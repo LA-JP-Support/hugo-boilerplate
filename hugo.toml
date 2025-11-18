@@ -1,0 +1,92 @@
+baseURL = 'https://main.d1jtfhinlastnr.amplifyapp.com/'
+languageCode = 'ja'
+title = 'Hugo Boilerplate'
+defaultContentLanguage = "ja"
+defaultContentLanguageInSubdir = true
+theme = 'boilerplate'
+
+[outputs]
+  home = ["HTML", "RSS", "SITEMAP"]
+
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["txt"]
+  [mediaTypes."application/xml"]
+    suffixes = ["xml"]
+
+[outputFormats]
+  [outputFormats.ROBOTS]
+    mediaType = "text/plain"
+    baseName = "robots"
+    isPlainText = true
+    notAlternative = true
+    permalinkable = true
+  [outputFormats.SITEMAP]
+    mediaType = "application/xml"
+    baseName = "sitemap"
+    isPlainText = false
+    isHTML = false
+    noUgly = true
+    rel = "sitemap"
+
+[params]
+  description = "Hugoで構築されたサイト"
+  author = "あなたの名前"
+  mainSections = ["blog"]
+  dateFormat = "2006年1月2日"
+  
+  [params.imaging]
+    resampleFilter = "Lanczos"
+    quality = 85
+    anchor = "smart"
+    bgColor = "#ffffff"
+    webpQuality = 85
+
+[languages]
+  [languages.ja]
+    languageName = "日本語"
+    title = "Hugoサイト"
+    weight = 1
+    contentDir = "content/ja"
+    [languages.ja.params]
+      bcp47Lang = "ja"
+      description = "日本語サイトの説明"
+    [[languages.ja.menu.main]]
+      identifier = "home"
+      name = "ホーム"
+      url = "/"
+      weight = 1
+    [[languages.ja.menu.main]]
+      identifier = "blog"
+      name = "ブログ"
+      url = "/blog/"
+      weight = 2
+  
+  [languages.en]
+    languageName = "English"
+    title = "Hugo Site"
+    weight = 2
+    contentDir = "content/en"
+    [languages.en.params]
+      bcp47Lang = "en-us"
+      description = "English site description"
+    [[languages.en.menu.main]]
+      identifier = "home"
+      name = "Home"
+      url = "/"
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "blog"
+      name = "Blog"
+      url = "/blog/"
+      weight = 2
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[build]
+  writeStats = true
+
+[sitemap]
+  filename = "sitemap.xml"
