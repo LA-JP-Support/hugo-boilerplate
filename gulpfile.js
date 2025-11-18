@@ -11,9 +11,9 @@ const { hideBin } = require('yargs/helpers');
 
 const argv = yargs(hideBin(process.argv)).argv;
 
-const cssSrc = 'themes/boilerplate/assets/css/main.css';
+const cssSrc = 'assets/css/main.css';
 const cssDest = 'static/css';
-const jsEntryPoints = ['themes/boilerplate/assets/js/main.js'];
+const jsEntryPoints = ['assets/js/main.js'];
 const jsDest = 'static/js';
 
 function buildCSS() {
