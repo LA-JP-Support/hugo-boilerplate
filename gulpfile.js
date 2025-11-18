@@ -56,8 +56,8 @@ function startHugoServer() {
 }
 
 function watchFiles() {
-  gulp.watch('themes/boilerplate/assets/css/**/*.css', buildCSS);
-  gulp.watch('themes/boilerplate/assets/js/**/*.js', buildJS);
+  gulp.watch('assets/css/**/*.css', buildCSS);
+  gulp.watch('assets/js/**/*.js', buildJS);
 }
 
 const build = gulp.series(buildCSS, buildJS);
