@@ -8,6 +8,12 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ with .Permalink }}<link rel="canonical" href="{{ . }}">{{ end }}
 
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/images/faivicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/faivicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/faivicon.png">
+<link rel="shortcut icon" href="/images/faivicon.png">
+
 <!-- Generate hreflang alternate links -->
 {{ ( partialCached "helpers/generate-hreflang-links.html" (dict "currentPage" . "defaultLang" "en") .Permalink ) | safeHTML }}
 {{ partial "social-meta.html" . | safeHTML }}
@@ -23,4 +29,3 @@
 {{ if templates.Exists "partials/tracking/tracking-scripts.html" }}
   {{ partial "tracking/tracking-scripts.html" . }}
 {{ end }}
-
