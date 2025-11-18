@@ -8,7 +8,7 @@
 @note: This is a basic footer implementation that uses the layout/footers/4-column_with_call-to-action_on_dark component with default values.
 */}}
 
-{{ $isJapanese := eq .Language.Lang "ja" }}
+{{ $isJapanese := eq site.Language.Lang "ja" }}
 
 {{ if $isJapanese }}
   {{/* 日本語版フッター */}}

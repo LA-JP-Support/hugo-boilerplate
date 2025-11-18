@@ -8,7 +8,7 @@
 @note: This is a basic header implementation that uses the menu/header_menu component with default values.
 */}}
 
-{{ $isJapanese := eq .Language.Lang "ja" }}
+{{ $isJapanese := eq site.Language.Lang "ja" }}
 
 {{ if $isJapanese }}
   {{/* 日本語版ヘッダー */}}
