@@ -3,7 +3,6 @@ languageCode = 'ja'
 title = 'Hugo Boilerplate'
 defaultContentLanguage = "ja"
 defaultContentLanguageInSubdir = true
-theme = 'boilerplate'
 
 [outputs]
   home = ["HTML", "RSS", "SITEMAP"]
