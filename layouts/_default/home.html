@@ -1,8 +1,17 @@
 {{ define "main" }}
 <div class="relative">
-  <!-- Hero Section with Logo -->
-  <div class="section-bg-light dark:section-bg-dark relative z-[1]">
-    <div class="relative isolate">
+  <!-- Hero Section with Logo and Background Image -->
+  <div class="section-bg-light dark:section-bg-dark relative z-[1] overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="/images/a_modern_customer_support.jpg" 
+           alt="Customer Support Background" 
+           class="w-full h-full object-cover">
+      <!-- Dark overlay for better text readability -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60"></div>
+    </div>
+    
+    <div class="relative isolate z-10">
       <div class="wrapper py-24 sm:py-32">
         <div class="mx-auto max-w-3xl text-center">
           <!-- Logo with background -->
@@ -14,22 +23,22 @@
 
           <!-- Main Heading -->
           {{ if .Params.hero_heading }}
-            <h1 class="text-5xl font-semibold tracking-tight text-balance text-heading sm:text-7xl">
+            <h1 class="text-5xl font-semibold tracking-tight text-balance text-white drop-shadow-lg sm:text-7xl">
               {{ .Params.hero_heading }}
             </h1>
           {{ else }}
-            <h1 class="text-5xl font-semibold tracking-tight text-balance text-heading sm:text-7xl">
+            <h1 class="text-5xl font-semibold tracking-tight text-balance text-white drop-shadow-lg sm:text-7xl">
               {{ .Title }}
             </h1>
           {{ end }}
 
           <!-- Description -->
           {{ if .Params.hero_description }}
-            <p class="mt-9 text-lg font-medium text-pretty text-secondary sm:text-xl/8">
+            <p class="mt-9 text-lg font-medium text-pretty text-white drop-shadow-md sm:text-xl/8">
               {{ .Params.hero_description | safeHTML }}
             </p>
           {{ else if .Description }}
-            <p class="mt-9 text-lg font-medium text-pretty text-secondary sm:text-xl/8">
+            <p class="mt-9 text-lg font-medium text-pretty text-white drop-shadow-md sm:text-xl/8">
               {{ .Description }}
             </p>
           {{ end }}
@@ -39,13 +48,13 @@
             <div class="mt-9 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
               {{ if .Params.cta_primary }}
                 <a href="{{ .Params.cta_primary.url }}" 
-                   class="rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors">
+                   class="rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors">
                   {{ .Params.cta_primary.text }}
                 </a>
               {{ end }}
               {{ if .Params.cta_secondary }}
                 <a href="{{ .Params.cta_secondary.url }}" 
-                   class="text-sm font-semibold text-gray-900 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                   class="text-sm font-semibold text-white hover:text-indigo-300 transition-colors drop-shadow-md">
                   {{ .Params.cta_secondary.text }} <span aria-hidden="true">→</span>
                 </a>
               {{ end }}
