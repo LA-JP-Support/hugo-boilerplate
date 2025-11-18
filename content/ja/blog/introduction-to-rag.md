@@ -4,10 +4,10 @@ date: 2025-11-18
 draft: false
 description: "RAG（検索拡張生成）の基本と活用方法を解説。従来のAIとの違い、メリット、実際の活用例まで詳しく紹介します。"
 keywords: ["RAG", "検索拡張生成", "AI", "生成AI", "チャットボット", "FlowHunt"]
+image: "/images/blog/rag-paint.jpg"
 tags: ["AI技術", "RAG", "チャットボット"]
 categories: ["テクノロジー"]
 ---
-
 ## RAG（Retrieval-Augmented Generation）の基本と活用方法
 
 ### RAGの基本構造
@@ -49,6 +49,8 @@ RAGを使うことで、AIはもっと柔軟に、賢く情報を提供できま
 ### RAGの仕組みをやさしく解説
 
 RAGは「質問理解」「検索（Retrieval）」「生成（Generation）」の3つのステップで答えを作ります。
+
+![RAGの3つのステップ](/images/blog/RAG-123.jpg)
 
 1. **質問理解**
    - 利用者からの質問を生成AIが理解し、どのような情報が必要かを判断します
