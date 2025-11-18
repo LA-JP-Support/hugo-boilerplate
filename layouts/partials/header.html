@@ -8,22 +8,48 @@
 @note: This is a basic header implementation that uses the menu/header_menu component with default values.
 */}}
 
-{{ partial "components/menus/header_menu" (dict 
-    "logoUrl" "/images/smartweb-logo.png"
-    "logoAlt" "SmartWeb Logo"
-    "logoHeight" "h-12"
-    "siteTitle" "SmartWeb"
-    "ctaText" "今すぐ始める"
-    "ctaUrl" "/ja/blog/"
-    "ctaBgColor" "bg-indigo-600"
-    "ctaHoverBgColor" "hover:bg-indigo-500"
-    "ctaTextColor" "text-white"
-    "loginText" "ログイン"
-    "loginUrl" "#"
-    "menuItems" (slice 
-      (dict "title" "ホーム" "url" "/ja/")
-      (dict "title" "ブログ" "url" "/ja/blog/")
-      (dict "title" "会社情報" "url" "#")
-      (dict "title" "お問い合わせ" "url" "#")
-    )
-) }}
+{{ $isJapanese := eq .Language.Lang "ja" }}
+
+{{ if $isJapanese }}
+  {{/* 日本語版ヘッダー */}}
+  {{ partial "components/menus/header_menu" (dict 
+      "logoUrl" "/images/smartweb-logo.png"
+      "logoAlt" "SmartWeb Logo"
+      "logoHeight" "h-12"
+      "siteTitle" "SmartWeb"
+      "ctaText" "今すぐ始める"
+      "ctaUrl" "/ja/blog/"
+      "ctaBgColor" "bg-indigo-600"
+      "ctaHoverBgColor" "hover:bg-indigo-500"
+      "ctaTextColor" "text-white"
+      "loginText" "ログイン"
+      "loginUrl" "#"
+      "menuItems" (slice 
+        (dict "title" "ホーム" "url" "/ja/")
+        (dict "title" "ブログ" "url" "/ja/blog/")
+        (dict "title" "会社情報" "url" "#")
+        (dict "title" "お問い合わせ" "url" "#")
+      )
+  ) }}
+{{ else }}
+  {{/* 英語版ヘッダー */}}
+  {{ partial "components/menus/header_menu" (dict 
+      "logoUrl" "/images/smartweb-logo.png"
+      "logoAlt" "SmartWeb Logo"
+      "logoHeight" "h-12"
+      "siteTitle" "SmartWeb"
+      "ctaText" "Get Started"
+      "ctaUrl" "/en/blog/"
+      "ctaBgColor" "bg-indigo-600"
+      "ctaHoverBgColor" "hover:bg-indigo-500"
+      "ctaTextColor" "text-white"
+      "loginText" "Log in"
+      "loginUrl" "#"
+      "menuItems" (slice 
+        (dict "title" "Home" "url" "/en/")
+        (dict "title" "Blog" "url" "/en/blog/")
+        (dict "title" "Company" "url" "#")
+        (dict "title" "Contact" "url" "#")
+      )
+  ) }}
+{{ end }}
