@@ -1,5 +1,126 @@
 {{ define "main" }}
-{{ if .Content }}
-  {{ .Content }}
-{{ end }}
+<div class="relative">
+  <!-- Hero Section with Logo -->
+  <div class="section-bg-light dark:section-bg-dark relative z-[1]">
+    <div class="relative isolate">
+      <div class="wrapper py-24 sm:py-32">
+        <div class="mx-auto max-w-3xl text-center">
+          <!-- Logo with background -->
+          <div class="mb-12 flex justify-center">
+            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 p-6 rounded-2xl shadow-lg">
+              <img src="/images/smartweb-logo-white_1@3x.png" alt="SmartWeb Logo" class="h-16 sm:h-20 w-auto">
+            </div>
+          </div>
+
+          <!-- Main Heading -->
+          {{ if .Params.hero_heading }}
+            <h1 class="text-5xl font-semibold tracking-tight text-balance text-heading sm:text-7xl">
+              {{ .Params.hero_heading }}
+            </h1>
+          {{ else }}
+            <h1 class="text-5xl font-semibold tracking-tight text-balance text-heading sm:text-7xl">
+              {{ .Title }}
+            </h1>
+          {{ end }}
+
+          <!-- Description -->
+          {{ if .Params.hero_description }}
+            <p class="mt-9 text-lg font-medium text-pretty text-secondary sm:text-xl/8">
+              {{ .Params.hero_description | safeHTML }}
+            </p>
+          {{ else if .Description }}
+            <p class="mt-9 text-lg font-medium text-pretty text-secondary sm:text-xl/8">
+              {{ .Description }}
+            </p>
+          {{ end }}
+
+          <!-- CTA Buttons -->
+          {{ if or .Params.cta_primary .Params.cta_secondary }}
+            <div class="mt-9 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
+              {{ if .Params.cta_primary }}
+                <a href="{{ .Params.cta_primary.url }}" 
+                   class="rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors">
+                  {{ .Params.cta_primary.text }}
+                </a>
+              {{ end }}
+              {{ if .Params.cta_secondary }}
+                <a href="{{ .Params.cta_secondary.url }}" 
+                   class="text-sm font-semibold text-gray-900 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                  {{ .Params.cta_secondary.text }} <span aria-hidden="true">→</span>
+                </a>
+              {{ end }}
+            </div>
+          {{ end }}
+
+          <!-- Hero Image -->
+          {{ if .Params.hero_image }}
+            <div class="mt-16 flow-root sm:mt-20">
+              <div class="rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+                <img src="{{ .Params.hero_image }}" 
+                     alt="{{ .Params.hero_image_alt | default "Hero Image" }}" 
+                     class="w-full rounded-md shadow-2xl ring-1 ring-gray-900/10">
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section (optional) -->
+  {{ if .Params.features }}
+    <div class="py-24 sm:py-32 bg-white dark:bg-gray-900">
+      <div class="wrapper">
+        <div class="mx-auto max-w-2xl lg:text-center mb-16">
+          {{ if .Params.features_heading }}
+            <h2 class="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">{{ .Params.features_heading }}</h2>
+          {{ end }}
+          {{ if .Params.features_title }}
+            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              {{ .Params.features_title }}
+            </p>
+          {{ end }}
+          {{ if .Params.features_description }}
+            <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
+              {{ .Params.features_description }}
+            </p>
+          {{ end }}
+        </div>
+        
+        <div class="mx-auto max-w-7xl">
+          <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
+            {{ range .Params.features }}
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900 dark:text-white">
+                  {{ if .icon }}
+                    <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="{{ .icon }}" />
+                      </svg>
+                    </div>
+                  {{ end }}
+                  {{ .name }}
+                </dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
+                  {{ .description }}
+                </dd>
+              </div>
+            {{ end }}
+          </dl>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+
+  <!-- Content from Markdown -->
+  {{ if .Content }}
+    <div class="py-16 bg-gray-50 dark:bg-gray-800">
+      <div class="wrapper">
+        <div class="prose prose-lg dark:prose-invert mx-auto max-w-3xl">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</div>
 {{ end }}
