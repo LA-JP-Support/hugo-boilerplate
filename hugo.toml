@@ -1,6 +1,6 @@
 baseURL = 'https://main.d1jtfhinlastnr.amplifyapp.com/'
 languageCode = 'ja'
-title = 'Hugo Boilerplate'
+title = 'SmartWeb'
 defaultContentLanguage = "ja"
 defaultContentLanguageInSubdir = true
 
@@ -29,8 +29,8 @@ defaultContentLanguageInSubdir = true
     rel = "sitemap"
 
 [params]
-  description = "Hugoで構築されたサイト"
-  author = "あなたの名前"
+  description = "次世代のWeb体験をあなたに"
+  author = "SmartWeb"
   mainSections = ["blog"]
   dateFormat = "2006年1月2日"
   
@@ -44,41 +44,81 @@ defaultContentLanguageInSubdir = true
 [languages]
   [languages.ja]
     languageName = "日本語"
-    title = "Hugoサイト"
+    title = "SmartWeb"
     weight = 1
     contentDir = "content/ja"
     [languages.ja.params]
       bcp47Lang = "ja"
-      description = "日本語サイトの説明"
+      description = "次世代のWeb体験をあなたに"
     [[languages.ja.menu.main]]
       identifier = "home"
       name = "ホーム"
       url = "/"
       weight = 1
     [[languages.ja.menu.main]]
+      identifier = "services"
+      name = "サービス"
+      url = "#"
+      weight = 2
+    [[languages.ja.menu.main]]
+      identifier = "solutions"
+      name = "ソリューション"
+      url = "#"
+      weight = 3
+    [[languages.ja.menu.main]]
+      identifier = "resources"
+      name = "リソース"
+      url = "#"
+      weight = 4
+    [[languages.ja.menu.main]]
       identifier = "blog"
       name = "ブログ"
       url = "/blog/"
-      weight = 2
+      weight = 5
+    [[languages.ja.menu.main]]
+      identifier = "company"
+      name = "会社情報"
+      url = "#"
+      weight = 6
   
   [languages.en]
     languageName = "English"
-    title = "Hugo Site"
+    title = "SmartWeb"
     weight = 2
     contentDir = "content/en"
     [languages.en.params]
       bcp47Lang = "en-us"
-      description = "English site description"
+      description = "Next generation web experience"
     [[languages.en.menu.main]]
       identifier = "home"
       name = "Home"
       url = "/"
       weight = 1
     [[languages.en.menu.main]]
+      identifier = "services"
+      name = "Services"
+      url = "#"
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "solutions"
+      name = "Solutions"
+      url = "#"
+      weight = 3
+    [[languages.en.menu.main]]
+      identifier = "resources"
+      name = "Resources"
+      url = "#"
+      weight = 4
+    [[languages.en.menu.main]]
       identifier = "blog"
       name = "Blog"
       url = "/blog/"
-      weight = 2
+      weight = 5
+    [[languages.en.menu.main]]
+      identifier = "company"
+      name = "Company"
+      url = "#"
+      weight = 6
 
 [taxonomies]
   tag = "tags"

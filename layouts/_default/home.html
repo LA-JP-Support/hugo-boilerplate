@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="relative">
-  <!-- Hero Section with Logo and Background Image -->
+  <!-- Hero Section with Background Image -->
   <div class="section-bg-light dark:section-bg-dark relative z-[1] overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
@@ -14,13 +14,6 @@
     <div class="relative isolate z-10">
       <div class="wrapper py-24 sm:py-32">
         <div class="mx-auto max-w-3xl text-center">
-          <!-- Logo with background -->
-          <div class="mb-12 flex justify-center">
-            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 p-6 rounded-2xl shadow-lg">
-              <img src="/images/smartweb-logo-white_1@3x.png" alt="SmartWeb Logo" class="h-16 sm:h-20 w-auto">
-            </div>
-          </div>
-
           <!-- Main Heading -->
           {{ if .Params.hero_heading }}
             <h1 class="text-5xl font-semibold tracking-tight text-balance text-white drop-shadow-lg sm:text-7xl">

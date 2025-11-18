@@ -9,44 +9,45 @@
 */}}
 
 {{ partial "layout/footers/4-column_with_call-to-action_on_dark" (dict 
-    "logoUrl" "https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-    "logoAlt" "Your Company"
-    "ctaTagline" "Ready to get started?"
-    "ctaHeading" "Start using our services today"
-    "ctaDescription" "Join thousands of satisfied customers who have transformed their business with our solutions."
-    "ctaButtonText" "Get started"
-    "ctaButtonUrl" "/contact/"
-    "column1Title" "Solutions"
+    "logoUrl" "/images/smartweb-logo-white_1@3x.png"
+    "logoAlt" "SmartWeb"
+    "ctaTagline" "今すぐ始めませんか？"
+    "ctaHeading" "SmartWebで未来を創る"
+    "ctaDescription" "数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。"
+    "ctaButtonText" "無料で始める"
+    "ctaButtonUrl" "/ja/blog/"
+    "column1Title" "サービス"
     "column1Links" (slice 
-        (dict "text" "Marketing" "url" "#")
-        (dict "text" "Analytics" "url" "#")
-        (dict "text" "Automation" "url" "#")
-        (dict "text" "Commerce" "url" "#")
+        (dict "text" "AIソリューション" "url" "#")
+        (dict "text" "Webサイト制作" "url" "#")
+        (dict "text" "システム開発" "url" "#")
+        (dict "text" "コンサルティング" "url" "#")
     )
-    "column2Title" "Support"
+    "column2Title" "サポート"
     "column2Links" (slice 
-        (dict "text" "Documentation" "url" "#")
-        (dict "text" "Guides" "url" "#")
-        (dict "text" "API Status" "url" "#")
+        (dict "text" "ドキュメント" "url" "#")
+        (dict "text" "ガイド" "url" "#")
+        (dict "text" "よくある質問" "url" "#")
+        (dict "text" "お問い合わせ" "url" "#")
     )
-    "column3Title" "Company"
+    "column3Title" "会社情報"
     "column3Links" (slice 
-        (dict "text" "About" "url" "/about/")
-        (dict "text" "Blog" "url" "/blog/")
-        (dict "text" "Careers" "url" "/careers/")
-        (dict "text" "Press" "url" "/press/")
+        (dict "text" "会社概要" "url" "#")
+        (dict "text" "ブログ" "url" "/ja/blog/")
+        (dict "text" "採用情報" "url" "#")
+        (dict "text" "ニュース" "url" "#")
     )
-    "column4Title" "Legal"
+    "column4Title" "法務情報"
     "column4Links" (slice 
-        (dict "text" "Privacy" "url" "#")
-        (dict "text" "Terms" "url" "#")
-        (dict "text" "Cookie Policy" "url" "#")
+        (dict "text" "プライバシーポリシー" "url" "#")
+        (dict "text" "利用規約" "url" "#")
+        (dict "text" "Cookie ポリシー" "url" "#")
     )
     "socialLinks" (slice 
         (dict "name" "GitHub" "url" "https://github.com" "icon" "github")
         (dict "name" "X" "url" "https://x.com" "icon" "x")
-        (dict "name" "LinkedIn" "url" "https://linkedin.com" "icon" "linkedin")
+        (dict "name" "YouTube" "url" "https://youtube.com" "icon" "youtube")
     )
-    "copyrightText" (printf "&copy; %d Your Company, Inc. All rights reserved." now.Year)
+    "copyrightText" (printf "&copy; %d Interwork Corporation All rights reserved." now.Year)
     "currentPage" .
 ) }}

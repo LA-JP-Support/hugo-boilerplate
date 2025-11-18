@@ -11,7 +11,7 @@
 {{ partial "components/menus/header_menu" (dict 
     "logoUrl" "/images/smartweb-logo.png"
     "logoAlt" "SmartWeb Logo"
-    "logoHeight" "h-8"
+    "logoHeight" "h-12"
     "siteTitle" "SmartWeb"
     "ctaText" "今すぐ始める"
     "ctaUrl" "/ja/blog/"
@@ -20,4 +20,10 @@
     "ctaTextColor" "text-white"
     "loginText" "ログイン"
     "loginUrl" "#"
+    "menuItems" (slice 
+      (dict "title" "ホーム" "url" "/ja/")
+      (dict "title" "ブログ" "url" "/ja/blog/")
+      (dict "title" "会社情報" "url" "#")
+      (dict "title" "お問い合わせ" "url" "#")
+    )
 ) }}
