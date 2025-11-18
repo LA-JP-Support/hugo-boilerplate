@@ -1,39 +1,107 @@
-{{ define "main" }}
-
-{{/* Set page context for shortcodes to know about wrapper-narrower-content usage */}}
-{{ .Scratch.Set "hasWrapperNarrower" true }}
-
-{{ partial "breadcrumbs_default.html" . }}
-{{ partial "hero_default.html" . }}
-
-<!-- Main Content -->
-<div class="bg-white">
-  <div class="wrapper">
-    <div class="wrapper-content">
-      <div class="mx-auto max-w-none prose">
-        {{ .Content }}
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FAQ Section if available -->
-{{ if .Params.faq }}
-{{ partial "sections/faq/side-by-side" (dict
-"title" (i18n "faq_heading")
-"description" (i18n "faq_description")
-"items" .Params.faq
-) }}
-{{ end }}
-
-
-<!-- Author Section -->
-{{ if .Params.author }}
-  {{ partial "author.html" (dict "authorKey" .Params.author "page" .) }}
-{{ end }}
-
-{{ partial "cta.html" . }}
-
-{{ partial "related_content.html" . }}
-
-{{ end }}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">{{ define "main" }}</span></p>
+<p class="p1"><span class="s1">&lt;article class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- ヘッダーセクション --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;header class="py-10 sm:py-16"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="mx-auto max-w-3xl"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- パンくずリスト --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;nav class="mb-8 text-sm"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;ol class="flex items-center space-x-2 text-gray-500"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="/{{ .Language.Lang }}/" class="hover:text-indigo-600"&gt;ホーム&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;span class="mx-2"&gt;/&lt;/span&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="/{{ .Language.Lang }}/blog/" class="hover:text-indigo-600"&gt;ブログ&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;span class="mx-2"&gt;/&lt;/span&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li class="text-gray-900"&gt;{{ .Title }}&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/ol&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- タイトル --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{ .Title }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/h1&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- メタ情報 --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="mt-6 flex items-center gap-x-4 text-sm text-gray-500"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;time datetime="{{ .Date.Format "2006-01-02" }}"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{{ .Date.Format "2006年1月2日" }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/time&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{ if .Params.tags }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-gray-300"&gt;•&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="flex flex-wrap gap-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{{ range .Params.tags }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-600"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{{ . }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{{ end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{ end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- メイン画像（スマートフォンでも表示） --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{{ if .Params.image }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="mt-8 w-full"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;img<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>src="{{ .Params.image }}"<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>alt="{{ .Title }}"<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>class="w-full h-auto rounded-lg shadow-lg object-cover"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>style="max-height: 500px; object-fit: cover;"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{{ end }}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- 説明 --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{{ if .Description }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{{ .Description }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{{ end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- 記事本文 --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="prose prose-lg dark:prose-invert mx-auto max-w-3xl py-10"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{{ .Content }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- タグセクション --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ if .Params.tags }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="mt-12 border-t border-gray-200 pt-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h3 class="text-sm font-semibold text-gray-900 dark:text-white"&gt;タグ:&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="mt-4 flex flex-wrap gap-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{ range .Params.tags }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;a<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>href="/{{ $.Language.Lang }}/tags/{{ . | urlize }}/"<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>class="rounded-full bg-gray-100 dark:bg-gray-800 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{{ . }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{ end }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ end }}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- 関連記事 --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ $related := .Site.RegularPages.Related . | first 3 }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{{ if $related }}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="mt-16 border-t border-gray-200 pt-12"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>関連記事</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>{{ range $related }}</span></p>
+</body>
+</html>
