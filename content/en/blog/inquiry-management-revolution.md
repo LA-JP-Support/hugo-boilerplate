@@ -8,12 +8,12 @@ image: "/images/blog/inquiry-management-revolution.png"
 # Monday Morning Nightmare: Before Drowning in a Sea of Emails
 
 "Good morning! Did you check the weekend inquiries?"
-Have you ever felt startled by this question from staff first thing Monday morning?
-You frantically open your email inbox to find a mountain of inquiries that have piled up since Friday evening. You open your Excel management sheet and desperately check "Handled" and "Pending." Wait, is Tanaka-san handling this inquiry, or am I?
+Have you ever been startled by this question from staff first thing Monday morning?
+You frantically open your email inbox to find a mountain of inquiries that have piled up since Friday evening. You open your Excel management sheet and desperately check "Handled" and "Pending" statuses. Wait, is Tanaka-san handling this inquiry, or am I?
 Before you know it, the morning is over and your actual work remains untouched...
-**In fact, this scene is playing out in small businesses across Japan.**
+**In fact, this scene is happening in small businesses all across Japan.**
 
-## Shocking Truth: 60% of Inquiry Handling Is Still "Manual"
+## Shocking Truth: 60% of Inquiry Handling is Still "Manual"
 
 ### Invisible Losses Are Accumulating
 
@@ -23,11 +23,11 @@ Let's think concretely about what this means:
 
 #### 【Case 1: The Tragedy of Duplicate Response】
 
-Friday evening, a customer emails about a "product defect." Yamada-san thought they replied, but Monday morning Suzuki-san also replies to the same email. The customer thinks, "Why two emails from the same company? Can't they manage properly?" and loses trust.
+Friday evening, a customer emails about a "product defect." Yamada-san thinks he replied, but Monday morning Suzuki-san also replies to the same email. The customer feels distrustful: "Why two emails from the same company? Can't you manage properly?"
 
 #### 【Case 2: The Handover Pitfall】
 
-The assigned Sato-san suddenly calls in sick. "How far did we get with that customer's case?" Even digging through emails, the background is unclear and we have to start from scratch. The customer gets irritated: "I already explained this before..."
+The assigned Sato-san suddenly calls in sick. "How far did we get with that customer's case?" Even after digging through emails, the history is unclear and confirmation starts from scratch. The customer gets irritated: "I already explained this before..."
 
 #### 【Case 3: Priority Misjudgment】
 
@@ -35,19 +35,19 @@ When multiple inquiries come in simultaneously, which should be handled first? A
 
 ### 30% of Customers Leave Due to "Slow Response"
 
-There's even more shocking data. Recent surveys show that delays in customer response and declining service quality are the reason approximately **30%** of customers leave.
+There's even more shocking data. Recent surveys show that delays in customer response and declining service quality are reasons why approximately **30%** of customers leave.
 
-In other words, improving inquiry management isn't something you "should do" - it's a "must do or you won't survive" level challenge.
+In other words, improving inquiry management isn't something you "should do" - it's a "must do to survive" level challenge.
 
-## {{< tooltip text="A system that treats inquiries and support requests as numbered management tickets, centrally managing assigned staff and progress status" >}}Ticket System{{< /tooltip >}}: The "Magic Wand"
+## {{< tooltip text="A system that treats inquiries and support requests as numbered management tickets, centrally managing assigned staff and progress status" >}}Ticket System{{< /tooltip >}} - The "Magic Wand"
 
-### What Exactly Is a "Ticket System"?
+### What Exactly is a "Ticket System"?
 
 It might sound complicated, but it's actually simple.
 
 > Ticket System = A mechanism to manage all inquiries as "numbered slips"
 
-It's like when a restaurant takes an order, writes it on a slip, and sends it to the kitchen, right? It's the same thing.
+It's like when a restaurant takes an order, writes it on a slip, and sends it to the kitchen.
 
 - Email inquiry → Ticket #001
 - Phone consultation → Ticket #002
@@ -58,7 +58,7 @@ Everything gets a number, and you can see at a glance "who," "when," and "what" 
 
 ### Amazing Results: Actual Company Outcomes
 
-At SmartWeb, we use {{< tooltip text="Customer support and help desk software used worldwide. It can centrally manage inquiries from email, chat, phone, SNS, and other channels" >}}{{< tooltip text="Inquiry ticket management system" >}}LiveAgent{{< /tooltip >}}{{< /tooltip >}}, a ticket system with proven track record.
+At SmartWeb, we use {{< tooltip text="Customer support and help desk software used worldwide. It can centrally manage inquiries from email, chat, phone, SNS, and other channels" >}}{{< tooltip text="Inquiry ticket management system" >}}LiveAgent{{< /tooltip >}}{{< /tooltip >}}, a proven ticket system.
 
 #### Results from companies that implemented LiveAgent:
 
@@ -67,13 +67,13 @@ At SmartWeb, we use {{< tooltip text="Customer support and help desk software us
 - Response oversights: **Nearly zero**
 
 Voice from a small business owner:
-**"Before implementation, every day was panic mode. But now, I can see the status of all inquiries just by looking at the screen. Response speed doubled and complaints drastically decreased."**
+**"Before implementation, every day was panic mode. But now, I can see the status of all inquiries on the screen. Response speed doubled and complaints drastically decreased."**
 
 ## {{< tooltip text="A website or system that aggregates information like FAQs, manuals, and guides so customers can solve problems themselves" >}}Support Portal{{< /tooltip >}}: The "Magic Bookshelf" for Customer Self-Service
 
 ### 30-52% of Inquiries Disappear!?
 
-A "Support Portal" is like a "customer-dedicated library" that compiles {{< tooltip text="Frequently Asked Questions - content that summarizes questions commonly asked by customers and their answers" >}}FAQs{{< /tooltip >}} and manuals.
+A "Support Portal" is like a "customer-dedicated library" that organizes {{< tooltip text="Frequently Asked Questions - content that compiles questions commonly asked by customers and their answers" >}}FAQs{{< /tooltip >}} and manuals.
 
 In fact, **30-52%** of inquiries are things customers can resolve themselves if they have the right information (according to Gartner research).
 
@@ -89,35 +89,34 @@ In fact, **30-52%** of inquiries are things customers can resolve themselves if 
 - What payment methods are available?
 - Is there a warranty?
 - Is a contract required?
-- Where is your physical store located?
+- Where are your physical stores located?
 - How do I check my order number?
 - How do I upgrade (change plans)?
-- How do I change privacy settings or delete my account?
+- How do I adjust privacy settings or delete my account?
 - What services do you provide?
 - How do I contact support?
 
 By providing this information 24/7/365, you can reduce late-night and weekend inquiries, allowing staff to focus on truly complex cases that require human attention.
 
-## "Before and After" Inquiry Management with SmartWeb
+## Starting with SmartWeb: "Before and After" of Inquiry Management
 
 | Time | Before: Monday Morning Pre-Implementation | After: Monday Morning Post-SmartWeb Implementation |
 | --- | --- | --- |
-| Time | Before: Monday Morning Pre-Implementation | After: Monday Morning Post-SmartWeb Implementation |
 | 9:30 | Arrive at office | Arrive at office |
-| 9:35 | Start checking emails | Check dedicated support {{< tooltip text="A management tool that displays various information and data together on one screen" >}}dashboard{{< /tooltip >}} |
+| 9:35 | Start checking emails | Check support {{< tooltip text="A management tool that displays various information and data together on one screen" >}}dashboard{{< /tooltip >}} |
 | 9:40 |   | 3 unhandled tickets, process from "high" priority |
-| 10:00 | Update Excel management sheet | Start handling automatically sorted tickets by assigned staff, also begin parallel chat support |
+| 10:00 | Update Excel management sheet | Each assigned staff member starts handling auto-sorted tickets, also begins parallel chat support |
 | 10:30 | Ask staff "Did anyone handle this case?" |   |
-| 11:00 | Discover duplicate response, apologize to customer | Take chat offline and focus intensively on complex cases |
+| 11:00 | Discover duplicate response, apologize to customer | Turn chat offline to focus on complex cases |
 | 11:30 | Finally start handling new cases |   |
 | 12:30 | Don't know priorities, process in chronological order |   |
 
-## Implementation Is Surprisingly Easy! 3 Steps
+## Implementation is Surprisingly Easy! 3 Steps
 
 ### Step 1: Preparation (1 week)
 
 - Clarify implementation objectives
-- Organize current inquiry routes
+- Organize current inquiry channels
 - Hold staff briefing sessions
 
 ### Step 2: Setup (1 week)
@@ -134,7 +133,7 @@ By providing this information 24/7/365, you can reduce late-night and weekend in
 
 ## Pricing from ¥10,000 per month: Let's Calculate ROI
 
-### SmartWeb's Basic Plan Pricing for Inquiry Efficiency
+### SmartWeb's Inquiry Efficiency Basic Plan Pricing
 
 - Initial cost: ¥100,000 - We'll set it up ready to use
 - Monthly cost: From ¥10,000~ - Varies based on number of staff using the system
@@ -143,24 +142,23 @@ By providing this information 24/7/365, you can reduce late-night and weekend in
 
 | Item | Current State | After SmartWeb Implementation |
 | --- | --- | --- |
-| Item | Current State | After SmartWeb Implementation |
 | Response time | 2 staff members, 2 hours daily each | Response time cut in half |
 | Personnel costs | 2 hours × 2 people × 20 days × ¥2,000 = ¥160,000/month equivalent | Reducible personnel costs: ¥80,000/month equivalent |
 | System costs | - | SmartWeb monthly cost: ¥12,500 |
-| Net reduction effect | - | ¥67,500/month! |
+| Net reduction effect | - | ¥67,500 per month! |
 
 In other words, you can **recover the initial investment in 2 months**.
 
 ## Answering Common Questions and Concerns
 
-**Q: We're a small company, do we really need this?**
-**A:** Small companies especially need this. To operate efficiently with few people, leveraging system power is crucial.
+**Q: We're a small company - do we really need this?**
+**A:** Small companies need it even more. To operate efficiently with few people, leveraging system capabilities is crucial.
 
-**Q: Can we use it even if we're not IT-savvy?**
-**A:** Absolutely. Japanese staff will carefully support you from implementation to operation. The interface is in Japanese and intuitive to operate.
+**Q: Can we use it without being IT-savvy?**
+**A:** Absolutely. Japanese staff will carefully support you from implementation to operation. The interface is in Japanese and intuitively operable.
 
 **Q: Changing our current methods seems difficult...**
-**A:** The first week does require adjustment, but after a month everyone says "we can't go back to the old way."
+**A:** The first week does require adjustment, but after a month, everyone says "we can't go back to the old way."
 
 ## "3 Secrets" Practiced by Successful Companies
 
@@ -172,41 +170,40 @@ Successful companies share the meaning of implementation with everyone, not just
 
 Don't try to perfect everything from the start - begin with basic functions. Gradually add features as you get comfortable.
 
-### 3. Analyze Data and Continue Improving
+### 3. Continuous Improvement Through Data Analysis
 
-Check data monthly. Analyze "what types of inquiries are most common?" and "did we reduce response time?" and continuously improve.
+Check data monthly. Analyze "what types of inquiries are common?" and "did response times improve?" for continuous improvement.
 
-## If You Don't Start Now, Competitors Will Leave You Behind
+## Start Now or Fall Behind Competitors
 
-The wave of {{< tooltip text="Introducing digital technology into business processes to improve efficiency and drive transformation" >}}digitalization{{< /tooltip >}} isn't just for large corporations. Rather, small businesses have the opportunity to provide enterprise-level service by making technology their ally.
+The wave of {{< tooltip text="Introducing digital technology into business processes to improve efficiency and drive transformation" >}}digitalization{{< /tooltip >}} isn't just for large corporations. Rather, small businesses have the opportunity to provide enterprise-level service by leveraging technology.
 
 ### Imagine Your Company One Year From Now
 
 | If you do nothing... | If you implement LiveAgent through SmartWeb's construction service... |
 | --- | --- |
-| If you do nothing... | If you implement LiveAgent through SmartWeb's construction service... |
-| Days spent chasing inquiry responses continue | Inquiry response time cut in half |
+| Days consumed by inquiry handling continue | Inquiry handling time cut in half |
 | Excellent staff burn out and quit | Staff focus on their core work |
-| Customer satisfaction declines, sales drop | Customer satisfaction improves, repeat business increases |
+| Declining customer satisfaction leads to reduced sales | Improved customer satisfaction increases repeat business |
 | Customers flow to competitors | Reputation as "a company with fast response" |
 
-## Inquiry Management Is "Investment," Not "Cost"
+## Inquiry Management is an "Investment," Not a "Cost"
 
-Improving inquiry management isn't just operational efficiency. It's a "strategic investment" to build trust relationships with customers and grow your business.
+Improving inquiry management isn't just about operational efficiency. It's a "strategic investment" to build trust with customers and grow your business.
 
 ### With SmartWeb:
 
 - Start from ¥100,000 initial cost, ¥10,000 monthly
-- Comprehensive support by Japanese staff
-- Operations can begin in as little as 3 weeks
+- Comprehensive support from Japanese staff
+- Operations can start in as little as 3 weeks
 - Investment recovery possible in 2 months
 
 ## Why Not Start with a Free Consultation?
 
-"How much effect would this have for our company?"
+"How effective would this be for our company?"
 "Can we migrate from our current system?"
-"What kind of support is available during implementation?"
+"What support is available during implementation?"
 
 Our experienced Japanese staff will carefully answer any questions you have.
 
-**In a 20-minute free online demo, we'll show you the moment your company's inquiry management dramatically transforms.**
+**In a 20-minute free online demo, we'll show you the moment your company's inquiry management transforms dramatically.**
