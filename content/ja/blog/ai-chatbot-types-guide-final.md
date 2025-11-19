@@ -401,23 +401,3 @@ SmartWebのAIチャットボット構築サービスを導入すると、以下�
 5. **ハルシネーション対策** - RAG技術により、事実と異なる情報の生成を大幅に削減
 
 SmartWebのAIチャットボット構築サービスは、FlowHuntとLiveAgentを組み合わせることで、企業の顧客対応や業務自動化を支える次世代のソリューションです。
-
----
-
-## メタディスクリプション
-
-AIチャットボットの5つのタイプ（ルールベース型・AI型・生成AI型・RAG型・ハイブリッド型）を徹底解説。それぞれの特徴、メリット・デメリット、用途別の選び方、導入時の注意点まで、中小企業でも安心して導入できるポイントを分かりやすく紹介します。
-
----
-
-## 推奨Midjourney画像プロンプト
-
-### 案1：チーム会議シーン
-```
-Japanese business team in modern meeting room, diverse group of 4 professionals (men and women in business casual) gathered around laptop, discussing AI chatbot interface on screen, natural office lighting, collaborative atmosphere, photorealistic, shot on Sony A7III, 8k, ultra detailed, shallow depth of field --ar 16:9 --style raw --v 6
-```
-
-### 案2：分岐するパス（選択の象徴）
-```
-Overhead view of Japanese business meeting table, 5 different tablet devices arranged in circle showing different AI chatbot interfaces, hands of diverse team members pointing at different screens, modern office setting, natural lighting, photorealistic, architectural photography style, 8k ultra detailed --ar 16:9 --style raw --v 6
-```
