@@ -1,0 +1,49 @@
+{{/*
+@component: Language Switcher
+@description: Language switcher button for Japanese/English toggle
+@params:
+  - page: Current page context (required)
+@example:
+  {{ partial "components/buttons/language-switcher.html" . }}
+*/}}
+
+{{- $currentLang := site.Language.Lang -}}
+{{- $translations := .Translations -}}
+
+<div class="flex items-center gap-2">
+  {{- range site.Languages -}}
+    {{- $lang := .Lang -}}
+    {{- $isCurrent := eq $lang $currentLang -}}
+    {{- $label := cond (eq $lang "ja") "日本語" "English" -}}
+    
+    {{- if $isCurrent -}}
+      {{- /* Current language - display as active button */ -}}
+      <span class="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold text-white">
+        {{ $label }}
+      </span>
+    {{- else -}}
+      {{- /* Other language - display as link */ -}}
+      {{- $targetUrl := "" -}}
+      
+      {{- /* Try to find translation of current page */ -}}
+      {{- $translationFound := false -}}
+      {{- range $.Translations -}}
+        {{- if eq .Lang $lang -}}
+          {{- $targetUrl = .RelPermalink -}}
+          {{- $translationFound = true -}}
+        {{- end -}}
+      {{- end -}}
+      
+      {{- /* If no translation found, go to homepage of that language */ -}}
+      {{- if not $translationFound -}}
+        {{- $targetUrl = printf "/%s/" $lang -}}
+      {{- end -}}
+      
+      <a href="{{ $targetUrl }}" 
+         class="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+         hreflang="{{ $lang }}">
+        {{ $label }}
+      </a>
+    {{- end -}}
+  {{- end -}}
+</div>

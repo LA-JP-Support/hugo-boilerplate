@@ -1,101 +1,66 @@
 {{/*
 @component: Language Selector
-@description: Displays a language switcher using country flags. Shows translations of the current page or all configured languages from all_languages.toml.
+@description: Displays a language switcher using country flags.
 @params:
   This component doesn't accept any parameters, it automatically detects available languages and translations.
 @example:
   {{ partial "components/navigation/language-selector.html" . }}
-@note: The component will show either:
-  1. Page translations if available (Hugo's built-in .Translations)
-  2. All languages from site.Data.all_languages.languages if configured
-  3. Nothing if neither is available or the site is monolingual
 */}}
 
 {{ $currentPage := . }}
-
-{{ $hasMultipleLanguages := gt (len site.Home.AllTranslations) 1 }}
-{{ $useAllLanguagesData := isset site.Data "all_languages" }}
+{{ $currentLang := .Language.Lang }}
 
 <div class="language-selector">
   <div class="flex flex-wrap items-center justify-center gap-3">
-    {{ if $useAllLanguagesData }}
-      <!-- Use unified language data when available -->
-      {{ with site.Data }}
-        {{ range $code, $langData := .all_languages.languages }}
-          <!-- Get country code for flag -->
-          {{ $countryCode := partial "helpers/get-country-code.html" (dict "code" $code) }}
-          
-          <!-- Create flag image url -->
-          {{ $flagUrl := printf "/flags/%s.png" $countryCode }}
-
-          <!-- Get language URL -->
-          {{ $href := "/" }}
-          {{ if $currentPage }}
-            {{ if $currentPage.Permalink }}
-              {{ $href = partial "helpers/get-language-url.html" (dict 
-                  "code" $code 
-                  "langData" $langData 
-                  "currentPage" $currentPage 
-              ) }}
-            {{ else }}
-              {{ $href = printf "/%s/" $code }}
-            {{ end }}
-          {{ else }}
-            {{ $href = printf "/%s/" $code }}
-          {{ end }}
-
-          <a href="{{ $href }}"
-             class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
-             title="{{ $langData.languageName }}"
-             aria-label="{{ $langData.languageName }}">
-            <img 
-              src="{{ $flagUrl }}"
-              alt="{{ $langData.languageName }}"
-              width="24"
-              height="18"
-              class="rounded"
-            >
-          </a>
-        {{ end }}
-      {{ end }}
-    {{ else if and $currentPage $currentPage.Translations }}
-      <!-- Use page translations when available -->
-      {{ range $currentPage.Translations }}
-        {{ $lang := .Language.Lang }}
-        
-        <!-- Get country code for flag -->
-        {{ $countryCode := partial "helpers/get-country-code.html" (dict "code" $lang) }}
-        
-        <!-- Create flag image url -->
-        {{ $flagUrl := printf "/flags/%s.png" $countryCode }}
-        
-        <a href="{{ .Permalink }}"
-           class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
-           title="{{ .Language.LanguageName }}"
-           aria-label="{{ .Language.LanguageName }}">
+    {{ range site.Languages }}
+      {{ $lang := .Lang }}
+      {{ $isCurrent := eq $lang $currentLang }}
+      {{ $countryCode := partial "helpers/get-country-code.html" (dict "code" $lang) }}
+      {{ $flagUrl := printf "/flags/%s.png" $countryCode }}
+      
+      {{ if $isCurrent }}
+        {{/* 現在の言語（薄く表示） */}}
+        <span class="inline-flex items-center text-sm opacity-50" title="{{ .LanguageName }}">
           <img 
             src="{{ $flagUrl }}"
-            alt="{{ .Language.LanguageName }}"
+            alt="{{ .LanguageName }}"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </span>
+      {{ else }}
+        {{/* 対応する翻訳ページを探す */}}
+        {{ $targetUrl := "" }}
+        {{ $translationFound := false }}
+        
+        {{/* .Translationsを使って翻訳を確認 */}}
+        {{ range $currentPage.Translations }}
+          {{ if eq .Lang $lang }}
+            {{ $targetUrl = .RelPermalink }}
+            {{ $translationFound = true }}
+          {{ end }}
+        {{ end }}
+        
+        {{/* 翻訳が見つからない場合は、その言語のホームページにリンク */}}
+        {{ if not $translationFound }}
+          {{ $targetUrl = printf "/%s/" $lang }}
+        {{ end }}
+        
+        <a href="{{ $targetUrl }}"
+           class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
+           title="{{ .LanguageName }}"
+           aria-label="{{ .LanguageName }}"
+           hreflang="{{ $lang }}">
+          <img 
+            src="{{ $flagUrl }}"
+            alt="{{ .LanguageName }}"
             width="24"
             height="18"
             class="rounded"
           >
         </a>
       {{ end }}
-      
-      <!-- Also show current language -->
-      {{ $currentLang := $currentPage.Language.Lang }}
-      {{ $countryCode := partial "helpers/get-country-code.html" (dict "code" $currentLang) }}
-      {{ $flagUrl := printf "/flags/%s.png" $countryCode }}
-      <span class="inline-flex items-center text-sm opacity-50" title="{{ $currentPage.Language.LanguageName }}">
-        <img 
-          src="{{ $flagUrl }}"
-          alt="{{ $currentPage.Language.LanguageName }}"
-          width="24"
-          height="18"
-          class="rounded"
-        >
-      </span>
     {{ end }}
   </div>
 </div>

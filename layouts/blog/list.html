@@ -1,10 +1,9 @@
 {{ define "main" }}
 <div class="bg-white dark:bg-gray-900 py-12 sm:py-16 lg:py-20">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <!-- 言語セレクターとパンくずリスト -->
-    <div class="mb-8 flex items-center justify-between max-w-5xl mx-auto">
-      <!-- パンくずリスト -->
-      <nav class="text-sm hidden sm:block flex-1">
+    <!-- パンくずリスト -->
+    <div class="mb-8 max-w-5xl mx-auto">
+      <nav class="text-sm hidden sm:block">
         <ol class="flex items-center space-x-2 text-gray-500">
           <li class="flex items-center">
             <a href="/{{ .Language.Lang }}/" class="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center">
@@ -15,11 +14,6 @@
           <li class="text-gray-900 dark:text-white">{{ i18n "blog_title" }}</li>
         </ol>
       </nav>
-
-      <!-- 言語セレクター -->
-      <div class="flex-shrink-0">
-        {{ partial "components/navigation/language-selector.html" . }}
-      </div>
     </div>
 
     <!-- ヘッダーセクション -->

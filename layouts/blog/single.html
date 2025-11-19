@@ -3,10 +3,10 @@
   <!-- ヘッダーセクション -->
   <header class="py-8 sm:py-12">
     <div class="mx-auto max-w-5xl">
-      <!-- 言語セレクターとパンくずリストのコンテナ -->
-      <div class="mb-6 flex items-center justify-between">
+      <!-- パンくずリスト -->
+      <div class="mb-6">
         <!-- パンくずリスト（スマホでは非表示） -->
-        <nav class="text-sm hidden sm:block flex-1">
+        <nav class="text-sm hidden sm:block">
           <ol class="flex items-center space-x-2 text-gray-500">
             <li class="flex items-center">
               <a href="/{{ .Language.Lang }}/" class="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center">
@@ -19,11 +19,6 @@
             <li class="text-gray-900 dark:text-white truncate max-w-xs">{{ .Title }}</li>
           </ol>
         </nav>
-
-        <!-- 言語セレクター -->
-        <div class="flex-shrink-0">
-          {{ partial "components/navigation/language-selector.html" . }}
-        </div>
       </div>
 
       <!-- タイトル -->
