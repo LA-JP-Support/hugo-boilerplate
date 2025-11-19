@@ -133,6 +133,10 @@ copy_code: "Copy code"
 copy_success: "Copied!"
 copy_error: "Copy error"
 
+# Blog page translations
+blog_title: "Blog"
+related_posts: "Related Posts"
+
 # Promotional offers
 promo_offer: "Black Friday"
 promo_offer_in_menu: "-75% OFF"
