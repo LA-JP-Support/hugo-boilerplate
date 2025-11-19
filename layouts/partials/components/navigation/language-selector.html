@@ -11,7 +11,13 @@
   3. Nothing if neither is available or the site is monolingual
 */}}
 
-{{ $currentPage := .Page }}
+{{ $currentPage := . }}
+{{ if reflect.IsMap . }}
+  {{ $currentPage = . }}
+{{ else }}
+  {{ $currentPage = .Page }}
+{{ end }}
+
 {{ $filePath := "" }}
 {{ if $currentPage.File }}
   {{ $filePath = $currentPage.File.Path }}
@@ -53,9 +59,9 @@
           </a>
         {{ end }}
       {{ end }}
-    {{ else if .Translations }}
+    {{ else if $currentPage.Translations }}
       <!-- Use page translations when available -->
-      {{ range .Translations }}
+      {{ range $currentPage.Translations }}
         {{ $lang := .Language.Lang }}
         
         <!-- Get country code for flag -->
