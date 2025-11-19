@@ -1,0 +1,14 @@
+# Language configuration for the website
+# This file defines all available languages and their properties
+
+[languages.ja]
+languageName = "日本語"
+languageCode = "ja"
+contentDir = "content/ja"
+weight = 1
+
+[languages.en]
+languageName = "English"
+languageCode = "en"
+contentDir = "content/en"
+weight = 2

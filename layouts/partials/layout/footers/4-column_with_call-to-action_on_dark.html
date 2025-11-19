@@ -178,8 +178,14 @@
       </div>
     </div>
     <div class="language-selector mt-12 border-t {{ $borderColor }} pt-8 md:flex md:items-center md:justify-between">
-      <p class="text-sm/6 font-semibold {{ $headingColor }} mb-4">{{ $languageSelectorTitle }}</p>
-      {{ partial "components/navigation/language-selector.html" $currentPage }}
+      <div>
+        <p class="text-sm/6 font-semibold {{ $headingColor }} mb-4">{{ $languageSelectorTitle }}</p>
+        {{ if $currentPage }}
+          {{ partial "components/navigation/language-selector.html" $currentPage }}
+        {{ else }}
+          {{ partial "components/navigation/language-selector.html" . }}
+        {{ end }}
+      </div>
     </div>
     <div class="mt-12 border-t {{ $borderColor }} pt-8 md:flex md:items-center md:justify-between">
       <div class="flex gap-x-6 md:order-2">

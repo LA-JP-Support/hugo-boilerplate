@@ -12,16 +12,6 @@
 */}}
 
 {{ $currentPage := . }}
-{{ if reflect.IsMap . }}
-  {{ $currentPage = . }}
-{{ else }}
-  {{ $currentPage = .Page }}
-{{ end }}
-
-{{ $filePath := "" }}
-{{ if $currentPage.File }}
-  {{ $filePath = $currentPage.File.Path }}
-{{ end }}
 
 {{ $hasMultipleLanguages := gt (len site.Home.AllTranslations) 1 }}
 {{ $useAllLanguagesData := isset site.Data "all_languages" }}
@@ -39,27 +29,36 @@
           {{ $flagUrl := printf "/flags/%s.png" $countryCode }}
 
           <!-- Get language URL -->
-          {{ $href := partial "helpers/get-language-url.html" (dict 
-              "code" $code 
-              "langData" $langData 
-              "currentPage" $currentPage 
-              "filePath" $filePath
-          ) }}
+          {{ $href := "/" }}
+          {{ if $currentPage }}
+            {{ if $currentPage.Permalink }}
+              {{ $href = partial "helpers/get-language-url.html" (dict 
+                  "code" $code 
+                  "langData" $langData 
+                  "currentPage" $currentPage 
+              ) }}
+            {{ else }}
+              {{ $href = printf "/%s/" $code }}
+            {{ end }}
+          {{ else }}
+            {{ $href = printf "/%s/" $code }}
+          {{ end }}
 
           <a href="{{ $href }}"
              class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
              title="{{ $langData.languageName }}"
              aria-label="{{ $langData.languageName }}">
-            {{ partial "components/media/lazyimg.html" (dict 
-                "src" $flagUrl
-                "alt" $langData.languageName
-                "width" 24
-                "height" 18
-            ) }}
+            <img 
+              src="{{ $flagUrl }}"
+              alt="{{ $langData.languageName }}"
+              width="24"
+              height="18"
+              class="rounded"
+            >
           </a>
         {{ end }}
       {{ end }}
-    {{ else if $currentPage.Translations }}
+    {{ else if and $currentPage $currentPage.Translations }}
       <!-- Use page translations when available -->
       {{ range $currentPage.Translations }}
         {{ $lang := .Language.Lang }}
@@ -70,26 +69,33 @@
         <!-- Create flag image url -->
         {{ $flagUrl := printf "/flags/%s.png" $countryCode }}
         
-        <!-- Get language URL -->
-        {{ $href := partial "helpers/get-language-url.html" (dict 
-            "code" $lang 
-            "currentPage" $currentPage 
-            "filePath" $filePath
-            "permalink" .Permalink
-        ) }}
-        
-        <a href="{{ $href }}"
+        <a href="{{ .Permalink }}"
            class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
            title="{{ .Language.LanguageName }}"
            aria-label="{{ .Language.LanguageName }}">
-          {{ partial "components/media/lazyimg.html" (dict 
-              "src" $flagUrl
-              "alt" .Language.LanguageName
-              "width" 24
-              "height" 18
-          ) }}
+          <img 
+            src="{{ $flagUrl }}"
+            alt="{{ .Language.LanguageName }}"
+            width="24"
+            height="18"
+            class="rounded"
+          >
         </a>
       {{ end }}
+      
+      <!-- Also show current language -->
+      {{ $currentLang := $currentPage.Language.Lang }}
+      {{ $countryCode := partial "helpers/get-country-code.html" (dict "code" $currentLang) }}
+      {{ $flagUrl := printf "/flags/%s.png" $countryCode }}
+      <span class="inline-flex items-center text-sm opacity-50" title="{{ $currentPage.Language.LanguageName }}">
+        <img 
+          src="{{ $flagUrl }}"
+          alt="{{ $currentPage.Language.LanguageName }}"
+          width="24"
+          height="18"
+          class="rounded"
+        >
+      </span>
     {{ end }}
   </div>
 </div>

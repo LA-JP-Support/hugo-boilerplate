@@ -82,14 +82,37 @@
   </div>
 
   <!-- 関連記事 -->
-  {{ $related := .Site.RegularPages.Related . | first 3 }}
-  {{ if $related }}
+  {{ $currentPage := . }}
+  {{ $relatedPages := slice }}
+  
+  {{/* まずRelated機能で関連記事を探す */}}
+  {{ $related := .Site.RegularPages.Related . }}
+  {{ range $related }}
+    {{ if and (eq .Language.Lang $currentPage.Language.Lang) (ne .Permalink $currentPage.Permalink) }}
+      {{ $relatedPages = $relatedPages | append . }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* 関連記事が3件未満の場合、同じ言語の他の記事を追加 */}}
+  {{ if lt (len $relatedPages) 3 }}
+    {{ $langPages := where .Site.RegularPages "Language.Lang" .Language.Lang }}
+    {{ range $langPages }}
+      {{ if and (ne .Permalink $currentPage.Permalink) (not (in $relatedPages .)) }}
+        {{ $relatedPages = $relatedPages | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* 最初の3件を表示 */}}
+  {{ $relatedPages = first 3 $relatedPages }}
+  
+  {{ if $relatedPages }}
     <div class="mt-10 sm:mt-14 border-t border-gray-200 dark:border-gray-700 pt-8 sm:pt-10">
       <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 sm:mb-8">
         {{ i18n "related_posts" }}
       </h2>
       <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        {{ range $related }}
+        {{ range $relatedPages }}
           <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
             {{ if .Params.image }}
               <div class="relative h-48 sm:h-52 w-full overflow-hidden">
@@ -106,15 +129,29 @@
                   {{ .Title }}
                 </a>
               </h3>
-              <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 line-clamp-3 flex-1">
-                {{ .Summary }}
-              </p>
+              {{ if .Description }}
+                {{ $desc := .Description }}
+                {{ if gt (len $desc) 100 }}
+                  {{ $desc = substr $desc 0 100 | printf "%s..." }}
+                {{ end }}
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  {{ $desc }}
+                </p>
+              {{ else if .Summary }}
+                {{ $summary := .Summary }}
+                {{ if gt (len $summary) 100 }}
+                  {{ $summary = substr $summary 0 100 | printf "%s..." }}
+                {{ end }}
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  {{ $summary }}
+                </p>
+              {{ end }}
               <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
                 <a 
                   href="{{ .Permalink }}" 
                   class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
                 >
-                  {{ if eq $.Language.Lang "ja" }}続きを読む{{ else }}Read more{{ end }}
+                  {{ if eq $currentPage.Language.Lang "ja" }}続きを読む{{ else }}Read more{{ end }}
                   <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                   </svg>
