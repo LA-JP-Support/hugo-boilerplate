@@ -3,7 +3,7 @@
 Smart Tooltip Syntax Converter
 hugo-boilerplate用
 
-**用語**（説明：詳細な説明文） パターンを
+用語（説明：詳細な説明文） パターンまたは **用語**（説明：詳細な説明文） パターンを
 {{< tooltip text="詳細な説明文" >}}用語{{< /tooltip >}} に変換
 
 使用方法:
@@ -23,10 +23,11 @@ from datetime import datetime
 class TooltipConverter:
     """ツールチップ構文変換クラス"""
     
-    # マッチパターン: **用語**（説明：詳細な説明文）
-    # グループ1: 用語部分
-    # グループ2: 説明部分
-    PATTERN = r'\*\*([^*]+)\*\*（説明：([^）]+)）'
+    # マッチパターン: 
+    # パターン1: **用語**（説明：詳細な説明文）
+    # パターン2: 用語（説明：詳細な説明文）
+    PATTERN_BOLD = r'\*\*([^*]+)\*\*[（(]説明[：:]\s*([^)）]+)[)）]'
+    PATTERN_NORMAL = r'([^\s（(]+)[（(]説明[：:]\s*([^)）]+)[)）]'
     
     def __init__(self, create_backup=True, verbose=True):
         self.create_backup = create_backup
@@ -62,7 +63,11 @@ class TooltipConverter:
             conversion_count += 1
             return f'{{{{< tooltip text="{explanation_escaped}" >}}}}{term}{{{{< /tooltip >}}}}'
         
-        converted_text = re.sub(self.PATTERN, replace_match, text)
+        # まず太字パターンを変換
+        converted_text = re.sub(self.PATTERN_BOLD, replace_match, text)
+        
+        # 次に通常パターンを変換
+        converted_text = re.sub(self.PATTERN_NORMAL, replace_match, converted_text)
         
         return converted_text, conversion_count
     
@@ -153,7 +158,7 @@ class TooltipConverter:
 def main():
     """メイン処理"""
     parser = argparse.ArgumentParser(
-        description='ツールチップ構文を変換（**用語**（説明：詳細） → ショートコード形式）',
+        description='ツールチップ構文を変換（用語（説明：詳細） → ショートコード形式）',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用例:
