@@ -40,6 +40,17 @@ defaultContentLanguageInSubdir = true
     anchor = "smart"
     bgColor = "#ffffff"
     webpQuality = 85
+  
+  # ========================================
+  # ツールチップシステム
+  # ========================================
+  [params.tooltip]
+    enabled = true
+    termColorClass = "text-primary-600 dark:text-primary-400"
+    bgColorClass = "bg-gray-900 dark:bg-gray-800"
+    textColorClass = "text-white"
+    mobilePosition = "center"
+    debug = false
 
 [languages]
   [languages.ja]

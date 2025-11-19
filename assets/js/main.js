@@ -10,7 +10,7 @@ import './cookie-consent.js';
 import './copyToClipboard.js';
 // Import typewriter effect functionality
 import './typewriter.js';
-// Import tooltip functionality
-import './tooltips.js';
+// Import tooltip functionality (Smart Tooltip System)
+import './tooltip.js';
 // Import dynamic font sizing functionality
 import './dynamic-font-sizing.js';

@@ -1,0 +1,152 @@
+/**
+ * Smart Tooltip System - Tailwind CSS Integration
+ * hugo-boilerplate用に最適化
+ * 
+ * このファイルはassets/css/main.cssからインポートされます
+ */
+
+/* ========================================
+   ツールチップの基本設定
+   ======================================== */
+
+/* ツールチップのアニメーション強化 */
+.tooltip-wrapper:hover .tooltip,
+.tooltip-wrapper:focus .tooltip,
+.tooltip-wrapper.active .tooltip {
+  @apply visible opacity-100;
+}
+
+/* フォーカス時のアウトライン */
+.tooltip-wrapper:focus {
+  @apply outline-none;
+}
+
+.tooltip-wrapper:focus .tooltip-term {
+  @apply ring-2 ring-primary-500 ring-offset-2 rounded-sm;
+}
+
+/* ========================================
+   モバイル専用スタイル
+   ======================================== */
+
+/* モバイルでアクティブ時 */
+@media (max-width: 768px) {
+  .tooltip-wrapper.active .tooltip-mobile {
+    @apply opacity-100 visible pointer-events-auto;
+    animation: tooltipFadeIn 0.3s ease-out;
+  }
+  
+  /* タップ時の視覚フィードバック */
+  .tooltip-wrapper:active .tooltip-term {
+    @apply opacity-70;
+  }
+}
+
+/* ========================================
+   アクセシビリティ対応
+   ======================================== */
+
+/* モーション削減設定を尊重 */
+@media (prefers-reduced-motion: reduce) {
+  .tooltip,
+  .tooltip-mobile {
+    @apply transition-none;
+    animation: none !important;
+  }
+  
+  .tooltip-wrapper:hover .tooltip,
+  .tooltip-wrapper:focus .tooltip {
+    @apply transform-none;
+  }
+}
+
+/* ハイコントラストモード */
+@media (prefers-contrast: high) {
+  .tooltip-term {
+    @apply underline decoration-solid;
+  }
+  
+  .tooltip,
+  .tooltip-mobile {
+    @apply border-2 border-white;
+  }
+}
+
+/* ========================================
+   印刷時の表示
+   ======================================== */
+
+@media print {
+  .tooltip,
+  .tooltip-mobile {
+    @apply static block opacity-100 visible bg-transparent text-inherit p-0 shadow-none;
+    transform: none !important;
+  }
+  
+  .tooltip::before {
+    content: ' (';
+  }
+  
+  .tooltip::after {
+    content: ')';
+    @apply border-none;
+  }
+  
+  .tooltip-mobile {
+    @apply hidden;
+  }
+}
+
+/* ========================================
+   アニメーション定義
+   ======================================== */
+
+@keyframes tooltipFadeIn {
+  from {
+    @apply opacity-0 scale-95;
+  }
+  to {
+    @apply opacity-100 scale-100;
+  }
+}
+
+/* ========================================
+   デバッグモード（開発時のみ）
+   ======================================== */
+
+body.tooltip-debug .tooltip-wrapper {
+  @apply outline-dashed outline-2 outline-red-500;
+}
+
+body.tooltip-debug .tooltip,
+body.tooltip-debug .tooltip-mobile {
+  @apply outline-dashed outline-2 outline-blue-500;
+}
+
+/* ========================================
+   ダークモード対応の微調整
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  .tooltip-term {
+    @apply text-primary-400;
+  }
+}
+
+/* ========================================
+   レスポンシブブレークポイントの調整
+   ======================================== */
+
+/* タブレット横向き */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .tooltip {
+    @apply max-w-sm;
+  }
+}
+
+/* 小型スマートフォン */
+@media (max-width: 380px) {
+  .tooltip-mobile {
+    @apply inset-x-3 text-sm px-3 py-2;
+  }
+}
