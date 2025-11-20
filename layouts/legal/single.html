@@ -5,8 +5,8 @@
 <!-- Main Content - Optimized for Legal Documents -->
 <div class="bg-white py-4 lg:py-6">
   <div class="wrapper">
-    <!-- Much narrower max-width (550px) for better readability -->
-    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <!-- Wider max-width (about 768px) for better readability -->
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <!-- Custom styling for compact legal document layout -->
       <style>
         .legal-content {
@@ -21,6 +21,15 @@
         
         .legal-content > :first-child {
           margin-top: 0;
+        }
+        
+        /* Page title styling */
+        .legal-content h1 {
+          font-size: 2.5rem;
+          font-weight: 800;
+          margin-top: 0;
+          margin-bottom: 1.5rem;
+          line-height: 1.2;
         }
         
         .legal-content h2 {
@@ -95,6 +104,18 @@
         
         .legal-content a:hover {
           color: #1d4ed8;
+        }
+        
+        /* Right-aligned footer section - last hr and following paragraphs */
+        .legal-content > hr:last-of-type,
+        .legal-content > hr:last-of-type ~ * {
+          text-align: right;
+        }
+        
+        .legal-content > hr:last-of-type ~ p {
+          margin-top: 0.3rem;
+          font-size: 0.9rem;
+          line-height: 1.6;
         }
       </style>
       
