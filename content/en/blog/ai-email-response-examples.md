@@ -78,8 +78,11 @@ Based on specific numbers like "approximately 50 FAQ items, approximately 100 ma
 **Natural and Polite Business Document**
 Rather than template-like standard text, it generated polite and specific responses in natural Japanese appropriate to the situation.
 
-![Actual Email Sample](/images/blog/AI-Email-Auto-Response-Generator.png)
-*Actual Email Sample*
+<a href="/files/sample-article.html" target="_blank" rel="noopener">
+  <img src="/images/blog/AI-Email-Auto-Response-Generator.png" alt="Actual Email Sample" width="300" />
+</a>
+
+*Actual Email Sample (Click for details)*
 
 ### 【Example 2】Sincere Response to Complaint Handling
 

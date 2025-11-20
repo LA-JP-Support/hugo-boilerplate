@@ -78,8 +78,11 @@ AIは、この複数の質問を正確に理解し、以下のような構造化
 **自然で丁寧なビジネス文書**
 テンプレート的な定型文ではなく、状況に応じた自然な日本語で、丁寧かつ具体的な回答を生成しています。
 
-![実際のメールサンプル](/images/blog/AI-Email-Auto-Response-Generator.png)
-*実際のメールサンプル*
+<a href="/files/sample-article.html" target="_blank" rel="noopener">
+  <img src="/images/blog/AI-Email-Auto-Response-Generator.png" alt="実際のメールサンプル" width="300" />
+</a>
+
+*実際のメールサンプル（クリックで詳細表示）*
 
 ### 【実例2】クレーム対応での誠意ある返信
 
