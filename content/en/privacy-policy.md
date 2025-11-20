@@ -112,3 +112,9 @@ Personal Information Inquiry Department
 11F, Aoyama Paracio Tower, 3-6-7 Kitaaoyama, Minato Ward, Tokyo 107-0061, Japan
 
 Please use the inquiry button at the bottom right of the page to contact us.
+
+---
+
+Established: September 9, 2025
+Last Updated: September 11, 2025
+Interwork Corporation
