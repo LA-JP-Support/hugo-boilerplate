@@ -1,0 +1,110 @@
+{{ define "main" }}
+
+{{ partial "breadcrumbs_default.html" . }}
+
+<!-- Main Content - Optimized for Legal Documents -->
+<div class="bg-white py-4 lg:py-6">
+  <div class="wrapper">
+    <!-- Much narrower max-width (550px) for better readability -->
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+      <!-- Custom styling for compact legal document layout -->
+      <style>
+        .legal-content {
+          font-size: 0.95rem;
+          line-height: 1.5;
+        }
+        
+        .legal-content > * {
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+        }
+        
+        .legal-content > :first-child {
+          margin-top: 0;
+        }
+        
+        .legal-content h2 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-top: 1.25rem;
+          margin-bottom: 0.5rem;
+          line-height: 1.3;
+        }
+        
+        .legal-content h3 {
+          font-size: 1.125rem;
+          font-weight: 600;
+          margin-top: 1rem;
+          margin-bottom: 0.4rem;
+          line-height: 1.3;
+        }
+        
+        .legal-content p {
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+          line-height: 1.6;
+        }
+        
+        .legal-content ul,
+        .legal-content ol {
+          margin-top: 0.3rem;
+          margin-bottom: 0.5rem;
+          padding-left: 1.25rem;
+        }
+        
+        .legal-content li {
+          margin-top: 0.2rem;
+          margin-bottom: 0.2rem;
+          line-height: 1.5;
+        }
+        
+        .legal-content li + li {
+          margin-top: 0.3rem;
+        }
+        
+        .legal-content hr {
+          margin-top: 0.75rem;
+          margin-bottom: 0.75rem;
+          border: none;
+          border-top: 1px solid #e5e7eb;
+        }
+        
+        .legal-content table {
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+          font-size: 0.9rem;
+        }
+        
+        .legal-content table td,
+        .legal-content table th {
+          padding: 0.4rem;
+        }
+        
+        .legal-content strong {
+          font-weight: 600;
+        }
+        
+        .legal-content em {
+          font-style: italic;
+        }
+        
+        .legal-content a {
+          color: #2563eb;
+          text-decoration: underline;
+        }
+        
+        .legal-content a:hover {
+          color: #1d4ed8;
+        }
+      </style>
+      
+      <div class="legal-content">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ partial "cta.html" . }}
+
+{{ end }}
