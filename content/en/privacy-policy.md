@@ -115,6 +115,10 @@ Please use the inquiry button at the bottom right of the page to contact us.
 
 ---
 
-Established: September 9, 2025
+**Establishment and Update History**
+
+Date Established: September 9, 2025
+
 Last Updated: September 11, 2025
+
 Interwork Corporation
