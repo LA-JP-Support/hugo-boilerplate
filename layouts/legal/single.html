@@ -25,7 +25,7 @@
         
         /* Page title styling */
         .legal-content h1 {
-          font-size: 2.5rem;
+          font-size: 3rem;
           font-weight: 800;
           margin-top: 0;
           margin-bottom: 1.5rem;
@@ -33,7 +33,7 @@
         }
         
         .legal-content h2 {
-          font-size: 1.5rem;
+          font-size: 1.75rem;
           font-weight: 700;
           margin-top: 1.25rem;
           margin-bottom: 0.5rem;
@@ -52,6 +52,7 @@
           margin-top: 0;
           margin-bottom: 0.5rem;
           line-height: 1.6;
+          word-break: break-word;
         }
         
         .legal-content ul,
@@ -108,21 +109,17 @@
         
         /* Right-aligned footer section */
         .legal-content > hr:last-of-type {
-          margin-top: 1.5rem;
-          margin-bottom: 1rem;
-        }
-        
-        /* Title (strong) stays left-aligned */
-        .legal-content > hr:last-of-type + p strong {
-          text-align: left;
+          margin-top: 2rem;
+          margin-bottom: 1.5rem;
         }
         
         /* All paragraphs after last hr are right-aligned */
         .legal-content > hr:last-of-type ~ p {
           text-align: right;
-          margin: 0.3rem 0;
+          margin: 0.5rem 0;
           font-size: 0.9rem;
-          line-height: 1.6;
+          line-height: 1.8;
+          display: block;
         }
       </style>
       
