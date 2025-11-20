@@ -17,7 +17,6 @@ When operations are left to individual staff members or managed manually, the ri
 > According to domestic and international surveys, delayed customer service on social media leads to decreased customer satisfaction and increased customer churn to competitors.
 
 ## Overview of Centralized Social Media Management
-
 {{< tooltip text="Managing messages, comments, and response history from multiple social media platforms in a single system" >}}Centralized social media management{{< /tooltip >}} is a system that consolidates and manages messages, comments, and response history exchanged across multiple social media platforms in one unified system.
 
 ### Implementation Benefits

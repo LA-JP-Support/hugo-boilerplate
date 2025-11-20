@@ -12,11 +12,7 @@ image: "/images/blog/ai-customer-support-2025-guide.png"
 
 AI customer support is a system that uses artificial intelligence to automatically respond to customer inquiries. Unlike human agents, AI can provide support 24/7, 365 days a year. Key features include instant responses and multilingual capabilities.
 
-This system utilizes several technologies.
-
-{{< tooltip text="Technology that enables AI to understand and respond to human language" >}}Natural Language Processing (NLP){{< /tooltip >}} helps AI understand and respond to human language.
-
-{{< tooltip text="Mechanism that enables AI to expand and improve its knowledge" >}}Machine Learning{{< /tooltip >}} is a mechanism that allows AI to expand and improve its knowledge. By integrating with databases, AI can reference vast amounts of information. Voice and image recognition capabilities enable handling of non-text inputs.
+This system utilizes several technologies.{{< tooltip text="Technology that enables AI to understand and respond to human language" >}}Natural Language Processing (NLP){{< /tooltip >}} helps AI understand and respond to human language.{{< tooltip text="Mechanism that enables AI to expand and improve its knowledge" >}}Machine Learning{{< /tooltip >}} is a mechanism that allows AI to expand and improve its knowledge. By integrating with databases, AI can reference vast amounts of information. Voice and image recognition capabilities enable handling of non-text inputs.
 
 AI customer support includes various forms such as automated FAQ responses, AI chatbots, and virtual assistants. For example, tools used in SmartWeb's construction services such as{{< tooltip text="Globally used customer support and helpdesk software" >}}LiveAgent{{< /tooltip >}}and{{< tooltip text="Chatbot platform leveraging cutting-edge generative AI technology" >}}FlowHunt{{< /tooltip >}} are AI chatbots that use company manuals and FAQs as knowledge bases to provide quick and accurate answers to user questions.
 
@@ -27,7 +23,6 @@ The origins of AI customer support trace back to the 1960s chatbot "ELIZA." Subs
 From 2016, {{< tooltip text="AI services available via the internet" >}}Cloud AI{{< /tooltip >}} and{{< tooltip text="AI technology that automatically generates text and images" >}}Generative AI{{< /tooltip >}} became available, evolving AI customer support as follows:
 
 ### Proliferation of {{< tooltip text="AI capable of handling multiple formats including text, voice, and images" >}}Multimodal AI{{< /tooltip >}}
-
 {{< tooltip text="AI capable of handling multiple formats including text, voice, and images" >}}Multimodal AI{{< /tooltip >}} that can analyze various types of information including text, voice, images, and videos is emerging. This allows users to make inquiries not only through words but also using images and voice. For example, in 2025, major airlines and e-commerce companies have adopted this technology.
 
 ### Real-time Response and Emotion Analysis
@@ -40,9 +35,7 @@ AI can automatically update FAQ and manual content, constantly maintaining optim
 
 ## Global Adoption and Standardization
 
-AI customer support is spreading among companies worldwide, including in Europe, America, and Asia. As of 2025, not only large enterprises but also SMEs and startups are adopting AI support. AI-powered support is used to enhance
-
-{{< tooltip text="Abbreviation for Customer Experience, the overall experience customers have with a company" >}}Customer Experience (CX){{< /tooltip >}} and strengthen corporate competitiveness.
+AI customer support is spreading among companies worldwide, including in Europe, America, and Asia. As of 2025, not only large enterprises but also SMEs and startups are adopting AI support. AI-powered support is used to enhance{{< tooltip text="Abbreviation for Customer Experience, the overall experience customers have with a company" >}}Customer Experience (CX){{< /tooltip >}} and strengthen corporate competitiveness.
 
 Scientific research shows that AI performance doubles every six months. Customers are also increasingly expecting AI-powered support.
 
@@ -50,9 +43,7 @@ Scientific research shows that AI performance doubles every six months. Customer
 
 ### Global Market Size and Growth Rate
 
-In 2025, the AI customer support market is rapidly expanding worldwide. The AI chatbot market size is predicted to reach $10-15 billion. It was estimated at $8.3 billion in 2024, showing significant year-over-year growth.
-
-{{< tooltip text="Compound Annual Growth Rate, an indicator of annual growth" >}}CAGR{{< /tooltip >}} is high at 24-30%, with projections to grow to approximately $47 billion by 2029.
+In 2025, the AI customer support market is rapidly expanding worldwide. The AI chatbot market size is predicted to reach $10-15 billion. It was estimated at $8.3 billion in 2024, showing significant year-over-year growth.{{< tooltip text="Compound Annual Growth Rate, an indicator of annual growth" >}}CAGR{{< /tooltip >}} is high at 24-30%, with projections to grow to approximately $47 billion by 2029.
 
 While North America and Europe lead this field, adoption is also progressing in emerging regions such as Asia, the Middle East, and South America. Not only large enterprises but also SMEs are widely adopting the technology. Some surveys indicate that by 2025, approximately 60% of companies in developed countries will have adopted customer support AI.
 
@@ -82,9 +73,7 @@ Salesforce is revolutionizing the traditional chatbot concept with{{< tooltip te
 
 ### 2. Intuit: AI-powered Financial Support Automation
 
-Intuit leveraged Amazon Connect to build an integrated customer contact center. During tax season, they scale from 6,000 to 11,000 agents according to demand, completing deployment in 2 weeks instead of the traditional 6 months. They process 275 million minutes of customer interactions annually, achieving accurate call transcription and sentiment analysis through
-
-{{< tooltip text="Machine learning-powered call analysis service" >}}Contact Lens for Amazon Connect{{< /tooltip >}}.
+Intuit leveraged Amazon Connect to build an integrated customer contact center. During tax season, they scale from 6,000 to 11,000 agents according to demand, completing deployment in 2 weeks instead of the traditional 6 months. They process 275 million minutes of customer interactions annually, achieving accurate call transcription and sentiment analysis through{{< tooltip text="Machine learning-powered call analysis service" >}}Contact Lens for Amazon Connect{{< /tooltip >}}.
 
 **Reference:**
 - [Intuit Case Study - Amazon Connect Implementation](https://aws.amazon.com/solutions/case-studies/intuit-contact-center-case-study/)
@@ -132,9 +121,7 @@ These cases demonstrate that **AI customer support can deliver sufficient result
 
 Globally successful AI customer support companies emphasize not simple automation but individualized responses based on each customer's situation and past usage history. For example, in major companies, AI analyzes past inquiry content and purchase history in real-time to provide optimal responses and suggestions.
 
-International research shows that contextual understanding and individualized responses to enhance customer experience directly contribute to improved customer satisfaction and
-
-{{< tooltip text="Total profit a single customer brings to a company" >}}LTV (Lifetime Value){{< /tooltip >}}.
+International research shows that contextual understanding and individualized responses to enhance customer experience directly contribute to improved customer satisfaction and{{< tooltip text="Total profit a single customer brings to a company" >}}LTV (Lifetime Value){{< /tooltip >}}.
 
 Some international surveys show that approximately 68% of AI-adopting companies report that "{{< tooltip text="Adjusting services to individual preferences and situations" >}}personalization{{< /tooltip >}} increased repurchase rates."
 
@@ -156,9 +143,7 @@ Survey results show a scientific trend that "companies with higher AI knowledge 
 
 ### Thorough Security and Privacy Considerations
 
-Data management and security systems compliant with international standards are also items commonly implemented by successful companies.
-
-{{< tooltip text="EU General Data Protection Regulation" >}}GDPR{{< /tooltip >}} and operational design compliant with various countries' personal information protection laws, access rights management, and {{< tooltip text="Converting information into unreadable form to protect it from third parties" >}}data encryption{{< /tooltip >}} strengthen mechanisms to protect customer trust.
+Data management and security systems compliant with international standards are also items commonly implemented by successful companies.{{< tooltip text="EU General Data Protection Regulation" >}}GDPR{{< /tooltip >}} and operational design compliant with various countries' personal information protection laws, access rights management, and {{< tooltip text="Converting information into unreadable form to protect it from third parties" >}}data encryption{{< /tooltip >}} strengthen mechanisms to protect customer trust.
 
 Research shows scientific data that investing in security measures reduced annual customer churn rates by up to 22%.
 

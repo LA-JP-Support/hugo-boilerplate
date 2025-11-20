@@ -85,12 +85,23 @@ class TooltipConverter:
             str: 改行が削除されたテキスト
         """
         # ツールチップの前の不要な改行を削除
-        # パターン: テキスト + 改行 + ツールチップ
-        text = re.sub(r'(\S+)\n\n*(\{\{< tooltip)', r'\1\2', text)
+        # ヘッディング行の場合は 1 行だけ残し、それ以外は直前の行に結合
+        def _join_tooltip(match):
+            start = match.start()
+            source = match.string
+            prev_newline = source.rfind('\n', 0, start)
+            if prev_newline == -1:
+                prev_line = source[:start]
+            else:
+                prev_line = source[prev_newline + 1:start]
+            if prev_line.lstrip().startswith('#'):
+                return '\n' + match.group(1)
+            return match.group(1)
+        text = re.sub(r'\n\s*(\{\{< tooltip)', _join_tooltip, text)
         
         # ツールチップの後の不要な改行を削除
         # パターン: ツールチップ終了 + 改行 + テキスト
-        text = re.sub(r'(\{\{< /tooltip >\}\})\n\n*(\S+)', r'\1\2', text)
+        text = re.sub(r'(\{\{< /tooltip >\}\})\n\s*(\S+)', r'\1\2', text)
         
         return text
     

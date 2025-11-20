@@ -12,7 +12,6 @@ categories: ["Technology"]
 ## Basics and Applications of RAG (Retrieval-Augmented Generation)
 
 ### Basic Structure of RAG
-
 {{< tooltip text="AI technology that searches for and incorporates external information to generate responses based on it" >}}RAG (Retrieval-Augmented Generation){{< /tooltip >}} is a mechanism that combines "retrieval" and "generation". Traditional AI created text and responses using only learned knowledge. RAG searches for necessary information from external sources like databases when questions arrive, then creates answers based on that information.
 
 First, AI understands the question content and retrieves relevant information from search engines or specific databases. Next, using the found information, it creates answers in natural text. This method enables AI to immediately update knowledge and quickly reflect new information.

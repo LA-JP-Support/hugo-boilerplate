@@ -17,7 +17,6 @@ Knowledge bases manage both {{< tooltip text="Knowledge and skills acquired thro
 For example, they are useful in standardizing work procedures, preventing knowledge from being concentrated in specific individuals, and facilitating smooth onboarding of new employees.
 
 ## Differences Between {{< tooltip text="Frequently Asked Questions - a collection of common questions and their answers" >}}FAQ{{< /tooltip >}} and Knowledge Base
-
 {{< tooltip text="Frequently Asked Questions - a collection of common questions and their answers" >}}FAQ{{< /tooltip >}} (Frequently Asked Questions) is content that compiles common questions from users or employees along with their answers. FAQ is positioned as part of a knowledge base.
 
 While FAQ follows a simple format of paired "questions" and "answers," knowledge bases organize a broader range of information including detailed operation guides, business workflows, error response methods, and video explanations. FAQ is designed for quickly finding answers to specific questions, while knowledge bases also accommodate users who want to explore various information independently.
@@ -67,7 +66,6 @@ For efficient operation, utilize templates for Q&A and article creation. For exa
 ## AI-Enhanced Knowledge Base Management and FAQ Automation
 
 ### AI-Powered Automatic Classification and Search Enhancement
-
 {{< tooltip text="Technology that enables computers to make human-like judgments and learning. Can automatically find optimal answers" >}}AI (Artificial Intelligence){{< /tooltip >}} automatically analyzes and classifies large volumes of knowledge base information. Through {{< tooltip text="Technology that enables computers to understand and appropriately process human language" >}}Natural Language Processing (NLP){{< /tooltip >}} technology, even when users search with ambiguous or colloquial expressions, AI instantly displays optimal answers and related FAQs.
 
 For example, generative AI extracts "highly relevant Q&As" from inquiry histories and automatically organizes FAQ structures. This mechanism reduces search time and significantly improves self-resolution rates for employees and customers. This effectiveness has been proven in many domestic and international companies.
@@ -81,7 +79,6 @@ By combining with AI chatbots, optimal answers from the knowledge base can be au
 ## Promoting Knowledge Sharing Through {{< tooltip text="Defined business processes and procedures. Rules that determine who does what and when" >}}Workflow{{< /tooltip >}} and {{< tooltip text="A system that immediately registers knowledge gained in the field into a database for organization-wide sharing. A knowledge-centered service operation method" >}}KCS{{< /tooltip >}}
 
 ### KCS Fundamentals and Knowledge Sharing Concepts
-
 {{< tooltip text="A system that immediately registers knowledge gained in the field into a database for organization-wide sharing. A knowledge-centered service operation method" >}}KCS (Knowledge-Centered Service){{< /tooltip >}} is an operational model that immediately reflects field-acquired knowledge into knowledge bases for organization-wide utilization.
 
 KCS emphasizes the concept that "organizations are strengthened through knowledge accumulation and sharing." For example, know-how and troubleshooting methods acquired during work are registered in the knowledge base on the spot. This prevents information silos and enables everyone to utilize new and accurate information.

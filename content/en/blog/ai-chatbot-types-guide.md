@@ -98,7 +98,6 @@ Like ChatGPT, generative AI automatically creates text from large-scale data. It
 Generative AI is based on large language models. Using the latest models provided by OpenAI, Google, and Anthropic significantly improves the accuracy of natural text generation.
 
 ### RAG (Retrieval-Augmented Generation)
-
 {{< tooltip text="Abbreviation for Retrieval-Augmented Generation. Technology that searches external data and uses that information to generate responses" >}}RAG{{< /tooltip >}} is a type where AI searches external databases or documents and uses that information to create answers. It provides highly reliable responses when the latest information or specialized knowledge is needed.
 
 **Advantages:**
