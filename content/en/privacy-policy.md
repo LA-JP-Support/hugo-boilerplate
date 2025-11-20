@@ -9,8 +9,6 @@ type: "legal"
 draft: false
 ---
 
-## Privacy Policy
-
 Interwork Corporation (hereinafter "the Company") is committed to protecting and appropriately handling the personal information of customers in the website construction and operational support service **SmartWeb** that the Company provides. This policy consolidates the Company's personal information protection policy and matters related to the handling of personal information.
 
 ---
