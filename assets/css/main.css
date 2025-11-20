@@ -457,6 +457,17 @@
     @apply text-brand-text;
   }
   
+  /* リストの行間を調整 */
+  .prose ul li {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
+  
+  .prose ol li {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
+  
   /* ================================================================ */
   /* CUSTOM SCROLLBAR */
   /* ================================================================ */
