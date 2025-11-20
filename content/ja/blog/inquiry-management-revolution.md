@@ -58,7 +58,7 @@ image: "/images/blog/inquiry-management-revolution.png"
 
 ### 驚きの効果：実際の企業での成果
 
-SmartWebでは、実績豊富なチケットシステムである{{< tooltip text="世界中で使われている顧客サポート・ヘルプデスクソフトウェア。メール、チャット、電話、SNSなどの問い合わせを一元管理できる" >}}{{< tooltip text="問い合わせチケット管理システム" >}}LiveAgent{{< /tooltip >}}{{< /tooltip >}}を利用しています。
+SmartWebでは、実績豊富なチケットシステムである{{< tooltip text="世界中で使われている顧客サポート・ヘルプデスクソフトウェア。メール、チャット、電話、SNSなどの問い合わせを一元管理できる" >}}LiveAgent{{< /tooltip >}}を利用しています。
 
 #### LiveAgentを導入した企業の実績：
 

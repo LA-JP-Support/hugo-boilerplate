@@ -58,7 +58,7 @@ Everything gets a number, making it clear at a glance "who," "when," and "what" 
 
 ### Amazing Results: Actual Company Outcomes
 
-At SmartWeb, we use {{< tooltip text="Customer support and help desk software used worldwide. It can centrally manage inquiries from email, chat, phone, SNS, and other channels" >}}{{< tooltip text="Inquiry ticket management system" >}}LiveAgent{{< /tooltip >}}{{< /tooltip >}}, a proven ticket system with extensive track record.
+At SmartWeb, we use {{< tooltip text="Customer support and help desk software used worldwide. It can centrally manage inquiries from email, chat, phone, SNS, and other channels" >}}LiveAgent{{< /tooltip >}}, a proven ticket system with extensive track record.
 
 #### Results from companies that implemented LiveAgent:
 

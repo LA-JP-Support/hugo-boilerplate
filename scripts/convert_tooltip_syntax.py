@@ -69,7 +69,30 @@ class TooltipConverter:
         # 次に通常パターンを変換
         converted_text = re.sub(self.PATTERN_NORMAL, replace_match, converted_text)
         
+        # ツールチップ周辺の不要な改行を削除
+        converted_text = self._cleanup_tooltip_linebreaks(converted_text)
+        
         return converted_text, conversion_count
+    
+    def _cleanup_tooltip_linebreaks(self, text):
+        """
+        ツールチップ周辺の不要な改行を削除
+        
+        Args:
+            text (str): 処理対象のテキスト
+            
+        Returns:
+            str: 改行が削除されたテキスト
+        """
+        # ツールチップの前の不要な改行を削除
+        # パターン: テキスト + 改行 + ツールチップ
+        text = re.sub(r'(\S+)\n\n*(\{\{< tooltip)', r'\1\2', text)
+        
+        # ツールチップの後の不要な改行を削除
+        # パターン: ツールチップ終了 + 改行 + テキスト
+        text = re.sub(r'(\{\{< /tooltip >\}\})\n\n*(\S+)', r'\1\2', text)
+        
+        return text
     
     def convert_file(self, file_path):
         """
