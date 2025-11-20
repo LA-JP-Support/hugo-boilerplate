@@ -28,9 +28,7 @@ The origins of AI customer support trace back to the 1960s chatbot "ELIZA." Subs
 
 {{< tooltip text="Technology enabling AI to perform more complex learning" >}}Deep Learning{{< /tooltip >}} enabled AI to handle more natural conversations and complex questions.
 
-From 2016, {{< tooltip text="AI services available via the internet" >}}Cloud AI{{< /tooltip >}} and
-
-{{< tooltip text="AI technology that automatically generates text and images" >}}Generative AI{{< /tooltip >}} became available, evolving AI customer support as follows:
+From 2016, {{< tooltip text="AI services available via the internet" >}}Cloud AI{{< /tooltip >}} and{{< tooltip text="AI technology that automatically generates text and images" >}}Generative AI{{< /tooltip >}} became available, evolving AI customer support as follows:
 
 ### Proliferation of {{< tooltip text="AI capable of handling multiple formats including text, voice, and images" >}}Multimodal AI{{< /tooltip >}}
 
@@ -66,9 +64,7 @@ While North America and Europe lead this field, adoption is also progressing in 
 
 Multimodal AI is attracting attention as a major technology trend in 2025. Multimodal AI can analyze not only text but also images, voice, and video together. This transforms FAQ and manual searches from "reading and searching" tasks into "conversational" experiences.
 
-Using generative AI enables deeper understanding of individual user intent and question context, allowing for personalized responses. Real-time AI, emotion analysis, and
-
-{{< tooltip text="AI capable of autonomous decision-making and action" >}}Autonomous AI Agents{{< /tooltip >}} are emerging, enabling higher accuracy and more flexible responses than traditional
+Using generative AI enables deeper understanding of individual user intent and question context, allowing for personalized responses. Real-time AI, emotion analysis, and{{< tooltip text="AI capable of autonomous decision-making and action" >}}Autonomous AI Agents{{< /tooltip >}} are emerging, enabling higher accuracy and more flexible responses than traditional
 
 {{< tooltip text="Systems operating according to predetermined rules" >}}Rule-based{{< /tooltip >}} mechanisms.
 
