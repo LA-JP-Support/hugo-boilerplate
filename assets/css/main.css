@@ -521,24 +521,25 @@
   .particle {
     position: absolute;
     border-radius: 50%;
-    background: rgba(99, 102, 241, 0.3);
+    background: rgba(99, 102, 241, 0.7);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
     animation: float linear infinite;
     opacity: 0;
   }
 
   .particle-sm {
-    width: 4px;
-    height: 4px;
+    width: 8px;
+    height: 8px;
   }
 
   .particle-md {
-    width: 6px;
-    height: 6px;
+    width: 12px;
+    height: 12px;
   }
 
   .particle-lg {
-    width: 8px;
-    height: 8px;
+    width: 16px;
+    height: 16px;
   }
 
   @keyframes float {
