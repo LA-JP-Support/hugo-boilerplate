@@ -27,11 +27,12 @@
   /* ================================================================ */
   
   .prose blockquote {
-    @apply not-italic text-sm leading-relaxed;
+    @apply not-italic text-sm;
+    line-height: 1.5;
     border-left: 4px solid #3b82f6;
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    padding: 0.75rem 1.25rem;
-    margin: 0.75rem 0;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
     border-radius: 0.5rem;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     position: relative;
@@ -495,13 +496,36 @@
   
   /* リストの行間を調整 */
   .prose ul li {
-    margin-top: 0.125em;
-    margin-bottom: 0.125em;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
   }
   
   .prose ol li {
-    margin-top: 0.125em;
-    margin-bottom: 0.125em;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+  
+  .prose ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .prose ol {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  /* テキストの行間を調整（日英とも） */
+  .prose {
+    line-height: 1.7;
+  }
+  
+  .prose p {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    line-height: 1.7;
   }
   
   /* 英語コンテンツの行間を調整 */
@@ -510,8 +534,9 @@
   }
   
   .prose[lang="en"] p {
-    margin-top: 0.75em;
-    margin-bottom: 0.75em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.6;
   }
   
   /* ================================================================ */
