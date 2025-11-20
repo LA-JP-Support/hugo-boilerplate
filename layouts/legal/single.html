@@ -106,14 +106,21 @@
           color: #1d4ed8;
         }
         
-        /* Right-aligned footer section - last hr and following paragraphs */
-        .legal-content > hr:last-of-type,
-        .legal-content > hr:last-of-type ~ * {
-          text-align: right;
+        /* Right-aligned footer section */
+        .legal-content > hr:last-of-type {
+          margin-top: 1.5rem;
+          margin-bottom: 1rem;
         }
         
+        /* Title (strong) stays left-aligned */
+        .legal-content > hr:last-of-type + p strong {
+          text-align: left;
+        }
+        
+        /* All paragraphs after last hr are right-aligned */
         .legal-content > hr:last-of-type ~ p {
-          margin-top: 0.3rem;
+          text-align: right;
+          margin: 0.3rem 0;
           font-size: 0.9rem;
           line-height: 1.6;
         }
