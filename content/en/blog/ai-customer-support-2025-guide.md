@@ -18,15 +18,11 @@ This system utilizes several technologies.
 
 {{< tooltip text="Mechanism that enables AI to expand and improve its knowledge" >}}Machine Learning{{< /tooltip >}} is a mechanism that allows AI to expand and improve its knowledge. By integrating with databases, AI can reference vast amounts of information. Voice and image recognition capabilities enable handling of non-text inputs.
 
-AI customer support comes in various forms, including FAQ auto-response, AI chatbots, and virtual assistants. For example, tools used in SmartWeb's construction services such as
-
-{{< tooltip text="Globally used customer support and helpdesk software" >}}LiveAgent{{< /tooltip >}} and {{< tooltip text="Chatbot platform leveraging cutting-edge generative AI technology" >}}FlowHunt{{< /tooltip >}} are AI chatbots that use company manuals and FAQs as knowledge bases to provide quick and accurate answers to user questions.
+AI customer support includes various forms such as automated FAQ responses, AI chatbots, and virtual assistants. For example, tools used in SmartWeb's construction services such as{{< tooltip text="Globally used customer support and helpdesk software" >}}LiveAgent{{< /tooltip >}}and{{< tooltip text="Chatbot platform leveraging cutting-edge generative AI technology" >}}FlowHunt{{< /tooltip >}} are AI chatbots that use company manuals and FAQs as knowledge bases to provide quick and accurate answers to user questions.
 
 ## Evolution of Technology and Its History
 
-The origins of AI customer support trace back to the 1960s chatbot "ELIZA." Subsequently, in the 1990s, rule-based automated response systems became widespread. In the 2010s, advancements in machine learning and
-
-{{< tooltip text="Technology enabling AI to perform more complex learning" >}}Deep Learning{{< /tooltip >}} enabled AI to handle more natural conversations and complex questions.
+The origins of AI customer support trace back to the 1960s chatbot "ELIZA." Subsequently, in the 1990s, rule-based automated response systems became widespread. In the 2010s, advancements in machine learning and{{< tooltip text="Technology enabling AI to perform more complex learning" >}}Deep Learning{{< /tooltip >}} enabled AI to handle more natural conversations and complex questions.
 
 From 2016, {{< tooltip text="AI services available via the internet" >}}Cloud AI{{< /tooltip >}} and{{< tooltip text="AI technology that automatically generates text and images" >}}Generative AI{{< /tooltip >}} became available, evolving AI customer support as follows:
 
@@ -78,9 +74,7 @@ By industry, adoption started early in major companies in e-commerce, aviation, 
 
 ### 1. Salesforce: Autonomous AI with Einstein Service Agent
 
-Salesforce is revolutionizing the traditional chatbot concept with
-
-{{< tooltip text="Fully autonomous AI agent capable of understanding and acting on a wide range of service issues without pre-programming" >}}Einstein Service Agent{{< /tooltip >}} announced in 2024. At Iron Mountain, Einstein AI implementation achieved an 80% close rate for generative AI responses, with 76% of AI-generated answers requiring no editing. Additionally, repeat calls decreased by 8%, and 85% of service agents rated AI responses as "extremely useful, contextual, and accurate."
+Salesforce is revolutionizing the traditional chatbot concept with{{< tooltip text="Fully autonomous AI agent capable of understanding and acting on a wide range of service issues without pre-programming" >}}Einstein Service Agent{{< /tooltip >}} announced in 2024. At Iron Mountain, Einstein AI implementation achieved an 80% close rate for generative AI responses, with 76% of AI-generated answers requiring no editing. Additionally, repeat calls decreased by 8%, and 85% of service agents rated AI responses as "extremely useful, contextual, and accurate."
 
 **References:**
 - [Iron Mountain Case Study - Einstein AI Implementation](https://www.salesforce.com/customer-stories/iron-mountain-ai-faster-automation/)
@@ -111,9 +105,7 @@ Bali Bliss Homestay, a 5-room guesthouse in Bali, Indonesia, faced challenges wi
 
 ### 5. Procosmet (Italy - Hair Care Products Company)
 
-Italian hair care manufacturer Procosmet faced increasing customer support burdens with order cancellations, changes, and refund requests due to business expansion, resulting in delayed responses and long customer wait times. They implemented Tidio's AI chatbot (Lyro AI agent) in their website live chat to automate and expedite inquiry handling. Results included a 23% sales increase, over 100 new leads per month, chatbot-driven newsletter open rates of 18-22%, single campaign
-
-{{< tooltip text="Return on Investment - indicator of profit gained relative to investment" >}}ROI{{< /tooltip >}} exceeding 1000 euros, and customer feedback ratings improving from 3.8 to 4.7 out of 5.
+Italian hair care manufacturer Procosmet faced increasing customer support burdens with order cancellations, changes, and refund requests due to business expansion, resulting in delayed responses and long customer wait times. They implemented Tidio's AI chatbot (Lyro AI agent) in their website live chat to automate and expedite inquiry handling. Results included a 23% sales increase, over 100 new leads per month, chatbot-driven newsletter open rates of 18-22%, single campaign{{< tooltip text="Return on Investment - indicator of profit gained relative to investment" >}}ROI{{< /tooltip >}} exceeding 1000 euros, and customer feedback ratings improving from 3.8 to 4.7 out of 5.
 
 **Reference:**
 - [12 Companies Using Chatbots for AI-Generated Customer Service](https://www.tidio.com/blog/companies-that-use-ai-generated-customer-support/#procosmet)
@@ -160,9 +152,7 @@ Multilingual and diverse channel support is essential for competing in global ma
 
 Successful companies regularly update AI knowledge databases and automatically evolve FAQs and manuals. AI search services' intent prediction search and various AI services' generative AI constantly learn customer question patterns and feedback to provide more accurate responses.
 
-Survey results show a scientific trend that "companies with higher AI knowledge update frequency have higher
-
-{{< tooltip text="Indicator measuring customer attachment to a company or brand" >}}Customer Loyalty Scores{{< /tooltip >}}."
+Survey results show a scientific trend that "companies with higher AI knowledge update frequency have higher{{< tooltip text="Indicator measuring customer attachment to a company or brand" >}}Customer Loyalty Scores{{< /tooltip >}}."
 
 ### Thorough Security and Privacy Considerations
 
