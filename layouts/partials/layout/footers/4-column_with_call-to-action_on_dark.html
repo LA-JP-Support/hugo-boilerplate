@@ -104,9 +104,59 @@
 {{ $showLanguageSelector := .showLanguageSelector | default true }}
 {{ $languageSelectorTitle := .languageSelectorTitle | default (i18n "language_selector_title") }}
 
-<footer class="{{ $bgColor }}">
-  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
-    <div class="mx-auto max-w-2xl text-center">
+<footer style="background-color: #000000;">
+  <!-- CTA Section - Full Width, No Margins -->
+  <div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+    <!-- SVG Flowing Curves with Mouse Interaction -->
+    <svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="curveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      
+      <!-- 15 animated curves -->
+      <path class="curve" data-speed="0.8" stroke="url(#curveGrad1)" stroke-width="2" fill="none" />
+      <path class="curve" data-speed="1.2" stroke="url(#curveGrad2)" stroke-width="2.5" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.6" stroke="url(#curveGrad3)" stroke-width="1.5" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.5" stroke="url(#curveGrad1)" stroke-width="2" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="0.9" stroke="url(#curveGrad2)" stroke-width="3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.3" stroke="url(#curveGrad3)" stroke-width="1.8" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.7" stroke="url(#curveGrad1)" stroke-width="2.2" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.1" stroke="url(#curveGrad2)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="1.4" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="0.85" stroke="url(#curveGrad1)" stroke-width="1.5" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="1.0" stroke="url(#curveGrad2)" stroke-width="2.8" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.25" stroke="url(#curveGrad3)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.95" stroke="url(#curveGrad1)" stroke-width="2.3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.35" stroke="url(#curveGrad2)" stroke-width="1.7" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.75" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.7" />
+    </svg>
+    
+    <!-- Corner accent lines -->
+    <div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    
+    <div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
       <h2 class="text-base/7 font-semibold {{ $ctaTaglineColor }}">{{ $ctaTagline }}</h2>
       <p class="mt-2 text-4xl font-semibold tracking-tight text-balance {{ $ctaHeadingColor }} sm:text-5xl">{{ $ctaHeading }}</p>
       <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty {{ $ctaDescriptionColor }}">{{ $ctaDescription }}</p>
@@ -114,6 +164,94 @@
         <a href="{{ partial "helpers/get-translated-url.html" (dict "url" $ctaButtonUrl) }}" class="rounded-md {{ $ctaButtonBgColor }} px-3.5 py-2.5 text-sm font-semibold {{ $ctaButtonTextColor }} shadow-xs hover:{{ $ctaButtonHoverBgColor }} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">{{ $ctaButtonText }}</a>
       </div>
     </div>
+  </div>
+  
+  <script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+  
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
     <div class="mt-24 border-t {{ $borderColor }} pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
       {{ partial "components/media/lazyimg.html" (dict 
         "src" $logoUrl 
@@ -196,7 +334,20 @@
         </a>
         {{ end }}
       </div>
-      <p class="mt-8 text-sm/6 {{ $copyrightColor }} md:order-1 md:mt-0">{{ $copyrightText | safeHTML }}</p>
+      <p class="mt-8 text-sm/6 {{ $copyrightColor }} md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">{{ $copyrightText | safeHTML }}</p>
     </div>
   </div>
+  
+  <style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
 </footer>

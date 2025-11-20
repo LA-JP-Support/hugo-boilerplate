@@ -96,7 +96,7 @@
     "search" $search
     ) }}
 {{ else if eq $heroType "enhanced" }}
-    {{ partial "sections/hero/simple_centered_enhanced.html" (dict
+    {{ partial "sections/hero/simple_centered.html" (dict
     "heading" $title
     "description" (markdownify $shortDescription)
     "cta" (dict

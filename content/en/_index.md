@@ -33,10 +33,15 @@ features:
   - name: "Fully Responsive"
     description: "Perfect display on all devices - smartphones, tablets, and desktops. Adopts modern and beautiful UI design."
     icon: "M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+
+# CTA Section (Bottom)
+showCTA: true
+ctaHeading: "Ready to get started?"
+ctaDescription: "Start using our services today"
+ctaPrimaryText: "Get started"
+ctaPrimaryURL: "/en/blog/"
+ctaSecondaryText: "Contact us"
+ctaSecondaryURL: "/en/contact/"
 ---
 
-## Coming Soon
-
-We are currently preparing new services. Stay tuned!
-
-Check our [Blog](/en/blog/) for the latest information.
+{{< youtube frmB19r0k58 >}}

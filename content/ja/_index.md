@@ -34,10 +34,15 @@ features:
   - name: "完全レスポンシブ"
     description: "スマートフォン、タブレット、デスクトップ、あらゆるデバイスで完璧に表示されます。モダンで美しいUIデザインを採用しています。"
     icon: "M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+
+# CTA Section (Bottom)
+showCTA: true
+ctaHeading: "今すぐ始めませんか？"
+ctaDescription: "SmartWebで未来を創る"
+ctaPrimaryText: "無料で始める"
+ctaPrimaryURL: "/ja/blog/"
+ctaSecondaryText: "お問い合わせ"
+ctaSecondaryURL: "/ja/contact/"
 ---
 
-## 準備中
-
-現在、新しいサービスの準備を進めています。近日公開予定ですので、お楽しみに！
-
-最新の情報は[ブログ](/ja/blog/)でご確認いただけます。
+{{< youtube frmB19r0k58 >}}
