@@ -1,6 +1,6 @@
 ---
 title: "「あの問い合わせ、誰が対応してたっけ？」がなくなる日 - 企業のための問い合わせ管理革命"
-date: 2025-11-19
+date: 2025-11-20
 draft: false
 image: "/images/blog/inquiry-management-revolution.png"
 ---
