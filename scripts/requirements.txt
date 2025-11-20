@@ -5,6 +5,7 @@ faiss-cpu>=1.7.4
 pyyaml>=5.3
 python-frontmatter
 markdown
+markdownify>=0.12.1
 beautifulsoup4>=4.12.0
 lxml>=4.9.0
 tqdm
