@@ -5,7 +5,7 @@ draft: false
 translationKey: "ai-evaluation-japanese-benchmarks"
 description: "LLMの自動評価手法から日本語評価ベンチマーク、ハルシネーション対策まで、企業のAI導入に必要な知識を完全解説。FlowHunt活用例も紹介。"
 keywords: ["LLM評価", "日本語ベンチマーク", "ハルシネーション", "RAG", "プロンプト最適化", "FlowHunt"]
-image: "/images/blog/ai-evaluation-benchmarks.jpg"
+image: "/images/blog/ai-evaluation-japanese-benchmarks.jpg"
 tags: ["AI技術", "LLM評価", "ベンチマーク"]
 categories: ["テクノロジー"]
 ---

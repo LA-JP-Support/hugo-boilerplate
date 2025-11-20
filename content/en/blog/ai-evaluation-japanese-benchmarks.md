@@ -5,7 +5,7 @@ draft: false
 translationKey: "ai-evaluation-japanese-benchmarks"
 description: "From automatic LLM evaluation methods to Japanese-specific benchmarks and hallucination mitigation strategies—comprehensive knowledge essential for enterprise AI adoption. Includes FlowHunt case studies."
 keywords: ["LLM evaluation", "Japanese benchmarks", "hallucination mitigation", "RAG", "prompt optimization", "FlowHunt"]
-image: "/images/blog/ai-evaluation-benchmarks.jpg"
+image: "/images/blog/ai-evaluation-japanese-benchmarks.jpg"
 tags: ["AI Technology", "LLM Evaluation", "Benchmarks"]
 categories: ["Technology"]
 ---
