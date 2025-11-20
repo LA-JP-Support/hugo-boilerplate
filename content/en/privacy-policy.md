@@ -5,6 +5,7 @@ lastmod: 2025-09-11
 translationKey: "privacy-policy"
 description: "Privacy policy regarding the handling of personal information in the SmartWeb service"
 keywords: ["Privacy Policy", "Personal Information Protection", "SmartWeb", "Interwork"]
+type: "legal"
 draft: false
 ---
 

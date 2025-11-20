@@ -5,6 +5,7 @@ lastmod: 2025-09-11
 translationKey: "privacy-policy"
 description: "SmartWebサービスにおける個人情報の取扱いについてのプライバシーポリシーです"
 keywords: ["プライバシーポリシー", "個人情報保護", "SmartWeb", "インターワーク"]
+type: "legal"
 draft: false
 ---
 
