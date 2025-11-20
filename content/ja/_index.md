@@ -1,6 +1,7 @@
 ---
 title: "SmartWeb"
 date: 2025-11-18
+heroType: "enhanced"
 draft: false
 description: "次世代のWeb体験をあなたに"
 

@@ -95,6 +95,14 @@
     "padding" (.Params.heroPadding | default "py-24 sm:py-32")
     "search" $search
     ) }}
+{{ else if eq $heroType "enhanced" }}
+    {{ partial "sections/hero/simple_centered_enhanced.html" (dict
+    "heading" $title
+    "description" (markdownify $shortDescription)
+    "cta" (dict
+    "primary" (dict "text" .Params.ctaPrimaryText "url" .Params.ctaPrimaryURL)
+    "secondary" (dict "text" .Params.ctaSecondaryText "url" .Params.ctaSecondaryURL))
+    ) }}
 {{ else }}
     {{ partial "sections/hero/simple_centered.html" (dict
     "heading" $title
