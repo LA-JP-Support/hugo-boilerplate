@@ -1,0 +1,164 @@
+{{ define "main" }}
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+  <!-- ヘッダーセクション -->
+  <header class="py-8 sm:py-12">
+    <div class="mx-auto max-w-5xl">
+      <!-- パンくずリスト -->
+      <div class="mb-6">
+        <nav class="text-sm hidden sm:block">
+          <ol class="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
+            <li class="flex items-center">
+              <a href="/{{ .Language.Lang }}/" class="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center">
+                <img src="/images/home-icon.png" alt="Home" class="h-5 w-5">
+              </a>
+            </li>
+            <li><span class="mx-2">/</span></li>
+            <li>
+              <a href="/{{ .Language.Lang }}/glossary/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                {{ if eq .Language.Lang "ja" }}用語集{{ else }}Glossary{{ end }}
+              </a>
+            </li>
+            <li><span class="mx-2">/</span></li>
+            <li class="text-gray-900 dark:text-white truncate max-w-xs">{{ .Title }}</li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- カテゴリーバッジ -->
+      {{ if .Params.category }}
+        <div class="mb-4">
+          <span class="inline-flex items-center rounded-full bg-indigo-100 dark:bg-indigo-900/30 px-3 py-1 text-sm font-medium text-indigo-600 dark:text-indigo-400">
+            <svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+            </svg>
+            {{ .Params.category }}
+          </span>
+        </div>
+      {{ end }}
+
+      <!-- タイトル -->
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl leading-tight">
+        {{ .Title }}
+      </h1>
+
+      <!-- 説明 -->
+      {{ if .Description }}
+        <p class="mt-4 sm:mt-6 text-lg sm:text-xl leading-7 sm:leading-8 text-gray-600 dark:text-gray-400">
+          {{ .Description }}
+        </p>
+      {{ end }}
+
+      <!-- キーワードタグ -->
+      {{ if .Params.keywords }}
+        <div class="mt-4 sm:mt-6 flex flex-wrap gap-2">
+          {{ range .Params.keywords }}
+            <span class="inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-800 px-2.5 py-1 text-xs font-medium text-gray-700 dark:text-gray-300">
+              {{ . }}
+            </span>
+          {{ end }}
+        </div>
+      {{ end }}
+
+      <!-- 更新日 -->
+      <div class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+        {{ if eq .Language.Lang "ja" }}
+          最終更新: {{ .Lastmod.Format "2006年1月2日" }}
+        {{ else }}
+          Last updated: {{ .Lastmod.Format "January 2, 2006" }}
+        {{ end }}
+      </div>
+    </div>
+  </header>
+
+  <!-- 記事本文 -->
+  <div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-5xl py-6 sm:py-8
+              prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white
+              prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700
+              prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+              prose-a:text-indigo-600 dark:prose-a:text-indigo-400 prose-a:no-underline hover:prose-a:underline
+              prose-strong:text-gray-900 dark:prose-strong:text-white
+              prose-code:text-indigo-600 dark:prose-code:text-indigo-400 prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+              prose-pre:bg-gray-900 dark:prose-pre:bg-gray-950 prose-pre:border prose-pre:border-gray-700
+              prose-blockquote:border-l-4 prose-blockquote:border-indigo-500 prose-blockquote:bg-gray-50 dark:prose-blockquote:bg-gray-800/50 prose-blockquote:pl-4 prose-blockquote:py-2
+              prose-li:marker:text-indigo-600 dark:prose-li:marker:text-indigo-400
+              prose-table:border-collapse prose-table:border prose-table:border-gray-300 dark:prose-table:border-gray-700
+              prose-th:bg-gray-100 dark:prose-th:bg-gray-800 prose-th:border prose-th:border-gray-300 dark:prose-th:border-gray-700 prose-th:p-2
+              prose-td:border prose-td:border-gray-300 dark:prose-td:border-gray-700 prose-td:p-2">
+    {{ .Content }}
+  </div>
+
+  <!-- 関連用語（同じカテゴリー） -->
+  {{ if .Params.category }}
+    {{ $currentPage := . }}
+    {{ $currentCategory := .Params.category }}
+    {{ $relatedTerms := where (where .Site.RegularPages "Section" "glossary") "Params.category" $currentCategory }}
+    {{ $relatedTerms = where $relatedTerms "Language.Lang" .Language.Lang }}
+    {{ $relatedTerms = where $relatedTerms "Permalink" "!=" .Permalink }}
+    {{ $relatedTerms = first 6 $relatedTerms }}
+    
+    {{ if $relatedTerms }}
+      <div class="mt-12 sm:mt-16 border-t border-gray-200 dark:border-gray-700 pt-8 sm:pt-10">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 sm:mb-8">
+          {{ if eq .Language.Lang "ja" }}
+            関連用語
+          {{ else }}
+            Related Terms
+          {{ end }}
+        </h2>
+        <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {{ range $relatedTerms }}
+            <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-all duration-300 hover:border-indigo-300 dark:hover:border-indigo-600">
+              <div class="flex flex-1 flex-col p-4 sm:p-5">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 flex-1">
+                    <a href="{{ .Permalink }}" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                      {{ .Title }}
+                    </a>
+                  </h3>
+                </div>
+                {{ if .Description }}
+                  {{ $desc := .Description }}
+                  {{ if gt (len $desc) 100 }}
+                    {{ $desc = substr $desc 0 100 | printf "%s..." }}
+                  {{ end }}
+                  <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    {{ $desc }}
+                  </p>
+                {{ end }}
+                <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                  <a 
+                    href="{{ .Permalink }}" 
+                    class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                  >
+                    {{ if eq $currentPage.Language.Lang "ja" }}詳細を見る{{ else }}View details{{ end }}
+                    <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  {{ end }}
+
+  <!-- 用語集に戻るリンク -->
+  <div class="mt-10 sm:mt-12 py-6 border-t border-gray-200 dark:border-gray-700">
+    <a 
+      href="/{{ .Language.Lang }}/glossary/" 
+      class="inline-flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300"
+    >
+      <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+      </svg>
+      {{ if eq .Language.Lang "ja" }}
+        用語集に戻る
+      {{ else }}
+        Back to Glossary
+      {{ end }}
+    </a>
+  </div>
+</article>
+{{ end }}
