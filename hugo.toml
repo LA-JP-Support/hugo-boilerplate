@@ -87,10 +87,15 @@ defaultContentLanguageInSubdir = true
       url = "/blog/"
       weight = 5
     [[languages.ja.menu.main]]
+      identifier = "glossary"
+      name = "用語集"
+      url = "/glossary/"
+      weight = 6
+    [[languages.ja.menu.main]]
       identifier = "company"
       name = "会社情報"
       url = "#"
-      weight = 6
+      weight = 7
   
   [languages.en]
     languageName = "English"
@@ -126,10 +131,15 @@ defaultContentLanguageInSubdir = true
       url = "/blog/"
       weight = 5
     [[languages.en.menu.main]]
+      identifier = "glossary"
+      name = "Glossary"
+      url = "/glossary/"
+      weight = 6
+    [[languages.en.menu.main]]
       identifier = "company"
       name = "Company"
       url = "#"
-      weight = 6
+      weight = 7
 
 [taxonomies]
   tag = "tags"
