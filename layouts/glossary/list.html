@@ -11,10 +11,11 @@
       {{ $activeLetter = substr . 0 1 | upper }}
     {{ end }}
     {{ $glossaryTerms := where .Site.RegularPages "Section" "glossary" }}
-    <div id="alphabetNav" class="w-full bg-white sticky top-20 md:top-[5.25rem] z-[45] transition-all duration-300">
+    {{ $glossaryTerms = where $glossaryTerms "Language.Lang" .Language.Lang }}
+    <div id="alphabetNav" class="w-full bg-white dark:bg-gray-900 sticky top-20 md:top-[5.25rem] z-[45] transition-all duration-300">
       <div class="wrapper px-8 ">
         <div class="grid grid-cols-2 lg:hidden">
-          <select class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-2 pl-3 pr-8 text-base " id="alphabetSelect">
+          <select class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white dark:bg-gray-800 py-2 pl-3 pr-8 text-base text-gray-900 dark:text-white" id="alphabetSelect">
             {{ range $letters }}
               <option value="{{ . }}" {{ if eq . $activeLetter }}selected{{ end }}>{{ . }}</option>
             {{ end }}
@@ -27,24 +28,23 @@
               {{ $letter := . }}
               {{ $hasTerms := false }}
               {{ range $glossaryTerms }}
-                {{ $termCategory := .Params.category }}
-                {{ if not $termCategory }}
-                  {{ $termName := .Params.term | default .Title }}
-                  {{ $firstChar := substr $termName 0 1 | upper }}
-                  {{ if in $letters $firstChar }}
-                    {{ $termCategory = $firstChar }}
-                  {{ else }}
-                    {{ $termCategory = "0-9" }}
-                  {{ end }}
+                {{/* アルファベット順の分類は常にタイトルの最初の文字を使用 */}}
+                {{ $termName := .Params.term | default .Title }}
+                {{ $firstChar := substr $termName 0 1 | upper }}
+                {{ $letterCategory := "" }}
+                {{ if in $letters $firstChar }}
+                  {{ $letterCategory = $firstChar }}
+                {{ else }}
+                  {{ $letterCategory = "0-9" }}
                 {{ end }}
-                {{ if eq $termCategory $letter }}
+                {{ if eq $letterCategory $letter }}
                   {{ $hasTerms = true }}
                 {{ end }}
               {{ end }}
               <a href="#{{ $letter }}"
                  class="rounded-md px-2 py-2 text-sm font-medium
-                 {{ if eq $letter $activeLetter }}bg-indigo-100 text-primary aria-current='page'
-                 {{ else if $hasTerms }}text-tertiary hover:text-primary hover:bg-indigo-100
+                 {{ if eq $letter $activeLetter }}bg-indigo-100 dark:bg-indigo-900 text-primary aria-current='page'
+                 {{ else if $hasTerms }}text-tertiary hover:text-primary hover:bg-indigo-100 dark:hover:bg-indigo-900
                  {{ else }}text-tertiary opacity-30 pointer-events-none{{ end }}">
                 {{ $letter }}
               </a>
@@ -59,23 +59,22 @@
         {{ $letter := . }}
         {{ $termsInCategory := slice }}
         {{ range $glossaryTerms }}
-          {{ $termCategory := .Params.category }}
-          {{ if not $termCategory }}
-            {{ $termName := .Params.term | default .Title }}
-            {{ $firstChar := substr $termName 0 1 | upper }}
-            {{ if in $letters $firstChar }}
-              {{ $termCategory = $firstChar }}
-            {{ else }}
-              {{ $termCategory = "0-9" }}
-            {{ end }}
+          {{/* アルファベット順の分類は常にタイトルの最初の文字を使用 */}}
+          {{ $termName := .Params.term | default .Title }}
+          {{ $firstChar := substr $termName 0 1 | upper }}
+          {{ $letterCategory := "" }}
+          {{ if in $letters $firstChar }}
+            {{ $letterCategory = $firstChar }}
+          {{ else }}
+            {{ $letterCategory = "0-9" }}
           {{ end }}
-          {{ if eq $termCategory $letter }}
+          {{ if eq $letterCategory $letter }}
             {{ $termsInCategory = $termsInCategory | append . }}
           {{ end }}
         {{ end }}
         {{ if $termsInCategory }}
           <div id="{{ $letter }}" class="my-10">
-            <h2 class="text-5xl font-semibold text-heading">{{ $letter }}</h2>
+            <h2 class="text-5xl font-semibold text-heading dark:text-white">{{ $letter }}</h2>
             <ul class="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
               {{ range sort $termsInCategory "Title" }}
                 {{ partial "components/cards/post_card_with_image.html" (
@@ -94,7 +93,7 @@
   {{ if .Content }}
     {{ partial "sections/content/centered.html" (dict
         "content" .Content
-        "bgColor" "bg-gray-50"
+        "bgColor" "bg-gray-50 dark:bg-gray-800"
         "page" .
     ) }}
   {{ end }}
@@ -107,13 +106,13 @@
       const alphabetNav = document.getElementById('alphabetNav');
       const header = document.querySelector('header');
 
-      const activeClasses = ['bg-indigo-100', 'text-primary'];
-      const defaultClasses = ['text-secondary', 'hover:text-primary', 'hover:bg-indigo-100'];
+      const activeClasses = ['bg-indigo-100', 'dark:bg-indigo-900', 'text-primary'];
+      const defaultClasses = ['text-secondary', 'hover:text-primary', 'hover:bg-indigo-100', 'dark:hover:bg-indigo-900'];
       const disabledClasses = ['text-gray-500', 'opacity-30', 'pointer-events-none']; 
       const allDynamicClasses = [...activeClasses, ...defaultClasses, ...disabledClasses];
 
       const scrollThreshold = 31.5 * 16;
-      const borderClasses = ['border-b', 'border-gray-300'];
+      const borderClasses = ['border-b', 'border-gray-300', 'dark:border-gray-700'];
 
       function setActiveTab(letterToActivate) {
         if (!tabsContainer) return;
