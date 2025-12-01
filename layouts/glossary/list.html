@@ -5,14 +5,14 @@
 
   <div class="bg-white dark:bg-gray-900">
     {{/* 用語集専用のシンプルヒーロー */}}
-    <div class="bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 py-12 sm:py-16">
+    <div class="bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-700 dark:from-gray-800 dark:via-gray-900 dark:to-black py-12 sm:py-16">
       <div class="wrapper">
         <div class="mx-auto max-w-2xl text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
+          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             {{ .Title }}
           </h1>
           {{ if .Description }}
-            <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
+            <p class="mt-4 text-lg text-white/90">
               {{ .Description }}
             </p>
           {{ end }}
