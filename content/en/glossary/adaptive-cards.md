@@ -5,7 +5,7 @@ description: "Adaptive Cards are platform-agnostic, declarative UI snippets auth
 keywords: ["Adaptive Cards", "JSON", "Microsoft Teams", "Power Automate", "UI"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-draft: true
+draft: false
 ---
 
 

@@ -5,7 +5,7 @@ description: "Active learning is a machine learning process where the model inte
 keywords: ["Active Learning", "Machine Learning", "Data Annotation", "Query Strategy", "Model Uncertainty"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-draft: true
+draft: false
 ---
 
 **Definition:** A machine learning process where the model explicitly asks a human to label data points it is uncertain about.  

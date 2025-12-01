@@ -5,7 +5,7 @@ description: "An aggregator collects outputs from multiple execution paths, data
 keywords: ["aggregator", "AI", "automation", "chatbot", "data aggregation"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-draft: true
+draft: false
 ---
 
 
