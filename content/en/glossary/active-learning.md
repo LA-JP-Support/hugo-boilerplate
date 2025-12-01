@@ -1,319 +1,291 @@
 ---
-title: "Active Learning"
-translationKey: "active-learning"
-description: "--- Active learning is a machine learning paradigm where an algorithm or model actively selects the most informative data points from an unlabeled..."
-keywords: ['Active Learning', 'AI Chatbots', 'Automation']
-category: "AI Chatbot & Automation"
-type: "glossary"
-draft: false
+title = "Active Learning"
+translationKey = "active-learning"
+description = "Active learning is a machine learning process where the model interactively queries a human to label uncertain data, optimizing learning efficiency and reducing annotation costs."
+keywords = ["Active Learning", "Machine Learning", "Data Annotation", "Query Strategy", "Model Uncertainty"]
+category = "AI Chatbot & Automation"
+type = "glossary"
+draft = false
 ---
 
-# Active Learning
-
-## Definition
-
-Active learning is a machine learning paradigm where an algorithm or model actively selects the most informative data points from an unlabeled dataset and queries a human annotator (the "oracle") to label those data points. This approach enables achieving higher accuracy with fewer labeled examples, reducing manual annotation costs and efforts. Active learning is a subset of supervised learning, optimized for scenarios where obtaining labeled data is expensive, time-consuming, or otherwise constrained.
-
-**See also:**  
-- [Active Learning in Machine Learning: Guide & Strategies | Encord](https://encord.com/blog/active-learning-machine-learning-guide/)  
-- [ML | Active Learning - GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/ml-active-learning/)  
-- [Key Terms for AI Governance | IAPP](https://iapp.org/resources/article/key-terms-for-ai-governance/#active-learning)  
+**Definition:** A machine learning process where the model explicitly asks a human to label data points it is uncertain about.  
 
 ---
 
-## 1. What is Active Learning?
+## What is Active Learning?
 
-Active learning is not a passive process of consuming labeled data. Instead, it strategically requests labels for data points expected to yield the greatest model improvement. The model iteratively asks for help in areas of highest uncertainty or where new information would significantly affect predictions.
+Active learning is a focused approach in supervised machine learning that enables a model to select and request labels for data points it finds most informative or uncertain. Instead of passively consuming all available labeled data, the model actively identifies which unlabeled instances would most improve its predictive power if annotated.  
+This approach is especially valuable when labeling large datasets is expensive, time-consuming, or requires domain experts.
 
-**Key characteristics:**
-- **Human-in-the-loop:** Relies on a human or expert for labels when requested.
-- **Iterative process:** Consists of repeated cycles of training, selection, annotation, and retraining.
-- **Query strategy:** Core to active learning; the method for selecting which data points to label.
+> **Authoritative Definition:**  
+> Active learning is a supervised machine learning process in which the model interactively queries a human (or other external oracle) to label data points it is uncertain about, thereby optimizing learning efficiency while minimizing the amount of required labeled data.  
+> — [Encord Guide on Active Learning](https://encord.com/blog/active-learning-machine-learning-guide/), [V7 Labs Guide](https://www.v7labs.com/blog/active-learning-guide)
 
-**Alternative terms:** Query learning, human-in-the-loop learning, selective sampling.
+The model’s ability to “query” for new labels based on a strategic selection is why this paradigm is also referred to as *query learning*.
 
-**Further reading:**  
-- [Active Learning: Strategies, Tools, and Real-World Use Cases | Neptune.ai](https://neptune.ai/blog/active-learning-strategies-tools-use-cases)  
-- [Optimal Experimental Design (Wikipedia)](https://en.wikipedia.org/wiki/Optimal_experimental_design)
+## Key Concepts and Definitions
 
----
+- **Oracle:** The person or system (usually a human expert) providing ground truth labels upon request.
+- **Unlabeled Data Pool:** The dataset containing instances for which the true labels are not yet known.
+- **Query Strategy:** The method or algorithm the model uses to select which data points to query for labels.
+- **Model Uncertainty:** A quantitative measure of the model’s confidence in its predictions for specific data points.
+- **Iteration:** The repeated cycle of training, querying, annotating, and retraining as part of the active learning process.
+- **Stopping Condition:** The rule (such as a labeling budget, accuracy threshold, or convergence) that determines when to end the active learning cycle.
 
-## 2. How Active Learning Works
+For more, see:  
+- [Encord: Active Learning Key Concepts](https://encord.com/blog/active-learning-machine-learning-guide/)  
+- [V7 Labs: Active Learning Glossary](https://www.v7labs.com/blog/active-learning-guide)
 
-### 2.1. The Active Learning Workflow
+## How Active Learning is Used in Machine Learning
 
-Active learning is implemented as a loop:
+Data annotation is often the bottleneck in developing accurate AI systems, as it can be expensive and slow, particularly for complex domains. Active learning addresses this by directing labeling efforts where they have the highest impact on model performance.
 
-1. **Initialization:** Start with a small labeled dataset to train the initial model.
-2. **Model Training:** Train the model on current labeled data.
-3. **Uncertainty/Query Assessment:** Use a query strategy to estimate which unlabeled data points would most improve the model if labeled.
-4. **Querying the Oracle:** Request labels for selected data points from a human annotator or subject matter expert.
-5. **Model Update:** Add new labeled data to the training set, retrain or fine-tune the model.
-6. **Iteration:** Repeat until a performance threshold is achieved or annotation budget is exhausted.
+In a typical scenario, suppose you are building an email spam classifier. Instead of labeling thousands of emails at random, active learning lets the model request human input only on those emails it finds ambiguous, streamlining the annotation process and maximizing model improvement per labeled instance.
 
-**Diagram:**  
-![Active learning cycle diagram](https://i0.wp.com/neptune.ai/wp-content/uploads/2022/10/Active-Learning.png?resize=646%2C514&ssl=1)
+Active learning’s selective approach is increasingly significant in areas where annotated data is rare or costly, such as medical imaging, autonomous vehicles, and legal document analysis ([V7 Labs Guide](https://www.v7labs.com/blog/active-learning-guide), [Encord Guide](https://encord.com/blog/active-learning-machine-learning-guide/)).
 
-### 2.2. Query Strategies
+## Active Learning Workflow: Step-by-Step
 
-The effectiveness of active learning depends on the **query strategy**—the method for choosing which unlabeled examples to annotate. Common strategies include:
+Active learning operates through a systematic, iterative cycle. Each iteration aims to refine the model using carefully selected new data. The standard workflow includes:
 
-#### a. Uncertainty Sampling
-Selects data points for which the model's predictions have the lowest confidence (highest uncertainty).  
-**Methods:** Least confident, margin sampling, entropy-based selection.  
-**Example:** In binary classification, select samples with predicted probability closest to 0.5.
+1. **Initialization:**  
+   Begin with a small, labeled dataset to train the initial model.
+2. **Model Training:**  
+   Train the model on the labeled data.
+3. **Query Strategy Application:**  
+   Use a query strategy to identify unlabeled instances where the model has the least confidence or expects the most benefit from labeling.
+4. **Annotation:**  
+   Request labels for these selected instances from a human annotator (oracle).
+5. **Model Update:**  
+   Add the newly labeled data to the training set and retrain the model.
+6. **Iteration:**  
+   Repeat steps 3–5 until a stopping condition (such as a labeling budget or target accuracy) is reached.
 
-#### b. Query-by-Committee (QBC)
-Trains multiple models ("the committee") and chooses data points where these models most disagree, indicating ambiguity.
+**Analogy:**  
+Think of active learning as a junior analyst who handles tasks independently but consults a senior expert only when encountering uncertainty.
 
-#### c. Diversity Sampling
-Selects samples that are both uncertain and diverse, to avoid redundancy and overfitting.  
-**Approaches:** Clustering, core-set selection, distance-based metrics.
+**Visual Workflow:**  
+Model Training → Uncertainty Estimation → Query → Human Annotation → Retraining → (repeat)
 
-#### d. Expected Model Change
-Selects samples expected to cause the greatest change in model parameters if labeled, directly optimizing for impactful updates.
+- See [Encord Guide: Workflow Visualization](https://encord.com/blog/active-learning-machine-learning-guide/)
+- [V7 Labs: Workflow Example](https://www.v7labs.com/blog/active-learning-guide#what-is-active-learning)
 
-#### e. Expected Error Reduction
-Selects samples anticipated to reduce the model’s overall error the most after labeling. Computationally intensive, often approximated.
+## Core Strategies in Active Learning
 
-#### f. Query Synthesis
-Generates new data points (possibly non-existent in the original dataset) for the oracle to label. Useful in sparse data scenarios.
+The effectiveness of active learning hinges on the selection strategy used to choose which data points to label. The most prominent query strategies include:
 
-**Detailed strategy breakdown:**  
-- [Query Strategies | Encord Glossary](https://encord.com/glossary/query-strategies/)
-- [Active Learning Query Strategies for Classification, Regression, and Clustering: A Survey | Springer](https://link.springer.com/article/10.1007/s11390-020-9487-4)
-- [Active Learning in Classification — Query Strategies | Medium](https://medium.com/@rongqianhui/active-learning-in-classification-query-strategies-69cc9fe70938)
+### 1. Uncertainty Sampling
+- **How it works:** Selects examples where the model’s confidence in its prediction is lowest (e.g., softmax probabilities close to 0.5 in binary classification).
+- **When to use:** Rapidly reduce model uncertainty, especially in classification problems.
+- **Example:** In a cat vs. dog classifier, images where the model predicts 51% cat and 49% dog are prioritized for labeling.
+- [V7 Labs: Uncertainty Sampling](https://www.v7labs.com/blog/active-learning-guide#uncertainty-sampling)
+- [YouTube: Uncertainty Sampling Explained](https://youtu.be/DsdBe0-4-30)
 
----
+### 2. Query-by-Committee (QBC)
+- **How it works:** Uses an ensemble (“committee”) of models, selecting samples with the highest prediction disagreement.
+- **When to use:** When ensemble methods are available, increasing robustness by capturing diverse model opinions.
+- **Example:** If three models predict “cat,” “dog,” and “rabbit” for the same image, that image is highly informative.
+- [Encord: QBC Explanation](https://encord.com/blog/active-learning-machine-learning-guide/)
 
-## 3. Real-World Use Cases and Industry Applications
+### 3. Diversity Sampling
+- **How it works:** Selects samples that are most different from already-labeled data, ensuring comprehensive coverage of the data space.
+- **When to use:** To prevent overfitting and ensure generalization, especially in datasets with high variance.
+- **Example:** Choosing images that are visually distinct from previously labeled examples.
+- [V7 Labs: Diversity Sampling](https://www.v7labs.com/blog/active-learning-guide#diversity-sampling)
 
-Active learning is essential in domains with scarce labeled data or expensive labeling, yet large volumes of unlabeled data.
+### 4. Expected Model Change
+- **How it works:** Selects samples that, if labeled, are expected to most change the current model’s parameters.
+- **When to use:** When optimizing for rapid improvement with minimal labels.
 
-### 3.1. Computer Vision
+### 5. Density-Weighted Sampling
+- **How it works:** Balances informativeness (uncertainty) and representativeness (density) by selecting uncertain data points in dense regions of the data space.
+- **When to use:** Avoids focusing only on outliers, emphasizes common but ambiguous cases.
+- [V7 Labs: Density Sampling](https://www.v7labs.com/blog/active-learning-guide#density-weighted-sampling)
 
-- **Image Classification:** Actively selects ambiguous images for labeling.  
-  Example: X-ray images where a diagnostic model is least certain.
-- **Semantic Segmentation:** Annotators label only uncertain regions, reducing pixel-wise annotation costs.
-- **Object Detection:** Focuses on edge cases—rare objects or ambiguous boundaries.
+### 6. Stream-Based vs. Pool-Based Sampling
+- **Stream-Based:** Model evaluates each incoming data point in real-time, deciding instantly whether to query a label.
+- **Pool-Based:** Model selects the most informative samples from a static pool of unlabeled data.
+- [V7 Labs: Stream-Based Sampling](https://www.v7labs.com/blog/active-learning-guide#stream-based-selective-sampling)
 
-### 3.2. Natural Language Processing (NLP)
+### 7. Query Synthesis
+- **How it works:** Model generates new synthetic data points to query when natural data is scarce.
+- **Example:** Generating artificial images or sentences and requesting human annotation.
 
-- **Text Classification:** Queries ambiguous sentences for sentiment or topic labels.
-- **Named Entity Recognition (NER):** Focuses on sentences where entity boundaries are unclear.
-- **Conversational AI:** Improves chatbot intent detection by labeling uncertain utterances.
+Academic resource: [Policy-based Active Learning (PAL)](https://arxiv.org/pdf/1708.02383.pdf)
 
-### 3.3. Medical Imaging
+## Benefits of Active Learning
 
-Prioritizes complex or ambiguous scans for expert annotation, improving accuracy while limiting workload.
+Implementing active learning offers substantial advantages:
 
-### 3.4. Autonomous Vehicles
+- **Reduced Labeling Costs:**  
+  By labeling only the most informative data points, overall annotation costs are minimized.
+- **Faster Model Convergence:**  
+  The model learns efficiently, reaching high accuracy with fewer labeled examples.
+- **Improved Accuracy and Generalization:**  
+  Focusing on edge cases and ambiguous data enhances model robustness.
+- **Efficient Use of Expert Resources:**  
+  Human experts focus on the most valuable data points, maximizing their impact.
+- **Adaptability to Imbalanced Data or New Distributions:**  
+  The model can shift its focus as new data types emerge or rare events are encountered.
 
-Labels rare or hazardous driving scenarios from sensor data where the model is least confident.
+> **Example:** In medical imaging, active learning reduces the workload on radiologists by prioritizing annotation of ambiguous scans.
+> — [Encord: Active Learning Advantages](https://encord.com/blog/active-learning-machine-learning-guide/), [V7 Labs: Benefits](https://www.v7labs.com/blog/active-learning-guide#advantages-of-active-learning)
 
-### 3.5. Fraud Detection
+## Challenges and Limitations
 
-Queries for labels on transactions with low-confidence classification (fraudulent vs. legitimate).
+Despite its strengths, active learning presents several practical challenges:
 
-**Industry case study:**  
-- [The Practical Challenges of Active Learning: A Case Study from Live Experimentation | Google Research](https://research.google/pubs/the-practical-challenges-of-active-learning-a-case-study-from-live-experimentation/)
+- **Cost of Expert Annotation:**  
+  Complex data types (e.g., legal or medical) still require costly expert labeling.
+- **Computational Overhead:**  
+  Retraining the model frequently as new labels are added increases computational demands.
+- **Potential for Bias and Imbalanced Data:**  
+  Poorly designed query strategies may oversample certain data regions, leading to bias or neglect of rare classes.
+- **Annotation Difficulty:**  
+  In query synthesis, synthetic data may be difficult for humans to label accurately.
 
----
+**Mitigation Strategies:**
+- Combine multiple query strategies (e.g., uncertainty + diversity).
+- Monitor and balance label distribution across classes.
+- Use AI-assisted labeling to automate simple annotation tasks.
+- Define clear stopping criteria for active learning loops.
 
-## 4. Advanced Implementation Details
+References:  
+- [V7 Labs: Limitations](https://www.v7labs.com/blog/active-learning-guide#limitations-of-active-learning)
+- [Encord: Challenges](https://encord.com/blog/active-learning-machine-learning-guide/)
 
-### 4.1. Practical Steps
+## Practical Examples and Use Cases
 
-1. **Dataset Preparation:** Split data into a small labeled set and a large unlabeled pool.
-2. **Select a Model:** Choose a supervised learning algorithm (e.g., logistic regression, SVM, deep neural networks).
-3. **Choose a Query Strategy:** Implement uncertainty sampling, QBC, or other methods.
-4. **Iterative Loop:**
-   - Train the model.
-   - Apply the query strategy to select new samples from the unlabeled pool.
-   - Obtain labels from the oracle.
-   - Update the labeled set and retrain.
-5. **Stopping Criteria:**  
-   - When model performance plateaus, the budget is exhausted, or target accuracy is achieved.
+Active learning is applied in diverse domains where labeled data is difficult or expensive to obtain:
 
-### 4.2. Example: Active Learning with Logistic Regression
+### 1. **Medical Imaging**
+   - Prioritizes ambiguous scans (e.g., X-rays, MRIs), reducing radiologist workload and improving diagnostic models.
+   - Case: Active learning can cut annotation volumes by up to 80% in large-scale radiology projects.
+   - [Encord: Medical Imaging Case Study](https://encord.com/blog/active-learning-machine-learning-guide/)
+
+### 2. **Natural Language Processing (NLP)**
+   - Selects difficult examples for sentiment analysis, entity recognition, or spam detection, improving language model performance.
+
+### 3. **Autonomous Vehicles**
+   - Focuses annotation on rare or complex driving scenarios, enhancing object detection and decision-making AI.
+
+### 4. **Fraud Detection**
+   - Targets financial transactions the model finds suspicious but cannot confidently classify, refining fraud detection.
+
+### 5. **Document Understanding and Automation**
+   - Accelerates training of document classifiers (e.g., invoice vs. contract recognition), reducing manual review time.
+   - Example: UiPath reports up to 80% faster model training using active learning in business automation pipelines ([UiPath Blog](https://www.uipath.com/blog/ai/what-is-active-learning)).
+
+Additional use cases:  
+- Robotics (exploration and navigation)
+- Retail (customer intent classification)
+- Industrial quality control (anomaly detection)
+
+## Comparison with Related Machine Learning Paradigms
+
+Active learning differs from, but relates to, several other machine learning approaches:
+
+| Approach                      | Data Labeling         | Data Selection           | Human Role           | Typical Use Case           |
+|-------------------------------|-----------------------|--------------------------|----------------------|----------------------------|
+| **Active Learning**           | Selective, iterative  | Model-driven (query)     | Label only queried   | Expensive annotation       |
+| **Passive Learning**          | All data upfront      | Random or all            | Label all data       | Large, cheap datasets      |
+| **Reinforcement Learning**    | Learns from rewards   | Environment exploration  | Defines reward rules | Robotics, games            |
+| **Semi-Supervised Learning**  | Few labels + unlabeled| Uses both                | Label a small set    | Abundant unlabeled data    |
+| **Self-Supervised Learning**  | No human labels       | Generates own labels     | No labeling          | Pretraining, language models|
+
+### Key Differences
+
+- **Active vs. Passive Learning:**  
+  Active learning queries labels only for selected data; passive learning labels all available data.
+- **Active vs. Reinforcement Learning:**  
+  Active learning queries for labels; reinforcement learning learns by interacting with an environment and receiving feedback.
+- **Active vs. Semi/Self-Supervised Learning:**  
+  Semi-supervised learning combines a small labeled set with a large unlabeled set; self-supervised learning generates its own training signals.
+
+References:  
+- [V7 Labs: Paradigm Comparison](https://www.v7labs.com/blog/active-learning-guide#active-learning-vs-passive-learning)  
+- [Encord: Related Approaches](https://encord.com/blog/active-learning-machine-learning-guide/)
+
+## Implementation and Tools
+
+Active learning can be implemented using open-source libraries and commercial platforms. Typical workflow:
+
+1. **Setup:**  
+   Divide your dataset into labeled and unlabeled pools.
+2. **Training:**  
+   Train a base model on the labeled data.
+3. **Query:**  
+   Use a query strategy (e.g., uncertainty sampling) to select data points from the unlabeled pool.
+4. **Annotation:**  
+   Request human labels for selected points.
+5. **Retrain:**  
+   Add new labels to the training set and retrain the model.
+6. **Repeat:**  
+   Continue until your stopping condition is met.
+
+### Popular Libraries
+
+- **scikit-learn:**  
+  Classic machine learning library; active learning via extensions.
+  - [scikit-learn](https://scikit-learn.org/stable/)
+- **modAL:**  
+  Modular active learning framework built on top of scikit-learn.
+  - [modAL Documentation](https://modal-python.readthedocs.io/en/latest/)
+- **Encord:**  
+  Platform for data curation, annotation, and active learning workflows.
+  - [Encord Platform](https://encord.com/explore-product/)
+- **V7 Labs:**  
+  Provides active learning integrated with data annotation and curation.
+  - [V7 Go Platform](https://www.v7labs.com/)
+- **UiPath:**  
+  Integrates active learning into document understanding and business automation.
+  - [UiPath Overview](https://www.uipath.com/blog/ai/what-is-active-learning)
+
+### Sample Code Snippet (Python with modAL)
 
 ```python
-import numpy as np
-from sklearn.linear_model import LogisticRegression
+from modAL.models import ActiveLearner
+from sklearn.ensemble import RandomForestClassifier
 
-# Assume: x_train (labeled), y_train (labels), x_unlabeled (unlabeled pool)
+learner = ActiveLearner(
+    estimator=RandomForestClassifier(),
+    X_training=initial_X, y_training=initial_y
+)
 
-for iteration in range(max_iterations):
-    # Train the model on currently labeled data
-    model = LogisticRegression()
-    model.fit(x_train, y_train)
-    
-    # Predict probabilities for unlabeled data
-    probs = model.predict_proba(x_unlabeled)
-    
-    # Uncertainty sampling: select samples with probabilities closest to 0.5
-    uncertainty = np.abs(probs[:, 1] - 0.5)
-    query_indices = np.argsort(uncertainty)[:batch_size]
-    
-    # (Human) annotate selected samples and add to labeled set
-    new_x, new_y = get_labels_from_oracle(x_unlabeled[query_indices])
-    x_train = np.concatenate([x_train, new_x])
-    y_train = np.concatenate([y_train, new_y])
-    x_unlabeled = np.delete(x_unlabeled, query_indices, axis=0)
+for i in range(num_iterations):
+    query_idx, query_instance = learner.query(unlabeled_X)
+    label = oracle_label(query_instance)
+    learner.teach(X=query_instance, y=label)
 ```
-*For a full code example, see [ML | Active Learning - GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/ml-active-learning/).*
 
-### 4.3. Libraries and Tools
+More implementation details:  
+- [Encord: Tools for Active Learning](https://encord.com/blog/active-learning-machine-learning-guide/#tools-to-use-for-active-learning)
+- [V7 Labs: Implementation Guide](https://www.v7labs.com/blog/active-learning-guide#how-to-implement-active-learning)
 
-- **modAL:** Modular active learning framework for Python, compatible with scikit-learn.  
-  [modAL documentation](https://modal-python.readthedocs.io/en/latest/)
-- **libact:** Python library for active learning.  
-  [libact documentation](https://libact.readthedocs.io/en/latest/)
-- **Encord Active:** Toolkit for computer vision active learning.  
-  [Encord Active](https://encord.com/encord-active/)
+## Further Reading and References
 
-**Further reading:**  
-- [Top 6 Tools for Active Learning in Machine Learning | Encord](https://encord.com/blog/top-active-learning-tools-for-machine-learning/)
-
----
-
-## 5. Mathematical Background and Performance Metrics
-
-### 5.1. Generalization Error
-
-Active learning aims to reduce generalization error—the difference between model performance on training and unseen data—by selecting informative samples.
-
-### 5.2. Information Theory
-
-Many query strategies are grounded in information theory, using entropy, mutual information, or expected information gain as criteria for selection. For example, **entropy-based uncertainty sampling** chooses samples with maximal output entropy.
-
-### 5.3. Performance Metrics
-
-Common metrics for evaluating active learning systems include:
-- **Accuracy, Precision, Recall, F1-score:** Standard supervised learning metrics.
-- **Learning Curve:** Plots model performance versus the number of labeled samples.
-- **Label Efficiency:** Number of labels required to reach a certain level of performance.
-
-**Reference:**  
-- [Active Learning Query Strategies for Classification, Regression, and Clustering: A Survey | Springer](https://link.springer.com/article/10.1007/s11390-020-9487-4)
-
----
-
-## 6. Advantages and Benefits
-
-- **Reduced Labeling Cost:** Fewer labels needed for high accuracy.
-- **Improved Model Accuracy:** Focus on ambiguous/informative samples.
-- **Faster Convergence:** Achieves performance goals with fewer iterations and less data.
-- **Better Generalization:** Avoids overfitting by selecting diverse, challenging examples.
-- **Robustness:** Handles noise and edge cases by surfacing challenging data.
-
-| Benefit                  | Description                                                                    |
-|--------------------------|--------------------------------------------------------------------------------|
-| Reduced Labeling Cost    | Fewer labels needed for similar or better accuracy                             |
-| Improved Accuracy        | Focused learning on informative or ambiguous samples                           |
-| Faster Convergence       | Model reaches target performance in fewer iterations                           |
-| Better Generalization    | Encourages learning from diverse, representative, or challenging examples      |
-| Robustness               | Decreases sensitivity to noise and outliers                                    |
-
----
-
-## 7. Challenges and Limitations
-
-- **Annotation Cost Remains:** Even with reductions, manual labeling is still required for complex/specialized tasks.
-- **Continuous Retraining:** Each loop iteration requires model retraining, which can be computationally expensive for large models.
-- **Query Strategy Complexity:** Poorly designed strategies may choose redundant or non-informative samples.
-- **Imbalanced Data:** Risk of over-sampling certain classes if strategies are not carefully managed.
-- **Oracle Limitations:** Humans may make mistakes, especially for ambiguous samples.
-- **Scalability:** Difficult to scale for massive datasets or high-dimensional data.
-
-**Case study on practical challenges:**  
-- [The Practical Challenges of Active Learning: A Case Study from Live Experimentation | Google Research](https://research.google/pubs/the-practical-challenges-of-active-learning-a-case-study-from-live-experimentation/)
-
----
-
-## 8. Comparison with Related Approaches
-
-### 8.1. Active vs. Passive Learning
-
-| Aspect               | Active Learning                             | Passive Learning                    |
-|----------------------|---------------------------------------------|-------------------------------------|
-| Data Selection       | Model selects which samples to label        | Random or predefined selection      |
-| Labeling Cost        | Reduced                                     | High                                |
-| Adaptability         | High (focuses on ambiguous examples)        | Low (may waste effort on easy cases)|
-| Model Performance    | Higher for the same amount of labeled data  | Lower unless large label set        |
-| Human-in-the-loop    | Required                                    | Not required                        |
-
-### 8.2. Active Learning vs. Reinforcement Learning
-
-| Aspect                  | Active Learning                                 | Reinforcement Learning            |
-|-------------------------|-------------------------------------------------|-----------------------------------|
-| Learning Mode           | Learns from selected labeled data               | Learns via trial-and-error        |
-| Feedback                | Explicit labels from oracle                     | Reward/punishment signals         |
-| Data Source             | Fixed dataset (label on request)                | Dynamic environment interaction   |
-| Goal                    | Optimize model with minimal labeled data        | Maximize cumulative reward        |
-
----
-
-## 9. Key Terms and Concepts
-
-- **Active Learning Model:** A model employing active learning strategies.
-- **Model Performance:** Measured in accuracy, precision, recall, F1-score, etc.
-- **Uncertainty Sampling:** Query strategy focusing on least confident predictions.
-- **Oracle:** The human or system providing ground-truth labels.
-- **Training Dataset:** Collection of labeled data used to train the model.
-- **Informative Samples:** Data points likely to contribute most to learning/improvement.
-
----
-
-## 10. Further Reading and Resources
-
-- [Active Learning in Machine Learning: Guide & Strategies | Encord](https://encord.com/blog/active-learning-machine-learning-guide/)
-- [ML | Active Learning - GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/ml-active-learning/)
-- [Active Learning: Strategies, Tools, and Real-World Use Cases | Neptune.ai](https://neptune.ai/blog/active-learning-strategies-tools-use-cases)
-- [A Practical Guide to Active Learning for Computer Vision](https://encord.com/blog/a-practical-guide-to-active-learning-for-computer-vision/)
-- [Active Learning Query Strategies for Classification, Regression, and Clustering: A Survey | Springer](https://link.springer.com/article/10.1007/s11390-020-9487-4)
-- [YouTube: Uncertainty Sampling in Active Learning](https://youtu.be/DsdBe0-4-30)
-- [modAL: Active Learning Framework for Python](https://modal-python.readthedocs.io/en/latest/)
-- [libact: Python Library for Active Learning](https://libact.readthedocs.io/en/latest/)
-
----
-
-## 11. Summary Table
-
-| Concept                | Description                                                                                                     |
-|------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Active Learning        | Model actively queries for labels on the most informative unlabeled instances                                   |
-| Query Strategy         | Method for selecting which data points to query (uncertainty, diversity, committee, etc.)                      |
-| Oracle                 | Human or system that provides true labels when requested                                                        |
-| Pool-based Sampling    | Query samples from a pool of unlabeled data                                                                     |
-| Stream-based Sampling  | Query samples from a continuous stream of data                                                                  |
-| Query Synthesis        | Synthesize new unlabeled data points for querying                                                               |
-| Applications           | Computer vision, NLP, medical imaging, fraud detection, autonomous vehicles                                     |
-| Benefits               | Reduced labeling cost, improved generalization, better performance, robustness                                  |
-| Challenges             | Annotation effort, retraining cost, strategy complexity, scalability, oracle errors                             |
-
----
-
-## 12. Related Terms
-
-- [Supervised Learning](https://www.geeksforgeeks.org/machine-learning/supervised-machine-learning/)
-- [Unsupervised Learning](https://www.geeksforgeeks.org/machine-learning/unsupervised-learning/)
-- [Human-in-the-Loop](https://iapp.org/resources/article/key-terms-for-ai-governance/#human-in-the-loop)
-- [Model Performance](https://iapp.org/resources/article/key-terms-for-ai-governance/#accuracy)
-- [Query Strategy](https://encord.com/glossary/query-strategies/)
-
----
-
-**References:**
-- [Encord: Active Learning in Machine Learning Guide](https://encord.com/blog/active-learning-machine-learning-guide/)
 - [GeeksforGeeks: ML | Active Learning](https://www.geeksforgeeks.org/machine-learning/ml-active-learning/)
-- [Active Learning: Strategies, Tools, and Real-World Use Cases | Neptune.ai](https://neptune.ai/blog/active-learning-strategies-tools-use-cases)
-- [IEEE Teaching Excellence Hub: ACTIVE LEARNING IN MACHINE LEARNING: A STEP TOWARDS SMARTER MODELS](https://teaching.ieee.org/active-learning-in-machine-learning-a-step-towards-smarter-models/)
-- [Key Terms for AI Governance | IAPP](https://iapp.org/resources/article/key-terms-for-ai-governance/#active-learning)
-- [Active Learning Query Strategies for Classification, Regression, and Clustering: A Survey | Springer](https://link.springer.com/article/10.1007/s11390-020-9487-4)
-- [The Practical Challenges of Active Learning: A Case Study from Live Experimentation | Google Research](https://research.google/pubs/the-practical-challenges-of-active-learning-a-case-study-from-live-experimentation/)
+- [Encord: Active Learning in Machine Learning Guide](https://encord.com/blog/active-learning-machine-learning-guide/)
+- [V7 Labs: Active Learning in Machine Learning Guide](https://www.v7labs.com/blog/active-learning-guide)
+- [UiPath: Active Learning Overview](https://www.uipath.com/blog/ai/what-is-active-learning)
+- [IEEE: ACTIVE LEARNING IN MACHINE LEARNING: A STEP TOWARDS SMARTER MODELS](https://teaching.ieee.org/active-learning-in-machine-learning-a-step-towards-smarter-models/)
+- [IAPP: AI Governance Key Terms – Active learning](https://iapp.org/resources/article/key-terms-for-ai-governance/#active-learning)
+- [YouTube: Uncertainty Sampling Explained](https://youtu.be/DsdBe0-4-30)
+- [Policy-based Active Learning (PAL) Paper](https://arxiv.org/pdf/1708.02383.pdf)
 
----
+## Glossary Box: Related Terms
 
-**Key Takeaway:**  
-Active learning enables efficient, cost-effective training of machine learning models where labeled data is limited or expensive. By selecting the most informative data for labeling, it produces high-performance, robust models with minimal annotation effort. Its methods, challenges, and tools are critical for advancing AI across domains such as computer vision, NLP, healthcare, and more. For deeper technical exploration, refer to the sources above.
+- **Supervised Learning:** Training an AI model using labeled data to predict outcomes for new data.
+- **Unsupervised Learning:** Learning patterns from unlabeled data without explicit labels.
+- **Semi-Supervised Learning:** Combines a small amount of labeled data with a large amount of unlabeled data.
+- **Self-Supervised Learning:** The model generates its own supervisory signals from the data.
+- **Reinforcement Learning:** An agent learns to make decisions by receiving feedback in the form of rewards or penalties.
+- **Data Annotation:** The process of labeling data with ground truth, crucial for supervised and active learning.
+- **Model Uncertainty:** A measure of how unsure a model is about its predictions, used to guide querying in active learning.
+- **Oracle:** The human or system providing ground truth labels upon request.
+- **Query Synthesis:** Generating synthetic data points for labeling when the natural data pool is small.
+- **Pool-Based Sampling:** Selecting samples from a fixed pool of unlabeled data.
+- **Stream-Based Sampling:** Selecting samples from a continuous stream of incoming data.
+- **Informative Sample:** A data point that, if labeled, is expected to provide significant value to the model.
+- **Generalization
+

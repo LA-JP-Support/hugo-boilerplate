@@ -1,396 +1,281 @@
 ---
-title: "Adaptive Cards – Glossary & Technical Reference"
-translationKey: "adaptive-cards-glossary-technical-reference"
-description: "--- Keyword: Adaptive Cards Definition: A platform-agnostic UI framework allowing developers to exchange rich content cards (images, text,..."
-keywords: ['Adaptive Cards – Glossary & Technical Reference', 'AI Chatbots', 'Automation']
-category: "AI Chatbot & Automation"
-type: "glossary"
-draft: false
+title = "Adaptive Cards"
+translationKey = "adaptive-cards"
+description = "Adaptive Cards are platform-agnostic, declarative UI snippets authored in JSON for exchanging and rendering rich, interactive content across various applications and services."
+keywords = ["Adaptive Cards", "JSON", "Microsoft Teams", "Power Automate", "UI"]
+category = "AI Chatbot & Automation"
+type = "glossary"
+draft = false
 ---
 
----
 
-# Adaptive Cards – Glossary & Technical Reference
+## **1. What Are Adaptive Cards?**
 
-**Keyword:** Adaptive Cards  
-**Definition:** A platform-agnostic UI framework allowing developers to exchange rich content cards (images, text, forms) in a common format.  
-## Table of Contents
+Adaptive Cards are a standardized, open-source, declarative framework for authoring UI cards using JSON. A card’s JSON describes the structure, content, styling, and interactivity (e.g., forms, buttons, images, text). When delivered to a host app, the card is rendered natively, adopting the host’s theme, fonts, interaction style, and accessibility features.
 
-1. [What Are Adaptive Cards?](#what-are-adaptive-cards)
-2. [Core Concepts](#core-concepts)
-    - [JSON Schema](#json-schema)
-    - [Platform-Agnostic Rendering](#platform-agnostic-rendering)
-    - [Host Applications](#host-applications)
-3. [Key Features and Principles](#key-features-and-principles)
-    - [Portability](#portability)
-    - [Declarative Authoring](#declarative-authoring)
-    - [Open Source and Extensibility](#open-source-and-extensibility)
-    - [Native Performance](#native-performance)
-    - [Dynamic and Interactive Content](#dynamic-and-interactive-content)
-4. [How Adaptive Cards Are Used](#how-adaptive-cards-are-used)
-    - [Authoring and Design](#authoring-and-design)
-    - [Rendering and Display](#rendering-and-display)
-    - [User Input and Actions](#user-input-and-actions)
-5. [Typical Use Cases](#typical-use-cases)
-    - [AI Chatbots](#ai-chatbots)
-    - [Business Process Automation](#business-process-automation)
-    - [Enterprise Messaging](#enterprise-messaging)
-    - [Web and Mobile Applications](#web-and-mobile-applications)
-6. [Integration Examples](#integration-examples)
-    - [Microsoft Teams](#microsoft-teams)
-    - [Microsoft Outlook Actionable Messages](#microsoft-outlook-actionable-messages)
-    - [Bot Framework](#bot-framework)
-    - [Custom Apps and Web Portals](#custom-apps-and-web-portals)
-7. [Implementation Steps](#implementation-steps)
-    - [Creating an Adaptive Card](#creating-an-adaptive-card)
-    - [Integrating with Microsoft Teams via Power Automate](#integrating-with-microsoft-teams-via-power-automate)
-    - [Custom Integration (SDKs)](#custom-integration-sdks)
-8. [Best Practices](#best-practices)
-9. [Known Limitations](#known-limitations)
-10. [Tooling & Ecosystem](#tooling--ecosystem)
-11. [Quotes & Testimonials](#quotes--testimonials)
-12. [Visual Aids: Examples & JSON Snippets](#visual-aids-examples--json-snippets)
-13. [Further Reading & References](#further-reading--references)
+**Key Characteristics:**
+- **Platform Agnostic:** Write once, use everywhere.
+- **Declarative:** UI is described in JSON, not code.
+- **Native Rendering:** Host apps render cards using their own controls and styles.
+- **Interactivity:** Includes actionable elements (buttons, forms, inputs).
 
----
+**Examples:**
+- Task assignment cards in Microsoft Teams, featuring summary, description, and actionable buttons.
+- Approval workflows in Outlook, where managers can approve or reject requests directly from their inbox.
 
-## What Are Adaptive Cards?
+**Why Use Adaptive Cards?**
+- **Consistency:** Uniform user experience across platforms.
+- **Efficiency:** Single card definition for multiple hosts.
+- **Interactivity:** Enables actionable content and rich data collection.
+- **Accessibility:** Supports adaptive styling for accessibility and dark mode.
 
-Adaptive Cards are a platform-agnostic, open card exchange format that enables developers to exchange UI content in a common and consistent way. Authored in JSON, Adaptive Cards encapsulate structured data—such as text, images, inputs, containers, and actions—into a portable payload. This payload, when delivered to a host application (such as Microsoft Teams, Outlook, Windows Timeline, or a custom web app), is transformed into native UI that adopts the style and behavior of the host environment.
+**References:**
+- [Official Adaptive Cards Documentation Hub](https://adaptivecards.microsoft.com/)
+- [Adaptive Cards Overview - Microsoft Learn](https://learn.microsoft.com/en-us/adaptive-cards/)
 
-The Adaptive Cards framework is open source and designed to work across all major platforms and UI frameworks. Its declarative approach separates content and presentation, promoting reusability and easy maintenance. Adaptive Cards are integral to AI chatbots, business process automation, and cross-platform messaging due to their consistent, interactive, and lightweight user experience.
+## **2. Architecture: How Adaptive Cards Work**
 
-- [Adaptive Cards Official Site](https://adaptivecards.io/)
-- [Adaptive Cards Overview – Microsoft Learn](https://learn.microsoft.com/en-us/adaptive-cards/)
+### **2.1. Authoring**
+- **Card Author:** Creates cards using the standardized JSON schema, defining layout, content, and available actions.
+- **Schema:** Supports a wide range of elements, such as TextBlock, Image, FactSet, Input.Text, Input.ChoiceSet, and action types like Action.OpenUrl, Action.Submit, Action.Execute.
 
----
-
-## Core Concepts
-
-### JSON Schema
-
-Adaptive Cards are defined by a declarative JSON schema that specifies the structure and content of each card. The schema supports a wide range of elements, including `TextBlock`, `Image`, `Input`, `Container`, `FactSet`, and more. Actions such as `Action.OpenUrl` or `Action.Submit` allow user interactivity. The schema is both human-readable and machine-processable.
-
-**Example: Basic Adaptive Card JSON**
+**Example JSON:**
 ```json
 {
   "type": "AdaptiveCard",
-  "version": "1.4",
+  "version": "1.5",
   "body": [
-    {
-      "type": "TextBlock",
-      "text": "Welcome to Adaptive Cards!",
-      "weight": "Bolder",
-      "size": "Medium"
-    },
-    {
-      "type": "Image",
-      "url": "https://adaptivecards.io/content/cats/1.png"
-    }
+    { "type": "TextBlock", "text": "Task Assigned", "weight": "Bolder", "size": "Medium" },
+    { "type": "TextBlock", "text": "You have a new task: Review Q2 Report." }
   ],
   "actions": [
-    {
-      "type": "Action.OpenUrl",
-      "title": "Learn More",
-      "url": "https://adaptivecards.io"
-    }
+    { "type": "Action.OpenUrl", "title": "View Task", "url": "https://contoso.com/tasks/123" }
   ]
 }
 ```
-- [Adaptive Cards Schema Reference](https://adaptivecards.io/explorer/)
-- [JSON Schema Specification](https://learn.microsoft.com/en-us/adaptive-cards/authoring-cards/card-schema)
+- See the [Adaptive Cards Schema Explorer](https://adaptivecards.io/explorer/) for a complete list of supported elements.
+
+### **2.2. Delivery and Hosting**
+- **Host Application:** Receives the card JSON, parses it, and renders it natively.
+- **Supported Hosts:** Microsoft Teams, Outlook, Power Automate, Windows Timeline, web/mobile apps, and the Microsoft Bot Framework.
+- **Rendering:** The host interprets the card JSON, applies its own visual language (colors, fonts, spacings), and displays the card as part of its UI.
+
+**Reference:**  
+- [Adaptive Cards: How it Works](https://adaptivecards.io/)
+
+### **2.3. Adaptation**
+- **Automatic Styling:** Cards automatically adapt to the host’s style, including dark mode and accessibility settings.
+- **Native Controls:** Inputs and buttons use the host’s native UI elements for a seamless experience.
+
+### **2.4. Interactivity**
+- **Actions:** Cards support various interactive actions:
+  - Action.OpenUrl: Open a link.
+  - Action.Submit: Submit data (form inputs).
+  - Action.Execute (Universal Actions): Unified handling across Teams and Outlook.
+- **Data Collection:** User input is processed by bots, Power Automate flows, or custom app handlers.  
+  - See [Universal Actions for Adaptive Cards](https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview).
+
+**Diagram Description:**  
+A bot sends a card’s JSON to Teams. Teams renders it as a native card, styled like Teams, and users interact directly in the app. Actions trigger backend processes or update the card.
+
+## **3. Key Features and Design Principles**
+
+### **3.1. Core Features**
+- **Portability:** One card definition for all platforms (Teams, Outlook, web, mobile, etc.).
+- **Declarative:** Entire UI and interaction described in JSON.
+- **Open Source:** Community-driven with SDKs for major platforms ([GitHub](https://github.com/microsoft/AdaptiveCards/)).
+- **Reusable:** Same card payload can be reused and templated.
+- **Expressive:** Supports text, images, media, complex layouts, inputs, and multiple action types.
+- **Safe:** No executable code or scripting is allowed in cards.
+- **Consistent Experience:** Host controls look and feel for native integration.
+
+### **3.2. Design Principles**
+- **Content Ownership:** Card authors define content; hosts control appearance.
+- **Semantic Layout:** Focus on logical information structure over pixel-perfect layouts.
+- **Simplicity:** Avoid unnecessary complexity; emphasize clarity and purpose.
+- **Extensibility:** Developers can extend with custom elements as needed, but should prefer standard schema for cross-platform consistency.
+- **Universal Schema:** One JSON format for all supported hosts.
+
+**Feature Table:**
+| Feature         | Description                                                                                   |
+|-----------------|----------------------------------------------------------------------------------------------|
+| Portability     | Cards work on Teams, Outlook, web, mobile, and more.                                         |
+| Declarative     | JSON-based, no code for UI logic.                                                            |
+| Openness        | Open-source SDKs, community templates, transparent roadmap.                                  |
+| Consistency     | Host apps control visual style, ensuring a native feel.                                      |
+| Interactivity   | Supports input fields, buttons, and inline actions.                                          |
+| Reusability     | Same card can be used in multiple flows and platforms.                                       |
+| Security        | Declarative only, no scripting or unsafe markup.                                             |
+
+**References:**  
+- [Designing Adaptive Cards for Teams](https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards)  
+- [Adaptive Cards Design Best Practices](https://adaptivecards.microsoft.com/?topic=design-best-practices)
+
+## **4. Core Use Cases and Examples**
+
+Adaptive Cards are pivotal in business process automation, conversational AI bots, actionable messaging, workflow approvals, and custom app dashboards.
+
+### **4.1. Business Process Automation**
+**Scenario:**  
+A CRM creates a new sales lead. Power Automate triggers a card in the Teams Sales channel, showing lead info and action buttons (“Assign”, “Contact”). A sales manager clicks “Assign”, submits the card, and the CRM is updated via the flow.
+
+**References:**  
+- [Adaptive Cards in Power Automate](https://learn.microsoft.com/en-us/power-automate/overview-adaptive-cards)
+
+### **4.2. AI Chatbots**
+**Scenario:**  
+A helpdesk bot presents an Adaptive Card with an issue submission form in Teams or web chat. User fills in details, submits, and the bot processes the input, responding with a confirmation card.
+
+**References:**  
+- [Bot Framework Adaptive Cards Reference](https://docs.microsoft.com/microsoftteams/platform/concepts/cards/cards-reference#adaptive-card)
+
+### **4.3. Actionable Emails in Outlook**
+**Scenario:**  
+Managers receive expense approval cards in Outlook. The card displays expense details and action buttons (Approve/Reject). The manager acts directly from their email.
+
+**References:**  
+- [Adaptive Cards for Outlook Actionable Messages](https://learn.microsoft.com/en-us/outlook/actionable-messages/adaptive-card)
+
+### **4.4. Automating Workflows with Power Automate**
+**Scenario:**  
+Adaptive Cards are posted in Teams channels for feedback. The flow waits until a response is received, then processes the input and continues.
+
+### **4.5. Additional Use Cases**
+- **Notifications:** System events, escalations, deadlines.
+- **Surveys and Polls:** Structured user feedback.
+- **Status Updates:** Task, delivery, or incident status.
+- **Third-party Integrations:** Bringing external data into Teams/Outlook.
+
+**Reference:**  
+- [Adaptive Cards Use Cases](https://adaptivecards.io/)
+
+## **5. Implementation: Authoring and Deploying Adaptive Cards**
+
+### **5.1. Designing Cards**
+- Use the [Adaptive Cards Designer](https://adaptivecards.io/designer) for drag-and-drop card creation, JSON preview, and data binding.
+- Preview how cards render in Teams, Outlook, Web, and other hosts.
+- Access [templates and samples](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main) for rapid development.
+
+### **5.2. Authoring JSON**
+- Manually craft JSON or use the designer to export it.
+- Leverage [templating](https://adaptivecards.io/designer/#templating) for dynamic data binding.
+
+### **5.3. Deploying Cards**
+- **Power Automate:**  
+  - Use actions such as “Post adaptive card and wait for response”.
+  - Cards can be sent to users or channels; workflow continues after response.
+  - [Overview of Adaptive Cards in Power Automate](https://learn.microsoft.com/en-us/power-automate/overview-adaptive-cards)
+
+- **Bot Framework:**  
+  - Bots send and process Adaptive Cards in conversations.
+  - Adaptive Cards support updates, refreshes, and sequential workflows.
+
+- **Outlook Actionable Messages:**  
+  - Send Adaptive Cards in emails for embedded approval, notification, or survey actions.
+  - [Outlook Adaptive Cards](https://docs.microsoft.com/outlook/actionable-messages/adaptive-card)
+
+- **Custom Apps:**  
+  - Use SDKs for JavaScript, .NET, Android, iOS, and React Native to render cards in any app.
+  - [SDKs and Platform Integrations](https://adaptivecards.io/#platforms)
+
+## **6. Integration with Microsoft Teams, Power Automate, Outlook, and More**
+
+### **6.1. Microsoft Teams**
+- Cards can be sent as bots or via Power Automate to users, chats, or channels.
+- Supports light/dark themes, accessibility, and native styling.
+- [Designing Effective Cards for Teams](https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards)
+
+### **6.2. Power Automate**
+- Actions for posting cards to users/channels, waiting for responses, collecting input, and driving workflows.
+- Dynamic content from flows can be inserted in cards.
+- [Power Automate Adaptive Cards Guide](https://learn.microsoft.com/en-us/power-automate/overview-adaptive-cards)
+
+### **6.3. Outlook**
+- Actionable Messages powered by Adaptive Cards.
+- Users can approve/reject, provide feedback, or trigger flows from their inbox.
+- [Outlook Actionable Messages](https://docs.microsoft.com/outlook/actionable-messages/adaptive-card)
+
+### **6.4. Bot Framework**
+- Bots can send Adaptive Cards interactively in Teams, web chat, and other channels.
+- [Bot Framework Adaptive Cards](https://docs.microsoft.com/microsoftteams/platform/concepts/cards/cards-reference#adaptive-card)
+
+### **6.5. Web and Custom Apps**
+- SDKs for [JavaScript](https://docs.microsoft.com/adaptive-cards/sdk/rendering-cards/javascript/getting-started), [.NET](https://docs.microsoft.com/adaptive-cards/sdk/rendering-cards/net-html/getting-started), [Android](https://docs.microsoft.com/adaptive-cards/sdk/rendering-cards/android/getting-started), and [iOS](https://docs.microsoft.com/adaptive-cards/sdk/rendering-cards/ios/getting-started).
+- Embed cards in any dashboard, portal, or UI.
+
+## **7. Developer Tools and SDKs**
+
+- **Visual Designer:** [Adaptive Cards Designer](https://adaptivecards.io/designer)
+- **SDKs:**
+  - [JavaScript](https://docs.microsoft.com/adaptive-cards/sdk/rendering-cards/javascript/getting-started)
+  - [.NET / ASP.NET / WPF](https://docs.microsoft.com/adaptive-cards/sdk/rendering-cards/net-html/getting-started)
+  - [Android](https://docs.microsoft.com/adaptive-cards/sdk/rendering-cards/android/getting-started)
+  - [iOS](https://docs.microsoft.com/adaptive-cards/sdk/rendering-cards/ios/getting-started)
+  - [React Native](https://docs.microsoft.com/adaptive-cards/sdk/rendering-cards/react-native/getting-started)
+- **Templating Service:** Separate data from layout for reusable cards.
+- **REST APIs:** Deliver cards/templates from backend services.
+- **Open Source Repository:** [AdaptiveCards on GitHub](https://github.com/microsoft/AdaptiveCards/)
+
+## **8. Known Limitations**
+
+- **Host Capabilities:** Some hosts may not support all schema features (e.g., certain input types or actions).
+- **Data Submission:** Action.Submit can only be used in “wait for response” flows in Power Automate.
+- **Single Submission:** Cards in “wait for response” mode are single-use; after submission, further attempts are ignored unless updated.
+- **Update Message Requirement:** Prevent duplicate submissions by updating the card post-submission.
+- **No Custom JavaScript/CSS:** Hosts control all styling and scripting; custom code is disallowed.
+- **DoD Environment:** Adaptive Cards are not available in some government (Department of Defense) environments.
+- **Refresh Constraints:** Inconsistent refresh behavior for anonymous users or certain hosts ([source](https://learn.microsoft.com/en-us/answers/questions/2281334/inconsistent-adaptive-card-refresh-behavior-for-an)).
+- **Universal Actions Model:** Not every scenario is compatible with Action.Execute; some messaging extension scenarios require Action.Submit ([Universal Actions for Adaptive Cards](https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview)).
+
+## **9. Best Practices**
+
+- **Design for Host Adaptation:** Avoid pixel-perfect layouts; embrace host-controlled styling.
+- **Use Update Messages:** Configure “replacement” messages after submission to prevent duplicate actions.
+- **Prefer Universal Actions:** Use Action.Execute for broadest compatibility in Teams and Outlook.
+- **Keep Cards Simple:** Include only essential information and actions; avoid overcrowding.
+- **Test Across Hosts:** Use the Designer to preview cards for all intended platforms.
+- **Secure Data Handling:** Never include sensitive information directly in cards; host apps may log or cache data.
+- **Accessibility:** Use semantic elements and text alternatives for screen reader compatibility.
+- **Leverage Templates and UI Kits:** Use the [Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159) and the [Adaptive Card templates](https://github.com/OfficeDev/Microsoft-Teams-Adaptive-Card-Samples/tree/main) for rapid, accessible card design.
+
+## **10. Related Concepts and Terms**
+
+- **JSON Object:** The data structure used to describe Adaptive Cards.
+- **Host Application:** Teams, Outlook, or any app rendering the card.
+- **Bot Framework:** SDK for building conversational bots delivering cards.
+- **Power Automate:** Platform for triggering and posting Adaptive Cards as part of workflows.
+- **Rendering:** Host-side process of parsing and displaying the card from JSON.
+- **Templating:** Separating card structure from dynamic data for reusability.
+- **Actionable Content:** UI elements (buttons, forms) enabling user interaction.
+- **Universal Action Model:** Unified action handling across hosts using Action.Execute.
+
+## **11. Frequently Asked Questions**
+
+**Q: What is an Adaptive Card?**  
+A: A JSON-defined UI card rendered natively by host applications, delivering interactive experiences across platforms.
+
+**Q: Where can Adaptive Cards be used?**  
+A: Microsoft Teams, Outlook, Power Automate, Bot Framework, web apps, mobile apps, and any app supporting the SDK.
+
+**Q: How do I create an Adaptive Card?**  
+A: Use the [Adaptive Cards Designer](https://adaptivecards.io/designer) or author JSON manually.
+
+**Q: Can I collect input from users?**  
+A: Yes, cards support input fields, choice sets, and toggles. Submissions are processed by bots, flows, or handlers.
+
+**Q: Are Adaptive Cards secure?**  
+A: Yes; they are declarative with no custom scripts, reducing attack surfaces.
+
+**Q: Can cards be updated or refreshed?**  
+A: Yes, use update messages or refresh actions to update card content after submission.
+
+**Q: What are common limitations?**  
+A: Feature support varies by host; data submission and styling are host-controlled; no custom code is allowed.
+
+## **12. Related Resources**
+
+- [Official Adaptive Cards Documentation Hub](https://adaptivecards.microsoft.com/)
+- [Adaptive Cards Designer](https://adaptivecards.io/designer)
+- [Microsoft Learn: Adaptive Cards Overview](https://learn.microsoft.com/en-us/adaptive-cards/)
+- [Power Automate Adaptive Cards](https://learn.microsoft
 
-### Platform-Agnostic Rendering
-
-Adaptive Cards are rendered natively by any host application that supports the Adaptive Cards framework. The host application parses the card's JSON and automatically adapts its appearance and controls to match the host's design guidelines and accessibility requirements. This ensures a consistent and integrated user experience across platforms.
-
-- [Rendering Cards – Getting Started](https://learn.microsoft.com/en-us/adaptive-cards/rendering-cards/getting-started)
-
-### Host Applications
-
-A host application is any service or platform that can receive, parse, and render Adaptive Cards. Notable hosts include:
-- Microsoft Teams
-- Outlook (Actionable Messages)
-- Windows Timeline
-- Web applications
-- Bots built on Microsoft Bot Framework
-
-The host application controls the final look and feel, ensuring that Adaptive Cards blend seamlessly into the native user interface.
-
-- [Host Applications Overview](https://learn.microsoft.com/en-us/adaptive-cards/rendering-cards/getting-started)
-- [Teams Design Best Practices](https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards)
-
----
-
-## Key Features and Principles
-
-### Portability
-
-Adaptive Cards are designed to work across any app, device, or UI framework. The "write once, render anywhere" paradigm eliminates the need for custom markup or repeated development for different platforms.
-
-- [Portable UI Integration](https://learn.microsoft.com/en-us/adaptive-cards/)
-
-### Declarative Authoring
-
-Authors define card UI in JSON, specifying the structure, content, and actions without imperative programming. Basic interactivity and dynamic layouts are supported natively through the schema.
-
-- [Authoring Cards – Getting Started](https://learn.microsoft.com/en-us/adaptive-cards/authoring-cards/getting-started)
-
-### Open Source and Extensibility
-
-The Adaptive Cards framework is open source, with libraries and schemas available for extension and customization. Developers can add custom elements, actions, or templates to meet specialized needs.
-
-- [GitHub Repository](https://github.com/microsoft/AdaptiveCards/)
-
-### Native Performance
-
-Host applications render cards using native controls, ensuring that performance, accessibility, and styling are consistent with the host's ecosystem.
-
-- [Native UI Rendering Details](https://adaptivecards.io/)
-
-### Dynamic and Interactive Content
-
-Adaptive Cards support input controls (text, date, toggles, choice sets) and actions (submit, open URL, custom actions). Dynamic data binding and templating allow cards to reflect real-time data and personalized content.
-
-- [Adaptive Cards Templating Language](https://learn.microsoft.com/en-us/adaptive-cards/templating/language)
-
----
-
-## How Adaptive Cards Are Used
-
-### Authoring and Design
-
-Card authors define layouts, content, and actions using the Adaptive Cards JSON schema. Authoring can be done manually or through visual design tools such as the [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html).
-
-- [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html)
-- [Design Best Practices](https://adaptivecards.microsoft.com/?topic=design-best-practices)
-
-### Rendering and Display
-
-Upon delivery to a host, the card's JSON is parsed and rendered as native UI. The host application determines final styling, ensuring cards match the look and feel of the environment.
-
-- [Rendering Cards](https://learn.microsoft.com/en-us/adaptive-cards/rendering-cards/getting-started)
-
-### User Input and Actions
-
-Cards can collect data from users through input fields and support actions such as submit, open URL, or custom host-defined actions. User submissions are processed by bots, workflows, or application logic.
-
-- [Input Controls Reference](https://adaptivecards.io/explorer/Input.Text.html)
-
----
-
-## Typical Use Cases
-
-### AI Chatbots
-
-Adaptive Cards allow chatbots to present structured information, collect input, and guide conversational workflows within chat clients or web channels.
-
-**Example:**  
-A support bot presents a troubleshooting guide with images, steps, and feedback buttons.
-
-- [Bot Framework Integration](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/cards/cards-reference#adaptive-card)
-
-### Business Process Automation
-
-Cards streamline business processes by embedding forms, approvals, and actionable content into users' preferred applications (e.g., Teams, Outlook).
-
-**Example:**  
-An employee receives a leave approval request as an Adaptive Card in Teams and can approve/reject it inline.
-
-- [Actionable Messages in Outlook](https://docs.microsoft.com/outlook/actionable-messages/adaptive-card)
-
-### Enterprise Messaging
-
-Adaptive Cards enable delivery of interactive messages, surveys, notifications, and reports in enterprise communication tools.
-
-**Example:**  
-A survey card is sent via Outlook Actionable Message, and users can submit responses directly from their inbox.
-
-### Web and Mobile Applications
-
-Developers use Adaptive Cards to inject consistent, dynamic UI components across web, desktop, and mobile platforms without needing custom code for each.
-
-**Example:**  
-A CRM system displays customer details and allows quick updates via Adaptive Cards embedded in the dashboard.
-
-- [SDKs for Major Platforms](https://learn.microsoft.com/en-us/adaptive-cards/sdk/rendering-cards/getting-started)
-
----
-
-## Integration Examples
-
-### Microsoft Teams
-
-Adaptive Cards are deeply integrated into [Microsoft Teams](https://learn.microsoft.com/en-us/power-automate/overview-adaptive-cards), enabling actionable messages in channels, chats, and notifications. Cards can be posted by bots or automated workflows and support real-time updates and input collection.
-
-**Typical Workflow:**  
-1. A Power Automate flow posts an Adaptive Card to a Teams user or channel.
-2. The card collects user input (e.g., approval, comments).
-3. The workflow processes the response and continues based on user input.
-
-- [Teams Integration Guide](https://learn.microsoft.com/en-us/power-automate/overview-adaptive-cards)
-
-### Microsoft Outlook Actionable Messages
-
-Outlook uses Adaptive Cards for [Actionable Messages](https://docs.microsoft.com/outlook/actionable-messages/adaptive-card), enabling users to complete tasks directly within an email (e.g., approve expenses, respond to surveys).
-
-> “User engagement on surveys is always a challenge, but after utilizing Outlook Actionable Messages, our return rate surged from 10-12% to a 3 month average of 35%!”  
-> — Richard Greenfield, Executive Support Services
-
-- [Outlook Actionable Messages Documentation](https://docs.microsoft.com/outlook/actionable-messages/adaptive-card)
-
-### Bot Framework
-
-Bots built with the [Microsoft Bot Framework](https://dev.botframework.com/) use Adaptive Cards for rich, interactive messaging across web chat, Teams, and other supported channels.
-
-- [Bot Framework Integration Documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/cards/cards-reference#adaptive-card)
-
-### Custom Apps and Web Portals
-
-Adaptive Cards can be rendered in custom web or desktop applications using official SDKs:
-- [Android](https://learn.microsoft.com/adaptive-cards/sdk/rendering-cards/android/getting-started)
-- [iOS](https://learn.microsoft.com/adaptive-cards/sdk/rendering-cards/ios/getting-started)
-- [JavaScript](https://learn.microsoft.com/adaptive-cards/sdk/rendering-cards/javascript/getting-started)
-- [.NET](https://learn.microsoft.com/adaptive-cards/sdk/rendering-cards/net-html/getting-started)
-- [React Native](https://learn.microsoft.com/adaptive-cards/sdk/rendering-cards/react-native/getting-started)
-
-For advanced scenarios, developers can extend rendering logic or customize the schema.
-
-- [Rendering SDKs – Getting Started](https://learn.microsoft.com/en-us/adaptive-cards/sdk/rendering-cards/getting-started)
-
----
-
-## Implementation Steps
-
-### Creating an Adaptive Card
-
-1. **Define the Card Structure:**  
-   Use the [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html) or author JSON directly. Specify elements like `TextBlock`, `Image`, `Input`, etc.
-2. **Validate the Card:**  
-   Preview and validate your card using the visualizer in the designer.
-3. **Integrate with the Target Host:**  
-   Use the relevant SDK or follow platform-specific guides.
-
-- [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html)
-- [Card Schema Reference](https://adaptivecards.io/explorer/)
-
-### Integrating with Microsoft Teams via Power Automate
-
-1. Create a new flow in Power Automate.
-2. Add a trigger (e.g., new email, form submission).
-3. Use the action “Post an Adaptive Card to a Teams user/channel and wait for a response.”
-4. Paste or author the card JSON.
-5. Map responses to subsequent actions in your flow.
-
-- [Power Automate Integration](https://learn.microsoft.com/en-us/power-automate/overview-adaptive-cards)
-
-### Custom Integration (SDKs)
-
-Use official SDKs for:
-- [Android](https://learn.microsoft.com/adaptive-cards/sdk/rendering-cards/android/getting-started)
-- [iOS](https://learn.microsoft.com/adaptive-cards/sdk/rendering-cards/ios/getting-started)
-- [JavaScript](https://learn.microsoft.com/adaptive-cards/sdk/rendering-cards/javascript/getting-started)
-- [.NET](https://learn.microsoft.com/adaptive-cards/sdk/rendering-cards/net-html/getting-started)
-- [React Native](https://learn.microsoft.com/adaptive-cards/sdk/rendering-cards/react-native/getting-started)
-
-Parse and render Adaptive Cards in your app, or extend the schema/renderer for custom requirements.
-
-- [SDKs for Rendering Cards](https://learn.microsoft.com/en-us/adaptive-cards/sdk/rendering-cards/getting-started)
-
----
-
-## Best Practices
-
-- **Use Templating:**  
-  Utilize the [Adaptive Cards Templating Language](https://learn.microsoft.com/en-us/adaptive-cards/templating/language) to separate data from presentation.
-- **Design for Adaptability:**  
-  Avoid hardcoding visual details; let the host control styles.
-- **Update Cards on Submission:**  
-  Provide feedback and prevent duplicate submissions by updating cards post-interaction.
-- **Validate User Input:**  
-  Configure input fields and actions to capture and validate data effectively.
-- **Test Across Hosts:**  
-  Preview cards in all target environments for user experience consistency.
-
-- [Design Best Practices](https://adaptivecards.microsoft.com/?topic=design-best-practices)
-
----
-
-## Known Limitations
-
-- Cards without "wait for a response" actions can only capture user input via URL clicks.
-- Submit buttons on such cards error; only `OpenUrl` actions function.
-- "Wait for a response" cards can be submitted once per instance.
-- Only one container per card is allowed; multiple selection not supported.
-- Some features (e.g., property translation prevention) require specific platform versions.
-- Adaptive Cards may not be available in certain environments (e.g., DoD tenant in Power Automate).
-
-- [Limitations & Host Support](https://adaptivecards.io/samples/)
-
----
-
-## Tooling & Ecosystem
-
-- **Designer:** [Adaptive Cards Designer](https://adaptivecards.microsoft.com/designer.html)
-- **SDKs:** [SDKs for Major Platforms](https://learn.microsoft.com/en-us/adaptive-cards/sdk/rendering-cards/getting-started)
-- **Template Service:** [Template Discovery and Exchange](https://learn.microsoft.com/en-us/adaptive-cards/templating)
-- **Card Editor (DRUID):** [Adaptive Cards Editor](https://docs.druidai.com/1385954/Content/4_Flows/Adaptive%20Cards%20Steps.htm#Adaptive_Card_Editor)
-- **GitHub:** [Adaptive Cards GitHub](https://github.com/microsoft/AdaptiveCards/)
-- **Documentation Hub:** [Adaptive Cards Documentation Hub](https://adaptivecards.microsoft.com)
-- **Community & Examples:** [Adaptive Cards Official Site](https://adaptivecards.io/)
-
----
-
-## Quotes & Testimonials
-
-> “Microsoft Teams is only as powerful as the third-party services that integrate with it. Adaptive Cards allows any developer to plug into the richness of the Teams platform in a native way.”  
-> — Bill Bliss, Platform Architect
-
-> “AtBot helps anyone write a bot without having to write code. By embedding the Adaptive Card designer directly into our web-based portal, our customers can create rich, data-bound cards right from the browser.”  
-> — Joe Herres, Co-CEO
-
-> “User engagement on surveys is always a challenge, but after utilizing Outlook Actionable Messages, our return rate surged from 10-12% to a 3 month average of 35%!”  
-> — Richard Greenfield, Executive Support Services
-
----
-
-## Visual Aids: Examples & JSON Snippets
-
-### Example 1: Simple Welcome Card
-```json
-{
-  "type": "AdaptiveCard",
-  "version": "1.4",
-  "body": [
-    {
-      "type": "TextBlock",
-      "text": "Welcome, John!",
-      "weight": "Bolder",
-      "size": "Large"
-    },
-    {
-      "type": "Image",
-      "url": "https://adaptivecards.io/content/cats/2.png",
-      "size": "Medium"
-    }
-  ],
-  "actions": [
-    {
-      "type": "Action.OpenUrl",
-      "title": "View Dashboard",
-      "url": "https://contoso.com/dashboard"
-    }
-  ]
-}
-```
-
-### Example 2: Collect User Feedback
-```json
-{
-  "type": "AdaptiveCard",
-  "version": "1.4",
-  "body": [
-    {
-      "type": "TextBlock",
-      "text": "Please rate your recent experience:",
-      "wrap": true
