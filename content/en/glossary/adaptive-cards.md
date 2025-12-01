@@ -1,11 +1,11 @@
 ---
-title = "Adaptive Cards"
-translationKey = "adaptive-cards"
-description = "Adaptive Cards are platform-agnostic, declarative UI snippets authored in JSON for exchanging and rendering rich, interactive content across various applications and services."
-keywords = ["Adaptive Cards", "JSON", "Microsoft Teams", "Power Automate", "UI"]
-category = "AI Chatbot & Automation"
-type = "glossary"
-draft = false
+title: "Adaptive Cards"
+translationKey: "adaptive-cards"
+description: "Adaptive Cards are platform-agnostic, declarative UI snippets authored in JSON for exchanging and rendering rich, interactive content across various applications and services."
+keywords: ["Adaptive Cards", "JSON", "Microsoft Teams", "Power Automate", "UI"]
+category: "AI Chatbot & Automation"
+type: "glossary"
+draft: true
 ---
 
 

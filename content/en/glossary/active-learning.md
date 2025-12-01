@@ -1,11 +1,11 @@
 ---
-title = "Active Learning"
-translationKey = "active-learning"
-description = "Active learning is a machine learning process where the model interactively queries a human to label uncertain data, optimizing learning efficiency and reducing annotation costs."
-keywords = ["Active Learning", "Machine Learning", "Data Annotation", "Query Strategy", "Model Uncertainty"]
-category = "AI Chatbot & Automation"
-type = "glossary"
-draft = false
+title: "Active Learning"
+translationKey: "active-learning"
+description: "Active learning is a machine learning process where the model interactively queries a human to label uncertain data, optimizing learning efficiency and reducing annotation costs."
+keywords: ["Active Learning", "Machine Learning", "Data Annotation", "Query Strategy", "Model Uncertainty"]
+category: "AI Chatbot & Automation"
+type: "glossary"
+draft: true
 ---
 
 **Definition:** A machine learning process where the model explicitly asks a human to label data points it is uncertain about.  

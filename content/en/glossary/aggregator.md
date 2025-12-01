@@ -1,11 +1,11 @@
 ---
-title = "Aggregator"
-translationKey = "aggregator"
-description = "An aggregator collects outputs from multiple execution paths, data sources, or AI models, combining them into a single, unified result for streamlined workflows."
-keywords = ["aggregator", "AI", "automation", "chatbot", "data aggregation"]
-category = "AI Chatbot & Automation"
-type = "glossary"
-draft = false
+title: "Aggregator"
+translationKey: "aggregator"
+description: "An aggregator collects outputs from multiple execution paths, data sources, or AI models, combining them into a single, unified result for streamlined workflows."
+keywords: ["aggregator", "AI", "automation", "chatbot", "data aggregation"]
+category: "AI Chatbot & Automation"
+type: "glossary"
+draft: true
 ---
 
 
