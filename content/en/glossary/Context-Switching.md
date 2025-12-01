@@ -1,13 +1,12 @@
 ---
 title: "Context Switching"
 translationKey: "context-switching"
-description: "Learn about context switching in AI chatbots and automation systems, its importance, technical mechanisms, and strategies for managing abrupt topic changes in conversations."
-keywords: ["Context Switching", "AI Chatbots", "Automation", "LLMs", "Conversation Management"]
+description: "Learn about context switching in AI chatbots and automation systems, its importance, technical mechanisms, and strategies for managing abrupt topic..."
+keywords: ['Context Switching', 'AI Chatbots', 'Automation', 'LLMs', 'Conversation Management']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
 ---
-
 
 # Glossary: Context Switching  
 **Category:** AI Chatbot & Automation  

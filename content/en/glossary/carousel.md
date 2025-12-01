@@ -1,7 +1,7 @@
 ---
 title: "Carousel"
 translationKey: "carousel"
-description: "*** --- **Content Type:** - Primarily glossary article, with integrated elements of best practices guide, technical documentation, and UI/UX explainer"
+description: "* --- Content Type:** - Primarily glossary article, with integrated elements of best practices guide, technical documentation, and UI/UX explainer"
 keywords: ['Carousel', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation, UI/UX Design"
 type: "glossary"

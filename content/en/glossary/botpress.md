@@ -1,7 +1,7 @@
 ---
 title: "Glossary: Botpress"
 translationKey: "glossary-botpress"
-description: "**Keyword:** Botpress **Definition:** Botpress is a developer-oriented AI platform for building, managing, and deploying advanced chatbots and AI..."
+description: "Keyword: Botpress Definition: Botpress is a developer-oriented AI platform for building, managing, and deploying advanced chatbots and AI..."
 keywords: ['Glossary: Botpress', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"

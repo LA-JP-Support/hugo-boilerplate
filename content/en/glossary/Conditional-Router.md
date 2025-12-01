@@ -1,8 +1,8 @@
 ---
 title: "Conditional Router – Glossary & Deep Technical Reference"
 translationKey: "conditional-router-glossary-deep-technical-reference"
-description: "Learn about Conditional Routers: configurable nodes for dynamic data routing in AI workflows, automation, and software systems based on user-defined..."
-keywords: ["conditional router", "dynamic routing", "AI workflow", "model selection", "conditional routing"]
+description: "Learn about Conditional Routers: configurable nodes for dynamic data routing in AI workflows, automation, and software systems based on user-define..."
+keywords: ['conditional router', 'dynamic routing', 'AI workflow', 'model selection', 'conditional routing']
 category: "Glossary"
 type: "glossary"
 draft: false

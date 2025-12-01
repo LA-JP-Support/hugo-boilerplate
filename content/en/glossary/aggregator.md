@@ -1,8 +1,8 @@
 ---
 title: "Aggregator (AI Chatbot & Automation): Glossary, Guide, and Platform Comparison"
 translationKey: "aggregator-ai-chatbot-automation-glossary-guide-and-platform-comparison"
-description: "--- --- **Aggregator** A node or platform that collects outputs from multiple execution paths, loops, or AI models, and combines them into a single,..."
-keywords: ['Aggregator (AI Chatbot & Automation): Glossary, Guide, and Platform Comparison', 'AI Chatbots', 'Automation']
+description: "--- --- Aggregator A node or platform that collects outputs from multiple execution paths, loops, or AI models, and combines them into a single,..."
+keywords: ['Aggregator (AI Chatbot & Automation): Glossary', 'Guide', 'and Platform Comparison', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false

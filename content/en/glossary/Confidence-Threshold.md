@@ -2,7 +2,7 @@
 title: "Confidence Threshold"
 translationKey: "confidence-threshold"
 description: "The minimum probability score an AI model needs to accept a prediction as valid. If confidence falls below this, the prediction is disregarded or..."
-keywords: ["confidence threshold", "AI models", "machine learning", "confidence scores", "prediction certainty"]
+keywords: ['confidence threshold', 'AI models', 'machine learning', 'confidence scores', 'prediction certainty']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false

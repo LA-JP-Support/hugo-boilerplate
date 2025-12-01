@@ -1,8 +1,8 @@
 ---
 title: "Glossary: Autonomous Agents"
 translationKey: "glossary-autonomous-agents"
-description: "**Definition:** Autonomous agents are advanced AI systems capable of independently planning and executing complex, multi-step tasks (e.g., "refund..."
-keywords: ['Glossary: Autonomous Agents', 'AI Chatbots', 'Automation']
+description: "Autonomous agents are advanced AI systems capable of independently planning and executing complex, multi-step tasks without human intervention"
+keywords: ['Glossary: Autonomous Agents', 'AI Chatbots', 'Automation', 'AI Agents', 'Machine Learning']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
@@ -37,7 +37,7 @@ draft: false
 Autonomous agents are advanced forms of artificial intelligence designed to execute sequences of tasks toward a specific objective, without the need for continuous human guidance. They differ from traditional automation by being able to analyze their environment, reason through decisions, adapt to new information, and learn over time.
 
 **Example:**  
-A customer service autonomous agent receives a complaint, verifies the claim by analyzing transaction records, issues a refund, updates the customer’s account, and sends a confirmation email—entirely autonomously.
+A customer service autonomous agent receives a complaint, verifies the claim by analyzing transaction records, issues a refund, updates the customer's account, and sends a confirmation email—entirely autonomously.
 
 **Key Characteristics:**
 
@@ -347,4 +347,3 @@ A: Assess task complexity, need for adaptability, integration requirements, and 
 - [IBM: Components of AI Agents](https://www.ibm.com/think/topics/components-of-ai-agents#498277090)
 - [Reddit: Difference Between Chatbot, AI Agent](https://www.reddit.com/r/AI_Agents/comments/1i0lcxc/what_is_the_difference_between_chatbot_ai_agent/)
 - [Salesforce: Strategy for Autonomous Agents](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents/#include)
-- [IBM: AI Agent Security](https://www.ibm.com/think/topics/ai

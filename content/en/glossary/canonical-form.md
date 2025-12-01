@@ -1,7 +1,7 @@
 ---
 title: "Canonical Form"
 translationKey: "canonical-form"
-description: "*** --- **Content Type:** - Glossary article / in-depth explainer (targeting both technical and applied/SEO audiences) **Search Intent:** -..."
+description: "* --- Content Type: - Glossary article / in-depth explainer (targeting both technical and applied/SEO audiences) Search Intent:** -..."
 keywords: ['Canonical Form', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"

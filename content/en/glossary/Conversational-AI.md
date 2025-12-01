@@ -2,7 +2,7 @@
 title: "Conversational AI"
 translationKey: "conversational-ai"
 description: "Conversational AI uses AI technologies to understand, process, and respond to human language naturally, enabling meaningful dialogues and automated..."
-keywords: ["Conversational AI", "NLP", "Chatbots", "Virtual Assistants", "Machine Learning"]
+keywords: ['Conversational AI', 'NLP', 'Chatbots', 'Virtual Assistants', 'Machine Learning']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false

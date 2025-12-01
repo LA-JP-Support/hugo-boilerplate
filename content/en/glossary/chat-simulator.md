@@ -1,7 +1,7 @@
 ---
 title: "Chat Simulator"
 translationKey: "chat-simulator"
-description: "*** --- **Content Type:** Long-form, comprehensive blog article (occasionally includes tutorial and glossary elements) **Search Intent:**..."
+description: "* --- Content Type: Long-form, comprehensive blog article (occasionally includes tutorial and glossary elements) Search Intent:**..."
 keywords: ['Chat Simulator', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"

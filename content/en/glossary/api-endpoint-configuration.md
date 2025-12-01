@@ -1,7 +1,7 @@
 ---
 title: "Glossary: API Endpoint Configuration"
 translationKey: "glossary-api-endpoint-configuration"
-description: "**Definition:** Settings that expose a created flow as an API, allowing other applications to trigger it programmatically"
+description: "Definition: Settings that expose a created flow as an API, allowing other applications to trigger it programmatically"
 keywords: ['Glossary: API Endpoint Configuration', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"

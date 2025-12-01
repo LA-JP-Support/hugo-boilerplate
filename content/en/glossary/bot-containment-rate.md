@@ -1,7 +1,7 @@
 ---
 title: "Bot Containment Rate"
 translationKey: "bot-containment-rate"
-description: "--- **Definition:** **Bot Containment Rate is the percentage of user interactions handled entirely by a chatbot—without transferring to a human..."
+description: "--- Definition: **Bot Containment Rate is the percentage of user interactions handled entirely by a chatbot—without transferring to a human..."
 keywords: ['Bot Containment Rate', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"

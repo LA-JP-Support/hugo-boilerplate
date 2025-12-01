@@ -2,7 +2,7 @@
 title: "Code Block (Python/JS)"
 translationKey: "code-block-python-js"
 description: "A node enabling developers to write custom JavaScript or Python scripts for advanced logic, data manipulation, and dynamic workflow control in..."
-keywords: ["code block", "code execution", "custom code", "javascript python", "input parameters"]
+keywords: ['code block', 'code execution', 'custom code', 'javascript python', 'input parameters']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
