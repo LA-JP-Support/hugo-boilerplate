@@ -5,7 +5,7 @@ description: "AIチャットボット、自動化、顧客サポートに関す�
 keywords: ["用語集", "AI用語", "チャットボット", "自動化", "カスタマーサポート"]
 type: "glossary"
 layout: "list"
-heroPadding: "py-12 sm:py-16"
+heroPadding: "py-6 sm:py-8"
 ---
 
 AIチャットボット、自動化システム、顧客サポートに関する重要な用語を分かりやすく解説しています。
