@@ -5,6 +5,7 @@ description: "Comprehensive glossary of AI chatbot, automation, and customer sup
 keywords: ["Glossary", "AI Terms", "Chatbot", "Automation", "Customer Support"]
 type: "glossary"
 layout: "list"
+heroPadding: "py-12 sm:py-16"
 ---
 
 A comprehensive collection of key terms related to AI chatbots, automation systems, and customer support, explained in clear and accessible language.
