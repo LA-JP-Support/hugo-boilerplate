@@ -1,23 +1,12 @@
 ---
-title: "Conversational AI: Comprehensive Glossary and In-Depth Guide"
-translationKey: "conversational-ai-comprehensive-glossary-and-in-depth-guide"
-description: "--- title = "Conversational AI" translationKey = "conversational-ai" description = "Conversational AI uses AI technologies to understand, process,..."
-keywords: ['Conversational AI: Comprehensive Glossary and In-Depth Guide', 'AI Chatbots', 'Automation', 'Customer Support']
+title: "Conversational AI"
+translationKey: "conversational-ai"
+description: "Conversational AI uses AI technologies to understand, process, and respond to human language naturally, enabling meaningful dialogues and automated..."
+keywords: ["Conversational AI", "NLP", "Chatbots", "Virtual Assistants", "Machine Learning"]
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
 ---
-
----
-title = "Conversational AI"
-translationKey = "conversational-ai"
-description = "Conversational AI uses AI technologies to understand, process, and respond to human language naturally, enabling meaningful dialogues and automated tasks."
-keywords = ["Conversational AI", "NLP", "Chatbots", "Virtual Assistants", "Machine Learning"]
-category = "AI Chatbot & Automation"
-type = "glossary"
-draft = true
----
-
 
 # Conversational AI: Comprehensive Glossary and In-Depth Guide
 

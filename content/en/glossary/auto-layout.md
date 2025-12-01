@@ -2,7 +2,7 @@
 title: "Auto-Layout: In-Depth Glossary & Technical Guide"
 translationKey: "auto-layout-in-depth-glossary-technical-guide"
 description: "**Keyword:** Auto-Layout **Definition:** A UI feature that automatically organizes messy nodes and edges into a clean, readable structure"
-keywords: ['Auto-Layout: In-Depth Glossary & Technical Guide', 'AI Chatbots', 'Automation', 'Customer Support']
+keywords: ['Auto-Layout: In-Depth Glossary & Technical Guide', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false

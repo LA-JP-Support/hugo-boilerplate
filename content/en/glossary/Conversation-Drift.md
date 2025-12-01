@@ -1,23 +1,12 @@
 ---
 title: "Conversation Drift"
 translationKey: "conversation-drift"
-description: "--- title = "Conversation Drift" translationKey = "conversation-drift" description = "Conversation drift is when an AI chatbot's dialogue shifts away..."
-keywords: ['Conversation Drift', 'AI Chatbots', 'Automation', 'Customer Support']
+description: "Conversation drift is when an AI chatbot's dialogue shifts away from the original user intent, leading to off-topic responses, eroding trust, and..."
+keywords: ["Conversation drift", "AI chatbot", "User intent", "Context window", "Conversational AI"]
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
 ---
-
----
-title = "Conversation Drift"
-translationKey = "conversation-drift"
-description = "Conversation drift is when an AI chatbot's dialogue shifts away from the original user intent, leading to off-topic responses, eroding trust, and disrupting objectives."
-keywords = ["Conversation drift", "AI chatbot", "User intent", "Context window", "Conversational AI"]
-category = "AI Chatbot & Automation"
-type = "glossary"
-draft = true
----
-
 
 # Conversation Drift
 

@@ -1,29 +1,11 @@
 ---
-title: "Writing style definition"
-translationKey: "writing-style-definition"
+title: "Canonical Form"
+translationKey: "canonical-form"
 description: "*** --- **Content Type:** - Glossary article / in-depth explainer (targeting both technical and applied/SEO audiences) **Search Intent:** -..."
-keywords: ['Writing style definition', 'AI Chatbots', 'Automation', 'Customer Support']
+keywords: ['Canonical Form', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
----
-
-# Writing style definition
-
-***
-
-## **Aggregated Technical Writing Style & Structure Prompt for Copywriter**
-
----
-
-**Content Type:**  
-- Glossary article / in-depth explainer (targeting both technical and applied/SEO audiences)
-
-**Search Intent:**  
-- Informational, with a strong focus on clear definition, practical applications, and actionable guidance.
-- Serves both technical professionals (software engineers, NLP practitioners, digital circuit designers) and applied users (webmasters, SEO managers).
-- Readers seek to understand what "canonical form" or "canonicalization" means, why it matters, and how it is implemented in different domains.
-
 ---
 
 ### Overall Structure

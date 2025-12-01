@@ -2,7 +2,7 @@
 title: "Ambient Intelligence (AmI): Glossary, Mechanisms, Applications, Challenges, and Future Outlook"
 translationKey: "ambient-intelligence-ami-glossary-mechanisms-applications-challenges-and-future-outlook"
 description: "--- --- - Definition of Ambient Intelligence (AmI) - Core Characteristics of AmI - Ambient Intelligence vs"
-keywords: ['Ambient Intelligence (AmI): Glossary, Mechanisms, Applications, Challenges, and Future Outlook', 'AI Chatbots', 'Automation', 'Customer Support']
+keywords: ['Ambient Intelligence (AmI): Glossary, Mechanisms, Applications, Challenges, and Future Outlook', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false

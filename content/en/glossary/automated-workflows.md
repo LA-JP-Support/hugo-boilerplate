@@ -2,7 +2,7 @@
 title: "Glossary: Automated Workflows"
 translationKey: "glossary-automated-workflows"
 description: "**Definition:** Automated workflows are digital mechanisms that systematically execute business processes according to predefined logic, rules, and..."
-keywords: ['Glossary: Automated Workflows', 'AI Chatbots', 'Automation', 'Customer Support']
+keywords: ['Glossary: Automated Workflows', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false

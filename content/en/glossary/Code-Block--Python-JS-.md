@@ -1,43 +1,11 @@
 ---
-title: "Writing style definition"
-translationKey: "writing-style-definition"
-description: "--- title = "Code Block (Python/JS)" translationKey = "code-block-python-js" description = "A node enabling developers to write custom JavaScript or..."
-keywords: ['Writing style definition', 'AI Chatbots', 'Automation', 'Customer Support']
+title: "Code Block (Python/JS)"
+translationKey: "code-block-python-js"
+description: "A node enabling developers to write custom JavaScript or Python scripts for advanced logic, data manipulation, and dynamic workflow control in..."
+keywords: ["code block", "code execution", "custom code", "javascript python", "input parameters"]
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
----
-
----
-title = "Code Block (Python/JS)"
-translationKey = "code-block-python-js"
-description = "A node enabling developers to write custom JavaScript or Python scripts for advanced logic, data manipulation, and dynamic workflow control in chatbot/automation platforms."
-keywords = ["code block", "code execution", "custom code", "javascript python", "input parameters"]
-category = "AI Chatbot & Automation"
-type = "glossary"
-draft = true
----
-
-
-
-
-# Writing style definition
-
-***
-
-## **Copywriter Technical Task Definition: Writing Style & Structure for "Code Block (Python/JS)" Articles**
-
----
-
-**Content Type:**  
-- Technical documentation article (product documentation, feature guide)
-- Targeting blog post or help center/knowledge base format  
-- May include step-by-step guides, configuration walkthroughs, practical code examples, and reference sections
-
-**Primary Audience & Search Intent:**  
-- Audience: Technical users (developers, bot builders, automation specialists) seeking to learn how to use "Code Block" (Python/JS) features in AI chatbot and automation platforms
-- Search Intent: Informational & instructional—users want to understand what a Code Block node is, how/when to use it, its capabilities/limitations, and how to configure and write scripts for it
-
 ---
 
 ### Structure & Organization

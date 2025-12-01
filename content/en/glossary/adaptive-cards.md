@@ -2,7 +2,7 @@
 title: "Adaptive Cards – Glossary & Technical Reference"
 translationKey: "adaptive-cards-glossary-technical-reference"
 description: "--- **Keyword:** Adaptive Cards **Definition:** A platform-agnostic UI framework allowing developers to exchange rich content cards (images, text,..."
-keywords: ['Adaptive Cards – Glossary & Technical Reference', 'AI Chatbots', 'Automation', 'Customer Support']
+keywords: ['Adaptive Cards – Glossary & Technical Reference', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false

@@ -2,7 +2,7 @@
 title: "Glossary: Autonomous Agents"
 translationKey: "glossary-autonomous-agents"
 description: "**Definition:** Autonomous agents are advanced AI systems capable of independently planning and executing complex, multi-step tasks (e.g., "refund..."
-keywords: ['Glossary: Autonomous Agents', 'AI Chatbots', 'Automation', 'Customer Support']
+keywords: ['Glossary: Autonomous Agents', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false

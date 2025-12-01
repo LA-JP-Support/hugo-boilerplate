@@ -1,27 +1,11 @@
 ---
-title: "Writing style definition"
-translationKey: "writing-style-definition"
+title: "Carousel"
+translationKey: "carousel"
 description: "*** --- **Content Type:** - Primarily glossary article, with integrated elements of best practices guide, technical documentation, and UI/UX explainer"
-keywords: ['Writing style definition', 'AI Chatbots', 'Automation', 'Customer Support']
+keywords: ['Carousel', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation, UI/UX Design"
 type: "glossary"
 draft: false
----
-
-# Writing style definition
-
-***
-
-## **Aggregated Writing Style & Task Definition for Copywriter: Carousel UI/Chatbot Content**
-
----
-
-**Content Type:**  
-- Primarily glossary article, with integrated elements of best practices guide, technical documentation, and UI/UX explainer.
-
-**Search Intent & Document Intent:**  
-- Informational and instructional: Users seek to understand what a carousel is in digital UI/UX and chatbot contexts, when/why to use (or avoid) it, and practical guidance on effective implementation, design, and alternatives. Some documents also target product designers and developers with actionable steps for building carousels.
-
 ---
 
 ### Writing Style & Structure

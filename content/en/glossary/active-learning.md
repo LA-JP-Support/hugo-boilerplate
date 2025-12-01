@@ -2,7 +2,7 @@
 title: "Active Learning"
 translationKey: "active-learning"
 description: "--- Active learning is a machine learning paradigm where an algorithm or model actively selects the most informative data points from an unlabeled..."
-keywords: ['Active Learning', 'AI Chatbots', 'Automation', 'Customer Support']
+keywords: ['Active Learning', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false

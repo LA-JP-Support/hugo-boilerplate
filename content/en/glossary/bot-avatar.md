@@ -2,7 +2,7 @@
 title: "Bot Avatar: The Complete Glossary & Implementation Guide"
 translationKey: "bot-avatar-the-complete-glossary-implementation-guide"
 description: "**Keyword:** Bot Avatar **Definition:** The icon, image, or animated character that visually represents a chatbot persona in a chat interface"
-keywords: ['Bot Avatar: The Complete Glossary & Implementation Guide', 'AI Chatbots', 'Automation', 'Customer Support']
+keywords: ['Bot Avatar: The Complete Glossary & Implementation Guide', 'AI Chatbots', 'Automation']
 category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
