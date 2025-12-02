@@ -35,6 +35,31 @@
           "marginClass" "mt-4"
           "directories" (slice "blog")
         ) }}
+
+        {{/* ブログタグ一覧（現在の言語・セクションのページからユニークなタグを抽出） */}}
+        {{ $tags := slice }}
+        {{ range .Pages }}
+          {{ with .Params.tags }}
+            {{ range . }}
+              {{ if not (in $tags .) }}
+                {{ $tags = $tags | append . }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+
+        {{ if gt (len $tags) 0 }}
+          <div class="mt-6 flex flex-wrap justify-center gap-2">
+            {{ range sort $tags }}
+              <button
+                type="button"
+                class="blog-tag-filter inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                data-tag="{{ . }}">
+                {{ . }}
+              </button>
+            {{ end }}
+          </div>
+        {{ end }}
       </div>
     </div>
 
@@ -86,4 +111,24 @@
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('popup-search-input-blog-archive-search');
+  if (!input) return;
+
+  const buttons = document.querySelectorAll('.blog-tag-filter');
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const tag = this.getAttribute('data-tag');
+      if (!tag) return;
+      input.value = tag;
+      const ev = new Event('input', { bubbles: true });
+      input.dispatchEvent(ev);
+      input.focus();
+    });
+  });
+});
+</script>
+
 {{ end }}
