@@ -30,12 +30,15 @@
     @apply not-italic text-sm;
     line-height: 1.5;
     border-left: 4px solid #3b82f6;
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    /* 背景を単色にしてコントラストを上げる */
+    background-color: #f9fafb;
     padding: 0.5rem 1rem;
     margin: 0.5rem 0;
     border-radius: 0.5rem;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px 0 rgba(15, 23, 42, 0.04);
     position: relative;
+    /* 中のテキストを濃いグレーで固定して、青背景でも読めるようにする */
+    color: #111827;
   }
   
   .prose blockquote::before {
