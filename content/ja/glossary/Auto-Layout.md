@@ -1,6 +1,6 @@
 ---
-title: オートレイアウト：完全用語集
-translationKey: auto-layout-the-complete-glossary
+title: オートレイアウト
+translationKey: auto-layout
 description: UIエレメントを自動的に配置・サイズ変更するデザイン機能であるオートレイアウトをマスターしましょう。Figma、iOS、Android、Webでの主要概念、メリット、実装方法を網羅しています。
 keywords:
 - オートレイアウト

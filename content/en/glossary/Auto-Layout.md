@@ -1,6 +1,6 @@
 ---
-title: "Auto-Layout: The Complete Glossary"
-translationKey: "auto-layout-the-complete-glossary"
+title: "Auto-Layout"
+translationKey: "auto-layout"
 description: "Master Auto-Layout, a design feature for automatically arranging and resizing UI elements. Covers core concepts, benefits, and implementation in Figma, iOS, Android, and Web."
 keywords: ["Auto-Layout", "Figma", "UI design", "Responsive design", "Constraints"]
 category: "General"
