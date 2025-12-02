@@ -5,6 +5,7 @@ description: "Explore Conversational AI: technologies simulating human conversat
 keywords: ["Conversational AI", "Natural Language Processing", "Machine Learning", "Chatbots", "Virtual Assistants"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

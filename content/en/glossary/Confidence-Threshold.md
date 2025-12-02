@@ -5,6 +5,7 @@ description: "The minimum score an AI model needs to accept a prediction as corr
 keywords: ["confidence threshold", "AI model", "machine learning", "confidence score", "prediction reliability"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

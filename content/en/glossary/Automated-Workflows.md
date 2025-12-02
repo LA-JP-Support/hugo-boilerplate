@@ -5,6 +5,7 @@ description: "Automated workflows are technology-enabled processes that execute 
 keywords: ["Automated Workflows", "Workflow Automation", "Business Process Automation", "RPA", "Process Automation"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

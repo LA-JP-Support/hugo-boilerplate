@@ -5,6 +5,7 @@ description: "Learn about API endpoint configuration, its importance for integra
 keywords: ["API endpoint configuration", "API security", "API documentation", "REST API design", "API monitoring"]
 category: "Web Services"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

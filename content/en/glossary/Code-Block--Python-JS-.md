@@ -5,6 +5,7 @@ description: "A code block groups programming statements for unified execution, 
 keywords: ["code block", "Python", "JavaScript", "automation", "chatbot"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

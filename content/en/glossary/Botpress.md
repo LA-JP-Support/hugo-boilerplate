@@ -5,6 +5,7 @@ description: "Botpress is a developer-friendly platform for building AI chatbots
 keywords: ["Botpress", "AI chatbot", "LLM", "conversational AI", "visual flow editor"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

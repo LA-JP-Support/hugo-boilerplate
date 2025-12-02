@@ -5,6 +5,7 @@ description: "The percentage of user interactions handled entirely by a chatbot 
 keywords: ["Bot Containment Rate", "chatbot performance", "AI chatbot", "customer service automation", "escalation rate"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

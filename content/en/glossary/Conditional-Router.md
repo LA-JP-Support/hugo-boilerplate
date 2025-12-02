@@ -5,6 +5,7 @@ description: "A Conditional Router evaluates data against rules, directing it to
 keywords: ["Conditional Router", "Workflow automation", "Rule-based branching", "AI chatbots", "Data routing"]
 category: "General"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

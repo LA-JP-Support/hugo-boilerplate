@@ -5,6 +5,7 @@ description: "Understand context switching in AI chatbots and automation: how sy
 keywords: ["context switching", "AI chatbots", "automation", "conversation management", "LLMs"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

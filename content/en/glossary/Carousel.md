@@ -5,6 +5,7 @@ description: "A carousel is an interactive UI component displaying a sequence of
 keywords: ["carousel", "UI component", "web design", "UX design", "accessibility"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

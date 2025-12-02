@@ -5,6 +5,7 @@ description: "Discover what a bot avatar is, its benefits, types, and how to cre
 keywords: ["bot avatar", "chatbot persona", "AI assistant", "digital human", "user experience"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

@@ -5,6 +5,7 @@ description: "Conversation drift occurs when an AI chatbot or virtual assistant 
 keywords: ["conversation drift", "AI chatbot", "virtual assistant", "chatbot context", "drift detection"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

@@ -5,6 +5,7 @@ description: "Master Auto-Layout, a design feature for automatically arranging a
 keywords: ["Auto-Layout", "Figma", "UI design", "Responsive design", "Constraints"]
 category: "General"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

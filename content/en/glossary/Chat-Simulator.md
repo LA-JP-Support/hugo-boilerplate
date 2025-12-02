@@ -5,6 +5,7 @@ description: "A development tool for developers, QA, and operations to test, val
 keywords: ["Chat Simulator", "Chatbot testing", "Conversational AI", "NLU validation", "Agent training"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

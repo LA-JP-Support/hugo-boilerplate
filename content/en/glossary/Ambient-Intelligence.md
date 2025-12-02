@@ -5,6 +5,7 @@ description: "Ambient Intelligence (AmI) seamlessly embeds digital systems into 
 keywords: ["ambient intelligence", "AmI", "smart environments", "context-aware systems", "AI automation"]
 category: "General"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

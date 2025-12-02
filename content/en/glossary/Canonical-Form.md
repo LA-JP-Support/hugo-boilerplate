@@ -5,6 +5,7 @@ description: "Canonical form transforms data into a single, standardized represe
 keywords: ["canonical form", "data normalization", "AI chatbots", "intent recognition", "unique representation"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 

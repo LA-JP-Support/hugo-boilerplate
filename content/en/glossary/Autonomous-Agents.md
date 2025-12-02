@@ -5,6 +5,7 @@ description: "Explore autonomous agents: AI systems that independently plan, rea
 keywords: ["autonomous agents", "AI automation", "multi-step tasks", "machine learning", "AI systems"]
 category: "AI Chatbot & Automation"
 type: "glossary"
+date: 2025-12-02
 draft: false
 ---
 
