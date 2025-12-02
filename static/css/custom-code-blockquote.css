@@ -9,20 +9,21 @@
 
 /* インラインコード */
 code {
-    background-color: #f6f8fa !important;
-    color: #d73a49 !important;
+    /* シンプルなライトテーマ：薄いグレー背景 + 濃いテキスト */
+    background-color: #f3f4f6 !important; /* gray-100 相当 */
+    color: #111827 !important;            /* gray-900 相当 */
     padding: 3px 6px !important;
     border-radius: 3px !important;
     font-family: 'Courier New', Consolas, Monaco, monospace !important;
-    font-size: 90% !important;
-    font-weight: 600 !important;
+    font-size: 95% !important;   /* 本文より少し小さい程度 */
+    font-weight: 650 !important; /* やや太め */
     border: 1px solid #e1e4e8 !important;
 }
 
 /* コードブロック全体 */
 pre {
-    background-color: #f6f8fa !important;
-    border: 1px solid #e1e4e8 !important;
+    background-color: #f3f4f6 !important; /* 薄いグレー背景 */
+    border: 1px solid #e5e7eb !important; /* 明るい枠線 */
     border-radius: 6px !important;
     padding: 16px !important;
     overflow-x: auto !important;
@@ -32,62 +33,25 @@ pre {
 /* コードブロック内のコード */
 pre code {
     background-color: transparent !important;
-    color: #24292e !important;
+    color: #111827 !important;            /* 濃いテキスト */
     padding: 0 !important;
-    font-size: 14px !important;
+    font-size: 14px !important;  /* 一般的なコードサイズ */
     line-height: 1.6 !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important; /* 読みやすい太さ */
 }
 
 /* シンタックスハイライト */
 .highlight pre {
-    background-color: #f6f8fa !important;
-    border: 1px solid #e1e4e8 !important;
+    background-color: #f3f4f6 !important;
+    border: 1px solid #e5e7eb !important;
 }
 
 /* シンタックスハイライトの色設定（読みやすく最適化） */
-.highlight .n,
-.highlight .nx,
-.highlight .nf {
-    color: #24292e !important;  /* 関数名・変数名：濃い黒 */
-    font-weight: 500 !important;
-}
-
-.highlight .s,
-.highlight .s1,
-.highlight .s2,
-.highlight .se {
-    color: #d73a49 !important;  /* 文字列：濃い赤 */
-    font-weight: 500 !important;
-}
-
-.highlight .kd,
-.highlight .kn,
-.highlight .kp,
-.highlight .kr,
-.highlight .kt {
-    color: #d73a49 !important;  /* キーワード：濃い赤 */
-    font-weight: 600 !important;
-}
-
-.highlight .c,
-.highlight .cm,
-.highlight .c1 {
-    color: #6a737d !important;  /* コメント：グレー */
-    font-style: italic !important;
-}
-
-.highlight .m,
-.highlight .mi,
-.highlight .mf {
-    color: #005cc5 !important;  /* 数値：青 */
-    font-weight: 500 !important;
-}
-
-.highlight .o,
-.highlight .ow {
-    color: #d73a49 !important;  /* 演算子：赤 */
-    font-weight: 600 !important;
+/* インライン style も含めて、濃いテキスト色＋薄い背景に統一する */
+.highlight pre,
+.highlight pre * {
+    color: #111827 !important;
+    background-color: #f3f4f6 !important;
 }
 
 /* すべてのコード要素に基本的な読みやすさを確保 */
@@ -236,23 +200,24 @@ pre.formula {
    ========================================================================== */
 
 @media (prefers-color-scheme: dark) {
-    /* コードブロック */
+    /* OSダークモードでもライトテーマと同じスタイルを維持 */
     code {
-        background-color: #2d2d2d !important;
-        color: #f8f8f2 !important;
+        background-color: #f3f4f6 !important;
+        color: #111827 !important;
     }
-    
+
     pre {
-        background-color: #1e1e1e !important;
-        border-color: #404040 !important;
+        background-color: #f3f4f6 !important;
+        border-color: #e5e7eb !important;
     }
-    
+
     pre code {
-        color: #f8f8f2 !important;
+        color: #111827 !important;
     }
-    
+
     .highlight pre {
-        background-color: #1e1e1e !important;
+        background-color: #f3f4f6 !important;
+        border-color: #e5e7eb !important;
     }
     
     /* 引用ブロック */

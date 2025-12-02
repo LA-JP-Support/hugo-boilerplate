@@ -9,7 +9,7 @@ date: 2025-12-02
 draft: false
 ---
 
-## TL;DR
+## Summary
 
 Bot Containment Rate is the share of customer interactions that a chatbot or virtual agent resolves entirely, without human handoff. This metric is foundational for evaluating chatbot performance, operational efficiency, and customer experience in automated support. High containment is valuable only when paired with quality resolutions and strong customer satisfaction.  
 **Source:** [Botpress Guide](https://botpress.com/blog/containment-rate), [Decagon Glossary](https://decagon.ai/glossary/what-is-chatbot-containment-rate)
