@@ -7,30 +7,31 @@
    1. コードブロック
    ========================================================================== */
 
-/* インラインコード */
+/* インラインコード（pre の外） */
 code {
     /* シンプルなライトテーマ：薄いグレー背景 + 濃いテキスト */
     background-color: #f3f4f6 !important; /* gray-100 相当 */
     color: #111827 !important;            /* gray-900 相当 */
-    padding: 3px 6px !important;
+    padding: 2px 4px !important;
     border-radius: 3px !important;
     font-family: 'Courier New', Consolas, Monaco, monospace !important;
-    font-size: 95% !important;   /* 本文より少し小さい程度 */
-    font-weight: 650 !important; /* やや太め */
+    font-size: 90% !important;   /* 本文より少し小さめ */
+    font-weight: 600 !important; /* やや太め */
     border: 1px solid #e1e4e8 !important;
 }
 
-/* コードブロック全体 */
+/* コードブロック全体（汎用） */
 pre {
     background-color: #f3f4f6 !important; /* 薄いグレー背景 */
     border: 1px solid #e5e7eb !important; /* 明るい枠線 */
     border-radius: 6px !important;
     padding: 16px !important;
     overflow-x: auto !important;
+    font-family: 'Courier New', Consolas, Monaco, monospace !important;
     margin: 1.5em 0 !important;
 }
 
-/* コードブロック内のコード */
+/* コードブロック内のコード（汎用） */
 pre code {
     background-color: transparent !important;
     color: #111827 !important;            /* 濃いテキスト */
@@ -40,23 +41,28 @@ pre code {
     font-weight: 600 !important; /* 読みやすい太さ */
 }
 
-/* シンタックスハイライト */
+/* シンタックスハイライト：完全リセットして統一スタイルに */
 .highlight pre {
+    all: unset;
+    display: block;
+    margin: 1rem 0 !important;
+    padding: 16px !important;
+    border-radius: 6px !important;
     background-color: #f3f4f6 !important;
     border: 1px solid #e5e7eb !important;
+    overflow-x: auto !important;
+    font-family: 'Courier New', Consolas, Monaco, monospace !important;
 }
 
-/* シンタックスハイライトの色設定（読みやすく最適化） */
-/* インライン style も含めて、濃いテキスト色＋薄い背景に統一する */
-.highlight pre,
-.highlight pre * {
+.highlight pre code,
+.highlight pre code * {
+    all: unset;
+    font-family: 'Courier New', Consolas, Monaco, monospace !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    font-weight: 600 !important;
     color: #111827 !important;
-    background-color: #f3f4f6 !important;
-}
-
-/* すべてのコード要素に基本的な読みやすさを確保 */
-pre code * {
-    font-weight: 500 !important;
+    background-color: transparent !important;
 }
 
 /* ==========================================================================
