@@ -8,10 +8,6 @@ type: "glossary"
 draft: false
 ---
 
-**Definition:** A machine learning process where the model explicitly asks a human to label data points it is uncertain about.  
-
----
-
 ## What is Active Learning?
 
 Active learning is a focused approach in supervised machine learning that enables a model to select and request labels for data points it finds most informative or uncertain. Instead of passively consuming all available labeled data, the model actively identifies which unlabeled instances would most improve its predictive power if annotated.  
