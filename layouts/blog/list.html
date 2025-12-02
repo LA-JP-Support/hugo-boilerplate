@@ -1,7 +1,10 @@
 {{ define "main" }}
-<div class="bg-white dark:bg-gray-900 py-12 sm:py-16 lg:py-20">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <!-- パンくずリスト -->
+<!-- ヒーローセクション全体（グラデーション背景付き） -->
+<div class="relative overflow-hidden">
+  <div class="blog-hero-animated-bg absolute inset-0 z-0"></div>
+  <div class="relative z-10 py-8 sm:py-12 lg:py-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <!-- パンくずリスト -->
     <div class="mb-8 max-w-5xl mx-auto">
       <nav class="text-sm hidden sm:block">
         <ol class="flex items-center space-x-2 text-gray-500">
@@ -17,51 +20,62 @@
     </div>
 
     <!-- ヘッダーセクション -->
-    <div class="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl">
-        {{ i18n "blog_title" }}
-      </h1>
-      <p class="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600 dark:text-gray-400">
-        {{ if eq .Language.Lang "ja" }}
-          最新の技術情報やニュースをお届けします
-        {{ else }}
-          Latest technology news and updates
-        {{ end }}
-      </p>
+    <div class="mb-8 sm:mb-12">
+      <div class="mx-auto max-w-2xl text-center">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl">
+          {{ i18n "blog_title" }}
+        </h1>
+        <p class="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600 dark:text-gray-400">
+          {{ if eq .Language.Lang "ja" }}
+            最新の技術情報やニュースをお届けします
+          {{ else }}
+            Latest technology news and updates
+          {{ end }}
+        </p>
 
-      <div class="mt-8 max-w-xl mx-auto">
-        {{ partial "search_field.html" (dict
-          "type" "blog-archive-search"
-          "marginClass" "mt-4"
-          "directories" (slice "blog")
-        ) }}
+        <div class="mt-8 max-w-xl mx-auto">
+          {{ partial "search_field.html" (dict
+            "type" "blog-archive-search"
+            "marginClass" "mt-4"
+            "directories" (slice "blog")
+          ) }}
+        </div>
+      </div>
 
-        {{/* ブログタグ一覧（現在の言語・セクションのページからユニークなタグを抽出） */}}
-        {{ $tags := slice }}
-        {{ range .Pages }}
-          {{ with .Params.tags }}
-            {{ range . }}
-              {{ if not (in $tags .) }}
-                {{ $tags = $tags | append . }}
-              {{ end }}
+      {{/* ブログタグ一覧（現在の言語・セクションのページからユニークなタグを抽出） */}}
+      {{ $tags := slice }}
+      {{ range .Pages }}
+        {{ with .Params.tags }}
+          {{ range . }}
+            {{ if not (in $tags .) }}
+              {{ $tags = $tags | append . }}
             {{ end }}
           {{ end }}
         {{ end }}
+      {{ end }}
 
-        {{ if gt (len $tags) 0 }}
-          <div class="mt-6 flex flex-wrap justify-center gap-2">
+      {{ if gt (len $tags) 0 }}
+        <div class="mt-6 mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="flex flex-wrap justify-start gap-2">
             {{ range sort $tags }}
               <button
                 type="button"
-                class="blog-tag-filter inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                class="blog-tag-filter inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1 text-[10px] sm:text-[11px] font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700"
                 data-tag="{{ . }}">
                 {{ . }}
               </button>
             {{ end }}
           </div>
-        {{ end }}
-      </div>
+        </div>
+      {{ end }}
     </div>
+    </div>
+  </div>
+</div>
+
+<!-- ブログ記事セクション -->
+<div class="bg-white dark:bg-gray-900 py-12 sm:py-16 lg:py-20">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
     <!-- ブログ記事グリッド -->
     <div class="mx-auto mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-6 sm:gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -108,9 +122,32 @@
           {{ end }}
         </article>
       {{ end }}
-    </div>
   </div>
 </div>
+
+<style>
+@keyframes blog-hero-color-shift {
+  0%   { background-position: 0% 0%; }
+  25%  { background-position: 100% 0%; }
+  50%  { background-position: 100% 100%; }
+  75%  { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+.blog-hero-animated-bg {
+  background: linear-gradient(
+    -45deg,
+    #e0f7fa,
+    #80deea,
+    #26c6da,
+    #4fc3f7,
+    #29b6f6,
+    #03a9f4
+  );
+  background-size: 400% 400%;
+  animation: blog-hero-color-shift 6s ease infinite;
+}
+</style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
