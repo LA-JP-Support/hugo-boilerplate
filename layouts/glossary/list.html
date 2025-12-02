@@ -99,6 +99,12 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
+      // JSON埋め込み時に二重引用符が付いている場合に外側の " を1組だけ削る
+      function stripOuterQuotes(str) {
+        if (typeof str !== 'string') return str;
+        return str.replace(/^"(.*)"$/, '$1');
+      }
+
       const select = document.getElementById("alphabetSelect");
       const tabsContainer = document.querySelector('#alphabetNav nav');
       const sections = document.querySelectorAll('.wrapper > div[id]');
@@ -161,6 +167,14 @@
       kanaGroups.forEach(group => groupedTerms[group] = []);
 
       termsData.forEach(term => {
+        // 外側の "..." を削除してから利用する
+        term.term = stripOuterQuotes(term.term);
+        term.title = stripOuterQuotes(term.title);
+        term.url = stripOuterQuotes(term.url);
+        term.description = stripOuterQuotes(term.description);
+        term.image = stripOuterQuotes(term.image);
+        term.date = stripOuterQuotes(term.date);
+
         const firstChar = term.term.charAt(0);
         const group = getKanaGroup(firstChar);
         if (group && groupedTerms[group]) {
