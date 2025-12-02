@@ -1,6 +1,6 @@
 ---
-title: "Conversational AI: Glossary & Comprehensive Explainer"
-translationKey: "conversational-ai-glossary-comprehensive-explainer"
+title: "Conversational AI"
+translationKey: "conversational-ai"
 description: "Explore Conversational AI: technologies simulating human conversation with NLP, NLU, ML, and speech recognition. Learn how it works, its benefits, use cases, and future trends."
 keywords: ["Conversational AI", "Natural Language Processing", "Machine Learning", "Chatbots", "Virtual Assistants"]
 category: "AI Chatbot & Automation"

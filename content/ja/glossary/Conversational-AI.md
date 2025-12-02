@@ -1,6 +1,6 @@
 ---
-title: "会話型AI：用語集と包括的解説"
-translationKey: "conversational-ai-glossary-comprehensive-explainer"
+title: "会話型AI"
+translationKey: "conversational-ai"
 description: "会話型AIを探る：NLP、NLU、ML、音声認識により人間の会話をシミュレートする技術。仕組み、メリット、ユースケース、将来のトレンドを学ぶ。"
 keywords: ["会話型AI", "自然言語処理", "機械学習", "チャットボット", "バーチャルアシスタント"]
 category: "AIチャットボット＆自動化"
