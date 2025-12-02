@@ -148,5 +148,21 @@ defaultContentLanguageInSubdir = true
 [build]
   writeStats = true
 
+# ========================================
+# マークアップとシンタックスハイライト設定
+# ========================================
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = false
+    lineNumbersInTable = false
+    # カスタムCSSを使用するため style を none に設定
+    style = "none"
+    tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # HTMLタグを許可（iframe、YouTubeなど）
+      unsafe = true
+
 [sitemap]
   filename = "sitemap.xml"
