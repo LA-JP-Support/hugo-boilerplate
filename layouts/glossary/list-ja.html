@@ -1,0 +1,326 @@
+{{ define "main" }}
+
+{{/* Configuration variables */}}
+{{ $cardHeight := 252 }}
+
+  <div class="bg-white dark:bg-gray-900">
+    {{/* 用語集専用のシンプルヒーロー */}}
+    <div class="bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-700 dark:from-gray-800 dark:via-gray-900 dark:to-black py-12 sm:py-16">
+      <div class="wrapper">
+        <div class="mx-auto max-w-2xl text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            {{ .Title }}
+          </h1>
+          {{ if .Description }}
+            <p class="mt-4 text-lg text-white/90">
+              {{ .Description }}
+            </p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{/* 五十音ナビゲーションと記事リスト */}}
+    {{ $kanaGroups := slice "あ行" "か行" "さ行" "た行" "な行" "は行" "ま行" "や行" "ら行" "わ行" "0-9" "A-Z" }}
+    {{ $activeLetter := "" }}
+    {{ with .Title }}
+      {{ $activeLetter = substr . 0 1 }}
+    {{ end }}
+    {{ $glossaryTerms := where .Site.RegularPages "Section" "glossary" }}
+    {{ $glossaryTerms = where $glossaryTerms "Language.Lang" .Language.Lang }}
+    
+    <div id="alphabetNav" class="w-full bg-white dark:bg-gray-900 sticky top-20 md:top-[5.25rem] z-[45] transition-all duration-300">
+      <div class="wrapper px-8 ">
+        {{/* モバイル用ドロップダウン */}}
+        <div class="grid grid-cols-2 lg:hidden">
+          <select class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white dark:bg-gray-800 py-2 pl-3 pr-8 text-base text-gray-900 dark:text-white" id="alphabetSelect">
+            {{ range $kanaGroups }}
+              <option value="{{ . }}" {{ if eq . $activeLetter }}selected{{ end }}>{{ . }}</option>
+            {{ end }}
+          </select>
+        </div>
+
+        {{/* デスクトップ用ナビゲーション */}}
+        <div class="hidden lg:block">
+          <nav class="flex flex-wrap gap-2 py-6 justify-between">
+            {{ range $kanaGroups }}
+              {{ $group := . }}
+              <a href="#{{ $group }}" data-group="{{ $group }}"
+                 class="kana-nav-link rounded-md px-3 py-2 text-sm font-medium whitespace-nowrap
+                 {{ if eq $group $activeLetter }}bg-indigo-100 dark:bg-indigo-900 text-primary aria-current='page'
+                 {{ else }}text-tertiary hover:text-primary hover:bg-indigo-100 dark:hover:bg-indigo-900{{ end }}">
+                {{ $group }}
+              </a>
+            {{ end }}
+          </nav>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="wrapper mt-10">
+      {{ range $kanaGroups }}
+        {{ $group := . }}
+        <div id="{{ $group }}" class="my-10" data-group="{{ $group }}" style="display:none;">
+          <h2 class="text-5xl font-semibold text-heading dark:text-white">{{ $group }}</h2>
+          <ul class="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-3" data-terms-container="{{ $group }}">
+            {{/* 用語はJavaScriptで動的に配置される */}}
+          </ul>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+  {{/* すべての用語をJSON形式で埋め込み */}}
+  <script id="glossary-terms-data" type="application/json">
+  [
+    {{ range $index, $term := $glossaryTerms }}
+      {{ if $index }},{{ end }}
+      {
+        "title": {{ $term.Title | jsonify }},
+        "term": {{ ($term.Params.term | default $term.Title) | jsonify }},
+        "url": {{ $term.RelPermalink | jsonify }},
+        "description": {{ $term.Description | jsonify }},
+        "image": {{ ($term.Params.image | default "") | jsonify }},
+        "date": {{ $term.Date.Format "2006-01-02" | jsonify }},
+        "readingTime": {{ $term.ReadingTime }}
+      }
+    {{ end }}
+  ]
+  </script>
+
+  {{ if .Content }}
+    {{ partial "sections/content/centered.html" (dict
+        "content" .Content
+        "bgColor" "bg-gray-50 dark:bg-gray-800"
+        "page" .
+    ) }}
+  {{ end }}
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const select = document.getElementById("alphabetSelect");
+      const tabsContainer = document.querySelector('#alphabetNav nav');
+      const sections = document.querySelectorAll('.wrapper > div[id]');
+      const alphabetNav = document.getElementById('alphabetNav');
+
+      const activeClasses = ['bg-indigo-100', 'dark:bg-indigo-900', 'text-primary'];
+      const defaultClasses = ['text-tertiary', 'hover:text-primary', 'hover:bg-indigo-100', 'dark:hover:bg-indigo-900'];
+      const disabledClasses = ['text-gray-500', 'opacity-30', 'pointer-events-none']; 
+      const allDynamicClasses = [...activeClasses, ...defaultClasses, ...disabledClasses];
+
+      const scrollThreshold = 31.5 * 16;
+      const borderClasses = ['border-b', 'border-gray-300', 'dark:border-gray-700'];
+
+      // 五十音行の判定関数
+      function getKanaGroup(char) {
+        const code = char.charCodeAt(0);
+        
+        // ひらがな判定
+        if (code >= 0x3041 && code <= 0x3096) {
+          if (/[あいうえおぁぃぅぇぉ]/.test(char)) return 'あ行';
+          if (/[か-ごが-ご]/.test(char)) return 'か行';
+          if (/[さ-ぞざ-ぞ]/.test(char)) return 'さ行';
+          if (/[た-どだ-ど]/.test(char)) return 'た行';
+          if (/[な-の]/.test(char)) return 'な行';
+          if (/[は-ぽば-ぽ]/.test(char)) return 'は行';
+          if (/[ま-も]/.test(char)) return 'ま行';
+          if (/[や-よゃ-ょ]/.test(char)) return 'や行';
+          if (/[ら-ろ]/.test(char)) return 'ら行';
+          if (/[わ-んゎ-ゔ]/.test(char)) return 'わ行';
+        }
+        
+        // カタカナ判定
+        if (code >= 0x30A0 && code <= 0x30FF) {
+          if (/[ア-オァ-ォ]/.test(char)) return 'あ行';
+          if (/[カ-ゴガ-ゴ]/.test(char)) return 'か行';
+          if (/[サ-ゾザ-ゾ]/.test(char)) return 'さ行';
+          if (/[タ-ドダ-ド]/.test(char)) return 'た行';
+          if (/[ナ-ノ]/.test(char)) return 'な行';
+          if (/[ハ-ポバ-ポ]/.test(char)) return 'は行';
+          if (/[マ-モ]/.test(char)) return 'ま行';
+          if (/[ヤ-ヨャ-ョ]/.test(char)) return 'や行';
+          if (/[ラ-ロ]/.test(char)) return 'ら行';
+          if (/[ワ-ンヮ-ヴ]/.test(char)) return 'わ行';
+        }
+        
+        // 数字
+        if (/[0-9]/.test(char)) return '0-9';
+        
+        // アルファベット
+        if (/[A-Za-z]/.test(char)) return 'A-Z';
+        
+        return null;
+      }
+
+      // 用語データの読み込みと分類
+      const termsData = JSON.parse(document.getElementById('glossary-terms-data').textContent);
+      const groupedTerms = {};
+      const kanaGroups = ['あ行', 'か行', 'さ行', 'た行', 'な行', 'は行', 'ま行', 'や行', 'ら行', 'わ行', '0-9', 'A-Z'];
+
+      kanaGroups.forEach(group => groupedTerms[group] = []);
+
+      termsData.forEach(term => {
+        const firstChar = term.term.charAt(0);
+        const group = getKanaGroup(firstChar);
+        if (group && groupedTerms[group]) {
+          groupedTerms[group].push(term);
+        }
+      });
+
+      // 用語をソートして表示
+      Object.keys(groupedTerms).forEach(group => {
+        groupedTerms[group].sort((a, b) => a.term.localeCompare(b.term, 'ja'));
+        const container = document.querySelector(`[data-terms-container="${group}"]`);
+        const section = document.getElementById(group);
+        
+        if (groupedTerms[group].length > 0 && container) {
+          section.style.display = 'block';
+          groupedTerms[group].forEach(term => {
+            const li = document.createElement('li');
+            li.className = 'group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300';
+            
+            li.innerHTML = `
+              <a href="${term.url}" class="flex flex-col h-full">
+                <div class="flex-1 p-6">
+                  <h3 class="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
+                    ${term.title}
+                  </h3>
+                  ${term.description ? `
+                    <p class="mt-3 text-base text-gray-600 dark:text-gray-300 line-clamp-3">
+                      ${term.description}
+                    </p>
+                  ` : ''}
+                </div>
+              </a>
+            `;
+            
+            container.appendChild(li);
+          });
+        }
+      });
+
+      // ナビゲーションのアクティブ状態を更新
+      function updateNavigation() {
+        const tabs = tabsContainer?.querySelectorAll('a') || [];
+        tabs.forEach(tab => {
+          const group = tab.dataset.group;
+          tab.classList.remove(...allDynamicClasses);
+          tab.removeAttribute('aria-current');
+
+          if (groupedTerms[group] && groupedTerms[group].length > 0) {
+            tab.classList.add(...defaultClasses);
+          } else {
+            tab.classList.add(...disabledClasses);
+          }
+        });
+      }
+
+      updateNavigation();
+
+      function setActiveTab(groupToActivate) {
+        if (!tabsContainer) return;
+
+        const tabs = tabsContainer.querySelectorAll('a');
+        tabs.forEach(tab => {
+          const tabGroup = tab.dataset.group;
+          tab.classList.remove(...allDynamicClasses);
+          tab.removeAttribute('aria-current');
+
+          const hasTerms = groupedTerms[tabGroup] && groupedTerms[tabGroup].length > 0;
+
+          if (tabGroup === groupToActivate) {
+            tab.classList.add(...activeClasses);
+            tab.setAttribute('aria-current', 'page');
+          } else if (hasTerms) {
+            tab.classList.add(...defaultClasses);
+          } else {
+            tab.classList.add(...disabledClasses);
+          }
+        });
+
+        if (select) {
+          select.value = groupToActivate;
+        }
+      }
+
+      function handleScroll() {
+        if (window.innerWidth >= 1024) {
+          if (window.scrollY > scrollThreshold) {
+            alphabetNav?.classList.add(...borderClasses);
+          } else {
+            alphabetNav?.classList.remove(...borderClasses);
+          }
+        } else {
+          alphabetNav?.classList.remove(...borderClasses);
+        }
+      }
+
+      // 初期表示
+      const firstGroupWithTerms = kanaGroups.find(group => groupedTerms[group].length > 0);
+      if (firstGroupWithTerms) {
+        setActiveTab(firstGroupWithTerms);
+        document.getElementById(firstGroupWithTerms)?.scrollIntoView({ behavior: "auto", block: "start" });
+      }
+
+      // モバイルセレクトボックス
+      if (select) {
+        select.addEventListener("change", function() {
+          const group = this.value;
+          document.getElementById(group)?.scrollIntoView({ behavior: "smooth", block: "start" });
+          setActiveTab(group);
+        });
+      }
+
+      // デスクトップタブクリック
+      if (tabsContainer) {
+        tabsContainer.addEventListener('click', function(e) {
+          const targetTab = e.target.closest('a');
+          if (targetTab && !targetTab.classList.contains('pointer-events-none')) {
+            e.preventDefault();
+            const group = targetTab.dataset.group;
+            setActiveTab(group);
+            const section = document.getElementById(group);
+            if (section) {
+              const header = document.querySelector('header');
+              const alphabetNav = document.getElementById('alphabetNav');
+              const extraSpace = -16;
+              const offset = (header?.offsetHeight || 0) + (alphabetNav?.offsetHeight || 0) - extraSpace;
+              const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+              window.scrollTo({
+                top: sectionTop - offset,
+                left: 0,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      }
+
+      // スクロール監視
+      const observerOptions = {
+        root: null,
+        rootMargin: "-20% 0px -80% 0px",
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveTab(entry.target.id);
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => {
+        if (section.style.display !== 'none') {
+          observer.observe(section);
+        }
+      });
+
+      window.addEventListener('scroll', handleScroll);
+      handleScroll();
+    });
+  </script>
+  
+{{ end }}
