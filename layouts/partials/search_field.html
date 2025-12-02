@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
         searchResultsPopup.classList.remove('hidden');
         searchResults.innerHTML = `<p>${searchTranslations.searchInitializing}</p>`;
 
-        fetch('/index.json')
+        fetch('{{ "index.json" | relLangURL }}')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);

@@ -5,7 +5,7 @@ defaultContentLanguage = "ja"
 defaultContentLanguageInSubdir = true
 
 [outputs]
-  home = ["HTML", "RSS", "SITEMAP"]
+  home = ["HTML", "RSS", "SITEMAP", "JSON"]
 
 [mediaTypes]
   [mediaTypes."text/plain"]

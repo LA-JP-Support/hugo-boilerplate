@@ -28,6 +28,14 @@
           Latest technology news and updates
         {{ end }}
       </p>
+
+      <div class="mt-8 max-w-xl mx-auto">
+        {{ partial "search_field.html" (dict
+          "type" "blog-archive-search"
+          "marginClass" "mt-4"
+          "directories" (slice "blog")
+        ) }}
+      </div>
     </div>
 
     <!-- ブログ記事グリッド -->

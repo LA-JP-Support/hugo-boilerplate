@@ -17,6 +17,14 @@
             </p>
           {{ end }}
         </div>
+
+        <div class="mt-8 max-w-xl mx-auto">
+          {{ partial "search_field.html" (dict
+            "type" "glossary-archive-search-en"
+            "marginClass" "mt-4"
+            "directories" (slice "glossary")
+          ) }}
+        </div>
       </div>
     </div>
 
