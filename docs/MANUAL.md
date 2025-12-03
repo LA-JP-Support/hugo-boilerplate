@@ -208,6 +208,12 @@ python scripts/pipeline_translate.py --auto --dry-run
 # Start from specific step / 特定ステップから開始
 python scripts/pipeline_translate.py --file Copilot.md --from-step translate
 
+# Run only a specific step (debugging) / 特定ステップのみ実行（デバッグ用）
+python scripts/pipeline_translate.py --file Copilot.md --only-step translate
+
+# Cleanup temp files after processing / 処理後に一時ファイルを削除
+python scripts/pipeline_translate.py --auto --cleanup
+
 # Include publish step / 公開ステップを含む
 python scripts/pipeline_translate.py --auto --publish
 ```
@@ -220,6 +226,9 @@ python scripts/pipeline_translate.py --auto --publish
 | `--file` | Process specific file | 特定ファイルを処理 |
 | `--dry-run` | Show changes without applying | 変更を適用せずに表示 |
 | `--from-step` | Start from specific step | 特定ステップから開始 |
+| `--only-step` | Run only this specific step | 特定ステップのみ実行（デバッグ用） |
+| `--cleanup` | Delete temp files after processing | 処理後に一時ファイルを削除 |
+| `--skip-existing` | Skip files with existing JA translations | 既存の日本語翻訳があるファイルをスキップ |
 | `--publish` | Set draft: false after processing | 処理後にdraft: falseを設定 |
 
 ### enrich_glossary.py

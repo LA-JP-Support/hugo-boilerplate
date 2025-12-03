@@ -26,6 +26,12 @@ Usage:
 
     # Skip to specific step
     python scripts/pipeline_translate.py --file Copilot.md --from-step translate
+
+    # Run only a specific step
+    python scripts/pipeline_translate.py --file Copilot.md --only-step translate
+
+    # Cleanup temp files after processing
+    python scripts/pipeline_translate.py --auto --cleanup
 """
 
 import argparse
@@ -378,6 +384,7 @@ def process_file(
     logger: PipelineLogger,
     dry_run: bool = False,
     from_step: str = "cleanup",
+    only_step: Optional[str] = None,
     skip_publish: bool = True,
 ) -> bool:
     """Process a single file through the pipeline."""
@@ -386,11 +393,21 @@ def process_file(
     logger.log(f"{'='*60}", "INFO")
 
     step_index = STEPS.index(from_step) if from_step in STEPS else 0
+    # For --only-step, set end_index to same as start
+    end_index = STEPS.index(only_step) if only_step else len(STEPS) - 1
+    
     current_en_file = file_path
     current_ja_file: Optional[Path] = None
+    
+    def should_run(step_name: str) -> bool:
+        """Check if a step should run based on from_step and only_step."""
+        idx = STEPS.index(step_name)
+        if only_step:
+            return idx == step_index
+        return step_index <= idx <= end_index
 
     # Step 1: Cleanup
-    if step_index <= STEPS.index("cleanup"):
+    if should_run("cleanup"):
         cleaned = step_cleanup(file_path, logger, dry_run)
         if cleaned:
             current_en_file = cleaned
@@ -398,12 +415,12 @@ def process_file(
             return False
 
     # Step 2: Enrich EN
-    if step_index <= STEPS.index("enrich_en"):
+    if should_run("enrich_en"):
         if not step_enrich_en(current_en_file, logger, dry_run) and not dry_run:
             logger.log("Enrich EN failed, continuing anyway", "WARN")
 
     # Step 3: Copy to content
-    if step_index <= STEPS.index("copy_to_content"):
+    if should_run("copy_to_content"):
         copied = step_copy_to_content(current_en_file, logger, dry_run)
         if copied:
             current_en_file = copied
@@ -411,7 +428,7 @@ def process_file(
             return False
 
     # Step 4: Translate
-    if step_index <= STEPS.index("translate"):
+    if should_run("translate"):
         translated = step_translate(current_en_file, logger, dry_run)
         if translated:
             current_ja_file = translated
@@ -422,33 +439,33 @@ def process_file(
     if current_ja_file is None:
         current_ja_file = CONTENT_JA / file_path.name
 
-    if not current_ja_file.exists() and not dry_run:
+    if not current_ja_file.exists() and not dry_run and step_index >= STEPS.index("enrich_ja"):
         logger.log(f"JA file not found: {current_ja_file}", "ERROR")
         return False
 
     # Step 5: Enrich JA
-    if step_index <= STEPS.index("enrich_ja"):
+    if should_run("enrich_ja"):
         if not step_enrich_ja(current_ja_file, logger, dry_run) and not dry_run:
             logger.log("Enrich JA failed, continuing anyway", "WARN")
 
     # Step 6: Add kana
-    if step_index <= STEPS.index("add_kana"):
+    if should_run("add_kana"):
         if not step_add_kana(current_ja_file, logger, dry_run) and not dry_run:
             logger.log("Add kana failed, continuing anyway", "WARN")
 
     # Step 7: Fix term
-    if step_index <= STEPS.index("fix_term"):
+    if should_run("fix_term"):
         if not step_fix_term(current_ja_file, logger, dry_run) and not dry_run:
             logger.log("Fix term failed, continuing anyway", "WARN")
 
     # Step 8: Compare
-    if step_index <= STEPS.index("compare"):
+    if should_run("compare"):
         step_compare(current_en_file, current_ja_file, logger, dry_run)
 
     # Note: refresh_links is called once after all files are processed (in main)
 
     # Step 10: Publish (optional)
-    if not skip_publish and step_index <= STEPS.index("publish"):
+    if not skip_publish and should_run("publish"):
         step_publish(current_ja_file, logger, dry_run)
         step_publish(current_en_file, logger, dry_run)
 
@@ -492,19 +509,42 @@ def main() -> None:
         default=True,
         help="Verbose output (default: True)",
     )
+    parser.add_argument(
+        "--only-step",
+        choices=STEPS,
+        help="Run only this specific step (useful for debugging)",
+    )
+    parser.add_argument(
+        "--cleanup",
+        action="store_true",
+        help="Delete content-drafts/en/clean/ files after successful processing",
+    )
+    parser.add_argument(
+        "--skip-existing",
+        action="store_true",
+        help="Skip files that already have Japanese translations",
+    )
     args = parser.parse_args()
 
     if not args.auto and not args.file:
         parser.error("Specify --auto or --file")
+
+    # Handle --only-step (sets both from-step and to-step to same value)
+    if args.only_step:
+        args.from_step = args.only_step
 
     # Setup logging
     log_file = LOGS_DIR / f"pipeline_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
     logger = PipelineLogger(log_file=log_file, verbose=args.verbose)
 
     logger.log("=" * 60, "INFO")
-    logger.log("FlowHunt Translation Pipeline", "INFO")
+    logger.log("FlowHunt Translation Pipeline v1.0.0", "INFO")
     logger.log(f"Mode: {'Auto-detect' if args.auto else 'Single file'}", "INFO")
     logger.log(f"Dry run: {args.dry_run}", "INFO")
+    if args.only_step:
+        logger.log(f"Only step: {args.only_step}", "INFO")
+    else:
+        logger.log(f"From step: {args.from_step}", "INFO")
     logger.log("=" * 60, "INFO")
 
     files_to_process: List[Path] = []
@@ -536,16 +576,26 @@ def main() -> None:
             logger,
             dry_run=args.dry_run,
             from_step=args.from_step,
+            only_step=args.only_step,
             skip_publish=not args.publish,
         ):
             success_count += 1
 
     # Step 9: Refresh all links (after all files are processed)
     # This ensures new pages can be linked from existing pages
-    if success_count > 0:
+    if success_count > 0 and not args.only_step:
         step_index = STEPS.index(args.from_step) if args.from_step in STEPS else 0
         if step_index <= STEPS.index("refresh_links"):
             step_refresh_links(logger, args.dry_run)
+
+    # Cleanup temp files if requested
+    if args.cleanup and success_count > 0 and not args.dry_run:
+        logger.log("Cleaning up temporary files...", "STEP")
+        cleaned_files = list(DRAFTS_EN_CLEAN.glob("*.md"))
+        for f in cleaned_files:
+            f.unlink()
+            logger.log(f"Deleted: {f.name}", "INFO")
+        logger.log(f"Cleaned {len(cleaned_files)} temp file(s)", "OK")
 
     # Summary
     logger.log("=" * 60, "INFO")
