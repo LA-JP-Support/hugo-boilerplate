@@ -1,6 +1,6 @@
 ---
-title: "Sentiment Analysis Glossary"
-translationKey: "sentiment-analysis-glossary"
+title: "Sentiment Analysis"
+translationKey: "sentiment-analysis"
 description: "Sentiment analysis interprets emotional tone in text using NLP, ML, and AI. It converts unstructured data into actionable insights for customer feedback, brand monitoring, and product improvement."
 keywords: ["sentiment analysis", "natural language processing", "aspect-based sentiment analysis", "customer feedback", "brand reputation"]
 category: "AI Chatbot & Automation"
