@@ -2,19 +2,13 @@
 title: 正規形
 translationKey: canonical-form
 description: 正規形はデータを単一の標準化された表現に変換し、一貫性、処理、比較のために重要であり、AIチャットボット、自然言語処理、自動化に不可欠です。
-keywords:
-- 正規形
-- データ正規化
-- AIチャットボット
-- 意図認識
-- 一意表現
+keywords: ["正規形", "データ正規化", "AIチャットボット", "意図認識", "一意表現", "チャットボット", "対話型AI", "会話AI", "自然言語処理", "NLP", "言語処理", "ワークフロー自動化", "業務自動化", "RPA", "API", "API連携", "インターフェース"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-02
 draft: false
 term: せいきけい
 ---
-
 ## 定義
 
 **正規形**（Canonical form）とは、概念、入力、またはデータの様々な表現形式を単一の、標準化された、好ましい表現—*正規形*と呼ばれる—に変換するプロセスです。実用的には、特定の種類のデータ、リソース、またはエンティティが複数の方法で表現できる場合、一貫性、処理、比較のために、そのうちの1つを権威ある「正規化された」形式として選択することを意味します。
@@ -36,7 +30,7 @@ AIチャットボット、NLP、自動化の文脈では、正規化は様々な
 
 例えば、データベース管理では、正規化はデータの冗長性と依存性を減らすために編成しますが、正規化（canonicalization）は「37 buttercup AVE」と「37 Buttercup Avenue」が常に同じ一意の形式で保存されることを保証します。
 
-*参照: [Splunk: データ正規化の説明](https://www.splunk.com/en_us/blog/learn/data-normalization.html), [Stack Overflow: データの正規化と正規化の違い](https://stackoverflow.com/questions/55286086/is-there-a-well-defined-difference-between-normalizing-and-canonicalizing-da), [GeeksforGeeks: 正規形と標準形](https://www.geeksforgeeks.org/digital-logic/canonical-and-standard-form/)*
+*参照: [Splunk: データ正規化の説明](https://www.splunk.com/en_us/blog/learn/data-normalization.html), [Stack Overflow: データの正規化と正規化の違い](https://stackoverflow.com/questions/55286086/is-there-a-well-defined-difference-between-normalizing-and-canonicalizing-da), [GeeksforGeeks: 正規形と標準形](https://www.geeksforgeeks.org/digital-logic/canonical-and-standard-form*
 
 ---
 
@@ -105,7 +99,7 @@ NLUエンジンは正規形を使用して、ユーザー発話を標準化さ�
 - SOP: F(A, B) = A'B + AB'
 - POS: F(A, B) = (A + B)(A' + B')
 
-*参照: [GeeksforGeeks: 正規形と標準形](https://www.geeksforgeeks.org/digital-logic/canonical-and-standard-form/)*
+*参照: [GeeksforGeeks: 正規形と標準形](https://www.geeksforgeeks.org/digital-logic/canonical-and-standard-form*
 
 ### 3. チャットボットガードレール（NeMo Guardrails）
 
@@ -124,14 +118,14 @@ define flow greeting
 ```
 すべてのユーザー挨拶のバリエーションは、一貫したボット応答のために正規的な意図「user express greeting」にマッピングされます。
 
-*参照: [Pinecone: NeMo Guardrails](https://www.pinecone.io/learn/nemo-guardrails-intro/)*
+*参照: [Pinecone: NeMo Guardrails](https://www.pinecone.io/learn/nemo-guardrails-intro*
 
 ### 4. データ統合と正規化
 
 - 不整合なフィールド名（「customer_id」、「cust_id」、「id」）を正規的な「CUSTOMER_ID」にマッピングすることで、統一された処理が可能になります。
 - Unicodeの文字列正規化は、同じ文字の異なるエンコーディングを単一のエンコーディングにマッピングすることで曖昧さを防ぎます。
 
-*参照: [BMC: 正規データモデル](https://www.bmc.com/blogs/canonical-data-model/)*
+*参照: [BMC: 正規データモデル](https://www.bmc.com/blogs/canonical-data-model*
 
 ---
 
@@ -194,7 +188,7 @@ def to_canonical(user_input):
 
 - 例：「I'd like a soda」、「get me a pop」、「can I have a soft drink?」はすべて意味的類似性を通じて「ORDER_SOFT_DRINK」にマッピングされます。
 
-*関連: [Pinecone: NeMo Guardrails](https://www.pinecone.io/learn/nemo-guardrails-intro/), [Wikipedia: 正規化](https://en.wikipedia.org/wiki/Canonicalization)*
+*関連: [Pinecone: NeMo Guardrails](https://www.pinecone.io/learn/nemo-guardrails-intro, [Wikipedia: 正規化](https://en.wikipedia.org/wiki/Canonicalization)*
 
 ---
 

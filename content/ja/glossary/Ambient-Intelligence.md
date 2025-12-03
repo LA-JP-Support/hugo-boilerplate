@@ -2,19 +2,13 @@
 title: 環境知能（AmI）
 translationKey: ambient-intelligence-ami
 description: 環境知能（AmI）は、明示的な命令なしに人間のニーズを感知、解釈し、積極的に対応するためにデジタルシステムを環境にシームレスに組み込みます。
-keywords:
-- 環境知能
-- AmI
-- スマート環境
-- コンテキスト認識システム
-- AI自動化
+keywords: ["環境知能", "AmI", "スマート環境", "コンテキスト認識システム", "AI自動化", "チャットボット", "対話型AI", "会話AI", "AIエージェント", "自律型エージェント", "エージェント", "ワークフロー自動化", "業務自動化", "RPA"]
 category: General
 type: glossary
 date: 2025-12-02
 draft: false
 term: かんきょうちのう
 ---
-
 ## アンビエントインテリジェンスとは？定義、例、応用
 
 ### 定義：アンビエントインテリジェンス（AmI）
@@ -144,8 +138,8 @@ term: かんきょうちのう
 **ケーススタディ：**  
 患者がクリニックに到着すると、AmIソフトウェアが彼らの入室を認識し、記録を取得し、診察室を快適に調整し、相談内容をすべてシームレスに記録します。
 
-- [Microsoft: 医療におけるアンビエントインテリジェンスの新時代](https://www.microsoft.com/en-us/industry/blog/healthcare/2025/02/27/a-new-era-of-ambient-intelligence-in-healthcare/)
-- [Emorphis Health: 医療におけるアンビエントインテリジェンス](https://emorphis.health/blogs/ambient-intelligence-in-healthcare/)
+- [Microsoft: 医療におけるアンビエントインテリジェンスの新時代](https://www.microsoft.com/en-us/industry/blog/healthcare/2025/02/27/a-new-era-of-ambient-intelligence-in-healthcare
+- [Emorphis Health: 医療におけるアンビエントインテリジェンス](https://emorphis.health/blogs/ambient-intelligence-in-healthcare
 
 ### ビジネス生産性とスマートオフィス
 

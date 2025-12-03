@@ -8,7 +8,6 @@ type: "glossary"
 date: 2025-12-02
 draft: false
 ---
-
 ## What is a Code Block?
 
 A code block in programming is a contiguous section of code that a language’s interpreter or compiler treats as a single executable unit. Code blocks are foundational in structuring programs, encapsulating logic for functions, loops, conditionals, classes, and more.
@@ -32,7 +31,6 @@ if (condition) {
 }
 ```
 
----
 
 ## Syntax and Usage
 
@@ -79,7 +77,6 @@ if (age >= 18)
 ```
 **Best Practice:** Always use curly braces, even for single-statement blocks, to avoid logic errors and improve readability ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block#examples)).
 
----
 
 ## Naming, Binding, and Scope
 
@@ -108,7 +105,6 @@ console.log(y); // 1
 ```
 [MDN Block Statement: Scoping](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block#block_scoping_rules_with_var_or_function_declaration_in_non-strict_mode)
 
----
 
 ## Usage in Automation and Chatbot Platforms
 
@@ -134,7 +130,6 @@ Automation platforms like [Contentstack](https://www.contentstack.com/docs/devel
 - Built-in methods and variables for workflow data access.
 - [n8n Code Node Docs](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/)
 
----
 
 ## Practical Examples
 
@@ -198,7 +193,6 @@ for (let i = 0; i < 3; i++) {
 }
 ```
 
----
 
 ## Common Issues & Troubleshooting
 
@@ -227,7 +221,6 @@ for (let i = 0; i < 3; i++) {
 
 - **Formatting Limitations:** Not all formatting is supported on all platforms/devices. Test thoroughly.
 
----
 
 ## Formatting Code Blocks in Chatbots
 
@@ -236,7 +229,6 @@ for (let i = 0; i < 3; i++) {
 - **Not all formatting is supported on mobile clients; test across devices.**
 - [Official documentation with compatibility table](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages)
 
----
 
 ## Best Practices
 
@@ -266,7 +258,6 @@ for (let i = 0; i < 3; i++) {
 - Avoid using both HTML and Markdown in a single message.
 - Test formatting in the target client (desktop, iOS, Android).
 
----
 
 ## Further Resources
 
@@ -280,7 +271,6 @@ for (let i = 0; i < 3; i++) {
 - [Python Glossary – Code Block](https://mimo.org/glossary/python/code-block)
 - [MDN JavaScript Control Flow](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement)
 
----
 
 ## Conclusion
 

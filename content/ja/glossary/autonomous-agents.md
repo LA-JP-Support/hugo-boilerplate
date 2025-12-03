@@ -2,19 +2,13 @@
 title: 自律型エージェント
 translationKey: autonomous-agents
 description: 自律型エージェントを探求：人間の介入なしに独自に計画を立て、推論し、複雑な複数ステップのタスクを実行するAIシステム。効率性と生産性を向上させます。
-keywords:
-- 自律型エージェント
-- AI自動化
-- 複数ステップタスク
-- 機械学習
-- AIシステム
+keywords: ["自律型エージェント", "AI自動化", "複数ステップタスク", "機械学習", "AIシステム", "チャットボット", "対話型AI", "会話AI", "自然言語処理", "NLP", "言語処理", "AIエージェント", "エージェント", "生成AI", "ジェネレーティブAI", "GenAI", "プロンプト", "プロンプトエンジニアリング", "RAG", "検索拡張生成", "Retrieval-Augmented Generation", "ワークフロー自動化", "業務自動化", "RPA", "API", "API連携", "インターフェース"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-02
 draft: false
 term: じりつがたエージェント
 ---
-
 ## 自律型エージェントとは何か？
 
 自律型エージェントとは、各ステップで人間の介入を必要とせずに、複雑なタスクの連続を独自に計画、推論、実行できる高度なAIシステムです。従来のボットやアシスタントとは異なり、自律型エージェントは高レベルの目標を受け取り、それを実行可能なサブタスクに分解し、リアルタイムデータに適応して、それらのタスクを最初から最後まで完了することができます。
@@ -22,7 +16,7 @@ term: じりつがたエージェント
 **主な特徴：**
 - 単なる事前定義されたスクリプトではなく、内部目標と環境認識に基づいて動作する。
 - 独自のメモリを使用し、ツールにアクセスし、フィードバックから学習する。
-- 反応的および適応的な行動の両方が可能で、新しい条件に動的に調整できる（[Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents/); [Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents/); [Wikipedia](https://en.wikipedia.org/wiki/Autonomous_agent)）。
+- 反応的および適応的な行動の両方が可能で、新しい条件に動的に調整できる（[Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents; [Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents; [Wikipedia](https://en.wikipedia.org/wiki/Autonomous_agent)）。
 
 **例：**  
 「顧客の苦情を解決する」という目標が与えられた場合、自律型エージェントは以下を行うかもしれません：
@@ -36,7 +30,7 @@ term: じりつがたエージェント
 
 ## 自律型エージェントの仕組み：ステップバイステップ
 
-自律型エージェントは、機械学習、自然言語処理（NLP）、リアルタイムデータ分析など、複数の高度なAI分野を組み合わせて、動的な環境で機能します。（[Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents/), [Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents/)）
+自律型エージェントは、機械学習、自然言語処理（NLP）、リアルタイムデータ分析など、複数の高度なAI分野を組み合わせて、動的な環境で機能します。（[Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents, [Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents）
 
 ### 1. 認識とデータ収集
 - データベース、センサー、会話、API、ウェブスクレイピングなど多様なソースから情報を収集。
@@ -63,13 +57,13 @@ term: じりつがたエージェント
 - 共有目標を達成したりワークフローを最適化したりするために、他のエージェントと調整・通信する。
 
 **例：**  
-金融サービスエージェントは、取引の紛争処理—クライント履歴の確認、加盟店への警告、クレジットの発行、必要な場合のみエスカレーションを行います。（[Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents/)）
+金融サービスエージェントは、取引の紛争処理—クライント履歴の確認、加盟店への警告、クレジットの発行、必要な場合のみエスカレーションを行います。（[Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents）
 
 ---
 
 ## 自律型エージェントの主な機能
 
-自律型エージェントはいくつかの中核的な能力によって定義されます（[Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents/), [Medium](https://medium.com/@bijit211987/the-key-features-that-enable-ai-agents-3995acd29be7), [Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents/)）：
+自律型エージェントはいくつかの中核的な能力によって定義されます（[Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents, [Medium](https://medium.com/@bijit211987/the-key-features-that-enable-ai-agents-3995acd29be7), [Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents）：
 
 - **自律性：** 最小限の人間の介入で動作し、独自に目標を追求する。
 - **推論：** データを分析し、代替案を検討し、動的に決定を下す。
@@ -86,7 +80,7 @@ term: じりつがたエージェント
 
 ## 自律型エージェントの種類（例付き）
 
-エージェントの種類は複雑さと自律性によって異なります（[Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents/), [Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents/)）：
+エージェントの種類は複雑さと自律性によって異なります（[Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents, [Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents）：
 
 | 種類 | 説明 | 例 |
 |------|-------------|---------|
@@ -98,13 +92,13 @@ term: じりつがたエージェント
 | **階層型エージェント** | 複数のレベルでタスクとサブタスクを整理する。 | 製造ロボット：組み立てを段階的なアクションに分解する。 |
 | **マルチエージェントシステム** | 複数のエージェントが問題解決のために協力または競争する。 | 航空交通管制：エージェントが協力して安全にフライトを管理する。 |
 
-*詳細は[Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents/)をご覧ください。*
+*詳細は[Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agentsをご覧ください。*
 
 ---
 
 ## 自律型エージェントとボット、アシスタント、生成AIの比較
 
-これらの違いを理解することは、適切なソリューションを選択するために不可欠です（[Google Cloud](https://cloud.google.com/discover/what-are-ai-agents), [IBM](https://www.ibm.com/think/topics/ai-agents), [Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents/)）：
+これらの違いを理解することは、適切なソリューションを選択するために不可欠です（[Google Cloud](https://cloud.google.com/discover/what-are-ai-agents), [IBM](https://www.ibm.com/think/topics/ai-agents), [Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents）：
 
 | 特徴                | 自律型エージェント | AIアシスタント     | ボット             | 生成AI             |
 |------------------------|-----------------|---------------------|--------------------|--------------------|
@@ -125,7 +119,7 @@ term: じりつがたエージェント
 
 ## 自律型エージェントのビジネス上のメリット
 
-自律型エージェントの導入は、大きな変革と運用上の利点をもたらします（[Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents/), [SuperAGI](https://superagi.com/top-10-autonomous-ai-agent-tools-in-2024-a-comparison-of-features-and-pricing-2/)）：
+自律型エージェントの導入は、大きな変革と運用上の利点をもたらします（[Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents, [SuperAGI](https://superagi.com/top-10-autonomous-ai-agent-tools-in-2024-a-comparison-of-features-and-pricing-2）：
 
 - **効率の向上：** 複雑、反復的、複数ステップのタスクを自動化し、人間の従業員をより価値の高い業務に解放する。
 - **コスト削減：** 労働コストを削減し、特に大量の業務においてエラーを最小化する。
@@ -140,7 +134,7 @@ term: じりつがたエージェント
 
 ## 実用的な応用例とユースケース
 
-自律型エージェントは様々な業界を変革しています（[AWS](https://aws.amazon.com/blogs/aws-insights/the-rise-of-autonomous-agents-what-enterprise-leaders-need-to-know-about-the-next-wave-of-ai/), [Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents/), [Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents/)）：
+自律型エージェントは様々な業界を変革しています（[AWS](https://aws.amazon.com/blogs/aws-insights/the-rise-of-autonomous-agents-what-enterprise-leaders-need-to-know-about-the-next-wave-of-ai, [Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents, [Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents）：
 
 ### カスタマーサービス
 - 問い合わせ対応、返金処理、複数チャネル（チャット、メール、ソーシャルメディア）でのエスカレーション管理。

@@ -7,5 +7,4 @@ type: "glossary"
 layout: "list.en"
 heroPadding: "py-6 sm:py-8"
 ---
-
 A comprehensive collection of key terms related to AI chatbots, automation systems, and customer support, explained in clear and accessible language.

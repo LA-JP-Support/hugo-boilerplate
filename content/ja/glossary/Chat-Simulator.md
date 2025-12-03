@@ -2,19 +2,13 @@
 title: チャットシミュレーター
 translationKey: chat-simulator
 description: 開発者、QA、運用担当者がチャットボットの会話フローや自然言語理解（NLU）を安全で管理された環境でテスト、検証、最適化するための開発ツールです。
-keywords:
-- チャットシミュレーター
-- チャットボットテスト
-- 会話型AI
-- NLU検証
-- エージェントトレーニング
+keywords: ["チャットシミュレーター", "チャットボットテスト", "会話型AI", "NLU検証", "エージェントトレーニング", "チャットボット", "対話型AI", "会話AI", "大規模言語モデル", "LLM", "言語モデル", "自然言語処理", "NLP", "言語処理", "AIエージェント", "自律型エージェント", "エージェント", "ワークフロー自動化", "業務自動化", "RPA"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-02
 draft: false
 term: チャットシミュレーター
 ---
-
 ## チャットシミュレーターとは何ですか？
 
 チャットシミュレーターは、チャットボット、音声アシスタント、バーチャルエージェントなどの会話型AIシステムを、実際の顧客とのやり取りに近いシナリオで体系的にテストできる専門ツールセットです。これらのシミュレーターを使用すると、ボットや人間のエージェントと、リアルな特性を持つユーザーペルソナとの間で、合成された複数ターンの対話をオーケストレーションできます。主な目的は、実際のユーザーやビジネスクリティカルなワークフローに公開する前に、会話システムの機能的正確性、NLUパフォーマンス、コンプライアンス、ユーザーエクスペリエンスを評価し最適化することです。
@@ -26,7 +20,7 @@ term: チャットシミュレーター
 - 安全でフィードバックが豊富な環境でエージェントに実践的なトレーニングを提供する。
 - 多様で複雑なシナリオやエッジケースでのボットパフォーマンスをベンチマークする。
 
-[LivePerson Conversation Simulator](https://www.liveperson.com/conversation-simulator/)や[Botium](https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html)などのプラットフォームは、企業が採用している会話型AIの品質保証とトレーニングのための最先端ソリューションです。
+[LivePerson Conversation Simulator](https://www.liveperson.com/conversation-simulatorや[Botium](https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html)などのプラットフォームは、企業が採用している会話型AIの品質保証とトレーニングのための最先端ソリューションです。
 
 ---
 

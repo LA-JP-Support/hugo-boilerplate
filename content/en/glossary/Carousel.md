@@ -8,7 +8,6 @@ type: "glossary"
 date: 2025-12-02
 draft: false
 ---
-
 ## 1. Definition and Overview <a name="definition-overview"></a>
 
 A **carousel** is an interactive UI component that shows a sequence of content items—such as images, text cards, featured products, or calls-to-action—within a single viewport. Items are arranged horizontally, and users can cycle through them by clicking navigation arrows, using swipe gestures, or allowing auto-rotation to advance the slides. Carousels are sometimes called *image sliders*, *content sliders*, or *card carousels*.
@@ -24,7 +23,6 @@ Carousel components surface multiple options or responses in a compact conversat
 - [W3C: Carousels Accessibility Tutorial](https://www.w3.org/WAI/tutorials/carousels/)  
 - [Eleken: Carousel UI Guide](https://www.eleken.co/blog-posts/carousel-ui)
 
----
 
 ## 2. Key Features & Anatomy <a name="key-features-anatomy"></a>
 
@@ -61,7 +59,6 @@ Designing a usable carousel requires understanding its core components:
 - [W3C: Carousels - Structure & Functionality](https://www.w3.org/WAI/tutorials/carousels/structure/)  
 - [Smart Interface Design Patterns: Better Carousel UX](https://smart-interface-design-patterns.com/articles/better-carousel-ux/)
 
----
 
 ## 3. Common Use Cases <a name="common-use-cases"></a>
 
@@ -93,7 +90,6 @@ Usability studies show that most users interact only with the first slide—[onl
 - [Eleken: Carousel UI Use Cases](https://www.eleken.co/blog-posts/carousel-ui)  
 - [NN/g: Carousel Usability](https://www.nngroup.com/articles/designing-effective-carousels/)
 
----
 
 ## 4. Benefits and Drawbacks <a name="benefits-drawbacks"></a>
 
@@ -144,7 +140,6 @@ Never place critical information on slides beyond the first—most users will no
 - [Eleken: Carousel UI Failures](https://www.eleken.co/blog-posts/carousel-ui)  
 - [Smart Patterns: Usability Pitfalls](https://smart-interface-design-patterns.com/articles/better-carousel-ux/)
 
----
 
 ## 5. Design Best Practices <a name="design-best-practices"></a>
 
@@ -195,7 +190,6 @@ For carousels to be effective and user-friendly, follow these best practices, di
 - [W3C: Carousel Accessibility Full Guide](https://www.w3.org/WAI/tutorials/carousels/)  
 - [Smart Interface Design Patterns: Better Carousel UX](https://smart-interface-design-patterns.com/articles/better-carousel-ux/)
 
----
 
 ## 6. Implementation Guidance <a name="implementation-guidance"></a>
 
@@ -279,7 +273,6 @@ Preview and optimize for multiple device sizes.
 - [W3C: Full Accessible Carousel Example](https://www.w3.org/WAI/tutorials/carousels/working-example/)
 - [NN/g: Carousel Usability](https://www.nngroup.com/articles/designing-effective-carousels/)
 
----
 
 ## 7. Alternatives to Carousels <a name="alternatives-carousels"></a>
 
@@ -308,7 +301,6 @@ Carousels are not always the optimal solution, especially for content discoverab
 **Reference:**  
 - [Eleken: When to Use Carousels, Grids, Tabs, or Accordions](https://www.eleken.co/blog-posts/carousel-ui)
 
----
 
 ## 8. Inspirational Examples <a name="inspirational-examples"></a>
 

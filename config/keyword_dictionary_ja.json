@@ -1,0 +1,52 @@
+{
+  "AIコパイロット": {
+    "keywords": ["AIコパイロット", "コパイロット", "AI支援"],
+    "link": "/ja/glossary/copilot/",
+    "aliases": ["AIコパイロット", "コパイロット", "AI Copilot"]
+  },
+  "チャットボット": {
+    "keywords": ["チャットボット", "対話型AI", "会話AI"],
+    "link": "/ja/glossary/chatbot/",
+    "aliases": ["チャットボット", "chatbot", "チャットBot"]
+  },
+  "大規模言語モデル": {
+    "keywords": ["大規模言語モデル", "LLM", "言語モデル"],
+    "link": "/ja/glossary/large-language-model/",
+    "aliases": ["大規模言語モデル", "LLM", "大規模言語モデル（LLM）"]
+  },
+  "自然言語処理": {
+    "keywords": ["自然言語処理", "NLP", "言語処理"],
+    "link": "/ja/glossary/natural-language-processing/",
+    "aliases": ["自然言語処理", "NLP", "自然言語処理（NLP）"]
+  },
+  "AIエージェント": {
+    "keywords": ["AIエージェント", "自律型エージェント", "エージェント"],
+    "link": "/ja/glossary/ai-agent/",
+    "aliases": ["AIエージェント", "AI Agent", "エージェント"]
+  },
+  "生成AI": {
+    "keywords": ["生成AI", "ジェネレーティブAI", "GenAI"],
+    "link": "/ja/glossary/generative-ai/",
+    "aliases": ["生成AI", "Generative AI", "ジェネレーティブAI"]
+  },
+  "プロンプト": {
+    "keywords": ["プロンプト", "プロンプトエンジニアリング"],
+    "link": "/ja/glossary/prompt/",
+    "aliases": ["プロンプト", "prompt", "プロンプト入力"]
+  },
+  "RAG": {
+    "keywords": ["RAG", "検索拡張生成", "Retrieval-Augmented Generation"],
+    "link": "/ja/glossary/rag/",
+    "aliases": ["RAG", "検索拡張生成", "Retrieval-Augmented Generation"]
+  },
+  "ワークフロー自動化": {
+    "keywords": ["ワークフロー自動化", "業務自動化", "RPA"],
+    "link": "/ja/glossary/workflow-automation/",
+    "aliases": ["ワークフロー自動化", "ワークフロー", "業務自動化"]
+  },
+  "API": {
+    "keywords": ["API", "API連携", "インターフェース"],
+    "link": "/ja/glossary/api/",
+    "aliases": ["API", "API連携", "REST API"]
+  }
+}

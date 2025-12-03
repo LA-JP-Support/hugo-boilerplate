@@ -8,7 +8,6 @@ type: "glossary"
 date: 2025-12-02
 draft: false
 ---
-
 ## What Are Autonomous Agents?
 
 Autonomous agents are advanced AI systems capable of independently planning, reasoning, and executing complex sequences of tasks without requiring human intervention at each step. Unlike traditional bots or assistants, autonomous agents can take a high-level objective, break it down into actionable subtasks, adapt to real-time data, and complete those tasks end-to-end.
@@ -26,7 +25,6 @@ Given a goal like “resolve a customer complaint,” an autonomous agent might:
 - Update internal records,
 - Email the customer a resolution—all without human help.
 
----
 
 ## How Autonomous Agents Work: Step by Step
 
@@ -59,7 +57,6 @@ Autonomous agents combine multiple advanced AI disciplines—including machine l
 **Example:**  
 A financial services agent processes a transaction dispute—verifying client history, alerting merchants, issuing credits, and escalating only when necessary. ([Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents/))
 
----
 
 ## Key Features of Autonomous Agents
 
@@ -76,7 +73,6 @@ Autonomous agents are defined by several core capabilities ([Shelf.io](https://s
 - **Adaptability:** Respond to changing environments, requirements, or objectives in real time.
 - **Multimodal Perception:** Process and interpret data from multiple sources (text, images, audio, etc.).
 
----
 
 ## Types of Autonomous Agents (with Examples)
 
@@ -94,7 +90,6 @@ Types of agents differ in complexity and autonomy ([Shelf.io](https://shelf.io/b
 
 *See [Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents/) for more details.*
 
----
 
 ## Autonomous Agents vs. Bots, Assistants, and Generative AI
 
@@ -115,7 +110,6 @@ Understanding the distinctions is essential for choosing the right solution ([Go
 - **Bots**: Automate simple or repetitive tasks via scripts.
 - **Generative AI**: Create content but do not act or plan autonomously.
 
----
 
 ## Business Benefits of Autonomous Agents
 
@@ -130,7 +124,6 @@ Deploying autonomous agents leads to significant transformation and operational 
 - **Improved Customer Experience:** Resolve issues quickly, proactively communicate, and provide consistent service.
 - **Scalability:** Expand automation across teams, departments, or geographies without linear increases in staffing.
 
----
 
 ## Practical Applications and Use Cases
 
@@ -168,7 +161,6 @@ Autonomous agents are transforming diverse industries ([AWS](https://aws.amazon.
 - Organize, tag, and update enterprise knowledge bases.
 - Example: Agents update FAQs/support articles based on customer feedback and trends.
 
----
 
 ## Risks, Limitations, and Ethical Considerations
 
@@ -203,7 +195,6 @@ Deploying autonomous agents responsibly means understanding and addressing poten
 - **Regulatory Compliance:** Navigating laws and regulations is complex.
 - **Infinite Feedback Loops & Cascading Failures:** Must be managed to prevent runaway or systemic errors.
 
----
 
 ## Best Practices for Adopting Autonomous Agents
 
@@ -220,7 +211,6 @@ To maximize value and minimize risk ([Salesforce](https://www.salesforce.com/age
 9. **Promote Ethical Use**: Set guidelines for responsible AI, regularly review decisions for fairness.
 10. **Educate & Train Staff**: Upskill teams to collaborate with, supervise, and troubleshoot agents.
 
----
 
 ## Tools and Frameworks for Building Autonomous Agents
 
@@ -251,7 +241,6 @@ For comparisons and detailed guides, see:
 - [Analytics Vidhya’s Frameworks List](https://www.analyticsvidhya.com/blog/2024/07/ai-agent-frameworks/)  
 - [Shakudo’s AI Agent Frameworks](https://www.shakudo.io/blog/top-9-ai-agent-frameworks)
 
----
 
 ## FAQs
 

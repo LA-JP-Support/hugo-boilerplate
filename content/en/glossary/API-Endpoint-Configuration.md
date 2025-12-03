@@ -8,7 +8,6 @@ type: "glossary"
 date: 2025-12-02
 draft: false
 ---
-
 ## What Is API Endpoint Configuration?
 
 **Definition:**  
@@ -23,7 +22,6 @@ An API endpoint is like the marked, guarded entrance to a secure building. Endpo
 **Category:**  
 AI Chatbot & Automation, Web Services, Application Integration
 
----
 
 ## Why Is API Endpoint Configuration Important?
 
@@ -39,7 +37,6 @@ AI Chatbot & Automation, Web Services, Application Integration
 - [Facilitating communication client server (Kinsta)](https://kinsta.com/blog/api-endpoint/)
 - [Chatbot API Integration Guide (BotPenguin)](https://botpenguin.com/blogs/chatbot-api)
 
----
 
 ## How Does API Endpoint Configuration Work?
 
@@ -98,7 +95,6 @@ Content-Type: application/json
 **Reference:**  
 - [AWS: EndpointConfiguration - Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/api/API_EndpointConfiguration.html)
 
----
 
 ## Components of API Endpoint Configuration
 
@@ -115,7 +111,6 @@ Content-Type: application/json
 | **Rate Limiting**   | Preventing abuse by capping requests                                     | 1000 requests per hour per user        |
 | **Monitoring**      | Tracking uptime, errors, usage                                           | Alert if error rate exceeds threshold  |
 
----
 
 ## Designing & Configuring API Endpoints: Deep Best Practices
 
@@ -194,7 +189,6 @@ Content-Type: application/json
   Don’t leak sensitive info but provide enough for troubleshooting.
 - [Microsoft Learn: Error Handling](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#error-handling)
 
----
 
 ## Security: Comprehensive API Endpoint Protection
 
@@ -234,7 +228,6 @@ APIs are a top attack vector. High-profile breaches (e.g., [T-Mobile](https://ww
 - [API Security Best Practices (Curity)](https://curity.io/resources/learn/api-security-best-practices/)
 - [IBM: API Security](https://www.ibm.com/topics/api-security)
 
----
 
 ## Monitoring, Logging, and Testing API Endpoints
 
@@ -275,7 +268,6 @@ APIs are a top attack vector. High-profile breaches (e.g., [T-Mobile](https://ww
 - **Synthetic Monitoring:**  
   Automated uptime checks from multiple locations.
 
----
 
 ## API Documentation: Clarity, Usability, and Automation
 
@@ -303,7 +295,6 @@ APIs are a top attack vector. High-profile breaches (e.g., [T-Mobile](https://ww
 - [Kinsta: API Documentation](https://kinsta.com/blog/api-documentation/)
 - [Swagger/OpenAPI Specification](https://swagger.io/specification/)
 
----
 
 ## Real-World Examples & Use Cases
 
@@ -357,7 +348,6 @@ Configure endpoints as EDGE (global), REGIONAL, or PRIVATE (VPC-only):
 - **Unified Chatbots:**  
   Multi-channel bots using a single `/api/v1/chat/send`.
 
----
 
 ## Glossary: Key Terms in API Endpoint Configuration
 
@@ -380,7 +370,6 @@ Configure endpoints as EDGE (global), REGIONAL, or PRIVATE (VPC-only):
 - **API Documentation:**  
   Reference describing how to use the API, parameters, data formats, and errors.
 
----
 
 ## Further Reading & References
 

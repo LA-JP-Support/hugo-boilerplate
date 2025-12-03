@@ -8,13 +8,11 @@ type: "glossary"
 date: 2025-12-02
 draft: false
 ---
-
 ## Summary
 
 Bot Containment Rate is the share of customer interactions that a chatbot or virtual agent resolves entirely, without human handoff. This metric is foundational for evaluating chatbot performance, operational efficiency, and customer experience in automated support. High containment is valuable only when paired with quality resolutions and strong customer satisfaction.  
 **Source:** [Botpress Guide](https://botpress.com/blog/containment-rate), [Decagon Glossary](https://decagon.ai/glossary/what-is-chatbot-containment-rate)
 
----
 
 ## What is Bot Containment Rate?
 
@@ -35,7 +33,6 @@ Bot Containment Rate measures the proportion of all user interactions that are s
   > “Enterprise targets typically fall between 70–90%, but the exact target depends on use case complexity.”  
   — [Botpress](https://botpress.com/blog/containment-rate)
 
----
 
 ## How is Bot Containment Rate Calculated?
 
@@ -59,7 +56,6 @@ Picture a funnel: All user queries enter the top. Those solved by the bot exit a
 - Consider coupling with satisfaction metrics: a high containment rate is only valuable if users are satisfied.  
 **Source:** [Decagon](https://decagon.ai/glossary/what-is-chatbot-containment-rate), [Botpress](https://botpress.com/blog/containment-rate)
 
----
 
 ## Why Does Bot Containment Rate Matter?
 
@@ -82,7 +78,6 @@ Picture a funnel: All user queries enter the top. Those solved by the bot exit a
   ([Botpress](https://botpress.com/blog/containment-rate), [Decagon](https://decagon.ai/glossary/what-is-chatbot-containment-rate), [GetTalkative](https://gettalkative.com/info/chatbot-containment-rate))
 - 100% containment is unrealistic—some queries require human judgment or empathy.
 
----
 
 ## Practical Applications
 
@@ -104,7 +99,6 @@ Picture a funnel: All user queries enter the top. Those solved by the bot exit a
 
 **Source:** [Botpress](https://botpress.com/blog/containment-rate), [Decagon](https://decagon.ai/glossary/what-is-chatbot-containment-rate)
 
----
 
 ## Example Scenarios
 
@@ -117,7 +111,6 @@ Picture a funnel: All user queries enter the top. Those solved by the bot exit a
 3. **HR Bot:** 300 leave balance questions contained; 50 salary questions, 40 escalated.  
    - Overall Containment: (310 ÷ 350) × 100 = **88.6%**
 
----
 
 ## Related Metrics and How They Compare
 
@@ -139,7 +132,6 @@ Additional metrics:
 
 **Source:** [Decagon](https://decagon.ai/glossary/what-is-chatbot-containment-rate), [Botpress](https://botpress.com/blog/containment-rate)
 
----
 
 ## Factors Influencing Bot Containment Rate
 
@@ -170,7 +162,6 @@ Additional metrics:
 
 **Source:** [Botpress](https://botpress.com/blog/containment-rate), [Decagon](https://decagon.ai/glossary/what-is-chatbot-containment-rate)
 
----
 
 ## Strategies to Improve Bot Containment Rate
 
@@ -197,7 +188,6 @@ Additional metrics:
 - [Botpress Guide](https://botpress.com/blog/containment-rate)
 - [Decagon Glossary](https://decagon.ai/glossary/what-is-chatbot-containment-rate)
 
----
 
 ## Limitations and Nuances
 
@@ -214,7 +204,6 @@ Additional metrics:
 - [Botpress Guide](https://botpress.com/blog/containment-rate)
 - [Decagon Glossary](https://decagon.ai/glossary/what-is-chatbot-containment-rate)
 
----
 
 ## Frequently Asked Questions
 
@@ -231,7 +220,6 @@ No. Always pair containment with satisfaction, speed, and escalation quality.
 **4. How do feedback loops help?**  
 User ratings, comments, and escalated interaction analysis identify gaps for retraining and improvement.
 
----
 
 ## Glossary Reference Table
 
@@ -256,7 +244,6 @@ User ratings, comments, and escalated interaction analysis identify gaps for ret
 
 For detailed definitions of these and related metrics, see [Decagon Glossary](https://decagon.ai/glossary/what-is-chatbot-containment-rate) and [Botpress Guide](https://botpress.com/blog/containment-rate).
 
----
 
 ## Further Reading & Resources
 
@@ -269,7 +256,6 @@ For detailed definitions of these and related metrics, see [Decagon Glossary](ht
 - [Industry Chatbot Statistics](https://ecommercebonsai.com/chatbot-statistics/)
 - [Gartner AI Agent Predictions](https://www.wired.com/story/uncanny-valley-podcast-unpacking-ai-agents/)
 
----
 
 ## Key Takeaways
 
@@ -281,7 +267,6 @@ For detailed definitions of these and related metrics, see [Decagon Glossary](ht
 
 **Optimizing bot containment rate is an ongoing process—pair data-driven insights with continuous improvement to maximize both operational and customer experience outcomes.**
 
----
 
 **References & Direct Sources:**  
 - [Botpress: Complete Guide to Chatbot Containment Rates](https://botpress.com/blog/containment-rate)  
@@ -293,9 +278,7 @@ For detailed definitions of these and related metrics, see [Decagon Glossary](ht
 - [Kodif Blog](https://kodif.ai/blog/what-is-chat-containment-rate-and-why-it-matters-for-your-business/)  
 - [Ecommerce Bonsai: Chatbot Statistics](https://ecommercebonsai.com/chatbot-statistics/)  
 
----
 
 For more on related metrics and AI chatbot optimization, see the [Decagon Glossary](https://decagon.ai/glossary/what-is-chatbot-containment-rate) and [Botpress Blog](https://botpress.com/blog/containment-rate).
 
----
 

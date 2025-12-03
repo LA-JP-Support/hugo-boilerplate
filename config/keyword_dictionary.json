@@ -1,0 +1,17 @@
+{
+  "bot avatar": {
+    "keywords": ["bot avatar", "chatbot persona", "digital human"],
+    "link": "/en/glossary/bot-avatar/",
+    "aliases": ["bot avatar", "bot avatars"]
+  },
+  "digital human": {
+    "keywords": ["digital human", "virtual human"],
+    "link": "/en/glossary/digital-human/",
+    "aliases": ["digital human", "digital humans"]
+  },
+  "ai assistant": {
+    "keywords": ["AI assistant", "virtual agent"],
+    "link": "/en/glossary/ai-assistant/",
+    "aliases": ["ai assistant", "ai assistants", "virtual agent"]
+  }
+}

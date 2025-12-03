@@ -2,25 +2,19 @@
 title: 会話ドリフト
 translationKey: conversation-drift
 description: 会話ドリフトとは、AIチャットボットや仮想アシスタントが元のトピックから逸脱し、的外れな応答をしてユーザー体験を低下させることです。その防止方法について学びましょう。
-keywords:
-- 会話ドリフト
-- AIチャットボット
-- 仮想アシスタント
-- チャットボットコンテキスト
-- ドリフト検出
+keywords: ["会話ドリフト", "AIチャットボット", "仮想アシスタント", "チャットボットコンテキスト", "ドリフト検出", "チャットボット", "対話型AI", "会話AI", "大規模言語モデル", "LLM", "言語モデル", "自然言語処理", "NLP", "言語処理", "AIエージェント", "自律型エージェント", "エージェント", "プロンプト", "プロンプトエンジニアリング"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-02
 draft: false
 term: かいわドリフト
 ---
-
 ## 会話ドリフトとは何か？
 
 **会話ドリフト**とは、チャットボットの応答とユーザーの元々の意図との間に生じる徐々の乖離を指します。複数ターンのAI会話では、プロンプトが焦点を維持していても、ボットが追跡を失い、的外れな、混乱させる、または無関係なやり取りになることがあります。
 
 > 「AI会話ドリフトとは、チャットボットやアシスタントなどのAI駆動の会話エージェントが、会話の元のトピックや意図から徐々に離れていく現象を指します。」  
-> — [Armstrong et al., 2025, AMCIS](https://aisel.aisnet.org/treos_amcis2025/15/)
+> — [Armstrong et al., 2025, AMCIS](https://aisel.aisnet.org/treos_amcis2025/15
 
 ### 主な特徴
 
@@ -38,7 +32,7 @@ term: かいわドリフト
 
 **1. コンテキストウィンドウの制限**  
 GPT-4などの大規模言語モデル（LLM）は、考慮できる会話履歴の量である「コンテキストウィンドウ」が有限です。長いセッションでは、以前のターンがメモリから押し出され、コンテキストの喪失やトピックの混乱を引き起こします。  
-*参考: [Castro, 2025](https://www.linkedin.com/posts/cesarecastrotorres_ai-chatgpt-conversationalai-activity-7309377204214239232-4k3z/)*
+*参考: [Castro, 2025](https://www.linkedin.com/posts/cesarecastrotorres_ai-chatgpt-conversationalai-activity-7309377204214239232-4k3z*
 
 **2. あいまいまたは変化するユーザープロンプト**  
 ユーザーは意図せずにあいまいさ、同義語、または突然のトピック変更を導入し、AIが焦点を維持するのを難しくすることがあります。
@@ -51,7 +45,7 @@ AIシステムは、特に複数のやり取りにわたる微妙な、抽象的
 
 **5. 競合する出力の優先順位**  
 AIモデルは正確さ、安全性、有用性、会話のトーンのバランスを取る必要があり、時にはコンテキストの喪失やトピックのドリフトを引き起こします。  
-*参照: [AI Conversation Drift, Armstrong et al., 2025](https://aisel.aisnet.org/treos_amcis2025/15/)*
+*参照: [AI Conversation Drift, Armstrong et al., 2025](https://aisel.aisnet.org/treos_amcis2025/15*
 
 ### 心理的およびUXの原因
 
@@ -75,7 +69,7 @@ AIモデルは正確さ、安全性、有用性、会話のトーンのバラン
   ユーザー: 「医療におけるAIについて教えて。」  
   4回のやり取り後、ボット: 「AIはフィンテックも変革しています…」  
   ボットが元のドメインの焦点を失います。  
-  *参照: [Armstrong et al., 2025](https://aisel.aisnet.org/treos_amcis2025/15/)*
+  *参照: [Armstrong et al., 2025](https://aisel.aisnet.org/treos_amcis2025/15*
 
 ### カスタマーサポートのシナリオ
 
@@ -110,7 +104,7 @@ AIモデルは正確さ、安全性、有用性、会話のトーンのバラン
   ドリフトにより、ログ、分析、トレーニングデータが無関係なやり取りで汚染されます。
 - **静かなパフォーマンス低下:**  
   AIシステムは明確な失敗信号なしに劣化する可能性があります。  
-  *参考: [Magai.co](https://magai.co/how-to-detect-and-manage-model-drift-in-ai/), [DEV.to](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l)*
+  *参考: [Magai.co](https://magai.co/how-to-detect-and-manage-model-drift-in-ai, [DEV.to](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l)*
 
 ### 心理的・UXリスク
 
@@ -144,7 +138,7 @@ AIモデルは正確さ、安全性、有用性、会話のトーンのバラン
   トレーニングデータと実際のデータの分布（平均、分散、分位数）を比較し、コルモゴロフ-スミルノフ検定や人口安定性指数などの統計的検定を使用して変化にフラグを立てる。
 - **自動ドリフト検出ツール:**  
   リアルタイムモニタリングツールを使用して、ドリフトが検出されたときにチームに警告する。  
-  *参考: [Magai.co, How to Detect and Manage Model Drift in AI](https://magai.co/how-to-detect-and-manage-model-drift-in-ai/), [DEV.to](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l), [Tencent Cloud](https://www.tencentcloud.com/techpedia/127715)*
+  *参考: [Magai.co, How to Detect and Manage Model Drift in AI](https://magai.co/how-to-detect-and-manage-model-drift-in-ai, [DEV.to](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l), [Tencent Cloud](https://www.tencentcloud.com/techpedia/127715)*
 
 ---
 
@@ -187,4 +181,4 @@ AIモデルは正確さ、安全性、有用性、会話のトーンのバラン
 12. **実際のユーザーでテストする:**  
     長く複雑なセッションをシミュレートしてエッジケースのドリフトを浮き彫りにする。
 
-*参考: [Magai.co](https://magai.co/how-to-detect-and-manage-model-drift-in-ai/), [DEV.to](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l), [Tim Williams, LinkedIn](https://www.linkedin.com/posts/timwilliamsau_ai-productmanagement
+*参考: [Magai.co](https://magai.co/how-to-detect-and-manage-model-drift-in-ai, [DEV.to](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l), [Tim Williams, LinkedIn](https://www.linkedin.com/posts/timwilliamsau_ai-productmanagement

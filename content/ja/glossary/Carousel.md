@@ -2,19 +2,13 @@
 title: カルーセル（UIコンポーネント）：用語集と実践ガイド
 translationKey: carousel-ui-component-glossary-practical-guide
 description: カルーセルは、画像やカードなどのコンテンツ項目のシーケンスを単一のビューポート内に表示し、ユーザーがそれらを循環して閲覧できるようにするインタラクティブなUIコンポーネントです。
-keywords:
-- カルーセル
-- UIコンポーネント
-- ウェブデザイン
-- UXデザイン
-- アクセシビリティ
+keywords: ["カルーセル", "UIコンポーネント", "ウェブデザイン", "UXデザイン", "アクセシビリティ", "チャットボット", "対話型AI", "会話AI", "プロンプト", "プロンプトエンジニアリング"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-02
 draft: false
 term: カルーセル（UIコンポーネント）：用語集と実践ガイド
 ---
-
 ## 1. 定義と概要 <a name="definition-overview"></a>
 
 **カルーセル**は、画像、テキストカード、注目商品、行動喚起など一連のコンテンツ項目を単一のビューポート内に表示するインタラクティブなUIコンポーネントです。項目は水平に配置され、ユーザーはナビゲーション矢印をクリックしたり、スワイプジェスチャーを使用したり、自動回転によってスライドを進めたりすることができます。カルーセルは*イメージスライダー*、*コンテンツスライダー*、または*カードカルーセル*とも呼ばれます。
@@ -26,8 +20,8 @@ term: カルーセル（UIコンポーネント）：用語集と実践ガイド
 カルーセルコンポーネントは、コンパクトな会話型UIで複数のオプションや応答を表示し、チャットウィンドウを圧迫することなくユーザーの選択をガイドします。
 
 **参考文献：**  
-- [NN/g: カルーセルのユーザビリティ](https://www.nngroup.com/articles/designing-effective-carousels/)  
-- [W3C: カルーセルアクセシビリティチュートリアル](https://www.w3.org/WAI/tutorials/carousels/)  
+- [NN/g: カルーセルのユーザビリティ](https://www.nngroup.com/articles/designing-effective-carousels  
+- [W3C: カルーセルアクセシビリティチュートリアル](https://www.w3.org/WAI/tutorials/carousels  
 - [Eleken: カルーセルUIガイド](https://www.eleken.co/blog-posts/carousel-ui)
 
 ---
@@ -64,8 +58,8 @@ term: カルーセル（UIコンポーネント）：用語集と実践ガイド
 ![カルーセルの構造](https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/file.webp?enc=1.DfSR4rss.18iJ_v3n_QwbR2lJ.eh09PQcAjLspC7jzH8D3WbLJaJGelpLbklsuKqetwUOCDosoXs2ea-WYbZG8Uk0RpCzCp8anGjzBz08jYUYBGoqDtSALiyo1CQ34QW_Z62FOhKls1wyO0dzEEI4dlCs4rMMkmHHjF8UjRFmIsvvLG4QiRNedyJ4BW6je98fsCoVyUXeNUZ6JMF7NC2nK4yHqbbTZb4jnO9z_DuexAtrUpg)
 
 **参考文献：**  
-- [W3C: カルーセル - 構造と機能](https://www.w3.org/WAI/tutorials/carousels/structure/)  
-- [Smart Interface Design Patterns: より良いカルーセルUX](https://smart-interface-design-patterns.com/articles/better-carousel-ux/)
+- [W3C: カルーセル - 構造と機能](https://www.w3.org/WAI/tutorials/carousels/structure  
+- [Smart Interface Design Patterns: より良いカルーセルUX](https://smart-interface-design-patterns.com/articles/better-carousel-ux
 
 ---
 
@@ -93,11 +87,11 @@ term: カルーセル（UIコンポーネント）：用語集と実践ガイド
 - ウェブサイトのホームページ：プロモーション、お知らせ、ヒーロー画像のローテーション。
 
 **実際のエンゲージメント：**  
-ユーザビリティ調査によると、ほとんどのユーザーは最初のスライドとしか対話しません—[カルーセルのトグルをクリックするユーザーはわずか1％で、84％のユーザーは1回しか対話せず、最初のスライドを超えることはほとんどありません](https://erikrunyon.com/2013/01/carousel-interaction-stats/)。重要な情報を後続のスライドに隠すべきではありません。
+ユーザビリティ調査によると、ほとんどのユーザーは最初のスライドとしか対話しません—[カルーセルのトグルをクリックするユーザーはわずか1％で、84％のユーザーは1回しか対話せず、最初のスライドを超えることはほとんどありません](https://erikrunyon.com/2013/01/carousel-interaction-stats。重要な情報を後続のスライドに隠すべきではありません。
 
 **参考文献：**  
 - [Eleken: カルーセルUIのユースケース](https://www.eleken.co/blog-posts/carousel-ui)  
-- [NN/g: カルーセルのユーザビリティ](https://www.nngroup.com/articles/designing-effective-carousels/)
+- [NN/g: カルーセルのユーザビリティ](https://www.nngroup.com/articles/designing-effective-carousels
 
 ---
 
@@ -125,7 +119,7 @@ term: カルーセル（UIコンポーネント）：用語集と実践ガイド
 ### **デメリット**
 
 - **最初のスライド以降の低いエンゲージメント：**  
-  ほとんどのユーザーは最初のスライド以降を無視するか見ません。後続のスライドに配置された重要なコンテンツは見逃されることが多いです。([NN/g, Eleken, Erik Runyonの統計](https://erikrunyon.com/2013/01/carousel-interaction-stats/))
+  ほとんどのユーザーは最初のスライド以降を無視するか見ません。後続のスライドに配置された重要なコンテンツは見逃されることが多いです。([NN/g, Eleken, Erik Runyonの統計](https://erikrunyon.com/2013/01/carousel-interaction-stats)
 
 - **注意散漫と認知負荷：**  
   自動回転するカルーセルは気が散り、読書を妨げ、バナーブラインドネスにつながる可能性があります。
@@ -137,18 +131,18 @@ term: カルーセル（UIコンポーネント）：用語集と実践ガイド
   ユーザーはオプションを見るためにクリック/スワイプするか回転を待つ必要があり、ジャーニーが遅くなる可能性があります。
 
 - **アクセシビリティの問題：**  
-  多くのカルーセルは、アクセシビリティを特に考慮して設計されていない限り、スクリーンリーダーやキーボードユーザーにとってナビゲートが困難です。([W3Cアクセシビリティガイドライン](https://www.w3.org/WAI/tutorials/carousels/))
+  多くのカルーセルは、アクセシビリティを特に考慮して設計されていない限り、スクリーンリーダーやキーボードユーザーにとってナビゲートが困難です。([W3Cアクセシビリティガイドライン](https://www.w3.org/WAI/tutorials/carousels)
 
 - **バナーブラインドネス：**  
-  回転する要素は、特に広告や重要でないコンテンツのようにスタイル設定されている場合、無視されることが多いです。([NN/g バナーブラインドネスについて](https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/))
+  回転する要素は、特に広告や重要でないコンテンツのようにスタイル設定されている場合、無視されることが多いです。([NN/g バナーブラインドネスについて](https://www.nngroup.com/articles/banner-blindness-old-and-new-findings)
 
 **ヒント：**  
 重要な情報を最初のスライド以降に配置しないでください—ほとんどのユーザーはそれを見ることはありません。
 
 **参考文献：**  
-- [NN/g: カルーセルのユーザビリティ](https://www.nngroup.com/articles/designing-effective-carousels/)  
+- [NN/g: カルーセルのユーザビリティ](https://www.nngroup.com/articles/designing-effective-carousels  
 - [Eleken: カルーセルUIの失敗](https://www.eleken.co/blog-posts/carousel-ui)  
-- [Smart Patterns: ユーザビリティの落とし穴](https://smart-interface-design-patterns.com/articles/better-carousel-ux/)
+- [Smart Patterns: ユーザビリティの落とし穴](https://smart-interface-design-patterns.com/articles/better-carousel-ux
 
 ---
 

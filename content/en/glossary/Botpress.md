@@ -8,7 +8,6 @@ type: "glossary"
 date: 2025-12-02
 draft: false
 ---
-
 ## What is Botpress?
 
 Botpress is a comprehensive platform for designing, building, deploying, and managing AI-powered chatbots and conversational agents. Its core is a low-code, visual flow editor that integrates advanced artificial intelligence, including direct support for large language models (LLMs) such as GPT-4, Claude, and Google Gemini. Botpress is designed for both developers and non-technical users, offering a robust, scalable solution for automating conversations, customer support, sales, HR, and more.
@@ -27,7 +26,6 @@ Botpress is a comprehensive platform for designing, building, deploying, and man
 - [Botpress Homepage](https://botpress.com)  
 - [Voiceflow independent review](https://www.voiceflow.com/blog/botpress)
 
----
 
 ## Core Features of Botpress
 
@@ -48,7 +46,6 @@ Iterate on conversation logic visually, simulate user interactions, and refine f
 - [Official Flow Editor guide](https://botpress.com/academy-lesson/studio-ui-flow-editor)  
 - [PDF on Botpress features](https://www.cpce-polyu.edu.hk/docs/qesschatbotlibraries/qess-chatbot-guidelines/botpressintroduction.pdf?sfvrsn=4f4ee1ce_5)
 
----
 
 ### AI & LLM Integration
 
@@ -74,7 +71,6 @@ Bots can use these models for:
 - [Google AI Integration](https://botpress.com/integrations/google-ai)  
 - [Best LLMs 2025](https://botpress.com/blog/best-large-language-models)
 
----
 
 ### Knowledge Base Support
 
@@ -97,7 +93,6 @@ Botpress provides advanced knowledge base functionality, leveraging [vector data
 - [KB Best Practices](https://botpress.com/docs/studio/concepts/knowledge-base/knowledge-base-best-practices)  
 - [Vector Storage in Botpress](https://botpress.com/academy-lesson/vector-database-storage)
 
----
 
 ### Omnichannel Deployment
 
@@ -113,7 +108,6 @@ Botpress supports deployment across over 10+ channels, ensuring reach and flexib
 **References:**  
 - [Official Integrations Directory](https://www.botpress.com/hub?type_equal=%5B%22Channel%22%5D)
 
----
 
 ### Advanced Analytics & Monitoring
 
@@ -125,7 +119,6 @@ Botpress offers robust analytics and monitoring tools for continuous improvement
 **References:**  
 - [Botpress Analytics Overview](https://botpress.com/docs/)
 
----
 
 ### Integrations and Extensibility
 
@@ -134,7 +127,6 @@ Botpress is built for integration and extensibility:
 - **Custom code:** Inject JavaScript for advanced logic, API calls, and data manipulation
 - **API & SDK:** Extend Botpress within your own applications or workflows ([SDK Overview](https://botpress.com/docs/for-developers/sdk/overview))
 
----
 
 ### Security & Compliance
 
@@ -150,7 +142,6 @@ Botpress is engineered for enterprise security and compliance:
 - Version history, audit logs, and robust file management
 - Controls for privacy, prompt injection, and malicious output
 
----
 
 ## How Botpress is Used
 
@@ -176,7 +167,6 @@ Botpress is engineered for enterprise security and compliance:
 **References:**  
 - [Botpress Documentation](https://botpress.com/docs/)
 
----
 
 ### Deployment Scenarios
 
@@ -187,7 +177,6 @@ Botpress is engineered for enterprise security and compliance:
 - **Internal Tools:**  
   Intranet, HR, and IT support bots
 
----
 
 ## Examples & Use Cases
 
@@ -222,7 +211,6 @@ Botpress is engineered for enterprise security and compliance:
 - **Education:** Admissions, campus info, student support
 - **Government:** Forms, status updates, public information
 
----
 
 ## Botpress vs. Other Chatbot Platforms
 
@@ -241,7 +229,6 @@ Botpress is engineered for enterprise security and compliance:
 - [GPTBots review of Botpress](https://www.gptbots.ai/blog/botpress-alternatives)  
 - [Chatimize review](https://chatimize.com/reviews/botpress/)
 
----
 
 ## Strengths & Limitations
 
@@ -264,7 +251,6 @@ Botpress is engineered for enterprise security and compliance:
 - Live chat and advanced support on higher tiers
 - Usage-based billing and third-party fees may complicate cost forecasting
 
----
 
 ## Pricing Overview
 
@@ -281,7 +267,6 @@ Botpress offers flexible plans:
 **Channel fees and AI token usage billed separately.**  
 [Full pricing details](https://botpress.com/pricing)
 
----
 
 ## FAQs
 
@@ -317,7 +302,6 @@ Quarterly or after major business changes.
 **Q9: Who should use Botpress?**  
 Developers, enterprises, and SMBs needing flexible, scalable, secure AI agents.
 
----
 
 ## Key Resources & Further Reading
 
@@ -334,9 +318,7 @@ Developers, enterprises, and SMBs needing flexible, scalable, secure AI agents.
 - [Enterprise Security](https://botpress.com/enterprise)
 - [Chatbot Security Guide (2025)](https://botpress.com/blog/chatbot-security)
 
----
 
 *For deeper technical information, deployment guides, or advanced integrations, consult the [Botpress Docs](https://botpress.com/docs/) or join the [Botpress Community on Discord](https://discord.com/invite/botpress).*
 
----
 

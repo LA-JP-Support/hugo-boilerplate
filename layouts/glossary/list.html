@@ -85,10 +85,10 @@
     {{ range $index, $term := $glossaryTerms }}
       {{ if $index }},{{ end }}
       {
-        "title": {{ $term.Title | jsonify }},
-        "term": {{ ($term.Params.term | default $term.Title) | jsonify }},
+        "title": "{{ $term.Title | safeJS }}",
+        "term": "{{ ($term.Params.term | default $term.Title) | safeJS }}",
         "url": {{ $term.RelPermalink | jsonify }},
-        "description": {{ $term.Description | jsonify }},
+        "description": "{{ $term.Description | safeJS }}",
         "image": {{ ($term.Params.image | default "") | jsonify }},
         "date": {{ $term.Date.Format "2006-01-02" | jsonify }},
         "readingTime": {{ $term.ReadingTime }}

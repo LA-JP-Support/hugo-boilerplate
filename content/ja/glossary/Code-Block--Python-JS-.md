@@ -2,19 +2,13 @@
 title: コードブロック（Python/JS）
 translationKey: code-block-python-js
 description: コードブロックはプログラミングステートメントをまとめて実行するためのグループで、Pythonではインデントによって、JavaScriptでは波括弧によって定義されます。自動化やチャットボットでカスタムロジックを実装するために使用されます。
-keywords:
-- コードブロック
-- Python
-- JavaScript
-- 自動化
-- チャットボット
+keywords: ["コードブロック", "Python", "JavaScript", "自動化", "チャットボット", "対話型AI", "会話AI", "ワークフロー自動化", "業務自動化", "RPA", "API", "API連携", "インターフェース"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-02
 draft: false
 term: コードブロック（Python/JS）
 ---
-
 ## コードブロックとは何か？
 
 プログラミングにおけるコードブロックとは、言語のインタープリターやコンパイラが単一の実行単位として扱う連続したコードのセクションです。コードブロックはプログラムの構造化において基本的なもので、関数、ループ、条件文、クラスなどのロジックをカプセル化します。
@@ -120,7 +114,7 @@ console.log(y); // 1
 
 ### コードブロックノード
 
-[Contentstack](https://www.contentstack.com/docs/developers/automation-hub-connectors/code-block)、[n8n](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/)などの自動化プラットフォームは、ユーザーがカスタムPythonやJavaScriptを埋め込むことができる「コードブロック」ノードを提供しています。
+[Contentstack](https://www.contentstack.com/docs/developers/automation-hub-connectors/code-block)、[n8n](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.codeなどの自動化プラットフォームは、ユーザーがカスタムPythonやJavaScriptを埋め込むことができる「コードブロック」ノードを提供しています。
 
 #### 機能：
 - **カスタムスクリプティング：** データ変換、検証、外部APIコールのためのカスタムロジックを記述。
@@ -138,7 +132,7 @@ console.log(y); // 1
 - JavaScriptとPython（Pyodide経由）の両方をサポート。
 - 2つの実行モード：「すべてのアイテムに対して一度実行」または「各アイテムに対して一度実行」。
 - ワークフローデータにアクセスするための組み込みメソッドと変数。
-- [n8n コードノードドキュメント](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/)
+- [n8n コードノードドキュメント](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code
 
 ---
 
@@ -264,7 +258,7 @@ for (let i = 0; i < 3; i++) {
 - 入出力オブジェクトの構造を検証してください。
 - サポートされている場所では、デバッグに `console.log` を使用してください。
 - 複雑なスクリプトには明確にするためのコメントを追加してください。
-- ノード設定とサポートされているライブラリについては、プラットフォームのドキュメントに従ってください（[Contentstack ドキュメント](https://www.contentstack.com/docs/developers/automation-hub-connectors/code-block)、[n8n ドキュメント](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/)）。
+- ノード設定とサポートされているライブラリについては、プラットフォームのドキュメントに従ってください（[Contentstack ドキュメント](https://www.contentstack.com/docs/developers/automation-hub-connectors/code-block)、[n8n ドキュメント](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code）。
 
 ### チャットボットコードフォーマット
 

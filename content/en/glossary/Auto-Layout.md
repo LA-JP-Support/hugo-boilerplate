@@ -8,7 +8,6 @@ type: "glossary"
 date: 2025-12-02
 draft: false
 ---
-
 ## What is Auto-Layout?
 
 Auto-Layout is a design and development feature that arranges, aligns, and resizes interface elements automatically based on rules or constraints you define. When the content, screen size, or the number of elements changes, Auto-Layout recalculates and repositions elements, ensuring your interface remains clean, legible, and responsive.
@@ -19,7 +18,6 @@ Imagine a bookshelf that automatically shifts and spaces its books every time yo
 **Figma Official Guide:**  
 [Guide to auto layout – Figma Help Center](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout)
 
----
 
 ## Why Use Auto-Layout?
 
@@ -40,7 +38,6 @@ Imagine a bookshelf that automatically shifts and spaces its books every time yo
 - [A Guide to Auto Layout: Best Practices, Tips & Tricks | Figma (YouTube)](https://www.youtube.com/watch?v=1odqpkfkDL8)
 - [Figma Handbook: Advanced Auto Layout by Design+Code](https://designcode.io/figma-handbook-advanced-layout)
 
----
 
 ## How Auto-Layout Works
 
@@ -70,7 +67,6 @@ A button whose width "hugs" its label will automatically resize as the text chan
 - **Nesting:** Create complex layouts by combining multiple Auto-Layouts.
 - **Absolute Positioning:** Exclude specific children from the Auto-Layout rules when needed.
 
----
 
 ## Platform Specifics: Auto-Layout in Figma
 
@@ -85,7 +81,6 @@ If you select objects not already in a frame, Figma creates a new frame with Aut
 
 [Official Figma Instructions](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout)
 
----
 
 ### Direction: Horizontal, Vertical, Wrap, and Grid
 
@@ -100,7 +95,6 @@ Use the Direction controls in Figma’s right panel.
 **Learn More:**  
 [Auto layout flow in Figma](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout#flow)
 
----
 
 ### Spacing, Padding & Gaps
 
@@ -116,7 +110,6 @@ A button with 16px horizontal and 8px vertical padding.
 **Deep Dive:**  
 [Advanced spacing and alignment – Figma Handbook](https://designcode.io/figma-handbook-advanced-layout)
 
----
 
 ### Resizing Options: Hug, Fill, Fixed, Min/Max
 
@@ -133,7 +126,6 @@ A button with width set to "Hug" and a minimum width of 100px prevents it from b
 
 [Resizing and constraints in Figma](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout#resize)
 
----
 
 ### Nesting Auto-Layouts
 
@@ -147,7 +139,6 @@ A card component with vertical Auto-Layout, a header row (horizontal), and a con
 
 [Building complex layouts – Figma Help Center](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout#nest)
 
----
 
 ### Alignment and Distribution
 
@@ -162,7 +153,6 @@ Alignment changes only have an effect when there’s space to align within; “h
 
 [Alignment and distribution in Figma](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout#align)
 
----
 
 ### Ignoring Auto-Layout (Absolute Positioning)
 
@@ -176,7 +166,6 @@ A notification badge positioned on the corner of an icon.
 
 [Absolute positioning in Figma](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout#absolute)
 
----
 
 ## Auto-Layout in Other Platforms
 
@@ -193,7 +182,6 @@ A notification badge positioned on the corner of an icon.
 - Use Interface Builder for visual constraint editing.
 - Use “Safe Area” guides for layouts that adapt to notches and rounded corners.
 
----
 
 ### Android (Jetpack Compose, XML, ConstraintLayout)
 
@@ -207,7 +195,6 @@ A notification badge positioned on the corner of an icon.
 **Best Practice:**  
 Use ConstraintLayout for complex, adaptive UIs and to avoid deep nesting.
 
----
 
 ### Web (CSS Flexbox, Grid)
 
@@ -222,7 +209,6 @@ Use ConstraintLayout for complex, adaptive UIs and to avoid deep nesting.
 - Flexbox for navigation bars and toolbars.
 - Grid for product listings and dashboards.
 
----
 
 ## Common Use Cases and Examples
 
@@ -246,7 +232,6 @@ Use “Ignore Auto-Layout” or absolute positioning for badges overlaying icons
 
 Use CSS Grid or Flexbox to make content reflow for different screen sizes, keeping layouts fluid and responsive.
 
----
 
 ## Best Practices and Troubleshooting
 
@@ -266,7 +251,6 @@ Use CSS Grid or Flexbox to make content reflow for different screen sizes, keepi
 - **Badge/Overlay Not Positioning:** Use “Ignore Auto-Layout.”
 - **Spacing Off After Applying Auto-Layout:** Adjust padding and gap values manually.
 
----
 
 ## Glossary of Terms
 
@@ -286,7 +270,6 @@ Use CSS Grid or Flexbox to make content reflow for different screen sizes, keepi
 - **Wrap:** Contents move to new rows/columns when space runs out.
 - **Grid:** Two-dimensional arrangement (rows and columns).
 
----
 
 ## FAQ
 
@@ -307,7 +290,6 @@ Yes, it’s designed for adaptive/responsive interfaces.
 **Why does my Auto-Layout frame shrink/expand unexpectedly?**  
 Figma sets initial padding based on content—adjust values in the right panel as needed.
 
----
 
 ## Further Resources
 
@@ -320,7 +302,6 @@ Figma sets initial padding based on content—adjust values in the right panel a
 - [Android ConstraintLayout Guide](https://developer.android.com/develop/ui/views/layout/constraint-layout)
 - [ConstraintLayout in Jetpack Compose](https://developer.android.com/develop/ui/compose/layouts/constraintlayout)
 
----
 
 This glossary incorporates detailed, authoritative information for Auto-Layout across Figma, iOS, Android, and Web, with direct links to official documentation and advanced tutorials for deep learning and troubleshooting.
 

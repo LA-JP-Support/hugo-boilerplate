@@ -2,24 +2,18 @@
 title: 条件付きルーター
 translationKey: conditional-router
 description: 条件付きルーターはデータをルールに照らして評価し、特定のルートに振り分けます。自動化パイプライン、AIチャットボット、ソフトウェアにおける動的なルールベースの分岐に不可欠です。
-keywords:
-- 条件付きルーター
-- ワークフロー自動化
-- ルールベース分岐
-- AIチャットボット
-- データルーティング
+keywords: ["条件付きルーター", "ワークフロー自動化", "ルールベース分岐", "AIチャットボット", "データルーティング", "チャットボット", "対話型AI", "会話AI", "業務自動化", "RPA", "API", "API連携", "インターフェース"]
 category: General
 type: glossary
 date: 2025-12-02
 draft: false
 term: じょうけんつきるーたー
 ---
-
 ## 定義
 
 **条件付きルーター**は、ワークフローコンポーネントまたはノードであり、入力データをユーザー定義の1つ以上のルールと照合し、どの条件が一致するかに基づいて特定の下流ルートにデータを振り分けます。その目的は、自動化パイプライン、AIチャットボット、ビジネスプロセス自動化、ソフトウェアアーキテクチャにおいて、動的でルールベースの分岐を可能にすることです。各出力ポートは、さまざまな演算子を使用したカスタマイズ可能なルールによって決定される、可能なルーティング結果に対応しています。
 
-- **信頼できる情報源:** [AWS Glue 条件付きルーター](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)、[FlowHunt 条件付きルーター](https://www.flowhunt.io/components/ConditionalRouter/)
+- **信頼できる情報源:** [AWS Glue 条件付きルーター](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)、[FlowHunt 条件付きルーター](https://www.flowhunt.io/components/ConditionalRouter
 
 **主な機能:**
 - 入力（テキスト、構造化オブジェクト、メタデータなど）を受け取る
@@ -64,7 +58,7 @@ term: じょうけんつきるーたー
 | メタデータ/パラメータ | オブジェクト    | ルーティング用の追加フィールド（user_plan、region、modelなど）    | いいえ | はい  |
 | メッセージオブジェクト | オブジェクト    | ルートに沿って渡すペイロード                                  | いいえ | いいえ |
 
-- **情報源:** [FlowHunt 入力](https://www.flowhunt.io/components/ConditionalRouter/)、[AWS Glue ドキュメント](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
+- **情報源:** [FlowHunt 入力](https://www.flowhunt.io/components/ConditionalRouter、[AWS Glue ドキュメント](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
 - 多くのプラットフォーム（例：[Haystack](https://docs.haystack.deepset.ai/docs/conditionalrouter)）は、動的変数を使用したテンプレートベースのルーティングをサポートしています。
 
 ---
@@ -92,7 +86,7 @@ term: じょうけんつきるーたー
 | `$lt`, `$lte`      | より小さい/以下（数値）                     | `temperature < 0.7`                 |
 
 - **論理演算子:** `$and`（すべての条件が真である必要がある）、`$or`（いずれかの条件が真）
-- **情報源:** [FlowHunt 演算子リスト](https://www.flowhunt.io/components/ConditionalRouter/)、[Portkey 条件付きルーティング](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing)、[AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
+- **情報源:** [FlowHunt 演算子リスト](https://www.flowhunt.io/components/ConditionalRouter、[Portkey 条件付きルーティング](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing)、[AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
 
 ---
 
@@ -111,7 +105,7 @@ term: じょうけんつきるーたー
 - **デフォルト出力:** 一致しないデータを処理します。
 - **データ転送:** 元の（または変換された）メッセージ/データが有効化された出力を通過します。
 
-- **情報源:** [FlowHunt 出力](https://www.flowhunt.io/components/ConditionalRouter/)、[AWS Glue ルーティング](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
+- **情報源:** [FlowHunt 出力](https://www.flowhunt.io/components/ConditionalRouter、[AWS Glue ルーティング](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
 
 ---
 
@@ -151,7 +145,7 @@ term: じょうけんつきるーたー
 
 ## 実用的な例
 
-### 例1: 単純なテキスト一致 ([FlowHunt](https://www.flowhunt.io/components/ConditionalRouter/))
+### 例1: 単純なテキスト一致 ([FlowHunt](https://www.flowhunt.io/components/ConditionalRouter)
 ユーザーメッセージに「help」というキーワードが含まれている場合はサポートにルーティングし、それ以外の場合はボットにルーティングします。
 
 ```json

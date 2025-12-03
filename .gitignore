@@ -50,3 +50,7 @@ build/
 # Optional: Ignore generated CSS/JS if using a build pipeline
 # /static/css/
 # /static/js/
+
+# FlowHunt raw articles (before cleanup)
+content-drafts/
+content-drafts/**/*.md
