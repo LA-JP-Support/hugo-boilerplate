@@ -1,6 +1,6 @@
 ---
-title: 埋め込みスクリプト：用語集と包括的ガイド
-translationKey: embed-script-glossary-comprehensive-guide
+title: 埋め込みスクリプト
+translationKey: embed-script
 description: 埋め込みスクリプトについて学びましょう。AIチャットボットや動的コンテンツをあらゆるウェブサイトに統合するために使用されるJavaScriptスニペットです。使用方法、例、カスタマイズ、ベストプラクティスをご紹介します。
 keywords:
 - 埋め込みスクリプト
@@ -12,10 +12,10 @@ category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
-term: うめこみスクリプト：ようごしゅうとほうかつてきガイド
-reading: 埋め込みスクリプト：用語集と包括的ガイド
+term: うめこみスクリプト
+reading: 埋め込みスクリプト
 kana_head: その他
-e-title: 'Embed Script: Glossary & Comprehensive Guide'
+e-title: Embed Script
 ---
 
 ## Embed Scriptとは何か?

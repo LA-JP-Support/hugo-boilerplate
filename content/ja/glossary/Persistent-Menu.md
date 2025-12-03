@@ -1,6 +1,6 @@
 ---
-title: パーシステントメニュー:詳細用語集と実装ガイド
-translationKey: persistent-menu-deep-dive-glossary-implementation-guide
+title: パーシステントメニュー
+translationKey: persistent-menu-deep-dive-glossary-implementation
 description: チャットボットにおけるパーシステントメニューについて学びます:その定義、使用する理由、実装方法、そしてユーザーナビゲーションと体験を向上させるためのベストプラクティスを解説します。
 keywords:
 - Persistent Menu
@@ -13,9 +13,9 @@ type: glossary
 date: 2025-12-03
 draft: false
 term: ぱーしすてんとめにゅー:しょうさいようごしゅうとじっそうがいど
-reading: パーシステントメニュー:詳細用語集と実装ガイド
+reading: パーシステントメニュー
 kana_head: は
-e-title: 'Persistent Menu: Deep-Dive Glossary & Implementation Guide'
+e-title: Persistent Menu
 ---
 
 ## Persistent Menu(パーシステントメニュー)とは?

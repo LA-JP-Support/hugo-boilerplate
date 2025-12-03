@@ -1,6 +1,6 @@
 ---
-title: カルーセル（UIコンポーネント）：用語集と実践ガイド
-translationKey: carousel-ui-component-glossary-practical-guide
+title: カルーセル（UIコンポーネント）
+translationKey: carousel-ui-component
 description: カルーセルは、画像やカードなどのコンテンツ項目のシーケンスを単一のビューポート内に表示し、ユーザーがそれらを循環して閲覧できるようにするインタラクティブなUIコンポーネントです。
 keywords:
 - カルーセル
@@ -17,8 +17,8 @@ category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-02
 draft: false
-term: カルーセル（UIコンポーネント）：用語集と実践ガイド
-e-title: 'Carousel (UI Component): Glossary & Practical Guide'
+term: カルーセル（UIコンポーネント）
+e-title: Carousel (UI Component)
 ---
 
 ## 1. 定義と概要 <a name="definition-overview"></a>

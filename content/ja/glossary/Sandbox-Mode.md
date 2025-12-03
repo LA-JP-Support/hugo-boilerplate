@@ -1,6 +1,6 @@
 ---
-title: サンドボックスモード:決定版用語集と実装ガイド
-translationKey: sandbox-mode-the-definitive-glossary-implementation-guide
+title: サンドボックスモード
+translationKey: sandbox-mode-the-definitive-glossary-implementation
 description: 本番システムに影響を与えることなく、コード、フロー、またはソフトウェアを安全に実行するための、分離された使い捨て可能なテスト環境。開発、セキュリティ、QAに最適。
 keywords:
 - sandbox mode
@@ -19,9 +19,9 @@ type: glossary
 date: 2025-12-03
 draft: false
 term: さんどぼっくすもーど:けっていばんようごしゅうとじっそうがいど
-reading: サンドボックスモード:決定版用語集と実装ガイド
+reading: サンドボックスモード
 kana_head: か
-e-title: 'Sandbox Mode: The Definitive Glossary & Implementation Guide'
+e-title: Sandbox Mode
 ---
 
 ## はじめに・定義

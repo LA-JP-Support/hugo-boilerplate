@@ -1,13 +1,21 @@
 ---
-title: "Environment Variables (Secrets): The Deep Glossary"
-translationKey: "environment-variables-secrets-the-deep-glossary"
-description: "Learn about environment variables (secrets) for secure application configuration. Decouple sensitive data like API keys and passwords from code, ensuring security and flexibility."
-keywords: ["environment variables", "secrets management", "API keys", "application security", "configuration management"]
-category: "General"
-type: "glossary"
+title: Environment Variables (Secrets)
+translationKey: environment-variables-secrets-the
+description: Learn about environment variables (secrets) for secure application configuration.
+  Decouple sensitive data like API keys and passwords from code, ensuring security
+  and flexibility.
+keywords:
+- environment variables
+- secrets management
+- API keys
+- application security
+- configuration management
+category: General
+type: glossary
 date: 2025-12-03
 draft: false
 ---
+
 ## What Are Environment Variables (Secrets)?
 
 Environment variables are named, externally-defined key-value pairs that provide runtime configuration to applications. When utilized for secrets, they store sensitive data—API keys, passwords, connection strings, tokens—outside codebases, UIs, or logs. The decoupling ensures that secrets are never hardcoded in source code or checked into version control.

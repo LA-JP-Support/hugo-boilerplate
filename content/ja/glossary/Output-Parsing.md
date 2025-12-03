@@ -1,6 +1,6 @@
 ---
 title: アウトプットパーシング用語集と詳細解説
-translationKey: output-parsing-glossary-deep-dive
+translationKey: output-parsing
 description: アウトプットパーシングは、AI言語モデルのテキスト応答から構造化データ(JSON、Pythonオブジェクト)を抽出し、自動化、分析、システム統合に活用する技術です。
 keywords:
 - アウトプットパーシング

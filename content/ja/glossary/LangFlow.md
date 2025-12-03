@@ -1,6 +1,6 @@
 ---
-title: LangFlow用語集：詳細な技術リファレンス＆ガイド
-translationKey: langflow-glossary-deep-technical-reference-guide
+title: LangFlow用語集
+translationKey: langflow-glossary-deep-technical-reference
 description: LangFlowは、AI アプリケーション、特にLLMとLangChainをベースとしたアプリケーションの構築、テスト、デプロイを行うためのオープンソースのローコードビジュアルインターフェースです。
 keywords:
 - LangFlow
@@ -12,10 +12,10 @@ category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
-term: ラングフロー ようごしゅう：しょうさいな ぎじゅつ リファレンス アンド ガイド
-reading: LangFlow用語集：詳細な技術リファレンス＆ガイド
+term: ラングフロー ようごしゅう
+reading: LangFlow用語集
 kana_head: その他
-e-title: 'LangFlow Glossary: Deep Technical Reference & Guide'
+e-title: LangFlow Glossary
 ---
 
 ## LangFlowとは?

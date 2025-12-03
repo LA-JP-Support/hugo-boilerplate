@@ -1,5 +1,5 @@
 ---
-title: スロットフィリング:会話型AIの決定版用語集
+title: スロットフィリング
 translationKey: slot-filling-the-definitive-glossary-for-conversational-ai
 description: スロットフィリングは、会話型AIにおいてユーザーのクエリから特定のパラメータを抽出し、タスクを完了させる技術です。データ収集、自然な対話の実現、タスク完了の保証に不可欠な要素となっています。
 keywords:
@@ -13,9 +13,9 @@ type: glossary
 date: 2025-12-03
 draft: false
 term: すろっとふぃりんぐ:かいわがたえーあいのけっていばんようごしゅう
-reading: スロットフィリング:会話型AIの決定版用語集
+reading: スロットフィリング
 kana_head: か
-e-title: 'Slot Filling: The Definitive Glossary for Conversational AI'
+e-title: Slot Filling
 ---
 
 ## スロットフィリングとは?

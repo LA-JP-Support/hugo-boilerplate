@@ -64,6 +64,7 @@ LOGS_DIR = PROJECT_ROOT / "logs"
 # Pipeline steps
 STEPS = [
     "cleanup",
+    "sanitize_titles",
     "enrich_en",
     "copy_to_content",
     "translate",
@@ -176,8 +177,19 @@ def step_cleanup(file_path: Path, logger: PipelineLogger, dry_run: bool) -> Opti
     return None
 
 
+def step_sanitize_titles(file_path: Path, logger: PipelineLogger, dry_run: bool) -> bool:
+    """Step 2: Sanitize titles and translation keys."""
+    logger.log(f"Sanitizing titles: {file_path.name}", "STEP")
+
+    args = [str(file_path)]
+    if dry_run:
+        args.append("--dry-run")
+
+    return run_script("title_sanitizer.py", args, logger, dry_run=False)
+
+
 def step_enrich_en(file_path: Path, logger: PipelineLogger, dry_run: bool) -> bool:
-    """Step 2: Enrich English article with keywords and links."""
+    """Step 3: Enrich English article with keywords and links."""
     logger.log(f"Enriching (EN): {file_path.name}", "STEP")
 
     dict_path = CONFIG_DIR / "keyword_dictionary.json"
@@ -414,7 +426,12 @@ def process_file(
         elif not dry_run:
             return False
 
-    # Step 2: Enrich EN
+    # Step 2: Sanitize titles
+    if should_run("sanitize_titles"):
+        if not step_sanitize_titles(current_en_file, logger, dry_run) and not dry_run:
+            logger.log("Sanitize titles failed, continuing anyway", "WARN")
+
+    # Step 3: Enrich EN
     if should_run("enrich_en"):
         if not step_enrich_en(current_en_file, logger, dry_run) and not dry_run:
             logger.log("Enrich EN failed, continuing anyway", "WARN")

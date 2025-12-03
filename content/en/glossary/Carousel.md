@@ -1,13 +1,21 @@
 ---
-title: "Carousel (UI Component): Glossary & Practical Guide"
-translationKey: "carousel-ui-component-glossary-practical-guide"
-description: "A carousel is an interactive UI component displaying a sequence of content items like images or cards within a single viewport, allowing users to cycle through them."
-keywords: ["carousel", "UI component", "web design", "UX design", "accessibility"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: Carousel (UI Component)
+translationKey: carousel-ui-component
+description: A carousel is an interactive UI component displaying a sequence of content
+  items like images or cards within a single viewport, allowing users to cycle through
+  them.
+keywords:
+- carousel
+- UI component
+- web design
+- UX design
+- accessibility
+category: AI Chatbot & Automation
+type: glossary
 date: 2025-12-02
 draft: false
 ---
+
 ## 1. Definition and Overview <a name="definition-overview"></a>
 
 A **carousel** is an interactive UI component that shows a sequence of content items—such as images, text cards, featured products, or calls-to-action—within a single viewport. Items are arranged horizontally, and users can cycle through them by clicking navigation arrows, using swipe gestures, or allowing auto-rotation to advance the slides. Carousels are sometimes called *image sliders*, *content sliders*, or *card carousels*.

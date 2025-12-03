@@ -1,13 +1,21 @@
 ---
-title: "API Endpoint Configuration: Complete Glossary & Deep-Dive Guide"
-translationKey: "api-endpoint-configuration-complete-glossary-deep-dive-guide"
-description: "Learn about API endpoint configuration, its importance for integration, automation, and security, and best practices for designing, securing, and documenting your API endpoints."
-keywords: ["API endpoint configuration", "API security", "API documentation", "REST API design", "API monitoring"]
-category: "Web Services"
-type: "glossary"
+title: API Endpoint Configuration
+translationKey: api-endpoint-configuration
+description: Learn about API endpoint configuration, its importance for integration,
+  automation, and security, and best practices for designing, securing, and documenting
+  your API endpoints.
+keywords:
+- API endpoint configuration
+- API security
+- API documentation
+- REST API design
+- API monitoring
+category: Web Services
+type: glossary
 date: 2025-12-02
 draft: false
 ---
+
 ## What Is API Endpoint Configuration?
 
 **Definition:**  

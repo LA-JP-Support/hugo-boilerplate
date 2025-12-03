@@ -1,7 +1,7 @@
 # FlowHunt Glossary Translation Pipeline Manual / FlowHunt 用語集翻訳パイプライン マニュアル
 
-**Version / バージョン:** 1.0.0  
-**Last Updated / 最終更新:** 2025-12-03  
+**Version / バージョン:** 1.2.0  
+**Last Updated / 最終更新:** 2025-12-04  
 **Author / 作成者:** Development Team
 
 ---
@@ -231,6 +231,21 @@ python scripts/pipeline_translate.py --auto --publish
 | `--skip-existing` | Skip files with existing JA translations | 既存の日本語翻訳があるファイルをスキップ |
 | `--publish` | Set draft: false after processing | 処理後にdraft: falseを設定 |
 
+### backfill_e_titles.py
+
+Ensures every Japanese glossary file retains its original English title for display and search.
+
+日本語用語記事に英語タイトル(`e-title`)を自動付与し、検索と表示の整合性を保ちます。
+
+```bash
+python scripts/backfill_e_titles.py
+```
+
+| Option | Description (EN) | 説明 (JA) |
+|--------|------------------|-----------|
+| `--ja-dir` | Japanese glossary directory (default `content/ja/glossary`) | 日本語用語ディレクトリ |
+| `--en-dir` | English glossary directory (default `content/en/glossary`) | 英語用語ディレクトリ |
+
 ### enrich_glossary.py
 
 Adds keywords to frontmatter and internal links to content body.  
@@ -293,6 +308,9 @@ cp NewArticle.md content-drafts/en/
 
 ```bash
 python scripts/pipeline_translate.py --auto
+
+# After processing, refresh bilingual titles
+python scripts/backfill_e_titles.py
 ```
 
 #### Step 3: Verify Results / 結果を確認
@@ -396,6 +414,25 @@ Check frontmatter formatting. Each field should be on its own line.
 ---
 
 ## Changelog / 変更履歴
+
+### Version 1.2.0 (2025-12-04)
+
+#### Added / 追加
+- `title_sanitizer.py` to remove redundant suffixes from titles, translation keys, term, and reading fields
+- `sanitize_titles` step added to pipeline (runs after cleanup, before enrich_en)
+
+#### Changed / 変更
+- Stop words expanded: `glossary`, `guide`, `comprehensive`, `complete`, `deep`, `dive`, `practical`
+
+### Version 1.1.0 (2025-12-04)
+
+#### Added / 追加
+- Bilingual title support (`title` + `e-title`) for Japanese listings and detail pages
+- Search index + Fuse.js keys updated to include English titles, translation keys, and kana terms
+- `backfill_e_titles.py` to retroactively populate English titles in JA articles
+
+#### Changed / 変更
+- Glossary typography (titles, body, list section headers) aligned with blog styling for consistent UI
 
 ### Version 1.0.0 (2025-12-03)
 

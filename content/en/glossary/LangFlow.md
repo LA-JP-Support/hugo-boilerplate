@@ -1,13 +1,20 @@
 ---
-title: "LangFlow Glossary: Deep Technical Reference & Guide"
-translationKey: "langflow-glossary-deep-technical-reference-guide"
-description: "LangFlow is an open-source, low-code visual interface for building, testing, and deploying AI applications, especially those based on LLMs and LangChain."
-keywords: ["LangFlow", "LLMs", "AI applications", "LangChain", "low-code"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: LangFlow Glossary
+translationKey: langflow-glossary-deep-technical-reference
+description: LangFlow is an open-source, low-code visual interface for building, testing,
+  and deploying AI applications, especially those based on LLMs and LangChain.
+keywords:
+- LangFlow
+- LLMs
+- AI applications
+- LangChain
+- low-code
+category: AI Chatbot & Automation
+type: glossary
 date: 2025-12-03
 draft: false
 ---
+
 ## What is LangFlow?
 
 LangFlow is an open-source, Python-based visual framework that allows rapid, code-optional development of applications powered by large language models (LLMs), agents, and AI automation workflows. It is built on top of [LangChain](https://www.langchain.com/), which is a modular framework for chaining large language model calls, data retrieval, and tool use.

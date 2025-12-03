@@ -1,6 +1,6 @@
 ---
-title: リアルタイム翻訳:包括的用語集ガイド
-translationKey: real-time-translation-comprehensive-glossary-guide
+title: リアルタイム翻訳
+translationKey: real-time-translation
 description: チャット、音声、またはドキュメントのコンテンツを即座に翻訳するAI搭載システム。サポート担当者や自動化システムが、あらゆる言語で顧客とリアルタイムにコミュニケーションを取ることを可能にします。
 keywords:
 - リアルタイム翻訳 顧客
@@ -13,9 +13,9 @@ type: glossary
 date: 2025-12-03
 draft: false
 term: りあるたいむほんやく:ほうかつてきようごしゅうがいど
-reading: リアルタイム翻訳:包括的用語集ガイド
+reading: リアルタイム翻訳
 kana_head: ら
-e-title: 'Real-Time Translation: Comprehensive Glossary Guide'
+e-title: Real-Time Translation
 ---
 
 ## リアルタイム翻訳とは?

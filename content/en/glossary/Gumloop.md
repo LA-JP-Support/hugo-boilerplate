@@ -1,13 +1,21 @@
 ---
-title: "Gumloop: Complete Glossary & In-Depth Guide"
-translationKey: "gumloop-complete-glossary-in-depth-guide"
-description: "Gumloop is a no-code, AI-first automation platform for repetitive tasks and workflows. It uses intelligent agents to browse the web, interact with SaaS apps, and make decisions."
-keywords: ["Gumloop", "AI automation", "no-code platform", "workflows", "AI agents"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: Gumloop
+translationKey: gumloop-complete-glossary-in-depth
+description: Gumloop is a no-code, AI-first automation platform for repetitive tasks
+  and workflows. It uses intelligent agents to browse the web, interact with SaaS
+  apps, and make decisions.
+keywords:
+- Gumloop
+- AI automation
+- no-code platform
+- workflows
+- AI agents
+category: AI Chatbot & Automation
+type: glossary
 date: 2025-12-03
 draft: false
 ---
+
 ## What is Gumloop?
 
 **Gumloop** is a modern, no-code platform for building intelligent automation workflows (“Flows”) powered by AI. Unlike traditional automation tools that rely solely on rigid, rule-based triggers and actions, Gumloop is **AI-native**: it was designed from scratch to deeply integrate large language models (LLMs), such as OpenAI’s GPT series and Anthropic’s Claude, into every layer of its automation engine.

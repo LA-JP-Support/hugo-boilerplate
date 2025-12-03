@@ -15,7 +15,7 @@ category: General
 type: glossary
 date: 2025-12-02
 draft: false
-term: オートレイアウト：完全用語集
+term: オートレイアウト
 e-title: Auto-Layout
 ---
 

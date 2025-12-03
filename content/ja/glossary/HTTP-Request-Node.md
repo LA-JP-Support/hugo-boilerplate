@@ -1,6 +1,6 @@
 ---
 title: HTTPリクエストノード用語集
-translationKey: http-request-node-glossary
+translationKey: http-request-node
 description: HTTPリクエストノードについて学びましょう。n8nやNode-REDなどの自動化プラットフォームにおいて、外部APIへのHTTPリクエスト送信やシステム統合を行うための重要なコンポーネントです。
 keywords:
 - HTTPリクエストノード
