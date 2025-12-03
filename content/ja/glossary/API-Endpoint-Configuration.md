@@ -1,6 +1,6 @@
 ---
-title: API エンドポイント設定：完全な用語集と詳細ガイド
-translationKey: api-endpoint-configuration-complete-glossary-deep-dive-guide
+title: API エンドポイント設定
+translationKey: api-endpoint-configuration
 description: API エンドポイント設定、統合・自動化・セキュリティにおけるその重要性、そして API エンドポイントの設計、保護、文書化のためのベストプラクティスについて学びましょう。
 keywords:
 - API エンドポイント設定
@@ -21,8 +21,8 @@ category: Web Services
 type: glossary
 date: 2025-12-02
 draft: false
-term: API エンドポイント設定：完全な用語集と詳細ガイド
-e-title: 'API Endpoint Configuration: Complete Glossary & Deep-Dive Guide'
+term: えいぴーあい エンドポイント設定
+e-title: 'API Endpoint Configuration'
 ---
 
 ## API エンドポイント設定とは何か？

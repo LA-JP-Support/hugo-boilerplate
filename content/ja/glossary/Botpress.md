@@ -1,5 +1,5 @@
 ---
-title: Botpress
+title: ボットプレス
 translationKey: botpress
 description: Botpressは、ビジュアルフローエディタ、高度なAI、LLM統合を備えた、開発者にやさしいAIチャットボットや会話型エージェントを構築するためのプラットフォームです。
 keywords:
@@ -34,7 +34,7 @@ category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-02
 draft: false
-term: Botpress
+term: ボットプレス
 e-title: Botpress
 ---
 
