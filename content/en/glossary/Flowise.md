@@ -1,6 +1,6 @@
 ---
-title: "Flowise Glossary and In-Depth Technical Guide"
-translationKey: "flowise-glossary-and-in-depth-technical-guide"
+title: "Flowise"
+translationKey: "flowise"
 description: "Flowise is an open-source, visual platform for building custom LLM flows and agentic AI systems with LangChainJS. Design, orchestrate, and deploy advanced AI workflows with minimal code."
 keywords: ["Flowise", "LLM workflows", "AI agents", "LangChainJS", "open-source"]
 category: "AI Chatbot & Automation"

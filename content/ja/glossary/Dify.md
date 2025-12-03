@@ -2,7 +2,12 @@
 title: Dify
 translationKey: dify
 description: Difyは、BaaSとLLMOpsを統合したオープンソースのLLMアプリ開発プラットフォームです。最小限のコードで、AIアプリケーション、エージェントワークフロー、RAGパイプラインを視覚的に構築、デプロイ、管理できます。
-keywords: ["Dify", "LLMOps", "AIアプリケーション", "RAG", "エージェントワークフロー"]
+keywords:
+- Dify
+- LLMOps
+- AIアプリケーション
+- RAG
+- エージェントワークフロー
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: ディファイ
 reading: Dify
 kana_head: その他
+e-title: Dify
 ---
+
 ## **Dify**
 
 **カテゴリー:** AIチャットボット & 自動化  

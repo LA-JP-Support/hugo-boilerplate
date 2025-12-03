@@ -8,7 +8,23 @@
     {{- $dir = replaceRE "/$" "" $dir -}}
   {{- end -}}
 {{- end -}}
-{{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "keywords" .Params.keywords "content" .Params.description "permalink" .Permalink "readingTime" .ReadingTime "date" (.Date.Format "Jan 2, 2006") "dir" $dir "image" .Params.image) -}}
+{{- $eTitle := index .Params "e-title" -}}
+{{- $.Scratch.Add "index" (dict
+  "title" .Title
+  "eTitle" $eTitle
+  "translationKey" .Params.translationKey
+  "term" .Params.term
+  "tags" .Params.tags
+  "categories" .Params.categories
+  "keywords" .Params.keywords
+  "content" .Params.description
+  "permalink" .Permalink
+  "readingTime" .ReadingTime
+  "date" (.Date.Format "Jan 2, 2006")
+  "dir" $dir
+  "image" .Params.image
+  "lang" .Lang
+) -}}
 {{- end -}}
 {{- /* Include taxonomy terms (e.g., components) in the search index */ -}}
 {{- range $taxonomy := .Site.Taxonomies -}}
@@ -21,7 +37,23 @@
         {{- $dir = replaceRE "/$" "" $dir -}}
       {{- end -}}
     {{- end -}}
-    {{- $.Scratch.Add "index" (dict "title" $term.Page.Title "tags" $term.Page.Params.tags "categories" $term.Page.Params.categories "keywords" $term.Page.Params.keywords "content" $term.Page.Params.description "permalink" $term.Page.Permalink "readingTime" $term.Page.ReadingTime "date" ($term.Page.Date.Format "Jan 2, 2006") "dir" $dir "image" $term.Page.Params.image) -}}
+    {{- $eTitle := index $term.Page.Params "e-title" -}}
+    {{- $.Scratch.Add "index" (dict
+      "title" $term.Page.Title
+      "eTitle" $eTitle
+      "translationKey" $term.Page.Params.translationKey
+      "term" $term.Page.Params.term
+      "tags" $term.Page.Params.tags
+      "categories" $term.Page.Params.categories
+      "keywords" $term.Page.Params.keywords
+      "content" $term.Page.Params.description
+      "permalink" $term.Page.Permalink
+      "readingTime" $term.Page.ReadingTime
+      "date" ($term.Page.Date.Format "Jan 2, 2006")
+      "dir" $dir
+      "image" $term.Page.Params.image
+      "lang" $term.Page.Lang
+    ) -}}
   {{- end -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

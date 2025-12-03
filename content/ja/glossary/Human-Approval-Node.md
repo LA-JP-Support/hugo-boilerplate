@@ -2,7 +2,12 @@
 title: ヒューマン承認ノード
 translationKey: human-approval-node
 description: 自動化されたワークフローを一時停止し、人間によるレビューと意思決定を可能にするワークフローステップ。Human-in-the-Loop(HITL)とも呼ばれ、自動化またはエージェント型ワークフローにおける人間の監視を確保します。
-keywords: ["ヒューマン承認", "Human-in-the-Loop", "人間の監視", "意思決定", "承認ワークフロー"]
+keywords:
+- ヒューマン承認
+- Human-in-the-Loop
+- 人間の監視
+- 意思決定
+- 承認ワークフロー
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: ヒューマンしょうにんノード
 reading: ヒューマン承認ノード
 kana_head: は
+e-title: Human Approval Node
 ---
+
 ## 定義
 
 **Human Approval Node(ヒューマン承認ノード):**  

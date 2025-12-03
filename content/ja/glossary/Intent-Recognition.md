@@ -2,7 +2,12 @@
 title: インテント認識
 translationKey: intent-recognition
 description: インテント認識は、ユーザーの入力を解釈して特定の目標を理解する、AI/NLPのコア技術です。システムが文脈に応じて効率的に応答することを可能にします。
-keywords: ["インテント認識", "NLP", "AI", "機械学習", "チャットボット"]
+keywords:
+- インテント認識
+- NLP
+- AI
+- 機械学習
+- チャットボット
 category: General
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: いんてんとにんしき
 reading: インテント認識
 kana_head: あ
+e-title: Intent Recognition
 ---
+
 ## 定義:Intent Recognitionとは?
 
 Intent Recognition(インテント認識)は、インテント分類とも呼ばれ、人工知能(AI)と自然言語処理(NLP)における中核技術です。これは、ユーザーの入力(テキスト、音声、コマンド)を解釈し、「インテント」と呼ばれる特定の事前定義された目的や目標にマッピングするプロセスです。これにより、デジタルシステムは、クエリがどのように表現されているかに関わらず、ユーザーが何を達成したいのかを理解できます。

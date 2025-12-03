@@ -2,7 +2,12 @@
 title: ステートマシン:AIチャットボット&自動化のための詳細用語集
 translationKey: state-machine-deep-glossary-for-ai-chatbot-automation
 description: システムの状態遷移を表現する計算モデル、ステートマシンについて解説します。基本概念、種類、AIチャットボットや自動化における活用方法、実装手法、利点、課題について学びましょう。
-keywords: ["ステートマシン", "AIチャットボット", "自動化", "有限状態機械", "ステートチャート"]
+keywords:
+- ステートマシン
+- AIチャットボット
+- 自動化
+- 有限状態機械
+- ステートチャート
 category: General
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: すてーとましん
 reading: ステートマシン:AIチャットボット&自動化のための詳細用語集
 kana_head: か
+e-title: 'State Machine: Deep Glossary for AI Chatbot & Automation'
 ---
+
 ## ステートマシンとは?
 
 ステートマシンは、システムが外部イベントや入力に応じて有限の状態セット間をどのように遷移するかを記述する、形式的な計算モデルです。各状態はシステム動作中の明確な状況を表し、遷移は特定のトリガーに基づいてシステムがある状態から別の状態へどのように移動するかを定義します。

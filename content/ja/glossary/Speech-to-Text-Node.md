@@ -2,7 +2,12 @@
 title: Speech-to-Textノード
 translationKey: speech-to-text-node
 description: Speech-to-Textノードは、自動音声認識(ASR)を使用して音声言語を機械可読テキストに変換する、自動化プラットフォームやAIワークフローにおけるモジュール型コンポーネントです。
-keywords: ["Speech-to-Textノード", "自動音声認識", "AIワークフロー", "音声からテキスト", "文字起こし"]
+keywords:
+- Speech-to-Textノード
+- 自動音声認識
+- AIワークフロー
+- 音声からテキスト
+- 文字起こし
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: スピーチ・トゥ・テキスト・ノード
 reading: Speech-to-Textノード
 kana_head: その他
+e-title: Speech-to-Text Node
 ---
+
 ## 概要
 
 **音声テキスト変換ノード**は、音声ファイル(音声録音、通話、動画のサウンドトラック)内の話し言葉を正確で構造化されたテキストに変換することで、会話型AI、自動化パイプライン、ワークフローシステムの基盤を形成します。この文字起こしは、分析、要約、翻訳、またはさらなる自動化プロセスのトリガーに使用できます。

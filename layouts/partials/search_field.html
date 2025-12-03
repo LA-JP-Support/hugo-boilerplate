@@ -237,6 +237,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 fuseInstance = new Fuse(searchData, {
                     keys: [
                         { name: 'title', weight: 2 },
+                        { name: 'eTitle', weight: 1.8 },
+                        { name: 'translationKey', weight: 1.5 },
+                        { name: 'term', weight: 1.5 },
                         { name: 'content', weight: 1 },
                         { name: 'tags', weight: 1.5 },
                         { name: 'keywords', weight: 1.8 }
@@ -391,6 +394,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
 
                     const title = item.title || searchTranslations.searchUntitled;
+                    const englishTitle = (item.lang === 'ja' && item.eTitle) ? `<p class="text-xs text-gray-500">${item.eTitle}</p>` : '';
                     const permalink = item.permalink || '#';
 
                     const isLast = index === displayResults.length - 1;
@@ -401,6 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="p-3 surface-secondary ${borderClass} ${marginClass}">
                         <a href="${permalink}" class="no-underline text-inherit group/dropdown-item">
                             <div class="font-semibold text-heading mb-1.5 group-hover/dropdown-item:text-primary">${title}</div>
+                            ${englishTitle}
                             <div class="text-sm text-secondary">${snippet}</div>
                         </a>
                     </div>`;
@@ -561,6 +566,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         ` : ''}
                         <div class="flex-1 min-w-0">
                             <div class="font-medium text-gray-900 dark:text-gray-100 text-sm mb-1 truncate">${title}</div>
+                            ${englishTitle}
                             <div class="text-xs text-gray-600 dark:text-gray-400 line-clamp-2">${snippet}</div>
                         </div>
                     </div>

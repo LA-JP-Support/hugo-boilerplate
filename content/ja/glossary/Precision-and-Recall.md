@@ -2,7 +2,12 @@
 title: 精度と再現率:用語集と詳細解説
 translationKey: precision-and-recall-glossary-and-deep-dive
 description: 精度と再現率は、分類システムや情報検索システムを評価するための中核的な指標です。精度は正しい陽性予測を測定し、再現率はすべての実際の陽性を見つけ出します。
-keywords: ["精度", "再現率", "機械学習", "分類指標", "混同行列"]
+keywords:
+- 精度
+- 再現率
+- 機械学習
+- 分類指標
+- 混同行列
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: せいどとさいげんりつ:ようごしゅうとしょうさいかいせつ
 reading: 精度と再現率:用語集と詳細解説
 kana_head: その他
+e-title: 'Precision and Recall: Glossary and Deep Dive'
 ---
+
 ## カテゴリー:AIチャットボット&自動化
 
 **定義:**  

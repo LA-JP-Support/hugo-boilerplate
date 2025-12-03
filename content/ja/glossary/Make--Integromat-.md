@@ -2,7 +2,16 @@
 title: Make(Integromat)
 translationKey: make-integromat
 description: Make(旧Integromat)は、シンプルなタスクから複雑なエンタープライズ規模のプロセスまで、ワークフローの設計、構築、自動化を行うビジュアルなノーコードプラットフォームです。
-keywords: ["Make", "Integromat", "ノーコード自動化", "ワークフロー自動化", "ビジュアルビルダー", "API連携", "データ変換", "ビジネスプロセス自動化", "シナリオ"]
+keywords:
+- Make
+- Integromat
+- ノーコード自動化
+- ワークフロー自動化
+- ビジュアルビルダー
+- API連携
+- データ変換
+- ビジネスプロセス自動化
+- シナリオ
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -10,7 +19,9 @@ draft: false
 term: メイク(インテグロマット)
 reading: Make(Integromat)
 kana_head: その他
+e-title: Make (Integromat)
 ---
+
 ## Make (Integromat)とは?
 
 Make(旧Integromat)は、小規模ビジネスから大企業まで、あらゆるユーザーがアプリ、API、データソース間のワークフローやタスクを自動化できるノーコードプラットフォームです。強力なビジュアルシナリオビルダー、リアルタイム自動化、データ変換、高度なエラーハンドリングを提供し、最も柔軟で深くカスタマイズ可能な自動化ツールの一つとなっています。

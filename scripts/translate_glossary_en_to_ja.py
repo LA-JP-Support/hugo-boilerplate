@@ -267,6 +267,7 @@ def translate_markdown_file(
     fm, body = parse_markdown_with_frontmatter(raw)
 
     title_en = fm.get("title", "")
+    e_title = fm.get("e-title", title_en)
     desc_en = fm.get("description", "")
     keywords_en = fm.get("keywords", []) or []
 
@@ -278,6 +279,7 @@ def translate_markdown_file(
     # Build JA frontmatter
     fm_ja = dict(fm)  # shallow copy
     fm_ja["title"] = title_ja
+    fm_ja["e-title"] = e_title or title_en
     # 日本語側では term がない場合、少なくともタイトルを入れておく。
     # Claude が TERM_JA を返していればそれを優先し、なければタイトルをそのまま使用。
     if "term" not in fm_ja or not fm_ja.get("term"):

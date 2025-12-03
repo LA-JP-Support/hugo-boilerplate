@@ -2,13 +2,29 @@
 title: 環境知能（AmI）
 translationKey: ambient-intelligence-ami
 description: 環境知能（AmI）は、明示的な命令なしに人間のニーズを感知、解釈し、積極的に対応するためにデジタルシステムを環境にシームレスに組み込みます。
-keywords: ["環境知能", "AmI", "スマート環境", "コンテキスト認識システム", "AI自動化", "チャットボット", "対話型AI", "会話AI", "AIエージェント", "自律型エージェント", "エージェント", "ワークフロー自動化", "業務自動化", "RPA"]
+keywords:
+- 環境知能
+- AmI
+- スマート環境
+- コンテキスト認識システム
+- AI自動化
+- チャットボット
+- 対話型AI
+- 会話AI
+- AIエージェント
+- 自律型エージェント
+- エージェント
+- ワークフロー自動化
+- 業務自動化
+- RPA
 category: General
 type: glossary
 date: 2025-12-02
 draft: false
 term: かんきょうちのう
+e-title: Ambient Intelligence (AmI)
 ---
+
 ## アンビエントインテリジェンスとは？定義、例、応用
 
 ### 定義：アンビエントインテリジェンス（AmI）

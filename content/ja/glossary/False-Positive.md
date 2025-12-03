@@ -2,7 +2,12 @@
 title: 偽陽性
 translationKey: false-positive
 description: 偽陽性とは、AIシステム(チャットボット、検出ツール、プライバシーフィルター)が、状況やコンテンツを誤って基準に一致すると識別し、エラーを引き起こすことです。
-keywords: ["偽陽性", "AIシステム", "チャットボット", "コンテンツ検出", "プライバシーツール"]
+keywords:
+- 偽陽性
+- AIシステム
+- チャットボット
+- コンテンツ検出
+- プライバシーツール
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: ぎようせい
 reading: 偽陽性
 kana_head: その他
+e-title: False Positive
 ---
+
 ## 偽陽性(False Positive)とは?
 
 **偽陽性**とは、AIシステムや検出ツールが、実際には存在しない条件や状態を検出したと誤って判定する結果のことです。つまり、無害、中立的、または無関係なものを、システムが検出すべき条件や基準に該当すると誤って分類するエラーの一種です。

@@ -3,7 +3,12 @@ title: ナレッジベースコネクタ
 translationKey: knowledge-base-connector
 description: チャットボットなどのAIワークフローをインデックス化されたナレッジソースに接続する統合モジュールで、文脈に関連した応答を実現するためのRetrieval
   Augmented Generation(RAG)を強化します。
-keywords: ["ナレッジベースコネクタ", "Retrieval Augmented Generation", "AIチャットボット", "ベクトルデータベース", "自動化"]
+keywords:
+- ナレッジベースコネクタ
+- Retrieval Augmented Generation
+- AIチャットボット
+- ベクトルデータベース
+- 自動化
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -11,7 +16,9 @@ draft: false
 term: ナレッジベースコネクタ
 reading: ナレッジベースコネクタ
 kana_head: な
+e-title: Knowledge Base Connector
 ---
+
 ## 詳細な定義
 
 Knowledge Base Connector(ナレッジベースコネクタ)は、AI駆動の対話エージェントとナレッジリポジトリ(ドキュメント、FAQ、ポリシーマニュアル、社内Wikiなど)を橋渡しする役割を果たします。RAGの文脈において、これは大規模言語モデル(LLM)が静的な事前学習済み知識のみに依存するのではなく、プライベートまたは独自のデータを動的に取得、処理、推論できるようにする重要なコンポーネントです。

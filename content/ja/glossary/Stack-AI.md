@@ -2,7 +2,15 @@
 title: Stack AI – 詳細用語集と技術概要
 translationKey: stack-ai-deep-glossary-and-technical-overview
 description: Stack AIは、高度な大規模言語モデル(LLM)を中心とした、AIを活用したワークフローとエージェントの構築、テスト、デプロイを行うための、エンタープライズグレードのノーコード/ローコードプラットフォームです。
-keywords: ["Stack AI", "ノーコードAI", "LLMプラットフォーム", "AIワークフロー自動化", "エンタープライズAI", "AIコパイロット", "コパイロット", "AI支援"]
+keywords:
+- Stack AI
+- ノーコードAI
+- LLMプラットフォーム
+- AIワークフロー自動化
+- エンタープライズAI
+- AIコパイロット
+- コパイロット
+- AI支援
 category: General
 type: glossary
 date: 2025-12-03
@@ -10,7 +18,9 @@ draft: false
 term: スタック エーアイ – しょうさい ようごしゅう と ぎじゅつ がいよう
 reading: Stack AI – 詳細用語集と技術概要
 kana_head: その他
+e-title: Stack AI – Deep Glossary and Technical Overview
 ---
+
 ## 定義
 **Stack AI**は、高度な大規模言語モデル(LLM)を中心とした、AI駆動型ワークフローとエージェントの構築、テスト、デプロイを行うためのエンタープライズグレードのノーコード/ローコードプラットフォームです。Stack AIは、組織が分散したデータソースやビジネスシステムを接続し、複雑なプロセスを自動化し、AIアシスタントを大規模にデプロイすることを可能にします—すべて深いプログラミング知識を必要とせずに実現できます。
 

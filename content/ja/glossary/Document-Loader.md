@@ -2,7 +2,12 @@
 title: ドキュメントローダー
 translationKey: document-loader
 description: ドキュメントローダーは、生データを自動的に取り込み、LLMパイプラインやベクトルストアのインデックス作成などのAIタスク向けに構造化されたDocumentオブジェクトに変換するソフトウェアモジュールです。
-keywords: ["Document Loader", "AIパイプライン", "LLM", "データ取り込み", "LangChain"]
+keywords:
+- Document Loader
+- AIパイプライン
+- LLM
+- データ取り込み
+- LangChain
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: どきゅめんとろーだー
 reading: ドキュメントローダー
 kana_head: た
+e-title: Document Loader
 ---
+
 ## Document Loaderとは?
 
 **Document Loader**は、ファイル、Webページ、クラウドドキュメント、データベースエントリなどの生データを自動的に取り込み、*Documentオブジェクト*と呼ばれる構造化フォーマットに変換するソフトウェアモジュールまたはコンポーネントです。これらのオブジェクトは、情報検索、LLM(大規模言語モデル)パイプライン、ベクトルストアのインデックス化、ワークフロー自動化などの下流AIタスクに最適化されています。

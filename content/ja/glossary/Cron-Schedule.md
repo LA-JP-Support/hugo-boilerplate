@@ -2,7 +2,12 @@
 title: Cronスケジュール
 translationKey: cron-schedule
 description: Cronスケジュールは、Cron式を使用してタスクの自動実行をトリガーする時間ベースの仕組みです。Unix、Linux、クラウド、DevOps、AI自動化において、信頼性の高いタスク自動化の基盤となっています。
-keywords: ["cronスケジュール", "cron式", "タスク自動化", "crontab", "Unix Linuxスケジューリング"]
+keywords:
+- cronスケジュール
+- cron式
+- タスク自動化
+- crontab
+- Unix Linuxスケジューリング
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: クーロンスケジュール
 reading: Cronスケジュール
 kana_head: その他
+e-title: Cron Schedule
 ---
+
 ## Cronスケジュールとは?
 
 **Cronスケジュール**は、タスク(スクリプトやコマンドなど)を実行する正確な時刻を、柔軟でプログラム可能な構文を使用して指定します。これは本質的に、コンピュータやクラウドシステムのためのプログラム可能なカレンダーであり、繰り返しタスクが自動的かつ一貫して実行されることを保証します。

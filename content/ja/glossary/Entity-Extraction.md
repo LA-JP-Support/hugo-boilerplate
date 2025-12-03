@@ -2,7 +2,12 @@
 title: エンティティ抽出（固有表現認識、NER）
 translationKey: entity-extraction-named-entity-recognition-ner
 description: エンティティ抽出（NER）は、非構造化テキストから人名、組織名、日付などの重要な情報を識別・分類する自然言語処理技術です。これにより、テキストデータを構造化データに変換し、分析や自動化に活用できます。
-keywords: ["エンティティ抽出", "固有表現認識", "NLP", "AIチャットボット", "テキスト分析"]
+keywords:
+- エンティティ抽出
+- 固有表現認識
+- NLP
+- AIチャットボット
+- テキスト分析
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: エンティティちゅうしゅつ（こゆうひょうげんにんしき、エヌイーアール）
 reading: エンティティ抽出（固有表現認識、NER）
 kana_head: あ
+e-title: Entity Extraction (Named Entity Recognition, NER)
 ---
+
 ## **カテゴリー**
 **AIチャットボット&自動化**
 

@@ -2,7 +2,12 @@
 title: ロジックノード / 条件分岐
 translationKey: logic-node-conditional-branching
 description: ロジックノード(条件分岐)は、チャットボットや自動化ワークフローにおいて条件を評価し、ユーザー入力やコンテキストに基づいて動的にパスを振り分けます。
-keywords: ["ロジックノード", "条件分岐", "チャットボット", "自動化", "ワークフロー"]
+keywords:
+- ロジックノード
+- 条件分岐
+- チャットボット
+- 自動化
+- ワークフロー
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: ろじっくのーど / じょうけんぶんき
 reading: ロジックノード / 条件分岐
 kana_head: ら
+e-title: Logic Node / Conditional Branching
 ---
+
 ## Logic Nodeとは?
 
 **Logic Node**(ロジックノード)は、チャットボットや自動化ワークフローにおけるモジュール式の判断ブロックで、条件(ユーザーの選択、変数、ステータスなど)を評価し、それに応じてフローを分岐させます。ロジックノードは、カスタムルールに基づいてワークフローが分岐する「判断ポイント」(条件分岐)です。

@@ -2,7 +2,12 @@
 title: DTMF(デュアルトーン多重周波数)
 translationKey: dtmf-dual-tone-multi-frequency
 description: DTMF(デュアルトーン多重周波数)は、キーパッド押下時に発生する固有の音声トーンを使用してコマンドを解釈し、通話をルーティングし、自動メニューナビゲーション、リモートコントロール、安全なデータ入力を可能にする電気通信シグナリングシステムです。電話網やデジタルプラットフォームで広く活用されています。
-keywords: ["DTMF", "電気通信", "IVR", "VoIP", "PCI DSS"]
+keywords:
+- DTMF
+- 電気通信
+- IVR
+- VoIP
+- PCI DSS
 category: AI Chatbot & Automation, Telecommunication Systems
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: ディーティーエムエフ(デュアルトーンたじゅうしゅうはすう)
 reading: DTMF(デュアルトーン多重周波数)
 kana_head: その他
+e-title: DTMF (Dual-Tone Multi-Frequency)
 ---
+
 ## DTMFとは?
 
 Dual-tone multi-frequency(DTMF)は、通信ネットワークやデジタル通信プラットフォームで使用される信号技術です。キーパッドの各キーを押すと、「低周波」グループと「高周波」グループからそれぞれ1つずつ、合計2つの音声周波数の独特な組み合わせが送信されます。これらのトーンは、電話をかけたり自動システムを操作したりする際に聞こえるビープ音です。DTMFにより、人間と機械の両方がコマンドを伝達し、通話をルーティングし、データを安全に入力することができます。

@@ -86,6 +86,7 @@
       {{ if $index }},{{ end }}
       {
         "title": "{{ $term.Title | safeJS }}",
+        "eTitle": "{{ (or (index $term.Params "e-title") "") | safeJS }}",
         "term": "{{ ($term.Params.term | default $term.Title) | safeJS }}",
         "url": {{ $term.RelPermalink | jsonify }},
         "description": "{{ $term.Description | safeJS }}",
@@ -171,6 +172,7 @@
       const termsData = JSON.parse(document.getElementById('glossary-terms-data').textContent);
       const groupedTerms = {};
       const kanaGroups = ['あ行', 'か行', 'さ行', 'た行', 'な行', 'は行', 'ま行', 'や行', 'ら行', 'わ行', '0-9', 'A-Z'];
+      const lang = '{{ .Language.Lang }}';
 
       kanaGroups.forEach(group => groupedTerms[group] = []);
 
@@ -178,6 +180,7 @@
         // 外側の "..." を削除してから利用する
         term.term = stripOuterQuotes(term.term);
         term.title = stripOuterQuotes(term.title);
+        term.eTitle = stripOuterQuotes(term.eTitle);
         term.url = stripOuterQuotes(term.url);
         term.description = stripOuterQuotes(term.description);
         term.image = stripOuterQuotes(term.image);
@@ -208,6 +211,9 @@
                   <h3 class="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
                     ${term.title}
                   </h3>
+                  ${(lang === 'ja' && term.eTitle) ? `
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">${term.eTitle}</p>
+                  ` : ''}
                   ${term.description ? `
                     <p class="mt-3 text-base text-gray-600 dark:text-gray-300 line-clamp-3">
                       ${term.description}

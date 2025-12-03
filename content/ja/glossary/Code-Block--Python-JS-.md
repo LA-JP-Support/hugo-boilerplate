@@ -2,13 +2,28 @@
 title: コードブロック（Python/JS）
 translationKey: code-block-python-js
 description: コードブロックはプログラミングステートメントをまとめて実行するためのグループで、Pythonではインデントによって、JavaScriptでは波括弧によって定義されます。自動化やチャットボットでカスタムロジックを実装するために使用されます。
-keywords: ["コードブロック", "Python", "JavaScript", "自動化", "チャットボット", "対話型AI", "会話AI", "ワークフロー自動化", "業務自動化", "RPA", "API", "API連携", "インターフェース"]
+keywords:
+- コードブロック
+- Python
+- JavaScript
+- 自動化
+- チャットボット
+- 対話型AI
+- 会話AI
+- ワークフロー自動化
+- 業務自動化
+- RPA
+- API
+- API連携
+- インターフェース
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-02
 draft: false
 term: コードブロック（Python/JS）
+e-title: Code Block (Python/JS)
 ---
+
 ## コードブロックとは何か？
 
 プログラミングにおけるコードブロックとは、言語のインタープリターやコンパイラが単一の実行単位として扱う連続したコードのセクションです。コードブロックはプログラムの構造化において基本的なもので、関数、ループ、条件文、クラスなどのロジックをカプセル化します。

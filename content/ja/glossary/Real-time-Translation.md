@@ -2,7 +2,12 @@
 title: リアルタイム翻訳:包括的用語集ガイド
 translationKey: real-time-translation-comprehensive-glossary-guide
 description: チャット、音声、またはドキュメントのコンテンツを即座に翻訳するAI搭載システム。サポート担当者や自動化システムが、あらゆる言語で顧客とリアルタイムにコミュニケーションを取ることを可能にします。
-keywords: ["リアルタイム翻訳 顧客", "翻訳ツール", "人工知能", "多言語サポート", "翻訳ソフトウェア"]
+keywords:
+- リアルタイム翻訳 顧客
+- 翻訳ツール
+- 人工知能
+- 多言語サポート
+- 翻訳ソフトウェア
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: りあるたいむほんやく:ほうかつてきようごしゅうがいど
 reading: リアルタイム翻訳:包括的用語集ガイド
 kana_head: ら
+e-title: 'Real-Time Translation: Comprehensive Glossary Guide'
 ---
+
 ## リアルタイム翻訳とは?
 
 リアルタイム翻訳(RTT)とは、人工知能(AI)、ニューラル機械翻訳(NMT)、自然言語処理(NLP)を使用して、会話が行われる際に音声やテキストをある言語から別の言語へ瞬時に変換するソフトウェアを指します。これにより、カスタマーサービス、会議、文書作成、その他言語の壁が存在するあらゆる領域において、流暢な多言語コミュニケーションが可能になります。

@@ -2,7 +2,12 @@
 title: 画像生成ノード
 translationKey: image-generation-node
 description: 画像生成ノードについて学びましょう。これは、ビジュアルプログラミングにおけるモジュール式コンポーネントで、DALL-EやStable DiffusionなどのAIモデルとインターフェースし、テキストプロンプトから画像を生成します。
-keywords: ["画像生成ノード", "AI画像生成", "Stable Diffusion", "DALL-E", "テキストプロンプト"]
+keywords:
+- 画像生成ノード
+- AI画像生成
+- Stable Diffusion
+- DALL-E
+- テキストプロンプト
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -10,7 +15,9 @@ draft: false
 term: がぞうせいせいノード
 reading: 画像生成ノード
 kana_head: その他
+e-title: Image Generation Node
 ---
+
 # 1. 画像生成ノードとは?
 
 **画像生成ノード**は、ビジュアルプログラミング、自動化、またはワークフロー環境内で使用される、モジュール式で再利用可能なコンポーネントです。テキストプロンプトやその他のデータから画像を合成するAIモデルに接続します。これらのノードは、高度な生成モデルの実行とパラメータ設定の複雑さを抽象化し、機械学習の専門知識を持たないユーザーでも、カスタム画像生成ワークフローを作成、編集、デプロイできるようにします。
