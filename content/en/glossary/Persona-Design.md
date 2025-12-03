@@ -1,13 +1,21 @@
 ---
-title: "Persona Design (AI Chatbot & Automation)"
-translationKey: "persona-design-ai-chatbot-automation"
-description: "Learn about Persona Design for AI chatbots and automation. Define personality, voice, and character to create engaging, human-like interactions and enhance user experience."
-keywords: ["Persona Design", "AI Chatbot", "Chatbot Persona", "Automation", "User Engagement"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: Persona Design
+translationKey: persona-design
+description: Learn about Persona Design for AI chatbots and automation. Define personality,
+  voice, and character to create engaging, human-like interactions and enhance user
+  experience.
+keywords:
+- Persona Design
+- AI Chatbot
+- Chatbot Persona
+- Automation
+- User Engagement
+category: AI Chatbot & Automation
+type: glossary
 date: 2025-12-03
 draft: false
 ---
+
 ## What is Persona Design?
 
 Persona design is the process of crafting a unique, purposeful, and consistent personality for an AI chatbot or automated system. This involves defining the bot’s tone of voice, communication style, behavior, and even visual identity, ensuring that all interactions align with the brand’s values and user expectations. [Zendesk](https://www.zendesk.com/blog/chatbot-persona/) highlights that a chatbot persona is an extension of a brand’s identity, transforming the chatbot experience from robotic to engaging and memorable.

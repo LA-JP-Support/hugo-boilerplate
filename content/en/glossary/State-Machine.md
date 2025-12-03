@@ -1,6 +1,6 @@
 ---
 title: State Machine
-translationKey: state-machine-deep-glossary-for-ai-chatbot-automation
+translationKey: state-machine
 description: Explore state machines, a computational model for system transitions.
   Learn core concepts, types, uses in AI chatbots & automation, implementation, advantages,
   and challenges.

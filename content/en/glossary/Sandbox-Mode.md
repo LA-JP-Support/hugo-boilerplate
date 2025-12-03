@@ -1,6 +1,6 @@
 ---
 title: Sandbox Mode
-translationKey: sandbox-mode-the-definitive-glossary-implementation
+translationKey: sandbox-mode
 description: An isolated, disposable testing environment for safely executing code,
   flows, or software without impacting production systems. Ideal for development,
   security, and QA.

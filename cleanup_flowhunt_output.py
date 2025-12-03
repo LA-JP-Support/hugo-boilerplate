@@ -13,8 +13,15 @@ FlowHunt Desktop出力のクリーンアップスクリプト（最終版）
 """
 
 import re
+import sys
 from pathlib import Path
 from datetime import date
+
+# Add scripts directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent / "scripts"))
+from title_sanitizer import sanitize_front_matter
+
+import yaml
 
 
 def clean_flowhunt_output(content):
@@ -48,6 +55,14 @@ def clean_flowhunt_output(content):
             )
         else:
             frontmatter_content = frontmatter_content.rstrip() + f'\ndate: {today}\n'
+    
+    # タイトル・translationKeyのサニタイズ
+    try:
+        fm_dict = yaml.safe_load(frontmatter_content)
+        if fm_dict and sanitize_front_matter(fm_dict):
+            frontmatter_content = yaml.safe_dump(fm_dict, allow_unicode=True, sort_keys=False).strip() + '\n'
+    except Exception:
+        pass  # YAML解析に失敗した場合はスキップ
     
     frontmatter = f"---\n{frontmatter_content}---\n"
     

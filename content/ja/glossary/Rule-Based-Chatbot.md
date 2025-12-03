@@ -1,6 +1,6 @@
 ---
 title: ルールベース型チャットボット
-translationKey: rule-based-chatbot
+translationKey: rule-based
 description: ルールベース型チャットボットは、事前に定義されたルールとスクリプトに従ってユーザーと対話し、特定のキーワードやボタン選択に応答します。AIによる学習機能は持ちません。
 keywords:
 - ルールベース型チャットボット

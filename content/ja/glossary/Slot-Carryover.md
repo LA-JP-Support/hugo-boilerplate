@@ -1,6 +1,6 @@
 ---
 title: AIチャットボット&自動化におけるスロットキャリーオーバー
-translationKey: slot-carryover-in-ai-chatbot-automation
+translationKey: slot-carryover
 description: スロットキャリーオーバーは、AIチャットボットが会話のターンをまたいで構造化された情報(スロット)を記憶し再利用することを可能にし、タスク指向の対話システムにおいてコンテキストを維持し、ユーザー体験を向上させます。
 keywords:
 - スロットキャリーオーバー
@@ -15,7 +15,7 @@ draft: false
 term: エーアイチャットボットアンドジドウカニオケルスロットキャリーオーバー
 reading: AIチャットボット&自動化におけるスロットキャリーオーバー
 kana_head: その他
-e-title: Slot Carryover in AI Chatbot & Automation
+e-title: Slot Carryover
 ---
 
 ## はじめに

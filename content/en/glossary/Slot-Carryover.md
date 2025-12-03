@@ -1,13 +1,21 @@
 ---
-title: "Slot Carryover in AI Chatbot & Automation"
-translationKey: "slot-carryover-in-ai-chatbot-automation"
-description: "Slot carryover enables AI chatbots to remember and reuse structured information (slots) across conversational turns, maintaining context and improving user experience in task-oriented dialogue systems."
-keywords: ["Slot Carryover", "AI Chatbot", "Dialogue Systems", "Dialogue State Tracking", "Context Management"]
-category: "General"
-type: "glossary"
+title: Slot Carryover
+translationKey: slot-carryover
+description: Slot carryover enables AI chatbots to remember and reuse structured information
+  (slots) across conversational turns, maintaining context and improving user experience
+  in task-oriented dialogue systems.
+keywords:
+- Slot Carryover
+- AI Chatbot
+- Dialogue Systems
+- Dialogue State Tracking
+- Context Management
+category: General
+type: glossary
 date: 2025-12-03
 draft: false
 ---
+
 ## Introduction
 
 Slot carryover is a central capability in modern AI-powered chatbots, especially within task-oriented dialogue systems. It allows the system to remember, reuse, and correctly apply previously gathered structured information (slots) across multiple conversational turns. In both spoken and text-based dialogue systems, slot carryover directly affects how well the system maintains context and responds to users in a coherent and helpful manner. This is particularly important in complex, multi-turn, and multi-domain conversations where users refer to earlier stated preferences or entities, often using pronouns or implicit references.

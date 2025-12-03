@@ -1,6 +1,6 @@
 ---
 title: Precision and Recall
-translationKey: precision-and-recall-glossary-and
+translationKey: precision-and-recall
 description: Precision and recall are core metrics for evaluating classification and
   information retrieval systems. Precision measures correct positive predictions,
   recall finds all actual positives.

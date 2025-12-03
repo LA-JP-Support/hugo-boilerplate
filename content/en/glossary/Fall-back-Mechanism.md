@@ -1,13 +1,21 @@
 ---
-title: "Fall-back Mechanism (Fallback Mechanism) in AI Chatbots & Automation"
-translationKey: "fall-back-mechanism-in-ai-chatbots-automation"
-description: "A fall-back mechanism in AI chatbots ensures continuity when the bot fails to interpret or fulfill a request, redirecting, clarifying, or escalating the conversation."
-keywords: ["fallback mechanism", "AI chatbots", "automation", "user experience", "escalation"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: Fall-back Mechanism
+translationKey: fall-back-mechanism
+description: A fall-back mechanism in AI chatbots ensures continuity when the bot
+  fails to interpret or fulfill a request, redirecting, clarifying, or escalating
+  the conversation.
+keywords:
+- fallback mechanism
+- AI chatbots
+- automation
+- user experience
+- escalation
+category: AI Chatbot & Automation
+type: glossary
 date: 2025-12-03
 draft: false
 ---
+
 ## What is a Fall-back Mechanism?
 
 A **fall-back mechanism** is the contingency logic embedded in an AI chatbot or process automation system which is activated whenever the bot cannot confidently resolve a user’s request. This may result from unrecognized language, ambiguous input, missing data, system/API errors, or unsupported requests. Effective fallback logic ensures the user is not left stranded—it may prompt for clarification, suggest alternatives, or escalate to human support.

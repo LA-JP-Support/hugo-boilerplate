@@ -1,6 +1,6 @@
 # FlowHunt Glossary Translation Pipeline Manual / FlowHunt 用語集翻訳パイプライン マニュアル
 
-**Version / バージョン:** 1.2.0  
+**Version / バージョン:** 1.2.1  
 **Last Updated / 最終更新:** 2025-12-04  
 **Author / 作成者:** Development Team
 
@@ -414,6 +414,16 @@ Check frontmatter formatting. Each field should be on its own line.
 ---
 
 ## Changelog / 変更履歴
+
+### Version 1.2.1 (2025-12-04)
+
+#### Added / 追加
+- Title sanitization integrated into `cleanup_flowhunt_output.py` for early-stage processing
+- Parenthesized patterns: `(AI Chatbot & Automation)`, `(AIチャットボット&自動化)`
+
+#### Changed / 変更
+- Stop words expanded with: `technical`, `reference`, `overview`, `resource`, `chatbots`
+- Japanese keywords expanded: `ようごしゅう`, `かいせつ`, `リソース`, `がいよう`, `ぎじゅつ`
 
 ### Version 1.2.0 (2025-12-04)
 

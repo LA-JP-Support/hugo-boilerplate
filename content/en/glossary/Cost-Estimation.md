@@ -1,13 +1,21 @@
 ---
-title: "Cost Estimation in AI Chatbot & Automation"
-translationKey: "cost-estimation-in-ai-chatbot-automation"
-description: "Cost estimation in AI chatbot and automation predicts resource consumption and financial outlay for deploying conversational AI solutions, enabling budgeting and optimization."
-keywords: ["Cost Estimation", "AI Chatbot", "Automation", "Token Usage", "AI Pricing"]
-category: "General"
-type: "glossary"
+title: Cost Estimation
+translationKey: cost-estimation
+description: Cost estimation in AI chatbot and automation predicts resource consumption
+  and financial outlay for deploying conversational AI solutions, enabling budgeting
+  and optimization.
+keywords:
+- Cost Estimation
+- AI Chatbot
+- Automation
+- Token Usage
+- AI Pricing
+category: General
+type: glossary
 date: 2025-12-03
 draft: false
 ---
+
 ## What is Cost Estimation?
 
 Cost estimation within AI chatbot and automation refers to the set of techniques and tools used to predict the resource consumption and financial outlay required for deploying conversational AI solutions. This includes calculating anticipated token usage (input and output), infrastructure, third-party service costs, labor, and ongoing maintenance needs. The main objective is to provide a predictive snapshot of spending for a given chatbot or automation flow, enabling proactive budgeting, optimization, and transparent client communications.

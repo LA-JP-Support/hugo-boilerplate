@@ -1,6 +1,6 @@
 ---
-title: 自然言語処理（NLP）用語集と詳細リソース
-translationKey: natural-language-processing-(nlp)-glossary-&-deep-dive-resource
+title: 自然言語処理（NLP）
+translationKey: natural-language-processing-nlp
 description: 自然言語処理（NLP）は、コンピュータが人間の言語を理解、解釈、生成することを可能にするAI技術であり、人間のコミュニケーションと機械の理解を橋渡しします。
 keywords:
 - 自然言語処理
@@ -12,10 +12,10 @@ category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
-term: しぜんげんごしょり（エヌエルピー）ようごしゅうとしょうさいリソース
-reading: 自然言語処理（NLP）用語集と詳細リソース
+term: しぜんげんごしょり（エヌエルピー）
+reading: 自然言語処理（NLP）
 kana_head: その他
-e-title: Natural Language Processing (NLP) Glossary & Deep-Dive Resource
+e-title: Natural Language Processing (NLP)
 ---
 
 ## 1. 概要と定義

@@ -1,6 +1,6 @@
 ---
 title: Error Handler / Try-Catch
-translationKey: error-handler-try-catch-in-depth
+translationKey: error-handler-try-catch
 description: An error handler, often a Try-Catch block, manages unexpected failures
   in automation and AI chatbots, preventing crashes and enabling controlled recovery
   or logging.

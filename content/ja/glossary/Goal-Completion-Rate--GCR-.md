@@ -1,6 +1,6 @@
 ---
 title: AIチャットボット&自動化におけるゴール達成率(GCR)
-translationKey: goal-completion-rate-gcr-ai-chatbots-automation
+translationKey: goal-completion-rate-gcr
 description: ゴール達成率(GCR)は、AIチャットボットや自動化において、ユーザーが目標を正常に達成した割合を測定する指標です。その重要性、計算方法、改善方法について解説します。
 keywords:
 - ゴール達成率
@@ -15,7 +15,7 @@ draft: false
 term: エーアイチャットボットアンドジドウカニオケルゴールタッセイリツ(ジーシーアール)
 reading: AIチャットボット&自動化におけるゴール達成率(GCR)
 kana_head: その他
-e-title: Goal Completion Rate (GCR) in AI Chatbots & Automation
+e-title: Goal Completion Rate (GCR)
 ---
 
 ## ゴール達成率(GCR)とは?

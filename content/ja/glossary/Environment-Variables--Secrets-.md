@@ -1,6 +1,6 @@
 ---
 title: 環境変数(シークレット)
-translationKey: environment-variables-secrets-the
+translationKey: environment-variables-secrets
 description: アプリケーションの安全な設定のための環境変数(シークレット)について学びます。APIキーやパスワードなどの機密データをコードから分離し、セキュリティと柔軟性を確保します。
 keywords:
 - 環境変数
@@ -12,7 +12,7 @@ category: General
 type: glossary
 date: 2025-12-03
 draft: false
-term: かんきょうへんすう(しーくれっと):しょうさいようごしゅう
+term: かんきょうへんすう(しーくれっと)
 reading: 環境変数(シークレット)
 kana_head: その他
 e-title: Environment Variables (Secrets)

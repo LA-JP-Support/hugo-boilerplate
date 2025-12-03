@@ -1,13 +1,20 @@
 ---
-title: "Rule-Based Chatbot"
-translationKey: "rule-based-chatbot"
-description: "A rule-based chatbot interacts with users by following predefined rules and scripts, responding to specific keywords or button selections without AI learning."
-keywords: ["rule-based chatbot", "chatbot", "decision tree", "automation", "customer support"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: Rule-Based Chatbot
+translationKey: rule-based
+description: A rule-based chatbot interacts with users by following predefined rules
+  and scripts, responding to specific keywords or button selections without AI learning.
+keywords:
+- rule-based chatbot
+- chatbot
+- decision tree
+- automation
+- customer support
+category: AI Chatbot & Automation
+type: glossary
 date: 2025-12-03
 draft: false
 ---
+
 ## Definition: What Is a Rule-Based Chatbot?
 
 A **rule-based chatbot** is a type of conversational software that interacts with users by following a set of pre-defined rules, scripts, or decision trees. Rather than using artificial intelligence or machine learning, it responds to specific keywords, phrases, or button selections. These bots cannot improvise or “learn” from user data; their behavior is entirely determined by their initial programming.

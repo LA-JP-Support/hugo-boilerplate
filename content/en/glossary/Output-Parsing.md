@@ -1,5 +1,5 @@
 ---
-title: Output Parsing Glossary & Deep Dive
+title: Output Parsing
 translationKey: output-parsing
 description: Output parsing extracts structured data (JSON, Python objects) from AI
   language model text responses for automation, analytics, and system integration.

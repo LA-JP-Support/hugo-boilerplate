@@ -12,7 +12,7 @@ category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
-term: りあるたいむほんやく:ほうかつてきようごしゅうがいど
+term: りあるたいむほんやく
 reading: リアルタイム翻訳
 kana_head: ら
 e-title: Real-Time Translation

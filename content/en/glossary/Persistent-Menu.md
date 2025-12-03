@@ -1,6 +1,6 @@
 ---
 title: Persistent Menu
-translationKey: persistent-menu-deep-dive-glossary-implementation
+translationKey: persistent-menu
 description: 'Learn about Persistent Menus in chatbots: what they are, why use them,
   how to implement them, and best practices for enhancing user navigation and experience.'
 keywords:

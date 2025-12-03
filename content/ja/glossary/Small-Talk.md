@@ -1,6 +1,6 @@
 ---
 title: AIチャットボットにおけるスモールトーク
-translationKey: small-talk-in-ai-chatbots
+translationKey: small-talk
 description: AIチャットボットにおけるスモールトークを探求:カジュアルで機能的でない会話を処理する能力、自然な人間らしいやり取りをシミュレートして信頼関係を構築し、ユーザーエクスペリエンスを向上させます。
 keywords:
 - スモールトーク
@@ -15,7 +15,7 @@ draft: false
 term: エーアイチャットボットにおけるスモールトーク
 reading: AIチャットボットにおけるスモールトーク
 kana_head: その他
-e-title: Small Talk in AI Chatbots
+e-title: Small Talk
 ---
 
 ## **1. AIチャットボットにおけるスモールトークとは?**

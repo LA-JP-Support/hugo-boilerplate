@@ -1,6 +1,6 @@
 ---
 title: Environment Variables (Secrets)
-translationKey: environment-variables-secrets-the
+translationKey: environment-variables-secrets
 description: Learn about environment variables (secrets) for secure application configuration.
   Decouple sensitive data like API keys and passwords from code, ensuring security
   and flexibility.

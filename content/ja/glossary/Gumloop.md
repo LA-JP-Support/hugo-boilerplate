@@ -1,6 +1,6 @@
 ---
 title: Gumloop
-translationKey: gumloop-complete-glossary-in-depth
+translationKey: gumloop
 description: Gumloopは、反復的なタスクとワークフローのためのノーコードAIファースト自動化プラットフォームです。インテリジェントエージェントを使用してウェブを閲覧し、SaaSアプリと連携し、意思決定を行います。
 keywords:
 - Gumloop
@@ -12,7 +12,7 @@ category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
-term: 'がむるーぷ: かんぜんようごしゅうとしょうさいがいど'
+term: がむるーぷ
 reading: Gumloop
 kana_head: その他
 e-title: Gumloop

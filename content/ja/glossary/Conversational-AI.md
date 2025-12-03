@@ -1,6 +1,6 @@
 ---
 title: 会話型AI
-translationKey: conversational-ai
+translationKey: conversational
 description: 会話型AIを探求：自然言語処理（NLP）、自然言語理解（NLU）、機械学習、音声認識を用いて人間との会話をシミュレートする技術。その仕組み、利点、ユースケース、将来のトレンドについて学びましょう。
 keywords:
 - 会話型AI

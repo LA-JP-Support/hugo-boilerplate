@@ -1,6 +1,6 @@
 ---
-title: LangFlow Glossary
-translationKey: langflow-glossary-deep-technical-reference
+title: LangFlow
+translationKey: langflow
 description: LangFlow is an open-source, low-code visual interface for building, testing,
   and deploying AI applications, especially those based on LLMs and LangChain.
 keywords:

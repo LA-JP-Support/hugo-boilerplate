@@ -1,5 +1,5 @@
 ---
-title: HTTPリクエストノード用語集
+title: HTTPリクエストノード
 translationKey: http-request-node
 description: HTTPリクエストノードについて学びましょう。n8nやNode-REDなどの自動化プラットフォームにおいて、外部APIへのHTTPリクエスト送信やシステム統合を行うための重要なコンポーネントです。
 keywords:
@@ -12,10 +12,10 @@ category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
-term: エイチティーティーピーリクエストノードようごしゅう
-reading: HTTPリクエストノード用語集
+term: エイチティーティーピーリクエストノード
+reading: HTTPリクエストノード
 kana_head: その他
-e-title: HTTP Request Node Glossary
+e-title: HTTP Request Node
 ---
 
 ## はじめに

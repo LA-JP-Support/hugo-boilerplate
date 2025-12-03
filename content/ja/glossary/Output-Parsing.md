@@ -1,5 +1,5 @@
 ---
-title: アウトプットパーシング用語集と詳細解説
+title: アウトプットパーシング
 translationKey: output-parsing
 description: アウトプットパーシングは、AI言語モデルのテキスト応答から構造化データ(JSON、Pythonオブジェクト)を抽出し、自動化、分析、システム統合に活用する技術です。
 keywords:
@@ -12,10 +12,10 @@ category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
-term: あうとぷっとぱーしんぐようごしゅうとしょうさいかいせつ
-reading: アウトプットパーシング用語集と詳細解説
+term: あうとぷっとぱーしんぐ
+reading: アウトプットパーシング
 kana_head: あ
-e-title: Output Parsing Glossary & Deep Dive
+e-title: Output Parsing
 ---
 
 ## 出力パースとは?

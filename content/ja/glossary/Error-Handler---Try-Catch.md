@@ -1,6 +1,6 @@
 ---
 title: エラーハンドラー / Try-Catch
-translationKey: error-handler-try-catch-in-depth
+translationKey: error-handler-try-catch
 description: エラーハンドラー(多くの場合Try-Catchブロック)は、自動化やAIチャットボットにおける予期しない障害を管理し、クラッシュを防ぎ、制御された復旧やログ記録を可能にします。
 keywords:
 - エラーハンドラー

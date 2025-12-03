@@ -1,13 +1,21 @@
 ---
-title: "Small Talk in AI Chatbots"
-translationKey: "small-talk-in-ai-chatbots"
-description: "Explore small talk in AI chatbots: their ability to handle casual, non-functional conversations, simulating natural human-like exchanges to build rapport and enhance user experience."
-keywords: ["Small Talk", "AI Chatbots", "Virtual Assistants", "Chatbot Interaction", "User Experience"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: Small Talk
+translationKey: small-talk
+description: 'Explore small talk in AI chatbots: their ability to handle casual, non-functional
+  conversations, simulating natural human-like exchanges to build rapport and enhance
+  user experience.'
+keywords:
+- Small Talk
+- AI Chatbots
+- Virtual Assistants
+- Chatbot Interaction
+- User Experience
+category: AI Chatbot & Automation
+type: glossary
 date: 2025-12-03
 draft: false
 ---
+
 ## **1. What is Small Talk in AI Chatbots?**
 
 Small talk in AI chatbots refers to the bot’s ability to engage users in casual, social, and non-functional conversations. These exchanges are not directly tied to business transactions or critical support tasks, but rather mimic the informal, friendly interactions found in human communication—such as greetings, jokes, compliments, or light banter. 

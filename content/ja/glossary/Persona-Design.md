@@ -1,6 +1,6 @@
 ---
-title: ペルソナデザイン(AIチャットボット&自動化)
-translationKey: persona-design-ai-chatbot-automation
+title: ペルソナデザイン
+translationKey: persona-design
 description: AIチャットボットと自動化のためのペルソナデザインについて学びます。パーソナリティ、トーン、キャラクターを定義し、魅力的で人間らしいインタラクションを作成してユーザー体験を向上させます。
 keywords:
 - ペルソナデザイン
@@ -12,10 +12,10 @@ category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
-term: ペルソナデザイン(エーアイチャットボットアンドジドウカ)
-reading: ペルソナデザイン(AIチャットボット&自動化)
+term: ペルソナデザイン
+reading: ペルソナデザイン
 kana_head: は
-e-title: Persona Design (AI Chatbot & Automation)
+e-title: Persona Design
 ---
 
 ## ペルソナデザインとは?

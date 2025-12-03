@@ -1,6 +1,6 @@
 ---
-title: AIチャットボット&自動化におけるフォールバック機構(Fallback Mechanism)
-translationKey: fall-back-mechanism-in-ai-chatbots-automation
+title: フォールバック機構
+translationKey: fall-back-mechanism
 description: AIチャットボットにおけるフォールバック機構は、ボットがリクエストを解釈または実行できない場合に継続性を確保し、会話をリダイレクト、明確化、またはエスカレーションします。
 keywords:
 - フォールバック機構
@@ -13,9 +13,9 @@ type: glossary
 date: 2025-12-03
 draft: false
 term: フォールバックきこう
-reading: AIチャットボット&自動化におけるフォールバック機構(Fallback Mechanism)
+reading: フォールバック機構
 kana_head: その他
-e-title: Fall-back Mechanism (Fallback Mechanism) in AI Chatbots & Automation
+e-title: Fall-back Mechanism
 ---
 
 ## Fall-back Mechanismとは?

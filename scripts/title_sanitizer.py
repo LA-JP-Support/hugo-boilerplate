@@ -29,9 +29,50 @@ TITLE_SUFFIX_KEYWORDS_EN = (
     "glossary",
     "guide",
 )
+# Patterns to remove from end of titles (case-insensitive)
+TITLE_SUFFIX_PATTERNS_EN = (
+    " in AI Chatbot & Automation",
+    " in AI Chatbots & Automation",
+    " in AI Chatbots",
+    " for AI Chatbot & Automation",
+    " for AI Chatbots & Automation",
+    " for AI Chatbots",
+    " (AI Chatbot & Automation)",
+    " (AI Chatbots & Automation)",
+    " Glossary & Deep-Dive Resource",
+    " Glossary & Deep Dive",
+    " – Deep Glossary and Technical Overview",
+    " Glossary",
+)
+TITLE_SUFFIX_PATTERNS_JA = (
+    "用語集と詳細リソース",
+    "用語集と詳細解説",
+    " – 詳細用語集と技術概要",
+    "用語集",
+    "(AIチャットボット&自動化)",
+    "(エーアイチャットボットアンドジドウカ)",
+)
 TITLE_SUFFIX_KEYWORDS_JA = (
     "用語集",
+    "ようごしゅう",
     "ガイド",
+    "決定版",
+    "けっていばん",
+    "実装",
+    "じっそう",
+    "完全",
+    "かんぜん",
+    "詳細",
+    "しょうさい",
+    "包括的",
+    "ほうかつてき",
+    "解説",
+    "かいせつ",
+    "リソース",
+    "概要",
+    "がいよう",
+    "技術",
+    "ぎじゅつ",
 )
 TRANSLATION_KEY_STOP_WORDS = {
     "glossary",
@@ -41,6 +82,21 @@ TRANSLATION_KEY_STOP_WORDS = {
     "deep",
     "dive",
     "practical",
+    "definitive",
+    "implementation",
+    "the",
+    "for",
+    "ai",
+    "chatbot",
+    "chatbots",
+    "automation",
+    "and",
+    "in",
+    "depth",
+    "technical",
+    "reference",
+    "overview",
+    "resource",
 }
 
 
@@ -69,6 +125,33 @@ def _needs_removal(segment: str) -> bool:
 def sanitize_title_text(title: str | None) -> str | None:
     if not title:
         return title
+    
+    # First, remove suffix patterns like "in AI Chatbots & Automation"
+    title_lower = title.lower()
+    for pattern in TITLE_SUFFIX_PATTERNS_EN:
+        if title_lower.endswith(pattern.lower()):
+            title = title[:-len(pattern)].strip()
+            break
+    
+    # Remove Japanese suffix patterns
+    for pattern in TITLE_SUFFIX_PATTERNS_JA:
+        if title.endswith(pattern):
+            title = title[:-len(pattern)].strip()
+            break
+    
+    # Remove trailing Japanese keywords (for term field with hiragana)
+    changed = True
+    while changed:
+        changed = False
+        for keyword in TITLE_SUFFIX_KEYWORDS_JA:
+            if title.endswith(keyword):
+                title = title[:-len(keyword)].strip()
+                # Also remove common delimiters
+                title = title.rstrip(" 　–-:：と")
+                changed = True
+                break
+    
+    # Then check for colon-separated suffixes
     for delimiter in ("：", ":"):
         if delimiter in title:
             head, tail = title.split(delimiter, 1)

@@ -1,13 +1,21 @@
 ---
-title: "Natural Language Processing (NLP) Glossary & Deep-Dive Resource"
-translationKey: "natural-language-processing-(nlp)-glossary-&-deep-dive-resource"
-description: "Natural Language Processing (NLP) is AI technology enabling computers to understand, interpret, and generate human language, bridging human communication and machine understanding."
-keywords: ["Natural Language Processing", "NLP", "Artificial Intelligence", "Large Language Models", "Machine Learning"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: Natural Language Processing (NLP)
+translationKey: natural-language-processing-nlp
+description: Natural Language Processing (NLP) is AI technology enabling computers
+  to understand, interpret, and generate human language, bridging human communication
+  and machine understanding.
+keywords:
+- Natural Language Processing
+- NLP
+- Artificial Intelligence
+- Large Language Models
+- Machine Learning
+category: AI Chatbot & Automation
+type: glossary
 date: 2025-12-03
 draft: false
 ---
+
 ## 1. Overview and Definition
 
 Natural Language Processing (NLP) is a multidisciplinary field, combining computer science, artificial intelligence, and linguistics. Its core goal is to enable computers and software to understand, process, and generate human language in a way that is both meaningful and useful.

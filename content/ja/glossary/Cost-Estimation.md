@@ -1,6 +1,6 @@
 ---
 title: AIチャットボット&自動化におけるコスト見積もり
-translationKey: cost-estimation-in-ai-chatbot-automation
+translationKey: cost-estimation
 description: AIチャットボットと自動化におけるコスト見積もりは、会話型AIソリューションの導入に必要なリソース消費と財務支出を予測し、予算策定と最適化を可能にします。
 keywords:
 - コスト見積もり
@@ -15,7 +15,7 @@ draft: false
 term: エーアイチャットボットアンドジドウカニオケルコストミツモリ
 reading: AIチャットボット&自動化におけるコスト見積もり
 kana_head: その他
-e-title: Cost Estimation in AI Chatbot & Automation
+e-title: Cost Estimation
 ---
 
 ## コスト見積もりとは?

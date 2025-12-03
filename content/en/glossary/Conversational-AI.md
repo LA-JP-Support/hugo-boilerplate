@@ -1,13 +1,21 @@
 ---
-title: "Conversational AI"
-translationKey: "conversational-ai"
-description: "Explore Conversational AI: technologies simulating human conversation with NLP, NLU, ML, and speech recognition. Learn how it works, its benefits, use cases, and future trends."
-keywords: ["Conversational AI", "Natural Language Processing", "Machine Learning", "Chatbots", "Virtual Assistants"]
-category: "AI Chatbot & Automation"
-type: "glossary"
+title: Conversational AI
+translationKey: conversational
+description: 'Explore Conversational AI: technologies simulating human conversation
+  with NLP, NLU, ML, and speech recognition. Learn how it works, its benefits, use
+  cases, and future trends.'
+keywords:
+- Conversational AI
+- Natural Language Processing
+- Machine Learning
+- Chatbots
+- Virtual Assistants
+category: AI Chatbot & Automation
+type: glossary
 date: 2025-12-02
 draft: false
 ---
+
 ## What is Conversational AI?
 
 **Conversational AI** refers to the collection of artificial intelligence technologies that allow computers to simulate and process human conversation, either via text or voice. By leveraging a blend of Natural Language Processing (NLP), Natural Language Understanding (NLU), Machine Learning (ML), and speech recognition, these systems can interpret user queries, retain context, and generate responses that are coherent and human-like. Conversational AI powers chatbots, virtual agents, interactive voice response (IVR) systems, and intelligent assistants across digital touchpoints.

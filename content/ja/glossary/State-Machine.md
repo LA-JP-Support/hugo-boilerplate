@@ -1,6 +1,6 @@
 ---
 title: ステートマシン
-translationKey: state-machine-deep-glossary-for-ai-chatbot-automation
+translationKey: state-machine
 description: システムの状態遷移を表現する計算モデル、ステートマシンについて解説します。基本概念、種類、AIチャットボットや自動化における活用方法、実装手法、利点、課題について学びましょう。
 keywords:
 - ステートマシン

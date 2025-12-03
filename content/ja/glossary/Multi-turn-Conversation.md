@@ -1,6 +1,6 @@
 ---
 title: AIチャットボット&自動化におけるマルチターン会話
-translationKey: multi-turn-conversation-in-ai-chatbot-automation
+translationKey: multi-turn-conversation
 description: AIチャットボットと自動化におけるマルチターン会話について学びます。AIシステムがコンテキスト、状態、複数のやり取りを管理し、複雑なタスクを処理する方法を理解できます。
 keywords:
 - マルチターン会話
@@ -15,7 +15,7 @@ draft: false
 term: エーアイチャットボットアンドジドウカニオケルマルチターンカイワ
 reading: AIチャットボット&自動化におけるマルチターン会話
 kana_head: その他
-e-title: Multi-Turn Conversation in AI Chatbot & Automation
+e-title: Multi-Turn Conversation
 ---
 
 ## 1. 定義:マルチターン会話とは何か?
