@@ -1,6 +1,6 @@
 ---
-title: "Delay / Sleep Node: Glossary & Technical Guide for AI Chatbot & Automation Workflows"
-translationKey: "delay-sleep-node-glossary-technical-guide-for-ai-chatbot-automation-workflows"
+title: "Delay / Sleep Node"
+translationKey: "delay-sleep-node"
 description: "A Delay/Sleep Node pauses workflow execution in AI chatbots & automation for a set period or until a condition is met, crucial for API rate limiting & orchestration."
 keywords: ["Delay Node", "Sleep Node", "Automation Workflows", "AI Chatbot", "Workflow Orchestration"]
 category: "AI Chatbot & Automation"
