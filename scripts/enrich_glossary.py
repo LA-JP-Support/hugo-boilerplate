@@ -23,7 +23,8 @@ import re
 from pathlib import Path
 from typing import Dict, List, Sequence
 
-DEFAULT_DICT = Path("config/keyword_dictionary.json")
+DEFAULT_DICT_EN = Path("config/keyword_dictionary_en.json")
+DEFAULT_DICT_JA = Path("config/keyword_dictionary_ja.json")
 FRONT_MATTER_PATTERN = re.compile(r"^---\s*\n(.*?)\n---\s*\n?", re.DOTALL)
 KEYWORDS_BLOCK_PATTERN = re.compile(
     r"(^keywords:\s*(?:\[[^\]]*\]|(?:\n(?:\s*-\s*[^\n]+\n?)+)))\n?",
@@ -45,8 +46,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--dict",
         dest="dictionary",
-        default=str(DEFAULT_DICT),
-        help="Path to keyword dictionary JSON (default: %(default)s)",
+        default=None,
+        help="Path to keyword dictionary JSON (auto-detected by language if omitted)",
     )
     parser.add_argument(
         "--dry-run",
@@ -187,50 +188,96 @@ def collect_new_keywords(body: str, dictionary: List[Dict[str, Sequence[str]]]) 
     return found
 
 
-def link_terms(body: str, dictionary: List[Dict[str, Sequence[str]]]) -> str:
-    """Add internal links to terms, avoiding existing markdown links."""
-    # First, protect existing markdown links by replacing them with placeholders
-    link_pattern = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
-    protected_links: List[str] = []
+def link_terms(
+    body: str, 
+    dictionary: List[Dict[str, Sequence[str]]],
+    current_slug: str = None,
+) -> str:
+    """Add internal links to terms, avoiding existing markdown links and self-references.
     
-    def protect_link(match: re.Match[str]) -> str:
-        idx = len(protected_links)
-        protected_links.append(match.group(0))
-        return f"__PROTECTED_LINK_{idx}__"
+    Only links the FIRST occurrence of each term to avoid over-linking.
+    """
+    # First, protect existing markdown links and code blocks
+    protected: List[str] = []
     
-    result = link_pattern.sub(protect_link, body)
+    def add_protection(text: str) -> str:
+        idx = len(protected)
+        protected.append(text)
+        return f"__PROTECTED_{idx}__"
     
-    # Now add links to terms
+    def protect(match: re.Match[str]) -> str:
+        return add_protection(match.group(0))
+    
+    result = body
+    
+    # Protect existing markdown links
+    result = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', protect, result)
+    
+    # Protect code blocks
+    result = re.sub(r'```[\s\S]*?```', protect, result)
+    result = re.sub(r'`[^`]+`', protect, result)
+    
+    # Protect LaTeX math blocks
+    result = re.sub(r'\$\$[\s\S]*?\$\$', protect, result)
+    result = re.sub(r'\$[^$]+\$', protect, result)
+    
+    # Protect headings (don't add links in headings)
+    result = re.sub(r'^#{1,6}\s+.*$', protect, result, flags=re.MULTILINE)
+    
+    # Protect bold/italic markers to avoid matching inside them
+    result = re.sub(r'\*\*[^*]+\*\*', protect, result)
+    
+    # Track which terms have been linked (only link first occurrence)
+    linked_slugs: set = set()
+    
+    # Build list of (alias, link, slug_key) sorted by length
+    sorted_entries = []
     for entry in dictionary:
         link = entry["link"]
+        entry_slug = link.strip("/").split("/")[-1].lower()
+        
+        # Skip self-references
+        if current_slug and entry_slug == current_slug:
+            continue
+            
         for alias in entry.get("aliases", []):
-            escaped = re.escape(alias)
-            pattern = re.compile(rf"(?<!\w)({escaped})(?!\w)", re.IGNORECASE)
-            
-            def _replacement(match: re.Match[str]) -> str:
-                start = match.start()
-                text = match.string
-                
-                # Skip if inside code spans/backticks
-                if text[:start].count("`") % 2 == 1:
-                    return match.group(0)
-                
-                # Skip if inside a protected placeholder
-                before = text[:start]
-                if "__PROTECTED_LINK_" in before:
-                    last_placeholder = before.rfind("__PROTECTED_LINK_")
-                    if "__" not in before[last_placeholder + 17:]:
-                        # We're inside a placeholder, skip
-                        return match.group(0)
-                
-                replacement = match.group(0)
-                return f"[{replacement}]({link})"
-            
-            result = pattern.sub(_replacement, result)
+            # Skip very short aliases and common words
+            if len(alias) >= 4:
+                sorted_entries.append((alias, link, entry_slug))
     
-    # Restore protected links
-    for idx, original in enumerate(protected_links):
-        result = result.replace(f"__PROTECTED_LINK_{idx}__", original)
+    # Sort by length descending (longer matches first)
+    sorted_entries.sort(key=lambda x: -len(x[0]))
+    
+    # Add links (first occurrence only per target page)
+    for alias, link, slug_key in sorted_entries:
+        if slug_key in linked_slugs:
+            continue
+        
+        escaped = re.escape(alias)
+        # Word boundary - don't match inside words
+        pattern = re.compile(
+            rf"(?<![a-zA-Z0-9_\-])({escaped})(?![a-zA-Z0-9_\-])",
+            re.IGNORECASE
+        )
+        
+        match = pattern.search(result)
+        if match:
+            # Skip if the match is inside a protection placeholder
+            if "__PROTECTED_" in result[max(0, match.start()-20):match.start()]:
+                continue
+            
+            # Create the link and protect it immediately
+            new_link = f"[{match.group(1)}]({link})"
+            placeholder = add_protection(new_link)
+            
+            # Replace with placeholder (not the link itself)
+            result = result[:match.start()] + placeholder + result[match.end():]
+            linked_slugs.add(slug_key)
+    
+    # Restore all protected content in REVERSE order
+    # This is critical because later protections may be nested inside earlier ones
+    for idx in range(len(protected) - 1, -1, -1):
+        result = result.replace(f"__PROTECTED_{idx}__", protected[idx])
     
     return result
 
@@ -240,14 +287,22 @@ def process_file(
     dest: Path,
     dictionary: List[Dict[str, Sequence[str]]],
     dry_run: bool = False,
+    add_keywords: bool = False,  # Disabled by default - keywords are already in frontmatter
 ) -> None:
     text = src.read_text(encoding="utf-8")
     front, body = split_front_matter(text)
+    
+    # Get current file's slug to prevent self-references
+    current_slug = src.stem.lower()
 
-    current_keywords = gather_keywords(front)
-    new_keywords = current_keywords + collect_new_keywords(body, dictionary)
-    front_updated = upsert_keywords(front, new_keywords)
-    body_updated = link_terms(body, dictionary)
+    if add_keywords:
+        current_keywords = gather_keywords(front)
+        new_keywords = current_keywords + collect_new_keywords(body, dictionary)
+        front_updated = upsert_keywords(front, new_keywords)
+    else:
+        front_updated = front
+    
+    body_updated = link_terms(body, dictionary, current_slug=current_slug)
 
     new_content = f"---\n{front_updated.strip()}\n---\n{body_updated.lstrip()}"
 
@@ -289,13 +344,23 @@ def main() -> None:
     print(f"[INFO] Language: {lang}")
     print(f"[INFO] Found {len(existing_pages)} existing glossary pages")
     
+    # Auto-detect dictionary path if not specified
+    dict_path = args.dictionary
+    if dict_path is None:
+        if lang == "ja":
+            dict_path = DEFAULT_DICT_JA
+        else:
+            dict_path = DEFAULT_DICT_EN
+    else:
+        dict_path = Path(dict_path)
+    
     # Load dictionary with filtering
     dictionary = load_dictionary(
-        Path(args.dictionary), 
+        dict_path, 
         existing_pages=existing_pages,
         lang=lang
     )
-    print(f"[INFO] Using {len(dictionary)} dictionary entries with valid links")
+    print(f"[INFO] Using {len(dictionary)} dictionary entries from {dict_path}")
 
     files = iter_markdown_files(input_path)
     base_dir = input_path if input_path.is_dir() else input_path.parent

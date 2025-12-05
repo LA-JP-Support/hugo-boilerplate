@@ -10,11 +10,11 @@ draft: false
 ---
 ## What is a Chat Simulator?
 
-A chat simulator is a specialized toolset that enables the systematic testing of conversational AI systems—such as chatbots, voice assistants, and virtual agents—in scenarios that closely replicate real customer interactions. These simulators allow for the orchestration of synthetic, multi-turn dialogues between bots or human agents and lifelike user personas. The primary objective is to assess and optimize the functional accuracy, NLU performance, compliance, and user experience of conversational systems before exposure to actual users or business-critical workflows.
+A chat simulator is a specialized toolset that enables the systematic testing of [conversational AI](/en/glossary/conversational-ai/) systems—such as chatbots, voice assistants, and virtual agents—in scenarios that closely replicate real customer interactions. These simulators allow for the orchestration of synthetic, multi-turn dialogues between bots or human agents and lifelike user personas. The primary objective is to assess and optimize the functional accuracy, NLU performance, compliance, and user experience of conversational systems before exposure to actual users or business-critical workflows.
 
 Chat simulators are foundational in AI chatbot and customer service automation projects. They allow stakeholders to:
 
-- Validate conversation logic, intent recognition, and response relevance.
+- Validate conversation logic, [intent recognition](/en/glossary/intent-recognition/), and response relevance.
 - Detect logic flaws, NLU gaps, or compliance risks before launch.
 - Provide hands-on agent training in a safe, feedback-rich environment.
 - Benchmark bot performance across diverse, complex, or edge-case scenarios.
@@ -36,7 +36,7 @@ Chat simulators enable the scripting and execution of multi-turn, scenario-based
 
 ### 2. NLU (Natural Language Understanding) Validation
 
-A core capability of chat simulators is to stress-test the AI’s intent recognition and entity extraction in both typical and adverse conditions. This includes:
+A core capability of chat simulators is to stress-test the AI’s intent recognition and [entity extraction](/en/glossary/entity-extraction/) in both typical and adverse conditions. This includes:
 
 - Evaluating NLU accuracy with varied phrasings, slang, misspellings, and ambiguous inputs.
 - Benchmarking sentiment detection and context retention.
@@ -72,7 +72,7 @@ Critical for regulated industries, simulators:
 
 Chat simulators collect and analyze metrics such as:
 
-- Intent recognition rates, response latency, conversation completion rates, escalation frequencies, and compliance adherence.
+- Intent recognition rates, response [latency](/en/glossary/latency/), conversation completion rates, escalation frequencies, and compliance adherence.
 - Use transcript analytics and usability scoring (e.g., System Usability Scale) to drive continuous improvement.
 
 For in-depth technical strategies see [Botium: Testing Conversational AI](https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html).
@@ -101,7 +101,7 @@ Chat simulators operate through a structured, repeatable workflow designed for c
 
 - Transcripts are automatically logged and scored for intent accuracy, knowledge retention, compliance, and satisfaction proxies.
 - Automated QA tools flag errors, escalation triggers, and edge-case failures.
-- Human-in-the-loop review enables annotation, feedback, and subjective scoring.
+- [Human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/) review enables annotation, feedback, and subjective scoring.
 
 ### 5. Iterative Optimization
 
@@ -129,7 +129,7 @@ Chat simulators combine a mix of AI, NLP, software engineering, and QA automatio
 
 ### Natural Language Processing (NLP)
 
-- Supports features such as tokenization, part-of-speech tagging, sentiment analysis, and language translation.
+- Supports features such as tokenization, part-of-speech tagging, [sentiment analysis](/en/glossary/sentiment-analysis/), and language translation.
 - Facilitates robust preprocessing and normalization of user inputs for more reliable bot responses.
 
 ### Conversation Flow Engines
@@ -201,7 +201,7 @@ Chat simulators address critical needs in a variety of sectors and roles:
 **B. AI Chatbot Validation**
 
 - Run thousands of parallel simulated conversations for bot performance validation, reducing bot testing cycles by up to 60%.
-- Tools like [Botium](https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html) automate scenario creation and multi-turn conversation testing.
+- Tools like [Botium](https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html) automate scenario creation and [multi-turn conversation](/en/glossary/multi-turn-conversation/) testing.
 
 **C. Compliance Simulation**
 

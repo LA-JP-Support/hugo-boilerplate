@@ -11,7 +11,7 @@ draft: false
 ## Definition
 
 **NLU Confidence Threshold:**  
-The NLU (Natural Language Understanding) confidence threshold is the minimum confidence score an NLU engine requires to trigger a specific intent for a user’s utterance. If the top intent’s confidence score is below this threshold, the NLU typically triggers fallback logic—such as asking the user to rephrase, confirming the intent, or routing to a human agent. The threshold is tunable (usually 0.0–1.0), and is central to how conversational AI systems interpret input and manage uncertainty.
+The NLU (Natural Language Understanding) [confidence threshold](/en/glossary/confidence-threshold/) is the minimum confidence score an NLU engine requires to trigger a specific intent for a user’s [utterance](/en/glossary/utterance/). If the top intent’s confidence score is below this threshold, the NLU typically triggers fallback logic—such as asking the user to rephrase, confirming the intent, or routing to a human agent. The threshold is tunable (usually 0.0–1.0), and is central to how [conversational AI](/en/glossary/conversational-ai/) systems interpret input and manage uncertainty.
 
 ## 1. What is an NLU Confidence Score?
 
@@ -128,10 +128,10 @@ If all intent scores are below the threshold, Lex triggers `AMAZON.FallbackInten
    - Incorrect rejections (false negatives)
 
 4. **Plot ROC Curve:**  
-   Receiver Operating Characteristic (ROC) curve plots true positive rate vs. false positive rate for different thresholds.
+   Receiver Operating Characteristic (ROC) curve plots true positive rate vs. [false positive](/en/glossary/false-positive/) rate for different thresholds.
 
 5. **Calculate F1 Score:**  
-   F1 combines precision and recall into one metric, especially useful for imbalanced datasets.
+   F1 combines [precision and recall](/en/glossary/precision-and-recall/) into one metric, especially useful for imbalanced datasets.
 
 6. **Select Threshold(s):**  
    Choose threshold(s) that balance:
@@ -166,7 +166,7 @@ Line graphs showing:
 - Correct Accept (true positive)
 - False Accept (false positive)
 - Correct Reject (true negative)
-- False Reject (false negative)
+- False Reject ([false negative](/en/glossary/false-negative/))
 
 **References:**  
 - [Genesys: Set bot confidence thresholds](https://www.genesys.com/blog/post/set-bot-confidence-thresholds)

@@ -1,0 +1,1172 @@
+﻿Keyword,Definition,Category,filename
+Active Learning,A machine learning process where the model explicitly asks a human to label data points it is uncertain about.,AI Chatbot & Automation,Active-Learning.md
+Adaptive Cards,"A platform-agnostic UI framework allowing developers to exchange rich content cards (images, text, forms) in a common format.",AI Chatbot & Automation,Adaptive-Cards.md
+Aggregator,A node that collects outputs from multiple execution paths or loops and combines them into a single result.,AI Chatbot & Automation,Aggregator.md
+Ambient Intelligence,Systems that listen in the background to support calls with relevant data without explicit commands.,AI Chatbot & Automation,Ambient-Intelligence.md
+API Endpoint Configuration,"Settings that expose the created flow as an API, allowing other apps to trigger it programmatically.",AI Chatbot & Automation,API-Endpoint-Configuration.md
+Auto-Layout,"A UI feature that automatically organizes messy nodes and edges into a clean, readable structure.",AI Chatbot & Automation,Auto-Layout.md
+Automated Workflows,A mechanism that automatically executes business processes based on predefined rules.,AI Chatbot & Automation,Automated-Workflows.md
+Autonomous Agents,"AI systems that can plan and execute multiple steps (e.g., 'refund the order and email the user') without human intervention.",AI Chatbot & Automation,Autonomous-Agents.md
+Bot Avatar,The icon or image representing the chatbot persona in the chat interface.,AI Chatbot & Automation,Bot-Avatar.md
+Bot Containment Rate,The percentage of user interactions handled entirely by the chatbot without transferring to a human agent.,AI Chatbot & Automation,Bot-Containment-Rate.md
+Botpress,A developer-friendly platform for building chat bots with a visual flow editor.,AI Chatbot & Automation,Botpress.md
+Canonical Form,"Standardizing various user inputs (e.g., 'burgers', 'hamburger', 'cheeseburger') into a single standard value (e.g., 'BURGER').",AI Chatbot & Automation,Canonical-Form.md
+Carousel,"A UI element in chat that displays a series of cards (images, text) that users can swipe through horizontally.",AI Chatbot & Automation,Carousel.md
+Chat Simulator,A development tool allowing developers to test conversation flows and NLU detection in a safe environment.,AI Chatbot & Automation,Chat-Simulator.md
+Code Block (Python/JS),A node allowing developers to write custom scripts for complex logic that standard nodes can't handle.,AI Chatbot & Automation,Code-Block--Python-JS-.md
+Conditional Router,"A node with multiple output ports, routing data to exactly one path based on complex rules.",AI Chatbot & Automation,Conditional-Router.md
+Confidence Threshold,The minimum score required for an AI model to accept a prediction as correct.,AI Chatbot & Automation,Confidence-Threshold.md
+Context Switching,"Handling a scenario where a user abruptly changes the topic mid-conversation, then returns to the original topic.",AI Chatbot & Automation,Context-Switching.md
+Conversation Drift,"When a conversation gradually moves away from the original intent or goal, potentially confusing the bot.",AI Chatbot & Automation,Conversation-Drift.md
+Conversational AI,A general term for AI systems that communicate and perform tasks through natural dialogue.,AI Chatbot & Automation,Conversational-AI.md
+Copilot,"AI tools designed to assist human agents in real-time by drafting responses, summarizing chats, and suggesting actions.",AI Chatbot & Automation,Copilot.md
+Cost Estimation,A feature that calculates the approximate token usage and cost of running a flow before deployment.,AI Chatbot & Automation,Cost-Estimation.md
+Cron Schedule,"A time-based trigger that runs the flow automatically at specific intervals (e.g., 'Every Monday at 9 AM').",AI Chatbot & Automation,Cron-Schedule.md
+Debug Console / Trace,"A tool that shows the step-by-step execution of a flow, highlighting inputs and outputs at each node for troubleshooting.",AI Chatbot & Automation,Debug-Console---Trace.md
+Delay / Sleep Node,"A block that pauses the flow execution for a set amount of time (e.g., 'Wait 5 seconds') before proceeding.",AI Chatbot & Automation,Delay---Sleep-Node.md
+Dialogue Management,A control system that tracks the state of the conversation and determines the next response.,AI Chatbot & Automation,Dialogue-Management.md
+Dialogue State Tracking,The component of a dialogue system that estimates the user's goal at every step of the conversation.,AI Chatbot & Automation,Dialogue-State-Tracking.md
+Dify,An open-source LLM app development platform that integrates BaaS and LLM Ops.,AI Chatbot & Automation,Dify.md
+Disambiguation,The process of clarifying user intent when an input has multiple possible meanings.,AI Chatbot & Automation,Disambiguation.md
+Document Loader,"A component that ingests files (PDF, CSV, TXT) to be processed or stored in a vector database.",AI Chatbot & Automation,Document-Loader.md
+DTMF (Dual-Tone Multi-Frequency),Signaling used in telecommunication (pressing keypad numbers) which chatbots can recognize for menu selection.,AI Chatbot & Automation,DTMF--Dual-Tone-Multi-Frequency-.md
+Embed Script,A snippet of JavaScript code provided to place the chatbot widget onto any external website.,AI Chatbot & Automation,Embed-Script.md
+Entity Extraction,"Technology that pulls specific data points like dates, locations, or names from text.",AI Chatbot & Automation,Entity-Extraction.md
+Entity Linking,"Connecting extracted entities from text to a knowledge base (e.g., linking 'Apple' to the company).",AI Chatbot & Automation,Entity-Linking.md
+Environment Variables (Secrets),"Secure storage for sensitive keys (API Keys, Passwords) that are hidden from the visual interface.",AI Chatbot & Automation,Environment-Variables--Secrets-.md
+Error Handler / Try-Catch,"A dedicated path in the flow that activates only if a specific node fails, preventing the whole flow from crashing.",AI Chatbot & Automation,Error-Handler---Try-Catch.md
+Fall-back Mechanism,A system designed to switch to human support when the bot cannot answer a query.,AI Chatbot & Automation,Fall-back-Mechanism.md
+False Negative,When a chatbot fails to recognize an intent that it should have understood.,AI Chatbot & Automation,False-Negative.md
+False Positive,"When a chatbot incorrectly identifies an intent (e.g., thinking 'I want to cancel' means 'I want to buy').",AI Chatbot & Automation,False-Positive.md
+Feedback Buttons (Thumbs Up/Down),Simple icons allowing users to rate a specific bot response as helpful or unhelpful immediately.,AI Chatbot & Automation,Feedback-Buttons--Thumbs-Up-Down-.md
+Flowise,An open-source UI visual tool to build your customized LLM flows using LangChainJS.,AI Chatbot & Automation,Flowise.md
+Global Variables,"Variables that are accessible from any node in the flow, regardless of the connection path.",AI Chatbot & Automation,Global-Variables.md
+Goal Completion Rate (GCR),The percentage of user sessions where the user successfully achieved their intended goal.,AI Chatbot & Automation,Goal-Completion-Rate--GCR-.md
+Gumloop,A platform to automate repetitive tasks with AI agents that can browse the web and use apps.,AI Chatbot & Automation,Gumloop.md
+Hamburger Menu,A collapsible menu icon (three lines) within the chat window giving access to settings or persistent options.,AI Chatbot & Automation,Hamburger-Menu.md
+HTTP Request Node,"A generic node used to send GET, POST, PUT, or DELETE requests to any external API.",AI Chatbot & Automation,HTTP-Request-Node.md
+Human Approval Node,A step that pauses the automation until a human user clicks 'Approve' or 'Reject' in the dashboard.,AI Chatbot & Automation,Human-Approval-Node.md
+Human-Agent Teaming,"A workflow where AI and human agents work together in the same thread, passing control back and forth.",AI Chatbot & Automation,Human-Agent-Teaming.md
+Hybrid Chatbot,A bot that combines rule-based logic (buttons/menus) for simple tasks and NLP for complex queries.,AI Chatbot & Automation,Hybrid-Chatbot.md
+Image Generation Node,A block connected to models like DALL-E or Stable Diffusion to create images from text prompts.,AI Chatbot & Automation,Image-Generation-Node.md
+Import / Export Blueprint,Saving the entire flow structure as a JSON/YAML file to share with others or move to another account.,AI Chatbot & Automation,Import---Export-Blueprint.md
+Infinite Canvas,"A workspace interface that expands indefinitely in all directions, allowing complex node graphs to be mapped out.",AI Chatbot & Automation,Infinite-Canvas.md
+Intent Recognition,Technology that identifies the user's specific purpose or goal from their input.,AI Chatbot & Automation,Intent-Recognition.md
+Iterator / For-Each,"A logic block that processes items in a list one by one (e.g., processing 10 rows from a spreadsheet).",AI Chatbot & Automation,Iterator---For-Each.md
+JSON Path,"A query syntax used to extract specific values (e.g., 'user.id') from a complex JSON data structure.",AI Chatbot & Automation,JSON-Path.md
+Knowledge Base Connector,A specialized node that links the flow to an uploaded dataset for RAG operations.,AI Chatbot & Automation,Knowledge-Base-Connector.md
+LangFlow,"A UI for LangChain, designed with a reactive flow based on drag-and-drop components.",AI Chatbot & Automation,LangFlow.md
+Lemmatization,Grouping together the inflected forms of a word so they can be analyzed as a single item.,AI Chatbot & Automation,Lemmatization.md
+Logic Node / Conditional Branching,"A block that directs the flow down different paths based on specific criteria (e.g., If user says 'Yes').",AI Chatbot & Automation,Logic-Node---Conditional-Branching.md
+Loop Node,"A function that repeats a set of actions until a certain condition is met (e.g., processing a list of items).",AI Chatbot & Automation,Loop-Node.md
+Make (Integromat),"A visual platform that lets you design, build, and automate anything from simple tasks to complex workflows.",AI Chatbot & Automation,Make--Integromat-.md
+Minimap,"A small overview map used to navigate large, complex flows with hundreds of nodes.",AI Chatbot & Automation,Minimap.md
+Misunderstood Rate,The percentage of user inputs where the bot failed to identify an intent or triggered a fallback.,AI Chatbot & Automation,Misunderstood-Rate.md
+Multi-turn Conversation,"A dialogue that requires multiple back-and-forth exchanges to complete a task (e.g., booking a flight).",AI Chatbot & Automation,Multi-turn-Conversation.md
+N-Gram,A contiguous sequence of n items (words or characters) from a given sample of text.,AI Chatbot & Automation,N-Gram.md
+Named Entity Recognition (NER),A subtask of information extraction that locates and classifies named entities like people or places.,AI Chatbot & Automation,Named-Entity-Recognition--NER-.md
+Natural Language Processing (NLP),"Technology that enables computers to understand, interpret, and generate human language.",AI Chatbot & Automation,Natural-Language-Processing--NLP-.md
+NLU Confidence Threshold,"The minimum score required for the NLU engine to trigger a specific intent; below this, it triggers a fallback.",AI Chatbot & Automation,NLU-Confidence-Threshold.md
+Node Grouping,Visually clustering related nodes together (often with a colored background) to document logic sections.,AI Chatbot & Automation,Node-Grouping.md
+Nodes and Edges,"Nodes are the functional blocks (actions), and Edges are the lines connecting them to define the data flow.",AI Chatbot & Automation,Nodes-and-Edges.md
+Open-Domain Bot,"A chatbot capable of engaging in conversation on any topic, rather than being limited to a specific domain.",AI Chatbot & Automation,Open-Domain-Bot.md
+Output Parsing,"Extracting specific parts of the AI's text response (e.g., just the JSON object) to use in the next step.",AI Chatbot & Automation,Output-Parsing.md
+Parallel Execution,Running multiple branches of the flow simultaneously to speed up processing.,AI Chatbot & Automation,Parallel-Execution.md
+Persistent Menu,"A menu interface that is always accessible within the chat window for common actions (e.g., 'Restart', 'Help').",AI Chatbot & Automation,Persistent-Menu.md
+Persona Design,"Creating a distinct personality, voice, and character for the bot to make interactions more engaging.",AI Chatbot & Automation,Persona-Design.md
+Precision and Recall,Metrics used to evaluate the performance of information retrieval and classification systems.,AI Chatbot & Automation,Precision-and-Recall.md
+Prompt Template,"A pre-configured prompt structure with placeholders for variables, saved for reuse across flows.",AI Chatbot & Automation,Prompt-Template.md
+Query Expansion,The process of reformulating or adding synonyms to a user's search query to improve the likelihood of finding relevant answers.,AI Chatbot & Automation,Query-Expansion.md
+Quick Replies,Suggested response buttons that appear above the keyboard to guide the user's next action.,AI Chatbot & Automation,Quick-Replies.md
+Rate Limiting Handler,Logic to automatically retry or wait when an external API returns a 'Too Many Requests' error.,AI Chatbot & Automation,Rate-Limiting-Handler.md
+Real-time Translation,"AI that instantly translates chat or voice conversations, allowing agents to support customers in any language.",AI Chatbot & Automation,Real-time-Translation.md
+Rich Media Cards,"Interactive UI elements in a chat stream that can display images, titles, subtitles, and buttons together.",AI Chatbot & Automation,Rich-Media-Cards.md
+Rule-Based Chatbot,"A chatbot that functions based on a pre-defined set of rules and decision trees, without using complex AI.",AI Chatbot & Automation,Rule-Based-Chatbot.md
+Sandbox Mode,A testing environment where flows can be run safely without charging credits or affecting live data.,AI Chatbot & Automation,Sandbox-Mode.md
+Self-Healing Knowledge,AI that automatically detects outdated info or broken links in the knowledge base and suggests fixes.,AI Chatbot & Automation,Self-Healing-Knowledge.md
+Semantic Routing,"Using vector similarity to route a user's query to the correct specialized agent or prompt, rather than using keywords.",AI Chatbot & Automation,Semantic-Routing.md
+Sentiment Analysis,"The process of determining the emotional tone (positive, negative, neutral) behind a text.",AI Chatbot & Automation,Sentiment-Analysis.md
+Sentiment-Adaptive Tone,"AI capability to adjust the tone of voice (empathetic, formal, cheerful) based on the customer's current emotion.",AI Chatbot & Automation,Sentiment-Adaptive-Tone.md
+Slot Carryover,"The ability of the bot to remember information (e.g., 'Tokyo') from a previous turn and apply it to the current intent.",AI Chatbot & Automation,Slot-Carryover.md
+Slot Filling,Extracting specific parameters (like dates or locations) to complete a user's request.,AI Chatbot & Automation,Slot-Filling.md
+Small Talk,"The ability of a bot to handle casual, non-functional conversation (e.g., 'How are you?') to seem more human.",AI Chatbot & Automation,Small-Talk.md
+Speech-to-Text Node,A block that accepts audio input and transcribes it into text for the LLM to process.,AI Chatbot & Automation,Speech-to-Text-Node.md
+Splash Screen,The initial screen or welcome image displayed while the chatbot widget is loading.,AI Chatbot & Automation,Splash-Screen.md
+SSML (Speech Synthesis Markup Language),"An XML-based markup language for assisting the generation of synthetic speech (controlling pitch, pauses, speed).",AI Chatbot & Automation,SSML--Speech-Synthesis-Markup-Language-.md
+Stack AI,"A no-code interface to build, test, and deploy AI workflows using the latest LLMs.",AI Chatbot & Automation,Stack-AI.md
+State / Context Memory,"Storage that persists across different sessions or runs, allowing the bot to remember long-term info.",AI Chatbot & Automation,State---Context-Memory.md
+State Machine,"A model used in bot development to manage the current 'state' of the conversation (e.g., 'waiting for date' vs 'waiting for payment').",AI Chatbot & Automation,State-Machine.md
+Sub-flow / Nested Flow,embedding one entire workflow inside another to simplify complex logic and reuse components.,AI Chatbot & Automation,Sub-flow---Nested-Flow.md
+Suggestion Chips,"Small, pill-shaped buttons that offer quick response options (e.g., 'Yes', 'No'), usually disappearing after selection.",AI Chatbot & Automation,Suggestion-Chips.md
+Task-Oriented Bot,"A chatbot designed to help users complete a specific task, such as booking a flight or tracking a package.",AI Chatbot & Automation,Task-Oriented-Bot.md
+Team Collaboration / Workspace,Features allowing multiple users to edit or view flows within the same organization.,AI Chatbot & Automation,Team-Collaboration---Workspace.md
+Text-to-Speech Node,A block that converts the AI's text response into an audio file to be played back to the user.,AI Chatbot & Automation,Text-to-Speech-Node.md
+Typing Indicators,"Visual cues (e.g., three moving dots) shown to the user while the bot is processing a response.",AI Chatbot & Automation,Typing-Indicators.md
+Utterance,The specific phrase or sentence entered by the user into a chatbot.,AI Chatbot & Automation,Utterance.md
+Utterance Permutation,Generating multiple variations of a sentence to train the NLU model to recognize different ways of asking the same thing.,AI Chatbot & Automation,Utterance-Permutation.md
+VAD (Voice Activity Detection),Technology used in voicebots to detect when a user starts and stops speaking to avoid interrupting them.,AI Chatbot & Automation,VAD--Voice-Activity-Detection-.md
+Variable Injection,"Inserting dynamic data (e.g., user input) into prompts using a specific syntax like {{input}}.",AI Chatbot & Automation,Variable-Injection.md
+Version History / Rollback,Saving specific states of the flow allowing users to revert to a previous version if changes break the bot.,AI Chatbot & Automation,Version-History---Rollback.md
+Virtual Assistant,An AI agent that answers questions or performs tasks on behalf of the user.,AI Chatbot & Automation,Virtual-Assistant.md
+Visual Flow Builder,A drag-and-drop interface where users connect nodes to create AI workflows without writing code.,AI Chatbot & Automation,Visual-Flow-Builder.md
+Voicebot,A conversational agent that users interact with via spoken language rather than text.,AI Chatbot & Automation,Voicebot.md
+Voiceflow,"A conversation design tool that allows teams to design, prototype, and launch voice and chat assistants.",AI Chatbot & Automation,Voiceflow.md
+Wake Word,"A specific keyword used to activate a voice assistant (e.g., 'Hey Siri').",AI Chatbot & Automation,Wake-Word.md
+Web Scraper Node,A specific block designed to fetch and extract text content from a given URL within the flow.,AI Chatbot & Automation,Web-Scraper-Node.md
+Webhook Fulfillment,"The backend code that runs in response to an intent, fetching data from APIs to generate a dynamic response.",AI Chatbot & Automation,Webhook-Fulfillment.md
+Webhook Trigger,A starting point of a flow that activates whenever it receives data from an external service.,AI Chatbot & Automation,Webhook-Trigger.md
+Webview,A feature that opens a mini-browser inside the chat window to load complex forms or pages without leaving the app.,AI Chatbot & Automation,Webview.md
+White Labeling,"The ability to remove the platform's branding (e.g., 'Powered by FlowHunt') from the final chatbot widget.",AI Chatbot & Automation,White-Labeling.md
+Wizard of Oz Testing (WoZ),A testing method where a human manually simulates the chatbot's responses behind the scenes to test conversation flows.,AI Chatbot & Automation,Wizard-of-Oz-Testing--WoZ-.md
+Zapier,"The leader in no-code automation, recently added 'Zapier Central' for AI-powered logic.",AI Chatbot & Automation,Zapier.md
+Zero-Shot Chain of Thought,Prompting the AI to reason step-by-step ('Let's think step by step') without providing examples.,AI Chatbot & Automation,Zero-Shot-Chain-of-Thought.md
+Zero-Touch Resolution,Issues resolved entirely by automation without any human agent involvement.,AI Chatbot & Automation,Zero-Touch-Resolution.md
+n8n,"A workflow automation tool that connects your apps and services, with strong AI integration features.",AI Chatbot & Automation,n8n.md
+Adversarial Attack,Inputs designed to cause an AI model to make a mistake.,AI Ethics & Safety Mechanisms,Adversarial-Attack.md
+Adversarial Robustness,The ability of a model to resist adversarial attacks.,AI Ethics & Safety Mechanisms,Adversarial-Robustness.md
+Algorithmic Accountability,The principle that organizations are responsible for the results of the algorithms they use.,AI Ethics & Safety Mechanisms,Algorithmic-Accountability.md
+Alignment Problem,The challenge of ensuring AI systems' goals and behaviors match human values and intentions.,AI Ethics & Safety Mechanisms,Alignment-Problem.md
+Bias Mitigation,Techniques used to reduce or eliminate bias in machine learning models.,AI Ethics & Safety Mechanisms,Bias-Mitigation.md
+Content Moderation,The practice of monitoring and managing user-generated content.,AI Ethics & Safety Mechanisms,Content-Moderation.md
+Data Poisoning,An attack where malicious data is injected into a training set to corrupt the model.,AI Ethics & Safety Mechanisms,Data-Poisoning.md
+Deepfake Detection,Technologies designed to identify media that has been manipulated by AI.,AI Ethics & Safety Mechanisms,Deepfake-Detection.md
+Fairness Metrics,Quantifiable measures used to assess whether an AI model is biased against certain groups.,AI Ethics & Safety Mechanisms,Fairness-Metrics.md
+Human-in-the-Loop (HITL),"A model that requires human interaction for training, tuning, or testing.",AI Ethics & Safety Mechanisms,Human-in-the-Loop--HITL-.md
+Indirect Prompt Injection,An attack where the LLM reads a malicious prompt hidden in a webpage or email it is processing.,AI Ethics & Safety Mechanisms,Indirect-Prompt-Injection.md
+Jailbreaking,The act of bypassing the safety restrictions placed on an AI model.,AI Ethics & Safety Mechanisms,Jailbreaking.md
+Model Cards,"Documents that provide details about a machine learning model's performance, limitations, and intended use.",AI Ethics & Safety Mechanisms,Model-Cards.md
+Model Robustness,The ability of a model to maintain performance when faced with unexpected or malicious inputs.,AI Ethics & Safety Mechanisms,Model-Robustness.md
+PII Redaction,"Automatically detecting and blurring/removing sensitive info (credit cards, names) from logs and training data.",AI Ethics & Safety Mechanisms,PII-Redaction.md
+Privacy-Preserving ML,Techniques like Differential Privacy that allow models to learn without exposing individual data points.,AI Ethics & Safety Mechanisms,Privacy-Preserving-ML.md
+Red Teaming,Ethical hacking to test AI systems for vulnerabilities and biases.,AI Ethics & Safety Mechanisms,Red-Teaming.md
+Regulatory Sandbox,A framework set up by a regulator that allows FinTech startups and other innovators to conduct live experiments in a controlled environment.,AI Ethics & Safety Mechanisms,Regulatory-Sandbox.md
+Safety Guardrails,Controls implemented to prevent AI from generating harmful or inappropriate content.,AI Ethics & Safety Mechanisms,Safety-Guardrails.md
+Shadow AI,The unsanctioned use of generative AI tools by employees within an organization.,AI Ethics & Safety Mechanisms,Shadow-AI.md
+Transparency,The extent to which the internal workings and decision-making processes of an AI system are visible and understandable.,AI Ethics & Safety Mechanisms,Transparency.md
+Watermarking,Embedding hidden signals in AI-generated content to identify its origin.,AI Ethics & Safety Mechanisms,Watermarking.md
+Auto-Scaling Group,A collection of EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management.,AI Infrastructure & Deployment,Auto-Scaling-Group.md
+Autoscaling,A method used in cloud computing to dynamically adjust the amount of computational resources.,AI Infrastructure & Deployment,Autoscaling.md
+Batch Processing,"Processing a large volume of data all at once, rather than one item at a time (real-time).",AI Infrastructure & Deployment,Batch-Processing.md
+Blue-Green Deployment,A release management technique that reduces downtime and risk by running two identical production environments.,AI Infrastructure & Deployment,Blue-Green-Deployment.md
+Canary Release,Rolling out a new version of software to a small subset of users before a full rollout.,AI Infrastructure & Deployment,Canary-Release.md
+Chaos Engineering,"The discipline of experimenting on a system (e.g., intentionally causing failures) to build confidence in its resilience.",AI Infrastructure & Deployment,Chaos-Engineering.md
+Chroma,An open-source embedding database designed to make it easy to build LLM apps.,AI Infrastructure & Deployment,Chroma.md
+Cloud Computing,Applications built and run to take full advantage of the cloud computing model.,AI Infrastructure & Deployment,Cloud-Computing.md
+Containerization,Packaging software code with all its dependencies so it runs uniformly on any infrastructure.,AI Infrastructure & Deployment,Containerization.md
+Cosine Similarity,"A metric used to measure how similar two vectors are, often used to determine the relevance of search results.",AI Infrastructure & Deployment,Cosine-Similarity.md
+Docker,A platform used to package applications into containers.,AI Infrastructure & Deployment,Docker.md
+Edge AI,Running AI algorithms locally on a hardware device rather than in the cloud.,AI Infrastructure & Deployment,Edge-AI.md
+Feature Flags,A technique to turn features on or off in a live system without deploying new code.,AI Infrastructure & Deployment,Feature-Flags.md
+FinOps for AI,The practice of managing and optimizing the financial performance of cloud and AI resources.,AI Infrastructure & Deployment,FinOps-for-AI.md
+GitOps,A set of practices to manage infrastructure and application configurations using Git as the single source of truth.,AI Infrastructure & Deployment,GitOps.md
+GPU Acceleration,Using Graphics Processing Units to speed up compute-intensive AI tasks.,AI Infrastructure & Deployment,GPU-Acceleration.md
+HNSW (Hierarchical Navigable Small World),"An algorithm used in vector databases for approximate nearest neighbor search, known for high speed and accuracy.",AI Infrastructure & Deployment,HNSW--Hierarchical-Navigable-Small-World-.md
+Hugging Face,"The AI community building the future. Hub for models, datasets, and demos.",AI Infrastructure & Deployment,Hugging-Face.md
+High Availability (HA),"Systems aimed at ensuring an agreed level of operational performance, usually uptime, for a higher than normal period.",AI Infrastructure & Deployment,High-Availability--HA-.md
+Inference Latency,The time delay between sending data to an AI model and receiving a prediction.,AI Infrastructure & Deployment,Inference-Latency.md
+Infrastructure as Code (IaC),Managing and provisioning computer data centers through machine-readable definition files.,AI Infrastructure & Deployment,Infrastructure-as-Code--IaC-.md
+KV Cache,A technique to cache Key and Value states in Transformer models to speed up token generation during inference.,AI Infrastructure & Deployment,KV-Cache.md
+Latency,The time delay between a user's action and the web application's response.,AI Infrastructure & Deployment,Latency.md
+Latency Budget,"The maximum allowable time for a system to respond, allocated across different components.",AI Infrastructure & Deployment,Latency-Budget.md
+Load Balancing,Distributing network traffic across multiple servers to ensure no single server performs too much work.,AI Infrastructure & Deployment,Load-Balancing.md
+Micro-Frontends,"An architectural style where a front-end app is decomposed into individual, semi-independent 'microapps'.",AI Infrastructure & Deployment,Micro-Frontends.md
+Microservices,An architectural style that structures an application as a collection of services.,AI Infrastructure & Deployment,Microservices.md
+Milvus,A cloud-native vector database built for scalable similarity search.,AI Infrastructure & Deployment,Milvus.md
+MLOps,Practices to streamline the deployment and maintenance of machine learning models.,AI Infrastructure & Deployment,MLOps.md
+Model Quantization,Reducing the precision of the numbers used to represent a model's parameters to save memory and speed up inference.,AI Infrastructure & Deployment,Model-Quantization.md
+Model Serving,The process of making a trained model available for use in software applications.,AI Infrastructure & Deployment,Model-Serving.md
+Monolithic Architecture,"A traditional software architecture where the entire application is built as a single, indivisible unit.",AI Infrastructure & Deployment,Monolithic-Architecture.md
+Multi-Tenancy,An architecture where a single instance of software serves multiple customers (tenants).,AI Infrastructure & Deployment,Multi-Tenancy.md
+PagedAttention,A memory management algorithm (used in vLLM) that optimizes memory usage for higher throughput.,AI Infrastructure & Deployment,PagedAttention.md
+Pinecone,A managed vector database that makes it easy to build high-performance vector search applications.,AI Infrastructure & Deployment,Pinecone.md
+Qdrant,A vector similarity search engine and vector database.,AI Infrastructure & Deployment,Qdrant.md
+Serverless Computing,"A cloud execution model where the cloud provider runs the server, and dynamically manages the allocation of machine resources.",AI Infrastructure & Deployment,Serverless-Computing.md
+Sharding,A method of splitting and storing a single logical dataset in multiple databases.,AI Infrastructure & Deployment,Sharding.md
+Speculative Decoding,A method to speed up inference by having a small model draft tokens and a large model verify them.,AI Infrastructure & Deployment,Speculative-Decoding.md
+Spot Instances,"Unused cloud compute capacity offered at a steep discount, often used for batch processing or model training.",AI Infrastructure & Deployment,Spot-Instances.md
+Technical Debt,"The implied cost of future reworking required when choosing an easy, short-term solution over a better long-term approach.",AI Infrastructure & Deployment,Technical-Debt.md
+Telemetry,The automatic recording and transmission of data from remote or inaccessible sources to an IT system.,AI Infrastructure & Deployment,Telemetry.md
+Throttling,Intentionally limiting the rate at which a user can access an API or service.,AI Infrastructure & Deployment,Throttling.md
+Vector Database,A database designed to store and query vector embeddings for efficient similarity search.,AI Infrastructure & Deployment,Vector-Database.md
+Weaviate,An open-source vector database that stores both objects and vectors.,AI Infrastructure & Deployment,Weaviate.md
+Attribution Modeling,Determining which marketing channels deserve credit for a conversion.,Analytics & Content Effectiveness,Attribution-Modeling.md
+Attribution Window,The period of time between a user's exposure to an ad and the subsequent conversion.,Analytics & Content Effectiveness,Attribution-Window.md
+Bounce Rate,The percentage of visitors who enter the site and then leave rather than viewing other pages.,Analytics & Content Effectiveness,Bounce-Rate.md
+Click Map,A visualization showing exactly where users are clicking on a page.,Analytics & Content Effectiveness,Click-Map.md
+Cohort Analysis,"Grouping users by shared characteristics (e.g., sign-up month) to track behavior over time.",Analytics & Content Effectiveness,Cohort-Analysis.md
+Conversion Funnel,The set of steps a visitor needs to take before reaching the conversion.,Analytics & Content Effectiveness,Conversion-Funnel.md
+Dwell Time,The length of time a visitor spends on a page before returning to the SERPs.,Analytics & Content Effectiveness,Dwell-Time.md
+Engagement Metrics,Data points that measure how much a user interacts with content.,Analytics & Content Effectiveness,Engagement-Metrics.md
+Engagement Score,A composite metric quantifying how engaged a user is with the content or product.,Analytics & Content Effectiveness,Engagement-Score.md
+Event Tracking,Measuring user interactions with content that can be tracked independently from a web page or a screen load.,Analytics & Content Effectiveness,Event-Tracking.md
+Exit Page,The last page a visitor views before leaving the website.,Analytics & Content Effectiveness,Exit-Page.md
+Exit Rate,The percentage of pageviews that were the last in the session.,Analytics & Content Effectiveness,Exit-Rate.md
+Funnel Visualization,A graphical representation of the steps visitors take towards a conversion.,Analytics & Content Effectiveness,Funnel-Visualization.md
+Heatmap,A data visualization technique that shows the magnitude of a phenomenon as color in two dimensions.,Analytics & Content Effectiveness,Heatmap.md
+Heatmap Analysis,"Visualizing user behavior (clicks, scrolls) on a page using color gradients.",Analytics & Content Effectiveness,Heatmap-Analysis.md
+Multivariate Testing,A technique for testing a hypothesis in which multiple variables are modified.,Analytics & Content Effectiveness,Multivariate-Testing.md
+Page Value,A metric estimating the monetary value of a page based on its contribution to conversions.,Analytics & Content Effectiveness,Page-Value.md
+Path Analysis,Visualizing the sequence of pages a user visits during their session.,Analytics & Content Effectiveness,Path-Analysis.md
+Retention Rate,The percentage of customers who continue paying for a product over a given timeframe.,Analytics & Content Effectiveness,Retention-Rate.md
+ROI Analysis,An analysis of the return on investment for a particular campaign or content piece.,Analytics & Content Effectiveness,ROI-Analysis.md
+Scroll Depth,A metric measuring how far down a page a user scrolls.,Analytics & Content Effectiveness,Scroll-Depth.md
+Scroll Map,A visual representation of how far down the page users are scrolling.,Analytics & Content Effectiveness,Scroll-Map.md
+Session Recording,Recording real user actions on a website to understand behavior and UX issues.,Analytics & Content Effectiveness,Session-Recording.md
+User Path,The sequence of pages a user visits during a session.,Analytics & Content Effectiveness,User-Path.md
+Aspect-Based Sentiment Analysis,"Analyzing sentiment related to specific aspects of a product (e.g., battery life vs. screen).",Application & Use-Cases,Aspect-Based-Sentiment-Analysis.md
+Code Generation,"Using AI to write, debug, or explain programming code.",Application & Use-Cases,Code-Generation.md
+Code Interpreter,An AI feature that can write and execute code (usually Python) to perform data analysis or math.,Application & Use-Cases,Code-Interpreter.md
+Content Summarization,AI capability to condense long documents into short summaries.,Application & Use-Cases,Content-Summarization.md
+Demand Forecasting,Using historical data and AI to predict future demand for products or services.,Application & Use-Cases,Demand-Forecasting.md
+EdTech Personalized Learning,AI systems that adapt learning materials to the student's pace and understanding.,Application & Use-Cases,EdTech-Personalized-Learning.md
+FinTech Fraud Detection,Using AI to identify suspicious financial transactions in real-time.,Application & Use-Cases,FinTech-Fraud-Detection.md
+Financial Risk Management,AI models predicting loan defaults or market volatility.,Application & Use-Cases,Financial-Risk-Management.md
+Fraud Detection,Systems that identify suspicious patterns in transaction data to prevent fraud.,Application & Use-Cases,Fraud-Detection.md
+HealthTech Diagnosis,AI tools assisting doctors in analyzing medical images or symptoms.,Application & Use-Cases,HealthTech-Diagnosis.md
+HR Talent Acquisition,Using AI to screen resumes and match candidates to job descriptions.,Application & Use-Cases,HR-Talent-Acquisition.md
+HR Tech Resume Screening,Automated filtering of job applications based on keywords and qualifications.,Application & Use-Cases,HR-Tech-Resume-Screening.md
+Lead Scoring,Using AI to rank prospects against a scale that represents the perceived value of each lead.,Application & Use-Cases,Lead-Scoring.md
+Legal Contract Review,"AI tools that scan legal documents for risks, anomalies, and compliance issues.",Application & Use-Cases,Legal-Contract-Review.md
+Legal Tech Document Review,AI-assisted scanning of legal contracts to find risks and clauses.,Application & Use-Cases,Legal-Tech-Document-Review.md
+Medical Imaging Analysis,"Using AI to analyze X-rays, MRIs, etc., to assist in diagnosis.",Application & Use-Cases,Medical-Imaging-Analysis.md
+Personalized Education,AI systems that adapt the curriculum difficulty based on student performance.,Application & Use-Cases,Personalized-Education.md
+Personalized Recommendations,Suggesting products or content tailored to an individual user's preferences.,Application & Use-Cases,Personalized-Recommendations.md
+Predictive Maintenance,Using data analysis to detect anomalies in equipment and prevent failure.,Application & Use-Cases,Predictive-Maintenance.md
+Retail Demand Forecasting,Using AI to predict future product demand based on historical data and trends.,Application & Use-Cases,Retail-Demand-Forecasting.md
+Retail Personalization,Tailoring the shopping experience and product suggestions to individual shopper habits.,Application & Use-Cases,Retail-Personalization.md
+Retrieval Augmented Generation (RAG),Combining an LLM with an external knowledge retrieval system to reduce hallucinations and update knowledge.,Application & Use-Cases,Retrieval-Augmented-Generation--RAG-.md
+Smart City Traffic Management,Using AI to control traffic lights and reduce congestion based on real-time flow.,Application & Use-Cases,Smart-City-Traffic-Management.md
+Smart Manufacturing,Using AI and IoT to optimize factory production lines and maintenance.,Application & Use-Cases,Smart-Manufacturing.md
+Speech Recognition,Technology that enables the recognition and translation of spoken language into text.,Application & Use-Cases,Speech-Recognition.md
+Supply Chain Optimization,AI forecasting to manage inventory levels and logistics routes.,Application & Use-Cases,Supply-Chain-Optimization.md
+Virtual Agents,Advanced AI systems capable of handling complex customer interactions autonomously.,Application & Use-Cases,Virtual-Agents.md
+Voice Synthesis,The artificial production of human speech (Text-to-Speech).,Application & Use-Cases,Voice-Synthesis.md
+Brand Storytelling,Using narrative techniques to connect a brand to customers.,Blogging & Thought Leadership,Brand-Storytelling.md
+Brand Voice vs Tone,Voice is the consistent personality of the brand; Tone is the emotional inflection applied to specific situations.,Blogging & Thought Leadership,Brand-Voice-vs-Tone.md
+Byline,The line in a newspaper or magazine that gives the name of the writer of an article.,Blogging & Thought Leadership,Byline.md
+Case Studies,Detailed stories of how customers used a product to solve a problem.,Blogging & Thought Leadership,Case-Studies.md
+Case Study / Success Story,A detailed account of how a customer used the product to solve a problem and achieve results.,Blogging & Thought Leadership,Case-Study---Success-Story.md
+Content Brief,"A document outlining the goals, audience, keywords, and structure for a piece of content before writing begins.",Blogging & Thought Leadership,Content-Brief.md
+Content Curation,Gathering relevant information from various sources and presenting it in a meaningful way.,Blogging & Thought Leadership,Content-Curation.md
+Content Franchise,"A recurring content series (e.g., weekly show, podcast, newsletter) that builds a loyal audience.",Blogging & Thought Leadership,Content-Franchise.md
+Content Pillar,A substantive piece of content on a specific topic that can be broken into many smaller pieces.,Blogging & Thought Leadership,Content-Pillar.md
+Editorial Calendar,A schedule that helps content teams plan and organize upcoming content production.,Blogging & Thought Leadership,Editorial-Calendar.md
+Editorial Voice,The distinct personality and tone used in all content produced by a brand.,Blogging & Thought Leadership,Editorial-Voice.md
+Expert Roundup,A blog post that compiles quotes or insights from multiple industry experts on a specific topic.,Blogging & Thought Leadership,Expert-Roundup.md
+Ghostwriting,Writing content that is officially credited to another person (often an executive).,Blogging & Thought Leadership,Ghostwriting.md
+Guest Blogging,Writing content for another company's website to increase traffic and authority.,Blogging & Thought Leadership,Guest-Blogging.md
+Headline Optimization,Tweaking article titles to maximize click-through rates and SEO visibility.,Blogging & Thought Leadership,Headline-Optimization.md
+Industry Insights,Deep understanding and analysis of trends within a specific industry.,Blogging & Thought Leadership,Industry-Insights.md
+Listicle,"An article presented in the form of a list, often used for ease of reading and sharing.",Blogging & Thought Leadership,Listicle.md
+Long-form Content,In-depth articles (usually 2000+ words) that cover a topic comprehensively.,Blogging & Thought Leadership,Long-form-Content.md
+Narrative Arc,The chronological construction of a plot in storytelling used to keep readers engaged.,Blogging & Thought Leadership,Narrative-Arc.md
+Op-Ed,A piece of writing which expresses a personal opinion and is usually printed in a newspaper opposite the page on which the editorial lies.,Blogging & Thought Leadership,Op-Ed.md
+Opinion Pieces,Articles that reflect the author's personal opinion about a subject.,Blogging & Thought Leadership,Opinion-Pieces.md
+Original Research,"Content based on primary data collected by the brand (surveys, data analysis) to generate unique insights.",Blogging & Thought Leadership,Original-Research.md
+Skimmability,How easy it is for a reader to scan content and grasp the main points quickly.,Blogging & Thought Leadership,Skimmability.md
+Subject Matter Expert (SME),A person with authority and deep knowledge in a particular area or topic.,Blogging & Thought Leadership,Subject-Matter-Expert--SME-.md
+Trend Report,A publication that analyzes current market trends and predicts future developments.,Blogging & Thought Leadership,Trend-Report.md
+Voice and Tone,The consistent personality (voice) and emotional inflection (tone) of a brand's content.,Blogging & Thought Leadership,Voice-and-Tone.md
+White Papers,An authoritative report or guide that informs readers concisely about a complex issue.,Blogging & Thought Leadership,White-Papers.md
+Accent Localization,Technology that alters an agent's voice accent in real-time to match the customer's region for better understanding.,Call Center Functionality,Accent-Localization.md
+ACD (Automatic Call Distributor),A system that routes incoming calls to the most appropriate agent based on rules.,Call Center Functionality,ACD--Automatic-Call-Distributor-.md
+Adherence,A metric measuring how closely agents follow their assigned schedules.,Call Center Functionality,Adherence.md
+AHT (Average Handling Time),"The average duration of an entire transaction, from call initiation to wrap-up.",Call Center Functionality,AHT--Average-Handling-Time-.md
+Ambient Intelligence,Systems that listen in the background to support calls with relevant data without explicit commands.,Call Center Functionality,Ambient-Intelligence.md
+Average Speed of Answer (ASA),The average time a caller waits in queue before an agent answers.,Call Center Functionality,Average-Speed-of-Answer--ASA-.md
+Blended Agent,An agent who handles both inbound calls and outbound calls or other channels.,Call Center Functionality,Blended-Agent.md
+Call Abandonment Rate,The percentage of callers who hang up before reaching an agent.,Call Center Functionality,Call-Abandonment-Rate.md
+Call Barging,A feature that allows a supervisor to enter a live call to speak with both the agent and the customer.,Call Center Functionality,Call-Barging.md
+Call Blending,Automatically moving agents between inbound and outbound calls based on volume.,Call Center Functionality,Call-Blending.md
+Call Recording,Capturing audio of telephone conversations for quality assurance and compliance.,Call Center Functionality,Call-Recording.md
+Call Whispering,A feature allowing a manager to speak to an agent during a call without the customer hearing.,Call Center Functionality,Call-Whispering.md
+Callback Queue,A feature allowing callers to request a return call instead of waiting on hold.,Call Center Functionality,Callback-Queue.md
+First Call Resolution (FCR),The percentage of calls where the customer's issue is resolved without a callback or transfer.,Call Center Functionality,First-Call-Resolution--FCR-.md
+IVR (Interactive Voice Response),An automated telephony system that interacts with callers via voice and keypad.,Call Center Functionality,IVR--Interactive-Voice-Response-.md
+Occupancy Rate,The percent of logged-in time an agent spends on call-related activities.,Call Center Functionality,Occupancy-Rate.md
+Predictive Dialer,An outbound calling system that automatically dials numbers based on agent availability.,Call Center Functionality,Predictive-Dialer.md
+Quality Monitoring (QM),The process of listening to or reviewing agent interactions to ensure standards are met.,Call Center Functionality,Quality-Monitoring--QM-.md
+Service Level (SL),"The percentage of calls answered within a specified timeframe (e.g., 80% in 20 seconds).",Call Center Functionality,Service-Level--SL-.md
+Silent Monitoring,A supervisor listening to a call in real-time without the agent or caller knowing.,Call Center Functionality,Silent-Monitoring.md
+Skill Gap Analysis,Identifying the difference between the skills agents have and the skills they need.,Call Center Functionality,Skill-Gap-Analysis.md
+Softphone,Software that allows users to make telephone calls over the internet via a computer.,Call Center Functionality,Softphone.md
+Speech Analytics,"Technology that analyzes voice recordings to detect sentiment, keywords, and trends.",Call Center Functionality,Speech-Analytics.md
+Voice AI,"Advanced voice assistants that sound human-like and can handle complex conversations, replacing traditional IVR.",Call Center Functionality,Voice-AI.md
+Voice Biometrics,Technology that uses unique vocal characteristics to verify a speaker's identity.,Call Center Functionality,Voice-Biometrics.md
+Wallboard,A visual display (screen) in a call center showing real-time performance metrics to agents.,Call Center Functionality,Wallboard.md
+WebRTC,An open framework that enables Real-Time Communications in the browser.,Call Center Functionality,WebRTC.md
+3-Way Calling,A conference call feature that allows three parties to be on the line simultaneously.,Cloud Telephony & VoIP Infrastructure,3-Way-Calling.md
+Call Flipping,"Transferring a live call from one device (e.g., desk phone) to another (e.g., mobile app) seamlessly.",Cloud Telephony & VoIP Infrastructure,Call-Flipping.md
+Call Parking,Placing a call on hold in a 'parking spot' so that it can be picked up by any agent from any extension.,Cloud Telephony & VoIP Infrastructure,Call-Parking.md
+Call Queuing,Placing incoming calls in a line (queue) to be answered by the next available agent.,Cloud Telephony & VoIP Infrastructure,Call-Queuing.md
+Click-to-Call,A function allowing agents to dial a customer's number directly by clicking it on the PC screen.,Cloud Telephony & VoIP Infrastructure,Click-to-Call.md
+Cloud PBX,A phone system that is hosted entirely on servers in off-site data centers and powered over the internet.,Cloud Telephony & VoIP Infrastructure,Cloud-PBX.md
+Cold Transfer (Blind Transfer),Transferring a call to another agent immediately without speaking to them first.,Cloud Telephony & VoIP Infrastructure,Cold-Transfer--Blind-Transfer-.md
+CTI (Computer Telephony Integration),"Technology that allows computers to interact with telephone systems, enabling features like screen pops.",Cloud Telephony & VoIP Infrastructure,CTI--Computer-Telephony-Integration-.md
+DID (Direct Inward Dialing),A service that allows a phone number to ring directly to a specific phone/extension at a business instead of going to a menu.,Cloud Telephony & VoIP Infrastructure,DID--Direct-Inward-Dialing-.md
+DTMF (Dual Tone Multi Frequency),"The signal generated when you press a key on a telephone, used for menu navigation in IVR.",Cloud Telephony & VoIP Infrastructure,DTMF--Dual-Tone-Multi-Frequency-.md
+Hunt Group,A group of phone extensions organized to process specific incoming calls by ringing them in a set order.,Cloud Telephony & VoIP Infrastructure,Hunt-Group.md
+Latency / Jitter,"Metrics measuring the delay or variation in packet arrival time, crucial for VoIP call quality.",Cloud Telephony & VoIP Infrastructure,Latency---Jitter.md
+Number Portability (LNP),The ability to keep your existing phone number when switching to a new service provider.,Cloud Telephony & VoIP Infrastructure,Number-Portability--LNP-.md
+Presence Status,"Indicators showing whether an agent is available, busy, or offline, visible to the whole team.",Cloud Telephony & VoIP Infrastructure,Presence-Status.md
+Screen Pop,Automatically displaying the caller's account information (CRM data) on the agent's screen when the phone rings.,Cloud Telephony & VoIP Infrastructure,Screen-Pop.md
+Simultaneous Ringing,"Setting multiple phones (e.g., desk phone and mobile app) to ring at the same time for an incoming call.",Cloud Telephony & VoIP Infrastructure,Simultaneous-Ringing.md
+SIP Trunking,A method of sending voice and other unified communications services over the internet to the PSTN.,Cloud Telephony & VoIP Infrastructure,SIP-Trunking.md
+Softphone App,"Software installed on a PC or smartphone that acts as a phone interface, replacing hardware phones.",Cloud Telephony & VoIP Infrastructure,Softphone-App.md
+Toll-Free Number,A telephone number that is billed for all arriving calls instead of incurring charges to the originating telephone subscriber.,Cloud Telephony & VoIP Infrastructure,Toll-Free-Number.md
+Voicemail transcription,Using AI to convert voicemail audio messages into text format sent via email or chat.,Cloud Telephony & VoIP Infrastructure,Voicemail-transcription.md
+Warm Transfer,Putting the caller on hold to speak with the new agent first before transferring the call.,Cloud Telephony & VoIP Infrastructure,Warm-Transfer.md
+WebRTC (Web Real-Time Communication),An open source project providing web browsers and mobile applications with real-time communication (voice/video) capabilities via APIs.,Cloud Telephony & VoIP Infrastructure,WebRTC--Web-Real-Time-Communication-.md
+AMA (Ask Me Anything),A Q&A session where a host answers questions from the community audience in real-time.,Community Management,AMA--Ask-Me-Anything-.md
+Brand Ambassador,A person who is hired or volunteers to represent a brand in a positive light and help to increase brand awareness.,Community Management,Brand-Ambassador.md
+Churn (Community),When members stop participating or visiting the community platform.,Community Management,Churn--Community-.md
+Circle,"A community platform for creators and brands to host discussions, memberships, and content.",Community Management,Circle.md
+Code of Conduct,"A set of rules outlining the social norms, rules, and responsibilities of an individual in the community.",Community Management,Code-of-Conduct.md
+Community Engagement,The process of building relationships with community members to keep them interested and active.,Community Management,Community-Engagement.md
+Community Forum,An online discussion site where people can hold conversations in the form of posted messages.,Community Management,Community-Forum.md
+Community Guidelines,A set of rules that defines what behavior is acceptable and unacceptable in the community.,Community Management,Community-Guidelines.md
+Community-Led Growth (CLG),A go-to-market strategy where the community is the primary driver of acquisition and retention.,Community Management,Community-Led-Growth--CLG-.md
+Discord,"A voice, video, and text communication service used by over a hundred million people to hang out.",Community Management,Discord.md
+Discourse,An open-source discussion platform used for community forums and mailing lists.,Community Management,Discourse.md
+Gamification,"Applying game mechanics (points, leaderboards) to non-game contexts to increase engagement.",Community Management,Gamification.md
+Gamification Badges,"Digital rewards given to community members for achievements (e.g., 'Top Contributor').",Community Management,Gamification-Badges.md
+Lurker,A member of an online community who observes but does not actively participate.,Community Management,Lurker.md
+Mighty Networks,"A platform that brings together community, courses, and memberships in one place.",Community Management,Mighty-Networks.md
+Moderation Queue,A list of user-generated content waiting for approval by a community moderator.,Community Management,Moderation-Queue.md
+Slack,A messaging app for business that connects people to the information they need.,Community Management,Slack.md
+Stickiness,A measure of how often users return to the community or app (often calculated as DAU/MAU).,Community Management,Stickiness.md
+Superuser,Highly active and knowledgeable community members who often help others and drive engagement.,Community Management,Superuser.md
+Top Contributor,A user who frequently posts high-quality content and helps others in the community.,Community Management,Top-Contributor.md
+Content Repurposing,"Taking one piece of content (e.g., a blog post) and turning it into other formats (e.g., video, infographic).",Content Distribution & Amplification,Content-Repurposing.md
+Content Syndication,Republishing your content on third-party websites to reach a broader audience.,Content Distribution & Amplification,Content-Syndication.md
+Dark Social,"Private sharing of content via direct messages or email, which is difficult to track in analytics.",Content Distribution & Amplification,Dark-Social.md
+Dark Social Sharing,"Sharing content via private channels like email or DM, which is hard to track.",Content Distribution & Amplification,Dark-Social-Sharing.md
+Earned Media,"Publicity gained through promotional efforts other than paid media advertising (e.g., reviews, shares).",Content Distribution & Amplification,Earned-Media.md
+Employee Advocacy,Encouraging employees to share company content on their personal social networks to increase reach.,Content Distribution & Amplification,Employee-Advocacy.md
+Influencer Marketing,Endorsements and product placement from influencers who have a dedicated social following.,Content Distribution & Amplification,Influencer-Marketing.md
+Influencer Seeding,"Sending free products to influencers with no obligation to post, hoping for organic mentions.",Content Distribution & Amplification,Influencer-Seeding.md
+Native Advertising,"Paid content that matches the look, feel, and function of the media format in which it appears.",Content Distribution & Amplification,Native-Advertising.md
+Newsletter,A regularly distributed publication via email that is generally about one main topic.,Content Distribution & Amplification,Newsletter.md
+Newsletter Marketing,Sending informational and product-focused content via an email letter to a subscriber list.,Content Distribution & Amplification,Newsletter-Marketing.md
+Newsletter Sponsorship,Paying to place content or ads in a popular newsletter to reach a specific audience.,Content Distribution & Amplification,Newsletter-Sponsorship.md
+Outreach Strategy,Proactively contacting influencers or publishers to promote content.,Content Distribution & Amplification,Outreach-Strategy.md
+Owned Media,"Communication channels that are within one's control, such as websites, blogs, or email lists.",Content Distribution & Amplification,Owned-Media.md
+Paid Amplification,Using paid ads (like boosted posts) to increase the reach of organic content.,Content Distribution & Amplification,Paid-Amplification.md
+Paid Media,"External marketing efforts that involve a paid placement (e.g., PPC, branded content).",Content Distribution & Amplification,Paid-Media.md
+Paid Social,Advertising on social media platforms to reach a specific target audience.,Content Distribution & Amplification,Paid-Social.md
+Press Release,"A short, compelling news story written by a public relations professional and sent to targeted members of the media.",Content Distribution & Amplification,Press-Release.md
+Push Notifications,Messages sent to a user's mobile device or browser to alert them of new content.,Content Distribution & Amplification,Push-Notifications.md
+Repurposing Content,"Adapting existing content into different formats (e.g., turning a blog into a video).",Content Distribution & Amplification,Repurposing-Content.md
+RSS Feed,"A web feed that allows users and applications to access updates to websites in a standardized, computer-readable format.",Content Distribution & Amplification,RSS-Feed.md
+Social Sharing,Distributing content through social media platforms.,Content Distribution & Amplification,Social-Sharing.md
+Social Sharing Buttons,Widgets on a webpage that allow users to easily share content to their social profiles.,Content Distribution & Amplification,Social-Sharing-Buttons.md
+Syndication,Republishing content on third-party sites to reach a broader audience.,Content Distribution & Amplification,Syndication.md
+Buyer Persona,A semi-fictional representation of your ideal customer based on data and research.,Content Marketing & Inbound Strategy,Buyer-Persona.md
+Call to Action (CTA),A prompt on a website that tells the user to take some specified action.,Content Marketing & Inbound Strategy,Call-to-Action--CTA-.md
+Clickbait,Content whose main purpose is to attract attention and encourage visitors to click on a link to a particular web page.,Content Marketing & Inbound Strategy,Clickbait.md
+Content Atomization,"Breaking down a large piece of content (e.g., ebook) into smaller, strategic pieces (blogs, social posts).",Content Marketing & Inbound Strategy,Content-Atomization.md
+Content Calendar,"A schedule used to plan, organize, and publish upcoming content.",Content Marketing & Inbound Strategy,Content-Calendar.md
+Content Decay,The gradual decline in traffic and rankings of older content as it becomes obsolete.,Content Marketing & Inbound Strategy,Content-Decay.md
+Content Funnel,The path potential customers take through your content on their way to making a purchase.,Content Marketing & Inbound Strategy,Content-Funnel.md
+Content Funnel (TOFU/MOFU/BOFU),"The stages of content marketing: Top of Funnel (Awareness), Middle (Consideration), Bottom (Decision).",Content Marketing & Inbound Strategy,Content-Funnel--TOFU-MOFU-BOFU-.md
+Content Gap Analysis,Identifying the missing content pieces that could align with the various stages of the customer journey.,Content Marketing & Inbound Strategy,Content-Gap-Analysis.md
+Content Refresh,"Updating older content with new information, images, and keywords to maintain SEO rankings.",Content Marketing & Inbound Strategy,Content-Refresh.md
+Content Velocity,The speed at which a brand creates and publishes content over a given period.,Content Marketing & Inbound Strategy,Content-Velocity.md
+Conversion Rate (CVR),"The percentage of users who take a desired action (e.g., buying, signing up) out of the total visitors.",Content Marketing & Inbound Strategy,Conversion-Rate--CVR-.md
+Copywriting,The act or occupation of writing text for the purpose of advertising or other forms of marketing.,Content Marketing & Inbound Strategy,Copywriting.md
+Cost Per Lead (CPL),The amount of money spent to acquire a single new lead.,Content Marketing & Inbound Strategy,Cost-Per-Lead--CPL-.md
+Dark Funnel,The part of the buyer's journey that happens in places that attribution software can't track.,Content Marketing & Inbound Strategy,Dark-Funnel.md
+Editorial Calendar,"A schedule used to plan, organize, and publish upcoming content.",Content Marketing & Inbound Strategy,Editorial-Calendar.md
+Evergreen Content,Content that remains relevant and valuable to readers over a long period.,Content Marketing & Inbound Strategy,Evergreen-Content.md
+Gated Content,Premium content that requires a user to provide contact information to access.,Content Marketing & Inbound Strategy,Gated-Content.md
+Gated Video,Video content that requires the viewer to enter their email address before or during playback.,Content Marketing & Inbound Strategy,Gated-Video.md
+Landing Page Optimization (LPO),The process of improving elements on a website to increase conversions.,Content Marketing & Inbound Strategy,Landing-Page-Optimization--LPO-.md
+Lead Generation,The process of attracting and converting strangers into prospects for your business.,Content Marketing & Inbound Strategy,Lead-Generation.md
+Lead Nurturing,The process of developing relationships with buyers at every stage of the sales funnel.,Content Marketing & Inbound Strategy,Lead-Nurturing.md
+Marketing Qualified Lead (MQL),A lead who has indicated interest in what a brand has to offer based on marketing efforts.,Content Marketing & Inbound Strategy,Marketing-Qualified-Lead--MQL-.md
+Multi-Touch Attribution,Assigning credit to the different touchpoints a customer interacts with before a conversion.,Content Marketing & Inbound Strategy,Multi-Touch-Attribution.md
+Newsjacking,Injecting your brand into breaking news stories to generate media coverage and social engagement.,Content Marketing & Inbound Strategy,Newsjacking.md
+Pillar Content,A comprehensive piece of content that covers a broad topic in depth and links to related cluster content.,Content Marketing & Inbound Strategy,Pillar-Content.md
+Pillar Page,A comprehensive page that covers a broad topic in depth and links to cluster content.,Content Marketing & Inbound Strategy,Pillar-Page.md
+Programmatic Advertising,The automated buying and selling of online advertising.,Content Marketing & Inbound Strategy,Programmatic-Advertising.md
+Programmatic SEO,Creating landing pages on a large scale using code and data to target long-tail keywords.,Content Marketing & Inbound Strategy,Programmatic-SEO.md
+Return on Ad Spend (ROAS),A marketing metric that measures the efficacy of a digital advertising campaign.,Content Marketing & Inbound Strategy,Return-on-Ad-Spend--ROAS-.md
+Sales Qualified Lead (SQL),A prospective customer that has been researched and vetted by marketing and is ready for the sales team.,Content Marketing & Inbound Strategy,Sales-Qualified-Lead--SQL-.md
+Search Engine Marketing (SEM),A form of Internet marketing that involves the promotion of websites by increasing their visibility in search engine results pages primarily through paid advertising.,Content Marketing & Inbound Strategy,Search-Engine-Marketing--SEM-.md
+Skyscraper Technique,"A content marketing strategy of finding popular content, improving it, and getting backlinks.",Content Marketing & Inbound Strategy,Skyscraper-Technique.md
+Topic Cluster,A group of interlinked web pages built around one pillar content piece.,Content Marketing & Inbound Strategy,Topic-Cluster.md
+User Generated Content (UGC),"Content such as text, videos, or reviews created by people rather than brands.",Content Marketing & Inbound Strategy,User-Generated-Content--UGC-.md
+Voice Search Optimization,"Optimizing content to appear in voice search results (e.g., Siri, Alexa), often focusing on conversational keywords.",Content Marketing & Inbound Strategy,Voice-Search-Optimization.md
+Zero-Click Searches,Search queries where the user gets the answer directly on the results page and doesn't click any link.,Content Marketing & Inbound Strategy,Zero-Click-Searches.md
+API-First,A strategy where the API is designed and built before the user interface or other components.,Content Platform & CMS Integration,API-First.md
+Content Federation,Aggregating content from multiple disparate sources into a single API or view.,Content Platform & CMS Integration,Content-Federation.md
+Content Mesh,An infrastructure layer for decoupling content sources from the presentation layer.,Content Platform & CMS Integration,Content-Mesh.md
+Content Migration,The process of moving content from one CMS or storage system to another.,Content Platform & CMS Integration,Content-Migration.md
+Content Modeling,Defining the structure and relationships of content types within a CMS.,Content Platform & CMS Integration,Content-Modeling.md
+Content Sync,Ensuring content is consistent across multiple platforms or environments.,Content Platform & CMS Integration,Content-Sync.md
+DAM Integration,Connecting a Digital Asset Management system with the CMS to access media files directly.,Content Platform & CMS Integration,DAM-Integration.md
+Database Migration,Moving data from one database to another.,Content Platform & CMS Integration,Database-Migration.md
+Decoupled CMS,A CMS architecture where the backend and frontend are distinct but connected via API (similar to Headless).,Content Platform & CMS Integration,Decoupled-CMS.md
+DXP (Digital Experience Platform),An integrated set of technologies used to provide a personalized user experience across channels.,Content Platform & CMS Integration,DXP--Digital-Experience-Platform-.md
+Headless Architecture,Separating the frontend (presentation layer) from the backend (content repository).,Content Platform & CMS Integration,Headless-Architecture.md
+Headless CMS,A back-end only content management system that makes content available via API.,Content Platform & CMS Integration,Headless-CMS.md
+Multi-language Support (i18n),Designing software to be adapted to various languages and regions without engineering changes.,Content Platform & CMS Integration,Multi-language-Support--i18n-.md
+Omnichannel Delivery,"Serving the same content to multiple channels (web, mobile, smartwatch) from one CMS.",Content Platform & CMS Integration,Omnichannel-Delivery.md
+Plugin Architecture,A design that allows third-party developers to extend the functionality of an application.,Content Platform & CMS Integration,Plugin-Architecture.md
+Preview API,An API endpoint that allows content editors to see draft content rendered on the frontend before publishing.,Content Platform & CMS Integration,Preview-API.md
+Role-Based Access Control (RBAC),Restricting system access to authorized users based on their role.,Content Platform & CMS Integration,Role-Based-Access-Control--RBAC-.md
+Schema Mapping,The process of matching fields from one database or API to another during integration.,Content Platform & CMS Integration,Schema-Mapping.md
+Template Engine,Software designed to combine templates with a data model to produce result documents.,Content Platform & CMS Integration,Template-Engine.md
+Version Control,Systems like Git that record changes to a file or set of files over time.,Content Platform & CMS Integration,Version-Control.md
+Webhook Listener,A server endpoint configured to receive and process real-time data payloads from other apps.,Content Platform & CMS Integration,Webhook-Listener.md
+Webhooks,A method for an app to provide other applications with real-time information.,Content Platform & CMS Integration,Webhooks.md
+Webhooks for CMS,"Triggers that notify external systems when content is created, updated, or deleted.",Content Platform & CMS Integration,Webhooks-for-CMS.md
+WYSIWYG Editor,An editor where the content being edited appears very similar to the final output ('What You See Is What You Get').,Content Platform & CMS Integration,WYSIWYG-Editor.md
+Attribution Modeling,Determining which marketing channels or touchpoints contributed to a conversion.,Customer Journey Orchestration,Attribution-Modeling.md
+Behavioral Trigger,"An automated action initiated by a specific user behavior (e.g., abandoning a cart).",Customer Journey Orchestration,Behavioral-Trigger.md
+Behavioral Triggers,Actions automatically initiated by specific user behaviors.,Customer Journey Orchestration,Behavioral-Triggers.md
+Churn Prediction,Using data to predict which customers are likely to cancel their subscription.,Customer Journey Orchestration,Churn-Prediction.md
+Churn Rate,The percentage of customers who stop using a service during a given time period.,Customer Journey Orchestration,Churn-Rate.md
+Cross-Device Tracking,"Identifying and tracking the same user across multiple devices (phone, laptop, tablet).",Customer Journey Orchestration,Cross-Device-Tracking.md
+Customer Lifecycle Management,Managing the customer's journey from initial contact to loyal advocate.,Customer Journey Orchestration,Customer-Lifecycle-Management.md
+Drop-off Point,The specific step in a flow where the highest percentage of users abandon the process.,Customer Journey Orchestration,Drop-off-Point.md
+Friction Point,"Steps in the journey that cause frustration or slow down the customer (e.g., complex login).",Customer Journey Orchestration,Friction-Point.md
+Identity Resolution,"Connecting multiple identifiers (email, cookie, device ID) to form a single customer view.",Customer Journey Orchestration,Identity-Resolution.md
+Journey Mapping,Visualizing the process that a person goes through to accomplish a goal.,Customer Journey Orchestration,Journey-Mapping.md
+Lifecycle Maps,Visual tools used to plan interactions at each stage of the customer lifecycle (Acquisition to Retention).,Customer Journey Orchestration,Lifecycle-Maps.md
+Lifecycle Stage,"Categorizing customers based on where they are in their relationship with the brand (e.g., Acquisition, Retention).",Customer Journey Orchestration,Lifecycle-Stage.md
+Moment of Truth,Critical touchpoints in the customer journey where the customer forms an impression of the brand.,Customer Journey Orchestration,Moment-of-Truth.md
+Next Best Action,Predicting the most effective action to take for a customer in a given situation.,Customer Journey Orchestration,Next-Best-Action.md
+Next Best Experience,"Beyond 'Next Best Action', focusing on the overall experience delivered to the customer next.",Customer Journey Orchestration,Next-Best-Experience.md
+Omnichannel Mapping,"Visualizing how a customer moves across different channels (web, app, store) to complete a goal.",Customer Journey Orchestration,Omnichannel-Mapping.md
+Omnichannel Orchestration,Coordinating customer interactions across multiple channels to ensure a seamless experience.,Customer Journey Orchestration,Omnichannel-Orchestration.md
+Personalization Engine,Software that analyzes data to deliver content tailored to individual users.,Customer Journey Orchestration,Personalization-Engine.md
+Real-Time Interaction Management (RTIM),Delivering personalized experiences in the moment based on current context and history.,Customer Journey Orchestration,Real-Time-Interaction-Management--RTIM-.md
+Retention Strategy,Plans and actions designed to keep customers engaged and prevent them from leaving.,Customer Journey Orchestration,Retention-Strategy.md
+Touchpoint Analysis,Evaluating the impact and effectiveness of each interaction point in the customer journey.,Customer Journey Orchestration,Touchpoint-Analysis.md
+Touchpoint Mapping,Listing every interaction a customer has with a brand throughout their journey.,Customer Journey Orchestration,Touchpoint-Mapping.md
+Trigger-Based Marketing,Automated marketing actions initiated by specific user behaviors or events.,Customer Journey Orchestration,Trigger-Based-Marketing.md
+Win-back Campaign,Targeted efforts to re-engage customers who have stopped using the service.,Customer Journey Orchestration,Win-back-Campaign.md
+Adoption Rate,The percentage of users who successfully start using a new feature or product regularly.,Customer Success & Retention,Adoption-Rate.md
+Churn Prediction,Using data analysis and AI to identify customers who are at high risk of cancelling their subscription.,Customer Success & Retention,Churn-Prediction.md
+ChurnZero,A real-time customer success platform that helps subscription businesses fight churn.,Customer Success & Retention,ChurnZero.md
+Customer Activation,The moment when a user performs a key action that signifies they are getting value from the product.,Customer Success & Retention,Customer-Activation.md
+Expansion Revenue,"Revenue generated from existing customers through upsells, cross-sells, and add-ons.",Customer Success & Retention,Expansion-Revenue.md
+Gainsight,A customer success platform that helps businesses reduce churn and increase upsell.,Customer Success & Retention,Gainsight.md
+Health Score,A composite metric indicating whether a customer is healthy (likely to renew) or at risk (likely to churn).,Customer Success & Retention,Health-Score.md
+High Touch,"A high-engagement model involving dedicated CSMs and frequent personal interaction, usually for high-value accounts.",Customer Success & Retention,High-Touch.md
+Net Revenue Retention (NRR),"The percentage of recurring revenue retained from existing customers, including expansion revenue, minus churn.",Customer Success & Retention,Net-Revenue-Retention--NRR-.md
+Onboarding Time,The time required to train a new customer and get them fully operational with the product.,Customer Success & Retention,Onboarding-Time.md
+Planhat,"A customer platform used by CS teams to manage customer success, onboarding, and retention.",Customer Success & Retention,Planhat.md
+Success Plan,"A strategic document created jointly by the CSM and customer to define goals, milestones, and success metrics.",Customer Success & Retention,Success-Plan.md
+Tech Touch,"A low-touch engagement model using digital tools (email, in-app guides) to support a large number of customers efficiently.",Customer Success & Retention,Tech-Touch.md
+Time to Value (TTV),The time it takes for a new customer to realize the expected value from a product or service.,Customer Success & Retention,Time-to-Value--TTV-.md
+Totango,A customer success software that helps recurring revenue businesses drive adoption and retention.,Customer Success & Retention,Totango.md
+Upselling vs Cross-selling,Upselling is selling a more expensive version; Cross-selling is selling related or complementary products.,Customer Success & Retention,Upselling-vs-Cross-selling.md
+Vitally,A customer success platform built for the modern B2B SaaS era.,Customer Success & Retention,Vitally.md
+Voice of the Customer (VoC),Collecting and analyzing customer feedback to improve the product and experience.,Customer Success & Retention,Voice-of-the-Customer--VoC-.md
+Access Control List (ACL),A list of permissions attached to an object specifying which users have access to it.,Cybersecurity & Compliance,Access-Control-List--ACL-.md
+API Key Rotation,The practice of periodically changing API keys to reduce the risk of them being compromised.,Cybersecurity & Compliance,API-Key-Rotation.md
+Audit Log,"A chronological record of system activities, used to reconstruct events and detect security violations.",Cybersecurity & Compliance,Audit-Log.md
+CCPA (California Consumer Privacy Act),"A state statute intended to enhance privacy rights and consumer protection for residents of California, similar to GDPR.",Cybersecurity & Compliance,CCPA--California-Consumer-Privacy-Act-.md
+Cloudflare,"A global network built for the cloud, offering security, performance, and reliability.",Cybersecurity & Compliance,Cloudflare.md
+CrowdStrike,A cybersecurity technology company that provides endpoint security and threat intelligence.,Cybersecurity & Compliance,CrowdStrike.md
+Data Breach,"A security incident in which sensitive, protected, or confidential data is copied, transmitted, viewed, stolen, or used.",Cybersecurity & Compliance,Data-Breach.md
+Data Processing Agreement (DPA),A contract between a data controller and a data processor regulating the processing of personal data (GDPR requirement).,Cybersecurity & Compliance,Data-Processing-Agreement--DPA-.md
+Data Residency,The physical or geographic location of an organization's data or information.,Cybersecurity & Compliance,Data-Residency.md
+DDoS Attack,A malicious attempt to disrupt the normal traffic of a targeted server by overwhelming it with a flood of internet traffic.,Cybersecurity & Compliance,DDoS-Attack.md
+Drata,A security and compliance automation platform that continuously monitors your security posture.,Cybersecurity & Compliance,Drata.md
+Encryption at Rest,Protecting data that is stored physically (on disk/database) from unauthorized access.,Cybersecurity & Compliance,Encryption-at-Rest.md
+Encryption in Transit,"Protecting data while it is moving between networks or devices (e.g., via HTTPS).",Cybersecurity & Compliance,Encryption-in-Transit.md
+Encryption Key Management,"The management of cryptographic keys in a cryptosystem, including dealing with generation, exchange, storage, and replacement.",Cybersecurity & Compliance,Encryption-Key-Management.md
+Firewall,A network security device that monitors and filters incoming and outgoing network traffic based on security policies.,Cybersecurity & Compliance,Firewall.md
+GDPR,A regulation in EU law on data protection and privacy for all individuals within the European Union.,Cybersecurity & Compliance,GDPR.md
+Incident Response Plan,"A set of instructions to help IT staff detect, respond to, and recover from network security incidents.",Cybersecurity & Compliance,Incident-Response-Plan.md
+Least Privilege Principle,The concept that a user should only have access to the specific data and resources needed to do their job.,Cybersecurity & Compliance,Least-Privilege-Principle.md
+Multi-Factor Authentication (MFA),An authentication method that requires the user to provide two or more verification factors to gain access.,Cybersecurity & Compliance,Multi-Factor-Authentication--MFA-.md
+Palo Alto Networks (Prisma),A global cybersecurity leader known for its advanced firewalls and cloud security offerings.,Cybersecurity & Compliance,Palo-Alto-Networks--Prisma-.md
+PCI DSS,"A set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment.",Cybersecurity & Compliance,PCI-DSS.md
+Penetration Testing (Pentest),A simulated cyber attack against your computer system to check for exploitable vulnerabilities.,Cybersecurity & Compliance,Penetration-Testing--Pentest-.md
+Phishing,"A cybercrime in which a target is contacted by email, telephone or text message by someone posing as a legitimate institution.",Cybersecurity & Compliance,Phishing.md
+Ransomware,Malware that employs encryption to hold a victim's information at ransom.,Cybersecurity & Compliance,Ransomware.md
+SLA Breach,"Failure to meet the agreed-upon service standards (e.g., uptime, response time), often resulting in penalties.",Cybersecurity & Compliance,SLA-Breach.md
+Social Engineering,The psychological manipulation of people into performing actions or divulging confidential information.,Cybersecurity & Compliance,Social-Engineering.md
+Threat Intelligence,Information about potential or current attacks that can help an organization protect itself.,Cybersecurity & Compliance,Threat-Intelligence.md
+Vanta,"A platform that automates security compliance (SOC 2, ISO 27001) for growing companies.",Cybersecurity & Compliance,Vanta.md
+Vulnerability Scanning,Automated process of inspecting systems for known security weaknesses (distinct from manual pentesting).,Cybersecurity & Compliance,Vulnerability-Scanning.md
+Webhook Verification,The process of verifying that a webhook request actually came from the expected service using a signature.,Cybersecurity & Compliance,Webhook-Verification.md
+Zero Trust Security,"A security model that assumes no user or device is trustworthy, verifying every request regardless of origin.",Cybersecurity & Compliance,Zero-Trust-Security.md
+Zero-Day Vulnerability,"A hole in software that is unknown to the vendor and has no patch available, making it easy to exploit.",Cybersecurity & Compliance,Zero-Day-Vulnerability.md
+Big Data Processing,"Processing extremely large data sets that may be analyzed computationally to reveal patterns, trends, and associations.",Data & Analytics Infrastructure,Big-Data-Processing.md
+Business Intelligence (BI),Strategies and technologies used for data analysis of business information.,Data & Analytics Infrastructure,Business-Intelligence--BI-.md
+Data Catalog,An organized inventory of data assets in an organization.,Data & Analytics Infrastructure,Data-Catalog.md
+Data Dictionary,"A centralized repository of information about data, such as meaning, relationships to other data, origin, usage, and format.",Data & Analytics Infrastructure,Data-Dictionary.md
+Data Fabric,An architecture that facilitates the flexible integration of data pipelines and cloud environments.,Data & Analytics Infrastructure,Data-Fabric.md
+Data Governance,"The management of data availability, usability, integrity, and security.",Data & Analytics Infrastructure,Data-Governance.md
+Data Ingestion,The process of obtaining and importing data for immediate use or storage in a database.,Data & Analytics Infrastructure,Data-Ingestion.md
+Data Lakehouse,A data architecture combining the flexibility of data lakes with the management of data warehouses.,Data & Analytics Infrastructure,Data-Lakehouse.md
+Data Latency,The time it takes for data to become available for use after it has been generated.,Data & Analytics Infrastructure,Data-Latency.md
+Data Mart,A subset of a data warehouse focused on a specific business line or department.,Data & Analytics Infrastructure,Data-Mart.md
+Data Mesh,"A decentralized data architecture that treats data as a product, owned by domain-specific teams.",Data & Analytics Infrastructure,Data-Mesh.md
+Data Observability,The ability to understand the health and state of data in a system based on its outputs.,Data & Analytics Infrastructure,Data-Observability.md
+Data Pipeline,A set of actions that move data from a source to a destination for analysis.,Data & Analytics Infrastructure,Data-Pipeline.md
+Data Silo,A collection of data held by one group that is not easily accessible by other groups in the same organization.,Data & Analytics Infrastructure,Data-Silo.md
+Data Visualization,"The graphical representation of information and data using charts, graphs, and maps.",Data & Analytics Infrastructure,Data-Visualization.md
+Data Warehousing,"A system used for reporting and data analysis, centralizing data from different sources.",Data & Analytics Infrastructure,Data-Warehousing.md
+Dark Data,"Information assets that organizations collect, process, and store but generally fail to use for other purposes.",Data & Analytics Infrastructure,Dark-Data.md
+"ETL (Extract, Transform, Load)",A data integration process combining data from multiple sources into a single store.,Data & Analytics Infrastructure,"ETL--Extract,-Transform,-Load-.md"
+Metadata Management,"Managing data that describes other data to ensure it can be found, used, and preserved.",Data & Analytics Infrastructure,Metadata-Management.md
+NoSQL Database,A non-relational database designed for specific data models and flexible schemas.,Data & Analytics Infrastructure,NoSQL-Database.md
+Real-time Analytics,The use of logic and mathematics to provide data for making decisions in real time.,Data & Analytics Infrastructure,Real-time-Analytics.md
+Reverse ETL,The process of moving data from a data warehouse back into operational tools (SaaS apps) for action.,Data & Analytics Infrastructure,Reverse-ETL.md
+Schema,"The structural definition of a database, including tables and relationships.",Data & Analytics Infrastructure,Schema.md
+Snowflake Schema,A more complex database schema where dimension tables are normalized into multiple related tables.,Data & Analytics Infrastructure,Snowflake-Schema.md
+Star Schema,A database schema where a central fact table is connected to multiple dimension tables.,Data & Analytics Infrastructure,Star-Schema.md
+Zero-Copy Integration,"Sharing data between systems without physically copying it, reducing storage and synchronization issues.",Data & Analytics Infrastructure,Zero-Copy-Integration.md
+Asynchronous Communication,"Communication that doesn't require immediate response (e.g., email, recorded video), enabling flexible work.",Digital Workplace & Employee Experience,Asynchronous-Communication.md
+Asynchronous Video,"Recorded video messages (e.g., Loom) sent to colleagues instead of a live meeting.",Digital Workplace & Employee Experience,Asynchronous-Video.md
+Bring Your Own Device (BYOD),A policy that allows employees to bring their own personal mobile devices to their workplace.,Digital Workplace & Employee Experience,Bring-Your-Own-Device--BYOD-.md
+Collaboration Hub,A central platform (like Slack or Teams) where work and communication happen.,Digital Workplace & Employee Experience,Collaboration-Hub.md
+Digital Adoption Platform (DAP),Software that overlays on other applications to guide users through tasks and features.,Digital Workplace & Employee Experience,Digital-Adoption-Platform--DAP-.md
+Digital Nomad,People who use telecommunications technologies to earn a living and conduct their life in a nomadic manner.,Digital Workplace & Employee Experience,Digital-Nomad.md
+Employee Directory,"A digital searchable list of employees, often including skills and contact info.",Digital Workplace & Employee Experience,Employee-Directory.md
+Employee Engagement,The emotional commitment the employee has to the organization and its goals.,Digital Workplace & Employee Experience,Employee-Engagement.md
+Employee Pulse Survey,"Short, frequent surveys to gauge employee sentiment and engagement in real-time.",Digital Workplace & Employee Experience,Employee-Pulse-Survey.md
+Employee Wellbeing,Programs and initiatives to support the physical and mental health of employees.,Digital Workplace & Employee Experience,Employee-Wellbeing.md
+Hybrid Work Model,"A flexible work model that supports a blend of in-office, remote, and on-the-go workers.",Digital Workplace & Employee Experience,Hybrid-Work-Model.md
+Identity and Access Management (IAM),A framework of policies and technologies for ensuring that the right users have the appropriate access.,Digital Workplace & Employee Experience,Identity-and-Access-Management--IAM-.md
+Internal Communications,Communication between an organization and its employees.,Digital Workplace & Employee Experience,Internal-Communications.md
+Internal Knowledge Base,A centralized repository of information accessible only to employees for support and training.,Digital Workplace & Employee Experience,Internal-Knowledge-Base.md
+Intranet,A private network designed to be a digital hub for company information and communication.,Digital Workplace & Employee Experience,Intranet.md
+Intranet Modernization,"Updating traditional intranets to be more social, mobile-friendly, and integrated.",Digital Workplace & Employee Experience,Intranet-Modernization.md
+Knowledge Retention,Ensuring critical institutional knowledge remains in the company when employees leave.,Digital Workplace & Employee Experience,Knowledge-Retention.md
+OKRs (Objectives and Key Results),"A goal-setting framework used by individuals, teams, and organizations to define measurable goals.",Digital Workplace & Employee Experience,OKRs--Objectives-and-Key-Results-.md
+Productivity Tools,"Software applications used to create information (e.g., documents, spreadsheets, presentations).",Digital Workplace & Employee Experience,Productivity-Tools.md
+Remote Collaboration,Working together with team members from different locations using digital tools.,Digital Workplace & Employee Experience,Remote-Collaboration.md
+Single Sign-On (SSO),An authentication scheme that allows a user to log in with a single ID to any of several related systems.,Digital Workplace & Employee Experience,Single-Sign-On--SSO-.md
+Two-Factor Authentication (2FA),A security process in which users provide two different authentication factors to verify themselves.,Digital Workplace & Employee Experience,Two-Factor-Authentication--2FA-.md
+Virtual Desktop Infrastructure (VDI),Hosting desktop environments on a central server.,Digital Workplace & Employee Experience,Virtual-Desktop-Infrastructure--VDI-.md
+Virtual Private Network (VPN),"A service that creates a safe, encrypted online connection.",Digital Workplace & Employee Experience,Virtual-Private-Network--VPN-.md
+Virtual Town Hall,"A large-scale, company-wide meeting held online to update employees and answer questions.",Digital Workplace & Employee Experience,Virtual-Town-Hall.md
+Approval Process,The sequence of steps required to approve content for publication.,Editorial & Content Operations,Approval-Process.md
+Asset Management (DAM),"A system for storing, organizing, and retrieving digital assets like photos and videos.",Editorial & Content Operations,Asset-Management--DAM-.md
+Content Audit,The process of evaluating content elements and information assets on some part or all of a website.,Editorial & Content Operations,Content-Audit.md
+Content Governance,The system of guidelines and procedures for creating and managing content.,Editorial & Content Operations,Content-Governance.md
+Content Inventory,A quantitative list of all the content on a website.,Editorial & Content Operations,Content-Inventory.md
+Content Lifecycle Management (CLM),Managing content from conception to retirement (archiving/deletion).,Editorial & Content Operations,Content-Lifecycle-Management--CLM-.md
+Content Modeling,"Defining the structure, relationships, and metadata of content types within a CMS.",Editorial & Content Operations,Content-Modeling.md
+Content Staging,A secure environment to preview content updates before they go live.,Editorial & Content Operations,Content-Staging.md
+Content Staging,A preview environment where content changes can be reviewed before going live.,Editorial & Content Operations,Content-Staging.md
+Deprecation Policy,A policy outlining how and when older content or features will be removed.,Editorial & Content Operations,Deprecation-Policy.md
+Digital Asset Management (DAM),"A system for organizing, storing, and retrieving rich media assets like photos and videos.",Editorial & Content Operations,Digital-Asset-Management--DAM-.md
+Digital Rights Management (DRM),Technologies used to control the use of proprietary hardware and copyrighted works.,Editorial & Content Operations,Digital-Rights-Management--DRM-.md
+Editorial Board,A group of people who determine the editorial policy and direction of a publication.,Editorial & Content Operations,Editorial-Board.md
+Freelance Management,The process of managing freelance contributors and their work.,Editorial & Content Operations,Freelance-Management.md
+Internationalization (i18n),Designing a product or content framework so it can be easily adapted to various languages without engineering changes.,Editorial & Content Operations,Internationalization--i18n-.md
+Localization (L10n),"Adapting content to a specific locale or market, including translation and cultural nuances.",Editorial & Content Operations,Localization--L10n-.md
+Quality Assurance (QA),A process used to prevent mistakes and defects in manufactured products or services.,Editorial & Content Operations,Quality-Assurance--QA-.md
+Style Guide,A set of standards for the writing and design of documents.,Editorial & Content Operations,Style-Guide.md
+Tone of Voice Guidelines,Rules defining how a brand communicates its character through language.,Editorial & Content Operations,Tone-of-Voice-Guidelines.md
+Transcreation,"Adapting a message from one language to another while maintaining its intent, style, tone, and context.",Editorial & Content Operations,Transcreation.md
+Translation Memory (TM),A database that stores segments of text which have been previously translated to aid consistency and speed.,Editorial & Content Operations,Translation-Memory--TM-.md
+Version Control,Tracking and managing changes to content or code over time.,Editorial & Content Operations,Version-Control.md
+Workflow Approval,A systematic process where content must be reviewed and approved by specific people before publication.,Editorial & Content Operations,Workflow-Approval.md
+Workflow Automation,"Using software to route content through creation, approval, and publishing steps automatically.",Editorial & Content Operations,Workflow-Automation.md
+Workflow Management,Managing the sequence of processes or people involved in a task.,Editorial & Content Operations,Workflow-Management.md
+Anchor Links,"Links that jump to a specific section within a long article, improving usability.",Knowledge Base & Self-Service,Anchor-Links.md
+Article Lifecycle,"The flow of a knowledge article from creation to approval, publication, and archiving.",Knowledge Base & Self-Service,Article-Lifecycle.md
+Article Rating / Feedback,"A feature allowing users to rate the helpfulness of an article (e.g., 'Did this solve your issue? Yes/No').",Knowledge Base & Self-Service,Article-Rating---Feedback.md
+Breadcrumbs,A secondary navigation scheme that reveals the user's location in a website or web application.,Knowledge Base & Self-Service,Breadcrumbs.md
+Broken Link Checker,A tool used to identify hyperlinks that no longer point to valid pages.,Knowledge Base & Self-Service,Broken-Link-Checker.md
+Bulk Editing,"The ability to update properties (tags, categories, visibility) of multiple articles at once.",Knowledge Base & Self-Service,Bulk-Editing.md
+Content Auditing,The process of evaluating content elements and information assets on some part or all of a website.,Knowledge Base & Self-Service,Content-Auditing.md
+Content Curation,"Collecting, selecting, and presenting information in a way that adds value to the user.",Knowledge Base & Self-Service,Content-Curation.md
+Content Decay,The gradual decline in the accuracy or relevance of content over time.,Knowledge Base & Self-Service,Content-Decay.md
+Content Expiration,Setting a date for articles to automatically unpublish or flag for review to prevent outdated info.,Knowledge Base & Self-Service,Content-Expiration.md
+Content Fragment,A modular piece of content designed to be reused across multiple pages or channels.,Knowledge Base & Self-Service,Content-Fragment.md
+Content Freshness,A measure of how up-to-date and relevant a piece of content is.,Knowledge Base & Self-Service,Content-Freshness.md
+Content Hierarchy,"The organization of content into levels of importance, such as categories and subcategories.",Knowledge Base & Self-Service,Content-Hierarchy.md
+Contextual Help,Help content that appears relevant to the specific screen or action the user is performing.,Knowledge Base & Self-Service,Contextual-Help.md
+Decision Tree,A flowchart-like structure used in help guides to lead users to a solution.,Knowledge Base & Self-Service,Decision-Tree.md
+Draft State,The status of an article that is being written or reviewed but is not yet visible to the public.,Knowledge Base & Self-Service,Draft-State.md
+Embeddable Widget,A small help center interface that can be placed on any webpage as a pop-up or sidebar.,Knowledge Base & Self-Service,Embeddable-Widget.md
+FAQ Management,"The administrative process of creating, updating, and organizing frequently asked questions.",Knowledge Base & Self-Service,FAQ-Management.md
+Information Architecture (IA),The structural design of shared information environments to support findability.,Knowledge Base & Self-Service,Information-Architecture--IA-.md
+Information Retrieval (IR),"The science of searching for information in a document, searching for documents themselves, and also searching for metadata.",Knowledge Base & Self-Service,Information-Retrieval--IR-.md
+Internal Search Analytics,Analyzing what users are searching for within a help center to identify gaps.,Knowledge Base & Self-Service,Internal-Search-Analytics.md
+Internal vs External View,Managing different versions of content: one for customers (external) and one with private notes for agents (internal).,Knowledge Base & Self-Service,Internal-vs-External-View.md
+Knowledge Graph,"A network of real-world entities and their interrelations, organized in a graph structure.",Knowledge Base & Self-Service,Knowledge-Graph.md
+PDF Generation,Allowing users to download a knowledge base article as a PDF file for offline reading.,Knowledge Base & Self-Service,PDF-Generation.md
+Permalink,A permanent static hyperlink to a particular web page or entry.,Knowledge Base & Self-Service,Permalink.md
+Reading Time Estimation,"Displaying an estimated time required to read an article (e.g., '3 min read') to set user expectations.",Knowledge Base & Self-Service,Reading-Time-Estimation.md
+Related Content Suggestion,Automatically displaying articles similar to the one currently being viewed to assist the user.,Knowledge Base & Self-Service,Related-Content-Suggestion.md
+Rich Text Format,"Text that allows for formatting such as bold, italics, and different fonts.",Knowledge Base & Self-Service,Rich-Text-Format.md
+Search Synonyms,"Configuring the search engine to treat different words (e.g., 'bill' and 'invoice') as the same query.",Knowledge Base & Self-Service,Search-Synonyms.md
+Search Void Analysis,Analyzing search queries that returned zero results to identify gaps in the knowledge base.,Knowledge Base & Self-Service,Search-Void-Analysis.md
+Searchability,The ease with which content can be found via a search engine or internal search.,Knowledge Base & Self-Service,Searchability.md
+Semantic Search,"Search technology that understands the meaning and context of words, not just keyword matching.",Knowledge Base & Self-Service,Semantic-Search.md
+Step-by-Step Guide,"Structured content that breaks down a complex process into numbered, sequential instructions.",Knowledge Base & Self-Service,Step-by-Step-Guide.md
+Ticket Deflection,Reducing the volume of support tickets by enabling customers to solve issues themselves.,Knowledge Base & Self-Service,Ticket-Deflection.md
+Topic Clustering,"Grouping related articles together (e.g., all 'Billing' articles) to improve navigation and SEO.",Knowledge Base & Self-Service,Topic-Clustering.md
+Troubleshooting Guides,Step-by-step manuals designed to help users diagnose and resolve problems.,Knowledge Base & Self-Service,Troubleshooting-Guides.md
+User Portal,A dedicated site where customers can view their ticket history and access help articles.,Knowledge Base & Self-Service,User-Portal.md
+Zero-Search Results,Instances where a user searches for a term and finds no matching articles.,Knowledge Base & Self-Service,Zero-Search-Results.md
+Access Control,Selective restriction of access to data.,Knowledge Management Systems,Access-Control.md
+Check-in / Check-out,A control mechanism that prevents multiple users from editing the same document simultaneously.,Knowledge Management Systems,Check-in---Check-out.md
+Community of Practice (CoP),A group of people who share a concern or a passion for something they do and learn how to do it better as they interact regularly.,Knowledge Management Systems,Community-of-Practice--CoP-.md
+Decision Tree,A flowchart-like structure in a knowledge base that guides users through a series of questions to a solution.,Knowledge Management Systems,Decision-Tree.md
+Document Management System (DMS),"A system used to receive, track, manage and store documents and reduce paper.",Knowledge Management Systems,Document-Management-System--DMS-.md
+Document Repository,A digital storage area for managing and storing documents.,Knowledge Management Systems,Document-Repository.md
+Enterprise Search,Search technology aimed at finding information within an enterprise's internal collections.,Knowledge Management Systems,Enterprise-Search.md
+Explicit Knowledge,"Knowledge that can be readily articulated, codified, accessed, and verbalized.",Knowledge Management Systems,Explicit-Knowledge.md
+Faceted Search,"A search feature allowing users to filter results by multiple dimensions (e.g., date, author, type).",Knowledge Management Systems,Faceted-Search.md
+Federated Search,Technology that allows searching across multiple distinct databases with one query.,Knowledge Management Systems,Federated-Search.md
+Full-Text Search,Techniques for searching a single computer-stored document or a collection in a full-text database.,Knowledge Management Systems,Full-Text-Search.md
+Implicit Knowledge,Knowledge that is not explicitly documented but is applied in practice (distinct from Tacit knowledge which is hard to articulate).,Knowledge Management Systems,Implicit-Knowledge.md
+Information Architecture,Structuring information to help users find what they are looking for.,Knowledge Management Systems,Information-Architecture.md
+Knowledge Base Article (KBA),"A single unit of content within a knowledge base, addressing a specific question or issue.",Knowledge Management Systems,Knowledge-Base-Article--KBA-.md
+Knowledge Broker,An individual or system that facilitates the transfer of knowledge between different parties or silos.,Knowledge Management Systems,Knowledge-Broker.md
+Knowledge Governance,"The strategic framework ensuring knowledge is accurate, maintained, and accessible according to policies.",Knowledge Management Systems,Knowledge-Governance.md
+Knowledge Hoarding,When employees intentionally withhold information that could be useful to others.,Knowledge Management Systems,Knowledge-Hoarding.md
+Knowledge Silos,Isolated pockets of information known only to certain individuals or departments.,Knowledge Management Systems,Knowledge-Silos.md
+Lessons Learned,Knowledge or understanding gained by experience that has a significant impact for an organization.,Knowledge Management Systems,Lessons-Learned.md
+Ontology vs Taxonomy,Taxonomy is hierarchical classification; Ontology defines complex relationships and attributes between concepts.,Knowledge Management Systems,Ontology-vs-Taxonomy.md
+Single Source of Truth (SSOT),The practice of structuring information models so that every data element is mastered (or edited) in only one place.,Knowledge Management Systems,Single-Source-of-Truth--SSOT-.md
+Subject Matter Expert (SME),A person with special knowledge or skills in a particular area of endeavor.,Knowledge Management Systems,Subject-Matter-Expert--SME-.md
+Tagging & Classification,Assigning labels to content to make it easier to search and filter.,Knowledge Management Systems,Tagging-&-Classification.md
+Taxonomy Management,The practice of creating and maintaining hierarchical classifications of information.,Knowledge Management Systems,Taxonomy-Management.md
+Topic Map,A standard for representing knowledge and connecting information resources to topics.,Knowledge Management Systems,Topic-Map.md
+Topic-Based Authoring,A modular content creation method where information is written as standalone topics rather than linear documents.,Knowledge Management Systems,Topic-Based-Authoring.md
+Transactive Memory System,"A collective memory system where group members know who knows what, rather than everyone knowing everything.",Knowledge Management Systems,Transactive-Memory-System.md
+Version History,"A record of changes made to a document, allowing users to revert to previous states.",Knowledge Management Systems,Version-History.md
+Wiki Software,Collaborative software that allows users to create and edit web page content.,Knowledge Management Systems,Wiki-Software.md
+A/B Testing (ML),Serving different models to different user segments to compare real-world performance.,Machine Learning Lifecycle,A-B-Testing--ML-.md
+Champion-Challenger,A testing strategy where a new 'Challenger' model competes against the current 'Champion' model.,Machine Learning Lifecycle,Champion-Challenger.md
+Continuous Integration/Continuous Deployment (CI/CD),A set of operating principles and practices that enable application development teams to deliver code changes more frequently.,Machine Learning Lifecycle,Continuous-Integration-Continuous-Deployment--CI-CD-.md
+Data Versioning (DVC),Applying version control principles to datasets so that model training is reproducible.,Machine Learning Lifecycle,Data-Versioning--DVC-.md
+Deployment Strategy,"The plan for releasing a model to production (e.g., canary, blue-green).",Machine Learning Lifecycle,Deployment-Strategy.md
+Drift Detection,Identifying when the statistical properties of the target variable change over time.,Machine Learning Lifecycle,Drift-Detection.md
+Experiment Tracking,"The process of saving all experiment related information (parameters, metrics, models).",Machine Learning Lifecycle,Experiment-Tracking.md
+Feature Engineering,The process of using domain knowledge to extract features from raw data for ML algorithms.,Machine Learning Lifecycle,Feature-Engineering.md
+Feature Store,A centralized repository where features (data attributes) are stored and served for training and inference.,Machine Learning Lifecycle,Feature-Store.md
+Hyperparameter Tuning,Optimizing the parameters that are set before the learning process begins.,Machine Learning Lifecycle,Hyperparameter-Tuning.md
+Inference Pipeline,"The automated workflow that takes new data, processes it, and generates predictions from the model.",Machine Learning Lifecycle,Inference-Pipeline.md
+Model Deprecation,The process of phasing out an old ML model and replacing it with a newer version.,Machine Learning Lifecycle,Model-Deprecation.md
+Model Drift,The degradation of model performance over time due to changes in the underlying data relationships.,Machine Learning Lifecycle,Model-Drift.md
+Model Evaluation,The process of assessing the performance of a machine learning model.,Machine Learning Lifecycle,Model-Evaluation.md
+Model Monitoring,Identifying issues with the model's performance in production.,Machine Learning Lifecycle,Model-Monitoring.md
+Model Registry,A centralized repository for managing the lifecycle of ML models.,Machine Learning Lifecycle,Model-Registry.md
+Model Versioning,Tracking different iterations of machine learning models over time.,Machine Learning Lifecycle,Model-Versioning.md
+Reproducibility,The ability to obtain consistent results using the same data and code.,Machine Learning Lifecycle,Reproducibility.md
+Retraining Loop,The automated process of updating a model with new data.,Machine Learning Lifecycle,Retraining-Loop.md
+Shadow Deployment,Running a new model version alongside the current one to compare performance without affecting users.,Machine Learning Lifecycle,Shadow-Deployment.md
+Test Data,A dataset used to provide an unbiased evaluation of a final model fit on the training dataset.,Machine Learning Lifecycle,Test-Data.md
+Training Data,The dataset used to train a machine learning model.,Machine Learning Lifecycle,Training-Data.md
+Administrative Metadata,"Information used to manage a resource (e.g., File Type, Rights, Creation Date).",Metadata & Taxonomy for Glossary Sites,Administrative-Metadata.md
+Associative Relationship,"A relationship between terms that are related but not hierarchical (e.g., 'Car' and 'Fuel').",Metadata & Taxonomy for Glossary Sites,Associative-Relationship.md
+Breadcrumb Trail,A secondary navigation scheme that reveals the user's location in a website or Web application.,Metadata & Taxonomy for Glossary Sites,Breadcrumb-Trail.md
+Controlled Vocabulary,A standardized list of terms used to ensure consistency in indexing and retrieval.,Metadata & Taxonomy for Glossary Sites,Controlled-Vocabulary.md
+Cross-referencing,Directing the user from one part of a document or system to another.,Metadata & Taxonomy for Glossary Sites,Cross-referencing.md
+Descriptive Metadata,"Information describing the intellectual content of a resource (e.g., Title, Author, Abstract).",Metadata & Taxonomy for Glossary Sites,Descriptive-Metadata.md
+Dublin Core,A widely used standard for cross-domain metadata description.,Metadata & Taxonomy for Glossary Sites,Dublin-Core.md
+Facet,A specific attribute or category used to filter content in a faceted search system.,Metadata & Taxonomy for Glossary Sites,Facet.md
+Faceted Classification,Organizing content by multiple attributes (facets) rather than a single rigid hierarchy.,Metadata & Taxonomy for Glossary Sites,Faceted-Classification.md
+Folksonomy,A user-generated system of classifying and organizing online content into different categories.,Metadata & Taxonomy for Glossary Sites,Folksonomy.md
+Hierarchical Categorization,Organizing items into a tree-like structure where each item belongs to a single parent category.,Metadata & Taxonomy for Glossary Sites,Hierarchical-Categorization.md
+Metadata Schema,A structure that defines the elements and format of metadata.,Metadata & Taxonomy for Glossary Sites,Metadata-Schema.md
+Ontology,A set of concepts and categories in a subject area or domain that shows their properties and the relations between them.,Metadata & Taxonomy for Glossary Sites,Ontology.md
+Polyhierarchy,A structure where a single item belongs to multiple parent categories simultaneously.,Metadata & Taxonomy for Glossary Sites,Polyhierarchy.md
+Preferred Term,"The designated term to be used in indexing to represent a concept, avoiding synonyms.",Metadata & Taxonomy for Glossary Sites,Preferred-Term.md
+Scope Note,A note explaining the definition and usage limits of a term within a specific taxonomy.,Metadata & Taxonomy for Glossary Sites,Scope-Note.md
+Search Filters,Tools that allow users to narrow down search results based on specific criteria.,Metadata & Taxonomy for Glossary Sites,Search-Filters.md
+Semantic Tagging,"The process of attaching meaningful tags to content to describe what it is about, not just what it says.",Metadata & Taxonomy for Glossary Sites,Semantic-Tagging.md
+SKOS (Simple Knowledge Organization System),A common data model for sharing and linking knowledge organization systems via the Web.,Metadata & Taxonomy for Glossary Sites,SKOS--Simple-Knowledge-Organization-System-.md
+Structural Metadata,"Information about how a compound object is put together (e.g., page order in a book).",Metadata & Taxonomy for Glossary Sites,Structural-Metadata.md
+Synonym Management,Handling different words that have the same meaning.,Metadata & Taxonomy for Glossary Sites,Synonym-Management.md
+Synonym Ring,"A set of terms that are considered equivalent for search purposes (e.g., mobile, cell, phone).",Metadata & Taxonomy for Glossary Sites,Synonym-Ring.md
+Tag Cloud,A visual representation of text data where the importance of each tag is shown with font size or color.,Metadata & Taxonomy for Glossary Sites,Tag-Cloud.md
+Tagging System,A non-hierarchical keyword or term assigned to a piece of information.,Metadata & Taxonomy for Glossary Sites,Tagging-System.md
+Taxonomy,The science or technique of classification; a scheme of classification.,Metadata & Taxonomy for Glossary Sites,Taxonomy.md
+Thesaurus,A controlled vocabulary that lists words grouped together according to similarity of meaning.,Metadata & Taxonomy for Glossary Sites,Thesaurus.md
+Topic Map,A standard for representing knowledge and connecting information resources to topics.,Metadata & Taxonomy for Glossary Sites,Topic-Map.md
+Annotator Agreement,A metric measuring how often different human annotators agree on the labels for the same data.,Model Training & Data,Annotator-Agreement.md
+Batch Size,The number of training examples utilized in one iteration.,Model Training & Data,Batch-Size.md
+Bias-Variance Tradeoff,The conflict when trying to simultaneously minimize these two sources of error.,Model Training & Data,Bias-Variance-Tradeoff.md
+BLEU Score,"A metric for evaluating a generated sentence to a reference sentence, often used in translation.",Model Training & Data,BLEU-Score.md
+Checkpointing,Saving the state of a model at specific intervals during training to allow resumption if it crashes.,Model Training & Data,Checkpointing.md
+Cold Start Problem,The difficulty a recommendation system faces when there is insufficient data about a new user or item.,Model Training & Data,Cold-Start-Problem.md
+Confusion Matrix,A table used to describe the performance of a classification model.,Model Training & Data,Confusion-Matrix.md
+Context Recall,A metric measuring if the retrieved context actually contains the information needed to answer the query.,Model Training & Data,Context-Recall.md
+Data Augmentation,Techniques used to increase the amount of data by adding slightly modified copies.,Model Training & Data,Data-Augmentation.md
+Data Cleansing,The process of detecting and correcting corrupt or inaccurate records from a dataset.,Model Training & Data,Data-Cleansing.md
+Dataset Annotation,The process of labeling data to make it usable for machine learning training.,Model Training & Data,Dataset-Annotation.md
+Early Stopping,Halting the training of a model when performance on a validation dataset stops improving to prevent overfitting.,Model Training & Data,Early-Stopping.md
+Epoch,One complete pass of the training dataset through the algorithm.,Model Training & Data,Epoch.md
+F1 Score,"The harmonic mean of precision and recall, providing a single metric for model accuracy.",Model Training & Data,F1-Score.md
+Faithfulness,An evaluation metric measuring whether the generated answer is factually consistent with the retrieved context.,Model Training & Data,Faithfulness.md
+Gradient Descent,An optimization algorithm used to minimize the loss function by iteratively moving towards the minimum.,Model Training & Data,Gradient-Descent.md
+Gradient Vanishing,A problem in training deep neural networks where gradients become too small to update weights effectively.,Model Training & Data,Gradient-Vanishing.md
+Learning Rate Scheduler,"Adjusting the learning rate during training (e.g., decaying it) to help the model converge efficiently.",Model Training & Data,Learning-Rate-Scheduler.md
+Loss Function,A mathematical function that measures how far the model's predictions are from the actual values.,Model Training & Data,Loss-Function.md
+Overfitting,"When a model learns the training data too well, including noise, reducing real-world performance.",Model Training & Data,Overfitting.md
+RAGAS,"A framework for evaluating RAG pipelines based on metrics like faithfulness, answer relevance, and context recall.",Model Training & Data,RAGAS.md
+Reinforcement Learning,Training an AI to make decisions by rewarding desired behaviors and punishing undesired ones.,Model Training & Data,Reinforcement-Learning.md
+ROUGE Score,A set of metrics used to evaluate automatic summarization and machine translation software.,Model Training & Data,ROUGE-Score.md
+Supervised Learning,Training an AI using a dataset that includes both inputs and the correct outputs (labels).,Model Training & Data,Supervised-Learning.md
+Synthetic Data Generation,Creating artificial data that mimics real-world data to train models where real data is scarce or sensitive.,Model Training & Data,Synthetic-Data-Generation.md
+Train-Test Split,Separating data into a training set for learning and a test set for evaluation.,Model Training & Data,Train-Test-Split.md
+Training Corpus,The large body of text or data used to train a machine learning model.,Model Training & Data,Training-Corpus.md
+Unsupervised Learning,Training an AI to find patterns in data without pre-existing labels.,Model Training & Data,Unsupervised-Learning.md
+Validation Set,A subset of data used to tune hyperparameters and prevent overfitting.,Model Training & Data,Validation-Set.md
+Vector Store,A specialized storage system designed to handle high-dimensional vector data for RAG.,Model Training & Data,Vector-Store.md
+Warmup Steps,A period at the beginning of training where the learning rate is gradually increased from zero.,Model Training & Data,Warmup-Steps.md
+After Call Work (ACW),"Tasks an agent must complete immediately after a call finishes (logging, notes).",Omnichannel Support,After-Call-Work--ACW-.md
+Asynchronous Messaging,"Communication where the participants do not need to be online simultaneously (e.g., WhatsApp).",Omnichannel Support,Asynchronous-Messaging.md
+Async Video Support,"Using recorded video messages (e.g., Loom) to explain complex issues instead of live calls or long emails.",Omnichannel Support,Async-Video-Support.md
+Average Speed of Answer (ASA),The average time it takes for calls to be answered by an agent during a specific time period.,Omnichannel Support,Average-Speed-of-Answer--ASA-.md
+Average Talk Time (ATT),"The average amount of time an agent spends talking to customers, excluding hold time and wrap-up time.",Omnichannel Support,Average-Talk-Time--ATT-.md
+BPO (Business Process Outsourcing),Contracting standard business functions (like support) to a third-party provider.,Omnichannel Support,BPO--Business-Process-Outsourcing-.md
+Call Deflection,"Strategies to redirect incoming calls to digital channels (chat, self-service) to reduce phone volume.",Omnichannel Support,Call-Deflection.md
+Channel Handover,Transitioning a customer from one support channel to another smoothly.,Omnichannel Support,Channel-Handover.md
+Channel Migration,Strategically moving customers from expensive channels (phone) to lower-cost channels (chat/web).,Omnichannel Support,Channel-Migration.md
+Channel Preference,The specific communication method a customer prefers to use for support interactions.,Omnichannel Support,Channel-Preference.md
+Channel Switching,The ability for a customer to move from one communication channel to another seamlessly.,Omnichannel Support,Channel-Switching.md
+Co-browsing,Technology enabling an agent to view and interact with a customer's web browser in real-time.,Omnichannel Support,Co-browsing.md
+Context Persistence,Maintaining the state and history of a conversation across different sessions.,Omnichannel Support,Context-Persistence.md
+Context Preservation,Transferring a support case while maintaining the conversation history and background context.,Omnichannel Support,Context-Preservation.md
+Contextual Handoff,Transferring a customer to another agent along with the full background and data of the current session.,Omnichannel Support,Contextual-Handoff.md
+Continuous Authentication,"Verifying a user's identity passively throughout the interaction (voice biometrics, typing behavior) rather than just at login.",Omnichannel Support,Continuous-Authentication.md
+Cross-Channel Consistency,The concept of providing the same quality and content of support regardless of the channel used.,Omnichannel Support,Cross-Channel-Consistency.md
+Customer 360,"A complete, holistic view of a customer's data and interaction history.",Omnichannel Support,Customer-360.md
+Customer Advocacy,"A customer service strategy focused on doing what is best for the customer, turning them into brand supporters.",Omnichannel Support,Customer-Advocacy.md
+Customer Effort Score (CES),A metric measuring how much effort a customer had to exert to get an issue resolved.,Omnichannel Support,Customer-Effort-Score--CES-.md
+Customer Journey Analytics,The process of tracking and analyzing how customers use a combination of channels to interact with an organization.,Omnichannel Support,Customer-Journey-Analytics.md
+Customer Journey Mapping,A method to visualize the customer's path from awareness to purchase and support.,Omnichannel Support,Customer-Journey-Mapping.md
+Customer Lifetime Value (CLV),The total revenue a business can reasonably expect from a single customer account.,Omnichannel Support,Customer-Lifetime-Value--CLV-.md
+Engagement History,A record of all past interactions and touchpoints with a customer.,Omnichannel Support,Engagement-History.md
+First Contact Resolution (FCR),The percentage of incoming requests that are resolved during the first interaction.,Omnichannel Support,First-Contact-Resolution--FCR-.md
+Gamification in Support,"Using game mechanics (leaderboards, badges) to motivate support agents and improve performance.",Omnichannel Support,Gamification-in-Support.md
+Help Scout,A help desk platform that focuses on a shared inbox approach for a more human customer experience.,Omnichannel Support,Help-Scout.md
+HubSpot Service Hub,A customer service software that connects to the HubSpot CRM to deliver authentic service.,Omnichannel Support,HubSpot-Service-Hub.md
+Interactive Text Response (ITR),"Similar to IVR but for text channels, guiding users through menus via chat or SMS.",Omnichannel Support,Interactive-Text-Response--ITR-.md
+Intercom,"A customer messaging platform that combines bots, apps, and product tours for support and sales.",Omnichannel Support,Intercom.md
+Kustomer,"A top-rated CRM for customer service that focuses on treating people like people, not tickets.",Omnichannel Support,Kustomer.md
+Mystery Shopping,A method used to measure quality of service using anonymous 'shoppers' to gather data.,Omnichannel Support,Mystery-Shopping.md
+Omnichannel Routing,"A routing logic that assigns work items from all channels (email, chat, phone) to a single unified queue.",Omnichannel Support,Omnichannel-Routing.md
+Predictive Engagement,"Proactively initiating a chat or offer based on visitor behavior (e.g., hesitation on checkout) before they ask for help.",Omnichannel Support,Predictive-Engagement.md
+Predictive Routing,Using AI to match customers with the specific agent best suited to handle their personality or issue type.,Omnichannel Support,Predictive-Routing.md
+Proactive Chat,"A chat invitation automatically triggered by visitor behavior (e.g., staying on a pricing page).",Omnichannel Support,Proactive-Chat.md
+Proactive Support,Providing assistance before the customer asks for it.,Omnichannel Support,Proactive-Support.md
+Real-time Synchronization,Immediate reflection of data and status updates across all connected systems.,Omnichannel Support,Real-time-Synchronization.md
+Salesforce Service Cloud,The world's #1 customer service application to deliver personalized support across any channel.,Omnichannel Support,Salesforce-Service-Cloud.md
+Seamless Experience,A continuous experience where information is not lost when switching between channels.,Omnichannel Support,Seamless-Experience.md
+Sentiment-Based Routing,Routing customers to specific queues or senior agents based on the negative sentiment detected in their initial message.,Omnichannel Support,Sentiment-Based-Routing.md
+Service Recovery,The actions a company takes to resolve a service failure and restore customer trust.,Omnichannel Support,Service-Recovery.md
+Service Recovery Paradox,A situation where a customer thinks more highly of a company after a problem is solved than if no problem had occurred.,Omnichannel Support,Service-Recovery-Paradox.md
+Session Continuity,Technology that maintains the state of a conversation even when changing devices.,Omnichannel Support,Session-Continuity.md
+Single Customer View (SCV),A representation of all data a company holds about a single customer in one place.,Omnichannel Support,Single-Customer-View--SCV-.md
+Skill-Based Routing,Assigning incoming support requests to the agent with the most relevant skills to handle them.,Omnichannel Support,Skill-Based-Routing.md
+Social Care,Customer support provided via social media channels.,Omnichannel Support,Social-Care.md
+Ticket Swarming,A collaborative support model where tickets are handled by a group of experts rather than tiered escalation.,Omnichannel Support,Ticket-Swarming.md
+Touchpoint Integration,"Systematic linkage of all customer contact points such as Web, SNS, and phone.",Omnichannel Support,Touchpoint-Integration.md
+Unified Agent Desktop,A single interface where agents can view all customer interactions and data without switching tabs.,Omnichannel Support,Unified-Agent-Desktop.md
+Unified Communications as a Service (UCaaS),A cloud delivery model that offers a variety of communication and collaboration applications and services.,Omnichannel Support,Unified-Communications-as-a-Service--UCaaS-.md
+Unified Customer Profile,A comprehensive collection of data associated with a specific customer from all channels.,Omnichannel Support,Unified-Customer-Profile.md
+Unified Customer View,A centralized display of customer data and interaction history across all channels.,Omnichannel Support,Unified-Customer-View.md
+Unified Inbox,"A single interface aggregating messages from email, SMS, social media, and chat.",Omnichannel Support,Unified-Inbox.md
+Visual IVR,A support menu displayed on a smartphone screen that allows customers to navigate options visually instead of listening to voice prompts.,Omnichannel Support,Visual-IVR.md
+Voice of the Customer (VoC),"The process of capturing customer's expectations, preferences, and aversions.",Omnichannel Support,Voice-of-the-Customer--VoC-.md
+Workforce Optimization (WFO),"A strategy integrating contact center technologies (WFM, QA, Analytics) to maximize agent efficiency.",Omnichannel Support,Workforce-Optimization--WFO-.md
+Wrap-up Code,A code or category selected by an agent after a call to classify the interaction type and outcome.,Omnichannel Support,Wrap-up-Code.md
+Zendesk,A service-first CRM company that builds software designed to improve customer relationships.,Omnichannel Support,Zendesk.md
+API Economy,Business models and practices built around the use of APIs.,Platform Ecosystems & Integrations,API-Economy.md
+API Gateway,"A server that acts as an API front-end, receiving API requests, enforcing throttling and security policies.",Platform Ecosystems & Integrations,API-Gateway.md
+API Monetization,"Generating revenue by charging for access to an API (e.g., tiered usage plans).",Platform Ecosystems & Integrations,API-Monetization.md
+API Rate Limiting,Controlling the number of requests a user can make to an API in a given timeframe.,Platform Ecosystems & Integrations,API-Rate-Limiting.md
+Change Data Capture (CDC),A set of software design patterns used to determine and track the data that has changed so that action can be taken.,Platform Ecosystems & Integrations,Change-Data-Capture--CDC-.md
+Developer Community,A group of developers who use a specific platform or technology.,Platform Ecosystems & Integrations,Developer-Community.md
+Developer Portal,"A website that provides documentation, tools, and support for developers using your API.",Platform Ecosystems & Integrations,Developer-Portal.md
+Embedded iPaaS,Integration capabilities embedded directly into a SaaS product for end-users to connect their apps.,Platform Ecosystems & Integrations,Embedded-iPaaS.md
+Event-Driven Architecture,"A software architecture paradigm promoting the production, detection, consumption of, and reaction to events.",Platform Ecosystems & Integrations,Event-Driven-Architecture.md
+GraphQL,A query language for APIs and a runtime for fulfilling those queries with your existing data.,Platform Ecosystems & Integrations,GraphQL.md
+Headless Commerce,An e-commerce architecture where the frontend is decoupled from the backend commerce functionality.,Platform Ecosystems & Integrations,Headless-Commerce.md
+Integration PaaS (iPaaS),"A suite of cloud services enabling development, execution and governance of integration flows.",Platform Ecosystems & Integrations,Integration-PaaS--iPaaS-.md
+Marketplace,An online platform where third-party developers can sell or distribute their applications.,Platform Ecosystems & Integrations,Marketplace.md
+Marketplace Dynamics,"The interactions between buyers, sellers, and the platform operator in an ecosystem.",Platform Ecosystems & Integrations,Marketplace-Dynamics.md
+Middleware,Software that acts as a bridge between an operating system and applications.,Platform Ecosystems & Integrations,Middleware.md
+Native Integration,A direct connection built into a software platform to connect seamlessly with another specific application.,Platform Ecosystems & Integrations,Native-Integration.md
+OAuth,"An open standard for access delegation, commonly used as a way for Internet users to log in to websites.",Platform Ecosystems & Integrations,OAuth.md
+Partner Ecosystem,"A network of partners (resellers, integrators) that work together to create value for customers.",Platform Ecosystems & Integrations,Partner-Ecosystem.md
+Partner Portal,A web-based application that allows a company to manage its relationship with its partners.,Platform Ecosystems & Integrations,Partner-Portal.md
+Rate Limiting,Controlling the amount of incoming or outgoing traffic to or from a network or API.,Platform Ecosystems & Integrations,Rate-Limiting.md
+REST API,"An API that adheres to the constraints of REST architectural style, commonly used for web services.",Platform Ecosystems & Integrations,REST-API.md
+Reverse Proxy,A server that sits in front of web servers and forwards client requests to those web servers.,Platform Ecosystems & Integrations,Reverse-Proxy.md
+Sandbox Environment,An isolated testing environment that enables users to run programs or execute files without affecting the live system.,Platform Ecosystems & Integrations,Sandbox-Environment.md
+SDK (Software Development Kit),A collection of software development tools in one installable package.,Platform Ecosystems & Integrations,SDK--Software-Development-Kit-.md
+Service Mesh,An infrastructure layer for facilitating service-to-service communications between microservices.,Platform Ecosystems & Integrations,Service-Mesh.md
+Sidecar Pattern,Deploying components of an application into a separate process or container to provide isolation and encapsulation.,Platform Ecosystems & Integrations,Sidecar-Pattern.md
+Single Sign-On (SSO),"An authentication scheme that allows a user to log in with a single ID to any of several related, yet independent, software systems.",Platform Ecosystems & Integrations,Single-Sign-On--SSO-.md
+Solution Partner,A company that provides consulting or implementation services around a platform.,Platform Ecosystems & Integrations,Solution-Partner.md
+Technology Partner,A company whose software integrates with the platform to offer complementary features.,Platform Ecosystems & Integrations,Technology-Partner.md
+Third-Party Plugins,Add-on software components created by an external company.,Platform Ecosystems & Integrations,Third-Party-Plugins.md
+Vendor Management,The process that empowers an organization to take appropriate measures for controlling cost and reducing potential risks related to vendors.,Platform Ecosystems & Integrations,Vendor-Management.md
+Webhook,A method for an app to provide other applications with real-time information.,Platform Ecosystems & Integrations,Webhook.md
+Acceptance Criteria,A set of conditions that a software product must satisfy to be accepted by a user or customer.,Product Management & Agile,Acceptance-Criteria.md
+Aha!,"The world's #1 roadmap software, helping teams define strategy and prioritize work.",Product Management & Agile,Aha!.md
+Backlog Grooming,The process of reviewing and prioritizing items in the product backlog to ensure the team is working on the right things.,Product Management & Agile,Backlog-Grooming.md
+Burndown Chart,"A graphical representation of work left to do versus time, used to track the progress of a project.",Product Management & Agile,Burndown-Chart.md
+Dogfooding,The practice of an organization using its own product to test and improve it.,Product Management & Agile,Dogfooding.md
+End of Life (EOL),"The date after which a vendor will no longer support, market, or sell a particular product.",Product Management & Agile,End-of-Life--EOL-.md
+Feature Creep,"The ongoing expansion or addition of new features in a product, often resulting in complexity and delay.",Product Management & Agile,Feature-Creep.md
+Feature Parity,When a new system or product offers the same set of features as the legacy system it is replacing.,Product Management & Agile,Feature-Parity.md
+Jira,"The #1 software development tool used by agile teams to plan, track, and release software.",Product Management & Agile,Jira.md
+Kanban,"A visual method for managing work as it moves through a process, emphasizing continuous delivery.",Product Management & Agile,Kanban.md
+Linear,"A purpose-built tool for planning and building products, known for its speed and design.",Product Management & Agile,Linear.md
+MoSCoW Method,"A prioritization technique: Must have, Should have, Could have, and Won't have.",Product Management & Agile,MoSCoW-Method.md
+MVP (Minimum Viable Product),A product with just enough features to be usable by early customers who can then provide feedback.,Product Management & Agile,MVP--Minimum-Viable-Product-.md
+Notion,"An all-in-one workspace for notes, project management, documents, and collaboration.",Product Management & Agile,Notion.md
+Product Roadmap,"A shared source of truth that outlines the vision, direction, priorities, and progress of a product over time.",Product Management & Agile,Product-Roadmap.md
+Product-Market Fit (PMF),The degree to which a product satisfies a strong market demand.,Product Management & Agile,Product-Market-Fit--PMF-.md
+Productboard,A customer-centric product management platform that helps teams get the right products to market.,Product Management & Agile,Productboard.md
+Proof of Concept (PoC),A small-scale realization of a certain method or idea to demonstrate its feasibility.,Product Management & Agile,Proof-of-Concept--PoC-.md
+Refactoring,The process of restructuring existing computer code without changing its external behavior.,Product Management & Agile,Refactoring.md
+RICE Score,"A prioritization framework based on Reach, Impact, Confidence, and Effort.",Product Management & Agile,RICE-Score.md
+Scrum,"An agile framework for developing, delivering, and sustaining complex products through iterative cycles.",Product Management & Agile,Scrum.md
+Sprint,A set period of time (usually 2 weeks) during which specific work has to be completed and made ready for review.,Product Management & Agile,Sprint.md
+Technical Debt,"The implied cost of future reworking required when choosing an easy, short-term solution over a better long-term approach.",Product Management & Agile,Technical-Debt.md
+Use Case,A specific situation in which a product or service could potentially be used.,Product Management & Agile,Use-Case.md
+User Story,"A description of a software feature from an end-user perspective (e.g., 'As a [user], I want [feature] so that [benefit]').",Product Management & Agile,User-Story.md
+Wireframe,A visual guide that represents the skeletal framework of a website or application interface.,Product Management & Agile,Wireframe.md
+Assistant Message,The response generated by the AI.,Prompting & Interfaces,Assistant-Message.md
+Chain-of-Thought Prompting,Prompting the AI to explain its reasoning step-by-step to improve accuracy.,Prompting & Interfaces,Chain-of-Thought-Prompting.md
+Chat Interface,A user interface that allows for conversation with a computer program.,Prompting & Interfaces,Chat-Interface.md
+Context Window,The limit on the amount of text (tokens) an AI model can process at one time.,Prompting & Interfaces,Context-Window.md
+Conversational Memory,The ability of a chat system to store and recall past interactions within a session.,Prompting & Interfaces,Conversational-Memory.md
+Few-Shot Learning,Teaching a model to perform a task with only a small number of examples.,Prompting & Interfaces,Few-Shot-Learning.md
+Interactive UI,A user interface that allows for two-way interaction between the user and the system.,Prompting & Interfaces,Interactive-UI.md
+Multimodal Prompting,"Providing inputs of different types (e.g., text + image) simultaneously to an AI model.",Prompting & Interfaces,Multimodal-Prompting.md
+Negative Prompt,Instructions telling the AI what *not* to include in the generated output.,Prompting & Interfaces,Negative-Prompt.md
+Output Parser,Code that formats the unstructured text output from an LLM into a structured format like JSON.,Prompting & Interfaces,Output-Parser.md
+Persona Design,"Defining the character, tone, and style of an AI agent.",Prompting & Interfaces,Persona-Design.md
+Prompt Chaining,"Breaking a complex task into a series of smaller prompts, using the output of one as the input for the next.",Prompting & Interfaces,Prompt-Chaining.md
+Prompt Injection,A security exploit where malicious inputs trick the AI into overriding its instructions.,Prompting & Interfaces,Prompt-Injection.md
+Prompt Leaking,A security vulnerability where the model reveals its own system instructions or hidden prompts.,Prompting & Interfaces,Prompt-Leaking.md
+Prompt Library,A collection of pre-saved prompts that users can easily insert into the chat.,Prompting & Interfaces,Prompt-Library.md
+Retry Mechanism,Allowing the user to regenerate the response if the first output was unsatisfactory.,Prompting & Interfaces,Retry-Mechanism.md
+Role Prompting,"Assigning a specific persona (e.g., 'Act as a lawyer') to the AI to guide its output.",Prompting & Interfaces,Role-Prompting.md
+Stop Sequence,A specific set of characters that tells the AI model to stop generating further text.,Prompting & Interfaces,Stop-Sequence.md
+Streaming Response,"Displaying the AI's output token-by-token as it is generated, rather than waiting for the full text.",Prompting & Interfaces,Streaming-Response.md
+System Message,The initial hidden instruction given to the AI to define its behavior and constraints.,Prompting & Interfaces,System-Message.md
+System Prompt,Initial instructions given to an AI model to define its behavior and persona.,Prompting & Interfaces,System-Prompt.md
+Tree of Thoughts (ToT),A prompting framework that allows LLMs to explore multiple reasoning paths for problem-solving.,Prompting & Interfaces,Tree-of-Thoughts--ToT-.md
+User Intent,What the user wants to achieve with their input.,Prompting & Interfaces,User-Intent.md
+User Message,The input provided by the human user to the AI.,Prompting & Interfaces,User-Message.md
+Variable Substitution,"Replacing placeholders in a prompt template with actual user data (e.g., {{name}} -> 'John').",Prompting & Interfaces,Variable-Substitution.md
+Zero-Shot Learning,Testing a model's ability to perform a task without any specific examples.,Prompting & Interfaces,Zero-Shot-Learning.md
+Account-Based Marketing (ABM),A B2B marketing strategy that concentrates resources on a set of target accounts within a market.,Sales Enablement & CRM,Account-Based-Marketing--ABM-.md
+Apollo.io,A sales intelligence and engagement platform with a database of millions of contacts.,Sales Enablement & CRM,Apollo.io.md
+BANT Framework,"A sales qualification framework based on Budget, Authority, Need, and Timeline.",Sales Enablement & CRM,BANT-Framework.md
+Battle Card,A cheat sheet for sales reps comparing their company's product against a specific competitor's.,Sales Enablement & CRM,Battle-Card.md
+Champion,A person within the prospect's organization who actively advocates for your product to the decision-makers.,Sales Enablement & CRM,Champion.md
+Cold Calling,Soliciting business from potential customers who have had no prior contact with the salesperson.,Sales Enablement & CRM,Cold-Calling.md
+"CPQ (Configure, Price, Quote)",Software that helps sellers quote complex and configurable products accurately.,Sales Enablement & CRM,"CPQ--Configure,-Price,-Quote-.md"
+Deal Closing,The final step of a transaction where the prospect agrees to the purchase and signs the contract.,Sales Enablement & CRM,Deal-Closing.md
+Discovery Call,"The first conversation with a prospect to understand their pain points, needs, and goals.",Sales Enablement & CRM,Discovery-Call.md
+Gatekeeper,"An individual (e.g., receptionist, assistant) who controls access to the decision-maker.",Sales Enablement & CRM,Gatekeeper.md
+Gong,A revenue intelligence platform that captures and analyzes customer interactions.,Sales Enablement & CRM,Gong.md
+Ideal Customer Profile (ICP),A description of the company — not the individual buyer — that would get the most value from your product.,Sales Enablement & CRM,Ideal-Customer-Profile--ICP-.md
+Intent Data,"Data that indicates a prospect's level of interest or readiness to buy, often based on web behavior.",Sales Enablement & CRM,Intent-Data.md
+Magic Number,A metric that measures the sales efficiency of a SaaS business.,Sales Enablement & CRM,Magic-Number.md
+MEDDIC,"A B2B sales qualification methodology (Metrics, Economic Buyer, Decision Criteria, Decision Process, Identify Pain, Champion).",Sales Enablement & CRM,MEDDIC.md
+Outreach,A sales execution platform that helps revenue organizations create and close more pipeline.,Sales Enablement & CRM,Outreach.md
+Quota,A specific sales target that a seller or team is expected to achieve over a given period.,Sales Enablement & CRM,Quota.md
+Sales Cycle,"The entire process of selling a product to a customer, from identifying the lead to closing the deal.",Sales Enablement & CRM,Sales-Cycle.md
+Sales Funnel,The buying process that companies lead customers through when purchasing products.,Sales Enablement & CRM,Sales-Funnel.md
+Sales Pipeline,A visual representation of where prospects are in the sales process.,Sales Enablement & CRM,Sales-Pipeline.md
+Sales Velocity,A metric measuring how quickly deals move through your sales pipeline and generate revenue.,Sales Enablement & CRM,Sales-Velocity.md
+Salesloft,A leading sales engagement platform that helps sales teams drive more revenue.,Sales Enablement & CRM,Salesloft.md
+301 Redirect,"A permanent redirect from one URL to another, passing on ranking power.",SEO & Search Visibility,301-Redirect.md
+Alt Text,A text description of an image used for accessibility and SEO.,SEO & Search Visibility,Alt-Text.md
+Anchor Text,"The visible, clickable text in a hyperlink.",SEO & Search Visibility,Anchor-Text.md
+Backlink Strategy,A plan to get other websites to link to your site to improve authority.,SEO & Search Visibility,Backlink-Strategy.md
+Canonical Tag,"Similar to a 301 redirect, but without the redirect.",SEO & Search Visibility,Canonical-Tag.md
+Content Pruning,Removing or updating low-quality or outdated content to improve overall site health and SEO.,SEO & Search Visibility,Content-Pruning.md
+Core Web Vitals,"Google's rating guidelines: Experience, Expertise, Authoritativeness, and Trustworthiness.",SEO & Search Visibility,Core-Web-Vitals.md
+Crawl Budget,The number of pages a search engine bot crawls on a website within a certain timeframe.,SEO & Search Visibility,Crawl-Budget.md
+Domain Authority,A search engine ranking score that predicts how likely a website is to rank.,SEO & Search Visibility,Domain-Authority.md
+Domain Rating (DR),A proprietary metric by Ahrefs showing the strength of a website's backlink profile.,SEO & Search Visibility,Domain-Rating--DR-.md
+E-E-A-T,"Google's rating guidelines: Experience, Expertise, Authoritativeness, and Trustworthiness.",SEO & Search Visibility,E-E-A-T.md
+Entity SEO,"Optimizing content based on distinct concepts (people, places, things) rather than just keywords.",SEO & Search Visibility,Entity-SEO.md
+Featured Snippet,Selected search results that are featured on top of Google's organic results in a box.,SEO & Search Visibility,Featured-Snippet.md
+Google Business Profile,"A free tool for businesses to manage their online presence across Google, including Search and Maps.",SEO & Search Visibility,Google-Business-Profile.md
+Hreflang Tag,An HTML attribute used to specify the language and geographical targeting of a webpage.,SEO & Search Visibility,Hreflang-Tag.md
+Internal Linking,Hyperlinks that point to another page on the same website.,SEO & Search Visibility,Internal-Linking.md
+Keyword Cannibalization,"When multiple pages on a site target the same keyword, hurting each other's ranking.",SEO & Search Visibility,Keyword-Cannibalization.md
+Keyword Clustering,Grouping related keywords together to target them with a single page or topic cluster.,SEO & Search Visibility,Keyword-Clustering.md
+Keyword Difficulty,A metric estimating how hard it would be to rank on the first page of Google for a specific keyword.,SEO & Search Visibility,Keyword-Difficulty.md
+Keyword Research,The process of finding and analyzing search terms that people enter into search engines.,SEO & Search Visibility,Keyword-Research.md
+Knowledge Panel,"Information boxes that appear on Google when you search for entities (people, places, organizations).",SEO & Search Visibility,Knowledge-Panel.md
+Link Juice,A colloquial term in SEO referring to the value or equity passed from one page to another via hyperlinks.,SEO & Search Visibility,Link-Juice.md
+Local SEO,"Optimizing a website to be found in local search results (e.g., 'near me' searches).",SEO & Search Visibility,Local-SEO.md
+Log File Analysis,Analyzing server logs to see exactly how search engine bots are crawling a website.,SEO & Search Visibility,Log-File-Analysis.md
+Long-Tail Keywords,"Search volume is low, but conversion rates are high.",SEO & Search Visibility,Long-Tail-Keywords.md
+LSI Keywords (Latent Semantic Indexing),Conceptual terms related to the main keyword that help search engines understand content context.,SEO & Search Visibility,LSI-Keywords--Latent-Semantic-Indexing-.md
+Meta Description,A summary of a page's content that appears in search engine results.,SEO & Search Visibility,Meta-Description.md
+Mobile-First Indexing,Google's indexing method where the mobile version of a website is used for ranking and indexing.,SEO & Search Visibility,Mobile-First-Indexing.md
+Off-Page SEO,Actions taken outside of your own website to impact your rankings within search engine results pages.,SEO & Search Visibility,Off-Page-SEO.md
+On-Page SEO,The practice of optimizing individual web pages in order to rank higher and earn more relevant traffic.,SEO & Search Visibility,On-Page-SEO.md
+Open Graph Protocol (OGP),"Meta tags that control how a URL is displayed when shared on social media (Facebook, LinkedIn, etc.).",SEO & Search Visibility,Open-Graph-Protocol--OGP-.md
+Orphan Page,"A webpage that has no internal links pointing to it, making it hard for crawlers to find.",SEO & Search Visibility,Orphan-Page.md
+Parasite SEO,Publishing content on high-authority third-party sites (like LinkedIn or Medium) to rank for competitive keywords.,SEO & Search Visibility,Parasite-SEO.md
+Redirect Chain,"A series of redirects that go from one URL to another, and then to another, slowing down page load.",SEO & Search Visibility,Redirect-Chain.md
+Robots.txt,A text file webmasters create to instruct web robots (crawlers) how to crawl pages on their website.,SEO & Search Visibility,Robots.txt.md
+Schema.org,"A collaborative community activity with a mission to create, maintain, and promote schemas for structured data.",SEO & Search Visibility,Schema.org.md
+Search Generative Experience (SGE),"Google's integration of generative AI directly into search results, providing snapshots and conversational modes.",SEO & Search Visibility,Search-Generative-Experience--SGE-.md
+Search Intent,User's purpose for a query.,SEO & Search Visibility,Search-Intent.md
+Search Intent (Navigational/Informational/Transactional),The underlying goal a user has when typing a query into a search engine.,SEO & Search Visibility,Search-Intent--Navigational-Informational-Transactional-.md
+Search Volume,The number of times a specific keyword is searched for during a given timeframe.,SEO & Search Visibility,Search-Volume.md
+SERP (Search Engine Results Page),The page displayed by a search engine in response to a query.,SEO & Search Visibility,SERP--Search-Engine-Results-Page-.md
+Structured Data,Code added to a website to help search engines understand the content better.,SEO & Search Visibility,Structured-Data.md
+Structured Data / Schema Markup,A standardized format for providing information about a page and classifying the page content.,SEO & Search Visibility,Structured-Data---Schema-Markup.md
+Topical Authority,"The depth of expertise a website shows on a specific subject, influencing its ranking for related keywords.",SEO & Search Visibility,Topical-Authority.md
+Toxic Backlinks,Links from low-quality or suspicious sites that can harm your SEO rankings.,SEO & Search Visibility,Toxic-Backlinks.md
+XML Sitemap,"A file where you provide information about the pages, videos, and other files on your site, and the relationships between them.",SEO & Search Visibility,XML-Sitemap.md
+Zero-Click Search,Search results that answer the user's query directly on the SERP.,SEO & Search Visibility,Zero-Click-Search.md
+ACV (Annual Contract Value),"The average annualized revenue per customer contract, excluding one-time fees.",SMB (DX)-Friendly Solutions,ACV--Annual-Contract-Value-.md
+Agile Methodology,A project management approach based on iterative development and flexibility.,SMB (DX)-Friendly Solutions,Agile-Methodology.md
+ARPU (Average Revenue Per User),The average amount of revenue generated from each active user or unit over a period.,SMB (DX)-Friendly Solutions,ARPU--Average-Revenue-Per-User-.md
+Bookings vs Revenue,Bookings is the value of signed contracts; Revenue is the income recognized over the service period.,SMB (DX)-Friendly Solutions,Bookings-vs-Revenue.md
+Bootstrap,Building a company from the ground up with nothing but personal savings and the cash coming in.,SMB (DX)-Friendly Solutions,Bootstrap.md
+Burn Multiple,A metric measuring how much a startup burns to generate each dollar of new ARR (efficiency metric).,SMB (DX)-Friendly Solutions,Burn-Multiple.md
+Burn Rate,The rate at which a new company is spending its venture capital to finance overhead before generating positive cash flow.,SMB (DX)-Friendly Solutions,Burn-Rate.md
+CAC Payback Period,The time it takes for a customer to generate enough revenue to cover the cost of acquiring them.,SMB (DX)-Friendly Solutions,CAC-Payback-Period.md
+Churn Analysis,The process of evaluating the rate at which customers stop doing business with an entity.,SMB (DX)-Friendly Solutions,Churn-Analysis.md
+Cloud-Native,Applications built and run to take full advantage of the cloud computing model.,SMB (DX)-Friendly Solutions,Cloud-Native.md
+Contraction MRR,The reduction in MRR due to customers downgrading their subscriptions.,SMB (DX)-Friendly Solutions,Contraction-MRR.md
+Cost-Benefit Analysis,A systematic approach to estimating the strengths and weaknesses of alternatives.,SMB (DX)-Friendly Solutions,Cost-Benefit-Analysis.md
+Cost-Effective,Producing good results without costing a lot of money.,SMB (DX)-Friendly Solutions,Cost-Effective.md
+Customer Acquisition Cost (CAC),The total cost of sales and marketing efforts needed to acquire a new customer.,SMB (DX)-Friendly Solutions,Customer-Acquisition-Cost--CAC-.md
+Customer Health Score,"A metric used to predict the likelihood of a customer churning or renewing, based on usage data.",SMB (DX)-Friendly Solutions,Customer-Health-Score.md
+Digital Maturity Model,A framework for assessing an organization's current level of digital capability.,SMB (DX)-Friendly Solutions,Digital-Maturity-Model.md
+Digital Transformation Strategy,A plan of action describing how a business will strategically reposition itself in the digital economy.,SMB (DX)-Friendly Solutions,Digital-Transformation-Strategy.md
+Expansion MRR,Monthly Recurring Revenue generated from existing customers through upsells and cross-sells.,SMB (DX)-Friendly Solutions,Expansion-MRR.md
+Freemium Model,"A business model where basic services are free, but advanced features require payment.",SMB (DX)-Friendly Solutions,Freemium-Model.md
+Freemium to Premium Conversion,The percentage of free users who upgrade to a paid plan.,SMB (DX)-Friendly Solutions,Freemium-to-Premium-Conversion.md
+Gross Revenue Retention (GRR),"The percentage of recurring revenue retained from existing customers, excluding upsells (focuses on churn/downgrades).",SMB (DX)-Friendly Solutions,Gross-Revenue-Retention--GRR-.md
+Implementation Fee,A one-time fee charged to a customer to set up and configure the software.,SMB (DX)-Friendly Solutions,Implementation-Fee.md
+Legacy Migration,The process of moving from outdated software to modern cloud-based systems.,SMB (DX)-Friendly Solutions,Legacy-Migration.md
+Logo Retention,"The percentage of customers (logos) retained over a period, regardless of the revenue they generate.",SMB (DX)-Friendly Solutions,Logo-Retention.md
+Low-Code/No-Code,Development platforms that require little to no coding knowledge to build applications.,SMB (DX)-Friendly Solutions,Low-Code-No-Code.md
+LTV:CAC Ratio,A metric that compares the value of a customer over their lifetime to the cost of acquiring them.,SMB (DX)-Friendly Solutions,LTV-CAC-Ratio.md
+Net Dollar Retention (NDR),"A metric showing the percentage of recurring revenue retained from existing customers, including expansions and churn.",SMB (DX)-Friendly Solutions,Net-Dollar-Retention--NDR-.md
+PQL (Product Qualified Lead),"A lead who has experienced meaningful value using the product (e.g., during a free trial) and is likely to buy.",SMB (DX)-Friendly Solutions,PQL--Product-Qualified-Lead-.md
+Product-Led Growth (PLG),"A business methodology where the product itself is the primary driver of acquisition, expansion, and retention.",SMB (DX)-Friendly Solutions,Product-Led-Growth--PLG-.md
+QBR (Quarterly Business Review),"A quarterly meeting with a customer to review value delivered, goals, and future plans.",SMB (DX)-Friendly Solutions,QBR--Quarterly-Business-Review-.md
+Rapid Deployment,The ability to install and configure a system quickly.,SMB (DX)-Friendly Solutions,Rapid-Deployment.md
+Revenue Churn,The percentage of recurring revenue lost from existing customers over a given period.,SMB (DX)-Friendly Solutions,Revenue-Churn.md
+Rule of 40,A SaaS principle stating that a company's growth rate plus profit margin should equal or exceed 40%.,SMB (DX)-Friendly Solutions,Rule-of-40.md
+SaaS (Software as a Service),A software distribution model where applications are hosted by a provider over the internet.,SMB (DX)-Friendly Solutions,SaaS--Software-as-a-Service-.md
+SaaS Magic Number,A metric that measures the efficiency of sales and marketing spend in generating recurring revenue.,SMB (DX)-Friendly Solutions,SaaS-Magic-Number.md
+Scalability,The ability of a system to handle growing amounts of work or resources.,SMB (DX)-Friendly Solutions,Scalability.md
+Self-Service SaaS,"A SaaS model where customers can sign up, pay, and start using the product without talking to sales.",SMB (DX)-Friendly Solutions,Self-Service-SaaS.md
+Serviceable Available Market (SAM),The segment of the TAM targeted by your products and services which is within your geographical reach.,SMB (DX)-Friendly Solutions,Serviceable-Available-Market--SAM-.md
+Total Addressable Market (TAM),The overall revenue opportunity available to a product or service if 100% market share was achieved.,SMB (DX)-Friendly Solutions,Total-Addressable-Market--TAM-.md
+Total Contract Value (TCV),"The total value of a customer contract, including one-time fees and recurring revenue over the contract term.",SMB (DX)-Friendly Solutions,Total-Contract-Value--TCV-.md
+Turnkey Solution,A product that is ready for immediate use upon implementation.,SMB (DX)-Friendly Solutions,Turnkey-Solution.md
+User-Friendly Interface,An interface that is easy to use and understand.,SMB (DX)-Friendly Solutions,User-Friendly-Interface.md
+Vertical SaaS,"Software solutions targeting a specific industry or niche (e.g., construction, healthcare) rather than broad usage.",SMB (DX)-Friendly Solutions,Vertical-SaaS.md
+Brand Monitoring,Continuously tracking mentions of a brand across the web to manage reputation.,Social Media & EC Integration,Brand-Monitoring.md
+Community Management,Building and maintaining an authentic community among a brand's customers.,Social Media & EC Integration,Community-Management.md
+Conversational Commerce,E-commerce done through messaging apps or voice assistants.,Social Media & EC Integration,Conversational-Commerce.md
+Dark Social,"Private social sharing (e.g., DMs, email) that cannot be easily tracked by analytics.",Social Media & EC Integration,Dark-Social.md
+Direct Message (DM),A private message sent between users on a social media platform.,Social Media & EC Integration,Direct-Message--DM-.md
+Direct Messaging API,An API that allows applications to send and receive direct messages.,Social Media & EC Integration,Direct-Messaging-API.md
+Drop Marketing,Releasing limited-edition products at specific times to create hype and scarcity.,Social Media & EC Integration,Drop-Marketing.md
+Engagement Rate,A metric that measures the level of engagement that a piece of created content is receiving from an audience.,Social Media & EC Integration,Engagement-Rate.md
+Geotargeting,Delivering different content or ads to a website visitor based on their geographic location.,Social Media & EC Integration,Geotargeting.md
+Influencer Outreach,The process of connecting with influencers to promote products or services.,Social Media & EC Integration,Influencer-Outreach.md
+Influencer Tier (Nano/Micro/Macro),"Categorizing influencers based on their follower count (e.g., Nano < 10k, Micro 10k-100k).",Social Media & EC Integration,Influencer-Tier--Nano-Micro-Macro-.md
+Influencer Whitelisting,When an influencer grants a brand permission to run ads through their social media handle.,Social Media & EC Integration,Influencer-Whitelisting.md
+Lookalike Audience,An audience targeting tool that finds new people who share characteristics with existing customers.,Social Media & EC Integration,Lookalike-Audience.md
+Multi-store Sync,Synchronizing inventory and order data across multiple online stores.,Social Media & EC Integration,Multi-store-Sync.md
+Nano-Influencer,Influencers with a very small (1k-10k) but highly engaged and niche following.,Social Media & EC Integration,Nano-Influencer.md
+Order Tracking,A feature allowing customers to see the shipping status and location of their orders.,Social Media & EC Integration,Order-Tracking.md
+Pixel Tracking,A snippet of code allowing brands to track visitor activity on a website.,Social Media & EC Integration,Pixel-Tracking.md
+Review Management,The process of monitoring and responding to customer reviews.,Social Media & EC Integration,Review-Management.md
+Share of Voice (SOV),A measure of the market your brand owns compared to your competitors.,Social Media & EC Integration,Share-of-Voice--SOV-.md
+Shoppable Posts,Social media posts that allow users to click on products and purchase them.,Social Media & EC Integration,Shoppable-Posts.md
+Shopping Cart Integration,Connecting e-commerce cart data with customer support tools for better context.,Social Media & EC Integration,Shopping-Cart-Integration.md
+Social Commerce,The practice of selling products directly through social media platforms.,Social Media & EC Integration,Social-Commerce.md
+Social Graph,"A diagram that illustrates the interconnections among people, groups, and organizations in a social network.",Social Media & EC Integration,Social-Graph.md
+Social Listening,Monitoring social media channels for customer feedback and brand mentions.,Social Media & EC Integration,Social-Listening.md
+Social Proof,"Psychological phenomenon where people copy the actions of others (e.g., reviews, likes).",Social Media & EC Integration,Social-Proof.md
+Social Proof Notification,"Pop-ups showing recent purchases or sign-ups to create urgency and trust (e.g., 'John just bought X').",Social Media & EC Integration,Social-Proof-Notification.md
+Social Selling,"Using social media to find, connect with, and nurture sales prospects.",Social Media & EC Integration,Social-Selling.md
+Social Sentiment,The perceived attitude or emotion of users towards a brand on social media.,Social Media & EC Integration,Social-Sentiment.md
+Social Sign-On,Allows users to log in to a third-party website using their existing social media account information.,Social Media & EC Integration,Social-Sign-On.md
+UGC Rights Management,The process of asking for and gaining permission to use user-generated content in marketing.,Social Media & EC Integration,UGC-Rights-Management.md
+User Generated Content Rights,Permission granted by a user to a brand to use their content for marketing purposes.,Social Media & EC Integration,User-Generated-Content-Rights.md
+Vanity Metric,"Metrics that look good on paper (likes, views) but don't necessarily translate to meaningful business results.",Social Media & EC Integration,Vanity-Metric.md
+Archetypes,Content templates in Hugo used to pre-populate front matter when creating new content files.,Static Site Generation (SSG) & Hugo Workflow,Archetypes.md
+Asset Bundling,The process of combining multiple CSS or JavaScript files into a single file to reduce HTTP requests.,Static Site Generation (SSG) & Hugo Workflow,Asset-Bundling.md
+Asset Minification,"Reducing the size of CSS, JS, and HTML files by removing unnecessary characters to improve load time.",Static Site Generation (SSG) & Hugo Workflow,Asset-Minification.md
+Atomic Design,"A methodology for creating design systems via five levels: atoms, molecules, organisms, templates, and pages.",Static Site Generation (SSG) & Hugo Workflow,Atomic-Design.md
+Branch Bundle,"A directory structure in Hugo containing an _index.md file, representing a section or listing page.",Static Site Generation (SSG) & Hugo Workflow,Branch-Bundle.md
+Build Pipeline,Automated process of compiling code and assets into a deployable website.,Static Site Generation (SSG) & Hugo Workflow,Build-Pipeline.md
+Build Time,The time it takes to generate the static site from source files.,Static Site Generation (SSG) & Hugo Workflow,Build-Time.md
+CDN (Content Delivery Network),A geographically distributed network of proxy servers and their data centers.,Static Site Generation (SSG) & Hugo Workflow,CDN--Content-Delivery-Network-.md
+Code Splitting,Splitting code into various bundles which can then be loaded on demand.,Static Site Generation (SSG) & Hugo Workflow,Code-Splitting.md
+Content Organization,How files and directories are structured in the 'content' folder to map to URLs.,Static Site Generation (SSG) & Hugo Workflow,Content-Organization.md
+Content Sections,"Directories in Hugo that organize content into logical groups (e.g., blog, docs, projects).",Static Site Generation (SSG) & Hugo Workflow,Content-Sections.md
+Data Files,"Files (YAML, JSON, TOML) stored in the data directory to keep content separate from configuration.",Static Site Generation (SSG) & Hugo Workflow,Data-Files.md
+Fingerprinting,Adding a unique hash to filenames to force browsers to reload assets when they change (cache busting).,Static Site Generation (SSG) & Hugo Workflow,Fingerprinting.md
+Front Matter,Metadata at the top of a markdown file defining properties like title and date.,Static Site Generation (SSG) & Hugo Workflow,Front-Matter.md
+Front Matter Variables,"Predefined or custom variables in the header of a content file (e.g., title, date, draft).",Static Site Generation (SSG) & Hugo Workflow,Front-Matter-Variables.md
+Gatsby,A React-based open-source framework for creating websites and apps.,Static Site Generation (SSG) & Hugo Workflow,Gatsby.md
+Go Templates,The templating language used by Hugo to customize HTML generation.,Static Site Generation (SSG) & Hugo Workflow,Go-Templates.md
+Go Templating,The templating language used by Hugo.,Static Site Generation (SSG) & Hugo Workflow,Go-Templating.md
+Hugo,"One of the most popular open-source static site generators, known for its amazing speed.",Static Site Generation (SSG) & Hugo Workflow,Hugo.md
+Hugo Pipes,"A set of functions in Hugo for processing assets like SCSS, JavaScript, and images directly in the build process.",Static Site Generation (SSG) & Hugo Workflow,Hugo-Pipes.md
+Hydration,The process of attaching event listeners to HTML generated by server-side rendering.,Static Site Generation (SSG) & Hugo Workflow,Hydration.md
+Jamstack,"A modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup.",Static Site Generation (SSG) & Hugo Workflow,Jamstack.md
+Leaf Bundle,A directory structure in Hugo containing an index.md file and associated assets (images) for a single page.,Static Site Generation (SSG) & Hugo Workflow,Leaf-Bundle.md
+Live Reload,A feature where the browser automatically refreshes when file changes are detected during development.,Static Site Generation (SSG) & Hugo Workflow,Live-Reload.md
+Lookup Order,The logic Hugo uses to decide which template file to use for rendering a specific page.,Static Site Generation (SSG) & Hugo Workflow,Lookup-Order.md
+Markdown,A lightweight markup language with plain text formatting syntax.,Static Site Generation (SSG) & Hugo Workflow,Markdown.md
+Minification,Removing unnecessary characters from code (like spaces) to reduce file size.,Static Site Generation (SSG) & Hugo Workflow,Minification.md
+Netlify,A cloud computing company that offers hosting and serverless backend services for web applications.,Static Site Generation (SSG) & Hugo Workflow,Netlify.md
+Next.js,A React framework that enables functionality such as server-side rendering and generating static websites.,Static Site Generation (SSG) & Hugo Workflow,Next.js.md
+Pagination,The process of dividing a document or a list of items into discrete pages.,Static Site Generation (SSG) & Hugo Workflow,Pagination.md
+Partials,"Smaller, reusable template files that can be included in other templates.",Static Site Generation (SSG) & Hugo Workflow,Partials.md
+Render Hooks,Custom templates in Hugo allowing developers to override how Markdown elements (like links or images) are rendered.,Static Site Generation (SSG) & Hugo Workflow,Render-Hooks.md
+Scratch,A temporary variable storage in Hugo used to pass data between templates or loops.,Static Site Generation (SSG) & Hugo Workflow,Scratch.md
+Shortcode Overrides,Creating a custom version of a theme's built-in shortcode to change its behavior.,Static Site Generation (SSG) & Hugo Workflow,Shortcode-Overrides.md
+Shortcodes,Simple code snippets used inside content files to render complex HTML.,Static Site Generation (SSG) & Hugo Workflow,Shortcodes.md
+Site Config,The main configuration file in Hugo where global variables and settings are defined.,Static Site Generation (SSG) & Hugo Workflow,Site-Config.md
+Slug,The part of a URL which identifies a particular page on a website in a form readable by users.,Static Site Generation (SSG) & Hugo Workflow,Slug.md
+Taxonomy Templates,"Templates designed specifically to list content grouped by tags, categories, or other taxonomies.",Static Site Generation (SSG) & Hugo Workflow,Taxonomy-Templates.md
+Taxonomy Terms,"Specific items within a taxonomy (e.g., 'Tags' is the taxonomy, 'AI' is the term).",Static Site Generation (SSG) & Hugo Workflow,Taxonomy-Terms.md
+Tree Shaking,A build process that removes unused code from the final JavaScript or CSS bundles.,Static Site Generation (SSG) & Hugo Workflow,Tree-Shaking.md
+Vercel,A cloud platform for static sites and Serverless Functions that fits perfectly with your workflow.,Static Site Generation (SSG) & Hugo Workflow,Vercel.md
+Agent Occupancy,The percentage of time agents spend handling calls/chats versus waiting for work.,Support & Operations Efficiency,Agent-Occupancy.md
+Agent Wellness AI,AI that monitors agent stress levels via voice/text analysis and suggests breaks or easier tasks to prevent burnout.,Support & Operations Efficiency,Agent-Wellness-AI.md
+Average Handle Time (AHT),"The average duration of a transaction, including talk time, hold time, and wrap-up.",Support & Operations Efficiency,Average-Handle-Time--AHT-.md
+Bottleneck Analysis,Identifying the process step that limits the overall capacity.,Support & Operations Efficiency,Bottleneck-Analysis.md
+Capacity Planning,Determining the resources needed to meet future demand for products or services.,Support & Operations Efficiency,Capacity-Planning.md
+Continuous Improvement,"An ongoing effort to improve products, services, or processes.",Support & Operations Efficiency,Continuous-Improvement.md
+Conversation Mining,"Using AI to analyze thousands of support logs to discover hidden trends, product gaps, or training needs.",Support & Operations Efficiency,Conversation-Mining.md
+De-escalation,Techniques used by agents to reduce the intensity of a conflict or angry customer interaction.,Support & Operations Efficiency,De-escalation.md
+Deflection Ratio,The percentage of potential tickets that were avoided thanks to self-service tools.,Support & Operations Efficiency,Deflection-Ratio.md
+Empathy Statement,Phrases used by agents to show they understand and care about the customer's feelings.,Support & Operations Efficiency,Empathy-Statement.md
+Erlang C Formula,A mathematical formula used in call centers to calculate the number of staff needed to meet service levels.,Support & Operations Efficiency,Erlang-C-Formula.md
+First Contact Resolution (FCR),The percentage of support requests resolved during the initial interaction.,Support & Operations Efficiency,First-Contact-Resolution--FCR-.md
+Gap Analysis,A comparison of actual performance with potential or desired performance.,Support & Operations Efficiency,Gap-Analysis.md
+Knowledge Gap Analysis,Identifying missing information in the knowledge base based on failed searches.,Support & Operations Efficiency,Knowledge-Gap-Analysis.md
+Knowledge Sharing,"The exchange of information, skills, or expertise among people.",Support & Operations Efficiency,Knowledge-Sharing.md
+KPI Dashboard,A visual display of the most important performance indicators.,Support & Operations Efficiency,KPI-Dashboard.md
+Lean Operations,A business practice that minimizes waste while maximizing productivity.,Support & Operations Efficiency,Lean-Operations.md
+Lean Six Sigma,A methodology that relies on a collaborative team effort to improve performance by removing waste.,Support & Operations Efficiency,Lean-Six-Sigma.md
+Mean Time To Acknowledge (MTTA),The average time it takes for a team to acknowledge an alert or ticket.,Support & Operations Efficiency,Mean-Time-To-Acknowledge--MTTA-.md
+Mean Time To Resolution (MTTR),The average time required to resolve a failure or a support ticket.,Support & Operations Efficiency,Mean-Time-To-Resolution--MTTR-.md
+Pareto Principle (80/20 Rule),"The concept that 80% of effects come from 20% of causes (e.g., 80% of tickets from 20% of bugs).",Support & Operations Efficiency,Pareto-Principle--80-20-Rule-.md
+Performance Metrics,Quantitative standards used to measure the performance and quality of operations.,Support & Operations Efficiency,Performance-Metrics.md
+Process Automation,Using technology to perform repetitive tasks without human intervention.,Support & Operations Efficiency,Process-Automation.md
+Quality Assurance Automation,"Using AI to score 100% of support interactions for quality, rather than manually reviewing a small sample.",Support & Operations Efficiency,Quality-Assurance-Automation.md
+Resource Allocation,The process of assigning available resources to various uses in an economic way.,Support & Operations Efficiency,Resource-Allocation.md
+Root Cause Analysis,A method of problem solving used for identifying the root causes of faults or problems.,Support & Operations Efficiency,Root-Cause-Analysis.md
+Schedule Adherence,A metric measuring how effectively agents stick to their assigned shifts and breaks.,Support & Operations Efficiency,Schedule-Adherence.md
+Shift Left Strategy,"Moving support closer to the customer (e.g., self-service) to reduce costs and wait times.",Support & Operations Efficiency,Shift-Left-Strategy.md
+Shrinkage,"The percentage of paid time that employees are not available to handle calls (e.g., breaks, training).",Support & Operations Efficiency,Shrinkage.md
+Workflow Optimization,Improving business processes to eliminate waste and maximize efficiency.,Support & Operations Efficiency,Workflow-Optimization.md
+Above the Fold,The portion of a webpage that is visible without scrolling.,Web Performance & User Experience,Above-the-Fold.md
+Accessibility (a11y),"The practice of making websites usable by as many people as possible, including those with disabilities.",Web Performance & User Experience,Accessibility--a11y-.md
+ARIA Labels (Accessible Rich Internet Applications),Attributes added to HTML to define ways to make Web content and Web applications more accessible to people with disabilities.,Web Performance & User Experience,ARIA-Labels--Accessible-Rich-Internet-Applications-.md
+Bounce Rate,The percentage of visitors who enter the site and then leave rather than viewing other pages.,Web Performance & User Experience,Bounce-Rate.md
+Cache Busting,Forcing the browser to download a new version of a file instead of using the cached version.,Web Performance & User Experience,Cache-Busting.md
+CDN Edge Server,"A server located at the edge of a network, closer to the user, to deliver content faster.",Web Performance & User Experience,CDN-Edge-Server.md
+Client-Side Rendering (CSR),Rendering pages directly in the browser using JavaScript.,Web Performance & User Experience,Client-Side-Rendering--CSR-.md
+Conversion Rate Optimization (CRO),The process of increasing the percentage of users who perform a desired action on a website.,Web Performance & User Experience,Conversion-Rate-Optimization--CRO-.md
+Critical CSS,Extracting and inlining the CSS required for above-the-fold content to render it as fast as possible.,Web Performance & User Experience,Critical-CSS.md
+Critical Rendering Path,"The sequence of steps the browser goes through to convert HTML, CSS, and JavaScript into actual pixels on the screen.",Web Performance & User Experience,Critical-Rendering-Path.md
+Cumulative Layout Shift (CLS),A metric that measures visual stability and unexpected layout shifts.,Web Performance & User Experience,Cumulative-Layout-Shift--CLS-.md
+Dark Mode,"A display setting that uses a light-on-dark color scheme, reducing eye strain and battery consumption.",Web Performance & User Experience,Dark-Mode.md
+Edge Functions,"Serverless code that runs at the network edge (CDN), closer to the user, for lower latency.",Web Performance & User Experience,Edge-Functions.md
+Empty State,"What the user sees when there is no data to display (e.g., an empty inbox), often used to guide next steps.",Web Performance & User Experience,Empty-State.md
+Favicon,"A small icon associated with a particular website or web page, displayed in browser tabs.",Web Performance & User Experience,Favicon.md
+First Input Delay (FID),A metric that measures the time from when a user first interacts with a page to the time when the browser is actually able to begin processing event handlers.,Web Performance & User Experience,First-Input-Delay--FID-.md
+FOUC (Flash of Unstyled Content),A momentary display of unstyled HTML content before the CSS is loaded.,Web Performance & User Experience,FOUC--Flash-of-Unstyled-Content-.md
+Graceful Degradation,"Designing a system so that it continues to function, possibly at a reduced level, when some part of it fails.",Web Performance & User Experience,Graceful-Degradation.md
+Hero Image,"A large web banner image, prominently placed on a web page, generally in the front and center.",Web Performance & User Experience,Hero-Image.md
+HTTP/3,"The next major version of the HTTP protocol, using QUIC to improve speed and security over unreliable connections.",Web Performance & User Experience,HTTP-3.md
+Hydration Mismatch,An error where the HTML rendered by the server does not match the HTML expected by the client-side JavaScript.,Web Performance & User Experience,Hydration-Mismatch.md
+Incremental Static Regeneration (ISR),"A hybrid approach allowing static pages to be updated in the background as traffic comes in, without a full site rebuild.",Web Performance & User Experience,Incremental-Static-Regeneration--ISR-.md
+Infinite Scroll,A web design technique where content is loaded continuously as the user scrolls down the page.,Web Performance & User Experience,Infinite-Scroll.md
+Interaction to Next Paint (INP),A Core Web Vital metric that assesses a page's responsiveness to user interactions.,Web Performance & User Experience,Interaction-to-Next-Paint--INP-.md
+Largest Contentful Paint (LCP),A metric measuring the time it takes for the largest content element to become visible.,Web Performance & User Experience,Largest-Contentful-Paint--LCP-.md
+Lazy Loading,A strategy to identify resources as non-blocking and load them only when needed.,Web Performance & User Experience,Lazy-Loading.md
+Micro-interactions,"Subtle animations or design elements that provide feedback to the user (e.g., a 'like' heart animation).",Web Performance & User Experience,Micro-interactions.md
+Mobile Responsiveness,The ability of a website to adjust its layout and content to fit different screen sizes automatically.,Web Performance & User Experience,Mobile-Responsiveness.md
+Mobile-First Indexing,Google's practice of using the mobile version of content for indexing and ranking.,Web Performance & User Experience,Mobile-First-Indexing.md
+Page Load Speed,The time it takes for a specific page to load on your site.,Web Performance & User Experience,Page-Load-Speed.md
+Progressive Enhancement,"Building a core webpage that works for everyone, then adding layers of advanced features for better browsers.",Web Performance & User Experience,Progressive-Enhancement.md
+Progressive Web App (PWA),"Web apps that use service workers, manifests, and other web-platform features in combination to behave like native apps.",Web Performance & User Experience,Progressive-Web-App--PWA-.md
+Resource Hints (Preload/Prefetch),Instructions to the browser to load resources ahead of time to improve performance.,Web Performance & User Experience,Resource-Hints--Preload-Prefetch-.md
+Server-Side Rendering (SSR),"Rendering a client-side or universal app on the server, sending fully rendered HTML to the client.",Web Performance & User Experience,Server-Side-Rendering--SSR-.md
+Single Page Application (SPA),A web application that interacts with the web browser by dynamically rewriting the current web page with new data.,Web Performance & User Experience,Single-Page-Application--SPA-.md
+Skeleton Screen,"A blank version of a page into which information is gradually loaded, often used as a loading state.",Web Performance & User Experience,Skeleton-Screen.md
+Time on Page,The amount of time a visitor spends on a page.,Web Performance & User Experience,Time-on-Page.md
+Time to First Byte (TTFB),The time it takes for a browser to receive the first byte of page content.,Web Performance & User Experience,Time-to-First-Byte--TTFB-.md
+Total Blocking Time (TBT),"A metric measuring the total time the main thread is blocked, preventing input responsiveness.",Web Performance & User Experience,Total-Blocking-Time--TBT-.md
+UX Design,"The process of enhancing user satisfaction with a product by improving the usability, accessibility, and pleasure provided in the interaction.",Web Performance & User Experience,UX-Design.md
+Viewport Meta Tag,A meta tag that controls how a website is displayed on mobile devices (width and scaling).,Web Performance & User Experience,Viewport-Meta-Tag.md
+WCAG (Web Content Accessibility Guidelines),"A set of recommendations for making Web content more accessible, primarily for people with disabilities.",Web Performance & User Experience,WCAG--Web-Content-Accessibility-Guidelines-.md
+Revenue Leakage,"Loss of revenue due to operational inefficiencies, billing errors, or uncollected payments.",Revenue Operations (RevOps),Revenue-Leakage.md
+Deal Desk,"A cross-functional team that helps sales reps structure and close complex, non-standard deals.",Revenue Operations (RevOps),Deal-Desk.md
+Lead-to-Cash,The complete process flow from the initial customer interest (lead) to the final payment collection.,Revenue Operations (RevOps),Lead-to-Cash.md
+Sales Cycle Time,The average time it takes to convert a lead into a closed-won customer.,Revenue Operations (RevOps),Sales-Cycle-Time.md
+Pipeline Velocity,The speed at which deals move through the sales pipeline and generate revenue.,Revenue Operations (RevOps),Pipeline-Velocity.md
+Total Contract Value (TCV),"The total value of a contract over its entire duration, including recurring revenue and one-time fees.",Revenue Operations (RevOps),Total-Contract-Value--TCV-.md
+Annual Recurring Revenue (ARR),The yearly value of a single subscription agreement or the total value of all subscriptions.,Revenue Operations (RevOps),Annual-Recurring-Revenue--ARR-.md
+Win/Loss Analysis,The process of analyzing closed deals to understand why they were won or lost.,Revenue Operations (RevOps),Win-Loss-Analysis.md
+Forecast Accuracy,A metric measuring how close the actual sales results were to the predicted forecast.,Revenue Operations (RevOps),Forecast-Accuracy.md
+Territory Management,Assigning sales reps to specific geographic areas or industry verticals to optimize coverage.,Revenue Operations (RevOps),Territory-Management.md
+Grice's Maxims,"Four principles of effective communication (Quality, Quantity, Relation, Manner) applied to bot design.",Conversation Design & UX Writing,Grice's-Maxims.md
+Discourse Markers,"Words like 'Well', 'So', 'Actually' used to manage the flow and tone of conversation.",Conversation Design & UX Writing,Discourse-Markers.md
+Happy Path,The ideal scenario where the user acts exactly as intended and encounters no errors.,Conversation Design & UX Writing,Happy-Path.md
+Repair Strategy,Techniques used to get the conversation back on track after a misunderstanding or error.,Conversation Design & UX Writing,Repair-Strategy.md
+Turn-Taking,The mechanism of regulating who speaks when in a conversation.,Conversation Design & UX Writing,Turn-Taking.md
+Progressive Disclosure,Revealing information gradually to avoid overwhelming the user.,Conversation Design & UX Writing,Progressive-Disclosure.md
+Cognitive Load,The amount of mental effort required for the user to understand and interact with the bot.,Conversation Design & UX Writing,Cognitive-Load.md
+Microcopy,"Small bits of text on buttons, error messages, and tooltips that guide the user.",Conversation Design & UX Writing,Microcopy.md
+Voice Chart,"A document defining the bot's persona attributes, vocabulary, and tone guidelines.",Conversation Design & UX Writing,Voice-Chart.md
+Wizard of Oz,A prototyping method where a human simulates the bot's responses to test user interactions.,Conversation Design & UX Writing,Wizard-of-Oz.md
+Plan-and-Execute,An agentic pattern where the AI first outlines a multi-step plan and then executes it step-by-step.,Generative AI／Content Generation,Plan-and-Execute.md
+Tool Use (Function Calling),"The ability of an LLM to format outputs to trigger external software actions (calculators, APIs).",Generative AI／Content Generation,Tool-Use--Function-Calling-.md
+ReAct Framework,A prompting technique combining Reasoning (thinking) and Acting (executing tools) in a loop.,Generative AI／Content Generation,ReAct-Framework.md
+Self-Reflection,The agent's ability to review its own past outputs and correct mistakes before final answer.,Generative AI／Content Generation,Self-Reflection.md
+Multi-Agent Orchestration,"Coordinating multiple specialized AI agents (e.g., Coder, Reviewer, Manager) to solve a task.",Generative AI／Content Generation,Multi-Agent-Orchestration.md
+Memory Stream,"A continuous log of an agent's observations and thoughts, used for long-term context.",Generative AI／Content Generation,Memory-Stream.md
+Task Decomposition,"Breaking down a complex user goal into smaller, manageable sub-tasks.",Generative AI／Content Generation,Task-Decomposition.md
+Autonomous Loop,"A continuous cycle of perception, decision, and action taken by an AI agent without human trigger.",Generative AI／Content Generation,Autonomous-Loop.md
+Agent Persona,"Specific roles assigned to agents (e.g., 'You are a Python expert') to guide their behavior.",Generative AI／Content Generation,Agent-Persona.md
+Environment Feedback,"Information received from the external world (API errors, search results) that the agent uses to adjust its plan.",Generative AI／Content Generation,Environment-Feedback.md
+Docs-as-Code,"Managing documentation using the same tools and workflows as software code (Git, CI/CD).",Editorial & Content Operations,Docs-as-Code.md
+Linting,Automatically checking documentation source files for syntax errors or style violations.,Editorial & Content Operations,Linting.md
+Single Sourcing,"Creating content in one place and publishing it to multiple outputs (PDF, Web, Help).",Editorial & Content Operations,Single-Sourcing.md
+DITA (Darwin Information Typing Architecture),An XML data model for authoring and publishing topic-oriented information.,Editorial & Content Operations,DITA--Darwin-Information-Typing-Architecture-.md
+Swagger / OpenAPI,"A specification for building, documenting, and consuming RESTful Web services.",Editorial & Content Operations,Swagger---OpenAPI.md
+API Reference,"Documentation that describes the functions, classes, return types, and arguments of an API.",Editorial & Content Operations,API-Reference.md
+Release Notes,"Documents shared with customers detailing new features, bug fixes, and improvements.",Editorial & Content Operations,Release-Notes.md
+Boilerplate Text,"Standardized sections of text (e.g., copyright, warnings) reused across multiple documents.",Editorial & Content Operations,Boilerplate-Text.md
+Content Reuse,Using the same content block in multiple places to ensure consistency and reduce maintenance.,Editorial & Content Operations,Content-Reuse.md
+Static Site Generator (SSG),Software that builds a website from source files (like Markdown) into static HTML pages.,Editorial & Content Operations,Static-Site-Generator--SSG-.md
+Multimodal AI,"AI capable of processing and generating multiple types of media (text, image, audio, video) simultaneously.",Emerging Trends & Future Tech,Multimodal-AI.md
+Small Language Models (SLMs),Lightweight AI models designed to run efficiently on edge devices or with lower costs.,Emerging Trends & Future Tech,Small-Language-Models--SLMs-.md
+Neuro-symbolic AI,Combining neural networks (learning) with symbolic AI (logic/rules) for better reasoning.,Emerging Trends & Future Tech,Neuro-symbolic-AI.md
+AI Wearables,"Wearable devices (pins, glasses) integrated with AI assistants for hands-free interaction.",Emerging Trends & Future Tech,AI-Wearables.md
+Spatial Computing,Human-computer interaction in which the machine retains and manipulates referents to real objects and spaces.,Emerging Trends & Future Tech,Spatial-Computing.md
+Federated Learning,Training an algorithm across multiple decentralized edge devices without exchanging local data samples.,Emerging Trends & Future Tech,Federated-Learning.md
+Post-Quantum Cryptography,Cryptographic algorithms thought to be secure against an attack by a quantum computer.,Emerging Trends & Future Tech,Post-Quantum-Cryptography.md
+Digital Twin,A virtual representation that serves as the real-time digital counterpart of a physical object or process.,Emerging Trends & Future Tech,Digital-Twin.md
+Generative Search,Search engines that generate direct answers using AI rather than just listing links.,Emerging Trends & Future Tech,Generative-Search.md
+Synthetic Data,"Information that's artificially generated rather than produced by real-world events, used to train AI.",Emerging Trends & Future Tech,Synthetic-Data.md

@@ -14,7 +14,7 @@ e-title: Query Expansion
 ---
 ## クエリ拡張とは?
 
-クエリ拡張は、情報検索および検索システムにおける技術であり、ユーザーの元のクエリに関連用語、同義語、または文脈的に関連するフレーズを追加することで、検索精度と再現率を大幅に向上させます。例えば、「心臓病」を検索すると、「心血管疾患」「心筋梗塞」「心臓発作」などの用語が自動的に含まれ、より広範囲の関連文書を捕捉できます([ITU Online](https://www.ituonline.com/tech-definitions/what-is-query-expansion/)、[Stanford NLP](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf))。
+クエリ拡張は、情報検索および検索システムにおける技術であり、ユーザーの元のクエリに関連用語、同義語、または文脈的に関連するフレーズを追加することで、検索[精度と再現率](/ja/glossary/precision-and-recall/)を大幅に向上させます。例えば、「心臓病」を検索すると、「心血管疾患」「心筋梗塞」「心臓発作」などの用語が自動的に含まれ、より広範囲の関連文書を捕捉できます([ITU Online](https://www.ituonline.com/tech-definitions/what-is-query-expansion/)、[Stanford NLP](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf))。
 
 クエリ拡張は、現代の検索エンジン、エンタープライズ検索、医学文献データベース、法律検索システム、AIチャットボット、そしてユーザークエリを多様で大規模な情報リソースにマッチングする必要があるあらゆるシステムにとって不可欠です。人間の言語が持つ自然な変動性と曖昧性を補完します。
 
@@ -71,7 +71,7 @@ e-title: Query Expansion
 | 技術                  | 動作方法                                              | 例                                      |
 |----------------------|-----------------------------------------------------|----------------------------------------|
 | 同義語拡張            | 同義語を追加                                          | 「car」→「automobile」、「vehicle」      |
-| ステミング/レンマ化    | 単語形式を正規化                                      | 「running」→「run」                     |
+| ステミング/[レンマ化](/ja/glossary/lemmatization/)    | 単語形式を正規化                                      | 「running」→「run」                     |
 | 関連用語拡張          | 文脈的に関連する用語を追加                             | 「心臓発作」→「心筋梗塞」                |
 | 適合性フィードバック   | ユーザーフィードバックから拡張を改善                    | クリックされた文書が追加用語に影響       |
 | 埋め込みベース拡張     | ベクトル空間での意味的類似性を使用                     | 「AI」→「人工知能」、「ML」             |
@@ -116,7 +116,7 @@ results = expanded_retrieval_pipeline.run({"expander": {"query": "climate change
 | 初期Web(1990年代)     | 同義語リスト            | 高速、予測可能               | 硬直的、文脈認識なし                 |
 | 2000年代             | 統計分析               | データ駆動、一部パーソナル化  | 大規模データが必要、プライバシー問題  |
 | 2010年代             | 疑似適合性フィードバック | 文脈的、自己改善             | ノイズを導入する可能性               |
-| 2020年代             | LLM、埋め込み          | 深い文脈、曖昧性解消         | リソース集約的、過剰拡張のリスク      |
+| 2020年代             | LLM、埋め込み          | 深い文脈、[曖昧性解消](/ja/glossary/disambiguation/)         | リソース集約的、過剰拡張のリスク      |
 
 **参考文献:**  
 - [Stanford NLP - Query Expansion PDF](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf)  

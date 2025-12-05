@@ -9,8 +9,6 @@ image: "/images/blog/ai-chatbot-types-guide.jpg"
 tags: ["AI Chatbot", "Chatbot Types", "Implementation Guide"]
 categories: ["Technology", "Business Efficiency"]
 ---
-
-
 ## AI Chatbot Fundamentals
 
 An AI chatbot is a program that uses {{< tooltip text="Technology that enables computers to think and make decisions like humans" >}}artificial intelligence{{< /tooltip >}} to communicate with customers using natural language. Today, they are used in various scenarios including {{< tooltip text="Operations that handle customer inquiries and support" >}}customer support{{< /tooltip >}}, information guidance, and business efficiency improvements.
@@ -23,7 +21,7 @@ This article provides clear explanations of the differences and characteristics 
 
 An AI chatbot is software built using artificial intelligence. This program can converse in natural language just like humans. It can interact through text or voice on websites, apps, LINE, and other SNS platforms.
 
-Modern AI chatbots combine technologies such as {{< tooltip text="AI models trained on massive amounts of text data to understand language usage" >}}large language models{{< /tooltip >}}, {{< tooltip text="Advanced learning methods that mimic the human brain's mechanisms" >}}deep learning{{< /tooltip >}}, and {{< tooltip text="Technology that enables computers to understand and process human language" >}}natural language processing{{< /tooltip >}}. This allows them to automatically generate human-like responses to customer questions.
+Modern AI chatbots combine technologies such as {{< tooltip text="AI models trained on massive amounts of text data to understand language usage" >}}large language models{{< /tooltip >}}, {{< tooltip text="Advanced learning methods that mimic the human brain's mechanisms" >}}deep learning{{< /tooltip >}}, and {{< tooltip text="Technology that enables computers to understand and process human language" >}}[natural language processing](/en/glossary/natural-language-processing--nlp-/){{< /tooltip >}}. This allows them to automatically generate human-like responses to customer questions.
 
 ### Basic Mechanisms
 
@@ -325,7 +323,7 @@ With advances in technologies like continuous learning and reinforcement learnin
 
 ### Emphasis on AI Ethics and Governance
 
-As AI chatbot usage expands, interest in AI ethics such as fairness, transparency, and accountability, as well as management methods, is increasing.
+As AI chatbot usage expands, interest in AI ethics such as fairness, [transparency](/en/glossary/transparency/), and accountability, as well as management methods, is increasing.
 
 **Research Institution Findings:**  
 MIT research points out that while AI usage reduces user burden, it may also affect long-term thinking and memory.

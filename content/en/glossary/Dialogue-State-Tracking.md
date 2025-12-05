@@ -10,7 +10,7 @@ draft: false
 ---
 ## What is Dialogue State Tracking?
 
-Dialogue State Tracking (DST) is the backbone of any task-oriented conversational AI system. It systematically keeps track of the essential details throughout a multi-turn conversation, maintaining a structured, machine-readable representation of:
+Dialogue State Tracking (DST) is the backbone of any task-oriented [conversational AI](/en/glossary/conversational-ai/) system. It systematically keeps track of the essential details throughout a [multi-turn conversation](/en/glossary/multi-turn-conversation/), maintaining a structured, machine-readable representation of:
 
 - **User goals and intentions**
 - **Slot values** (specific pieces of information expressed by the user)
@@ -18,7 +18,7 @@ Dialogue State Tracking (DST) is the backbone of any task-oriented conversationa
 
 At every turn, DST estimates the user's current objective and all the relevant parameters required to fulfill it. This enables the system to make informed decisions about what to do or say next, ensuring conversation coherence and relevance.
 
-DST operates as an intermediary between user input interpretation (through natural language understanding techniques) and dialogue management (decision-making for system responses). It forms a critical part of the conversational loop: the user's utterance is processed, state is estimated, and the system determines the next action accordingly.
+DST operates as an intermediary between user input interpretation (through natural language understanding techniques) and [dialogue management](/en/glossary/dialogue-management/) (decision-making for system responses). It forms a critical part of the conversational loop: the user's [utterance](/en/glossary/utterance/) is processed, state is estimated, and the system determines the next action accordingly.
 
 **References:**
 - [Fiveable NLP Study Guide: Dialogue State Tracking and Management](https://fiveable.me/natural-language-processing/unit-10/dialogue-state-tracking-management/study-guide/INVJzuMxkLvmaoRV)
@@ -194,7 +194,7 @@ Updating the dialogue state is the core function of DST. Mechanisms include:
 |------------------------|-----------------------------------------------------------------------------------------------------|
 | **Joint Goal Accuracy**| Percentage of dialogue turns where all slots are correctly predicted (stringent measure).            |
 | **Slot Accuracy**      | Correctness of individual slot-value predictions.                                                    |
-| **Slot F1 Score**      | Harmonic mean of precision and recall for slot prediction; handles class imbalance.                  |
+| **Slot F1 Score**      | Harmonic mean of [precision and recall](/en/glossary/precision-and-recall/) for slot prediction; handles class imbalance.                  |
 | **Perplexity**         | Evaluates language modeling, measuring how well the model predicts next tokens in context.           |
 | **Human Evaluation**   | Subjective assessment of system performance (coherence, helpfulness, naturalness).                   |
 

@@ -9,7 +9,6 @@ image: "/images/blog/AI-Email-Auto-Response-Generator-image.png"
 tags: ["AI技術", "カスタマーサポート", "業務効率化"]
 categories: ["ビジネス"]
 ---
-
 ### 「AIによる自動回答案作成って、本当に使えるの？」「定型文みたいな返事しかできないんじゃないの？」
 
 そんな疑問をお持ちの方も多いのではないでしょうか。

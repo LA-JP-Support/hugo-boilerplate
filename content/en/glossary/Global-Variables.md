@@ -265,7 +265,7 @@ int main() {
 - **Session Management:**  
   Maintain state or session attributes throughout a conversation or workflow.
 - **Configuration Settings:**  
-  Hold feature flags or environment settings accessed by multiple flows.
+  Hold [feature flags](/en/glossary/feature-flags/) or environment settings accessed by multiple flows.
 - **Context Sharing:**  
   Pass data between subflows, scripts, or branches.
 - **External Integration:**  

@@ -1,0 +1,253 @@
+---
+title: カナリアリリース
+date: 2025-11-25
+translationKey: canary-release
+description: カナリアリリースとは、新しいアプリケーションバージョンを少数のユーザーに段階的に展開する漸進的なソフトウェアデプロイメント戦略であり、早期の問題検出とリスク軽減を可能にします。
+keywords:
+- カナリアリリース
+- デプロイメント戦略
+- 継続的デリバリー
+- リスク軽減
+- ソフトウェアデプロイメント
+category: AI Infrastructure & Deployment
+type: glossary
+draft: false
+e-title: Canary Release
+term: かなりありりーす
+reading: カナリアリリース
+kana_head: か
+---
+## 概要: カナリアリリースとは何か?
+
+**カナリアリリース**は、新しいアプリケーションバージョンを全ユーザーベースに展開する前に、少数のユーザーまたはインフラストラクチャのサブセットに段階的にロールアウトする、プログレッシブなソフトウェアデプロイメント戦略です。この段階的アプローチにより、エンジニアリングチームは実際の本番環境条件下で新バージョンを監視し、問題を迅速に検出し、問題が発生した場合はロールアウトを一時停止またはロールバックすることで、リグレッションの影響を制限できます。カナリアリリースは、現代の継続的デリバリーパイプラインに不可欠であり、リスクを軽減し、迅速な反復を可能にします。
+
+- 参考: [Martin Fowler: Canary Release](https://martinfowler.com/bliki/CanaryRelease.html)
+- 参考: [Google Cloud: Use a Canary Deployment Strategy](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary)
+- 参考: [Gravitee: Comprehensive Guide to Canary Releases](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+
+## 語源: なぜ「カナリア」なのか?
+
+「カナリアリリース」という用語は、炭鉱でカナリアを使用していた歴史的慣行に由来します。鉱夫は有毒ガスの早期警告システムとしてカナリアをトンネルに持ち込んでいました。カナリアが病気になると、避難が必要であることを知らせる信号となりました。ソフトウェアにおいて、カナリアリリースは、新バージョンを少数の制御されたユーザーまたはサーバーのサブセットのみに公開します。問題が発生した場合、これらの「カナリア」が早期警告を提供し、より広範なユーザーへの影響が生じる前にチームが停止または復帰できるようにします。
+
+- 参考: [Wikipedia: Canary in a coal mine](https://en.wikipedia.org/wiki/Canary_in_a_coal_mine)
+- 参考: [Gravitee: Comprehensive Guide to Canary Releases](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+
+## カナリアリリースの仕組み: ステップバイステッププロセス
+
+### 1. 小規模なサブセット(カナリア)へのデプロイ
+
+新しいアプリケーションバージョンは、まずインフラストラクチャの限定されたセグメント、またはユーザートラフィックの小さな割合にデプロイされます。これは、サーバーのグループ、クラスターリージョン、または特定のユーザーコホートである可能性があります。この段階では、外部ユーザー(または社内スタッフなどの選択されたグループのみ)がカナリアと対話します。
+
+- 参考: [Google Cloud: Canary Deployment Phases](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary)
+
+### 2. カナリア公開のためのユーザー選択
+
+カナリア公開のためのユーザーセグメンテーション戦略には以下が含まれます:
+- **ランダムサンプリング:** ユーザートラフィックの小さなランダムな割合(例: 1-5%)をカナリアにルーティングします。
+- **地理的ターゲティング:** 特定の地域またはデータセンターに最初にデプロイします。
+- **ユーザータイプ:** 従業員またはパワーユーザーから開始します(「ドッグフーディング」)。
+- **ブランド/顧客セグメンテーション:** マルチテナントシステムの場合、特定のブランドまたはテナントをターゲットにします。
+- **オプトイン/オプトアウト:** ユーザーが早期アクセスに自発的に参加できるようにします。
+
+例: Facebookは、まず従業員に新バージョンを公開し、その後徐々により広範なコホートに展開します。  
+- 参考: [InfoQ: Facebook Release Process](http://www.infoq.com/presentations/Facebook-Release-Process)
+- 参考: [Gravitee: Comprehensive Guide](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+
+### 3. 段階的な公開範囲の拡大
+
+問題が検出されない場合、ロールアウトは段階的に拡大されます: 1% → 5% → 10% → 25% → 50% → 100%。トラフィックシフトは、ロードバランサー、APIゲートウェイ、またはサービスメッシュを介して管理されます。各フェーズは、次に進む前に監視および検証されます。
+
+- 参考: [Google Cloud: Automated and Custom-automated Canary](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary)
+- 参考: [Gravitee: Traffic Shaping with API Gateways](https://www.gravitee.io/products/edge-stack/api-gateway)
+
+### 4. 主要メトリクスとオブザーバビリティの監視
+
+**技術的メトリクス:**
+- エラー率(HTTP 5xx、例外)
+- [レイテンシー](/en/glossary/latency/)、応答時間
+- リソース消費(CPU、メモリ)
+- クラッシュ率、ログ
+
+**ビジネスメトリクス:**
+- コンバージョン率、トランザクション成功率
+- エンゲージメント、リテンション
+- 収益への影響
+
+オブザーバビリティは、ダッシュボード、アラート、自動異常検出を通じて管理されます。高度なセットアップでは、しきい値を超えた場合に自動ロールバックをトリガーできます。
+
+- 参考: [IMVU: Integrating QA with Continuous Deployment](http://engineering.imvu.com/2010/04/09/imvus-approach-to-integrating-quality-assurance-with-continuous-deployment/)
+- 参考: [Google Cloud: Monitoring Canary Deployments](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary)
+
+### 5. ロールバックメカニズム
+
+問題が検出された場合:
+- **即時ロールバック:** すべてのトラフィックを以前のバージョンに即座に戻します。
+- **ロールバック戦略:** 
+    - ロードバランサー/APIゲートウェイ/[フィーチャーフラグ](/ja/glossary/feature-flags/)を介して再ルーティングします。
+    - カナリアポッド/インスタンスを廃止します。
+    - 必要に応じて以前のデータベース状態を復元します(スキーマ変更は慎重に計画してください)。
+
+迅速でエラーのないロールバックのために、自動化が強く推奨されます。
+
+- 参考: [Google Cloud: Rollback Planning](https://docs.cloud.google.com/deploy/docs/deployment-strategies/manage-rollout)
+- 参考: [Gravitee: Canary Rollback](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+
+## カナリアリリースのメリット
+
+- **リスク軽減:** 失敗したリリースの「爆発半径」を少数のユーザーグループに制限します。
+- **迅速な本番グレードのフィードバック:** 実際の使用により、ステージング環境では見つからない問題が明らかになります。
+- **高い保証:** 実際の本番環境条件下で新バージョンを検証します。
+- **シームレスで高速なロールバック:** ダウンタイムとユーザーへの影響を最小限に抑えます。
+- **容量とパフォーマンステスト:** 完全なロールアウト前に、スケールでの新バージョンを観察します。
+- **継続的デリバリーのサポート:** 頻繁で安全なデプロイメントを可能にします。
+
+- 参考: [Gravitee: Advantages of Canary Releases](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+- 参考: [Google Cloud: Why Use Canary](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary)
+
+## 課題、注意点、制限事項
+
+- **インフラストラクチャの複雑性:** プログラマブルなトラフィックルーティングと高度な監視が必要です。
+- **バージョン互換性:** 旧バージョンと新バージョンが並行して実行されることが多く、APIとデータベースが複雑になります。
+- **ユーザーエクスペリエンスの不一致:** 一部のユーザーは他のユーザーより先に新機能やバグを目にします。
+- **データベースマイグレーション:** スキーマ変更は両方のバージョンをサポートする必要があり、多くの場合[Parallel Changeパターン](https://martinfowler.com/bliki/ParallelChange.html)を使用します。
+- **オブザーバビリティ:** 監視の欠如はカナリアの価値を低下させます。
+- **自動化:** 手動のカナリア管理はエラーが発生しやすくなります。
+- **コストとオーバーヘッド:** 重複環境の実行はリソース使用量を増加させます。
+- **すべてのシステムに適しているわけではない:** ミッション/安全クリティカルなシステム、または不可逆的なデータベース変更を伴うシステムは、カナリアリリースを避けるべきです。
+
+- 参考: [Gravitee: Applicability and Limitations](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+
+## 比較: カナリアリリース vs. その他のデプロイメント戦略
+
+| 戦略           | ロールアウトモデル                  | リスク軽減      | ロールバックの複雑性 | ユーザーエクスペリエンス        | ユースケース                |
+|--------------------|-------------------------------|----------------------|---------------------|------------------------|--------------------------|
+| **カナリアリリース** | 段階的; ユーザーのサブセット       | 高                 | 容易                | 一部が新バージョンを早期に確認 | 高リスク、大規模ユーザーベース|
+| **ブルーグリーン**     | 一斉; 2つの環境  | 中               | 容易                | シームレス(バグがない場合) | 軽微な変更            |
+| **ローリング**        | 段階的; サーバーバッチ        | 中               | 中程度            | ユーザーがバージョンを切り替える可能性 | インフラアップグレード           |
+| **フィーチャーフラグ**  | ユーザー/グループごとに機能を切り替え | 高                 | 非常に容易           | 高度にターゲット化        | 実験、A/Bテスト   |
+
+- ブルーグリーン: すべてのユーザーが一度に切り替わり、ロールバックは簡単ですが、完全な公開のリスクがあります。
+- ローリング: ユーザーコホートではなく、インフラストラクチャを段階的に更新します。
+- [フィーチャーフラグ](/en/glossary/feature-flags/): アプリケーションバージョン全体ではなく、機能を細かいレベルで制御します。
+- カナリア: 高リスクまたは大規模デプロイメントのための段階的なコホートベースの公開。
+
+- 参考: [Gravitee: Canary vs. Blue-Green, Feature Flags, Dark Launches](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+- 参考: [LaunchDarkly: What Is a Canary Release?](https://launchdarkly.com/blog/what-is-a-canary-release/)
+
+## 実装の詳細とベストプラクティス
+
+### トラフィックシェーピングとユーザー選択
+
+- プログラマブルなAPIゲートウェイ(例: [Edge Stack by Gravitee](https://www.gravitee.io/products/edge-stack/api-gateway))、サービスメッシュ、またはクラウドロードバランサーを使用します。
+- SaaSの場合、[LaunchDarkly](https://launchdarkly.com/)や[Optimizely](https://www.optimizely.com/)などのフィーチャーフラグプラットフォームがユーザーターゲティングを管理できます。
+
+### 自動化
+
+- Jenkins、[Spinnaker](https://medium.com/netflix-techblog/automated-canary-analysis-at-netflix-with-kayenta-3260bc7acc69)、Harness、またはGitHub ActionsなどのツールでCI/CDに統合します。
+- 環境管理にはインフラストラクチャアズコードを使用します(例: Terraform、Kubernetesマニフェスト)。
+
+### 監視とオブザーバビリティ
+
+- 明確な成功/失敗のしきい値を定義します。
+- ダッシュボード、リアルタイムアラート、自動ロールバックトリガーを実装します。
+- 診断のためにログ集約と分散トレーシングを使用します。
+
+### データベースと状態管理
+
+- スキーママイグレーションには[Parallel Change](https://martinfowler.com/bliki/ParallelChange.html)(expand-contract)パターンを採用します。
+- ロールアウト中の後方互換性を確保します。
+
+### ロールバック計画
+
+- ロールバック手順を自動化します。
+- データベースと環境のバックアップを維持およびテストします。
+
+### ドキュメンテーションとコミュニケーション
+
+- 早期採用者またはオプトインユーザーに通知します。
+- 監査可能性のために、カナリア手順、メトリクス、基準を文書化します。
+
+- 参考: [Google Cloud: Canary Implementation](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary)
+- 参考: [Gravitee: Implementation Guide](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+
+## 実用的なシナリオ: カナリアリリースを使用する(または避ける)タイミング
+
+**効果的なユースケース:**
+- 大規模なWebアプリケーション(eコマース、SaaS、ソーシャルネットワーク)
+- 限定的で制御された障害が許容されるシステム
+- レガシーまたはサードパーティの依存関係との統合テスト
+- 実際の条件下でのパフォーマンス/容量テスト
+
+**カナリアリリースが不適切な場合:**
+- ミッションまたは安全クリティカルな環境(医療、航空宇宙、金融)
+- 不可逆的または互換性のないデータベース変更
+- 集中管理されていない分散ソフトウェア(例: デスクトップアプリ)
+
+- 参考: [Gravitee: Applicability](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+- 参考: [Google Cloud: Use Cases](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary)
+
+## 実世界の例
+
+### Facebookの多段階カナリアプロセス
+
+1. すべてのフィーチャーフラグを有効にして従業員への内部リリース。
+2. 小規模なランダムユーザーコホートへの段階的なロールアウト。
+3. 各段階で監視とロールバック機能を備えた段階的なランプアップ。
+
+- 参考: [InfoQ: Facebook Release Process](http://www.infoq.com/presentations/Facebook-Release-Process)
+
+### Kubernetesネイティブカナリアデプロイメント
+
+- Kubernetes DeploymentsとServicesを使用して、旧バージョンと新バージョンを並行して実行します。
+- [service networking](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary/gke/service-networking)、Gateway API、またはカナリアコントローラーでトラフィックをシフトします。
+- ポッドレベルのヘルスを監視し、CI/CDパイプラインでロールアウト/ロールバックを自動化します。
+
+- 参考: [Google Cloud: Kubernetes Canary Deployments](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary)
+
+## 一般的な課題とアンチパターン
+
+- 手動で自動化されていないカナリアは、人的エラーのリスクを増加させます。
+- 不十分な監視により、カナリアのみの問題が検出されない可能性があります。
+- 技術的メトリクスのみに焦点を当てると、ビジネスリグレッションを見逃す可能性があります。
+- 過度に積極的なランプアップは、リスク軽減を無効にします。
+- カナリアリリースとA/Bテストの混同: カナリアは安全性のためであり、製品分析のためではありません。
+
+- 参考: [Gravitee: Anti-Patterns](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+
+## よくある質問(FAQ)
+
+**Q: カナリアリリースはブルーグリーンデプロイメントとどう違いますか?**  
+A: ブルーグリーンはすべてのユーザーを一度に新しい環境に切り替えますが、カナリアリリースは段階的にトラフィックをシフトし、早期公開のリスクを最小限に抑えます。  
+[参考](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+
+**Q: データベース変更にカナリアリリースを使用できますか?**  
+A: 変更が後方互換性があり、両方のバージョンが並行して実行できる場合のみ可能です。多くの場合、[Parallel Change](https://martinfowler.com/bliki/ParallelChange.html)パターンを介して行われます。
+
+**Q: カナリアリリースに必要なインフラストラクチャは何ですか?**  
+A: プログラマブルなロードバランサー、APIゲートウェイ、オブザーバビリティスタック、CI/CD自動化が必要です。
+
+**Q: カナリアリリースはすべてのタイプのソフトウェアに適していますか?**  
+A: Webサービス、API、集中デプロイメントを持つクラウドネイティブアプリケーションに最も効果的です。
+
+## さらなる読み物と参考文献
+
+- [Martin Fowler: Canary Release](https://martinfowler.com/bliki/CanaryRelease.html)
+- [Google Cloud: Use a Canary Deployment Strategy](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary)
+- [Gravitee: Comprehensive Guide to Canary Releases](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
+- [LaunchDarkly: What Is a Canary Release?](https://launchdarkly.com/blog/what-is-a-canary-release/)
+- [Semaphore: What Is Canary Deployment?](https://semaphore.io/blog/what-is-canary-deployment)
+- [Harness: What is a Canary Deployment?](https://www.harness.io/harness-devops-academy/what-is-a-canary-deployment)
+- [Google Cloud: Canary Deployments with Kubernetes](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary/gke/service-networking)
+- [IMVU: Continuous Deployment QA](http://engineering.imvu.com/2010/04/09/imvus-approach-to-integrating-quality-assurance-with-continuous-deployment/)
+
+## 関連概念
+
+- [Blue-Green Deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html)
+- [Rolling Deployment](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-type-rolling.html)
+- [Feature Flags](https://en.wikipedia.org/wiki/Feature_toggle)
+- [A/B Testing](https://en.wikipedia.org/wiki/A/B_testing)
+- [Dark Launch](https://martinfowler.com/bliki/DarkLaunching.html)
+- [Parallel Change (Expand-Contract)](https://martinfowler.com/bliki/ParallelChange.html)
+
+**注記:**  
+カナリアリリースの最も深く実用的なカバレッジについては、[Google Cloudドキュメント](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary)、[Graviteeの包括的ガイド](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)、および[Martin Fowler](https://martinfowler.com/bliki/CanaryRelease.html)による基礎的な議論を参照してください。これらのリソースは、堅牢な本番グレードのカナリアデプロイメントのための権威ある最新のベストプラクティスと実装パターンを提供します。

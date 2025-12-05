@@ -210,7 +210,7 @@ inputs:
 - **機能:** 競合状態を防ぎ、自動化を確実に順序付けるために一時停止を挿入する。
 - **設定:** 期間、または長い待機のために複数の遅延を重ねる。
 - **ベストプラクティス:**
-    - Jira自動化のブランチは並列実行される可能性があることに注意する。遅延でアクションをシリアル化するか、別々のルールに分割する必要がある場合がある。
+    - Jira自動化のブランチは[並列実行](/ja/glossary/parallel-execution/)される可能性があることに注意する。遅延でアクションをシリアル化するか、別々のルールに分割する必要がある場合がある。
     - [Jira Issue: Support for delay / pause / wait step](https://jira.atlassian.com/browse/AUTO-238)
     - [Atlassian Community: Can I set a delay in Jira Automation?](https://community.atlassian.com/forums/Jira-questions/Can-I-set-a-delay-in-Jira-Automation/qaq-p/3074180)
 

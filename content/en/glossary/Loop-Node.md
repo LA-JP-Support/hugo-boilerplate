@@ -15,7 +15,7 @@ A **Loop Node** automates the repetition of actions in a workflow. It can proces
 - **Typical Use Cases:**
   - Processing lists/collections (e.g., send messages to each contact)
   - Automating repetitive tasks (e.g., generate reports for multiple departments)
-  - Batch processing (e.g., handle API calls in groups)
+  - [Batch processing](/en/glossary/batch-processing/) (e.g., handle API calls in groups)
   - Input validation (e.g., prompt until valid input is received)
 
 **Sources:**  

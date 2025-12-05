@@ -10,7 +10,7 @@ draft: false
 ---
 ## What is State / Context Memory?
 
-State / Context Memory is the set of mechanisms and storage solutions that enable conversational AI agents and automation systems to retain, recall, and use information across sessions, workflows, or even application restarts. This concept bridges the gap between the inherent statelessness of most AI models (such as LLMs) and user expectations for continuity, personalization, and task management.
+State / Context Memory is the set of mechanisms and storage solutions that enable [conversational AI](/en/glossary/conversational-ai/) agents and automation systems to retain, recall, and use information across sessions, workflows, or even application restarts. This concept bridges the gap between the inherent statelessness of most AI models (such as LLMs) and user expectations for continuity, personalization, and task management.
 
 - **State** is any data (structured or unstructured) recorded by a system about past events, used to inform future actions.
 - **Context memory** is the relevant subset of state for immediate or ongoing interactions, ensuring logical continuity.
@@ -204,7 +204,7 @@ See: [How persistent container storage works and why it matters – TechTarget](
 
 - More state improves user experience but increases resource costs.
 - Aggressively prune unnecessary data to optimize efficiency.
-- Monitor latency, cost per interaction, and user satisfaction.
+- Monitor [latency](/en/glossary/latency/), cost per interaction, and user satisfaction.
 
 ### Tailoring State to Application Needs
 

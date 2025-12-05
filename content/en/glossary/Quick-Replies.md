@@ -13,7 +13,7 @@ draft: false
 **Quick Replies** are ephemeral, selectable buttons or chips that appear in chat interfaces, providing users with pre-defined options and sending a specific value or message when tapped. Once selected, they vanish from the interface, preventing clutter and maintaining a focused conversational flow.
 
 **Other names on platforms:**  
-- *Suggestion Chips* (Google Assistant, Dialogflow)  
+- *[Suggestion Chips](/en/glossary/suggestion-chips/)* (Google Assistant, Dialogflow)  
 - *Suggested Actions* (Microsoft Bot Framework)  
 - *Keyboard Buttons* (Telegram)  
 - *HeroCard* (Skype)  
@@ -124,9 +124,9 @@ For deeper use case flows:
 | **Best for**                | Simple, one-off responses, user input collection                 | Navigation, triggering actions, links, payments      |
 | **Text Length**             | Usually up to 20 (SendPulse/Telegram) or 25 (LivePerson) characters | Up to 20–25 characters                               |
 | **Supports Dynamic Values** | Yes (on some platforms)                                          | Mostly static text                                   |
-| **UI Location**             | Above/below input field (ephemeral chips/bubbles)                | Below message or as persistent menu items            |
+| **UI Location**             | Above/below input field (ephemeral chips/bubbles)                | Below message or as [persistent menu](/en/glossary/persistent-menu/) items            |
 | **User Experience**         | Lightweight, uncluttered, focused conversation                   | Multi-step navigation, persistent options            |
-| **Example Use Case**        | “Confirm order:” [Yes] [No]                                      | “Learn More” [Button opens webview]                  |
+| **Example Use Case**        | “Confirm order:” [Yes] [No]                                      | “Learn More” [Button opens [webview](/en/glossary/webview/)]                  |
 
 **Tip:**  
 Use Quick Replies for guided, quick user input; use Buttons for navigation or persistent menus.  
@@ -176,7 +176,7 @@ See [SendPulse: Best Practices](https://sendpulse.com/knowledge-base/chatbot/qui
 | **Telegram**            | 13                | 20             | Keyboard buttons; supports dynamic variables                  |
 | **WhatsApp**            | 3                 | 20             | >3 converts to list picker; multiple selection possible       |
 | **Apple Messages**      | 5                 | N/A            | >5 triggers list picker; only >1 Quick Reply supported        |
-| **Google Assistant/Dialogflow** | 8–10+      | ~25            | Suggestion Chips; supports context switching and slot-filling |
+| **Google Assistant/Dialogflow** | 8–10+      | ~25            | Suggestion Chips; supports [context switching](/en/glossary/context-switching/) and slot-filling |
 | **SendPulse**           | 10                | 20             | Emoji and dynamic variables supported                         |
 | **LivePerson Conversational Cloud** | 24    | 25             | Up to 24 chips per message, with rich branding and actions    |
 

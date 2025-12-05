@@ -232,7 +232,7 @@ User ratings, comments, and escalated interaction analysis identify gaps for ret
 | Escalation Rate           | % of conversations the bot cannot resolve and must send to a human.            |
 | CSAT                      | Customer Satisfaction Score—how happy users are with the interaction.          |
 | FCR                       | First Contact Resolution—% of queries resolved on the first try.               |
-| NLP                       | Natural Language Processing—AI for understanding human language.               |
+| NLP                       | [Natural Language Processing](/en/glossary/natural-language-processing--nlp-/)—AI for understanding human language.               |
 | LLM                       | Large Language Model, e.g., GPT—enables nuanced, context-aware bots.           |
 | Operational Efficiency    | How well resources are used to deliver support or services.                    |
 | Knowledge Base            | Repository of information a bot draws on to answer queries.                    |

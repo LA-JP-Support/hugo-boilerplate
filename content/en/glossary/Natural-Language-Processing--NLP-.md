@@ -121,7 +121,7 @@ After preprocessing, textual data is converted into numerically meaningful forms
 
 ### Core Techniques
 
-- **Supervised Learning:** Model learns from labeled examples. Used in spam detection, sentiment analysis, and NER.
+- **Supervised Learning:** Model learns from labeled examples. Used in spam detection, [sentiment analysis](/en/glossary/sentiment-analysis/), and NER.
 - **Unsupervised Learning:** Model discovers patterns without labels. Used in topic modeling and clustering.
 - **Transfer Learning:** Pretrained models (e.g., BERT, GPT) are adapted to new tasks with minimal new data.
 
@@ -272,7 +272,7 @@ According to Fortune Business Insights, the NLP market is expected to grow from 
   [AWS Polly](https://aws.amazon.com/polly/)
 - **Amazon Translate:** Machine translation.  
   [AWS Translate](https://aws.amazon.com/translate/)
-- **Google Cloud NLP API:** Text analysis, entity extraction.
+- **Google Cloud NLP API:** Text analysis, [entity extraction](/en/glossary/entity-extraction/).
   - [Google Cloud NLP](https://cloud.google.com/natural-language)
 - **IBM Watson NLP:** Language understanding and automation.
   - [IBM Watson NLP](https://www.ibm.com/watson/products-services/natural-language-processing/)

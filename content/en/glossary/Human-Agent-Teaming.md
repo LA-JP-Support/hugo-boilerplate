@@ -86,7 +86,7 @@ Adaptive agents infer human intent in real-time, eschewing static models in favo
 
 ### 4.1. Trust Calibration and Transparency
 
-Mechanisms for calibrating trust are essential; humans must avoid both over-trusting and under-utilizing AI partners. Explainability and transparency are vital, especially in high-stakes fields like healthcare and defense.
+Mechanisms for calibrating trust are essential; humans must avoid both over-trusting and under-utilizing AI partners. Explainability and [transparency](/en/glossary/transparency/) are vital, especially in high-stakes fields like healthcare and defense.
 
 - Trust is dynamic and requires real-time feedback and transparency about agent intent and system limitations.
 - Over-trust can cause complacency; under-trust leads to inefficiencies.

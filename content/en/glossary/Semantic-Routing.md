@@ -40,7 +40,7 @@ A database for storing and searching embeddings using similarity metrics. Popula
 - [Azure AI Search](https://devblogs.microsoft.com/ise/semantic-routing-using-azure-ai-search/)
 
 ### 5. Similarity Metric
-A mathematical function (e.g., cosine similarity) used to score the closeness of vectors, determining which route most closely matches the incoming query.
+A mathematical function (e.g., [cosine similarity](/en/glossary/cosine-similarity/)) used to score the closeness of vectors, determining which route most closely matches the incoming query.
 
 ### 6. Routing Layer
 Logic that compares user query embeddings with route vectors, selects the best match (if it exceeds a similarity threshold), and applies fallback logic as needed.
@@ -56,7 +56,7 @@ Logic that compares user query embeddings with route vectors, selects the best m
 1. **User Query:** User submits a free-form question or command.
 2. **Text Embedding:** Query is converted into a vector using an embedding model.
 3. **Route Definition:** Each route is associated with one or more example utterances, embedded as vectors.
-4. **Similarity Search:** The system computes similarity (e.g., cosine similarity) between the query vector and all route utterance vectors.
+4. **Similarity Search:** The system computes similarity (e.g., cosine similarity) between the query vector and all route [utterance](/en/glossary/utterance/) vectors.
 5. **Routing Decision:** The route with the highest similarity (above a threshold) is chosen.
 6. **Action/Fallback:** The matched route triggers a specific action or a fallback/default route is used if no match is strong enough.
 
@@ -82,7 +82,7 @@ User Query
 
 | Routing Method          | How It Works                      | Pros                                      | Cons                                        | Ideal Use Cases                  |
 |------------------------|-----------------------------------|-------------------------------------------|---------------------------------------------|-----------------------------------|
-| Semantic Routing       | Vector similarity search           | Low cost, low latency, scalable           | Less effective for ambiguous/multi-intent   | High-volume, domain-specific      |
+| Semantic Routing       | Vector similarity search           | Low cost, low [latency](/en/glossary/latency/), scalable           | Less effective for ambiguous/multi-intent   | High-volume, domain-specific      |
 | Keyword Routing        | Exact/partial keyword match        | Ultra-fast, easy to implement             | Brittle, low recall, high maintenance       | Simple, well-defined workflows    |
 | LLM-as-Router          | Prompt-based LLM decision          | Accurate, flexible, context-sensitive      | Expensive, slower, prompt design required   | Nuanced, context-aware routing    |
 | Multi-Agent            | Task decomposition, agent teams    | Modular, extensible, powerful              | Complex, high resource use                  | Complex, multi-step automation    |
@@ -251,7 +251,7 @@ A technique where external information is retrieved and fed into an LLM to impro
 [Source](https://www.pryon.com/landing/what-is-retrieval-augmented-generation)
 
 **Agentic Workflows**  
-AI systems in which autonomous agents (see below) collaborate, often with different specializations, to solve complex problems.  
+AI systems in which [autonomous agents](/en/glossary/autonomous-agents/) (see below) collaborate, often with different specializations, to solve complex problems.  
 [Source](https://docs.datarobot.com/en/docs/agentic-ai/agentic-glossary.html#agentic-workflow)
 
 **Agent (AI)**  

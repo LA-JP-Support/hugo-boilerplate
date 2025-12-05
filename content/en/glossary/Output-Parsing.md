@@ -311,7 +311,7 @@ A: For high-volume, specialized tasks needing absolute consistency.
 - [What is Parsing? | Xcitium](https://www.xcitium.com/blog/news/what-is-parsing/)
 - [LangChain Output Parsers - GeeksforGeeks](https://www.geeksforgeeks.org/artificial-intelligence/output-parsers-in-langchain/)
 
-**Related Terms:** output parsers, prompt engineering, structured data, parser jsonoutputparser, function/tool calling, fine-tuning, content uploads, prompt template, machine learning, structured outputs, schema enforcement
+**Related Terms:** output parsers, prompt engineering, structured data, parser jsonoutputparser, function/tool calling, fine-tuning, content uploads, [prompt template](/en/glossary/prompt-template/), machine learning, structured outputs, schema enforcement
 
 **Tip:**  
 Always include explicit format instructions in prompts and validate output with a parser before downstream use.

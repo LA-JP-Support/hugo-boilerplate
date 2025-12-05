@@ -19,7 +19,7 @@ Dify is an open-source LLM (Large Language Model) app development platform that 
 
 ## **What is Dify?**
 
-Dify is an open-source platform for building, deploying, and operating AI-powered applications based on LLMs. It is designed for both technical and non-technical teams and combines a **visual workflow builder** with powerful backend operations, allowing organizations to create sophisticated AI solutions—such as chatbots, autonomous agents, and document Q&A systems—without deep software engineering or MLOps expertise.
+Dify is an open-source platform for building, deploying, and operating AI-powered applications based on LLMs. It is designed for both technical and non-technical teams and combines a **visual workflow builder** with powerful backend operations, allowing organizations to create sophisticated AI solutions—such as chatbots, [autonomous agents](/en/glossary/autonomous-agents/), and document Q&A systems—without deep software engineering or [MLOps](/en/glossary/mlops/) expertise.
 
 **Core Concept:**  
 Dify is categorized as an **LLMOps platform**, providing an end-to-end environment for defining, deploying, and operating AI applications. It handles:
@@ -76,7 +76,7 @@ An HR manager creates a candidate screening bot:
 - [Gallery on Dify.ai](https://dify.ai/)
 
 ### **Multi-LLM Integration**
-- **Model flexibility:** Instantly connect OpenAI (GPT-3.5/4), Anthropic (Claude), Meta Llama 2, Azure OpenAI, Hugging Face, etc.
+- **Model flexibility:** Instantly connect OpenAI (GPT-3.5/4), Anthropic (Claude), Meta Llama 2, Azure OpenAI, [Hugging Face](/en/glossary/hugging-face/), etc.
 - **Switch and compare:** Test/swap models with a click; optimize for cost, speed, or compliance.
 - **Avoid vendor lock-in:** Use multiple models in one workflow; migrate as needed.
 
@@ -84,7 +84,7 @@ An HR manager creates a candidate screening bot:
 A FinTech startup uses OpenAI for English chat, then adds a local Llama 2 model for data privacy.
 
 ### **Retrieval-Augmented Generation (RAG) Pipelines**
-- **Knowledge grounding:** Upload proprietary docs, connect DBs, sync web data. Dify indexes data in a vector database (e.g., Weaviate).
+- **Knowledge grounding:** Upload proprietary docs, connect DBs, sync web data. Dify indexes data in a vector database (e.g., [Weaviate](/en/glossary/weaviate/)).
 - **RAG node:** LLM combines training knowledge with real-time, company-specific data.
 - **Multi-format support:** Ingest PDFs, DOCs, PPTs, TXT, etc.
 
@@ -160,7 +160,7 @@ Dify sits in a growing field of LLMOps and AI workflow tools.
 
 | **Criteria**     | **Dify**                              | **LangChain**                        |
 |------------------|---------------------------------------|--------------------------------------|
-| Interface        | Visual, no-code/low-code              | Code library (Python/JS), dev centric|
+| Interface        | Visual, no-code/low-code              | Code library ([Python/JS](/en/glossary/code-block--python-js-/)), dev centric|
 | Target User      | Product, business, developers (broad) | Developers, ML engineers             |
 | Flexibility      | Fast prototyping, built-in ops         | Ultimate flexibility, needs coding   |
 | Extensibility    | Plugins, custom nodes, API integration| Deep code-level customization        |

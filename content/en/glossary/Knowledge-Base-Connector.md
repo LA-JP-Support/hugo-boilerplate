@@ -41,7 +41,7 @@ A Knowledge Base Connector acts as a bridge between AI-powered conversational ag
 ### 2. Document Chunking & Embedding
 - **Chunking:** Documents are split into contextually meaningful segments (paragraphs, sections) to optimize retrieval precision.
 - **Embedding:** Each chunk is converted into a high-dimensional vector using embedding models (e.g., OpenAI, Cohere, Sentence Transformers).
-- **Vector Storage:** Embeddings are stored in a vector database (e.g., Pinecone, Weaviate, OpenSearch) along with metadata.
+- **Vector Storage:** Embeddings are stored in a vector database (e.g., [Pinecone](/en/glossary/pinecone/), Weaviate, OpenSearch) along with metadata.
 
   **Reference:**  
   - [n8n: Understanding Vector Databases](https://docs.n8n.io/advanced-ai/examples/understand-vector-databases/)
@@ -138,7 +138,7 @@ A Knowledge Base Connector acts as a bridge between AI-powered conversational ag
    - Balance between storage, speed, and retrieval accuracy.
 
 3. **Vector Store Optimization**
-   - Monitor index health and retrieval latency.
+   - Monitor index health and retrieval [latency](/en/glossary/latency/).
    - Use scalable, high-performance vector databases.
 
 4. **Security & Access Control**
@@ -221,7 +221,7 @@ Get started with [n8n](https://n8n.io/ai/), [Amazon Bedrock](https://docs.aws.am
 - Embedding Model
 - Internal Knowledge Base
 - AI Agent
-- Natural Language Processing (NLP)
+- [Natural Language Processing (NLP)](/en/glossary/natural-language-processing--nlp-/)
 - Customer Service Automation
 - Data Source
 - Large Language Model (LLM)

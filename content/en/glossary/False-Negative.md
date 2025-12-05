@@ -28,7 +28,7 @@ This concept is fundamental in **binary classification**—where outcomes are di
 |                         | **Predicted Positive** | **Predicted Negative** |
 |-------------------------|-----------------------|-----------------------|
 | **Actual Positive**     | True Positive (TP)    | **False Negative (FN)**|
-| **Actual Negative**     | False Positive (FP)   | True Negative (TN)    |
+| **Actual Negative**     | [False Positive](/en/glossary/false-positive/) (FP)   | True Negative (TN)    |
 
 ### **Comparison: False Negative vs. False Positive**
 
@@ -176,7 +176,7 @@ False Negative Rate = 15 / (85 + 15) = 0.15 (15%)
    - Leverage data augmentation and synthetic data for rare scenarios.
 
 **2. Adjust Model Thresholds**
-   - Balance precision and recall by tuning confidence thresholds.
+   - Balance [precision and recall](/en/glossary/precision-and-recall/) by tuning confidence thresholds.
    - Lowering the threshold may reduce false negatives at the cost of more false positives. ([Google: Thresholding](https://developers.google.com/machine-learning/crash-course/classification/thresholding))
 
 **3. Implement Regression and Automated Testing**
@@ -193,7 +193,7 @@ False Negative Rate = 15 / (85 + 15) = 0.15 (15%)
 
 **6. Hybrid Human-AI Escalation**
    - Route uncertain or low-confidence cases to human agents.
-   - Human-in-the-loop reviews and labels missed intents for retraining.
+   - [Human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/) reviews and labels missed intents for retraining.
 
 **7. Regular Knowledge Base Auditing**
    - Remove outdated/conflicting content to improve retrieval precision.

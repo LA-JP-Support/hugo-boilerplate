@@ -46,7 +46,7 @@ Knowledge Base Connector(ナレッジベースコネクタ)は、AI駆動の対�
 ### 2. ドキュメントのチャンク化と埋め込み
 - **チャンク化:** ドキュメントは、検索精度を最適化するために、文脈的に意味のあるセグメント(段落、セクション)に分割されます。
 - **埋め込み:** 各チャンクは、埋め込みモデル(OpenAI、Cohere、Sentence Transformersなど)を使用して高次元ベクトルに変換されます。
-- **ベクトルストレージ:** 埋め込みは、メタデータとともにベクトルデータベース(Pinecone、Weaviate、OpenSearchなど)に保存されます。
+- **ベクトルストレージ:** 埋め込みは、メタデータとともにベクトルデータベース(Pinecone、[Weaviate](/ja/glossary/weaviate/)、OpenSearchなど)に保存されます。
 
   **参考資料:**  
   - [n8n: Understanding Vector Databases](https://docs.n8n.io/advanced-ai/examples/understand-vector-databases/)
@@ -119,7 +119,7 @@ Knowledge Base Connector(ナレッジベースコネクタ)は、AI駆動の対�
 
 ### 3. 金融アナリストアシスタント
 - リアルタイムの金融データ、市場センチメント、過去のレポートを取得します。
-- HTTPリクエストノードを使用してデータを取得し、LLMが分析サマリーを生成します。
+- [HTTPリクエストノード](/ja/glossary/http-request-node/)を使用してデータを取得し、LLMが分析サマリーを生成します。
 
 ### 4. マルチモーダル検索
 - 一部のコネクタは画像、表、図をサポートし、より豊かな応答を可能にします。
@@ -210,7 +210,7 @@ Knowledge Base Connector(ナレッジベースコネクタ)は、AI駆動の対�
 
 ## 行動喚起
 
-Knowledge Base Connectorsを探索して、最新のコンテキストを考慮した回答でAIチャットボットまたは自動化ワークフローを強化しましょう。  
+Knowledge Base Connectorsを探索して、最新のコンテキストを考慮した回答でAIチャットボットまたは[自動化ワークフロー](/ja/glossary/automated-workflows/)を強化しましょう。  
 [n8n](https://n8n.io/ai/)、[Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html)、または[Automation Anywhere](https://www.youtube.com/watch?v=Z6JWTrpObQo)で始めて、ビジネスのためのRetrieval Augmented Generationの完全な可能性を解き放ちましょう。
 
 ## 関連項目

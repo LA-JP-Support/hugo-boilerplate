@@ -47,7 +47,7 @@ A regression suite with 500 test cases can be split among 50 agents, each runnin
 
 ### AI Chatbots
 
-- **Intent Handling:** Multiple user intents (especially with ambiguous input) are processed in parallel, enabling quicker disambiguation.
+- **Intent Handling:** Multiple user intents (especially with ambiguous input) are processed in parallel, enabling quicker [disambiguation](/en/glossary/disambiguation/).
 - **Data Aggregation:** Fetching and collating data from different sources or APIs concurrently.
 - **Multi-Turn Conversations:** Managing multiple ongoing conversation threads or sub-dialogues, such as handling interruptions or background tasks.
 
@@ -88,7 +88,7 @@ Parallel execution is enabled by several architectural models:
 | Process-based    | Separate OS-level processes                               | Python multiprocessing                |
 | Distributed      | Tasks distributed across multiple machines or grid nodes   | Selenium Grid, Kubernetes cluster     |
 | Cloud-based      | Parallel tasks spun up on cloud resources dynamically      | LambdaTest, BrowserStack, AWS Lambda  |
-| Containerized    | Isolated containers managed by orchestrators              | Docker + Kubernetes                   |
+| Containerized    | Isolated containers managed by orchestrators              | [Docker](/en/glossary/docker/) + Kubernetes                   |
 
 **Modern parallel test execution increasingly leverages distributed, cloud-native, and containerized architectures for elastic scaling, global reach, and consistent environments.**  
 > - [Virtuoso QA: Architecture and Infrastructure](https://www.virtuosoqa.com/post/parallel-test-execution)

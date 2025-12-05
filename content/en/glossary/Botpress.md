@@ -14,7 +14,7 @@ Botpress is a comprehensive platform for designing, building, deploying, and man
 
 **Key characteristics:**
 - Visual, drag-and-drop conversation and automation design
-- AI-powered NLU (Natural Language Understanding) and NLP (Natural Language Processing)
+- AI-powered NLU (Natural Language Understanding) and NLP ([Natural Language Processing](/en/glossary/natural-language-processing--nlp-/))
 - Seamless integration with enterprise systems and external data sources
 - Omnichannel deployment: websites, messaging apps, internal tools, and more
 - Enterprise-grade security and compliance, including SOC II and GDPR
@@ -152,7 +152,7 @@ Botpress is engineered for enterprise security and compliance:
 2. **Define Bot Purpose:**  
    Clarify your automation goals (support, sales, HR, etc.).
 3. **Design Conversation Flows:**  
-   Use the visual flow builder to map dialog and user journeys.
+   Use the [visual flow builder](/en/glossary/visual-flow-builder/) to map dialog and user journeys.
 4. **Import Knowledge Bases:**  
    Add websites, documents, or FAQs as knowledge sources.
 5. **Configure Integrations:**  

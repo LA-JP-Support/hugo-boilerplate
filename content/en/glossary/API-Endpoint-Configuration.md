@@ -90,7 +90,7 @@ Content-Type: application/json
 ### 4. Monitoring and Logging
 
 - **Usage Tracking:**  
-  Collect metrics on calls, errors, latency.
+  Collect metrics on calls, errors, [latency](/en/glossary/latency/).
 - **Alerting:**  
   Notify admins if error rates spike or abnormal patterns occur.
 

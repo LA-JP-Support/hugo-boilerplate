@@ -67,7 +67,7 @@ Query expansion encompasses a range of methods, from classic synonym expansion t
 | Technique                  | How It Works                                              | Example                                  |
 |----------------------------|----------------------------------------------------------|------------------------------------------|
 | Synonym Expansion          | Adds synonyms                                            | “car” → “automobile,” “vehicle”          |
-| Stemming/Lemmatization     | Normalizes word forms                                    | “running” → “run”                        |
+| Stemming/[Lemmatization](/en/glossary/lemmatization/)     | Normalizes word forms                                    | “running” → “run”                        |
 | Related-Term Expansion     | Adds contextually relevant terms                         | “heart attack” → “myocardial infarction” |
 | Relevance Feedback         | Refines expansion from user feedback                     | Clicked docs influence added terms       |
 | Embedding-Based Expansion  | Uses semantic similarity in vector space                 | “AI” → “artificial intelligence,” “ML”   |
@@ -112,7 +112,7 @@ results = expanded_retrieval_pipeline.run({"expander": {"query": "climate change
 | Early Web (1990s)     | Synonym Lists            | Fast, predictable            | Rigid, not context-aware             |
 | 2000s                 | Statistical Analysis     | Data-driven, some personal.  | Needs large data, privacy issues     |
 | 2010s                 | Pseudo-Relevance Feedback| Contextual, self-improving   | Can introduce noise                  |
-| 2020s                 | LLMs, Embeddings         | Deep context, disambiguation | Resource-intensive, risk of over-expansion |
+| 2020s                 | LLMs, Embeddings         | Deep context, [disambiguation](/en/glossary/disambiguation/) | Resource-intensive, risk of over-expansion |
 
 **Reference:**  
 - [Stanford NLP - Query Expansion PDF](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf)  
@@ -134,7 +134,7 @@ results = expanded_retrieval_pipeline.run({"expander": {"query": "climate change
 ## Challenges and Considerations
 
 - **Over-Expansion:** Too many or irrelevant terms dilute precision.
-- **Computational Overhead:** More terms increase system load and latency.
+- **Computational Overhead:** More terms increase system load and [latency](/en/glossary/latency/).
 - **Relevance Maintenance:** Added terms must match user intent.
 - **Privacy:** Personal data use can raise regulatory concerns.
 - **Bias Amplification:** Expansion algorithms may perpetuate biases.
@@ -227,7 +227,7 @@ A: It’s a technique that reformulates a user’s original query by adding syno
 A: Including synonyms enables retrieval of documents using different words for the same concept, increasing recall.
 
 **Q: What are the main challenges?**  
-A: Over-expansion, computational complexity, relevance, privacy/bias issues, and lack of transparency.
+A: Over-expansion, computational complexity, relevance, privacy/bias issues, and lack of [transparency](/en/glossary/transparency/).
 
 **Q: Can query expansion help with ambiguous queries?**  
 A: Yes. Contextual expansion helps infer likely intent behind short or ambiguous queries.

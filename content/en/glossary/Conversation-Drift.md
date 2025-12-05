@@ -126,7 +126,7 @@ In extended or emotionally intense chats, users and AI may reinforce off-track a
 - **User Feedback:**  
   Periodically prompt users to confirm if the bot is still on track.
 - **Analytics Dashboards:**  
-  Platforms like Drift and Intercom surface drop-off points and engagement metrics.
+  Platforms like Drift and Intercom surface drop-off points and [engagement metrics](/en/glossary/engagement-metrics/).
 - **Performance Monitoring:**  
   Track accuracy, error rates, and user satisfaction over time.
 - **Statistical Distribution Analysis:**  

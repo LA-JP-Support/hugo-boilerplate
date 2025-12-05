@@ -95,7 +95,7 @@ e-title: Rate Limiting Handler
    高度なシステムは、ダッシュボード、ログ、またはAPIレスポンスを介して、待機時間、現在のクォータ、または予想される回復をクライアントまたはエンドユーザーに通知します。
 
 7. **コストと不正使用管理:**  
-   ハンドラーは、リクエストをバッチ処理、キャッシュ、または統合し、異常な使用パターンを自動ブロックまたはアラートする場合があります。
+   ハンドラーは、リクエストを[バッチ処理](/ja/glossary/batch-processing/)、キャッシュ、または統合し、異常な使用パターンを自動ブロックまたはアラートする場合があります。
 
 **参考:** [Zuplo: 10 Best Practices for API Rate Limiting](https://zuplo.com/learning-center/10-best-practices-for-api-rate-limiting-in-2025)
 

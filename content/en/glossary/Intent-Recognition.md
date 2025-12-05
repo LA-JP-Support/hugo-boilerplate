@@ -9,7 +9,7 @@ date: 2025-12-03
 draft: false
 ---
 ## Definition: What is Intent Recognition?
-Intent recognition, also known as intent classification, is a core technology in artificial intelligence (AI) and natural language processing (NLP). It is the process of interpreting a user’s input—whether text, speech, or commands—and mapping it to a specific, predefined purpose or goal called an "intent." This enables digital systems to understand what the user wants to achieve, regardless of how the query is phrased.
+Intent recognition, also known as intent classification, is a core technology in artificial intelligence (AI) and [natural language processing (NLP)](/en/glossary/natural-language-processing--nlp-/). It is the process of interpreting a user’s input—whether text, speech, or commands—and mapping it to a specific, predefined purpose or goal called an "intent." This enables digital systems to understand what the user wants to achieve, regardless of how the query is phrased.
 
 - **Reference:** [Lyzr Glossary: Intent Recognition](https://www.lyzr.ai/glossaries/intent-recognition/)
 - **Reference:** [TAUS: Intent Recognition in NLP](https://www.taus.net/resources/blog/intent-recognition-in-nlp)
@@ -152,7 +152,7 @@ Unlike keyword-based approaches, intent recognition leverages context, semantics
 | Personalization      | Strong (adapts to user needs)                       | Limited (static replies)             | Limited (manual updates)          |
 | Language Support     | Handles synonyms, paraphrasing, ambiguity           | Struggles with variations            | Struggles with variations         |
 | Scalability          | Easily expands to new intents/languages/channels    | Manual updates needed                | Complex to expand                 |
-| Best For             | Conversational AI, virtual assistants, support      | Basic search, FAQ bots               | Decision trees                    |
+| Best For             | [Conversational AI](/en/glossary/conversational-ai/), virtual assistants, support      | Basic search, FAQ bots               | Decision trees                    |
 
 - **Reference:** [Lyzr: Comparison Table](https://www.lyzr.ai/glossaries/intent-recognition/)
 

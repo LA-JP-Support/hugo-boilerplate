@@ -266,7 +266,7 @@ Embed Scriptを使用することで、AIを活用したチャットボットを
 | セキュリティタスク                                   | 推奨事項                                               |
 |-------------------------------------------------|--------------------------------------------------------------|
 | 公開/制限付きAPIキーを使用                  | ✔️                                                           |
-| スクリプトにシークレット/プライベートキーを埋め込まない  | ✔️                                                           |
+| スクリプトに[シークレット](/ja/glossary/environment-variables--secrets-/)/プライベートキーを埋め込まない  | ✔️                                                           |
 | バックエンド経由で機密データを難読化またはプロキシ   | ✔️                                                           |
 | すべてのウィジェットとAPI通信にHTTPSを使用 | ✔️                                                           |
 | チャットボット設定で許可されたドメインを検証    | ✔️                                                           |
@@ -314,7 +314,7 @@ Embed Scriptを使用することで、AIを活用したチャットボットを
 1. ブラウザコンソールを開き、JavaScriptエラーを確認。
 2. スクリプトURL、パラメータ、エージェントIDを検証。
 3. チャットボット設定でウェブサイトドメインが許可されていることを確認。
-4. ブラウザ拡張機能を無効にするか、シークレットモードでテスト。
+4. ブラウザ拡張機能を無効にするか、[シークレット](/ja/glossary/environment-variables--secrets-/)モードでテスト。
 5. 公式トラブルシューティングドキュメントを確認:
    - [Chatbase Troubleshooting](https://chatbase.co/docs/developer-guides/javascript-embed#troubleshooting)
    - [ChatBot.com Widget Installation Guide](https://www.chatbot.com/help/install-chatbot/widget-installation/)

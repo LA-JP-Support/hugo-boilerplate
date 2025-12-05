@@ -263,7 +263,7 @@ e-title: Fall-back Mechanism
 |------|------|--------|
 | **Fallback** | 失敗や未知の事象を代替ロジックで処理する | チャットボット、自動化、API |
 | **Graceful Degradation** | 失敗時にシステムが機能を縮小して継続する | Webアプリ、分散システム |
-| **Redundancy** | 信頼性のための重複コンポーネント | 高可用性インフラストラクチャ |
+| **Redundancy** | 信頼性のための重複コンポーネント | [高可用性](/ja/glossary/high-availability--ha-/)インフラストラクチャ |
 | **Failover** | バックアップシステムへの自動切り替え | データベース、サーバー |
 | **Polyfills** | サポートされていない環境で欠落している機能を提供する | Web開発 |
 

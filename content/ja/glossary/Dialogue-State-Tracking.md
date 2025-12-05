@@ -22,7 +22,7 @@ Dialogue State Tracking(DST)は、タスク指向型の会話AI システムの�
 
 各ターンにおいて、DSTはユーザーの現在の目的とそれを達成するために必要なすべての関連パラメータを推定します。これにより、システムは次に何をすべきか、何を言うべきかについて情報に基づいた意思決定を行い、会話の一貫性と関連性を確保できます。
 
-DSTは、ユーザー入力の解釈(自然言語理解技術を通じて)と対話管理(システム応答の意思決定)の間の仲介役として機能します。会話ループの重要な部分を形成します:ユーザーの発話が処理され、状態が推定され、システムが次のアクションを決定します。
+DSTは、ユーザー入力の解釈(自然言語理解技術を通じて)と[対話管理](/ja/glossary/dialogue-management/)(システム応答の意思決定)の間の仲介役として機能します。会話ループの重要な部分を形成します:ユーザーの発話が処理され、状態が推定され、システムが次のアクションを決定します。
 
 **参考文献:**
 - [Fiveable NLP Study Guide: Dialogue State Tracking and Management](https://fiveable.me/natural-language-processing/unit-10/dialogue-state-tracking-management/study-guide/INVJzuMxkLvmaoRV)

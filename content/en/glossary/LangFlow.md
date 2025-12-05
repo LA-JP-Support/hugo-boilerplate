@@ -13,7 +13,7 @@ draft: false
 
 LangFlow is an open-source, Python-based visual framework that allows rapid, code-optional development of applications powered by large language models (LLMs), agents, and AI automation workflows. It is built on top of [LangChain](https://www.langchain.com/), which is a modular framework for chaining large language model calls, data retrieval, and tool use.
 
-- **Visual-first:** LangFlow provides a drag-and-drop canvas where each node represents a modular component—such as an LLM, a prompt template, an embedding store, or a custom tool.
+- **Visual-first:** LangFlow provides a drag-and-drop canvas where each node represents a modular component—such as an LLM, a [prompt template](/en/glossary/prompt-template/), an embedding store, or a custom tool.
 - **Comprehensive support:** LangFlow supports key AI paradigms such as agentic reasoning, RAG (retrieval augmented generation), and multi-agent orchestration.
 - **No lock-in:** You are not restricted to particular LLMs or vector stores—LangFlow is model- and datastore-agnostic.
 - **Open-source extensibility:** Advanced users can create custom Python components or integrate external Python code directly.
@@ -80,8 +80,8 @@ Components are modular nodes that represent discrete steps or resources within y
 
 - **LLMs:** Integrate with models such as OpenAI's GPT, Meta's Llama, Mistral, HuggingFace-hosted models, and more.
 - **Prompt Templates:** Design and reuse prompt patterns for consistent LLM interaction.
-- **Vector Databases:** Connect to Pinecone, FAISS, Weaviate, Qdrant, Milvus, Astra DB, and other stores for semantic search and retrieval.
-- **Agents:** Create intelligent, autonomous agents capable of tool use, API access, reasoning, and task management.
+- **Vector Databases:** Connect to [Pinecone](/en/glossary/pinecone/), FAISS, [Weaviate](/en/glossary/weaviate/), Qdrant, [Milvus](/en/glossary/milvus/), Astra DB, and other stores for semantic search and retrieval.
+- **Agents:** Create intelligent, [autonomous agents](/en/glossary/autonomous-agents/) capable of tool use, API access, reasoning, and task management.
 - **Chains:** Combine multiple components into sequential or branching logic flows.
 
 #### Specialized Components
@@ -236,7 +236,7 @@ LangFlow will open at [http://localhost:7860](http://localhost:7860).
 
 ## LangFlow vs. LangChain and Alternatives
 
-- **LangChain:** Code-first Python/JS framework for chaining LLMs, tools, and data sources.
+- **LangChain:** Code-first [Python/JS](/en/glossary/code-block--python-js-/) framework for chaining LLMs, tools, and data sources.
 - **LangFlow:** Visual, low-code UI on top of LangChain, auto-generating pipelines.
 - **Flowise:** Visual LLM workflow builder, similar to LangFlow, but with different design choices and integrations ([FlowiseAI](https://flowiseai.com/)).
 - **LangGraph:** Graph-based agentic workflows with granular control, but lacks drag-and-drop UI ([IBM LangGraph](https://www.ibm.com/think/topics/langgraph)).

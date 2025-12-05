@@ -12,7 +12,7 @@ draft: false
 ---
 ## What is Conversational AI?
 
-**Conversational AI** refers to the collection of artificial intelligence technologies that allow computers to simulate and process human conversation, either via text or voice. By leveraging a blend of Natural Language Processing (NLP), Natural Language Understanding (NLU), Machine Learning (ML), and speech recognition, these systems can interpret user queries, retain context, and generate responses that are coherent and human-like. Conversational AI powers chatbots, virtual agents, interactive voice response (IVR) systems, and intelligent assistants across digital touchpoints.
+**Conversational AI** refers to the collection of artificial intelligence technologies that allow computers to simulate and process human conversation, either via text or voice. By leveraging a blend of [Natural Language Processing (NLP)](/en/glossary/natural-language-processing--nlp-/), Natural Language Understanding (NLU), Machine Learning (ML), and speech recognition, these systems can interpret user queries, retain context, and generate responses that are coherent and human-like. Conversational AI powers chatbots, virtual agents, interactive voice response (IVR) systems, and intelligent assistants across digital touchpoints.
 
 - **Key Attributes:**
   - Understands context and user intent.
@@ -40,7 +40,7 @@ Identifying the distinctions between conversational AI, generative AI, and chatb
 | **Generative AI**            | Produces new, original content such as text, images, or code.                | Email drafting, creative copy  | Author/creator         |
 
 - **Chatbots** can be simple (rule-based, button-driven) or complex (AI-driven). Traditional chatbots are limited to predefined scripts and are unable to manage complex or ambiguous conversations.
-- **Conversational AI** uses advanced NLP, NLU, and dialogue management to offer fluid, context-aware, and multi-turn conversations.
+- **Conversational AI** uses advanced NLP, NLU, and [dialogue management](/en/glossary/dialogue-management/) to offer fluid, context-aware, and multi-turn conversations.
 - **Generative AI** (e.g., GPT-4, DALL-E) is capable of producing entirely new content and is often embedded within conversational AI to provide dynamic, creative, and contextually relevant responses.
 
 **How they work together:**  
@@ -111,7 +111,7 @@ flowchart LR
 
 #### Natural Language Understanding (NLU)
 - Subset of NLP focused on deriving meaning, intent, and context from language.
-- Powers intent recognition, entity extraction, and sentiment analysis.
+- Powers [intent recognition](/en/glossary/intent-recognition/), entity extraction, and [sentiment analysis](/en/glossary/sentiment-analysis/).
 
 #### Natural Language Generation (NLG)
 - Converts structured data and intent into coherent, human-like sentences.
@@ -293,7 +293,7 @@ The field evolves rapidly, with several emerging trends:
 - **Integration with Generative AI:** Leveraging large language models (LLMs) for more creative, adaptive responses.
 - **Industry-Specific Solutions:** AI tailored to sectors like healthcare, finance, education, and retail.
 - **Hyper-Personalization:** Deep CRM and analytics integration for individualized experiences.
-- **Ethics & Responsible AI:** Greater focus on fairness, transparency, and privacy.
+- **Ethics & Responsible AI:** Greater focus on fairness, [transparency](/en/glossary/transparency/), and privacy.
 
 **Market Outlook:**  
 Conversational AI market in banking and financial services is expected to surpass $7 billion by 2030 ([NextMSC](https://www.nextmsc.com/report/chatbot-market-in-bfsi)).
@@ -312,5 +312,5 @@ Explore more:
 - **Customer Experience Impact Stats:**  
   ![Zendesk: AI in Customer Experience](https://d1eipm3vz40hy0.cloudfront.net/vorteile-der-konversationellen-ki-de-optimized.png)
 - **AI Copilot Example:**  
-  ![AI Copilot in Customer Support](https://www.nextiva.com/cdn-cgi/image/width=850,height=599
+  ![[AI Copilot](/en/glossary/copilot/) in Customer Support](https://www.nextiva.com/cdn-cgi/image/width=850,height=599
 

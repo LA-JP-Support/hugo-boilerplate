@@ -9,7 +9,6 @@ image: "/images/blog/ticket-systems-for-customer-support.png"
 tags: ["Customer Support", "Ticket System", "AI Technology"]
 categories: ["Business"]
 ---
-
 ## Centralized Management Through the "Ticket" Approach
 
 A {{< tooltip text="A case file-like system for managing inquiries and cases individually. Similar to medical records at a hospital, it consolidates customer information and response history in one place" >}}ticket system{{< /tooltip >}} in customer support is a mechanism that electronically issues and manages "tickets" for customer inquiries, requests, complaints, and other communications. Unlike scattered response methods such as email and phone calls, this system enables organizations to consolidate and record all inquiry information, response flows, and progress status in one place.
@@ -152,7 +151,7 @@ To effectively leverage AI, clearly define "which tasks AI and humans handle." W
 
 ### Future Outlook and Practical Implementation Points
 
-From 2025 onward, AI-equipped ticket systems can automatically handle increasingly complex inquiries thanks to advances in {{< tooltip text="Technology that enables computers to understand human language and respond appropriately" >}}natural language processing technology{{< /tooltip >}}. 24/7 support becomes possible, along with multilingual support and personalized service using emotion analysis. Going forward, "{{< tooltip text="A model where AI and humans collaborate on customer support, leveraging each other's strengths" >}}hybrid support{{< /tooltip >}}" that seamlessly connects AI and human judgment will become standard, advancing both customer satisfaction and operational efficiency.
+From 2025 onward, AI-equipped ticket systems can automatically handle increasingly complex inquiries thanks to advances in {{< tooltip text="Technology that enables computers to understand human language and respond appropriately" >}}[natural language processing](/en/glossary/natural-language-processing--nlp-/) technology{{< /tooltip >}}. 24/7 support becomes possible, along with multilingual support and personalized service using emotion analysis. Going forward, "{{< tooltip text="A model where AI and humans collaborate on customer support, leveraging each other's strengths" >}}hybrid support{{< /tooltip >}}" that seamlessly connects AI and human judgment will become standard, advancing both customer satisfaction and operational efficiency.
 
 ## Absolutely Essential Best Practices for Ticket System Operations
 

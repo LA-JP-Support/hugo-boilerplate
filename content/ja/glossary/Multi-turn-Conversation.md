@@ -43,7 +43,7 @@ e-title: Multi-Turn Conversation
 <a name="how-it-works"></a>
 ## 3. マルチターン会話の仕組み
 
-マルチターンシステムは、コンテキスト保持、対話管理、スロットフィリング、エラー処理、ナレッジベース構造化の組み合わせを使用して、ユーザーを複数ステップのタスクを通じてガイドします。
+マルチターンシステムは、コンテキスト保持、[対話管理](/ja/glossary/dialogue-management/)、[スロットフィリング](/ja/glossary/slot-filling/)、エラー処理、ナレッジベース構造化の組み合わせを使用して、ユーザーを複数ステップのタスクを通じてガイドします。
 
 ### <a name="technical-elements"></a>主要な技術要素
 
@@ -128,7 +128,7 @@ e-title: Multi-Turn Conversation
 
 - 各タスクに必要な「スロット」を定義します(例:フライト予約の目的地、日付、座席クラス)。
 - ボットは欠落しているスロットをプロンプトし、エントリを検証し、すべてが完了したら確認します。
-- 人気のフレームワーク(Dialogflow、Rasa、Lex)は、組み込みのスロットフィリングと検証を提供します。
+- 人気のフレームワーク(Dialogflow、Rasa、Lex)は、組み込みの[スロットフィリング](/ja/glossary/slot-filling/)と検証を提供します。
 
 **参考文献:**  
 [Rasa Slot Filling Docs](https://rasa.com/docs/rasa/forms/)
@@ -244,7 +244,7 @@ e-title: Multi-Turn Conversation
 | 機能                | 目的                            | 例/ソリューション                                      |
 |------------------------|------------------------------------|---------------------------------------------------------|
 | コンテキスト保持      | ステップ間でユーザー入力を記憶 | 予約中に目的地と日付を保存              |
-| 対話状態追跡| プロセス内のユーザーの位置を把握   | 「ステップ2:フライトの選択」                             |
+| [対話状態追跡](/ja/glossary/dialogue-state-tracking/)| プロセス内のユーザーの位置を把握   | 「ステップ2:フライトの選択」                             |
 | スロットフィリング           | 必要なデータを収集             | 目的地の後に帰着日を尋ねる                  |
 | 明確化プロンプト  | 欠落/曖昧な情報を処理     | 「日付を確認していただけますか?」                           |
 | コンテキスト有効期限         | タスク終了時にコンテキストをクリア      | 予約確認後にリセット                       |
@@ -267,7 +267,7 @@ e-title: Multi-Turn Conversation
 - [Sendbird: Multi-turn conversation testing framework](https://sendbird.com/blog/what-are-multi-turn-conversations/ai-agent-testing)
 
 **要点:**  
-マルチターン会話は、現実世界の複雑なタスクを処理するAIチャットボットと自動化の基盤です。コンテキストを維持し、フローを管理し、中断を処理することで、AIシステムはシームレスで人間らしい体験を提供します。効果的な実装には、慎重なフロー設計、堅牢なテスト、継続的な改善が必要であり、最新の会話型AIフレームワークとベストプラクティスによってサポートされます。
+マルチターン会話は、現実世界の複雑なタスクを処理するAIチャットボットと自動化の基盤です。コンテキストを維持し、フローを管理し、中断を処理することで、AIシステムはシームレスで人間らしい体験を提供します。効果的な実装には、慎重なフロー設計、堅牢なテスト、継続的な改善が必要であり、最新の[会話型AI](/ja/glossary/conversational-ai/)フレームワークとベストプラクティスによってサポートされます。
 
 **より深く掘り下げるには:**
 - [Microsoft Bot Builder Conversation Design Guidance](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-conversations)

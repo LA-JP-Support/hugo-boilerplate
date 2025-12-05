@@ -16,7 +16,7 @@ e-title: LangFlow
 
 LangFlowは、大規模言語モデル(LLM)、エージェント、AI自動化ワークフローを活用したアプリケーションを、コードをほとんど書かずに迅速に開発できる、オープンソースのPythonベースのビジュアルフレームワークです。[LangChain](https://www.langchain.com/)の上に構築されており、LangChainは大規模言語モデルの呼び出し、データ取得、ツール使用を連鎖させるためのモジュラーフレームワークです。
 
-- **ビジュアルファースト:** LangFlowは、各ノードがLLM、プロンプトテンプレート、埋め込みストア、カスタムツールなどのモジュラーコンポーネントを表すドラッグ&ドロップキャンバスを提供します。
+- **ビジュアルファースト:** LangFlowは、各ノードがLLM、[プロンプトテンプレート](/ja/glossary/prompt-template/)、埋め込みストア、カスタムツールなどのモジュラーコンポーネントを表すドラッグ&ドロップキャンバスを提供します。
 - **包括的なサポート:** LangFlowは、エージェント推論、RAG(検索拡張生成)、マルチエージェントオーケストレーションなどの主要なAIパラダイムをサポートしています。
 - **ロックインなし:** 特定のLLMやベクトルストアに制限されることはありません。LangFlowはモデルとデータストアに依存しません。
 - **オープンソースの拡張性:** 上級ユーザーは、カスタムPythonコンポーネントを作成したり、外部のPythonコードを直接統合したりできます。
@@ -83,7 +83,7 @@ LangFlowは、以下を含む幅広い対象者に対応しています:
 
 - **LLM:** OpenAIのGPT、MetaのLlama、Mistral、HuggingFaceホストモデルなどと統合します。
 - **プロンプトテンプレート:** 一貫したLLMインタラクションのためのプロンプトパターンを設計し、再利用します。
-- **ベクトルデータベース:** Pinecone、FAISS、Weaviate、Qdrant、Milvus、Astra DBなどのストアに接続して、セマンティック検索と検索を実現します。
+- **ベクトルデータベース:** Pinecone、FAISS、[Weaviate](/ja/glossary/weaviate/)、Qdrant、[Milvus](/ja/glossary/milvus/)、Astra DBなどのストアに接続して、セマンティック検索と検索を実現します。
 - **エージェント:** ツール使用、APIアクセス、推論、タスク管理が可能なインテリジェントで自律的なエージェントを作成します。
 - **チェーン:** 複数のコンポーネントを順次または分岐ロジックフローに結合します。
 
@@ -105,7 +105,7 @@ LangFlowは、幅広いプラグアンドプレイ接続を提供します:
 
 - **モデルプロバイダー:** OpenAI、Anthropic、HuggingFace、NVIDIA、Mistral、Groq、Perplexityなど。
 - **データソース:** Google Drive、Notion、Confluence、Github、Gmailなど、ナレッジベースの取り込みと処理用。
-- **ベクトルストア:** Pinecone、FAISS、Qdrant、Milvus、Astra DB、Vectara、Redis、MongoDBなど。
+- **ベクトルストア:** Pinecone、FAISS、Qdrant、[Milvus](/ja/glossary/milvus/)、Astra DB、Vectara、Redis、MongoDBなど。
 - **API:** 任意の外部APIをフロー内のツールとして統合します。
 - **カスタムツール:** Pythonベースのツールをインポートし、独自の要件に合わせて独自のツールを開発します。
 
@@ -179,7 +179,7 @@ LangFlowは[http://localhost:7860](http://localhost:7860)で開きます。
 
 2. **コンポーネントを追加:**  
    - LLMノード(例: OpenAI、Llama)をキャンバスにドラッグします。APIキー、モデルタイプ、パラメータを設定します。
-   - プロンプトテンプレートノードを追加します(例: "You are a helpful assistant.\nUser: {input}\nAssistant:")。
+   - [プロンプトテンプレート](/ja/glossary/prompt-template/)ノードを追加します(例: "You are a helpful assistant.\nUser: {input}\nAssistant:")。
    - チェーンまたはチャット出力ノードを追加します。
 
 3. **コンポーネントを接続:**  

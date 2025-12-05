@@ -44,8 +44,8 @@ Precision and recall are both derived from the **confusion matrix**, which summa
 
 |                       | **Predicted Positive** | **Predicted Negative** |
 |-----------------------|-----------------------|-----------------------|
-| **Actual Positive**   | True Positive (TP)    | False Negative (FN)   |
-| **Actual Negative**   | False Positive (FP)   | True Negative (TN)    |
+| **Actual Positive**   | True Positive (TP)    | [False Negative](/en/glossary/false-negative/) (FN)   |
+| **Actual Negative**   | [False Positive](/en/glossary/false-positive/) (FP)   | True Negative (TN)    |
 
 - **True Positive (TP):** Model correctly predicted a positive instance.
 - **False Positive (FP):** Model incorrectly predicted a positive (was actually negative).

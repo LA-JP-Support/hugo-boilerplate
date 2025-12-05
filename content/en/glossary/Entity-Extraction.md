@@ -12,7 +12,7 @@ draft: false
 **AI Chatbot & Automation**
 
 ## **Definition**
-**Entity extraction**, also referred to as **named entity recognition (NER)**, is a foundational technique in natural language processing (NLP) that automatically identifies and classifies key information—such as names, organizations, dates, locations, monetary values, and other predefined data types—from unstructured text. The process transforms raw text into structured data, supporting downstream analytics, automation, and decision-making.
+**Entity extraction**, also referred to as **named entity recognition (NER)**, is a foundational technique in [natural language processing (NLP)](/en/glossary/natural-language-processing--nlp-/) that automatically identifies and classifies key information—such as names, organizations, dates, locations, monetary values, and other predefined data types—from unstructured text. The process transforms raw text into structured data, supporting downstream analytics, automation, and decision-making.
 
 For example, in the sentence:
 
@@ -154,7 +154,7 @@ Evaluating NER systems requires rigorous metrics to measure performance:
 
 - **Precision:** Of the entities extracted, what proportion are correct?
 - **Recall:** Of all correct entities in the text, what proportion were extracted?
-- **F1 Score:** The harmonic mean of precision and recall, balancing the two.
+- **F1 Score:** The harmonic mean of [precision and recall](/en/glossary/precision-and-recall/), balancing the two.
 - **Entity-level vs. Token-level Evaluation:** Scoring may be done at the exact span (entity-level) or token-by-token basis.
 
 **Example:**  
@@ -203,7 +203,7 @@ Scoring must consider both correct boundary detection (e.g., “John Corncob” 
 
 ### **2. Context Dependency**
 - Entities may be referenced by pronouns or phrases across sentences (“he”, “the CEO”).
-- **Solution:** Coreference resolution and entity linking.
+- **Solution:** Coreference resolution and [entity linking](/en/glossary/entity-linking/).
 
 ### **3. Multilinguality and Informal Language**
 - Text may include slang, abbreviations, or multiple languages.
@@ -246,7 +246,7 @@ Scoring must consider both correct boundary detection (e.g., “John Corncob” 
 - **Multilingual and cross-domain support:** Modern systems handle multiple languages and specialized domains (legal, medical, financial).
 - **Integration with knowledge graphs:** Extracted entities enrich knowledge graphs, enabling semantic search, recommendations, and automation.
 - **Real-time and adaptive learning:** Systems learn dynamically from new data and user feedback, improving accuracy over time.
-- **Responsible AI:** Focus on privacy, fairness, and transparency, especially for personal or sensitive data.
+- **Responsible AI:** Focus on privacy, fairness, and [transparency](/en/glossary/transparency/), especially for personal or sensitive data.
 
 **References:**
 - [Encord: NER Trends](https://encord.com/blog/named-entity-recognition/)
@@ -275,7 +275,7 @@ Scoring must consider both correct boundary detection (e.g., “John Corncob” 
 
 ## **Glossary Summary**
 
-Entity extraction (named entity recognition, NER) systematically converts unstructured text into structured, actionable information by identifying and classifying key data points such as names, organizations, dates, and locations. This enables automation, analytics, and AI-driven decision support across industries. As NLP and AI advance, entity extraction becomes increasingly accurate, adaptable, and central to data-driven business and intelligent automation.
+Entity extraction ([named entity recognition](/en/glossary/named-entity-recognition--ner-/), NER) systematically converts unstructured text into structured, actionable information by identifying and classifying key data points such as names, organizations, dates, and locations. This enables automation, analytics, and AI-driven decision support across industries. As NLP and AI advance, entity extraction becomes increasingly accurate, adaptable, and central to data-driven business and intelligent automation.
 
 *For more in-depth technical documentation, annotation guidelines, and code samples, visit the following resources:*
 - [Encord: NER Guide](https://encord.com/blog/named-entity-recognition/)

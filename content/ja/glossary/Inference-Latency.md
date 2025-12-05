@@ -1,0 +1,286 @@
+---
+title: 推論レイテンシ
+date: 2025-11-25
+translationKey: inference-latency
+description: 推論レイテンシとは、AIモデルに入力を与えてから予測結果を得るまでの時間遅延のことです。リアルタイムAIアプリケーションにおいて重要な指標であり、応答性とユーザーエクスペリエンスに影響を与えます。
+keywords:
+- 推論レイテンシ
+- AIモデル
+- 機械学習
+- リアルタイムAI
+- モデル最適化
+category: AI Infrastructure & Deployment
+type: glossary
+draft: false
+e-title: Inference Latency
+term: すいろんレイテンシ
+---
+## 推論レイテンシとは?
+
+推論[レイテンシ](/en/glossary/latency/)とは、学習済みのAIまたは機械学習モデルに入力を与えてから予測結果を得るまでの時間遅延のことです。推論レイテンシはAI導入における重要な運用指標であり、リアルタイムアプリケーションにおける応答性とユーザー体験に直接影響します。一般的にミリ秒(ms)または秒単位で測定され、タスクや基盤インフラストラクチャによって異なります。
+
+- **簡単な定義:**  
+  AIモデルが入力を受け取ってから出力を生成するまでにかかる時間。
+
+- **例:**  
+  コンピュータビジョンを使用するモバイルアプリにおいて、画像をキャプチャしてから検出されたオブジェクトラベルが表示されるまでの遅延が推論レイテンシです。
+
+> 参考資料:  
+> - [Ultralytics: Inference Latency - Definition & Importance](https://www.ultralytics.com/glossary/inference-latency)  
+> - [Roboflow: What Is Inference Latency?](https://blog.roboflow.com/inference-latency/)  
+> - [Mirantis: Understanding Machine Learning Inference](https://www.mirantis.com/blog/understanding-machine-learning-inference-a-guide/)
+
+## 推論レイテンシの文脈:学習と推論の比較
+
+学習と推論の違いを理解することは、レイテンシを理解する上で基本となります:
+
+| **段階**    | **目的**                 | **プロセス**                | **データ**                   | **主要指標**             |
+|--------------|------------------------------|----------------------------|----------------------------|----------------------------|
+| 学習     | 新しいモデルの構築               | 反復的な最適化     | ラベル付き履歴データ   | 精度、損失             |
+| ファインチューニング  | 事前学習済みモデルの適応       | ターゲットデータでの調整      | タスク固有のラベル付きデータ | 効率性、適応性     |
+| 推論    | 新しいデータへのモデル適用       | フォワードパス(予測)  | ラベルなしの実世界データ | **レイテンシ、コスト、精度**|
+
+- 学習には特徴選択、データ処理、モデル最適化が含まれます。計算集約的であり、オフラインまたはバッチモードで実行できます。
+- 推論は、学習済みモデルを新しい未知のデータに適用して予測を行うプロセスです。本番環境では、推論はユーザーとビジネスのニーズを満たすために高速でスケーラブル、かつコスト効率的である必要があります。
+
+> 詳細:  
+> - [Edgecore: AI Inference vs. Training](https://edgecore.com/ai-inference-vs-training/)  
+> - [io.net: AI Training vs Inference](https://io.net/blog/ai-training-vs-inference)  
+> - [Nebius: Difference between AI Training and Inference](https://nebius.com/blog/posts/difference-between-ai-training-and-inference)
+
+## 推論レイテンシパイプライン:時間が費やされる場所
+
+推論レイテンシは、予測パイプライン全体を通じた遅延の合計です。主なパイプライン段階は以下の通りです:
+
+1. **データ収集**  
+   データはAPI、センサー、ユーザーインタラクション、またはログから到着します。高速で多様な形式のデータキャプチャが一般的です。  
+   - 例:通信事業者が異常検知のために毎秒数百万のネットワークログを収集。
+
+2. **データ前処理**  
+   データをクリーニング、正規化し、モデルの要件に合わせてフォーマットします。  
+   - タスク:値のスケーリング、カテゴリ特徴のエンコーディング、欠損データの処理。  
+   - 例:銀行業務におけるトランザクションのタイムスタンプと通貨形式の正規化。
+
+3. **特徴エンジニアリング**  
+   生データをモデルのパフォーマンスを向上させる特徴に変換します。  
+   - 例:購入サイズの集約、時間ベースの特徴抽出。
+
+4. **入力処理**  
+   生の入力をモデル用に準備します。  
+   - 例:画像のデコード、リサイズ、正規化、テキストのトークン化、テンソル変換。
+
+5. **データ転送**  
+   データをモデルの実行環境(CPU、GPU、クラウド、エッジデバイス)に移動します。  
+   - ネットワークレイテンシとメモリコピーは、特にクラウド環境では重要になる可能性があります。
+
+6. **モデルロード**  
+   学習済みモデルの重みとパラメータをメモリにロードします。
+
+7. **モデル実行(推論)**  
+   ニューラルネットワークを通じたフォワードパス。  
+   - 主要因子:モデルサイズ、アーキテクチャ、バッチサイズ、精度、ハードウェア。
+
+8. **後処理**  
+   生のモデル出力をユーザーが利用可能な予測に変換します。  
+   - 例:物体検出における非最大値抑制(NMS)、ラベルマッピング、アップサンプリング。
+
+9. **システムオーバーヘッド**  
+   OS、ドライバー、フレームワークのオーバーヘッド(スレッドスケジューリング、ランタイム初期化)。
+
+> 包括的な内訳については:  
+> - [Mirantis: ML Inference Pipeline](https://www.mirantis.com/blog/understanding-machine-learning-inference-a-guide/)  
+> - [Roboflow: Inference Latency Pipeline](https://blog.roboflow.com/inference-latency/)  
+> - [Prodia: Master Deployment Strategy for Inference Pipelines](https://blog.prodia.com/post/master-deployment-strategy-for-inference-pipelines-a-guide)
+
+## レイテンシの種類と原因
+
+### 予測可能なレイテンシと予測不可能なレイテンシ
+
+- **予測可能:**  
+  計算、入力サイズ、ハードウェアスループットによって決定されます。
+- **予測不可能:**  
+  ネットワーク遅延、キャッシュミス、OS割り込み、または同時実行ワークロードによるものです。
+
+### ヘッド、平均、テールレイテンシ
+
+| **指標**      | **定義**                                       | **関連性**                | **例**                                  |
+|-----------------|------------------------------------------------------|------------------------------|-----------------------------------------------|
+| ヘッドレイテンシ    | 観測された最小遅延(ベストケース)                   | ベースライン能力          | バッチ内で最も速く処理された画像            |
+| 平均レイテンシ | すべてのリクエストにわたる平均遅延                       | 一般的なシステムパフォーマンス   | 10,000リクエストにわたる典型的な応答時間    |
+| テールレイテンシ    | 95パーセンタイル/99パーセンタイル(最も遅い応答)             | ユーザー体験、信頼性 | チャット応答の最も遅い1%                  |
+
+- **テールレイテンシ**は、分散システムやリアルタイムシステムにおいて特に重要です。外れ値がユーザー体験や全体的なスループットを低下させる可能性があります。[AWS: Latency in LLM Applications](https://aws.amazon.com/blogs/machine-learning/optimizing-ai-responsiveness-a-practical-guide-to-amazon-bedrock-latency-optimized-inference/)を参照してください。
+
+### レイテンシの主な原因
+
+- モデルの複雑さとアーキテクチャ。
+- 入力データのサイズと形式。
+- ハードウェア速度とリソース競合。
+- ネットワーク転送時間(クラウド、分散推論)。
+- システム負荷とバックグラウンドプロセス。
+- フレームワークオーバーヘッド(例:TensorFlow、ONNX Runtime)。
+
+## 推論レイテンシに影響を与える要因
+
+- **モデルアーキテクチャ:** 軽量なアーキテクチャ(MobileNet、EfficientNet)は、深く複雑なもの(ResNet、GPT)よりも高速です。
+- **モデルサイズと複雑さ:** パラメータが多いほど計算要件が増加します。
+- **ハードウェアアクセラレーション:**  
+  - **CPU:** 汎用、ディープラーニングには遅い。  
+  - **GPU:** 高い並列性、大規模モデルとバッチに最適。  
+  - **TPU:** ディープラーニング専用。  
+  - **NPU:** 低消費電力、エッジ/モバイル向けに最適化。
+- **ソフトウェアとランタイム:**  
+  - 最適化されたエンジン(TensorRT、ONNX Runtime、TensorFlow Lite)はレイテンシを大幅に削減できます。
+- **精度:** 精度を下げる(FP32 → FP16 → INT8)ことで、精度の損失をほとんど伴わずに計算時間を削減できます。
+- **バッチサイズ:**  
+  - バッチ=1はレイテンシを最小化(リアルタイム)、大きなバッチはスループットを向上させますが、入力あたりのレイテンシが増加します。
+- **入力解像度:** 高解像度は処理時間を増加させます。
+- **後処理の複雑さ:** NMS、クラスタリング、アップサンプリングなどの操作はレイテンシを追加します。
+- **ネットワーク転送:** クラウドベースの推論はネットワークラウンドトリップを追加します。
+
+> パフォーマンスチューニングの詳細:  
+> - [NVIDIA: Think SMART for AI Inference Performance](https://blogs.nvidia.com/blog/think-smart-optimize-ai-factory-inference-performance/)  
+> - [AWS: Practical Guide to Bedrock Latency-Optimized Inference](https://aws.amazon.com/blogs/machine-learning/optimizing-ai-responsiveness-a-practical-guide-to-amazon-bedrock-latency-optimized-inference/)
+
+## 実世界の例とユースケース
+
+- **自動運転車:**  
+  - 物体/歩行者検出において、安全性のために100ms未満のレイテンシが不可欠です([Roboflow: Autonomous Vehicle Object Detection](https://blog.roboflow.com/autonomous-vehicle-object-detection/))。
+- **産業オートメーション:**  
+  - コンベアベルト上のリアルタイム欠陥検出、遅延検出は不良品のリリースリスクがあります。
+- **安全監視:**  
+  - 制限区域内の人員に対する即座のアラート。
+- **会話型AI(チャットボット、音声アシスタント):**  
+  - 500ms以上のレイテンシは知覚される知能と使いやすさを低下させます。
+- **金融サービス:**  
+  - 不正検出は、不正なトランザクションの承認を避けるためにミリ秒以内に行われる必要があります。
+- **ライブ翻訳とビデオ分析:**  
+  - シームレスな体験のために1秒未満のレイテンシが必要です。
+
+> 例:  
+> ライブスポーツ分析では、各ビデオフレーム(例:30fps)をリアルタイムのプレイに追いつくために33ms未満で処理する必要があります([Roboflow: Inference Latency](https://blog.roboflow.com/inference-latency/))。
+
+## 推論レイテンシの測定と評価
+
+### コアレイテンシ指標
+
+- **レイテンシ(ms):** 予測あたりの時間(エンドツーエンドまたはパイプライン段階ごと)。
+- **スループット(req/sec、tokens/sec):** 毎秒の予測数。
+- **テールレイテンシ(P95、P99):** 95パーセンタイル/99パーセンタイルのレイテンシ(SLAに重要)。
+- **Time to First Token(TTFT):** LLMにおける最初の応答までの時間。
+- **Output Tokens Per Second(OTPS):** LLMにおけるトークン生成速度。
+- **推論あたりのコスト:** 予測あたりの運用コスト。
+
+### ツールとフレームワーク
+
+- [NVIDIA Triton Inference Server](https://developer.nvidia.com/nvidia-triton-inference-server)
+- [ONNX Runtime Profiling](https://onnxruntime.ai/docs/performance/profiling/)
+- [TensorFlow Profiler](https://www.tensorflow.org/guide/profiler)
+- [vLLM Benchmarking Guide](https://medium.com/@kimdoil1211/benchmarking-vllm-inference-performance-measuring-latency-throughput-and-more-1dba830c5444)
+
+### ベストプラクティス
+
+- 現実的なワークロードと入力データを使用して、平均とテールレイテンシの両方を測定します。
+- ボトルネックを特定するために各パイプライン段階をプロファイルします。
+- 代表的なバッチサイズとデプロイメントハードウェアでベンチマークを実施します。
+
+> 測定の詳細:  
+> - [AWS: Metrics for LLM Latency](https://aws.amazon.com/blogs/machine-learning/optimizing-ai-responsiveness-a-practical-guide-to-amazon-bedrock-latency-optimized-inference/)  
+> - [NVIDIA: Inference Performance Optimization](https://blogs.nvidia.com/blog/think-smart-optimize-ai-factory-inference-performance/)
+
+## レイテンシを削減する最適化戦略
+
+### モデルレベル
+
+- **プルーニング:** 不要なモデル重みを削除し、サイズと計算を削減します。
+- **量子化:** 重み/活性化を低精度(例:INT8)に変換し、高速な計算と小さなメモリフットプリントを実現します。
+- **知識蒸留:** 大規模な「教師」モデルから小規模で高速な「生徒」モデルに知識を転送します。
+- **効率的なアーキテクチャの選択:** 速度のために設計されたモデル(MobileNet、EfficientNet、YOLO-NAS)を使用します。
+
+### システムレベル
+
+- **ハードウェアアクセラレーション:** 推論用に最適化されたGPU、TPU、NPU、またはFPGAにデプロイします。
+- **精度チューニング:** 必要な精度を維持する最低精度を使用します。
+- **動的バッチング:** スループットを向上させますが、リクエストあたりのレイテンシに注意してください。
+- **最適化された推論エンジン:**  
+  - [NVIDIA TensorRT](https://developer.nvidia.com/blog/optimize-ai-inference-performance-with-nvidia-full-stack-solutions/)  
+  - [ONNX Runtime](https://blog.roboflow.com/what-is-onnx/)  
+  - [TensorFlow Lite](https://blog.roboflow.com/what-is-tensorflow-lite/)
+- **パイプラインの合理化:** 入力と出力の間の不要なステップを最小化します。
+- **ネットワークプロトコルの最適化:** 高速プロトコル(UDP、gRPC)を使用し、ラウンドトリップを最小化します。
+
+### デプロイメントレベル
+
+- **エッジデプロイメント:** ネットワークレイテンシを回避するためにローカルで推論を実行します([Roboflow Inference](https://inference.roboflow.com/))。
+- **コンテナ化:** 軽量で再現可能な環境がオーバーヘッドを削減します。
+- **負荷分散:** ボトルネックを回避するためにリクエストを均等に分散します。
+
+> 詳細ガイド:  
+> - [Prodia: Inference Pipeline Deployment Strategies](https://blog.prodia.com/post/master-deployment-strategy-for-inference-pipelines-a-guide)  
+> - [NVIDIA: Think SMART](https://blogs.nvidia.com/blog/think-smart-optimize-ai-factory-inference-performance/)  
+> - [Roboflow: Model Optimization](https://blog.roboflow.com/inference-latency/)
+
+## デプロイメントシナリオとハードウェアの考慮事項
+
+| **シナリオ**       | **場所**         | **予想レイテンシ** | **ユースケース**                          | **ハードウェア**                |
+|--------------------|---------------------|---------------------|----------------------------------------|-----------------------------|
+| クラウド推論    | リモートデータセンター  | 高(ネットワークRTT)  | バッチジョブ、LLM、分析            | GPU、TPU、FPGA              |
+| リアルタイムクラウド    | リモートデータセンター  | 中程度            | チャットボット、ライブ翻訳             | GPU、TPU                    |
+| エッジ推論     | デバイス上/ローカル     | 低                 | カメラ、自動運転車           | NPU、組み込みGPU、FPGA     |
+| ハイブリッド             | エッジ + クラウド        | 可変            | エッジで重要なタスクを分割、残りはクラウド | 上記すべて               |
+| オンプレミス        | ローカルサーバー        | 中程度から低     | セキュア/規制環境         | GPU、FPGA、CPU              |
+
+- **GPU:** 並列ワークロードに最適、高スループット。
+- **TPU:** ディープラーニング用のカスタムASIC、サポートされているモデルに優れています。
+- **FPGA:** カスタマイズ可能、低レイテンシ、エッジ向けにエネルギー効率的。
+- **NPU:** モバイル/エッジでの低消費電力、高速推論に特化。
+- **CPU:** 柔軟ですが、ディープラーニングには最も遅い。
+
+> - [Roboflow: AI Hardware Accelerators](https://roboflow.com/hardware?ref=blog.roboflow.com)
+> - [NVIDIA: AI Inference Glossary](https://www.nvidia.com/en-us/glossary/ai-inference/)
+
+## トレードオフ:レイテンシ、スループット、コスト
+
+- **レイテンシ対スループット:**  
+  - バッチ=1はレイテンシを最小化(リアルタイム)、大きなバッチはスループットを向上させますが、入力あたりのレイテンシが増加します。
+- **レイテンシ対精度:**  
+  - より重く、より正確なモデルは遅い、プルーニング/量子化は軽微な精度コストでレイテンシを削減できます。
+- **レイテンシ対コスト:**  
+  - 低レイテンシには、より多くのハードウェア/オーバープロビジョニングが必要になることが多く、運用コストが増加します。
+- **テール対平均レイテンシ:**  
+  - 平均レイテンシのみに焦点を当てると、ユーザー体験と信頼性に影響を与える稀だが深刻な外れ値を隠す可能性があります。
+
+| **指標**        | **使用法**                  |
+|-------------------|---------------------------|
+| レイテンシ(ms)      | 推論あたりの応答    |
+| スループット        | リクエスト/トークン毎秒   |
+| 推論あたりのコスト| 運用コスト       |
+| 精度          | 予測品質        |
+
+> 例:翻訳レイテンシを200ms未満に削減すると、インフラストラクチャコストが2倍になる可能性がありますが、スムーズで同期的なインタラクションには必要です([NVIDIA: Think SMART](https://blogs.nvidia.com/blog/think-smart-optimize-ai-factory-inference-performance/))。
+
+## 課題と制限
+
+- **モデルの互換性:** すべてのモデルがすべてのハードウェアまたは推論エンジンに移植可能ではありません。
+- **インフラストラクチャコスト:** 高性能で低レイテンシのシステムには大きな投資が必要です。
+- **消費電力:** エッジおよびモバイルデバイスにとって重要です。
+- **スケーラビリティ:** モデルの成長とユーザー需要は、インフラストラクチャが適切にスケールしない限り、レイテンシを増加させる可能性があります。
+- **リソース利用:** テールレイテンシを満たすためのオーバープロビジョニングはリソースを浪費する可能性があります。
+- **相互運用性:** アクセラレータ(FPGA、NPU)をフレームワークと統合すると、複雑さと追加のレイテンシが発生する可能性があります。
+
+## FAQ:推論レイテンシ
+
+**Q:AIにおける推論レイテンシとは何ですか?**  
+A:学習済みAIモデルに入力データを提供してから予測を受け取るまでの時間遅延です。
+
+**Q:低い推論レイテンシが重要なのはなぜですか?**  
+A:リアルタイムの応答性、スムーズなユーザー体験、重要なシステムにおける安全性を可能にします。
+
+**Q:推論レイテンシに影響を与える要因は何ですか?**  
+A:モデルアーキテクチャ、ハードウェア、入力サイズ、バッチサイズ、ランタイム最適化、ネットワーク転送、後処理です。
+
+**Q:推論レイテンシを削減するにはどうすればよいですか?**  
+A:モデルプルーニング、量子化、効率的なアーキテクチャ、ハードウェアアクセラレーション、バッチング、推論エンジンの最適化を通じて削減できます。
+
+**Q:テールレイテンシとは何ですか?**  
+A:高パーセンタイル(例:95パーセンタイル、99パーセンタイル)のレイテンシで、最も遅い応答を表します。ユーザー体験とシステム信頼性に重要です。

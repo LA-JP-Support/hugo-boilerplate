@@ -246,7 +246,7 @@ Advanced cron features enable highly flexible schedules:
 - **Minimum Interval:** Classic cron’s minimum interval is one minute.
 - **Missed Runs:** Missed jobs (system down, busy) are not auto-executed; no built-in retry.
 - **Notification:** No built-in notification for failures (unless configured via log/email).
-- **Environment:** Cron jobs run in a minimal environment—environment variables like `PATH` may differ from your terminal session.
+- **Environment:** Cron jobs run in a minimal environment—[environment variables](/en/glossary/environment-variables--secrets-/) like `PATH` may differ from your terminal session.
 - **Permissions:** Only authorized users can set/edit cron jobs. System-wide jobs require root.
 
 See: [Cronitor: Cron vs. Alternatives](https://cronitor.io/docs/cron-reference)

@@ -34,7 +34,7 @@ AI chatbots and virtual assistants simulate human conversation by tracking ongoi
 - **Embedding Search:**  
   For information retrieval, chatbots may use embeddings—numerical representations of text—to connect user queries with knowledge base segments. This allows the bot to shift topics fluidly and retrieve information even after abrupt switches ([OpenAI Community](https://community.openai.com/t/dealing-with-context-switching-in-a-conversation-that-uses-embeddings-for-information-retrieval/87836)).
 - **Intent Detection:**  
-  Natural Language Processing (NLP) models analyze user input for signals such as keywords, phrasing ("new question", "back to..."), and context cues to identify topic changes ([Milvus](https://milvus.io/ai-quick-reference/how-do-llms-handle-context-switching-in-conversations)).
+  [Natural Language Processing (NLP)](/en/glossary/natural-language-processing--nlp-/) models analyze user input for signals such as keywords, phrasing ("new question", "back to..."), and context cues to identify topic changes ([Milvus](https://milvus.io/ai-quick-reference/how-do-llms-handle-context-switching-in-conversations)).
 
 ### Practical Example
 
@@ -198,7 +198,7 @@ Group similar tasks together to minimize context switches.
 Assess urgency, value, and impact before switching tasks.
 
 **6. Clear Communication**  
-Inform colleagues when you can’t switch tasks immediately. Use status indicators or quick replies.
+Inform colleagues when you can’t switch tasks immediately. Use status indicators or [quick replies](/en/glossary/quick-replies/).
 
 
 ## Best Practices Checklist

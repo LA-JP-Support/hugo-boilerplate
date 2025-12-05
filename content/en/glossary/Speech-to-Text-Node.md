@@ -10,7 +10,7 @@ draft: false
 ---
 ## Overview
 
-A **Speech-to-Text Node** forms the foundation of conversational AI, automation pipelines, and workflow systems by converting spoken language in audio files (voice recordings, calls, or video soundtracks) into accurate, structured text. This transcription can then be analyzed, summarized, translated, or used to trigger further automated processes.
+A **Speech-to-Text Node** forms the foundation of [conversational AI](/en/glossary/conversational-ai/), automation pipelines, and workflow systems by converting spoken language in audio files (voice recordings, calls, or video soundtracks) into accurate, structured text. This transcription can then be analyzed, summarized, translated, or used to trigger further automated processes.
 
 **Typical Workflow:**
 1. Receives audio input (as a file upload, URL, or variable in the workflow).
@@ -167,7 +167,7 @@ A **Speech-to-Text Node** forms the foundation of conversational AI, automation 
 }
 ```
 
-- **Rev AI:** Offers insights such as sentiment analysis, topic extraction, summarization, and forced alignment ([Rev AI Features](https://www.rev.ai/)).
+- **Rev AI:** Offers insights such as [sentiment analysis](/en/glossary/sentiment-analysis/), topic extraction, summarization, and forced alignment ([Rev AI Features](https://www.rev.ai/)).
 
 ## Common Use Cases
 

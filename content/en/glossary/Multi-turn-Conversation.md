@@ -11,7 +11,7 @@ draft: false
 ---
 ## 1. Definition: What Is a Multi-Turn Conversation?
 
-A **multi-turn conversation** is a dialog between a user and an AI system, such as a chatbot or virtual assistant, where the interaction consists of multiple exchanges or "turns". Each turn is a pair of user input and system response. Multi-turn conversations allow the AI to handle scenarios where information must be collected or clarified across several steps to achieve a goal (e.g., booking travel, troubleshooting, or onboarding). Unlike single-turn interactions, the system must remember and use information from previous turns, manage conversational state, and adapt to ambiguity or interruptions.
+A **multi-turn conversation** is a dialog between a user and an AI system, such as a chatbot or [virtual assistant](/en/glossary/virtual-assistant/), where the interaction consists of multiple exchanges or "turns". Each turn is a pair of user input and system response. Multi-turn conversations allow the AI to handle scenarios where information must be collected or clarified across several steps to achieve a goal (e.g., booking travel, troubleshooting, or onboarding). Unlike single-turn interactions, the system must remember and use information from previous turns, manage conversational state, and adapt to ambiguity or interruptions.
 
 **References:**
 - [Microsoft Learn - Multi-turn conversations](https://learn.microsoft.com/en-us/azure/ai-services/qnamaker/how-to/multi-turn)
@@ -40,7 +40,7 @@ Multi-turn conversations are required for realistic, helpful, and human-like aut
 <a name="how-it-works"></a>
 ## 3. How Multi-Turn Conversations Work
 
-Multi-turn systems use a combination of context retention, dialogue management, slot filling, error handling, and knowledge base structuring to guide users through multi-step tasks.
+Multi-turn systems use a combination of context retention, [dialogue management](/en/glossary/dialogue-management/), slot filling, error handling, and knowledge base structuring to guide users through multi-step tasks.
 
 ### <a name="technical-elements"></a>Key Technical Elements
 
@@ -115,7 +115,7 @@ Bot: Done. The dish soap order is canceled, and your money was refunded.
 
 ### <a name="dialogue-management"></a>Dialogue & State Management
 
-- Use a state machine, flowchart, or story-based system to track the user's position in the conversation and trigger relevant prompts.
+- Use a [state machine](/en/glossary/state-machine/), flowchart, or story-based system to track the user's position in the conversation and trigger relevant prompts.
 - Supports non-linear flows: users may ask clarifying questions, change their mind, or interject new requests.
 
 **Reference:**  
@@ -241,7 +241,7 @@ To deliver robust, user-friendly multi-turn experiences:
 | Feature                | Purpose                            | Example / Solution                                      |
 |------------------------|------------------------------------|---------------------------------------------------------|
 | Context Retention      | Remembers user inputs across steps | Stores destination and date during booking              |
-| Dialogue State Tracking| Knows user’s position in process   | “Step 2: Choosing a flight”                             |
+| [Dialogue State Tracking](/en/glossary/dialogue-state-tracking/)| Knows user’s position in process   | “Step 2: Choosing a flight”                             |
 | Slot Filling           | Collects required data             | Asks for return date after destination                  |
 | Clarification Prompts  | Handles missing/ambiguous info     | “Could you confirm the date?”                           |
 | Context Expiry         | Clears context when task ends      | Resets after booking confirmation                       |
@@ -264,7 +264,7 @@ To deliver robust, user-friendly multi-turn experiences:
 - [Sendbird: Multi-turn conversation testing framework](https://sendbird.com/blog/what-are-multi-turn-conversations/ai-agent-testing)
 
 **Takeaway:**  
-Multi-turn conversation is foundational for AI chatbots and automation handling real-world, complex tasks. By maintaining context, managing flows, and handling interruptions, AI systems deliver seamless, human-like experiences. Effective implementation requires careful flow design, robust testing, and continuous improvement, supported by modern conversational AI frameworks and best practices.
+Multi-turn conversation is foundational for AI chatbots and automation handling real-world, complex tasks. By maintaining context, managing flows, and handling interruptions, AI systems deliver seamless, human-like experiences. Effective implementation requires careful flow design, robust testing, and continuous improvement, supported by modern [conversational AI](/en/glossary/conversational-ai/) frameworks and best practices.
 
 **For a deeper dive:**
 - [Microsoft Bot Builder Conversation Design Guidance](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-conversations)

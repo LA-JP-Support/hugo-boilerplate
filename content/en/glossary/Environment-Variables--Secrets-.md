@@ -16,7 +16,7 @@ Environment variables are named, externally-defined key-value pairs that provide
 
 - **Analogy:** The value of an environment variable acts as a placeholder in your code. For example, instead of writing `API_KEY = "secret123"`, you reference `API_KEY`, which is only defined at runtime in the execution environment.
 - **Security Context:** Storing secrets in environment variables minimizes the risk of accidental exposure through code leaks, Git repository access, or logs. Sensitive values are injected at runtime and not stored in visual interfaces or configuration files unless specifically required.
-- **Secret Types:** Database passwords, API tokens, OAuth credentials, cryptographic keys, feature flags, and more.
+- **Secret Types:** Database passwords, API tokens, OAuth credentials, cryptographic keys, [feature flags](/en/glossary/feature-flags/), and more.
 
 **See:**  
 - [OWASP Secrets Management Cheat Sheet—Intro and General Concepts](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#1-introduction)  

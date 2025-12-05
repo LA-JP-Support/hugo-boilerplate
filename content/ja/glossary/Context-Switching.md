@@ -26,7 +26,7 @@ e-title: Context Switching
 
 ## AIチャットボットと自動化におけるコンテキストスイッチングの仕組み
 
-AIチャットボットやバーチャルアシスタントは、進行中の「コンテキスト」—トピック、意図、ユーザーとシステム入力間の関係の履歴—を追跡することで人間の会話をシミュレートします。
+AIチャットボットや[バーチャルアシスタント](/ja/glossary/virtual-assistant/)は、進行中の「コンテキスト」—トピック、意図、ユーザーとシステム入力間の関係の履歴—を追跡することで人間の会話をシミュレートします。
 
 ### 技術的メカニズム
 
@@ -37,7 +37,7 @@ AIチャットボットやバーチャルアシスタントは、進行中の「
 - **埋め込み検索：**  
   情報検索のために、チャットボットはテキストの数値表現である埋め込みを使用して、ユーザークエリとナレッジベースのセグメントを接続することがあります。これにより、ボットは突然の切り替え後でもトピックを流動的に変更し、情報を取得できます（[OpenAIコミュニティ](https://community.openai.com/t/dealing-with-context-switching-in-a-conversation-that-uses-embeddings-for-information-retrieval/87836)）。
 - **意図検出：**  
-  自然言語処理（NLP）モデルは、キーワード、フレーズ（「新しい質問」、「戻って...」）、コンテキスト手がかりなどの信号をユーザー入力から分析して、トピックの変更を識別します（[Milvus](https://milvus.io/ai-quick-reference/how-do-llms-handle-context-switching-in-conversations)）。
+  [自然言語処理（NLP）](/ja/glossary/natural-language-processing--nlp-/)モデルは、キーワード、フレーズ（「新しい質問」、「戻って...」）、コンテキスト手がかりなどの信号をユーザー入力から分析して、トピックの変更を識別します（[Milvus](https://milvus.io/ai-quick-reference/how-do-llms-handle-context-switching-in-conversations)）。
 
 ### 実用的な例
 

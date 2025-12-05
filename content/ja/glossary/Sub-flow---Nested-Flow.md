@@ -69,7 +69,7 @@ e-title: Sub-flow / Nested Flow
   [Workflow Studio ドキュメント](https://docs.servicenow.com/csh?version=latest&topicname=workflow-studio)
 
 - **AWS Step Functions:**  
-  親ステートマシンが子(ネストされた)ワークフローをオーケストレーションし、複雑な階層とドメイン分離をサポートします。  
+  親[ステートマシン](/ja/glossary/state-machine/)が子(ネストされた)ワークフローをオーケストレーションし、複雑な階層とドメイン分離をサポートします。  
   [AWS Step Functions ドキュメント](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-nested-workflows.html)
 
 ## 親ワークフロー vs. サブフロー: 主要な用語
@@ -217,7 +217,7 @@ A: はい、複雑な階層をサポートします。
 ## トラブルシューティングとヒント
 
 - **サブフローが予期せず失敗する:** 入力データとパラメータを確認し、エラー処理を見直します。
-- **並列サブフローがパフォーマンスを低下させる:** リソース使用状況を監視し、必要に応じてバッチ処理またはスロットリングを行います。
+- **並列サブフローがパフォーマンスを低下させる:** リソース使用状況を監視し、必要に応じて[バッチ処理](/ja/glossary/batch-processing/)またはスロットリングを行います。
 - **結果マッピングが不明確:** 出力を明示的に文書化し、スキーマを使用します。
 - **バージョニングの問題:** バージョン管理を実装し、破壊的変更を慎重に管理します。
 

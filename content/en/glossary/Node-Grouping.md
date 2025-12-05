@@ -21,7 +21,7 @@ Node grouping is the practice of visually or logically clustering related nodesâ
 | Grouping Nodes| The act/process of assigning nodes into collective groups for easier management or analysis.                   | AI Chatbot, Network Management   |
 | Group Nodes   | Nodes that are members of an explicitly defined group, often sharing properties/roles.                         | AI/Automation/Workflow Design    |
 | Task Grouping | Grouping related tasks/nodes representing tasks within a workflow/dialog system for manageability.             | Workflow Automation              |
-| Dialog Task   | A logical conversational or action unit in chatbots, often built from grouped nodes for function separation.   | Conversational AI                |
+| Dialog Task   | A logical conversational or action unit in chatbots, often built from grouped nodes for function separation.   | [Conversational AI](/en/glossary/conversational-ai/)                |
 
 ## What is Node Grouping?
 
@@ -210,7 +210,7 @@ Below are platform-specific instructions, technical details, and best practices 
 | **Industry/Domain**       | **Node Grouping Purpose**             | **Example**                                                |
 |---------------------------|---------------------------------------|------------------------------------------------------------|
 | Conversational AI         | Dialog segmentation                   | Kore.ai dialog task groups                                 |
-| HPC / Cloud Computing     | Resource allocation & monitoring      | Microsoft HPC node groups                                  |
+| HPC / [Cloud Computing](/en/glossary/cloud-computing/)     | Resource allocation & monitoring      | Microsoft HPC node groups                                  |
 | Social Network Analysis   | Community detection                   | Louvain clusters in R/Visone                               |
 | Data Engineering          | Workflow modularization               | Grouped ETL pipeline tasks in Node-RED                     |
 | Machine Learning          | Model modularity                      | Grouped layers in neural architectures                     |

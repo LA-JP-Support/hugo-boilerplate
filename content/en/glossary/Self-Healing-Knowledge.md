@@ -106,7 +106,7 @@ Purpose: Improve detection and correction models over time.
 
 - **Web Crawlers/Bots**: Continuously scan repositories for broken links or outdated references.
 - **API Integrations**: Connect to external feeds (e.g., product release notes, regulatory changelogs) to trigger updates.
-- **Workflow Engines**: Orchestrate multi-step remediation processes, including automated patching, human-in-the-loop validation, and audit logging.
+- **Workflow Engines**: Orchestrate multi-step remediation processes, including automated patching, [human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/) validation, and audit logging.
 - **Knowledge Graphs**: Structured, machine-readable representations of organizational knowledge, providing context and relationships for more accurate AI-driven actions ([Vitria](https://vitria.com/blog/aiknowledge-a-better-foundation-for-self-healing-networks/)).
 
 ## Industry Applications & Use Cases
@@ -161,7 +161,7 @@ Purpose: Improve detection and correction models over time.
 - **Prioritize High-Value Content**: Start with critical/high-traffic documentation or workflows.
 - **Leverage Semantic Metadata**: Use structured metadata and semantic HTML for more effective AI analysis.
 - **Integrate with Source-of-Truth Systems**: Sync knowledge bases with product release feeds, regulatory databases, and authoritative sources.
-- **Monitor and Log All Changes**: Maintain detailed audit trails for all AI-suggested or applied updates for compliance and transparency.
+- **Monitor and Log All Changes**: Maintain detailed audit trails for all AI-suggested or applied updates for compliance and [transparency](/en/glossary/transparency/).
 - **Human-in-the-Loop Validation**: Route sensitive or ambiguous cases to subject matter experts or content owners.
 - **Iterate Through Feedback**: Regularly review system performance, tuning learning algorithms to minimize false positives/negatives.
 - **Document Healing Decisions**: Build a “healing playbook” for transparency and continuous improvement.

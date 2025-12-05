@@ -314,7 +314,7 @@ A: 絶対的な一貫性を必要とする大量の専門的なタスクの場�
 - [What is Parsing? | Xcitium](https://www.xcitium.com/blog/news/what-is-parsing/)
 - [LangChain Output Parsers - GeeksforGeeks](https://www.geeksforgeeks.org/artificial-intelligence/output-parsers-in-langchain/)
 
-**関連用語:** 出力パーサー、プロンプトエンジニアリング、構造化データ、パーサー jsonoutputparser、関数/ツール呼び出し、ファインチューニング、コンテンツアップロード、プロンプトテンプレート、機械学習、構造化出力、スキーマ強制
+**関連用語:** 出力パーサー、プロンプトエンジニアリング、構造化データ、パーサー jsonoutputparser、関数/ツール呼び出し、ファインチューニング、コンテンツアップロード、[プロンプトテンプレート](/ja/glossary/prompt-template/)、機械学習、構造化出力、スキーマ強制
 
 **ヒント:**  
 常にプロンプトに明示的なフォーマット指示を含め、下流での使用前にパーサーで出力を検証してください。

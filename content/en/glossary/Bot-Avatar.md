@@ -14,7 +14,7 @@ A **[bot avatar](/en/glossary/bot-avatar/)** is the icon, image, or animated cha
 
 The most advanced [bot avatars](/en/glossary/bot-avatar/) are interactive digital characters—sometimes modeled after real people or brand mascots—capable of expressing emotions, performing gestures, and even mimicking human speech and lip movement. According to Akool, the best AI chatbots use an avatar (digital character, sometimes based on a real person) to interact with users through text, audio, and video channels, driving personalized and human-like engagement ([Akool](https://akool.com/blog-posts/ai-chatbot-avatar)). 
 
-D-ID explains that AI avatar chatbots combine conversational AI with animated digital avatars, enabling both voice and text interaction through a visually engaging interface. These avatars can act as digital humans or be abstract, and are widely used in advanced customer service, onboarding, virtual sales, and online learning ([D-ID](https://www.d-id.com/resources/glossary/ai-avatar-chatbot/)).
+D-ID explains that AI avatar chatbots combine [conversational AI](/en/glossary/conversational-ai/) with animated digital avatars, enabling both voice and text interaction through a visually engaging interface. These avatars can act as digital humans or be abstract, and are widely used in advanced customer service, onboarding, virtual sales, and online learning ([D-ID](https://www.d-id.com/resources/glossary/ai-avatar-chatbot/)).
 
 [Bot avatars](/en/glossary/bot-avatar/) can appear as:
 - Stylized human faces or digital humans

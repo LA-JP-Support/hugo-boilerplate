@@ -14,13 +14,13 @@ draft: false
 
 **Sandbox Mode** is an isolated, disposable testing environment used to execute flows, automations, software, or untrusted code with zero impact on production systems or live data. It acts as a digital playground for innovation, debugging, security analysis, and validation—enabling safe experimentation away from operational assets. The sandbox concept originated with the need to safely run untrusted code or software, allowing researchers, developers, and security analysts to observe, analyze, and iterate without risk of damaging core infrastructure or exposing sensitive data ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [TestGrid](https://testgrid.io/blog/sandbox-environment-for-testing/), [Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing)).
 
-A sandbox provides a tightly controlled and isolated environment—often achieved through virtualization or containerization—so that whatever is executed inside cannot escape its boundaries, propagate errors, or leak information. This strict separation is critical for modern workflows in AI/ML, automation, cybersecurity, and software development.
+A sandbox provides a tightly controlled and isolated environment—often achieved through virtualization or [containerization](/en/glossary/containerization/)—so that whatever is executed inside cannot escape its boundaries, propagate errors, or leak information. This strict separation is critical for modern workflows in AI/ML, automation, cybersecurity, and software development.
 
 ## Key Features & Characteristics
 
 ### Complete Isolation from Production
 
-- Sandboxes are fully separated from operational (production) environments, ensuring no cross-contamination of code, data, or configurations. Isolation is enforced with technologies such as hypervisors (for virtual machines), Docker/Kubernetes (for containers), and secure runtimes like [gVisor](https://gvisor.dev) ([Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing)).
+- Sandboxes are fully separated from operational (production) environments, ensuring no cross-contamination of code, data, or configurations. Isolation is enforced with technologies such as hypervisors (for virtual machines), [Docker](/en/glossary/docker/)/Kubernetes (for containers), and secure runtimes like [gVisor](https://gvisor.dev) ([Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing)).
 - This architecture prevents anything running in the sandbox from affecting the host system, tampering with live resources, or spreading malware ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing)).
 
 ### Controlled Data Handling
@@ -133,7 +133,7 @@ Sandbox Mode relies on overlapping technologies for robust isolation and observa
 ### Advanced Security & Threat Analysis
 
 - **Behavioral Monitoring**: Observe code for suspicious behaviors, including API calls, memory access, and network activity.
-- **Evasion Detection**: Employ randomized environments, dynamic instrumentation, and human-in-the-loop analysis to catch malware designed to detect sandboxes ([Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
+- **Evasion Detection**: Employ randomized environments, dynamic instrumentation, and [human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/) analysis to catch malware designed to detect sandboxes ([Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
 - **Extended Detonation Windows**: Allow malware to execute over longer periods, catching time-based evasions.
 
 **Analogy**: A sandbox is like a sealed lab room—no matter what happens inside, the rest of the building remains safe.

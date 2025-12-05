@@ -10,9 +10,9 @@ draft: false
 ---
 ## What Is Misunderstood Rate?
 
-Misunderstood Rate is the percentage of user messages during chatbot interactions where the bot fails to correctly identify user intent or triggers a fallback response such as “Sorry, I didn’t understand that.” This metric is a fundamental indicator of natural language understanding (NLU) performance and highlights friction points in conversational AI systems. The misunderstood rate not only uncovers errors in intent detection but also signals where the bot’s conversational coverage is lacking.
+Misunderstood Rate is the percentage of user messages during chatbot interactions where the bot fails to correctly identify user intent or triggers a fallback response such as “Sorry, I didn’t understand that.” This metric is a fundamental indicator of natural language understanding (NLU) performance and highlights friction points in [conversational AI](/en/glossary/conversational-ai/) systems. The misunderstood rate not only uncovers errors in intent detection but also signals where the bot’s conversational coverage is lacking.
 
-For example, as noted by [Botsquad](https://botsquad.ai/chatbot-conversation-rate-metrics), misunderstood rate is often conflated with other metrics, but it specifically refers to cases where a bot cannot successfully classify input, resulting in fallback behavior. This is distinct from cases where a bot gives an incorrect answer with high confidence (false positive).
+For example, as noted by [Botsquad](https://botsquad.ai/chatbot-conversation-rate-metrics), misunderstood rate is often conflated with other metrics, but it specifically refers to cases where a bot cannot successfully classify input, resulting in fallback behavior. This is distinct from cases where a bot gives an incorrect answer with high confidence ([false positive](/en/glossary/false-positive/)).
 
 ## Why Does Misunderstood Rate Matter?
 
@@ -126,7 +126,7 @@ Action: Regularly reviewing misunderstood logs showed issues with recent policy 
 3. **Leverage Advanced NLP/LLMs:** Upgrade or fine-tune models for domain specificity.
 4. **Review Fallback Logs:** Identify patterns and integrate insights into bot updates.
 5. **Enrich Knowledge Base:** Keep information current to address new queries.
-6. **Enhance Conversation Design:** Use guided flows and quick replies to steer users.
+6. **Enhance Conversation Design:** Use guided flows and [quick replies](/en/glossary/quick-replies/) to steer users.
 7. **Multilingual and Accessibility Support:** Adapt for linguistic and special needs.
 8. **Integrate Human Escalation:** Ensure smooth handoff to agents when automation fails.
 
@@ -224,7 +224,7 @@ Most leading chatbot platforms (Dialogflow, Lex, Bot Framework) include fallback
 - Continuous monitoring, iterative training, and ethical oversight are essential for optimal misunderstood rates and user trust.
 
 **Related Terms:**  
-Fallback Rate, Intent Recognition Accuracy, False Positive Rate, Goal Completion Rate (GCR), Customer Satisfaction Score (CSAT), First Contact Resolution (FCR), Deflection Rate, User Experience (UX), NLP, Machine Learning, Knowledge Base, Conversational Flow
+Fallback Rate, [Intent Recognition](/en/glossary/intent-recognition/) Accuracy, False Positive Rate, [Goal Completion Rate (GCR)](/en/glossary/goal-completion-rate--gcr-/), Customer Satisfaction Score (CSAT), First Contact Resolution (FCR), Deflection Rate, User Experience (UX), NLP, Machine Learning, Knowledge Base, Conversational Flow
 
 **For more in-depth guidance on chatbot analytics and misunderstood rate improvement, see [Quickchat AI’s Guide](https://quickchat.ai/post/chatbot-analytics), [Prompts.ai’s Metrics Guide](https://www.prompts.ai/en/blog/guide-to-task-specific-chatbot-evaluation-metrics), and [Botsquad’s Metrics Deep-Dive](https://botsquad.ai/chatbot-conversation-rate-metrics).**
 

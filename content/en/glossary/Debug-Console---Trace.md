@@ -23,11 +23,11 @@ For foundational concepts and terminology, see the [OpenTelemetry Glossary](http
 
 ## Why Use a Debug Console or Trace?
 
-Debug consoles and trace tools are essential for developers, admins, and automation architects who must maintain, troubleshoot, or optimize complex workflows or conversational AI. They directly address pain points such as:
+Debug consoles and trace tools are essential for developers, admins, and automation architects who must maintain, troubleshoot, or optimize complex workflows or [conversational AI](/en/glossary/conversational-ai/). They directly address pain points such as:
 
 - Pinpointing the exact step or node where a process fails.
 - Tracking variable values and data changes through the flow.
-- Identifying sources of latency or performance degradation.
+- Identifying sources of [latency](/en/glossary/latency/) or performance degradation.
 - Interpreting cryptic error messages and resolving silent failures.
 
 By providing granular, real-time insight, these tools make automation systems more robust, maintainable, and reliable.
@@ -148,7 +148,7 @@ Debug consoles and trace tools are standard in:
 - **Status:** Success/failure indicator for each operation.
 - **Error Path/Fault Connector:** Alternate flow for error handling.
 - **Context Propagation:** Linking spans across distributed systems to form a trace ([OpenTelemetry Context Propagation](https://opentelemetry.io/docs/concepts/context-propagation)).
-- **Trace Exporter:** Component exporting trace data to logs, dashboards, or telemetry backends ([Trace Exporters](https://opentelemetry.io/docs/concepts/signals/traces/#trace-exporters)).
+- **Trace Exporter:** Component exporting trace data to logs, dashboards, or [telemetry](/en/glossary/telemetry/) backends ([Trace Exporters](https://opentelemetry.io/docs/concepts/signals/traces/#trace-exporters)).
 - **Tracer/Tracer Provider:** Classes responsible for creating and managing spans ([Tracer Provider](https://opentelemetry.io/docs/concepts/signals/traces/#tracer-provider)).
 - **Distributed Tracing:** Tracking a request across multiple services or components ([OpenTelemetry Glossary](https://opentelemetry.io/docs/concepts/glossary/#distributed-tracing)).
 - **Aggregation:** Combining measurements over time for statistics ([Aggregation](https://opentelemetry.io/docs/concepts/glossary/#aggregation)).

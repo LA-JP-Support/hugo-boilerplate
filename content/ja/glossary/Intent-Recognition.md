@@ -36,7 +36,7 @@ Intent Recognition(インテント認識)は、インテント分類とも呼ば
 - 必要に応じて、自動音声認識(ASR)を使用して音声データをテキストに変換します。
 
 ### 3. 特徴抽出
-- 関連する言語的特徴を抽出します:キーワード、n-gram、構文構造、意味関係、コンテキストウィンドウ。
+- 関連する言語的特徴を抽出します:キーワード、[n-gram](/ja/glossary/n-gram/)、構文構造、意味関係、コンテキストウィンドウ。
 - 単語埋め込み(例:[Word2Vec](https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa)、GloVe、FastText)を適用して、単語をそのコンテキスト的意味を表すベクトルに変換します。
 
 ### 4. モデルトレーニング
@@ -157,7 +157,7 @@ Intent Recognition(インテント認識)は、インテント分類とも呼ば
 | パーソナライゼーション      | 強力(ユーザーニーズに適応)                       | 限定的(静的な返信)             | 限定的(手動更新)          |
 | 言語サポート     | 同義語、言い換え、曖昧さを処理           | バリエーションに苦戦            | バリエーションに苦戦         |
 | スケーラビリティ          | 新しいインテント/言語/チャネルに簡単に拡張    | 手動更新が必要                | 拡張が複雑                 |
-| 最適用途             | 会話型AI、仮想アシスタント、サポート      | 基本的な検索、FAQボット               | 決定木                    |
+| 最適用途             | [会話型AI](/ja/glossary/conversational-ai/)、仮想アシスタント、サポート      | 基本的な検索、FAQボット               | 決定木                    |
 
 - **参考:** [Lyzr: Comparison Table](https://www.lyzr.ai/glossaries/intent-recognition/)
 

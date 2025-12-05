@@ -9,7 +9,6 @@ image: "/images/blog/ai-evaluation-japanese-benchmarks.jpg"
 tags: ["AI Technology", "LLM Evaluation", "Benchmarks"]
 categories: ["Technology"]
 ---
-
 With the rapid advancement of AI technology, methods for evaluating large language models (LLMs) continue to evolve daily. This article comprehensively explains cutting-edge evaluation techniques, challenges specific to Japanese-language models, and practical implementation strategies in language accessible to business leaders. Whether you're considering AI building tools like FlowHunt, this serves as an invaluable reference.
 
 ## The Frontier of LLM Automatic Evaluation: The Revolutionary "AI as Judge" Method
@@ -82,7 +81,7 @@ Effective AI utilization requires careful design and evaluation of {{< tooltip t
 - Utilize techniques such as {{< tooltip text="Directly asking questions without examples" >}}Zero-shot{{< /tooltip >}}, {{< tooltip text="Asking questions after showing several examples" >}}Few-shot{{< /tooltip >}}, and {{< tooltip text="Asking questions while gradually showing the thinking process" >}}Chain-of-Thought{{< /tooltip >}}
 
 **Step 2: Multi-faceted Evaluation**
-- {{< tooltip text="Accuracy rate" >}}Precision{{< /tooltip >}}, {{< tooltip text="Harmonic mean of precision and recall" >}}F1 score{{< /tooltip >}}, {{< tooltip text="Metrics measuring similarity between generated and reference text" >}}BLEU/ROUGE scores{{< /tooltip >}}
+- {{< tooltip text="Accuracy rate" >}}Precision{{< /tooltip >}}, {{< tooltip text="Harmonic mean of [precision and recall](/en/glossary/precision-and-recall/)" >}}F1 score{{< /tooltip >}}, {{< tooltip text="Metrics measuring similarity between generated and reference text" >}}BLEU/ROUGE scores{{< /tooltip >}}
 - {{< tooltip text="Evaluation of whether the same input produces consistent outputs" >}}Consistency evaluation{{< /tooltip >}}
 - {{< tooltip text="Verification that results remain consistent across different environments" >}}Reproducibility validation{{< /tooltip >}}
 

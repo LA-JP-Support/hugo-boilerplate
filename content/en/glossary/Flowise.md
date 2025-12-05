@@ -59,7 +59,7 @@ Flowise provides a modular, node-based canvas for building LLM-powered workflows
 ### **4. Data Connectivity & Integration**
 
 - **100+ Data Formats Supported:** TXT, PDF, DOCX, HTML, CSV, MD, JSON, XML, SQL, and more.
-- **Vector Database Integration:** Built-in support for Pinecone, ChromaDB, Weaviate, Milvus, and others.
+- **Vector Database Integration:** Built-in support for [Pinecone](/en/glossary/pinecone/), ChromaDB, [Weaviate](/en/glossary/weaviate/), Milvus, and others.
 - **API, SDK, and Embedding:** Expose flows via REST API, Python/Typescript SDKs, or web-embeddable chat widgets.
 
 **Reference:**  
@@ -79,7 +79,7 @@ Flowise provides a modular, node-based canvas for building LLM-powered workflows
 ### **7. Security & Enterprise Readiness**
 
 - **RBAC & SSO:** Fine-grained role-based access control, Single Sign-On for enterprise deployments.
-- **Credential Management:** Encrypted storage for API keys and secrets.
+- **Credential Management:** Encrypted storage for API keys and [secrets](/en/glossary/environment-variables--secrets-/).
 - **Horizontal Scalability:** Message queues and worker-based architecture for scaling flows across clusters or cloud environments.
 
 ### **8. Extensibility**
@@ -149,7 +149,7 @@ Users construct LLM-powered workflows by visually linking modular nodes:
 ### **Embedded AI in SaaS Products**
 
 - **InsightSoftware:** Enhanced embedded analytics with AI-driven conversational insights.
-- **UneeQ Digital Humans:** Streamlined deployment of digital avatars with advanced conversational AI.
+- **UneeQ Digital Humans:** Streamlined deployment of digital avatars with advanced [conversational AI](/en/glossary/conversational-ai/).
 
 ### **Custom Integrations & Automation**
 
@@ -173,7 +173,7 @@ Users construct LLM-powered workflows by visually linking modular nodes:
 
 | Feature             | Flowise Benefit                                             |
 |---------------------|------------------------------------------------------------|
-| Open Source         | Complete transparency, no vendor lock-in, self-hosting      |
+| Open Source         | Complete [transparency](/en/glossary/transparency/), no vendor lock-in, self-hosting      |
 | Visual Development  | Drag-and-drop interface cuts development time               |
 | Modular & Flexible  | Compose any LLM workflow, from chatbot to multi-agent team  |
 | LLM Agnostic        | 100+ supported models and vector DBs, including local       |
@@ -193,7 +193,7 @@ Users construct LLM-powered workflows by visually linking modular nodes:
 
 - **Assistant:** Easiest, form-based, rapid chatbot creation.
 - **Chatflow:** Node-based, flexible flows for single-agent systems.
-- **Agentflow (V2):** Advanced orchestration, supports explicit workflow design, multi-agent collaboration, loops, branching, and human-in-the-loop.
+- **Agentflow (V2):** Advanced orchestration, supports explicit workflow design, multi-agent collaboration, loops, branching, and [human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/).
 
 **Reference:**  
 - [Agentflow V2 Deep Dive](https://docs.flowiseai.com/using-flowise/agentflowv2#core-concept)

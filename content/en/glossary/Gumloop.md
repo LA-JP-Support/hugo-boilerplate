@@ -41,7 +41,7 @@ Gumloop operates through two main primitives: **Workflows (Flows)** and **Agents
 
 #### Advanced Concepts:
 - **Subflows:** Reusable, modular mini-workflows you can invoke from multiple parent Flows. Promotes code/data reuse and maintainability.
-- **Conditional Logic and Loops:** Use if/then branches, batch processing, and error handling for robust automations.
+- **Conditional Logic and Loops:** Use if/then branches, [batch processing](/en/glossary/batch-processing/), and error handling for robust automations.
 - **MCP Nodes:** Custom nodes built via natural language prompts, leveraging the Model Context Protocol for accessing any compatible tool or dataset.
 
 ### 2. Agents
@@ -130,7 +130,7 @@ Agents are AI-powered orchestrators that:
 
 - **Marketers:**  
   - Automate SEO audits and content briefs.  
-  - Social listening and sentiment analysis.  
+  - Social listening and [sentiment analysis](/en/glossary/sentiment-analysis/).  
   - Automated reporting and campaign analysis.
 - **Sales Teams:**  
   - Lead enrichment and scoring.  
@@ -201,7 +201,7 @@ Explore practical automations built with Gumloop:
    - Add summarization, data extraction, categorization, or content generation steps.
 
 **7. Test, Debug, Refine:**  
-   - Use sandbox mode, review logs, and troubleshoot errors for accuracy.
+   - Use [sandbox mode](/en/glossary/sandbox-mode/), review logs, and troubleshoot errors for accuracy.
 
 **8. Deploy & Share:**  
    - Publish flows for your team, or turn them into public mini-apps.

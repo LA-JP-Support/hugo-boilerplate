@@ -11,9 +11,9 @@ draft: false
 ## Definition
 
 **Copilot (AI Copilot):**  
-An AI copilot is an advanced artificial intelligence (AI)-powered digital assistant that operates alongside human users to enhance productivity, creativity, and decision-making in real time. Copilots are driven by natural language processing (NLP), large language models (LLMs), and machine learning (ML) to interpret context, automate repetitive workflows, generate actionable insights, and provide creative or analytical assistance across a vast array of business and technical domains.
+An AI copilot is an advanced artificial intelligence (AI)-powered digital assistant that operates alongside human users to enhance productivity, creativity, and decision-making in real time. Copilots are driven by [natural language processing (NLP)](/en/glossary/natural-language-processing--nlp-/), large language models (LLMs), and machine learning (ML) to interpret context, automate repetitive workflows, generate actionable insights, and provide creative or analytical assistance across a vast array of business and technical domains.
 
-Copilots are distinct from traditional chatbots and autonomous agents. Unlike chatbots, which primarily handle scripted, customer-facing queries, and AI agents, which often perform tasks independently, copilots function as collaborative partners—continuously working with humans, surfacing recommendations, and learning from ongoing interaction.
+Copilots are distinct from traditional chatbots and [autonomous agents](/en/glossary/autonomous-agents/). Unlike chatbots, which primarily handle scripted, customer-facing queries, and AI agents, which often perform tasks independently, copilots function as collaborative partners—continuously working with humans, surfacing recommendations, and learning from ongoing interaction.
 
 **Sources:**  
 - [Microsoft Copilot Glossary](https://learn.microsoft.com/en-us/copilot/glossary)  
@@ -206,7 +206,7 @@ A manager uses Microsoft 365 Copilot to generate a performance summary from inte
 ## Frequently Asked Questions (FAQ)
 
 **What is the primary difference between a copilot, a chatbot, and an AI agent?**  
-A copilot works interactively with humans, offering real-time suggestions and summaries. A chatbot answers simple, scripted queries. An AI agent runs automated workflows with minimal human oversight ([ThoughtSpot comparison](https://www.thoughtspot.com/data-trends/ai/ai-copilot-and-ai-agent)).
+A copilot works interactively with humans, offering real-time suggestions and summaries. A chatbot answers simple, scripted queries. An AI agent runs [automated workflows](/en/glossary/automated-workflows/) with minimal human oversight ([ThoughtSpot comparison](https://www.thoughtspot.com/data-trends/ai/ai-copilot-and-ai-agent)).
 
 **Can copilots use my company’s internal data?**  
 Yes, with secure and compliant integration, copilots can access internal databases, CRMs, and knowledge bases for context-rich support.
@@ -256,6 +256,6 @@ Key metrics: reduced response time, increased resolution rate, customer satisfac
 | **Purpose**         | Assist humans, enhance real-time work  | Automate simple interactions           | Automate structured workflows             |
 | **User Interaction**| Ongoing, collaborative                 | Direct, scripted                       | Minimal after setup                       |
 | **Complexity**      | High—handles nuanced tasks             | Low—routine, predictable               | High—process automation                   |
-| **Autonomy**        | Human-in-the-loop                      | Low                                    | High                                      |
+| **Autonomy**        | [Human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/)                      | Low                                    | High                                      |
 | **Examples**        | Microsoft 365 Copilot, SAP Joule       | FAQ bot, order status bot              | RPA tools, workflow automation
 

@@ -29,7 +29,7 @@ Document loaders are built to abstract the complexity of handling diverse, unstr
   Loaders do not just extract raw text—they also attach vital metadata such as source location, page or row numbers, timestamps, and content type. This context is crucial for search, traceability, compliance, and fine-grained retrieval in AI-driven applications.
 
 - **Scalability:**  
-  Loaders are designed to handle large-scale ingestion scenarios, supporting batch processing, streaming, and both local and cloud-based resources. They optimize for both performance and memory efficiency, especially via lazy loading mechanisms.
+  Loaders are designed to handle large-scale ingestion scenarios, supporting [batch processing](/en/glossary/batch-processing/), streaming, and both local and cloud-based resources. They optimize for both performance and memory efficiency, especially via lazy loading mechanisms.
 
 - **Plug-and-Play Integration:**  
   Frameworks like [LangChain](https://www.langchain.com/) and vector databases expect input in a standard Document format. Document loaders provide this standard interface, ensuring seamless connectivity across AI pipelines.

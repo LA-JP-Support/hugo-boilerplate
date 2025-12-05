@@ -72,7 +72,7 @@ e-title: Entity Linking
   - エンティティタイプマッチング
   - エンティティの説明と関係性の使用
 - **例:**  
-  米国大統領の文脈で「Clinton」を曖昧性解消する場合、「Hillary Clinton」ではなく「Bill Clinton」にリンクされる可能性が高くなります([Ontotext](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/))。
+  米国大統領の文脈で「Clinton」を[曖昧性解消](/ja/glossary/disambiguation/)する場合、「Hillary Clinton」ではなく「Bill Clinton」にリンクされる可能性が高くなります([Ontotext](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/))。
 
 ### 3.4 知識ベースへのリンク
 - **目標:** 言及を一意のKB識別子(例:Apple Inc.のWikidata Q312)に接続します。
@@ -80,7 +80,7 @@ e-title: Entity Linking
   構造化された事実、関係性、属性へのアクセスを可能にします。
 
 **パイプライン図(テキスト説明):**  
-生テキスト → NER → 候補生成 → エンティティ曖昧性解消 → KBリンク
+生テキスト → NER → 候補生成 → エンティティ[曖昧性解消](/ja/glossary/disambiguation/) → KBリンク
 
 ## 4. エンティティリンキングにおける課題
 

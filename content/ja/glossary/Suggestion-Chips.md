@@ -55,7 +55,7 @@ e-title: Suggestion Chips
 | タップ後に消える  | はい                                   | 必ずしもそうではない、しばしば永続的      |
 | 使用例             | 軽量で文脈依存の選択肢| ナビゲーション、アクション、永続的   |
 | 配置            | プロンプト/入力エリアの下               | カード、メッセージ、フッターにインライン|
-| プラットフォーム例     | Dialogflow、Messenger(クイックリプライ) | Messenger、Telegram、Webウィジェット  |
+| プラットフォーム例     | Dialogflow、Messenger([クイックリプライ](/ja/glossary/quick-replies/)) | Messenger、Telegram、Webウィジェット  |
 
 **重要なポイント:**  
 サジェスチョンチップは素早い、文脈的な、一回限りの決定のためのもので、ボタンは継続的なアクションやナビゲーションのためのものです。
@@ -63,7 +63,7 @@ e-title: Suggestion Chips
 ### サジェスチョンチップ vs. クイックリプライ
 
 - **用語:**  
-  「クイックリプライ」は、[Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies/)や[Telegram](https://core.telegram.org/bots/api#replykeyboardmarkup)でこのパターンを指す用語です。GoogleはDialogflowとAssistantで「サジェスチョンチップ」と呼んでいます。
+  「[クイックリプライ](/ja/glossary/quick-replies/)」は、[Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies/)や[Telegram](https://core.telegram.org/bots/api#replykeyboardmarkup)でこのパターンを指す用語です。GoogleはDialogflowとAssistantで「サジェスチョンチップ」と呼んでいます。
 
 - **動作:**  
   チップとクイックリプライの両方とも、使用後に消え、数が制限されており、迅速な入力を目的としています。

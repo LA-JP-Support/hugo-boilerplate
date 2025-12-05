@@ -14,7 +14,7 @@ e-title: HTTP Request Node
 ---
 ## はじめに
 
-**HTTPリクエストノード**は、[n8n](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)、[Node-RED](https://flowfuse.com/node-red/core-nodes/http-request/)、Node.jsを含む自動化および統合プラットフォームにおける中核的なコンポーネントです。外部サーバーやAPIに対してHTTPリクエスト(GET、POST、PUT、PATCH、DELETEなど)を送信し、自動化ワークフロー内でそのレスポンスを処理することができます。このノードは、異なるシステムの統合、サードパーティサービスの利用、Webhookのトリガー、アプリケーション間のデータ交換において不可欠です。
+**HTTPリクエストノード**は、[n8n](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)、[Node-RED](https://flowfuse.com/node-red/core-nodes/http-request/)、Node.jsを含む自動化および統合プラットフォームにおける中核的なコンポーネントです。外部サーバーやAPIに対してHTTPリクエスト(GET、POST、PUT、PATCH、DELETEなど)を送信し、[自動化ワークフロー](/ja/glossary/automated-workflows/)内でそのレスポンスを処理することができます。このノードは、異なるシステムの統合、サードパーティサービスの利用、Webhookのトリガー、アプリケーション間のデータ交換において不可欠です。
 
 ## ノードの機能
 
@@ -212,7 +212,7 @@ axios.post('https://api.example.com/resource', {
 
 ### セキュリティ
 
-- **認証情報の保存:** 組み込みの認証情報マネージャーを使用。シークレットをハードコードしない。
+- **認証情報の保存:** 組み込みの認証情報マネージャーを使用。[シークレット](/ja/glossary/environment-variables--secrets-/)をハードコードしない。
 - **HTTPS:** 常にSSL証明書を検証。信頼できる内部エンドポイントのみSSLを無視([Node-RED HTTPS設定](https://nodered.org/docs/user-guide/runtime/securing-node-red#enabling-https-access))。
 - **入力のサニタイズ:** すべての動的入力(ヘッダー、パラメータ、ボディ)を検証。
 - **トークン管理:** トークンをローテーション、期限切れ、安全に保存。

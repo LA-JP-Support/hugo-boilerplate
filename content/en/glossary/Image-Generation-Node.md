@@ -60,7 +60,7 @@ A **parameter** is any configurable option that affects how the image is generat
 
 ### Workflow
 
-A **workflow** is a sequence of nodes representing a complete pipeline, from prompt input to image output. Workflows enable batch processing, automation, and reproducibility.
+A **workflow** is a sequence of nodes representing a complete pipeline, from prompt input to image output. Workflows enable [batch processing](/en/glossary/batch-processing/), automation, and reproducibility.
 
 - **Example:**  
   1. Input Node (text prompt)  

@@ -10,7 +10,7 @@ draft: false
 ---
 ## Introduction and Definition
 
-Open-domain bots are conversational AI systems designed for flexibility, allowing them to converse on nearly any topic. They differ fundamentally from closed-domain bots, which focus on specific, narrowly defined tasks. The ambition behind open-domain bot research is to achieve human-like conversational breadth, supporting unstructured, free-form interactions.  
+Open-domain bots are [conversational AI](/en/glossary/conversational-ai/) systems designed for flexibility, allowing them to converse on nearly any topic. They differ fundamentally from closed-domain bots, which focus on specific, narrowly defined tasks. The ambition behind open-domain bot research is to achieve human-like conversational breadth, supporting unstructured, free-form interactions.  
 - See: [ACL Anthology 2021](https://aclanthology.org/2021.sigdial-1.41.pdf)  
 - [IJEAT Research](https://www.ijeat.org/wp-content/uploads/papers/v9i4/D8734049420.pdf)
 
@@ -55,7 +55,7 @@ Subsequent transformer-based models, such as **Google’s Meena** and **Facebook
 ### Question Answering vs. Free-Form Dialogue
 
 - **Question answering (QA):** Focused on factual, often one-turn queries, leveraging structured retrieval (e.g., from Wikipedia).
-- **Free-form dialogue:** Multi-turn, unstructured conversation, including small talk, storytelling, and opinions.
+- **Free-form dialogue:** Multi-turn, unstructured conversation, including [small talk](/en/glossary/small-talk/), storytelling, and opinions.
 
 ## Architectures Underlying Open-Domain Bots
 
@@ -168,7 +168,7 @@ Speech events represent the categories of conversational activity (Goldsmith & B
 - **Conversational breadth:** Expanding beyond small talk to cover the full range of human conversational events.
 - **Contextual memory:** Improving bots’ ability to remember, recall, and reference prior exchanges.
 - **Ethics and safety:** Developing robust filtering and monitoring for responsible deployment.
-- **Hybrid models:** Combining retrieval, generation, and human-in-the-loop curation for improved dialogue quality.
+- **Hybrid models:** Combining retrieval, generation, and [human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/) curation for improved dialogue quality.
 
 ## References and Further Reading
 

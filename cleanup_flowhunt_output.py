@@ -20,8 +20,28 @@ from datetime import date
 # Add scripts directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent / "scripts"))
 from title_sanitizer import sanitize_front_matter
+from remove_inline_references import remove_inline_references
 
 import yaml
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+CONTENT_EN_GLOSSARY = PROJECT_ROOT / "content" / "en" / "glossary"
+
+
+def _ensure_allowed_output(path: Path):
+    """Prevent direct writes into published content directories before translation."""
+    resolved = path.resolve()
+    restricted_dirs = [CONTENT_EN_GLOSSARY.resolve()]
+
+    for restricted in restricted_dirs:
+        try:
+            resolved.relative_to(restricted)
+            raise ValueError(
+                f"Direct output to {restricted} is blocked. "
+                "Run pipeline_translate.py to copy cleaned files after translation."
+            )
+        except ValueError:
+            continue
 
 
 def clean_flowhunt_output(content):
@@ -112,6 +132,7 @@ def process_file(input_file, output_file=None, output_dir=None):
     
     # クリーンアップ
     cleaned_content = clean_flowhunt_output(content)
+    cleaned_content = remove_inline_references(cleaned_content)
     
     # 出力ファイル名を決定
     if output_file:
@@ -125,7 +146,8 @@ def process_file(input_file, output_file=None, output_dir=None):
         output_path = clean_dir / input_path.name
     
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    
+    _ensure_allowed_output(output_path)
+
     # 出力
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(cleaned_content)

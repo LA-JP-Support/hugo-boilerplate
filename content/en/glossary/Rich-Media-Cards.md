@@ -31,7 +31,7 @@ Rich media cards are built from a set of standard components, each serving a fun
 - **Subtitle/Description:** Supporting text, often up to 2,000 characters, providing additional context, benefits, or call-to-action (CTA) information.
 - **Action Buttons:** Clickable elements triggering immediate actions (web navigation, postbacks, phone calls, downloads, etc.). Button limits and types vary by platform.
 - **Suggested Replies:** Predefined user responses presented as chips or buttons, steering the conversation down optimal, bot-friendly paths.
-- **Optional Interactive Elements:** Carousels (scrollable groups of cards), forms (for data capture), quick replies, list pickers, and custom payloads.
+- **Optional Interactive Elements:** Carousels (scrollable groups of cards), forms (for data capture), [quick replies](/en/glossary/quick-replies/), list pickers, and custom payloads.
 
 **Illustrations and references:**  
 - [Google: Components of a Rich Card](https://developers.google.com/business-communications/rcs-business-messaging/guides/learn/rich-cards#rich-card-components)
@@ -56,7 +56,7 @@ Rich media cards dramatically enhance chatbot interactions by making conversatio
 
 Rich media card support and features differ among messaging platforms. Key environments include:
 
-- **Web Chat Widgets:** Full card, carousel, and form support; customizable layouts (e.g., Intercom, Drift, Kommunicate).
+- **Web Chat Widgets:** Full card, [carousel](/en/glossary/carousel/), and form support; customizable layouts (e.g., Intercom, Drift, Kommunicate).
 - **Social Messaging:**  
   - **Facebook Messenger:** Card templates, carousels, quick replies, up to 10 cards per carousel.
   - **WhatsApp:** Limited list and button templates (no carousels), up to 3 buttons per message.

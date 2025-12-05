@@ -160,6 +160,12 @@ defaultContentLanguageInSubdir = true
     style = "none"
     tabWidth = 4
   [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [["\\[", "\\]"], ["$$", "$$"]]
+          inline = [["\\(", "\\)"], ["$", "$"]]
     [markup.goldmark.renderer]
       # HTMLタグを許可（iframe、YouTubeなど）
       unsafe = true

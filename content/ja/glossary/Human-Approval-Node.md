@@ -15,7 +15,7 @@ e-title: Human Approval Node
 ## 定義
 
 **Human Approval Node(ヒューマン承認ノード):**  
-指定された人間ユーザーがタスクを確認し、ダッシュボード、UI、または通信チャネルを介して「承認」または「却下」をクリック(またはフィードバックを提供)するまで、自動化を一時停止するワークフローステップ。このステップは「Human-in-the-Loop(HITL)」チェックポイントとも呼ばれ、自動化またはエージェントワークフローの事前定義されたポイントで人間の監視と意思決定を強制します。  
+指定された人間ユーザーがタスクを確認し、ダッシュボード、UI、または通信チャネルを介して「承認」または「却下」をクリック(またはフィードバックを提供)するまで、自動化を一時停止するワークフローステップ。このステップは「Human-in-the-Loop([HITL](/ja/glossary/human-in-the-loop--hitl-/))」チェックポイントとも呼ばれ、自動化またはエージェントワークフローの事前定義されたポイントで人間の監視と意思決定を強制します。  
 **参考文献:**  
 - [Permit.io: Human-in-the-Loop for AI Agents](https://www.permit.io/blog/human-in-the-loop-for-ai-agents-best-practices-frameworks-use-cases-and-demo)
 - [n8n: Human-in-the-Loop Workflow Tutorial (YouTube)](https://www.youtube.com/watch?v=n6llypVyGx8)

@@ -1,0 +1,2888 @@
+{
+  "API Endpoint Configuration": {
+    "keywords": [
+      "API endpoint configuration",
+      "API security",
+      "API documentation",
+      "REST API design",
+      "API monitoring"
+    ],
+    "link": "/en/glossary/api-endpoint-configuration/",
+    "aliases": [
+      "api endpoint configuration",
+      "API Endpoint Configuration"
+    ]
+  },
+  "Adversarial Attack": {
+    "keywords": [
+      "adversarial attack",
+      "AI security",
+      "machine learning",
+      "adversarial examples",
+      "cybersecurity"
+    ],
+    "link": "/en/glossary/adversarial-attack/",
+    "aliases": [
+      "adversarial attack",
+      "Adversarial Attack"
+    ]
+  },
+  "Adversarial Robustness": {
+    "keywords": [
+      "Adversarial Robustness",
+      "Adversarial Attacks",
+      "AI Safety",
+      "Machine Learning",
+      "Deep Learning"
+    ],
+    "link": "/en/glossary/adversarial-robustness/",
+    "aliases": [
+      "Adversarial Robustness",
+      "adversarial robustness"
+    ]
+  },
+  "Algorithmic Accountability": {
+    "keywords": [
+      "algorithmic accountability",
+      "AI ethics",
+      "AI governance",
+      "transparency",
+      "explainability"
+    ],
+    "link": "/en/glossary/algorithmic-accountability/",
+    "aliases": [
+      "Algorithmic Accountability",
+      "algorithmic accountability"
+    ]
+  },
+  "Alignment Problem": {
+    "keywords": [
+      "AI alignment",
+      "misalignment",
+      "AI ethics",
+      "AI safety",
+      "reward hacking"
+    ],
+    "link": "/en/glossary/alignment-problem/",
+    "aliases": [
+      "alignment problem",
+      "Alignment Problem"
+    ]
+  },
+  "Ambient Intelligence (AmI)": {
+    "keywords": [
+      "ambient intelligence",
+      "AmI",
+      "smart environments",
+      "context-aware systems",
+      "AI automation"
+    ],
+    "link": "/en/glossary/ambient-intelligence/",
+    "aliases": [
+      "ambient intelligence (ami)",
+      "Ambient Intelligence (AmI)",
+      "Ambient Intelligence",
+      "ambient intelligence",
+      "ami",
+      "AmI"
+    ]
+  },
+  "Attribution Modeling": {
+    "keywords": [
+      "attribution modeling",
+      "marketing attribution",
+      "conversion tracking",
+      "customer journey",
+      "marketing channels"
+    ],
+    "link": "/en/glossary/attribution-modeling/",
+    "aliases": [
+      "Attribution Modeling",
+      "attribution modeling"
+    ]
+  },
+  "Attribution Window": {
+    "keywords": [
+      "attribution window",
+      "marketing attribution",
+      "conversion window",
+      "campaign effectiveness",
+      "digital advertising"
+    ],
+    "link": "/en/glossary/attribution-window/",
+    "aliases": [
+      "attribution window",
+      "Attribution Window"
+    ]
+  },
+  "Auto-Layout": {
+    "keywords": [
+      "Auto-Layout",
+      "Figma",
+      "UI design",
+      "Responsive design",
+      "Constraints"
+    ],
+    "link": "/en/glossary/auto-layout/",
+    "aliases": [
+      "Auto Layout",
+      "auto layout",
+      "auto-layout",
+      "Auto-Layout"
+    ]
+  },
+  "Auto-Scaling Group": {
+    "keywords": [
+      "Auto-Scaling Group",
+      "AWS Auto Scaling",
+      "EC2 instances",
+      "cloud infrastructure",
+      "scaling policies"
+    ],
+    "link": "/en/glossary/auto-scaling-group/",
+    "aliases": [
+      "Auto Scaling Group",
+      "auto scaling group",
+      "Auto-Scaling Group",
+      "auto-scaling group"
+    ]
+  },
+  "Automated Workflows": {
+    "keywords": [
+      "Automated Workflows",
+      "Workflow Automation",
+      "Business Process Automation",
+      "RPA",
+      "Process Automation"
+    ],
+    "link": "/en/glossary/automated-workflows/",
+    "aliases": [
+      "Automated Workflows",
+      "automated workflows"
+    ]
+  },
+  "Autonomous Agents": {
+    "keywords": [
+      "autonomous agents",
+      "AI automation",
+      "multi-step tasks",
+      "machine learning",
+      "AI systems"
+    ],
+    "link": "/en/glossary/autonomous-agents/",
+    "aliases": [
+      "Autonomous Agents",
+      "autonomous agents"
+    ]
+  },
+  "Autoscaling": {
+    "keywords": [
+      "autoscaling",
+      "cloud computing",
+      "resource allocation",
+      "horizontal scaling",
+      "vertical scaling"
+    ],
+    "link": "/en/glossary/autoscaling/",
+    "aliases": [
+      "autoscaling",
+      "Autoscaling"
+    ]
+  },
+  "Batch Processing": {
+    "keywords": [
+      "batch processing",
+      "stream processing",
+      "AI infrastructure",
+      "data processing",
+      "ETL"
+    ],
+    "link": "/en/glossary/batch-processing/",
+    "aliases": [
+      "batch processing",
+      "Batch Processing"
+    ]
+  },
+  "Bias Mitigation": {
+    "keywords": [
+      "bias mitigation",
+      "machine learning bias",
+      "AI ethics",
+      "algorithmic fairness",
+      "responsible AI"
+    ],
+    "link": "/en/glossary/bias-mitigation/",
+    "aliases": [
+      "Bias Mitigation",
+      "bias mitigation"
+    ]
+  },
+  "Blue-Green Deployment": {
+    "keywords": [
+      "blue-green deployment",
+      "deployment strategy",
+      "zero-downtime",
+      "rollback",
+      "CI/CD"
+    ],
+    "link": "/en/glossary/blue-green-deployment/",
+    "aliases": [
+      "blue green deployment",
+      "Blue Green Deployment",
+      "Blue-Green Deployment",
+      "blue-green deployment"
+    ]
+  },
+  "Bot Avatar": {
+    "keywords": [
+      "bot avatar",
+      "chatbot persona",
+      "AI assistant",
+      "digital human",
+      "user experience"
+    ],
+    "link": "/en/glossary/bot-avatar/",
+    "aliases": [
+      "Bot Avatar",
+      "bot avatar"
+    ]
+  },
+  "Bot Containment Rate": {
+    "keywords": [
+      "Bot Containment Rate",
+      "chatbot performance",
+      "AI chatbot",
+      "customer service automation",
+      "escalation rate"
+    ],
+    "link": "/en/glossary/bot-containment-rate/",
+    "aliases": [
+      "Bot Containment Rate",
+      "bot containment rate"
+    ]
+  },
+  "Botpress": {
+    "keywords": [
+      "Botpress",
+      "AI chatbot",
+      "LLM",
+      "conversational AI",
+      "visual flow editor"
+    ],
+    "link": "/en/glossary/botpress/",
+    "aliases": [
+      "Botpress",
+      "botpress"
+    ]
+  },
+  "Bounce Rate": {
+    "keywords": [
+      "bounce rate",
+      "web analytics",
+      "user engagement",
+      "SEO",
+      "Google Analytics 4"
+    ],
+    "link": "/en/glossary/bounce-rate/",
+    "aliases": [
+      "Bounce Rate",
+      "bounce rate"
+    ]
+  },
+  "Canary Release": {
+    "keywords": [
+      "canary release",
+      "deployment strategy",
+      "continuous delivery",
+      "risk mitigation",
+      "software deployment"
+    ],
+    "link": "/en/glossary/canary-release/",
+    "aliases": [
+      "canary release",
+      "Canary Release"
+    ]
+  },
+  "Canonical Form": {
+    "keywords": [
+      "canonical form",
+      "data normalization",
+      "AI chatbots",
+      "intent recognition",
+      "unique representation"
+    ],
+    "link": "/en/glossary/canonical-form/",
+    "aliases": [
+      "Canonical Form",
+      "canonical form"
+    ]
+  },
+  "Carousel (UI Component)": {
+    "keywords": [
+      "carousel",
+      "UI component",
+      "web design",
+      "UX design",
+      "accessibility"
+    ],
+    "link": "/en/glossary/carousel/",
+    "aliases": [
+      "Carousel (UI Component)",
+      "carousel (ui component)",
+      "UI Component",
+      "ui component",
+      "Carousel",
+      "carousel"
+    ]
+  },
+  "Chaos Engineering": {
+    "keywords": [
+      "Chaos Engineering",
+      "system resilience",
+      "fault injection",
+      "distributed systems",
+      "SRE"
+    ],
+    "link": "/en/glossary/chaos-engineering/",
+    "aliases": [
+      "Chaos Engineering",
+      "chaos engineering"
+    ]
+  },
+  "Chat Simulator": {
+    "keywords": [
+      "Chat Simulator",
+      "Chatbot testing",
+      "Conversational AI",
+      "NLU validation",
+      "Agent training"
+    ],
+    "link": "/en/glossary/chat-simulator/",
+    "aliases": [
+      "chat simulator",
+      "Chat Simulator"
+    ]
+  },
+  "Chroma": {
+    "keywords": [
+      "Chroma",
+      "vector database",
+      "embeddings",
+      "AI-native applications",
+      "semantic search"
+    ],
+    "link": "/en/glossary/chroma/",
+    "aliases": [
+      "chroma",
+      "Chroma"
+    ]
+  },
+  "Click Map": {
+    "keywords": [
+      "click map",
+      "web analytics",
+      "user interactions",
+      "UX optimization",
+      "conversion rate optimization"
+    ],
+    "link": "/en/glossary/click-map/",
+    "aliases": [
+      "Click Map",
+      "click map"
+    ]
+  },
+  "Cloud Computing": {
+    "keywords": [
+      "cloud computing",
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "AI infrastructure"
+    ],
+    "link": "/en/glossary/cloud-computing/",
+    "aliases": [
+      "Cloud Computing",
+      "cloud computing"
+    ]
+  },
+  "Code Block (Python/JS)": {
+    "keywords": [
+      "code block",
+      "Python",
+      "JavaScript",
+      "automation",
+      "chatbot"
+    ],
+    "link": "/en/glossary/code-block--python-js-/",
+    "aliases": [
+      "Code Block (Python/JS)",
+      "code block (python/js)",
+      "Code Block",
+      "code block",
+      "Python/JS",
+      "python/js"
+    ]
+  },
+  "Cohort Analysis": {
+    "keywords": [
+      "cohort analysis",
+      "retention",
+      "churn",
+      "behavioral analytics",
+      "user engagement"
+    ],
+    "link": "/en/glossary/cohort-analysis/",
+    "aliases": [
+      "Cohort Analysis",
+      "cohort analysis"
+    ]
+  },
+  "Conditional Router": {
+    "keywords": [
+      "Conditional Router",
+      "Workflow automation",
+      "Rule-based branching",
+      "AI chatbots",
+      "Data routing"
+    ],
+    "link": "/en/glossary/conditional-router/",
+    "aliases": [
+      "Conditional Router",
+      "conditional router"
+    ]
+  },
+  "Confidence Threshold": {
+    "keywords": [
+      "confidence threshold",
+      "AI model",
+      "machine learning",
+      "confidence score",
+      "prediction reliability"
+    ],
+    "link": "/en/glossary/confidence-threshold/",
+    "aliases": [
+      "Confidence Threshold",
+      "confidence threshold"
+    ]
+  },
+  "Containerization": {
+    "keywords": [
+      "containerization",
+      "containers",
+      "docker",
+      "kubernetes",
+      "microservices"
+    ],
+    "link": "/en/glossary/containerization/",
+    "aliases": [
+      "Containerization",
+      "containerization"
+    ]
+  },
+  "Content Moderation": {
+    "keywords": [
+      "content moderation",
+      "user-generated content",
+      "AI moderation",
+      "platform guidelines",
+      "community standards"
+    ],
+    "link": "/en/glossary/content-moderation/",
+    "aliases": [
+      "Content Moderation",
+      "content moderation"
+    ]
+  },
+  "Context Switching": {
+    "keywords": [
+      "context switching",
+      "AI chatbots",
+      "automation",
+      "conversation management",
+      "LLMs"
+    ],
+    "link": "/en/glossary/context-switching/",
+    "aliases": [
+      "Context Switching",
+      "context switching"
+    ]
+  },
+  "Conversation Drift": {
+    "keywords": [
+      "conversation drift",
+      "AI chatbot",
+      "virtual assistant",
+      "chatbot context",
+      "drift detection"
+    ],
+    "link": "/en/glossary/conversation-drift/",
+    "aliases": [
+      "conversation drift",
+      "Conversation Drift"
+    ]
+  },
+  "Conversational AI": {
+    "keywords": [
+      "Conversational AI",
+      "Natural Language Processing",
+      "Machine Learning",
+      "Chatbots",
+      "Virtual Assistants"
+    ],
+    "link": "/en/glossary/conversational-ai/",
+    "aliases": [
+      "conversational ai",
+      "Conversational AI"
+    ]
+  },
+  "Conversion Funnel": {
+    "keywords": [
+      "conversion funnel",
+      "marketing funnel",
+      "sales funnel",
+      "conversion rate optimization",
+      "user journey"
+    ],
+    "link": "/en/glossary/conversion-funnel/",
+    "aliases": [
+      "conversion funnel",
+      "Conversion Funnel"
+    ]
+  },
+  "AI Copilot": {
+    "keywords": [
+      "AI Copilot",
+      "Artificial Intelligence",
+      "Large Language Models",
+      "Digital Assistant",
+      "Productivity"
+    ],
+    "link": "/en/glossary/copilot/",
+    "aliases": [
+      "AI Copilot",
+      "ai copilot"
+    ]
+  },
+  "Cosine Similarity": {
+    "keywords": [
+      "cosine similarity",
+      "machine learning",
+      "natural language processing",
+      "recommendation systems",
+      "vector similarity"
+    ],
+    "link": "/en/glossary/cosine-similarity/",
+    "aliases": [
+      "Cosine Similarity",
+      "cosine similarity"
+    ]
+  },
+  "Cost Estimation": {
+    "keywords": [
+      "Cost Estimation",
+      "AI Chatbot",
+      "Automation",
+      "Token Usage",
+      "AI Pricing"
+    ],
+    "link": "/en/glossary/cost-estimation/",
+    "aliases": [
+      "Cost Estimation",
+      "cost estimation"
+    ]
+  },
+  "Cron Schedule": {
+    "keywords": [
+      "cron schedule",
+      "cron expression",
+      "task automation",
+      "crontab",
+      "Unix Linux scheduling"
+    ],
+    "link": "/en/glossary/cron-schedule/",
+    "aliases": [
+      "cron schedule",
+      "Cron Schedule"
+    ]
+  },
+  "DTMF (Dual-Tone Multi-Frequency)": {
+    "keywords": [
+      "DTMF",
+      "telecommunication",
+      "IVR",
+      "VoIP",
+      "PCI DSS"
+    ],
+    "link": "/en/glossary/dtmf--dual-tone-multi-frequency-/",
+    "aliases": [
+      "dtmf (dual tone multi frequency)",
+      "DTMF (Dual Tone Multi Frequency)",
+      "dtmf (dual-tone multi-frequency)",
+      "DTMF (Dual-Tone Multi-Frequency)",
+      "Dual-Tone Multi-Frequency",
+      "dual-tone multi-frequency",
+      "dtmf",
+      "DTMF"
+    ]
+  },
+  "Data Poisoning": {
+    "keywords": [
+      "data poisoning",
+      "AI security",
+      "machine learning",
+      "adversarial attacks",
+      "model integrity"
+    ],
+    "link": "/en/glossary/data-poisoning/",
+    "aliases": [
+      "Data Poisoning",
+      "data poisoning"
+    ]
+  },
+  "Debug Console / Trace": {
+    "keywords": [
+      "Debug Console",
+      "Trace",
+      "Automation Flow",
+      "AI Chatbot",
+      "API Proxy"
+    ],
+    "link": "/en/glossary/debug-console---trace/",
+    "aliases": [
+      "debug console / trace",
+      "Debug Console / Trace"
+    ]
+  },
+  "Deepfake Detection": {
+    "keywords": [
+      "deepfake detection",
+      "AI-generated media",
+      "synthetic media",
+      "fraud prevention",
+      "misinformation"
+    ],
+    "link": "/en/glossary/deepfake-detection/",
+    "aliases": [
+      "Deepfake Detection",
+      "deepfake detection"
+    ]
+  },
+  "Delay / Sleep Node": {
+    "keywords": [
+      "Delay Node",
+      "Sleep Node",
+      "Automation Workflows",
+      "AI Chatbot",
+      "Workflow Orchestration"
+    ],
+    "link": "/en/glossary/delay---sleep-node/",
+    "aliases": [
+      "delay / sleep node",
+      "Delay / Sleep Node"
+    ]
+  },
+  "Dialogue Management": {
+    "keywords": [
+      "dialogue management",
+      "conversational AI",
+      "AI chatbot",
+      "state tracking",
+      "dialogue policy"
+    ],
+    "link": "/en/glossary/dialogue-management/",
+    "aliases": [
+      "dialogue management",
+      "Dialogue Management"
+    ]
+  },
+  "Dialogue State Tracking": {
+    "keywords": [
+      "Dialogue State Tracking",
+      "Conversational AI",
+      "Chatbot",
+      "Dialogue System",
+      "Slot Filling"
+    ],
+    "link": "/en/glossary/dialogue-state-tracking/",
+    "aliases": [
+      "dialogue state tracking",
+      "Dialogue State Tracking"
+    ]
+  },
+  "Dify": {
+    "keywords": [
+      "Dify",
+      "LLMOps",
+      "AI applications",
+      "RAG",
+      "agentic workflows"
+    ],
+    "link": "/en/glossary/dify/",
+    "aliases": [
+      "Dify",
+      "dify"
+    ]
+  },
+  "Disambiguation": {
+    "keywords": [
+      "disambiguation",
+      "AI chatbots",
+      "user intent",
+      "conversational AI",
+      "natural language understanding"
+    ],
+    "link": "/en/glossary/disambiguation/",
+    "aliases": [
+      "disambiguation",
+      "Disambiguation"
+    ]
+  },
+  "Docker": {
+    "keywords": [
+      "Docker",
+      "containers",
+      "containerization",
+      "microservices",
+      "Kubernetes"
+    ],
+    "link": "/en/glossary/docker/",
+    "aliases": [
+      "docker",
+      "Docker"
+    ]
+  },
+  "Document Loader": {
+    "keywords": [
+      "Document Loader",
+      "AI pipelines",
+      "LLM",
+      "data ingestion",
+      "LangChain"
+    ],
+    "link": "/en/glossary/document-loader/",
+    "aliases": [
+      "document loader",
+      "Document Loader"
+    ]
+  },
+  "Dwell Time": {
+    "keywords": [
+      "dwell time",
+      "SEO",
+      "user engagement",
+      "Google Analytics",
+      "ranking factor"
+    ],
+    "link": "/en/glossary/dwell-time/",
+    "aliases": [
+      "dwell time",
+      "Dwell Time"
+    ]
+  },
+  "Edge AI": {
+    "keywords": [
+      "Edge AI",
+      "Edge Computing",
+      "Artificial Intelligence",
+      "IoT",
+      "Machine Learning"
+    ],
+    "link": "/en/glossary/edge-ai/",
+    "aliases": [
+      "edge ai",
+      "Edge AI"
+    ]
+  },
+  "Embed Script": {
+    "keywords": [
+      "embed script",
+      "chatbot",
+      "JavaScript",
+      "website integration",
+      "AI automation"
+    ],
+    "link": "/en/glossary/embed-script/",
+    "aliases": [
+      "embed script",
+      "Embed Script"
+    ]
+  },
+  "Engagement Metrics": {
+    "keywords": [
+      "engagement metrics",
+      "user interaction",
+      "conversion rate",
+      "bounce rate",
+      "session duration"
+    ],
+    "link": "/en/glossary/engagement-metrics/",
+    "aliases": [
+      "engagement metrics",
+      "Engagement Metrics"
+    ]
+  },
+  "Entity Extraction (Named Entity Recognition, NER)": {
+    "keywords": [
+      "Entity Extraction",
+      "Named Entity Recognition",
+      "NLP",
+      "AI Chatbot",
+      "Text Analytics"
+    ],
+    "link": "/en/glossary/entity-extraction/",
+    "aliases": [
+      "Entity Extraction (Named Entity Recognition, NER)",
+      "entity extraction (named entity recognition, ner)",
+      "named entity recognition, ner",
+      "Named Entity Recognition, NER",
+      "entity extraction",
+      "Entity Extraction"
+    ]
+  },
+  "Entity Linking": {
+    "keywords": [
+      "entity linking",
+      "knowledge base",
+      "named entity recognition",
+      "knowledge graph",
+      "natural language processing"
+    ],
+    "link": "/en/glossary/entity-linking/",
+    "aliases": [
+      "Entity Linking",
+      "entity linking"
+    ]
+  },
+  "Environment Variables (Secrets)": {
+    "keywords": [
+      "environment variables",
+      "secrets management",
+      "API keys",
+      "application security",
+      "configuration management"
+    ],
+    "link": "/en/glossary/environment-variables--secrets-/",
+    "aliases": [
+      "environment variables (secrets)",
+      "Environment Variables (Secrets)",
+      "Environment Variables",
+      "environment variables",
+      "Secrets",
+      "secrets"
+    ]
+  },
+  "Error Handler / Try-Catch": {
+    "keywords": [
+      "error handler",
+      "try-catch",
+      "exception handling",
+      "automation",
+      "AI chatbot"
+    ],
+    "link": "/en/glossary/error-handler---try-catch/",
+    "aliases": [
+      "Error Handler / Try Catch",
+      "error handler / try catch",
+      "error handler / try-catch",
+      "Error Handler / Try-Catch"
+    ]
+  },
+  "Fairness Metrics": {
+    "keywords": [
+      "fairness metrics",
+      "AI bias",
+      "algorithmic bias",
+      "responsible AI",
+      "machine learning fairness"
+    ],
+    "link": "/en/glossary/fairness-metrics/",
+    "aliases": [
+      "fairness metrics",
+      "Fairness Metrics"
+    ]
+  },
+  "Fall-back Mechanism": {
+    "keywords": [
+      "fallback mechanism",
+      "AI chatbots",
+      "automation",
+      "user experience",
+      "escalation"
+    ],
+    "link": "/en/glossary/fall-back-mechanism/",
+    "aliases": [
+      "Fall back Mechanism",
+      "fall back mechanism",
+      "Fall-back Mechanism",
+      "fall-back mechanism"
+    ]
+  },
+  "False Negative": {
+    "keywords": [
+      "False Negative",
+      "AI Chatbot",
+      "Automation",
+      "Machine Learning",
+      "Confusion Matrix"
+    ],
+    "link": "/en/glossary/false-negative/",
+    "aliases": [
+      "false negative",
+      "False Negative"
+    ]
+  },
+  "False Positive": {
+    "keywords": [
+      "False Positive",
+      "AI Systems",
+      "Chatbots",
+      "Content Detection",
+      "Privacy Tools"
+    ],
+    "link": "/en/glossary/false-positive/",
+    "aliases": [
+      "false positive",
+      "False Positive"
+    ]
+  },
+  "Feature Flags": {
+    "keywords": [
+      "feature flags",
+      "feature toggles",
+      "progressive delivery",
+      "A/B testing",
+      "software deployment"
+    ],
+    "link": "/en/glossary/feature-flags/",
+    "aliases": [
+      "Feature Flags",
+      "feature flags"
+    ]
+  },
+  "Feedback Buttons (Thumbs Up/Down)": {
+    "keywords": [
+      "feedback buttons",
+      "thumbs up/down",
+      "AI chatbots",
+      "user feedback",
+      "digital experience"
+    ],
+    "link": "/en/glossary/feedback-buttons--thumbs-up-down-/",
+    "aliases": [
+      "Feedback Buttons (Thumbs Up/Down)",
+      "feedback buttons (thumbs up/down)",
+      "Feedback Buttons",
+      "feedback buttons",
+      "thumbs up/down",
+      "Thumbs Up/Down"
+    ]
+  },
+  "FinOps for AI": {
+    "keywords": [
+      "FinOps for AI",
+      "cloud cost optimization",
+      "AI infrastructure",
+      "financial management",
+      "AI governance"
+    ],
+    "link": "/en/glossary/finops-for-ai/",
+    "aliases": [
+      "FinOps for AI",
+      "finops for ai"
+    ]
+  },
+  "Flowise": {
+    "keywords": [
+      "Flowise",
+      "LLM workflows",
+      "AI agents",
+      "LangChainJS",
+      "open-source"
+    ],
+    "link": "/en/glossary/flowise/",
+    "aliases": [
+      "Flowise",
+      "flowise"
+    ]
+  },
+  "GPU Acceleration": {
+    "keywords": [
+      "GPU acceleration",
+      "AI",
+      "deep learning",
+      "parallel processing",
+      "CUDA"
+    ],
+    "link": "/en/glossary/gpu-acceleration/",
+    "aliases": [
+      "GPU Acceleration",
+      "gpu acceleration"
+    ]
+  },
+  "GitOps": {
+    "keywords": [
+      "GitOps",
+      "DevOps",
+      "Kubernetes",
+      "CI/CD",
+      "Infrastructure as Code"
+    ],
+    "link": "/en/glossary/gitops/",
+    "aliases": [
+      "gitops",
+      "GitOps"
+    ]
+  },
+  "Global Variables": {
+    "keywords": [
+      "Global Variables",
+      "AI Chatbot",
+      "Automation Platform",
+      "Programming Variables",
+      "Variable Scope"
+    ],
+    "link": "/en/glossary/global-variables/",
+    "aliases": [
+      "Global Variables",
+      "global variables"
+    ]
+  },
+  "Goal Completion Rate (GCR)": {
+    "keywords": [
+      "Goal Completion Rate",
+      "AI Chatbots",
+      "Automation",
+      "Chatbot Metrics",
+      "Customer Experience"
+    ],
+    "link": "/en/glossary/goal-completion-rate--gcr-/",
+    "aliases": [
+      "goal completion rate (gcr)",
+      "Goal Completion Rate (GCR)",
+      "Goal Completion Rate",
+      "goal completion rate",
+      "GCR",
+      "gcr"
+    ]
+  },
+  "Gumloop": {
+    "keywords": [
+      "Gumloop",
+      "AI automation",
+      "no-code platform",
+      "workflows",
+      "AI agents"
+    ],
+    "link": "/en/glossary/gumloop/",
+    "aliases": [
+      "gumloop",
+      "Gumloop"
+    ]
+  },
+  "HNSW (Hierarchical Navigable Small World)": {
+    "keywords": [
+      "HNSW",
+      "Approximate Nearest Neighbor",
+      "Vector Search",
+      "Vector Databases",
+      "Graph Algorithm"
+    ],
+    "link": "/en/glossary/hnsw--hierarchical-navigable-small-world-/",
+    "aliases": [
+      "HNSW (Hierarchical Navigable Small World)",
+      "hnsw (hierarchical navigable small world)",
+      "Hierarchical Navigable Small World",
+      "hierarchical navigable small world",
+      "hnsw",
+      "HNSW"
+    ]
+  },
+  "HTTP Request Node": {
+    "keywords": [
+      "HTTP Request Node",
+      "API integration",
+      "automation platforms",
+      "n8n",
+      "Node-RED"
+    ],
+    "link": "/en/glossary/http-request-node/",
+    "aliases": [
+      "http request node",
+      "HTTP Request Node"
+    ]
+  },
+  "Hamburger Menu": {
+    "keywords": [
+      "hamburger menu",
+      "UI/UX design",
+      "mobile navigation",
+      "progressive disclosure",
+      "web accessibility"
+    ],
+    "link": "/en/glossary/hamburger-menu/",
+    "aliases": [
+      "hamburger menu",
+      "Hamburger Menu"
+    ]
+  },
+  "High Availability (HA)": {
+    "keywords": [
+      "High Availability",
+      "HA",
+      "redundancy",
+      "failover",
+      "uptime"
+    ],
+    "link": "/en/glossary/high-availability--ha-/",
+    "aliases": [
+      "High Availability (HA)",
+      "high availability (ha)",
+      "high availability",
+      "High Availability",
+      "ha",
+      "HA"
+    ]
+  },
+  "Hugging Face": {
+    "keywords": [
+      "hugging face models",
+      "large language models",
+      "transformers library",
+      "model hub",
+      "datasets huggingface"
+    ],
+    "link": "/en/glossary/hugging-face/",
+    "aliases": [
+      "hugging face",
+      "Hugging Face"
+    ]
+  },
+  "Human-Agent Teaming": {
+    "keywords": [
+      "Human-Agent Teaming",
+      "AI collaboration",
+      "Human-AI Teaming",
+      "Artificial Intelligence",
+      "Team dynamics"
+    ],
+    "link": "/en/glossary/human-agent-teaming/",
+    "aliases": [
+      "Human Agent Teaming",
+      "human agent teaming",
+      "human-agent teaming",
+      "Human-Agent Teaming"
+    ]
+  },
+  "Human Approval Node": {
+    "keywords": [
+      "human approval",
+      "human-in-the-loop",
+      "human oversight",
+      "decision making",
+      "approval workflows"
+    ],
+    "link": "/en/glossary/human-approval-node/",
+    "aliases": [
+      "human approval node",
+      "Human Approval Node"
+    ]
+  },
+  "Human-in-the-Loop (HITL)": {
+    "keywords": [
+      "human-in-the-loop",
+      "artificial intelligence",
+      "machine learning",
+      "human oversight",
+      "data annotation"
+    ],
+    "link": "/en/glossary/human-in-the-loop--hitl-/",
+    "aliases": [
+      "Human in the Loop (HITL)",
+      "human in the loop (hitl)",
+      "Human-in-the-Loop (HITL)",
+      "human-in-the-loop (hitl)",
+      "human-in-the-loop",
+      "Human-in-the-Loop",
+      "hitl",
+      "HITL"
+    ]
+  },
+  "Hybrid Chatbot": {
+    "keywords": [
+      "hybrid chatbot",
+      "AI chatbot",
+      "natural language processing",
+      "machine learning",
+      "customer service automation"
+    ],
+    "link": "/en/glossary/hybrid-chatbot/",
+    "aliases": [
+      "hybrid chatbot",
+      "Hybrid Chatbot"
+    ]
+  },
+  "Image Generation Node": {
+    "keywords": [
+      "Image Generation Node",
+      "AI image generation",
+      "Stable Diffusion",
+      "DALL-E",
+      "Text prompt"
+    ],
+    "link": "/en/glossary/image-generation-node/",
+    "aliases": [
+      "image generation node",
+      "Image Generation Node"
+    ]
+  },
+  "Import / Export Blueprint": {
+    "keywords": [
+      "automation blueprint",
+      "chatbot blueprint",
+      "JSON",
+      "YAML",
+      "workflow migration"
+    ],
+    "link": "/en/glossary/import---export-blueprint/",
+    "aliases": [
+      "import / export blueprint",
+      "Import / Export Blueprint"
+    ]
+  },
+  "Indirect Prompt Injection": {
+    "keywords": [
+      "indirect prompt injection",
+      "LLM security",
+      "AI security",
+      "prompt injection",
+      "data exfiltration"
+    ],
+    "link": "/en/glossary/indirect-prompt-injection/",
+    "aliases": [
+      "Indirect Prompt Injection",
+      "indirect prompt injection"
+    ]
+  },
+  "Inference Latency": {
+    "keywords": [
+      "inference latency",
+      "AI model",
+      "machine learning",
+      "real-time AI",
+      "model optimization"
+    ],
+    "link": "/en/glossary/inference-latency/",
+    "aliases": [
+      "Inference Latency",
+      "inference latency"
+    ]
+  },
+  "Infinite Canvas": {
+    "keywords": [
+      "Infinite Canvas",
+      "Digital Workspace",
+      "Node Graph Mapping",
+      "Collaboration Tools",
+      "Data Visualization"
+    ],
+    "link": "/en/glossary/infinite-canvas/",
+    "aliases": [
+      "infinite canvas",
+      "Infinite Canvas"
+    ]
+  },
+  "Infrastructure as Code (IaC)": {
+    "keywords": [
+      "Infrastructure as Code",
+      "IaC",
+      "DevOps",
+      "automation",
+      "cloud infrastructure"
+    ],
+    "link": "/en/glossary/infrastructure-as-code--iac-/",
+    "aliases": [
+      "Infrastructure as Code (IaC)",
+      "infrastructure as code (iac)",
+      "Infrastructure as Code",
+      "infrastructure as code",
+      "iac",
+      "IaC"
+    ]
+  },
+  "Intent Recognition": {
+    "keywords": [
+      "Intent Recognition",
+      "NLP",
+      "AI",
+      "Machine Learning",
+      "Chatbots"
+    ],
+    "link": "/en/glossary/intent-recognition/",
+    "aliases": [
+      "intent recognition",
+      "Intent Recognition"
+    ]
+  },
+  "Iterator / For-Each": {
+    "keywords": [
+      "iterator",
+      "for-each loop",
+      "collection processing",
+      "workflow automation",
+      "programming concepts"
+    ],
+    "link": "/en/glossary/iterator---for-each/",
+    "aliases": [
+      "iterator / for each",
+      "Iterator / For Each",
+      "Iterator / For-Each",
+      "iterator / for-each"
+    ]
+  },
+  "JSON Path": {
+    "keywords": [
+      "JSON Path",
+      "JSON data",
+      "query syntax",
+      "data extraction",
+      "API testing"
+    ],
+    "link": "/en/glossary/json-path/",
+    "aliases": [
+      "JSON Path",
+      "json path"
+    ]
+  },
+  "Jailbreaking (AI Jailbreaking): Bypassing AI Safety Guardrails": {
+    "keywords": [
+      "AI jailbreaking",
+      "large language models",
+      "safety guardrails",
+      "prompt engineering",
+      "security risks"
+    ],
+    "link": "/en/glossary/jailbreaking/",
+    "aliases": [
+      "jailbreaking (ai jailbreaking): bypassing ai safety guardrails",
+      "Jailbreaking (AI Jailbreaking): Bypassing AI Safety Guardrails"
+    ]
+  },
+  "KV Cache": {
+    "keywords": [
+      "KV Cache",
+      "LLMs",
+      "Transformer models",
+      "inference optimization",
+      "token generation"
+    ],
+    "link": "/en/glossary/kv-cache/",
+    "aliases": [
+      "KV Cache",
+      "kv cache"
+    ]
+  },
+  "Knowledge Base Connector": {
+    "keywords": [
+      "Knowledge Base Connector",
+      "Retrieval Augmented Generation",
+      "AI Chatbot",
+      "Vector Database",
+      "Automation"
+    ],
+    "link": "/en/glossary/knowledge-base-connector/",
+    "aliases": [
+      "knowledge base connector",
+      "Knowledge Base Connector"
+    ]
+  },
+  "LangFlow": {
+    "keywords": [
+      "LangFlow",
+      "LLMs",
+      "AI applications",
+      "LangChain",
+      "low-code"
+    ],
+    "link": "/en/glossary/langflow/",
+    "aliases": [
+      "langflow",
+      "LangFlow"
+    ]
+  },
+  "Latency Budget": {
+    "keywords": [
+      "latency budget",
+      "AI systems",
+      "performance optimization",
+      "real-time systems",
+      "system response time"
+    ],
+    "link": "/en/glossary/latency-budget/",
+    "aliases": [
+      "latency budget",
+      "Latency Budget"
+    ]
+  },
+  "Latency": {
+    "keywords": [
+      "latency",
+      "AI infrastructure",
+      "network latency",
+      "performance optimization",
+      "real-time systems"
+    ],
+    "link": "/en/glossary/latency/",
+    "aliases": [
+      "Latency",
+      "latency"
+    ]
+  },
+  "Lemmatization": {
+    "keywords": [
+      "lemmatization",
+      "natural language processing",
+      "nlp",
+      "stemming",
+      "text normalization"
+    ],
+    "link": "/en/glossary/lemmatization/",
+    "aliases": [
+      "Lemmatization",
+      "lemmatization"
+    ]
+  },
+  "Load Balancing Glossary: Deep Dive & Advanced Reference": {
+    "keywords": [
+      "load balancing",
+      "load balancer",
+      "network traffic",
+      "server scalability",
+      "application performance"
+    ],
+    "link": "/en/glossary/load-balancing/",
+    "aliases": [
+      "Load Balancing Glossary: Deep Dive & Advanced Reference",
+      "load balancing glossary: deep dive & advanced reference"
+    ]
+  },
+  "Logic Node / Conditional Branching": {
+    "keywords": [
+      "Logic Node",
+      "Conditional Branching",
+      "Chatbot",
+      "Automation",
+      "Workflow"
+    ],
+    "link": "/en/glossary/logic-node---conditional-branching/",
+    "aliases": [
+      "logic node / conditional branching",
+      "Logic Node / Conditional Branching"
+    ]
+  },
+  "Loop Node": {
+    "keywords": [
+      "Loop Node",
+      "Workflow Automation",
+      "AI Chatbot",
+      "RPA",
+      "Iteration"
+    ],
+    "link": "/en/glossary/loop-node/",
+    "aliases": [
+      "Loop Node",
+      "loop node"
+    ]
+  },
+  "MLOps": {
+    "keywords": [
+      "MLOps",
+      "machine learning operations",
+      "model deployment",
+      "model monitoring",
+      "feature store"
+    ],
+    "link": "/en/glossary/mlops/",
+    "aliases": [
+      "mlops",
+      "MLOps"
+    ]
+  },
+  "Make (Integromat)": {
+    "keywords": [
+      "Make",
+      "Integromat",
+      "no-code automation",
+      "workflow automation",
+      "visual builder",
+      "API integration",
+      "data transformation",
+      "business process automation",
+      "scenario"
+    ],
+    "link": "/en/glossary/make--integromat-/",
+    "aliases": [
+      "make (integromat)",
+      "Make (Integromat)",
+      "Integromat",
+      "integromat"
+    ]
+  },
+  "Micro-Frontends": {
+    "keywords": [
+      "micro frontends",
+      "frontend development",
+      "micro frontend architecture",
+      "web applications",
+      "independent deployment"
+    ],
+    "link": "/en/glossary/micro-frontends/",
+    "aliases": [
+      "micro frontends",
+      "Micro Frontends",
+      "micro-frontends",
+      "Micro-Frontends"
+    ]
+  },
+  "Microservices Architecture: Comprehensive": {
+    "keywords": [
+      "microservices",
+      "API Gateway",
+      "bounded context",
+      "event-driven architecture",
+      "resilience"
+    ],
+    "link": "/en/glossary/microservices/",
+    "aliases": [
+      "Microservices Architecture: Comprehensive",
+      "microservices architecture: comprehensive"
+    ]
+  },
+  "Milvus": {
+    "keywords": [
+      "Milvus",
+      "vector database",
+      "similarity search",
+      "vector embeddings",
+      "unstructured data"
+    ],
+    "link": "/en/glossary/milvus/",
+    "aliases": [
+      "Milvus",
+      "milvus"
+    ]
+  },
+  "Minimap": {
+    "keywords": [
+      "minimap",
+      "AI chatbot",
+      "automation platforms",
+      "flow navigation",
+      "UI/UX"
+    ],
+    "link": "/en/glossary/minimap/",
+    "aliases": [
+      "Minimap",
+      "minimap"
+    ]
+  },
+  "Misunderstood Rate": {
+    "keywords": [
+      "chatbot performance",
+      "natural language processing (NLP)",
+      "user experience",
+      "evaluation metrics",
+      "customer service"
+    ],
+    "link": "/en/glossary/misunderstood-rate/",
+    "aliases": [
+      "Misunderstood Rate",
+      "misunderstood rate"
+    ]
+  },
+  "Model Cards": {
+    "keywords": [
+      "Model Cards",
+      "Machine Learning",
+      "AI Ethics",
+      "Transparency",
+      "Responsible AI"
+    ],
+    "link": "/en/glossary/model-cards/",
+    "aliases": [
+      "Model Cards",
+      "model cards"
+    ]
+  },
+  "Model Quantization: A Comprehensive": {
+    "keywords": [
+      "model quantization",
+      "machine learning",
+      "deep learning",
+      "LLMs",
+      "AI optimization"
+    ],
+    "link": "/en/glossary/model-quantization/",
+    "aliases": [
+      "model quantization: a comprehensive",
+      "Model Quantization: A Comprehensive"
+    ]
+  },
+  "Model Robustness": {
+    "keywords": [
+      "model robustness",
+      "machine learning",
+      "AI safety",
+      "adversarial attacks",
+      "data drift"
+    ],
+    "link": "/en/glossary/model-robustness/",
+    "aliases": [
+      "Model Robustness",
+      "model robustness"
+    ]
+  },
+  "Model Serving": {
+    "keywords": [
+      "Model Serving",
+      "Machine Learning",
+      "AI",
+      "Inference",
+      "Model Deployment"
+    ],
+    "link": "/en/glossary/model-serving/",
+    "aliases": [
+      "Model Serving",
+      "model serving"
+    ]
+  },
+  "Monolithic Architecture": {
+    "keywords": [
+      "monolithic architecture",
+      "software design",
+      "application development",
+      "microservices",
+      "system design"
+    ],
+    "link": "/en/glossary/monolithic-architecture/",
+    "aliases": [
+      "monolithic architecture",
+      "Monolithic Architecture"
+    ]
+  },
+  "Multi-Tenancy": {
+    "keywords": [
+      "multi-tenancy",
+      "SaaS",
+      "cloud computing",
+      "data isolation",
+      "software architecture"
+    ],
+    "link": "/en/glossary/multi-tenancy/",
+    "aliases": [
+      "multi tenancy",
+      "Multi Tenancy",
+      "Multi-Tenancy",
+      "multi-tenancy"
+    ]
+  },
+  "Multi-Turn Conversation": {
+    "keywords": [
+      "multi-turn conversation",
+      "AI chatbot",
+      "conversational AI",
+      "dialogue management",
+      "context retention"
+    ],
+    "link": "/en/glossary/multi-turn-conversation/",
+    "aliases": [
+      "Multi Turn Conversation",
+      "multi turn conversation",
+      "Multi-Turn Conversation",
+      "multi-turn conversation"
+    ]
+  },
+  "N-Gram": {
+    "keywords": [
+      "N-gram",
+      "Natural Language Processing",
+      "Language Modeling",
+      "Text Analysis",
+      "Speech Recognition"
+    ],
+    "link": "/en/glossary/n-gram/",
+    "aliases": [
+      "n gram",
+      "N Gram",
+      "N-Gram",
+      "n-gram"
+    ]
+  },
+  "NLU Confidence Threshold": {
+    "keywords": [
+      "NLU confidence threshold",
+      "natural language understanding",
+      "confidence scores",
+      "chatbot",
+      "intent classification"
+    ],
+    "link": "/en/glossary/nlu-confidence-threshold/",
+    "aliases": [
+      "NLU Confidence Threshold",
+      "nlu confidence threshold"
+    ]
+  },
+  "Named Entity Recognition (NER)": {
+    "keywords": [
+      "Named Entity Recognition",
+      "NER",
+      "Natural Language Processing",
+      "NLP",
+      "Entity Extraction"
+    ],
+    "link": "/en/glossary/named-entity-recognition--ner-/",
+    "aliases": [
+      "named entity recognition (ner)",
+      "Named Entity Recognition (NER)",
+      "named entity recognition",
+      "Named Entity Recognition",
+      "ner",
+      "NER"
+    ]
+  },
+  "Natural Language Processing (NLP)": {
+    "keywords": [
+      "Natural Language Processing",
+      "NLP",
+      "Artificial Intelligence",
+      "Large Language Models",
+      "Machine Learning"
+    ],
+    "link": "/en/glossary/natural-language-processing--nlp-/",
+    "aliases": [
+      "Natural Language Processing (NLP)",
+      "natural language processing (nlp)",
+      "natural language processing",
+      "Natural Language Processing",
+      "NLP",
+      "nlp"
+    ]
+  },
+  "Node Grouping": {
+    "keywords": [
+      "Node Grouping",
+      "AI Chatbots",
+      "Workflow Automation",
+      "Kubernetes",
+      "Clustering"
+    ],
+    "link": "/en/glossary/node-grouping/",
+    "aliases": [
+      "Node Grouping",
+      "node grouping"
+    ]
+  },
+  "Nodes and Edges": {
+    "keywords": [
+      "nodes",
+      "edges",
+      "graph-based modeling",
+      "AI chatbots",
+      "automation workflows"
+    ],
+    "link": "/en/glossary/nodes-and-edges/",
+    "aliases": [
+      "Nodes and Edges",
+      "nodes and edges"
+    ]
+  },
+  "Open-Domain Bot": {
+    "keywords": [
+      "open-domain bot",
+      "AI chatbot",
+      "conversational AI",
+      "transformer models",
+      "dialogue system"
+    ],
+    "link": "/en/glossary/open-domain-bot/",
+    "aliases": [
+      "Open Domain Bot",
+      "open domain bot",
+      "Open-Domain Bot",
+      "open-domain bot"
+    ]
+  },
+  "Output Parsing": {
+    "keywords": [
+      "output parsing",
+      "LLMs",
+      "structured data",
+      "prompt engineering",
+      "LangChain"
+    ],
+    "link": "/en/glossary/output-parsing/",
+    "aliases": [
+      "Output Parsing",
+      "output parsing"
+    ]
+  },
+  "PII Redaction": {
+    "keywords": [
+      "PII redaction",
+      "personally identifiable information",
+      "data privacy",
+      "regulatory compliance",
+      "automated redaction"
+    ],
+    "link": "/en/glossary/pii-redaction/",
+    "aliases": [
+      "PII Redaction",
+      "pii redaction"
+    ]
+  },
+  "Glossary: PagedAttention and Advanced Memory Management for LLM Inference": {
+    "keywords": [
+      "PagedAttention",
+      "LLM inference",
+      "KV cache",
+      "vLLM",
+      "memory management"
+    ],
+    "link": "/en/glossary/pagedattention/",
+    "aliases": [
+      "Glossary: PagedAttention and Advanced Memory Management for LLM Inference",
+      "glossary: pagedattention and advanced memory management for llm inference"
+    ]
+  },
+  "Parallel Execution": {
+    "keywords": [
+      "parallel execution",
+      "workflow automation",
+      "AI chatbots",
+      "software testing",
+      "CI/CD pipelines"
+    ],
+    "link": "/en/glossary/parallel-execution/",
+    "aliases": [
+      "Parallel Execution",
+      "parallel execution"
+    ]
+  },
+  "Persistent Menu": {
+    "keywords": [
+      "Persistent Menu",
+      "Chatbot",
+      "Facebook Messenger",
+      "Navigational Menu",
+      "Menu Items"
+    ],
+    "link": "/en/glossary/persistent-menu/",
+    "aliases": [
+      "Persistent Menu",
+      "persistent menu"
+    ]
+  },
+  "Persona Design": {
+    "keywords": [
+      "Persona Design",
+      "AI Chatbot",
+      "Chatbot Persona",
+      "Automation",
+      "User Engagement"
+    ],
+    "link": "/en/glossary/persona-design/",
+    "aliases": [
+      "persona design",
+      "Persona Design"
+    ]
+  },
+  "Pinecone": {
+    "keywords": [
+      "Pinecone",
+      "vector database",
+      "vector embeddings",
+      "semantic search",
+      "AI memory"
+    ],
+    "link": "/en/glossary/pinecone/",
+    "aliases": [
+      "pinecone",
+      "Pinecone"
+    ]
+  },
+  "Precision and Recall": {
+    "keywords": [
+      "precision",
+      "recall",
+      "machine learning",
+      "classification metrics",
+      "confusion matrix"
+    ],
+    "link": "/en/glossary/precision-and-recall/",
+    "aliases": [
+      "Precision and Recall",
+      "precision and recall"
+    ]
+  },
+  "Privacy-Preserving Machine Learning (PPML)": {
+    "keywords": [
+      "Privacy-Preserving Machine Learning",
+      "Differential Privacy",
+      "Homomorphic Encryption",
+      "Multi-Party Computation",
+      "Federated Learning"
+    ],
+    "link": "/en/glossary/privacy-preserving-ml/",
+    "aliases": [
+      "privacy preserving machine learning (ppml)",
+      "Privacy Preserving Machine Learning (PPML)",
+      "Privacy-Preserving Machine Learning (PPML)",
+      "privacy-preserving machine learning (ppml)",
+      "Privacy-Preserving Machine Learning",
+      "privacy-preserving machine learning",
+      "ppml",
+      "PPML"
+    ]
+  },
+  "Prompt Template": {
+    "keywords": [
+      "prompt template",
+      "AI chatbots",
+      "automation",
+      "large language models",
+      "prompt engineering"
+    ],
+    "link": "/en/glossary/prompt-template/",
+    "aliases": [
+      "prompt template",
+      "Prompt Template"
+    ]
+  },
+  "Qdrant": {
+    "keywords": [
+      "Qdrant",
+      "vector database",
+      "vector search",
+      "embeddings",
+      "RAG"
+    ],
+    "link": "/en/glossary/qdrant/",
+    "aliases": [
+      "qdrant",
+      "Qdrant"
+    ]
+  },
+  "Query Expansion": {
+    "keywords": [
+      "Query Expansion",
+      "Information Retrieval",
+      "AI Chatbots",
+      "RAG",
+      "Search Engines"
+    ],
+    "link": "/en/glossary/query-expansion/",
+    "aliases": [
+      "query expansion",
+      "Query Expansion"
+    ]
+  },
+  "Quick Replies": {
+    "keywords": [
+      "Quick Replies",
+      "Chatbot",
+      "Ephemeral buttons",
+      "Chat interface",
+      "Messaging platforms"
+    ],
+    "link": "/en/glossary/quick-replies/",
+    "aliases": [
+      "Quick Replies",
+      "quick replies"
+    ]
+  },
+  "Rate Limiting Handler": {
+    "keywords": [
+      "Rate Limiting Handler",
+      "API Rate Limiting",
+      "429 Too Many Requests",
+      "Retry Logic",
+      "Exponential Backoff"
+    ],
+    "link": "/en/glossary/rate-limiting-handler/",
+    "aliases": [
+      "rate limiting handler",
+      "Rate Limiting Handler"
+    ]
+  },
+  "Real-Time Translation": {
+    "keywords": [
+      "real time translation customer",
+      "translation tools",
+      "artificial intelligence",
+      "multilingual support",
+      "translation software"
+    ],
+    "link": "/en/glossary/real-time-translation/",
+    "aliases": [
+      "real time translation",
+      "Real Time Translation",
+      "real-time translation",
+      "Real-Time Translation"
+    ]
+  },
+  "Red Teaming": {
+    "keywords": [
+      "AI systems",
+      "vulnerabilities",
+      "biases",
+      "AI security",
+      "adversarial attacks"
+    ],
+    "link": "/en/glossary/red-teaming/",
+    "aliases": [
+      "Red Teaming",
+      "red teaming"
+    ]
+  },
+  "Regulatory Sandbox": {
+    "keywords": [
+      "regulatory sandbox",
+      "fintech",
+      "AI regulation",
+      "innovation",
+      "consumer protection"
+    ],
+    "link": "/en/glossary/regulatory-sandbox/",
+    "aliases": [
+      "Regulatory Sandbox",
+      "regulatory sandbox"
+    ]
+  },
+  "Rich Media Cards": {
+    "keywords": [
+      "rich media cards",
+      "chatbot",
+      "conversational AI",
+      "messaging platforms",
+      "user engagement"
+    ],
+    "link": "/en/glossary/rich-media-cards/",
+    "aliases": [
+      "rich media cards",
+      "Rich Media Cards"
+    ]
+  },
+  "Rule-Based Chatbot": {
+    "keywords": [
+      "rule-based chatbot",
+      "chatbot",
+      "decision tree",
+      "automation",
+      "customer support"
+    ],
+    "link": "/en/glossary/rule-based-chatbot/",
+    "aliases": [
+      "rule based chatbot",
+      "Rule Based Chatbot",
+      "rule-based chatbot",
+      "Rule-Based Chatbot"
+    ]
+  },
+  "SSML (Speech Synthesis Markup Language)": {
+    "keywords": [
+      "SSML",
+      "Speech Synthesis Markup Language",
+      "Text-to-Speech",
+      "TTS",
+      "W3C",
+      "prosody",
+      "phonetics",
+      "voice user interfaces",
+      "AI chatbot"
+    ],
+    "link": "/en/glossary/ssml--speech-synthesis-markup-language-/",
+    "aliases": [
+      "ssml (speech synthesis markup language)",
+      "SSML (Speech Synthesis Markup Language)",
+      "speech synthesis markup language",
+      "Speech Synthesis Markup Language",
+      "ssml",
+      "SSML"
+    ]
+  },
+  "Safety Guardrails": {
+    "keywords": [
+      "Safety Guardrails",
+      "AI Safety",
+      "LLM Safety",
+      "AI Ethics",
+      "AI Risk Management"
+    ],
+    "link": "/en/glossary/safety-guardrails/",
+    "aliases": [
+      "Safety Guardrails",
+      "safety guardrails"
+    ]
+  },
+  "Sandbox Mode": {
+    "keywords": [
+      "sandbox mode",
+      "testing environment",
+      "isolated environment",
+      "malware analysis",
+      "software development",
+      "security sandbox",
+      "containerization",
+      "virtualization",
+      "AI code sandbox",
+      "QA testing"
+    ],
+    "link": "/en/glossary/sandbox-mode/",
+    "aliases": [
+      "sandbox mode",
+      "Sandbox Mode"
+    ]
+  },
+  "Self-Healing Knowledge": {
+    "keywords": [
+      "Self-Healing Knowledge",
+      "AI",
+      "Knowledge Management",
+      "Automation",
+      "Content Accuracy"
+    ],
+    "link": "/en/glossary/self-healing-knowledge/",
+    "aliases": [
+      "self healing knowledge",
+      "Self Healing Knowledge",
+      "Self-Healing Knowledge",
+      "self-healing knowledge"
+    ]
+  },
+  "Semantic Routing": {
+    "keywords": [
+      "semantic routing",
+      "AI systems",
+      "vector similarity",
+      "chatbot automation",
+      "LLM routing"
+    ],
+    "link": "/en/glossary/semantic-routing/",
+    "aliases": [
+      "semantic routing",
+      "Semantic Routing"
+    ]
+  },
+  "Sentiment-Adaptive Tone": {
+    "keywords": [
+      "sentiment-adaptive tone",
+      "AI chatbots",
+      "customer service",
+      "sentiment analysis",
+      "emotional intelligence"
+    ],
+    "link": "/en/glossary/sentiment-adaptive-tone/",
+    "aliases": [
+      "sentiment adaptive tone",
+      "Sentiment Adaptive Tone",
+      "Sentiment-Adaptive Tone",
+      "sentiment-adaptive tone"
+    ]
+  },
+  "Sentiment Analysis": {
+    "keywords": [
+      "sentiment analysis",
+      "natural language processing",
+      "aspect-based sentiment analysis",
+      "customer feedback",
+      "brand reputation"
+    ],
+    "link": "/en/glossary/sentiment-analysis/",
+    "aliases": [
+      "Sentiment Analysis",
+      "sentiment analysis"
+    ]
+  },
+  "Serverless Computing": {
+    "keywords": [
+      "serverless computing",
+      "cloud computing",
+      "FaaS",
+      "BaaS",
+      "AWS Lambda"
+    ],
+    "link": "/en/glossary/serverless-computing/",
+    "aliases": [
+      "Serverless Computing",
+      "serverless computing"
+    ]
+  },
+  "Shadow AI": {
+    "keywords": [
+      "Shadow AI",
+      "Generative AI",
+      "AI governance",
+      "Data security",
+      "Compliance"
+    ],
+    "link": "/en/glossary/shadow-ai/",
+    "aliases": [
+      "Shadow AI",
+      "shadow ai"
+    ]
+  },
+  "Sharding": {
+    "keywords": [
+      "sharding",
+      "database scaling",
+      "horizontal partitioning",
+      "shard key",
+      "system design"
+    ],
+    "link": "/en/glossary/sharding/",
+    "aliases": [
+      "sharding",
+      "Sharding"
+    ]
+  },
+  "Slot Carryover": {
+    "keywords": [
+      "Slot Carryover",
+      "AI Chatbot",
+      "Dialogue Systems",
+      "Dialogue State Tracking",
+      "Context Management"
+    ],
+    "link": "/en/glossary/slot-carryover/",
+    "aliases": [
+      "slot carryover",
+      "Slot Carryover"
+    ]
+  },
+  "Slot Filling": {
+    "keywords": [
+      "Slot Filling",
+      "Conversational AI",
+      "Chatbot",
+      "Entities",
+      "Intents"
+    ],
+    "link": "/en/glossary/slot-filling/",
+    "aliases": [
+      "slot filling",
+      "Slot Filling"
+    ]
+  },
+  "Small Talk": {
+    "keywords": [
+      "Small Talk",
+      "AI Chatbots",
+      "Virtual Assistants",
+      "Chatbot Interaction",
+      "User Experience"
+    ],
+    "link": "/en/glossary/small-talk/",
+    "aliases": [
+      "small talk",
+      "Small Talk"
+    ]
+  },
+  "Speculative Decoding": {
+    "keywords": [
+      "speculative decoding",
+      "LLM inference",
+      "draft model",
+      "target model",
+      "latency reduction"
+    ],
+    "link": "/en/glossary/speculative-decoding/",
+    "aliases": [
+      "Speculative Decoding",
+      "speculative decoding"
+    ]
+  },
+  "Speech-to-Text Node": {
+    "keywords": [
+      "Speech-to-Text Node",
+      "Automatic Speech Recognition",
+      "AI workflows",
+      "Audio to Text",
+      "Transcription"
+    ],
+    "link": "/en/glossary/speech-to-text-node/",
+    "aliases": [
+      "Speech to Text Node",
+      "speech to text node",
+      "speech-to-text node",
+      "Speech-to-Text Node"
+    ]
+  },
+  "Splash Screen": {
+    "keywords": [
+      "splash screen",
+      "AI chatbot",
+      "mobile app",
+      "user experience",
+      "branding"
+    ],
+    "link": "/en/glossary/splash-screen/",
+    "aliases": [
+      "splash screen",
+      "Splash Screen"
+    ]
+  },
+  "Spot Instances": {
+    "keywords": [
+      "Spot Instances",
+      "cloud compute",
+      "AWS",
+      "Azure",
+      "GCP"
+    ],
+    "link": "/en/glossary/spot-instances/",
+    "aliases": [
+      "Spot Instances",
+      "spot instances"
+    ]
+  },
+  "Stack AI": {
+    "keywords": [
+      "Stack AI",
+      "no-code AI",
+      "LLM platform",
+      "AI workflow automation",
+      "enterprise AI"
+    ],
+    "link": "/en/glossary/stack-ai/",
+    "aliases": [
+      "Stack AI",
+      "stack ai"
+    ]
+  },
+  "State / Context Memory": {
+    "keywords": [
+      "State / Context Memory",
+      "AI chatbots",
+      "conversational AI",
+      "persistent storage",
+      "context window",
+      "LLMs"
+    ],
+    "link": "/en/glossary/state---context-memory/",
+    "aliases": [
+      "State / Context Memory",
+      "state / context memory"
+    ]
+  },
+  "State Machine": {
+    "keywords": [
+      "state machine",
+      "AI chatbot",
+      "automation",
+      "finite state machine",
+      "statecharts"
+    ],
+    "link": "/en/glossary/state-machine/",
+    "aliases": [
+      "State Machine",
+      "state machine"
+    ]
+  },
+  "Sub-flow / Nested Flow": {
+    "keywords": [
+      "sub-flow",
+      "nested flow",
+      "workflow automation",
+      "reusability",
+      "modular workflow"
+    ],
+    "link": "/en/glossary/sub-flow---nested-flow/",
+    "aliases": [
+      "sub flow / nested flow",
+      "Sub flow / Nested Flow",
+      "sub-flow / nested flow",
+      "Sub-flow / Nested Flow"
+    ]
+  },
+  "Suggestion Chips": {
+    "keywords": [
+      "suggestion chips",
+      "chatbots",
+      "conversational UI",
+      "quick replies",
+      "Dialogflow"
+    ],
+    "link": "/en/glossary/suggestion-chips/",
+    "aliases": [
+      "Suggestion Chips",
+      "suggestion chips"
+    ]
+  },
+  "Task-Oriented Bot": {
+    "keywords": [
+      "Task-Oriented Bot",
+      "chatbots",
+      "natural language processing",
+      "AI",
+      "automation"
+    ],
+    "link": "/en/glossary/task-oriented-bot/",
+    "aliases": [
+      "Task Oriented Bot",
+      "task oriented bot",
+      "task-oriented bot",
+      "Task-Oriented Bot"
+    ]
+  },
+  "Team Collaboration / Workspace": {
+    "keywords": [
+      "team collaboration",
+      "workspace",
+      "AI chatbot",
+      "automation",
+      "real-time editing"
+    ],
+    "link": "/en/glossary/team-collaboration---workspace/",
+    "aliases": [
+      "team collaboration / workspace",
+      "Team Collaboration / Workspace"
+    ]
+  },
+  "Technical Debt": {
+    "keywords": [
+      "technical debt",
+      "software development",
+      "AI infrastructure",
+      "code quality",
+      "refactoring"
+    ],
+    "link": "/en/glossary/technical-debt/",
+    "aliases": [
+      "technical debt",
+      "Technical Debt"
+    ]
+  },
+  "Telemetry": {
+    "keywords": [
+      "telemetry",
+      "observability",
+      "data collection",
+      "OpenTelemetry",
+      "monitoring"
+    ],
+    "link": "/en/glossary/telemetry/",
+    "aliases": [
+      "Telemetry",
+      "telemetry"
+    ]
+  },
+  "Text-to-Speech Node": {
+    "keywords": [
+      "Text-to-Speech Node",
+      "TTS",
+      "speech synthesis",
+      "AI chatbots",
+      "automation"
+    ],
+    "link": "/en/glossary/text-to-speech-node/",
+    "aliases": [
+      "text to speech node",
+      "Text to Speech Node",
+      "text-to-speech node",
+      "Text-to-Speech Node"
+    ]
+  },
+  "Throttling (API Throttling)": {
+    "keywords": [
+      "API throttling",
+      "rate limiting",
+      "token bucket",
+      "API gateway",
+      "system protection"
+    ],
+    "link": "/en/glossary/throttling/",
+    "aliases": [
+      "throttling (api throttling)",
+      "Throttling (API Throttling)",
+      "api throttling",
+      "API Throttling",
+      "Throttling",
+      "throttling"
+    ]
+  },
+  "Transparency (AI Transparency)": {
+    "keywords": [
+      "AI transparency",
+      "explainability",
+      "interpretability",
+      "AI governance",
+      "regulatory compliance"
+    ],
+    "link": "/en/glossary/transparency/",
+    "aliases": [
+      "transparency (ai transparency)",
+      "Transparency (AI Transparency)",
+      "ai transparency",
+      "AI Transparency",
+      "Transparency",
+      "transparency"
+    ]
+  },
+  "Typing Indicators": {
+    "keywords": [
+      "typing indicators",
+      "chat applications",
+      "real-time communication",
+      "AI chatbots",
+      "user engagement"
+    ],
+    "link": "/en/glossary/typing-indicators/",
+    "aliases": [
+      "Typing Indicators",
+      "typing indicators"
+    ]
+  },
+  "Utterance Permutation": {
+    "keywords": [
+      "utterance permutation",
+      "NLU models",
+      "AI chatbots",
+      "intent classification",
+      "training data augmentation"
+    ],
+    "link": "/en/glossary/utterance-permutation/",
+    "aliases": [
+      "utterance permutation",
+      "Utterance Permutation"
+    ]
+  },
+  "Utterance": {
+    "keywords": [
+      "utterance",
+      "conversational AI",
+      "chatbot",
+      "NLU",
+      "NLP"
+    ],
+    "link": "/en/glossary/utterance/",
+    "aliases": [
+      "Utterance",
+      "utterance"
+    ]
+  },
+  "Voice Activity Detection (VAD)": {
+    "keywords": [
+      "Voice Activity Detection",
+      "VAD",
+      "Speech Activity Detection",
+      "AI chatbots",
+      "ASR"
+    ],
+    "link": "/en/glossary/vad--voice-activity-detection-/",
+    "aliases": [
+      "Voice Activity Detection (VAD)",
+      "voice activity detection (vad)",
+      "voice activity detection",
+      "Voice Activity Detection",
+      "VAD",
+      "vad"
+    ]
+  },
+  "Variable Injection": {
+    "keywords": [
+      "variable injection",
+      "prompt injection",
+      "AI chatbots",
+      "automation",
+      "LLMs"
+    ],
+    "link": "/en/glossary/variable-injection/",
+    "aliases": [
+      "Variable Injection",
+      "variable injection"
+    ]
+  },
+  "Vector Database: Comprehensive": {
+    "keywords": [
+      "vector database",
+      "vector embeddings",
+      "similarity search",
+      "approximate nearest neighbor",
+      "AI workflows"
+    ],
+    "link": "/en/glossary/vector-database/",
+    "aliases": [
+      "vector database: comprehensive",
+      "Vector Database: Comprehensive"
+    ]
+  },
+  "Version History / Rollback": {
+    "keywords": [
+      "Version History",
+      "Rollback",
+      "AI Chatbot",
+      "Automation Platforms",
+      "Version Control"
+    ],
+    "link": "/en/glossary/version-history---rollback/",
+    "aliases": [
+      "Version History / Rollback",
+      "version history / rollback"
+    ]
+  },
+  "Virtual Assistant": {
+    "keywords": [
+      "virtual assistant",
+      "AI virtual assistant",
+      "remote work",
+      "outsourcing",
+      "administrative support"
+    ],
+    "link": "/en/glossary/virtual-assistant/",
+    "aliases": [
+      "virtual assistant",
+      "Virtual Assistant"
+    ]
+  },
+  "Visual Flow Builder": {
+    "keywords": [
+      "Visual Flow Builder",
+      "no-code workflow",
+      "workflow automation",
+      "AI orchestration",
+      "drag-and-drop interface"
+    ],
+    "link": "/en/glossary/visual-flow-builder/",
+    "aliases": [
+      "Visual Flow Builder",
+      "visual flow builder"
+    ]
+  },
+  "Voicebot Glossary": {
+    "keywords": [
+      "voicebot",
+      "AI",
+      "ASR",
+      "NLP",
+      "TTS",
+      "conversational AI",
+      "customer service",
+      "automation",
+      "NLU",
+      "LLM"
+    ],
+    "link": "/en/glossary/voicebot/",
+    "aliases": [
+      "Voicebot Glossary",
+      "voicebot glossary"
+    ]
+  },
+  "Voiceflow": {
+    "keywords": [
+      "Voiceflow",
+      "conversational AI",
+      "chatbots",
+      "no-code platform",
+      "AI agents"
+    ],
+    "link": "/en/glossary/voiceflow/",
+    "aliases": [
+      "Voiceflow",
+      "voiceflow"
+    ]
+  },
+  "Comprehensive Glossary Guide for AI Chatbot & Automation: Wake Word Technology": {
+    "keywords": [
+      "wake word",
+      "voice AI",
+      "hotword",
+      "speech recognition",
+      "AI assistants"
+    ],
+    "link": "/en/glossary/wake-word/",
+    "aliases": [
+      "Comprehensive Glossary Guide for AI Chatbot & Automation: Wake Word Technology",
+      "comprehensive glossary guide for ai chatbot & automation: wake word technology"
+    ]
+  },
+  "Watermarking": {
+    "keywords": [
+      "AI watermarking",
+      "generative AI",
+      "deepfakes",
+      "content provenance",
+      "digital authenticity"
+    ],
+    "link": "/en/glossary/watermarking/",
+    "aliases": [
+      "Watermarking",
+      "watermarking"
+    ]
+  },
+  "Weaviate": {
+    "keywords": [
+      "Weaviate",
+      "vector database",
+      "semantic search",
+      "vector embeddings",
+      "hybrid search"
+    ],
+    "link": "/en/glossary/weaviate/",
+    "aliases": [
+      "weaviate",
+      "Weaviate"
+    ]
+  },
+  "Web Scraper Node": {
+    "keywords": [
+      "web scraper node",
+      "web scraping",
+      "data extraction",
+      "automation",
+      "Node.js"
+    ],
+    "link": "/en/glossary/web-scraper-node/",
+    "aliases": [
+      "web scraper node",
+      "Web Scraper Node"
+    ]
+  },
+  "Webhook Fulfillment": {
+    "keywords": [
+      "webhook",
+      "fulfillment",
+      "AI chatbots",
+      "automation",
+      "APIs"
+    ],
+    "link": "/en/glossary/webhook-fulfillment/",
+    "aliases": [
+      "Webhook Fulfillment",
+      "webhook fulfillment"
+    ]
+  },
+  "Webhook Trigger": {
+    "keywords": [
+      "webhook trigger",
+      "automation",
+      "AI chatbot",
+      "system integration",
+      "real-time events"
+    ],
+    "link": "/en/glossary/webhook-trigger/",
+    "aliases": [
+      "webhook trigger",
+      "Webhook Trigger"
+    ]
+  },
+  "Webview": {
+    "keywords": [
+      "webview",
+      "chatbot",
+      "mobile app",
+      "interactive content",
+      "user experience"
+    ],
+    "link": "/en/glossary/webview/",
+    "aliases": [
+      "webview",
+      "Webview"
+    ]
+  },
+  "White Labeling": {
+    "keywords": [
+      "white labeling",
+      "AI chatbots",
+      "chatbot platform",
+      "brand control",
+      "agencies"
+    ],
+    "link": "/en/glossary/white-labeling/",
+    "aliases": [
+      "White Labeling",
+      "white labeling"
+    ]
+  },
+  "Wizard of Oz Testing (WoZ)": {
+    "keywords": [
+      "Wizard of Oz Testing",
+      "WoZ testing",
+      "user research",
+      "prototyping",
+      "conversational AI"
+    ],
+    "link": "/en/glossary/wizard-of-oz-testing--woz-/",
+    "aliases": [
+      "wizard of oz testing (woz)",
+      "Wizard of Oz Testing (WoZ)",
+      "Wizard of Oz Testing",
+      "wizard of oz testing",
+      "WoZ",
+      "woz"
+    ]
+  },
+  "Zapier Glossary & Deep-Dive (2024 Edition)": {
+    "keywords": [
+      "Zapier",
+      "automation",
+      "no-code",
+      "AI Agents",
+      "workflows"
+    ],
+    "link": "/en/glossary/zapier/",
+    "aliases": [
+      "zapier glossary & deep dive (2024 edition)",
+      "Zapier Glossary & Deep Dive (2024 Edition)",
+      "zapier glossary & deep-dive (2024 edition)",
+      "Zapier Glossary & Deep-Dive (2024 Edition)",
+      "zapier glossary & deep-dive",
+      "Zapier Glossary & Deep-Dive",
+      "2024 Edition",
+      "2024 edition"
+    ]
+  },
+  "Zero-Shot Chain of Thought": {
+    "keywords": [
+      "Zero-Shot Chain of Thought",
+      "Prompt Engineering",
+      "LLMs",
+      "AI Chatbots",
+      "Reasoning"
+    ],
+    "link": "/en/glossary/zero-shot-chain-of-thought/",
+    "aliases": [
+      "Zero Shot Chain of Thought",
+      "zero shot chain of thought",
+      "Zero-Shot Chain of Thought",
+      "zero-shot chain of thought"
+    ]
+  },
+  "Zero-Touch Resolution": {
+    "keywords": [
+      "Zero-Touch Resolution",
+      "automation",
+      "AI chatbots",
+      "ITSM",
+      "device provisioning"
+    ],
+    "link": "/en/glossary/zero-touch-resolution/",
+    "aliases": [
+      "zero touch resolution",
+      "Zero Touch Resolution",
+      "Zero-Touch Resolution",
+      "zero-touch resolution"
+    ]
+  },
+  "n8n": {
+    "keywords": [
+      "n8n",
+      "workflow automation",
+      "AI integration",
+      "nodes",
+      "self-hosting"
+    ],
+    "link": "/en/glossary/n8n/",
+    "aliases": [
+      "n8n"
+    ]
+  }
+}

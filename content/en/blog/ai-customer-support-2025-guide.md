@@ -7,12 +7,11 @@ tags: ["AI", "Customer Support", "Chatbot", "Generative AI", "Business Efficienc
 categories: ["AI & Machine Learning", "Business Efficiency"]
 image: "/images/blog/ai-customer-support-2025-guide.png"
 ---
-
 ## What is AI Customer Support?
 
 AI customer support is a system that uses artificial intelligence to automatically respond to customer inquiries. Unlike human agents, AI can provide support 24/7, 365 days a year. Key features include instant responses and multilingual capabilities.
 
-This system utilizes several technologies.{{< tooltip text="Technology that enables AI to understand and respond to human language" >}}Natural Language Processing (NLP){{< /tooltip >}} helps AI understand and respond to human language.{{< tooltip text="Mechanism that enables AI to expand and improve its knowledge" >}}Machine Learning{{< /tooltip >}} is a mechanism that allows AI to expand and improve its knowledge. By integrating with databases, AI can reference vast amounts of information. Voice and image recognition capabilities enable handling of non-text inputs.
+This system utilizes several technologies.{{< tooltip text="Technology that enables AI to understand and respond to human language" >}}[Natural Language Processing (NLP)](/en/glossary/natural-language-processing--nlp-/){{< /tooltip >}} helps AI understand and respond to human language.{{< tooltip text="Mechanism that enables AI to expand and improve its knowledge" >}}Machine Learning{{< /tooltip >}} is a mechanism that allows AI to expand and improve its knowledge. By integrating with databases, AI can reference vast amounts of information. Voice and image recognition capabilities enable handling of non-text inputs.
 
 AI customer support includes various forms such as automated FAQ responses, AI chatbots, and virtual assistants. For example, tools used in SmartWeb's construction services such as{{< tooltip text="Globally used customer support and helpdesk software" >}}LiveAgent{{< /tooltip >}}and{{< tooltip text="Chatbot platform leveraging cutting-edge generative AI technology" >}}FlowHunt{{< /tooltip >}} are AI chatbots that use company manuals and FAQs as knowledge bases to provide quick and accurate answers to user questions.
 
@@ -73,7 +72,7 @@ Salesforce is revolutionizing the traditional chatbot concept with{{< tooltip te
 
 ### 2. Intuit: AI-powered Financial Support Automation
 
-Intuit leveraged Amazon Connect to build an integrated customer contact center. During tax season, they scale from 6,000 to 11,000 agents according to demand, completing deployment in 2 weeks instead of the traditional 6 months. They process 275 million minutes of customer interactions annually, achieving accurate call transcription and sentiment analysis through{{< tooltip text="Machine learning-powered call analysis service" >}}Contact Lens for Amazon Connect{{< /tooltip >}}.
+Intuit leveraged Amazon Connect to build an integrated customer contact center. During tax season, they scale from 6,000 to 11,000 agents according to demand, completing deployment in 2 weeks instead of the traditional 6 months. They process 275 million minutes of customer interactions annually, achieving accurate call transcription and [sentiment analysis](/en/glossary/sentiment-analysis/) through{{< tooltip text="Machine learning-powered call analysis service" >}}Contact Lens for Amazon Connect{{< /tooltip >}}.
 
 **Reference:**
 - [Intuit Case Study - Amazon Connect Implementation](https://aws.amazon.com/solutions/case-studies/intuit-contact-center-case-study/)

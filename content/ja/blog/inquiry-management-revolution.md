@@ -4,7 +4,6 @@ date: 2025-11-19
 draft: false
 image: "/images/blog/inquiry-management-revolution.png"
 ---
-
 # 月曜朝の悪夢：メールの海で溺れる前に
 
 「おはようございます！週末の問い合わせ、確認しました？」

@@ -12,7 +12,7 @@ draft: false
 
 **Canonical form** is the process of transforming various possible representations of a concept, input, or data into a single, standardized, and preferred representation—called the *canonical form*. In practical terms, this means that for any given type of data, resource, or entity that can be represented in multiple ways, one is selected as the authoritative or "canonized" form for consistency, processing, and comparison.
 
-In the context of AI chatbots, NLP, and automation, canonicalization is essential to ensure that various user expressions, synonyms, and data variants are mapped to a single underlying meaning or action. For example, the user utterances "hamburger", "cheeseburger", and "burgers" may all be mapped to the canonical form “BURGER”. This is crucial for intent recognition, workflow triggering, and analytics.
+In the context of AI chatbots, NLP, and automation, canonicalization is essential to ensure that various user expressions, synonyms, and data variants are mapped to a single underlying meaning or action. For example, the user utterances "hamburger", "cheeseburger", and "burgers" may all be mapped to the canonical form “BURGER”. This is crucial for [intent recognition](/en/glossary/intent-recognition/), workflow triggering, and analytics.
 
 > "A canonical form means that values of a particular type of resource can be described or represented in multiple ways, and one of those ways is chosen as the favored canonical form. That form is *canonized*, like books that made it into the bible, and the other forms are not."
 — [Stack Overflow: Canonical Form or Canonical Representation in Java](https://stackoverflow.com/questions/280107/what-does-the-term-canonical-form-or-canonical-representation-in-java-mean)
@@ -187,7 +187,7 @@ Modern AI chatbots increasingly use semantic similarity models, such as sentence
 | Use Case                 | Description                                                                              |
 |--------------------------|-----------------------------------------------------------------------------------------|
 | Intent Recognition       | Mapping “I want fries”, “can I get chips?” → “ORDER_FRIES” intent                       |
-| Entity Extraction        | Mapping “NYC”, “New York City”, “Big Apple” → “NEW_YORK_CITY”                           |
+| [Entity Extraction](/en/glossary/entity-extraction/)        | Mapping “NYC”, “New York City”, “Big Apple” → “NEW_YORK_CITY”                           |
 | Guardrail Enforcement    | Restricting bot actions to safe, predefined canonical forms                             |
 | Data Integration         | Standardizing customer IDs or product codes from disparate sources                      |
 | API Input Normalization  | Mapping external parameters to internal canonical forms                                 |
@@ -209,7 +209,7 @@ A **Canonical Data Model (CDM)** is a design pattern used to create a unified, c
 
 ## Common Challenges
 
-- **Ambiguity in Mapping**: Some user inputs can validly map to multiple canonical forms, requiring context for disambiguation.
+- **Ambiguity in Mapping**: Some user inputs can validly map to multiple canonical forms, requiring context for [disambiguation](/en/glossary/disambiguation/).
 - **Maintenance Overhead**: As vocabulary and use cases evolve, synonym and mapping lists must be updated.
 - **Multilingual Inputs**: Canonicalization must handle multiple languages, dialects, and regional slang.
 - **Edge Cases**: User creativity, typos, or rare synonyms may require robust handling via machine learning or manual review.

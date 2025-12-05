@@ -12,7 +12,7 @@ draft: false
 ---
 ## What is Slot Filling?
 
-Slot filling is a core technique in task-oriented dialog systems for conversational AI. It focuses on identifying and extracting required parameters—called slots—from user queries. These slots are necessary to fulfill a specific action, such as booking a flight, ordering food, or scheduling an appointment.
+Slot filling is a core technique in task-oriented dialog systems for [conversational AI](/en/glossary/conversational-ai/). It focuses on identifying and extracting required parameters—called slots—from user queries. These slots are necessary to fulfill a specific action, such as booking a flight, ordering food, or scheduling an appointment.
 
 For example, in the query:
 

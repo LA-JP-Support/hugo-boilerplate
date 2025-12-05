@@ -30,7 +30,7 @@ Effective slot carryover eliminates the need for users to repeat information, su
 > “Slot carryover is the task where a model makes a binary decision for each candidate slot from previous dialogue context, determining if it should be carried over to the current turn to support intent fulfillment.”  
 > — [Chen et al., 2019, arXiv:1906.01149](https://arxiv.org/abs/1906.01149)
 
-This process is fundamental to dialogue state tracking (DST), as it involves:
+This process is fundamental to [dialogue state tracking](/en/glossary/dialogue-state-tracking/) (DST), as it involves:
 
 - **Tracking**: Monitoring the emergence and evolution of slots and their values throughout the dialogue.
 - **Mapping**: Translating slots between potentially different schemas or domains (e.g., mapping “WeatherLocation” in a weather app to “City” in a travel booking app).
@@ -157,7 +157,7 @@ Key performance metrics for slot carryover include:
 
 - **Precision**: Proportion of carried-over slots that are correct.
 - **Recall**: Proportion of relevant slots that are successfully carried over.
-- **F1 Score**: Harmonic mean of precision and recall.
+- **F1 Score**: Harmonic mean of [precision and recall](/en/glossary/precision-and-recall/).
 
 | Method           | Precision | Recall | F1    |
 |------------------|-----------|--------|-------|
@@ -184,7 +184,7 @@ Key performance metrics for slot carryover include:
 #### Privacy and Scalability
 
 - **Data Retention**: Strict policies for what information is stored and for how long.
-- **User Consent**: Mechanisms for opt-in/opt-out and transparency.
+- **User Consent**: Mechanisms for opt-in/opt-out and [transparency](/en/glossary/transparency/).
 - **Secure Storage**: Encryption and access controls for sensitive slot values.
 - **Scalability**: Efficient indexing and retrieval to support large user bases and long dialogue histories.
 
@@ -279,5 +279,5 @@ User: Yes, please.
 For more technical and code-level examples, consult the following resources and their references:  
 - [Chen et al., 2019, arXiv PDF](https://arxiv.org/pdf/1906.01149)  
 - [ISCA Archive: Naik et al. 2018](https://www.isca-archive.org/interspeech_2018/naik18_interspeech.html)  
-- [Hugging Face DST Dataset Collection](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets
+- [[Hugging Face](/en/glossary/hugging-face/) DST Dataset Collection](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets
 

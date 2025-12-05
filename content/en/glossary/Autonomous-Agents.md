@@ -28,7 +28,7 @@ Given a goal like “resolve a customer complaint,” an autonomous agent might:
 
 ## How Autonomous Agents Work: Step by Step
 
-Autonomous agents combine multiple advanced AI disciplines—including machine learning, natural language processing (NLP), and real-time data analysis—to function in dynamic environments. ([Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents/), [Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents/))
+Autonomous agents combine multiple advanced AI disciplines—including machine learning, [natural language processing (NLP)](/en/glossary/natural-language-processing--nlp-/), and real-time data analysis—to function in dynamic environments. ([Salesforce](https://www.salesforce.com/agentforce/ai-agents/autonomous-agents/), [Shelf.io](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents/))
 
 ### 1. Perception & Data Collection
 - Gather information from diverse sources: databases, sensors, conversations, APIs, web scraping.
@@ -206,7 +206,7 @@ To maximize value and minimize risk ([Salesforce](https://www.salesforce.com/age
 4. **Seamless Integration**: Connect agents with CRM, ERP, and knowledge bases.
 5. **Focus on User Experience**: Design intuitive, helpful, transparent interactions.
 6. **Continuous Monitoring & Optimization**: Track performance, gather feedback, iterate.
-7. **Plan for Human Oversight**: Define escalation paths, maintain “human-in-the-loop” for critical tasks.
+7. **Plan for Human Oversight**: Define escalation paths, maintain “[human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/)” for critical tasks.
 8. **Ensure Data Privacy & Security**: Implement access controls, encryption, and compliance.
 9. **Promote Ethical Use**: Set guidelines for responsible AI, regularly review decisions for fairness.
 10. **Educate & Train Staff**: Upskill teams to collaborate with, supervise, and troubleshoot agents.

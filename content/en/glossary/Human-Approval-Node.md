@@ -11,7 +11,7 @@ draft: false
 ## Definition
 
 **Human Approval Node:**  
-A workflow step that pauses automation until a designated human user reviews the task and clicks 'Approve' or 'Reject' (or provides feedback) via a dashboard, UI, or communication channel. This step—also known as a "Human-in-the-Loop" (HITL) checkpoint—enforces human oversight and decision-making at predefined points in automated or agentic workflows.  
+A workflow step that pauses automation until a designated human user reviews the task and clicks 'Approve' or 'Reject' (or provides feedback) via a dashboard, UI, or communication channel. This step—also known as a "[Human-in-the-Loop](/en/glossary/human-in-the-loop--hitl-/)" (HITL) checkpoint—enforces human oversight and decision-making at predefined points in automated or agentic workflows.  
 **References:**  
 - [Permit.io: Human-in-the-Loop for AI Agents](https://www.permit.io/blog/human-in-the-loop-for-ai-agents-best-practices-frameworks-use-cases-and-demo)
 - [n8n: Human-in-the-Loop Workflow Tutorial (YouTube)](https://www.youtube.com/watch?v=n6llypVyGx8)
@@ -38,7 +38,7 @@ AI agents and automation can hallucinate, misinterpret, or act outside intended 
 - **Approval & Rejection Paths:** Supports distinct workflow branches based on human input.
 - **Real-Time Updates:** Status changes are reflected instantly in dashboards or task lists.
 - **Notifications:** Email, Slack, or in-app alerts notify reviewers of pending tasks.
-- **Audit Logging:** All actions and decisions are logged immutably for transparency and auditability.
+- **Audit Logging:** All actions and decisions are logged immutably for [transparency](/en/glossary/transparency/) and auditability.
 - **Flexible Input Types:** Supports binary (approve/reject) and open-ended (comments, modifications) feedback.
 - **Seamless Integration:** Compatible with major workflow engines (LangGraph, n8n, Permit.io, etc.).
 - **Timeouts and Escalation:** Configurable wait times for response with fallback escalation.

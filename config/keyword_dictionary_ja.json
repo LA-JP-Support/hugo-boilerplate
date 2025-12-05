@@ -1,52 +1,2322 @@
 {
+  "API エンドポイント設定": {
+    "keywords": [
+      "API エンドポイント設定",
+      "API セキュリティ",
+      "API ドキュメント",
+      "REST API 設計",
+      "API モニタリング",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "ワークフロー自動化",
+      "業務自動化",
+      "RPA",
+      "API",
+      "API連携",
+      "インターフェース"
+    ],
+    "link": "/ja/glossary/api-endpoint-configuration/",
+    "aliases": [
+      "API エンドポイント設定",
+      "api エンドポイント設定"
+    ]
+  },
+  "敵対的攻撃": {
+    "keywords": [
+      "敵対的攻撃",
+      "AI セキュリティ",
+      "機械学習",
+      "敵対的サンプル",
+      "サイバーセキュリティ"
+    ],
+    "link": "/ja/glossary/adversarial-attack/",
+    "aliases": [
+      "敵対的攻撃"
+    ]
+  },
+  "敵対的ロバストネス": {
+    "keywords": [
+      "敵対的ロバストネス",
+      "敵対的攻撃",
+      "AI安全性",
+      "機械学習",
+      "ディープラーニング"
+    ],
+    "link": "/ja/glossary/adversarial-robustness/",
+    "aliases": [
+      "敵対的ロバストネス"
+    ]
+  },
+  "アルゴリズミック・アカウンタビリティ": {
+    "keywords": [
+      "アルゴリズミック・アカウンタビリティ",
+      "AI倫理",
+      "AIガバナンス",
+      "透明性",
+      "説明可能性"
+    ],
+    "link": "/ja/glossary/algorithmic-accountability/",
+    "aliases": [
+      "アルゴリズミック・アカウンタビリティ"
+    ]
+  },
+  "アライメント問題": {
+    "keywords": [
+      "AIアライメント",
+      "ミスアライメント",
+      "AI倫理",
+      "AI安全性",
+      "報酬ハッキング"
+    ],
+    "link": "/ja/glossary/alignment-problem/",
+    "aliases": [
+      "アライメント問題"
+    ]
+  },
+  "環境知能（AmI）": {
+    "keywords": [
+      "環境知能",
+      "AmI",
+      "スマート環境",
+      "コンテキスト認識システム",
+      "AI自動化",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "AIエージェント",
+      "自律型エージェント",
+      "エージェント",
+      "ワークフロー自動化",
+      "業務自動化",
+      "RPA"
+    ],
+    "link": "/ja/glossary/ambient-intelligence/",
+    "aliases": [
+      "環境知能（ami）",
+      "環境知能（AmI）"
+    ]
+  },
+  "アトリビューションモデリング": {
+    "keywords": [
+      "アトリビューションモデリング",
+      "マーケティングアトリビューション",
+      "コンバージョントラッキング",
+      "カスタマージャーニー",
+      "マーケティングチャネル"
+    ],
+    "link": "/ja/glossary/attribution-modeling/",
+    "aliases": [
+      "アトリビューションモデリング"
+    ]
+  },
+  "アトリビューションウィンドウ": {
+    "keywords": [
+      "アトリビューションウィンドウ",
+      "マーケティングアトリビューション",
+      "コンバージョンウィンドウ",
+      "キャンペーン効果測定",
+      "デジタル広告"
+    ],
+    "link": "/ja/glossary/attribution-window/",
+    "aliases": [
+      "アトリビューションウィンドウ"
+    ]
+  },
+  "オートレイアウト": {
+    "keywords": [
+      "オートレイアウト",
+      "Figma",
+      "UIデザイン",
+      "レスポンシブデザイン",
+      "制約",
+      "ワークフロー自動化",
+      "業務自動化",
+      "RPA"
+    ],
+    "link": "/ja/glossary/auto-layout/",
+    "aliases": [
+      "オートレイアウト"
+    ]
+  },
+  "自動化ワークフロー": {
+    "keywords": [
+      "自動化ワークフロー",
+      "ワークフロー自動化",
+      "ビジネスプロセス自動化",
+      "RPA",
+      "プロセス自動化",
+      "AIエージェント",
+      "自律型エージェント",
+      "エージェント",
+      "業務自動化",
+      "API",
+      "API連携",
+      "インターフェース"
+    ],
+    "link": "/ja/glossary/automated-workflows/",
+    "aliases": [
+      "自動化ワークフロー"
+    ]
+  },
+  "オートスケーリング": {
+    "keywords": [
+      "オートスケーリング",
+      "クラウドコンピューティング",
+      "リソース割り当て",
+      "水平スケーリング",
+      "垂直スケーリング"
+    ],
+    "link": "/ja/glossary/autoscaling/",
+    "aliases": [
+      "オートスケーリング"
+    ]
+  },
+  "バッチ処理": {
+    "keywords": [
+      "バッチ処理",
+      "ストリーム処理",
+      "AIインフラストラクチャ",
+      "データ処理",
+      "ETL"
+    ],
+    "link": "/ja/glossary/batch-processing/",
+    "aliases": [
+      "バッチ処理"
+    ]
+  },
+  "バイアス緩和": {
+    "keywords": [
+      "バイアス緩和",
+      "機械学習バイアス",
+      "AI倫理",
+      "アルゴリズムの公平性",
+      "責任あるAI"
+    ],
+    "link": "/ja/glossary/bias-mitigation/",
+    "aliases": [
+      "バイアス緩和"
+    ]
+  },
+  "ボットアバター": {
+    "keywords": [
+      "ボットアバター",
+      "チャットボットペルソナ",
+      "AIアシスタント",
+      "デジタルヒューマン",
+      "ユーザー体験",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "自然言語処理",
+      "NLP",
+      "言語処理",
+      "AIエージェント",
+      "自律型エージェント",
+      "エージェント"
+    ],
+    "link": "/ja/glossary/bot-avatar/",
+    "aliases": [
+      "ボットアバター"
+    ]
+  },
+  "ボット対応率": {
+    "keywords": [
+      "ボット対応率",
+      "チャットボットパフォーマンス",
+      "AIチャットボット",
+      "カスタマーサービス自動化",
+      "エスカレーション率",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "大規模言語モデル",
+      "LLM",
+      "言語モデル",
+      "自然言語処理",
+      "NLP",
+      "言語処理",
+      "AIエージェント",
+      "自律型エージェント",
+      "エージェント",
+      "RAG",
+      "検索拡張生成",
+      "Retrieval-Augmented Generation"
+    ],
+    "link": "/ja/glossary/bot-containment-rate/",
+    "aliases": [
+      "ボット対応率"
+    ]
+  },
+  "ボットプレス": {
+    "keywords": [
+      "Botpress",
+      "AIチャットボット",
+      "LLM",
+      "会話型AI",
+      "ビジュアルフローエディタ",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "大規模言語モデル",
+      "言語モデル",
+      "自然言語処理",
+      "NLP",
+      "言語処理",
+      "AIエージェント",
+      "自律型エージェント",
+      "エージェント",
+      "プロンプト",
+      "プロンプトエンジニアリング",
+      "RAG",
+      "検索拡張生成",
+      "Retrieval-Augmented Generation",
+      "ワークフロー自動化",
+      "業務自動化",
+      "RPA",
+      "API",
+      "API連携",
+      "インターフェース"
+    ],
+    "link": "/ja/glossary/botpress/",
+    "aliases": [
+      "ボットプレス"
+    ]
+  },
+  "バウンスレート": {
+    "keywords": [
+      "バウンスレート",
+      "ウェブ解析",
+      "ユーザーエンゲージメント",
+      "SEO",
+      "Google Analytics 4"
+    ],
+    "link": "/ja/glossary/bounce-rate/",
+    "aliases": [
+      "バウンスレート"
+    ]
+  },
+  "正規形": {
+    "keywords": [
+      "正規形",
+      "データ正規化",
+      "AIチャットボット",
+      "意図認識",
+      "一意表現",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "自然言語処理",
+      "NLP",
+      "言語処理",
+      "ワークフロー自動化",
+      "業務自動化",
+      "RPA",
+      "API",
+      "API連携",
+      "インターフェース"
+    ],
+    "link": "/ja/glossary/canonical-form/",
+    "aliases": [
+      "正規形"
+    ]
+  },
+  "カルーセル（UIコンポーネント）": {
+    "keywords": [
+      "カルーセル",
+      "UIコンポーネント",
+      "ウェブデザイン",
+      "UXデザイン",
+      "アクセシビリティ",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "プロンプト",
+      "プロンプトエンジニアリング"
+    ],
+    "link": "/ja/glossary/carousel/",
+    "aliases": [
+      "カルーセル（uiコンポーネント）",
+      "カルーセル（UIコンポーネント）"
+    ]
+  },
+  "カオスエンジニアリング": {
+    "keywords": [
+      "カオスエンジニアリング",
+      "システムレジリエンス",
+      "障害注入",
+      "分散システム",
+      "SRE"
+    ],
+    "link": "/ja/glossary/chaos-engineering/",
+    "aliases": [
+      "カオスエンジニアリング"
+    ]
+  },
+  "チャットシミュレーター": {
+    "keywords": [
+      "チャットシミュレーター",
+      "チャットボットテスト",
+      "会話型AI",
+      "NLU検証",
+      "エージェントトレーニング",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "大規模言語モデル",
+      "LLM",
+      "言語モデル",
+      "自然言語処理",
+      "NLP",
+      "言語処理",
+      "AIエージェント",
+      "自律型エージェント",
+      "エージェント",
+      "ワークフロー自動化",
+      "業務自動化",
+      "RPA"
+    ],
+    "link": "/ja/glossary/chat-simulator/",
+    "aliases": [
+      "チャットシミュレーター"
+    ]
+  },
+  "Chroma": {
+    "keywords": [
+      "Chroma",
+      "ベクトルデータベース",
+      "埋め込み",
+      "AI ネイティブアプリケーション",
+      "セマンティック検索"
+    ],
+    "link": "/ja/glossary/chroma/",
+    "aliases": [
+      "chroma",
+      "Chroma"
+    ]
+  },
+  "クリックマップ": {
+    "keywords": [
+      "クリックマップ",
+      "ウェブ解析",
+      "ユーザーインタラクション",
+      "UX最適化",
+      "コンバージョン率最適化"
+    ],
+    "link": "/ja/glossary/click-map/",
+    "aliases": [
+      "クリックマップ"
+    ]
+  },
+  "コードブロック（Python/JS）": {
+    "keywords": [
+      "コードブロック",
+      "Python",
+      "JavaScript",
+      "自動化",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "ワークフロー自動化",
+      "業務自動化",
+      "RPA",
+      "API",
+      "API連携",
+      "インターフェース"
+    ],
+    "link": "/ja/glossary/code-block--python-js-/",
+    "aliases": [
+      "コードブロック（python/js）",
+      "コードブロック（Python/JS）"
+    ]
+  },
+  "条件付きルーター": {
+    "keywords": [
+      "条件付きルーター",
+      "ワークフロー自動化",
+      "ルールベース分岐",
+      "AIチャットボット",
+      "データルーティング",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "業務自動化",
+      "RPA",
+      "API",
+      "API連携",
+      "インターフェース"
+    ],
+    "link": "/ja/glossary/conditional-router/",
+    "aliases": [
+      "条件付きルーター"
+    ]
+  },
+  "信頼度しきい値": {
+    "keywords": [
+      "信頼度しきい値",
+      "AIモデル",
+      "機械学習",
+      "信頼度スコア",
+      "予測信頼性",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "AIエージェント",
+      "自律型エージェント",
+      "エージェント"
+    ],
+    "link": "/ja/glossary/confidence-threshold/",
+    "aliases": [
+      "信頼度しきい値"
+    ]
+  },
+  "コンテンツモデレーション": {
+    "keywords": [
+      "コンテンツモデレーション",
+      "ユーザー生成コンテンツ",
+      "AIモデレーション",
+      "プラットフォームガイドライン",
+      "コミュニティ基準"
+    ],
+    "link": "/ja/glossary/content-moderation/",
+    "aliases": [
+      "コンテンツモデレーション"
+    ]
+  },
+  "コンテキストスイッチング": {
+    "keywords": [
+      "コンテキストスイッチング",
+      "AIチャットボット",
+      "自動化",
+      "会話管理",
+      "LLM",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "大規模言語モデル",
+      "言語モデル",
+      "自然言語処理",
+      "NLP",
+      "言語処理"
+    ],
+    "link": "/ja/glossary/context-switching/",
+    "aliases": [
+      "コンテキストスイッチング"
+    ]
+  },
+  "会話ドリフト": {
+    "keywords": [
+      "会話ドリフト",
+      "AIチャットボット",
+      "仮想アシスタント",
+      "チャットボットコンテキスト",
+      "ドリフト検出",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "大規模言語モデル",
+      "LLM",
+      "言語モデル",
+      "自然言語処理",
+      "NLP",
+      "言語処理",
+      "AIエージェント",
+      "自律型エージェント",
+      "エージェント",
+      "プロンプト",
+      "プロンプトエンジニアリング"
+    ],
+    "link": "/ja/glossary/conversation-drift/",
+    "aliases": [
+      "会話ドリフト"
+    ]
+  },
+  "会話型AI": {
+    "keywords": [
+      "会話型AI",
+      "自然言語処理",
+      "機械学習",
+      "チャットボット",
+      "バーチャルアシスタント",
+      "対話型AI",
+      "会話AI",
+      "NLP",
+      "言語処理",
+      "AIエージェント",
+      "自律型エージェント",
+      "エージェント",
+      "生成AI",
+      "ジェネレーティブAI",
+      "GenAI",
+      "ワークフロー自動化",
+      "業務自動化",
+      "RPA",
+      "API",
+      "API連携",
+      "インターフェース"
+    ],
+    "link": "/ja/glossary/conversational-ai/",
+    "aliases": [
+      "会話型AI",
+      "会話型ai"
+    ]
+  },
+  "コンバージョンファネル": {
+    "keywords": [
+      "コンバージョンファネル",
+      "マーケティングファネル",
+      "セールスファネル",
+      "コンバージョン率最適化",
+      "ユーザージャーニー"
+    ],
+    "link": "/ja/glossary/conversion-funnel/",
+    "aliases": [
+      "コンバージョンファネル"
+    ]
+  },
   "AIコパイロット": {
-    "keywords": ["AIコパイロット", "コパイロット", "AI支援"],
+    "keywords": [
+      "AIコパイロット",
+      "人工知能",
+      "大規模言語モデル",
+      "デジタルアシスタント",
+      "生産性",
+      "コパイロット",
+      "AI支援"
+    ],
     "link": "/ja/glossary/copilot/",
-    "aliases": ["AIコパイロット", "コパイロット", "AI Copilot"]
+    "aliases": [
+      "aiコパイロット",
+      "AIコパイロット"
+    ]
   },
-  "チャットボット": {
-    "keywords": ["チャットボット", "対話型AI", "会話AI"],
-    "link": "/ja/glossary/chatbot/",
-    "aliases": ["チャットボット", "chatbot", "チャットBot"]
+  "コサイン類似度": {
+    "keywords": [
+      "コサイン類似度",
+      "機械学習",
+      "自然言語処理",
+      "レコメンデーションシステム",
+      "ベクトル類似度"
+    ],
+    "link": "/ja/glossary/cosine-similarity/",
+    "aliases": [
+      "コサイン類似度"
+    ]
   },
-  "大規模言語モデル": {
-    "keywords": ["大規模言語モデル", "LLM", "言語モデル"],
-    "link": "/ja/glossary/large-language-model/",
-    "aliases": ["大規模言語モデル", "LLM", "大規模言語モデル（LLM）"]
+  "AIチャットボット&自動化におけるコスト見積もり": {
+    "keywords": [
+      "コスト見積もり",
+      "AIチャットボット",
+      "自動化",
+      "トークン使用量",
+      "AI価格設定"
+    ],
+    "link": "/ja/glossary/cost-estimation/",
+    "aliases": [
+      "aiチャットボット&自動化におけるコスト見積もり",
+      "AIチャットボット&自動化におけるコスト見積もり"
+    ]
   },
-  "自然言語処理": {
-    "keywords": ["自然言語処理", "NLP", "言語処理"],
-    "link": "/ja/glossary/natural-language-processing/",
-    "aliases": ["自然言語処理", "NLP", "自然言語処理（NLP）"]
+  "Cronスケジュール": {
+    "keywords": [
+      "cronスケジュール",
+      "cron式",
+      "タスク自動化",
+      "crontab",
+      "Unix Linuxスケジューリング"
+    ],
+    "link": "/ja/glossary/cron-schedule/",
+    "aliases": [
+      "Cronスケジュール",
+      "cronスケジュール"
+    ]
   },
-  "AIエージェント": {
-    "keywords": ["AIエージェント", "自律型エージェント", "エージェント"],
-    "link": "/ja/glossary/ai-agent/",
-    "aliases": ["AIエージェント", "AI Agent", "エージェント"]
+  "DTMF(デュアルトーン多重周波数)": {
+    "keywords": [
+      "DTMF",
+      "電気通信",
+      "IVR",
+      "VoIP",
+      "PCI DSS"
+    ],
+    "link": "/ja/glossary/dtmf--dual-tone-multi-frequency-/",
+    "aliases": [
+      "DTMF(デュアルトーン多重周波数)",
+      "dtmf(デュアルトーン多重周波数)",
+      "デュアルトーン多重周波数",
+      "dtmf",
+      "DTMF"
+    ]
   },
-  "生成AI": {
-    "keywords": ["生成AI", "ジェネレーティブAI", "GenAI"],
-    "link": "/ja/glossary/generative-ai/",
-    "aliases": ["生成AI", "Generative AI", "ジェネレーティブAI"]
+  "データポイズニング": {
+    "keywords": [
+      "データポイズニング",
+      "AIセキュリティ",
+      "機械学習",
+      "敵対的攻撃",
+      "モデルの整合性"
+    ],
+    "link": "/ja/glossary/data-poisoning/",
+    "aliases": [
+      "データポイズニング"
+    ]
   },
-  "プロンプト": {
-    "keywords": ["プロンプト", "プロンプトエンジニアリング"],
-    "link": "/ja/glossary/prompt/",
-    "aliases": ["プロンプト", "prompt", "プロンプト入力"]
+  "デバッグコンソール / トレース": {
+    "keywords": [
+      "デバッグコンソール",
+      "トレース",
+      "自動化フロー",
+      "AIチャットボット",
+      "APIプロキシ"
+    ],
+    "link": "/ja/glossary/debug-console---trace/",
+    "aliases": [
+      "デバッグコンソール / トレース"
+    ]
   },
-  "RAG": {
-    "keywords": ["RAG", "検索拡張生成", "Retrieval-Augmented Generation"],
-    "link": "/ja/glossary/rag/",
-    "aliases": ["RAG", "検索拡張生成", "Retrieval-Augmented Generation"]
+  "ディープフェイク検出": {
+    "keywords": [
+      "ディープフェイク検出",
+      "AI生成メディア",
+      "合成メディア",
+      "詐欺防止",
+      "誤情報"
+    ],
+    "link": "/ja/glossary/deepfake-detection/",
+    "aliases": [
+      "ディープフェイク検出"
+    ]
   },
-  "ワークフロー自動化": {
-    "keywords": ["ワークフロー自動化", "業務自動化", "RPA"],
-    "link": "/ja/glossary/workflow-automation/",
-    "aliases": ["ワークフロー自動化", "ワークフロー", "業務自動化"]
+  "Delay / Sleepノード": {
+    "keywords": [
+      "Delayノード",
+      "Sleepノード",
+      "自動化ワークフロー",
+      "AIチャットボット",
+      "ワークフローオーケストレーション"
+    ],
+    "link": "/ja/glossary/delay---sleep-node/",
+    "aliases": [
+      "delay / sleepノード",
+      "Delay / Sleepノード"
+    ]
   },
-  "API": {
-    "keywords": ["API", "API連携", "インターフェース"],
-    "link": "/ja/glossary/api/",
-    "aliases": ["API", "API連携", "REST API"]
+  "対話管理": {
+    "keywords": [
+      "対話管理",
+      "会話型AI",
+      "AIチャットボット",
+      "状態追跡",
+      "対話ポリシー"
+    ],
+    "link": "/ja/glossary/dialogue-management/",
+    "aliases": [
+      "対話管理"
+    ]
+  },
+  "対話状態追跡": {
+    "keywords": [
+      "対話状態追跡",
+      "会話型AI",
+      "チャットボット",
+      "対話システム",
+      "スロットフィリング"
+    ],
+    "link": "/ja/glossary/dialogue-state-tracking/",
+    "aliases": [
+      "対話状態追跡"
+    ]
+  },
+  "Dify": {
+    "keywords": [
+      "Dify",
+      "LLMOps",
+      "AIアプリケーション",
+      "RAG",
+      "エージェントワークフロー"
+    ],
+    "link": "/ja/glossary/dify/",
+    "aliases": [
+      "dify",
+      "Dify"
+    ]
+  },
+  "曖昧性解消": {
+    "keywords": [
+      "曖昧性解消",
+      "AIチャットボット",
+      "ユーザー意図",
+      "会話型AI",
+      "自然言語理解"
+    ],
+    "link": "/ja/glossary/disambiguation/",
+    "aliases": [
+      "曖昧性解消"
+    ]
+  },
+  "ドキュメントローダー": {
+    "keywords": [
+      "Document Loader",
+      "AIパイプライン",
+      "LLM",
+      "データ取り込み",
+      "LangChain"
+    ],
+    "link": "/ja/glossary/document-loader/",
+    "aliases": [
+      "ドキュメントローダー"
+    ]
+  },
+  "滞在時間": {
+    "keywords": [
+      "滞在時間",
+      "SEO",
+      "ユーザーエンゲージメント",
+      "Google Analytics",
+      "ランキング要因"
+    ],
+    "link": "/ja/glossary/dwell-time/",
+    "aliases": [
+      "滞在時間"
+    ]
+  },
+  "エッジAI": {
+    "keywords": [
+      "エッジAI",
+      "エッジコンピューティング",
+      "人工知能",
+      "IoT",
+      "機械学習"
+    ],
+    "link": "/ja/glossary/edge-ai/",
+    "aliases": [
+      "エッジAI",
+      "エッジai"
+    ]
+  },
+  "埋め込みスクリプト": {
+    "keywords": [
+      "埋め込みスクリプト",
+      "チャットボット",
+      "JavaScript",
+      "ウェブサイト統合",
+      "AI自動化"
+    ],
+    "link": "/ja/glossary/embed-script/",
+    "aliases": [
+      "埋め込みスクリプト"
+    ]
+  },
+  "エンティティ抽出（固有表現認識、NER）": {
+    "keywords": [
+      "エンティティ抽出",
+      "固有表現認識",
+      "NLP",
+      "AIチャットボット",
+      "テキスト分析"
+    ],
+    "link": "/ja/glossary/entity-extraction/",
+    "aliases": [
+      "エンティティ抽出（固有表現認識、NER）",
+      "エンティティ抽出（固有表現認識、ner）"
+    ]
+  },
+  "エンティティリンキング": {
+    "keywords": [
+      "エンティティリンキング",
+      "ナレッジベース",
+      "固有表現認識",
+      "ナレッジグラフ",
+      "自然言語処理"
+    ],
+    "link": "/ja/glossary/entity-linking/",
+    "aliases": [
+      "エンティティリンキング"
+    ]
+  },
+  "環境変数(シークレット)": {
+    "keywords": [
+      "環境変数",
+      "シークレット管理",
+      "APIキー",
+      "アプリケーションセキュリティ",
+      "設定管理"
+    ],
+    "link": "/ja/glossary/environment-variables--secrets-/",
+    "aliases": [
+      "環境変数(シークレット)",
+      "シークレット",
+      "環境変数"
+    ]
+  },
+  "エラーハンドラー / Try-Catch": {
+    "keywords": [
+      "エラーハンドラー",
+      "try-catch",
+      "例外処理",
+      "自動化",
+      "AIチャットボット"
+    ],
+    "link": "/ja/glossary/error-handler---try-catch/",
+    "aliases": [
+      "エラーハンドラー / try catch",
+      "エラーハンドラー / Try Catch",
+      "エラーハンドラー / try-catch",
+      "エラーハンドラー / Try-Catch"
+    ]
+  },
+  "フォールバック機構": {
+    "keywords": [
+      "フォールバック機構",
+      "AIチャットボット",
+      "自動化",
+      "ユーザーエクスペリエンス",
+      "エスカレーション"
+    ],
+    "link": "/ja/glossary/fall-back-mechanism/",
+    "aliases": [
+      "フォールバック機構"
+    ]
+  },
+  "偽陰性": {
+    "keywords": [
+      "偽陰性",
+      "AIチャットボット",
+      "自動化",
+      "機械学習",
+      "混同行列"
+    ],
+    "link": "/ja/glossary/false-negative/",
+    "aliases": [
+      "偽陰性"
+    ]
+  },
+  "偽陽性": {
+    "keywords": [
+      "偽陽性",
+      "AIシステム",
+      "チャットボット",
+      "コンテンツ検出",
+      "プライバシーツール"
+    ],
+    "link": "/ja/glossary/false-positive/",
+    "aliases": [
+      "偽陽性"
+    ]
+  },
+  "フィーチャーフラグ": {
+    "keywords": [
+      "フィーチャーフラグ",
+      "フィーチャートグル",
+      "段階的デリバリー",
+      "A/Bテスト",
+      "ソフトウェアデプロイメント"
+    ],
+    "link": "/ja/glossary/feature-flags/",
+    "aliases": [
+      "フィーチャーフラグ"
+    ]
+  },
+  "フィードバックボタン(サムズアップ/ダウン)": {
+    "keywords": [
+      "フィードバックボタン",
+      "サムズアップ/ダウン",
+      "AIチャットボット",
+      "ユーザーフィードバック",
+      "デジタルエクスペリエンス"
+    ],
+    "link": "/ja/glossary/feedback-buttons--thumbs-up-down-/",
+    "aliases": [
+      "フィードバックボタン(サムズアップ/ダウン)",
+      "サムズアップ/ダウン",
+      "フィードバックボタン"
+    ]
+  },
+  "AI向けFinOps": {
+    "keywords": [
+      "AI向けFinOps",
+      "クラウドコスト最適化",
+      "AIインフラストラクチャ",
+      "財務管理",
+      "AIガバナンス"
+    ],
+    "link": "/ja/glossary/finops-for-ai/",
+    "aliases": [
+      "ai向けfinops",
+      "AI向けFinOps"
+    ]
+  },
+  "Flowise": {
+    "keywords": [
+      "Flowise",
+      "LLMワークフロー",
+      "AIエージェント",
+      "LangChainJS",
+      "オープンソース"
+    ],
+    "link": "/ja/glossary/flowise/",
+    "aliases": [
+      "Flowise",
+      "flowise"
+    ]
+  },
+  "GitOps": {
+    "keywords": [
+      "GitOps",
+      "DevOps",
+      "Kubernetes",
+      "CI/CD",
+      "Infrastructure as Code"
+    ],
+    "link": "/ja/glossary/gitops/",
+    "aliases": [
+      "GitOps",
+      "gitops"
+    ]
+  },
+  "グローバル変数": {
+    "keywords": [
+      "グローバル変数",
+      "AIチャットボット",
+      "自動化プラットフォーム",
+      "プログラミング変数",
+      "変数スコープ"
+    ],
+    "link": "/ja/glossary/global-variables/",
+    "aliases": [
+      "グローバル変数"
+    ]
+  },
+  "AIチャットボット&自動化におけるゴール達成率(GCR)": {
+    "keywords": [
+      "ゴール達成率",
+      "AIチャットボット",
+      "自動化",
+      "チャットボット指標",
+      "カスタマーエクスペリエンス"
+    ],
+    "link": "/ja/glossary/goal-completion-rate--gcr-/",
+    "aliases": [
+      "aiチャットボット&自動化におけるゴール達成率(gcr)",
+      "AIチャットボット&自動化におけるゴール達成率(GCR)",
+      "AIチャットボット&自動化におけるゴール達成率",
+      "aiチャットボット&自動化におけるゴール達成率",
+      "GCR",
+      "gcr"
+    ]
+  },
+  "Gumloop": {
+    "keywords": [
+      "Gumloop",
+      "AI自動化",
+      "ノーコードプラットフォーム",
+      "ワークフロー",
+      "AIエージェント"
+    ],
+    "link": "/ja/glossary/gumloop/",
+    "aliases": [
+      "Gumloop",
+      "gumloop"
+    ]
+  },
+  "HNSW(階層的ナビゲート可能スモールワールド)": {
+    "keywords": [
+      "HNSW",
+      "近似最近傍探索",
+      "ベクトル検索",
+      "ベクトルデータベース",
+      "グラフアルゴリズム"
+    ],
+    "link": "/ja/glossary/hnsw--hierarchical-navigable-small-world-/",
+    "aliases": [
+      "hnsw(階層的ナビゲート可能スモールワールド)",
+      "HNSW(階層的ナビゲート可能スモールワールド)",
+      "階層的ナビゲート可能スモールワールド",
+      "HNSW",
+      "hnsw"
+    ]
+  },
+  "HTTPリクエストノード": {
+    "keywords": [
+      "HTTPリクエストノード",
+      "API統合",
+      "自動化プラットフォーム",
+      "n8n",
+      "Node-RED"
+    ],
+    "link": "/ja/glossary/http-request-node/",
+    "aliases": [
+      "httpリクエストノード",
+      "HTTPリクエストノード"
+    ]
+  },
+  "ハンバーガーメニュー": {
+    "keywords": [
+      "ハンバーガーメニュー",
+      "UI/UXデザイン",
+      "モバイルナビゲーション",
+      "プログレッシブディスクロージャー",
+      "Webアクセシビリティ"
+    ],
+    "link": "/ja/glossary/hamburger-menu/",
+    "aliases": [
+      "ハンバーガーメニュー"
+    ]
+  },
+  "高可用性 (HA)": {
+    "keywords": [
+      "高可用性",
+      "HA",
+      "冗長性",
+      "フェイルオーバー",
+      "稼働時間"
+    ],
+    "link": "/ja/glossary/high-availability--ha-/",
+    "aliases": [
+      "高可用性 (ha)",
+      "高可用性 (HA)",
+      "高可用性",
+      "ha",
+      "HA"
+    ]
+  },
+  "ヒューマン・エージェント・チーミング": {
+    "keywords": [
+      "ヒューマン・エージェント・チーミング",
+      "AIコラボレーション",
+      "Human-AI Teaming",
+      "人工知能",
+      "チームダイナミクス",
+      "AIコパイロット",
+      "コパイロット",
+      "AI支援"
+    ],
+    "link": "/ja/glossary/human-agent-teaming/",
+    "aliases": [
+      "ヒューマン・エージェント・チーミング"
+    ]
+  },
+  "ヒューマン承認ノード": {
+    "keywords": [
+      "ヒューマン承認",
+      "Human-in-the-Loop",
+      "人間の監視",
+      "意思決定",
+      "承認ワークフロー"
+    ],
+    "link": "/ja/glossary/human-approval-node/",
+    "aliases": [
+      "ヒューマン承認ノード"
+    ]
+  },
+  "ヒューマン・イン・ザ・ループ(HITL)": {
+    "keywords": [
+      "ヒューマン・イン・ザ・ループ",
+      "人工知能",
+      "機械学習",
+      "人間による監視",
+      "データアノテーション"
+    ],
+    "link": "/ja/glossary/human-in-the-loop--hitl-/",
+    "aliases": [
+      "ヒューマン・イン・ザ・ループ(hitl)",
+      "ヒューマン・イン・ザ・ループ(HITL)",
+      "ヒューマン・イン・ザ・ループ",
+      "hitl",
+      "HITL"
+    ]
+  },
+  "ハイブリッドチャットボット": {
+    "keywords": [
+      "ハイブリッドチャットボット",
+      "AIチャットボット",
+      "自然言語処理",
+      "機械学習",
+      "カスタマーサービス自動化"
+    ],
+    "link": "/ja/glossary/hybrid-chatbot/",
+    "aliases": [
+      "ハイブリッドチャットボット"
+    ]
+  },
+  "画像生成ノード": {
+    "keywords": [
+      "画像生成ノード",
+      "AI画像生成",
+      "Stable Diffusion",
+      "DALL-E",
+      "テキストプロンプト"
+    ],
+    "link": "/ja/glossary/image-generation-node/",
+    "aliases": [
+      "画像生成ノード"
+    ]
+  },
+  "ブループリントのインポート/エクスポート": {
+    "keywords": [
+      "自動化ブループリント",
+      "チャットボットブループリント",
+      "JSON",
+      "YAML",
+      "ワークフロー移行"
+    ],
+    "link": "/ja/glossary/import---export-blueprint/",
+    "aliases": [
+      "ブループリントのインポート/エクスポート"
+    ]
+  },
+  "間接的プロンプトインジェクション": {
+    "keywords": [
+      "間接的プロンプトインジェクション",
+      "LLMセキュリティ",
+      "AIセキュリティ",
+      "プロンプトインジェクション",
+      "データ流出"
+    ],
+    "link": "/ja/glossary/indirect-prompt-injection/",
+    "aliases": [
+      "間接的プロンプトインジェクション"
+    ]
+  },
+  "インフィニットキャンバス": {
+    "keywords": [
+      "インフィニットキャンバス",
+      "デジタルワークスペース",
+      "ノードグラフマッピング",
+      "コラボレーションツール",
+      "データビジュアライゼーション"
+    ],
+    "link": "/ja/glossary/infinite-canvas/",
+    "aliases": [
+      "インフィニットキャンバス"
+    ]
+  },
+  "Infrastructure as Code (IaC)": {
+    "keywords": [
+      "Infrastructure as Code",
+      "IaC",
+      "DevOps",
+      "自動化",
+      "クラウドインフラストラクチャ"
+    ],
+    "link": "/ja/glossary/infrastructure-as-code--iac-/",
+    "aliases": [
+      "infrastructure as code (iac)",
+      "Infrastructure as Code (IaC)",
+      "infrastructure as code",
+      "Infrastructure as Code",
+      "iac",
+      "IaC"
+    ]
+  },
+  "インテント認識": {
+    "keywords": [
+      "インテント認識",
+      "NLP",
+      "AI",
+      "機械学習",
+      "チャットボット"
+    ],
+    "link": "/ja/glossary/intent-recognition/",
+    "aliases": [
+      "インテント認識"
+    ]
+  },
+  "イテレーター / For-Each": {
+    "keywords": [
+      "イテレーター",
+      "for-eachループ",
+      "コレクション処理",
+      "ワークフロー自動化",
+      "プログラミング概念"
+    ],
+    "link": "/ja/glossary/iterator---for-each/",
+    "aliases": [
+      "イテレーター / For Each",
+      "イテレーター / for each",
+      "イテレーター / for-each",
+      "イテレーター / For-Each"
+    ]
+  },
+  "JSON Path": {
+    "keywords": [
+      "JSON Path",
+      "JSONデータ",
+      "クエリ構文",
+      "データ抽出",
+      "APIテスト"
+    ],
+    "link": "/ja/glossary/json-path/",
+    "aliases": [
+      "JSON Path",
+      "json path"
+    ]
+  },
+  "ナレッジベースコネクタ": {
+    "keywords": [
+      "ナレッジベースコネクタ",
+      "Retrieval Augmented Generation",
+      "AIチャットボット",
+      "ベクトルデータベース",
+      "自動化"
+    ],
+    "link": "/ja/glossary/knowledge-base-connector/",
+    "aliases": [
+      "ナレッジベースコネクタ"
+    ]
+  },
+  "LangFlow": {
+    "keywords": [
+      "LangFlow",
+      "LLM",
+      "AIアプリケーション",
+      "LangChain",
+      "ローコード"
+    ],
+    "link": "/ja/glossary/langflow/",
+    "aliases": [
+      "LangFlow",
+      "langflow"
+    ]
+  },
+  "レイテンシバジェット": {
+    "keywords": [
+      "レイテンシバジェット",
+      "AIシステム",
+      "パフォーマンス最適化",
+      "リアルタイムシステム",
+      "システム応答時間"
+    ],
+    "link": "/ja/glossary/latency-budget/",
+    "aliases": [
+      "レイテンシバジェット"
+    ]
+  },
+  "レンマ化": {
+    "keywords": [
+      "レンマ化",
+      "自然言語処理",
+      "NLP",
+      "ステミング",
+      "テキスト正規化"
+    ],
+    "link": "/ja/glossary/lemmatization/",
+    "aliases": [
+      "レンマ化"
+    ]
+  },
+  "ロジックノード / 条件分岐": {
+    "keywords": [
+      "ロジックノード",
+      "条件分岐",
+      "チャットボット",
+      "自動化",
+      "ワークフロー"
+    ],
+    "link": "/ja/glossary/logic-node---conditional-branching/",
+    "aliases": [
+      "ロジックノード / 条件分岐"
+    ]
+  },
+  "ループノード": {
+    "keywords": [
+      "ループノード",
+      "ワークフロー自動化",
+      "AIチャットボット",
+      "RPA",
+      "反復処理"
+    ],
+    "link": "/ja/glossary/loop-node/",
+    "aliases": [
+      "ループノード"
+    ]
+  },
+  "Make(Integromat)": {
+    "keywords": [
+      "Make",
+      "Integromat",
+      "ノーコード自動化",
+      "ワークフロー自動化",
+      "ビジュアルビルダー",
+      "API連携",
+      "データ変換",
+      "ビジネスプロセス自動化",
+      "シナリオ"
+    ],
+    "link": "/ja/glossary/make--integromat-/",
+    "aliases": [
+      "make(integromat)",
+      "Make(Integromat)",
+      "Integromat",
+      "integromat"
+    ]
+  },
+  "マイクロフロントエンド": {
+    "keywords": [
+      "マイクロフロントエンド",
+      "フロントエンド開発",
+      "マイクロフロントエンドアーキテクチャ",
+      "Webアプリケーション",
+      "独立デプロイ"
+    ],
+    "link": "/ja/glossary/micro-frontends/",
+    "aliases": [
+      "マイクロフロントエンド"
+    ]
+  },
+  "Milvus": {
+    "keywords": [
+      "Milvus",
+      "ベクトルデータベース",
+      "類似性検索",
+      "ベクトル埋め込み",
+      "非構造化データ"
+    ],
+    "link": "/ja/glossary/milvus/",
+    "aliases": [
+      "Milvus",
+      "milvus"
+    ]
+  },
+  "ミニマップ": {
+    "keywords": [
+      "ミニマップ",
+      "AIチャットボット",
+      "自動化プラットフォーム",
+      "フローナビゲーション",
+      "UI/UX"
+    ],
+    "link": "/ja/glossary/minimap/",
+    "aliases": [
+      "ミニマップ"
+    ]
+  },
+  "誤解率": {
+    "keywords": [
+      "チャットボットパフォーマンス",
+      "自然言語処理(NLP)",
+      "ユーザーエクスペリエンス",
+      "評価指標",
+      "カスタマーサービス"
+    ],
+    "link": "/ja/glossary/misunderstood-rate/",
+    "aliases": [
+      "誤解率"
+    ]
+  },
+  "モデルロバストネス": {
+    "keywords": [
+      "モデルロバストネス",
+      "機械学習",
+      "AI安全性",
+      "敵対的攻撃",
+      "データドリフト"
+    ],
+    "link": "/ja/glossary/model-robustness/",
+    "aliases": [
+      "モデルロバストネス"
+    ]
+  },
+  "モデルサービング": {
+    "keywords": [
+      "モデルサービング",
+      "機械学習",
+      "AI",
+      "推論",
+      "モデルデプロイメント"
+    ],
+    "link": "/ja/glossary/model-serving/",
+    "aliases": [
+      "モデルサービング"
+    ]
+  },
+  "モノリシックアーキテクチャ": {
+    "keywords": [
+      "モノリシックアーキテクチャ",
+      "ソフトウェア設計",
+      "アプリケーション開発",
+      "マイクロサービス",
+      "システム設計"
+    ],
+    "link": "/ja/glossary/monolithic-architecture/",
+    "aliases": [
+      "モノリシックアーキテクチャ"
+    ]
+  },
+  "マルチテナンシー": {
+    "keywords": [
+      "マルチテナンシー",
+      "SaaS",
+      "クラウドコンピューティング",
+      "データ分離",
+      "ソフトウェアアーキテクチャ"
+    ],
+    "link": "/ja/glossary/multi-tenancy/",
+    "aliases": [
+      "マルチテナンシー"
+    ]
+  },
+  "AIチャットボット&自動化におけるマルチターン会話": {
+    "keywords": [
+      "マルチターン会話",
+      "AIチャットボット",
+      "対話型AI",
+      "対話管理",
+      "コンテキスト保持"
+    ],
+    "link": "/ja/glossary/multi-turn-conversation/",
+    "aliases": [
+      "AIチャットボット&自動化におけるマルチターン会話",
+      "aiチャットボット&自動化におけるマルチターン会話"
+    ]
+  },
+  "N-gram": {
+    "keywords": [
+      "N-gram",
+      "自然言語処理",
+      "言語モデリング",
+      "テキスト分析",
+      "音声認識"
+    ],
+    "link": "/ja/glossary/n-gram/",
+    "aliases": [
+      "N gram",
+      "n gram",
+      "N-gram",
+      "n-gram"
+    ]
+  },
+  "NLU信頼度閾値": {
+    "keywords": [
+      "NLU信頼度閾値",
+      "自然言語理解",
+      "信頼度スコア",
+      "チャットボット",
+      "インテント分類"
+    ],
+    "link": "/ja/glossary/nlu-confidence-threshold/",
+    "aliases": [
+      "NLU信頼度閾値",
+      "nlu信頼度閾値"
+    ]
+  },
+  "固有表現抽出（NER）": {
+    "keywords": [
+      "固有表現抽出",
+      "NER",
+      "自然言語処理",
+      "NLP",
+      "エンティティ抽出"
+    ],
+    "link": "/ja/glossary/named-entity-recognition--ner-/",
+    "aliases": [
+      "固有表現抽出（NER）",
+      "固有表現抽出（ner）"
+    ]
+  },
+  "自然言語処理（NLP）": {
+    "keywords": [
+      "自然言語処理",
+      "NLP",
+      "人工知能",
+      "大規模言語モデル",
+      "機械学習"
+    ],
+    "link": "/ja/glossary/natural-language-processing--nlp-/",
+    "aliases": [
+      "自然言語処理（nlp）",
+      "自然言語処理（NLP）"
+    ]
+  },
+  "ノードグルーピング": {
+    "keywords": [
+      "ノードグルーピング",
+      "AIチャットボット",
+      "ワークフロー自動化",
+      "Kubernetes",
+      "クラスタリング"
+    ],
+    "link": "/ja/glossary/node-grouping/",
+    "aliases": [
+      "ノードグルーピング"
+    ]
+  },
+  "ノードとエッジ": {
+    "keywords": [
+      "ノード",
+      "エッジ",
+      "グラフベースモデリング",
+      "AIチャットボット",
+      "自動化ワークフロー"
+    ],
+    "link": "/ja/glossary/nodes-and-edges/",
+    "aliases": [
+      "ノードとエッジ"
+    ]
+  },
+  "オープンドメインボット": {
+    "keywords": [
+      "オープンドメインボット",
+      "AIチャットボット",
+      "会話型AI",
+      "transformerモデル",
+      "対話システム"
+    ],
+    "link": "/ja/glossary/open-domain-bot/",
+    "aliases": [
+      "オープンドメインボット"
+    ]
+  },
+  "アウトプットパーシング": {
+    "keywords": [
+      "アウトプットパーシング",
+      "LLMs",
+      "構造化データ",
+      "プロンプトエンジニアリング",
+      "LangChain"
+    ],
+    "link": "/ja/glossary/output-parsing/",
+    "aliases": [
+      "アウトプットパーシング"
+    ]
+  },
+  "PII編集": {
+    "keywords": [
+      "PII編集",
+      "個人識別情報",
+      "データプライバシー",
+      "規制コンプライアンス",
+      "自動編集"
+    ],
+    "link": "/ja/glossary/pii-redaction/",
+    "aliases": [
+      "PII編集",
+      "pii編集"
+    ]
+  },
+  "用語集:PagedAttentionとLLM推論のための高度なメモリ管理": {
+    "keywords": [
+      "PagedAttention",
+      "LLM推論",
+      "KVキャッシュ",
+      "vLLM",
+      "メモリ管理"
+    ],
+    "link": "/ja/glossary/pagedattention/",
+    "aliases": [
+      "用語集:PagedAttentionとLLM推論のための高度なメモリ管理",
+      "用語集:pagedattentionとllm推論のための高度なメモリ管理"
+    ]
+  },
+  "並列実行": {
+    "keywords": [
+      "並列実行",
+      "ワークフロー自動化",
+      "AIチャットボット",
+      "ソフトウェアテスト",
+      "CI/CDパイプライン"
+    ],
+    "link": "/ja/glossary/parallel-execution/",
+    "aliases": [
+      "並列実行"
+    ]
+  },
+  "パーシステントメニュー": {
+    "keywords": [
+      "Persistent Menu",
+      "チャットボット",
+      "Facebook Messenger",
+      "ナビゲーションメニュー",
+      "メニュー項目"
+    ],
+    "link": "/ja/glossary/persistent-menu/",
+    "aliases": [
+      "パーシステントメニュー"
+    ]
+  },
+  "ペルソナデザイン": {
+    "keywords": [
+      "ペルソナデザイン",
+      "AIチャットボット",
+      "チャットボットペルソナ",
+      "自動化",
+      "ユーザーエンゲージメント"
+    ],
+    "link": "/ja/glossary/persona-design/",
+    "aliases": [
+      "ペルソナデザイン"
+    ]
+  },
+  "精度と再現率": {
+    "keywords": [
+      "精度",
+      "再現率",
+      "機械学習",
+      "分類指標",
+      "混同行列"
+    ],
+    "link": "/ja/glossary/precision-and-recall/",
+    "aliases": [
+      "精度と再現率"
+    ]
+  },
+  "プライバシー保護機械学習(PPML)": {
+    "keywords": [
+      "プライバシー保護機械学習",
+      "差分プライバシー",
+      "準同型暗号",
+      "マルチパーティ計算",
+      "連合学習"
+    ],
+    "link": "/ja/glossary/privacy-preserving-ml/",
+    "aliases": [
+      "プライバシー保護機械学習(PPML)",
+      "プライバシー保護機械学習(ppml)",
+      "プライバシー保護機械学習",
+      "PPML",
+      "ppml"
+    ]
+  },
+  "プロンプトテンプレート": {
+    "keywords": [
+      "プロンプトテンプレート",
+      "AIチャットボット",
+      "自動化",
+      "大規模言語モデル",
+      "プロンプトエンジニアリング"
+    ],
+    "link": "/ja/glossary/prompt-template/",
+    "aliases": [
+      "プロンプトテンプレート"
+    ]
+  },
+  "Qdrant": {
+    "keywords": [
+      "Qdrant",
+      "ベクトルデータベース",
+      "ベクトル検索",
+      "埋め込み",
+      "RAG"
+    ],
+    "link": "/ja/glossary/qdrant/",
+    "aliases": [
+      "Qdrant",
+      "qdrant"
+    ]
+  },
+  "クエリ拡張": {
+    "keywords": [
+      "クエリ拡張",
+      "情報検索",
+      "AIチャットボット",
+      "RAG",
+      "検索エンジン"
+    ],
+    "link": "/ja/glossary/query-expansion/",
+    "aliases": [
+      "クエリ拡張"
+    ]
+  },
+  "クイックリプライ": {
+    "keywords": [
+      "クイックリプライ",
+      "チャットボット",
+      "一時的ボタン",
+      "チャットインターフェース",
+      "メッセージングプラットフォーム"
+    ],
+    "link": "/ja/glossary/quick-replies/",
+    "aliases": [
+      "クイックリプライ"
+    ]
+  },
+  "レート制限ハンドラー": {
+    "keywords": [
+      "レート制限ハンドラー",
+      "APIレート制限",
+      "429 Too Many Requests",
+      "リトライロジック",
+      "エクスポネンシャルバックオフ"
+    ],
+    "link": "/ja/glossary/rate-limiting-handler/",
+    "aliases": [
+      "レート制限ハンドラー"
+    ]
+  },
+  "リアルタイム翻訳": {
+    "keywords": [
+      "リアルタイム翻訳 顧客",
+      "翻訳ツール",
+      "人工知能",
+      "多言語サポート",
+      "翻訳ソフトウェア"
+    ],
+    "link": "/ja/glossary/real-time-translation/",
+    "aliases": [
+      "リアルタイム翻訳"
+    ]
+  },
+  "レッドチーミング": {
+    "keywords": [
+      "AIシステム",
+      "脆弱性",
+      "バイアス",
+      "AIセキュリティ",
+      "敵対的攻撃"
+    ],
+    "link": "/ja/glossary/red-teaming/",
+    "aliases": [
+      "レッドチーミング"
+    ]
+  },
+  "規制サンドボックス": {
+    "keywords": [
+      "規制サンドボックス",
+      "フィンテック",
+      "AI規制",
+      "イノベーション",
+      "消費者保護"
+    ],
+    "link": "/ja/glossary/regulatory-sandbox/",
+    "aliases": [
+      "規制サンドボックス"
+    ]
+  },
+  "リッチメディアカード": {
+    "keywords": [
+      "リッチメディアカード",
+      "チャットボット",
+      "対話型AI",
+      "メッセージングプラットフォーム",
+      "ユーザーエンゲージメント"
+    ],
+    "link": "/ja/glossary/rich-media-cards/",
+    "aliases": [
+      "リッチメディアカード"
+    ]
+  },
+  "ルールベース型チャットボット": {
+    "keywords": [
+      "ルールベース型チャットボット",
+      "チャットボット",
+      "デシジョンツリー",
+      "自動化",
+      "カスタマーサポート"
+    ],
+    "link": "/ja/glossary/rule-based-chatbot/",
+    "aliases": [
+      "ルールベース型チャットボット"
+    ]
+  },
+  "SSML(音声合成マークアップ言語)": {
+    "keywords": [
+      "SSML",
+      "音声合成マークアップ言語",
+      "Text-to-Speech",
+      "TTS",
+      "W3C",
+      "プロソディ",
+      "音声学",
+      "音声ユーザーインターフェース",
+      "AIチャットボット"
+    ],
+    "link": "/ja/glossary/ssml--speech-synthesis-markup-language-/",
+    "aliases": [
+      "ssml(音声合成マークアップ言語)",
+      "SSML(音声合成マークアップ言語)",
+      "音声合成マークアップ言語",
+      "ssml",
+      "SSML"
+    ]
+  },
+  "サンドボックスモード": {
+    "keywords": [
+      "sandbox mode",
+      "サンドボックスモード",
+      "テスト環境",
+      "分離環境",
+      "マルウェア解析",
+      "ソフトウェア開発",
+      "セキュリティサンドボックス",
+      "コンテナ化",
+      "仮想化",
+      "AIコードサンドボックス",
+      "QAテスト"
+    ],
+    "link": "/ja/glossary/sandbox-mode/",
+    "aliases": [
+      "サンドボックスモード"
+    ]
+  },
+  "セルフヒーリング・ナレッジ": {
+    "keywords": [
+      "セルフヒーリング・ナレッジ",
+      "AI",
+      "ナレッジマネジメント",
+      "自動化",
+      "コンテンツ精度"
+    ],
+    "link": "/ja/glossary/self-healing-knowledge/",
+    "aliases": [
+      "セルフヒーリング・ナレッジ"
+    ]
+  },
+  "セマンティックルーティング": {
+    "keywords": [
+      "セマンティックルーティング",
+      "AIシステム",
+      "ベクトル類似度",
+      "チャットボット自動化",
+      "LLMルーティング"
+    ],
+    "link": "/ja/glossary/semantic-routing/",
+    "aliases": [
+      "セマンティックルーティング"
+    ]
+  },
+  "センチメント適応型トーン": {
+    "keywords": [
+      "センチメント適応型トーン",
+      "AIチャットボット",
+      "カスタマーサービス",
+      "感情分析",
+      "感情的知性"
+    ],
+    "link": "/ja/glossary/sentiment-adaptive-tone/",
+    "aliases": [
+      "センチメント適応型トーン"
+    ]
+  },
+  "センチメント分析": {
+    "keywords": [
+      "センチメント分析",
+      "自然言語処理",
+      "アスペクトベースセンチメント分析",
+      "顧客フィードバック",
+      "ブランドレピュテーション"
+    ],
+    "link": "/ja/glossary/sentiment-analysis/",
+    "aliases": [
+      "センチメント分析"
+    ]
+  },
+  "シャドーAI": {
+    "keywords": [
+      "シャドーAI",
+      "生成AI",
+      "AIガバナンス",
+      "データセキュリティ",
+      "コンプライアンス"
+    ],
+    "link": "/ja/glossary/shadow-ai/",
+    "aliases": [
+      "シャドーAI",
+      "シャドーai"
+    ]
+  },
+  "AIチャットボット&自動化におけるスロットキャリーオーバー": {
+    "keywords": [
+      "スロットキャリーオーバー",
+      "AIチャットボット",
+      "対話システム",
+      "対話状態追跡",
+      "コンテキスト管理"
+    ],
+    "link": "/ja/glossary/slot-carryover/",
+    "aliases": [
+      "AIチャットボット&自動化におけるスロットキャリーオーバー",
+      "aiチャットボット&自動化におけるスロットキャリーオーバー"
+    ]
+  },
+  "スロットフィリング": {
+    "keywords": [
+      "スロットフィリング",
+      "会話型AI",
+      "チャットボット",
+      "エンティティ",
+      "インテント"
+    ],
+    "link": "/ja/glossary/slot-filling/",
+    "aliases": [
+      "スロットフィリング"
+    ]
+  },
+  "AIチャットボットにおけるスモールトーク": {
+    "keywords": [
+      "スモールトーク",
+      "AIチャットボット",
+      "バーチャルアシスタント",
+      "チャットボットインタラクション",
+      "ユーザーエクスペリエンス"
+    ],
+    "link": "/ja/glossary/small-talk/",
+    "aliases": [
+      "AIチャットボットにおけるスモールトーク",
+      "aiチャットボットにおけるスモールトーク"
+    ]
+  },
+  "Speech-to-Textノード": {
+    "keywords": [
+      "Speech-to-Textノード",
+      "自動音声認識",
+      "AIワークフロー",
+      "音声からテキスト",
+      "文字起こし"
+    ],
+    "link": "/ja/glossary/speech-to-text-node/",
+    "aliases": [
+      "Speech to Textノード",
+      "speech to textノード",
+      "Speech-to-Textノード",
+      "speech-to-textノード"
+    ]
+  },
+  "スプラッシュスクリーン": {
+    "keywords": [
+      "スプラッシュスクリーン",
+      "AIチャットボット",
+      "モバイルアプリ",
+      "ユーザーエクスペリエンス",
+      "ブランディング"
+    ],
+    "link": "/ja/glossary/splash-screen/",
+    "aliases": [
+      "スプラッシュスクリーン"
+    ]
+  },
+  "スポットインスタンス": {
+    "keywords": [
+      "スポットインスタンス",
+      "クラウドコンピューティング",
+      "AWS",
+      "Azure",
+      "GCP"
+    ],
+    "link": "/ja/glossary/spot-instances/",
+    "aliases": [
+      "スポットインスタンス"
+    ]
+  },
+  "Stack AI": {
+    "keywords": [
+      "Stack AI",
+      "ノーコードAI",
+      "LLMプラットフォーム",
+      "AIワークフロー自動化",
+      "エンタープライズAI",
+      "AIコパイロット",
+      "コパイロット",
+      "AI支援"
+    ],
+    "link": "/ja/glossary/stack-ai/",
+    "aliases": [
+      "stack ai",
+      "Stack AI"
+    ]
+  },
+  "ステート/コンテキストメモリ": {
+    "keywords": [
+      "ステート/コンテキストメモリ",
+      "AIチャットボット",
+      "会話型AI",
+      "永続ストレージ",
+      "コンテキストウィンドウ",
+      "LLMs"
+    ],
+    "link": "/ja/glossary/state---context-memory/",
+    "aliases": [
+      "ステート/コンテキストメモリ"
+    ]
+  },
+  "ステートマシン": {
+    "keywords": [
+      "ステートマシン",
+      "AIチャットボット",
+      "自動化",
+      "有限状態機械",
+      "ステートチャート"
+    ],
+    "link": "/ja/glossary/state-machine/",
+    "aliases": [
+      "ステートマシン"
+    ]
+  },
+  "サブフロー / ネストフロー": {
+    "keywords": [
+      "サブフロー",
+      "ネストフロー",
+      "ワークフロー自動化",
+      "再利用性",
+      "モジュラーワークフロー"
+    ],
+    "link": "/ja/glossary/sub-flow---nested-flow/",
+    "aliases": [
+      "サブフロー / ネストフロー"
+    ]
+  },
+  "サジェスチョンチップ": {
+    "keywords": [
+      "サジェスチョンチップ",
+      "チャットボット",
+      "対話型UI",
+      "クイックリプライ",
+      "Dialogflow"
+    ],
+    "link": "/ja/glossary/suggestion-chips/",
+    "aliases": [
+      "サジェスチョンチップ"
+    ]
+  },
+  "タスク指向型ボット": {
+    "keywords": [
+      "タスク指向型ボット",
+      "チャットボット",
+      "自然言語処理",
+      "AI",
+      "自動化"
+    ],
+    "link": "/ja/glossary/task-oriented-bot/",
+    "aliases": [
+      "タスク指向型ボット"
+    ]
+  },
+  "チームコラボレーション / ワークスペース": {
+    "keywords": [
+      "チームコラボレーション",
+      "ワークスペース",
+      "AIチャットボット",
+      "自動化",
+      "リアルタイム編集"
+    ],
+    "link": "/ja/glossary/team-collaboration---workspace/",
+    "aliases": [
+      "チームコラボレーション / ワークスペース"
+    ]
+  },
+  "Text-to-Speech ノード": {
+    "keywords": [
+      "Text-to-Speechノード",
+      "TTS",
+      "音声合成",
+      "AIチャットボット",
+      "自動化"
+    ],
+    "link": "/ja/glossary/text-to-speech-node/",
+    "aliases": [
+      "Text to Speech ノード",
+      "text to speech ノード",
+      "text-to-speech ノード",
+      "Text-to-Speech ノード"
+    ]
+  },
+  "透明性(AI透明性)": {
+    "keywords": [
+      "AI透明性",
+      "説明可能性",
+      "解釈可能性",
+      "AIガバナンス",
+      "規制コンプライアンス"
+    ],
+    "link": "/ja/glossary/transparency/",
+    "aliases": [
+      "透明性(ai透明性)",
+      "透明性(AI透明性)",
+      "AI透明性",
+      "ai透明性",
+      "透明性"
+    ]
+  },
+  "タイピングインジケーター": {
+    "keywords": [
+      "タイピングインジケーター",
+      "チャットアプリケーション",
+      "リアルタイムコミュニケーション",
+      "AIチャットボット",
+      "ユーザーエンゲージメント"
+    ],
+    "link": "/ja/glossary/typing-indicators/",
+    "aliases": [
+      "タイピングインジケーター"
+    ]
+  },
+  "発話パーミュテーション": {
+    "keywords": [
+      "発話パーミュテーション",
+      "NLUモデル",
+      "AIチャットボット",
+      "インテント分類",
+      "トレーニングデータ拡張"
+    ],
+    "link": "/ja/glossary/utterance-permutation/",
+    "aliases": [
+      "発話パーミュテーション"
+    ]
+  },
+  "ベクトルデータベース:包括的ガイド": {
+    "keywords": [
+      "ベクトルデータベース",
+      "ベクトル埋め込み",
+      "類似性検索",
+      "近似最近傍探索",
+      "AIワークフロー"
+    ],
+    "link": "/ja/glossary/vector-database/",
+    "aliases": [
+      "ベクトルデータベース:包括的ガイド"
+    ]
+  },
+  "バーチャルアシスタント": {
+    "keywords": [
+      "バーチャルアシスタント",
+      "AIバーチャルアシスタント",
+      "リモートワーク",
+      "アウトソーシング",
+      "管理業務サポート"
+    ],
+    "link": "/ja/glossary/virtual-assistant/",
+    "aliases": [
+      "バーチャルアシスタント"
+    ]
+  },
+  "ビジュアルフロービルダー": {
+    "keywords": [
+      "ビジュアルフロービルダー",
+      "ノーコードワークフロー",
+      "ワークフロー自動化",
+      "AIオーケストレーション",
+      "ドラッグ&ドロップインターフェース"
+    ],
+    "link": "/ja/glossary/visual-flow-builder/",
+    "aliases": [
+      "ビジュアルフロービルダー"
+    ]
+  },
+  "Voiceflow": {
+    "keywords": [
+      "Voiceflow",
+      "会話型AI",
+      "チャットボット",
+      "ノーコードプラットフォーム",
+      "AIエージェント",
+      "AIコパイロット",
+      "コパイロット",
+      "AI支援"
+    ],
+    "link": "/ja/glossary/voiceflow/",
+    "aliases": [
+      "voiceflow",
+      "Voiceflow"
+    ]
+  },
+  "Weaviate": {
+    "keywords": [
+      "Weaviate",
+      "ベクトルデータベース",
+      "セマンティック検索",
+      "ベクトル埋め込み",
+      "ハイブリッド検索"
+    ],
+    "link": "/ja/glossary/weaviate/",
+    "aliases": [
+      "Weaviate",
+      "weaviate"
+    ]
+  },
+  "Webhookトリガー": {
+    "keywords": [
+      "webhookトリガー",
+      "自動化",
+      "AIチャットボット",
+      "システム統合",
+      "リアルタイムイベント"
+    ],
+    "link": "/ja/glossary/webhook-trigger/",
+    "aliases": [
+      "Webhookトリガー",
+      "webhookトリガー"
+    ]
+  },
+  "Webview(ウェブビュー)": {
+    "keywords": [
+      "webview",
+      "ウェブビュー",
+      "チャットボット",
+      "モバイルアプリ",
+      "インタラクティブコンテンツ",
+      "ユーザー体験"
+    ],
+    "link": "/ja/glossary/webview/",
+    "aliases": [
+      "webview(ウェブビュー)",
+      "Webview(ウェブビュー)",
+      "Webview",
+      "webview",
+      "ウェブビュー"
+    ]
+  },
+  "ウィザード・オブ・オズ・テスティング(WoZ)": {
+    "keywords": [
+      "ウィザード・オブ・オズ・テスティング",
+      "WoZテスティング",
+      "ユーザーリサーチ",
+      "プロトタイピング",
+      "対話型AI"
+    ],
+    "link": "/ja/glossary/wizard-of-oz-testing--woz-/",
+    "aliases": [
+      "ウィザード・オブ・オズ・テスティング(WoZ)",
+      "ウィザード・オブ・オズ・テスティング(woz)",
+      "ウィザード・オブ・オズ・テスティング",
+      "woz",
+      "WoZ"
+    ]
+  },
+  "ゼロショット思考連鎖": {
+    "keywords": [
+      "ゼロショット思考連鎖",
+      "プロンプトエンジニアリング",
+      "LLM",
+      "AIチャットボット",
+      "推論"
+    ],
+    "link": "/ja/glossary/zero-shot-chain-of-thought/",
+    "aliases": [
+      "ゼロショット思考連鎖"
+    ]
+  },
+  "自律型エージェント": {
+    "keywords": [
+      "自律型エージェント",
+      "AI自動化",
+      "複数ステップタスク",
+      "機械学習",
+      "AIシステム",
+      "チャットボット",
+      "対話型AI",
+      "会話AI",
+      "自然言語処理",
+      "NLP",
+      "言語処理",
+      "AIエージェント",
+      "エージェント",
+      "生成AI",
+      "ジェネレーティブAI",
+      "GenAI",
+      "プロンプト",
+      "プロンプトエンジニアリング",
+      "RAG",
+      "検索拡張生成",
+      "Retrieval-Augmented Generation",
+      "ワークフロー自動化",
+      "業務自動化",
+      "RPA",
+      "API",
+      "API連携",
+      "インターフェース"
+    ],
+    "link": "/ja/glossary/autonomous-agents/",
+    "aliases": [
+      "自律型エージェント"
+    ]
   }
 }

@@ -7,7 +7,6 @@ tags: ["SNS管理", "業務効率化", "LiveAgent", "カスタマーサポート
 categories: ["業務効率化"]
 image: "/images/blog/centralised-social-media-management.png"
 ---
-
 ## SNS運用の分散化による課題
 
 企業が複数のSNSアカウントを運用していると、それぞれの{{< tooltip text="Facebook、Twitter、Instagramなどのソーシャルメディアサービス" >}}プラットフォーム{{< /tooltip >}}ごとに管理の手間が増えてしまいます。その結果、お客様への対応が遅れたり、重要なメッセージを見落としたり、同じ内容を重複して投稿してしまうことが起きやすくなります。

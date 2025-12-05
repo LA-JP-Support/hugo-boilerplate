@@ -10,7 +10,7 @@ draft: false
 ---
 ## 1. What is Disambiguation in AI Chatbots?
 
-Disambiguation is a systematic approach in conversational AI to resolve ambiguities in user inputs. When user messages are vague, overlap with multiple intents, or can be interpreted in more than one way, chatbots and virtual assistants employ specific strategies to unearth the user's actual intention. This prevents the system from making incorrect assumptions or providing irrelevant responses.
+Disambiguation is a systematic approach in [conversational AI](/en/glossary/conversational-ai/) to resolve ambiguities in user inputs. When user messages are vague, overlap with multiple intents, or can be interpreted in more than one way, chatbots and virtual assistants employ specific strategies to unearth the user's actual intention. This prevents the system from making incorrect assumptions or providing irrelevant responses.
 
 For example:
 - **User:** “Show me Apple.”

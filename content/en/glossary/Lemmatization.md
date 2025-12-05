@@ -22,7 +22,7 @@ draft: false
 10. [Related Terms](#related-terms)
 
 ## What is Lemmatization?  
-Lemmatization is a core text normalization technique in computational linguistics, NLP, and AI. It reduces inflected or derived words to their *lemma*—the canonical form found in dictionaries. For example, “running”, “ran”, and “runs” are all lemmatized to “run”; “better” is lemmatized to “good”. This normalization helps systems process and analyze text by treating varied word forms as a single concept, improving the accuracy of search, sentiment analysis, and classification tasks.
+Lemmatization is a core text normalization technique in computational linguistics, NLP, and AI. It reduces inflected or derived words to their *lemma*—the [canonical form](/en/glossary/canonical-form/) found in dictionaries. For example, “running”, “ran”, and “runs” are all lemmatized to “run”; “better” is lemmatized to “good”. This normalization helps systems process and analyze text by treating varied word forms as a single concept, improving the accuracy of search, [sentiment analysis](/en/glossary/sentiment-analysis/), and classification tasks.
 
 **Why Lemmatization?**  
 Languages are morphologically rich: words change form based on tense, number, gender, case, or degree. Lemmatization allows algorithms to recognize these variations as the same underlying idea, producing more reliable and meaningful results in NLP and AI systems.
@@ -149,7 +149,7 @@ Lemmatization is critical in many NLP and AI tasks:
 - **Context Sensitivity:** Handles word meaning and POS, reducing errors.
 - **Standardization:** Groups word variants, lowering redundancy and dimensionality.
 - **Improved Information Retrieval:** Matches user queries with relevant content more effectively.
-- **Semantic Understanding:** Essential for deep semantic tasks like conversational AI and advanced sentiment analysis.
+- **Semantic Understanding:** Essential for deep semantic tasks like [conversational AI](/en/glossary/conversational-ai/) and advanced sentiment analysis.
 
 ### Disadvantages
 

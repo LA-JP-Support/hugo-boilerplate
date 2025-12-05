@@ -10,7 +10,7 @@ draft: false
 ---
 ## 1. What Is Entity Linking?
 
-Entity linking is a foundational task in natural language processing (NLP), enabling machines to identify entities in unstructured text and link each mention to a specific entry in a knowledge base. This process is vital for transforming human language into structured, actionable data and is essential for tasks such as semantic search, recommendation, and knowledge graph population.
+Entity linking is a foundational task in [natural language processing (NLP)](/en/glossary/natural-language-processing--nlp-/), enabling machines to identify entities in unstructured text and link each mention to a specific entry in a knowledge base. This process is vital for transforming human language into structured, actionable data and is essential for tasks such as semantic search, recommendation, and knowledge graph population.
 
 - **Example:**  
   In “Jordan played exceptionally well against Phoenix last night,”
@@ -76,7 +76,7 @@ Entity linking is implemented as a multi-stage pipeline. Each component addresse
   Enables access to structured facts, relationships, and attributes.
 
 **Pipeline Diagram (Text Description):**  
-Raw Text → NER → Candidate Generation → Entity Disambiguation → KB Link
+Raw Text → NER → Candidate Generation → Entity [Disambiguation](/en/glossary/disambiguation/) → KB Link
 
 ## 4. Challenges in Entity Linking
 
@@ -227,7 +227,7 @@ This markup clarifies that “Jaguar” refers to the car brand, not the animal.
 
 - entity disambiguation
 - knowledge bases
-- named entity recognition
+- [named entity recognition](/en/glossary/named-entity-recognition--ner-/)
 - natural language processing
 - knowledge graphs
 - entity linking systems

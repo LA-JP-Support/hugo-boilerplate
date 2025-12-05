@@ -62,7 +62,7 @@ Task-oriented bots blend **rule-based logic**, **Natural Language Processing (NL
 - **Escalation:**  
   If the bot cannot complete a task due to missing or ambiguous data, or cannot handle an exception, it escalates the interaction to a human agent.
 
-For a technical explanation of slot filling, see:
+For a technical explanation of [slot filling](/en/glossary/slot-filling/), see:
 - [How does a chatbot fill and confirm slots? (Tencent Cloud)](https://www.tencentcloud.com/techpedia/127699)
 - [Slot filling — A first step towards ambitious NLP systems (Medium)](https://medium.com/@aixplain/slot-filling-a-first-step-towards-ambitious-nlp-systems-ead102ea6c01)
 
@@ -88,7 +88,7 @@ Task-oriented bots are distinct in their focus and technical underpinnings. The 
 | **Feature**                   | **Task-Oriented Bot**                                                      | **Conversational Chatbot**                         | **AI Assistant / Virtual Assistant**                  | **Rule-Based Bot**                            |
 |-------------------------------|----------------------------------------------------------------------------|----------------------------------------------------|------------------------------------------------------|-----------------------------------------------|
 | **Primary Function**          | Complete specific tasks/processes                                          | Open-ended, human-like dialogue                    | Broad, context-aware assistance                      | Scripted, linear flows                        |
-| **Dialogue Structure**        | Structured, step-by-step, goal-driven                                     | Flexible, can handle small talk & broad topics     | Contextual, multi-turn, multi-session                | Predetermined Q&A, menus                      |
+| **Dialogue Structure**        | Structured, step-by-step, goal-driven                                     | Flexible, can handle [small talk](/en/glossary/small-talk/) & broad topics     | Contextual, multi-turn, multi-session                | Predetermined Q&A, menus                      |
 | **Technologies**              | Rules, NLP/NLU, backend integration, slot-filling                          | NLP/NLU, ML, sometimes generative AI               | Advanced NLP/NLU, ML, multi-app context              | Decision trees, if-then logic                 |
 | **Context Handling**          | Maintains context for a single process                                    | May handle context within a session                | Maintains long-term & multi-session context          | No context-awareness                          |
 | **Examples**                  | Booking, support automation, onboarding                                   | FAQ bots, engagement bots                          | Siri, Alexa, Google Assistant                       | IVR menus, basic chat popups                  |
@@ -165,7 +165,7 @@ For more use-case examples and case studies:
 
 ### Slot Filling & Multi-Turn Dialogue
 
-Slot-filling is a core technique in task-oriented bots ([Tencent Cloud Techpedia](https://www.tencentcloud.com/techpedia/127699)). The bot defines a set of required slots (e.g., date, time, location), tracks which have been filled, and prompts for missing ones in an interactive, multi-turn conversation. Confirmation steps ensure data is correctly captured before task execution.
+Slot-filling is a core technique in task-oriented bots ([Tencent Cloud Techpedia](https://www.tencentcloud.com/techpedia/127699)). The bot defines a set of required slots (e.g., date, time, location), tracks which have been filled, and prompts for missing ones in an interactive, [multi-turn conversation](/en/glossary/multi-turn-conversation/). Confirmation steps ensure data is correctly captured before task execution.
 
 See also:
 - [Slot filling — A first step towards ambitious NLP systems (Medium)](https://medium.com/@aixplain/slot-filling-a-first-step-towards-ambitious-nlp-systems-ead102ea6c01)

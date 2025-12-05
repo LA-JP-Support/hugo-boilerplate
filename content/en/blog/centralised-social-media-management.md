@@ -7,7 +7,6 @@ tags: ["Social Media Management", "Business Efficiency", "LiveAgent", "Customer 
 categories: ["Business Efficiency"]
 image: "/images/blog/centralised-social-media-management.png"
 ---
-
 ## Challenges of Decentralized Social Media Management
 
 When companies operate multiple social media accounts, the management workload increases for each {{< tooltip text="Social media services such as Facebook, Twitter, and Instagram" >}}platform{{< /tooltip >}}. As a result, customer responses may be delayed, important messages may be overlooked, and duplicate posts of the same content may occur.
@@ -369,7 +368,7 @@ The following technologies will further improve response quality and operational
 
 - {{< tooltip text="Automated response systems utilizing artificial intelligence" >}}AI chatbots{{< /tooltip >}}
 - Auto-response functionality
-- Sentiment analysis capabilities
+- [Sentiment analysis](/en/glossary/sentiment-analysis/) capabilities
 
 ### Enhanced Scalability and Integration
 

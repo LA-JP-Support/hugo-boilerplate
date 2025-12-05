@@ -37,5 +37,8 @@
 <!-- App JavaScript - non-critical interactions -->
 <script src="/js/app.js?v={{ partialCached "helpers/build-timestamp.html" . }}"></script>
 
+<!-- KaTeX render call -->
+{{ partial "head/katex-render.html" . }}
+
 </body>
 </html>

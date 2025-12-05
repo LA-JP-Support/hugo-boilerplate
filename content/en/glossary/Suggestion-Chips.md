@@ -51,7 +51,7 @@ draft: false
 | Disappear After Tap  | Yes                                   | Not always, often persistent      |
 | Use Case             | Lightweight, context-sensitive choices| Navigation, actions, persistent   |
 | Placement            | Below prompt/input area               | Inline with cards, messages, footers|
-| Platform Example     | Dialogflow, Messenger (Quick Replies) | Messenger, Telegram, Web widgets  |
+| Platform Example     | Dialogflow, Messenger ([Quick Replies](/en/glossary/quick-replies/)) | Messenger, Telegram, Web widgets  |
 
 **Key Point:**  
 Suggestion chips are for quick, contextual, one-off decisions; buttons are for ongoing actions or navigation.
@@ -266,7 +266,7 @@ A: Ensure good color contrast, readable fonts, and ARIA labels as per [Material 
 
 ## Summary Table
 
-| Feature                 | Suggestion Chips     | Buttons               | Quick Replies         | Persistent Menu       |
+| Feature                 | Suggestion Chips     | Buttons               | Quick Replies         | [Persistent Menu](/en/glossary/persistent-menu/)       |
 |-------------------------|---------------------|-----------------------|----------------------|----------------------|
 | Appearance              | Pill, ephemeral     | Rectangular, persistent | Pill/bubble, ephemeral | List, always visible |
 | Disappear on selection  | Yes                 | Often no              | Yes                  | No                   |

@@ -56,7 +56,7 @@ Small talk is not limited to greetings. It encompasses a broad range of conversa
 
 ### **Sample Dialogues**
 
-| User Utterance                   | Bot Response                                                  |
+| User [Utterance](/en/glossary/utterance/)                   | Bot Response                                                  |
 |-----------------------------------|--------------------------------------------------------------|
 | “Hi! How are you?”                | “Hello! I’m just a bot, but I’m feeling chipper today. How can I help you?” |
 | “Tell me a joke.”                 | “Why did the developer go broke? Because he used up all his cache!” |
@@ -244,7 +244,7 @@ Gather feedback from real users on tone, usefulness, and engagement value.
 Allow users to skip, minimize, or disable small talk if they prefer direct interactions.
 
 **8. Use Patterns and NLP:**  
-Employ natural language processing to recognize variants of small talk (e.g., “What’s up?”, “How’s it going?”).
+Employ [natural language processing](/en/glossary/natural-language-processing--nlp-/) to recognize variants of small talk (e.g., “What’s up?”, “How’s it going?”).
 
 **9. Leverage Channel-Specific Adaptation:**  
 Customize responses for web, SMS, or voice interfaces.

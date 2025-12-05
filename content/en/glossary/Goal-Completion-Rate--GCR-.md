@@ -28,7 +28,7 @@ If an AI chatbot resolves 800 out of 1,000 customer queries, the GCR = (800 ÷ 1
 
 ### Measures Real User Success
 
-GCR quantifies the proportion of users who successfully achieve their goal in a digital session. Unlike general engagement metrics (e.g., session duration), GCR focuses on tangible outcomes—directly reflecting how well your chatbot or automation process supports user intent.
+GCR quantifies the proportion of users who successfully achieve their goal in a digital session. Unlike general [engagement metrics](/en/glossary/engagement-metrics/) (e.g., session duration), GCR focuses on tangible outcomes—directly reflecting how well your chatbot or automation process supports user intent.
 
 - In customer service, GCR indicates how many issues the bot resolves without human intervention.
 - For e-commerce, it shows the proportion of users completing purchases or critical funnel steps.
@@ -187,7 +187,7 @@ GCR is tracked by channel (web, WhatsApp, Facebook Messenger, etc.) to compare a
 - **User Satisfaction (CSAT):** Complements GCR with qualitative feedback.
 
 **Dashboard example:**  
-A marketing dashboard might display GCR, CES, CR, and Bounce Rate per campaign or chatbot flow.
+A marketing dashboard might display GCR, CES, CR, and [Bounce Rate](/en/glossary/bounce-rate/) per campaign or chatbot flow.
 
 More reading:  
 - [Chatbot Analytics Essentials – Chatbase Blog](https://www.chatbase.co/blog/chatbot-analytics)

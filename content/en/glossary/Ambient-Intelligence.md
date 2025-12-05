@@ -220,7 +220,7 @@ Privacy-by-design, transparent policies, opt-in controls, and data anonymization
 ### Bias and Fairness
 
 - Machine learning models may inherit or amplify data biases.
-- Regular audits and algorithmic transparency are necessary.
+- Regular audits and algorithmic [transparency](/en/glossary/transparency/) are necessary.
 
 ### Reliability and User Trust
 

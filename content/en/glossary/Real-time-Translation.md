@@ -12,7 +12,7 @@ draft: false
 ---
 ## What is Real-time Translation?
 
-Real-time translation (RTT) refers to software that uses artificial intelligence (AI), neural machine translation (NMT), and natural language processing (NLP) to convert speech or text from one language to another instantly, as conversations occur. This enables fluid, multilingual communication in customer service, meetings, documentation, and any domain where language barriers exist.
+Real-time translation (RTT) refers to software that uses artificial intelligence (AI), neural machine translation (NMT), and [natural language processing (NLP)](/en/glossary/natural-language-processing--nlp-/) to convert speech or text from one language to another instantly, as conversations occur. This enables fluid, multilingual communication in customer service, meetings, documentation, and any domain where language barriers exist.
 
 - RTT is built on breakthroughs in deep learning, neural networks, and access to vast multilingual datasets. It powers everything from live subtitles in video calls to multilingual customer support chat and even simultaneous speech interpretation on wearable devices.
 - RTT solutions are widely available, from consumer apps like Google Translate and Apple Translate to enterprise-grade platforms integrated into CRMs, helpdesks, and event software ([Smartling](https://www.smartling.com/blog/real-time-translation), [Localize](https://localizejs.com/articles/everything-you-want-to-know-about-real-time-translation)).

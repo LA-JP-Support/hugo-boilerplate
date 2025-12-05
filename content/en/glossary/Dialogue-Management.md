@@ -10,7 +10,7 @@ draft: false
 ---
 ## What is Dialogue Management?
 
-Dialogue management is the orchestrator of AI-powered conversations. It is the layer in a conversational system that tracks the context and state of an interaction, decides what should happen next, and generates or selects the system’s next utterance or action. This function transforms language models and chatbots from reactive, single-turn responders into coherent, context-aware conversational partners.
+Dialogue management is the orchestrator of AI-powered conversations. It is the layer in a conversational system that tracks the context and state of an interaction, decides what should happen next, and generates or selects the system’s next [utterance](/en/glossary/utterance/) or action. This function transforms language models and chatbots from reactive, single-turn responders into coherent, context-aware conversational partners.
 
 Dialogue management tracks what information has been shared, what is still needed, and manages multiple conversational threads, handling interruptions or topic changes seamlessly. It integrates with backend systems, executes actions (like booking a ticket or fetching account data), and ensures the conversation stays logical and user-centric.
 
@@ -22,7 +22,7 @@ Without dialogue management, even advanced AI would respond to each message as i
 
 ## How is Dialogue Management Used?
 
-Dialogue management is the backbone of various conversational AI solutions, including:
+Dialogue management is the backbone of various [conversational AI](/en/glossary/conversational-ai/) solutions, including:
 
 - **Customer service chatbots:** Automate support, troubleshoot issues, process transactions, and answer FAQs.
 - **Voicebots and smart assistants:** Drive multi-turn interactions in devices like Amazon Alexa, Google Assistant, or IVR systems.
@@ -144,7 +144,7 @@ Hybrid systems combine rules (for structure, safety) with ML (for flexibility, n
 - **Cons:** More complex to design, requires careful integration.
 
 **Example:**  
-Use ML for intent prediction and slot filling, but rules to ensure compliance, handle critical flows, or manage sensitive data.
+Use ML for intent prediction and [slot filling](/en/glossary/slot-filling/), but rules to ensure compliance, handle critical flows, or manage sensitive data.
 
 **References:**  
 - [Mastering Dialogue Management in Conversational AI (LinkedIn)](https://www.linkedin.com/pulse/mastering-dialogue-management-conversational-ai-rajiv-kedia-oxywe)
@@ -233,7 +233,7 @@ A user says, “I want to return my order.”
 ### Voicebot for Appointment Scheduling
 
 User: “Book me a dentist appointment next Tuesday.”  
-- Intent/entity extraction parses date and appointment type.
+- Intent/[entity extraction](/en/glossary/entity-extraction/) parses date and appointment type.
 - Bot checks available slots via backend integration.
 - If user interrupts, “Wait, make that Wednesday,” state and context are updated and the schedule is rechecked before confirmation.
 

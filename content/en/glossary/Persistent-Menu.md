@@ -11,7 +11,7 @@ draft: false
 ---
 ## What is a Persistent Menu?
 
-A **Persistent Menu** is an always-on, static menu interface embedded in a chatbot, visible to users throughout their session. It provides immediate access to critical chatbot actions, regardless of message context or conversation flow. The menu typically appears via a recognizable icon (often a hamburger menu) and lists essential actions such as restart, help, unsubscribe, or navigation shortcuts.
+A **Persistent Menu** is an always-on, static menu interface embedded in a chatbot, visible to users throughout their session. It provides immediate access to critical chatbot actions, regardless of message context or conversation flow. The menu typically appears via a recognizable icon (often a [hamburger menu](/en/glossary/hamburger-menu/)) and lists essential actions such as restart, help, unsubscribe, or navigation shortcuts.
 
 - **Key Features:**
   - Always accessible—never disappears after a button is used.
@@ -187,7 +187,7 @@ Only localize if your bot supports those languages throughout the user journey.
 
 ### Disabling User Input
 
-- Disable free text input to restrict users to menu/quick replies only.
+- Disable free text input to restrict users to menu/[quick replies](/en/glossary/quick-replies/) only.
 - Useful for strict flows (e.g., quizzes, forms) but beware: this usually disables input globally.
 - To collect open responses (emails, addresses), leave user input enabled.
 

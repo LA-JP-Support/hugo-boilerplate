@@ -27,7 +27,7 @@ A **Rate Limiting Handler** manages and enforces API request quotas transparentl
 APIs, especially those in SaaS, AI, social media, and cloud platforms, impose rate limits to ensure fair usage and infrastructure stability. Unmanaged request bursts can trigger:
 
 - HTTP 429 errors
-- Temporary/permanent bans or throttling
+- Temporary/permanent bans or [throttling](/en/glossary/throttling/)
 - Workflow failures and user disruptions
 - Increased costs due to repeated or failed requests
 

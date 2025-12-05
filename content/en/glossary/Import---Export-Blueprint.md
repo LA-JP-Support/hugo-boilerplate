@@ -105,7 +105,7 @@ Blueprint files encapsulate:
 
 - **Metadata:** Name, description, version, author, and creation date.
 - **Modules/Steps:** Sequence of actions or nodes (e.g., triggers, conditions, API calls).
-- **Variables/Parameters:** Inputs, outputs, environment variables, mapped fields.
+- **Variables/Parameters:** Inputs, outputs, [environment variables](/en/glossary/environment-variables--secrets-/), mapped fields.
 - **Connections:** Integration points (API keys, credentials—usually not exported for security).
 - **Artifacts:** Azure Blueprints may reference additional artifact files in an `artifacts` folder.
 

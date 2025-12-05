@@ -205,7 +205,7 @@ A: They receive defined inputs; broader access depends on platform security sett
 A: Update the sub-flow definition; all parent workflows immediately use the latest version.
 
 **Q: What if a sub-flow is suspended or paused?**  
-A: Parent workflows can wait and resume as needed—supports human-in-the-loop processes.
+A: Parent workflows can wait and resume as needed—supports [human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/) processes.
 
 **Q: Can sub-flows be nested multiple levels deep?**  
 A: Yes, supporting complex hierarchies.

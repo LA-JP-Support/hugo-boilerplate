@@ -166,7 +166,7 @@ The configuration process and available parameters are platform-specific. The fo
 
 - **http / https**: Low-level modules for full control over requests (method, headers, body, authentication).
 - **Streaming:** Built-in support for large payloads.
-- **Proxy Support:** Via environment variables or custom code.
+- **Proxy Support:** Via [environment variables](/en/glossary/environment-variables--secrets-/) or custom code.
 
 **Docs:**  
 [Node.js HTTP Module](https://nodejs.org/api/http.html)  

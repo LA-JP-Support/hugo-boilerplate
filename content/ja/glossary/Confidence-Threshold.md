@@ -97,7 +97,7 @@ e-title: Confidence Threshold
    - 高リスクドメインでは、より高く始める（例：0.9）。
 
 3. **テストと反復**
-   - さまざまな閾値での精度と再現率を評価する。
+   - さまざまな閾値での[精度と再現率](/ja/glossary/precision-and-recall/)を評価する。
    - トレードオフを視覚化するために*精度-再現率（PR）曲線*を使用する。
    - ビジネスニーズ、リスク許容度、または規制要件に基づいて調整する。
 
@@ -110,7 +110,7 @@ e-title: Confidence Threshold
 
 ### 閾値効果の視覚化：精度-再現率曲線
 
-**PR曲線**は複数の閾値での精度と再現率をプロットします。優先順位のバランスを取る閾値を選ぶのに役立ちます。
+**PR曲線**は複数の閾値での[精度と再現率](/ja/glossary/precision-and-recall/)をプロットします。優先順位のバランスを取る閾値を選ぶのに役立ちます。
 
 ![PR曲線](https://cdn.prod.website-files.com/67ea47febc0b1c768efbabd5/67f88fa1d3c87b539c680055_673da21d7542acff24318de9_673da16c4a6bfb21cdade3f8_curve-precision-recall.png)
 *出典: [Mindee](https://www.mindee.com/blog/how-use-confidence-scores-ml-models)*

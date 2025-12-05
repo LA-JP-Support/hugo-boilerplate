@@ -273,7 +273,7 @@ A: Use clear instructions, descriptive variables, regular testing, and update te
 - [x] Integrate into workflows and share across teams.
 - [x] Stay updated with best practices from authoritative sources.
 
-*Prompt templates are foundational instruments in prompt engineering. They enable reliable, efficient, and scalable automation for conversational AI, content creation, data extraction, and more. Mastering prompt templates unlocks the full potential of large language models and generative AI.*
+*Prompt templates are foundational instruments in prompt engineering. They enable reliable, efficient, and scalable automation for [conversational AI](/en/glossary/conversational-ai/), content creation, data extraction, and more. Mastering prompt templates unlocks the full potential of large language models and generative AI.*
 
 **For more on prompt templates, see:**  
 - [Prompt Engineering Guide: Tips](https://www.promptingguide.ai/introduction/tips)  

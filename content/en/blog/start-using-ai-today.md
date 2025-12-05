@@ -9,7 +9,6 @@ image: "/images/blog/start-using-ai-today.jpg"
 tags: ["AI Technology", "SME", "Operational Efficiency"]
 categories: ["Business"]
 ---
-
 In recent years, {{< tooltip text="Incorporating artificial intelligence into business operations" >}}AI implementation{{< /tooltip >}} for small and medium-sized enterprises (SMEs) has gained attention as a realistic option for achieving operational efficiency and {{< tooltip text="Transforming business processes and business models using IT and digital technologies" >}}digital transformation{{< /tooltip >}}.
 
 Many SMEs face challenges such as "not knowing who handled what" and "missing responses" that arise from individually managing diverse inquiry channels—email, phone, SNS, and chat. The key to fundamentally resolving this confusion lies in implementing {{< tooltip text="A system where AI automatically answers customer questions" >}}AI chatbots{{< /tooltip >}}, {{< tooltip text="A feature where AI understands inquiry content and automatically creates response drafts" >}}AI email auto-response generation{{< /tooltip >}}, and {{< tooltip text="A system that centrally manages inquiries and visualizes response status" >}}ticket systems{{< /tooltip >}}.

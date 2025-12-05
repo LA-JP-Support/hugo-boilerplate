@@ -10,7 +10,7 @@ draft: false
 ---
 ## What is Sentiment Analysis?
 
-Sentiment analysis, also known as opinion mining or emotion AI, is a specialized branch of natural language processing (NLP) that uses machine learning and computational linguistics to identify, extract, and categorize subjective information from text data. Its chief goal is to determine whether a piece of text expresses a positive, negative, or neutral sentiment, but advanced systems can detect more nuanced emotions or intentions.
+Sentiment analysis, also known as opinion mining or emotion AI, is a specialized branch of [natural language processing (NLP)](/en/glossary/natural-language-processing--nlp-/) that uses machine learning and computational linguistics to identify, extract, and categorize subjective information from text data. Its chief goal is to determine whether a piece of text expresses a positive, negative, or neutral sentiment, but advanced systems can detect more nuanced emotions or intentions.
 
 Organizations use sentiment analysis to systematically analyze large volumes of unstructured data such as customer reviews, social media posts, support tickets, and survey responses to uncover actionable insights. By automating the detection of emotional tone, businesses can better understand public perception, improve products, manage reputation, and drive strategic decision-making.
 

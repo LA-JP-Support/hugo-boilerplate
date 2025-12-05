@@ -4,7 +4,6 @@ date: 2025-11-20
 draft: false
 image: "/images/blog/inquiry-management-revolution.png"
 ---
-
 # Monday Morning Nightmare: Before Drowning in a Sea of Emails
 
 "Good morning! Did you check the weekend inquiries?"

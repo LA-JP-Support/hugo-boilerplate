@@ -25,7 +25,7 @@ draft: false
 
 ## What is Team Collaboration / Workspace?
 
-Team Collaboration / Workspace is a digital environment enabling multiple users within the same organization to collaboratively work in real time on shared documents, processes, or automated workflows. In the context of AI Chatbot & Automation, these platforms and tools support collaborative editing, automated task flows, communication, and collective decision-making—all within a secure, governed digital space.
+Team Collaboration / Workspace is a digital environment enabling multiple users within the same organization to collaboratively work in real time on shared documents, processes, or [automated workflows](/en/glossary/automated-workflows/). In the context of AI Chatbot & Automation, these platforms and tools support collaborative editing, automated task flows, communication, and collective decision-making—all within a secure, governed digital space.
 
 Collaborative AI tools create an intelligence layer across the technology stack, synthesizing information from multiple sources, automating routine coordination tasks, and surfacing relevant insights for teams. Unlike standalone AI assistants, these tools integrate with workplace apps via APIs, reducing time spent searching for information and coordinating decisions ([Superhuman](https://blog.superhuman.com/collaborative-ai-tools/)).
 

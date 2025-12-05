@@ -283,7 +283,7 @@ Rule-based chatbots are deployed across many industries for routine, high-volume
 
 | **Aspect**           | **Rule-Based Chatbot**                                          | **AI-Powered Chatbot**                                       |
 |----------------------|-----------------------------------------------------------------|--------------------------------------------------------------|
-| **Approach**         | Predefined scripts/decision trees                               | Machine learning & NLP (Natural Language Processing)         |
+| **Approach**         | Predefined scripts/decision trees                               | Machine learning & NLP ([Natural Language Processing](/en/glossary/natural-language-processing--nlp-/))         |
 | **Learning**         | No self-learning; static                                        | Learns from data; adapts over time                           |
 | **Input Handling**   | Keyword matching/buttons; limited free text understanding       | Understands intent, synonyms, typos; robust language parsing |
 | **Conversation Flow**| Linear, predictable, “menu-like”                                | Dynamic, context-aware, handles multi-turn dialogues         |

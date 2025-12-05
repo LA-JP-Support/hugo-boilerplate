@@ -180,7 +180,7 @@ e-title: False Negative
    - 稀なシナリオにデータ拡張と合成データを活用する。
 
 **2. モデル閾値を調整**
-   - 信頼度閾値を調整して精度と再現率のバランスを取る。
+   - 信頼度閾値を調整して[精度と再現率](/ja/glossary/precision-and-recall/)のバランスを取る。
    - 閾値を下げると、偽陽性が増える代わりに偽陰性が減る可能性がある。([Google: Thresholding](https://developers.google.com/machine-learning/crash-course/classification/thresholding))
 
 **3. リグレッションと自動テストを実装**
@@ -197,7 +197,7 @@ e-title: False Negative
 
 **6. ハイブリッド人間-AIエスカレーション**
    - 不確実または低信頼度のケースを人間のエージェントにルーティングする。
-   - ヒューマン・イン・ザ・ループが見逃された意図をレビューし、再トレーニング用にラベル付けする。
+   - [ヒューマン・イン・ザ・ループ](/ja/glossary/human-in-the-loop--hitl-/)が見逃された意図をレビューし、再トレーニング用にラベル付けする。
 
 **7. 定期的なナレッジベース監査**
    - 古い/矛盾するコンテンツを削除して検索精度を向上させる。

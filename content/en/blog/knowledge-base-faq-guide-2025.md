@@ -7,7 +7,6 @@ tags: ["AI", "Knowledge Base", "FAQ", "Customer Support", "Operational Efficienc
 categories: ["Operational Efficiency", "AI & Machine Learning"]
 image: "/images/blog/knowledge-base-faq-guide-2025.png"
 ---
-
 ## Definition and Role of Knowledge Base
 
 A {{< tooltip text="A database that organizes and stores company knowledge and know-how, making it searchable for everyone. Like a company's 'knowledge warehouse'" >}}Knowledge Base{{< /tooltip >}} is a collection of organized information that includes business knowledge, know-how, work procedures, troubleshooting examples, and success stories used within companies and organizations. It serves as an information infrastructure that allows anyone to quickly look up necessary information when needed.
@@ -66,7 +65,7 @@ For efficient operation, utilize templates for Q&A and article creation. For exa
 ## AI-Enhanced Knowledge Base Management and FAQ Automation
 
 ### AI-Powered Automatic Classification and Search Enhancement
-{{< tooltip text="Technology that enables computers to make human-like judgments and learning. Can automatically find optimal answers" >}}AI (Artificial Intelligence){{< /tooltip >}} automatically analyzes and classifies large volumes of knowledge base information. Through {{< tooltip text="Technology that enables computers to understand and appropriately process human language" >}}Natural Language Processing (NLP){{< /tooltip >}} technology, even when users search with ambiguous or colloquial expressions, AI instantly displays optimal answers and related FAQs.
+{{< tooltip text="Technology that enables computers to make human-like judgments and learning. Can automatically find optimal answers" >}}AI (Artificial Intelligence){{< /tooltip >}} automatically analyzes and classifies large volumes of knowledge base information. Through {{< tooltip text="Technology that enables computers to understand and appropriately process human language" >}}[Natural Language Processing (NLP)](/en/glossary/natural-language-processing--nlp-/){{< /tooltip >}} technology, even when users search with ambiguous or colloquial expressions, AI instantly displays optimal answers and related FAQs.
 
 For example, generative AI extracts "highly relevant Q&As" from inquiry histories and automatically organizes FAQ structures. This mechanism reduces search time and significantly improves self-resolution rates for employees and customers. This effectiveness has been proven in many domestic and international companies.
 

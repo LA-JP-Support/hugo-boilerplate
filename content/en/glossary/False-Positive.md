@@ -22,7 +22,7 @@ For foundational context, see [Protecto: The Case of False Positives and Negativ
 
 False positives are not an intentional feature; rather, they represent a fundamental limitation of statistical detection systems. Their frequency, context, and impact are critical metrics for evaluating the quality of AI-driven applications.
 
-- **Performance Metrics:** False positives are measured alongside false negatives, true positives, and true negatives to calculate system performance, especially precision and recall.
+- **Performance Metrics:** False positives are measured alongside false negatives, true positives, and true negatives to calculate system performance, especially [precision and recall](/en/glossary/precision-and-recall/).
 - **System Evaluation:** The **false positive rate** is a core metric in benchmarking AI models, especially when stakes are high (e.g., healthcare, academic integrity, privacy compliance).
 - **Workflow Impact:** In automation, false positives can halt processes, block users, misdirect customers, or trigger incorrect alerts, often leading to operational friction or reputational harm.
 

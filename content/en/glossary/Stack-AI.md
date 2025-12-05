@@ -177,9 +177,9 @@ Stack AI’s technical foundation is modular and cloud-native, emphasizing flexi
 | Pega           | Large enterprise  | Decision automation, process management    | Steep learning curve, expensive      |
 | Cflow          | SMB/Enterprise    | Drag-and-drop builder                      | Minimal AI integration               |
 | Inbenta        | Enterprise        | AI workflow for support                    | Narrow focus                         |
-| Voiceflow      | SMB/Enterprise    | Conversational, multichannel               | Less back-office automation          |
+| [Voiceflow](/en/glossary/voiceflow/)      | SMB/Enterprise    | Conversational, multichannel               | Less back-office automation          |
 | n8n            | Developers/SMB    | Open-source, flexible                      | Less enterprise support/compliance   |
-| Gumloop        | Agencies/SMB      | Fast GPT prototyping                       | Fewer integrations/compliance gaps   |
+| [Gumloop](/en/glossary/gumloop/)        | Agencies/SMB      | Fast GPT prototyping                       | Fewer integrations/compliance gaps   |
 
 **Stack AI Differentiators:**
 
@@ -214,7 +214,7 @@ Stack AI’s technical foundation is modular and cloud-native, emphasizing flexi
 **Areas for improvement:**
 
 - More onboarding content for complex workflows needed.
-- Pricing transparency is a common enterprise platform challenge.
+- Pricing [transparency](/en/glossary/transparency/) is a common enterprise platform challenge.
 
 ## Glossary of Related Terms
 

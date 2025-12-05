@@ -90,7 +90,7 @@ Raising the threshold increases precision (fewer false positives) but may lower 
    - For high-risk domains, start higher (e.g., 0.9).
 
 3. **Test and Iterate**
-   - Evaluate precision and recall at various thresholds.
+   - Evaluate [precision and recall](/en/glossary/precision-and-recall/) at various thresholds.
    - Use *Precision-Recall (PR) curves* to visualize trade-offs.
    - Adjust based on business needs, risk tolerance, or regulatory requirements.
 

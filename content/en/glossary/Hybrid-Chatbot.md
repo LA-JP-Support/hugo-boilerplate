@@ -176,7 +176,7 @@ Hybrid chatbots follow a layered, decision-based workflow:
 | System Integration           | Use APIs/middleware for CRM and backend access     |
 | Knowledge Base Updates       | Schedule content reviews, retrain AI regularly     |
 | Handover Coordination        | Automate context sharing; train agents on workflow |
-| User Frustration             | Provide clear paths to humans; use sentiment analysis|
+| User Frustration             | Provide clear paths to humans; use [sentiment analysis](/en/glossary/sentiment-analysis/)|
 | Industry-Specific Language   | Work with subject experts for training data        |
 | Data Privacy & Compliance    | Use secure authentication and regulatory compliance|
 

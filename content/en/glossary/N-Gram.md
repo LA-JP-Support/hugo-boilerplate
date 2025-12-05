@@ -31,7 +31,7 @@ In the 1940s and 1950s, Claude Shannon applied Markov models to English text, in
 
 By the 1980s and 1990s, with the rise of digital corpora and increased computational power, N-gram models became the standard approach for tasks such as speech recognition, optical character recognition (OCR), and early machine translation systems. Their simplicity, interpretability, and effectiveness made them a baseline in many NLP pipelines.
 
-Today, while advanced neural architectures like [Transformers](https://www.geeksforgeeks.org/machine-learning/getting-started-with-transformers/) have surpassed N-gram models in many tasks, N-grams remain essential for feature engineering, baseline comparisons, and applications where efficiency and transparency are critical.
+Today, while advanced neural architectures like [Transformers](https://www.geeksforgeeks.org/machine-learning/getting-started-with-transformers/) have surpassed N-gram models in many tasks, N-grams remain essential for feature engineering, baseline comparisons, and applications where efficiency and [transparency](/en/glossary/transparency/) are critical.
 
 *Further reading: [Wikipedia: N-gram](https://en.wikipedia.org/wiki/N-gram)*
 
@@ -41,7 +41,7 @@ Today, while advanced neural architectures like [Transformers](https://www.geeks
 
 - **Definition:** Sequences of single items (usually words).
 - **Example:**  
-  Text: "Natural language processing is fun."  
+  Text: "[Natural language processing](/en/glossary/natural-language-processing--nlp-/) is fun."  
   Unigrams: "Natural", "language", "processing", "is", "fun"
 - **Use Cases:** Basic word frequency analysis, text classification, information retrieval.
 
@@ -51,7 +51,7 @@ Today, while advanced neural architectures like [Transformers](https://www.geeks
 - **Example:**  
   Text: "Natural language processing is fun."  
   Bigrams: "Natural language", "language processing", "processing is", "is fun"
-- **Use Cases:** Phrase detection, sentiment analysis ("not good"), speech recognition.
+- **Use Cases:** Phrase detection, [sentiment analysis](/en/glossary/sentiment-analysis/) ("not good"), speech recognition.
 
 ### Trigrams
 

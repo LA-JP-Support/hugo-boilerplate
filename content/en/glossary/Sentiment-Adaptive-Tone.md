@@ -25,8 +25,8 @@ Sentiment-adaptive tone bridges the human–machine gap by enabling automated co
 
 | Technology                      | Role in Sentiment-Adaptive Tone                                           |
 |----------------------------------|---------------------------------------------------------------------------|
-| Natural Language Processing (NLP)| Understands meaning, intent, context, and sentiment in text or speech.    |
-| Sentiment Analysis               | Detects emotional tone—positive, negative, neutral, or nuanced emotions.  |
+| [Natural Language Processing (NLP)](/en/glossary/natural-language-processing--nlp-/)| Understands meaning, intent, context, and sentiment in text or speech.    |
+| [Sentiment Analysis](/en/glossary/sentiment-analysis/)               | Detects emotional tone—positive, negative, neutral, or nuanced emotions.  |
 | Voice Pattern Analysis           | Analyzes pitch, rate, volume, and rhythm for emotional cues in speech.     |
 | Machine Learning (ML)            | Learns from large datasets to improve emotion detection over time.         |
 | Contextual Understanding         | Tracks conversation flow, user history, and situational context.           |

@@ -29,7 +29,7 @@ A Delay or Sleep Node is a component, often seen in automation platforms or as a
 - **API Rate Limiting:** Prevent exceeding quotas by spacing requests.
 - **Workflow Orchestration:** Ensure steps occur in a specific order with controlled intervals.
 - **Polling/Condition Waits:** Pause until an external event or condition is met.
-- **Testing & Simulation:** Simulate slow operations or network latency.
+- **Testing & Simulation:** Simulate slow operations or network [latency](/en/glossary/latency/).
 - **Retry & Backoff:** Implement retries with exponential backoff.
 - **Buffer for External Systems:** Allow time for data sync before continuing.
 

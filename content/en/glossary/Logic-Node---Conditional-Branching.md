@@ -223,7 +223,7 @@ Route to fallback or clarification paths for invalid/missing inputs.
 
 ### Example 3: Quick Reply Branching ([HubSpot Bot](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows))
 **Scenario:** Bot asks, “What can we help you with?”  
-Quick replies: “Order Status”, “Technical Support”, “Other”
+[Quick replies](/en/glossary/quick-replies/): “Order Status”, “Technical Support”, “Other”
 - If **Order Status** → Go to order lookup
 - If **Technical Support** → Go to support
 - If **Other** → General inquiry

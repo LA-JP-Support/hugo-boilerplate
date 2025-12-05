@@ -16,7 +16,7 @@ In automation and AI chatbot development, an error handler—often implemented a
 
 ## 1. Introduction
 
-Automated systems and conversational AI platforms must be resilient against unexpected failures from invalid user input, integration outages, or logic bugs. Error handlers, typically realized as Try-Catch blocks, anticipate and manage such runtime exceptions. Without them, a single unhandled error can crash an automation process or leave a chatbot session in an undefined state.
+Automated systems and [conversational AI](/en/glossary/conversational-ai/) platforms must be resilient against unexpected failures from invalid user input, integration outages, or logic bugs. Error handlers, typically realized as Try-Catch blocks, anticipate and manage such runtime exceptions. Without them, a single unhandled error can crash an automation process or leave a chatbot session in an undefined state.
 
 **Scenario:**  
 If a chatbot reads data from an external API and the API fails, a Try-Catch block ensures the bot gracefully informs the user and offers alternatives, rather than terminating abruptly ([JavaScript.info: Try-Catch](https://javascript.info/try-catch)).
