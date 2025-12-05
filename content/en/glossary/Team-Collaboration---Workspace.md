@@ -9,21 +9,6 @@ category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
 ---
-## In This Glossary
-
-- [What is Team Collaboration / Workspace?](#what-is-team-collaboration--workspace)
-- [Key Features of Team Collaboration Workspaces](#key-features-of-team-collaboration-workspaces)
-- [How Team Collaboration / Workspace Is Used](#how-team-collaboration--workspace-is-used)
-- [Common Use Cases](#common-use-cases)
-- [Benefits of Team Collaboration / Workspace](#benefits-of-team-collaboration--workspace)
-- [Practical Examples](#practical-examples)
-- [Best Practices for Team Collaboration](#best-practices-for-team-collaboration)
-- [Essential Collaboration Tools](#essential-collaboration-tools)
-- [AI Chatbot & Automation in Collaborative Workspaces](#ai-chatbot--automation-in-collaborative-workspaces)
-- [Comparison: Team Collaboration vs. Teamwork](#comparison-team-collaboration-vs-teamwork)
-- [FAQ: Team Collaboration / Workspace](#faq-team-collaboration--workspace)
-- [Further Reading & Resources](#further-reading--resources)
-
 ## What is Team Collaboration / Workspace?
 
 Team Collaboration / Workspace is a digital environment enabling multiple users within the same organization to collaboratively work in real time on shared documents, processes, or [automated workflows](/en/glossary/automated-workflows/). In the context of AI Chatbot & Automation, these platforms and tools support collaborative editing, automated task flows, communication, and collective decision-making—all within a secure, governed digital space.
