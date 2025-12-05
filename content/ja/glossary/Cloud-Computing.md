@@ -58,8 +58,6 @@ kana_head: か
 - **管理:** リソースのプロビジョニング、監視、自動化のためのミドルウェアとオーケストレーションツール。
 - **セキュリティ:** データ、アプリケーション、インフラストラクチャを保護するメカニズム。
 
-参考: [IBM Cloud Architecture](https://www.ibm.com/think/topics/cloud-architecture)、[Google Cloud Architecture](https://cloud.google.com/learn/what-is-cloud-architecture)、[GeeksforGeeks Architecture](https://www.geeksforgeeks.org/cloud-computing/architecture-of-cloud-computing/)
-
 ## クラウドコンピューティングの主要コンポーネント
 
 クラウドインフラストラクチャは、クラウドを構成し、サービスとして提供されるハードウェアとソフトウェアリソースの集合体です([GeeksforGeeks Infrastructure](https://www.geeksforgeeks.org/software-engineering/cloud-computing-infrastructure/)、[AWS Cloud Infrastructure](https://aws.amazon.com/what-is/cloud-infrastructure/)、[Spot.io Cloud Infrastructure](https://spot.io/resources/cloud-optimization/cloud-infrastructure-4-key-components-and-deployment-models/))。
@@ -75,11 +73,6 @@ kana_head: か
 - **展開ソフトウェア:** 仮想コンピューティング環境を展開、統合、構成するためのツール。
 
 クラウドインフラストラクチャは、[透明性](/en/glossary/transparency/)、スケーラビリティ、セキュリティ、インテリジェントな監視を提供する必要があります。仮想化により、GUIベースの操作が可能になり、ユーザーは基盤となるハードウェアを理解する必要なくリソースを管理できます。
-
-参考:  
-- [GeeksforGeeks Infrastructure](https://www.geeksforgeeks.org/software-engineering/cloud-computing-infrastructure/)  
-- [AWS Cloud Infrastructure](https://aws.amazon.com/what-is/cloud-infrastructure/)  
-- [Spot.io Cloud Infrastructure](https://spot.io/resources/cloud-optimization/cloud-infrastructure-4-key-components-and-deployment-models/)  
 
 ## クラウドコンピューティングサービスモデル
 

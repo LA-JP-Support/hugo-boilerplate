@@ -4,10 +4,16 @@ translationKey: persona-design
 description: Learn about Persona Design for AI chatbots and automation. Define personality,
   voice, and character to create engaging, human-like interactions and enhance user
   experience.
-keywords: ["Persona Design", "AI Chatbot", "Chatbot Persona", "Automation", "User Engagement"]
+keywords:
+- Persona Design
+- AI Chatbot
+- Chatbot Persona
+- Automation
+- User Engagement
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is Persona Design?
@@ -123,7 +129,6 @@ Designing a chatbot persona involves a structured, iterative approach. Below is 
 ### 3. Align Persona with Brand Identity
 
 - Ensure the chatbot’s personality is an extension of your brand.
-- Reference your brand’s style and tone guides.
 
 ### 4. Select Persona Traits
 
@@ -268,15 +273,4 @@ For actionable templates, in-depth guides, and platform tools, explore the resou
 [Customer Engagement](https://www.tidio.com/blog/customer-engagement/),  
 [User Feedback](https://www.tidio.com/blog/customer-feedback/),  
 [Chatbot Experience](https://www.zendesk.com/blog/chatbot-persona/)
-
-**References:**
-
-- [Zendesk: Chatbot persona – What it is + how to create one](https://www.zendesk.com/blog/chatbot-persona/)
-- [ProProfsChat: What’s a Chatbot Persona? Why You Need One and How to Build It](https://www.proprofschat.com/blog/chatbot-persona/)
-- [AIMultiple: Top 25 Chatbot Case Studies & Success Stories](https://research.aimultiple.com/top-chatbot-success/)
-- [Tidio: The Ultimate Guide to Crafting a Chatbot Persona](https://www.tidio.com/blog/chatbot-persona/)
-- [Chatbase: How to Create The Perfect Chatbot Persona in 10 Steps](https://www.chatbase.co/blog/chatbot-persona)
-- [IxDF: Personas – A Simple Introduction](https://www.interaction-design.org/literature/article/personas-why-and-how-you-should-use-them)
-
 This glossary integrates the latest real-world insights, best practices, and reference links to help you master persona design for AI chatbots and automation.
-

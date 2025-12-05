@@ -5,7 +5,8 @@ description: "A cron schedule is a time-based trigger for automated execution of
 keywords: ["cron schedule", "cron expression", "task automation", "crontab", "Unix Linux scheduling"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is a Cron Schedule?
@@ -36,8 +37,6 @@ Cron schedules automate repetitive and scheduled tasks, freeing humans from manu
 - **Cloud Providers**: AWS Lambda scheduled events, Google Cloud Scheduler, Azure Logic Apps, [Cloudflare Workers](https://developers.cloudflare.com/workers/configuration/cron-triggers/).
 - **SaaS Automation**: Cloudflare Workers, RobilityAI, Zapier, GitHub Actions, and more.
 - **CI/CD & Orchestration**: Jenkins, GitLab CI, Argo Workflows, RobilityAI, etc.
-
-See also: [Splunk: What Are Cron Jobs?](https://www.splunk.com/en_us/blog/learn/cron-jobs.html)
 
 ## Cron Schedule Syntax: The Building Blocks
 
@@ -320,8 +319,4 @@ A: Use external tools ([Cronitor](https://cronitor.io), [Healthchecks.io](https:
 - [Crontab Generator](https://crontab-generator.org/)
 
 *This glossary page is part of the AI Chatbot & Automation knowledge base. For more advanced scheduling, consult your platform’s documentation or system administrator.*
-
-**References:**  
-- [Cronitor: The Complete Guide for Cron Jobs (2025)](https://cronitor.io/guides/cron-jobs)  
 - [OSTechNix: A Beginner’s Guide to Cron Jobs](https://ostechnix.com/a-beginners
-

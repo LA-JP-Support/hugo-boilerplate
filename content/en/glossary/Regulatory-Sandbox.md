@@ -1,6 +1,7 @@
 ---
 title: "Regulatory Sandbox"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "regulatory-sandbox"
 description: "A regulatory sandbox is a controlled environment set up by regulators for innovative firms to test new products and services with relaxed rules, ensuring consumer safety and fostering innovation."
 keywords: ["regulatory sandbox", "fintech", "AI regulation", "innovation", "consumer protection"]
@@ -215,4 +216,3 @@ National AI sandboxes across the EU focus on data protection, algorithmic transp
 - [FCA Regulatory Sandbox](https://www.fca.org.uk/firms/innovation/regulatory-sandbox)
 - [MAS FinTech Regulatory Sandbox](https://www.mas.gov.sg/development/fintech/sandbox)
 - [State Policy Network: What is a Regulatory Sandbox?](https://spn
-

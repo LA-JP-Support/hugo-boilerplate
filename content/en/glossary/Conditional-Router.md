@@ -332,4 +332,3 @@ For an interactive, visual introduction, see [Slack's Workflow Builder Demo](htt
 
 
 This glossary page synthesizes deep technical knowledge, practical guidance, and best practices for Conditional Routers in AI and workflow automation contexts. For further exploration, consult the linked documentation and video tutorials.
-

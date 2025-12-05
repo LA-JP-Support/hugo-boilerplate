@@ -1,6 +1,7 @@
 ---
 title: "Red Teaming"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "red-teaming"
 description: "Red Teaming is an adversarial process simulating real-world attacks on AI systems to uncover vulnerabilities, biases, and misuse. Essential for AI security, ethics, and compliance."
 keywords: ["AI systems", "vulnerabilities", "biases", "AI security", "adversarial attacks"]
@@ -277,4 +278,3 @@ More case studies:
 - [OpenAI: External Red Teaming PDF](https://cdn.openai.com/papers/openais-approach-to-external-red-teaming.pdf)
 - [Anthropic: Red Teaming for AI Safety](https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety)
 - [MITRE ATLAS](
-

@@ -1,6 +1,7 @@
 ---
 title: Telemetry
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: telemetry-glossary-definition-use-cases
 description: Telemetry is the automated process of collecting, transmitting, and analyzing
   data from remote sources for monitoring, analysis, and decision-making. Learn its
@@ -16,12 +17,6 @@ Telemetry is the automated process of collecting, transmitting, and analyzing da
 
 **Etymology:**  
 The term “telemetry” derives from the Greek *tele* (remote) and *metron* (measure), literally signifying “remote measurement.” Originally developed for industrial automation and scientific research, telemetry is now fundamental to IT, AI infrastructure, cloud operations, and cybersecurity.
-
-**See also:**  
-- [Splunk: Telemetry 101](https://www.splunk.com/en_us/blog/learn/what-is-telemetry.html)  
-- [Proofpoint: What Is Telemetry?](https://www.proofpoint.com/us/threat-reference/telemetry)  
-- [Estuary: What is Telemetry Data?](https://estuary.dev/blog/Telemetry-data/)
-
 ## How Telemetry Works: Step-by-Step
 
 Telemetry automates the data flow from the point of origin to actionable insights. A typical telemetry system involves several stages:
@@ -54,11 +49,6 @@ Telemetry automates the data flow from the point of origin to actionable insight
 
 **Analogy:**  
 Telemetry in IT is akin to a medical patient monitor: vital signs are continuously recorded and displayed in real time, allowing clinicians (engineers or admins) to respond rapidly to changes.
-
-**References:**  
-- [Proofpoint: How Telemetry Works](https://www.proofpoint.com/us/threat-reference/telemetry#toc-1)  
-- [Splunk: Telemetry 101](https://www.splunk.com/en_us/blog/learn/what-is-telemetry.html)
-
 ## Types of Telemetry Data
 
 Telemetry data can be organized into several categories, each providing distinct insights into operational behavior, performance, and user experience. The MELT model—Metrics, Events, Logs, Traces—summarizes the core data types in modern observability.
@@ -125,11 +115,6 @@ Telemetry data can be organized into several categories, each providing distinct
 - **Definition:** Data from Internet of Things devices, often in industrial or environmental settings.
 - **Examples:** Temperature readings, GPS coordinates, device battery status, environmental sensors.
 - **Use Case:** Predictive maintenance of industrial equipment.
-
-**References:**  
-- [Splunk: Meet MELT](https://www.splunk.com/en_us/blog/learn/melt-metrics-events-logs-traces.html)  
-- [Proofpoint: Types of Telemetry](https://www.proofpoint.com/us/threat-reference/telemetry#toc-3)
-
 ## Telemetry in IT and AI Infrastructure
 
 ### Observability, Monitoring, and Telemetry: How They Differ
@@ -184,11 +169,6 @@ A SaaS provider uses OpenTelemetry to instrument hundreds of microservices, expo
 - **Retail/E-commerce:** Cart abandonment analytics, personalized recommendations.
 - **Cloud/SaaS:** Resource optimization, uptime guarantees.
 - **AI/ML:** Model drift monitoring, [inference latency](/en/glossary/inference-latency/).
-
-**References:**  
-- [Estuary: Telemetry Data Benefits & Challenges](https://estuary.dev/blog/Telemetry-data/)  
-- [Proofpoint: Importance of Telemetry](https://www.proofpoint.com/us/threat-reference/telemetry#toc-2)
-
 ## Challenges and Considerations in Telemetry
 
 ### Technical and Organizational Challenges
@@ -216,11 +196,6 @@ A SaaS provider uses OpenTelemetry to instrument hundreds of microservices, expo
 - **Security Risks:**  
   Telemetry may be a target for attackers.  
   *Mitigation:* Encrypt data in transit and at rest, monitor access, and audit regularly.
-
-**References:**  
-- [Splunk: Telemetry Challenges](https://www.splunk.com/en_us/blog/learn/what-is-telemetry.html)  
-- [Estuary: Telemetry Data Challenges](https://estuary.dev/blog/Telemetry-data/)
-
 ## Step-by-Step Implementation: Deploying Telemetry in IT Environments
 
 ### 1. Identify Requirements
@@ -337,4 +312,3 @@ To implement telemetry effectively:
 - Deploy agents or SDKs for comprehensive data collection.
 - Set up secure, scalable data pipelines and analytics.
 - Regularly audit and refine your telemetry
-

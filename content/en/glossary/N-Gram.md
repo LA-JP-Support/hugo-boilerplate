@@ -5,7 +5,8 @@ description: "An N-gram is a contiguous sequence of n items (words, characters, 
 keywords: ["N-gram", "Natural Language Processing", "Language Modeling", "Text Analysis", "Speech Recognition"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Definition and Overview
@@ -307,4 +308,3 @@ This causes:
 ### N-gram Backoff and Interpolation
 
 **Backoff:** If a higher-order N-gram
-

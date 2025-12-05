@@ -5,7 +5,8 @@ description: "A Loop Node automates repetitive actions in workflows, repeating t
 keywords: ["Loop Node", "Workflow Automation", "AI Chatbot", "RPA", "Iteration"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is a Loop Node?
@@ -17,12 +18,6 @@ A **Loop Node** automates the repetition of actions in a workflow. It can proces
   - Automating repetitive tasks (e.g., generate reports for multiple departments)
   - [Batch processing](/en/glossary/batch-processing/) (e.g., handle API calls in groups)
   - Input validation (e.g., prompt until valid input is received)
-
-**Sources:**  
-- [MindPal Docs: Loop Node](https://docs.mindpal.space/workflow/build/loop-node)  
-- [n8n Docs: Looping](https://docs.n8n.io/flow-logic/looping/)  
-- [Power Automate: Using loops](https://learn.microsoft.com/en-us/power-automate/desktop-flows/use-loops)
-
 ## How Does a Loop Node Work?
 
 The fundamental logic of a Loop Node is to evaluate, on each cycle, whether to continue or exit the loop. This evaluation is based on:
@@ -41,11 +36,6 @@ The fundamental logic of a Loop Node is to evaluate, on each cycle, whether to c
 
 **Visual Reference:**  
 ![n8n Loop Node Example](https://docs.n8n.io/_images/flow-logic/looping/example_workflow.png)
-
-**Sources:**  
-- [MindPal Docs: How a Loop Node Works](https://docs.mindpal.space/workflow/build/loop-node#how-a-loop-node-works)  
-- [n8n Docs: Creating loops](https://docs.n8n.io/flow-logic/looping/#creating-loops)
-
 ## Types of Loop Nodes and Looping Methods
 
 Loop nodes can be classified by their exit criteria or iteration mechanism:
@@ -74,11 +64,6 @@ Loop nodes can be classified by their exit criteria or iteration mechanism:
 
 - Processes items in groups, useful for bulk operations or rate limiting.
 - **Ideal for:** API integrations where requests must be chunked.
-
-**Sources:**  
-- [Power Automate: Loops actions reference](https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/loops)  
-- [n8n Docs: Loop Over Items](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/)
-
 ## How to Use Loop Nodes
 
 ### General Steps (Applicable to MindPal, n8n, Power Automate, etc.)
@@ -151,11 +136,6 @@ Loop nodes can be classified by their exit criteria or iteration mechanism:
 ### 4. Inventory Check (E-commerce)
 **Scenario:** Check stock for products in a catalog.
 **Workflow:** Fetch catalog → Loop Node (for each) → Check inventory
-
-**Sources:**  
-- [MindPal: Loop Node Scenarios](https://docs.mindpal.space/workflow/build/loop-node#when-to-use-a-loop-node)  
-- [Power Automate: Loop Examples](https://learn.microsoft.com/en-us/power-automate/desktop-flows/use-loops)
-
 ## Use Cases for Loop Nodes
 
 - **Processing Lists:** Send notifications, emails, updates, or perform calculations on each item in a database or spreadsheet.
@@ -206,11 +186,6 @@ Loop nodes can be classified by their exit criteria or iteration mechanism:
 - **Error Handling:** Implement retry limits and graceful error handling for loops that interact with unreliable services.
 - **Node Exceptions:** Not all workflow nodes auto-iterate; consult platform documentation.
 - **Variable Scope:** Ensure variables for counters, current items, and results are scoped correctly within and outside loops.
-
-**References:**  
-- [n8n Docs: Node Exceptions](https://docs.n8n.io/flow-logic/looping/#node-exceptions)  
-- [Power Automate Loops](https://learn.microsoft.com/en-us/power-automate/desktop-flows/use-loops)
-
 ## Key Terms and Related Concepts
 
 | Term                   | Definition                                                                                      |
@@ -237,4 +212,3 @@ Loop nodes can be classified by their exit criteria or iteration mechanism:
 - [Loops in Microsoft Power Automate (YouTube)](https://www.youtube.com/watch?v=54ZFR4SCkO0)
 
 This glossary page includes authoritative explanations, platform-specific configurations, technical examples, and best practices for Loop Nodes, with direct links to the most current official documentation for every major workflow automation environment.
-

@@ -1,6 +1,7 @@
 ---
 title: "Technical Debt"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "technical-debt"
 description: "Technical debt is the implied cost of future reworking when choosing short-term solutions over robust approaches, leading to increased maintenance, complexity, and remediation costs in software development and AI systems."
 keywords: ["technical debt", "software development", "AI infrastructure", "code quality", "refactoring"]
@@ -318,4 +319,3 @@ Symptoms in source code (e.g., duplicate code, long methods, excessive coupling)
 - [Try a technical debt tracking template in Jira.](https://www.atlassian.com/software/jira/templates)
 - [Learn how Ardoq visualizes and quantifies tech debt.](https://www.ardoq.com/knowledge-hub/technical-debt)
 - [
-

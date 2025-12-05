@@ -5,7 +5,8 @@ description: "A minimap is a compact visual overview map for navigating large, c
 keywords: ["minimap", "AI chatbot", "automation platforms", "flow navigation", "UI/UX"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Definition & Overview
@@ -104,11 +105,6 @@ Both React Flow and Svelte Flow minimaps share a common set of properties (props
 | `onClick`          | `(event, position) => void`                      | -                 | Callback when the minimap is clicked.                                      |
 | `onNodeClick`      | `(event, node) => void`                          | -                 | Callback when a minimap node is clicked.                                   |
 | `...props`         | `HTMLAttributes<HTMLDivElement/SVGSVGElement>`   | -                 | Additional HTML/SVG attributes.                                            |
-
-**References:**  
-- [React Flow MiniMap Props](https://reactflow.dev/api-reference/components/minimap#props)  
-- [Svelte Flow MiniMap Props](https://svelteflow.dev/api-reference/components/mini-map#props)
-
 ### Customization & Interactivity
 
 **Appearance**  
@@ -274,4 +270,3 @@ export default function AutomationFlow() {
 - [Game UI Database: Minimap](https://www.gameuidatabase.com/index.php?scrn=135)
 
 This glossary covers all technical, practical, and accessibility aspects of minimaps in AI chatbot & automation platforms, software UIs, code editors, games, and data visualization. All examples, code, and best practices are directly sourced from official documentation and leading industry resources.
-

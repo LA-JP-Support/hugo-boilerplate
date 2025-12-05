@@ -1,6 +1,7 @@
 ---
 title: "Transparency (AI Transparency)"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "transparency-ai-transparency"
 description: "AI transparency reveals an AI system's internal workings, data, and decision logic. Essential for building trust, ensuring accountability, and meeting regulatory compliance."
 keywords: ["AI transparency", "explainability", "interpretability", "AI governance", "regulatory compliance"]
@@ -8,19 +9,6 @@ category: "AI Ethics & Safety Mechanisms"
 type: "glossary"
 draft: false
 ---
-## Contents
-
-- [What is AI Transparency?](#what-is-ai-transparency)
-- [Key Concepts: Transparency, Explainability, Interpretability](#key-concepts-transparency-explainability-interpretability)
-- [Importance of AI Transparency](#importance-of-ai-transparency)
-- [Regulatory and Ethical Frameworks](#regulatory-and-ethical-frameworks)
-- [Core Requirements for AI Transparency](#core-requirements-for-ai-transparency)
-- [Challenges and Trade-offs](#challenges-and-trade-offs)
-- [Best Practices and Implementation Steps](#best-practices-and-implementation-steps)
-- [Examples and Use Cases](#examples-and-use-cases)
-- [Summary Checklist: Achieving AI Transparency](#summary-checklist-achieving-ai-transparency)
-- [Further Reading](#further-reading)
-
 ## What is AI Transparency?
 
 AI transparency encompasses the documentation, communication, and accessibility of information regarding the design, data, algorithms, and decision-making logic of AI systems. It is the process of “opening the black box” to make AI’s internal processes observable and understandable by stakeholders including users, developers, regulators, and the public.
@@ -94,11 +82,6 @@ AI transparency is essential for:
 
 > “Transparency isn’t just good practice; it’s necessary for sustainable AI governance.”  
 > — [OCEG](https://www.oceg.org/what-does-transparency-really-mean-in-the-context-of-ai-governance/)
-
-See also:
-- [Sendbird: Benefits of AI Transparency](https://sendbird.com/blog/ai-transparency-guide#benefits_of_ai_transparency)
-- [IBM AI Governance](https://www.ibm.com/think/topics/ai-governance)
-
 ## Regulatory and Ethical Frameworks
 
 AI transparency is increasingly mandated by international regulations and ethical standards. Key frameworks:
@@ -122,10 +105,6 @@ AI transparency is increasingly mandated by international regulations and ethica
 > — [OECD AI Principles](https://www.oecd.org/en/topics/sub-issues/ai-principles.html)
 
 **Note:** Legal requirements evolve rapidly and depend on risk, sector, and geography. Organizations must monitor developments and adjust practices accordingly.
-
-See also:  
-- [IBM: What is AI Governance? – Regulatory Overview](https://www.ibm.com/think/topics/ai-governance)
-
 ## Core Requirements for AI Transparency
 
 Organizations should address these requirements for effective transparency:
@@ -206,10 +185,6 @@ Transparency presents several challenges and trade-offs:
 
 > “Transparency is not a ‘nice-to-have’ attribute; it is essential, especially in the early days of AI experimentation and adoption.”  
 > — [OCEG](https://www.oceg.org/what-does-transparency-really-mean-in-the-context-of-ai-governance/)
-
-See also:  
-- [Zendesk: Challenges and Solutions](https://www.zendesk.com/blog/ai-transparency/)
-
 ## Best Practices and Implementation Steps
 
 **To achieve transparent and trustworthy AI, organizations should:**
@@ -299,4 +274,3 @@ See detailed guidance:
 - [Zendesk: Was ist KI-Transparenz? Ein umfassender Leitfaden](https://www.zendesk.de/blog/ai-transparency/)
 - [F5: Crucial Concepts in AI: Transparency and Explainability](https://www.f5.com/company/blog/crucial-concepts-in-ai-transparency-and-explainability)
 - [Holistic AI: What is AI Transparency?](https
-

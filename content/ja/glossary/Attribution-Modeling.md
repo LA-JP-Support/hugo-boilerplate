@@ -275,7 +275,6 @@ A:少なくとも四半期ごと、または重要な新しいキャンペーン
 
 > **マーケティングパフォーマンスの最適化を開始する:**  
 > - カスタマージャーニーをマッピングし、包括的なトラッキングを設定します。
-> - [Google Analytics 4](https://support.google.com/analytics/answer/10596866?hl=en)、[Amplitude](https://amplitude.com/blog/attribution-model-frameworks)、または[HubSpot](https://knowledge.hubspot.com/reports/understand-attribution-reporting)でモデルを比較します。
 > - インサイトに基づいて行動する—予算を再配分し、キャンペーンを洗練させ、結果を促進します。
 
 ## 参考資料
@@ -287,11 +286,6 @@ A:少なくとも四半期ごと、または重要な新しいキャンペーン
 - [AppsFlyer: Attribution Modeling (Glossary)](https://www.appsflyer.com/glossary/attribution-modeling/)
 - [Google Ads: About Attribution Models](https://support.google.com/google-ads/answer/6259715?hl=en)
 - [YouTube Explainer: What is Attribution Modelling?](https://www.youtube.com/embed/o3rIwaquMF4)
-
-## 用語集エントリー:アトリビューションモデリング
-
-**アトリビューションモデリング:**  
-どのマーケティングチャネルとタッチポイントがコンバージョンのクレジットに値するかを決定する体系的なプロセスで、マーケターがキャンペーンを最適化し、予算を効果的に配分し、全体的なマーケティングパフォーマンスを向上させることを可能にします。([Amplitude](https://amplitude.com/blog/attribution-model-frameworks)、[AgencyAnalytics](https://agencyanalytics.com/blog/marketing-attribution-models))
 
 ## 図の説明
 

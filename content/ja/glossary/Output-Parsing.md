@@ -120,8 +120,6 @@ tool_def = {
 **長所:** 高度に決定論的な出力。  
 **短所:** 特定のAPI/モデルでのみサポート。
 
-**参考:** [OpenAI JSON Mode Docs](https://platform.openai.com/docs/guides/text-generation/json-mode)
-
 ### ファインチューニング
 
 常に特定のフォーマットで出力するようにLLMをカスタムトレーニングします。
@@ -165,9 +163,6 @@ print(response)
   "quote": "I am your father."
 }
 ```
-**参考:**  
-- [LangChain Output Parsers Documentation](https://reference.langchain.com/python/langchain_core/output_parsers/)
-
 ### 構造化出力のストリーミング
 
 ```python
@@ -175,9 +170,6 @@ for chunk in chain.stream({"query": "Give me a famous movie quote with the chara
     print(chunk)
 ```
 ストリーミングは部分的な結果とリアルタイム処理を可能にします。  
-**参考:**  
-- [A Comprehensive Guide to Output Parsers - Analytics Vidhya](https://www.analyticsvidhya.com/blog/2024/11/output-parsers/#h-streaming-structured-outputs)
-
 ### XMLとYAMLのパース
 
 **XML例:**
@@ -210,10 +202,6 @@ class Recipe(BaseModel):
 parser = YamlOutputParser(pydantic_object=Recipe)
 # ...上記のようにプロンプトとチェーンをセットアップ
 ```
-**参考:**  
-- [Parsing XML Output with XMLOutputParser](https://www.analyticsvidhya.com/blog/2024/11/output-parsers/#h-parsing-xml-output-with-xmloutputparser)
-- [Parsing YAML Output with YamlOutputParser](https://www.analyticsvidhya.com/blog/2024/11/output-parsers/#h-parsing-yaml-output-with-yamloutputparser)
-
 ## 機能と利点
 
 - **構造化出力生成:** 応答がJSON、辞書、リスト、またはPydanticオブジェクトとしてフォーマットされることを保証します。
@@ -224,9 +212,6 @@ parser = YamlOutputParser(pydantic_object=Recipe)
 - **複数のパーサータイプ:** JSON、XML、YAML、文字列、リスト、カスタムパーサー。
 - **検証:** Pydanticによる型とロジックの検証。
 - **互換性:** API、データベース、UIフレームワーク、分析ツールと統合します。
-
-**参考:**  
-- [LangChain Output Parsers Features](https://reference.langchain.com/python/langchain_core/output_parsers/)
 
 ## 課題とエラー処理
 
@@ -250,10 +235,6 @@ from langchain.output_parsers import OutputFixingParser
 
 parser = OutputFixingParser.from_parser(JsonOutputParser(pydantic_object=Review), llm=model)
 ```
-**参考:**  
-- [Handling Parsing Errors with RetryOutputParser](https://www.analyticsvidhya.com/blog/2024/11/output-parsers/#h-handling-parsing-errors-with-retryoutputparser)
-- [How to Use the Output-Fixing Parser?](https://www.analyticsvidhya.com/blog/2024/11/output-parsers/#h-how-to-use-the-output-fixing-parser)
-
 ## ベストプラクティス
 
 - `parser.get_format_instructions()`を使用してプロンプトを明示的にします。
@@ -262,9 +243,6 @@ parser = OutputFixingParser.from_parser(JsonOutputParser(pydantic_object=Review)
 - 大規模またはリアルタイム出力にはストリーミングを使用します。
 - 信頼性のためにエラー修正でパーサーをラップします。
 - 最大の決定論性のために、利用可能な場合は組み込みの関数呼び出しを優先します。
-
-**参考:**  
-- [Parsing LLM Structured Outputs in LangChain - Medium](https://medium.com/@juanc.olamendy/parsing-llm-structured-outputs-in-langchain-a-comprehensive-guide-f05ffa88261f) (要約とベストプラクティスを参照)
 
 ## パース方法の比較
 

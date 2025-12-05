@@ -5,7 +5,8 @@ description: "Dialogue management is the control system that maintains the state
 keywords: ["dialogue management", "conversational AI", "AI chatbot", "state tracking", "dialogue policy"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is Dialogue Management?
@@ -145,10 +146,6 @@ Hybrid systems combine rules (for structure, safety) with ML (for flexibility, n
 
 **Example:**  
 Use ML for intent prediction and [slot filling](/en/glossary/slot-filling/), but rules to ensure compliance, handle critical flows, or manage sensitive data.
-
-**References:**  
-- [Mastering Dialogue Management in Conversational AI (LinkedIn)](https://www.linkedin.com/pulse/mastering-dialogue-management-conversational-ai-rajiv-kedia-oxywe)
-
 ### 4. Finite State and Form-Based Models
 
 - **Finite state:** Predefined states and transitions, best for linear, guided flows (e.g., multi-step wizards, authentication).
@@ -176,10 +173,6 @@ Selecting the right framework depends on technical skill, infrastructure, compli
 - **Ideal for:** Regulated environments (healthcare, finance), enterprise customization, on-premise deployment.
 
 **Cons:** Steep learning curve, DevOps expertise needed.  
-**References:**  
-- [Rasa vs Dialogflow vs Microsoft Bot Framework (Rootstack)](https://rootstack.com/en/blog/rasa-vs-dialogflow-vs-microsoft-bot-framework-which-chatbot-platform-best-fits-your)
-- [Battle of the Bots: Rasa vs Google Dialogflow vs AWS Lex (Ideas2IT)](https://www.ideas2it.com/blogs/battle-of-the-bots-rasa-vs-google-dialogflow-vs-aws-lex)
-
 ### Dialogflow (Google Cloud)
 
 - **Cloud-hosted, visual builder:** Fast flow design, rapid deployment.
@@ -310,4 +303,3 @@ User: “Refill my prescription.”
 - [Dialog Management Considerations for Chatbots (Medium)](https://cobusgreyling.medium.com/dialog-management-considerations-for-chatbots-6ed4dca65a80)
 - [Rootstack: Rasa vs Dialogflow vs Microsoft Bot Framework](https://rootstack.com/en/blog/rasa-vs-dialogflow-vs-microsoft-bot-framework-which-chatbot-platform-best-fits-your)
 - [Ideas2IT: R
-

@@ -1,6 +1,7 @@
 ---
 title: Containerization
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: containerization
 description: Containerization packages software code with dependencies into portable,
   isolated containers, ensuring consistent application execution across any environment,
@@ -27,7 +28,6 @@ Containerization relies on a layered architecture that delivers isolation, porta
 
 1. **Infrastructure**  
    Physical or virtual hardware resources (CPU, memory, storage, networking) form the foundation for running containers. This could be bare metal, VMs, or cloud hosts.  
-   Source: [GeeksforGeeks: Containerization Architecture in System Design](https://www.geeksforgeeks.org/system-design/containerization-architecture-in-system-design/)
 
 2. **Host Operating System (OS)**  
    The OS (typically Linux, but also Windows) manages system resources and provides services to the container engine.  
@@ -66,7 +66,6 @@ Containerization relies on a layered architecture that delivers isolation, porta
 | Underlying Infrastructure (bare metal, VM, cloud)     |
 +-------------------------------------------------------+
 ```
-Source: [AWS: What is Containerization?](https://aws.amazon.com/what-is/containerization/)
 
 ## How Containerization Works
 
@@ -281,4 +280,3 @@ Further reading:
 - **Google Cloud:** [What is Containerization?](https://cloud.google.com/discover/what-is-containerization)
 - **CrowdStrike:** [Containerization Explained](https://www.crowdstrike.com/en-us/cybersecurity-101/cloud-security/containerization/)
 - **YouTube:** [Containerization Explained (IBM)](
-

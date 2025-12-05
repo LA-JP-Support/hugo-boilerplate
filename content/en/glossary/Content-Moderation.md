@@ -1,6 +1,7 @@
 ---
 title: Content Moderation
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: content-moderation
 description: 'Explore content moderation: monitoring, evaluating, and managing user-generated
   content to ensure platform guidelines, community standards, and legal compliance.'
@@ -12,8 +13,6 @@ draft: false
 ## What is Content Moderation?
 
 Content moderation is the strategic process of evaluating, filtering, and regulating user-generated content (UGC) online. It ensures that all forms of content—text, images, video, audio, or live streams—comply with platform rules, legal requirements, and ethical standards. Effective moderation balances the promotion of freedom of expression with the need to protect users from harmful material, including hate speech, graphic violence, exploitation, and misinformation.
-
-Reference: [Checkstep Guide](https://www.checkstep.com/content-moderation-a-comprehensive-guide)
 
 ## Why is Content Moderation Important?
 
@@ -185,8 +184,6 @@ Content moderation carries significant mental health risks, especially for those
 - **Burnout and compassion fatigue**
 - **Social withdrawal and avoidance behaviors**
 
-Reference: [Cyberpsychology: The psychological impacts of content moderation on content moderators](https://cyberpsychology.eu/article/view/33166), [Content Moderator Mental Health and Coping Styles (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC12024403/)
-
 **Best Practices for Support:**
 
 - Provide trauma-informed care and psychoeducation.
@@ -268,8 +265,6 @@ Users may distrust opaque or inconsistent moderation. Clear guidelines and appea
 - **Transparency and Appeals:** Communicate reasons for moderation actions and allow contesting of decisions.
 - **Legal Compliance:** Monitor legal changes (e.g., DSA, GDPR) and update policies accordingly.
 
-Reference: [Checkstep Guide](https://www.checkstep.com/content-moderation-a-comprehensive-guide)
-
 ## Use Cases and Real-World Examples
 
 ### Social Media
@@ -305,8 +300,6 @@ Content moderation is essential for risk management, user safety, legal complian
 - Human judgment remains crucial, especially for context and appeals.
 - Addressing moderator wellbeing is both an ethical and operational necessity.
 - Platforms must adapt to new content types, evolving threats, and regulatory landscapes.
-
-Reference: [Immersive Truth](https://opentextbooks.library.arizona.edu/immersivetruth/chapter/content-moderation-new/)
 
 ## FAQs
 
@@ -356,4 +349,3 @@ By offering counseling, breaks, trauma-informed training, and fostering a suppor
 - [6 types of AI content moderation and how they work – TechTarget](https://www.techtarget.com/searchcontentmanagement/tip/Types-of-AI-content-moderation-and-how-they-work)
 - [Utopia AI Moderator](https://www.utopiaanalytics.com/utopia-ai-moderator)
 - [The psychological impacts of content moderation on content moderators – Cyberpsychology](https://cyberpsych
-

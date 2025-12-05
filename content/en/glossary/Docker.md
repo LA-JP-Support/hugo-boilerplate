@@ -1,6 +1,7 @@
 ---
 title: "Docker"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "docker"
 description: "Learn about Docker, an open-source platform for packaging, shipping, and running applications in lightweight, portable containers. Understand its architecture, benefits, and use cases."
 keywords: ["Docker", "containers", "containerization", "microservices", "Kubernetes"]
@@ -28,11 +29,6 @@ Traditional deployments often encounter environmental inconsistencies. For insta
 - **Efficient resource use:** Containers share the host OS kernel, reducing overhead.
 - **Rapid deployment and scaling:** Containers start in seconds and are easier to replicate or scale.
 - **Simplified management:** Containers can be started, stopped, or replaced quickly, streamlining deployment and operational processes.
-
-**References:**
-- [Docker Containers vs. VMs](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/)
-- [Docker Curriculum: Why Use Containers?](https://docker-curriculum.com#why-use-containers-)
-
 ## How Docker Works
 
 Docker relies on operating system–level virtualization to create isolated containers. Each container is an isolated process running on the host, sharing the host OS kernel but possessing its own filesystem, network stack, and process space.
@@ -44,11 +40,6 @@ Docker relies on operating system–level virtualization to create isolated cont
 
 **Example:**
 - Building a web application image with a Dockerfile, pushing it to Docker Hub, and running it on a cloud VM.
-
-**See also:**
-- [Official Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
-- [Docker Hub](https://hub.docker.com)
-
 ## Docker Architecture
 
 Docker’s architecture is based on a client-server model, with several key components working together:
@@ -57,10 +48,6 @@ Docker’s architecture is based on a client-server model, with several key comp
 - The Docker daemon is a background service managing Docker objects (images, containers, networks, volumes).
 - Listens for Docker API requests and performs operations accordingly.
 - Runs as a system process and requires root privileges or appropriate user group membership.
-
-**Source:**  
-[Docker Daemon Docs](https://docs.docker.com/engine/reference/commandline/dockerd/)
-
 ### 2. Docker Client (`docker`)
 - The primary user interface for Docker.
 - Command-line tool (`docker`) to issue commands like `docker build`, `docker run`, `docker ps`.
@@ -90,10 +77,6 @@ Docker’s architecture is based on a client-server model, with several key comp
 ### 6. Docker Compose
 - A tool for defining and managing multi-container applications using a YAML file (`docker-compose.yml`).
 - Enables declarative configuration of services, networks, and volumes.
-
-**Reference:**  
-[Docker Compose Docs](https://docs.docker.com/compose/)
-
 ### 7. Docker Networks and Volumes
 - **Networks:** Virtual networks for container communication and isolation (bridge, host, overlay, etc.).
 - **Volumes:** Persistent storage for container data, surviving restarts and container destruction.
@@ -143,11 +126,6 @@ Docker containers deliver numerous advantages over traditional deployment models
 
 ### 7. Integration with CI/CD
 - Automates build, test, and deploy steps in modern DevOps workflows.
-
-**References:**
-- [Why Docker? (Docker Official)](https://www.docker.com/resources/what-container/)
-- [Benefits of Containers](https://aws.amazon.com/docker/)
-
 ## Docker vs. Virtual Machines (VMs)
 
 | Feature                | Docker Containers                    | Virtual Machines (VMs)             |
@@ -319,10 +297,6 @@ A data scientist builds a Docker image with a trained model and API, then deploy
 - **Bridge:** Default network for single-host containers.
 - **Host:** Shares host’s network stack.
 - **Overlay:** Enables multi-host communication (used by orchestrators).
-
-**Reference:**  
-[Docker Networking](https://docs.docker.com/network/)
-
 ## Frequently Used Docker Commands
 
 - `docker run` — Start a new container

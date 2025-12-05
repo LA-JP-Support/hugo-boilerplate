@@ -1,11 +1,19 @@
 ---
-title: "Flowise"
-translationKey: "flowise"
-description: "Flowise is an open-source, visual platform for building custom LLM flows and agentic AI systems with LangChainJS. Design, orchestrate, and deploy advanced AI workflows with minimal code."
-keywords: ["Flowise", "LLM workflows", "AI agents", "LangChainJS", "open-source"]
-category: "AI Chatbot & Automation"
-type: "glossary"
-date: 2025-12-03
+title: Flowise Glossary and In-Depth Technical Guide
+translationKey: flowise
+description: Flowise is an open-source, visual platform for building custom LLM flows
+  and agentic AI systems with LangChainJS. Design, orchestrate, and deploy advanced
+  AI workflows with minimal code.
+keywords:
+- Flowise
+- LLM workflows
+- AI agents
+- LangChainJS
+- open-source
+category: AI Chatbot & Automation
+type: glossary
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## **What is Flowise?**
@@ -19,11 +27,6 @@ Flowise is an open-source, generative AI development platform focused on visuall
   - **Assistant:** Simplest, form-based for rapid chatbot creation.
   - **Chatflow:** Node-based for single-agent, flexible LLM flows.
   - **Agentflow:** Most advanced, supporting multi-agent orchestration, branching, looping, and state management.  
-
-**References:**  
-- [FlowiseAI Official Documentation](https://docs.flowiseai.com)  
-- [Agentflow V2 Details](https://docs.flowiseai.com/using-flowise/agentflowv2)  
-
 ## **Core Features and Capabilities**
 
 ### **1. Visual Workflow Builder**
@@ -32,10 +35,6 @@ Flowise provides a modular, node-based canvas for building LLM-powered workflows
 - **Drag & Drop Interface:** Construct flows by connecting nodes representing LLMs, retrievers, databases, memory, and logic.
 - **Reusable Templates:** Access a marketplace/library of pre-built templates and community-contributed flows.
 - **Assistant, Chatflow, Agentflow:** Choose between beginner-friendly, single-agent, or advanced multi-agent orchestration builders.
-
-**Reference:**  
-- [Visual Builders Overview](https://docs.flowiseai.com)
-
 ### **2. Multi-Agent Orchestration**
 
 **Agentflow** supports the design of multi-agent systems:
@@ -43,28 +42,16 @@ Flowise provides a modular, node-based canvas for building LLM-powered workflows
 - **Agent-to-Agent Communication:** Supervisor agents can delegate tasks to workers, aggregate results, and manage state. All agents access conversation history and shared flow state.
 - **Loops, Branching, Human-in-the-Loop:** Supports conditional logic, iterative loops, and pauses for human approval or review at any workflow stage.
 - **Stateful, Long-Running Agents:** Checkpoints and resume logic for persistent, resilient workflows.
-
-**Reference:**  
-- [Agentflow V2 Architecture](https://docs.flowiseai.com/using-flowise/agentflowv2#core-concept)
-
 ### **3. Chat Assistants & Single-Agent Flows**
 
 - **Chatflow:** Flexible canvas for building single-agent bots, RAG (Retrieval-Augmented Generation) chatbots, and simple LLM-driven applications.
 - **Assistant:** Rapid setup via forms; attach knowledge bases, files, and tools for conversational bots.
 - **Advanced RAG:** Incorporate tools like retrievers, rerankers, and graph-based retrieval for high-accuracy Q&A on custom data.
-
-**Reference:**  
-- [Assistant and Chatflow Documentation](https://docs.flowiseai.com#assistant)
-
 ### **4. Data Connectivity & Integration**
 
 - **100+ Data Formats Supported:** TXT, PDF, DOCX, HTML, CSV, MD, JSON, XML, SQL, and more.
 - **Vector Database Integration:** Built-in support for [Pinecone](/en/glossary/pinecone/), ChromaDB, [Weaviate](/en/glossary/weaviate/), Milvus, and others.
 - **API, SDK, and Embedding:** Expose flows via REST API, Python/Typescript SDKs, or web-embeddable chat widgets.
-
-**Reference:**  
-- [Flowise Data Integrations](https://docs.flowiseai.com)
-
 ### **5. Observability & Monitoring**
 
 - **Execution Tracing:** Visualize step-by-step execution and data flow for debugging and optimization.
@@ -86,10 +73,6 @@ Flowise provides a modular, node-based canvas for building LLM-powered workflows
 
 - **Custom Nodes:** Implement and add your own logic, models, or integrations.
 - **Marketplace/Community Components:** Share and reuse nodes and flow templates.
-
-**Reference:**  
-- [Marketplace and Extensibility](https://cloud.flowiseai.com/marketplace)
-
 ## **How Flowise is Used**
 
 ### **Building AI Agents Visually**
@@ -129,11 +112,6 @@ Users construct LLM-powered workflows by visually linking modular nodes:
 
 5. **Deploy:**  
    - Use REST API, SDK, embed chat widget, or share via public URL.
-
-**References:**  
-- [Official Getting Started Guide](https://docs.flowiseai.com/getting-started)
-- [YouTube: Building AI Chatbot in 10 Minutes](https://www.youtube.com/watch?v=riXpu1tHzl0)
-
 ## **Use Cases & Real-World Examples**
 
 ### **Enterprise Chatbots & Assistants**
@@ -165,10 +143,6 @@ Users construct LLM-powered workflows by visually linking modular nodes:
 
 - **Rapid Prototyping:** Drag-and-drop agent creation for hackathons, demos, and production pilots.
 - **Open Source Collaboration:** Active GitHub and Discord communities for sharing flows and troubleshooting.
-
-**Reference:**  
-- [Flowise Real-World Examples](https://cobusgreyling.medium.com/flowise-for-langchain-b7c4023ffa71)
-
 ## **Key Advantages: Why Use Flowise?**
 
 | Feature             | Flowise Benefit                                             |
@@ -183,10 +157,6 @@ Users construct LLM-powered workflows by visually linking modular nodes:
 | Observability       | Tracing, analytics, and monitoring support                  |
 | Human in the Loop   | Human review/approval embedded in workflows                 |
 | Easy Deployment     | APIs, SDKs, embedded widgets, public URLs                   |
-
-**Reference:**  
-- [Flowise Feature Matrix](https://docs.flowiseai.com)
-
 ## **Technical Architecture & Integrations**
 
 ### **Visual Builders**
@@ -194,10 +164,6 @@ Users construct LLM-powered workflows by visually linking modular nodes:
 - **Assistant:** Easiest, form-based, rapid chatbot creation.
 - **Chatflow:** Node-based, flexible flows for single-agent systems.
 - **Agentflow (V2):** Advanced orchestration, supports explicit workflow design, multi-agent collaboration, loops, branching, and [human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/).
-
-**Reference:**  
-- [Agentflow V2 Deep Dive](https://docs.flowiseai.com/using-flowise/agentflowv2#core-concept)
-
 ### **Data Formats Supported**
 
 - **Textual:** TXT, PDF, DOCX, HTML, MD, CSV, JSON, XML, SQL.
@@ -215,10 +181,6 @@ Users construct LLM-powered workflows by visually linking modular nodes:
 - **RBAC/SSO:** Enterprise-grade access controls.
 - **Encrypted Credentials:** Secure API key and secret storage.
 - **Horizontal Scaling:** Message queue and worker model for distributed deployments.
-
-**Reference:**  
-- [Security and Scalability Docs](https://docs.flowiseai.com)
-
 ## **Getting Started: Installation & First Steps**
 
 ### **Installation**
@@ -308,4 +270,3 @@ Join the [Discord community](https://discord.gg/jbaHfsRVBW), submit PRs or issue
 - **Join the community:** [Discord](https://discord.gg/jbaHfsRVBW)
 - **Explore the code:** [GitHub](https://github.com/FlowiseAI/Flowise)
 - **Watch tutorials:** [YouTube](https://www.youtube.com/watch?v=ri
-

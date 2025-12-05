@@ -1,6 +1,7 @@
 ---
 title: "High Availability (HA)"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "high-availability-ha"
 description: "High Availability (HA) is a system design focused on achieving continuous operational performance and uptime by eliminating single points of failure and leveraging redundancy."
 keywords: ["High Availability", "HA", "redundancy", "failover", "uptime"]
@@ -14,11 +15,6 @@ High Availability (HA) is a system design and operational discipline focused on 
 
 A highly available system is engineered to eliminate single points of failure (SPOFs), leverage redundancy at every layer (hardware, network, software, data), and implement rapid failover. According to [TechTarget](https://www.techtarget.com/searchdatacenter/definition/high-availability), HA is “the ability of a system to operate continuously for a designated period of time even if components within the system fail.”  
 [IBM](https://www.ibm.com/think/topics/high-availability) further emphasizes that HA systems “must be accessible and reliable close to 100% of the time,” supporting both planned and unplanned downtime scenarios.
-
-**See also:**  
-- [Nobl9: Best Practices Guide to High Availability Design](https://www.nobl9.com/service-availability/high-availability-design)  
-- [Red Hat: High Availability Add-On Overview](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/system_design_guide/assembly_overview-of-high-availability-system-design-guide)
-
 ## How is High Availability Used?
 
 High Availability strategies are implemented wherever uninterrupted service is essential:
@@ -201,13 +197,6 @@ Maximum tolerable period in which data might be lost due to failure.
 **Alt-text for Diagrams:**  
 - *Active-active cluster diagram:* Several servers process requests in parallel; failure of one node does not interrupt service.  
 - *Active-passive cluster diagram:* Main server processes requests, backup is ready to take over instantly upon failure.
-
-**See Also:**  
-- [Disaster Recovery (DR)](https://www.ibm.com/topics/disaster-recovery)  
-- [Fault Tolerance](https://www.techtarget.com/searchdisasterrecovery/definition/fault-tolerant)  
-- [Load Balancing](https://www.techtarget.com/searchnetworking/definition/load-balancing)  
-- [Service Level Agreement (SLA)](https://www.ibm.com/topics/service-level-agreement)
-
 **Additional Technical Resources:**
 - [Memgraph: How High Availability Works](https://memgraph.com/docs/clustering/high-availability/how-high-availability-works)
 - [Red Hat: High Availability System Design](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/system_design_guide/assembly_overview-of-high-availability-system-design-guide)
@@ -220,4 +209,3 @@ Maximum tolerable period in which data might be lost due to failure.
 - [Aerospike: Clustering](https://aerospike.com/blog/database-clustering-use-cases/)
 
 This comprehensive glossary integrates deep technical principles, real-world best practices, and authoritative references to support architects, engineers, and business leaders in designing, implementing, and maintaining highly available systems across AI, cloud, and mission-critical infrastructure domains.
-

@@ -103,10 +103,6 @@ main();
 await new Promise(resolve => setTimeout(resolve, 5000));
 ```
 
-**参考:**
-- [Stack Overflow: Best sleep pattern](https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep)
-- [Mimo: JavaScript Sleep Function](https://mimo.org/glossary/javascript/sleep-function)
-
 ### サードパーティパッケージ(例:`sleep-promise`)
 
 **例:**

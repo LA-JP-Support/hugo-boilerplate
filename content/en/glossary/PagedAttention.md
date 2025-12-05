@@ -1,6 +1,7 @@
 ---
 title: "Glossary: PagedAttention and Advanced Memory Management for LLM Inference"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "glossary-pagedattention-and-advanced-memory-management-for-llm-inference"
 description: "Explore PagedAttention, a memory management algorithm that partitions the KV cache of LLMs into fixed-size blocks, reducing GPU memory waste during inference and powering vLLM."
 keywords: ["PagedAttention", "LLM inference", "KV cache", "vLLM", "memory management"]
@@ -99,8 +100,6 @@ A memory management technique to ensure safe modification of shared memory block
 
 - **How it works:** When a sequence needs to modify a block that is shared (multiple references), a new copy is created for that sequence only. Other sequences continue to reference the original block.
 - **Benefit:** Enables memory sharing without risk of data corruption or race conditions.
-- **Reference Counting:** Each block tracks how many sequences reference it, triggering a copy when a write is needed and count > 1 ([vLLM blog, animation](https://blog.vllm.ai/2023/06/20/vllm.html)).
-
 ## Attention Computation with Paging
 
 Traditional attention kernels expect contiguous memory regions for keys and values. PagedAttention introduces a custom attention kernel that can efficiently fetch keys and values from non-contiguous blocks as specified in the block table.
@@ -170,4 +169,3 @@ Classic transformers (Llama, GPT-2, GPT-J), Mixture-of-Experts (Mixtral, Qwen2Mo
 - [vLLM Documentation](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)
 
 *For the latest guides, community support, and updates, see [vLLM on GitHub](https://github.com/vllm-project/vllm) and [official docs](https://docs.vllm.ai/en/latest/).*
-

@@ -4,10 +4,16 @@ translationKey: http-request-node
 description: Learn about the HTTP Request Node, a vital component in automation platforms
   like n8n and Node-RED, for sending HTTP requests to external APIs and integrating
   systems.
-keywords: ["HTTP Request Node", "API integration", "automation platforms", "n8n", "Node-RED"]
+keywords:
+- HTTP Request Node
+- API integration
+- automation platforms
+- n8n
+- Node-RED
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Introduction
@@ -27,11 +33,6 @@ HTTP Request Nodes support the following methods, each corresponding to a specif
 - **DELETE**: Remove a resource.
 - **HEAD**: Retrieve headers without a response body.
 - **OPTIONS**: Query supported communication options.
-
-References:
-- [n8n HTTP Methods](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/#method)
-- [Node-RED HTTP Methods](https://flowfuse.com/node-red/core-nodes/http-request/#configuring-http-request-node)
-
 ### Authentication Options
 
 HTTP Request Nodes cater to a wide array of authentication standards:
@@ -44,11 +45,6 @@ HTTP Request Nodes cater to a wide array of authentication standards:
 - **Header Auth**: Custom header for API keys or other tokens.
 - **Custom Auth**: User-defined authentication logic.
 - **Query Auth**: Credentials sent via query parameters.
-
-References:
-- [n8n Authentication](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/#authentication)
-- [Node-RED Authentication](https://flowfuse.com/node-red/core-nodes/http-request/#configuring-http-request-node)
-
 ### Supported Data Formats
 
 HTTP Request Nodes handle various data formats for both request and response:
@@ -59,12 +55,6 @@ HTTP Request Nodes handle various data formats for both request and response:
 - **Raw**: Arbitrary content with a specified content type.
 - **Plain Text**: Unstructured text payloads.
 - **Binary**: For file and binary data transfer.
-
-References:
-- [n8n Send Body](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/#send-body)
-- [Axios Request Body Formats](https://axios-http.com/docs/req_config)
-- [Node.js Fetch API](https://oxylabs.io/blog/nodejs-fetch-api)
-
 ### Additional Features
 
 - **Custom Headers**: Set arbitrary HTTP headers (e.g., Content-Type, Authorization).
@@ -77,11 +67,6 @@ References:
 - **Response Handling**: Output as JSON, text, binary, or file.
 - **Batching**: Control the number and timing of requests sent in parallel or sequence.
 - **Optimizations for AI Agents**: (n8n) Optimize responses for AI tool consumption.
-
-References:
-- [n8n Pagination](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/#pagination)
-- [Node-RED Output Options](https://flowfuse.com/node-red/core-nodes/http-request/#output)
-
 ## Configuration Steps
 
 The configuration process and available parameters are platform-specific. The following sections illustrate the typical configuration workflow for n8n, Node-RED, and Node.js.
@@ -374,4 +359,3 @@ req.end();
 - [Stack Overflow: HTTP POST in Node.js](https://stackoverflow.com/questions/6158933/how-is-an-http-post-request-made-in-node-js)
 
 This glossary provides a comprehensive, deeply detailed reference for the HTTP Request Node, including configuration, authentication, supported formats, best practices, pitfalls, and platform-specific guidance for n8n, Node-RED, and Node.js. For specific code examples, troubleshooting, and advanced integrations, consult the linked documentation and resources.
-

@@ -1,6 +1,7 @@
 ---
 title: "Model Serving"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "model-serving"
 description: "Model serving is the operational process of making trained machine learning models available for predictions via a network-accessible service, enabling AI-driven features in production systems."
 keywords: ["Model Serving", "Machine Learning", "AI", "Inference", "Model Deployment"]
@@ -34,9 +35,6 @@ Model serving workflows generally follow these steps:
 **Diagram Overview:**  
 - Data Source → Model Serving API → Trained Model → Prediction Output  
 - Monitoring and scaling services surround the API to ensure health and performance.
-
-**Further Reading:**  
-- [Databricks: Deploy models using Mosaic AI Model Serving](https://docs.databricks.com/aws/en/machine-learning/model-serving/)
 - [Seldon: Essential Guide to ML Model Serving Strategies](https://www.seldon.io/an-essential-guide-to-ml-model-serving-strategies-including-llms/) *(see summary)*
 
 ## Why Is Model Serving Needed?
@@ -46,11 +44,6 @@ Model serving workflows generally follow these steps:
 - **Centralized Model Management:** Decouples model logic from application code; multiple apps can use the same model endpoint.
 - **Versioning and Updates:** Allows safe deployment, A/B testing, rollback, and canary releases of models.
 - **Scalable Infrastructure:** Leverages cloud/serverless [autoscaling](/en/glossary/autoscaling/) to handle variable load and optimize costs.
-
-**References:**
-- [Backblaze: AI 101 – What Is Model Serving?](https://www.backblaze.com/blog/ai-101-what-is-model-serving/)
-- [UbiOps: What Is AI Model Serving?](https://ubiops.com/what-is-ai-model-serving/)
-
 ## Use Cases and Examples
 
 ### 1. **E-commerce Product Recommendations**
@@ -67,10 +60,6 @@ Chatbots and search engines utilize LLMs (e.g., GPT-4, Llama) via serving endpoi
 
 ### 5. **Batch Inference Pipelines**
 Telecommunications firms use batch model serving to score churn risk for millions of customers overnight, leveraging distributed serving infrastructure.
-
-**Reference:**  
-- [Databricks: Model Serving Use Cases](https://docs.databricks.com/aws/en/machine-learning/model-serving/)
-
 ## Key Features of Model Serving
 
 | Feature               | Description                                                                                   |
@@ -83,11 +72,6 @@ Telecommunications firms use batch model serving to score churn risk for million
 | **Security**          | Authentication, authorization, encryption (TLS) and compliance (ISO, NEN, GDPR, etc.).        |
 | **Integration**       | Connect to feature stores, data sources, and orchestration tools.                             |
 | **Cost Optimization** | Dynamically allocate resources, pay-per-use billing, avoid overprovisioning.                  |
-
-**Reference:**  
-- [Databricks: Model Serving Security & Monitoring](https://docs.databricks.com/aws/en/machine-learning/model-serving/#-data-protection-in-model-serving)
-- [AWS EC2 Pricing](https://aws.amazon.com/ec2/pricing/on-demand/)
-
 ### Benefits and Drawbacks of Model Serving Platforms
 
 #### **Benefits**
@@ -128,11 +112,6 @@ Telecommunications firms use batch model serving to score churn risk for million
 - **Managed Services:** Use cloud VMs, network, and managed Kubernetes (e.g., AWS EKS).
 - **Serverless:** Upload models, minimal configuration, automatic scaling ([Banana.dev](https://www.banana.dev/), [CoreWeave](https://www.coreweave.com/)).
 - **Model Endpoints:** Directly upload and serve models with provider APIs ([SageMaker](https://aws.amazon.com/sagemaker/), [Azure ML](https://azure.microsoft.com/en-us/products/machine-learning), [Vertex AI](https://cloud.google.com/vertex-ai)).
-
-**Further Reading:**  
-- [UbiOps: Serverless Model Serving](https://ubiops.com/what-is-ai-model-serving/)
-- [Databricks: Model Serving Architectures](https://docs.databricks.com/aws/en/machine-learning/model-serving/)
-
 ## Operational Considerations
 
 ### Scalability
@@ -172,10 +151,6 @@ Telecommunications firms use batch model serving to score churn risk for million
 
 - Open-source frameworks (e.g., [KServe](https://www.hopsworks.ai/dictionary/kserve), [TorchServe](https://pytorch.org/serve/)) allow fine-tuning and deep customization.
 - Managed platforms trade some flexibility for ease of use and reliability.
-
-**Further Reading:**  
-- [Databricks: Optimize Model Serving Endpoints](https://docs.databricks.com/aws/en/machine-learning/model-serving/production-optimization)
-
 ## Popular Model Serving Frameworks & Platforms
 
 | Platform                      | Best For                  | Features & Docs                                                                                 |
@@ -249,4 +224,3 @@ Model serving is the operational backbone that brings data science models into p
 - [KServe Kubernetes-native Model Serving](https://www.hopsworks.ai/dictionary/kserve)
 
 **Authoritative Glossary, enriched and updated with leading practices and direct links to further resources.**
-

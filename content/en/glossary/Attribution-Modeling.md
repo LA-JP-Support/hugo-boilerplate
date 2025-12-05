@@ -1,6 +1,7 @@
 ---
 title: "Attribution Modeling"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "attribution-modeling"
 description: "Attribution modeling is an analytical method to assign credit for conversions to marketing channels and touchpoints, optimizing campaigns and budget allocation."
 keywords: ["attribution modeling", "marketing attribution", "conversion tracking", "customer journey", "marketing channels"]
@@ -75,8 +76,6 @@ Attribution models determine how conversion credit is distributed. These models 
 | J-Shaped / Inverse J      | 20% to first, 60% to converting interaction, 20% split among others (or vice versa)         | Emphasize either the initial or final touchpoint                              | First ad gets 20%, purchase page 60%, rest split 20%.                                                    |
 | Data-Driven / Algorithmic | Uses machine learning to assign credit based on actual conversion data and patterns         | Large datasets, complex, multi-channel journeys                               | Credit distributed based on each channel’s historical impact.                                            |
 | Full Path                 | 22.5% to first, lead creation, deal creation, and last interaction; 10% split among others  | For revenue-focused B2B journeys spanning marketing and sales                 | Each key milestone gets 22.5%; other steps share 10%.                                                    |
-
-Source: [AgencyAnalytics](https://agencyanalytics.com/blog/marketing-attribution-models), [Amplitude](https://amplitude.com/blog/attribution-model-frameworks)
 
 ### Diagram  
 *Depict a customer journey as a flow of touchpoints (ad, blog, email, direct), with arrows and credits assigned per the selected model.*
@@ -292,4 +291,3 @@ The systematic process of determining which marketing channels and touchpoints d
 ## Diagram Description
 
 A network of interconnected nodes visualizes attribution pathways. Each node (touchpoint, e.g., social ad, email, PPC click) is labeled, with arrows illustrating the customer’s journey across
-

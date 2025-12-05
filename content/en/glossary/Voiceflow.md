@@ -1,6 +1,7 @@
 ---
 title: "Voiceflow"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "voiceflow"
 description: "Voiceflow is a no-code platform for designing, building, and deploying conversational AI agents like chatbots and voice assistants across multiple channels. Automate customer interactions and workflows."
 keywords: ["Voiceflow", "conversational AI", "chatbots", "no-code platform", "AI agents"]
@@ -247,15 +248,3 @@ For advanced live chat, deep analytics, or highly regulated deployments, additio
 **Further reading:**  
 - [Conversation Design Solutions](https://www.voiceflow.com/solutions/conversation-design)
 - [Designing Voice User Interfaces by Cathy Pearl](https://www.cathypearl.com/book)
-
-**References & Resources:**  
-- [Voiceflow Official](https://www.voiceflow.com/)  
-- [Voiceflow Pricing](https://www.voiceflow.com/pricing)  
-- [Synthflow Review](https://synthflow.ai/blog/voiceflow-review)  
-- [Callpod AI Review](https://www.callpod.ai/blog/voiceflow-review)  
-- [Voiceflow Salesforce Integration](https://www.voiceflow.com/integrations/salesforce)  
-- [Conversation Design Best Practices](https://www.voiceflow.com/pathways/getting-started-in-conversation-design-heres-what-you-need-to-know)  
-- [Trilogy Case Study](https://www.voiceflow.com/blog/automating-60-of-customer-support-for-90-products-in-12-weeks-how-ai-automation-transformed-trilogy)  
-- [Roam Auto Case Study](https://www.voiceflow.com/blog/how-roam-saved-30-hours-a-week-in-customer-support-hours)  
-- [Designing Voice User Interfaces by Cathy Pearl](https://www.cathypearl.com/book)
-

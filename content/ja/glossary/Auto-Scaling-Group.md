@@ -263,14 +263,6 @@ A: 問題には、不適切なメトリック選択、非現実的な容量制�
 
 - [Official AWS architecture diagram](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html)
 
-## 用語集クロスリファレンス
-
-- **Elastic Load Balancer(ELB):** 複数の計算ターゲット間で受信アプリケーション/ネットワークトラフィックを分散するサービス。
-- **スポットインスタンス:** 中断の可能性がある、より低コストでAWSの余剰容量を使用するEC2コンピューティング。
-- **起動テンプレート:** インスタンスを起動するための設定を含むリソース。
-- **容量リバランシング:** スポットインスタンスがリスクにさらされているときに可用性を事前に維持します。
-- **ライフサイクルフック:** ASG内の主要なライフサイクルイベントでトリガーされるカスタムアクション。
-
 ## 関連記事
 
 - [AWS Auto Scaling 101: Tips For Success](https://www.cloudzero.com/blog/aws-auto-scaling/)

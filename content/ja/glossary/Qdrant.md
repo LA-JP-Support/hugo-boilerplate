@@ -63,8 +63,6 @@ Qdrantのようなベクトルデータベースは類似性によるクエリ�
   アイテムをベクトルとして表現することで、距離メトリクスを介して「類似した」アイテムを見つけることができ、セマンティック検索やレコメンデーションを実現します。
 
 > **参考資料:**  
-> - [Vector Embeddings Explained (Analytics Vidhya)](https://www.analyticsvidhya.com/blog/2024/09/vector-embeddings-with-cohere-and-huggingface/)
-> - [What is a Vector Database? (Qdrant)](https://qdrant.tech/articles/what-is-a-vector-database/)
 
 ### 2. **ポイント**
 

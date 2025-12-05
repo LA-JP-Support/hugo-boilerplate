@@ -90,9 +90,6 @@ n8n(「エヌエイトエヌ」と発音、*nodemation*の略)は、ノードベ
 - Slack APIトークン
 - REST API用のカスタムHTTPヘッダー
 
-**参考:**  
-- [n8nドキュメント: 認証情報](https://docs.n8n.io/credentials/)
-
 ### トリガー
 
 **定義:**  
@@ -102,9 +99,6 @@ n8n(「エヌエイトエヌ」と発音、*nodemation*の略)は、ノードベ
 - Webhook(フォーム、APIなどからデータを受信)
 - Cron(スケジュールされた時刻に実行)
 - アプリ固有のトリガー(Sheetsの新しい行、CRMの新しい取引)
-
-**参考:**  
-- [n8nドキュメント: トリガー](https://docs.n8n.io/nodes/#trigger-nodes)
 
 ### 式
 
@@ -118,9 +112,6 @@ n8n(「エヌエイトエヌ」と発音、*nodemation*の略)は、ノードベ
 - 条件ロジック
 - データフォーマット
 - 計算と文字列操作
-
-**参考:**  
-- [n8nドキュメント: 式](https://docs.n8n.io/code/expressions/)
 
 ## ビジュアルワークフローエディタ
 
@@ -158,10 +149,6 @@ n8nは、アプリやデータソース間で繰り返し発生する複数ス�
 - 開発者と非コーダー(ビジュアルエディタのおかげ)
 - プライバシー、コンプライアンス、カスタム統合ニーズを持つ企業
 - 個人的またはスマートホームワークフローを自動化する個人
-
-**参考:**  
-- [n8n初心者向けガイド](https://contabo.com/blog/the-complete-beginners-guide-to-n8n-your-first-workflow/)
-- [n8n使用例](https://n8n.io/use-cases/)
 
 ## n8nにおけるAI統合
 

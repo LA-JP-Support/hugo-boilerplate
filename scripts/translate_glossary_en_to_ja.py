@@ -31,7 +31,8 @@ import yaml
 
 try:
     from dotenv import load_dotenv
-    load_dotenv()  # .env ファイルから環境変数を自動読み込み
+    load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env")
+  # .env ファイルから環境変数を自動読み込み
 except ImportError:
     pass  # python-dotenv がなければスキップ
 

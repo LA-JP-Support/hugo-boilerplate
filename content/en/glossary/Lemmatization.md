@@ -5,13 +5,10 @@ description: "Lemmatization is a linguistic process in NLP and AI that reduces i
 keywords: ["lemmatization", "natural language processing", "nlp", "stemming", "text normalization"]
 category: "General"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
-## Contents
-
-1. [What is Lemmatization?](#what-is-lemmatization)
-2. [How Does Lemmatization Work?](#how-does-lemmatization-work)
 3. [Types of Lemmatization](#types-of-lemmatization)
 4. [Lemmatization vs. Stemming](#lemmatization-vs-stemming)
 5. [Applications of Lemmatization](#applications-of-lemmatization)
@@ -26,12 +23,6 @@ Lemmatization is a core text normalization technique in computational linguistic
 
 **Why Lemmatization?**  
 Languages are morphologically rich: words change form based on tense, number, gender, case, or degree. Lemmatization allows algorithms to recognize these variations as the same underlying idea, producing more reliable and meaningful results in NLP and AI systems.
-
-**Sources:**  
-- [Built In: Lemmatization in NLP and Machine Learning](https://builtin.com/machine-learning/lemmatization)  
-- [IBM: What Are Stemming and Lemmatization?](https://www.ibm.com/think/topics/stemming-lemmatization)  
-- [GeeksforGeeks: Python Lemmatization with NLTK](https://www.geeksforgeeks.org/python/python-lemmatization-with-nltk/)
-
 ## How Does Lemmatization Work?
 
 Lemmatization involves several essential steps:
@@ -57,11 +48,6 @@ Lemmatization involves several essential steps:
 | better    | Adjective  | good           |
 | mice      | Noun       | mouse          |
 | feet      | Noun       | foot           |
-
-**References:**  
-- [spaCy Linguistic Features](https://spacy.io/usage/linguistic-features#lemmatization)  
-- [GeeksforGeeks: Python Lemmatization with NLTK](https://www.geeksforgeeks.org/python/python-lemmatization-with-nltk/)
-
 ## Types of Lemmatization
 
 1. **Rule-Based Lemmatization**  
@@ -137,10 +123,6 @@ Lemmatization is critical in many NLP and AI tasks:
 
 7. **Language Modeling and Information Retrieval**  
    Reduces vocabulary size, focusing models on conceptual units.
-
-**Sources:**  
-- [Built In: Lemmatization in NLP and Machine Learning](https://builtin.com/machine-learning/lemmatization)
-
 ## Advantages and Disadvantages
 
 ### Advantages
@@ -158,11 +140,6 @@ Lemmatization is critical in many NLP and AI tasks:
 - **Language Dependence:** Effectiveness varies with language complexity.
 - **Resource Requirement:** Needs extensive lexical resources or annotated data.
 - **Limited Context Window:** Typically operates at the sentence or phrase level.
-
-**References:**  
-- [Built In: Lemmatization in NLP and Machine Learning](https://builtin.com/machine-learning/lemmatization)  
-- [GeeksforGeeks: Python Lemmatization with NLTK](https://www.geeksforgeeks.org/python/python-lemmatization-with-nltk/)
-
 ## Implementation Examples
 
 ### Lemmatization with NLTK
@@ -200,8 +177,6 @@ print(lemmatized_words)
 - `"better"` → `"good"`
 - `"children"` → `"child"`
 
-Source: [GeeksforGeeks: Python Lemmatization with NLTK](https://www.geeksforgeeks.org/python/python-lemmatization-with-nltk/)
-
 ### Lemmatization with spaCy
 
 ```python
@@ -223,7 +198,6 @@ toys --> toy
 mice --> mouse
 ```
 spaCy provides both rule-based and lookup-based lemmatization.  
-Reference: [spaCy Linguistic Features](https://spacy.io/usage/linguistic-features#lemmatization)
 
 ### Stemming vs. Lemmatization with NLTK
 
@@ -235,7 +209,6 @@ word = "running"
 print(f"Stemmed: {stemmer.stem(word)}")  # Output: run
 ```
 Stemming is faster but less accurate.  
-Reference: [GeeksforGeeks: Introduction to Stemming](https://www.geeksforgeeks.org/machine-learning/introduction-to-stemming/)
 
 ## When to Use Lemmatization
 
@@ -276,15 +249,7 @@ Reference: [GeeksforGeeks: Introduction to Stemming](https://www.geeksforgeeks.o
 
 **Summary:**  
 Lemmatization groups different word forms to their base lemma using linguistic context and dictionaries, producing more accurate and semantically meaningful results than stemming. It is fundamental for high-precision NLP tasks, with implementation available in mainstream libraries like spaCy and NLTK.
-
-**See also:**  
-- [spaCy Documentation: Lemmatization](https://spacy.io/usage/linguistic-features#lemmatization)
-- [NLTK Lemmatization Guide](https://www.geeksforgeeks.org/python/python-lemmatization-with-nltk/)
-- [IBM: Stemming and Lemmatization](https://www.ibm.com/think/topics/stemming-lemmatization)
-- [Built In: Lemmatization in NLP](https://builtin.com/machine-learning/lemmatization)
-
 **Recommended Video:**  
 - [Codebasics: Stemming and Lemmatization in NLP](https://www.youtube.com/watch?v=4vryPwLtjIg)
 
 *Lemmatization ensures that different inflected forms of a word are analyzed as a single item, which is crucial for systems that need to understand meaning rather than just process text superficially. Its use is essential for tasks requiring semantic understanding, though it comes with increased computational cost compared to stemming.*
-

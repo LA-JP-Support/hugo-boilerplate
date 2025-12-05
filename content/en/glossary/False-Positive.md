@@ -5,7 +5,8 @@ description: "A false positive is when an AI system (chatbot, detection tool, pr
 keywords: ["False Positive", "AI Systems", "Chatbots", "Content Detection", "Privacy Tools"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is a False Positive?
@@ -25,10 +26,6 @@ False positives are not an intentional feature; rather, they represent a fundame
 - **Performance Metrics:** False positives are measured alongside false negatives, true positives, and true negatives to calculate system performance, especially [precision and recall](/en/glossary/precision-and-recall/).
 - **System Evaluation:** The **false positive rate** is a core metric in benchmarking AI models, especially when stakes are high (e.g., healthcare, academic integrity, privacy compliance).
 - **Workflow Impact:** In automation, false positives can halt processes, block users, misdirect customers, or trigger incorrect alerts, often leading to operational friction or reputational harm.
-
-See also:  
-[Gaslighting Check: False Positives in AI – Emotional Fallout](https://www.gaslightingcheck.com/blog/false-positives-ai-emotional-fallout)
-
 ## Technical Background
 
 Detection, classification, or prediction systems in AI categorize each instance as follows:
@@ -166,10 +163,6 @@ A privacy filter tags “John Doe” and “Tesla” in a public press release a
 - **Operational friction:** Workflows are blocked, and analytic processes are degraded.
 - **Compliance noise:** Excessive false alerts lead to alert fatigue and loss of trust in the system.
 - **Data utility loss:** Overredaction destroys the analytical value of datasets.
-
-**Source:**  
-- [Protecto: False positives and negatives in AI privacy tools](https://www.protecto.ai/blog/false-positives-and-negatives-in-ai-privacy-tools/)
-
 ## False Positive Rate and Measurement
 
 **False Positive Rate (FPR):**  
@@ -271,4 +264,3 @@ For more, see [Euronews: AI hallucinations and misclassification](https://www.eu
 - [Turnitin: Understanding False Positives in AI Writing Detection](https://www.turnitin.com/blog/understanding-false-positives-within-our-ai-writing-detection-capabilities)
 - [Gaslighting Check: False Positives in AI – Emotional Fallout](https://www.gaslightingcheck.com/blog/false-positives-ai-emotional-fallout)
 - [Originality.AI: AI Content Detector False Positives](https://originality.ai/blog
-

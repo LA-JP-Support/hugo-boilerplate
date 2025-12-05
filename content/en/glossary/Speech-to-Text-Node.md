@@ -5,7 +5,8 @@ description: "A Speech-to-Text Node is a modular component in automation platfor
 keywords: ["Speech-to-Text Node", "Automatic Speech Recognition", "AI workflows", "Audio to Text", "Transcription"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Overview
@@ -21,11 +22,6 @@ A **Speech-to-Text Node** forms the foundation of [conversational AI](/en/glossa
 - Enables chatbots to process voice queries.
 - Transcribes meetings, interviews, or lectures for knowledge management.
 - Automates content indexing and data extraction from voice interactions or media.
-
-**Further Reading:**  
-- [Kore.ai Audio to Text Node Documentation](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/audio-to-text-node/)  
-- [LiveKit STT Models Overview](https://docs.livekit.io/agents/models/stt/)
-
 ## Key Capabilities
 
 - **Automatic Speech Recognition (ASR):** Converts audio to text using advanced models ([Kore.ai](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/audio-to-text-node/), [LiveKit](https://docs.livekit.io/agents/models/stt/), [Rev AI](https://www.rev.ai/)).
@@ -295,4 +291,3 @@ session = AgentSession(
   - Removal is default for some models; configurable in others.
 - **Speaker Diarization:**  
   - Not universally supported—verify with provider
-

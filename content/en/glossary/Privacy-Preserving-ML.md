@@ -1,6 +1,7 @@
 ---
 title: "Privacy-Preserving Machine Learning (PPML)"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "privacy-preserving-machine-learning-ppml"
 description: "Explore Privacy-Preserving Machine Learning (PPML), methods like Differential Privacy, Homomorphic Encryption, MPC, and Federated Learning, to secure sensitive data in ML models."
 keywords: ["Privacy-Preserving Machine Learning", "Differential Privacy", "Homomorphic Encryption", "Multi-Party Computation", "Federated Learning"]
@@ -178,11 +179,6 @@ A distributed ML paradigm where models are collaboratively trained across decent
 - **Model Update Attacks:**  
   Infer sensitive data by comparing model states before and after updates ([Analyzing Information Leakage of Updates to Natural Language Models](https://www.microsoft.com/en-us/research/publication/analyzing-information-leakage-of-updates-to-natural-language-models/)).
 
-**References and Detailed Survey:**
-- [arXiv: Privacy Preserving Machine Learning: Threats and Solutions](https://arxiv.org/pdf/1804.11238)
-- [ScienceDirect: Privacy Preserving Machine Learning](https://www.sciencedirect.com/topics/computer-science/privacy-preserving-machine-learning)
-- [Tandfonline: Privacy Threats in Machine Learning](https://www.tandfonline.com/doi/full/10.1080/19361610.2025.2562401?src=)
-
 ## Industry Deployments, Toolkits, and Frameworks
 
 ### Industry Deployments
@@ -275,4 +271,3 @@ A distributed ML paradigm where models are collaboratively trained across decent
 ## Further Reading and Resources
 
 - [Microsoft Research: Privacy Preserving Machine
-

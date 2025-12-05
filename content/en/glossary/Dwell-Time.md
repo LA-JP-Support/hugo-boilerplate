@@ -1,6 +1,7 @@
 ---
 title: "Dwell Time"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "dwell-time"
 description: "Dwell time measures the duration a user spends on a page after clicking from a SERP before returning. Learn its SEO impact, how to measure it, and strategies to improve user engagement."
 keywords: ["dwell time", "SEO", "user engagement", "Google Analytics", "ranking factor"]
@@ -20,12 +21,6 @@ draft: false
 
 **Visual:**  
 [![Dwell time explained — Ahrefs](https://ahrefs.com/blog/wp-content/uploads/2022/08/dwell-time-explained.png)](https://ahrefs.com/seo/glossary/dwell-time)
-
-**Further Reading:**  
-- [SEMrush: What Is Dwell Time?](https://www.semrush.com/blog/dwell-time/)
-- [Ahrefs: Dwell Time](https://ahrefs.com/seo/glossary/dwell-time)
-- [Backlinko: Dwell Time](https://backlinko.com/hub/seo/dwell-time)
-
 ## How Dwell Time Is Used
 
 Dwell time is interpreted as a proxy for user satisfaction and the degree to which content matches the user’s search intent:
@@ -141,8 +136,6 @@ Dwell time provides critical insights into **user satisfaction** and **content q
 
 - **Ecommerce:** Longer dwell times on product pages often correlate with higher conversion rates ([Adsterra](https://adsterra.com/blog/dwell-time/)).
 - **Blogs/Guides:** Well-structured, in-depth guides keep users reading.
-- **Reference/FAQ:** Quick answers can mean short dwell time but high satisfaction.
-
 ## How to Improve Dwell Time
 
 ### Actionable Tactics
@@ -244,15 +237,5 @@ A: Dwell time is time before returning to the SERP; bounce rate is % of single-p
 - [YouTube: How to Add Video to Your Website](https://www.youtube.com/results?search_query=add+video+to+website)
 - [Google Analytics Filter Screenshot Tutorial](https://support.google.com/analytics/answer/1006253?hl=en)
 - [SERP Bounce Time Custom Report (Measureschool)](https://measureschool.com/)
-
-**See also:**  
-- [Average Engagement Time](https://www.semrush.com/blog/average-time-on-page-google-analytics/)
-- [Bounce Rate](https://www.semrush.com/blog/bounce-rate/)
-- [Session Duration](https://support.google.com/analytics/answer/1006253?hl=en)
-- [User Search Intent](https://backlinko.com/hub/seo/search-intent)
-- [Internal Linking](https://ahrefs.com/blog/internal-links/)
-- [High Quality Content](https://backlinko.com/hub/seo/content)
-
 **For technical implementation:**  
 - [Simo Ahava’s Advanced Dwell Time Tracking Guide](https://www.simoahava.com/analytics/track-serp-b
-

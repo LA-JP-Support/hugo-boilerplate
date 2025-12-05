@@ -5,7 +5,8 @@ description: "A splash screen is the first visual a user sees when an app or cha
 keywords: ["splash screen", "AI chatbot", "mobile app", "user experience", "branding"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What Is a Splash Screen?
@@ -20,12 +21,6 @@ A **splash screen** is a non-interactive, branded image or animation that appear
 - Not interactive—users cannot click or interact.
 - Automatically dismissed when loading is complete.
 - Often includes support for both light and dark themes, responsive layouts, and high contrast for accessibility.
-
-**Further Reading:**  
-- [Android Developers: Splash Screens](https://developer.android.com/develop/ui/views/launch/splash-screen)  
-- [Apple Human Interface Guidelines: Launch Screen](https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/launch-screen/)  
-- [ChatBot.com: Chat Widget Integration](https://www.chatbot.com/integrations/chat-widget/)
-
 ## Purpose and Benefits
 
 ### 1. Brand Identity and First Impressions
@@ -42,11 +37,6 @@ A **splash screen** is a non-interactive, branded image or animation that appear
 - **Resource Initialization:** Provides time for loading assets (e.g. AI models, data, authentication), especially important for AI chatbot widgets that may require API handshakes or model loading.
 - **Error Handling:** Can be adapted to display friendly error messages in case of loading failures (e.g., due to network issues), though this should not be the primary function.
 - **Security:** In some banking or enterprise contexts, splash screens allow secure authentication or environment checks before user interaction.
-
-**References:**  
-- [UX StackExchange: Best Practices for Splash Screens](https://ux.stackexchange.com/questions/50363/why-have-a-splash-screen-and-best-practices-for-native-app)  
-- [HelpCrunch: Chatbot Best Practices](https://helpcrunch.com/blog/chatbot-best-practices/)
-
 ## Best Practices for Splash Screen Design
 
 ### 1. Keep It Minimal
@@ -84,12 +74,6 @@ A **splash screen** is a non-interactive, branded image or animation that appear
 
 ### 8. Exit Animation
 - Use a brief fade-out or slide transition when dismissing the splash screen for a smoother handoff to the main interface, as recommended by Android and iOS platform guidelines.
-
-**References:**  
-- [Android Developers: Splash Screens](https://developer.android.com/develop/ui/views/launch/splash-screen)  
-- [UX StackExchange: Best Practices](https://ux.stackexchange.com/questions/50363/why-have-a-splash-screen-and-best-practices-for-native-app)  
-- [Built In: What Is a Splash Screen?](https://builtin.com/articles/splash-screen)
-
 ## Technical Implementation
 
 ### Android
@@ -125,10 +109,6 @@ splashScreen.setOnExitAnimationListener { splashScreenView ->
 
 **Migration:**  
 If using custom splash screens in Android 11 or earlier, migrate to the SplashScreen API for consistency and compliance with modern Android UX guidelines.
-
-**Source:**  
-- [Android Developers: Splash Screens](https://developer.android.com/develop/ui/views/launch/splash-screen)
-
 ### iOS
 
 iOS uses static launch images or storyboards for splash screens, defined in Xcode project settings.
@@ -144,7 +124,6 @@ iOS uses static launch images or storyboards for splash screens, defined in Xcod
 
 **Apple Guidelines:**  
 > "Design a launch screen that’s nearly identical to the first screen of your app. The launch screen quickly transitions to the first screen to make your app feel fast and responsive."  
-Source: [Apple Human Interface Guidelines: Launch Screen](https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/launch-screen/)
 
 ### Web Applications & Chatbot Widgets
 
@@ -214,10 +193,6 @@ Web splash screens are typically HTML/CSS overlays that are displayed while the 
 
 ### Enterprise SaaS Dashboards
 - AI assistant widgets use splash screens to indicate integration with CRM or business tools, signaling that data is being prepared for a personalized experience.
-
-**Reference:**  
-- [HelpCrunch: Chatbot Best Practices](https://helpcrunch.com/blog/chatbot-best-practices/)
-
 ## Frequently Asked Questions (FAQ)
 
 **Q1: Should a splash screen be used if the app or chatbot loads instantly?**  
@@ -256,4 +231,3 @@ A: Not strictly required, but recommended for apps or widgets with noticeable lo
 - [YouTube: What is a Splash Page?](https://www.youtube.com/watch?v=UimHoQpv3gs)
 
 A splash screen is a brief, branded visual presented while an application or chatbot widget loads. It delivers brand impact, user feedback, and a smooth transition into the primary interface. Effective splash screens are minimal, fast, and accessible, aligning closely with platform guidelines and user expectations. For more, see the official documentation and design inspiration linked above.
-

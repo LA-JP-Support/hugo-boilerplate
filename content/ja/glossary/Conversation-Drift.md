@@ -33,8 +33,6 @@ e-title: Conversation Drift
 
 **1. コンテキストウィンドウの制限**  
 GPT-4などの大規模言語モデル（LLM）は、考慮できる会話履歴の量である「コンテキストウィンドウ」が有限です。長いセッションでは、以前のターンがメモリから押し出され、コンテキストの喪失やトピックの混乱を引き起こします。  
-*参考: [Castro, 2025](https://www.linkedin.com/posts/cesarecastrotorres_ai-chatgpt-conversationalai-activity-7309377204214239232-4k3z*
-
 **2. あいまいまたは変化するユーザープロンプト**  
 ユーザーは意図せずにあいまいさ、同義語、または突然のトピック変更を導入し、AIが焦点を維持するのを難しくすることがあります。
 
@@ -58,8 +56,6 @@ AIモデルは正確さ、安全性、有用性、会話のトーンのバラン
 
 **3. 検証ループと現実ドリフト**  
 長期または感情的に強いチャットでは、ユーザーとAIが間違った前提を強化し、「密閉された解釈フレーム」を作り出す可能性があります。  
-*参考: [Recursive Entanglement Drift, Ruane 2025](https://www.psychologytoday.com/us/blog/the-algorithmic-mind/202508/how-ai-chatbots-may-blur-reality)*
-
 ---
 
 ## 会話ドリフトの例
@@ -105,8 +101,6 @@ AIモデルは正確さ、安全性、有用性、会話のトーンのバラン
   ドリフトにより、ログ、分析、トレーニングデータが無関係なやり取りで汚染されます。
 - **静かなパフォーマンス低下:**  
   AIシステムは明確な失敗信号なしに劣化する可能性があります。  
-  *参考: [Magai.co](https://magai.co/how-to-detect-and-manage-model-drift-in-ai, [DEV.to](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l)*
-
 ### 心理的・UXリスク
 
 - **フラストレーションとドロップオフ:**  
@@ -139,8 +133,6 @@ AIモデルは正確さ、安全性、有用性、会話のトーンのバラン
   トレーニングデータと実際のデータの分布（平均、分散、分位数）を比較し、コルモゴロフ-スミルノフ検定や人口安定性指数などの統計的検定を使用して変化にフラグを立てる。
 - **自動ドリフト検出ツール:**  
   リアルタイムモニタリングツールを使用して、ドリフトが検出されたときにチームに警告する。  
-  *参考: [Magai.co, How to Detect and Manage Model Drift in AI](https://magai.co/how-to-detect-and-manage-model-drift-in-ai, [DEV.to](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l), [Tencent Cloud](https://www.tencentcloud.com/techpedia/127715)*
-
 ---
 
 ## 予防と緩和戦略
@@ -181,5 +173,3 @@ AIモデルは正確さ、安全性、有用性、会話のトーンのバラン
     ダッシュボードと視覚化を使用して早期にコンテキスト喪失を発見する。
 12. **実際のユーザーでテストする:**  
     長く複雑なセッションをシミュレートしてエッジケースのドリフトを浮き彫りにする。
-
-*参考: [Magai.co](https://magai.co/how-to-detect-and-manage-model-drift-in-ai, [DEV.to](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l), [Tim Williams, LinkedIn](https://www.linkedin.com/posts/timwilliamsau_ai-productmanagement

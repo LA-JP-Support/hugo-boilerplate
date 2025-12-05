@@ -1,6 +1,7 @@
 ---
 title: "Human-in-the-Loop (HITL)"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "human-in-the-loop-hitl"
 description: "Human-in-the-Loop (HITL) integrates human intelligence into AI/ML workflows for training, tuning, and validation, ensuring accuracy, safety, and ethical decision-making."
 keywords: ["human-in-the-loop", "artificial intelligence", "machine learning", "human oversight", "data annotation"]
@@ -50,9 +51,6 @@ When processing invoices, AI models extract standard fields, but ambiguous handw
 
 5. **Decision Oversight:**  
    In production, AI handles routine cases, escalating ambiguous or high-risk decisions to humans.
-
-**Reference workflow diagram:**  
-- [Parseur: HITL Workflow Diagram](https://parseur.com/images/hitl-workflow_1024.png)
 
 #### More on HITL workflows:
 - [Zapier: Human-in-the-Loop in AI workflows](https://zapier.com/blog/human-in-the-loop/)
@@ -260,4 +258,3 @@ Yes, human reviewers can correct biases that automated systems may not detect.
 - [AI Model Validation](https://www.ibm.com/think/topics/ai-model)
 
 For a deep dive, review the comprehensive guides, best practices, and real-world case studies linked above. These resources provide up-to-date, authoritative insights into building, scaling, and governing effective Human-in-the-Loop AI systems.
-

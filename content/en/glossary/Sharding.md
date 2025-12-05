@@ -1,6 +1,7 @@
 ---
 title: "Sharding"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "sharding"
 description: "Sharding is a database architecture pattern that splits a large logical dataset into smaller, independent pieces called shards, enabling horizontal scaling and improved performance."
 keywords: ["sharding", "database scaling", "horizontal partitioning", "shard key", "system design"]
@@ -26,11 +27,6 @@ A social media application with millions of users may shard its user table by us
 - **Horizontal Partitioning:** Distributing the rows of a table across multiple databases (shards).
 - **Vertical Partitioning:** Distributing columns of a table across separate tables or databases. (For example, separating infrequently used columns into a different table.)
 - **Shared-Nothing Architecture:** Each shard operates entirely independently, without shared hardware, storage, or state.
-
-**Further Reading:**  
-- [Hello Interview: Sharding in System Design](https://www.hellointerview.com/learn/system-design/core-concepts/sharding)  
-- [Microsoft Learn: Sharding Pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding)
-
 ## How is Sharding Used?
 
 Sharding is fundamental to designing scalable, high-performance, and fault-tolerant systems. It is used to:
@@ -90,10 +86,6 @@ Sharding overcomes these by distributing both data and workload across many mach
 
 - **Application-Level Sharding:** Custom logic in the application to route queries and writes.
 - **Database-Level Sharding:** Sharding is handled natively by the database system; examples include MongoDB, Cassandra, and some SQL databases with sharding extensions.
-
-**Source:**  
-- [MongoDB: Database Sharding Explained](https://www.mongodb.com/resources/products/capabilities/database-sharding-explained)
-
 ## Sharding Strategies & Architectures
 
 The method chosen for sharding impacts data distribution, performance, scalability, and operational complexity.
@@ -308,4 +300,3 @@ Consider these options before committing to sharding.
 
 **Q: Does sharding guarantee even data and load distribution?**  
 A: No. It depends entirely on the shard key and the sharding strategy
-

@@ -16,8 +16,6 @@ kana_head: か
 
 コンテンツモデレーションとは、オンライン上のユーザー生成コンテンツ(UGC)を評価、フィルタリング、規制する戦略的プロセスです。テキスト、画像、動画、音声、ライブストリームなど、あらゆる形式のコンテンツがプラットフォームのルール、法的要件、倫理基準に準拠していることを保証します。効果的なモデレーションは、表現の自由の促進と、ヘイトスピーチ、暴力的な映像、搾取、誤情報などの有害なコンテンツからユーザーを保護する必要性とのバランスを取ります。
 
-参考:[Checkstep Guide](https://www.checkstep.com/content-moderation-a-comprehensive-guide)
-
 ## コンテンツモデレーションが重要な理由
 
 コンテンツモデレーションは以下の点で重要です:
@@ -188,8 +186,6 @@ AIモデレーションタイプの詳細な内訳(出典:[TechTarget](https://w
 - **燃え尽き症候群と共感疲労**
 - **社会的引きこもりと回避行動**
 
-参考:[Cyberpsychology: The psychological impacts of content moderation on content moderators](https://cyberpsychology.eu/article/view/33166)、[Content Moderator Mental Health and Coping Styles (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC12024403/)
-
 **サポートのベストプラクティス:**
 
 - トラウマインフォームドケアと心理教育を提供します。
@@ -271,8 +267,6 @@ AIは文脈、皮肉、文化的違いの理解に苦労し、過剰モデレー
 - **透明性と異議申し立て:** モデレーションアクションの理由を伝え、決定に異議を唱えることを許可します。
 - **法令遵守:** 法的変更(例:DSA、GDPR)を監視し、ポリシーを更新します。
 
-参考:[Checkstep Guide](https://www.checkstep.com/content-moderation-a-comprehensive-guide)
-
 ## 使用例と実例
 
 ### ソーシャルメディア
@@ -308,8 +302,6 @@ AIは文脈、皮肉、文化的違いの理解に苦労し、過剰モデレー
 - 人間の判断は、特に文脈と異議申し立てにおいて依然として重要です。
 - モデレーターのウェルビーイングへの対処は、倫理的かつ運用上の必要性です。
 - プラットフォームは、新しいコンテンツタイプ、進化する脅威、規制環境に適応する必要があります。
-
-参考:[Immersive Truth](https://opentextbooks.library.arizona.edu/immersivetruth/chapter/content-moderation-new/)
 
 ## よくある質問
 

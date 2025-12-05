@@ -1,6 +1,7 @@
 ---
 title: "Weaviate"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "weaviate"
 description: "Weaviate is an open-source, cloud-native vector database storing objects & high-dimensional embeddings. It enables semantic, hybrid search & large-scale AI/ML applications."
 keywords: ["Weaviate", "vector database", "semantic search", "vector embeddings", "hybrid search"]
@@ -258,4 +259,3 @@ A: Horizontal [sharding](/en/glossary/sharding/), clustering, and replication ([
 
 **Q: Is Weaviate suitable for enterprise use?**  
 A: Yes. It offers RBAC, encryption, audit
-

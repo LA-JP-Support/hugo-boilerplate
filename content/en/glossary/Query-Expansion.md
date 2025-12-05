@@ -5,7 +5,8 @@ description: "Query expansion reformulates user search queries by adding synonym
 keywords: ["Query Expansion", "Information Retrieval", "AI Chatbots", "RAG", "Search Engines"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What Is Query Expansion?
@@ -113,11 +114,6 @@ results = expanded_retrieval_pipeline.run({"expander": {"query": "climate change
 | 2000s                 | Statistical Analysis     | Data-driven, some personal.  | Needs large data, privacy issues     |
 | 2010s                 | Pseudo-Relevance Feedback| Contextual, self-improving   | Can introduce noise                  |
 | 2020s                 | LLMs, Embeddings         | Deep context, [disambiguation](/en/glossary/disambiguation/) | Resource-intensive, risk of over-expansion |
-
-**Reference:**  
-- [Stanford NLP - Query Expansion PDF](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf)  
-- [Sandgarden - Query Expansion Revolution](https://www.sandgarden.com/learn/query-expansion)
-
 ## Benefits of Query Expansion
 
 - **Improved Recall:** Recovers relevant documents that use different terminology.
@@ -126,11 +122,6 @@ results = expanded_retrieval_pipeline.run({"expander": {"query": "climate change
 - **Disambiguation:** Handles short or vague queries using context.
 - **Natural Language Support:** Users can search in their own words.
 - **Personalization:** Expansion can be tailored to user history and profile.
-
-**Sources:**  
-- [ITU Online - Benefits of Query Expansion](https://www.ituonline.com/tech-definitions/what-is-query-expansion/)  
-- [Glean - RAG Examples](https://www.glean.com/blog/rag-examples)
-
 ## Challenges and Considerations
 
 - **Over-Expansion:** Too many or irrelevant terms dilute precision.

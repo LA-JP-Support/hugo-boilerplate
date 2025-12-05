@@ -42,10 +42,6 @@ The [Botpress Flow Editor](https://botpress.com/academy-lesson/studio-ui-flow-ed
 **Best practice:**  
 Iterate on conversation logic visually, simulate user interactions, and refine flows for clarity and ROI.
 
-**References:**  
-- [Official Flow Editor guide](https://botpress.com/academy-lesson/studio-ui-flow-editor)  
-- [PDF on Botpress features](https://www.cpce-polyu.edu.hk/docs/qesschatbotlibraries/qess-chatbot-guidelines/botpressintroduction.pdf?sfvrsn=4f4ee1ce_5)
-
 
 ### AI & LLM Integration
 
@@ -66,11 +62,6 @@ Bots can use these models for:
 - Ensures answers are accurate and up-to-date, not just generated from the model’s static memory
 - Supports industry use cases where compliance and accuracy are critical
 
-**References:**  
-- [RAG in AI](https://botpress.com/blog/rag-in-ai)  
-- [Google AI Integration](https://botpress.com/integrations/google-ai)  
-- [Best LLMs 2025](https://botpress.com/blog/best-large-language-models)
-
 
 ### Knowledge Base Support
 
@@ -88,11 +79,6 @@ Botpress provides advanced knowledge base functionality, leveraging [vector data
 - Organize knowledge into separate KBs for different products or departments
 - Apply a ROT (Redundant, Obsolete, Trivial) analysis to keep data clean
 
-**References:**  
-- [Vector Database Guide](https://botpress.com/blog/vector-database)  
-- [KB Best Practices](https://botpress.com/docs/studio/concepts/knowledge-base/knowledge-base-best-practices)  
-- [Vector Storage in Botpress](https://botpress.com/academy-lesson/vector-database-storage)
-
 
 ### Omnichannel Deployment
 
@@ -105,9 +91,6 @@ Botpress supports deployment across over 10+ channels, ensuring reach and flexib
 - **Multilingual support:** Automatic translation and language model adaptation for global audiences
 - **Consistent UX:** Build once, deploy everywhere—flows and logic are consistent across channels
 
-**References:**  
-- [Official Integrations Directory](https://www.botpress.com/hub?type_equal=%5B%22Channel%22%5D)
-
 
 ### Advanced Analytics & Monitoring
 
@@ -115,9 +98,6 @@ Botpress offers robust analytics and monitoring tools for continuous improvement
 - **Conversation analytics:** Track user engagement, drop-off points, and popular topics
 - **Testing tools:** Built-in emulator, event debugger, and flow simulation
 - **Continuous improvement:** Use data-driven insights to refine flows, update knowledge, and optimize bot performance
-
-**References:**  
-- [Botpress Analytics Overview](https://botpress.com/docs/)
 
 
 ### Integrations and Extensibility
@@ -163,9 +143,6 @@ Botpress is engineered for enterprise security and compliance:
    Publish bots on websites, messaging apps, or internal tools.
 8. **Monitor & Optimize:**  
    Use analytics to improve over time.
-
-**References:**  
-- [Botpress Documentation](https://botpress.com/docs/)
 
 
 ### Deployment Scenarios
@@ -216,7 +193,7 @@ Botpress is engineered for enterprise security and compliance:
 
 | Feature                     | **Botpress**                    | Chatfuel / ManyChat (No-Code) | Rasa / Open Source | GPTBots (Enterprise AI) |
 |-----------------------------|----------------------------------|-------------------------------|--------------------|-------------------------|
-| Visual flow builder         | Yes                              | Yes                           | No                 | Yes                     |
+| [Visual flow builder](/en/glossary/visual-flow-builder/)         | Yes                              | Yes                           | No                 | Yes                     |
 | LLM/AI integration          | Advanced (GPT-4, Claude, etc.)   | Limited                       | Customizable       | Advanced                |
 | Knowledge base (RAG)        | Native support                   | Limited                       | Custom only        | Proprietary             |
 | API & custom code           | Robust, developer-friendly       | Limited                       | Advanced           | Yes                     |
@@ -320,5 +297,3 @@ Developers, enterprises, and SMBs needing flexible, scalable, secure AI agents.
 
 
 *For deeper technical information, deployment guides, or advanced integrations, consult the [Botpress Docs](https://botpress.com/docs/) or join the [Botpress Community on Discord](https://discord.com/invite/botpress).*
-
-

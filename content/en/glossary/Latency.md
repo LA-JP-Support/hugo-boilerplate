@@ -1,6 +1,7 @@
 ---
 title: "Latency"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "latency"
 description: "Latency is the time delay between a request and a system's response, crucial for AI infrastructure, web apps, and real-time systems. Learn its types, causes, and reduction strategies."
 keywords: ["latency", "AI infrastructure", "network latency", "performance optimization", "real-time systems"]
@@ -295,4 +296,3 @@ A: High retrieval latency slows inference and real-time decision-making, directl
 - **Bandwidth:** Network's maximum data transfer capacity at a given time.
 - **Throughput:** Actual data transferred per unit time.
 - **J
-

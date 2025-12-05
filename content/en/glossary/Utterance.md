@@ -1,6 +1,7 @@
 ---
 title: "Utterance"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "utterance"
 description: "Learn what an utterance is in conversational AI, its role in NLU/NLP, types, workflow, challenges, and best practices for training chatbots effectively."
 keywords: ["utterance", "conversational AI", "chatbot", "NLU", "NLP"]
@@ -131,12 +132,6 @@ The chatbot workflow for processing utterances involves several steps:
 | Utterance  | What the user says                                                 | “Find me flights to Paris next weekend” |
 | Intent     | The goal or purpose behind the utterance                           | BookFlight                              |
 | Entity     | Key details within the utterance                                   | Destination: Paris, Date: next weekend  |
-
-**Further Reading:**  
-- [Microsoft LUIS: Utterances](https://learn.microsoft.com/en-us/azure/ai-services/luis/concepts/utterances)  
-- [IBM Watson: Intents and Entities](https://www.ibm.com/cloud/learn/natural-language-processing)  
-- [LinkedIn: What is Utterance, Intent & Entity?](https://www.linkedin.com/pulse/what-utterance-intent-entity-conversational-ai-paul-blocchi)
-
 ## Challenges in Handling Utterances
 
 ### 1. Linguistic Ambiguity
@@ -171,11 +166,6 @@ The chatbot workflow for processing utterances involves several steps:
 ### 7. Entity Variation
 
 - “NYC”, “New York City”, “The Big Apple” (same destination)
-
-**Source:**  
-- [SiteSpeakAI: Utterance FAQ](https://sitespeak.ai/ai-chatbot-terms/utterance)
-- [LinkedIn: Utterance, Intent & Entity](https://www.linkedin.com/pulse/what-utterance-intent-entity-conversational-ai-paul-blocchi)
-
 ## Best Practices for Designing and Collecting Utterances
 
 ### 1. Collect Diverse, Representative Utterances
@@ -229,11 +219,6 @@ Ensure utterance data does not contain personal or confidential information.
 | Update regularly                          | Incorporate live user feedback               |
 | Balance utterance count per intent        | Prevent bias                                 |
 | Cover special cases                       | Greetings, farewells, error handling         |
-
-**References:**  
-- [Emplifi: AI Utterances - How To](https://docs.emplifi.io/platform/latest/home/ai-utterances)
-- [Microsoft LUIS: Best Practices](https://learn.microsoft.com/en-us/azure/ai-services/luis/concepts/utterances)
-
 ## Utterance Types, Challenges, and Solutions
 
 | Category            | Example                           | Challenge Addressed             | Solution/Best Practice                     |
@@ -245,12 +230,6 @@ Ensure utterance data does not contain personal or confidential information.
 | Multilingual        | “Bonjour, je veux un café”        | Language diversity             | Multilingual utterance sets                |
 | Contextual          | “How long will it take?”          | Context dependence             | Context-aware NLU engines                  |
 | Negative Feedback   | “Not working”                     | Sentiment, support escalation  | [Sentiment analysis](/en/glossary/sentiment-analysis/), escalation triggers    |
-
-**Further Reading:**  
-- [IBM Watson: NLP in Chatbots](https://www.ibm.com/cloud/learn/natural-language-processing)
-- [CogniTech: Intents, Entities, Synonyms](https://www.cognitech.systems/blog/artificial-intelligence/entry/intents-entities-synonyms-retrieval-natural-language-understanding)
-- [BotPenguin: Utterance Glossary](https://botpenguin.com/glossary/utterance)
-
 ## Frequently Asked Questions (FAQ) about Utterances
 
 **Q: Why are multiple utterances needed for chatbot training?**  
@@ -299,4 +278,3 @@ For visual learning and demonstrations, explore:
 - [Microsoft Azure AI: NLP and Chatbots](https://www.youtube.com/results?search_query=microsoft+azure+ai+chatbot)
 
 *Category: AI Chatbot & Automation*
-

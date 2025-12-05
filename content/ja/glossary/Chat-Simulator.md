@@ -158,7 +158,6 @@ e-title: Chat Simulator
 - スケーラビリティのために数千の会話のバッチ実行を可能にします。
 - 継続的なQAと展開ゲーティングのためにCI/CDパイプラインと統合します。
 
-**参考：**  
 - [Botium 会話型AIテストツール](https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html)
 
 ---

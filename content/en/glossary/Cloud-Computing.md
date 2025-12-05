@@ -1,6 +1,7 @@
 ---
 title: Cloud Computing
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: cloud-computing-glossary-comprehensive-guide-for-ai-infrastructure-deployment
 description: 'Explore cloud computing: on-demand IT resources, service models (IaaS,
   PaaS, SaaS), deployment options (public, private, hybrid), and benefits for AI infrastructure
@@ -51,8 +52,6 @@ Cloud architecture is the strategic blueprint for connecting front-end (client) 
 - **Management:** Middleware and orchestration tools for provisioning, monitoring, and automating resources.
 - **Security:** Mechanisms for protecting data, applications, and infrastructure.
 
-Reference: [IBM Cloud Architecture](https://www.ibm.com/think/topics/cloud-architecture), [Google Cloud Architecture](https://cloud.google.com/learn/what-is-cloud-architecture), [GeeksforGeeks Architecture](https://www.geeksforgeeks.org/cloud-computing/architecture-of-cloud-computing/)
-
 ## Key Components of Cloud Computing
 
 Cloud infrastructure is the collection of hardware and software resources that make up the cloud and are provided as services ([GeeksforGeeks Infrastructure](https://www.geeksforgeeks.org/software-engineering/cloud-computing-infrastructure/), [AWS Cloud Infrastructure](https://aws.amazon.com/what-is/cloud-infrastructure/), [Spot.io Cloud Infrastructure](https://spot.io/resources/cloud-optimization/cloud-infrastructure-4-key-components-and-deployment-models/)).
@@ -68,12 +67,6 @@ Cloud infrastructure is the collection of hardware and software resources that m
 - **Deployment Software:** Tools for deploying, integrating, and configuring virtual computing environments.
 
 Cloud infrastructure must provide [transparency](/en/glossary/transparency/), scalability, security, and intelligent monitoring. Virtualization enables GUI-based interaction, allowing users to manage resources without needing to understand the underlying hardware.
-
-References:  
-- [GeeksforGeeks Infrastructure](https://www.geeksforgeeks.org/software-engineering/cloud-computing-infrastructure/)  
-- [AWS Cloud Infrastructure](https://aws.amazon.com/what-is/cloud-infrastructure/)  
-- [Spot.io Cloud Infrastructure](https://spot.io/resources/cloud-optimization/cloud-infrastructure-4-key-components-and-deployment-models/)  
-
 ## Cloud Computing Service Models
 
 Cloud services are delivered through several models, each offering different levels of control, flexibility, and management ([AWS Cloud Service Models](https://aws.amazon.com/types-of-cloud-computing/), [Google Cloud Service Models](https://cloud.google.com/learn/paas-vs-iaas-vs-saas), [IBM Cloud Service Models](https://www.ibm.com/think/topics/iaas-paas-saas)).
@@ -326,4 +319,3 @@ Explore provider documentation, engage consultants, and use free trials for hand
 **Artificial Intelligence (AI):** Machine intelligence, often delivered through cloud services.
 
 **Cloud-Native:** Apps built to exploit cloud features like
-

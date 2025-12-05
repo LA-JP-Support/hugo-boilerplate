@@ -5,7 +5,8 @@ description: "An open-domain bot is an AI conversational agent designed for free
 keywords: ["open-domain bot", "AI chatbot", "conversational AI", "transformer models", "dialogue system"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Introduction and Definition
@@ -194,4 +195,3 @@ Speech events represent the categories of conversational activity (Goldsmith & B
 - [SQuAD: Stanford Question Answering Dataset](https://rajpurkar.github.io/SQuAD-explorer/)
 
 This glossary is designed as a deep resource with direct links to sources and further reading, providing a comprehensive reference for open-domain bots, their architecture, real-world capabilities, evaluation, and future directions.
-

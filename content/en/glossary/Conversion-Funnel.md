@@ -1,6 +1,7 @@
 ---
 title: "Conversion Funnel"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "conversion-funnel"
 description: "A conversion funnel is an analytical model representing the user journey from initial awareness to a specific goal. Learn its stages, uses in marketing, UX, and optimization."
 keywords: ["conversion funnel", "marketing funnel", "sales funnel", "conversion rate optimization", "user journey"]
@@ -53,8 +54,6 @@ Product managers and UX teams use funnel analysis to:
 
 - Pinpoint friction in onboarding or feature adoption.
 - Test and optimize user flows for increased engagement and retention.
-
-**See also:** [How Fullstory helps perfect conversion funnels](https://www.fullstory.com/platform/funnels-conversions/)
 
 ### Web Analytics
 
@@ -298,4 +297,3 @@ Typical B2B SaaS funnel stages and average conversion rates (source: [First Page
 - [Landing Page Optimization](https://landingi.com/blog/landing-page-optimisation-5-steps/)
 
 For more detailed explanations, real-world examples, and optimization strategies, see the resources linked throughout this glossary.
-

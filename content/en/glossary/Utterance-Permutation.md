@@ -1,6 +1,7 @@
 ---
 title: "Utterance Permutation"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "utterance-permutation"
 description: "Utterance permutation generates diverse sentence variations to train NLU models for AI chatbots and voice assistants, improving intent recognition and handling real-world language variability."
 keywords: ["utterance permutation", "NLU models", "AI chatbots", "intent classification", "training data augmentation"]
@@ -132,8 +133,6 @@ Effective utterance permutation hinges on a deliberate, quality-focused workflow
 ### 1. Seed With Real Data
 
 Gather utterances from authentic sources: chat logs, call transcripts, search queries, support tickets. Real data reflects genuine language patterns, idiomatic expressions, and error types.
-
-- **Reference:** [LinkedIn: Best Practices in Writing Utterances](https://www.linkedin.com/pulse/training-your-nlp-model-best-practices-writing-grant-ronald)
 
 ### 2. Author and Generate Variations
 
@@ -330,10 +329,6 @@ Drawing from research and industry guidelines, the following best practices maxi
 - [ ] Version datasets and document changes.
 - [ ] Re-evaluate across channels (text, voice) and locales.
 - [ ] Monitor intent health and address confusion/collision.
-
-**Reference:**  
-- [Shaip Implementation Checklist](https://www.shaip.com/blog/why-conversationalai-needs-good-utterance-data/)
-
 ## Additional Examples and Dataset Samples
 
 ### Sample Permutated Utterances for "Cancel Subscription" Intent
@@ -371,4 +366,3 @@ Drawing from research and industry guidelines, the following best practices maxi
 - [Nuance: Adding natural language capabilities](https://docs.nuance.com/speech-suite/nr-gram/nrg_nlg_adv_NLUover.html)
 - [A Dependency-Aware Utterances Permutation Strategy (ECIR 2022, PDF)](https://www.dei.unipd.it/~ferro/papers/2022/ECIR2022-FFFPT.pdf)
 - [PRIMO.ai: [Natural Language Processing (NLP)](/en/glossary/natural-language-processing--nlp-/)](https://primo.ai/index.php/Natural_Language_Processing_(N
-

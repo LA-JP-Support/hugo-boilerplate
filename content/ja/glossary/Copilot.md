@@ -195,18 +195,6 @@ AIコパイロットとは、人間のユーザーと並行して動作し、生
 - [Microsoft Copilot: Getting Started](https://www.microsoft.com/en-us/microsoft-copilot/copilot-101/copilot-ai-agents#Getting-started)
 - [Assembled: AI Copilot Governance](https://www.assembled.com/page/ai-copilots-customer-service)
 
-## 用語集:関連用語
-
-- **自然言語処理(NLP):**コパイロットが人間の言語を解釈し生成できるようにする分野([SAP: NLP explained](https://www.sap.com/resources/what-is-natural-language-processing))。
-- **大規模言語モデル(LLM):**膨大なデータセットでトレーニングされた、人間のような言語生成のための高度なAIモデル。
-- **チャットボット:**シンプルでスクリプト化されたユーザー会話のためのルールベースまたはAIツール。
-- **AIエージェント:**最小限の人間の入力でタスクやワークフローを完了する自律システム。
-- **自律型エージェント:**独立して意思決定とアクションを実行し、しばしばプロセス自動化に使用されます。
-- **生成AI:**プロンプトから新しいコンテンツ(テキスト、コード、画像)を作成するAI。
-- **反復タスク:**自動化に適した定型的で予測可能な作業。
-- **構造化/非構造化データ:**整理されたデータ(データベース)と整理されていないデータ(メール、テキスト)。
-- **顧客満足度(CSAT):**サービス/製品の品質を測る指標で、コパイロットサポートによりしばしば改善されます。
-
 ## よくある質問(FAQ)
 
 **[コパイロット](/ja/glossary/copilot/)、チャットボット、AIエージェントの主な違いは何ですか?**  

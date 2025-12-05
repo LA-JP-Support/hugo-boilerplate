@@ -1,6 +1,7 @@
 ---
 title: "HNSW (Hierarchical Navigable Small World)"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "hnsw-hierarchical-navigable-small-world"
 description: "HNSW (Hierarchical Navigable Small World) is a graph-based algorithm for fast, accurate approximate nearest neighbor (ANN) search in vector databases, ideal for high-dimensional data."
 keywords: ["HNSW", "Approximate Nearest Neighbor", "Vector Search", "Vector Databases", "Graph Algorithm"]
@@ -15,13 +16,6 @@ HNSW (Hierarchical Navigable Small World) is a proximity graph algorithm for fas
 - **Purpose:** Efficient ANN search with high recall in large and high-dimensional datasets.
 - **Key Innovations:** Combines the strengths of small-world graphs (for rapid navigation) and skip-list-like hierarchy (for multi-scale search).
 - **Typical Applications:** Semantic document search, image/video retrieval, recommendation engines, LLM context retrieval, anomaly detection.
-
-**References:**
-- [HNSW Original Paper (arXiv)](https://arxiv.org/abs/1603.09320)
-- [Pinecone HNSW Tutorial](https://www.pinecone.io/learn/series/faiss/hnsw/)
-- [Zilliz: Hierarchical Navigable Small Worlds (HNSW)](https://zilliz.com/learn/hierarchical-navigable-small-worlds-HNSW)
-- [Redis: How HNSW Improves Search](https://redis.io/blog/how-hnsw-algorithms-can-improve-search/)
-
 ## Core Concepts
 
 ### Vector Search and ANN
@@ -80,11 +74,6 @@ Each node is assigned a highest layer using a geometric distribution (probabilit
 5. **Result:** Return the k closest vectors after search completion.
 
 This process ensures fast, accurate search by leveraging long-range links for global navigation and short-range links for local refinement.
-
-**References:**  
-- [How HNSW Search Works (Pinecone)](https://www.pinecone.io/learn/series/faiss/hnsw/#Foundations-of-HNSW)
-- [Zilliz: HNSW Search Steps](https://zilliz.com/learn/hierarchical-navigable-small-worlds-HNSW)
-
 ### Graph Construction (Insertion)
 
 1. **Random Layer Assignment:** Each new vector randomly gets a highest layer using a geometric distribution.
@@ -93,11 +82,6 @@ This process ensures fast, accurate search by leveraging long-range links for gl
 4. **Repeat:** Descend through assigned layers, connecting at each, until reaching layer 0.
 
 **Key insight:** This incremental, probabilistic process enables dynamic and efficient index construction.
-
-**References:**  
-- [Graph Construction Details (Pinecone)](https://www.pinecone.io/learn/series/faiss/hnsw/#Graph-Construction)
-- [Zilliz: Building HNSW](https://zilliz.com/learn/hierarchical-navigable-small-worlds-HNSW)
-
 ### Key Parameters and Tradeoffs
 
 - **M (max neighbors):** Controls the number of neighbors per node. Higher M increases recall and memory usage.
@@ -112,11 +96,6 @@ This process ensures fast, accurate search by leveraging long-range links for gl
 - **Memory:** O(M*N) edges for N vectors.
 - **Index build time:** O(N log N) with high efConstruction.
 - **Search:** O(log N) expected hops in well-tuned graphs.
-
-**References:**  
-- [arXiv: HNSW Complexity Analysis](https://arxiv.org/abs/1603.09320)
-- [Pinecone: HNSW Parameters](https://www.pinecone.io/learn/series/faiss/hnsw/#Implementation-of-HNSW)
-
 ## Comparison to Other ANN Algorithms
 
 | Algorithm        | Structure      | Pros                  | Cons                        | Best Use Cases                |
@@ -188,11 +167,6 @@ Start with defaults: M=16–32, efConstruction=100–200, efSearch=40–100.
 - Use parallel build if supported (e.g., Faiss, Redis).
 - For dynamic workloads, periodically monitor connectivity to avoid “islands.”
 - For frequent updates, use incremental inserts/deletes.
-
-**References:**  
-- [Pinecone: Faiss HNSW Parameter Guide](https://www.pinecone.io/learn/series/faiss/hnsw/#Implementation-of-HNSW)
-- [Redis: HNSW Practical Tuning](https://redis.io/blog/how-hnsw-algorithms-can-improve-search/)
-
 ## Applications and Use Cases
 
 - **Semantic text search:** Powering retrieval of relevant documents, FAQs, or code snippets by vector similarity (embedding search).
@@ -206,11 +180,6 @@ A customer query “reset my password” is embedded and matched in milliseconds
 
 **Example (image search):**  
 Given a photo, retrieve top visually similar images from a dataset of 10 million products.
-
-**References:**  
-- [Zilliz: HNSW Use Cases](https://zilliz.com/learn/hierarchical-navigable-small-worlds-HNSW)
-- [Redis: HNSW Applications](https://redis.io/blog/how-hnsw-algorithms-can-improve-search/)
-
 ## Strengths and Challenges
 
 ### Strengths
@@ -231,11 +200,6 @@ Given a photo, retrieve top visually similar images from a dataset of 10 million
 - Apply dimensionality reduction (e.g., PCA) or quantization for large-scale, high-dim problems.
 - For massive datasets, use hybrid HNSW+IVF or streaming/disk-based algorithms.
 - Monitor connectivity and recall to ensure no isolated nodes.
-
-**References:**  
-- [Redis: HNSW Challenges and Tuning](https://redis.io/blog/how-hnsw-algorithms-can-improve-search/)
-- [arXiv: HNSW Benchmarking Study (2024)](https://arxiv.org/html/2412.01940v1)
-
 ## Advanced Topics
 
 ### Filtering and Hybrid Search
@@ -255,15 +219,9 @@ Given a photo, retrieve top visually similar images from a dataset of 10 million
 - Distributed HNSW is more complex, as cross-shard search either requires broadcasting queries or routing via a global index.
 - Some vector DBs (Milvus, Redis Cluster, Pinecone) support cluster management and distributed HNSW natively.
 - [Redis: HNSW Sharding](https://redis.io/blog/how-hnsw-algorithms-can-improve-search/)
-
-**References:**  
-- [Pinecone: Distributed Vector Search](https://www.pinecone.io/learn/series/faiss/hnsw/)
-- [Milvus: Distributed HNSW](https://milvus.io/docs/hnsw.md#HNSW)
-
 ## Further Reading and References
 
 - [HNSW original paper (arXiv)](https://arxiv.org/abs/1603.09320)
 - [Pinecone: Hierarchical Navigable Small Worlds (HNSW)](https://www.pinecone.io/learn/series/faiss/hnsw/)
 - [Zilliz: HNSW Technical Deep Dive](https://zilliz.com/learn/hierarchical-navigable-small-worlds-HNSW)
 - [Redis: How HNSW Algorithms Can Improve Search](https://redis
-

@@ -1,6 +1,7 @@
 ---
 title: "Indirect Prompt Injection"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "indirect-prompt-injection"
 description: "Learn about indirect prompt injection, a security vulnerability where attackers embed malicious instructions in external content processed by LLMs, leading to unintended actions or data leakage."
 keywords: ["indirect prompt injection", "LLM security", "AI security", "prompt injection", "data exfiltration"]
@@ -133,8 +134,6 @@ Attackers exploit any channel where LLMs ingest untrusted content, including:
 - Configuration files (YAML, JSON, XML)
 - Audio/video transcripts (speech-to-text attacks)
 
-*References: [SentinelOne](https://www.sentinelone.com/cybersecurity-101/cybersecurity/indirect-prompt-injection-attacks/), [OWASP](https://genai.owasp.org/llmrisk/llm01-prompt-injection/), [CrowdStrike](https://www.crowdstrike.com/en-us/blog/indirect-prompt-injection-attacks-hidden-ai-risks/), [Pillar Security](https://www.pillar.security/blog/anatomy-of-an-indirect-prompt-injection)*
-
 ## Technical Characteristics: CFS Model
 
 According to [Pillar Security](https://www.pillar.security/blog/anatomy-of-an-indirect-prompt-injection), successful indirect prompt injections often have:
@@ -224,13 +223,6 @@ Malicious instructions are camouflaged using scrambled words, bypassing string-m
 
 - Train users and developers to recognize prompt injection risks.
 - Enforce policies on acceptable AI tool usage.
-
-**References:**  
-- [Google Security: Mitigating prompt injection attacks](https://security.googleblog.com/2025/06/mitigating-prompt-injection-attacks.html)
-- [OWASP LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)
-- [Microsoft Defense-in-Depth](https://www.microsoft.com/en-us/msrc/blog/2025/07/how-microsoft-defends-against-indirect-prompt-injection-attacks)
-- [IBM: Prompt Injection Prevention](https://www.ibm.com/think/insights/prevent-prompt-injection)
-
 ## Challenges and Limitations
 
 - **LLMs cannot reliably distinguish instructions from data** ([IBM](https://www.ibm.com/think/topics/prompt-injection), [OWASP](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)).
@@ -267,12 +259,6 @@ Malicious instructions are camouflaged using scrambled words, bypassing string-m
 8. **Treat all external content as untrusted by default**
    - Enforce content security policies; use allow-lists for sources.
 
-**Reference Frameworks:**
-- [OWASP GenAI LLM01: Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)
-- [MITRE ATLAS AML.T0051.001](https://atlas.mitre.org/techniques/AML.T0051.001)
-- [Microsoft Guidance](https://www.microsoft.com/en-us/msrc/blog/2025/07/how-microsoft-defends-against-indirect-prompt-injection-attacks)
-- [Pillar Security CFS Model](https://www.pillar.security/blog/anatomy-of-an-indirect-prompt-injection)
-
 ## Further Reading
 
 - [OWASP GenAI Security Project – LLM01: Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)
@@ -289,4 +275,3 @@ Malicious instructions are camouflaged using scrambled words, bypassing string-m
 - [Kudelski Security: Reducing the Impact of Prompt Injection Attacks Through Design](https://research.kudelskisecurity.com/2023/05/25/reducing-the-impact-of-prompt-injection-attacks-through-design/)
 
 ## Summary
-

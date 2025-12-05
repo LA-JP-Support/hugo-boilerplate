@@ -30,8 +30,6 @@ Conversation drift is driven by technical constraints and human-UX dynamics.
 
 **1. Context Window Limitations**  
 Large language models (LLMs) such as GPT-4 process a finite "context window"—the amount of conversation history they can consider. In long sessions, earlier turns are pushed out of memory, causing loss of context and topic confusion.  
-*Reference: [Castro, 2025](https://www.linkedin.com/posts/cesarecastrotorres_ai-chatgpt-conversationalai-activity-7309377204214239232-4k3z/)*
-
 **2. Ambiguous or Shifting User Prompts**  
 Users may unintentionally inject ambiguity, synonyms, or abrupt topic changes, making it hard for AI to stay anchored.
 
@@ -55,8 +53,6 @@ Users ascribe human-like qualities and expect continuity or empathy, amplifying 
 
 **3. Validation Loops & Reality Drift**  
 In extended or emotionally intense chats, users and AI may reinforce off-track assumptions, creating “sealed interpretive frames.”  
-*Reference: [Recursive Entanglement Drift, Ruane 2025](https://www.psychologytoday.com/us/blog/the-algorithmic-mind/202508/how-ai-chatbots-may-blur-reality)*
-
 
 ## Examples of Conversation Drift
 
@@ -100,8 +96,6 @@ In extended or emotionally intense chats, users and AI may reinforce off-track a
   Drift contaminates logs, analytics, and training data with irrelevant exchanges.
 - **Silent Performance Decay:**  
   AI systems may degrade without clear failure signals.  
-  *Reference: [Magai.co](https://magai.co/how-to-detect-and-manage-model-drift-in-ai/), [DEV.to](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l)*
-
 ### Psychological & UX Risks
 
 - **Frustration and Drop-Off:**  
@@ -133,8 +127,6 @@ In extended or emotionally intense chats, users and AI may reinforce off-track a
   Compare distributions in training vs. live data (mean, variance, quantiles); use statistical tests like Kolmogorov-Smirnov or Population Stability Index to flag changes.
 - **Automated Drift Detection Tools:**  
   Use real-time monitoring tools to alert teams when drift is detected.  
-  *References: [Magai.co, How to Detect and Manage Model Drift in AI](https://magai.co/how-to-detect-and-manage-model-drift-in-ai/), [DEV.to](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l), [Tencent Cloud](https://www.tencentcloud.com/techpedia/127715)*
-
 
 ## Prevention & Mitigation Strategies
 
@@ -174,8 +166,6 @@ In extended or emotionally intense chats, users and AI may reinforce off-track a
     Use dashboards and visualizations to spot context loss early.
 12. **Test with Real Users:**  
     Simulate long, complex sessions to surface edge-case drift.
-
-*References: [Magai.co](https://magai.co/how-to-detect-and-manage-model-drift-in-ai/), [DEV.to](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l), [Tim Williams, LinkedIn](https://www.linkedin.com/posts/timwilliamsau_ai-productmanagement-startuplife-activity-7371722234735878144-zmgG)*
 
 
 ## Product Spotlight: Drift Chatbot and Alternatives
@@ -267,8 +257,6 @@ In extended or emotionally intense chats, users and AI may reinforce off-track a
 
 - **Long-Term Engagement:**  
   Risk of reality drift or harm in vulnerable users.  
-  *Reference: [Psychology Today, 2025](https://www.psychologytoday.com/us/blog/the-algorithmic-mind/202508/how-ai-chatbots-may-blur-reality)*
-
 
 ## Checklist: Preventing & Managing Drift
 
@@ -308,4 +296,3 @@ In extended or emotionally intense chats, users and AI may reinforce off-track a
 
 
 *This glossary integrates insights from academic research, industry best practices, and technical
-

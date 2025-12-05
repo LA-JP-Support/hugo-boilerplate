@@ -3,10 +3,16 @@ title: Persistent Menu
 translationKey: persistent-menu
 description: 'Learn about Persistent Menus in chatbots: what they are, why use them,
   how to implement them, and best practices for enhancing user navigation and experience.'
-keywords: ["Persistent Menu", "Chatbot", "Facebook Messenger", "Navigational Menu", "Menu Items"]
+keywords:
+- Persistent Menu
+- Chatbot
+- Facebook Messenger
+- Navigational Menu
+- Menu Items
 category: General
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is a Persistent Menu?
@@ -18,11 +24,6 @@ A **Persistent Menu** is an always-on, static menu interface embedded in a chatb
   - Available at any step in the conversation or onboarding.
   - Presents a clear, consistent set of user options.
   - Ideal for both first-time and returning users.
-
-**References:**
-- [ChatbotBuilder.ai: Persistent Menu](https://docs.chatbotbuilder.ai/support/solutions/articles/150000166613-persistent-menu)
-- [Meta for Developers: Persistent Menu Overview](https://developers.facebook.com/docs/messenger-platform/send-messages/persistent-menu/)
-
 ## Why Use a Persistent Menu? (Core Benefits)
 
 A well-configured Persistent Menu provides clear user value and supports business objectives:
@@ -32,11 +33,6 @@ A well-configured Persistent Menu provides clear user value and supports busines
 - **Feature Discovery:** New and returning users see the bot’s main capabilities at a glance.
 - **Business Alignment:** Promotes core actions (e.g., product quizzes, contact support, order tracking) that drive business value.
 - **Accessibility:** Users with accessibility needs benefit from clearly structured, always-available actions.
-
-**References:**
-- [Chatfuel Blog: Persistent Menu](https://chatfuel.com/blog/persistent-menu)
-- [Certainly Knowledge Base: Add a Persistent Menu](https://support.certainly.io/knowledge/add-a-persistent-menu-to-your-chat)
-
 ## How is a Persistent Menu Used?
 
 The Persistent Menu is usually accessed by clicking or tapping a menu icon (commonly the hamburger icon) in the chat window. Its contents are available at any time, regardless of conversation stage.
@@ -44,10 +40,6 @@ The Persistent Menu is usually accessed by clicking or tapping a menu icon (comm
 **User Experience Highlights:**
 - Users can open the menu in onboarding, mid-conversation, or after completing an action.
 - Typical actions: restart bot, access help/FAQ, jump to a main menu, unsubscribe, open external URLs, or trigger quizzes.
-
-**Reference:**
-- [YouTube: How to Setup Persistent Menu In Website Chatbot (BotSailor)](https://www.youtube.com/watch?v=4kAlBEgCvwM)
-
 ## Supported Channels & Platform Limitations
 
 Persistent Menus are supported on major messaging and web platforms, but features and limits vary:
@@ -63,12 +55,6 @@ Persistent Menus are supported on major messaging and web platforms, but feature
 - **Appearance:** Menu icon and location may differ per channel.
 - **Menu Scope:** Some platforms only allow a single menu per bot instance.
 - **Disabling Input:** Often applies globally, not per flow.
-
-**References:**
-- [ChatbotBuilder.ai Documentation](https://docs.chatbotbuilder.ai/support/solutions/articles/150000166613-persistent-menu)
-- [Certainly: Channel Limitations](https://support.certainly.io/knowledge/Overview-of-channel-limitations)
-- [Meta for Developers: Persistent Menu](https://developers.facebook.com/docs/messenger-platform/send-messages/persistent-menu/)
-
 ## Menu Item Types & Structure
 
 ### Button Actions
@@ -101,11 +87,6 @@ Some platforms (like Messenger) allow menu nesting, grouping related actions und
 | 💬 Contact Support | Open support flow/email         | Human agent or further help                      |
 
 *You may mix different action types within one menu.*
-
-**References:**
-- [Messenger Platform API: persistent_menu](https://developers.facebook.com/docs/messenger-platform/reference/messenger-profile-api/persistent-menu/)
-- [ChatbotBuilder.ai Guide](https://docs.chatbotbuilder.ai/support/solutions/articles/150000166613-persistent-menu)
-
 ## Step-by-Step: How to Add a Persistent Menu
 
 The process depends on your chatbot builder/platform. Here’s a generalized guide, followed by specific instructions for popular platforms.
@@ -125,10 +106,6 @@ The process depends on your chatbot builder/platform. Here’s a generalized gui
    - Localize menu, enable/disable user input, add submenus if supported.
 7. **Save & Publish**
    - Click “Save”, “Publish”, or toggle menu live.
-
-**Reference:**  
-- [YouTube: Persistent Menu Setup Tutorial (BotSailor)](https://www.youtube.com/watch?v=4kAlBEgCvwM)
-
 ### Platform-Specific Instructions
 
 #### **Facebook Messenger (via Chatfuel)**
@@ -208,11 +185,6 @@ Only localize if your bot supports those languages throughout the user journey.
 - **Test Thoroughly:** Check on all channels and devices.
 - **Maintain Accessibility:** Use readable fonts and clear contrast.
 - **Update Regularly:** Adjust menu based on analytics and user feedback.
-
-**References:**  
-- [Chatfuel Blog: Persistent Menu Best Practices](https://chatfuel.com/blog/persistent-menu)
-- [Certainly: Menu Design Tips](https://support.certainly.io/knowledge/add-a-persistent-menu-to-your-chat)
-
 ## Common Use Cases & Examples
 
 ### E-commerce Chatbot Menu
@@ -246,11 +218,6 @@ Only localize if your bot supports those languages throughout the user journey.
 - **Localization Issues:** Make sure language settings are correct; only button text is localized.
 - **Too Many Buttons:** Respect platform limits (e.g., Messenger = 3 per menu level); use nesting if supported.
 - **Testing:** Test on all target channels and devices for visibility and function.
-
-**References:**  
-- [ChatbotBuilder.ai Troubleshooting](https://docs.chatbotbuilder.ai/support/solutions/articles/150000166613-persistent-menu)
-- [Certainly: Menu Troubleshooting](https://support.certainly.io/knowledge/add-a-persistent-menu-to-your-chat)
-
 ## Further Resources & Next Steps
 
 - [Chatfuel Blog: Persistent Menu](https://chatfuel.com/blog/persistent-menu)
@@ -286,4 +253,3 @@ For further reading on customization and advanced use, visit:
 - [Certainly Knowledge Base](https://support.certainly.io/knowledge/add-a-persistent-menu-to-your-chat)
 
 **Enhance your chatbot now by leveraging these resources and building a Persistent Menu that fits your users’ needs and your business goals.**
-

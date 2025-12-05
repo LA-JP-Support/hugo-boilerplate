@@ -20,11 +20,6 @@ The word “carousel” comes from the amusement ride, reflecting the way conten
 **In AI chatbots and automation:**  
 Carousel components surface multiple options or responses in a compact conversational UI, helping guide user choices without overwhelming the chat window.
 
-**References:**  
-- [NN/g: Carousel Usability](https://www.nngroup.com/articles/designing-effective-carousels/)  
-- [W3C: Carousels Accessibility Tutorial](https://www.w3.org/WAI/tutorials/carousels/)  
-- [Eleken: Carousel UI Guide](https://www.eleken.co/blog-posts/carousel-ui)
-
 
 ## 2. Key Features & Anatomy <a name="key-features-anatomy"></a>
 
@@ -57,10 +52,6 @@ Designing a usable carousel requires understanding its core components:
 **Annotated Diagram:**  
 ![Anatomy of a carousel](https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/file.webp?enc=1.DfSR4rss.18iJ_v3n_QwbR2lJ.eh09PQcAjLspC7jzH8D3WbLJaJGelpLbklsuKqetwUOCDosoXs2ea-WYbZG8Uk0RpCzCp8anGjzBz08jYUYBGoqDtSALiyo1CQ34QW_Z62FOhKls1wyO0dzEEI4dlCs4rMMkmHHjF8UjRFmIsvvLG4QiRNedyJ4BW6je98fsCoVyUXeNUZ6JMF7NC2nK4yHqbbTZb4jnO9z_DuexAtrUpg)
 
-**References:**  
-- [W3C: Carousels - Structure & Functionality](https://www.w3.org/WAI/tutorials/carousels/structure/)  
-- [Smart Interface Design Patterns: Better Carousel UX](https://smart-interface-design-patterns.com/articles/better-carousel-ux/)
-
 
 ## 3. Common Use Cases <a name="common-use-cases"></a>
 
@@ -87,10 +78,6 @@ Carousels appear in many digital products. Their main use is to present multiple
 
 **Real-world engagement:**  
 Usability studies show that most users interact only with the first slide—[only 1% of users click carousel toggles, and 84% interact only once, rarely making it past the first slide](https://erikrunyon.com/2013/01/carousel-interaction-stats/). Critical information should never be hidden in later slides.
-
-**References:**  
-- [Eleken: Carousel UI Use Cases](https://www.eleken.co/blog-posts/carousel-ui)  
-- [NN/g: Carousel Usability](https://www.nngroup.com/articles/designing-effective-carousels/)
 
 
 ## 4. Benefits and Drawbacks <a name="benefits-drawbacks"></a>
@@ -136,11 +123,6 @@ Carousels are widely used but often criticized. Here’s a detailed look at thei
 
 **Tip:**  
 Never place critical information on slides beyond the first—most users will not see it.
-
-**References:**  
-- [NN/g: Carousel Usability](https://www.nngroup.com/articles/designing-effective-carousels/)  
-- [Eleken: Carousel UI Failures](https://www.eleken.co/blog-posts/carousel-ui)  
-- [Smart Patterns: Usability Pitfalls](https://smart-interface-design-patterns.com/articles/better-carousel-ux/)
 
 
 ## 5. Design Best Practices <a name="design-best-practices"></a>
@@ -233,10 +215,6 @@ Preview and optimize for multiple device sizes.
   - [Swiper.js](https://swiperjs.com/)
   - [Slick Carousel](https://kenwheeler.github.io/slick/)
 
-**Reference:**  
-- [Snappify: Best React Carousel Component Libraries](https://snappify.com/blog/react-carousel-component-libraries)
-- [Enstacked: Top 10 React Carousel Libraries](https://enstacked.com/react-carousel-component-libraries/)
-
 #### **Option 2: Custom Implementation**
 
 **Basic HTML Structure:**
@@ -271,10 +249,6 @@ Preview and optimize for multiple device sizes.
 - Announce changes to screen readers using `aria-live`.
 - Provide a pause button if auto-rotation is enabled.
 
-**References:**  
-- [W3C: Full Accessible Carousel Example](https://www.w3.org/WAI/tutorials/carousels/working-example/)
-- [NN/g: Carousel Usability](https://www.nngroup.com/articles/designing-effective-carousels/)
-
 
 ## 7. Alternatives to Carousels <a name="alternatives-carousels"></a>
 
@@ -299,9 +273,6 @@ Carousels are not always the optimal solution, especially for content discoverab
 - **When to Use:** For text-heavy, sectioned information (FAQs, policies).
 - **Pros:** Reduces clutter, easy scan.
 - **Cons:** Not for visual galleries.
-
-**Reference:**  
-- [Eleken: When to Use Carousels, Grids, Tabs, or Accordions](https://www.eleken.co/blog-posts/carousel-ui)
 
 
 ## 8. Inspirational Examples <a name="inspirational-examples"></a>
@@ -331,4 +302,3 @@ Carousels are not always the optimal solution, especially for content discoverab
 - [Justinmind Carousel Dynamic Panel Example](https://www.justinmind.com/open-resource?url=/examples/Carousel-DynamicPanel.vp)
 
 **UI
-

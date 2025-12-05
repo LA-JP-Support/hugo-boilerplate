@@ -233,14 +233,6 @@ kana_head: た
 - [NYT: Risks of New AI Technology](https://www.nytimes.com/2018/10/22/business/efforts-to-acknowledge-the-risks-of-new-ai-technology.html)
 - [Unit21: Synthetic ID Detection & Prevention](https://www.unit21.ai/blog/synthetic-id-detection-prevention)
 
-## 用語集
-
-- [Artificial Intelligence](https://www.pindrop.com/glossary/artificial-intelligence/)
-- [Machine Learning](https://www.pindrop.com/glossary/machine-learning/)
-- [Identity Verification](https://www.unit21.ai/fraud-aml-dictionary/identity-verification/)
-- [Synthetic ID](https://www.unit21.ai/fraud-aml-dictionary/synthetic-id/)
-- [Impersonation](https://www.unit21.ai/trust-safety-dictionary/impersonation/)
-
 ## 探索、実験、そして情報を得続ける
 
 - **検出ツールを試す:**  

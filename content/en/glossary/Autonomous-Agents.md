@@ -6,6 +6,7 @@ keywords: ["autonomous agents", "AI automation", "multi-step tasks", "machine le
 category: "AI Chatbot & Automation"
 type: "glossary"
 date: 2025-12-02
+lastmod: 2025-12-05
 draft: false
 ---
 ## What Are Autonomous Agents?
@@ -246,4 +247,3 @@ For comparisons and detailed guides, see:
 
 **What is an autonomous agent in AI?**  
 An autonomous agent is an AI system that can independently plan, reason, and execute multi-step tasks without human intervention
-

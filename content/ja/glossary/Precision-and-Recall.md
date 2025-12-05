@@ -272,17 +272,6 @@ F1スコアは適合率と再現率の調和平均です:
 - [BuiltIn: Precision and Recall](https://builtin.com/data-science/precision-and-recall)
 - [Lyzr: Glossary - Precision and Recall](https://www.lyzr.ai/glossaries/precision-and-recall/)
 
-## 用語集:主要用語
-
-- **真陽性(TP):** 正しく予測された正のインスタンス。
-- **偽陽性(FP):** 誤って予測された正のインスタンス。
-- **偽陰性(FN):** モデルに見逃された実際の正例。
-- **真陰性(TN):** 正しく予測された負のインスタンス。
-- **混同行列:** TP、FP、TN、FNを要約する表。
-- **閾値:** モデルが正と予測する値;これを調整すると適合率と再現率が変化します。
-- **クラス不均衡:** 一方のクラスが他のクラスよりもはるかに頻繁に出現する場合。
-- **F1スコア:** 適合率と再現率の調和平均。
-
 ## さらなる学習
 
 - [EvidentlyAI: Confusion Matrix Explained](https://www.evidentlyai.com/classification-metrics/confusion-matrix)

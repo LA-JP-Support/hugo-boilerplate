@@ -175,8 +175,8 @@ Further reading:
 | ML                            | Learns from data, improves accuracy over time                       | Adapting to slang/new topics       |
 | ASR                           | Converts speech to text                                             | Voice commands for Alexa/Siri      |
 | TTS                           | Converts text to spoken language                                    | Spoken responses in voice apps     |
-| Dialogue Management           | Manages conversation flow and context                               | Multi-turn interactions            |
-| Sentiment Analysis            | Detects emotions, adjusts replies accordingly                       | Prioritizing angry customers       |
+| [Dialogue Management](/en/glossary/dialogue-management/)           | Manages conversation flow and context                               | Multi-turn interactions            |
+| [Sentiment Analysis](/en/glossary/sentiment-analysis/)            | Detects emotions, adjusts replies accordingly                       | Prioritizing angry customers       |
 | Integration APIs              | Connects AI to business systems (CRM, ERP, databases)               | Fulfilling orders, checking status |
 
 - **Further Concepts:**  
@@ -313,4 +313,3 @@ Explore more:
   ![Zendesk: AI in Customer Experience](https://d1eipm3vz40hy0.cloudfront.net/vorteile-der-konversationellen-ki-de-optimized.png)
 - **AI Copilot Example:**  
   ![[AI Copilot](/en/glossary/copilot/) in Customer Support](https://www.nextiva.com/cdn-cgi/image/width=850,height=599
-

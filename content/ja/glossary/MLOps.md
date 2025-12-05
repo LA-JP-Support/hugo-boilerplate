@@ -228,25 +228,6 @@ MLOpsを効果的に実装するには、実践的なベストプラクティス
 - [ML-Ops.org: MLOps Principles](https://ml-ops.org/content/mlops-principles)
 - [Big Book of MLOps (eBook)](https://www.databricks.com/resources/ebook/the-big-book-of-mlops)
 
-## 用語集: 重要なMLOps用語
-
-- **AI Lakehouse:** 高度なAI/MLワークロードのためにデータレイクとウェアハウスを組み合わせたもの([Hopsworks AI Lakehouse](https://www.hopsworks.ai/dictionary/ai-lakehouse))。
-- **AIパイプライン:** 入力データをMLアーティファクトに変換するプログラム([Hopsworks AI Pipeline](https://www.hopsworks.ai/dictionary/ai-pipelines))。
-- **AutoML:** モデルトレーニングパイプラインタスクの自動化([Hopsworks AutoML](https://www.hopsworks.ai/dictionary/auto-ml))。
-- **バッチ推論パイプライン:** データのバッチにモデルを適用して予測を行う([Hopsworks Batch Inference Pipeline](https://www.hopsworks.ai/dictionary/batch-inference-pipeline))。
-- **MLOpsのCI/CD:** MLパイプラインの継続的インテグレーションとデリバリー([Hopsworks CI/CD for MLOps](https://www.hopsworks.ai/dictionary/ci-cd-for-mlops))。
-- **特徴量ストア:** エンジニアリングされた特徴量を保存、共有、再利用するための中央集約型リポジトリ([Hopsworks Feature Store](https://www.hopsworks.ai/dictionary/feature-store))。
-- **モデルレジストリ:** モデルバージョン、メタデータ、デプロイメントステータスを管理するリポジトリ([MLflow Model Registry](https://mlflow.org/docs/latest/model-registry.html))。
-- **モデルドリフト:** データ分布の変化によるモデルパフォーマンスの劣化。
-- **モデルモニタリング:** モデルパフォーマンスと本番データ特性の継続的な追跡。
-- **観測可能性:** 本番MLモデルの動作とパフォーマンスに関する洞察を得る能力([Hopsworks Observability](https://www.hopsworks.ai/mlops-dictionary))。
-- **バックフィリング:** トレーニングのために生の履歴データからデータセットを再計算するプロセス([Hopsworks Backfill](https://www.hopsworks.ai/dictionary/backfill-features))。
-- **再トレーニング:** 精度を維持または向上させるために新しいデータでモデルを更新すること。
-- **カナリアデプロイメント:** 完全デプロイ前にテストするために、新しいモデルバージョンをユーザーのサブセットに段階的にロールアウトすること。
-
-MLOps用語の包括的な辞書については、以下を参照してください:  
-- [Hopsworks MLOps Dictionary](https://www.hopsworks.ai/mlops-dictionary)
-
 ## 追加リソース
 
 - [AWS: What is MLOps?](https://aws.amazon.com/what-is/mlops/)

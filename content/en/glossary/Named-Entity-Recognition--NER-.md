@@ -5,7 +5,8 @@ description: "Named Entity Recognition (NER) identifies and classifies real-worl
 keywords: ["Named Entity Recognition", "NER", "Natural Language Processing", "NLP", "Entity Extraction"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is Named Entity Recognition (NER)?
@@ -164,8 +165,6 @@ Return structured results, typically as annotated text, JSON, or XML.
 - Uses dictionaries (gazetteers), regular expressions, and linguistic rules.
 - Fast and interpretable, but brittle—requires manual updating for new entities or domains.
 - Effective for fixed formats (phone numbers, dates, known PII).
-- **Reference:** [Wikipedia: Named-entity recognition](https://en.wikipedia.org/wiki/Named-entity_recognition)
-
 ### 2. Traditional Machine Learning
 - Learns from annotated datasets using engineered features (word shapes, POS, context).
 - Popular algorithms: Conditional Random Fields (CRF), Hidden Markov Models (HMM), Support Vector Machines (SVM), Decision Trees.
@@ -333,4 +332,3 @@ print(df)
 | [Tonic Textual](https://www.tonic.ai/products/textual) | Enterprise NER, redaction, synthesis, custom models                | API, Python SDK| [Tonic Textual](https://www.tonic.ai/products/textual) |
 | [DeepPavlov](https://deeppavlov.ai/) | Deep learning, pre-trained models, domain adaptation                | Python         | [DeepPavlov](https://deeppavlov.ai/) |
 | [Google Cloud NLP](https://cloud.google.com/natural-language)
-

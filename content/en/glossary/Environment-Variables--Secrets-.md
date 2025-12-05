@@ -1,13 +1,19 @@
 ---
-title: Environment Variables (Secrets)
+title: 'Environment Variables (Secrets): The Deep'
 translationKey: environment-variables-secrets
 description: Learn about environment variables (secrets) for secure application configuration.
   Decouple sensitive data like API keys and passwords from code, ensuring security
   and flexibility.
-keywords: ["environment variables", "secrets management", "API keys", "application security", "configuration management"]
+keywords:
+- environment variables
+- secrets management
+- API keys
+- application security
+- configuration management
 category: General
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What Are Environment Variables (Secrets)?
@@ -42,11 +48,6 @@ Environment variables are named, externally-defined key-value pairs that provide
 
 **Process Isolation:**  
 - Each process has access only to relevant secrets, reducing accidental exposure or privilege escalation.
-
-**References:**  
-- [Microsoft Learn: Best practices for protecting secrets](https://learn.microsoft.com/en-us/azure/security/fundamentals/secrets-best-practices)  
-- [OWASP: Centralize and Standardize Secrets Management](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#22-centralize-and-standardize)
-
 ## Types of Environment Variables
 
 ### 1. System Environment Variables
@@ -74,11 +75,6 @@ Environment variables are named, externally-defined key-value pairs that provide
 ### Platform Differences
 - **Windows:** Set via Control Panel, CLI (`set`), or PowerShell (`$env:VAR_NAME`).
 - **Unix/Linux/macOS:** Set via `export VAR=value` in shell, or add to `.bashrc`/`.zshrc` for persistence.
-
-**References:**  
-- [DreamHost: Environment Variables Explained](https://www.dreamhost.com/blog/environment-variables/)  
-- [Kinsta: Environment Variable Types](https://kinsta.com/blog/what-is-an-environment-variable/)
-
 ## How Environment Variables Are Used
 
 **Workflow:**
@@ -92,11 +88,6 @@ Instead of hardcoding `API_KEY = "abc123"`, set the value as an environment vari
 **Automated Secret Injection:**  
 - In CI/CD, secrets are often injected at build or deployment time.
 - Secret managers or deployment dashboards provide UIs/APIs for defining and rotating secrets.
-
-**References:**  
-- [Render: Configure Environment Variables](https://render.com/docs/configure-environment-variables)  
-- [OWASP: Automate Secrets Management](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#24-automate-secrets-management)
-
 ## Common Use Cases & Examples
 
 - **API Keys:** External services (OpenAI, Google Cloud, Stripe).
@@ -222,12 +213,6 @@ MODE=production
      var builder = WebApplication.CreateBuilder(args);
      var movieApiKey = builder.Configuration["Movies:ServiceApiKey"];
      ```
-
-**References:**  
-- [Microsoft Docs: Safe storage of app secrets in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-10.0)
-- [python-dotenv](https://pypi.org/project/python-dotenv/)
-- [npm dotenv](https://www.npmjs.com/package/dotenv)
-
 ## Managing & Rotating Secrets
 
 **Secret Lifecycle:**
@@ -244,11 +229,6 @@ MODE=production
 **Mapping to Configuration Objects:**
 - .NET: Map secrets to POCOs for structured access.
 - Node.js/Python: Use config libraries or custom wrappers for validation and aggregation.
-
-**References:**  
-- [OWASP: Automated Secrets Rotation](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#24-automate-secrets-management)
-- [Azure Key Vault: Secret Rotation](https://learn.microsoft.com/en-us/azure/key-vault/secrets/tutorial-rotation)
-
 ## Security Best Practices
 
 - **Never store secrets in version control.**
@@ -265,11 +245,6 @@ MODE=production
 - **Encrypt secrets at rest and in transit.**
 - **Isolate secrets by environment and service.**
 - **Minimize human interaction with secrets—use automated pipelines.**
-
-**References:**  
-- [OWASP: Access Control & Automation](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#23-access-control)
-- [Microsoft Learn: Best practices for protecting secrets](https://learn.microsoft.com/en-us/azure/security/fundamentals/secrets-best-practices)
-
 ## Advanced Scenarios: Multiple Environments, Secret Files, Environment Groups
 
 - **Multiple Environments:** Use separate `.env` files or secret sets for `development`, `staging`, and `production`.
@@ -292,11 +267,6 @@ MODE=production
 - **Secret Managers:** AWS Secrets Manager, Azure Key Vault, HashiCorp Vault.
 - **Encrypted Configuration Files:** For complex configs (must be excluded from version control).
 - **Platform Tools:** Use deployment dashboards (Render, Vercel, Netlify) for managing and grouping secrets.
-
-**References:**  
-- [Azure Key Vault Overview](https://learn.microsoft.com/en-us/azure/key-vault/general/overview)
-- [HashiCorp Vault Overview](https://www.vaultproject.io/docs)
-
 ## Key Takeaways
 
 - Environment variables securely inject sensitive values into apps without exposing them in code or UIs.
@@ -345,8 +315,4 @@ client = OpenAI(api_key=api_key)
 var builder = WebApplication.CreateBuilder(args);
 var openAiApiKey = builder.Configuration["OPENAI_API_KEY"];
 ```
-
-**See Also:**  
-- [Safe storage of app secrets in ASP.NET Core – Microsoft Docs](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-10.0)
 - [How to store and access
-

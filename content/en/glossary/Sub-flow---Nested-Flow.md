@@ -5,7 +5,8 @@ description: "Learn about sub-flows (nested flows) in automation. Embed workflow
 keywords: ["sub-flow", "nested flow", "workflow automation", "reusability", "modular workflow"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What Are Sub-flows / Nested Flows?
@@ -13,12 +14,6 @@ draft: false
 A **sub-flow** (or **nested flow**) is a self-contained workflow invoked as a step within a larger, parent workflow. This modular pattern allows decomposition of intricate business logic, enabling consistent reuse and simplified maintenance. Sub-flows are analogous to software functions: encapsulating specific logic reusable across multiple contexts.
 
 - **Example:** In employee onboarding, separate sub-flows handle IT setup, HR compliance, equipment provisioning, and account creation. Each sub-flow is developed once and invoked wherever needed.
-
-**References:**  
-- [Microsoft Power Automate: Create subflows](https://learn.microsoft.com/en-us/training/modules/create-subflows-web-automation-online-workshop/)  
-- [ServiceNow: Subflows and workflow automation](https://sn.works/CoE/StartFlow)  
-- [AWS Step Functions: Nested Workflows](https://aws.amazon.com/blogs/compute/breaking-down-monolith-workflows-modularizing-aws-step-functions-workflows/)
-
 ## Why Use Sub-flows / Nested Flows?
 
 ### Key Benefits
@@ -30,11 +25,6 @@ A **sub-flow** (or **nested flow**) is a self-contained workflow invoked as a st
 - **Consistency:** Identical processes execute uniformly across all workflows.  
 - **Enhanced Security:** Access to sensitive logic is isolated and protected via permissions.  
 - **Improved Error Handling:** Centralized error management is applied to sub-flows for reliable recovery and unified logging.
-
-**Further Reading:**  
-- [ServiceNow Flow Designer Docs](https://docs.servicenow.com/csh?version=latest&topicname=flow-designer)  
-- [AWS Step Functions Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-nested-workflows.html)
-
 ## How Do Sub-flows / Nested Flows Work?
 
 ### Step-by-Step Process
@@ -168,10 +158,6 @@ const parentWorkflow = new LegacyWorkflow({ name: "parent-workflow" })
 | **Scalability**      | Limited by complexity                 | Easily scaled by composing sub-flows     |
 | **Debugging**        | Complex, due to state explosion       | Simpler, with isolated error domains     |
 | **Versioning**       | Requires redeploying the entire flow  | Update individual sub-flows independently|
-
-**Source:**  
-- [AWS Compute Blog: Modularizing Step Functions](https://aws.amazon.com/blogs/compute/breaking-down-monolith-workflows-modularizing-aws-step-functions-workflows/)
-
 ## Best Practices for Sub-flows / Nested Flows
 
 1. **Design for Modularity:** Encapsulate related steps; avoid "God" sub-flows.
@@ -240,4 +226,3 @@ A: Yes, supporting complex hierarchies.
 - [AWS Step Functions: Parent-Child State Machine Diagrams](https://aws.amazon.com/blogs/compute/breaking-down-monolith-workflows-modularizing-aws-step-functions-workflows/)
 
 *For further platform-specific guidance and advanced architectural patterns, consult the above resources. Implementing sub-flows is fundamental for scalable, maintainable, and resilient workflow automation in both enterprise and SMB settings.*
-

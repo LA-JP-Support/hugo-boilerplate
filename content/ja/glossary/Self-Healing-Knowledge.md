@@ -131,8 +131,6 @@ e-title: Self-Healing Knowledge
 
 - **シナリオ**: 自動テストスクリプトが、特定のテストデータセットやコードリポジトリへのリンクとともにドキュメント化されています。
 - **アプリケーション**: セルフヒーリングシステムが、テストデータが移動または更新されたことを特定し、スクリプト/ドキュメントの更新を提案または実行します。
-- **参考**: [Self-Healing Test Automation Framework using AI and ML (ResearchGate)](https://www.researchgate.net/publication/383019866_Self-Healing_Test_Automation_Framework_using_AI_and_ML)
-
 ### 規制産業(医療、金融)
 
 - **シナリオ**: コンプライアンスドキュメントは、最新の法令と規制基準を参照する必要があります。

@@ -5,7 +5,8 @@ description: "Dify is an open-source LLM app development platform integrating Ba
 keywords: ["Dify", "LLMOps", "AI applications", "RAG", "agentic workflows"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## **Dify**
@@ -297,10 +298,3 @@ A healthcare provider self-hosts Dify for HIPAA compliance, connects to internal
 - [Contribute on GitHub](https://github.com/langgenius/dify)
 
 *For a visual overview, see sample screenshots in the Dify [Docs](https://docs.dify.ai/en/introduction) or [YouTube Channel](https://www.youtube.com/@dify_ai).*
-
-**References & Further Reading:**
-- [Dify Official Docs](https://docs.dify.ai/en/introduction)
-- [Dify GitHub](https://github.com/langgenius/dify)
-- [Baytech Consulting – Dify Overview](https://www.baytechconsulting.com/blog/what-is-dify-ai-2025)
-- [GPTBots Dify Review](https://www.gptbots.ai/blog/dify-ai)
-- [Dify Community Forum](https://forum.dify.ai/)

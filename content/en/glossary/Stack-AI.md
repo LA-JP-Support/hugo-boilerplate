@@ -4,10 +4,16 @@ translationKey: stack
 description: Stack AI is an enterprise-grade, no-code/low-code platform for building,
   testing, and deploying AI-powered workflows and agents, centered around advanced
   large language models (LLMs).
-keywords: ["Stack AI", "no-code AI", "LLM platform", "AI workflow automation", "enterprise AI"]
+keywords:
+- Stack AI
+- no-code AI
+- LLM platform
+- AI workflow automation
+- enterprise AI
 category: General
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Definition
@@ -29,11 +35,6 @@ Stack AI was founded by Antoni Rosinol and Bernardo Aceituno, both former MIT Ph
 - **Integration ecosystem:** 100+ SaaS, cloud, database, and API connectors.
 - **Flexible deployment:** Cloud, on-premise, VPC, web, chat, API, Slack, Teams, embedded widgets.
 - **Enterprise focus:** Designed for regulated industries and large-scale automation with granular access controls.
-
-**Sources:**  
-- [Stack AI Official](https://www.stack-ai.com/)  
-- [TechCrunch article (2024)](https://techcrunch.com/2024/05/21/stack-ai-raises-3m-to-make-ai-workflows-easy/)
-
 ## How Is Stack AI Used?
 
 ### Core Usage Patterns
@@ -73,10 +74,6 @@ Read PDF from Google Drive → Extract key data with OCR → Analyze with Claude
 - **Conversational builder:** Scaffold workflows by describing them in plain English.
 - **Advanced logic:** Parallel, conditional, and multi-source aggregation supported.
 - **Reusable components:** Save and reuse workflow templates across the organization.
-
-**Source:**  
-- [Voiceflow Stack AI Review](https://www.voiceflow.com/blog/stack-ai)
-
 ### 2. Integration Ecosystem
 
 Over 100 integrations with SaaS, cloud storage, databases, communication platforms, and APIs:
@@ -163,11 +160,6 @@ Stack AI’s technical foundation is modular and cloud-native, emphasizing flexi
 - **Vector databases:** Power semantic search and RAG.
 - **Machine learning/NLP:** Core for extraction, classification, summarization.
 - **Access/security modules:** Enforce compliance and protection.
-
-**Reference:**  
-- [Stack AI Documentation](https://docs.stack-ai.com/stack-ai/)  
-- [MongoDB AI Stack Overview](https://www.mongodb.com/resources/basics/artificial-intelligence/ai-stack)
-
 ## Stack AI vs. Other AI Workflow Automation Tools
 
 | Platform       | Target Market      | Strengths                                  | Weaknesses                           |
@@ -188,10 +180,6 @@ Stack AI’s technical foundation is modular and cloud-native, emphasizing flexi
 - Enterprise compliance (SOC2/HIPAA/GDPR)
 - Flexible deployment (SaaS, on-prem, VPC)
 - UI for both technical and business users
-
-**See also:**  
-- [Best AI Agent Platforms (Marketer Milk)](https://www.marketermilk.com/blog/best-ai-agent-platforms)
-
 ## Limitations and Considerations
 
 - **Pricing:** Free tier for prototyping (500 runs/month); commercial deployments require custom enterprise plans ([Pricing FAQ](https://docs.stack-ai.com/pricing)).

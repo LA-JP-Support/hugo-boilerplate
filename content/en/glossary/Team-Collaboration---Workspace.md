@@ -1,6 +1,7 @@
 ---
 title: "Team Collaboration / Workspace"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "team-collaboration-workspace"
 description: "Explore Team Collaboration / Workspace, a digital environment for multiple users to work in real-time on shared documents, processes, and automated workflows, often enhanced by AI."
 keywords: ["team collaboration", "workspace", "AI chatbot", "automation", "real-time editing"]
@@ -323,4 +324,3 @@ A: Flows are automated, multi-step processes designed, edited, and managed colla
 ## Summary
 
 Team Collaboration / Workspace features form the backbone for modern organizations seeking to harness collective intelligence, automate processes, and foster innovation. Real-time editing, AI-powered automation, secure sharing, and open communication empower teams to achieve more, together. Explore [Google Workspace Essentials](https://workspace.google.com/essentials/) or [discover AI-powered flows](https://sites.google.com/view/workspace-flows/about) to empower your organization today.
-

@@ -5,7 +5,8 @@ description: "A hamburger menu is a GUI element with three stacked lines that re
 keywords: ["hamburger menu", "UI/UX design", "mobile navigation", "progressive disclosure", "web accessibility"]
 category: "General"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is a Hamburger Menu?
@@ -116,8 +117,6 @@ In **AI chatbots and automation platforms**, the hamburger menu is frequently em
   Poor fit for simple sites or scenarios requiring immediate action.
 - **Accessibility Barriers:**  
   If not implemented with proper labels and keyboard support, can hinder users with disabilities.
-
-*References: [NNG: Hamburger Menus Hurt UX Metrics](https://www.nngroup.com/articles/hamburger-menus/), [UserWay: UX & Accessibility Best Practices](https://userway.org/blog/website-navigation/), [HubSpot: Hamburger Button Pros & Cons](https://blog.hubspot.com/website/hamburger-button)*
 
 ## Design Principles and Best Practices
 
@@ -290,8 +289,6 @@ Choose the model that matches your users’ needs and the importance of the opti
 - [Mobile-Friendly Website](#)
 - [Web Design](#)
 
-**References and Source Links Used Directly in Content:**
-
 - [Interaction Design Foundation: Hamburger Menu UX](https://www.interaction-design.org/literature/article/hamburger-menu-ux)
 - [UXDesign.cc: Accessible Hamburger Menu Guide](https://uxdesign.cc/create-an-accessible-hamburger-menu-869b0301cfd7)
 - [UserWay: Website Navigation Best Practices](https://userway.org/blog/website-navigation/)
@@ -299,4 +296,3 @@ Choose the model that matches your users’ needs and the importance of the opti
 - [Justinmind: Hamburger Menu Design Guide](https://www.justinmind.com/ui-design/hamburger-menu)
 
 For a deep dive into implementation, accessibility, and UX best practices, visit the recommended further reading links. This glossary consolidates the latest research and expert consensus on hamburger menus, their history, usage, best practices, and accessibility.
-

@@ -1,11 +1,18 @@
 ---
-title: "Delay / Sleep Node"
-translationKey: "delay-sleep-node"
-description: "A Delay/Sleep Node pauses workflow execution in AI chatbots & automation for a set period or until a condition is met, crucial for API rate limiting & orchestration."
-keywords: ["Delay Node", "Sleep Node", "Automation Workflows", "AI Chatbot", "Workflow Orchestration"]
-category: "AI Chatbot & Automation"
-type: "glossary"
-date: 2025-12-03
+title: Delay / Sleep Node
+translationKey: delay-sleep-node-glossary-technical-guide-for-ai-chatbot-automation-workflows
+description: A Delay/Sleep Node pauses workflow execution in AI chatbots & automation
+  for a set period or until a condition is met, crucial for API rate limiting & orchestration.
+keywords:
+- Delay Node
+- Sleep Node
+- Automation Workflows
+- AI Chatbot
+- Workflow Orchestration
+category: AI Chatbot & Automation
+type: glossary
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is a Delay / Sleep Node?
@@ -18,11 +25,6 @@ A Delay or Sleep Node is a component, often seen in automation platforms or as a
 - To space out API calls and prevent rate limiting.
 - To wait for external processes (e.g., file upload, payment confirmation).
 - For orchestrating workflows with time-based or event-based conditions.
-
-**Further Reading:**  
-- [JavaScript version of sleep() (Stack Overflow)](https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep)  
-- [Mimo: JavaScript Sleep Function](https://mimo.org/glossary/javascript/sleep-function)
-
 ## Purpose and Use Cases
 
 **When and why are Delay/Sleep Nodes used?**
@@ -98,11 +100,6 @@ main();
 ```js
 await new Promise(resolve => setTimeout(resolve, 5000));
 ```
-
-**Reference:**  
-- [Stack Overflow: Best sleep pattern](https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep)
-- [Mimo: JavaScript Sleep Function](https://mimo.org/glossary/javascript/sleep-function)
-
 ### Third-Party Packages (e.g., `sleep-promise`)
 
 **Example:**
@@ -157,11 +154,6 @@ while (!conditionMet) {
 }
 ```
 - **Use case:** Waiting for asynchronous external events.
-
-**References:**  
-- [JavaScript Sleep, Wait & Delay Guide](https://www.index.dev/blog/javascript-sleep-wait-delay-guide)
-- [LinkedIn: Intelligent Delay Node](https://www.linkedin.com/posts/muhammedadnanvv_alright-lets-cut-through-the-noise-youre-activity-7341374262135373825-6xUv)
-
 ## Delay/Sleep Nodes in Automation Workflows
 
 ### AWS SSM (Systems Manager) Automation
@@ -171,9 +163,6 @@ while (!conditionMet) {
     - `Duration` (ISO 8601, e.g., `PT10M`)
     - `Timestamp` (e.g., `2020-01-01T01:00:00Z`)
 - **Max delay:** 7 days (604799 seconds)
-- **References:**  
-    - [AWS SSM Sleep Action](https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-action-sleep.html)
-
 **Example:**
 ```yaml
 name: sleep
@@ -296,4 +285,3 @@ A Delay/Sleep Node is a fundamental building block for orchestrating time-based 
 For code samples, workflow diagrams, and more advanced use patterns, consult the [References & Further Reading](#references--further-reading) section.
 
 *This glossary entry is maintained for developers seeking robust solutions for time management, pacing, and conditional waits in automation and chatbot workflows.*
-

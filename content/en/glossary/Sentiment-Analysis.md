@@ -1,11 +1,19 @@
 ---
-title: "Sentiment Analysis"
-translationKey: "sentiment-analysis"
-description: "Sentiment analysis interprets emotional tone in text using NLP, ML, and AI. It converts unstructured data into actionable insights for customer feedback, brand monitoring, and product improvement."
-keywords: ["sentiment analysis", "natural language processing", "aspect-based sentiment analysis", "customer feedback", "brand reputation"]
-category: "AI Chatbot & Automation"
-type: "glossary"
-date: 2025-12-03
+title: Sentiment Analysis
+translationKey: sentiment-analysis
+description: Sentiment analysis interprets emotional tone in text using NLP, ML, and
+  AI. It converts unstructured data into actionable insights for customer feedback,
+  brand monitoring, and product improvement.
+keywords:
+- sentiment analysis
+- natural language processing
+- aspect-based sentiment analysis
+- customer feedback
+- brand reputation
+category: AI Chatbot & Automation
+type: glossary
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is Sentiment Analysis?
@@ -33,8 +41,6 @@ Preprocessing is essential for cleaning and preparing raw text data. These steps
 - **Named Entity Recognition (NER):** Identifying mentions of brands, products, organizations, or people.
 - **Noise Reduction:** Removing HTML tags, URLs, special characters, or other irrelevant elements.
 
-*Reference: [Codefinity: Preprocessing in Python](https://codefinity.com/blog/A-Comprehensive-Guide-to-Sentiment-Analysis-with-Python)*
-
 ### Feature Extraction
 
 Transforming text into numerical vectors so machine learning algorithms can process it:
@@ -44,8 +50,6 @@ Transforming text into numerical vectors so machine learning algorithms can proc
 - **Word Embeddings:** Captures semantic meaning and context via vector representations of words (e.g., Word2Vec, GloVe, FastText, BERT).
     - [Word Embeddings Visualization (YouTube)](https://www.youtube.com/watch?v=ERibwqs9p38)
 
-*Reference: [Thematic: NLP and Feature Extraction](https://getthematic.com/insights/text-analytics/)*
-
 ### Sentiment Classification
 
 After preprocessing and feature extraction, text is classified using one of three primary approaches:
@@ -54,16 +58,12 @@ After preprocessing and feature extraction, text is classified using one of thre
 - **Traditional Machine Learning Models:** Algorithms like Naive Bayes, Support Vector Machines (SVM), and Logistic Regression.
 - **Neural Networks:** Deep learning models (LSTM, CNN, Transformer-based models like BERT) that learn complex language patterns.
 
-*Reference: [CareerFoundry: Sentiment Analysis Workflows](https://careerfoundry.com/en/blog/data-analytics/sentiment-analysis/#how-does-it-work)*
-
 ### Sentiment Scoring
 
 Assigning a sentiment label or a quantitative score:
 
 - **Discrete Labels:** Categories such as positive, negative, neutral, or more granular (very positive, positive, neutral, negative, very negative).
 - **Continuous Scores:** Numeric scales (e.g., -1 to +1 or 0 to 100) that measure sentiment intensity or polarity.
-
-*Reference: [Thematic: Sentiment Scoring](https://getthematic.com/insights/customer-sentiment-how-to-analyze/)*
 
 ## Types of Sentiment Analysis
 
@@ -76,8 +76,6 @@ Breaks down sentiment into multiple levels, not just positive/negative/neutral, 
 - "It's okay, nothing special." → Neutral  
 - "Really disappointed with the battery life." → Very Negative
 
-*Reference: [Thematic: Fine-Grained Sentiment](https://getthematic.com/insights/customer-sentiment-analysis-explained/)*
-
 ### Aspect-Based Sentiment Analysis (ABSA)
 
 Pinpoints sentiment related to specific attributes or "aspects" within a text.
@@ -89,8 +87,6 @@ Pinpoints sentiment related to specific attributes or "aspects" within a text.
 
 This approach is crucial for product feedback, highlighting which features are praised or criticized.
 
-*Reference: [IBM: Aspect-based Sentiment Analysis](https://www.ibm.com/think/topics/sentiment-analysis)*
-
 ### Emotion Detection
 
 Goes beyond polarity to categorize specific emotions such as joy, anger, surprise, or sadness.
@@ -101,8 +97,6 @@ Goes beyond polarity to categorize specific emotions such as joy, anger, surpris
 
 Modern systems often use emotion lexicons or deep learning to detect subtle emotional cues.
 
-*Reference: [Thematic: Emotion AI](https://getthematic.com/sentiment-analysis)*
-
 ### Intent-Based Sentiment Analysis
 
 Detects the underlying intent (e.g., purchase, cancellation, complaint, inquiry) behind a message, not just its sentiment.
@@ -111,13 +105,9 @@ Detects the underlying intent (e.g., purchase, cancellation, complaint, inquiry)
 - "How can I upgrade my plan?" → Purchase/Upgrade Intent  
 - "I'm considering canceling my subscription." → Cancellation Intent
 
-*Reference: [AWS: Intent-based Sentiment Analysis](https://aws.amazon.com/what-is/sentiment-analysis/)*
-
 ### Multilingual Sentiment Analysis
 
 Analyzes sentiment in texts written in different languages and dialects, requiring specialized models and lexicons for each language.
-
-*Reference: [Elastic: Multilingual Sentiment Analysis](https://www.elastic.co/what-is/sentiment-analysis)*
 
 ## Approaches to Sentiment Analysis
 
@@ -142,8 +132,6 @@ Uses manually crafted rules and sentiment dictionaries to assign polarity.
 **Example:**  
 "Not bad at all." ("bad" is negative, but "not" negates, making overall sentiment positive)
 
-*Reference: [CareerFoundry: Rule-Based Sentiment Analysis](https://careerfoundry.com/en/blog/data-analytics/sentiment-analysis/#how-does-it-work)*
-
 ### Machine Learning Methods
 
 Relies on supervised learning with labeled datasets to train classifiers.
@@ -165,8 +153,6 @@ Relies on supervised learning with labeled datasets to train classifiers.
 **Example:**  
 "The new interface is a breath of fresh air." → Positive (learned from annotated data)
 
-*Reference: [Codefinity: Machine Learning for Sentiment Analysis](https://codefinity.com/blog/A-Comprehensive-Guide-to-Sentiment-Analysis-with-Python)*
-
 ### Neural Network Methods
 
 Applies deep learning models (LSTMs, CNNs, Transformers like BERT) for advanced semantic understanding.
@@ -178,8 +164,6 @@ Applies deep learning models (LSTMs, CNNs, Transformers like BERT) for advanced 
 **Limitations:**  
 - Demands significant computational resources  
 - Requires large-scale annotated datasets
-
-*Reference: [Thematic: Neural Approaches to Sentiment Analysis](https://getthematic.com/sentiment-analysis)*
 
 ### Hybrid Approaches
 
@@ -194,8 +178,6 @@ Combines rule-based and machine learning methods for greater flexibility and acc
 - Handles domain-specific and subtle sentiment  
 - Increased robustness
 
-*Reference: [Thematic: Hybrid Models](https://getthematic.com/sentiment-analysis)*
-
 ## Business Applications and Use Cases
 
 Sentiment analysis is integral to data-driven business strategies across industries:
@@ -207,16 +189,12 @@ Analyzes reviews, support tickets, and surveys to uncover customer pain points a
 **Example:**  
 E-commerce platforms automatically analyze thousands of product reviews to identify design flaws or popular features.
 
-*Reference: [Thematic: Customer Feedback Analytics](https://getthematic.com/insights/customer-sentiment-how-to-analyze/)*
-
 ### Brand Reputation Monitoring
 
 Monitors social media, forums, and news sites to detect spikes in negative sentiment and trigger PR interventions.
 
 **Example:**  
 A sudden increase in negative tweets about a product recall is detected, prompting a timely public response.
-
-*Reference: [CareerFoundry: Brand Reputation Use Case](https://careerfoundry.com/en/blog/data-analytics/sentiment-analysis/#use-cases)*
 
 ### Product and Service Improvement
 
@@ -231,8 +209,6 @@ Tracks public perception, competitor benchmarking, and market trends using real-
 
 **Example:**  
 Aggregating sentiment on Twitter during a product launch to inform marketing strategies.
-
-*Reference: [Thematic: Market Research Examples](https://getthematic.com/sentiment-analysis)*
 
 ### Employee and Internal Analytics
 
@@ -249,8 +225,6 @@ Analyzing open-ended employee survey responses to detect workplace satisfaction 
 - **Actionable Intelligence:** Directs product, marketing, and CX strategies
 - **Cost Efficiency:** Automates analysis, reducing manual labor
 
-*Reference: [Thematic: Benefits of Sentiment Analysis](https://getthematic.com/sentiment-analysis)*
-
 ## Challenges in Sentiment Analysis
 
 - **Sarcasm and Irony:** Hard for algorithms to detect non-literal language  
@@ -263,8 +237,6 @@ Analyzing open-ended employee survey responses to detect workplace satisfaction 
 - **Domain and Culture Dependency:** Language varies by context and region
 - **Data Quality:** Noisy, incomplete, or biased data impairs accuracy
 - **Language and Dialect Diversity:** Multilingual analysis requires specialized models
-
-*Reference: [Thematic: Sentiment Analysis Challenges](https://getthematic.com/sentiment-analysis)*
 
 ## Best Practices for Implementation
 
@@ -279,8 +251,6 @@ Analyzing open-ended employee survey responses to detect workplace satisfaction 
 6. **Monitor and Update:** Update lexicons/models as language evolves.
 7. **Integrate with Workflows:** Dashboards and alerts for real-time action.
 8. **Respect Privacy:** Ensure compliance with data protection regulations.
-
-*Reference: [Thematic: Best Practices](https://getthematic.com/sentiment-analysis)*
 
 ## Examples and Practical Scenarios
 
@@ -307,8 +277,6 @@ A sudden surge in negative sentiment on Twitter after a product recall triggers 
 
 Analyzing competitors' reviews uncovers frequent complaints about "poor battery life," allowing a company to promote its own superior battery in marketing campaigns.
 
-*Reference: [Thematic: Sentiment Analysis Case Studies](https://getthematic.com/sentiment-analysis)*
-
 ## Further Reading & References
 
 - [IBM: What Is Sentiment Analysis?](https://www.ibm.com/think/topics/sentiment-analysis)
@@ -332,4 +300,3 @@ Sentiment analysis systematically interprets emotional tone in text using NLP, M
 - [YouTube: Sentiment Analysis with Deep Learning using BERT](https://www.youtube.com/watch?v=xvqsFTUsOmc)
 
 This glossary is regularly updated with the latest advances in AI-powered sentiment analysis. For further technical depth and best practices, follow the linked resources and authoritative guides.
-

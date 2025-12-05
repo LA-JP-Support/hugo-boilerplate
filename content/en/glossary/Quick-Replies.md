@@ -5,7 +5,8 @@ description: "Quick Replies are ephemeral, selectable buttons in chat interfaces
 keywords: ["Quick Replies", "Chatbot", "Ephemeral buttons", "Chat interface", "Messaging platforms"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Definition
@@ -245,4 +246,3 @@ For further reading on conversational UI best practices:
 Or explore [LivePerson's Conversational Cloud](https://community.liveperson.com/kb/articles/1397-quick-replies-user-guide)
 
 *This glossary was deeply informed by technical documentation and user guides from leading chatbot platforms. For the most up-to-date platform constraints and examples, always consult the official resources linked above.*
-

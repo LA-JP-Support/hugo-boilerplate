@@ -5,7 +5,8 @@ description: "Make (formerly Integromat) is a visual, no-code platform for desig
 keywords: ["Make", "Integromat", "no-code automation", "workflow automation", "visual builder", "API integration", "data transformation", "business process automation", "scenario"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is Make (Integromat)?
@@ -15,13 +16,6 @@ Make, formerly Integromat, is a no-code platform enabling users—ranging from s
 Make connects over 2,500+ apps, including productivity tools (Google Workspace, Slack, Notion), e-commerce (Shopify, WooCommerce), marketing automation (Mailchimp, HubSpot), databases (Airtable, MySQL), and virtually any REST API. Its drag-and-drop interface allows the design of linear or highly branched workflows, supporting data mapping, transformation, scheduling, and advanced conditional logic.
 
 The platform is suited for anyone aiming to eliminate repetitive manual work, orchestrate business processes, or integrate disparate systems, all without traditional programming.
-
-**References:**  
-- [Make Official Site](https://www.make.com/en)  
-- [Minimum Code - Make Overview](https://www.minimum-code.com/tools-directory/make-integromat)  
-- [Tallyfy Beginner’s Guide](https://tallyfy.com/what-is-integromat/)  
-- [XRay.Tech Beginner’s Guide 2024](https://www.xray.tech/post/make-beginner-2024)  
-
 ## How Does Make Work?
 
 Make operates by creating "scenarios," which are visual representations of workflows. Each scenario is constructed from modules, including triggers, actions, and tools (such as filters, routers, iterators, and aggregators), all connected via a flowchart-like interface.
@@ -42,12 +36,6 @@ The builder enables users to visually map out workflows, see data as it passes t
 - **Custom Functions:** Build reusable logic blocks (e.g., data transformations or calculations) for complex scenarios. [See Make’s Custom Functions](https://www.make.com/en/blog/custom-functions-in-make-best-practices)
 - **API Integrations:** Use HTTP modules for advanced API calls, including custom authentication, pagination, and header management.
 - **Data Stores:** Persist data across scenarios and runs, enabling stateful automations and multi-step processes.
-
-**References:**  
-- [Make.com Automation Tutorial (YouTube)](https://www.youtube.com/watch?v=JSA2oezQWOU)  
-- [Make Help Center: Learn the Basics](https://help.make.com/learn-the-basics)  
-- [XRay.Tech Beginner’s Guide 2024](https://www.xray.tech/post/make-beginner-2024)
-
 ## Key Features
 
 **1. Visual Workflow Builder:**  
@@ -79,12 +67,6 @@ Granular user permissions, secure webhook endpoints, audit logs, and SSO for ent
 
 **10. Make AI:**  
 Recently added AI features for intelligent automation, including smart data extraction and processing. [Release note](https://app.archbee.com/public/PREVIEW-TDD_JYughqVhdcQ3sZF9_/PREVIEW-CqL-zHgSWS_WjgsU_f0TK)
-
-**References:**  
-- [Make Features Overview (Minimum Code)](https://www.minimum-code.com/tools-directory/make-integromat#section2)  
-- [Make Help Center: Explore More](https://help.make.com/explore-more)  
-- [Make Academy: Make Advanced](https://academy.make.com/bundles/make-advanced)
-
 ## How Make is Used: Real-World Examples
 
 **E-Commerce Automation:**  
@@ -115,11 +97,6 @@ Recently added AI features for intelligent automation, including smart data extr
 **IT & Development:**  
 - Monitor GitHub repo events and push updates to project management tool  
 - Error/exception logs parsed and critical alerts sent to DevOps team
-
-**References:**  
-- [Make.com Use Cases](https://www.make.com/en/use-cases)  
-- [XRay.Tech Beginner’s Guide 2024](https://www.xray.tech/post/make-beginner-2024)
-
 ## Common Use Cases
 
 - **Form Data Collection:** Website form submissions routed to CRM, spreadsheets, or Slack
@@ -159,12 +136,6 @@ Recently added AI features for intelligent automation, including smart data extr
 - Zapier: Simplicity and app coverage  
 - Lindy: AI-driven communication  
 - IFTTT: Personal/home automations
-
-**References:**  
-- [Make vs. Zapier vs. Lindy Comparison](https://www.lindy.ai/blog/make-review)  
-- [Minimum Code Comparison](https://www.minimum-code.com/tools-directory/make-integromat)  
-- [Tallyfy Integromat vs. Zapier](https://tallyfy.com/what-is-integromat/)
-
 ## Step-by-Step: Setting Up Automations in Make
 
 **1. Create Your Account:**  
@@ -198,12 +169,6 @@ Recently added AI features for intelligent automation, including smart data extr
 
 **10. Monitor and Refine:**  
 - Check execution logs, refine mappings, and optimize for performance.
-
-**References:**  
-- [Make.com Automation Tutorial (YouTube)](https://www.youtube.com/watch?v=JSA2oezQWOU)  
-- [Make Help Center: Get Started](https://help.make.com/get-started)  
-- [Make Academy: Make Advanced](https://academy.make.com/bundles/make-advanced)  
-
 ## Best Practices, Tips, and Pitfalls
 
 **Best Practices:**
@@ -225,13 +190,6 @@ Recently added AI features for intelligent automation, including smart data extr
 - **Skipping Error Handling:** Always add error handlers to avoid unexpected data loss or process halts.
 - **Not Monitoring Usage:** Monitor operations/credit usage to avoid hitting plan limits.
 - **Forgetting Security:** Expose webhooks only as needed and secure sensitive data.
-
-**References:**  
-- [Make Help Center: Error Handling](https://help.make.com/error-handling)  
-- [Make Advanced Best Practices](https://academy.make.com/bundles/make-advanced)  
-- [Custom Functions in Make](https://www.make.com/en/blog/custom-functions-in-make-best-practices)  
-- [Minimum Code - Pros and Cons](https://www.minimum-code.com/tools-directory/make-integromat#section4)
-
 ## Pricing Overview
 
 - **Free:** 1,000 operations/month, all core features, 2,500+ apps.
@@ -242,11 +200,6 @@ Recently added AI features for intelligent automation, including smart data extr
 **Notes:**
 - Pricing is based on “operations” (every module execution counts as one operation).
 - Overages are billed automatically or capped based on your plan.
-
-**References:**  
-- [Make Pricing](https://www.make.com/en/pricing)  
-- [Lindy Make Review - Pricing](https://www.lindy.ai/blog/make-review)
-
 ## Glossary of Make Terms
 
 - **Scenario:** An automated workflow of connected modules.
@@ -270,11 +223,6 @@ Recently added AI features for intelligent automation, including smart data extr
 - **Regular Expression (Regex):** Advanced text manipulation for data extraction and logic.
 - **Pagination:** Technique for retrieving multiple pages of data from APIs.
 - **Scheduler:** Tool to run scenarios at defined intervals.
-
-**See also:**  
-- [Make Help Center: Glossary](https://help.make.com/learn-the-basics)  
-- [Make Advanced: Data Stores, API, and Regex](https://academy.make.com/bundles/make-advanced)
-
 ## Frequently Asked Questions (FAQ)
 
 **Is Make the same as Integromat?**  
@@ -296,4 +244,3 @@ E-commerce, marketing agencies, IT, finance, HR, support, education, and more.
 
 **Does Make automate phone calls or AI chatbots?**  
 Not directly. It can integrate with communication tools and AI APIs (such as OpenAI) for chatbot-like automations, but for direct phone or inbox automation,
-

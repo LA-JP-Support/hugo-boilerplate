@@ -37,8 +37,6 @@ e-title: Sentiment Analysis
 - **固有表現認識(NER):** ブランド、製品、組織、または人物の言及を識別します。
 - **ノイズ削減:** HTMLタグ、URL、特殊文字、またはその他の無関係な要素を削除します。
 
-*参考: [Codefinity: Preprocessing in Python](https://codefinity.com/blog/A-Comprehensive-Guide-to-Sentiment-Analysis-with-Python)*
-
 ### 特徴抽出
 
 機械学習アルゴリズムが処理できるように、テキストを数値ベクトルに変換します:
@@ -48,8 +46,6 @@ e-title: Sentiment Analysis
 - **単語埋め込み:** ベクトル表現を通じて単語の意味的意味と文脈を捉えます(例:Word2Vec、GloVe、FastText、BERT)。
     - [Word Embeddings Visualization (YouTube)](https://www.youtube.com/watch?v=ERibwqs9p38)
 
-*参考: [Thematic: NLP and Feature Extraction](https://getthematic.com/insights/text-analytics/)*
-
 ### センチメント分類
 
 前処理と特徴抽出の後、テキストは3つの主要なアプローチのいずれかを使用して分類されます:
@@ -58,16 +54,12 @@ e-title: Sentiment Analysis
 - **従来の機械学習モデル:** Naive Bayes、サポートベクターマシン(SVM)、ロジスティック回帰などのアルゴリズム。
 - **ニューラルネットワーク:** 複雑な言語パターンを学習する深層学習モデル(LSTM、CNN、BERTなどのTransformerベースモデル)。
 
-*参考: [CareerFoundry: Sentiment Analysis Workflows](https://careerfoundry.com/en/blog/data-analytics/sentiment-analysis/#how-does-it-work)*
-
 ### センチメントスコアリング
 
 センチメントラベルまたは定量的スコアを割り当てます:
 
 - **離散ラベル:** 肯定的、否定的、中立などのカテゴリ、またはより細かい分類(非常に肯定的、肯定的、中立、否定的、非常に否定的)。
 - **連続スコア:** センチメントの強度や極性を測定する数値スケール(例:-1から+1、または0から100)。
-
-*参考: [Thematic: Sentiment Scoring](https://getthematic.com/insights/customer-sentiment-how-to-analyze/)*
 
 ## センチメント分析の種類
 
@@ -80,8 +72,6 @@ e-title: Sentiment Analysis
 - 「まあまあ、特別なことはない。」 → 中立
 - 「バッテリー寿命に本当にがっかりした。」 → 非常に否定的
 
-*参考: [Thematic: Fine-Grained Sentiment](https://getthematic.com/insights/customer-sentiment-analysis-explained/)*
-
 ### アスペクトベースセンチメント分析(ABSA)
 
 テキスト内の特定の属性または「アスペクト」に関連するセンチメントを特定します。
@@ -93,8 +83,6 @@ e-title: Sentiment Analysis
 
 このアプローチは製品フィードバックに不可欠で、どの機能が称賛または批判されているかを明らかにします。
 
-*参考: [IBM: Aspect-based Sentiment Analysis](https://www.ibm.com/think/topics/sentiment-analysis)*
-
 ### 感情検出
 
 極性を超えて、喜び、怒り、驚き、悲しみなどの特定の感情を分類します。
@@ -105,8 +93,6 @@ e-title: Sentiment Analysis
 
 現代のシステムは、感情辞書や深層学習を使用して微妙な感情の手がかりを検出することがよくあります。
 
-*参考: [Thematic: Emotion AI](https://getthematic.com/sentiment-analysis)*
-
 ### 意図ベースセンチメント分析
 
 メッセージの背後にある根本的な意図(例:購入、キャンセル、苦情、問い合わせ)を検出し、単なるセンチメントだけでなく意図を識別します。
@@ -115,13 +101,9 @@ e-title: Sentiment Analysis
 - 「プランをアップグレードするにはどうすればいいですか?」 → 購入/アップグレード意図
 - 「サブスクリプションのキャンセルを検討しています。」 → キャンセル意図
 
-*参考: [AWS: Intent-based Sentiment Analysis](https://aws.amazon.com/what-is/sentiment-analysis/)*
-
 ### 多言語センチメント分析
 
 異なる言語や方言で書かれたテキストのセンチメントを分析し、各言語に特化したモデルと辞書が必要です。
-
-*参考: [Elastic: Multilingual Sentiment Analysis](https://www.elastic.co/what-is/sentiment-analysis)*
 
 ## センチメント分析へのアプローチ
 
@@ -146,8 +128,6 @@ e-title: Sentiment Analysis
 **例:**
 「全然悪くない。」(「悪い」は否定的だが、「全然」が否定し、全体的なセンチメントは肯定的)
 
-*参考: [CareerFoundry: Rule-Based Sentiment Analysis](https://careerfoundry.com/en/blog/data-analytics/sentiment-analysis/#how-does-it-work)*
-
 ### 機械学習手法
 
 ラベル付きデータセットを使用した教師あり学習に依存して分類器をトレーニングします。
@@ -169,8 +149,6 @@ e-title: Sentiment Analysis
 **例:**
 「新しいインターフェースは新鮮な空気のようだ。」 → 肯定的(注釈付きデータから学習)
 
-*参考: [Codefinity: Machine Learning for Sentiment Analysis](https://codefinity.com/blog/A-Comprehensive-Guide-to-Sentiment-Analysis-with-Python)*
-
 ### ニューラルネットワーク手法
 
 高度な意味理解のために深層学習モデル(LSTM、CNN、BERTなどのTransformer)を適用します。
@@ -182,8 +160,6 @@ e-title: Sentiment Analysis
 **制限:**
 - 大規模な計算リソースが必要
 - 大規模な注釈付きデータセットが必要
-
-*参考: [Thematic: Neural Approaches to Sentiment Analysis](https://getthematic.com/sentiment-analysis)*
 
 ### ハイブリッドアプローチ
 
@@ -198,8 +174,6 @@ e-title: Sentiment Analysis
 - ドメイン固有で微妙なセンチメントを処理
 - 堅牢性の向上
 
-*参考: [Thematic: Hybrid Models](https://getthematic.com/sentiment-analysis)*
-
 ## ビジネスアプリケーションとユースケース
 
 センチメント分析は、業界を超えたデータ駆動型ビジネス戦略に不可欠です:
@@ -211,16 +185,12 @@ e-title: Sentiment Analysis
 **例:**
 eコマースプラットフォームは、数千の製品レビューを自動的に分析して、設計上の欠陥や人気のある機能を特定します。
 
-*参考: [Thematic: Customer Feedback Analytics](https://getthematic.com/insights/customer-sentiment-how-to-analyze/)*
-
 ### ブランド評判モニタリング
 
 ソーシャルメディア、フォーラム、ニュースサイトを監視して、否定的なセンチメントの急増を検出し、PR介入をトリガーします。
 
 **例:**
 製品リコールに関する否定的なツイートの突然の増加が検出され、タイムリーな公式対応が促されます。
-
-*参考: [CareerFoundry: Brand Reputation Use Case](https://careerfoundry.com/en/blog/data-analytics/sentiment-analysis/#use-cases)*
 
 ### 製品とサービスの改善
 
@@ -235,8 +205,6 @@ eコマースプラットフォームは、数千の製品レビューを自動�
 
 **例:**
 製品発売中のTwitterでのセンチメントを集約して、マーケティング戦略に情報を提供します。
-
-*参考: [Thematic: Market Research Examples](https://getthematic.com/sentiment-analysis)*
 
 ### 従業員と内部分析
 
@@ -253,8 +221,6 @@ eコマースプラットフォームは、数千の製品レビューを自動�
 - **実用的なインテリジェンス:** 製品、マーケティング、CX戦略を導く
 - **コスト効率:** 分析を自動化し、手作業を削減
 
-*参考: [Thematic: Benefits of Sentiment Analysis](https://getthematic.com/sentiment-analysis)*
-
 ## センチメント分析の課題
 
 - **皮肉とアイロニー:** アルゴリズムが非文字通りの言語を検出するのが困難
@@ -267,8 +233,6 @@ eコマースプラットフォームは、数千の製品レビューを自動�
 - **ドメインと文化依存性:** 文脈や地域によって言語が異なる
 - **データ品質:** ノイズが多い、不完全、または偏ったデータが精度を損なう
 - **言語と方言の多様性:** 多言語分析には特化したモデルが必要
-
-*参考: [Thematic: Sentiment Analysis Challenges](https://getthematic.com/sentiment-analysis)*
 
 ## 実装のベストプラクティス
 
@@ -283,8 +247,6 @@ eコマースプラットフォームは、数千の製品レビューを自動�
 6. **監視と更新:** 言語の進化に応じて辞書/モデルを更新します。
 7. **ワークフローとの統合:** リアルタイムアクションのためのダッシュボードとアラート。
 8. **プライバシーの尊重:** データ保護規制への準拠を確保します。
-
-*参考: [Thematic: Best Practices](https://getthematic.com/sentiment-analysis)*
 
 ## 例と実用的なシナリオ
 
@@ -310,8 +272,6 @@ eコマースプラットフォームは、数千の製品レビューを自動�
 ### 市場調査
 
 競合他社のレビューを分析して「バッテリー寿命が悪い」という頻繁な苦情を発見し、企業が自社の優れたバッテリーをマーケティングキャンペーンで宣伝できるようにします。
-
-*参考: [Thematic: Sentiment Analysis Case Studies](https://getthematic.com/sentiment-analysis)*
 
 ## さらなる読み物と参考文献
 

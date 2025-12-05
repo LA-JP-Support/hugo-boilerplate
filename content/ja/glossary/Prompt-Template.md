@@ -38,8 +38,6 @@ e-title: Prompt Template
 - **継続的な最適化:** AIレスポンスを改善するための継続的なテストと改良を促進します。
 - **知識共有:** プロンプトエンジニアリングプロセスを標準化することで、オンボーディングとコラボレーションを簡素化します。
 
-*参考: [Prompt Engineering Guide: Tips](https://www.promptingguide.ai/introduction/tips)*
-
 ## プロンプトテンプレートの主要コンポーネント
 
 1. **静的指示:** AIに何をすべきかを指示する不変の部分。
@@ -111,8 +109,6 @@ e-title: Prompt Template
 - レベルと科目別の適応型教育コンテンツ
 - 標準化されたデータ抽出と要約
 
-*参考: [Zapier AI prompt templates](https://zapier.com/blog/ai-prompt-templates/)*
-
 ## ステップバイステップ:プロンプトテンプレートの作成と使用方法
 
 1. **タスクの分析**
@@ -159,8 +155,6 @@ e-title: Prompt Template
 - 認知負荷とエラーリスクを減らすために変数の数を制限する
 - 基準が満たされていることを確認するためにAI出力を定期的にレビューする
 
-*参考: [Prompt Engineering Guide: Best Practices](https://www.promptingguide.ai/introduction/tips)*
-
 ## よくある落とし穴と課題
 
 - **変数の不一致:** 未定義またはスペルミスのプレースホルダーは、自動化を破壊したり、誤った出力につながる可能性があります。
@@ -170,8 +164,6 @@ e-title: Prompt Template
 - **テンプレートのドリフト:** 時間の経過とともに、テンプレートはビジネスニーズや進化するモデル機能と整合しなくなる可能性があります。
 - **コンテキストウィンドウの制限:** 大きすぎる、または過度に詳細なテンプレートは、LLM入力制限を超える可能性があります。
 - **複雑なロジック:** 分岐や条件付き指示の過度の使用は、人間の保守担当者とAIモデルの両方を混乱させる可能性があります。
-
-*参考: [PromptLayer: Prompt Template Glossary](https://www.promptlayer.com/glossary/prompt-template)*
 
 ## 高度なテクニック
 

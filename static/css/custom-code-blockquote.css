@@ -20,6 +20,24 @@ code {
     border: 1px solid #e1e4e8 !important;
 }
 
+/* ==========================================================================
+   7. Glossary internal links
+   ========================================================================== */
+
+.prose a[href^="/en/glossary/"],
+.prose a[href^="/ja/glossary/"] {
+    color: #2563eb;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.35);
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.prose a[href^="/en/glossary/"]:hover,
+.prose a[href^="/ja/glossary/"]:hover {
+    color: #1d4ed8;
+    border-bottom-color: rgba(29, 78, 216, 0.6);
+}
+
 /* コードブロック全体（汎用） */
 pre {
     background-color: #f3f4f6 !important; /* 薄いグレー背景 */

@@ -1,6 +1,7 @@
 ---
 title: "KV Cache"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "kv-cache"
 description: "KV Cache is an inference-time optimization for Transformer models and LLMs, storing Key and Value tensors to dramatically speed up autoregressive token generation and reduce compute costs."
 keywords: ["KV Cache", "LLMs", "Transformer models", "inference optimization", "token generation"]
@@ -297,4 +298,3 @@ For more on transformer internals, prompt engineering, and LLM optimization, see
 
 - [Hugging Face: KV Caching Explained](https://huggingface.co/blog/not-lain/kv-caching)
 - [Sebastian Raschka: Coding the KV Cache in LLMs](https://magazine.sebastianraschka.com/p/coding-the-kv-cache-in-llms)
-

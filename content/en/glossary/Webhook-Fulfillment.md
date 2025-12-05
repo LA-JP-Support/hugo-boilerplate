@@ -1,6 +1,7 @@
 ---
 title: "Webhook Fulfillment"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "webhook-fulfillment"
 description: "Webhook fulfillment is the backend process executing in response to an intent in AI chatbots or automated workflows. It fetches/manipulates data via APIs for dynamic, context-aware responses."
 keywords: ["webhook", "fulfillment", "AI chatbots", "automation", "APIs"]
@@ -382,4 +383,3 @@ Use HTTPS, validate HMAC signatures or tokens, and restrict IPs if possible.
 ## References & Further Reading
 
 - [Google Dialogflow ES Webhooks Documentation](https://docs.cloud.google.com/dialogflow/es
-

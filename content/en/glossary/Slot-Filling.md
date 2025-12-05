@@ -4,10 +4,16 @@ translationKey: slot-filling-the-definitive-glossary-for-conversational
 description: Slot filling extracts specific parameters from user queries to complete
   tasks in conversational AI. Essential for gathering data, enabling natural interaction,
   and ensuring task completion.
-keywords: ["Slot Filling", "Conversational AI", "Chatbot", "Entities", "Intents"]
+keywords:
+- Slot Filling
+- Conversational AI
+- Chatbot
+- Entities
+- Intents
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is Slot Filling?
@@ -337,4 +343,3 @@ Each intent is associated with a set of required and optional slots. The chatbot
 The chatbot will prompt with clarifying questions for missing required slots, up to a maximum retry limit or until the user abandons the process.
 
 **Q4: Can users fill multiple slots in one message?**
-

@@ -1,6 +1,7 @@
 ---
 title: Latency Budget
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: latency-budget-complex
 description: Explore latency budgets, the maximum allowable time for system response
   allocated across components. Understand their importance in AI systems, types, management
@@ -82,10 +83,6 @@ Latency in AI and real-time systems is multi-faceted, with contributions from se
 - Order gateway: 100 µs
 - Network hop: 200 µs
 - Venue processing: 150 µs
-
-References:  
-- [Mitrix: Real-time AI performance](https://mitrix.io/blog/real-time-ai-performance-latency-challenges-and-optimization/)
-
 ## How Latency Budgets Are Used in AI Systems
 
 Latency budgets are integral at both the design and operational levels:
@@ -187,11 +184,6 @@ Further reading:
 - **Profilers:** perf, NVIDIA Nsight, PyTorch Profiler.
 - **Distributed Tracing:** OpenTelemetry, Jaeger.
 - **Specialized Platforms:** [Galileo Evaluate](https://docs.galileo.ai/galileo/gen-ai-studio-products/galileo-evaluate).
-
-References:  
-- [Mitrix: Real-time AI performance](https://mitrix.io/blog/real-time-ai-performance-latency-challenges-and-optimization/)
-- [Galileo AI: Model Evaluation and Latency Profiling](https://docs.galileo.ai/galileo/gen-ai-studio-products/galileo-evaluate)
-
 ## Checklists and Actionable Recommendations
 
 **Latency Budgeting Checklist**
@@ -237,11 +229,6 @@ References:
 - **Hybrid Edge-Cloud:** Smart routing for latency-sensitive vs compute-heavy requests.
 - **Continual/Incremental Inference:** Output updates as data arrives.
 - **Observability Integration:** Latency budgets as [MLOps](/en/glossary/mlops/)/observability primitives.
-
-References:  
-- [Materialize: Low-latency Context Engineering](https://materialize.com/blog/low-latency-context-engineering-for-production-ai/)
-- [Google Cloud TPU: Latency Considerations](https://cloud.google.com/tpu/docs/intro-to-tpu)
-
 ## Reflection: Latency as Governance or Performance Metric?
 
 **Discussion:**  
@@ -249,10 +236,6 @@ Latency budgets are system-level governance boundaries—not just optimization t
 
 **Reflection Prompt:**  
 How do you enforce latency budgets? Are they core to your architecture, or an afterthought in testing?
-
-Reference:  
-- [Thor Signia: Latency Budgets as Governance](https://www.linkedin.com/posts/thorsignia_aisystemsengineering-latencyarchitecture-activity-7396045682123624448-B8uF)
-
 ## Further Reading and References
 
 - [Understanding Latency in AI – Galileo AI Blog](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
@@ -285,4 +268,3 @@ For a comprehensive, practical, and deeply referenced overview, see:
 - [Low-latency Context Engineering for Production AI – Materialize](https://materialize.com/blog/low-latency-context-engineering-for-production-ai/)
 - [Why Latency Budgets Matter for AI System Survivability – Thor Signia (LinkedIn)](https://www.linkedin.com/posts/thorsignia_aisystemsengineering-latencyarchitecture-activity-7396045682123624448-B8uF)
 - [Galileo AI: Understanding Latency in AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
-

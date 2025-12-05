@@ -263,4 +263,3 @@ A: Repetitive, rule-based, and high-volume tasks such as approvals, notification
 A: Most modern platforms offer low-code/no-code interfaces, so business users can design and manage workflows without programming ([Atlassian](https://www.atlassian.com/agile/project-management/workflow-automation)).
 
 **Q:
-

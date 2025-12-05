@@ -304,4 +304,3 @@ Figma sets initial padding based on content—adjust values in the right panel a
 
 
 This glossary incorporates detailed, authoritative information for Auto-Layout across Figma, iOS, Android, and Web, with direct links to official documentation and advanced tutorials for deep learning and troubleshooting.
-

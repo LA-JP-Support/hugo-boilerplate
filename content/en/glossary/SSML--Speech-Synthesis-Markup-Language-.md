@@ -5,7 +5,8 @@ description: "SSML is an XML-based markup language for controlling synthetic spe
 keywords: ["SSML", "Speech Synthesis Markup Language", "Text-to-Speech", "TTS", "W3C", "prosody", "phonetics", "voice user interfaces", "AI chatbot"]
 category: "AI Chatbot & Automation / Text-to-Speech / Voice User Interfaces"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is SSML?
@@ -294,4 +295,3 @@ All valid SSML documents begin with the `<speak>` root element, which defines th
 ```
 **Expected Output:**  
 "Welcome to the demo. [pause] Your appointment is on June tenth, twenty
-

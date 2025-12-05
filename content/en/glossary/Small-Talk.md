@@ -4,10 +4,16 @@ translationKey: small-talk
 description: 'Explore small talk in AI chatbots: their ability to handle casual, non-functional
   conversations, simulating natural human-like exchanges to build rapport and enhance
   user experience.'
-keywords: ["Small Talk", "AI Chatbots", "Virtual Assistants", "Chatbot Interaction", "User Experience"]
+keywords:
+- Small Talk
+- AI Chatbots
+- Virtual Assistants
+- Chatbot Interaction
+- User Experience
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## **1. What is Small Talk in AI Chatbots?**
@@ -23,11 +29,6 @@ By enabling this capability, chatbots foster a sense of approachability and rela
 - “What’s the weather like?”
 
 Small talk is designed through a series of predefined user utterances and bot responses. These are managed in hierarchical groups and can be customized to match brand voice, regional context, or even support multiple languages.
-
-**Sources:**  
-- [Kore.ai Small Talk Docs](https://developer.kore.ai/docs/bots/bot-builder-tool/small-talk/)
-- [Talkative Chatbot Best Practices](https://gettalkative.com/info/chatbot-best-practices)
-
 ## **2. How Small Talk is Used in Chatbots**
 
 Small talk serves several core purposes within chatbot interactions:
@@ -48,10 +49,6 @@ Small talk is not limited to greetings. It encompasses a broad range of conversa
 - Jokes
 - Polite refusals or farewells
 - Emojis and reactions
-
-**Sources:**  
-- [Kore.ai Small Talk Docs](https://developer.kore.ai/docs/bots/bot-builder-tool/small-talk/)
-
 ## **3. Practical Examples of Small Talk**
 
 ### **Sample Dialogues**
@@ -114,11 +111,6 @@ Small talk is not limited to greetings. It encompasses a broad range of conversa
 
 - Reduces onboarding friction with friendly greetings and context-aware dialogue.
 - Nurtures leads, keeping users engaged during initial interactions.
-
-**Sources:**  
-- [How Small Talk Enhances The Chatbot Experience (Enterprise Bot)](https://www.enterprisebot.ai/blog/how-small-talk-enhances-the-chatbot-experience)
-- [Kore.ai Small Talk Docs](https://developer.kore.ai/docs/bots/bot-builder-tool/small-talk/)
-
 ## **5. Technical Implementation: Configuring Small Talk**
 
 ### **Core Elements**
@@ -149,10 +141,6 @@ Most advanced platforms, like Kore.ai, allow:
 - Bulk import/export of small talk data using JSON or TSV files.
 - Downloading sample files for formatting guidance.
 - Rapid deployment and management across multiple bots.
-
-**Sources:**  
-- [Kore.ai Small Talk Docs](https://developer.kore.ai/docs/bots/bot-builder-tool/small-talk/)
-
 ## **6. Small Talk Features and Structure**
 
 ### **Key Features**
@@ -251,11 +239,6 @@ Customize responses for web, SMS, or voice interfaces.
 
 **10. Ensure Data Privacy:**  
 Never collect sensitive personal data during small talk.
-
-**Sources:**  
-- [Kore.ai Docs](https://developer.kore.ai/docs/bots/bot-builder-tool/small-talk/)
-- [GetTalkative Chatbot Best Practices](https://gettalkative.com/info/chatbot-best-practices)
-
 ## **10. Platform-Specific Guidance (Kore.ai Example)**
 
 ### **Setting Up Small Talk in Kore.ai**
@@ -300,10 +283,6 @@ Kore.ai’s XO Platform includes a dedicated interface for building and managing
 
 - **Bulk management:** Quickly deploy large sets of small talk data across projects.
 - **Channel adaptation:** Adjust style and tone for chat, voice, or SMS.
-
-**Source:**  
-- [Kore.ai Small Talk Docs](https://developer.kore.ai/docs/bots/bot-builder-tool/small-talk/)
-
 ## **12. Glossary of Key Terms**
 
 | Term                              | Description                                                                                     |
@@ -327,4 +306,3 @@ Small talk is the ability of a chatbot to engage in casual, friendly, and non-fu
 
 **Why is small talk important in customer service bots?**  
 It builds trust, diffuses frustration,
-

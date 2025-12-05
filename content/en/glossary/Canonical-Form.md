@@ -170,8 +170,6 @@ def to_canonical(user_input):
 
 In programming, especially in languages like Java, canonical instances are used to ensure that all objects with the same value reference a single, shared instance. This allows for fast identity checks (using `==` instead of `.equals()`) and reduces memory usage. For example, `String.intern()` in Java returns the canonical instance of a string.
 
-*Reference: [Stack Overflow: Canonical Form or Canonical Representation in Java](https://stackoverflow.com/questions/280107/what-does-the-term-canonical-form-or-canonical-representation-in-java-mean)*
-
 
 ## Semantic Similarity and Embeddings for Canonicalization
 
@@ -186,7 +184,7 @@ Modern AI chatbots increasingly use semantic similarity models, such as sentence
 
 | Use Case                 | Description                                                                              |
 |--------------------------|-----------------------------------------------------------------------------------------|
-| Intent Recognition       | Mapping “I want fries”, “can I get chips?” → “ORDER_FRIES” intent                       |
+| [Intent Recognition](/en/glossary/intent-recognition/)       | Mapping “I want fries”, “can I get chips?” → “ORDER_FRIES” intent                       |
 | [Entity Extraction](/en/glossary/entity-extraction/)        | Mapping “NYC”, “New York City”, “Big Apple” → “NEW_YORK_CITY”                           |
 | Guardrail Enforcement    | Restricting bot actions to safe, predefined canonical forms                             |
 | Data Integration         | Standardizing customer IDs or product codes from disparate sources                      |
@@ -203,8 +201,6 @@ A **Canonical Data Model (CDM)** is a design pattern used to create a unified, c
   - Fewer translation rules required as the number of systems grows
   - Easier to replace or upgrade individual systems
   - Improved data analytics and reporting due to consistency
-
-*Reference: [BMC: Canonical Data Models](https://www.bmc.com/blogs/canonical-data-model/)*
 
 
 ## Common Challenges
@@ -268,4 +264,3 @@ A: Yes. Canonicalization is vital for input validation and security, preventing 
 
 
 **This glossary page is authoritative, structured, and is continuously updated for AI chatbot and automation professionals. For ongoing updates and implementation best practices, consult the referenced documentation and community forums.**
-

@@ -18,6 +18,8 @@
 
 {{- $target := "" -}}
 {{- $rel := "" -}}
+{{- $linkTitle := .Title -}}
+{{- $tooltip := "" -}}
 
 {{- if $isExternal -}}
   {{- $parsedURL := urls.Parse site.BaseURL -}}
@@ -48,11 +50,63 @@
 {{- else -}}
   {{- /* For internal links, process with get-translated-url */ -}}
   {{- $url = partial "helpers/get-translated-url.html" (dict "url" $url) -}}
+
+  {{- $candidate := false -}}
+  {{- $parsedLink := urls.Parse $url -}}
+  {{- $path := $parsedLink.Path -}}
+  {{- if $path -}}
+    {{- $trimmed := strings.TrimPrefix "/" $path | strings.TrimSuffix "/" -}}
+    {{- $tmp := site.GetPage (printf "/%s" $trimmed) -}}
+    {{- if $tmp -}}
+      {{- $candidate = $tmp -}}
+    {{- else -}}
+      {{- $tmp = site.GetPage $trimmed -}}
+      {{- if $tmp -}}
+        {{- $candidate = $tmp -}}
+      {{- else if ne $trimmed "" -}}
+        {{- $tmp = site.GetPage (printf "%s/_index" $trimmed) -}}
+        {{- if $tmp -}}
+          {{- $candidate = $tmp -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $relURL := $url | relURL -}}
+  {{- $relURLNoSlash := strings.TrimSuffix "/" $relURL -}}
+  {{- if not $candidate -}}
+    {{- $matches := where site.RegularPages "RelPermalink" "==" $relURL -}}
+    {{- if gt (len $matches) 0 -}}
+      {{- $candidate = index $matches 0 -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if and (not $candidate) (ne $relURLNoSlash "") -}}
+    {{- $matches := where site.RegularPages "RelPermalink" "==" (printf "%s/" $relURLNoSlash) -}}
+    {{- if gt (len $matches) 0 -}}
+      {{- $candidate = index $matches 0 -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if and (not $candidate) (ne $relURLNoSlash "") -}}
+    {{- $matches := where site.RegularPages "RelPermalink" "==" $relURLNoSlash -}}
+    {{- if gt (len $matches) 0 -}}
+      {{- $candidate = index $matches 0 -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $candidate -}}
+    {{- $tooltip = .Params.description | default "" -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if and (not $linkTitle) $tooltip -}}
+  {{- $linkTitle = $tooltip -}}
+{{- else if and $linkTitle $tooltip -}}
+  {{- $linkTitle = printf "%s — %s" $linkTitle $tooltip -}}
 {{- end -}}
 
 <a href="{{ $url }}"
    {{- if $target }} target="{{ $target }}"{{ end }}
    {{- if $rel }} rel="{{ $rel }}"{{ end }}
-   {{- with .Title }} title="{{ . }}"{{ end -}}>
+   {{- with $linkTitle }} title="{{ . }}"{{ end -}}>
    {{- .Text -}}
 </a>

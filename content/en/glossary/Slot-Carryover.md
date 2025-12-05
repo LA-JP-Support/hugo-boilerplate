@@ -4,10 +4,16 @@ translationKey: slot-carryover
 description: Slot carryover enables AI chatbots to remember and reuse structured information
   (slots) across conversational turns, maintaining context and improving user experience
   in task-oriented dialogue systems.
-keywords: ["Slot Carryover", "AI Chatbot", "Dialogue Systems", "Dialogue State Tracking", "Context Management"]
+keywords:
+- Slot Carryover
+- AI Chatbot
+- Dialogue Systems
+- Dialogue State Tracking
+- Context Management
 category: General
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Introduction
@@ -58,8 +64,6 @@ Slot carryover, especially in real-world, multi-turn, and multi-domain dialogue 
 | Ambiguity and Reference Resolution | Resolving indirect references, pronouns, or implicit slots.                                             |
 | Error Propagation              | Mitigating compounding errors from earlier incorrect slot extractions or carryover decisions.                 |
 
-*Reference: [Chen et al., 2019, arXiv:1906.01149](https://arxiv.org/abs/1906.01149)*
-
 ### Modeling Approaches
 
 #### Rule-Based Approaches
@@ -71,8 +75,6 @@ Early slot carryover implementations used hand-crafted rules, such as always car
 
 **Limitations:**  
 Rule-based systems are brittle and do not generalize well to unseen dialogue flows or new domains. They perform poorly in cases involving long-distance slot references or schema heterogeneity.  
-*Reference: [Chen et al., 2019, ACL Anthology](https://aclanthology.org/W19-4111/)*
-
 #### Neural Network Architectures
 
 The state-of-the-art in slot carryover relies on neural models that can dynamically manage context and slot relevance:
@@ -104,10 +106,6 @@ For each candidate slot in context:
     4. Concatenate encodings, compute carryover probability via softmax
     5. If probability > threshold, carry over slot
 ```
-*References:*  
-- [Chen et al., 2019, arXiv:1906.01149](https://arxiv.org/abs/1906.01149)  
-- [Naik et al., 2018, ISCA Archive](https://www.isca-archive.org/interspeech_2018/naik18_interspeech.html)
-
 ### Benchmarks and Datasets
 
 Evaluating slot carryover models requires robust datasets that represent real-world conversational complexity. The most prominent benchmarks include:
@@ -144,8 +142,6 @@ Slot carryover across domains often requires mapping slot keys and values betwee
 
 - **Label Embeddings:** Averaging pre-trained word embeddings for slot keys and values to compute similarity and candidate mappings.
 - **Data-Driven Mapping:** Learning mappings from data rather than relying on static dictionaries or hand-crafted rules.
-
-*Reference: [Naik et al., 2018, ISCA Archive](https://www.isca-archive.org/interspeech_2018/naik18_interspeech.html)*
 
 ### Candidate Slot Generation
 
@@ -195,8 +191,6 @@ Chatbots can inadvertently store sensitive user data (e.g., location, personal i
 - Providing users with explicit options to control what is remembered.
 - Regularly purging slot memories per privacy policy.
 - Using encrypted storage and access controls.
-
-*Reference: [Mozilla Foundation: How to Protect Your Privacy from ChatGPT and Other AI Chatbots](https://www.mozillafoundation.org/en/privacynotincluded/articles/how-to-protect-your-privacy-from-chatgpt-and-other-ai-chatbots/)*
 
 ## Applications and Examples
 
@@ -253,10 +247,6 @@ User: Yes, please.
 - **Data Privacy:** Storing and processing sensitive user data requires robust privacy safeguards, encryption, and compliance (e.g., GDPR).
 - **Computational Cost:** Transformer-based and attention-heavy models increase computational and memory requirements for large context windows.
 
-*References:*  
-- [Chen et al., 2019, arXiv:1906.01149](https://arxiv.org/abs/1906.01149)  
-- [Mozilla Foundation Privacy Guide](https://www.mozillafoundation.org/en/privacynotincluded/articles/how-to-protect-your-privacy-from-chatgpt-and-other-ai-chatbots/)
-
 ## References and Further Reading
 
 - [Improving Long Distance Slot Carryover in Spoken Dialogue Systems – Amazon Science](https://www.amazon.science/publications/improving-long-distance-slot-carryover-in-spoken-dialogue-systems)
@@ -280,4 +270,3 @@ For more technical and code-level examples, consult the following resources and 
 - [Chen et al., 2019, arXiv PDF](https://arxiv.org/pdf/1906.01149)  
 - [ISCA Archive: Naik et al. 2018](https://www.isca-archive.org/interspeech_2018/naik18_interspeech.html)  
 - [[Hugging Face](/en/glossary/hugging-face/) DST Dataset Collection](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets
-

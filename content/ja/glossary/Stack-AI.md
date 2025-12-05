@@ -166,10 +166,6 @@ Stack AIの技術基盤はモジュール式でクラウドネイティブであ
 - **機械学習/NLP:** 抽出、分類、要約のコア技術。
 - **アクセス/セキュリティモジュール:** コンプライアンスと保護を強制。
 
-**参考:**  
-- [Stack AIドキュメント](https://docs.stack-ai.com/stack-ai/)  
-- [MongoDB AI Stack概要](https://www.mongodb.com/resources/basics/artificial-intelligence/ai-stack)
-
 ## Stack AIと他のAIワークフロー自動化ツールの比較
 
 | プラットフォーム | ターゲット市場 | 強み | 弱み |

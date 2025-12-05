@@ -54,6 +54,40 @@ JA_LABELS = [
 ]
 
 
+REFERENCE_HEADING_KEYWORDS_EN = [
+    "references",
+    "reference",
+    "further reading",
+    "resources",
+    "further reading and authoritative resources",
+    "additional reading",
+    "more reading",
+]
+
+REFERENCE_HEADING_KEYWORDS_JA = [
+    "参考",
+    "資料",
+    "出典",
+    "さらなる読み物",
+    "権威あるリソース",
+    "さらなるリソース",
+]
+
+ADDITIONAL_HEADING_KEYWORDS_EN = [
+    "additional resources",
+    "explore more",
+    "additional resource",
+    "extra resources",
+]
+
+ADDITIONAL_HEADING_KEYWORDS_JA = [
+    "追加のリソース",
+    "追加リソース",
+    "さらに探索する",
+    "さらなるリソース",
+]
+
+
 def _build_patterns() -> list[re.Pattern[str]]:
     """Build regex patterns for inline reference blocks.
     
@@ -101,15 +135,30 @@ def _build_patterns() -> list[re.Pattern[str]]:
                 rf"(?:\s*\[[^\]]+\]\([^)]+\)\s*\n)+\n?"
             )
         )
-        # Pattern 5: **Label:** [Link](url) on SAME LINE (inline style)
+        # Pattern 5: Bullet form "- **Label:** [Link](url)"
+        patterns.append(
+            re.compile(
+                rf"(?m)^\s*[-*]\s*\*\*{escaped}[:：]\*\*\s+\[[^\]]+\]\([^)]+\)"
+                rf"(?:[,、]?\s*\[[^\]]+\]\([^)]+\))*[.,、]?[ \t]*\n"
+            )
+        )
+        # Pattern 6: Bullet form "- Label: [Link](url)" without bold
+        patterns.append(
+            re.compile(
+                rf"(?m)^\s*[-*]\s*(?:\*\*)?{escaped}(?:\*\*)?[:：]\s+\[[^\]]+\]\([^)]+\)"
+                rf"(?:[,、]?\s*\[[^\]]+\]\([^)]+\))*[.,、]?[ \t]*\n"
+            )
+        )
+        # Pattern 7: **Label:** [Link](url) on SAME LINE (inline style)
         # Matches: **Source:** [link](url), [link2](url2)
         # Also handles trailing punctuation like period, and Japanese comma (、)
         patterns.append(
             re.compile(
-                rf"(?m)^\s*\*\*{escaped}[:：]\*\*[ \t]+\[[^\]]+\]\([^)]+\)(?:[,、]?[ \t]*\[[^\]]+\]\([^)]+\))*[.,、]?[ \t]*\n"
+                rf"(?m)^\s*\*\*{escaped}[:：]\*\*[ \t]+\[[^\]]+\]\([^)]+\)"
+                rf"(?:[,、]?[ \t]*\[[^\]]+\]\([^)]+\))*[.,、]?[ \t]*\n"
             )
         )
-        # Pattern 6: Label: [Link](url) on SAME LINE (no bold)
+        # Pattern 8: Label: [Link](url) on SAME LINE (no bold)
         patterns.append(
             re.compile(
                 rf"(?m)^\s*{escaped}[:：][ \t]+\[[^\]]+\]\([^)]+\)(?:[,、]?[ \t]*\[[^\]]+\]\([^)]+\))*[.,、]?[ \t]*\n"
@@ -151,9 +200,42 @@ def remove_inline_references(text: str) -> str:
     return updated
 
 
+def normalize_reference_headings(text: str) -> str:
+    """Normalize reference/extra resource headings."""
+    lines = text.splitlines()
+    changed = False
+
+    for idx, line in enumerate(lines):
+        stripped = line.strip()
+        if not stripped.startswith("##"):
+            continue
+        heading_text = stripped.lstrip("#").strip().lower()
+        if any(keyword in heading_text for keyword in REFERENCE_HEADING_KEYWORDS_EN):
+            if stripped != "## References":
+                lines[idx] = "## References"
+                changed = True
+        elif any(keyword in heading_text for keyword in REFERENCE_HEADING_KEYWORDS_JA):
+            if stripped != "## 参考資料":
+                lines[idx] = "## 参考資料"
+                changed = True
+        elif any(keyword in heading_text for keyword in ADDITIONAL_HEADING_KEYWORDS_EN):
+            if stripped != "## Additional Resources":
+                lines[idx] = "## Additional Resources"
+                changed = True
+        elif any(keyword in heading_text for keyword in ADDITIONAL_HEADING_KEYWORDS_JA):
+            if stripped != "## 追加リソース":
+                lines[idx] = "## 追加リソース"
+                changed = True
+
+    if changed:
+        return "\n".join(lines)
+    return text
+
+
 def process_file(file_path: Path, dry_run: bool = False) -> bool:
     original = file_path.read_text(encoding="utf-8")
     updated = remove_inline_references(original)
+    updated = normalize_reference_headings(updated)
 
     if updated == original:
         return False

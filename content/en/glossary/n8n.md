@@ -1,6 +1,7 @@
 ---
 title: "n8n"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "n8n"
 description: "n8n is a source-available, node-based workflow automation tool that connects your apps, APIs, and services with advanced AI integration."
 keywords: ["n8n", "workflow automation", "AI integration", "nodes", "self-hosting"]
@@ -20,12 +21,6 @@ n8n (pronounced “en-eight-en”, short for *nodemation*) is a node-based, sour
 - Native AI nodes (OpenAI, Gemini, Claude, etc.)
 - Agentic workflows, RAG, and prompt chaining
 - Active open community
-
-**References:**
-- [n8n Official Site](https://n8n.io/)
-- [n8n Docs: About n8n](https://docs.n8n.io/)
-- [Beginner’s Guide](https://contabo.com/blog/the-complete-beginners-guide-to-n8n-your-first-workflow/)
-
 ## n8n Core Concepts
 
 ### Nodes
@@ -81,10 +76,6 @@ Securely stored authentication details (API keys, OAuth tokens, etc.) that allow
 - Google OAuth credential for Sheets
 - Slack API token
 - Custom HTTP header for REST APIs
-
-**Reference:**  
-- [n8n Docs: Credentials](https://docs.n8n.io/credentials/)
-
 ### Triggers
 
 **Definition:**  
@@ -94,10 +85,6 @@ Events that start workflows, such as incoming webhooks, scheduled times, or chan
 - Webhook (receive data from forms, APIs, etc.)
 - Cron (run at scheduled times)
 - App-specific triggers (new row in Sheets, new deal in CRM)
-
-**Reference:**  
-- [n8n Docs: Triggers](https://docs.n8n.io/nodes/#trigger-nodes)
-
 ### Expressions
 
 **Definition:**  
@@ -110,10 +97,6 @@ Dynamic formulas for referencing, transforming, and mapping data between nodes�
 - Conditional logic
 - Data formatting
 - Calculations and string manipulation
-
-**Reference:**  
-- [n8n Docs: Expressions](https://docs.n8n.io/code/expressions/)
-
 ## Visual Workflow Editor
 
 n8n’s visual editor is a node-based, drag-and-drop interface allowing users to design, trace, and debug workflows transparently.
@@ -150,11 +133,6 @@ n8n is used to automate repetitive, multi-step business or personal tasks across
 - Developers and non-coders (thanks to the visual editor)
 - Enterprises with privacy, compliance, or custom integration needs
 - Individuals automating personal or smart home workflows
-
-**Reference:**  
-- [Beginner’s Guide to n8n](https://contabo.com/blog/the-complete-beginners-guide-to-n8n-your-first-workflow/)
-- [n8n Use Cases](https://n8n.io/use-cases/)
-
 ## AI Integration in n8n
 
 AI workflow automation in n8n leverages nodes for LLMs (OpenAI, Gemini, Claude, etc.), retrievers, and agentic orchestration, allowing you to automate unstructured data processing, intelligent routing, and advanced decision-making.
@@ -172,12 +150,6 @@ AI workflow automation in n8n leverages nodes for LLMs (OpenAI, Gemini, Claude, 
 - Scales with business growth
 - Adapts to unexpected changes in data or process
 - Provides predictive analytics and actionable insights
-
-**References:**
-- [AI Automation Guide (n8n Blog)](https://blog.n8n.io/ai-workflow-automation/)
-- [n8n AI Documentation](https://docs.n8n.io/advanced-ai/)
-- [n8n YouTube: AI Workflows](https://www.youtube.com/@n8n-automation)
-
 ## Features & Differentiators
 
 | Feature                          | n8n                                   | Zapier                     | [Make (Integromat)](/en/glossary/make--integromat-/)         |
@@ -200,11 +172,6 @@ AI workflow automation in n8n leverages nodes for LLMs (OpenAI, Gemini, Claude, 
 - Integrated code for edge cases
 - Native AI agentic workflows
 - Expanding ecosystem of nodes, templates, and plugins
-
-**References:**
-- [n8n Docs: Features](https://docs.n8n.io/)
-- [Zapier vs n8n](https://www.hostinger.com/tutorials/n8n-vs-zapier)
-
 ## Getting Started with n8n
 
 ### n8n Cloud (Fastest)
@@ -221,12 +188,6 @@ AI workflow automation in n8n leverages nodes for LLMs (OpenAI, Gemini, Claude, 
 4. Access UI: Browser-based editor on your server IP
 5. Secure: Configure authentication, SSL, backups
 6. Start building: Use the visual editor
-
-**References:**
-- [n8n Docs: Quickstart](https://docs.n8n.io/try-it-out/)
-- [n8n Docs: Hosting](https://docs.n8n.io/hosting/installation/)
-- [One-click Cloud Deployments](https://xcloud.host/)
-
 ## Example Workflows
 
 ### 1. Automated Lead Capture (Web to CRM to Slack)
@@ -282,22 +243,12 @@ AI workflow automation in n8n leverages nodes for LLMs (OpenAI, Gemini, Claude, 
   Expand n8n with 3rd-party and custom nodes ([Install Guide](https://docs.n8n.io/integrations/community-nodes/installation/))
 - **Custom Code:**  
   Use Function/FunctionItem nodes for custom logic, data transforms, or external library calls
-
-**References:**  
-- [n8n Docs: Advanced AI](https://docs.n8n.io/advanced-ai/)
-- [Community Nodes](https://docs.n8n.io/integrations/community-nodes/installation/)
-
 ## Security & Compliance
 
 - **Self-hosting:** All data remains on your infrastructure
 - **Access Control:** Role-based permissions for workflows and credentials
 - **Audit Logs:** Trace all workflow executions and changes
 - **SOC2:** n8n Cloud is SOC2 compliant for enterprise security
-
-**References:**  
-- [n8n Docs: Security](https://docs.n8n.io/security/)
-- [n8n Cloud Compliance](https://n8n.io/cloud/)
-
 ## Pros & Cons: n8n vs Zapier/Make
 
 | Pros (n8n)                              | Cons (n8n)                              |
@@ -354,3 +305,4 @@ Self-hosting ensures full data privacy. n8n Cloud is SOC2 compliant.
 - [n8n Docs](https://docs.n8n.io/)
 - [n8n Github](https://github.com/n8n-io/n8n)
 - [n8n Template Library](https://n8n.io/workflows/)
+- [n

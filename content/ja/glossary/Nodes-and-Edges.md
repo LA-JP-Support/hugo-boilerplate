@@ -22,8 +22,6 @@ e-title: Nodes and Edges
 **AIチャットボットおよび自動化システムにおいて:**  
 ノードは通常、個別のアクションまたはエージェント(ワークフローのトリガー、API呼び出し、メッセージ処理など)を表します。エッジは、あるアクションまたはエージェントから別のアクションまたはエージェントへの情報、データ、または制御の転送を定義し、ワークフローロジックまたはプロセス依存関係をマッピングします。
 
-*参考: [Introduction to Nodes – Relevance AI Documentation](https://relevanceai.com/docs/workforce/build-an-ai-workforce/introduction-to-nodes)*
-
 ## 正式な定義
 
 | 用語  | 正式な定義 |
@@ -31,8 +29,6 @@ e-title: Nodes and Edges
 | **ノード(頂点)** | グラフ構造内の個別のエンティティまたは計算単位。アクション、エージェント、データポイント、論理ステップなど。 |
 | **エッジ(リンク/アーク)** | 2つのノード間の接続で、関係性、データ伝送、またはプロセスシーケンスを表します。 |
 | **グラフ** | ノード(頂点)の集合とノードのペアを接続するエッジの集合で構成される構造。数学的には、グラフGはG = (V, E)として定義され、Vはノードの集合、Eはエッジの集合です。 |
-
-*参考: [Nature, Explainable Artificial Intelligence Through Graph Theory](https://www.nature.com/articles/s41598-022-19419-7)*
 
 ## 類推とシンプルな説明
 
@@ -86,8 +82,6 @@ e-title: Nodes and Edges
 | **重みなしエッジ**| すべての接続が等しく扱われる                  | ワークフローのシーケンス       |
 | **条件付きエッジ** | ロジック条件が満たされた場合にのみアクティブ            | IF-THEN分岐          |
 
-*参考: [Nature, Explainable Artificial Intelligence Through Graph Theory](https://www.nature.com/articles/s41598-022-19419-7)*
-
 ## ノードとエッジの動作原理
 
 ノードとエッジは協力して、システム内のロジック、データフロー、制御パターンを定義します:
@@ -131,8 +125,6 @@ e-title: Nodes and Edges
 - 活性化関数: 非線形変換(例:シグモイド、ReLU)
 
 *ニューラルネットワークでは、ノードはユニット(ニューロン)、エッジは重み付けされたシナプス接続です。*  
-*参考: [What Are AI Nodes?](https://cyfuture.ai/blog/what-are-ai-nodes)*
-
 ### コード例
 
 #### Python: シンプルなワークフローのノードとエッジの定義
@@ -173,8 +165,6 @@ agent.connect(tool)
 - `edges`: 接続のリスト(ページネーション、関係性)
 - `node`: 各エッジのユーザーまたはエンティティ
 
-*参考: [GraphQL: edges and node meaning](https://stackoverflow.com/questions/42622912/in-graphql-whats-the-meaning-of-edges-and-node)*
-
 ## 例とユースケース
 
 ### AIチャットボットと自動化ワークフロー
@@ -195,8 +185,6 @@ agent.connect(tool)
 **視覚的構造:**  
 トリガー → エージェント → ツール → 条件 → [エージェントまたは終了]
 
-*参考: [Relevance AI Documentation](https://relevanceai.com/docs/workforce/build-an-ai-workforce/introduction-to-nodes)*
-
 ### ナレッジグラフ
 
 **シナリオ:**  
@@ -211,8 +199,6 @@ agent.connect(tool)
 
 エッジには、タイムスタンプ、権限、出所などのメタデータが含まれる場合があります。
 
-*参考: [Knowledge Graph Definition 101](https://solutionsreview.com/data-management/knowledge-graph-definition-101-how-nodes-and-edges-connect-data/)*
-
 ### ニューラルネットワーク
 
 **シナリオ:**  
@@ -225,8 +211,6 @@ agent.connect(tool)
 
 - **エッジ:**  
   - 層間で情報を運ぶ重み付き接続。
-
-*参考: [What Are AI Nodes?](https://cyfuture.ai/blog/what-are-ai-nodes)*
 
 ### GraphQL API
 
@@ -260,8 +244,6 @@ agent.connect(tool)
   }
 }
 ```
-*参考: [GraphQL: edges and node meaning](https://stackoverflow.com/questions/42622912/in-graphql-whats-the-meaning-of-edges-and-node)*
-
 ## ベストプラクティス
 
 - **シンプルに始める:**  
@@ -288,8 +270,6 @@ agent.connect(tool)
 - **エッジタイプを活用:**  
   ビジネスロジックが分岐を要求する場合は、条件付きエッジを使用します。
 
-*参考: [Relevance AI Docs](https://relevanceai.com/docs/workforce/build-an-ai-workforce/introduction-to-nodes#best-practices-for-working-with-nodes)*
-
 ## 制限事項と考慮事項
 
 - **スケーラビリティ:**  
@@ -309,8 +289,6 @@ agent.connect(tool)
 
 - **エッジの方向性:**  
   不適切なエッジ設定は、ロジックを破壊したり、データ損失を引き起こす可能性があります。
-
-*参考: [Nature, Explainable Artificial Intelligence Through Graph Theory](https://www.nature.com/articles/s41598-022-19419-7)*
 
 ## よくある質問
 

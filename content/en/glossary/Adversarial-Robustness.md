@@ -1,6 +1,7 @@
 ---
 title: "Adversarial Robustness"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "adversarial-robustness"
 description: "Adversarial Robustness is the ability of AI/ML models to maintain reliable performance against intentionally crafted adversarial inputs designed to induce errors or misclassifications."
 keywords: ["Adversarial Robustness", "Adversarial Attacks", "AI Safety", "Machine Learning", "Deep Learning"]
@@ -135,7 +136,7 @@ Adversarial examples exploit the model’s decision boundaries—pushing inputs 
 
 ### 5.4. Natural Language Processing
 
-- **Toxicity Detection:** Slight rewording can evade [content moderation](/en/glossary/content-moderation/).
+- **Toxicity Detection:** Slight rewording can evade content moderation.
 - **Language Models:** Adversarial prompts can induce unsafe or harmful outputs.
 
 ## 6. Defense Strategies
@@ -218,7 +219,7 @@ Robustness assessment requires systematic testing and benchmarking.
 | Fraud Detection            | Detect adversarially altered transactions                          | Bypassing credit card fraud models           |
 | Medical Diagnostics        | Resilient diagnostics against noise/adversarial changes in images  | Adversarial noise in mammograms              |
 | Content Moderation         | Prevent evasion of toxicity/spam detection                        | Obfuscated hate speech bypassing filters     |
-| LLM Safety & [Red Teaming](/en/glossary/red-teaming/)   | Robustness against adversarial prompts and jailbreaks              | Prompt injections causing harmful outputs    |
+| LLM Safety & Red Teaming   | Robustness against adversarial prompts and jailbreaks              | Prompt injections causing harmful outputs    |
 
 ## 10. Glossary of Related Terms
 
@@ -237,7 +238,7 @@ Robustness assessment requires systematic testing and benchmarking.
 2. **Use Diverse Defenses:** Combine adversarial training, input validation, and ensembles.
 3. **Continuously Monitor:** Implement real-time monitoring and anomaly detection.
 4. **Regularly Evaluate and Update:** Benchmark against new attacks and update defenses.
-5. **Document and Audit:** Maintain [transparency](/en/glossary/transparency/) and auditability.
+5. **Document and Audit:** Maintain transparency and auditability.
 
 ## 12. Further Reading and References
 
@@ -303,4 +304,3 @@ Robustness assessment requires systematic testing and benchmarking.
 - [CleverHans Library](https://github.com/cleverhans-lab/cleverhans)  
 - [IBM Adversarial Robustness Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox)  
 - [Foolbox](https://github.com/bethgelab/foolbox)
-

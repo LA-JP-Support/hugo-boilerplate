@@ -4,10 +4,16 @@ translationKey: real-time-translation
 description: AI-powered systems that instantly translate chat, voice, or document
   content, enabling support agents and automated systems to communicate with customers
   in any language, in real time.
-keywords: ["real time translation customer", "translation tools", "artificial intelligence", "multilingual support", "translation software"]
+keywords:
+- real time translation customer
+- translation tools
+- artificial intelligence
+- multilingual support
+- translation software
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is Real-time Translation?
@@ -221,4 +227,3 @@ A: Broader global reach, higher customer satisfaction, cost savings, scalability
 A: Handling idioms, context, and compliance; ensuring privacy; and knowing when to escalate for human review ([Business Age](https://www.businessage.com/post/secure-ai-translation-for-businesses-protecting-data-privacy-and-accuracy), [Straker.ai](https://www.straker.ai/blogs/ai-translation-for-compliance-documents-is-the-risk-worth-the-reward)).
 
 **Q
-

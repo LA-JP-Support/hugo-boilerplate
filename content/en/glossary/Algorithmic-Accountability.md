@@ -1,6 +1,7 @@
 ---
 title: "Algorithmic Accountability"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "algorithmic-accountability"
 description: "Algorithmic accountability ensures organizations are responsible for their AI systems' explainable, traceable, and justifiable operations, including outcomes and impacts on individuals and society."
 keywords: ["algorithmic accountability", "AI ethics", "AI governance", "transparency", "explainability"]
@@ -130,8 +131,6 @@ Algorithmic accountability is increasingly mandated by law and regulation.
 | **NYC Automated Employment Decision Tools Law** | U.S. (NYC) | 2022 | Passed | Bias audits, transparency in hiring tools | [NYC Law](https://ogletree.com/insights/new-york-citys-automated-employment-decision-tools-law-proposed-rules-are-finally-here/) |
 | **Canada AI and Data Act (AIDA)** | Canada | 2022 | Proposed | Responsible, explainable use; prohibition of harm | [AIDA](https://www.justice.gc.ca/eng/csj-sjc/pl/charter-charte/c27_1.html) |
 
-**See also:** [The Terry Group’s summary](https://terrygroup.com/algorithmic-accountability-what-is-it-and-why-does-it-matter/).
-
 ## Challenges and Limitations
 
 - **Technical Complexity:** Many AI systems (e.g., deep learning) operate as “black boxes,” making explainability and auditing difficult.
@@ -193,4 +192,3 @@ Algorithmic accountability is foundational for trustworthy, fair, and effective 
 - [ISO/IEC 42001](https://www.iso.org/standard/81230.html)  
 - [RSI Security: ISO 42001 and NIST AI RMF](https://blog.rsisecurity.com/iso-42001-nist-ai-rmf-alignment/)  
 - [ProPublica: Machine Bias](https://www
-

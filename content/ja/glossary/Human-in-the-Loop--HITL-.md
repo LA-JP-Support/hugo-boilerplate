@@ -179,26 +179,6 @@ AIチャットボットが日常的な問い合わせを処理します。人間
 - [SuperAnnotate: HITL Platforms](https://www.superannotate.com/blog/human-in-the-loop-hitl)
 - [Encord: HITL Tools](https://encord.com/blog/human-in-the-loop-ai/)
 
-## 用語集/FAQ
-
-**HITLはデータアノテーションだけですか?**  
-いいえ、HITLには検証、監視、調整、モニタリングも含まれます([Google Cloud](https://cloud.google.com/discover/human-in-the-loop))。
-
-**HITLは「human-on-the-loop」とどう違いますか?**  
-HITLは人間をコアフィードバックと意思決定サイクルに組み込みます。「human-on-the-loop」は監督のみです。
-
-**HITLワークフローをサポートするツールは何ですか?**  
-[SuperAnnotate](https://www.superannotate.com/blog/human-in-the-loop-hitl)、[Encord](https://encord.com/blog/human-in-the-loop-ai/)、[Parseur](https://parseur.com/blog/human-in-the-loop-ai)などのプラットフォームが、アノテーション、検証、ワークフロー管理のためのツールを提供しています。
-
-**HITLは自動化を遅くしますか?**  
-適切に設計されていれば、そうではありません。HITLは人間を例外に割り当て、効率と信頼を向上させます。
-
-**HITLは法律で義務付けられていますか?**  
-場合によってはそうです。[EU AI Act](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence)は、高リスクAIシステムに対して人間の監視を義務付けています。
-
-**HITLはAIバイアスを減らすのに役立ちますか?**  
-はい、人間のレビュアーは自動化システムが検出できないバイアスを修正できます。
-
 ## 実世界のケーススタディ
 
 - **文書処理:**  

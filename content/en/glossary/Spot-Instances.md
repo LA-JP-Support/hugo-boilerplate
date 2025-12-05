@@ -1,6 +1,7 @@
 ---
 title: "Spot Instances"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "spot-instances"
 description: "Spot Instances are discounted cloud compute resources from AWS, Azure, and GCP, ideal for fault-tolerant workloads like batch processing, analytics, and ML training."
 keywords: ["Spot Instances", "cloud compute", "AWS", "Azure", "GCP"]
@@ -17,7 +18,6 @@ Spot Instances are a purchasing model for cloud compute where users access spare
 - **Google Cloud Spot VMs:** Offer similar discounts, with fixed and substantial savings, and pricing is stable for up to a month. [Google Cloud Spot VMs](https://cloud.google.com/compute/docs/instances/spot)
 
 Spot Instances are best suited for **flexible, fault-tolerant applications**. Providers can reclaim these instances with short notice, so resilience to interruptions is a crucial requirement.  
-**Source:** [Spot.io Ultimate Guide](https://spot.io/resources/spot-instances/spot-instances-aws-azure-google-cloud/), [AWS Docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
 
 ## How Spot Instances Work
 
@@ -225,4 +225,3 @@ A: No. Providers do not guarantee uptime or availability for Spot Instances.
 
 - [On-Demand Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-on-demand-instances.html)
 - [Reserved Instances](https://docs.aws.amazon.com/AWSEC2/latest
-

@@ -1,6 +1,7 @@
 ---
 title: 'Model Quantization: A Comprehensive'
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: model-quantization-a
 description: Model quantization reduces ML model precision (e.g., FP32 to INT8) to
   create smaller, faster models. It saves memory, speeds inference, lowers power,
@@ -15,14 +16,9 @@ draft: false
 Model quantization is a model optimization technique that reduces the numerical precision of a machine learning model’s parameters (weights) and activations. Instead of using high-precision floating-point numbers—such as 32-bit (FP32) or 16-bit (FP16) floats—quantization maps these values to lower-precision representations, such as 8-bit (INT8) or even 4-bit (INT4) integers or fixed-point formats. This process yields much smaller models, faster computations, lower power consumption, and enables deployment on hardware with limited resources (such as edge devices, mobile phones, and embedded systems).
 
 Quantization is a key enabler for running large neural networks efficiently on edge and embedded hardware, including CPUs, GPUs, AI accelerators, and even IoT devices. By reducing both memory and compute requirements, quantized models can be deployed in latency- and resource-constrained environments, as well as in high-throughput cloud inference.  
-**References:**  
-- [Hugging Face Optimum: Quantization Guide](https://huggingface.co/docs/optimum/en/concept_guides/quantization)  
-- [GeeksforGeeks: Quantization in Deep Learning](https://www.geeksforgeeks.org/deep-learning/quantization-in-deep-learning/)  
-
 ### Intuitive Analogy
 
 Think of recording temperatures with a digital thermometer that shows decimals (e.g., 23.487°C). If you only care about the approximate temperature, you could round to the nearest integer (e.g., 23°C). Quantization applies a similar principle to neural networks, rounding or mapping precise continuous values into a smaller, finite set of discrete values that can be stored and processed more efficiently.  
-**Source:** [GeeksforGeeks](https://www.geeksforgeeks.org/deep-learning/quantization-in-deep-learning/)
 
 ## Why is Quantization Used?
 
@@ -46,11 +42,6 @@ Think of recording temperatures with a digital thermometer that shows decimals (
 #### Example
 
 A 70-billion parameter LLM requires approximately 280GB in FP32 precision. Quantizing to INT8 can shrink this to about 70GB—making it possible to run on a single high-end GPU or even on smaller devices.
-
-**References:**  
-- [GeeksforGeeks: Quantization in Deep Learning](https://www.geeksforgeeks.org/deep-learning/quantization-in-deep-learning/)  
-- [arXiv: A Comprehensive Study on Quantization Techniques for Large Language Models](https://arxiv.org/abs/2411.02530)
-
 ## How Quantization Works
 
 Quantization maps high-precision values to a lower-precision domain, usually by scaling and discretizing continuous values into a finite set.
@@ -111,10 +102,6 @@ Quantization is applied to a trained model, without retraining.
 
 **Use Case:**  
 When retraining is not possible or you have limited data; suitable for many NLP transformer models.
-
-**References:**  
-- [GeeksforGeeks: Post-Training Quantization](https://www.geeksforgeeks.org/deep-learning/quantization-in-deep-learning/)
-
 ### 2. Quantization-Aware Training (QAT)
 
 Simulates quantization effects during model training by inserting "fake quantization" operations in the computational graph. The model learns to compensate for quantization errors, generally achieving higher post-quantization accuracy, especially at very low bit-widths (e.g., INT4).
@@ -142,11 +129,6 @@ All computations, including accumulations, are performed using integer arithmeti
 - **GPTQ (Gradient Post-Training Quantization):** Layer-wise quantization for transformers, minimizing the mean squared error between original and quantized outputs. Often uses mixed INT4/FP16 precision.
 - **QLoRA (Quantized Low-Rank Adaptation):** Combines low-rank adaptation (LoRA) with quantization, enabling efficient fine-tuning of LLMs.
 - **ZeroQAT, FlatQuant:** Recent research methods for quantizing LLMs with minimal accuracy loss.
-
-**References:**  
-- [arXiv: A Comprehensive Study on Quantization Techniques for Large Language Models](https://arxiv.org/abs/2411.02530)  
-- [GeeksforGeeks: QLoRA & GPTQ](https://www.geeksforgeeks.org/deep-learning/quantization-in-deep-learning/)
-
 ## Step-by-Step Example: Quantizing a Large Language Model
 
 Below is a practical workflow using [Hugging Face](/en/glossary/hugging-face/) Transformers and BitsAndBytes for 4-bit quantization (QLoRA) of a TinyLlama model:
@@ -194,11 +176,6 @@ def ask_question(question, max_new_tokens=128):
 
 print(ask_question("What are the advantages of 4-bit quantization in LLMs?"))
 ```
-
-**References:**  
-- [Hugging Face BitsAndBytes Quantization](https://huggingface.co/docs/transformers/en/quantization/bitsandbytes)  
-- [Hugging Face Optimum Quantization](https://huggingface.co/docs/optimum/en/concept_guides/quantization)
-
 ## Challenges and Trade-Offs
 
 ### 1. Accuracy Loss
@@ -220,11 +197,6 @@ Not all hardware supports all quantization types (e.g., INT4, INT8, FP8). The qu
 ### 5. Fairness and Bias
 
 Improper calibration or quantization can introduce or amplify biases, especially if calibration data is unrepresentative.
-
-**References:**  
-- [arXiv: A Comprehensive Study on Quantization Techniques for Large Language Models](https://arxiv.org/abs/2411.02530)  
-- [Hugging Face Optimum Quantization](https://huggingface.co/docs/optimum/en/concept_guides/quantization)
-
 ## Applications and Use Cases
 
 ### 1. Edge and Embedded Devices
@@ -253,11 +225,6 @@ Large-scale LLMs and recommender systems in the cloud benefit from reduced memor
 | FP16      | 2x                  | 1.5–2x  | <0.5%                  |
 | INT8      | 4x                  | 2–3x    | <1%                    |
 | INT4      | 8x                  | 3–5x    | 1–2% (with QAT/advanced methods) |
-
-**References:**  
-- [GeeksforGeeks: Quantization in Deep Learning](https://www.geeksforgeeks.org/deep-learning/quantization-in-deep-learning/)  
-- [arXiv: A Comprehensive Study on Quantization Techniques for Large Language Models](https://arxiv.org/abs/2411.02530)
-
 ## Hardware and Framework Support
 
 ### Hardware
@@ -300,11 +267,6 @@ Large-scale LLMs and recommender systems in the cloud benefit from reduced memor
 - **Affine Quantization:** Linear mapping from float to int with scale and zero-point.
 - **Symmetric Quantization:** Integer range centered at zero.
 - **Asymmetric Quantization:** Integer range not necessarily centered at zero.
-
-**Further Reading:**  
-- [Hugging Face Quantization Glossary](https://huggingface.co/docs/optimum/en/concept_guides/quantization)  
-- [arXiv: Quantization for LLMs](https://arxiv.org/abs/2411.02530)
-
 ## References and Further Reading
 
 - [Hugging Face Optimum: Quantization Guide](https://huggingface.co/docs/optimum/en/concept_guides/quantization)
@@ -321,4 +283,3 @@ Large-scale LLMs and recommender systems in the cloud benefit from reduced memor
 
 **Q: What is model quantization?**  
 A: Model quantization is the process of reducing the numerical precision of a model’s parameters and activations—typically from high-precision floating-point (e.g., FP32) to low-precision integer (e.g., INT8)—to reduce
-

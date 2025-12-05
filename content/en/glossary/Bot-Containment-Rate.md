@@ -184,10 +184,6 @@ Additional metrics:
 8. **Educate Users:**  
    Communicate chatbot capabilities at the conversation's start to align expectations.
 
-**Reference:**  
-- [Botpress Guide](https://botpress.com/blog/containment-rate)
-- [Decagon Glossary](https://decagon.ai/glossary/what-is-chatbot-containment-rate)
-
 
 ## Limitations and Nuances
 
@@ -268,17 +264,5 @@ For detailed definitions of these and related metrics, see [Decagon Glossary](ht
 **Optimizing bot containment rate is an ongoing process—pair data-driven insights with continuous improvement to maximize both operational and customer experience outcomes.**
 
 
-**References & Direct Sources:**  
-- [Botpress: Complete Guide to Chatbot Containment Rates](https://botpress.com/blog/containment-rate)  
-- [Decagon: What is Chatbot Containment Rate?](https://decagon.ai/glossary/what-is-chatbot-containment-rate)  
-- [Calabrio: Demystifying Chatbot Containment Rates](https://www.calabrio.com/wfo/contact-center-ai/understanding-chatbot-containment-rates/)  
-- [NexgenCloud Case Study](https://www.nexgencloud.com/blog/case-studies/how-ai-and-rag-chatbots-cut-customer-service-costs-by-millions)  
-- [GetTalkative: Chatbot Containment Rate](https://gettalkative.com/info/chatbot-containment-rate)  
-- [Kommunicate: What is Chatbot Containment Rate?](https://www.kommunicate.io/what-is/chatbot-containment-rate/)  
-- [Kodif Blog](https://kodif.ai/blog/what-is-chat-containment-rate-and-why-it-matters-for-your-business/)  
-- [Ecommerce Bonsai: Chatbot Statistics](https://ecommercebonsai.com/chatbot-statistics/)  
-
 
 For more on related metrics and AI chatbot optimization, see the [Decagon Glossary](https://decagon.ai/glossary/what-is-chatbot-containment-rate) and [Botpress Blog](https://botpress.com/blog/containment-rate).
-
-

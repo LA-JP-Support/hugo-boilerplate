@@ -43,8 +43,6 @@ e-title: False Negative
 | 影響          | 実際の問題が対処されない; 信頼と品質が損なわれる      | 非問題の調査に時間を浪費; ユーザーの不満           |
 
 > 混同行列とエラーについての詳細:  
-> - [Google ML Crash Course: Thresholds and Confusion Matrix](https://developers.google.com/machine-learning/crash-course/classification/thresholding)  
-> - [Oracle: Building a Confusion Matrix](https://blogs.oracle.com/ai-and-datascience/a-simple-guide-to-building-a-confusion-matrix)
 
 ## **偽陰性はどのように使用され、測定されるか?**
 

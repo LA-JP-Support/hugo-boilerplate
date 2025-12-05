@@ -5,7 +5,8 @@ description: "Self-Healing Knowledge uses AI, ML, and automation to autonomously
 keywords: ["Self-Healing Knowledge", "AI", "Knowledge Management", "Automation", "Content Accuracy"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Definition
@@ -127,8 +128,6 @@ Purpose: Improve detection and correction models over time.
 
 - **Scenario**: Automated test scripts are documented with links to specific test data sets or code repositories.
 - **Application**: Self-healing systems identify when test data has moved or been updated and suggest or perform script/documentation updates.
-- **Reference**: [Self-Healing Test Automation Framework using AI and ML (ResearchGate)](https://www.researchgate.net/publication/383019866_Self-Healing_Test_Automation_Framework_using_AI_and_ML)
-
 ### Regulated Industries (Healthcare, Finance)
 
 - **Scenario**: Compliance documentation must reference the latest legal statutes and regulatory standards.
@@ -218,4 +217,3 @@ Purpose: Improve detection and correction models over time.
 - **Agentic AI**: Autonomous agents with self-diagnosis and repair capabilities across digital systems.
 - **Anomaly Detection**: Identifying patterns in data that do not conform to expected behavior.
 - **Predictive Analytics**: Techniques used to forecast future events or detect outliers using historical data.
-

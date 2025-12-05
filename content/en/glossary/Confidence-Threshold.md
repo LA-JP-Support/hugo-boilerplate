@@ -149,16 +149,12 @@ labels = apply_confidence_threshold(predictions, threshold=0.8)
 #### Object Detection for Safety
 - **Autonomous Vehicles:** Only obstacles detected with high confidence trigger braking. Low-confidence detections may be cross-validated with other sensors.
 
-*Reference: [Ultralytics](https://www.ultralytics.com/glossary/confidence)*
-
 ### Chatbots & AI Agents
 
 #### Intent Matching (Zendesk)
 - **Scenario:** Chatbot predicts user intent with confidence levels.
 - **Threshold:** Default is 60% (0.6); most users prefer 50–70%.
 - **Outcome:** At or above threshold, chatbot replies; below, it defaults or escalates.
-
-*Reference: [Zendesk](https://support.zendesk.com/hc/en-us/articles/8357749625498-About-confidence-thresholds-for-advanced-AI-agents)*
 
 ### Document Processing
 
@@ -241,7 +237,7 @@ labels = apply_confidence_threshold(predictions, threshold=0.8)
 ## Key Takeaways
 
 - A confidence threshold is the primary gatekeeper for automated decisions in AI/ML pipelines.
-- Tuning the threshold is an ongoing, context-dependent process balancing precision and recall.
+- Tuning the threshold is an ongoing, context-dependent process balancing [precision and recall](/en/glossary/precision-and-recall/).
 - Businesses should set thresholds based on risk, compliance, and operational needs—and always monitor performance.
 - Visualize metrics (e.g., PR curves), calibrate scores, and keep humans in the loop for safe, effective automation.
 
@@ -259,5 +255,3 @@ For deep dives, visual guides, and code examples, explore the sources above.
 
 
 *Confidence thresholds balance automation and risk—choose and tune them carefully for your application. For further visual explanations, practical tutorials, and up-to-date guides, see the links and references in this glossary.*
-
-

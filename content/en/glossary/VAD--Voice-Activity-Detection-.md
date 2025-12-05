@@ -1,6 +1,7 @@
 ---
 title: "Voice Activity Detection (VAD)"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "voice-activity-detection-vad"
 description: "Voice Activity Detection (VAD) is a signal processing method that identifies human speech in audio streams. Essential for AI chatbots, ASR, and real-time communication, VAD improves accuracy and user experience by distinguishing speech from silence and noise."
 keywords: ["Voice Activity Detection", "VAD", "Speech Activity Detection", "AI chatbots", "ASR"]
@@ -22,11 +23,6 @@ Voice Activity Detection (VAD), also called Speech Activity Detection (SAD), is 
 
 **Alternative Names:** Speech Activity Detection (SAD), Speech Detection, Voice Detection  
 **Standards:** VAD is referenced in ITU, ETSI, and IEEE standards for telephony, VoIP, and audio coding.
-
-**Further Reading:**
-- [Wikipedia: Voice activity detection](https://en.wikipedia.org/wiki/Voice_activity_detection)
-- [Picovoice: What is Voice Activity Detection?](https://picovoice.ai/blog/what-is-voice-activity-detection/)
-
 ## How VAD Works: Technical Overview
 
 VAD systems process audio in real-time by dividing the audio signal into small overlapping frames (typically 10–30 ms). Each frame is analyzed to extract features that are informative for distinguishing speech from non-speech. A classifier then labels the frame as containing speech or not, often outputting a probability (speech presence probability, SPP) that is thresholded to produce a binary decision. Smoothing and post-processing logic are applied to avoid rapid toggling and improve segment continuity.
@@ -247,18 +243,8 @@ A: Not necessarily. Models like [Cobra VAD](https://picovoice.ai/platform/cobra/
 **Open Source VAD Libraries:**
 - [py-webrtcvad](https://github.com/wiseman/py-webrtcvad)
 - [silero-vad](https://github.com/snakers4/silero-vad)
-
-**Further Reading:**
-- [Picovoice: Voice Activity Detection Guide 2025](https://picovoice.ai/blog/complete-guide-voice-activity-detection-vad/)
-- [Aalto Introduction to Speech Processing](https://speechprocessingbook.aalto.fi/Recognition/Voice_activity_detection.html)
-- [Tavus: Voice Activity Detection](https://www.tavus.io/post/voice-activity-detection)
-- [Retell AI: Voice Activity Detection (VAD)](https://www.retellai.com/glossary/voice-activity-detection-vad)
-- [Decagon: What is VAD?](https://decagon.ai/glossary/what-is-voice-activity-detection-vad)
-- [Omniscien: Speech Recognition & Synthesis Glossary](https://omniscien.com/blog/speech-recognition-speech-synthesis-glossary-v-z/)
-
 ## Summary
 
 Voice Activity Detection (VAD) is an essential technology in the speech AI stack, enabling accurate, low-latency detection of speech segments in audio streams. From classical energy-based methods to advanced neural network architectures, VAD underpins the performance and efficiency of voicebots, chatbots, speech recognition, and real-time communication systems. Developers can integrate VAD using open source libraries, cloud APIs, or edge SDKs, with careful tuning for sensitivity, [latency](/en/glossary/latency/), and resource constraints. For robust deployment, combine VAD with noise reduction, speaker diarization, and context-aware logic.
 
 Explore more implementation resources and benchmarks via [Picovoice](https://picovoice.ai/blog/complete-guide-voice-activity-detection-v
-

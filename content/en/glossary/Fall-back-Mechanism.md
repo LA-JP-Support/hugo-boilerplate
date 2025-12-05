@@ -1,13 +1,19 @@
 ---
-title: Fall-back Mechanism
+title: Fall-back Mechanism (Fallback Mechanism)
 translationKey: fall-back-mechanism
 description: A fall-back mechanism in AI chatbots ensures continuity when the bot
   fails to interpret or fulfill a request, redirecting, clarifying, or escalating
   the conversation.
-keywords: ["fallback mechanism", "AI chatbots", "automation", "user experience", "escalation"]
+keywords:
+- fallback mechanism
+- AI chatbots
+- automation
+- user experience
+- escalation
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is a Fall-back Mechanism?
@@ -58,7 +64,6 @@ See: [Default fallback – ChatBot.com](https://www.chatbot.com/help/interaction
 A more personalized fallback, referencing the current conversation or previous steps.
 
 **Actions:**
-- Reference prior questions or user journey (“Are you still looking for help with your account?”).
 - Provide suggested next steps tailored to the last known context.
 
 **Example:**  
@@ -209,10 +214,6 @@ User: “It’s not working.”
 - Over 50% of chatbot sessions ended in fallback due to NLU misclassification.
 - Users were trapped in fallback loops with generic messages, leading to increased call volumes and frustration.
 - Redesigning fallback messages to display top relevant matches, clear recovery options, and actionable steps improved both user satisfaction and business outcomes.
-
-**Source:**  
-[UX Content: Designing chatbot fallbacks](https://uxcontent.com/designing-chatbots-fallbacks/)
-
 ## Challenges and Limitations
 
 - **Edge Case Identification:**  
@@ -342,4 +343,3 @@ Sign up for our [newsletter](#) to get more technical guides on chatbot design a
 
 **Sources and Further Links:**  
 - [ChatBot.com: Fallback Interaction](https://www.chatbot.com/help/inter
-

@@ -298,7 +298,7 @@ It automates documentation, monitors patients in real time, and provides actiona
 Ambient intelligence provides continuous, context-aware sensing and interpretation. Agentic AI uses this context to autonomously execute complex workflows.
 
 **Is ambient intelligence safe for privacy?**  
-AmI raises privacy concerns due to continuous data collection. Responsible design, transparency, and robust security are essential.
+AmI raises privacy concerns due to continuous data collection. Responsible design, [transparency](/en/glossary/transparency/), and robust security are essential.
 
 
 ## Explore More
@@ -318,4 +318,3 @@ AmI raises privacy concerns due to continuous data collection. Responsible desig
 
 
 **This glossary is a living resource. For the latest innovations in ambient intelligence, always refer to the most current publications and industry news.**
-

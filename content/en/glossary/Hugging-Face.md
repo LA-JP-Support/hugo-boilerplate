@@ -1,6 +1,7 @@
 ---
 title: "Hugging Face"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "hugging-face"
 description: "Explore Hugging Face, the open-source AI platform and global community for democratizing ML. Discover models, datasets, and tools for NLP, computer vision, and more."
 keywords: ["hugging face models", "large language models", "transformers library", "model hub", "datasets huggingface"]
@@ -369,4 +370,3 @@ import requests
 API_URL = "https://api-inference.huggingface.co/models/gpt2"
 headers = {"Authorization": "Bearer YOUR_HUGGINGFACE_TOKEN"}
 payload = {"inputs": "Hugging Face is
-

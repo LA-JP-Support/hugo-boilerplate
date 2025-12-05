@@ -227,19 +227,6 @@ GitHub、Snyk、主要クラウドプロバイダーなどのソースからの�
 - [Snyk: Webhook Security Best Practices](https://snyk.io/blog/creating-secure-webhooks/)
 - [Slack Developer Docs: Creating webhook triggers](https://docs.slack.dev/tools/deno-slack-sdk/guides/creating-webhook-triggers)
 - [Jenkins Plugins: Generic Webhook Trigger](https://plugins.jenkins.io/generic-webhook-trigger/)
-## 用語集
-
-- **Webhook:** あるシステムがイベントについて別のシステムにリアルタイムで通知できるようにするHTTPコールバック。
-- **トリガー:** 自動化されたプロセスまたはワークフローを開始するメカニズムまたはイベント。
-- **ペイロード:** イベントを説明するHTTPリクエスト(通常はJSON)で送信されるデータ。
-- **エンドポイント:** Webhookリクエストが送信され処理されるURL。
-- **認証ヘッダー:** Webhookリクエストの身元を確認するために使用されるHTTPヘッダー。
-- **シークレットキー:** Webhookエンドポイントを保護し、リクエストの真正性を検証するために使用される一意の文字列。
-- **署名検証:** 暗号署名をチェックすることで、Webhookペイロードが信頼できるソースから送信されたことを確認するプロセス。
-- **IP許可リスト:** Webhookリクエストを特定の信頼できるソースIPに制限すること。
-- **ポーリング:** イベント駆動型通知とは対照的に、変更を検出するためにリソースを繰り返しチェックすること。
-- **冪等性:** 重複したWebhook配信が同じ結果を生成し、重複処理を回避することを保証すること。
-
 ## 詳細:高度な実装とアーキテクチャパターン
 
 ### 動的トリガーと静的トリガー

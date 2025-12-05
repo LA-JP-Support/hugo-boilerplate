@@ -286,9 +286,3 @@ A: Google Analytics 4、Hotjar、Mixpanel、Adobe Analytics、Fullstory、SEMrus
 - [Fullstory: 良好なバウンス率とは](https://www.fullstory.com/blog/what-is-a-good-bounce-rate/)
 - [Adobe Analytics: バウンス率指標](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/bounce-rate)
 - [Google: PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
-
-## 用語集の要約
-
-バウンス率は、ウェブサイトが訪問者をどれだけ効果的にエンゲージし、維持しているかを理解するための中核的な解析指標です。セグメンテーション、技術的改善、コンテンツ戦略、ユーザーエクスペリエンスの強化を使用してバウンス率を監視、分析、最適化することで、コンバージョンを高め、SEOシグナルを改善し、ユーザーにより満足のいく体験を提供できます。
-
-**このページをチームと引用して共有してください。さらなる学習のために、上記の参照記事とツールを探索してください。**

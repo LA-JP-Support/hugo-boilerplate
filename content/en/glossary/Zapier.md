@@ -1,6 +1,7 @@
 ---
 title: "Zapier Glossary & Deep-Dive (2024 Edition)"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "zapier-glossary-deep-dive-2024-edition"
 description: "Explore Zapier, the no-code automation platform connecting 8,000+ apps. Learn about Zaps, AI Agents, use cases, and how to automate workflows efficiently."
 keywords: ["Zapier", "automation", "no-code", "AI Agents", "workflows"]
@@ -239,4 +240,3 @@ Zapier automates repetitive business tasks by connecting your favorite apps and 
 - [Zapier YouTube: What’s New in 2024](https://www.youtube.com/watch?v=LGBNt_F76Us)
 
 For further learning, explore Zapier's official [blog](https://zapier.com/blog/) and [developer docs](https://docs.zapier.com/platform/home).
-

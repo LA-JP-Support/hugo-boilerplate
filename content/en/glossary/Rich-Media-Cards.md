@@ -5,7 +5,8 @@ description: "Rich media cards are interactive UI components in chat streams, de
 keywords: ["rich media cards", "chatbot", "conversational AI", "messaging platforms", "user engagement"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Definition
@@ -65,11 +66,6 @@ Rich media card support and features differ among messaging platforms. Key envir
 - **Enterprise Solutions:**  
   - **Microsoft Dynamics 365, Salesforce:** Adaptive Cards (JSON-based), carousels, custom data collection, deep integration.
   - **APIs:** Custom bots with programmable payloads and UI rendering.
-
-**Reference:**  
-- [Google: Platform Constraints and Media Guidelines](https://developers.google.com/business-communications/rcs-business-messaging/guides/learn/rich-cards#media)
-- [Microsoft: Channel Support Matrix](https://learn.microsoft.com/en-us/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0)
-
 ## Technical Implementation and Supported Platforms
 
 ### Card Structure and Payloads
@@ -186,11 +182,6 @@ Rich media cards are trackable, allowing you to measure which cards, buttons, an
 - Card view counts
 - Drop-off points and funnel analysis
 - Goal completion rates
-
-**References:**  
-- [Sprinklr: Chatbot Analytics Metrics](https://www.sprinklr.com/blog/chatbot-analytics/)
-- [Quickchat: Complete Guide to Chatbot Analytics](https://quickchat.ai/post/chatbot-analytics)
-
 ## Use Cases & Real-World Examples
 
 ### Lead Generation
@@ -266,11 +257,6 @@ Rich media cards are trackable, allowing you to measure which cards, buttons, an
 - Neglecting image optimization—slow load times reduce engagement.
 - Using generic or irrelevant visuals.
 - Ignoring platform-specific card limits and constraints.
-
-**References:**  
-- [Kommunicate: Best Chatbot Practices](https://www.kommunicate.io/blog/best-chatbot-practices/)  
-- [Tars: When and How To Use Rich Media](https://hellotars.com/blog/improve-chatbot-conversion-rate-rich-media)
-
 ## Advanced Analytics and Measurement
 
 ### Key Metrics for Rich Media Card Performance
@@ -320,4 +306,3 @@ Yes. Most platforms provide analytics for button clicks, card views, drop-offs, 
 
 ### Are rich media cards supported on all messaging apps?
 Support varies by platform. Web chat, Messenger, and Apple Business Chat offer robust support; WhatsApp and SMS are
-

@@ -5,7 +5,8 @@ description: "DTMF (Dual-Tone Multi-Frequency) is a telecommunication signaling 
 keywords: ["DTMF", "telecommunication", "IVR", "VoIP", "PCI DSS"]
 category: "AI Chatbot & Automation, Telecommunication Systems"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is DTMF?
@@ -245,4 +246,3 @@ DTMF (Dual-Tone Multi-Frequency) is the global standard for encoding keypad sign
 **For in-depth technical videos:**  
 - [YouTube: DTMF Explainer Video](https://www.youtube.com/watch?v=bAbNl8O6sSY)
 - [YouTube: Sycurio DTMF Masking & PCI DSS Demo](https://www.youtube.com/watch?v=-iMrUREflUY)
-

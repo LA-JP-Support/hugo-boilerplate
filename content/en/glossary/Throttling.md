@@ -1,6 +1,7 @@
 ---
 title: "Throttling (API Throttling)"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "throttling-api-throttling"
 description: "Throttling, also called API throttling, is the deliberate restriction of requests to an API or service within a specific time period. It prevents overload, ensures fair access, curbs abuse, and maintains performance."
 keywords: ["API throttling", "rate limiting", "token bucket", "API gateway", "system protection"]
@@ -289,4 +290,3 @@ A company operates a public AI image recognition API:
 **For more detailed guidance and code samples, consult the [AWS API Gateway Throttling Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) and [Gravitee's API Throttling Best Practices](https://www.gravitee.io/blog/api-throttling-best-practices).**
 
 This glossary is based on authoritative industry documentation and best-practice guides from AWS, Gravitee, Knit.dev, and more. For an in-depth video introduction, see: [What is Rate Limiting / API Throttling? (YouTube)](https://www.youtube.com/watch?v=9CIjoWPwAhU)
-

@@ -1,6 +1,7 @@
 ---
 title: "Multi-Tenancy"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "multi-tenancy"
 description: "Multi-tenancy is a software architecture where a single application instance serves multiple tenants, logically isolating data while sharing infrastructure. Essential for SaaS and cloud platforms."
 keywords: ["multi-tenancy", "SaaS", "cloud computing", "data isolation", "software architecture"]
@@ -167,10 +168,6 @@ Best practices:
 - Use strict query scoping (tenant ID filters).
 - Encrypt data at rest and in transit.
 - Apply audit trails and regular security reviews.
-
-Sources:
-- [Qrvey: Multi-Tenant Security—Risks and Best Practices](https://qrvey.com/blog/multi-tenant-security/)
-
 <a name="noisy-neighbor"></a>
 ### The "Noisy Neighbor" Problem
 
@@ -307,4 +304,3 @@ No—also used in cloud hosting, analytics, embedded services, and more.
 - [Spectro Cloud: Managing the Noisy Neighbor Problem in Kubernetes Multi-Tenancy](https://www.spectrocloud.com/blog/managing-the-noisy-neighbor-problem-in-kubernetes-multi-tenancy)
 - [GoodData: Multi-Tenant Architecture](https://www.gooddata.com/blog/multi-tenant-architecture/)
 - [AI in SaaS: Use cases, benefits, challenges, and real-world examples](https://www.cigen.io/insights/ai-in-saas-use-cases-benefits-and-real-world-applications
-

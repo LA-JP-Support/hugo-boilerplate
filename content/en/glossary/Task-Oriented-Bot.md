@@ -1,6 +1,7 @@
 ---
 title: "Task-Oriented Bot"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "task-oriented-bot"
 description: "A Task-Oriented Bot is a specialized chatbot designed to automate specific, structured processes like booking, tracking, or scheduling, using NLP and backend integration."
 keywords: ["Task-Oriented Bot", "chatbots", "natural language processing", "AI", "automation"]
@@ -96,11 +97,6 @@ Task-oriented bots are distinct in their focus and technical underpinnings. The 
 | **Autonomy**                  | High within defined tasks                                                 | Moderate                                           | High                                                | Low                                           |
 | **Personalization**           | Task-based; some user-specific options                                    | Limited                                            | High; recommendations, personal context              | None                                          |
 | **Business Value**            | Efficiency, automation, cost reduction, scalability                       | Engagement, brand affinity, information delivery   | Proactive service, productivity, satisfaction        | Basic automation, low complexity              |
-
-Sources:
-- [ContactFusion: Comprehensive Guide to Different Types of AI Chatbots](https://www.contactfusion.co.uk/comprehensive-guide-to-different-types-of-ai-chatbots/)
-- [Qualimero: Types of Chatbots](https://www.qualimero.com/en/blog/types-of-chatbots-guide)
-
 ## Key Use Cases & Benefits
 
 Task-oriented bots are deployed to automate high-volume, repeatable processes across industries.
@@ -166,10 +162,6 @@ For more use-case examples and case studies:
 ### Slot Filling & Multi-Turn Dialogue
 
 Slot-filling is a core technique in task-oriented bots ([Tencent Cloud Techpedia](https://www.tencentcloud.com/techpedia/127699)). The bot defines a set of required slots (e.g., date, time, location), tracks which have been filled, and prompts for missing ones in an interactive, [multi-turn conversation](/en/glossary/multi-turn-conversation/). Confirmation steps ensure data is correctly captured before task execution.
-
-See also:
-- [Slot filling — A first step towards ambitious NLP systems (Medium)](https://medium.com/@aixplain/slot-filling-a-first-step-towards-ambitious-nlp-systems-ead102ea6c01)
-
 ### Limitations
 
 - **Scope of Automation:**  
@@ -227,13 +219,6 @@ More best practices:
 | **Limitations**          | Limited flexibility, not suited for open-ended dialogue or creative problem-solving                     |
 | **Typical Channels**     | Web chat, mobile apps, enterprise messaging (Teams, Slack), voice assistants                            |
 | **Business Impact**      | Measurable time savings, improved user satisfaction, reduced operational costs                           |
-
-**See also:**  
-- [Comprehensive Guide to Different Types of AI Chatbots (ContactFusion)](https://www.contactfusion.co.uk/comprehensive-guide-to-different-types-of-ai-chatbots/)  
-- [Types of Chatbots: A Comprehensive Guide (Qualimero)](https://www.qualimero.com/en/blog/types-of-chatbots-guide)  
-- [AWS: Chatbot Use Cases](https://aws.amazon.com/what-is/chatbot/#what-are-use-cases-for-chatbots--1xgzrhn)  
-- [Oracle: Chatbot Value for Business](https://www.oracle.com/chatbots/what-is-a-chatbot/#value)
-
 **Last Updated:** 2024-06
 
 *This glossary entry is structured and referenced for business and technical professionals evaluating task-oriented bots in enterprise automation and customer service contexts.*

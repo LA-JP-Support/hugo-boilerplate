@@ -1,6 +1,7 @@
 ---
 title: "Auto-Scaling Group"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "auto-scaling-group"
 description: "An Auto-Scaling Group (ASG) automatically adjusts compute resources like EC2 instances to maintain application performance and minimize costs by scaling based on demand."
 keywords: ["Auto-Scaling Group", "AWS Auto Scaling", "EC2 instances", "cloud infrastructure", "scaling policies"]
@@ -13,12 +14,6 @@ draft: false
 An **Auto-Scaling Group (ASG)** is a logical grouping of compute resources—typically [Amazon EC2 instances](https://aws.amazon.com/ec2/)—in a cloud environment. ASGs automatically adjust the number of running instances to maintain steady and predictable application performance while minimizing costs. This elasticity is achieved by scaling out (adding instances) or scaling in (removing instances) in response to real-time demand, health status, or predefined scaling policies. The ASG manages the full lifecycle of instances, including launching, monitoring, and terminating, without manual intervention.
 
 Auto-Scaling Groups underpin elastic, resilient, and cost-optimized cloud architectures. They are integral for applications with variable workloads, enabling organizations to maintain availability and performance, avoid over-provisioning, and automate capacity management.
-
-**Reference:**  
-- [Amazon EC2 Auto Scaling: What is Amazon EC2 Auto Scaling? (Official AWS Documentation)](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html)  
-- [Spot.io: Understanding EC2 Auto Scaling Groups](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/)  
-- [GeeksforGeeks: Create and Configure the Auto Scaling Group in EC2](https://www.geeksforgeeks.org/devops/create-and-configure-the-auto-scaling-group-in-ec2/)
-
 ## Core Components
 
 Auto-Scaling Groups are composed of several integrated components designed to automate and optimize resource management.
@@ -27,11 +22,6 @@ Auto-Scaling Groups are composed of several integrated components designed to au
 - **Definition:** Specifies the configuration for instances launched by the ASG, such as AMI, instance type, storage, networking, security settings, IAM roles, and bootstrapping scripts.
 - **Launch Templates** are the recommended and more flexible option, supporting versioning, mixed instance policies (i.e., combining multiple instance types and purchase options in one group), and advanced networking features.
 - **Launch Configurations** are older and less flexible; they cannot be modified after creation.
-
-**References:**  
-- [AWS: Launch Templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-templates.html)  
-- [Spot.io: EC2 Auto Scaling Groups with Multiple Instance Types](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/#a3)
-
 ### 2. **Scaling Policies**
 - **Purpose:** Define when and how the ASG changes capacity.
 - **Types:**
@@ -40,65 +30,27 @@ Auto-Scaling Groups are composed of several integrated components designed to au
   - **Simple Scaling Policies:** Increase or decrease a fixed number of instances when a metric crosses a threshold.
   - **Scheduled Scaling:** Scale at pre-defined times (e.g., business hours, weekends).
 - **Metrics:** Commonly use CPU, memory, network I/O, request count, or custom [CloudWatch](https://aws.amazon.com/cloudwatch/) metrics.
-
-**References:**  
-- [AWS: Dynamic Scaling Policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html)  
-- [Datadog: Auto-Scaling Policy Types](https://www.datadoghq.com/knowledge-center/auto-scaling/)
-
 ### 3. **Health Checks**
 - **Function:** Continuously monitor instance health using Amazon EC2 status checks and, optionally, application-level health checks via Elastic Load Balancer (ELB).
 - **Action:** Unhealthy instances are automatically terminated and replaced to maintain the desired capacity.
-
-**References:**  
-- [AWS: Health Checks for Auto Scaling Instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-checks.html)  
-- [Spot.io: Health Checks](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/#a1)
-
 ### 4. **Desired, Minimum, and Maximum Capacity**
 - **Desired Capacity:** Target number of instances the ASG attempts to maintain.
 - **Minimum Capacity:** The lowest number of instances the group will have.
 - **Maximum Capacity:** The upper limit for the number of instances, preventing over-provisioning.
-
-**References:**  
-- [AWS: Configure Auto Scaling Group Size](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-capacity-limits.html)
-
 ### 5. **Instance Types and Purchase Options**
 - **Multiple Instance Types:** ASGs can use a mix of instance types (e.g., compute-optimized, memory-optimized, GPU-enabled) to tailor capacity to workload needs.
 - **Purchase Models:** Supports On-Demand, Reserved, and [Spot Instances](/en/glossary/spot-instances/) within a single ASG for optimized cost and availability.
-
-**References:**  
-- [AWS: Mixed Instances Policy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html)  
-- [Spot.io: Auto Scaling Groups and Spot Instances](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/#a6)
-
 ### 6. **Availability Zones (AZs)**
 - **Purpose:** Distribute instances across multiple AZs within a region for [high availability](/en/glossary/high-availability--ha-/) and fault tolerance.
 - **Behavior:** ASGs balance the number of instances in each enabled AZ and replace failed AZs by launching instances in healthy ones.
-
-**References:**  
-- [AWS: Distributing Instances Across Availability Zones](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-distribution-balancing.html)  
-- [Spot.io: Auto Scaling Groups and Availability Zones](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/#a2)
-
 ### 7. **Elastic Load Balancing (ELB) Integration**
 - **Role:** Distributes incoming traffic across healthy ASG instances.
 - **Types:** Application Load Balancer (ALB), Network Load Balancer (NLB), Classic Load Balancer (CLB), Gateway Load Balancer (GWLB).
 - **Behavior:** New instances are automatically registered; terminated instances are deregistered.
-
-**References:**  
-- [AWS: Attach a Load Balancer to Your Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-load-balancer-asg.html)  
-- [Spot.io: Elastic Load Balancing and Auto Scaling Groups](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/#a5)
-
 ### 8. **Lifecycle Hooks**
 - **Definition:** Allow execution of custom scripts or logic at specific points in instance lifecycle (e.g., initialization, termination) to handle configuration, draining, or cleanup tasks.
-
-**References:**  
-- [AWS: Lifecycle Hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html)
-
 ### 9. **Tags and Metadata**
 - **Usage:** Assign key-value pairs to ASGs and instances for tracking, automation, cost allocation, and governance.
-
-**References:**  
-- [AWS: Tagging Auto Scaling Groups and Instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html)  
-- [Spot.io: Tagging Auto Scaling Groups](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/#a4)
-
 ## How Auto-Scaling Groups Work
 
 Auto-Scaling Groups dynamically maintain the optimal number of healthy compute instances based on real-time demand and defined policies.
@@ -129,11 +81,6 @@ During a major event (e.g., live streaming), the ASG detects a spike in load and
 
 ### 7. **Cross-AZ Balancing**
 - ASGs distribute instances evenly across AZs for resilience. If an AZ fails, replacement instances are launched in healthy AZs.
-
-**References:**  
-- [AWS: How Auto Scaling Works](https://docs.aws.amazon.com/autoscaling/ec2/userguide/how-asg-works.html)  
-- [Spot.io: How Do Auto Scaling Groups Work?](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/#a1)
-
 ## Benefits and Use Cases
 
 ### Key Benefits
@@ -156,11 +103,6 @@ During a major event (e.g., live streaming), the ASG detects a spike in load and
 **Industry Examples:**  
 - **Netflix:** Uses ASGs for global microservices scalability.  
 - **Airbnb:** Scales resources during peak travel seasons for millions of users.
-
-**References:**  
-- [Spot.io: Real-World Auto Scaling Examples](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/)  
-- [CloudZero: AWS Auto Scaling 101](https://www.cloudzero.com/blog/aws-auto-scaling/)
-
 ## Configuration and Best Practices
 
 ### Basic Setup Steps
@@ -270,4 +212,3 @@ A: Issues include poor metric selection, unrealistic capacity limits, lack of st
 - [Auto Scaling Groups: Definition, Examples, and Applications | Graph AI](https://www.graphapp.ai/engineering-glossary/cloud-computing/auto-scaling-groups)
 - [IBM: What is auto scaling?](https://www.ibm.com/think/topics/autoscaling)
 - [Amazon EC2 Auto Scaling groups - AWS Documentation](https://docs.aws.amazon.com/[autoscaling](/en/glossary/autoscaling/)/ec2/user
-

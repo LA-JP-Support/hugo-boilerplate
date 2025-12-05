@@ -112,29 +112,21 @@ kana_head: ま
 - **例:** [Nginx SSI](https://nginx.org/en/docs/http/ngx_http_ssi_module.html)  
 - **長所:** 強力な隔離、ユニバーサルレンダリング、最小限のクライアントサイドJS  
 - **短所:** インタラクティビティの制限、粗い更新、動的UIには遅い  
-- **参考:** [martinfowler.com/articles/micro-frontends.html#Server-sideTemplateComposition](https://martinfowler.com/articles/micro-frontends.html#Server-sideTemplateComposition)
-
 ### 2. ビルド時統合
 
 マイクロフロントエンドはライブラリ(npmパッケージ)として公開され、ビルド時に「コンテナ」アプリケーションによってインポートされます。  
 - **長所:** 重複排除された依存関係、最適化されたバンドル  
 - **短所:** 独立したデプロイが失われる、調整されたリリースが必要  
-- **参考:** [martinfowler.com/articles/micro-frontends.html#Build-timeIntegration](https://martinfowler.com/articles/micro-frontends.html#Build-timeIntegration)
-
 ### 3. ランタイム統合
 
 **a. iframe**  
 各マイクロフロントエンドはiframeにロードされ、コンテナアプリケーションがどのiframeを表示するかを管理します。  
 - **長所:** 最大限の隔離、セキュリティ  
 - **短所:** 不器用なナビゲーション、通信の困難さ、パフォーマンスオーバーヘッド  
-- **参考:** [martinfowler.com/articles/micro-frontends.html#Run-timeIntegrationViaIframes](https://martinfowler.com/articles/micro-frontends.html#Run-timeIntegrationViaIframes)
-
 **b. JavaScriptエントリーポイント**  
 各マイクロフロントエンドはグローバルなレンダー関数を公開します。コンテナアプリがバンドルをロードし、関数を呼び出してマイクロフロントエンドをマウントします。  
 - **長所:** 柔軟性、独立したデプロイ  
 - **短所:** 名前空間の衝突、依存関係管理  
-- **参考:** [martinfowler.com/articles/micro-frontends.html#Run-timeIntegrationViaJavascript](https://martinfowler.com/articles/micro-frontends.html#Run-timeIntegrationViaJavascript)
-
 **c. Web Components(カスタム要素)**  
 マイクロフロントエンドはカスタムHTML要素として配布され、カプセル化のためにShadow DOMを活用します。  
 - **長所:** 強力なカプセル化、技術スタック非依存、ネイティブブラウザサポート  
@@ -247,14 +239,6 @@ window.customElements.define('user-profile', UserProfile);
 | **技術スタック**     | すべてに対して単一スタック          | 柔軟、マイクロフロントエンドごと    |
 | **スケーリング**     | チームと機能のスケールが困難        | チーム/機能が独立してスケール       |
 | **マイグレーション** | 困難、高リスク                      | 段階的、低リスク                    |
-
-## 用語集
-
-- **マイクロフロントエンド:** ビジネスドメインを担当する自己完結型のフロントエンドモジュールで、独立して開発・デプロイされます。
-- **コンテナアプリ(シェル):** マイクロフロントエンドをロード・合成し、共有レイアウトとサービスを処理するホストアプリケーション。
-- **垂直スライス:** 単一チームによる、UIからバックエンドまでの機能またはビジネスドメインのエンドツーエンド所有権。
-- **カスタム要素:** Web Componentの一種。JavaScriptで定義される再利用可能でカプセル化されたカスタムHTMLタグ。
-- **Module Federation:** Webpack 5の機能で、アプリ間でモジュールのランタイムロードと共有を可能にします。
 
 ## 参考資料
 

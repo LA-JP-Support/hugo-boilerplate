@@ -1,6 +1,7 @@
 ---
 title: "MLOps"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "mlops"
 description: "MLOps (Machine Learning Operations) is an engineering discipline that automates and streamlines the lifecycle of ML models from experimentation to production and maintenance."
 keywords: ["MLOps", "machine learning operations", "model deployment", "model monitoring", "feature store"]
@@ -244,4 +245,4 @@ For a comprehensive dictionary of MLOps terminology, see:
 - [AWS: What is MLOps?](https://aws.amazon.com/what-is/mlops/)
 - [Google Cloud: MLOps Continuous Delivery and Automation Pipelines](https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
 - [Databricks: MLOps Glossary](https://www.databricks.com/glossary/mlops)
-- [NVIDIA: What is MLOps?](https://blogs.nvidia.com/blog/what-is-mlops/)
+- [NVIDIA: What is MLOps?](https

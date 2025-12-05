@@ -1,6 +1,7 @@
 ---
 title: GitOps
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: gitops
 description: Explore GitOps, a modern operational framework using Git as the single
   source of truth for infrastructure and application management. Learn its principles,
@@ -89,11 +90,6 @@ spec:
 
 **Visual Flow:**  
 Developer PR → Review → Merge → CI/CD Pipeline → GitOps Agent → Environment matches Git
-
-**Source:**  
-- [Spot.io: GitOps Workflow](https://spot.io/resources/gitops/understanding-gitops-principles-workflows-deployment-types/)
-- [Datadog: GitOps Components](https://www.datadoghq.com/blog/gitops-principles-and-components/)
-
 ## Benefits of GitOps
 
 **Technical and Organizational Benefits:**
@@ -121,11 +117,6 @@ Developer PR → Review → Merge → CI/CD Pipeline → GitOps Agent → Enviro
 - **Conflict Resolution:** Simultaneous changes from multiple contributors can cause merge conflicts.
 - **Scaling Observability:** As environments grow larger, maintaining visibility and auditability requires additional monitoring and tooling.
 - **No Native Help for Secrets:** GitOps is not a secrets manager; it must be paired with external solutions.
-
-**References:**  
-- [Humanitec: GitOps Pros and Cons](https://humanitec.com/blog/gitops-pros-and-cons)
-- [Codefresh: Benefits and Considerations](https://codefresh.io/blog/gitops-benefits-and-considerations/)
-
 ## GitOps vs DevOps (and Platform Engineering)
 
 ### Comparison Table
@@ -178,11 +169,6 @@ Developer PR → Review → Merge → CI/CD Pipeline → GitOps Agent → Enviro
 - **Monitor Drift and Reconcile Frequently:** Set agents to detect/correct drift promptly.
 - **Plan Repo Structure and Branching:** Use clear repo structures and branch policies for complexity and access control.
 - **Educate and Document:** Ensure team-wide understanding and buy-in.
-
-**References:**  
-- [Akuity: GitOps Best Practices](https://akuity.io/blog/gitops-best-practices-whitepaper)
-- [Spot.io: GitOps Best Practices](https://spot.io/resources/gitops/understanding-gitops-principles-workflows-deployment-types/#best-practices)
-
 ## Use Cases & Role-Specific Benefits
 
 ### Application Developers
@@ -241,4 +227,3 @@ For in-depth case studies, tool documentation, and live examples, see the refere
 - [OpenGitOps](https://opengitops.dev/)
 
 *All links and references are authoritative, up-to-date, and suitable for deep technical research, learning, and operational implementation.*
-

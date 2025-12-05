@@ -1,6 +1,7 @@
 ---
 title: "Jailbreaking (AI Jailbreaking): Bypassing AI Safety Guardrails"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "jailbreaking-ai-jailbreaking-bypassing-ai-safety-guardrails"
 description: "AI jailbreaking is bypassing AI safety guardrails to generate prohibited content. Learn about techniques, risks, and mitigation strategies for large language models (LLMs)."
 keywords: ["AI jailbreaking", "large language models", "safety guardrails", "prompt engineering", "security risks"]
@@ -279,4 +280,3 @@ Possible generation of illegal/malicious content, data breaches, regulatory pena
 - [Abnormal AI Glossary: Jailbreaking](https://abnormal.ai/ai-glossary/ai-jailbreak)
 - [IBM Think: AI Jailbreak](https://www.ibm.com/think/insights/ai-jailbreak)
 - [PyRIT Toolkit for Red Teaming](https://
-

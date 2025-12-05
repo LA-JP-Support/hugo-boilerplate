@@ -1,6 +1,7 @@
 ---
 title: "Model Robustness"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "model-robustness"
 description: "Model robustness is the ability of ML/AI models to maintain reliable performance against unexpected, noisy, incomplete, or maliciously manipulated inputs, ensuring trustworthiness and safety."
 keywords: ["model robustness", "machine learning", "AI safety", "adversarial attacks", "data drift"]
@@ -34,11 +35,6 @@ Model robustness underpins the trustworthiness and safety of AI systems. High-st
 
 **Example:**  
 A medical diagnosis model that fails to identify rare but critical conditions in patients outside its training data can cause harm, legal liability, and loss of public trust.
-
-**References:**  
-- [Fiddler AI: Importance of Model Robustness](https://www.fiddler.ai/blog/expect-the-unexpected-the-importance-of-model-robustness)
-- [arXiv: Robustness and Trustworthy AI](https://arxiv.org/html/2404.00897v2#Ch0.S1.SS2)
-
 ## Core Concepts and Definitions
 
 ### Accuracy vs. Robustness vs. Reliability
@@ -127,11 +123,6 @@ Robustness requires a combined approach across data, model architecture, and eva
 | Computer Vision   | Rotate, flip, crop, add noise, change brightness  |
 | NLP               | Synonym replacement, back-translation, paraphrase |
 | Tabular Data      | Add noise, resample, simulate rare events         |
-
-**Reference:**  
-- [arXiv: Data-Centric Amelioration Strategies](https://arxiv.org/html/2404.00897v2#Ch0.S4.SS1)
-- [Encord: Data Quality for Robustness](https://encord.com/blog/model-robustness-machine-learning-strategies/)
-
 ### Model-Centric Methods
 
 - **Regularization:** L1/L2 penalties to prevent overfitting.
@@ -140,10 +131,6 @@ Robustness requires a combined approach across data, model architecture, and eva
 - **Domain adaptation/transfer learning:** Adapt to new domains efficiently.
 - **Randomized smoothing:** Noise injection for prediction stability.
 - **Defensive distillation:** Makes models less sensitive to small input changes.
-
-**Reference:**  
-- [arXiv: Model-Centric Optimization Methods](https://arxiv.org/html/2404.00897v2#Ch0.S4.SS2)
-
 ### Testing & Evaluation Strategies
 
 - **Cross-validation:** Multiple data splits to expose sensitivity.
@@ -183,11 +170,6 @@ Chatbots face slang, typos, or attempts to bypass content filters. Robustness en
 - **Fairness:** Overlaps with robustness; failures on underrepresented groups are both unfair and non-robust.
 - **Transparency:** Robustness must not sacrifice interpretability, especially in regulated domains.
 - **Documentation:** Robustness test protocols and results are often compliance requirements.
-
-**References:**  
-- [Fiddler AI: Expect the Unexpected](https://www.fiddler.ai/blog/expect-the-unexpected-the-importance-of-model-robustness)
-- [VerifyWise: AI Model Robustness Lexicon](https://verifywise.ai/lexicon)
-
 ## Tools and Frameworks Supporting Robustness
 
 - **[IBM AI Fairness 360](https://aif360.mybluemix.net/):** Robustness and bias evaluation toolkit.
@@ -205,10 +187,6 @@ Chatbots face slang, typos, or attempts to bypass content filters. Robustness en
 - **Interpretability:** Some robust models (deep ensembles, smoothed models) are harder to explain.
 - **Over-conservatism:** Excessive robustness can make models too cautious, lowering responsiveness.
 - **Resource cost:** Continuous robustness testing and monitoring require sustained investment.
-
-**Source:**  
-- [arXiv: Empirical Methods and Their Limitations](https://arxiv.org/html/2404.00897v2#Ch0.S3.SS4)
-
 ## Best Practices for Practitioners
 
 **Model Robustness Checklist:**
@@ -256,4 +234,3 @@ Chatbots face slang, typos, or attempts to bypass content filters. Robustness en
 - **Robustness:** Ability to maintain performance when faced with unexpected or malicious inputs.
 
 ### Summary Table: Model Robustness at a Glance
-

@@ -259,15 +259,6 @@ A: [Material Designアクセシビリティガイドライン](https://m3.materi
 - [Stack Overflow: Slot filling chatbot, suggestion chips in prompts](https://stackoverflow.com/questions/48091538/slot-filling-chatbot-suggestion-chips-in-prompts)
 - [YouTube: Dialogflow chatbot for websites | Botcopy's Bot prompt suggestion chips](https://www.youtube.com/watch?v=SZBMD435mV0)
 
-## 用語集
-
-- **サジェスチョンチップ:** チャットUIにおける一時的なピル型のクイックレスポンスボタン。
-- **クイックリプライ:** Messenger、Telegramなどでのサジェスチョンチップに相当するもの。
-- **スロット埋め:** 会話で必要なパラメータを収集すること([Dialogflowドキュメント](https://cloud.google.com/dialogflow/es/docs/slots)を参照)。
-- **Webhook:** 動的なレスポンスとチップを生成するためのバックエンドエンドポイント。
-- **永続メニュー:** チャットボットにおける常時表示のナビゲーション。
-- **Material Design:** チップ、カードなどをカバーするGoogleのUIデザイン標準([ガイドラインを参照](https://m3.material.io/components/chips/guidelines))。
-
 ## 要約表
 
 | 特徴                 | サジェスチョンチップ     | ボタン               | クイックリプライ         | 永続メニュー       |

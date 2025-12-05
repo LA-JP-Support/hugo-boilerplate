@@ -242,16 +242,3 @@ AIおよびリアルタイムシステムにおけるレイテンシは多面的
 | エンジニアリング戦略   | モデル/ハードウェア/パイプラインチューニングで遅延を削減     | プルーニング、量子化、アクセラレーション、キャッシング   |
 | ベンチマーク             | 実世界のコンプライアンスを確保し、リグレッションを検出  | P50/P95/P99、トレース、自動化         |
 | ガバナンス vs. パフォーマンス | レイテンシを交渉不可能なシステム制約にする     | 実施、監視、違反時にアラート    |
-
-## 用語集の相互参照
-
-- [Edge Computing](https://en.wikipedia.org/wiki/Edge_computing) – ネットワークレイテンシを削減するためのローカル処理。
-- [Distributed Tracing](https://opentelemetry.io/docs/) – エンドツーエンドのリクエストプロファイリング。
-- [Model Quantization](https://pytorch.org/docs/stable/quantization.html) – 低精度演算による高速化。
-- [Latency Percentiles](https://en.wikipedia.org/wiki/Percentile) – P50、P95、P99コンプライアンスの測定。
-
-包括的で実践的、かつ深く参照された概要については、以下を参照してください:
-- [Real-time AI performance: latency challenges and optimization – Mitrix](https://mitrix.io/blog/real-time-ai-performance-latency-challenges-and-optimization/)
-- [Low-latency Context Engineering for Production AI – Materialize](https://materialize.com/blog/low-latency-context-engineering-for-production-ai/)
-- [Why Latency Budgets Matter for AI System Survivability – Thor Signia (LinkedIn)](https://www.linkedin.com/posts/thorsignia_aisystemsengineering-latencyarchitecture-activity-7396045682123624448-B8uF)
-- [Galileo AI: Understanding Latency in AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)

@@ -158,16 +158,12 @@ labels = apply_confidence_threshold(predictions, threshold=0.8)
 #### 安全のための物体検出
 - **自律走行車：** 高い信頼度で検出された障害物のみがブレーキを作動させる。低信頼度の検出は他のセンサーでクロスバリデーションされる場合がある。
 
-*参考: [Ultralytics](https://www.ultralytics.com/glossary/confidence)*
-
 ### チャットボットとAIエージェント
 
 #### 意図マッチング（Zendesk）
 - **シナリオ：** チャットボットがユーザーの意図を信頼度レベルで予測。
 - **閾値：** デフォルトは60%（0.6）；ほとんどのユーザーは50～70%を好む。
 - **結果：** 閾値以上の場合、チャットボットが返信；未満の場合、デフォルト応答またはエスカレーション。
-
-*参考: [Zendesk](https://support.zendesk.com/hc/en-us/articles/8357749625498-About-confidence-thresholds-for-advanced-AI-agents)*
 
 ### 文書処理
 

@@ -1,6 +1,7 @@
 ---
 title: "Cosine Similarity"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "cosine-similarity"
 description: "Cosine similarity is a metric that measures the cosine of the angle between two non-zero vectors, assessing their similarity based on orientation rather than magnitude. Widely used in machine learning, NLP, and recommendation systems."
 keywords: ["cosine similarity", "machine learning", "natural language processing", "recommendation systems", "vector similarity"]
@@ -187,10 +188,3 @@ Multi-dimensional transaction vectors are compared to flag abnormal patterns usi
 - [Principal Component Analysis](https://www.ibm.com/think/topics/principal-component-analysis#:~:text=Principal%20component%20analysis%2C%20or%20PCA,of%20variables%2C%20called%20principal%20components.)
 
 ### For additional technical details, code samples, and mathematical proofs, visit the linked documentation and educational resources listed above.
-
-**References:**  
-- [GeeksforGeeks: Cosine Similarity](https://www.geeksforgeeks.org/dbms/cosine-similarity/)  
-- [IBM: What is Cosine Similarity](https://www.ibm.com/think/topics/cosine-similarity)  
-- [Wikipedia: Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)  
-- [YouTube: Cosine Similarity, Clearly Explained!!! (StatQuest)](https://www.youtube.com/watch?v=e9U0QAFbfLI)  
-- [scikit-learn: Cosine Similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html)

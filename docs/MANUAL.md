@@ -289,6 +289,25 @@ python scripts/translate_glossary_en_to_ja.py content/en/glossary/Copilot.md
 - Validates translation completeness / 翻訳完全性を検証
 - Max tokens: 16000 / 最大トークン: 16000
 
+### update_lastmod.py
+
+Automatically updates the `lastmod` field in Markdown frontmatter based on the current date for files you have modified.  
+変更したMarkdownファイルの frontmatter にある `lastmod` を自動的に今日の日付へ更新します。
+
+```bash
+# Update lastmod for all modified files under content/
+python scripts/update_lastmod.py
+
+# (Optional) Call from git pre-commit hook
+echo "python scripts/update_lastmod.py" >> .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+```
+
+**Tips / ヒント**
+
+- Runs quickly before committing to keep `lastmod` fresh. / コミット前に実行して最終更新日を最新に保つ。
+- Safe to run repeatedly; files already up to date are skipped. / 既に最新のファイルはスキップされるため繰り返し実行しても安全。
+
 ---
 
 ## Operation Guide / 操作ガイド
@@ -311,6 +330,9 @@ python scripts/pipeline_translate.py --auto
 
 # After processing, refresh bilingual titles
 python scripts/backfill_e_titles.py
+
+# Refresh lastmod values for modified content
+python scripts/update_lastmod.py
 ```
 
 #### Step 3: Verify Results / 結果を確認

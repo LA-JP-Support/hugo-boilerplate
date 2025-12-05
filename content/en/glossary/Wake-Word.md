@@ -1,6 +1,7 @@
 ---
 title: "Comprehensive Glossary Guide for AI Chatbot & Automation: Wake Word Technology"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "comprehensive-glossary-guide-for-ai-chatbot-automation-wake-word-technology"
 description: "Explore wake word technology, the essential component for hands-free voice interaction with AI assistants and smart devices. Learn how wake words work, their use cases, and implementation."
 keywords: ["wake word", "voice AI", "hotword", "speech recognition", "AI assistants"]
@@ -149,10 +150,6 @@ Short, generic, or commonly used terms (e.g., “Hi,” “OK”) which can caus
 - “Hey Siri” (distinct, 2+2 syllables)
 - “Alexa” (unique, 3 syllables)
 - “Hey Mercedes” (branded, distinctive)
-
-**Source:**  
-[SoundHound Interview](https://www.soundhound.com/voice-ai-blog/what-you-need-to-know-about-wake-word-detection/)
-
 ### Multi-Language and Cultural Considerations
 
 - Test wake words with native speakers across target regions.
@@ -313,4 +310,3 @@ Support for multiple wake words on a single device is possible and increasingly 
 
 - [Complete Guide to Wake Word Detection (Picovoice)](https://picovoice.ai/blog/complete-guide-to-wake-word/)
 - [What You Need to Know About Wake Word Detection (SoundHound)](https://www.soundhound.com/voice-ai-blog/what-you-need-to-know-about-w
-

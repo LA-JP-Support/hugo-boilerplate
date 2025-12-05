@@ -44,6 +44,21 @@ def _ensure_allowed_output(path: Path):
             continue
 
 
+HEADING_DEF_PATTERN = re.compile(
+    r'^(#{2,6}\s+)(?:Definition|Definitions|定義)\s*[：:]\s*(.+)$',
+    re.MULTILINE,
+)
+
+
+def strip_definition_headings(text: str) -> str:
+    def repl(match):
+        heading_prefix = match.group(1)
+        title = match.group(2).strip()
+        return f"{heading_prefix}{title}"
+
+    return HEADING_DEF_PATTERN.sub(repl, text)
+
+
 def clean_flowhunt_output(content):
     """
     フロントマター後の不要部分を削除
@@ -108,6 +123,13 @@ def clean_flowhunt_output(content):
         body_content,
         flags=re.DOTALL | re.IGNORECASE
     )
+    # "## Contents" / "## 目次" セクションを削除（リンクリスト形式）
+    body_content = re.sub(
+        r'##\s+(?:Contents|目次)\s*\n(?:\s*\n)?(?:\s*[-*]\s+\[[^\]]+\]\([^)]+\)\s*\n?)+',
+        '\n',
+        body_content,
+        flags=re.IGNORECASE
+    )
     
     # 本文中の区切り線（---）を削除
     body_content = re.sub(r'^\s*---\s*$', '', body_content, flags=re.MULTILINE)
@@ -116,6 +138,8 @@ def clean_flowhunt_output(content):
     # 余分な空行を整理
     body_content = re.sub(r'\n{4,}', '\n\n', body_content)
     
+    body_content = strip_definition_headings(body_content)
+
     return frontmatter + '\n' + body_content
 
 

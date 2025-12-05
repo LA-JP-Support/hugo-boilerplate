@@ -1,6 +1,7 @@
 ---
 title: Deepfake Detection
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: deepfake-detection
 description: Explore deepfake detection technologies, methodologies, and workflows
   to identify AI-generated or altered media. Learn how to combat fraud, misinformation,
@@ -257,4 +258,3 @@ Deepfake detection is critical for digital identity security, fraud prevention, 
 **For organizations, integrating deepfake detection is essential for digital trust and security in the era of synthetic media.**
 
 *For more technical details, refer to the whitepapers and research links above. For hands-on experimentation and up-to-date resources, follow the referenced URLs and participate in ongoing detection challenges and experiments.*
-

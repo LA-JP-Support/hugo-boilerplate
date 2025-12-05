@@ -5,7 +5,8 @@ description: "A Debug Console or Trace is a diagnostic interface providing visib
 keywords: ["Debug Console", "Trace", "Automation Flow", "AI Chatbot", "API Proxy"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is a Debug Console / Trace?
@@ -31,8 +32,6 @@ Debug consoles and trace tools are essential for developers, admins, and automat
 - Interpreting cryptic error messages and resolving silent failures.
 
 By providing granular, real-time insight, these tools make automation systems more robust, maintainable, and reliable.
-
-See also: [Honeycomb.io – What Are Traces?](https://www.honeycomb.io/blog/what-are-traces)
 
 ## How Debug Consoles / Trace Tools Work
 
@@ -269,14 +268,3 @@ A **Debug Console** or **Trace Tool** is the primary interface for methodical, r
 Always treat debug consoles and trace tools as your “x-ray” for automation: use them early, often, and with attention to error handling, incremental testing, and data protection.
 
 For more platform-specific guides, see the [Further Reading and Resources](#further-reading-and-resources) section above.
-
-**References:**
-
-- [OpenTelemetry Glossary](https://opentelemetry.io/docs/concepts/glossary/)
-- [OpenTelemetry Traces](https://opentelemetry.io/docs/concepts/signals/traces/)
-- [Leena AI Debug Console](https://docs.leena.ai/docs/debug-console-in-km)
-- [Honeycomb.io – What Are Traces?](https://www.honeycomb.io/blog/what-are-traces)
-- [Salesforce Flow Debugging Guide](https://www.nickfrates.com/blog/how-to-debug-salesforce-flows-step-by-step-troubleshooting-guide)
-- [Lamatic.ai Flow Debugging](https://lamatic.ai/docs/tests/flow-debugging)
-- [Apigee Trace Tool](https://docs.apigee.com/api-platform/debug/using-trace-tool-0)
-- [The 3 Levels of Debugging With AI (Neon)](https://neon.com/blog/the-3-levels-of-debugging-with-ai)

@@ -5,7 +5,8 @@ description: "A false negative occurs when an AI system, like a chatbot, fails t
 keywords: ["False Negative", "AI Chatbot", "Automation", "Machine Learning", "Confusion Matrix"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## **What is a False Negative?**
@@ -39,8 +40,6 @@ This concept is fundamental in **binary classification**—where outcomes are di
 | Impact          | Real problems go unaddressed; trust and quality suffer       | Time wasted investigating non-issues; user annoyance       |
 
 > More about confusion matrix and errors:  
-> - [Google ML Crash Course: Thresholds and Confusion Matrix](https://developers.google.com/machine-learning/crash-course/classification/thresholding)  
-> - [Oracle: Building a Confusion Matrix](https://blogs.oracle.com/ai-and-datascience/a-simple-guide-to-building-a-confusion-matrix)
 
 ## **How Are False Negatives Used and Measured?**
 
@@ -276,10 +275,3 @@ A: [LambdaTest](https://www.lambdatest.com/blog/false-positive-and-false-negativ
 ## **Summary**
 
 A **false negative** in AI chatbot and automation contexts is when the system fails to identify an intent, issue, or event that truly exists. This error impacts customer satisfaction, product quality, business risk, and cross-team trust in automation. Reducing false negatives requires broad training datasets, robust real-time monitoring, refined escalation logic, and collaboration across QA, development, and business teams. Reliable automation depends on minimizing false negatives—enabling accurate, safe, and trustworthy AI systems.
-
-**References and Further Learning:**  
-- [Alessa: AI Blind Spots & False Negatives](https://alessa.com/blog/ai-blind-spots-and-false-negatives/)  
-- [Google ML Crash Course: Thresholds and Confusion Matrix](https://developers.google.com/machine-learning/crash-course/classification/thresholding)  
-- [T2D2: False Positives and False Negatives in AI](https://t2d2.ai/blog/the-confusion-matrix-false-positives-and-false-negatives-in-ai)  
-- [LambdaTest: Impacts of False Negatives](https://www
-

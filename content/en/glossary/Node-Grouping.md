@@ -5,7 +5,8 @@ description: "Learn about Node Grouping, the practice of clustering related node
 keywords: ["Node Grouping", "AI Chatbots", "Workflow Automation", "Kubernetes", "Clustering"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Definition
@@ -103,8 +104,6 @@ Below are platform-specific instructions, technical details, and best practices 
 
 ### 1. Kore.ai: Grouping Nodes in a Dialog Task
 
-- **Reference:** [Kore.ai Docs](https://developer.kore.ai/v8-0/docs/bots/bot-builder-tool/dialog-task/grouping-nodes/)
-- **Steps:**
   1. Open Dialog Canvas.
   2. Select nodes (Shift-click or lasso).
   3. Right-click and choose "Group Nodes".
@@ -116,8 +115,6 @@ Below are platform-specific instructions, technical details, and best practices 
 
 ### 2. Microsoft HPC Pack: Grouping Compute Nodes
 
-- **Reference:** [Microsoft Learn](https://learn.microsoft.com/en-us/powershell/high-performance-computing/grouping-nodes?view=hpc19-ps)
-- **Steps:**
   1. Go to Node Management > Nodes.
   2. Select nodes in Heat Map/List view.
   3. Right-click > Groups > New Group.
@@ -129,12 +126,6 @@ Below are platform-specific instructions, technical details, and best practices 
 
 ### 3. Kubernetes: Node Pools and Labels
 
-- **Reference:** [Kubernetes Nodes](https://kubernetes.io/docs/concepts/architecture/nodes/)
-- **Concept:**
-  - Nodes are physical or virtual machines that run workloads via Pods.
-  - Grouping by node labels or node pools allows for targeted scheduling, resource allocation, and batch operations.
-- **Implementation:**
-  - Use node labels for grouping:  
     ```yaml
     apiVersion: v1
     kind: Node
@@ -148,8 +139,6 @@ Below are platform-specific instructions, technical details, and best practices 
 
 ### 4. Node-RED: Grouping Nodes and Kubernetes Integration
 
-- **Reference:** [Node-RED Groups](https://nodered.org/docs/user-guide/editor/groups/), [Node-RED Kubernetes Client](https://flows.nodered.org/node/node-red-contrib-kubernetes-client)
-- **Steps:**
   1. Drag to select related nodes.
   2. Use "group" feature for visual grouping.
   3. Label each group by its function.
@@ -158,8 +147,6 @@ Below are platform-specific instructions, technical details, and best practices 
 
 ### 5. R/Visone: Algorithmic Node Clustering
 
-- **Reference:** [STCA.guide](https://stca.guide/clustering-cluster-visualization/)
-- **Hierarchical Clustering (Ward’s):**
   1. Load normalized data into R.
   2. Use `clustering_ward_script.R` for clustering.
   3. Adjust `k` in `cutree(cc, k = X)` for cluster count.
@@ -171,13 +158,6 @@ Below are platform-specific instructions, technical details, and best practices 
   3. Analyze/export cluster attributes.
 
 ### 6. AI Automation Tools (e.g., n8n, Node-RED, Custom Orchestration)
-
-- **Reference:** [YouTube: 7 Foundational Nodes in n8n](https://www.youtube.com/watch?v=dQDN5OpJANE)
-- **Key Nodes:** HTTP request, webhook, edit fields (set), IF condition, function, merge, split.
-- **Grouping Strategy:**  
-  - Group nodes by logical function (data fetching, transformation, error handling).
-  - Use visual grouping and comments for clarity.
-  - Modularize for reuse and scalability.
 
 ## Real-World Applications and Use Cases
 
@@ -289,4 +269,3 @@ A: Kore.ai, Microsoft HPC Pack, Node-RED, R/Visone, Kubernetes, and many others.
 **For further clarification or platform-specific instructions, consult the official documentation of your workflow, AI, or automation tool.**
 
 This detailed glossary and guide equips you with the terminology, conceptual understanding, technical depth, and practical know-how to implement, document, and scale node grouping in AI, automation, and cloud infrastructure, supported by authoritative resources and real-world examples.
-

@@ -5,7 +5,8 @@ description: "A Logic Node (Conditional Branching) evaluates conditions in chatb
 keywords: ["Logic Node", "Conditional Branching", "Chatbot", "Automation", "Workflow"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is a Logic Node?
@@ -19,14 +20,6 @@ A **Logic Node** is a modular decision block in chatbot and automation workflows
 - Condition Node ([Noca AI](https://support.noca.ai/logic-nodes/))
 - Switch Node
 - Branch Node
-
-**References:**
-- [Kore.ai Logic Node Documentation](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-logic-node/)
-- [Yellow.ai Logic Nodes](https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes/logic-nodes)
-- [HubSpot If/Then Branches](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows)
-- [Slack Conditional Branching](https://slack.com/blog/news/conditional-branching-workflow-builder)
-- [BotStacks: Use Conditions and Logic Branching](https://docs.botstacks.ai/common-tasks/conversation-design/conditions-logic/)
-
 ## Why Use Conditional Branching?
 
 Logic nodes enable workflows to:
@@ -62,11 +55,6 @@ If a customer selects “Report an Issue”, the bot asks for details; if they c
 
 6. **No-Code/Low-Code Setup:**  
    Configurable via graphical UI, but advanced logic may be supported by code or pseudo-code.
-
-**References:**  
-- [Yellow.ai Logic Nodes](https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes/logic-nodes)
-- [BotStacks: Use Conditions and Logic Branching](https://docs.botstacks.ai/common-tasks/conversation-design/conditions-logic)
-
 ## Types of Logic Nodes and Branching
 
 Platform offerings may include:
@@ -98,10 +86,6 @@ Logic nodes in Kore.ai can only be added as part of a Bot Action node.
    - In **Instance Properties**, set tags or dialog-specific metadata.
    - In **Connection Properties**, define conditional statements to control which node executes next, based on entity values, context objects, or intents.
 5. Save and connect branches visually.
-
-**Reference:**  
-- [Kore.ai Logic Node Documentation](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-logic-node/)
-
 ### Platform-Agnostic Guide
 
 Most platforms follow a similar pattern:
@@ -117,12 +101,6 @@ Most platforms follow a similar pattern:
    - Input values to match.
 5. Connect branches to next steps.
 6. Test the flow using preview/testing tools.
-
-**References:**  
-- [Yellow.ai Logic Nodes](https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes/logic-nodes)
-- [HubSpot If/Then Branches](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows)
-- [TextIt: Introduction to Flows](https://help.textit.com/en/article/introduction-to-flows-1vmh15z/)
-
 ## Logic Node Settings & Properties
 
 ### Component Properties
@@ -148,11 +126,6 @@ Most platforms follow a similar pattern:
 - **Intents/Entity Values:** Use detected intents/entity values for branching.
 
 *Some platforms restrict logic node connections to specific scopes (e.g., inside Bot Action nodes in Kore.ai).*
-
-**References:**  
-- [Kore.ai Logic Node Documentation](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-logic-node/)
-- [Yellow.ai Logic Nodes](https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes/logic-nodes)
-
 ## Conditional Statements and Syntax
 
 Conditional statements determine how branches are evaluated. These may be set via UI or written as expressions.
@@ -203,11 +176,6 @@ Randomly branch users for experimentation or feature rollout.
 
 **7. Error Handling**  
 Route to fallback or clarification paths for invalid/missing inputs.
-
-**References:**  
-- [BotStacks: Use Conditions and Logic Branching](https://docs.botstacks.ai/common-tasks/conversation-design/conditions-logic)
-- [TextIt: Introduction to Flows](https://help.textit.com/en/article/introduction-to-flows-1vmh15z/)
-
 ## Examples: Real-World Conditional Branching
 
 ### Example 1: Yes/No Decision
@@ -248,11 +216,6 @@ Route to fallback or clarification paths for invalid/missing inputs.
 - Use variables/tags for analytics and personalization.
 - Avoid overly nested logic; break complex logic into smaller flows.
 - Document business rules using comments or descriptions.
-
-**References:**  
-- [BotStacks: Use Conditions and Logic Branching](https://docs.botstacks.ai/common-tasks/conversation-design/conditions-logic)
-- [Kore.ai: Custom Meta Tags](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/custom-meta-tags/)
-
 ## Limitations & Edge Cases
 
 - **Scope Restrictions:**  
@@ -267,11 +230,6 @@ Route to fallback or clarification paths for invalid/missing inputs.
   - Data types in conditions (string vs. number) must be compatible.
 - **Random/A/B Branching:**  
   - May yield unpredictable results without seeding or tracking.
-
-**References:**
-- [Yellow.ai Node Types](https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes)
-- [Kore.ai Managing Namespace](https://developer.kore.ai/docs/bots/bot-settings/bot-management/managing-namespace/)
-
 ## Related Concepts and Further Reading
 
 - [Bot Action Node (Kore.ai)](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/bot-action-node/)
@@ -308,4 +266,3 @@ Let us know or [read more about advanced automation nodes](#related-concepts-and
 - [Noca AI: Logic Nodes](https://support.noca.ai/logic-nodes/)
 
 **For more details, always consult your platform's official documentation and developer guides.**
-

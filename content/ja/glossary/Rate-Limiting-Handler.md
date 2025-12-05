@@ -48,13 +48,9 @@ e-title: Rate Limiting Handler
 
 定義された時間枠内でクライアントまたはユーザーが実行できるリクエスト数の制限—通常「N秒/分/時間あたりMリクエスト」として表現されます。
 
-**参考:** [KongHQ: What is API Rate Limiting?](https://konghq.com/blog/learning-center/what-is-api-rate-limiting)
-
 ### 429 Too Many Requests
 
 クライアントが許可されたリクエストレートを超えた場合に返される標準HTTPステータスコード。APIは通常、`Retry-After`などの回復用の追加ヘッダーを含みます。
-
-**参考:** [MDN: HTTP 429](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)
 
 ### 再試行ロジック
 
@@ -96,8 +92,6 @@ e-title: Rate Limiting Handler
 
 7. **コストと不正使用管理:**  
    ハンドラーは、リクエストを[バッチ処理](/ja/glossary/batch-processing/)、キャッシュ、または統合し、異常な使用パターンを自動ブロックまたはアラートする場合があります。
-
-**参考:** [Zuplo: 10 Best Practices for API Rate Limiting](https://zuplo.com/learning-center/10-best-practices-for-api-rate-limiting-in-2025)
 
 ## 一般的なレート制限アルゴリズム
 
@@ -229,9 +223,6 @@ X-RateLimit-Reset: 1715276060
 - 指定された間隔後にリクエストを遅延および再試行します。
 - クォータ枯渇をログに記録し、潜在的にアラートします。
 
-**参考:**  
-- [MDN: 429 Status](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)
-
 ## 再試行ロジック: 指数バックオフとジッター
 
 **理由:**  
@@ -263,8 +254,6 @@ from tenacity import retry, wait_random_exponential, stop_after_attempt
 def call_api():
     return client.api_call()
 ```
-**参考:** [Tenacity Docs](https://tenacity.readthedocs.io/en/latest/)
-
 ## ベストプラクティス
 
 [Zuploの2025年ベストプラクティスガイド](https://zuplo.com/learning-center/10-best-practices-for-api-rate-limiting-in-2025)から引用:
@@ -280,8 +269,6 @@ def call_api():
 9. **開発者とユーザーのフィードバック:** ヘッダー、ダッシュボード、またはUIを介してクォータステータスを可視化します。
 10. **API管理プラットフォーム:** 分析、グローバル実施、スケーリングのために管理プラットフォームを使用します。
 
-**参考:** [Zuplo: Best Practices](https://zuplo.com/learning-center/10-best-practices-for-api-rate-limiting-in-2025)
-
 ## 一般的な落とし穴と課題
 
 - `Retry-After`またはリセットヘッダーを無視する。
@@ -289,8 +276,6 @@ def call_api():
 - 分散またはサーバーレスシステムでクォータを調整しない。
 - すべてのエンドポイントまたはキーが同じ制限を共有すると仮定する。
 - 非冪等(安全でない)操作を再試行し、データ破損または二重実行のリスクを冒す。
-
-**参考:** [Cloudflare: Rate Limiting Best Practices](https://developers.cloudflare.com/waf/rate-limiting-rules/best-practices/)
 
 ## ユースケースとシナリオ
 
@@ -307,8 +292,6 @@ def call_api():
 
 - API制限内でポーリングとバルクデータ同期を調整します。
 - エンドポイントとユーザークラスに基づいて頻度を動的に調整します。
-
-**参考:** [Cloudflare: Protecting REST/GraphQL APIs](https://developers.cloudflare.com/waf/rate-limiting-rules/best-practices/#protecting-rest-apis)
 
 ## 効果的なハンドラーの主な機能
 

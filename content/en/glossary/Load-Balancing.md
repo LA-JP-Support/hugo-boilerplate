@@ -1,6 +1,7 @@
 ---
 title: 'Load Balancing Glossary: Deep Dive & Advanced Reference'
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: load-balancing-glossary-deep-dive-advanced
 description: 'Learn about load balancing: distributing network traffic across servers
   to optimize application availability, reliability, and performance. Explore types,
@@ -51,10 +52,6 @@ Modern applications—especially AI-powered services, high-traffic websites, and
   The load balancer receives every client request and, using rules and real-time health data, selects the optimal backend server for each request.
 - **Server Selection:**  
   Factors influencing server choice include current health status, active connection counts, response times, server weights, and custom business rules.
-
-**Reference:**  
-- [Kemp: Load Balancing Algorithms and Techniques](https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques)
-
 ### c. Health Checks & Failover
 
 - Load balancers continuously perform health checks (e.g., TCP/HTTP ping, application-level probes) to verify backend server availability.
@@ -66,10 +63,6 @@ Modern applications—especially AI-powered services, high-traffic websites, and
 ### d. Session Persistence ("Sticky Sessions")
 
 Some applications require session data (e.g., shopping carts, authentication context) to persist on the same server. Load balancers can enforce session persistence, often using cookies or IP hash techniques, ensuring all requests in a session are routed to the same backend.
-
-**Reference:**  
-- [NGINX: Session Persistence](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/#sticky)
-
 ### e. Real-World Analogy
 
 A load balancer is like a restaurant manager assigning diners to tables. If one waiter is overloaded, the manager directs new guests to other waiters, ensuring fast, smooth service.
@@ -239,4 +232,3 @@ Each solution offers unique features (e.g., global load balancing, WAF integrati
 - [Google Cloud: Advanced Load Balancing Overview](https://docs.cloud.google.com/service-mesh/docs/service-routing/advanced-load-balancing-overview)
 
 This glossary is designed to serve as a detailed, actionable reference for architects, engineers, and AI practitioners working with modern load balancing in diverse environments.
-

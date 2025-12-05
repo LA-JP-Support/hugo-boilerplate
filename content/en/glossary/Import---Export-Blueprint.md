@@ -5,7 +5,8 @@ description: "Import / Export Blueprint saves automation/chatbot logic as a file
 keywords: ["automation blueprint", "chatbot blueprint", "JSON", "YAML", "workflow migration"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Definition
@@ -297,4 +298,3 @@ A: Use CLI tools or APIs to script exports, storing files securely or in version
 - [BMC Documentation: Exporting or importing a blueprint](https://docs.bmc.com/xwiki/bin/view/Automation-DevSecOps/Client-Management/BMC-Cloud-Lifecycle-Management/clm46/Administering-the-product/Services/Building-service-blueprints/Exporting-or-importing-a-blueprint/)
 
 This glossary entry delivers a comprehensive and deeply detailed overview of Import / Export Blueprint, with authoritative references, best practices, technical file structure, and platform-specific instructions. For further learning, consult the documentation and community resources linked above.
-

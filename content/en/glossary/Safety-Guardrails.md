@@ -1,6 +1,7 @@
 ---
 title: "Safety Guardrails"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "safety-guardrails"
 description: "Safety guardrails are engineered controls and policies that prevent AI systems, especially LLMs, from generating harmful, inappropriate, or non-compliant content, ensuring responsible and secure AI deployment."
 keywords: ["Safety Guardrails", "AI Safety", "LLM Safety", "AI Ethics", "AI Risk Management"]
@@ -274,4 +275,3 @@ For further technical implementation guidance, see:
 **Safety guardrails** are foundational for deploying AI in production environments, especially where compliance, brand reputation, and user trust are at stake. They are not optional, but essential for responsible, secure, and effective AI adoption.
 
 *This glossary is based on in-depth synthesis of leading industry sources and technical guides. For updates and community discussion, see the [DEV.to guardrails article](https://dev.to/tech
-

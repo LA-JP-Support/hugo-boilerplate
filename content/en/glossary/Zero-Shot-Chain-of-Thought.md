@@ -1,6 +1,7 @@
 ---
 title: "Zero-Shot Chain of Thought"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "zero-shot-chain-of-thought"
 description: "Zero-Shot Chain of Thought (CoT) is a prompt engineering technique for LLMs that instructs models to reason step-by-step without examples, improving complex problem-solving."
 keywords: ["Zero-Shot Chain of Thought", "Prompt Engineering", "LLMs", "AI Chatbots", "Reasoning"]
@@ -286,4 +287,3 @@ No. Its effectiveness depends on task complexity and model size. It works best f
 Yes. It pairs well with self-consistency, answer validation, and automatic examplar selection (Auto-CoT).
 
 **Q6: How do I implement Zero-Shot CoT in code?**
-

@@ -5,7 +5,8 @@ description: "Entity linking connects extracted entities from text to unique ent
 keywords: ["entity linking", "knowledge base", "named entity recognition", "knowledge graph", "natural language processing"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## 1. What Is Entity Linking?
@@ -290,12 +291,4 @@ A news service uses entity linking to unify references to the same person or pla
 - [Graph RAG](https://www.ontotext.com/knowledgehub/fundamentals/what-is-graph-rag/)
 
 **Implementation guidance, tool selection, or integration support are available via the documentation and solution providers linked throughout this glossary.**
-
-**References:**  
-- [Ontotext: What is Entity Linking](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/)  
-- [Microsoft Azure: Entity Linking Overview](https://learn.microsoft.com/en-us/azure/ai-services/language-service/entity-linking/overview)  
-- [Schema App: What is Entity Linking](https://www.schemaapp.com/schema-markup/what-is-entity-linking/)  
-- [Amazon Science: Entity Linking](https://www.amazon.science/blog/improving-entity-linking-between-texts-and-knowledge-bases)  
-
 This glossary provides a comprehensive, deeply detailed reference to entity linking, its processes, challenges, architectures, tooling, and applications.
-

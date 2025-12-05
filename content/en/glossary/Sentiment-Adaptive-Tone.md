@@ -5,7 +5,8 @@ description: "Explore sentiment-adaptive tone, an AI capability that adjusts com
 keywords: ["sentiment-adaptive tone", "AI chatbots", "customer service", "sentiment analysis", "emotional intelligence"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is Sentiment-Adaptive Tone?
@@ -259,4 +260,3 @@ For more, see [Bitcot Future Trends](https://www.bitcot.com/chatbot-personality/
 
 **Ready to make your customer interactions emotionally intelligent?**  
 Audit your current chatbot or voicebot for sentiment-adaptive tone capabilities, or [contact Vox
-

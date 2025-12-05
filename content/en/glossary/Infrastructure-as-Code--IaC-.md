@@ -1,6 +1,7 @@
 ---
 title: "Infrastructure as Code (IaC)"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "infrastructure-as-code-iac"
 description: "Infrastructure as Code (IaC) defines and manages IT infrastructure like networks, VMs, and load balancers using code and automation. Learn its benefits, tools, and best practices."
 keywords: ["Infrastructure as Code", "IaC", "DevOps", "automation", "cloud infrastructure"]
@@ -279,4 +280,3 @@ IaC transforms how infrastructure is managed — enabling agility, consistency, 
 - [Kubernetes Explained (IBM Technology)](https://www.youtube.com/watch?v=PH-2FfFD2PU)
 
 This glossary page is a comprehensive reference for understanding, adopting, and mastering Infrastructure as Code in any organization. All sections include direct links to authoritative, up-to-date resources for further exploration.
-

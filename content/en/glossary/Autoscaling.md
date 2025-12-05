@@ -1,6 +1,7 @@
 ---
 title: "Autoscaling"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "autoscaling"
 description: "Autoscaling automatically adjusts cloud computing resources (VMs, containers) based on real-time demand, optimizing performance, availability, and cost efficiency."
 keywords: ["autoscaling", "cloud computing", "resource allocation", "horizontal scaling", "vertical scaling"]
@@ -234,4 +235,3 @@ Autoscaling provides elastic capacity, while load balancing ensures efficient, r
 > Autoscaling empowers cloud environments to dynamically allocate resources as demand fluctuates, optimizing both performance and cost. It is a cornerstone for organizations deploying AI, big data, or customer-facing platforms.
 
 **For more technical deep-dives or implementation guides, see [DigitalOcean: Auto Scaling Techniques](https://www.digitalocean.com/community/tutorials/auto-scaling-techniques-guide) or [IBM: Auto Scaling Documentation](https://www.ibm.com/think/topics/autoscaling).**
-

@@ -5,7 +5,8 @@ description: "Suggestion chips are interactive, pill-shaped UI elements in chatb
 keywords: ["suggestion chips", "chatbots", "conversational UI", "quick replies", "Dialogflow"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What Are Suggestion Chips?
@@ -114,10 +115,6 @@ Suggestion chips are for quick, contextual, one-off decisions; buttons are for o
 
 - **Design:**  
   Pair chips with cards or responses; do not repeat the same info in both.
-
-**References:**  
-- [Dialogflow Rich Responses Docs](https://developers.google.com/assistant/df-asdk/rich-responses)
-
 #### Facebook Messenger
 
 - **Quick Replies:**  
@@ -127,10 +124,6 @@ Suggestion chips are for quick, contextual, one-off decisions; buttons are for o
 
 - **Persistent Buttons:**  
   For navigation or static actions, not ephemeral input.
-
-**References:**  
-- [Messenger Platform: Quick Replies](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies/)
-
 #### Telegram
 
 - **ReplyKeyboardMarkup:**  
@@ -140,10 +133,6 @@ Suggestion chips are for quick, contextual, one-off decisions; buttons are for o
 
 - **Inline Keyboard:**  
   Used for persistent, action-triggering buttons.
-
-**References:**  
-- [Telegram Bot API: ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)
-
 ### Sample Code: Dialogflow Webhook (Node.js)
 
 ```javascript

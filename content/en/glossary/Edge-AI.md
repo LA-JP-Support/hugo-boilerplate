@@ -1,6 +1,7 @@
 ---
 title: Edge AI
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: edge
 description: Edge AI deploys and executes artificial intelligence algorithms directly
   on devices at the network's edge, enabling real-time analysis, inference, and automated
@@ -258,4 +259,3 @@ A: Ultra-low latency and improved privacy by keeping data local.
 
 **Q: Can Edge AI devices operate offline?**  
 A: Yes, they’re designed
-

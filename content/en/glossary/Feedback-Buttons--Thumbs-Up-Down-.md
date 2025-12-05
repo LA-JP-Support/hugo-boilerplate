@@ -5,7 +5,8 @@ description: "Learn about feedback buttons (thumbs up/down) for AI chatbots and 
 keywords: ["feedback buttons", "thumbs up/down", "AI chatbots", "user feedback", "digital experience"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Introduction
@@ -161,8 +162,6 @@ While thumbs up/down buttons are popular, alternative feedback mechanisms may su
 | Multi-Choice      | Medium     | Medium           | Structured surveys               | Can limit depth of insight        |
 | Screenshot/Screen Recording | Low | High          | UI feedback, bug reporting       | High effort for users             |
 
-Source: [Qualaroo: Types of Website Feedback](https://qualaroo.com/blog/feedback-buttons/#Types_of_Website_Feedback_Tabs_Buttons)
-
 ## Best Practice Recommendations
 
 - **Start simple:** Deploy thumbs up/down at key touchpoints to maximize participation.
@@ -210,4 +209,3 @@ Browse more: [Qualaroo Feedback Button Gallery](https://qualaroo.com/blog/feedba
 - [UX StackExchange: Button Placement](https://ux.stackexchange.com/questions/98733/how-to-position-thumbs-up-thumbs-down-with-progression-on-one-line)
 
 **Implement thumbs up/down feedback buttons to unlock actionable insights, improve AI chatbot performance, and deliver better digital experiences.** For advanced strategies and technical tutorials, consult the resources above.
-

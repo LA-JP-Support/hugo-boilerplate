@@ -1,6 +1,7 @@
 ---
 title: "Feature Flags"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "feature-flags"
 description: "Feature flags enable dynamic control of software functionality without redeploying. Learn how these toggles facilitate progressive delivery, A/B testing, rapid rollbacks, and operational agility."
 keywords: ["feature flags", "feature toggles", "progressive delivery", "A/B testing", "software deployment"]
@@ -314,7 +315,6 @@ Multiple ML models are live, each behind a flag. The team toggles between them, 
 - [Building vs. buying a feature flag system (LaunchDarkly)](https://launchdarkly.com/blog/manufacturing-feature-flags-build-vs-buy/)
 - [AWS AppConfig Video: Mastering Feature Flags](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
 
-**References and Further Learning**  
 - [LaunchDarkly: Feature Flags 101](https://launchdarkly.com/blog/what-are-feature-flags/)
 - [Sendbird: Deep Dive on Feature Flags](https://sendbird.com/developer/tutorials/what-are-feature-flags)
 - [AWS AppConfig: Feature Flag Best Practices](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
@@ -322,4 +322,3 @@ Multiple ML models are live, each behind a flag. The team toggles between them, 
 - [Unleash: Feature Flag Types and Implementation](https://docs.getunleash.io/get-started/what-is-a-feature-flag)
 
 This glossary is designed as a living reference; for the latest best practices and industry insights, explore the links above and consult tool-specific documentation. Feature flags, when used responsibly, unlock new possibilities in software delivery, experimentation, and operational excellence.
-

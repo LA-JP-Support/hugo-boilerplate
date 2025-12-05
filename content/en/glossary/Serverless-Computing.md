@@ -1,6 +1,7 @@
 ---
 title: "Serverless Computing"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "serverless-computing"
 description: "Serverless computing is a cloud execution model where providers manage infrastructure, allowing developers to build and deploy applications without provisioning or scaling servers."
 keywords: ["serverless computing", "cloud computing", "FaaS", "BaaS", "AWS Lambda"]
@@ -264,4 +265,3 @@ Serverless computing is used across a range of industries and technical domains,
 - [Function as a Service (FaaS)](https://www.redhat.com/en/topics/cloud-native-apps/what-is-faas)
 - [Backend as a Service (BaaS)](https://firebase.google.com/)
 -
-

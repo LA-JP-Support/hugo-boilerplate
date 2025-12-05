@@ -1,11 +1,22 @@
 ---
-title: Voicebot Glossary
+title: Voicebot
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: voicebot-glossary-deep-knowledge
 description: Explore a comprehensive guide to voicebots, covering core technologies
   like ASR, NLP, and TTS, how they work, key features, types, and their business benefits
   for customer service and automation.
-keywords: ["voicebot", "AI", "ASR", "NLP", "TTS", "conversational AI", "customer service", "automation", "NLU", "LLM"]
+keywords:
+- voicebot
+- AI
+- ASR
+- NLP
+- TTS
+- conversational AI
+- customer service
+- automation
+- NLU
+- LLM
 category: General
 type: glossary
 draft: false
@@ -248,4 +259,3 @@ Up to 50% reduction in service costs, increased customer satisfaction, and impro
 
 **How do I choose a platform?**  
 Consider use case, integrations, language support, scalability, and ease of use. See [Voiceflow](https://www.voiceflow.com/blog/voicebot), [Floatbot](https://floatbot.ai/blog/voicebot-an-ultimate-guide), [Genesys](https://www.genesys.com/definitions/what-is-a-voice
-

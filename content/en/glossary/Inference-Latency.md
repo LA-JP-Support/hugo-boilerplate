@@ -1,6 +1,7 @@
 ---
 title: "Inference Latency"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "inference-latency"
 description: "Inference latency is the time delay between providing input to an AI model and getting a prediction. It's a critical metric for real-time AI applications, impacting responsiveness and user experience."
 keywords: ["inference latency", "AI model", "machine learning", "real-time AI", "model optimization"]
@@ -19,9 +20,6 @@ Inference [latency](/en/glossary/latency/) is the time delay between providing a
   In a mobile app using computer vision, the delay between capturing an image and displaying detected object labels is the inference latency.
 
 > Further reading:  
-> - [Ultralytics: Inference Latency - Definition & Importance](https://www.ultralytics.com/glossary/inference-latency)  
-> - [Roboflow: What Is Inference Latency?](https://blog.roboflow.com/inference-latency/)  
-> - [Mirantis: Understanding Machine Learning Inference](https://www.mirantis.com/blog/understanding-machine-learning-inference-a-guide/)
 
 ## Inference Latency in Context: Training vs Inference
 
@@ -37,9 +35,6 @@ The distinction between training and inference is fundamental to understanding l
 - Inference is the process of applying a trained model to new, unseen data for prediction. In production, inference must be fast, scalable, and cost-efficient to meet user and business needs.
 
 > Deep dive:  
-> - [Edgecore: AI Inference vs. Training](https://edgecore.com/ai-inference-vs-training/)  
-> - [io.net: AI Training vs Inference](https://io.net/blog/ai-training-vs-inference)  
-> - [Nebius: Difference between AI Training and Inference](https://nebius.com/blog/posts/difference-between-ai-training-and-inference)
 
 ## Inference Latency Pipeline: Where Time is Spent
 
@@ -81,9 +76,6 @@ Inference latency is the sum of delays throughout the entire prediction pipeline
    OS, drivers, and framework overhead (thread scheduling, runtime initialization).
 
 > For a comprehensive breakdown:  
-> - [Mirantis: ML Inference Pipeline](https://www.mirantis.com/blog/understanding-machine-learning-inference-a-guide/)  
-> - [Roboflow: Inference Latency Pipeline](https://blog.roboflow.com/inference-latency/)  
-> - [Prodia: Master Deployment Strategy for Inference Pipelines](https://blog.prodia.com/post/master-deployment-strategy-for-inference-pipelines-a-guide)
 
 ## Types and Sources of Latency
 
@@ -132,8 +124,6 @@ Inference latency is the sum of delays throughout the entire prediction pipeline
 - **Network Transfer:** Cloud-based inference adds network round-trip.
 
 > More on performance tuning:  
-> - [NVIDIA: Think SMART for AI Inference Performance](https://blogs.nvidia.com/blog/think-smart-optimize-ai-factory-inference-performance/)  
-> - [AWS: Practical Guide to Bedrock Latency-Optimized Inference](https://aws.amazon.com/blogs/machine-learning/optimizing-ai-responsiveness-a-practical-guide-to-amazon-bedrock-latency-optimized-inference/)
 
 ## Real-World Examples and Use Cases
 
@@ -178,8 +168,6 @@ Inference latency is the sum of delays throughout the entire prediction pipeline
 - Benchmark with representative batch sizes and deployment hardware.
 
 > More on measurement:  
-> - [AWS: Metrics for LLM Latency](https://aws.amazon.com/blogs/machine-learning/optimizing-ai-responsiveness-a-practical-guide-to-amazon-bedrock-latency-optimized-inference/)  
-> - [NVIDIA: Inference Performance Optimization](https://blogs.nvidia.com/blog/think-smart-optimize-ai-factory-inference-performance/)
 
 ## Optimization Strategies to Reduce Latency
 
@@ -209,9 +197,6 @@ Inference latency is the sum of delays throughout the entire prediction pipeline
 - **Load Balancing:** Distribute requests evenly to avoid bottlenecks.
 
 > For detailed guides:  
-> - [Prodia: Inference Pipeline Deployment Strategies](https://blog.prodia.com/post/master-deployment-strategy-for-inference-pipelines-a-guide)  
-> - [NVIDIA: Think SMART](https://blogs.nvidia.com/blog/think-smart-optimize-ai-factory-inference-performance/)  
-> - [Roboflow: Model Optimization](https://blog.roboflow.com/inference-latency/)
 
 ## Deployment Scenarios and Hardware Considerations
 
@@ -229,8 +214,6 @@ Inference latency is the sum of delays throughout the entire prediction pipeline
 - **NPU:** Specialized for low-power, fast inference on mobile/edge.
 - **CPU:** Flexible, but slowest for deep learning.
 
-> - [Roboflow: AI Hardware Accelerators](https://roboflow.com/hardware?ref=blog.roboflow.com)
-> - [NVIDIA: AI Inference Glossary](https://www.nvidia.com/en-us/glossary/ai-inference/)
 
 ## Trade-offs: Latency, Throughput, and Cost
 
@@ -277,4 +260,3 @@ A: Through model pruning, quantization, efficient architecture, hardware acceler
 
 **Q: What is tail latency?**  
 A: The high-percentile (e.g.,
-

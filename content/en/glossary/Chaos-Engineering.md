@@ -1,6 +1,7 @@
 ---
 title: "Chaos Engineering"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "chaos-engineering"
 description: "Chaos Engineering is a discipline of intentionally experimenting on systems to uncover weaknesses and build confidence in their resilience. Learn how to proactively identify vulnerabilities."
 keywords: ["Chaos Engineering", "system resilience", "fault injection", "distributed systems", "SRE"]
@@ -173,11 +174,6 @@ Recommended best practices ([phoenixNAP](https://phoenixnap.com/blog/chaos-engin
    Gradually increase experiment complexity and production exposure.
 10. **Integrate into Organization:**  
     Embed chaos engineering in reliability, security, and development processes.
-
-**Further Reading:**
-- [Google Cloud: Getting Started with Chaos Engineering](https://cloud.google.com/blog/products/devops-sre/getting-started-with-chaos-engineering)
-- [Harness: What is Chaos Engineering?](https://www.harness.io/harness-devops-academy/what-is-chaos-engineering)
-
 ## Further Resources
 
 - [Principles of Chaos Engineering](https://principlesofchaos.org/)
@@ -213,16 +209,4 @@ Recommended best practices ([phoenixNAP](https://phoenixnap.com/blog/chaos-engin
 - **Observability:** The capability to understand system state and behavior through metrics, logs, and traces ([IBM Observability](https://www.ibm.com/cloud/learn/observability)).
 
 **For authoritative, community-driven best practices, visit [Principles of Chaos Engineering](https://principlesofchaos.org/).**
-
-**References:**  
-- [phoenixNAP: Chaos Engineering](https://phoenixnap.com/blog/chaos-engineering)  
-- [IBM: What is Chaos Engineering?](https://www.ibm.com/think/topics/chaos-engineering)  
-- [eG Innovations: Chaos Engineering Glossary](https://www.eginnovations.com/glossary/chaos-engineering)  
-- [Gremlin: Chaos Engineering](https://www.gremlin.com/chaos-engineering)  
-- [Chaos Toolkit](https://chaostoolkit.org/)  
-- [Netflix Chaos Monkey](https://netflix.github.io/chaosmonkey/)  
-- [Google SRE Book - DiRT](https://sre.google/sre-book/disaster-testing-dirt/)  
-- [AWS FIS](https://aws.amazon.com/fis/)  
-
 This glossary is designed to serve as a definitive reference guide for Chaos Engineering, supporting both newcomers and advanced practitioners. Every section is sourced from industry-leading resources, with links to documentation, tutorials, and real-world case studies. Continue your exploration by engaging with the community, reading the [Principles of Chaos Engineering](https://principlesofchaos.org/), and applying structured chaos practices to improve the resilience of your own systems.
-

@@ -1,6 +1,7 @@
 ---
 title: "White Labeling"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "white-labeling"
 description: "White labeling in AI chatbots allows businesses to deploy a chatbot platform fully branded as their own, removing all vendor references. Ideal for agencies, SaaS, and enterprises."
 keywords: ["white labeling", "AI chatbots", "chatbot platform", "brand control", "agencies"]
@@ -284,4 +285,3 @@ White labeling empowers agencies, SaaS founders, and businesses to deploy advanc
 
 **For success:**  
 Choose a provider that supports full white-labeling across all touchpoints, robust integrations, compliance, analytics, and multi
-

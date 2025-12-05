@@ -5,7 +5,8 @@ description: "The NLU confidence threshold is the minimum confidence score an NL
 keywords: ["NLU confidence threshold", "natural language understanding", "confidence scores", "chatbot", "intent classification"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Definition
@@ -27,10 +28,6 @@ The top intent, `ResetPassword`, has a confidence score of 0.92.
 
 **Key Point:**  
 The confidence score expresses the model’s internal certainty about its prediction. It is not a calibrated probability, but rather a comparative value for choosing between intents.
-
-**Further Reading:**  
-- [Amazon Lex: Using intent confidence scores](https://docs.aws.amazon.com/lexv2/latest/dg/using-intent-confidence-scores.html)
-
 ## 2. Distinction: Confidence Score vs. Statistical Probability
 
 **Confidence Score:**  
@@ -44,10 +41,6 @@ The confidence score expresses the model’s internal certainty about its predic
 
 **Caution:**  
 Do not interpret a confidence score of 0.9 as a 90% chance of correctness. Treat it as “the model is much more certain about this intent than others right now.”
-
-**Reference:**  
-- [Best practices to build and test your natural language understanding — Genesys](https://help.mypurecloud.com/articles/best-practices-to-build-and-test-your-natural-language-understanding/)
-
 ## 3. Role of Confidence Threshold in Chatbot Workflows
 
 The confidence threshold acts as a gate in conversational AI decision logic. It determines what happens if the model is not confident enough in its classification.
@@ -69,10 +62,6 @@ The confidence threshold acts as a gate in conversational AI decision logic. It 
 
 **Diagram (Described):**  
 User Input → NLU Model → [Is Top Confidence ≥ Threshold?] → (Yes: Proceed with Intent) / (No: Fallback/Confirmation)
-
-**Reference:**  
-- [Amazon Lex: Using intent confidence scores](https://docs.aws.amazon.com/lexv2/latest/dg/using-intent-confidence-scores.html)
-
 ## 4. Types of Confidence Thresholds
 
 NLU systems can implement several thresholds for different behaviors:
@@ -93,10 +82,6 @@ NLU systems can implement several thresholds for different behaviors:
 | Rejection     | < 0.2            | Fallback/Reject      |
 | Confirmation  | 0.2 – 0.4        | Ask for confirmation |
 | Acceptance    | > 0.4            | Proceed with intent  |
-
-**Reference:**  
-- [Genesys: Set bot confidence thresholds](https://www.genesys.com/blog/post/set-bot-confidence-thresholds)
-
 ## 5. How Confidence Thresholds Are Used
 
 **Operational Usage:**
@@ -141,10 +126,6 @@ If all intent scores are below the threshold, Lex triggers `AMAZON.FallbackInten
 
 **Tip:**  
 The criticality of errors can justify higher or lower thresholds. In regulated or high-risk domains, favor higher thresholds and confirmations.
-
-**Reference:**  
-- [Genesys: Best practices to build and test your natural language understanding](https://help.mypurecloud.com/articles/best-practices-to-build-and-test-your-natural-language-understanding/)
-
 ## 7. Technical Evaluation: Metrics and Tools
 
 **Metrics:**
@@ -167,10 +148,6 @@ Line graphs showing:
 - False Accept (false positive)
 - Correct Reject (true negative)
 - False Reject ([false negative](/en/glossary/false-negative/))
-
-**References:**  
-- [Genesys: Set bot confidence thresholds](https://www.genesys.com/blog/post/set-bot-confidence-thresholds)
-
 ## 8. Variations Across NLU Engines
 
 Different NLU engines have unique approaches to confidence scores and thresholds:
@@ -208,11 +185,6 @@ Thresholds are not portable across engines. Each NLU's scoring is unique and may
 - Monitor metrics (precision, recall, F1) in production.
 - Adjust thresholds in response to performance changes or business feedback.
 - Test thresholds after any NLU engine change, even if data/model are unchanged.
-
-**References:**  
-- [Genesys: Best practices to build and test your natural language understanding](https://help.mypurecloud.com/articles/best-practices-to-build-and-test-your-natural-language-understanding/)
-- [Amazon Lex: Using intent confidence scores](https://docs.aws.amazon.com/lexv2/latest/dg/using-intent-confidence-scores.html)
-
 ## 10. Practical Examples and Use Cases
 
 ### Example 1: Banking Chatbot with Overlapping Intents
@@ -244,10 +216,6 @@ Thresholds are not portable across engines. Each NLU's scoring is unique and may
   Set at 0.65.
 - **Result:**  
   Both below threshold; Lex triggers `AMAZON.FallbackIntent`.
-
-**References:**  
-- [Amazon Lex: Using intent confidence scores](https://docs.aws.amazon.com/lexv2/latest/dg/using-intent-confidence-scores.html)
-
 ## 11. Common Pitfalls and Best Practices
 
 ### Pitfalls
@@ -274,10 +242,6 @@ Thresholds are not portable across engines. Each NLU's scoring is unique and may
 
 **Tip:**  
 In high-risk domains (e.g., healthcare, finance), set conservative thresholds and favor confirmation.
-
-**References:**  
-- [Genesys: Best practices to build and test your natural language understanding](https://help.mypurecloud.com/articles/best-practices-to-build-and-test-your-natural-language-understanding/)
-
 ## 12. Glossary of Related Terms
 
 - **Natural Language Understanding (NLU):**  
@@ -323,4 +287,3 @@ For implementation guides, platform details, and up-to-date best practices, cons
 - [ServiceNow Community Q&A](https://www.servicenow.com/community/developer-forum/how-is-the-nlu-confidence-threshold-calculated/m-p/2142617#M799543)
 
 If you want further detail, code samples, or hands-on configuration guides for a specific NLU platform, refer to the linked documentation and community articles above.
-

@@ -19,7 +19,7 @@ Chat simulators are foundational in AI chatbot and customer service automation p
 - Provide hands-on agent training in a safe, feedback-rich environment.
 - Benchmark bot performance across diverse, complex, or edge-case scenarios.
 
-Platforms like [LivePerson Conversation Simulator](https://www.liveperson.com/conversation-simulator/) and [Botium](https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html) represent state-of-the-art solutions embraced by enterprises for robust conversational AI quality assurance and training.
+Platforms like [LivePerson Conversation Simulator](https://www.liveperson.com/conversation-simulator/) and [Botium](https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html) represent state-of-the-art solutions embraced by enterprises for robust [conversational AI](/en/glossary/conversational-ai/) quality assurance and training.
 
 
 ## Core Functions of a Chat Simulator
@@ -36,7 +36,7 @@ Chat simulators enable the scripting and execution of multi-turn, scenario-based
 
 ### 2. NLU (Natural Language Understanding) Validation
 
-A core capability of chat simulators is to stress-test the AI’s intent recognition and [entity extraction](/en/glossary/entity-extraction/) in both typical and adverse conditions. This includes:
+A core capability of chat simulators is to stress-test the AI’s [intent recognition](/en/glossary/intent-recognition/) and [entity extraction](/en/glossary/entity-extraction/) in both typical and adverse conditions. This includes:
 
 - Evaluating NLU accuracy with varied phrasings, slang, misspellings, and ambiguous inputs.
 - Benchmarking sentiment detection and context retention.
@@ -153,9 +153,6 @@ See [ScienceDirect: A Survey on Chatbots and Large Language Models](https://www.
 - Enable batch execution of thousands of conversations for scalability.
 - Integrate with CI/CD pipelines for continuous QA and deployment gating.
 
-**Reference:**  
-- [Botium Conversational AI Testing Tools](https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html)
-
 
 ## Primary Use Cases
 
@@ -249,11 +246,7 @@ While chat simulators are indispensable, they come with certain challenges:
 - Regularly update scenarios with live customer transcripts and feedback.
 - Combine simulated and live pilot testing.
 - Continuously retrain NLU with real-world data.
-- Use both automated and human-in-the-loop evaluation.
-
-**References:**  
-- [FrugalTesting Chatbot Testing Guide](https://www.frugaltesting.com/blog/chatbot-testing-your-guide-to-accuracy-and-user-experience)  
-- [Botium Conversational AI Testing](https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html)
+- Use both automated and [human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/) evaluation.
 
 
 ## Best Practices for Effective Chat Simulation
@@ -334,4 +327,3 @@ A: By identifying and fixing issues before launch, simulators ensure bots and ag
 
 **Q: What tools are commonly used?**  
 A: [Botium](https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html), [LivePerson Conversation Simulator](https://www.liveperson.com/conversation-simulator/), [DeepEval](https://deepeval.com
-

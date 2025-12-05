@@ -5,7 +5,8 @@ description: "Explore State / Context Memory, the storage mechanisms enabling AI
 keywords: ["State / Context Memory", "AI chatbots", "conversational AI", "persistent storage", "context window", "LLMs"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is State / Context Memory?
@@ -22,7 +23,7 @@ For a deep dive: [Memory and State in LLM Applications – Arize AI](https://ari
 
 State / Context Memory enables:
 
-- **Conversational continuity:** Recall of previous user/system messages so the AI can maintain a coherent dialogue.
+- **[Conversational AI](/en/glossary/conversational-ai/) continuity:** Recall of previous user/system messages so the AI can maintain a coherent dialogue.
 - **Personalization:** Retention of user attributes, preferences, and history for tailored responses.
 - **Workflow efficiency:** Avoids redundant questions, supports multi-step/multi-session tasks, and reduces friction.
 - **Task and ticket tracking:** Ensures ongoing issues or requests can be resumed or referenced across sessions.
@@ -138,8 +139,6 @@ See [IBM: Context Window](https://www.ibm.com/think/topics/context-window).
   - **File storage:** For logs, static files.
   - **Block storage:** Fast, random access.
   - **Object storage:** Scalable, used for unstructured or cloud-native data.
-
-Reference: [TechTarget: Persistent storage](https://www.techtarget.com/searchstorage/definition/Persistent-storage), [GeeksforGeeks: Persistent storage](https://www.geeksforgeeks.org/cloud-computing/what-is-persistent-storage/)
 
 ### Containerization and Cloud
 

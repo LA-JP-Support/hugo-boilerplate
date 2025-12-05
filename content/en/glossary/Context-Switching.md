@@ -257,7 +257,6 @@ Inform colleagues when you can’t switch tasks immediately. Use status indicato
 Explore these resources for further guidance on minimizing the negative impact of context switching in your workflow or systems.
 
 
-**References and Further Reading**  
 - [OpenAI Community](https://community.openai.com/t/dealing-with-context-switching-in-a-conversation-that-uses-embeddings-for-information-retrieval/87836)  
 - [Milvus AI Quick Reference](https://milvus.io/ai-quick-reference/how-do-llms-handle-context-switching-in-conversations)  
 - [Asana Context Switching Guide](https://asana.com/resources/context-switching)  
@@ -268,4 +267,3 @@ Explore these resources for further guidance on minimizing the negative impact o
 
 
 This article is based on evidence and technical documentation from industry leaders and research institutions. For implementation details, workflow integration, or further technical deep-dives, see the linked resources above.
-

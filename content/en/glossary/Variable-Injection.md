@@ -1,6 +1,7 @@
 ---
 title: "Variable Injection"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "variable-injection"
 description: "Variable injection inserts dynamic data into prompts, scripts, or templates for AI chatbots and automation. Understand its syntax, use cases, and critical security risks like prompt injection attacks."
 keywords: ["variable injection", "prompt injection", "AI chatbots", "automation", "LLMs"]
@@ -13,12 +14,6 @@ draft: false
 Variable injection is the process of programmatically inserting dynamic data—such as user input, system variables, or contextual information—into prompts, scripts, queries, or templates. This is done using a specific syntax, such as `{{input}}`, `$variable`, `@variable`, or `%variable%`, depending on the platform or language. Variable injection allows systems to adapt responses and actions to real-time data, which is essential in AI chatbot development, prompt engineering, automation scripts, and application programming.
 
 When a template includes placeholders, these are replaced at runtime with actual values. This enables personalized, context-aware, and interactive AI applications, such as chatbots that greet users by name or scripts that operate with dynamic paths and parameters. Variable injection also brings unique security and engineering considerations, especially in AI and LLM applications, due to the risk of prompt injection attacks.
-
-**References:**  
-- [AWS: Safeguard your generative AI workloads from prompt injections](https://aws.amazon.com/blogs/security/safeguard-your-generative-ai-workloads-from-prompt-injections/)
-- [IBM: Protect Against Prompt Injection](https://www.ibm.com/think/insights/prevent-prompt-injection)
-- [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
-
 ## How Does Variable Injection Work?
 
 Variable injection operates through a structured process:
@@ -79,11 +74,6 @@ SELECT * FROM users WHERE username = 'alice'
 **Template:**  
 - **Syntax:** `@ProductKeyVariable`
 - **Use:** Filtering a data pipeline by a runtime-selected product key.
-
-**References:**  
-- [Prompt Injection 101: Prompt Security](https://www.prompt.security/blog/prompt-injection-101)
-- [Prompt Engineering Guide: IBM](https://www.ibm.com/think/prompt-engineering#605511093)
-
 ## Use Cases in AI Chatbots and Automation
 
 Variable injection is foundational in scenarios where dynamic, context-sensitive responses are required:
@@ -106,10 +96,6 @@ Variable injection is foundational in scenarios where dynamic, context-sensitive
 
 ### 5. Software Configuration and Deployment
 - **Environment Variables:** Injecting deployment-specific [secrets](/en/glossary/environment-variables--secrets-/) or settings into config files.
-
-**References:**  
-- [AWS: Generative AI Security Strategies](https://aws.amazon.com/ai/generative-ai/security/)
-
 ## Security Implications: Prompt Injection Attacks
 
 Variable injection introduces new security risks—most notably, prompt injection attacks in AI and automation contexts. These attacks exploit the fact that user input is incorporated into prompts or scripts, potentially allowing manipulation of system behavior.
@@ -133,11 +119,6 @@ Prompt injection occurs when untrusted user input is injected into prompts in a 
 - Data leakage (e.g., revealing credentials or sensitive info)
 - Execution of unauthorized tasks (e.g., sending emails, modifying records)
 - Bypassing safety and ethical guardrails
-
-**References:**  
-- [Palo Alto Networks: What Is a Prompt Injection Attack?](https://www.paloaltonetworks.com/cyberpedia/what-is-a-prompt-injection-attack)
-- [AWS Blog: Prompt Injection Defense](https://aws.amazon.com/blogs/security/safeguard-your-generative-ai-workloads-from-prompt-injections/)
-
 ### Types of Prompt Injection: Direct and Indirect
 
 #### 1. Direct Prompt Injection
@@ -155,11 +136,6 @@ Malicious prompts are embedded in system memory, persistent storage, or training
 
 #### 4. Multimodal Injection
 Attackers hide malicious prompts in non-text data such as images or audio, targeting multimodal LLMs.
-
-**References:**  
-- [Prompt Injection 101: Prompt Security](https://www.prompt.security/blog/prompt-injection-101)
-- [UnderDefense: Real-World Prompt Injection Example](https://underdefense.com/blog/prompt-injection-real-world-example-from-our-team/)
-
 ### Prompt Injection Techniques and Attack Vectors
 
 **Common Attack Vectors:**
@@ -171,11 +147,6 @@ Attackers hide malicious prompts in non-text data such as images or audio, targe
 
 **Real-World Example:**  
 A chatbot tasked to summarize emails could be tricked if an attacker sends an email with hidden instructions to forward sensitive data.
-
-**References:**  
-- [OWASP Top 10 for LLM](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
-- [Palo Alto Networks: Prompt Injection Attack Examples](https://www.paloaltonetworks.com/cyberpedia/what-is-a-prompt-injection-attack#examples-of-prompt-injection-attacks)
-
 ## Best Practices and Prevention
 
 To implement variable injection safely:
@@ -219,12 +190,6 @@ To implement variable injection safely:
 - Concatenate raw user input with system instructions directly.
 - Allow unchecked variable injection from untrusted sources.
 - Ignore evolving prompt injection and jailbreaking tactics.
-
-**References:**  
-- [AWS: Generative AI Security Strategies](https://aws.amazon.com/ai/generative-ai/security/)
-- [IBM: Prompt Injection Prevention](https://www.ibm.com/think/insights/prevent-prompt-injection)
-- [Prompt Security: Prompt Injection 101](https://www.prompt.security/blog/prompt-injection-101)
-
 ## Related Concepts
 
 - **Prompt Engineering:** Crafting prompts/templates to reliably control LLM outputs ([IBM Prompt Engineering Guide](https://www.ibm.com/think/prompt-engineering#605511093)).
@@ -276,4 +241,3 @@ For in-depth guidance and evolving best practices, consult resources from AWS, I
 - [Prompt Security: Prompt Injection 101](https://www.prompt.security/blog/prompt-injection-101)  
 - [OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/)  
 - [YouTube: Variable Injection Timing Explained](https://www.youtube.com/watch?v=huy7UhIWqKc)
-

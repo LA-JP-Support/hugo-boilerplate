@@ -4,10 +4,16 @@ translationKey: precision-and-recall
 description: Precision and recall are core metrics for evaluating classification and
   information retrieval systems. Precision measures correct positive predictions,
   recall finds all actual positives.
-keywords: ["precision", "recall", "machine learning", "classification metrics", "confusion matrix"]
+keywords:
+- precision
+- recall
+- machine learning
+- classification metrics
+- confusion matrix
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Category: AI Chatbot & Automation
@@ -302,4 +308,3 @@ Precision and recall are foundational for evaluating classification model perfor
 - [EvidentlyAI: Accuracy vs Precision vs Recall](https://www.evidentlyai.com/classification-metrics/accuracy-precision-recall)
 - [GeeksforGeeks: Precision and Recall](https://www.geeksforgeeks.org/machine-learning/precision-and-recall-in-machine-learning/)
 - [scikit-learn: Precision-Recall Curves](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
-

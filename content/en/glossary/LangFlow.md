@@ -1,12 +1,18 @@
 ---
-title: LangFlow
+title: LangFlow Glossary
 translationKey: langflow
 description: LangFlow is an open-source, low-code visual interface for building, testing,
   and deploying AI applications, especially those based on LLMs and LangChain.
-keywords: ["LangFlow", "LLMs", "AI applications", "LangChain", "low-code"]
+keywords:
+- LangFlow
+- LLMs
+- AI applications
+- LangChain
+- low-code
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is LangFlow?
@@ -67,11 +73,6 @@ LangFlow caters to a broad audience, including:
 - **Canvas-based UI:** Build applications by dragging components (LLMs, prompts, databases, APIs, etc.) onto a visual canvas and connecting them to define the data flow.
 - **Low-code/no-code:** Most configuration is accomplished via visual forms and drop-downs; little or no code is required for standard applications.
 - **Live feedback:** Inspect the flow of data and logic at each step, enabling rapid debugging and iteration.
-
-**Source:**  
-[LangFlow: Use the Visual Editor](https://docs.langflow.org/concepts-overview)  
-[Cohorte Visual Guide](https://www.cohorte.co/blog/langflow-a-visual-guide-to-building-llm-apps-with-langchain)
-
 ### Component System
 
 Components are modular nodes that represent discrete steps or resources within your AI workflow.
@@ -92,10 +93,6 @@ Components are modular nodes that represent discrete steps or resources within y
 
 **Component configuration:**  
 Each component exposes parameters and can accept either hard-coded or variable values. Parameters can be overridden at runtime for flexible experimentation.
-
-**Source:**  
-[Component Overview](https://docs.langflow.org/concepts-components)
-
 ### Extensive Integrations
 
 LangFlow provides broad, plug-and-play connectivity:
@@ -105,10 +102,6 @@ LangFlow provides broad, plug-and-play connectivity:
 - **Vector stores:** Pinecone, FAISS, Qdrant, Milvus, Astra DB, Vectara, Redis, MongoDB, and others.
 - **APIs:** Integrate any external API as a tool within your flows.
 - **Custom tools:** Import Python-based tools and develop your own for bespoke requirements.
-
-**Source:**  
-[LangFlow Integrations](https://docs.langflow.org/concepts-components)
-
 ### Export, Import, Collaboration, and Versioning
 
 - **Export flows:** Save flows as JSON files, Python code, or shareable links for use in other projects or environments.
@@ -118,10 +111,6 @@ LangFlow provides broad, plug-and-play connectivity:
 
 **Practical tip:**  
 Use flow export/import to migrate projects between development, staging, and production environments or to share prototypes for stakeholder review.
-
-**Source:**  
-[LangFlow Export/Import Documentation](https://docs.langflow.org/concepts-flows)
-
 ### Real-Time Testing and Playground
 
 - **Playground mode:** Test flows interactively before deploying. The right-side panel switches to a chat interface for live prompts and responses.

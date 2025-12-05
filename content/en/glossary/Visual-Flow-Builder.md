@@ -1,6 +1,7 @@
 ---
 title: "Visual Flow Builder"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "visual-flow-builder"
 description: "Explore Visual Flow Builders, no-code drag-and-drop interfaces for designing, automating, and managing complex workflows and AI processes without writing code."
 keywords: ["Visual Flow Builder", "no-code workflow", "workflow automation", "AI orchestration", "drag-and-drop interface"]
@@ -270,4 +271,3 @@ A: AI nodes or agents analyze data, make decisions, retain context, and adapt wo
 
 **Q: Is there a free version or trial?**  
 A:
-

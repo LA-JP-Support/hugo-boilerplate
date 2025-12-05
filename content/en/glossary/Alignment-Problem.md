@@ -1,6 +1,7 @@
 ---
 title: "Alignment Problem"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "alignment-problem"
 description: "The Alignment Problem in AI is the challenge of ensuring AI systems' goals and behaviors consistently match human values, preferences, and ethical standards, crucial for safe and beneficial AI deployment."
 keywords: ["AI alignment", "misalignment", "AI ethics", "AI safety", "reward hacking"]
@@ -324,4 +325,3 @@ A: A thought experiment illustrating catastrophic misalignment: a superintellige
 - The Alignment Problem is central to AI ethics and safety, demanding both technical and societal solutions.
 - Alignment means encoding human values and intentions into AI, but values are subjective, diverse, and evolving.
 - Misalignment
-

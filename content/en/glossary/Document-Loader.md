@@ -5,7 +5,8 @@ description: "A Document Loader is a software module that automates the ingestio
 keywords: ["Document Loader", "AI pipelines", "LLM", "data ingestion", "LangChain"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is a Document Loader?
@@ -13,10 +14,6 @@ draft: false
 A **Document Loader** is a software module or component that automates the ingestion and transformation of raw data—such as files, web pages, cloud documents, or database entries—into a structured format known as a *Document object*. These objects are optimized for downstream AI tasks, including information retrieval, LLM (Large Language Model) pipelines, vector store indexing, and workflow automation.
 
 Document loaders are built to abstract the complexity of handling diverse, unstructured, or semi-structured content sources. They parse and extract meaningful text, enrich it with contextual metadata, and output standardized, consistent structures regardless of the original file type or data origin. This uniformity is critical for applications like AI chatbots, search engines, and data analysis pipelines, which require predictable and rich input data.
-
-**Reference:**  
-- [LangChain: Document Loaders - Official Documentation](https://docs.langchain.com/oss/python/integrations/document_loaders)
-
 ## Why Are Document Loaders Used?
 
 - **Standardization:**  
@@ -80,10 +77,6 @@ doc = Document(
     id="doc-002"
 )
 ```
-
-**Reference:**  
-- [LangChain: Document object reference](https://reference.langchain.com/python/langchain_core/documents/#langchain_core.documents.base.Document)
-
 ## Types of Document Loaders
 
 Document loaders are classified by the kind of data source or file type they process. This modularity ensures that any data—regardless of origin—can be converted to the same Document object structure.
@@ -140,10 +133,6 @@ Document loaders are classified by the kind of data source or file type they pro
 
 - **Custom Loaders:**  
   Extendable base classes for proprietary or uncommon data sources.
-
-**Reference:**  
-- [Document Loaders by Category - LangChain Docs](https://docs.langchain.com/oss/python/integrations/document_loaders#by-category)
-
 ## How Document Loaders Work: Technical Overview
 
 ### Standard Interfaces: `load()` and `lazy_load()`
@@ -167,10 +156,6 @@ All LangChain-compatible document loaders extend the `BaseLoader` class and must
 
 **Technical Note:**  
 Frameworks like LangChain require both methods for full compatibility, enabling batch and streaming workflows. Custom loaders must ensure both methods are implemented for optimal integration.
-
-**Reference:**  
-- [BaseLoader Interface - LangChain Docs](https://docs.langchain.com/oss/python/integrations/document_loaders#interface)
-
 ### Parameters and Customization
 
 Each loader provides parameters for fine-tuning extraction:
@@ -198,10 +183,6 @@ Each loader provides parameters for fine-tuning extraction:
     - `batch_size` (int): Control memory usage during extraction
 
 Custom loaders may add further parameters, but all should ensure that the Document object’s `metadata` is comprehensive and consistent.
-
-**Reference:**  
-- [LangChain Document Loader Reference](https://docs.langchain.com/oss/python/integrations/document_loaders)
-
 ## Practical Examples
 
 ### Loading PDFs
@@ -292,10 +273,6 @@ from langchain_community.document_loaders import S3DirectoryLoader
 loader = S3DirectoryLoader("s3://my-bucket/documents/")
 documents = loader.load()
 ```
-
-**Reference:**  
-- [Document Loaders: Official Examples](https://docs.langchain.com/oss/python/integrations/document_loaders)
-
 ## Best Practices & Optimization
 
 - **Validate Source Data:**  
@@ -348,10 +325,6 @@ documents = loader.load()
 
 - **Content Moderation:**  
   Ingest chat logs, social media posts, or emails for automated review, filtering, or compliance monitoring.
-
-**Reference:**  
-- [LangChain Document Loaders - Use Cases](https://docs.langchain.com/oss/python/integrations/document_loaders)
-
 ## Troubleshooting & FAQ
 
 **Q: Why isn’t my file loading?**  
@@ -370,4 +343,3 @@ A: Extend the `BaseLoader` class, implement `load()` and `lazy_load()`, and ensu
 A: Use cloud-specific loaders and configure authentication with appropriate credentials or tokens.
 
 **Q
-

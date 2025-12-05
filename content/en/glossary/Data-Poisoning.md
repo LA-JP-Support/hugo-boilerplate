@@ -1,6 +1,7 @@
 ---
 title: "Data Poisoning"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "data-poisoning"
 description: "Data poisoning is a malicious attack where corrupted data is injected into AI/ML training sets to manipulate model behavior, degrade performance, or embed hidden vulnerabilities."
 keywords: ["data poisoning", "AI security", "machine learning", "adversarial attacks", "model integrity"]
@@ -210,4 +211,3 @@ Financial, reputational, and safety harms from poisoning may require costly retr
 - [OWASP LLM Top 10: Data and Model Poisoning](https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/)
 - [Lakera: Introduction to Data Poisoning](https://www.lakera.ai/blog/training-data-poisoning)
 - [Palo Alto Networks: What Is Data Poisoning?](https://www.paloaltonetworks.com/cyberpedia/what
-

@@ -1,6 +1,7 @@
 ---
 title: "Speculative Decoding"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "speculative-decoding"
 description: "Speculative decoding accelerates LLM inference by using a fast draft model to propose tokens, verified by a larger target model, reducing latency while maintaining output quality."
 keywords: ["speculative decoding", "LLM inference", "draft model", "target model", "latency reduction"]
@@ -47,11 +48,6 @@ Speculative decoding is structured as a **draft-then-verify** process:
 
 **Guarantee:**  
 The final output is provably identical to what the target model would produce via naïve, sequential decoding.
-
-**Further Reading:**  
-- [NVIDIA: Speculative Decoding Overview](https://developer.nvidia.com/blog/an-introduction-to-speculative-decoding-for-reducing-latency-in-ai-inference/)
-- [arXiv Paper (PDF)](https://arxiv.org/pdf/2211.17192)
-
 ## Technical Terminology
 
 **Autoregressive Generation:**  
@@ -183,11 +179,6 @@ If average of 2.5 draft tokens are accepted per round, then in 15 ms (1 ms draft
   Speculative decoding is most effective at low batch sizes (latency-critical applications).
 - **Orchestration Overhead:**  
   Efficient communication and scheduling between models is critical.
-
-**References:**  
-- [NVIDIA Blog: Speculative Decoding Math](https://developer.nvidia.com/blog/an-introduction-to-speculative-decoding-for-reducing-latency-in-ai-inference/)
-- [arXiv: Section 3, Theoretical Analysis](https://arxiv.org/pdf/2211.17192)
-
 ## Benefits
 
 - **2–3x+ Latency Reduction:**  
@@ -221,11 +212,6 @@ If average of 2.5 draft tokens are accepted per round, then in 15 ms (1 ms draft
   Requires careful engineering for efficient model interaction and cache management.
 - **Less Effective for Small Models or High Batch Loads:**  
   Speedup is most pronounced for large models and latency-sensitive applications.
-
-**References:**  
-- [NVIDIA EAGLE-3](https://developer.nvidia.com/blog/an-introduction-to-speculative-decoding-for-reducing-latency-in-ai-inference/)
-- [arXiv: Discussion](https://arxiv.org/abs/2211.17192)
-
 ## Implementation Guidance
 
 ### When to Use Speculative Decoding
@@ -267,11 +253,6 @@ params = SamplingParams(max_tokens=100, speculative_tokens=4)
 output = llm.generate("Prompt text", sampling_params=params)
 print(output)
 ```
-
-**References:**  
-- [vLLM Speculative Decoding](https://docs.vllm.ai/en/latest/features/spec_decode/)
-- [BentoML vLLM Example](https://docs.bentoml.com/en/latest/examples/vllm.html)
-
 ## Examples and Use Cases
 
 ### Real-World Deployments
@@ -333,4 +314,3 @@ print(output)
 - [LLM inference](https://bentoml.com/llm/inference-optimization/speculative-decoding)
 - [Speculative execution](https://en.wikipedia.org/wiki/Speculative_execution)
 - [Rejection sampling](https://en.wikipedia.org/wiki/Re
-

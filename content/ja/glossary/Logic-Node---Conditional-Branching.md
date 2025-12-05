@@ -285,19 +285,6 @@ if (user_response == "yes") {
 - [Noca AI Logic Nodes](https://support.noca.ai/logic-nodes/)
 - [HubSpot Chatflows](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows)
 
-## 用語集
-
-- **Conditional Branching(条件分岐):** 条件に基づいてワークフローを分割する行為。
-- **Bot Action Node:** Kore.aiにおけるロジックノードの親ノード([ドキュメント](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/bot-action-node/))。
-- **Quick Replies(クイック返信):** ユーザーが選択するための事前定義されたオプション。分岐と共によく使用されます([HubSpot](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows))。
-- **Instance Properties:** ノード固有のメタデータまたは設定([Kore.aiドキュメント](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-logic-node/#Instance_Properties))。
-- **Split Actions:** TextItにおける分岐メカニズム([TextIt Flows](https://help.textit.com/en/article/introduction-to-flows-1vmh15z/))。
-
-**この記事は役に立ちましたか?**  
-お知らせいただくか、[高度な自動化ノードについてさらに読む](#関連概念と参考資料)。
-
-**[用語集に戻る](#table-of-contents)**
-
 ## ソースリンクと参考資料
 
 - [BotStacks: Use Conditions and Logic Branching](https://docs.botstacks.ai/common-tasks/conversation-design/conditions-logic/)

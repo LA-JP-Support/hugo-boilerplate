@@ -5,7 +5,8 @@ description: "An infinite canvas is a digital workspace that expands indefinitel
 keywords: ["Infinite Canvas", "Digital Workspace", "Node Graph Mapping", "Collaboration Tools", "Data Visualization"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is an Infinite Canvas?

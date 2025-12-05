@@ -26,9 +26,6 @@ term: すいろんレイテンシ
   コンピュータビジョンを使用するモバイルアプリにおいて、画像をキャプチャしてから検出されたオブジェクトラベルが表示されるまでの遅延が推論レイテンシです。
 
 > 参考資料:  
-> - [Ultralytics: Inference Latency - Definition & Importance](https://www.ultralytics.com/glossary/inference-latency)  
-> - [Roboflow: What Is Inference Latency?](https://blog.roboflow.com/inference-latency/)  
-> - [Mirantis: Understanding Machine Learning Inference](https://www.mirantis.com/blog/understanding-machine-learning-inference-a-guide/)
 
 ## 推論レイテンシの文脈:学習と推論の比較
 
@@ -44,9 +41,6 @@ term: すいろんレイテンシ
 - 推論は、学習済みモデルを新しい未知のデータに適用して予測を行うプロセスです。本番環境では、推論はユーザーとビジネスのニーズを満たすために高速でスケーラブル、かつコスト効率的である必要があります。
 
 > 詳細:  
-> - [Edgecore: AI Inference vs. Training](https://edgecore.com/ai-inference-vs-training/)  
-> - [io.net: AI Training vs Inference](https://io.net/blog/ai-training-vs-inference)  
-> - [Nebius: Difference between AI Training and Inference](https://nebius.com/blog/posts/difference-between-ai-training-and-inference)
 
 ## 推論レイテンシパイプライン:時間が費やされる場所
 
@@ -88,9 +82,6 @@ term: すいろんレイテンシ
    OS、ドライバー、フレームワークのオーバーヘッド(スレッドスケジューリング、ランタイム初期化)。
 
 > 包括的な内訳については:  
-> - [Mirantis: ML Inference Pipeline](https://www.mirantis.com/blog/understanding-machine-learning-inference-a-guide/)  
-> - [Roboflow: Inference Latency Pipeline](https://blog.roboflow.com/inference-latency/)  
-> - [Prodia: Master Deployment Strategy for Inference Pipelines](https://blog.prodia.com/post/master-deployment-strategy-for-inference-pipelines-a-guide)
 
 ## レイテンシの種類と原因
 
@@ -139,8 +130,6 @@ term: すいろんレイテンシ
 - **ネットワーク転送:** クラウドベースの推論はネットワークラウンドトリップを追加します。
 
 > パフォーマンスチューニングの詳細:  
-> - [NVIDIA: Think SMART for AI Inference Performance](https://blogs.nvidia.com/blog/think-smart-optimize-ai-factory-inference-performance/)  
-> - [AWS: Practical Guide to Bedrock Latency-Optimized Inference](https://aws.amazon.com/blogs/machine-learning/optimizing-ai-responsiveness-a-practical-guide-to-amazon-bedrock-latency-optimized-inference/)
 
 ## 実世界の例とユースケース
 
@@ -185,8 +174,6 @@ term: すいろんレイテンシ
 - 代表的なバッチサイズとデプロイメントハードウェアでベンチマークを実施します。
 
 > 測定の詳細:  
-> - [AWS: Metrics for LLM Latency](https://aws.amazon.com/blogs/machine-learning/optimizing-ai-responsiveness-a-practical-guide-to-amazon-bedrock-latency-optimized-inference/)  
-> - [NVIDIA: Inference Performance Optimization](https://blogs.nvidia.com/blog/think-smart-optimize-ai-factory-inference-performance/)
 
 ## レイテンシを削減する最適化戦略
 
@@ -216,9 +203,6 @@ term: すいろんレイテンシ
 - **負荷分散:** ボトルネックを回避するためにリクエストを均等に分散します。
 
 > 詳細ガイド:  
-> - [Prodia: Inference Pipeline Deployment Strategies](https://blog.prodia.com/post/master-deployment-strategy-for-inference-pipelines-a-guide)  
-> - [NVIDIA: Think SMART](https://blogs.nvidia.com/blog/think-smart-optimize-ai-factory-inference-performance/)  
-> - [Roboflow: Model Optimization](https://blog.roboflow.com/inference-latency/)
 
 ## デプロイメントシナリオとハードウェアの考慮事項
 
@@ -236,8 +220,6 @@ term: すいろんレイテンシ
 - **NPU:** モバイル/エッジでの低消費電力、高速推論に特化。
 - **CPU:** 柔軟ですが、ディープラーニングには最も遅い。
 
-> - [Roboflow: AI Hardware Accelerators](https://roboflow.com/hardware?ref=blog.roboflow.com)
-> - [NVIDIA: AI Inference Glossary](https://www.nvidia.com/en-us/glossary/ai-inference/)
 
 ## トレードオフ:レイテンシ、スループット、コスト
 

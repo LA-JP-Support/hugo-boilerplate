@@ -66,37 +66,21 @@ By industry, adoption started early in major companies in e-commerce, aviation, 
 
 Salesforce is revolutionizing the traditional chatbot concept with{{< tooltip text="Fully autonomous AI agent capable of understanding and acting on a wide range of service issues without pre-programming" >}}Einstein Service Agent{{< /tooltip >}} announced in 2024. At Iron Mountain, Einstein AI implementation achieved an 80% close rate for generative AI responses, with 76% of AI-generated answers requiring no editing. Additionally, repeat calls decreased by 8%, and 85% of service agents rated AI responses as "extremely useful, contextual, and accurate."
 
-**References:**
-- [Iron Mountain Case Study - Einstein AI Implementation](https://www.salesforce.com/customer-stories/iron-mountain-ai-faster-automation/)
-- [Salesforce Einstein Service Agent Official Announcement](https://www.salesforce.com/news/stories/einstein-service-agent-announcement/)
-
 ### 2. Intuit: AI-powered Financial Support Automation
 
 Intuit leveraged Amazon Connect to build an integrated customer contact center. During tax season, they scale from 6,000 to 11,000 agents according to demand, completing deployment in 2 weeks instead of the traditional 6 months. They process 275 million minutes of customer interactions annually, achieving accurate call transcription and [sentiment analysis](/en/glossary/sentiment-analysis/) through{{< tooltip text="Machine learning-powered call analysis service" >}}Contact Lens for Amazon Connect{{< /tooltip >}}.
-
-**Reference:**
-- [Intuit Case Study - Amazon Connect Implementation](https://aws.amazon.com/solutions/case-studies/intuit-contact-center-case-study/)
 
 ### 3. Joyful Hands (Vietnam - Beauty & Health Products Startup)
 
 Hanoi-based beauty and health products startup **Joyful Hands** faced challenges handling customer inquiries in Vietnamese, Thai, and English. They implemented **BotStar's multilingual AI chatbot** to establish automated response capabilities in each language. As a result,{{< tooltip text="Percentage of customers who add items to cart but leave without purchasing" >}}Cart Abandonment Rate{{< /tooltip >}} **decreased by 35%**, automated inquiry handling improved **from 55% to 89%**, and positive customer reviews increased regarding response speed and conversation ease.
 
-**Reference:**
-- [Case Study 1: Multilingual Chatbot Boosts Cross-Border E-Commerce](https://nineten.ai/ai-chatbots-for-smes-in-southeast-asia-challenges-and-opportunities/)
-
 ### 4. Bali Bliss Homestay (Indonesia - Small Accommodation Business)
 
 Bali Bliss Homestay, a 5-room guesthouse in Bali, Indonesia, faced challenges with delayed responses to international booking inquiries due to time differences and staff unavailability. They developed a WhatsApp chatbot with a local company to automate booking responses, directions, facility FAQ answers, and post-stay feedback collection. This implementation enabled instant booking confirmations even during staff absence, improved inquiry-to-booking conversion rate by 21%, and enhanced customer satisfaction including international guests through rapid responses.
 
-**Reference:**
-- [Case Study 2: WhatsApp Chatbot Transforms Guest Experience in Travel](https://nineten.ai/ai-chatbots-for-smes-in-southeast-asia-challenges-and-opportunities/)
-
 ### 5. Procosmet (Italy - Hair Care Products Company)
 
 Italian hair care manufacturer Procosmet faced increasing customer support burdens with order cancellations, changes, and refund requests due to business expansion, resulting in delayed responses and long customer wait times. They implemented Tidio's AI chatbot (Lyro AI agent) in their website live chat to automate and expedite inquiry handling. Results included a 23% sales increase, over 100 new leads per month, chatbot-driven newsletter open rates of 18-22%, single campaign{{< tooltip text="Return on Investment - indicator of profit gained relative to investment" >}}ROI{{< /tooltip >}} exceeding 1000 euros, and customer feedback ratings improving from 3.8 to 4.7 out of 5.
-
-**Reference:**
-- [12 Companies Using Chatbots for AI-Generated Customer Service](https://www.tidio.com/blog/companies-that-use-ai-generated-customer-support/#procosmet)
 
 #### Common Points and Differentiation Factors
 

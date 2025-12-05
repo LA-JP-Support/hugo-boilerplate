@@ -5,7 +5,8 @@ description: "JSON Path is a query syntax for extracting, searching, and manipul
 keywords: ["JSON Path", "JSON data", "query syntax", "data extraction", "API testing"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What is JSON Path?
@@ -33,12 +34,6 @@ JSON Path is a query language designed for navigating, extracting, and evaluatin
 $.user.id
 // Output: 123
 ```
-
-**References:**  
-- [RFC 9535: JSONPath Standard](https://datatracker.ietf.org/doc/html/rfc9535)  
-- [SmartBear JSONPath Syntax Documentation](https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html)  
-- [JSONPath Online Evaluator](https://jsonpath.com/)
-
 ## Why Use JSON Path?
 
 JSON Path dramatically simplifies extracting or validating data within deeply nested JSON documents. It enables you to:
@@ -55,11 +50,6 @@ JSON Path dramatically simplifies extracting or validating data within deeply ne
 - **Database Integration:** Query JSON columns in databases (SQL Server, PostgreSQL, MongoDB).
 - **Configuration Management:** Retrieve or update settings in JSON config files.
 - **AI Chatbots:** Parse user attributes, intents, or message history in JSON-formatted conversations.
-
-**References:**  
-- [ToolsQA: JSONPath and Query JSON Using JSONPath](https://toolsqa.com/rest-assured/jsonpath-and-query-json-using-jsonpath/)  
-- [Curiosity Software: JSONPath Documentation](https://knowledge.curiositysoftware.ie/docs/jsonpath-extracting-values-from-json)
-
 ## JSON Path Syntax and Operators
 
 ### Core Syntax Elements
@@ -110,8 +100,6 @@ JSON Path expressions consist of selectors and operators to traverse and filter 
 #### 11. **Case Sensitivity**
 - JSON Path is case-sensitive for property names and values.
 
-**Reference:** [RFC 9535 Syntax and Examples](https://datatracker.ietf.org/doc/html/rfc9535#section-2)
-
 ## JSON Path Syntax Cheat Sheet
 
 | Operator           | Description                                          | Example                                |
@@ -126,10 +114,6 @@ JSON Path expressions consist of selectors and operators to traverse and filter 
 | `[?()]`            | Filter expression                                    | `$.books[?(@.price < 10)]`             |
 | `@`                | Current object in filter                             | `@.price > 20`                         |
 | `*`                | Wildcard (all keys or values at this level)          | `$.store.*`                            |
-
-**References:**  
-- [JSONPath Syntax | SmartBear](https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html#jsonpath-notation)
-
 ## Practical Examples
 
 **Sample JSON:**
@@ -228,10 +212,6 @@ JSON Path expressions consist of selectors and operators to traverse and filter 
    $..price
    // Output: [8.95, 12.99, 8.99, 22.99, 19.95, 10]
    ```
-
-**References:**  
-- [SmartBear JSONPath Syntax: Examples](https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html#examples)
-
 ## JSON Path Operators and Filters (Advanced)
 
 ### Supported Operators ([SmartBear Documentation](https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html#filters))
@@ -300,13 +280,6 @@ JSON Path expressions consist of selectors and operators to traverse and filter 
   ```javascript
   jsonpath.value(config, '$.env.mode', 'production');
   ```
-
-**References:**  
-- [JSONPath in JavaScript: dchester/jsonpath](https://github.com/dchester/jsonpath)  
-- [Python: h2non/jsonpath-ng](https://github.com/h2non/jsonpath-ng)  
-- [Java: json-path/JsonPath](https://github.com/json-path/JsonPath)  
-- [PHP: Flow-Communications/JSONPath](https://github.com/Flow-Communications/JSONPath)
-
 ## Comparison to XPath
 
 | Feature         | JSON Path           | XPath         |
@@ -320,10 +293,6 @@ JSON Path expressions consist of selectors and operators to traverse and filter 
 
 - JSON Path is for JSON, XPath is for XML.
 - JSON Path lacks parent/sibling navigation found in XPath.
-
-**References:**  
-- [RFC 9535 - JSONPath Standard](https://datatracker.ietf.org/doc/html/rfc9535)
-
 ## JSON Path in Code: Multi-Language Examples
 
 ### JavaScript (Node.js)
@@ -380,4 +349,3 @@ print_r($titles->data());
 
 - **Strict vs. Lax Mode:** Some implementations (e.g., SQL Server) offer strict/lax modes for error handling of missing paths.
 - **Bracket Not
-

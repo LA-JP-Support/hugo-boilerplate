@@ -293,27 +293,6 @@ print(ask_question("What are the advantages of 4-bit quantization in LLMs?"))
 - **BitsAndBytes:**  
   LLMと4ビット/8ビット量子化に焦点を当てています:[BitsAndBytes Quantization](https://huggingface.co/docs/transformers/en/quantization/bitsandbytes)
 
-## 用語集:主要な量子化用語
-
-- **ビット幅:** 各値を表すために使用されるビット数(例:INT8の場合は8)。
-- **キャリブレーションデータセット:** 量子化のためのアクティベーション範囲を推定するために使用される代表的なサンプルのセット。
-- **スケール(S):** 浮動小数点範囲を整数範囲にマッピングするために使用される係数。
-- **ゼロポイント(Z):** 浮動小数点空間のゼロに対応する整数値。
-- **動的量子化:** 推論時に決定される量子化パラメータ。
-- **静的量子化:** キャリブレーションを使用して事前計算された量子化パラメータ。
-- **量子化認識学習(QAT):** シミュレートされた量子化効果を使用してモデルを学習すること。
-- **チャネル単位の量子化:** 各チャネルに個別の量子化パラメータ。
-- **学習後量子化(PTQ):** 事前学習済みモデルに量子化を適用すること。
-- **整数のみの量子化:** すべての操作(累積を含む)が整数演算を使用すること。
-- **均一/非均一量子化:** 量子化区間が等しいサイズかどうか。
-- **アフィン量子化:** スケールとゼロポイントを使用した浮動小数点から整数への線形マッピング。
-- **対称量子化:** ゼロを中心とした整数範囲。
-- **非対称量子化:** 必ずしもゼロを中心としない整数範囲。
-
-**さらなる読み物:**  
-- [Hugging Face Quantization Glossary](https://huggingface.co/docs/optimum/en/concept_guides/quantization)  
-- [arXiv: Quantization for LLMs](https://arxiv.org/abs/2411.02530)
-
 ## 参考文献とさらなる読み物
 
 - [Hugging Face Optimum: Quantization Guide](https://huggingface.co/docs/optimum/en/concept_guides/quantization)

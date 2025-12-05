@@ -5,7 +5,8 @@ description: "Human-Agent Teaming (HAT) is a collaborative paradigm where AI and
 keywords: ["Human-Agent Teaming", "AI collaboration", "Human-AI Teaming", "Artificial Intelligence", "Team dynamics"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## 1. What is Human-Agent Teaming?
@@ -17,11 +18,6 @@ draft: false
 - **Bidirectional Control:** Authority and initiative flexibly transfer based on task needs.
 - **Complementarity:** Each party leverages its strengths to counterbalance the other's limitations.
 - **Shared Goals:** Continuous coordination to accomplish common objectives.
-
-**Further Reading:**  
-- [Emergent Mind – Human-Agent Teaming Overview](https://www.emergentmind.com/topics/human-agent-teaming)  
-- [Frontiers in AI – Defining Human-AI Teaming the Human-Centered Way](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1250725/full)
-
 ## 2. Human-Agent Teaming: How is it Used?
 
 ### 2.1. Workflow and Control Flow
@@ -48,10 +44,6 @@ Key capabilities of effective HAT systems:
 - **Interpredictability:** Team members anticipate each other’s behaviors.
 - **Proactive Communication:** Agents initiate communication when contextually necessary.
 - **Directability:** Formal work agreements encode enforceable commitments and prohibitions.
-
-**Reference:**  
-[Pluggable Social Artificial Intelligence for Enabling Human-Agent Teaming](https://www.emergentmind.com/papers/1909.04492)
-
 ## 3. Theoretical and Technical Foundations
 
 ### 3.1. Foundational Dimensions
@@ -78,10 +70,6 @@ A modular middleware architecture that enables HAT functionalities:
 #### Adaptive Architectures for Real-Time Teaming
 
 Adaptive agents infer human intent in real-time, eschewing static models in favor of policy libraries and similarity metrics. For example, in the [Team Space Fortress](https://sites.pitt.edu/~cmlewis/pubs/tianwei-pair.pdf) testbed, agents adapt to human teammates by selecting complementary policies from a library, using cross-entropy-based similarity to human actions, and switching strategies in real-time. This approach generalizes to diverse human policies and outperforms static agents in dynamic, real-world scenarios.
-
-**Reference:**  
-[Adaptive Agent Architecture for Real-time Human-Agent Teaming (PDF)](https://sites.pitt.edu/~cmlewis/pubs/tianwei-pair.pdf)
-
 ## 4. Human, Organizational, and Socio-Technical Factors
 
 ### 4.1. Trust Calibration and Transparency
@@ -101,10 +89,6 @@ HAT systems in ethically sensitive domains must support emotional engagement and
 - **Team Training:** Cross-training enhances interpredictability.
 - **Communication:** Modalities should match context and cognitive load.
 - **Organizational Adaptation:** Implementing HAT may require redefined workflows and culture change.
-
-**Reference:**  
-[Frontiers in Artificial Intelligence: Human-AI Teaming Review](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1250725/full)
-
 ## 5. Formalization and Protocols
 
 ### 5.1. Work Agreements and Deontic Logic
@@ -131,10 +115,6 @@ Several UAVs with autonomous navigation and object detection support a human bas
 - **Proactive Communication:** ProCom module modulates information flow.
 - **Dynamic Control:** Control shifts based on mission state.
 - **Human-Interface:** Multimodal avatars minimize distraction.
-
-**Reference:**  
-[Pluggable Social Artificial Intelligence for Enabling Human-Agent Teaming](https://www.emergentmind.com/papers/1909.04492)
-
 ### 6.2. Customer Service
 
 AI chatbots handle simple queries, escalating complex or sensitive matters to human agents. AI may continue supporting by providing summaries or retrieving documents.
@@ -143,10 +123,6 @@ AI chatbots handle simple queries, escalating complex or sensitive matters to hu
 - **Human Escalation Path:** Handles complex, nuanced queries.
 - **Copilot Mode:** AI assists even after handoff.
 - **Continuous Learning:** Feedback improves AI models.
-
-**Reference:**  
-[Kommunicate – Human-AI Collaboration in Customer Service](https://www.kommunicate.io/blog/human-ai-collaboration/)
-
 ### 6.3. Healthcare
 
 AI assists with diagnosis, but clinicians provide final judgment and oversight.
@@ -229,12 +205,3 @@ Human-Agent Teaming transforms automation from tool-based to partnership-driven 
 [Human-Machine Teaming](https://www.emergentmind.com/topics/human-machine-teaming) | [Human-AI Collaboration Systems](https://www.emergentmind.com/topics/human-ai-collaboration-systems) | [Hybrid Intelligence](https://www.emergentmind.com/topics/hybrid-intelligence)
 
 For technical deep dives, case studies, and further exploration, see the references and related topics above. 
-
-**References and URLs Used:**
-- [Emergent Mind – Human-Agent Teaming Overview](https://www.emergentmind.com/topics/human-agent-teaming)
-- [Frontiers in AI – Defining Human-AI Teaming the Human-Centered Way](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1250725/full)
-- [Pluggable Social Artificial Intelligence for Enabling Human-Agent Teaming (2019)](https://www.emergentmind.com/papers/1909.04492)
-- [Kommunicate – Human-AI Collaboration in Customer Service](https://www.kommunicate.io/blog/human-ai-collaboration/)
-- [YouTube – Human–AI Teaming Webinar](https://www.youtube.com/watch?v=zQKw47Yn3ys)
-- [Adaptive Agent Architecture for Real-time Human-Agent Teaming (PDF)](https://sites.pitt.edu/~cmlewis/pubs/tianwei-pair.pdf)
-

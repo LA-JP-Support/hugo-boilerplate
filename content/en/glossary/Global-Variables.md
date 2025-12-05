@@ -5,7 +5,8 @@ description: "Global variables are accessible from any node in a program or auto
 keywords: ["Global Variables", "AI Chatbot", "Automation Platform", "Programming Variables", "Variable Scope"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Introduction and Definition
@@ -135,7 +136,6 @@ int main() {
 2. **Set Scope to Global:**  
    Configure the variable's scope as "global" or "bot-level" for cross-flow access.
 3. **Access in Any Node:**  
-   Reference the global variable from any logic block, topic, or automation step.
 
 #### Microsoft Copilot Studio Example
 
@@ -145,7 +145,6 @@ int main() {
   3. The variable name is prefixed (e.g., `Global.UserName`).
   4. The variable can now be accessed or modified in any topic or automation node.
 - To use a global variable:
-  - Reference it directly in messages, questions, or logic branches.
   - Use the variable picker or type the prefixed name.
 - To set from external sources:
   - Accept values via query strings or API calls at the start of the conversation.
@@ -370,4 +369,3 @@ int main() {
 
 **Summary:**  
 Global variables provide a mechanism for sharing and persisting information across multiple parts of automation systems, programming languages, and AI chatbot platforms. While they enable dynamic, context-aware, and efficient flows, careful management is essential to avoid side effects and maintain code quality. For further technical depth, see the linked references and platform documentation.
-

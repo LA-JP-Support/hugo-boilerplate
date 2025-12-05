@@ -1,6 +1,7 @@
 ---
 title: "Batch Processing"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "batch-processing"
 description: "Batch processing is a data approach where large volumes of data are collected and processed in groups over set periods. Ideal for high-throughput AI, analytics, and business operations."
 keywords: ["batch processing", "stream processing", "AI infrastructure", "data processing", "ETL"]
@@ -18,8 +19,6 @@ Batch processing is a data processing approach where large volumes of data are c
   - Ideal for repetitive, high-volume workloads.
 
 **Example:** Payroll calculations, nightly transaction reconciliations, bulk ETL (Extract, Transform, Load) jobs, and large-scale AI inference tasks.
-
-**Source:** [Tetrate: What is Batch Processing?](https://tetrate.io/learn/ai/batch-processing)
 
 ## **How Does Batch Processing Work?**
 
@@ -47,8 +46,6 @@ Batch processing follows a systematic, step-by-step workflow, designed for effic
 
 *Diagram: Data flows from multiple sources into a staging area, is grouped and processed by a batch engine, and outputs are written to storage or reporting systems.*
 
-**Source:** [Atlan: Batch Processing in Data Pipelines](https://atlan.com/batch-processing-vs-stream-processing/), [Tetrate: Batch Accumulation and Scheduling](https://tetrate.io/learn/ai/batch-processing#key-components-of-batch-processing)
-
 ## **Common Components of a Batch Processing System**
 
 | Component             | Description                                                         | Examples                                      |
@@ -58,8 +55,6 @@ Batch processing follows a systematic, step-by-step workflow, designed for effic
 | **Batch Engine**      | Executes batch jobs; manages workflow logic                         | Apache Spark, Hadoop MapReduce, Databricks    |
 | **Monitoring Tools**  | Tracks job status, errors, and performance                          | Prometheus, Grafana, Splunk, custom dashboards         |
 | **Output Handlers**   | Manages output delivery and storage                                 | Data warehouses, file exports, BI tools       |
-
-**Source:** [Mirantis: AI Infrastructure Components](https://www.mirantis.com/blog/build-ai-infrastructure-your-definitive-guide-to-getting-ai-right/), [Tetrate: Key Components of Batch Processing](https://tetrate.io/learn/ai/batch-processing#key-components-of-batch-processing)
 
 ## **Benefits and Advantages of Batch Processing**
 
@@ -83,8 +78,6 @@ Batch processing follows a systematic, step-by-step workflow, designed for effic
 ### **Supports Complex Transformations**
 - Enables sophisticated logic and multi-step computations on complete datasets.
 
-**Source:** [Tetrate: Batch Processing Benefits](https://tetrate.io/learn/ai/batch-processing#benefits-of-batch-processing), [Rivery: Batch vs. Stream Processing](https://rivery.io/blog/batch-vs-stream-processing-pros-and-cons-2/)
-
 ## **Limitations and Challenges of Batch Processing**
 
 ### **Latency & Data Freshness**
@@ -106,8 +99,6 @@ Batch processing follows a systematic, step-by-step workflow, designed for effic
 
 **Note:** Many modern architectures blend batch and stream processing to balance efficiency and responsiveness.
 
-**Source:** [Atlan: Pros and Cons](https://atlan.com/batch-processing-vs-stream-processing/#the-pros-and-cons-of-batch-processing-and-stream-processing), [Monte Carlo Data: Batch vs Stream Processing](https://www.montecarlodata.com/blog-stream-vs-batch-processing/)
-
 ## **Batch Processing vs. Stream Processing: A Direct Comparison**
 
 | Feature                | **Batch Processing**                                               | **Stream Processing**                                   |
@@ -123,8 +114,6 @@ Batch processing follows a systematic, step-by-step workflow, designed for effic
 
 **Key Takeaway:**  
 Batch is best for large, periodic data jobs where immediacy isn’t critical. Stream is essential for low-latency, time-sensitive applications.
-
-**Sources:** [Rivery: Batch vs. Stream Processing](https://rivery.io/blog/batch-vs-stream-processing-pros-and-cons-2/), [Atlan: Batch vs. Stream Table](https://atlan.com/batch-processing-vs-stream-processing/#batch-processing-vs-stream-processing-a-tabular-comparison), [Monte Carlo Data: Comparison](https://www.montecarlodata.com/blog-stream-vs-batch-processing/)
 
 ## **Common Use Cases and Real-World Examples**
 
@@ -162,8 +151,6 @@ Batch processing is widely used in industries and enterprise applications where 
 
 **Example:**  
 A bank processes all transactions from the previous day in a nightly batch job, updating balances and generating regulatory reports.
-
-**Sources:** [Tetrate: Batch Processing in AI](https://tetrate.io/learn/ai/batch-processing), [Atlan: Practical Use Cases](https://atlan.com/batch-processing-vs-stream-processing/#practical-use-casesexamples-for-batch-processing-and-stream-processing-where-do-you-use-them)
 
 ## **Batch Processing in Modern AI Infrastructure**
 
@@ -205,12 +192,6 @@ Distributed frameworks (e.g., Apache Spark, Hadoop, AWS Batch, Databricks) allow
 
 - **Event-Driven Batch Processing:**  
   Trigger batches by events (e.g., data threshold reached) to improve responsiveness.
-
-**Further Reading:**  
-- [Splunk: Introduction to Batch Processing](https://www.splunk.com/en_us/blog/learn/batch-processing.html)  
-- [Confluent: Batch Processing](https://www.confluent.io/learn/batch-processing/)  
-- [Talend: Batch Processing Guide](https://www.talend.com/resources/batch-processing/)
-
 ## **When to Choose Batch Processing**
 
 Batch is best when:
@@ -232,8 +213,6 @@ Batch is best when:
 
 **Decision Guidance:**  
 If your workload needs immediate response, always-fresh data, or powers customer-facing apps, consider stream or hybrid processing.
-
-**Source:** [Atlan: When to Use Batch](https://atlan.com/batch-processing-vs-stream-processing/)
 
 ## **Batch vs. Stream Processing: At-a-Glance Table**
 
@@ -316,4 +295,3 @@ A hybrid approach: small batches processed at frequent intervals, offering lower
 - [Monte Carlo Data: Batch vs Stream Processing](https://www.montecarlodata.com/blog-stream-vs-batch-processing/)  
 
 For further learning, visit the above links and explore hybrid architectures that combine batch and stream processing to optimize your AI and data-driven strategies.
-

@@ -3,20 +3,21 @@ title: Multi-Turn Conversation
 translationKey: multi-turn-conversation
 description: Learn about multi-turn conversations in AI chatbots and automation. Understand
   how AI systems manage context, state, and multiple exchanges for complex tasks.
-keywords: ["multi-turn conversation", "AI chatbot", "conversational AI", "dialogue management", "context retention"]
+keywords:
+- multi-turn conversation
+- AI chatbot
+- conversational AI
+- dialogue management
+- context retention
 category: General
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## 1. Definition: What Is a Multi-Turn Conversation?
 
 A **multi-turn conversation** is a dialog between a user and an AI system, such as a chatbot or [virtual assistant](/en/glossary/virtual-assistant/), where the interaction consists of multiple exchanges or "turns". Each turn is a pair of user input and system response. Multi-turn conversations allow the AI to handle scenarios where information must be collected or clarified across several steps to achieve a goal (e.g., booking travel, troubleshooting, or onboarding). Unlike single-turn interactions, the system must remember and use information from previous turns, manage conversational state, and adapt to ambiguity or interruptions.
-
-**References:**
-- [Microsoft Learn - Multi-turn conversations](https://learn.microsoft.com/en-us/azure/ai-services/qnamaker/how-to/multi-turn)
-- [OpenAI Developer Community - Multi-turn best practice](https://community.openai.com/t/multi-turn-conversation-best-practice/282349)
-
 <a name="importance"></a>
 ## 2. Why Multi-Turn Conversation Matters
 
@@ -32,11 +33,6 @@ Multi-turn conversations are required for realistic, helpful, and human-like aut
 - Improved customer satisfaction (CSAT), as measured in user studies ([see research summary](https://arxiv.org/abs/2505.06120))
 - More robust automation (bots can guide users through complex flows)
 - Human-like digital experiences
-
-**References:**
-- [PolyAI: What multi-turn conversations are & why they matter](https://poly.ai/blog/multi-turn-conversations-what-are-they-and-why-do-they-matter-for-your-customers/)
-- [DataStudios: Multi-Turn Dialogue Explained](https://www.datastudios.org/post/how-chatbots-handle-follow-up-questions-multi-turn-dialogue-explained)
-
 <a name="how-it-works"></a>
 ## 3. How Multi-Turn Conversations Work
 
@@ -76,10 +72,6 @@ Bot: Your flight has been booked. Confirmation sent to your email.
 - The chatbot retains the destination and date across multiple turns.
 - If the user gave ambiguous input ("Book for Friday"), the bot could clarify ("Do you mean this Friday or next Friday?").
 - If the user changed their mind ("Actually, make that Paris"), the system updates context and continues the flow.
-
-**Reference:**  
-[Retell AI Glossary: Multi-Turn Conversation](https://www.retellai.com/glossary/multi-turn-conversation)
-
 <a name="usecases"></a>
 ## 4. Practical Use Cases
 
@@ -100,10 +92,6 @@ Bot: Which order would you like to cancel?
 User: The dish soap order.
 Bot: Done. The dish soap order is canceled, and your money was refunded.
 ```
-
-**Reference:**  
-[Sendbird: What are multi-turn conversations?](https://sendbird.com/blog/what-are-multi-turn-conversations)
-
 <a name="implementation"></a>
 ## 5. Technical Foundations & Implementation
 
@@ -117,28 +105,16 @@ Bot: Done. The dish soap order is canceled, and your money was refunded.
 
 - Use a [state machine](/en/glossary/state-machine/), flowchart, or story-based system to track the user's position in the conversation and trigger relevant prompts.
 - Supports non-linear flows: users may ask clarifying questions, change their mind, or interject new requests.
-
-**Reference:**  
-[Microsoft Learn: Multi-turn conversations - QnA Maker](https://learn.microsoft.com/en-us/azure/ai-services/qnamaker/how-to/multi-turn)
-
 ### <a name="slot-filling"></a>Slot Filling
 
 - Define required "slots" for each task (e.g., destination, date, seat class for flight booking).
 - The bot prompts for missing slots, validates entries, and confirms when all are complete.
 - Popular frameworks (Dialogflow, Rasa, Lex) provide built-in slot filling and validation.
-
-**Reference:**  
-[Rasa Slot Filling Docs](https://rasa.com/docs/rasa/forms/)
-
 ### <a name="error-recovery"></a>Error Recovery
 
 - Detects ambiguous or inconsistent responses and prompts for clarification.
 - Handles interruptions (user asks a new question mid-flow) by pausing, branching, or restarting as appropriate.
 - Implements context expiry to avoid acting on stale or irrelevant information.
-
-**Reference:**  
-[Maxim AI: Ensuring Consistency in Multi-Turn AI](https://www.getmaxim.ai/articles/how-to-ensure-consistency-in-multi-turn-ai-conversations/)
-
 ### <a name="kb-structuring"></a>Knowledge Base Structuring
 
 - Hierarchical structuring (headings/subheadings) enables follow-up prompts and logical flow.
@@ -173,9 +149,6 @@ Multi-turn dialogue systems often use API requests with conversation state in th
   ]
 }
 ```
-**Reference:**  
-[Microsoft QnA Maker API Docs](https://learn.microsoft.com/en-us/azure/ai-services/qnamaker/how-to/multi-turn)
-
 <a name="challenges"></a>
 ## 6. Common Challenges
 
@@ -272,4 +245,3 @@ Multi-turn conversation is foundational for AI chatbots and automation handling 
 - [PromptLayer Blog: Evaluating Multi-Turn AI](https://blog.promptlayer.com/best-practi-to-evaluate-back-and-forth-conversational-ai-in-promptlayer/)
 
 *This glossary is based on in-depth technical documentation and current best practices from Microsoft, OpenAI, Rasa, PromptLayer, Sendbird, Maxim AI, and other leading sources. All referenced links provide further guidance, tutorials, and real-world examples for building effective multi-turn conversational systems.*
-

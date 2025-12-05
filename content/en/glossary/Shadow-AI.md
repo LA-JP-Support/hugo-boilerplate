@@ -1,6 +1,7 @@
 ---
 title: Shadow AI
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: shadow
 description: Shadow AI refers to the unsanctioned use of generative AI tools by employees,
   posing significant risks to data security, compliance, and intellectual property.
@@ -112,11 +113,6 @@ Shadow AI exposes organizations to four primary classes of risk:
 ### 4. Operational and Security Blind Spots
 - **Lack of Visibility:** Traditional security tools may not detect browser-based or embedded AI features.
 - **Shadow SaaS Proliferation:** Employees use AI tools across devices and cloud services, complicating monitoring and response.
-
-**Source:**  
-- [IBM: Risks of Shadow AI](https://www.ibm.com/think/topics/shadow-ai)  
-- [Zscaler: Risks and Challenges Associated with Shadow AI](https://www.zscaler.com/zpedia/what-is-shadow-ai#risks-and-challenges-associated-with-shadow-ai)
-
 ## Real-World Incidents and Examples
 
 - **Samsung Source Code Leak:** Samsung engineers pasted proprietary code into ChatGPT for debugging, risking future exposure ([PCMag](https://www.pcmag.com/news/samsung-software-engineers-busted-for-pasting-proprietary-code-into-chatgpt)).
@@ -229,4 +225,3 @@ A: No. Bans often drive employees to seek unsanctioned tools, increasing risk. A
 
 | Dimension            | Description/Details                                                                                  |
 |----------------------
-

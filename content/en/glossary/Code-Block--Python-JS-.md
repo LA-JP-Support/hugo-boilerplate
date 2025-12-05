@@ -277,4 +277,3 @@ for (let i = 0; i < 3; i++) {
 A code block in Python or JavaScript is an essential programming construct grouping statements for unified execution—via indentation in Python and curly braces in JavaScript. In automation and chatbot platforms, code block nodes empower developers with the flexibility to execute custom logic, process data, and integrate with APIs beyond built-in workflow components. Adhering to syntax and formatting best practices is crucial for robust, maintainable, and readable code, especially in collaborative and automated environments.
 
 For detailed implementation, always refer to the official documentation linked above.
-

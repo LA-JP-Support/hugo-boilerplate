@@ -5,7 +5,8 @@ description: "An iterator or for-each construct processes items in a list or col
 keywords: ["iterator", "for-each loop", "collection processing", "workflow automation", "programming concepts"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What Is an Iterator / For-Each?
@@ -117,7 +118,6 @@ for number in Counter():
   Use for loops for most iteration tasks.
 - **Pitfall:**  
   Modifying a collection during iteration can cause errors or unexpected results.
-- **Reference:**  
   [GeeksforGeeks: Python Iterables vs Iterators](https://www.geeksforgeeks.org/python/python-difference-iterable-iterator/)
 
 ### JavaScript
@@ -190,7 +190,6 @@ for (const num of genNumbers()) {
   Iterators are usually consumed after one complete loop.
 - **Best Practice:**  
   Use `for...of` for clean and idiomatic iteration.
-- **Reference:**  
   [MDN: Iterators and generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
 
 ### Java
@@ -308,7 +307,6 @@ await foreach (var item in asyncSequence)
   Use `foreach` for readability and safety unless you need to modify the collection or require the index.
 - **Pitfall:**  
   Direct modification of a collection during `foreach` iteration is not allowed.
-- **Reference:**  
   [Stackify: C# foreach definition and best practices](https://stackify.com/c-foreach-definition-and-best-practices/)
 
 ### Workflow Automation Platforms (Relay.app)
@@ -326,7 +324,6 @@ Workflow automation platforms such as Relay.app provide *iterator* or *for-each*
 3. **Configure Actions:**  
    - Inside the iterator, add steps to define what should happen for each item (e.g., send email, update a record).
 4. **Use Current Item Data:**  
-   - Reference values from the current iteration in your actions.
 
 > **Tip:**  
 > Iterator blocks allow for visual, no-code processing of collections, ideal for automating repetitive tasks in workflows.
@@ -337,7 +334,6 @@ Workflow automation platforms such as Relay.app provide *iterator* or *for-each*
   Place all actions that should happen per item inside the iterator block.
 - **Pitfall:**  
   Avoid modifying the underlying list during iteration.
-- **Reference:**  
   [Relay.app Docs: Looping (Iterators)](https://docs.relay.app/flow-control/iterators)
 
 ## Comparison: Iterator vs Iterable, For vs For-Each
@@ -391,4 +387,3 @@ Workflow automation platforms such as Relay.app provide *iterator* or *for-each*
   ```
 - **Relay.app:**  
   - Iterator block processes each row for data extraction, notification, etc. ([Relay.app Docs](https://docs.relay
-

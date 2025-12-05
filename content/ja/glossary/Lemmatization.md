@@ -227,8 +227,6 @@ toys --> toy
 mice --> mouse
 ```
 spaCyはルールベースと検索ベースの両方のLemmatizationを提供します。  
-参考: [spaCy Linguistic Features](https://spacy.io/usage/linguistic-features#lemmatization)
-
 ### NLTKを使用したStemming vs. Lemmatization
 
 ```python
@@ -239,8 +237,6 @@ word = "running"
 print(f"Stemmed: {stemmer.stem(word)}")  # Output: run
 ```
 Stemmingは速いですが精度は低いです。  
-参考: [GeeksforGeeks: Introduction to Stemming](https://www.geeksforgeeks.org/machine-learning/introduction-to-stemming/)
-
 ## Lemmatizationを使用すべき場合
 
 **Lemmatizationを選択すべき場合:**

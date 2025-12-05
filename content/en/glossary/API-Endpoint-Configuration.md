@@ -94,9 +94,6 @@ Content-Type: application/json
 - **Alerting:**  
   Notify admins if error rates spike or abnormal patterns occur.
 
-**Reference:**  
-- [AWS: EndpointConfiguration - Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/api/API_EndpointConfiguration.html)
-
 
 ## Components of API Endpoint Configuration
 
@@ -293,10 +290,6 @@ APIs are a top attack vector. High-profile breaches (e.g., [T-Mobile](https://ww
 - **Postman:**  
   Collections for testing and sharing.
 
-**References:**  
-- [Kinsta: API Documentation](https://kinsta.com/blog/api-documentation/)
-- [Swagger/OpenAPI Specification](https://swagger.io/specification/)
-
 
 ## Real-World Examples & Use Cases
 
@@ -370,7 +363,6 @@ Configure endpoints as EDGE (global), REGIONAL, or PRIVATE (VPC-only):
 - **Rate Limiting:**  
   Restricting request rates to prevent abuse.
 - **API Documentation:**  
-  Reference describing how to use the API, parameters, data formats, and errors.
 
 
 ## Further Reading & References
@@ -379,4 +371,3 @@ Configure endpoints as EDGE (global), REGIONAL, or PRIVATE (VPC-only):
 - [Stack Overflow: Best Practices for REST API Design](https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/)
 - [Microsoft Learn: RESTful API Design](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design)
 - [impart.security: API Security Monitoring Best Practices](https://
-

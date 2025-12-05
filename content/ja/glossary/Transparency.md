@@ -12,19 +12,6 @@ term: とうめいせい(エーアイとうめいせい)
 reading: 透明性(AI透明性)
 kana_head: その他
 ---
-## 目次
-
-- [AI透明性とは何か?](#what-is-ai-transparency)
-- [主要概念:透明性、説明可能性、解釈可能性](#key-concepts-transparency-explainability-interpretability)
-- [AI透明性の重要性](#importance-of-ai-transparency)
-- [規制および倫理的枠組み](#regulatory-and-ethical-frameworks)
-- [AI透明性の中核要件](#core-requirements-for-ai-transparency)
-- [課題とトレードオフ](#challenges-and-trade-offs)
-- [ベストプラクティスと実装手順](#best-practices-and-implementation-steps)
-- [事例とユースケース](#examples-and-use-cases)
-- [まとめチェックリスト:AI透明性の実現](#summary-checklist-achieving-ai-transparency)
-- [参考資料](#further-reading)
-
 ## AI透明性とは何か?
 
 AI透明性とは、AIシステムの設計、データ、アルゴリズム、意思決定ロジックに関する情報の文書化、コミュニケーション、アクセシビリティを包含するものです。これは「ブラックボックスを開く」プロセスであり、AIの内部プロセスをユーザー、開発者、規制当局、一般市民を含むステークホルダーにとって観察可能で理解可能なものにします。

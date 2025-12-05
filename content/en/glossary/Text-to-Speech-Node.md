@@ -1,6 +1,7 @@
 ---
 title: "Text-to-Speech Node"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "text-to-speech-node"
 description: "A Text-to-Speech Node (TTS Node) is a modular building block in conversational AI and automation platforms, converting input text into synthesized audio for voice responses."
 keywords: ["Text-to-Speech Node", "TTS", "speech synthesis", "AI chatbots", "automation"]
@@ -308,4 +309,3 @@ A: Audio format mismatches, wrong voice/language, unsupported SSML tags. Test ou
 - [Voice Model Customization](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/custom-neural-voice)
 
 **Related Keywords:** speech service, text speech tts, custom voice, [speech synthesis markup language](/en/glossary/ssml--speech-synthesis-markup-language-/), neural networks, linguistic analysis, spoken language, professional voice, TTS systems, real time, accessibility,
-

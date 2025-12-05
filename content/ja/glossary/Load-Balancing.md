@@ -57,9 +57,6 @@ term: ろーどばらんしんぐようごしゅう:しょうさいかいせつ�
 - **サーバー選択:**  
   サーバー選択に影響する要因には、現在の健全性ステータス、アクティブな接続数、応答時間、サーバーウェイト、カスタムビジネスルールなどがあります。
 
-**参考:**  
-- [Kemp: Load Balancing Algorithms and Techniques](https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques)
-
 ### c. ヘルスチェックとフェイルオーバー
 
 - ロードバランサーは、バックエンドサーバーの可用性を確認するために、継続的にヘルスチェック(TCP/HTTP ping、アプリケーションレベルプローブなど)を実行します。
@@ -71,9 +68,6 @@ term: ろーどばらんしんぐようごしゅう:しょうさいかいせつ�
 ### d. セッション永続性(「スティッキーセッション」)
 
 一部のアプリケーションでは、セッションデータ(ショッピングカート、認証コンテキストなど)を同じサーバー上に保持する必要があります。ロードバランサーは、多くの場合Cookieまたはipハッシュ技術を使用してセッション永続性を強制し、セッション内のすべてのリクエストが同じバックエンドにルーティングされるようにします。
-
-**参考:**  
-- [NGINX: Session Persistence](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/#sticky)
 
 ### e. 実世界のアナロジー
 
@@ -226,21 +220,3 @@ term: ろーどばらんしんぐようごしゅう:しょうさいかいせつ�
 | ソフトウェアロードバランサー           | L4/L7         | クラウド/仮想          | 柔軟性、クラウドネイティブ、DevOps中心のデプロイメント   |
 | 仮想ロードバランサー            | L4/L7         | VM/コンテナ           | Kubernetes、マイクロサービス、仮想化データセンター  |
 | エラスティックロードバランサー            | L4/L7         | クラウド                  | オートスケーリング、動的、需要ベースのアプリケーション     |
-
-## 用語集
-
-- **バックエンドサーバー:** アプリケーションロジックまたはデータ処理を実行する実際のサーバー。
-- **ヘルスチェック:** サーバーの可用性を確認するための定期的なテスト(ping、HTTPリクエストなど)。
-- **セッション永続性(スティッキーセッション):** ユーザーのセッションが特定のサーバー上に留まることを保証します。
-- **リバースプロキシ:** バックエンドサーバーにリクエストを転送し、クライアントに応答を返すサーバー(多くの場合ロードバランサー)。
-- **アプリケーションデリバリーコントローラー(ADC):** ロードバランシング、SSLオフロード、WAF、高度なトラフィック管理を実行するアプライアンスまたはソフトウェア。
-
-**ロードバランシングは、信頼性が高く、スケーラブルで、高パフォーマンスなAIインフラストラクチャとデプロイメントの基盤です。詳細とアーキテクチャ固有のガイダンスについては、上記にリンクされている公式ベンダードキュメントを参照してください。**
-
-**権威ある参考資料と詳細な技術ガイド:**
-
-- [Kemp: Load Balancing Algorithms and Techniques (Deep Dive)](https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques)
-- [Loadbalancer.org: Best Load Balancing Methods, Techniques and Algorithms](https://www.loadbalancer.org/blog/load-balancing-methods/)
-- [Google Cloud: Advanced Load Balancing Overview](https://docs.cloud.google.com/service-mesh/docs/service-routing/advanced-load-balancing-overview)
-
-この用語集は、多様な環境で最新のロードバランシングを扱うアーキテクト、エンジニア、AI実務者のための詳細で実用的なリファレンスとして設計されています。

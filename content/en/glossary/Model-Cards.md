@@ -1,6 +1,7 @@
 ---
 title: "Model Cards"
 date: 2025-11-25
+lastmod: 2025-12-05
 translationKey: "model-cards"
 description: "Model Cards are standardized documents for ML models, detailing architecture, intended uses, performance, limitations, training data, and ethical considerations for transparency and accountability."
 keywords: ["Model Cards", "Machine Learning", "AI Ethics", "Transparency", "Responsible AI"]
@@ -48,11 +49,6 @@ A model card is a concise but comprehensive document that describes the key tech
 
 **Analogy:**  
 A model card is to an AI model what a nutrition label is to food: a clear, accessible summary that enables informed, responsible use.
-
-**References:**  
-- [Hugging Face Model Card Guidebook](https://huggingface.co/docs/hub/en/model-card-guidebook)
-- [Google Model Cards](https://modelcards.withgoogle.com/)
-
 ## Why Model Cards Matter: Benefits
 
 ### 1. Transparency and Accountability
@@ -126,10 +122,6 @@ While templates vary, a comprehensive model card usually includes the following 
 - Licensing terms and usage restrictions
 - Maintenance and support contacts
 - Recommendations for ongoing monitoring
-
-**Reference:**  
-- [Hugging Face Annotated Model Card Template](https://huggingface.co/docs/hub/en/model-card-annotated)
-
 ## Example: Model Card Section Table
 
 | Section                | Purpose                                                     | Typical Content                          |
@@ -215,11 +207,6 @@ While templates vary, a comprehensive model card usually includes the following 
 
 - Involve technical, business, legal, and ethics teams.
 - Gather feedback from users and affected communities.
-
-**Reference:**  
-- [Hugging Face Model Card Guidebook](https://huggingface.co/docs/hub/en/model-card-guidebook)
-- [Model Card Annotated Template](https://huggingface.co/docs/hub/en/model-card-annotated)
-
 ## Tools, Templates, and Further Resources
 
 ### Templates and Toolkits
@@ -298,4 +285,3 @@ While templates vary, a comprehensive model card usually includes the following 
 - [IBM AI FactSheets](https://aifs360.mybluemix.net/introduction)
 
 **Glossary in Markdown format, >5,000 words when expanded with full examples and stakeholder-specific details. For the most up-to-date templates and examples, always refer to the official documentation and repositories linked above.**
-

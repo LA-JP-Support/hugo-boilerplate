@@ -4,10 +4,16 @@ translationKey: error-handler-try-catch
 description: An error handler, often a Try-Catch block, manages unexpected failures
   in automation and AI chatbots, preventing crashes and enabling controlled recovery
   or logging.
-keywords: ["error handler", "try-catch", "exception handling", "automation", "AI chatbot"]
+keywords:
+- error handler
+- try-catch
+- exception handling
+- automation
+- AI chatbot
 category: General
 type: glossary
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## Definition
@@ -381,4 +387,3 @@ try {
 - [UiPath Official Docs: Try Catch](https://docs.uipath.com/activities/docs/try-catch)
 
 **For implementation details on exception handling in your platform, always consult the official documentation and community best practices.**
-

@@ -5,7 +5,8 @@ description: "Misunderstood Rate measures chatbot failures to understand user in
 keywords: ["chatbot performance", "natural language processing (NLP)", "user experience", "evaluation metrics", "customer service"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-03
+date: 2025-12-05
+lastmod: 2025-12-05
 draft: false
 ---
 ## What Is Misunderstood Rate?
@@ -228,15 +229,4 @@ Fallback Rate, [Intent Recognition](/en/glossary/intent-recognition/) Accuracy, 
 
 **For more in-depth guidance on chatbot analytics and misunderstood rate improvement, see [Quickchat AI’s Guide](https://quickchat.ai/post/chatbot-analytics), [Prompts.ai’s Metrics Guide](https://www.prompts.ai/en/blog/guide-to-task-specific-chatbot-evaluation-metrics), and [Botsquad’s Metrics Deep-Dive](https://botsquad.ai/chatbot-conversation-rate-metrics).**
 
-**References & Further Exploration:**  
-- [Quickchat AI: Chatbot Analytics](https://quickchat.ai/post/chatbot-analytics)  
-- [Amazon Lex Analytics](https://docs.aws.amazon.com/lexv2/latest/dg/analytics-key-definitions.html)  
-- [CMU/Microsoft: Cost of Misunderstanding](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/mcmu.pdf)  
-- [Prompts.ai: Chatbot Evaluation Metrics](https://www.prompts.ai/en/blog/guide-to-task-specific-chatbot-evaluation-metrics)  
-- [Forbes: Chatbot Mistakes](https://www.forbes.com/sites/garydrenik/2025/08/21/these-chatbot-mistakes-could-cost-you-customers/)  
-- [Botsquad: Chatbot Conversation Rate Metrics](https://botsquad.ai/chatbot-conversation-rate-metrics)  
-- [Bridgepointe Technologies: Disadvantages of Chatbots](https://bridgepointetechnologies.com/customer-experience/disadvantages-of-chatbots/)  
-- [Air Canada Chatbot Case - BBC](https://www.bbc.com/travel/article/20240222-air-canada-chatbot-misinformation-what-travellers-should-know)  
-
 This glossary page is designed to provide a comprehensive, actionable resource on misunderstood rate for AI chatbot and automation professionals. Use the linked sources for further depth and the latest industry insights.
-

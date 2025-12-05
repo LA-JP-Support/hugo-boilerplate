@@ -24,9 +24,6 @@ e-title: Parallel Execution
 **ソフトウェアテストと自動化における並列実行**: テストケース、ワークフロー、またはスクリプトを異なるマシン、ブラウザ、または環境で同時に実行することを意味します。これは、テストカバレッジを拡大し、CI/CDパイプラインでのフィードバックを高速化するために不可欠です。
 
 > **参考資料:**  
-> - [LambdaTest: What Is Parallel Testing And Why Is It Important?](https://www.lambdatest.com/blog/what-is-parallel-testing-and-why-to-adopt-it/)
-> - [BrowserStack: Parallel Testing—The Essential Guide](https://www.browserstack.com/guide/what-is-parallel-testing)
-> - [Virtuoso QA: Parallel Test Execution for 10x Faster Testing](https://www.virtuosoqa.com/post/parallel-test-execution)
 
 ## 並列実行の仕組み
 
@@ -44,8 +41,6 @@ e-title: Parallel Execution
 500のテストケースを含むリグレッションスイートを50のエージェントに分割し、各エージェントが10のテストを同時に実行できます。これにより、総実行時間が数時間から1時間未満に短縮されます。
 
 > **参考資料:**  
-> - [BrowserStack: How does Parallel Testing Work?](https://www.browserstack.com/guide/what-is-parallel-testing#toc1)
-> - [Virtuoso QA: Understanding Parallel Test Execution](https://www.virtuosoqa.com/post/parallel-test-execution)
 
 ## 主なユースケース
 
@@ -77,8 +72,6 @@ e-title: Parallel Execution
 - **同時検証:** 同じテストを複数のOS/ブラウザ/デバイスの組み合わせで実行し、信頼性の高い互換性を確保します。
 
 > **参考資料:**  
-> - [LambdaTest: Why is Parallel Testing Required?](https://www.lambdatest.com/blog/what-is-parallel-testing-and-why-to-adopt-it/#why-is-parallel-testing-required)
-> - [Virtuoso QA: The Sequential Testing Bottleneck](https://www.virtuosoqa.com/post/parallel-test-execution)
 
 ## 技術的基盤
 
@@ -95,8 +88,6 @@ e-title: Parallel Execution
 | コンテナ化    | オーケストレーターによって管理される分離されたコンテナ              | Docker + Kubernetes                   |
 
 **最新の並列テスト実行は、弾力的なスケーリング、グローバルリーチ、一貫した環境のために、分散型、クラウドネイティブ、コンテナ化されたアーキテクチャをますます活用しています。**  
-> - [Virtuoso QA: Architecture and Infrastructure](https://www.virtuosoqa.com/post/parallel-test-execution)
-> - [BrowserStack: Parallel Testing using TestNG and Selenium](https://www.browserstack.com/guide/what-is-parallel-testing#toc7)
 
 ### パーティショニングと分散
 
@@ -107,7 +98,6 @@ e-title: Parallel Execution
 - **ワークスティーリング:** アイドル状態のエグゼキューターがビジー状態のエグゼキューターから残りのタスクを取得し、負荷を動的にバランスさせます。
 
 パーティションサイズとタスク期間のバランスを取ることで、すべてのリソースが効率的に使用され、他のエグゼキューターがまだ作業中の間にアイドル状態のエグゼキューターがないことを保証します。
-> - [Virtuoso QA: Test Suite Partitioning](https://www.virtuosoqa.com/post/parallel-test-execution)
 
 ### 依存関係管理
 
@@ -117,7 +107,6 @@ e-title: Parallel Execution
 - **サービス仮想化:** 依存サービスは各テストのためにモック化または仮想化されます。
 - **依存関係グラフ:** 依存関係のあるテストの場合、明示的なグラフにより、依存タスクが開始される前に前提条件が完了することを保証します。
 
-> - [Virtuoso QA: Managing Test Dependencies](https://www.virtuosoqa.com/post/parallel-test-execution)
 
 ### 同期とリソース割り当て
 
@@ -125,7 +114,6 @@ e-title: Parallel Execution
 - **リソース割り当て:** インテリジェントスケジューラーがCPU、メモリ、ネットワークリソースのバランスを取り、ボトルネックやシステムの過負荷を回避します。リソースプロファイリング、クォータ、優先度キューなどの技術が、リソースを効率的に割り当てるのに役立ちます。
 
 Kubernetesなどのコンテナオーケストレーションプラットフォームは、水平スケーリング、自己修復、高度なスケジューリングなどの機能を提供し、並列テスト実行を最適化するために、これの多くを自動化します。
-> - [Virtuoso QA: Optimizing Resource Allocation](https://www.virtuosoqa.com/post/parallel-test-execution)
 
 ## メリットと影響
 
@@ -139,8 +127,6 @@ Kubernetesなどのコンテナオーケストレーションプラットフォ�
 | テストカバレッジの向上       | より短時間でより広範かつ深いカバレッジ                                 | 完全なクロスブラウザ/デバイス検証            |
 | 継続的デリバリーの実現| 大規模なCI/CDと継続的テストを可能にする                           | すべてのコードコミットに対するリアルタイムフィードバック        |
 
-> - [Virtuoso QA: Benefits of Parallel Test Execution](https://www.virtuosoqa.com/post/parallel-test-execution)
-> - [BrowserStack: Advantages of Parallel Testing](https://www.browserstack.com/guide/what-is-parallel-testing#toc3)
 
 ## 実装戦略
 
@@ -195,8 +181,6 @@ python -m pytest test_suite.py -n 4
 - **不適切な依存関係処理:** 見落とされた依存関係は、微妙なバグや一貫性のない結果を引き起こす可能性があります。
 - **一貫性のない環境:** 並列実行環境間の違いは、再現が困難なバグを作成する可能性があります。
 
-> - [LambdaTest: Best Practices for Parallel Testing](https://www.lambdatest.com/blog/what-is-parallel-testing-and-why-to-adopt-it/#best-practices-for-parallel-testing)
-> - [Virtuoso QA: Implementation Strategies](https://www.virtuosoqa.com/post/parallel-test-execution)
 
 ## 実例とケーススタディ
 
@@ -212,11 +196,9 @@ Chrome(3分)、Firefox(4分)、Edge(5分)でサインアップフォームをテ
 
 **ケーススタディ: エンタープライズ継続的デリバリー**  
 大企業は、並列実行を実装することで、一晩のリグレッションスイート時間を8時間から45分に短縮し、1日に複数のデプロイメントを可能にし、欠陥エスケープ率を60%削減しました。  
-> - [Virtuoso QA: Case Study](https://www.virtuosoqa.com/post/parallel-test-execution)
 
 **例3: Power Automateによるワークフロー自動化**  
 複数の承認リクエストが並列で送信され、すべての応答が受信されるとプロセスが再開され、ターンアラウンドタイムが数時間から数分に短縮されます。  
-> - [Microsoft: Optimize flows with parallel execution and concurrency](https://learn.microsoft.com/en-us/power-automate/guidance/coding-guidelines/implement-parallel-execution)
 
 ## 比較: 並列実行 vs. 逐次実行
 
