@@ -230,23 +230,6 @@ For more, see [Bitcot Future Trends](https://www.bitcot.com/chatbot-personality/
 - [Top 7 Sentiment Analysis Techniques for Voice AI](https://dialzara.com/blog/top-7-sentiment-analysis-techniques-for-voice-ai)
 - [AI Sentiment Analysis for Customer Experience [How It Works]](https://www.qevalpro.com/blog/ai-sentiment-analysis-improves-customer-experience/)
 
-## Glossary Table: Key Terms
-
-| Term                        | Definition                                                                                           |
-|-----------------------------|------------------------------------------------------------------------------------------------------|
-| Sentiment-Adaptive Tone     | AI’s ability to adjust its communication style based on detected customer emotion                    |
-| Sentiment Analysis          | Detecting emotional tone (positive, negative, neutral, nuanced) in text or speech                    |
-| Emotional Intelligence      | The skill to perceive, understand, and manage emotions—applied to AI/automation                      |
-| NLP (Natural Language Processing) | AI techniques for understanding and generating human language                                   |
-| Voice Pattern Analysis      | Analyzing features of speech (pitch, volume, rate) to infer emotion                                  |
-| Machine Learning (ML)       | Algorithms that learn from data to improve performance—essential for emotion detection               |
-| Contextual Understanding    | Interpreting input based on conversation flow, user history, and situational clues                   |
-| Customer Satisfaction (CSAT)| Metric measuring how satisfied customers are with a product, service, or interaction                  |
-| Customer Churn              | The rate at which customers stop using a product or service; often driven by negative experiences    |
-| Escalation Rate             | Frequency of transferring interactions from AI to human agents, often triggered by negative sentiment|
-| Customer Engagement         | The degree of interaction and emotional connection a customer has with a brand                       |
-| Emotional Tone              | The underlying feeling (e.g., empathy, frustration, joy) conveyed in communication                   |
-| Customer Journey            | The complete experience of a customer across all touchpoints, shaped by emotional interactions       |
 
 ### References & Source Links
 

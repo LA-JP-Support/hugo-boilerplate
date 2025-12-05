@@ -255,21 +255,6 @@ Suppose you operate a site cataloging millions of books globally, with heavy que
 
 Consider these options before committing to sharding.
 
-## Glossary
-
-| Term                | Definition                                                                                         |
-|---------------------|----------------------------------------------------------------------------------------------------|
-| Sharding            | Splitting a single logical dataset into multiple databases (shards), each holding a subset of data |
-| Shard Key           | Attribute(s) used to assign data records to shards                                                 |
-| Hash-based Sharding | Sharding strategy using a hash function on the shard key                                           |
-| Range-based Sharding| Sharding by assigning value ranges of the shard key to shards                                      |
-| Directory-based     | Sharding using a lookup table to map keys or ranges to specific shards                            |
-| Horizontal Scaling  | Increasing capacity by adding more servers (nodes)                                                 |
-| Vertical Scaling    | Increasing capacity by upgrading a single server’s hardware                                        |
-| Hotspot             | A shard that receives disproportionate traffic or data, becoming a bottleneck                      |
-| Shared-nothing      | Architecture where each node/shard operates independently, with no shared resources                |
-| Cross-shard Query   | Query that requires accessing more than one shard                                                   |
-| Resharding          | The process of redistributing data when adding/removing shards or correcting skew                  |
 
 ## Further Resources / References
 

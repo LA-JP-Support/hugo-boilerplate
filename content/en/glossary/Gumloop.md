@@ -283,20 +283,6 @@ Gumloop uses a **credit-based pricing** model—each workflow action or AI call 
 - **Slack Community:** Invite via the dashboard.
 - **Professional Services:** Hire Gumloop automation experts for advanced projects.
 
-## Glossary of Gumloop Terms
-
-- **Flow / Workflow:** Automated sequence of steps built visually using nodes.
-- **Node:** An action or building block in a workflow (e.g., read email, run AI, update CRM).
-- **Agent:** AI-powered orchestrator that runs workflows and makes context-aware decisions.
-- **Subflow:** A reusable mini-workflow embedded within other flows.
-- **Template:** Pre-built, customizable automation ready to use and adapt.
-- **Trigger:** Event that starts a workflow (email, time, webhook).
-- **Loop Mode:** Batch process lists or datasets (e.g., summarize all spreadsheet rows).
-- **Integration:** Connection to a third-party app (e.g., Gmail, Salesforce, Notion).
-- **Credit:** Unit of usage for billing; each action or AI call consumes credits.
-- **MCP (Model Context Protocol):** Open standard for connecting AI to external data/tools via natural language scripts. [MCP Scripting Guide](https://www.gumloop.com/blog/a-different-take-on-mcp-introducing-mcp-scripting)
-- **Ask AI Node:** Special node that can connect to multiple MCP servers and orchestrate tool calls via LLMs. [Docs](https://docs.gumloop.com/nodes/mcp/ask_ai_mcp_support)
-- **Native MCP Node:** Pre-configured node for repeatable, production-grade MCP workflows.
 
 ## FAQs
 

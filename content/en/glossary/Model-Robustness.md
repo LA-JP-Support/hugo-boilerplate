@@ -220,17 +220,5 @@ Chatbots face slang, typos, or attempts to bypass content filters. Robustness en
 - [CleverHans](https://github.com/cleverhans-lab/cleverhans)
 - [Foolbox](https://github.com/bethgelab/foolbox)
 
-## Glossary of Key Terms
-
-- **Adversarial Attack:** Input intentionally crafted to cause a model to make a mistake ([ART documentation](https://adversarial-robustness-toolbox.readthedocs.io/en/latest/)).
-- **Adversarial Robustness:** Ability of a model to resist adversarial attacks.
-- **Data Augmentation:** Techniques to increase dataset diversity by adding modified copies of existing data.
-- **Distribution Shift:** Change in the data distribution between training and deployment.
-- **Ensemble Methods:** Combining multiple models to improve reliability and robustness.
-- **Model Drift:** Degradation of model performance over time due to changes in input data.
-- **Out-of-Distribution (OOD) Data:** Inputs that differ significantly from the training data.
-- **Regularization:** Techniques to prevent overfitting by penalizing model complexity.
-- **Red Teaming:** Simulating attacks or edge cases to probe model vulnerabilities.
-- **Robustness:** Ability to maintain performance when faced with unexpected or malicious inputs.
 
 ### Summary Table: Model Robustness at a Glance

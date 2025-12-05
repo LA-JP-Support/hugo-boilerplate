@@ -196,13 +196,6 @@ A: Issues include poor metric selection, unrealistic capacity limits, lack of st
 
 - [Official AWS architecture diagram](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html)
 
-## Glossary Cross-References
-
-- **Elastic Load Balancer (ELB):** Service distributing incoming application/network traffic across multiple compute targets.
-- **Spot Instance:** EC2 compute using spare AWS capacity at a lower cost, subject to interruption.
-- **Launch Template:** Resource containing configuration for launching an instance.
-- **Capacity Rebalancing:** Proactively maintains availability when Spot Instances are at risk.
-- **Lifecycle Hook:** Custom action triggered at key lifecycle events within the ASG.
 
 ## Related Reading
 

@@ -219,27 +219,6 @@ Many tools offer simulation or rollback modes; always check before running on li
 
 [OpenTelemetry Glossary](https://opentelemetry.io/docs/concepts/glossary/)
 
-## Glossary of Related Terms
-
-| Term               | Definition |
-|--------------------|------------|
-| **Flow Debugging** | Using consoles or trace tools to inspect and troubleshoot flow execution. |
-| **Debug Mode**     | Special mode with enhanced logging/visibility, often with no data changes. |
-| **Debug Logs**     | Chronological records of execution, variable states, errors. |
-| **Test Case**      | Predefined input set for validating flow behavior. |
-| **Request Flow**   | Sequence of operations processing a request. |
-| **Step/Node**      | Individual operation within a flow. |
-| **Error Path**     | Alternate route for error handling. |
-| **Real-time**      | Observing execution/outcomes as they occur. |
-| **Private Cloud**  | On-premises/dedicated cloud with extra data/security constraints. |
-| **API Call**       | Request to an application programming interface. |
-| **Debug Button**   | UI element for launching debug sessions. |
-| **Click Icon**     | UI interaction to reveal execution details. |
-| **Search Debug**   | Inspecting search pipeline steps for accuracy. |
-| **Flow Testing**   | Running flows with varied inputs to validate logic. |
-| **Error Occurred** | Status/log message indicating a step failure. |
-
-For detailed definitions, see the [OpenTelemetry Glossary](https://opentelemetry.io/docs/concepts/glossary/).
 
 ## Further Reading and Resources
 

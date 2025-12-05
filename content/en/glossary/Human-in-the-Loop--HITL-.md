@@ -173,25 +173,6 @@ Without automation, HITL steps can become bottlenecks as data volumes grow.
 - [SuperAnnotate: HITL Platforms](https://www.superannotate.com/blog/human-in-the-loop-hitl)
 - [Encord: HITL Tools](https://encord.com/blog/human-in-the-loop-ai/)
 
-## Glossary/FAQ
-
-**Is HITL only about data annotation?**  
-No, HITL also includes validation, oversight, tuning, and monitoring ([Google Cloud](https://cloud.google.com/discover/human-in-the-loop)).
-
-**How is HITL different from “human-on-the-loop”?**  
-HITL embeds humans in core feedback and decision cycles; “human-on-the-loop” is supervisory only.
-
-**What tools support HITL workflows?**  
-Platforms like [SuperAnnotate](https://www.superannotate.com/blog/human-in-the-loop-hitl), [Encord](https://encord.com/blog/human-in-the-loop-ai/), and [Parseur](https://parseur.com/blog/human-in-the-loop-ai) provide tools for annotation, validation, and workflow management.
-
-**Does HITL slow down automation?**  
-Not if designed well—HITL allocates humans to exceptions, improving efficiency and trust.
-
-**Is HITL required by law?**  
-Yes, in some cases. The [EU AI Act](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence) mandates human oversight for high-risk AI systems.
-
-**Can HITL help reduce AI bias?**  
-Yes, human reviewers can correct biases that automated systems may not detect.
 
 ## Real-World Case Studies
 

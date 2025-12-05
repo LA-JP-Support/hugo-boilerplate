@@ -222,15 +222,6 @@ Place “Approve Email” node after AI draft step. Route approved and rejected 
 
 > **Tip:** Use fallback escalation and reminders to ensure timely human reviews.
 
-## Glossary Terms Related to Human Approval Node
-
-- **Human Input:** Direct data or decisions from a human in an automated workflow.
-- **Decision Point:** A workflow step where branching occurs based on a decision, often requiring human judgment.
-- **Human Oversight:** Monitoring and controlling automated processes to ensure correctness and compliance.
-- **Human-in-the-Loop (HITL):** A system pattern requiring human intervention at key steps.
-- **Approval Workflow:** Sequence of automation steps with approval checkpoints.
-- **Access Control:** Mechanisms to restrict task assignment, approval, or system changes to authorized users/roles.
-- **Agent:** Autonomous or semi-autonomous AI process acting within workflows, often requiring oversight.
 
 ## References & Further Reading
 

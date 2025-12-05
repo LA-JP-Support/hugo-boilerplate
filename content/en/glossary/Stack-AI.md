@@ -204,7 +204,6 @@ Stack AI’s technical foundation is modular and cloud-native, emphasizing flexi
 - More onboarding content for complex workflows needed.
 - Pricing [transparency](/en/glossary/transparency/) is a common enterprise platform challenge.
 
-## Glossary of Related Terms
 
 ### Artificial Intelligence (AI)
 Simulation of human intelligence by machines. See [IBM AI Glossary](https://www.ibm.com/cloud/learn/ai).

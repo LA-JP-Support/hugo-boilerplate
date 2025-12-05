@@ -251,22 +251,7 @@ Large-scale LLMs and recommender systems in the cloud benefit from reduced memor
 - **BitsAndBytes:**  
   Focused on LLMs and 4-bit/8-bit quantization: [BitsAndBytes Quantization](https://huggingface.co/docs/transformers/en/quantization/bitsandbytes)
 
-## Glossary: Key Quantization Terms
 
-- **Bit-Width:** Number of bits used to represent each value (e.g., 8 for INT8).
-- **Calibration Dataset:** A set of representative samples used to estimate activation ranges for quantization.
-- **Scale (S):** Factor used to map floating-point ranges to integer ranges.
-- **Zero-Point (Z):** Integer value corresponding to zero in floating-point space.
-- **Dynamic Quantization:** Quantization parameters determined at inference time.
-- **Static Quantization:** Quantization parameters precomputed using calibration.
-- **Quantization-Aware Training (QAT):** Training a model with simulated quantization effects.
-- **Per-Channel Quantization:** Separate quantization parameters for each channel.
-- **Post-Training Quantization (PTQ):** Applying quantization to a pre-trained model.
-- **Integer-Only Quantization:** All operations (including accumulation) use integer arithmetic.
-- **Uniform/Non-Uniform Quantization:** Whether quantization intervals are of equal size.
-- **Affine Quantization:** Linear mapping from float to int with scale and zero-point.
-- **Symmetric Quantization:** Integer range centered at zero.
-- **Asymmetric Quantization:** Integer range not necessarily centered at zero.
 ## References and Further Reading
 
 - [Hugging Face Optimum: Quantization Guide](https://huggingface.co/docs/optimum/en/concept_guides/quantization)

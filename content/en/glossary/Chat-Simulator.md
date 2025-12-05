@@ -275,29 +275,6 @@ To maximize value, organizations should:
 - [FrugalTesting Best Practices](https://www.frugaltesting.com/blog/chatbot-testing-your-guide-to-accuracy-and-user-experience)
 
 
-## Glossary: Related Terms
-
-- **Chatbot:**  
-  A program simulating human conversation via text or voice to automate customer interactions. [IBM: What is a Chatbot?](https://www.ibm.com/think/topics/chatbots)
-- **AI Chatbot:**  
-  Chatbot enhanced with AI, NLU, and ML for human-like responses.
-- **Natural Language Understanding (NLU):**  
-  AI that interprets user intent, sentiment, and entities.
-- **Natural Language Processing (NLP):**  
-  Technologies enabling machine processing of human language.
-- **Large Language Model (LLM):**  
-  AI model trained on vast data to generate and understand language (e.g., GPT, Claude, Gemini).
-- **Rule-Based Chatbot:**  
-  Operates on predefined rules, limited to anticipated queries.
-- **Generative AI:**  
-  AI that can create new content, not just recall programmed responses.
-- **Human Agent:**  
-  Person handling customer interactions, often with chatbot support.
-- **Customer Interaction:**  
-  Any business-customer exchange (chat, voice, email, etc.).
-- **Customer Experience (CX):**  
-  The sum of all customer-brand interactions and impressions.
-
 
 ## Further Resources
 

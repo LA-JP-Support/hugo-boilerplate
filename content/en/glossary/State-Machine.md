@@ -238,17 +238,6 @@ const orderMachine = createMachine({
 
 - In complex chatbots, state machines can switch the bot’s persona or role based on context (e.g., from general agent to specialist).
 
-## Glossary of Related Terms
-
-- **State Space:** The complete set of all possible states.
-- **Transition Function:** Defines the next state given the current state and event.
-- **Initial State:** The starting state.
-- **Final State:** A state that ends the process.
-- **Event:** Input, action, or occurrence that may trigger a transition.
-- **Session:** Retained context across interactions.
-- **Deterministic FSM:** Each input from a state leads to one next state.
-- **Non-Deterministic FSM:** An input may lead to multiple next states.
-- **State Agent:** The software (or agent) managing state transitions.
 
 ## References & Further Reading
 

@@ -323,20 +323,6 @@ By offering counseling, breaks, trauma-informed training, and fostering a suppor
 - [Imagga](https://imagga.com/solutions/adult-content-moderation)
 - [Sendbird](https://sendbird.com/products/chat-messaging/content-moderation)
 
-## Glossary of Key Terms
-
-- **User Generated Content (UGC):** Content created by users rather than the platform.
-- **Community Standards:** Set of rules defining acceptable behavior/content.
-- **Automated Moderation:** Using AI/algorithms to review and flag violations.
-- **Manual Moderation:** Human review of content for violations.
-- **Reactive Moderation:** Review triggered by user reports.
-- **Distributed Moderation:** Community-driven moderation via voting/peer review.
-- **False Positive:** Legitimate content incorrectly flagged/removed.
-- **False Negative:** Harmful content not flagged/removed.
-- **Trust and Safety:** Practices minimizing risk and harm online.
-- **Labeling:** Addition of warnings or information to content.
-- **Appeals Process:** Mechanism for users to contest moderation decisions.
-- **Psychoeducation:** Providing mental health information to reduce trauma impact.
 
 ## References & Further Reading
 

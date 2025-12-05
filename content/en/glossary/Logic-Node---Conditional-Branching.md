@@ -239,18 +239,6 @@ Route to fallback or clarification paths for invalid/missing inputs.
 - [Noca AI Logic Nodes](https://support.noca.ai/logic-nodes/)
 - [HubSpot Chatflows](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows)
 
-## Glossary Terms
-
-- **Conditional Branching:** The act of splitting a workflow based on conditions.
-- **Bot Action Node:** A parent node for logic nodes in Kore.ai ([docs](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/bot-action-node/)).
-- **Quick Replies:** Predefined options for users to select, often used with branching ([HubSpot](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows)).
-- **Instance Properties:** Node-specific metadata or settings ([Kore.ai docs](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-logic-node/#Instance_Properties)).
-- **Split Actions:** Branching mechanism in TextIt ([TextIt Flows](https://help.textit.com/en/article/introduction-to-flows-1vmh15z/)).
-
-**Was this article helpful?**  
-Let us know or [read more about advanced automation nodes](#related-concepts-and-further-reading).
-
-**[Back to Glossary](#table-of-contents)**
 
 ## Source Links and Further Reading
 

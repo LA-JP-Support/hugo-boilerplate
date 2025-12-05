@@ -198,18 +198,6 @@ A media company scores users based on session duration, articles read, and socia
 - Recognize and reward employee contributions through internal programs.
 
 
-## Glossary: Key Terms
-
-- **Composite Metric:** A measurement that combines multiple indicators into a single value for easier interpretation and tracking.
-- **Churn Rate:** The percentage of users/customers who stop using a product or service over a specific period.
-- **Net Promoter Score (NPS):** A standard survey metric that measures user loyalty and likelihood to recommend.
-- **Session Duration:** The average time a user spends in a session on your website, app, or platform.
-- **Feature Adoption:** The extent to which users utilize specific product features, often tracked as part of engagement.
-- **Segmentation:** The practice of grouping users or employees based on engagement or other criteria to enable targeted strategies.
-
-- **Glossary References:**  
-  - [Pipedrive: Engagement Score Glossary](https://www.pipedrive.com/en/blog/engagement-score)
-  - [Drivetrain: SaaS Metrics Glossary](https://www.drivetrain.ai/finance-saas-metrics)
 
 ## Limitations & Cautions
 

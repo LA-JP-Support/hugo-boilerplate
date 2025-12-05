@@ -291,8 +291,3 @@ A: High retrieval latency slows inference and real-time decision-making, directl
 - Reducing latency involves architectural, infrastructural, and software optimizations.
 - Industry leaders provide tools and services to monitor, reduce, and manage latency.
 
-## Glossary References
-
-- **Bandwidth:** Network's maximum data transfer capacity at a given time.
-- **Throughput:** Actual data transferred per unit time.
-- **J

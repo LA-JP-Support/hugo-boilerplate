@@ -221,24 +221,6 @@ Several platforms provide end-to-end MLOps capabilities:
 - [ML-Ops.org: MLOps Principles](https://ml-ops.org/content/mlops-principles)
 - [Big Book of MLOps (eBook)](https://www.databricks.com/resources/ebook/the-big-book-of-mlops)
 
-## Glossary: Essential MLOps Terms
-
-- **AI Lakehouse:** Combines data lakes and warehouses for advanced AI/ML workloads ([Hopsworks AI Lakehouse](https://www.hopsworks.ai/dictionary/ai-lakehouse)).
-- **AI Pipeline:** A program that transforms input data to ML artifacts ([Hopsworks AI Pipeline](https://www.hopsworks.ai/dictionary/ai-pipelines)).
-- **AutoML:** Automation of model training pipeline tasks ([Hopsworks AutoML](https://www.hopsworks.ai/dictionary/auto-ml)).
-- **Batch Inference Pipeline:** Applies a model to a batch of data for predictions ([Hopsworks Batch Inference Pipeline](https://www.hopsworks.ai/dictionary/batch-inference-pipeline)).
-- **CI/CD for MLOps:** Continuous integration and delivery for ML pipelines ([Hopsworks CI/CD for MLOps](https://www.hopsworks.ai/dictionary/ci-cd-for-mlops)).
-- **Feature Store:** Centralized repository for storing, sharing, and reusing engineered features ([Hopsworks Feature Store](https://www.hopsworks.ai/dictionary/feature-store)).
-- **Model Registry:** Repository to manage model versions, metadata, and deployment status ([MLflow Model Registry](https://mlflow.org/docs/latest/model-registry.html)).
-- **Model Drift:** Degradation of model performance due to changes in data distribution.
-- **Model Monitoring:** Continuous tracking of model performance and production data characteristics.
-- **Observability:** Ability to gain insights into production ML model behavior and performance ([Hopsworks Observability](https://www.hopsworks.ai/mlops-dictionary)).
-- **Backfilling:** Process of recomputing datasets from raw historical data for training ([Hopsworks Backfill](https://www.hopsworks.ai/dictionary/backfill-features)).
-- **Retraining:** Updating a model with new data to maintain or improve accuracy.
-- **Canary Deployment:** Gradually rolling out a new model version to a subset of users to test before full deployment.
-
-For a comprehensive dictionary of MLOps terminology, see:  
-- [Hopsworks MLOps Dictionary](https://www.hopsworks.ai/mlops-dictionary)
 
 ## Additional Resources
 

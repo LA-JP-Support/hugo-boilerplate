@@ -224,18 +224,6 @@ Authoritative recommendations from sources such as GitHub, Snyk, and leading clo
 - [Snyk: Webhook Security Best Practices](https://snyk.io/blog/creating-secure-webhooks/)
 - [Slack Developer Docs: Creating webhook triggers](https://docs.slack.dev/tools/deno-slack-sdk/guides/creating-webhook-triggers)
 - [Jenkins Plugins: Generic Webhook Trigger](https://plugins.jenkins.io/generic-webhook-trigger/)
-## Glossary
-
-- **Webhook:** An HTTP callback that enables one system to notify another about an event in real time.
-- **Trigger:** The mechanism or event that starts an automated process or workflow.
-- **Payload:** Data sent in an HTTP request (usually JSON) that describes the event.
-- **Endpoint:** The URL where webhook requests are sent and processed.
-- **Authentication Header:** HTTP header used to verify the identity of a webhook request.
-- **Secret Key:** A unique string used to secure webhook endpoints and verify request authenticity.
-- **Signature Verification:** The process of confirming that a webhook payload was sent from a trusted source by checking a cryptographic signature.
-- **IP Allowlisting:** Restricting webhook requests to specific, trusted source IPs.
-- **Polling:** Repeatedly checking a resource to detect changes, as opposed to event-driven notifications.
-- **Idempotency:** Ensuring that repeated webhook deliveries produce the same outcome, avoiding duplicate processing.
 
 ## Deep-Dive: Advanced Implementation and Architectural Patterns
 

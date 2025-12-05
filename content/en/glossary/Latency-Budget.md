@@ -256,15 +256,3 @@ How do you enforce latency budgets? Are they core to your architecture, or an af
 | Benchmarking             | Ensure real-world compliance and detect regressions  | P50/P95/P99, trace, automate         |
 | Governance vs. Performance | Make latency a non-negotiable system constraint     | Enforce, monitor, alert on breach    |
 
-## Glossary Cross-References
-
-- [Edge Computing](https://en.wikipedia.org/wiki/Edge_computing) – Local processing to reduce network latency.
-- [Distributed Tracing](https://opentelemetry.io/docs/) – End-to-end request profiling.
-- [Model Quantization](https://pytorch.org/docs/stable/quantization.html) – Speed-up via reduced-precision arithmetic.
-- [Latency Percentiles](https://en.wikipedia.org/wiki/Percentile) – Measuring P50, P95, P99 compliance.
-
-For a comprehensive, practical, and deeply referenced overview, see:
-- [Real-time AI performance: latency challenges and optimization – Mitrix](https://mitrix.io/blog/real-time-ai-performance-latency-challenges-and-optimization/)
-- [Low-latency Context Engineering for Production AI – Materialize](https://materialize.com/blog/low-latency-context-engineering-for-production-ai/)
-- [Why Latency Budgets Matter for AI System Survivability – Thor Signia (LinkedIn)](https://www.linkedin.com/posts/thorsignia_aisystemsengineering-latencyarchitecture-activity-7396045682123624448-B8uF)
-- [Galileo AI: Understanding Latency in AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)

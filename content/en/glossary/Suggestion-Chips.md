@@ -244,14 +244,6 @@ A: Ensure good color contrast, readable fonts, and ARIA labels as per [Material 
 - [Stack Overflow: Slot filling chatbot, suggestion chips in prompts](https://stackoverflow.com/questions/48091538/slot-filling-chatbot-suggestion-chips-in-prompts)
 - [YouTube: Dialogflow chatbot for websites | Botcopy's Bot prompt suggestion chips](https://www.youtube.com/watch?v=SZBMD435mV0)
 
-## Glossary
-
-- **Suggestion Chip:** Ephemeral, pill-shaped quick response button in chat UIs.
-- **Quick Reply:** Equivalent to suggestion chip on Messenger, Telegram, etc.
-- **Slot Filling:** Collecting required parameters in a conversation (see [Dialogflow docs](https://cloud.google.com/dialogflow/es/docs/slots)).
-- **Webhook:** Backend endpoint for generating dynamic responses and chips.
-- **Persistent Menu:** Always-on navigation in chatbots.
-- **Material Design:** UI design standard from Google covering chips, cards, and more ([see guidelines](https://m3.material.io/components/chips/guidelines)).
 
 ## Summary Table
 

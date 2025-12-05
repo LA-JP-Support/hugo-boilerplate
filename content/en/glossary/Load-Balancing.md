@@ -215,20 +215,3 @@ Each solution offers unique features (e.g., global load balancing, WAF integrati
 | Virtual Load Balancer            | L4/L7         | VM/Container           | Kubernetes, microservices, virtualized data centers  |
 | Elastic Load Balancer            | L4/L7         | Cloud                  | Auto-scaling, dynamic, demand-based applications     |
 
-## Glossary
-
-- **Backend Server:** The actual server(s) performing application logic or data processing.
-- **Health Check:** Periodic test (e.g., ping, HTTP request) to verify server availability.
-- **Session Persistence (Sticky Sessions):** Ensures a user’s session remains on a specific server.
-- **Reverse Proxy:** A server (often a load balancer) that forwards requests to backend servers and returns the response to the client.
-- **Application Delivery Controller (ADC):** Appliance or software that performs load balancing, SSL offloading, WAF, and advanced traffic management.
-
-**Load balancing is foundational for reliable, scalable, and high-performing AI infrastructure and deployment. For further details and architecture-specific guidance, consult the official vendor documentation linked above.**
-
-**Authoritative References and Deep Technical Guides:**
-
-- [Kemp: Load Balancing Algorithms and Techniques (Deep Dive)](https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques)
-- [Loadbalancer.org: Best Load Balancing Methods, Techniques and Algorithms](https://www.loadbalancer.org/blog/load-balancing-methods/)
-- [Google Cloud: Advanced Load Balancing Overview](https://docs.cloud.google.com/service-mesh/docs/service-routing/advanced-load-balancing-overview)
-
-This glossary is designed to serve as a detailed, actionable reference for architects, engineers, and AI practitioners working with modern load balancing in diverse environments.

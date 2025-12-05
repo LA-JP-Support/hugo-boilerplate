@@ -287,14 +287,6 @@ Yes—telemetry is used in healthcare, automotive, energy, logistics, and more.
 | **Challenges**               | Data privacy, volume, integration, quality, cost, security      |
 | **Industries**               | IT, AI, Healthcare, Automotive, Finance, Retail, IoT, Cloud     |
 
-## Glossary: Related Terms
-
-- **Application Performance Monitoring (APM):** Tools and techniques for tracking and optimizing application health.
-- **Observability:** The capability to understand a system’s internal state from its telemetry outputs.
-- **Data Lake:** Centralized storage for raw and structured telemetry data.
-- **Instrumentation:** Embedding code or agents to enable telemetry data collection.
-- **Sampling:** Selecting a subset of telemetry data to reduce volume/cost.
-- **Data Retention Policy:** Rules for how long telemetry data is stored.
 
 ## Authoritative References
 

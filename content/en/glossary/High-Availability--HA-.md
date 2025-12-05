@@ -171,17 +171,6 @@ Maximum tolerable period in which data might be lost due to failure.
 - **IoT and Edge:**  
   Smart city infrastructure relies on HA for sensor networks and real-time response ([Aerospike: HA in Cloud Computing](https://aerospike.com/blog/what-is-high-availability/)).
 
-## Glossary of Related Terms
-
-- **Load Balancing:** Distributes network traffic or workloads to maximize performance and resilience ([TechTarget: Load Balancing](https://www.techtarget.com/searchnetworking/definition/load-balancing)).
-- **Single Point of Failure (SPOF):** Any non-redundant component that can bring down the system if it fails.
-- **Replication:** Synchronous or asynchronous copying of data to ensure consistency and availability.
-- **HA Clusters:** Groups of servers for redundancy and failover, in active-active or active-passive modes ([Aerospike: Clustering Use Cases](https://aerospike.com/blog/database-clustering-use-cases/)).
-- **Service Level Agreement (SLA):** Contract specifying expected uptime and performance ([IBM: SLA](https://www.ibm.com/topics/service-level-agreement)).
-- **Business Continuity:** Plans to maintain essential functions during/after disasters.
-- **Performance Scalability:** The ability to handle increased load without performance loss.
-- **Redundant Components:** Backup hardware/software for critical operations.
-- **High Availability Disaster Recovery (HADR):** Integrated HA and DR strategies for full resilience.
 
 ## Further Reading
 

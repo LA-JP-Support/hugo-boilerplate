@@ -167,17 +167,6 @@ A manager uses Microsoft 365 Copilot to generate a performance summary from inte
 - [Microsoft Copilot: Getting Started](https://www.microsoft.com/en-us/microsoft-copilot/copilot-101/copilot-ai-agents#Getting-started)
 - [Assembled: AI Copilot Governance](https://www.assembled.com/page/ai-copilots-customer-service)
 
-## Glossary: Related Terms
-
-- **Natural Language Processing (NLP):** The field enabling copilots to interpret and generate human language ([SAP: NLP explained](https://www.sap.com/resources/what-is-natural-language-processing)).
-- **Large Language Models (LLMs):** Advanced AI models trained on vast datasets for human-like language generation.
-- **Chatbot:** Rule-based or AI tools for simple, scripted user conversations.
-- **AI Agent:** Autonomous systems that complete tasks or workflows with minimal human input.
-- **Autonomous Agent:** Executes decisions and actions independently, often for process automation.
-- **Generative AI:** AI that creates new content (text, code, images) from prompts.
-- **Repetitive Tasks:** Routine, predictable work ideal for automation.
-- **Structured/Unstructured Data:** Organized (databases) vs. unorganized (emails, text) data.
-- **Customer Satisfaction (CSAT):** A metric for service/product quality, often improved with copilot support.
 
 ## Frequently Asked Questions (FAQ)
 

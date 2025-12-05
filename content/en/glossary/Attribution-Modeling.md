@@ -283,10 +283,6 @@ A: At least quarterly, or whenever you launch significant new campaigns, channel
 - [Google Ads: About Attribution Models](https://support.google.com/google-ads/answer/6259715?hl=en)
 - [YouTube Explainer: What is Attribution Modelling?](https://www.youtube.com/embed/o3rIwaquMF4)
 
-## Glossary Entry: Attribution Modeling
-
-**Attribution Modeling:**  
-The systematic process of determining which marketing channels and touchpoints deserve credit for a conversion, enabling marketers to optimize campaigns, allocate budgets effectively, and improve overall marketing performance. ([Amplitude](https://amplitude.com/blog/attribution-model-frameworks), [AgencyAnalytics](https://agencyanalytics.com/blog/marketing-attribution-models))
 
 ## Diagram Description
 

@@ -203,21 +203,6 @@ Developers should keep the following in mind:
 - [dev.to: Adding Typing Indicators to Real-Time Chat Applications](https://dev.to/hexshift/adding-typing-indicators-to-real-time-chat-applications-76p)
 - [Sendbird: Mobile App Engagement – The Ultimate Guide](https://sendbird.com/resources/mobile-app-engagement-the-ultimate-guide)
 
-## Glossary
-
-**Typing Indicator:** A visual/textual cue in a messaging application that shows when another user is composing a message.
-
-**Debounce Timer:** A delay mechanism to prevent excessive typing events from being sent on every keystroke.
-
-**Stop Typing Event:** A signal sent when a user ceases input, used to remove the typing indicator.
-
-**WebSockets:** A real-time communication protocol commonly used for implementing typing indicators.
-
-**Read Receipt:** A feature that displays when a message has been read by the recipient.
-
-**Presence Status:** An indicator showing whether a user is online, offline, or away.
-
-**Push Notification:** An alert sent to a user’s device, sometimes triggered by typing activity.
 
 ## Summary
 

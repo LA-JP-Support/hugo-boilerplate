@@ -217,29 +217,6 @@ No. Always pair containment with satisfaction, speed, and escalation quality.
 User ratings, comments, and escalated interaction analysis identify gaps for retraining and improvement.
 
 
-## Glossary Reference Table
-
-| Term                      | Definition                                                                     |
-|---------------------------|--------------------------------------------------------------------------------|
-| Bot Containment Rate      | % of user interactions fully handled by the bot without human help.            |
-| Human Intervention        | When the chatbot escalates or transfers a query to a live agent.               |
-| Customer Support          | Departments or teams assisting users, often with chatbots.                     |
-| Customer Experience (CX)  | The overall quality of a customer’s interactions with your brand.              |
-| Escalation Rate           | % of conversations the bot cannot resolve and must send to a human.            |
-| CSAT                      | Customer Satisfaction Score—how happy users are with the interaction.          |
-| FCR                       | First Contact Resolution—% of queries resolved on the first try.               |
-| NLP                       | [Natural Language Processing](/en/glossary/natural-language-processing--nlp-/)—AI for understanding human language.               |
-| LLM                       | Large Language Model, e.g., GPT—enables nuanced, context-aware bots.           |
-| Operational Efficiency    | How well resources are used to deliver support or services.                    |
-| Knowledge Base            | Repository of information a bot draws on to answer queries.                    |
-| Backend Integration       | Connecting the bot to internal systems for data retrieval/actions.             |
-| Self-Service Rate         | % of issues resolved by customers without agent or bot intervention.           |
-| Deflection Rate           | % of interactions redirected from human agents to self-service/bots.           |
-| Abandonment Rate          | % of users who leave before their issue is resolved.                           |
-| Resolution Rate           | % of total issues resolved, bot or human.                                      |
-
-For detailed definitions of these and related metrics, see [Decagon Glossary](https://decagon.ai/glossary/what-is-chatbot-containment-rate) and [Botpress Guide](https://botpress.com/blog/containment-rate).
-
 
 ## Further Reading & Resources
 

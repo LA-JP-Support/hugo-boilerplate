@@ -191,17 +191,6 @@ Infinite canvases present unique challenges:
 - **Version Control:** Multiple collaborators may need additional tools or workflows.
 - **Onboarding and Usability:** New users may need guidance for navigation and organization.
 
-## Glossary of Related Terms
-
-- **Artboard:** Defined area within an infinite canvas for organizing project sections.
-- **Node Graph:** Visual representation of interconnected nodes (chatbot flows, pipelines, etc.).
-- **Drag & Drop:** Interaction for moving or connecting elements by dragging.
-- **Meta-data:** High-level descriptors used for filtering or navigating datasets.
-- **Pan:** Move the visible area of the canvas.
-- **Zoom:** Change the scale of the view for detail or overview.
-- **Cut-line:** Dynamic tool for extracting data from a plot along a path.
-- **Template:** Pre-defined structure used to start new projects.
-- **Layer:** Organizational tool for stacking, grouping, or toggling items.
 
 ## References and Further Reading
 

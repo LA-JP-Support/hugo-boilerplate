@@ -295,21 +295,6 @@ Tracking JavaScript errors and load times to prioritize performance fixes ([Coun
 ## Real-World Case Study: Loveholidays
 
 *Loveholidays, a UK travel leader, replaced daily Google Analytics exports with RudderStack’s real-time event streaming. This reduced data [latency](/en/glossary/latency/) to 15 minutes, increased experiment velocity, improved conversions by 2%, and saved $500,000 annually—all while staying GDPR-compliant.*
-## Glossary
-
-- **Event:** A discrete user or system action (e.g., button click, form submission, purchase).
-- **Event Handler:** Code that listens for and responds to user actions.
-- **Event Taxonomy:** Organized structure and naming of events and parameters.
-- **Event Parameters/Properties:** Additional details attached to an event (item name, value, location).
-- **Event Stream:** Flow of event data from source to analytics or storage.
-- **Funnel Analysis:** Tracking user drop-off at each step of a multi-step process.
-- **Attribution:** Assigning conversion credit to marketing touchpoints.
-- **Custom Events:** Business-defined events for unique interactions.
-- **Data Governance:** Policies ensuring data quality, security, and compliance.
-
-**Full Glossary:**  
-- [Clay: Event Tracking Glossary](https://www.clay.com/glossary/event-tracking)
-- [Reteno: Event Tracking](https://reteno.com/glossary/event-tracking)
 
 ## Actionable Next Steps
 

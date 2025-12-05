@@ -236,19 +236,6 @@ A distributed ML paradigm where models are collaboratively trained across decent
 **Research Surveys:**  
 - [ResearchGate: PPML Techniques, Challenges And Research Directions](https://www.researchgate.net/publication/379244515_Privacy-Preserving_Machine_Learning_Techniques_Challenges_And_Research_Directions)
 
-## Glossary of Key Terms
-
-| **Term**              | **Definition**                                                                                                                                                      |
-|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Differential Privacy  | A guarantee that the removal or addition of a single data point does not significantly affect the output of a computation, protecting individual privacy. ([Glossary](https://desfontain.es/blog/differential-privacy-glossary.html)) |
-| Privacy Budget (ε)    | Parameter in DP quantifying maximum allowable privacy loss; lower values = stronger privacy.                                                                        |
-| Homomorphic Encryption| Encryption enabling computation on ciphertexts, producing encrypted results that can be safely decrypted.                                                            |
-| Multi-Party Computation (MPC) | Protocols allowing multiple parties to jointly compute functions over inputs without revealing them to each other.                                          |
-| Federated Learning    | Distributed ML where models are trained on decentralized data without exchanging raw data.                                                                          |
-| Membership Inference Attack | Attack to determine if a record was used in model training.                                                            |
-| Model Inversion Attack| Attack reconstructing input features from model outputs or parameters.                                                       |
-| Privacy-Utility Trade-off | The balance between model performance and privacy guarantees.                                                            |
-| Trusted Execution Environment (TEE) | Secure processor area protecting code/data confidentiality and integrity.                                       |
 
 ## Summary Table: PPML Techniques
 

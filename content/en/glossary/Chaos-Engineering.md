@@ -199,14 +199,3 @@ Recommended best practices ([phoenixNAP](https://phoenixnap.com/blog/chaos-engin
 - [Continuous Integration / Continuous Delivery (CI/CD)](https://phoenixnap.com/blog/ci-cd-pipeline)
 - [Fault Injection](https://phoenixnap.com/blog/fault-injection-testing)
 
-## Glossary of Related Terms
-
-- **Blast Radius:** The maximum extent or impact area of a chaos experiment; should be minimized to reduce risk ([Gremlin Glossary](https://www.gremlin.com/chaos-engineering/)).
-- **Steady State:** The normal, healthy operating condition of a system, defined by observable metrics ([phoenixNAP](https://phoenixnap.com/blog/chaos-engineering)).
-- **Fault Injection:** Deliberate introduction of failures into a system to observe and improve its behavior ([eG Innovations](https://www.eginnovations.com/glossary/chaos-engineering)).
-- **GameDay:** Scheduled, team-based chaos engineering event to practice incident response ([Gremlin GameDay](https://www.gremlin.com/gameday/)).
-- **Resilience:** The system’s ability to recover from and adapt to failures ([IBM](https://www.ibm.com/think/topics/chaos-engineering)).
-- **Observability:** The capability to understand system state and behavior through metrics, logs, and traces ([IBM Observability](https://www.ibm.com/cloud/learn/observability)).
-
-**For authoritative, community-driven best practices, visit [Principles of Chaos Engineering](https://principlesofchaos.org/).**
-This glossary is designed to serve as a definitive reference guide for Chaos Engineering, supporting both newcomers and advanced practitioners. Every section is sourced from industry-leading resources, with links to documentation, tutorials, and real-world case studies. Continue your exploration by engaging with the community, reading the [Principles of Chaos Engineering](https://principlesofchaos.org/), and applying structured chaos practices to improve the resilience of your own systems.

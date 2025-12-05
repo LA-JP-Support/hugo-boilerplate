@@ -276,16 +276,6 @@ The F1 score is the harmonic mean of precision and recall:
 - [BuiltIn: Precision and Recall](https://builtin.com/data-science/precision-and-recall)
 - [Lyzr: Glossary - Precision and Recall](https://www.lyzr.ai/glossaries/precision-and-recall/)
 
-## Glossary: Key Terms
-
-- **True Positive (TP):** Correctly predicted positive instance.
-- **False Positive (FP):** Incorrectly predicted positive instance.
-- **False Negative (FN):** Actual positive missed by the model.
-- **True Negative (TN):** Correctly predicted negative instance.
-- **Confusion Matrix:** Table summarizing TP, FP, TN, FN.
-- **Threshold:** Value above which a model predicts positive; adjusting this changes precision and recall.
-- **Class Imbalance:** When one class is much more frequent than the other(s).
-- **F1 Score:** Harmonic mean of precision and recall.
 
 ## Further Learning
 

@@ -200,29 +200,7 @@ Recently added AI features for intelligent automation, including smart data extr
 **Notes:**
 - Pricing is based on “operations” (every module execution counts as one operation).
 - Overages are billed automatically or capped based on your plan.
-## Glossary of Make Terms
 
-- **Scenario:** An automated workflow of connected modules.
-- **Module:** A functional block—trigger, action, tool, or aggregator.
-- **Trigger:** An event that starts a scenario, e.g., new form submission.
-- **Action:** A task performed after a trigger, such as sending an email.
-- **Filter:** A condition module to allow or block data flow.
-- **Router:** Branches scenario flow into multiple paths based on logic.
-- **Iterator:** Processes each item in an array or list individually.
-- **Aggregator:** Combines multiple data bundles into one.
-- **Error Handler:** Defines what happens if a module fails (retry, skip, custom logic).
-- **Operation:** A counted step or task in a scenario, used for billing.
-- **Execution Log:** Record of a scenario run, with step-by-step data and errors.
-- **Template:** Prebuilt scenario, ready for customization.
-- **Webhook:** HTTP endpoint to receive real-time data and trigger scenarios.
-- **Data Store:** Persistent internal database for use across scenarios.
-- **API:** Application Programming Interface; used for custom app integrations.
-- **HTTP Module:** For sending custom API requests, handling authentication, and parsing responses.
-- **Custom Function:** User-defined, reusable logic for advanced data transformations.
-- **Visual Workflow Builder:** Drag-and-drop interface for scenario creation.
-- **Regular Expression (Regex):** Advanced text manipulation for data extraction and logic.
-- **Pagination:** Technique for retrieving multiple pages of data from APIs.
-- **Scheduler:** Tool to run scenarios at defined intervals.
 ## Frequently Asked Questions (FAQ)
 
 **Is Make the same as Integromat?**  

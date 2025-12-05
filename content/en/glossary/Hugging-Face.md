@@ -21,12 +21,6 @@ Hugging Face functions as a “GitHub for AI,” allowing anyone to collaborate,
 
 - [Official Hugging Face Site](https://huggingface.co/)
 
-## Glossary of Core Terms
-
-This glossary provides authoritative definitions and context for core Hugging Face concepts, model and data science terms, and open-source AI technologies.
-
-**For the full official glossary, see:**  
-- [Transformers Glossary](https://huggingface.co/docs/transformers/en/glossary)
 
 ### Model
 A machine learning artifact trained to perform a specific task, such as text classification, image recognition, or speech-to-text conversion. Hugging Face models may be pre-trained (trained on public data) or fine-tuned (adapted to a specific dataset or task).

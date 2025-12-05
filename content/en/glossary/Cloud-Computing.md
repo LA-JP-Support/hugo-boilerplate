@@ -314,8 +314,3 @@ Security is a shared responsibility between providers and users ([IBM Cloud Secu
 
 Explore provider documentation, engage consultants, and use free trials for hands-on experience.
 
-## Glossary of Essential Terms
-
-**Artificial Intelligence (AI):** Machine intelligence, often delivered through cloud services.
-
-**Cloud-Native:** Apps built to exploit cloud features like

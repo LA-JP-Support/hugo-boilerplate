@@ -220,17 +220,6 @@ Inform colleagues when you can’t switch tasks immediately. Use status indicato
 - [ ] Educate team on the cognitive costs and encourage deep work.
 
 
-## Glossary of Related Terms
-
-- **Context Window:** The amount of conversation history an AI model can access at one time ([Milvus](https://milvus.io/ai-quick-reference/how-do-llms-handle-context-switching-in-conversations)).
-- **Embedding:** A numerical representation of text for semantic search and retrieval ([OpenAI Community](https://community.openai.com/t/dealing-with-context-switching-in-a-conversation-that-uses-embeddings-for-information-retrieval/87836)).
-- **Intent Detection:** Identifying the purpose or topic of a user’s message.
-- **Threading:** Structuring conversations so multiple topics can be tracked independently.
-- **Flow State:** A mental state of deep focus and productivity, often disrupted by context switching ([Todoist](https://www.todoist.com/inspiration/context-switching)).
-- **Work Block:** Scheduled time for uninterrupted, focused work.
-- **Task Batching:** Grouping similar tasks to minimize context switches.
-- **Attention Mechanism:** AI model component that weighs the importance of different inputs ([Milvus](https://milvus.io/ai-quick-reference/how-do-llms-handle-context-switching-in-conversations)).
-
 
 ## Summary & Key Takeaways
 

@@ -230,28 +230,6 @@ Migrating from a monolithic to a distributed (e.g., microservices) architecture 
 ### Event-Driven Architecture
 - Use events to coordinate actions across services, reducing direct dependencies and improving scalability.
 - [GeeksforGeeks: Event-Driven Architecture](https://www.geeksforgeeks.org/system-design/event-driven-architecture-system-design/)
-## Glossary
-
-- **Monolithic Application:**  
-  A software application built as a single, indivisible codebase and deployed as one unit.
-
-- **Tightly Coupled:**  
-  A system where modules/components are highly dependent on one another’s internal details.
-
-- **Single Deployment Unit:**  
-  The entire application is built, tested, and released as a single artifact.
-
-- **Vertical Scaling:**  
-  Increasing the resources (CPU, RAM) of the servers running the application—scaling up.
-
-- **Horizontal Scaling:**  
-  Running multiple copies of the application behind a load balancer—scaling out.
-
-- **Microservices:**  
-  An architectural approach dividing an application into small, independent, loosely coupled services, each with its own lifecycle.
-
-- **Continuous Integration/Continuous Delivery (CI/CD):**  
-  Practices and tools for frequent, automated building, testing, and deployment.
 
 ## Summary
 

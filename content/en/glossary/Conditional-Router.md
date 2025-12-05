@@ -292,14 +292,6 @@ A: Most routers are exclusive (single-path per evaluation). For parallel actions
 - [Rapidomize Conditional Routing](https://rapidomize.com/docs/services/router/)
 
 
-## Glossary
-
-- **Conditional Routing:** Directing data flow based on user-defined rules or conditions.
-- **Operator:** The comparison method used in each condition (e.g., equals, contains).
-- **Logical Operator:** Combines multiple conditions into complex expressions (`$and`, `$or`).
-- **Route/Output Port:** The possible destinations the router can send data to.
-- **Default Route:** The fallback path if no conditions are met.
-
 
 ## In-depth Resources & Further Reading
 

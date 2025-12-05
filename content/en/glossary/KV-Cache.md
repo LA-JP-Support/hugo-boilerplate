@@ -264,19 +264,6 @@ Anthropic Claude’s API charges 10× less for cached tokens. Maintaining a stab
 - [Hugging Face: Standard Inference and the Rise of KV Caching](https://huggingface.co/blog/not-lain/kv-caching#standard-inference-and-the-rise-of-kv-caching)
 - [Sebastian Raschka: KV Cache in LLMs](https://magazine.sebastianraschka.com/p/coding-the-kv-cache-in-llms)
 
-## Glossary of Related Terms
-
-| Term                 | Definition                                                                                                          |
-|----------------------|---------------------------------------------------------------------------------------------------------------------|
-| **Attention Mechanism** | Process by which transformers determine which parts of the input sequence to focus on for each token output.        |
-| **Key (K)**          | Vector representation for each token, used as the “address” in attention computations.                              |
-| **Value (V)**        | Content vector associated with each token, used to generate the context vector for output.                          |
-| **Query (Q)**        | Vector for the current token asking “what do I need from context?”                                                  |
-| **Multi-Head Attention** | Attention mechanism using multiple sets of Q/K/V projections to capture information from different subspaces.         |
-| **Autoregressive Decoding** | Generating text one token at a time, conditioning each output on all prior tokens.                              |
-| **Causal Attention** | Masking future tokens to ensure the model only “looks back,” not forward.                                           |
-| **Forward Pass**     | Process of computing the output of a neural network for a given input.                                              |
-| **Time to First Token (TTFT)** | Time between sending a prompt to a model and receiving the first token in response.                      |
 
 ## References & Further Reading
 

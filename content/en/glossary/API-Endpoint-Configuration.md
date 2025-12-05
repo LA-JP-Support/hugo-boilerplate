@@ -344,26 +344,6 @@ Configure endpoints as EDGE (global), REGIONAL, or PRIVATE (VPC-only):
   Multi-channel bots using a single `/api/v1/chat/send`.
 
 
-## Glossary: Key Terms in API Endpoint Configuration
-
-- **API Endpoint:**  
-  The unique URL where an API resource is accessed.
-- **Resource:**  
-  The data or object the API exposes (user, message, order).
-- **HTTP Method:**  
-  Action performed (GET, POST, PUT, DELETE).
-- **Query Parameter:**  
-  Modifiers in the URL (?status=active).
-- **Authentication:**  
-  API key, OAuth, JWT, or mTLS mechanism to verify the caller’s identity.
-- **Input Validation:**  
-  Ensuring received data is correct, safe, and in expected format.
-- **Monitoring:**  
-  Tracking API usage, performance, and anomalies.
-- **Rate Limiting:**  
-  Restricting request rates to prevent abuse.
-- **API Documentation:**  
-
 
 ## Further Reading & References
 

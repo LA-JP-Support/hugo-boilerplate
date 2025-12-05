@@ -225,14 +225,6 @@ labels = apply_confidence_threshold(predictions, threshold=0.8)
 | Customer Service| Chatbot Intent Matching   | 0.50 – 0.70       | Balance between helpfulness and accuracy ([Zendesk](https://support.zendesk.com/hc/en-us/articles/8357749625498-About-confidence-thresholds-for-advanced-AI-agents)) |
 
 
-## Glossary & Related Concepts
-
-- **False Positive:** Model predicts positive when false (e.g., detects a defect when there is none).
-- **False Negative:** Model fails to detect a true positive (e.g., misses a real defect).
-- **Human-in-the-Loop:** Humans review or override AI outputs near the threshold.
-- **Confidence Calibration:** Aligning confidence scores with actual probabilities.
-- **Threshold Tuning:** Iteratively adjusting the cutoff for optimal results.
-
 
 ## Key Takeaways
 

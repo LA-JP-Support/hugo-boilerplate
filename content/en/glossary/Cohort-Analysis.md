@@ -267,21 +267,6 @@ These visualizations make it easy to spot trends and outliers.
 - [Corporate Finance Institute Cohort Analysis Guide](https://corporatefinanceinstitute.com/resources/business-intelligence/cohort-analysis/)
 - [Appcues Beginner’s Guide to Cohort Analysis](https://www.appcues.com/blog/cohort-analysis)
 
-## Glossary: Related Keywords & Concepts
-
-| Term                       | Definition/Context                                                                                     |
-|----------------------------|-------------------------------------------------------------------------------------------------------|
-| Acquisition cohort analysis | Grouping users by when they first signed up or were acquired.                                         |
-| Behavioral cohort analysis  | Grouping by shared actions or behaviors (e.g., used a feature, completed onboarding).                 |
-| Retention rate              | Percentage of a cohort still active after a period.                                                   |
-| Churn rate                  | Percentage of a cohort that has left after a period.                                                  |
-| Customer lifetime value (LTV) | The projected value a customer brings over their time with your product.                             |
-| Segmentation                | Dividing users into groups for snapshot analysis—not always time-based.                               |
-| Shared characteristics      | The trait(s) used to define a cohort (time, action, location, plan, etc.).                            |
-| Time periods                | Intervals (days, weeks, months) after cohort start.                                                   |
-| Conduct/Perform cohort analysis | The process of defining, building, and analyzing cohorts to answer business questions.             |
-| Improve retention / reduce churn | The main business goals cohort analysis supports.                                                 |
-| Product teams               | Typical users of cohort analysis—product managers, marketers, analytics pros.                         |
 
 ## Further Reading & Resources
 

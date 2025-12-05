@@ -237,13 +237,6 @@ Deepfake detection is critical for digital identity security, fraud prevention, 
 - [NYT: Risks of New AI Technology](https://www.nytimes.com/2018/10/22/business/efforts-to-acknowledge-the-risks-of-new-ai-technology.html)
 - [Unit21: Synthetic ID Detection & Prevention](https://www.unit21.ai/blog/synthetic-id-detection-prevention)
 
-## Glossary Terms
-
-- [Artificial Intelligence](https://www.pindrop.com/glossary/artificial-intelligence/)
-- [Machine Learning](https://www.pindrop.com/glossary/machine-learning/)
-- [Identity Verification](https://www.unit21.ai/fraud-aml-dictionary/identity-verification/)
-- [Synthetic ID](https://www.unit21.ai/fraud-aml-dictionary/synthetic-id/)
-- [Impersonation](https://www.unit21.ai/trust-safety-dictionary/impersonation/)
 
 ## Explore, Experiment, and Stay Informed
 

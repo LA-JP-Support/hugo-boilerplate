@@ -252,24 +252,6 @@ Use CSS Grid or Flexbox to make content reflow for different screen sizes, keepi
 - **Spacing Off After Applying Auto-Layout:** Adjust padding and gap values manually.
 
 
-## Glossary of Terms
-
-- **Auto-Layout:** A system for arranging UI elements automatically based on rules.
-- **Frame:** Container for other elements/components.
-- **Constraint:** A rule for how an element relates to others (spacing, alignment).
-- **Padding:** Space between a container’s edge and its children.
-- **Gap/Spacing:** Space between children within a container.
-- **Hug Contents:** Container resizes to fit its children.
-- **Fill Container:** Child expands to fill parent’s available space.
-- **Fixed Size:** Element’s dimensions stay constant.
-- **Min/Max Constraints:** Lower/upper bounds on element size.
-- **Nesting:** Placing Auto-Layout frames within others.
-- **Alignment:** Positioning of elements inside their container.
-- **Absolute Positioning / Ignore Auto-Layout:** Excludes a child from Auto-Layout rules for free placement.
-- **Direction:** Axis along which children are arranged.
-- **Wrap:** Contents move to new rows/columns when space runs out.
-- **Grid:** Two-dimensional arrangement (rows and columns).
-
 
 ## FAQ
 

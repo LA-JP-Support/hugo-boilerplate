@@ -313,25 +313,6 @@ A data scientist builds a Docker image with a trained model and API, then deploy
 **Complete CLI reference:**  
 [Docker CLI Docs](https://docs.docker.com/engine/reference/commandline/cli/)
 
-## Glossary: Key Docker Terms
-
-| Term                  | Definition                                                                                   |
-|-----------------------|---------------------------------------------------------------------------------------------|
-| Container             | Isolated process running an application and its dependencies.                               |
-| Image                 | Read-only template with instructions for container creation.                                |
-| Dockerfile            | File defining build steps for a Docker image.                                               |
-| Registry              | Service for storing and distributing images (e.g., Docker Hub).                             |
-| Docker Daemon         | Background process managing Docker objects.                                                 |
-| Docker Client         | CLI/API interface to Docker daemon.                                                         |
-| Volume                | Persistent storage for containers.                                                          |
-| Network               | Virtual networking for containers.                                                          |
-| Compose               | Tool for defining/running multi-container applications.                                     |
-| Orchestration         | Automation of deployment, scaling, and management of containers.                            |
-| Namespace             | Linux kernel feature for resource/process isolation.                                        |
-| cgroup                | Linux kernel feature for resource allocation/control.                                       |
-| Overlay Network       | Virtual network enabling multi-host container communication.                                |
-| Multi-stage Build     | Dockerfile technique to separate build/runtime dependencies.                                |
-| Docker Swarm          | Native clustering/orchestration tool for Docker.                                            |
 
 ## Further Resources
 

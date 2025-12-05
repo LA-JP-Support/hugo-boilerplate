@@ -228,13 +228,6 @@ Hybrid approach: multiple micro-frontend repos with a meta-repo for coordination
 | **Scaling**          | Difficult for teams and features   | Teams/features scale independently  |
 | **Migration**        | Hard, high risk                    | Incremental, low risk               |
 
-## Glossary
-
-- **Micro-Frontend:** A self-contained frontend module responsible for a business domain, developed and deployed independently.
-- **Container App (Shell):** The host application that loads and composes micro-frontends, handling shared layout and services.
-- **Vertical Slice:** End-to-end ownership of a feature or business domain, from UI to backend, by a single team.
-- **Custom Element:** A type of Web Component; reusable, encapsulated custom HTML tags defined by JavaScript.
-- **Module Federation:** Webpack 5 feature allowing runtime loading and sharing of modules between apps.
 
 ## References & Further Reading
 

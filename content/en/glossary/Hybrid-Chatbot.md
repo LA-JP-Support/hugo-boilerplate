@@ -186,23 +186,6 @@ A retailer reduced 85% of stock complaints by integrating inventory data in its 
 **Explore more:**  
 - [Jotform: Future trends in hybrid chatbots](https://www.jotform.com/ai/agents/hybrid-chatbots/)
 
-## Glossary of Related Terms
-
-- **Artificial Intelligence (AI):** Simulation of human intelligence processes by machines.
-  - [IBM: Artificial Intelligence](https://www.ibm.com/think/topics/artificial-intelligence)
-- **Machine Learning (ML):** AI subset that allows systems to learn from data and improve.
-  - [Engati: Machine Learning Algorithms](https://www.engati.com/glossary/machine-learning-algorithms)
-- **Natural Language Processing (NLP):** Technology for understanding and responding to human language.
-  - [Engati: Natural Language Processing](https://www.engati.com/glossary/natural-language-processing)
-- **Rule-Based Chatbot:** Chatbot that relies on scripted decision trees.
-  - [IBM: Rule-Based Chatbots](https://www.ibm.com/think/topics/chatbot-types)
-- **Entity Extraction:** Identifying key data (names, dates) from user inputs.
-  - [OMQ: NLP Chatbot](https://omq.ai/lexicon/nlp-chatbot/)
-- **Intent Recognition:** Determining the purpose behind a user's message.
-  - [Engati: Intent Recognition](https://www.engati.com/glossary/intent-recognition)
-- **Human Handover:** Transferring a chat from bot to live agent, including context.
-  - [moinAI: Human Handover](https://www.moin.ai/en/chatbot-wiki/human-takeover-the-chatbot-human-handover)
-- **Fallback Mechanism:** System that provides backup responses or directs to human help if the bot is uncertain.
 
 ## Summary & Next Steps
 

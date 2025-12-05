@@ -135,15 +135,6 @@ run();
 - **Template and setup:** [n8n Web Scraping Workflow Templates (Firecrawl)](https://www.firecrawl.dev/blog/n8n-web-scraping-workflow-templates)
 - **AI chatbot integration:** [n8n.io: AI Agent Chatbot with Jina.ai Webpage Scraper](https://n8n.io/workflows/2943-ai-agent-chatbot-with-jinaai-webpage-scraper/)
 
-## Glossary of Related Concepts
-
-- **Headless Browser:** Scriptable browser without UI, e.g., Puppeteer, for JS-heavy sites ([ScrapingBee explanation](https://www.scrapingbee.com/blog/web-scraping-javascript/#puppeteer)).
-- **Selector (CSS/XPath):** Pattern to identify/extract DOM elements.
-- **Async Function:** JavaScript function using Promises for non-blocking I/O.
-- **Proxy:** Intermediary server to mask origin or distribute load ([ScrapingBee proxy guide](https://www.scrapingbee.com/blog/web-scraping-proxies/)).
-- **Anti-Bot Measures:** Site defenses like CAPTCHAs, dynamic markup, IP bans ([Imperva overview](https://www.imperva.com/learn/application-security/data-scraping/)).
-- **Rate Limiting:** Restricting request frequency to avoid detection/blocking.
-- **robots.txt:** Site file specifying allowed/disallowed scraping paths ([Google robots.txt docs](https://developers.google.com/search/docs/crawling-indexing/robots/intro)).
 
 ## Best Practices
 
