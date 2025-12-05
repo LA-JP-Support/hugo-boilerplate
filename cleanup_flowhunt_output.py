@@ -4,8 +4,10 @@ FlowHunt Desktop出力のクリーンアップスクリプト（最終版）
 
 削除対象:
 1. フロントマター直後～最初の ## 見出しまでの全て（H1, **Category:**, **Definition:** など）
-2. ## Table of Contents セクション
-3. 本文中の区切り線（---）
+2. ## Table of Contents / ## Contents / ## 目次 セクション
+3. ## In This Glossary / ## In This Article / ## In This Section セクション
+4. ## Glossary / ## 用語集 セクション
+5. 本文中の区切り線（---）
 
 保持対象:
 - フロントマター（YAML形式に変換、日付を自動挿入）
@@ -129,6 +131,20 @@ def clean_flowhunt_output(content):
         '\n',
         body_content,
         flags=re.IGNORECASE
+    )
+    # "## In This Glossary" / "## In This Article" / "## In This Section" セクションを削除
+    body_content = re.sub(
+        r'##\s+(?:In This Glossary|In This Article|In This Section)\s*\n.+?(?=\n##|\Z)',
+        '',
+        body_content,
+        flags=re.DOTALL | re.IGNORECASE
+    )
+    # "## Glossary" / "## 用語集" セクションを削除
+    body_content = re.sub(
+        r'##\s+(?:Glossary|用語集)\s*\n.+?(?=\n##|\Z)',
+        '',
+        body_content,
+        flags=re.DOTALL | re.IGNORECASE
     )
     
     # 本文中の区切り線（---）を削除
