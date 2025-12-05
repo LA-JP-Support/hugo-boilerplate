@@ -9,7 +9,7 @@ category: "Analytics & Content Effectiveness"
 type: "glossary"
 draft: false
 ---
-## Definition: What is Dwell Time?
+## What is Dwell Time?
 
 **Dwell time** is the duration between when a user clicks on a link from a search engine results page (SERP) and when they return to the SERP. It specifically measures the time a visitor "dwells" on a page before signaling to the search engine—by clicking “back” or otherwise returning—that they are done with the result.
 

@@ -8,7 +8,7 @@ type: "glossary"
 date: 2025-12-02
 draft: false
 ---
-## Definition: What Are Automated Workflows?
+## What Are Automated Workflows?
 
 Automated workflows are technology-enabled processes that execute a series of tasks, activities, or decisions based on predefined business rules, triggers, and logic—minimizing or eliminating human intervention. These workflows are orchestrated by software platforms that route tasks, control data movement, and enforce business policies across systems and teams.
 

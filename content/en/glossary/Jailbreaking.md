@@ -9,7 +9,7 @@ category: "AI Ethics & Safety Mechanisms"
 type: "glossary"
 draft: false
 ---
-## Definition: What Is AI Jailbreaking?
+## What Is AI Jailbreaking?
 
 AI jailbreaking is the process of circumventing the built-in safety mechanisms, ethical constraints, and operational guardrails of artificial intelligence systems—especially large language models (LLMs)—to force them into producing content or actions that are normally prohibited. This includes generating instructions for illegal activities, leaking sensitive data, or facilitating cybercrime.
 

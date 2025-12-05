@@ -11,7 +11,7 @@ category: AI Infrastructure & Deployment
 type: glossary
 draft: false
 ---
-## Definition: What is FinOps for AI?
+## What is FinOps for AI?
 
 **FinOps for AI** is a discipline uniting financial management, cloud operations, and AI infrastructure governance to ensure organizations maximize business value from investments in artificial intelligence and machine learning. The practice is built upon the core FinOps principles of cost visibility, financial accountability, continuous optimization, and cross-functional collaboration, but is tailored to the unique dynamics and cost drivers of AI workloads.
 

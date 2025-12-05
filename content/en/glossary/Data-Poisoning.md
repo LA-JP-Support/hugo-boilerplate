@@ -9,7 +9,7 @@ category: "AI Ethics & Safety Mechanisms"
 type: "glossary"
 draft: false
 ---
-## Definition: What is Data Poisoning?
+## What is Data Poisoning?
 
 **Data poisoning** is the deliberate act of inserting, modifying, or deleting data in a training set used for machine learning (ML) or artificial intelligence (AI) models, with the specific intent to corrupt or manipulate the resulting model behavior. These attacks can introduce subtle vulnerabilities, bias outputs, degrade performance, or embed hidden behaviors (backdoors) that activate under specific conditions.
 

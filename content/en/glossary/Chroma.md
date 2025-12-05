@@ -9,7 +9,7 @@ category: "General"
 type: "glossary"
 draft: false
 ---
-## Definition: What is Chroma?
+## What is Chroma?
 
 **Chroma** is an open-source vector (embedding) database engineered for AI-native applications, particularly those using large language models (LLMs) and multimodal AI. Unlike traditional databases, Chroma specializes in storing, indexing, and retrieving high-dimensional vector embeddings—numerical representations of text, images, and other unstructured data.
 

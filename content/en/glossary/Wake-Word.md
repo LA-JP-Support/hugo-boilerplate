@@ -9,7 +9,7 @@ category: "AI"
 type: "glossary"
 draft: false
 ---
-## Definition: What Is a Wake Word?
+## What Is a Wake Word?
 
 A **wake word** is a specific word or phrase recognized by voice-enabled devices as a signal to "wake up" from passive listening and begin processing commands. This technology underpins hands-free interaction with AI assistants and smart devices. Wake word detection is the process of constantly analyzing ambient audio for this phrase, so that, upon detection, the device transitions from idle state to active command processing without requiring any physical input.
 

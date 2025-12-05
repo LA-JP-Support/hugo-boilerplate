@@ -9,7 +9,7 @@ category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
 ---
-## Definition: What is Zero-Touch Resolution?
+## What is Zero-Touch Resolution?
 
 Zero-Touch Resolution is a practice in which issues, requests, or incidents are automatically resolved **without any human intervention**. This is achieved through a combination of AI-powered automation, workflow orchestration, and intelligent self-service platforms. In IT Service Management (ITSM), operations, and customer support, Zero-Touch Resolution is the benchmark for frictionless, scalable, and highly efficient service delivery.
 

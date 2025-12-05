@@ -9,7 +9,7 @@ category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
 ---
-## Definition: What is Voice Activity Detection (VAD)?
+## What is Voice Activity Detection (VAD)?
 
 Voice Activity Detection (VAD), also called Speech Activity Detection (SAD), is a signal processing method that determines whether an audio signal contains human speech. VAD identifies the temporal boundaries of speech within a continuous audio stream by analyzing short segments (frames) and classifying each as "speech" or "non-speech". This separation is crucial for downstream applications in speech recognition, transcription, real-time communication, and AI chatbots, which must process only relevant spoken segments and ignore silence, noise, or music.
 

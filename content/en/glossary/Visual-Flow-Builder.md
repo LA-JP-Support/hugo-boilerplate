@@ -9,7 +9,7 @@ category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
 ---
-## Definition: What is a Visual Flow Builder?
+## What is a Visual Flow Builder?
 
 A **Visual Flow Builder** is a no-code or low-code software environment for designing, automating, and managing complex workflows using a drag-and-drop, visual interface. Users link process steps (nodes) on a canvas, creating logic flows that automate tasks, integrate systems, and coordinate AI models—without writing code.
 
