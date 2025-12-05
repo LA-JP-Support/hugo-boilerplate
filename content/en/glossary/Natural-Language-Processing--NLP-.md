@@ -1,6 +1,6 @@
 ---
 title: Natural Language Processing (NLP)
-translationKey: natural-language-processing-(nlp)-glossary-&
+translationKey: natural-language-processing-nlp
 description: Natural Language Processing (NLP) is AI technology enabling computers
   to understand, interpret, and generate human language, bridging human communication
   and machine understanding.
