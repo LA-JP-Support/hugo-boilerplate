@@ -2,12 +2,7 @@
 title: N-gram
 translationKey: n-gram
 description: N-gramとは、テキストや音声から抽出されるn個の連続したアイテム(単語、文字、記号)のシーケンスであり、自然言語処理における言語モデリングやテキスト分析の基礎となる手法です。
-keywords:
-- N-gram
-- 自然言語処理
-- 言語モデリング
-- テキスト分析
-- 音声認識
+keywords: ["N-gram", "自然言語処理", "言語モデリング", "テキスト分析", "音声認識"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: N-gram
 kana_head: その他
 e-title: N-Gram
 ---
-
 ## 定義と概要
 
 **N-gram**とは、テキストや音声のサンプルから抽出された*n*個の連続したアイテムの系列です。[自然言語処理(NLP)](https://en.wikipedia.org/wiki/Natural_language_processing)の文脈では、N-gramは通常、単語、文字、または記号の系列を指します。*n*の値によって各チャンクの長さが決まります:

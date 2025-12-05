@@ -2,12 +2,7 @@
 title: 固有表現抽出（NER）
 translationKey: named-entity-recognition-ner
 description: 固有表現抽出（NER）は、テキスト内の実世界のエンティティ（人物、組織、場所など）を識別し分類することで、生データを構造化された情報に変換します。
-keywords:
-- 固有表現抽出
-- NER
-- 自然言語処理
-- NLP
-- エンティティ抽出
+keywords: ["固有表現抽出", "NER", "自然言語処理", "NLP", "エンティティ抽出"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: 固有表現抽出（NER）
 kana_head: その他
 e-title: Named Entity Recognition (NER)
 ---
-
 ## Named Entity Recognition (NER)とは?
 
 [Named Entity Recognition (NER)](https://en.wikipedia.org/wiki/Named-entity_recognition)は、[自然言語処理(NLP)](https://www.ibm.com/think/topics/natural-language-processing)における中核的なタスクであり、非構造化テキスト内の実世界のエンティティを自動的に識別し分類することに焦点を当てています。エンティティには、人名、組織名、場所、日付、数量、金額などが含まれます。NERは、関連する部分文字列(エンティティメンション)を特定し、事前定義されたカテゴリに割り当てることで、生のテキストを構造化された機械可読データに変換します。

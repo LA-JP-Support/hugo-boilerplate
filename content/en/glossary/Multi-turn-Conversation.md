@@ -3,18 +3,12 @@ title: Multi-Turn Conversation
 translationKey: multi-turn-conversation
 description: Learn about multi-turn conversations in AI chatbots and automation. Understand
   how AI systems manage context, state, and multiple exchanges for complex tasks.
-keywords:
-- multi-turn conversation
-- AI chatbot
-- conversational AI
-- dialogue management
-- context retention
+keywords: ["multi-turn conversation", "AI chatbot", "conversational AI", "dialogue management", "context retention"]
 category: General
 type: glossary
 date: 2025-12-03
 draft: false
 ---
-
 ## 1. Definition: What Is a Multi-Turn Conversation?
 
 A **multi-turn conversation** is a dialog between a user and an AI system, such as a chatbot or virtual assistant, where the interaction consists of multiple exchanges or "turns". Each turn is a pair of user input and system response. Multi-turn conversations allow the AI to handle scenarios where information must be collected or clarified across several steps to achieve a goal (e.g., booking travel, troubleshooting, or onboarding). Unlike single-turn interactions, the system must remember and use information from previous turns, manage conversational state, and adapt to ambiguity or interruptions.

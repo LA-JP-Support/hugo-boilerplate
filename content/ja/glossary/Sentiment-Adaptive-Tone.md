@@ -2,12 +2,7 @@
 title: センチメント適応型トーン
 translationKey: sentiment-adaptive-tone
 description: センチメント適応型トーンは、顧客の感情に基づいてコミュニケーションスタイルを調整するAI機能です。これにより、インタラクションの質が向上し、顧客満足度が改善されます。
-keywords:
-- センチメント適応型トーン
-- AIチャットボット
-- カスタマーサービス
-- 感情分析
-- 感情的知性
+keywords: ["センチメント適応型トーン", "AIチャットボット", "カスタマーサービス", "感情分析", "感情的知性"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: センチメント適応型トーン
 kana_head: か
 e-title: Sentiment-Adaptive Tone
 ---
-
 ## Sentiment-Adaptive Tone(感情適応型トーン)とは?
 
 Sentiment-Adaptive Tone(感情適応型トーン)は、チャットボット、ボイスボット、自動化システムが、インタラクション中に検出されたユーザーの感情状態に基づいて、コミュニケーションスタイル(トーン、ムード、フォーマリティ)を動的に調整できる高度な人工知能(AI)機能です。

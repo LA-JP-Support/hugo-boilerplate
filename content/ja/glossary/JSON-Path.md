@@ -2,12 +2,7 @@
 title: JSON Path
 translationKey: json-path
 description: JSON Pathは、簡潔なパス式を使用して複雑なJSONデータ構造から特定の値を抽出、検索、操作するためのクエリ構文です。
-keywords:
-- JSON Path
-- JSONデータ
-- クエリ構文
-- データ抽出
-- APIテスト
+keywords: ["JSON Path", "JSONデータ", "クエリ構文", "データ抽出", "APIテスト"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: JSON Path
 kana_head: その他
 e-title: JSON Path
 ---
-
 ## JSON Pathとは?
 
 JSON Pathは、JSON(JavaScript Object Notation)ドキュメント内の要素をナビゲート、抽出、評価するために設計されたクエリ言語です。XMLにおけるXPathに相当し、標準化された読みやすい構文を使用してJSON構造の任意の深さから対象データを取得できます。JSON Pathは、プログラミング、自動化、APIテスト、データエンジニアリング、構成管理で広く使用されており、JSONデータを効率的に扱う必要があるすべての人にとって不可欠なツールです。

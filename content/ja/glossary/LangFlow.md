@@ -2,12 +2,7 @@
 title: LangFlow
 translationKey: langflow
 description: LangFlowは、AI アプリケーション、特にLLMとLangChainをベースとしたアプリケーションの構築、テスト、デプロイを行うためのオープンソースのローコードビジュアルインターフェースです。
-keywords:
-- LangFlow
-- LLM
-- AIアプリケーション
-- LangChain
-- ローコード
+keywords: ["LangFlow", "LLM", "AIアプリケーション", "LangChain", "ローコード"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: LangFlow
 kana_head: その他
 e-title: LangFlow
 ---
-
 ## LangFlowとは?
 
 LangFlowは、大規模言語モデル(LLM)、エージェント、AI自動化ワークフローを活用したアプリケーションを、コードをほとんど書かずに迅速に開発できる、オープンソースのPythonベースのビジュアルフレームワークです。[LangChain](https://www.langchain.com/)の上に構築されており、LangChainは大規模言語モデルの呼び出し、データ取得、ツール使用を連鎖させるためのモジュラーフレームワークです。

@@ -2,12 +2,7 @@
 title: レンマ化
 translationKey: lemmatization
 description: レンマ化は、NLPおよびAIにおける言語処理プロセスで、活用形の単語を基本形(レンマ)に還元し、テキスト検索、理解、分析を向上させます。
-keywords:
-- レンマ化
-- 自然言語処理
-- NLP
-- ステミング
-- テキスト正規化
+keywords: ["レンマ化", "自然言語処理", "NLP", "ステミング", "テキスト正規化"]
 category: General
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: レンマ化
 kana_head: ら
 e-title: Lemmatization
 ---
-
 ## 目次
 
 1. [Lemmatizationとは?](#what-is-lemmatization)

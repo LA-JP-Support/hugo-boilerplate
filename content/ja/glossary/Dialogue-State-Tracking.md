@@ -2,12 +2,7 @@
 title: 対話状態追跡
 translationKey: dialogue-state-tracking
 description: 対話状態追跡(DST)は、対話システムにおいてユーザーの目標、スロット値、会話履歴を推定し、一貫性のある適切なAI応答を可能にします。
-keywords:
-- 対話状態追跡
-- 会話型AI
-- チャットボット
-- 対話システム
-- スロットフィリング
+keywords: ["対話状態追跡", "会話型AI", "チャットボット", "対話システム", "スロットフィリング"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: 対話状態追跡
 kana_head: その他
 e-title: Dialogue State Tracking
 ---
-
 ## Dialogue State Tracking(対話状態追跡)とは?
 
 Dialogue State Tracking(DST)は、タスク指向型の会話AI システムの基盤となる技術です。複数ターンにわたる会話を通じて重要な詳細情報を体系的に追跡し、以下の構造化された機械可読な表現を維持します:

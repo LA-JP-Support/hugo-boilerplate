@@ -3,18 +3,12 @@ title: Hybrid Chatbot
 translationKey: hybrid
 description: A hybrid chatbot combines rule-based logic with AI, NLP, and ML to handle
   routine and complex queries, seamlessly escalating to human agents with full context.
-keywords:
-- hybrid chatbot
-- AI chatbot
-- natural language processing
-- machine learning
-- customer service automation
+keywords: ["hybrid chatbot", "AI chatbot", "natural language processing", "machine learning", "customer service automation"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
 ---
-
 ## What is a Hybrid Chatbot?
 
 A **hybrid chatbot** integrates two foundational chatbot architectures:

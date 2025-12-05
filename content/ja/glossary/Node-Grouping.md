@@ -2,12 +2,7 @@
 title: ノードグルーピング
 translationKey: node-grouping
 description: ノードグルーピングについて学びましょう。これは、AIシステム、ワークフロー自動化、インフラストラクチャオーケストレーションにおいて、関連するノードをクラスタリングする手法であり、明確性、管理性、モジュール性を向上させます。
-keywords:
-- ノードグルーピング
-- AIチャットボット
-- ワークフロー自動化
-- Kubernetes
-- クラスタリング
+keywords: ["ノードグルーピング", "AIチャットボット", "ワークフロー自動化", "Kubernetes", "クラスタリング"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: ノードグルーピング
 kana_head: な
 e-title: Node Grouping
 ---
-
 ## 定義
 
 **ノードグループ化**  

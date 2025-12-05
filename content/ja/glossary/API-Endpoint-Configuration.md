@@ -2,21 +2,7 @@
 title: API エンドポイント設定
 translationKey: api-endpoint-configuration
 description: API エンドポイント設定、統合・自動化・セキュリティにおけるその重要性、そして API エンドポイントの設計、保護、文書化のためのベストプラクティスについて学びましょう。
-keywords:
-- API エンドポイント設定
-- API セキュリティ
-- API ドキュメント
-- REST API 設計
-- API モニタリング
-- チャットボット
-- 対話型AI
-- 会話AI
-- ワークフロー自動化
-- 業務自動化
-- RPA
-- API
-- API連携
-- インターフェース
+keywords: ["API エンドポイント設定", "API セキュリティ", "API ドキュメント", "REST API 設計", "API モニタリング", "チャットボット", "対話型AI", "会話AI", "ワークフロー自動化", "業務自動化", "RPA", "API", "API連携", "インターフェース"]
 category: Web Services
 type: glossary
 date: 2025-12-02
@@ -24,7 +10,6 @@ draft: false
 term: えいぴーあい エンドポイント設定
 e-title: 'API Endpoint Configuration'
 ---
-
 ## API エンドポイント設定とは何か？
 
 **定義:**  

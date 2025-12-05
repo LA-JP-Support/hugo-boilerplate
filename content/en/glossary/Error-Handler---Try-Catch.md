@@ -4,18 +4,12 @@ translationKey: error-handler-try-catch
 description: An error handler, often a Try-Catch block, manages unexpected failures
   in automation and AI chatbots, preventing crashes and enabling controlled recovery
   or logging.
-keywords:
-- error handler
-- try-catch
-- exception handling
-- automation
-- AI chatbot
+keywords: ["error handler", "try-catch", "exception handling", "automation", "AI chatbot"]
 category: General
 type: glossary
 date: 2025-12-03
 draft: false
 ---
-
 ## Definition
 
 In automation and AI chatbot development, an error handler—often implemented as a Try-Catch block or its platform-specific equivalent—is a dedicated path in a workflow or code execution that activates only if a specified operation fails (i.e., throws an exception). This mechanism prevents the entire flow from crashing, enabling controlled recovery, logging, or corrective action ([MDN try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)).

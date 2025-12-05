@@ -4,18 +4,12 @@ translationKey: real-time-translation
 description: AI-powered systems that instantly translate chat, voice, or document
   content, enabling support agents and automated systems to communicate with customers
   in any language, in real time.
-keywords:
-- real time translation customer
-- translation tools
-- artificial intelligence
-- multilingual support
-- translation software
+keywords: ["real time translation customer", "translation tools", "artificial intelligence", "multilingual support", "translation software"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
 ---
-
 ## What is Real-time Translation?
 
 Real-time translation (RTT) refers to software that uses artificial intelligence (AI), neural machine translation (NMT), and natural language processing (NLP) to convert speech or text from one language to another instantly, as conversations occur. This enables fluid, multilingual communication in customer service, meetings, documentation, and any domain where language barriers exist.

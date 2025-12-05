@@ -4,23 +4,12 @@ translationKey: sandbox-mode
 description: An isolated, disposable testing environment for safely executing code,
   flows, or software without impacting production systems. Ideal for development,
   security, and QA.
-keywords:
-- sandbox mode
-- testing environment
-- isolated environment
-- malware analysis
-- software development
-- security sandbox
-- containerization
-- virtualization
-- AI code sandbox
-- QA testing
+keywords: ["sandbox mode", "testing environment", "isolated environment", "malware analysis", "software development", "security sandbox", "containerization", "virtualization", "AI code sandbox", "QA testing"]
 category: General
 type: glossary
 date: 2025-12-03
 draft: false
 ---
-
 ## Introduction & Definition
 
 **Sandbox Mode** is an isolated, disposable testing environment used to execute flows, automations, software, or untrusted code with zero impact on production systems or live data. It acts as a digital playground for innovation, debugging, security analysis, and validation—enabling safe experimentation away from operational assets. The sandbox concept originated with the need to safely run untrusted code or software, allowing researchers, developers, and security analysts to observe, analyze, and iterate without risk of damaging core infrastructure or exposing sensitive data ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [TestGrid](https://testgrid.io/blog/sandbox-environment-for-testing/), [Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing)).

@@ -2,12 +2,7 @@
 title: HTTPリクエストノード
 translationKey: http-request-node
 description: HTTPリクエストノードについて学びましょう。n8nやNode-REDなどの自動化プラットフォームにおいて、外部APIへのHTTPリクエスト送信やシステム統合を行うための重要なコンポーネントです。
-keywords:
-- HTTPリクエストノード
-- API統合
-- 自動化プラットフォーム
-- n8n
-- Node-RED
+keywords: ["HTTPリクエストノード", "API統合", "自動化プラットフォーム", "n8n", "Node-RED"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: HTTPリクエストノード
 kana_head: その他
 e-title: HTTP Request Node
 ---
-
 ## はじめに
 
 **HTTPリクエストノード**は、[n8n](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)、[Node-RED](https://flowfuse.com/node-red/core-nodes/http-request/)、Node.jsを含む自動化および統合プラットフォームにおける中核的なコンポーネントです。外部サーバーやAPIに対してHTTPリクエスト(GET、POST、PUT、PATCH、DELETEなど)を送信し、自動化ワークフロー内でそのレスポンスを処理することができます。このノードは、異なるシステムの統合、サードパーティサービスの利用、Webhookのトリガー、アプリケーション間のデータ交換において不可欠です。

@@ -4,18 +4,12 @@ translationKey: state-machine
 description: Explore state machines, a computational model for system transitions.
   Learn core concepts, types, uses in AI chatbots & automation, implementation, advantages,
   and challenges.
-keywords:
-- state machine
-- AI chatbot
-- automation
-- finite state machine
-- statecharts
+keywords: ["state machine", "AI chatbot", "automation", "finite state machine", "statecharts"]
 category: General
 type: glossary
 date: 2025-12-03
 draft: false
 ---
-
 ## What is a State Machine?
 
 A state machine is a formal computational model that describes how a system transitions between a finite set of states in response to external events or inputs. Each state represents a distinct situation during the system's operation, and transitions define how the system moves from one state to another based on specific triggers.

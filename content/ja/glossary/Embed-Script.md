@@ -2,12 +2,7 @@
 title: 埋め込みスクリプト
 translationKey: embed-script
 description: 埋め込みスクリプトについて学びましょう。AIチャットボットや動的コンテンツをあらゆるウェブサイトに統合するために使用されるJavaScriptスニペットです。使用方法、例、カスタマイズ、ベストプラクティスをご紹介します。
-keywords:
-- 埋め込みスクリプト
-- チャットボット
-- JavaScript
-- ウェブサイト統合
-- AI自動化
+keywords: ["埋め込みスクリプト", "チャットボット", "JavaScript", "ウェブサイト統合", "AI自動化"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: 埋め込みスクリプト
 kana_head: その他
 e-title: Embed Script
 ---
-
 ## Embed Scriptとは何か?
 
 **Embed Script(埋め込みスクリプト)**とは、ウェブサイトのHTMLに挿入される、コンパクトで自己完結型のJavaScriptスニペットで、動的なサードパーティコンテンツ(主にAIチャットボットやウィジェット)を読み込んで表示します。サイトに追加されると、スクリプトはプロバイダーのサーバーからチャットボットのコードとリソースを取得し、ブラウザ上でウィジェットをレンダリングします。

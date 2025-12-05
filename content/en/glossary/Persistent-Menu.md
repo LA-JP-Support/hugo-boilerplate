@@ -3,18 +3,12 @@ title: Persistent Menu
 translationKey: persistent-menu
 description: 'Learn about Persistent Menus in chatbots: what they are, why use them,
   how to implement them, and best practices for enhancing user navigation and experience.'
-keywords:
-- Persistent Menu
-- Chatbot
-- Facebook Messenger
-- Navigational Menu
-- Menu Items
+keywords: ["Persistent Menu", "Chatbot", "Facebook Messenger", "Navigational Menu", "Menu Items"]
 category: General
 type: glossary
 date: 2025-12-03
 draft: false
 ---
-
 ## What is a Persistent Menu?
 
 A **Persistent Menu** is an always-on, static menu interface embedded in a chatbot, visible to users throughout their session. It provides immediate access to critical chatbot actions, regardless of message context or conversation flow. The menu typically appears via a recognizable icon (often a hamburger menu) and lists essential actions such as restart, help, unsubscribe, or navigation shortcuts.

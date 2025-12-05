@@ -2,12 +2,7 @@
 title: イテレーター / For-Each
 translationKey: iterator-for-each
 description: イテレーターまたはfor-each構文は、リストやコレクション内のアイテムを1つずつ処理し、各要素に対して読み取り、更新、タスクの自動化などのアクションを実行できるようにします。
-keywords:
-- イテレーター
-- for-eachループ
-- コレクション処理
-- ワークフロー自動化
-- プログラミング概念
+keywords: ["イテレーター", "for-eachループ", "コレクション処理", "ワークフロー自動化", "プログラミング概念"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: イテレーター / For-Each
 kana_head: あ
 e-title: Iterator / For-Each
 ---
-
 ## イテレーター / For-Eachとは?
 
 **イテレーター:**  

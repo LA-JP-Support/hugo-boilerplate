@@ -2,12 +2,7 @@
 title: Delay / Sleepノード
 translationKey: delay-sleep-node
 description: Delay/Sleepノードは、AIチャットボットや自動化ワークフローにおいて、設定された期間または条件が満たされるまでワークフローの実行を一時停止します。APIレート制限やオーケストレーションにおいて重要な役割を果たします。
-keywords:
-- Delayノード
-- Sleepノード
-- 自動化ワークフロー
-- AIチャットボット
-- ワークフローオーケストレーション
+keywords: ["Delayノード", "Sleepノード", "自動化ワークフロー", "AIチャットボット", "ワークフローオーケストレーション"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: Delay / Sleep ノード
 kana_head: その他
 e-title: Delay / Sleep Node
 ---
-
 ## Delay / Sleep Nodeとは?
 
 Delay / Sleep Nodeは、自動化プラットフォームやコード内の関数として見られるコンポーネントで、設定可能な期間または条件が満たされるまで実行を一時停止します。

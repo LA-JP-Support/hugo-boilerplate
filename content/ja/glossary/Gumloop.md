@@ -2,12 +2,7 @@
 title: Gumloop
 translationKey: gumloop
 description: Gumloopは、反復的なタスクとワークフローのためのノーコードAIファースト自動化プラットフォームです。インテリジェントエージェントを使用してウェブを閲覧し、SaaSアプリと連携し、意思決定を行います。
-keywords:
-- Gumloop
-- AI自動化
-- ノーコードプラットフォーム
-- ワークフロー
-- AIエージェント
+keywords: ["Gumloop", "AI自動化", "ノーコードプラットフォーム", "ワークフロー", "AIエージェント"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: Gumloop
 kana_head: その他
 e-title: Gumloop
 ---
-
 ## Gumloopとは？
 
 **Gumloop**は、AIを活用したインテリジェントな自動化ワークフロー（「Flow」）を構築するための、モダンなノーコードプラットフォームです。従来の自動化ツールが厳格なルールベースのトリガーとアクションのみに依存しているのに対し、Gumloopは**AI-native**です。つまり、OpenAIのGPTシリーズやAnthropicのClaudeなどの大規模言語モデル（LLM）を、自動化エンジンのあらゆる層に深く統合するよう、ゼロから設計されています。

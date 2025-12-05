@@ -2,12 +2,7 @@
 title: Flowise
 translationKey: flowise
 description: Flowiseは、LangChainJSを使用してカスタムLLMフローとエージェント型AIシステムを構築するための、オープンソースのビジュアルプラットフォームです。最小限のコードで高度なAIワークフローを設計、オーケストレーション、デプロイできます。
-keywords:
-- Flowise
-- LLMワークフロー
-- AIエージェント
-- LangChainJS
-- オープンソース
+keywords: ["Flowise", "LLMワークフロー", "AIエージェント", "LangChainJS", "オープンソース"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: Flowise
 kana_head: その他
 e-title: Flowise
 ---
-
 ## **Flowiseとは?**
 
 Flowiseは、オープンソースの生成AI開発プラットフォームで、LangChainJSをコアオーケストレーターとして、AIエージェント、チャットボット、複雑なLLMワークフローを視覚的に構築することに特化しています。従来の自動化ツールとは異なり、Flowiseは高度なエージェントシステムのオーケストレーションを目的として設計されており、直感的なドラッグ&ドロップUIを通じて、シングルエージェントとマルチエージェントの両方のワークフローを実現します。

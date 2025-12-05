@@ -2,12 +2,7 @@
 title: アウトプットパーシング
 translationKey: output-parsing
 description: アウトプットパーシングは、AI言語モデルのテキスト応答から構造化データ(JSON、Pythonオブジェクト)を抽出し、自動化、分析、システム統合に活用する技術です。
-keywords:
-- アウトプットパーシング
-- LLMs
-- 構造化データ
-- プロンプトエンジニアリング
-- LangChain
+keywords: ["アウトプットパーシング", "LLMs", "構造化データ", "プロンプトエンジニアリング", "LangChain"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: アウトプットパーシング
 kana_head: あ
 e-title: Output Parsing
 ---
-
 ## 出力パースとは?
 
 出力パースとは、大規模言語モデル(LLM)が生成する非構造化テキストを、ソフトウェアが確実に利用できる構造化フォーマット(JSON、Pythonの辞書、Pydanticモデルなど)に変換することを指します。LLMは決定論的なテキストエンジンではなく、同じプロンプトでも出力が変動する可能性があり、しばしば散文、説明、または自動化における直接的な抽出を複雑にするフォーマットを含みます。

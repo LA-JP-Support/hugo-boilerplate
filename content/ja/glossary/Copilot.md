@@ -2,14 +2,7 @@
 title: AIコパイロット
 translationKey: ai-copilot
 description: AIコパイロットとは、人間のユーザーと並行して動作し、生産性、創造性、意思決定をリアルタイムで向上させる高度なAI搭載デジタルアシスタントです。
-keywords:
-- AIコパイロット
-- 人工知能
-- 大規模言語モデル
-- デジタルアシスタント
-- 生産性
-- コパイロット
-- AI支援
+keywords: ["AIコパイロット", "人工知能", "大規模言語モデル", "デジタルアシスタント", "生産性", "コパイロット", "AI支援"]
 category: General
 type: glossary
 date: 2025-12-03
@@ -19,7 +12,6 @@ reading: AIコパイロット
 kana_head: その他
 e-title: AI Copilot
 ---
-
 ## 定義
 
 **Copilot([AIコパイロット](/ja/glossary/copilot/)):**  

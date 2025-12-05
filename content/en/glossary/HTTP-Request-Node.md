@@ -4,18 +4,12 @@ translationKey: http-request-node
 description: Learn about the HTTP Request Node, a vital component in automation platforms
   like n8n and Node-RED, for sending HTTP requests to external APIs and integrating
   systems.
-keywords:
-- HTTP Request Node
-- API integration
-- automation platforms
-- n8n
-- Node-RED
+keywords: ["HTTP Request Node", "API integration", "automation platforms", "n8n", "Node-RED"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
 ---
-
 ## Introduction
 
 An **HTTP Request Node** is a central component in automation and integration platforms, including [n8n](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/), [Node-RED](https://flowfuse.com/node-red/core-nodes/http-request/), and Node.js. It allows sending HTTP requests (GET, POST, PUT, PATCH, DELETE, etc.) to external servers or APIs, processing their responses within automation workflows. This node is vital for integrating different systems, consuming third-party services, triggering webhooks, and exchanging data between applications.

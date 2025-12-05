@@ -2,12 +2,7 @@
 title: レート制限ハンドラー
 translationKey: rate-limiting-handler
 description: レート制限ハンドラーは、APIリクエストのクォータを管理し、429エラーを検出し、リトライロジックを実装することで、クライアントおよびサーバーアプリケーションのコンプライアンスを確保し、サービス中断を防止します。
-keywords:
-- レート制限ハンドラー
-- APIレート制限
-- 429 Too Many Requests
-- リトライロジック
-- エクスポネンシャルバックオフ
+keywords: ["レート制限ハンドラー", "APIレート制限", "429 Too Many Requests", "リトライロジック", "エクスポネンシャルバックオフ"]
 category: General
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: レート制限ハンドラー
 kana_head: ら
 e-title: Rate Limiting Handler
 ---
-
 ## Rate Limiting Handlerとは?
 
 **Rate Limiting Handler**は、クライアントアプリケーションとサーバーアプリケーションの両方に対して、APIリクエストのクォータを透過的に管理・実施します。リクエストの閾値に近づいたり超過したりした際に検知し、HTTP 429「Too Many Requests」レスポンスを処理し、再試行ロジック、キューイング、または遅延を管理してAPIレート制限への準拠を維持します。ハンドラーは、ミドルウェア、ライブラリ、プロキシレイヤー、またはクラウド管理サービスとして存在できます。

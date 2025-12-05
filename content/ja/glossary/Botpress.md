@@ -2,34 +2,7 @@
 title: ボットプレス
 translationKey: botpress
 description: Botpressは、ビジュアルフローエディタ、高度なAI、LLM統合を備えた、開発者にやさしいAIチャットボットや会話型エージェントを構築するためのプラットフォームです。
-keywords:
-- Botpress
-- AIチャットボット
-- LLM
-- 会話型AI
-- ビジュアルフローエディタ
-- チャットボット
-- 対話型AI
-- 会話AI
-- 大規模言語モデル
-- 言語モデル
-- 自然言語処理
-- NLP
-- 言語処理
-- AIエージェント
-- 自律型エージェント
-- エージェント
-- プロンプト
-- プロンプトエンジニアリング
-- RAG
-- 検索拡張生成
-- Retrieval-Augmented Generation
-- ワークフロー自動化
-- 業務自動化
-- RPA
-- API
-- API連携
-- インターフェース
+keywords: ["Botpress", "AIチャットボット", "LLM", "会話型AI", "ビジュアルフローエディタ", "チャットボット", "対話型AI", "会話AI", "大規模言語モデル", "言語モデル", "自然言語処理", "NLP", "言語処理", "AIエージェント", "自律型エージェント", "エージェント", "プロンプト", "プロンプトエンジニアリング", "RAG", "検索拡張生成", "Retrieval-Augmented Generation", "ワークフロー自動化", "業務自動化", "RPA", "API", "API連携", "インターフェース"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-02
@@ -37,7 +10,6 @@ draft: false
 term: ボットプレス
 e-title: Botpress
 ---
-
 ## Botpressとは？
 
 Botpressは、AI搭載のチャットボットや会話エージェントを設計、構築、デプロイ、管理するための包括的なプラットフォームです。その中核はローコードのビジュアルフローエディタで、GPT-4、Claude、Google Geminiなどの大規模言語モデル（LLM）への直接サポートを含む高度な人工知能を統合しています。Botpressは開発者と非技術者の両方を対象に設計されており、会話、カスタマーサポート、営業、人事などを自動化するための堅牢でスケーラブルなソリューションを提供します。

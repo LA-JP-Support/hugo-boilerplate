@@ -2,12 +2,7 @@
 title: パーシステントメニュー
 translationKey: persistent-menu
 description: チャットボットにおけるパーシステントメニューについて学びます:その定義、使用する理由、実装方法、そしてユーザーナビゲーションと体験を向上させるためのベストプラクティスを解説します。
-keywords:
-- Persistent Menu
-- チャットボット
-- Facebook Messenger
-- ナビゲーションメニュー
-- メニュー項目
+keywords: ["Persistent Menu", "チャットボット", "Facebook Messenger", "ナビゲーションメニュー", "メニュー項目"]
 category: General
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: パーシステントメニュー
 kana_head: は
 e-title: Persistent Menu
 ---
-
 ## Persistent Menu(パーシステントメニュー)とは?
 
 **Persistent Menu(パーシステントメニュー)**は、チャットボットに組み込まれた常時表示の静的メニューインターフェースで、セッション全体を通じてユーザーに表示されます。メッセージのコンテキストや会話フローに関係なく、チャットボットの重要なアクションへ即座にアクセスできます。メニューは通常、認識しやすいアイコン(多くの場合ハンバーガーメニュー)から表示され、再起動、ヘルプ、配信停止、ナビゲーションショートカットなどの重要なアクションがリストされます。

@@ -4,18 +4,12 @@ translationKey: precision-and-recall
 description: Precision and recall are core metrics for evaluating classification and
   information retrieval systems. Precision measures correct positive predictions,
   recall finds all actual positives.
-keywords:
-- precision
-- recall
-- machine learning
-- classification metrics
-- confusion matrix
+keywords: ["precision", "recall", "machine learning", "classification metrics", "confusion matrix"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
 ---
-
 ## Category: AI Chatbot & Automation
 
 **Definition:**  

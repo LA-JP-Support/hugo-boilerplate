@@ -4,18 +4,12 @@ translationKey: embed-script
 description: Learn about embed scripts, JavaScript snippets used to integrate AI chatbots
   and dynamic content onto any website. Discover usage, examples, customization, and
   best practices.
-keywords:
-- embed script
-- chatbot
-- JavaScript
-- website integration
-- AI automation
+keywords: ["embed script", "chatbot", "JavaScript", "website integration", "AI automation"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
 draft: false
 ---
-
 ## What Is an Embed Script?
 
 An **embed script** is a compact, self-contained JavaScript snippet inserted into a website’s HTML to load and display dynamic third-party content—most commonly AI chatbots or widgets. When added to a site, the script fetches the chatbot’s code and resources from the provider’s servers and renders the widget in the browser.

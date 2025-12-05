@@ -2,12 +2,7 @@
 title: 自然言語処理（NLP）
 translationKey: natural-language-processing-nlp
 description: 自然言語処理（NLP）は、コンピュータが人間の言語を理解、解釈、生成することを可能にするAI技術であり、人間のコミュニケーションと機械の理解を橋渡しします。
-keywords:
-- 自然言語処理
-- NLP
-- 人工知能
-- 大規模言語モデル
-- 機械学習
+keywords: ["自然言語処理", "NLP", "人工知能", "大規模言語モデル", "機械学習"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: 自然言語処理（NLP）
 kana_head: その他
 e-title: Natural Language Processing (NLP)
 ---
-
 ## 1. 概要と定義
 
 自然言語処理(NLP)は、コンピュータサイエンス、人工知能、言語学を組み合わせた学際的な分野です。その中核的な目標は、コンピュータやソフトウェアが人間の言語を意味のある有用な方法で理解、処理、生成できるようにすることです。

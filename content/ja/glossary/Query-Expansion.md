@@ -2,12 +2,7 @@
 title: クエリ拡張
 translationKey: query-expansion
 description: クエリ拡張は、検索エンジン、AIチャットボット、RAGシステムにおいて、ユーザーの検索クエリに同義語や関連用語を追加することで再構成し、意図のギャップを埋めて関連性を向上させる手法です。
-keywords:
-- クエリ拡張
-- 情報検索
-- AIチャットボット
-- RAG
-- 検索エンジン
+keywords: ["クエリ拡張", "情報検索", "AIチャットボット", "RAG", "検索エンジン"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: クエリ拡張
 kana_head: か
 e-title: Query Expansion
 ---
-
 ## クエリ拡張とは?
 
 クエリ拡張は、情報検索および検索システムにおける技術であり、ユーザーの元のクエリに関連用語、同義語、または文脈的に関連するフレーズを追加することで、検索精度と再現率を大幅に向上させます。例えば、「心臓病」を検索すると、「心血管疾患」「心筋梗塞」「心臓発作」などの用語が自動的に含まれ、より広範囲の関連文書を捕捉できます([ITU Online](https://www.ituonline.com/tech-definitions/what-is-query-expansion/)、[Stanford NLP](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf))。

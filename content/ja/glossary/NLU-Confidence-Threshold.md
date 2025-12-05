@@ -2,12 +2,7 @@
 title: NLU信頼度閾値
 translationKey: nlu-confidence-threshold
 description: NLU信頼度閾値とは、NLUエンジンがユーザーの発話に対して特定のインテントをトリガーするために必要な最小信頼度スコアです。会話型AIの中核となる概念です。
-keywords:
-- NLU信頼度閾値
-- 自然言語理解
-- 信頼度スコア
-- チャットボット
-- インテント分類
+keywords: ["NLU信頼度閾値", "自然言語理解", "信頼度スコア", "チャットボット", "インテント分類"]
 category: AI Chatbot & Automation
 type: glossary
 date: 2025-12-03
@@ -17,7 +12,6 @@ reading: NLU信頼度閾値
 kana_head: その他
 e-title: NLU Confidence Threshold
 ---
-
 ## 定義
 
 **NLU信頼度閾値:**  

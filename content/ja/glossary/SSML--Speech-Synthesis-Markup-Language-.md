@@ -2,16 +2,7 @@
 title: SSML(音声合成マークアップ言語)
 translationKey: ssml-speech-synthesis-markup-language
 description: SSMLは、合成音声の出力を制御するためのXMLベースのマークアップ言語で、発音、イントネーション、ペース、感情などを調整でき、主要なTTSプロバイダーで使用されています。
-keywords:
-- SSML
-- 音声合成マークアップ言語
-- Text-to-Speech
-- TTS
-- W3C
-- プロソディ
-- 音声学
-- 音声ユーザーインターフェース
-- AIチャットボット
+keywords: ["SSML", "音声合成マークアップ言語", "Text-to-Speech", "TTS", "W3C", "プロソディ", "音声学", "音声ユーザーインターフェース", "AIチャットボット"]
 category: AI Chatbot & Automation / Text-to-Speech / Voice User Interfaces
 type: glossary
 date: 2025-12-03
@@ -21,7 +12,6 @@ reading: SSML(音声合成マークアップ言語)
 kana_head: その他
 e-title: SSML (Speech Synthesis Markup Language)
 ---
-
 ## SSMLとは？
 
 Speech Synthesis Markup Language（SSML）は、[W3C](https://www.w3.org/TR/speech-synthesis11/)によって開発・維持されているXMLベースのマークアップ標準です。SSMLにより、開発者、デザイナー、言語学者は、テキストが合成音声（機械生成音声）でどのように表現されるべきかを正確に記述できます。これは、自然で表現豊かな、文脈に適した音声出力を必要とするアプリケーションにとって不可欠です。
