@@ -1,0 +1,216 @@
+You are given a glossary article with optional metadata input. Your task is to generate ONLY the Hugo frontmatter metadata.
+
+---
+
+## INPUT FORMAT
+
+You may receive metadata in this format (optional):
+```
+Category: [category name]
+Keyword: [keyword name]
+Description: [specific description for this keyword context]
+```
+
+**Important about Description input:**
+- If Description is provided in input, it means this keyword may have multiple meanings in different contexts
+- Use the provided Description to clarify which specific meaning this article covers
+- This Description should ONLY appear in the frontmatter, NOT in the article body
+
+---
+
+## YOUR TASK
+
+Generate ONLY the frontmatter section. DO NOT modify or include the input metadata in the article body.
+
+---
+
+## FRONTMATTER FORMAT
+
+```
+---
+title: "[Keyword from input OR first H1 heading]"
+date: [Current date YYYY-MM-DD]
+translationKey: "[lowercase-hyphen-separated version of title]"
+description: "[Description from input OR SEO optimized description, max 160 characters]"
+keywords: ["[keyword1]", "[keyword2]", "[keyword3]", "[keyword4]", "[keyword5]"]
+category: "[Category from input OR extracted from article OR 'General']"
+type: "glossary"
+draft: true
+---
+```
+
+---
+
+## FIELD GENERATION RULES
+
+### title
+- **Priority 1:** Use Keyword from input if provided
+- **Priority 2:** Extract from first H1 heading (skip "Writing style definition" if present)
+- **Format:** Keep as-is, wrap in quotes
+- **Example:** `title: "Active Learning"`
+
+### date
+- Use current date (2025-11-25)
+- Format: YYYY-MM-DD
+- NO quotes
+- **Example:** `date: 2025-11-25`
+
+### translationKey
+- Convert title to lowercase
+- Replace spaces with hyphens
+- Remove special characters: ( ) / \ : ; , . " '
+- **Examples:**
+  - "Active Learning" → `translationKey: "active-learning"`
+  - "Code Block (Python/JS)" → `translationKey: "code-block-python-js"`
+
+### description
+- **Priority 1:** Use Description from input if provided (this clarifies the specific context/meaning)
+- **Priority 2:** Extract or create SEO-optimized description from article
+- **Maximum length:** 160 characters
+- **Wrap in quotes**
+- **Example:** `description: "A machine learning process where the model explicitly asks a human to label data points it is uncertain about."`
+
+**Note on Description input:**
+When Description is provided in input, it serves to disambiguate the keyword. For example:
+- Keyword: "Active Learning" 
+- Description: "A machine learning process..." (distinguishes from educational pedagogy meaning)
+
+### keywords
+- Extract top 5 most relevant keywords from article
+- Include the main Keyword as first item
+- Array format with quotes
+- **Example:** `keywords: ["Active Learning", "Machine Learning", "Supervised Learning", "Data Annotation", "Human-in-the-Loop"]`
+
+### category
+- **Priority 1:** Use Category from input if provided
+- **Priority 2:** Extract from "Category:" field in article
+- **Priority 3:** Use "General" as default
+- **Example:** `category: "AI Chatbot & Automation"`
+
+### type
+- Always: `type: "glossary"`
+
+### draft
+- Always: `draft: true` (boolean, NO quotes)
+
+---
+
+## CRITICAL RULES
+
+1. **Output ONLY the frontmatter section**
+2. **Start with ---**
+3. **End with ---**
+4. **DO NOT use ```yaml annotation**
+5. **DO NOT include input metadata (Category, Keyword, Description) in article body**
+6. **Input metadata is ONLY for frontmatter generation**
+7. **DO NOT modify the article content**
+
+---
+
+## EXAMPLES
+
+### Example 1: With Input Metadata
+
+**Input Metadata:**
+```
+Category: AI Chatbot & Automation
+Keyword: Active Learning
+Description: A machine learning process where the model explicitly asks a human to label data points it is uncertain about.
+```
+
+**Article:**
+```
+# Active Learning
+
+## What is Active Learning?
+
+Active Learning is a supervised machine learning paradigm...
+
+[rest of article]
+```
+
+**Output (ONLY frontmatter):**
+```
+---
+title: "Active Learning"
+date: 2025-11-25
+translationKey: "active-learning"
+description: "A machine learning process where the model explicitly asks a human to label data points it is uncertain about."
+keywords: ["Active Learning", "Machine Learning", "Supervised Learning", "Data Annotation", "Query Strategy"]
+category: "AI Chatbot & Automation"
+type: "glossary"
+draft: true
+---
+```
+
+**Important:** The input metadata (Category, Keyword, Description) should NOT appear in the article body.
+
+### Example 2: Without Input Metadata
+
+**Article:**
+```
+# Neural Networks
+
+## Introduction
+
+Neural networks are computing systems inspired by biological neural networks...
+
+Category: Deep Learning
+
+[rest of article]
+```
+
+**Output (ONLY frontmatter):**
+```
+---
+title: "Neural Networks"
+date: 2025-11-25
+translationKey: "neural-networks"
+description: "Computing systems inspired by biological neural networks that learn from data to make predictions and decisions."
+keywords: ["Neural Networks", "Deep Learning", "Machine Learning", "Artificial Intelligence", "Backpropagation"]
+category: "Deep Learning"
+type: "glossary"
+draft: true
+---
+```
+
+---
+
+## WHAT NOT TO DO
+
+❌ DO NOT output:
+```yaml
+---
+title: "Active Learning"
+...
+---
+```
+
+❌ DO NOT include input metadata in article:
+```
+# Active Learning
+
+Category: AI Chatbot & Automation
+Keyword: Active Learning
+Description: A machine learning process...
+
+## What is Active Learning?
+...
+```
+
+✅ CORRECT:
+```
+---
+title: "Active Learning"
+date: 2025-11-25
+...
+---
+```
+
+And the article body remains unchanged (no input metadata added).
+
+---
+
+## NOW GENERATE THE FRONTMATTER
+
+RETURN ONLY THE FRONTMATTER SECTION STARTING WITH --- AND ENDING WITH ---

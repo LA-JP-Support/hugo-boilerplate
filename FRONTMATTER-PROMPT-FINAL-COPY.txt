@@ -1,0 +1,239 @@
+You are given a glossary article with optional metadata input. Your task is to generate ONLY the Hugo frontmatter metadata.
+
+---
+
+## INPUT FORMAT
+
+You may receive metadata in this format (optional):
+```
+Category: [category name]
+Keyword: [keyword name]
+Description: [specific description for this keyword context]
+```
+
+**Important about Description input:**
+- If Description is provided in input, it helps clarify which specific meaning/context this article covers
+- This Description is for YOUR understanding to generate better frontmatter
+- DO NOT use the input Description directly in frontmatter
+- DO NOT include input metadata (Category, Keyword, Description) in the article body
+- Input metadata is ONLY for guidance, not for direct output
+
+---
+
+## YOUR TASK
+
+Generate ONLY the frontmatter section. DO NOT modify or include the input metadata in the article body.
+
+---
+
+## FRONTMATTER FORMAT
+
+```
+---
+title: "[Keyword from input OR first H1 heading]"
+date: [Current date YYYY-MM-DD]
+translationKey: "[lowercase-hyphen-separated version of title]"
+description: "[SEO optimized description of page, max 160 characters]"
+keywords: ["[keyword1]", "[keyword2]", "[keyword3]", "[keyword4]", "[keyword5]"]
+category: "[Category from input OR extracted from article OR 'General']"
+type: "glossary"
+draft: true
+---
+```
+
+---
+
+## FIELD GENERATION RULES
+
+### title
+- **Priority 1:** Use Keyword from input if provided
+- **Priority 2:** Extract from first H1 heading (skip "Writing style definition" if present)
+- **Format:** Keep as-is, wrap in quotes
+- **Example:** `title: "Active Learning"`
+
+### date
+- Use current date (2025-11-25)
+- Format: YYYY-MM-DD
+- NO quotes
+- **Example:** `date: 2025-11-25`
+
+### translationKey
+- Convert title to lowercase
+- Replace spaces with hyphens
+- Remove special characters: ( ) / \ : ; , . " '
+- **Examples:**
+  - "Active Learning" → `translationKey: "active-learning"`
+  - "Code Block (Python/JS)" → `translationKey: "code-block-python-js"`
+
+### description
+- **Generate an SEO-optimized description from the article content**
+- **Maximum length:** 160 characters
+- **Should be compelling and informative**
+- **Include the main keyword naturally**
+- **Wrap in quotes**
+- **Example:** `description: "Learn what Active Learning is, how it works, and how to reduce labeling costs while improving model performance in machine learning."`
+
+**Note:** If Description is provided in input, use it as context to understand the article's focus, but still create an SEO-optimized description based on the actual article content.
+
+### keywords
+- Extract top 5 most relevant keywords from article
+- Include the main Keyword as first item
+- Array format with quotes
+- **Example:** `keywords: ["Active Learning", "Machine Learning", "Supervised Learning", "Data Annotation", "Human-in-the-Loop"]`
+
+### category
+- **Priority 1:** Use Category from input if provided
+- **Priority 2:** Extract from "Category:" field in article
+- **Priority 3:** Use "General" as default
+- **Example:** `category: "AI Chatbot & Automation"`
+
+### type
+- Always: `type: "glossary"`
+
+### draft
+- Always: `draft: true` (boolean, NO quotes)
+
+---
+
+## CRITICAL RULES
+
+1. **Output ONLY the frontmatter section**
+2. **Start with ---**
+3. **End with ---**
+4. **DO NOT use ```yaml annotation**
+5. **DO NOT include input metadata (Category, Keyword, Description) in article body**
+6. **Input metadata is ONLY for guidance, not direct output**
+7. **DO NOT modify the article content**
+8. **Generate SEO-optimized description (max 160 chars), do NOT copy input Description directly**
+
+---
+
+## EXAMPLES
+
+### Example 1: With Input Metadata
+
+**Input Metadata:**
+```
+Category: AI Chatbot & Automation
+Keyword: Active Learning
+Description: A machine learning process where the model explicitly asks a human to label data points it is uncertain about.
+```
+
+**Article:**
+```
+# Active Learning
+
+## What is Active Learning?
+
+Active Learning is a supervised machine learning paradigm where an algorithm interactively selects the most informative data points from a large pool of unlabeled data, requesting labels from a human oracle...
+
+[rest of article]
+```
+
+**Output (ONLY frontmatter):**
+```
+---
+title: "Active Learning"
+date: 2025-11-25
+translationKey: "active-learning"
+description: "Learn what Active Learning is, how it works, and how to reduce labeling costs while improving ML model performance with targeted data annotation."
+keywords: ["Active Learning", "Machine Learning", "Supervised Learning", "Data Annotation", "Query Strategy"]
+category: "AI Chatbot & Automation"
+type: "glossary"
+draft: true
+---
+```
+
+**Note:** 
+- The input Description helped understand the context
+- But the frontmatter description is SEO-optimized (160 chars max)
+- Input metadata does NOT appear in article body
+
+### Example 2: Without Input Metadata
+
+**Article:**
+```
+# Neural Networks
+
+## Introduction
+
+Neural networks are computing systems inspired by biological neural networks that learn from data to make predictions and decisions...
+
+Category: Deep Learning
+
+[rest of article]
+```
+
+**Output (ONLY frontmatter):**
+```
+---
+title: "Neural Networks"
+date: 2025-11-25
+translationKey: "neural-networks"
+description: "Discover how Neural Networks work, their architecture, training methods, and applications in deep learning and artificial intelligence systems."
+keywords: ["Neural Networks", "Deep Learning", "Machine Learning", "Artificial Intelligence", "Backpropagation"]
+category: "Deep Learning"
+type: "glossary"
+draft: true
+---
+```
+
+---
+
+## WHAT NOT TO DO
+
+❌ DO NOT copy input Description directly:
+```
+---
+description: "A machine learning process where the model explicitly asks a human to label data points it is uncertain about."
+---
+```
+
+✅ CORRECT - Generate SEO-optimized description:
+```
+---
+description: "Learn what Active Learning is, how it works, and how to reduce labeling costs while improving ML model performance."
+---
+```
+
+❌ DO NOT include input metadata in article:
+```
+# Active Learning
+
+Category: AI Chatbot & Automation
+Keyword: Active Learning
+Description: A machine learning process...
+
+## What is Active Learning?
+...
+```
+
+✅ CORRECT - Article body unchanged:
+```
+# Active Learning
+
+## What is Active Learning?
+...
+```
+
+---
+
+## SEO-OPTIMIZED DESCRIPTION TIPS
+
+- Start with action words: "Learn", "Discover", "Understand"
+- Include main keyword naturally
+- Mention key benefits or outcomes
+- Keep under 160 characters
+- Make it compelling and informative
+- Answer "What will the reader learn?"
+
+**Examples:**
+- "Learn what Active Learning is, how it works, and how to reduce labeling costs in machine learning projects."
+- "Discover Active Learning strategies, benefits, and implementation tips to improve your ML model performance efficiently."
+- "Understand Active Learning: a machine learning approach that minimizes annotation costs while maximizing model accuracy."
+
+---
+
+## NOW GENERATE THE FRONTMATTER
+
+RETURN ONLY THE FRONTMATTER SECTION STARTING WITH --- AND ENDING WITH ---
