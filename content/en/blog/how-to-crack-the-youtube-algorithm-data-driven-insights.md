@@ -49,10 +49,10 @@ While the YouTube algorithm operates independently, creators can leverage **Smar
 
 One of the most fundamental questions in thumbnail design is whether to include text at all, and if so, how much. The data reveals a fascinating trend: **41.6% of top YouTubers primarily use text-free thumbnails**, while **58.4% include text**. This split suggests that both approaches can work, but the decision should be strategic rather than arbitrary. Historically, the trend toward text-heavy thumbnails peaked around 2013, when approximately 70% of top creators included text. However, this percentage has declined significantly, suggesting that the platform has evolved toward more visual, text-minimal designs. This shift likely reflects several factors: improved mobile viewing experiences that make small text harder to read, the rise of short-form content where visual impact matters more than text clarity, and the general maturation of creator strategies that move beyond clickbait tactics. When top creators do include text in their thumbnails, they follow a strict discipline: **the average is between 1-3 words**. This constraint forces creators to choose their words carefully, ensuring that every word serves a purpose. A thumbnail with "SHOCKING TRUTH REVEALED" uses three words to create curiosity, while a thumbnail with just "EXPOSED" accomplishes similar psychological impact with one word. The data suggests that more words don't equal more clicks; in fact, the opposite appears true. Thumbnails with excessive text often perform worse because they become cluttered and harder to read at small sizes, especially on mobile devices where most YouTube viewing occurs.
 
-<div class="max-w-2xl mx-auto">
-  <div class="relative w-full pt-[56.25%] rounded-xl shadow-lg overflow-hidden">
+<div style="max-width: 768px; margin: 2rem auto;">
+  <div style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 18px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.25); background: #000;">
     <iframe
-      class="absolute inset-0 h-full w-full"
+      style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"
       src="https://www.youtube.com/embed/P2aJ9Br1JRc"
       title="I Analyzed 93,421 YouTube Videos To CRACK The Algorithm"
       frameborder="0"
