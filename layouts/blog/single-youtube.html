@@ -1,0 +1,191 @@
+{{ define "main" }}
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+  <!-- ヘッダーセクション -->
+  <header class="py-8 sm:py-12">
+    <div class="mx-auto max-w-5xl">
+      <!-- パンくずリスト -->
+      <div class="mb-6">
+        <!-- パンくずリスト（スマホでは非表示） -->
+        <nav class="text-sm hidden sm:block">
+          <ol class="flex items-center space-x-2 text-gray-500">
+            <li class="flex items-center">
+              <a href="/{{ .Language.Lang }}/" class="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center">
+                <img src="/images/home-icon.png" alt="Home" class="h-5 w-5">
+              </a>
+            </li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="/{{ .Language.Lang }}/blog/" class="hover:text-indigo-600 dark:hover:text-indigo-400">{{ i18n "blog_title" }}</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li class="text-gray-900 dark:text-white truncate max-w-xs">{{ .Title }}</li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- タイトル -->
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight">
+        {{ .Title }}
+      </h1>
+
+      <!-- メタ情報とタグ -->
+      <div class="mt-3 sm:mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
+        <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-xs sm:text-sm">
+          {{ if eq .Language.Lang "ja" }}
+            {{ .Date.Format "2006年1月2日" }}
+          {{ else }}
+            {{ .Date.Format "January 2, 2006" }}
+          {{ end }}
+        </time>
+        {{ if .Params.tags }}
+          <span class="text-gray-300 hidden sm:inline">•</span>
+          <div class="flex flex-wrap gap-2">
+            {{ range .Params.tags }}
+              <a 
+                href="/{{ $.Language.Lang }}/tags/{{ . | urlize }}/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                {{ . }}
+              </a>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+
+      <!-- メイン画像（スマートフォンでも表示） -->
+      {{ if .Params.image }}
+        <div class="mt-5 sm:mt-6 w-full">
+          <img 
+            src="{{ .Params.image }}" 
+            alt="{{ .Title }}" 
+            class="w-full h-auto rounded-lg shadow-lg object-cover"
+            style="max-height: 400px; object-fit: cover;"
+          >
+        </div>
+      {{ end }}
+
+      <!-- YouTube動画紹介の注釈 -->
+      <div class="mt-4 sm:mt-5 mx-auto max-w-5xl">
+        <div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 dark:border-blue-400 p-4 rounded-r-lg">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg class="h-5 w-5 text-blue-500 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
+              </svg>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-semibold text-blue-800 dark:text-blue-300">
+                {{ if eq .Language.Lang "ja" }}
+                  スタッフ厳選の注目動画
+                {{ else }}
+                  Staff-Selected Featured Video
+                {{ end }}
+              </p>
+              <p class="mt-1 text-sm text-blue-700 dark:text-blue-200">
+                {{ if eq .Language.Lang "ja" }}
+                  SmartWebスタッフが「多くの方に知っていただきたい」と感じた優れたYouTube動画を記事化しました。詳しくは元動画をご覧ください。
+                {{ else }}
+                  We've created this article based on an excellent YouTube video that our SmartWeb staff felt should be shared with a wider audience. For more details, please watch the original video.
+                {{ end }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 説明 -->
+      {{ if .Description }}
+        <p class="mt-3 sm:mt-5 text-base sm:text-lg leading-6 sm:leading-7 text-gray-600 dark:text-gray-400">
+          {{ .Description }}
+        </p>
+      {{ end }}
+    </div>
+  </header>
+
+  <!-- 記事本文 -->
+  <div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-5xl py-6 sm:py-8">
+    {{ .Content }}
+  </div>
+
+  <!-- 関連記事 -->
+  {{ $currentPage := . }}
+  {{ $relatedPages := slice }}
+  
+  {{/* まずRelated機能で関連記事を探す */}}
+  {{ $related := .Site.RegularPages.Related . }}
+  {{ range $related }}
+    {{ if and (eq .Language.Lang $currentPage.Language.Lang) (ne .Permalink $currentPage.Permalink) }}
+      {{ $relatedPages = $relatedPages | append . }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* 関連記事が3件未満の場合、同じ言語の他の記事を追加 */}}
+  {{ if lt (len $relatedPages) 3 }}
+    {{ $langPages := where .Site.RegularPages "Language.Lang" .Language.Lang }}
+    {{ range $langPages }}
+      {{ if and (ne .Permalink $currentPage.Permalink) (not (in $relatedPages .)) }}
+        {{ $relatedPages = $relatedPages | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* 最初の3件を表示 */}}
+  {{ $relatedPages = first 3 $relatedPages }}
+  
+  {{ if $relatedPages }}
+    <div class="mt-10 sm:mt-14 border-t border-gray-200 dark:border-gray-700 pt-8 sm:pt-10">
+      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 sm:mb-8">
+        {{ i18n "related_posts" }}
+      </h2>
+      <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {{ range $relatedPages }}
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            {{ if .Params.image }}
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="{{ .Params.image }}" 
+                  alt="{{ .Title }}" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            {{ end }}
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="{{ .Permalink }}" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  {{ .Title }}
+                </a>
+              </h3>
+              {{ if .Description }}
+                {{ $desc := .Description }}
+                {{ if gt (len $desc) 100 }}
+                  {{ $desc = substr $desc 0 100 | printf "%s..." }}
+                {{ end }}
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  {{ $desc }}
+                </p>
+              {{ else if .Summary }}
+                {{ $summary := .Summary }}
+                {{ if gt (len $summary) 100 }}
+                  {{ $summary = substr $summary 0 100 | printf "%s..." }}
+                {{ end }}
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  {{ $summary }}
+                </p>
+              {{ end }}
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="{{ .Permalink }}" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  {{ if eq $currentPage.Language.Lang "ja" }}続きを読む{{ else }}Read more{{ end }}
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</article>
+{{ end }}
