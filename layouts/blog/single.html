@@ -27,17 +27,9 @@
       </h1>
 
       <!-- メタ情報とタグ -->
-      <div class="mt-3 sm:mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
-        <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-xs sm:text-sm">
-          {{ if eq .Language.Lang "ja" }}
-            {{ .Date.Format "2006年1月2日" }}
-          {{ else }}
-            {{ .Date.Format "January 2, 2006" }}
-          {{ end }}
-        </time>
+      <div class="mt-3 sm:mt-4 flex flex-wrap sm:flex-nowrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
         {{ if .Params.tags }}
-          <span class="text-gray-300 hidden sm:inline">•</span>
-          <div class="flex flex-wrap gap-2">
+          <div class="flex flex-wrap gap-2 sm:flex-1 min-w-0">
             {{ range .Params.tags }}
               <a 
                 href="/{{ $.Language.Lang }}/tags/{{ . | urlize }}/" 
@@ -48,6 +40,10 @@
             {{ end }}
           </div>
         {{ end }}
+
+        <div class="w-full sm:w-auto sm:ml-auto">
+          {{ partial "components/page-dates.html" . }}
+        </div>
       </div>
 
       <!-- メイン画像（スマートフォンでも表示） -->

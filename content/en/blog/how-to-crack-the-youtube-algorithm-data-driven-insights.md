@@ -1,6 +1,7 @@
 ---
 title: "How to Crack the YouTube Algorithm: Data-Driven Insights from 93,421 Videos"
 date: 2025-11-21
+lastmod: 2025-12-12
 draft: false
 layout: single-youtube
 translationKey: "how-to-crack-the-youtube-algorithm-data-driven-insights"
