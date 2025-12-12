@@ -57,6 +57,8 @@
                     let fuse = null;
                     let debounceTimer;
 
+                    const pageLang = "{{ .Lang }}";
+
                     const minReadTranslatedText = document.getElementById('min-read-translation').textContent;
 
                     // Initialize with URL parameters if present
@@ -64,6 +66,35 @@
                     if (searchQuery) {
                         searchInput.value = searchQuery;
                     }
+
+                    // Update hero copy (avoid awkward static title like "検索")
+                    function updateHeroCopy(queryValue) {
+                        const heroTitle = document.querySelector('.hero-enhanced--compact .hero-content h1, .hero-content h1');
+                        const heroDesc = document.querySelector('.hero-enhanced--compact .hero-content p, .hero-content p');
+
+                        if (!heroTitle) return;
+
+                        const query = (queryValue || '').trim();
+                        const hasQuery = query.length > 0;
+
+                        if (pageLang === 'ja') {
+                            heroTitle.textContent = hasQuery ? `「${query}」の検索結果` : '検索結果';
+                            if (heroDesc) {
+                                heroDesc.textContent = hasQuery
+                                    ? 'キーワードを変えて再検索できます。'
+                                    : 'キーワードを入力してサイト内を検索できます。';
+                            }
+                        } else {
+                            heroTitle.textContent = hasQuery ? `Search results for “${query}”` : 'Search results';
+                            if (heroDesc) {
+                                heroDesc.textContent = hasQuery
+                                    ? 'Refine your query to narrow down results.'
+                                    : 'Enter a keyword to search across the site.';
+                            }
+                        }
+                    }
+
+                    updateHeroCopy(searchInput.value);
 
                     // Show/hide clear button
                     function toggleClearBtn() {
@@ -77,6 +108,7 @@
                         searchInput.value = '';
                         //searchInput.focus();
                         toggleClearBtn();
+                        updateHeroCopy('');
                         searchResults.innerHTML = '';
                         document.getElementById('search-pagination').innerHTML = '';
                         updateURL('');
@@ -218,6 +250,31 @@
                         }).sort((a, b) => a.priorityScore - b.priorityScore);
                     }
 
+                    function canonicalizePermalink(permalink) {
+                        if (!permalink || typeof permalink !== 'string') return '';
+                        const noHash = permalink.split('#')[0];
+                        return noHash.replace(/\/+$/, '');
+                    }
+
+                    function dedupeResultsByPermalink(results) {
+                        const bestByPermalink = new Map();
+
+                        results.forEach(result => {
+                            const key = canonicalizePermalink(result?.item?.permalink);
+                            if (!key) return;
+
+                            const existing = bestByPermalink.get(key);
+                            const score = (result.priorityScore ?? result.score ?? 0);
+                            const existingScore = existing ? (existing.priorityScore ?? existing.score ?? 0) : undefined;
+
+                            if (!existing || score < existingScore) {
+                                bestByPermalink.set(key, result);
+                            }
+                        });
+
+                        return Array.from(bestByPermalink.values());
+                    }
+
                     let lastQuery = '';
                     function performSearch(query, page = 1) {
                         lastQuery = query;
@@ -261,6 +318,9 @@
 
                         // Prioritize exact matches and multi-word presence
                         results = prioritizeResults(results, query);
+
+                        // Ensure each page appears at most once (keep best-scoring entry)
+                        results = dedupeResultsByPermalink(results);
 
                         const total = results.length;
                         const start = (page - 1) * perPage;
@@ -405,6 +465,7 @@
 
                     // Listen for input changes
                     searchInput.addEventListener('input', function() {
+                        updateHeroCopy(this.value);
                         debounce(() => performSearch(this.value), 300);
                     });
                 });

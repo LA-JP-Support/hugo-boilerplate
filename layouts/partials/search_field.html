@@ -5,6 +5,7 @@
 {{- $directories := .directories | default (slice) -}}
 {{- $placeholder := .placeholder | default (i18n "search_placeholder") -}}
 {{- $resultsContainer := .resultsContainer | default "" -}}
+{{- $searchPageUrl := "/search/" | relLangURL -}}
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js" integrity="sha512-Nqw1tH3mpavka9cQCc5zWWEZNfIPdOYyQFjlV1NvflEtQ0/XI6ZQ+H/D3YgJdqSUJlMLAPRj/oXlaHCFbFCjoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -28,7 +29,7 @@
         <div id="popup-search-results-{{ $searchId }}" class="p-2"></div>
         <div class="search-loading-{{ $searchId }} text-center px-3 py-4 text-secondary hidden">{{ i18n "search_loading" }}</div>
         <div class="search-view-all-{{ $searchId }} text-center py-3 border-t border-gray-200 dark:border-gray-700 hidden">
-            <a href="/search/" id="view-all-results-{{ $searchId }}" class="text-heading text-sm font-medium hover:underline hover:text-primary">{{ i18n "search_view_all_results" }}</a>
+            <a href="{{ $searchPageUrl }}" id="view-all-results-{{ $searchId }}" class="text-heading text-sm font-medium hover:underline hover:text-primary">{{ i18n "search_view_all_results" }}</a>
         </div>
     </div>
 </div>
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const viewAllSection = document.querySelector('.search-view-all-{{ $searchId }}');
     const viewAllLink = document.getElementById('view-all-results-{{ $searchId }}');
     const clearButton = document.getElementById('clear-search-{{ $searchId }}');
+    const searchPageUrl = {{ $searchPageUrl | jsonify | safeJS }};
 
     // Global variables
     let fuseInstance = null;
@@ -315,6 +317,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }).sort((a, b) => a.priorityScore - b.priorityScore);
     }
 
+    function canonicalizePermalink(permalink) {
+        if (!permalink || typeof permalink !== 'string') return '';
+        const noHash = permalink.split('#')[0];
+        return noHash.replace(/\/+$/, '');
+    }
+
+    function dedupeResultsByPermalink(results) {
+        const bestByPermalink = new Map();
+
+        results.forEach(result => {
+            const key = canonicalizePermalink(result?.item?.permalink);
+            if (!key) return;
+
+            const existing = bestByPermalink.get(key);
+            const score = (result.priorityScore ?? result.score ?? 0);
+            const existingScore = existing ? (existing.priorityScore ?? existing.score ?? 0) : undefined;
+
+            if (!existing || score < existingScore) {
+                bestByPermalink.set(key, result);
+            }
+        });
+
+        return Array.from(bestByPermalink.values());
+    }
+
     /**
      * Performs a search for the given query and displays the results.
      * @param {string} query - The search query.
@@ -352,6 +379,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Prioritize exact matches and multi-word presence
             results = prioritizeResults(results, query);
 
+            // Ensure each page appears at most once (keep best-scoring entry)
+            results = dedupeResultsByPermalink(results);
+
             // Reset keyboard selection when new results appear
             selectedResultIndex = -1;
 
@@ -364,7 +394,7 @@ document.addEventListener('DOMContentLoaded', function() {
             loadingIndicator.classList.add('hidden');
             searchResultsPopup.classList.remove('hidden');
 
-            viewAllLink.href = `/search?q=${encodeURIComponent(query)}`;
+            viewAllLink.href = `${searchPageUrl}?q=${encodeURIComponent(query)}`;
 
             if (results.length > 0) {
                 const displayResults = results.slice(0, 5);
@@ -527,7 +557,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loadingIndicator.classList.add('hidden');
         searchResultsPopup.classList.remove('hidden');
         
-        viewAllLink.href = `/search?q=${encodeURIComponent(query)}`;
+        viewAllLink.href = `${searchPageUrl}?q=${encodeURIComponent(query)}`;
         
         if (results.length > 0) {
             // Filter out duplicates based on permalink

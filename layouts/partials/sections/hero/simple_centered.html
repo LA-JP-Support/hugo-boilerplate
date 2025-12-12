@@ -91,6 +91,7 @@
 {{ $typewriter := merge (dict "color" "text-indigo-600") $typewriter }}
 {{ $typewriter := merge (dict "wordAlternatives" "") $typewriter }}{{/* comma separated words to alternate with */}}
 {{ $padding := .padding | default "py-24 sm:py-32" }}
+{{ $compact := .compact | default false }}
 
 {{ $imgBgClass := .imgBgClass | default "" }}
 
@@ -132,6 +133,9 @@
       position: relative;
       overflow: hidden;
     }
+    .hero-enhanced--compact {
+      min-height: 260px;
+    }
     .hero-enhanced::before {
       content: '';
       position: absolute;
@@ -143,6 +147,10 @@
       border-radius: 50%;
       animation: float 20s ease-in-out infinite;
     }
+    .hero-enhanced--compact::before {
+      width: 220px;
+      height: 220px;
+    }
     .hero-enhanced::after {
       content: '';
       position: absolute;
@@ -153,6 +161,10 @@
       background: rgba(255,255,255,0.1);
       border-radius: 50%;
       animation: float 25s ease-in-out infinite reverse;
+    }
+    .hero-enhanced--compact::after {
+      width: 180px;
+      height: 180px;
     }
     .hero-content {
       position: relative;
@@ -185,8 +197,25 @@
       filter: blur(40px);
       transform: translate(-50%, -50%);
     }
+    .hero-enhanced--compact .hero-glow-orb {
+      width: 200px;
+      height: 200px;
+    }
+
+    .hero-enhanced--compact .hero-content h1 {
+      font-size: clamp(1.4rem, 2.6vw, 2.0rem);
+      letter-spacing: -0.02em;
+    }
+    .hero-enhanced--compact .hero-content p {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .hero-enhanced--compact .cta-buttons {
+      margin-top: 0.9rem;
+    }
   </style>
-  <div class="hero-enhanced">
+  <div class="hero-enhanced{{ if $compact }} hero-enhanced--compact{{ end }}">
         <div class="wrapper {{ $padding }}">
           <div class="hero-glow" id="heroGlow">
             <div class="hero-glow-orb" id="heroGlowOrb"></div>

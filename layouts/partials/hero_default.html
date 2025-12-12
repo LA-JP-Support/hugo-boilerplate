@@ -115,7 +115,8 @@
     "cta" (dict
     "primary" (dict "text" .Params.ctaPrimaryText "url" .Params.ctaPrimaryURL)
     "secondary" (dict "text" .Params.ctaSecondaryText "url" .Params.ctaSecondaryURL))
-    "padding" (.Params.heroPadding | default "py-24 sm:py-32")
+    "padding" (cond (eq .Type "search") "py-5 sm:py-7 lg:py-9" (.Params.heroPadding | default "py-24 sm:py-32"))
+    "compact" (eq .Type "search")
     "search" $search
     ) }}
 {{ end }}
