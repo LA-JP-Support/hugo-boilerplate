@@ -1,0 +1,29 @@
+{
+  "languages": [
+    {
+      "language": "ja",
+      "html_files": 215,
+      "total_text_length": 62969,
+      "original_keywords": 4,
+      "found_keywords": 4,
+      "reduction_percent": 0.0,
+      "output_file": "/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/data/linkbuilding/optimized/ja_optimized.json"
+    },
+    {
+      "language": "en",
+      "html_files": 3,
+      "total_text_length": 3439266,
+      "original_keywords": 350,
+      "found_keywords": 2,
+      "reduction_percent": 99.4,
+      "output_file": "/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/data/linkbuilding/optimized/en_optimized.json"
+    }
+  ],
+  "summary": {
+    "total_languages": 2,
+    "total_html_files": 218,
+    "total_original_keywords": 354,
+    "total_found_keywords": 6,
+    "average_reduction_percent": 49.7
+  }
+}

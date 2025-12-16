@@ -119,3 +119,6 @@ copy_error: "Gwall copïo"
 # Promotional offers
 promo_offer: "Cynnig Cyfyngedig"
 promo_offer_in_menu: "-75% OFF"
+
+blog_title: "Blog"
+related_posts: "Related Posts"

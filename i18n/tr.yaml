@@ -130,3 +130,6 @@ copy_error: "Kopyalama hatası"
 # Promotional offers
 promo_offer: "Sınırlı teklif"
 promo_offer_in_menu: "-75% OFF"
+
+blog_title: "Blog"
+related_posts: "Related Posts"

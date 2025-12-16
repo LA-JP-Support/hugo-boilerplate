@@ -130,3 +130,6 @@ copy_error: "Kopieringsfeil"
 # Promotional offers
 promo_offer: "Begrenset tilbud"
 promo_offer_in_menu: "-75% OFF"
+
+blog_title: "Blog"
+related_posts: "Related Posts"

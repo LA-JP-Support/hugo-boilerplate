@@ -131,3 +131,6 @@ copy_error: "Ошибка копирования"
 # Promotional offers
 promo_offer: "Ограниченное предложение"
 promo_offer_in_menu: "-75% OFF"
+
+blog_title: "Blog"
+related_posts: "Related Posts"

@@ -131,6 +131,10 @@
             // タップイベント
             document.addEventListener('click', function(e) {
                 const wrapper = e.target.closest('.tooltip-wrapper');
+                const link = e.target.closest('a');
+                if (wrapper && link && wrapper.contains(link)) {
+                    return;
+                }
                 
                 if (wrapper) {
                     e.preventDefault();
@@ -173,6 +177,10 @@
             
             document.addEventListener('keydown', function(e) {
                 const wrapper = e.target.closest('.tooltip-wrapper');
+                const link = e.target.closest('a');
+                if (wrapper && link && wrapper.contains(link)) {
+                    return;
+                }
                 
                 if (!wrapper) {
                     if (e.key === 'Escape') {

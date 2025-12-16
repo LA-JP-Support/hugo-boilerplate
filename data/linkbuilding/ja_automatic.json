@@ -1,0 +1,32 @@
+{
+  "keywords": [
+    {
+      "Keyword": "AIチャットボット",
+      "URL": "/ai-chatbot-terms-of-use/",
+      "Title": "SmartWebが提供するAIチャットボット・AIカスタマーサポートサービスの利用規約です",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "プライバシーポリシー",
+      "URL": "/privacy-policy/",
+      "Title": "SmartWebサービスにおける個人情報の取扱いについてのプライバシーポリシーです",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "個人情報保護",
+      "URL": "/privacy-policy/",
+      "Title": "SmartWebサービスにおける個人情報の取扱いについてのプライバシーポリシーです",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "利用規約",
+      "URL": "/ai-chatbot-terms-of-use/",
+      "Title": "SmartWebが提供するAIチャットボット・AIカスタマーサポートサービスの利用規約です",
+      "Exact": false,
+      "Priority": 6
+    }
+  ]
+}

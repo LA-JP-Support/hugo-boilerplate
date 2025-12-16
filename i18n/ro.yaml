@@ -129,3 +129,6 @@ copy_error: "Eroare la copiere"
 # Promotional offers
 promo_offer: "Ofertă limitată"
 promo_offer_in_menu: "-75% OFF"
+
+blog_title: "Blog"
+related_posts: "Related Posts"

@@ -36,21 +36,124 @@ import sys
 import argparse
 import time
 import json
+import hashlib
+import re
 from pathlib import Path
 from tqdm import tqdm
 from dotenv import load_dotenv
 import flowhunt
 from pprint import pprint
+import yaml
 
 # Load environment variables from .env file
 script_dir = os.path.dirname(os.path.abspath(__file__))
-hugo_root = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))  # Adjusted to point to the correct root
+script_dir_path = Path(script_dir)
+theme_root_path = script_dir_path.parent
+if any((theme_root_path / f).exists() for f in ("hugo.toml", "config.toml", "config.yaml", "config.yml", "config.json")):
+    hugo_root = str(theme_root_path)
+elif 'themes' in script_dir_path.parts:
+    theme_index = script_dir_path.parts.index('themes')
+    hugo_root = str(Path(*script_dir_path.parts[:theme_index]))
+else:
+    hugo_root = str(script_dir_path.parents[1])
 env_path = os.path.join(script_dir, '.env')
 if os.path.exists(env_path):
     print(f"Loading environment variables from {env_path}")
     load_dotenv(env_path)
 else:
     print("No .env file found, using environment variables if available")
+
+state_file = script_dir_path / '.venv' / 'translate_state.json'
+
+
+def compute_en_fingerprint(en_dir: Path) -> str:
+    hasher = hashlib.sha256()
+    for file_path in sorted(en_dir.rglob('*')):
+        if not file_path.is_file():
+            continue
+        if not is_translatable_file(file_path):
+            continue
+        if should_skip_translation(file_path):
+            continue
+
+        rel = str(file_path.relative_to(en_dir)).encode('utf-8', errors='ignore')
+        st = file_path.stat()
+        hasher.update(rel)
+        hasher.update(b'\0')
+        hasher.update(str(int(st.st_size)).encode('utf-8'))
+        hasher.update(b'\0')
+        hasher.update(str(int(getattr(st, 'st_mtime_ns', int(st.st_mtime * 1_000_000_000)))).encode('utf-8'))
+        hasher.update(b'\0')
+
+    return hasher.hexdigest()
+
+
+def load_translation_state() -> dict:
+    if not state_file.exists():
+        return {}
+    try:
+        with open(state_file, 'r', encoding='utf-8') as f:
+            return json.load(f) or {}
+    except Exception:
+        return {}
+
+
+def save_translation_state(state: dict) -> None:
+    try:
+        os.makedirs(state_file.parent, exist_ok=True)
+        with open(state_file, 'w', encoding='utf-8') as f:
+            json.dump(state, f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
+
+
+def extract_front_matter_dict(raw: str) -> dict:
+    if raw.startswith('---'):
+        match = re.match(r'^---\s*\n(.*?)\n---\s*\n', raw, re.DOTALL)
+        if not match:
+            return {}
+        try:
+            data = yaml.safe_load(match.group(1))
+            return data if isinstance(data, dict) else {}
+        except Exception:
+            return {}
+    if raw.startswith('+++'):
+        match = re.match(r'^\+\+\+\s*\n(.*?)\n\+\+\+\s*\n', raw, re.DOTALL)
+        if not match:
+            return {}
+        try:
+            import tomllib
+        except ImportError:
+            try:
+                import toml as tomllib
+            except ImportError:
+                return {}
+        try:
+            data = tomllib.loads(match.group(1))
+            return data if isinstance(data, dict) else {}
+        except Exception:
+            return {}
+    return {}
+
+
+def should_skip_translation(file_path: Path) -> bool:
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            raw = f.read(20_000)
+    except Exception:
+        return False
+
+    fm = extract_front_matter_dict(raw)
+    if not fm:
+        return False
+
+    if fm.get('translate') is False:
+        return True
+    if fm.get('noTranslate') is True:
+        return True
+    if fm.get('no_translate') is True:
+        return True
+    return False
 
 # Get API key from environment variable
 api_key = os.getenv("FLOWHUNT_API_KEY")
@@ -160,9 +263,10 @@ def get_target_languages(content_dir):
         list: List of target language directory names
     """
     target_langs = []
+    excluded_dirs = {"en", "internal"}
     
     for item in content_dir.iterdir():
-        if item.is_dir() and item.name != "en":
+        if item.is_dir() and item.name not in excluded_dirs:
             target_langs.append(item.name)
             
     return target_langs
@@ -284,27 +388,46 @@ def find_files_for_translation(content_dir, target_langs):
     
     # Create the list of translation tasks
     for file_path in translatable_files:
-        # Read the content of the file
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Get the relative path from the English directory
+        if should_skip_translation(file_path):
+            continue
         rel_path = file_path.relative_to(en_dir)
-        
-        # For each target language, check if translation is needed
+
+        missing_targets = []
         for target_lang in target_langs:
             target_dir = content_dir / target_lang
             target_file = target_dir / rel_path
-            
-            # Skip if the target file already exists
             if target_file.exists():
                 files_already_exist += 1
-                continue
-            
-            # Add to translation tasks
+            else:
+                missing_targets.append((target_lang, target_file))
+
+        if not missing_targets:
+            continue
+
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        for target_lang, target_file in missing_targets:
             translation_tasks.append((file_path, content, target_lang, target_file))
     
     return translation_tasks, files_already_exist
+
+
+def has_missing_translations(content_dir: Path, target_langs: list) -> bool:
+    en_dir = content_dir / "en"
+    for root, _, files in os.walk(en_dir):
+        for file in files:
+            file_path = Path(root) / file
+            if not is_translatable_file(file_path):
+                continue
+            if should_skip_translation(file_path):
+                continue
+            rel_path = file_path.relative_to(en_dir)
+            for target_lang in target_langs:
+                target_file = (content_dir / target_lang) / rel_path
+                if not target_file.exists():
+                    return True
+    return False
 
 def process_translations(translation_tasks, flow_id, workspace_id, max_scheduled_tasks=500):
     """
@@ -565,7 +688,15 @@ Examples:
     print(f"Source language: en")
     print(f"Target languages: {', '.join(target_langs)}")
     print(f"Using FlowHunt flow ID: {args.flow_id}")
-    
+
+    en_fingerprint = compute_en_fingerprint(content_dir / "en")
+    state = load_translation_state()
+    last_fingerprint = state.get('en_fingerprint')
+    if last_fingerprint == en_fingerprint:
+        if not has_missing_translations(content_dir, target_langs):
+            print("No changes detected in content/en and no missing translations; skipping translation.")
+            return
+
     # Find files that need translation
     print(f"\n[DEBUG] ========== SCANNING FOR FILES TO TRANSLATE ===========")
     translation_tasks, files_already_exist = find_files_for_translation(content_dir, target_langs)
@@ -578,6 +709,13 @@ Examples:
     print(f"\n[DEBUG] ========== STARTING TRANSLATION PROCESS ===========")
     process_translations(translation_tasks, args.flow_id, workspace_id, args.max_scheduled_tasks)
     print(f"[DEBUG] ========== TRANSLATION PROCESS COMPLETE ===========")
+
+    save_translation_state({
+        'en_fingerprint': en_fingerprint,
+        'updated_at': time.strftime('%Y-%m-%d %H:%M:%S'),
+        'flow_id': args.flow_id,
+        'content_dir': str(content_dir),
+    })
     
     print("\n[DEBUG] Translation script completed!")
     print(f"[DEBUG] End time: {time.strftime('%Y-%m-%d %H:%M:%S')}")

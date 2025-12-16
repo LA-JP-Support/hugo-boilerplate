@@ -12,7 +12,11 @@ set -e  # Exit immediately if a command exits with a non-zero status
 # Get the directory where this script is located
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 THEME_DIR="$(dirname "$SCRIPT_DIR")"
-HUGO_ROOT="$(dirname "$(dirname "$THEME_DIR")")"
+if [ -f "${THEME_DIR}/hugo.toml" ] || [ -f "${THEME_DIR}/config.toml" ] || [ -f "${THEME_DIR}/config.yaml" ] || [ -f "${THEME_DIR}/config.yml" ] || [ -f "${THEME_DIR}/config.json" ]; then
+    HUGO_ROOT="${THEME_DIR}"
+else
+    HUGO_ROOT="$(dirname "$(dirname "$THEME_DIR")")"
+fi
 
 # Colors for output
 GREEN='\033[0;32m'
@@ -126,7 +130,7 @@ run_step() {
             elif [ -z "$FLOWHUNT_API_KEY" ]; then
                 echo -e "${YELLOW}Warning: FlowHunt API key not set. Translation step will be skipped.${NC}"
                 echo -e "${YELLOW}To use translation, set FLOWHUNT_API_KEY environment variable.${NC}"
-                exit 0
+                return 0
             fi
             
             echo -e "${YELLOW}Running FlowHunt translation script...${NC}"

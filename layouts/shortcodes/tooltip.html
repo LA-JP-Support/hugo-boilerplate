@@ -9,7 +9,8 @@
 */}}
 
 {{- $text := .Get "text" -}}
-{{- $term := .Inner | htmlUnescape -}}
+{{- $term := .Inner | markdownify -}}
+{{- $term = $term | replaceRE `(?s)^\s*<p>(.*)</p>\s*$` `$1` -}}
 
 {{- if not $text -}}
   {{- errorf "tooltip shortcode requires 'text' parameter in %s" .Position -}}

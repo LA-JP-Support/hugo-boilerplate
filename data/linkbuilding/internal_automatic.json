@@ -1,0 +1,2916 @@
+{
+  "keywords": [
+    {
+      "Keyword": "aceleración GPU",
+      "URL": "/internal/glossary/GPU-Acceleration/",
+      "Title": "La aceleración GPU aprovecha las Unidades de Procesamiento Gráfico (GPUs) para el procesamiento masivo en paralelo, acelerando significativamente las cargas de trabajo intensivas en computación en IA, aprendizaje profundo, ciencia de datos y HPC.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "adversarial attack",
+      "URL": "/internal/glossary/Adversarial-Attack/",
+      "Title": "Los ataques adversarios manipulan las entradas de modelos de IA/ML para provocar predicciones incorrectas, explotando vulnerabilidades. Estos ataques socavan la fiabilidad de la IA, afectando la ciberseguridad, vehículos autónomos y más.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Adversarial Attacks",
+      "URL": "/internal/glossary/Adversarial-Robustness/",
+      "Title": "Adversarial Robustness is the ability of AI/ML models to maintain reliable performance against intentionally crafted adversarial inputs designed to induce errors or misclassifications.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Adversarial Robustness",
+      "URL": "/internal/glossary/Adversarial-Robustness/",
+      "Title": "Adversarial Robustness is the ability of AI/ML models to maintain reliable performance against intentionally crafted adversarial inputs designed to induce errors or misclassifications.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "agentes autónomos",
+      "URL": "/internal/glossary/Autonomous-Agents/",
+      "Title": "Explora agentes autónomos: sistemas de IA que planifican, razonan y ejecutan tareas complejas de múltiples pasos de manera independiente, sin intervención humana. Impulsa la eficiencia y la productividad.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Agrupación de Nodos",
+      "URL": "/internal/glossary/Node-Grouping/",
+      "Title": "Aprende sobre la Agrupación de Nodos, la práctica de agrupar nodos relacionados en sistemas de IA, automatización de flujos de trabajo y orquestación de infraestructura para mejorar la claridad, la gestión y la modularidad.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "AI",
+      "URL": "/internal/glossary/Voicebot/",
+      "Title": "Få en komplett innføring i voicebots: kjerne­teknologier som ASR, NLP og TTS, hvordan de fungerer, nøkkelfunksjoner, typer, og forretnings­fordeler for kundeservice og automatisering.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "AI",
+      "URL": "/internal/glossary/Self-Healing-Knowledge/",
+      "Title": "Self-Healing Knowledge menggunakan AI, ML, dan otomasi untuk secara mandiri mendeteksi, mendiagnosis, dan memperbaiki konten usang atau salah pada sistem manajemen pengetahuan, memastikan akurasi.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "AI chatbot",
+      "URL": "/internal/glossary/Conversation-Drift/",
+      "Title": "Conversation drift occurs when an AI chatbot or virtual assistant diverges from the original topic, leading to off-topic responses and degraded user experience. Learn to prevent it.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "AI chatbots",
+      "URL": "/internal/glossary/Context-Switching/",
+      "Title": "Understand context switching in AI chatbots and automation: how systems manage abrupt topic changes in user conversations, its impact on productivity, and strategies for effective handling.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "AI chatbots",
+      "URL": "/internal/glossary/Sentiment-Adaptive-Tone/",
+      "Title": "Explore sentiment-adaptive tone, an AI capability that adjusts communication style based on customer emotion for improved interactions and satisfaction.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "AI jailbreaking",
+      "URL": "/internal/glossary/Jailbreaking/",
+      "Title": "AI jailbreaking is bypassing AI safety guardrails to generate prohibited content. Learn about techniques, risks, and mitigation strategies for large language models (LLMs).",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "AI pipelines",
+      "URL": "/internal/glossary/Document-Loader/",
+      "Title": "A Document Loader is a software module that automates the ingestion and transformation of raw data into structured Document objects for AI tasks like LLM pipelines and vector store indexing.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "AI Safety",
+      "URL": "/internal/glossary/Safety-Guardrails/",
+      "Title": "Safety guardrails are engineered controls and policies that prevent AI systems, especially LLMs, from generating harmful, inappropriate, or non-compliant content, ensuring responsible and secure AI deployment.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "AI systems",
+      "URL": "/internal/glossary/Semantic-Routing/",
+      "Title": "Semantic routing directs user queries to specialized agents, prompts, or data sources by evaluating the semantic meaning (intent) using vector similarity.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "AI модел",
+      "URL": "/internal/glossary/Confidence-Threshold/",
+      "Title": "Минималната оценка, която един AI модел трябва да постигне, за да се приеме, че предсказанието е коректно; действа като праг на надеждност и определя дали дадено предсказание ще бъде използвано или прегледано.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "AI-generated media",
+      "URL": "/internal/glossary/Deepfake-Detection/",
+      "Title": "Explore deepfake detection technologies, methodologies, and workflows to identify AI-generated or altered media. Learn how to combat fraud, misinformation, and protect digital trust.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "AIチャットボット",
+      "URL": "/ai-chatbot-terms-of-use/",
+      "Title": "SmartWebが提供するAIチャットボットおよびAIカスタマーサポートサービスの利用規約",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "AIチャットボット",
+      "URL": "/internal/blog/ai-chatbot-types-guide/",
+      "Title": "AIチャットボットの5つの種類（ルールベース、AI搭載、生成AI、RAG、ハイブリッド）を網羅的に解説。特徴・メリット・デメリット、用途別の選定ポイント、導入時の注意点まで、中小企業でも安心してチャットボットを導入できる知識が身につきます。",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "AI導入",
+      "URL": "/internal/blog/start-using-ai-today/",
+      "Title": "IT担当者ゼロでもできるAI導入徹底ガイド。チケット管理・AIメール自動応答・AIチャットボットで業務効率化と顧客満足度向上を実現。",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "alineación de IA",
+      "URL": "/internal/glossary/Alignment-Problem/",
+      "Title": "El Problema de Alineación en IA es el desafío de asegurar que las metas y comportamientos de los sistemas de IA coincidan consistentemente con los valores, preferencias y estándares éticos humanos, siendo crucial para un despliegue seguro y beneficioso de la IA.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Alta Disponibilidad",
+      "URL": "/internal/glossary/High-Availability--HA-/",
+      "Title": "La Alta Disponibilidad (HA) es un diseño de sistemas enfocado en lograr un rendimiento y tiempo de actividad operativos continuos, eliminando puntos únicos de falla y aprovechando la redundancia.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "AmI",
+      "URL": "/internal/glossary/Ambient-Intelligence/",
+      "Title": "La Inteligencia Ambiental (AmI) integra sistemas digitales en los entornos para detectar, interpretar y responder proactivamente a las necesidades humanas sin comandos explícitos.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "analítica web",
+      "URL": "/internal/glossary/Bounce-Rate/",
+      "Title": "Comprenda la tasa de rebote, una métrica clave de analítica web. Aprenda cómo se calcula, su impacto en la participación de los usuarios y el SEO, y estrategias para reducir tasas de rebote altas y mejorar el rendimiento del sitio.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "análisis de cohortes",
+      "URL": "/internal/glossary/Cohort-Analysis/",
+      "Title": "El análisis de cohortes es un método de analítica de comportamiento que divide a los usuarios en grupos según características compartidas para rastrear y comparar sus comportamientos a lo largo del tiempo, revelando tendencias.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "análisis de sentimiento",
+      "URL": "/internal/glossary/Sentiment-Analysis/",
+      "Title": "El análisis de sentimiento interpreta el tono emocional en textos utilizando PLN, ML e IA. Convierte datos no estructurados en información accionable para la retroalimentación de clientes, monitoreo de marca y mejora de productos.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "API Gateway",
+      "URL": "/internal/glossary/Microservices/",
+      "Title": "Explore a comprehensive glossary of microservices architecture, covering essential concepts, patterns, and technologies like API Gateway, Bounded Context, CQRS, and more.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "API integration",
+      "URL": "/internal/glossary/HTTP-Request-Node/",
+      "Title": "Learn about the HTTP Request Node, a vital component in automation platforms like n8n and Node-RED, for sending HTTP requests to external APIs and integrating systems.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "API Rate Limiting",
+      "URL": "/internal/glossary/Rate-Limiting-Handler/",
+      "Title": "A Rate Limiting Handler manages API request quotas, detects 429 errors, and implements retry logic to ensure compliance and prevent service disruptions for client and server applications.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Approximate Nearest Neighbor",
+      "URL": "/internal/glossary/HNSW--Hierarchical-Navigable-Small-World-/",
+      "Title": "HNSW (Hierarchical Navigable Small World) es un algoritmo basado en grafos para búsqueda aproximada de vecinos más cercanos (ANN) rápida y precisa en bases de datos vectoriales, ideal para datos de alta dimensión.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "aprendizaje automático",
+      "URL": "/internal/glossary/Model-Robustness/",
+      "Title": "La robustez del modelo es la capacidad de los modelos de ML/IA para mantener un rendimiento confiable frente a entradas inesperadas, ruidosas, incompletas o manipuladas maliciosamente, garantizando confiabilidad y seguridad.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "aprendizaje automático",
+      "URL": "/internal/glossary/Model-Quantization/",
+      "Title": "La cuantización de modelos reduce la precisión de los modelos de aprendizaje automático (por ejemplo, de FP32 a INT8) para crear modelos más pequeños y rápidos. Ahorra memoria, acelera la inferencia, reduce el consumo energético y permite el despliegue en dispositivos de borde.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Aprendizaje Automático con Preservación de la Privacidad",
+      "URL": "/internal/glossary/Privacy-Preserving-ML/",
+      "Title": "Descubre el Aprendizaje Automático con Preservación de la Privacidad (PPML), métodos como Privacidad Diferencial, Cifrado Homomórfico, MPC y Aprendizaje Federado, para proteger datos sensibles en modelos de ML.",
+      "Exact": false,
+      "Priority": 13
+    },
+    {
+      "Keyword": "aprobación humana",
+      "URL": "/internal/glossary/Human-Approval-Node/",
+      "Title": "Un paso de flujo de trabajo que pausa la automatización para revisión y toma de decisiones humanas. También conocido como Human-in-the-Loop (HITL), garantiza la supervisión humana en flujos de trabajo automatizados o agenticos.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "aristas",
+      "URL": "/internal/glossary/Nodes-and-Edges/",
+      "Title": "Los nodos son los elementos fundamentales (acciones o entidades) en un sistema; las aristas son las conexiones (líneas) que definen relaciones, flujos de datos o dependencias.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "arquitectura monolítica",
+      "URL": "/internal/glossary/Monolithic-Architecture/",
+      "Title": "La arquitectura monolítica es un diseño de software en el que toda una aplicación se construye y despliega como una sola unidad indivisible. Conozca su estructura, ventajas, desventajas y casos de uso.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "asistente virtual",
+      "URL": "/internal/glossary/Virtual-Assistant/",
+      "Title": "Un asistente virtual (AV) es un proveedor de servicios remoto, humano o IA, que ofrece soporte administrativo, técnico, creativo o específico de la industria a empresas e individuos.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "asistente virtual IA",
+      "URL": "/internal/glossary/Virtual-Assistant/",
+      "Title": "Un asistente virtual (AV) es un proveedor de servicios remoto, humano o IA, que ofrece soporte administrativo, técnico, creativo o específico de la industria a empresas e individuos.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "atribución de marketing",
+      "URL": "/internal/glossary/Attribution-Modeling/",
+      "Title": "El modelado de atribución es un método analítico para asignar el crédito de las conversiones a canales y puntos de contacto de marketing, optimizando campañas y la asignación de presupuesto.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "attribution window",
+      "URL": "/internal/glossary/Attribution-Window/",
+      "Title": "An attribution window defines the period after a marketing interaction when conversions are credited to that touchpoint. Learn why it's crucial for campaign effectiveness and budget allocation.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Auto-Layout",
+      "URL": "/internal/glossary/Auto-Layout/",
+      "Title": "Master Auto-Layout, a design feature for automatically arranging and resizing UI elements. Covers core concepts, benefits, and implementation in Figma, iOS, Android, and Web.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "auto-reply email",
+      "URL": "/internal/blog/ai-email-response-examples/",
+      "Title": "Análisis de las verdaderas capacidades de la generación automática de respuestas con IA usando ejemplos reales. Un examen profundo sobre precisión y practicidad en consultas técnicas complejas y casos de gestión de reclamaciones.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Auto-Scaling Group",
+      "URL": "/internal/glossary/Auto-Scaling-Group/",
+      "Title": "An Auto-Scaling Group (ASG) automatically adjusts compute resources like EC2 instances to maintain application performance and minimize costs by scaling based on demand.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Automated Workflows",
+      "URL": "/internal/glossary/Automated-Workflows/",
+      "Title": "Automated workflows are technology-enabled processes that execute tasks, activities, or decisions based on predefined rules, minimizing human intervention and optimizing efficiency.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "automation",
+      "URL": "/internal/glossary/Zapier/",
+      "Title": "Explore Zapier, the no-code automation platform connecting 8,000+ apps. Learn about Zaps, AI Agents, use cases, and how to automate workflows efficiently.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "automatización",
+      "URL": "/internal/glossary/Webhook-Trigger/",
+      "Title": "Un Webhook Trigger permite que servicios externos inicien flujos de trabajo automatizados enviando solicitudes HTTP en tiempo real. Esencial para chatbots de IA, automatización e integración de sistemas.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Automatización con IA",
+      "URL": "/internal/glossary/Gumloop/",
+      "Title": "Gumloop es una plataforma de automatización sin código, orientada a IA, para tareas y flujos de trabajo repetitivos. Utiliza agentes inteligentes para navegar por la web, interactuar con apps SaaS y tomar decisiones.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Automatización de flujos",
+      "URL": "/internal/glossary/Conditional-Router/",
+      "Title": "Un Router Condicional evalúa los datos según reglas y los dirige a rutas específicas. Esencial para ramificación dinámica basada en reglas en flujos de automatización, chatbots de IA y software.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "automatización de flujos de trabajo",
+      "URL": "/internal/glossary/Parallel-Execution/",
+      "Title": "Aprende sobre la ejecución paralela: ejecutar múltiples tareas simultáneamente para acelerar el procesamiento, maximizar el uso de recursos y comprimir los ciclos de retroalimentación en flujos de trabajo, pruebas y chatbots.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "Automatización de Flujos de Trabajo",
+      "URL": "/internal/glossary/Loop-Node/",
+      "Title": "Un Nodo de Bucle automatiza acciones repetitivas en flujos de trabajo, repitiendo tareas hasta que se cumple una condición, un número fijo de veces o para cada elemento de una colección. Esencial para la automatización.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "automatización de flujos de trabajo",
+      "URL": "/internal/glossary/n8n/",
+      "Title": "n8n es una herramienta de automatización de flujos de trabajo basada en nodos y con código fuente disponible, que conecta tus aplicaciones, APIs y servicios con integración avanzada de IA.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "automatización IA",
+      "URL": "/internal/glossary/Autonomous-Agents/",
+      "Title": "Explora agentes autónomos: sistemas de IA que planifican, razonan y ejecutan tareas complejas de múltiples pasos de manera independiente, sin intervención humana. Impulsa la eficiencia y la productividad.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "autoscaling",
+      "URL": "/internal/glossary/Autoscaling/",
+      "Title": "Autoscaling automáticamente ajusta los recursos de computación en la nube (VMs, contenedores) según la demanda en tiempo real, optimizando el rendimiento, la disponibilidad y la eficiencia de costos.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "avatar de bot",
+      "URL": "/internal/glossary/Bot-Avatar/",
+      "Title": "Descubre qué es un avatar de bot, sus beneficios, tipos y cómo crear uno. Aprende cómo estas representaciones visuales humanizan los chatbots de IA, mejoran la experiencia del usuario y refuerzan la identidad de marca.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "AWS Auto Scaling",
+      "URL": "/internal/glossary/Auto-Scaling-Group/",
+      "Title": "An Auto-Scaling Group (ASG) automatically adjusts compute resources like EC2 instances to maintain application performance and minimize costs by scaling based on demand.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "banderas de funcionalidad",
+      "URL": "/internal/glossary/Feature-Flags/",
+      "Title": "Las banderas de funcionalidad permiten el control dinámico de funcionalidades de software sin volver a desplegar. Descubra cómo estos interruptores facilitan la entrega progresiva, pruebas A/B, reversiones rápidas y agilidad operativa.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "base de datos vectorial",
+      "URL": "/internal/glossary/Weaviate/",
+      "Title": "Weaviate es una base de datos vectorial open-source y nativa en la nube que almacena objetos y embeddings de alta dimensión. Permite búsqueda semántica, híbrida y aplicaciones de IA/ML a gran escala.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "base de datos vectorial",
+      "URL": "/internal/glossary/Chroma/",
+      "Title": "Explora Chroma, una base de datos vectorial de código abierto para aplicaciones nativas de IA. Aprende sobre sus conceptos clave, arquitectura, casos de uso como RAG y búsqueda semántica, y compárala con alternativas.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "base de datos vectorial",
+      "URL": "/internal/glossary/Qdrant/",
+      "Title": "Qdrant es un motor de búsqueda de similitud vectorial y base de datos de vectores open-source para datos vectoriales de alta dimensión, habilitando búsqueda semántica, RAG y recomendaciones.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "base de datos vectorial",
+      "URL": "/internal/glossary/Pinecone/",
+      "Title": "Pinecone es una base de datos vectorial totalmente gestionada y nativa en la nube para búsquedas vectoriales de alto rendimiento y aplicaciones de memoria de IA escalables. Indexa y busca embeddings vectoriales de alta dimensión.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "base de datos vectorial",
+      "URL": "/internal/glossary/Milvus/",
+      "Title": "Explora Milvus, una base de datos vectorial open source y cloud-native para búsquedas por similitud escalables en datos no estructurados. Conoce su arquitectura, características, casos de uso y cómo se compara con otras bases vectoriales.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "blue-green deployment",
+      "URL": "/internal/glossary/Blue-Green-Deployment/",
+      "Title": "Blue-green deployment is a strategy to minimize downtime and risk by running two identical production environments (blue and green). It enables seamless traffic switching and instant rollback for new software releases.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "blueprint de automatización",
+      "URL": "/internal/glossary/Import---Export-Blueprint/",
+      "Title": "La Importación / Exportación de Blueprint guarda la lógica de automatización/chatbot como archivo (JSON/YAML) para compartir, respaldar, migrar y controlar versiones entre plataformas y entornos.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "blueprint de chatbot",
+      "URL": "/internal/glossary/Import---Export-Blueprint/",
+      "Title": "La Importación / Exportación de Blueprint guarda la lógica de automatización/chatbot como archivo (JSON/YAML) para compartir, respaldar, migrar y controlar versiones entre plataformas y entornos.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Bot Containment Rate",
+      "URL": "/internal/glossary/Bot-Containment-Rate/",
+      "Title": "El porcentaje de interacciones de usuarios gestionadas completamente por un chatbot sin transferirse a un agente humano. Es una métrica clave para evaluar el rendimiento del chatbot y la eficiencia operativa.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "bot de dominio abierto",
+      "URL": "/internal/glossary/Open-Domain-Bot/",
+      "Title": "Un bot de dominio abierto es un agente conversacional de IA diseñado para el diálogo libre sobre cualquier tema, a diferencia de los bots de dominio cerrado específicos de tareas. Explore su arquitectura y usos.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Bot Orientado a Tareas",
+      "URL": "/internal/glossary/Task-Oriented-Bot/",
+      "Title": "Un Bot Orientado a Tareas es un chatbot especializado diseñado para automatizar procesos específicos y estructurados como reservas, seguimiento o programación, utilizando PLN e integración con sistemas backend.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "botones de retroalimentación",
+      "URL": "/internal/glossary/Feedback-Buttons--Thumbs-Up-Down-/",
+      "Title": "Aprende sobre los botones de retroalimentación (pulgar arriba/abajo) para chatbots de IA y contenido digital. Descubre sus beneficios, mejores prácticas y cómo impulsan la mejora continua.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Botpress",
+      "URL": "/internal/glossary/Botpress/",
+      "Title": "Botpress es una plataforma amigable para desarrolladores para crear chatbots de IA y agentes conversacionales con un editor visual de flujos, IA avanzada e integración de LLM.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "bucle for-each",
+      "URL": "/internal/glossary/Iterator---For-Each/",
+      "Title": "Un iterador o estructura for-each procesa elementos de una lista o colección uno a uno, permitiendo acciones como leer, actualizar o automatizar tareas para cada elemento.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "canary release",
+      "URL": "/internal/glossary/Canary-Release/",
+      "Title": "Un canary release es una estrategia progresiva de despliegue de software que lanza nuevas versiones de aplicaciones de forma incremental a un pequeño subconjunto de usuarios, permitiendo la detección temprana de problemas y la mitigación de riesgos.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "canonical form",
+      "URL": "/internal/glossary/Canonical-Form/",
+      "Title": "Canonical form transforms data into a single, standardized representation for consistency, processing, and comparison, crucial for AI chatbots, NLP, and automation.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "carrusel",
+      "URL": "/internal/glossary/Carousel/",
+      "Title": "Un carrusel es un componente interactivo de UI que muestra una secuencia de elementos de contenido, como imágenes o tarjetas, dentro de una sola vista, permitiendo a los usuarios recorrerlos.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Chaos Engineering",
+      "URL": "/internal/glossary/Chaos-Engineering/",
+      "Title": "Chaos Engineering es una disciplina que consiste en experimentar intencionadamente en los sistemas para descubrir debilidades y generar confianza en su resiliencia. Aprenda cómo identificar proactivamente vulnerabilidades.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Charla trivial",
+      "URL": "/internal/glossary/Small-Talk/",
+      "Title": "Explora la charla trivial en chatbots de IA: su capacidad para manejar conversaciones informales y no funcionales, simulando intercambios naturales similares a los humanos para generar cercanía y mejorar la experiencia del usuario.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chat applications",
+      "URL": "/internal/glossary/Typing-Indicators/",
+      "Title": "Typing indicators are visual cues in chat apps showing when someone is composing a message. They enhance user engagement, reduce uncertainty, and improve real-time communication.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Chat Simulator",
+      "URL": "/internal/glossary/Chat-Simulator/",
+      "Title": "A development tool for developers, QA, and operations to test, validate, and optimize chatbot conversation flows and NLU in a controlled, risk-free environment.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Chatbot",
+      "URL": "/internal/glossary/Quick-Replies/",
+      "Title": "Las Respuestas Rápidas son botones efímeros y seleccionables en interfaces de chat, que ofrecen opciones predefinidas. Desaparecen tras la selección, evitando desorden y manteniendo el flujo conversacional.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "chatbot",
+      "URL": "/internal/glossary/Webview/",
+      "Title": "Descubre Webview, una ventana de navegador embebida que muestra contenido web como formularios, catálogos de productos e interfaces de pago directamente dentro de chatbots y aplicaciones móviles para una experiencia de usuario fluida.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Chatbot",
+      "URL": "/internal/glossary/Rule-Based-Chatbot/",
+      "Title": "Ein regelbasierter Chatbot interagiert mit Nutzern, indem er vordefinierten Regeln und Skripten folgt und auf bestimmte Schlüsselwörter oder Button-Auswahlen ohne KI-Lernen reagiert.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "chatbot",
+      "URL": "/internal/glossary/Embed-Script/",
+      "Title": "Aprenda sobre los scripts de inserción, fragmentos de JavaScript utilizados para integrar chatbots de IA y contenido dinámico en cualquier sitio web. Descubra usos, ejemplos, personalización y mejores prácticas.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Chatbot",
+      "URL": "/internal/glossary/Persistent-Menu/",
+      "Title": "Aprenda sobre los Menús Persistentes en chatbots: qué son, por qué usarlos, cómo implementarlos y mejores prácticas para mejorar la navegación y experiencia del usuario.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "chatbot",
+      "URL": "/internal/glossary/Rich-Media-Cards/",
+      "Title": "Las tarjetas multimedia enriquecidas son componentes interactivos de la interfaz en flujos de chat, que entregan contenido multimedia y elementos accionables como imágenes, videos y botones para conversaciones atractivas.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "chatbot de IA",
+      "URL": "/internal/glossary/Minimap/",
+      "Title": "Un minimapa es un mapa visual compacto que sirve como visión general para navegar flujos grandes y complejos, como conversaciones de chatbots de IA o código. Ayuda a los usuarios a orientarse y gestionar diagramas intrincados.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Chatbot de IA",
+      "URL": "/internal/glossary/Cost-Estimation/",
+      "Title": "La estimación de costos en chatbots de IA y automatización predice el consumo de recursos y el desembolso financiero para implementar soluciones de IA conversacional, permitiendo presupuestación y optimización.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Chatbot de IA",
+      "URL": "/internal/glossary/False-Negative/",
+      "Title": "Un false negative ocurre cuando un sistema de IA, como un chatbot, no detecta un problema o intención real. Descubre su impacto, causas y estrategias para reducirlo en la automatización.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Chatbot de IA",
+      "URL": "/internal/glossary/Global-Variables/",
+      "Title": "Las variables globales son accesibles desde cualquier nodo en un programa o plataforma de automatización, permitiendo compartir datos entre flujos, funciones y contextos. Descubra su uso en chatbots de IA.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chatbot de IA",
+      "URL": "/internal/glossary/Botpress/",
+      "Title": "Botpress es una plataforma amigable para desarrolladores para crear chatbots de IA y agentes conversacionales con un editor visual de flujos, IA avanzada e integración de LLM.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chatbot de IA",
+      "URL": "/internal/glossary/Hybrid-Chatbot/",
+      "Title": "Un chatbot híbrido combina lógica basada en reglas con IA, PLN y AA para gestionar consultas rutinarias y complejas, derivando sin problemas a agentes humanos con todo el contexto.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Chatbot de IA",
+      "URL": "/internal/glossary/Persona-Design/",
+      "Title": "Aprenda sobre el Diseño de Persona para chatbots de IA y automatización. Defina personalidad, voz y carácter para crear interacciones atractivas, humanas y mejorar la experiencia del usuario.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chatbot de IA",
+      "URL": "/internal/glossary/Splash-Screen/",
+      "Title": "Una pantalla de bienvenida es la primera visualización que ve el usuario al iniciar una app o chatbot, aportando reconocimiento de marca e indicando la carga. Esencial para la experiencia de usuario y el branding.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Chatbot de IA",
+      "URL": "/internal/glossary/Slot-Carryover/",
+      "Title": "La transferencia de ranuras permite que los chatbots de IA recuerden y reutilicen información estructurada (ranuras) a lo largo de los turnos conversacionales, manteniendo el contexto y mejorando la experiencia del usuario en sistemas de diálogo orientados a tareas.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chatbot híbrido",
+      "URL": "/internal/glossary/Hybrid-Chatbot/",
+      "Title": "Un chatbot híbrido combina lógica basada en reglas con IA, PLN y AA para gestionar consultas rutinarias y complejas, derivando sin problemas a agentes humanos con todo el contexto.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "chatbot IA",
+      "URL": "/internal/glossary/Multi-turn-Conversation/",
+      "Title": "Aprenda sobre las conversaciones multi-turno en chatbots de IA y automatización. Comprenda cómo los sistemas de IA gestionan contexto, estado y múltiples intercambios para tareas complejas.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chatbot IA",
+      "URL": "/internal/glossary/State-Machine/",
+      "Title": "Explora las máquinas de estados, un modelo computacional para las transiciones de sistemas. Aprende conceptos clave, tipos, usos en chatbots de IA y automatización, implementación, ventajas y desafíos.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chatbot IA",
+      "URL": "/internal/glossary/Open-Domain-Bot/",
+      "Title": "Un bot de dominio abierto es un agente conversacional de IA diseñado para el diálogo libre sobre cualquier tema, a diferencia de los bots de dominio cerrado específicos de tareas. Explore su arquitectura y usos.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chatbot performance",
+      "URL": "/internal/glossary/Misunderstood-Rate/",
+      "Title": "Misunderstood Rate measures chatbot failures to understand user intent, triggering fallback responses. It's a key metric for NLU performance, user experience, and improving conversational AI.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Chatbot testing",
+      "URL": "/internal/glossary/Chat-Simulator/",
+      "Title": "A development tool for developers, QA, and operations to test, validate, and optimize chatbot conversation flows and NLU in a controlled, risk-free environment.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "chatbots",
+      "URL": "/internal/glossary/Suggestion-Chips/",
+      "Title": "Las suggestion chips son elementos interactivos con forma de pastilla en chatbots e interfaces conversacionales, que ofrecen opciones rápidas y contextuales de respuesta y desaparecen tras seleccionarse.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "chatbots",
+      "URL": "/internal/glossary/Task-Oriented-Bot/",
+      "Title": "Un Bot Orientado a Tareas es un chatbot especializado diseñado para automatizar procesos específicos y estructurados como reservas, seguimiento o programación, utilizando PLN e integración con sistemas backend.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Chatbots de IA",
+      "URL": "/internal/glossary/Goal-Completion-Rate--GCR-/",
+      "Title": "La Tasa de Cumplimiento de Objetivos (GCR) mide el porcentaje de usuarios que logran con éxito los objetivos en chatbots de IA y automatización. Descubre su importancia, cómo se calcula y cómo mejorarla.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Chatbots de IA",
+      "URL": "/internal/glossary/Node-Grouping/",
+      "Title": "Aprende sobre la Agrupación de Nodos, la práctica de agrupar nodos relacionados en sistemas de IA, automatización de flujos de trabajo y orquestación de infraestructura para mejorar la claridad, la gestión y la modularidad.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chatbots de IA",
+      "URL": "/internal/glossary/Fall-back-Mechanism/",
+      "Title": "Un mecanismo de respaldo en chatbots de IA garantiza la continuidad cuando el bot no logra interpretar o cumplir una solicitud, redirigiendo, aclarando o escalando la conversación.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chatbots de IA",
+      "URL": "/internal/glossary/Prompt-Template/",
+      "Title": "Un prompt template es una estructura de prompt preconfigurada con instrucciones estáticas y variables, diseñada para su uso repetido en chatbots de IA y sistemas de automatización.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Chatbots de IA",
+      "URL": "/internal/glossary/Small-Talk/",
+      "Title": "Explora la charla trivial en chatbots de IA: su capacidad para manejar conversaciones informales y no funcionales, simulando intercambios naturales similares a los humanos para generar cercanía y mejorar la experiencia del usuario.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chatbots de IA",
+      "URL": "/internal/glossary/State---Context-Memory/",
+      "Title": "Explora el Estado / Memoria de Contexto, los mecanismos de almacenamiento que permiten a los chatbots de IA conservar y recordar información entre sesiones para lograr continuidad conversacional, personalización y gestión eficiente de tareas.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chatbots de IA",
+      "URL": "/internal/glossary/White-Labeling/",
+      "Title": "El white labeling en chatbots de IA permite a las empresas implementar una plataforma de chatbot totalmente personalizada con su propia marca, eliminando toda referencia al proveedor. Ideal para agencias, SaaS y empresas.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "chatbots de IA",
+      "URL": "/internal/glossary/Disambiguation/",
+      "Title": "La desambiguación clarifica la intención del usuario en chatbots de IA cuando la entrada tiene múltiples significados, asegurando una interpretación precisa al pedir aclaraciones o presentar opciones.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Chroma",
+      "URL": "/internal/glossary/Chroma/",
+      "Title": "Explora Chroma, una base de datos vectorial de código abierto para aplicaciones nativas de IA. Aprende sobre sus conceptos clave, arquitectura, casos de uso como RAG y búsqueda semántica, y compárala con alternativas.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "click map",
+      "URL": "/internal/glossary/Click-Map/",
+      "Title": "A click map is a visual analytics tool showing where users click or tap on a web page. It helps web professionals, marketers, and UX specialists optimize site layouts, improve conversions, and understand user interactions.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "cloud computing",
+      "URL": "/internal/glossary/Cloud-Computing/",
+      "Title": "Descubre la computación en la nube: recursos de TI bajo demanda, modelos de servicio (IaaS, PaaS, SaaS), opciones de implementación (pública, privada, híbrida) y beneficios para infraestructura e implementación de IA.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "cloud computing",
+      "URL": "/internal/glossary/Serverless-Computing/",
+      "Title": "Serverless computing is a cloud execution model where providers manage infrastructure, allowing developers to build and deploy applications without provisioning or scaling servers.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "code block",
+      "URL": "/internal/glossary/Code-Block--Python-JS-/",
+      "Title": "A code block groups programming statements for unified execution, defined by indentation in Python and curly braces in JavaScript. Used in automation and chatbots for custom logic.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "colaboración en equipo",
+      "URL": "/internal/glossary/Team-Collaboration---Workspace/",
+      "Title": "Explora Colaboración en Equipo / Espacio de Trabajo, un entorno digital para que varios usuarios trabajen en tiempo real sobre documentos compartidos, procesos y flujos de trabajo automatizados, a menudo potenciados por IA.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "colaboración IA",
+      "URL": "/internal/glossary/Human-Agent-Teaming/",
+      "Title": "El Human-Agent Teaming (HAT) es un paradigma colaborativo donde agentes de IA y humanos trabajan juntos, compartiendo metas y control. Descubra cómo HAT mejora la eficiencia y la toma de decisiones.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "componente UI",
+      "URL": "/internal/glossary/Carousel/",
+      "Title": "Un carrusel es un componente interactivo de UI que muestra una secuencia de elementos de contenido, como imágenes o tarjetas, dentro de una sola vista, permitiendo a los usuarios recorrerlos.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "comprensión del lenguaje natural",
+      "URL": "/internal/glossary/NLU-Confidence-Threshold/",
+      "Title": "El umbral de confianza NLU es la puntuación mínima de confianza que un motor NLU requiere para activar una intención específica ante una expresión de usuario. Es central en la IA conversacional.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "computación en la nube",
+      "URL": "/internal/glossary/Spot-Instances/",
+      "Title": "Las Spot Instances son recursos de computación en la nube con descuento de AWS, Azure y GCP, ideales para cargas de trabajo tolerantes a fallos como procesamiento por lotes, analítica y entrenamiento de ML.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "computación en la nube",
+      "URL": "/internal/glossary/Autoscaling/",
+      "Title": "Autoscaling automáticamente ajusta los recursos de computación en la nube (VMs, contenedores) según la demanda en tiempo real, optimizando el rendimiento, la disponibilidad y la eficiencia de costos.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Conector de Base de Conocimiento",
+      "URL": "/internal/glossary/Knowledge-Base-Connector/",
+      "Title": "Un módulo de integración que vincula flujos de trabajo de IA como chatbots a fuentes de conocimiento indexadas, impulsando la Generación Aumentada por Recuperación (RAG) para respuestas relevantes al contexto.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "confidence threshold",
+      "URL": "/internal/glossary/Confidence-Threshold/",
+      "Title": "Минималната оценка, която един AI модел трябва да постигне, за да се приеме, че предсказанието е коректно; действа като праг на надеждност и определя дали дадено предсказание ще бъде използвано или прегледано.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Configuración de endpoint de API",
+      "URL": "/internal/glossary/API-Endpoint-Configuration/",
+      "Title": "Aprenda sobre la configuración de endpoints de API, su importancia para la integración, automatización y seguridad, y las mejores prácticas para diseñar, asegurar y documentar sus endpoints de API.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Constructor visual de flujos",
+      "URL": "/internal/glossary/Visual-Flow-Builder/",
+      "Title": "Explore los Constructores Visuales de Flujos: interfaces sin código de arrastrar y soltar para diseñar, automatizar y gestionar flujos de trabajo y procesos de IA complejos sin escribir código.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "contenedores",
+      "URL": "/internal/glossary/Containerization/",
+      "Title": "La contenedorización empaqueta el código de software con dependencias en contenedores portátiles y aislados, garantizando una ejecución consistente de aplicaciones en cualquier entorno, desde desarrollo hasta la nube.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "contenedores",
+      "URL": "/internal/glossary/Docker/",
+      "Title": "Aprende sobre Docker, una plataforma de código abierto para empaquetar, enviar y ejecutar aplicaciones en contenedores ligeros y portátiles. Comprende su arquitectura, beneficios y casos de uso.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "contenedorización",
+      "URL": "/internal/glossary/Containerization/",
+      "Title": "La contenedorización empaqueta el código de software con dependencias en contenedores portátiles y aislados, garantizando una ejecución consistente de aplicaciones en cualquier entorno, desde desarrollo hasta la nube.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "contenido generado por usuarios",
+      "URL": "/internal/glossary/Content-Moderation/",
+      "Title": "Explora la moderación de contenido: monitoreo, evaluación y gestión del contenido generado por usuarios para garantizar las directrices de la plataforma, los estándares comunitarios y el cumplimiento legal.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "context switching",
+      "URL": "/internal/glossary/Context-Switching/",
+      "Title": "Understand context switching in AI chatbots and automation: how systems manage abrupt topic changes in user conversations, its impact on productivity, and strategies for effective handling.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "conversación multi-turno",
+      "URL": "/internal/glossary/Multi-turn-Conversation/",
+      "Title": "Aprenda sobre las conversaciones multi-turno en chatbots de IA y automatización. Comprenda cómo los sistemas de IA gestionan contexto, estado y múltiples intercambios para tareas complejas.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "conversation drift",
+      "URL": "/internal/glossary/Conversation-Drift/",
+      "Title": "Conversation drift occurs when an AI chatbot or virtual assistant diverges from the original topic, leading to off-topic responses and degraded user experience. Learn to prevent it.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Copiloto de IA",
+      "URL": "/internal/glossary/Copilot/",
+      "Title": "Un copiloto de IA es un asistente digital avanzado impulsado por inteligencia artificial que opera junto a los usuarios humanos para potenciar la productividad, la creatividad y la toma de decisiones en tiempo real.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "cosine similarity",
+      "URL": "/internal/glossary/Cosine-Similarity/",
+      "Title": "Cosine similarity es una métrica que mide el coseno del ángulo entre dos vectores no nulos, evaluando su similitud en función de la orientación en lugar de la magnitud. Ampliamente utilizada en machine learning, PLN y sistemas de recomendación.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "cron expression",
+      "URL": "/internal/glossary/Cron-Schedule/",
+      "Title": "Un cron schedule es un disparador basado en tiempo para la ejecución automatizada de tareas utilizando una expresión cron. Fundamental en Unix, Linux, la nube, DevOps y la automatización de IA para tareas confiables y automatizadas.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "cron schedule",
+      "URL": "/internal/glossary/Cron-Schedule/",
+      "Title": "Un cron schedule es un disparador basado en tiempo para la ejecución automatizada de tareas utilizando una expresión cron. Fundamental en Unix, Linux, la nube, DevOps y la automatización de IA para tareas confiables y automatizadas.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "cuantización de modelos",
+      "URL": "/internal/glossary/Model-Quantization/",
+      "Title": "La cuantización de modelos reduce la precisión de los modelos de aprendizaje automático (por ejemplo, de FP32 a INT8) para crear modelos más pequeños y rápidos. Ahorra memoria, acelera la inferencia, reduce el consumo energético y permite el despliegue en dispositivos de borde.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "data normalization",
+      "URL": "/internal/glossary/Canonical-Form/",
+      "Title": "Canonical form transforms data into a single, standardized representation for consistency, processing, and comparison, crucial for AI chatbots, NLP, and automation.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Debug Console",
+      "URL": "/internal/glossary/Debug-Console---Trace/",
+      "Title": "A Debug Console or Trace is a diagnostic interface providing visibility into automation flows, AI chatbots, or API proxy operations, capturing data, errors, and performance.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "deepfake detection",
+      "URL": "/internal/glossary/Deepfake-Detection/",
+      "Title": "Explore deepfake detection technologies, methodologies, and workflows to identify AI-generated or altered media. Learn how to combat fraud, misinformation, and protect digital trust.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Delay Node",
+      "URL": "/internal/glossary/Delay---Sleep-Node/",
+      "Title": "A Delay/Sleep Node pauses workflow execution in AI chatbots & automation for a set period or until a condition is met, crucial for API rate limiting & orchestration.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "deployment strategy",
+      "URL": "/internal/glossary/Blue-Green-Deployment/",
+      "Title": "Blue-green deployment is a strategy to minimize downtime and risk by running two identical production environments (blue and green). It enables seamless traffic switching and instant rollback for new software releases.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "desalineación",
+      "URL": "/internal/glossary/Alignment-Problem/",
+      "Title": "El Problema de Alineación en IA es el desafío de asegurar que las metas y comportamientos de los sistemas de IA coincidan consistentemente con los valores, preferencias y estándares éticos humanos, siendo crucial para un despliegue seguro y beneficioso de la IA.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "desambiguación",
+      "URL": "/internal/glossary/Disambiguation/",
+      "Title": "La desambiguación clarifica la intención del usuario en chatbots de IA cuando la entrada tiene múltiples significados, asegurando una interpretación precisa al pedir aclaraciones o presentar opciones.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "desarrollo frontend",
+      "URL": "/internal/glossary/Micro-Frontends/",
+      "Title": "Micro-Frontends es un estilo arquitectónico que descompone aplicaciones web en apps frontend más pequeñas, desarrolladas y desplegadas de forma independiente para equipos escalables y autónomos.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "DevOps",
+      "URL": "/internal/glossary/GitOps/",
+      "Title": "Explora GitOps, un marco operativo moderno que utiliza Git como fuente única de verdad para la gestión de infraestructura y aplicaciones. Aprende sus principios, flujo de trabajo, beneficios y herramientas clave para despliegues consistentes, auditables y automatizados.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Dify",
+      "URL": "/internal/glossary/Dify/",
+      "Title": "Dify es una plataforma de desarrollo de aplicaciones LLM de código abierto que integra BaaS y LLMOps. Construya, despliegue y gestione visualmente aplicaciones de IA, flujos de trabajo agentivos y pipelines RAG con mínimo código.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "Digital Workspace",
+      "URL": "/internal/glossary/Infinite-Canvas/",
+      "Title": "An infinite canvas is a digital workspace that expands indefinitely, allowing users to map complex ideas, data, and visual elements without fixed boundaries. Ideal for brainstorming, design, and automation.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Diseño de Persona",
+      "URL": "/internal/glossary/Persona-Design/",
+      "Title": "Aprenda sobre el Diseño de Persona para chatbots de IA y automatización. Defina personalidad, voz y carácter para crear interacciones atractivas, humanas y mejorar la experiencia del usuario.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "diseño de software",
+      "URL": "/internal/glossary/Monolithic-Architecture/",
+      "Title": "La arquitectura monolítica es un diseño de software en el que toda una aplicación se construye y despliega como una sola unidad indivisible. Conozca su estructura, ventajas, desventajas y casos de uso.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "diseño UI/UX",
+      "URL": "/internal/glossary/Hamburger-Menu/",
+      "Title": "Un menú hamburguesa es un elemento de interfaz gráfica con tres líneas apiladas que revela un menú de navegación oculto al hacer clic. Esencial para el diseño web móvil y responsivo.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Docker",
+      "URL": "/internal/glossary/Docker/",
+      "Title": "Aprende sobre Docker, una plataforma de código abierto para empaquetar, enviar y ejecutar aplicaciones en contenedores ligeros y portátiles. Comprende su arquitectura, beneficios y casos de uso.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Document Loader",
+      "URL": "/internal/glossary/Document-Loader/",
+      "Title": "A Document Loader is a software module that automates the ingestion and transformation of raw data into structured Document objects for AI tasks like LLM pipelines and vector store indexing.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "DTMF",
+      "URL": "/internal/glossary/DTMF--Dual-Tone-Multi-Frequency-/",
+      "Title": "DTMF（デュアルトーン多重周波数）は、電話ネットワークやデジタルプラットフォームで、キー操作時に発生する固有の音声トーンを利用してコマンド解釈、通話のルーティング、自動メニュー操作、リモート制御、セキュアなデータ入力を行う通信信号システムです。",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "dwell time",
+      "URL": "/internal/glossary/Dwell-Time/",
+      "Title": "El dwell time mide la duración que un usuario pasa en una página tras hacer clic desde un SERP antes de regresar. Descubre su impacto en SEO, cómo medirlo y estrategias para mejorar el engagement del usuario.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Edge AI",
+      "URL": "/internal/glossary/Edge-AI/",
+      "Title": "Edge AI implementa y ejecuta algoritmos de inteligencia artificial directamente en dispositivos en el borde de la red, permitiendo análisis en tiempo real, inferencia y toma de decisiones automatizada localmente.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Edge Computing",
+      "URL": "/internal/glossary/Edge-AI/",
+      "Title": "Edge AI implementa y ejecuta algoritmos de inteligencia artificial directamente en dispositivos en el borde de la red, permitiendo análisis en tiempo real, inferencia y toma de decisiones automatizada localmente.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "ejecución paralela",
+      "URL": "/internal/glossary/Parallel-Execution/",
+      "Title": "Aprende sobre la ejecución paralela: ejecutar múltiples tareas simultáneamente para acelerar el procesamiento, maximizar el uso de recursos y comprimir los ciclos de retroalimentación en flujos de trabajo, pruebas y chatbots.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "embudo de conversión",
+      "URL": "/internal/glossary/Conversion-Funnel/",
+      "Title": "Un embudo de conversión es un modelo analítico que representa el recorrido del usuario desde el conocimiento inicial hasta un objetivo específico. Conozca sus etapas, usos en marketing, experiencia de usuario y optimización.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "embudo de marketing",
+      "URL": "/internal/glossary/Conversion-Funnel/",
+      "Title": "Un embudo de conversión es un modelo analítico que representa el recorrido del usuario desde el conocimiento inicial hasta un objetivo específico. Conozca sus etapas, usos en marketing, experiencia de usuario y optimización.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Engagement del Cliente",
+      "URL": "/internal/glossary/Engagement-Score/",
+      "Title": "Descubre qué es una Puntuación de Engagement, cómo esta métrica compuesta cuantifica la interacción de usuarios, clientes o empleados con contenidos, productos o servicios, y sus usos estratégicos.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "engagement metrics",
+      "URL": "/internal/glossary/Engagement-Metrics/",
+      "Title": "Engagement metrics quantify user interaction with digital assets like websites, apps, and social media. They reveal how users click, scroll, share, and convert, guiding optimization.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "entity linking",
+      "URL": "/internal/glossary/Entity-Linking/",
+      "Title": "Entity linking connects extracted entities from text to unique entries in a knowledge base, resolving ambiguities and enabling structured data for AI, search, and recommendations.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "entorno de pruebas",
+      "URL": "/internal/glossary/Sandbox-Mode/",
+      "Title": "Un entorno de pruebas aislado y desechable para ejecutar código, flujos o software de forma segura sin afectar los sistemas de producción. Ideal para desarrollo, seguridad y QA.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "envenenamiento de datos",
+      "URL": "/internal/glossary/Data-Poisoning/",
+      "Title": "El envenenamiento de datos es un ataque malicioso donde se inyectan datos corruptos en los conjuntos de entrenamiento de IA/ML para manipular el comportamiento del modelo, degradar el rendimiento o insertar vulnerabilidades ocultas.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "error handler",
+      "URL": "/internal/glossary/Error-Handler---Try-Catch/",
+      "Title": "An error handler, often a Try-Catch block, manages unexpected failures in automation and AI chatbots, preventing crashes and enabling controlled recovery or logging.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "escalado de base de datos",
+      "URL": "/internal/glossary/Sharding/",
+      "Title": "Sharding es un patrón de arquitectura de bases de datos que divide un gran conjunto de datos lógico en piezas más pequeñas e independientes llamadas shards, permitiendo escalado horizontal y mejorando el rendimiento.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "espacio de trabajo",
+      "URL": "/internal/glossary/Team-Collaboration---Workspace/",
+      "Title": "Explora Colaboración en Equipo / Espacio de Trabajo, un entorno digital para que varios usuarios trabajen en tiempo real sobre documentos compartidos, procesos y flujos de trabajo automatizados, a menudo potenciados por IA.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Estado / Memoria de Contexto",
+      "URL": "/internal/glossary/State---Context-Memory/",
+      "Title": "Explora el Estado / Memoria de Contexto, los mecanismos de almacenamiento que permiten a los chatbots de IA conservar y recordar información entre sesiones para lograr continuidad conversacional, personalización y gestión eficiente de tareas.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Estimación de Costos",
+      "URL": "/internal/glossary/Cost-Estimation/",
+      "Title": "La estimación de costos en chatbots de IA y automatización predice el consumo de recursos y el desembolso financiero para implementar soluciones de IA conversacional, permitiendo presupuestación y optimización.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "estrategia de despliegue",
+      "URL": "/internal/glossary/Canary-Release/",
+      "Title": "Un canary release es una estrategia progresiva de despliegue de software que lanza nuevas versiones de aplicaciones de forma incremental a un pequeño subconjunto de usuarios, permitiendo la detección temprana de problemas y la mitigación de riesgos.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "explicabilidad",
+      "URL": "/internal/glossary/Transparency/",
+      "Title": "La transparencia de IA revela el funcionamiento interno, los datos y la lógica de decisión de un sistema de IA. Es esencial para generar confianza, garantizar la rendición de cuentas y cumplir con la normativa.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Extracción de Entidades",
+      "URL": "/internal/glossary/Entity-Extraction/",
+      "Title": "La extracción de entidades (NER) es una técnica de PLN que identifica y clasifica información clave como nombres, organizaciones y fechas a partir de texto no estructurado, transformándolo en datos estructurados para análisis y automatización.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "False Negative",
+      "URL": "/internal/glossary/False-Negative/",
+      "Title": "Un false negative ocurre cuando un sistema de IA, como un chatbot, no detecta un problema o intención real. Descubre su impacto, causas y estrategias para reducirlo en la automatización.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Falso Positivo",
+      "URL": "/internal/glossary/False-Positive/",
+      "Title": "Un falso positivo es cuando un sistema de IA (chatbot, herramienta de detección, filtro de privacidad) identifica incorrectamente una situación o contenido como coincidente con un criterio, lo que conduce a errores.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Figma",
+      "URL": "/internal/glossary/Auto-Layout/",
+      "Title": "Master Auto-Layout, a design feature for automatically arranging and resizing UI elements. Covers core concepts, benefits, and implementation in Figma, iOS, Android, and Web.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "FinOps para IA",
+      "URL": "/internal/glossary/FinOps-for-AI/",
+      "Title": "FinOps para IA es una disciplina que une la gestión financiera, las operaciones en la nube y la gobernanza de la infraestructura de IA para optimizar y gobernar el rendimiento financiero de los recursos de IA.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "fintech",
+      "URL": "/internal/glossary/Regulatory-Sandbox/",
+      "Title": "Un 'sandbox' regulatorio es un entorno controlado establecido por los reguladores para que empresas innovadoras prueben nuevos productos y servicios con reglas relajadas, garantizando la seguridad del consumidor y fomentando la innovación.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Flowise",
+      "URL": "/internal/glossary/Flowise/",
+      "Title": "Flowise — это платформа с открытым исходным кодом для визуального создания кастомных LLM-потоков и агентных AI-систем на базе LangChainJS. Проектируйте, оркестрируйте и внедряйте продвинутые AI-воркфлоу с минимальным кодом.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "flujo anidado",
+      "URL": "/internal/glossary/Sub-flow---Nested-Flow/",
+      "Title": "Aprenda sobre sub-flujos (flujos anidados) en automatización. Incruste flujos de trabajo dentro de otros para simplificar lógica compleja, mejorar la reutilización y facilitar el mantenimiento.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "flujo de trabajo sin código",
+      "URL": "/internal/glossary/Visual-Flow-Builder/",
+      "Title": "Explore los Constructores Visuales de Flujos: interfaces sin código de arrastrar y soltar para diseñar, automatizar y gestionar flujos de trabajo y procesos de IA complejos sin escribir código.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "fulfillment",
+      "URL": "/internal/glossary/Webhook-Fulfillment/",
+      "Title": "El fulfillment por webhook es el proceso backend que se ejecuta en respuesta a una intención en chatbots de IA o flujos de trabajo automatizados. Recupera o manipula datos vía APIs para respuestas dinámicas y con conocimiento de contexto.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Generación Aumentada por Recuperación",
+      "URL": "/internal/glossary/Knowledge-Base-Connector/",
+      "Title": "Un módulo de integración que vincula flujos de trabajo de IA como chatbots a fuentes de conocimiento indexadas, impulsando la Generación Aumentada por Recuperación (RAG) para respuestas relevantes al contexto.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "Generación de imágenes con IA",
+      "URL": "/internal/glossary/Image-Generation-Node/",
+      "Title": "Descubre los Nodos de Generación de Imágenes, componentes modulares en la programación visual que se conectan con modelos de IA como DALL-E y Stable Diffusion para crear imágenes a partir de indicaciones de texto.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Generative AI",
+      "URL": "/internal/glossary/Shadow-AI/",
+      "Title": "Shadow AI refers to the unsanctioned use of generative AI tools by employees, posing significant risks to data security, compliance, and intellectual property.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "gestión de secretos",
+      "URL": "/internal/glossary/Environment-Variables--Secrets-/",
+      "Title": "Aprenda sobre variables de entorno (secretos) para una configuración segura de aplicaciones. Separe datos sensibles como claves API y contraseñas del código, asegurando seguridad y flexibilidad.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "gestión del diálogo",
+      "URL": "/internal/glossary/Dialogue-Management/",
+      "Title": "La gestión del diálogo es el sistema de control que mantiene el estado, el contexto y el flujo de una conversación en interfaces impulsadas por IA, determinando la respuesta o acción más adecuada en cada turno.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "GitOps",
+      "URL": "/internal/glossary/GitOps/",
+      "Title": "Explora GitOps, un marco operativo moderno que utiliza Git como fuente única de verdad para la gestión de infraestructura y aplicaciones. Aprende sus principios, flujo de trabajo, beneficios y herramientas clave para despliegues consistentes, auditables y automatizados.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Glosario",
+      "URL": "/internal/glossary/",
+      "Title": "Glosario completo de términos de chatbots de IA, automatización y soporte al cliente. Explicaciones claras de conceptos técnicos.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "grandes modelos de lenguaje",
+      "URL": "/internal/glossary/Hugging-Face/",
+      "Title": "Explora Hugging Face, la plataforma de IA de código abierto y comunidad global para democratizar el aprendizaje automático. Descubre modelos, conjuntos de datos y herramientas para PLN, visión por computadora y más.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Gumloop",
+      "URL": "/internal/glossary/Gumloop/",
+      "Title": "Gumloop es una plataforma de automatización sin código, orientada a IA, para tareas y flujos de trabajo repetitivos. Utiliza agentes inteligentes para navegar por la web, interactuar con apps SaaS y tomar decisiones.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "HA",
+      "URL": "/internal/glossary/High-Availability--HA-/",
+      "Title": "La Alta Disponibilidad (HA) es un diseño de sistemas enfocado en lograr un rendimiento y tiempo de actividad operativos continuos, eliminando puntos únicos de falla y aprovechando la redundancia.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "herramientas de traducción",
+      "URL": "/internal/glossary/Real-time-Translation/",
+      "Title": "Sistemas impulsados por IA que traducen instantáneamente contenido de chat, voz o documentos, permitiendo que agentes de soporte y sistemas automatizados se comuniquen con clientes en cualquier idioma, en tiempo real.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Historial de Versiones",
+      "URL": "/internal/glossary/Version-History---Rollback/",
+      "Title": "Entienda el historial de versiones y la reversión en plataformas de chatbots de IA y automatización. Aprenda a rastrear, gestionar y revertir configuraciones de bots a estados estables, asegurando una recuperación rápida ante errores.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "HNSW",
+      "URL": "/internal/glossary/HNSW--Hierarchical-Navigable-Small-World-/",
+      "Title": "HNSW (Hierarchical Navigable Small World) es un algoritmo basado en grafos para búsqueda aproximada de vecinos más cercanos (ANN) rápida y precisa en bases de datos vectoriales, ideal para datos de alta dimensión.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "HTTP Request Node",
+      "URL": "/internal/glossary/HTTP-Request-Node/",
+      "Title": "Learn about the HTTP Request Node, a vital component in automation platforms like n8n and Node-RED, for sending HTTP requests to external APIs and integrating systems.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Human-Agent Teaming",
+      "URL": "/internal/glossary/Human-Agent-Teaming/",
+      "Title": "El Human-Agent Teaming (HAT) es un paradigma colaborativo donde agentes de IA y humanos trabajan juntos, compartiendo metas y control. Descubra cómo HAT mejora la eficiencia y la toma de decisiones.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "human-in-the-loop",
+      "URL": "/internal/glossary/Human-in-the-Loop--HITL-/",
+      "Title": "Human-in-the-Loop (HITL) integra la inteligencia humana en los flujos de trabajo de IA/ML para el entrenamiento, ajuste y validación, garantizando precisión, seguridad y toma de decisiones ética.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "human-in-the-loop",
+      "URL": "/internal/glossary/Human-Approval-Node/",
+      "Title": "Un paso de flujo de trabajo que pausa la automatización para revisión y toma de decisiones humanas. También conocido como Human-in-the-Loop (HITL), garantiza la supervisión humana en flujos de trabajo automatizados o agenticos.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "IA",
+      "URL": "/internal/glossary/GPU-Acceleration/",
+      "Title": "La aceleración GPU aprovecha las Unidades de Procesamiento Gráfico (GPUs) para el procesamiento masivo en paralelo, acelerando significativamente las cargas de trabajo intensivas en computación en IA, aprendizaje profundo, ciencia de datos y HPC.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "IA conversacional",
+      "URL": "/internal/glossary/Voiceflow/",
+      "Title": "Voiceflow es una plataforma sin código para diseñar, construir y desplegar agentes conversacionales de IA como chatbots y asistentes de voz en múltiples canales. Automatice interacciones con clientes y flujos de trabajo.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "IA conversacional",
+      "URL": "/internal/glossary/Conversational-AI/",
+      "Title": "Explora la IA conversacional: tecnologías que simulan la conversación humana con PLN, NLU, ML y reconocimiento de voz. Aprende cómo funciona, sus beneficios, casos de uso y tendencias futuras.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "IA conversacional",
+      "URL": "/internal/glossary/Slot-Filling/",
+      "Title": "Slot filling extrae parámetros específicos de las consultas de los usuarios para completar tareas en IA conversacional. Esencial para recopilar datos, permitir interacción natural y asegurar la finalización de tareas.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "IA conversacional",
+      "URL": "/internal/glossary/Utterance/",
+      "Title": "Aprende qué es una utterance en IA conversacional, su rol en NLU/NLP, tipos, flujo de trabajo, desafíos y mejores prácticas para entrenar chatbots de manera efectiva.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "IA Conversacional",
+      "URL": "/internal/glossary/Dialogue-State-Tracking/",
+      "Title": "El Seguimiento del Estado del Diálogo (DST) estima los objetivos del usuario, valores de slots y el historial conversacional en un sistema de diálogo, permitiendo respuestas de IA coherentes y relevantes.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "IA conversacional",
+      "URL": "/internal/glossary/Dialogue-Management/",
+      "Title": "La gestión del diálogo es el sistema de control que mantiene el estado, el contexto y el flujo de una conversación en interfaces impulsadas por IA, determinando la respuesta o acción más adecuada en cada turno.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "IA generativa",
+      "URL": "/internal/glossary/Watermarking/",
+      "Title": "El watermarking en IA consiste en incrustar señales visibles o invisibles en contenidos generados por IA (texto, imágenes, audio, video) para verificar su origen, combatir deepfakes y garantizar la autenticidad.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "IA por voz",
+      "URL": "/internal/glossary/Wake-Word/",
+      "Title": "Explora la tecnología de palabra de activación, el componente esencial para la interacción por voz manos libres con asistentes de IA y dispositivos inteligentes. Aprende cómo funcionan las palabras de activación, sus casos de uso e implementación.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "IA sin código",
+      "URL": "/internal/glossary/Stack-AI/",
+      "Title": "Stack AI es una plataforma empresarial de no-code/low-code para construir, probar y desplegar flujos de trabajo y agentes potenciados por IA, centrada en avanzados modelos de lenguaje grande (LLMs).",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "IaaS",
+      "URL": "/internal/glossary/Cloud-Computing/",
+      "Title": "Descubre la computación en la nube: recursos de TI bajo demanda, modelos de servicio (IaaS, PaaS, SaaS), opciones de implementación (pública, privada, híbrida) y beneficios para infraestructura e implementación de IA.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "IaC",
+      "URL": "/internal/glossary/Infrastructure-as-Code--IaC-/",
+      "Title": "Infrastructure as Code (IaC) defines and manages IT infrastructure like networks, VMs, and load balancers using code and automation. Learn its benefits, tools, and best practices.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "inferencia LLM",
+      "URL": "/internal/glossary/PagedAttention/",
+      "Title": "Explora PagedAttention, un algoritmo de gestión de memoria que divide la caché KV de los LLMs en bloques de tamaño fijo, reduciendo el desperdicio de memoria GPU durante la inferencia y potenciando vLLM.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Infinite Canvas",
+      "URL": "/internal/glossary/Infinite-Canvas/",
+      "Title": "An infinite canvas is a digital workspace that expands indefinitely, allowing users to map complex ideas, data, and visual elements without fixed boundaries. Ideal for brainstorming, design, and automation.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Information Retrieval",
+      "URL": "/internal/glossary/Query-Expansion/",
+      "Title": "Query expansion reformulates user search queries by adding synonyms and related terms to improve relevance in search engines, AI chatbots, and RAG systems, bridging intent gaps.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "infraestructura de IA",
+      "URL": "/internal/glossary/Latency/",
+      "Title": "La latencia es el retraso temporal entre una solicitud y la respuesta de un sistema, crucial para la infraestructura de IA, aplicaciones web y sistemas en tiempo real. Conozca sus tipos, causas y estrategias de reducción.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Infrastructure as Code",
+      "URL": "/internal/glossary/Infrastructure-as-Code--IaC-/",
+      "Title": "Infrastructure as Code (IaC) defines and manages IT infrastructure like networks, VMs, and load balancers using code and automation. Learn its benefits, tools, and best practices.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Integromat",
+      "URL": "/internal/glossary/Make--Integromat-/",
+      "Title": "Make (ранее Integromat) — это визуальная платформа без кода для проектирования, создания и автоматизации рабочих процессов: от простых задач до сложных бизнес-процессов корпоративного уровня.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "inteligencia ambiental",
+      "URL": "/internal/glossary/Ambient-Intelligence/",
+      "Title": "La Inteligencia Ambiental (AmI) integra sistemas digitales en los entornos para detectar, interpretar y responder proactivamente a las necesidades humanas sin comandos explícitos.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "inteligencia artificial",
+      "URL": "/internal/glossary/Human-in-the-Loop--HITL-/",
+      "Title": "Human-in-the-Loop (HITL) integra la inteligencia humana en los flujos de trabajo de IA/ML para el entrenamiento, ajuste y validación, garantizando precisión, seguridad y toma de decisiones ética.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Inteligencia Artificial",
+      "URL": "/internal/glossary/Copilot/",
+      "Title": "Un copiloto de IA es un asistente digital avanzado impulsado por inteligencia artificial que opera junto a los usuarios humanos para potenciar la productividad, la creatividad y la toma de decisiones en tiempo real.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "interacciones de usuario",
+      "URL": "/internal/glossary/Event-Tracking/",
+      "Title": "El seguimiento de eventos mide las interacciones de los usuarios con contenido y funciones digitales, proporcionando datos accionables para optimizar la experiencia de usuario e impulsar resultados empresariales.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "interruptores de funcionalidad",
+      "URL": "/internal/glossary/Feature-Flags/",
+      "Title": "Las banderas de funcionalidad permiten el control dinámico de funcionalidades de software sin volver a desplegar. Descubra cómo estos interruptores facilitan la entrega progresiva, pruebas A/B, reversiones rápidas y agilidad operativa.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "inyección de prompts",
+      "URL": "/internal/glossary/Variable-Injection/",
+      "Title": "La inyección de variables inserta datos dinámicos en prompts, scripts o plantillas para chatbots de IA y automatización. Comprenda su sintaxis, casos de uso y riesgos críticos de seguridad como los ataques de inyección de prompts.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "inyección de variables",
+      "URL": "/internal/glossary/Variable-Injection/",
+      "Title": "La inyección de variables inserta datos dinámicos en prompts, scripts o plantillas para chatbots de IA y automatización. Comprenda su sintaxis, casos de uso y riesgos críticos de seguridad como los ataques de inyección de prompts.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "inyección indirecta de prompt",
+      "URL": "/internal/glossary/Indirect-Prompt-Injection/",
+      "Title": "Aprende sobre la inyección indirecta de prompts, una vulnerabilidad de seguridad donde los atacantes incrustan instrucciones maliciosas en contenido externo procesado por LLMs, lo que provoca acciones no deseadas o fuga de datos.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "iterador",
+      "URL": "/internal/glossary/Iterator---For-Each/",
+      "Title": "Un iterador o estructura for-each procesa elementos de una lista o colección uno a uno, permitiendo acciones como leer, actualizar o automatizar tareas para cada elemento.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "JSON data",
+      "URL": "/internal/glossary/JSON-Path/",
+      "Title": "JSON Path je dotazovací syntaxe pro extrakci, vyhledávání a manipulaci s konkrétními hodnotami ze složitých struktur dat JSON pomocí stručných cestových výrazů.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "JSON Path",
+      "URL": "/internal/glossary/JSON-Path/",
+      "Title": "JSON Path je dotazovací syntaxe pro extrakci, vyhledávání a manipulaci s konkrétními hodnotami ze složitých struktur dat JSON pomocí stručných cestových výrazů.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "kerentanan",
+      "URL": "/internal/glossary/Red-Teaming/",
+      "Title": "Red Teaming adalah proses adversarial yang mensimulasikan serangan dunia nyata pada sistem AI untuk menemukan kerentanan, bias, dan penyalahgunaan. Esensial untuk keamanan AI, etika, dan kepatuhan.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "knowledge base",
+      "URL": "/internal/glossary/Entity-Linking/",
+      "Title": "Entity linking connects extracted entities from text to unique entries in a knowledge base, resolving ambiguities and enabling structured data for AI, search, and recommendations.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "KV Cache",
+      "URL": "/internal/glossary/KV-Cache/",
+      "Title": "KV Cache je optimalizace pro inference u Transformer modelů a LLM, ukládající Key a Value tenzory pro dramatické zrychlení autoregresivní generace tokenů a snížení výpočetních nákladů.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "LangFlow",
+      "URL": "/internal/glossary/LangFlow/",
+      "Title": "LangFlow es una interfaz visual de código abierto y bajo código para construir, probar y desplegar aplicaciones de IA, especialmente aquellas basadas en LLMs y LangChain.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "large language models",
+      "URL": "/internal/glossary/Jailbreaking/",
+      "Title": "AI jailbreaking is bypassing AI safety guardrails to generate prohibited content. Learn about techniques, risks, and mitigation strategies for large language models (LLMs).",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "latencia",
+      "URL": "/internal/glossary/Latency/",
+      "Title": "La latencia es el retraso temporal entre una solicitud y la respuesta de un sistema, crucial para la infraestructura de IA, aplicaciones web y sistemas en tiempo real. Conozca sus tipos, causas y estrategias de reducción.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "latencia de inferencia",
+      "URL": "/internal/glossary/Inference-Latency/",
+      "Title": "La latencia de inferencia es el retraso entre proporcionar una entrada a un modelo de IA y obtener una predicción. Es una métrica crítica para aplicaciones de IA en tiempo real, ya que impacta la capacidad de respuesta y la experiencia del usuario.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "lemmatization",
+      "URL": "/internal/glossary/Lemmatization/",
+      "Title": "Lemmatization is a linguistic process in NLP and AI that reduces inflected words to their base form (lemma), improving text search, understanding, and analysis.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Lenguaje de Marcado de Síntesis de Voz",
+      "URL": "/internal/glossary/SSML--Speech-Synthesis-Markup-Language-/",
+      "Title": "SSML es un lenguaje de marcado basado en XML para controlar la salida de voz sintética, incluyendo pronunciación, entonación, ritmo y emoción, utilizado por los principales proveedores de TTS.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "limitación de API",
+      "URL": "/internal/glossary/Throttling/",
+      "Title": "La limitación, también llamada limitación de API, es la restricción deliberada de solicitudes a una API o servicio dentro de un período de tiempo específico. Previene la sobrecarga, garantiza acceso equitativo, limita el abuso y mantiene el rendimiento.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "limitación de tasa",
+      "URL": "/internal/glossary/Throttling/",
+      "Title": "La limitación, también llamada limitación de API, es la restricción deliberada de solicitudes a una API o servicio dentro de un período de tiempo específico. Previene la sobrecarga, garantiza acceso equitativo, limita el abuso y mantiene el rendimiento.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "LLM inference",
+      "URL": "/internal/glossary/Speculative-Decoding/",
+      "Title": "Speculative decoding accelerates LLM inference by using a fast draft model to propose tokens, verified by a larger target model, reducing latency while maintaining output quality.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "LLM-воркфлоу",
+      "URL": "/internal/glossary/Flowise/",
+      "Title": "Flowise — это платформа с открытым исходным кодом для визуального создания кастомных LLM-потоков и агентных AI-систем на базе LangChainJS. Проектируйте, оркестрируйте и внедряйте продвинутые AI-воркфлоу с минимальным кодом.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "LLMOps",
+      "URL": "/internal/glossary/Dify/",
+      "Title": "Dify es una plataforma de desarrollo de aplicaciones LLM de código abierto que integra BaaS y LLMOps. Construya, despliegue y gestione visualmente aplicaciones de IA, flujos de trabajo agentivos y pipelines RAG con mínimo código.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "LLMs",
+      "URL": "/internal/glossary/Output-Parsing/",
+      "Title": "El análisis de salida extrae datos estructurados (JSON, objetos de Python) de las respuestas en texto de modelos de lenguaje de IA para automatización, analítica e integración de sistemas.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "LLMs",
+      "URL": "/internal/glossary/LangFlow/",
+      "Title": "LangFlow es una interfaz visual de código abierto y bajo código para construir, probar y desplegar aplicaciones de IA, especialmente aquellas basadas en LLMs y LangChain.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "LLMs",
+      "URL": "/internal/glossary/KV-Cache/",
+      "Title": "KV Cache je optimalizace pro inference u Transformer modelů a LLM, ukládající Key a Value tenzory pro dramatické zrychlení autoregresivní generace tokenů a snížení výpočetních nákladů.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "LLM評価",
+      "URL": "/internal/blog/ai-evaluation-japanese-benchmarks/",
+      "Title": "自動LLM評価手法から日本独自のベンチマーク、ハルシネーション対策まで――エンタープライズAI導入に必須の知識を包括解説。FlowHuntの事例も紹介。",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "load balancer",
+      "URL": "/internal/glossary/Load-Balancing/",
+      "Title": "Learn about load balancing: distributing network traffic across servers to optimize application availability, reliability, and performance. Explore types, algorithms, and benefits for AI infrastructure.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "load balancing",
+      "URL": "/internal/glossary/Load-Balancing/",
+      "Title": "Learn about load balancing: distributing network traffic across servers to optimize application availability, reliability, and performance. Explore types, algorithms, and benefits for AI infrastructure.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Logic Node",
+      "URL": "/internal/glossary/Logic-Node---Conditional-Branching/",
+      "Title": "Un Logic Node (ramificación condicional) evalúa condiciones en flujos de trabajo de chatbots y automatización, dirigiendo los caminos dinámicamente según la entrada del usuario o el contexto.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Machine Learning",
+      "URL": "/internal/glossary/Model-Serving/",
+      "Title": "Model serving is the operational process of making trained machine learning models available for predictions via a network-accessible service, enabling AI-driven features in production systems.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "machine learning",
+      "URL": "/internal/glossary/Cosine-Similarity/",
+      "Title": "Cosine similarity es una métrica que mide el coseno del ángulo entre dos vectores no nulos, evaluando su similitud en función de la orientación en lugar de la magnitud. Ampliamente utilizada en machine learning, PLN y sistemas de recomendación.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Machine Learning",
+      "URL": "/internal/glossary/Model-Cards/",
+      "Title": "Model Cards are standardized documents for ML models, detailing architecture, intended uses, performance, limitations, training data, and ethical considerations for transparency and accountability.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Make",
+      "URL": "/internal/glossary/Make--Integromat-/",
+      "Title": "Make (ранее Integromat) — это визуальная платформа без кода для проектирования, создания и автоматизации рабочих процессов: от простых задач до сложных бизнес-процессов корпоративного уровня.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "marcado de agua en IA",
+      "URL": "/internal/glossary/Watermarking/",
+      "Title": "El watermarking en IA consiste en incrustar señales visibles o invisibles en contenidos generados por IA (texto, imágenes, audio, video) para verificar su origen, combatir deepfakes y garantizar la autenticidad.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "marketing attribution",
+      "URL": "/internal/glossary/Attribution-Window/",
+      "Title": "An attribution window defines the period after a marketing interaction when conversions are credited to that touchpoint. Learn why it's crucial for campaign effectiveness and budget allocation.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "mecanismo de respaldo",
+      "URL": "/internal/glossary/Fall-back-Mechanism/",
+      "Title": "Un mecanismo de respaldo en chatbots de IA garantiza la continuidad cuando el bot no logra interpretar o cumplir una solicitud, redirigiendo, aclarando o escalando la conversación.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "menú hamburguesa",
+      "URL": "/internal/glossary/Hamburger-Menu/",
+      "Title": "Un menú hamburguesa es un elemento de interfaz gráfica con tres líneas apiladas que revela un menú de navegación oculto al hacer clic. Esencial para el diseño web móvil y responsivo.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Menú Persistente",
+      "URL": "/internal/glossary/Persistent-Menu/",
+      "Title": "Aprenda sobre los Menús Persistentes en chatbots: qué son, por qué usarlos, cómo implementarlos y mejores prácticas para mejorar la navegación y experiencia del usuario.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "micro frontends",
+      "URL": "/internal/glossary/Micro-Frontends/",
+      "Title": "Micro-Frontends es un estilo arquitectónico que descompone aplicaciones web en apps frontend más pequeñas, desarrolladas y desplegadas de forma independiente para equipos escalables y autónomos.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "microservices",
+      "URL": "/internal/glossary/Microservices/",
+      "Title": "Explore a comprehensive glossary of microservices architecture, covering essential concepts, patterns, and technologies like API Gateway, Bounded Context, CQRS, and more.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Milvus",
+      "URL": "/internal/glossary/Milvus/",
+      "Title": "Explora Milvus, una base de datos vectorial open source y cloud-native para búsquedas por similitud escalables en datos no estructurados. Conoce su arquitectura, características, casos de uso y cómo se compara con otras bases vectoriales.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "minimapa",
+      "URL": "/internal/glossary/Minimap/",
+      "Title": "Un minimapa es un mapa visual compacto que sirve como visión general para navegar flujos grandes y complejos, como conversaciones de chatbots de IA o código. Ayuda a los usuarios a orientarse y gestionar diagramas intrincados.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "mitigación de sesgos",
+      "URL": "/internal/glossary/Bias-Mitigation/",
+      "Title": "La mitigación de sesgos implica técnicas y estrategias para reducir o eliminar la injusticia sistemática en modelos de aprendizaje automático, garantizando resultados éticos y justos en la IA.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "MLOps",
+      "URL": "/internal/glossary/MLOps/",
+      "Title": "MLOps (Operaciones de Aprendizaje Automático) es una disciplina de ingeniería que automatiza y agiliza el ciclo de vida de los modelos de ML desde la experimentación hasta la producción y el mantenimiento.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Model Cards",
+      "URL": "/internal/glossary/Model-Cards/",
+      "Title": "Model Cards are standardized documents for ML models, detailing architecture, intended uses, performance, limitations, training data, and ethical considerations for transparency and accountability.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Model Serving",
+      "URL": "/internal/glossary/Model-Serving/",
+      "Title": "Model serving is the operational process of making trained machine learning models available for predictions via a network-accessible service, enabling AI-driven features in production systems.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "modelado de atribución",
+      "URL": "/internal/glossary/Attribution-Modeling/",
+      "Title": "El modelado de atribución es un método analítico para asignar el crédito de las conversiones a canales y puntos de contacto de marketing, optimizando campañas y la asignación de presupuesto.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "modelo de IA",
+      "URL": "/internal/glossary/Inference-Latency/",
+      "Title": "La latencia de inferencia es el retraso entre proporcionar una entrada a un modelo de IA y obtener una predicción. Es una métrica crítica para aplicaciones de IA en tiempo real, ya que impacta la capacidad de respuesta y la experiencia del usuario.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "modelos hugging face",
+      "URL": "/internal/glossary/Hugging-Face/",
+      "Title": "Explora Hugging Face, la plataforma de IA de código abierto y comunidad global para democratizar el aprendizaje automático. Descubre modelos, conjuntos de datos y herramientas para PLN, visión por computadora y más.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "moderación de contenido",
+      "URL": "/internal/glossary/Content-Moderation/",
+      "Title": "Explora la moderación de contenido: monitoreo, evaluación y gestión del contenido generado por usuarios para garantizar las directrices de la plataforma, los estándares comunitarios y el cumplimiento legal.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "multi-tenancy",
+      "URL": "/internal/glossary/Multi-Tenancy/",
+      "Title": "Multi-tenancy is a software architecture where a single application instance serves multiple tenants, logically isolating data while sharing infrastructure. Essential for SaaS and cloud platforms.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "máquina de estados",
+      "URL": "/internal/glossary/State-Machine/",
+      "Title": "Explora las máquinas de estados, un modelo computacional para las transiciones de sistemas. Aprende conceptos clave, tipos, usos en chatbots de IA y automatización, implementación, ventajas y desafíos.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "métricas de equidad",
+      "URL": "/internal/glossary/Fairness-Metrics/",
+      "Title": "Las métricas de equidad son herramientas matemáticas y estadísticas utilizadas para cuantificar, evaluar y monitorear el sesgo en sistemas de IA/ML, garantizando un trato equitativo entre grupos.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "N-grama",
+      "URL": "/internal/glossary/N-Gram/",
+      "Title": "Un N-grama es una secuencia contigua de n elementos (palabras, caracteres o símbolos) extraídos de texto o habla, fundamental en PLN para modelado de lenguaje y análisis de texto.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "n8n",
+      "URL": "/internal/glossary/n8n/",
+      "Title": "n8n es una herramienta de automatización de flujos de trabajo basada en nodos y con código fuente disponible, que conecta tus aplicaciones, APIs y servicios con integración avanzada de IA.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "natural language processing",
+      "URL": "/internal/glossary/Lemmatization/",
+      "Title": "Lemmatization is a linguistic process in NLP and AI that reduces inflected words to their base form (lemma), improving text search, understanding, and analysis.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Natural Language Processing",
+      "URL": "/internal/glossary/Natural-Language-Processing--NLP-/",
+      "Title": "Natural Language Processing (NLP) is AI technology enabling computers to understand, interpret, and generate human language, bridging human communication and machine understanding.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "natural language processing (NLP)",
+      "URL": "/internal/glossary/Misunderstood-Rate/",
+      "Title": "Misunderstood Rate measures chatbot failures to understand user intent, triggering fallback responses. It's a key metric for NLU performance, user experience, and improving conversational AI.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "NER",
+      "URL": "/internal/glossary/Named-Entity-Recognition--NER-/",
+      "Title": "El Reconocimiento de Entidades Nombradas (NER) identifica y clasifica entidades del mundo real (personas, organizaciones, ubicaciones, etc.) en texto, transformando datos sin procesar en información estructurada.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "NLP",
+      "URL": "/internal/glossary/Natural-Language-Processing--NLP-/",
+      "Title": "Natural Language Processing (NLP) is AI technology enabling computers to understand, interpret, and generate human language, bridging human communication and machine understanding.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "NLU models",
+      "URL": "/internal/glossary/Utterance-Permutation/",
+      "Title": "Utterance permutation generates diverse sentence variations to train NLU models for AI chatbots and voice assistants, improving intent recognition and handling real-world language variability.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Nodo de Bucle",
+      "URL": "/internal/glossary/Loop-Node/",
+      "Title": "Un Nodo de Bucle automatiza acciones repetitivas en flujos de trabajo, repitiendo tareas hasta que se cumple una condición, un número fijo de veces o para cada elemento de una colección. Esencial para la automatización.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Nodo de Generación de Imágenes",
+      "URL": "/internal/glossary/Image-Generation-Node/",
+      "Title": "Descubre los Nodos de Generación de Imágenes, componentes modulares en la programación visual que se conectan con modelos de IA como DALL-E y Stable Diffusion para crear imágenes a partir de indicaciones de texto.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Nodo de Voz a Texto",
+      "URL": "/internal/glossary/Speech-to-Text-Node/",
+      "Title": "Un nodo de Conversión de Voz a Texto es un componente modular en plataformas de automatización y flujos de trabajo de IA que transcribe lenguaje hablado en texto legible por máquina utilizando ASR.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "nodo web scraper",
+      "URL": "/internal/glossary/Web-Scraper-Node/",
+      "Title": "Un Nodo Web Scraper es un componente modular para flujos de trabajo automatizados, que obtiene y extrae datos de URLs web. Esencial para chatbots de IA, monitoreo de competidores y agregación de datos.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "nodos",
+      "URL": "/internal/glossary/Nodes-and-Edges/",
+      "Title": "Los nodos son los elementos fundamentales (acciones o entidades) en un sistema; las aristas son las conexiones (líneas) que definen relaciones, flujos de datos o dependencias.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "observability",
+      "URL": "/internal/glossary/Telemetry/",
+      "Title": "Telemetry is the automated process of collecting, transmitting, and analyzing data from remote sources for monitoring, analysis, and decision-making. Learn its types, benefits, and implementation.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "operaciones de machine learning",
+      "URL": "/internal/glossary/MLOps/",
+      "Title": "MLOps (Operaciones de Aprendizaje Automático) es una disciplina de ingeniería que automatiza y agiliza el ciclo de vida de los modelos de ML desde la experimentación hasta la producción y el mantenimiento.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "optimización de costos en la nube",
+      "URL": "/internal/glossary/FinOps-for-AI/",
+      "Title": "FinOps para IA es una disciplina que une la gestión financiera, las operaciones en la nube y la gobernanza de la infraestructura de IA para optimizar y gobernar el rendimiento financiero de los recursos de IA.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "output parsing",
+      "URL": "/internal/glossary/Output-Parsing/",
+      "Title": "El análisis de salida extrae datos estructurados (JSON, objetos de Python) de las respuestas en texto de modelos de lenguaje de IA para automatización, analítica e integración de sistemas.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "PagedAttention",
+      "URL": "/internal/glossary/PagedAttention/",
+      "Title": "Explora PagedAttention, un algoritmo de gestión de memoria que divide la caché KV de los LLMs en bloques de tamaño fijo, reduciendo el desperdicio de memoria GPU durante la inferencia y potenciando vLLM.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "palabra de activación",
+      "URL": "/internal/glossary/Wake-Word/",
+      "Title": "Explora la tecnología de palabra de activación, el componente esencial para la interacción por voz manos libres con asistentes de IA y dispositivos inteligentes. Aprende cómo funcionan las palabras de activación, sus casos de uso e implementación.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "pantalla de bienvenida",
+      "URL": "/internal/glossary/Splash-Screen/",
+      "Title": "Una pantalla de bienvenida es la primera visualización que ve el usuario al iniciar una app o chatbot, aportando reconocimiento de marca e indicando la carga. Esencial para la experiencia de usuario y el branding.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "persona de chatbot",
+      "URL": "/internal/glossary/Bot-Avatar/",
+      "Title": "Descubre qué es un avatar de bot, sus beneficios, tipos y cómo crear uno. Aprende cómo estas representaciones visuales humanizan los chatbots de IA, mejoran la experiencia del usuario y refuerzan la identidad de marca.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "personally identifiable information",
+      "URL": "/internal/glossary/PII-Redaction/",
+      "Title": "Learn about PII redaction: the automated process of detecting and obscuring sensitive personally identifiable information from digital assets to ensure privacy and compliance.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "PII redaction",
+      "URL": "/internal/glossary/PII-Redaction/",
+      "Title": "Learn about PII redaction: the automated process of detecting and obscuring sensitive personally identifiable information from digital assets to ensure privacy and compliance.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Pinecone",
+      "URL": "/internal/glossary/Pinecone/",
+      "Title": "Pinecone es una base de datos vectorial totalmente gestionada y nativa en la nube para búsquedas vectoriales de alto rendimiento y aplicaciones de memoria de IA escalables. Indexa y busca embeddings vectoriales de alta dimensión.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "PNA",
+      "URL": "/internal/glossary/Intent-Recognition/",
+      "Title": "El reconocimiento de intenciones es una tecnología central de IA/PNA que interpreta la entrada del usuario para comprender objetivos específicos. Permite que los sistemas respondan de manera contextual y eficiente.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "precision",
+      "URL": "/internal/glossary/Precision-and-Recall/",
+      "Title": "Precision and recall are core metrics for evaluating classification and information retrieval systems. Precision measures correct positive predictions, recall finds all actual positives.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "presupuesto de latencia",
+      "URL": "/internal/glossary/Latency-Budget/",
+      "Title": "Explore los presupuestos de latencia, el tiempo máximo permitido para la respuesta de un sistema distribuido entre componentes. Comprenda su importancia en sistemas de IA, tipos, estrategias de gestión y compensaciones.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Privacidad Diferencial",
+      "URL": "/internal/glossary/Privacy-Preserving-ML/",
+      "Title": "Descubre el Aprendizaje Automático con Preservación de la Privacidad (PPML), métodos como Privacidad Diferencial, Cifrado Homomórfico, MPC y Aprendizaje Federado, para proteger datos sensibles en modelos de ML.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Procesamiento de Lenguaje Natural",
+      "URL": "/internal/glossary/N-Gram/",
+      "Title": "Un N-grama es una secuencia contigua de n elementos (palabras, caracteres o símbolos) extraídos de texto o habla, fundamental en PLN para modelado de lenguaje y análisis de texto.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Procesamiento de Lenguaje Natural",
+      "URL": "/internal/glossary/Conversational-AI/",
+      "Title": "Explora la IA conversacional: tecnologías que simulan la conversación humana con PLN, NLU, ML y reconocimiento de voz. Aprende cómo funciona, sus beneficios, casos de uso y tendencias futuras.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "procesamiento de lenguaje natural",
+      "URL": "/internal/glossary/Sentiment-Analysis/",
+      "Title": "El análisis de sentimiento interpreta el tono emocional en textos utilizando PLN, ML e IA. Convierte datos no estructurados en información accionable para la retroalimentación de clientes, monitoreo de marca y mejora de productos.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "procesamiento en tiempo real",
+      "URL": "/internal/glossary/Batch-Processing/",
+      "Title": "El procesamiento por lotes es un enfoque de datos donde grandes volúmenes de datos se recopilan y procesan en grupos durante períodos establecidos. Ideal para IA de alto rendimiento, análisis y operaciones empresariales.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "procesamiento por lotes",
+      "URL": "/internal/glossary/Batch-Processing/",
+      "Title": "El procesamiento por lotes es un enfoque de datos donde grandes volúmenes de datos se recopilan y procesan en grupos durante períodos establecidos. Ideal para IA de alto rendimiento, análisis y operaciones empresariales.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Prompt Engineering",
+      "URL": "/internal/glossary/Zero-Shot-Chain-of-Thought/",
+      "Title": "Zero-Shot Chain of Thought (CoT) es una técnica de prompt engineering para LLMs que instruye a los modelos a razonar paso a paso sin ejemplos, mejorando la resolución de problemas complejos.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "prompt template",
+      "URL": "/internal/glossary/Prompt-Template/",
+      "Title": "Un prompt template es una estructura de prompt preconfigurada con instrucciones estáticas y variables, diseñada para su uso repetido en chatbots de IA y sistemas de automatización.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "pulgar arriba/abajo",
+      "URL": "/internal/glossary/Feedback-Buttons--Thumbs-Up-Down-/",
+      "Title": "Aprende sobre los botones de retroalimentación (pulgar arriba/abajo) para chatbots de IA y contenido digital. Descubre sus beneficios, mejores prácticas y cómo impulsan la mejora continua.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Puntuación de Engagement",
+      "URL": "/internal/glossary/Engagement-Score/",
+      "Title": "Descubre qué es una Puntuación de Engagement, cómo esta métrica compuesta cuantifica la interacción de usuarios, clientes o empleados con contenidos, productos o servicios, y sus usos estratégicos.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Python",
+      "URL": "/internal/glossary/Code-Block--Python-JS-/",
+      "Title": "A code block groups programming statements for unified execution, defined by indentation in Python and curly braces in JavaScript. Used in automation and chatbots for custom logic.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Qdrant",
+      "URL": "/internal/glossary/Qdrant/",
+      "Title": "Qdrant es un motor de búsqueda de similitud vectorial y base de datos de vectores open-source para datos vectoriales de alta dimensión, habilitando búsqueda semántica, RAG y recomendaciones.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Query Expansion",
+      "URL": "/internal/glossary/Query-Expansion/",
+      "Title": "Query expansion reformulates user search queries by adding synonyms and related terms to improve relevance in search engines, AI chatbots, and RAG systems, bridging intent gaps.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "RAG",
+      "URL": "/internal/blog/introduction-to-rag/",
+      "Title": "RAG（検索拡張生成）の基礎と実用例を解説。従来AIとの違いから利点、現場での活用事例まで詳しく紹介します。",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "Ramificación Condicional",
+      "URL": "/internal/glossary/Logic-Node---Conditional-Branching/",
+      "Title": "Un Logic Node (ramificación condicional) evalúa condiciones en flujos de trabajo de chatbots y automatización, dirigiendo los caminos dinámicamente según la entrada del usuario o el contexto.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Rate Limiting Handler",
+      "URL": "/internal/glossary/Rate-Limiting-Handler/",
+      "Title": "A Rate Limiting Handler manages API request quotas, detects 429 errors, and implements retry logic to ensure compliance and prevent service disruptions for client and server applications.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "recall",
+      "URL": "/internal/glossary/Precision-and-Recall/",
+      "Title": "Precision and recall are core metrics for evaluating classification and information retrieval systems. Precision measures correct positive predictions, recall finds all actual positives.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Reconocimiento Automático del Habla",
+      "URL": "/internal/glossary/Speech-to-Text-Node/",
+      "Title": "Un nodo de Conversión de Voz a Texto es un componente modular en plataformas de automatización y flujos de trabajo de IA que transcribe lenguaje hablado en texto legible por máquina utilizando ASR.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "Reconocimiento de Entidades Nombradas",
+      "URL": "/internal/glossary/Entity-Extraction/",
+      "Title": "La extracción de entidades (NER) es una técnica de PLN que identifica y clasifica información clave como nombres, organizaciones y fechas a partir de texto no estructurado, transformándolo en datos estructurados para análisis y automatización.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "Reconocimiento de Entidades Nombradas",
+      "URL": "/internal/glossary/Named-Entity-Recognition--NER-/",
+      "Title": "El Reconocimiento de Entidades Nombradas (NER) identifica y clasifica entidades del mundo real (personas, organizaciones, ubicaciones, etc.) en texto, transformando datos sin procesar en información estructurada.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "Reconocimiento de Intenciones",
+      "URL": "/internal/glossary/Intent-Recognition/",
+      "Title": "El reconocimiento de intenciones es una tecnología central de IA/PNA que interpreta la entrada del usuario para comprender objetivos específicos. Permite que los sistemas respondan de manera contextual y eficiente.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "regelbasierter Chatbot",
+      "URL": "/internal/glossary/Rule-Based-Chatbot/",
+      "Title": "Ein regelbasierter Chatbot interagiert mit Nutzern, indem er vordefinierten Regeln und Skripten folgt und auf bestimmte Schlüsselwörter oder Button-Auswahlen ohne KI-Lernen reagiert.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "rendición de cuentas algorítmica",
+      "URL": "/internal/glossary/Algorithmic-Accountability/",
+      "Title": "La rendición de cuentas algorítmica garantiza que las organizaciones sean responsables de que sus sistemas de IA operen de manera explicable, rastreable y justificable, incluyendo los resultados y los impactos sobre las personas y la sociedad.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "rendimiento del chatbot",
+      "URL": "/internal/glossary/Bot-Containment-Rate/",
+      "Title": "El porcentaje de interacciones de usuarios gestionadas completamente por un chatbot sin transferirse a un agente humano. Es una métrica clave para evaluar el rendimiento del chatbot y la eficiencia operativa.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "resiliencia de sistemas",
+      "URL": "/internal/glossary/Chaos-Engineering/",
+      "Title": "Chaos Engineering es una disciplina que consiste en experimentar intencionadamente en los sistemas para descubrir debilidades y generar confianza en su resiliencia. Aprenda cómo identificar proactivamente vulnerabilidades.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Respuestas automáticas IA",
+      "URL": "/internal/blog/ai-email-response-examples/",
+      "Title": "Análisis de las verdaderas capacidades de la generación automática de respuestas con IA usando ejemplos reales. Un examen profundo sobre precisión y practicidad en consultas técnicas complejas y casos de gestión de reclamaciones.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Respuestas Rápidas",
+      "URL": "/internal/glossary/Quick-Replies/",
+      "Title": "Las Respuestas Rápidas son botones efímeros y seleccionables en interfaces de chat, que ofrecen opciones predefinidas. Desaparecen tras la selección, evitando desorden y manteniendo el flujo conversacional.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "retención",
+      "URL": "/internal/glossary/Cohort-Analysis/",
+      "Title": "El análisis de cohortes es un método de analítica de comportamiento que divide a los usuarios en grupos según características compartidas para rastrear y comparar sus comportamientos a lo largo del tiempo, revelando tendencias.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Reversión",
+      "URL": "/internal/glossary/Version-History---Rollback/",
+      "Title": "Entienda el historial de versiones y la reversión en plataformas de chatbots de IA y automatización. Aprenda a rastrear, gestionar y revertir configuraciones de bots a estados estables, asegurando una recuperación rápida ante errores.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "robustez del modelo",
+      "URL": "/internal/glossary/Model-Robustness/",
+      "Title": "La robustez del modelo es la capacidad de los modelos de ML/IA para mantener un rendimiento confiable frente a entradas inesperadas, ruidosas, incompletas o manipuladas maliciosamente, garantizando confiabilidad y seguridad.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Router Condicional",
+      "URL": "/internal/glossary/Conditional-Router/",
+      "Title": "Un Router Condicional evalúa los datos según reglas y los dirige a rutas específicas. Esencial para ramificación dinámica basada en reglas en flujos de automatización, chatbots de IA y software.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "SaaS",
+      "URL": "/internal/glossary/Multi-Tenancy/",
+      "Title": "Multi-tenancy is a software architecture where a single application instance serves multiple tenants, logically isolating data while sharing infrastructure. Essential for SaaS and cloud platforms.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "Safety Guardrails",
+      "URL": "/internal/glossary/Safety-Guardrails/",
+      "Title": "Safety guardrails are engineered controls and policies that prevent AI systems, especially LLMs, from generating harmful, inappropriate, or non-compliant content, ensuring responsible and secure AI deployment.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "sandbox mode",
+      "URL": "/internal/glossary/Sandbox-Mode/",
+      "Title": "Un entorno de pruebas aislado y desechable para ejecutar código, flujos o software de forma segura sin afectar los sistemas de producción. Ideal para desarrollo, seguridad y QA.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "sandbox regulatorio",
+      "URL": "/internal/glossary/Regulatory-Sandbox/",
+      "Title": "Un 'sandbox' regulatorio es un entorno controlado establecido por los reguladores para que empresas innovadoras prueben nuevos productos y servicios con reglas relajadas, garantizando la seguridad del consumidor y fomentando la innovación.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "script de inserción",
+      "URL": "/internal/glossary/Embed-Script/",
+      "Title": "Aprenda sobre los scripts de inserción, fragmentos de JavaScript utilizados para integrar chatbots de IA y contenido dinámico en cualquier sitio web. Descubra usos, ejemplos, personalización y mejores prácticas.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "seguimiento de eventos",
+      "URL": "/internal/glossary/Event-Tracking/",
+      "Title": "El seguimiento de eventos mide las interacciones de los usuarios con contenido y funciones digitales, proporcionando datos accionables para optimizar la experiencia de usuario e impulsar resultados empresariales.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Seguimiento del Estado del Diálogo",
+      "URL": "/internal/glossary/Dialogue-State-Tracking/",
+      "Title": "El Seguimiento del Estado del Diálogo (DST) estima los objetivos del usuario, valores de slots y el historial conversacional en un sistema de diálogo, permitiendo respuestas de IA coherentes y relevantes.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Seguridad de API",
+      "URL": "/internal/glossary/API-Endpoint-Configuration/",
+      "Title": "Aprenda sobre la configuración de endpoints de API, su importancia para la integración, automatización y seguridad, y las mejores prácticas para diseñar, asegurar y documentar sus endpoints de API.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "seguridad de IA",
+      "URL": "/internal/glossary/Data-Poisoning/",
+      "Title": "El envenenamiento de datos es un ataque malicioso donde se inyectan datos corruptos en los conjuntos de entrenamiento de IA/ML para manipular el comportamiento del modelo, degradar el rendimiento o insertar vulnerabilidades ocultas.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "seguridad en IA",
+      "URL": "/internal/glossary/Adversarial-Attack/",
+      "Title": "Los ataques adversarios manipulan las entradas de modelos de IA/ML para provocar predicciones incorrectas, explotando vulnerabilidades. Estos ataques socavan la fiabilidad de la IA, afectando la ciberseguridad, vehículos autónomos y más.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "seguridad LLM",
+      "URL": "/internal/glossary/Indirect-Prompt-Injection/",
+      "Title": "Aprende sobre la inyección indirecta de prompts, una vulnerabilidad de seguridad donde los atacantes incrustan instrucciones maliciosas en contenido externo procesado por LLMs, lo que provoca acciones no deseadas o fuga de datos.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Self-Healing Knowledge",
+      "URL": "/internal/glossary/Self-Healing-Knowledge/",
+      "Title": "Self-Healing Knowledge menggunakan AI, ML, dan otomasi untuk secara mandiri mendeteksi, mendiagnosis, dan memperbaiki konten usang atau salah pada sistem manajemen pengetahuan, memastikan akurasi.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "semantic routing",
+      "URL": "/internal/glossary/Semantic-Routing/",
+      "Title": "Semantic routing directs user queries to specialized agents, prompts, or data sources by evaluating the semantic meaning (intent) using vector similarity.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "sentiment-adaptive tone",
+      "URL": "/internal/glossary/Sentiment-Adaptive-Tone/",
+      "Title": "Explore sentiment-adaptive tone, an AI capability that adjusts communication style based on customer emotion for improved interactions and satisfaction.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "SEO",
+      "URL": "/internal/glossary/Dwell-Time/",
+      "Title": "El dwell time mide la duración que un usuario pasa en una página tras hacer clic desde un SERP antes de regresar. Descubre su impacto en SEO, cómo medirlo y estrategias para mejorar el engagement del usuario.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "serverless computing",
+      "URL": "/internal/glossary/Serverless-Computing/",
+      "Title": "Serverless computing is a cloud execution model where providers manage infrastructure, allowing developers to build and deploy applications without provisioning or scaling servers.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "sesgo en aprendizaje automático",
+      "URL": "/internal/glossary/Bias-Mitigation/",
+      "Title": "La mitigación de sesgos implica técnicas y estrategias para reducir o eliminar la injusticia sistemática en modelos de aprendizaje automático, garantizando resultados éticos y justos en la IA.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "sesgo en IA",
+      "URL": "/internal/glossary/Fairness-Metrics/",
+      "Title": "Las métricas de equidad son herramientas matemáticas y estadísticas utilizadas para cuantificar, evaluar y monitorear el sesgo en sistemas de IA/ML, garantizando un trato equitativo entre grupos.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Shadow AI",
+      "URL": "/internal/glossary/Shadow-AI/",
+      "Title": "Shadow AI refers to the unsanctioned use of generative AI tools by employees, posing significant risks to data security, compliance, and intellectual property.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "sharding",
+      "URL": "/internal/glossary/Sharding/",
+      "Title": "Sharding es un patrón de arquitectura de bases de datos que divide un gran conjunto de datos lógico en piezas más pequeñas e independientes llamadas shards, permitiendo escalado horizontal y mejorando el rendimiento.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "sistem AI",
+      "URL": "/internal/glossary/Red-Teaming/",
+      "Title": "Red Teaming adalah proses adversarial yang mensimulasikan serangan dunia nyata pada sistem AI untuk menemukan kerentanan, bias, dan penyalahgunaan. Esensial untuk keamanan AI, etika, dan kepatuhan.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "sistema de tickets",
+      "URL": "/internal/blog/understanding-ticket-systems-for-customer-support/",
+      "Title": "Guía integral sobre sistemas de tickets de soporte al cliente: desde los conceptos básicos hasta la implementación e integración con IA. Descubra cómo lograr eficiencia operativa y mejorar la satisfacción del cliente.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "sistemas de IA",
+      "URL": "/internal/glossary/Latency-Budget/",
+      "Title": "Explore los presupuestos de latencia, el tiempo máximo permitido para la respuesta de un sistema distribuido entre componentes. Comprenda su importancia en sistemas de IA, tipos, estrategias de gestión y compensaciones.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Sistemas de IA",
+      "URL": "/internal/glossary/False-Positive/",
+      "Title": "Un falso positivo es cuando un sistema de IA (chatbot, herramienta de detección, filtro de privacidad) identifica incorrectamente una situación o contenido como coincidente con un criterio, lo que conduce a errores.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Sleep Node",
+      "URL": "/internal/glossary/Delay---Sleep-Node/",
+      "Title": "A Delay/Sleep Node pauses workflow execution in AI chatbots & automation for a set period or until a condition is met, crucial for API rate limiting & orchestration.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Slot Filling",
+      "URL": "/internal/glossary/Slot-Filling/",
+      "Title": "Slot filling extrae parámetros específicos de las consultas de los usuarios para completar tareas en IA conversacional. Esencial para recopilar datos, permitir interacción natural y asegurar la finalización de tareas.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "software development",
+      "URL": "/internal/glossary/Technical-Debt/",
+      "Title": "Technical debt is the implied cost of future reworking when choosing short-term solutions over robust approaches, leading to increased maintenance, complexity, and remediation costs in software development and AI systems.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "soporte al cliente",
+      "URL": "/internal/blog/understanding-ticket-systems-for-customer-support/",
+      "Title": "Guía integral sobre sistemas de tickets de soporte al cliente: desde los conceptos básicos hasta la implementación e integración con IA. Descubra cómo lograr eficiencia operativa y mejorar la satisfacción del cliente.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "speculative decoding",
+      "URL": "/internal/glossary/Speculative-Decoding/",
+      "Title": "Speculative decoding accelerates LLM inference by using a fast draft model to propose tokens, verified by a larger target model, reducing latency while maintaining output quality.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Spot Instances",
+      "URL": "/internal/glossary/Spot-Instances/",
+      "Title": "Las Spot Instances son recursos de computación en la nube con descuento de AWS, Azure y GCP, ideales para cargas de trabajo tolerantes a fallos como procesamiento por lotes, analítica y entrenamiento de ML.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "SSML",
+      "URL": "/internal/glossary/SSML--Speech-Synthesis-Markup-Language-/",
+      "Title": "SSML es un lenguaje de marcado basado en XML para controlar la salida de voz sintética, incluyendo pronunciación, entonación, ritmo y emoción, utilizado por los principales proveedores de TTS.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "Stack AI",
+      "URL": "/internal/glossary/Stack-AI/",
+      "Title": "Stack AI es una plataforma empresarial de no-code/low-code para construir, probar y desplegar flujos de trabajo y agentes potenciados por IA, centrada en avanzados modelos de lenguaje grande (LLMs).",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "sub-flujo",
+      "URL": "/internal/glossary/Sub-flow---Nested-Flow/",
+      "Title": "Aprenda sobre sub-flujos (flujos anidados) en automatización. Incruste flujos de trabajo dentro de otros para simplificar lógica compleja, mejorar la reutilización y facilitar el mantenimiento.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "suggestion chips",
+      "URL": "/internal/glossary/Suggestion-Chips/",
+      "Title": "Las suggestion chips son elementos interactivos con forma de pastilla en chatbots e interfaces conversacionales, que ofrecen opciones rápidas y contextuales de respuesta y desaparecen tras seleccionarse.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "tarjetas multimedia enriquecidas",
+      "URL": "/internal/glossary/Rich-Media-Cards/",
+      "Title": "Las tarjetas multimedia enriquecidas son componentes interactivos de la interfaz en flujos de chat, que entregan contenido multimedia y elementos accionables como imágenes, videos y botones para conversaciones atractivas.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Tasa de Cumplimiento de Objetivos",
+      "URL": "/internal/glossary/Goal-Completion-Rate--GCR-/",
+      "Title": "La Tasa de Cumplimiento de Objetivos (GCR) mide el porcentaje de usuarios que logran con éxito los objetivos en chatbots de IA y automatización. Descubre su importancia, cómo se calcula y cómo mejorarla.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "tasa de rebote",
+      "URL": "/internal/glossary/Bounce-Rate/",
+      "Title": "Comprenda la tasa de rebote, una métrica clave de analítica web. Aprenda cómo se calcula, su impacto en la participación de los usuarios y el SEO, y estrategias para reducir tasas de rebote altas y mejorar el rendimiento del sitio.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "technical debt",
+      "URL": "/internal/glossary/Technical-Debt/",
+      "Title": "Technical debt is the implied cost of future reworking when choosing short-term solutions over robust approaches, leading to increased maintenance, complexity, and remediation costs in software development and AI systems.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "telemetry",
+      "URL": "/internal/glossary/Telemetry/",
+      "Title": "Telemetry is the automated process of collecting, transmitting, and analyzing data from remote sources for monitoring, analysis, and decision-making. Learn its types, benefits, and implementation.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Text-to-Speech Node",
+      "URL": "/internal/glossary/Text-to-Speech-Node/",
+      "Title": "A Text-to-Speech Node (TTS Node) is a modular building block in conversational AI and automation platforms, converting input text into synthesized audio for voice responses.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "thumbnail optimization",
+      "URL": "/internal/blog/how-to-crack-the-youtube-algorithm-data-driven-insights/",
+      "Title": "Discover the exact strategies top 100 YouTubers use to get millions of views. Based on analysis of 93,421 videos, learn the data-backed secrets of thumbnail design, title optimization, and content structure that drive YouTube success.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Trace",
+      "URL": "/internal/glossary/Debug-Console---Trace/",
+      "Title": "A Debug Console or Trace is a diagnostic interface providing visibility into automation flows, AI chatbots, or API proxy operations, capturing data, errors, and performance.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "traducción en tiempo real cliente",
+      "URL": "/internal/glossary/Real-time-Translation/",
+      "Title": "Sistemas impulsados por IA que traducen instantáneamente contenido de chat, voz o documentos, permitiendo que agentes de soporte y sistemas automatizados se comuniquen con clientes en cualquier idioma, en tiempo real.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Transferencia de Ranuras",
+      "URL": "/internal/glossary/Slot-Carryover/",
+      "Title": "La transferencia de ranuras permite que los chatbots de IA recuerden y reutilicen información estructurada (ranuras) a lo largo de los turnos conversacionales, manteniendo el contexto y mejorando la experiencia del usuario en sistemas de diálogo orientados a tareas.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "transparencia de IA",
+      "URL": "/internal/glossary/Transparency/",
+      "Title": "La transparencia de IA revela el funcionamiento interno, los datos y la lógica de decisión de un sistema de IA. Es esencial para generar confianza, garantizar la rendición de cuentas y cumplir con la normativa.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "try-catch",
+      "URL": "/internal/glossary/Error-Handler---Try-Catch/",
+      "Title": "An error handler, often a Try-Catch block, manages unexpected failures in automation and AI chatbots, preventing crashes and enabling controlled recovery or logging.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "TTS",
+      "URL": "/internal/glossary/Text-to-Speech-Node/",
+      "Title": "A Text-to-Speech Node (TTS Node) is a modular building block in conversational AI and automation platforms, converting input text into synthesized audio for voice responses.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "typing indicators",
+      "URL": "/internal/glossary/Typing-Indicators/",
+      "Title": "Typing indicators are visual cues in chat apps showing when someone is composing a message. They enhance user engagement, reduce uncertainty, and improve real-time communication.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Términos de IA",
+      "URL": "/internal/glossary/",
+      "Title": "Glosario completo de términos de chatbots de IA, automatización y soporte al cliente. Explicaciones claras de conceptos técnicos.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "umbral de confianza NLU",
+      "URL": "/internal/glossary/NLU-Confidence-Threshold/",
+      "Title": "El umbral de confianza NLU es la puntuación mínima de confianza que un motor NLU requiere para activar una intención específica ante una expresión de usuario. Es central en la IA conversacional.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "user interaction",
+      "URL": "/internal/glossary/Engagement-Metrics/",
+      "Title": "Engagement metrics quantify user interaction with digital assets like websites, apps, and social media. They reveal how users click, scroll, share, and convert, guiding optimization.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "utterance",
+      "URL": "/internal/glossary/Utterance/",
+      "Title": "Aprende qué es una utterance en IA conversacional, su rol en NLU/NLP, tipos, flujo de trabajo, desafíos y mejores prácticas para entrenar chatbots de manera efectiva.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "utterance permutation",
+      "URL": "/internal/glossary/Utterance-Permutation/",
+      "Title": "Utterance permutation generates diverse sentence variations to train NLU models for AI chatbots and voice assistants, improving intent recognition and handling real-world language variability.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "VAD",
+      "URL": "/internal/glossary/VAD--Voice-Activity-Detection-/",
+      "Title": "Voice Activity Detection (VAD) es un método de procesamiento de señales que identifica el habla humana en flujos de audio. Esencial para chatbots de IA, ASR y comunicación en tiempo real, VAD mejora la precisión y la experiencia del usuario al distinguir el habla del silencio y el ruido.",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "variables de entorno",
+      "URL": "/internal/glossary/Environment-Variables--Secrets-/",
+      "Title": "Aprenda sobre variables de entorno (secretos) para una configuración segura de aplicaciones. Separe datos sensibles como claves API y contraseñas del código, asegurando seguridad y flexibilidad.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Variables Globales",
+      "URL": "/internal/glossary/Global-Variables/",
+      "Title": "Las variables globales son accesibles desde cualquier nodo en un programa o plataforma de automatización, permitiendo compartir datos entre flujos, funciones y contextos. Descubra su uso en chatbots de IA.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "vector database",
+      "URL": "/internal/glossary/Vector-Database/",
+      "Title": "A vector database is a specialized system for storing, indexing, and querying high-dimensional vector embeddings, enabling efficient similarity search and powering modern AI applications like RAG.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "vector embeddings",
+      "URL": "/internal/glossary/Vector-Database/",
+      "Title": "A vector database is a specialized system for storing, indexing, and querying high-dimensional vector embeddings, enabling efficient similarity search and powering modern AI applications like RAG.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Voice Activity Detection",
+      "URL": "/internal/glossary/VAD--Voice-Activity-Detection-/",
+      "Title": "Voice Activity Detection (VAD) es un método de procesamiento de señales que identifica el habla humana en flujos de audio. Esencial para chatbots de IA, ASR y comunicación en tiempo real, VAD mejora la precisión y la experiencia del usuario al distinguir el habla del silencio y el ruido.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "voicebot",
+      "URL": "/internal/glossary/Voicebot/",
+      "Title": "Få en komplett innføring i voicebots: kjerne­teknologier som ASR, NLP og TTS, hvordan de fungerer, nøkkelfunksjoner, typer, og forretnings­fordeler for kundeservice og automatisering.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Voiceflow",
+      "URL": "/internal/glossary/Voiceflow/",
+      "Title": "Voiceflow es una plataforma sin código para diseñar, construir y desplegar agentes conversacionales de IA como chatbots y asistentes de voz en múltiples canales. Automatice interacciones con clientes y flujos de trabajo.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Weaviate",
+      "URL": "/internal/glossary/Weaviate/",
+      "Title": "Weaviate es una base de datos vectorial open-source y nativa en la nube que almacena objetos y embeddings de alta dimensión. Permite búsqueda semántica, híbrida y aplicaciones de IA/ML a gran escala.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "web analytics",
+      "URL": "/internal/glossary/Click-Map/",
+      "Title": "A click map is a visual analytics tool showing where users click or tap on a web page. It helps web professionals, marketers, and UX specialists optimize site layouts, improve conversions, and understand user interactions.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "web scraping",
+      "URL": "/internal/glossary/Web-Scraper-Node/",
+      "Title": "Un Nodo Web Scraper es un componente modular para flujos de trabajo automatizados, que obtiene y extrae datos de URLs web. Esencial para chatbots de IA, monitoreo de competidores y agregación de datos.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "webhook",
+      "URL": "/internal/glossary/Webhook-Fulfillment/",
+      "Title": "El fulfillment por webhook es el proceso backend que se ejecuta en respuesta a una intención en chatbots de IA o flujos de trabajo automatizados. Recupera o manipula datos vía APIs para respuestas dinámicas y con conocimiento de contexto.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "webhook trigger",
+      "URL": "/internal/glossary/Webhook-Trigger/",
+      "Title": "Un Webhook Trigger permite que servicios externos inicien flujos de trabajo automatizados enviando solicitudes HTTP en tiempo real. Esencial para chatbots de IA, automatización e integración de sistemas.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "webview",
+      "URL": "/internal/glossary/Webview/",
+      "Title": "Descubre Webview, una ventana de navegador embebida que muestra contenido web como formularios, catálogos de productos e interfaces de pago directamente dentro de chatbots y aplicaciones móviles para una experiencia de usuario fluida.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "white labeling",
+      "URL": "/internal/glossary/White-Labeling/",
+      "Title": "El white labeling en chatbots de IA permite a las empresas implementar una plataforma de chatbot totalmente personalizada con su propia marca, eliminando toda referencia al proveedor. Ideal para agencias, SaaS y empresas.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Wizard of Oz Testing",
+      "URL": "/internal/glossary/Wizard-of-Oz-Testing--WoZ-/",
+      "Title": "Wizard of Oz Testing (WoZ) es un método de investigación de usuarios en el que los usuarios interactúan con un sistema controlado por una persona oculta, simulando IA para probar diseños de manera rentable.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Workflow Automation",
+      "URL": "/internal/glossary/Automated-Workflows/",
+      "Title": "Automated workflows are technology-enabled processes that execute tasks, activities, or decisions based on predefined rules, minimizing human intervention and optimizing efficiency.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "WoZ testing",
+      "URL": "/internal/glossary/Wizard-of-Oz-Testing--WoZ-/",
+      "Title": "Wizard of Oz Testing (WoZ) es un método de investigación de usuarios en el que los usuarios interactúan con un sistema controlado por una persona oculta, simulando IA para probar diseños de manera rentable.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "YouTube algorithm",
+      "URL": "/internal/blog/how-to-crack-the-youtube-algorithm-data-driven-insights/",
+      "Title": "Discover the exact strategies top 100 YouTubers use to get millions of views. Based on analysis of 93,421 videos, learn the data-backed secrets of thumbnail design, title optimization, and content structure that drive YouTube success.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Zapier",
+      "URL": "/internal/glossary/Zapier/",
+      "Title": "Explore Zapier, the no-code automation platform connecting 8,000+ apps. Learn about Zaps, AI Agents, use cases, and how to automate workflows efficiently.",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "Zero-Shot Chain of Thought",
+      "URL": "/internal/glossary/Zero-Shot-Chain-of-Thought/",
+      "Title": "Zero-Shot Chain of Thought (CoT) es una técnica de prompt engineering para LLMs que instruye a los modelos a razonar paso a paso sin ejemplos, mejorando la resolución de problemas complejos.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Zero-Touch Resolution",
+      "URL": "/internal/glossary/Zero-Touch-Resolution/",
+      "Title": "Zero-Touch Resolution-ийг судлаарай — энэ бол хүний оролцоогүйгээр, AI, автоматжуулалт болон өөртөө үйлчлэх платформуудыг ашиглан асуудлыг автоматаар шийдвэрлэх арга юм. Үүний давуу тал, сорилтууд болон хэрэгжүүлэх аргачлалыг мэдэж аваарай.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "ética de la IA",
+      "URL": "/internal/glossary/Algorithmic-Accountability/",
+      "Title": "La rendición de cuentas algorítmica garantiza que las organizaciones sean responsables de que sus sistemas de IA operen de manera explicable, rastreable y justificable, incluyendo los resultados y los impactos sobre las personas y la sociedad.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "автоматжуулалт",
+      "URL": "/internal/glossary/Zero-Touch-Resolution/",
+      "Title": "Zero-Touch Resolution-ийг судлаарай — энэ бол хүний оролцоогүйгээр, AI, автоматжуулалт болон өөртөө үйлчлэх платформуудыг ашиглан асуудлыг автоматаар шийдвэрлэх арга юм. Үүний давуу тал, сорилтууд болон хэрэгжүүлэх аргачлалыг мэдэж аваарай.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "チャットボット種類",
+      "URL": "/internal/blog/ai-chatbot-types-guide/",
+      "Title": "AIチャットボットの5つの種類（ルールベース、AI搭載、生成AI、RAG、ハイブリッド）を網羅的に解説。特徴・メリット・デメリット、用途別の選定ポイント、導入時の注意点まで、中小企業でも安心してチャットボットを導入できる知識が身につきます。",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "プライバシーポリシー",
+      "URL": "/privacy-policy/",
+      "Title": "SmartWebサービスにおける個人情報の取り扱いに関するプライバシーポリシー",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "メール返信効率化",
+      "URL": "/internal/blog/email-response-automation-platform/",
+      "Title": "ビジネスメールの返信に過剰な時間を費やしていませんか？科学的アプローチから統合プラットフォームまで、効率的なメール対応を実現する革新的な改善手法を紹介します。",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "中小企業",
+      "URL": "/internal/blog/start-using-ai-today/",
+      "Title": "IT担当者ゼロでもできるAI導入徹底ガイド。チケット管理・AIメール自動応答・AIチャットボットで業務効率化と顧客満足度向上を実現。",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
+      "Keyword": "個人情報保護",
+      "URL": "/privacy-policy/",
+      "Title": "SmartWebサービスにおける個人情報の取り扱いに関するプライバシーポリシー",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "利用規約",
+      "URL": "/ai-chatbot-terms-of-use/",
+      "Title": "SmartWebが提供するAIチャットボットおよびAIカスタマーサポートサービスの利用規約",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "日本語ベンチマーク",
+      "URL": "/internal/blog/ai-evaluation-japanese-benchmarks/",
+      "Title": "自動LLM評価手法から日本独自のベンチマーク、ハルシネーション対策まで――エンタープライズAI導入に必須の知識を包括解説。FlowHuntの事例も紹介。",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "検索拡張生成",
+      "URL": "/internal/blog/introduction-to-rag/",
+      "Title": "RAG（検索拡張生成）の基礎と実用例を解説。従来AIとの違いから利点、現場での活用事例まで詳しく紹介します。",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "統合プラットフォーム",
+      "URL": "/internal/blog/email-response-automation-platform/",
+      "Title": "ビジネスメールの返信に過剰な時間を費やしていませんか？科学的アプローチから統合プラットフォームまで、効率的なメール対応を実現する革新的な改善手法を紹介します。",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "通信",
+      "URL": "/internal/glossary/DTMF--Dual-Tone-Multi-Frequency-/",
+      "Title": "DTMF（デュアルトーン多重周波数）は、電話ネットワークやデジタルプラットフォームで、キー操作時に発生する固有の音声トーンを利用してコマンド解釈、通話のルーティング、自動メニュー操作、リモート制御、セキュアなデータ入力を行う通信信号システムです。",
+      "Exact": false,
+      "Priority": 2
+    }
+  ]
+}

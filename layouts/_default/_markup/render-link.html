@@ -20,6 +20,7 @@
 {{- $rel := "" -}}
 {{- $linkTitle := .Title -}}
 {{- $tooltip := "" -}}
+{{- $isGlossaryLink := false -}}
 
 {{- if $isExternal -}}
   {{- $parsedURL := urls.Parse site.BaseURL -}}
@@ -54,6 +55,9 @@
   {{- $candidate := false -}}
   {{- $parsedLink := urls.Parse $url -}}
   {{- $path := $parsedLink.Path -}}
+  {{- if and $path (strings.Contains $path "/glossary/") -}}
+    {{- $isGlossaryLink = true -}}
+  {{- end -}}
   {{- if $path -}}
     {{- $trimmed := strings.TrimPrefix "/" $path | strings.TrimSuffix "/" -}}
     {{- $tmp := site.GetPage (printf "/%s" $trimmed) -}}
@@ -93,8 +97,10 @@
     {{- end -}}
   {{- end -}}
 
-  {{- with $candidate -}}
-    {{- $tooltip = .Params.description | default "" -}}
+  {{- if not $isGlossaryLink -}}
+    {{- with $candidate -}}
+      {{- $tooltip = .Params.description | default "" -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 

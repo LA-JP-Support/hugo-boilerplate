@@ -117,3 +117,6 @@ copy_error: "कॉपी त्रुटि"
 # Promotional offers
 promo_offer: "सीमित प्रस्ताव"
 promo_offer_in_menu: "-75% OFF"
+
+blog_title: "Blog"
+related_posts: "Related Posts"

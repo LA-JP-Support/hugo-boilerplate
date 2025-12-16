@@ -131,3 +131,6 @@ copy_error: "복사 오류"
 # Promotional offers
 promo_offer: "한정 혜택"
 promo_offer_in_menu: "-75% OFF"
+
+blog_title: "Blog"
+related_posts: "Related Posts"

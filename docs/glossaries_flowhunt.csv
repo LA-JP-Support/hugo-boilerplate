@@ -1,0 +1,949 @@
+flow_input,filename
+"Create an English glossary entry.
+
+TERM: artificial intelligence
+DEFINITION (short): Technology that enables computers to think and make decisions like humans
+CATEGORY: AI Chatbot & Automation
+",artificial-intelligence.md
+"Create an English glossary entry.
+
+TERM: customer support
+DEFINITION (short): Operations that handle customer inquiries and support
+CATEGORY: AI Chatbot & Automation
+",customer-support.md
+"Create an English glossary entry.
+
+TERM: large language models
+DEFINITION (short): AI models trained on massive amounts of text data to understand language usage
+CATEGORY: AI Chatbot & Automation
+",large-language-models.md
+"Create an English glossary entry.
+
+TERM: deep learning
+DEFINITION (short): Advanced learning methods that mimic the human brain's mechanisms
+CATEGORY: AI Chatbot & Automation
+",deep-learning.md
+"Create an English glossary entry.
+
+TERM: natural language processing
+DEFINITION (short): Technology that enables computers to understand and process human language
+CATEGORY: AI Chatbot & Automation
+",Natural-Language-Processing--NLP-.md
+"Create an English glossary entry.
+
+TERM: scenarios
+DEFINITION (short): Pre-prepared conversation flows
+CATEGORY: AI Chatbot & Automation
+",scenarios.md
+"Create an English glossary entry.
+
+TERM: FAQs
+DEFINITION (short): Frequently asked questions and their answers compiled together
+CATEGORY: AI Chatbot & Automation
+",FAQs.md
+"Create an English glossary entry.
+
+TERM: finite state machines
+DEFINITION (short): Simple mechanisms that operate with defined states and transition rules
+CATEGORY: AI Chatbot & Automation
+",finite-state-machines.md
+"Create an English glossary entry.
+
+TERM: machine learning
+DEFINITION (short): Technology that learns by finding patterns in data
+CATEGORY: AI Chatbot & Automation
+",machine-learning.md
+"Create an English glossary entry.
+
+TERM: neural networks
+DEFINITION (short): Learning models that mimic the neural circuits of the human brain
+CATEGORY: AI Chatbot & Automation
+",neural-networks.md
+"Create an English glossary entry.
+
+TERM: hallucination
+DEFINITION (short): Phenomenon where AI generates plausible but incorrect information
+CATEGORY: AI Chatbot & Automation
+",hallucination.md
+"Create an English glossary entry.
+
+TERM: RAG
+DEFINITION (short): Abbreviation for Retrieval-Augmented Generation. Technology that searches external data and uses that information to generate responses
+CATEGORY: AI Chatbot & Automation
+",RAG.md
+"Create an English glossary entry.
+
+TERM: FlowHunt
+DEFINITION (short): Chatbot building platform that can utilize multiple AI models
+CATEGORY: AI Chatbot & Automation
+",FlowHunt.md
+"Create an English glossary entry.
+
+TERM: Multi-channel support
+DEFINITION (short): Unified management of multiple channels like Web, LINE, and email
+CATEGORY: AI Chatbot & Automation
+",Multi-channel-support.md
+"Create an English glossary entry.
+
+TERM: API integration
+DEFINITION (short): Mechanism for connecting different systems to automatically exchange data
+CATEGORY: AI Chatbot & Automation
+",API-integration.md
+"Create an English glossary entry.
+
+TERM: supervised learning
+DEFINITION (short): Method of training AI using data with correct answers
+CATEGORY: AI Chatbot & Automation
+",supervised-learning.md
+"Create an English glossary entry.
+
+TERM: unsupervised learning
+DEFINITION (short): Learning method where AI finds patterns on its own without being given correct answers
+CATEGORY: AI Chatbot & Automation
+",unsupervised-learning.md
+"Create an English glossary entry.
+
+TERM: reinforcement learning
+DEFINITION (short): Learning method that learns through trial and error, receiving rewards for good results
+CATEGORY: AI Chatbot & Automation
+",reinforcement-learning.md
+"Create an English glossary entry.
+
+TERM: continuous learning
+DEFINITION (short): Mechanism that continues to learn new information during operation
+CATEGORY: AI Chatbot & Automation
+",continuous-learning.md
+"Create an English glossary entry.
+
+TERM: LiveAgent
+DEFINITION (short): Tool for unified management of customer inquiries
+CATEGORY: AI Chatbot & Automation
+",LiveAgent.md
+"Create an English glossary entry.
+
+TERM: TCO
+DEFINITION (short): Abbreviation for Total Cost of Ownership. Total cost including implementation through operation
+CATEGORY: AI Chatbot & Automation
+",TCO.md
+"Create an English glossary entry.
+
+TERM: Personal Information Protection Law
+DEFINITION (short): Law defining proper handling of personal information
+CATEGORY: AI Chatbot & Automation
+",Personal-Information-Protection-Law.md
+"Create an English glossary entry.
+
+TERM: GDPR
+DEFINITION (short): EU's strict personal information protection regulations
+CATEGORY: AI Chatbot & Automation
+",GDPR.md
+"Create an English glossary entry.
+
+TERM: speech recognition
+DEFINITION (short): Technology that converts spoken words to text
+CATEGORY: AI Chatbot & Automation
+",speech-recognition.md
+"Create an English glossary entry.
+
+TERM: image analysis
+DEFINITION (short): Technology where AI understands photo and image content
+CATEGORY: AI Chatbot & Automation
+",image-analysis.md
+"Create an English glossary entry.
+
+TERM: multimodal technology
+DEFINITION (short): Technology that can simultaneously process multiple formats like text, voice, and images
+CATEGORY: AI Chatbot & Automation
+",multimodal-technology.md
+"Create an English glossary entry.
+
+TERM: bias
+DEFINITION (short): Specific biases or preconceptions
+CATEGORY: AI Chatbot & Automation
+",bias.md
+"Create an English glossary entry.
+
+TERM: Natural Language Processing (NLP)
+DEFINITION (short): Technology that enables AI to understand and respond to human language
+CATEGORY: AI Chatbot & Automation
+",Natural-Language-Processing--NLP-.md
+"Create an English glossary entry.
+
+TERM: Cloud AI
+DEFINITION (short): AI services available via the internet
+CATEGORY: AI Chatbot & Automation
+",Cloud-AI.md
+"Create an English glossary entry.
+
+TERM: Generative AI
+DEFINITION (short): AI technology that automatically generates text and images
+CATEGORY: AI Chatbot & Automation
+",Generative-AI.md
+"Create an English glossary entry.
+
+TERM: Multimodal AI
+DEFINITION (short): AI capable of handling multiple formats including text, voice, and images
+CATEGORY: AI Chatbot & Automation
+",Multimodal-AI.md
+"Create an English glossary entry.
+
+TERM: Customer Experience (CX)
+DEFINITION (short): Abbreviation for Customer Experience, the overall experience customers have with a company
+CATEGORY: AI Chatbot & Automation
+",Customer-Experience---CX-.md
+"Create an English glossary entry.
+
+TERM: CAGR
+DEFINITION (short): Compound Annual Growth Rate, an indicator of annual growth
+CATEGORY: AI Chatbot & Automation
+",CAGR.md
+"Create an English glossary entry.
+
+TERM: Autonomous AI Agents
+DEFINITION (short): AI capable of autonomous decision-making and action
+CATEGORY: AI Chatbot & Automation
+",Autonomous-AI-Agents.md
+"Create an English glossary entry.
+
+TERM: Rule-based
+DEFINITION (short): Systems operating according to predetermined rules
+CATEGORY: AI Chatbot & Automation
+",Rule-based.md
+"Create an English glossary entry.
+
+TERM: Einstein Service Agent
+DEFINITION (short): Fully autonomous AI agent capable of understanding and acting on a wide range of service issues without pre-programming
+CATEGORY: AI Chatbot & Automation
+",Einstein-Service-Agent.md
+"Create an English glossary entry.
+
+TERM: Contact Lens for Amazon Connect
+DEFINITION (short): Machine learning-powered call analysis service
+CATEGORY: AI Chatbot & Automation
+",Contact-Lens-for-Amazon-Connect.md
+"Create an English glossary entry.
+
+TERM: Cart Abandonment Rate
+DEFINITION (short): Percentage of customers who add items to cart but leave without purchasing
+CATEGORY: AI Chatbot & Automation
+",Cart-Abandonment-Rate.md
+"Create an English glossary entry.
+
+TERM: ROI
+DEFINITION (short): Return on Investment - indicator of profit gained relative to investment
+CATEGORY: AI Chatbot & Automation
+",ROI.md
+"Create an English glossary entry.
+
+TERM: CRM
+DEFINITION (short): Customer Relationship Management system
+CATEGORY: AI Chatbot & Automation
+",CRM.md
+"Create an English glossary entry.
+
+TERM: Personalization
+DEFINITION (short): Adjusting services to individual preferences and situations
+CATEGORY: AI Chatbot & Automation
+",Personalization.md
+"Create an English glossary entry.
+
+TERM: LTV (Lifetime Value)
+DEFINITION (short): Total profit a single customer brings to a company
+CATEGORY: AI Chatbot & Automation
+",LTV---Lifetime-Value-.md
+"Create an English glossary entry.
+
+TERM: Hybrid System
+DEFINITION (short): System where AI and humans collaborate through role division
+CATEGORY: AI Chatbot & Automation
+",Hybrid-System.md
+"Create an English glossary entry.
+
+TERM: Customer Loyalty Scores
+DEFINITION (short): Indicator measuring customer attachment to a company or brand
+CATEGORY: AI Chatbot & Automation
+",Customer-Loyalty-Scores.md
+"Create an English glossary entry.
+
+TERM: data encryption
+DEFINITION (short): Converting information into unreadable form to protect it from third parties
+CATEGORY: AI Chatbot & Automation
+",data-encryption.md
+"Create an English glossary entry.
+
+TERM: contextual understanding
+DEFINITION (short): Understanding conversation flow and context
+CATEGORY: AI Chatbot & Automation
+",contextual-understanding.md
+"Create an English glossary entry.
+
+TERM: honorific language support
+DEFINITION (short): Appropriate use of Japanese polite expressions
+CATEGORY: AI Chatbot & Automation
+",honorific-language-support.md
+"Create an English glossary entry.
+
+TERM: knowledge base
+DEFINITION (short): A database that systematically compiles knowledge such as frequently asked questions and product information
+CATEGORY: AI Chatbot & Automation
+",knowledge-base.md
+"Create an English glossary entry.
+
+TERM: URL Retriever
+DEFINITION (short): A function that automatically acquires website information and updates it periodically
+CATEGORY: AI Chatbot & Automation
+",URL-Retriever.md
+"Create an English glossary entry.
+
+TERM: first contact resolution
+DEFINITION (short): The percentage of customer inquiries resolved on first contact. Higher percentages indicate higher customer satisfaction
+CATEGORY: AI Chatbot & Automation
+",first-contact-resolution.md
+"Create an English glossary entry.
+
+TERM: tickets
+DEFINITION (short): A unit for managing customer inquiries as individual cases. Can record progress status and response history
+CATEGORY: AI Chatbot & Automation
+",tickets.md
+"Create an English glossary entry.
+
+TERM: LLM as Judge
+DEFINITION (short): A novel technique where AI systems evaluate the responses of other AI systems
+CATEGORY: AI Chatbot & Automation
+",LLM-as-Judge.md
+"Create an English glossary entry.
+
+TERM: unsupervised consistency evaluation
+DEFINITION (short): An evaluation method that measures reliability by assessing the consistency of multiple AI responses without requiring correct answers
+CATEGORY: AI Chatbot & Automation
+",unsupervised-consistency-evaluation.md
+"Create an English glossary entry.
+
+TERM: oracle feedback (ground-truth labels)
+DEFINITION (short): Pre-determined correct answers or gold standard labels provided by humans
+CATEGORY: AI Chatbot & Automation
+",oracle-feedback---ground-truth-labels-.md
+"Create an English glossary entry.
+
+TERM: CAI ratio
+DEFINITION (short): An evaluation metric in the research phase that analyzes the consistency and inconsistency between student models and LLM outputs, abbreviating Consistent and Inconsistent Ratio
+CATEGORY: AI Chatbot & Automation
+",CAI-ratio.md
+"Create an English glossary entry.
+
+TERM: student models
+DEFINITION (short): A supplementary AI model used for comparison with the main evaluation target model
+CATEGORY: AI Chatbot & Automation
+",student-models.md
+"Create an English glossary entry.
+
+TERM: supplementary indicator
+DEFINITION (short): Additional judgment material that complements the primary evaluation metric
+CATEGORY: AI Chatbot & Automation
+",supplementary-indicator.md
+"Create an English glossary entry.
+
+TERM: Hallucination phenomena
+DEFINITION (short): The phenomenon where AI generates non-existent information or incorrect content in a plausible manner
+CATEGORY: AI Chatbot & Automation
+",Hallucination-phenomena.md
+"Create an English glossary entry.
+
+TERM: RAG benchmarks
+DEFINITION (short): Evaluation criteria for AI systems that search external knowledge to generate responses
+CATEGORY: AI Chatbot & Automation
+",RAG-benchmarks.md
+"Create an English glossary entry.
+
+TERM: Fact-Score
+DEFINITION (short): An evaluation metric that automatically scores the factuality of AI-generated text
+CATEGORY: AI Chatbot & Automation
+",Fact-Score.md
+"Create an English glossary entry.
+
+TERM: MHaluBench
+DEFINITION (short): A hallucination detection benchmark for multimodal AI combining images and text
+CATEGORY: AI Chatbot & Automation
+",MHaluBench.md
+"Create an English glossary entry.
+
+TERM: prompts
+DEFINITION (short): Instruction text or questions given to AI
+CATEGORY: AI Chatbot & Automation
+",prompts.md
+"Create an English glossary entry.
+
+TERM: Zero-shot
+DEFINITION (short): Directly asking questions without examples
+CATEGORY: AI Chatbot & Automation
+",Zero-shot.md
+"Create an English glossary entry.
+
+TERM: Few-shot
+DEFINITION (short): Asking questions after showing several examples
+CATEGORY: AI Chatbot & Automation
+",Few-shot.md
+"Create an English glossary entry.
+
+TERM: Chain-of-Thought
+DEFINITION (short): Asking questions while gradually showing the thinking process
+CATEGORY: AI Chatbot & Automation
+",Chain-of-Thought.md
+"Create an English glossary entry.
+
+TERM: Precision
+DEFINITION (short): Accuracy rate
+CATEGORY: AI Chatbot & Automation
+",Precision.md
+"Create an English glossary entry.
+
+TERM: F1 score
+DEFINITION (short): Harmonic mean of precision and recall
+CATEGORY: AI Chatbot & Automation
+",F1-score.md
+"Create an English glossary entry.
+
+TERM: BLEU/ROUGE scores
+DEFINITION (short): Metrics measuring similarity between generated and reference text
+CATEGORY: AI Chatbot & Automation
+",BLEU---ROUGE-scores.md
+"Create an English glossary entry.
+
+TERM: Consistency evaluation
+DEFINITION (short): Evaluation of whether the same input produces consistent outputs
+CATEGORY: AI Chatbot & Automation
+",Consistency-evaluation.md
+"Create an English glossary entry.
+
+TERM: Reproducibility validation
+DEFINITION (short): Verification that results remain consistent across different environments
+CATEGORY: AI Chatbot & Automation
+",Reproducibility-validation.md
+"Create an English glossary entry.
+
+TERM: Chain-of-Thought prompts
+DEFINITION (short): A technique that improves reasoning accuracy by prompting AI to show step-by-step thinking
+CATEGORY: AI Chatbot & Automation
+",Chain-of-Thought-prompts.md
+"Create an English glossary entry.
+
+TERM: structured prompts
+DEFINITION (short): Prompt design that organizes information according to fixed formats
+CATEGORY: AI Chatbot & Automation
+",structured-prompts.md
+"Create an English glossary entry.
+
+TERM: JamC-QA
+DEFINITION (short): Abbreviation for Japanese Multiple Choice QA, an evaluation test assessing knowledge of Japanese culture and customs
+CATEGORY: AI Chatbot & Automation
+",JamC-QA.md
+"Create an English glossary entry.
+
+TERM: accuracy measurement
+DEFINITION (short): Calculation of accuracy rate
+CATEGORY: AI Chatbot & Automation
+",accuracy-measurement.md
+"Create an English glossary entry.
+
+TERM: hallucination mitigation strategies
+DEFINITION (short): Technology to prevent AI from generating incorrect information
+CATEGORY: AI Chatbot & Automation
+",hallucination-mitigation-strategies.md
+"Create an English glossary entry.
+
+TERM: OpenAI
+DEFINITION (short): AI company that developed ChatGPT and GPT-5
+CATEGORY: AI Chatbot & Automation
+",OpenAI.md
+"Create an English glossary entry.
+
+TERM: Google
+DEFINITION (short): AI company that developed advanced AI including Gemini 2.5 Pro
+CATEGORY: AI Chatbot & Automation
+",Google.md
+"Create an English glossary entry.
+
+TERM: Anthropic
+DEFINITION (short): AI company that developed Claude AI
+CATEGORY: AI Chatbot & Automation
+",Anthropic.md
+"Create an English glossary entry.
+
+TERM: hallucination problem
+DEFINITION (short): The phenomenon where AI generates non-existent information in a plausible manner
+CATEGORY: AI Chatbot & Automation
+",hallucination-problem.md
+"Create an English glossary entry.
+
+TERM: RAG technology
+DEFINITION (short): Technology that generates responses by referencing external knowledge bases
+CATEGORY: AI Chatbot & Automation
+",RAG-technology.md
+"Create an English glossary entry.
+
+TERM: Unsupervised consistency metrics
+DEFINITION (short): A method measuring reliability from the consistency of AI responses without ground-truth data
+CATEGORY: AI Chatbot & Automation
+",Unsupervised-consistency-metrics.md
+"Create an English glossary entry.
+
+TERM: hallucination detection
+DEFINITION (short): Technology that automatically detects incorrect information generated by AI
+CATEGORY: AI Chatbot & Automation
+",hallucination-detection.md
+"Create an English glossary entry.
+
+TERM: culture-specific benchmarks
+DEFINITION (short): Evaluation tests specialized in the knowledge of specific cultures or regions
+CATEGORY: AI Chatbot & Automation
+",culture-specific-benchmarks.md
+"Create an English glossary entry.
+
+TERM: platform
+DEFINITION (short): Social media services such as Facebook, Twitter, and Instagram
+CATEGORY: AI Chatbot & Automation
+",platform.md
+"Create an English glossary entry.
+
+TERM: Centralized social media management
+DEFINITION (short): Managing messages, comments, and response history from multiple social media platforms in a single system
+CATEGORY: AI Chatbot & Automation
+",Centralized-social-media-management.md
+"Create an English glossary entry.
+
+TERM: digitalization
+DEFINITION (short): Using computers and the internet to make work and life more convenient
+CATEGORY: AI Chatbot & Automation
+",digitalization.md
+"Create an English glossary entry.
+
+TERM: APIs
+DEFINITION (short): A mechanism that allows different software systems to automatically exchange information
+CATEGORY: AI Chatbot & Automation
+",APIs.md
+"Create an English glossary entry.
+
+TERM: rules engine
+DEFINITION (short): A system that automatically makes decisions and processes based on predetermined conditions
+CATEGORY: AI Chatbot & Automation
+",rules-engine.md
+"Create an English glossary entry.
+
+TERM: dashboard
+DEFINITION (short): A management interface that displays multiple pieces of information consolidated on a single screen
+CATEGORY: AI Chatbot & Automation
+",dashboard.md
+"Create an English glossary entry.
+
+TERM: network environment
+DEFINITION (short): Internet connection environment
+CATEGORY: AI Chatbot & Automation
+",network-environment.md
+"Create an English glossary entry.
+
+TERM: security policies
+DEFINITION (short): Internal rules regarding information security
+CATEGORY: AI Chatbot & Automation
+",security-policies.md
+"Create an English glossary entry.
+
+TERM: user roles
+DEFINITION (short): Roles and permissions such as administrator, staff member, viewer, etc.
+CATEGORY: AI Chatbot & Automation
+",user-roles.md
+"Create an English glossary entry.
+
+TERM: Integration
+DEFINITION (short): Integrating and connecting different systems
+CATEGORY: AI Chatbot & Automation
+",Integration.md
+"Create an English glossary entry.
+
+TERM: API keys
+DEFINITION (short): Authentication information required to connect different systems
+CATEGORY: AI Chatbot & Automation
+",API-keys.md
+"Create an English glossary entry.
+
+TERM: visualization
+DEFINITION (short): Making information and situations easily visible and understandable
+CATEGORY: AI Chatbot & Automation
+",visualization.md
+"Create an English glossary entry.
+
+TERM: monitoring
+DEFINITION (short): Continuously monitoring system and business conditions
+CATEGORY: AI Chatbot & Automation
+",monitoring.md
+"Create an English glossary entry.
+
+TERM: workflows
+DEFINITION (short): A system that defines business processes and approval procedures
+CATEGORY: AI Chatbot & Automation
+",workflows.md
+"Create an English glossary entry.
+
+TERM: cost-performance
+DEFINITION (short): Cost-performance ratio
+CATEGORY: AI Chatbot & Automation
+",cost-performance.md
+"Create an English glossary entry.
+
+TERM: AI
+DEFINITION (short): Artificial Intelligence
+CATEGORY: AI Chatbot & Automation
+",AI.md
+"Create an English glossary entry.
+
+TERM: AI agents
+DEFINITION (short): AI programs that automatically perform specific tasks
+CATEGORY: AI Chatbot & Automation
+",AI-agents.md
+"Create an English glossary entry.
+
+TERM: AI chatbots
+DEFINITION (short): Automated response systems utilizing artificial intelligence
+CATEGORY: AI Chatbot & Automation
+",AI-chatbots.md
+"Create an English glossary entry.
+
+TERM: Pareto's Law
+DEFINITION (short): An empirical rule stating that 80% of overall results come from 20% of overall causes. In email handling, approximately 80% of all inquiries tend to concentrate on specific 20% of themes
+CATEGORY: AI Chatbot & Automation
+",Pareto's-Law.md
+"Create an English glossary entry.
+
+TERM: cognitive load
+DEFINITION (short): The mental burden placed on the brain during work. Refers to the amount of attention and memory required when processing information
+CATEGORY: AI Chatbot & Automation
+",cognitive-load.md
+"Create an English glossary entry.
+
+TERM: multitasking
+DEFINITION (short): Performing multiple tasks simultaneously. Research shows this reduces work efficiency; email handling is more efficient when processed one at a time with concentration
+CATEGORY: AI Chatbot & Automation
+",multitasking.md
+"Create an English glossary entry.
+
+TERM: bottlenecks
+DEFINITION (short): Points in business processes that take the most time or impose the greatest burden. Improving these points significantly enhances overall efficiency
+CATEGORY: AI Chatbot & Automation
+",bottlenecks.md
+"Create an English glossary entry.
+
+TERM: circadian rhythm
+DEFINITION (short): Physiological phenomena that fluctuate on approximately 24-hour cycles. Includes body temperature, hormone secretion, and sleep-wake cycles. The 2-3 hours after waking are considered cognitive function peaks
+CATEGORY: AI Chatbot & Automation
+",circadian-rhythm.md
+"Create an English glossary entry.
+
+TERM: ticket management
+DEFINITION (short): A system that manages customer inquiries and requests individually as 'tickets,' tracking response status and history
+CATEGORY: AI Chatbot & Automation
+",ticket-management.md
+"Create an English glossary entry.
+
+TERM: ticket system
+DEFINITION (short): A system that manages customer inquiries and requests individually as 'tickets,' tracking response status and history
+CATEGORY: AI Chatbot & Automation
+",ticket-system.md
+"Create an English glossary entry.
+
+TERM: Support Portal
+DEFINITION (short): A website or system that aggregates information like FAQs, manuals, and guides so customers can solve problems themselves
+CATEGORY: AI Chatbot & Automation
+",Support-Portal.md
+"Create an English glossary entry.
+
+TERM: Return on Investment
+DEFINITION (short): A metric that measures how much benefit or profit is gained relative to the amount invested
+CATEGORY: AI Chatbot & Automation
+",Return-on-Investment.md
+"Create an English glossary entry.
+
+TERM: RAG (Retrieval-Augmented Generation)
+DEFINITION (short): AI technology that searches for and incorporates external information to generate responses based on it
+CATEGORY: AI Chatbot & Automation
+",RAG---Retrieval-Augmented-Generation-.md
+"Create an English glossary entry.
+
+TERM: computational resources
+DEFINITION (short): Computer processing power, memory, and other resources
+CATEGORY: AI Chatbot & Automation
+",computational-resources.md
+"Create an English glossary entry.
+
+TERM: knowledge graphs
+DEFINITION (short): Data structure representing relationships between information as graphs
+CATEGORY: AI Chatbot & Automation
+",knowledge-graphs.md
+"Create an English glossary entry.
+
+TERM: tacit knowledge
+DEFINITION (short): Knowledge and skills acquired through experience that are difficult to explain in words
+CATEGORY: AI Chatbot & Automation
+",tacit-knowledge.md
+"Create an English glossary entry.
+
+TERM: explicit knowledge
+DEFINITION (short): Knowledge recorded in visible forms such as documents and manuals
+CATEGORY: AI Chatbot & Automation
+",explicit-knowledge.md
+"Create an English glossary entry.
+
+TERM: FAQ
+DEFINITION (short): Frequently Asked Questions - a collection of common questions and their answers
+CATEGORY: AI Chatbot & Automation
+",FAQ.md
+"Create an English glossary entry.
+
+TERM: natural language search
+DEFINITION (short): A feature that allows searching using natural language. Users can search with natural sentences like 'What should I do when I forget my password?'
+CATEGORY: AI Chatbot & Automation
+",natural-language-search.md
+"Create an English glossary entry.
+
+TERM: AI (Artificial Intelligence)
+DEFINITION (short): Technology that enables computers to make human-like judgments and learning. Can automatically find optimal answers
+CATEGORY: AI Chatbot & Automation
+",AI---Artificial-Intelligence-.md
+"Create an English glossary entry.
+
+TERM: Chatbot
+DEFINITION (short): A program that automatically answers customer questions. Available 24/7 and can respond to simple questions like humans
+CATEGORY: AI Chatbot & Automation
+",Chatbot.md
+"Create an English glossary entry.
+
+TERM: Workflow
+DEFINITION (short): Defined business processes and procedures. Rules that determine who does what and when
+CATEGORY: AI Chatbot & Automation
+",Workflow.md
+"Create an English glossary entry.
+
+TERM: KCS
+DEFINITION (short): A system that immediately registers knowledge gained in the field into a database for organization-wide sharing. A knowledge-centered service operation method
+CATEGORY: AI Chatbot & Automation
+",KCS.md
+"Create an English glossary entry.
+
+TERM: KCS (Knowledge-Centered Service)
+DEFINITION (short): A system that immediately registers knowledge gained in the field into a database for organization-wide sharing. A knowledge-centered service operation method
+CATEGORY: AI Chatbot & Automation
+",KCS---Knowledge-Centered-Service-.md
+"Create an English glossary entry.
+
+TERM: access control
+DEFINITION (short): A system that restricts who can use the system and what functions they can access. Security features
+CATEGORY: AI Chatbot & Automation
+",access-control.md
+"Create an English glossary entry.
+
+TERM: self-service
+DEFINITION (short): Services that help customers solve problems independently. Provides FAQs and operation guides
+CATEGORY: AI Chatbot & Automation
+",self-service.md
+"Create an English glossary entry.
+
+TERM: data science
+DEFINITION (short): Technology that analyzes large amounts of data to discover useful information and trends
+CATEGORY: AI Chatbot & Automation
+",data-science.md
+"Create an English glossary entry.
+
+TERM: UX
+DEFINITION (short): User experience and satisfaction when using systems
+CATEGORY: AI Chatbot & Automation
+",UX.md
+"Create an English glossary entry.
+
+TERM: user interfaces (UI)
+DEFINITION (short): The screens and operation methods users interact with in systems. Directly impacts usability
+CATEGORY: AI Chatbot & Automation
+",user-interfaces---UI-.md
+"Create an English glossary entry.
+
+TERM: AI implementation
+DEFINITION (short): Incorporating artificial intelligence into business operations
+CATEGORY: AI Chatbot & Automation
+",AI-implementation.md
+"Create an English glossary entry.
+
+TERM: digital transformation
+DEFINITION (short): Transforming business processes and business models using IT and digital technologies
+CATEGORY: AI Chatbot & Automation
+",digital-transformation.md
+"Create an English glossary entry.
+
+TERM: AI email auto-response generation
+DEFINITION (short): A feature where AI understands inquiry content and automatically creates response drafts
+CATEGORY: AI Chatbot & Automation
+",AI-email-auto-response-generation.md
+"Create an English glossary entry.
+
+TERM: ticket systems
+DEFINITION (short): A system that centrally manages inquiries and visualizes response status
+CATEGORY: AI Chatbot & Automation
+",ticket-systems.md
+"Create an English glossary entry.
+
+TERM: automation platform
+DEFINITION (short): A system platform that automatically coordinates and executes multiple business processes
+CATEGORY: AI Chatbot & Automation
+",automation-platform.md
+"Create an English glossary entry.
+
+TERM: cloud-based
+DEFINITION (short): A service format accessed via the internet, independent of specific locations or devices
+CATEGORY: AI Chatbot & Automation
+",cloud-based.md
+"Create an English glossary entry.
+
+TERM: automation rules
+DEFINITION (short): Settings that automatically execute processes based on specific conditions
+CATEGORY: AI Chatbot & Automation
+",automation-rules.md
+"Create an English glossary entry.
+
+TERM: spam filtering
+DEFINITION (short): A feature that automatically identifies and appropriately classifies unwanted emails
+CATEGORY: AI Chatbot & Automation
+",spam-filtering.md
+"Create an English glossary entry.
+
+TERM: knowledge bases
+DEFINITION (short): A database that systematically compiles knowledge and information within a company
+CATEGORY: AI Chatbot & Automation
+",knowledge-bases.md
+"Create an English glossary entry.
+
+TERM: note
+DEFINITION (short): Internal memo displayed for staff within the ticket system
+CATEGORY: AI Chatbot & Automation
+",note.md
+"Create an English glossary entry.
+
+TERM: AI answer assistant
+DEFINITION (short): An AI feature that supports text refinement and adding explanations for technical terms
+CATEGORY: AI Chatbot & Automation
+",AI-answer-assistant.md
+"Create an English glossary entry.
+
+TERM: AI chatbot
+DEFINITION (short): A system where AI automatically answers customer questions
+CATEGORY: AI Chatbot & Automation
+",AI-chatbot.md
+"Create an English glossary entry.
+
+TERM: cloud service
+DEFINITION (short): A service format for software and systems available via the internet
+CATEGORY: AI Chatbot & Automation
+",cloud-service.md
+"Create an English glossary entry.
+
+TERM: ITIL, the Best Practice in IT Operations Management
+DEFINITION (short): A global standard methodology for efficiently managing computer systems. A proven method adopted by many companies
+CATEGORY: AI Chatbot & Automation
+",ITIL--the-Best-Practice-in-IT-Operations-Management.md
+"Create an English glossary entry.
+
+TERM: ITIL (IT Infrastructure Library)
+DEFINITION (short): A global standard methodology for efficiently managing computer systems. A proven method adopted by many companies
+CATEGORY: AI Chatbot & Automation
+",ITIL---IT-Infrastructure-Library-.md
+"Create an English glossary entry.
+
+TERM: incidents
+DEFINITION (short): The process of managing inquiries related to service interruptions or troubles
+CATEGORY: AI Chatbot & Automation
+",incidents.md
+"Create an English glossary entry.
+
+TERM: escalation
+DEFINITION (short): The process of escalating difficult cases to senior staff or specialized teams
+CATEGORY: AI Chatbot & Automation
+",escalation.md
+"Create an English glossary entry.
+
+TERM: ITIL
+DEFINITION (short): A global standard methodology for efficiently managing computer systems
+CATEGORY: AI Chatbot & Automation
+",ITIL.md
+"Create an English glossary entry.
+
+TERM: ITSM
+DEFINITION (short): Methodologies and concepts for IT service management
+CATEGORY: AI Chatbot & Automation
+",ITSM.md
+"Create an English glossary entry.
+
+TERM: Customer Satisfaction (CSAT)
+DEFINITION (short): A metric that quantifies customer satisfaction. Measures how satisfied customers are with a service
+CATEGORY: AI Chatbot & Automation
+",Customer-Satisfaction---CSAT-.md
+"Create an English glossary entry.
+
+TERM: Customer Satisfaction (CSAT: Customer Satisfaction Score)
+DEFINITION (short): A metric that quantifies customer satisfaction. Measures how satisfied customers are with a service
+CATEGORY: AI Chatbot & Automation
+",Customer-Satisfaction---CSAT--Customer-Satisfaction-Score-.md
+"Create an English glossary entry.
+
+TERM: NPS (Net Promoter Score)
+DEFINITION (short): A metric indicating how likely customers are to recommend a service to others
+CATEGORY: AI Chatbot & Automation
+",NPS---Net-Promoter-Score-.md
+"Create an English glossary entry.
+
+TERM: KPIs (Key Performance Indicators)
+DEFINITION (short): Important numerical indicators for measuring business performance, such as response time, resolution rate, and customer satisfaction
+CATEGORY: AI Chatbot & Automation
+",KPIs---Key-Performance-Indicators-.md
+"Create an English glossary entry.
+
+TERM: dashboards
+DEFINITION (short): A feature that displays important numbers and data on a single screen, providing at-a-glance visibility of business conditions
+CATEGORY: AI Chatbot & Automation
+",dashboards.md
+"Create an English glossary entry.
+
+TERM: UI
+DEFINITION (short): The screens and operation methods users interact with. Directly impacts usability
+CATEGORY: AI Chatbot & Automation
+",UI.md
+"Create an English glossary entry.
+
+TERM: auto-routing functions
+DEFINITION (short): A feature that analyzes inquiry content and automatically distributes to optimal agents
+CATEGORY: AI Chatbot & Automation
+",auto-routing-functions.md
+"Create an English glossary entry.
+
+TERM: Requirements Definition
+DEFINITION (short): The process of specifically defining required features and conditions for a system. Essential preparatory work before creating blueprints
+CATEGORY: AI Chatbot & Automation
+",Requirements-Definition.md
+"Create an English glossary entry.
+
+TERM: security requirements
+DEFINITION (short): Necessary conditions and measures to maintain system security
+CATEGORY: AI Chatbot & Automation
+",security-requirements.md
+"Create an English glossary entry.
+
+TERM: AI Reporting
+DEFINITION (short): A feature where AI automatically analyzes data and creates reports. Provides detailed analysis results without manual effort
+CATEGORY: AI Chatbot & Automation
+",AI-Reporting.md
+"Create an English glossary entry.
+
+TERM: natural language processing technology
+DEFINITION (short): Technology that enables computers to understand human language and respond appropriately
+CATEGORY: AI Chatbot & Automation
+",natural-language-processing-technology.md
+"Create an English glossary entry.
+
+TERM: hybrid support
+DEFINITION (short): A model where AI and humans collaborate on customer support, leveraging each other's strengths
+CATEGORY: AI Chatbot & Automation
+",hybrid-support.md

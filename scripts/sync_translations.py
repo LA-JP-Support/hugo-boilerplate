@@ -134,20 +134,33 @@ if __name__ == "__main__":
     
     # Get the i18n directory path
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    hugo_root = os.path.abspath(os.path.join(script_dir, '../../../'))
     theme_root = os.path.abspath(os.path.join(script_dir, '../'))
-    i18n_dir = os.path.join(hugo_root, 'i18n')
-    
-    
-    if not os.path.exists(i18n_dir):
-        print(f"Error: i18n directory not found at {i18n_dir}")
-        sys.exit(1)
-    else:
-        sync_translations(i18n_dir, args.test)
+    theme_root_path = Path(theme_root)
+    script_dir_path = Path(script_dir)
 
-    i18n_dir = os.path.join(theme_root, 'i18n')
-    if not os.path.exists(i18n_dir):
-        print(f"Error: i18n directory not found at {i18n_dir}")
-        sys.exit(1)
+    if any((theme_root_path / f).exists() for f in ("hugo.toml", "config.toml", "config.yaml", "config.yml", "config.json")):
+        hugo_root = str(theme_root_path)
     else:
-        sync_translations(i18n_dir, args.test)
+        hugo_root = str(script_dir_path.parents[2])
+
+    candidate_i18n_dirs = []
+    candidate_i18n_dirs.append(os.path.join(hugo_root, 'i18n'))
+    candidate_i18n_dirs.append(os.path.join(theme_root, 'i18n'))
+
+    seen = set()
+    found_any = False
+    for i18n_dir in candidate_i18n_dirs:
+        i18n_dir = os.path.abspath(i18n_dir)
+        if i18n_dir in seen:
+            continue
+        seen.add(i18n_dir)
+
+        if os.path.exists(i18n_dir):
+            sync_translations(i18n_dir, args.test)
+            found_any = True
+        else:
+            print(f"Warning: i18n directory not found at {i18n_dir}")
+
+    if not found_any:
+        print("Error: i18n directory not found in any expected location")
+        sys.exit(1)

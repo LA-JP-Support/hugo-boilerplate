@@ -1,0 +1,23 @@
+{
+  "keywords": [
+    {
+      "Keyword": "AmI",
+      "URL": "/glossary/Ambient-Intelligence/",
+      "Title": "Ambient Intelligence (AmI) seamlessly embeds digital systems into environments to sense, interpret, and proactively respond to human needs without explicit commands.",
+      "Priority": 4,
+      "Exact": false
+    },
+    {
+      "Keyword": "HA",
+      "URL": "/glossary/High-Availability--HA-/",
+      "Title": "High Availability (HA) is a system design focused on achieving continuous operational performance and uptime by eliminating single points of failure and leveraging redundancy.",
+      "Priority": 4,
+      "Exact": false
+    }
+  ],
+  "metadata": {
+    "original_keywords": 350,
+    "optimized_keywords": 2,
+    "reduction_percent": 99.4
+  }
+}

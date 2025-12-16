@@ -11,6 +11,7 @@ This is a generic theme script that can be used across different Hugo projects.
 
 import os
 import re
+import yaml
 try:
     import tomllib
 except ImportError:
@@ -86,45 +87,74 @@ def get_content_dir(hugo_root: Optional[str] = None) -> Path:
 DIRECTORY_URL_CACHE = {}
 
 
-def extract_front_matter(file_path: Path) -> Tuple[str, Dict, str, str]:
-    """Extract TOML front matter from markdown file
-    Returns: (original_front_matter_text, parsed_dict, remaining_content, full_content)
+def extract_front_matter(file_path: Path) -> Tuple[str, Dict, str, str, Optional[str]]:
+    """Extract front matter from markdown file
+    Returns: (original_front_matter_text, parsed_dict, remaining_content, full_content, front_matter_type)
     """
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Look for front matter between +++ delimiters
     match = re.match(r'^\+\+\+\s*\n*(.*?)\n*\+\+\+\s*\n*', content, re.DOTALL)
     if match:
         front_matter_text = match.group(1)
         try:
             front_matter = tomllib.loads(front_matter_text)
             remaining_content = content[match.end():]
-            return front_matter_text, front_matter, remaining_content, content
+            return front_matter_text, front_matter, remaining_content, content, 'toml'
         except tomllib.TOMLDecodeError as e:
             print(f"Error parsing front matter in {file_path}: {e}")
-            return "", {}, content, content
-    return "", {}, content, content
+            return "", {}, content, content, None
+
+    match = re.match(r'^---\s*\n*(.*?)\n*---\s*\n*', content, re.DOTALL)
+    if match:
+        front_matter_text = match.group(1)
+        try:
+            front_matter = yaml.safe_load(front_matter_text) or {}
+            if not isinstance(front_matter, dict):
+                front_matter = {}
+            remaining_content = content[match.end():]
+            return front_matter_text, front_matter, remaining_content, content, 'yaml'
+        except Exception as e:
+            print(f"Error parsing front matter in {file_path}: {e}")
+            return "", {}, content, content, None
+
+    return "", {}, content, content, None
 
 
-def update_front_matter_url_only(file_path: Path, original_toml: str, new_url: str, remaining_content: str):
-    """Update only the URL field in the TOML front matter, preserving all other formatting"""
-    # Use regex to replace just the URL line in the original TOML
-    url_pattern = r'^url\s*=\s*"[^"]*"'
-    
-    # Check if URL exists in the original TOML
-    if re.search(url_pattern, original_toml, re.MULTILINE):
-        # Replace existing URL
-        updated_toml = re.sub(url_pattern, f'url = "{new_url}"', original_toml, flags=re.MULTILINE)
-    else:
-        # Add URL at the end if it doesn't exist
-        updated_toml = original_toml.rstrip() + f'\nurl = "{new_url}"\n'
-    
-    # Write the updated content
+def update_front_matter_url_only(file_path: Path, original_front_matter: str, new_url: str, remaining_content: str, front_matter_type: Optional[str]):
+    """Update only the URL field in the front matter, preserving format"""
+    if front_matter_type == 'toml':
+        url_pattern = r'^url\s*=\s*"[^"]*"'
+        if re.search(url_pattern, original_front_matter, re.MULTILINE):
+            updated_front_matter = re.sub(url_pattern, f'url = "{new_url}"', original_front_matter, flags=re.MULTILINE)
+        else:
+            updated_front_matter = original_front_matter.rstrip() + f'\nurl = "{new_url}"\n'
+
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write('+++\n')
+            f.write(updated_front_matter)
+            f.write('\n+++\n')
+            f.write(remaining_content)
+        return
+
+    if front_matter_type == 'yaml':
+        url_pattern = r'^url\s*:\s*.*$'
+        if re.search(url_pattern, original_front_matter, re.MULTILINE):
+            updated_front_matter = re.sub(url_pattern, f'url: "{new_url}"', original_front_matter, flags=re.MULTILINE)
+        else:
+            updated_front_matter = original_front_matter.rstrip() + f'\nurl: "{new_url}"\n'
+
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write('---\n')
+            f.write(updated_front_matter)
+            f.write('\n---\n')
+            f.write(remaining_content)
+        return
+
     with open(file_path, 'w', encoding='utf-8') as f:
-        f.write('+++\n')
-        f.write(updated_toml)
-        f.write('\n+++\n')
+        f.write('---\n')
+        f.write(f'url: "{new_url}"\n')
+        f.write('---\n')
         f.write(remaining_content)
 
 
@@ -135,7 +165,7 @@ def get_directory_url_slug(directory_path: Path) -> str:
     
     if index_file.exists():
         # Extract URL from _index.md
-        _, front_matter, _, _ = extract_front_matter(index_file)
+        _, front_matter, _, _, _ = extract_front_matter(index_file)
         if 'url' in front_matter:
             url = front_matter['url'].strip('/')
             # Extract the last part of the URL as the slug
@@ -147,7 +177,7 @@ def get_directory_url_slug(directory_path: Path) -> str:
     return directory_path.name
 
 
-def get_directory_url_path(directory_path: Path, language: str, hugo_config: Dict) -> Optional[str]:
+def get_directory_url_path(directory_path: Path, lang_dir: Path, language: str, hugo_config: Dict) -> Optional[str]:
     """Get the URL path for a directory by checking its _index.md file or predicting from directory name"""
     # Check if languages have different domains
     languages = hugo_config.get('languages', {})
@@ -180,11 +210,9 @@ def get_directory_url_path(directory_path: Path, language: str, hugo_config: Dic
         # Languages share the same domain, use subdirectories
         needs_lang_prefix = (language != default_lang) or (language == default_lang and default_in_subdir)
     
-    # Always build the URL from the directory structure for consistency
-    # Get the content directory to calculate relative path
-    content_dir = get_content_dir()
-    lang_dir = content_dir / language
-    
+    directory_path = directory_path.resolve()
+    lang_dir = lang_dir.resolve()
+
     # Get the relative path from the language directory
     relative_path = directory_path.relative_to(lang_dir)
     
@@ -210,13 +238,15 @@ def ensure_trailing_slash(url: str) -> str:
     return url
 
 
-def process_directory(lang_dir: Path, directory: Path, stats: Dict, hugo_config: Dict, dry_run: bool = False, verbose: bool = False):
+def process_directory(content_dir: Path, lang_dir: Path, directory: Path, stats: Dict, hugo_config: Dict, dry_run: bool = False, verbose: bool = False):
     """Process all files in a directory and fix their URLs"""
+    directory = directory.resolve()
+    lang_dir = lang_dir.resolve()
     language = lang_dir.name
     relative_path = directory.relative_to(lang_dir)
     
     # Get the expected base URL for this directory
-    base_url = get_directory_url_path(directory, language, hugo_config)
+    base_url = get_directory_url_path(directory, lang_dir, language, hugo_config)
     
     if not base_url:
         return
@@ -228,15 +258,14 @@ def process_directory(lang_dir: Path, directory: Path, stats: Dict, hugo_config:
     for file_path in directory.glob('*.md'):
         if file_path.name == '_index.md':
             # Ensure _index.md has the correct URL
-            original_toml, front_matter, remaining_content, _ = extract_front_matter(file_path)
+            original_fm, front_matter, remaining_content, _, fm_type = extract_front_matter(file_path)
             
             if 'url' not in front_matter:
                 # Add the URL if missing
                 new_url = ensure_trailing_slash(base_url)
                 if not dry_run:
-                    update_front_matter_url_only(file_path, original_toml, new_url, remaining_content)
+                    update_front_matter_url_only(file_path, original_fm, new_url, remaining_content, fm_type)
                 if verbose or dry_run:
-                    content_dir = get_content_dir()
                     rel_file_path = file_path.relative_to(content_dir.parent)
                     print(f"  {'[DRY-RUN] Would add' if dry_run else 'Added'} URL to {rel_file_path}")
                     print(f"    New URL: {new_url}")
@@ -249,9 +278,8 @@ def process_directory(lang_dir: Path, directory: Path, stats: Dict, hugo_config:
                 if current_url != expected_url:
                     # Update if the URL doesn't match the expected URL
                     if not dry_run:
-                        update_front_matter_url_only(file_path, original_toml, expected_url, remaining_content)
+                        update_front_matter_url_only(file_path, original_fm, expected_url, remaining_content, fm_type)
                     if verbose or dry_run:
-                        content_dir = get_content_dir()
                         rel_file_path = file_path.relative_to(content_dir.parent)
                         print(f"  {'[DRY-RUN] Would fix' if dry_run else 'Fixed'} {rel_file_path}")
                         print(f"    Current URL: {current_url}")
@@ -261,7 +289,7 @@ def process_directory(lang_dir: Path, directory: Path, stats: Dict, hugo_config:
                     stats['urls_correct'] += 1
         else:
             # Process regular files
-            original_toml, front_matter, remaining_content, _ = extract_front_matter(file_path)
+            original_fm, front_matter, remaining_content, _, fm_type = extract_front_matter(file_path)
             
             if 'url' in front_matter:
                 current_url = front_matter['url']
@@ -276,9 +304,8 @@ def process_directory(lang_dir: Path, directory: Path, stats: Dict, hugo_config:
                     
                     if current_url != expected_url:
                         if not dry_run:
-                            update_front_matter_url_only(file_path, original_toml, expected_url, remaining_content)
+                            update_front_matter_url_only(file_path, original_fm, expected_url, remaining_content, fm_type)
                         if verbose or dry_run:
-                            content_dir = get_content_dir()
                             rel_file_path = file_path.relative_to(content_dir.parent)
                             print(f"  {'[DRY-RUN] Would fix' if dry_run else 'Fixed'} {rel_file_path}")
                             print(f"    Current URL: {current_url}")
@@ -292,9 +319,8 @@ def process_directory(lang_dir: Path, directory: Path, stats: Dict, hugo_config:
                 filename_slug = file_path.stem
                 new_url = f"{base_url}/{filename_slug}/"
                 if not dry_run:
-                    update_front_matter_url_only(file_path, original_toml, new_url, remaining_content)
+                    update_front_matter_url_only(file_path, original_fm, new_url, remaining_content, fm_type)
                 if verbose or dry_run:
-                    content_dir = get_content_dir()
                     rel_file_path = file_path.relative_to(content_dir.parent)
                     print(f"  {'[DRY-RUN] Would add' if dry_run else 'Added'} URL to {rel_file_path}")
                     print(f"    New URL: {new_url}")
@@ -376,13 +402,13 @@ def main():
             # Process subdirectories
             for subdir in lang_dir.iterdir():
                 if subdir.is_dir() and not subdir.name.startswith('.'):
-                    process_directory(lang_dir, subdir, stats, hugo_config, dry_run=args.dry_run, verbose=args.verbose)
+                    process_directory(content_dir, lang_dir, subdir, stats, hugo_config, dry_run=args.dry_run, verbose=args.verbose)
                     stats['directories_processed'] += 1
                     
                     # Also process nested subdirectories (e.g., about/team)
                     for nested_dir in subdir.iterdir():
                         if nested_dir.is_dir() and not nested_dir.name.startswith('.'):
-                            process_directory(lang_dir, nested_dir, stats, hugo_config, dry_run=args.dry_run, verbose=args.verbose)
+                            process_directory(content_dir, lang_dir, nested_dir, stats, hugo_config, dry_run=args.dry_run, verbose=args.verbose)
                             stats['directories_processed'] += 1
     
     # Print summary

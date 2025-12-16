@@ -131,3 +131,6 @@ copy_error: "复制时出错"
 # Promotional offers
 promo_offer: "限时优惠"
 promo_offer_in_menu: "-75% OFF"
+
+blog_title: "Blog"
+related_posts: "Related Posts"

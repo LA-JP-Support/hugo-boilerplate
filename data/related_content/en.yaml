@@ -1,0 +1,847 @@
+blog:
+  ai-chatbot-types-guide:
+  - file: glossary/Rule-Based-Chatbot
+  - file: glossary/Hybrid-Chatbot
+  - file: glossary/Small-Talk
+  ai-customer-support-2025-guide:
+  - file: blog/understanding-ticket-systems-for-customer-support
+  - file: blog/start-using-ai-today
+  - file: ai-chatbot-terms-of-use
+  ai-email-response-examples:
+  - file: blog/email-response-automation-platform
+  - file: blog/ai-customer-support-2025-guide
+  - file: blog/start-using-ai-today
+  ai-evaluation-japanese-benchmarks:
+  - file: glossary/LangFlow
+  - file: glossary/Hugging-Face
+  - file: blog/ai-email-response-examples
+  centralised-social-media-management:
+  - file: blog/start-using-ai-today
+  - file: blog/email-response-automation-platform
+  - file: blog/ai-customer-support-2025-guide
+  email-response-automation-platform:
+  - file: blog/ai-email-response-examples
+  - file: blog/start-using-ai-today
+  - file: blog/centralised-social-media-management
+  how-to-crack-the-youtube-algorithm-data-driven-insights:
+  - file: glossary/Content-Moderation
+  - file: glossary/Deepfake-Detection
+  - file: glossary/Hugging-Face
+  inquiry-management-revolution:
+  - file: blog/email-response-automation-platform
+  - file: blog/ai-email-response-examples
+  - file: blog/centralised-social-media-management
+  introduction-to-rag:
+  - file: glossary/Knowledge-Base-Connector
+  - file: glossary/Edge-AI
+  - file: glossary/Image-Generation-Node
+  knowledge-base-faq-guide-2025:
+  - file: glossary/Knowledge-Base-Connector
+  - file: glossary/Self-Healing-Knowledge
+  - file: blog/ai-customer-support-2025-guide
+  start-using-ai-today:
+  - file: blog/ai-customer-support-2025-guide
+  - file: blog/centralised-social-media-management
+  - file: blog/ai-email-response-examples
+  understanding-ticket-systems-for-customer-support:
+  - file: blog/ai-customer-support-2025-guide
+  - file: blog/start-using-ai-today
+  - file: blog/email-response-automation-platform
+glossary:
+  API-Endpoint-Configuration:
+  - file: glossary/Microservices
+  - file: glossary/Environment-Variables--Secrets-
+  - file: glossary/Load-Balancing
+  Adversarial-Attack:
+  - file: glossary/Adversarial-Robustness
+  - file: glossary/Data-Poisoning
+  - file: glossary/Model-Robustness
+  Adversarial-Robustness:
+  - file: glossary/Model-Robustness
+  - file: glossary/Adversarial-Attack
+  - file: glossary/Confidence-Threshold
+  Algorithmic-Accountability:
+  - file: glossary/Transparency
+  - file: glossary/Alignment-Problem
+  - file: glossary/Fairness-Metrics
+  Alignment-Problem:
+  - file: glossary/Human-in-the-Loop--HITL-
+  - file: glossary/Transparency
+  - file: glossary/Adversarial-Attack
+  Ambient-Intelligence:
+  - file: glossary/Autonomous-Agents
+  - file: glossary/Intent-Recognition
+  - file: glossary/Transparency
+  Attribution-Modeling:
+  - file: glossary/Attribution-Window
+  - file: glossary/Conversion-Funnel
+  - file: glossary/Event-Tracking
+  Attribution-Window:
+  - file: glossary/Attribution-Modeling
+  - file: glossary/Click-Map
+  - file: glossary/Event-Tracking
+  Auto-Layout:
+  - file: glossary/Infinite-Canvas
+  - file: glossary/Webview
+  - file: glossary/Visual-Flow-Builder
+  Auto-Scaling-Group:
+  - file: glossary/Autoscaling
+  - file: glossary/Serverless-Computing
+  - file: glossary/Load-Balancing
+  Automated-Workflows:
+  - file: glossary/Task-Oriented-Bot
+  - file: glossary/Visual-Flow-Builder
+  - file: glossary/Autonomous-Agents
+  Autonomous-Agents:
+  - file: glossary/Botpress
+  - file: glossary/Hybrid-Chatbot
+  - file: glossary/Voicebot
+  Autoscaling:
+  - file: glossary/Auto-Scaling-Group
+  - file: glossary/Cloud-Computing
+  - file: glossary/Load-Balancing
+  Batch-Processing:
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/Load-Balancing
+  - file: glossary/Human-in-the-Loop--HITL-
+  Bias-Mitigation:
+  - file: glossary/Fairness-Metrics
+  - file: glossary/Model-Robustness
+  - file: glossary/Adversarial-Robustness
+  Blue-Green-Deployment:
+  - file: glossary/Canary-Release
+  - file: glossary/GitOps
+  - file: glossary/Import---Export-Blueprint
+  Bot-Avatar:
+  - file: glossary/Persona-Design
+  - file: blog/ai-chatbot-types-guide
+  - file: glossary/Botpress
+  Bot-Containment-Rate:
+  - file: glossary/Misunderstood-Rate
+  - file: glossary/Goal-Completion-Rate--GCR-
+  - file: glossary/Chat-Simulator
+  Botpress:
+  - file: glossary/Hybrid-Chatbot
+  - file: glossary/Rule-Based-Chatbot
+  - file: glossary/Small-Talk
+  Bounce-Rate:
+  - file: glossary/Engagement-Metrics
+  - file: glossary/Dwell-Time
+  - file: glossary/Engagement-Score
+  Canary-Release:
+  - file: glossary/Blue-Green-Deployment
+  - file: glossary/Containerization
+  - file: glossary/Docker
+  Canonical-Form:
+  - file: glossary/Conversational-AI
+  - file: glossary/Knowledge-Base-Connector
+  - file: glossary/Disambiguation
+  Carousel:
+  - file: glossary/Webview
+  - file: glossary/Infinite-Canvas
+  - file: glossary/Minimap
+  Chaos-Engineering:
+  - file: glossary/Infrastructure-as-Code--IaC-
+  - file: glossary/Adversarial-Robustness
+  - file: glossary/Self-Healing-Knowledge
+  Chat-Simulator:
+  - file: glossary/Conversational-AI
+  - file: glossary/Botpress
+  - file: glossary/Rule-Based-Chatbot
+  Chroma:
+  - file: glossary/Vector-Database
+  - file: glossary/Qdrant
+  - file: glossary/Weaviate
+  Click-Map:
+  - file: glossary/Minimap
+  - file: glossary/Webview
+  - file: glossary/Engagement-Metrics
+  Cloud-Computing:
+  - file: glossary/Autoscaling
+  - file: glossary/Serverless-Computing
+  - file: glossary/Load-Balancing
+  Code-Block--Python-JS-:
+  - file: glossary/Global-Variables
+  - file: glossary/Logic-Node---Conditional-Branching
+  - file: glossary/Iterator---For-Each
+  Cohort-Analysis:
+  - file: glossary/Sentiment-Analysis
+  - file: glossary/Engagement-Metrics
+  - file: glossary/Event-Tracking
+  Conditional-Router:
+  - file: glossary/Logic-Node---Conditional-Branching
+  - file: glossary/Flowise
+  - file: glossary/Task-Oriented-Bot
+  Confidence-Threshold:
+  - file: glossary/NLU-Confidence-Threshold
+  - file: glossary/Model-Robustness
+  - file: glossary/Adversarial-Robustness
+  Containerization:
+  - file: glossary/Docker
+  - file: glossary/Infrastructure-as-Code--IaC-
+  - file: glossary/Autoscaling
+  Content-Moderation:
+  - file: glossary/White-Labeling
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/Embed-Script
+  Context-Switching:
+  - file: glossary/Disambiguation
+  - file: glossary/State---Context-Memory
+  - file: glossary/Conversation-Drift
+  Conversation-Drift:
+  - file: glossary/Disambiguation
+  - file: glossary/Fall-back-Mechanism
+  - file: glossary/Multi-turn-Conversation
+  Conversational-AI:
+  - file: glossary/Small-Talk
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/Multi-turn-Conversation
+  Conversion-Funnel:
+  - file: glossary/Attribution-Modeling
+  - file: glossary/Canonical-Form
+  - file: glossary/Bounce-Rate
+  Copilot:
+  - file: glossary/Conversational-AI
+  - file: glossary/Botpress
+  - file: glossary/Natural-Language-Processing--NLP-
+  Cosine-Similarity:
+  - file: glossary/Precision-and-Recall
+  - file: glossary/Qdrant
+  - file: glossary/Vector-Database
+  Cost-Estimation:
+  - file: glossary/Small-Talk
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/Conversational-AI
+  Cron-Schedule:
+  - file: glossary/Task-Oriented-Bot
+  - file: glossary/Loop-Node
+  - file: glossary/Automated-Workflows
+  DTMF--Dual-Tone-Multi-Frequency-:
+  - file: glossary/Sentiment-Adaptive-Tone
+  - file: glossary/VAD--Voice-Activity-Detection-
+  - file: glossary/Feedback-Buttons--Thumbs-Up-Down-
+  Data-Poisoning:
+  - file: glossary/Adversarial-Attack
+  - file: glossary/Model-Robustness
+  - file: glossary/Adversarial-Robustness
+  Debug-Console---Trace:
+  - file: glossary/Error-Handler---Try-Catch
+  - file: glossary/Import---Export-Blueprint
+  - file: glossary/Webhook-Fulfillment
+  Deepfake-Detection:
+  - file: glossary/Watermarking
+  - file: glossary/Adversarial-Attack
+  - file: glossary/Red-Teaming
+  Delay---Sleep-Node:
+  - file: glossary/Loop-Node
+  - file: glossary/Logic-Node---Conditional-Branching
+  - file: glossary/Web-Scraper-Node
+  Dialogue-Management:
+  - file: glossary/Multi-turn-Conversation
+  - file: glossary/State---Context-Memory
+  - file: glossary/Dialogue-State-Tracking
+  Dialogue-State-Tracking:
+  - file: glossary/Dialogue-Management
+  - file: glossary/State---Context-Memory
+  - file: glossary/Slot-Carryover
+  Dify:
+  - file: glossary/LangFlow
+  - file: glossary/Botpress
+  - file: glossary/Flowise
+  Disambiguation:
+  - file: glossary/Conversational-AI
+  - file: glossary/Intent-Recognition
+  - file: glossary/Multi-turn-Conversation
+  Docker:
+  - file: glossary/Containerization
+  - file: glossary/GitOps
+  - file: glossary/Zapier
+  Document-Loader:
+  - file: glossary/LangFlow
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/Knowledge-Base-Connector
+  Dwell-Time:
+  - file: glossary/Bounce-Rate
+  - file: glossary/Latency
+  - file: glossary/Engagement-Metrics
+  Edge-AI:
+  - file: glossary/Hugging-Face
+  - file: glossary/Cloud-Computing
+  - file: glossary/Transparency
+  Embed-Script:
+  - file: glossary/Webview
+  - file: glossary/Botpress
+  - file: glossary/Small-Talk
+  Engagement-Metrics:
+  - file: glossary/Engagement-Score
+  - file: glossary/Bounce-Rate
+  - file: glossary/Event-Tracking
+  Engagement-Score:
+  - file: glossary/Engagement-Metrics
+  - file: glossary/Bounce-Rate
+  - file: glossary/Goal-Completion-Rate--GCR-
+  Entity-Extraction:
+  - file: glossary/Named-Entity-Recognition--NER-
+  - file: glossary/Entity-Linking
+  - file: glossary/Natural-Language-Processing--NLP-
+  Entity-Linking:
+  - file: glossary/Named-Entity-Recognition--NER-
+  - file: glossary/Entity-Extraction
+  - file: glossary/Natural-Language-Processing--NLP-
+  Environment-Variables--Secrets-:
+  - file: glossary/Global-Variables
+  - file: glossary/API-Endpoint-Configuration
+  - file: glossary/Sandbox-Mode
+  Error-Handler---Try-Catch:
+  - file: glossary/Fall-back-Mechanism
+  - file: glossary/Version-History---Rollback
+  - file: glossary/Rule-Based-Chatbot
+  Event-Tracking:
+  - file: glossary/Engagement-Metrics
+  - file: glossary/Batch-Processing
+  - file: glossary/Cohort-Analysis
+  Fairness-Metrics:
+  - file: glossary/Bias-Mitigation
+  - file: glossary/Precision-and-Recall
+  - file: glossary/Transparency
+  Fall-back-Mechanism:
+  - file: glossary/Version-History---Rollback
+  - file: glossary/Rule-Based-Chatbot
+  - file: glossary/Small-Talk
+  False-Negative:
+  - file: glossary/False-Positive
+  - file: glossary/Fall-back-Mechanism
+  - file: glossary/Misunderstood-Rate
+  False-Positive:
+  - file: glossary/False-Negative
+  - file: glossary/Fall-back-Mechanism
+  - file: glossary/Disambiguation
+  Feature-Flags:
+  - file: glossary/Visual-Flow-Builder
+  - file: glossary/GitOps
+  - file: glossary/Infrastructure-as-Code--IaC-
+  Feedback-Buttons--Thumbs-Up-Down-:
+  - file: glossary/Quick-Replies
+  - file: glossary/Suggestion-Chips
+  - file: glossary/Typing-Indicators
+  FinOps-for-AI:
+  - file: glossary/GitOps
+  - file: glossary/Transparency
+  - file: glossary/Flowise
+  Flowise:
+  - file: glossary/LangFlow
+  - file: glossary/Botpress
+  - file: glossary/Visual-Flow-Builder
+  GPU-Acceleration:
+  - file: glossary/Autoscaling
+  - file: glossary/Auto-Scaling-Group
+  - file: glossary/Batch-Processing
+  GitOps:
+  - file: glossary/Docker
+  - file: glossary/Infrastructure-as-Code--IaC-
+  - file: glossary/Containerization
+  Global-Variables:
+  - file: glossary/Variable-Injection
+  - file: glossary/Environment-Variables--Secrets-
+  - file: glossary/Natural-Language-Processing--NLP-
+  Goal-Completion-Rate--GCR-:
+  - file: glossary/Misunderstood-Rate
+  - file: glossary/Bot-Containment-Rate
+  - file: glossary/Small-Talk
+  Gumloop:
+  - file: glossary/Botpress
+  - file: glossary/LangFlow
+  - file: glossary/Natural-Language-Processing--NLP-
+  HNSW--Hierarchical-Navigable-Small-World-:
+  - file: glossary/Vector-Database
+  - file: glossary/Pinecone
+  - file: glossary/Qdrant
+  HTTP-Request-Node:
+  - file: glossary/Web-Scraper-Node
+  - file: glossary/n8n
+  - file: glossary/Node-Grouping
+  Hamburger-Menu:
+  - file: glossary/Persistent-Menu
+  - file: glossary/Carousel
+  - file: glossary/Auto-Layout
+  High-Availability--HA-:
+  - file: glossary/Load-Balancing
+  - file: glossary/Latency-Budget
+  - file: glossary/Blue-Green-Deployment
+  Hugging-Face:
+  - file: glossary/Botpress
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/LangFlow
+  Human-Agent-Teaming:
+  - file: glossary/Red-Teaming
+  - file: glossary/Team-Collaboration---Workspace
+  - file: glossary/Human-in-the-Loop--HITL-
+  Human-Approval-Node:
+  - file: glossary/Human-in-the-Loop--HITL-
+  - file: glossary/Loop-Node
+  - file: glossary/Logic-Node---Conditional-Branching
+  Human-in-the-Loop--HITL-:
+  - file: glossary/Human-Approval-Node
+  - file: glossary/Alignment-Problem
+  - file: glossary/Human-Agent-Teaming
+  Hybrid-Chatbot:
+  - file: glossary/Rule-Based-Chatbot
+  - file: glossary/Botpress
+  - file: glossary/Conversational-AI
+  Image-Generation-Node:
+  - file: glossary/Node-Grouping
+  - file: glossary/Speech-to-Text-Node
+  - file: glossary/Loop-Node
+  Import---Export-Blueprint:
+  - file: glossary/Botpress
+  - file: glossary/White-Labeling
+  - file: glossary/Gumloop
+  Indirect-Prompt-Injection:
+  - file: glossary/Variable-Injection
+  - file: glossary/Data-Poisoning
+  - file: glossary/Zero-Shot-Chain-of-Thought
+  Inference-Latency:
+  - file: glossary/Latency
+  - file: glossary/Latency-Budget
+  - file: glossary/Confidence-Threshold
+  Infinite-Canvas:
+  - file: glossary/Botpress
+  - file: glossary/Auto-Layout
+  - file: glossary/Minimap
+  Infrastructure-as-Code--IaC-:
+  - file: glossary/GitOps
+  - file: glossary/Cloud-Computing
+  - file: glossary/Containerization
+  Intent-Recognition:
+  - file: glossary/Disambiguation
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/Conversational-AI
+  Iterator---For-Each:
+  - file: glossary/Loop-Node
+  - file: glossary/Batch-Processing
+  - file: glossary/Document-Loader
+  JSON-Path:
+  - file: glossary/HTTP-Request-Node
+  - file: glossary/API-Endpoint-Configuration
+  - file: glossary/Web-Scraper-Node
+  Jailbreaking:
+  - file: glossary/Safety-Guardrails
+  - file: glossary/Watermarking
+  - file: glossary/Adversarial-Attack
+  KV-Cache:
+  - file: glossary/PagedAttention
+  - file: glossary/State---Context-Memory
+  - file: glossary/Inference-Latency
+  Knowledge-Base-Connector:
+  - file: blog/knowledge-base-faq-guide-2025
+  - file: glossary/Conversational-AI
+  - file: glossary/Botpress
+  LangFlow:
+  - file: glossary/Flowise
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/Botpress
+  Latency:
+  - file: glossary/Inference-Latency
+  - file: glossary/Latency-Budget
+  - file: glossary/Delay---Sleep-Node
+  Latency-Budget:
+  - file: glossary/Latency
+  - file: glossary/Inference-Latency
+  - file: glossary/Cost-Estimation
+  Lemmatization:
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/LangFlow
+  - file: glossary/Output-Parsing
+  Load-Balancing:
+  - file: glossary/Autoscaling
+  - file: glossary/Cloud-Computing
+  - file: glossary/Batch-Processing
+  Logic-Node---Conditional-Branching:
+  - file: glossary/Loop-Node
+  - file: glossary/Conditional-Router
+  - file: glossary/Node-Grouping
+  Loop-Node:
+  - file: glossary/Node-Grouping
+  - file: glossary/Human-Approval-Node
+  - file: glossary/Gumloop
+  MLOps:
+  - file: glossary/GitOps
+  - file: glossary/Model-Serving
+  - file: glossary/Privacy-Preserving-ML
+  Make--Integromat-:
+  - file: glossary/Visual-Flow-Builder
+  - file: glossary/Import---Export-Blueprint
+  - file: glossary/Botpress
+  Micro-Frontends:
+  - file: glossary/Microservices
+  - file: glossary/Monolithic-Architecture
+  - file: glossary/Webhook-Fulfillment
+  Microservices:
+  - file: glossary/API-Endpoint-Configuration
+  - file: glossary/Micro-Frontends
+  - file: glossary/Load-Balancing
+  Milvus:
+  - file: glossary/Vector-Database
+  - file: glossary/Weaviate
+  - file: glossary/Qdrant
+  Minimap:
+  - file: glossary/Webview
+  - file: glossary/Botpress
+  - file: glossary/Visual-Flow-Builder
+  Misunderstood-Rate:
+  - file: glossary/NLU-Confidence-Threshold
+  - file: glossary/Bot-Containment-Rate
+  - file: glossary/Goal-Completion-Rate--GCR-
+  Model-Cards:
+  - file: glossary/Model-Serving
+  - file: glossary/Model-Robustness
+  - file: glossary/Hugging-Face
+  Model-Quantization:
+  - file: glossary/Model-Robustness
+  - file: glossary/Model-Cards
+  - file: glossary/Confidence-Threshold
+  Model-Robustness:
+  - file: glossary/Adversarial-Robustness
+  - file: glossary/Adversarial-Attack
+  - file: glossary/Confidence-Threshold
+  Model-Serving:
+  - file: glossary/Model-Cards
+  - file: glossary/Hugging-Face
+  - file: glossary/Load-Balancing
+  Monolithic-Architecture:
+  - file: glossary/Micro-Frontends
+  - file: glossary/Multi-Tenancy
+  - file: glossary/Infrastructure-as-Code--IaC-
+  Multi-Tenancy:
+  - file: glossary/Monolithic-Architecture
+  - file: glossary/Serverless-Computing
+  - file: glossary/Containerization
+  Multi-turn-Conversation:
+  - file: glossary/Conversational-AI
+  - file: glossary/Small-Talk
+  - file: glossary/Slot-Carryover
+  N-Gram:
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/Named-Entity-Recognition--NER-
+  - file: glossary/Utterance-Permutation
+  NLU-Confidence-Threshold:
+  - file: glossary/Confidence-Threshold
+  - file: glossary/Misunderstood-Rate
+  - file: glossary/Intent-Recognition
+  Named-Entity-Recognition--NER-:
+  - file: glossary/Entity-Extraction
+  - file: glossary/Entity-Linking
+  - file: glossary/Intent-Recognition
+  Natural-Language-Processing--NLP-:
+  - file: glossary/Conversational-AI
+  - file: glossary/Real-time-Translation
+  - file: glossary/LangFlow
+  Node-Grouping:
+  - file: glossary/Loop-Node
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/Speech-to-Text-Node
+  Nodes-and-Edges:
+  - file: glossary/Web-Scraper-Node
+  - file: glossary/Logic-Node---Conditional-Branching
+  - file: glossary/Image-Generation-Node
+  Open-Domain-Bot:
+  - file: glossary/Rule-Based-Chatbot
+  - file: glossary/Hybrid-Chatbot
+  - file: glossary/Botpress
+  Output-Parsing:
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/LangFlow
+  - file: glossary/Batch-Processing
+  PII-Redaction:
+  - file: glossary/Red-Teaming
+  - file: glossary/Data-Poisoning
+  - file: privacy-policy
+  PagedAttention:
+  - file: glossary/KV-Cache
+  - file: glossary/Speculative-Decoding
+  - file: glossary/State---Context-Memory
+  Parallel-Execution:
+  - file: glossary/Batch-Processing
+  - file: glossary/Automated-Workflows
+  - file: glossary/Load-Balancing
+  Persistent-Menu:
+  - file: glossary/Quick-Replies
+  - file: glossary/Rule-Based-Chatbot
+  - file: glossary/Multi-turn-Conversation
+  Persona-Design:
+  - file: glossary/Small-Talk
+  - file: glossary/Hybrid-Chatbot
+  - file: blog/ai-chatbot-types-guide
+  Pinecone:
+  - file: glossary/Vector-Database
+  - file: glossary/Qdrant
+  - file: glossary/Chroma
+  Precision-and-Recall:
+  - file: glossary/Fairness-Metrics
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/Confidence-Threshold
+  Privacy-Preserving-ML:
+  - file: glossary/Model-Cards
+  - file: glossary/Jailbreaking
+  - file: glossary/Model-Serving
+  Prompt-Template:
+  - file: glossary/Zero-Shot-Chain-of-Thought
+  - file: glossary/Botpress
+  - file: glossary/Quick-Replies
+  Qdrant:
+  - file: glossary/Vector-Database
+  - file: glossary/Hugging-Face
+  - file: glossary/Weaviate
+  Query-Expansion:
+  - file: glossary/Slot-Filling
+  - file: glossary/Disambiguation
+  - file: glossary/Natural-Language-Processing--NLP-
+  Quick-Replies:
+  - file: glossary/Small-Talk
+  - file: glossary/Suggestion-Chips
+  - file: glossary/Botpress
+  Rate-Limiting-Handler:
+  - file: glossary/Throttling
+  - file: glossary/Microservices
+  - file: glossary/Error-Handler---Try-Catch
+  Real-time-Translation:
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/Voicebot
+  - file: glossary/Conversational-AI
+  Red-Teaming:
+  - file: glossary/Human-Agent-Teaming
+  - file: glossary/Adversarial-Attack
+  - file: glossary/Adversarial-Robustness
+  Regulatory-Sandbox:
+  - file: glossary/Sandbox-Mode
+  - file: glossary/Safety-Guardrails
+  - file: glossary/Shadow-AI
+  Rich-Media-Cards:
+  - file: glossary/Quick-Replies
+  - file: glossary/Webview
+  - file: blog/ai-chatbot-types-guide
+  Rule-Based-Chatbot:
+  - file: glossary/Hybrid-Chatbot
+  - file: blog/ai-chatbot-types-guide
+  - file: glossary/Small-Talk
+  SSML--Speech-Synthesis-Markup-Language-:
+  - file: glossary/Speech-to-Text-Node
+  - file: glossary/State-Machine
+  - file: glossary/Text-to-Speech-Node
+  Safety-Guardrails:
+  - file: glossary/Jailbreaking
+  - file: glossary/Adversarial-Attack
+  - file: glossary/Adversarial-Robustness
+  Sandbox-Mode:
+  - file: glossary/Regulatory-Sandbox
+  - file: glossary/Environment-Variables--Secrets-
+  - file: glossary/Containerization
+  Self-Healing-Knowledge:
+  - file: glossary/Autonomous-Agents
+  - file: glossary/Knowledge-Base-Connector
+  - file: glossary/Natural-Language-Processing--NLP-
+  Semantic-Routing:
+  - file: glossary/Intent-Recognition
+  - file: glossary/Disambiguation
+  - file: glossary/Conditional-Router
+  Sentiment-Adaptive-Tone:
+  - file: glossary/Sentiment-Analysis
+  - file: glossary/Small-Talk
+  - file: glossary/Conversational-AI
+  Sentiment-Analysis:
+  - file: glossary/Natural-Language-Processing--NLP-
+  - file: glossary/Sentiment-Adaptive-Tone
+  - file: glossary/Real-time-Translation
+  Serverless-Computing:
+  - file: glossary/Cloud-Computing
+  - file: glossary/Autoscaling
+  - file: glossary/Model-Serving
+  Shadow-AI:
+  - file: glossary/Transparency
+  - file: glossary/Hugging-Face
+  - file: glossary/Autonomous-Agents
+  Sharding:
+  - file: glossary/Autoscaling
+  - file: glossary/Batch-Processing
+  - file: glossary/Multi-Tenancy
+  Slot-Carryover:
+  - file: glossary/Slot-Filling
+  - file: glossary/Multi-turn-Conversation
+  - file: glossary/Small-Talk
+  Slot-Filling:
+  - file: glossary/Slot-Carryover
+  - file: glossary/Quick-Replies
+  - file: glossary/Small-Talk
+  Small-Talk:
+  - file: glossary/Conversational-AI
+  - file: glossary/Multi-turn-Conversation
+  - file: glossary/Rule-Based-Chatbot
+  Speculative-Decoding:
+  - file: glossary/PagedAttention
+  - file: glossary/Inference-Latency
+  - file: glossary/Zero-Shot-Chain-of-Thought
+  Speech-to-Text-Node:
+  - file: glossary/Text-to-Speech-Node
+  - file: glossary/Conversational-AI
+  - file: glossary/Natural-Language-Processing--NLP-
+  Splash-Screen:
+  - file: glossary/Webview
+  - file: glossary/Typing-Indicators
+  - file: glossary/Bot-Avatar
+  Spot-Instances:
+  - file: glossary/Cloud-Computing
+  - file: glossary/Auto-Scaling-Group
+  - file: glossary/Serverless-Computing
+  Stack-AI:
+  - file: glossary/Botpress
+  - file: glossary/LangFlow
+  - file: glossary/Gumloop
+  State---Context-Memory:
+  - file: glossary/State-Machine
+  - file: glossary/Dialogue-Management
+  - file: glossary/Conversational-AI
+  State-Machine:
+  - file: glossary/State---Context-Memory
+  - file: glossary/Hybrid-Chatbot
+  - file: glossary/Fall-back-Mechanism
+  Sub-flow---Nested-Flow:
+  - file: glossary/Visual-Flow-Builder
+  - file: glossary/Voiceflow
+  - file: glossary/Automated-Workflows
+  Suggestion-Chips:
+  - file: glossary/Quick-Replies
+  - file: glossary/Feedback-Buttons--Thumbs-Up-Down-
+  - file: glossary/Slot-Filling
+  Task-Oriented-Bot:
+  - file: glossary/Webhook-Fulfillment
+  - file: glossary/Hybrid-Chatbot
+  - file: glossary/Botpress
+  Team-Collaboration---Workspace:
+  - file: glossary/Human-Agent-Teaming
+  - file: glossary/Copilot
+  - file: glossary/Voiceflow
+  Technical-Debt:
+  - file: glossary/Latency-Budget
+  - file: glossary/Infrastructure-as-Code--IaC-
+  - file: glossary/Algorithmic-Accountability
+  Telemetry:
+  - file: glossary/Event-Tracking
+  - file: glossary/Debug-Console---Trace
+  - file: glossary/Batch-Processing
+  Text-to-Speech-Node:
+  - file: glossary/Speech-to-Text-Node
+  - file: glossary/Web-Scraper-Node
+  - file: glossary/Image-Generation-Node
+  Throttling:
+  - file: glossary/Rate-Limiting-Handler
+  - file: glossary/Autoscaling
+  - file: glossary/Microservices
+  Transparency:
+  - file: glossary/Alignment-Problem
+  - file: glossary/Algorithmic-Accountability
+  - file: glossary/Watermarking
+  Typing-Indicators:
+  - file: glossary/Feedback-Buttons--Thumbs-Up-Down-
+  - file: glossary/Quick-Replies
+  - file: glossary/Splash-Screen
+  Utterance:
+  - file: glossary/Utterance-Permutation
+  - file: glossary/Conversational-AI
+  - file: glossary/Disambiguation
+  Utterance-Permutation:
+  - file: glossary/Utterance
+  - file: glossary/Disambiguation
+  - file: glossary/Multi-turn-Conversation
+  VAD--Voice-Activity-Detection-:
+  - file: glossary/Voiceflow
+  - file: glossary/Wake-Word
+  - file: glossary/Speech-to-Text-Node
+  Variable-Injection:
+  - file: glossary/Global-Variables
+  - file: glossary/Indirect-Prompt-Injection
+  - file: glossary/Webhook-Fulfillment
+  Vector-Database:
+  - file: glossary/Qdrant
+  - file: glossary/Pinecone
+  - file: glossary/Weaviate
+  Version-History---Rollback:
+  - file: glossary/Fall-back-Mechanism
+  - file: glossary/Rule-Based-Chatbot
+  - file: glossary/State-Machine
+  Virtual-Assistant:
+  - file: glossary/Voicebot
+  - file: glossary/Voiceflow
+  - file: glossary/Autonomous-Agents
+  Visual-Flow-Builder:
+  - file: glossary/Voiceflow
+  - file: glossary/Flowise
+  - file: glossary/Botpress
+  Voicebot:
+  - file: glossary/Voiceflow
+  - file: glossary/Hybrid-Chatbot
+  - file: glossary/Real-time-Translation
+  Voiceflow:
+  - file: glossary/Voicebot
+  - file: glossary/Botpress
+  - file: glossary/Visual-Flow-Builder
+  Wake-Word:
+  - file: glossary/Voicebot
+  - file: glossary/Conversational-AI
+  - file: glossary/Voiceflow
+  Watermarking:
+  - file: glossary/Deepfake-Detection
+  - file: glossary/White-Labeling
+  - file: glossary/Transparency
+  Weaviate:
+  - file: glossary/Qdrant
+  - file: glossary/Vector-Database
+  - file: glossary/Chroma
+  Web-Scraper-Node:
+  - file: glossary/HTTP-Request-Node
+  - file: glossary/Loop-Node
+  - file: glossary/Speech-to-Text-Node
+  Webhook-Fulfillment:
+  - file: glossary/Webhook-Trigger
+  - file: glossary/Fall-back-Mechanism
+  - file: glossary/Task-Oriented-Bot
+  Webhook-Trigger:
+  - file: glossary/Webhook-Fulfillment
+  - file: glossary/Webview
+  - file: glossary/Task-Oriented-Bot
+  Webview:
+  - file: glossary/Embed-Script
+  - file: glossary/Botpress
+  - file: glossary/Webhook-Fulfillment
+  White-Labeling:
+  - file: glossary/Botpress
+  - file: blog/ai-chatbot-types-guide
+  - file: glossary/Small-Talk
+  Wizard-of-Oz-Testing--WoZ-:
+  - file: glossary/Chat-Simulator
+  - file: glossary/Disambiguation
+  - file: glossary/White-Labeling
+  Zapier:
+  - file: glossary/Botpress
+  - file: glossary/Gumloop
+  - file: glossary/Import---Export-Blueprint
+  Zero-Shot-Chain-of-Thought:
+  - file: glossary/Prompt-Template
+  - file: glossary/Utterance-Permutation
+  - file: glossary/Indirect-Prompt-Injection
+  Zero-Touch-Resolution:
+  - file: glossary/Zero-Shot-Chain-of-Thought
+  - file: glossary/Self-Healing-Knowledge
+  - file: glossary/Wizard-of-Oz-Testing--WoZ-
+  glossary:
+  - file: glossary/Small-Talk
+  - file: glossary/Hybrid-Chatbot
+  - file: glossary/Botpress
+  n8n:
+  - file: glossary/HTTP-Request-Node
+  - file: glossary/Flowise
+  - file: glossary/Botpress
+search:
+  search:
+  - file: glossary/Auto-Layout
+  - file: glossary/Query-Expansion
+  - file: glossary/Slot-Filling

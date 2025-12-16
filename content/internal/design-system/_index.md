@@ -6,8 +6,9 @@ draft = true
 private = true
 sitemap_exclude = true
 outputs = ['HTML']
-+++
+url = "/internal/design-system/"
 
++++
 Internal design system for FlowHunt.
 
 ## Contents

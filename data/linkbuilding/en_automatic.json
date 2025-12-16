@@ -1,0 +1,2916 @@
+{
+  "keywords": [
+    {
+      "Keyword": "adversarial attack",
+      "URL": "/glossary/Adversarial-Attack/",
+      "Title": "Adversarial attacks manipulate AI/ML model inputs to cause incorrect predictions, exploiting vulnerabilities. These attacks undermine AI reliability, affecting cybersecurity, autonomous vehicles, and more.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Adversarial Attacks",
+      "URL": "/glossary/Adversarial-Robustness/",
+      "Title": "Adversarial Robustness is the ability of AI/ML models to maintain reliable performance against intentionally crafted adversarial inputs designed to induce errors or misclassifications.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Adversarial Robustness",
+      "URL": "/glossary/Adversarial-Robustness/",
+      "Title": "Adversarial Robustness is the ability of AI/ML models to maintain reliable performance against intentionally crafted adversarial inputs designed to induce errors or misclassifications.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "AI",
+      "URL": "/glossary/Voicebot/",
+      "Title": "Explore a comprehensive guide to voicebots, covering core technologies like ASR, NLP, and TTS, how they work, key features, types, and their business benefits for customer service and automation.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "AI",
+      "URL": "/glossary/GPU-Acceleration/",
+      "Title": "GPU acceleration leverages Graphics Processing Units (GPUs) for massive parallel processing, significantly speeding up compute-intensive AI, deep learning, data science, and HPC workloads.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "AI",
+      "URL": "/glossary/Self-Healing-Knowledge/",
+      "Title": "Self-Healing Knowledge uses AI, ML, and automation to autonomously detect, diagnose, and correct outdated or erroneous content in knowledge management systems, ensuring accuracy.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "AI alignment",
+      "URL": "/glossary/Alignment-Problem/",
+      "Title": "The Alignment Problem in AI is the challenge of ensuring AI systems' goals and behaviors consistently match human values, preferences, and ethical standards, crucial for safe and beneficial AI deployment.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI automated responses",
+      "URL": "/blog/ai-email-response-examples/",
+      "Title": "Examining the true capabilities of AI-powered automated response generation through real examples. A thorough analysis of accuracy and practicality through complex technical inquiries and complaint handling cases.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "AI automation",
+      "URL": "/glossary/Autonomous-Agents/",
+      "Title": "Explore autonomous agents: AI systems that independently plan, reason, and execute complex multi-step tasks without human intervention. Boost efficiency and productivity.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI automation",
+      "URL": "/glossary/Gumloop/",
+      "Title": "Gumloop is a no-code, AI-first automation platform for repetitive tasks and workflows. It uses intelligent agents to browse the web, interact with SaaS apps, and make decisions.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI bias",
+      "URL": "/glossary/Fairness-Metrics/",
+      "Title": "Fairness metrics are mathematical and statistical tools used to quantify, evaluate, and monitor bias in AI/ML systems, ensuring equitable treatment across groups.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "AI Chatbot",
+      "URL": "/ai-chatbot-terms-of-use/",
+      "Title": "Terms of use for the AI Chatbot and AI Customer Support service provided by SmartWeb",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "AI chatbot",
+      "URL": "/blog/ai-chatbot-types-guide/",
+      "Title": "A comprehensive guide to the 5 types of AI chatbots (rule-based, AI-powered, generative AI, RAG, and hybrid). Learn their characteristics, advantages and disadvantages, selection criteria by use case, and implementation considerations to confidently deploy chatbots even for small and medium-sized businesses.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbot",
+      "URL": "/glossary/Minimap/",
+      "Title": "A minimap is a compact visual overview map for navigating large, complex flows, like AI chatbot conversations or code. It helps users orient themselves and manage intricate diagrams.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI Chatbot",
+      "URL": "/glossary/Cost-Estimation/",
+      "Title": "Cost estimation in AI chatbot and automation predicts resource consumption and financial outlay for deploying conversational AI solutions, enabling budgeting and optimization.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI Chatbot",
+      "URL": "/glossary/False-Negative/",
+      "Title": "A false negative occurs when an AI system, like a chatbot, fails to detect a real issue or intent. Learn its impact, causes, and strategies to reduce it in automation.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbot",
+      "URL": "/glossary/Conversation-Drift/",
+      "Title": "Conversation drift occurs when an AI chatbot or virtual assistant diverges from the original topic, leading to off-topic responses and degraded user experience. Learn to prevent it.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI Chatbot",
+      "URL": "/glossary/Global-Variables/",
+      "Title": "Global variables are accessible from any node in a program or automation platform, sharing data across flows, functions, and contexts. Learn their use in AI chatbots.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbot",
+      "URL": "/glossary/Multi-turn-Conversation/",
+      "Title": "Learn about multi-turn conversations in AI chatbots and automation. Understand how AI systems manage context, state, and multiple exchanges for complex tasks.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbot",
+      "URL": "/glossary/Botpress/",
+      "Title": "Botpress is a developer-friendly platform for building AI chatbots and conversational agents with a visual flow editor, advanced AI, and LLM integration.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbot",
+      "URL": "/glossary/Hybrid-Chatbot/",
+      "Title": "A hybrid chatbot combines rule-based logic with AI, NLP, and ML to handle routine and complex queries, seamlessly escalating to human agents with full context.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbot",
+      "URL": "/glossary/State-Machine/",
+      "Title": "Explore state machines, a computational model for system transitions. Learn core concepts, types, uses in AI chatbots & automation, implementation, advantages, and challenges.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI Chatbot",
+      "URL": "/glossary/Persona-Design/",
+      "Title": "Learn about Persona Design for AI chatbots and automation. Define personality, voice, and character to create engaging, human-like interactions and enhance user experience.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbot",
+      "URL": "/glossary/Splash-Screen/",
+      "Title": "A splash screen is the first visual a user sees when an app or chatbot launches, providing brand recognition and indicating loading. Essential for UX and branding.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbot",
+      "URL": "/glossary/Open-Domain-Bot/",
+      "Title": "An open-domain bot is an AI conversational agent designed for free-form dialogue on any topic, unlike task-specific closed-domain bots. Explore its architecture & uses.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI Chatbot",
+      "URL": "/glossary/Slot-Carryover/",
+      "Title": "Slot carryover enables AI chatbots to remember and reuse structured information (slots) across conversational turns, maintaining context and improving user experience in task-oriented dialogue systems.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI Chatbots",
+      "URL": "/glossary/Goal-Completion-Rate--GCR-/",
+      "Title": "Goal Completion Rate (GCR) measures the percentage of users successfully achieving objectives in AI chatbots & automation. Learn its importance, calculation, and how to improve it.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbots",
+      "URL": "/glossary/Context-Switching/",
+      "Title": "Understand context switching in AI chatbots and automation: how systems manage abrupt topic changes in user conversations, its impact on productivity, and strategies for effective handling.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbots",
+      "URL": "/glossary/Sentiment-Adaptive-Tone/",
+      "Title": "Explore sentiment-adaptive tone, an AI capability that adjusts communication style based on customer emotion for improved interactions and satisfaction.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI Chatbots",
+      "URL": "/glossary/Node-Grouping/",
+      "Title": "Learn about Node Grouping, the practice of clustering related nodes in AI systems, workflow automation, and infrastructure orchestration to enhance clarity, manageability, and modularity.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbots",
+      "URL": "/glossary/Fall-back-Mechanism/",
+      "Title": "A fall-back mechanism in AI chatbots ensures continuity when the bot fails to interpret or fulfill a request, redirecting, clarifying, or escalating the conversation.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbots",
+      "URL": "/glossary/Prompt-Template/",
+      "Title": "A prompt template is a pre-configured prompt structure with static instructions and variable placeholders, designed for repeated use in AI chatbots and automation systems.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI Chatbots",
+      "URL": "/glossary/Small-Talk/",
+      "Title": "Explore small talk in AI chatbots: their ability to handle casual, non-functional conversations, simulating natural human-like exchanges to build rapport and enhance user experience.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbots",
+      "URL": "/glossary/State---Context-Memory/",
+      "Title": "Explore State / Context Memory, the storage mechanisms enabling AI chatbots to retain and recall information across sessions for conversational continuity, personalization, and efficient task management.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbots",
+      "URL": "/glossary/White-Labeling/",
+      "Title": "White labeling in AI chatbots allows businesses to deploy a chatbot platform fully branded as their own, removing all vendor references. Ideal for agencies, SaaS, and enterprises.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI chatbots",
+      "URL": "/glossary/Disambiguation/",
+      "Title": "Disambiguation clarifies user intent in AI chatbots when input has multiple meanings, ensuring accurate interpretation by asking for clarification or presenting options.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI collaboration",
+      "URL": "/glossary/Human-Agent-Teaming/",
+      "Title": "Human-Agent Teaming (HAT) is a collaborative paradigm where AI and human agents work together, sharing goals and control. Learn how HAT enhances efficiency and decision-making.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "AI Copilot",
+      "URL": "/glossary/Copilot/",
+      "Title": "An AI copilot is an advanced AI-powered digital assistant that operates alongside human users to enhance productivity, creativity, and decision-making in real time.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI ethics",
+      "URL": "/glossary/Algorithmic-Accountability/",
+      "Title": "Algorithmic accountability ensures organizations are responsible for their AI systems' explainable, traceable, and justifiable operations, including outcomes and impacts on individuals and society.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "AI image generation",
+      "URL": "/glossary/Image-Generation-Node/",
+      "Title": "Learn about Image Generation Nodes, modular components in visual programming that interface with AI models like DALL-E and Stable Diffusion to create images from text prompts.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "AI implementation",
+      "URL": "/blog/start-using-ai-today/",
+      "Title": "A comprehensive guide to AI implementation for SMEs without IT staff. Achieve operational efficiency and improved customer satisfaction through ticket systems, AI email auto-response, and AI chatbots.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "AI infrastructure",
+      "URL": "/glossary/Latency/",
+      "Title": "Latency is the time delay between a request and a system's response, crucial for AI infrastructure, web apps, and real-time systems. Learn its types, causes, and reduction strategies.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "AI jailbreaking",
+      "URL": "/glossary/Jailbreaking/",
+      "Title": "AI jailbreaking is bypassing AI safety guardrails to generate prohibited content. Learn about techniques, risks, and mitigation strategies for large language models (LLMs).",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "AI model",
+      "URL": "/glossary/Confidence-Threshold/",
+      "Title": "The minimum score an AI model needs to accept a prediction as correct, acting as a cutoff for reliability and determining if a prediction is used or reviewed.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "AI model",
+      "URL": "/glossary/Inference-Latency/",
+      "Title": "Inference latency is the time delay between providing input to an AI model and getting a prediction. It's a critical metric for real-time AI applications, impacting responsiveness and user experience.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "AI pipelines",
+      "URL": "/glossary/Document-Loader/",
+      "Title": "A Document Loader is a software module that automates the ingestion and transformation of raw data into structured Document objects for AI tasks like LLM pipelines and vector store indexing.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI Safety",
+      "URL": "/glossary/Safety-Guardrails/",
+      "Title": "Safety guardrails are engineered controls and policies that prevent AI systems, especially LLMs, from generating harmful, inappropriate, or non-compliant content, ensuring responsible and secure AI deployment.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "AI security",
+      "URL": "/glossary/Data-Poisoning/",
+      "Title": "Data poisoning is a malicious attack where corrupted data is injected into AI/ML training sets to manipulate model behavior, degrade performance, or embed hidden vulnerabilities.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI security",
+      "URL": "/glossary/Adversarial-Attack/",
+      "Title": "Adversarial attacks manipulate AI/ML model inputs to cause incorrect predictions, exploiting vulnerabilities. These attacks undermine AI reliability, affecting cybersecurity, autonomous vehicles, and more.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI systems",
+      "URL": "/glossary/Red-Teaming/",
+      "Title": "Red Teaming is an adversarial process simulating real-world attacks on AI systems to uncover vulnerabilities, biases, and misuse. Essential for AI security, ethics, and compliance.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI systems",
+      "URL": "/glossary/Latency-Budget/",
+      "Title": "Explore latency budgets, the maximum allowable time for system response allocated across components. Understand their importance in AI systems, types, management strategies, and trade-offs.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI Systems",
+      "URL": "/glossary/False-Positive/",
+      "Title": "A false positive is when an AI system (chatbot, detection tool, privacy filter) incorrectly identifies a situation or content as matching a criterion, leading to errors.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI systems",
+      "URL": "/glossary/Semantic-Routing/",
+      "Title": "Semantic routing directs user queries to specialized agents, prompts, or data sources by evaluating the semantic meaning (intent) using vector similarity.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AI Terms",
+      "URL": "/glossary/",
+      "Title": "Comprehensive glossary of AI chatbot, automation, and customer support terms. Clear explanations of technical concepts.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "AI transparency",
+      "URL": "/glossary/Transparency/",
+      "Title": "AI transparency reveals an AI system's internal workings, data, and decision logic. Essential for building trust, ensuring accountability, and meeting regulatory compliance.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "AI virtual assistant",
+      "URL": "/glossary/Virtual-Assistant/",
+      "Title": "A virtual assistant (VA) is a remote service provider, human or AI, offering administrative, technical, creative, or industry-specific support to businesses and individuals.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "AI watermarking",
+      "URL": "/glossary/Watermarking/",
+      "Title": "Watermarking in AI involves embedding visible or invisible signals into AI-generated content (text, images, audio, video) to verify its origin, combat deepfakes, and ensure authenticity.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "AI-generated media",
+      "URL": "/glossary/Deepfake-Detection/",
+      "Title": "Explore deepfake detection technologies, methodologies, and workflows to identify AI-generated or altered media. Learn how to combat fraud, misinformation, and protect digital trust.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "algorithmic accountability",
+      "URL": "/glossary/Algorithmic-Accountability/",
+      "Title": "Algorithmic accountability ensures organizations are responsible for their AI systems' explainable, traceable, and justifiable operations, including outcomes and impacts on individuals and society.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "ambient intelligence",
+      "URL": "/glossary/Ambient-Intelligence/",
+      "Title": "Ambient Intelligence (AmI) seamlessly embeds digital systems into environments to sense, interpret, and proactively respond to human needs without explicit commands.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "AmI",
+      "URL": "/glossary/Ambient-Intelligence/",
+      "Title": "Ambient Intelligence (AmI) seamlessly embeds digital systems into environments to sense, interpret, and proactively respond to human needs without explicit commands.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "API endpoint configuration",
+      "URL": "/glossary/API-Endpoint-Configuration/",
+      "Title": "Learn about API endpoint configuration, its importance for integration, automation, and security, and best practices for designing, securing, and documenting your API endpoints.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "API Gateway",
+      "URL": "/glossary/Microservices/",
+      "Title": "Explore a comprehensive glossary of microservices architecture, covering essential concepts, patterns, and technologies like API Gateway, Bounded Context, CQRS, and more.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "API integration",
+      "URL": "/glossary/HTTP-Request-Node/",
+      "Title": "Learn about the HTTP Request Node, a vital component in automation platforms like n8n and Node-RED, for sending HTTP requests to external APIs and integrating systems.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "API Rate Limiting",
+      "URL": "/glossary/Rate-Limiting-Handler/",
+      "Title": "A Rate Limiting Handler manages API request quotas, detects 429 errors, and implements retry logic to ensure compliance and prevent service disruptions for client and server applications.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "API security",
+      "URL": "/glossary/API-Endpoint-Configuration/",
+      "Title": "Learn about API endpoint configuration, its importance for integration, automation, and security, and best practices for designing, securing, and documenting your API endpoints.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "API throttling",
+      "URL": "/glossary/Throttling/",
+      "Title": "Throttling, also called API throttling, is the deliberate restriction of requests to an API or service within a specific time period. It prevents overload, ensures fair access, curbs abuse, and maintains performance.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Approximate Nearest Neighbor",
+      "URL": "/glossary/HNSW--Hierarchical-Navigable-Small-World-/",
+      "Title": "HNSW (Hierarchical Navigable Small World) is a graph-based algorithm for fast, accurate approximate nearest neighbor (ANN) search in vector databases, ideal for high-dimensional data.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "artificial intelligence",
+      "URL": "/glossary/Human-in-the-Loop--HITL-/",
+      "Title": "Human-in-the-Loop (HITL) integrates human intelligence into AI/ML workflows for training, tuning, and validation, ensuring accuracy, safety, and ethical decision-making.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Artificial Intelligence",
+      "URL": "/glossary/Copilot/",
+      "Title": "An AI copilot is an advanced AI-powered digital assistant that operates alongside human users to enhance productivity, creativity, and decision-making in real time.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "attribution modeling",
+      "URL": "/glossary/Attribution-Modeling/",
+      "Title": "Attribution modeling is an analytical method to assign credit for conversions to marketing channels and touchpoints, optimizing campaigns and budget allocation.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "attribution window",
+      "URL": "/glossary/Attribution-Window/",
+      "Title": "An attribution window defines the period after a marketing interaction when conversions are credited to that touchpoint. Learn why it's crucial for campaign effectiveness and budget allocation.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Auto-Layout",
+      "URL": "/glossary/Auto-Layout/",
+      "Title": "Master Auto-Layout, a design feature for automatically arranging and resizing UI elements. Covers core concepts, benefits, and implementation in Figma, iOS, Android, and Web.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Auto-Scaling Group",
+      "URL": "/glossary/Auto-Scaling-Group/",
+      "Title": "An Auto-Scaling Group (ASG) automatically adjusts compute resources like EC2 instances to maintain application performance and minimize costs by scaling based on demand.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Automated Workflows",
+      "URL": "/glossary/Automated-Workflows/",
+      "Title": "Automated workflows are technology-enabled processes that execute tasks, activities, or decisions based on predefined rules, minimizing human intervention and optimizing efficiency.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Automatic Speech Recognition",
+      "URL": "/glossary/Speech-to-Text-Node/",
+      "Title": "A Speech-to-Text Node is a modular component in automation platforms and AI workflows that transcribes spoken language into machine-readable text using ASR.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "automation",
+      "URL": "/glossary/Webhook-Trigger/",
+      "Title": "A Webhook Trigger enables external services to initiate automated workflows by sending real-time HTTP requests. Essential for AI chatbots, automation, and system integration.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "automation",
+      "URL": "/glossary/Zapier/",
+      "Title": "Explore Zapier, the no-code automation platform connecting 8,000+ apps. Learn about Zaps, AI Agents, use cases, and how to automate workflows efficiently.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "automation",
+      "URL": "/glossary/Zero-Touch-Resolution/",
+      "Title": "Explore Zero-Touch Resolution, a practice where issues are automatically resolved without human intervention using AI, automation, and self-service platforms. Learn its benefits, challenges, and implementation.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "automation blueprint",
+      "URL": "/glossary/Import---Export-Blueprint/",
+      "Title": "Import / Export Blueprint saves automation/chatbot logic as a file (JSON/YAML) for sharing, backup, migration, and version control across platforms and environments.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "autonomous agents",
+      "URL": "/glossary/Autonomous-Agents/",
+      "Title": "Explore autonomous agents: AI systems that independently plan, reason, and execute complex multi-step tasks without human intervention. Boost efficiency and productivity.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "autoscaling",
+      "URL": "/glossary/Autoscaling/",
+      "Title": "Autoscaling automatically adjusts cloud computing resources (VMs, containers) based on real-time demand, optimizing performance, availability, and cost efficiency.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "AWS Auto Scaling",
+      "URL": "/glossary/Auto-Scaling-Group/",
+      "Title": "An Auto-Scaling Group (ASG) automatically adjusts compute resources like EC2 instances to maintain application performance and minimize costs by scaling based on demand.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "batch processing",
+      "URL": "/glossary/Batch-Processing/",
+      "Title": "Batch processing is a data approach where large volumes of data are collected and processed in groups over set periods. Ideal for high-throughput AI, analytics, and business operations.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "bias mitigation",
+      "URL": "/glossary/Bias-Mitigation/",
+      "Title": "Bias mitigation involves techniques and strategies to reduce or eliminate systematic unfairness in machine learning models, ensuring ethical and fair AI outcomes.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "blue-green deployment",
+      "URL": "/glossary/Blue-Green-Deployment/",
+      "Title": "Blue-green deployment is a strategy to minimize downtime and risk by running two identical production environments (blue and green). It enables seamless traffic switching and instant rollback for new software releases.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "bot avatar",
+      "URL": "/glossary/Bot-Avatar/",
+      "Title": "Discover what a bot avatar is, its benefits, types, and how to create one. Learn how these visual representations humanize AI chatbots, enhance user experience, and reinforce brand identity.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Bot Containment Rate",
+      "URL": "/glossary/Bot-Containment-Rate/",
+      "Title": "The percentage of user interactions handled entirely by a chatbot without transferring to a human agent. A key metric for evaluating chatbot performance and operational efficiency.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Botpress",
+      "URL": "/glossary/Botpress/",
+      "Title": "Botpress is a developer-friendly platform for building AI chatbots and conversational agents with a visual flow editor, advanced AI, and LLM integration.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "bounce rate",
+      "URL": "/glossary/Bounce-Rate/",
+      "Title": "Understand bounce rate, a key web analytics metric. Learn how it's calculated, its impact on user engagement & SEO, and strategies to reduce high bounce rates for better site performance.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "canary release",
+      "URL": "/glossary/Canary-Release/",
+      "Title": "A canary release is a progressive software deployment strategy that rolls out new application versions incrementally to a small subset of users, allowing early issue detection and risk mitigation.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "canonical form",
+      "URL": "/glossary/Canonical-Form/",
+      "Title": "Canonical form transforms data into a single, standardized representation for consistency, processing, and comparison, crucial for AI chatbots, NLP, and automation.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "carousel",
+      "URL": "/glossary/Carousel/",
+      "Title": "A carousel is an interactive UI component displaying a sequence of content items like images or cards within a single viewport, allowing users to cycle through them.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Chaos Engineering",
+      "URL": "/glossary/Chaos-Engineering/",
+      "Title": "Chaos Engineering is a discipline of intentionally experimenting on systems to uncover weaknesses and build confidence in their resilience. Learn how to proactively identify vulnerabilities.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "chat applications",
+      "URL": "/glossary/Typing-Indicators/",
+      "Title": "Typing indicators are visual cues in chat apps showing when someone is composing a message. They enhance user engagement, reduce uncertainty, and improve real-time communication.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Chat Simulator",
+      "URL": "/glossary/Chat-Simulator/",
+      "Title": "A development tool for developers, QA, and operations to test, validate, and optimize chatbot conversation flows and NLU in a controlled, risk-free environment.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Chatbot",
+      "URL": "/glossary/Quick-Replies/",
+      "Title": "Quick Replies are ephemeral, selectable buttons in chat interfaces, providing pre-defined options. They vanish after selection, preventing clutter and maintaining conversational flow.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "chatbot",
+      "URL": "/glossary/Webview/",
+      "Title": "Discover Webview, an embedded browser window displaying web content like forms, product catalogs, and payment interfaces directly within chatbots and mobile apps for a seamless user experience.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "chatbot",
+      "URL": "/glossary/Rule-Based-Chatbot/",
+      "Title": "A rule-based chatbot interacts with users by following predefined rules and scripts, responding to specific keywords or button selections without AI learning.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "chatbot",
+      "URL": "/glossary/Embed-Script/",
+      "Title": "Learn about embed scripts, JavaScript snippets used to integrate AI chatbots and dynamic content onto any website. Discover usage, examples, customization, and best practices.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Chatbot",
+      "URL": "/glossary/Persistent-Menu/",
+      "Title": "Learn about Persistent Menus in chatbots: what they are, why use them, how to implement them, and best practices for enhancing user navigation and experience.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "chatbot",
+      "URL": "/glossary/Rich-Media-Cards/",
+      "Title": "Rich media cards are interactive UI components in chat streams, delivering multimedia content and actionable elements like images, videos, and buttons for engaging conversations.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "chatbot blueprint",
+      "URL": "/glossary/Import---Export-Blueprint/",
+      "Title": "Import / Export Blueprint saves automation/chatbot logic as a file (JSON/YAML) for sharing, backup, migration, and version control across platforms and environments.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "chatbot performance",
+      "URL": "/glossary/Misunderstood-Rate/",
+      "Title": "Misunderstood Rate measures chatbot failures to understand user intent, triggering fallback responses. It's a key metric for NLU performance, user experience, and improving conversational AI.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "chatbot performance",
+      "URL": "/glossary/Bot-Containment-Rate/",
+      "Title": "The percentage of user interactions handled entirely by a chatbot without transferring to a human agent. A key metric for evaluating chatbot performance and operational efficiency.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "chatbot persona",
+      "URL": "/glossary/Bot-Avatar/",
+      "Title": "Discover what a bot avatar is, its benefits, types, and how to create one. Learn how these visual representations humanize AI chatbots, enhance user experience, and reinforce brand identity.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Chatbot testing",
+      "URL": "/glossary/Chat-Simulator/",
+      "Title": "A development tool for developers, QA, and operations to test, validate, and optimize chatbot conversation flows and NLU in a controlled, risk-free environment.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "chatbot types",
+      "URL": "/blog/ai-chatbot-types-guide/",
+      "Title": "A comprehensive guide to the 5 types of AI chatbots (rule-based, AI-powered, generative AI, RAG, and hybrid). Learn their characteristics, advantages and disadvantages, selection criteria by use case, and implementation considerations to confidently deploy chatbots even for small and medium-sized businesses.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "chatbots",
+      "URL": "/glossary/Suggestion-Chips/",
+      "Title": "Suggestion chips are interactive, pill-shaped UI elements in chatbots and conversational interfaces, offering quick, contextual response options that disappear after selection.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "chatbots",
+      "URL": "/glossary/Task-Oriented-Bot/",
+      "Title": "A Task-Oriented Bot is a specialized chatbot designed to automate specific, structured processes like booking, tracking, or scheduling, using NLP and backend integration.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Chroma",
+      "URL": "/glossary/Chroma/",
+      "Title": "Explore Chroma, an open-source vector database for AI-native applications. Learn about its core concepts, architecture, use cases like RAG and semantic search, and compare it with alternatives.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "click map",
+      "URL": "/glossary/Click-Map/",
+      "Title": "A click map is a visual analytics tool showing where users click or tap on a web page. It helps web professionals, marketers, and UX specialists optimize site layouts, improve conversions, and understand user interactions.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "cloud compute",
+      "URL": "/glossary/Spot-Instances/",
+      "Title": "Spot Instances are discounted cloud compute resources from AWS, Azure, and GCP, ideal for fault-tolerant workloads like batch processing, analytics, and ML training.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "cloud computing",
+      "URL": "/glossary/Autoscaling/",
+      "Title": "Autoscaling automatically adjusts cloud computing resources (VMs, containers) based on real-time demand, optimizing performance, availability, and cost efficiency.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "cloud computing",
+      "URL": "/glossary/Cloud-Computing/",
+      "Title": "Explore cloud computing: on-demand IT resources, service models (IaaS, PaaS, SaaS), deployment options (public, private, hybrid), and benefits for AI infrastructure & deployment.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "cloud computing",
+      "URL": "/glossary/Serverless-Computing/",
+      "Title": "Serverless computing is a cloud execution model where providers manage infrastructure, allowing developers to build and deploy applications without provisioning or scaling servers.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "cloud cost optimization",
+      "URL": "/glossary/FinOps-for-AI/",
+      "Title": "FinOps for AI is a discipline uniting financial management, cloud operations, and AI infrastructure governance to optimize and govern financial performance of AI resources.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "code block",
+      "URL": "/glossary/Code-Block--Python-JS-/",
+      "Title": "A code block groups programming statements for unified execution, defined by indentation in Python and curly braces in JavaScript. Used in automation and chatbots for custom logic.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "cohort analysis",
+      "URL": "/glossary/Cohort-Analysis/",
+      "Title": "Cohort analysis is a behavioral analytics method that divides users into groups based on shared characteristics to track and compare their behaviors over time, revealing trends.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Conditional Branching",
+      "URL": "/glossary/Logic-Node---Conditional-Branching/",
+      "Title": "A Logic Node (Conditional Branching) evaluates conditions in chatbot and automation workflows, directing paths dynamically based on user input or context.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Conditional Router",
+      "URL": "/glossary/Conditional-Router/",
+      "Title": "A Conditional Router evaluates data against rules, directing it to specific routes. Essential for dynamic, rule-based branching in automation pipelines, AI chatbots, and software.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "confidence threshold",
+      "URL": "/glossary/Confidence-Threshold/",
+      "Title": "The minimum score an AI model needs to accept a prediction as correct, acting as a cutoff for reliability and determining if a prediction is used or reviewed.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "containerization",
+      "URL": "/glossary/Containerization/",
+      "Title": "Containerization packages software code with dependencies into portable, isolated containers, ensuring consistent application execution across any environment, from dev to cloud.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "containers",
+      "URL": "/glossary/Containerization/",
+      "Title": "Containerization packages software code with dependencies into portable, isolated containers, ensuring consistent application execution across any environment, from dev to cloud.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "containers",
+      "URL": "/glossary/Docker/",
+      "Title": "Learn about Docker, an open-source platform for packaging, shipping, and running applications in lightweight, portable containers. Understand its architecture, benefits, and use cases.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "content moderation",
+      "URL": "/glossary/Content-Moderation/",
+      "Title": "Explore content moderation: monitoring, evaluating, and managing user-generated content to ensure platform guidelines, community standards, and legal compliance.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "context switching",
+      "URL": "/glossary/Context-Switching/",
+      "Title": "Understand context switching in AI chatbots and automation: how systems manage abrupt topic changes in user conversations, its impact on productivity, and strategies for effective handling.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "conversation drift",
+      "URL": "/glossary/Conversation-Drift/",
+      "Title": "Conversation drift occurs when an AI chatbot or virtual assistant diverges from the original topic, leading to off-topic responses and degraded user experience. Learn to prevent it.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "conversational AI",
+      "URL": "/glossary/Voiceflow/",
+      "Title": "Voiceflow is a no-code platform for designing, building, and deploying conversational AI agents like chatbots and voice assistants across multiple channels. Automate customer interactions and workflows.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Conversational AI",
+      "URL": "/glossary/Conversational-AI/",
+      "Title": "Explore Conversational AI: technologies simulating human conversation with NLP, NLU, ML, and speech recognition. Learn how it works, its benefits, use cases, and future trends.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Conversational AI",
+      "URL": "/glossary/Slot-Filling/",
+      "Title": "Slot filling extracts specific parameters from user queries to complete tasks in conversational AI. Essential for gathering data, enabling natural interaction, and ensuring task completion.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "conversational AI",
+      "URL": "/glossary/Utterance/",
+      "Title": "Learn what an utterance is in conversational AI, its role in NLU/NLP, types, workflow, challenges, and best practices for training chatbots effectively.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Conversational AI",
+      "URL": "/glossary/Dialogue-State-Tracking/",
+      "Title": "Dialogue State Tracking (DST) estimates user goals, slot values, and conversation history in a dialogue system, enabling coherent and relevant AI responses.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "conversational AI",
+      "URL": "/glossary/Dialogue-Management/",
+      "Title": "Dialogue management is the control system that maintains the state, context, and flow of a conversation in AI-powered interfaces, determining the most appropriate response or action at every turn.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "conversion funnel",
+      "URL": "/glossary/Conversion-Funnel/",
+      "Title": "A conversion funnel is an analytical model representing the user journey from initial awareness to a specific goal. Learn its stages, uses in marketing, UX, and optimization.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "cosine similarity",
+      "URL": "/glossary/Cosine-Similarity/",
+      "Title": "Cosine similarity is a metric that measures the cosine of the angle between two non-zero vectors, assessing their similarity based on orientation rather than magnitude. Widely used in machine learning, NLP, and recommendation systems.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Cost Estimation",
+      "URL": "/glossary/Cost-Estimation/",
+      "Title": "Cost estimation in AI chatbot and automation predicts resource consumption and financial outlay for deploying conversational AI solutions, enabling budgeting and optimization.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "cron expression",
+      "URL": "/glossary/Cron-Schedule/",
+      "Title": "A cron schedule is a time-based trigger for automated execution of tasks using a cron expression. Foundational in Unix, Linux, cloud, DevOps, and AI automation for reliable task automation.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "cron schedule",
+      "URL": "/glossary/Cron-Schedule/",
+      "Title": "A cron schedule is a time-based trigger for automated execution of tasks using a cron expression. Foundational in Unix, Linux, cloud, DevOps, and AI automation for reliable task automation.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Customer Engagement",
+      "URL": "/glossary/Engagement-Score/",
+      "Title": "Learn what an Engagement Score is, how this composite metric quantifies user, customer, or employee interaction with content, products, or services, and its strategic uses.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "customer support",
+      "URL": "/blog/understanding-ticket-systems-for-customer-support/",
+      "Title": "A comprehensive guide to customer support ticket systems, from basics to implementation and AI integration. Learn how to achieve operational efficiency and improve customer satisfaction.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "data normalization",
+      "URL": "/glossary/Canonical-Form/",
+      "Title": "Canonical form transforms data into a single, standardized representation for consistency, processing, and comparison, crucial for AI chatbots, NLP, and automation.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "data poisoning",
+      "URL": "/glossary/Data-Poisoning/",
+      "Title": "Data poisoning is a malicious attack where corrupted data is injected into AI/ML training sets to manipulate model behavior, degrade performance, or embed hidden vulnerabilities.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "database scaling",
+      "URL": "/glossary/Sharding/",
+      "Title": "Sharding is a database architecture pattern that splits a large logical dataset into smaller, independent pieces called shards, enabling horizontal scaling and improved performance.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Debug Console",
+      "URL": "/glossary/Debug-Console---Trace/",
+      "Title": "A Debug Console or Trace is a diagnostic interface providing visibility into automation flows, AI chatbots, or API proxy operations, capturing data, errors, and performance.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "deepfake detection",
+      "URL": "/glossary/Deepfake-Detection/",
+      "Title": "Explore deepfake detection technologies, methodologies, and workflows to identify AI-generated or altered media. Learn how to combat fraud, misinformation, and protect digital trust.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Delay Node",
+      "URL": "/glossary/Delay---Sleep-Node/",
+      "Title": "A Delay/Sleep Node pauses workflow execution in AI chatbots & automation for a set period or until a condition is met, crucial for API rate limiting & orchestration.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "deployment strategy",
+      "URL": "/glossary/Blue-Green-Deployment/",
+      "Title": "Blue-green deployment is a strategy to minimize downtime and risk by running two identical production environments (blue and green). It enables seamless traffic switching and instant rollback for new software releases.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "deployment strategy",
+      "URL": "/glossary/Canary-Release/",
+      "Title": "A canary release is a progressive software deployment strategy that rolls out new application versions incrementally to a small subset of users, allowing early issue detection and risk mitigation.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "DevOps",
+      "URL": "/glossary/GitOps/",
+      "Title": "Explore GitOps, a modern operational framework using Git as the single source of truth for infrastructure and application management. Learn its principles, workflow, benefits, and key tools for consistent, auditable, and automated deployments.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "dialogue management",
+      "URL": "/glossary/Dialogue-Management/",
+      "Title": "Dialogue management is the control system that maintains the state, context, and flow of a conversation in AI-powered interfaces, determining the most appropriate response or action at every turn.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Dialogue State Tracking",
+      "URL": "/glossary/Dialogue-State-Tracking/",
+      "Title": "Dialogue State Tracking (DST) estimates user goals, slot values, and conversation history in a dialogue system, enabling coherent and relevant AI responses.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Differential Privacy",
+      "URL": "/glossary/Privacy-Preserving-ML/",
+      "Title": "Explore Privacy-Preserving Machine Learning (PPML), methods like Differential Privacy, Homomorphic Encryption, MPC, and Federated Learning, to secure sensitive data in ML models.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Dify",
+      "URL": "/glossary/Dify/",
+      "Title": "Dify is an open-source LLM app development platform integrating BaaS and LLMOps. Visually build, deploy, and manage AI applications, agentic workflows, and RAG pipelines with minimal code.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Digital Workspace",
+      "URL": "/glossary/Infinite-Canvas/",
+      "Title": "An infinite canvas is a digital workspace that expands indefinitely, allowing users to map complex ideas, data, and visual elements without fixed boundaries. Ideal for brainstorming, design, and automation.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "disambiguation",
+      "URL": "/glossary/Disambiguation/",
+      "Title": "Disambiguation clarifies user intent in AI chatbots when input has multiple meanings, ensuring accurate interpretation by asking for clarification or presenting options.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Docker",
+      "URL": "/glossary/Docker/",
+      "Title": "Learn about Docker, an open-source platform for packaging, shipping, and running applications in lightweight, portable containers. Understand its architecture, benefits, and use cases.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Document Loader",
+      "URL": "/glossary/Document-Loader/",
+      "Title": "A Document Loader is a software module that automates the ingestion and transformation of raw data into structured Document objects for AI tasks like LLM pipelines and vector store indexing.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "DTMF",
+      "URL": "/glossary/DTMF--Dual-Tone-Multi-Frequency-/",
+      "Title": "DTMF (Dual-Tone Multi-Frequency) is a telecommunication signaling system using unique audio tones from keypad presses to interpret commands, route calls, and enable automated menu navigation, remote control, and secure data entry in telephone networks and digital platforms.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "dwell time",
+      "URL": "/glossary/Dwell-Time/",
+      "Title": "Dwell time measures the duration a user spends on a page after clicking from a SERP before returning. Learn its SEO impact, how to measure it, and strategies to improve user engagement.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Edge AI",
+      "URL": "/glossary/Edge-AI/",
+      "Title": "Edge AI deploys and executes artificial intelligence algorithms directly on devices at the network's edge, enabling real-time analysis, inference, and automated decision-making locally.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Edge Computing",
+      "URL": "/glossary/Edge-AI/",
+      "Title": "Edge AI deploys and executes artificial intelligence algorithms directly on devices at the network's edge, enabling real-time analysis, inference, and automated decision-making locally.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "edges",
+      "URL": "/glossary/Nodes-and-Edges/",
+      "Title": "Nodes are the fundamental building blocks (actions or entities) in a system; edges are the connections (lines) that define relationships, data flow, or dependencies.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "email auto-reply",
+      "URL": "/blog/ai-email-response-examples/",
+      "Title": "Examining the true capabilities of AI-powered automated response generation through real examples. A thorough analysis of accuracy and practicality through complex technical inquiries and complaint handling cases.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "email response efficiency",
+      "URL": "/blog/email-response-automation-platform/",
+      "Title": "Are you spending excessive time on business email responses? From scientific approaches to integrated platforms, discover revolutionary improvement methods for efficient email handling.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "embed script",
+      "URL": "/glossary/Embed-Script/",
+      "Title": "Learn about embed scripts, JavaScript snippets used to integrate AI chatbots and dynamic content onto any website. Discover usage, examples, customization, and best practices.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "engagement metrics",
+      "URL": "/glossary/Engagement-Metrics/",
+      "Title": "Engagement metrics quantify user interaction with digital assets like websites, apps, and social media. They reveal how users click, scroll, share, and convert, guiding optimization.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Engagement Score",
+      "URL": "/glossary/Engagement-Score/",
+      "Title": "Learn what an Engagement Score is, how this composite metric quantifies user, customer, or employee interaction with content, products, or services, and its strategic uses.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Entity Extraction",
+      "URL": "/glossary/Entity-Extraction/",
+      "Title": "Entity extraction (NER) is an NLP technique that identifies and classifies key information like names, organizations, and dates from unstructured text, transforming it into structured data for analytics and automation.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "entity linking",
+      "URL": "/glossary/Entity-Linking/",
+      "Title": "Entity linking connects extracted entities from text to unique entries in a knowledge base, resolving ambiguities and enabling structured data for AI, search, and recommendations.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "environment variables",
+      "URL": "/glossary/Environment-Variables--Secrets-/",
+      "Title": "Learn about environment variables (secrets) for secure application configuration. Decouple sensitive data like API keys and passwords from code, ensuring security and flexibility.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "error handler",
+      "URL": "/glossary/Error-Handler---Try-Catch/",
+      "Title": "An error handler, often a Try-Catch block, manages unexpected failures in automation and AI chatbots, preventing crashes and enabling controlled recovery or logging.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "event tracking",
+      "URL": "/glossary/Event-Tracking/",
+      "Title": "Event tracking measures user interactions with digital content and features, providing actionable data to optimize user experience and drive business outcomes.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "explainability",
+      "URL": "/glossary/Transparency/",
+      "Title": "AI transparency reveals an AI system's internal workings, data, and decision logic. Essential for building trust, ensuring accountability, and meeting regulatory compliance.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "fairness metrics",
+      "URL": "/glossary/Fairness-Metrics/",
+      "Title": "Fairness metrics are mathematical and statistical tools used to quantify, evaluate, and monitor bias in AI/ML systems, ensuring equitable treatment across groups.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "fallback mechanism",
+      "URL": "/glossary/Fall-back-Mechanism/",
+      "Title": "A fall-back mechanism in AI chatbots ensures continuity when the bot fails to interpret or fulfill a request, redirecting, clarifying, or escalating the conversation.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "False Negative",
+      "URL": "/glossary/False-Negative/",
+      "Title": "A false negative occurs when an AI system, like a chatbot, fails to detect a real issue or intent. Learn its impact, causes, and strategies to reduce it in automation.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "False Positive",
+      "URL": "/glossary/False-Positive/",
+      "Title": "A false positive is when an AI system (chatbot, detection tool, privacy filter) incorrectly identifies a situation or content as matching a criterion, leading to errors.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "feature flags",
+      "URL": "/glossary/Feature-Flags/",
+      "Title": "Feature flags enable dynamic control of software functionality without redeploying. Learn how these toggles facilitate progressive delivery, A/B testing, rapid rollbacks, and operational agility.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "feature toggles",
+      "URL": "/glossary/Feature-Flags/",
+      "Title": "Feature flags enable dynamic control of software functionality without redeploying. Learn how these toggles facilitate progressive delivery, A/B testing, rapid rollbacks, and operational agility.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "feedback buttons",
+      "URL": "/glossary/Feedback-Buttons--Thumbs-Up-Down-/",
+      "Title": "Learn about feedback buttons (thumbs up/down) for AI chatbots and digital content. Discover their benefits, best practices, and how they drive continuous improvement.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Figma",
+      "URL": "/glossary/Auto-Layout/",
+      "Title": "Master Auto-Layout, a design feature for automatically arranging and resizing UI elements. Covers core concepts, benefits, and implementation in Figma, iOS, Android, and Web.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "FinOps for AI",
+      "URL": "/glossary/FinOps-for-AI/",
+      "Title": "FinOps for AI is a discipline uniting financial management, cloud operations, and AI infrastructure governance to optimize and govern financial performance of AI resources.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "fintech",
+      "URL": "/glossary/Regulatory-Sandbox/",
+      "Title": "A regulatory sandbox is a controlled environment set up by regulators for innovative firms to test new products and services with relaxed rules, ensuring consumer safety and fostering innovation.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Flowise",
+      "URL": "/glossary/Flowise/",
+      "Title": "Flowise is an open-source, visual platform for building custom LLM flows and agentic AI systems with LangChainJS. Design, orchestrate, and deploy advanced AI workflows with minimal code.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "for-each loop",
+      "URL": "/glossary/Iterator---For-Each/",
+      "Title": "An iterator or for-each construct processes items in a list or collection one by one, enabling actions like reading, updating, or automating tasks for each element.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "frontend development",
+      "URL": "/glossary/Micro-Frontends/",
+      "Title": "Micro-Frontends is an architectural style decomposing web applications into smaller, independently developed and deployed frontend apps for scalable, autonomous teams.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "fulfillment",
+      "URL": "/glossary/Webhook-Fulfillment/",
+      "Title": "Webhook fulfillment is the backend process executing in response to an intent in AI chatbots or automated workflows. It fetches/manipulates data via APIs for dynamic, context-aware responses.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Generative AI",
+      "URL": "/glossary/Shadow-AI/",
+      "Title": "Shadow AI refers to the unsanctioned use of generative AI tools by employees, posing significant risks to data security, compliance, and intellectual property.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "generative AI",
+      "URL": "/glossary/Watermarking/",
+      "Title": "Watermarking in AI involves embedding visible or invisible signals into AI-generated content (text, images, audio, video) to verify its origin, combat deepfakes, and ensure authenticity.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "GitOps",
+      "URL": "/glossary/GitOps/",
+      "Title": "Explore GitOps, a modern operational framework using Git as the single source of truth for infrastructure and application management. Learn its principles, workflow, benefits, and key tools for consistent, auditable, and automated deployments.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Global Variables",
+      "URL": "/glossary/Global-Variables/",
+      "Title": "Global variables are accessible from any node in a program or automation platform, sharing data across flows, functions, and contexts. Learn their use in AI chatbots.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Glossary",
+      "URL": "/glossary/",
+      "Title": "Comprehensive glossary of AI chatbot, automation, and customer support terms. Clear explanations of technical concepts.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "Goal Completion Rate",
+      "URL": "/glossary/Goal-Completion-Rate--GCR-/",
+      "Title": "Goal Completion Rate (GCR) measures the percentage of users successfully achieving objectives in AI chatbots & automation. Learn its importance, calculation, and how to improve it.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "GPU acceleration",
+      "URL": "/glossary/GPU-Acceleration/",
+      "Title": "GPU acceleration leverages Graphics Processing Units (GPUs) for massive parallel processing, significantly speeding up compute-intensive AI, deep learning, data science, and HPC workloads.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Gumloop",
+      "URL": "/glossary/Gumloop/",
+      "Title": "Gumloop is a no-code, AI-first automation platform for repetitive tasks and workflows. It uses intelligent agents to browse the web, interact with SaaS apps, and make decisions.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "HA",
+      "URL": "/glossary/High-Availability--HA-/",
+      "Title": "High Availability (HA) is a system design focused on achieving continuous operational performance and uptime by eliminating single points of failure and leveraging redundancy.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "hamburger menu",
+      "URL": "/glossary/Hamburger-Menu/",
+      "Title": "A hamburger menu is a GUI element with three stacked lines that reveals a hidden navigation menu when clicked. Essential for mobile and responsive web design.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "High Availability",
+      "URL": "/glossary/High-Availability--HA-/",
+      "Title": "High Availability (HA) is a system design focused on achieving continuous operational performance and uptime by eliminating single points of failure and leveraging redundancy.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "HNSW",
+      "URL": "/glossary/HNSW--Hierarchical-Navigable-Small-World-/",
+      "Title": "HNSW (Hierarchical Navigable Small World) is a graph-based algorithm for fast, accurate approximate nearest neighbor (ANN) search in vector databases, ideal for high-dimensional data.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "HTTP Request Node",
+      "URL": "/glossary/HTTP-Request-Node/",
+      "Title": "Learn about the HTTP Request Node, a vital component in automation platforms like n8n and Node-RED, for sending HTTP requests to external APIs and integrating systems.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "hugging face models",
+      "URL": "/glossary/Hugging-Face/",
+      "Title": "Explore Hugging Face, the open-source AI platform and global community for democratizing ML. Discover models, datasets, and tools for NLP, computer vision, and more.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "human approval",
+      "URL": "/glossary/Human-Approval-Node/",
+      "Title": "A workflow step pausing automation for human review and decision-making. Also known as Human-in-the-Loop (HITL), it ensures human oversight in automated or agentic workflows.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Human-Agent Teaming",
+      "URL": "/glossary/Human-Agent-Teaming/",
+      "Title": "Human-Agent Teaming (HAT) is a collaborative paradigm where AI and human agents work together, sharing goals and control. Learn how HAT enhances efficiency and decision-making.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "human-in-the-loop",
+      "URL": "/glossary/Human-in-the-Loop--HITL-/",
+      "Title": "Human-in-the-Loop (HITL) integrates human intelligence into AI/ML workflows for training, tuning, and validation, ensuring accuracy, safety, and ethical decision-making.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "human-in-the-loop",
+      "URL": "/glossary/Human-Approval-Node/",
+      "Title": "A workflow step pausing automation for human review and decision-making. Also known as Human-in-the-Loop (HITL), it ensures human oversight in automated or agentic workflows.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "hybrid chatbot",
+      "URL": "/glossary/Hybrid-Chatbot/",
+      "Title": "A hybrid chatbot combines rule-based logic with AI, NLP, and ML to handle routine and complex queries, seamlessly escalating to human agents with full context.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "IaaS",
+      "URL": "/glossary/Cloud-Computing/",
+      "Title": "Explore cloud computing: on-demand IT resources, service models (IaaS, PaaS, SaaS), deployment options (public, private, hybrid), and benefits for AI infrastructure & deployment.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "IaC",
+      "URL": "/glossary/Infrastructure-as-Code--IaC-/",
+      "Title": "Infrastructure as Code (IaC) defines and manages IT infrastructure like networks, VMs, and load balancers using code and automation. Learn its benefits, tools, and best practices.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Image Generation Node",
+      "URL": "/glossary/Image-Generation-Node/",
+      "Title": "Learn about Image Generation Nodes, modular components in visual programming that interface with AI models like DALL-E and Stable Diffusion to create images from text prompts.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "indirect prompt injection",
+      "URL": "/glossary/Indirect-Prompt-Injection/",
+      "Title": "Learn about indirect prompt injection, a security vulnerability where attackers embed malicious instructions in external content processed by LLMs, leading to unintended actions or data leakage.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "inference latency",
+      "URL": "/glossary/Inference-Latency/",
+      "Title": "Inference latency is the time delay between providing input to an AI model and getting a prediction. It's a critical metric for real-time AI applications, impacting responsiveness and user experience.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Infinite Canvas",
+      "URL": "/glossary/Infinite-Canvas/",
+      "Title": "An infinite canvas is a digital workspace that expands indefinitely, allowing users to map complex ideas, data, and visual elements without fixed boundaries. Ideal for brainstorming, design, and automation.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Information Retrieval",
+      "URL": "/glossary/Query-Expansion/",
+      "Title": "Query expansion reformulates user search queries by adding synonyms and related terms to improve relevance in search engines, AI chatbots, and RAG systems, bridging intent gaps.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Infrastructure as Code",
+      "URL": "/glossary/Infrastructure-as-Code--IaC-/",
+      "Title": "Infrastructure as Code (IaC) defines and manages IT infrastructure like networks, VMs, and load balancers using code and automation. Learn its benefits, tools, and best practices.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "integrated platform",
+      "URL": "/blog/email-response-automation-platform/",
+      "Title": "Are you spending excessive time on business email responses? From scientific approaches to integrated platforms, discover revolutionary improvement methods for efficient email handling.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Integromat",
+      "URL": "/glossary/Make--Integromat-/",
+      "Title": "Make (formerly Integromat) is a visual, no-code platform for designing, building, and automating workflows from simple tasks to complex, enterprise-scale processes.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Intent Recognition",
+      "URL": "/glossary/Intent-Recognition/",
+      "Title": "Intent recognition is a core AI/NLP technology interpreting user input to understand specific goals. It enables systems to respond contextually and efficiently.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "iterator",
+      "URL": "/glossary/Iterator---For-Each/",
+      "Title": "An iterator or for-each construct processes items in a list or collection one by one, enabling actions like reading, updating, or automating tasks for each element.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Japanese benchmarks",
+      "URL": "/blog/ai-evaluation-japanese-benchmarks/",
+      "Title": "From automatic LLM evaluation methods to Japanese-specific benchmarks and hallucination mitigation strategies—comprehensive knowledge essential for enterprise AI adoption. Includes FlowHunt case studies.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "JSON data",
+      "URL": "/glossary/JSON-Path/",
+      "Title": "JSON Path is a query syntax for extracting, searching, and manipulating specific values from complex JSON data structures using concise path expressions.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "JSON Path",
+      "URL": "/glossary/JSON-Path/",
+      "Title": "JSON Path is a query syntax for extracting, searching, and manipulating specific values from complex JSON data structures using concise path expressions.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "knowledge base",
+      "URL": "/glossary/Entity-Linking/",
+      "Title": "Entity linking connects extracted entities from text to unique entries in a knowledge base, resolving ambiguities and enabling structured data for AI, search, and recommendations.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Knowledge Base Connector",
+      "URL": "/glossary/Knowledge-Base-Connector/",
+      "Title": "An integration module linking AI workflows like chatbots to indexed knowledge sources, powering Retrieval Augmented Generation (RAG) for context-relevant responses.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "KV Cache",
+      "URL": "/glossary/KV-Cache/",
+      "Title": "KV Cache is an inference-time optimization for Transformer models and LLMs, storing Key and Value tensors to dramatically speed up autoregressive token generation and reduce compute costs.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "LangFlow",
+      "URL": "/glossary/LangFlow/",
+      "Title": "LangFlow is an open-source, low-code visual interface for building, testing, and deploying AI applications, especially those based on LLMs and LangChain.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "large language models",
+      "URL": "/glossary/Jailbreaking/",
+      "Title": "AI jailbreaking is bypassing AI safety guardrails to generate prohibited content. Learn about techniques, risks, and mitigation strategies for large language models (LLMs).",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "large language models",
+      "URL": "/glossary/Hugging-Face/",
+      "Title": "Explore Hugging Face, the open-source AI platform and global community for democratizing ML. Discover models, datasets, and tools for NLP, computer vision, and more.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "latency",
+      "URL": "/glossary/Latency/",
+      "Title": "Latency is the time delay between a request and a system's response, crucial for AI infrastructure, web apps, and real-time systems. Learn its types, causes, and reduction strategies.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "latency budget",
+      "URL": "/glossary/Latency-Budget/",
+      "Title": "Explore latency budgets, the maximum allowable time for system response allocated across components. Understand their importance in AI systems, types, management strategies, and trade-offs.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "lemmatization",
+      "URL": "/glossary/Lemmatization/",
+      "Title": "Lemmatization is a linguistic process in NLP and AI that reduces inflected words to their base form (lemma), improving text search, understanding, and analysis.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "LLM evaluation",
+      "URL": "/blog/ai-evaluation-japanese-benchmarks/",
+      "Title": "From automatic LLM evaluation methods to Japanese-specific benchmarks and hallucination mitigation strategies—comprehensive knowledge essential for enterprise AI adoption. Includes FlowHunt case studies.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "LLM inference",
+      "URL": "/glossary/PagedAttention/",
+      "Title": "Explore PagedAttention, a memory management algorithm that partitions the KV cache of LLMs into fixed-size blocks, reducing GPU memory waste during inference and powering vLLM.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "LLM inference",
+      "URL": "/glossary/Speculative-Decoding/",
+      "Title": "Speculative decoding accelerates LLM inference by using a fast draft model to propose tokens, verified by a larger target model, reducing latency while maintaining output quality.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "LLM security",
+      "URL": "/glossary/Indirect-Prompt-Injection/",
+      "Title": "Learn about indirect prompt injection, a security vulnerability where attackers embed malicious instructions in external content processed by LLMs, leading to unintended actions or data leakage.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "LLM workflows",
+      "URL": "/glossary/Flowise/",
+      "Title": "Flowise is an open-source, visual platform for building custom LLM flows and agentic AI systems with LangChainJS. Design, orchestrate, and deploy advanced AI workflows with minimal code.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "LLMOps",
+      "URL": "/glossary/Dify/",
+      "Title": "Dify is an open-source LLM app development platform integrating BaaS and LLMOps. Visually build, deploy, and manage AI applications, agentic workflows, and RAG pipelines with minimal code.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "LLMs",
+      "URL": "/glossary/Output-Parsing/",
+      "Title": "Output parsing extracts structured data (JSON, Python objects) from AI language model text responses for automation, analytics, and system integration.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "LLMs",
+      "URL": "/glossary/LangFlow/",
+      "Title": "LangFlow is an open-source, low-code visual interface for building, testing, and deploying AI applications, especially those based on LLMs and LangChain.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "LLMs",
+      "URL": "/glossary/KV-Cache/",
+      "Title": "KV Cache is an inference-time optimization for Transformer models and LLMs, storing Key and Value tensors to dramatically speed up autoregressive token generation and reduce compute costs.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "load balancer",
+      "URL": "/glossary/Load-Balancing/",
+      "Title": "Learn about load balancing: distributing network traffic across servers to optimize application availability, reliability, and performance. Explore types, algorithms, and benefits for AI infrastructure.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "load balancing",
+      "URL": "/glossary/Load-Balancing/",
+      "Title": "Learn about load balancing: distributing network traffic across servers to optimize application availability, reliability, and performance. Explore types, algorithms, and benefits for AI infrastructure.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Logic Node",
+      "URL": "/glossary/Logic-Node---Conditional-Branching/",
+      "Title": "A Logic Node (Conditional Branching) evaluates conditions in chatbot and automation workflows, directing paths dynamically based on user input or context.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Loop Node",
+      "URL": "/glossary/Loop-Node/",
+      "Title": "A Loop Node automates repetitive actions in workflows, repeating tasks until a condition is met, a fixed number of times, or for each item in a collection. Essential for automation.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Machine Learning",
+      "URL": "/glossary/Model-Serving/",
+      "Title": "Model serving is the operational process of making trained machine learning models available for predictions via a network-accessible service, enabling AI-driven features in production systems.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "machine learning",
+      "URL": "/glossary/Cosine-Similarity/",
+      "Title": "Cosine similarity is a metric that measures the cosine of the angle between two non-zero vectors, assessing their similarity based on orientation rather than magnitude. Widely used in machine learning, NLP, and recommendation systems.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "machine learning",
+      "URL": "/glossary/Model-Robustness/",
+      "Title": "Model robustness is the ability of ML/AI models to maintain reliable performance against unexpected, noisy, incomplete, or maliciously manipulated inputs, ensuring trustworthiness and safety.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "machine learning",
+      "URL": "/glossary/Model-Quantization/",
+      "Title": "Model quantization reduces ML model precision (e.g., FP32 to INT8) to create smaller, faster models. It saves memory, speeds inference, lowers power, and enables edge device deployment.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Machine Learning",
+      "URL": "/glossary/Model-Cards/",
+      "Title": "Model Cards are standardized documents for ML models, detailing architecture, intended uses, performance, limitations, training data, and ethical considerations for transparency and accountability.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "machine learning bias",
+      "URL": "/glossary/Bias-Mitigation/",
+      "Title": "Bias mitigation involves techniques and strategies to reduce or eliminate systematic unfairness in machine learning models, ensuring ethical and fair AI outcomes.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "machine learning operations",
+      "URL": "/glossary/MLOps/",
+      "Title": "MLOps (Machine Learning Operations) is an engineering discipline that automates and streamlines the lifecycle of ML models from experimentation to production and maintenance.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "Make",
+      "URL": "/glossary/Make--Integromat-/",
+      "Title": "Make (formerly Integromat) is a visual, no-code platform for designing, building, and automating workflows from simple tasks to complex, enterprise-scale processes.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "marketing attribution",
+      "URL": "/glossary/Attribution-Window/",
+      "Title": "An attribution window defines the period after a marketing interaction when conversions are credited to that touchpoint. Learn why it's crucial for campaign effectiveness and budget allocation.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "marketing attribution",
+      "URL": "/glossary/Attribution-Modeling/",
+      "Title": "Attribution modeling is an analytical method to assign credit for conversions to marketing channels and touchpoints, optimizing campaigns and budget allocation.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "marketing funnel",
+      "URL": "/glossary/Conversion-Funnel/",
+      "Title": "A conversion funnel is an analytical model representing the user journey from initial awareness to a specific goal. Learn its stages, uses in marketing, UX, and optimization.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "micro frontends",
+      "URL": "/glossary/Micro-Frontends/",
+      "Title": "Micro-Frontends is an architectural style decomposing web applications into smaller, independently developed and deployed frontend apps for scalable, autonomous teams.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "microservices",
+      "URL": "/glossary/Microservices/",
+      "Title": "Explore a comprehensive glossary of microservices architecture, covering essential concepts, patterns, and technologies like API Gateway, Bounded Context, CQRS, and more.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Milvus",
+      "URL": "/glossary/Milvus/",
+      "Title": "Explore Milvus, an open-source, cloud-native vector database for scalable similarity search on unstructured data. Learn its architecture, features, use cases, and how it compares to other vector databases.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "minimap",
+      "URL": "/glossary/Minimap/",
+      "Title": "A minimap is a compact visual overview map for navigating large, complex flows, like AI chatbot conversations or code. It helps users orient themselves and manage intricate diagrams.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "misalignment",
+      "URL": "/glossary/Alignment-Problem/",
+      "Title": "The Alignment Problem in AI is the challenge of ensuring AI systems' goals and behaviors consistently match human values, preferences, and ethical standards, crucial for safe and beneficial AI deployment.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "MLOps",
+      "URL": "/glossary/MLOps/",
+      "Title": "MLOps (Machine Learning Operations) is an engineering discipline that automates and streamlines the lifecycle of ML models from experimentation to production and maintenance.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Model Cards",
+      "URL": "/glossary/Model-Cards/",
+      "Title": "Model Cards are standardized documents for ML models, detailing architecture, intended uses, performance, limitations, training data, and ethical considerations for transparency and accountability.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "model quantization",
+      "URL": "/glossary/Model-Quantization/",
+      "Title": "Model quantization reduces ML model precision (e.g., FP32 to INT8) to create smaller, faster models. It saves memory, speeds inference, lowers power, and enables edge device deployment.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "model robustness",
+      "URL": "/glossary/Model-Robustness/",
+      "Title": "Model robustness is the ability of ML/AI models to maintain reliable performance against unexpected, noisy, incomplete, or maliciously manipulated inputs, ensuring trustworthiness and safety.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Model Serving",
+      "URL": "/glossary/Model-Serving/",
+      "Title": "Model serving is the operational process of making trained machine learning models available for predictions via a network-accessible service, enabling AI-driven features in production systems.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "monolithic architecture",
+      "URL": "/glossary/Monolithic-Architecture/",
+      "Title": "Monolithic architecture is a software design where an entire application is built and deployed as a single, indivisible unit. Learn its structure, advantages, drawbacks, and use cases.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "multi-tenancy",
+      "URL": "/glossary/Multi-Tenancy/",
+      "Title": "Multi-tenancy is a software architecture where a single application instance serves multiple tenants, logically isolating data while sharing infrastructure. Essential for SaaS and cloud platforms.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "multi-turn conversation",
+      "URL": "/glossary/Multi-turn-Conversation/",
+      "Title": "Learn about multi-turn conversations in AI chatbots and automation. Understand how AI systems manage context, state, and multiple exchanges for complex tasks.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "N-gram",
+      "URL": "/glossary/N-Gram/",
+      "Title": "An N-gram is a contiguous sequence of n items (words, characters, or symbols) from text or speech, fundamental in NLP for language modeling and text analysis.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "n8n",
+      "URL": "/glossary/n8n/",
+      "Title": "n8n is a source-available, node-based workflow automation tool that connects your apps, APIs, and services with advanced AI integration.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Named Entity Recognition",
+      "URL": "/glossary/Entity-Extraction/",
+      "Title": "Entity extraction (NER) is an NLP technique that identifies and classifies key information like names, organizations, and dates from unstructured text, transforming it into structured data for analytics and automation.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Named Entity Recognition",
+      "URL": "/glossary/Named-Entity-Recognition--NER-/",
+      "Title": "Named Entity Recognition (NER) identifies and classifies real-world entities (people, organizations, locations, etc.) in text, transforming raw data into structured information.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Natural Language Processing",
+      "URL": "/glossary/N-Gram/",
+      "Title": "An N-gram is a contiguous sequence of n items (words, characters, or symbols) from text or speech, fundamental in NLP for language modeling and text analysis.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "Natural Language Processing",
+      "URL": "/glossary/Conversational-AI/",
+      "Title": "Explore Conversational AI: technologies simulating human conversation with NLP, NLU, ML, and speech recognition. Learn how it works, its benefits, use cases, and future trends.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "natural language processing",
+      "URL": "/glossary/Lemmatization/",
+      "Title": "Lemmatization is a linguistic process in NLP and AI that reduces inflected words to their base form (lemma), improving text search, understanding, and analysis.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "natural language processing",
+      "URL": "/glossary/Sentiment-Analysis/",
+      "Title": "Sentiment analysis interprets emotional tone in text using NLP, ML, and AI. It converts unstructured data into actionable insights for customer feedback, brand monitoring, and product improvement.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "Natural Language Processing",
+      "URL": "/glossary/Natural-Language-Processing--NLP-/",
+      "Title": "Natural Language Processing (NLP) is AI technology enabling computers to understand, interpret, and generate human language, bridging human communication and machine understanding.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "natural language processing (NLP)",
+      "URL": "/glossary/Misunderstood-Rate/",
+      "Title": "Misunderstood Rate measures chatbot failures to understand user intent, triggering fallback responses. It's a key metric for NLU performance, user experience, and improving conversational AI.",
+      "Exact": false,
+      "Priority": 10
+    },
+    {
+      "Keyword": "natural language understanding",
+      "URL": "/glossary/NLU-Confidence-Threshold/",
+      "Title": "The NLU confidence threshold is the minimum confidence score an NLU engine requires to trigger a specific intent for a user’s utterance. It's central to conversational AI.",
+      "Exact": false,
+      "Priority": 10
+    },
+    {
+      "Keyword": "NER",
+      "URL": "/glossary/Named-Entity-Recognition--NER-/",
+      "Title": "Named Entity Recognition (NER) identifies and classifies real-world entities (people, organizations, locations, etc.) in text, transforming raw data into structured information.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "nested flow",
+      "URL": "/glossary/Sub-flow---Nested-Flow/",
+      "Title": "Learn about sub-flows (nested flows) in automation. Embed workflows within others to simplify complex logic, enhance reusability, and improve maintenance.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "NLP",
+      "URL": "/glossary/Intent-Recognition/",
+      "Title": "Intent recognition is a core AI/NLP technology interpreting user input to understand specific goals. It enables systems to respond contextually and efficiently.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "NLP",
+      "URL": "/glossary/Natural-Language-Processing--NLP-/",
+      "Title": "Natural Language Processing (NLP) is AI technology enabling computers to understand, interpret, and generate human language, bridging human communication and machine understanding.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "NLU confidence threshold",
+      "URL": "/glossary/NLU-Confidence-Threshold/",
+      "Title": "The NLU confidence threshold is the minimum confidence score an NLU engine requires to trigger a specific intent for a user’s utterance. It's central to conversational AI.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "NLU models",
+      "URL": "/glossary/Utterance-Permutation/",
+      "Title": "Utterance permutation generates diverse sentence variations to train NLU models for AI chatbots and voice assistants, improving intent recognition and handling real-world language variability.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "no-code AI",
+      "URL": "/glossary/Stack-AI/",
+      "Title": "Stack AI is an enterprise-grade, no-code/low-code platform for building, testing, and deploying AI-powered workflows and agents, centered around advanced large language models (LLMs).",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "no-code workflow",
+      "URL": "/glossary/Visual-Flow-Builder/",
+      "Title": "Explore Visual Flow Builders, no-code drag-and-drop interfaces for designing, automating, and managing complex workflows and AI processes without writing code.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Node Grouping",
+      "URL": "/glossary/Node-Grouping/",
+      "Title": "Learn about Node Grouping, the practice of clustering related nodes in AI systems, workflow automation, and infrastructure orchestration to enhance clarity, manageability, and modularity.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "nodes",
+      "URL": "/glossary/Nodes-and-Edges/",
+      "Title": "Nodes are the fundamental building blocks (actions or entities) in a system; edges are the connections (lines) that define relationships, data flow, or dependencies.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "observability",
+      "URL": "/glossary/Telemetry/",
+      "Title": "Telemetry is the automated process of collecting, transmitting, and analyzing data from remote sources for monitoring, analysis, and decision-making. Learn its types, benefits, and implementation.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "open-domain bot",
+      "URL": "/glossary/Open-Domain-Bot/",
+      "Title": "An open-domain bot is an AI conversational agent designed for free-form dialogue on any topic, unlike task-specific closed-domain bots. Explore its architecture & uses.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "output parsing",
+      "URL": "/glossary/Output-Parsing/",
+      "Title": "Output parsing extracts structured data (JSON, Python objects) from AI language model text responses for automation, analytics, and system integration.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "PagedAttention",
+      "URL": "/glossary/PagedAttention/",
+      "Title": "Explore PagedAttention, a memory management algorithm that partitions the KV cache of LLMs into fixed-size blocks, reducing GPU memory waste during inference and powering vLLM.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "parallel execution",
+      "URL": "/glossary/Parallel-Execution/",
+      "Title": "Learn about parallel execution: running multiple tasks simultaneously to accelerate processing, maximize resource utilization, and compress feedback loops in workflows, tests, and chatbots.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Persistent Menu",
+      "URL": "/glossary/Persistent-Menu/",
+      "Title": "Learn about Persistent Menus in chatbots: what they are, why use them, how to implement them, and best practices for enhancing user navigation and experience.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Persona Design",
+      "URL": "/glossary/Persona-Design/",
+      "Title": "Learn about Persona Design for AI chatbots and automation. Define personality, voice, and character to create engaging, human-like interactions and enhance user experience.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Personal Information Protection",
+      "URL": "/privacy-policy/",
+      "Title": "Privacy policy regarding the handling of personal information in the SmartWeb service",
+      "Exact": false,
+      "Priority": 12
+    },
+    {
+      "Keyword": "personally identifiable information",
+      "URL": "/glossary/PII-Redaction/",
+      "Title": "Learn about PII redaction: the automated process of detecting and obscuring sensitive personally identifiable information from digital assets to ensure privacy and compliance.",
+      "Exact": false,
+      "Priority": 11
+    },
+    {
+      "Keyword": "PII redaction",
+      "URL": "/glossary/PII-Redaction/",
+      "Title": "Learn about PII redaction: the automated process of detecting and obscuring sensitive personally identifiable information from digital assets to ensure privacy and compliance.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Pinecone",
+      "URL": "/glossary/Pinecone/",
+      "Title": "Pinecone is a fully managed, cloud-native vector database for high-performance, scalable vector search and AI memory applications. It indexes and searches high-dimensional vector embeddings.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "precision",
+      "URL": "/glossary/Precision-and-Recall/",
+      "Title": "Precision and recall are core metrics for evaluating classification and information retrieval systems. Precision measures correct positive predictions, recall finds all actual positives.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Privacy Policy",
+      "URL": "/privacy-policy/",
+      "Title": "Privacy policy regarding the handling of personal information in the SmartWeb service",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Privacy-Preserving Machine Learning",
+      "URL": "/glossary/Privacy-Preserving-ML/",
+      "Title": "Explore Privacy-Preserving Machine Learning (PPML), methods like Differential Privacy, Homomorphic Encryption, MPC, and Federated Learning, to secure sensitive data in ML models.",
+      "Exact": false,
+      "Priority": 11
+    },
+    {
+      "Keyword": "Prompt Engineering",
+      "URL": "/glossary/Zero-Shot-Chain-of-Thought/",
+      "Title": "Zero-Shot Chain of Thought (CoT) is a prompt engineering technique for LLMs that instructs models to reason step-by-step without examples, improving complex problem-solving.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "prompt injection",
+      "URL": "/glossary/Variable-Injection/",
+      "Title": "Variable injection inserts dynamic data into prompts, scripts, or templates for AI chatbots and automation. Understand its syntax, use cases, and critical security risks like prompt injection attacks.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "prompt template",
+      "URL": "/glossary/Prompt-Template/",
+      "Title": "A prompt template is a pre-configured prompt structure with static instructions and variable placeholders, designed for repeated use in AI chatbots and automation systems.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Python",
+      "URL": "/glossary/Code-Block--Python-JS-/",
+      "Title": "A code block groups programming statements for unified execution, defined by indentation in Python and curly braces in JavaScript. Used in automation and chatbots for custom logic.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Qdrant",
+      "URL": "/glossary/Qdrant/",
+      "Title": "Qdrant is an open-source vector similarity search engine and vector database for high-dimensional vector data, enabling semantic search, RAG, and recommendations.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Query Expansion",
+      "URL": "/glossary/Query-Expansion/",
+      "Title": "Query expansion reformulates user search queries by adding synonyms and related terms to improve relevance in search engines, AI chatbots, and RAG systems, bridging intent gaps.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Quick Replies",
+      "URL": "/glossary/Quick-Replies/",
+      "Title": "Quick Replies are ephemeral, selectable buttons in chat interfaces, providing pre-defined options. They vanish after selection, preventing clutter and maintaining conversational flow.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "RAG",
+      "URL": "/blog/introduction-to-rag/",
+      "Title": "Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed coverage from differences with traditional AI to benefits and real-world use cases.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "rate limiting",
+      "URL": "/glossary/Throttling/",
+      "Title": "Throttling, also called API throttling, is the deliberate restriction of requests to an API or service within a specific time period. It prevents overload, ensures fair access, curbs abuse, and maintains performance.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Rate Limiting Handler",
+      "URL": "/glossary/Rate-Limiting-Handler/",
+      "Title": "A Rate Limiting Handler manages API request quotas, detects 429 errors, and implements retry logic to ensure compliance and prevent service disruptions for client and server applications.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "real time translation customer",
+      "URL": "/glossary/Real-time-Translation/",
+      "Title": "AI-powered systems that instantly translate chat, voice, or document content, enabling support agents and automated systems to communicate with customers in any language, in real time.",
+      "Exact": false,
+      "Priority": 10
+    },
+    {
+      "Keyword": "recall",
+      "URL": "/glossary/Precision-and-Recall/",
+      "Title": "Precision and recall are core metrics for evaluating classification and information retrieval systems. Precision measures correct positive predictions, recall finds all actual positives.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "regulatory sandbox",
+      "URL": "/glossary/Regulatory-Sandbox/",
+      "Title": "A regulatory sandbox is a controlled environment set up by regulators for innovative firms to test new products and services with relaxed rules, ensuring consumer safety and fostering innovation.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "retention",
+      "URL": "/glossary/Cohort-Analysis/",
+      "Title": "Cohort analysis is a behavioral analytics method that divides users into groups based on shared characteristics to track and compare their behaviors over time, revealing trends.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Retrieval Augmented Generation",
+      "URL": "/glossary/Knowledge-Base-Connector/",
+      "Title": "An integration module linking AI workflows like chatbots to indexed knowledge sources, powering Retrieval Augmented Generation (RAG) for context-relevant responses.",
+      "Exact": false,
+      "Priority": 10
+    },
+    {
+      "Keyword": "Retrieval-Augmented Generation",
+      "URL": "/blog/introduction-to-rag/",
+      "Title": "Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed coverage from differences with traditional AI to benefits and real-world use cases.",
+      "Exact": false,
+      "Priority": 10
+    },
+    {
+      "Keyword": "rich media cards",
+      "URL": "/glossary/Rich-Media-Cards/",
+      "Title": "Rich media cards are interactive UI components in chat streams, delivering multimedia content and actionable elements like images, videos, and buttons for engaging conversations.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Rollback",
+      "URL": "/glossary/Version-History---Rollback/",
+      "Title": "Understand version history and rollback in AI chatbot and automation platforms. Learn how to track, manage, and revert bot configurations to stable states, ensuring fast recovery from errors.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "rule-based chatbot",
+      "URL": "/glossary/Rule-Based-Chatbot/",
+      "Title": "A rule-based chatbot interacts with users by following predefined rules and scripts, responding to specific keywords or button selections without AI learning.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "SaaS",
+      "URL": "/glossary/Multi-Tenancy/",
+      "Title": "Multi-tenancy is a software architecture where a single application instance serves multiple tenants, logically isolating data while sharing infrastructure. Essential for SaaS and cloud platforms.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Safety Guardrails",
+      "URL": "/glossary/Safety-Guardrails/",
+      "Title": "Safety guardrails are engineered controls and policies that prevent AI systems, especially LLMs, from generating harmful, inappropriate, or non-compliant content, ensuring responsible and secure AI deployment.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "sandbox mode",
+      "URL": "/glossary/Sandbox-Mode/",
+      "Title": "An isolated, disposable testing environment for safely executing code, flows, or software without impacting production systems. Ideal for development, security, and QA.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "secrets management",
+      "URL": "/glossary/Environment-Variables--Secrets-/",
+      "Title": "Learn about environment variables (secrets) for secure application configuration. Decouple sensitive data like API keys and passwords from code, ensuring security and flexibility.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Self-Healing Knowledge",
+      "URL": "/glossary/Self-Healing-Knowledge/",
+      "Title": "Self-Healing Knowledge uses AI, ML, and automation to autonomously detect, diagnose, and correct outdated or erroneous content in knowledge management systems, ensuring accuracy.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "semantic routing",
+      "URL": "/glossary/Semantic-Routing/",
+      "Title": "Semantic routing directs user queries to specialized agents, prompts, or data sources by evaluating the semantic meaning (intent) using vector similarity.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "sentiment analysis",
+      "URL": "/glossary/Sentiment-Analysis/",
+      "Title": "Sentiment analysis interprets emotional tone in text using NLP, ML, and AI. It converts unstructured data into actionable insights for customer feedback, brand monitoring, and product improvement.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "sentiment-adaptive tone",
+      "URL": "/glossary/Sentiment-Adaptive-Tone/",
+      "Title": "Explore sentiment-adaptive tone, an AI capability that adjusts communication style based on customer emotion for improved interactions and satisfaction.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "SEO",
+      "URL": "/glossary/Dwell-Time/",
+      "Title": "Dwell time measures the duration a user spends on a page after clicking from a SERP before returning. Learn its SEO impact, how to measure it, and strategies to improve user engagement.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "serverless computing",
+      "URL": "/glossary/Serverless-Computing/",
+      "Title": "Serverless computing is a cloud execution model where providers manage infrastructure, allowing developers to build and deploy applications without provisioning or scaling servers.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Shadow AI",
+      "URL": "/glossary/Shadow-AI/",
+      "Title": "Shadow AI refers to the unsanctioned use of generative AI tools by employees, posing significant risks to data security, compliance, and intellectual property.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "sharding",
+      "URL": "/glossary/Sharding/",
+      "Title": "Sharding is a database architecture pattern that splits a large logical dataset into smaller, independent pieces called shards, enabling horizontal scaling and improved performance.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Sleep Node",
+      "URL": "/glossary/Delay---Sleep-Node/",
+      "Title": "A Delay/Sleep Node pauses workflow execution in AI chatbots & automation for a set period or until a condition is met, crucial for API rate limiting & orchestration.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Slot Carryover",
+      "URL": "/glossary/Slot-Carryover/",
+      "Title": "Slot carryover enables AI chatbots to remember and reuse structured information (slots) across conversational turns, maintaining context and improving user experience in task-oriented dialogue systems.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Slot Filling",
+      "URL": "/glossary/Slot-Filling/",
+      "Title": "Slot filling extracts specific parameters from user queries to complete tasks in conversational AI. Essential for gathering data, enabling natural interaction, and ensuring task completion.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Small Talk",
+      "URL": "/glossary/Small-Talk/",
+      "Title": "Explore small talk in AI chatbots: their ability to handle casual, non-functional conversations, simulating natural human-like exchanges to build rapport and enhance user experience.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "SME",
+      "URL": "/blog/start-using-ai-today/",
+      "Title": "A comprehensive guide to AI implementation for SMEs without IT staff. Achieve operational efficiency and improved customer satisfaction through ticket systems, AI email auto-response, and AI chatbots.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "software design",
+      "URL": "/glossary/Monolithic-Architecture/",
+      "Title": "Monolithic architecture is a software design where an entire application is built and deployed as a single, indivisible unit. Learn its structure, advantages, drawbacks, and use cases.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "software development",
+      "URL": "/glossary/Technical-Debt/",
+      "Title": "Technical debt is the implied cost of future reworking when choosing short-term solutions over robust approaches, leading to increased maintenance, complexity, and remediation costs in software development and AI systems.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "speculative decoding",
+      "URL": "/glossary/Speculative-Decoding/",
+      "Title": "Speculative decoding accelerates LLM inference by using a fast draft model to propose tokens, verified by a larger target model, reducing latency while maintaining output quality.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Speech Synthesis Markup Language",
+      "URL": "/glossary/SSML--Speech-Synthesis-Markup-Language-/",
+      "Title": "SSML is an XML-based markup language for controlling synthetic speech output, including pronunciation, intonation, pacing, and emotion, used by major TTS providers.",
+      "Exact": false,
+      "Priority": 10
+    },
+    {
+      "Keyword": "Speech-to-Text Node",
+      "URL": "/glossary/Speech-to-Text-Node/",
+      "Title": "A Speech-to-Text Node is a modular component in automation platforms and AI workflows that transcribes spoken language into machine-readable text using ASR.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "splash screen",
+      "URL": "/glossary/Splash-Screen/",
+      "Title": "A splash screen is the first visual a user sees when an app or chatbot launches, providing brand recognition and indicating loading. Essential for UX and branding.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Spot Instances",
+      "URL": "/glossary/Spot-Instances/",
+      "Title": "Spot Instances are discounted cloud compute resources from AWS, Azure, and GCP, ideal for fault-tolerant workloads like batch processing, analytics, and ML training.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "SSML",
+      "URL": "/glossary/SSML--Speech-Synthesis-Markup-Language-/",
+      "Title": "SSML is an XML-based markup language for controlling synthetic speech output, including pronunciation, intonation, pacing, and emotion, used by major TTS providers.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "Stack AI",
+      "URL": "/glossary/Stack-AI/",
+      "Title": "Stack AI is an enterprise-grade, no-code/low-code platform for building, testing, and deploying AI-powered workflows and agents, centered around advanced large language models (LLMs).",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "State / Context Memory",
+      "URL": "/glossary/State---Context-Memory/",
+      "Title": "Explore State / Context Memory, the storage mechanisms enabling AI chatbots to retain and recall information across sessions for conversational continuity, personalization, and efficient task management.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "state machine",
+      "URL": "/glossary/State-Machine/",
+      "Title": "Explore state machines, a computational model for system transitions. Learn core concepts, types, uses in AI chatbots & automation, implementation, advantages, and challenges.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "stream processing",
+      "URL": "/glossary/Batch-Processing/",
+      "Title": "Batch processing is a data approach where large volumes of data are collected and processed in groups over set periods. Ideal for high-throughput AI, analytics, and business operations.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "sub-flow",
+      "URL": "/glossary/Sub-flow---Nested-Flow/",
+      "Title": "Learn about sub-flows (nested flows) in automation. Embed workflows within others to simplify complex logic, enhance reusability, and improve maintenance.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "suggestion chips",
+      "URL": "/glossary/Suggestion-Chips/",
+      "Title": "Suggestion chips are interactive, pill-shaped UI elements in chatbots and conversational interfaces, offering quick, contextual response options that disappear after selection.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "system resilience",
+      "URL": "/glossary/Chaos-Engineering/",
+      "Title": "Chaos Engineering is a discipline of intentionally experimenting on systems to uncover weaknesses and build confidence in their resilience. Learn how to proactively identify vulnerabilities.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Task-Oriented Bot",
+      "URL": "/glossary/Task-Oriented-Bot/",
+      "Title": "A Task-Oriented Bot is a specialized chatbot designed to automate specific, structured processes like booking, tracking, or scheduling, using NLP and backend integration.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "team collaboration",
+      "URL": "/glossary/Team-Collaboration---Workspace/",
+      "Title": "Explore Team Collaboration / Workspace, a digital environment for multiple users to work in real-time on shared documents, processes, and automated workflows, often enhanced by AI.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "technical debt",
+      "URL": "/glossary/Technical-Debt/",
+      "Title": "Technical debt is the implied cost of future reworking when choosing short-term solutions over robust approaches, leading to increased maintenance, complexity, and remediation costs in software development and AI systems.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "telecommunication",
+      "URL": "/glossary/DTMF--Dual-Tone-Multi-Frequency-/",
+      "Title": "DTMF (Dual-Tone Multi-Frequency) is a telecommunication signaling system using unique audio tones from keypad presses to interpret commands, route calls, and enable automated menu navigation, remote control, and secure data entry in telephone networks and digital platforms.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "telemetry",
+      "URL": "/glossary/Telemetry/",
+      "Title": "Telemetry is the automated process of collecting, transmitting, and analyzing data from remote sources for monitoring, analysis, and decision-making. Learn its types, benefits, and implementation.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Terms of Use",
+      "URL": "/ai-chatbot-terms-of-use/",
+      "Title": "Terms of use for the AI Chatbot and AI Customer Support service provided by SmartWeb",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "testing environment",
+      "URL": "/glossary/Sandbox-Mode/",
+      "Title": "An isolated, disposable testing environment for safely executing code, flows, or software without impacting production systems. Ideal for development, security, and QA.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Text-to-Speech Node",
+      "URL": "/glossary/Text-to-Speech-Node/",
+      "Title": "A Text-to-Speech Node (TTS Node) is a modular building block in conversational AI and automation platforms, converting input text into synthesized audio for voice responses.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "thumbnail optimization",
+      "URL": "/blog/how-to-crack-the-youtube-algorithm-data-driven-insights/",
+      "Title": "Discover the exact strategies top 100 YouTubers use to get millions of views. Based on analysis of 93,421 videos, learn the data-backed secrets of thumbnail design, title optimization, and content structure that drive YouTube success.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "thumbs up/down",
+      "URL": "/glossary/Feedback-Buttons--Thumbs-Up-Down-/",
+      "Title": "Learn about feedback buttons (thumbs up/down) for AI chatbots and digital content. Discover their benefits, best practices, and how they drive continuous improvement.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "ticket system",
+      "URL": "/blog/understanding-ticket-systems-for-customer-support/",
+      "Title": "A comprehensive guide to customer support ticket systems, from basics to implementation and AI integration. Learn how to achieve operational efficiency and improve customer satisfaction.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Trace",
+      "URL": "/glossary/Debug-Console---Trace/",
+      "Title": "A Debug Console or Trace is a diagnostic interface providing visibility into automation flows, AI chatbots, or API proxy operations, capturing data, errors, and performance.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "translation tools",
+      "URL": "/glossary/Real-time-Translation/",
+      "Title": "AI-powered systems that instantly translate chat, voice, or document content, enabling support agents and automated systems to communicate with customers in any language, in real time.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "try-catch",
+      "URL": "/glossary/Error-Handler---Try-Catch/",
+      "Title": "An error handler, often a Try-Catch block, manages unexpected failures in automation and AI chatbots, preventing crashes and enabling controlled recovery or logging.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "TTS",
+      "URL": "/glossary/Text-to-Speech-Node/",
+      "Title": "A Text-to-Speech Node (TTS Node) is a modular building block in conversational AI and automation platforms, converting input text into synthesized audio for voice responses.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "typing indicators",
+      "URL": "/glossary/Typing-Indicators/",
+      "Title": "Typing indicators are visual cues in chat apps showing when someone is composing a message. They enhance user engagement, reduce uncertainty, and improve real-time communication.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "UI component",
+      "URL": "/glossary/Carousel/",
+      "Title": "A carousel is an interactive UI component displaying a sequence of content items like images or cards within a single viewport, allowing users to cycle through them.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "UI/UX design",
+      "URL": "/glossary/Hamburger-Menu/",
+      "Title": "A hamburger menu is a GUI element with three stacked lines that reveals a hidden navigation menu when clicked. Essential for mobile and responsive web design.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "user interaction",
+      "URL": "/glossary/Engagement-Metrics/",
+      "Title": "Engagement metrics quantify user interaction with digital assets like websites, apps, and social media. They reveal how users click, scroll, share, and convert, guiding optimization.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "user interactions",
+      "URL": "/glossary/Event-Tracking/",
+      "Title": "Event tracking measures user interactions with digital content and features, providing actionable data to optimize user experience and drive business outcomes.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "user-generated content",
+      "URL": "/glossary/Content-Moderation/",
+      "Title": "Explore content moderation: monitoring, evaluating, and managing user-generated content to ensure platform guidelines, community standards, and legal compliance.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "utterance",
+      "URL": "/glossary/Utterance/",
+      "Title": "Learn what an utterance is in conversational AI, its role in NLU/NLP, types, workflow, challenges, and best practices for training chatbots effectively.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "utterance permutation",
+      "URL": "/glossary/Utterance-Permutation/",
+      "Title": "Utterance permutation generates diverse sentence variations to train NLU models for AI chatbots and voice assistants, improving intent recognition and handling real-world language variability.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "VAD",
+      "URL": "/glossary/VAD--Voice-Activity-Detection-/",
+      "Title": "Voice Activity Detection (VAD) is a signal processing method that identifies human speech in audio streams. Essential for AI chatbots, ASR, and real-time communication, VAD improves accuracy and user experience by distinguishing speech from silence and noise.",
+      "Exact": false,
+      "Priority": 4
+    },
+    {
+      "Keyword": "variable injection",
+      "URL": "/glossary/Variable-Injection/",
+      "Title": "Variable injection inserts dynamic data into prompts, scripts, or templates for AI chatbots and automation. Understand its syntax, use cases, and critical security risks like prompt injection attacks.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "vector database",
+      "URL": "/glossary/Weaviate/",
+      "Title": "Weaviate is an open-source, cloud-native vector database storing objects & high-dimensional embeddings. It enables semantic, hybrid search & large-scale AI/ML applications.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "vector database",
+      "URL": "/glossary/Chroma/",
+      "Title": "Explore Chroma, an open-source vector database for AI-native applications. Learn about its core concepts, architecture, use cases like RAG and semantic search, and compare it with alternatives.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "vector database",
+      "URL": "/glossary/Vector-Database/",
+      "Title": "A vector database is a specialized system for storing, indexing, and querying high-dimensional vector embeddings, enabling efficient similarity search and powering modern AI applications like RAG.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "vector database",
+      "URL": "/glossary/Qdrant/",
+      "Title": "Qdrant is an open-source vector similarity search engine and vector database for high-dimensional vector data, enabling semantic search, RAG, and recommendations.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "vector database",
+      "URL": "/glossary/Pinecone/",
+      "Title": "Pinecone is a fully managed, cloud-native vector database for high-performance, scalable vector search and AI memory applications. It indexes and searches high-dimensional vector embeddings.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "vector database",
+      "URL": "/glossary/Milvus/",
+      "Title": "Explore Milvus, an open-source, cloud-native vector database for scalable similarity search on unstructured data. Learn its architecture, features, use cases, and how it compares to other vector databases.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "vector embeddings",
+      "URL": "/glossary/Vector-Database/",
+      "Title": "A vector database is a specialized system for storing, indexing, and querying high-dimensional vector embeddings, enabling efficient similarity search and powering modern AI applications like RAG.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Version History",
+      "URL": "/glossary/Version-History---Rollback/",
+      "Title": "Understand version history and rollback in AI chatbot and automation platforms. Learn how to track, manage, and revert bot configurations to stable states, ensuring fast recovery from errors.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "virtual assistant",
+      "URL": "/glossary/Virtual-Assistant/",
+      "Title": "A virtual assistant (VA) is a remote service provider, human or AI, offering administrative, technical, creative, or industry-specific support to businesses and individuals.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Visual Flow Builder",
+      "URL": "/glossary/Visual-Flow-Builder/",
+      "Title": "Explore Visual Flow Builders, no-code drag-and-drop interfaces for designing, automating, and managing complex workflows and AI processes without writing code.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Voice Activity Detection",
+      "URL": "/glossary/VAD--Voice-Activity-Detection-/",
+      "Title": "Voice Activity Detection (VAD) is a signal processing method that identifies human speech in audio streams. Essential for AI chatbots, ASR, and real-time communication, VAD improves accuracy and user experience by distinguishing speech from silence and noise.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "voice AI",
+      "URL": "/glossary/Wake-Word/",
+      "Title": "Explore wake word technology, the essential component for hands-free voice interaction with AI assistants and smart devices. Learn how wake words work, their use cases, and implementation.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "voicebot",
+      "URL": "/glossary/Voicebot/",
+      "Title": "Explore a comprehensive guide to voicebots, covering core technologies like ASR, NLP, and TTS, how they work, key features, types, and their business benefits for customer service and automation.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Voiceflow",
+      "URL": "/glossary/Voiceflow/",
+      "Title": "Voiceflow is a no-code platform for designing, building, and deploying conversational AI agents like chatbots and voice assistants across multiple channels. Automate customer interactions and workflows.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "vulnerabilities",
+      "URL": "/glossary/Red-Teaming/",
+      "Title": "Red Teaming is an adversarial process simulating real-world attacks on AI systems to uncover vulnerabilities, biases, and misuse. Essential for AI security, ethics, and compliance.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "wake word",
+      "URL": "/glossary/Wake-Word/",
+      "Title": "Explore wake word technology, the essential component for hands-free voice interaction with AI assistants and smart devices. Learn how wake words work, their use cases, and implementation.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Weaviate",
+      "URL": "/glossary/Weaviate/",
+      "Title": "Weaviate is an open-source, cloud-native vector database storing objects & high-dimensional embeddings. It enables semantic, hybrid search & large-scale AI/ML applications.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "web analytics",
+      "URL": "/glossary/Bounce-Rate/",
+      "Title": "Understand bounce rate, a key web analytics metric. Learn how it's calculated, its impact on user engagement & SEO, and strategies to reduce high bounce rates for better site performance.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "web analytics",
+      "URL": "/glossary/Click-Map/",
+      "Title": "A click map is a visual analytics tool showing where users click or tap on a web page. It helps web professionals, marketers, and UX specialists optimize site layouts, improve conversions, and understand user interactions.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "web scraper node",
+      "URL": "/glossary/Web-Scraper-Node/",
+      "Title": "A Web Scraper Node is a modular component for automated workflows, fetching and extracting data from web URLs. Essential for AI chatbots, competitor monitoring, and data aggregation.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "web scraping",
+      "URL": "/glossary/Web-Scraper-Node/",
+      "Title": "A Web Scraper Node is a modular component for automated workflows, fetching and extracting data from web URLs. Essential for AI chatbots, competitor monitoring, and data aggregation.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "webhook",
+      "URL": "/glossary/Webhook-Fulfillment/",
+      "Title": "Webhook fulfillment is the backend process executing in response to an intent in AI chatbots or automated workflows. It fetches/manipulates data via APIs for dynamic, context-aware responses.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "webhook trigger",
+      "URL": "/glossary/Webhook-Trigger/",
+      "Title": "A Webhook Trigger enables external services to initiate automated workflows by sending real-time HTTP requests. Essential for AI chatbots, automation, and system integration.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "webview",
+      "URL": "/glossary/Webview/",
+      "Title": "Discover Webview, an embedded browser window displaying web content like forms, product catalogs, and payment interfaces directly within chatbots and mobile apps for a seamless user experience.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "white labeling",
+      "URL": "/glossary/White-Labeling/",
+      "Title": "White labeling in AI chatbots allows businesses to deploy a chatbot platform fully branded as their own, removing all vendor references. Ideal for agencies, SaaS, and enterprises.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "Wizard of Oz Testing",
+      "URL": "/glossary/Wizard-of-Oz-Testing--WoZ-/",
+      "Title": "Wizard of Oz Testing (WoZ) is a user-research method where users interact with a system controlled by a hidden human, simulating AI to test designs cost-effectively.",
+      "Exact": false,
+      "Priority": 8
+    },
+    {
+      "Keyword": "Workflow Automation",
+      "URL": "/glossary/Automated-Workflows/",
+      "Title": "Automated workflows are technology-enabled processes that execute tasks, activities, or decisions based on predefined rules, minimizing human intervention and optimizing efficiency.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Workflow automation",
+      "URL": "/glossary/Conditional-Router/",
+      "Title": "A Conditional Router evaluates data against rules, directing it to specific routes. Essential for dynamic, rule-based branching in automation pipelines, AI chatbots, and software.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "workflow automation",
+      "URL": "/glossary/Parallel-Execution/",
+      "Title": "Learn about parallel execution: running multiple tasks simultaneously to accelerate processing, maximize resource utilization, and compress feedback loops in workflows, tests, and chatbots.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Workflow Automation",
+      "URL": "/glossary/Loop-Node/",
+      "Title": "A Loop Node automates repetitive actions in workflows, repeating tasks until a condition is met, a fixed number of times, or for each item in a collection. Essential for automation.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "workflow automation",
+      "URL": "/glossary/n8n/",
+      "Title": "n8n is a source-available, node-based workflow automation tool that connects your apps, APIs, and services with advanced AI integration.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "workspace",
+      "URL": "/glossary/Team-Collaboration---Workspace/",
+      "Title": "Explore Team Collaboration / Workspace, a digital environment for multiple users to work in real-time on shared documents, processes, and automated workflows, often enhanced by AI.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "WoZ testing",
+      "URL": "/glossary/Wizard-of-Oz-Testing--WoZ-/",
+      "Title": "Wizard of Oz Testing (WoZ) is a user-research method where users interact with a system controlled by a hidden human, simulating AI to test designs cost-effectively.",
+      "Exact": false,
+      "Priority": 6
+    },
+    {
+      "Keyword": "YouTube algorithm",
+      "URL": "/blog/how-to-crack-the-youtube-algorithm-data-driven-insights/",
+      "Title": "Discover the exact strategies top 100 YouTubers use to get millions of views. Based on analysis of 93,421 videos, learn the data-backed secrets of thumbnail design, title optimization, and content structure that drive YouTube success.",
+      "Exact": false,
+      "Priority": 7
+    },
+    {
+      "Keyword": "Zapier",
+      "URL": "/glossary/Zapier/",
+      "Title": "Explore Zapier, the no-code automation platform connecting 8,000+ apps. Learn about Zaps, AI Agents, use cases, and how to automate workflows efficiently.",
+      "Exact": false,
+      "Priority": 5
+    },
+    {
+      "Keyword": "Zero-Shot Chain of Thought",
+      "URL": "/glossary/Zero-Shot-Chain-of-Thought/",
+      "Title": "Zero-Shot Chain of Thought (CoT) is a prompt engineering technique for LLMs that instructs models to reason step-by-step without examples, improving complex problem-solving.",
+      "Exact": false,
+      "Priority": 9
+    },
+    {
+      "Keyword": "Zero-Touch Resolution",
+      "URL": "/glossary/Zero-Touch-Resolution/",
+      "Title": "Explore Zero-Touch Resolution, a practice where issues are automatically resolved without human intervention using AI, automation, and self-service platforms. Learn its benefits, challenges, and implementation.",
+      "Exact": false,
+      "Priority": 8
+    }
+  ]
+}

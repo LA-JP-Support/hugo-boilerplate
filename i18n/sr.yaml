@@ -119,3 +119,6 @@ copy_error: "Грешка при копирању"
 # Promotional offers
 promo_offer: "Ограничена понуда"
 promo_offer_in_menu: "-75% OFF"
+
+blog_title: "Blog"
+related_posts: "Related Posts"

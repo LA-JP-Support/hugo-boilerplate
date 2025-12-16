@@ -1170,3 +1170,161 @@ Post-Quantum Cryptography,Cryptographic algorithms thought to be secure against 
 Digital Twin,A virtual representation that serves as the real-time digital counterpart of a physical object or process.,Emerging Trends & Future Tech,Digital-Twin.md
 Generative Search,Search engines that generate direct answers using AI rather than just listing links.,Emerging Trends & Future Tech,Generative-Search.md
 Synthetic Data,"Information that's artificially generated rather than produced by real-world events, used to train AI.",Emerging Trends & Future Tech,Synthetic-Data.md
+artificial intelligence,Technology that enables computers to think and make decisions like humans,AI Chatbot & Automation,artificial-intelligence.md
+customer support,Operations that handle customer inquiries and support,AI Chatbot & Automation,customer-support.md
+large language models,AI models trained on massive amounts of text data to understand language usage,AI Chatbot & Automation,large-language-models.md
+deep learning,Advanced learning methods that mimic the human brain's mechanisms,AI Chatbot & Automation,deep-learning.md
+natural language processing,Technology that enables computers to understand and process human language,AI Chatbot & Automation,natural-language-processing.md
+scenarios,Pre-prepared conversation flows,AI Chatbot & Automation,scenarios.md
+FAQs,Frequently asked questions and their answers compiled together,AI Chatbot & Automation,FAQs.md
+finite state machines,Simple mechanisms that operate with defined states and transition rules,AI Chatbot & Automation,finite-state-machines.md
+machine learning,Technology that learns by finding patterns in data,AI Chatbot & Automation,machine-learning.md
+neural networks,Learning models that mimic the neural circuits of the human brain,AI Chatbot & Automation,neural-networks.md
+hallucination,Phenomenon where AI generates plausible but incorrect information,AI Chatbot & Automation,hallucination.md
+RAG,Abbreviation for Retrieval-Augmented Generation. Technology that searches external data and uses that information to generate responses,AI Chatbot & Automation,RAG.md
+FlowHunt,Chatbot building platform that can utilize multiple AI models,AI Chatbot & Automation,FlowHunt.md
+Multi-channel support,"Unified management of multiple channels like Web, LINE, and email",AI Chatbot & Automation,Multi-channel-support.md
+API integration,Mechanism for connecting different systems to automatically exchange data,AI Chatbot & Automation,API-integration.md
+supervised learning,Method of training AI using data with correct answers,AI Chatbot & Automation,supervised-learning.md
+unsupervised learning,Learning method where AI finds patterns on its own without being given correct answers,AI Chatbot & Automation,unsupervised-learning.md
+reinforcement learning,"Learning method that learns through trial and error, receiving rewards for good results",AI Chatbot & Automation,reinforcement-learning.md
+continuous learning,Mechanism that continues to learn new information during operation,AI Chatbot & Automation,continuous-learning.md
+LiveAgent,Tool for unified management of customer inquiries,AI Chatbot & Automation,LiveAgent.md
+TCO,Abbreviation for Total Cost of Ownership. Total cost including implementation through operation,AI Chatbot & Automation,TCO.md
+Personal Information Protection Law,Law defining proper handling of personal information,AI Chatbot & Automation,Personal-Information-Protection-Law.md
+GDPR,EU's strict personal information protection regulations,AI Chatbot & Automation,GDPR.md
+speech recognition,Technology that converts spoken words to text,AI Chatbot & Automation,speech-recognition.md
+image analysis,Technology where AI understands photo and image content,AI Chatbot & Automation,image-analysis.md
+multimodal technology,"Technology that can simultaneously process multiple formats like text, voice, and images",AI Chatbot & Automation,multimodal-technology.md
+bias,Specific biases or preconceptions,AI Chatbot & Automation,bias.md
+Natural Language Processing (NLP),Technology that enables AI to understand and respond to human language,AI Chatbot & Automation,Natural-Language-Processing--NLP-.md
+Cloud AI,AI services available via the internet,AI Chatbot & Automation,Cloud-AI.md
+Generative AI,AI technology that automatically generates text and images,AI Chatbot & Automation,Generative-AI.md
+Multimodal AI,"AI capable of handling multiple formats including text, voice, and images",AI Chatbot & Automation,Multimodal-AI.md
+Customer Experience (CX),"Abbreviation for Customer Experience, the overall experience customers have with a company",AI Chatbot & Automation,Customer-Experience---CX-.md
+CAGR,"Compound Annual Growth Rate, an indicator of annual growth",AI Chatbot & Automation,CAGR.md
+Autonomous AI Agents,AI capable of autonomous decision-making and action,AI Chatbot & Automation,Autonomous-AI-Agents.md
+Rule-based,Systems operating according to predetermined rules,AI Chatbot & Automation,Rule-based.md
+Einstein Service Agent,Fully autonomous AI agent capable of understanding and acting on a wide range of service issues without pre-programming,AI Chatbot & Automation,Einstein-Service-Agent.md
+Contact Lens for Amazon Connect,Machine learning-powered call analysis service,AI Chatbot & Automation,Contact-Lens-for-Amazon-Connect.md
+Cart Abandonment Rate,Percentage of customers who add items to cart but leave without purchasing,AI Chatbot & Automation,Cart-Abandonment-Rate.md
+ROI,Return on Investment - indicator of profit gained relative to investment,AI Chatbot & Automation,ROI.md
+CRM,Customer Relationship Management system,AI Chatbot & Automation,CRM.md
+Personalization,Adjusting services to individual preferences and situations,AI Chatbot & Automation,Personalization.md
+LTV (Lifetime Value),Total profit a single customer brings to a company,AI Chatbot & Automation,LTV---Lifetime-Value-.md
+Hybrid System,System where AI and humans collaborate through role division,AI Chatbot & Automation,Hybrid-System.md
+Customer Loyalty Scores,Indicator measuring customer attachment to a company or brand,AI Chatbot & Automation,Customer-Loyalty-Scores.md
+data encryption,Converting information into unreadable form to protect it from third parties,AI Chatbot & Automation,data-encryption.md
+contextual understanding,Understanding conversation flow and context,AI Chatbot & Automation,contextual-understanding.md
+honorific language support,Appropriate use of Japanese polite expressions,AI Chatbot & Automation,honorific-language-support.md
+knowledge base,A database that systematically compiles knowledge such as frequently asked questions and product information,AI Chatbot & Automation,knowledge-base.md
+URL Retriever,A function that automatically acquires website information and updates it periodically,AI Chatbot & Automation,URL-Retriever.md
+first contact resolution,The percentage of customer inquiries resolved on first contact. Higher percentages indicate higher customer satisfaction,AI Chatbot & Automation,first-contact-resolution.md
+tickets,A unit for managing customer inquiries as individual cases. Can record progress status and response history,AI Chatbot & Automation,tickets.md
+LLM as Judge,A novel technique where AI systems evaluate the responses of other AI systems,AI Chatbot & Automation,LLM-as-Judge.md
+unsupervised consistency evaluation,An evaluation method that measures reliability by assessing the consistency of multiple AI responses without requiring correct answers,AI Chatbot & Automation,unsupervised-consistency-evaluation.md
+oracle feedback (ground-truth labels),Pre-determined correct answers or gold standard labels provided by humans,AI Chatbot & Automation,oracle-feedback---ground-truth-labels-.md
+CAI ratio,"An evaluation metric in the research phase that analyzes the consistency and inconsistency between student models and LLM outputs, abbreviating Consistent and Inconsistent Ratio",AI Chatbot & Automation,CAI-ratio.md
+student models,A supplementary AI model used for comparison with the main evaluation target model,AI Chatbot & Automation,student-models.md
+supplementary indicator,Additional judgment material that complements the primary evaluation metric,AI Chatbot & Automation,supplementary-indicator.md
+Hallucination phenomena,The phenomenon where AI generates non-existent information or incorrect content in a plausible manner,AI Chatbot & Automation,Hallucination-phenomena.md
+RAG benchmarks,Evaluation criteria for AI systems that search external knowledge to generate responses,AI Chatbot & Automation,RAG-benchmarks.md
+Fact-Score,An evaluation metric that automatically scores the factuality of AI-generated text,AI Chatbot & Automation,Fact-Score.md
+MHaluBench,A hallucination detection benchmark for multimodal AI combining images and text,AI Chatbot & Automation,MHaluBench.md
+prompts,Instruction text or questions given to AI,AI Chatbot & Automation,prompts.md
+Zero-shot,Directly asking questions without examples,AI Chatbot & Automation,Zero-shot.md
+Few-shot,Asking questions after showing several examples,AI Chatbot & Automation,Few-shot.md
+Chain-of-Thought,Asking questions while gradually showing the thinking process,AI Chatbot & Automation,Chain-of-Thought.md
+Precision,Accuracy rate,AI Chatbot & Automation,Precision.md
+F1 score,Harmonic mean of precision and recall,AI Chatbot & Automation,F1-score.md
+BLEU/ROUGE scores,Metrics measuring similarity between generated and reference text,AI Chatbot & Automation,BLEU---ROUGE-scores.md
+Consistency evaluation,Evaluation of whether the same input produces consistent outputs,AI Chatbot & Automation,Consistency-evaluation.md
+Reproducibility validation,Verification that results remain consistent across different environments,AI Chatbot & Automation,Reproducibility-validation.md
+Chain-of-Thought prompts,A technique that improves reasoning accuracy by prompting AI to show step-by-step thinking,AI Chatbot & Automation,Chain-of-Thought-prompts.md
+structured prompts,Prompt design that organizes information according to fixed formats,AI Chatbot & Automation,structured-prompts.md
+JamC-QA,"Abbreviation for Japanese Multiple Choice QA, an evaluation test assessing knowledge of Japanese culture and customs",AI Chatbot & Automation,JamC-QA.md
+accuracy measurement,Calculation of accuracy rate,AI Chatbot & Automation,accuracy-measurement.md
+hallucination mitigation strategies,Technology to prevent AI from generating incorrect information,AI Chatbot & Automation,hallucination-mitigation-strategies.md
+OpenAI,AI company that developed ChatGPT and GPT-5,AI Chatbot & Automation,OpenAI.md
+Google,AI company that developed advanced AI including Gemini 2.5 Pro,AI Chatbot & Automation,Google.md
+Anthropic,AI company that developed Claude AI,AI Chatbot & Automation,Anthropic.md
+hallucination problem,The phenomenon where AI generates non-existent information in a plausible manner,AI Chatbot & Automation,hallucination-problem.md
+RAG technology,Technology that generates responses by referencing external knowledge bases,AI Chatbot & Automation,RAG-technology.md
+Unsupervised consistency metrics,A method measuring reliability from the consistency of AI responses without ground-truth data,AI Chatbot & Automation,Unsupervised-consistency-metrics.md
+hallucination detection,Technology that automatically detects incorrect information generated by AI,AI Chatbot & Automation,hallucination-detection.md
+culture-specific benchmarks,Evaluation tests specialized in the knowledge of specific cultures or regions,AI Chatbot & Automation,culture-specific-benchmarks.md
+platform,"Social media services such as Facebook, Twitter, and Instagram",AI Chatbot & Automation,platform.md
+Centralized social media management,"Managing messages, comments, and response history from multiple social media platforms in a single system",AI Chatbot & Automation,Centralized-social-media-management.md
+digitalization,Using computers and the internet to make work and life more convenient,AI Chatbot & Automation,digitalization.md
+APIs,A mechanism that allows different software systems to automatically exchange information,AI Chatbot & Automation,APIs.md
+rules engine,A system that automatically makes decisions and processes based on predetermined conditions,AI Chatbot & Automation,rules-engine.md
+dashboard,A management interface that displays multiple pieces of information consolidated on a single screen,AI Chatbot & Automation,dashboard.md
+network environment,Internet connection environment,AI Chatbot & Automation,network-environment.md
+security policies,Internal rules regarding information security,AI Chatbot & Automation,security-policies.md
+user roles,"Roles and permissions such as administrator, staff member, viewer, etc.",AI Chatbot & Automation,user-roles.md
+Integration,Integrating and connecting different systems,AI Chatbot & Automation,Integration.md
+API keys,Authentication information required to connect different systems,AI Chatbot & Automation,API-keys.md
+visualization,Making information and situations easily visible and understandable,AI Chatbot & Automation,visualization.md
+monitoring,Continuously monitoring system and business conditions,AI Chatbot & Automation,monitoring.md
+workflows,A system that defines business processes and approval procedures,AI Chatbot & Automation,workflows.md
+cost-performance,Cost-performance ratio,AI Chatbot & Automation,cost-performance.md
+AI,Artificial Intelligence,AI Chatbot & Automation,AI.md
+AI agents,AI programs that automatically perform specific tasks,AI Chatbot & Automation,AI-agents.md
+AI chatbots,Automated response systems utilizing artificial intelligence,AI Chatbot & Automation,AI-chatbots.md
+Pareto's Law,"An empirical rule stating that 80% of overall results come from 20% of overall causes. In email handling, approximately 80% of all inquiries tend to concentrate on specific 20% of themes",AI Chatbot & Automation,Pareto's-Law.md
+cognitive load,The mental burden placed on the brain during work. Refers to the amount of attention and memory required when processing information,AI Chatbot & Automation,cognitive-load.md
+multitasking,Performing multiple tasks simultaneously. Research shows this reduces work efficiency; email handling is more efficient when processed one at a time with concentration,AI Chatbot & Automation,multitasking.md
+bottlenecks,Points in business processes that take the most time or impose the greatest burden. Improving these points significantly enhances overall efficiency,AI Chatbot & Automation,bottlenecks.md
+circadian rhythm,"Physiological phenomena that fluctuate on approximately 24-hour cycles. Includes body temperature, hormone secretion, and sleep-wake cycles. The 2-3 hours after waking are considered cognitive function peaks",AI Chatbot & Automation,circadian-rhythm.md
+ticket management,"A system that manages customer inquiries and requests individually as 'tickets,' tracking response status and history",AI Chatbot & Automation,ticket-management.md
+ticket system,"A system that manages customer inquiries and requests individually as 'tickets,' tracking response status and history",AI Chatbot & Automation,ticket-system.md
+Support Portal,"A website or system that aggregates information like FAQs, manuals, and guides so customers can solve problems themselves",AI Chatbot & Automation,Support-Portal.md
+Return on Investment,A metric that measures how much benefit or profit is gained relative to the amount invested,AI Chatbot & Automation,Return-on-Investment.md
+RAG (Retrieval-Augmented Generation),AI technology that searches for and incorporates external information to generate responses based on it,AI Chatbot & Automation,RAG---Retrieval-Augmented-Generation-.md
+computational resources,"Computer processing power, memory, and other resources",AI Chatbot & Automation,computational-resources.md
+knowledge graphs,Data structure representing relationships between information as graphs,AI Chatbot & Automation,knowledge-graphs.md
+tacit knowledge,Knowledge and skills acquired through experience that are difficult to explain in words,AI Chatbot & Automation,tacit-knowledge.md
+explicit knowledge,Knowledge recorded in visible forms such as documents and manuals,AI Chatbot & Automation,explicit-knowledge.md
+FAQ,Frequently Asked Questions - a collection of common questions and their answers,AI Chatbot & Automation,FAQ.md
+natural language search,A feature that allows searching using natural language. Users can search with natural sentences like 'What should I do when I forget my password?',AI Chatbot & Automation,natural-language-search.md
+AI (Artificial Intelligence),Technology that enables computers to make human-like judgments and learning. Can automatically find optimal answers,AI Chatbot & Automation,AI---Artificial-Intelligence-.md
+Chatbot,A program that automatically answers customer questions. Available 24/7 and can respond to simple questions like humans,AI Chatbot & Automation,Chatbot.md
+Workflow,Defined business processes and procedures. Rules that determine who does what and when,AI Chatbot & Automation,Workflow.md
+KCS,A system that immediately registers knowledge gained in the field into a database for organization-wide sharing. A knowledge-centered service operation method,AI Chatbot & Automation,KCS.md
+KCS (Knowledge-Centered Service),A system that immediately registers knowledge gained in the field into a database for organization-wide sharing. A knowledge-centered service operation method,AI Chatbot & Automation,KCS---Knowledge-Centered-Service-.md
+access control,A system that restricts who can use the system and what functions they can access. Security features,AI Chatbot & Automation,access-control.md
+self-service,Services that help customers solve problems independently. Provides FAQs and operation guides,AI Chatbot & Automation,self-service.md
+data science,Technology that analyzes large amounts of data to discover useful information and trends,AI Chatbot & Automation,data-science.md
+UX,User experience and satisfaction when using systems,AI Chatbot & Automation,UX.md
+user interfaces (UI),The screens and operation methods users interact with in systems. Directly impacts usability,AI Chatbot & Automation,user-interfaces---UI-.md
+AI implementation,Incorporating artificial intelligence into business operations,AI Chatbot & Automation,AI-implementation.md
+digital transformation,Transforming business processes and business models using IT and digital technologies,AI Chatbot & Automation,digital-transformation.md
+AI email auto-response generation,A feature where AI understands inquiry content and automatically creates response drafts,AI Chatbot & Automation,AI-email-auto-response-generation.md
+ticket systems,A system that centrally manages inquiries and visualizes response status,AI Chatbot & Automation,ticket-systems.md
+automation platform,A system platform that automatically coordinates and executes multiple business processes,AI Chatbot & Automation,automation-platform.md
+cloud-based,"A service format accessed via the internet, independent of specific locations or devices",AI Chatbot & Automation,cloud-based.md
+automation rules,Settings that automatically execute processes based on specific conditions,AI Chatbot & Automation,automation-rules.md
+spam filtering,A feature that automatically identifies and appropriately classifies unwanted emails,AI Chatbot & Automation,spam-filtering.md
+knowledge bases,A database that systematically compiles knowledge and information within a company,AI Chatbot & Automation,knowledge-bases.md
+note,Internal memo displayed for staff within the ticket system,AI Chatbot & Automation,note.md
+AI answer assistant,An AI feature that supports text refinement and adding explanations for technical terms,AI Chatbot & Automation,AI-answer-assistant.md
+AI chatbot,A system where AI automatically answers customer questions,AI Chatbot & Automation,AI-chatbot.md
+cloud service,A service format for software and systems available via the internet,AI Chatbot & Automation,cloud-service.md
+"ITIL, the Best Practice in IT Operations Management",A global standard methodology for efficiently managing computer systems. A proven method adopted by many companies,AI Chatbot & Automation,ITIL--the-Best-Practice-in-IT-Operations-Management.md
+ITIL (IT Infrastructure Library),A global standard methodology for efficiently managing computer systems. A proven method adopted by many companies,AI Chatbot & Automation,ITIL---IT-Infrastructure-Library-.md
+incidents,The process of managing inquiries related to service interruptions or troubles,AI Chatbot & Automation,incidents.md
+escalation,The process of escalating difficult cases to senior staff or specialized teams,AI Chatbot & Automation,escalation.md
+ITIL,A global standard methodology for efficiently managing computer systems,AI Chatbot & Automation,ITIL.md
+ITSM,Methodologies and concepts for IT service management,AI Chatbot & Automation,ITSM.md
+Customer Satisfaction (CSAT),A metric that quantifies customer satisfaction. Measures how satisfied customers are with a service,AI Chatbot & Automation,Customer-Satisfaction---CSAT-.md
+Customer Satisfaction (CSAT: Customer Satisfaction Score),A metric that quantifies customer satisfaction. Measures how satisfied customers are with a service,AI Chatbot & Automation,Customer-Satisfaction---CSAT--Customer-Satisfaction-Score-.md
+NPS (Net Promoter Score),A metric indicating how likely customers are to recommend a service to others,AI Chatbot & Automation,NPS---Net-Promoter-Score-.md
+KPIs (Key Performance Indicators),"Important numerical indicators for measuring business performance, such as response time, resolution rate, and customer satisfaction",AI Chatbot & Automation,KPIs---Key-Performance-Indicators-.md
+dashboards,"A feature that displays important numbers and data on a single screen, providing at-a-glance visibility of business conditions",AI Chatbot & Automation,dashboards.md
+UI,The screens and operation methods users interact with. Directly impacts usability,AI Chatbot & Automation,UI.md
+auto-routing functions,A feature that analyzes inquiry content and automatically distributes to optimal agents,AI Chatbot & Automation,auto-routing-functions.md
+Requirements Definition,The process of specifically defining required features and conditions for a system. Essential preparatory work before creating blueprints,AI Chatbot & Automation,Requirements-Definition.md
+security requirements,Necessary conditions and measures to maintain system security,AI Chatbot & Automation,security-requirements.md
+AI Reporting,A feature where AI automatically analyzes data and creates reports. Provides detailed analysis results without manual effort,AI Chatbot & Automation,AI-Reporting.md
+natural language processing technology,Technology that enables computers to understand human language and respond appropriately,AI Chatbot & Automation,natural-language-processing-technology.md
+hybrid support,"A model where AI and humans collaborate on customer support, leveraging each other's strengths",AI Chatbot & Automation,hybrid-support.md
