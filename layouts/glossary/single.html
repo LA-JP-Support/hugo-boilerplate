@@ -82,27 +82,23 @@
     {{ .Content }}
   </div>
 
-  <!-- 関連用語（同じカテゴリー） -->
-  {{ if .Params.category }}
+  <!-- 関連用語（Related Content機能を使用：glossaryセクションのみ対象） -->
+  {{ $glossaryPages := where .Site.RegularPages "Section" "glossary" }}
+  {{ $relatedTerms := $glossaryPages.Related . | first 6 }}
+  
+  {{ if $relatedTerms }}
     {{ $currentPage := . }}
-    {{ $currentCategory := .Params.category }}
-    {{ $relatedTerms := where (where .Site.RegularPages "Section" "glossary") "Params.category" $currentCategory }}
-    {{ $relatedTerms = where $relatedTerms "Language.Lang" .Language.Lang }}
-    {{ $relatedTerms = where $relatedTerms "Permalink" "!=" .Permalink }}
-    {{ $relatedTerms = first 6 $relatedTerms }}
-    
-    {{ if $relatedTerms }}
-      <div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
-          {{ if eq .Language.Lang "ja" }}
-            関連用語
-          {{ else }}
-            Related Terms
-          {{ end }}
-        </h2>
-        <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {{ range $relatedTerms }}
-            <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+    <div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        {{ if eq .Language.Lang "ja" }}
+          関連用語
+        {{ else }}
+          Related Terms
+        {{ end }}
+      </h2>
+      <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {{ range $relatedTerms }}
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
               <div class="flex flex-1 flex-col p-5 sm:p-6">
                 <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
                   <a href="{{ .Permalink }}" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
@@ -135,7 +131,7 @@
         </div>
       </div>
     {{ end }}
-  {{ end }}
+
 
   <!-- 用語集に戻るリンク -->
   <div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">

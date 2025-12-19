@@ -1,0 +1,97 @@
+{
+  "completed": [
+    {
+      "keyword": "Adaptive Cards",
+      "success": true,
+      "word_count": 3040,
+      "file_path": "content/en/glossary/Adaptive-Cards.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 92.41579604148865
+    },
+    {
+      "keyword": "Aggregator",
+      "success": true,
+      "word_count": 2201,
+      "file_path": "content/en/glossary/Aggregator.md",
+      "error": "",
+      "retries": 2,
+      "generation_time": 208.06876397132874
+    },
+    {
+      "keyword": "Code Generation",
+      "success": true,
+      "word_count": 2945,
+      "file_path": "content/en/glossary/Code-Generation.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 89.24686002731323
+    },
+    {
+      "keyword": "Code Interpreter",
+      "success": true,
+      "word_count": 2446,
+      "file_path": "content/en/glossary/Code-Interpreter.md",
+      "error": "",
+      "retries": 2,
+      "generation_time": 224.46415305137634
+    },
+    {
+      "keyword": "Content Summarization",
+      "success": true,
+      "word_count": 3062,
+      "file_path": "content/en/glossary/Content-Summarization.md",
+      "error": "",
+      "retries": 2,
+      "generation_time": 252.3973741531372
+    },
+    {
+      "keyword": "EdTech Personalized Learning",
+      "success": true,
+      "word_count": 3141,
+      "file_path": "content/en/glossary/EdTech-Personalized-Learning.md",
+      "error": "",
+      "retries": 0,
+      "generation_time": 91.64294600486755
+    },
+    {
+      "keyword": "FinTech Fraud Detection",
+      "success": true,
+      "word_count": 2814,
+      "file_path": "content/en/glossary/FinTech-Fraud-Detection.md",
+      "error": "",
+      "retries": 2,
+      "generation_time": 237.74685192108154
+    }
+  ],
+  "failed": [
+    {
+      "keyword": "Active Learning",
+      "success": false,
+      "word_count": 0,
+      "file_path": "",
+      "error": "Failed after 3 retries",
+      "retries": 3,
+      "generation_time": 276.26188111305237
+    },
+    {
+      "keyword": "Aspect-Based Sentiment Analysis",
+      "success": false,
+      "word_count": 0,
+      "file_path": "",
+      "error": "Failed after 3 retries",
+      "retries": 3,
+      "generation_time": 274.00069403648376
+    },
+    {
+      "keyword": "Demand Forecasting",
+      "success": false,
+      "word_count": 0,
+      "file_path": "",
+      "error": "Failed after 3 retries",
+      "retries": 3,
+      "generation_time": 232.59596800804138
+    }
+  ],
+  "pending": []
+}

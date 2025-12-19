@@ -1,6 +1,7 @@
 baseURL = 'https://main.d1jtfhinlastnr.amplifyapp.com/'
 languageCode = 'ja'
 title = 'SmartWeb'
+timeZone = "Asia/Tokyo"
 defaultContentLanguage = "ja"
 defaultContentLanguageInSubdir = true
 
@@ -174,3 +175,19 @@ ignoreFiles = ['(?i)glossary-backup']
 
 [sitemap]
   filename = "sitemap.xml"
+
+# ========================================
+# 関連コンテンツ設定 (Related Content)
+# ========================================
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = true
+
+  [[related.indices]]
+    name = "keywords"
+    weight = 100
+
+  [[related.indices]]
+    name = "category"
+    weight = 50
