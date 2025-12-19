@@ -58,6 +58,8 @@ pre code {
     font-size: 14px !important;  /* 一般的なコードサイズ */
     line-height: 1.6 !important;
     font-weight: 600 !important; /* 読みやすい太さ */
+    border: none !important;
+    box-shadow: none !important;
 }
 
 /* シンタックスハイライト：完全リセットして統一スタイルに */
@@ -77,6 +79,8 @@ pre code {
 .highlight pre code,
 .highlight pre code * {
     all: unset;
+    border: none !important;
+    box-shadow: none !important;
     font-family: 'Courier New', Consolas, Monaco, monospace !important;
     font-size: 14px !important;
     line-height: 1.6 !important;
