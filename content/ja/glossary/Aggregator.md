@@ -12,6 +12,9 @@ keywords:
 category: "AI Chatbot & Automation"
 type: glossary
 draft: false
+e-title: "Aggregator"
+term: "あぐりげーたー"
+url: "/ja/glossary/Aggregator/"
 ---
 
 ## Aggregatorとは？

@@ -12,6 +12,9 @@ keywords:
 category: "Application & Use-Cases"
 type: glossary
 draft: false
+e-title: "EdTech Personalized Learning"
+term: "えどてっくぱーそならいずどらーにんぐ"
+url: "/ja/glossary/EdTech-Personalized-Learning/"
 ---
 
 ## EdTech Personalized Learningとは？

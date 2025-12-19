@@ -12,6 +12,9 @@ keywords:
 category: "Application & Use-Cases"
 type: glossary
 draft: false
+e-title: "Code Generation"
+term: "こーどじぇねれーしょん"
+url: "/ja/glossary/Code-Generation/"
 ---
 
 ## Code Generationとは？

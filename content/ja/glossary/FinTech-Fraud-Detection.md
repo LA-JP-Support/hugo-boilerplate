@@ -12,6 +12,9 @@ keywords:
 category: "Application & Use-Cases"
 type: glossary
 draft: false
+e-title: "FinTech Fraud Detection"
+term: "ふぃんてっくふろーどでぃてくしょん"
+url: "/ja/glossary/FinTech-Fraud-Detection/"
 ---
 
 ## FinTech Fraud Detectionとは？

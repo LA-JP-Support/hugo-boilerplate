@@ -12,6 +12,9 @@ keywords:
 category: "Application & Use-Cases"
 type: glossary
 draft: false
+e-title: "Content Summarization"
+term: "こんてんとさまらいぜーしょん"
+url: "/ja/glossary/Content-Summarization/"
 ---
 
 ## Content Summarizationとは？

@@ -12,6 +12,9 @@ keywords:
 category: "Application & Use-Cases"
 type: glossary
 draft: false
+e-title: "Code Interpreter"
+term: "こーどいんたーぷりたー"
+url: "/ja/glossary/Code-Interpreter/"
 ---
 
 ## Code Interpreterとは？
