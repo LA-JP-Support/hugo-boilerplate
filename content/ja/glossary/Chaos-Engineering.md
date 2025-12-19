@@ -1,220 +1,309 @@
 ---
 title: カオスエンジニアリング
-date: 2025-11-25
+date: '2025-12-19'
+lastmod: '2025-12-19'
 translationKey: chaos-engineering
 description: カオスエンジニアリングは、システムの弱点を発見し、その回復力に対する信頼性を構築するために、意図的にシステムに実験を行う手法です。脆弱性を事前に特定する方法を学びましょう。
-keywords: ["カオスエンジニアリング", "システムレジリエンス", "障害注入", "分散システム", "SRE"]
+keywords:
+- カオスエンジニアリング
+- システムレジリエンス
+- 障害注入
+- 分散システム
+- SRE
 category: AI Infrastructure & Deployment
 type: glossary
 draft: false
 e-title: Chaos Engineering
 term: かおすえんじにありんぐ
-reading: カオスエンジニアリング
-kana_head: か
+url: "/ja/glossary/Chaos-Engineering/"
 ---
-## 定義
+## カオスエンジニアリングとは?
+カオスエンジニアリングは、制御された障害を意図的に注入することで、ソフトウェアシステムの弱点を発見し、レジリエンス(回復力)を向上させることに焦点を当てた体系的な規律です。システムをランダムに破壊するのではなく、科学的で仮説駆動型の実験を通じて、システムの動作に関する前提を検証し、インシデントになる前に脆弱性を積極的に特定します。特に分散型、クラウドネイティブ、マイクロサービスベースのアーキテクチャにおいて重要です。これらの環境では、創発的な相互作用と依存関係により、障害の予測が困難になります。
 
-カオスエンジニアリングは、制御された障害を意図的に注入することで、ソフトウェアシステムの弱点を発見し、レジリエンスを向上させることに焦点を当てた構造化された規律です。システムをランダムに破壊するのではなく、科学的で仮説駆動型の実験を通じて、システムの動作に関する仮定を検証し、インシデントになる前に脆弱性を積極的に特定します。特に分散型、クラウドネイティブ、マイクロサービスベースのアーキテクチャにおいて重要であり、これらの環境では創発的な相互作用と依存関係により障害の予測が困難になります。
-
-- [IBM: What is Chaos Engineering?](https://www.ibm.com/think/topics/chaos-engineering)
-- [Principles of Chaos Engineering](https://principlesofchaos.org/)
-- [eG Innovations: What is Chaos Engineering?](https://www.eginnovations.com/glossary/chaos-engineering)
-- [phoenixNAP: Chaos Engineering – Definition, Principles, Best Practices](https://phoenixnap.com/blog/chaos-engineering)
+この方法論は、事後対応型のインシデント対応を、積極的なレジリエンスエンジニアリングに変革します。意図的に制御されたカオス(サーバー障害、ネットワーク障害、リソース枯渇)を導入することで、チームは実世界の条件に耐えるシステムの能力を検証し、安全で管理された方法で隠れた弱点を発見します。
 
 ## カオスエンジニアリングの使用方法
 
 カオスエンジニアリングは、さまざまなIT環境で適用されます:
 
-- **分散システム:** 1つのサービスやノードの障害が複雑なアーキテクチャ全体にどのように波及するかを特定するため([phoenixNAP](https://phoenixnap.com/blog/chaos-engineering))。
-- **クラウドネイティブアプリケーション:** オートスケーリング、一時的なインフラストラクチャ、マネージドサービスを持つ環境でのレジリエンスを検証するため([IBM](https://www.ibm.com/think/topics/chaos-engineering))。
-- **本番環境:** 実際のトラフィックでの制御された実験は最も現実的な洞察をもたらしますが、慎重な影響範囲の管理が必要です([eG Innovations](https://www.eginnovations.com/glossary/chaos-engineering))。
-- **本番前/テスト環境:** カオスプラクティスに不慣れなチームにとって安全な出発点。
-- **CI/CDパイプライン:** カオステストを組み込むことで、新しいコードやインフラストラクチャの変更がシステムのレジリエンスを低下させないことを保証します。
+**分散システム**  
+1つのサービスまたはノードの障害が、複雑なアーキテクチャ全体にどのように波及するかを特定します。サービスメッシュのレジリエンス、フェイルオーバーメカニズム、サーキットブレーカーをテストします。
 
-**主な実践者:** サイトリライアビリティエンジニア(SRE)、DevOpsおよびプラットフォームチーム、QA/パフォーマンスエンジニア、セキュリティ/インシデント対応チーム。
+**クラウドネイティブアプリケーション**  
+オートスケーリング、エフェメラルインフラストラクチャ、マネージドサービスを持つ環境でのレジリエンスを検証します。クラウドサービスが利用できなくなった場合の優雅な機能低下を確保します。
 
-**類推:**  
-カオスエンジニアリングは、しばしば防災訓練(システムとチームが準備できるように緊急事態をシミュレート)やワクチン(免疫を構築するために制御された「用量」の障害を導入)に例えられます。
+**本番環境**  
+実際のトラフィックでの制御された実験は、最も現実的な洞察をもたらしますが、慎重な影響範囲の管理と堅牢な監視が必要です。
+
+**本番前/テスト環境**  
+カオスプラクティスに不慣れなチームにとって安全な出発点であり、本番デプロイ前に技術を洗練させることができます。
+
+**CI/CDパイプライン**  
+カオステストを組み込むことで、新しいコードやインフラストラクチャの変更がシステムのレジリエンスを低下させないことを保証します。自動化されたカオステストは、早期にリグレッションを検出します。
+
+**主要な実践者:** サイト信頼性エンジニア(SRE)、DevOpsおよびプラットフォームチーム、QA/パフォーマンスエンジニア、セキュリティ/インシデント対応チーム。
 
 ## 中核原則
 
-カオスエンジニアリングは、実験が科学的、制御的、価値あるものであることを保証する原則に基づいています([Principles of Chaos Engineering](https://principlesofchaos.org/)):
+カオスエンジニアリングは、実験が科学的、制御的、価値あるものであることを保証する原則に基づいています:
 
-1. **定常状態に関する仮説を構築する:**  
-   観測可能なメトリクス(エラー率、レイテンシ、スループット)で「正常な」システム動作を定義します。
-2. **現実世界のイベントをシミュレートする:**  
-   もっともらしい障害を注入します:サーバークラッシュ、ネットワーク分断、依存関係の停止、負荷スパイク。
-3. **本番環境で実験を実行する(安全な場合):**  
-   本番実験は、真のユーザートラフィックと依存関係を反映します。最小限の影響範囲から始め、信頼が高まるにつれて拡大します。
-4. **自動化して継続的に実行する:**  
-   自動化により、システムが進化してもレジリエンスが維持されます([phoenixNAP](https://phoenixnap.com/blog/chaos-engineering))。
-5. **影響範囲を最小化する:**  
-   サービスやユーザーのサブセットをターゲットにし、[フィーチャーフラグ](/ja/glossary/feature-flags/)を使用し、時間制限を設定し、明確な中止/ロールバック手順を確立します。
+### 1. 定常状態に関する仮説を構築する
+観測可能なメトリクス(エラー率、レイテンシ、スループット)で「正常な」システム動作を定義します。健全な動作を表すベースラインKPIを確立します。
+
+### 2. 実世界のイベントをシミュレートする
+もっともらしい障害を注入します:サーバークラッシュ、ネットワークパーティション、依存関係の停止、負荷スパイク。本番環境で発生した、または合理的に発生する可能性のあるシナリオに焦点を当てます。
+
+### 3. (安全な場合)本番環境で実験を実行する
+本番環境での実験は、真のユーザートラフィックと依存関係を反映します。最小限の影響範囲から始め、信頼が高まるにつれて拡大します。フィーチャーフラグと監視を使用して範囲を制御します。
+
+### 4. 自動化して継続的に実行する
+自動化により、システムが進化してもレジリエンスが維持されます。継続的なカオスエンジニアリングは、新しいデプロイによって導入されたリグレッションを検出します。
+
+### 5. 影響範囲を最小化する
+サービスまたはユーザーのサブセットをターゲットにし、フィーチャーフラグを使用し、時間制限を設定し、明確な中止/ロールバック手順を確立します。安全メカニズムは交渉の余地がありません。
 
 ## カオスエンジニアリングの方法論
 
-カオスエンジニアリングは、科学的で反復的なアプローチに従います([phoenixNAP](https://phoenixnap.com/blog/chaos-engineering)、[IBM](https://www.ibm.com/think/topics/chaos-engineering)):
+カオスエンジニアリングは、科学的で反復的なアプローチに従います:
 
-1. **定常状態とKPIを定義する:**  
-   健全なシステム動作を表すベースラインメトリクス(例:レイテンシ、エラー率、可用性)を確立します。
-2. **仮説を立てる:**  
-   明確でテスト可能な声明を作成します(例:「サービスXが失敗しても、ユーザーログイン率は影響を受けない」)。
-3. **実験を計画する:**  
-   どの障害を注入するか、どのコンポーネントをターゲットにするか、システムの応答をどのように監視するかを決定します。
-4. **安全対策を準備する:**  
-   堅牢な可観測性、アラート、ロールバック/中止制御を確保します。ステークホルダーとコミュニケーションを取ります。
-5. **実験を実行する:**  
-   ツールを使用して制御された方法で障害を注入します(例:プロセスを終了する、レイテンシを導入する)。
-6. **監視してデータを収集する:**  
-   実験中/後のメトリクス、ログ、トレース、アプリケーションの動作を観察します。
-7. **結果を分析する:**  
-   実際のシステム動作を仮説と比較し、発見事項、予期しない動作、パフォーマンスの問題を文書化します。
-8. **改善して反復する:**  
-   発見された弱点に対処し、将来の実験の範囲や複雑さを拡大します。
+### 1. 定常状態とKPIを定義する
+健全なシステム動作を表すベースラインメトリクスを確立します(例:レイテンシ < 200ms、エラー率 < 0.1%、可用性99.9%)。
+
+### 2. 仮説を策定する
+明確でテスト可能な声明を作成します。例:「サービスXが失敗した場合、バックアップ認証サービスが起動するため、ユーザーログイン率は影響を受けない。」
+
+### 3. 実験を計画する
+どの障害を注入するか、どのコンポーネントをターゲットにするか、システムの応答をどのように監視するかを決定します。期待される結果と中止条件を文書化します。
+
+### 4. 安全対策を準備する
+堅牢な可観測性、アラート、ロールバック/中止制御を確保します。実験のタイミングと範囲について関係者とコミュニケーションを取ります。
+
+### 5. 実験を実行する
+ツールを使用して、制御された方法で障害を注入します(例:プロセスを終了する、レイテンシを導入する、帯域幅を制限する)。
+
+### 6. 監視してデータを収集する
+実験中および実験後のメトリクス、ログ、トレース、アプリケーションの動作を観察します。予期しないカスケード障害に注意します。
+
+### 7. 結果を分析する
+実際のシステム動作を仮説と比較します。発見事項、予期しない動作、パフォーマンスの問題を文書化します。
+
+### 8. 改善して反復する
+コードの変更、インフラストラクチャの改善、または運用手順を通じて、発見された弱点に対処します。将来の実験の範囲または複雑さを拡大します。
 
 **例:**  
-サードパーティの決済サービスに依存するeコマースアプリケーションが停止をシミュレートします。仮説は、システムが注文をキューに入れ、ユーザーに通知するというものです。代わりに、テストは未処理の例外を明らかにし、改善されたエラー処理とさらなる検証を促します([phoenixNAP](https://phoenixnap.com/blog/chaos-engineering))。
+サードパーティの決済サービスに依存するeコマースアプリケーションが停止をシミュレートします。仮説は、システムが注文をキューに入れ、ユーザーに通知するというものです。代わりに、テストは未処理の例外を明らかにし、改善されたエラー処理と再試行ロジックを促します。
 
 ## カオスエンジニアリング実験の種類
 
-カオス実験は、現実世界の障害シナリオをシミュレートします([phoenixNAP](https://phoenixnap.com/blog/chaos-engineering)、[eG Innovations](https://www.eginnovations.com/glossary/chaos-engineering)):
+カオス実験は、実世界の障害シナリオをシミュレートします:
 
-- **レイテンシ注入:** ネットワーク通信やサービス応答を人為的に遅延させます。
-- **障害注入:** サーバークラッシュ、プロセス終了、ハードウェア障害などのエラーを強制します。
-- **負荷生成:** トラフィックスパイクをシミュレートして、スケーリングとオートスケーリングメカニズムをテストします。
-- **リソース枯渇:** リソース(CPU、メモリ、ディスク、ネットワーク)を消費して、ストレス動作を観察します。
-- **ネットワーク分断/停止:** ネットワーク障害、パケット損失、スプリットブレインシナリオをシミュレートします。
-- **依存関係障害シミュレーション:** 外部API、データベース、マイクロサービスを利用不可または遅延させます。
-- **カナリアテスト:** 完全なロールアウト前に、ユーザー/サービスのサブセットに変更をデプロイして影響を検証します。
-- **セキュリティカオスエンジニアリング:** セキュリティインシデントをシミュレートして、検出と対応をテストします([Gremlin's Security Chaos Engineering](https://www.gremlin.com/chaos-engineering/security/)を参照)。
+**レイテンシ注入**  
+ネットワーク通信またはサービス応答を人為的に遅延させ、タイムアウト処理とユーザーエクスペリエンスの低下をテストします。
+
+**障害注入**  
+サーバークラッシュ、プロセス終了、ハードウェア障害、データベース利用不可などのエラーを強制します。
+
+**負荷生成**  
+トラフィックスパイクをシミュレートして、スケーリングメカニズム、オートスケーリングポリシー、レート制限をテストします。
+
+**リソース枯渇**  
+リソース(CPU、メモリ、ディスク、ネットワーク)を消費して、ストレス動作とリソース割り当てポリシーを観察します。
+
+**ネットワークパーティション/停止**  
+ネットワーク障害、パケット損失、またはスプリットブレインシナリオをシミュレートして、分散システムのコンセンサスとパーティション耐性を検証します。
+
+**依存関係障害シミュレーション**  
+外部API、データベース、またはマイクロサービスを利用不可または遅くして、フォールバックメカニズムとサーキットブレーカーをテストします。
+
+**カナリアテスト**  
+完全なロールアウト前に、ユーザー/サービスのサブセットに変更をデプロイして影響を検証します。
+
+**セキュリティカオスエンジニアリング**  
+セキュリティインシデントをシミュレートして、検出と対応能力をテストします。
 
 ## 一般的なツールとテクノロジー
 
-オープンソースおよび商用ツールが幅広く利用可能です([eG Innovations](https://www.eginnovations.com/glossary/chaos-engineering#section4)、[phoenixNAP](https://phoenixnap.com/blog/chaos-engineering)):
+さまざまなオープンソースおよび商用ツールが利用可能です:
 
-- **Chaos Monkey:** Netflixのクラウドインスタンスをランダムに終了するオリジナルツール([Netflix Chaos Monkey](https://netflix.github.io/chaosmonkey/))。
-- **Gremlin:** 幅広い制御された障害と統合を提供する商用プラットフォーム([Gremlin](https://www.gremlin.com/chaos-engineering))。
-- **Chaos Toolkit:** カオス実験のためのオープンソースで拡張可能なフレームワーク([Chaos Toolkit](https://chaostoolkit.org/))。
-- **Chaos Mesh:** コンテナ化環境での障害をシミュレートするKubernetesネイティブプラットフォーム([Chaos Mesh](https://chaos-mesh.org/))。
-- **Pumba:** Dockerコンテナ用のオープンソースツール(ネットワーク遅延、パケット損失、再起動)([Pumba](https://github.com/alexei-led/pumba))。
-- **LitmusChaos:** Kubernetesカオステスト用のCNCFプロジェクト([LitmusChaos](https://litmuschaos.io/))。
-- **AWS Fault Injection Simulator (FIS):** カオステスト用のマネージドAWSサービス([AWS FIS](https://aws.amazon.com/fis/))。
-- **Google DiRT:** Googleの内部災害テストプログラム([Google SRE Book - DiRT](https://sre.google/sre-book/disaster-testing-dirt/))。
+**Chaos Monkey**  
+Netflixのクラウドインスタンスをランダムに終了するオリジナルツール。カオスエンジニアリング運動の先駆者。
+
+**Gremlin**  
+包括的な安全制御を備えた、幅広い制御された障害と統合を提供する商用プラットフォーム。
+
+**Chaos Toolkit**  
+宣言的な実験定義を持つ、カオス実験のためのオープンソースで拡張可能なフレームワーク。
+
+**Chaos Mesh**  
+オペレーターベースの管理を備えた、コンテナ化環境での障害をシミュレートするKubernetesネイティブプラットフォーム。
+
+**Pumba**  
+ネットワーク遅延、パケット損失、コンテナ再起動をサポートするDockerコンテナ用のオープンソースツール。
+
+**LitmusChaos**  
+広範なコミュニティ貢献実験を持つ、Kubernetesカオステスト用のCNCFプロジェクト。
+
+**AWS Fault Injection Simulator (FIS)**  
+ネイティブAWS統合を備えた、カオステスト用のマネージドAWSサービス。
+
+**Google DiRT**  
+大規模なレジリエンス検証のためのGoogleの内部災害テストプログラム。
 
 ## 例とユースケース
 
 ### 業界の例
 
-- **Netflix:** クラウドベースのグローバルストリーミングサービスのレジリエンスを検証するために、Chaos MonkeyとSimian Armyを開発しました([Netflix Tech Blog](https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116))。
-- **Amazon (AWS):** AWS Fault Injection Simulatorと内部プラクティスを使用して、クラウドサービスの信頼性を確保しています([AWS FIS](https://aws.amazon.com/fis/))。
-- **Google:** データセンター全体のシャットダウンをシミュレートするなど、DiRT(Disaster Recovery Testing)演習を実施しています([Google SRE Book](https://sre.google/sre-book/disaster-testing-dirt/))。
+**Netflix**  
+クラウドベースのグローバルストリーミングサービスのレジリエンスを検証するために、Chaos MonkeyとSimian Armyを開発しました。継続的な可用性を確保するために、本番システムを定期的にテストします。
+
+**Amazon (AWS)**  
+AWS Fault Injection Simulatorと内部プラクティスを使用して、大規模なクラウドサービスの信頼性を確保します。
+
+**Google**  
+DiRT(災害復旧テスト)演習を実行し、データセンター全体のシャットダウンをシミュレートして、マルチリージョンフェイルオーバーを検証します。
 
 ### 典型的なユースケース
 
-- **オートスケーリングとフェイルオーバーの検証:** 障害後にトラフィックが正常なノードに再ルーティングされることを確認します。
-- **災害復旧訓練:** 停止や地域的な障害をシミュレートします。
-- **インシデント対応の検証:** SRE GameDaysの一環として、検出と修復を実践します([GameDay at Gremlin](https://www.gremlin.com/gameday/))。
-- **規制コンプライアンス:** 金融、医療、その他の規制対象セクターのレジリエンスを実証します。
-- **単一障害点の特定:** 冗長性のない重要な依存関係を明らかにします。
-- **CI/CDの安全性:** 本番デプロイ前にリグレッションを捕捉します。
+**オートスケーリングとフェイルオーバーの検証**  
+障害後にトラフィックが健全なノードに再ルーティングされ、オートスケーリングが負荷の変化に適切に応答することを確保します。
+
+**災害復旧訓練**  
+停止またはリージョン障害をシミュレートして、バックアップシステムと復旧手順を検証します。
+
+**インシデント対応の検証**  
+SRE GameDaysの一環として検出と修復を実践し、チームをトレーニングし、ランブックを検証します。
+
+**規制コンプライアンス**  
+稼働時間SLAが契約上の義務である金融、医療、その他の規制セクターのレジリエンスを実証します。
+
+**単一障害点の特定**  
+冗長性または適切なフェイルオーバーメカニズムが欠如している重要な依存関係を明らかにします。
+
+**CI/CDの安全性**  
+自動化されたカオステストゲートを通じて、本番デプロイ前にリグレッションを検出します。
 
 ## メリット
 
-カオスエンジニアリングは重要なメリットをもたらします([phoenixNAP](https://phoenixnap.com/blog/chaos-engineering)、[eG Innovations](https://www.eginnovations.com/glossary/chaos-engineering#section6)、[IBM](https://www.ibm.com/think/topics/chaos-engineering)):
+カオスエンジニアリングは、重要なメリットをもたらします:
 
-- **システムレジリエンスの向上:** 弱点を積極的に特定して解決します。
-- **ダウンタイムと停止コストの削減:** より迅速な検出、診断、復旧。
-- **インシデント対応の強化:** チームが障害への対処経験を積みます。
-- **スケーラビリティとパフォーマンスの向上:** ボトルネックとスケーリングの問題が明らかになります。
-- **文化的変革:** 障害から学ぶ文化を奨励します。
-- **規制/契約コンプライアンス:** 災害復旧と事業継続性の証拠を提供します。
-- **顧客の信頼:** 停止の減少、より迅速な復旧、より良いユーザーエクスペリエンス。
+**システムレジリエンスの向上**  
+ユーザーに影響を与える前に、弱点を積極的に特定して解決します。
+
+**ダウンタイムと停止コストの削減**  
+実践された対応手順により、実際のインシデント中の検出、診断、復旧が高速化されます。
+
+**インシデント対応の強化**  
+チームは制御された環境で障害を処理する経験を積み、実際のインシデント中のパニックを軽減します。
+
+**スケーラビリティとパフォーマンスの向上**  
+容量制限に達する前に、ボトルネックとスケーリングの問題が露呈され、対処されます。
+
+**文化的変革**  
+非難ではなく障害から学ぶ文化を奨励し、継続的な改善を促進します。
+
+**規制/契約コンプライアンス**  
+災害復旧と事業継続能力の証拠を提供します。
+
+**顧客の信頼**  
+停止の減少、復旧の高速化、より良いユーザーエクスペリエンスが、サービスの信頼性への信頼を構築します。
 
 ## 課題とリスク
 
-カオスエンジニアリングに関連するリスクと課題([phoenixNAP](https://phoenixnap.com/blog/chaos-engineering)、[eG Innovations](https://www.eginnovations.com/glossary/chaos-engineering#section7)):
+カオスエンジニアリングに関連するリスクと課題:
 
-- **組織的な抵抗:** 本番システムを「壊す」ことへの躊躇。
-- **顧客への潜在的な影響:** 範囲が不適切な実験は実際の停止を引き起こす可能性があります。
-- **分散システムの複雑さ:** カスケード障害の予測が困難。
-- **定常状態の定義:** 関連するメトリクスの特定と監視が困難。
-- **リソース要件:** 熟練した人材、可観測性、インフラストラクチャが必要。
-- **安全性の懸念:** 中止、ロールバック、コミュニケーション手順が重要。
+**組織的抵抗**  
+顧客への影響や経営陣の懸念から、本番システムを「壊す」ことへの躊躇。
+
+**潜在的な顧客への影響**  
+安全メカニズムが失敗した場合、範囲が不適切な実験は実際の停止を引き起こす可能性があります。
+
+**分散システムの複雑さ**  
+数千の相互依存関係を持つシステムでのカスケード障害を予測することは困難です。
+
+**定常状態の定義**  
+システムの健全性を正確に表す関連メトリクスを特定して監視することは困難です。
+
+**リソース要件**  
+熟練した人材、包括的な可観測性インフラストラクチャ、専用のテスト容量が必要です。
+
+**安全性の懸念**  
+中止メカニズム、ロールバック手順、明確なコミュニケーションプロトコルを持つことが重要です。
 
 ## ベストプラクティス
 
-推奨されるベストプラクティス([phoenixNAP](https://phoenixnap.com/blog/chaos-engineering)、[IBM](https://www.ibm.com/think/topics/chaos-engineering)、[eG Innovations](https://www.eginnovations.com/glossary/chaos-engineering#section6)):
+推奨されるベストプラクティス:
 
-- **小さく始める:** 非クリティカルまたは本番前環境から始めます。
-- **監視とロールバックを自動化する:** 可観測性と自動化を使用して迅速な復旧を実現します。
-- **影響範囲を最小化する:** サービスやユーザーの小さなサブセットをターゲットにします。
-- **明確にコミュニケーションする:** 実験を実行する前にすべてのステークホルダーに通知します。
-- **CI/CDと統合する:** カオステストをデプロイサイクルの定期的な部分にします。
-- **学びを文書化して共有する:** 徹底的な記録とポストモーテムを維持します。
-- **継続的に反復する:** 信頼が高まるにつれて実験を拡大し、洗練させます。
+**小さく始める**  
+信頼を構築し、手順を洗練させるために、非クリティカルまたは本番前環境から始めます。
 
-## カオスエンジニアリングの始め方
+**監視とロールバックを自動化する**  
+実験がうまくいかない場合の迅速な検出と復旧のために、可観測性と自動化を使用します。
 
-### ステップバイステップガイダンス
+**影響範囲を最小化する**  
+最初はサービスまたはユーザーの小さなサブセットをターゲットにし、徐々に範囲を拡大します。
 
-1. **チームを教育する:**  
-   エンジニアとステークホルダーにカオスの原則についてトレーニングします([phoenixNAP](https://phoenixnap.com/blog/chaos-engineering))。
-2. **準備状況を評価する:**  
-   堅牢な可観測性とロールバックメカニズムを確保します。
-3. **重要なコンポーネントを特定する:**  
-   ビジネスクリティカルなユーザージャーニーと依存関係に焦点を当てます。
-4. **定常状態メトリクスを定義する:**  
-   システムの健全性を表す実用的なKPIを選択します。
-5. **仮説を立てる:**  
-   「もし〜だったら」シナリオから始めます(例:「データベースを5分間失ったらどうなるか?」)。
-6. **ツールを選択してセットアップする:**  
-   スタックに適したカオスツールを選択します([Chaos Toolkit](https://chaostoolkit.org/)、[Gremlin](https://www.gremlin.com/chaos-engineering))。
-7. **小規模な実験を設計して実行する:**  
-   テスト環境でシンプルな障害から始めます。
-8. **監視、分析、文書化する:**  
-   発見事項を記録し、インシデント対応とアーキテクチャを更新します。
-9. **反復して範囲を拡大する:**  
-   徐々に実験の複雑さと本番環境への露出を増やします。
-10. **組織に統合する:**  
-    カオスエンジニアリングを信頼性、セキュリティ、開発プロセスに組み込みます。
+**明確にコミュニケーションする**  
+実験を実行する前に、すべての関係者に通知します。透明性は、インシデント中の混乱を防ぎます。
 
-**さらなる読み物:**
-- [Google Cloud: Getting Started with Chaos Engineering](https://cloud.google.com/blog/products/devops-sre/getting-started-with-chaos-engineering)
-- [Harness: What is Chaos Engineering?](https://www.harness.io/harness-devops-academy/what-is-chaos-engineering)
+**CI/CDと統合する**  
+カオステストをデプロイサイクルの定期的な部分にして、リグレッションを自動的に検出します。
 
-## 参考資料
+**学習を文書化して共有する**  
+徹底的な記録とポストモーテムを維持します。チーム間で洞察を共有して、実験の価値を倍増させます。
+
+**継続的に反復する**  
+信頼が高まり、システムが進化するにつれて、実験を拡大して洗練させます。
+
+## カオスエンジニアリングの開始
+
+### ステップバイステップのガイダンス
+
+**1. チームを教育する**  
+エンジニアと関係者にカオスの原則とメリットについてトレーニングします。
+
+**2. 準備状況を評価する**  
+堅牢な可観測性とロールバックメカニズムが整っていることを確認します。
+
+**3. 重要なコンポーネントを特定する**  
+ビジネスクリティカルなユーザージャーニーと依存関係に焦点を当てます。
+
+**4. 定常状態メトリクスを定義する**  
+システムの健全性を表す実行可能なKPIを選択します。
+
+**5. 仮説を策定する**  
+「もし〜だったら」シナリオから始めます(例:「データベースを5分間失ったらどうなるか?」)。
+
+**6. ツールを選択して設定する**  
+スタックに適したカオスツールを選択します。
+
+**7. 小規模な実験を設計して実行する**  
+テスト環境での単純な障害から始めます。
+
+**8. 監視、分析、文書化する**  
+発見事項を記録し、インシデント対応手順とアーキテクチャドキュメントを更新します。
+
+**9. 反復して範囲を拡大する**  
+徐々に実験の複雑さと本番環境への露出を増やします。
+
+**10. 組織に統合する**  
+カオスエンジニアリングを信頼性、セキュリティ、開発プロセスに組み込みます。
+
+## 参考文献
 
 - [Principles of Chaos Engineering](https://principlesofchaos.org/)
 - [IBM: What is Chaos Engineering?](https://www.ibm.com/think/topics/chaos-engineering)
-- [eG Innovations: Chaos Engineering Glossary](https://www.eginnovations.com/glossary/chaos-engineering)
-- [phoenixNAP: Chaos Engineering](https://phoenixnap.com/blog/chaos-engineering)
+- [eG Innovations: What is Chaos Engineering?](https://www.eginnovations.com/glossary/chaos-engineering)
+- [phoenixNAP: Chaos Engineering – Definition, Principles, Best Practices](https://phoenixnap.com/blog/chaos-engineering)
 - [Gremlin: Chaos Engineering](https://www.gremlin.com/chaos-engineering)
-- [Dynatrace: What is Chaos Engineering?](https://www.dynatrace.com/news/blog/what-is-chaos-engineering/)
+- [Gremlin: Security Chaos Engineering](https://www.gremlin.com/chaos-engineering/security/)
+- [Gremlin: GameDay Chaos Engineering Exercises](https://www.gremlin.com/gameday/)
+- [Netflix Chaos Monkey](https://netflix.github.io/chaosmonkey/)
+- [Netflix Tech Blog: Simian Army](https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116)
 - [Chaos Toolkit Documentation](https://chaostoolkit.org/)
+- [Chaos Mesh](https://chaos-mesh.org/)
+- [Pumba GitHub Repository](https://github.com/alexei-led/pumba)
+- [LitmusChaos](https://litmuschaos.io/)
+- [AWS Fault Injection Simulator (FIS)](https://aws.amazon.com/fis/)
+- [Google SRE Book: Disaster Testing (DiRT)](https://sre.google/sre-book/disaster-testing-dirt/)
+- [Dynatrace: What is Chaos Engineering?](https://www.dynatrace.com/news/blog/what-is-chaos-engineering/)
 - [Google Cloud: Chaos Engineering Recipes](https://github.com/GoogleCloudPlatform/chaos-engineering/blob/main/Chaos-Engineering-Recipes-Book.md)
-- [Netflix Tech Blog - Simian Army](https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116)
-- [GameDay: Chaos Engineering Exercises](https://www.gremlin.com/gameday/)
-
-## 関連項目
-
-- [Site Reliability Engineering (SRE)](https://www.ibm.com/topics/site-reliability-engineering)
-- [Resilience Testing](https://phoenixnap.com/blog/resilience-testing)
-- [Performance Engineering](https://phoenixnap.com/blog/performance-engineering)
-- [Incident Response](https://phoenixnap.com/blog/incident-response)
-- [Disaster Recovery](https://phoenixnap.com/blog/disaster-recovery)
-- [Observability](https://www.ibm.com/cloud/learn/observability)
-- [Microservices Architecture](https://phoenixnap.com/blog/microservices-architecture)
-- [Continuous Integration / Continuous Delivery (CI/CD)](https://phoenixnap.com/blog/ci-cd-pipeline)
-- [Fault Injection](https://phoenixnap.com/blog/fault-injection-testing)
-
-## 関連用語集
-
-- **影響範囲(Blast Radius):** カオス実験の最大範囲または影響領域。リスクを軽減するために最小化する必要があります([Gremlin Glossary](https://www.gremlin.com/chaos-engineering/))。
-- **定常状態(Steady State):** 観測可能なメトリクスで定義される、システムの正常で健全な動作状態([phoenixNAP](https://phoenixnap.com/blog/chaos-engineering))。
-- **障害注入(Fault Injection):** システムの動作を観察し改善するために、意図的に障害を導入すること([eG Innovations](https://www.eginnovations.com/glossary/chaos-engineering))。
-- **GameDay:** インシデント対応を実践するためのスケジュールされたチームベースのカオスエンジニアリングイベント([Gremlin GameDay](https://www.gremlin.com/gameday/))。
-- **レジリエンス(Resilience):** 障害から回復し適応するシステムの能力([IBM](https://www.ibm.com/think/topics/chaos-engineering))。
-- **可観測性(Observability):** メトリクス、ログ、トレースを通じてシステムの状態と動作を理解する能力([IBM Observability](https://www.ibm.com/cloud/learn/observability))。
-
-**権威あるコミュニティ主導のベストプラクティスについては、[IBM Observability](https://www.ibm.com/cloud/learn/observability)をご覧ください。**
-この用語集は、カオスエンジニアリングの決定的なリファレンスガイドとして、初心者と上級実践者の両方をサポートするように設計されています。すべてのセクションは業界をリードするリソースから調達されており、ドキュメント、チュートリアル、実世界のケーススタディへのリンクが含まれています。コミュニティと関わり、[Principles of Chaos Engineering](https://principlesofchaos.org/)を読み、構造化されたカオスプラクティスを適用して、自身のシステムのレジリエンスを向上させることで、探求を続けてください。

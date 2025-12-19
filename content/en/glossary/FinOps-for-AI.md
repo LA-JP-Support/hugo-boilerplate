@@ -1,222 +1,217 @@
 ---
 title: FinOps for AI
-date: 2025-11-25
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 translationKey: finops
-description: FinOps for AI is a discipline uniting financial management, cloud operations,
-  and AI infrastructure governance to optimize and govern financial performance of
-  AI resources.
+description: FinOps for AI is a discipline uniting financial management, cloud operations, and AI infrastructure governance to optimize and govern financial performance of AI resources.
 keywords: ["FinOps for AI", "cloud cost optimization", "AI infrastructure", "financial management", "AI governance"]
 category: AI Infrastructure & Deployment
 type: glossary
 draft: false
 ---
+
 ## What is FinOps for AI?
 
-**FinOps for AI** is a discipline uniting financial management, cloud operations, and AI infrastructure governance to ensure organizations maximize business value from investments in artificial intelligence and machine learning. The practice is built upon the core FinOps principles of cost visibility, financial accountability, continuous optimization, and cross-functional collaboration, but is tailored to the unique dynamics and cost drivers of AI workloads.
+FinOps for AI is a discipline uniting financial management, cloud operations, and AI infrastructure governance to maximize business value from artificial intelligence and machine learning investments. Built upon core FinOps principles—cost visibility, financial accountability, continuous optimization, and cross-functional collaboration—this practice adapts traditional FinOps to the unique dynamics and cost drivers of AI workloads.
 
-### Core Pillars:
+AI workloads present distinctive financial challenges: expensive specialized hardware (GPUs/TPUs), unpredictable usage patterns, rapidly evolving pricing models, and complex cost attribution across experimentation and production environments. FinOps for AI addresses these challenges through granular resource tagging, unit economics tracking, and alignment of AI spending with measurable business outcomes.
 
-- **Cost Visibility:** AI workloads, especially those involving large-scale model training or inference, can rapidly drive up costs with little [transparency](/en/glossary/transparency/) if not managed. FinOps for AI emphasizes granular visibility by tagging AI resources (GPUs, endpoints, datasets) and attributing expenses to teams, projects, and business units.  
-  [FinOps Foundation: Overview](https://www.finops.org/wg/finops-for-ai-overview/)
+The discipline is not merely cost reduction but strategic optimization—ensuring AI investments scale efficiently, innovation proceeds responsibly within financial guardrails, and spending directly correlates with value creation. Organizations implementing FinOps for AI typically progress through maturity stages: establishing visibility (Crawl), building accountability (Walk), and achieving business value alignment (Run).
 
-- **Optimization:** AI infrastructure (notably GPUs/TPUs, high-bandwidth networking, and distributed storage) is both expensive and subject to bursty, unpredictable usage. Optimization includes rightsizing resources, leveraging spot/preemptible instances, managing data locality, and automating shutdowns of idle endpoints.  
-  [CloudZero: FinOps for AI](https://www.cloudzero.com/blog/finops-for-ai/)
+## Core Pillars
 
-- **Accountability:** Ownership of AI spending is assigned to specific teams or stakeholders, tying costs to business value and enabling true cost governance. Showback and chargeback models are common to enforce transparency without stifling innovation.
+**Cost Visibility**  
+Granular tracking of AI resources—GPUs, endpoints, datasets, API calls—with tagging by project, team, and environment. Separation of AI-specific expenses from general cloud spending enables accurate attribution and informed decision-making.
 
-- **Continuous Improvement:** Given the rapid evolution of AI technologies and pricing models, FinOps for AI is an ongoing cycle of measurement, analysis, process refinement, and adoption of new best practices.
+**Optimization**  
+Strategic resource management including rightsizing GPU clusters, leveraging spot/preemptible instances, automating idle resource shutdown, and managing data locality to minimize transfer costs.
 
-FinOps for AI is not merely about cost reduction; it aligns AI spending with business outcomes, provides guardrails for responsible innovation, and ensures investments scale with measurable value.
-## How FinOps for AI is Used
+**Accountability**  
+Ownership assignment for AI spending to specific teams or stakeholders. Showback models (reporting usage without billing) or chargeback models (actual cost allocation) enforce transparency without stifling innovation.
 
-Organizations leverage FinOps for AI to address the unique financial challenges associated with large-scale AI adoption and to bring rigor to cloud-native, experimental, and production AI workflows.
+**Continuous Improvement**  
+Ongoing measurement, analysis, and refinement cycle adapting to rapidly evolving AI technologies, pricing models, and organizational needs.
 
-### Typical Use Cases:
+## Implementation Framework: Crawl, Walk, Run
 
-- **Tracking and Allocating Costs:**
-  - Assigning costs for model training, hyperparameter tuning, inference, and experimentation to relevant teams and business units.
-  - Tagging every resource (VM, GPU, data pipeline) for accurate attribution.
-  - Implementing showback/chargeback models where teams receive regular reports on their AI resource consumption and cost impact.
-  - [FinOps Foundation: Best Practices](https://www.finops.org/wg/finops-for-ai-overview/#best-practices)
+**Crawl: Cost Visibility**
 
-- **Optimizing Compute Resources:**
-  - Rightsizing GPU clusters based on model requirements and actual utilization.
-  - Leveraging spot/preemptible instances for non-critical workloads.
-  - Automating shutdown of idle endpoints and cleaning up unused volumes.
-  - Using observability to identify underutilized infrastructure.
-  - [CloudZero: FinOps for AI](https://www.cloudzero.com/blog/finops-for-ai/)
+- Implement comprehensive resource tagging (project, team, environment)
+- Separate AI expenses from general cloud spending
+- Track major cost drivers: GPU hours, storage, API calls, token usage
+- Establish basic reporting identifying ownership and expenditure
 
-- **Cost Controls and Governance:**
-  - Setting quotas or budgets on AI experimentation.
-  - Distinguishing R&D workloads from production deployments using environment tagging and separate billing structures.
-  - Enabling real-time alerts for cost spikes or runaway training jobs.
+*Milestone:* "We know what AI workloads we're running and who owns them."
 
-- **Cross-Functional Collaboration:**
-  - Regular cost reviews with engineering, data science, finance, and product leads.
-  - Joint decision-making on architecture, model deployment, and scaling.
+**Walk: Accountability and Optimization**
 
-- **Forecasting and Budgeting:**
-  - Building cost forecasts for anticipated AI projects.
-  - Iteratively refining budgets based on observed usage patterns and business value realization.
+- Assign budgets and spending limits to AI teams/projects
+- Schedule regular cross-functional cost reviews
+- Optimize resource usage through auto-scaling, spot instances, rightsizing
+- Implement showback/chargeback models
+- Establish alerts for budget overruns and anomalies
 
-### Real-World Example
+*Milestone:* "We know what we're spending, why, and how to course-correct."
 
-A financial services firm deploying fraud detection models on cloud GPUs creates detailed tags for each training job and endpoint. This enables per-prediction cost calculation, supports monthly optimization reviews, and results in an 18% reduction in AI spend after uncovering underutilized endpoints.  
-[Flexera: 8 Steps to Managing AI Costs](https://www.flexera.com/blog/finops/finops-for-ai-8-steps-to-managing-ai-costs-and-resources/)
+**Run: Business Value Alignment**
 
-## Key Concepts and Terminology
+- Track unit economics (cost per inference, prediction, customer)
+- Link AI spend to business outcomes (retention, revenue, productivity)
+- Automate waste elimination (idle shutdowns, anomaly detection)
+- Implement forecasting and scenario analysis
+- Integrate cost/value metrics into strategic planning
 
-A deep understanding of FinOps for AI requires mastery of both traditional FinOps language and AI-specific cost mechanics:
+*Milestone:* "AI costs managed as product lifecycle—investments justified by measurable value."
 
-| Term                        | Definition                                                                                         |
-|-----------------------------|----------------------------------------------------------------------------------------------------|
-| **FinOps**                  | Financial Operations: Collaborative discipline that brings together engineering, finance, and business for optimizing cloud/AI spend. |
-| **Cloud Cost Optimization** | Structured process to minimize unnecessary spend while maximizing value and performance.           |
-| **Token-Based Pricing**     | AI APIs (especially LLMs) bill per token processed, requiring fine-grained usage tracking.         |
-| **Showback Model**          | Reporting resource usage and cost to teams for transparency, without direct internal billing.      |
-| **Chargeback Model**        | Assigning actual costs to internal teams or business units, creating direct financial accountability.|
-| **Unit Economics**          | Analyzing per-unit cost/value (e.g., cost per inference, per prediction, per customer) for business alignment. |
-| **Commitment Discounts**    | Reduced rates in exchange for long-term or high-volume usage commitments with cloud/AI vendors.    |
-| **Cross-Functional Collaboration** | Coordination among engineering, data, product, and finance to align costs with value.     |
-| **Business Value Realization** | Linking AI/ML costs to tangible, measurable business outcomes.                                |
-| **Idle Resource Detection** | Identifying and cleaning up unused compute/storage to reduce waste.                                |
-| **Right-Sizing**            | Adjusting resources to match actual workload requirements, minimizing overprovisioning.            |
-| **Cost-per-Token**          | The effective price per token processed in LLM or GenAI APIs; core for tracking inference expenses.|
+## Key Use Cases
 
-Detailed definitions and additional terminology are found in the [Glossary of Related Terms](#glossary-of-related-terms) section.
+**Cost Tracking and Allocation**  
+Assign costs for training, hyperparameter tuning, inference, and experimentation to relevant teams. Implement showback/chargeback models providing regular consumption reports and cost impact visibility.
 
-## FinOps for AI in Practice: Frameworks and Models
+**Compute Resource Optimization**  
+Rightsize GPU clusters based on actual utilization. Leverage spot instances for non-critical workloads. Automate idle endpoint shutdown. Use observability to identify underutilized infrastructure.
 
-Successful FinOps for AI programs use structured frameworks to move organizations from cost awareness to advanced, value-driven optimization. The most widely adopted is the **Crawl, Walk, Run** maturity model, adapted for AI by the FinOps Foundation and thought leaders.  
-See: [CloudZero: FinOps for AI](https://www.cloudzero.com/blog/finops-for-ai/), [FinOps Foundation: Overview](https://www.finops.org/wg/finops-for-ai-overview/)
+**Cost Controls and Governance**  
+Set quotas on AI experimentation. Distinguish R&D from production using environment tagging and separate billing. Enable real-time alerts for cost spikes or runaway training jobs.
 
-### Crawl: Cost Visibility
+**Forecasting and Budgeting**  
+Build cost forecasts for anticipated AI projects. Iteratively refine budgets based on observed usage patterns and business value realization.
 
-- Implement tagging/labeling of all AI resources—GPUs, endpoints, models, datasets—by project, team, and environment (R&D vs. production).
-- Separate AI-specific expenses from general cloud spend using dedicated cost centers or billing accounts.
-- Begin tracking major cost drivers: GPU hours, storage, API calls, token usage.
-- Basic reporting to identify “who owns what” and “how much is being spent.”
+**Real-World Example:**  
+Financial services firm deploying fraud detection models creates detailed tags for each training job and endpoint. Per-prediction cost calculation enables monthly optimization reviews, resulting in 18% AI spend reduction after uncovering underutilized endpoints.
 
-**Milestone:** “We know what AI workloads we’re running and who owns them.”
+## Pricing Models in AI
 
-### Walk: Accountability and Optimization
+| Model | Description | Use Cases |
+|-------|-------------|-----------|
+| **On-Demand** | Pay only for usage (compute, tokens, API calls) | Model training, ad hoc inference |
+| **Reserved/Committed** | Discounted rates for long-term commitments | Predictable production inference |
+| **Provisioned Capacity** | Pre-pay for fixed resources, guaranteed performance | Real-time, latency-sensitive inference |
+| **Spot/Burst** | Discounted spare capacity with interruption risk | Batch training, non-critical workloads |
+| **Subscription** | Recurring fee for AI services/models access | SaaS AI platforms, pre-trained models |
+| **Tiered** | Volume discounts as usage increases | Large-scale API consumption |
+| **Freemium/Trial** | Free basic usage, pay for premium | Experimentation, initial pilots |
 
-- Assign budgets and spending limits to AI teams/projects.
-- Schedule regular cost reviews with all stakeholders (engineering, data, product, finance).
-- Optimize resource usage via auto-scaling, spot/preemptible instances, and right-sizing recommendations.
-- Implement showback (and, as maturity grows, chargeback) models to increase cost awareness and accountability.
-- Establish alerts for budget overruns and cost anomalies.
+**AI-Specific Nuances:**
 
-**Milestone:** “We know what we’re spending, why we’re spending it, and how to course-correct.”
+- Token-based billing for LLMs requires accurate inference tracking
+- SKU volatility from frequent new model/hardware releases
+- GPU scarcity causing price fluctuations
+- Data ingress/egress fees accumulating with high-volume movement
 
-### Run: Business Value Alignment
+## Key Performance Indicators
 
-- Track and optimize unit economics (cost per model, cost per inference, feature, or customer).
-- Link AI spend to business outcomes (e.g., customer retention, revenue, productivity).
-- Automate elimination of waste: idle shutdowns, anomaly detection, and periodic optimization sweeps.
-- Implement forecasting, scenario analysis, and what-if modeling to plan for scaling.
-- Integrate AI cost and value metrics into product roadmaps and strategic planning.
+| KPI | Measurement Focus |
+|-----|-------------------|
+| **Cost-per-Inference** | Cost efficiency of inference workloads |
+| **Cost-per-Training Iteration** | Training spend efficiency |
+| **Cost-per-Feature/Customer** | AI spend allocation to value drivers |
+| **Model Performance/Accuracy** | Cost-quality tradeoff |
+| **Utilization Rate** | Percentage of provisioned resources in use |
+| **Idle Resource Spend** | Cost of unused/underutilized resources |
+| **Business Value KPIs** | Revenue impact, retention, productivity gains |
 
-**Milestone:** “AI costs are managed as a product lifecycle—investments are justified by measurable business value.”
-## Best Practices and Use Cases
+**Advanced Metrics:**
 
-### Best Practices
+- Unit economics (cost vs. value per product/feature/user)
+- Forecasting accuracy (actuals vs. predicted spend)
+- Optimization adoption rate (implemented recommendations percentage)
+- Waste reduction (quantified unused resource elimination)
 
-Drawing from [Flexera’s 8 Steps to Managing AI Costs](https://www.flexera.com/blog/finops/finops-for-ai-8-steps-to-managing-ai-costs-and-resources/), [FinOps Foundation](https://www.finops.org/wg/finops-for-ai-overview/#best-practices), and [CloudZero](https://www.cloudzero.com/blog/finops-for-ai/):
+## Cross-Functional Roles
 
-1. **Educate and Train:** Upskill both technical and finance teams on the unique cost drivers and pricing models of AI infrastructure and services.
+| Persona | Responsibilities |
+|---------|------------------|
+| **Data Scientists** | Model creation, training, tuning (largest cost drivers) |
+| **Data Engineers** | Data pipelines, storage, transfer optimization |
+| **ML/AI Engineers** | Model integration, API/endpoint management |
+| **DevOps/Platform Teams** | Infrastructure provisioning, cost control automation |
+| **Product Managers** | Feature requirements, business value measurement |
+| **Finance/Procurement** | Budgeting, cost allocation, vendor negotiations |
+| **Leadership** | Investment approval, AI strategy, ROI oversight |
 
-2. **Resource Tagging:** Mandate tagging of every AI job, cluster, dataset, and endpoint by project, environment, and owner for granular allocation.
+## Best Practices
 
-3. **Separate R&D from Production:** Use folders, billing accounts, or explicit naming conventions to clearly delineate experimental and production workloads.
+**Education and Training**  
+Upskill technical and finance teams on AI cost drivers and pricing models.
 
-4. **Adopt Cost Observability Tools:** Implement platforms (e.g., [CloudZero](https://www.cloudzero.com/solutions/ai/), AWS Cost Explorer, Azure Cost Management, GCP Billing) for real-time, AI-specific cost tracking.
+**Comprehensive Resource Tagging**  
+Mandate tagging of every AI job, cluster, dataset, endpoint by project, environment, owner.
 
-5. **Budgeting:** Provide clear budget guidelines and pre-approved experimentation quotas to enable responsible innovation without financial surprises.
+**Environment Separation**  
+Clearly delineate experimental and production workloads using folders, billing accounts, or naming conventions.
 
-6. **Regular Cost Reviews:** Establish a cadence (weekly, biweekly) for cross-functional cost and value review meetings.
+**Cost Observability Tools**  
+Implement platforms (CloudZero, AWS Cost Explorer, Azure Cost Management, GCP Billing) for real-time tracking.
 
-7. **Automate Waste Elimination:** Use scripts or policy engines to shut down idle endpoints, delete unused datasets, and flag runaway training jobs.
+**Budget Guidelines**  
+Provide clear budgets and pre-approved experimentation quotas enabling innovation without financial surprises.
 
-8. **Continuous Improvement:** Analyze past spend spikes, conduct post-mortems on overages, and refine policies to prevent future waste.
+**Regular Cost Reviews**  
+Establish cadence (weekly/biweekly) for cross-functional cost and value review meetings.
 
-### Use Cases
+**Automated Waste Elimination**  
+Use scripts or policy engines to shut down idle endpoints, delete unused datasets, flag runaway jobs.
 
-1. **AI-Powered Fraud Detection:**  
-   A bank tags every model training job and endpoint, calculates cost-per-prediction, and ties spend directly to fraud prevention outcomes. Regular reviews uncover idle endpoints, reducing AI spend by 18%.  
-   [Flexera: FinOps for AI](https://www.flexera.com/blog/finops/finops-for-ai-8-steps-to-managing-ai-costs-and-resources/)
+**Continuous Improvement**  
+Analyze spend spikes, conduct post-mortems on overages, refine policies to prevent future waste.
 
-2. **Conversational AI in Customer Support:**  
-   SaaS provider uses LLM APIs for chatbots, segregates experimentation from production, monitors cost-per-token, and optimizes API usage by batching requests and right-sizing models. Achieves 22% improved cost efficiency.
+## Key Challenges
 
-3. **Enterprise Document Analysis:**  
-   Compliance workflows use document AI models, with showback models making business units aware of their usage. This transparency drives teams to proactively optimize pipelines.
+**Unpredictable Usage**  
+Training jobs and R&D experiments cause sudden cost spikes requiring flexible budgeting and alerting.
 
-4. **GenAI Product Feature Rollout:**  
-   Startup launches AI features, tracks cost-per-customer, shuts down idle resources automatically, and uses business value measurement to guide investment.
-## Roles, Personas, and Stakeholders
+**GPU Scarcity**  
+Limited availability and price volatility complicate planning and forecasting.
 
-FinOps for AI is inherently cross-functional, requiring cooperation across engineering, finance, data, and business teams. ([FinOps Foundation: Personas](https://www.finops.org/framework/personas))
+**Rapidly Evolving Technology**  
+New models, hardware types, and pricing structures released frequently.
 
-| Persona                   | Responsibilities in FinOps for AI                              |
-|---------------------------|---------------------------------------------------------------|
-| **Data Scientists**       | Model creation, training, tuning (often largest cost drivers)  |
-| **Data Engineers**        | Manage data pipelines, storage, optimize data transfer         |
-| **ML/AI Engineers**       | Integrate models into products, manage APIs/endpoints          |
-| **DevOps/Platform Teams** | Provision infrastructure, automate cost controls, optimize usage|
-| **Product Managers**      | Define feature requirements, measure business value            |
-| **Finance/Procurement**   | Budgeting, cost allocation, vendor negotiations               |
-| **Leadership**            | Approve investments, set AI strategy, ensure ROI               |
-| **End Users**             | Internal/external consumers of AI features, influence demand   |
+**Attribution Complexity**  
+Shared resources and distributed workloads complicate accurate cost allocation.
 
-**Collaboration Frameworks:**
-- Cross-functional FinOps committees or working groups.
-- Joint ownership of AI budget and cost review cycles.
-- Shared dashboards and reporting tools.
+**Balancing Innovation and Control**  
+Maintaining financial discipline without stifling experimentation and rapid iteration.
 
-## Pricing and Cost Models in AI
+**Data Transfer Costs**  
+Cross-region or cross-cloud data movement accumulating significant hidden expenses.
 
-AI workloads present unique and evolving pricing paradigms, which can be significantly different from traditional cloud resources. ([FinOps Foundation: AI Cost Paradigms](https://www.finops.org/wg/finops-for-ai-overview/#best-practices))
+## Tools and Platforms
 
-| Pricing Model                | Description                            | Example Use Cases                                  |
-|------------------------------|----------------------------------------|----------------------------------------------------|
-| **On-Demand/Pay-As-You-Go**  | Pay only for what you use (compute, tokens, API calls) | Model training, ad hoc inference                   |
-| **Reserved/Committed Use**   | Discounted rates for long-term commitments | Predictable production inference                   |
-| **Provisioned Capacity**     | Pre-pay for fixed resources for guaranteed performance | Real-time, latency-sensitive inference             |
-| **Spot/Burst Pricing**       | Use spare capacity at a discount, but risk interruptions | Batch training, non-critical workloads             |
-| **Subscription-Based**       | Recurring fee for access to AI services/models | SaaS AI platforms, pre-trained models              |
-| **Tiered Pricing**           | Volume discounts as usage increases    | Large-scale API consumption                        |
-| **Freemium/Trial**           | Free for basic usage, pay for premium  | Experimentation, initial pilots                    |
+**Cost Management:**
+- CloudZero (AI-specific cost tracking and optimization)
+- AWS Cost Explorer (AWS-native cost analysis)
+- Azure Cost Management (Azure-native cost tracking)
+- GCP Billing (GCP-native cost visibility)
 
-### AI-Specific Pricing Nuances
+**Feature Flag and Experiment Control:**
+- LaunchDarkly (feature flags for AI model rollouts)
+- Optimizely (experimentation and A/B testing)
 
-- **Token-Based Billing:** LLMs (e.g., OpenAI GPT, Anthropic Claude) charge per token processed, requiring accurate inference tracking.
-- **SKU Volatility:** New AI model versions, hardware types, and pricing tiers are released frequently, complicating forecasting.
-- **GPU Scarcity:** Demand fluctuations can lead to price volatility or limited availability.
-- **Data Ingress/Egress Fees:** High-volume AI data movement can accrue significant cost, especially cross-region.
-## KPIs, Metrics, and Value Measurement
+**Observability:**
+- Datadog (infrastructure and application monitoring)
+- New Relic (performance and cost correlation)
 
-Measuring the value of AI investments requires metrics that go far beyond raw cost. ([FinOps Foundation: KPIs](https://www.finops.org/wg/finops-for-ai-overview/#kpis-metrics))
+## Implementation Roadmap
 
-| KPI                        | Definition/What It Measures                              |
-|----------------------------|----------------------------------------------------------|
-| **Cost-per-Inference**     | Cost efficiency of running inference workloads           |
-| **Cost-per-Training Iteration** | Efficiency of model training spend                     |
-| **Cost-per-Feature/Customer** | Allocating AI spend to specific business value drivers          |
-| **Model Performance/Accuracy** | Tradeoff between cost and output quality               |
-| **Utilization Rate**       | % of provisioned resources actively in use               |
-| **Idle Resource Spend**    | Cost of unused or underutilized resources                |
-| **Business Value KPIs**    | Revenue impact, customer retention, productivity gains   |
+**Phase 1: Visibility (Months 1-3)**  
+Implement tagging, separate AI spend, establish basic reporting, identify major cost drivers.
 
-### Advanced Metrics
+**Phase 2: Accountability (Months 4-6)**  
+Assign budgets, implement showback, schedule reviews, begin optimization initiatives.
 
-- **Unit Economics:** Cost vs. value per product, feature, or user.
-- **Forecasting Accuracy:** How closely actuals match predicted spend.
-- **Optimization Adoption Rate:** % of recommended savings actions implemented.
-- **Waste Reduction:** Quantifiable reduction in unused resources over time.
-## Challenges and Nuances
+**Phase 3: Optimization (Months 7-9)**  
+Rightsize resources, leverage spot instances, automate waste elimination, refine processes.
 
-FinOps for AI introduces complexities beyond traditional cloud cost management.
+**Phase 4: Value Alignment (Months 10-12)**  
+Track unit economics, link to business outcomes, implement forecasting, integrate into strategic planning.
 
-- **Unpredictable, Bursty Usage:** Training jobs and R&D experiments can cause sudden
+## References
+
+- [FinOps Foundation: FinOps for AI Overview](https://www.finops.org/wg/finops-for-ai-overview/)
+- [CloudZero: FinOps for AI](https://www.cloudzero.com/blog/finops-for-ai/)
+- [Flexera: 8 Steps to Managing AI Costs](https://www.flexera.com/blog/finops/finops-for-ai-8-steps-to-managing-ai-costs-and-resources/)
+- [FinOps Foundation: Best Practices](https://www.finops.org/wg/finops-for-ai-overview/#best-practices)
+- [FinOps Foundation: Personas](https://www.finops.org/framework/personas)
+- [FinOps Foundation: KPIs and Metrics](https://www.finops.org/wg/finops-for-ai-overview/#kpis-metrics)
+- [CloudZero: AI Solutions](https://www.cloudzero.com/solutions/ai/)

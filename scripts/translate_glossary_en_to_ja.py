@@ -20,6 +20,7 @@ If --one-file is omitted, all .md files in source-dir are processed.
 """
 
 import argparse
+import datetime
 import os
 import re
 import textwrap
@@ -256,6 +257,61 @@ def rewrite_internal_links(body_ja: str, existing_ja_slugs: set) -> str:
     return pattern.sub(repl, body_ja)
 
 
+def _iter_markdown_lines_outside_fences(body: str):
+    in_fence = False
+    for line in body.splitlines(keepends=True):
+        stripped = line.lstrip()
+        if stripped.startswith("```"):
+            in_fence = not in_fence
+            yield line, True
+            continue
+        yield line, not in_fence
+
+
+def _count_headings_by_level(body: str) -> Dict[int, int]:
+    counts = {i: 0 for i in range(1, 7)}
+    for line, enabled in _iter_markdown_lines_outside_fences(body):
+        if not enabled:
+            continue
+        m = re.match(r"^(#{1,6})\s+", line)
+        if m:
+            counts[len(m.group(1))] += 1
+    return counts
+
+
+def normalize_body_headings(en_body: str, ja_body: str) -> str:
+    en_counts = _count_headings_by_level(en_body)
+    ja_counts = _count_headings_by_level(ja_body)
+
+    if en_counts.get(1, 0) != 0:
+        return ja_body
+    if ja_counts.get(1, 0) == 0:
+        return ja_body
+
+    shift_all = ja_counts.get(1, 0) >= 2
+
+    out_lines: List[str] = []
+    for line, enabled in _iter_markdown_lines_outside_fences(ja_body):
+        if not enabled:
+            out_lines.append(line)
+            continue
+        m = re.match(r"^(#{1,6})(\s+)(.*)$", line)
+        if not m:
+            out_lines.append(line)
+            continue
+        hashes, ws, rest = m.groups()
+        if shift_all:
+            new_level = min(6, len(hashes) + 1)
+            out_lines.append("#" * new_level + ws + rest)
+            continue
+        if len(hashes) == 1:
+            out_lines.append("##" + ws + rest)
+            continue
+        out_lines.append(line)
+
+    return "".join(out_lines)
+
+
 def translate_markdown_file(
     translator: ClaudeTranslator,
     src_path: Path,
@@ -263,6 +319,7 @@ def translate_markdown_file(
     existing_ja_slugs: set,
     *,
     body_override: Optional[str] = None,
+    override_date: Optional[str] = None,
 ) -> None:
     raw = src_path.read_text(encoding="utf-8")
     fm, body = parse_markdown_with_frontmatter(raw)
@@ -273,6 +330,7 @@ def translate_markdown_file(
     keywords_en = fm.get("keywords", []) or []
 
     body_ja = body_override or translator.translate_body(body)
+    body_ja = normalize_body_headings(body, body_ja)
 
     title_ja, term_ja, keywords_ja, desc_ja = translator.translate_meta(title_en, desc_en, keywords_en)
     body_ja = rewrite_internal_links(body_ja, existing_ja_slugs)
@@ -294,7 +352,10 @@ def translate_markdown_file(
     if keywords_ja:
         fm_ja["keywords"] = keywords_ja
 
-    # translationKey, type, date, category などはそのままコピー
+    # translationKey, type, category などはそのままコピー
+    if override_date:
+        fm_ja["date"] = override_date
+        fm_ja["lastmod"] = override_date
 
     dst_path.parent.mkdir(parents=True, exist_ok=True)
     dst_text = dump_markdown_with_frontmatter(fm_ja, body_ja)
@@ -322,6 +383,16 @@ def main() -> None:
     parser.add_argument("--source-dir", default="content/en/glossary", help="Source directory for English glossary .md files")
     parser.add_argument("--target-dir", default="content/ja/glossary", help="Target directory for Japanese glossary .md files")
     parser.add_argument("--one-file", help="Translate only this filename (e.g., autonomous-agents.md)")
+    parser.add_argument(
+        "--set-date-today",
+        action="store_true",
+        help="Overwrite frontmatter date/lastmod in generated Japanese files with today's date (YYYY-MM-DD)",
+    )
+    parser.add_argument(
+        "--skip-existing",
+        action="store_true",
+        help="Skip translation if the target Japanese file already exists (do not overwrite)",
+    )
     parser.add_argument("--model", default="claude-sonnet-4-5-20250929", help="Claude model name (default: %(default)s)")
     parser.add_argument(
         "--style-guide",
@@ -332,6 +403,12 @@ def main() -> None:
         type=int,
         default=1,
         help="Number of files to bundle per body translation request (>=2 enables batch mode)",
+    )
+    parser.add_argument(
+        "--max-workers",
+        type=int,
+        default=4,
+        help="Max worker threads for parallel translation when --batch-size=1 (default: %(default)s)",
     )
     args = parser.parse_args()
 
@@ -344,24 +421,42 @@ def main() -> None:
 
     existing_ja_slugs = find_existing_ja_slugs(dst_dir)
 
+    override_date = datetime.date.today().isoformat() if args.set_date_today else None
+
     if args.one_file:
         src_path = src_dir / args.one_file
         if not src_path.exists():
             raise SystemExit(f"Source file not found: {src_path}")
+        # Treat the current file as an existing slug so self-references can be rewritten.
+        existing_ja_slugs.add(src_path.stem)
         dst_path = dst_dir / src_path.name
-        translate_markdown_file(translator, src_path, dst_path, existing_ja_slugs)
+        if args.skip_existing and dst_path.exists():
+            print(f"- Skipped (exists): {dst_path}")
+            return
+        translate_markdown_file(
+            translator,
+            src_path,
+            dst_path,
+            existing_ja_slugs,
+            override_date=override_date,
+        )
         return
 
     # 一括翻訳時は、複数ファイルを並列処理して速度アップ
     src_files = sorted(src_dir.glob("*.md"))
+    if args.skip_existing:
+        src_files = [p for p in src_files if not (dst_dir / p.name).exists()]
     if not src_files:
         print(f"No markdown files found in {src_dir}")
         return
 
+    # Include slugs that will be created in this run so internal links can be rewritten to /ja/.
+    existing_ja_slugs |= {p.stem for p in src_files}
+
     batch_size = max(1, args.batch_size)
     if batch_size == 1:
         # ネットワーク待ちが中心なので、3〜4スレッド程度の並列で十分
-        max_workers = min(4, len(src_files))
+        max_workers = min(max(1, args.max_workers), len(src_files))
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = {
                 executor.submit(
@@ -370,6 +465,7 @@ def main() -> None:
                     src_path,
                     dst_dir / src_path.name,
                     existing_ja_slugs,
+                    override_date=override_date,
                 ): src_path
                 for src_path in src_files
             }
@@ -392,20 +488,45 @@ def main() -> None:
             translated_map = translator.translate_body_batch(docs)
         except Exception as exc:
             print(f"Batch translation failed for {[p.name for p in chunk_paths]}: {exc}")
+            for src_path in chunk_paths:
+                try:
+                    translate_markdown_file(
+                        translator,
+                        src_path,
+                        dst_dir / src_path.name,
+                        existing_ja_slugs,
+                        override_date=override_date,
+                    )
+                except Exception as e:
+                    print(f"Error translating {src_path}: {e}")
             continue
 
         for src_path in chunk_paths:
             body_override = translated_map.get(src_path.name)
             if not body_override:
                 print(f"Missing batch result for {src_path}")
+                try:
+                    translate_markdown_file(
+                        translator,
+                        src_path,
+                        dst_dir / src_path.name,
+                        existing_ja_slugs,
+                        override_date=override_date,
+                    )
+                except Exception as e:
+                    print(f"Error translating {src_path}: {e}")
                 continue
-            translate_markdown_file(
-                translator,
-                src_path,
-                dst_dir / src_path.name,
-                existing_ja_slugs,
-                body_override=body_override,
-            )
+            try:
+                translate_markdown_file(
+                    translator,
+                    src_path,
+                    dst_dir / src_path.name,
+                    existing_ja_slugs,
+                    body_override=body_override,
+                    override_date=override_date,
+                )
+            except Exception as e:
+                print(f"Error translating {src_path}: {e}")
 
 
 if __name__ == "__main__":

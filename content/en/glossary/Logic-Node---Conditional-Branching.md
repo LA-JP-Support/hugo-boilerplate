@@ -5,252 +5,299 @@ description: "A Logic Node (Conditional Branching) evaluates conditions in chatb
 keywords: ["Logic Node", "Conditional Branching", "Chatbot", "Automation", "Workflow"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-05
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 draft: false
 ---
+
 ## What is a Logic Node?
 
-A **Logic Node** is a modular decision block in chatbot and automation workflows that evaluates conditions (such as user choices, variables, or statuses) and branches the flow accordingly. The logic node is the “decision point” (conditional branching) where the workflow diverges based on custom rules.
+A Logic Node is a modular decision block in chatbot and automation workflows that evaluates conditions—such as user choices, variables, or system states—and branches the flow accordingly. It represents the "decision point" where workflows diverge based on custom rules, enabling dynamic, intelligent responses to user input or changing contexts.
 
-**Also known as:**
-- Conditional Branching Node
-- If/Then Branch
-- Split Action ([TextIt](https://help.textit.com/en/article/introduction-to-flows-1vmh15z/))
-- Condition Node ([Noca AI](https://support.noca.ai/logic-nodes/))
-- Switch Node
-- Branch Node
+Also known as Conditional Branching Node, If/Then Branch, Split Action, Condition Node, Switch Node, or Branch Node, logic nodes are fundamental building blocks in modern automation platforms. They transform linear workflows into sophisticated, adaptive systems capable of handling complex business logic and user interactions.
+
+**Core Function:** Logic nodes enable workflows to respond dynamically to user input or context, route users to specific actions based on their choices or data, implement business rules (eligibility checks, escalations, approvals), personalize experiences based on tags, user properties, or history, and reduce manual intervention by automating complex decision-making processes.
+
 ## Why Use Conditional Branching?
 
-Logic nodes enable workflows to:
+**Dynamic Response:** Workflows adapt to user input in real-time, providing contextually appropriate responses rather than following rigid, predetermined paths.
 
-- **Respond dynamically** to user input or context
-- **Route users** to specific actions based on their choices or data
-- **Implement business rules** (eligibility checks, escalations, approvals)
-- **Personalize experiences** (based on tags, user properties, or history)
-- **Reduce manual intervention** by automating complex processes
+**Intelligent Routing:** Direct support requests to appropriate teams (technical, billing, equipment) based on issue type, urgency, or customer tier without manual intervention.
 
-**Example:**  
-If a customer selects “Report an Issue”, the bot asks for details; if they choose “Check Order Status”, it fetches order info.
+**Business Rule Implementation:** Encode complex business logic including eligibility checks, multi-tier approvals, compliance requirements, and exception handling directly into automated workflows.
 
-**More:**  
-- [BotStacks: Use Conditions and Logic Branching](https://docs.botstacks.ai/common-tasks/conversation-design/conditions-logic)
+**Personalization at Scale:** Deliver customized experiences based on user tags, CRM properties, purchase history, or behavioral patterns without individual configuration.
 
-## Core Features of Logic Nodes
+**Process Automation:** Eliminate manual decision-making for routine scenarios, freeing human agents for complex, high-value interactions requiring judgment and empathy.
 
-1. **Conditional Evaluation:**  
-   Define one or more conditions using variables, user inputs, or system states.
+**Example Scenario:** Customer selects "Report an Issue" → bot asks for details and creates ticket. Customer selects "Check Order Status" → bot retrieves order information and provides tracking updates. Customer selects "Billing Question" → bot routes to billing department with full conversation context.
 
-2. **Branching/Flow Control:**  
-   Route to different nodes/actions based on which condition is true.
+## Core Features and Capabilities
 
-3. **Context Variable Access:**  
-   Read/write variables in the conversation or workflow context.
+### Conditional Evaluation
 
-4. **Nested Logic:**  
-   Support for multi-level or nested conditions (e.g., “If A, then check B; else do C”).
+Define single or multiple conditions using variables, user inputs, system states, timestamps, or external data sources. Support for complex Boolean logic (AND, OR, NOT) enables sophisticated decision trees matching real-world business requirements.
 
-5. **Visual Representation:**  
-   Most platforms provide a visual editor for connecting and configuring logic nodes.
+### Flow Control and Branching
 
-6. **No-Code/Low-Code Setup:**  
-   Configurable via graphical UI, but advanced logic may be supported by code or pseudo-code.
-## Types of Logic Nodes and Branching
+Route execution to different nodes or actions based on condition evaluation results. Support for multiple branch paths enables parallel processing, fallback handling, and graceful degradation when primary paths fail.
 
-Platform offerings may include:
+### Context Variable Management
 
-- **If/Then Branches:** Binary branching (true/false).
-- **Switch/Case Nodes:** Multi-way branching for discrete values.
-- **Split Actions:** Branching based on user input, variables, or randomization ([TextIt](https://help.textit.com/en/article/introduction-to-flows-1vmh15z/)).
-- **Condition Nodes:** General-purpose true/false evaluators.
-- **Loop, Break, Continue:** For iterative logic ([Noca AI](https://support.noca.ai/logic-nodes/)).
-- **Random Branching:** For A/B testing or randomized flows.
-- **Multi-Level Branching:** Nested or multi-layered logic ([Slack Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder)).
+Read and write variables in conversation or workflow context, maintaining state across multiple interactions. Variables can store user preferences, transaction data, session information, or temporary calculation results.
 
-## How to Add and Configure a Logic Node
+### Nested Logic Support
 
-### Kore.ai Example
+Build multi-level conditional structures ("If A, then check B; else if C, then check D; else do E") enabling complex decision-making that mirrors human reasoning processes.
 
-Logic nodes in Kore.ai can only be added as part of a Bot Action node.
+### Visual Representation
 
-**Steps:**
-1. Open the dialog task where you want to add branching.
-2. Add/expand a **Bot Action** node ([Bot Action Node docs](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/bot-action-node/)).
-3. Insert a **Logic Node**.  
-   - The **Component Properties** tab is displayed by default.
-   - ![Adding a logic node in Kore.ai](https://kore-wordpress.s3.us-east-2.amazonaws.com/developer.kore.ai/wp-content/uploads/20220921084031/add-logic-node-1024x456.gif)
-4. Configure:
-   - **Name** and **Display Name** in **Component Properties**.
-   - Assign variable namespaces as needed.
-   - Use **Manage Context Variables** to define/update variables (e.g., `_context.BotUserSession.<variable_name>_`).
-   - In **Instance Properties**, set tags or dialog-specific metadata.
-   - In **Connection Properties**, define conditional statements to control which node executes next, based on entity values, context objects, or intents.
-5. Save and connect branches visually.
-### Platform-Agnostic Guide
+Most platforms provide drag-and-drop editors for connecting and configuring logic nodes, making complex workflows comprehensible to non-technical stakeholders and enabling collaborative design.
 
-Most platforms follow a similar pattern:
+### No-Code/Low-Code Configuration
 
-1. Open your bot/automation builder (e.g., [Yellow.ai](https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes/logic-nodes), [HubSpot](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows), [Slack](https://slack.com/blog/news/conditional-branching-workflow-builder), [TextIt](https://help.textit.com/en/article/introduction-to-flows-1vmh15z/)).
-2. Navigate to the relevant flow or journey.
-3. Add a logic/condition/split node:
-   - Look for **Logic**, **If/Then**, **Condition**, or **Split Action** in the node palette.
-   - Drag and drop onto your canvas.
-4. Define condition(s):
-   - Specify property or variable to evaluate.
-   - Set comparison operators (equals, contains, >, etc.).
-   - Input values to match.
-5. Connect branches to next steps.
-6. Test the flow using preview/testing tools.
-## Logic Node Settings & Properties
+Configure logic through graphical interfaces with form-based inputs, though advanced scenarios may leverage scripting or pseudo-code for maximum flexibility.
 
-### Component Properties
+## Types and Branching Patterns
 
-- **Name:** Internal identifier.
-- **Display Name:** User-friendly label.
-- **Variable Namespaces:** Scope for variables (task or node-level isolation).
-- **Manage Context Variables:** Set/update variables in conversation context.
+### Binary Decision (If/Then)
 
-*Component Properties changes affect all instances of a logic node.*
+Simple true/false evaluation directing flow to one of two paths. Ideal for yes/no questions, boolean checks, or presence/absence validation.
 
-### Instance Properties
+### Multi-Way Branching (Switch/Case)
 
-- **Tags:** Custom metadata or tags for tracking/segmentation.
-- **Dialog-Scoped Settings:** Settings specific to the current dialog/flow.
+Evaluate single variable against multiple discrete values, routing to appropriate branch for each case. Efficient for menu selections, status codes, or category classifications.
 
-*Instance Properties affect only the current node instance.*
+### Split Actions
+
+Branch based on user input, context variables, or randomization. Used for A/B testing, load distribution, or dynamic content delivery based on user characteristics.
+
+### Condition Evaluation
+
+General-purpose conditional nodes accepting complex expressions with multiple operators and operands. Support mathematical comparisons, string matching, regex patterns, and custom functions.
+
+### Iterative Logic (Loop, Break, Continue)
+
+Implement looping constructs for processing collections, retry logic, or repeated validation checks until conditions are met or limits reached.
+
+### Random Branching
+
+Distribute traffic randomly across multiple paths for A/B testing, feature rollout, or load balancing across equivalent service endpoints.
+
+### Multi-Level Branching
+
+Nested conditional structures enabling complex decision trees with multiple evaluation stages and interdependent conditions.
+
+## Implementation Guide
+
+### Platform-Agnostic Configuration Steps
+
+**Access Workflow Builder:** Open your automation platform (Yellow.ai, HubSpot, Slack Workflow Builder, TextIt, or similar).
+
+**Navigate to Flow:** Locate the specific workflow, journey, or dialog task requiring conditional logic.
+
+**Add Logic Node:** Find Logic, If/Then, Condition, or Split Action in the node palette. Drag and drop onto canvas at appropriate decision point.
+
+**Define Conditions:**
+- Specify property or variable for evaluation
+- Select comparison operator (equals, contains, greater than, less than, in list)
+- Input target values or expressions
+- Configure additional conditions with AND/OR logic
+
+**Connect Branches:** Wire each conditional branch to subsequent actions, creating complete execution paths for all possible outcomes.
+
+**Configure Fallback:** Define default branch for conditions not explicitly matched, ensuring graceful handling of unexpected inputs.
+
+**Test Thoroughly:** Use platform preview tools to verify correct branching for all input variations, edge cases, and error conditions.
+
+### Kore.ai-Specific Implementation
+
+Logic nodes in Kore.ai must be added within Bot Action nodes, providing scoped isolation for complex dialog management.
+
+**Procedure:**
+1. Open dialog task requiring branching
+2. Add or expand Bot Action node
+3. Insert Logic Node (Component Properties tab displays)
+4. Configure Name and Display Name
+5. Assign variable namespaces for scope management
+6. Use Manage Context Variables to define/update variables (e.g., `_context.BotUserSession.<variable_name>_`)
+7. Set Instance Properties for tags or dialog-specific metadata
+8. Define Connection Properties with conditional statements controlling next node execution
+9. Save and visually connect branches
+
+## Configuration Properties
+
+### Component Properties (Global)
+
+**Name:** Internal identifier for programmatic reference and debugging.
+
+**Display Name:** User-friendly label appearing in visual editor for team communication.
+
+**Variable Namespaces:** Scope management for variables ensuring task or node-level isolation prevents naming conflicts.
+
+**Context Variable Management:** Interface for creating, reading, updating variables in conversation context, maintaining state across multiple turns.
+
+Changes to Component Properties affect all instances of logic node across entire workflow.
+
+### Instance Properties (Local)
+
+**Tags:** Custom metadata for tracking, segmentation, analytics, or conditional processing downstream.
+
+**Dialog-Scoped Settings:** Configuration specific to current dialog instance without affecting other uses of same node template.
+
+Instance Properties apply only to current node instance, enabling customization without global impact.
 
 ### Connection Properties
 
-- **Conditional Connections:** Define which node executes next, based on conditions.
-- **Fallback Path:** Default branch if no conditions are met.
-- **Intents/Entity Values:** Use detected intents/entity values for branching.
+**Conditional Connections:** Define which node executes next based on evaluated conditions, creating dynamic routing.
 
-*Some platforms restrict logic node connections to specific scopes (e.g., inside Bot Action nodes in Kore.ai).*
-## Conditional Statements and Syntax
+**Fallback Path:** Default branch when no conditions match, ensuring workflow never terminates unexpectedly.
 
-Conditional statements determine how branches are evaluated. These may be set via UI or written as expressions.
+**Intent/Entity Integration:** Use detected intents or extracted entity values in branching decisions, leveraging NLP capabilities.
 
-**Common Operators:**
-- equals (==)
-- not equals (!=)
-- contains
-- greater than (>)
-- less than (<)
-- in (list membership)
-- and, or, not (logical operators)
+Platform-specific restrictions may apply—for example, Kore.ai restricts logic node connections to Bot Action node scope.
 
-**Pseudo-code Example:**
+## Conditional Logic Syntax
+
+### Common Operators
+
+**Equality:** `==` (equals), `!=` (not equals)
+
+**Comparison:** `>` (greater than), `<` (less than), `>=` (greater or equal), `<=` (less or equal)
+
+**String Operations:** `contains`, `starts_with`, `ends_with`, `matches` (regex)
+
+**List Operations:** `in` (membership), `not_in`
+
+**Logical Operators:** `and`, `or`, `not` for combining multiple conditions
+
+### Expression Examples
+
 ```pseudo
-if (user_response == "yes") {
-    go_to("ConfirmOrder");
+if (user_response == "yes" && account_verified) {
+    go_to("CompleteTransaction");
+} else if (user_response == "yes" && !account_verified) {
+    go_to("VerifyAccount");
 } else if (user_response == "no") {
-    go_to("CancelOrder");
+    go_to("CancelProcess");
 } else {
     go_to("ClarifyIntent");
 }
 ```
 
-**Platform UI Example:**
-- In [HubSpot](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows), use the **If/then branches** tab to add rules based on user response, property, or agent availability.
-- In [Slack Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder), select criteria such as dropdown values, form responses, or channel data.
+### Platform-Specific Syntax
 
-## Practical Usage Scenarios
+**HubSpot:** Configure through If/then branches tab, adding rules based on contact properties, form responses, or agent availability status.
 
-**1. User Response Handling**  
-Route users based on “Yes/No” answers, option selections, or free text.
+**Slack Workflow Builder:** Select criteria from dropdown values, form field contents, channel data, or custom variables.
 
-**2. Support Request Routing**  
-Direct support tickets to the right team (e.g., technical, billing, equipment).
+**TextIt:** Visual flow editor with drag-and-drop split nodes supporting regex validation and variable evaluation.
 
-**3. Multi-Step Approvals**  
-Implement tiered approvals (e.g., manager, then director).
+## Practical Applications
 
-**4. Personalization**  
-Show responses based on user tags or CRM properties.
+### User Response Processing
 
-**5. Data Validation**  
-Check for valid phone numbers, emails, or required fields before progressing.
+Route based on explicit choices (yes/no, menu selections) or implicit signals (message tone, keyword presence, response length).
 
-**6. A/B Testing**  
-Randomly branch users for experimentation or feature rollout.
+### Support Ticket Routing
 
-**7. Error Handling**  
-Route to fallback or clarification paths for invalid/missing inputs.
-## Examples: Real-World Conditional Branching
+Direct inquiries to specialized teams based on issue type, customer tier, SLA requirements, or technical complexity indicators.
 
-### Example 1: Yes/No Decision
-**Scenario:** Bot asks, “Do you want to receive notifications?”
-- If user response equals “yes” → Go to **Enable Notifications** node.
-- Else → Go to **Disable Notifications** node.
+### Multi-Stage Approvals
 
-### Example 2: Support Request Routing ([Slack Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder))
-**Scenario:** User submits a support request with issue type.
-- If `issue_type == "technical"` → Route to `#tech-support`
-- If `issue_type == "billing"` → Route to `#billing-support`
-- If `issue_type == "equipment"` → Route to `#equipment-support`
+Implement hierarchical approval workflows (team lead → department head → finance director) with automatic escalation and timeout handling.
 
-### Example 3: Quick Reply Branching ([HubSpot Bot](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows))
-**Scenario:** Bot asks, “What can we help you with?”  
-[Quick replies](/en/glossary/quick-replies/): “Order Status”, “Technical Support”, “Other”
-- If **Order Status** → Go to order lookup
-- If **Technical Support** → Go to support
-- If **Other** → General inquiry
+### Experience Personalization
 
-### Example 4: Multi-Layered Approval ([Slack](https://slack.com/blog/news/conditional-branching-workflow-builder))
-- If `manager_approval == "approved"`:
-  - Route to finance director.
-  - If `finance_approval == "approved"`: Notify procurement.
-  - Else: Notify rejection.
-- Else: Notify rejection.
+Customize content, tone, offers based on user segments, purchase history, engagement level, or demographic data.
 
-### Example 5: Split Action for Data Validation ([TextIt](https://help.textit.com/en/article/introduction-to-flows-1vmh15z/))
-- If input is a valid phone number → Proceed.
-- Else → Send error and prompt for re-entry.
+### Data Validation
 
-## Best Practices & Tips
+Verify phone numbers, email formats, postal codes, credit card numbers before processing, prompting for correction when validation fails.
 
-- Define all branches, including fallback (“else”).
-- Use descriptive node names for clarity.
-- Group related logic for modularity.
-- Test every branch using preview/testing tools.
-- Use variables/tags for analytics and personalization.
-- Avoid overly nested logic; break complex logic into smaller flows.
-- Document business rules using comments or descriptions.
-## Limitations & Edge Cases
+### A/B Testing
 
-- **Scope Restrictions:**  
-  - In Kore.ai, logic nodes are scoped inside Bot Action nodes.
-- **Global vs. Instance Settings:**  
-  - Component Properties are global, Instance Properties are local.
-- **Node Limits:**  
-  - Some platforms have node-per-flow limits (e.g., Yellow.ai: 150 nodes).
-- **Deletion Dependencies:**  
-  - Active branches must be deleted before deleting the parent node (HubSpot).
-- **Data Type Considerations:**  
-  - Data types in conditions (string vs. number) must be compatible.
-- **Random/A/B Branching:**  
-  - May yield unpredictable results without seeding or tracking.
-## Related Concepts and Further Reading
+Randomly assign users to experimental variants for feature testing, messaging optimization, or conversion funnel analysis.
 
-- [Bot Action Node (Kore.ai)](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/bot-action-node/)
-- [Yellow.ai Node Types](https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes)
-- [TextIt Flows](https://help.textit.com/en/article/introduction-to-flows-1vmh15z/)
-- [Slack Workflow Builder Guide](https://slack.com/help/articles/360035692513-Guide-to-Slack-Workflow-Builder)
-- [Noca AI Logic Nodes](https://support.noca.ai/logic-nodes/)
-- [HubSpot Chatflows](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows)
+### Error Recovery
 
+Route to fallback paths, clarification dialogs, or human escalation when inputs are ambiguous, invalid, or outside expected parameters.
 
-## Source Links and Further Reading
+## Real-World Examples
 
-- [BotStacks: Use Conditions and Logic Branching](https://docs.botstacks.ai/common-tasks/conversation-design/conditions-logic/)
-- [Kore.ai: Working with the Logic Node](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-logic-node/)
+### E-Commerce Order Status
+
+Bot asks: "What can I help you with today?"
+- User selects "Track Order" → Request order number → Retrieve tracking data → Display status
+- User selects "Return Item" → Verify purchase date → Check return eligibility → Generate return label
+- User selects "Product Question" → Route to product specialist with context
+
+### Financial Services Routing
+
+Customer submits inquiry:
+- Issue type = "Account Access" → Verify identity → Reset credentials or escalate to fraud team
+- Issue type = "Transaction Dispute" → Retrieve transaction → Check dispute eligibility → Create case
+- Issue type = "Investment Advice" → Route to licensed financial advisor with customer profile
+
+### Healthcare Appointment Scheduling
+
+Patient interaction:
+- "Schedule new appointment" AND insurance_verified → Show available slots → Confirm booking
+- "Schedule new appointment" AND !insurance_verified → Request insurance information → Verify → Proceed
+- "Reschedule existing" → Retrieve current appointment → Show alternatives → Update booking
+
+### HR Onboarding Automation
+
+New employee workflow:
+- Department = "Engineering" → Assign development environment → Schedule technical orientation
+- Department = "Sales" → Assign CRM access → Schedule sales methodology training
+- Contract type = "Contractor" → Limited access provisioning → Compliance documentation
+
+## Best Practices
+
+**Define Complete Branch Coverage:** Ensure all possible condition outcomes have defined paths, including edge cases and unexpected inputs.
+
+**Use Descriptive Naming:** Label nodes, variables, conditions with clear, business-meaningful names enabling collaboration and maintenance.
+
+**Implement Modular Logic:** Break complex decision trees into smaller, reusable flows improving testability and reducing coupling.
+
+**Test Exhaustively:** Verify every branch path using platform testing tools with representative data covering normal, edge, and error cases.
+
+**Leverage Variables for Analytics:** Capture decision paths, user choices in variables enabling downstream analysis and optimization.
+
+**Avoid Deep Nesting:** Limit nesting depth to 3-4 levels; refactor complex logic into separate flows preventing maintenance nightmares.
+
+**Document Business Rules:** Use comments, descriptions, or external documentation explaining decision logic and rationale for future reference.
+
+**Monitor Performance:** Track branch execution frequency, conversion rates, abandonment points identifying optimization opportunities.
+
+## Limitations and Considerations
+
+**Platform Scope Restrictions:** Some platforms (e.g., Kore.ai) restrict logic nodes to specific container nodes, limiting flexibility.
+
+**Global vs. Instance Settings:** Changes to Component Properties affect all instances; Instance Properties provide isolation but limited configurability.
+
+**Node Count Limits:** Platforms may impose per-flow limits (e.g., Yellow.ai: 150 nodes) requiring careful design for complex workflows.
+
+**Deletion Dependencies:** Active branches must be removed before deleting parent nodes, requiring careful coordination during refactoring.
+
+**Data Type Consistency:** Ensure variables maintain consistent types (string vs. number) across conditions preventing unexpected behavior.
+
+**Random Branching Repeatability:** Random distribution without seeding may produce unpredictable results for returning users or testing scenarios.
+
+**Performance Impact:** Complex nested conditions or excessive branching can impact response latency in high-throughput scenarios.
+
+## References
+
+- [BotStacks: Conditions and Logic Branching](https://docs.botstacks.ai/common-tasks/conversation-design/conditions-logic/)
+- [Kore.ai: Working with Logic Node](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-logic-node/)
+- [Kore.ai: Bot Action Node](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/bot-action-node/)
 - [Yellow.ai: Logic Nodes](https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes/logic-nodes)
+- [Yellow.ai: Node Types](https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes)
 - [HubSpot: If/Then Branches](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows)
 - [Slack: Conditional Branching Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder)
+- [Slack: Workflow Builder Guide](https://slack.com/help/articles/360035692513-Guide-to-Slack-Workflow-Builder)
 - [TextIt: Introduction to Flows](https://help.textit.com/en/article/introduction-to-flows-1vmh15z/)
 - [Kore.ai: Managing Namespace](https://developer.kore.ai/docs/bots/bot-settings/bot-management/managing-namespace/)
 - [Kore.ai: Custom Meta Tags](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/custom-meta-tags/)
-- [Slack: Workflow Builder Guide](https://slack.com/help/articles/360035692513-Guide-to-Slack-Workflow-Builder)
 - [Noca AI: Logic Nodes](https://support.noca.ai/logic-nodes/)
-
-**For more details, always consult your platform's official documentation and developer guides.**

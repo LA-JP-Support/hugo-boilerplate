@@ -1,5 +1,5 @@
 ---
-title: LangFlow Glossary
+title: LangFlow
 translationKey: langflow
 description: LangFlow is an open-source, low-code visual interface for building, testing,
   and deploying AI applications, especially those based on LLMs and LangChain.
@@ -11,257 +11,271 @@ keywords:
 - low-code
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-05
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 draft: false
 ---
+
 ## What is LangFlow?
 
-LangFlow is an open-source, Python-based visual framework that allows rapid, code-optional development of applications powered by large language models (LLMs), agents, and AI automation workflows. It is built on top of [LangChain](https://www.langchain.com/), which is a modular framework for chaining large language model calls, data retrieval, and tool use.
+LangFlow is an open-source, Python-based visual framework enabling rapid, code-optional development of applications powered by large language models (LLMs), agents, and AI automation workflows. Built on top of LangChain, a modular framework for chaining LLM calls, data retrieval, and tool use, LangFlow provides a drag-and-drop canvas where each node represents a modular component—such as an LLM, prompt template, embedding store, or custom tool.
 
-- **Visual-first:** LangFlow provides a drag-and-drop canvas where each node represents a modular component—such as an LLM, a [prompt template](/en/glossary/prompt-template/), an embedding store, or a custom tool.
-- **Comprehensive support:** LangFlow supports key AI paradigms such as agentic reasoning, RAG (retrieval augmented generation), and multi-agent orchestration.
-- **No lock-in:** You are not restricted to particular LLMs or vector stores—LangFlow is model- and datastore-agnostic.
-- **Open-source extensibility:** Advanced users can create custom Python components or integrate external Python code directly.
+**Core Characteristics:**
+- **Visual-first:** Drag-and-drop interface for assembling AI workflows without extensive coding
+- **Comprehensive support:** Enables agentic reasoning, RAG (retrieval augmented generation), and multi-agent orchestration
+- **No lock-in:** Model- and datastore-agnostic, supporting multiple LLM providers and vector databases
+- **Open-source extensibility:** Advanced users can create custom Python components or integrate external code
 
-**Authoritative Resources:**
-- [LangFlow Official Docs: What is LangFlow?](https://docs.langflow.org/)
-- [Cohorte: Visual Guide to LangFlow](https://www.cohorte.co/blog/langflow-a-visual-guide-to-building-llm-apps-with-langchain)
+LangFlow democratizes LLM application development by making it accessible to both technical and non-technical users, accelerating prototyping and deployment of sophisticated AI systems.
 
-## LangFlow Workspace and Visual Editor
+## Visual Editor and Workspace
 
-The heart of LangFlow is its interactive visual editor, which allows users to build, test, and share "flows"—graphical representations of application logic.
+The LangFlow workspace provides an interactive environment for building, testing, and sharing "flows"—graphical representations of application logic.
 
-### Key Workspace Features
+**Key Features:**
 
-- **Canvas-based design:** Drag nodes onto the workspace, connect them with edges to define the flow of data and logic. Nodes can be rearranged, grouped, and annotated for clarity.
-- **Component library:** Access a rich set of pre-built nodes for LLMs, data loaders, API connectors, and more.
-- **Smart guides and gestures:** Pan, zoom, and rearrange components easily; use keyboard shortcuts for rapid prototyping.
-- **Notes and comments:** Add documentation directly to your flows for easier collaboration and knowledge transfer.
-- **Lock/unlock flows:** Prevent accidental edits or enable protected sharing.
-- **Logs and debugging:** Integrated logs panel for step-by-step output and error inspection during flow execution.
+**Canvas-Based Design:** Drag nodes onto the workspace and connect them with edges to define data flow and logic. Nodes can be rearranged, grouped, and annotated for clarity and documentation.
 
-**Visual references and documentation:**
-- [LangFlow Visual Editor Overview](https://docs.langflow.org/concepts-overview)
-- [Workspace Gestures and Interactions](https://docs.langflow.org/concepts-overview#workspace-gestures-and-interactions)
+**Component Library:** Access rich set of pre-built nodes for LLMs, data loaders, API connectors, vector databases, and specialized tools.
 
-## How LangFlow is Used: Audience and Application Scenarios
+**Smart Guides and Gestures:** Pan, zoom, and rearrange components easily using keyboard shortcuts for rapid prototyping.
 
-LangFlow caters to a broad audience, including:
+**Notes and Comments:** Add documentation directly to flows for easier collaboration and knowledge transfer.
 
-- **AI Builders & Developers:** Prototype, iterate, and deploy LLM-powered applications with reusable, modular flows.
-- **Product Teams:** Visualize AI workflows for communication with non-technical stakeholders.
-- **Data Scientists:** Experiment with prompt engineering, agentic workflows, and RAG pipelines.
-- **Educators & Researchers:** Demonstrate and teach LLM concepts interactively.
-- **Non-Developers:** Assemble functional AI solutions without deep programming expertise.
+**Flow Management:** Lock/unlock flows to prevent accidental edits or enable protected sharing among team members.
 
-### Typical Usage Patterns
+**Logs and Debugging:** Integrated logs panel for step-by-step output inspection and error diagnosis during flow execution.
 
-- **Designing chatbots, agentic systems, and automation tools.**
-- **Constructing RAG (retrieval-augmented generation) pipelines** that combine LLMs with vector databases for knowledge retrieval.
-- **Creating multi-agent systems** where agents collaborate or specialize in subtasks.
-- **Testing and sharing flows** for real-time feedback and collaborative iteration.
-- **Exporting flows** for use as APIs, embeddable widgets, or integration with external applications.
+These workspace features enable iterative development and collaborative workflow design, essential for building production-ready AI applications.
 
-**Authoritative resource:**  
-[LangFlow Application Development and Prototyping](https://docs.langflow.org/)
+## Target Audience and Use Cases
 
-## LangFlow Core Features
+**AI Builders & Developers:** Prototype, iterate, and deploy LLM-powered applications with reusable, modular flows.
 
-### Visual Drag-and-Drop Interface
+**Product Teams:** Visualize AI workflows for communication with non-technical stakeholders and executive presentations.
 
-- **Canvas-based UI:** Build applications by dragging components (LLMs, prompts, databases, APIs, etc.) onto a visual canvas and connecting them to define the data flow.
-- **Low-code/no-code:** Most configuration is accomplished via visual forms and drop-downs; little or no code is required for standard applications.
-- **Live feedback:** Inspect the flow of data and logic at each step, enabling rapid debugging and iteration.
-### Component System
+**Data Scientists:** Experiment with prompt engineering, agentic workflows, and RAG pipelines without infrastructure overhead.
 
-Components are modular nodes that represent discrete steps or resources within your AI workflow.
+**Educators & Researchers:** Demonstrate and teach LLM concepts interactively through hands-on workflow building.
 
-#### Core Component Types
+**Non-Developers:** Assemble functional AI solutions without deep programming expertise or DevOps knowledge.
 
-- **LLMs:** Integrate with models such as OpenAI's GPT, Meta's Llama, Mistral, HuggingFace-hosted models, and more.
-- **Prompt Templates:** Design and reuse prompt patterns for consistent LLM interaction.
-- **Vector Databases:** Connect to [Pinecone](/en/glossary/pinecone/), FAISS, [Weaviate](/en/glossary/weaviate/), Qdrant, [Milvus](/en/glossary/milvus/), Astra DB, and other stores for semantic search and retrieval.
-- **Agents:** Create intelligent, [autonomous agents](/en/glossary/autonomous-agents/) capable of tool use, API access, reasoning, and task management.
-- **Chains:** Combine multiple components into sequential or branching logic flows.
+### Typical Application Patterns
 
-#### Specialized Components
+**Chatbot Development:** Design conversational agents with integrated memory, context management, and multi-turn dialogue capabilities.
 
-- **Memory:** Maintain conversational or operational context across turns or sessions.
-- **Tools:** Web search, calculators, web scrapers, PDF loaders, and arbitrary API integrations.
-- **Inputs/Outputs:** Chat boxes, file uploaders, text fields, and output visualizations.
+**RAG Pipeline Construction:** Combine LLMs with vector databases for knowledge retrieval, enabling chatbots to reference company documentation or specialized knowledge bases.
 
-**Component configuration:**  
-Each component exposes parameters and can accept either hard-coded or variable values. Parameters can be overridden at runtime for flexible experimentation.
-### Extensive Integrations
+**Multi-Agent Systems:** Create workflows where multiple agents collaborate, specialize in subtasks, or compete to solve complex problems.
 
-LangFlow provides broad, plug-and-play connectivity:
+**Rapid Prototyping:** Test and share flows for real-time feedback and collaborative iteration before production deployment.
 
-- **Model providers:** OpenAI, Anthropic, HuggingFace, NVIDIA, Mistral, Groq, Perplexity, and others.
-- **Data sources:** Google Drive, Notion, Confluence, Github, Gmail, and more for ingesting and processing knowledge bases.
-- **Vector stores:** Pinecone, FAISS, Qdrant, Milvus, Astra DB, Vectara, Redis, MongoDB, and others.
-- **APIs:** Integrate any external API as a tool within your flows.
-- **Custom tools:** Import Python-based tools and develop your own for bespoke requirements.
-### Export, Import, Collaboration, and Versioning
+**API Integration:** Export flows as APIs, embeddable widgets, or integration modules for external applications.
 
-- **Export flows:** Save flows as JSON files, Python code, or shareable links for use in other projects or environments.
-- **Import flows:** Load flows shared by others for team development or community learning.
-- **Versioning:** Track iterations and changes for robust development workflows.
-- **Collaboration:** Share flows for review, collaborative editing, or onboarding new users.
+## Core Component System
 
-**Practical tip:**  
-Use flow export/import to migrate projects between development, staging, and production environments or to share prototypes for stakeholder review.
-### Real-Time Testing and Playground
+### LLM Integration
 
-- **Playground mode:** Test flows interactively before deploying. The right-side panel switches to a chat interface for live prompts and responses.
-- **Debugging:** View step-by-step outputs, monitor agent tool calls, and inspect intermediate results for troubleshooting.
-- **Component isolation:** Run individual nodes to verify configuration and data flow.
+Connect to multiple model providers including OpenAI's GPT series, Meta's Llama models, Mistral, Anthropic Claude, HuggingFace-hosted models, and other commercial and open-source options. Configure model parameters, temperature, context windows, and token limits directly through the visual interface.
 
-**Screenshot and detailed walkthrough:**  
-[LangFlow Playground Documentation](https://docs.langflow.org/concepts-playground)
+### Prompt Templates
 
-### Agent and Model Context Protocol (MCP) Support
+Design and reuse prompt patterns for consistent LLM interaction. Support for variable injection, few-shot examples, and system message configuration ensures reproducible results across workflow executions.
+
+### Vector Databases
+
+Native integration with Pinecone, FAISS, Weaviate, Qdrant, Milvus, Astra DB, and other vector stores for semantic search and retrieval. Configure embedding models, indexing strategies, and similarity search parameters visually.
+
+### Agents and Reasoning
+
+Create intelligent, autonomous agents capable of tool use, API access, reasoning chains, and task management. Agents can make decisions, call external tools, and maintain context over multi-turn interactions.
+
+### Chains and Workflows
+
+Combine multiple components into sequential or branching logic flows. Support for conditional routing, parallel execution, and error handling enables complex workflow orchestration.
+
+### Specialized Components
+
+**Memory Management:** Maintain conversational or operational context across turns or sessions using various memory types (buffer, summary, entity).
+
+**Tool Integration:** Web search, calculators, web scrapers, PDF loaders, database connectors, and arbitrary API integrations.
+
+**Input/Output Handling:** Chat boxes, file uploaders, text fields, and output visualizations for user interaction and result display.
+
+Each component exposes configurable parameters that can accept hard-coded values or runtime variables, enabling flexible experimentation and production deployment.
+
+## Extensive Integration Ecosystem
+
+**Model Providers:** OpenAI, Anthropic, HuggingFace, NVIDIA, Mistral, Groq, Perplexity, and expanding provider network.
+
+**Data Sources:** Google Drive, Notion, Confluence, GitHub, Gmail integration for ingesting and processing knowledge bases.
+
+**Vector Stores:** Comprehensive support for modern vector databases including Pinecone, FAISS, Qdrant, Milvus, Astra DB, Vectara, Redis, MongoDB.
+
+**APIs and Custom Tools:** Integrate any external API as tool within workflows. Import Python-based tools and develop custom components for specialized requirements.
+
+Integration flexibility ensures LangFlow adapts to existing infrastructure and technology stacks without vendor lock-in.
+
+## Collaboration and Deployment
+
+**Flow Export:** Save flows as JSON files, Python code, or shareable links for use in other projects or environments.
+
+**Flow Import:** Load flows shared by others for team development, learning, or building on community contributions.
+
+**Version Control:** Track iterations and changes for robust development workflows and rollback capabilities.
+
+**Sharing and Collaboration:** Distribute flows for review, collaborative editing, or onboarding new team members.
+
+**Deployment Options:** Export to production APIs, embed in web applications, or integrate with external automation platforms.
+
+Use export/import functionality to migrate projects between development, staging, and production environments or share prototypes for stakeholder review.
+
+## Real-Time Testing and Playground
+
+**Playground Mode:** Test flows interactively before deploying. Right-side panel switches to chat interface for live prompts and responses.
+
+**Debugging Capabilities:** View step-by-step outputs, monitor agent tool calls, and inspect intermediate results for troubleshooting.
+
+**Component Isolation:** Run individual nodes to verify configuration and data flow without executing entire workflow.
+
+**Live Feedback:** Immediate visibility into data transformations, API calls, and model responses enables rapid iteration.
+
+Testing capabilities reduce development cycle time and ensure production readiness before deployment.
+
+## Agent and MCP Support
 
 LangFlow supports advanced agentic workflows and interoperability via the Model Context Protocol (MCP):
 
-- **Agentic workflows:** Build agents that autonomously make decisions, call tools, and maintain context over multi-turn tasks.
-- **Multi-agent orchestration:** Compose workflows where multiple agents collaborate, compete, or specialize.
-- **MCP support:** Run LangFlow as an MCP server or client, standardizing context and inter-process communication between models and tools.
+**Agentic Workflows:** Build agents that autonomously make decisions, call tools, and maintain context over multi-turn tasks.
 
-**Further reading:**  
-- [LangFlow Agents](https://docs.langflow.org/agents)
-- [MCP Server](https://docs.langflow.org/mcp-server)
-- [MCP Client](https://docs.langflow.org/mcp-client)
+**Multi-Agent Orchestration:** Compose workflows where multiple agents collaborate, compete, or specialize in complementary roles.
 
-### Custom Components and Extensibility
+**MCP Server/Client:** Run LangFlow as MCP server or client, standardizing context and inter-process communication between models and tools.
 
-- **Custom Python components:** Advanced users can extend LangFlow by building custom Python modules, available as reusable nodes within the visual editor.
-- **Community extensions:** Leverage or contribute community-developed components for rapid feature expansion.
-- **Security and flexibility:** As open source, LangFlow is transparent and auditable for security-focused deployments.
+These capabilities enable sophisticated AI systems that can reason, plan, and execute complex tasks with minimal human intervention.
 
-**Developer guide:**  
-[Building Custom Components](https://docs.langflow.org/components-custom-components)
+## Custom Component Development
 
-## Step-by-Step: Building Your First Flow in LangFlow
+**Custom Python Components:** Advanced users extend LangFlow by building custom Python modules, available as reusable nodes within visual editor.
 
-**Installation and Setup:**
+**Community Extensions:** Leverage or contribute community-developed components for rapid feature expansion.
+
+**Security and Transparency:** Open-source architecture provides transparency and auditability for security-focused deployments.
+
+Custom component development enables domain-specific functionality while maintaining visual workflow benefits.
+
+## Getting Started
+
+### Installation
+
 ```bash
 pip install langflow
-# or for the latest features:
+# or for latest features:
 pip install git+https://github.com/langflow-ai/langflow.git
 ```
-Start the UI:
+
+### Launch Interface
+
 ```bash
 python -m langflow
 # or
 langflow
 ```
-LangFlow will open at [http://localhost:7860](http://localhost:7860).
 
-**Build a Chatbot Example:**
+LangFlow opens at http://localhost:7860 by default.
 
-1. **Create a new flow:**  
-   - Click `New Project` or `New Flow` in the dashboard. Name your flow.
+### Building First Chatbot
 
-2. **Add components:**  
-   - Drag an LLM node (e.g., OpenAI, Llama) onto the canvas. Configure API key, model type, parameters.
-   - Add a Prompt Template node (e.g., "You are a helpful assistant.\nUser: {input}\nAssistant:").
-   - Add a Chain or Chat Output node.
+**Create New Flow:** Click "New Project" or "New Flow" in dashboard. Name your workflow.
 
-3. **Connect components:**  
-   - Draw connections to define data flow: Prompt Template → LLM → Chat Output.
+**Add Components:** Drag LLM node (e.g., OpenAI, Llama) onto canvas. Configure API key, model type, and parameters.
 
-4. **Test in Playground:**  
-   - Open the Playground, input a question, and observe the AI response.
-   - Tweak settings and re-test as needed.
+**Add Prompt Template:** Create prompt pattern with variable placeholders for user input.
 
-5. **Export, share, or deploy:**  
-   - Export your flow as JSON or Python code, or deploy as an API endpoint.
+**Add Output:** Include Chat Output node or API endpoint for response delivery.
 
-**Complete walkthroughs:**  
-- [LangFlow Quickstart](https://docs.langflow.org/get-started-quickstart)
-- [Build a Flow](https://docs.langflow.org/concepts-flows)
+**Connect Components:** Draw connections defining data flow: Prompt Template → LLM → Chat Output.
 
-## Common Use Cases and Example Workflows
+**Test in Playground:** Open Playground, input question, observe AI response. Iterate and refine as needed.
 
-### Chatbot with RAG
+**Deploy:** Export flow as JSON, Python code, or deploy as API endpoint for production use.
 
-**Scenario:** Customer support chatbot powered by retrieval-augmented generation (RAG).
+## Common Workflow Examples
 
-**Workflow:**
+### RAG-Powered Chatbot
+
+Customer support chatbot using retrieval-augmented generation:
 - Document Loader → Text Splitter → Embeddings → Vector Store
-- On user query: Embed query, retrieve relevant docs, compose prompt, route to LLM, display response.
+- Query Handler: Embed query, retrieve relevant documents, compose prompt, route to LLM, display response with citations
 
-**Example flow:**  
-[LangFlow RAG Template](https://docs.langflow.org/templates)
+### Multi-Agent Support System
 
-### Multi-Agent Workflow
-
-**Scenario:** Automated support with one agent retrieving information and another summarizing.
-
-**Workflow:**
-- Create Retriever Agent and Summarizer Agent nodes
-- Connect tools as needed
-- Use memory components for context management
+Automated support with specialized agents:
+- Retriever Agent: Searches knowledge base and retrieves relevant information
+- Summarizer Agent: Processes retrieved information and generates concise responses
+- Memory components maintain context across interactions
 
 ### Document Analysis Application
 
-**Scenario:** Legal document upload and Q&A.
-
-**Workflow:**
+Legal document upload and question answering:
 - File Uploader → Document Loader → Text Splitter → Embeddings → Vector Store
-- On query: Retrieve relevant text, synthesize answer with LLM
+- Query Processing: Retrieve relevant sections, synthesize answer with LLM, provide source attribution
 
-### Rapid Prototyping for Product Teams
+### Marketing Content Generator
 
-**Scenario:** AI-powered marketing copy generator.
+AI-powered copy generation:
+- Prompt Template configuration with brand guidelines
+- LLM integration for content generation
+- Web Search Tool for current trends and references
+- Output formatting and export capabilities
 
-**Workflow:**
-- Prompt Template + LLM + Web Search Tool
-- Test variants, swap components, share for feedback
+## Comparison with Alternatives
 
-**Use-case examples and visual diagrams:**  
-- [Cohorte LangFlow Visual Guide](https://www.cohorte.co/blog/langflow-a-visual-guide-to-building-llm-apps-with-langchain)
+**LangChain:** Code-first Python/JavaScript framework for chaining LLMs, tools, and data sources. Requires programming expertise but offers maximum flexibility.
 
-## LangFlow vs. LangChain and Alternatives
+**LangFlow:** Visual, low-code UI on top of LangChain, auto-generating pipelines. Accessible to non-developers while maintaining power user capabilities.
 
-- **LangChain:** Code-first [Python/JS](/en/glossary/code-block--python-js-/) framework for chaining LLMs, tools, and data sources.
-- **LangFlow:** Visual, low-code UI on top of LangChain, auto-generating pipelines.
-- **Flowise:** Visual LLM workflow builder, similar to LangFlow, but with different design choices and integrations ([FlowiseAI](https://flowiseai.com/)).
-- **LangGraph:** Graph-based agentic workflows with granular control, but lacks drag-and-drop UI ([IBM LangGraph](https://www.ibm.com/think/topics/langgraph)).
+**Flowise:** Alternative visual LLM workflow builder with different design philosophy and integration choices.
 
-**Comparison guide:**  
-- [LangFlow vs. Flowise vs. LangChain (Cohorte)](https://www.cohorte.co/blog/langflow-a-visual-guide-to-building-llm-apps-with-langchain)
+**LangGraph:** Graph-based agentic workflows with granular control but lacks drag-and-drop interface.
 
-## FAQ & Troubleshooting
+LangFlow combines accessibility of visual development with power of code-based frameworks, suitable for wide range of use cases and skill levels.
 
-- **Do I need Python knowledge?**  
-  No. Flows can be built visually; Python is only needed for advanced customizations.
-- **Can I use closed-source LLMs?**  
-  Yes, as long as they're supported by LangChain.
-- **How to share a flow?**  
-  Export as a JSON file; import it in the recipient's LangFlow instance.
-- **Troubleshooting errors?**  
-  Use the right-side debugging/logs panel; check [GitHub issues](https://github.com/langflow-ai/langflow/issues) and [LangFlow docs](https://docs.langflow.org/).
-- **Difference between LangFlow and LangChain?**  
-  LangChain is a framework; LangFlow is a visual UI on top of LangChain.
+## Frequently Asked Questions
 
-## Further Resources
+**Do I need Python knowledge?**
+No. Flows can be built visually. Python only needed for advanced customizations or custom component development.
 
-- [LangFlow Documentation](https://docs.langflow.org/)
-- [LangFlow Official Website](https://www.langflow.org/)
-- [Cohorte: LangFlow Visual Guide](https://www.cohorte.co/blog/langflow-a-visual-guide-to-building-llm-apps-with-langchain)
-- [Analytics Vidhya Guide](https://www.analyticsvidhya.com/blog/2023/06/langflow-ui-for-langchain-to-develop-applications-with-llms/)
-- [YouTube: LangFlow UI Demo](https://www.youtube.com/watch?v=18b7u_e5tnM)
-- [LangFlow GitHub Issues](https://github.com/langflow-ai/langflow/issues)
+**Can I use closed-source LLMs?**
+Yes, as long as they're supported by LangChain. Most commercial providers are compatible.
+
+**How to share a flow?**
+Export as JSON file and import in recipient's LangFlow instance. Alternatively, share via URL if using cloud deployment.
+
+**Troubleshooting errors?**
+Use right-side debugging/logs panel. Check GitHub issues and LangFlow documentation for common problems and solutions.
+
+**Difference between LangFlow and LangChain?**
+LangChain is underlying framework. LangFlow is visual UI on top of LangChain, making it accessible without coding.
+
+**Can I deploy to production?**
+Yes. Export flows to Python code or deploy as API endpoints. Supports containerization and cloud deployment.
 
 ## References
 
 - [LangFlow Official Documentation](https://docs.langflow.org/)
+- [LangFlow Official Website](https://www.langflow.org/)
 - [LangFlow Concepts: Components](https://docs.langflow.org/concepts-components)
 - [LangFlow Concepts: Playground](https://docs.langflow.org/concepts-playground)
-- [Cohorte LangFlow Visual Guide](https://www.cohorte.co/blog/langflow-a-visual-guide-to-building-llm-apps-with-langchain)
-- [FlowiseAI](https://flowiseai.com/)
-- [IBM LangGraph](https://www.ibm.com/think/topics/langgraph)
-
-LangFlow is a robust, open-source platform for visually building, testing, and deploying advanced AI applications—democratizing LLM workflow development for all levels of technical expertise.
+- [LangFlow Quickstart Guide](https://docs.langflow.org/get-started-quickstart)
+- [LangFlow Build a Flow Tutorial](https://docs.langflow.org/concepts-flows)
+- [LangFlow Agents Documentation](https://docs.langflow.org/agents)
+- [LangFlow MCP Server](https://docs.langflow.org/mcp-server)
+- [LangFlow MCP Client](https://docs.langflow.org/mcp-client)
+- [LangFlow Custom Components Guide](https://docs.langflow.org/components-custom-components)
+- [Cohorte: LangFlow Visual Guide](https://www.cohorte.co/blog/langflow-a-visual-guide-to-building-llm-apps-with-langchain)
+- [Analytics Vidhya: LangFlow UI Guide](https://www.analyticsvidhya.com/blog/2023/06/langflow-ui-for-langchain-to-develop-applications-with-llms/)
+- [YouTube: LangFlow UI Demo](https://www.youtube.com/watch?v=18b7u_e5tnM)
+- [LangFlow GitHub Repository](https://github.com/langflow-ai/langflow)
+- [FlowiseAI Alternative](https://flowiseai.com/)
+- [IBM LangGraph Documentation](https://www.ibm.com/think/topics/langgraph)

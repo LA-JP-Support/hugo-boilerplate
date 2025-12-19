@@ -1,197 +1,215 @@
 ---
 title: プロンプトテンプレート
 translationKey: prompt-template
-description: プロンプトテンプレートとは、静的な指示と変数プレースホルダーを含む事前設定されたプロンプト構造で、AIチャットボットや自動化システムにおいて繰り返し使用するために設計されたものです。
-keywords: ["プロンプトテンプレート", "AIチャットボット", "自動化", "大規模言語モデル", "プロンプトエンジニアリング"]
+description: プロンプトテンプレートとは、静的な指示と変数プレースホルダーを含む事前設定されたプロンプト構造であり、AIチャットボットや自動化システムで繰り返し使用するために設計されています。
+keywords:
+- プロンプトテンプレート
+- AIチャットボット
+- 自動化
+- 大規模言語モデル
+- プロンプトエンジニアリング
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: '2025-12-19'
+lastmod: '2025-12-19'
 draft: false
-term: ぷろんぷとてんぷれーと
-reading: プロンプトテンプレート
-kana_head: は
 e-title: Prompt Template
+term: ぷろんぷとてんぷれーと
+url: "/ja/glossary/Prompt-Template/"
 ---
-## 定義
+## プロンプトテンプレートとは?
 
-**プロンプトテンプレート**とは、静的な指示と変数プレースホルダーを組み込んだ事前設定されたプロンプト構造です。これらのテンプレートは、AIチャットボット、コンテンツジェネレーター、自動化システムとの会話フローにおいて繰り返し使用されるように設計されており、毎回プロンプト全体を書き直すことなく、動的でコンテキストに応じた入力を可能にします。
+プロンプトテンプレートは、静的な指示と変数プレースホルダーを組み込んだ事前設定されたプロンプト構造であり、AIチャットボット、コンテンツジェネレーター、自動化システムとの会話フローで繰り返し使用するために設計されています。これらのテンプレートは、使用のたびにプロンプト全体を書き直すことなく、動的でコンテキストを認識した入力を可能にし、AI駆動システムにおけるプロンプト生成のための構造化された設計図として機能します。
 
-## 概要:プロンプトテンプレートとは?
+各テンプレートは、固定指示(常に一定)とプレースホルダー(例:`{customer_name}`や`[TOPIC]`)で構成され、実行時にコンテキスト固有のデータで動的に埋められます。このモジュール性により、チームやアプリケーションは一貫性を維持しながら、大規模にパーソナライズされたコンテキストに関連する出力を生成できます。
 
-プロンプトテンプレートは、AI駆動システムにおいてプロンプトを生成するための構造化された設計図として機能します。各テンプレートは、固定された指示(常に一定)とプレースホルダー(例:`{customer_name}`や`[TOPIC]`)で構成されており、実行時にコンテキスト固有のデータで動的に埋められます。このモジュール性により、チームやアプリケーションは一貫性を保ちながら、パーソナライズされたコンテキストに関連する出力を大規模に生成できます。
+プロンプトテンプレートはレシピに似ています。方法と指示は同じままですが、各食事に必要な特定の材料を置き換えることができます。このアプローチは、会話エージェントやコンテンツ自動化の開発を効率化し、大規模言語モデルアプリケーション全体で統一性とスケーラビリティを確保します。
 
-プロンプトテンプレートはレシピに似ています。調理方法と指示は同じままですが、各食事に必要な具体的な材料は必要に応じて置き換えることができます。このアプローチは、会話エージェントやコンテンツ自動化の開発を効率化し、均一性とスケーラビリティを確保します。
+## 主要コンポーネント
 
-**権威あるリソース:**
-- [PromptLayer: What is a Prompt Template?](https://www.promptlayer.com/glossary/prompt-template)
-- [Google Cloud: Use prompt templates](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-templates)
-- [Notion: AI prompt templates directory](https://www.notion.com/templates/category/ai-prompts)
-- [Prompt Engineering Guide: General Tips](https://www.promptingguide.ai/introduction/tips)
+**静的指示:** AIに何をすべきかを指示する不変部分
 
-## プロンプトテンプレートの主な利点
+**プレースホルダー/変数:** 関連データで置き換えられるマークされたセクション(例:`{variable}`)
 
-- **一貫性:** すべての生成出力に対して、統一されたトーン、構造、指示を維持します。これはブランドボイス、規制遵守、顧客体験にとって重要です。
-- **再利用性:** 最小限の変更で異なるタスクやシナリオに適応し、手作業のオーバーヘッドを削減します。
-- **効率性:** 繰り返しの作業を排除し、デプロイメントを加速し、生産性を向上させます。
-- **スケーラビリティ:** プロンプト作成を自動化することで、大規模なコンテンツや会話の生成を迅速に実現します。
-- **エラー削減:** 情報の欠落や一貫性のないメッセージングのリスクを低減します。
-- **継続的な最適化:** AIレスポンスを改善するための継続的なテストと改良を促進します。
-- **知識共有:** プロンプトエンジニアリングプロセスを標準化することで、オンボーディングとコラボレーションを簡素化します。
+**フォーマットガイダンス:** 出力形式、スタイル、または長さに関するオプションの指示(例:「箇条書きで応答してください」)
 
-## プロンプトテンプレートの主要コンポーネント
+**コンテキスト情報:** 応答精度を向上させるための補足的な詳細や背景
 
-1. **静的指示:** AIに何をすべきかを指示する不変の部分。
-2. **プレースホルダー/変数:** 関連データで置き換えられるマークされたセクション(例:`{variable}`)。
-3. **フォーマットガイダンス:** 出力形式、スタイル、長さに関するオプションの指示(例:「箇条書きで回答してください」)。
-4. **コンテキスト情報:** レスポンスの精度を向上させるための補足的な詳細や背景。
-5. **役割またはペルソナの割り当て:** テンプレートがAIに役割を指定する場合があります(例:「サポートエージェントとして行動してください」)。
+**役割またはペルソナの割り当て:** トーンとアプローチを調整するための「サポートエージェントとして行動する」などの仕様
 
-## プロンプトテンプレートの使用方法
+## 主な利点
 
-プロンプトテンプレートは、大規模言語モデル(LLM)と生成AIを活用するアプリケーションの基盤となります。一般的なシナリオには以下が含まれます:
+**一貫性:** すべての生成出力に対して統一されたトーン、構造、指示を維持し、ブランドボイス、規制遵守、顧客体験にとって重要
 
-- **AIチャットボット:** 一貫性のあるパーソナライズされた会話の推進、FAQの処理、タスクベースのフローの管理。
-- **コンテンツ生成:** 記事、要約、製品説明、マーケティングコピーなどの自動作成。
-- **データ抽出:** 非構造化テキストから構造化データを抽出するためのプロンプトの構造化(例:エンティティ認識、要約)。
-- **カスタマーサポート:** 統一された高品質なサービスレスポンスを提供するAIアシスタントのガイド。
-- **教育ツール:** 学習者向けにカスタマイズされた説明、クイズ、学習補助の生成。
-- **自動化プラットフォーム:** Zapierや[Vertex AI](https://cloud.google.com/vertex-ai)などのツールと統合し、ワークフロー自動化と動的コンテンツ作成を実現。
+**再利用性:** 最小限の変更で異なるタスクやシナリオに適応し、手動作業のオーバーヘッドを削減
 
-**その他のユースケース:**  
-[Zapier: AI prompt templates](https://zapier.com/blog/ai-prompt-templates/)  
-[Notion: AI prompt templates](https://www.notion.com/templates/category/ai-prompts)
+**効率性:** 繰り返しの記述を排除し、展開を加速し、生産性を向上
 
-## 実例:プレースホルダー付きプロンプトテンプレート
+**スケーラビリティ:** プロンプト作成を自動化することで、大規模なコンテンツや会話生成を迅速に実現
 
-**例1:カスタマーサポートレスポンス**
+**エラー削減:** 情報の欠落や一貫性のないメッセージングのリスクを低減
+
+**継続的な最適化:** AI応答を改善するための継続的なテストと改良を促進
+
+**知識共有:** プロンプトエンジニアリングプロセスを標準化することで、オンボーディングとコラボレーションを簡素化
+
+## 一般的なユースケース
+
+### AIチャットボット
+
+一貫性のあるパーソナライズされた会話を推進し、FAQを処理し、すべてのインタラクションで統一された品質とトーンでタスクベースのフローを管理します。
+
+### コンテンツ生成
+
+ブランドボイスとスタイルガイドラインを維持しながら、記事、要約、製品説明、マーケティングコピー、ソーシャルメディア投稿の作成を自動化します。
+
+### データ抽出
+
+エンティティ認識、要約、情報分類を通じて、非構造化テキストから構造化データを抽出するためのプロンプトを構造化します。
+
+### カスタマーサポート
+
+多様な顧客の問い合わせやサポートシナリオ全体で、統一された高品質のサービス応答を提供するようAIアシスタントをガイドします。
+
+### 教育ツール
+
+一貫した教育基準とパーソナライズされた難易度レベルで、学習者向けにカスタマイズされた説明、クイズ、学習補助を生成します。
+
+### 自動化プラットフォーム
+
+ZapierやVertex AIなどのツールと統合して、ビジネスプロセス全体でワークフロー自動化と動的コンテンツ作成を実現します。
+
+## 実例
+
+### カスタマーサポート応答
 
 ```text
-{customer_name}様
+Hello {customer_name},
 
-{product_name}に関する問題についてお問い合わせいただき、ありがとうございます。お客様の説明:「{issue_description}」に基づき、以下の手順をお勧めします:
+Thank you for reaching out about your issue with {product_name}. Based on your description: "{issue_description}", we recommend the following steps:
 
 1. {step_1}
 2. {step_2}
 
-問題が解決しない場合は、このメッセージに返信するか、{support_email}のサポートチームまでご連絡ください。
+If the issue persists, please reply to this message or contact our support team at {support_email}.
 
-よろしくお願いいたします、  
+Best regards,  
 {agent_name}
 ```
-- **プレースホルダー:** `{customer_name}`、`{product_name}`、`{issue_description}`、`{step_1}`、`{step_2}`、`{support_email}`、`{agent_name}`
-- **使用方法:** 各プレースホルダーは実行時に関連データで埋められ、パーソナライズされたサポートメッセージが生成されます。
 
-**例2:LLM用データ抽出テンプレート**
+**プレースホルダー:** `{customer_name}`、`{product_name}`、`{issue_description}`、`{step_1}`、`{step_2}`、`{support_email}`、`{agent_name}`
 
-```text
-以下のテキストから言及されているすべての日付と関連イベントを抽出してください:{TEXT}。各日付とそれに関連するイベントをリストしてください。
-```
-- **プレースホルダー:** `{TEXT}`
-- **目的:** 可変入力から構造化データを抽出するようAIをガイドします。
-
-**例3:ブログ記事ジェネレーター**
+### データ抽出テンプレート
 
 ```text
-あなたは{target_audience}が読むブログのために執筆する世界的に有名な{role}です。{topic}について、{subtopic}に焦点を当てた魅力的なブログ記事を書いてください。{product}を試すための行動喚起を含めてください。
+Extract all mentioned dates and related events from the following text: {TEXT}. List each date followed by the events associated with it.
 ```
-- **プレースホルダー:** `{role}`、`{target_audience}`、`{topic}`、`{subtopic}`、`{product}`
 
-**さらに探索:**  
-[Notion AI prompt templates](https://www.notion.com/templates/category/ai-prompts)
+**目的:** 可変入力から構造化データを抽出するようAIをガイド
 
-## 典型的なユースケース
+### ブログ投稿ジェネレーター
 
-- パーソナライズされたメール(アウトリーチ、フォローアップ、通知)
-- チャットボットの対話と複数ターンの会話
-- ウェブサイトやナレッジベースへのバッチコンテンツアップロード
-- ステップバイステップの問題解決とトラブルシューティング
-- 多様なオーディエンスセグメント向けマーケティングキャンペーン生成
-- レベルと科目別の適応型教育コンテンツ
-- 標準化されたデータ抽出と要約
+```text
+You are a world-renowned {role} writing for a blog read by {target_audience}. Write an engaging blog post about {topic}, focusing on {subtopic}. Include a call to action to try {product}.
+```
 
-## ステップバイステップ:プロンプトテンプレートの作成と使用方法
+**プレースホルダー:** `{role}`、`{target_audience}`、`{topic}`、`{subtopic}`、`{product}`
 
-1. **タスクの分析**
-   - 意図する結果と可変/静的要素を定義します。
+## 実装ガイド
 
-2. **テンプレート構造の設計**
-   - プレースホルダーに中括弧`{}`を使用してプロンプトを作成します。
-   - 例:  
-     `以下のテキストを要約してください:{input_text}。3つの重要なポイントを提供し、全体的なセンチメントを肯定的、中立的、または否定的として評価してください。`
+### ステップバイステップの作成
 
-3. **変数の定義**
-   - 各変数に明確で曖昧さのない名前を付けます(例:`{customer_name}`)。
+**1. タスクを分析する**  
+意図した結果を定義し、可変要素と静的要素を特定
 
-4. **実装とテスト**
-   - プレースホルダーをサンプルデータで置き換えます。
-   - AIプラットフォーム(例:[Google Vertex AI Studio](https://cloud.google.com/vertex-ai)、[LangChain](https://python.langchain.com/docs/modules/prompts/prompt_templates/)、[Zapier](https://zapier.com/blog/ai-prompt-templates/)、ChatGPT)でテストします。
+**2. テンプレート構造を設計する**  
+プレースホルダーに中括弧`{}`を使用してプロンプトを記述
 
-5. **改良と最適化**
-   - 明確性、具体性、望ましい出力のために指示を調整します。
-   - 品質保証のために反復テストを実行します。
+例:  
+```
+Summarize the following text: {input_text}. Provide three key points and rate the overall sentiment as positive, neutral, or negative.
+```
 
-6. **文書化とバージョン管理**
-   - テンプレートの目的、変数、使用ガイドラインを記録します。
-   - 継続的な改善のためにバージョン管理を維持します。
+**3. 変数を定義する**  
+各変数に明確で曖昧さのない名前を付ける(例:`{customer_name}`)
 
-7. **デプロイと再利用**
-   - テンプレートを自動化またはチャットボットパイプラインに統合します。
-   - 一貫した実装のためにチームと共有します。
+**4. 実装とテスト**  
+プレースホルダーをサンプルデータで置き換え、AIプラットフォーム(Google Vertex AI Studio、LangChain、Zapier、ChatGPT)でテスト
 
-*参考文献:*
-- [Prompt Engineering Guide: Tips](https://www.promptingguide.ai/introduction/tips)
-- [Google Cloud: Prompt templates in Vertex AI](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-templates)
-- [LangChain: Prompt Templates](https://python.langchain.com/docs/modules/prompts/prompt_templates/)
+**5. 改良と最適化**  
+反復テストを通じて、明確性、具体性、望ましい出力のために指示を調整
 
-## 効果的なプロンプトテンプレートのベストプラクティス
+**6. 文書化とバージョン管理**  
+テンプレートの目的、変数、使用ガイドラインをバージョン管理とともに記録
 
-- 明確で説明的な変数名を使用する(`{x}`ではなく`{user_email}`)
-- 構造をシンプルに保つ。不必要な複雑さを避ける
-- 明示的な出力指示を提供する(形式、スタイル、長さ)
-- 品質と一貫性を向上させるために定期的にテストと反復を行う
-- 一貫したフォーマットとプレースホルダー規則を維持する
-- 各テンプレートの目的、変数、意図された使用方法を徹底的に文書化する
-- 欠落データを適切に処理できるようテンプレートを設計する(デフォルトまたは指示を提供)
-- 認知負荷とエラーリスクを減らすために変数の数を制限する
-- 基準が満たされていることを確認するためにAI出力を定期的にレビューする
+**7. デプロイと再利用**  
+テンプレートを自動化またはチャットボットパイプラインに統合し、チームと共有
 
-## よくある落とし穴と課題
+## ベストプラクティス
 
-- **変数の不一致:** 未定義またはスペルミスのプレースホルダーは、自動化を破壊したり、誤った出力につながる可能性があります。
-- **過度の一般化:** 過度に一般的なテンプレートは、平凡で役に立たない、またはブランドに合わないレスポンスをもたらす可能性があります。
-- **曖昧な指示:** 具体性の欠如は、一貫性のない、または予測不可能な出力を引き起こす可能性があります。
-- **不十分なテスト:** テンプレートはエッジケースや多様な入力データで失敗する可能性があります。
-- **テンプレートのドリフト:** 時間の経過とともに、テンプレートはビジネスニーズや進化するモデル機能と整合しなくなる可能性があります。
-- **コンテキストウィンドウの制限:** 大きすぎる、または過度に詳細なテンプレートは、LLM入力制限を超える可能性があります。
-- **複雑なロジック:** 分岐や条件付き指示の過度の使用は、人間の保守担当者とAIモデルの両方を混乱させる可能性があります。
+**明確で説明的な変数名を使用する**(`{x}`ではなく`{user_email}`)
+
+**構造をシンプルに保つ**不要な複雑さを避ける
+
+**明示的な出力指示を提供する**形式、スタイル、長さについて
+
+**定期的にテストと反復を行う**品質と一貫性を向上させるため
+
+**一貫したフォーマットを維持する**プレースホルダーの規則を統一
+
+**徹底的に文書化する**各テンプレートの目的、変数、意図した使用方法
+
+**欠損データに対応した設計**デフォルト値または適切な処理を用意
+
+**変数の数を制限する**認知負荷とエラーリスクを削減
+
+**AI出力を定期的にレビューする**基準が満たされていることを確認
+
+## よくある落とし穴
+
+**変数の不一致:** 未定義またはスペルミスのプレースホルダーは自動化を破壊したり、誤った出力につながる可能性があります
+
+**過度の一般化:** 過度に一般的なテンプレートは、平凡で役に立たない、またはブランドに合わない応答を生成する可能性があります
+
+**曖昧な指示:** 具体性の欠如は、一貫性のない予測不可能な出力を引き起こす可能性があります
+
+**不十分なテスト:** テンプレートはエッジケースや多様な入力データで失敗する可能性があります
+
+**テンプレートのドリフト:** 時間の経過とともに、テンプレートはビジネスニーズや進化するモデル機能と整合性が取れなくなる可能性があります
+
+**コンテキストウィンドウの制限:** 大きすぎるまたは過度に詳細なテンプレートはLLM入力制限を超える可能性があります
+
+**複雑なロジック:** 分岐や条件付き指示の過度な使用は、人間の保守担当者とAIモデルの両方を混乱させる可能性があります
 
 ## 高度なテクニック
 
-### 1. マルチステップテンプレート
-オンボーディング、トラブルシューティング、ガイド付き意思決定など、複数のステップを必要とするワークフローのためにテンプレートをシーケンス化できます。
+### マルチステップテンプレート
 
-### 2. Chain-of-Thoughtプロンプティング
-「ステップバイステップで考えましょう」などの指示を追加することで、AIがプロセスを明示的に推論するよう促します。
+テンプレートは、オンボーディング、トラブルシューティング、ガイド付き意思決定など、複数のステップを必要とするワークフローのために順序付けできます。
 
-### 3. ロジック分岐
-高度なプラットフォーム(例:[LangChain](https://python.langchain.com/docs/modules/prompts/prompt_templates/))は、シナリオベースのレスポンスのための条件付きプレースホルダーをサポートします。
+### Chain-of-Thoughtプロンプティング
 
-### 4. Few-Shotプロンプティング
-入力-出力ペアの例を統合して、モデルを望ましい形式と動作に導きます。
+「段階的に考えましょう」などの指示を追加することで、AIがプロセスを明示的に推論するよう促し、複雑なタスクの精度を向上させます。
 
-### 5. 役割とペルソナテンプレート
-ペルソナを割り当てる(例:「法律専門家として行動してください...」)ことで、トーンと深さを調整します。
+### ロジック分岐
 
-### 6. 出力フォーマット
-JSON、テーブル、箇条書きで出力するようAIに指示し、下流処理を容易にします。
+高度なプラットフォーム(例:LangChain)は、ユーザー入力やコンテキストに基づくシナリオベースの応答のための条件付きプレースホルダーをサポートします。
 
-*参考文献:*
-- [Prompt Engineering Guide: Tips](https://www.promptingguide.ai/introduction/tips)
-- [LangChain: Prompt Templates](https://python.langchain.com/docs/modules/prompts/prompt_templates/)
+### Few-Shotプロンプティング
 
-## 技術的実装:サンプルコード
+入力-出力ペアの例を統合して、広範なファインチューニングなしに望ましい形式と動作にモデルをガイドします。
 
-**LangChainを使用したPythonの例**
+### 役割とペルソナのテンプレート
+
+ペルソナ(例:「法律専門家として行動する...」)を割り当てて、トーン、専門知識レベル、コミュニケーションスタイルを調整します。
+
+### 出力フォーマット
+
+JSON、テーブル、箇条書きで出力するようAIに指示し、下流処理とシステム統合を容易にします。
+
+## 技術実装例
+
+### PythonとLangChain
 
 ```python
 from langchain.prompts import PromptTemplate
@@ -199,81 +217,64 @@ from langchain.prompts import PromptTemplate
 prompt = PromptTemplate(
     input_variables=["topic"],
     template="""
-トピック'{topic}'のJSONオブジェクトを生成してください:
-- summary: 短い要約
-- key_points: 3つの重要なポイントのリスト
-- difficulty: "easy"、"medium"、または"hard"
+Generate a JSON object for the topic '{topic}':
+- summary: short summary
+- key_points: list of 3 key points
+- difficulty: "easy", "medium", or "hard"
 
-JSONのみを出力してください。
+Output only JSON.
 JSON:
 """
 )
 ```
-- このテンプレートは、任意の`{topic}`入力に対して構造化された反復可能な出力を可能にします。
 
-技術的な詳細とテンプレートの詳細:  
-[LangChain Documentation: Prompt Templates](https://python.langchain.com/docs/modules/prompts/prompt_templates/)
+このテンプレートは、任意の`{topic}`入力に対して構造化された反復可能な出力を可能にし、自動化されたコンテンツ生成とデータ処理パイプラインに最適です。
 
-## 比較:プロンプトテンプレート vs. その他のプロンプティング技術
+## 他の技術との比較
 
-- **アドホックプロンプト:** 一回限りのタスク用に作成。一貫性とスケーラビリティに欠ける。
-- **プロンプトテンプレート:** 標準化され、再利用可能で、複数のシナリオに適応可能。
-- **Few-Shotプロンプティング:** プロンプト内に例を埋め込む。テンプレートに統合可能。
-- **Chain-of-Thoughtプロンプト:** 段階的な推論を促す。テンプレート機能として使用可能。
-
-*参考文献:*
-- [Prompt Engineering Guide](https://www.promptingguide.ai/introduction/tips)
-- [PromptLayer: Glossary](https://www.promptlayer.com/glossary/prompt-template)
+| アプローチ | 説明 | ユースケース |
+|----------|-------------|----------|
+| アドホックプロンプト | 単発タスク用に記述 | 迅速な実験、ユニークな状況 |
+| プロンプトテンプレート | 標準化された再利用可能な構造 | 本番システム、一貫した品質 |
+| Few-Shotプロンプティング | プロンプト内に例を埋め込む | フォーマットの教示、動作パターン |
+| Chain-of-Thought | 段階的推論を促進 | 複雑な問題解決 |
 
 ## 関連概念
 
-- **プロンプトエンジニアリング:** LLM用のプロンプトを設計、改良、最適化する広範なプロセス。
-- **プロンプトライブラリ:** 多様なタスク用の再利用可能なテンプレートの厳選されたコレクション。
-- **プロンプト最適化:** パフォーマンスと精度を最大化するためにプロンプトを反復的に改善すること。
-- **プレースホルダー/変数:** テンプレート内の動的フィールドで、実行時にデータで置き換えられます。
-- **コンテンツ自動化:** テンプレートを使用してプログラム的にコンテンツを生成およびアップロードすること。
+**プロンプトエンジニアリング:** LLM用のプロンプトを設計、改良、最適化する広範なプロセス
 
-## さらなる読み物と権威ある参考文献
+**プロンプトライブラリ:** 多様なタスクとドメイン用の再利用可能なテンプレートの厳選されたコレクション
 
-- [Google Cloud: Use prompt templates](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-templates)
-- [PromptLayer: What is a Prompt Template?](https://www.promptlayer.com/glossary/prompt-template)
-- [Salesforce: Understand Prompt Templates](https://trailhead.salesforce.com/content/learn/modules/prompt-fundamentals/understand-prompt-templates)
-- [GeeksforGeeks: Prompt Templates](https://www.geeksforgeeks.org/artificial-intelligence/prompt-templates/)
-- [Zapier: 8 AI prompt templates to use with your AI chatbots](https://zapier.com/blog/ai-prompt-templates/)
-- [Notion: AI prompt templates directory](https://www.notion.com/templates/category/ai-prompts)
-- [Prompt Engineering Guide: Best Practices](https://www.promptingguide.ai/introduction/tips)
+**プロンプト最適化:** パフォーマンスと精度を最大化するためにプロンプトを反復的に改善すること
+
+**プレースホルダー/変数:** テンプレート内の動的フィールドで、実行時にデータで置き換えられる
+
+**コンテンツ自動化:** テンプレートを使用して大規模にプログラム的にコンテンツを生成およびアップロードすること
 
 ## よくある質問
 
-**Q: AIにおけるプロンプトテンプレートとは何ですか?**  
-A: 変数プレースホルダーを持つ再利用可能なプロンプト構造で、AI言語モデルに対して一貫性のあるスケーラブルな指示を生成するように設計されています。
+**AIにおけるプロンプトテンプレートとは何ですか?**  
+変数プレースホルダーを持つ再利用可能なプロンプト構造で、AI言語モデルに対して一貫性のあるスケーラブルな指示を生成するために設計されています。
 
-**Q: 効果的なプロンプトテンプレートを作成するにはどうすればよいですか?**  
-A: タスクを分析し、変数を定義し、明確なテンプレート構造を設計し、徹底的にテストし、AI出力に基づいて改良します。
+**効果的なプロンプトテンプレートを作成するにはどうすればよいですか?**  
+タスクを分析し、変数を定義し、明確なテンプレート構造を設計し、徹底的にテストし、AI出力に基づいて改良します。
 
-**Q: プロンプトテンプレートの一般的なユースケースは何ですか?**  
-A: AIチャットボット、コンテンツ生成、データ抽出、カスタマーサポート、教育ツール、自動化されたドキュメント作成。
+**プロンプトテンプレートの一般的なユースケースは何ですか?**  
+AIチャットボット、コンテンツ生成、データ抽出、カスタマーサポート、教育ツール、自動化されたドキュメント作成。
 
-**Q: プロンプトテンプレートの主な課題は何ですか?**  
-A: 変数の不一致、具体性の欠如、一般的なテンプレートの過度の使用、タスクの進化に伴うメンテナンス。
+**プロンプトテンプレートの主な課題は何ですか?**  
+変数の不一致、具体性の欠如、一般的なテンプレートの過度な使用、タスクの進化に伴うメンテナンス。
 
-**Q: プロンプトテンプレートを最適化するにはどうすればよいですか?**  
-A: 明確な指示、説明的な変数を使用し、定期的なテストを行い、要件やAIモデルの変化に応じてテンプレートを更新します。
+**プロンプトテンプレートを最適化するにはどうすればよいですか?**  
+明確な指示、説明的な変数、定期的なテスト、要件やAIモデルの変化に応じたテンプレートの更新を使用します。
 
-## サマリーチェックリスト
+## 参考文献
 
-- [x] 静的指示と明確な変数プレースホルダーを定義する。
-- [x] 一貫したフォーマットと説明的な名前を使用する。
-- [x] 品質のために定期的にテストと反復を行う。
-- [x] 各テンプレートの目的と変数を文書化する。
-- [x] ワークフローに統合し、チーム全体で共有する。
-- [x] 権威あるソースからのベストプラクティスを常に最新の状態に保つ。
-
-*プロンプトテンプレートは、プロンプトエンジニアリングにおける基礎的なツールです。会話AI、コンテンツ作成、データ抽出などのための信頼性が高く、効率的で、スケーラブルな自動化を可能にします。プロンプトテンプレートをマスターすることで、大規模言語モデルと生成AIの可能性を最大限に引き出すことができます。*
-
-**プロンプトテンプレートの詳細については、以下を参照してください:**  
-- [Prompt Engineering Guide: Tips](https://www.promptingguide.ai/introduction/tips)  
-- [Google Cloud: Prompt Templates](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-templates)  
-- [Notion: AI prompt templates](https://www.notion.com/templates/category/ai-prompts)  
-- [LangChain: Prompt Templates](https://python.langchain.com/docs/modules/prompts/prompt_templates/)  
-- [Zapier: 8 AI prompt templates](https://zapier.com/blog/ai-prompt-templates/)
+- [Google Cloud: Use Prompt Templates](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-templates)
+- [PromptLayer: What is a Prompt Template?](https://www.promptlayer.com/glossary/prompt-template)
+- [Salesforce: Understand Prompt Templates](https://trailhead.salesforce.com/content/learn/modules/prompt-fundamentals/understand-prompt-templates)
+- [GeeksforGeeks: Prompt Templates](https://www.geeksforgeeks.org/artificial-intelligence/prompt-templates/)
+- [Zapier: 8 AI Prompt Templates](https://zapier.com/blog/ai-prompt-templates/)
+- [Notion: AI Prompt Templates Directory](https://www.notion.com/templates/category/ai-prompts)
+- [Prompt Engineering Guide: Best Practices](https://www.promptingguide.ai/introduction/tips)
+- [LangChain: Prompt Templates Documentation](https://python.langchain.com/docs/modules/prompts/prompt_templates/)

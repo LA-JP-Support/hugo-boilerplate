@@ -6,6 +6,8 @@ description: "SNS一元管理で業務革命！作業時間30-50%削減、対応
 tags: ["SNS管理", "業務効率化", "LiveAgent", "カスタマーサポート", "中小企業"]
 categories: ["業務効率化"]
 image: "/images/blog/centralised-social-media-management.png"
+url: "/ja/blog/centralised-social-media-management/"
+
 ---
 ## SNS運用の分散化による課題
 

@@ -1,200 +1,136 @@
 ---
 title: エンティティリンキング
 translationKey: entity-linking
-description: エンティティリンキングは、テキストから抽出されたエンティティをナレッジベース内の一意のエントリに接続し、曖昧さを解消することで、AI、検索、レコメンデーションのための構造化データを実現します。
-keywords: ["エンティティリンキング", "ナレッジベース", "固有表現認識", "ナレッジグラフ", "自然言語処理"]
+description: エンティティリンキングは、テキストから抽出されたエンティティをナレッジベース内の一意のエントリに接続し、曖昧性を解決することで、AI、検索、レコメンデーションのための構造化データを実現します。
+keywords:
+- エンティティリンキング
+- ナレッジベース
+- 固有表現認識
+- ナレッジグラフ
+- 自然言語処理
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: '2025-12-19'
+lastmod: '2025-12-19'
 draft: false
-term: えんてぃてぃりんきんぐ
-reading: エンティティリンキング
-kana_head: あ
 e-title: Entity Linking
+term: えんてぃてぃりんきんぐ
+url: "/ja/glossary/Entity-Linking/"
 ---
-## 1. エンティティリンキングとは?
+## エンティティリンキングとは?
+エンティティリンキングは、自然言語処理(NLP)における基盤的なタスクであり、機械が非構造化テキスト内のエンティティを識別し、各言及を知識ベース内の特定のエントリに接続することを可能にします。このプロセスは人間の言語を構造化された実用的なデータに変換し、セマンティック検索、コンテンツ推薦、知識グラフ構築、AI駆動型アプリケーションに不可欠なものとなっています。
 
-エンティティリンキングは、自然言語処理(NLP)における基盤的なタスクであり、機械が非構造化テキスト内のエンティティを識別し、各言及を知識ベース内の特定のエントリにリンクすることを可能にします。このプロセスは、人間の言語を構造化された実行可能なデータに変換するために不可欠であり、セマンティック検索、レコメンデーション、知識グラフの構築などのタスクに必須です。
+「Jordan played exceptionally well against Phoenix last night」という文では、「Jordan」と「Phoenix」の両方が曖昧です。「Jordan」はマイケル・ジョーダン、別のアスリート、あるいは地名を指す可能性があります。「Phoenix」はフェニックス・サンズのバスケットボールチームまたはアリゾナ州の都市を意味するかもしれません。エンティティリンキングは、文脈的な手がかりを分析し、各言及を正しい知識ベースエントリにマッピングすることで、これらの曖昧さを解決します。例えば、「Jordan」をマイケル・ジョーダンのWikidataエントリに、「Phoenix」をフェニックス・サンズにリンクします。
 
-- **例:**  
-  「Jordan played exceptionally well against Phoenix last night」という文において、
-  - 「Jordan」は、Michael Jordan(バスケットボール選手)、別のアスリート、または地名を指す可能性があります。
-  - 「Phoenix」は、Phoenix Suns(NBAチーム)またはアリゾナ州の都市を意味する可能性があります。
-- エンティティリンキングは、文脈的な手がかりを使用してこれらの曖昧性を解決し、各言及を正しい知識ベースエントリにマッピングします([Ontotext: What is Entity Linking](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/)を参照)。
+この機能は非構造化テキストと構造化データを橋渡しし、アプリケーションがどの単語が現れるかだけでなく、それらの単語が文脈において実際に何を意味するかを理解できるようにします。言語を権威ある知識ベースに基づかせることで、エンティティリンキングはより知的な検索エンジン、パーソナライズされた推薦、自動化された知識グラフの更新、文脈認識型AIアシスタントを実現します。
 
-## 2. エンティティリンキングの用途
+## 主要な応用分野
 
-エンティティリンキングは、非構造化テキストと構造化データの間の隔たりを橋渡しし、データ集約型およびAI駆動型アプリケーションの幅広い範囲を可能にします:
+**検索エンジンとセマンティック検索**  
+エンティティリンキングは、クエリと文書の曖昧さを解消することで検索の関連性を向上させます。ユーザーが「Paris」を検索した際、クエリの文脈が旅行や地理を示唆する場合、システムはパリス・ヒルトンではなく都市に関する結果を優先できます。
 
-- **検索エンジン&セマンティック検索:**  
-  クエリとドキュメントを特定のエンティティにリンクすることで、検索エンジンは結果の関連性を向上させます。例えば、「Paris」を検索する際、文脈的に示されていれば、Paris Hiltonではなく都市に関する結果を優先できます([Ontotext: Semantic Search](https://www.ontotext.com/knowledgehub/fundamentals/what-is-semantic-search/))。
+**コンテンツ推薦とパーソナライゼーション**  
+リンクされたエンティティを通じてユーザーの興味とコンテンツトピックを整合させることで、推薦がより正確になります。「Jaguar」を自動車ブランドと動物で区別することで、無関係な提案を防ぎ、ユーザー体験を向上させます。
 
-- **コンテンツレコメンデーション&パーソナライゼーション:**  
-  リンクされたエンティティを介してユーザーの興味とコンテンツトピックを整合させることで、レコメンデーションが改善されます。例えば、「Jaguar」が自動車ブランドか動物かを区別します。
+**知識グラフ構築**  
+エンティティリンキングは知識グラフの構築と充実を自動化し、テキストから事実と関係を抽出し、グラフ内の既存エンティティに接続します。
 
-- **知識グラフの構築&拡充:**  
-  新しい事実と関係性で知識グラフの構築と更新を自動化します。
+**情報抽出とデータ統合**  
+組織は非構造化文書を構造化データに変換し、ビジネスインテリジェンスと分析に活用することで、大規模なデータ駆動型意思決定を可能にします。
 
-- **情報抽出&データ統合:**  
-  非構造化データを分析とビジネスインテリジェンスのための構造化形式に変換します。
+**SEOと構造化データ**  
+コンテンツ制作者は、Schema.orgを使用してエンティティリンクでページをマークアップすることで発見性を高め、検索エンジンがコンテンツをより適切に理解しランク付けできるようにします。
 
-- **SEO&スキーママークアップ:**  
-  公開または独自の知識グラフ内の権威あるエンティティにコンテンツをリンクすることで、発見可能性を向上させます([Schema App: What is Entity Linking](https://www.schemaapp.com/schema-markup/what-is-entity-linking/))。
+**AIアシスタントとチャットボット**  
+仮想アシスタントはエンティティリンキングを使用してユーザークエリを正確に理解し、リンクされた知識に基づいて文脈に適した応答を生成します。
 
-- **AIアシスタント&チャットボット:**  
-  正確なクエリ理解と文脈を考慮した応答生成をサポートします。
+**多言語サポート**  
+システムは言語や地域を超えたエンティティ参照を処理し、「football」がヨーロッパではサッカーに、米国ではアメリカンフットボールにリンクされることを保証します。
 
-- **多言語・多地域コンテンツ:**  
-  言語や地域を超えて正しいエンティティ参照を保証します(例:米国と英国での「football」)。
+## エンティティリンキングのプロセス
 
-[Microsoft Azure: Entity Linking Overview](https://learn.microsoft.com/en-us/azure/ai-services/language-service/entity-linking/overview)も参照してください。
+### 固有表現認識(NER)
 
-## 3. エンティティリンキングプロセス:ステップバイステップ
+最初のステップは、エンティティを示すテキストスパンを識別します。「Christa Lanz loves San Diego」では、NERは「Christa Lanz」(人物)と「San Diego」(場所)を検出します。現代のNERシステムは、大規模な注釈付きデータセットで訓練された深層学習モデルを使用します。
 
-エンティティリンキングは、複数段階のパイプラインとして実装されます。各コンポーネントは異なる問題に対処します:
+### 候補生成
 
-### 3.1 固有表現認識(NER)
-- **目標:** エンティティを示すテキストスパンを識別します。
-- **例:**  
-  「Christa Lanz loves San Diego」において、NERは「Christa Lanz」(人物)と「San Diego」(場所)を検出します。
+検出された各エンティティに対して、システムは知識ベースから可能性のある一致を生成します。技術には、名前辞書、略語や同義語の表層形式展開、検索ベースの検索が含まれます。このステップは曖昧性解消のための候補リストを作成します。
 
-### 3.2 候補生成
-- **目標:** 検出された各エンティティ言及に対して、知識ベースから一致する可能性のあるエンティティのセットを生成します。
-- **技術:**  
-  - 名前辞書
-  - 表層形式の拡張(略語、同義語の処理)
-  - 検索エンジンベースの検索
+### エンティティ曖昧性解消
 
-### 3.3 エンティティ曖昧性解消
-- **目標:** 文脈を使用して候補から正しいエンティティを選択します。
-- **技術:**  
-  - 文脈的類似性スコアリング
-  - エンティティタイプマッチング
-  - エンティティの説明と関係性の使用
-- **例:**  
-  米国大統領の文脈で「Clinton」を[曖昧性解消](/ja/glossary/disambiguation/)する場合、「Hillary Clinton」ではなく「Bill Clinton」にリンクされる可能性が高くなります([Ontotext](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/))。
+システムは文脈的な手がかりを使用して正しいエンティティを選択します。方法には、文脈類似性スコアリング、エンティティタイプマッチング、エンティティの説明と関係の活用が含まれます。米国大統領の文脈では、「Clinton」は周囲の単語に基づいてヒラリー・クリントンではなくビル・クリントンにリンクされる可能性が高くなります。
 
-### 3.4 知識ベースへのリンク
-- **目標:** 言及を一意のKB識別子(例:Apple Inc.のWikidata Q312)に接続します。
-- **成果:**  
-  構造化された事実、関係性、属性へのアクセスを可能にします。
+### 知識ベースリンキング
 
-**パイプライン図(テキスト説明):**  
-生テキスト → NER → 候補生成 → エンティティ[曖昧性解消](/ja/glossary/disambiguation/) → KBリンク
+最終ステップは、言及を一意のKB識別子(例:Apple Inc.のWikidata Q312)に接続し、構造化された事実、関係、属性へのアクセスを可能にします。このリンクにより、エンティティが機械可読で実用的になります。
 
-## 4. エンティティリンキングにおける課題
+## 技術的アプローチ
 
-### 4.1 曖昧性
-多くの用語は複数のエンティティを指します(例:「Jaguar」は自動車ブランドまたは動物)。
+**ルールベース手法**  
+初期のシステムは手作りのルールとヒューリスティックを使用し、多くの場合ドメイン固有でした。解釈可能ですが、これらのアプローチはスケーラビリティに欠け、曖昧さに苦労します。
 
-### 4.2 名前のバリエーション
-エンティティは、別名、略語、ニックネーム、またはスペルミスで参照される可能性があります(「NYC」と「Big Apple」はどちらもニューヨーク市を指します)。
+**古典的機械学習**  
+文脈、文字列類似性、エンティティタイプに関する特徴量エンジニアリングが、サポートベクターマシンやランダムフォレストなどのモデルに供給されました。これらの方法は大きな手作業を必要としましたが、ルールのみよりも改善されました。
 
-### 4.3 スケーラビリティ
-大規模な知識ベース(Wikidataなど)には数百万のエンティティが含まれており、大規模なリンキングは計算集約的です。
+**Transformerベースの深層学習**  
+現代のシステムは、言及の文脈と候補エンティティの説明の両方をエンコードするTransformer(BERT、RoBERTa)からの文脈埋め込みを活用します。例には、Ontotext CEEL、Amazon ReFinED、Facebook GENREがあります。これらのモデルは曖昧さを効果的に処理し、以前に見たことのないエンティティへのゼロショットリンキングをサポートします。
 
-### 4.4 ゼロショットリンキング
-以前に見たことのないエンティティにリンクする能力。
+**知識グラフ統合**  
+グラフニューラルネットワークと埋め込みは、エンティティの属性、タイプ、関係を捉えることで曖昧性解消を強化し、エンティティ接続に関するより洗練された推論を可能にします。
 
-### 4.5 多言語性
-言語や地域を超えてエンティティ名と文脈を処理します。
+## 主要な課題
 
-### 4.6 知識ベースの進化
-新しいエンティティと事実が絶えず追加されます。システムは頻繁な再トレーニングなしに適応する必要があります。
+**曖昧性**  
+多くの用語には複数の可能な参照先があり(例:「Jaguar」が自動車ブランドまたは動物)、洗練された文脈分析が必要です。
 
-[参考: Ontotext](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/)
+**名前のバリエーション**  
+エンティティは別名、略語、ニックネーム、またはスペルミスとして現れ(「NYC」と「Big Apple」はどちらもニューヨーク市を指す)、マッチングを複雑にします。
 
-## 5. 技術的手法&アーキテクチャ
+**スケーラビリティ**  
+Wikidataのような大規模な知識ベースには数百万のエンティティが含まれており、リアルタイムリンキングは計算集約的です。
 
-### 5.1 ルールベースアプローチ
-- 手作業で作成されたルールとヒューリスティック、多くの場合ドメイン固有。
-- スケーラビリティと柔軟性が限定的。
+**ゼロショット能力**  
+システムは訓練中に見たことのないエンティティにリンクする必要があり、タイプと説明情報からの汎化が必要です。
 
-### 5.2 古典的機械学習
-- 文脈、文字列類似性、エンティティタイプに関する特徴エンジニアリング。
-- モデル:サポートベクターマシン(SVM)、ランダムフォレスト、勾配ブースティング。
+**多言語処理**  
+エンティティ名と文脈は言語によって異なり、言語に依存しないまたは多言語アプローチが必要です。
 
-### 5.3 深層学習&Transformerベース手法
-- 文脈的埋め込みを使用して曖昧性を解決し、関係性を捉えます。
-- Transformer(BERT、RoBERTa)は、言及の文脈と候補エンティティの説明/タイプの両方をエンコードします。
-- **例:** Ontotext CEEL、AmazonのReFinED、FacebookのGENRE。
+**知識ベースの進化**  
+新しいエンティティと事実が絶えず出現し、頻繁な再訓練なしにシステムが適応する必要があります。
 
-#### Transformerベースパイプライン(Ontotext CEELの例)
-- **言及検出:** トークン分類のためのTransformerモデル。
-- **候補生成:** ガゼッタ/辞書が候補を提案。
-- **エンティティタイピング:** 予測されたタイプと候補のタイプを比較。
-- **エンティティ説明マッチング:** バイエンコーダーが言及とKBエンティティの説明を比較。
-- **最終スコアリング:** タイプと説明のスコアを組み合わせます。
+## 主要なツールとプラットフォーム
 
-#### ゼロショットエンティティリンキング
-- モデルは、タイプ/説明情報を使用して未知のエンティティに一般化します。
+| システム | アプローチ | サポートKB | 速度 | ゼロショット | ベンチマークF1 | 備考 |
+|--------|----------|---------------|-------|-----------|--------------|-------|
+| Ontotext CEEL | Transformerベース | Wikidata、カスタム | 約10倍高速 | あり | 76% | CPU最適化 |
+| Amazon ReFinED | Transformerベース | Wikidata、カスタム | 60倍高速 | あり | SOTA比+3.7 F1 | Amazon本番環境 |
+| Facebook GENRE | 生成Transformer | Wikipedia | 低速 | 部分的 | 61% | 生成タスク |
+| Google NLP | 深層学習 | Wikipedia | 中程度 | なし | 58% | API利用可能 |
+| Azure Language Service | API/SDK | Wikipedia | 中程度 | なし | N/A | エンタープライズ統合 |
 
-### 5.4 知識グラフ統合
-- 知識グラフは属性、タイプ、関係性をエンコードします。
-- グラフニューラルネットワーク(GNN)と埋め込みがますます使用されています。
+## 実用的なユースケース
 
-[Ontotext: Entity Linking with Knowledge Graphs](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/)を参照してください。
+**医療検索最適化**  
+医師プロフィールページでのエンティティリンキングにより、参照される医師、専門分野、クリニックを明確に識別することで、クリックスルー率が32%増加しました。
 
-## 6. エンティティリンキングシステムとツールの比較
+**ロケーションベースSEO**  
+ビジネスロケーションのエンティティリンクを追加することで、非ブランド検索クエリのインプレッションが46%、クリックが42%増加しました。
 
-| システム/ツール        | アプローチ                | サポートKB        | 速度          | ゼロショットリンキング | ベンチマークF1 (AIDA/CoNLL-YAGO) | 備考                      |
-|----------------------|-------------------------|-------------------|---------------|-------------------|-------------------------------|---------------------------|
-| Ontotext CEEL        | Transformerベース       | Wikidata、カスタム | 約10倍高速*    | はい              | 76% (Entity Linking)          | 効率的、CPU最適化         |
-| Amazon ReFinED       | Transformerベース       | Wikidata、カスタム | 60倍高速*      | はい              | SOTAより+3.7 F1               | Amazonで展開              |
-| Facebook GENRE       | 生成的Transformer       | Wikipedia         | 遅い          | 部分的            | 61% (Entity Linking)          | 生成タスクに適している    |
-| Google NLP           | 深層学習                | Wikipedia         | 中程度        | いいえ            | 58% (Entity Linking)          | API利用可能               |
-| mGENRE (Facebook)    | 生成的Transformer       | Wikipedia         | 遅い          | Entity Disambig.  | 53% (Entity Linking)          | 曖昧性解消のみ            |
+**Eコマース製品の曖昧性解消**  
+小売業者は「Apple」製品リストが果物ではなくApple Inc.にリンクされることを保証し、検索の関連性とコンバージョン率を向上させます。
 
-\*同じデータセット上の同等モデルとの比較。
+**多言語ニュース集約**  
+ニュースサービスは、エンティティリンキングを通じて異なる言語の記事で同じ人物またはイベントへの参照を統一します。
 
-**[Ontotext's CEEL Benchmarks](https://www.ontotext.com/blog/common-english-entity-linking-linking-text-to-knowledge-fast-and-efficient/)を参照**
+**ビジネスインテリジェンス**  
+組織は、エンティティを知識グラフにリンクすることで、ニュース、研究、市場データから洞察を抽出し、自動分析を行います。
 
-## 7. 実用的なアプリケーション&ユースケース
+## 実装統合
 
-**検索&検索:**  
-エンティティを曖昧性解消することで、意図理解と結果の関連性を向上させます。
+**Schema.orgマークアップ**  
+エンティティリンキングのJSON-LD例:
 
-**コンテンツレコメンデーション:**  
-コンテンツとユーザーの興味を同じエンティティセットにマッピングして、より良いレコメンデーションを実現します。
-
-**知識グラフの構築:**  
-新しい事実と関係性で知識ベースを自動化し、拡充します。
-
-**SEO&構造化データ:**  
-Schema.orgの`sameAs`を使用してエンティティ参照を埋め込むことで、検索可視性を向上させます。
-
-**ビジネスインテリジェンス:**  
-ニュース、研究、市場データから洞察を抽出します。
-
-**AIアシスタント&チャットボット:**  
-リンクされたエンティティにクエリを基づかせることで、文脈を考慮した応答をサポートします。
-
-**多言語コンテンツ管理:**  
-言語や市場を超えて用語を曖昧性解消します。
-
-### ケーススタディ
-
-- **医療検索の改善:**  
-  医師プロフィールページでのエンティティリンキングにより、参照される医師やクリニックを明確化し、クリックスルー率が32%増加しました。  
-  [ケーススタディを参照](https://www.schemaapp.com/customer-stories/how-marshfield-clinic-leveraged-schema-markup-to-improve-search-traffic-prepare-for-ai-search/)
-
-- **ロケーションベースSEO:**  
-  場所のエンティティリンクを追加することで、非ブランドクエリのインプレッションが46%、クリックが42%増加しました。
-
-## 8. ツーリング&統合
-
-さまざまな商用およびオープンソースツールがエンティティリンキング機能を提供します:
-
-| ツール/プラットフォーム  | 統合オプション              | サポートKB            | API例/ドキュメント                           |
-|------------------------|----------------------------|-----------------------|---------------------------------------------|
-| Ontotext CEEL / OMDS   | API、GraphDB、UI           | Wikidata、カスタム    | [ドキュメント](https://www.ontotext.com/products/ontotext-metadata-studio/) |
-| Amazon ReFinED         | 内部、API                  | Wikidata、カスタム    | [論文](https://www.amazon.science/publications/refined-an-efficient-zero-shot-capable-approach-to-end-to-end-entity-linking) |
-| Google NLP             | REST API                   | Wikipedia             | [API](https://cloud.google.com/natural-language/docs) |
-| Facebook BLINK/GENRE   | オープンソース、API        | Wikipedia             | [BLINK](https://github.com/facebookresearch/BLINK) |
-| Azure Language Service | API、SDK (Python、C#など)  | Wikipedia             | [ドキュメント](https://learn.microsoft.com/en-us/azure/ai-services/language-service/entity-linking/overview) |
-| Schema App             | Web、Schema.orgマークアップ | 公開、内部            | [ドキュメント](https://www.schemaapp.com/schema-markup/what-is-entity-linking/) |
-
-**スキーママークアップにおけるエンティティリンキングのJSON-LD例:**
 ```json
 {
   "@context": "https://schema.org",
@@ -206,99 +142,64 @@ Schema.orgの`sameAs`を使用してエンティティ参照を埋め込むこ�
   ]
 }
 ```
-このマークアップは、「Jaguar」が動物ではなく自動車ブランドを指すことを明確にします。
 
-## 9. 関連概念とキーワード
+このマークアップは「Jaguar」が動物ではなく自動車ブランドを指すことを明確にします。
 
-- **エンティティ曖昧性解消:** 類似した名前を持つエンティティを区別します。
-- **知識ベース(KB):** 事実とエンティティの構造化リポジトリ(例:Wikidata、DBpedia)。
-- **固有表現認識(NER):** テキスト内のエンティティ言及を検出します。
-- **知識グラフ:** エンティティをノード、関係性をエッジとするグラフ構造のKB。
-- **セマンティックアノテーション:** 機械可読なエンティティ参照でコンテンツにタグ付けします。
-- **カスタム調整サービス:** 組織の知識グラフにデータをマッピングするためのサービス。
-- **調整:** データセット間で同等のエンティティをマッチングおよびマージします。
+**API統合**  
+現代のツールは、既存システムへのシームレスな組み込みのためにREST API、SDK、GraphDB統合を提供します。クラウドサービスはマネージドソリューションを提供し、オープンソースオプションはオンプレミス展開を可能にします。
 
-## 10. さらなる読み物&リソース
+## ベストプラクティス
+
+**高品質な知識ベースの使用**  
+公開(Wikidata、DBpedia)または独自のものであれ、ドメインに適した権威ある、よく維持された知識ベースを選択します。
+
+**完全なパイプラインの実装**  
+単一段階のアプローチに依存するのではなく、NER、候補生成、曖昧性解消を組み合わせます。
+
+**Transformerモデルの活用**  
+現代の文脈埋め込みは、曖昧性解消の精度において古典的手法を大幅に上回ります。
+
+**ドメインベンチマークでの評価**  
+一般的なベンチマークだけでなく、ユースケースを代表するデータでパフォーマンスをテストします。
+
+**SEOのためのSchemaマークアップの展開**  
+検索可視性を向上させるために、Schema.orgの`sameAs`プロパティを使用してコンテンツを権威あるエンティティソースにリンクします。
+
+**内部知識グラフの維持**  
+独自のエンティティを持つ組織は、正確なリンキングのためにカスタム知識ベースを構築し維持する必要があります。
+
+## 関連概念
+
+**エンティティ曖昧性解消**は、類似した名前を持つエンティティを区別し、リンキングプロセスの中核コンポーネントを形成します。
+
+**知識ベース**は、Wikidata、DBpedia、またはドメイン固有のデータベースのような事実とエンティティの構造化リポジトリです。
+
+**固有表現認識**は、リンキング前の最初のステップとしてテキスト内のエンティティ言及を検出します。
+
+**知識グラフ**は、エンティティをノード、関係をエッジとするグラフ構造の知識ベースです。
+
+**セマンティックアノテーション**は、強化された処理のために機械可読なエンティティ参照でコンテンツにタグを付けます。
+
+**照合サービス**は、異なるデータセット間で同等のエンティティをマッピングおよびマージします。
+
+## まとめ
+
+エンティティリンキングは、テキストの言及を構造化された知識ベース接続に変換し、機械が単語だけでなく意味を理解できるようにします。現代のTransformerベースのアプローチは高精度を達成しながら、新しいエンティティへのゼロショットリンキングをサポートします。応用分野は検索最適化、コンテンツ推薦、知識管理、AIシステムに及びます。成功には、品質の高い知識ベース、洗練されたモデル、ドメイン固有の評価を組み合わせる必要があります。知識グラフが拡大しNLPが進歩するにつれて、エンティティリンキングは知的情報システムの重要なコンポーネントとして進化し続けています。
+
+## 参考文献
 
 - [Ontotext: What is Entity Linking](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/)
-- [Amazon Science: Improving "entity linking" between texts and knowledge bases](https://www.amazon.science/blog/improving-entity-linking-between-texts-and-knowledge-bases)
+- [Amazon Science: Improving Entity Linking Between Texts and Knowledge Bases](https://www.amazon.science/blog/improving-entity-linking-between-texts-and-knowledge-bases)
 - [Schema App: What is Entity Linking](https://www.schemaapp.com/schema-markup/what-is-entity-linking/)
 - [Wei Shen et al.: Entity Linking with a Knowledge Base (PDF)](https://dbgroup.cs.tsinghua.edu.cn/wangjy/papers/TKDE14-entitylinking.pdf)
-- [Azure Entity Linking Overview](https://learn.microsoft.com/en-us/azure/ai-services/language-service/entity-linking/overview)
+- [Microsoft Azure: Entity Linking Overview](https://learn.microsoft.com/en-us/azure/ai-services/language-service/entity-linking/overview)
 - [Ontotext: Common English Entity Linking](https://www.ontotext.com/blog/common-english-entity-linking-linking-text-to-knowledge-fast-and-efficient/)
-
-## 11. 用語集キーワード(関連用語)
-
-- エンティティ曖昧性解消
-- 知識ベース
-- 固有表現認識
-- 自然言語処理
-- 知識グラフ
-- エンティティリンキングシステム
-- エンティティリンキング知識
-- カスタム調整サービス
-- knowledgehub fundamentals
-- ontotext metadata studio
-
-## 12. 要約表:エンティティリンキング一覧
-
-| 側面                  | 説明                                                                |
-|-----------------------|---------------------------------------------------------------------|
-| **定義**              | テキスト言及をKBエントリに接続(例:「Apple」→ Apple Inc.)            |
-| **主要ステップ**      | NER → 候補生成 → 曖昧性解消 → KBリンキング                          |
-| **主要課題**          | 曖昧性、スケーラビリティ、KB進化、ゼロショット、多言語性            |
-| **アプローチ**        | ルールベース、ML、DL、Transformer、知識グラフ                       |
-| **アプリケーション**  | 検索、レコメンデーション、知識グラフ、SEO、チャットボット、BI       |
-| **主要ツール**        | Ontotext CEEL、Amazon ReFinED、Google NLP、BLINK、GENRE、SchemaApp |
-| **統合**              | API、GraphDB、REST、Schema.org、カスタムパイプライン                |
-
-## 13. よくある質問(FAQ)
-
-**エンティティリンキングと固有表現認識の違いは何ですか?**  
-固有表現認識は、テキスト内のどの単語やフレーズがエンティティであるかを識別します。エンティティリンキングは、これらの言及を曖昧性解消と拡充のために知識ベース内の一意のエントリに接続します。
-
-**エンティティリンキングは独自または内部の知識ベースを処理できますか?**  
-はい。Ontotext CEELやSchema Appなどのツールは、公開および内部のKBへのリンキングを可能にします。
-
-**エンティティリンキングはSEOをどのようにサポートしますか?**  
-権威あるエンティティへのリンクでコンテンツをマークアップすることで、検索エンジンはページの文脈をより良く理解し、発見可能性とランキングを向上させます。
-
-**ゼロショットエンティティリンキングとは何ですか?**  
-モデルを再トレーニングすることなく、KB内の新しいまたは以前に見たことのないエンティティに言及をリンクする能力です。
-
-## 14. ユースケース例
-
-### 14.1 コンテンツ内のブランド名の曖昧性解消
-小売業者が製品リストで「Apple」に言及します。エンティティリンキングは、WikidataまたはGoogleの知識グラフを介して、言及が果物ではなくApple Inc.に接続されることを保証します。
-
-### 14.2 医療提供者の検索強化
-医師プロフィールページは、医療専門分野、場所、組織へのエンティティリンクで拡充され、検索結果の関連性とエンゲージメントが向上します。
-
-### 14.3 多言語ニュース集約
-ニュースサービスは、エンティティリンキングを使用して、異なる言語の記事間で同じ人物や場所への参照を統一します。
-
-## 15. ベストプラクティス
-
-- 高品質で最新の知識ベースを使用します。
-- NERとエンティティ曖昧性解消の両方を実装します。
-- 文脈を考慮したリンキングのためにTransformerベースモデルを活用します。
-- ドメイン固有のベンチマークでパフォーマンスを評価します。
-- SEOの場合、Schema.orgマークアップと権威あるソースへの`sameAs`リンクを使用します。
-- 独自のエンティティリンキングのために内部知識グラフを維持します。
-
-## 16. 関連項目
-
-- [Semantic Search](https://www.ontotext.com/knowledgehub/fundamentals/what-is-semantic-search/)
-- [Knowledge Graph Embeddings](https://www.ontotext.com/knowledgehub/fundamentals/what-are-knowledge-graph-embeddings/)
-- [Natural Language Querying](https://www.ontotext.com/knowledgehub/fundamentals/what-is-natural-language-querying/)
-- [Graph RAG](https://www.ontotext.com/knowledgehub/fundamentals/what-is-graph-rag/)
-
-**実装ガイダンス、ツール選択、または統合サポートは、この用語集全体でリンクされているドキュメントとソリューションプロバイダーを通じて利用可能です。**
-
-**参考文献:**  
-- [Ontotext: What is Entity Linking](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/)  
-- [Microsoft Azure: Entity Linking Overview](https://learn.microsoft.com/en-us/azure/ai-services/language-service/entity-linking/overview)  
-- [Schema App: What is Entity Linking](https://www.schemaapp.com/schema-markup/what-is-entity-linking/)  
-- [Amazon Science: Entity Linking](https://www.amazon.science/blog/improving-entity-linking-between-texts-and-knowledge-bases)  
-
-この用語集は、エンティティリンキング、そのプロセス、課題、アーキテクチャ、ツーリング、およびアプリケーションに関する包括的で詳細なリファレンスを提供します。
+- [Ontotext: Semantic Search](https://www.ontotext.com/knowledgehub/fundamentals/what-is-semantic-search/)
+- [Amazon Science: ReFinED Paper](https://www.amazon.science/publications/refined-an-efficient-zero-shot-capable-approach-to-end-to-end-entity-linking)
+- [Google Cloud: Natural Language API](https://cloud.google.com/natural-language/docs)
+- [Facebook Research: BLINK](https://github.com/facebookresearch/BLINK)
+- [Ontotext: Knowledge Graph Embeddings](https://www.ontotext.com/knowledgehub/fundamentals/what-are-knowledge-graph-embeddings/)
+- [Ontotext: Natural Language Querying](https://www.ontotext.com/knowledgehub/fundamentals/what-is-natural-language-querying/)
+- [Ontotext: Graph RAG](https://www.ontotext.com/knowledgehub/fundamentals/what-is-graph-rag/)
+- [Schema App: Marshfield Clinic Case Study](https://www.schemaapp.com/customer-stories/how-marshfield-clinic-leveraged-schema-markup-to-improve-search-traffic-prepare-for-ai-search/)
+- [Ontotext: Products - Ontotext Metadata Studio](https://www.ontotext.com/products/ontotext-metadata-studio/)

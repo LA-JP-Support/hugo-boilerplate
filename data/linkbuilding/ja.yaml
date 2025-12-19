@@ -1,0 +1,1641 @@
+keywords:
+- keyword: AIレポーティング
+  url: /ja/glossary/ai-reporting/
+  exact: true
+  priority: 10
+  title: AIレポーティング の用語集ページ
+- keyword: AIエージェント
+  url: /ja/glossary/ai-agents/
+  exact: true
+  priority: 10
+  title: AIエージェント の用語集ページ
+- keyword: AI回答アシスタント:詳細ガイド
+  url: /ja/glossary/ai-answer-assistant-an/
+  exact: true
+  priority: 10
+  title: AI回答アシスタント:詳細ガイド の用語集ページ
+- keyword: AIチャットボット
+  url: /ja/glossary/ai-chatbot-in-depth-glossary-and-guide/
+  exact: true
+  priority: 10
+  title: AIチャットボット の用語集ページ
+- keyword: AIメール自動返信生成
+  url: /ja/glossary/ai-email-auto-response-generation/
+  exact: true
+  priority: 10
+  title: AIメール自動返信生成 の用語集ページ
+- keyword: AI実装
+  url: /ja/glossary/ai-implementation/
+  exact: true
+  priority: 10
+  title: AI実装 の用語集ページ
+- keyword: 人工知能(AI)
+  url: /ja/glossary/artificial-intelligence/
+  exact: true
+  priority: 10
+  title: 人工知能(AI) の用語集ページ
+- keyword: APIエンドポイント設定
+  url: /ja/glossary/api-endpoint-configuration/
+  exact: true
+  priority: 10
+  title: APIエンドポイント設定 の用語集ページ
+- keyword: API統合
+  url: /ja/glossary/api-integration/
+  exact: true
+  priority: 10
+  title: API統合 の用語集ページ
+- keyword: APIキー
+  url: /ja/glossary/api-keys/
+  exact: true
+  priority: 10
+  title: APIキー の用語集ページ
+- keyword: API(アプリケーション・プログラミング・インターフェース)
+  url: /ja/glossary/apis-application-programming-interfaces/
+  exact: true
+  priority: 10
+  title: API(アプリケーション・プログラミング・インターフェース) の用語集ページ
+- keyword: 敵対的攻撃
+  url: /ja/glossary/adversarial-attack/
+  exact: true
+  priority: 10
+  title: 敵対的攻撃 の用語集ページ
+- keyword: 敵対的ロバストネス
+  url: /ja/glossary/adversarial-robustness/
+  exact: true
+  priority: 10
+  title: 敵対的ロバストネス の用語集ページ
+- keyword: アルゴリズミック・アカウンタビリティ
+  url: /ja/glossary/algorithmic-accountability/
+  exact: true
+  priority: 10
+  title: アルゴリズミック・アカウンタビリティ の用語集ページ
+- keyword: アライメント問題
+  url: /ja/glossary/alignment-problem/
+  exact: true
+  priority: 10
+  title: アライメント問題 の用語集ページ
+- keyword: アンビエント・インテリジェンス(AmI)
+  url: /ja/glossary/ambient-intelligence-ami/
+  exact: true
+  priority: 10
+  title: アンビエント・インテリジェンス(AmI) の用語集ページ
+- keyword: Anthropic
+  url: /ja/glossary/anthropic/
+  exact: true
+  priority: 10
+  title: Anthropic の用語集ページ
+- keyword: アトリビューションモデリング
+  url: /ja/glossary/attribution-modeling/
+  exact: true
+  priority: 10
+  title: アトリビューションモデリング の用語集ページ
+- keyword: アトリビューションウィンドウ
+  url: /ja/glossary/attribution-window/
+  exact: true
+  priority: 10
+  title: アトリビューションウィンドウ の用語集ページ
+- keyword: オートレイアウト
+  url: /ja/glossary/auto-layout/
+  exact: true
+  priority: 10
+  title: オートレイアウト の用語集ページ
+- keyword: オートスケーリンググループ
+  url: /ja/glossary/auto-scaling-group/
+  exact: true
+  priority: 10
+  title: オートスケーリンググループ の用語集ページ
+- keyword: 自動化ワークフロー
+  url: /ja/glossary/automated-workflows/
+  exact: true
+  priority: 10
+  title: 自動化ワークフロー の用語集ページ
+- keyword: 自律型AIエージェント
+  url: /ja/glossary/autonomous-ai-agents/
+  exact: true
+  priority: 10
+  title: 自律型AIエージェント の用語集ページ
+- keyword: オートスケーリング
+  url: /ja/glossary/autoscaling/
+  exact: true
+  priority: 10
+  title: オートスケーリング の用語集ページ
+- keyword: バッチ処理
+  url: /ja/glossary/batch-processing/
+  exact: true
+  priority: 10
+  title: バッチ処理 の用語集ページ
+- keyword: バイアス緩和
+  url: /ja/glossary/bias-mitigation/
+  exact: true
+  priority: 10
+  title: バイアス緩和 の用語集ページ
+- keyword: ブルーグリーンデプロイメント
+  url: /ja/glossary/blue-green-deployment/
+  exact: true
+  priority: 10
+  title: ブルーグリーンデプロイメント の用語集ページ
+- keyword: ボットアバター
+  url: /ja/glossary/bot-avatar/
+  exact: true
+  priority: 10
+  title: ボットアバター の用語集ページ
+- keyword: ボット封じ込め率
+  url: /ja/glossary/bot-containment-rate/
+  exact: true
+  priority: 10
+  title: ボット封じ込め率 の用語集ページ
+- keyword: Botpress
+  url: /ja/glossary/botpress/
+  exact: true
+  priority: 10
+  title: Botpress の用語集ページ
+- keyword: バウンス率
+  url: /ja/glossary/bounce-rate/
+  exact: true
+  priority: 10
+  title: バウンス率 の用語集ページ
+- keyword: CAGR(年平均成長率)
+  url: /ja/glossary/cagr-compound-annual-growth-rate/
+  exact: true
+  priority: 10
+  title: CAGR(年平均成長率) の用語集ページ
+- keyword: CAI比率
+  url: /ja/glossary/cai-ratio/
+  exact: true
+  priority: 10
+  title: CAI比率 の用語集ページ
+- keyword: CRM(顧客関係管理)
+  url: /ja/glossary/crm-customer-relationship-management/
+  exact: true
+  priority: 10
+  title: CRM(顧客関係管理) の用語集ページ
+- keyword: カナリアリリース
+  url: /ja/glossary/canary-release/
+  exact: true
+  priority: 10
+  title: カナリアリリース の用語集ページ
+- keyword: 正規形
+  url: /ja/glossary/canonical-form/
+  exact: true
+  priority: 10
+  title: 正規形 の用語集ページ
+- keyword: カルーセル(UIコンポーネント)
+  url: /ja/glossary/carousel-ui-component/
+  exact: true
+  priority: 10
+  title: カルーセル(UIコンポーネント) の用語集ページ
+- keyword: カート放棄率
+  url: /ja/glossary/cart-abandonment-rate/
+  exact: true
+  priority: 10
+  title: カート放棄率 の用語集ページ
+- keyword: 統合型ソーシャルメディア管理
+  url: /ja/glossary/centralized-social-media-management-complex/
+  exact: true
+  priority: 10
+  title: 統合型ソーシャルメディア管理 の用語集ページ
+- keyword: Chain-of-Thought プロンプト
+  url: /ja/glossary/chain-of-thought-prompts/
+  exact: true
+  priority: 10
+  title: Chain-of-Thought プロンプト の用語集ページ
+- keyword: Chain-of-Thought プロンプティング
+  url: /ja/glossary/chain-of-thought-prompting/
+  exact: true
+  priority: 10
+  title: Chain-of-Thought プロンプティング の用語集ページ
+- keyword: カオスエンジニアリング
+  url: /ja/glossary/chaos-engineering/
+  exact: true
+  priority: 10
+  title: カオスエンジニアリング の用語集ページ
+- keyword: チャットシミュレーター
+  url: /ja/glossary/chat-simulator/
+  exact: true
+  priority: 10
+  title: チャットシミュレーター の用語集ページ
+- keyword: チャットボット
+  url: /ja/glossary/chatbot/
+  exact: true
+  priority: 10
+  title: チャットボット の用語集ページ
+- keyword: Chroma
+  url: /ja/glossary/chroma/
+  exact: true
+  priority: 10
+  title: Chroma の用語集ページ
+- keyword: クリックマップ
+  url: /ja/glossary/click-map/
+  exact: true
+  priority: 10
+  title: クリックマップ の用語集ページ
+- keyword: クラウドAI
+  url: /ja/glossary/cloud/
+  exact: true
+  priority: 10
+  title: クラウドAI の用語集ページ
+- keyword: クラウドコンピューティング
+  url: /ja/glossary/cloud-computing-glossary-comprehensive-guide-for-ai-infrastructure-deployment/
+  exact: true
+  priority: 10
+  title: クラウドコンピューティング の用語集ページ
+- keyword: コードブロック(Python/JS)
+  url: /ja/glossary/code-block-python-js/
+  exact: true
+  priority: 10
+  title: コードブロック(Python/JS) の用語集ページ
+- keyword: コホート分析
+  url: /ja/glossary/cohort-analysis/
+  exact: true
+  priority: 10
+  title: コホート分析 の用語集ページ
+- keyword: コンディショナルルーター
+  url: /ja/glossary/conditional-router/
+  exact: true
+  priority: 10
+  title: コンディショナルルーター の用語集ページ
+- keyword: 信頼度閾値
+  url: /ja/glossary/confidence-threshold/
+  exact: true
+  priority: 10
+  title: 信頼度閾値 の用語集ページ
+- keyword: 一貫性評価
+  url: /ja/glossary/consistency-evaluation/
+  exact: true
+  priority: 10
+  title: 一貫性評価 の用語集ページ
+- keyword: Contact Lens for Amazon Connect
+  url: /ja/glossary/contact-lens-for-amazon-connect/
+  exact: true
+  priority: 10
+  title: Contact Lens for Amazon Connect の用語集ページ
+- keyword: コンテナ化
+  url: /ja/glossary/containerization/
+  exact: true
+  priority: 10
+  title: コンテナ化 の用語集ページ
+- keyword: コンテンツモデレーション
+  url: /ja/glossary/content-moderation/
+  exact: true
+  priority: 10
+  title: コンテンツモデレーション の用語集ページ
+- keyword: コンテキストスイッチング
+  url: /ja/glossary/context-switching/
+  exact: true
+  priority: 10
+  title: コンテキストスイッチング の用語集ページ
+- keyword: 会話のドリフト
+  url: /ja/glossary/conversation-drift/
+  exact: true
+  priority: 10
+  title: 会話のドリフト の用語集ページ
+- keyword: 対話型AI
+  url: /ja/glossary/conversational/
+  exact: true
+  priority: 10
+  title: 対話型AI の用語集ページ
+- keyword: コンバージョンファネル
+  url: /ja/glossary/conversion-funnel/
+  exact: true
+  priority: 10
+  title: コンバージョンファネル の用語集ページ
+- keyword: AIコパイロット
+  url: /ja/glossary/ai-copilot/
+  exact: true
+  priority: 10
+  title: AIコパイロット の用語集ページ
+- keyword: コサイン類似度
+  url: /ja/glossary/cosine-similarity/
+  exact: true
+  priority: 10
+  title: コサイン類似度 の用語集ページ
+- keyword: コスト見積もり
+  url: /ja/glossary/cost-estimation/
+  exact: true
+  priority: 10
+  title: コスト見積もり の用語集ページ
+- keyword: Cronスケジュール
+  url: /ja/glossary/cron-schedule/
+  exact: true
+  priority: 10
+  title: Cronスケジュール の用語集ページ
+- keyword: 顧客ロイヤルティスコア
+  url: /ja/glossary/customer-loyalty-scores/
+  exact: true
+  priority: 10
+  title: 顧客ロイヤルティスコア の用語集ページ
+- keyword: DTMF(デュアルトーン多重周波数)
+  url: /ja/glossary/dtmf-dual-tone-multi-frequency/
+  exact: true
+  priority: 10
+  title: DTMF(デュアルトーン多重周波数) の用語集ページ
+- keyword: ダッシュボード:定義、用途、種類、ベストプラクティス
+  url: /ja/glossary/dashboards-definition-uses-types-and-best-practices/
+  exact: true
+  priority: 10
+  title: ダッシュボード:定義、用途、種類、ベストプラクティス の用語集ページ
+- keyword: データポイズニング
+  url: /ja/glossary/data-poisoning/
+  exact: true
+  priority: 10
+  title: データポイズニング の用語集ページ
+- keyword: ディープフェイク検出
+  url: /ja/glossary/deepfake-detection/
+  exact: true
+  priority: 10
+  title: ディープフェイク検出 の用語集ページ
+- keyword: 対話管理
+  url: /ja/glossary/dialogue-management/
+  exact: true
+  priority: 10
+  title: 対話管理 の用語集ページ
+- keyword: 対話状態追跡
+  url: /ja/glossary/dialogue-state-tracking/
+  exact: true
+  priority: 10
+  title: 対話状態追跡 の用語集ページ
+- keyword: Dify
+  url: /ja/glossary/dify/
+  exact: true
+  priority: 10
+  title: Dify の用語集ページ
+- keyword: 曖昧性解消
+  url: /ja/glossary/disambiguation/
+  exact: true
+  priority: 10
+  title: 曖昧性解消 の用語集ページ
+- keyword: Docker
+  url: /ja/glossary/docker/
+  exact: true
+  priority: 10
+  title: Docker の用語集ページ
+- keyword: ドキュメントローダー
+  url: /ja/glossary/document-loader/
+  exact: true
+  priority: 10
+  title: ドキュメントローダー の用語集ページ
+- keyword: 滞在時間
+  url: /ja/glossary/dwell-time/
+  exact: true
+  priority: 10
+  title: 滞在時間 の用語集ページ
+- keyword: エッジAI
+  url: /ja/glossary/edge/
+  exact: true
+  priority: 10
+  title: エッジAI の用語集ページ
+- keyword: Einstein Service Agent
+  url: /ja/glossary/einstein-service-agent/
+  exact: true
+  priority: 10
+  title: Einstein Service Agent の用語集ページ
+- keyword: 埋め込みスクリプト
+  url: /ja/glossary/embed-script/
+  exact: true
+  priority: 10
+  title: 埋め込みスクリプト の用語集ページ
+- keyword: エンゲージメント指標
+  url: /ja/glossary/engagement-metrics/
+  exact: true
+  priority: 10
+  title: エンゲージメント指標 の用語集ページ
+- keyword: エンゲージメントスコア
+  url: /ja/glossary/engagement-score/
+  exact: true
+  priority: 10
+  title: エンゲージメントスコア の用語集ページ
+- keyword: エンティティ抽出（固有表現認識、NER）
+  url: /ja/glossary/entity-extraction-named-entity-recognition-ner/
+  exact: true
+  priority: 10
+  title: エンティティ抽出（固有表現認識、NER） の用語集ページ
+- keyword: エンティティリンキング
+  url: /ja/glossary/entity-linking/
+  exact: true
+  priority: 10
+  title: エンティティリンキング の用語集ページ
+- keyword: 環境変数(シークレット):詳細ガイド
+  url: /ja/glossary/environment-variables-secrets/
+  exact: true
+  priority: 10
+  title: 環境変数(シークレット):詳細ガイド の用語集ページ
+- keyword: イベントトラッキング
+  url: /ja/glossary/event-tracking/
+  exact: true
+  priority: 10
+  title: イベントトラッキング の用語集ページ
+- keyword: F1スコア
+  url: /ja/glossary/f1-score/
+  exact: true
+  priority: 10
+  title: F1スコア の用語集ページ
+- keyword: FAQ(よくある質問)
+  url: /ja/glossary/faq-frequently-asked-questions/
+  exact: true
+  priority: 10
+  title: FAQ(よくある質問) の用語集ページ
+- keyword: FAQ(よくある質問)
+  url: /ja/glossary/faqs-frequently-asked-questions/
+  exact: true
+  priority: 10
+  title: FAQ(よくある質問) の用語集ページ
+- keyword: Fact-Score (FActScore)
+  url: /ja/glossary/fact-score/
+  exact: true
+  priority: 10
+  title: Fact-Score (FActScore) の用語集ページ
+- keyword: 公平性メトリクス
+  url: /ja/glossary/fairness-metrics/
+  exact: true
+  priority: 10
+  title: 公平性メトリクス の用語集ページ
+- keyword: フォールバック機構(Fallback Mechanism)
+  url: /ja/glossary/fall-back-mechanism/
+  exact: true
+  priority: 10
+  title: フォールバック機構(Fallback Mechanism) の用語集ページ
+- keyword: 偽陰性
+  url: /ja/glossary/false-negative/
+  exact: true
+  priority: 10
+  title: 偽陰性 の用語集ページ
+- keyword: 偽陽性
+  url: /ja/glossary/false-positive/
+  exact: true
+  priority: 10
+  title: 偽陽性 の用語集ページ
+- keyword: フィーチャーフラグ
+  url: /ja/glossary/feature-flags/
+  exact: true
+  priority: 10
+  title: フィーチャーフラグ の用語集ページ
+- keyword: フィードバックボタン(サムズアップ/ダウン)
+  url: /ja/glossary/feedback-buttons-thumbs-up-down/
+  exact: true
+  priority: 10
+  title: フィードバックボタン(サムズアップ/ダウン) の用語集ページ
+- keyword: Few-Shot Learning(少数例学習)
+  url: /ja/glossary/few-shot/
+  exact: true
+  priority: 10
+  title: Few-Shot Learning(少数例学習) の用語集ページ
+- keyword: AI向けFinOps
+  url: /ja/glossary/finops/
+  exact: true
+  priority: 10
+  title: AI向けFinOps の用語集ページ
+- keyword: FlowHunt
+  url: /ja/glossary/flowhunt/
+  exact: true
+  priority: 10
+  title: FlowHunt の用語集ページ
+- keyword: Flowise
+  url: /ja/glossary/flowise/
+  exact: true
+  priority: 10
+  title: Flowise の用語集ページ
+- keyword: GDPR
+  url: /ja/glossary/gdpr/
+  exact: true
+  priority: 10
+  title: GDPR の用語集ページ
+- keyword: GPUアクセラレーション
+  url: /ja/glossary/gpu-acceleration/
+  exact: true
+  priority: 10
+  title: GPUアクセラレーション の用語集ページ
+- keyword: 生成AI
+  url: /ja/glossary/generative/
+  exact: true
+  priority: 10
+  title: 生成AI の用語集ページ
+- keyword: GitOps
+  url: /ja/glossary/gitops/
+  exact: true
+  priority: 10
+  title: GitOps の用語集ページ
+- keyword: グローバル変数
+  url: /ja/glossary/global-variables/
+  exact: true
+  priority: 10
+  title: グローバル変数 の用語集ページ
+- keyword: ゴール達成率(GCR)
+  url: /ja/glossary/goal-completion-rate-gcr/
+  exact: true
+  priority: 10
+  title: ゴール達成率(GCR) の用語集ページ
+- keyword: AI企業としてのGoogle
+  url: /ja/glossary/google-as-an-ai-company/
+  exact: true
+  priority: 10
+  title: AI企業としてのGoogle の用語集ページ
+- keyword: Gumloop
+  url: /ja/glossary/gumloop/
+  exact: true
+  priority: 10
+  title: Gumloop の用語集ページ
+- keyword: HNSW(階層的ナビゲート可能スモールワールド)
+  url: /ja/glossary/hnsw-hierarchical-navigable-small-world/
+  exact: true
+  priority: 10
+  title: HNSW(階層的ナビゲート可能スモールワールド) の用語集ページ
+- keyword: HTTPリクエストノード
+  url: /ja/glossary/http-request-node/
+  exact: true
+  priority: 10
+  title: HTTPリクエストノード の用語集ページ
+- keyword: ハルシネーション現象
+  url: /ja/glossary/hallucination-phenomena/
+  exact: true
+  priority: 10
+  title: ハルシネーション現象 の用語集ページ
+- keyword: ハンバーガーメニュー
+  url: /ja/glossary/hamburger-menu/
+  exact: true
+  priority: 10
+  title: ハンバーガーメニュー の用語集ページ
+- keyword: 高可用性 (HA)
+  url: /ja/glossary/high-availability-ha/
+  exact: true
+  priority: 10
+  title: 高可用性 (HA) の用語集ページ
+- keyword: Hugging Face
+  url: /ja/glossary/hugging-face/
+  exact: true
+  priority: 10
+  title: Hugging Face の用語集ページ
+- keyword: ヒューマン・エージェント・チーミング
+  url: /ja/glossary/human-agent-teaming/
+  exact: true
+  priority: 10
+  title: ヒューマン・エージェント・チーミング の用語集ページ
+- keyword: ヒューマン承認ノード
+  url: /ja/glossary/human-approval-node/
+  exact: true
+  priority: 10
+  title: ヒューマン承認ノード の用語集ページ
+- keyword: ヒューマン・イン・ザ・ループ(HITL)
+  url: /ja/glossary/human-in-the-loop-hitl/
+  exact: true
+  priority: 10
+  title: ヒューマン・イン・ザ・ループ(HITL) の用語集ページ
+- keyword: ハイブリッドチャットボット
+  url: /ja/glossary/hybrid/
+  exact: true
+  priority: 10
+  title: ハイブリッドチャットボット の用語集ページ
+- keyword: ハイブリッドシステム
+  url: /ja/glossary/hybrid-system/
+  exact: true
+  priority: 10
+  title: ハイブリッドシステム の用語集ページ
+- keyword: ITIL、IT運用管理におけるベストプラクティス –
+  url: /ja/glossary/itil-the-best-practice-in-it-operations-management/
+  exact: true
+  priority: 10
+  title: ITIL、IT運用管理におけるベストプラクティス – の用語集ページ
+- keyword: ITIL – Information Technology Infrastructure Library(ITインフラストラクチャライブラリ)
+  url: /ja/glossary/itil-information-technology-infrastructure-library/
+  exact: true
+  priority: 10
+  title: ITIL – Information Technology Infrastructure Library(ITインフラストラクチャライブラリ) の用語集ページ
+- keyword: ITSM(ITサービスマネジメント)
+  url: /ja/glossary/itsm-it-service-management/
+  exact: true
+  priority: 10
+  title: ITSM(ITサービスマネジメント) の用語集ページ
+- keyword: 画像生成ノード
+  url: /ja/glossary/image-generation-node/
+  exact: true
+  priority: 10
+  title: 画像生成ノード の用語集ページ
+- keyword: 間接的プロンプトインジェクション
+  url: /ja/glossary/indirect-prompt-injection/
+  exact: true
+  priority: 10
+  title: 間接的プロンプトインジェクション の用語集ページ
+- keyword: 推論レイテンシ
+  url: /ja/glossary/inference-latency/
+  exact: true
+  priority: 10
+  title: 推論レイテンシ の用語集ページ
+- keyword: インフィニットキャンバス
+  url: /ja/glossary/infinite-canvas/
+  exact: true
+  priority: 10
+  title: インフィニットキャンバス の用語集ページ
+- keyword: Infrastructure as Code (IaC)
+  url: /ja/glossary/infrastructure-as-code-iac/
+  exact: true
+  priority: 10
+  title: Infrastructure as Code (IaC) の用語集ページ
+- keyword: インテグレーション
+  url: /ja/glossary/integration/
+  exact: true
+  priority: 10
+  title: インテグレーション の用語集ページ
+- keyword: インテント認識
+  url: /ja/glossary/intent-recognition/
+  exact: true
+  priority: 10
+  title: インテント認識 の用語集ページ
+- keyword: JSON Path
+  url: /ja/glossary/json-path/
+  exact: true
+  priority: 10
+  title: JSON Path の用語集ページ
+- keyword: ジェイルブレイキング(AIジェイルブレイキング)
+  url: /ja/glossary/jailbreaking-ai-jailbreaking/
+  exact: true
+  priority: 10
+  title: ジェイルブレイキング(AIジェイルブレイキング) の用語集ページ
+- keyword: JamC-QA
+  url: /ja/glossary/jamc-qa/
+  exact: true
+  priority: 10
+  title: JamC-QA の用語集ページ
+- keyword: ナレッジ中心型サービス (KCS)
+  url: /ja/glossary/knowledge-centered-service-kcs/
+  exact: true
+  priority: 10
+  title: ナレッジ中心型サービス (KCS) の用語集ページ
+- keyword: KVキャッシュ
+  url: /ja/glossary/kv-cache/
+  exact: true
+  priority: 10
+  title: KVキャッシュ の用語集ページ
+- keyword: ナレッジベースコネクタ
+  url: /ja/glossary/knowledge-base-connector/
+  exact: true
+  priority: 10
+  title: ナレッジベースコネクタ の用語集ページ
+- keyword: ナレッジベース
+  url: /ja/glossary/knowledge-bases/
+  exact: true
+  priority: 10
+  title: ナレッジベース の用語集ページ
+- keyword: LLM as Judge(LLMによる評価)
+  url: /ja/glossary/llm-as-judge/
+  exact: true
+  priority: 10
+  title: LLM as Judge(LLMによる評価) の用語集ページ
+- keyword: LangFlow
+  url: /ja/glossary/langflow/
+  exact: true
+  priority: 10
+  title: LangFlow の用語集ページ
+- keyword: レイテンシバジェット
+  url: /ja/glossary/latency-budget-complex/
+  exact: true
+  priority: 10
+  title: レイテンシバジェット の用語集ページ
+- keyword: レイテンシ
+  url: /ja/glossary/latency/
+  exact: true
+  priority: 10
+  title: レイテンシ の用語集ページ
+- keyword: レンマ化
+  url: /ja/glossary/lemmatization/
+  exact: true
+  priority: 10
+  title: レンマ化 の用語集ページ
+- keyword: LiveAgent
+  url: /ja/glossary/liveagent/
+  exact: true
+  priority: 10
+  title: LiveAgent の用語集ページ
+- keyword: ロードバランシング
+  url: /ja/glossary/load-balancing/
+  exact: true
+  priority: 10
+  title: ロードバランシング の用語集ページ
+- keyword: ループノード
+  url: /ja/glossary/loop-node/
+  exact: true
+  priority: 10
+  title: ループノード の用語集ページ
+- keyword: MHaluBench
+  url: /ja/glossary/mhalubench/
+  exact: true
+  priority: 10
+  title: MHaluBench の用語集ページ
+- keyword: MLOps
+  url: /ja/glossary/mlops/
+  exact: true
+  priority: 10
+  title: MLOps の用語集ページ
+- keyword: Make(Integromat)
+  url: /ja/glossary/make-integromat/
+  exact: true
+  priority: 10
+  title: Make(Integromat) の用語集ページ
+- keyword: マイクロフロントエンド
+  url: /ja/glossary/micro-frontends/
+  exact: true
+  priority: 10
+  title: マイクロフロントエンド の用語集ページ
+- keyword: マイクロサービスアーキテクチャ:包括的ガイド
+  url: /ja/glossary/microservices-architecture/
+  exact: true
+  priority: 10
+  title: マイクロサービスアーキテクチャ:包括的ガイド の用語集ページ
+- keyword: Milvus
+  url: /ja/glossary/milvus-a/
+  exact: true
+  priority: 10
+  title: Milvus の用語集ページ
+- keyword: ミニマップ
+  url: /ja/glossary/minimap/
+  exact: true
+  priority: 10
+  title: ミニマップ の用語集ページ
+- keyword: 誤解率
+  url: /ja/glossary/misunderstood-rate/
+  exact: true
+  priority: 10
+  title: 誤解率 の用語集ページ
+- keyword: モデルカード
+  url: /ja/glossary/model-cards/
+  exact: true
+  priority: 10
+  title: モデルカード の用語集ページ
+- keyword: モデル量子化:包括的ガイド
+  url: /ja/glossary/model-quantization-a/
+  exact: true
+  priority: 10
+  title: モデル量子化:包括的ガイド の用語集ページ
+- keyword: モデルロバストネス
+  url: /ja/glossary/model-robustness/
+  exact: true
+  priority: 10
+  title: モデルロバストネス の用語集ページ
+- keyword: モデルサービング
+  url: /ja/glossary/model-serving/
+  exact: true
+  priority: 10
+  title: モデルサービング の用語集ページ
+- keyword: モノリシックアーキテクチャ
+  url: /ja/glossary/monolithic-architecture/
+  exact: true
+  priority: 10
+  title: モノリシックアーキテクチャ の用語集ページ
+- keyword: マルチテナンシー
+  url: /ja/glossary/multi-tenancy/
+  exact: true
+  priority: 10
+  title: マルチテナンシー の用語集ページ
+- keyword: マルチチャネルサポート
+  url: /ja/glossary/multi-channel-support/
+  exact: true
+  priority: 10
+  title: マルチチャネルサポート の用語集ページ
+- keyword: マルチターン会話
+  url: /ja/glossary/multi-turn-conversation/
+  exact: true
+  priority: 10
+  title: マルチターン会話 の用語集ページ
+- keyword: マルチモーダルAI
+  url: /ja/glossary/multimodal/
+  exact: true
+  priority: 10
+  title: マルチモーダルAI の用語集ページ
+- keyword: N-gram
+  url: /ja/glossary/n-gram/
+  exact: true
+  priority: 10
+  title: N-gram の用語集ページ
+- keyword: NLU信頼度閾値
+  url: /ja/glossary/nlu-confidence-threshold/
+  exact: true
+  priority: 10
+  title: NLU信頼度閾値 の用語集ページ
+- keyword: 固有表現認識（NER）
+  url: /ja/glossary/named-entity-recognition-ner/
+  exact: true
+  priority: 10
+  title: 固有表現認識（NER） の用語集ページ
+- keyword: 自然言語処理(NLP)
+  url: /ja/glossary/natural-language-processing-nlp/
+  exact: true
+  priority: 10
+  title: 自然言語処理(NLP) の用語集ページ
+- keyword: 自然言語処理(NLP)
+  url: /ja/glossary/natural-language-processing-nlp/
+  exact: true
+  priority: 10
+  title: 自然言語処理(NLP) の用語集ページ
+- keyword: 自然言語処理
+  url: /ja/glossary/natural-language-processing-technology/
+  exact: true
+  priority: 10
+  title: 自然言語処理 の用語集ページ
+- keyword: ノードグルーピング
+  url: /ja/glossary/node-grouping/
+  exact: true
+  priority: 10
+  title: ノードグルーピング の用語集ページ
+- keyword: ノードとエッジ
+  url: /ja/glossary/nodes-and-edges/
+  exact: true
+  priority: 10
+  title: ノードとエッジ の用語集ページ
+- keyword: オープンドメインボット
+  url: /ja/glossary/open-domain-bot/
+  exact: true
+  priority: 10
+  title: オープンドメインボット の用語集ページ
+- keyword: OpenAI
+  url: /ja/glossary/openai/
+  exact: true
+  priority: 10
+  title: OpenAI の用語集ページ
+- keyword: 出力パース
+  url: /ja/glossary/output-parsing/
+  exact: true
+  priority: 10
+  title: 出力パース の用語集ページ
+- keyword: PII編集
+  url: /ja/glossary/pii-redaction/
+  exact: true
+  priority: 10
+  title: PII編集 の用語集ページ
+- keyword: PagedAttention
+  url: /ja/glossary/pagedattention/
+  exact: true
+  priority: 10
+  title: PagedAttention の用語集ページ
+- keyword: 並列実行
+  url: /ja/glossary/parallel-execution/
+  exact: true
+  priority: 10
+  title: 並列実行 の用語集ページ
+- keyword: パレートの法則(80/20の法則)
+  url: /ja/glossary/paretos-law-the-80-20-rule/
+  exact: true
+  priority: 10
+  title: パレートの法則(80/20の法則) の用語集ページ
+- keyword: パーシステントメニュー
+  url: /ja/glossary/persistent-menu/
+  exact: true
+  priority: 10
+  title: パーシステントメニュー の用語集ページ
+- keyword: ペルソナデザイン
+  url: /ja/glossary/persona-design/
+  exact: true
+  priority: 10
+  title: ペルソナデザイン の用語集ページ
+- keyword: 個人情報保護法(中国)
+  url: /ja/glossary/personal-information-protection-law/
+  exact: true
+  priority: 10
+  title: 個人情報保護法(中国) の用語集ページ
+- keyword: パーソナライゼーション
+  url: /ja/glossary/personalization/
+  exact: true
+  priority: 10
+  title: パーソナライゼーション の用語集ページ
+- keyword: Pinecone
+  url: /ja/glossary/pinecone/
+  exact: true
+  priority: 10
+  title: Pinecone の用語集ページ
+- keyword: 適合率と再現率
+  url: /ja/glossary/precision-and-recall/
+  exact: true
+  priority: 10
+  title: 適合率と再現率 の用語集ページ
+- keyword: 精度(Precision)
+  url: /ja/glossary/precision/
+  exact: true
+  priority: 10
+  title: 精度(Precision) の用語集ページ
+- keyword: プライバシー保護機械学習(PPML)
+  url: /ja/glossary/privacy-preserving-machine-learning-ppml/
+  exact: true
+  priority: 10
+  title: プライバシー保護機械学習(PPML) の用語集ページ
+- keyword: プロンプトテンプレート
+  url: /ja/glossary/prompt-template/
+  exact: true
+  priority: 10
+  title: プロンプトテンプレート の用語集ページ
+- keyword: Qdrant
+  url: /ja/glossary/qdrant/
+  exact: true
+  priority: 10
+  title: Qdrant の用語集ページ
+- keyword: クエリ拡張
+  url: /ja/glossary/query-expansion/
+  exact: true
+  priority: 10
+  title: クエリ拡張 の用語集ページ
+- keyword: クイックリプライ
+  url: /ja/glossary/quick-replies/
+  exact: true
+  priority: 10
+  title: クイックリプライ の用語集ページ
+- keyword: RAGベンチマーク
+  url: /ja/glossary/rag-benchmarks/
+  exact: true
+  priority: 10
+  title: RAGベンチマーク の用語集ページ
+- keyword: Retrieval-Augmented Generation (RAG)
+  url: /ja/glossary/retrieval-augmented-generation-rag-technology/
+  exact: true
+  priority: 10
+  title: Retrieval-Augmented Generation (RAG) の用語集ページ
+- keyword: RAG(Retrieval-Augmented Generation)
+  url: /ja/glossary/rag-retrieval-augmented-generation/
+  exact: true
+  priority: 10
+  title: RAG(Retrieval-Augmented Generation) の用語集ページ
+- keyword: ROI(投資収益率)
+  url: /ja/glossary/roi-return-on-investment/
+  exact: true
+  priority: 10
+  title: ROI(投資収益率) の用語集ページ
+- keyword: レート制限ハンドラー
+  url: /ja/glossary/rate-limiting-handler/
+  exact: true
+  priority: 10
+  title: レート制限ハンドラー の用語集ページ
+- keyword: リアルタイム翻訳
+  url: /ja/glossary/real-time-translation/
+  exact: true
+  priority: 10
+  title: リアルタイム翻訳 の用語集ページ
+- keyword: レッドチーミング
+  url: /ja/glossary/red-teaming/
+  exact: true
+  priority: 10
+  title: レッドチーミング の用語集ページ
+- keyword: 規制サンドボックス
+  url: /ja/glossary/regulatory-sandbox/
+  exact: true
+  priority: 10
+  title: 規制サンドボックス の用語集ページ
+- keyword: 再現性検証
+  url: /ja/glossary/reproducibility-validation/
+  exact: true
+  priority: 10
+  title: 再現性検証 の用語集ページ
+- keyword: 要件定義
+  url: /ja/glossary/requirements-definition/
+  exact: true
+  priority: 10
+  title: 要件定義 の用語集ページ
+- keyword: 投資収益率(ROI)
+  url: /ja/glossary/return-on-investment-roi/
+  exact: true
+  priority: 10
+  title: 投資収益率(ROI) の用語集ページ
+- keyword: リッチメディアカード
+  url: /ja/glossary/rich-media-cards/
+  exact: true
+  priority: 10
+  title: リッチメディアカード の用語集ページ
+- keyword: ルールベースチャットボット
+  url: /ja/glossary/rule-based/
+  exact: true
+  priority: 10
+  title: ルールベースチャットボット の用語集ページ
+- keyword: ルールベースシステム
+  url: /ja/glossary/rule-based-systems/
+  exact: true
+  priority: 10
+  title: ルールベースシステム の用語集ページ
+- keyword: SSML(音声合成マークアップ言語)
+  url: /ja/glossary/ssml-speech-synthesis-markup-language/
+  exact: true
+  priority: 10
+  title: SSML(音声合成マークアップ言語) の用語集ページ
+- keyword: セーフティガードレール
+  url: /ja/glossary/safety-guardrails/
+  exact: true
+  priority: 10
+  title: セーフティガードレール の用語集ページ
+- keyword: サンドボックスモード
+  url: /ja/glossary/sandbox-mode/
+  exact: true
+  priority: 10
+  title: サンドボックスモード の用語集ページ
+- keyword: セルフヒーリング・ナレッジ
+  url: /ja/glossary/self-healing-knowledge/
+  exact: true
+  priority: 10
+  title: セルフヒーリング・ナレッジ の用語集ページ
+- keyword: セマンティックルーティング
+  url: /ja/glossary/semantic-routing/
+  exact: true
+  priority: 10
+  title: セマンティックルーティング の用語集ページ
+- keyword: センチメント適応型トーン
+  url: /ja/glossary/sentiment-adaptive-tone/
+  exact: true
+  priority: 10
+  title: センチメント適応型トーン の用語集ページ
+- keyword: センチメント分析
+  url: /ja/glossary/sentiment-analysis/
+  exact: true
+  priority: 10
+  title: センチメント分析 の用語集ページ
+- keyword: サーバーレスコンピューティング
+  url: /ja/glossary/serverless-computing/
+  exact: true
+  priority: 10
+  title: サーバーレスコンピューティング の用語集ページ
+- keyword: シャドーAI
+  url: /ja/glossary/shadow/
+  exact: true
+  priority: 10
+  title: シャドーAI の用語集ページ
+- keyword: シャーディング
+  url: /ja/glossary/sharding/
+  exact: true
+  priority: 10
+  title: シャーディング の用語集ページ
+- keyword: スロットキャリーオーバー
+  url: /ja/glossary/slot-carryover/
+  exact: true
+  priority: 10
+  title: スロットキャリーオーバー の用語集ページ
+- keyword: スロットフィリング
+  url: /ja/glossary/slot-filling-the-definitive-glossary-for-conversational/
+  exact: true
+  priority: 10
+  title: スロットフィリング の用語集ページ
+- keyword: スモールトーク
+  url: /ja/glossary/small-talk/
+  exact: true
+  priority: 10
+  title: スモールトーク の用語集ページ
+- keyword: 投機的デコーディング
+  url: /ja/glossary/speculative-decoding/
+  exact: true
+  priority: 10
+  title: 投機的デコーディング の用語集ページ
+- keyword: Speech-to-Textノード
+  url: /ja/glossary/speech-to-text-node/
+  exact: true
+  priority: 10
+  title: Speech-to-Textノード の用語集ページ
+- keyword: スプラッシュスクリーン
+  url: /ja/glossary/splash-screen/
+  exact: true
+  priority: 10
+  title: スプラッシュスクリーン の用語集ページ
+- keyword: スポットインスタンス
+  url: /ja/glossary/spot-instances/
+  exact: true
+  priority: 10
+  title: スポットインスタンス の用語集ページ
+- keyword: Stack AI
+  url: /ja/glossary/stack/
+  exact: true
+  priority: 10
+  title: Stack AI の用語集ページ
+- keyword: ステートマシン
+  url: /ja/glossary/state-machine/
+  exact: true
+  priority: 10
+  title: ステートマシン の用語集ページ
+- keyword: サジェスチョンチップ
+  url: /ja/glossary/suggestion-chips/
+  exact: true
+  priority: 10
+  title: サジェスチョンチップ の用語集ページ
+- keyword: サポートポータル
+  url: /ja/glossary/support-portal/
+  exact: true
+  priority: 10
+  title: サポートポータル の用語集ページ
+- keyword: TCO(総所有コスト)
+  url: /ja/glossary/tco-total-cost-of-ownership/
+  exact: true
+  priority: 10
+  title: TCO(総所有コスト) の用語集ページ
+- keyword: タスク指向型ボット
+  url: /ja/glossary/task-oriented-bot/
+  exact: true
+  priority: 10
+  title: タスク指向型ボット の用語集ページ
+- keyword: 技術的負債
+  url: /ja/glossary/technical-debt/
+  exact: true
+  priority: 10
+  title: 技術的負債 の用語集ページ
+- keyword: テレメトリー
+  url: /ja/glossary/telemetry-glossary-definition-use-cases/
+  exact: true
+  priority: 10
+  title: テレメトリー の用語集ページ
+- keyword: Text-to-Speechノード
+  url: /ja/glossary/text-to-speech-node/
+  exact: true
+  priority: 10
+  title: Text-to-Speechノード の用語集ページ
+- keyword: スロットリング(APIスロットリング)
+  url: /ja/glossary/throttling-api-throttling/
+  exact: true
+  priority: 10
+  title: スロットリング(APIスロットリング) の用語集ページ
+- keyword: チケットシステム
+  url: /ja/glossary/ticket-system/
+  exact: true
+  priority: 10
+  title: チケットシステム の用語集ページ
+- keyword: 透明性(AI透明性)
+  url: /ja/glossary/transparency-ai-transparency/
+  exact: true
+  priority: 10
+  title: 透明性(AI透明性) の用語集ページ
+- keyword: タイピングインジケーター
+  url: /ja/glossary/typing-indicators/
+  exact: true
+  priority: 10
+  title: タイピングインジケーター の用語集ページ
+- keyword: UI(ユーザーインターフェース)
+  url: /ja/glossary/ui-user-interface/
+  exact: true
+  priority: 10
+  title: UI(ユーザーインターフェース) の用語集ページ
+- keyword: URLレトリーバーとは？
+  url: /ja/glossary/what-is-a-url-retriever/
+  exact: true
+  priority: 10
+  title: URLレトリーバーとは？ の用語集ページ
+- keyword: UX
+  url: /ja/glossary/ux/
+  exact: true
+  priority: 10
+  title: UX の用語集ページ
+- keyword: 教師なし一貫性メトリクス
+  url: /ja/glossary/unsupervised-consistency-metrics/
+  exact: true
+  priority: 10
+  title: 教師なし一貫性メトリクス の用語集ページ
+- keyword: 発話パーミュテーション
+  url: /ja/glossary/utterance-permutation/
+  exact: true
+  priority: 10
+  title: 発話パーミュテーション の用語集ページ
+- keyword: 発話
+  url: /ja/glossary/utterance/
+  exact: true
+  priority: 10
+  title: 発話 の用語集ページ
+- keyword: 音声アクティビティ検出(VAD)
+  url: /ja/glossary/voice-activity-detection-vad/
+  exact: true
+  priority: 10
+  title: 音声アクティビティ検出(VAD) の用語集ページ
+- keyword: 変数インジェクション
+  url: /ja/glossary/variable-injection/
+  exact: true
+  priority: 10
+  title: 変数インジェクション の用語集ページ
+- keyword: ベクトルデータベース
+  url: /ja/glossary/vector-database/
+  exact: true
+  priority: 10
+  title: ベクトルデータベース の用語集ページ
+- keyword: バーチャルアシスタント
+  url: /ja/glossary/virtual-assistant/
+  exact: true
+  priority: 10
+  title: バーチャルアシスタント の用語集ページ
+- keyword: ビジュアルフロービルダー
+  url: /ja/glossary/visual-flow-builder/
+  exact: true
+  priority: 10
+  title: ビジュアルフロービルダー の用語集ページ
+- keyword: ボイスボット
+  url: /ja/glossary/voicebot-glossary-deep-knowledge/
+  exact: true
+  priority: 10
+  title: ボイスボット の用語集ページ
+- keyword: Voiceflow
+  url: /ja/glossary/voiceflow/
+  exact: true
+  priority: 10
+  title: Voiceflow の用語集ページ
+- keyword: ウェイクワード技術
+  url: /ja/glossary/wake-word-technology/
+  exact: true
+  priority: 10
+  title: ウェイクワード技術 の用語集ページ
+- keyword: ウォーターマーキング
+  url: /ja/glossary/watermarking/
+  exact: true
+  priority: 10
+  title: ウォーターマーキング の用語集ページ
+- keyword: Weaviate
+  url: /ja/glossary/weaviate/
+  exact: true
+  priority: 10
+  title: Weaviate の用語集ページ
+- keyword: Webスクレイパーノード
+  url: /ja/glossary/web-scraper-node/
+  exact: true
+  priority: 10
+  title: Webスクレイパーノード の用語集ページ
+- keyword: Webhook Fulfillment
+  url: /ja/glossary/webhook-fulfillment/
+  exact: true
+  priority: 10
+  title: Webhook Fulfillment の用語集ページ
+- keyword: Webhookトリガー
+  url: /ja/glossary/webhook-trigger/
+  exact: true
+  priority: 10
+  title: Webhookトリガー の用語集ページ
+- keyword: Webview(ウェブビュー)
+  url: /ja/glossary/webview/
+  exact: true
+  priority: 10
+  title: Webview(ウェブビュー) の用語集ページ
+- keyword: ホワイトラベリング
+  url: /ja/glossary/white-labeling/
+  exact: true
+  priority: 10
+  title: ホワイトラベリング の用語集ページ
+- keyword: ウィザード・オブ・オズ・テスティング(WoZ)
+  url: /ja/glossary/wizard-of-oz-testing-woz/
+  exact: true
+  priority: 10
+  title: ウィザード・オブ・オズ・テスティング(WoZ) の用語集ページ
+- keyword: ワークフロー
+  url: /ja/glossary/workflow-definition-types-examples-and-guide-to-workflow/
+  exact: true
+  priority: 10
+  title: ワークフロー の用語集ページ
+- keyword: Zapier
+  url: /ja/glossary/zapier/
+  exact: true
+  priority: 10
+  title: Zapier の用語集ページ
+- keyword: ゼロショット思考連鎖
+  url: /ja/glossary/zero-shot-chain-of-thought/
+  exact: true
+  priority: 10
+  title: ゼロショット思考連鎖 の用語集ページ
+- keyword: ゼロタッチ解決
+  url: /ja/glossary/zero-touch-resolution/
+  exact: true
+  priority: 10
+  title: ゼロタッチ解決 の用語集ページ
+- keyword: ゼロショット学習(ZSL)
+  url: /ja/glossary/zero-shot-learning-zsl/
+  exact: true
+  priority: 10
+  title: ゼロショット学習(ZSL) の用語集ページ
+- keyword: 用語集
+  url: /ja/glossary/glossary-index/
+  exact: true
+  priority: 10
+  title: 用語集 の用語集ページ
+- keyword: アクセス制御
+  url: /ja/glossary/access-control/
+  exact: true
+  priority: 10
+  title: アクセス制御 の用語集ページ
+- keyword: 精度測定
+  url: /ja/glossary/accuracy-measurement/
+  exact: true
+  priority: 10
+  title: 精度測定 の用語集ページ
+- keyword: 人工知能
+  url: /ja/glossary/artificial-intelligence/
+  exact: true
+  priority: 10
+  title: 人工知能 の用語集ページ
+- keyword: 自動ルーティング機能
+  url: /ja/glossary/auto-routing-functions/
+  exact: true
+  priority: 10
+  title: 自動ルーティング機能 の用語集ページ
+- keyword: オートメーションプラットフォーム
+  url: /ja/glossary/automation-platform/
+  exact: true
+  priority: 10
+  title: オートメーションプラットフォーム の用語集ページ
+- keyword: オートメーションルール
+  url: /ja/glossary/automation-rules/
+  exact: true
+  priority: 10
+  title: オートメーションルール の用語集ページ
+- keyword: バイアス
+  url: /ja/glossary/bias/
+  exact: true
+  priority: 10
+  title: バイアス の用語集ページ
+- keyword: ボトルネック
+  url: /ja/glossary/bottlenecks-comprehensive-glossary-action-guide-for-business-automation-and-ai-chatbot-operations/
+  exact: true
+  priority: 10
+  title: ボトルネック の用語集ページ
+- keyword: 概日リズム
+  url: /ja/glossary/circadian-rhythm/
+  exact: true
+  priority: 10
+  title: 概日リズム の用語集ページ
+- keyword: クラウドベース
+  url: /ja/glossary/cloud-based/
+  exact: true
+  priority: 10
+  title: クラウドベース の用語集ページ
+- keyword: クラウドサービス
+  url: /ja/glossary/cloud-service/
+  exact: true
+  priority: 10
+  title: クラウドサービス の用語集ページ
+- keyword: 認知負荷
+  url: /ja/glossary/cognitive-load/
+  exact: true
+  priority: 10
+  title: 認知負荷 の用語集ページ
+- keyword: 計算リソース
+  url: /ja/glossary/computational-resources/
+  exact: true
+  priority: 10
+  title: 計算リソース の用語集ページ
+- keyword: コンテキスト理解
+  url: /ja/glossary/contextual-understanding/
+  exact: true
+  priority: 10
+  title: コンテキスト理解 の用語集ページ
+- keyword: AIにおける継続学習
+  url: /ja/glossary/continuous-learning/
+  exact: true
+  priority: 10
+  title: AIにおける継続学習 の用語集ページ
+- keyword: コストパフォーマンス比率(CPI)
+  url: /ja/glossary/cost-performance-ratio-cpi/
+  exact: true
+  priority: 10
+  title: コストパフォーマンス比率(CPI) の用語集ページ
+- keyword: 文化特有ベンチマーク
+  url: /ja/glossary/culture-specific-benchmarks/
+  exact: true
+  priority: 10
+  title: 文化特有ベンチマーク の用語集ページ
+- keyword: カスタマーサポート
+  url: /ja/glossary/customer-support/
+  exact: true
+  priority: 10
+  title: カスタマーサポート の用語集ページ
+- keyword: ダッシュボード
+  url: /ja/glossary/dashboard/
+  exact: true
+  priority: 10
+  title: ダッシュボード の用語集ページ
+- keyword: データ暗号化
+  url: /ja/glossary/data-encryption/
+  exact: true
+  priority: 10
+  title: データ暗号化 の用語集ページ
+- keyword: データサイエンス
+  url: /ja/glossary/data-science/
+  exact: true
+  priority: 10
+  title: データサイエンス の用語集ページ
+- keyword: ディープラーニング
+  url: /ja/glossary/deep-learning/
+  exact: true
+  priority: 10
+  title: ディープラーニング の用語集ページ
+- keyword: デジタルトランスフォーメーション
+  url: /ja/glossary/digital-transformation/
+  exact: true
+  priority: 10
+  title: デジタルトランスフォーメーション の用語集ページ
+- keyword: デジタル化
+  url: /ja/glossary/digitalization/
+  exact: true
+  priority: 10
+  title: デジタル化 の用語集ページ
+- keyword: エスカレーション
+  url: /ja/glossary/escalation/
+  exact: true
+  priority: 10
+  title: エスカレーション の用語集ページ
+- keyword: 形式知
+  url: /ja/glossary/explicit-knowledge/
+  exact: true
+  priority: 10
+  title: 形式知 の用語集ページ
+- keyword: 有限状態機械(FSM)
+  url: /ja/glossary/finite-state-machines-fsm/
+  exact: true
+  priority: 10
+  title: 有限状態機械(FSM) の用語集ページ
+- keyword: 初回コンタクト解決率(FCR)
+  url: /ja/glossary/first-contact-resolution-fcr/
+  exact: true
+  priority: 10
+  title: 初回コンタクト解決率(FCR) の用語集ページ
+- keyword: ハルシネーション検出
+  url: /ja/glossary/hallucination-detection/
+  exact: true
+  priority: 10
+  title: ハルシネーション検出 の用語集ページ
+- keyword: ハルシネーション緩和戦略
+  url: /ja/glossary/hallucination-mitigation-strategies/
+  exact: true
+  priority: 10
+  title: ハルシネーション緩和戦略 の用語集ページ
+- keyword: AIにおける幻覚問題:複雑な課題
+  url: /ja/glossary/hallucination-problem-in-ai-a-complex/
+  exact: true
+  priority: 10
+  title: AIにおける幻覚問題:複雑な課題 の用語集ページ
+- keyword: ハルシネーション
+  url: /ja/glossary/hallucination/
+  exact: true
+  priority: 10
+  title: ハルシネーション の用語集ページ
+- keyword: 敬語サポート
+  url: /ja/glossary/honorific-language-support/
+  exact: true
+  priority: 10
+  title: 敬語サポート の用語集ページ
+- keyword: ハイブリッドサポート
+  url: /ja/glossary/hybrid-support/
+  exact: true
+  priority: 10
+  title: ハイブリッドサポート の用語集ページ
+- keyword: 画像解析
+  url: /ja/glossary/image-analysis/
+  exact: true
+  priority: 10
+  title: 画像解析 の用語集ページ
+- keyword: インシデント
+  url: /ja/glossary/incidents/
+  exact: true
+  priority: 10
+  title: インシデント の用語集ページ
+- keyword: ナレッジベース
+  url: /ja/glossary/knowledge-base/
+  exact: true
+  priority: 10
+  title: ナレッジベース の用語集ページ
+- keyword: ナレッジグラフ
+  url: /ja/glossary/knowledge-graph/
+  exact: true
+  priority: 10
+  title: ナレッジグラフ の用語集ページ
+- keyword: 大規模言語モデル(LLM)
+  url: /ja/glossary/large-language-models-llms/
+  exact: true
+  priority: 10
+  title: 大規模言語モデル(LLM) の用語集ページ
+- keyword: 機械学習
+  url: /ja/glossary/machine-learning/
+  exact: true
+  priority: 10
+  title: 機械学習 の用語集ページ
+- keyword: モニタリング
+  url: /ja/glossary/monitoring/
+  exact: true
+  priority: 10
+  title: モニタリング の用語集ページ
+- keyword: マルチモーダル技術
+  url: /ja/glossary/multimodal-technology-comprehensive-glossary-and-foundational/
+  exact: true
+  priority: 10
+  title: マルチモーダル技術 の用語集ページ
+- keyword: マルチタスキング
+  url: /ja/glossary/multitasking/
+  exact: true
+  priority: 10
+  title: マルチタスキング の用語集ページ
+- keyword: n8n
+  url: /ja/glossary/n8n/
+  exact: true
+  priority: 10
+  title: n8n の用語集ページ
+- keyword: 自然言語検索(NLS):詳細ガイド
+  url: /ja/glossary/natural-language-search-nls-an/
+  exact: true
+  priority: 10
+  title: 自然言語検索(NLS):詳細ガイド の用語集ページ
+- keyword: ネットワーク環境
+  url: /ja/glossary/network-environment/
+  exact: true
+  priority: 10
+  title: ネットワーク環境 の用語集ページ
+- keyword: ニューラルネットワーク
+  url: /ja/glossary/neural-networks/
+  exact: true
+  priority: 10
+  title: ニューラルネットワーク の用語集ページ
+- keyword: ノート
+  url: /ja/glossary/note/
+  exact: true
+  priority: 10
+  title: ノート の用語集ページ
+- keyword: プラットフォーム(ソーシャルメディア)
+  url: /ja/glossary/platform-social-media-glossary-and-explainer-for-ai-chatbot-automation-applications/
+  exact: true
+  priority: 10
+  title: プラットフォーム(ソーシャルメディア) の用語集ページ
+- keyword: プロンプト
+  url: /ja/glossary/prompts-comprehensive-glossary-best-practices/
+  exact: true
+  priority: 10
+  title: プロンプト の用語集ページ
+- keyword: 強化学習
+  url: /ja/glossary/reinforcement-learning/
+  exact: true
+  priority: 10
+  title: 強化学習 の用語集ページ
+- keyword: ルールエンジン
+  url: /ja/glossary/rules-engine/
+  exact: true
+  priority: 10
+  title: ルールエンジン の用語集ページ
+- keyword: シナリオ(事前準備された会話フロー)
+  url: /ja/glossary/scenarios-pre-prepared-conversation-flows/
+  exact: true
+  priority: 10
+  title: シナリオ(事前準備された会話フロー) の用語集ページ
+- keyword: セキュリティポリシー
+  url: /ja/glossary/security-policies/
+  exact: true
+  priority: 10
+  title: セキュリティポリシー の用語集ページ
+- keyword: セキュリティ要件
+  url: /ja/glossary/security-requirements/
+  exact: true
+  priority: 10
+  title: セキュリティ要件 の用語集ページ
+- keyword: セルフサービス
+  url: /ja/glossary/self-service/
+  exact: true
+  priority: 10
+  title: セルフサービス の用語集ページ
+- keyword: スパムフィルタリング
+  url: /ja/glossary/spam-filtering/
+  exact: true
+  priority: 10
+  title: スパムフィルタリング の用語集ページ
+- keyword: 音声認識
+  url: /ja/glossary/speech-recognition/
+  exact: true
+  priority: 10
+  title: 音声認識 の用語集ページ
+- keyword: 構造化プロンプト
+  url: /ja/glossary/structured-prompts/
+  exact: true
+  priority: 10
+  title: 構造化プロンプト の用語集ページ
+- keyword: スチューデントモデル
+  url: /ja/glossary/student-models-an-exhaustive/
+  exact: true
+  priority: 10
+  title: スチューデントモデル の用語集ページ
+- keyword: 教師あり学習
+  url: /ja/glossary/supervised-learning/
+  exact: true
+  priority: 10
+  title: 教師あり学習 の用語集ページ
+- keyword: 補助指標
+  url: /ja/glossary/supplementary-indicator/
+  exact: true
+  priority: 10
+  title: 補助指標 の用語集ページ
+- keyword: 暗黙知
+  url: /ja/glossary/tacit-knowledge-deep-glossary-resource-page/
+  exact: true
+  priority: 10
+  title: 暗黙知 の用語集ページ
+- keyword: チケット管理
+  url: /ja/glossary/ticket-management/
+  exact: true
+  priority: 10
+  title: チケット管理 の用語集ページ
+- keyword: チケット(カスタマーサポートチケット)
+  url: /ja/glossary/ticket/
+  exact: true
+  priority: 10
+  title: チケット(カスタマーサポートチケット) の用語集ページ
+- keyword: 教師なし一貫性評価:包括的ガイド
+  url: /ja/glossary/unsupervised-consistency-evaluation/
+  exact: true
+  priority: 10
+  title: 教師なし一貫性評価:包括的ガイド の用語集ページ
+- keyword: 教師なし学習
+  url: /ja/glossary/unsupervised-learning/
+  exact: true
+  priority: 10
+  title: 教師なし学習 の用語集ページ
+- keyword: ユーザーロール
+  url: /ja/glossary/user-roles/
+  exact: true
+  priority: 10
+  title: ユーザーロール の用語集ページ
+- keyword: ビジュアライゼーション
+  url: /ja/glossary/visualization/
+  exact: true
+  priority: 10
+  title: ビジュアライゼーション の用語集ページ

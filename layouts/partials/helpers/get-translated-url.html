@@ -12,6 +12,7 @@
 {{- $url := .url | default "#" -}}
 {{- $lang := .lang | default site.Language.Lang -}}
 {{- $site := site -}}
+{{- $contextPage := .page | default false -}}
 
 {{- /* Handle external URLs and anchors - return as-is */ -}}
 {{- if or (hasPrefix $url "http://") (hasPrefix $url "https://") (hasPrefix $url "#") -}}
@@ -19,15 +20,24 @@
 {{- else -}}
   {{- /* Try to find the page and get its actual URL from frontmatter */ -}}
   {{- $contentPath := strings.TrimPrefix "/" (strings.TrimSuffix "/" $url) -}}
-  {{- $page := "" -}}
+  {{- $page := false -}}
+
+  {{- /* First try to resolve relative references from the current page context */ -}}
+  {{- if $contextPage -}}
+    {{- with $contextPage.GetPage $contentPath -}}
+      {{- $page = . -}}
+    {{- end -}}
+  {{- end -}}
 
   {{- /* First try to get the page directly in current language */ -}}
-  {{- with $site.GetPage (printf "/%s/%s" $lang $contentPath) -}}
-    {{- $page = . -}}
-  {{- else -}}
-    {{- /* Try without language prefix */ -}}
-    {{- with $site.GetPage $contentPath -}}
+  {{- if not $page -}}
+    {{- with $site.GetPage (printf "/%s/%s" $lang $contentPath) -}}
       {{- $page = . -}}
+    {{- else -}}
+      {{- /* Try without language prefix */ -}}
+      {{- with $site.GetPage $contentPath -}}
+        {{- $page = . -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 

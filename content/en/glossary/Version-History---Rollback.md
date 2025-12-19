@@ -1,7 +1,7 @@
 ---
 title: "Version History / Rollback"
-date: 2025-11-25
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 translationKey: "version-history-rollback"
 description: "Understand version history and rollback in AI chatbot and automation platforms. Learn how to track, manage, and revert bot configurations to stable states, ensuring fast recovery from errors."
 keywords: ["Version History", "Rollback", "AI Chatbot", "Automation Platforms", "Version Control"]
@@ -9,259 +9,285 @@ category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
 ---
-## **Definition**
 
-**Version history** in AI chatbot and automation platforms is the systematic tracking, storing, and management of previous iterations or states of a bot’s configuration, conversational logic, scripts, or machine learning models. **Rollback** is the process of reverting the system to an earlier, stable state whenever a recent change introduces errors, degrades performance, or leads to undesirable behaviors. This mechanism enables fast recovery from mistakes or failed experiments, often with full traceability and minimal service disruption.
+## What is Version History and Rollback?
 
-## **Core Concepts & Detailed Terminology**
+Version history in AI chatbot and automation platforms is the systematic tracking, storing, and management of previous iterations or states of a bot's configuration, conversational logic, scripts, or machine learning models. Rollback is the process of reverting the system to an earlier, stable state whenever a recent change introduces errors, degrades performance, or leads to undesirable behaviors. This mechanism enables fast recovery from mistakes or failed experiments, often with full traceability and minimal service disruption.
 
-### 1. **Version Types & Lifecycle**
+Together, version history and rollback form a critical safety net for bot development and deployment, allowing teams to innovate confidently while maintaining the ability to quickly reverse problematic changes. This capability is essential for maintaining service reliability, meeting compliance requirements, and enabling agile development practices in production environments.
 
-| Version Type           | Description                                                                 | Typical Use Case                      |
-|------------------------|-----------------------------------------------------------------------------|---------------------------------------|
-| **Draft**              | Editable working copy; tracks every unsaved change. Not visible to end-users. | Safe workspace for ongoing edits      |
-| **Published/Active**   | Official, user-facing version deployed to production.                       | Live chatbot experience               |
-| **Snapshot/Checkpoint**| Manual or automated savepoint; referenceable for rollback.                  | Milestones, pre-release checkpoints   |
-| **Previous Version**   | Any historical state (published or draft) stored for auditing or rollback.  | Recovery, compliance, experimentation |
+## Core Concepts and Components
 
-#### **Naming Conventions**
-- Use clear, descriptive names (e.g., “v1.0-prod”, “2025-06-hotfix-intent-fix”).
-- Record reasons for changes, especially when publishing or rolling back.
+### Version Types and Lifecycle
 
-[ChatBot.com: Version History Documentation](https://www.chatbot.com/help/build-your-chatbot/version-history/)
+Understanding different version types is fundamental to effective version management:
 
-### 2. **Development Environments**
+**Draft Versions**  
+Editable working copies that track every unsaved change. Not visible to end-users, providing a safe workspace for ongoing edits, experimentation, and development without impacting production systems.
 
-| Environment        | Purpose                                               | Example Usage         |
-|--------------------|------------------------------------------------------|----------------------|
-| **Development**    | Isolated for new features, experiments, or bug fixes | Internal QA/testing  |
-| **Test/Staging**   | Mirrors production for user acceptance and integration| UAT, pre-release     |
-| **Production**     | Hosts the active bot, exposed to users               | Customer interactions|
+**Published/Active Versions**  
+Official, user-facing versions deployed to production environments. These versions represent the current live chatbot experience and are the versions end-users interact with directly.
 
-- Environments reference specific versions. Promote versions through Dev → Test → Prod to minimize production risk.
-- Many platforms enable switching environments with a few clicks or API calls.
+**Snapshots/Checkpoints**  
+Manual or automated savepoints that can be referenced for rollback. Often created at significant milestones, before major releases, or at regular intervals for compliance purposes.
 
-### 3. **State Management: Persistent Data Through Versioning**
+**Previous Versions**  
+Any historical state (published or draft) stored for auditing, compliance, or rollback purposes. These versions form the complete history of bot evolution and enable forensic analysis of issues.
 
-- **State** is the persistent memory about conversations, users, and operational context.
-    - **Bot State:** Data relevant to overall bot logic (e.g., conversation history, global flags).
-    - **Conversation State:** Tracks users’ progress in a flow/dialog.
-    - **User State:** Stores individual user data and preferences.
-- **State Compatibility:** Always ensure that the schema for state storage is backward-compatible when rolling back. Data mismatches can cause unpredictable errors or user experience issues ([Microsoft: Managing State in Bots](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0)).
+**Version Naming Best Practices:**
+- Use clear, descriptive names following consistent conventions (e.g., "v1.0-prod", "2025-06-hotfix-intent-fix")
+- Record reasons for changes with each version, especially when publishing or rolling back
+- Include date, environment, and change type in version names for easy identification
+- Document who created each version and why
 
-### 4. **Version Control & Rollback Mechanisms**
+### Development Environments
 
-#### **Version Control**
+Modern bot platforms support multiple environments for safe development and testing:
 
-- Track and label each bot version, including metadata: author, timestamp, change log, and reason.
-- Use systems analogous to Git (for code), or model repositories like MLflow, DVC for AI models ([Tencent Cloud Techpedia](https://www.tencentcloud.com/techpedia/127632)).
-- Maintain metadata: training data, hyperparameters, performance metrics.
+| Environment | Purpose | Typical Usage |
+|-------------|---------|---------------|
+| **Development** | Isolated space for new features, experiments, bug fixes | Internal QA, initial testing, feature development |
+| **Test/Staging** | Production mirror for user acceptance and integration testing | UAT, pre-release validation, integration testing |
+| **Production** | Live bot exposed to end-users | Customer interactions, real transactions |
 
-#### **Rollback Mechanisms**
+**Environment Management:**
+- Each environment references specific versions
+- Changes promote through Dev → Test → Prod pipeline to minimize production risk
+- Many platforms enable environment switching with clicks or API calls
+- Maintain consistency between environments to ensure reliable testing
 
-- **Manual Rollback:** User initiates reversal to a prior version via UI or API.
-- **Automated Rollback:** System monitors metrics (error rate, [latency](/en/glossary/latency/), user feedback), and reverts if triggers are hit.
-- **Distributed Rollback:** In systems with multiple dependent components (bot, APIs, models), rollback must synchronize all parts to a consistent state.
+### State Management Through Versioning
 
-#### **Prompt Versioning (for LLMs)**
-- Track changes to prompts, templates, and context instructions for generative AI bots ([LaunchDarkly: Prompt Versioning Guide](https://launchdarkly.com/blog/prompt-versioning-and-management/)).
+State represents the persistent memory about conversations, users, and operational context:
 
-## **How Version History / Rollback is Used**
+**Bot State**  
+Data relevant to overall bot logic including conversation history, global flags, system configuration, and operational parameters that persist across user sessions.
 
-### A. **Development & Deployment Workflow**
+**Conversation State**  
+Tracks individual users' progress through dialogue flows, including collected information, current position in conversation trees, and context needed for continuity.
 
-#### **Standard Workflow**
+**User State**  
+Stores individual user data, preferences, authentication status, and personalization information that persists across multiple conversation sessions.
 
-1. **Develop:** Make and save changes in the Draft or Development environment.
-2. **Test:** Promote Draft to Test/Staging; run automated and manual regression tests.
-3. **Publish:** After validation, release to Production.
-4. **Monitor:** Track production metrics (errors, latency, satisfaction).
-5. **Rollback:** If performance degrades or errors increase, revert to a previous stable version.
+**Critical Consideration:**  
+Always ensure state storage schemas are backward-compatible when rolling back. Data mismatches between bot logic versions and state schemas can cause unpredictable errors, data loss, or poor user experiences.
 
-#### **Example: SAP Conversational AI**
+### Version Control Mechanisms
 
-- Dev points to v1 for new skills.
-- After testing, create snapshot “v2”.
-- Promote v2 to Test, then Prod.
-- If v2 is faulty, re-point Prod to v1.
+**Tracking and Labeling:**  
+Each bot version is tracked with comprehensive metadata including author, timestamp, detailed change logs, reason for changes, and deployment status.
 
-[See: SAP Community Guide](https://community.sap.com/t5/technology-blog-posts-by-sap/managing-the-chatbot-lifecycle-with-versions/ba-p/13432953)
+**Integration with Version Control Systems:**  
+Many platforms support integration with Git-like systems or model repositories (MLflow, DVC) for AI models, providing familiar workflows for technical teams and enabling advanced branching and merging strategies.
 
-### B. **Rollback in Action: Practical Scenarios**
+**Rollback Mechanisms:**
 
-#### **Manual Rollback via UI**
+**Manual Rollback**  
+User-initiated reversion to prior versions via UI or API. Provides full control but requires human decision-making and action.
 
-- Open version history panel.
-- Select previous version.
-- Preview configuration and flows.
-- Click “Restore” or “Publish” to revert.
+**Automated Rollback**  
+System monitors key metrics (error rate, latency, user feedback) and automatically reverts when triggers are hit. Enables rapid response to issues without human intervention.
 
-[ChatBot.com: How to Restore Previous Version](https://www.chatbot.com/help/build-your-chatbot/version-history/#how-to-restore-the-previous-bot-version)
+**Distributed Rollback**  
+In systems with multiple dependent components (bot, APIs, models), rollback must synchronize all parts to maintain consistency and avoid integration failures.
 
-#### **Automated Rollback**
+**Prompt Versioning for LLMs:**  
+Track changes to prompts, templates, and context instructions for generative AI bots, ensuring reproducibility and enabling A/B testing of different prompt strategies.
 
-- Set up real-time monitoring for error rates, latency, or user complaints.
-- Define rollback triggers (e.g., >1% error rate).
-- System auto-reverts to last known-good version if threshold is exceeded.
+## Implementation Workflow and Best Practices
 
-#### **Distributed Rollback**
+### Standard Development and Deployment Workflow
 
-- Roll back all dependent systems (bot, APIs, external models) together to avoid inconsistencies.
+**1. Development Phase**  
+Make and save changes in Draft or Development environment. Save frequently to avoid losing work. Use descriptive commit messages documenting what changed and why.
 
-#### **Thought Rollback (Advanced / LLMs)**
+**2. Testing Phase**  
+Promote Draft to Test/Staging environment. Run comprehensive automated and manual regression tests. Validate against acceptance criteria and user scenarios.
 
-- For advanced language models, “thought rollback” allows rewinding reasoning steps to self-correct without discarding entire conversation state ([arXiv: Thought Rollback in LLMs](https://arxiv.org/abs/2412.19707)).
+**3. Publication Phase**  
+After successful validation, release to Production. Document what's being released and notify stakeholders. Schedule releases during low-traffic periods when possible.
 
-## **Platform-Specific Features & Step-by-Step UI Actions**
+**4. Monitoring Phase**  
+Track production metrics including error rates, latency, user satisfaction, and conversation success rates. Set up alerts for anomalies.
 
-### 1. **Saving a New Version: ChatBot.com**
+**5. Rollback When Needed**  
+If performance degrades or errors increase beyond acceptable thresholds, revert to previous stable version quickly to minimize user impact.
 
-- Complete your changes in Draft.
-- Click **Publish**.
-- Name the new version; confirm.
-- New version appears at top of list.
-- Change version name via 3-dot menu.
+### Rollback Scenarios and Execution
 
-[ChatBot.com: How to Save a New Version](https://www.chatbot.com/help/build-your-chatbot/version-history/#how-to-save-a-new-bot-version)
+**Manual Rollback via UI:**
+1. Open version history panel in administration interface
+2. Select target previous version from history list
+3. Preview configuration and flows to verify correct version
+4. Click "Restore" or "Publish" to revert
+5. Verify rollback success through monitoring and testing
 
-### 2. **Previewing Previous Versions**
+**Automated Rollback Process:**
+- Configure real-time monitoring for critical metrics
+- Define rollback triggers (e.g., error rate > 1%, latency > 500ms)
+- System automatically reverts to last known-good version when threshold exceeded
+- Notifications sent to operations team for investigation
+- Manual intervention available to override or adjust
 
-- Open **Version History**.
-- Click any version to preview.
-- “Preview” badge indicates loaded version.
-- Review conversation flows and configurations.
+**Distributed System Rollback:**
+- Coordinate rollback across all dependent components
+- Roll back bot logic, API integrations, external models together
+- Avoid inconsistencies from partial rollbacks
+- Verify all system components at compatible versions
 
-### 3. **Restoring (Rolling Back) to a Previous Version**
+## Platform-Specific Implementations
 
-- In preview mode, select desired version.
-- Use 3-dot menu → **Restore**.
-- Selected version becomes new Draft or can be published.
-- Optional: edit before re-publishing.
+### ChatBot.com Version Management
 
-- **Note:** Restoring is available on Team, Business, and Enterprise plans ([ChatBot.com](https://www.chatbot.com/help/build-your-chatbot/version-history/)).
+**Saving New Versions:**
+1. Complete changes in Draft editor
+2. Click "Publish" button
+3. Name the new version descriptively
+4. Confirm publication
+5. New version appears at top of version history list
+6. Modify version names via three-dot menu if needed
 
-### 4. **Rolling Back a Flow (AWS Amazon Connect)**
+**Previewing Previous Versions:**
+- Open Version History panel
+- Click any version to preview without affecting production
+- "Preview" badge indicates currently loaded version
+- Review conversation flows, intents, and configurations safely
 
-- Open flow designer.
-- Use version dropdown to select a previous version.
-- View, edit, or **Publish** to make it live.
+**Restoring Previous Versions:**
+- Enter preview mode for desired version
+- Use three-dot menu → "Restore"
+- Selected version becomes new Draft or can be published directly
+- Optional: edit restored version before re-publishing
 
-[AWS: Flow Version Control](https://docs.aws.amazon.com/connect/latest/adminguide/flow-version-control.html)
+**Plan Considerations:**  
+Version restoration is available on Team, Business, and Enterprise plans. Check plan limitations before relying on this feature.
 
-## **End-to-End Example: Safe Bot Changes Workflow**
+### AWS Amazon Connect Flow Rollback
 
-1. **Start in Development**
-   - Add or modify intents, skills, or logic.
-   - Save Drafts frequently.
+**Process:**
+1. Open flow designer interface
+2. Use version dropdown to view available versions
+3. Select previous version to review
+4. View or edit as needed
+5. Click "Publish" to make selected version live
+6. Previous version becomes active with no data loss
 
-2. **Create a Snapshot**
-   - Save new version (“v2.0-beta”).
-   - Remains invisible to users.
+### SAP Conversational AI Version Management
 
-3. **Promote to Test**
-   - Assign Test environment to new version.
-   - Run regression tests, user simulations.
+**Multi-Environment Workflow:**
+- Development environment points to v1 for new skills development
+- After testing, create snapshot "v2"
+- Promote v2 to Test environment for validation
+- Deploy to Production after successful testing
+- If v2 fails in production, quickly repoint Production to v1
 
-4. **Monitor Test Results**
-   - Fix issues in Dev, repeat if necessary.
-   - Compare metrics with current production version.
+## Industry Best Practices
 
-5. **Release to Production**
-   - Assign tested version to Production.
-   - Monitor live metrics (errors, feedback).
+**Staged Deployment Strategy**  
+Always promote changes through Dev → Test → Prod pipeline. Never deploy directly to production without testing. Use staging environments that mirror production configuration.
 
-6. **Automatic/Manual Rollback**
-   - If errors spike, revert Production to previous version.
+**Comprehensive Monitoring**  
+Track accuracy, latency, user feedback, error rates, and business metrics continuously. Set up dashboards visible to entire team. Define SLAs and monitor compliance.
 
-7. **Document & Iterate**
-   - Record reasons for changes and rollbacks.
-   - Repeat cycle for each update.
+**Automated Rollback Triggers**  
+Set clear thresholds for auto-revert: error rate > 1%, latency degradation > 50%, user satisfaction drop > 10%. Document trigger logic and test regularly.
 
-## **Industry-Proven Best Practices for Version History & Rollback**
+**Consistent Naming Conventions**  
+Use standard formats for version names. Include environment, date, change type, and ticket numbers. Make versions self-documenting through names.
 
-- **Staged Deployment:** Always promote changes through Dev → Test → Prod.
-- **Real-Time Monitoring:** Track accuracy, latency, and user feedback continuously.
-- **Automated Rollback Triggers:** Set thresholds for auto-revert (e.g., error rate > 1%).
-- **Consistent Naming:** Use clear, descriptive version names.
-- **State Compatibility:** Maintain backward-compatible data schemas.
-- **Strict Access Control:** Limit who can save, promote, or restore versions.
-- **Canary/Blue-Green Deployment:** Gradually roll out changes to minimize user impact ([Tencent Cloud Techpedia](https://www.tencentcloud.com/techpedia/127632)).
-- **Comprehensive Logging:** Keep detailed audit trails.
-- **Sandbox Testing:** Validate updates in non-production environments.
+**State Schema Compatibility**  
+Maintain backward-compatible data schemas. Test state migration before deployment. Document schema changes thoroughly.
 
-## **Caveats, Limitations, and Warnings**
+**Strict Access Control**  
+Limit version management permissions. Separate read, write, and rollback permissions. Audit all version operations.
 
-- **Plan Restrictions:** Version history/rollback may be limited to premium plans ([ChatBot.com plans](https://www.chatbot.com/pricing/)).
-- **Data Mismatches:** Rolling back code/configuration without data migration can cause errors.
-- **Granularity:** Some systems support only whole-bot or flow rollback, not fine-grained elements.
-- **Restore Time:** Large bots may take longer to revert.
-- **Potential Data Loss:** Unsynced data may be lost during rollback.
-- **Access Rights:** Only users with proper permissions can perform rollbacks ([AWS: Tag-Based Access Control](https://docs.aws.amazon.com/connect/latest/adminguide/tag-based-access-control.html)).
+**Canary and Blue-Green Deployment**  
+Gradually roll out changes to minimize user impact. Run new and old versions simultaneously. Switch traffic incrementally while monitoring.
 
-## **Key Related Concepts**
+**Comprehensive Logging and Audit Trails**  
+Keep detailed records of all version operations. Track who made changes, when, and why. Enable compliance reporting and forensic analysis.
 
-- **Version Control:** Formal tracking and management of all chatbot versions ([Git, MLflow](https://www.tencentcloud.com/techpedia/127632)).
-- **State Management:** Handling persistent data for bots, users, and conversations ([Microsoft documentation](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0)).
-- **Conversation State:** Current context within an active dialog.
-- **Rollback Mechanisms:** Technical processes and policies enabling reversions.
-- **Production Environment:** The live, user-facing deployment of your chatbot.
-- **Automated Rollback:** System-driven reversion based on real-time monitoring.
-- **A/B Testing & Canary Deployment:** Controlled experiments and gradual rollouts.
-- **Blue-Green Deployment:** Parallel environments for instant switching.
+**Regular Backup and Archival**  
+Maintain offsite backups of critical versions. Test backup restoration regularly. Define retention policies based on compliance requirements.
 
-## **Detailed Reference Use Cases**
+## Common Challenges and Solutions
 
-| Scenario                    | How Version History / Rollback Helps                         |
-|-----------------------------|-------------------------------------------------------------|
-| **Failed Release**          | Restore last stable version if new logic breaks prod         |
-| **A/B Testing**             | Switch between versions for controlled user experiments      |
-| **Canary Deployments**      | Gradually expose changes, auto-rollback on failure           |
-| **Audit/Compliance**        | Review historical bot states for investigations              |
-| **Collaborative Editing**   | Track and revert contributions from multiple editors         |
-| **Training Data Updates**   | Undo problematic NLP or ML data changes                      |
-| **Security Incidents**      | Instantly restore pre-incident bot version                   |
+**Challenge: Plan and Feature Restrictions**  
+**Solution:** Verify version history and rollback availability in current plan. Upgrade if necessary for production deployments.
 
-## **FAQ**
+**Challenge: Data Schema Mismatches**  
+**Solution:** Design backward-compatible schemas. Test rollback with production-like data. Implement schema versioning.
 
-**Q: How is state managed during rollback?**  
-A: State management ensures data consistency. Most platforms roll back logic, not user/conversation data. Always check schema compatibility when rolling back. ([Microsoft Bot Service](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0))
+**Challenge: Limited Rollback Granularity**  
+**Solution:** Some platforms only support whole-bot rollback, not individual components. Plan accordingly and consider platform limitations in architecture design.
 
-**Q: Can I preview a previous version before restoring?**  
-A: Yes. Most platforms (ChatBot.com, AWS Amazon Connect) allow you to preview any previous version in a safe mode.
+**Challenge: Restoration Time for Large Bots**  
+**Solution:** Optimize bot complexity. Use modular design. Consider incremental rollback capabilities.
 
-**Q: Who can perform a rollback?**  
-A: Only users with admin or explicit bot management permissions.
+**Challenge: Potential Data Loss**  
+**Solution:** Implement proper state management. Separate transient and persistent data. Backup before major changes.
 
-**Q: How granular is rollback?**  
-A: Depends on the platform. Some allow entire bot/flow rollback, others support reverting individual scripts, flows, or files.
+**Challenge: Access Control and Permissions**  
+**Solution:** Implement role-based access control. Audit permission changes. Require multi-factor authentication for production rollbacks.
 
-## **Further Reading & References**
+## Use Case Examples
 
-- [ChatBot.com: Version History](https://www.chatbot.com/help/build-your-chatbot/version-history/)
+| Scenario | How Version History/Rollback Helps | Best Practice |
+|----------|-----------------------------------|---------------|
+| **Failed Release** | Restore last stable version when new logic breaks production | Automated rollback triggers |
+| **A/B Testing** | Switch between versions for controlled user experiments | Environment-based routing |
+| **Canary Deployments** | Gradually expose changes, auto-rollback on failure | Incremental traffic shifting |
+| **Audit/Compliance** | Review historical bot states for investigations | Long-term version retention |
+| **Collaborative Editing** | Track and revert contributions from multiple editors | Branch-based development |
+| **Training Data Updates** | Undo problematic NLP or ML data changes | Model version control |
+| **Security Incidents** | Instantly restore pre-incident bot version | Emergency rollback procedures |
+
+## Advanced Topics
+
+### Thought Rollback in Advanced LLMs
+
+For sophisticated language models, thought rollback allows rewinding reasoning steps to self-correct without discarding entire conversation state. This enables more intelligent error recovery and self-improvement during extended interactions.
+
+### Continuous Integration and Deployment
+
+Modern platforms support CI/CD pipelines integrating version control, automated testing, and deployment. Jenkins, GitHub Actions, or platform-specific tools orchestrate automated workflows from development through production.
+
+### Multi-Region Deployment
+
+Global deployments require coordinated version management across regions. Implement region-specific rollback strategies while maintaining consistent user experiences.
+
+### Machine Learning Model Versioning
+
+Track model artifacts, training data, hyperparameters, and performance metrics. Use specialized tools like MLflow or DVC for comprehensive ML lifecycle management.
+
+## Frequently Asked Questions
+
+**How is state managed during rollback?**  
+Most platforms roll back logic but preserve user and conversation data. Always verify schema compatibility. Test rollback in staging with production-like data before emergency situations.
+
+**Can I preview a previous version before restoring?**  
+Yes. Most platforms (ChatBot.com, AWS Amazon Connect) allow safe preview mode to review previous versions without affecting production.
+
+**Who can perform rollbacks?**  
+Only users with appropriate admin or bot management permissions. Implement approval workflows for production rollbacks in regulated environments.
+
+**How granular is rollback support?**  
+Platform-dependent. Some allow entire bot/flow rollback, others support reverting individual scripts, flows, or components. Evaluate platform capabilities before production deployment.
+
+**What happens to in-flight conversations during rollback?**  
+Depends on implementation. Best practice is graceful degradation with conversation state preservation. Test rollback impact on active users.
+
+## References
+
+- [ChatBot.com: Version History Documentation](https://www.chatbot.com/help/build-your-chatbot/version-history/)
+- [ChatBot.com: How to Save a New Bot Version](https://www.chatbot.com/help/build-your-chatbot/version-history/#how-to-save-a-new-bot-version)
+- [ChatBot.com: How to Restore Previous Bot Version](https://www.chatbot.com/help/build-your-chatbot/version-history/#how-to-restore-the-previous-bot-version)
+- [ChatBot.com: Pricing Plans](https://www.chatbot.com/pricing/)
 - [SAP Community: Managing the Chatbot Lifecycle with Versions](https://community.sap.com/t5/technology-blog-posts-by-sap/managing-the-chatbot-lifecycle-with-versions/ba-p/13432953)
 - [Tencent Cloud Techpedia: Model Rollback](https://www.tencentcloud.com/techpedia/127632)
 - [LaunchDarkly: Prompt Versioning & Management Guide](https://launchdarkly.com/blog/prompt-versioning-and-management/)
-- [AWS: Roll Back a Flow](https://docs.aws.amazon.com/connect/latest/adminguide/flow-version-control.html)
+- [AWS: Roll Back a Flow - Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/flow-version-control.html)
+- [AWS: Tag-Based Access Control - Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/tag-based-access-control.html)
 - [Microsoft: Managing State in Bots](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0)
 - [arXiv: Thought Rollback in LLMs](https://arxiv.org/abs/2412.19707)
-- [Sandgarden: Hitting the Undo Button](https://www.sandgarden.com/learn/rollback)
-
-## **Related Terms**
-
-- Version Control
-- State Management
-- Bot Framework
-- Rollback Mechanisms
-- Conversation State
-- Automated Rollback
-- Production Environment
-- Bot State
-- Published Versions
-- Track Multiple Versions
-- Revert to Previous
-- State Data
-- Version Selection
-- Snapshot
-- Staged Deployment
-
-**For further assistance, consult the documentation for your specific platform or reach out to your system administrator for guidance on safe rollback procedures and best practices.**
+- [Sandgarden: Hitting the Undo Button - Rollback Basics](https://www.sandgarden.com/learn/rollback)

@@ -77,12 +77,18 @@ def clean_flowhunt_output(content):
     # フロントマターをTOMLからYAMLに変換
     frontmatter_content = re.sub(r'^(\w+)\s*=\s*', r'\1: ', frontmatter_content, flags=re.MULTILINE)
     frontmatter_content = re.sub(r'draft:\s*true', 'draft: false', frontmatter_content)
-    
-    # 日付フィールドが存在しない場合は追加
-    if not re.search(r'^date:', frontmatter_content, flags=re.MULTILINE):
-        # 現在の日付を取得
-        today = date.today().strftime('%Y-%m-%d')
-        
+
+    today = date.today().strftime('%Y-%m-%d')
+
+    # 日付フィールドは常に本日に揃える（既存dateがあれば上書き、なければ追加）
+    if re.search(r'^date:', frontmatter_content, flags=re.MULTILINE):
+        frontmatter_content = re.sub(
+            r'^date:\s*.*$',
+            f'date: {today}',
+            frontmatter_content,
+            flags=re.MULTILINE,
+        )
+    else:
         # draft: の行の前に date: を挿入
         if 'draft:' in frontmatter_content:
             frontmatter_content = re.sub(

@@ -50,7 +50,7 @@
   {{- end -}}
 {{- else -}}
   {{- /* For internal links, process with get-translated-url */ -}}
-  {{- $url = partial "helpers/get-translated-url.html" (dict "url" $url) -}}
+  {{- $url = partial "helpers/get-translated-url.html" (dict "url" $url "page" .Page) -}}
 
   {{- $candidate := false -}}
   {{- $parsedLink := urls.Parse $url -}}

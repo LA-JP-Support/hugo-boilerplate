@@ -1,7 +1,7 @@
 ---
 title: "Human-in-the-Loop (HITL)"
-date: 2025-11-25
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 translationKey: "human-in-the-loop-hitl"
 description: "Human-in-the-Loop (HITL) integrates human intelligence into AI/ML workflows for training, tuning, and validation, ensuring accuracy, safety, and ethical decision-making."
 keywords: ["human-in-the-loop", "artificial intelligence", "machine learning", "human oversight", "data annotation"]

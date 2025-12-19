@@ -1,7 +1,7 @@
 ---
 title: "Feature Flags"
-date: 2025-11-25
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 translationKey: "feature-flags"
 description: "Feature flags enable dynamic control of software functionality without redeploying. Learn how these toggles facilitate progressive delivery, A/B testing, rapid rollbacks, and operational agility."
 keywords: ["feature flags", "feature toggles", "progressive delivery", "A/B testing", "software deployment"]
@@ -9,26 +9,41 @@ category: "AI Infrastructure & Deployment"
 type: "glossary"
 draft: false
 ---
-## Definition
 
-Feature flags (also called *feature toggles*, *switches*, *flippers*) are runtime controls in software that let developers enable or disable specific functionality without changing code or redeploying. Flags are implemented as conditional statements within the codebase; their state is managed via configuration, databases, or external control panels.
+## What Are Feature Flags?
 
-> “Feature flags allow you to enable or disable a feature without modifying source code or redeploying your application.”  
-> — [LaunchDarkly: What Are Feature Flags?](https://launchdarkly.com/blog/what-are-feature-flags/)
+Feature flags (also called feature toggles, switches, or flippers) are runtime controls enabling developers to enable or disable specific functionality without changing code or redeploying applications. Implemented as conditional statements within codebases, flag states are managed via configuration files, databases, or external control panels.
 
-Feature flags are used to:
-- Hide incomplete, experimental, or risky features.
-- Roll out features gradually or to specific audiences.
-- Instantly disable features that are misbehaving (“kill switch”).
-- Support continuous integration and trunk-based development.
+Feature flags decouple deployment from release, allowing code to ship to production while controlling feature exposure until readiness is confirmed. This separation enables progressive rollouts, instant rollbacks, continuous integration with trunk-based development, A/B testing, and operational controls for managing system stability.
 
-For an introduction and detailed breakdown, see:
-- [LaunchDarkly: Feature Flags 101](https://launchdarkly.com/blog/what-are-feature-flags/)
-- [Sendbird: What Are Feature Flags? A Deep Dive](https://sendbird.com/developer/tutorials/what-are-feature-flags)
+Modern feature flag systems provide dynamic, real-time updates across distributed systems, allowing instant behavior changes for all users or targeted segments without downtime. Flags can be boolean (on/off), multivariate (multiple states), or targeted (affecting specific user cohorts, environments, or geographies).
 
-## How Feature Flags Work
+## Core Capabilities
 
-Feature flags are implemented as runtime conditionals. Code for a new or experimental feature is “wrapped” with an evaluation of the flag’s current state:
+**Deployment Decoupling**  
+Ship code to production with features hidden behind flags. Control feature activation timing independently from deployment schedules.
+
+**Progressive Delivery**  
+Roll out features gradually—internal users first, then beta testers, then percentage-based expansion—minimizing risk through controlled exposure.
+
+**Rapid Rollback (Kill Switch)**  
+Instantly disable problematic features without redeployment, hotfixes, or rollback procedures. Critical for maintaining system stability during incidents.
+
+**Continuous Integration Support**  
+Merge incomplete features into mainline safely, eliminating long-lived feature branches and enabling true continuous integration workflows.
+
+**Experimentation and Testing**  
+Conduct A/B tests and multivariate experiments, exposing users to variants and measuring behavioral impact for data-driven decisions.
+
+**Operational Control**  
+Respond to incidents by toggling off resource-intensive features, managing load, or switching infrastructure components.
+
+**Access Management**  
+Gate features by user role, subscription tier, contract terms, or geographic location for entitlement and permission control.
+
+## Technical Implementation
+
+**Basic Implementation:**
 
 ```javascript
 if (featureFlags.isEnabled("new-dashboard")) {
@@ -38,287 +53,165 @@ if (featureFlags.isEnabled("new-dashboard")) {
 }
 ```
 
-Flag states are managed in one of several ways:
-- Static configuration files
-- Databases or key-value stores
-- Dedicated feature flag management systems (e.g., LaunchDarkly, AWS AppConfig, Unleash)
-- [Environment variables](/en/glossary/environment-variables--secrets-/)
+**Flag State Management:**
 
-Modern flag management tools allow dynamic updates—so flipping a flag in a UI or API changes behavior instantly for all users or selected segments, without downtime or redeploy.
+- **Static Configuration** – Hardcoded or in config files; requires redeployment to change
+- **Dynamic Management** – Stored in databases, APIs, or flag platforms; changes propagate instantly
 
-Flags can be:
-- **Global** (affecting all users)
-- **Targeted** (affecting specific users, cohorts, or environments)
-- **Boolean** (on/off) or **multivariate** (multiple states or variants)
+**Targeting and Evaluation:**
 
-For a visual explanation and more technical details, see:
-- [AWS: Feature Flags Best Practices](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
-- [Sendbird: Feature Flag Example](https://sendbird.com/developer/tutorials/what-are-feature-flags#feature_flag_example)
+Flags evaluate based on:
+- User attributes (ID, role, region)
+- Request context (session, device, cohort)
+- Environment (development, staging, production)
+- Percentage rollouts (enable for 10% of users)
+- Custom rules and segments
 
-## Types of Feature Flags
+**CI/CD Integration:**
 
-Feature flag taxonomy is crucial for best practice management. Types include:
+- Merge incomplete features behind flags
+- Test both enabled and disabled code paths
+- Control release timing independently from deployments
+- Automate flag lifecycle management
 
-| Type                | Purpose                                        | Typical Lifespan    | Example Use                                   |
-|---------------------|------------------------------------------------|---------------------|-----------------------------------------------|
-| **Release Toggle**  | Hide incomplete or experimental features       | Short (weeks/months)| Progressive rollout of a new UI               |
-| **Experiment Toggle** | Enable A/B or multivariate testing           | Short (days/weeks)  | Comparing checkout flows                      |
-| **Ops Toggle**      | Operational control (e.g., kill switch)        | Short/Medium/Long   | Disabling resource-intensive features         |
-| **Permission Toggle** | Limit features by roles/cohorts              | Long/Permanent      | Premium or admin-only features                |
-| **Kill Switch**     | Emergency disabling of risky features          | Long/Permanent      | Instantly disabling a payment integration     |
+## Feature Flag Types
 
-Deep reference:
-- [Martin Fowler: Feature Toggles Taxonomy](https://martinfowler.com/articles/feature-toggles.html#CategoriesOfToggles)
-- [Octopus: Types of Feature Flags](https://octopus.com/devops/feature-flags/)
-- [Unleash: Types of Feature Flags](https://docs.getunleash.io/get-started/what-is-a-feature-flag#types-of-feature-flags)
-
-## Benefits
-
-Feature flags enable fast, safe, and flexible software delivery. Key benefits:
-
-- **Decouple Deployment from Release:**  
-  Ship code to production but control exposure of features until ready. [LaunchDarkly](https://launchdarkly.com/blog/what-are-feature-flags/)
-
-- **Progressive Delivery:**  
-  Roll out features gradually to minimize risk (canary, percentage, cohort, region).  
-  [AWS: Gradual Deployments](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
-
-- **Rapid Rollback (Kill Switch):**  
-  Instantly disable problematic features without redeploying or hotfixes.
-
-- **Continuous Integration & Trunk-Based Development:**  
-  Merge incomplete features into mainline safely, removing the need for long-lived feature branches.  
-  [LaunchDarkly: Trunk-Based Development](https://launchdarkly.com/blog/introduction-to-trunk-based-development/)
-
-- **A/B Testing & Experimentation:**  
-  Test variants and collect behavioral data for data-driven product decisions.
-
-- **Operational Control:**  
-  Respond to incidents by toggling off features that cause instability.
-
-- **Entitlement & Permission Management:**  
-  Gate access by user role, subscription, contract, or geography.
-
-For more, see:
-- [Optimizely: Feature Flag Benefits](https://www.optimizely.com/optimization-glossary/feature-flags/)
-- [Sendbird: Top 5 Benefits of Feature Flags](https://sendbird.com/developer/tutorials/what-are-feature-flags#top_5_benefits_of_feature_flags)
-
-## Implementation
-
-### 1. Coding Feature Flags
-
-Basic implementation uses conditional logic:
-
-```python
-if feature_flags.is_enabled("new-search"):
-    use_new_search()
-else:
-    use_legacy_search()
-```
-
-Wrap evaluation in a helper for centralization and testability.
-
-### 2. Configuring Flags
-
-- **Static:**  
-  Hardcoded or in config files; requires redeploy to change.
-- **Dynamic:**  
-  Stored in databases, APIs, or flag management platforms; changes propagate instantly.
-
-Dynamic management is best for most production use cases.
-
-### 3. Targeting and Evaluation
-
-Flags may check:
-- **User attributes:** (ID, role, region)
-- **Request context:** (session, device, cohort)
-- **Environment:** (dev, staging, prod)
-
-Example: Rollout to 10% of users
-```javascript
-if (user.id % 10 === 0) { enableFeature(); }
-```
-Most modern tools support segmentation, targeting, and percentage rollouts.
-
-### 4. Integration with CI/CD
-
-Flags are essential for continuous integration/delivery:
-- Merge and deploy incomplete features behind flags.
-- Release timing is independent of deploys.
-- Automated testing covers both flagged and default paths.
-
-Implementation guides:
-- [LaunchDarkly: CI/CD Integration](https://launchdarkly.com/blog/what-are-feature-flags/#featureflagsandcicd)
-- [Unleash: Implementing Feature Flags](https://docs.getunleash.io/get-started/what-is-a-feature-flag#implementing-feature-flags)
-- [AWS AppConfig: Feature Flag Implementation](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
+| Type | Purpose | Lifespan | Example Use |
+|------|---------|----------|-------------|
+| **Release Toggle** | Hide incomplete/experimental features | Short (weeks/months) | Progressive rollout of new UI |
+| **Experiment Toggle** | Enable A/B or multivariate testing | Short (days/weeks) | Compare checkout flows |
+| **Ops Toggle** | Operational control and kill switches | Short/Medium/Long | Disable resource-intensive features |
+| **Permission Toggle** | Limit features by roles or cohorts | Long/Permanent | Premium or admin-only features |
+| **Kill Switch** | Emergency feature disabling | Long/Permanent | Instantly disable payment integration |
 
 ## Common Use Cases
 
-Feature flags are widely used across software operations, AI, and experimentation.
+**Progressive Rollouts**  
+Deploy features incrementally: internal users → beta testers → 5% → 25% → 100%. Instantly revert at any stage if issues arise.
 
-### 1. Progressive Rollouts
+**A/B Testing**  
+Expose user segments to variants, measure conversion and engagement, iterate based on data. Example: Test two checkout flows, adopt better performer.
 
-Enable to increasing audiences:  
-- Start with internal users → expand to beta testers → open to all.
+**Kill Switch Operations**  
+Payment provider integration malfunctions. Operations team disables it via flag, instantly restoring stability without code changes.
 
-### 2. A/B Testing and Experimentation
+**Targeted Releases**  
+Enable features for specific customers, regions, or subscription tiers. Example: Enterprise-only features, geographic market testing.
 
-Expose users to variants, measure impact, iterate quickly.
+**Infrastructure Controls**  
+Toggle database migrations, endpoint switches, or third-party integrations with zero downtime. Manage complexity without deployment risk.
 
-### 3. Kill Switch / Rapid Rollback
+**AI Model Experimentation**  
+Deploy multiple ML models behind flags, toggle between them for testing, monitor performance—all without application redeployment.
 
-Instantly disable features causing errors—critical for stability.
+## Implementation Best Practices
 
-### 4. Targeted Releases
+**Centralized Management**  
+Use dedicated flag management platforms for visibility, access control, auditability, and consistent evaluation across systems.
 
-Enable by customer, geography, or subscription.
+**Clear Naming Conventions**  
+Name flags by purpose and expected lifespan. Example: `release-new-dashboard`, `experiment-checkout-flow-v2`, `ops-disable-payment-provider`.
 
-### 5. Infrastructure and Operational Controls
+**Comprehensive Documentation**  
+Document purpose, owner, dependencies, activation criteria, and removal timeline for each flag.
 
-Toggle database migrations, endpoint switches, or integrations with zero downtime.
+**Regular Audits**  
+Remove obsolete flags to prevent technical debt accumulation ("flag rot"). Establish removal criteria and enforce cleanup.
 
-### 6. AI Model Experimentation
+**Testing Coverage**  
+Automated tests must cover both enabled and disabled code paths to prevent regressions and ensure reliable behavior.
 
-Control deployment of new ML models/parameters without app redeploy; enables shadow testing, blue/green deployments, and model comparison.
+**Performance Monitoring**  
+Track flag evaluation overhead. Cache flag state where appropriate to minimize performance impact on critical paths.
 
-Detailed use case guides:
-- [LaunchDarkly: Use Cases](https://launchdarkly.com/blog/what-are-feature-flags/#featureflagusecaseswhentouseflags)
-- [Optimizely: Feature Flag Use Cases](https://www.optimizely.com/optimization-glossary/feature-flags/)
-- [Sendbird: Top 5 Feature Flag Use Cases](https://sendbird.com/developer/tutorials/what-are-feature-flags#top_5_feature_flag_use_cases)
+**Security Controls**  
+Implement access controls, audit logging, and restricted management interfaces. Prevent unauthorized flag manipulation.
 
-## Challenges and Risks
+**Team Education**  
+Train teams on proper flag usage, lifecycle management, and removal procedures to ensure disciplined adoption.
 
-While feature flags add flexibility, they introduce complexity and require discipline.
+## Challenges and Mitigation
 
-### 1. Increased Code Complexity
+**Code Complexity**  
+Multiple flags create additional conditional paths, potentially reducing code readability.
 
-Multiple flags = more conditional paths.  
-- Can lead to hard-to-read and hard-to-test code.  
-- **Mitigation:** Limit number of active flags, document thoroughly.
+*Mitigation:* Limit concurrent active flags, document thoroughly, establish clear naming conventions.
 
-### 2. Technical Debt from Stale Flags
+**Technical Debt**  
+Temporary flags may persist indefinitely if not actively managed.
 
-Flags meant as temporary may linger, cluttering codebase.  
-- **Mitigation:** Audit and remove obsolete flags regularly.
+*Mitigation:* Mandatory removal dates, automated alerts, regular audit cycles, integration into release checklists.
 
-### 3. Performance Overhead
+**Performance Overhead**  
+Frequent flag evaluation in performance-critical paths may degrade latency.
 
-Frequent flag checks, especially in performance-critical paths, may degrade performance.  
-- **Mitigation:** Cache flag state where possible.
+*Mitigation:* Cache flag states, optimize evaluation logic, use asynchronous updates where possible.
 
-### 4. Test Matrix Explosion
+**Test Matrix Explosion**  
+Multiple flags exponentially increase possible code path combinations.
 
-Multiple flags multiply possible code paths to test.  
-- **Mitigation:** Prioritize high-impact combinations, automate testing.
+*Mitigation:* Prioritize critical combinations, automate testing, use feature flag analytics to identify high-risk states.
 
-### 5. Security Considerations
+**Security Risks**  
+Improper configuration may expose sensitive features or data.
 
-Improper configuration may expose sensitive features/data.  
-- **Mitigation:** Apply access control, audit logs, restrict management access.
+*Mitigation:* Implement role-based access control, enable comprehensive audit trails, restrict management permissions.
 
-### 6. Operational Complexity
+**Operational Complexity**  
+Synchronizing flag state across distributed systems requires robust infrastructure.
 
-Synchronizing flag state across distributed systems is non-trivial.  
-- **Mitigation:** Use robust, centralized management tools.
-
-Further analysis:
-- [Octopus: Challenges and Risks](https://octopus.com/devops/feature-flags/#challenges-and-risks-of-using-feature-flags)
-- [Sendbird: Top 5 Challenges of Feature Flags](https://sendbird.com/developer/tutorials/what-are-feature-flags#top_5_challenges_of_feature_flags)
-
-## Best Practices
-
-To get the most out of feature flags:
-
-- **Use a Centralized Management Tool:**  
-  Provides visibility, access control, and auditability.
-
-- **Naming Conventions:**  
-  Name flags by purpose and expected lifespan.
-
-- **Document Everything:**  
-  Purpose, owner, dependencies, and removal criteria.
-
-- **Regular Audits:**  
-  Remove unused flags to avoid [technical debt](/en/glossary/technical-debt/) (“flag rot”).
-
-- **Integrate Flag Cleanup:**  
-  Into CI/CD and release checklists.
-
-- **Monitor Performance Impact:**  
-  Optimize evaluation logic.
-
-- **Secure Management Interfaces:**  
-  Limit access, enable audit logging.
-
-- **Educate Teams:**  
-  On proper flag usage and lifecycle.
-
-**Actionable Checklist:**
-- [ ] Each flag has a documented owner.
-- [ ] Flags are categorized (release, experiment, ops, permission).
-- [ ] Flag status is visible in all environments.
-- [ ] Expiry/removal dates are tracked.
-- [ ] Automated tests cover both flagged and fallback paths.
-
-Best practice guides:
-- [LaunchDarkly: Best Practices](https://launchdarkly.com/blog/what-are-feature-flags/#featureflagresources)
-- [Octopus: Best Practices](https://octopus.com/devops/feature-flags/#best-practices-for-managing-feature-flags)
-- [AWS: Feature Flags Best Practices](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
+*Mitigation:* Use proven flag management platforms, implement health checks, establish rollback procedures.
 
 ## Feature Flag Tools
 
-You can build a tool in-house, but commercial and open-source tools provide advanced features:
+| Tool | Type | Key Features |
+|------|------|--------------|
+| **LaunchDarkly** | Commercial | Granular targeting, real-time analytics, integrations, audit logs |
+| **Unleash** | Open Source | Self-hosted, flexible SDKs, web UI, active community |
+| **Optimizely** | Commercial | Built-in experimentation, A/B testing, analytics integration |
+| **ConfigCat** | SaaS | Simple UI, multi-language SDKs, targeting rules |
+| **Split** | Commercial | Feature flagging, experimentation, impact metrics |
+| **OpenFeature** | Standard | Vendor-neutral API/SDK specification |
+| **AWS AppConfig** | Commercial | AWS-native, gradual rollouts, safety guardrails |
 
-| Tool           | Type           | Key Features                                             | More Info |
-|----------------|----------------|----------------------------------------------------------|-----------|
-| LaunchDarkly   | Commercial     | Granular targeting, analytics, integrations, audit logs  | [launchdarkly.com](https://launchdarkly.com) |
-| Unleash        | Open source    | Self-hosted, flexible SDKs, UI, community                | [unleash.io](https://docs.getunleash.io/get-started/what-is-a-feature-flag) |
-| Optimizely     | Commercial     | Built-in experimentation, analytics, A/B testing         | [optimizely.com](https://www.optimizely.com/optimization-glossary/feature-flags/) |
-| ConfigCat      | SaaS           | Simple UI, SDKs, targeting, roles                        | [configcat.com](https://configcat.com/) |
-| Split          | Commercial     | Feature flagging, experimentation, metrics               | [split.io](http://split.io) |
-| OpenFeature    | Standard       | Vendor-neutral API/SDK for flag evaluation               | [openfeature.dev](https://openfeature.dev/) |
-| AWS AppConfig  | Commercial     | AWS native, integrates with other AWS services, gradual rollouts, [safety guardrails](/en/glossary/safety-guardrails/) | [AWS AppConfig documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) |
+## Example Scenarios
 
-Select a tool based on your scale, security, and analytics needs.
+**Gradual Feature Release:**  
+New search algorithm deployed behind release flag. Initially internal only, expands to 5% users, then 100%. Instant rollback available at any stage.
 
-## Further Reading
+**A/B Testing:**  
+Product team introduces two checkout flows. Experiment flag randomly assigns users to variants. Analytics measure conversion, better path adopted.
+
+**Operational Kill Switch:**  
+Payment provider integration experiences issues. Operations team disables via flag, restoring stability instantly without emergency deployment.
+
+**AI Model Experimentation:**  
+Multiple ML models live behind flags. Team toggles between them, rolling out to test cohorts and monitoring performance without redeployment.
+
+## Quality Checklist
+
+- [ ] Each flag has documented owner and purpose
+- [ ] Flags categorized by type (release, experiment, ops, permission)
+- [ ] Removal dates or criteria established
+- [ ] Automated tests cover both enabled and disabled paths
+- [ ] Flag state visible across all environments
+- [ ] Access controls and audit logging enabled
+- [ ] Performance impact monitored
+- [ ] Cleanup procedures integrated into release process
+
+## References
 
 - [LaunchDarkly: What Are Feature Flags?](https://launchdarkly.com/blog/what-are-feature-flags/)
 - [Martin Fowler: Feature Toggles](https://martinfowler.com/articles/feature-toggles.html)
 - [Unleash: What is a Feature Flag?](https://docs.getunleash.io/get-started/what-is-a-feature-flag)
 - [Optimizely: Feature Flags](https://www.optimizely.com/optimization-glossary/feature-flags/)
-- [Octopus: Types of Feature Flags, Best Practices](https://octopus.com/devops/feature-flags/)
-- [Sendbird: What Are Feature Flags?](https://sendbird.com/developer/tutorials/what-are-feature-flags)
-- [Stack Overflow: What is a feature flag?](https://stackoverflow.com/questions/7707383/what-is-a-feature-flag)
+- [Octopus: Types of Feature Flags](https://octopus.com/devops/feature-flags/)
+- [Sendbird: What Are Feature Flags? A Deep Dive](https://sendbird.com/developer/tutorials/what-are-feature-flags)
+- [AWS: Feature Flags Best Practices](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
+- [Stack Overflow: What is a Feature Flag?](https://stackoverflow.com/questions/7707383/what-is-a-feature-flag)
 - [Flickr: Flipping Out (Historical)](http://code.flickr.com/blog/2009/12/02/flipping-out)
 - [AWS AppConfig Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html)
-- [YouTube: Facebook's Gatekeeper (Feature Flag System)](https://youtu.be/dDf2t-E_Ea8?t=11m20s)
-
-## Example Scenarios
-
-### 1. Gradual Feature Release (Progressive Delivery)
-A new search algorithm is deployed behind a release flag. Initially, only internal users see it. The rollout expands to 5% of users, then to 100%. At any stage, the flag can be toggled off instantly to revert to the original feature.
-
-### 2. A/B Testing
-A product team introduces two checkout flows. An experiment flag randomly assigns users to A or B. Analytics measure conversion, and the better path is adopted.
-
-### 3. Operational Kill Switch
-A payment provider integration malfunctions. The ops team disables it with a flag, instantly restoring stability.
-
-### 4. AI Model Experimentation
-Multiple ML models are live, each behind a flag. The team toggles between them, rolling out new models to test cohorts and monitoring performance—all without redeploying.
-
-## Explore More
-
-- [Feature flag best practices (Octopus)](https://octopus.com/devops/feature-flags/feature-flag-best-practices/)
-- [Feature flags and trunk-based development (LaunchDarkly)](https://launchdarkly.com/blog/introduction-to-trunk-based-development/)
-- [Building vs. buying a feature flag system (LaunchDarkly)](https://launchdarkly.com/blog/manufacturing-feature-flags-build-vs-buy/)
-- [AWS AppConfig Video: Mastering Feature Flags](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
-
-- [LaunchDarkly: Feature Flags 101](https://launchdarkly.com/blog/what-are-feature-flags/)
-- [Sendbird: Deep Dive on Feature Flags](https://sendbird.com/developer/tutorials/what-are-feature-flags)
-- [AWS AppConfig: Feature Flag Best Practices](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
-- [Martin Fowler: Feature Toggle Patterns](https://martinfowler.com/articles/feature-toggles.html)
-- [Unleash: Feature Flag Types and Implementation](https://docs.getunleash.io/get-started/what-is-a-feature-flag)
-
-This glossary is designed as a living reference; for the latest best practices and industry insights, explore the links above and consult tool-specific documentation. Feature flags, when used responsibly, unlock new possibilities in software delivery, experimentation, and operational excellence.
+- [YouTube: Facebook's Gatekeeper Feature Flag System](https://youtu.be/dDf2t-E_Ea8?t=11m20s)
+- [LaunchDarkly: Trunk-Based Development](https://launchdarkly.com/blog/introduction-to-trunk-based-development/)
+- [Octopus: Feature Flag Best Practices](https://octopus.com/devops/feature-flags/feature-flag-best-practices/)
+- [LaunchDarkly: Build vs Buy Feature Flags](https://launchdarkly.com/blog/manufacturing-feature-flags-build-vs-buy/)

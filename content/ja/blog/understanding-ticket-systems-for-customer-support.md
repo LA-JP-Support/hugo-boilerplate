@@ -8,6 +8,8 @@ keywords: ["チケットシステム", "カスタマーサポート", "ITIL", "�
 image: "/images/blog/ticket-systems-for-customer-support.png"
 tags: ["カスタマーサポート", "チケットシステム", "AI技術"]
 categories: ["ビジネス"]
+url: "/ja/blog/understanding-ticket-systems-for-customer-support/"
+
 ---
 ## 問い合わせを一元管理する「チケット」方式
 

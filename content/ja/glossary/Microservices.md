@@ -1,6 +1,7 @@
 ---
 title: マイクロサービスアーキテクチャ:包括的ガイド
-date: 2025-11-25
+date: '2025-12-19'
+lastmod: '2025-12-19'
 translationKey: microservices-architecture
 description: API Gateway、Bounded Context、CQRSなど、マイクロサービスアーキテクチャの重要な概念、パターン、テクノロジーを網羅した包括的な用語集をご覧ください。
 keywords:
@@ -14,245 +15,197 @@ type: glossary
 draft: false
 e-title: 'Microservices Architecture: Comprehensive'
 term: まいくろさーびすあーきてくちゃ ほうかつてきがいど
+url: "/ja/glossary/Microservices/"
 ---
+## マイクロサービスアーキテクチャとは?
 
-## 主要なマイクロサービス用語
+マイクロサービスアーキテクチャは、アプリケーションを小規模で独立してデプロイ可能なサービスで構成するソフトウェア設計アプローチであり、各サービスは特定のビジネス機能をカプセル化します。すべての機能が単一のコードベースに存在するモノリシックアーキテクチャとは異なり、マイクロサービスはアプリケーションを明確に定義されたAPIを介して通信する個別のコンポーネントに分解し、チームがサービスを独立して開発、デプロイ、スケールできるようにします。
+
+このアーキテクチャスタイルは、モジュール性、回復性、技術の多様性を重視し、組織が疎結合なコンポーネントから複雑なアプリケーションを構築し、それぞれが独立して進化できるようにします。各マイクロサービスは独自のデータを所有し、独自のプロセスで実行され、その特定の要件に最も適した技術スタックを使用して実装できます。
+
+## マイクロサービスの主要概念
 
 ### API
 
-サービスが公開する操作とドメインイベントのセット。APIはHTTP/REST、gRPC、メッセージキューなどのプロトコルを介してアクセスされ、マイクロサービスとそのクライアント(他のサービスやフロントエンド)間の契約を形成します。
+サービスがクライアントに公開する操作とドメインイベントのセット。APIはマイクロサービスとその利用者(他のサービスまたはフロントエンド)間の契約を定義し、通常HTTP/REST、gRPC、またはメッセージキューを介してアクセスされます。適切に設計されたAPIは疎結合と独立した進化を可能にします。
 
-- **参考資料:** [Microservices.io: API](https://microservices.io/articles/glossary#api)
+### APIゲートウェイ
 
-### API Gateway
-
-クライアントからバックエンドマイクロサービスへのAPIリクエストの単一エントリーポイントとして機能するサーバー。リクエストルーティング、構成、プロトコル変換、認証、レート制限、ログ記録を処理します。
-
-- **参考資料:** [AWS API Gateway](https://aws.amazon.com/api-gateway/)、[Kong](https://konghq.com/)、[NGINX](https://www.nginx.com/)、[Microservices.io: API Gateway Pattern](https://microservices.io/patterns/apigateway.html)
+バックエンドマイクロサービスへのクライアントリクエストの単一エントリポイントとして機能するサーバー。リクエストルーティング、構成、プロトコル変換、認証、レート制限、ログ記録を処理します。分散サービスへの統一されたインターフェースを提供することで、クライアントとのやり取りを簡素化します。
 
 ### 非同期通信
 
-送信者と受信者がリアルタイムでやり取りしない通信方式。メッセージはメッセージブローカーやイベントバスを介して送信され、疎結合性と回復力が向上します。
-
-- **参考資料:** [Azure Queue-based Load Leveling Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling)、[Microservices.io: Messaging](https://microservices.io/patterns/communication-style/messaging.html)
+送信者と受信者がリアルタイムでやり取りしない通信パターン。メッセージブローカーまたはイベントバスを介して送信されるメッセージは、疎結合と回復性を高め、サービスが即座の応答を待たずに独立してリクエストを処理できるようにします。
 
 ### 境界づけられたコンテキスト
 
-マイクロサービスのドメインモデルが定義される概念的な境界。明確な責任範囲を確保し、他のサービスとの結合を最小限に抑えます。
-
-- **参考資料:** [Domain-Driven Design](https://martinfowler.com/bliki/BoundedContext.html)、[Microservices.io: Bounded Context](https://microservices.io/patterns/apigateway.html)
+マイクロサービスのドメインモデルが定義される概念的な境界。各サービスのスコープ内でどの概念とルールが適用されるかを明示的に定義することで、明確な責任と他のサービスとの最小限の結合を保証します。
 
 ### バルクヘッドパターン
 
-各マイクロサービスまたは機能の重要なリソース(スレッドプール、接続プールなど)を分離し、1つの障害が他に波及しないようにします。
-
-- **参考資料:** [Microservices.io: Bulkhead Pattern](https://microservices.io/patterns/reliability/bulkhead.html)
+各マイクロサービスまたは機能の重要なリソース(スレッドプール、接続プール)を分離し、1つの障害が他に波及しないようにします。浸水の拡散を防ぐ船の区画にちなんで名付けられました。
 
 ### サーキットブレーカーパターン
 
-サービスの障害を検出し、障害が発生しているサービスへのリクエストを遮断する回復力パターン。システムが適切に劣化し、自動的に回復できるようにします。
+サービスの障害を検出し、障害が発生しているサービスへのリクエストを短絡させる回復性パターン。不健全なサービスへの繰り返しの呼び出しを防ぐことで、システムが適切に劣化し、自動的に回復できるようにします。
 
-- **参考資料:** [Microservices.io: Circuit Breaker](https://microservices.io/patterns/reliability/circuit-breaker.html)
+### CI/CD(継続的インテグレーション/継続的デプロイメント)
 
-### CI/CD (継続的インテグレーション / 継続的デプロイメント)
-
-ソフトウェア変更のビルド、テスト、デプロイを自動化するパイプライン。マイクロサービスの迅速で信頼性の高い提供を可能にします。
-
-- **参考資料:** [AWS CI/CD](https://aws.amazon.com/devops/continuous-integration/)、[Azure DevOps](https://azure.microsoft.com/en-us/products/devops/)
+ソフトウェア変更のビルド、テスト、デプロイを自動化するパイプライン。自動化された検証とデプロイプロセスを通じて、マイクロサービスの迅速で信頼性の高い提供を可能にします。
 
 ### コマンドとクエリ
 
-- **コマンド:** データや状態を変更する操作。
-- **クエリ:** 副作用なしにデータを取得する操作。
+**コマンド:** データまたは状態を変更する操作で、通常は副作用を伴います。
 
-- **参考資料:** [Microservices.io: Command & Query](https://microservices.io/articles/glossary#Command)、[CQRS Pattern](https://microservices.io/patterns/data/cqrs.html)
+**クエリ:** 副作用なしにデータを取得する操作で、読み取り専用のセマンティクスに従います。
 
 ### コンテナ
 
-マイクロサービスのコード、ランタイム、ライブラリ、依存関係を含む軽量で分離されたソフトウェアパッケージ。コンテナは移植可能で、一貫したデプロイを可能にします。
+マイクロサービスのコード、ランタイム、ライブラリ、依存関係を含む軽量で分離されたソフトウェアパッケージ。コンテナは移植可能で、環境間での一貫したデプロイを可能にし、一般的にDockerまたはcontainerdによって管理されます。
 
-- **参考資料:** [Docker](https://www.docker.com/)、[Kubernetes](https://kubernetes.io/)
+### CQRS(コマンドクエリ責任分離)
 
-### CQRS (コマンドクエリ責任分離)
-
-データの変更(コマンド)とデータの取得(クエリ)を分離するパターン。それぞれを独立して最適化およびスケーリングできます。
-
-- **参考資料:** [Microservices.io: CQRS](https://microservices.io/patterns/data/cqrs.html)
+データの変更(コマンド)とデータの取得(クエリ)を分離するパターンで、それぞれを独立して最適化およびスケールできるようにします。異なる読み取りモデルと書き込みモデルを必要とする複雑なドメインに特に有用です。
 
 ### 分散データ管理
 
-各マイクロサービスが独自のデータベースを管理し、集中型データストレージを回避してサービス間の結合を減らします。
-
-- **参考資料:** [Microservices.io: Database per Service](https://microservices.io/patterns/data/database-per-service.html)
+各マイクロサービスが独自のデータベースを管理し、集中型データストレージを回避し、サービス間の結合を減らします。サービスが特定の要件に最適なストレージ技術を選択できるようにします。
 
 ### ドメインイベント
 
-サービスが状態の変化を通知するために公開するメッセージ。他のサービスが結果整合性やワークフローオーケストレーションのために消費できます。
-
-- **参考資料:** [Microservices.io: Domain Event](https://microservices.io/patterns/data/domain-event.html)
+状態変更を通知するためにサービスが公開するメッセージ。他のサービスは、結果整合性またはワークフローオーケストレーションのためにドメインイベントを消費でき、リアクティブアーキテクチャを可能にします。
 
 ### イベントソーシング
 
-アプリケーション状態へのすべての変更をイベントのシーケンスとして保存し、状態の再構築と完全な監査証跡を提供します。
-
-- **参考資料:** [Microservices.io: Event Sourcing](https://microservices.io/patterns/data/event-sourcing.html)
+アプリケーション状態へのすべての変更をイベントのシーケンスとして保存します。状態の再構築を可能にし、完全な監査証跡を提供します。CQRSを補完し、時間的クエリを可能にします。
 
 ### イベント駆動アーキテクチャ
 
-サービスが直接呼び出しではなくイベントを介して通信するアーキテクチャ。疎結合とシステムのスケーラビリティを促進します。
-
-- **参考資料:** [AWS Event-Driven Architecture](https://aws.amazon.com/event-driven-architecture/)
+サービスが直接呼び出しではなくイベントを介して通信するアーキテクチャ。サービスが状態変更に非同期で反応できるようにすることで、疎結合とシステムのスケーラビリティを促進します。
 
 ### 障害分離
 
-マイクロサービスシステムが単一サービス内で障害を封じ込めて分離し、連鎖的な障害を防ぐ能力。
-
-- **参考資料:** [AWS Microservices Fault Isolation](https://aws.amazon.com/builders-library/using-timeouts-and-retries-with-backoff-with-aws-services/)
+マイクロサービスシステムが単一サービス内で障害を封じ込めて分離し、カスケード障害を防ぐ能力。バルクヘッドやサーキットブレーカーなどのパターンを通じて実現されます。
 
 ### 冪等性
 
-操作を複数回実行しても同じ結果が得られる性質。信頼性の高いメッセージ処理とエラー回復に不可欠です。
-
-- **参考資料:** [AWS Idempotency](https://aws.amazon.com/builders-library/idempotency-patterns/)
+操作を複数回実行しても、1回実行した場合と同じ結果が得られる特性。分散システムにおける信頼性の高いメッセージ処理とエラー回復に不可欠です。
 
 ### ロードバランサー
 
-着信ネットワークトラフィックを複数のサービスインスタンスに分散し、可用性と信頼性を確保します。
-
-- **参考資料:** [AWS Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/)、[NGINX Load Balancing](https://www.nginx.com/solutions/load-balancing/)
+複数のサービスインスタンス間で受信ネットワークトラフィックを分散し、可用性と信頼性を確保します。個々のインスタンスが過負荷になるのを防ぎます。
 
 ### メッセージブローカー
 
-マイクロサービス間の非同期通信とイベント配信を可能にするミドルウェア(例:Kafka、RabbitMQ、AWS SNS/SQS)。
-
-- **参考資料:** [Apache Kafka](https://kafka.apache.org/)、[RabbitMQ](https://www.rabbitmq.com/)、[AWS SNS/SQS](https://aws.amazon.com/sns/)
+マイクロサービス間の非同期通信とイベント配信を可能にするミドルウェア。例:Apache Kafka、RabbitMQ、AWS SNS/SQS。バッファリング、ルーティング、配信保証を提供します。
 
 ### マイクロサービス
 
-特定のビジネス機能をカプセル化し、APIを介して他のサービスと相互作用する、自己完結型で独立してデプロイ可能なコンポーネント。
-
-- **参考資料:** [Microservices.io: What is a Microservice?](https://microservices.io/patterns/microservices.html)、[AWS Microservices](https://aws.amazon.com/microservices/)
+特定のビジネス機能をカプセル化する、自己完結型で独立してデプロイ可能なコンポーネント。APIを介して他のサービスとやり取りし、独自のデータを所有し、独立して開発およびデプロイできます。
 
 ### モジュール性
 
-アプリケーションを個別の独立したモジュール(マイクロサービス)に分割し、管理性、スケーラビリティ、回復力を向上させるアーキテクチャ原則。
+アプリケーションを個別の独立したモジュール(マイクロサービス)に分割するアーキテクチャ原則で、関心の分離を通じて管理性、スケーラビリティ、回復性を向上させます。
 
 ### モノリシックアーキテクチャ
 
-すべての機能が単一のデプロイ可能なユニットに密結合されたアプリケーション設計。マイクロサービスとは対照的です。
-
-- **参考資料:** [Microservices.io: Monolithic Architecture](https://microservices.io/patterns/monolithic.html)
+すべての機能が単一のデプロイ可能なユニットに緊密に統合されたアプリケーション設計。共有コードベースとデータベースを持つことでマイクロサービスと対照的です。
 
 ### 可観測性
 
-分散マイクロサービス全体でシステムの動作を監視、トレース、ログ記録する能力。デバッグとパフォーマンス最適化に不可欠です。
-
-- **参考資料:** [OpenTelemetry](https://opentelemetry.io/)、[Prometheus](https://prometheus.io/)、[Grafana](https://grafana.com/)
+分散マイクロサービス全体でシステムの動作を監視、トレース、ログ記録する能力。複雑な分散システムにおけるデバッグとパフォーマンス最適化に不可欠です。メトリクス、ログ、トレースが含まれます。
 
 ### オーケストレーション
 
-コンテナやマイクロサービスのデプロイ、スケーリング、ライフサイクルの自動管理。Kubernetesなどのプラットフォームで実行されることが多いです。
-
-- **参考資料:** [Kubernetes Docs](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
+コンテナまたはマイクロサービスのデプロイ、スケーリング、ライフサイクルの自動管理。多くの場合、スケジューリング、ヘルスモニタリング、自己修復を提供するKubernetesなどのプラットフォームによって実行されます。
 
 ### ポリグロット永続化
 
-システム内で異なるストレージ技術(SQL、NoSQL、グラフデータベースなど)を使用する実践。要件に基づいてサービスごとに選択されます。
+システム内で異なるストレージ技術(SQL、NoSQL、グラフデータベース)を使用する実践で、単一のデータベース技術に標準化するのではなく、特定の要件に基づいてサービスごとに選択されます。
 
-- **参考資料:** [Martin Fowler: Polyglot Persistence](https://martinfowler.com/bliki/PolyglotPersistence.html)
+### 回復性
 
-### 回復力
-
-障害に直面してもマイクロサービスシステムが回復し、機能を維持する能力。サーキットブレーカーやリトライなどのパターンで実現されることが多いです。
-
-- **参考資料:** [Resilient Microservices](https://microservices.io/patterns/reliability/circuit-breaker.html)
+障害に直面してもマイクロサービスシステムが回復し、機能を維持する能力。サーキットブレーカー、リトライ、タイムアウト、バルクヘッドなどのパターンを通じて実現されます。
 
 ### Sagaパターン
 
-分散サービス全体で管理されるローカルトランザクションのシーケンス。障害を処理し、整合性を維持するための補償アクションを含みます。
-
-- **参考資料:** [Microservices.io: Saga Pattern](https://microservices.io/patterns/data/saga.html)
+分散サービス全体で管理されるローカルトランザクションのシーケンスで、障害を処理し整合性を維持するための補償アクションを伴います。マイクロサービスにおける分散トランザクションの代替手段です。
 
 ### サービスシャーシ
 
-マイクロサービスに共通機能(ログ記録、監視、設定など)を提供する再利用可能なフレームワークまたはテンプレート。一貫性を促進し、重複を削減します。
-
-- **参考資料:** [Microservices.io: Service Chassis](https://microservices.io/patterns/microservice-chassis.html)
+マイクロサービスに共通機能(ログ記録、監視、構成、ヘルスチェック)を提供する再利用可能なフレームワークまたはテンプレート。サービス間の一貫性を促進し、重複を削減します。
 
 ### サービスディスカバリー
 
-マイクロサービスが動的に相互を検出して通信するプロセス。通常、サービスレジストリ(例:Consul、Eureka、AWS Cloud Map)を介して行われます。
-
-- **参考資料:** [Consul](https://www.consul.io/)、[Netflix Eureka](https://github.com/Netflix/eureka)、[AWS Cloud Map](https://aws.amazon.com/cloud-map/)
+マイクロサービスが動的に互いを見つけて通信するプロセス。通常、サービスレジストリ(Consul、Eureka、AWS Cloud Map)を介して行われ、サービスがハードコードされたアドレスなしでインスタンスを見つけられるようにします。
 
 ### サービスメッシュ
 
-サービス間通信を管理するインフラストラクチャレイヤー。トラフィックルーティング、セキュリティ、可観測性などの機能を透過的に提供します(例:Istio、Linkerd)。
-
-- **参考資料:** [Istio](https://istio.io/)、[Linkerd](https://linkerd.io/)
+サービス間通信を透過的に管理するインフラストラクチャレイヤー。アプリケーションコードを変更せずに、トラフィックルーティング、セキュリティ、可観測性を提供します。例:Istio、Linkerd、Consul Connect。
 
 ### サービスレジストリ
 
-利用可能なサービスインスタンスとその場所のデータベース。サービスディスカバリーと信頼性の高いルーティングを可能にします。
-
-- **参考資料:** [Microservices.io: Service Registry](https://microservices.io/patterns/service-discovery/service-registry.html)
+利用可能なサービスインスタンスとその場所のデータベース。健全なサービスインスタンスの最新のインベントリを維持することで、サービスディスカバリーと信頼性の高いルーティングを可能にします。
 
 ### サイドカーパターン
 
-マイクロサービスと並行してヘルパーコンポーネント(サイドカー)をデプロイし、アプリケーションコードを変更せずにログ記録、監視、トラフィックプロキシなどのサポート機能を提供します。
-
-- **参考資料:** [Microservices.io: Sidecar Pattern](https://microservices.io/patterns/deployment/sidecar.html)
+アプリケーションコードを変更せずに、ログ記録、監視、トラフィックのプロキシなどのサポート機能を提供するために、マイクロサービスと並行してヘルパーコンポーネント(サイドカー)をデプロイします。サービスメッシュ実装で一般的です。
 
 ### 同期通信
 
-サービス間の直接的なリアルタイム通信。通常はHTTPまたはgRPCを介して行われ、呼び出し側は応答を待ちます。
+呼び出し元が応答を待つ、サービス間の直接的なリアルタイム通信。通常、HTTPまたはgRPCを介して行われます。非同期よりシンプルですが、より緊密な結合を生み出します。
 
-- **参考資料:** [Microservices.io: Remote Procedure Invocation](https://microservices.io/patterns/communication-style/rpi.html)
+### Stranglerパターン
 
-### ストラングラーパターン
-
-モノリシックシステムの一部をマイクロサービスで段階的に置き換える移行戦略。新しいサービスが開発されるにつれてトラフィックを再ルーティングします。
-
-- **参考資料:** [Microservices.io: Strangler Pattern](https://microservices.io/patterns/strangler.html)、[Azure Strangler Pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler)
+モノリシックシステムの一部をマイクロサービスで段階的に置き換える移行戦略。開発された新しいサービスにトラフィックを再ルーティングし、ビッグバンの書き直しなしに段階的な近代化を可能にします。
 
 ### テストピラミッド
 
-分散システムの信頼性を確保するために、ユニットテスト、統合テスト、エンドツーエンドテストのバランスを取るテスト戦略。
-
-- **参考資料:** [Martin Fowler: Test Pyramid](https://martinfowler.com/bliki/TestPyramid.html)
+分散システムにおける信頼性を確保するために、ユニットテスト、統合テスト、エンドツーエンドテストのバランスをとるテスト戦略。ベースにより多くのユニットテスト、より少ない統合テスト、トップにさらに少ないエンドツーエンドテストがあります。
 
 ### トランザクション
 
-マイクロサービスでは、従来の分散トランザクション(2フェーズコミット)は避けられることが多く、信頼性のために結果整合性やSagaなどのパターンが好まれます。
-
-- **参考資料:** [Microservices.io: Distributed Transactions](https://microservices.io/patterns/data/transactional-outbox.html)
+マイクロサービスでは、従来の分散トランザクション(2フェーズコミット)は複雑さとパフォーマンスの理由から避けられることが多いです。信頼性のために結果整合性やSagaなどのパターンが好まれます。
 
 ### バージョニング
 
-後方互換性を確保し、クライアントの破壊を避けるために、サービスAPIやデータ契約の変更を管理するプロセス。
+後方互換性を確保し、クライアントを壊さないようにサービスAPIまたはデータ契約への変更を管理するプロセス。独立したサービスの進化に不可欠です。
 
-- **参考資料:** [API Versioning](https://microservices.io/patterns/communication-style/api-versioning.html)
+## アーキテクチャの利点
 
-## 追加リソース
+**独立したデプロイ:** サービスはアプリケーション全体でリリースを調整することなく、個別にデプロイできます。
+
+**技術の柔軟性:** チームは各サービスの特定の要件に最適な技術を選択できます。
+
+**スケーラビリティ:** 個々のサービスは需要に基づいて独立してスケールできます。
+
+**障害分離:** 障害はアプリケーション全体をダウンさせるのではなく、サービス内に封じ込められます。
+
+**チームの自律性:** 小規模なチームが完全なサービスを所有でき、速度と説明責任が向上します。
+
+**保守の容易さ:** より小さなコードベースは理解、変更、テストが容易です。
+
+## 一般的な課題
+
+**分散システムの複雑さ:** ネットワークレイテンシ、部分的な障害、結果整合性には慎重な処理が必要です。
+
+**運用オーバーヘッド:** より多くのサービスは、より多くのデプロイパイプライン、監視、管理を意味します。
+
+**データ整合性:** サービス間で整合性を維持するには、Sagaやイベントソーシングなどのパターンが必要です。
+
+**テストの複雑さ:** 複数の独立してデプロイされたサービスでは、エンドツーエンドテストがより困難になります。
+
+**ネットワークオーバーヘッド:** サービス間通信はレイテンシと潜在的な障害ポイントを導入します。
+
+## 参考文献
 
 - [Microservices.io: Glossary](https://microservices.io/articles/glossary)
 - [AWS Microservices Glossary](https://docs.aws.amazon.com/whitepapers/latest/microservices-on-aws/glossary.html)
-- [Azure Microservices Architecture Guide](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)
-- [Google Cloud: What is Microservices Architecture?](https://cloud.google.com/learn/what-is-microservices-architecture)
+- [Azure: Microservices Architecture](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)
+- [Google Cloud: Microservices Architecture](https://cloud.google.com/learn/what-is-microservices-architecture)
 - [GeeksforGeeks: Microservices System Design](https://www.geeksforgeeks.org/system-design/microservices/)
-- [Microservices Explained in 5 Minutes (YouTube)](https://www.youtube.com/watch?v=lL_j7ilk7rc)
-
-## 関連項目
-
-- [System Design Fundamentals – GeeksforGeeks](https://www.geeksforgeeks.org/system-design/get)
-- [Microservices Patterns – Microservices.io](https://microservices.io/patterns/index.html)
-- [Microservices Anti-Patterns](https://microservices.io/patterns/anti-patterns/index.html)
+- [Microservices.io: Patterns](https://microservices.io/patterns/index.html)
+- [Microservices.io: Anti-Patterns](https://microservices.io/patterns/anti-patterns/index.html)
 - [Eventuate: Distributed Data Patterns](https://eventuate.io/)
-
-**より詳細な情報については、以下を参照してください:**
-- [Microservices.io](https://microservices.io/)
-- [AWS Microservices](https://aws.amazon.com/microservices/)
-- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)
-- [Google Cloud Microservices](https://cloud.google.com/learn/what-is-microservices-architecture)
-
-**注記:** 各用語について、参考資料のリンクは詳細な解説、実用的なパターン、実世界の例を提供しています。実装の詳細、アーキテクチャ図、専門家のガイダンスについては、参考資料をご覧ください。
+- [GeeksforGeeks: System Design Fundamentals](https://www.geeksforgeeks.org/system-design/get)
+- [YouTube: Microservices Explained](https://www.youtube.com/watch?v=lL_j7ilk7rc)

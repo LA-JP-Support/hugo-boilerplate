@@ -1,30 +1,144 @@
 keywords:
-- keyword: 'API Endpoint Configuration: Complete Glossary & Deep-Dive Guide'
-  url: /en/glossary/api-endpoint-configuration-complete-glossary-deep-dive-guide/
+- keyword: AI Reporting
+  url: /en/glossary/ai-reporting/
   exact: true
   priority: 10
-  title: 'API Endpoint Configuration: Complete Glossary & Deep-Dive Guide glossary
-    entry'
+  title: AI Reporting glossary entry
+- keyword: AI Agents
+  url: /en/glossary/ai-agents/
+  exact: true
+  priority: 10
+  title: AI Agents glossary entry
+- keyword: '''AI Answer Assistant: An In-Depth'''
+  url: /en/glossary/ai-answer-assistant-an/
+  exact: true
+  priority: 10
+  title: '''AI Answer Assistant: An In-Depth'' glossary entry'
+- keyword: AI Chatbot
+  url: /en/glossary/ai-chatbot-in-depth-glossary-and-guide/
+  exact: true
+  priority: 10
+  title: AI Chatbot glossary entry
+- keyword: AI Email Auto-Response Generation
+  url: /en/glossary/ai-email-auto-response-generation/
+  exact: true
+  priority: 10
+  title: AI Email Auto-Response Generation glossary entry
+- keyword: AI Implementation
+  url: /en/glossary/ai-implementation/
+  exact: true
+  priority: 10
+  title: AI Implementation glossary entry
+- keyword: Artificial Intelligence (AI)
+  url: /en/glossary/artificial-intelligence/
+  exact: true
+  priority: 10
+  title: Artificial Intelligence (AI) glossary entry
+- keyword: API Endpoint Configuration
+  url: /en/glossary/api-endpoint-configuration/
+  exact: true
+  priority: 10
+  title: API Endpoint Configuration glossary entry
+- keyword: API Integration
+  url: /en/glossary/api-integration/
+  exact: true
+  priority: 10
+  title: API Integration glossary entry
+- keyword: API Keys
+  url: /en/glossary/api-keys/
+  exact: true
+  priority: 10
+  title: API Keys glossary entry
+- keyword: APIs (Application Programming Interfaces)
+  url: /en/glossary/apis-application-programming-interfaces/
+  exact: true
+  priority: 10
+  title: APIs (Application Programming Interfaces) glossary entry
+- keyword: Adversarial Attack
+  url: /en/glossary/adversarial-attack/
+  exact: true
+  priority: 10
+  title: Adversarial Attack glossary entry
+- keyword: Adversarial Robustness
+  url: /en/glossary/adversarial-robustness/
+  exact: true
+  priority: 10
+  title: Adversarial Robustness glossary entry
+- keyword: Algorithmic Accountability
+  url: /en/glossary/algorithmic-accountability/
+  exact: true
+  priority: 10
+  title: Algorithmic Accountability glossary entry
+- keyword: Alignment Problem
+  url: /en/glossary/alignment-problem/
+  exact: true
+  priority: 10
+  title: Alignment Problem glossary entry
 - keyword: Ambient Intelligence (AmI)
   url: /en/glossary/ambient-intelligence-ami/
   exact: true
   priority: 10
   title: Ambient Intelligence (AmI) glossary entry
-- keyword: 'Auto-Layout: The Complete Glossary'
-  url: /en/glossary/auto-layout-the-complete-glossary/
+- keyword: Anthropic
+  url: /en/glossary/anthropic/
   exact: true
   priority: 10
-  title: 'Auto-Layout: The Complete Glossary glossary entry'
+  title: Anthropic glossary entry
+- keyword: Attribution Modeling
+  url: /en/glossary/attribution-modeling/
+  exact: true
+  priority: 10
+  title: Attribution Modeling glossary entry
+- keyword: Attribution Window
+  url: /en/glossary/attribution-window/
+  exact: true
+  priority: 10
+  title: Attribution Window glossary entry
+- keyword: Auto-Layout
+  url: /en/glossary/auto-layout/
+  exact: true
+  priority: 10
+  title: Auto-Layout glossary entry
+- keyword: Auto-Scaling Group
+  url: /en/glossary/auto-scaling-group/
+  exact: true
+  priority: 10
+  title: Auto-Scaling Group glossary entry
 - keyword: Automated Workflows
   url: /en/glossary/automated-workflows/
   exact: true
   priority: 10
   title: Automated Workflows glossary entry
-- keyword: Autonomous Agents
-  url: /en/glossary/autonomous-agents/
+- keyword: Autonomous AI Agents
+  url: /en/glossary/autonomous-ai-agents/
   exact: true
   priority: 10
-  title: Autonomous Agents glossary entry
+  title: Autonomous AI Agents glossary entry
+- keyword: Autoscaling
+  url: /en/glossary/autoscaling/
+  exact: true
+  priority: 10
+  title: Autoscaling glossary entry
+- keyword: BLEU/ROUGE Scores
+  url: /en/glossary/bleu-rouge-scores/
+  exact: true
+  priority: 10
+  title: BLEU/ROUGE Scores glossary entry
+- keyword: Batch Processing
+  url: /en/glossary/batch-processing/
+  exact: true
+  priority: 10
+  title: Batch Processing glossary entry
+- keyword: Bias Mitigation
+  url: /en/glossary/bias-mitigation/
+  exact: true
+  priority: 10
+  title: Bias Mitigation glossary entry
+- keyword: Blue-Green Deployment
+  url: /en/glossary/blue-green-deployment/
+  exact: true
+  priority: 10
+  title: Blue-Green Deployment glossary entry
 - keyword: Bot Avatar
   url: /en/glossary/bot-avatar/
   exact: true
@@ -40,26 +154,101 @@ keywords:
   exact: true
   priority: 10
   title: Botpress glossary entry
+- keyword: Bounce Rate
+  url: /en/glossary/bounce-rate/
+  exact: true
+  priority: 10
+  title: Bounce Rate glossary entry
+- keyword: CAGR (Compound Annual Growth Rate)
+  url: /en/glossary/cagr-compound-annual-growth-rate/
+  exact: true
+  priority: 10
+  title: CAGR (Compound Annual Growth Rate) glossary entry
+- keyword: CAI Ratio
+  url: /en/glossary/cai-ratio/
+  exact: true
+  priority: 10
+  title: CAI Ratio glossary entry
+- keyword: CRM (Customer Relationship Management)
+  url: /en/glossary/crm-customer-relationship-management/
+  exact: true
+  priority: 10
+  title: CRM (Customer Relationship Management) glossary entry
+- keyword: Canary Release
+  url: /en/glossary/canary-release/
+  exact: true
+  priority: 10
+  title: Canary Release glossary entry
 - keyword: Canonical Form
   url: /en/glossary/canonical-form/
   exact: true
   priority: 10
   title: Canonical Form glossary entry
-- keyword: 'Carousel (UI Component): Glossary & Practical Guide'
-  url: /en/glossary/carousel-ui-component-glossary-practical-guide/
+- keyword: Carousel (UI Component)
+  url: /en/glossary/carousel-ui-component/
   exact: true
   priority: 10
-  title: 'Carousel (UI Component): Glossary & Practical Guide glossary entry'
+  title: Carousel (UI Component) glossary entry
+- keyword: Cart Abandonment Rate
+  url: /en/glossary/cart-abandonment-rate/
+  exact: true
+  priority: 10
+  title: Cart Abandonment Rate glossary entry
+- keyword: Centralized Social Media Management
+  url: /en/glossary/centralized-social-media-management-complex/
+  exact: true
+  priority: 10
+  title: Centralized Social Media Management glossary entry
+- keyword: Chain-of-Thought Prompting
+  url: /en/glossary/chain-of-thought-prompting/
+  exact: true
+  priority: 10
+  title: Chain-of-Thought Prompting glossary entry
+- keyword: Chaos Engineering
+  url: /en/glossary/chaos-engineering/
+  exact: true
+  priority: 10
+  title: Chaos Engineering glossary entry
 - keyword: Chat Simulator
   url: /en/glossary/chat-simulator/
   exact: true
   priority: 10
   title: Chat Simulator glossary entry
+- keyword: Chatbot
+  url: /en/glossary/chatbot/
+  exact: true
+  priority: 10
+  title: Chatbot glossary entry
+- keyword: Chroma
+  url: /en/glossary/chroma/
+  exact: true
+  priority: 10
+  title: Chroma glossary entry
+- keyword: Click Map
+  url: /en/glossary/click-map/
+  exact: true
+  priority: 10
+  title: Click Map glossary entry
+- keyword: Cloud AI
+  url: /en/glossary/cloud/
+  exact: true
+  priority: 10
+  title: Cloud AI glossary entry
+- keyword: Cloud Computing
+  url: /en/glossary/cloud-computing-glossary-comprehensive-guide-for-ai-infrastructure-deployment/
+  exact: true
+  priority: 10
+  title: Cloud Computing glossary entry
 - keyword: Code Block (Python/JS)
   url: /en/glossary/code-block-python-js/
   exact: true
   priority: 10
   title: Code Block (Python/JS) glossary entry
+- keyword: Cohort Analysis
+  url: /en/glossary/cohort-analysis/
+  exact: true
+  priority: 10
+  title: Cohort Analysis glossary entry
 - keyword: Conditional Router
   url: /en/glossary/conditional-router/
   exact: true
@@ -70,6 +259,26 @@ keywords:
   exact: true
   priority: 10
   title: Confidence Threshold glossary entry
+- keyword: Consistency Evaluation
+  url: /en/glossary/consistency-evaluation/
+  exact: true
+  priority: 10
+  title: Consistency Evaluation glossary entry
+- keyword: Contact Lens for Amazon Connect
+  url: /en/glossary/contact-lens-for-amazon-connect/
+  exact: true
+  priority: 10
+  title: Contact Lens for Amazon Connect glossary entry
+- keyword: Containerization
+  url: /en/glossary/containerization/
+  exact: true
+  priority: 10
+  title: Containerization glossary entry
+- keyword: Content Moderation
+  url: /en/glossary/content-moderation/
+  exact: true
+  priority: 10
+  title: Content Moderation glossary entry
 - keyword: Context Switching
   url: /en/glossary/context-switching/
   exact: true
@@ -81,12 +290,1382 @@ keywords:
   priority: 10
   title: Conversation Drift glossary entry
 - keyword: Conversational AI
-  url: /en/glossary/conversational-ai/
+  url: /en/glossary/conversational/
   exact: true
   priority: 10
   title: Conversational AI glossary entry
+- keyword: Conversion Funnel
+  url: /en/glossary/conversion-funnel/
+  exact: true
+  priority: 10
+  title: Conversion Funnel glossary entry
+- keyword: AI Copilot
+  url: /en/glossary/ai-copilot/
+  exact: true
+  priority: 10
+  title: AI Copilot glossary entry
+- keyword: Cosine Similarity
+  url: /en/glossary/cosine-similarity/
+  exact: true
+  priority: 10
+  title: Cosine Similarity glossary entry
+- keyword: Cost Estimation
+  url: /en/glossary/cost-estimation/
+  exact: true
+  priority: 10
+  title: Cost Estimation glossary entry
+- keyword: Cron Schedule
+  url: /en/glossary/cron-schedule/
+  exact: true
+  priority: 10
+  title: Cron Schedule glossary entry
+- keyword: Customer Experience (CX)
+  url: /en/glossary/customer-experience-cx/
+  exact: true
+  priority: 10
+  title: Customer Experience (CX) glossary entry
+- keyword: Customer Loyalty Scores
+  url: /en/glossary/customer-loyalty-scores/
+  exact: true
+  priority: 10
+  title: Customer Loyalty Scores glossary entry
+- keyword: Customer Satisfaction Score (CSAT)
+  url: /en/glossary/customer-satisfaction-score-csat/
+  exact: true
+  priority: 10
+  title: Customer Satisfaction Score (CSAT) glossary entry
+- keyword: DTMF (Dual-Tone Multi-Frequency)
+  url: /en/glossary/dtmf-dual-tone-multi-frequency/
+  exact: true
+  priority: 10
+  title: DTMF (Dual-Tone Multi-Frequency) glossary entry
+- keyword: Data Poisoning
+  url: /en/glossary/data-poisoning/
+  exact: true
+  priority: 10
+  title: Data Poisoning glossary entry
+- keyword: Debug Console / Trace
+  url: /en/glossary/debug-console-trace/
+  exact: true
+  priority: 10
+  title: Debug Console / Trace glossary entry
+- keyword: Deepfake Detection
+  url: /en/glossary/deepfake-detection/
+  exact: true
+  priority: 10
+  title: Deepfake Detection glossary entry
+- keyword: Delay / Sleep Node
+  url: /en/glossary/delay-sleep-node/
+  exact: true
+  priority: 10
+  title: Delay / Sleep Node glossary entry
+- keyword: Dialogue Management
+  url: /en/glossary/dialogue-management/
+  exact: true
+  priority: 10
+  title: Dialogue Management glossary entry
+- keyword: Dialogue State Tracking
+  url: /en/glossary/dialogue-state-tracking/
+  exact: true
+  priority: 10
+  title: Dialogue State Tracking glossary entry
+- keyword: Dify
+  url: /en/glossary/dify/
+  exact: true
+  priority: 10
+  title: Dify glossary entry
+- keyword: Disambiguation
+  url: /en/glossary/disambiguation/
+  exact: true
+  priority: 10
+  title: Disambiguation glossary entry
+- keyword: Docker
+  url: /en/glossary/docker/
+  exact: true
+  priority: 10
+  title: Docker glossary entry
+- keyword: Document Loader
+  url: /en/glossary/document-loader/
+  exact: true
+  priority: 10
+  title: Document Loader glossary entry
+- keyword: Dwell Time
+  url: /en/glossary/dwell-time/
+  exact: true
+  priority: 10
+  title: Dwell Time glossary entry
+- keyword: Edge AI
+  url: /en/glossary/edge/
+  exact: true
+  priority: 10
+  title: Edge AI glossary entry
+- keyword: Einstein Service Agent
+  url: /en/glossary/einstein-service-agent/
+  exact: true
+  priority: 10
+  title: Einstein Service Agent glossary entry
+- keyword: Embed Script
+  url: /en/glossary/embed-script/
+  exact: true
+  priority: 10
+  title: Embed Script glossary entry
+- keyword: Engagement Metrics
+  url: /en/glossary/engagement-metrics/
+  exact: true
+  priority: 10
+  title: Engagement Metrics glossary entry
+- keyword: Engagement Score
+  url: /en/glossary/engagement-score/
+  exact: true
+  priority: 10
+  title: Engagement Score glossary entry
+- keyword: Entity Extraction (Named Entity Recognition, NER)
+  url: /en/glossary/entity-extraction-named-entity-recognition-ner/
+  exact: true
+  priority: 10
+  title: Entity Extraction (Named Entity Recognition, NER) glossary entry
+- keyword: Entity Linking
+  url: /en/glossary/entity-linking/
+  exact: true
+  priority: 10
+  title: Entity Linking glossary entry
+- keyword: '''Environment Variables (Secrets): The Deep'''
+  url: /en/glossary/environment-variables-secrets/
+  exact: true
+  priority: 10
+  title: '''Environment Variables (Secrets): The Deep'' glossary entry'
+- keyword: Error Handler / Try-Catch
+  url: /en/glossary/error-handler-try-catch/
+  exact: true
+  priority: 10
+  title: Error Handler / Try-Catch glossary entry
+- keyword: Event Tracking
+  url: /en/glossary/event-tracking/
+  exact: true
+  priority: 10
+  title: Event Tracking glossary entry
+- keyword: F1 Score
+  url: /en/glossary/f1-score/
+  exact: true
+  priority: 10
+  title: F1 Score glossary entry
+- keyword: FAQ (Frequently Asked Questions)
+  url: /en/glossary/faq-frequently-asked-questions/
+  exact: true
+  priority: 10
+  title: FAQ (Frequently Asked Questions) glossary entry
+- keyword: Fact-Score (FActScore)
+  url: /en/glossary/fact-score/
+  exact: true
+  priority: 10
+  title: Fact-Score (FActScore) glossary entry
+- keyword: Fairness Metrics
+  url: /en/glossary/fairness-metrics/
+  exact: true
+  priority: 10
+  title: Fairness Metrics glossary entry
+- keyword: Fall-back Mechanism (Fallback Mechanism)
+  url: /en/glossary/fall-back-mechanism/
+  exact: true
+  priority: 10
+  title: Fall-back Mechanism (Fallback Mechanism) glossary entry
+- keyword: False Negative
+  url: /en/glossary/false-negative/
+  exact: true
+  priority: 10
+  title: False Negative glossary entry
+- keyword: False Positive
+  url: /en/glossary/false-positive/
+  exact: true
+  priority: 10
+  title: False Positive glossary entry
+- keyword: Feature Flags
+  url: /en/glossary/feature-flags/
+  exact: true
+  priority: 10
+  title: Feature Flags glossary entry
+- keyword: Feedback Buttons (Thumbs Up/Down)
+  url: /en/glossary/feedback-buttons-thumbs-up-down/
+  exact: true
+  priority: 10
+  title: Feedback Buttons (Thumbs Up/Down) glossary entry
+- keyword: '''Few-Shot Learning'''
+  url: /en/glossary/few-shot/
+  exact: true
+  priority: 10
+  title: '''Few-Shot Learning'' glossary entry'
+- keyword: FinOps for AI
+  url: /en/glossary/finops/
+  exact: true
+  priority: 10
+  title: FinOps for AI glossary entry
+- keyword: FlowHunt
+  url: /en/glossary/flowhunt/
+  exact: true
+  priority: 10
+  title: FlowHunt glossary entry
+- keyword: Flowise
+  url: /en/glossary/flowise/
+  exact: true
+  priority: 10
+  title: Flowise glossary entry
+- keyword: GDPR
+  url: /en/glossary/gdpr/
+  exact: true
+  priority: 10
+  title: GDPR glossary entry
+- keyword: GPU Acceleration
+  url: /en/glossary/gpu-acceleration/
+  exact: true
+  priority: 10
+  title: GPU Acceleration glossary entry
+- keyword: Generative AI
+  url: /en/glossary/generative/
+  exact: true
+  priority: 10
+  title: Generative AI glossary entry
+- keyword: GitOps
+  url: /en/glossary/gitops/
+  exact: true
+  priority: 10
+  title: GitOps glossary entry
+- keyword: Global Variables
+  url: /en/glossary/global-variables/
+  exact: true
+  priority: 10
+  title: Global Variables glossary entry
+- keyword: Goal Completion Rate (GCR)
+  url: /en/glossary/goal-completion-rate-gcr/
+  exact: true
+  priority: 10
+  title: Goal Completion Rate (GCR) glossary entry
+- keyword: Google as an AI Company
+  url: /en/glossary/google-as-an-ai-company/
+  exact: true
+  priority: 10
+  title: Google as an AI Company glossary entry
+- keyword: Gumloop
+  url: /en/glossary/gumloop/
+  exact: true
+  priority: 10
+  title: Gumloop glossary entry
+- keyword: HNSW (Hierarchical Navigable Small World)
+  url: /en/glossary/hnsw-hierarchical-navigable-small-world/
+  exact: true
+  priority: 10
+  title: HNSW (Hierarchical Navigable Small World) glossary entry
+- keyword: HTTP Request Node
+  url: /en/glossary/http-request-node/
+  exact: true
+  priority: 10
+  title: HTTP Request Node glossary entry
+- keyword: Hamburger Menu
+  url: /en/glossary/hamburger-menu/
+  exact: true
+  priority: 10
+  title: Hamburger Menu glossary entry
+- keyword: High Availability (HA)
+  url: /en/glossary/high-availability-ha/
+  exact: true
+  priority: 10
+  title: High Availability (HA) glossary entry
+- keyword: Hugging Face
+  url: /en/glossary/hugging-face/
+  exact: true
+  priority: 10
+  title: Hugging Face glossary entry
+- keyword: Human-Agent Teaming
+  url: /en/glossary/human-agent-teaming/
+  exact: true
+  priority: 10
+  title: Human-Agent Teaming glossary entry
+- keyword: Human Approval Node
+  url: /en/glossary/human-approval-node/
+  exact: true
+  priority: 10
+  title: Human Approval Node glossary entry
+- keyword: Human-in-the-Loop (HITL)
+  url: /en/glossary/human-in-the-loop-hitl/
+  exact: true
+  priority: 10
+  title: Human-in-the-Loop (HITL) glossary entry
+- keyword: Hybrid Chatbot
+  url: /en/glossary/hybrid/
+  exact: true
+  priority: 10
+  title: Hybrid Chatbot glossary entry
+- keyword: Hybrid System
+  url: /en/glossary/hybrid-system/
+  exact: true
+  priority: 10
+  title: Hybrid System glossary entry
+- keyword: ITIL – Information Technology Infrastructure Library
+  url: /en/glossary/itil-information-technology-infrastructure-library/
+  exact: true
+  priority: 10
+  title: ITIL – Information Technology Infrastructure Library glossary entry
+- keyword: ITSM (IT Service Management)
+  url: /en/glossary/itsm-it-service-management/
+  exact: true
+  priority: 10
+  title: ITSM (IT Service Management) glossary entry
+- keyword: Image Generation Node
+  url: /en/glossary/image-generation-node/
+  exact: true
+  priority: 10
+  title: Image Generation Node glossary entry
+- keyword: Import / Export Blueprint
+  url: /en/glossary/import-export-blueprint/
+  exact: true
+  priority: 10
+  title: Import / Export Blueprint glossary entry
+- keyword: Indirect Prompt Injection
+  url: /en/glossary/indirect-prompt-injection/
+  exact: true
+  priority: 10
+  title: Indirect Prompt Injection glossary entry
+- keyword: Inference Latency
+  url: /en/glossary/inference-latency/
+  exact: true
+  priority: 10
+  title: Inference Latency glossary entry
+- keyword: Infinite Canvas
+  url: /en/glossary/infinite-canvas/
+  exact: true
+  priority: 10
+  title: Infinite Canvas glossary entry
+- keyword: Infrastructure as Code (IaC)
+  url: /en/glossary/infrastructure-as-code-iac/
+  exact: true
+  priority: 10
+  title: Infrastructure as Code (IaC) glossary entry
+- keyword: '''Integration'''
+  url: /en/glossary/integration/
+  exact: true
+  priority: 10
+  title: '''Integration'' glossary entry'
+- keyword: Intent Recognition
+  url: /en/glossary/intent-recognition/
+  exact: true
+  priority: 10
+  title: Intent Recognition glossary entry
+- keyword: Iterator / For-Each
+  url: /en/glossary/iterator-for-each/
+  exact: true
+  priority: 10
+  title: Iterator / For-Each glossary entry
+- keyword: JSON Path
+  url: /en/glossary/json-path/
+  exact: true
+  priority: 10
+  title: JSON Path glossary entry
+- keyword: Jailbreaking (AI Jailbreaking)
+  url: /en/glossary/jailbreaking-ai-jailbreaking/
+  exact: true
+  priority: 10
+  title: Jailbreaking (AI Jailbreaking) glossary entry
+- keyword: JamC-QA
+  url: /en/glossary/jamc-qa/
+  exact: true
+  priority: 10
+  title: JamC-QA glossary entry
+- keyword: Knowledge-Centered Service (KCS)
+  url: /en/glossary/knowledge-centered-service-kcs/
+  exact: true
+  priority: 10
+  title: Knowledge-Centered Service (KCS) glossary entry
+- keyword: KPIs (Key Performance Indicators)
+  url: /en/glossary/kpis-key-performance-indicators/
+  exact: true
+  priority: 10
+  title: KPIs (Key Performance Indicators) glossary entry
+- keyword: KV Cache
+  url: /en/glossary/kv-cache/
+  exact: true
+  priority: 10
+  title: KV Cache glossary entry
+- keyword: Knowledge Base Connector
+  url: /en/glossary/knowledge-base-connector/
+  exact: true
+  priority: 10
+  title: Knowledge Base Connector glossary entry
+- keyword: LLM as Judge
+  url: /en/glossary/llm-as-judge/
+  exact: true
+  priority: 10
+  title: LLM as Judge glossary entry
+- keyword: LTV (Lifetime Value)
+  url: /en/glossary/ltv-lifetime-value/
+  exact: true
+  priority: 10
+  title: LTV (Lifetime Value) glossary entry
+- keyword: LangFlow
+  url: /en/glossary/langflow/
+  exact: true
+  priority: 10
+  title: LangFlow glossary entry
+- keyword: Latency Budget
+  url: /en/glossary/latency-budget-complex/
+  exact: true
+  priority: 10
+  title: Latency Budget glossary entry
+- keyword: Latency
+  url: /en/glossary/latency/
+  exact: true
+  priority: 10
+  title: Latency glossary entry
+- keyword: Lemmatization
+  url: /en/glossary/lemmatization/
+  exact: true
+  priority: 10
+  title: Lemmatization glossary entry
+- keyword: LiveAgent
+  url: /en/glossary/liveagent/
+  exact: true
+  priority: 10
+  title: LiveAgent glossary entry
+- keyword: '''Load Balancing'''
+  url: /en/glossary/load-balancing/
+  exact: true
+  priority: 10
+  title: '''Load Balancing'' glossary entry'
+- keyword: Logic Node / Conditional Branching
+  url: /en/glossary/logic-node-conditional-branching/
+  exact: true
+  priority: 10
+  title: Logic Node / Conditional Branching glossary entry
+- keyword: Loop Node
+  url: /en/glossary/loop-node/
+  exact: true
+  priority: 10
+  title: Loop Node glossary entry
+- keyword: MHaluBench
+  url: /en/glossary/mhalubench/
+  exact: true
+  priority: 10
+  title: MHaluBench glossary entry
+- keyword: MLOps
+  url: /en/glossary/mlops/
+  exact: true
+  priority: 10
+  title: MLOps glossary entry
+- keyword: Make (Integromat)
+  url: /en/glossary/make-integromat/
+  exact: true
+  priority: 10
+  title: Make (Integromat) glossary entry
+- keyword: Micro-Frontends
+  url: /en/glossary/micro-frontends/
+  exact: true
+  priority: 10
+  title: Micro-Frontends glossary entry
+- keyword: '''Microservices Architecture: Comprehensive'''
+  url: /en/glossary/microservices-architecture/
+  exact: true
+  priority: 10
+  title: '''Microservices Architecture: Comprehensive'' glossary entry'
+- keyword: Milvus
+  url: /en/glossary/milvus-a/
+  exact: true
+  priority: 10
+  title: Milvus glossary entry
+- keyword: Minimap
+  url: /en/glossary/minimap/
+  exact: true
+  priority: 10
+  title: Minimap glossary entry
+- keyword: Misunderstood Rate
+  url: /en/glossary/misunderstood-rate/
+  exact: true
+  priority: 10
+  title: Misunderstood Rate glossary entry
+- keyword: Model Cards
+  url: /en/glossary/model-cards/
+  exact: true
+  priority: 10
+  title: Model Cards glossary entry
+- keyword: '''Model Quantization: A Comprehensive Guide'''
+  url: /en/glossary/model-quantization-a/
+  exact: true
+  priority: 10
+  title: '''Model Quantization: A Comprehensive Guide'' glossary entry'
+- keyword: Model Robustness
+  url: /en/glossary/model-robustness/
+  exact: true
+  priority: 10
+  title: Model Robustness glossary entry
+- keyword: Model Serving
+  url: /en/glossary/model-serving/
+  exact: true
+  priority: 10
+  title: Model Serving glossary entry
+- keyword: Monolithic Architecture
+  url: /en/glossary/monolithic-architecture/
+  exact: true
+  priority: 10
+  title: Monolithic Architecture glossary entry
+- keyword: Multi-Tenancy
+  url: /en/glossary/multi-tenancy/
+  exact: true
+  priority: 10
+  title: Multi-Tenancy glossary entry
+- keyword: Multi-channel Support
+  url: /en/glossary/multi-channel-support/
+  exact: true
+  priority: 10
+  title: Multi-channel Support glossary entry
+- keyword: Multi-Turn Conversation
+  url: /en/glossary/multi-turn-conversation/
+  exact: true
+  priority: 10
+  title: Multi-Turn Conversation glossary entry
+- keyword: Multimodal AI
+  url: /en/glossary/multimodal/
+  exact: true
+  priority: 10
+  title: Multimodal AI glossary entry
+- keyword: N-Gram
+  url: /en/glossary/n-gram/
+  exact: true
+  priority: 10
+  title: N-Gram glossary entry
+- keyword: NLU Confidence Threshold
+  url: /en/glossary/nlu-confidence-threshold/
+  exact: true
+  priority: 10
+  title: NLU Confidence Threshold glossary entry
+- keyword: Net Promoter Score (NPS)
+  url: /en/glossary/net-promoter-score-nps/
+  exact: true
+  priority: 10
+  title: Net Promoter Score (NPS) glossary entry
+- keyword: Named Entity Recognition (NER)
+  url: /en/glossary/named-entity-recognition-ner/
+  exact: true
+  priority: 10
+  title: Named Entity Recognition (NER) glossary entry
+- keyword: Natural Language Processing (NLP)
+  url: /en/glossary/natural-language-processing-nlp/
+  exact: true
+  priority: 10
+  title: Natural Language Processing (NLP) glossary entry
+- keyword: Node Grouping
+  url: /en/glossary/node-grouping/
+  exact: true
+  priority: 10
+  title: Node Grouping glossary entry
+- keyword: Nodes and Edges
+  url: /en/glossary/nodes-and-edges/
+  exact: true
+  priority: 10
+  title: Nodes and Edges glossary entry
+- keyword: Open-Domain Bot
+  url: /en/glossary/open-domain-bot/
+  exact: true
+  priority: 10
+  title: Open-Domain Bot glossary entry
+- keyword: OpenAI
+  url: /en/glossary/openai/
+  exact: true
+  priority: 10
+  title: OpenAI glossary entry
+- keyword: Output Parsing
+  url: /en/glossary/output-parsing/
+  exact: true
+  priority: 10
+  title: Output Parsing glossary entry
+- keyword: PII Redaction
+  url: /en/glossary/pii-redaction/
+  exact: true
+  priority: 10
+  title: PII Redaction glossary entry
+- keyword: PagedAttention
+  url: /en/glossary/pagedattention/
+  exact: true
+  priority: 10
+  title: PagedAttention glossary entry
+- keyword: Parallel Execution
+  url: /en/glossary/parallel-execution/
+  exact: true
+  priority: 10
+  title: Parallel Execution glossary entry
+- keyword: Pareto's Law (The 80/20 Rule)
+  url: /en/glossary/paretos-law-the-80-20-rule/
+  exact: true
+  priority: 10
+  title: Pareto's Law (The 80/20 Rule) glossary entry
+- keyword: Persistent Menu
+  url: /en/glossary/persistent-menu/
+  exact: true
+  priority: 10
+  title: Persistent Menu glossary entry
+- keyword: Persona Design
+  url: /en/glossary/persona-design/
+  exact: true
+  priority: 10
+  title: Persona Design glossary entry
+- keyword: Personal Information Protection Law (China)
+  url: /en/glossary/personal-information-protection-law---china--/
+  exact: true
+  priority: 10
+  title: Personal Information Protection Law (China) glossary entry
+- keyword: Personalization
+  url: /en/glossary/personalization/
+  exact: true
+  priority: 10
+  title: Personalization glossary entry
+- keyword: Pinecone
+  url: /en/glossary/pinecone/
+  exact: true
+  priority: 10
+  title: Pinecone glossary entry
+- keyword: Precision and Recall
+  url: /en/glossary/precision-and-recall/
+  exact: true
+  priority: 10
+  title: Precision and Recall glossary entry
+- keyword: Precision
+  url: /en/glossary/precision/
+  exact: true
+  priority: 10
+  title: Precision glossary entry
+- keyword: Privacy-Preserving Machine Learning (PPML)
+  url: /en/glossary/privacy-preserving-machine-learning-ppml/
+  exact: true
+  priority: 10
+  title: Privacy-Preserving Machine Learning (PPML) glossary entry
+- keyword: Prompt Template
+  url: /en/glossary/prompt-template/
+  exact: true
+  priority: 10
+  title: Prompt Template glossary entry
+- keyword: Qdrant
+  url: /en/glossary/qdrant/
+  exact: true
+  priority: 10
+  title: Qdrant glossary entry
+- keyword: Query Expansion
+  url: /en/glossary/query-expansion/
+  exact: true
+  priority: 10
+  title: Query Expansion glossary entry
+- keyword: Quick Replies
+  url: /en/glossary/quick-replies/
+  exact: true
+  priority: 10
+  title: Quick Replies glossary entry
+- keyword: RAG Benchmarks
+  url: /en/glossary/rag-benchmarks/
+  exact: true
+  priority: 10
+  title: RAG Benchmarks glossary entry
+- keyword: RAG (Retrieval-Augmented Generation)
+  url: /en/glossary/rag-retrieval-augmented-generation/
+  exact: true
+  priority: 10
+  title: RAG (Retrieval-Augmented Generation) glossary entry
+- keyword: ROI (Return on Investment)
+  url: /en/glossary/roi-return-on-investment/
+  exact: true
+  priority: 10
+  title: ROI (Return on Investment) glossary entry
+- keyword: Rate Limiting Handler
+  url: /en/glossary/rate-limiting-handler/
+  exact: true
+  priority: 10
+  title: Rate Limiting Handler glossary entry
+- keyword: Real-Time Translation
+  url: /en/glossary/real-time-translation/
+  exact: true
+  priority: 10
+  title: Real-Time Translation glossary entry
+- keyword: Red Teaming
+  url: /en/glossary/red-teaming/
+  exact: true
+  priority: 10
+  title: Red Teaming glossary entry
+- keyword: Regulatory Sandbox
+  url: /en/glossary/regulatory-sandbox/
+  exact: true
+  priority: 10
+  title: Regulatory Sandbox glossary entry
+- keyword: Reproducibility Validation
+  url: /en/glossary/reproducibility-validation/
+  exact: true
+  priority: 10
+  title: Reproducibility Validation glossary entry
+- keyword: Requirements Definition
+  url: /en/glossary/requirements-definition/
+  exact: true
+  priority: 10
+  title: Requirements Definition glossary entry
+- keyword: Rich Media Cards
+  url: /en/glossary/rich-media-cards/
+  exact: true
+  priority: 10
+  title: Rich Media Cards glossary entry
+- keyword: Rule-Based Chatbot
+  url: /en/glossary/rule-based/
+  exact: true
+  priority: 10
+  title: Rule-Based Chatbot glossary entry
+- keyword: Rule-Based Systems
+  url: /en/glossary/rule-based-systems/
+  exact: true
+  priority: 10
+  title: Rule-Based Systems glossary entry
+- keyword: SSML (Speech Synthesis Markup Language)
+  url: /en/glossary/ssml-speech-synthesis-markup-language/
+  exact: true
+  priority: 10
+  title: SSML (Speech Synthesis Markup Language) glossary entry
+- keyword: Safety Guardrails
+  url: /en/glossary/safety-guardrails/
+  exact: true
+  priority: 10
+  title: Safety Guardrails glossary entry
+- keyword: Sandbox Mode
+  url: /en/glossary/sandbox-mode/
+  exact: true
+  priority: 10
+  title: Sandbox Mode glossary entry
+- keyword: Self-Healing Knowledge
+  url: /en/glossary/self-healing-knowledge/
+  exact: true
+  priority: 10
+  title: Self-Healing Knowledge glossary entry
+- keyword: Semantic Routing
+  url: /en/glossary/semantic-routing/
+  exact: true
+  priority: 10
+  title: Semantic Routing glossary entry
+- keyword: Sentiment-Adaptive Tone
+  url: /en/glossary/sentiment-adaptive-tone/
+  exact: true
+  priority: 10
+  title: Sentiment-Adaptive Tone glossary entry
+- keyword: Sentiment Analysis
+  url: /en/glossary/sentiment-analysis/
+  exact: true
+  priority: 10
+  title: Sentiment Analysis glossary entry
+- keyword: Serverless Computing
+  url: /en/glossary/serverless-computing/
+  exact: true
+  priority: 10
+  title: Serverless Computing glossary entry
+- keyword: Shadow AI
+  url: /en/glossary/shadow/
+  exact: true
+  priority: 10
+  title: Shadow AI glossary entry
+- keyword: Sharding
+  url: /en/glossary/sharding/
+  exact: true
+  priority: 10
+  title: Sharding glossary entry
+- keyword: Slot Carryover
+  url: /en/glossary/slot-carryover/
+  exact: true
+  priority: 10
+  title: Slot Carryover glossary entry
+- keyword: Slot Filling
+  url: /en/glossary/slot-filling-the-definitive-glossary-for-conversational/
+  exact: true
+  priority: 10
+  title: Slot Filling glossary entry
+- keyword: Small Talk
+  url: /en/glossary/small-talk/
+  exact: true
+  priority: 10
+  title: Small Talk glossary entry
+- keyword: Speculative Decoding
+  url: /en/glossary/speculative-decoding/
+  exact: true
+  priority: 10
+  title: Speculative Decoding glossary entry
+- keyword: Speech-to-Text Node
+  url: /en/glossary/speech-to-text-node/
+  exact: true
+  priority: 10
+  title: Speech-to-Text Node glossary entry
+- keyword: Splash Screen
+  url: /en/glossary/splash-screen/
+  exact: true
+  priority: 10
+  title: Splash Screen glossary entry
+- keyword: Spot Instances
+  url: /en/glossary/spot-instances/
+  exact: true
+  priority: 10
+  title: Spot Instances glossary entry
+- keyword: Stack AI
+  url: /en/glossary/stack/
+  exact: true
+  priority: 10
+  title: Stack AI glossary entry
+- keyword: State / Context Memory
+  url: /en/glossary/state-context-memory/
+  exact: true
+  priority: 10
+  title: State / Context Memory glossary entry
+- keyword: State Machine
+  url: /en/glossary/state-machine/
+  exact: true
+  priority: 10
+  title: State Machine glossary entry
+- keyword: Sub-flow / Nested Flow
+  url: /en/glossary/sub-flow-nested-flow/
+  exact: true
+  priority: 10
+  title: Sub-flow / Nested Flow glossary entry
+- keyword: Suggestion Chips
+  url: /en/glossary/suggestion-chips/
+  exact: true
+  priority: 10
+  title: Suggestion Chips glossary entry
+- keyword: Support Portal
+  url: /en/glossary/support-portal/
+  exact: true
+  priority: 10
+  title: Support Portal glossary entry
+- keyword: TCO (Total Cost of Ownership)
+  url: /en/glossary/tco-total-cost-of-ownership/
+  exact: true
+  priority: 10
+  title: TCO (Total Cost of Ownership) glossary entry
+- keyword: Task-Oriented Bot
+  url: /en/glossary/task-oriented-bot/
+  exact: true
+  priority: 10
+  title: Task-Oriented Bot glossary entry
+- keyword: Team Collaboration / Workspace
+  url: /en/glossary/team-collaboration-workspace/
+  exact: true
+  priority: 10
+  title: Team Collaboration / Workspace glossary entry
+- keyword: Technical Debt
+  url: /en/glossary/technical-debt/
+  exact: true
+  priority: 10
+  title: Technical Debt glossary entry
+- keyword: Telemetry
+  url: /en/glossary/telemetry-glossary-definition-use-cases/
+  exact: true
+  priority: 10
+  title: Telemetry glossary entry
+- keyword: Text-to-Speech Node
+  url: /en/glossary/text-to-speech-node/
+  exact: true
+  priority: 10
+  title: Text-to-Speech Node glossary entry
+- keyword: Throttling (API Throttling)
+  url: /en/glossary/throttling-api-throttling/
+  exact: true
+  priority: 10
+  title: Throttling (API Throttling) glossary entry
+- keyword: Transparency (AI Transparency)
+  url: /en/glossary/transparency-ai-transparency/
+  exact: true
+  priority: 10
+  title: Transparency (AI Transparency) glossary entry
+- keyword: Typing Indicators
+  url: /en/glossary/typing-indicators/
+  exact: true
+  priority: 10
+  title: Typing Indicators glossary entry
+- keyword: UI (User Interface)
+  url: /en/glossary/ui-user-interface/
+  exact: true
+  priority: 10
+  title: UI (User Interface) glossary entry
+- keyword: What is a URL Retriever?
+  url: /en/glossary/what-is-a-url-retriever/
+  exact: true
+  priority: 10
+  title: What is a URL Retriever? glossary entry
+- keyword: UX
+  url: /en/glossary/ux/
+  exact: true
+  priority: 10
+  title: UX glossary entry
+- keyword: Unsupervised Consistency Metrics
+  url: /en/glossary/unsupervised-consistency-metrics/
+  exact: true
+  priority: 10
+  title: Unsupervised Consistency Metrics glossary entry
+- keyword: Utterance Permutation
+  url: /en/glossary/utterance-permutation/
+  exact: true
+  priority: 10
+  title: Utterance Permutation glossary entry
+- keyword: Utterance
+  url: /en/glossary/utterance/
+  exact: true
+  priority: 10
+  title: Utterance glossary entry
+- keyword: Voice Activity Detection (VAD)
+  url: /en/glossary/voice-activity-detection-vad/
+  exact: true
+  priority: 10
+  title: Voice Activity Detection (VAD) glossary entry
+- keyword: Variable Injection
+  url: /en/glossary/variable-injection/
+  exact: true
+  priority: 10
+  title: Variable Injection glossary entry
+- keyword: '''Vector Database'''
+  url: /en/glossary/vector-database/
+  exact: true
+  priority: 10
+  title: '''Vector Database'' glossary entry'
+- keyword: Version History / Rollback
+  url: /en/glossary/version-history-rollback/
+  exact: true
+  priority: 10
+  title: Version History / Rollback glossary entry
+- keyword: Virtual Assistant
+  url: /en/glossary/virtual-assistant/
+  exact: true
+  priority: 10
+  title: Virtual Assistant glossary entry
+- keyword: Visual Flow Builder
+  url: /en/glossary/visual-flow-builder/
+  exact: true
+  priority: 10
+  title: Visual Flow Builder glossary entry
+- keyword: Voicebot
+  url: /en/glossary/voicebot-glossary-deep-knowledge/
+  exact: true
+  priority: 10
+  title: Voicebot glossary entry
+- keyword: Voiceflow
+  url: /en/glossary/voiceflow/
+  exact: true
+  priority: 10
+  title: Voiceflow glossary entry
+- keyword: Wake Word Technology
+  url: /en/glossary/wake-word-technology/
+  exact: true
+  priority: 10
+  title: Wake Word Technology glossary entry
+- keyword: Watermarking
+  url: /en/glossary/watermarking/
+  exact: true
+  priority: 10
+  title: Watermarking glossary entry
+- keyword: Weaviate
+  url: /en/glossary/weaviate/
+  exact: true
+  priority: 10
+  title: Weaviate glossary entry
+- keyword: Web Scraper Node
+  url: /en/glossary/web-scraper-node/
+  exact: true
+  priority: 10
+  title: Web Scraper Node glossary entry
+- keyword: Webhook Fulfillment
+  url: /en/glossary/webhook-fulfillment/
+  exact: true
+  priority: 10
+  title: Webhook Fulfillment glossary entry
+- keyword: Webhook Trigger
+  url: /en/glossary/webhook-trigger/
+  exact: true
+  priority: 10
+  title: Webhook Trigger glossary entry
+- keyword: Webview
+  url: /en/glossary/webview/
+  exact: true
+  priority: 10
+  title: Webview glossary entry
+- keyword: White Labeling
+  url: /en/glossary/white-labeling/
+  exact: true
+  priority: 10
+  title: White Labeling glossary entry
+- keyword: Wizard of Oz Testing (WoZ)
+  url: /en/glossary/wizard-of-oz-testing-woz/
+  exact: true
+  priority: 10
+  title: Wizard of Oz Testing (WoZ) glossary entry
+- keyword: Workflow
+  url: /en/glossary/workflow-definition-types-examples-and-guide-to-workflow/
+  exact: true
+  priority: 10
+  title: Workflow glossary entry
+- keyword: Zapier
+  url: /en/glossary/zapier/
+  exact: true
+  priority: 10
+  title: Zapier glossary entry
+- keyword: Zero-Shot Chain of Thought
+  url: /en/glossary/zero-shot-chain-of-thought/
+  exact: true
+  priority: 10
+  title: Zero-Shot Chain of Thought glossary entry
+- keyword: Zero-Touch Resolution
+  url: /en/glossary/zero-touch-resolution/
+  exact: true
+  priority: 10
+  title: Zero-Touch Resolution glossary entry
+- keyword: Zero-Shot Learning (ZSL)
+  url: /en/glossary/zero-shot-learning-zsl/
+  exact: true
+  priority: 10
+  title: Zero-Shot Learning (ZSL) glossary entry
 - keyword: Glossary
   url: /en/glossary/glossary-index/
   exact: true
   priority: 10
   title: Glossary glossary entry
+- keyword: Access Control
+  url: /en/glossary/access-control/
+  exact: true
+  priority: 10
+  title: Access Control glossary entry
+- keyword: Accuracy Measurement
+  url: /en/glossary/accuracy-measurement/
+  exact: true
+  priority: 10
+  title: Accuracy Measurement glossary entry
+- keyword: Artificial Intelligence
+  url: /en/glossary/artificial-intelligence/
+  exact: true
+  priority: 10
+  title: Artificial Intelligence glossary entry
+- keyword: Auto-Routing Functions
+  url: /en/glossary/auto-routing-functions/
+  exact: true
+  priority: 10
+  title: Auto-Routing Functions glossary entry
+- keyword: Automation Platform
+  url: /en/glossary/automation-platform/
+  exact: true
+  priority: 10
+  title: Automation Platform glossary entry
+- keyword: Automation Rules
+  url: /en/glossary/automation-rules/
+  exact: true
+  priority: 10
+  title: Automation Rules glossary entry
+- keyword: Bias
+  url: /en/glossary/bias/
+  exact: true
+  priority: 10
+  title: Bias glossary entry
+- keyword: Bottlenecks
+  url: /en/glossary/bottlenecks-comprehensive-glossary-action-guide-for-business-automation-and-ai-chatbot-operations/
+  exact: true
+  priority: 10
+  title: Bottlenecks glossary entry
+- keyword: Circadian Rhythm
+  url: /en/glossary/circadian-rhythm/
+  exact: true
+  priority: 10
+  title: Circadian Rhythm glossary entry
+- keyword: Cloud-Based
+  url: /en/glossary/cloud-based/
+  exact: true
+  priority: 10
+  title: Cloud-Based glossary entry
+- keyword: Cloud Service
+  url: /en/glossary/cloud-service/
+  exact: true
+  priority: 10
+  title: Cloud Service glossary entry
+- keyword: Cognitive load
+  url: /en/glossary/cognitive-load/
+  exact: true
+  priority: 10
+  title: Cognitive load glossary entry
+- keyword: Computational Resources
+  url: /en/glossary/computational-resources/
+  exact: true
+  priority: 10
+  title: Computational Resources glossary entry
+- keyword: contextual understanding
+  url: /en/glossary/contextual-understanding/
+  exact: true
+  priority: 10
+  title: contextual understanding glossary entry
+- keyword: Continuous Learning in AI
+  url: /en/glossary/continuous-learning/
+  exact: true
+  priority: 10
+  title: Continuous Learning in AI glossary entry
+- keyword: Cost-Performance Ratio (CPI)
+  url: /en/glossary/cost-performance-ratio-cpi/
+  exact: true
+  priority: 10
+  title: Cost-Performance Ratio (CPI) glossary entry
+- keyword: Culture-Specific Benchmarks
+  url: /en/glossary/culture-specific-benchmarks/
+  exact: true
+  priority: 10
+  title: Culture-Specific Benchmarks glossary entry
+- keyword: Customer Support
+  url: /en/glossary/customer-support/
+  exact: true
+  priority: 10
+  title: Customer Support glossary entry
+- keyword: Dashboard
+  url: /en/glossary/dashboard/
+  exact: true
+  priority: 10
+  title: Dashboard glossary entry
+- keyword: Data Encryption
+  url: /en/glossary/data-encryption/
+  exact: true
+  priority: 10
+  title: Data Encryption glossary entry
+- keyword: Data Science
+  url: /en/glossary/data-science/
+  exact: true
+  priority: 10
+  title: Data Science glossary entry
+- keyword: Deep Learning
+  url: /en/glossary/deep-learning/
+  exact: true
+  priority: 10
+  title: Deep Learning glossary entry
+- keyword: Digital Transformation
+  url: /en/glossary/digital-transformation/
+  exact: true
+  priority: 10
+  title: Digital Transformation glossary entry
+- keyword: Digitalization
+  url: /en/glossary/digitalization/
+  exact: true
+  priority: 10
+  title: Digitalization glossary entry
+- keyword: Escalation
+  url: /en/glossary/escalation/
+  exact: true
+  priority: 10
+  title: Escalation glossary entry
+- keyword: Explicit Knowledge
+  url: /en/glossary/explicit-knowledge/
+  exact: true
+  priority: 10
+  title: Explicit Knowledge glossary entry
+- keyword: Finite State Machines (FSM)
+  url: /en/glossary/finite-state-machines-fsm/
+  exact: true
+  priority: 10
+  title: Finite State Machines (FSM) glossary entry
+- keyword: First Contact Resolution (FCR)
+  url: /en/glossary/first-contact-resolution-fcr/
+  exact: true
+  priority: 10
+  title: First Contact Resolution (FCR) glossary entry
+- keyword: Hallucination Detection
+  url: /en/glossary/hallucination-detection/
+  exact: true
+  priority: 10
+  title: Hallucination Detection glossary entry
+- keyword: Hallucination Mitigation Strategies
+  url: /en/glossary/hallucination-mitigation-strategies/
+  exact: true
+  priority: 10
+  title: Hallucination Mitigation Strategies glossary entry
+- keyword: Hallucination
+  url: /en/glossary/hallucination/
+  exact: true
+  priority: 10
+  title: Hallucination glossary entry
+- keyword: Honorific Language Support
+  url: /en/glossary/honorific-language-support/
+  exact: true
+  priority: 10
+  title: Honorific Language Support glossary entry
+- keyword: Hybrid Support
+  url: /en/glossary/hybrid-support/
+  exact: true
+  priority: 10
+  title: Hybrid Support glossary entry
+- keyword: Image Analysis
+  url: /en/glossary/image-analysis/
+  exact: true
+  priority: 10
+  title: Image Analysis glossary entry
+- keyword: '''Incidents'''
+  url: /en/glossary/incidents/
+  exact: true
+  priority: 10
+  title: '''Incidents'' glossary entry'
+- keyword: Knowledge Base
+  url: /en/glossary/knowledge-base/
+  exact: true
+  priority: 10
+  title: Knowledge Base glossary entry
+- keyword: Knowledge Graph
+  url: /en/glossary/knowledge-graph/
+  exact: true
+  priority: 10
+  title: Knowledge Graph glossary entry
+- keyword: Large Language Models (LLMs)
+  url: /en/glossary/large-language-models-llms/
+  exact: true
+  priority: 10
+  title: Large Language Models (LLMs) glossary entry
+- keyword: Machine Learning
+  url: /en/glossary/machine-learning/
+  exact: true
+  priority: 10
+  title: Machine Learning glossary entry
+- keyword: Monitoring
+  url: /en/glossary/monitoring/
+  exact: true
+  priority: 10
+  title: Monitoring glossary entry
+- keyword: Multimodal Technology
+  url: /en/glossary/multimodal-technology-comprehensive-glossary-and-foundational/
+  exact: true
+  priority: 10
+  title: Multimodal Technology glossary entry
+- keyword: Multitasking
+  url: /en/glossary/multitasking/
+  exact: true
+  priority: 10
+  title: Multitasking glossary entry
+- keyword: n8n
+  url: /en/glossary/n8n/
+  exact: true
+  priority: 10
+  title: n8n glossary entry
+- keyword: '''Natural Language Search (NLS): An In-Depth'''
+  url: /en/glossary/natural-language-search-nls-an/
+  exact: true
+  priority: 10
+  title: '''Natural Language Search (NLS): An In-Depth'' glossary entry'
+- keyword: Network Environment
+  url: /en/glossary/network-environment/
+  exact: true
+  priority: 10
+  title: Network Environment glossary entry
+- keyword: Neural Networks
+  url: /en/glossary/neural-networks/
+  exact: true
+  priority: 10
+  title: Neural Networks glossary entry
+- keyword: Note
+  url: /en/glossary/note/
+  exact: true
+  priority: 10
+  title: Note glossary entry
+- keyword: Oracle Feedback (Ground-Truth Labels)
+  url: /en/glossary/oracle-feedback-ground-truth-labels/
+  exact: true
+  priority: 10
+  title: Oracle Feedback (Ground-Truth Labels) glossary entry
+- keyword: Platform (Social Media)
+  url: /en/glossary/platform-social-media-glossary-and-explainer-for-ai-chatbot-automation-applications/
+  exact: true
+  priority: 10
+  title: Platform (Social Media) glossary entry
+- keyword: Prompts
+  url: /en/glossary/prompts-comprehensive-glossary-best-practices/
+  exact: true
+  priority: 10
+  title: Prompts glossary entry
+- keyword: Reinforcement Learning
+  url: /en/glossary/reinforcement-learning/
+  exact: true
+  priority: 10
+  title: Reinforcement Learning glossary entry
+- keyword: Rules Engine
+  url: /en/glossary/rules-engine/
+  exact: true
+  priority: 10
+  title: Rules Engine glossary entry
+- keyword: Scenarios (Pre-Prepared Conversation Flows)
+  url: /en/glossary/scenarios-pre-prepared-conversation-flows/
+  exact: true
+  priority: 10
+  title: Scenarios (Pre-Prepared Conversation Flows) glossary entry
+- keyword: Security Policies
+  url: /en/glossary/security-policies/
+  exact: true
+  priority: 10
+  title: Security Policies glossary entry
+- keyword: Security Requirements
+  url: /en/glossary/security-requirements/
+  exact: true
+  priority: 10
+  title: Security Requirements glossary entry
+- keyword: Self-Service
+  url: /en/glossary/self-service/
+  exact: true
+  priority: 10
+  title: Self-Service glossary entry
+- keyword: Spam Filtering
+  url: /en/glossary/spam-filtering/
+  exact: true
+  priority: 10
+  title: Spam Filtering glossary entry
+- keyword: Speech Recognition
+  url: /en/glossary/speech-recognition/
+  exact: true
+  priority: 10
+  title: Speech Recognition glossary entry
+- keyword: Structured Prompts
+  url: /en/glossary/structured-prompts/
+  exact: true
+  priority: 10
+  title: Structured Prompts glossary entry
+- keyword: Student Models
+  url: /en/glossary/student-models-an-exhaustive/
+  exact: true
+  priority: 10
+  title: Student Models glossary entry
+- keyword: Supervised Learning
+  url: /en/glossary/supervised-learning/
+  exact: true
+  priority: 10
+  title: Supervised Learning glossary entry
+- keyword: Supplementary Indicator
+  url: /en/glossary/supplementary-indicator/
+  exact: true
+  priority: 10
+  title: Supplementary Indicator glossary entry
+- keyword: Tacit Knowledge
+  url: /en/glossary/tacit-knowledge-deep-glossary-resource-page/
+  exact: true
+  priority: 10
+  title: Tacit Knowledge glossary entry
+- keyword: Ticket Management
+  url: /en/glossary/ticket-management/
+  exact: true
+  priority: 10
+  title: Ticket Management glossary entry
+- keyword: Ticket (Customer Support Ticket)
+  url: /en/glossary/ticket/
+  exact: true
+  priority: 10
+  title: Ticket (Customer Support Ticket) glossary entry
+- keyword: '''Unsupervised Consistency Evaluation: Comprehensive'''
+  url: /en/glossary/unsupervised-consistency-evaluation/
+  exact: true
+  priority: 10
+  title: '''Unsupervised Consistency Evaluation: Comprehensive'' glossary entry'
+- keyword: Unsupervised Learning
+  url: /en/glossary/unsupervised-learning/
+  exact: true
+  priority: 10
+  title: Unsupervised Learning glossary entry
+- keyword: User Interfaces (UI)
+  url: /en/glossary/user-interfaces-ui-definition-types-design-guidelines-use-cases-and-strategic-value/
+  exact: true
+  priority: 10
+  title: User Interfaces (UI) glossary entry
+- keyword: User Roles
+  url: /en/glossary/user-roles/
+  exact: true
+  priority: 10
+  title: User Roles glossary entry
+- keyword: Visualization
+  url: /en/glossary/visualization/
+  exact: true
+  priority: 10
+  title: Visualization glossary entry

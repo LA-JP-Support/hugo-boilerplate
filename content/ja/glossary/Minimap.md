@@ -2,58 +2,52 @@
 title: ミニマップ
 translationKey: minimap
 description: ミニマップは、AIチャットボットの会話やコードなど、大規模で複雑なフローをナビゲートするためのコンパクトな視覚的概要マップです。ユーザーが自分の位置を把握し、複雑な図を管理するのに役立ちます。
-keywords: ["ミニマップ", "AIチャットボット", "自動化プラットフォーム", "フローナビゲーション", "UI/UX"]
+keywords:
+- ミニマップ
+- AIチャットボット
+- 自動化プラットフォーム
+- フローナビゲーション
+- UI/UX
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: '2025-12-19'
+lastmod: '2025-12-19'
 draft: false
-term: ミニマップ
-reading: ミニマップ
-kana_head: ま
 e-title: Minimap
+term: ミニマップ
+url: "/ja/glossary/Minimap/"
 ---
-## 定義と概要
+## ミニマップとは?
+ミニマップは、より大きなインターフェース内に埋め込まれたコンパクトで簡略化されたビジュアルマップで、ワークスペース、フロー、または環境の俯瞰図を提供します。通常は画面の端に配置され、ユーザーがコンテキストを失うことなく、大規模または複雑なコンテンツエリア内で素早く方向を確認し、ナビゲートできるようにします。
 
-**ミニマップ**は、より大きなインターフェース内に埋め込まれた、コンパクトで簡略化されたビジュアルマップです。ワークスペース、フロー、または環境の縮小された俯瞰図を提供し、通常は画面の端に配置されます。ユーザーは、コンテキストを失うことなく、大規模または複雑なコンテンツエリア内で素早く方向を確認し、ナビゲートできます。ミニマップは、**AIチャットボットおよび自動化プラットフォーム**において、数百の相互接続されたノードを含むことが多い複雑な会話フローやプロセス図を視覚化および管理するために特に有用です。その用途は、ソフトウェア設計、ゲーム、データ可視化、マッピング、コードエディタにまで及びます。
+ミニマップは、数百の相互接続されたノードを含む複雑な会話フローやプロセス図を視覚化・管理するAIチャットボットや自動化プラットフォームで特に有用です。その用途は、ソフトウェア設計ツール、ゲームインターフェース、データ可視化プラットフォーム、マッピングアプリケーション、コードエディタにまで及びます。
 
-- [React Flow Minimap Documentation](https://reactflow.dev/api-reference/components/minimap)
-- [Svelte Flow Minimap Documentation](https://svelteflow.dev/api-reference/components/mini-map)
-- [Lenovo Glossary: Minimap](https://www.lenovo.com/us/en/glossary/mini-map/)
-- [Game UI Database: Minimap](https://www.gameuidatabase.com/index.php?scrn=135)
+## 主な用途
 
-## 実用的な応用と利点
+### AIチャットボットおよび自動化プラットフォーム
 
-**AIチャットボット&自動化プラットフォーム**  
-Crispやカスタムオートメーションビルダーなどのプラットフォームにおけるミニマップは、作成者が複雑なチャットボットフローを監視、編集、デバッグすることを可能にします。数百のノードと複雑な決定木を持つ場合、ミニマップは全体像を維持し、ユーザーが任意のセクションに即座にジャンプできるようにし、「フロー内で迷子になる」問題を軽減します。  
-- 例:[Crisp AI Chatbot & Automations](https://help.crisp.chat/en/category/ai-chatbot-automations-1yxt4vb/)
+Crispやカスタムオートメーションビルダーなどのプラットフォームにおけるミニマップは、作成者が複雑なチャットボットフローを監視、編集、デバッグすることを可能にします。数百のノードと複雑な決定木を持つ場合、ミニマップは全体像を維持し、任意のセクションへの即座のナビゲーションを可能にし、「フロー内で迷子になる」問題を軽減します。
 
-**ソフトウェアUI/UX**  
-ミニマップは、コードエディタ(例:VS Code)、ダイアグラムビルダー(React Flow、Svelte Flow)、分析ダッシュボードに組み込まれ、大規模なドキュメント、グラフ、レイアウトのナビゲーションを容易にします。
-- [VS Code](https://code.visualstudio.com/docs/editor/codebasics#_minimap)では、ミニマップがファイルの視覚的な要約を提供し、コードブロック、検索マッチ、エラーをハイライト表示します。
+### ソフトウェア開発ツール
 
-**ゲーム**  
-ミニマップは、ゲームにおける標準的なHUD(ヘッドアップディスプレイ)要素であり、プレイヤーの位置、目標、環境を表示します。  
-- [Game UI Database: Minimap](https://www.gameuidatabase.com/index.php?scrn=135)  
-- ミニマップのコーディング技術:[Reddit: How do most games code minimaps?](https://www.reddit.com/r/howdidtheycodeit/comments/zxg62w/how_do_most_games_code_minimaps_and_your_movement/)
+コードエディタ(VS Code)は、ファイルの視覚的な要約を提供するミニマップを埋め込み、コードブロック、検索マッチ、エラーをハイライト表示します。図表ビルダー(React Flow、Svelte Flow)は、大規模なノードベースのグラフやレイアウトをナビゲートするためにミニマップを使用します。
 
-**データ可視化**  
-大規模なデータセットやグラフ(例:マインドマップ、ネットワーク図)は、コンテキストと可視化全体の迅速な移動のためにミニマップを使用します。
+### ゲームインターフェース
 
-**類推:**  
-ワークスペースのミニマップは、車のダッシュボードのGPSナビゲーションマップのようなもので、ユーザーが現在位置とナビゲーションに集中しながら、全ルートの視点を提供します。
+プレイヤーの位置、目標、環境レイアウトを表示する標準的なHUD(ヘッドアップディスプレイ)要素です。複雑なゲーム世界における空間認識と戦略的計画に不可欠です。
 
-## 技術ドキュメント:ミニマップの実装
+### データ可視化
 
-### コンポーネント例:React FlowおよびSvelte Flowの`<MiniMap />`
+大規模なデータセットやグラフ(マインドマップ、ネットワーク図)は、コンテキストと可視化全体の素早い移動のためにミニマップを採用し、複雑な関係の探索を可能にします。
 
-`<MiniMap />`コンポーネントは、React FlowとSvelte Flowの両方で利用可能で、ノードベースのエディタ用のカスタマイズ可能で埋め込み可能なミニマップを提供します。
+## 技術的実装
 
-#### [React Flow: MiniMapコンポーネント](https://reactflow.dev/api-reference/components/minimap)
+### React Flow ミニマップコンポーネント
 
-- **レンダリング:**各ノードをSVG要素として表示
-- **可視化:**フローに対する現在のビューポートを表示
+React FlowとSvelte Flowは、ノードベースエディタ用のカスタマイズ可能な`<MiniMap />`コンポーネントを提供し、各ノードをSVG要素としてレンダリングし、フローに対する現在のビューポートを視覚化します。
 
-**使用例:**
+**React Flowの例:**
+
 ```jsx
 import { ReactFlow, MiniMap } from '@xyflow/react';
 
@@ -66,14 +60,11 @@ export default function Flow() {
 }
 ```
 
-#### [Svelte Flow: MiniMapコンポーネント](https://svelteflow.dev/api-reference/components/mini-map)
+**Svelte Flowの例:**
 
-**使用例:**
 ```svelte
 <script lang="ts">
   import { SvelteFlow, MiniMap } from '@xyflow/svelte';
-  let nodes = [];
-  let edges = [];
 </script>
 
 <SvelteFlow bind:nodes bind:edges>
@@ -81,52 +72,35 @@ export default function Flow() {
 </SvelteFlow>
 ```
 
-### ミニマップコンポーネントのプロパティ
+### 設定プロパティ
 
-React FlowとSvelte Flowのミニマップは、カスタマイズとアクセシビリティのための共通のプロパティ(props)セットを共有しています:
+| プロパティ | 型 | デフォルト | 説明 |
+|----------|------|---------|-------------|
+| `bgColor` | string | - | 背景色 |
+| `nodeColor` | string/function | "#e2e2e2" | ノードの色 |
+| `nodeStrokeColor` | string/function | "transparent" | ノードのストローク色 |
+| `nodeClassName` | string/function | "" | ノードのCSSクラス |
+| `nodeBorderRadius` | number | 5 | ボーダー半径 |
+| `nodeStrokeWidth` | number | 2 | ストローク幅 |
+| `nodeComponent` | ComponentType | - | カスタムSVGコンポーネント |
+| `maskColor` | string | "rgba(240,240,240,0.6)" | ビューポートマスク色 |
+| `maskStrokeColor` | string | "transparent" | マスクストローク色 |
+| `maskStrokeWidth` | number | 1 | マスクストローク幅 |
+| `position` | PanelPosition | BottomRight | ミニマップの位置 |
+| `ariaLabel` | string/null | "Mini Map" | アクセシブルラベル |
+| `width` | number | - | 幅 |
+| `height` | number | - | 高さ |
+| `pannable` | boolean | false | パン操作を有効化 |
+| `zoomable` | boolean | false | ズーム操作を有効化 |
+| `inversePan` | boolean | false | パン操作を反転 |
+| `zoomStep` | number | 10 | ズームステップサイズ |
+| `onClick` | function | - | クリックコールバック |
+| `onNodeClick` | function | - | ノードクリックコールバック |
 
-| プロパティ           | 型                                              | デフォルト           | 説明                                                                |
-|--------------------|--------------------------------------------------|-------------------|----------------------------------------------------------------------------|
-| `bgColor`          | `string`                                         | -                 | ミニマップの背景色                                           |
-| `nodeColor`        | `string \| GetMiniMapNodeAttribute`              | "#e2e2e2"`        | ミニマップ上のノードの色                                             |
-| `nodeStrokeColor`  | `string \| GetMiniMapNodeAttribute`              | "transparent"`    | ミニマップ上のノードのストローク色                                      |
-| `nodeClass`/`nodeClassName` | `string \| GetMiniMapNodeAttribute`     | ""                | ミニマップ上のノードに適用されるCSSクラス                                 |
-| `nodeBorderRadius` | `number`                                         | `5`               | ノードのボーダー半径                                                    |
-| `nodeStrokeWidth`  | `number`                                         | `2`               | ノードのストローク幅                                                     |
-| `nodeComponent`    | `ComponentType<MiniMapNodeProps>`                | -                 | ノードをレンダリングするカスタムSVGコンポーネント                                      |
-| `maskColor`        | `string`                                         | "rgba(240,240,240,0.6)" | ミニマップ上のビューポートを表すマスクの色         |
-| `maskStrokeColor`  | `string`                                         | "transparent"     | ビューポートマスクのストローク色                                         |
-| `maskStrokeWidth`  | `number`                                         | `1`               | ビューポートマスクのストローク幅                                         |
-| `position`         | `PanelPosition`                                  | `BottomRight`     | ペイン内のミニマップの位置                                       |
-| `ariaLabel`        | `string \| null`                                 | "Mini Map"        | スクリーンリーダー用のアクセシブルラベル                                       |
-| `width`            | `number`                                         | -                 | ミニマップの幅                                                      |
-| `height`           | `number`                                         | -                 | ミニマップの高さ                                                     |
-| `pannable`         | `boolean`                                        | `false`           | ミニマップのインタラクションによるビューポートのパンを有効化                   |
-| `zoomable`         | `boolean`                                        | `false`           | ミニマップのインタラクションによるズームを有効化                                   |
-| `inversePan`       | `boolean`                                        | `false`           | パン方向を反転                                                 |
-| `zoomStep`         | `number`                                         | `10`              | ズームイン/アウトのステップサイズ                                              |
-| `onClick`          | `(event, position) => void`                      | -                 | ミニマップがクリックされたときのコールバック                                      |
-| `onNodeClick`      | `(event, node) => void`                          | -                 | ミニマップノードがクリックされたときのコールバック                                   |
-| `...props`         | `HTMLAttributes<HTMLDivElement/SVGSVGElement>`   | -                 | 追加のHTML/SVG属性                                            |
+### カスタマイズ例
 
-**参考資料:**  
-- [React Flow MiniMap Props](https://reactflow.dev/api-reference/components/minimap#props)  
-- [Svelte Flow MiniMap Props](https://svelteflow.dev/api-reference/components/mini-map#props)
+**ノードタイプ別の色分け:**
 
-### カスタマイズとインタラクティビティ
-
-**外観**  
-`bgColor`、`nodeColor`、`nodeStrokeColor`、`nodeBorderRadius`、`nodeComponent`をカスタマイズして、アプリのテーマに合わせたり、ノードのステータスを伝えたりします。
-
-**配置**  
-`position`プロパティ(`top-left`、`top-right`、`bottom-right`、`bottom-left`)を使用して、インターフェース内にミニマップを配置します。
-
-**インタラクティビティ**  
-- 直接的なインタラクションのために`pannable`と`zoomable`を有効化
-- ナビゲーションやアクションをトリガーするために`onClick`と`onNodeClick`を使用
-- ビューポートのハイライト表示のために`maskColor`、`maskStrokeColor`、`maskStrokeWidth`を調整
-
-**カスタマイズ例:タイプ別にノードの色を変更**
 ```jsx
 function nodeColor(node) {
   switch (node.type) {
@@ -139,7 +113,8 @@ function nodeColor(node) {
 <MiniMap nodeColor={nodeColor} />
 ```
 
-**カスタムノードレンダリング例**
+**カスタムノードレンダリング:**
+
 ```jsx
 function MiniMapNode({ x, y }) {
   return <circle cx={x} cy={y} r="50" />;
@@ -148,133 +123,110 @@ function MiniMapNode({ x, y }) {
 <MiniMap nodeComponent={MiniMapNode} />
 ```
 
-**インタラクティブミニマップ**
+**インタラクティブなミニマップ:**
+
 ```jsx
 <MiniMap pannable zoomable />
 ```
 
-## 使用例
+## ユースケース
 
-### 1. AIチャットボットビルダー
+### チャットボットビルダー
 
-サポートチームがノーコードチャットボットビルダーを使用して、カスタマーサポートボットを設計します。フローには、ユーザーイベント、返信、条件付きロジックを含む200以上のノードが含まれています。  
-- 右下隅に表示されるミニマップは、会話フローのミニチュアを表示します。
-- ビューポートがハイライト表示され、編集中のエリアが示されます。
-- ミニマップマスクをドラッグすると、オンボーディング、エスカレーション、またはフォールバックロジック間を即座にジャンプできます。
-- ノードは色分けされています(例:エントリは緑、アクションは青、エラーは赤)。
+サポートチームが、ユーザーイベント、返信、条件付きロジックを含む200以上のノードを持つカスタマーサポートボットを設計します。右下のミニマップは、ハイライトされたビューポートとともに会話フローのミニチュアを表示します。色分けされたノード(エントリーは緑、アクションは青、エラーは赤)により、オンボーディング、エスカレーション、またはフォールバックロジックセクション間の即座のナビゲーションが可能になります。
 
-### 2. コードエディタ
+### コードエディタ
 
-VS Codeのようなコードエディタでは、ミニマップがすべてのコード行の縮小ビューを表示します。  
-- シンタックスハイライトとエラーマーカーがミニマップ内に表示されます。
-- セクションをクリックすると、エディタがそのブロックにスクロールし、高速ナビゲーションが可能になります。
+VS Codeのミニマップは、構文ハイライトとエラーマーカーを含むすべてのコード行の縮小表示を提供します。セクションをクリックすると、エディタがそのブロックにスクロールし、長いファイル内での高速ナビゲーションを促進します。
 
-### 3. ゲームインターフェース
+### ゲームインターフェース
 
-ゲームでは、ミニマップがプレイヤーの位置、目標、環境の特徴を表示します。  
-- プレイヤーの移動に応じてリアルタイムで更新されます。
-- アイコンはチームメイト、敵、またはインタラクティブな要素を示します。
-- プレイヤーはミニマップを切り替えたり、拡大してより詳細を確認できます。
+ミニマップは、プレイヤーの位置、目標、環境の特徴をリアルタイムで更新しながら表示します。アイコンはチームメイト、敵、インタラクティブ要素を示します。プレイヤーはミニマップを切り替えたり拡大したりして、より詳細な情報を得ることができます。
 
-## FAQ:AIチャットボット&自動化コンテキストにおけるミニマップ
+### データ可視化プラットフォーム
 
-**ミニマップの主な目的は何ですか?**  
-チャットボットフロー、コードベース、ゲーム世界などの大規模なエリアの縮小されたナビゲート可能な概要を提供し、ユーザーがコンテキストを維持し、その中を効率的に移動できるようにします。
+複雑なネットワーク図は、数千の相互接続されたノードをナビゲートするためにミニマップを使用します。ビューポートのハイライトは現在表示されている部分を示し、ミニマップは全体的な構造と関係を明らかにします。
 
-**チャットボットビルダーにおいて、ミニマップはどのようにユーザーエクスペリエンスを向上させますか?**  
+## メリット
+
+**空間認識:** 大規模なワークスペース内で方向を維持し、ユーザーが複雑なフロー内で迷子になることを防ぎます。
+
+**効率的なナビゲーション:** スクロールや検索なしに遠く離れたセクションに即座にジャンプし、ワークフロー効率を向上させます。
+
+**コンテキストの保持:** 特定の詳細に焦点を当てながら全体的な構造を確認し、部分が全体とどのように関連しているかを理解します。
+
+**視覚的な概要:** フローの複雑さを素早く評価し、パターンを特定し、レイアウトや構造の潜在的な問題を発見します。
+
+**認知負荷の軽減:** 大規模なシステム内での位置を追跡するために必要な精神的努力を軽減する外部記憶補助。
+
+## アクセシビリティの考慮事項
+
+**アクセシブルラベル:** スクリーンリーダー用にミニマップの目的を説明する`ariaLabel`プロパティを設定します。
+
+**キーボードナビゲーション:** マウスを使用できないユーザーのために、キーボード操作のサポートを確保します。
+
+**色のコントラスト:** 視覚障害のあるユーザーのために、十分なコントラストを持つ色スキームを使用します。
+
+**レスポンシブサイジング:** さまざまな画面サイズで、ミニマップを見やすく、かつ邪魔にならないようにします。
+
+**代替ナビゲーション:** 視覚的なミニマップを効果的に使用できないユーザーのために、補完的なナビゲーション方法(検索、パンくずリスト)を提供します。
+
+## ベストプラクティス
+
+**適切なサイジング:** 有用であるのに十分な大きさでありながら、主要なコンテンツを隠さない程度に小さくします。
+
+**明確な視覚的階層:** 色、不透明度、ボーダーを通じて、ビューポートインジケーターとコンテンツを区別します。
+
+**パフォーマンスの最適化:** 仮想化や簡略化された表現を使用して、大量のノード数に対するレンダリングを最適化します。
+
+**一貫した配置:** ユーザーの期待に合わせて、一貫した場所(通常は右下)にミニマップを配置します。
+
+**段階的な開示:** 特に小さな画面では、必要ないときにミニマップを非表示または折りたたみます。
+
+**視覚的な明瞭さ:** ミニマップの表現が一貫したスタイリングでメインビューに明確に対応していることを確認します。
+
+## よくある落とし穴
+
+**小さすぎる:** ミニマップが小さすぎて使用できず、概要を提供する目的を果たさない。
+
+**大きすぎる:** 作業エリアの大部分を隠し、主要なタスクを妨げる。
+
+**コントラストの不足:** 要素間の視覚的な区別が不十分で、ミニマップが読みにくい。
+
+**アクセシビリティの欠如:** キーボードアクセスやスクリーンリーダーのサポートがなく、障害のあるユーザーを排除する。
+
+**パフォーマンスの問題:** 最適化されていないレンダリングが、大規模なデータセットで遅延やスタッタリングを引き起こす。
+
+## よくある質問
+
+**ミニマップの主な目的は何ですか?**
+大規模なエリアの凝縮されたナビゲート可能な概要を提供し、ユーザーが複雑なインターフェース内でコンテキストを維持し、効率的に移動できるようにします。
+
+**ミニマップはチャットボットビルダーの体験をどのように向上させますか?**
 作成者が自動化フロー全体を一目で確認し、ノードを素早く見つけて編集し、複雑な分岐ロジックでコンテキストを失うことを避けることができます。
 
-**ミニマップの外観と動作をカスタマイズできますか?**  
-はい。色、形状、ノードのレンダリング、位置、インタラクティビティ(パン、ズーム)などを変更できます。特殊な可視化のためにカスタムSVGコンポーネントを使用します。
+**ミニマップの外観はカスタマイズできますか?**
+はい。設定プロパティやカスタムコンポーネントを使用して、色、形状、ノードのレンダリング、位置、インタラクティビティ(パン、ズーム)などをカスタマイズできます。
 
-**ミニマップはデフォルトでインタラクティブですか?**  
-いいえ。React FlowとSvelte Flowでは、`pannable`または`zoomable`が`true`に設定されていない限り、ミニマップは非インタラクティブです。
+**ミニマップはデフォルトでインタラクティブですか?**
+いいえ。React FlowとSvelte Flowでは、`pannable`または`zoomable`プロパティが`true`に設定されない限り、ミニマップは非インタラクティブです。
 
-**ミニマップにはどのような情報を表示できますか?**  
-実装に応じて:ノードのタイプ/ステータス、ビューポートの境界、ノードの接続、カスタムオーバーレイなど。
+**ミニマップはどのように効率を向上させますか?**
+遠く離れたセクション間の即座のナビゲーションを可能にし、視覚的な構造の識別を提供し、編集やデバッグ時に空間認識を維持します。
 
-**大規模なフローにおいて、ミニマップはどのように効率を向上させますか?**  
-離れたセクション間を即座にジャンプし、構造を視覚的に識別し、編集/デバッグ時に空間認識を維持します。
+**ミニマップはアクセシブルですか?**
+実装によります。スクリーンリーダー用に`ariaLabel`を使用し、キーボードナビゲーションを確保し、強いカラーコントラストを提供します。
 
-**ミニマップはアクセシブルですか?**  
-スクリーンリーダー用の`ariaLabel`などのアクセシビリティ機能が有効になっている場合。開発者は、キーボードナビゲーションと強い色のコントラストを確保する必要があります。
+**ミニマップはチャットボットビルダー以外でも使用できますか?**
+はい。コードエディタ、データ可視化、マッピングアプリケーション、ゲームで広く使用されています。
 
-**ミニマップ設計における一般的な落とし穴は何ですか?**  
-- 小さすぎて役に立たない、または大きすぎてコンテンツを隠す
-- 色のコントラストが悪い、またはアクセシビリティラベルが欠落している
-- 情報の過負荷
+## 参考文献
 
-**ミニマップはチャットボットビルダー以外でも使用できますか?**  
-はい。コードエディタ、データ可視化、マッピングアプリケーション、ゲームで使用できます。
-
-**プロジェクトにミニマップを追加するにはどうすればよいですか?**  
-[React Flow](https://reactflow.dev/api-reference/components/minimap)や[Svelte Flow](https://svelteflow.dev/api-reference/components/mini-map)などのライブラリからミニマップコンポーネントを使用し、必要に応じてプロパティを設定します。
-
-## アクセシビリティとベストプラクティス
-
-- **アクセシブルラベル:**スクリーンリーダー用にミニマップの目的を説明するために`ariaLabel`プロパティを設定します。
-- **キーボードナビゲーション:**ユーザーがキーボードショートカットを使用してミニマップとインタラクトできることを確認します。
-- **色のコントラスト:**視覚障害のあるユーザーのために十分なコントラストを持つ色スキームを使用します([Material Design: Accessibility](https://m2.material.io/design/usability/accessibility.html))。
-- **レスポンシブサイジング:**ミニマップを見やすく、かつ邪魔にならないようにします。
-- **パフォーマンス:**大量のノード数に対してレンダリングを最適化します。
-
-- [EqualWeb: Accessible Navigation Design Best Practices](https://www.equalweb.com/a/44195/11527/accessible_navigation_design:_best_practices_for_2025)
-
-## その他のリソース
-
-- [React Flow MiniMap Documentation](https://reactflow.dev/api-reference/components/minimap)
-- [Svelte Flow MiniMap Documentation](https://svelteflow.dev/api-reference/components/mini-map)
+- [React Flow: MiniMap Component](https://reactflow.dev/api-reference/components/minimap)
+- [Svelte Flow: MiniMap Component](https://svelteflow.dev/api-reference/components/mini-map)
 - [Lenovo Glossary: Minimap](https://www.lenovo.com/us/en/glossary/mini-map/)
 - [Crisp AI Chatbot & Automations](https://help.crisp.chat/en/category/ai-chatbot-automations-1yxt4vb/)
 - [Game UI Database: Minimap](https://www.gameuidatabase.com/index.php?scrn=135)
-- [Reddit: How do most games code minimaps?](https://www.reddit.com/r/howdidtheycodeit/comments/zxg62w/how_do_most_games_code_minimaps_and_your_movement/)
-
-## 要約表:ミニマップの主要機能
-
-| 機能                    | 説明                                                                                 |
-|----------------------------|---------------------------------------------------------------------------------------------|
-| 概要ナビゲーション        | 大規模なフローやワークスペースを簡単に表示および移動                                    |
-| カスタムスタイリング             | 色、ボーダー半径、ストローク、ノードのレンダリングを調整                                    |
-| インタラクティビティ              | パン、ズーム、ノード固有のインタラクションを有効化                                     |
-| アクセシビリティ              | ariaラベルを使用し、高いコントラストを確保                                                    |
-| コンテキスト認識          | フロー全体に対する自分の位置を常に把握                                     |
-| 統合の柔軟性    | チャットボットビルダー、開発ツール、ゲーム、データ可視化に埋め込み可能                   |
-| パフォーマンス最適化   | 数百または数千のノードでも効率的なレンダリング                               |
-
-## 標準的な使用例
-
-**チャットボット自動化ビルダーにおけるインタラクティブでカスタム色のミニマップ:**
-
-```jsx
-import { ReactFlow, MiniMap } from '@xyflow/react';
-
-function nodeColor(node) {
-  if (node.type === "entry") return "#6ede87";
-  if (node.type === "exit") return "#6865A5";
-  return "#ff0072";
-}
-
-export default function AutomationFlow() {
-  return (
-    <ReactFlow nodes={nodes} edges={edges}>
-      <MiniMap
-        pannable
-        zoomable
-        nodeColor={nodeColor}
-        ariaLabel="Chatbot Flow Minimap"
-        maskColor="rgba(0,0,0,0.2)"
-        position="bottom-right"
-      />
-    </ReactFlow>
-  );
-}
-```
-
-**より詳細な技術情報やライブコード例については、以下をご覧ください:**  
-- [React Flow MiniMap Documentation](https://reactflow.dev/api-reference/components/minimap)  
-- [Svelte Flow MiniMap Documentation](https://svelteflow.dev/api-reference/components/mini-map)  
-- [Crisp AI Chatbot & Automations](https://help.crisp.chat/en/category/ai-chatbot-automations-1yxt4vb/)  
-- [Lenovo Glossary: Minimap](https://www.lenovo.com/us/en/glossary/mini-map/)
-- [Game UI Database: Minimap](https://www.gameuidatabase.com/index.php?scrn=135)
-
-この用語集は、AIチャットボット&自動化プラットフォーム、ソフトウェアUI、コードエディタ、ゲーム、データ可視化におけるミニマップのすべての技術的、実用的、アクセシビリティの側面をカバーしています。すべての例、コード、ベストプラクティスは、公式ドキュメントおよび主要な業界リソースから直接引用されています。
+- [Reddit: How Games Code Minimaps](https://www.reddit.com/r/howdidtheycodeit/comments/zxg62w/how_do_most_games_code_minimaps_and_your_movement/)
+- [EqualWeb: Accessible Navigation Design](https://www.equalweb.com/a/44195/11527/accessible_navigation_design:_best_practices_for_2025)
+- [Material Design: Accessibility](https://m2.material.io/design/usability/accessibility.html)

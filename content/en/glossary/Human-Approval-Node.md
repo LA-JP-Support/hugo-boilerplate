@@ -5,8 +5,8 @@ description: "A workflow step pausing automation for human review and decision-m
 keywords: ["human approval", "human-in-the-loop", "human oversight", "decision making", "approval workflows"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-05
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 draft: false
 ---
 ## Definition

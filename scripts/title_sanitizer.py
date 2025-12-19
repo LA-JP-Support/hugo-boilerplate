@@ -84,6 +84,22 @@ TRANSLATION_KEY_STOP_WORDS = {
     "practical",
     "definitive",
     "implementation",
+    "usage",
+    "example",
+    "examples",
+    "best",
+    "practices",
+    "types",
+    "type",
+    "design",
+    "guidelines",
+    "guideline",
+    "use",
+    "case",
+    "cases",
+    "strategic",
+    "value",
+    "values",
     "the",
     "for",
     "ai",
@@ -98,6 +114,14 @@ TRANSLATION_KEY_STOP_WORDS = {
     "overview",
     "resource",
 }
+
+
+def slugify_filename_stem(stem: str) -> str:
+    # Normalize stems like "Delay---Sleep-Node" -> "delay-sleep-node"
+    s = stem.strip().lower()
+    s = re.sub(r"[^a-z0-9]+", "-", s)
+    s = re.sub(r"-+", "-", s).strip("-")
+    return s
 
 
 def parse_markdown(path: Path) -> Tuple[Dict, str]:
@@ -151,22 +175,34 @@ def sanitize_title_text(title: str | None) -> str | None:
                 changed = True
                 break
     
-    # Then check for colon-separated suffixes
+    # Then check for colon-separated suffixes (always remove everything after colon)
     for delimiter in ("：", ":"):
         if delimiter in title:
-            head, tail = title.split(delimiter, 1)
-            if _needs_removal(tail):
-                return head.strip()
+            head, _tail = title.split(delimiter, 1)
+            return head.strip()
     return title.strip()
 
 
-def sanitize_translation_key(key: str | None) -> str | None:
+def sanitize_translation_key(key: str | None, *, filename_slug: str | None = None) -> str | None:
     if not key:
         return key
     parts = [p for p in key.lower().split("-") if p]
     while parts and parts[-1] in TRANSLATION_KEY_STOP_WORDS:
         parts.pop()
-    return "-".join(parts) if parts else key.lower()
+    sanitized = "-".join(parts) if parts else key.lower()
+
+    if filename_slug:
+        filename_slug = filename_slug.lower()
+        if sanitized.startswith(filename_slug) and sanitized != filename_slug:
+            # If key is basically "<slug>-<boilerplate>" then collapse to the slug.
+            # This keeps translationKey stable and concise, and matches EN/JA easily.
+            suffix = sanitized[len(filename_slug):]
+            if suffix.startswith("-"):
+                suffix = suffix[1:]
+            if suffix:
+                return filename_slug
+
+    return sanitized
 
 
 def sanitize_front_matter(frontmatter: Dict) -> bool:
@@ -196,7 +232,17 @@ def process_file(path: Path, dry_run: bool = False) -> bool:
     if not frontmatter:
         return False
 
-    if sanitize_front_matter(frontmatter):
+    # translationKey may depend on filename slug
+    filename_slug = slugify_filename_stem(path.stem)
+    translation_key_changed = False
+    if "translationKey" in frontmatter:
+        sanitized_key = sanitize_translation_key(frontmatter.get("translationKey"), filename_slug=filename_slug)
+        if sanitized_key and sanitized_key != frontmatter.get("translationKey"):
+            frontmatter["translationKey"] = sanitized_key
+            translation_key_changed = True
+
+    front_matter_changed = sanitize_front_matter(frontmatter)
+    if front_matter_changed or translation_key_changed:
         if dry_run:
             return True
         path.write_text(dump_markdown(frontmatter, body), encoding="utf-8")

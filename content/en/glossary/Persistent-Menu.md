@@ -1,8 +1,7 @@
 ---
 title: Persistent Menu
 translationKey: persistent-menu
-description: 'Learn about Persistent Menus in chatbots: what they are, why use them,
-  how to implement them, and best practices for enhancing user navigation and experience.'
+description: 'Learn about Persistent Menus in chatbots: what they are, why use them, how to implement them, and best practices for enhancing user navigation and experience.'
 keywords:
 - Persistent Menu
 - Chatbot
@@ -11,214 +10,292 @@ keywords:
 - Menu Items
 category: General
 type: glossary
-date: 2025-12-05
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 draft: false
 ---
-## What is a Persistent Menu?
 
-A **Persistent Menu** is an always-on, static menu interface embedded in a chatbot, visible to users throughout their session. It provides immediate access to critical chatbot actions, regardless of message context or conversation flow. The menu typically appears via a recognizable icon (often a [hamburger menu](/en/glossary/hamburger-menu/)) and lists essential actions such as restart, help, unsubscribe, or navigation shortcuts.
+## What Is a Persistent Menu?
 
-- **Key Features:**
-  - Always accessible—never disappears after a button is used.
-  - Available at any step in the conversation or onboarding.
-  - Presents a clear, consistent set of user options.
-  - Ideal for both first-time and returning users.
-## Why Use a Persistent Menu? (Core Benefits)
+A Persistent Menu is an always-on, static menu interface embedded in a chatbot, providing continuous access to critical actions regardless of message context or conversation flow. The menu typically appears via a recognizable icon—often the hamburger menu—and lists essential actions such as restart, help, unsubscribe, or navigation shortcuts.
 
-A well-configured Persistent Menu provides clear user value and supports business objectives:
+Unlike temporary buttons or quick replies that disappear after use, a Persistent Menu remains accessible throughout the entire user session. It serves as a constant navigational anchor, ensuring users can always access key functions without remembering commands or searching through conversation history. This architectural pattern has become a best practice in chatbot design, significantly improving user experience and reducing friction in conversational interfaces.
 
-- **Faster Navigation:** Users reach frequently-needed features or info instantly—no need to remember commands or search through conversation threads.
-- **Reduces Friction:** Prevents users from getting lost or frustrated; offers a direct escape route from confusing flows.
-- **Feature Discovery:** New and returning users see the bot’s main capabilities at a glance.
-- **Business Alignment:** Promotes core actions (e.g., product quizzes, contact support, order tracking) that drive business value.
-- **Accessibility:** Users with accessibility needs benefit from clearly structured, always-available actions.
-## How is a Persistent Menu Used?
+The Persistent Menu concept originated on messaging platforms like Facebook Messenger but has since been adopted across web chat widgets, mobile applications, and other conversational interfaces. Its persistent nature makes it ideal for both first-time users discovering bot capabilities and returning users seeking quick access to familiar features.
 
-The Persistent Menu is usually accessed by clicking or tapping a menu icon (commonly the hamburger icon) in the chat window. Its contents are available at any time, regardless of conversation stage.
+## Core Benefits
 
-**User Experience Highlights:**
-- Users can open the menu in onboarding, mid-conversation, or after completing an action.
-- Typical actions: restart bot, access help/FAQ, jump to a main menu, unsubscribe, open external URLs, or trigger quizzes.
-## Supported Channels & Platform Limitations
+### Faster Navigation
 
-Persistent Menus are supported on major messaging and web platforms, but features and limits vary:
+Users reach frequently-needed features or information instantly without remembering commands or searching through conversation threads. This direct access reduces cognitive load and accelerates task completion.
 
-| Platform              | Support Level           | Notes/Limitations                                                                            |
-|-----------------------|------------------------|----------------------------------------------------------------------------------------------|
-| Facebook Messenger    | Full                   | Max 3 top-level items; supports nested menus, user input control.                            |
-| Instagram             | Supported (via API)    | Similar to Messenger; check platform-specific documentation for updates.                      |
-| Webchat Widgets       | Full (most builders)   | Button appearance, user input control, and nesting vary by vendor.                            |
-| WhatsApp, Telegram    | Limited/Varies         | Check each bot builder’s documentation for support and limitations.                           |
+### Friction Reduction
 
-- **Button Limit:** Messenger supports up to 3 buttons per menu level.
-- **Appearance:** Menu icon and location may differ per channel.
-- **Menu Scope:** Some platforms only allow a single menu per bot instance.
-- **Disabling Input:** Often applies globally, not per flow.
-## Menu Item Types & Structure
+Prevents users from getting lost or frustrated by offering a direct escape route from confusing flows. Users always have a clear path back to main functionality or help resources.
 
-### Button Actions
+### Feature Discovery
 
-A Persistent Menu can include several types of actions:
+New and returning users see the bot's main capabilities at a glance. The menu serves as a feature catalog, increasing awareness of available functionality.
 
-- **Send Message:** Triggers a specific bot flow or sends a defined message.
-- **Open URL:** Opens a specified web page, often in an in-app browser.
-- **Restart Bot:** Resets the conversation to the start or welcome step.
-- **Unsubscribe:** Opts the user out of future messages or interactions.
-- **Take Quiz:** Launches a product or feedback quiz.
-- **Help/FAQ:** Displays support or answers to common questions.
+### Business Alignment
+
+Promotes core actions such as product quizzes, contact support, or order tracking that drive business value. Strategic menu design guides users toward high-value interactions.
+
+### Accessibility Enhancement
+
+Users with accessibility needs benefit from clearly structured, always-available actions. Screen readers and assistive technologies can reliably access menu options.
+
+## User Experience
+
+### Access Pattern
+
+The Persistent Menu is usually accessed by clicking or tapping a menu icon in the chat window. Its contents remain available at any conversation stage—during onboarding, mid-conversation, or after completing an action.
+
+### Typical Actions
+
+**Restart Bot**
+
+Resets conversation to the start or welcome step, useful when users want to begin fresh or encounter issues.
+
+**Access Help/FAQ**
+
+Displays support resources or answers to common questions, providing self-service assistance.
+
+**Jump to Main Menu**
+
+Returns users to primary navigation, offering a clear path back from specialized flows.
+
+**Unsubscribe**
+
+Opts users out of future messages or interactions, respecting user preferences and privacy.
+
+**Open External URLs**
+
+Launches web pages for additional resources, documentation, or related services.
+
+**Trigger Quizzes**
+
+Initiates product recommendation or feedback quizzes, engaging users in interactive experiences.
+
+## Platform Support and Limitations
+
+| Platform | Support Level | Notes/Limitations |
+|----------|--------------|-------------------|
+| Facebook Messenger | Full | Max 3 top-level items; supports nested menus, user input control |
+| Instagram | Supported (via API) | Similar to Messenger; check platform documentation for updates |
+| Webchat Widgets | Full (most builders) | Button appearance, user input control, and nesting vary by vendor |
+| WhatsApp, Telegram | Limited/Varies | Check each bot builder's documentation for support and limitations |
+
+### Key Limitations
+
+**Button Limit**
+
+Messenger supports up to 3 buttons per menu level. Exceeding this requires nesting or prioritization.
+
+**Appearance**
+
+Menu icon and location may differ per channel. Consistent branding may require platform-specific customization.
+
+**Menu Scope**
+
+Some platforms allow only a single menu per bot instance, requiring careful global design.
+
+**Input Control**
+
+Disabling user input often applies globally, not per flow, requiring careful consideration of use cases.
+
+## Menu Structure and Actions
+
+### Button Action Types
+
+**Send Message**
+
+Triggers a specific bot flow or sends a defined message, enabling programmatic conversation control.
+
+**Open URL**
+
+Opens a specified web page, often in an in-app browser, for external resources or documentation.
+
+**Restart Bot**
+
+Resets the conversation to the start or welcome step, providing a clean slate.
+
+**Unsubscribe**
+
+Opts the user out of future messages or interactions, ensuring compliance with user preferences.
+
+**Take Quiz**
+
+Launches a product or feedback quiz, engaging users in interactive experiences.
+
+**Help/FAQ**
+
+Displays support or answers to common questions, enabling self-service resolution.
 
 ### Nested Menus
 
-Some platforms (like Messenger) allow menu nesting, grouping related actions under one label. Example: “Account” → “Profile”, “Settings”.
+Some platforms like Messenger allow menu nesting, grouping related actions under one label. For example, "Account" might contain "Profile" and "Settings" submenus. However, not all platforms or builders support nested structures, requiring careful platform assessment.
 
-- **Limitation:** Not all platforms or builders support nested (sub)menus.
+### Example Menu Configurations
 
-### Menu Item Examples
+**E-commerce Chatbot**
 
-| Button Label       | Action                         | Description                                      |
-|--------------------|-------------------------------|--------------------------------------------------|
-| 🏠 Main Menu       | Go to main menu flow           | Returns user to main navigation                   |
-| 🔁 Restart         | Reset conversation             | Lets user start over                             |
-| ❌ Unsubscribe     | Opt-out action                 | Ends further messages to the user                |
-| 📝 Take Quiz       | Launch recommendation/quiz     | Collects info, provides personalized suggestions |
-| ❓ Help            | Show FAQ/contact options        | Offers instant support                           |
-| 📦 Order Status    | Check order                    | For e-commerce bots                              |
-| 💬 Contact Support | Open support flow/email         | Human agent or further help                      |
+| Button | Action |
+|--------|--------|
+| 🛒 Shop | Open main shopping flow |
+| 🚚 Track Order | Show order status |
+| ❓ Help | FAQ or support flow |
 
-*You may mix different action types within one menu.*
-## Step-by-Step: How to Add a Persistent Menu
+**Product Recommendation Quiz**
 
-The process depends on your chatbot builder/platform. Here’s a generalized guide, followed by specific instructions for popular platforms.
+| Button | Action |
+|--------|--------|
+| 📝 Take Quiz | Start product quiz flow |
+| 🔁 Restart Bot | Reset conversation |
+| ❌ Unsubscribe | Opt-out of bot messages |
+
+**Restaurant Reservation Bot**
+
+| Button | Action |
+|--------|--------|
+| 📅 Book Table | Start reservation flow |
+| 📖 Menu | Open menu URL |
+| 🏠 Main Menu | Return to home flow |
+
+## Implementation Guide
 
 ### General Steps
 
 1. **Log in to Your Bot Platform Dashboard**
-2. **Open Bot Settings or Flow Builder**
-   - Find the “Persistent Menu”, “Menu”, or “Navigation” section.
-3. **Create/Edit the Persistent Menu**
-   - Usually via a “Create” or “Edit” button.
-4. **Add Menu Items**
-   - For each slot: Choose action type, label, and target (flow, URL, etc).
-5. **Arrange Order**
-   - Drag and drop to reorder; most important actions first.
-6. **Advanced Options**
-   - Localize menu, enable/disable user input, add submenus if supported.
-7. **Save & Publish**
-   - Click “Save”, “Publish”, or toggle menu live.
+2. **Open Bot Settings or Flow Builder** - Find the "Persistent Menu", "Menu", or "Navigation" section
+3. **Create/Edit the Persistent Menu** - Usually via a "Create" or "Edit" button
+4. **Add Menu Items** - For each slot: Choose action type, label, and target (flow, URL, etc)
+5. **Arrange Order** - Drag and drop to reorder; most important actions first
+6. **Advanced Options** - Localize menu, enable/disable user input, add submenus if supported
+7. **Save & Publish** - Click "Save", "Publish", or toggle menu live
+
 ### Platform-Specific Instructions
 
-#### **Facebook Messenger (via Chatfuel)**
+**Facebook Messenger (via Chatfuel)**
 
-1. Go to [Chatfuel Dashboard](https://dashboard.chatfuel.com).
-2. Open the Flow tab; create/select your flow.
-3. Double-click canvas, select “Entry Points → Persistent Menu”.
-4. Add up to 3 buttons (e.g., “Restart Bot”, “Help”, “Unsubscribe”).
-5. Drag to reorder, enable menu with toggle.
-6. For localization, click “Localization” to add translations.
+1. Go to Chatfuel Dashboard
+2. Open the Flow tab; create/select your flow
+3. Double-click canvas, select "Entry Points → Persistent Menu"
+4. Add up to 3 buttons (e.g., "Restart Bot", "Help", "Unsubscribe")
+5. Drag to reorder, enable menu with toggle
+6. For localization, click "Localization" to add translations
 
-![Persistent Menu Example in Chatfuel](https://storage.googleapis.com/chatfuel-cms-staging/pic/original_persistent_menu_0_8a23ef77c3/original_persistent_menu_0_8a23ef77c3.webp)
+**ChatbotBuilder.ai**
 
-- [Chatfuel: Persistent Menu Docs](https://chatfuel.com/blog/persistent-menu)
+1. Go to Settings → Channels → Facebook Messenger/Instagram → Persistent Menu
+2. Click "Edit" to open setup wizard
+3. Add menu items as needed
+4. To disable user input, uncheck "Allow Keyboard Input"
+5. Save and publish
 
-#### **ChatbotBuilder.ai**
+**Certainly**
 
-1. Go to Settings → Channels → Facebook Messenger/Instagram → Persistent Menu.
-2. Click “Edit” to open setup wizard.
-3. Add menu items as needed.
-4. To disable user input, uncheck “Allow Keyboard Input”.
-5. Save and publish.
+1. Open Bot Settings
+2. Select the Persistent Menu tab
+3. Add items (Open URL, Send message, Nested)
+4. Save your changes
 
-- [ChatbotBuilder.ai: Persistent Menu](https://docs.chatbotbuilder.ai/support/solutions/articles/150000166613-persistent-menu)
+**Webchat Widgets**
 
-#### **Certainly**
+1. Log in to bot platform dashboard
+2. Go to web chatbot manager
+3. Click on "Persistent Menu"
+4. Click "Create", configure menu in the popup
+5. You can disable user input entirely if needed
+6. Save and test your web chat widget
 
-1. Open [Bot Settings](https://support.certainly.io/knowledge/Individualize-your-chatbot-in-Bot-Settings).
-2. Select the Persistent Menu tab.
-3. Add items (Open URL, Send message, Nested).
-4. Save your changes.
-
-- [Certainly Knowledge Base: Add a Persistent Menu](https://support.certainly.io/knowledge/add-a-persistent-menu-to-your-chat)
-
-#### **Webchat Widgets (BotSailor Example)**
-
-1. Log in to BotSailor dashboard.
-2. Go to your web chatbot manager.
-3. Click on “Persistent Menu”.
-4. Click “Create”, configure menu in the popup.
-5. You can disable user input entirely if needed.
-6. Save and test your web chat widget.
-
-- [YouTube Tutorial: Persistent Menu in Website Chatbot](https://www.youtube.com/watch?v=4kAlBEgCvwM)
-
-## Customizing the Persistent Menu
+## Customization Options
 
 ### Localization (Multiple Languages)
 
-- Add translations via a “Localization” or “Add Language” button.
-- Select target language, enter translated button labels.
-- Only menu button text is localized, not full conversation flows.
+Add translations via a "Localization" or "Add Language" button. Select target language and enter translated button labels. Note that only menu button text is localized, not full conversation flows.
 
-**Best Practice:**  
-Only localize if your bot supports those languages throughout the user journey.
+**Best Practice:** Only localize if your bot supports those languages throughout the user journey to maintain consistency.
 
 ### Disabling User Input
 
-- Disable free text input to restrict users to menu/[quick replies](/en/glossary/quick-replies/) only.
-- Useful for strict flows (e.g., quizzes, forms) but beware: this usually disables input globally.
-- To collect open responses (emails, addresses), leave user input enabled.
+Disable free text input to restrict users to menu and quick replies only. This is useful for strict flows such as quizzes or forms, but be aware that this usually disables input globally. To collect open responses like emails or addresses, leave user input enabled.
 
-### Menu Appearance & Order
+### Menu Appearance and Order
 
-- Menu is usually bottom-right (Messenger), but varies per platform.
-- Order matters: Place most critical actions at the top.
-- Use descriptive, short labels (30-character limit is common).
-- Emojis can aid recognition, but keep usage professional.
-- Buttons can open URLs or trigger bot flows.
+**Location**
 
-## Best Practices for Persistent Menus
+Menu is usually bottom-right in Messenger, but varies per platform.
 
-- **Keep it Simple:** Limit to 2–3 primary actions; avoid menu clutter.
-- **Prioritize Critical Functions:** “Restart”, “Help”, “Unsubscribe” should be easily accessible.
-- **Clear Labels:** Use terms like “Restart Bot” over vague terms like “Again”.
-- **Mix Action Types:** Combine links, flows, and submenus as needed.
-- **Test Thoroughly:** Check on all channels and devices.
-- **Maintain Accessibility:** Use readable fonts and clear contrast.
-- **Update Regularly:** Adjust menu based on analytics and user feedback.
-## Common Use Cases & Examples
+**Order**
 
-### E-commerce Chatbot Menu
+Place most critical actions at the top as order matters for user attention and accessibility.
 
-| Button         | Action                 |
-|----------------|-----------------------|
-| 🛒 Shop        | Open main shopping flow|
-| 🚚 Track Order | Show order status      |
-| ❓ Help        | FAQ or support flow    |
+**Labels**
 
-### Product Recommendation Quiz
+Use descriptive, short labels (30-character limit is common). Clear, action-oriented language improves usability.
 
-| Button           | Action                        |
-|------------------|------------------------------|
-| 📝 Take Quiz     | Start product quiz flow       |
-| 🔁 Restart Bot   | Reset conversation            |
-| ❌ Unsubscribe   | Opt-out of bot messages       |
+**Emojis**
 
-### Restaurant Reservation Bot
+Can aid recognition and visual appeal, but keep usage professional and accessible.
 
-| Button          | Action                    |
-|-----------------|--------------------------|
-| 📅 Book Table   | Start reservation flow    |
-| 📖 Menu        | Open menu URL             |
-| 🏠 Main Menu   | Return to home flow       |
+**Buttons**
 
-## Troubleshooting & Considerations
+Can open URLs or trigger bot flows, providing flexible functionality.
 
-- **Menu Not Showing:** Confirm menu is enabled and published; check channel support.
-- **User Input Disabled Unintentionally:** Remember disabling input often applies to the whole bot.
-- **Localization Issues:** Make sure language settings are correct; only button text is localized.
-- **Too Many Buttons:** Respect platform limits (e.g., Messenger = 3 per menu level); use nesting if supported.
-- **Testing:** Test on all target channels and devices for visibility and function.
-## Further Resources & Next Steps
+## Best Practices
+
+**Keep it Simple**
+
+Limit to 2-3 primary actions to avoid menu clutter and decision paralysis.
+
+**Prioritize Critical Functions**
+
+"Restart", "Help", and "Unsubscribe" should be easily accessible for user control and compliance.
+
+**Clear Labels**
+
+Use terms like "Restart Bot" over vague terms like "Again" for clarity.
+
+**Mix Action Types**
+
+Combine links, flows, and submenus as needed to provide comprehensive functionality.
+
+**Test Thoroughly**
+
+Check on all channels and devices to ensure visibility and proper function.
+
+**Maintain Accessibility**
+
+Use readable fonts and clear contrast. Ensure screen reader compatibility.
+
+**Update Regularly**
+
+Adjust menu based on analytics and user feedback to maintain relevance.
+
+## Troubleshooting
+
+**Menu Not Showing**
+
+Confirm menu is enabled and published. Check channel support and configuration settings.
+
+**User Input Disabled Unintentionally**
+
+Remember disabling input often applies to the whole bot, not individual flows.
+
+**Localization Issues**
+
+Verify language settings are correct. Only button text is localized, not conversation flows.
+
+**Too Many Buttons**
+
+Respect platform limits (e.g., Messenger = 3 per menu level). Use nesting if supported or prioritize most important actions.
+
+**Testing**
+
+Test on all target channels and devices for visibility and function before full deployment.
+
+## References
 
 - [Chatfuel Blog: Persistent Menu](https://chatfuel.com/blog/persistent-menu)
 - [ChatbotBuilder.ai Documentation](https://docs.chatbotbuilder.ai/support/solutions/articles/150000166613-persistent-menu)
@@ -226,30 +303,4 @@ Only localize if your bot supports those languages throughout the user journey.
 - [Messenger Platform API: persistent_menu](https://developers.facebook.com/docs/messenger-platform/reference/messenger-profile-api/persistent-menu/)
 - [YouTube: Persistent Menu in Website Chatbot](https://www.youtube.com/watch?v=4kAlBEgCvwM)
 - [YouTube: Using Persistent Menu Entry Point in Chatfuel](https://www.youtube.com/watch?v=DWovaAjFOOk)
-
-## Try It Yourself!
-
-**Add a Persistent Menu to your chatbot:**
-- Log in to your chatbot builder.
-- Follow the setup instructions for your platform.
-- Test and iterate based on user feedback.
-
-**Need help?**  
-Explore the documentation and video tutorials linked above, or reach out to your platform’s support team.
-
-## Related Keywords
-
-add persistent menu, button persistent menu, persistent menu add, creating persistent menu, navigational menu, disable user input, recommendation quiz, facebook messenger, restart bot, chat bot, menu items, add buttons, menu users, main menu
-
-**Comprehensive Deep-Dive**  
-This glossary consolidates platform documentation, best practices, and implementation details. For official technical API details, see [Meta’s persistent_menu API reference](https://developers.facebook.com/docs/messenger-platform/reference/messenger-profile-api/persistent-menu/).  
-
-For visual and step-by-step tutorials, watch:  
-- [How to Setup Persistent Menu In Website Chatbot (YouTube)](https://www.youtube.com/watch?v=4kAlBEgCvwM)  
-- [How to Use the Persistent Menu Entry Point in Chatfuel (YouTube)](https://www.youtube.com/watch?v=DWovaAjFOOk)
-
-For further reading on customization and advanced use, visit:  
-- [ChatbotBuilder.ai Documentation](https://docs.chatbotbuilder.ai/support/solutions/articles/150000166613-persistent-menu)  
-- [Certainly Knowledge Base](https://support.certainly.io/knowledge/add-a-persistent-menu-to-your-chat)
-
-**Enhance your chatbot now by leveraging these resources and building a Persistent Menu that fits your users’ needs and your business goals.**
+- [Certainly Bot Settings](https://support.certainly.io/knowledge/Individualize-your-chatbot-in-Bot-Settings)

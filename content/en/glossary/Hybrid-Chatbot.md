@@ -11,8 +11,8 @@ keywords:
 - customer service automation
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-05
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 draft: false
 ---
 ## What is a Hybrid Chatbot?

@@ -1,0 +1,167 @@
+---
+title: Einstein Service Agent
+lastmod: '2025-12-19'
+date: '2025-12-19'
+translationKey: einstein-service-agent
+description: Salesforceの自律型AIカスタマーサービスソリューション、Einstein Service Agentをご紹介します。複雑なリクエストを解決し、データを統合し、24時間365日のオムニチャネルサポートを提供します。
+keywords:
+- Einstein Service Agent
+- Salesforce AI
+- 自律型エージェント
+- カスタマーサービス自動化
+- Agentforce
+category: AI Chatbot & Automation
+type: glossary
+draft: false
+e-title: Einstein Service Agent
+term: アインシュタイン サービス エージェント
+url: "/ja/glossary/Einstein-Service-Agent/"
+---
+## Einstein Service Agentとは何か?
+Einstein Service Agentは、Salesforceの完全自律型AIサービスエージェントであり、Agentforceプラットフォームの中核コンポーネントです。静的なフローや事前にスクリプト化された対話に依存する従来のチャットボットとは異なり、Einstein Service Agentは高度な生成AI、Atlas Reasoning Engine、統合されたエンタープライズデータを活用して、微妙な顧客の意図を解釈し、複雑な複数ステップのワークフローを管理し、ビジネスアクションを自律的に実行します。
+
+デジタル労働力のメンバーとして設計されたEinstein Service Agentは、サービスケースの処理、解決、エスカレーション、返品処理、複雑な問い合わせへの対応、ビジネスシステムとの統合を完全に自動で行うことができます。このエージェントは、シンプルな自動応答システムから、コンテキストを理解し、アクションを計画し、以前は人間の判断を必要としていた意思決定を行うことができる高度な推論対応システムへの根本的な転換を表しています。
+
+このプラットフォームは、自然言語理解とSalesforce CRM、Data Cloud、外部ナレッジソースへの深い統合を組み合わせることで、リアルタイムのビジネスデータに基づいた正確でパーソナライズされた応答を提供できます。この基盤により、エージェントはパイロット展開において顧客問い合わせの90%以上を自律的に解決しながら、複雑または機密性の高い問題を完全なコンテキスト転送とともに人間のエージェントにシームレスにエスカレーションできます。
+
+## 主要機能
+
+**人間のような推論と自然言語**  
+Atlas Reasoning Engineは、人間の思考を模倣する熟考的な複数ステップの推論を実現します。エージェントは曖昧な問い合わせを解釈し、複数ターンの会話全体でコンテキストを維持し、ブランドに沿った共感的な応答を提供します。顧客が「インターネットが頻繁に切れて、請求額が高いようです」と言うと、エージェントは技術的問題を診断し、請求を分析し、料金を説明し、解決策を提供します—すべて自然な会話の中で。
+
+**包括的なデータ統合**  
+Salesforce Data Cloud、CRM、外部ナレッジソース(SharePoint、Google Drive、Confluence、ウェブサイト)へのネイティブ接続により、正確でパーソナライズされた回答のためのリアルタイムデータ取得が可能になります。エージェントは、テキスト、画像、音声、動画を含むマルチモーダル入力を処理します。顧客が破損した商品の写真をアップロードすると、購入記録への自動マッチングと保証交換処理がトリガーされます。
+
+**インテリジェントな人間への引き継ぎ**  
+リクエストがAIの境界を超える場合—複雑な例外、機密性の高いトピック、または人間の判断を必要とするシナリオ—エージェントは自動的に人間のエージェントにエスカレーションします。完全な会話コンテキスト、感情分析、関連履歴がシームレスに転送され、顧客のフラストレーションを防ぎ、継続性を確保します。
+
+**エンタープライズグレードの信頼性とセキュリティ**  
+Einstein Trust Layerは、幻覚防止プロトコル、PII(個人識別情報)マスキング、有害性軽減、包括的な監査証跡を通じて、プライバシー、セキュリティ、コンプライアンスを実施します。システムはGDPR、CCPA、HIPAAのコンプライアンスを維持しながら、出力が正確で倫理的かつ監査可能であることを保証します。
+
+**迅速な展開と柔軟性**  
+ローコードのAgent Builderにより、テンプレート、Salesforceコンポーネント、既存のフローを使用した迅速な展開が可能です。組織は数分以内に展開でき、シンプルなナレッジベースとワークフローの更新を通じて、新製品やビジネスニーズに迅速に適応できます。
+
+**オムニチャネルとマルチモーダルサポート**  
+ウェブポータル、メッセージングアプリ(WhatsApp、Facebook Messenger、Apple Messages for Business、SMS)、音声チャネル全体で動作し、エージェントはテキスト、画像、音声、動画のインタラクションをサポートします。顧客は好みのチャネルを通じて、一貫したコンテキスト対応のサービスを利用できます。
+
+## 識別機能:自律エージェント vs. チャットボット vs. コパイロット
+
+| 機能 | 従来のチャットボット | AIコパイロット | Einstein Service Agent |
+|---------|---------------------|------------|------------------------|
+| **意思決定** | ルールベース、スクリプト化 | 人間を支援 | 完全自律 |
+| **会話フロー** | 線形、ツリーベース | 人間と並行 | 動的、コンテキスト対応 |
+| **範囲** | FAQ中心 | 人間がループ内 | エンドツーエンドプロセス |
+| **データ統合** | 基本的なCRMのみ | CRM、限定的な外部 | 統合ビジネスデータ |
+| **人間への引き継ぎ** | 手動または基本的 | 人間が常に存在 | インテリジェント、シームレス |
+| **チャネル** | 単一または少数 | CRM UI、メール | 真のオムニチャネル |
+| **セットアップの複雑さ** | 高い、遅い | 中程度 | 高速、ローコード |
+
+Einstein Service Agentは、意図を自律的に解釈し、複雑なシナリオを推論し、エンタープライズアクションを実行し、インテリジェントにエスカレーションすることで、従来のチャットボットやAIコパイロットを超え、常時人間の監視なしにスケーラブルで人間のようなサービスを提供します。
+
+## アーキテクチャと主要コンポーネント
+
+**Data Cloud**  
+Salesforce CRMと外部ソースからの顧客およびエンタープライズデータを、エージェントがアクセスできる単一のリアルタイムプロファイルに統合します。深いパーソナライゼーションを可能にし、LLMのための検索拡張生成(RAG)をサポートします。
+
+**Atlas Reasoning Engine**  
+エージェントが意図を解釈し、アクションを計画し、非同期、イベント駆動、グラフベースのプロセスを通じてワークフローを実行できるようにする独自のAI「脳」です。主要コンポーネントには、State(短期/長期メモリ)、Flow(論理的アクションフレームワーク)、Side Effects(環境変更アクション)が含まれます。エンジンは応答の関連性が2倍向上し、精度が33%改善したことを実証しました。
+
+**Agent Builder**  
+エージェントのジョブ、スキル、データアクセス、ガードレール、チャネルを定義するためのローコード環境です。テンプレート、ポイント&クリックツール、自然言語プロンプトを提供し、管理者やビジネスユーザーのためのエージェント作成を民主化します。
+
+**Trust Layer**  
+幻覚防止チェック、PIIマスキング、モニタリング、監査証跡を通じて、セキュリティ、プライバシー、コンプライアンスを実施します。出力が信頼性が高く、倫理的で、規制に準拠していることを保証します。
+
+## ビジネスインパクトとユースケース
+
+**定量的メリット**
+- パイロット展開における90%以上の問い合わせ解決率
+- 待ち時間なしの24時間365日セルフサービス
+- 人間のエージェントの手動作業負荷の大幅な削減
+- より迅速で正確な応答による顧客満足度の向上
+
+**業界固有のアプリケーション**
+
+**小売:** 製品推奨、アップセル、返品/交換、注文追跡。顧客がチャットで返品をリクエストすると、エージェントは履歴を確認し、適格性を検証し、返品を処理し、集荷をスケジュールします—すべて自律的に。
+
+**保険:** 請求受付、保険契約照会、書類提出、機密性の高いエスカレーション。エージェントは請求詳細を収集し、保険契約を確認し、必要に応じて機密性の高いケースをライセンスを持つエージェントにエスカレーションします。
+
+**通信:** トラブルシューティング、障害通知、プランサポート。顧客が破損したデバイスの写真を送信すると、エージェントは画像を分析し、保証を確認し、交換を開始し、アップグレードを提案します。
+
+**ヘルスケア:** 予約スケジューリング、給付照会、プライバシーに準拠したデータ処理。患者が予約をリクエストすると、エージェントはリアルタイムのスケジューリングにアクセスし、スロットを提案し、予約し、確認します。
+
+**公共部門:** 市民サポート、ケース管理、政府サービスのためのリアルタイム情報配信。
+
+## 実装と統合
+
+**セットアッププロセス**  
+テンプレート、ローコードフロー、Salesforceコンポーネントを使用して数分以内に展開します。Salesforce Platformとのネイティブ統合は、MuleSoftとAPIを介して拡張されます。
+
+**カスタマイズオプション**  
+Agent Builderを介してエージェントの役割、アクション、ガードレール、チャネルを定義します。すぐに使用できるエージェントアクションとテンプレートのためのSkills LibraryとAgentExchangeマーケットプレイスにアクセスします。
+
+**拡張性**  
+既存のフロー、Apexコード、プロンプトを再利用します。特定のビジネス要件に合わせてカスタムスキルと統合を作成します。
+
+## 使用シナリオの例
+
+**小売返品**  
+顧客:「先週買ったこのジャケットを返品したいです。」  
+エージェント:購入履歴を確認し、返品ポリシーを検証し、返品承認を処理し、配送ラベルを生成し、集荷をスケジュールし、返金タイムラインを確認します—すべて自律的に。
+
+**通信サポート**  
+顧客:*破損したルーターの写真をアップロード*  
+エージェント:画像を分析し、デバイスモデルを識別し、保証状態を確認し、交換プロセスを開始し、即座の接続性のためのトラブルシューティングを提供し、アップグレードオプションを提案します。
+
+**保険請求**  
+顧客:「水害の請求を提出する必要があります。」  
+エージェント:事故の詳細を収集し、保険契約の補償範囲を確認し、請求情報を文書化し、写真をアップロードし、完全なコンテキスト転送とともに機密性の高い評価のためにライセンスを持つ査定人にエスカレーションします。
+
+## 顧客とアナリストの視点
+
+**George Pokorny氏、SVP Global Customer Success、OpenTable:**  
+「Einstein Service Agentの顧客問い合わせ処理における速度と精度は有望です。人間のように理解し、応答し、当社の多様な国別ガイドラインに従います。私たちの人間のエージェントがより高価値の問題に取り組むことを可能にする、サービスチームの不可欠な部分になると見ています。」
+
+**業界アナリスト、Futurum Group:**  
+「Einstein Service Agentは、生成AIの力を使用し、信頼できる企業データでLLMを基盤とすることで、組織がより多くの顧客サービス問題を自律的に理解し、解決できるようにします。最も興味深い機能は、マルチモーダルインタラクションのサポートと、人間へのシームレスな引き継ぎが必要な時を迅速に検出する能力です。」
+
+## よくある質問
+
+**Einstein Service AgentはAIコパイロットとどう違いますか?**  
+コパイロットは人間を支援し、補強しますが、Einstein Service Agentは独立して動作し、問題を解決し、必要な場合にのみ人間にエスカレーションします。常時人間の監視を必要とするのではなく、自律的に機能します。
+
+**セキュリティとコンプライアンス機能は何ですか?**  
+ゼロトラストアーキテクチャに準拠し、インタラクションを暗号化し、PIIをマスキングし、Einstein Trust Layerを通じてGDPR、CCPA、HIPAAに準拠します。
+
+**価格モデルは何ですか?**  
+Agentforceの価格は会話あたり2ドルから始まり、ボリュームディスカウントがあります。最新の条件はSalesforceで確認してください。
+
+**プラットフォームのスケーラビリティはどうですか?**  
+あらゆる規模の組織向けに設計されており、高い同時実行性、複数の言語、パフォーマンス低下なしの広範なカスタマイズをサポートします。
+
+**エージェントは特定の業界向けにカスタマイズできますか?**  
+はい。Agent BuilderとSkills Libraryを通じて、カスタムアクション、独自のデータソース、業界固有のワークフローを構成できます。
+
+**オンボーディングとサポートはどのように処理されますか?**  
+Salesforceは、包括的なオンボーディング、ドキュメント、認定パートナーサポート、カスタマーサクセスプログラムを提供します。
+
+## 参考文献
+
+- [Salesforce Newsroom: Einstein Service Agent Announcement](https://www.salesforce.com/news/stories/einstein-service-agent-announcement/)
+- [Salesforce Agentforce Guide](https://www.salesforce.com/agentforce/guide/)
+- [Engineering Salesforce: Inside the Brain of Agentforce - Atlas Reasoning Engine](https://engineering.salesforce.com/inside-the-brain-of-agentforce-revealing-the-atlas-reasoning-engine/)
+- [Salesforce: How Agentforce Is Redefining Productivity](https://www.salesforce.com/news/stories/agentforce-boosts-customer-experience-sales/)
+- [CEPTES: Salesforce Data Cloud](https://ceptes.com/salesforce-data-cloud/)
+- [Salesforce: How the Atlas Reasoning Engine Powers Agentforce](https://www.salesforce.com/agentforce/what-is-a-reasoning-engine/atlas/)
+- [Chain-of-Thought Reasoning Research](https://arxiv.org/abs/2201.11903)
+- [Salesforce: Unified Knowledge](https://www.salesforce.com/news/stories/unified-knowledge-news/)
+- [Salesforce AI Service Cloud](https://www.salesforce.com/service/?d=cta-body-promo-8)
+- [Einstein Trust Layer](https://www.salesforce.com/artificial-intelligence/trusted-ai/?d=cta-body-promo-8)
+- [Salesforce Ben: Dreamforce 24 Announcements](https://www.salesforceben.com/biggest-dreamforce-24-announcements-everything-in-a-nutshell/)
+- [Futurum Group: Salesforce Debuts Einstein Service Agent](https://futurumgroup.com/insights/salesforce-debuts-einstein-service-agent/)
+- [CEPTES: Next-Gen Agentforce Platform](https://ceptes.com/blogs/salesforces-next-gen-agentforce-platform-revolutionizing-customer-support-with-einstein-service-agent/)
+- [Service Einstein Partner Pocket Guide](https://cloud.mail.salesforce.com/stagingserviceeinsteinpartnerpocketguide)
+- [Trailhead: Agentforce Service Agent Quick Look](https://trailhead.salesforce.com/content/learn/modules/agentforce-service-agent-quick-look/get-started-with-agentforce-service-agent)
+- [Salesforce: Agentforce General Availability Announcement](https://www.salesforce.com/news/press-releases/2024/10/29/agentforce-general-availability-announcement/)
+- [Introduction To Salesforce Einstein Service Agent (YouTube)](https://www.youtube.com/watch?v=qAuxzkgDEkM)
+- [Salesforce: Einstein Service Agent (YouTube)](https://www.youtube.com/watch?v=D0HaL38kXBM)

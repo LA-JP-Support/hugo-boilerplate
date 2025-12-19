@@ -3,6 +3,8 @@ title: "「あの問い合わせ、誰が対応してたっけ？」がなくな
 date: 2025-11-19
 draft: false
 image: "/images/blog/inquiry-management-revolution.png"
+url: "/ja/blog/inquiry-management-revolution/"
+
 ---
 # 月曜朝の悪夢：メールの海で溺れる前に
 

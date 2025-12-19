@@ -5,151 +5,179 @@ description: "A Speech-to-Text Node is a modular component in automation platfor
 keywords: ["Speech-to-Text Node", "Automatic Speech Recognition", "AI workflows", "Audio to Text", "Transcription"]
 category: "AI Chatbot & Automation"
 type: "glossary"
-date: 2025-12-05
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 draft: false
 ---
-## Overview
 
-A **Speech-to-Text Node** forms the foundation of [conversational AI](/en/glossary/conversational-ai/), automation pipelines, and workflow systems by converting spoken language in audio files (voice recordings, calls, or video soundtracks) into accurate, structured text. This transcription can then be analyzed, summarized, translated, or used to trigger further automated processes.
+## What is a Speech-to-Text Node?
+
+A Speech-to-Text Node is a foundational component in conversational AI, automation pipelines, and workflow systems that converts spoken language in audio files—voice recordings, calls, or video soundtracks—into accurate, structured text. This transcription enables downstream analysis, summarization, translation, or automated process triggering, making it essential for voice-enabled applications and knowledge management systems.
+
+The node functions as a modular workflow component that receives audio input, processes it through an Automatic Speech Recognition (ASR) model, and outputs a transcript. This transcript can optionally include word-level timestamps, speaker labels, translations, or structured metadata for further processing.
 
 **Typical Workflow:**
-1. Receives audio input (as a file upload, URL, or variable in the workflow).
-2. Processes the audio using an ASR model such as [OpenAI Whisper](https://platform.openai.com/docs/guides/speech-to-text), [Google Speech-to-Text](https://cloud.google.com/speech-to-text), [Azure Speech Service](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-to-text), or third-party providers like [Rev AI](https://www.rev.ai/).
-3. Outputs a transcript (optionally with word-level timestamps, speaker labels, or translations).
+1. Audio input received (file upload, URL, or workflow variable)
+2. Processing via ASR model (OpenAI Whisper, Google Speech-to-Text, Azure Speech, Rev AI)
+3. Output transcript with optional metadata (timestamps, speaker labels, translations)
 
 **Role in Automation:**
-- Enables chatbots to process voice queries.
-- Transcribes meetings, interviews, or lectures for knowledge management.
-- Automates content indexing and data extraction from voice interactions or media.
+- Enables chatbots to process voice queries
+- Transcribes meetings, interviews, and lectures for knowledge management
+- Automates content indexing and data extraction from voice interactions
+
 ## Key Capabilities
 
-- **Automatic Speech Recognition (ASR):** Converts audio to text using advanced models ([Kore.ai](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/audio-to-text-node/), [LiveKit](https://docs.livekit.io/agents/models/stt/), [Rev AI](https://www.rev.ai/)).
-- **Multilingual Support:** Transcribes speech in multiple languages and dialects ([Google Supported Languages](https://cloud.google.com/speech-to-text/docs/speech-to-text-supported-languages), [OpenAI Whisper](https://platform.openai.com/docs/guides/speech-to-text#supported-languages)).
-- **Translation:** Translates non-English speech into English or other supported languages (provider-specific).
-- **Custom Prompt Instructions:** Accepts instructions for transcription style, speaker labeling, terminology, or error handling.
-- **Flexible Audio Input:** Accepts file uploads, URLs, or variables from previous workflow steps.
-- **Large File Handling:** Processes files up to provider-specific limits (often 25 MB), with support for segmenting larger files.
-- **Timestamps & Speaker Diarization:** Optionally includes word/utterance-level timing and speaker labels (see [LiveKit Plugins](https://docs.livekit.io/agents/models/stt/#plugins)).
-- **Profanity Filtering:** Removes or masks offensive content according to configuration or model defaults.
-- **Custom Vocabulary & Model Adaptation:** Improves recognition of domain-specific terms (see [Google Adaptation](https://cloud.google.com/speech-to-text/docs/adaptation)).
-- **Structured Output (JSON):** Returns data in schemas suitable for downstream processing.
+**Automatic Speech Recognition (ASR)**  
+Converts audio to text using advanced models with high accuracy across diverse accents and audio conditions.
 
-## How It Works
+**Multilingual Support**  
+Transcribes speech in 50-125+ languages and dialects, depending on provider. Major models support global language coverage for international deployments.
 
-1. **Audio Input:**  
-   - The node receives an audio file or URL (e.g., from user upload, cloud storage, or a previous workflow step).
-   - Supported formats typically include MP3, WAV, MP4, M4A, WebM, MPGA, and MPEG ([Kore.ai](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/audio-to-text-node/), [Rev AI](https://www.rev.ai/)).
+**Translation**  
+Translates non-English speech into English or other supported languages in a single processing step, eliminating the need for separate translation workflows.
 
-2. **Model Selection & Preprocessing:**
-   - Choose an ASR model/provider (e.g., Whisper, Google, Azure, AssemblyAI, Deepgram).
-   - Configure language, translation, and additional features (timestamps, speaker IDs, custom prompts).
+**Custom Prompt Instructions**  
+Accepts natural language instructions for transcription style, speaker labeling, terminology preferences, or error handling approaches.
 
-3. **Transcription Process:**
-   - The selected ASR engine processes the audio, generating a text transcript.
-   - Optional features: translation, profanity filtering, formatting, diarization.
+**Flexible Audio Input**  
+Accepts file uploads, URLs, or variables from previous workflow steps, supporting diverse integration patterns.
 
-4. **Output Handling:**
-   - The node outputs the transcript (plain text or structured JSON).
-   - The output is consumed by downstream steps—summarization, analysis, or user feedback.
+**Large File Handling**  
+Processes files up to provider-specific limits (typically 25 MB), with guidance on segmenting larger files at logical boundaries.
 
-**Diagram Example:**  
-![Speech to Text Node Workflow](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/images/how-audio-to-text-works.png)  
-([Source: Kore.ai Documentation](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/audio-to-text-node/))
+**Timestamps & Speaker Diarization**  
+Optionally includes word-level or utterance-level timing and identifies individual speakers in multi-party conversations.
 
-**For LiveKit:**  
-- [LiveKit Inference](https://docs.livekit.io/agents/models/stt/#inference) offers AssemblyAI, Cartesia Ink Whisper, and Deepgram Nova models with various language and specialty options.
+**Profanity Filtering**  
+Removes or masks offensive content according to configuration or model defaults.
+
+**Custom Vocabulary & Model Adaptation**  
+Improves recognition of domain-specific terms through vocabulary lists and model fine-tuning.
+
+**Structured Output (JSON)**  
+Returns data in schemas suitable for downstream processing, including nested metadata.
+
+## How Speech-to-Text Nodes Work
+
+### Audio Input
+
+The node receives an audio file or URL from user upload, cloud storage, or a previous workflow step. Supported formats typically include MP3, WAV, MP4, M4A, WebM, MPGA, and MPEG.
+
+### Model Selection & Preprocessing
+
+**Choose ASR Provider:** Select from OpenAI Whisper, Google Speech-to-Text, Azure Speech Service, AssemblyAI, Deepgram, or other providers.
+
+**Configure Features:** Enable language detection, translation, timestamps, speaker identification, and custom prompts.
+
+### Transcription Process
+
+The ASR engine processes the audio, applying acoustic and language models to generate text. Optional features like translation, profanity filtering, formatting, and diarization are applied during or after transcription.
+
+### Output Handling
+
+The node outputs the transcript in plain text or structured JSON format. Downstream workflow steps consume this output for summarization, analysis, storage, or user feedback.
 
 ## Supported Audio Formats & File Limits
 
-- **Audio Formats:**  
-  - M4A, MP3, WebM, MP4, MPGA, WAV, MPEG ([Kore.ai](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/audio-to-text-node/), [Google](https://cloud.google.com/speech-to-text/docs/encoding), [Rev AI](https://www.rev.ai/)).
+**Audio Formats:**
+- M4A, MP3, WebM, MP4, MPGA, WAV, MPEG
+- Provider support varies; verify compatibility with your chosen ASR service
 
-- **File Size Limits:**  
-  - Typical maximum: **25 MB** per file (varies by provider).
-  - Larger files must be split into segments ≤25 MB, ideally at logical sentence boundaries to preserve context and accuracy ([Kore.ai](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/audio-to-text-node/)).
+**File Size Limits:**
+- Typical maximum: 25 MB per file
+- Larger files must be split into segments ≤25 MB
+- Segment at logical sentence boundaries to preserve context and accuracy
 
-> **Note:** Some platforms accept only URLs as input for security and scalability.
+**Input Methods:**
+- Direct file upload
+- URL reference to hosted audio
+- Variable reference from previous workflow steps
 
-## Step-by-Step Configuration Guide
+Some platforms accept only URLs for security and scalability reasons.
 
-### Example: Configuring a Speech-to-Text Node (Kore.ai)
+## Configuration Guide
 
-**Prerequisites:**
-- Access to the automation platform (e.g., [Kore.ai](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/audio-to-text-node/), [LiveKit](https://docs.livekit.io/agents/models/stt/), [Google Cloud](https://cloud.google.com/speech-to-text), [Azure](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-to-text)).
-- API key or integration credentials (if required).
-- Audio files hosted at accessible URLs or provided by upload.
+### Prerequisites
 
-#### 1. Add the Node to Your Workflow
-- Open your automation builder (e.g., Kore.ai bot flow designer).
-- Locate and drag the **Speech-to-Text** (or **Audio to Text**) node into your workflow.
+- Access to automation platform (Kore.ai, LiveKit, Google Cloud, Azure)
+- API key or integration credentials (if required)
+- Audio files hosted at accessible URLs or available for upload
 
-#### 2. Configure Node Properties
-- **Node Name:** Assign a unique, descriptive name (e.g., “MeetingTranscription”).
-- **Audio File Input:** Reference the variable holding the audio file URL, e.g., `{{context.steps.Start.MeetingAudioUrl}}`.
-- **Model Selection:** Choose the ASR model/provider (e.g., OpenAI Whisper, AssemblyAI, Deepgram).
-- **Feature Toggles:** Enable translation, timestamps, speaker diarization, or profanity filtering as required.
+### Step-by-Step Configuration
 
-#### 3. Set Custom Prompt Instructions
-- Define transcription instructions (e.g., style, speaker labels, error handling).
-- Example:  
-  ```
-  Provide a clean transcript, omitting filler words, with clear speaker labels and correct technical terms.
-  ```
+**1. Add Node to Workflow**  
+Open your automation builder and drag the Speech-to-Text or Audio to Text node into your workflow.
 
-#### 4. (Optional) Define JSON Schema for Output
-- Specify a response schema for structured output.
-- Example:
-  ```json
-  {
-    "type": "object",
-    "properties": {
-      "transcript": {"type": "string"},
-      "timestamps": {"type": "array", "items": {"type": "object", "properties": {
-        "word": {"type": "string"},
-        "start": {"type": "number"},
-        "end": {"type": "number"}
-      }}}
+**2. Configure Node Properties**
+- **Node Name:** Assign unique, descriptive name (e.g., "MeetingTranscription")
+- **Audio File Input:** Reference variable holding audio URL
+- **Model Selection:** Choose ASR provider and specific model
+- **Feature Toggles:** Enable translation, timestamps, speaker diarization, profanity filtering
+
+**3. Set Custom Prompt Instructions**  
+Define transcription style, speaker labeling requirements, terminology preferences, or error handling approaches in natural language.
+
+Example:
+```
+Provide a clean transcript, omitting filler words, with clear speaker labels and correct technical terms.
+```
+
+**4. Define JSON Schema for Output (Optional)**  
+Specify structured output schema for downstream processing:
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "transcript": {"type": "string"},
+    "timestamps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "word": {"type": "string"},
+          "start": {"type": "number"},
+          "end": {"type": "number"}
+        }
+      }
     }
   }
-  ```
+}
+```
 
-#### 5. Connect Success & Failure Paths
-- **On Success:** Route to summarization, translation, or other downstream nodes.
-- **On Failure:** Route to error handling or a fallback node.
+**5. Connect Success & Failure Paths**
+- **On Success:** Route to summarization, translation, or analysis nodes
+- **On Failure:** Route to error handling or fallback nodes
 
-#### 6. Test and Validate
-- Run the workflow with sample inputs.
-- Review the output for completeness and correctness.
-- Adjust configuration as needed.
+**6. Test and Validate**  
+Run workflow with sample inputs, review output for completeness and correctness, and adjust configuration as needed.
 
-**Full Guide:** [Kore.ai Audio to Text Node Documentation](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/audio-to-text-node/)
+## Configuration Parameters
 
-## Configuration Parameters & Advanced Features
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| Audio Input | URL or reference to uploaded audio file | `https://host/path/audio.mp3` |
+| Model | ASR engine/model to use | `OpenAI Whisper-1`, `Chirp 3` |
+| Language Code | Language for transcription (BCP-47) | `en-US`, `fr-FR` |
+| Translation | Enable translation to English | `true` / `false` |
+| Timestamps | Include word/utterance-level timestamps | `true` / `false` |
+| Speaker Labels | Diarization, label speakers in multi-party audio | `true` / `false` |
+| Profanity Filter | Remove or mask offensive words | `true` / `false` |
+| Prompt | Custom instructions for transcription style | See above |
+| JSON Schema | Structured output for downstream processing | See above |
+| Custom Vocab | Domain-specific words to bias recognition | `["AcmeCorp", "API Gateway"]` |
+| Input Variable | Context variable holding input audio file | `{{context.steps.Start.AudioURL}}` |
 
-| Parameter        | Description                                                         | Example / Options                  |
-|------------------|---------------------------------------------------------------------|------------------------------------|
-| Audio Input      | URL or reference to uploaded audio file                             | `https://host/path/audio.mp3`      |
-| Model            | ASR engine/model to use                                             | `OpenAI Whisper-1`, `Chirp 3`, `AssemblyAI Universal-Streaming` |
-| Language Code    | Language for transcription (BCP-47 code)                            | `en-US`, `fr-FR`                   |
-| Translation      | Enable translation to English (if supported)                        | `true` / `false`                   |
-| Timestamps       | Include word/utterance-level timestamps                             | `true` / `false`                   |
-| Speaker Labels   | Diarization, label speakers in multi-party audio                    | `true` / `false`                   |
-| Profanity Filter | Remove or mask offensive words                                      | `true` / `false`                   |
-| Prompt           | Custom instructions for transcription style                         | See above                          |
-| JSON Schema      | Structured output for downstream processing                         | See above                          |
-| Custom Vocab     | List of domain-specific words to bias recognition                   | `["AcmeCorp", "API Gateway"]`      |
-| Input Variable   | Context variable holding input audio file URL/reference             | `{{context.steps.Start.AudioURL}}` |
+## Response Formats & Output
 
-> **LiveKit:** [Advanced parameters and custom STT](https://docs.livekit.io/agents/models/stt/#additional-parameters)
+**Plain Text Output:**  
+Default transcript as continuous text string.
 
-## Response Formats & Output Handling
+**Structured JSON Output:**  
+Includes transcript, timestamps, speaker labels, and confidence scores.
 
-**Output Types:**
-- **Plain Text:** Default transcript.
-- **Structured JSON:** Includes transcript, timestamps, speaker labels, and (optionally) confidence scores.
-
-**Example Output:**
+**Example:**
 ```json
 {
   "transcript": "Hello, thank you for calling AcmeCorp. How may I assist you today?",
@@ -163,77 +191,98 @@ A **Speech-to-Text Node** forms the foundation of [conversational AI](/en/glossa
 }
 ```
 
-- **Rev AI:** Offers insights such as [sentiment analysis](/en/glossary/sentiment-analysis/), topic extraction, summarization, and forced alignment ([Rev AI Features](https://www.rev.ai/)).
+**Advanced Features:**  
+Rev AI offers sentiment analysis, topic extraction, summarization, and forced alignment as additional output options.
 
 ## Common Use Cases
 
-- **Meeting and Lecture Transcription:**  
-  Transcribe meetings, interviews, or lectures into searchable, indexable text.
-- **Customer Support Automation:**  
-  Transcribe voice interactions for chatbots, CRM, and help desk systems.
-- **Subtitle and Caption Generation:**  
-  Generate subtitles for video content, with timestamp alignment.
-- **Voice Command Processing:**  
-  Convert spoken commands into actionable text for voice-enabled apps.
-- **Audio-based Translation:**  
-  Transcribe and translate multilingual audio for localization and accessibility.
-- **Healthcare Documentation:**  
-  Convert medical dictations and consultations into patient records.
-- **Call Center Analysis:**  
-  Transcribe recorded calls for quality assurance, compliance, or analytics.
-- **Market Research:**  
-  Transcribe focus group or interview recordings for further analysis.
+**Meeting and Lecture Transcription**  
+Transcribe meetings, interviews, or lectures into searchable, indexable text for knowledge management and compliance.
 
-- [Rev AI Use Cases](https://www.rev.ai/)
+**Customer Support Automation**  
+Transcribe voice interactions for chatbots, CRM systems, and help desk platforms to enable automated routing and analysis.
 
-## Integration Tips & Best Practices
+**Subtitle and Caption Generation**  
+Generate subtitles for video content with timestamp alignment for accessibility and localization.
 
-- **Context Variables:** Use variables to reference audio URLs or data dynamically.
-- **Prompt Engineering:** Tailor instructions for speaker labeling, terminology, or formatting for accuracy.
-- **Batch Processing:** For large volumes, utilize batch or asynchronous modes ([Google Batch Transcription](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/batch-transcription)).
-- **Audio Preprocessing:** Ensure clear audio, minimal noise, and compatible format.
-- **File Segmentation:** Split long recordings at logical breaks.
-- **Model Adaptation:** Provide custom vocabulary lists for better performance in specialized domains ([Google Adaptation](https://cloud.google.com/speech-to-text/docs/adaptation)).
-- **Compliance & Privacy:** Enable profanity filtering, and select appropriate data residency options.
+**Voice Command Processing**  
+Convert spoken commands into actionable text for voice-enabled applications and smart devices.
 
-## Error Handling & Performance Monitoring
+**Audio-Based Translation**  
+Transcribe and translate multilingual audio in a single step for localization and accessibility.
 
-- **Error Types:**
-  - Unsupported file format or exceeded size limits.
-  - Invalid/inaccessible audio URLs.
-  - Model selection/configuration errors.
-  - Output schema mismatches.
+**Healthcare Documentation**  
+Convert medical dictations and consultations into patient records with specialized medical vocabulary support.
 
-- **Error Handling:**
-  - Validate input before processing.
-  - Implement retry logic or fallback flows.
-  - Log errors and monitor via analytics dashboards.
+**Call Center Analysis**  
+Transcribe recorded calls for quality assurance, compliance monitoring, and performance analytics.
 
-- **Performance Metrics:**
-  - Minutes of audio processed (for cost/usage tracking).
-  - Token usage (for LLM-enabled ASR systems).
-  - Response times and throughput.
+**Market Research**  
+Transcribe focus group or interview recordings for thematic analysis and reporting.
 
-- [Kore.ai Model Analytics Dashboard](https://docs.kore.ai/agent-platform/settings/monitoring/analytics/model-analytics-dashboard/)  
-- [Google Speech-to-Text Monitoring](https://cloud.google.com/monitoring)
+## Integration Best Practices
+
+**Use Context Variables**  
+Reference audio URLs or data dynamically to support flexible workflow design and reusability.
+
+**Employ Prompt Engineering**  
+Tailor instructions for speaker labeling, terminology, or formatting to improve accuracy for specific use cases.
+
+**Implement Batch Processing**  
+For large volumes, utilize batch or asynchronous modes to optimize resource usage and reduce processing time.
+
+**Preprocess Audio Quality**  
+Ensure clear audio, minimal background noise, and compatible format before processing to maximize transcription accuracy.
+
+**Segment Files Strategically**  
+Split long recordings at logical breaks (sentence boundaries, speaker changes) to maintain context when approaching size limits.
+
+**Provide Custom Vocabulary**  
+Submit domain-specific term lists to improve recognition of technical jargon, product names, or industry terminology.
+
+**Configure Compliance Features**  
+Enable profanity filtering and select appropriate data residency options to meet regulatory requirements.
+
+## Error Handling & Monitoring
+
+### Error Types
+
+- Unsupported file format or exceeded size limits
+- Invalid or inaccessible audio URLs
+- Model selection or configuration errors
+- Output schema mismatches
+
+### Error Handling Strategies
+
+- Validate input format and size before processing
+- Implement retry logic with exponential backoff
+- Design fallback flows for critical workflows
+- Log errors with detailed context for troubleshooting
+
+### Performance Metrics
+
+- Minutes of audio processed (for cost/usage tracking)
+- Token usage (for LLM-enabled ASR systems)
+- Response times and throughput
+- Error rates by error type
 
 ## Provider Comparison
 
-| Provider            | Key Features                                                                   | Languages        | Notes / Links |
-|---------------------|--------------------------------------------------------------------------------|------------------|---------------|
-| **OpenAI Whisper**  | Multilingual, translation to English, robust ASR, profanity filtering          | 50+              | [Whisper Docs](https://platform.openai.com/docs/guides/speech-to-text) |
-| **Google Speech-to-Text** | 125+ languages, streaming & batch, diarization, adaptation, filtering    | 125+             | [Google Cloud Speech-to-Text](https://cloud.google.com/speech-to-text) |
-| **Azure Speech**    | Real-time/batch, custom models, industry adaptation, CLI & SDK                 | 100+             | [Azure Speech Overview](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-to-text) |
-| **Rev AI**          | Asynchronous & streaming, human and machine transcription, insights, low WER   | 58+              | [Rev AI](https://www.rev.ai/) |
-| **LiveKit**         | Pluggable models (AssemblyAI, Cartesia, Deepgram), automatic model selection   | Model-dependent  | [LiveKit STT](https://docs.livekit.io/agents/models/stt/) |
-| **VectorShift**     | Node-based pipelines, variable/upload input, LLM integration                   | Provider-dependent| [VectorShift Docs](https://docs.vectorshift.ai/platform/pipelines/multi-modal/speech-to-text) |
+| Provider | Key Features | Languages | Notes |
+|----------|-------------|-----------|-------|
+| **OpenAI Whisper** | Multilingual, translation, robust ASR, profanity filtering | 50+ | Best for general-purpose transcription |
+| **Google Speech-to-Text** | 125+ languages, streaming & batch, diarization, adaptation | 125+ | Strong enterprise features |
+| **Azure Speech** | Real-time/batch, custom models, industry adaptation | 100+ | Deep Microsoft ecosystem integration |
+| **Rev AI** | Asynchronous & streaming, human and machine transcription | 58+ | Hybrid human/AI options |
+| **LiveKit** | Pluggable models (AssemblyAI, Cartesia, Deepgram) | Model-dependent | Flexible for real-time applications |
+| **VectorShift** | Node-based pipelines, LLM integration | Provider-dependent | Best for complex workflows |
 
-## Illustrative Examples
+## Implementation Examples
 
-### Example 1: Meeting Transcription Node (Kore.ai)
+### Example 1: Meeting Transcription (Kore.ai)
 
 **Prompt:**  
-“Use direct speech and highlight problem or challenge-related vocabulary.”
+"Use direct speech and highlight problem or challenge-related vocabulary."
 
 **Input:**
 ```json
@@ -247,29 +296,32 @@ A **Speech-to-Text Node** forms the foundation of [conversational AI](/en/glossa
 Speaker 1: We're experiencing recurring issues with our API gateway.
 Speaker 2: The main challenge is integrating external authentication.
 ```
-([Kore.ai Example](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/audio-to-text-node/))
 
 ### Example 2: Google Speech-to-Text API (Node.js)
 
-**Code Sample:**
 ```javascript
 const speech = require('@google-cloud/speech');
 const client = new speech.SpeechClient();
 
 async function transcribe() {
   const audio = { uri: 'gs://cloud-samples-data/speech/brooklyn_bridge.raw' };
-  const config = { encoding: 'LINEAR16', sampleRateHertz: 16000, languageCode: 'en-US' };
+  const config = { 
+    encoding: 'LINEAR16', 
+    sampleRateHertz: 16000, 
+    languageCode: 'en-US' 
+  };
   const request = { audio, config };
   const [response] = await client.recognize(request);
-  const transcription = response.results.map(r => r.alternatives[0].transcript).join('\n');
+  const transcription = response.results
+    .map(r => r.alternatives[0].transcript)
+    .join('\n');
   console.log(`Transcription: ${transcription}`);
 }
 
 transcribe();
 ```
-[Full Google Codelab](https://codelabs.developers.google.com/codelabs/cloud-speech-text-node)
 
-### Example 3: LiveKit STT Model Usage (Python)
+### Example 3: LiveKit STT Model (Python)
 
 ```python
 from livekit.agents import AgentSession
@@ -279,15 +331,41 @@ session = AgentSession(
     # ... llm, tts, etc.
 )
 ```
-[LiveKit Usage Docs](https://docs.livekit.io/agents/models/stt/#usage)
 
-## Technical Notes & Edge Cases
+## Technical Considerations
 
-- **Token Limits:** Some ASR models have input token limits (e.g., Whisper: 224 tokens).
-- **Edge Audio Cases:**  
-  - For files near the size limit, segment at logical boundaries.
-  - Maintain sentence integrity when splitting.
-- **Profanity and Content Filtering:**  
-  - Removal is default for some models; configurable in others.
-- **Speaker Diarization:**  
-  - Not universally supported—verify with provider
+**Token Limits:**  
+Some ASR models have input token limits (e.g., Whisper: 224 tokens). Plan segmentation strategies for long-form content.
+
+**Edge Audio Cases:**  
+For files near size limits, segment at logical boundaries and maintain sentence integrity when splitting.
+
+**Profanity and Content Filtering:**  
+Removal may be default for some models; verify configuration options for your use case.
+
+**Speaker Diarization:**  
+Not universally supported across all providers—verify availability and accuracy for multi-speaker scenarios.
+
+**Real-Time vs Batch:**  
+Choose between streaming (real-time) and batch processing based on latency requirements and cost optimization.
+
+## References
+
+- [Kore.ai Audio to Text Node Documentation](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/audio-to-text-node/)
+- [OpenAI Whisper Documentation](https://platform.openai.com/docs/guides/speech-to-text)
+- [Google Cloud Speech-to-Text](https://cloud.google.com/speech-to-text)
+- [Google Speech-to-Text Supported Languages](https://cloud.google.com/speech-to-text/docs/speech-to-text-supported-languages)
+- [Google Speech-to-Text Encoding](https://cloud.google.com/speech-to-text/docs/encoding)
+- [Google Speech-to-Text Adaptation](https://cloud.google.com/speech-to-text/docs/adaptation)
+- [Google Cloud Monitoring](https://cloud.google.com/monitoring)
+- [Azure Speech Service Overview](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-to-text)
+- [Azure Batch Transcription](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/batch-transcription)
+- [Rev AI](https://www.rev.ai/)
+- [LiveKit STT Documentation](https://docs.livekit.io/agents/models/stt/)
+- [LiveKit STT Inference](https://docs.livekit.io/agents/models/stt/#inference)
+- [LiveKit STT Plugins](https://docs.livekit.io/agents/models/stt/#plugins)
+- [LiveKit STT Usage](https://docs.livekit.io/agents/models/stt/#usage)
+- [LiveKit STT Additional Parameters](https://docs.livekit.io/agents/models/stt/#additional-parameters)
+- [VectorShift Speech-to-Text Documentation](https://docs.vectorshift.ai/platform/pipelines/multi-modal/speech-to-text)
+- [Kore.ai Model Analytics Dashboard](https://docs.kore.ai/agent-platform/settings/monitoring/analytics/model-analytics-dashboard/)
+- [Google Codelabs: Cloud Speech Text Node](https://codelabs.developers.google.com/codelabs/cloud-speech-text-node)

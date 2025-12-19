@@ -1,161 +1,184 @@
 ---
 title: セマンティックルーティング
 translationKey: semantic-routing
-description: セマンティックルーティングは、ベクトル類似度を用いて意味的な内容(意図)を評価し、ユーザーのクエリを専門的なエージェント、プロンプト、またはデータソースに振り分けます。
-keywords: ["セマンティックルーティング", "AIシステム", "ベクトル類似度", "チャットボット自動化", "LLMルーティング"]
+description: セマンティックルーティングは、ベクトル類似度を用いて意味的な内容(意図)を評価することで、ユーザーのクエリを専門的なエージェント、プロンプト、またはデータソースに振り分けます。
+keywords:
+- セマンティックルーティング
+- AIシステム
+- ベクトル類似度
+- チャットボット自動化
+- LLMルーティング
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: '2025-12-19'
+lastmod: '2025-12-19'
 draft: false
-term: せまんてぃっくるーてぃんぐ
-reading: セマンティックルーティング
-kana_head: か
 e-title: Semantic Routing
+term: せまんてぃっくるーてぃんぐ
+url: "/ja/glossary/Semantic-Routing/"
 ---
 ## セマンティックルーティングとは?
+セマンティックルーティングは、AIシステムにおける意思決定レイヤーであり、キーワードや静的なインテントラベルではなく、セマンティック(意味的)な意味に基づいて、ユーザー入力を事前定義されたアクション、エージェント、またはデータソースにマッチングします。テキストのベクトル埋め込み(数値表現)を使用してユーザークエリの根底にある意図を測定し、このベクトルを事前定義された「ルート」(カテゴリ、エージェント、またはワークフロー)のベクトルと比較して、最もセマンティック的に類似したマッチを選択します。
 
-セマンティックルーティングは、AIシステムにおける意思決定レイヤーであり、ユーザー入力を、キーワードや静的なインテントラベルではなく、その**セマンティック(意味的)な意味**に基づいて、事前定義されたアクション、エージェント、またはデータソースにマッチングします。テキストの数値表現であるベクトル埋め込みを使用してユーザークエリの根底にあるインテントを測定し、このベクトルを事前定義された「ルート」(カテゴリ、エージェント、またはワークフロー)のベクトルと比較し、最もセマンティック的に類似したマッチを選択します。
+キーワードベースのアプローチとは異なり、セマンティックルーティングは、ユーザーが新しい方法や曖昧な方法でリクエストを表現した場合でも意図を認識します。例えば、「アカウントにロックアウトされました、どうすればいいですか?」という質問は、ユーザーが「パスワードをリセット」という正確なフレーズを使用していなくても、パスワード回復に正しくルーティングされます。このセマンティック理解により、自然言語のバリエーションに適応する、より柔軟で正確、かつユーザーフレンドリーなAIシステムが実現されます。
 
-キーワードベースのアプローチとは異なり、セマンティックルーティングは、ユーザーが新規または曖昧な方法でリクエストを表現した場合でもインテントを認識します。たとえば、「アカウントにロックアウトされました、どうすればいいですか?」は、ユーザーが「パスワードリセット」という正確なフレーズを使用していなくても、パスワード回復に正しくルーティングされます。
+セマンティックルーティングは、ユーザー入力と下流処理の間に位置する高速でコスト効率の高いオーケストレーションレイヤーとして機能し、すべての決定にLLM推論のオーバーヘッドをかけることなく、インテリジェントなリクエスト配信を可能にします。
 
-**出典:**  
-- [Deepchecks Glossary: Semantic Router](https://www.deepchecks.com/glossary/semantic-router/)
-- [Giskard AI Glossary: Semantic Router](https://www.giskard.ai/glossary/semantic-router)
+## コアコンポーネント
 
-## 主要コンポーネント
+### ルート
 
-### 1. ルート
-事前定義されたカテゴリ、エージェント、またはワークフロー。各ルートは、そのルートのインテントを代表する「発話」(サンプルクエリ)のセットによって定義されます。ルートは、LLM、API呼び出し、または専用ワークフローをトリガーする場合があります。
+異なる意図やアクションを表す事前定義されたカテゴリ、エージェント、またはワークフロー。各ルートは、そのルートの意図を代表する「発話」(サンプルクエリ)のセットによって定義されます。ルートは、LLM、API呼び出し、データベースクエリ、または専用ワークフローをトリガーする場合があります。
 
-### 2. 発話
-各ルートのセマンティック「プロファイル」を定義するサンプルテキスト入力。これらは、ユーザーが使用する可能性のある代表的なクエリまたはフレーズであり、ベクトルとして埋め込まれます。
+### 発話
 
-### 3. 埋め込みモデル
-テキストをセマンティックな意味を捉える数値ベクトルに変換する機械学習モデル。一般的なプロバイダーには以下が含まれます:
-- [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings)
-- [Cohere Embeddings](https://cohere.com/embed)
-- [Hugging Face Transformers](https://huggingface.co/docs/tokenizers/en/api/encoding)
-- [Azure AI Search](https://devblogs.microsoft.com/ise/semantic-routing-using-azure-ai-search/)
+各ルートのセマンティック「プロファイル」を定義するサンプルテキスト入力。これらは、ユーザーが使用する可能性のある代表的なクエリやフレーズであり、ベクトルとして埋め込まれてルートのセマンティックシグネチャを作成します。
 
-### 4. ベクトルストア / セマンティック検索エンジン
-類似性メトリクスを使用して埋め込みを保存および検索するためのデータベース。人気のあるオプション:
-- [Pinecone](https://www.pinecone.io/)
-- [Qdrant](https://qdrant.tech/)
-- [Azure AI Search](https://devblogs.microsoft.com/ise/semantic-routing-using-azure-ai-search/)
+### 埋め込みモデル
 
-### 5. 類似性メトリクス
-ベクトルの近さをスコアリングするために使用される数学的関数(例:[コサイン類似度](/ja/glossary/cosine-similarity/))で、どのルートが受信クエリに最も近いかを決定します。
+テキストをセマンティックな意味を捉える数値ベクトルに変換する機械学習モデル。埋め込みは、高次元空間で概念的関係を表現することにより、類似性ベースのマッチングを可能にします。一般的なプロバイダーには、OpenAI Embeddings、Cohere Embeddings、Hugging Face Transformers、Azure AI Searchなどがあります。
 
-### 6. ルーティングレイヤー
-ユーザークエリの埋め込みとルートベクトルを比較し、最適なマッチを選択し(類似性閾値を超える場合)、必要に応じてフォールバックロジックを適用するロジック。
+### ベクトルストア / セマンティック検索エンジン
 
-**出典:**  
-- [Deepchecks: How Semantic Router Works](https://www.deepchecks.com/glossary/semantic-router/)
-- [Pryon AI Glossary: Embeddings, Vector Store](https://www.pryon.com/landing/rag-definition-and-llm-glossary)
+類似性メトリクスを使用して埋め込みを保存および検索するためのデータベース。高速な最近傍探索に最適化されており、リアルタイムのルートマッチングを可能にします。人気のあるオプションには、Pinecone、Qdrant、FAISS、Azure AI Searchなどがあります。
+
+### 類似性メトリクス
+
+ベクトルの近さをスコアリングするために使用される数学的関数(通常はコサイン類似度)で、どのルートが受信クエリに最も近いかを決定します。スコアが高いほど、セマンティックな整合性が強いことを示します。
+
+### ルーティングレイヤー
+
+ユーザークエリの埋め込みとルートベクトルを比較し、最適なマッチを選択し(類似性閾値を超える場合)、必要に応じてフォールバックロジックを適用するロジック。このレイヤーは意思決定プロセスを調整し、エッジケースを処理します。
 
 ## セマンティックルーティングの仕組み
 
 ### ステップバイステップのワークフロー
 
-1. **ユーザークエリ:** ユーザーが自由形式の質問またはコマンドを送信します。
-2. **テキスト埋め込み:** クエリが埋め込みモデルを使用してベクトルに変換されます。
-3. **ルート定義:** 各ルートは、ベクトルとして埋め込まれた1つ以上の例示発話に関連付けられます。
-4. **類似性検索:** システムは、クエリベクトルとすべてのルート発話ベクトル間の類似性(例:[コサイン類似度](/ja/glossary/cosine-similarity/))を計算します。
-5. **ルーティング決定:** 最も高い類似性(閾値以上)を持つルートが選択されます。
-6. **アクション/フォールバック:** マッチしたルートが特定のアクションをトリガーするか、マッチが十分に強くない場合はフォールバック/デフォルトルートが使用されます。
+**1. ユーザークエリ:** ユーザーが自由形式の質問またはコマンドを送信
 
-**図:**
+**2. テキスト埋め込み:** クエリが埋め込みモデルを使用してベクトルに変換される
+
+**3. ルート定義:** 各ルートは1つ以上の例示発話に関連付けられ、ベクトルとして埋め込まれる
+
+**4. 類似性検索:** システムがクエリベクトルとすべてのルート発話ベクトル間の類似性(例:コサイン類似度)を計算
+
+**5. ルーティング決定:** 最も高い類似性(閾値以上)を持つルートが選択される
+
+**6. アクション/フォールバック:** マッチしたルートが特定のアクションをトリガーするか、マッチが十分に強くない場合はフォールバック/デフォルトルートが使用される
+
+**ワークフロー例:**
+
 ```plaintext
-ユーザークエリ
-   |
-   v
-[埋め込みモデル] ---> クエリベクトル
-   |
-   v
-[ルート埋め込みと比較] --(類似性計算)--> 最適マッチルート
-   |
-   v
-[エージェント / LLM / ワークフローをトリガー]
+ユーザークエリ: "アカウントに入れません"
+   ↓
+[埋め込みモデル] → クエリベクトル
+   ↓
+[類似性検索] → ルートベクトルと比較
+   ↓
+最適マッチ: "アカウントアクセス"ルート(類似度: 0.92)
+   ↓
+[アクション実行] → パスワードリセットワークフローをトリガー
 ```
-
-**出典:**  
-- [Deepchecks: How Semantic Router Works](https://www.deepchecks.com/glossary/semantic-router/)
-- [Giskard: Understanding Semantic Routing](https://www.giskard.ai/glossary/semantic-router)
 
 ## 従来のルーティング方法との比較
 
-| ルーティング方法          | 仕組み                      | 長所                                      | 短所                                        | 理想的なユースケース                  |
-|------------------------|-----------------------------------|-------------------------------------------|---------------------------------------------|-----------------------------------|
-| セマンティックルーティング       | ベクトル類似性検索           | 低コスト、低レイテンシ、スケーラブル           | 曖昧/マルチインテントには効果が低い   | 大量、ドメイン固有      |
-| キーワードルーティング        | 完全/部分キーワードマッチ        | 超高速、実装が容易             | 脆弱、低リコール、高メンテナンス       | シンプルで明確に定義されたワークフロー    |
-| LLMルーター          | プロンプトベースのLLM決定          | 正確、柔軟、コンテキスト対応      | 高コスト、低速、プロンプト設計が必要   | ニュアンスのある、コンテキスト対応ルーティング    |
-| マルチエージェント            | タスク分解、エージェントチーム    | モジュラー、拡張可能、強力              | 複雑、高リソース使用                  | 複雑、マルチステップ自動化    |
-| RAG (Retrieval-Augmented Generation) | セマンティック検索 + LLM | コンテキスト対応、最新の回答            | 高レイテンシ、ハルシネーションリスク            | 知識集約型チャット          |
+| ルーティング方法 | 仕組み | 長所 | 短所 | 理想的なユースケース |
+|----------------|-------------|------|------|-----------------|
+| **セマンティックルーティング** | ベクトル類似性検索 | 低コスト、低レイテンシ、スケーラブル | 曖昧/複数意図には効果が低い | 大量、ドメイン特化型 |
+| **キーワードルーティング** | 完全/部分キーワードマッチ | 超高速、実装が容易 | 脆弱、低再現率、高メンテナンス | シンプルで明確なワークフロー |
+| **LLMルーター** | プロンプトベースのLLM決定 | 正確、柔軟、コンテキスト対応 | 高コスト、低速、プロンプト設計が必要 | ニュアンスのある、コンテキスト対応ルーティング |
+| **マルチエージェント** | タスク分解、エージェントチーム | モジュラー、拡張可能、強力 | 複雑、高リソース使用 | 複雑な多段階自動化 |
+| **RAG** | セマンティック検索 + LLM | コンテキスト対応、最新の回答 | 高レイテンシ、幻覚リスク | 知識集約型チャット |
 
-**出典:**  
-- [Deepchecks: Semantic Router vs RAG](https://www.deepchecks.com/glossary/semantic-router/)
-- [Pryon: RAG Definition](https://www.pryon.com/landing/what-is-retrieval-augmented-generation)
+## 主な利点
 
-## メリット
+**速度と効率性**  
+ベクトル類似性検索は、LLM推論(5000ms以上)と比較して非常に高速(通常100ms)であり、大規模なリアルタイムルーティング決定を可能にします。
 
-- **速度:** ベクトル類似性検索は、LLM推論(5000ms以上)と比較して非常に高速(通常100ms)です。
-- **スケーラビリティ:** 数千のルートをサポートし、LLMのコンテキスト制限を超えます。
-- **コスト効率:** 高価なLLM呼び出しの必要性を削減します。
-- **安全性と決定性:** 事前定義されたパスにのみルーティングし、ハルシネーションのリスクを最小限に抑えます。
-- **カスタマイズ性:** 開発者は、任意のドメインに対してルートと発話を定義、調整、最適化できます。
-- **拡張性:** 新しい発話をアップロードすることで新しいルートを追加—再トレーニング不要。
-- **アーキテクチャの柔軟性:** 任意の埋め込みモデルまたはベクトルデータベースで動作します。
+**コスト最適化**  
+ベクトル比較による単純なルーティング決定を処理することで、高価なLLM呼び出しの必要性を減らし、運用コストを大幅に削減します。
 
-**出典:**  
-- [Deepchecks: Features of Semantic Router](https://www.deepchecks.com/glossary/semantic-router/)
-- [Giskard: Features and Benefits](https://www.giskard.ai/glossary/semantic-router)
+**スケーラビリティ**  
+数千のルートをサポートし、LLMのコンテキスト制限を超えます。ベクトルデータベースは、大規模展開のために数百万の埋め込みを効率的に処理できます。
 
-## トレードオフと制限事項
+**安全性と決定性**  
+事前定義されたパスにのみルーティングし、LLMベースのルーティングで一般的な幻覚や予期しない動作のリスクを最小限に抑えます。
 
-- **ニュアンスのあるまたは複数部分のクエリ:** 複数のインテントを含むクエリや、ドメイン横断的な推論を必要とするクエリに苦労します。
-- **ルート定義の品質:** 効果は、各ルートに対して適切に選択された発話に依存します。
-- **曖昧性:** エッジケースのクエリは、フォールバックメカニズムまたはLLMベースのルーティングへのエスカレーションを必要とする場合があります。
-- **限定的な深い理解:** 完全な言語理解の代替ではありません。ハイブリッドシステムにおける「第一線の防御」として最適です。
+**カスタマイズ性**  
+開発者は、モデルの再トレーニングなしに、任意のドメインに対してルートと発話を定義、調整、最適化できます。
 
-**出典:**  
-- [Deepchecks: Trade-offs](https://www.deepchecks.com/glossary/semantic-router/)
+**拡張性**  
+新しい発話をアップロードすることで新しいルートを追加—再トレーニングは不要。ルートは使用パターンに基づいて動的に更新できます。
+
+**アーキテクチャの柔軟性**  
+任意の埋め込みモデルまたはベクトルデータベースと連携し、ベンダーロックインを回避し、テクノロジースタックのカスタマイズを可能にします。
+
+## 制限とトレードオフ
+
+**ニュアンスのある、または複数部分のクエリ**  
+複数の意図を含むクエリやドメイン横断的な推論を必要とするクエリに苦戦します。複雑なケースではLLMベースのルーティングへのエスカレーションが必要な場合があります。
+
+**ルート定義の品質**  
+効果は各ルートに対して適切に選択された発話に依存します。発話の選択が不適切だと誤ルーティングにつながります。
+
+**曖昧性の処理**  
+エッジケースのクエリは、曖昧さ解消のためにフォールバックメカニズムまたはLLMベースのルーティングへのエスカレーションが必要な場合があります。
+
+**限定的な深い理解**  
+完全な言語理解の代替ではありません。複数のルーティングアプローチを組み合わせたハイブリッドシステムにおける「第一線の防御」として最適です。
 
 ## 一般的なユースケース
 
-### 1. カスタマーサポート
-- **シナリオ:** 「アカウントにアクセスできません」を技術サポートに、「価格はいくらですか?」を営業にルーティング。
-- **メリット:** 誤ルーティングを削減し、ドメインエキスパートが適切なクエリを処理することを保証します。
+### カスタマーサポート
 
-### 2. コンテンツモデレーション
-- **用途:** 有害またはポリシー違反のコンテンツを検出し、モデレーションワークフローにルーティングします。
+**シナリオ:** 「アカウントにアクセスできません」をテクニカルサポートに、「価格はいくらですか?」を営業にルーティング
 
-### 3. パーソナライゼーション
-- **用途:** 「もっとフォーマルに話してもらえますか?」などの手がかりを認識し、応答のトーン/ペルソナを切り替えます。
+**利点:** 誤ルーティングを削減し、ドメインエキスパートが適切なクエリを処理することを保証し、初回接触解決率を向上
 
-### 4. マルチソースRAG
-- **用途:** クエリを正しいドメイン固有のデータベース(例:HR、財務、技術文書)に誘導します。
+### コンテンツモデレーション
 
-### 5. APIオーケストレーション
-- **用途:** ユーザーリクエストに対して外部API、ローカル関数、またはLLMを呼び出すかどうかを決定します。
+**アプリケーション:** 有害またはポリシー違反のコンテンツを検出し、モデレーションワークフローにルーティング
 
-**出典:**  
-- [Giskard: Use Cases](https://www.giskard.ai/glossary/semantic-router)
-- [Deepchecks: Use Cases](https://www.deepchecks.com/glossary/semantic-router/)
+**利点:** 自動コンテンツフィルタリング、リアルタイム安全性の実施、モデレーションオーバーヘッドの削減
 
-## 運用および戦略的考慮事項
+### パーソナライゼーション
 
-- **第一線の防御:** 高価なLLMを呼び出す前の高速で決定論的なルーティング。
-- **ハイブリッドオーケストレーション:** 制御と効率のために、LLMルーターおよびエージェントオーケストレーションと組み合わせます。
-- **更新とスケーリング:** 発話ベクトルを介してルートを簡単に更新、追加、または削除します。
-- **データセキュリティ:** 機密クエリは、外部プロバイダーにデータを送信せずにルーティングできます。
-- **ベンダー独立性:** オープンソースおよび商用の埋め込みモデル/ベクトルストアの両方で動作します。
+**アプリケーション:** 「もっとフォーマルに話してもらえますか?」などの手がかりを認識し、応答トーン/ペルソナを切り替え
 
-**出典:**  
-- [Deepchecks: Strategic Considerations](https://www.deepchecks.com/glossary/semantic-router/)
+**利点:** ユーザー設定への動的適応、ユーザーエクスペリエンスの向上、コンテキスト対応インタラクション
+
+### マルチソースRAG
+
+**アプリケーション:** クエリを正しいドメイン特化型データベース(例:HR、財務、技術文書)に誘導
+
+**利点:** 専門知識ベースからの正確な検索、無関係な結果の削減、応答時間の短縮
+
+### APIオーケストレーション
+
+**アプリケーション:** ユーザーリクエストに対して外部API、ローカル関数、またはLLMを呼び出すかどうかを決定
+
+**利点:** リソース利用の最適化、コスト削減、インテリジェントなワークフロー自動化
+
+## 戦略的考慮事項
+
+**第一線の防御**  
+高価なLLMを呼び出す前の高速で決定論的なルーティング。単純なケースを効率的に処理しながら、複雑なクエリをエスカレート。
+
+**ハイブリッドオーケストレーション**  
+LLMルーターおよびエージェント型オーケストレーションと組み合わせて、制御と効率の最適なバランスを実現。
+
+**更新とスケーリング**  
+システムのダウンタイムやモデルの再トレーニングなしに、発話ベクトルを介してルートを簡単に更新、追加、または削除。
+
+**データセキュリティ**  
+機密クエリは、外部プロバイダーにデータを送信せずにルーティングでき、データ主権を維持。
+
+**ベンダー独立性**  
+オープンソースと商用の両方の埋め込みモデル/ベクトルストアと連携し、柔軟な技術選択を可能にします。
 
 ## 実装例
 
-[Aurelio Labs Semantic Router](https://github.com/aurelio-labs/semantic-router)を使用:
+Aurelio Labs Semantic Routerを使用:
 
 ```python
 from semantic_router import Route
@@ -174,6 +197,7 @@ support = Route(
         "My account is locked."
     ]
 )
+
 sales = Route(
     name="sales",
     utterances=[
@@ -192,113 +216,59 @@ result = router(query)
 print(result)  # RouteChoice(name='support', ...)
 ```
 
-**出典:**  
-- [Deepchecks: Implementation Example](https://www.deepchecks.com/glossary/semantic-router/)
-- [Aurelio Labs GitHub](https://github.com/aurelio-labs/semantic-router)
+## ベストプラクティス
 
-## オープンソースツールとフレームワーク
+**明確なルートを設計**  
+混乱を最小限に抑えるために、明確なセマンティック境界を持つ、明確で重複しないルートを作成します。
 
-- **[Aurelio Labs Semantic Router (MITライセンス)](https://github.com/aurelio-labs/semantic-router)**
-- **埋め込みモデルプロバイダー:**  
-  - [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings)  
-  - [Cohere Embeddings](https://cohere.com/embed)  
-  - [Hugging Face Transformers](https://huggingface.co/docs/tokenizers/en/api/encoding)  
-  - [Azure AI Search](https://devblogs.microsoft.com/ise/semantic-routing-using-azure-ai-search/)
-- **ベクトルストア:**  
-  - [Pinecone](https://www.pinecone.io/)  
-  - [Qdrant](https://qdrant.tech/)  
-  - [Azure AI Search](https://devblogs.microsoft.com/ise/semantic-routing-using-azure-ai-search/)
+**多様な発話**  
+ユーザーが同じ意図を表現するさまざまな方法を捉えるために、各ルートに多様なフレーズを含めます。
 
-**出典:**  
-- [Deepchecks: Semantic Router Tools](https://www.deepchecks.com/glossary/semantic-router/)
-- [Giskard: Tools](https://www.giskard.ai/glossary/semantic-router)
+**閾値の調整**  
+ユースケースの要件に基づいて、精度と再現率のバランスを取るために類似性閾値を最適化します。
 
-## 参考文献と追加資料
+**フォールバック処理**  
+既存のルートに確実にマッチしないクエリに対して、堅牢なフォールバックルートを実装します。
 
-- [Semantic Router | Deepchecks Glossary](https://www.deepchecks.com/glossary/semantic-router/)
-- [Semantic Router: Efficient Routing for AI | Giskard](https://www.giskard.ai/glossary/semantic-router)
-- [Semantic Router and Agentic Workflows | The New Stack](https://thenewstack.io/semantic-router-and-its-role-in-designing-agentic-workflows/)
-- [Semantic Router using Azure AI Search | Microsoft ISE Blog](https://devblogs.microsoft.com/ise/semantic-routing-using-azure-ai-search/)
-- [How to Route Queries to Different AI Models Automatically | Shakudo](https://www.shakudo.io/blog/how-to-automatically-route-ai-queries)
-- [Official Semantic Router GitHub](https://github.com/aurelio-labs/semantic-router)
-- [Pryon AI Glossary](https://www.pryon.com/landing/rag-definition-and-llm-glossary)
-- [DataRobot Agentic Glossary](https://docs.datarobot.com/en/docs/agentic-ai/agentic-glossary.html)
+**パフォーマンスの監視**  
+ルーティング精度、類似性スコア、フォールバック率を追跡して、改善の機会を特定します。
 
-## 関連用語集
+**反復的な改善**  
+実際の使用パターンとユーザーフィードバックに基づいて、ルートと発話を継続的に更新します。
 
-**ユーザークエリ**  
-ユーザーがAIシステムに提供するテキスト入力。  
-[出典](https://www.deepchecks.com/glossary/semantic-router/)
+## テクノロジースタックオプション
 
-**埋め込みモデル**  
-テキストをセマンティックな意味を捉える数値ベクトルに変換する機械学習モデル。  
-[出典](https://www.pryon.com/landing/rag-definition-and-llm-glossary)
+**埋め込みモデル:**
+- OpenAI Embeddings (text-embedding-3-small、text-embedding-3-large)
+- Cohere Embeddings (embed-english-v3.0、embed-multilingual-v3.0)
+- Hugging Face Transformers (sentence-transformers、all-MiniLM-L6-v2)
+- Azure AI Search (統合埋め込み生成)
 
-**ベクトルストア / セマンティック検索**  
-類似性メトリクスを使用して埋め込みを保存および検索するためのデータベースまたはエンジン。  
-[出典](https://www.pinecone.io/)
+**ベクトルデータベース:**
+- Pinecone (マネージド、サーバーレス)
+- Qdrant (オープンソース、セルフホストまたはクラウド)
+- FAISS (Facebook AI、高性能ローカル検索)
+- Azure AI Search (統合ベクトル検索)
+- Weaviate (オープンソース、GraphQL API)
+- Milvus (オープンソース、高度にスケーラブル)
 
-**発話**  
-ルートのインテントを表すサンプルテキスト。  
-[出典](https://www.deepchecks.com/glossary/semantic-router/)
+**フレームワーク:**
+- Aurelio Labs Semantic Router (MITライセンス、本番環境対応)
+- LangChain (ルーティング統合)
+- LlamaIndex (クエリルーティング機能)
 
-**ルート**  
-発話/インテントのセットに対応する事前定義された宛先またはアクション。  
-[出典](https://www.deepchecks.com/glossary/semantic-router/)
+## 参考文献
 
-**類似性閾値**  
-ルートをマッチと見なすために必要な最小類似性スコア。  
-[出典](https://www.deepchecks.com/glossary/semantic-router/)
-
-**Retrieval-Augmented Generation (RAG)**  
-外部情報を取得してLLMに供給し、回答の品質を向上させ、信頼できるコンテンツに応答を根拠付ける技術。  
-[出典](https://www.pryon.com/landing/what-is-retrieval-augmented-generation)
-
-**エージェントワークフロー**  
-自律的なエージェント(下記参照)が協力し、多くの場合異なる専門分野を持ち、複雑な問題を解決するAIシステム。  
-[出典](https://docs.datarobot.com/en/docs/agentic-ai/agentic-glossary.html#agentic-workflow)
-
-**エージェント(AI)**  
-複雑なマルチステップタスクを自律的に実行するように設計されたAI駆動コンポーネント、多くの場合エージェントワークフローの一部として。  
-[出典](https://docs.datarobot.com/en/docs/agentic-ai/agentic-glossary.html#agent)
-
-**LLM (Large Language Model)**  
-大規模な言語データでトレーニングされたニューラルネットワークで、テキストを生成および理解します。  
-[出典](https://www.pryon.com/landing/rag-definition-and-llm-glossary)
-
-**フォールバックメカニズム**  
-ルートが類似性閾値を超えない場合にクエリをデフォルトハンドラーにルーティングするロジック。  
-[出典](https://www.deepchecks.com/glossary/semantic-router/)
-
-**マルチエージェントオーケストレーション**  
-複雑なタスクを完了するために、複数の専門AIエージェントを調整すること、通常はエージェント間(A2A)プロトコルを通じて。  
-[出典](https://docs.datarobot.com/en/docs/agentic-ai/agentic-glossary.html#agent-to-agent-a2a)
-
-**オープンソースツール**  
-使用、変更、配布のために自由に利用可能にされたソフトウェア。  
-[出典](https://github.com/aurelio-labs/semantic-router)
-
-**さらに探索:**
-- [Semantic Router | Deepchecks Glossary](https://www.deepchecks.com/glossary/semantic-router/)
-- [Semantic Router using Azure AI Search | Microsoft ISE Blog](https://devblogs.microsoft.com/ise/semantic-routing-using-azure-ai-search/)
-- [Aurelio Labs Semantic Router (GitHub)](https://github.com/aurelio-labs/semantic-router)
-- [Pryon AI Glossary](https://www.pryon.com/landing/rag-definition-and-llm-glossary)
-- [DataRobot Agentic Glossary](https://docs.datarobot.com/en/docs/agentic-ai/agentic-glossary.html)
-
-アーキテクチャの詳細と運用のベストプラクティスについては、上記にリンクされている業界記事と公式ドキュメントをご覧ください。この用語集は、スケーラブルで安全かつ効率的なマルチエージェントAIシステムを設計する上級実務者、アーキテクト、エンジニアに適しています。
-
-**この用語集で直接参照された出典:**
-- [Deepchecks Glossary: Semantic Router](https://www.deepchecks.com/glossary/semantic-router/)
-- [Giskard AI Glossary: Semantic Router](https://www.giskard.ai/glossary/semantic-router)
-- [Pryon AI Glossary](https://www.pryon.com/landing/rag-definition-and-llm-glossary)
-- [DataRobot Agentic Glossary](https://docs.datarobot.com/en/docs/agentic-ai/agentic-glossary.html)
-- [Aurelio Labs Semantic Router GitHub](https://github.com/aurelio-labs/semantic-router)
-- [Pinecone Vector DB](https://www.pinecone.io/)
-- [Qdrant Vector DB](https://qdrant.tech/)
-- [Azure AI Search](https://devblogs.microsoft.com/ise/semantic-routing-using-azure-ai-search/)
-
-**関連YouTubeチュートリアル:**
-- [Semantic Routing with LLMs and Vector Databases | Pinecone](https://www.youtube.com/watch?v=Xb6GxdGZ5Nw)
-- [How to Build a Semantic Router | Aurelio Labs](https://www.youtube.com/watch?v=F4z1gR4f0w4)
-
-この用語集は、セマンティックルーティングとそのエコシステムに関する詳細で出典に裏付けられた知識リファレンスを提供し、AIチャットボット、自動化、マルチエージェントシステム開発をサポートします。
+- [Deepchecks: Semantic Router Glossary](https://www.deepchecks.com/glossary/semantic-router/)
+- [Giskard: Semantic Router - Efficient Routing for AI](https://www.giskard.ai/glossary/semantic-router)
+- [The New Stack: Semantic Router and Agentic Workflows](https://thenewstack.io/semantic-router-and-its-role-in-designing-agentic-workflows/)
+- [Microsoft ISE: Semantic Routing using Azure AI Search](https://devblogs.microsoft.com/ise/semantic-routing-using-azure-ai-search/)
+- [Shakudo: How to Automatically Route AI Queries](https://www.shakudo.io/blog/how-to-automatically-route-ai-queries)
+- [Aurelio Labs: Semantic Router GitHub](https://github.com/aurelio-labs/semantic-router)
+- [Pryon: RAG Definition and LLM Glossary](https://www.pryon.com/landing/rag-definition-and-llm-glossary)
+- [DataRobot: Agentic AI Glossary](https://docs.datarobot.com/en/docs/agentic-ai/agentic-glossary.html)
+- [OpenAI: Embeddings Guide](https://platform.openai.com/docs/guides/embeddings)
+- [Cohere: Embed API](https://cohere.com/embed)
+- [Hugging Face: Tokenizers Documentation](https://huggingface.co/docs/tokenizers/en/api/encoding)
+- [Pinecone: Vector Database](https://www.pinecone.io/)
+- [Qdrant: Vector Search Engine](https://qdrant.tech/)

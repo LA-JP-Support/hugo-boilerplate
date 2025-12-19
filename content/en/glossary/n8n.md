@@ -1,7 +1,7 @@
 ---
 title: "n8n"
-date: 2025-11-25
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 translationKey: "n8n"
 description: "n8n is a source-available, node-based workflow automation tool that connects your apps, APIs, and services with advanced AI integration."
 keywords: ["n8n", "workflow automation", "AI integration", "nodes", "self-hosting"]

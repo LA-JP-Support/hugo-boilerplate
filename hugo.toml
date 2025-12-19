@@ -4,6 +4,8 @@ title = 'SmartWeb'
 defaultContentLanguage = "ja"
 defaultContentLanguageInSubdir = true
 
+ignoreFiles = ['(?i)glossary-backup']
+
 [outputs]
   home = ["HTML", "RSS", "SITEMAP", "JSON"]
 

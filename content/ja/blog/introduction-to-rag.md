@@ -8,6 +8,8 @@ keywords: ["RAG", "検索拡張生成", "AI", "生成AI", "チャットボット
 image: "/images/blog/rag-paint.jpg"
 tags: ["AI技術", "RAG", "チャットボット"]
 categories: ["テクノロジー"]
+url: "/ja/blog/introduction-to-rag/"
+
 ---
 ## RAG（Retrieval-Augmented Generation）の基本と活用方法
 

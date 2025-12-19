@@ -1,62 +1,60 @@
 ---
 title: ヒューマン・エージェント・チーミング
 translationKey: human-agent-teaming
-description: ヒューマン・エージェント・チーミング(HAT)は、AIと人間のエージェントが目標と制御を共有しながら協働する共同作業のパラダイムです。HATがどのように効率性と意思決定を向上させるかをご紹介します。
-keywords: ["ヒューマン・エージェント・チーミング", "AIコラボレーション", "Human-AI Teaming", "人工知能", "チームダイナミクス", "AIコパイロット", "コパイロット", "AI支援"]
+description: ヒューマン・エージェント・チーミング(HAT)は、AIと人間のエージェントが目標と制御を共有しながら協働する協調的なパラダイムです。HATがどのように効率性と意思決定を向上させるかをご紹介します。
+keywords:
+- ヒューマン・エージェント・チーミング
+- AIコラボレーション
+- Human-AI Teaming
+- 人工知能
+- チームダイナミクス
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-03
+date: '2025-12-19'
+lastmod: '2025-12-19'
 draft: false
-term: ヒューマン・エージェント・チーミング
-reading: ヒューマン・エージェント・チーミング
-kana_head: は
 e-title: Human-Agent Teaming
+term: ヒューマン・エージェント・チーミング
+url: "/ja/glossary/Human-Agent-Teaming/"
 ---
-## 1. Human-Agent Teamingとは何か?
+## 1. Human-Agent Teamingとは?
 
-**Human-Agent Teaming(HAT)**は、人間と自律的な人工エージェント(AIシステム、ロボット、ソフトウェアエージェントなど)が共通の目標達成を目指してパートナーとして協働する協調パラダイムです。機械を継続的な指示を必要とするツールとして扱う従来の人間-機械インタラクションとは異なり、HATフレームワークは、シームレスで双方向的な制御と相補性を可能にする*相乗的パートナーシップ*を重視します。人間は文脈理解、倫理的推論、適応性を提供し、AIエージェントは計算効率、速度、持続的な監視を提供します。
+**Human-Agent Teaming(HAT)**は、人間とAIシステム、ロボット、ソフトウェアエージェントなどの自律的な人工エージェントが、共通の目標に向けてパートナーとして協働する協調パラダイムです。機械を継続的な指示を必要とするツールとして扱う従来の人間と機械の相互作用とは異なり、HATフレームワークは、シームレスで双方向の制御と相補性を可能にする*相乗的パートナーシップ*を重視します。人間は文脈理解、倫理的推論、適応性を提供し、AIエージェントは計算効率、速度、継続的な監視を提供します。
 
-**主要な特徴:**
-- **対等性:** AIを含むチームメンバーは、ツール-ユーザーの階層関係ではなく対等な立場で活動します。
-- **双方向制御:** タスクのニーズに基づいて、権限とイニシアチブが柔軟に移行します。
+**中核的特徴:**
+- **対等性:** AIを含むチームメンバーは、ツール-ユーザーの階層ではなく対等な立場で活動します。
+- **双方向制御:** タスクのニーズに基づいて、権限とイニシアチブが柔軟に移譲されます。
 - **相補性:** 各当事者が自身の強みを活用し、相手の限界を補完します。
 - **共通目標:** 共通の目的を達成するための継続的な調整。
-
-**参考文献:**  
-- [Emergent Mind – Human-Agent Teaming Overview](https://www.emergentmind.com/topics/human-agent-teaming)  
-- [Frontiers in AI – Defining Human-AI Teaming the Human-Centered Way](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1250725/full)
 
 ## 2. Human-Agent Teaming: どのように使用されるか?
 
 ### 2.1. ワークフローと制御フロー
 
-HATにおいて、人間とエージェントは統一された運用スレッド内で機能し、動的に制御を移行し、状況認識を共有します。タスク分担は文脈に応じて決定され、状況やミッション要件の変化に応じて迅速に変化することがよくあります。
+HATでは、人間とエージェントが統一された運用スレッド内で機能し、動的に制御を移譲し、状況認識を共有します。タスク分担は文脈に応じて決定され、状況やミッション要件の変化に応じて迅速に変化することがよくあります。
 
-**ワークフローの例:**
-1. **タスク開始:** 人間またはエージェントのいずれかが行動の必要性を特定します。
-2. **共有認識:** すべての当事者が状態、目標、制約について同期します。
+**ワークフロー例:**
+1. **タスク開始:** 人間またはエージェントが行動の必要性を特定します。
+2. **共有認識:** すべての当事者が状態、目的、制約について同期します。
 3. **交渉:** 役割とコミットメントが合意され、時には正式なプロトコルを通じて行われます。
-4. **実行:** 両者が各自の役割を実行し、継続的に文脈を監視します。
+4. **実行:** 両者が役割を実行し、文脈を継続的に監視します。
 5. **引き継ぎ:** 必要に応じて制御が移行します(例:異常のエスカレーション)。
-6. **振り返り/学習:** 結果がレビューされ、エージェントと人間の両方が戦略を更新します。
+6. **報告/学習:** 結果がレビューされ、エージェントと人間の両方が戦略を更新します。
 
-**具体例:**  
+**実例:**  
 マルチモーダルアバターが、視覚、音声、テキスト、触覚チャネルを使用して圧縮された状況更新を提供し、例外管理に従って注意散漫を軽減します。
 
-### 2.2. コア機能
+### 2.2. 中核機能
 
 効果的なHATシステムの主要な能力:
 
 - **共有状況認識:** すべての当事者が最新情報を持つことを保証するメカニズム。
 - **説明可能なAI:** エージェントは行動するだけでなく、信頼を構築するために決定を正当化します。
 - **相互予測可能性:** チームメンバーが互いの行動を予測します。
-- **プロアクティブなコミュニケーション:** エージェントは文脈的に必要な場合にコミュニケーションを開始します。
+- **プロアクティブなコミュニケーション:** エージェントは文脈上必要な場合にコミュニケーションを開始します。
 - **指示可能性:** 正式な作業合意が、実行可能なコミットメントと禁止事項をエンコードします。
 
-**参考文献:**  
-[Pluggable Social Artificial Intelligence for Enabling Human-Agent Teaming](https://www.emergentmind.com/papers/1909.04492)
-
-## 3. 理論的および技術的基盤
+## 3. 理論的・技術的基盤
 
 ### 3.1. 基礎的次元
 
@@ -70,30 +68,27 @@ HATの包括的理解には、いくつかの軸に沿った分析が必要で�
 
 ### 3.2. 技術アーキテクチャ
 
-#### SAIL(Social Artificial Intelligence Layer)
+#### SAIL (Social Artificial Intelligence Layer)
 HAT機能を可能にするモジュラーミドルウェアアーキテクチャ:
 
 - **コンポーネント構造:** 人間向けの柔軟なユーザーインターフェース、実行のためのタスク指向AI、チーミングのためのソーシャルAI。
-- **コミュニケーションプロトコル(HATCL):** `<Performative, Sender, Receiver, Content, ...>`を使用したメッセージ交換、FIPA-ACLに基づく。
-- **オントロジー層:** 二層オントロジー—汎用(Actor、Plan、Goal)とドメイン固有。
+- **コミュニケーションプロトコル(HATCL):** FIPA-ACLに基づく`<Performative, Sender, Receiver, Content, ...>`を使用したメッセージ交換。
+- **オントロジー層:** 汎用(Actor、Plan、Goal)とドメイン固有の二層オントロジー。
 - **実装プラットフォーム:** 分散型、クロスプラットフォームのモジュール性のためにAkka上に構築。
 - **セマンティックアンカリング:** 正式な合意を実行可能なエージェント動作にマッピング。
 
 #### リアルタイムチーミングのための適応型アーキテクチャ
 
-適応型エージェントは、静的モデルを避けてポリシーライブラリと類似性メトリクスを使用し、リアルタイムで人間の意図を推論します。例えば、[Team Space Fortress](https://sites.pitt.edu/~cmlewis/pubs/tianwei-pair.pdf)テストベッドでは、エージェントはライブラリから補完的なポリシーを選択し、人間の行動に対するクロスエントロピーベースの類似性を使用し、リアルタイムで戦略を切り替えることで、人間のチームメイトに適応します。このアプローチは多様な人間のポリシーに一般化し、動的で実世界のシナリオにおいて静的エージェントを上回ります。
-
-**参考文献:**  
-[Adaptive Agent Architecture for Real-time Human-Agent Teaming (PDF)](https://sites.pitt.edu/~cmlewis/pubs/tianwei-pair.pdf)
+適応型エージェントは、静的モデルを避け、ポリシーライブラリと類似性メトリクスを使用して、リアルタイムで人間の意図を推論します。例えば、[Team Space Fortress](https://sites.pitt.edu/~cmlewis/pubs/tianwei-pair.pdf)テストベッドでは、エージェントはライブラリから補完的なポリシーを選択し、人間の行動に対するクロスエントロピーベースの類似性を使用し、リアルタイムで戦略を切り替えることで、人間のチームメイトに適応します。このアプローチは多様な人間のポリシーに一般化し、動的な実世界のシナリオで静的エージェントを上回ります。
 
 ## 4. 人間的、組織的、社会技術的要因
 
 ### 4.1. 信頼の調整と透明性
 
-信頼を調整するメカニズムは不可欠です。人間はAIパートナーを過度に信頼することも、十分に活用しないことも避けなければなりません。説明可能性と透明性は、特に医療や防衛などの高リスク分野で重要です。
+信頼を調整するメカニズムは不可欠です。人間はAIパートナーを過信することも、過小利用することも避けなければなりません。説明可能性と[透明性](/en/glossary/transparency/)は、特に医療や防衛などの高リスク分野で重要です。
 
 - 信頼は動的であり、エージェントの意図とシステムの限界に関するリアルタイムのフィードバックと透明性が必要です。
-- 過度の信頼は自己満足を引き起こし、信頼不足は非効率につながります。
+- 過信は自己満足を引き起こし、過小信頼は非効率につながります。
 
 ### 4.2. 感情的関与と道徳的主体性
 
@@ -106,9 +101,6 @@ HAT機能を可能にするモジュラーミドルウェアアーキテクチ�
 - **コミュニケーション:** モダリティは文脈と認知負荷に一致する必要があります。
 - **組織適応:** HATの実装には、ワークフローと文化の再定義が必要になる場合があります。
 
-**参考文献:**  
-[Frontiers in Artificial Intelligence: Human-AI Teaming Review](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1250725/full)
-
 ## 5. 形式化とプロトコル
 
 ### 5.1. 作業合意と義務論理
@@ -120,7 +112,7 @@ HAT機能を可能にするモジュラーミドルウェアアーキテクチ�
 
 ### 5.2. セマンティックアンカリング
 
-HATCLなどのプロトコルにおける抽象的なコミュニケーション行為は、実行可能なエージェント動作にマッピングされ、異種アーキテクチャ全体でチームの意図を体系的に表現し実行することを保証します。
+HATCLなどのプロトコルにおける抽象的なコミュニケーション行為は、実行可能なエージェント動作にマッピングされ、異種アーキテクチャ全体でチームの意図の体系的な表現と実施を保証します。
 
 ### 5.3. オントロジー構造化
 
@@ -129,29 +121,23 @@ HATCLなどのプロトコルにおける抽象的なコミュニケーション
 ## 6. 例とユースケース
 
 ### 6.1. 軍事監視(UAVと地上ロボット)
-自律ナビゲーションと物体検出を備えた複数のUAVが人間の基地司令官をサポートします。
+自律航法と物体検出を備えた複数のUAVが人間の基地司令官をサポートします。
 
 - **共有認識:** 更新はイベント駆動型であり、常時ではありません。
 - **プロアクティブなコミュニケーション:** ProComモジュールが情報フローを調整します。
 - **動的制御:** ミッション状態に基づいて制御が移行します。
 - **ヒューマンインターフェース:** マルチモーダルアバターが注意散漫を最小限に抑えます。
 
-**参考文献:**  
-[Pluggable Social Artificial Intelligence for Enabling Human-Agent Teaming](https://www.emergentmind.com/papers/1909.04492)
-
 ### 6.2. カスタマーサービス
 
-AIチャットボットが単純な問い合わせを処理し、複雑または機密性の高い問題を人間のエージェントにエスカレーションします。AIは要約を提供したり文書を取得したりして、引き継ぎ後もサポートを継続する場合があります。
+AIチャットボットが簡単な問い合わせを処理し、複雑または機密性の高い問題を人間のエージェントにエスカレーションします。AIは要約を提供したり、ドキュメントを取得したりすることで、引き継ぎ後もサポートを継続できます。
 
 - **最前線のサポートとしてのAI:** チケットの最大70〜80%を処理します。
 - **人間へのエスカレーションパス:** 複雑で微妙な問い合わせを処理します。
 - **コパイロットモード:** 引き継ぎ後もAIが支援します。
 - **継続的学習:** フィードバックがAIモデルを改善します。
 
-**参考文献:**  
-[Kommunicate – Human-AI Collaboration in Customer Service](https://www.kommunicate.io/blog/human-ai-collaboration/)
-
-### 6.3. 医療
+### 6.3. ヘルスケア
 
 AIが診断を支援しますが、臨床医が最終判断と監督を提供します。
 
@@ -164,8 +150,8 @@ AIが診断を支援しますが、臨床医が最終判断と監督を提供し
 ### 7.1. 運用効率
 
 - **生産性:** AIが反復作業を処理し、人間を複雑なタスクに解放します。
-- **意思決定の質:** 人間の直感とAI分析が組み合わさり、より良い決定が生まれます。
-- **スケーラビリティ:** 組織は労働力を比例的に増やすことなくサービスを拡張します。
+- **意思決定の質:** 人間の直感とAI分析がより良い決定をもたらします。
+- **スケーラビリティ:** 組織は労働力の比例的増加なしにサービスを拡張します。
 
 ### 7.2. 人間中心の価値
 
@@ -182,16 +168,16 @@ AIが診断を支援しますが、臨床医が最終判断と監督を提供し
 
 ### 8.1. 定義の曖昧さ
 
-この分野には統一された用語が欠けています:「human-agent teaming」、「human-autonomy teaming」、「human-AI collaboration」が互換的に使用されていますが、必ずしも一貫しているわけではありません([Frontiers in AI](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1250725/full))。
+この分野には統一された用語が欠けています:「human-agent teaming」、「human-autonomy teaming」、「human-AI collaboration」は互換的に使用されますが、必ずしも一貫しているわけではありません([Frontiers in AI](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1250725/full))。
 
 ### 8.2. 技術的困難
 
 - **セマンティックアンカリング:** 多様なアーキテクチャ全体で合意をマッピングすることは複雑です。
-- **プロトコルの標準化:** プラットフォーム間で明確で相互運用可能なコミュニケーションを保証します。
+- **プロトコル標準化:** プラットフォーム間で明確で相互運用可能なコミュニケーションを保証します。
 
 ### 8.3. 人間的および社会技術的問題
 
-- **信頼の調整:** 過度の信頼と信頼不足の両方を避ける必要があります。
+- **信頼の調整:** 過信と過小信頼の両方を避ける必要があります。
 - **感情的関与:** 人間の道徳的主体性を保持する必要があります。
 - **縦断的検証:** 信頼、学習、グループダイナミクスに関する長期研究が必要です。
 
@@ -200,23 +186,23 @@ AIが診断を支援しますが、臨床医が最終判断と監督を提供し
 HAT進歩の主要な軌跡:
 
 - **強化されたセマンティックアンカリング:** 抽象的な合意と技術アーキテクチャの橋渡し。
-- **縦断的研究:** 進化する適応型チームにおけるHATの有効性を捉える。
+- **縦断的研究:** 進化する適応型チームにおけるHATの有効性の把握。
 - **高度なインタラクションモダリティ:** 自然なチーミングのための没入型マルチモーダルインターフェース。
 
 **未解決の問題:**
 - 複雑で倫理的な領域でHATをどのように検証できるか?
-- どのプロトコルとオントロジーがスケーラブルで堅牢なチーミングをサポートするか?
+- スケーラブルで堅牢なチーミングをサポートするプロトコルとオントロジーは何か?
 - 組織は必要な文化的およびスキル適応をどのように促進できるか?
 
 ## 10. 関連概念
 
-- **Human-AIコラボレーションシステム**
-- **Human-in-the-Loopエージェントシステム**
-- **人間中心の自動化**
-- **ハイブリッドインテリジェンス**
-- **Human-Machineチーミングの基礎**
+- **Human-AI Collaboration Systems**
+- **Human-in-the-Loop Agentic Systems**
+- **Human-Centered Automation**
+- **Hybrid Intelligence**
+- **Human-Machine Teaming Fundamentals**
 
-## 11. 参考文献とリファレンス
+## 11. 参考文献と追加資料
 
 - [Emergent Mind – Human-Agent Teaming Overview](https://www.emergentmind.com/topics/human-agent-teaming)
 - [Frontiers in AI – Defining Human-AI Teaming the Human-Centered Way](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1250725/full)
@@ -227,17 +213,9 @@ HAT進歩の主要な軌跡:
 
 ## 12. まとめ
 
-Human-Agent Teamingは、自動化をツールベースからパートナーシップ駆動のワークフローに変革し、人間の文脈的判断とAIの計算能力を統合します。主要な機能—共有認識、説明可能性、相互予測可能性、プロアクティブなコミュニケーション、指示可能性—は、防衛、医療、カスタマーサービスなどの領域にわたって堅牢で適応的かつ人間中心のシステムをサポートします。研究は、アーキテクチャ、信頼、プロトコル、社会技術的適応について継続しており、透明性、倫理的協働、長期的成果に重点を置いています。
+Human-Agent Teamingは、自動化をツールベースからパートナーシップ駆動のワークフローに変革し、人間の文脈的判断とAIの計算能力を統合します。主要な機能—共有認識、説明可能性、相互予測可能性、プロアクティブなコミュニケーション、指示可能性—は、防衛、医療、カスタマーサービスなどの領域にわたって、堅牢で適応的で人間中心のシステムをサポートします。研究は、アーキテクチャ、信頼、プロトコル、社会技術的適応について継続されており、透明性、倫理的協働、長期的成果に重点が置かれています。
 
 **関連項目:**  
-[Human-Machine Teaming](https://www.emergentmind.com/topics/human-machine-teaming) | [Human-AIコラボレーションシステム](https://www.emergentmind.com/topics/human-ai-collaboration-systems) | [ハイブリッドインテリジェンス](https://www.emergentmind.com/topics/hybrid-intelligence)
+[Human-Machine Teaming](https://www.emergentmind.com/topics/human-machine-teaming) | [Human-AI Collaboration Systems](https://www.emergentmind.com/topics/human-ai-collaboration-systems) | [Hybrid Intelligence](https://www.emergentmind.com/topics/hybrid-intelligence)
 
 技術的な詳細、ケーススタディ、さらなる探求については、上記の参考文献と関連トピックを参照してください。
-
-**使用された参考文献とURL:**
-- [Emergent Mind – Human-Agent Teaming Overview](https://www.emergentmind.com/topics/human-agent-teaming)
-- [Frontiers in AI – Defining Human-AI Teaming the Human-Centered Way](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1250725/full)
-- [Pluggable Social Artificial Intelligence for Enabling Human-Agent Teaming (2019)](https://www.emergentmind.com/papers/1909.04492)
-- [Kommunicate – Human-AI Collaboration in Customer Service](https://www.kommunicate.io/blog/human-ai-collaboration/)
-- [YouTube – Human–AI Teaming Webinar](https://www.youtube.com/watch?v=zQKw47Yn3ys)
-- [Adaptive Agent Architecture for Real-time Human-Agent Teaming (PDF)](https://sites.pitt.edu/~cmlewis/pubs/tianwei-pair.pdf)

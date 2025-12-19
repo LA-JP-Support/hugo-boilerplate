@@ -41,6 +41,7 @@ code {
 /* コードブロック全体（汎用） */
 pre {
     background-color: #f3f4f6 !important; /* 薄いグレー背景 */
+    background-image: none !important;
     border: 1px solid #e5e7eb !important; /* 明るい枠線 */
     border-radius: 6px !important;
     padding: 16px !important;
@@ -67,6 +68,7 @@ pre code {
     padding: 16px !important;
     border-radius: 6px !important;
     background-color: #f3f4f6 !important;
+    background-image: none !important;
     border: 1px solid #e5e7eb !important;
     overflow-x: auto !important;
     font-family: 'Courier New', Consolas, Monaco, monospace !important;

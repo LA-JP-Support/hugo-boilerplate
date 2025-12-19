@@ -1,5 +1,7 @@
 ---
 title: "Glossary"
+lastmod: 2025-12-18
+date: 2025-12-18
 translationKey: "glossary-index"
 description: "Comprehensive glossary of AI chatbot, automation, and customer support terms. Clear explanations of technical concepts."
 keywords: ["Glossary", "AI Terms", "Chatbot", "Automation", "Customer Support"]

@@ -1,9 +1,7 @@
 ---
 title: Gumloop
 translationKey: gumloop
-description: Gumloop is a no-code, AI-first automation platform for repetitive tasks
-  and workflows. It uses intelligent agents to browse the web, interact with SaaS
-  apps, and make decisions.
+description: Gumloop is a no-code, AI-first automation platform for repetitive tasks and workflows. It uses intelligent agents to browse the web, interact with SaaS apps, and make decisions.
 keywords:
 - Gumloop
 - AI automation
@@ -12,288 +10,260 @@ keywords:
 - AI agents
 category: AI Chatbot & Automation
 type: glossary
-date: 2025-12-05
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 draft: false
 ---
+
 ## What is Gumloop?
 
-**Gumloop** is a modern, no-code platform for building intelligent automation workflows (“Flows”) powered by AI. Unlike traditional automation tools that rely solely on rigid, rule-based triggers and actions, Gumloop is **AI-native**: it was designed from scratch to deeply integrate large language models (LLMs), such as OpenAI’s GPT series and Anthropic’s Claude, into every layer of its automation engine.
+Gumloop is a modern, no-code platform for building intelligent automation workflows ("Flows") powered by AI. Unlike traditional automation tools relying solely on rigid, rule-based triggers and actions, Gumloop is AI-native—designed from scratch to deeply integrate large language models (LLMs) such as OpenAI's GPT series and Anthropic's Claude into every layer of its automation engine.
 
-### Core Functionality:
+**Core Functionality:**
 
-- **Automated Workflows:** Build sequences of tasks that span multiple apps and data sources, performed automatically or on demand.
-- **AI Agents:** Deploy agents that interpret instructions in plain language, decide which workflows to run, and adapt their actions based on live context.
-- **Drag-and-Drop Builder:** Design automations visually by connecting modular “nodes” on a canvas.
-- **Advanced Data Handling:** Pull, process, and act on information across emails, spreadsheets, CRMs, web pages, and more.
+- **Automated Workflows** – Build sequences of tasks spanning multiple apps and data sources
+- **AI Agents** – Deploy agents that interpret plain language instructions, decide which workflows to run, and adapt based on live context
+- **Drag-and-Drop Builder** – Design automations visually by connecting modular "nodes" on a canvas
+- **Advanced Data Handling** – Pull, process, and act on information across emails, spreadsheets, CRMs, web pages
 
-> “Gumloop is an AI-native automation platform purpose-built for go-to-market (GTM) teams, revenue operations, and business development. It positions itself as a no-code solution for building AI-powered automations.”  
-> — [Softailed review](https://softailed.com/blog/gumloop-review)
+**Key Differentiators:**
 
-### What Sets It Apart?
+- **Model Context Protocol (MCP)** – Open standard for connecting AI models to external tools and data with natural-language scripting
+- **Browser Automation** – Chrome extension for direct, AI-powered web scraping and browser tasks
+- **Custom Integrations** – Use plain English to describe new automations; AI builds the backend logic
 
-- **Model Context Protocol (MCP):** An open standard for connecting AI models to external tools and data with natural-language scripting. [Learn about MCP scripting](https://www.gumloop.com/blog/a-different-take-on-mcp-introducing-mcp-scripting)
-- **Browser Automation:** Chrome extension for direct, AI-powered web scraping and browser tasks.
-- **Custom Integrations:** Use plain English to describe new automations; AI builds the backend logic.
+## How Gumloop Works
 
-## How Does Gumloop Work?
+### Workflows (Flows)
 
-Gumloop operates through two main primitives: **Workflows (Flows)** and **Agents**.
+**Visual Automations:**  
+Step-by-step sequences designed in a graphical builder where each step is a "node"—an action like reading a database, scraping a page, running AI analysis, or sending an email.
 
-### 1. Workflows (“Flows”)
-- **Visual Automations:** Step-by-step sequences designed in a graphical builder.
-- **Nodes:** Each step is a “node”—an action like reading a database, scraping a page, running an AI analysis, or sending an email.
-- **Triggers:** Flows can start from a variety of events (webhooks, schedules, new data in an app) or manually.
+**Triggers:**  
+Flows start from various events (webhooks, schedules, new data) or manually.
 
-#### Advanced Concepts:
-- **Subflows:** Reusable, modular mini-workflows you can invoke from multiple parent Flows. Promotes code/data reuse and maintainability.
-- **Conditional Logic and Loops:** Use if/then branches, [batch processing](/en/glossary/batch-processing/), and error handling for robust automations.
-- **MCP Nodes:** Custom nodes built via natural language prompts, leveraging the Model Context Protocol for accessing any compatible tool or dataset.
+**Advanced Concepts:**
 
-### 2. Agents
+- **Subflows** – Reusable, modular mini-workflows invoked from multiple parent Flows
+- **Conditional Logic** – If/then branches, batch processing, and error handling
+- **MCP Nodes** – Custom nodes built via natural language prompts leveraging Model Context Protocol
 
-Agents are AI-powered orchestrators that:
-- Interpret complex instructions (“Summarize all unread Gmail threads about project X and notify the ops team.”)
-- Decide autonomously which Flows/Subflows to run and in what order.
-- Handle context-aware tasks requiring reasoning, judgment, or multi-step problem solving.
-- Can be embedded in Slack, Chrome, or triggered by API/webhooks.
+### Agents
 
-> “Gumloop has embraced something called model context protocol (MCP), an open-source standard that acts like a USB-C port for AI applications. This provides a standardized way to connect AI systems to external data sources, tools, and workflows.”  
-> — [Softailed review](https://softailed.com/blog/gumloop-review)
+AI-powered orchestrators that:
 
-**Learn More:**  
-- [Gumloop Docs: Core Concepts](https://docs.gumloop.com/getting-started/introduction)
-- [MCP Scripting vs. Chatbots](https://www.gumloop.com/blog/a-different-take-on-mcp-introducing-mcp-scripting)
+- Interpret complex instructions ("Summarize all unread Gmail threads about project X")
+- Decide autonomously which Flows/Subflows to run and in what order
+- Handle context-aware tasks requiring reasoning, judgment, or multi-step problem solving
+- Embed in Slack, Chrome, or trigger by API/webhooks
 
-## Key Features and Capabilities
+## Key Features
 
-### Visual Automation Builder
+**Visual Automation Builder:**
 
-- **Drag-and-Drop UI:** Intuitive canvas for connecting nodes, visualizing logic, and debugging.
-- **100+ Pre-Built Nodes:** Out-of-the-box actions for integrations, data processing, AI tasks, loops, and branching.
-- **Subflows:** Compose complex automations by nesting reusable logic.
+- Drag-and-drop UI for connecting nodes, visualizing logic, and debugging
+- 100+ pre-built nodes for integrations, data processing, AI tasks, loops, and branching
+- Subflows for composing complex automations by nesting reusable logic
 
-### AI-Powered Automation
+**AI-Powered Automation:**
 
-- **AI Nodes:** Steps for summarization, data extraction, categorization, content generation, and semantic analysis—powered by LLMs.
-- **Prompt-to-Create:** Build new nodes and Flows from natural language, with AI generating the underlying logic.
-- **MCP Scripting:** Generate reusable, editable scripts that call tools via Model Context Protocol, offering deterministic, repeatable automation beyond conversational chatbots.  
-  [What is MCP?](https://www.gumloop.com/blog/a-different-take-on-mcp-introducing-mcp-scripting)
+- AI nodes for summarization, data extraction, categorization, content generation, and semantic analysis
+- Prompt-to-create functionality building new nodes and Flows from natural language
+- MCP scripting generating reusable, editable scripts for deterministic, repeatable automation
 
-### App & Data Integrations
+**App and Data Integrations:**
 
-- **50+ Native Integrations:** Gmail, Google Sheets, Slack, Salesforce, Notion, Airtable, Apollo, Zendesk, and more.
-- **Website Scraping:** No-code browser extension for extracting data from web pages, powered by AI.
-- **Custom APIs:** Support for webhooks, RESTful endpoints, and direct API calls.
+- 50+ native integrations: Gmail, Google Sheets, Slack, Salesforce, Notion, Airtable, Apollo, Zendesk
+- Website scraping via no-code browser extension for AI-powered data extraction
+- Custom APIs with webhook, RESTful endpoint, and direct API call support
 
-### Advanced Workflow Logic
+**Advanced Workflow Logic:**
 
-- **Conditional Branches:** Build flows that adapt to data and context.
-- **Loop Mode:** Batch process large datasets or lists (e.g., summarize every row in a spreadsheet).
-- **Triggers:** Schedule runs, listen for external events, and handle manual kicks.
+- Conditional branches building flows that adapt to data and context
+- Loop mode for batch processing large datasets or lists
+- Triggers for scheduled runs, external events, and manual execution
 
-### Templates & Public Flows
+**Templates and Sharing:**
 
-- **Template Gallery:** 60+ pre-built automations for marketing, sales, support, and operations.  
-  [Browse Templates](https://www.gumloop.com/templates)
-- **Shareable Workflows:** Publish flows as mini-apps for teammates or clients.
+- 60+ pre-built automations for marketing, sales, support, and operations
+- Shareable workflows publishable as mini-apps for teammates or clients
 
-### Security & Collaboration
+**Security and Collaboration:**
 
-- **Team Workspaces:** Securely share flows and credentials.
-- **SOC2/GDPR Compliance:** Enterprise-grade security—data never used for AI model training.
-- **Role-Based Access:** Control permissions across team members.
+- Team workspaces for secure flow and credential sharing
+- SOC2/GDPR compliance with enterprise-grade security
+- Role-based access controlling permissions across team members
 
-### Scalable Infrastructure
+## Comparing Gumloop
 
-- **Concurrent Executions:** Run hundreds or thousands of automations simultaneously.
-- **Background Workflows:** Triggered by events and schedules, not just manual runs.
+**AI-Native:**  
+Built from day one to harness LLMs for context-aware automations, not just rule-based triggers.
 
-**Deep Dive:**  
-- [Softailed: Gumloop Review](https://softailed.com/blog/gumloop-review)  
-- [Gumloop official blog: Best AI Workflow Tools](https://www.gumloop.com/blog/best-ai-workflow-automation-tools)
+**MCP-Enabled:**  
+Uses Model Context Protocol for seamless, natural-language integration with external tools and APIs.
 
-## Comparing Gumloop: How Is It Different?
+**Visual and Conversational:**  
+Drag-and-drop builder plus prompt-based creation via Gummie assistant.
 
-- **AI-Native:** Built from day one to harness LLMs for context-aware automations, not just rule-based triggers.
-- **MCP-Enabled:** Uses Model Context Protocol for seamless, natural-language integration with external tools and APIs.
-- **Visual & Conversational Automation:** Drag-and-drop builder, plus prompt-based creation via the Gummie assistant.
-- **Reusable Components:** Subflows, templates, and MCP scripts to maximize efficiency.
-- **Flexible Integrations:** Connects new and legacy SaaS, custom APIs, and even browser-based data sources.
-- **Deterministic Scripting:** MCP scripting enables repeatable, scalable, and editable workflows—crucial for enterprise-grade reliability.
+**Reusable Components:**  
+Subflows, templates, and MCP scripts to maximize efficiency and reduce redundancy.
 
-**Compare:**  
-- [Gumloop vs. Zapier, Make, n8n, Lindy AI](https://www.gumloop.com/blog/best-ai-workflow-automation-tools)
-- [Lindy Review & Comparison](https://www.lindy.ai/blog/gumloop)
+**Flexible Integrations:**  
+Connects new and legacy SaaS, custom APIs, and browser-based data sources.
 
-## Who Uses Gumloop? (Audience & Use Cases)
+**Deterministic Scripting:**  
+MCP scripting enables repeatable, scalable, and editable workflows crucial for enterprise reliability.
 
-**Designed for:**
-- Non-technical professionals: marketers, sales, support, operations, freelancers, product managers.
-- Advanced users needing rapid prototyping, browser automation, or LLM-powered flows.
+## Use Cases by Role
 
-### Real-World Use Cases
+**Marketers:**
 
-- **Marketers:**  
-  - Automate SEO audits and content briefs.  
-  - Social listening and [sentiment analysis](/en/glossary/sentiment-analysis/).  
-  - Automated reporting and campaign analysis.
-- **Sales Teams:**  
-  - Lead enrichment and scoring.  
-  - Automated outreach with personalized AI-driven emails.  
-  - CRM data sync and pipeline management.
-- **Customer Support:**  
-  - Categorize and summarize tickets.  
-  - Draft responses and escalate based on AI triage.
-- **Operations:**  
-  - Document processing, batch data entry, and workflow coordination.
-- **Freelancers/Solopreneurs:**  
-  - Build client-facing mini-apps, automate web research, manage communications.
+- Automate SEO audits and content briefs
+- Social listening and sentiment analysis
+- Automated reporting and campaign analysis
 
-**Enterprise Adoption:**  
-Used by Shopify, Instacart, Webflow, and other tech-forward companies for internal automation and productivity gains.
+**Sales Teams:**
 
-> “Gumloop’s AI-native flows let my team scrape, categorize, and summarize competitor data—hours of research in minutes.”  
-> — [User review, Softailed](https://softailed.com/blog/gumloop-review)
+- Lead enrichment and scoring
+- Automated outreach with personalized AI-driven emails
+- CRM data sync and pipeline management
 
-## Real-World Examples and Templates
+**Customer Support:**
 
-Explore practical automations built with Gumloop:
+- Categorize and summarize tickets
+- Draft responses and escalate based on AI triage
 
-### Marketing Automation
+**Operations:**
 
-- **SEO Audit Workflow:** Scrape target site, analyze with Semrush, summarize findings, generate Google Doc.  
-  [View Template](https://www.gumloop.com/pipeline?workbook_id=qEPtfLeGFXS8PxPgmcM7UL&tab=1)
-- **Brand Monitoring:** Scan Reddit/Twitter for mentions, analyze sentiment, send weekly summary.
-- **Content Brief Generator:** Enter keyword, scrape top-ranking articles, generate detailed outline.
+- Document processing, batch data entry, and workflow coordination
 
-### Sales Automation
+**Freelancers/Solopreneurs:**
 
-- **Lead Enrichment:** Scrape LinkedIn, enrich with Apollo, score with AI, update Salesforce.
-- **Personalized Outreach:** AI drafts and sends emails tailored to each lead.
+- Build client-facing mini-apps
+- Automate web research
+- Manage communications
 
-### Support Automation
+## Real-World Examples
 
-- **Ticket Prioritization:** Pull Zendesk tickets, categorize urgency, summarize issues, notify via Slack.
-- **Customer Feedback Reports:** Aggregate feedback, generate actionable summaries.
+**Marketing Automation:**
 
-### Operations
+- SEO Audit Workflow: Scrape target site, analyze with Semrush, summarize findings, generate Google Doc
+- Brand Monitoring: Scan Reddit/Twitter for mentions, analyze sentiment, send weekly summary
+- Content Brief Generator: Enter keyword, scrape top-ranking articles, generate detailed outline
 
-- **Document Processing:** Extract data from PDFs, auto-fill forms, summarize contracts.
-- **Batch Data Sync:** Move data between Google Sheets and CRMs, clean and reformat lists.
+**Sales Automation:**
 
-**Explore More:**  
-- [Gumloop Templates Gallery](https://www.gumloop.com/templates)  
-- [Gumloop YouTube Channel](https://www.youtube.com/@gumloop)
+- Lead Enrichment: Scrape LinkedIn, enrich with Apollo, score with AI, update Salesforce
+- Personalized Outreach: AI drafts and sends emails tailored to each lead
 
-## Step-by-Step: How to Use Gumloop
+**Support Automation:**
 
-**1. Sign Up or Access the Hub:**  
-   - [Gumloop Hub](https://www.gumloop.com/hub) (Free trial with no credit card).
+- Ticket Prioritization: Pull Zendesk tickets, categorize urgency, summarize issues, notify via Slack
+- Customer Feedback Reports: Aggregate feedback, generate actionable summaries
 
-**2. Choose Template or Start from Scratch:**  
-   - Customize pre-built templates, or build your own Flow.
+**Operations:**
 
-**3. Use the Visual Builder:**  
-   - Drag nodes onto the canvas; each node represents a task or integration.
+- Document Processing: Extract data from PDFs, auto-fill forms, summarize contracts
+- Batch Data Sync: Move data between Google Sheets and CRMs, clean and reformat lists
 
-**4. Add Triggers:**  
-   - Example triggers: new email, scheduled time, webhook, manual run.
+## Getting Started
 
-**5. Integrate Your Tools:**  
-   - Connect Gmail, Slack, Google Sheets, Salesforce, Notion, and more.
+**Step-by-Step:**
 
-**6. Leverage AI Nodes:**  
-   - Add summarization, data extraction, categorization, or content generation steps.
-
-**7. Test, Debug, Refine:**  
-   - Use [sandbox mode](/en/glossary/sandbox-mode/), review logs, and troubleshoot errors for accuracy.
-
-**8. Deploy & Share:**  
-   - Publish flows for your team, or turn them into public mini-apps.
-
-**9. Build Agents for Complex Tasks:**  
-   - Use “Gummie” to create AI agents that reason, decide, and orchestrate Flows.
-
-**Pro Tip:**  
-If you can describe your process step-by-step, Gumloop can likely automate it.
-
-**Official Documentation:**  
-- [Gumloop Docs — Getting Started](https://docs.gumloop.com/getting-started/introduction)
+1. **Sign Up** – Access Gumloop Hub with free trial (no credit card required)
+2. **Choose Template or Start Fresh** – Customize pre-built templates or build your own Flow
+3. **Use Visual Builder** – Drag nodes onto canvas; each node represents a task or integration
+4. **Add Triggers** – New email, scheduled time, webhook, manual run
+5. **Integrate Tools** – Connect Gmail, Slack, Google Sheets, Salesforce, Notion
+6. **Leverage AI Nodes** – Add summarization, data extraction, categorization, or content generation
+7. **Test and Refine** – Use sandbox mode, review logs, troubleshoot errors
+8. **Deploy and Share** – Publish flows for team or turn into public mini-apps
+9. **Build Agents** – Use "Gummie" to create AI agents that reason, decide, and orchestrate Flows
 
 ## Common Automation Scenarios
 
-- **Web Data Extraction:** Scrape competitor/product/market data with AI.
-- **Google Sheets Automation:** Analyze, update, and sync spreadsheets.
-- **Email Sequences:** Trigger custom emails on form submissions or CRM changes.
-- **Customer Feedback Analysis:** Aggregate, summarize, and report on support or survey data.
-- **Lead Scoring:** AI prioritizes leads by engagement or fit.
-- **Workflow Coordination:** Route tasks between people, apps, and databases.
+- Web data extraction for competitor, product, or market research
+- Google Sheets automation for analysis, updates, and syncing
+- Email sequences triggered by form submissions or CRM changes
+- Customer feedback analysis aggregating and reporting on support or survey data
+- Lead scoring with AI prioritization by engagement or fit
+- Workflow coordination routing tasks between people, apps, and databases
 
-> “AI workflow automation can handle pretty much any repetitive task you can think of. The possibilities are endless.”  
-— [Gumloop blog](https://www.gumloop.com/blog/best-ai-workflow-automation-tools)
+## Pros and Cons
 
-## Pros & Cons
+**Advantages:**
 
-### Pros
+- No coding required—accessible to non-technical users
+- AI-first features surpassing classic rule-based automation
+- Broad integrations with 50+ popular SaaS and data tools
+- Template library for quick start with pre-built flows
+- User-friendly drag-and-drop interface
+- Team collaboration with workspaces and secure sharing
+- Enterprise-ready with SOC2/GDPR compliance
 
-- **No Coding Required:** Accessible to non-technical users.
-- **AI-First Features:** Surpasses classic rule-based automation.
-- **Broad Integrations:** 50+ popular SaaS and data tools.
-- **Template Library:** Quick start with pre-built flows.
-- **User-Friendly UI:** Intuitive drag-and-drop builder.
-- **Collaboration:** Team workspaces and secure sharing.
-- **Enterprise-Ready:** SOC2/GDPR compliance, role-based access.
+**Limitations:**
 
-### Cons
+- Advanced customization for niche workflows may require manual scripting
+- Credit-based pricing can be difficult to estimate for large/complex automations
+- Learning curve for mastering advanced flows and agent orchestration
+- No instant live chat support; relies on docs, email, or community
 
-- **Advanced Customization:** Niche or highly complex workflows may still require manual scripting or external tools.
-- **Pricing Complexity:** Credit-based billing can be difficult to estimate for large/complex automations.
-- **Learning Curve:** Mastering advanced flows and agent orchestration takes practice.
-- **Support Delays:** No instant live chat; support via docs, email, or community.
+## Pricing
 
-## Pricing & Plans
+Gumloop uses credit-based pricing where each workflow action or AI call consumes credits.
 
-Gumloop uses a **credit-based pricing** model—each workflow action or AI call uses a certain number of credits.
+| Plan | Price | Credits | Seats | Best For |
+|------|-------|---------|-------|----------|
+| Free | $0 | ~1,000-2,000 | 1 | Exploring basics |
+| Solo | $37/mo | 10,000 | 1 | Individuals |
+| Starter | $97/mo | 30,000 | 1 | More workflows |
+| Pro | $297/mo | 75,000 | 10 | Teams |
+| Enterprise | Custom | Custom | Custom | Custom infrastructure |
 
-### Plan Overview
+**Credit Usage:**
 
-| Plan       | Monthly Price | Credits     | Seats | Notes                          |
-|------------|--------------|-------------|-------|--------------------------------|
-| Free       | $0           | ~1,000–2,000| 1     | Limited runs; explore basics   |
-| Solo       | $37/mo       | 10,000      | 1     | Best for individuals           |
-| Starter    | $97/mo       | 30,000      | 1     | More workflows, higher limits  |
-| Pro        | $297/mo      | 75,000      | 10    | Teams, more concurrency        |
-| Enterprise | Custom       | Custom      | Custom| Priority support, custom infra |
+- Basic action: 1 credit
+- Advanced AI (GPT-4o): 20+ credits
+- Web scraping: 30–60 credits
+- API integrations: Up to 20 credits/call
 
-- **Basic action:** 1 credit
-- **Advanced AI (e.g., GPT-4o):** 20+ credits
-- **Web scraping:** 30–60 credits
-- **API integrations:** Up to 20 credits/call
+Monitor usage via dashboard and test on free plan before committing.
 
-**Monitor usage** via the dashboard and test on the free plan.  
-**Full details:** [Gumloop Pricing](https://www.gumloop.com/pricing)
+## Support and Resources
 
-## Support, Documentation, and Community
+- **Official Documentation** – Comprehensive guides at docs.gumloop.com
+- **Community Forum** – forum.gumloop.com
+- **YouTube Tutorials** – youtube.com/@gumloop
+- **Email Support** – founders@gumloop.com
+- **Slack Community** – Invite via dashboard
+- **Professional Services** – Hire Gumloop automation experts for advanced projects
 
-- **Official Docs:** [Gumloop Documentation](https://docs.gumloop.com/getting-started/introduction)
-- **Community Forum:** [Gumloop Forum](https://forum.gumloop.com/)
-- **YouTube Tutorials:** [Gumloop YouTube Channel](https://www.youtube.com/@gumloop)
-- **Email Support:** founders@gumloop.com
-- **Slack Community:** Invite via the dashboard.
-- **Professional Services:** Hire Gumloop automation experts for advanced projects.
+## Frequently Asked Questions
 
+**Can I use Gumloop without coding knowledge?**  
+Yes—Gumloop's UI and AI assistant are built for non-technical users.
 
-## FAQs
+**What tasks can Gumloop automate?**  
+Any repetitive, data-driven, or context-aware task—data movement, content summarization, email sending, web scraping, and more.
 
-**Q: Can I use Gumloop if I don’t know how to code?**  
-A: Yes—Gumloop’s UI and AI assistant are built for non-technical users.
+**How is Gumloop different from Zapier or Make?**  
+Gumloop specializes in AI-powered, context-driven workflows and agent-based automation with native LLM integration.
 
-**Q: What can Gumloop automate?**  
-A: Any repetitive, data-driven, or context-aware task—moving data, summarizing content, sending emails, scraping websites, and more.
+**Can I connect custom APIs?**  
+Yes—via MCP nodes, webhooks, and direct API integrations.
 
-**Q: How is Gumloop different from Zapier or Make?**  
-A: Gumloop specializes in AI-powered, context-driven workflows and agent-based automation.
+**Which companies use Gumloop?**  
+Shopify, Instacart, Webflow, and other tech-forward companies use it for internal automation and productivity gains.
 
-**Q: Can I connect custom APIs or internal systems?**  
-A: Yes—via MCP nodes, webhooks
+## References
+
+- [Softailed: Gumloop Review](https://softailed.com/blog/gumloop-review)
+- [Gumloop Official Blog: Best AI Workflow Tools](https://www.gumloop.com/blog/best-ai-workflow-automation-tools)
+- [Gumloop: MCP Scripting Introduction](https://www.gumloop.com/blog/a-different-take-on-mcp-introducing-mcp-scripting)
+- [Gumloop Documentation: Getting Started](https://docs.gumloop.com/getting-started/introduction)
+- [Gumloop Templates Gallery](https://www.gumloop.com/templates)
+- [Gumloop Hub](https://www.gumloop.com/hub)
+- [Gumloop Pricing](https://www.gumloop.com/pricing)
+- [Gumloop Community Forum](https://forum.gumloop.com/)
+- [Gumloop YouTube Channel](https://www.youtube.com/@gumloop)
+- [Lindy Review: Gumloop Comparison](https://www.lindy.ai/blog/gumloop)

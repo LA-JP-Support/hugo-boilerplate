@@ -1,7 +1,7 @@
 ---
 title: "Web Scraper Node"
-date: 2025-11-25
-lastmod: 2025-12-05
+date: 2025-12-18
+lastmod: 2025-12-18
 translationKey: "web-scraper-node"
 description: "A Web Scraper Node is a modular component for automated workflows, fetching and extracting data from web URLs. Essential for AI chatbots, competitor monitoring, and data aggregation."
 keywords: ["web scraper node", "web scraping", "data extraction", "automation", "Node.js"]
@@ -9,230 +9,267 @@ category: "AI Chatbot & Automation"
 type: "glossary"
 draft: false
 ---
-## Category
-
-**AI Chatbot & Automation**
-
-## Definition
-
-A **Web Scraper Node** is a modular, reusable component that fetches and extracts data from specified web URLs within an automated workflow. It’s a building block commonly found in automation platforms (such as [n8n](https://n8n.io/), Node.js scripts, or AI chatbot backends), enabling the systematic collection of web data for further processing, integration, or analysis. Web scraper nodes are pivotal for workflows that require information from web pages lacking structured APIs.
 
 ## What Is a Web Scraper Node?
 
-A Web Scraper Node is a self-contained unit within a workflow automation framework. It:
+A Web Scraper Node is a modular, reusable component designed to fetch and extract data from specified web URLs within automated workflow systems. It functions as a fundamental building block in automation platforms, Node.js applications, and AI chatbot backends, enabling systematic collection of web data for processing, integration, or analysis. Web scraper nodes address the critical need for accessing information from web pages that lack structured APIs, transforming unstructured web content into actionable data.
 
-- Accepts URLs as input.
-- Fetches HTML (or other content) via HTTP.
-- Extracts relevant data using selectors (CSS, XPath) or AI prompts.
-- Returns the extracted, structured data for use by other workflow nodes.
+These components operate as self-contained units within workflow automation frameworks, accepting URLs as input, fetching HTML or other web content via HTTP requests, extracting relevant data using CSS selectors, XPath expressions, or AI-powered prompts, and returning structured data for downstream processing. The modular architecture allows scraper nodes to integrate seamlessly with broader automation ecosystems including chatbots, data pipelines, monitoring systems, and business intelligence platforms.
 
-**Node types include:**
-- **Code-based nodes:** e.g., [Puppeteer](https://pptr.dev/), [Cheerio](https://cheerio.js.org/), [Axios](https://github.com/axios/axios) in Node.js.
-- **Visual/low-code nodes:** e.g., [n8n Web Scraper Node](https://docs.n8n.io/) or [Firecrawl API node](https://docs.firecrawl.dev/).
-- **API-powered nodes:** e.g., [ZenRows](https://www.zenrows.com/), [ScrapingBee](https://www.scrapingbee.com/).
+**Common Implementation Types:**
 
-**Typical Inputs:**
-- Target URLs (array or single)
-- Extraction selectors (CSS, XPath, Regex) or AI prompts
-- Optional configs: User agent, proxies, authentication, headers
+**Code-Based Nodes** – Custom implementations using libraries like Puppeteer, Cheerio, and Axios in Node.js environments providing maximum flexibility and control
 
-**Typical Outputs:**
-- Structured data (JSON, text, table)
-- Status and error messages
+**Visual/Low-Code Nodes** – Platform-integrated components in systems like n8n or Firecrawl offering drag-and-drop configuration for non-technical users
 
-## How Does a Web Scraper Node Work?
+**API-Powered Nodes** – Managed services like ZenRows and ScrapingBee handling complex scenarios including anti-bot measures and dynamic content rendering
 
-### 1. Initiation
+## Core Technologies and Architecture
 
-Receives one or more URLs (from user, another node, or workflow trigger).
+### HTTP Client Layer
 
-### 2. Fetching Content
+Modern web scraper nodes leverage specialized HTTP clients optimized for data extraction:
 
-Performs HTTP requests to retrieve HTML content. For static pages, a simple GET suffices. For dynamic or JS-heavy sites, a headless browser (e.g., Puppeteer or Playwright) renders the content ([ScrapingBee Guide](https://www.scrapingbee.com/blog/web-scraping-javascript/)).
+**Axios** provides promise-based HTTP requests with automatic JSON transformation, request/response interceptors, and comprehensive error handling. Its lightweight architecture makes it ideal for simple static content retrieval with minimal overhead.
 
-### 3. Data Extraction
+**Node-Fetch** implements the standard Fetch API in Node.js environments, offering familiar browser-like syntax for HTTP operations. It excels in scenarios requiring streaming responses or integration with existing browser-based code.
 
-Parses the HTML using tools like [Cheerio](https://cheerio.js.org/) (for static content) or browser APIs (for dynamic content). Selectors (CSS/XPath) or AI-driven extraction logic pinpoint the required data.
+### HTML Parsing and Extraction
 
-### 4. Returning Results
+**Cheerio** implements jQuery-style selectors for server-side HTML parsing without browser overhead. Its fast, flexible API enables efficient data extraction from static HTML using familiar CSS selector syntax, making it the standard choice for parsing pre-rendered content.
 
-Delivers structured data (JSON, tables) to downstream nodes or responses (e.g., to a chatbot, database, or notification).
+**jsdom** provides complete DOM implementation in Node.js, enabling execution of embedded JavaScript and manipulation of dynamic content. While more resource-intensive than Cheerio, jsdom accurately replicates browser environments for complex parsing scenarios.
 
-## Why Use a Web Scraper Node?
+### Headless Browser Integration
 
-Web scraper nodes automate the process of collecting web data where no official API exists. Primary use cases include:
+**Puppeteer** controls headless Chrome or Chromium through DevTools Protocol, enabling full browser automation including JavaScript execution, screenshot capture, PDF generation, and user interaction simulation. Puppeteer excels at scraping JavaScript-heavy single-page applications requiring client-side rendering.
 
-- **Real-time data for chatbots or AI agents**
-- **Competitor monitoring**
-- **Price and content aggregation**
-- **Lead/contact data extraction**
+**Playwright** extends browser automation across Chrome, Firefox, and WebKit with enhanced reliability features including auto-waiting, network interception, and mobile device emulation. Its cross-browser support and robust API make it ideal for comprehensive testing and scraping scenarios.
 
-**Key Benefits:**
-- **No/low-code integration:** Build flows visually ([n8n example](https://docs.n8n.io/)).
-- **Scalable and reusable:** Nodes can be reused across workflows.
-- **Scheduled/triggered execution:** On-demand or interval-based data collection.
+**Selenium WebDriver** provides language-agnostic browser automation supporting extensive browser and platform combinations. While more verbose than modern alternatives, Selenium remains valuable for legacy systems and cross-language implementations.
 
-## Core Technologies & Tools
+### Framework Solutions
 
-### In Node.js:
+**nodejs-web-scraper** offers high-level abstraction for building production scraping systems with built-in pagination handling, data transformation pipelines, and result management. It simplifies complex multi-page scraping workflows through declarative configuration.
 
-- **HTTP Clients:** [Axios](https://github.com/axios/axios), [node-fetch](https://github.com/node-fetch/node-fetch)
-- **HTML Parsers:** [Cheerio](https://cheerio.js.org/), [jsdom](https://github.com/jsdom/jsdom)
-- **Headless Browsers:** [Puppeteer](https://pptr.dev/), [Playwright](https://playwright.dev/), [Selenium](https://www.selenium.dev/)
-- **Full Frameworks:** [nodejs-web-scraper (npm)](https://www.npmjs.com/package/nodejs-web-scraper), [Crawler](https://github.com/bda-research/node-crawler)
+**Crawler** provides queue-based crawling with rate limiting, retry logic, and concurrent request management. Its mature architecture handles large-scale scraping operations requiring sophisticated request orchestration.
 
-### In Automation Platforms:
+## Operational Workflow
 
-- **n8n Web Scraper Node:** Visual node for URL, selector, and output configuration ([Docs](https://docs.n8n.io/)).
-- **Firecrawl API Node:** Handles complex scraping via API ([Docs](https://docs.firecrawl.dev/)).
-- **ZenRows API:** Handles anti-bot and dynamic sites ([ZenRows Docs](https://www.zenrows.com/docs)).
+### Phase 1: Initialization
 
-**Further reading and sample code:**  
-- [Web Scraping with JavaScript and Node.js (ScrapingBee)](https://www.scrapingbee.com/blog/web-scraping-javascript/)
-- [7 Best JavaScript & Node.js Web Scraping Libraries (ZenRows)](https://www.zenrows.com/blog/javascript-nodejs-web-scraping-libraries)
+The scraper node receives target URLs from user input, upstream workflow nodes, or automated triggers. Configuration parameters including headers, authentication credentials, and proxy settings are applied. The node validates inputs and prepares the execution environment.
 
-## Example: Node.js Script for Book Data
+### Phase 2: Content Fetching
+
+For static content, simple HTTP GET requests retrieve HTML efficiently. Dynamic or JavaScript-rendered sites require headless browser instances to execute client-side code and render final content. The fetching strategy adapts based on target site architecture and content delivery mechanisms.
+
+### Phase 3: Data Extraction
+
+Parsing engines analyze retrieved HTML using configured selectors or extraction rules. CSS selectors and XPath expressions pinpoint specific data elements. Advanced implementations leverage AI-driven extraction logic capable of adapting to structural variations and identifying relevant content semantically.
+
+### Phase 4: Data Processing
+
+Extracted data undergoes validation, transformation, and normalization. Text is cleaned, dates parsed, numbers formatted, and relationships established. The processing pipeline ensures consistent, structured output regardless of source variations.
+
+### Phase 5: Result Delivery
+
+Structured data flows to downstream nodes or response handlers in standardized formats (JSON, CSV, databases). Status information, error messages, and metadata accompany results enabling robust workflow orchestration and monitoring.
+
+## Implementation Examples
+
+### Node.js Script with Puppeteer
 
 ```javascript
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 
-const run = async () => {
-  const browser = await puppeteer.launch();
+const scrapeBooks = async () => {
+  const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
-  await page.goto('https://books.toscrape.com');
-  const books = await page.evaluate(() => {
-    const bookElements = document.querySelectorAll('.product_pod');
-    return Array.from(bookElements).map((book) => {
-      const title = book.querySelector('h3 a').getAttribute('title');
-      const price = book.querySelector('.price_color').textContent;
-      const stock = book.querySelector('.instock.availability')
-        ? 'In stock'
-        : 'Out of stock';
-      const rating = book.querySelector('.star-rating').className.split(' ')[1];
-      const link = book.querySelector('h3 a').getAttribute('href');
-      return { title, price, stock, rating, link };
-    });
+  
+  await page.goto('https://books.toscrape.com', {
+    waitUntil: 'networkidle2'
   });
+  
+  const books = await page.evaluate(() => {
+    return Array.from(document.querySelectorAll('.product_pod')).map(book => ({
+      title: book.querySelector('h3 a')?.getAttribute('title'),
+      price: book.querySelector('.price_color')?.textContent,
+      availability: book.querySelector('.instock.availability') 
+        ? 'In stock' 
+        : 'Out of stock',
+      rating: book.querySelector('.star-rating')?.className.split(' ')[1],
+      link: book.querySelector('h3 a')?.getAttribute('href')
+    }));
+  });
+  
   fs.writeFileSync('books.json', JSON.stringify(books, null, 2));
   await browser.close();
+  
+  console.log(`Scraped ${books.length} books successfully`);
 };
-run();
+
+scrapeBooks();
 ```
-- **Workflow:** Launch browser → Load page → Extract structured data → Save to file  
-- **More Puppeteer examples:** [Puppeteer Docs](https://pptr.dev/)
 
-## Example: n8n Visual Workflow
-
-**Monitor competitor pricing:**
+### n8n Visual Workflow
 
 ```
-[Trigger] → [HTTP Request (Scrape)] → [Code (Compare)] → [Slack Notification]
-                                             |
-                                             ↓
-                                 [Google Sheets (Log History)]
+[Schedule Trigger] → [HTTP Request (Scrape)] → [Code (Transform)] 
+    → [Slack Notification] → [Google Sheets (Log)]
 ```
-- **Template and setup:** [n8n Web Scraping Workflow Templates (Firecrawl)](https://www.firecrawl.dev/blog/n8n-web-scraping-workflow-templates)
-- **AI chatbot integration:** [n8n.io: AI Agent Chatbot with Jina.ai Webpage Scraper](https://n8n.io/workflows/2943-ai-agent-chatbot-with-jinaai-webpage-scraper/)
 
+This workflow demonstrates automated competitive monitoring: schedule triggers periodic scraping, HTTP nodes fetch competitor pricing, code nodes compare historical data, Slack sends alerts for significant changes, and Google Sheets maintains historical logs.
+
+## Key Use Cases
+
+### Real-Time Chatbot Data Enrichment
+
+AI agents and chatbots leverage web scraper nodes to augment responses with current information unavailable in training data. A travel chatbot might scrape live flight prices, a support bot could retrieve product availability, or a financial assistant might extract real-time market data.
+
+### Competitive Intelligence and Monitoring
+
+Organizations automate tracking of competitor pricing, product catalogs, promotional campaigns, and market positioning. Scraper nodes continuously monitor target sites, detect changes, and trigger alerts or automated responses enabling rapid competitive adjustments.
+
+### Lead Generation and Contact Discovery
+
+Sales and marketing teams extract contact information, company details, and prospect data from business directories, professional networks, and industry listings. Automated enrichment pipelines validate, deduplicate, and integrate discovered data into CRM systems.
+
+### Content Aggregation and Curation
+
+Media platforms, research tools, and content marketers aggregate information from multiple sources creating unified views. News aggregators compile headlines, price comparison sites collect product listings, and research platforms synthesize academic publications.
+
+### Data Quality and Verification
+
+Validation systems cross-reference internal data against external authoritative sources. Address verification services scrape postal databases, compliance tools validate license numbers, and fraud detection systems check information against public records.
 
 ## Best Practices
 
-- **Respect robots.txt:** Review and honor scraping permissions.
-- **Implement rate limiting:** Avoid server overload and bans.
-- **Error handling:** Gracefully handle network, selector, or parsing failures.
-- **Pagination:** Detect and follow "next" links for multi-page data.
-- **Dynamic content:** Use headless browsers for JS-rendered sites.
-- **Proxy rotation:** Prevent IP bans during bulk scrapes.
-- **Data validation:** Clean, deduplicate, and structure data post-extraction.
-- **Ethical use:** Extract only public, non-sensitive data.
-- **Legal compliance:** Respect copyright, privacy, and consent laws ([Data Scraping overview](https://www.imperva.com/learn/application-security/data-scraping/)).
+### Ethical and Legal Compliance
 
-## Limitations & Challenges
+**Respect robots.txt** – Review and honor website crawling policies specifying allowed/disallowed paths and crawl rates
 
-- **Site structure changes:** Scrapers must adapt to HTML/CSS updates.
-- **Anti-scraping defenses:** CAPTCHAs, bot detection, and obfuscation complicate extraction.
-- **Legal/ethical risks:** Some sites prohibit scraping; always review terms and jurisdiction.
-- **Performance/cost:** Headless browsers are resource-intensive.
-- **Data quality:** Post-processing (cleaning/deduping) often required.
+**Implement Rate Limiting** – Prevent server overload through request throttling, typically 1-10 requests per second depending on target capacity
 
-## Integration in Larger Workflows
+**Honor Terms of Service** – Review website terms explicitly prohibiting automated access or data extraction
 
-- **Google Sheets:** Automate product/price tracking.
-- **AI models:** Feed extracted data for summarization, Q&A, or analytics ([OpenAI Cookbook](https://cookbook.openai.com/)).
-- **Notifications:** Trigger alerts via Slack, Telegram, or email.
-- **Chatbots:** Return real-time scraped answers ([n8n chatbot workflow](https://n8n.io/workflows/2943-ai-agent-chatbot-with-jinaai-webpage-scraper/)).
+**Extract Public Data Only** – Avoid scraping personal information, proprietary content, or data behind authentication without explicit permission
 
-## Sample Workflow: Scraping Email Addresses
+**Comply with Privacy Regulations** – Ensure GDPR, CCPA, and regional privacy law compliance when handling scraped data
 
-1. **Map pages:** Find Contact, About, Team URLs.
-2. **Batch scrape:** Extract emails with pattern-matching selectors.
-3. **Processing:** Clean/deduplicate; handle obfuscations (like "user[at]domain[dot]com").
-4. **Output:** Store in CRM, Google Sheets, or notify via email.
+### Technical Implementation
 
-**n8n sample:**  
-- Firecrawl `/v1/map` → Firecrawl `/v1/batch/scrape` → Code (clean) → Output
+**Graceful Error Handling** – Implement comprehensive try-catch blocks handling network failures, timeout errors, selector mismatches, and parsing exceptions
 
-## Security, Ethics, and Compliance
+**Pagination Management** – Detect and follow "next page" links, handle infinite scroll, and implement depth limits preventing runaway crawls
 
-- **Check robots.txt and terms:** Always verify site permissions.
-- **Avoid scraping personal/private data:** Only extract public information.
-- **No unsolicited email harvesting:** Many jurisdictions ban automated email collection for spam ([More info](https://www.imperva.com/learn/application-security/data-scraping/)).
-- **Secure data storage:** Prevent leaks and misuse.
+**Dynamic Content Handling** – Use headless browsers for JavaScript-rendered sites, implement wait strategies for async content, and handle AJAX-loaded data
+
+**Proxy Rotation** – Distribute requests across multiple IP addresses preventing blocks during high-volume scraping operations
+
+**Data Validation** – Clean extracted data removing HTML artifacts, validate field formats, deduplicate records, and handle missing values
+
+**Session Management** – Maintain cookies, handle authentication flows, and preserve session state for multi-step scraping workflows
+
+### Performance Optimization
+
+**Concurrent Processing** – Parallelize independent requests while respecting rate limits maximizing throughput
+
+**Caching Strategy** – Store frequently accessed content reducing redundant requests and improving response times
+
+**Resource Monitoring** – Track memory usage, CPU consumption, and network bandwidth preventing resource exhaustion
+
+**Selective Loading** – Disable images, CSS, and fonts when unnecessary reducing bandwidth and processing time
+
+## Challenges and Solutions
+
+| Challenge | Impact | Solution |
+|-----------|--------|----------|
+| **Site Structure Changes** | Scrapers break when HTML/CSS updates | Implement flexible selectors, use AI-powered extraction, maintain fallback strategies |
+| **Anti-Scraping Measures** | CAPTCHAs, rate limiting, IP blocking | Use CAPTCHA solving services, implement proxy rotation, add human-like delays |
+| **Dynamic Content** | JavaScript-rendered content invisible to simple scrapers | Deploy headless browsers, implement wait strategies, handle AJAX responses |
+| **Legal Risks** | Terms violations, copyright infringement | Review legal compliance, respect robots.txt, obtain necessary permissions |
+| **Performance Overhead** | Headless browsers consume significant resources | Use selective rendering, implement caching, optimize concurrent operations |
+| **Data Quality** | Inconsistent formats, missing fields, duplicate records | Implement robust validation, normalization pipelines, deduplication logic |
+
+## Integration Workflows
+
+### Google Sheets Automation
+
+Scraper nodes feed extracted data directly into Google Sheets for collaborative analysis, report generation, and data sharing. Automated workflows update pricing spreadsheets, maintain contact databases, or populate inventory tracking sheets.
+
+### AI Model Training
+
+Extracted content serves as training data for machine learning models. Scraped text feeds NLP systems, product images train computer vision models, and structured data populates knowledge graphs enhancing AI capabilities.
+
+### Notification Systems
+
+Webhook integrations trigger real-time alerts via Slack, Telegram, email, or SMS when scraper nodes detect specified conditions. Price drops, inventory changes, competitor actions, or content updates generate immediate notifications.
+
+### Chatbot Knowledge Bases
+
+Conversational AI systems query scraper nodes for real-time information enriching responses. Travel bots check flight availability, support agents verify product specifications, and research assistants retrieve current statistics.
+
+### Business Intelligence
+
+Scraped data flows into analytics platforms, dashboards, and reporting systems. Market intelligence teams analyze competitive landscapes, operations teams monitor supply chain dynamics, and executives track industry trends.
+
+## Security and Data Protection
+
+**Secure Credential Storage** – Store API keys, authentication tokens, and proxy credentials in environment variables or secure vaults never hardcoding in source
+
+**HTTPS Enforcement** – Always use encrypted connections preventing man-in-the-middle attacks and data interception
+
+**Data Encryption** – Encrypt sensitive scraped data at rest and in transit protecting against unauthorized access
+
+**Access Control** – Implement role-based permissions restricting scraper configuration and data access to authorized personnel
+
+**Audit Logging** – Maintain comprehensive logs of scraping activities, data access, and configuration changes enabling security monitoring
+
+**Input Validation** – Sanitize all inputs preventing injection attacks and validating URL patterns preventing unintended target access
 
 ## Frequently Asked Questions
 
-**Q: How is a web scraper node different from a generic HTTP node?**  
-A: Web scraper nodes include parsing and extraction logic for structured output, not just raw content.
+**How does a web scraper node differ from a standard HTTP request node?**  
+Web scraper nodes include specialized parsing engines, selector configuration, data extraction logic, and structured output formatting, whereas HTTP nodes return raw response content requiring manual processing.
 
-**Q: Can web scraper nodes handle JavaScript-heavy sites?**  
-A: Yes, with headless browsers or advanced APIs ([Puppeteer](https://pptr.dev/), [Firecrawl](https://docs.firecrawl.dev/)).
+**Can web scraper nodes handle JavaScript-heavy single-page applications?**  
+Yes, when integrated with headless browsers like Puppeteer or Playwright, scraper nodes fully render JavaScript content accessing dynamically generated data.
 
-**Q: What if the target site changes structure?**  
-A: Scraper nodes using fixed selectors will break; AI-powered or regularly updated selectors improve resilience.
+**What happens when target websites change their structure?**  
+Scrapers using fixed selectors break requiring updates. Mitigation strategies include flexible selector patterns, AI-powered extraction adapting to changes, and monitoring systems alerting to extraction failures.
 
-**Q: Are there legal risks?**  
-A: Yes; always comply with local laws, site terms, and data privacy regulations.
+**Are there legal restrictions on web scraping?**  
+Yes, legal considerations include website terms of service, copyright law, data protection regulations (GDPR, CCPA), and computer fraud statutes. Always consult legal counsel for compliance verification.
 
-**Q: Can web scraper nodes run in real time?**  
-A: Yes; they can be triggered on-demand or scheduled.
+**Can web scraper nodes operate in real-time?**  
+Yes, nodes can be triggered on-demand via webhooks, scheduled at intervals, or activated by workflow conditions enabling real-time data extraction and processing.
 
-## Further Reading and Resources
+**How do anti-scraping measures affect web scraper nodes?**  
+Modern websites deploy CAPTCHAs, rate limiting, IP blocking, and bot detection. Advanced scraper implementations use CAPTCHA solving services, proxy networks, and human-like behavior patterns circumventing restrictions.
 
-- [Web Scraping with JavaScript and Node.js (ScrapingBee)](https://www.scrapingbee.com/blog/web-scraping-javascript/)
-- [What is Web Scraping in Node.js? (GeeksforGeeks)](https://www.geeksforgeeks.org/node-js/what-is-web-scraping-in-node-js/)
-- [7 Best JavaScript & Node.js Web Scraping Libraries (ZenRows)](https://www.zenrows.com/blog/javascript-nodejs-web-scraping-libraries)
-- [n8n Web Scraping Workflow Templates (Firecrawl)](https://www.firecrawl.dev/blog/n8n-web-scraping-workflow-templates)
-- [Data Scraping overview (Imperva)](https://www.imperva.com/learn/application-security/data-scraping/)
+## References
+
+- [ScrapingBee: Web Scraping with JavaScript and Node.js](https://www.scrapingbee.com/blog/web-scraping-javascript/)
+- [GeeksforGeeks: What is Web Scraping in Node.js?](https://www.geeksforgeeks.org/node-js/what-is-web-scraping-in-node-js/)
+- [ZenRows: 7 Best JavaScript & Node.js Web Scraping Libraries](https://www.zenrows.com/blog/javascript-nodejs-web-scraping-libraries)
+- [Firecrawl: n8n Web Scraping Workflow Templates](https://www.firecrawl.dev/blog/n8n-web-scraping-workflow-templates)
+- [Imperva: Data Scraping Overview](https://www.imperva.com/learn/application-security/data-scraping/)
 - [Firecrawl Documentation](https://docs.firecrawl.dev/)
 - [n8n Quickstart Guide](https://docs.n8n.io/try-it-out/quickstart/)
-- [Stack Overflow: Scrape web pages in real time with Node.js](https://stackoverflow.com/questions/5211486/scrape-web-pages-in-real-time-with-node-js)
-- [nodejs-web-scraper (npm)](https://www.npmjs.com/package/nodejs-web-scraper)
-
-## Summary Table
-
-| Feature                | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| Input                  | URLs, selectors, prompts, headers, proxies                                 |
-| Output                 | Structured data (JSON, text, HTML), status, errors                         |
-| Use Cases              | Data collection, monitoring, chatbots, lead generation, reporting           |
-| Node Types             | HTTP-based, headless browser, API-powered, low-code/visual                 |
-| Key Libraries/Tools    | Puppeteer, Cheerio, Axios, Firecrawl, n8n, Playwright                      |
-| Best Practices         | Rate limiting, error handling, legal compliance, data cleaning              |
-| Common Challenges      | Dynamic sites, anti-bot defenses, site structure changes                    |
-| Integration Targets    | Google Sheets, AI models, Slack/Telegram/Email, Databases, Dashboards       |
-
-## See Also
-
-- [Puppeteer](https://pptr.dev/)
-- [Cheerio](https://cheerio.js.org/)
-- [Playwright](https://playwright.dev/)
-- [ZenRows](https://www.zenrows.com/)
-- [n8n](https://n8n.io/)
-- [Firecrawl](https://www.firecrawl.dev/)
-- [nodejs-web-scraper](https://www.npmjs.com/package/nodejs-web-scraper)
-- [ScrapingBee](https://www.scrapingbee.com/)
-
-**For more hands-on guides, workflow templates, and integration best practices, consult the resources above or explore the official documentation of your chosen tool.**
-
-*This glossary page is continually updated to reflect evolving technology and best practices. To suggest corrections or additions, please contact the maintainer or contribute via the linked resources.*
+- [n8n Workflows: AI Agent Chatbot with Jina.ai Webpage Scraper](https://n8n.io/workflows/2943-ai-agent-chatbot-with-jinaai-webpage-scraper/)
+- [Stack Overflow: Scrape Web Pages in Real Time with Node.js](https://stackoverflow.com/questions/5211486/scrape-web-pages-in-real-time-with-node-js)
+- [npm: nodejs-web-scraper](https://www.npmjs.com/package/nodejs-web-scraper)
+- [Puppeteer Documentation](https://pptr.dev/)
+- [Cheerio Documentation](https://cheerio.js.org/)
+- [Playwright Documentation](https://playwright.dev/)
+- [Selenium Documentation](https://www.selenium.dev/)
+- [Axios GitHub Repository](https://github.com/axios/axios)
+- [node-fetch GitHub Repository](https://github.com/node-fetch/node-fetch)
+- [jsdom GitHub Repository](https://github.com/jsdom/jsdom)
+- [Node Crawler GitHub Repository](https://github.com/bda-research/node-crawler)
+- [ZenRows Documentation](https://www.zenrows.com/docs)
+- [ScrapingBee Website](https://www.scrapingbee.com/)
+- [n8n Website](https://n8n.io/)
+- [Firecrawl Website](https://www.firecrawl.dev/)

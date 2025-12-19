@@ -8,6 +8,8 @@ keywords: ["AI自動回答", "メール自動返信", "カスタマーサポー�
 image: "/images/blog/AI-Email-Auto-Response-Generator-image.png"
 tags: ["AI技術", "カスタマーサポート", "業務効率化"]
 categories: ["ビジネス"]
+url: "/ja/blog/ai-email-response-examples/"
+
 ---
 ### 「AIによる自動回答案作成って、本当に使えるの？」「定型文みたいな返事しかできないんじゃないの？」
 

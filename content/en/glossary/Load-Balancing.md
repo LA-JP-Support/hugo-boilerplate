@@ -1,8 +1,8 @@
 ---
-title: 'Load Balancing Glossary: Deep Dive & Advanced Reference'
-date: 2025-11-25
-lastmod: 2025-12-05
-translationKey: load-balancing-glossary-deep-dive-advanced
+title: 'Load Balancing'
+date: 2025-12-18
+lastmod: 2025-12-18
+translationKey: load-balancing
 description: 'Learn about load balancing: distributing network traffic across servers
   to optimize application availability, reliability, and performance. Explore types,
   algorithms, and benefits for AI infrastructure.'
@@ -11,207 +11,298 @@ category: AI Infrastructure & Deployment
 type: glossary
 draft: false
 ---
-## 1. Definition: What Is Load Balancing?
 
-**Load balancing** is the process of intelligently distributing incoming network or application traffic across a group of backend servers (often called a server farm or pool) to ensure that no single server becomes overwhelmed. Load balancers optimize application availability, reliability, and performance by acting as a central gateway that receives client requests and routes each request to the most suitable server using algorithms and real-time server health data.
+## What Is Load Balancing?
 
-**Further reading:**  
-- [Kemp: What Is Load Balancing?](https://kemptechnologies.com/what-is-load-balancing)  
+Load balancing is the process of intelligently distributing incoming network or application traffic across multiple backend servers (server farm or pool) to ensure no single server becomes overwhelmed. Load balancers optimize application availability, reliability, and performance by acting as a central gateway that receives client requests and routes each request to the most suitable server using algorithms and real-time server health data.
+
+Modern applications—especially AI-powered services, high-traffic websites, and cloud-native workloads—must serve millions of simultaneous requests with minimal latency and maximum uptime. Without load balancing, a single server becomes a bottleneck, leading to slowdowns, failures, and poor user experience. Load balancing ensures graceful scaling, fault tolerance, and consistent performance under varying load conditions.
+
+## Why Load Balancing Matters
+
+**High Availability:** If a server fails, the load balancer automatically reroutes traffic to healthy servers, maintaining service continuity. Zero-downtime deployments become possible through gradual traffic shifting.
+
+**Resilience and Disaster Recovery:** Supports disaster recovery by rerouting traffic across geographic locations in case of regional outages or data center failures.
+
+**Scalability:** Easily adds or removes servers to match demand, supporting both planned growth and sudden traffic spikes. Horizontal scaling becomes seamless.
+
+**Consistent User Experience:** Minimizes response times and ensures predictable performance regardless of backend server load distribution.
+
+**Resource Optimization:** Maximizes utilization of existing infrastructure by distributing workload evenly across available resources.
+
+**Security Enhancement:** Acts as additional security layer, hiding backend infrastructure and enabling SSL/TLS termination at the load balancer.
+
+## Core Components and Architecture
+
+### Hardware vs. Software Load Balancers
+
+**Hardware Load Balancers:** Physical network appliances built for high throughput and reliability, typically deployed in on-premises data centers. Offer features like SSL/TLS offloading, advanced health checks, and Layer 4/7 traffic management. Require significant capital investment but provide deterministic performance.
+
+**Examples:** F5 BIG-IP, Kemp LoadMaster, Citrix ADC
+
+**Advantages:** Dedicated hardware, predictable performance, specialized processing
+**Disadvantages:** High upfront cost, limited flexibility, maintenance overhead
+
+**Software Load Balancers:** Implemented as software running on commodity hardware, virtual machines, or as cloud-managed services. Provide flexibility, rapid scaling, and deep integration with automation frameworks like Kubernetes and OpenShift.
+
+**Examples:** NGINX Plus, HAProxy, AWS Elastic Load Balancing, Traefik
+
+**Advantages:** Cost-effective, flexible deployment, easy updates
+**Disadvantages:** Shared resources, potential performance variability
+
+### Request Routing Process
+
+**Request Reception:** Load balancer receives client request at single entry point (IP address or DNS name).
+
+**Health Check Evaluation:** Continuously monitors backend server health through TCP pings, HTTP probes, or application-level health checks.
+
+**Server Selection:** Applies configured algorithm (round robin, least connections, etc.) to select optimal backend server based on current state.
+
+**Request Forwarding:** Routes request to selected server, potentially modifying headers or applying transformations.
+
+**Response Handling:** Receives response from backend, optionally caches or modifies it, then returns to client.
+
+**Session Management:** Maintains session persistence (sticky sessions) when required by application.
+
+### Health Checks and Failover
+
+Load balancers perform continuous health monitoring:
+
+**Active Health Checks:** Proactively send test requests to backends at regular intervals (e.g., HTTP GET to /health every 5 seconds).
+
+**Passive Health Checks:** Monitor actual traffic and mark servers unhealthy based on error rates or timeouts.
+
+**Failure Detection:** When server fails health checks (e.g., 3 consecutive failures), it's removed from active pool.
+
+**Automatic Recovery:** Once server passes health checks again, it's automatically reinstated into rotation.
+
+**Graceful Degradation:** During partial failures, load balancer continues serving from healthy servers while alerting operations team.
+
+## Types of Load Balancers
+
+### By OSI Layer
+
+**Layer 4 (Transport Layer) Load Balancers:** Route traffic based on TCP/UDP information (IP address, port). Fast and efficient but limited routing intelligence. Ideal for high-performance, low-latency workloads requiring simple distribution.
+
+**Use cases:** Database connections, generic TCP services, UDP applications
+**Advantages:** High throughput, low latency, protocol-agnostic
+**Disadvantages:** Limited routing intelligence, cannot inspect application data
+
+**Layer 7 (Application Layer) Load Balancers:** Route based on HTTP headers, URLs, cookies, or application-specific data. Enable sophisticated routing rules based on content.
+
+**Use cases:** Web applications, API gateways, microservices
+**Advantages:** Content-based routing, SSL termination, application awareness
+**Disadvantages:** Higher latency than L4, more resource intensive
+
+### By Deployment Model
+
+**Global Server Load Balancer (GSLB):** Distributes traffic across geographic locations and data centers using DNS-based routing. Essential for disaster recovery and global applications.
+
+**Use cases:** Multi-region deployments, disaster recovery, geographic optimization
+**Features:** DNS-based routing, health monitoring across regions, latency-based decisions
+
+**Hardware Load Balancers:** Physical appliances for enterprise data centers requiring deterministic performance.
+
+**Software Load Balancers:** Flexible, cloud-native solutions running on standard infrastructure.
+
+**Virtual Load Balancers:** Run within VMs or containers, integrate with orchestration platforms like Kubernetes.
+
+**Elastic Load Balancers:** Cloud-native services that automatically scale with demand (AWS ELB, Azure Load Balancer, Google Cloud Load Balancing).
+
+## Load Balancing Algorithms
+
+### Static Algorithms
+
+**Round Robin:** Cycles through servers sequentially, assigning each request to next server in list. Simple and effective for servers with equal capacity.
+
+**Weighted Round Robin:** Assigns more requests to higher-capacity servers based on weights. Server with weight 3 receives 3× traffic of server with weight 1.
+
+**IP Hash:** Hashes client IP address to consistently route same client to same server. Provides natural session persistence.
+
+### Dynamic Algorithms
+
+**Least Connections:** Routes to server with fewest active connections. Ideal for applications with varying request duration.
+
+**Weighted Least Connections:** Combines least connections with server capacity weighting.
+
+**Least Response Time:** Sends requests to server with lowest average response time and fewest connections. Optimizes for user-perceived performance.
+
+**Resource-Based (Agent-Based):** Uses server-reported metrics (CPU, memory, disk) to dynamically route traffic. Requires agent software on backends.
+
+**Consistent Hashing:** Maps servers and clients to hash ring, minimizing disruption when servers are added or removed. Popular in distributed caching.
+
+**Power of Two Random Choices:** Randomly selects two servers, routes request to less-loaded one. Surprisingly effective with minimal overhead.
+
+### Advanced Algorithms
+
+**Waterfall by Region:** Sends traffic to primary region until capacity reached, then overflows to secondary regions.
+
+**Spray Distribution:** Distributes traffic evenly across all available regions or zones.
+
+**Adaptive Algorithms:** Machine learning-based approaches that learn optimal routing patterns from historical data.
+
+## Key Benefits
+
+### Availability and Reliability
+
+**Zero Downtime Deployments:** Gradually shift traffic during updates without service interruption.
+
+**Automatic Failover:** Detect and route around failed servers in seconds.
+
+**Health Monitoring:** Continuous verification of backend availability and performance.
+
+### Scalability and Performance
+
+**Horizontal Scaling:** Add servers to handle increased load without application changes.
+
+**Auto-Scaling Integration:** Coordinate with cloud auto-scaling to match capacity to demand.
+
+**Performance Optimization:** Route requests to fastest or closest servers.
+
+### Security
+
+**SSL/TLS Termination:** Offload encryption/decryption to load balancer, reducing backend server load.
+
+**DDoS Protection:** Absorb and distribute attack traffic across multiple servers.
+
+**Web Application Firewall Integration:** Filter malicious requests before they reach backends.
+
+**Backend Obfuscation:** Hide backend server details from external clients.
+
+## Common Use Cases
+
+### E-Commerce Platforms
+
+**Challenge:** Handle traffic spikes during sales events, maintain shopping cart state.
+
+**Solution:** Layer 7 load balancing with cookie-based session persistence. Auto-scaling backend servers based on traffic patterns.
+
+**Benefits:** Maintain service during 10× traffic spikes, ensure cart persistence across requests.
+
+### Streaming Services
+
+**Challenge:** Distribute media content with minimal buffering across global audience.
+
+**Solution:** Geographic load balancing routing users to nearest edge location. CDN integration for content caching.
+
+**Benefits:** Reduced latency, improved streaming quality, lower bandwidth costs.
+
+### AI Inference APIs
+
+**Challenge:** Distribute inference requests across GPU servers for low-latency predictions.
+
+**Solution:** Least connections algorithm with GPU availability monitoring. Connection pooling for efficient resource use.
+
+**Benefits:** Optimal GPU utilization, consistent inference latency, automatic failover.
+
+### Microservices Architecture
+
+**Challenge:** Route requests across dynamically scaling service instances in Kubernetes.
+
+**Solution:** Service mesh integration with intelligent routing, circuit breaking, and retry logic.
+
+**Benefits:** Resilient inter-service communication, automatic service discovery, traffic shaping.
+
+## Implementation Best Practices
+
+**Start with Simple Algorithms:** Begin with round robin or least connections. Add complexity only when needed.
+
+**Implement Comprehensive Health Checks:** Use application-level health endpoints that verify actual service functionality, not just TCP connectivity.
+
+**Configure Appropriate Timeouts:** Set connection, read, and write timeouts to prevent slow backends from degrading overall service.
+
+**Enable Access Logging:** Log all requests for troubleshooting, security analysis, and capacity planning.
+
+**Monitor Key Metrics:** Track request rate, error rate, response time, and backend health status continuously.
+
+**Plan for Failure:** Test failover scenarios regularly. Ensure system operates acceptably with reduced capacity.
+
+**Implement Rate Limiting:** Protect backends from overload with request rate limiting at load balancer.
+
+**Use Connection Pooling:** Maintain persistent connections to backends to reduce connection overhead.
+
+**Enable Compression:** Compress responses at load balancer to reduce bandwidth and improve client performance.
+
+**Regular Capacity Planning:** Monitor trends and plan infrastructure scaling before hitting limits.
+
+## Platform-Specific Solutions
+
+### AWS Elastic Load Balancing
+
+**Application Load Balancer (ALB):** Layer 7 load balancing for HTTP/HTTPS with advanced routing capabilities.
+
+**Network Load Balancer (NLB):** Layer 4 load balancing for ultra-high performance and static IP addresses.
+
+**Gateway Load Balancer:** Layer 3 load balancing for third-party virtual appliances.
+
+### Google Cloud Load Balancing
+
+**Global Load Balancing:** Single anycast IP serving traffic globally with automatic failover.
+
+**Regional Load Balancing:** Lower-latency option for single-region deployments.
+
+**Internal Load Balancing:** Private load balancing for internal service communication.
+
+### Azure Load Balancer
+
+**Azure Load Balancer:** Layer 4 load balancing with high availability.
+
+**Azure Application Gateway:** Layer 7 load balancing with WAF integration.
+
+**Azure Front Door:** Global HTTP load balancing with CDN capabilities.
+
+### Open Source Solutions
+
+**NGINX Plus:** Commercial version with advanced features, support, and monitoring.
+
+**HAProxy:** High-performance Layer 4/7 load balancer with extensive configuration options.
+
+**Traefik:** Cloud-native load balancer with automatic service discovery for containers.
+
+## Performance Considerations
+
+**Throughput:** Hardware load balancers handle 10-100 Gbps. Software load balancers typically handle 1-10 Gbps per instance.
+
+**Latency:** Layer 4 adds <1 ms latency. Layer 7 adds 1-5 ms depending on processing complexity.
+
+**Connection Limits:** Hardware appliances support 10M+ concurrent connections. Software solutions typically support 100K-1M per instance.
+
+**SSL/TLS Performance:** Dedicated hardware accelerators process 10-100K TLS handshakes per second. Software solutions achieve 1-10K per second.
+
+## Monitoring and Troubleshooting
+
+**Key Metrics to Monitor:**
+- Request rate (requests/second)
+- Error rate (4xx, 5xx responses)
+- Response time percentiles (P50, P95, P99)
+- Backend health status
+- Connection counts (active, idle)
+- SSL/TLS handshake rate
+
+**Common Issues:**
+- Uneven traffic distribution
+- Session persistence breaking
+- Health check misconfigurations
+- SSL certificate expiration
+- Backend server overload
+
+## References
+
 - [IBM: What Is Load Balancing?](https://www.ibm.com/think/topics/load-balancing)
-
-## 2. Why Load Balancing Matters
-
-Modern applications—especially AI-powered services, high-traffic websites, and cloud-native workloads—must serve millions of simultaneous requests with minimal [latency](/en/glossary/latency/) and maximum uptime. Without load balancing, a single server could become a bottleneck, leading to slowdowns and failures. Load balancing ensures:
-
-- **High Availability:** If a server fails, the load balancer reroutes traffic to healthy servers, maintaining continuity.
-- **Resilience:** Supports disaster recovery by rerouting in case of outages or during maintenance.
-- **Scalability:** Easily adds or removes servers to match demand, supporting both planned growth and sudden traffic spikes.
-- **Consistent User Experience:** Minimizes response times, ensuring predictable performance.
-
-**More details:**  
 - [AWS: What is Load Balancing?](https://aws.amazon.com/what-is/load-balancing/)
-
-## 3. How Load Balancing Works
-
-### a. Hardware vs. Software Load Balancers
-
-- **Hardware Load Balancers:**  
-  These are physical network appliances built for high throughput and reliability, often deployed in on-premises data centers. They offer features like SSL/TLS offloading, advanced health checks, and Layer 4/7 traffic management, but require significant capital investment and ongoing maintenance.  
-  Examples: [F5 BIG-IP](https://www.f5.com/products/big-ip-services.html), [Kemp LoadMaster](https://kemptechnologies.com/load-balancer).
-
-- **Software Load Balancers:**  
-  Implemented as software running on commodity hardware, in virtual machines, or as cloud-managed services. They provide flexibility, rapid scaling, and deep integration with automation frameworks (e.g., Kubernetes, OpenShift).  
-  Examples: [NGINX Plus](https://www.nginx.com/products/nginx/), [HAProxy](https://www.haproxy.org/), [AWS Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/).
-
-**More:**  
-- [F5: Hardware vs. Software Load Balancers](https://www.f5.com/glossary/load-balancer)
-
-### b. Real-Time Request Routing & Backend Selection
-
-- **Request Handling:**  
-  The load balancer receives every client request and, using rules and real-time health data, selects the optimal backend server for each request.
-- **Server Selection:**  
-  Factors influencing server choice include current health status, active connection counts, response times, server weights, and custom business rules.
-### c. Health Checks & Failover
-
-- Load balancers continuously perform health checks (e.g., TCP/HTTP ping, application-level probes) to verify backend server availability.
-- If a server fails, it is automatically removed from the pool. Once it recovers and passes health checks, it's reinstated.
-
-**Details:**  
-- [Google Cloud: Backend Health Checks](https://cloud.google.com/load-balancing/docs/health-check-concepts)
-
-### d. Session Persistence ("Sticky Sessions")
-
-Some applications require session data (e.g., shopping carts, authentication context) to persist on the same server. Load balancers can enforce session persistence, often using cookies or IP hash techniques, ensuring all requests in a session are routed to the same backend.
-### e. Real-World Analogy
-
-A load balancer is like a restaurant manager assigning diners to tables. If one waiter is overloaded, the manager directs new guests to other waiters, ensuring fast, smooth service.
-
-## 4. Types of Load Balancers
-
-Load balancers are classified by deployment, OSI layer, and architecture:
-
-| **Type**                        | **OSI Layer** | **Description**                                                                                     |
-|----------------------------------|---------------|-----------------------------------------------------------------------------------------------------|
-| **Network Load Balancer (NLB)**  | L4            | Routes traffic based on TCP/UDP headers (IP address, port); ideal for high-performance, low-latency workloads. |
-| **Application Load Balancer (ALB)** | L7         | Routes based on HTTP headers, URLs, or cookies; suited for modern web/API apps. |
-| **Global Server Load Balancer (GSLB)** | DNS      | Distributes traffic across geographic locations/data centers for disaster recovery and geo-redundancy. |
-| **Hardware Load Balancer**       | L4/L7         | Physical appliances for robust, high-throughput load balancing, used in enterprise data centers. |
-| **Software Load Balancer**       | L4/L7         | Application-based, flexible, suited for cloud/virtualized environments. |
-| **Virtual Load Balancer**        | L4/L7         | Runs within virtual machines or containers, integrates with orchestration tools (e.g., Kubernetes). |
-| **Elastic Load Balancer**        | L4/L7         | Cloud-native, [autoscaling](/en/glossary/autoscaling/) with demand; ideal for dynamic cloud deployments. |
-
-**Layer 4 (Transport Layer):** Inspects TCP/UDP for routing.  
-**Layer 7 (Application Layer):** Inspects HTTP/HTTPS/application data for advanced routing.
-
-**More:**  
-- [Loadbalancer.org: Comparing Layer 4, Layer 7, and GSLB](https://www.loadbalancer.org/blog/comparing-layer-4-layer-7-and-gslb-load-balancing-techniques/)
-
-## 5. Load Balancing Algorithms
-
-Load balancing algorithms define how requests are distributed:
-
-### a. Static Algorithms
-
-- **Round Robin:**  
-  Cycles through servers, assigning each new request to the next in line. Best for servers with equal capacity.  
-  [Round Robin explained](https://kemptechnologies.com/load-balancer/round-robin-load-balancing)
-
-- **Weighted Round Robin:**  
-  Assigns more requests to higher-capacity servers based on assigned weights.  
-  [Weighted Round Robin explained](https://kemptechnologies.com/load-balancer/weighted-round-robin-load-balancing)
-
-- **IP Hash:**  
-  Hashes client IP to select a server, achieving session persistence for returning clients.
-
-### b. Dynamic Algorithms
-
-- **Least Connections:**  
-  Routes to the server with the fewest active sessions.  
-  [Least Connections explained](https://kemptechnologies.com/load-balancer/least-connections-load-balancing)
-
-- **Weighted Least Connections:**  
-  Like least connections, but factors in server weights (capacity).
-
-- **Least Response Time:**  
-  Sends requests to the server with the lowest average response time and least connections.
-
-- **Resource-Based (Agent-Based):**  
-  Uses server-reported metrics (CPU, memory, disk) to dynamically route traffic.  
-  [Resource Based Load Balancing](https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques)
-
-- **Consistent Hashing:**  
-  Maps servers/clients to a hash ring, minimizing disruption when servers are added/removed.
-
-- **Random with Two Choices (“Power of Two”):**  
-  Picks two servers at random, assigns the request to the less-loaded one.
-
-**Advanced algorithm options (Google Cloud Service Mesh):**  
-- Waterfall by region  
-- Spray to region  
-- Spray to world  
-- Waterfall by zone  
-[Advanced Load Balancing on Google Cloud](https://docs.cloud.google.com/service-mesh/docs/service-routing/advanced-load-balancing-overview)
-
-## 6. Key Benefits of Load Balancing
-
-- **Availability:**  
-  Health checks, failover, and redundancy enable continuous uptime and zero-downtime maintenance.
-
-- **Scalability:**  
-  Easily accommodates traffic spikes by adding/removing servers; cloud-native load balancers support autoscaling.
-
-- **Security:**  
-  Integrates with WAFs, provides SSL/TLS offloading, and absorbs DDoS attack traffic.  
-  [F5: SSL Offloading](https://f5.com/glossary/ssl-termination)
-
-- **Performance:**  
-  Reduces response time, optimizes bandwidth, and routes users to the closest or least busy server.
-
-**More:**  
-- [Kemp: Load Balancer Benefits](https://kemptechnologies.com/what-is-load-balancing)
-
-## 7. Use Cases & Examples
-
-- **E-Commerce:**  
-  During high-traffic events (e.g., flash sales), load balancers distribute requests to ensure fast page loads and maintain cart state via sticky sessions.
-
-- **Streaming Services:**  
-  Routes users to the nearest/least busy server, minimizing buffering and downtime.
-
-- **Cloud AI Deployments:**  
-  Evenly distributes inference API requests across containers or VMs for low-latency predictions.
-
-- **Disaster Recovery:**  
-  Global server load balancing reroutes traffic to healthy, geographically distributed data centers.
-
-- **Maintenance:**  
-  Servers can be drained for updates without downtime; traffic is routed to healthy servers.
-
-## 8. Platform-Specific Implementations
-
-| **Vendor / Platform** | **Solution(s)** | **Documentation** |
-|----------------------|-----------------|-------------------|
-| **AWS** | [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/) | [AWS Load Balancing Docs](https://aws.amazon.com/what-is/load-balancing/) |
-| **Google Cloud** | [Cloud Load Balancing](https://cloud.google.com/load-balancing) | [Google Cloud Load Balancing Overview](https://docs.cloud.google.com/load-balancing/docs/load-balancing-overview) |
-| **F5** | [BIG-IP](https://www.f5.com/products/big-ip-services.html), [NGINX Plus](https://www.f5.com/products/nginx) | [F5 Load Balancer Glossary](https://www.f5.com/glossary/load-balancer) |
-| **Kemp** | [LoadMaster](https://kemptechnologies.com/load-balancer) | [Kemp Load Balancing Overview](https://kemptechnologies.com/what-is-load-balancing) |
-
-Each solution offers unique features (e.g., global load balancing, WAF integration, SSL offloading, Kubernetes support).
-
-## 9. Visual Aids and Architecture Diagrams
-
-- **Typical Load Balancer Deployment:**  
-  ![Load Balancer Diagram](https://cdn.studio.f5.com/images/k6fem79d/production/a430050f25e3b35af49298281ad58f5a0f20fd83-909x557.svg)
-  _A load balancer receives client requests and distributes them among multiple backend servers. If a server fails, the load balancer reroutes traffic to healthy servers._
-
-- **Algorithm Flow Example:**  
-  ![Round Robin vs. Least Connections](https://kemptechnologies.com/images/kemptechnologieslibraries/illustrations/what-is-a-load-balancer-diagram-desktop.svg?sfvrsn=41cd660d_2)
-  _Round robin cycles through all servers; least connections routes to the server with the fewest active sessions._
-
-- **Global Load Balancing:**  
-  ![Global Server Load Balancing](https://docs.cloud.google.com/static/load-balancing/images/load-balancing-overview.svg)
-  _User requests are routed to the geographically closest or healthiest data center._
-
-## 10. Further Resources
-
-- [IBM: What Is Load Balancing?](https://www.ibm.com/think/topics/load-balancing)
-- [AWS: What is Load Balancing?](https://aws.amazon.com/what-is/load-balancing/)
-- [Kemp: What Is Load Balancing & How Do Load Balancers Work](https://kemptechnologies.com/what-is-load-balancing)
+- [AWS Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/)
+- [Kemp: What Is Load Balancing](https://kemptechnologies.com/what-is-load-balancing)
 - [F5: What Is a Load Balancer?](https://www.f5.com/glossary/load-balancer)
-- [Google Cloud: Load Balancing Overview](https://docs.cloud.google.com/load-balancing/docs/load-balancing-overview)
-- [NGINX: Load Balancing Algorithms and Techniques](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
-- [Kubernetes: Service Load Balancing](https://kubernetes.io/docs/concepts/services-networking/service/)
-
-## Summary Table: Types of Load Balancers
-
-| **Type**                        | **OSI Layer** | **Deployment**          | **Key Use Case**                                    |
-|----------------------------------|---------------|------------------------|-----------------------------------------------------|
-| Network Load Balancer (NLB)      | Layer 4       | Hardware/Software/Cloud | High-throughput, TCP/UDP traffic, low latency       |
-| Application Load Balancer (ALB)  | Layer 7       | Hardware/Software/Cloud | HTTP/HTTPS, web APIs, advanced routing              |
-| Global Server Load Balancer (GSLB) | DNS         | Hardware/Cloud         | Disaster recovery, geo-distributed applications      |
-| Hardware Load Balancer           | L4/L7         | On-premises            | Legacy data centers, high-performance environments   |
-| Software Load Balancer           | L4/L7         | Cloud/Virtual          | Flexible, cloud-native, DevOps-centric deployments   |
-| Virtual Load Balancer            | L4/L7         | VM/Container           | Kubernetes, microservices, virtualized data centers  |
-| Elastic Load Balancer            | L4/L7         | Cloud                  | Auto-scaling, dynamic, demand-based applications     |
-
+- [F5 BIG-IP](https://www.f5.com/products/big-ip-services.html)
+- [Google Cloud Load Balancing](https://cloud.google.com/load-balancing)
+- [Google Cloud Load Balancing Overview](https://docs.cloud.google.com/load-balancing/docs/load-balancing-overview)
+- [Google Cloud Health Check Concepts](https://cloud.google.com/load-balancing/docs/health-check-concepts)
+- [Google Cloud Service Mesh: Advanced Load Balancing](https://docs.cloud.google.com/service-mesh/docs/service-routing/advanced-load-balancing-overview)
+- [Loadbalancer.org: Layer 4 vs Layer 7](https://www.loadbalancer.org/blog/comparing-layer-4-layer-7-and-gslb-load-balancing-techniques/)
+- [Kemp: Round Robin Load Balancing](https://kemptechnologies.com/load-balancer/round-robin-load-balancing)
+- [Kemp: Weighted Round Robin](https://kemptechnologies.com/load-balancer/weighted-round-robin-load-balancing)
+- [Kemp: Least Connections](https://kemptechnologies.com/load-balancer/least-connections-load-balancing)
+- [Kemp: Load Balancing Algorithms](https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques)
+- [NGINX: Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
+- [HAProxy Official Site](https://www.haproxy.org/)
+- [Kubernetes Service Load Balancing](https://kubernetes.io/docs/concepts/services-networking/service/)

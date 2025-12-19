@@ -8,6 +8,8 @@ keywords: ["AI活用", "中小企業", "チケットシステム", "AIメール�
 image: "/images/blog/start-using-ai-today.jpg"
 tags: ["AI技術", "中小企業", "業務効率化"]
 categories: ["ビジネス"]
+url: "/ja/blog/start-using-ai-today/"
+
 ---
 近年、中小企業における{{< tooltip text="人工知能を業務に取り入れること" >}}AI活用{{< /tooltip >}}は、業務効率化と{{< tooltip text="ITやデジタル技術を活用して業務プロセスやビジネスモデルを変革すること" >}}デジタル変革{{< /tooltip >}}を実現する現実的な選択肢として注目を集めています。
 
