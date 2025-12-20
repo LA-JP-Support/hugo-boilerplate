@@ -30,6 +30,12 @@ from typing import Dict, Tuple
 import yaml
 
 try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
+try:
     import anthropic
 except ImportError:
     anthropic = None
