@@ -13,13 +13,13 @@ AIカスタマーサポートは、人工知能を使って顧客からの問い
 
 このシステムにはいくつかの技術が使われています。自然言語処理（NLP）は、AIが人間の言葉を理解して答えるのに役立ちます。機械学習は、AIが使う知識を増やしたり改善したりする仕組みです。データベースと連携することで、AIは多くの情報を参照できます。音声認識や画像認識も加わることで、テキスト以外の入力にも対応できます。
 
-AIカスタマーサポートには、FAQ自動応答、AIチャットボット、バーチャルアシスタントなどいろいろな形があります。たとえば、SmartWebの構築サービスで使用されているツールであるLiveAgentとFlowHuntは、企業が持つマニュアルやFAQを知識ベースにして、ユーザーの質問にすぐに、正確に答えるAIチャットボットです。
+AIカスタマーサポートには、FAQ自動応答、[AIチャットボット](/ja/glossary/[AI](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")-chatbot/ "AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。")、バーチャルアシスタントなどいろいろな形があります。たとえば、SmartWebの構築サービスで使用されているツールであるLiveAgentとFlowHuntは、企業が持つマニュアルやFAQを知識ベースにして、ユーザーの質問にすぐに、正確に答えるAIチャットボットです。
 
 ## 技術の進化とその歴史
 
 AIカスタマーサポートの始まりは1960年代のチャットボット「ELIZA」までさかのぼります。そのあと、1990年代にはルールに基づいて自動で答えるシステムが広まりました。2010年代になると、機械学習やディープラーニングの技術が進み、AIはより自然な会話や複雑な質問にも対応できるようになりました。
 
-2016年からはクラウドAIや生成AI（Generative AI）が使えるようになり、AIカスタマーサポートは次のように進化しています。
+2016年からはクラウドAIや生成AI（Generative [AI](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")）が使えるようになり、AIカスタマーサポートは次のように進化しています。
 
 ### マルチモーダルAIの普及
 
@@ -43,7 +43,7 @@ AIカスタマーサポートは、欧米やアジアをはじめ、世界中の
 
 ### 世界市場規模と成長率
 
-2025年、AIカスタマーサポート市場は世界中で急速に広がっています。AIチャットボットの市場規模は100〜150億ドルに達すると予測されています。2024年は83億ドルと見込まれており、1年で大きく増加しています。年平均成長率（CAGR）は24〜30%と高く、2029年にはおよそ470億ドルに成長する見通しです。
+2025年、AIカスタマーサポート市場は世界中で急速に広がっています。AIチャットボットの市場規模は100〜150億ドルに達すると予測されています。2024年は83億ドルと見込まれており、1年で大きく増加しています。[年平均成長率](/ja/glossary/CAGR/ "年平均成長率(CAGR)について学びましょう。投資や指標の経時的な平均年間成長を測定する財務指標です。その計算式、算出方法、および応用例を理解できます。")（[CAGR](/ja/glossary/CAGR/ "[年平均成長率](/ja/glossary/CAGR/ "年平均成長率(CAGR)について学びましょう。投資や指標の経時的な平均年間成長を測定する財務指標です。その計算式、算出方法、および応用例を理解できます。")(CAGR)について学びましょう。投資や指標の経時的な平均年間成長を測定する財務指標です。その計算式、算出方法、および応用例を理解できます。")）は24〜30%と高く、2029年にはおよそ470億ドルに成長する見通しです。
 
 北米やヨーロッパがこの分野をけん引していますが、アジアや中東、南米などの新興地域でも導入が進んでいます。大企業だけでなく、中小企業でも広く使われるようになっています。2025年には、先進国の企業でカスタマーサポートAIを導入する割合が約60%に達するという調査もあります。
 
@@ -66,8 +66,8 @@ AIカスタマーサポートは、欧米やアジアをはじめ、世界中の
 Salesforceは2024年に発表したEinstein Service Agentで、従来のチャットボットの概念を変革しています。Iron Mountain社では、Einstein AIの導入により、生成AI応答のクローズ率が80%に達し、AIが生成した回答の76%は編集不要という結果を記録しました。さらに、リピートコールが8%減少し、85%のサービスエージェントがAI応答を「極めて有用、文脈的、正確」と評価しています。
 
 **参考資料：**
-- [Iron Mountain Case Study - Einstein AI Implementation](https://www.salesforce.com/customer-stories/iron-mountain-ai-faster-automation/)
-- [Salesforce Einstein Service Agent Official Announcement](https://www.salesforce.com/news/stories/einstein-service-agent-announcement/)
+- [Iron Mountain Case Study - Einstein [AI](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。") Implementation](https://www.salesforce.com/customer-stories/iron-mountain-[ai](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")-faster-automation/)
+- [Salesforce [Einstein Service Agent](/ja/glossary/Einstein-Service-Agent/ "Salesforceの自律型AIカスタマーサービスソリューション、Einstein Service Agentをご紹介します。複雑なリクエストを解決し、データを統合し、24時間365日のオムニチャネルサポートを提供します。") Official Announcement](https://www.salesforce.com/news/stories/einstein-service-agent-announcement/)
 
 ### 2. Intuit：AI-powered財務サポートの自動化
 
@@ -81,18 +81,18 @@ IntuitはAmazon Connectを活用して、統合型カスタマーコンタクト
 ベトナム・ハノイ拠点の美容・健康製品スタートアップ**Joyful Hands**では、ベトナム語・タイ語・英語の3言語にわたる顧客問い合わせ対応に課題を抱えていました。そこで**BotStar社の多言語対応AIチャットボット**を導入し、各言語で自動応答できる体制を構築しました。その結果、カート放棄率が**35%減少**し、自動対応できる問い合わせ割合も**55%から89%へ向上**、回答速度や会話のしやすさに対する顧客からの好意的なレビューも増加しています。
 
 **参考資料：**
-- [Case Study 1: Multilingual Chatbot Boosts Cross-Border E-Commerce](https://nineten.ai/ai-chatbots-for-smes-in-southeast-asia-challenges-and-opportunities/)
+- [Case Study 1: Multilingual Chatbot Boosts Cross-Border E-Commerce](https://nineten.[ai](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")/ai-chatbots-for-smes-in-southeast-asia-challenges-and-opportunities/)
 
 ### 4. Bali Bliss Homestay（インドネシア・小規模宿泊業）
 
 インドネシア・バリ島にある客室5室の小規模ゲストハウスBali Bliss Homestayでは、海外からの宿泊問い合わせに対し、時差やスタッフ不在のため回答が遅れがちという課題がありました。そこでWhatsAppを活用したチャットボットを地元企業と開発し、予約対応、道順案内、設備に関するFAQ回答を自動化するとともに、滞在後のフィードバック収集も行いました。この導入により、予約確認がスタッフ不在時でも即時発行できるようになり、問い合わせから予約への転換率が21%向上、迅速な応答によって海外ゲストを含む顧客満足度も改善しました。
 
 **参考資料：**
-- [Case Study 2: WhatsApp Chatbot Transforms Guest Experience in Travel](https://nineten.ai/ai-chatbots-for-smes-in-southeast-asia-challenges-and-opportunities/)
+- [Case Study 2: [WhatsApp](/ja/glossary/WhatsApp/ "電話プランを使用せずにインターネット経由でテキスト、通話、ビデオを送信できる無料のメッセージングアプリで、強力なプライバシー保護機能を備えています。") Chatbot Transforms Guest Experience in Travel](https://nineten.ai/ai-chatbots-for-smes-in-southeast-asia-challenges-and-opportunities/)
 
 ### 5. Procosmet（イタリア・ヘアケア製品企業）
 
-イタリアのヘアケア製品メーカーProcosmetでは、事業拡大に伴い注文のキャンセルや変更、返金対応など顧客サポートにかかる負担が増大し、対応遅れや顧客待ち時間の長さが課題となっていました。そこでTidioのAIチャットボット（Lyro AIエージェント）をウェブサイトのライブチャットに導入し、問い合わせ対応の自動化と迅速化を図りました。その結果、売上が23%増加し、新規リード獲得数も月100件超に拡大。チャットボット経由のニュースレターでは開封率18～22%・単一キャンペーンで1000ユーロ超のROIを達成し、顧客からのフィードバック評価も5点中3.8から4.7へ向上するなど、大幅な成果を上げています。
+イタリアのヘアケア製品メーカーProcosmetでは、事業拡大に伴い注文のキャンセルや変更、返金対応など顧客サポートにかかる負担が増大し、対応遅れや顧客待ち時間の長さが課題となっていました。そこでTidioのAIチャットボット（Lyro [AIエージェント](/ja/glossary/AI-agents/ "AIエージェントは、環境を認識し、推論し、最小限の人間の介入で行動する自律的なソフトウェアシステムです。自動化と意思決定の強化を通じて、さまざまな業界を変革しています。")）をウェブサイトのライブチャットに導入し、問い合わせ対応の自動化と迅速化を図りました。その結果、売上が23%増加し、新規リード獲得数も月100件超に拡大。チャットボット経由のニュースレターでは開封率18～22%・単一キャンペーンで1000ユーロ超のROIを達成し、顧客からのフィードバック評価も5点中3.8から4.7へ向上するなど、大幅な成果を上げています。
 
 **参考資料：**
 - [12 Companies Using Chatbots for AI-Generated Customer Service](https://www.tidio.com/blog/companies-that-use-ai-generated-customer-support/#procosmet)
@@ -163,7 +163,7 @@ AIを導入している企業の約68％が「パーソナライズによって�
 
 日本では、製造業、金融、通信などさまざまな分野でAIカスタマーサポートの導入が進んでいます。大手通信企業では、社内の知識とAIを組み合わせた高精度なチャットボットが使われています。
 
-SmartWebの構築サービスで使用されている「LiveAgent」や「FlowHunt」のようなツールでは、専門的なマニュアルや取扱説明書をAIが自動で読み込んで、質問に対してすぐに答える仕組みを作っています。これらのAIは、ユーザーが「読む・探す」から「対話する」という新しい方法で情報にアクセスできるようにし、企業の顧客対応の質とコスト削減の両方に役立っています。
+SmartWebの構築サービスで使用されている「[LiveAgent](/ja/glossary/LiveAgent/ "LiveAgentは、メール、チャット、電話、ソーシャルメディアを通じたすべての顧客とのやり取りを一元管理する高度なカスタマーサービス・ヘルプデスクソフトウェアプラットフォームで、サポート効率を向上させます。")」や「[FlowHunt](/ja/glossary/FlowHunt/ "FlowHuntの中核となる概念、機能、統合機能について解説します。この用語集では、ノーコードAIチャットボットおよび自動化プラットフォームに関する詳細な技術的定義を提供します。")」のようなツールでは、専門的なマニュアルや取扱説明書をAIが自動で読み込んで、質問に対してすぐに答える仕組みを作っています。これらのAIは、ユーザーが「読む・探す」から「対話する」という新しい方法で情報にアクセスできるようにし、企業の顧客対応の質とコスト削減の両方に役立っています。
 
 ### グローバル展開に向けた戦略的ヒント
 
