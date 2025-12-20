@@ -50,8 +50,8 @@ class DatabaseLinkBuilder:
             existing_links.add(match.group(1).lower().strip())
         
         links_added = 0
-        max_links_per_term = 3
-        max_total_links = 200
+        max_links_per_term = 5  # Increased from 3
+        max_total_links = 500  # Increased from 200
         
         # Process keywords by priority
         for entry in self.link_database:
