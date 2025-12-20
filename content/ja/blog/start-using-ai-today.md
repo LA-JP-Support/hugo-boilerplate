@@ -116,7 +116,7 @@ SmartWebは、多様な問い合わせ窓口を一元管理できる「チケッ
 
 **こちらの動画もご覧ください。**
 
-{{< [youtube](/ja/glossary/YouTube/) frmB19r0k58 >}}
+{{< youtube frmB19r0k58 >}}
 
 今こそ、AI活用で顧客満足度を高めるデジタル変革を始めませんか？
 
