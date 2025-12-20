@@ -778,11 +778,11 @@ Agent Utilization,Percentage of time agents spend working.,Support & Operations 
 Automation Rate,Percentage of tasks handled automatically.,Support & Operations Efficiency,Automation-Rate.md,completed,completed
 Average Resolution Time,Mean time to solve customer issues.,Support & Operations Efficiency,Average-Resolution-Time.md,completed,completed
 Contact Deflection,Preventing contacts through self-service.,Support & Operations Efficiency,Contact-Deflection.md,completed,completed
-Cost per Contact,Average expense per customer interaction.,Support & Operations Efficiency,Cost-per-Contact.md,completed,pending
-Escalation Management,Handling elevated support issues.,Support & Operations Efficiency,Escalation-Management.md,completed,pending
-Escalation Rate,Percentage of issues requiring escalation.,Support & Operations Efficiency,Escalation-Rate.md,completed,pending
-First Contact Resolution (FCR),Solving issues in first interaction.,Support & Operations Efficiency,First-Contact-Resolution--FCR-.md,completed,pending
-Knowledge Utilization,How often knowledge base is used.,Support & Operations Efficiency,Knowledge-Utilization.md,completed,pending
+Cost per Contact,Average expense per customer interaction.,Support & Operations Efficiency,Cost-per-Contact.md,completed,completed
+Escalation Management,Handling elevated support issues.,Support & Operations Efficiency,Escalation-Management.md,completed,completed
+Escalation Rate,Percentage of issues requiring escalation.,Support & Operations Efficiency,Escalation-Rate.md,completed,completed
+First Contact Resolution (FCR),Solving issues in first interaction.,Support & Operations Efficiency,First-Contact-Resolution--FCR-.md,completed,completed
+Knowledge Utilization,How often knowledge base is used.,Support & Operations Efficiency,Knowledge-Utilization.md,completed,completed
 Macro,Pre-written response for common situations.,Support & Operations Efficiency,Macro.md,completed,pending
 Operational Metrics,KPIs measuring support operations.,Support & Operations Efficiency,Operational-Metrics.md,completed,completed
 Quality Monitoring,Evaluating support interaction quality.,Support & Operations Efficiency,Quality-Monitoring.md,completed,completed
@@ -883,10 +883,10 @@ Stable-Diffusion,Open-source AI model by Stability AI for generating images from
 Perplexity,AI-powered search engine providing answers with cited sources and conversational interface.,AI Companies & Products,Perplexity.md,completed,completed
 DALL-E,OpenAI's AI image generation model creating images from natural language descriptions.,AI Companies & Products,DALL-E.md,completed,completed
 GitHub-Copilot,AI code completion tool by Microsoft and OpenAI assisting developers in real-time.,AI Companies & Products,GitHub-Copilot.md,completed,completed
-Baidu,"Chinese technology company offering search engine, AI, and cloud services, developing Ernie Bot.",AI Companies & Products,Baidu.md,completed,pending
-Ernie-Bot,Baidu's large language model chatbot for Chinese language understanding and generation.,AI Companies & Products,Ernie-Bot.md,completed,pending
-Alibaba,Chinese e-commerce and cloud computing giant developing Tongyi Qianwen AI model.,AI Companies & Products,Alibaba.md,completed,pending
-Tongyi-Qianwen,Alibaba's large language model for Chinese language processing and business applications.,AI Companies & Products,Tongyi-Qianwen.md,completed,pending
-Tencent,"Chinese technology conglomerate offering WeChat, gaming, cloud services, and AI capabilities.",AI Companies & Products,Tencent.md,completed,pending
-WeChat,"Chinese super-app by Tencent combining messaging, payments, social media, and services.",AI Companies & Products,WeChat.md,completed,pending
+Baidu,"Chinese technology company offering search engine, AI, and cloud services, developing Ernie Bot.",AI Companies & Products,Baidu.md,completed,completed
+Ernie-Bot,Baidu's large language model chatbot for Chinese language understanding and generation.,AI Companies & Products,Ernie-Bot.md,completed,completed
+Alibaba,Chinese e-commerce and cloud computing giant developing Tongyi Qianwen AI model.,AI Companies & Products,Alibaba.md,completed,completed
+Tongyi-Qianwen,Alibaba's large language model for Chinese language processing and business applications.,AI Companies & Products,Tongyi-Qianwen.md,completed,completed
+Tencent,"Chinese technology conglomerate offering WeChat, gaming, cloud services, and AI capabilities.",AI Companies & Products,Tencent.md,completed,completed
+WeChat,"Chinese super-app by Tencent combining messaging, payments, social media, and services.",AI Companies & Products,WeChat.md,completed,completed
 Unsupervised Consistency Evaluation,An evaluation method that measures reliability by assessing the consistency of multiple AI responses without requiring correct answers,AI Chatbot & Automation,unsupervised-consistency-evaluation.md,completed,completed
