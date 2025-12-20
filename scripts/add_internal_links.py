@@ -177,12 +177,24 @@ class InternalLinkBuilder:
             def replace_match(match):
                 nonlocal term_count, links_added
                 
-                # Check if we're inside a link or code block
+                # Check if we're inside a link, code block, or shortcode
                 start_pos = match.start()
+                before_text = body[:start_pos]
+                after_text = body[start_pos:]
+                
                 # Check for existing link
-                before_text = body[:match.start()]
-                if before_text.rstrip().endswith('[') or before_text.rstrip().endswith(']('):
+                if before_text.rstrip().endswith('[') or '](' in before_text[-10:]:
                     return match.group(0)
+                
+                # Check for shortcode ({{< ... >}})
+                # Find the last {{< before current position
+                last_shortcode_start = before_text.rfind('{{<')
+                if last_shortcode_start != -1:
+                    # Check if there's a closing >}} after the start
+                    shortcode_end = body.find('>}}', last_shortcode_start)
+                    if shortcode_end != -1 and shortcode_end > start_pos:
+                        # We're inside a shortcode
+                        return match.group(0)
                 
                 # Check for code block (inline code)
                 if '`' in before_text[-50:] if len(before_text) >= 50 else before_text:
@@ -190,13 +202,13 @@ class InternalLinkBuilder:
                     if backticks_before % 2 != 0:  # Inside code block
                         return match.group(0)
                 
-                # Check for heading (more robust)
+                # Check for heading
                 line_start = before_text.rfind('\n')
                 if line_start == -1:
                     line_start = 0
                 else:
                     line_start += 1
-                line_prefix = before_text[line_start:match.start()]
+                line_prefix = before_text[line_start:start_pos]
                 if line_prefix.strip().startswith('#'):
                     return match.group(0)
                 

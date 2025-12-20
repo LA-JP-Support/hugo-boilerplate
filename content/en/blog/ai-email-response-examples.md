@@ -13,26 +13,26 @@ categories: ["Business"]
 
 Many of you may have these questions.
 
-In fact, automated response generation using the latest AI technology can handle far more sophisticated tasks than you might imagine. In this article, we'll thoroughly examine its capabilities and key implementation points by showing you actual samples of AI-generated responses.
+In fact, automated response generation using the latest [AI](/en/glossary/artificial-intelligence/ "Technology that enables computers to learn from experience and [make](/en/glossary/Make--[Integromat](/en/glossary/Make--Integromat-/ "A [no-code](/en/glossary/Low-Code-No-Code/ "Development platforms that let anyone build applications using drag-and-drop interfaces instead of writing code, enabling faster software creation with minimal programming knowledge.") platform that automates repetitive tasks by visually connecting apps and services without requiring programming knowledge.")-/ "A [no-code](/en/glossary/Low-Code-No-Code/ "Development platforms that let anyone build applications using drag-and-drop interfaces instead of writing code, enabling faster software creation with minimal programming knowledge.") platform that automates repetitive tasks by visually connecting apps and services without requiring programming knowledge.") decisions like humans do, rather than just following preset instructions.") technology can handle far more sophisticated tasks than you might imagine. In this article, we'll thoroughly examine its capabilities and key implementation points by showing you actual samples of [AI](/en/glossary/artificial-intelligence/ "Technology that enables computers to learn from experience and [make](/en/glossary/Make--[Integromat](/en/glossary/Make--Integromat-/ "A [no-code](/en/glossary/Low-Code-No-Code/ "Development platforms that let anyone build applications using drag-and-drop interfaces instead of writing code, enabling faster software creation with minimal programming knowledge.") platform that automates repetitive tasks by visually connecting apps and services without requiring programming knowledge.")-/ "A no-code platform that automates repetitive tasks by visually connecting apps and services without requiring programming knowledge.") decisions like humans do, rather than just following preset instructions.")-generated responses.
 
 ## First, Let's Look at Real Examples
 
-Seeing is believing. First, let's introduce two real examples of what kind of response drafts the AI automated response generation function actually creates.
+Seeing is believing. First, let's introduce two real examples of what kind of response drafts the [AI](/en/glossary/artificial-intelligence/ "Technology that enables computers to learn from experience and [make](/en/glossary/Make--[Integromat](/en/glossary/Make--Integromat-/ "A no-code platform that automates repetitive tasks by visually connecting apps and services without requiring programming knowledge.")-/ "A no-code platform that automates repetitive tasks by visually connecting apps and services without requiring programming knowledge.") decisions like humans do, rather than just following preset instructions.") automated response generation function actually creates.
 
-Note that the system introduced here combines [LiveAgent](/en/glossary/LiveAgent/ "A ticket system that can manage various inquiries from email, SNS, and other channels in one place") with [FlowHunt](/en/glossary/FlowHunt/ "An AI chatbot platform that integrates and utilizes multiple AI models"), which is also utilized in SmartWeb's construction services. It handles not only emails but also inquiries from contact forms and SNS, creating equally high-precision response drafts across all reception channels.
+[Note](/en/glossary/note/ "A staff-only message attached to a support [ticket](/en/glossary/ticket/ "Learn what a [customer support ticket](/en/glossary/ticket/ "Learn what a [customer](/en/glossary/Risk-Assessment--Customer-/ "A systematic process to evaluate potential risks associated with a customer, such as credit risk or fraud risk, to help organizations make informed decisions about lending, pricing, and relationship m") support ticket is, how ticketing systems work,") is, how ticketing systems work,") that records actions, decisions, and troubleshooting steps. Notes help team members stay informed and work together efficiently.") that the system introduced here combines [LiveAgent](/en/glossary/LiveAgent/ "A [ticket system](/en/glossary/[Ticket](/en/glossary/ticket/ "Learn what a [customer support ticket](/en/glossary/ticket/ "Learn what a [customer](/en/glossary/Risk-Assessment--Customer-/ "A systematic process to evaluate potential risks associated with a customer, such as credit risk or fraud risk, to help organizations make informed decisions about lending, pricing, and relationship m") support ticket is, how ticketing systems work,") is, how ticketing systems work,")-System/ "A software [platform](/en/glossary/platform/ "Explore [social media](/en/glossary/platform/ "Explore social media platforms like Facebook, Instagram, and TikTok.") platforms like Facebook, Instagram, and TikTok.") that converts [customer](/en/glossary/Risk-Assessment--Customer-/ "A systematic process to evaluate potential risks associated with a customer, such as credit risk or fraud risk, to help organizations make informed decisions about lending, pricing, and relationship m") inquiries from emails, calls, and messages into organized digital tickets, helping support teams track and resolve issues systematically.") that can manage various inquiries from email, SNS, and other channels in one place") with [FlowHunt](/en/glossary/FlowHunt/ "An [AI [chatbot](/en/glossary/Chatbot/ "A computer program that simulates human conversation through text or voice, available 24/7 to automatically answer questions and assist users on websites and apps.")](/en/glossary/AI-[chatbot](/en/glossary/Chatbot/ "A computer program that simulates human conversation through text or voice, available 24/7 to automatically answer questions and assist users on websites and apps.")/ "Explore AI chatbots: learn what they are, how they work with NLP, NLU, and [LLMs](/en/glossary/large-language-models/ "Large Language Models (LLMs) are AI systems trained on vast amounts of text data to understand and generate human language, powering applications like chatbots, translation, and content creation."), their types, benefits, use cases, and best practices for deployment.") [platform](/en/glossary/platform/ "Explore [social media](/en/glossary/platform/ "Explore social media platforms like Facebook, Instagram, and TikTok.") platforms like Facebook, Instagram, and TikTok.") that integrates and utilizes multiple AI models"), which is also utilized in SmartWeb's construction services. It handles not only emails but also inquiries from contact forms and SNS, creating equally high-[precision](/en/glossary/Precision/ "Precision measures how often an AI model's positive predictions are actually correct. It's essential for applications like fraud detection where false alarms are costly.") response drafts across all reception channels.
 
 ### 【Example 1】Handling Complex Technical Inquiries
 
 **Customer Inquiry Content:**
 
-From Mr. Yamada at XX Corporation, we received detailed questions regarding consideration of AI chatbot plan implementation:
+From Mr. Yamada at XX Corporation, we received detailed questions regarding consideration of [AI [chatbot](/en/glossary/Chatbot/ "A computer program that simulates human conversation through text or voice, available 24/7 to automatically answer questions and assist users on websites and apps.")](/en/glossary/AI-chatbot/ "Explore AI chatbots: learn what they are, how they work with NLP, NLU, and [LLMs](/en/glossary/large-language-models/ "Large Language Models (LLMs) are AI systems trained on vast amounts of text data to understand and generate human language, powering applications like chatbots, translation, and content creation."), their types, benefits, use cases, and best practices for deployment.") plan implementation:
 
-- Minimum required content volume (number of FAQ items, [knowledge base](/en/glossary/knowledge-base/ "A database that systematically compiles knowledge such as frequently asked questions and product information") pages, character count guidelines)
+- Minimum required content volume (number of [FAQ](/en/glossary/FAQ/ "A curated list of common questions and answers about a topic, product, or service. FAQs help users find information quickly and reduce repetitive support requests.") items, [knowledge base](/en/glossary/knowledge-base/ "A database that systematically compiles knowledge such as [frequently asked questions](/en/glossary/FAQ/ "A curated list of common questions and answers about a topic, product, or service. FAQs help users find information quickly and reduce repetitive support requests.") and product information") pages, character count guidelines)
 - Recommended content volume and industry-specific differences
 - Learnable content formats (PDF, Word, Excel, etc.)
-- Feasibility of importing existing website FAQ pages
+- Feasibility of importing existing website [FAQ](/en/glossary/FAQ/ "A curated list of common questions and answers about a topic, product, or service. FAQs help users find information quickly and reduce repetitive support requests.") pages
 - Initial implementation accuracy and feasibility of gradual content increases
-- Implementation possibility with current content holdings (approximately 50 FAQ items, approximately 100 manual pages, approximately 200 inquiry cases)
+- Implementation possibility with current content holdings (approximately 50 [FAQ](/en/glossary/FAQ/ "A curated list of common questions and answers about a topic, product, or service. FAQs help users find information quickly and reduce repetitive support requests.") items, approximately 100 manual pages, approximately 200 inquiry cases)
 
  
 
@@ -49,7 +49,7 @@ The AI accurately understood these multiple questions and automatically generate
 3. **Regarding Content Formats**
    - File formats such as PDF, Word, Excel
    - Website FAQ pages, LiveAgent knowledge base
-   - YouTube videos, audio content
+   - [YouTube](/en/glossary/YouTube/ "YouTube is the world's largest video-sharing [platform](/en/glossary/platform/ "Explore [social media](/en/glossary/platform/ "Explore social media platforms like Facebook, Instagram, and TikTok.") platforms like Facebook, Instagram, and TikTok.") where people upload, watch, and share videos on any topic, and creators can earn money through ads and subscriptions.") videos, audio content
    - Automatic acquisition and periodic updates via [URL Retriever](/en/glossary/URL-Retriever/ "A function that automatically acquires website information and updates it periodically")
    
    Specifically listed these options and clearly indicated that importing existing FAQ pages is possible
@@ -59,7 +59,7 @@ The AI accurately understood these multiple questions and automatically generate
    Proposed starting with necessary functions and gradually expanding the scope of utilization
 
 5. **Introduction of Implementation Examples**
-   Presented specific results from CVFR Travel Group ([first contact resolution](/en/glossary/First-Contact-Resolution--FCR-/ "The percentage of customer inquiries resolved on first contact. Higher percentages indicate higher customer satisfaction") improved by 28%, response time reduced from 1 hour to 20 minutes)
+   Presented specific results from CVFR Travel Group ([first contact resolution](/en/glossary/First-Contact-Resolution--[FCR](/en/glossary/First-Contact-Resolution--[FCR](/en/glossary/first-contact-resolution/ "A customer support metric measuring whether an issue is completely resolved during the first interaction, without needing follow-up contacts or escalations.")-/ "A customer service metric measuring how often issues are resolved in the first interaction, without requiring follow-up contacts. Higher [FCR](/en/glossary/first-contact-resolution/ "A customer support metric measuring whether an issue is completely resolved during the first interaction, without needing follow-up contacts or escalations.") rates improve customer satisfaction and reduce support cost")-/ "The percentage of customer inquiries resolved on first contact. Higher percentages indicate higher customer satisfaction") improved by 28%, [response time](/en/glossary/Response-Time/ "Response time is the total duration between when a user makes a request and when they receive the complete result, serving as a key measure of how fast a system or application performs.") reduced from 1 hour to 20 minutes)
    Suggested detailed guidance through free consultation
 
 6. **Provision of Reference URLs**
@@ -88,7 +88,7 @@ Rather than template-like standard text, it generated polite and specific respon
 
 From Mr. Yamada at XX Corporation, we received an urgent complaint regarding system malfunctions:
 
-- Email inquiries not automatically converting to [tickets](/en/glossary/ticket/ "A unit for managing customer inquiries as individual cases. Can record progress status and response history") (approximately 30% conversion rate)
+- Email inquiries not automatically converting to [tickets](/en/glossary/[ticket](/en/glossary/ticket/ "Learn what a [customer support ticket](/en/glossary/ticket/ "Learn what a customer support ticket is, how ticketing systems work,") is, how ticketing systems work,")/ "A unit for managing customer inquiries as individual cases. Can record progress status and response history") (approximately 30% conversion rate)
 - Completed ticket statuses automatically reverting to "unresponded"
 - SNS inquiries being double-ticketed
 - Receiving complaints from multiple customers
@@ -165,14 +165,14 @@ AI automatically extracts related information from pre-learned content:
 
 - FAQs, manuals, past inquiry cases
 - Website FAQ pages
-- YouTube videos and audio content
+- [YouTube](/en/glossary/YouTube/ "YouTube is the world's largest video-sharing platform where people upload, watch, and share videos on any topic, and creators can earn money through ads and subscriptions.") videos and audio content
 - Regularly auto-updated latest information
 
 In Example 1, it automatically cited specific numbers from implementation examples and four related knowledge base articles.
 
 ### 4. Support for All Reception Channels
 
-Centrally manages inquiries from all reception channels—email, contact forms, SNS (Facebook, Instagram, X (Twitter), etc.), phone, chat—creating response drafts with the same high precision.
+Centrally manages inquiries from all reception channels—email, contact forms, SNS ([Facebook](/en/glossary/Facebook/ "A global social network where billions of people share photos, messages, and updates to connect with friends, family, and communities."), [Instagram](/en/glossary/Instagram/ "A photo and video sharing app where people connect, share moments, and discover content from friends and creators worldwide."), X (Twitter), etc.), phone, chat—creating response drafts with the same high [precision](/en/glossary/Precision/ "Precision measures how often an AI model's positive predictions are actually correct. It's essential for applications like fraud detection where false alarms are costly.").
 
 ### 5. Automated Spam Filtering
 
@@ -185,9 +185,9 @@ Companies that have actually implemented AI-powered automated response generatio
 ### CVFR Travel Group Case Study
 
 - **First Contact Resolution**: Improved 28%
-- **Response Time**: Reduced from 1 hour to 20 minutes
+- **[Response Time](/en/glossary/Response-Time/ "Response time is the total duration between when a user makes a request and when they receive the complete result, serving as a key measure of how fast a system or application performs.")**: Reduced from 1 hour to 20 minutes
 
-Thus, AI-powered automated response generation is not merely "reply automation" but simultaneously achieves **improved customer satisfaction** and **dramatic operational efficiency improvements**.
+Thus, AI-powered automated response generation is not merely "reply automation" but simultaneously achieves **improved customer satisfaction** and **dramatic [operational efficiency](/en/glossary/Operational-Efficiency/ "Operational Efficiency is how well a company uses its resources like labor and materials to produce products or services at the lowest cost while maintaining quality. It measures a company's ability t") improvements**.
 
 ## Operational Considerations and Best Practices
 
@@ -213,7 +213,7 @@ In Example 2's complaint handling, while AI created an appropriate initial respo
 
 **Q1: How natural are AI-generated emails?**
 
-A: As shown in the examples, using the latest LLMs can generate text as natural as human-written. The level is sufficient for business emails.
+A: As shown in the examples, using the latest [LLMs](/en/glossary/large-language-models/ "Large Language Models (LLMs) are AI systems trained on vast amounts of text data to understand and generate human language, powering applications like chatbots, translation, and content creation.") can generate text as natural as human-written. The level is sufficient for business emails.
 
 **Q2: How much content volume is needed?**
 
@@ -226,8 +226,8 @@ A: The following formats are supported:
 | Category | Supported Formats |
 |---|---|
 | Files | PDF, Word (.docx), Excel |
-| Web | Existing website FAQ pages, HTML pages |
-| Media | YouTube videos, audio content |
+| [Web](/en/glossary/Accessibility--Web-/ "Web accessibility is the practice of designing websites so that people with disabilities—such as vision, hearing, or mobility impairments—can use them easily and effectively.") | Existing website FAQ pages, HTML pages |
+| Media | [YouTube](/en/glossary/YouTube/ "YouTube is the world's largest video-sharing platform where people upload, watch, and share videos on any topic, and creators can earn money through ads and subscriptions.") videos, audio content |
 | Auto-acquisition | Periodic automatic updates via URL Retriever |
 
 **Q4: Is there risk of incorrect replies?**
@@ -250,7 +250,7 @@ A: Yes, flexible language support is available. Configuration enables operations
 - English inquiries → Create response draft in English
 - Support for 100+ other languages
 
-Furthermore, using LiveAgent's [AI Response Assistant Function](https://www.smartweb.jp/functions/#answer-assistant), you can utilize ChatGPT-powered writing style adjustments and translation features. This enables more natural and appropriate multilingual support.
+Furthermore, using LiveAgent's [AI Response Assistant Function](https://www.smartweb.jp/functions/#answer-assistant), you can utilize [ChatGPT](/en/glossary/ChatGPT/ "An AI assistant that understands natural conversation and can answer questions, write content, help with coding, and complete various language tasks through simple text [prompts](/en/glossary/prompts/ "A prompt is an instruction or question you give to an AI system to get a specific response or result. The clearer and more detailed your prompt, the better the AI's answer will be.").")-powered writing style adjustments and translation features. This enables more natural and appropriate multilingual support.
 
 **Q7: Is post-implementation support available?**
 
@@ -260,16 +260,16 @@ A: Yes. We provide continuous support from specialized staff. Support is always 
 
 As demonstrated in the examples, modern AI-powered automated response generation:
 
-**High-Precision Handling of Complex Inquiries**
+**High-[Precision](/en/glossary/Precision/ "Precision measures how often an AI model's positive predictions are actually correct. It's essential for applications like fraud detection where false alarms are costly.") Handling of Complex Inquiries**
 Automatically generates structured and accurate responses even for inquiries containing multiple questions
 
 **Sincere Handling of Complaints**
 Creates response drafts with appropriate tone even in situations requiring emotional consideration
 
 **Overwhelming Efficiency Through Integrated System**
-Dramatically improves operational efficiency by completing everything from reception to reply across all channels—email, contact forms, SNS—in one system
+Dramatically improves [operational efficiency](/en/glossary/Operational-Efficiency/ "Operational Efficiency is how well a company uses its resources like labor and materials to produce products or services at the lowest cost while maintaining quality. It measures a company's ability t") by completing everything from reception to reply across all channels—email, contact forms, SNS—in one system
 
-**Automated Spam Filtering**
+**Automated [Spam Filtering](/en/glossary/spam-filtering/ "Spam filtering is an automated system that detects and blocks unwanted emails like phishing attempts and malware before they reach your inbox, protecting you from fraud and security threats.")**
 Automatically identifies not only common spam but also sales emails, preventing unnecessary response draft creation
 
 **24/7 Immediate Response**
