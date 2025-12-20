@@ -13,9 +13,9 @@ url: "/ja/blog/ai-customer-support-2025-guide/"
 
 AIカスタマーサポートは、人工知能を使って顧客からの問い合わせに自動で応答する仕組みです。人が対応する場合と違い、AIは24時間365日いつでも対応できます。すぐに返事を返せることや、多言語での対応ができることも大きな特徴です。
 
-このシステムにはいくつかの技術が使われています。[自然言語処理（NLP）](/ja/glossary/natural-language-processing--nlp-/)は、AIが人間の言葉を理解して答えるのに役立ちます。機械学習は、AIが使う知識を増やしたり改善したりする仕組みです。データベースと連携することで、AIは多くの情報を参照できます。音声認識や画像認識も加わることで、テキスト以外の入力にも対応できます。
+このシステムにはいくつかの技術が使われています。自然言語処理（NLP）は、AIが人間の言葉を理解して答えるのに役立ちます。機械学習は、AIが使う知識を増やしたり改善したりする仕組みです。データベースと連携することで、AIは多くの情報を参照できます。音声認識や画像認識も加わることで、テキスト以外の入力にも対応できます。
 
-AIカスタマーサポートには、FAQ自動応答、[AIチャットボット](/ja/glossary/AI-chatbot/)、[バーチャルアシスタント](/ja/glossary/virtual-assistant/)などいろいろな形があります。たとえば、SmartWebの構築サービスで使用されているツールであるLiveAgentとFlowHuntは、企業が持つマニュアルやFAQを知識ベースにして、ユーザーの質問にすぐに、正確に答えるAIチャットボットです。
+AIカスタマーサポートには、FAQ自動応答、[AIチャットボット](/ja/glossary/AI-chatbot/ "AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。")、バーチャルアシスタントなどいろいろな形があります。たとえば、SmartWebの構築サービスで使用されているツールであるLiveAgentとFlowHuntは、企業が持つマニュアルやFAQを知識ベースにして、ユーザーの質問にすぐに、正確に答えるAIチャットボットです。
 
 ## 技術の進化とその歴史
 
@@ -69,11 +69,11 @@ Salesforceは2024年に発表したEinstein Service Agentで、従来のチャ�
 
 **参考資料：**
 - [Iron Mountain Case Study - Einstein AI Implementation](https://www.salesforce.com/customer-stories/iron-mountain-ai-faster-automation/)
-- [Salesforce [Einstein Service Agent](/ja/glossary/Einstein-Service-Agent/) Official Announcement](https://www.salesforce.com/news/stories/einstein-service-agent-announcement/)
+- Salesforce [Einstein Service Agent Official Announcement](https://www.salesforce.com/news/stories/einstein-service-agent-announcement/)
 
 ### 2. Intuit：AI-powered財務サポートの自動化
 
-IntuitはAmazon Connectを活用して、統合型カスタマーコンタクトセンターを構築しました。税務シーズンには6,000人から11,000人のエージェントまで需要に応じてスケーリングし、従来6ヶ月かかった展開を2週間で完了できるようになりました。年間2億7,500万分の顧客インタラクションを処理し、Contact Lens for Amazon Connectによる正確な通話転写と[センチメント分析](/ja/glossary/sentiment-analysis/)を実現しています。
+IntuitはAmazon Connectを活用して、統合型カスタマーコンタクトセンターを構築しました。税務シーズンには6,000人から11,000人のエージェントまで需要に応じてスケーリングし、従来6ヶ月かかった展開を2週間で完了できるようになりました。年間2億7,500万分の顧客インタラクションを処理し、Contact Lens for Amazon Connectによる正確な通話転写とセンチメント分析を実現しています。
 
 **参考資料：**
 - [Intuit Case Study - Amazon Connect Implementation](https://aws.amazon.com/solutions/case-studies/intuit-contact-center-case-study/)
@@ -90,11 +90,11 @@ IntuitはAmazon Connectを活用して、統合型カスタマーコンタクト
 インドネシア・バリ島にある客室5室の小規模ゲストハウスBali Bliss Homestayでは、海外からの宿泊問い合わせに対し、時差やスタッフ不在のため回答が遅れがちという課題がありました。そこでWhatsAppを活用したチャットボットを地元企業と開発し、予約対応、道順案内、設備に関するFAQ回答を自動化するとともに、滞在後のフィードバック収集も行いました。この導入により、予約確認がスタッフ不在時でも即時発行できるようになり、問い合わせから予約への転換率が21%向上、迅速な応答によって海外ゲストを含む顧客満足度も改善しました。
 
 **参考資料：**
-- [Case Study 2: [WhatsApp](/ja/glossary/WhatsApp/) Chatbot Transforms Guest Experience in Travel](https://nineten.ai/ai-chatbots-for-smes-in-southeast-asia-challenges-and-opportunities/)
+- Case Study 2: [WhatsApp Chatbot Transforms Guest Experience in Travel](https://nineten.ai/ai-chatbots-for-smes-in-southeast-asia-challenges-and-opportunities/)
 
 ### 5. Procosmet（イタリア・ヘアケア製品企業）
 
-イタリアのヘアケア製品メーカーProcosmetでは、事業拡大に伴い注文のキャンセルや変更、返金対応など顧客サポートにかかる負担が増大し、対応遅れや顧客待ち時間の長さが課題となっていました。そこでTidioのAIチャットボット（Lyro [AIエージェント](/ja/glossary/AI-agents/)）をウェブサイトのライブチャットに導入し、問い合わせ対応の自動化と迅速化を図りました。その結果、売上が23%増加し、新規リード獲得数も月100件超に拡大。チャットボット経由のニュースレターでは開封率18～22%・単一キャンペーンで1000ユーロ超のROIを達成し、顧客からのフィードバック評価も5点中3.8から4.7へ向上するなど、大幅な成果を上げています。
+イタリアのヘアケア製品メーカーProcosmetでは、事業拡大に伴い注文のキャンセルや変更、返金対応など顧客サポートにかかる負担が増大し、対応遅れや顧客待ち時間の長さが課題となっていました。そこでTidioのAIチャットボット（Lyro [AIエージェント](/ja/glossary/AI-agents/ "AIエージェントは、環境を認識し、推論し、最小限の人間の介入で行動する自律的なソフトウェアシステムです。自動化と意思決定の強化を通じて、さまざまな業界を変革しています。")）をウェブサイトのライブチャットに導入し、問い合わせ対応の自動化と迅速化を図りました。その結果、売上が23%増加し、新規リード獲得数も月100件超に拡大。チャットボット経由のニュースレターでは開封率18～22%・単一キャンペーンで1000ユーロ超のROIを達成し、顧客からのフィードバック評価も5点中3.8から4.7へ向上するなど、大幅な成果を上げています。
 
 **参考資料：**
 - [12 Companies Using Chatbots for AI-Generated Customer Service](https://www.tidio.com/blog/companies-that-use-ai-generated-customer-support/#procosmet)
@@ -165,7 +165,7 @@ AIを導入している企業の約68％が「パーソナライズによって�
 
 日本では、製造業、金融、通信などさまざまな分野でAIカスタマーサポートの導入が進んでいます。大手通信企業では、社内の知識とAIを組み合わせた高精度なチャットボットが使われています。
 
-SmartWebの構築サービスで使用されている「[LiveAgent](/ja/glossary/LiveAgent/)」や「[FlowHunt](/ja/glossary/FlowHunt/)」のようなツールでは、専門的なマニュアルや取扱説明書をAIが自動で読み込んで、質問に対してすぐに答える仕組みを作っています。これらのAIは、ユーザーが「読む・探す」から「対話する」という新しい方法で情報にアクセスできるようにし、企業の顧客対応の質とコスト削減の両方に役立っています。
+SmartWebの構築サービスで使用されている「[LiveAgent](/ja/glossary/LiveAgent/ "LiveAgentは、メール、チャット、電話、ソーシャルメディアを通じたすべての顧客とのやり取りを一元管理する高度なカスタマーサービス・ヘルプデスクソフトウェアプラットフォームで、サポート効率を向上させます。")」や「[FlowHunt](/ja/glossary/FlowHunt/ "FlowHuntの中核となる概念、機能、統合機能について解説します。この用語集では、ノーコードAIチャットボットおよび自動化プラットフォームに関する詳細な技術的定義を提供します。")」のようなツールでは、専門的なマニュアルや取扱説明書をAIが自動で読み込んで、質問に対してすぐに答える仕組みを作っています。これらのAIは、ユーザーが「読む・探す」から「対話する」という新しい方法で情報にアクセスできるようにし、企業の顧客対応の質とコスト削減の両方に役立っています。
 
 ### グローバル展開に向けた戦略的ヒント
 

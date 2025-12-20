@@ -13,7 +13,7 @@ class InternalLinkBuilder:
     def __init__(self, glossary_dir: Path, lang: str = "ja"):
         self.glossary_dir = glossary_dir
         self.lang = lang
-        self.glossary_index: Dict[str, Tuple[str, str]] = {}  # normalized_term -> (title, url)
+        self.glossary_index: Dict[str, Tuple[str, str, str]] = {}  # normalized_term -> (title, url, description)
         self.load_glossary()
     
     def load_glossary(self):
@@ -31,7 +31,7 @@ class InternalLinkBuilder:
             
             try:
                 content = md_file.read_text(encoding='utf-8')
-                title, url = self._extract_title_and_url(content, md_file)
+                title, url, description = self._extract_title_url_description(content, md_file)
                 
                 if title and url:
                     # Generate variations
@@ -39,7 +39,7 @@ class InternalLinkBuilder:
                     for variant in variations:
                         normalized = self._normalize_keyword(variant)
                         if normalized and normalized not in self.glossary_index:
-                            self.glossary_index[normalized] = (title, url)
+                            self.glossary_index[normalized] = (title, url, description or "")
                     count += 1
                     
             except Exception as e:
@@ -48,22 +48,30 @@ class InternalLinkBuilder:
         print(f"Loaded {count} glossary entries")
         print(f"Generated {len(self.glossary_index)} keyword variations")
     
-    def _extract_title_and_url(self, content: str, filepath: Path) -> Tuple[str, str]:
-        """Extract title and construct URL from frontmatter"""
+    def _extract_title_url_description(self, content: str, filepath: Path) -> Tuple[str, str, str]:
+        """Extract title, URL, and description from frontmatter"""
         fm_match = re.search(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
         if not fm_match:
-            return None, None
+            return None, None, None
         
         frontmatter = fm_match.group(1)
+        
+        # Extract title
         title_match = re.search(r'^title:\s*["\']?(.+?)["\']?\s*$', frontmatter, re.MULTILINE)
         if not title_match:
-            return None, None
+            return None, None, None
         
         title = title_match.group(1).strip().strip('"').strip("'")
+        
+        # Extract description
+        description_match = re.search(r'^description:\s*["\']?(.+?)["\']?\s*$', frontmatter, re.MULTILINE)
+        description = description_match.group(1).strip().strip('"').strip("'") if description_match else ""
+        
+        # Construct URL
         slug = filepath.stem
         url = f"/{self.lang}/glossary/{slug}/"
         
-        return title, url
+        return title, url, description
     
     def _get_keyword_variations(self, title: str) -> Set[str]:
         """Generate keyword variations"""
@@ -113,7 +121,7 @@ class InternalLinkBuilder:
         links_added = 0
         max_links_per_term = 2
         
-        for normalized_keyword, (title, url) in sorted_keywords:
+        for normalized_keyword, (title, url, description) in sorted_keywords:
             # Skip self-links
             if url == current_url:
                 continue
@@ -158,7 +166,13 @@ class InternalLinkBuilder:
                 links_added += 1
                 linked_terms.add(normalized_keyword)
                 
-                return f'[{match.group(1)}]({url})'
+                # Add title attribute with description for hover tooltip
+                if description:
+                    # Escape quotes in description
+                    escaped_desc = description.replace('"', '&quot;')
+                    return f'[{match.group(1)}]({url} "{escaped_desc}")'
+                else:
+                    return f'[{match.group(1)}]({url})'
             
             body = re.sub(pattern, replace_match, body, flags=re.IGNORECASE)
         

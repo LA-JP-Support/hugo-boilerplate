@@ -21,11 +21,11 @@ AI技術の急速な発展により、大規模言語モデル（LLM）の評価
 
 この方法では、AIモデル自体が評価者となって、他のモデルや自分の出力をチェックします。具体的には、複数のAIが同じ質問に回答し、別のAIがその答えを比較評価する仕組みです。これにより、従来よりも効率的で多面的な評価が可能になりました。
 
-さらに、最新の研究では正解データに頼らない「[教師なし一貫性評価](/ja/glossary/Unsupervised-Consistency-Evaluation/)」も開発されています。最近、オラクルフィードバック（正解ラベル）なしでの信頼性評価を目的として、「[CAI比率](/ja/glossary/CAI-ratio/)」という指標が提案されています。
+さらに、最新の研究では正解データに頼らない「[教師なし一貫性評価](/ja/glossary/Unsupervised-Consistency-Evaluation/ "ラベル付きデータや人間によるアノテーションを必要とせず、モデルの信頼性を評価するための教師なし一貫性評価手法に関する包括的なガイド。")」も開発されています。最近、オラクルフィードバック（正解ラベル）なしでの信頼性評価を目的として、「[CAI比率](/ja/glossary/CAI-ratio/ "CAI比率(Consistent and Inconsistent Ratio)は、学習モデルとLLMの間の一致度を定量化する教師なし指標であり、正解データなしでアノテーション品質を評価する上で重要な役割を果たします。")」という指標が提案されています。
 
 2025年の論文『Evaluating LLMs Without Oracle Feedback』では、生徒モデルとLLMの出力の一致・不一致を解析することにより、このCAI比率を算出しています。一致度の高いモデルは従来の正答率などの指標にも高い相関を示しており、モデル選定のヒューリスティック（経験則）として有用であると報告されています。
 
-ただし、このメトリクスはまだ研究段階であり、全てのタスクで標準的に使われているわけではないため、「[補助指標](/ja/glossary/supplementary-indicator/)」として理解しておくべきです。
+ただし、このメトリクスはまだ研究段階であり、全てのタスクで標準的に使われているわけではないため、「[補助指標](/ja/glossary/supplementary-indicator/ "補助指標は、AIと自動化における主要な評価指標に対して重要な文脈と検証を提供します。これらは、堅牢なシステムパフォーマンス評価のための詳細な洞察を提供します。")」として理解しておくべきです。
 
 ## ハルシネーション問題：AIが「嘘」をつく原因と対策
 
@@ -41,9 +41,9 @@ AI技術の急速な発展により、大規模言語モデル（LLM）の評価
 
 この課題に対応するため、以下のような新しい評価指標が開発されています：
 
-- **[RAGベンチマーク](/ja/glossary/RAG-benchmarks/)**
+- **[RAGベンチマーク](/ja/glossary/RAG-benchmarks/ "RAGベンチマークは、Retrieval-Augmented Generation(RAG)システムを評価するための構造化された基準と指標であり、検索品質と生成品質の両方を評価します。")**
 - **Fact-Score**
-- **[MHaluBench](/ja/glossary/MHaluBench/)**
+- **[MHaluBench](/ja/glossary/MHaluBench/ "MHaluBenchは、マルチモーダル大規模言語モデル(MLLM)におけるI2TおよびT2Iタスク全体での、きめ細かいクレームレベルのハルシネーション検出のためのメタ評価および注釈ベンチマークです。")**
 
 これらの評価方法により、AIの出力がどの程度信頼できるかを科学的に測定できるようになりました。
 
@@ -83,9 +83,9 @@ AIを効果的に活用するためには、プロンプトの設計と評価が
 - Zero-shot、Few-shot、Chain-of-Thoughtなどの手法を活用
 
 **ステップ2：多角的評価**
-- 精度、[F1スコア](/ja/glossary/F1-score/)、BLEU/ROUGEスコア
-- [一貫性評価](/ja/glossary/Consistency-evaluation/)
-- [再現性検証](/ja/glossary/Reproducibility-validation/)
+- 精度、[F1スコア](/ja/glossary/F1-score/ "F1スコアは、機械学習における重要な評価指標であり、適合率と再現率の調和平均を表します。偽陽性と偽陰性のバランスを取るため、不均衡なデータセットに最適です。")、BLEU/ROUGEスコア
+- [一貫性評価](/ja/glossary/Consistency-evaluation/ "一貫性評価は、LLMやチャットボットなどのAIシステムが同一の入力に対して安定した一貫性のある応答を生成するかどうかを評価します。信頼性、信頼、自動化において不可欠です。")
+- [再現性検証](/ja/glossary/Reproducibility-validation/ "再現性検証は、AIモデルと自動化ワークフローが環境を超えて一貫した結果を生成することを保証します。AI/MLにおける信頼性、信頼、コンプライアンスに不可欠です。")
 
 **ステップ3：継続的改善**
 - 複数のプロンプトパターンを作成・比較
@@ -109,7 +109,7 @@ AIを効果的に活用するためには、プロンプトの設計と評価が
 ### 評価結果の傾向
 
 **グローバルモデル vs 日本語特化モデル**
-- [GPT](/ja/glossary/GPT/)-5やLlama-3などの海外モデル：JamC-QAで大幅にスコア低下
+- [GPT](/ja/glossary/GPT/ "GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。")-5やLlama-3などの海外モデル：JamC-QAで大幅にスコア低下
 - 日本語特化モデル：文化的な質問により適切に対応
 - スコア差が明確になることで、モデル選定の客観的指標として活用可能
 
@@ -144,7 +144,7 @@ A: はい。FlowHuntのようなノーコードAI構築ツールを使えば、�
 
 ### 高品質なLLMの活用
 
-SmartWebのAIチャットボットは、**[OpenAI社](https://[openai](/ja/glossary/OpenAI/).com/[gpt](/ja/glossary/GPT/)-5/)** の最新モデルGPT-5、**[Google社](https://deepmind.[google](/ja/glossary/Google/)/models/[gemini](/ja/glossary/Gemini/)/)** のGemini 2.5 Pro、**[Anthropic社](https://www.[anthropic](/ja/glossary/Anthropic/).com/[claude](/ja/glossary/Claude/))** のClaude Sonnet 4など、業界最高水準のLLMを採用しています。これらのモデルは、本記事で紹介した各種ベンチマークで高い性能を実証済みです。
+SmartWebのAIチャットボットは、**[OpenAI社](https://[openai](/ja/glossary/OpenAI/ "OpenAIは、ChatGPT、[GPT](/ja/glossary/GPT/ "GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。")-5.2、GPT-4o、[DALL-E](/ja/glossary/DALL-E/ "テキストの説明文から独自の画像を生成するAIツール。見たいものを言葉で説明するだけで、誰でもアートワークを生成できます。") 3などの先進的なモデルを開発することで知られる、AI分野をリードする企業です。そのミッション、製品、および影響力について探ります。").com/gpt-5/)** の最新モデルGPT-5、**[Google社](https://deepmind.[google](/ja/glossary/Google/ "AI分野のリーダーとしてのGoogleの進化を探る。Geminiモデル、マルチモーダル理解、高度な推論、そして自動化、クリエイティブ生成、エンタープライズにおける応用を紹介します。")/models/[gemini](/ja/glossary/Gemini/ "Geminiは、テキスト、画像、音声、動画の理解に優れたGoogleの先進的なマルチモーダルAIモデルファミリーです。Gemini 2.5")/)** のGemini 2.5 Pro、**[Anthropic社](https://www.[anthropic](/ja/glossary/Anthropic/ "AnthropicはClaudeファミリーのAIアシスタントを開発することで知られるAI研究企業です。Constitutional AI(憲法的AI)を通じて、AI安全性、解釈可能性、倫理的整合性を優先しています。").com/[claude](/ja/glossary/Claude/ "ClaudeはAnthropicが開発した、安全性、信頼性、有用性を重視した先進的なAIアシスタントファミリーです。Claude 4の機能、価格設定、エンタープライズ向けアプリケーションについて解説します。"))** のClaude Sonnet 4など、業界最高水準のLLMを採用しています。これらのモデルは、本記事で紹介した各種ベンチマークで高い性能を実証済みです。
 
 ### ハルシネーション問題への実践的対策
 
@@ -170,7 +170,7 @@ SmartWebが採用している**[FlowHunt](https://flowhunt.io/)** は、本記�
 
 ## まとめ：科学的LLM評価の未来展望
 
-LLM評価技術は、従来の静的な指標から、AI自身が評価に参加する動的で多層的なフレームワークへと進化しています。教師なし一貫性指標、[ハルシネーション検出](/ja/glossary/hallucination-detection/)、そして文化特化型ベンチマークなど、実用的な評価手法が次々と開発されています。
+LLM評価技術は、従来の静的な指標から、AI自身が評価に参加する動的で多層的なフレームワークへと進化しています。教師なし一貫性指標、[ハルシネーション検出](/ja/glossary/hallucination-detection/ "ハルシネーション検出について探求します。AIモデル、特にLLMが生成する誤った情報や捏造された情報を識別するために使用される技術とワークフローを解説します。")、そして文化特化型ベンチマークなど、実用的な評価手法が次々と開発されています。
 
 今後は以下の方向性での発展が期待されます：
 
