@@ -1,8 +1,8 @@
 ---
-title: 'AI Answer Assistant: An In-Depth'
+title: 'AI Answer Assistant'
 lastmod: 2025-12-18
 date: 2025-12-18
-translationKey: ai-answer-assistant-an
+translationKey: ai-answer-assistant
 description: An AI answer assistant is an advanced AI-driven software system that
   clarifies, refines, and explains complex text and technical terms using NLP, ML,
   LLMs, and RAG.

@@ -3,7 +3,7 @@ title: "F1 Score"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "f1-score"
-description: "The F1 score is a key machine learning evaluation metric, representing the harmonic mean of precision and recall. It balances false positives and negatives, ideal for imbalanced datasets."
+description: "A machine learning metric that balances how well a model catches true cases versus how often it makes false alarms, making it ideal for real-world problems where both mistakes matter."
 keywords: ["F1 score", "precision", "recall", "machine learning", "classification"]
 category: "AI Chatbot & Automation"
 type: "glossary"

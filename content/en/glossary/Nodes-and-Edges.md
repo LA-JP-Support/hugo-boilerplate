@@ -1,7 +1,7 @@
 ---
 title: "Nodes and Edges"
 translationKey: "nodes-and-edges"
-description: "Nodes are the fundamental building blocks (actions or entities) in a system; edges are the connections (lines) that define relationships, data flow, or dependencies."
+description: "Nodes are individual units (like actions or data points) and edges are the connections between them that show how information flows. They're used to map out workflows, processes, and relationships in systems like chatbots and automation tools."
 keywords: ["nodes", "edges", "graph-based modeling", "AI chatbots", "automation workflows"]
 category: "AI Chatbot & Automation"
 type: "glossary"

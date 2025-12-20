@@ -105,17 +105,18 @@
   {{ $currentPage := . }}
   {{ $relatedPages := slice }}
   
-  {{/* まずRelated機能で関連記事を探す */}}
-  {{ $related := .Site.RegularPages.Related . }}
+  {{/* まずRelated機能で関連記事を探す - ブログ記事のみ対象 */}}
+  {{ $blogPages := where .Site.RegularPages "Section" "blog" }}
+  {{ $related := $blogPages.Related . }}
   {{ range $related }}
     {{ if and (eq .Language.Lang $currentPage.Language.Lang) (ne .Permalink $currentPage.Permalink) }}
       {{ $relatedPages = $relatedPages | append . }}
     {{ end }}
   {{ end }}
   
-  {{/* 関連記事が3件未満の場合、同じ言語の他の記事を追加 */}}
+  {{/* 関連記事が3件未満の場合、同じ言語の他のブログ記事を追加 */}}
   {{ if lt (len $relatedPages) 3 }}
-    {{ $langPages := where .Site.RegularPages "Language.Lang" .Language.Lang }}
+    {{ $langPages := where $blogPages "Language.Lang" .Language.Lang }}
     {{ range $langPages }}
       {{ if and (ne .Permalink $currentPage.Permalink) (not (in $relatedPages .)) }}
         {{ $relatedPages = $relatedPages | append . }}

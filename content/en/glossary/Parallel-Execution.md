@@ -1,7 +1,7 @@
 ---
 title: "Parallel Execution"
 translationKey: "parallel-execution"
-description: "Learn about parallel execution: running multiple tasks simultaneously to accelerate processing, maximize resource utilization, and compress feedback loops in workflows, tests, and chatbots."
+description: "Multiple tasks running at the same time instead of one after another, speeding up work and making better use of computer resources."
 keywords: ["parallel execution", "workflow automation", "AI chatbots", "software testing", "CI/CD pipelines"]
 category: "AI Chatbot & Automation"
 type: "glossary"

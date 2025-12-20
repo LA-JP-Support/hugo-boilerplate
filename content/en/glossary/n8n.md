@@ -11,7 +11,7 @@ draft: false
 ---
 ## What Is n8n?
 
-n8n (pronounced “en-eight-en”, short for *nodemation*) is a node-based, source-available workflow automation platform that empowers users to visually design, automate, and orchestrate complex business processes across hundreds of apps and APIs—including advanced AI-powered tasks. Unlike closed-source platforms, n8n offers both self-hosting for full control and privacy, and a managed cloud for ease of use.
+n8n (pronounced "en-eight-en", short for *nodemation*) is a node-based, source-available workflow automation platform that empowers users to visually design, automate, and orchestrate complex business processes across hundreds of apps and APIs—including advanced AI-powered tasks. Unlike closed-source platforms, n8n offers both self-hosting for full control and privacy, and a managed cloud for ease of use.
 
 **Key Points:**
 - Source-available (fair-code): [n8n License](https://faircode.io)

@@ -1,0 +1,446 @@
+{
+  "language": "en",
+  "total_tooltips": 158,
+  "has_glossary": 105,
+  "missing_glossary": 53,
+  "glossary_entries": 1223,
+  "missing_details": [
+    {
+      "keyword": "ticket system",
+      "definition": "A system that centrally manages inquiries and visualizes response status",
+      "usage_count": 4,
+      "files": [
+        "start-using-ai-today.md",
+        "email-response-automation-platform.md",
+        "understanding-ticket-systems-for-customer-support.md",
+        "inquiry-management-revolution.md"
+      ]
+    },
+    {
+      "keyword": "ai chatbots",
+      "definition": "A system where AI automatically answers customer questions",
+      "usage_count": 3,
+      "files": [
+        "start-using-ai-today.md",
+        "understanding-ticket-systems-for-customer-support.md",
+        "centralised-social-media-management.md"
+      ]
+    },
+    {
+      "keyword": "crm",
+      "definition": "Customer Relationship Management system",
+      "usage_count": 3,
+      "files": [
+        "ai-customer-support-2025-guide.md",
+        "understanding-ticket-systems-for-customer-support.md",
+        "centralised-social-media-management.md"
+      ]
+    },
+    {
+      "keyword": "apis",
+      "definition": "A mechanism that allows different software systems to automatically exchange information",
+      "usage_count": 3,
+      "files": [
+        "understanding-ticket-systems-for-customer-support.md",
+        "centralised-social-media-management.md"
+      ]
+    },
+    {
+      "keyword": "faqs",
+      "definition": "Frequently Asked Questions - content that organizes common customer questions and their answers",
+      "usage_count": 3,
+      "files": [
+        "ai-chatbot-types-guide.md",
+        "understanding-ticket-systems-for-customer-support.md",
+        "inquiry-management-revolution.md"
+      ]
+    },
+    {
+      "keyword": "tickets",
+      "definition": "Numbered management records for handling customer inquiries and requests",
+      "usage_count": 2,
+      "files": [
+        "ai-email-response-examples.md",
+        "centralised-social-media-management.md"
+      ]
+    },
+    {
+      "keyword": "ai",
+      "definition": "Artificial Intelligence",
+      "usage_count": 2,
+      "files": [
+        "understanding-ticket-systems-for-customer-support.md",
+        "centralised-social-media-management.md"
+      ]
+    },
+    {
+      "keyword": "chain-of-thought prompts",
+      "definition": "A technique that improves reasoning accuracy by prompting AI to show step-by-step thinking",
+      "usage_count": 2,
+      "files": [
+        "ai-evaluation-japanese-benchmarks.md"
+      ]
+    },
+    {
+      "keyword": "hallucination problem",
+      "definition": "The phenomenon where AI generates non-existent information in a plausible manner",
+      "usage_count": 2,
+      "files": [
+        "ai-evaluation-japanese-benchmarks.md"
+      ]
+    },
+    {
+      "keyword": "faq",
+      "definition": "Frequently Asked Questions - a collection of common questions and their answers",
+      "usage_count": 2,
+      "files": [
+        "knowledge-base-faq-guide-2025.md"
+      ]
+    },
+    {
+      "keyword": "rag",
+      "definition": "Abbreviation for Retrieval-Augmented Generation. Technology that searches external data and uses that information to generate responses",
+      "usage_count": 2,
+      "files": [
+        "ai-chatbot-types-guide.md",
+        "email-response-automation-platform.md"
+      ]
+    },
+    {
+      "keyword": "ticket systems",
+      "definition": "A system that centrally manages inquiries and visualizes response status",
+      "usage_count": 1,
+      "files": [
+        "start-using-ai-today.md"
+      ]
+    },
+    {
+      "keyword": "knowledge bases",
+      "definition": "A database that systematically compiles knowledge and information within a company",
+      "usage_count": 1,
+      "files": [
+        "start-using-ai-today.md"
+      ]
+    },
+    {
+      "keyword": "ai answer assistant",
+      "definition": "An AI feature that supports text refinement and adding explanations for technical terms",
+      "usage_count": 1,
+      "files": [
+        "start-using-ai-today.md"
+      ]
+    },
+    {
+      "keyword": "cagr",
+      "definition": "Compound Annual Growth Rate, an indicator of annual growth",
+      "usage_count": 1,
+      "files": [
+        "ai-customer-support-2025-guide.md"
+      ]
+    },
+    {
+      "keyword": "rule-based",
+      "definition": "Systems operating according to predetermined rules",
+      "usage_count": 1,
+      "files": [
+        "ai-customer-support-2025-guide.md"
+      ]
+    },
+    {
+      "keyword": "roi",
+      "definition": "Return on Investment - indicator of profit gained relative to investment",
+      "usage_count": 1,
+      "files": [
+        "ai-customer-support-2025-guide.md"
+      ]
+    },
+    {
+      "keyword": "platform",
+      "definition": "Social media services such as Facebook, Twitter, and Instagram",
+      "usage_count": 1,
+      "files": [
+        "centralised-social-media-management.md"
+      ]
+    },
+    {
+      "keyword": "workflows",
+      "definition": "A system that defines business processes and approval procedures",
+      "usage_count": 1,
+      "files": [
+        "centralised-social-media-management.md"
+      ]
+    },
+    {
+      "keyword": "cost-performance",
+      "definition": "Cost-performance ratio",
+      "usage_count": 1,
+      "files": [
+        "centralised-social-media-management.md"
+      ]
+    },
+    {
+      "keyword": "unsupervised consistency evaluation",
+      "definition": "An evaluation method that measures reliability by assessing the consistency of multiple AI responses without requiring correct answers",
+      "usage_count": 1,
+      "files": [
+        "ai-evaluation-japanese-benchmarks.md"
+      ]
+    },
+    {
+      "keyword": "hallucination phenomena",
+      "definition": "The phenomenon where AI generates non-existent information or incorrect content in a plausible manner",
+      "usage_count": 1,
+      "files": [
+        "ai-evaluation-japanese-benchmarks.md"
+      ]
+    },
+    {
+      "keyword": "fact-score",
+      "definition": "An evaluation metric that automatically scores the factuality of AI-generated text",
+      "usage_count": 1,
+      "files": [
+        "ai-evaluation-japanese-benchmarks.md"
+      ]
+    },
+    {
+      "keyword": "zero-shot",
+      "definition": "Directly asking questions without examples",
+      "usage_count": 1,
+      "files": [
+        "ai-evaluation-japanese-benchmarks.md"
+      ]
+    },
+    {
+      "keyword": "few-shot",
+      "definition": "Asking questions after showing several examples",
+      "usage_count": 1,
+      "files": [
+        "ai-evaluation-japanese-benchmarks.md"
+      ]
+    },
+    {
+      "keyword": "chain-of-thought",
+      "definition": "Asking questions while gradually showing the thinking process",
+      "usage_count": 1,
+      "files": [
+        "ai-evaluation-japanese-benchmarks.md"
+      ]
+    },
+    {
+      "keyword": "google",
+      "definition": "AI company that developed advanced AI including Gemini 2.5 Pro",
+      "usage_count": 1,
+      "files": [
+        "ai-evaluation-japanese-benchmarks.md"
+      ]
+    },
+    {
+      "keyword": "rag technology",
+      "definition": "Technology that generates responses by referencing external knowledge bases",
+      "usage_count": 1,
+      "files": [
+        "ai-evaluation-japanese-benchmarks.md"
+      ]
+    },
+    {
+      "keyword": "return on investment",
+      "definition": "A metric that measures how much benefit or profit is gained relative to the amount invested",
+      "usage_count": 1,
+      "files": [
+        "inquiry-management-revolution.md"
+      ]
+    },
+    {
+      "keyword": "url retriever",
+      "definition": "A function that automatically acquires website information and updates it periodically",
+      "usage_count": 1,
+      "files": [
+        "ai-email-response-examples.md"
+      ]
+    },
+    {
+      "keyword": "first contact resolution",
+      "definition": "The percentage of customer inquiries resolved on first contact. Higher percentages indicate higher customer satisfaction",
+      "usage_count": 1,
+      "files": [
+        "ai-email-response-examples.md"
+      ]
+    },
+    {
+      "keyword": "knowledge graphs",
+      "definition": "Data structure representing relationships between information as graphs",
+      "usage_count": 1,
+      "files": [
+        "introduction-to-rag.md"
+      ]
+    },
+    {
+      "keyword": "natural language search",
+      "definition": "A feature that allows searching using natural language. Users can search with natural sentences like 'What should I do when I forget my password?'",
+      "usage_count": 1,
+      "files": [
+        "knowledge-base-faq-guide-2025.md"
+      ]
+    },
+    {
+      "keyword": "ai (artificial intelligence)",
+      "definition": "Technology that enables computers to make human-like judgments and learning. Can automatically find optimal answers",
+      "usage_count": 1,
+      "files": [
+        "knowledge-base-faq-guide-2025.md"
+      ]
+    },
+    {
+      "keyword": "kcs",
+      "definition": "A system that immediately registers knowledge gained in the field into a database for organization-wide sharing. A knowledge-centered service operation method",
+      "usage_count": 1,
+      "files": [
+        "knowledge-base-faq-guide-2025.md"
+      ]
+    },
+    {
+      "keyword": "kcs (knowledge-centered service)",
+      "definition": "A system that immediately registers knowledge gained in the field into a database for organization-wide sharing. A knowledge-centered service operation method",
+      "usage_count": 1,
+      "files": [
+        "knowledge-base-faq-guide-2025.md"
+      ]
+    },
+    {
+      "keyword": "artificial intelligence",
+      "definition": "Technology that enables computers to think and make decisions like humans",
+      "usage_count": 1,
+      "files": [
+        "ai-chatbot-types-guide.md"
+      ]
+    },
+    {
+      "keyword": "large language models",
+      "definition": "AI models trained on massive amounts of text data to understand language usage",
+      "usage_count": 1,
+      "files": [
+        "ai-chatbot-types-guide.md"
+      ]
+    },
+    {
+      "keyword": "scenarios",
+      "definition": "Pre-prepared conversation flows",
+      "usage_count": 1,
+      "files": [
+        "ai-chatbot-types-guide.md"
+      ]
+    },
+    {
+      "keyword": "finite state machines",
+      "definition": "Simple mechanisms that operate with defined states and transition rules",
+      "usage_count": 1,
+      "files": [
+        "ai-chatbot-types-guide.md"
+      ]
+    },
+    {
+      "keyword": "continuous learning",
+      "definition": "Mechanism that continues to learn new information during operation",
+      "usage_count": 1,
+      "files": [
+        "ai-chatbot-types-guide.md"
+      ]
+    },
+    {
+      "keyword": "tco",
+      "definition": "Abbreviation for Total Cost of Ownership. Total cost including implementation through operation",
+      "usage_count": 1,
+      "files": [
+        "ai-chatbot-types-guide.md"
+      ]
+    },
+    {
+      "keyword": "personal information protection law",
+      "definition": "Law defining proper handling of personal information",
+      "usage_count": 1,
+      "files": [
+        "ai-chatbot-types-guide.md"
+      ]
+    },
+    {
+      "keyword": "itil, the best practice in it operations management",
+      "definition": "A global standard methodology for efficiently managing computer systems. A proven method adopted by many companies",
+      "usage_count": 1,
+      "files": [
+        "understanding-ticket-systems-for-customer-support.md"
+      ]
+    },
+    {
+      "keyword": "itil (it infrastructure library)",
+      "definition": "A global standard methodology for efficiently managing computer systems. A proven method adopted by many companies",
+      "usage_count": 1,
+      "files": [
+        "understanding-ticket-systems-for-customer-support.md"
+      ]
+    },
+    {
+      "keyword": "itil",
+      "definition": "A global standard methodology for efficiently managing computer systems",
+      "usage_count": 1,
+      "files": [
+        "understanding-ticket-systems-for-customer-support.md"
+      ]
+    },
+    {
+      "keyword": "itsm",
+      "definition": "Methodologies and concepts for IT service management",
+      "usage_count": 1,
+      "files": [
+        "understanding-ticket-systems-for-customer-support.md"
+      ]
+    },
+    {
+      "keyword": "customer satisfaction (csat)",
+      "definition": "A metric that quantifies customer satisfaction. Measures how satisfied customers are with a service",
+      "usage_count": 1,
+      "files": [
+        "understanding-ticket-systems-for-customer-support.md"
+      ]
+    },
+    {
+      "keyword": "customer satisfaction (csat: customer satisfaction score)",
+      "definition": "A metric that quantifies customer satisfaction. Measures how satisfied customers are with a service",
+      "usage_count": 1,
+      "files": [
+        "understanding-ticket-systems-for-customer-support.md"
+      ]
+    },
+    {
+      "keyword": "nps (net promoter score)",
+      "definition": "A metric indicating how likely customers are to recommend a service to others",
+      "usage_count": 1,
+      "files": [
+        "understanding-ticket-systems-for-customer-support.md"
+      ]
+    },
+    {
+      "keyword": "dashboards",
+      "definition": "A feature that displays important numbers and data on a single screen, providing at-a-glance visibility of business conditions",
+      "usage_count": 1,
+      "files": [
+        "understanding-ticket-systems-for-customer-support.md"
+      ]
+    },
+    {
+      "keyword": "ui",
+      "definition": "The screens and operation methods users interact with. Directly impacts usability",
+      "usage_count": 1,
+      "files": [
+        "understanding-ticket-systems-for-customer-support.md"
+      ]
+    },
+    {
+      "keyword": "pareto's law",
+      "definition": "An empirical rule stating that 80% of overall results come from 20% of overall causes. In email handling, approximately 80% of all inquiries tend to concentrate on specific 20% of themes",
+      "usage_count": 1,
+      "files": [
+        "email-response-automation-platform.md"
+      ]
+    }
+  ]
+}

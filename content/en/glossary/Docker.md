@@ -3,7 +3,7 @@ title: "Docker"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "docker"
-description: "Learn about Docker, an open-source platform for packaging, shipping, and running applications in lightweight, portable containers. Understand its architecture, benefits, and use cases."
+description: "A platform that packages applications with everything they need to run, so they work the same way on any computer or server."
 keywords: ["Docker", "containers", "containerization", "microservices", "Kubernetes"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

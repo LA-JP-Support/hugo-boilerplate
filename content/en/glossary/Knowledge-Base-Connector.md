@@ -1,7 +1,7 @@
 ---
 title: "Knowledge Base Connector"
 translationKey: "knowledge-base-connector"
-description: "An integration module linking AI workflows like chatbots to indexed knowledge sources, powering Retrieval Augmented Generation (RAG) for context-relevant responses."
+description: "A bridge connecting AI chatbots to knowledge sources like documents and databases, enabling them to provide accurate, up-to-date answers based on specific information rather than general knowledge."
 keywords: ["Knowledge Base Connector", "Retrieval Augmented Generation", "AI Chatbot", "Vector Database", "Automation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

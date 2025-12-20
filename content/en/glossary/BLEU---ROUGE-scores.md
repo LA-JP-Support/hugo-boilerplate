@@ -3,7 +3,7 @@ title: "BLEU/ROUGE Scores"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "bleu-rouge-scores"
-description: "Learn about BLEU and ROUGE scores, essential NLP metrics for evaluating machine-generated text against human references in machine translation, summarization, and AI."
+description: "Metrics that measure how well AI-generated text matches human-written reference text by comparing word and phrase overlaps, commonly used to evaluate machine translation and text summarization quality."
 keywords: ["BLEU scores", "ROUGE scores", "NLP evaluation", "machine translation", "text summarization"]
 category: "AI Chatbot & Automation"
 type: "glossary"

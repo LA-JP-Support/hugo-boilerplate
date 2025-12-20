@@ -100,7 +100,7 @@ The [Airbnb homepage](https://www.airbnb.com/) employs clear buttons, intuitive 
 
 ### User Interface (UI)
 
-UI refers to the visual and interactive elements of a product—the “surface layer.” It encompasses everything a user sees and interacts with: screen layouts, controls, colors, typography, icons, and imagery.
+UI refers to the visual and interactive elements of a product—the "surface layer." It encompasses everything a user sees and interacts with: screen layouts, controls, colors, typography, icons, and imagery.
 
 ### User Experience (UX)
 

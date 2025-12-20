@@ -3,7 +3,7 @@ title: "ITIL – Information Technology Infrastructure Library"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "itil-information-technology-infrastructure-library"
-description: "Explore ITIL (Information Technology Infrastructure Library), the leading framework for IT service management. Learn its history, principles, practices, certification, and benefits."
+description: "A global best practices framework that helps organizations manage IT services efficiently and align technology with business goals."
 keywords: ["ITIL", "IT Service Management", "ITSM", "ITIL framework", "ITIL certification"]
 category: "Information Technology"
 type: "glossary"

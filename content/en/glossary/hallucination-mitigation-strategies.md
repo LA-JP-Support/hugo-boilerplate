@@ -3,7 +3,7 @@ title: "Hallucination Mitigation Strategies"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "hallucination-mitigation-strategies"
-description: "Explore hallucination mitigation strategies for AI systems, particularly LLMs. Learn about techniques like RAG, prompt engineering, and fine-tuning to prevent fabricated outputs."
+description: "Techniques and methods that prevent AI systems from generating false or made-up information by improving accuracy and reliability through tools like data verification and prompt refinement."
 keywords: ["hallucination mitigation strategies", "AI hallucinations", "large language models", "retrieval-augmented generation", "prompt engineering"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -1,7 +1,7 @@
 ---
 title: Slot Carryover
 translationKey: slot-carryover
-description: Slot carryover enables AI chatbots to remember and reuse structured information (slots) across conversational turns, maintaining context and improving user experience in task-oriented dialogue systems.
+description: "A chatbot feature that remembers information you've already shared, so you don't have to repeat it in follow-up questions."
 keywords:
 - Slot Carryover
 - AI Chatbot

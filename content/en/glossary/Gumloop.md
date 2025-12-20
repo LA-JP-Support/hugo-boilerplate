@@ -1,7 +1,7 @@
 ---
 title: Gumloop
 translationKey: gumloop
-description: Gumloop is a no-code, AI-first automation platform for repetitive tasks and workflows. It uses intelligent agents to browse the web, interact with SaaS apps, and make decisions.
+description: "An AI-powered automation platform that lets you build workflows without coding by connecting apps, analyzing data, and making decisions using artificial intelligence."
 keywords:
 - Gumloop
 - AI automation

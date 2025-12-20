@@ -1,7 +1,7 @@
 ---
 title: "State / Context Memory"
 translationKey: "state-context-memory"
-description: "Explore State / Context Memory, the storage mechanisms enabling AI chatbots to retain and recall information across sessions for conversational continuity, personalization, and efficient task management."
+description: "State / Context Memory is the system that allows AI chatbots to remember information from past conversations, enabling them to maintain continuity, personalize responses, and handle multi-step tasks efficiently."
 keywords: ["State / Context Memory", "AI chatbots", "conversational AI", "persistent storage", "context window", "LLMs"]
 category: "AI Chatbot & Automation"
 type: "glossary"

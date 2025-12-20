@@ -1,7 +1,7 @@
 ---
 title: "SSML (Speech Synthesis Markup Language)"
 translationKey: "ssml-speech-synthesis-markup-language"
-description: "SSML is an XML-based markup language for controlling synthetic speech output, including pronunciation, intonation, pacing, and emotion, used by major TTS providers."
+description: "A markup language that controls how text sounds when spoken by AI, adjusting pronunciation, speed, pitch, and emotion to make speech sound more natural and human-like."
 keywords: ["SSML", "Speech Synthesis Markup Language", "Text-to-Speech", "TTS", "W3C", "prosody", "phonetics", "voice user interfaces", "AI chatbot"]
 category: "AI Chatbot & Automation / Text-to-Speech / Voice User Interfaces"
 type: "glossary"

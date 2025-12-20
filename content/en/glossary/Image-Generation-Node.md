@@ -1,7 +1,7 @@
 ---
 title: "Image Generation Node"
 translationKey: "image-generation-node"
-description: "Learn about Image Generation Nodes, modular components in visual programming that interface with AI models like DALL-E and Stable Diffusion to create images from text prompts."
+description: "A reusable component in visual workflows that converts text descriptions into images using AI models like DALL-E or Stable Diffusion, without requiring coding skills."
 keywords: ["Image Generation Node", "AI image generation", "Stable Diffusion", "DALL-E", "Text prompt"]
 category: "AI Chatbot & Automation"
 type: "glossary"

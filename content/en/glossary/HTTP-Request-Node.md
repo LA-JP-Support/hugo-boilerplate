@@ -1,7 +1,7 @@
 ---
 title: HTTP Request Node
 translationKey: http-request-node
-description: Learn about the HTTP Request Node, a vital component in automation platforms like n8n and Node-RED, for sending HTTP requests to external APIs and integrating systems.
+description: "A tool that sends requests to external websites or services within automation workflows, allowing different applications to communicate and share data automatically."
 keywords:
 - HTTP Request Node
 - API integration

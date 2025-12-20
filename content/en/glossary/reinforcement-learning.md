@@ -3,7 +3,7 @@ title: "Reinforcement Learning"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "reinforcement-learning"
-description: "Reinforcement learning (RL) is a type of machine learning where an agent learns to make sequential decisions by interacting with an environment and maximizing cumulative rewards through trial and error."
+description: "A machine learning approach where an AI agent learns to make better decisions by trying different actions and receiving rewards or penalties based on results."
 keywords: ["reinforcement learning", "machine learning", "AI", "agent", "Markov Decision Process"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -1,7 +1,7 @@
 ---
 title: "Prompt Template"
 translationKey: "prompt-template"
-description: "A prompt template is a pre-configured prompt structure with static instructions and variable placeholders, designed for repeated use in AI chatbots and automation systems."
+description: "A reusable instruction blueprint for AI systems that combines fixed directions with customizable placeholders, allowing consistent outputs without rewriting prompts each time."
 keywords: ["prompt template", "AI chatbots", "automation", "large language models", "prompt engineering"]
 category: "AI Chatbot & Automation"
 type: "glossary"

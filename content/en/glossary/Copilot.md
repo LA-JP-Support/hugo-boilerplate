@@ -1,7 +1,7 @@
 ---
 title: "AI Copilot"
 translationKey: "ai-copilot"
-description: "An AI copilot is an advanced AI-powered digital assistant that operates alongside human users to enhance productivity, creativity, and decision-making in real time."
+description: "An AI assistant that works alongside you in real time to boost productivity and creativity by automating tasks, answering questions, and offering smart suggestions."
 keywords: ["AI Copilot", "Artificial Intelligence", "Large Language Models", "Digital Assistant", "Productivity"]
 category: "General"
 type: "glossary"

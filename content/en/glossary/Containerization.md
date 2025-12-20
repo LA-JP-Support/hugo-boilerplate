@@ -3,7 +3,7 @@ title: Containerization
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: containerization
-description: Containerization packages software code with dependencies into portable, isolated containers, ensuring consistent application execution across any environment, from dev to cloud.
+description: "A packaging method that bundles software with all its dependencies into a portable unit, allowing applications to run consistently across any computer or cloud environment."
 keywords: ["containerization", "containers", "docker", "kubernetes", "microservices"]
 category: AI Infrastructure & Deployment
 type: glossary

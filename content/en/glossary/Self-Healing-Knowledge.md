@@ -1,7 +1,7 @@
 ---
 title: "Self-Healing Knowledge"
 translationKey: "self-healing-knowledge"
-description: "Self-Healing Knowledge uses AI, ML, and automation to autonomously detect, diagnose, and correct outdated or erroneous content in knowledge management systems, ensuring accuracy."
+description: "AI-powered technology that automatically finds and fixes outdated or incorrect information in knowledge systems, keeping company information accurate and up-to-date without manual effort."
 keywords: ["Self-Healing Knowledge", "AI", "Knowledge Management", "Automation", "Content Accuracy"]
 category: "AI Chatbot & Automation"
 type: "glossary"

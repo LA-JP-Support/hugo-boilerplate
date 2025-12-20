@@ -3,7 +3,7 @@ title: "Task-Oriented Bot"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "task-oriented-bot"
-description: "A Task-Oriented Bot is a specialized chatbot designed to automate specific, structured processes like booking, tracking, or scheduling, using NLP and backend integration."
+description: "A chatbot designed to help users complete specific tasks like booking flights, tracking orders, or scheduling appointments by guiding them through step-by-step workflows."
 keywords: ["Task-Oriented Bot", "chatbots", "natural language processing", "AI", "automation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

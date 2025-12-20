@@ -3,7 +3,7 @@ title: "Privacy-Preserving Machine Learning (PPML)"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "privacy-preserving-machine-learning-ppml"
-description: "Explore Privacy-Preserving Machine Learning (PPML), methods like Differential Privacy, Homomorphic Encryption, MPC, and Federated Learning, to secure sensitive data in ML models."
+description: "A set of techniques that allow machine learning systems to learn from sensitive data while keeping that data hidden and protected from exposure."
 keywords: ["Privacy-Preserving Machine Learning", "Differential Privacy", "Homomorphic Encryption", "Multi-Party Computation", "Federated Learning"]
 category: "Machine Learning"
 type: "glossary"

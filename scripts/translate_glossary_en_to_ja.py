@@ -1,22 +1,11 @@
 #!/usr/bin/env python3
 """Translate English glossary markdown files to Japanese using Claude API.
 
-- Reads from content/en/glossary/*.md
-- Uses Anthropic Claude API (API key from ANTHROPIC_API_KEY env var)
-- Writes translated files to content/ja/glossary/ with:
-  - title/description/body translated to Japanese
-  - translationKey copied as-is
-  - keywords translated to Japanese
-  - internal links /en/... -> /ja/... only when corresponding ja file exists
+AUTO-UPDATE CSV STATUS: After translation, automatically updates CSV with completion status.
 
-Usage (example):
-
-  python scripts/translate_glossary_en_to_ja.py \
-      --source-dir content/en/glossary \
-      --target-dir content/ja/glossary \
-      --one-file autonomous-agents.md
-
-If --one-file is omitted, all .md files in source-dir are processed.
+Usage:
+  python scripts/translate_glossary_en_to_ja.py --one-file File.md
+  python scripts/translate_glossary_en_to_ja.py  # Translate all
 """
 
 import argparse
@@ -24,6 +13,7 @@ import datetime
 import os
 import re
 import textwrap
+import csv
 from pathlib import Path
 from typing import Dict, Tuple, Optional, Iterable, List
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -33,9 +23,8 @@ import yaml
 try:
     from dotenv import load_dotenv
     load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env")
-  # .env ファイルから環境変数を自動読み込み
 except ImportError:
-    pass  # python-dotenv がなければスキップ
+    pass
 
 try:
     import anthropic
@@ -56,10 +45,6 @@ DEFAULT_STYLE_GUIDE = textwrap.dedent(
 
 
 def parse_markdown_with_frontmatter(text: str) -> Tuple[Dict, str]:
-    """Parse simple YAML frontmatter and return (frontmatter, body).
-
-    Falls back to empty frontmatter if no frontmatter block is found.
-    """
     m = FRONTMATTER_RE.match(text)
     if not m:
         return {}, text
@@ -89,18 +74,12 @@ def build_claude_client() -> "anthropic.Anthropic":
 
 
 def check_translation_complete(en_body: str, ja_body: str) -> Tuple[bool, str]:
-    """Check if the Japanese translation covers all major sections of the English source.
-
-    Returns (is_complete, message).
-    """
-    # 英語原文の見出しを抽出
     en_headings = re.findall(r"^(#{1,4})\s+(.+)$", en_body, re.MULTILINE)
     ja_headings = re.findall(r"^(#{1,4})\s+(.+)$", ja_body, re.MULTILINE)
 
     en_h2_count = sum(1 for h in en_headings if h[0] == "##")
     ja_h2_count = sum(1 for h in ja_headings if h[0] == "##")
 
-    # 英語原文の行数と日本語訳の行数を比較
     en_lines = len([l for l in en_body.strip().splitlines() if l.strip()])
     ja_lines = len([l for l in ja_body.strip().splitlines() if l.strip()])
 
@@ -240,12 +219,6 @@ def find_existing_ja_slugs(ja_dir: Path) -> set:
 
 
 def rewrite_internal_links(body_ja: str, existing_ja_slugs: set) -> str:
-    """Rewrite /en/... links to /ja/... only when ja slug exists.
-
-    - /en/glossary/slug/  -> /ja/glossary/slug/ if slug exists in ja_dir
-    - Other /en/... are left as-is.
-    """
-
     def repl(match: re.Match) -> str:
         full = match.group(0)
         slug = match.group("slug")
@@ -335,16 +308,16 @@ def translate_markdown_file(
     title_ja, term_ja, keywords_ja, desc_ja = translator.translate_meta(title_en, desc_en, keywords_en)
     body_ja = rewrite_internal_links(body_ja, existing_ja_slugs)
 
-    # Build JA frontmatter
-    fm_ja = dict(fm)  # shallow copy
+    fm_ja = dict(fm)
     fm_ja["title"] = title_ja
     fm_ja["e-title"] = e_title or title_en
-    # 日本語側では term がない場合、少なくともタイトルを入れておく。
-    # Claude が TERM_JA を返していればそれを優先し、なければタイトルをそのまま使用。
+    
+    filename_stem = src_path.stem
+    fm_ja["url"] = f"/ja/glossary/{filename_stem}/"
+    
     if "term" not in fm_ja or not fm_ja.get("term"):
         fm_ja["term"] = term_ja or title_ja
 
-    # 特定エントリの読みを固定: autonomous-agents -> じりつがたエージェント
     if fm_ja.get("translationKey") == "autonomous-agents":
         fm_ja["term"] = "じりつがたエージェント"
     if desc_ja:
@@ -352,7 +325,6 @@ def translate_markdown_file(
     if keywords_ja:
         fm_ja["keywords"] = keywords_ja
 
-    # translationKey, type, category などはそのままコピー
     if override_date:
         fm_ja["date"] = override_date
         fm_ja["lastmod"] = override_date
@@ -361,12 +333,11 @@ def translate_markdown_file(
     dst_text = dump_markdown_with_frontmatter(fm_ja, body_ja)
     dst_path.write_text(dst_text, encoding="utf-8")
 
-    # 翻訳完了チェック
     is_complete, check_msg = check_translation_complete(body, body_ja)
     if is_complete:
-        print(f"✓ Translated {src_path} -> {dst_path}")
+        print(f"✓ Translated {src_path.name} -> {dst_path.name}")
     else:
-        print(f"⚠ Translated {src_path} -> {dst_path} [INCOMPLETE: {check_msg}]")
+        print(f"⚠ Translated {src_path.name} -> {dst_path.name} [INCOMPLETE: {check_msg}]")
 
 
 def load_style_guide(path: Optional[str]) -> str:
@@ -376,6 +347,59 @@ def load_style_guide(path: Optional[str]) -> str:
     if not file_path.exists():
         raise FileNotFoundError(f"Style guide file not found: {file_path}")
     return file_path.read_text(encoding="utf-8")
+
+
+def update_csv_status(csv_path: Path, en_dir: Path, ja_dir: Path) -> int:
+    """CSVステータスを実ファイル存在状況に基づいて自動更新"""
+    
+    if not csv_path.exists():
+        print(f"⚠️  CSV not found: {csv_path}")
+        return 0
+    
+    # CSVを読み込み
+    with open(csv_path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        fieldnames = list(reader.fieldnames or [])
+        rows = list(reader)
+    
+    # status列がない場合は追加
+    if 'status_en' not in fieldnames:
+        fieldnames.append('status_en')
+    if 'status_ja' not in fieldnames:
+        fieldnames.append('status_ja')
+    
+    # 各行のステータスを更新
+    updated_count = 0
+    for row in rows:
+        filename = row.get('filename', '')
+        if not filename:
+            continue
+        
+        en_file = en_dir / filename
+        ja_file = ja_dir / filename
+        
+        old_status_en = row.get('status_en', 'pending')
+        old_status_ja = row.get('status_ja', 'pending')
+        
+        new_status_en = 'completed' if en_file.exists() else 'pending'
+        new_status_ja = 'completed' if ja_file.exists() else 'pending'
+        
+        row['status_en'] = new_status_en
+        row['status_ja'] = new_status_ja
+        
+        if old_status_en != new_status_en or old_status_ja != new_status_ja:
+            updated_count += 1
+    
+    # CSVに書き戻し
+    with open(csv_path, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+    
+    if updated_count > 0:
+        print(f"📊 CSV updated: {updated_count} status changes")
+    
+    return updated_count
 
 
 def main() -> None:
@@ -410,6 +434,16 @@ def main() -> None:
         default=4,
         help="Max worker threads for parallel translation when --batch-size=1 (default: %(default)s)",
     )
+    parser.add_argument(
+        "--skip-csv-update",
+        action="store_true",
+        help="Skip automatic CSV status update after translation",
+    )
+    parser.add_argument(
+        "--csv-path",
+        default="docs/prioritized_keywords.csv",
+        help="Path to CSV file for status tracking (default: %(default)s)",
+    )
     args = parser.parse_args()
 
     src_dir = Path(args.source_dir)
@@ -427,7 +461,6 @@ def main() -> None:
         src_path = src_dir / args.one_file
         if not src_path.exists():
             raise SystemExit(f"Source file not found: {src_path}")
-        # Treat the current file as an existing slug so self-references can be rewritten.
         existing_ja_slugs.add(src_path.stem)
         dst_path = dst_dir / src_path.name
         if args.skip_existing and dst_path.exists():
@@ -440,9 +473,15 @@ def main() -> None:
             existing_ja_slugs,
             override_date=override_date,
         )
+        
+        # 翻訳完了後、CSV自動更新
+        if not args.skip_csv_update:
+            csv_path = Path(args.csv_path)
+            if csv_path.exists():
+                update_csv_status(csv_path, src_dir, dst_dir)
+        
         return
 
-    # 一括翻訳時は、複数ファイルを並列処理して速度アップ
     src_files = sorted(src_dir.glob("*.md"))
     if args.skip_existing:
         src_files = [p for p in src_files if not (dst_dir / p.name).exists()]
@@ -450,12 +489,10 @@ def main() -> None:
         print(f"No markdown files found in {src_dir}")
         return
 
-    # Include slugs that will be created in this run so internal links can be rewritten to /ja/.
     existing_ja_slugs |= {p.stem for p in src_files}
 
     batch_size = max(1, args.batch_size)
     if batch_size == 1:
-        # ネットワーク待ちが中心なので、3〜4スレッド程度の並列で十分
         max_workers = min(max(1, args.max_workers), len(src_files))
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = {
@@ -476,6 +513,13 @@ def main() -> None:
                     fut.result()
                 except Exception as e:
                     print(f"Error translating {src}: {e}")
+        
+        # 全翻訳完了後、CSV自動更新
+        if not args.skip_csv_update:
+            csv_path = Path(args.csv_path)
+            if csv_path.exists():
+                update_csv_status(csv_path, src_dir, dst_dir)
+        
         return
 
     for chunk_paths in chunked(src_files, batch_size):
@@ -527,6 +571,12 @@ def main() -> None:
                 )
             except Exception as e:
                 print(f"Error translating {src_path}: {e}")
+    
+    # 全翻訳完了後、CSV自動更新
+    if not args.skip_csv_update:
+        csv_path = Path(args.csv_path)
+        if csv_path.exists():
+            update_csv_status(csv_path, src_dir, dst_dir)
 
 
 if __name__ == "__main__":

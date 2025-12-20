@@ -38,7 +38,7 @@ There's even more shocking data. Recent surveys show that delays in customer ser
 
 In other words, improving inquiry management isn't something you "should do" - it's a "must do to survive" level challenge.
 
-## {{< tooltip text="A system that treats inquiries and support requests as numbered management tickets, centrally managing assigned staff and progress status" >}}Ticket System{{< /tooltip >}}: The "Magic Wand"
+## [Ticket System](/en/glossary/Ticket-System/ "A system that treats inquiries and support requests as numbered management tickets, centrally managing assigned staff and progress status"): The "Magic Wand"
 
 ### What Exactly Is a "Ticket System"?
 
@@ -57,7 +57,7 @@ Everything gets a number, making it clear at a glance "who," "when," and "what" 
 
 ### Amazing Results: Actual Company Outcomes
 
-At SmartWeb, we use {{< tooltip text="Customer support and help desk software used worldwide. It can centrally manage inquiries from email, chat, phone, SNS, and other channels" >}}LiveAgent{{< /tooltip >}}, a proven ticket system with extensive track record.
+At SmartWeb, we use [LiveAgent](/en/glossary/LiveAgent/ "Customer support and help desk software used worldwide. It can centrally manage inquiries from email, chat, phone, SNS, and other channels"), a proven ticket system with extensive track record.
 
 #### Results from companies that implemented LiveAgent:
 
@@ -68,11 +68,11 @@ At SmartWeb, we use {{< tooltip text="Customer support and help desk software us
 Voice from a small business owner:
 **"Before implementation, every day was panic mode. But now, I can see the status of all inquiries just by looking at the screen. Response speed doubled and complaints drastically decreased."**
 
-## {{< tooltip text="A website or system that aggregates information like FAQs, manuals, and guides so customers can solve problems themselves" >}}Support Portal{{< /tooltip >}}: The "Magic Bookshelf" for Customer Self-Service
+## [Support Portal](/en/glossary/Support-Portal/ "A website or system that aggregates information like FAQs, manuals, and guides so customers can solve problems themselves"): The "Magic Bookshelf" for Customer Self-Service
 
 ### 30-52% of Inquiries Disappear!?
 
-A "Support Portal" is like a "customer-dedicated library" that compiles {{< tooltip text="Frequently Asked Questions - content that organizes common customer questions and their answers" >}}FAQs{{< /tooltip >}} and manuals.
+A "Support Portal" is like a "customer-dedicated library" that compiles [FAQs](/en/glossary/FAQ/ "Frequently Asked Questions - content that organizes common customer questions and their answers") and manuals.
 
 In fact, **30-52%** of inquiries are things customers can resolve themselves if they have the right information (according to Gartner research).
 
@@ -102,7 +102,7 @@ By providing this information 24/7/365, you can reduce late-night and weekend in
 | Time | Before: Monday Morning Pre-Implementation | After: Monday Morning Post-SmartWeb Implementation |
 | --- | --- | --- |
 | 9:30 | Arrive at office | Arrive at office |
-| 9:35 | Start checking emails | Check dedicated support {{< tooltip text="A management tool that displays various information and data together on one screen" >}}dashboard{{< /tooltip >}} |
+| 9:35 | Start checking emails | Check dedicated support [dashboard](/en/glossary/dashboard/ "A management tool that displays various information and data together on one screen") |
 | 9:40 |   | 3 unhandled tickets, process from "high" priority |
 | 10:00 | Update Excel management sheet | Each assigned staff member starts handling auto-sorted tickets, also begins parallel chat support |
 | 10:30 | Ask staff "Did anyone handle this case?" |   |
@@ -137,7 +137,7 @@ By providing this information 24/7/365, you can reduce late-night and weekend in
 - Initial cost: 100,000 yen - We'll set it up ready to use
 - Monthly cost: From 10,000 yen~ - Varies based on number of staff using the system
 
-### Simple {{< tooltip text="A metric that measures how much benefit or profit is gained relative to the amount invested" >}}Return on Investment{{< /tooltip >}} Calculation
+### Simple [Return on Investment](/en/glossary/ROI/ "A metric that measures how much benefit or profit is gained relative to the amount invested") Calculation
 
 | Item | Current State | After SmartWeb Implementation |
 | --- | --- | --- |
@@ -175,7 +175,7 @@ Check data monthly. Analyze "what types of inquiries are most common?" and "did 
 
 ## If You Don't Start Now, Competitors Will Gain an Advantage
 
-The wave of {{< tooltip text="Introducing digital technology into corporate business processes to achieve efficiency and transformation" >}}digitalization{{< /tooltip >}} isn't just for large corporations. Rather, small businesses have the opportunity to provide enterprise-level service by making technology their ally.
+The wave of [digitalization](/en/glossary/digitalization/ "Introducing digital technology into corporate business processes to achieve efficiency and transformation") isn't just for large corporations. Rather, small businesses have the opportunity to provide enterprise-level service by making technology their ally.
 
 ### Imagine Your Company One Year From Now
 

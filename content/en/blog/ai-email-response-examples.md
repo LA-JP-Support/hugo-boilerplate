@@ -19,7 +19,7 @@ In fact, automated response generation using the latest AI technology can handle
 
 Seeing is believing. First, let's introduce two real examples of what kind of response drafts the AI automated response generation function actually creates.
 
-Note that the system introduced here combines {{< tooltip text="A ticket system that can manage various inquiries from email, SNS, and other channels in one place" >}}LiveAgent{{< /tooltip >}} with {{< tooltip text="An AI chatbot platform that integrates and utilizes multiple AI models" >}}FlowHunt{{< /tooltip >}}, which is also utilized in SmartWeb's construction services. It handles not only emails but also inquiries from contact forms and SNS, creating equally high-precision response drafts across all reception channels.
+Note that the system introduced here combines [LiveAgent](/en/glossary/LiveAgent/ "A ticket system that can manage various inquiries from email, SNS, and other channels in one place") with [FlowHunt](/en/glossary/FlowHunt/ "An AI chatbot platform that integrates and utilizes multiple AI models"), which is also utilized in SmartWeb's construction services. It handles not only emails but also inquiries from contact forms and SNS, creating equally high-precision response drafts across all reception channels.
 
 ### 【Example 1】Handling Complex Technical Inquiries
 
@@ -27,7 +27,7 @@ Note that the system introduced here combines {{< tooltip text="A ticket system 
 
 From Mr. Yamada at XX Corporation, we received detailed questions regarding consideration of AI chatbot plan implementation:
 
-- Minimum required content volume (number of FAQ items, {{< tooltip text="A database that systematically compiles knowledge such as frequently asked questions and product information" >}}knowledge base{{< /tooltip >}} pages, character count guidelines)
+- Minimum required content volume (number of FAQ items, [knowledge base](/en/glossary/knowledge-base/ "A database that systematically compiles knowledge such as frequently asked questions and product information") pages, character count guidelines)
 - Recommended content volume and industry-specific differences
 - Learnable content formats (PDF, Word, Excel, etc.)
 - Feasibility of importing existing website FAQ pages
@@ -50,7 +50,7 @@ The AI accurately understood these multiple questions and automatically generate
    - File formats such as PDF, Word, Excel
    - Website FAQ pages, LiveAgent knowledge base
    - YouTube videos, audio content
-   - Automatic acquisition and periodic updates via {{< tooltip text="A function that automatically acquires website information and updates it periodically" >}}URL Retriever{{< /tooltip >}}
+   - Automatic acquisition and periodic updates via [URL Retriever](/en/glossary/URL-Retriever/ "A function that automatically acquires website information and updates it periodically")
    
    Specifically listed these options and clearly indicated that importing existing FAQ pages is possible
 
@@ -59,7 +59,7 @@ The AI accurately understood these multiple questions and automatically generate
    Proposed starting with necessary functions and gradually expanding the scope of utilization
 
 5. **Introduction of Implementation Examples**
-   Presented specific results from CVFR Travel Group ({{< tooltip text="The percentage of customer inquiries resolved on first contact. Higher percentages indicate higher customer satisfaction" >}}first contact resolution{{< /tooltip >}} improved by 28%, response time reduced from 1 hour to 20 minutes)
+   Presented specific results from CVFR Travel Group ([first contact resolution](/en/glossary/First-Contact-Resolution--FCR-/ "The percentage of customer inquiries resolved on first contact. Higher percentages indicate higher customer satisfaction") improved by 28%, response time reduced from 1 hour to 20 minutes)
    Suggested detailed guidance through free consultation
 
 6. **Provision of Reference URLs**
@@ -88,7 +88,7 @@ Rather than template-like standard text, it generated polite and specific respon
 
 From Mr. Yamada at XX Corporation, we received an urgent complaint regarding system malfunctions:
 
-- Email inquiries not automatically converting to {{< tooltip text="A unit for managing customer inquiries as individual cases. Can record progress status and response history" >}}tickets{{< /tooltip >}} (approximately 30% conversion rate)
+- Email inquiries not automatically converting to [tickets](/en/glossary/ticket/ "A unit for managing customer inquiries as individual cases. Can record progress status and response history") (approximately 30% conversion rate)
 - Completed ticket statuses automatically reverting to "unresponded"
 - SNS inquiries being double-ticketed
 - Receiving complaints from multiple customers

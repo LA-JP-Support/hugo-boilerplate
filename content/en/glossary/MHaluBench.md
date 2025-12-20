@@ -3,7 +3,7 @@ title: MHaluBench
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: mhalubench
-description: MHaluBench is a meta-evaluation and annotation benchmark for fine-grained, claim-level hallucination detection in multimodal large language models (MLLMs) across I2T and T2I tasks.
+description: "A benchmark tool that detects false or made-up information in AI systems that work with both images and text, by breaking down responses into individual claims and checking each one for accuracy."
 keywords:
 - MHaluBench
 - hallucination detection

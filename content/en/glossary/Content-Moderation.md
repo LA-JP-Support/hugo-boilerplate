@@ -3,7 +3,7 @@ title: Content Moderation
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: content-moderation
-description: 'Explore content moderation: monitoring, evaluating, and managing user-generated content to ensure platform guidelines, community standards, and legal compliance.'
+description: "Content Moderation is the process of reviewing and managing user-posted content on websites and apps to ensure it follows platform rules, protects users from harmful material, and complies with laws."
 keywords: ["content moderation", "user-generated content", "AI moderation", "platform guidelines", "community standards"]
 category: AI Ethics & Safety Mechanisms
 type: glossary

@@ -1,7 +1,7 @@
 ---
 title: "Splash Screen"
 translationKey: "splash-screen"
-description: "A splash screen is the first visual a user sees when an app or chatbot launches, providing brand recognition and indicating loading. Essential for UX and branding."
+description: "A branded image or animation that appears when an app or chatbot starts up, showing the company logo while the system loads in the background."
 keywords: ["splash screen", "AI chatbot", "mobile app", "user experience", "branding"]
 category: "AI Chatbot & Automation"
 type: "glossary"

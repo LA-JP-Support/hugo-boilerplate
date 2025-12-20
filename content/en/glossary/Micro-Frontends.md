@@ -3,7 +3,7 @@ title: "Micro-Frontends"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "micro-frontends"
-description: "Micro-Frontends is an architectural style decomposing web applications into smaller, independently developed and deployed frontend apps for scalable, autonomous teams."
+description: "An architectural approach that breaks a web application into smaller, independently developed frontend parts managed by different teams, allowing faster development and easier maintenance."
 keywords: ["micro frontends", "frontend development", "micro frontend architecture", "web applications", "independent deployment"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

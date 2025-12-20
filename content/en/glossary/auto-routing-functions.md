@@ -3,7 +3,7 @@ title: "Auto-Routing Functions"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "auto-routing-functions"
-description: "Explore auto-routing functions, leveraging AI and NLU to automatically assign inquiries in customer service, IT, and logistics. Optimize efficiency, accuracy, and response times."
+description: "AI-powered system that automatically directs customer inquiries, support tickets, and orders to the right person or department based on content analysis and urgency, improving response speed and service quality."
 keywords: ["auto-routing", "AI routing", "customer service automation", "workflow automation", "logistics optimization"]
 category: "Automation"
 type: "glossary"

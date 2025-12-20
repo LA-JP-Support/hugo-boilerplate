@@ -3,7 +3,7 @@ title: LiveAgent
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: liveagent
-description: LiveAgent is an advanced customer service and help desk software platform that centralizes all customer interactions across email, chat, phone, and social media, enhancing support efficiency.
+description: "LiveAgent is customer service software that brings all customer messages from email, chat, phone, and social media into one place, helping support teams respond faster and more efficiently."
 keywords:
 - LiveAgent
 - customer service software

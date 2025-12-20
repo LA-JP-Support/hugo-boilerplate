@@ -15,19 +15,19 @@ With the rapid advancement of AI technology, methods for evaluating large langua
 
 Traditionally, AI performance evaluation relied on two primary approaches. The first was "human evaluation," where experts and general users manually reviewed AI responses to assess their accuracy, naturalness, and usefulness. The second involved "automatic evaluation metrics like BLEU and ROUGE," where computers automatically compared AI-generated text with reference answers and quantified similarity.
 
-Recently, however, a groundbreaking evaluation method called "{{< tooltip text="A novel technique where AI systems evaluate the responses of other AI systems" >}}LLM as Judge{{< /tooltip >}}" has gained significant attention.
+Recently, however, a groundbreaking evaluation method called "[LLM as Judge](/en/glossary/LLM-as-Judge/ "A novel technique where AI systems evaluate the responses of other AI systems")" has gained significant attention.
 
 In this approach, AI models themselves become evaluators, assessing other models' or their own outputs. Specifically, multiple AIs answer the same question, and another AI compares and evaluates these responses. This enables more efficient and multifaceted evaluation than traditional methods.
 
-Moreover, cutting-edge research has developed "{{< tooltip text="An evaluation method that measures reliability by assessing the consistency of multiple AI responses without requiring correct answers" >}}unsupervised consistency evaluation{{< /tooltip >}}" that doesn't rely on ground-truth data. Recently, aiming to assess reliability without {{< tooltip text="Pre-determined correct answers or gold standard labels provided by humans" >}}oracle feedback (ground-truth labels){{< /tooltip >}}, researchers have proposed the "{{< tooltip text="An evaluation metric in the research phase that analyzes the consistency and inconsistency between student models and LLM outputs, abbreviating Consistent and Inconsistent Ratio" >}}CAI ratio{{< /tooltip >}}."
+Moreover, cutting-edge research has developed "{{< tooltip text="An evaluation method that measures reliability by assessing the consistency of multiple AI responses without requiring correct answers" >}}unsupervised consistency evaluation{{< /tooltip >}}" that doesn't rely on ground-truth data. Recently, aiming to assess reliability without [oracle feedback (ground-truth labels)](/en/glossary/oracle-feedback---ground-truth-labels-/ "Pre-determined correct answers or gold standard labels provided by humans"), researchers have proposed the "[CAI ratio](/en/glossary/CAI-ratio/ "An evaluation metric in the research phase that analyzes the consistency and inconsistency between student models and LLM outputs, abbreviating Consistent and Inconsistent Ratio")."
 
-In the 2025 paper "Evaluating LLMs Without Oracle Feedback," researchers calculate the CAI ratio by analyzing the consistency and inconsistency between {{< tooltip text="A supplementary AI model used for comparison with the main evaluation target model" >}}student models{{< /tooltip >}} and LLM outputs. Models with higher agreement rates show strong correlation with traditional metrics like accuracy, proving useful as a heuristic for model selection.
+In the 2025 paper "Evaluating LLMs Without Oracle Feedback," researchers calculate the CAI ratio by analyzing the consistency and inconsistency between [student models](/en/glossary/student-models/ "A supplementary AI model used for comparison with the main evaluation target model") and LLM outputs. Models with higher agreement rates show strong correlation with traditional metrics like accuracy, proving useful as a heuristic for model selection.
 
-However, since this metric remains in the research phase and isn't yet standardized across all tasks, it should be understood as a "{{< tooltip text="Additional judgment material that complements the primary evaluation metric" >}}supplementary indicator{{< /tooltip >}}."
+However, since this metric remains in the research phase and isn't yet standardized across all tasks, it should be understood as a "[supplementary indicator](/en/glossary/supplementary-indicator/ "Additional judgment material that complements the primary evaluation metric")."
 
 ## Hallucination Problem: The Causes of AI "Lies" and Countermeasures
 
-{{< tooltip text="The phenomenon where AI generates non-existent information or incorrect content in a plausible manner" >}}Hallucination phenomena{{< /tooltip >}} remains one of the greatest risks in AI implementation today. According to the latest OpenAI research, the primary causes include:
+[Hallucination phenomena](/en/glossary/hallucination/ "The phenomenon where AI generates non-existent information or incorrect content in a plausible manner") remains one of the greatest risks in AI implementation today. According to the latest OpenAI research, the primary causes include:
 
 ### Main Causes of Occurrence
 
@@ -39,9 +39,9 @@ However, since this metric remains in the research phase and isn't yet standardi
 
 To address these challenges, new evaluation metrics have been developed:
 
-- **{{< tooltip text="Evaluation criteria for AI systems that search external knowledge to generate responses" >}}RAG benchmarks{{< /tooltip >}}**
-- **{{< tooltip text="An evaluation metric that automatically scores the factuality of AI-generated text" >}}Fact-Score{{< /tooltip >}}**
-- **{{< tooltip text="A hallucination detection benchmark for multimodal AI combining images and text" >}}MHaluBench{{< /tooltip >}}**
+- **[RAG benchmarks](/en/glossary/RAG-benchmarks/ "Evaluation criteria for AI systems that search external knowledge to generate responses")**
+- **[Fact-Score](/en/glossary/Fact-Score/ "An evaluation metric that automatically scores the factuality of AI-generated text")**
+- **[MHaluBench](/en/glossary/MHaluBench/ "A hallucination detection benchmark for multimodal AI combining images and text")**
 
 These evaluation methods enable scientific measurement of how trustworthy AI outputs are.
 
@@ -71,19 +71,19 @@ Evaluating Japanese AI models presents language-specific complexities. Honorific
 
 ## Practical Prompt Improvement and Evaluation Methodology
 
-Effective AI utilization requires careful design and evaluation of {{< tooltip text="Instruction text or questions given to AI" >}}prompts{{< /tooltip >}}. This principle remains constant whether using AI building tools like FlowHunt.
+Effective AI utilization requires careful design and evaluation of [prompts](/en/glossary/prompts/ "Instruction text or questions given to AI"). This principle remains constant whether using AI building tools like FlowHunt.
 
 ### Scientific Improvement Methodology
 
 **Step 1: Prompt Design**
 - Create clear, specific instructions
 - Eliminate ambiguous expressions
-- Utilize techniques such as {{< tooltip text="Directly asking questions without examples" >}}Zero-shot{{< /tooltip >}}, {{< tooltip text="Asking questions after showing several examples" >}}Few-shot{{< /tooltip >}}, and {{< tooltip text="Asking questions while gradually showing the thinking process" >}}Chain-of-Thought{{< /tooltip >}}
+- Utilize techniques such as [Zero-shot](/en/glossary/Zero-Shot-Chain-of-Thought/ "Directly asking questions without examples"), [Few-shot](/en/glossary/Few-Shot-Learning/ "Asking questions after showing several examples"), and [Chain-of-Thought](/en/glossary/Chain-of-Thought-Prompting/ "Asking questions while gradually showing the thinking process")
 
 **Step 2: Multi-faceted Evaluation**
-- {{< tooltip text="Accuracy rate" >}}Precision{{< /tooltip >}}, {{< tooltip text="Harmonic mean of [precision and recall](/en/glossary/precision-and-recall/)" >}}F1 score{{< /tooltip >}}, {{< tooltip text="Metrics measuring similarity between generated and reference text" >}}BLEU/ROUGE scores{{< /tooltip >}}
-- {{< tooltip text="Evaluation of whether the same input produces consistent outputs" >}}Consistency evaluation{{< /tooltip >}}
-- {{< tooltip text="Verification that results remain consistent across different environments" >}}Reproducibility validation{{< /tooltip >}}
+- [Precision](/en/glossary/Precision/ "Accuracy rate"), [F1 score](/en/glossary/F1-score/ "Harmonic mean of [precision and recall](/en/glossary/precision-and-recall/)"), [BLEU/ROUGE scores](/en/glossary/BLEU---ROUGE-scores/ "Metrics measuring similarity between generated and reference text")
+- [Consistency evaluation](/en/glossary/Consistency-evaluation/ "Evaluation of whether the same input produces consistent outputs")
+- [Reproducibility validation](/en/glossary/Reproducibility-validation/ "Verification that results remain consistent across different environments")
 
 **Step 3: Continuous Improvement**
 - Create and compare multiple prompt patterns
@@ -92,11 +92,11 @@ Effective AI utilization requires careful design and evaluation of {{< tooltip t
 
 ### Backing from Latest Research
 
-2024 research has numerically proven that differences in prompt design significantly affect model factuality and logical consistency. Particularly, {{< tooltip text="A technique that improves reasoning accuracy by prompting AI to show step-by-step thinking" >}}Chain-of-Thought prompts{{< /tooltip >}} and {{< tooltip text="Prompt design that organizes information according to fixed formats" >}}structured prompts{{< /tooltip >}} have proven effective for enhancing output stability.
+2024 research has numerically proven that differences in prompt design significantly affect model factuality and logical consistency. Particularly, [Chain-of-Thought prompts](/en/glossary/Chain-of-Thought-Prompting/ "A technique that improves reasoning accuracy by prompting AI to show step-by-step thinking") and [structured prompts](/en/glossary/structured-prompts/ "Prompt design that organizes information according to fixed formats") have proven effective for enhancing output stability.
 
 ## JamC-QA: Innovative Benchmark for Measuring Japan-Specific Cultural Knowledge
 
-**[{{< tooltip text="Abbreviation for Japanese Multiple Choice QA, an evaluation test assessing knowledge of Japanese culture and customs" >}}JamC-QA{{< /tooltip >}}](https://huggingface.co/datasets/sbintuitions/jamc-qa)** is a revolutionary tool for evaluating genuine "Japaneseness"—something translation-based benchmarks cannot measure.
+**[[JamC-QA](/en/glossary/JamC-QA/ "Abbreviation for Japanese Multiple Choice QA, an evaluation test assessing knowledge of Japanese culture and customs")](https://huggingface.co/datasets/sbintuitions/jamc-qa)** is a revolutionary tool for evaluating genuine "Japaneseness"—something translation-based benchmarks cannot measure.
 
 ### Characteristics and Design Purpose
 
@@ -122,7 +122,7 @@ Effective AI utilization requires careful design and evaluation of {{< tooltip t
 
 ### Q: Why does AI confidently answer with incorrect information?
 
-A: This is called {{< tooltip text="The phenomenon where AI generates non-existent information in a plausible manner" >}}hallucination{{< /tooltip >}}, occurring because AI probabilistically "guesses" to supplement information absent from training data. The particular problem is "certainty about uncertainty"—confidently generating wrong answers to questions where the model should admit it doesn't know.
+A: This is called [hallucination](/en/glossary/hallucination/ "The phenomenon where AI generates non-existent information in a plausible manner"), occurring because AI probabilistically "guesses" to supplement information absent from training data. The particular problem is "certainty about uncertainty"—confidently generating wrong answers to questions where the model should admit it doesn't know.
 
 ### Q: What are the differences between Japanese AI and English AI?
 
@@ -130,45 +130,45 @@ A: Japanese AI can handle Japanese-specific complexities including honorific dis
 
 ### Q: Which is more accurate for AI evaluation—human judgment or AI-to-AI judgment?
 
-A: Both have advantages and disadvantages. Human evaluation can judge nuance and practicality but is time-consuming and subject to evaluator bias. {{< tooltip text="A method where AI evaluates other AI responses" >}}LLM as Judge{{< /tooltip >}} efficiently processes large datasets but may be influenced by AI-specific biases. The optimal approach combines both methods.
+A: Both have advantages and disadvantages. Human evaluation can judge nuance and practicality but is time-consuming and subject to evaluator bias. [LLM as Judge](/en/glossary/LLM-as-Judge/ "A method where AI evaluates other AI responses") efficiently processes large datasets but may be influenced by AI-specific biases. The optimal approach combines both methods.
 
 ### Q: Can small-to-medium enterprises use these evaluation techniques?
 
-A: Yes. Using no-code AI building tools like FlowHunt, companies without specialized expertise can build and evaluate AI systems. Starting with basic {{< tooltip text="A method of checking whether similar answers are returned for identical questions" >}}consistency evaluation{{< /tooltip >}} and {{< tooltip text="Calculation of accuracy rate" >}}accuracy measurement{{< /tooltip >}}, you can gradually progress to more sophisticated evaluation methods.
+A: Yes. Using no-code AI building tools like FlowHunt, companies without specialized expertise can build and evaluate AI systems. Starting with basic [consistency evaluation](/en/glossary/Consistency-evaluation/ "A method of checking whether similar answers are returned for identical questions") and [accuracy measurement](/en/glossary/accuracy-measurement/ "Calculation of accuracy rate"), you can gradually progress to more sophisticated evaluation methods.
 
 ## Real-World Case Study: Advanced Methods Adopted by SmartWeb's AI Chatbot
 
-How are the LLM evaluation techniques and {{< tooltip text="Technology to prevent AI from generating incorrect information" >}}hallucination mitigation strategies{{< /tooltip >}} discussed in this article applied in actual business settings? SmartWeb's AI chatbot service exemplifies a practical combination of these cutting-edge technologies.
+How are the LLM evaluation techniques and [hallucination mitigation strategies](/en/glossary/hallucination-mitigation-strategies/ "Technology to prevent AI from generating incorrect information") discussed in this article applied in actual business settings? SmartWeb's AI chatbot service exemplifies a practical combination of these cutting-edge technologies.
 
 ### Utilizing High-Quality LLMs
 
-SmartWeb's AI chatbot employs industry-leading LLMs including **[{{< tooltip text="AI company that developed ChatGPT and GPT-5" >}}OpenAI{{< /tooltip >}}](https://openai.com/gpt-5/)**'s latest GPT-5 model, **[{{< tooltip text="AI company that developed advanced AI including Gemini 2.5 Pro" >}}Google{{< /tooltip >}}](https://deepmind.google/models/gemini/)**'s Gemini 2.5 Pro, and **[{{< tooltip text="AI company that developed Claude AI" >}}Anthropic{{< /tooltip >}}](https://www.anthropic.com/claude)**'s Claude Sonnet 4. These models have demonstrated high performance across the various benchmarks introduced in this article.
+SmartWeb's AI chatbot employs industry-leading LLMs including **[[OpenAI](/en/glossary/OpenAI/ "AI company that developed ChatGPT and GPT-5")](https://openai.com/gpt-5/)**'s latest GPT-5 model, **[[Google](/en/glossary/Google/ "AI company that developed advanced AI including Gemini 2.5 Pro")](https://deepmind.google/models/gemini/)**'s Gemini 2.5 Pro, and **[[Anthropic](/en/glossary/Anthropic/ "AI company that developed Claude AI")](https://www.anthropic.com/claude)**'s Claude Sonnet 4. These models have demonstrated high performance across the various benchmarks introduced in this article.
 
 ### Practical Countermeasures Against Hallucination Problems
 
-General AI chatbots face the challenge of providing inaccurate responses to unstudied content—the {{< tooltip text="The phenomenon where AI generates non-existent information in a plausible manner" >}}hallucination problem{{< /tooltip >}}. SmartWeb has implemented the following countermeasures:
+General AI chatbots face the challenge of providing inaccurate responses to unstudied content—the [hallucination problem](/en/glossary/hallucination/ "The phenomenon where AI generates non-existent information in a plausible manner"). SmartWeb has implemented the following countermeasures:
 
 **Proprietary Learning Data Management System**
 - Enterprise-specific response content is registered as training data in advance
-- {{< tooltip text="Technology that generates responses by referencing external knowledge bases" >}}RAG technology{{< /tooltip >}} selects appropriate answers from registered data
+- [RAG technology](/en/glossary/RAG/ "Technology that generates responses by referencing external knowledge bases") selects appropriate answers from registered data
 - Honestly responds "I don't know" to questions outside the training database
 
 **Continuous Quality Improvement**
 - Continuously improve response accuracy by analyzing actual conversation logs
-- Quality management through {{< tooltip text="Checking whether similar responses are returned for identical questions" >}}consistency evaluation{{< /tooltip >}}
+- Quality management through [consistency evaluation](/en/glossary/Consistency-evaluation/ "Checking whether similar responses are returned for identical questions")
 - Optimization of evaluation metrics based on customer satisfaction
 
 ### The Superiority of the FlowHunt Platform
 
-SmartWeb's adopted **[{{< tooltip text="A platform enabling no-code AI system construction" >}}FlowHunt{{< /tooltip >}}](https://flowhunt.io/)** provides a practical environment for applying the latest evaluation methodologies discussed in this article:
+SmartWeb's adopted **[[FlowHunt](/en/glossary/FlowHunt/ "A platform enabling no-code AI system construction")](https://flowhunt.io/)** provides a practical environment for applying the latest evaluation methodologies discussed in this article:
 
 1. **Comparative evaluation of diverse LLMs**: Actual performance testing of multiple AI models possible
-2. **Prompt optimization features**: Application of advanced techniques like {{< tooltip text="Prompt design that promotes step-by-step thinking" >}}Chain-of-Thought prompts{{< /tooltip >}}
+2. **Prompt optimization features**: Application of advanced techniques like [Chain-of-Thought prompts](/en/glossary/Chain-of-Thought-Prompting/ "Prompt design that promotes step-by-step thinking")
 3. **Real-time quality monitoring**: Continuous performance monitoring of operational AI systems
 
 ## Summary: Future Prospects for Scientific LLM Evaluation
 
-LLM evaluation technology is evolving from traditional static metrics toward dynamic, multi-layered frameworks where AI participates in evaluation. {{< tooltip text="A method measuring reliability from the consistency of AI responses without ground-truth data" >}}Unsupervised consistency metrics{{< /tooltip >}}, {{< tooltip text="Technology that automatically detects incorrect information generated by AI" >}}hallucination detection{{< /tooltip >}}, and {{< tooltip text="Evaluation tests specialized in the knowledge of specific cultures or regions" >}}culture-specific benchmarks{{< /tooltip >}} are continually being developed as practical evaluation methodologies.
+LLM evaluation technology is evolving from traditional static metrics toward dynamic, multi-layered frameworks where AI participates in evaluation. [Unsupervised consistency metrics](/en/glossary/Unsupervised-consistency-metrics/ "A method measuring reliability from the consistency of AI responses without ground-truth data"), [hallucination detection](/en/glossary/hallucination-detection/ "Technology that automatically detects incorrect information generated by AI"), and [culture-specific benchmarks](/en/glossary/culture-specific-benchmarks/ "Evaluation tests specialized in the knowledge of specific cultures or regions") are continually being developed as practical evaluation methodologies.
 
 The following developmental directions are anticipated:
 
@@ -177,6 +177,6 @@ The following developmental directions are anticipated:
 3. **Real-time quality management**: Dynamic performance monitoring during AI system operation
 4. **Industry-specific tools**: Specialized evaluation frameworks optimized for each sector
 
-SmartWeb's AI chatbot service exemplifies applying these cutting-edge technologies in real business environments, effectively solving the {{< tooltip text="Technology preventing AI from generating incorrect information" >}}hallucination problem{{< /tooltip >}}. By combining evaluation methodologies grounded in scientific evidence with practical solutions, organizations can maximize AI benefits while minimizing risks.
+SmartWeb's AI chatbot service exemplifies applying these cutting-edge technologies in real business environments, effectively solving the [hallucination problem](/en/glossary/hallucination/ "Technology preventing AI from generating incorrect information"). By combining evaluation methodologies grounded in scientific evidence with practical solutions, organizations can maximize AI benefits while minimizing risks.
 
 For those considering AI technology adoption, leveraging solutions with proven track records enables taking that critical first step toward safe, effective AI utilization.

@@ -14,3 +14,5 @@ import './typewriter.js';
 import './tooltip.js';
 // Import dynamic font sizing functionality
 import './dynamic-font-sizing.js';
+// Import back to top button functionality
+import './back-to-top.js';

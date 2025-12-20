@@ -3,7 +3,7 @@ title: "ITSM (IT Service Management)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "itsm-it-service-management"
-description: "ITSM (IT Service Management) is a systematic approach for designing, delivering, managing, and improving IT services, aligning them with business objectives for optimal value."
+description: "A systematic approach that organizes IT operations to align technology services with business goals, ensuring reliable and efficient support."
 keywords: ["ITSM", "IT Service Management", "ITIL", "Service Management", "Automation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

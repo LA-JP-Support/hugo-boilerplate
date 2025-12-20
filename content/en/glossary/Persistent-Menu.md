@@ -1,7 +1,7 @@
 ---
 title: Persistent Menu
 translationKey: persistent-menu
-description: 'Learn about Persistent Menus in chatbots: what they are, why use them, how to implement them, and best practices for enhancing user navigation and experience.'
+description: "A fixed menu in chatbots that stays visible at all times, giving users quick access to important features like help or restart without searching through conversations."
 keywords:
 - Persistent Menu
 - Chatbot

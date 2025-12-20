@@ -1,7 +1,7 @@
 ---
 title: "Semantic Routing"
 translationKey: "semantic-routing"
-description: "Semantic routing directs user queries to specialized agents, prompts, or data sources by evaluating the semantic meaning (intent) using vector similarity."
+description: "An AI decision-making layer that directs user requests to the right agent or service by understanding their true meaning, even when phrased differently than expected."
 keywords: ["semantic routing", "AI systems", "vector similarity", "chatbot automation", "LLM routing"]
 category: "AI Chatbot & Automation"
 type: "glossary"

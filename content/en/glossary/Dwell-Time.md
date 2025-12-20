@@ -3,7 +3,7 @@ title: "Dwell Time"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "dwell-time"
-description: "Dwell time measures the duration a user spends on a page after clicking from a SERP before returning. Learn its SEO impact, how to measure it, and strategies to improve user engagement."
+description: "The time a user spends reading a page after clicking a search result before returning to Google. It indicates whether the content matched what they were looking for."
 keywords: ["dwell time", "SEO", "user engagement", "Google Analytics", "ranking factor"]
 category: "Analytics & Content Effectiveness"
 type: "glossary"

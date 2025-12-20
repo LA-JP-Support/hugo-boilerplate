@@ -3,7 +3,7 @@ title: "Culture-Specific Benchmarks"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "culture-specific-benchmarks"
-description: "Culture-specific benchmarks are evaluation tools measuring unique cultural knowledge, behaviors, and values in organizations and AI, ensuring context-aware diagnostics and reducing bias."
+description: "A measurement tool that evaluates how well organizations and AI systems understand and respond to the unique values, behaviors, and customs of specific cultures, helping ensure fairness and relevance across different communities."
 keywords: ["culture-specific benchmarks", "organizational culture", "AI evaluation", "cultural commonsense", "benchmarking"]
 category: "Culture"
 type: "glossary"

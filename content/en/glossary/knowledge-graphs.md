@@ -3,7 +3,7 @@ title: "Knowledge Graph"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "knowledge-graph"
-description: "A knowledge graph is a structured data model representing entities and their relationships as a graph, enabling efficient retrieval, reasoning, and integration of information."
+description: "A network of connected information where entities like people and places are linked by their relationships, helping computers understand and find information more intelligently."
 keywords: ["knowledge graph", "graph database", "ontology", "semantic web", "data integration"]
 category: "AI Chatbot & Automation"
 type: "glossary"

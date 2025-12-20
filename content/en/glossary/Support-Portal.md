@@ -3,7 +3,7 @@ title: "Support Portal"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "support-portal"
-description: "A support portal is a secure web-based system centralizing customer support resources like FAQs, ticketing, and chat, enabling self-service and efficient problem-solving."
+description: "A website where customers can find answers to common questions, submit support requests, and track their progress all in one place."
 keywords: ["support portal", "customer service", "self-service", "knowledge base", "ticketing system"]
 category: "AI Chatbot & Automation"
 type: "glossary"

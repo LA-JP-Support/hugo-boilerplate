@@ -1,7 +1,7 @@
 ---
 title: "Sub-flow / Nested Flow"
 translationKey: "sub-flow-nested-flow"
-description: "Learn about sub-flows (nested flows) in automation. Embed workflows within others to simplify complex logic, enhance reusability, and improve maintenance."
+description: "A reusable workflow embedded within a larger workflow to break down complex processes into manageable, repeatable steps."
 keywords: ["sub-flow", "nested flow", "workflow automation", "reusability", "modular workflow"]
 category: "AI Chatbot & Automation"
 type: "glossary"

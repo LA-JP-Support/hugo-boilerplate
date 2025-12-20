@@ -3,7 +3,7 @@ title: "Visualization"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "visualization"
-description: "Visualization transforms complex data into understandable visuals like charts, graphs, and dashboards, revealing patterns and insights for better decision-making."
+description: "A method of turning complex data into charts, graphs, and dashboards so people can quickly spot patterns and make better decisions."
 keywords: ["data visualization", "AI chatbots", "automation", "dashboards", "business intelligence"]
 category: "AI Chatbot & Automation"
 type: "glossary"

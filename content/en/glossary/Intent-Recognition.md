@@ -1,7 +1,7 @@
 ---
 title: "Intent Recognition"
 translationKey: "intent-recognition"
-description: "Intent recognition is a core AI/NLP technology interpreting user input to understand specific goals. It enables systems to respond contextually and efficiently."
+description: "Intent recognition is an AI technology that understands what users want by analyzing the meaning behind their words, not just keywords. It enables chatbots and apps to respond appropriately to requests phrased in different ways."
 keywords: ["Intent Recognition", "NLP", "AI", "Machine Learning", "Chatbots"]
 category: "General"
 type: "glossary"

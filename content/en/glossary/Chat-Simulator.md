@@ -2,7 +2,7 @@
 title: "Chat Simulator"
 lastmod: 2025-12-18
 translationKey: "chat-simulator"
-description: "A development tool for developers, QA, and operations to test, validate, and optimize chatbot conversation flows and NLU in a controlled, risk-free environment."
+description: "A testing tool that lets developers safely practice and improve chatbots by simulating realistic customer conversations before they go live."
 keywords: ["Chat Simulator", "Chatbot testing", "Conversational AI", "NLU validation", "Agent training"]
 category: "AI Chatbot & Automation"
 type: "glossary"

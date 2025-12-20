@@ -1,7 +1,7 @@
 ---
 title: "Debug Console / Trace"
 translationKey: "debug-console-trace"
-description: "A Debug Console or Trace is a diagnostic interface providing visibility into automation flows, AI chatbots, or API proxy operations, capturing data, errors, and performance."
+description: "A diagnostic tool that records each step of a process—showing inputs, outputs, errors, and performance—to help troubleshoot and optimize automation flows, chatbots, or API operations."
 keywords: ["Debug Console", "Trace", "Automation Flow", "AI Chatbot", "API Proxy"]
 category: "AI Chatbot & Automation"
 type: "glossary"

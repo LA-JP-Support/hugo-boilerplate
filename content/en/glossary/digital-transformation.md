@@ -3,7 +3,7 @@ title: "Digital Transformation"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "digital-transformation"
-description: "Explore the Digital Transformation Glossary: Deep Knowledge Edition. Understand strategic integration of digital technologies, business model rethinking, and cultural shifts for modern organizations."
+description: "The strategic adoption of digital technologies across all business areas to fundamentally change how organizations operate, deliver value to customers, and compete in the market."
 keywords: ["digital transformation", "business strategy", "cloud computing", "artificial intelligence", "customer experience"]
 category: "Digital Transformation"
 type: "glossary"

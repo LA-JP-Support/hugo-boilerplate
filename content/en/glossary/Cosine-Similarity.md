@@ -3,7 +3,7 @@ title: "Cosine Similarity"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "cosine-similarity"
-description: "Cosine similarity is a metric that measures the cosine of the angle between two non-zero vectors, assessing their similarity based on orientation rather than magnitude. Widely used in machine learning, NLP, and recommendation systems."
+description: "A metric that measures how similar two sets of data are by comparing their direction rather than size, commonly used to find related documents or recommendations."
 keywords: ["cosine similarity", "machine learning", "natural language processing", "recommendation systems", "vector similarity"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

@@ -1,7 +1,7 @@
 ---
 title: Embed Script
 translationKey: embed-script
-description: Learn about embed scripts, JavaScript snippets used to integrate AI chatbots and dynamic content onto any website. Discover usage, examples, customization, and best practices.
+description: "A simple code snippet you paste into your website to instantly add an AI chatbot without any coding skills needed."
 keywords:
 - embed script
 - chatbot

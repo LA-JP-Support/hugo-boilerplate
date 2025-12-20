@@ -3,7 +3,7 @@ title: "LLM as Judge"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "llm-as-judge"
-description: "Explore LLM-as-a-Judge (LaaJ), an evaluation methodology where LLMs assess other LLM outputs. Learn definitions, methods, best practices, and use cases for scalable, nuanced AI evaluation."
+description: "LLM as Judge is an AI evaluation method where one language model assesses the quality of outputs from other AI systems, providing faster and more scalable alternatives to human review."
 keywords: ["LLM as Judge", "LLM evaluation", "AI evaluation", "large language models", "prompt engineering"]
 category: "LLMs"
 type: "glossary"

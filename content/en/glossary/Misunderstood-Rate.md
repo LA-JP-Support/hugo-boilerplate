@@ -1,7 +1,7 @@
 ---
 title: "Misunderstood Rate"
 translationKey: "misunderstood-rate"
-description: "Misunderstood Rate measures chatbot failures to understand user intent, triggering fallback responses. It's a key metric for NLU performance, user experience, and improving conversational AI."
+description: "Misunderstood Rate is the percentage of times a chatbot fails to understand what a user is asking and responds with a default message like 'Sorry, I didn't understand that.' It measures how well the chatbot can recognize user intent and identify gaps in its conversational abilities."
 keywords: ["chatbot performance", "natural language processing (NLP)", "user experience", "evaluation metrics", "customer service"]
 category: "AI Chatbot & Automation"
 type: "glossary"

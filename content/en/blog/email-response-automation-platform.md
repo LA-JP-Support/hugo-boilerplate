@@ -47,21 +47,21 @@ Response delays lead to decreased customer satisfaction, reduced deal closure ra
 
 ### Information Organization and Prioritization Theory
 
-Efficient business email processing requires information organization and clear prioritization. According to {{< tooltip text="An empirical rule stating that 80% of overall results come from 20% of overall causes. In email handling, approximately 80% of all inquiries tend to concentrate on specific 20% of themes" >}}Pareto's Law{{< /tooltip >}} (the 80:20 rule), approximately 80% of overall inquiries tend to concentrate on specific 20% of themes or questions.
+Efficient business email processing requires information organization and clear prioritization. According to [Pareto's Law](/en/glossary/Pareto's-Law/ "An empirical rule stating that 80% of overall results come from 20% of overall causes. In email handling, approximately 80% of all inquiries tend to concentrate on specific 20% of themes") (the 80:20 rule), approximately 80% of overall inquiries tend to concentrate on specific 20% of themes or questions.
 
-Utilizing this law enables identifying frequent patterns and standardizing response methods. As a result, {{< tooltip text="The mental burden placed on the brain during work. Refers to the amount of attention and memory required when processing information" >}}cognitive load{{< /tooltip >}} decreases and processing speed improves.
+Utilizing this law enables identifying frequent patterns and standardizing response methods. As a result, [cognitive load](/en/glossary/cognitive-load/ "The mental burden placed on the brain during work. Refers to the amount of attention and memory required when processing information") decreases and processing speed improves.
 
-Additionally, psychological research shows that {{< tooltip text="Performing multiple tasks simultaneously. Research shows this reduces work efficiency; email handling is more efficient when processed one at a time with concentration" >}}multitasking{{< /tooltip >}} reduces work efficiency. The method of handling email in concentrated batches at designated times, processing one at a time, is effective.
+Additionally, psychological research shows that [multitasking](/en/glossary/multitasking/ "Performing multiple tasks simultaneously. Research shows this reduces work efficiency; email handling is more efficient when processed one at a time with concentration") reduces work efficiency. The method of handling email in concentrated batches at designated times, processing one at a time, is effective.
 
 ### Business Flow Visualization and Bottleneck Analysis
 
-Visualizing email handling flow and identifying {{< tooltip text="Points in business processes that take the most time or impose the greatest burden. Improving these points significantly enhances overall efficiency" >}}bottlenecks{{< /tooltip >}} (time and burden points) at each stage is the first step toward efficiency.
+Visualizing email handling flow and identifying [bottlenecks](/en/glossary/bottlenecks/ "Points in business processes that take the most time or impose the greatest burden. Improving these points significantly enhances overall efficiency") (time and burden points) at each stage is the first step toward efficiency.
 
 Representing the flow from inquiry reception through staff assignment, reply content creation, to sending in a flowchart clarifies which processes take time. In the business improvement field, bottleneck resolution is key to productivity enhancement.
 
 ### Concentration Peaks and Time Zone Utilization
 
-Concentration and cognitive function are influenced by the body clock ({{< tooltip text="Physiological phenomena that fluctuate on approximately 24-hour cycles. Includes body temperature, hormone secretion, and sleep-wake cycles. The 2-3 hours after waking are considered cognitive function peaks" >}}circadian rhythm{{< /tooltip >}}). Many studies indicate 2-3 hours after waking as the cognitive function peak.
+Concentration and cognitive function are influenced by the body clock ([circadian rhythm](/en/glossary/circadian-rhythm/ "Physiological phenomena that fluctuate on approximately 24-hour cycles. Includes body temperature, hormone secretion, and sleep-wake cycles. The 2-3 hours after waking are considered cognitive function peaks")). Many studies indicate 2-3 hours after waking as the cognitive function peak.
 
 Concentrating important email replies during this time improves processing quality and speed. Meanwhile, afternoons see easier energy decline, making it efficient to allocate less burdensome tasks like routine work and simple communications.
 
@@ -75,7 +75,7 @@ Using pre-prepared templates for similar inquiries can significantly reduce repl
 
 ### 2. Automation Tool Implementation
 
-Implementing tools for email sorting, auto-reply, {{< tooltip text="A system that manages customer inquiries and requests individually as 'tickets,' tracking response status and history" >}}ticket management{{< /tooltip >}}, etc. However, combining multiple tools is necessary, and inter-system coordination becomes a challenge.
+Implementing tools for email sorting, auto-reply, [ticket management](/en/glossary/ticket-management/ "A system that manages customer inquiries and requests individually as 'tickets,' tracking response status and history"), etc. However, combining multiple tools is necessary, and inter-system coordination becomes a challenge.
 
 ### 3. Email Management Optimization
 
@@ -133,7 +133,7 @@ The next section introduces "SmartWeb," the integrated customer support platform
 
 ### What is SmartWeb?
 
-SmartWeb is a next-generation platform integrating LiveAgent ({{< tooltip text="A system that manages customer inquiries and requests individually as 'tickets,' tracking response status and history" >}}ticket system{{< /tooltip >}}) and FlowHunt (AI automation). **It realizes all the efficiency techniques introduced in the previous chapter in one system.**
+SmartWeb is a next-generation platform integrating LiveAgent ([ticket system](/en/glossary/Ticket-System/ "A system that manages customer inquiries and requests individually as 'tickets,' tracking response status and history")) and FlowHunt (AI automation). **It realizes all the efficiency techniques introduced in the previous chapter in one system.**
 
 ### Correspondence Table: Traditional Efficiency Methods and SmartWeb Functions
 
@@ -172,7 +172,7 @@ Traditionally, email sorting tools, ticket management systems, and progress mana
 
 **Creation and Updates Surprisingly Easy**
 
-Traditional FAQ systems required HTML knowledge or had complex update procedures. SmartWeb's {{< tooltip text="A database that systematically compiles knowledge and information within a company. Accumulates FAQs, manuals, response cases, etc., enabling anyone to search and utilize" >}}knowledge base{{< /tooltip >}} allows anyone to easily create and update with an intuitive editor.
+Traditional FAQ systems required HTML knowledge or had complex update procedures. SmartWeb's [knowledge base](/en/glossary/knowledge-base/ "A database that systematically compiles knowledge and information within a company. Accumulates FAQs, manuals, response cases, etc., enabling anyone to search and utilize") allows anyone to easily create and update with an intuitive editor.
 
 **Key Functions:**
 
@@ -213,7 +213,7 @@ Traditionally, nighttime and holiday support required additional personnel. AI c
 
 **Not Just Templates—AI Generates Optimal Responses Based on Situations**
 
-Traditional templates were static, requiring situation-based adjustments. SmartWeb's AI Answer Assistant uses {{< tooltip text="Abbreviation for Retrieval-Augmented Generation. Technology where AI searches and references company-specific documents and databases to generate accurate responses" >}}RAG{{< /tooltip >}} (Retrieval-Augmented Generation) technology, referencing company-specific knowledge bases to **automatically generate response drafts optimal for that customer and situation**.
+Traditional templates were static, requiring situation-based adjustments. SmartWeb's AI Answer Assistant uses [RAG](/en/glossary/RAG/ "Abbreviation for Retrieval-Augmented Generation. Technology where AI searches and references company-specific documents and databases to generate accurate responses") (Retrieval-Augmented Generation) technology, referencing company-specific knowledge bases to **automatically generate response drafts optimal for that customer and situation**.
 
 **Key Functions:**
 

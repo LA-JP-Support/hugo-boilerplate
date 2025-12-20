@@ -1,7 +1,7 @@
 ---
 title: State Machine
 translationKey: state-machine
-description: Explore state machines, a computational model for system transitions. Learn core concepts, types, uses in AI chatbots & automation, implementation, advantages, and challenges.
+description: "A computational model that tracks how a system moves between different states based on triggers, commonly used to control chatbot conversations and automated workflows."
 keywords:
 - state machine
 - AI chatbot

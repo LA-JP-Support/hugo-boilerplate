@@ -1,7 +1,7 @@
 ---
 title: "Sentiment-Adaptive Tone"
 translationKey: "sentiment-adaptive-tone"
-description: "Explore sentiment-adaptive tone, an AI capability that adjusts communication style based on customer emotion for improved interactions and satisfaction."
+description: "AI technology that adjusts how chatbots communicate—tone, mood, and formality—based on detecting a customer's emotions to create more natural and satisfying conversations."
 keywords: ["sentiment-adaptive tone", "AI chatbots", "customer service", "sentiment analysis", "emotional intelligence"]
 category: "AI Chatbot & Automation"
 type: "glossary"

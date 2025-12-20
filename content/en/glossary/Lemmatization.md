@@ -1,7 +1,7 @@
 ---
 title: "Lemmatization"
 translationKey: "lemmatization"
-description: "Lemmatization is a linguistic process in NLP and AI that reduces inflected words to their base form (lemma), improving text search, understanding, and analysis."
+description: "Lemmatization is a text processing technique that converts different word forms (like 'running,' 'ran,' 'runs') to their base form ('run') so computers can better understand and analyze language."
 keywords: ["lemmatization", "natural language processing", "nlp", "stemming", "text normalization"]
 category: "General"
 type: "glossary"

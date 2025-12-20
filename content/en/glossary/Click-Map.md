@@ -3,7 +3,7 @@ title: "Click Map"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "click-map"
-description: "A click map is a visual analytics tool showing where users click or tap on a web page. It helps web professionals, marketers, and UX specialists optimize site layouts, improve conversions, and understand user interactions."
+description: "A click map is a visual tool that shows where users click or tap on a website, using color overlays to reveal which buttons, links, and elements get the most attention."
 keywords: ["click map", "web analytics", "user interactions", "UX optimization", "conversion rate optimization"]
 category: "Analytics & Content Effectiveness"
 type: "glossary"

@@ -3,7 +3,7 @@ title: "Text-to-Speech Node"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "text-to-speech-node"
-description: "A Text-to-Speech Node (TTS Node) is a modular building block in conversational AI and automation platforms, converting input text into synthesized audio for voice responses."
+description: "A modular component that converts written text into spoken audio, enabling voice responses in chatbots, virtual assistants, and automated systems."
 keywords: ["Text-to-Speech Node", "TTS", "speech synthesis", "AI chatbots", "automation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

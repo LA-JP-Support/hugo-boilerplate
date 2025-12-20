@@ -3,7 +3,7 @@ title: "Hallucination"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "hallucination"
-description: "Hallucination in AI refers to generative models producing plausible but factually incorrect, nonsensical, or fabricated content. Learn its causes, types, risks, and mitigation strategies."
+description: "AI models generating content that sounds correct but contains false or made-up information. This occurs due to how these systems work statistically, not from intentional deception."
 keywords: ["AI hallucination", "large language models", "generative AI", "misinformation", "fact-checking"]
 category: "AI Chatbot & Automation"
 type: "glossary"

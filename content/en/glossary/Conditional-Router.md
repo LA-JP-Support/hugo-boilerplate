@@ -2,7 +2,7 @@
 title: "Conditional Router"
 lastmod: 2025-12-18
 translationKey: "conditional-router"
-description: "A Conditional Router evaluates data against rules, directing it to specific routes. Essential for dynamic, rule-based branching in automation pipelines, AI chatbots, and software."
+description: "A workflow component that automatically directs data to different paths based on matching rules, enabling smart decision-making in automation systems and chatbots."
 keywords: ["Conditional Router", "Workflow automation", "Rule-based branching", "AI chatbots", "Data routing"]
 category: "General"
 type: "glossary"

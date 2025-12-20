@@ -3,7 +3,7 @@ title: "Multi-Tenancy"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "multi-tenancy"
-description: "Multi-tenancy is a software architecture where a single application instance serves multiple tenants, logically isolating data while sharing infrastructure. Essential for SaaS and cloud platforms."
+description: "A software setup where one application serves multiple customers while keeping each customer's data completely separate and private."
 keywords: ["multi-tenancy", "SaaS", "cloud computing", "data isolation", "software architecture"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

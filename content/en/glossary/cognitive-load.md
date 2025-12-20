@@ -3,7 +3,7 @@ title: "Cognitive load"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "cognitive-load"
-description: "Cognitive load is the mental effort required to process, store, and use information. Learn about its types, measurement, and strategies to reduce it in education, UX, and AI."
+description: "The amount of mental effort needed to understand and process information. Managing it well improves learning and decision-making in education, design, and technology."
 keywords: ["cognitive load", "working memory", "instructional design", "UX design", "AI chatbots"]
 category: "AI Chatbot & Automation"
 type: "glossary"

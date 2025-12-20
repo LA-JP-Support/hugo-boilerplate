@@ -1,7 +1,7 @@
 ---
 title: "Suggestion Chips"
 translationKey: "suggestion-chips"
-description: "Suggestion chips are interactive, pill-shaped UI elements in chatbots and conversational interfaces, offering quick, contextual response options that disappear after selection."
+description: "Suggestion chips are quick-reply buttons that appear in chatbots to help users respond faster by tapping preset options instead of typing."
 keywords: ["suggestion chips", "chatbots", "conversational UI", "quick replies", "Dialogflow"]
 category: "AI Chatbot & Automation"
 type: "glossary"

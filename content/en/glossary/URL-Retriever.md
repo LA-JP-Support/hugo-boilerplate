@@ -1,9 +1,9 @@
 ---
-title: "What is a URL Retriever?"
+title: "URL Retriever"
 lastmod: 2025-12-18
 date: 2025-12-18
-translationKey: "what-is-a-url-retriever"
-description: "A URL Retriever is an AI-powered software tool or agent that automates web data extraction, content monitoring, and workflow orchestration from URLs. It operates as a browser extension, cloud service, or API, enabling efficient web automation."
+translationKey: "url-retriever"
+description: "A software tool that automatically collects and updates information from websites by accessing URLs, eliminating manual copy-paste work and enabling large-scale data extraction and monitoring tasks."
 keywords: ["URL Retriever", "web automation", "AI agent", "data extraction", "browser extension"]
 category: "AI Chatbot & Automation"
 type: "glossary"

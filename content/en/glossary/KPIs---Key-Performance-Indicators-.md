@@ -3,7 +3,7 @@ title: "KPIs (Key Performance Indicators)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "kpis-key-performance-indicators"
-description: "Learn about Key Performance Indicators (KPIs): what they are, why they matter, types, how to develop them, and examples across sales, marketing, HR, and IT."
+description: "KPIs are measurable targets that track how well a business is achieving its goals. They help organizations monitor performance and make better decisions by focusing on what matters most."
 keywords: ["Key Performance Indicators", "KPIs", "business metrics", "performance management", "strategic goals"]
 category: "Business"
 type: "glossary"

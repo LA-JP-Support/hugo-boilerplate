@@ -3,7 +3,7 @@ title: "contextual understanding"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "contextual-understanding"
-description: "Explore contextual understanding in AI: how systems interpret user input within ongoing conversations, leveraging history, preferences, and real-time data for personalized interactions."
+description: "An AI system's ability to remember previous conversations and understand what users really mean by considering their history, preferences, and current situation, rather than treating each question separately."
 keywords: ["contextual understanding", "AI chatbots", "virtual assistants", "personalization", "user experience"]
 category: "AI Chatbot & Automation"
 type: "glossary"

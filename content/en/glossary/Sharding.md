@@ -3,7 +3,7 @@ title: "Sharding"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "sharding"
-description: "Sharding is a database architecture pattern that splits a large logical dataset into smaller, independent pieces called shards, enabling horizontal scaling and improved performance."
+description: "A database technique that splits large datasets into smaller, independent pieces across multiple servers to improve performance and handle more users."
 keywords: ["sharding", "database scaling", "horizontal partitioning", "shard key", "system design"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

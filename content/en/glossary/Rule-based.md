@@ -1,9 +1,9 @@
 ---
-title: "Rule-Based Systems"
+title: "Rule-Based"
 lastmod: 2025-12-18
 date: 2025-12-18
-translationKey: "rule-based-systems"
-description: "A rule-based system is a computational framework using explicit 'if-then' rules to process data and make decisions. Essential for AI, business automation, and compliance, offering transparency and consistency."
+translationKey: "rule-based"
+description: "A computational system that makes decisions by following explicit if-then rules, enabling transparent and auditable operations in AI, business automation, and compliance."
 keywords: ["rule-based systems", "expert systems", "inference engine", "AI", "business automation"]
 category: "Artificial Intelligence"
 type: "glossary"

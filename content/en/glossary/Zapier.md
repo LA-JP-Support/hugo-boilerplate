@@ -3,7 +3,7 @@ title: "Zapier"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "zapier"
-description: "Explore Zapier, the no-code automation platform connecting 8,000+ apps. Learn about Zaps, AI Agents, use cases, and how to automate workflows efficiently."
+description: "Zapier is a no-code platform that automatically connects apps and handles repetitive tasks without requiring programming skills."
 keywords: ["Zapier", "automation", "no-code", "AI Agents", "workflows"]
 category: "Automation"
 type: "glossary"

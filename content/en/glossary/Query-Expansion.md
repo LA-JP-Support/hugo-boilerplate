@@ -1,7 +1,7 @@
 ---
 title: "Query Expansion"
 translationKey: "query-expansion"
-description: "Query expansion reformulates user search queries by adding synonyms and related terms to improve relevance in search engines, AI chatbots, and RAG systems, bridging intent gaps."
+description: "A search technique that automatically adds related words and synonyms to your search query to find more relevant results, helping search engines better understand what you're looking for."
 keywords: ["Query Expansion", "Information Retrieval", "AI Chatbots", "RAG", "Search Engines"]
 category: "AI Chatbot & Automation"
 type: "glossary"

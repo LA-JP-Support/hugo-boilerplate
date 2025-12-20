@@ -3,7 +3,7 @@ title: "Large Language Models (LLMs)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "large-language-models-llms"
-description: "Explore Large Language Models (LLMs), advanced AI systems leveraging deep learning and transformer networks for text generation, translation, and more. Understand their core concepts, applications, and challenges."
+description: "Large Language Models (LLMs) are AI systems trained on vast amounts of text data to understand and generate human language, powering applications like chatbots, translation, and content creation."
 keywords: ["Large Language Models", "LLMs", "Artificial Intelligence", "Deep Learning", "Natural Language Processing"]
 category: "Artificial Intelligence"
 type: "glossary"

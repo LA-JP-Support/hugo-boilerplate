@@ -3,7 +3,7 @@ title: Bias
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: bias
-description: 'Understand AI bias in chatbots & automation: its definition, types, ethical and business impacts, regulatory frameworks like the EU AI Act, and strategies for mitigation.'
+description: "AI Bias is systematic unfairness in AI systems that favors or disadvantages certain groups based on characteristics like race or gender, often reflecting historical inequities in training data and processes."
 keywords:
 - AI bias
 - chatbot bias

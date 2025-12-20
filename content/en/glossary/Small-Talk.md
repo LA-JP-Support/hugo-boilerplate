@@ -1,7 +1,7 @@
 ---
 title: Small Talk
 translationKey: small-talk
-description: Explore small talk in AI chatbots—their ability to handle casual, non-functional conversations, simulating natural human-like exchanges to build rapport and enhance user experience.
+description: "Small talk in AI chatbots is the ability to engage in casual, friendly conversations like greetings or jokes to make interactions feel more natural and build rapport with users."
 keywords:
 - Small Talk
 - AI Chatbots

@@ -3,7 +3,7 @@ title: "Canary Release"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "canary-release"
-description: "A canary release is a progressive software deployment strategy that rolls out new application versions incrementally to a small subset of users, allowing early issue detection and risk mitigation."
+description: "A software deployment method that releases new versions to a small group of users first to catch problems before rolling out to everyone."
 keywords: ["canary release", "deployment strategy", "continuous delivery", "risk mitigation", "software deployment"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

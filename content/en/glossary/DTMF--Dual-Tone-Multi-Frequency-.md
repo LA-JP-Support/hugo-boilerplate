@@ -1,7 +1,7 @@
 ---
 title: "DTMF (Dual-Tone Multi-Frequency)"
 translationKey: "dtmf-dual-tone-multi-frequency"
-description: "DTMF (Dual-Tone Multi-Frequency) is a telecommunication signaling system using unique audio tones from keypad presses to interpret commands, route calls, and enable automated menu navigation, remote control, and secure data entry in telephone networks and digital platforms."
+description: "DTMF is the beeping sound system that lets phones recognize which number you pressed, enabling automated menus and secure data entry like PIN codes."
 keywords: ["DTMF", "telecommunication", "IVR", "VoIP", "PCI DSS"]
 category: "AI Chatbot & Automation, Telecommunication Systems"
 type: "glossary"

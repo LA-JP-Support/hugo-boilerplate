@@ -3,7 +3,7 @@ title: "Model Cards"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "model-cards"
-description: "Model Cards are standardized documents for ML models, detailing architecture, intended uses, performance, limitations, training data, and ethical considerations for transparency and accountability."
+description: "Model Cards are standardized documents that summarize a machine learning model's purpose, performance, and limitations, similar to nutrition labels for food products."
 keywords: ["Model Cards", "Machine Learning", "AI Ethics", "Transparency", "Responsible AI"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

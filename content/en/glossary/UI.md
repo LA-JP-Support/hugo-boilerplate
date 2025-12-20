@@ -3,7 +3,7 @@ title: "UI (User Interface)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "ui-user-interface"
-description: "Explore User Interface (UI) definition, types, design principles, and practical use cases. Learn how UI facilitates human-digital interaction, from apps to AI chatbots."
+description: "A User Interface (UI) is the collection of buttons, menus, and interactive elements on your screen that let you control digital devices and apps. It makes it easy to accomplish tasks with minimal effort."
 keywords: ["User Interface", "UI design", "AI chatbots", "Conversational UI", "UX"]
 category: "Technology"
 type: "glossary"

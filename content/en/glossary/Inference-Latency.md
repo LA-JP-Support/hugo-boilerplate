@@ -3,7 +3,7 @@ title: "Inference Latency"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "inference-latency"
-description: "Inference latency is the time delay between providing input to an AI model and getting a prediction. It's a critical metric for real-time AI applications, impacting responsiveness and user experience."
+description: "The time it takes for an AI model to process input and deliver a prediction, measured in milliseconds. It's crucial for real-time applications where users expect fast responses."
 keywords: ["inference latency", "AI model", "machine learning", "real-time AI", "model optimization"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

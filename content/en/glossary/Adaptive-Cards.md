@@ -2,7 +2,7 @@
 title: "Adaptive Cards"
 date: 2025-12-19
 translationKey: adaptive-cards
-description: "Comprehensive guide to Adaptive Cards - a platform-agnostic UI framework for exchanging rich content cards across applications and platforms."
+description: "A standardized format that lets developers create interactive content cards once and display them consistently across different apps and platforms without rewriting code."
 keywords:
 - Adaptive Cards
 - UI framework

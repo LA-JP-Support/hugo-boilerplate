@@ -1,7 +1,7 @@
 ---
 title: Flowise
 translationKey: flowise
-description: Flowise is an open-source, visual platform for building custom LLM flows and agentic AI systems with LangChainJS. Design, orchestrate, and deploy advanced AI workflows with minimal code.
+description: "Flowise is an open-source platform that lets you build AI chatbots and workflows by dragging and dropping components, without needing to write code."
 keywords:
 - Flowise
 - LLM workflows

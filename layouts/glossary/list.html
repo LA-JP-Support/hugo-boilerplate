@@ -53,7 +53,7 @@
           <nav class="flex flex-wrap gap-2 py-6 justify-between">
             {{ range $kanaGroups }}
               {{ $group := . }}
-              <a href="#{{ $group }}" data-group="{{ $group }}"
+              <a href="javascript:void(0)" data-group="{{ $group }}"
                  class="kana-nav-link rounded-md px-3 py-2 text-sm font-medium whitespace-nowrap
                  {{ if eq $group $activeLetter }}bg-indigo-100 dark:bg-indigo-900 text-primary aria-current='page'
                  {{ else }}text-tertiary hover:text-primary hover:bg-indigo-100 dark:hover:bg-indigo-900{{ end }}">
@@ -87,7 +87,9 @@
       {
         "title": "{{ $term.Title | safeJS }}",
         "eTitle": "{{ (or (index $term.Params "e-title") "") | safeJS }}",
-        "term": "{{ ($term.Params.term | default $term.Title) | safeJS }}",
+        {{ $termVal := $term.Params.term | default $term.Title }}
+        {{ if reflect.IsSlice $termVal }}{{ $termVal = index $termVal 0 }}{{ end }}
+        "term": "{{ $termVal | safeJS }}",
         "url": {{ $term.RelPermalink | jsonify }},
         "description": "{{ $term.Description | safeJS }}",
         "image": {{ ($term.Params.image | default "") | jsonify }},
@@ -107,7 +109,21 @@
   {{ end }}
 
   <script>
+    // ページ読み込み前にスクロール位置をリセット
+    if (window.history.scrollRestoration) {
+      window.history.scrollRestoration = 'manual';
+    }
+    
     document.addEventListener("DOMContentLoaded", function() {
+      // ページ読み込み時に強制的にトップにスクロール
+      if (!window.location.search.includes('term=')) {
+        window.scrollTo(0, 0);
+        // URLからハッシュを削除
+        if (window.location.hash) {
+          history.replaceState(null, null, window.location.pathname + window.location.search);
+        }
+      }
+      
       // JSON埋め込み時に二重引用符が付いている場合に外側の " を1組だけ削る
       function stripOuterQuotes(str) {
         if (typeof str !== 'string') return str;
@@ -288,7 +304,15 @@
       const firstGroupWithTerms = kanaGroups.find(group => groupedTerms[group].length > 0);
       if (firstGroupWithTerms) {
         setActiveTab(firstGroupWithTerms);
-        document.getElementById(firstGroupWithTerms)?.scrollIntoView({ behavior: "auto", block: "start" });
+        // document.getElementById(firstGroupWithTerms)?.scrollIntoView({ behavior: "auto", block: "start" });
+        
+        // 初期表示時は強制的にトップにスクロール（ハッシュリンクによる自動スクロールを防ぐ）
+        if (window.location.hash === '' && !window.location.search.includes('term=')) {
+          window.scrollTo(0, 0);
+          // 確実にトップに戻すため、少し遅延させて再度実行
+          setTimeout(() => window.scrollTo(0, 0), 0);
+          setTimeout(() => window.scrollTo(0, 0), 100);
+        }
       }
 
       // モバイルセレクトボックス
@@ -303,24 +327,12 @@
       // デスクトップタブクリック
       if (tabsContainer) {
         tabsContainer.addEventListener('click', function(e) {
+          e.preventDefault();
           const targetTab = e.target.closest('a');
           if (targetTab && !targetTab.classList.contains('pointer-events-none')) {
-            e.preventDefault();
             const group = targetTab.dataset.group;
+            document.getElementById(group)?.scrollIntoView({ behavior: "smooth", block: "start" });
             setActiveTab(group);
-            const section = document.getElementById(group);
-            if (section) {
-              const header = document.querySelector('header');
-              const alphabetNav = document.getElementById('alphabetNav');
-              const extraSpace = -16;
-              const offset = (header?.offsetHeight || 0) + (alphabetNav?.offsetHeight || 0) - extraSpace;
-              const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
-              window.scrollTo({
-                top: sectionTop - offset,
-                left: 0,
-                behavior: 'smooth'
-              });
-            }
           }
         });
       }

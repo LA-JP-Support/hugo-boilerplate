@@ -66,7 +66,7 @@
                   {{ $hasTerms = true }}
                 {{ end }}
               {{ end }}
-              <a href="#{{ $letter }}"
+              <a href="javascript:void(0)" data-letter="{{ $letter }}"
                  class="rounded-md px-2 py-2 text-sm font-medium
                  {{ if eq $letter $activeLetter }}bg-indigo-100 dark:bg-indigo-900 text-primary aria-current='page'
                  {{ else if $hasTerms }}text-tertiary hover:text-primary hover:bg-indigo-100 dark:hover:bg-indigo-900
@@ -124,7 +124,24 @@
   {{ end }}
 
   <script>
+    // ページ読み込み前にスクロール位置をリセット
+    if (window.history.scrollRestoration) {
+      window.history.scrollRestoration = 'manual';
+    }
+
     document.addEventListener("DOMContentLoaded", function() {
+      // ページ読み込み時に強制的にトップにスクロール
+      if (!window.location.search.includes('term=')) {
+        window.scrollTo(0, 0);
+        // URLからハッシュを削除
+        if (window.location.hash) {
+          history.replaceState(null, null, window.location.pathname + window.location.search);
+        }
+        // 確実にトップに戻すため、少し遅延させて再度実行
+        setTimeout(() => window.scrollTo(0, 0), 0);
+        setTimeout(() => window.scrollTo(0, 0), 100);
+      }
+
       const select = document.getElementById("alphabetSelect");
       const tabsContainer = document.querySelector('#alphabetNav nav');
       const sections = document.querySelectorAll('.wrapper > div[id]');
@@ -179,11 +196,12 @@
         }
       }
 
-      const initialActiveLetter = "{{ $activeLetter }}";
-      if (initialActiveLetter) {
-        setActiveTab(initialActiveLetter);
-        document.getElementById(initialActiveLetter)?.scrollIntoView({ behavior: "auto", block: "start" });
-      }
+      // ページタイトルに基づく自動スクロール（Gへのジャンプ）を無効化
+      // const initialActiveLetter = "{{ $activeLetter }}";
+      // if (initialActiveLetter) {
+      //   setActiveTab(initialActiveLetter);
+      //   document.getElementById(initialActiveLetter)?.scrollIntoView({ behavior: "auto", block: "start" });
+      // }
 
       if (select) {
         select.addEventListener("change", function() {
@@ -198,7 +216,7 @@
           const targetTab = e.target.closest('a');
           if (targetTab && !targetTab.classList.contains('pointer-events-none')) {
             e.preventDefault();
-            const letter = targetTab.getAttribute('href').replace('#', '');
+            const letter = targetTab.dataset.letter;
             setActiveTab(letter);
             const section = document.getElementById(letter);
             if (section) {

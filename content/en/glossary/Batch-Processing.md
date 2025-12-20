@@ -3,7 +3,7 @@ title: "Batch Processing"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "batch-processing"
-description: "Batch processing is a data approach where large volumes of data are collected and processed in groups over set periods. Ideal for high-throughput AI, analytics, and business operations."
+description: "A method of processing large amounts of data in groups at scheduled times, rather than one piece at a time, commonly used for payroll, reports, and AI tasks that don't need instant results."
 keywords: ["batch processing", "stream processing", "AI infrastructure", "data processing", "ETL"]
 category: "AI Infrastructure"
 type: "glossary"

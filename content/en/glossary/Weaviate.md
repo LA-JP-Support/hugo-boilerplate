@@ -3,7 +3,7 @@ title: "Weaviate"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "weaviate"
-description: "Weaviate is an open-source, cloud-native vector database storing objects & high-dimensional embeddings. It enables semantic, hybrid search & large-scale AI/ML applications."
+description: "An open-source database designed to store and search AI-generated data representations, enabling smart search and recommendation features for AI applications."
 keywords: ["Weaviate", "vector database", "semantic search", "vector embeddings", "hybrid search"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

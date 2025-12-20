@@ -3,7 +3,7 @@ title: Data Encryption
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: data-encryption
-description: Explore data encryption, its types (symmetric, asymmetric), how it works with keys and algorithms, and its role in cybersecurity for protecting sensitive information.
+description: "Data encryption is the process of converting readable information into unreadable code using mathematical algorithms, so only authorized people with the correct key can access it."
 keywords:
 - data encryption
 - encryption algorithms

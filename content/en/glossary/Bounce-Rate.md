@@ -3,7 +3,7 @@ title: "Bounce Rate"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "bounce-rate"
-description: "Understand bounce rate, a key web analytics metric. Learn how it's calculated, its impact on user engagement & SEO, and strategies to reduce high bounce rates for better site performance."
+description: "Bounce rate is the percentage of visitors who leave your website after viewing just one page without taking any action. It helps measure how engaging your content is and whether visitors want to explore more."
 keywords: ["bounce rate", "web analytics", "user engagement", "SEO", "Google Analytics 4"]
 category: "Analytics & Content Effectiveness"
 type: "glossary"

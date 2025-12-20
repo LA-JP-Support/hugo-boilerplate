@@ -1,7 +1,7 @@
 ---
 title: "Minimap"
 translationKey: "minimap"
-description: "A minimap is a compact visual overview map for navigating large, complex flows, like AI chatbot conversations or code. It helps users orient themselves and manage intricate diagrams."
+description: "A small overview map positioned at the screen's edge that shows a bird's-eye view of large, complex content, helping users quickly navigate and stay oriented without losing context."
 keywords: ["minimap", "AI chatbot", "automation platforms", "flow navigation", "UI/UX"]
 category: "AI Chatbot & Automation"
 type: "glossary"

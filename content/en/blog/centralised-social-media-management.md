@@ -9,14 +9,14 @@ image: "/images/blog/centralised-social-media-management.png"
 ---
 ## Challenges of Decentralized Social Media Management
 
-When companies operate multiple social media accounts, the management workload increases for each {{< tooltip text="Social media services such as Facebook, Twitter, and Instagram" >}}platform{{< /tooltip >}}. As a result, customer responses may be delayed, important messages may be overlooked, and duplicate posts of the same content may occur.
+When companies operate multiple social media accounts, the management workload increases for each [platform](/en/glossary/platform/ "Social media services such as Facebook, Twitter, and Instagram"). As a result, customer responses may be delayed, important messages may be overlooked, and duplicate posts of the same content may occur.
 
 When operations are left to individual staff members or managed manually, the risk of missing customer inquiries and feedback increases. Poor information communication can potentially have negative effects on the company's brand image.
 
 > According to domestic and international surveys, delayed customer service on social media leads to decreased customer satisfaction and increased customer churn to competitors.
 
 ## Overview of Centralized Social Media Management
-{{< tooltip text="Managing messages, comments, and response history from multiple social media platforms in a single system" >}}Centralized social media management{{< /tooltip >}} is a system that consolidates and manages messages, comments, and response history exchanged across multiple social media platforms in one unified system.
+[Centralized social media management](/en/glossary/Centralized-social-media-management/ "Managing messages, comments, and response history from multiple social media platforms in a single system") is a system that consolidates and manages messages, comments, and response history exchanged across multiple social media platforms in one unified system.
 
 ### Implementation Benefits
 
@@ -31,7 +31,7 @@ Implementing this approach provides the following advantages:
 
 ## Background of Corporate Demand for Centralized Social Media Management
 
-As {{< tooltip text="Using computers and the internet to make work and life more convenient" >}}digitalization{{< /tooltip >}} advances and social media usage expands, the channels through which companies and customers interact have diversified.
+As [digitalization](/en/glossary/digitalization/ "Using computers and the internet to make work and life more convenient") advances and social media usage expands, the channels through which companies and customers interact have diversified.
 
 Many progressive companies are achieving efficient operations and rapid information sharing by consolidating all communication channels including social media, thereby differentiating themselves from competitors.
 
@@ -41,19 +41,19 @@ Many progressive companies are achieving efficient operations and rapid informat
 
 ### Data Integration through API Connectivity
 
-Modern management tools (such as those utilized in SmartWeb's construction services) connect directly with major social media platforms like Twitter, Facebook, and Instagram using official {{< tooltip text="A mechanism that allows different software systems to automatically exchange information" >}}APIs{{< /tooltip >}}.
+Modern management tools (such as those utilized in SmartWeb's construction services) connect directly with major social media platforms like Twitter, Facebook, and Instagram using official [APIs](/en/glossary/APIs/ "A mechanism that allows different software systems to automatically exchange information").
 
-Through {{< tooltip text="Short for 'Application Programming Interface,' it serves as a gateway for applications to collaborate with each other" >}}APIs{{< /tooltip >}}, messages, comments, and post data from each platform are received in real-time and securely consolidated for management.
+Through [APIs](/en/glossary/APIs/ "Short for 'Application Programming Interface,' it serves as a gateway for applications to collaborate with each other"), messages, comments, and post data from each platform are received in real-time and securely consolidated for management.
 
 ### Ticket System and Automated Processing
 
-Social media interactions collected are automatically created and managed as {{< tooltip text="Numbered management records for handling customer inquiries and requests" >}}tickets{{< /tooltip >}}.
+Social media interactions collected are automatically created and managed as [tickets](/en/glossary/ticket/ "Numbered management records for handling customer inquiries and requests").
 
-A pre-configured {{< tooltip text="A system that automatically makes decisions and processes based on predetermined conditions" >}}rules engine{{< /tooltip >}} analyzes message content, priority levels, and included keywords to automatically assign and categorize them to appropriate staff members. Real-time notification functionality is also included.
+A pre-configured [rules engine](/en/glossary/rules-engine/ "A system that automatically makes decisions and processes based on predetermined conditions") analyzes message content, priority levels, and included keywords to automatically assign and categorize them to appropriate staff members. Real-time notification functionality is also included.
 
 ### Cross-Platform Management through Dashboard
 
-The {{< tooltip text="A management interface that displays multiple pieces of information consolidated on a single screen" >}}dashboard{{< /tooltip >}} provides an at-a-glance view of message history by social media platform and overall response status.
+The [dashboard](/en/glossary/dashboard/ "A management interface that displays multiple pieces of information consolidated on a single screen") provides an at-a-glance view of message history by social media platform and overall response status.
 
 #### Key Features:
 
@@ -66,7 +66,7 @@ These functions enable quick information retrieval and response, and efficient h
 
 ### Flexible External Integration and Security
 
-Many management tools can integrate with other systems such as {{< tooltip text="Customer Relationship Management systems" >}}CRM{{< /tooltip >}}, external databases, and analytics tools through API utilization.
+Many management tools can integrate with other systems such as [CRM](/en/glossary/CRM/ "Customer Relationship Management systems"), external databases, and analytics tools through API utilization.
 
 #### Security Measures:
 
@@ -133,10 +133,10 @@ Before implementing management tools, first clarify your company's system requir
 #### Checklist Items:
 
 - Prepare recommended browsers (Google Chrome, Microsoft Edge, etc.)
-- Confirm stable {{< tooltip text="Internet connection environment" >}}network environment{{< /tooltip >}}
+- Confirm stable [network environment](/en/glossary/network-environment/ "Internet connection environment")
 - Verify internal operational structure
 - Confirm social media account administrators
-- Review {{< tooltip text="Internal rules regarding information security" >}}security policies{{< /tooltip >}}
+- Review [security policies](/en/glossary/security-policies/ "Internal rules regarding information security")
 
 These preparations help prevent confusion and troubles after implementation.
 
@@ -151,7 +151,7 @@ Create a new account on the official website of your chosen management tool.
 After registration completion, configure the following from the management interface:
 
 - Input basic information
-- Set {{< tooltip text="Roles and permissions such as administrator, staff member, viewer, etc." >}}user roles{{< /tooltip >}}
+- Set [user roles](/en/glossary/user-roles/ "Roles and permissions such as administrator, staff member, viewer, etc.")
 
 Proper user role configuration allows management of access scope and operational content according to respective permissions, also reducing information leakage risks.
 
@@ -159,7 +159,7 @@ Proper user role configuration allows management of access scope and operational
 
 #### Step 1: Access Integration Settings
 
-Navigate to the "Channel Integration" or "{{< tooltip text="Integrating and connecting different systems" >}}Integration{{< /tooltip >}}" section in the management interface.
+Navigate to the "Channel Integration" or "[Integration](/en/glossary/Integration/ "Integrating and connecting different systems")" section in the management interface.
 
 #### Step 2: Social Media Selection
 
@@ -172,7 +172,7 @@ Select the social media platforms you want to integrate:
 
 #### Step 3: Authentication Setup
 
-Enter {{< tooltip text="Authentication information required to connect different systems" >}}API keys{{< /tooltip >}} and authentication credentials for each social media platform to connect with the management tool.
+Enter [API keys](/en/glossary/API-keys/ "Authentication information required to connect different systems") and authentication credentials for each social media platform to connect with the management tool.
 
 #### Step 4: Permission Configuration
 
@@ -191,7 +191,7 @@ After completing integration, configure the following items:
 - Response templates
 - Auto-response functionality
 - Team-based task assignment
-- Response progress {{< tooltip text="Making information and situations easily visible and understandable" >}}visualization{{< /tooltip >}}
+- Response progress [visualization](/en/glossary/visualization/ "Making information and situations easily visible and understandable")
 
 These settings enable efficient inquiry handling and standardized response quality.
 
@@ -200,7 +200,7 @@ These settings enable efficient inquiry handling and standardized response quali
 #### Regular Tasks:
 
 - Regular system updates
-- Operational status {{< tooltip text="Continuously monitoring system and business conditions" >}}monitoring{{< /tooltip >}}
+- Operational status [monitoring](/en/glossary/monitoring/ "Continuously monitoring system and business conditions")
 - Adding new social media platforms
 - Staff training
 - Operational rule updates
@@ -278,7 +278,7 @@ Some tools are specifically developed for platforms like X (formerly Twitter) an
 - Campaign management
 - Bulk post management
 - Analytics capabilities
-- Approval {{< tooltip text="A system that defines business processes and approval procedures" >}}workflows{{< /tooltip >}}
+- Approval [workflows](/en/glossary/Workflow/ "A system that defines business processes and approval procedures")
 - CSV bulk posting
 - Scheduled posting
 
@@ -314,7 +314,7 @@ These also offer powerful customer service history and data analytics capabiliti
 
 **Cost Effectiveness**
 
-- High {{< tooltip text="Cost-performance ratio" >}}cost-performance{{< /tooltip >}}
+- High [cost-performance](/en/glossary/cost-performance/ "Cost-performance ratio")
 - Wide coverage from SMEs to large enterprises
 
 #### Comparison Points:
@@ -350,13 +350,13 @@ These also offer powerful customer service history and data analytics capabiliti
 
 ### Deepening Efficiency Through AI and Automation Technology
 
-From 2025 onwards, the centralized social media management field is experiencing advancement in {{< tooltip text="Artificial Intelligence" >}}AI{{< /tooltip >}} utilization and automation.
+From 2025 onwards, the centralized social media management field is experiencing advancement in [AI](/en/glossary/artificial-intelligence/ "Artificial Intelligence") utilization and automation.
 
 #### Latest Trends:
 
 **Multi-AI Collaboration Systems**
 
-Research shows increasing cases where multiple {{< tooltip text="AI programs that automatically perform specific tasks" >}}AI agents{{< /tooltip >}} collaborate to automatically handle the following tasks:
+Research shows increasing cases where multiple [AI agents](/en/glossary/AI-agents/ "AI programs that automatically perform specific tasks") collaborate to automatically handle the following tasks:
 
 - Social media customer support
 - Data analysis
@@ -366,7 +366,7 @@ Research shows increasing cases where multiple {{< tooltip text="AI programs tha
 
 The following technologies will further improve response quality and operational efficiency:
 
-- {{< tooltip text="Automated response systems utilizing artificial intelligence" >}}AI chatbots{{< /tooltip >}}
+- [AI chatbots](/en/glossary/AI-chatbot/ "Automated response systems utilizing artificial intelligence")
 - Auto-response functionality
 - [Sentiment analysis](/en/glossary/sentiment-analysis/) capabilities
 

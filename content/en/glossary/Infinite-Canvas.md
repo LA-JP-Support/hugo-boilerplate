@@ -1,7 +1,7 @@
 ---
 title: "Infinite Canvas"
 translationKey: "infinite-canvas"
-description: "An infinite canvas is a digital workspace that expands indefinitely, allowing users to map complex ideas, data, and visual elements without fixed boundaries. Ideal for brainstorming, design, and automation."
+description: "An infinite canvas is a digital workspace that expands in any direction without size limits, letting you freely arrange ideas, diagrams, and data as they grow."
 keywords: ["Infinite Canvas", "Digital Workspace", "Node Graph Mapping", "Collaboration Tools", "Data Visualization"]
 category: "AI Chatbot & Automation"
 type: "glossary"

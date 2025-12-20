@@ -1,7 +1,7 @@
 ---
 title: "Feedback Buttons (Thumbs Up/Down)"
 translationKey: "feedback-buttons-thumbs-up-down"
-description: "Learn about feedback buttons (thumbs up/down) for AI chatbots and digital content. Discover their benefits, best practices, and how they drive continuous improvement."
+description: "Simple one-click buttons (👍👎) that let users quickly rate whether content or AI responses are helpful, helping services improve based on real feedback."
 keywords: ["feedback buttons", "thumbs up/down", "AI chatbots", "user feedback", "digital experience"]
 category: "AI Chatbot & Automation"
 type: "glossary"

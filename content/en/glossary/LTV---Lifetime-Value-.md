@@ -3,7 +3,7 @@ title: "LTV (Lifetime Value)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "ltv-lifetime-value"
-description: "Understand Customer Lifetime Value (LTV), a key metric for AI chatbot and automation businesses. Learn its definition, calculation, importance, and strategies to increase LTV for sustainable growth."
+description: "The total profit or revenue a customer generates for your business over their entire relationship with you, used to measure business health and marketing effectiveness."
 keywords: ["LTV", "Customer Lifetime Value", "SaaS", "AI chatbot", "automation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -3,7 +3,7 @@ title: "Multitasking"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "multitasking"
-description: "Multitasking is performing multiple tasks concurrently or in rapid succession. Explore its impact on human productivity, brain health, and how it differs in AI and automation."
+description: "Multitasking is attempting to do multiple tasks at once or switch between them rapidly, though research shows it usually reduces efficiency and work quality rather than boosting productivity."
 keywords: ["multitasking", "task switching", "cognitive load", "productivity", "AI chatbots"]
 category: "AI Chatbot & Automation"
 type: "glossary"
@@ -128,12 +128,12 @@ For an overview of AI multitasking:
 
 ### Common Myths
 
-- **“Multitasking makes you more efficient.”**  
+- **"Multitasking makes you more efficient."**  
   Evidence shows most people complete tasks more slowly and make more errors when multitasking. [APA: Multitasking Myths](https://www.apa.org/monitor/oct01/multitask)
-- **“Some people are ‘natural’ multitaskers.”**  
+- **"Some people are 'natural' multitaskers."**  
   While distractibility and executive function vary, most people perform worse when tested on multitasking.
-- **“Multitasking improves brain health.”**  
-  Engaging in simultaneous attention-heavy tasks does not “exercise” the brain beneficially and may increase cognitive fatigue.
+- **"Multitasking improves brain health."**  
+  Engaging in simultaneous attention-heavy tasks does not "exercise" the brain beneficially and may increase cognitive fatigue.
 
 ### When Multitasking Is Less Harmful
 

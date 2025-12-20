@@ -3,7 +3,7 @@ title: "Technical Debt"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "technical-debt"
-description: "Technical debt is the implied cost of future reworking when choosing short-term solutions over robust approaches, leading to increased maintenance, complexity, and remediation costs in software development and AI systems."
+description: "Technical Debt: The extra time and effort needed to fix problems later when teams choose quick solutions now instead of building things the right way. Like borrowing money, it saves time upfront but costs more in the long run."
 keywords: ["technical debt", "software development", "AI infrastructure", "code quality", "refactoring"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

@@ -1,9 +1,9 @@
 ---
-title: Continuous Learning in AI
+title: Continuous Learning (Continual Learning)
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: continuous-learning
-description: Explore continuous learning in AI, enabling systems to adapt and acquire knowledge incrementally without forgetting. Understand its process, challenges like catastrophic forgetting, and real-world applications.
+description: "An AI system that learns and improves continuously from new data without forgetting previous knowledge, adapting to changing conditions like humans do over time."
 keywords:
 - continuous learning
 - continual learning

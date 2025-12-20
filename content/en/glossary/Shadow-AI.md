@@ -3,7 +3,7 @@ title: Shadow AI
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: shadow
-description: Shadow AI refers to the unsanctioned use of generative AI tools by employees, posing significant risks to data security, compliance, and intellectual property.
+description: "Shadow AI is the unauthorized use of AI tools like ChatGPT by employees without IT approval, creating security and data privacy risks for organizations."
 keywords: ["Shadow AI", "Generative AI", "AI governance", "Data security", "Compliance"]
 category: AI Ethics & Safety Mechanisms
 type: glossary

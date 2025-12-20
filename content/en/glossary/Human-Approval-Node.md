@@ -1,7 +1,7 @@
 ---
 title: "Human Approval Node"
 translationKey: "human-approval-node"
-description: "A workflow step pausing automation for human review and decision-making. Also known as Human-in-the-Loop (HITL), it ensures human oversight in automated or agentic workflows."
+description: "A workflow step that pauses automation so a human can review and approve or reject important decisions before they take effect."
 keywords: ["human approval", "human-in-the-loop", "human oversight", "decision making", "approval workflows"]
 category: "AI Chatbot & Automation"
 type: "glossary"
@@ -48,7 +48,7 @@ Insert approval nodes at decision points where:
 - Actions could cause irreversible change (e.g., deleting user accounts, modifying infrastructure).
 
 **Example:**  
-_"If the expense exceeds the predefined threshold, escalate to human review for approval."_  
+"If the expense exceeds the predefined threshold, escalate to human review for approval."  
 ### Configuration and Setup
 
 **Steps:**

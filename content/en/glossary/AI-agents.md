@@ -3,7 +3,7 @@ title: "AI Agents"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "ai-agents"
-description: "Explore AI agents, autonomous software systems that perceive environments, reason, and act with minimal human intervention, transforming industries through automation and enhanced decision-making."
+description: "Autonomous software that perceives its environment, makes decisions, and takes actions independently to achieve goals with minimal human intervention."
 keywords: ["AI agents", "autonomous systems", "machine learning", "automation", "LLM"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -3,7 +3,7 @@ title: Edge AI
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: edge
-description: Edge AI deploys and executes artificial intelligence algorithms directly on devices at the network's edge, enabling real-time analysis, inference, and automated decision-making locally.
+description: "AI technology that processes data directly on local devices instead of sending it to distant servers, enabling faster and more private decision-making."
 keywords: ["Edge AI", "Edge Computing", "Artificial Intelligence", "IoT", "Machine Learning"]
 category: AI Infrastructure & Deployment
 type: glossary

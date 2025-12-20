@@ -3,7 +3,7 @@ title: "Speculative Decoding"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "speculative-decoding"
-description: "Speculative decoding accelerates LLM inference by using a fast draft model to propose tokens, verified by a larger target model, reducing latency while maintaining output quality."
+description: "A technique that speeds up AI text generation by having a smaller, faster model propose tokens while a larger model verifies them, reducing wait time without sacrificing quality."
 keywords: ["speculative decoding", "LLM inference", "draft model", "target model", "latency reduction"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

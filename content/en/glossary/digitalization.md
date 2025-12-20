@@ -3,7 +3,7 @@ title: "Digitalization"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "digitalization"
-description: "Explore digitalization: its definition, differences from digitization and automation, real-world applications, benefits, challenges, and societal impact in this comprehensive glossary."
+description: "Digitalization is the use of digital technologies to transform how businesses operate, make decisions, and serve customers—going beyond simply converting paper to digital files to fundamentally reimagine work processes and create new value."
 keywords: ["digitalization", "digitization", "digital transformation", "automation", "digital technologies"]
 category: "Technology"
 type: "glossary"

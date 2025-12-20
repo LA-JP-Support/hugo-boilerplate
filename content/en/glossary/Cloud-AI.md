@@ -3,7 +3,7 @@ title: Cloud AI
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: cloud
-description: 'Explore Cloud AI: services and capabilities accessed over the internet using cloud computing infrastructure. Learn how it works, its benefits, use cases, and leading providers.'
+description: "AI services accessed over the internet that help businesses build and use artificial intelligence without expensive hardware or large teams."
 keywords:
 - Cloud AI
 - artificial intelligence

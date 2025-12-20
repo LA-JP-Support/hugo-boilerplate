@@ -1,7 +1,7 @@
 ---
 title: "JSON Path"
 translationKey: "json-path"
-description: "JSON Path is a query syntax for extracting, searching, and manipulating specific values from complex JSON data structures using concise path expressions."
+description: "A query language that lets you quickly find and extract specific data from JSON files, similar to how you'd search through a nested folder structure."
 keywords: ["JSON Path", "JSON data", "query syntax", "data extraction", "API testing"]
 category: "AI Chatbot & Automation"
 type: "glossary"

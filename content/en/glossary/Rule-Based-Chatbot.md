@@ -1,7 +1,7 @@
 ---
 title: Rule-Based Chatbot
 translationKey: rule-based
-description: A rule-based chatbot interacts with users by following predefined rules and scripts, responding to specific keywords or button selections without AI learning.
+description: "A chatbot that responds to users by following pre-programmed rules and scripts, using keyword matching rather than artificial intelligence to provide fixed answers."
 keywords:
 - rule-based chatbot
 - chatbot

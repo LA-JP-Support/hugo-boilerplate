@@ -3,7 +3,7 @@ title: Automation Platform
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: automation-platform
-description: Explore what an automation platform is, how it's used, its types, core features, and key benefits. Learn to select and implement the right solution for your business.
+description: "An automation platform is software that handles repetitive business tasks automatically by connecting different systems and applications, reducing manual work and improving accuracy."
 keywords:
 - automation platform
 - business process automation

@@ -3,7 +3,7 @@ title: "Wizard of Oz Testing (WoZ)"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "wizard-of-oz-testing-woz"
-description: "Wizard of Oz Testing (WoZ) is a user-research method where users interact with a system controlled by a hidden human, simulating AI to test designs cost-effectively."
+description: "A user research method where a hidden human operator controls a system to simulate AI, allowing teams to test designs and gather user feedback before building the actual technology."
 keywords: ["Wizard of Oz Testing", "WoZ testing", "user research", "prototyping", "conversational AI"]
 category: "AI Chatbot & Automation"
 type: "glossary"

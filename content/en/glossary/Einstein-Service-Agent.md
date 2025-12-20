@@ -3,7 +3,7 @@ title: "Einstein Service Agent"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "einstein-service-agent"
-description: "Discover Einstein Service Agent, Salesforce's autonomous AI for customer service. It resolves complex requests, integrates data, and offers 24/7 omnichannel support."
+description: "Einstein Service Agent is Salesforce's AI system that automatically handles customer service requests, resolves issues, and escalates complex problems to human agents 24/7."
 keywords: ["Einstein Service Agent", "Salesforce AI", "Autonomous Agent", "Customer Service Automation", "Agentforce"]
 category: "AI Chatbot & Automation"
 type: "glossary"

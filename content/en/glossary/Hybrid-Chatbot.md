@@ -40,7 +40,7 @@ Hybrid chatbots follow a layered, decision-based workflow:
 
 1. **User Initiates Conversation:** Interaction may begin via website, messaging platform, mobile app, or voice interface.
 2. **Intent Analysis:** The system determines the nature of the query.
-   - If the input matches programmed rules (e.g., “hours,” “return policy”), the rule-based engine responds instantly.
+   - If the input matches programmed rules (e.g., "hours," "return policy"), the rule-based engine responds instantly.
    - If the query is natural language, ambiguous, or complex, the NLP/AI engine analyzes user intent and extracts entities (people, products, dates, etc.).
 3. **Response Generation:**
    - **Scripted:** Direct, rule-based answer for recognized queries.

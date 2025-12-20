@@ -3,7 +3,7 @@ title: Escalation
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: escalation
-description: Learn about escalation in customer support, IT, and AI chatbot contexts. Discover types, triggers, best practices, and how automation streamlines complex issue resolution.
+description: "The process of transferring a difficult or urgent issue to someone with more expertise or authority to solve it effectively. Used in customer support, IT, and AI chatbots to ensure complex problems get proper attention."
 keywords:
 - escalation
 - AI chatbot

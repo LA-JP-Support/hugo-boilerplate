@@ -3,7 +3,7 @@ title: "KV Cache"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "kv-cache"
-description: "KV Cache is an inference-time optimization for Transformer models and LLMs, storing Key and Value tensors to dramatically speed up autoregressive token generation and reduce compute costs."
+description: "A memory storage technique that speeds up AI text generation by reusing previously calculated information instead of recalculating it for each new word."
 keywords: ["KV Cache", "LLMs", "Transformer models", "inference optimization", "token generation"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

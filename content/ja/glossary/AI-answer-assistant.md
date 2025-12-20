@@ -1,8 +1,8 @@
 ---
-title: AI回答アシスタント:詳細ガイド
+title: AI回答アシスタント
 lastmod: '2025-12-19'
 date: '2025-12-19'
-translationKey: ai-answer-assistant-an
+translationKey: ai-answer-assistant
 description: AI回答アシスタントは、自然言語処理(NLP)、機械学習(ML)、大規模言語モデル(LLM)、RAG技術を活用し、複雑なテキストや専門用語を明確化・洗練・解説する高度なAI駆動型ソフトウェアシステムです。
 keywords:
 - AI回答アシスタント
@@ -13,8 +13,8 @@ keywords:
 category: AI Chatbot & Automation
 type: glossary
 draft: false
-e-title: 'AI Answer Assistant: An In-Depth'
-term: エーアイかいとうアシスタント:しょうさいガイド
+e-title: 'AI Answer Assistant'
+term: エーアイかいとうアシスタント
 url: "/ja/glossary/AI-answer-assistant/"
 
 ---

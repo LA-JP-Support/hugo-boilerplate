@@ -3,7 +3,7 @@ title: "Typing Indicators"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "typing-indicators"
-description: "Typing indicators are visual cues in chat apps showing when someone is composing a message. They enhance user engagement, reduce uncertainty, and improve real-time communication."
+description: "Typing indicators are animated visual cues (like three dots) in chat apps that show when someone is composing a message, creating a sense of real-time conversation and keeping users informed."
 keywords: ["typing indicators", "chat applications", "real-time communication", "AI chatbots", "user engagement"]
 category: "AI Chatbot & Automation"
 type: "glossary"

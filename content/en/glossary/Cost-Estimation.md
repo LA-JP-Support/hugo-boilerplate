@@ -1,7 +1,7 @@
 ---
 title: Cost Estimation
 translationKey: cost-estimation
-description: Cost estimation in AI chatbot and automation predicts resource consumption and financial outlay for deploying conversational AI solutions, enabling budgeting and optimization.
+description: "Cost estimation is a method to predict how much money and computing resources you'll need to run an AI chatbot, helping you plan budgets and avoid unexpected expenses."
 keywords:
 - Cost Estimation
 - AI Chatbot

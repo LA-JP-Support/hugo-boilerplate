@@ -1,7 +1,7 @@
 ---
 title: "N-Gram"
 translationKey: "n-gram"
-description: "An N-gram is a contiguous sequence of n items (words, characters, or symbols) from text or speech, fundamental in NLP for language modeling and text analysis."
+description: "An N-gram is a sequence of consecutive words or characters used by computers to predict the next word you might type or to understand text patterns."
 keywords: ["N-gram", "Natural Language Processing", "Language Modeling", "Text Analysis", "Speech Recognition"]
 category: "AI Chatbot & Automation"
 type: "glossary"

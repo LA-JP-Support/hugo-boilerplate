@@ -1,7 +1,7 @@
 ---
 title: "Entity Linking"
 translationKey: "entity-linking"
-description: "Entity linking connects extracted entities from text to unique entries in a knowledge base, resolving ambiguities and enabling structured data for AI, search, and recommendations."
+description: "Entity linking identifies people, places, and things mentioned in text and connects them to the correct entry in a knowledge base, helping AI understand what words actually mean in context."
 keywords: ["entity linking", "knowledge base", "named entity recognition", "knowledge graph", "natural language processing"]
 category: "AI Chatbot & Automation"
 type: "glossary"

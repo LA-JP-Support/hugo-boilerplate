@@ -3,7 +3,7 @@ title: "Virtual Assistant"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "virtual-assistant"
-description: "A virtual assistant (VA) is a remote service provider, human or AI, offering administrative, technical, creative, or industry-specific support to businesses and individuals."
+description: "A remote professional or AI agent who handles administrative, technical, or creative tasks for businesses and individuals from outside their office. Virtual assistants offer flexible, cost-effective support without requiring full-time employment."
 keywords: ["virtual assistant", "AI virtual assistant", "remote work", "outsourcing", "administrative support"]
 category: "AI Chatbot & Automation"
 type: "glossary"

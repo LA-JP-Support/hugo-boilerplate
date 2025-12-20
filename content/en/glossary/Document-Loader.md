@@ -1,7 +1,7 @@
 ---
 title: "Document Loader"
 translationKey: "document-loader"
-description: "A Document Loader is a software module that automates the ingestion and transformation of raw data into structured Document objects for AI tasks like LLM pipelines and vector store indexing."
+description: "A software tool that automatically converts various data sources—like PDFs, websites, and databases—into standardized formats that AI systems can easily process."
 keywords: ["Document Loader", "AI pipelines", "LLM", "data ingestion", "LangChain"]
 category: "AI Chatbot & Automation"
 type: "glossary"

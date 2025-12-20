@@ -2,7 +2,7 @@
 title: "Botpress"
 lastmod: 2025-12-18
 translationKey: "botpress"
-description: "Botpress is a developer-friendly platform for building AI chatbots and conversational agents with a visual flow editor, advanced AI, and LLM integration."
+description: "A platform for building AI chatbots using a visual drag-and-drop editor, enabling businesses to automate customer conversations without extensive coding."
 keywords: ["Botpress", "AI chatbot", "LLM", "conversational AI", "visual flow editor"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -1,8 +1,8 @@
 ---
-title: 自然言語検索(NLS):詳細ガイド
+title: 自然言語検索(NLS)
 lastmod: '2025-12-19'
 date: '2025-12-19'
-translationKey: natural-language-search-nls-an
+translationKey: natural-language-search-nls
 description: 自然言語検索(NLS)は、ユーザーが会話形式の言語を使用してシステムに問い合わせを行うことを可能にします。この詳細な用語集では、NLSの仕組み、メリット、実際の応用例について解説します。
 keywords:
 - 自然言語検索

@@ -3,7 +3,7 @@ title: "API Integration"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "api-integration"
-description: "API integration connects software applications using APIs to enable automatic data exchange, trigger actions, and coordinate workflows for seamless business processes."
+description: "A system that automatically connects different software applications so they can share data and work together seamlessly."
 keywords: ["API integration", "API", "data exchange", "automation", "integration platforms"]
 category: "AI Chatbot & Automation"
 type: "glossary"

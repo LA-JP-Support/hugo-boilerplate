@@ -3,7 +3,7 @@ title: "Deep Learning"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "deep-learning"
-description: "Deep learning is an advanced AI branch using multi-layered neural networks to learn complex patterns from data. Essential for image recognition, NLP, and generative AI."
+description: "A machine learning technology that uses layered artificial networks inspired by the human brain to automatically learn patterns from data, powering applications like image recognition and language understanding."
 keywords: ["deep learning", "neural networks", "machine learning", "artificial intelligence", "AI chatbots"]
 category: "AI Chatbot & Automation"
 type: "glossary"

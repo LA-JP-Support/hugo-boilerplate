@@ -3,7 +3,7 @@ title: GitOps
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: gitops
-description: Explore GitOps, a modern operational framework using Git as the single source of truth for infrastructure and application management. Learn its principles, workflow, benefits, and key tools for consistent, auditable, and automated deployments.
+description: "A modern approach to managing infrastructure and applications by storing all configurations in Git and automatically keeping systems in sync with those definitions."
 keywords: ["GitOps", "DevOps", "Kubernetes", "CI/CD", "Infrastructure as Code"]
 category: AI Infrastructure & Deployment
 type: glossary

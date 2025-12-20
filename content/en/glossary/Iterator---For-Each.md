@@ -1,7 +1,7 @@
 ---
 title: "Iterator / For-Each"
 translationKey: "iterator-for-each"
-description: "An iterator or for-each construct processes items in a list or collection one by one, enabling actions like reading, updating, or automating tasks for each element."
+description: "A tool that processes items in a list or collection one by one, allowing you to perform actions on each item without manually managing the details of how to access them."
 keywords: ["iterator", "for-each loop", "collection processing", "workflow automation", "programming concepts"]
 category: "AI Chatbot & Automation"
 type: "glossary"

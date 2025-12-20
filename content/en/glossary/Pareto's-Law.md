@@ -3,7 +3,7 @@ title: "Pareto's Law (The 80/20 Rule)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "paretos-law-the-80-20-rule"
-description: "Explore Pareto's Law (the 80/20 Rule), an empirical principle stating 80% of outcomes stem from 20% of causes. Learn its applications in business, AI, productivity, and more."
+description: "A principle showing that roughly 80% of results come from just 20% of efforts or causes. It helps prioritize focus on the most impactful actions."
 keywords: ["Pareto's Law", "80/20 Rule", "Pareto Principle", "business optimization", "AI automation"]
 category: "Business"
 type: "glossary"

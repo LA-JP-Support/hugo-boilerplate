@@ -1,9 +1,9 @@
 ---
-title: ルールベースシステム
+title: ルールベース
 lastmod: '2025-12-19'
 date: '2025-12-19'
-translationKey: rule-based-systems
-description: ルールベースシステムとは、明示的な「if-then」ルールを使用してデータを処理し、意思決定を行う計算フレームワークです。AI、ビジネス自動化、コンプライアンスに不可欠であり、透明性と一貫性を提供します。
+translationKey: rule-based
+description: ルールベースとは、明示的な「if-then」ルールを使用してデータを処理し、意思決定を行う計算フレームワークです。AI、ビジネス自動化、コンプライアンスに不可欠であり、透明性と一貫性を提供します。
 keywords:
 - ルールベースシステム
 - エキスパートシステム
@@ -13,8 +13,8 @@ keywords:
 category: Artificial Intelligence
 type: glossary
 draft: false
-e-title: Rule-Based Systems
-term: ルールベースシステム
+e-title: Rule-Based
+term: ルールベース
 url: "/ja/glossary/Rule-based/"
 ---
 ## ルールベースシステムとは?

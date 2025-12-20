@@ -3,7 +3,7 @@ title: "Serverless Computing"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "serverless-computing"
-description: "Serverless computing is a cloud execution model where providers manage infrastructure, allowing developers to build and deploy applications without provisioning or scaling servers."
+description: "A cloud service where you write code without managing servers, paying only for what you use while the provider handles all the technical infrastructure automatically."
 keywords: ["serverless computing", "cloud computing", "FaaS", "BaaS", "AWS Lambda"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

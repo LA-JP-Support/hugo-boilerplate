@@ -3,7 +3,7 @@ title: "Wake Word Technology"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "wake-word-technology"
-description: "Explore wake word technology, the essential component for hands-free voice interaction with AI assistants and smart devices. Learn how wake words work, their use cases, and implementation."
+description: "A specific word or phrase that activates voice-enabled devices like smart speakers, allowing hands-free control without touching them."
 keywords: ["wake word", "voice AI", "hotword", "speech recognition", "AI assistants"]
 category: "AI"
 type: "glossary"

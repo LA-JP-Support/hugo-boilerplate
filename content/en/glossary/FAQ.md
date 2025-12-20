@@ -3,7 +3,7 @@ title: "FAQ (Frequently Asked Questions)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "faq-frequently-asked-questions"
-description: "Explore FAQ (Frequently Asked Questions) as a foundational pillar of digital communication, customer support, and AI chatbots. Learn its definition, purpose, benefits, and implementation."
+description: "A curated list of common questions and answers about a topic, product, or service. FAQs help users find information quickly and reduce repetitive support requests."
 keywords: ["FAQ", "Chatbot", "Customer Support Automation", "Self-service", "Knowledge Base"]
 category: "AI Chatbot & Automation"
 type: "glossary"

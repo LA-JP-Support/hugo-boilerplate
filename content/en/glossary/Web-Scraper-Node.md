@@ -3,7 +3,7 @@ title: "Web Scraper Node"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "web-scraper-node"
-description: "A Web Scraper Node is a modular component for automated workflows, fetching and extracting data from web URLs. Essential for AI chatbots, competitor monitoring, and data aggregation."
+description: "A reusable component that automatically collects and extracts data from websites, enabling chatbots and business systems to access information without direct API connections."
 keywords: ["web scraper node", "web scraping", "data extraction", "automation", "Node.js"]
 category: "AI Chatbot & Automation"
 type: "glossary"

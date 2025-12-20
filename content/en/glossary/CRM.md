@@ -3,7 +3,7 @@ title: "CRM (Customer Relationship Management)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "crm-customer-relationship-management"
-description: "A CRM (Customer Relationship Management) system is software that manages and optimizes customer interactions, centralizing data, automating processes, and providing insights for enhanced engagement and business performance."
+description: "Software that helps businesses organize and track all customer interactions in one place, so teams can better serve customers and boost sales."
 keywords: ["CRM", "Customer Relationship Management", "customer data", "customer interactions", "sales automation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

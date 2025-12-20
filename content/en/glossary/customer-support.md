@@ -3,7 +3,7 @@ title: "Customer Support"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "customer-support"
-description: "Explore customer support operations, its importance, types, channels, and the role of AI and automation. Learn best practices, team structures, and key metrics for effective customer support."
+description: "Customer support is a team and set of tools that help customers solve problems, answer questions, and get the most value from a product or service."
 keywords: ["customer support", "customer service", "AI chatbots", "automation", "omnichannel support"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -11,13 +11,13 @@ categories: ["Business"]
 ---
 ## Centralized Management Through the "Ticket" Approach
 
-A {{< tooltip text="A case file-like system for managing inquiries and cases individually. Similar to medical records at a hospital, it consolidates customer information and response history in one place" >}}ticket system{{< /tooltip >}} in customer support is a mechanism that electronically issues and manages "tickets" for customer inquiries, requests, complaints, and other communications. Unlike scattered response methods such as email and phone calls, this system enables organizations to consolidate and record all inquiry information, response flows, and progress status in one place.
+A [ticket system](/en/glossary/Ticket-System/ "A case file-like system for managing inquiries and cases individually. Similar to medical records at a hospital, it consolidates customer information and response history in one place") in customer support is a mechanism that electronically issues and manages "tickets" for customer inquiries, requests, complaints, and other communications. Unlike scattered response methods such as email and phone calls, this system enables organizations to consolidate and record all inquiry information, response flows, and progress status in one place.
 
 As a support representative, using this system allows you to easily share information with other team members, preventing response gaps and duplications. It also makes it easier to maintain consistent standards across all inquiries.
 
-## A Framework Born from {{< tooltip text="A global standard methodology for efficiently managing computer systems. A proven method adopted by many companies" >}}ITIL, the Best Practice in IT Operations Management{{< /tooltip >}}
+## A Framework Born from [ITIL, the Best Practice in IT Operations Management](/en/glossary/ITIL/ "A global standard methodology for efficiently managing computer systems. A proven method adopted by many companies")
 
-Ticket systems originally emerged from "{{< tooltip text="A global standard methodology for efficiently managing computer systems. A proven method adopted by many companies" >}}ITIL (IT Infrastructure Library){{< /tooltip >}}," a standard for IT operations management. ITIL manages {{< tooltip text="The process of managing inquiries related to service interruptions or troubles" >}}incidents{{< /tooltip >}} and service requests as "tickets," defining workflows including classification, priority setting, and handoffs to appropriate personnel ({{< tooltip text="The process of escalating difficult cases to senior staff or specialized teams" >}}escalation{{< /tooltip >}}) as needed.
+Ticket systems originally emerged from "[ITIL (IT Infrastructure Library)](/en/glossary/ITIL/ "A global standard methodology for efficiently managing computer systems. A proven method adopted by many companies")," a standard for IT operations management. ITIL manages [incidents](/en/glossary/incidents/ "The process of managing inquiries related to service interruptions or troubles") and service requests as "tickets," defining workflows including classification, priority setting, and handoffs to appropriate personnel ([escalation](/en/glossary/escalation/ "The process of escalating difficult cases to senior staff or specialized teams")) as needed.
 
 This methodology has been adopted in customer support and is now used as a standard across many industries, including finance, e-commerce, telecommunications, and manufacturing.
 
@@ -35,7 +35,7 @@ The main functions are summarized below.
 | Notifications & Reminders | Automatic notification and reminder delivery |
 | Escalation Function | Automatic handoff to senior staff based on case content |
 
-With these features, you can consolidate inquiries from various channels—email, phone, chat, web forms—into a single system. You can quickly access customer-specific response statuses and historical records, enabling smooth and efficient handling. Additionally, systematized processes reduce agent burden, standardize work methods, and stabilize response quality (referencing {{< tooltip text="A global standard methodology for efficiently managing computer systems" >}}ITIL{{< /tooltip >}}/{{< tooltip text="Methodologies and concepts for IT service management" >}}ITSM{{< /tooltip >}} best practices).
+With these features, you can consolidate inquiries from various channels—email, phone, chat, web forms—into a single system. You can quickly access customer-specific response statuses and historical records, enabling smooth and efficient handling. Additionally, systematized processes reduce agent burden, standardize work methods, and stabilize response quality (referencing [ITIL](/en/glossary/ITIL/ "A global standard methodology for efficiently managing computer systems")/[ITSM](/en/glossary/ITSM/ "Methodologies and concepts for IT service management") best practices).
 
 Thus, customer support ticket systems serve as a fundamental framework for efficient operations and consistent customer service, widely utilized in support centers as of 2025.
 
@@ -45,13 +45,13 @@ Thus, customer support ticket systems serve as a fundamental framework for effic
 
 Implementing a ticket system streamlines inquiry response operations. By managing all inquiry content in one place, you can monitor progress status in real time, significantly reducing risks of response gaps and duplicate handling. In fact, domestic and international companies have reported that ticket system implementation improved response speed by an average of over 30%.
 
-### Improved {{< tooltip text="A metric that quantifies customer satisfaction. Measures how satisfied customers are with a service" >}}Customer Satisfaction (CSAT){{< /tooltip >}}
+### Improved [Customer Satisfaction (CSAT)](/en/glossary/Customer-Satisfaction---CSAT-/ "A metric that quantifies customer satisfaction. Measures how satisfied customers are with a service")
 
-By recording inquiry content and managing history, you can provide quick and accurate responses. Data shows that {{< tooltip text="A metric that quantifies customer satisfaction. Measures how satisfied customers are with a service" >}}Customer Satisfaction (CSAT: Customer Satisfaction Score){{< /tooltip >}} tends to improve significantly. For example, research indicates that customer support {{< tooltip text="A metric indicating how likely customers are to recommend a service to others" >}}NPS (Net Promoter Score){{< /tooltip >}} increased by an average of 20 points after ticket system implementation.
+By recording inquiry content and managing history, you can provide quick and accurate responses. Data shows that [Customer Satisfaction (CSAT: Customer Satisfaction Score)](/en/glossary/Customer-Satisfaction---CSAT-/ "A metric that quantifies customer satisfaction. Measures how satisfied customers are with a service") tends to improve significantly. For example, research indicates that customer support [NPS (Net Promoter Score)](/en/glossary/NPS---Net-Promoter-Score-/ "A metric indicating how likely customers are to recommend a service to others") increased by an average of 20 points after ticket system implementation.
 
 ### Continuous Operational Improvement Through Data Utilization
 
-Since all response history and inquiry content are recorded as data, analyzing {{< tooltip text="Important numerical indicators for measuring business performance, such as response time, resolution rate, and customer satisfaction" >}}KPIs (Key Performance Indicators){{< /tooltip >}} and issues becomes easier. Using monthly reports and {{< tooltip text="A feature that displays important numbers and data on a single screen, providing at-a-glance visibility of business conditions" >}}dashboards{{< /tooltip >}}, you can quantitatively track metrics like response time and resolution rates. Based on this information, you can continuously review and improve operational flows. Ticket systems facilitate data-driven operational improvements.
+Since all response history and inquiry content are recorded as data, analyzing [KPIs (Key Performance Indicators)](/en/glossary/KPIs---Key-Performance-Indicators-/ "Important numerical indicators for measuring business performance, such as response time, resolution rate, and customer satisfaction") and issues becomes easier. Using monthly reports and [dashboards](/en/glossary/dashboard/ "A feature that displays important numbers and data on a single screen, providing at-a-glance visibility of business conditions"), you can quantitatively track metrics like response time and resolution rates. Based on this information, you can continuously review and improve operational flows. Ticket systems facilitate data-driven operational improvements.
 
 ## Preparation Before Ticket System Implementation
 
@@ -61,7 +61,7 @@ The first step involves specifically organizing the challenges your company's cu
 
 ### Setting System Selection Criteria
 
-To choose the optimal ticket system, establish multiple selection criteria in advance. Key criteria include implementation costs (initial and monthly fees), ease of use ({{< tooltip text="The screens and operation methods users interact with. Directly impacts usability" >}}UI{{< /tooltip >}} and {{< tooltip text="The experience and satisfaction users have when using the system" >}}UX{{< /tooltip >}} clarity), scalability (ability to add features and integrate with other tools), compatibility with existing systems ({{< tooltip text="A system for managing customer relationships. Centralizes customer information management" >}}CRM{{< /tooltip >}} and FAQ system {{< tooltip text="A mechanism for different systems to exchange data" >}}API integration{{< /tooltip >}}), and support structure (Japanese language availability, response speed to inquiries). Prioritizing these criteria based on your company's business scale and future growth makes selection easier.
+To choose the optimal ticket system, establish multiple selection criteria in advance. Key criteria include implementation costs (initial and monthly fees), ease of use ([UI](/en/glossary/UI/ "The screens and operation methods users interact with. Directly impacts usability") and [UX](/en/glossary/User-Experience--UX-/ "The experience and satisfaction users have when using the system") clarity), scalability (ability to add features and integrate with other tools), compatibility with existing systems ([CRM](/en/glossary/CRM/ "A system for managing customer relationships. Centralizes customer information management") and FAQ system [API integration](/en/glossary/API-integration/ "A mechanism for different systems to exchange data")), and support structure (Japanese language availability, response speed to inquiries). Prioritizing these criteria based on your company's business scale and future growth makes selection easier.
 
 ### Establishing Internal Structure and Operational Rules
 
@@ -73,7 +73,7 @@ Creating a checklist of items to verify before implementation prevents omissions
 
 - Understand current inquiry volume and peak response capacity
 - List challenges to improve and prioritize them
-- Clarify required features (auto-assignment, {{< tooltip text="Managing inquiries from multiple communication channels—email, phone, chat, SNS—in a single system" >}}multi-channel support{{< /tooltip >}}, etc.)
+- Clarify required features (auto-assignment, [multi-channel support](/en/glossary/Multi-channel-support/ "Managing inquiries from multiple communication channels—email, phone, chat, SNS—in a single system"), etc.)
 - Create and test assumed operational flows
 - Explain to and obtain agreement from relevant departments and staff
 
@@ -89,7 +89,7 @@ Ticket systems automatically issue a "ticket" when a customer inquiry occurs. In
 
 ### Automated Agent Assignment and Escalation
 
-Created tickets are automatically assigned to optimal agents based on content and priority. Using {{< tooltip text="Technology that enables computers to make human-like judgments and classifications. Enables better automated decisions" >}}AI{{< /tooltip >}}-powered {{< tooltip text="A feature that analyzes inquiry content and automatically distributes to optimal agents" >}}auto-routing functions{{< /tooltip >}} prevents workload concentration on specific agents and response delays. If resolution proves difficult, the "escalation" function automatically transfers cases to senior staff. These automation processes reduce response gaps and duplicate handling of the same cases.
+Created tickets are automatically assigned to optimal agents based on content and priority. Using [AI](/en/glossary/artificial-intelligence/ "Technology that enables computers to make human-like judgments and classifications. Enables better automated decisions")-powered [auto-routing functions](/en/glossary/auto-routing-functions/ "A feature that analyzes inquiry content and automatically distributes to optimal agents") prevents workload concentration on specific agents and response delays. If resolution proves difficult, the "escalation" function automatically transfers cases to senior staff. These automation processes reduce response gaps and duplicate handling of the same cases.
 
 ### Real-time Progress and Response History Management
 
@@ -97,9 +97,9 @@ Ticket progress and response history are updated and shared in real-time within 
 
 ### Multi-channel Support and API Integration
 
-Modern ticket systems centrally manage inquiries received through multiple channels—email, phone, chat, SNS. They flexibly integrate with external tools, existing CRMs, and groupware via {{< tooltip text="A mechanism for different systems to exchange data" >}}APIs{{< /tooltip >}}. This prevents information fragmentation and seamlessly integrates with operational workflows, ensuring consistency and efficiency in customer support.
+Modern ticket systems centrally manage inquiries received through multiple channels—email, phone, chat, SNS. They flexibly integrate with external tools, existing CRMs, and groupware via [APIs](/en/glossary/APIs/ "A mechanism for different systems to exchange data"). This prevents information fragmentation and seamlessly integrates with operational workflows, ensuring consistency and efficiency in customer support.
 
-### {{< tooltip text="Defined business processes or procedures. Rules that determine who does what and when" >}}Workflow{{< /tooltip >}} Automation and Notification Features
+### [Workflow](/en/glossary/Workflow/ "Defined business processes or procedures. Rules that determine who does what and when") Automation and Notification Features
 
 Routine tasks, approval flows, and reminders can also be automated. For example, alerts are automatically sent for tickets with no progress for a certain period. This design prevents human errors. Notifications support multiple methods including email and push notifications, prompting agents to respond promptly.
 
@@ -111,9 +111,9 @@ These ticket system functions transform individual responses into organization-w
 
 ## Implementation Steps and Path to Operational Launch
 
-### 1. Project Initiation & {{< tooltip text="The process of specifically defining required features and conditions for a system. Essential preparatory work before creating blueprints" >}}Requirements Definition{{< /tooltip >}}
+### 1. Project Initiation & [Requirements Definition](/en/glossary/Requirements-Definition/ "The process of specifically defining required features and conditions for a system. Essential preparatory work before creating blueprints")
 
-First, clarify current challenges and implementation objectives. Analyze the current state of customer support and share "which inquiry operations need improvement and how" among all stakeholders. At this stage, define roles for operational members, managers, IT staff, etc. In requirements definition, organize required features in detail (e.g., multi-channel support, escalation, report generation) and {{< tooltip text="Necessary conditions and measures to maintain system security" >}}security requirements{{< /tooltip >}}.
+First, clarify current challenges and implementation objectives. Analyze the current state of customer support and share "which inquiry operations need improvement and how" among all stakeholders. At this stage, define roles for operational members, managers, IT staff, etc. In requirements definition, organize required features in detail (e.g., multi-channel support, escalation, report generation) and [security requirements](/en/glossary/security-requirements/ "Necessary conditions and measures to maintain system security").
 
 ### 2. Vendor Selection & System Configuration
 
@@ -139,9 +139,9 @@ Following these steps ensures solid adoption of the ticket system in operations 
 
 ### AI-powered Automatic Ticket Response and Efficiency
 
-Implementing AI in ticket systems enables {{< tooltip text="An AI-powered automated response system. Can automatically answer customer questions 24/7" >}}AI chatbots{{< /tooltip >}} and auto-response features to immediately handle common inquiries. As of 2025, major AI-equipped ticket systems can automatically classify inquiries, apply tags, and set priorities, significantly reducing manual work for agents. Examples of latest system implementations show AI automating 50-70% of first-response handling, with overall response speed increasing by an average of over 30%.
+Implementing AI in ticket systems enables [AI chatbots](/en/glossary/AI-chatbot/ "An AI-powered automated response system. Can automatically answer customer questions 24/7") and auto-response features to immediately handle common inquiries. As of 2025, major AI-equipped ticket systems can automatically classify inquiries, apply tags, and set priorities, significantly reducing manual work for agents. Examples of latest system implementations show AI automating 50-70% of first-response handling, with overall response speed increasing by an average of over 30%.
 
-### Workflow Automation and {{< tooltip text="A feature where AI automatically analyzes data and creates reports. Provides detailed analysis results without manual effort" >}}AI Reporting{{< /tooltip >}}
+### Workflow Automation and [AI Reporting](/en/glossary/AI-Reporting/ "A feature where AI automatically analyzes data and creates reports. Provides detailed analysis results without manual effort")
 
 AI enables not just automatic responses but also automation of complex workflows. For example, it can automatically assign inquiries to optimal agents based on content and customer information, or automatically perform escalations (handoffs to senior staff). AI reporting functions learn from past response history and trends, automatically analyzing reasons for inquiry increases/decreases and where unresolved tickets stall. This allows managers to identify operational improvement points in real-time and easily adjust KPIs (performance indicators).
 
@@ -151,13 +151,13 @@ To effectively leverage AI, clearly define "which tasks AI and humans handle." W
 
 ### Future Outlook and Practical Implementation Points
 
-From 2025 onward, AI-equipped ticket systems can automatically handle increasingly complex inquiries thanks to advances in {{< tooltip text="Technology that enables computers to understand human language and respond appropriately" >}}[natural language processing](/en/glossary/natural-language-processing--nlp-/) technology{{< /tooltip >}}. 24/7 support becomes possible, along with multilingual support and personalized service using emotion analysis. Going forward, "{{< tooltip text="A model where AI and humans collaborate on customer support, leveraging each other's strengths" >}}hybrid support{{< /tooltip >}}" that seamlessly connects AI and human judgment will become standard, advancing both customer satisfaction and operational efficiency.
+From 2025 onward, AI-equipped ticket systems can automatically handle increasingly complex inquiries thanks to advances in {{< tooltip text="Technology that enables computers to understand human language and respond appropriately" >}}[natural language processing](/en/glossary/natural-language-processing--nlp-/) technology{{< /tooltip >}}. 24/7 support becomes possible, along with multilingual support and personalized service using emotion analysis. Going forward, "[hybrid support](/en/glossary/hybrid-support/ "A model where AI and humans collaborate on customer support, leveraging each other's strengths")" that seamlessly connects AI and human judgment will become standard, advancing both customer satisfaction and operational efficiency.
 
 ## Absolutely Essential Best Practices for Ticket System Operations
 
-### Systematic Construction and Utilization of {{< tooltip text="A database compiling past inquiries and responses. A mechanism for accumulating and sharing internal knowledge" >}}Knowledge Base{{< /tooltip >}}
+### Systematic Construction and Utilization of [Knowledge Base](/en/glossary/knowledge-base/ "A database compiling past inquiries and responses. A mechanism for accumulating and sharing internal knowledge")
 
-A knowledge base is a system that consolidates past inquiries and response methods for searchable storage. A well-organized knowledge base enables agents to resolve issues independently and speeds up initial responses, reducing concerns about response content depending on specific individuals. In fact, research shows that companies using {{< tooltip text="Frequently Asked Questions and their answers. Supports customer self-service" >}}FAQs{{< /tooltip >}} and knowledge databases reduced inquiry response time by an average of 25-40%. Regularly updating knowledge base content with operational feedback and new information is essential.
+A knowledge base is a system that consolidates past inquiries and response methods for searchable storage. A well-organized knowledge base enables agents to resolve issues independently and speeds up initial responses, reducing concerns about response content depending on specific individuals. In fact, research shows that companies using [FAQs](/en/glossary/FAQ/ "Frequently Asked Questions and their answers. Supports customer self-service") and knowledge databases reduced inquiry response time by an average of 25-40%. Regularly updating knowledge base content with operational feedback and new information is essential.
 
 ### Documentation and Thorough Implementation of Operational Rules and Guidelines
 

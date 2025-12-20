@@ -1,7 +1,7 @@
 ---
 title: "Cron Schedule"
 translationKey: "cron-schedule"
-description: "A cron schedule is a time-based trigger for automated execution of tasks using a cron expression. Foundational in Unix, Linux, cloud, DevOps, and AI automation for reliable task automation."
+description: "A cron schedule is a programmable calendar that automatically runs tasks at specific times, eliminating the need for manual execution and reducing errors."
 keywords: ["cron schedule", "cron expression", "task automation", "crontab", "Unix Linux scheduling"]
 category: "AI Chatbot & Automation"
 type: "glossary"

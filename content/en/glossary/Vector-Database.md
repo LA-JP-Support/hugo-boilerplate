@@ -3,7 +3,7 @@ title: 'Vector Database'
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: vector-database
-description: A vector database is a specialized system for storing, indexing, and querying high-dimensional vector embeddings, enabling efficient similarity search and powering modern AI applications like RAG.
+description: "A specialized database that stores AI-generated numerical representations of data and finds similar items by meaning rather than exact matches, enabling smarter search and AI applications."
 keywords: ["vector database", "vector embeddings", "similarity search", "approximate nearest neighbor", "AI workflows"]
 category: AI Infrastructure & Deployment
 type: glossary

@@ -2,7 +2,7 @@
 title: "Canonical Form"
 lastmod: 2025-12-18
 translationKey: "canonical-form"
-description: "Canonical form transforms data into a single, standardized representation for consistency, processing, and comparison, crucial for AI chatbots, NLP, and automation."
+description: "A standardized format that converts different versions of the same information into one consistent form, making it easier for AI systems to understand and process user input accurately."
 keywords: ["canonical form", "data normalization", "AI chatbots", "intent recognition", "unique representation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

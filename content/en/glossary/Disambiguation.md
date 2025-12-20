@@ -1,7 +1,7 @@
 ---
 title: "Disambiguation"
 translationKey: "disambiguation"
-description: "Disambiguation clarifies user intent in AI chatbots when input has multiple meanings, ensuring accurate interpretation by asking for clarification or presenting options."
+description: "A technique that helps AI chatbots understand what users really mean when their message could have multiple interpretations, by asking clarifying questions."
 keywords: ["disambiguation", "AI chatbots", "user intent", "conversational AI", "natural language understanding"]
 category: "AI Chatbot & Automation"
 type: "glossary"

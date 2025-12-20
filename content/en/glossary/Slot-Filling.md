@@ -1,7 +1,7 @@
 ---
 title: Slot Filling
 translationKey: slot-filling-the-definitive-glossary-for-conversational
-description: Slot filling extracts specific parameters from user queries to complete tasks in conversational AI. Essential for gathering data, enabling natural interaction, and ensuring task completion.
+description: "A conversational AI technique that extracts required information from user messages to complete tasks, such as booking flights or ordering food. It gathers missing details through natural conversation until all necessary information is collected."
 keywords:
 - Slot Filling
 - Conversational AI

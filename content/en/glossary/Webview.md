@@ -3,7 +3,7 @@ title: "Webview"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "webview"
-description: "Discover Webview, an embedded browser window displaying web content like forms, product catalogs, and payment interfaces directly within chatbots and mobile apps for a seamless user experience."
+description: "A browser window embedded within an app or chatbot that displays web content like forms and payment pages without leaving the application."
 keywords: ["webview", "chatbot", "mobile app", "interactive content", "user experience"]
 category: "AI Chatbot & Automation"
 type: "glossary"

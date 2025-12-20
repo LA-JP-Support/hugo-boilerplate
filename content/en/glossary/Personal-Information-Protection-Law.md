@@ -3,7 +3,7 @@ title: "Personal Information Protection Law (China)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "personal-information-protection-law---china--"
-description: "The Personal Information Protection Law (PIPL) is China's comprehensive data protection law, regulating personal information processing, individual rights, and organizational requirements."
+description: "China's data protection law that sets rules for how companies collect, use, and protect personal information. It applies to all organizations handling data of people in China, including foreign companies."
 keywords: ["Personal Information Protection Law", "China data protection", "PIPL compliance", "data privacy", "cross-border data transfer"]
 category: "AI Chatbot & Automation"
 type: "glossary"

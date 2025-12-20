@@ -3,7 +3,7 @@ title: "Webhook Fulfillment"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "webhook-fulfillment"
-description: "Webhook fulfillment is the backend process executing in response to an intent in AI chatbots or automated workflows. It fetches/manipulates data via APIs for dynamic, context-aware responses."
+description: "A backend system that automatically processes chatbot requests by fetching real-time data from databases and APIs to deliver personalized, context-aware responses."
 keywords: ["webhook", "fulfillment", "AI chatbots", "automation", "APIs"]
 category: "AI Chatbot & Automation"
 type: "glossary"

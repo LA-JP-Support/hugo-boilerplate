@@ -3,7 +3,7 @@ title: Finite State Machines (FSM)
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: finite-state-machines-fsm
-description: 'Explore Finite State Machines (FSMs): a computational model with states and transitions. Learn about DFSM, NDFSM, Mealy, Moore types, and their applications in software, hardware, AI, and game development.'
+description: "A computational model that represents a system with a fixed number of states and rules for switching between them based on inputs. Used to design predictable behavior in software, games, and devices."
 keywords:
 - finite state machine
 - FSM

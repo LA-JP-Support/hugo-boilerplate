@@ -3,7 +3,7 @@ title: Knowledge Base
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: knowledge-base
-description: 'Explore what a knowledge base is: a centralized, organized collection of information for rapid retrieval and self-service by customers, employees, or automated systems.'
+description: "A centralized digital library that organizes information so customers and employees can find answers quickly without asking for help."
 keywords:
 - knowledge base
 - self-service

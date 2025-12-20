@@ -3,7 +3,7 @@ title: "Chroma"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "chroma"
-description: "Explore Chroma, an open-source vector database for AI-native applications. Learn about its core concepts, architecture, use cases like RAG and semantic search, and compare it with alternatives."
+description: "An open-source database designed to store and search AI-generated numerical data, enabling applications to understand meaning and find similar information quickly."
 keywords: ["Chroma", "vector database", "embeddings", "AI-native applications", "semantic search"]
 category: "General"
 type: "glossary"

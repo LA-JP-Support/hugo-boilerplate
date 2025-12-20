@@ -3,7 +3,7 @@ title: "Access Control"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "access-control"
-description: "Access control is a fundamental security mechanism defining who can view, use, or modify resources. It prevents unauthorized access, protects sensitive data, and ensures appropriate system use."
+description: "Access control is a security system that determines who can access, view, or modify resources like data and applications, protecting against unauthorized use and data breaches."
 keywords: ["access control", "security", "authentication", "authorization", "data protection"]
 category: "Cybersecurity"
 type: "glossary"

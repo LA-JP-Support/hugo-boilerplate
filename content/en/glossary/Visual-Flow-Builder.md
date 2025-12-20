@@ -3,7 +3,7 @@ title: "Visual Flow Builder"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "visual-flow-builder"
-description: "Explore Visual Flow Builders, no-code drag-and-drop interfaces for designing, automating, and managing complex workflows and AI processes without writing code."
+description: "A no-code tool that lets anyone design automated workflows by dragging and connecting process steps on a visual canvas, without writing code."
 keywords: ["Visual Flow Builder", "no-code workflow", "workflow automation", "AI orchestration", "drag-and-drop interface"]
 category: "AI Chatbot & Automation"
 type: "glossary"

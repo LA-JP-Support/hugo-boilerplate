@@ -3,7 +3,7 @@ title: Scenarios (Pre-Prepared Conversation Flows)
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: scenarios-pre-prepared-conversation-flows
-description: Explore scenarios (chatbot scripts) in AI chatbot and automation systems. Learn their definition, structure (blocks, events, actions), creation process, and benefits for businesses.
+description: "A pre-written conversation blueprint that guides how a chatbot responds to users and performs actions to achieve specific business goals."
 keywords:
 - scenario
 - chatbot

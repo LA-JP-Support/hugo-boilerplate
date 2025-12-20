@@ -3,7 +3,7 @@ title: Structured Prompts
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: structured-prompts
-description: 'Explore structured prompts: organized, format-driven AI instructions for reliable, consistent outputs. Learn core components, benefits, frameworks, and enterprise use cases.'
+description: "Clear, organized instructions given to AI systems to get reliable and consistent results, using labeled sections instead of casual conversation."
 keywords:
 - structured prompts
 - prompt engineering

@@ -3,7 +3,7 @@ title: "Honorific Language Support"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "honorific-language-support"
-description: "Explore honorific language support (keigo) in Japanese, covering respectful, humble, and polite forms. Learn its cultural context and application in AI, chatbots, and automation."
+description: "Honorific Language Support is the ability to recognize and use Japanese polite expressions appropriately based on social relationships and situations. AI systems with this capability can automatically choose the right level of formality when speaking to customers, superiors, or peers."
 keywords: ["honorific language support", "Japanese keigo", "AI chatbots", "polite expressions", "automation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

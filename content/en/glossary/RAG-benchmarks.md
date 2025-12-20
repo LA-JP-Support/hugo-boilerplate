@@ -3,7 +3,7 @@ title: "RAG Benchmarks"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "rag-benchmarks"
-description: "RAG benchmarks are structured criteria and metrics used to evaluate Retrieval-Augmented Generation (RAG) systems, assessing both retrieval and generation quality."
+description: "RAG benchmarks are standardized tests that measure how well AI systems retrieve relevant information and generate accurate answers by combining external knowledge sources with language models."
 keywords: ["RAG benchmarks", "Retrieval-Augmented Generation", "LLMs", "AI evaluation", "retrieval quality"]
 category: "AI Chatbot & Automation"
 type: "glossary"

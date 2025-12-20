@@ -3,7 +3,7 @@ title: "Fairness Metrics"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "fairness-metrics"
-description: "Fairness metrics are mathematical and statistical tools used to quantify, evaluate, and monitor bias in AI/ML systems, ensuring equitable treatment across groups."
+description: "Fairness Metrics are tools that measure and identify bias in AI systems to ensure they treat all people fairly, regardless of race, gender, age, or other characteristics."
 keywords: ["fairness metrics", "AI bias", "algorithmic bias", "responsible AI", "machine learning fairness"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

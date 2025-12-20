@@ -1,7 +1,7 @@
 ---
 title: Output Parsing
 translationKey: output-parsing
-description: Output parsing extracts structured data (JSON, Python objects) from AI language model text responses for automation, analytics, and system integration.
+description: "A technique that converts unstructured text from AI models into organized, machine-readable formats like JSON so software can automatically process and use the data."
 keywords:
 - output parsing
 - LLMs

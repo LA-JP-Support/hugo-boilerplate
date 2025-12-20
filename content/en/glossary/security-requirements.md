@@ -3,7 +3,7 @@ title: "Security Requirements"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "security-requirements"
-description: "Learn about security requirements: explicit, actionable conditions systems must fulfill to ensure confidentiality, integrity, and availability (CIA) of information. Essential for protecting digital assets."
+description: "Security Requirements: Specific rules and conditions that systems must follow to protect information from unauthorized access, theft, or damage. They serve as a checklist for building secure software and operations."
 keywords: ["security requirements", "information security", "cybersecurity", "NIST SP 800-53", "ISO 27001"]
 category: "Cybersecurity"
 type: "glossary"

@@ -3,7 +3,7 @@ title: "APIs (Application Programming Interfaces)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "apis-application-programming-interfaces"
-description: "Discover APIs (Application Programming Interfaces): a comprehensive guide covering definitions, how they work, types (REST, SOAP), real-world examples, benefits, security, and best practices."
+description: "A set of rules that lets different software applications communicate and share data with each other, like a waiter taking orders between you and a kitchen."
 keywords: ["API", "Application Programming Interface", "REST API", "API security", "API testing"]
 category: "AI Chatbot & Automation"
 type: "glossary"

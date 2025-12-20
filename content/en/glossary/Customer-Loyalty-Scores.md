@@ -3,7 +3,7 @@ title: "Customer Loyalty Scores"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "customer-loyalty-scores"
-description: "Learn about Customer Loyalty Scores: quantitative/qualitative indicators of customer attachment and advocacy. Understand their importance, usage, and key metrics like NPS, CLV, and retention."
+description: "A numerical rating that measures how likely customers are to keep buying from a company and recommend it to others, based on their purchase behavior and satisfaction."
 keywords: ["Customer Loyalty Scores", "Net Promoter Score", "Customer Lifetime Value", "Customer Retention Rate", "Churn Rate"]
 category: "AI Chatbot & Automation"
 type: "glossary"

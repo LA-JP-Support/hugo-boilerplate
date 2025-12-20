@@ -3,7 +3,7 @@ title: "Fact-Score (FActScore)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "fact-score"
-description: "FActScore is an automatic metric quantifying factual accuracy in AI-generated text. It decomposes outputs into atomic facts, verifying support from reliable external knowledge sources."
+description: "FActScore is an automatic tool that checks whether facts in AI-generated text are accurate by breaking them into small claims and verifying each against reliable sources like Wikipedia."
 keywords: ["FActScore", "factual precision", "AI-generated text", "atomic facts", "LLM evaluation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

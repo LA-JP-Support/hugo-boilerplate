@@ -3,7 +3,7 @@ title: Requirements Definition
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: requirements-definition
-description: 'Explore Requirements Definition: the systematic process for identifying, documenting, and managing system features, behaviors, and constraints in software, AI, and automation projects.'
+description: "The systematic process of identifying and documenting what a system must do, how well it should perform, and what constraints it must follow—creating a clear agreement between all stakeholders about project goals and success criteria."
 keywords:
 - Requirements Definition
 - Software Requirements

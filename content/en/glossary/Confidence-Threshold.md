@@ -2,7 +2,7 @@
 title: "Confidence Threshold"
 lastmod: 2025-12-18
 translationKey: "confidence-threshold"
-description: "The minimum score an AI model needs to accept a prediction as correct, acting as a cutoff for reliability and determining if a prediction is used or reviewed."
+description: "A minimum confidence score that an AI model must reach for its prediction to be trusted and used automatically, with lower scores flagged for human review instead."
 keywords: ["confidence threshold", "AI model", "machine learning", "confidence score", "prediction reliability"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -3,7 +3,7 @@ title: "Data Poisoning"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "data-poisoning"
-description: "Data poisoning is a malicious attack where corrupted data is injected into AI/ML training sets to manipulate model behavior, degrade performance, or embed hidden vulnerabilities."
+description: "Data poisoning is a cyberattack where corrupted data is deliberately mixed into AI training sets to make the AI system behave incorrectly or unreliably."
 keywords: ["data poisoning", "AI security", "machine learning", "adversarial attacks", "model integrity"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

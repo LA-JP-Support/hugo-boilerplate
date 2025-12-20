@@ -1,7 +1,7 @@
 ---
 title: "Loop Node"
 translationKey: "loop-node"
-description: "A Loop Node automates repetitive actions in workflows, repeating tasks until a condition is met, a fixed number of times, or for each item in a collection. Essential for automation."
+description: "A Loop Node repeats tasks automatically in a workflow until a condition is met, a set number of times, or for each item in a list, making it easy to handle repetitive work at scale."
 keywords: ["Loop Node", "Workflow Automation", "AI Chatbot", "RPA", "Iteration"]
 category: "AI Chatbot & Automation"
 type: "glossary"

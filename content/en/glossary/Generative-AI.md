@@ -3,7 +3,7 @@ title: Generative AI
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: generative
-description: Generative AI creates new content like text, images, and code from learned patterns. Explore its definition, models (GANs, VAEs, Transformers), applications, benefits, and challenges.
+description: "Generative AI is artificial intelligence that creates new content like text, images, and code by learning patterns from data, rather than just analyzing existing information."
 keywords:
 - Generative AI
 - AI models

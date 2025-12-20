@@ -3,7 +3,7 @@ title: Bottlenecks
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: bottlenecks-comprehensive-glossary-action-guide-for-business-automation-and-ai-chatbot-operations
-description: Understand bottlenecks in business, automation, and AI chatbot operations. Learn to identify, analyze, and resolve process, resource, and capacity constraints for improved efficiency.
+description: "The slowest step in a process that limits how much work can be completed, like a bottle's narrow neck restricting liquid flow regardless of the bottle's size."
 keywords:
 - bottlenecks
 - business process

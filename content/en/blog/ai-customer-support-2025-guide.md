@@ -11,18 +11,18 @@ image: "/images/blog/ai-customer-support-2025-guide.png"
 
 AI customer support is a system that uses artificial intelligence to automatically respond to customer inquiries. Unlike human agents, AI can provide support 24/7, 365 days a year. Key features include instant responses and multilingual capabilities.
 
-This system utilizes several technologies.{{< tooltip text="Technology that enables AI to understand and respond to human language" >}}[Natural Language Processing (NLP)](/en/glossary/natural-language-processing--nlp-/){{< /tooltip >}} helps AI understand and respond to human language.{{< tooltip text="Mechanism that enables AI to expand and improve its knowledge" >}}Machine Learning{{< /tooltip >}} is a mechanism that allows AI to expand and improve its knowledge. By integrating with databases, AI can reference vast amounts of information. Voice and image recognition capabilities enable handling of non-text inputs.
+This system utilizes several technologies.[[Natural Language Processing (NLP)](/en/glossary/natural-language-processing--nlp-/)](/en/glossary/Natural-Language-Processing--NLP-/ "Technology that enables AI to understand and respond to human language") helps AI understand and respond to human language.[Machine Learning](/en/glossary/machine-learning/ "Mechanism that enables AI to expand and improve its knowledge") is a mechanism that allows AI to expand and improve its knowledge. By integrating with databases, AI can reference vast amounts of information. Voice and image recognition capabilities enable handling of non-text inputs.
 
-AI customer support includes various forms such as automated FAQ responses, AI chatbots, and virtual assistants. For example, tools used in SmartWeb's construction services such as{{< tooltip text="Globally used customer support and helpdesk software" >}}LiveAgent{{< /tooltip >}}and{{< tooltip text="Chatbot platform leveraging cutting-edge generative AI technology" >}}FlowHunt{{< /tooltip >}} are AI chatbots that use company manuals and FAQs as knowledge bases to provide quick and accurate answers to user questions.
+AI customer support includes various forms such as automated FAQ responses, AI chatbots, and virtual assistants. For example, tools used in SmartWeb's construction services such as[LiveAgent](/en/glossary/LiveAgent/ "Globally used customer support and helpdesk software")and[FlowHunt](/en/glossary/FlowHunt/ "Chatbot platform leveraging cutting-edge generative AI technology") are AI chatbots that use company manuals and FAQs as knowledge bases to provide quick and accurate answers to user questions.
 
 ## Evolution of Technology and Its History
 
-The origins of AI customer support trace back to the 1960s chatbot "ELIZA." Subsequently, in the 1990s, rule-based automated response systems became widespread. In the 2010s, advancements in machine learning and{{< tooltip text="Technology enabling AI to perform more complex learning" >}}Deep Learning{{< /tooltip >}} enabled AI to handle more natural conversations and complex questions.
+The origins of AI customer support trace back to the 1960s chatbot "ELIZA." Subsequently, in the 1990s, rule-based automated response systems became widespread. In the 2010s, advancements in machine learning and[Deep Learning](/en/glossary/deep-learning/ "Technology enabling AI to perform more complex learning") enabled AI to handle more natural conversations and complex questions.
 
-From 2016, {{< tooltip text="AI services available via the internet" >}}Cloud AI{{< /tooltip >}} and{{< tooltip text="AI technology that automatically generates text and images" >}}Generative AI{{< /tooltip >}} became available, evolving AI customer support as follows:
+From 2016, [Cloud AI](/en/glossary/Cloud-AI/ "AI services available via the internet") and[Generative AI](/en/glossary/Generative-AI/ "AI technology that automatically generates text and images") became available, evolving AI customer support as follows:
 
-### Proliferation of {{< tooltip text="AI capable of handling multiple formats including text, voice, and images" >}}Multimodal AI{{< /tooltip >}}
-{{< tooltip text="AI capable of handling multiple formats including text, voice, and images" >}}Multimodal AI{{< /tooltip >}} that can analyze various types of information including text, voice, images, and videos is emerging. This allows users to make inquiries not only through words but also using images and voice. For example, in 2025, major airlines and e-commerce companies have adopted this technology.
+### Proliferation of [Multimodal AI](/en/glossary/Multimodal-AI/ "AI capable of handling multiple formats including text, voice, and images")
+[Multimodal AI](/en/glossary/Multimodal-AI/ "AI capable of handling multiple formats including text, voice, and images") that can analyze various types of information including text, voice, images, and videos is emerging. This allows users to make inquiries not only through words but also using images and voice. For example, in 2025, major airlines and e-commerce companies have adopted this technology.
 
 ### Real-time Response and Emotion Analysis
 
@@ -34,7 +34,7 @@ AI can automatically update FAQ and manual content, constantly maintaining optim
 
 ## Global Adoption and Standardization
 
-AI customer support is spreading among companies worldwide, including in Europe, America, and Asia. As of 2025, not only large enterprises but also SMEs and startups are adopting AI support. AI-powered support is used to enhance{{< tooltip text="Abbreviation for Customer Experience, the overall experience customers have with a company" >}}Customer Experience (CX){{< /tooltip >}} and strengthen corporate competitiveness.
+AI customer support is spreading among companies worldwide, including in Europe, America, and Asia. As of 2025, not only large enterprises but also SMEs and startups are adopting AI support. AI-powered support is used to enhance[Customer Experience (CX)](/en/glossary/Customer-Experience---CX-/ "Abbreviation for Customer Experience, the overall experience customers have with a company") and strengthen corporate competitiveness.
 
 Scientific research shows that AI performance doubles every six months. Customers are also increasingly expecting AI-powered support.
 
@@ -42,7 +42,7 @@ Scientific research shows that AI performance doubles every six months. Customer
 
 ### Global Market Size and Growth Rate
 
-In 2025, the AI customer support market is rapidly expanding worldwide. The AI chatbot market size is predicted to reach $10-15 billion. It was estimated at $8.3 billion in 2024, showing significant year-over-year growth.{{< tooltip text="Compound Annual Growth Rate, an indicator of annual growth" >}}CAGR{{< /tooltip >}} is high at 24-30%, with projections to grow to approximately $47 billion by 2029.
+In 2025, the AI customer support market is rapidly expanding worldwide. The AI chatbot market size is predicted to reach $10-15 billion. It was estimated at $8.3 billion in 2024, showing significant year-over-year growth.[CAGR](/en/glossary/CAGR/ "Compound Annual Growth Rate, an indicator of annual growth") is high at 24-30%, with projections to grow to approximately $47 billion by 2029.
 
 While North America and Europe lead this field, adoption is also progressing in emerging regions such as Asia, the Middle East, and South America. Not only large enterprises but also SMEs are widely adopting the technology. Some surveys indicate that by 2025, approximately 60% of companies in developed countries will have adopted customer support AI.
 
@@ -50,9 +50,9 @@ While North America and Europe lead this field, adoption is also progressing in 
 
 Multimodal AI is attracting attention as a major technology trend in 2025. Multimodal AI can analyze not only text but also images, voice, and video together. This transforms FAQ and manual searches from "reading and searching" tasks into "conversational" experiences.
 
-Using generative AI enables deeper understanding of individual user intent and question context, allowing for personalized responses. Real-time AI, emotion analysis, and{{< tooltip text="AI capable of autonomous decision-making and action" >}}Autonomous AI Agents{{< /tooltip >}} are emerging, enabling higher accuracy and more flexible responses than traditional
+Using generative AI enables deeper understanding of individual user intent and question context, allowing for personalized responses. Real-time AI, emotion analysis, and[Autonomous AI Agents](/en/glossary/Autonomous-AI-Agents/ "AI capable of autonomous decision-making and action") are emerging, enabling higher accuracy and more flexible responses than traditional
 
-{{< tooltip text="Systems operating according to predetermined rules" >}}Rule-based{{< /tooltip >}} mechanisms.
+[Rule-based](/en/glossary/Rule-based/ "Systems operating according to predetermined rules") mechanisms.
 
 ### Market Trends and Adoption Expansion
 
@@ -64,15 +64,15 @@ By industry, adoption started early in major companies in e-commerce, aviation, 
 
 ### 1. Salesforce: Autonomous AI with Einstein Service Agent
 
-Salesforce is revolutionizing the traditional chatbot concept with{{< tooltip text="Fully autonomous AI agent capable of understanding and acting on a wide range of service issues without pre-programming" >}}Einstein Service Agent{{< /tooltip >}} announced in 2024. At Iron Mountain, Einstein AI implementation achieved an 80% close rate for generative AI responses, with 76% of AI-generated answers requiring no editing. Additionally, repeat calls decreased by 8%, and 85% of service agents rated AI responses as "extremely useful, contextual, and accurate."
+Salesforce is revolutionizing the traditional chatbot concept with[Einstein Service Agent](/en/glossary/Einstein-Service-Agent/ "Fully autonomous AI agent capable of understanding and acting on a wide range of service issues without pre-programming") announced in 2024. At Iron Mountain, Einstein AI implementation achieved an 80% close rate for generative AI responses, with 76% of AI-generated answers requiring no editing. Additionally, repeat calls decreased by 8%, and 85% of service agents rated AI responses as "extremely useful, contextual, and accurate."
 
 ### 2. Intuit: AI-powered Financial Support Automation
 
-Intuit leveraged Amazon Connect to build an integrated customer contact center. During tax season, they scale from 6,000 to 11,000 agents according to demand, completing deployment in 2 weeks instead of the traditional 6 months. They process 275 million minutes of customer interactions annually, achieving accurate call transcription and [sentiment analysis](/en/glossary/sentiment-analysis/) through{{< tooltip text="Machine learning-powered call analysis service" >}}Contact Lens for Amazon Connect{{< /tooltip >}}.
+Intuit leveraged Amazon Connect to build an integrated customer contact center. During tax season, they scale from 6,000 to 11,000 agents according to demand, completing deployment in 2 weeks instead of the traditional 6 months. They process 275 million minutes of customer interactions annually, achieving accurate call transcription and [sentiment analysis](/en/glossary/sentiment-analysis/) through[Contact Lens for Amazon Connect](/en/glossary/Contact-Lens-for-Amazon-Connect/ "Machine learning-powered call analysis service").
 
 ### 3. Joyful Hands (Vietnam - Beauty & Health Products Startup)
 
-Hanoi-based beauty and health products startup **Joyful Hands** faced challenges handling customer inquiries in Vietnamese, Thai, and English. They implemented **BotStar's multilingual AI chatbot** to establish automated response capabilities in each language. As a result,{{< tooltip text="Percentage of customers who add items to cart but leave without purchasing" >}}Cart Abandonment Rate{{< /tooltip >}} **decreased by 35%**, automated inquiry handling improved **from 55% to 89%**, and positive customer reviews increased regarding response speed and conversation ease.
+Hanoi-based beauty and health products startup **Joyful Hands** faced challenges handling customer inquiries in Vietnamese, Thai, and English. They implemented **BotStar's multilingual AI chatbot** to establish automated response capabilities in each language. As a result,[Cart Abandonment Rate](/en/glossary/Cart-Abandonment-Rate/ "Percentage of customers who add items to cart but leave without purchasing") **decreased by 35%**, automated inquiry handling improved **from 55% to 89%**, and positive customer reviews increased regarding response speed and conversation ease.
 
 ### 4. Bali Bliss Homestay (Indonesia - Small Accommodation Business)
 
@@ -80,7 +80,7 @@ Bali Bliss Homestay, a 5-room guesthouse in Bali, Indonesia, faced challenges wi
 
 ### 5. Procosmet (Italy - Hair Care Products Company)
 
-Italian hair care manufacturer Procosmet faced increasing customer support burdens with order cancellations, changes, and refund requests due to business expansion, resulting in delayed responses and long customer wait times. They implemented Tidio's AI chatbot (Lyro AI agent) in their website live chat to automate and expedite inquiry handling. Results included a 23% sales increase, over 100 new leads per month, chatbot-driven newsletter open rates of 18-22%, single campaign{{< tooltip text="Return on Investment - indicator of profit gained relative to investment" >}}ROI{{< /tooltip >}} exceeding 1000 euros, and customer feedback ratings improving from 3.8 to 4.7 out of 5.
+Italian hair care manufacturer Procosmet faced increasing customer support burdens with order cancellations, changes, and refund requests due to business expansion, resulting in delayed responses and long customer wait times. They implemented Tidio's AI chatbot (Lyro AI agent) in their website live chat to automate and expedite inquiry handling. Results included a 23% sales increase, over 100 new leads per month, chatbot-driven newsletter open rates of 18-22%, single campaign[ROI](/en/glossary/ROI/ "Return on Investment - indicator of profit gained relative to investment") exceeding 1000 euros, and customer feedback ratings improving from 3.8 to 4.7 out of 5.
 
 #### Common Points and Differentiation Factors
 
@@ -90,7 +90,7 @@ Italian hair care manufacturer Procosmet faced increasing customer support burde
 - **Balance of Operational Efficiency and Results:** Beyond mere cost reduction, directly contributing to concrete business outcomes such as sales expansion, booking rate improvement, and lead acquisition increase.
 
 **Differentiation Points:**
-- **Salesforce (USA):** Autonomous AI agents solve complex inquiries with near-human accuracy. Strong in large-scale {{< tooltip text="Customer Relationship Management system" >}}CRM{{< /tooltip >}} environment implementation.
+- **Salesforce (USA):** Autonomous AI agents solve complex inquiries with near-human accuracy. Strong in large-scale [CRM](/en/glossary/CRM/ "Customer Relationship Management system") environment implementation.
 - **Intuit (USA):** Scalable contact center construction for peak seasons, enabling rapid system establishment in industries with high demand fluctuation.
 - **Joyful Hands (Vietnam):** Multilingual support in cross-border EC reduces cart abandonment and improves customer experience. Key point is addressing Southeast Asia's unique multinational market.
 - **Bali Bliss Homestay (Indonesia):** WhatsApp bot implementable even in small accommodation facilities, solving time difference and staff absence challenges.
@@ -100,17 +100,17 @@ These cases demonstrate that **AI customer support can deliver sufficient result
 
 ## Common Success Factors - Strategies for Winning in Global Markets
 
-### {{< tooltip text="Adjusting services to individual preferences and situations" >}}Personalization{{< /tooltip >}} Strategy Centered on Customer Experience (CX)
+### [Personalization](/en/glossary/Personalization/ "Adjusting services to individual preferences and situations") Strategy Centered on Customer Experience (CX)
 
 Globally successful AI customer support companies emphasize not simple automation but individualized responses based on each customer's situation and past usage history. For example, in major companies, AI analyzes past inquiry content and purchase history in real-time to provide optimal responses and suggestions.
 
-International research shows that contextual understanding and individualized responses to enhance customer experience directly contribute to improved customer satisfaction and{{< tooltip text="Total profit a single customer brings to a company" >}}LTV (Lifetime Value){{< /tooltip >}}.
+International research shows that contextual understanding and individualized responses to enhance customer experience directly contribute to improved customer satisfaction and[LTV (Lifetime Value)](/en/glossary/LTV---Lifetime-Value-/ "Total profit a single customer brings to a company").
 
-Some international surveys show that approximately 68% of AI-adopting companies report that "{{< tooltip text="Adjusting services to individual preferences and situations" >}}personalization{{< /tooltip >}} increased repurchase rates."
+Some international surveys show that approximately 68% of AI-adopting companies report that "[personalization](/en/glossary/Personalization/ "Adjusting services to individual preferences and situations") increased repurchase rates."
 
-### {{< tooltip text="System where AI and humans collaborate through role division" >}}Hybrid System{{< /tooltip >}} and AI-Human Operator Collaboration
+### [Hybrid System](/en/glossary/Hybrid-System/ "System where AI and humans collaborate through role division") and AI-Human Operator Collaboration
 
-The "{{< tooltip text="System where AI and humans collaborate through role division" >}}hybrid system{{< /tooltip >}}" is mainstream, where AI handles routine tasks and initial responses quickly and accurately, while human operators handle complex content and emotionally charged inquiries.
+The "[hybrid system](/en/glossary/Hybrid-System/ "System where AI and humans collaborate through role division")" is mainstream, where AI handles routine tasks and initial responses quickly and accurately, while human operators handle complex content and emotionally charged inquiries.
 
 Advanced AI customer support has mechanisms to immediately transfer cases AI cannot handle to humans, maintaining response quality. This achieves both speedy responses and customer satisfaction. Multiple corporate studies report that this division of labor improves operational efficiency and reduces staff turnover.
 
@@ -122,11 +122,11 @@ Multilingual and diverse channel support is essential for competing in global ma
 
 Successful companies regularly update AI knowledge databases and automatically evolve FAQs and manuals. AI search services' intent prediction search and various AI services' generative AI constantly learn customer question patterns and feedback to provide more accurate responses.
 
-Survey results show a scientific trend that "companies with higher AI knowledge update frequency have higher{{< tooltip text="Indicator measuring customer attachment to a company or brand" >}}Customer Loyalty Scores{{< /tooltip >}}."
+Survey results show a scientific trend that "companies with higher AI knowledge update frequency have higher[Customer Loyalty Scores](/en/glossary/Customer-Loyalty-Scores/ "Indicator measuring customer attachment to a company or brand")."
 
 ### Thorough Security and Privacy Considerations
 
-Data management and security systems compliant with international standards are also items commonly implemented by successful companies.{{< tooltip text="EU General Data Protection Regulation" >}}GDPR{{< /tooltip >}} and operational design compliant with various countries' personal information protection laws, access rights management, and {{< tooltip text="Converting information into unreadable form to protect it from third parties" >}}data encryption{{< /tooltip >}} strengthen mechanisms to protect customer trust.
+Data management and security systems compliant with international standards are also items commonly implemented by successful companies.[GDPR](/en/glossary/GDPR/ "EU General Data Protection Regulation") and operational design compliant with various countries' personal information protection laws, access rights management, and [data encryption](/en/glossary/data-encryption/ "Converting information into unreadable form to protect it from third parties") strengthen mechanisms to protect customer trust.
 
 Research shows scientific data that investing in security measures reduced annual customer churn rates by up to 22%.
 
@@ -140,7 +140,7 @@ In Japanese AI customer support, new technologies such as generative AI and mult
 
 ### Unique Challenges Facing Japanese Companies
 
-When using AI customer support in Japan, language characteristics, the culture called "omotenashi" (hospitality), and detailed operational rules have an impact. For example, direct translation-like responses don't easily increase customer satisfaction, and {{< tooltip text="Understanding conversation flow and context" >}}contextual understanding{{< /tooltip >}} and {{< tooltip text="Appropriate use of Japanese polite expressions" >}}honorific language support{{< /tooltip >}} unique to Japanese, as well as emotional responses, are challenges in improving automated response accuracy.
+When using AI customer support in Japan, language characteristics, the culture called "omotenashi" (hospitality), and detailed operational rules have an impact. For example, direct translation-like responses don't easily increase customer satisfaction, and [contextual understanding](/en/glossary/contextual-understanding/ "Understanding conversation flow and context") and [honorific language support](/en/glossary/honorific-language-support/ "Appropriate use of Japanese polite expressions") unique to Japanese, as well as emotional responses, are challenges in improving automated response accuracy.
 
 However, many cases report reduced inquiry response times through AI use, 24/7 support, and multilingual communication capabilities.
 

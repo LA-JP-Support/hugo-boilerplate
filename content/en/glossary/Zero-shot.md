@@ -3,7 +3,7 @@ title: "Zero-Shot Learning (ZSL)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "zero-shot-learning-zsl"
-description: "Zero-shot learning (ZSL) is a machine learning paradigm enabling models to classify instances from unseen classes by leveraging auxiliary information like semantic descriptions or embeddings, reducing the need for extensive labeled data."
+description: "A machine learning technique that recognizes new categories without training examples by using descriptions or attributes to transfer knowledge from familiar categories."
 keywords: ["zero-shot learning", "machine learning", "unseen classes", "auxiliary information", "embedding-based methods"]
 category: "Machine Learning"
 type: "glossary"

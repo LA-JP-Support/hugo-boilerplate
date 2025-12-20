@@ -3,7 +3,7 @@ title: "Model Robustness"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "model-robustness"
-description: "Model robustness is the ability of ML/AI models to maintain reliable performance against unexpected, noisy, incomplete, or maliciously manipulated inputs, ensuring trustworthiness and safety."
+description: "A model's ability to maintain accurate and reliable performance even when facing unexpected, incomplete, or intentionally manipulated data in real-world situations."
 keywords: ["model robustness", "machine learning", "AI safety", "adversarial attacks", "data drift"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

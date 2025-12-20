@@ -1,7 +1,7 @@
 ---
 title: Sentiment Analysis
 translationKey: sentiment-analysis
-description: Sentiment analysis interprets emotional tone in text using NLP, ML, and AI. It converts unstructured data into actionable insights for customer feedback, brand monitoring, and product improvement.
+description: "Sentiment Analysis is AI technology that reads text like customer reviews or social media posts to automatically detect whether people feel positive, negative, or neutral about something, helping businesses understand customer opinions and improve their products."
 keywords:
 - sentiment analysis
 - natural language processing

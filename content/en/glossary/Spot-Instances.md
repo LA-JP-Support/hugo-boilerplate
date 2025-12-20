@@ -3,7 +3,7 @@ title: "Spot Instances"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "spot-instances"
-description: "Spot Instances are discounted cloud compute resources from AWS, Azure, and GCP, ideal for fault-tolerant workloads like batch processing, analytics, and ML training."
+description: "Discounted cloud computing resources that use spare server capacity, often 90% cheaper than regular pricing. They're ideal for flexible tasks like data analysis and machine learning that can handle brief interruptions."
 keywords: ["Spot Instances", "cloud compute", "AWS", "Azure", "GCP"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

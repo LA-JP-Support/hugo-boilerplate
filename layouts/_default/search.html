@@ -466,7 +466,7 @@
                     // Listen for input changes
                     searchInput.addEventListener('input', function() {
                         updateHeroCopy(this.value);
-                        debounce(() => performSearch(this.value), 300);
+                        debounce(() => performSearch(this.value), 150);
                     });
                 });
             </script>

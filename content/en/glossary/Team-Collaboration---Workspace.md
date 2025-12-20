@@ -3,7 +3,7 @@ title: "Team Collaboration / Workspace"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "team-collaboration-workspace"
-description: "Explore Team Collaboration / Workspace, a digital environment for multiple users to work in real-time on shared documents, processes, and automated workflows, often enhanced by AI."
+description: "A digital workspace where team members work together in real-time on shared documents, tasks, and automated processes, often powered by AI to boost productivity."
 keywords: ["team collaboration", "workspace", "AI chatbot", "automation", "real-time editing"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -3,7 +3,7 @@ title: "Neural Networks"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "neural-networks"
-description: "Explore neural networks, computational models mimicking the human brain to learn intricate patterns. Discover their structure, components, types, and applications in AI, ML, and deep learning."
+description: "A computational model inspired by the human brain that learns patterns in data by processing information through interconnected layers, powering AI applications like image recognition and language understanding."
 keywords: ["neural networks", "artificial intelligence", "machine learning", "deep learning", "artificial neurons"]
 category: "AI Chatbot & Automation"
 type: "glossary"
@@ -111,7 +111,7 @@ For more, see [Analytics Vidhya: Optimizers in Neural Network](https://www.analy
 **Example: Email Spam Classification**
 
 1. **Input Layer:**  
-   Extract features from an email, such as the occurrence of keywords (“free”, “win”, “offer”). Represent these as a vector, e.g., [1, 0, 1].
+   Extract features from an email, such as the occurrence of keywords ("free", "win", "offer"). Represent these as a vector, e.g., [1, 0, 1].
 
 2. **Hidden Layer(s):**  
    Each neuron computes a weighted sum of the inputs. For example, neuron H₁ might have weights [0.5, -0.2, 0.3]:

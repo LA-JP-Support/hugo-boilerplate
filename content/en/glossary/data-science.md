@@ -3,7 +3,7 @@ title: "Data Science"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "data-science"
-description: "Data science is an interdisciplinary field combining mathematics, statistics, computer science, and domain expertise to extract actionable insights from complex datasets."
+description: "Data science is the practice of analyzing large amounts of data using mathematics and computer science to help organizations make better decisions and discover hidden patterns."
 keywords: ["data science", "machine learning", "data analytics", "big data", "statistics"]
 category: "Data Science"
 type: "glossary"

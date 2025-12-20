@@ -1,9 +1,9 @@
 ---
-title: "Artificial Intelligence"
+title: "Artificial Intelligence (AI)"
 lastmod: 2025-12-18
 date: 2025-12-18
-translationKey: "artificial-intelligence"
-description: "Explore Artificial Intelligence (AI), the technology enabling computers to simulate human learning, problem-solving, and decision-making. Understand its uses, types, and impact."
+translationKey: "AI-artificial-intelligence"
+description: "Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions."
 keywords: ["artificial intelligence", "machine learning", "deep learning", "natural language processing", "generative AI"]
 category: "AI Chatbot & Automation"
 type: "glossary"

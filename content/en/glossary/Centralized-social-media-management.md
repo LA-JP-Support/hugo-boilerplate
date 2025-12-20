@@ -3,7 +3,7 @@ title: Centralized Social Media Management
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: centralized-social-media-management-complex
-description: Explore detailed definitions and best practices for centralized social media management, AI chatbots, automation, governance, and analytics in this comprehensive glossary.
+description: "A single platform that manages all of a company's social media accounts, messages, and posts in one place to keep messaging consistent and improve team efficiency."
 keywords:
 - centralized social media management
 - AI chatbots

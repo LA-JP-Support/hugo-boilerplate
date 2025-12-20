@@ -3,7 +3,7 @@ title: "Voiceflow"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "voiceflow"
-description: "Voiceflow is a no-code platform for designing, building, and deploying conversational AI agents like chatbots and voice assistants across multiple channels. Automate customer interactions and workflows."
+description: "A no-code platform that lets teams build AI chatbots and voice assistants by dragging and dropping conversation blocks, then deploy them across websites, apps, and phone systems."
 keywords: ["Voiceflow", "conversational AI", "chatbots", "no-code platform", "AI agents"]
 category: "AI Chatbot & Automation"
 type: "glossary"

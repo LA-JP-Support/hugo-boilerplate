@@ -3,7 +3,7 @@ title: 'Incidents'
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: incidents
-description: Explore a comprehensive glossary on IT incidents, covering their definition, management lifecycle, best practices, and the role of automation and AI in modern ITSM for rapid service restoration.
+description: "An unplanned disruption to IT services that reduces performance or availability, impacting business operations. Detected through user reports or automated monitoring."
 keywords:
 - incident management
 - ITSM

@@ -1,7 +1,7 @@
 ---
 title: "Human-Agent Teaming"
 translationKey: "human-agent-teaming"
-description: "Human-Agent Teaming (HAT) is a collaborative paradigm where AI and human agents work together, sharing goals and control. Learn how HAT enhances efficiency and decision-making."
+description: "Human-Agent Teaming is a partnership where humans and AI work as equals, sharing control and goals to accomplish tasks more effectively by combining human judgment with AI speed and efficiency."
 keywords: ["Human-Agent Teaming", "AI collaboration", "Human-AI Teaming", "Artificial Intelligence", "Team dynamics"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -3,7 +3,7 @@ title: "Adversarial Robustness"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "adversarial-robustness"
-description: "Adversarial Robustness is the ability of AI/ML models to maintain reliable performance against intentionally crafted adversarial inputs designed to induce errors or misclassifications."
+description: "An AI model's ability to work correctly even when given deliberately manipulated or tricky inputs designed to fool it."
 keywords: ["Adversarial Robustness", "Adversarial Attacks", "AI Safety", "Machine Learning", "Deep Learning"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

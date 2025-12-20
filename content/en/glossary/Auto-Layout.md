@@ -2,7 +2,7 @@
 title: "Auto-Layout"
 lastmod: 2025-12-18
 translationKey: "auto-layout"
-description: "Master Auto-Layout, a design feature for automatically arranging and resizing UI elements. Covers core concepts, benefits, and implementation in Figma, iOS, Android, and Web."
+description: "Auto-Layout is a design feature that automatically arranges and resizes UI elements based on rules you set, so your interface stays organized and balanced when content or screen size changes."
 keywords: ["Auto-Layout", "Figma", "UI design", "Responsive design", "Constraints"]
 category: "General"
 type: "glossary"

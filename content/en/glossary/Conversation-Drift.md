@@ -2,7 +2,7 @@
 title: "Conversation Drift"
 lastmod: 2025-12-18
 translationKey: "conversation-drift"
-description: "Conversation drift occurs when an AI chatbot or virtual assistant diverges from the original topic, leading to off-topic responses and degraded user experience. Learn to prevent it."
+description: "Conversation drift is when an AI chatbot gradually loses track of what you're asking and gives off-topic or confusing answers, making the conversation frustrating and unhelpful."
 keywords: ["conversation drift", "AI chatbot", "virtual assistant", "chatbot context", "drift detection"]
 category: "AI Chatbot & Automation"
 type: "glossary"

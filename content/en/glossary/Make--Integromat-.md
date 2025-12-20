@@ -1,7 +1,7 @@
 ---
 title: "Make (Integromat)"
 translationKey: "make-integromat"
-description: "Make (formerly Integromat) is a visual, no-code platform for designing, building, and automating workflows from simple tasks to complex, enterprise-scale processes."
+description: "A no-code platform that automates repetitive tasks by visually connecting apps and services without requiring programming knowledge."
 keywords: ["Make", "Integromat", "no-code automation", "workflow automation", "visual builder", "API integration", "data transformation", "business process automation", "scenario"]
 category: "AI Chatbot & Automation"
 type: "glossary"

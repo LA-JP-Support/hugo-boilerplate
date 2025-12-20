@@ -3,7 +3,7 @@ title: Security Policies
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: security-policies
-description: Understand security policies, their purpose, types, and importance in protecting information assets. Learn about compliance, best practices, and the CIA triad.
+description: "Security Policies are formal rules and guidelines that organizations create to protect their information and data. They define what needs to be protected and why, serving as the foundation for all security decisions and compliance requirements."
 keywords:
 - security policies
 - information security

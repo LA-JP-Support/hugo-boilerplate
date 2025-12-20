@@ -3,7 +3,7 @@ title: Machine Learning
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: machine-learning
-description: Explore machine learning (ML), a core AI domain where algorithms learn from data to make predictions and decisions. Understand its types, how it works, and applications.
+description: "Machine Learning is a type of AI that enables computers to learn from data and make predictions or decisions automatically, without being explicitly programmed for each task."
 keywords:
 - machine learning
 - artificial intelligence

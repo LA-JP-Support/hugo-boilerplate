@@ -3,7 +3,7 @@ title: "Net Promoter Score (NPS)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "net-promoter-score-nps"
-description: "Learn about Net Promoter Score (NPS), a key metric for customer loyalty. Understand its calculation, components, industry benchmarks, and how to use NPS data to drive customer experience improvements."
+description: "A simple survey metric that measures how likely customers are to recommend your company to others, helping businesses understand customer loyalty and satisfaction."
 keywords: ["Net Promoter Score", "NPS", "customer loyalty", "customer experience", "CX metrics"]
 category: "Customer Experience"
 type: "glossary"

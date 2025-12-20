@@ -1,7 +1,7 @@
 ---
 title: "Dialogue State Tracking"
 translationKey: "dialogue-state-tracking"
-description: "Dialogue State Tracking (DST) estimates user goals, slot values, and conversation history in a dialogue system, enabling coherent and relevant AI responses."
+description: "A technology that tracks what a user wants during a conversation, keeping track of important details so an AI chatbot can understand context and respond appropriately."
 keywords: ["Dialogue State Tracking", "Conversational AI", "Chatbot", "Dialogue System", "Slot Filling"]
 category: "AI Chatbot & Automation"
 type: "glossary"

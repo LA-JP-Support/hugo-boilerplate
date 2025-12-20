@@ -3,7 +3,7 @@ title: Voicebot
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: voicebot-glossary-deep-knowledge
-description: Explore a comprehensive guide to voicebots, covering core technologies like ASR, NLP, and TTS, how they work, key features, types, and their business benefits for customer service and automation.
+description: "A voicebot is an AI-powered assistant that listens to spoken words, understands them, and responds naturally to automate customer service tasks and answer questions through voice conversations."
 keywords:
 - voicebot
 - AI

@@ -2,7 +2,7 @@
 title: Carousel (UI Component)
 lastmod: 2025-12-18
 translationKey: carousel-ui-component
-description: A carousel is an interactive UI component displaying a sequence of content items like images or cards within a single viewport, allowing users to cycle through them.
+description: "A rotating display that shows multiple items like images or cards one at a time, letting users browse through them by clicking arrows or swiping."
 keywords: ["carousel", "UI component", "web design", "UX design", "accessibility"]
 category: AI Chatbot & Automation
 type: glossary

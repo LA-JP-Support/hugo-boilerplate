@@ -3,7 +3,7 @@ title: "Note"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "note"
-description: "Learn what a note is in an internal ticketing system, its purpose for staff-only communication, and how it's used for documentation, collaboration, and AI automation."
+description: "A staff-only message attached to a support ticket that records actions, decisions, and troubleshooting steps. Notes help team members stay informed and work together efficiently."
 keywords: ["note", "ticketing system", "internal note", "AI automation", "support ticket"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -3,7 +3,7 @@ title: FinOps for AI
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: finops
-description: FinOps for AI is a discipline uniting financial management, cloud operations, and AI infrastructure governance to optimize and govern financial performance of AI resources.
+description: "FinOps for AI is a practice that manages the costs and efficiency of artificial intelligence systems by combining financial oversight, cloud operations, and AI infrastructure management to ensure AI investments deliver measurable business value."
 keywords: ["FinOps for AI", "cloud cost optimization", "AI infrastructure", "financial management", "AI governance"]
 category: AI Infrastructure & Deployment
 type: glossary

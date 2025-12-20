@@ -1,7 +1,7 @@
 ---
 title: "Open-Domain Bot"
 translationKey: "open-domain-bot"
-description: "An open-domain bot is an AI conversational agent designed for free-form dialogue on any topic, unlike task-specific closed-domain bots. Explore its architecture & uses."
+description: "An AI chatbot that can have natural conversations about any topic, unlike specialized bots designed for specific tasks."
 keywords: ["open-domain bot", "AI chatbot", "conversational AI", "transformer models", "dialogue system"]
 category: "AI Chatbot & Automation"
 type: "glossary"

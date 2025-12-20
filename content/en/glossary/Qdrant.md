@@ -3,7 +3,7 @@ title: "Qdrant"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "qdrant"
-description: "Qdrant is an open-source vector similarity search engine and vector database for high-dimensional vector data, enabling semantic search, RAG, and recommendations."
+description: "A database designed to store and search through AI-generated data representations (embeddings) to find similar items quickly, powering features like semantic search and personalized recommendations."
 keywords: ["Qdrant", "vector database", "vector search", "embeddings", "RAG"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

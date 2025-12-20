@@ -3,7 +3,7 @@ title: "Consistency Evaluation"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "consistency-evaluation"
-description: "Consistency evaluation assesses if AI systems like LLMs and chatbots produce stable, coherent responses to identical inputs. Essential for reliability, trust, and automation."
+description: "A test that checks whether an AI chatbot gives the same reliable answers when asked the same question multiple times, ensuring users can trust its responses."
 keywords: ["consistency evaluation", "AI chatbots", "LLMs", "reliability", "RAG"]
 category: "AI Chatbot & Automation"
 type: "glossary"

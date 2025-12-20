@@ -1,7 +1,7 @@
 ---
 title: Stack AI
 translationKey: stack
-description: Stack AI is an enterprise-grade, no-code/low-code platform for building, testing, and deploying AI-powered workflows and agents, centered around advanced large language models (LLMs).
+description: "A no-code platform that lets businesses build AI assistants and automate workflows by connecting data sources with AI models, without requiring programming skills."
 keywords:
 - Stack AI
 - no-code AI

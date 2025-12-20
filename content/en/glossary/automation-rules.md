@@ -3,7 +3,7 @@ title: "Automation Rules"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "automation-rules"
-description: "Learn about automation rules: configurable settings that automatically execute processes based on specific conditions, streamlining tasks and ensuring consistency across platforms."
+description: "Automation rules are settings that automatically perform tasks when specific events happen and conditions are met, saving time and reducing errors."
 keywords: ["automation rules", "workflow automation", "triggers", "conditions", "actions"]
 category: "AI Chatbot & Automation"
 type: "glossary"

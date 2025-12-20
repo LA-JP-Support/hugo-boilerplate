@@ -1,8 +1,8 @@
 ---
-title: 'Natural Language Search (NLS): An In-Depth'
+title: 'Natural Language Search (NLS)'
 lastmod: 2025-12-18
 date: 2025-12-18
-translationKey: natural-language-search-nls-an
+translationKey: natural-language-search-nls
 description: Natural Language Search (NLS) allows users to query systems using conversational
   language. Learn how NLS works, its benefits, and real-world applications in this
   in-depth glossary.

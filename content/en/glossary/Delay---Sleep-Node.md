@@ -1,7 +1,7 @@
 ---
 title: Delay / Sleep Node
 translationKey: delay-sleep-node
-description: A Delay/Sleep Node pauses workflow execution in AI chatbots & automation for a set period or until a condition is met, crucial for API rate limiting & orchestration.
+description: "A Delay/Sleep Node pauses workflow execution for a set time or until a condition is met, commonly used to space out API requests and prevent system overload."
 keywords:
 - Delay Node
 - Sleep Node

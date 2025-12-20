@@ -3,7 +3,7 @@ title: Milvus
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: milvus-a
-description: Explore Milvus, an open-source, cloud-native vector database for scalable similarity search on unstructured data. Learn its architecture, features, use cases, and how it compares to other vector databases.
+description: "A database designed to quickly search and find similar items in large collections of unstructured data like images, text, and audio by comparing their numerical representations."
 keywords: ["Milvus", "vector database", "similarity search", "vector embeddings", "unstructured data"]
 category: Vector Database
 type: glossary

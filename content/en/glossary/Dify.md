@@ -1,7 +1,7 @@
 ---
 title: "Dify"
 translationKey: "dify"
-description: "Dify is an open-source LLM app development platform integrating BaaS and LLMOps. Visually build, deploy, and manage AI applications, agentic workflows, and RAG pipelines with minimal code."
+description: "An open-source platform that lets teams build and deploy AI applications like chatbots and intelligent agents using visual tools, with minimal coding required."
 keywords: ["Dify", "LLMOps", "AI applications", "RAG", "agentic workflows"]
 category: "AI Chatbot & Automation"
 type: "glossary"

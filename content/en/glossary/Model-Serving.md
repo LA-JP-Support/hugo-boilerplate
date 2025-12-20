@@ -3,7 +3,7 @@ title: "Model Serving"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "model-serving"
-description: "Model serving is the operational process of making trained machine learning models available for predictions via a network-accessible service, enabling AI-driven features in production systems."
+description: "A system that makes trained AI models available as online services so applications can request predictions from them in real-time."
 keywords: ["Model Serving", "Machine Learning", "AI", "Inference", "Model Deployment"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

@@ -3,7 +3,7 @@ title: "Zero-Shot Chain of Thought"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "zero-shot-chain-of-thought"
-description: "Zero-Shot Chain of Thought (CoT) is a prompt engineering technique for LLMs that instructs models to reason step-by-step without examples, improving complex problem-solving."
+description: "A prompt technique that makes AI models explain their thinking step-by-step to solve complex problems, without needing example demonstrations."
 keywords: ["Zero-Shot Chain of Thought", "Prompt Engineering", "LLMs", "AI Chatbots", "Reasoning"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -2,7 +2,7 @@
 title: "FinTech Fraud Detection"
 date: 2025-12-19
 translationKey: fintech-fraud-detection
-description: "Comprehensive guide to FinTech fraud detection systems using AI and machine learning to identify and prevent fraudulent financial transactions in real-time."
+description: "AI-powered technology that monitors financial transactions in real-time to detect and prevent fraud by identifying suspicious patterns and unusual activities."
 keywords:
 - fintech fraud detection
 - financial fraud prevention

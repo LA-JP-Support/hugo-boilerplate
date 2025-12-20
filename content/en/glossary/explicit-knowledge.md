@@ -3,7 +3,7 @@ title: "Explicit Knowledge"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "explicit-knowledge"
-description: "Explicit knowledge is documented information, easily articulated, codified, and shared through manuals, databases, and digital files. Essential for AI, automation, and organizational learning."
+description: "Explicit knowledge is information that can be written down, documented, and easily shared—like manuals, databases, or procedures—making it accessible to anyone in an organization."
 keywords: ["explicit knowledge", "knowledge management", "AI", "automation", "tacit knowledge"]
 category: "AI Chatbot & Automation"
 type: "glossary"

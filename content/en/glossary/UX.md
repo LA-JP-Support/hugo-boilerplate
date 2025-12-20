@@ -3,7 +3,7 @@ title: "UX"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "ux"
-description: "Explore User Experience (UX), covering its definition, principles, process, and value. Learn about UX vs. UI, usability, and CX, with a focus on AI chatbot and automation contexts."
+description: "UX (User Experience) is how people feel and what they experience when using a product or service. It includes everything from ease of use to customer support, aiming to make interactions satisfying and valuable."
 keywords: ["UX", "User Experience", "UI", "Chatbot UX", "Usability"]
 category: "AI Chatbot & Automation"
 type: "glossary"

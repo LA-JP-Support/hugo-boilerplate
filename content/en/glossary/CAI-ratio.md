@@ -3,7 +3,7 @@ title: "CAI Ratio"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "cai-ratio"
-description: "The CAI Ratio (Consistent and Inconsistent Ratio) is an unsupervised metric quantifying agreement between student models and LLMs, crucial for evaluating annotation quality without ground truth."
+description: "A metric that measures how often a student AI model and a large language model agree on answers, helping evaluate annotation quality without needing human verification."
 keywords: ["Consistency Metric", "Unsupervised Model Evaluation", "Annotation Quality", "LLM Accuracy", "Model Selection"]
 category: "AI Chatbot & Automation"
 type: "glossary"

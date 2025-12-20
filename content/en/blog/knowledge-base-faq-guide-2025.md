@@ -9,20 +9,20 @@ image: "/images/blog/knowledge-base-faq-guide-2025.png"
 ---
 ## Definition and Role of Knowledge Base
 
-A {{< tooltip text="A database that organizes and stores company knowledge and know-how, making it searchable for everyone. Like a company's 'knowledge warehouse'" >}}Knowledge Base{{< /tooltip >}} is a collection of organized information that includes business knowledge, know-how, work procedures, troubleshooting examples, and success stories used within companies and organizations. It serves as an information infrastructure that allows anyone to quickly look up necessary information when needed.
+A [Knowledge Base](/en/glossary/knowledge-base/ "A database that organizes and stores company knowledge and know-how, making it searchable for everyone. Like a company's 'knowledge warehouse'") is a collection of organized information that includes business knowledge, know-how, work procedures, troubleshooting examples, and success stories used within companies and organizations. It serves as an information infrastructure that allows anyone to quickly look up necessary information when needed.
 
-Knowledge bases manage both {{< tooltip text="Knowledge and skills acquired through experience that are difficult to explain in words" >}}tacit knowledge{{< /tooltip >}} (knowledge gained from experience) and {{< tooltip text="Knowledge recorded in visible forms such as documents and manuals" >}}explicit knowledge{{< /tooltip >}} (knowledge documented in manuals and other materials) in a database format. They are designed to provide efficient access to information using mechanisms such as AI search functionality, tagging, and hierarchical structures.
+Knowledge bases manage both [tacit knowledge](/en/glossary/tacit-knowledge/ "Knowledge and skills acquired through experience that are difficult to explain in words") (knowledge gained from experience) and [explicit knowledge](/en/glossary/explicit-knowledge/ "Knowledge recorded in visible forms such as documents and manuals") (knowledge documented in manuals and other materials) in a database format. They are designed to provide efficient access to information using mechanisms such as AI search functionality, tagging, and hierarchical structures.
 
 For example, they are useful in standardizing work procedures, preventing knowledge from being concentrated in specific individuals, and facilitating smooth onboarding of new employees.
 
-## Differences Between {{< tooltip text="Frequently Asked Questions - a collection of common questions and their answers" >}}FAQ{{< /tooltip >}} and Knowledge Base
-{{< tooltip text="Frequently Asked Questions - a collection of common questions and their answers" >}}FAQ{{< /tooltip >}} (Frequently Asked Questions) is content that compiles common questions from users or employees along with their answers. FAQ is positioned as part of a knowledge base.
+## Differences Between [FAQ](/en/glossary/FAQ/ "Frequently Asked Questions - a collection of common questions and their answers") and Knowledge Base
+[FAQ](/en/glossary/FAQ/ "Frequently Asked Questions - a collection of common questions and their answers") (Frequently Asked Questions) is content that compiles common questions from users or employees along with their answers. FAQ is positioned as part of a knowledge base.
 
 While FAQ follows a simple format of paired "questions" and "answers," knowledge bases organize a broader range of information including detailed operation guides, business workflows, error response methods, and video explanations. FAQ is designed for quickly finding answers to specific questions, while knowledge bases also accommodate users who want to explore various information independently.
 
 ## Background and Value of Knowledge Base Utilization in 2025
 
-In 2025, knowledge bases have incorporated AI-powered automatic classification and {{< tooltip text="A feature that allows searching using natural language. Users can search with natural sentences like 'What should I do when I forget my password?'" >}}natural language search{{< /tooltip >}} capabilities, with continued expansion of remote work and efforts to improve {{< tooltip text="The quality of satisfaction and experience customers have when using services" >}}customer experience (CX){{< /tooltip >}}. In this context, knowledge bases are treated as core assets for enhancing corporate competitiveness.
+In 2025, knowledge bases have incorporated AI-powered automatic classification and [natural language search](/en/glossary/natural-language-search/ "A feature that allows searching using natural language. Users can search with natural sentences like 'What should I do when I forget my password?'") capabilities, with continued expansion of remote work and efforts to improve [customer experience (CX)](/en/glossary/Customer-Experience---CX-/ "The quality of satisfaction and experience customers have when using services"). In this context, knowledge bases are treated as core assets for enhancing corporate competitiveness.
 
 Research shows that approximately 70% of companies that implemented knowledge bases experienced "faster inquiry response," "improved operational efficiency," and "enhanced employee satisfaction and retention rates." For example, companies that established internal knowledge bases reduced new employee training periods by up to 30%, while those that enhanced customer-facing FAQs reduced support costs by 20%.
 
@@ -65,20 +65,20 @@ For efficient operation, utilize templates for Q&A and article creation. For exa
 ## AI-Enhanced Knowledge Base Management and FAQ Automation
 
 ### AI-Powered Automatic Classification and Search Enhancement
-{{< tooltip text="Technology that enables computers to make human-like judgments and learning. Can automatically find optimal answers" >}}AI (Artificial Intelligence){{< /tooltip >}} automatically analyzes and classifies large volumes of knowledge base information. Through {{< tooltip text="Technology that enables computers to understand and appropriately process human language" >}}[Natural Language Processing (NLP)](/en/glossary/natural-language-processing--nlp-/){{< /tooltip >}} technology, even when users search with ambiguous or colloquial expressions, AI instantly displays optimal answers and related FAQs.
+[AI (Artificial Intelligence)](/en/glossary/artificial-intelligence/ "Technology that enables computers to make human-like judgments and learning. Can automatically find optimal answers") automatically analyzes and classifies large volumes of knowledge base information. Through [[Natural Language Processing (NLP)](/en/glossary/natural-language-processing--nlp-/)](/en/glossary/Natural-Language-Processing--NLP-/ "Technology that enables computers to understand and appropriately process human language") technology, even when users search with ambiguous or colloquial expressions, AI instantly displays optimal answers and related FAQs.
 
 For example, generative AI extracts "highly relevant Q&As" from inquiry histories and automatically organizes FAQ structures. This mechanism reduces search time and significantly improves self-resolution rates for employees and customers. This effectiveness has been proven in many domestic and international companies.
 
-### Practical Examples of Automatic FAQ Generation and {{< tooltip text="A program that automatically answers customer questions. Available 24/7 and can respond to simple questions like humans" >}}Chatbot{{< /tooltip >}} Integration
+### Practical Examples of Automatic FAQ Generation and [Chatbot](/en/glossary/Chatbot/ "A program that automatically answers customer questions. Available 24/7 and can respond to simple questions like humans") Integration
 
 AI analyzes past inquiry histories and existing knowledge to automatically generate Q&As. This streamlines regular FAQ updates and new content addition work while maintaining information freshness.
 
 By combining with AI chatbots, optimal answers from the knowledge base can be automatically presented in response to user questions. This integration has reduced operator response time by up to 50% in some cases. AI utilization automates FAQ operations, reducing workload while maintaining high-quality support and customer satisfaction.
 
-## Promoting Knowledge Sharing Through {{< tooltip text="Defined business processes and procedures. Rules that determine who does what and when" >}}Workflow{{< /tooltip >}} and {{< tooltip text="A system that immediately registers knowledge gained in the field into a database for organization-wide sharing. A knowledge-centered service operation method" >}}KCS{{< /tooltip >}}
+## Promoting Knowledge Sharing Through [Workflow](/en/glossary/Workflow/ "Defined business processes and procedures. Rules that determine who does what and when") and [KCS](/en/glossary/Knowledge-Centered-Service--KCS-/ "A system that immediately registers knowledge gained in the field into a database for organization-wide sharing. A knowledge-centered service operation method")
 
 ### KCS Fundamentals and Knowledge Sharing Concepts
-{{< tooltip text="A system that immediately registers knowledge gained in the field into a database for organization-wide sharing. A knowledge-centered service operation method" >}}KCS (Knowledge-Centered Service){{< /tooltip >}} is an operational model that immediately reflects field-acquired knowledge into knowledge bases for organization-wide utilization.
+[KCS (Knowledge-Centered Service)](/en/glossary/Knowledge-Centered-Service--KCS-/ "A system that immediately registers knowledge gained in the field into a database for organization-wide sharing. A knowledge-centered service operation method") is an operational model that immediately reflects field-acquired knowledge into knowledge bases for organization-wide utilization.
 
 KCS emphasizes the concept that "organizations are strengthened through knowledge accumulation and sharing." For example, know-how and troubleshooting methods acquired during work are registered in the knowledge base on the spot. This prevents information silos and enables everyone to utilize new and accurate information.
 
@@ -109,9 +109,9 @@ When selecting knowledge base tools, compare and evaluate based on the following
 | Selection Point | Details |
 | Searchability | Support for full-text search, tag search, and natural language search |
 | Ease of Operation and Updates | Usability of content creation, editing, and management functions |
-| Security | Completeness of {{< tooltip text="A system that restricts who can use the system and what functions they can access. Security features" >}}access control{{< /tooltip >}} and log management |
+| Security | Completeness of [access control](/en/glossary/access-control/ "A system that restricts who can use the system and what functions they can access. Security features") and log management |
 | Cost Performance | Balance between initial costs, monthly fees, and functionality |
-| Integration with Other Systems | Richness of {{< tooltip text="A mechanism for different systems to exchange data. Acts as a bridge between systems" >}}API integration{{< /tooltip >}} and extensibility |
+| Integration with Other Systems | Richness of [API integration](/en/glossary/API-integration/ "A mechanism for different systems to exchange data. Acts as a bridge between systems") and extensibility |
 | Support System | Quality of Japanese language support and inquiry response |
 
 For example, AI search and automatic classification features improve self-resolution rates using FAQs.
@@ -126,7 +126,7 @@ LiveAgent Support Portal, also adopted as a core system in SmartWeb's constructi
 
 ### LiveAgent Support Portal Key Features and Knowledge Base Integration
 
-LiveAgent Support Portal can integrate and handle multiple communication channels including {{< tooltip text="A system that manages customer inquiries as numbered cases and tracks response status" >}}ticket management{{< /tooltip >}}, live chat, social media, and email. This enables centralized management of customer inquiries. Combined with FAQs and knowledge bases, it promotes customer {{< tooltip text="Services that help customers solve problems independently. Provides FAQs and operation guides" >}}self-service{{< /tooltip >}} problem resolution.
+LiveAgent Support Portal can integrate and handle multiple communication channels including [ticket management](/en/glossary/ticket-management/ "A system that manages customer inquiries as numbered cases and tracks response status"), live chat, social media, and email. This enables centralized management of customer inquiries. Combined with FAQs and knowledge bases, it promotes customer [self-service](/en/glossary/self-service/ "Services that help customers solve problems independently. Provides FAQs and operation guides") problem resolution.
 
 For example, users can search "frequently asked questions" or "troubleshooting guides" on the portal to immediately find solutions. This reduces inquiry volume and improves response speed.
 
@@ -153,15 +153,15 @@ LiveAgent Support Portal provides cutting-edge mechanisms that simultaneously ac
 
 ## Knowledge Base Operation Trends and Success Tips for 2025 and Beyond
 
-### Deepening Data Utilization and {{< tooltip text="Providing optimal information and services tailored to each individual's preferences and situation" >}}Personalization{{< /tooltip >}}
+### Deepening Data Utilization and [Personalization](/en/glossary/Personalization/ "Providing optimal information and services tailored to each individual's preferences and situation")
 
-Future knowledge base operations will center on advanced data utilization using AI and {{< tooltip text="Technology that analyzes large amounts of data to discover useful information and trends" >}}data science{{< /tooltip >}}. AI can analyze FAQ and knowledge base access logs and user attributes to automatically display information optimized for individual users (personalized FAQs).
+Future knowledge base operations will center on advanced data utilization using AI and [data science](/en/glossary/data-science/ "Technology that analyzes large amounts of data to discover useful information and trends"). AI can analyze FAQ and knowledge base access logs and user attributes to automatically display information optimized for individual users (personalized FAQs).
 
 With the spread of this mechanism, users can more easily and quickly discover individually optimized solutions, improving self-resolution rates. Indeed, domestic and international surveys report approximately 20-30% reduction in inquiries and improved customer satisfaction (CSAT) at companies implementing FAQ systems with personalization features.
 
-### Self-Service Orientation and {{< tooltip text="User experience and satisfaction when using systems" >}}UX{{< /tooltip >}} Optimization
+### Self-Service Orientation and [UX](/en/glossary/User-Experience--UX-/ "User experience and satisfaction when using systems") Optimization
 
-Self-service portals with intuitive operation are essential for organizational knowledge base operations. 2025 trends include mobile compatibility, improved search accuracy, and introduction of user-friendly {{< tooltip text="The screens and operation methods users interact with in systems. Directly impacts usability" >}}user interfaces (UI){{< /tooltip >}}.
+Self-service portals with intuitive operation are essential for organizational knowledge base operations. 2025 trends include mobile compatibility, improved search accuracy, and introduction of user-friendly [user interfaces (UI)](/en/glossary/user-interfaces---UI-/ "The screens and operation methods users interact with in systems. Directly impacts usability").
 
 For example, AI-powered natural language search and automatic question suggestion features are becoming standardized. These improvements reduce traditional issues like "can't find information even when searching" and "difficult to use," promoting self-resolution for diverse users.
 

@@ -3,7 +3,7 @@ title: "Supplementary Indicator"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "supplementary-indicator"
-description: "Supplementary indicators provide critical context and validation to primary evaluation metrics in AI and automation. They offer nuanced insights for robust system performance assessment."
+description: "A supplementary indicator is a supporting metric that adds context and validation to main performance measures, helping paint a complete picture of how well a system actually works."
 keywords: ["Supplementary Indicator", "AI", "Automation", "Evaluation Metrics", "Primary Indicator"]
 category: "AI Chatbot & Automation"
 type: "glossary"

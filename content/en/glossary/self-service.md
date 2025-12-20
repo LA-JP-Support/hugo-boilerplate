@@ -3,7 +3,7 @@ title: "Self-Service"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "self-service"
-description: "Explore self-service solutions, tools, and strategies for customer support. Learn how FAQs, knowledge bases, and AI chatbots empower customers and reduce operational costs."
+description: "Self-service refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers."
 keywords: ["self-service", "customer support", "AI chatbots", "knowledge base", "FAQs"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -3,7 +3,7 @@ title: "Supervised Learning"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "supervised-learning"
-description: "Supervised learning is a foundational machine learning paradigm where algorithms learn from labeled data to map inputs to desired outputs, making accurate predictions on new, unseen data."
+description: "A machine learning method where algorithms learn from labeled examples to make accurate predictions on new data, like learning with a teacher who provides correct answers."
 keywords: ["supervised learning", "machine learning", "classification", "regression", "labeled data"]
 category: "AI Chatbot & Automation"
 type: "glossary"

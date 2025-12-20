@@ -1,7 +1,7 @@
 ---
 title: "Import / Export Blueprint"
 translationKey: "import-export-blueprint"
-description: "Import / Export Blueprint saves automation/chatbot logic as a file (JSON/YAML) for sharing, backup, migration, and version control across platforms and environments."
+description: "A file format that saves your automation or chatbot setup so you can back it up, share it with others, or move it between different systems."
 keywords: ["automation blueprint", "chatbot blueprint", "JSON", "YAML", "workflow migration"]
 category: "AI Chatbot & Automation"
 type: "glossary"

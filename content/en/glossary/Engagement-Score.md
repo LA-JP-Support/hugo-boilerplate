@@ -3,7 +3,7 @@ title: "Engagement Score"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "engagement-score"
-description: "Learn what an Engagement Score is, how this composite metric quantifies user, customer, or employee interaction with content, products, or services, and its strategic uses."
+description: "A single number that measures how actively someone uses a product, service, or content by combining multiple interaction signals like logins, time spent, and sharing activity."
 keywords: ["Engagement Score", "Customer Engagement", "Employee Engagement", "Product Engagement", "Composite Metric"]
 category: "Analytics & Content Effectiveness"
 type: "glossary"

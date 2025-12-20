@@ -3,7 +3,7 @@ title: "Cost-Performance Ratio (CPI)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "cost-performance-ratio-cpi"
-description: "The Cost Performance Index (CPI) is a key project management metric for cost efficiency. Learn to calculate, interpret, and apply CPI in AI chatbot and automation projects for budget tracking."
+description: "A metric that measures how efficiently a project converts spending into completed work, showing whether you're getting good value for every dollar spent."
 keywords: ["Cost Performance Index", "CPI", "project management", "AI chatbot projects", "automation projects"]
 category: "Project Management"
 type: "glossary"

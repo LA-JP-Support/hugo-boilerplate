@@ -3,7 +3,7 @@ title: "Rules Engine"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "rules-engine"
-description: "A rules engine automates decision-making by evaluating data against predefined 'if-then' rules, separating business logic from code for efficient management and updates."
+description: "A software system that automates business decisions by evaluating data against predefined rules, allowing non-technical users to manage decision logic without code changes."
 keywords: ["rules engine", "business rules", "automation", "decision-making", "business logic"]
 category: "AI Chatbot & Automation"
 type: "glossary"

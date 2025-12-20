@@ -3,7 +3,7 @@ title: "Auto-Scaling Group"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "auto-scaling-group"
-description: "An Auto-Scaling Group (ASG) automatically adjusts compute resources like EC2 instances to maintain application performance and minimize costs by scaling based on demand."
+description: "A cloud service that automatically adds or removes computing resources based on demand to keep applications running smoothly while reducing costs."
 keywords: ["Auto-Scaling Group", "AWS Auto Scaling", "EC2 instances", "cloud infrastructure", "scaling policies"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

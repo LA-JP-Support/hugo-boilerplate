@@ -3,7 +3,7 @@ title: "Latency"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "latency"
-description: "Latency is the time delay between a request and a system's response, crucial for AI infrastructure, web apps, and real-time systems. Learn its types, causes, and reduction strategies."
+description: "The time delay between a user's action and a system's response, typically measured in milliseconds. High latency makes digital services feel slow and sluggish."
 keywords: ["latency", "AI infrastructure", "network latency", "performance optimization", "real-time systems"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

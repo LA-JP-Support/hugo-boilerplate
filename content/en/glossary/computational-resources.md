@@ -3,7 +3,7 @@ title: "Computational Resources"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "computational-resources"
-description: "Explore computational resources, including CPUs, GPUs, memory, storage, and networking. Understand their role in AI, data science, and cloud computing, with optimization tips."
+description: "Computational Resources: The hardware and software infrastructure (processors, memory, storage, networks) needed to run programs and AI models. They power everything from everyday computing to complex data analysis."
 keywords: ["computational resources", "CPU", "GPU", "AI", "cloud computing"]
 category: "Technology"
 type: "glossary"

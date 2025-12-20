@@ -3,7 +3,7 @@ title: "PagedAttention"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "pagedattention"
-description: "Explore PagedAttention, a memory management algorithm that partitions the KV cache of LLMs into fixed-size blocks, reducing GPU memory waste during inference and powering vLLM."
+description: "A memory management technique that divides the AI model's cache into fixed blocks, allowing it to use only the memory it needs and reducing waste during text generation."
 keywords: ["PagedAttention", "LLM inference", "KV cache", "vLLM", "memory management"]
 category: "LLM Inference"
 type: "glossary"

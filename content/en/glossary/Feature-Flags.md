@@ -3,7 +3,7 @@ title: "Feature Flags"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "feature-flags"
-description: "Feature flags enable dynamic control of software functionality without redeploying. Learn how these toggles facilitate progressive delivery, A/B testing, rapid rollbacks, and operational agility."
+description: "A tool that lets developers turn features on or off instantly without changing code or restarting the app, enabling safe testing and quick fixes."
 keywords: ["feature flags", "feature toggles", "progressive delivery", "A/B testing", "software deployment"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

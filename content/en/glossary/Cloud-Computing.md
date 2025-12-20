@@ -3,7 +3,7 @@ title: Cloud Computing
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: cloud-computing-glossary-comprehensive-guide-for-ai-infrastructure-deployment
-description: 'Explore cloud computing: on-demand IT resources, service models (IaaS, PaaS, SaaS), deployment options (public, private, hybrid), and benefits for AI infrastructure & deployment.'
+description: "IT resources delivered over the internet on a pay-as-you-go basis, allowing organizations to access computing power, storage, and software without owning physical servers."
 keywords: ["cloud computing", "IaaS", "PaaS", "SaaS", "AI infrastructure"]
 category: Cloud Computing
 type: glossary

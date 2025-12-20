@@ -3,7 +3,7 @@ title: "ROI (Return on Investment)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "roi-return-on-investment"
-description: "Return on Investment (ROI) is a financial metric quantifying investment efficiency. Learn how to calculate ROI for AI chatbots & automation, understand key components, metrics, and real-world examples."
+description: "ROI measures how much profit or value you gain from an investment compared to what you spent. It helps businesses decide whether investing in new tools like AI chatbots will actually save money or boost sales."
 keywords: ["ROI", "Return on Investment", "AI chatbots", "automation", "financial metric"]
 category: "AI & Automation"
 type: "glossary"

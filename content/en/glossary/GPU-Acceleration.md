@@ -3,7 +3,7 @@ title: "GPU Acceleration"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "gpu-acceleration"
-description: "GPU acceleration leverages Graphics Processing Units (GPUs) for massive parallel processing, significantly speeding up compute-intensive AI, deep learning, data science, and HPC workloads."
+description: "GPU Acceleration is a technology that uses graphics processors to perform calculations much faster than regular computer chips, enabling rapid processing of AI, data analysis, and complex simulations."
 keywords: ["GPU acceleration", "AI", "deep learning", "parallel processing", "CUDA"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

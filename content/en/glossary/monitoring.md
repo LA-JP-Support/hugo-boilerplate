@@ -3,7 +3,7 @@ title: "Monitoring"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "monitoring"
-description: "Monitoring is the systematic, continuous process of collecting, analyzing, and responding to data about systems, applications, networks, and business operations. It provides real-time visibility for performance, security, and user experience."
+description: "Monitoring is the continuous process of collecting and analyzing data about systems and applications to detect problems and ensure everything runs smoothly and securely."
 keywords: ["monitoring", "AI monitoring", "observability", "APM", "system monitoring"]
 category: "Technology"
 type: "glossary"

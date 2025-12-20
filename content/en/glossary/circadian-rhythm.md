@@ -3,7 +3,7 @@ title: "Circadian Rhythm"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "circadian-rhythm"
-description: "Explore circadian rhythm, the body's 24-hour internal clock regulating sleep, hormones, metabolism, and cognitive function. Learn how it works, its impact on health, and how to maintain it."
+description: "Your body's internal 24-hour clock that controls sleep, hormones, and energy levels by syncing with the day-night cycle."
 keywords: ["circadian rhythm", "sleep-wake cycle", "suprachiasmatic nucleus", "melatonin", "sleep disorders"]
 category: "AI Chatbot & Automation"
 type: "glossary"

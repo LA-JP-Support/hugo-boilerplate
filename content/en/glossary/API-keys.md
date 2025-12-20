@@ -3,7 +3,7 @@ title: "API Keys"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "api-keys"
-description: "An API key is a unique alphanumeric string for authenticating applications to an API. Learn how API keys work, their security implications, best practices, and comparison with other methods."
+description: "A unique code that apps use to prove their identity and access specific services from a website or application safely."
 keywords: ["API key", "API authentication", "API security", "access control", "API management"]
 category: "AI Chatbot & Automation"
 type: "glossary"

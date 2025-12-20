@@ -3,7 +3,7 @@ title: "Version History / Rollback"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "version-history-rollback"
-description: "Understand version history and rollback in AI chatbot and automation platforms. Learn how to track, manage, and revert bot configurations to stable states, ensuring fast recovery from errors."
+description: "Version history is a record of all previous states of a chatbot's settings and behavior, while rollback lets you quickly restore an earlier working version if something goes wrong."
 keywords: ["Version History", "Rollback", "AI Chatbot", "Automation Platforms", "Version Control"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -1,7 +1,7 @@
 ---
 title: Goal Completion Rate (GCR)
 translationKey: goal-completion-rate-gcr
-description: Goal Completion Rate (GCR) measures the percentage of users successfully achieving objectives in AI chatbots & automation. Learn its importance, calculation, and how to improve it.
+description: "Goal Completion Rate (GCR) is the percentage of users who successfully complete their intended tasks—like resolving issues or making purchases—when using AI chatbots or automation tools. It measures how effectively these tools help users achieve their goals."
 keywords:
 - Goal Completion Rate
 - AI Chatbots

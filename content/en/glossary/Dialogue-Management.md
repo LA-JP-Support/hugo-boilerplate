@@ -1,7 +1,7 @@
 ---
 title: "Dialogue Management"
 translationKey: "dialogue-management"
-description: "Dialogue management is the control system that maintains the state, context, and flow of a conversation in AI-powered interfaces, determining the most appropriate response or action at every turn."
+description: "The control system that keeps track of conversation context and decides what an AI chatbot should say or do next, enabling natural back-and-forth interactions instead of isolated responses."
 keywords: ["dialogue management", "conversational AI", "AI chatbot", "state tracking", "dialogue policy"]
 category: "AI Chatbot & Automation"
 type: "glossary"

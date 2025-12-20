@@ -3,7 +3,7 @@ title: "Indirect Prompt Injection"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "indirect-prompt-injection"
-description: "Learn about indirect prompt injection, a security vulnerability where attackers embed malicious instructions in external content processed by LLMs, leading to unintended actions or data leakage."
+description: "A security threat where attackers hide malicious commands in external content like documents or emails that AI systems process, causing them to perform unintended actions or leak data."
 keywords: ["indirect prompt injection", "LLM security", "AI security", "prompt injection", "data exfiltration"]
 category: "AI Security"
 type: "glossary"

@@ -9,11 +9,11 @@ image: "/images/blog/start-using-ai-today.jpg"
 tags: ["AI Technology", "SME", "Operational Efficiency"]
 categories: ["Business"]
 ---
-In recent years, {{< tooltip text="Incorporating artificial intelligence into business operations" >}}AI implementation{{< /tooltip >}} for small and medium-sized enterprises (SMEs) has gained attention as a realistic option for achieving operational efficiency and {{< tooltip text="Transforming business processes and business models using IT and digital technologies" >}}digital transformation{{< /tooltip >}}.
+In recent years, [AI implementation](/en/glossary/AI-implementation/ "Incorporating artificial intelligence into business operations") for small and medium-sized enterprises (SMEs) has gained attention as a realistic option for achieving operational efficiency and [digital transformation](/en/glossary/digital-transformation/ "Transforming business processes and business models using IT and digital technologies").
 
-Many SMEs face challenges such as "not knowing who handled what" and "missing responses" that arise from individually managing diverse inquiry channels—email, phone, SNS, and chat. The key to fundamentally resolving this confusion lies in implementing {{< tooltip text="A system where AI automatically answers customer questions" >}}AI chatbots{{< /tooltip >}}, {{< tooltip text="A feature where AI understands inquiry content and automatically creates response drafts" >}}AI email auto-response generation{{< /tooltip >}}, and {{< tooltip text="A system that centrally manages inquiries and visualizes response status" >}}ticket systems{{< /tooltip >}}.
+Many SMEs face challenges such as "not knowing who handled what" and "missing responses" that arise from individually managing diverse inquiry channels—email, phone, SNS, and chat. The key to fundamentally resolving this confusion lies in implementing [AI chatbots](/en/glossary/AI-chatbot/ "A system where AI automatically answers customer questions"), [AI email auto-response generation](/en/glossary/AI-email-auto-response-generation/ "A feature where AI understands inquiry content and automatically creates response drafts"), and [ticket systems](/en/glossary/Ticket-System/ "A system that centrally manages inquiries and visualizes response status").
 
-SmartWeb provides services combining the "LiveAgent" ticket system used by over 40,000 companies worldwide with the "FlowHunt" {{< tooltip text="A system platform that automatically coordinates and executes multiple business processes" >}}automation platform{{< /tooltip >}} utilizing the latest AI technology. AI handles customer support 24/7 automatically, creating response drafts for emails and inquiry forms. Staff simply review, modify, and send—eliminating the need to compose messages from scratch.
+SmartWeb provides services combining the "LiveAgent" ticket system used by over 40,000 companies worldwide with the "FlowHunt" [automation platform](/en/glossary/automation-platform/ "A system platform that automatically coordinates and executes multiple business processes") utilizing the latest AI technology. AI handles customer support 24/7 automatically, creating response drafts for emails and inquiry forms. Staff simply review, modify, and send—eliminating the need to compose messages from scratch.
 
 Additionally, AI learns from daily response data and grows smarter with use. Supporting approximately 100 languages including Japanese, English, and Chinese, it facilitates support for international customers.
 
@@ -27,33 +27,33 @@ By implementing "ticket systems," "AI email auto-response generation," and "AI c
 
 ### Ticket System: Centralized Inquiry Management
 
-A {{< tooltip text="A system that centrally manages inquiries and visualizes response status" >}}ticket system{{< /tooltip >}} is a mechanism that can centrally manage inquiries arriving from diverse channels—email, phone, SNS, chat, inquiry forms.
+A [ticket system](/en/glossary/Ticket-System/ "A system that centrally manages inquiries and visualizes response status") is a mechanism that can centrally manage inquiries arriving from diverse channels—email, phone, SNS, chat, inquiry forms.
 
 **Key Benefits:**
 
 - **Multi-channel Centralization**: Manage inquiries from all channels on a single screen, eliminating response gaps
 - **Information Sharing and Quality Improvement**: Immediately access past interactions, enabling smooth handoffs when staff changes
 - **Automatic Recording and AI Utilization**: All interactions are automatically recorded and utilized as AI learning data
-- **Flexible Work from Anywhere**: Being {{< tooltip text="A service format accessed via the internet, independent of specific locations or devices" >}}cloud-based{{< /tooltip >}}, responses are possible from remote work locations, on the go, or via smartphone
+- **Flexible Work from Anywhere**: Being [cloud-based](/en/glossary/cloud-based/ "A service format accessed via the internet, independent of specific locations or devices"), responses are possible from remote work locations, on the go, or via smartphone
 - **Business Automation**: Significantly reduce response time through automatic replies with standard templates for common questions and automatic assignment to staff
 
 ### AI Email Auto-Response Generation: Dramatically Reduce Staff Burden
 
-{{< tooltip text="A feature where AI understands inquiry content and automatically creates response drafts" >}}AI email auto-response generation{{< /tooltip >}} is a feature where AI automatically creates response drafts for questions from emails, inquiry forms, and SNS, presenting them to staff. Employees no longer need to compose messages from scratch, significantly reducing work time.
+[AI email auto-response generation](/en/glossary/AI-email-auto-response-generation/ "A feature where AI understands inquiry content and automatically creates response drafts") is a feature where AI automatically creates response drafts for questions from emails, inquiry forms, and SNS, presenting them to staff. Employees no longer need to compose messages from scratch, significantly reducing work time.
 
 **AI Email Auto-Response Generation Process:**
 
 **❶ Receive Email or Inquiry Form**
-Following {{< tooltip text="Settings that automatically execute processes based on specific conditions" >}}automation rules{{< /tooltip >}} configured in LiveAgent, AI retrieves the full email text. At this stage, {{< tooltip text="A feature that automatically identifies and appropriately classifies unwanted emails" >}}spam filtering{{< /tooltip >}} automatically executes for not only general spam but also sales emails. Since response drafts aren't created for unnecessary emails, staff's wasted work is reduced.
+Following [automation rules](/en/glossary/automation-rules/ "Settings that automatically execute processes based on specific conditions") configured in LiveAgent, AI retrieves the full email text. At this stage, [spam filtering](/en/glossary/spam-filtering/ "A feature that automatically identifies and appropriately classifies unwanted emails") automatically executes for not only general spam but also sales emails. Since response drafts aren't created for unnecessary emails, staff's wasted work is reduced.
 
 **❷ AI Understands Questions and Creates Response Drafts**
-For legitimate inquiries that pass spam filtering, AI understands the content and creates optimal response drafts based on pre-learned {{< tooltip text="A database that systematically compiles knowledge and information within a company" >}}knowledge bases{{< /tooltip >}} and internal documents.
+For legitimate inquiries that pass spam filtering, AI understands the content and creates optimal response drafts based on pre-learned [knowledge bases](/en/glossary/knowledge-base/ "A database that systematically compiles knowledge and information within a company") and internal documents.
 
 **❸ Display Response Draft as Memo on Operation Screen**
-AI presents the response draft as a {{< tooltip text="Internal memo displayed for staff within the ticket system" >}}note{{< /tooltip >}} on the LiveAgent operation screen. Staff review the content and modify as necessary.
+AI presents the response draft as a [note](/en/glossary/note/ "Internal memo displayed for staff within the ticket system") on the LiveAgent operation screen. Staff review the content and modify as necessary.
 
 **❹ Further Improve Responses with AI Answer Assistant**
-If needed, use the {{< tooltip text="An AI feature that supports text refinement and adding explanations for technical terms" >}}AI answer assistant{{< /tooltip >}} to refine text or add explanations for technical terms before replying.
+If needed, use the [AI answer assistant](/en/glossary/AI-answer-assistant/ "An AI feature that supports text refinement and adding explanations for technical terms") to refine text or add explanations for technical terms before replying.
 
 **Key Benefits:**
 
@@ -65,7 +65,7 @@ If needed, use the {{< tooltip text="An AI feature that supports text refinement
 
 ### AI Chatbot: 24/7 Automated Response
 
-An {{< tooltip text="A system where AI automatically answers customer questions" >}}AI chatbot{{< /tooltip >}} is a system where AI handles customer support automatically 24/7. It responds immediately even outside business hours, late at night, or on holidays, significantly improving customer satisfaction.
+An [AI chatbot](/en/glossary/AI-chatbot/ "A system where AI automatically answers customer questions") is a system where AI handles customer support automatically 24/7. It responds immediately even outside business hours, late at night, or on holidays, significantly improving customer satisfaction.
 
 **Key Benefits:**
 
@@ -104,7 +104,7 @@ Even concerns like "worried about costs" or "anxious about operations without IT
 
 ## Summary: Improve Customer Satisfaction Through AI Implementation
 
-SmartWeb is a {{< tooltip text="A service format for software and systems available via the internet" >}}cloud service{{< /tooltip >}} combining a "ticket system" that can centrally manage diverse inquiry channels, "AI email auto-response generation" that streamlines email handling, and an "AI chatbot" capable of 24/7 automated response.
+SmartWeb is a [cloud service](/en/glossary/cloud-service/ "A service format for software and systems available via the internet") combining a "ticket system" that can centrally manage diverse inquiry channels, "AI email auto-response generation" that streamlines email handling, and an "AI chatbot" capable of 24/7 automated response.
 
 Through spam filtering functionality that automatically identifies unnecessary emails like sales messages, staff can focus only on truly necessary inquiries. Even without specialized knowledge, anyone who can use email can start immediately, enabling SMEs to achieve customer support on par with large enterprises.
 

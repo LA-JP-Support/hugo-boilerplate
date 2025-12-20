@@ -3,7 +3,7 @@ title: "Hugging Face"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "hugging-face"
-description: "Explore Hugging Face, the open-source AI platform and global community for democratizing ML. Discover models, datasets, and tools for NLP, computer vision, and more."
+description: "An open-source platform where people can find, share, and use pre-trained AI models and datasets to build applications without starting from scratch."
 keywords: ["hugging face models", "large language models", "transformers library", "model hub", "datasets huggingface"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

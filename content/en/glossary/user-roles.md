@@ -3,7 +3,7 @@ title: "User Roles"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "user-roles"
-description: "A user role defines permissions and access rights in software, crucial for access control, security, and operational efficiency in AI chatbot and automation systems. Learn about RBAC, common roles, and best practices."
+description: "User Roles are permission levels assigned to people in a system that control what they can see and do, like giving some people admin access while others can only view information."
 keywords: ["user roles", "access control", "RBAC", "permissions", "automation platforms"]
 category: "AI Chatbot & Automation"
 type: "glossary"

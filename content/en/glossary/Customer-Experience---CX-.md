@@ -3,7 +3,7 @@ title: "Customer Experience (CX)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "customer-experience-cx"
-description: "Explore Customer Experience (CX) – the sum of all interactions a customer has with a brand. Learn its impact on loyalty, key components, measurement, and strategy."
+description: "Customer Experience (CX) is the overall impression customers form from all their interactions with a brand—from discovering it, making a purchase, to getting support—which directly affects their loyalty and satisfaction."
 keywords: ["customer experience", "CX", "customer journey", "customer service", "customer loyalty"]
 category: "AI Chatbot & Automation"
 type: "glossary"

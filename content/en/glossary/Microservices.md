@@ -3,7 +3,7 @@ title: 'Microservices Architecture: Comprehensive'
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: microservices-architecture
-description: Explore a comprehensive glossary of microservices architecture, covering essential concepts, patterns, and technologies like API Gateway, Bounded Context, CQRS, and more.
+description: "A software design approach that breaks applications into small, independent services that communicate via APIs, allowing teams to develop and update each service separately."
 keywords: ["microservices", "API Gateway", "bounded context", "event-driven architecture", "resilience"]
 category: Microservices
 type: glossary
