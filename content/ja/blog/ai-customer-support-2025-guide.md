@@ -68,36 +68,36 @@ AIカスタマーサポートは、欧米やアジアをはじめ、世界中の
 Salesforceは2024年に発表したEinstein Service Agentで、従来のチャットボットの概念を変革しています。Iron Mountain社では、Einstein AIの導入により、生成AI応答のクローズ率が80%に達し、AIが生成した回答の76%は編集不要という結果を記録しました。さらに、リピートコールが8%減少し、85%のサービスエージェントがAI応答を「極めて有用、文脈的、正確」と評価しています。
 
 **参考資料：**
-- [Iron Mountain Case Study - Einstein [AI](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。") Implementation](https://www.salesforce.com/customer-stories/iron-mountain-[ai](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")-faster-automation/)
-- [Salesforce [Einstein Service Agent](/ja/glossary/Einstein-Service-Agent/ "Salesforceの自律型AIカスタマーサービスソリューション、Einstein Service Agentをご紹介します。複雑なリクエストを解決し、データを統合し、24時間365日のオムニチャネルサポートを提供します。") Official Announcement](https://www.salesforce.com/news/stories/einstein-service-agent-announcement/)
+- Iron Mountain Case Study - Einstein [AI](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。") Implementation
+- Salesforce [Einstein Service Agent](/ja/glossary/Einstein-Service-Agent/ "Salesforceの自律型AIカスタマーサービスソリューション、Einstein Service Agentをご紹介します。複雑なリクエストを解決し、データを統合し、24時間365日のオムニチャネルサポートを提供します。") Official Announcement
 
 ### 2. Intuit：AI-powered財務サポートの自動化
 
 IntuitはAmazon Connectを活用して、統合型カスタマーコンタクトセンターを構築しました。税務シーズンには6,000人から11,000人のエージェントまで需要に応じてスケーリングし、従来6ヶ月かかった展開を2週間で完了できるようになりました。年間2億7,500万分の顧客インタラクションを処理し、Contact Lens for Amazon Connectによる正確な通話転写とセンチメント分析を実現しています。
 
 **参考資料：**
-- [Intuit Case Study - Amazon Connect Implementation](https://aws.amazon.com/solutions/case-studies/intuit-contact-center-case-study/)
+- Intuit Case Study - Amazon Connect Implementation
 
 ### 3. Joyful Hands（ベトナム・美容ヘルス製品スタートアップ）
 
 ベトナム・ハノイ拠点の美容・健康製品スタートアップ**Joyful Hands**では、ベトナム語・タイ語・英語の3言語にわたる顧客問い合わせ対応に課題を抱えていました。そこで**BotStar社の多言語対応AIチャットボット**を導入し、各言語で自動応答できる体制を構築しました。その結果、カート放棄率が**35%減少**し、自動対応できる問い合わせ割合も**55%から89%へ向上**、回答速度や会話のしやすさに対する顧客からの好意的なレビューも増加しています。
 
 **参考資料：**
-- [Case Study 1: Multilingual Chatbot Boosts Cross-Border E-Commerce](https://nineten.[ai](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")/ai-chatbots-for-smes-in-southeast-asia-challenges-and-opportunities/)
+- Case Study 1: Multilingual Chatbot Boosts Cross-Border E-Commerce
 
 ### 4. Bali Bliss Homestay（インドネシア・小規模宿泊業）
 
 インドネシア・バリ島にある客室5室の小規模ゲストハウスBali Bliss Homestayでは、海外からの宿泊問い合わせに対し、時差やスタッフ不在のため回答が遅れがちという課題がありました。そこでWhatsAppを活用したチャットボットを地元企業と開発し、予約対応、道順案内、設備に関するFAQ回答を自動化するとともに、滞在後のフィードバック収集も行いました。この導入により、予約確認がスタッフ不在時でも即時発行できるようになり、問い合わせから予約への転換率が21%向上、迅速な応答によって海外ゲストを含む顧客満足度も改善しました。
 
 **参考資料：**
-- [Case Study 2: [WhatsApp](/ja/glossary/WhatsApp/ "電話プランを使用せずにインターネット経由でテキスト、通話、ビデオを送信できる無料のメッセージングアプリで、強力なプライバシー保護機能を備えています。") Chatbot Transforms Guest Experience in Travel](https://nineten.ai/ai-chatbots-for-smes-in-southeast-asia-challenges-and-opportunities/)
+- Case Study 2: [WhatsApp](/ja/glossary/WhatsApp/ "電話プランを使用せずにインターネット経由でテキスト、通話、ビデオを送信できる無料のメッセージングアプリで、強力なプライバシー保護機能を備えています。") Chatbot Transforms Guest Experience in Travel
 
 ### 5. Procosmet（イタリア・ヘアケア製品企業）
 
-イタリアのヘアケア製品メーカーProcosmetでは、事業拡大に伴い注文のキャンセルや変更、返金対応など顧客サポートにかかる負担が増大し、対応遅れや顧客待ち時間の長さが課題となっていました。そこでTidioのAIチャットボット（Lyro [AIエージェント](/ja/glossary/AI-agents/ "AIエージェントは、環境を認識し、推論し、最小限の人間の介入で行動する自律的なソフトウェアシステムです。自動化と意思決定の強化を通じて、さまざまな業界を変革しています。")）をウェブサイトのライブチャットに導入し、問い合わせ対応の自動化と迅速化を図りました。その結果、売上が23%増加し、新規リード獲得数も月100件超に拡大。チャットボット経由のニュースレターでは開封率18～22%・単一キャンペーンで1000ユーロ超のROIを達成し、顧客からのフィードバック評価も5点中3.8から4.7へ向上するなど、大幅な成果を上げています。
+イタリアのヘアケア製品メーカーProcosmetでは、事業拡大に伴い注文のキャンセルや変更、返金対応など顧客サポートにかかる負担が増大し、対応遅れや顧客待ち時間の長さが課題となっていました。そこでTidioのAIチャットボット（Lyro [AIエージェント](/ja/glossary/[AI](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")-agents/ "AIエージェントは、環境を認識し、推論し、最小限の人間の介入で行動する自律的なソフトウェアシステムです。自動化と意思決定の強化を通じて、さまざまな業界を変革しています。")）をウェブサイトのライブチャットに導入し、問い合わせ対応の自動化と迅速化を図りました。その結果、売上が23%増加し、新規リード獲得数も月100件超に拡大。チャットボット経由のニュースレターでは開封率18～22%・単一キャンペーンで1000ユーロ超のROIを達成し、顧客からのフィードバック評価も5点中3.8から4.7へ向上するなど、大幅な成果を上げています。
 
 **参考資料：**
-- [12 Companies Using Chatbots for AI-Generated Customer Service](https://www.tidio.com/blog/companies-that-use-ai-generated-customer-support/#procosmet)
+- 12 Companies Using Chatbots for [AI](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")-Generated Customer Service
 
 #### 各社事例の共通点と差別化ポイント
 

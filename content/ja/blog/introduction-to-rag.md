@@ -53,7 +53,7 @@ RAGを使うことで、AIはもっと柔軟に、賢く情報を提供できま
 
 RAGは「質問理解」「検索（Retrieval）」「生成（Generation）」の3つのステップで答えを作ります。
 
-![RAGの3つのステップ](/images/blog/[RAG](/ja/glossary/RAG/ "RAG([Retrieval-Augmented Generation](/ja/glossary/RAG/ "RAG(Retrieval-Augmented Generation)は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。"))は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。")-123.jpg)
+!RAGの3つのステップ
 
 1. **質問理解**  
 利用者からの質問を生成AIが理解し、どのような情報が必要かを判断します。この段階で、質問の意図や求められている回答の種類を分析します。

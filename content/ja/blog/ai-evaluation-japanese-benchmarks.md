@@ -55,10 +55,10 @@ AI技術の急速な発展により、[大規模言語モデル](/ja/glossary/la
 
 | ベンチマーク名 | 特徴 | 評価内容 |
 |---|---|---|
-| **[JMMLU](https://github.com/nlp-waseda/JMMLU)** | 多分野の知識問題 | 事実に基づく知識と推論能力 |
-| **[JGLUE](https://github.com/yahoojapan/JGLUE)** | 自然言語処理タスク集 | 文脈理解と論理的思考力 |
-| **[JamC-[QA](/ja/glossary/Quality-Assurance--QA-/ "製品の卓越性と信頼性を確保するための品質保証(QA)の方法論、プロセス、ベストプラクティスに関する包括的なガイド。")](https://huggingface.co/datasets/sbintuitions/jamc-[qa](/ja/glossary/Quality-Assurance--QA-/ "製品の卓越性と信頼性を確保するための品質保証(QA)の方法論、プロセス、ベストプラクティスに関する包括的なガイド。"))** | 日本文化特化型 | 日本独自の常識と文化的知識 |
-| **[Nejumi Leaderboard4](https://wandb.[ai](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")/wandb-japan/[llm](/ja/glossary/[Temperature](/ja/glossary/Temperature--LLM-/ "大規模言語モデルにおけるtemperatureパラメータの包括的ガイド - AIテキスト生成におけるランダム性、創造性、出力の一貫性を制御する方法について解説します。")--[LLM](/ja/glossary/large-language-models/ "[大規模言語モデル](/ja/glossary/large-language-models/ "大規模言語モデル(LLM)は、深層学習とトランスフォーマーネットワークを活用した高度なAIシステムで、テキスト生成、翻訳などを実現します。その中核概念、応用分野、課題について理解を深めましょう。")(LLM)は、深層学習とトランスフォーマーネットワークを活用した高度なAIシステムで、テキスト生成、翻訳などを実現します。その中核概念、応用分野、課題について理解を深めましょう。")-/ "大規模言語モデルにおけるtemperatureパラメータの包括的ガイド - AIテキスト生成におけるランダム性、創造性、出力の一貫性を制御する方法について解説します。")-leaderboard)** | 総合評価環境 | 多角的な性能比較 |
+| **JMMLU** | 多分野の知識問題 | 事実に基づく知識と推論能力 |
+| **JGLUE** | 自然言語処理タスク集 | 文脈理解と論理的思考力 |
+| **[JamC-[QA](/ja/glossary/Quality-Assurance--QA-/ "製品の卓越性と信頼性を確保するための品質保証(QA)の方法論、プロセス、ベストプラクティスに関する包括的なガイド。")](/ja/glossary/JamC-[QA](/ja/glossary/Quality-Assurance--QA-/ "製品の卓越性と信頼性を確保するための品質保証(QA)の方法論、プロセス、ベストプラクティスに関する包括的なガイド。")/ "JamC-QAは、文化、歴史、地理、医療など多様な領域にわたる多肢選択式QAにおいて、日本語LLMを評価するための大規模ベンチマークデータセットです。")** | 日本文化特化型 | 日本独自の常識と文化的知識 |
+| **Nejumi Leaderboard4** | 総合評価環境 | 多角的な性能比較 |
 
 ### 国際比較での傾向
 
@@ -98,7 +98,7 @@ AIを効果的に活用するためには、プロンプトの設計と評価が
 
 ## JamC-QA：日本独自の文化知識を測る革新的ベンチマーク
 
-**[JamC-[QA](/ja/glossary/Quality-Assurance--QA-/ "製品の卓越性と信頼性を確保するための品質保証(QA)の方法論、プロセス、ベストプラクティスに関する包括的なガイド。")](https://huggingface.co/datasets/sbintuitions/jamc-[qa](/ja/glossary/Quality-Assurance--QA-/ "製品の卓越性と信頼性を確保するための品質保証(QA)の方法論、プロセス、ベストプラクティスに関する包括的なガイド。"))** は、従来の翻訳ベースのベンチマークでは測れない、真の「日本らしさ」を評価する画期的なツールです。
+**[JamC-[QA](/ja/glossary/Quality-Assurance--QA-/ "製品の卓越性と信頼性を確保するための品質保証(QA)の方法論、プロセス、ベストプラクティスに関する包括的なガイド。")](/ja/glossary/JamC-[QA](/ja/glossary/Quality-Assurance--QA-/ "製品の卓越性と信頼性を確保するための品質保証(QA)の方法論、プロセス、ベストプラクティスに関する包括的なガイド。")/ "JamC-QAは、文化、歴史、地理、医療など多様な領域にわたる多肢選択式QAにおいて、日本語LLMを評価するための大規模ベンチマークデータセットです。")** は、従来の翻訳ベースのベンチマークでは測れない、真の「日本らしさ」を評価する画期的なツールです。
 
 ### 特徴と設計目的
 
@@ -144,7 +144,7 @@ A: はい。FlowHuntのようなノーコードAI構築ツールを使えば、�
 
 ### 高品質なLLMの活用
 
-SmartWebのAIチャットボットは、**[OpenAI社](https://openai.com/[gpt](/ja/glossary/GPT/ "GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。")-5/)** の最新モデルGPT-5、**[Google社](https://deepmind.[google](/ja/glossary/Google/ "AI分野のリーダーとしてのGoogleの進化を探る。Geminiモデル、マルチモーダル理解、高度な推論、そして自動化、クリエイティブ生成、エンタープライズにおける応用を紹介します。")/models/[gemini](/ja/glossary/Gemini/ "Geminiは、テキスト、画像、音声、動画の理解に優れたGoogleの先進的なマルチモーダルAIモデルファミリーです。Gemini 2.5")/)** のGemini 2.5 Pro、**[Anthropic社](https://www.[anthropic](/ja/glossary/Anthropic/ "AnthropicはClaudeファミリーのAIアシスタントを開発することで知られるAI研究企業です。Constitutional [AI](/ja/glossary/artificial-intelligence/ "[人工知能](/ja/glossary/artificial-intelligence/ "人工知能(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(AI)は、コンピュータが人間の学習、問題解決、意思決定を模倣することを可能にする技術です。その用途、種類、影響について理解を深めましょう。")(憲法的AI)を通じて、AI安全性、解釈可能性、倫理的整合性を優先しています。").com/[claude](/ja/glossary/Claude/ "ClaudeはAnthropicが開発した、安全性、信頼性、有用性を重視した先進的なAIアシスタントファミリーです。Claude 4の機能、価格設定、エンタープライズ向けアプリケーションについて解説します。"))** のClaude Sonnet 4など、業界最高水準のLLMを採用しています。これらのモデルは、本記事で紹介した各種ベンチマークで高い性能を実証済みです。
+SmartWebのAIチャットボットは、**OpenAI社** の最新モデルGPT-5、**Google社** のGemini 2.5 Pro、**Anthropic社** のClaude Sonnet 4など、業界最高水準のLLMを採用しています。これらのモデルは、本記事で紹介した各種ベンチマークで高い性能を実証済みです。
 
 ### ハルシネーション問題への実践的対策
 
@@ -162,7 +162,7 @@ SmartWebのAIチャットボットは、**[OpenAI社](https://openai.com/[gpt](/
 
 ### FlowHuntプラットフォームの優位性
 
-SmartWebが採用している**[FlowHunt](https://flowhunt.io/)** は、本記事で解説した最新の評価手法を実践的に活用できる環境を提供しています：
+SmartWebが採用している**[FlowHunt](/ja/glossary/FlowHunt/ "FlowHuntの中核となる概念、機能、統合機能について解説します。この用語集では、ノーコードAIチャットボットおよび自動化プラットフォームに関する詳細な技術的定義を提供します。")** は、本記事で解説した最新の評価手法を実践的に活用できる環境を提供しています：
 
 1. **多様なLLMの比較評価**: 複数のAIモデルの性能を実際に比較テスト可能
 2. **プロンプト最適化機能**: Chain-of-Thoughtプロンプトなど先進手法の活用
