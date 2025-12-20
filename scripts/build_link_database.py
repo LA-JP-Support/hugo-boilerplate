@@ -70,6 +70,15 @@ def generate_keyword_variations(title: str) -> List[Tuple[str, int, str]]:
                     variations.append((content, 950, "acronym"))
                 else:
                     variations.append((content, 800, "parens_content"))
+                
+                # Also add variations of parenthetical content
+                if '、' in content or ',' in content:
+                    # Split by comma or Japanese comma
+                    parts = re.split(r'[、,]', content)
+                    for part in parts:
+                        part = part.strip()
+                        if part and len(part) > 1:
+                            variations.append((part, 750, "parens_part"))
     
     # Handle slashes (e.g., "AI/ML" -> "AI", "ML")
     if '/' in title:
@@ -89,11 +98,28 @@ def generate_keyword_variations(title: str) -> List[Tuple[str, int, str]]:
     if title.endswith('とは'):
         variations.append((title[:-2], 500, "without_toha"))
     
+    # Handle common patterns with （）full-width parentheses
+    if '（' in title and '）' in title:
+        without_fullwidth = re.sub(r'\s*（[^）]*）\s*', '', title).strip()
+        if without_fullwidth and len(without_fullwidth) > 2:
+            variations.append((without_fullwidth, 880, "without_fullwidth_parens"))
+        
+        fullwidth_content = re.findall(r'（([^）]+)）', title)
+        for content in fullwidth_content:
+            content = content.strip()
+            if content and len(content) > 1:
+                variations.append((content, 780, "fullwidth_parens_content"))
+    
     # Handle common English patterns
     if title.endswith(' (AI)') or title.endswith(' (ML)'):
         base = re.sub(r'\s*\([^)]*\)$', '', title)
         if base:
             variations.append((base, 850, "without_ai_ml"))
+    
+    # Add singular/plural variations for common terms
+    if title.endswith('s') and len(title) > 3:
+        singular = title[:-1]
+        variations.append((singular, 400, "singular"))
     
     return variations
 
