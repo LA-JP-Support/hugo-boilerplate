@@ -43,7 +43,7 @@ YouTubeアルゴリズムは、コンテンツ制作の成功において最も�
       title="I Analyzed 93,421 [YouTube](/ja/glossary/YouTube/ "YouTubeは世界最大の動画共有プラットフォームで、あらゆるトピックの動画をアップロード、視聴、共有でき、クリエイターは広告や登録を通じて収益を得ることができます。") Videos To CRACK The Algorithm"
       frameborder="0"
       loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; [web](/ja/glossary/Accessibility--Web-/ "Webアクセシビリティとは、視覚、聴覚、運動機能などの障害を持つ人々が、Webサイトを容易かつ効果的に利用できるように設計する実践のことです。")-share"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen>
     </iframe>
