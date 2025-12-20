@@ -74,22 +74,41 @@ class InternalLinkBuilder:
         return title, url, description
     
     def _get_keyword_variations(self, title: str) -> Set[str]:
-        """Generate keyword variations"""
+        """Generate keyword variations with more intelligent patterns"""
         variations = set()
         variations.add(title)
         
         # Remove parenthetical content
         if '(' in title and ')' in title:
             without_parens = re.sub(r'\s*\([^)]*\)\s*', '', title).strip()
-            if without_parens:
+            if without_parens and len(without_parens) > 2:
                 variations.add(without_parens)
             
-            # Extract parenthetical content
+            # Extract parenthetical content (e.g., "NLP" from "Natural Language Processing (NLP)")
             parens_content = re.findall(r'\(([^)]+)\)', title)
             for content in parens_content:
                 content = content.strip()
-                if content and len(content) > 2:
+                if content and len(content) > 1:
                     variations.add(content)
+        
+        # Handle slashes (e.g., "AI/ML" -> "AI", "ML")
+        if '/' in title:
+            parts = title.split('/')
+            for part in parts:
+                part = part.strip()
+                if part and len(part) > 2:
+                    variations.add(part)
+        
+        # Handle hyphens for compound words
+        if '-' in title and '(' not in title:
+            without_hyphens = title.replace('-', ' ')
+            if without_hyphens != title:
+                variations.add(without_hyphens)
+        
+        # Handle common Japanese patterns
+        # Remove trailing "とは" if present
+        if title.endswith('とは'):
+            variations.add(title[:-2])
         
         return variations
     
@@ -115,11 +134,25 @@ class InternalLinkBuilder:
         for match in re.finditer(r'\[([^\]]+)\]\(([^)]+)\)', body):
             existing_links.add(self._normalize_keyword(match.group(1)))
         
-        # Sort keywords by length (longest first) to avoid partial matches
-        sorted_keywords = sorted(self.glossary_index.items(), key=lambda x: len(x[0]), reverse=True)
+        # Calculate priority for each keyword
+        keyword_priorities = {}
+        for normalized_keyword, (title, url, description) in self.glossary_index.items():
+            priority = len(normalized_keyword) * 2  # Longer terms get higher priority
+            if '(' in title:
+                priority += 50  # Terms with parentheses get bonus
+            if normalized_keyword == self._normalize_keyword(title):
+                priority += 100  # Exact title match gets highest priority
+            keyword_priorities[normalized_keyword] = priority
+        
+        # Sort keywords by priority (highest first), then by length (longest first)
+        sorted_keywords = sorted(
+            self.glossary_index.items(),
+            key=lambda x: (keyword_priorities.get(x[0], 0), len(x[0])),
+            reverse=True
+        )
         
         links_added = 0
-        max_links_per_term = 2
+        max_links_per_term = 3  # Increased from 2
         
         for normalized_keyword, (title, url, description) in sorted_keywords:
             # Skip self-links
@@ -146,17 +179,26 @@ class InternalLinkBuilder:
                 
                 # Check if we're inside a link or code block
                 start_pos = match.start()
-                
                 # Check for existing link
-                before_text = body[:start_pos]
+                before_text = body[:match.start()]
                 if before_text.rstrip().endswith('[') or before_text.rstrip().endswith(']('):
                     return match.group(0)
                 
-                # Check for code block
+                # Check for code block (inline code)
                 if '`' in before_text[-50:] if len(before_text) >= 50 else before_text:
                     backticks_before = before_text.count('`')
                     if backticks_before % 2 != 0:  # Inside code block
                         return match.group(0)
+                
+                # Check for heading (more robust)
+                line_start = before_text.rfind('\n')
+                if line_start == -1:
+                    line_start = 0
+                else:
+                    line_start += 1
+                line_prefix = before_text[line_start:match.start()]
+                if line_prefix.strip().startswith('#'):
+                    return match.group(0)
                 
                 # Limit links per term
                 if term_count >= max_links_per_term:
