@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Add internal links using CSV database
-Uses pre-built link database for intelligent and consistent linking
+Add internal links using CSV database with content protection and Japanese support
+Improved masking for existing links and smart boundary detection for mixed script
 """
 
 import csv
 import re
+import uuid
 from pathlib import Path
 from typing import Dict, List, Tuple
 from collections import defaultdict
@@ -16,24 +17,98 @@ class DatabaseLinkBuilder:
         self.database_csv = database_csv
         self.link_database: List[Dict] = []
         self.load_database()
+        self.debug = False
     
     def load_database(self):
-        """Load link database from CSV"""
-        print(f"Loading link database from {self.database_csv}")
-        
-        if not self.database_csv.exists():
+        """Load link database from CSV and sort by keyword length (longest first)"""
+        if self.database_csv.exists():
+            with open(self.database_csv, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                self.link_database = list(reader)
+            
+            # Sort by keyword length descending
+            self.link_database.sort(key=lambda x: len(x['keyword']), reverse=True)
+            print(f"Loaded {len(self.link_database)} keyword variations")
+        else:
             print(f"Error: Database file not found: {self.database_csv}")
-            return
+
+    def mask_content(self, text: str) -> Tuple[str, Dict[str, str]]:
+        """Mask parts of content that should not be linked using a robust parser"""
+        placeholders = {}
         
-        with open(self.database_csv, 'r', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            self.link_database = list(reader)
+        def create_placeholder(content):
+            key = f"__MASKED_{uuid.uuid4().hex}__"
+            placeholders[key] = content
+            return key
+
+        # 1. Mask Code Blocks (```...```) and Inline Code (`...`) first using Regex
+        text = re.sub(r'```[\s\S]*?```', lambda m: create_placeholder(m.group(0)), text)
+        text = re.sub(r'`[^`\n]+`', lambda m: create_placeholder(m.group(0)), text)
         
-        print(f"Loaded {len(self.link_database)} keyword variations")
-    
+        # 2. Mask Shortcodes {{< ... >}}
+        text = re.sub(r'{{<[\s\S]*?>}}', lambda m: create_placeholder(m.group(0)), text)
+        
+        # 3. Mask HTML Tags
+        text = re.sub(r'<[^>]+>', lambda m: create_placeholder(m.group(0)), text)
+
+        # 4. Mask Headings
+        text = re.sub(r'^#+ .*$', lambda m: create_placeholder(m.group(0)), text, flags=re.MULTILINE)
+
+        # 5. Mask Existing Links [text](url "title")
+        new_text = []
+        i = 0
+        length = len(text)
+        
+        while i < length:
+            if text[i] == '[':
+                bracket_depth = 1
+                j = i + 1
+                text_end = -1
+                
+                while j < length:
+                    if text[j] == '[':
+                        bracket_depth += 1
+                    elif text[j] == ']':
+                        bracket_depth -= 1
+                        if bracket_depth == 0:
+                            text_end = j
+                            break
+                    j += 1
+                
+                if text_end != -1 and text_end + 1 < length and text[text_end + 1] == '(':
+                    paren_depth = 1
+                    k = text_end + 2
+                    url_end = -1
+                    
+                    while k < length:
+                        if text[k] == '(':
+                            paren_depth += 1
+                        elif text[k] == ')':
+                            paren_depth -= 1
+                            if paren_depth == 0:
+                                url_end = k
+                                break
+                        k += 1
+                    
+                    if url_end != -1:
+                        full_link = text[i:url_end+1]
+                        new_text.append(create_placeholder(full_link))
+                        i = url_end + 1
+                        continue
+
+            new_text.append(text[i])
+            i += 1
+            
+        return "".join(new_text), placeholders
+
+    def unmask_content(self, text: str, placeholders: Dict[str, str]) -> str:
+        """Restore masked content"""
+        for key, value in placeholders.items():
+            text = text.replace(key, value)
+        return text
+
     def add_links_to_content(self, content: str, current_url: str) -> Tuple[str, int]:
         """Add internal links to content using database"""
-        # Split into frontmatter and body
         fm_match = re.search(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
         if not fm_match:
             return content, 0
@@ -41,105 +116,70 @@ class DatabaseLinkBuilder:
         frontmatter = fm_match.group(0)
         body = content[len(frontmatter):]
         
-        # Track linked terms
+        masked_body, placeholders = self.mask_content(body)
+        
         linked_terms = defaultdict(int)
-        existing_links = set()
-        
-        # Find existing links
-        for match in re.finditer(r'\[([^\]]+)\]\(([^)]+)\)', body):
-            existing_links.add(match.group(1).lower().strip())
-        
         links_added = 0
-        max_links_per_term = 5  # Increased from 3
-        max_total_links = 500  # Increased from 200
+        max_links_per_term = 3
+        max_total_links = 100
         
-        # Process keywords by priority
+        def has_cjk(s):
+            return any(ord(c) > 0x2E80 for c in s)
+
         for entry in self.link_database:
             if links_added >= max_total_links:
                 break
             
             keyword = entry['keyword']
             url = entry['url']
-            description = entry['description']
-            priority = int(entry['priority'])
             
-            # Skip self-links
             if url == current_url:
                 continue
             
-            # Skip if already linked enough times
             normalized_keyword = keyword.lower().strip()
             if linked_terms[normalized_keyword] >= max_links_per_term:
                 continue
             
-            # Skip if already exists as a link
-            if normalized_keyword in existing_links:
-                continue
-            
-            # Create pattern for whole-word matching
+            if self.debug and keyword in ["自然言語処理", "機械学習", "AI", "チャットボット"]:
+                print(f"Checking keyword: {keyword}")
+
             escaped_keyword = re.escape(keyword)
-            pattern = r'\b(' + escaped_keyword + r')\b'
             
-            term_count = 0
+            if has_cjk(keyword):
+                # CJK keywords: just match the keyword
+                pattern = f'({escaped_keyword})'
+            else:
+                # ASCII keywords: verify boundaries are NOT alphanumeric
+                # This allows "AI" in "AIカスタマー" (Japanese boundary) but not in "MAIL" (English boundary)
+                # (?<![a-zA-Z0-9_]) matches if previous char is NOT alphanumeric
+                # (?![a-zA-Z0-9_]) matches if next char is NOT alphanumeric
+                pattern = r'(?<![a-zA-Z0-9_])(' + escaped_keyword + r')(?![a-zA-Z0-9_])'
             
-            def replace_match(match):
-                nonlocal term_count, links_added
-                
-                start_pos = match.start()
-                before_text = body[:start_pos]
-                
-                # Check for existing link
-                if before_text.rstrip().endswith('[') or '](' in before_text[-10:]:
+            def replace_link(match):
+                nonlocal links_added
+                if linked_terms[normalized_keyword] >= max_links_per_term:
                     return match.group(0)
                 
-                # Check for shortcode
-                last_shortcode_start = before_text.rfind('{{<')
-                if last_shortcode_start != -1:
-                    shortcode_end = body.find('>}}', last_shortcode_start)
-                    if shortcode_end != -1 and shortcode_end > start_pos:
-                        return match.group(0)
-                
-                # Check for code block
-                if '`' in (before_text[-50:] if len(before_text) >= 50 else before_text):
-                    backticks_before = before_text.count('`')
-                    if backticks_before % 2 != 0:
-                        return match.group(0)
-                
-                # Check for heading
-                line_start = before_text.rfind('\n')
-                if line_start == -1:
-                    line_start = 0
-                else:
-                    line_start += 1
-                line_prefix = before_text[line_start:start_pos]
-                if line_prefix.strip().startswith('#'):
-                    return match.group(0)
-                
-                # Limit links per term
-                if term_count >= max_links_per_term:
-                    return match.group(0)
-                
-                term_count += 1
                 links_added += 1
                 linked_terms[normalized_keyword] += 1
                 
-                # Add link with title attribute
-                if description:
-                    escaped_desc = description.replace('"', '&quot;')
-                    return f'[{match.group(1)}]({url} "{escaped_desc}")'
-                else:
-                    return f'[{match.group(1)}]({url})'
+                new_link = f'[{match.group(1)}]({url})'
+                key = f"__MASKED_{uuid.uuid4().hex}__"
+                placeholders[key] = new_link
+                
+                if self.debug:
+                    print(f"  Linked: {keyword} -> {url}")
+                
+                return key
             
-            body = re.sub(pattern, replace_match, body, flags=re.IGNORECASE)
-        
-        return frontmatter + body, links_added
+            masked_body = re.sub(pattern, replace_link, masked_body, flags=re.IGNORECASE)
+
+        final_body = self.unmask_content(masked_body, placeholders)
+        return frontmatter + final_body, links_added
     
     def process_file(self, filepath: Path, dry_run: bool = False) -> int:
-        """Process a single markdown file"""
         try:
             content = filepath.read_text(encoding='utf-8')
-            
-            # Extract current URL
             url_match = re.search(r'^url:\s*["\']?(.+?)["\']?\s*$', content, re.MULTILINE)
             current_url = url_match.group(1) if url_match else ""
             
@@ -153,13 +193,12 @@ class DatabaseLinkBuilder:
             else:
                 print(f"  {filepath.name}: No links added")
                 return 0
-                
         except Exception as e:
             print(f"❌ Error processing {filepath.name}: {e}")
             return 0
     
-    def process_directory(self, content_dir: Path, dry_run: bool = False):
-        """Process all markdown files in directory"""
+    def process_directory(self, content_dir: Path, dry_run: bool = False, debug: bool = False):
+        self.debug = debug
         print(f"\n{'='*60}")
         print(f"Adding links from database to: {content_dir}")
         print(f"Mode: {'DRY RUN' if dry_run else 'LIVE'}")
@@ -184,10 +223,11 @@ class DatabaseLinkBuilder:
         print(f"{'='*60}\n")
 
 def main():
-    parser = argparse.ArgumentParser(description="Add internal links using CSV database")
+    parser = argparse.ArgumentParser(description="Add internal links safely")
     parser.add_argument("content_dir", type=Path, help="Directory containing markdown files")
     parser.add_argument("--database", type=Path, required=True, help="Path to link database CSV")
-    parser.add_argument("--dry-run", action="store_true", help="Preview changes without modifying files")
+    parser.add_argument("--dry-run", action="store_true", help="Preview changes")
+    parser.add_argument("--debug", action="store_true", help="Enable debug logging")
     
     args = parser.parse_args()
     
@@ -195,12 +235,8 @@ def main():
         print(f"Error: Directory not found: {args.content_dir}")
         return
     
-    if not args.database.exists():
-        print(f"Error: Database file not found: {args.database}")
-        return
-    
     builder = DatabaseLinkBuilder(args.database)
-    builder.process_directory(args.content_dir, dry_run=args.dry_run)
+    builder.process_directory(args.content_dir, dry_run=args.dry_run, debug=args.debug)
 
 if __name__ == "__main__":
     main()
