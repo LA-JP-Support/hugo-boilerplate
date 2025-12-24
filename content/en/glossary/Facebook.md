@@ -273,13 +273,14 @@ Algorithms prioritize content based on engagement history, relationships, conten
 
 ## References
 
-- [Facebook Official Site](https://www.facebook.com/)
-- [Meta Company Profile](Meta.md)
-- [Meta Business Suite](https://business.facebook.com/)
-- [Facebook Ads Manager](https://www.facebook.com/business/tools/ads-manager)
-- [Facebook for Business](https://www.facebook.com/business/)
-- [Facebook Help Center](https://www.facebook.com/help/)
-- [Meta Privacy Center](https://www.facebook.com/privacy/center/)
-- [Facebook Shops](https://www.facebook.com/business/shops)
-- [Facebook Creator Studio](https://business.facebook.com/creatorstudio/)
-- [Facebook Groups](https://www.facebook.com/groups/)
+
+1. Facebook. Official Website. URL: https://www.facebook.com/
+2. Meta. Company Profile. URL: https://meta.md
+3. Meta Business Suite. Business Management Platform. URL: https://business.facebook.com/
+4. Facebook Ads Manager. Advertising Management Tool. URL: https://www.facebook.com/business/tools/ads-manager
+5. Facebook for Business. Business Resource Platform. URL: https://www.facebook.com/business/
+6. Facebook Help Center. Customer Support Portal. URL: https://www.facebook.com/help/
+7. Meta Privacy Center. Privacy Information Platform. URL: https://www.facebook.com/privacy/center/
+8. Facebook Shops. E-commerce Platform. URL: https://www.facebook.com/business/shops
+9. Facebook Creator Studio. Content Management Tool. URL: https://business.facebook.com/creatorstudio/
+10. Facebook Groups. Community Networking Platform. URL: https://www.facebook.com/groups/

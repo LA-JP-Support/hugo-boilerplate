@@ -252,18 +252,33 @@ url: "/ja/glossary/Dwell-Time/"
 
 ## 参考文献
 
-- [SEMrush: Dwell Time](https://www.semrush.com/blog/dwell-time/)
-- [Ahrefs: Dwell Time](https://ahrefs.com/seo/glossary/dwell-time)
-- [Backlinko: Dwell Time](https://backlinko.com/hub/seo/dwell-time)
-- [Adsterra: Dwell Time](https://adsterra.com/blog/dwell-time/)
-- [HubSpot: Dwell Time](https://blog.hubspot.com/marketing/dwell-time)
-- [iPullRank: Google Algo Leak](https://ipullrank.com/google-algo-leak)
-- [Google Analytics Documentation](https://support.google.com/analytics/answer/1006253?hl=en)
-- [Simo Ahava: SERP Bounce Time Tracking](https://www.simoahava.com/analytics/track-serp-bounce-time-with-google-tag-manager/)
-- [Wistia: Video Time on Page](https://wistia.com/learn/marketing/video-time-on-page)
-- [Google PageSpeed Insights](https://pagespeed.web.dev/)
-- [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly)
-- [YouTube: How to Measure SEO Dwell Time with Google Analytics](https://www.youtube.com/watch?v=FS0KKzOyUrw)
-- [Bing Webmaster Blog: Building Quality Content](https://blogs.bing.com/webmaster/2011/08/02/how-to-build-quality-content)
-- [Pilot Holding](https://www.pilotholding.com/)
-- [Measureschool](https://measureschool.com/)
+
+1. SEMrush. (n.d.). Dwell Time. SEMrush Blog. URL: https://www.semrush.com/blog/dwell-time/
+
+2. Ahrefs. (n.d.). Dwell Time. Ahrefs SEO Glossary. URL: https://ahrefs.com/seo/glossary/dwell-time
+
+3. Backlinko. (n.d.). Dwell Time. Backlinko SEO Hub. URL: https://backlinko.com/hub/seo/dwell-time
+
+4. Adsterra. (n.d.). Dwell Time. Adsterra Blog. URL: https://adsterra.com/blog/dwell-time/
+
+5. HubSpot. (n.d.). Dwell Time. HubSpot Blog. URL: https://blog.hubspot.com/marketing/dwell-time
+
+6. iPullRank. (n.d.). Google Algo Leak. iPullRank. URL: https://ipullrank.com/google-algo-leak
+
+7. Google. (n.d.). Google Analytics Documentation. Google Support. URL: https://support.google.com/analytics/answer/1006253?hl=en
+
+8. Simo Ahava. (n.d.). SERP Bounce Time Tracking. Simo Ahava Blog. URL: https://www.simoahava.com/analytics/track-serp-bounce-time-with-google-tag-manager/
+
+9. Wistia. (n.d.). Video Time on Page. Wistia Learn. URL: https://wistia.com/learn/marketing/video-time-on-page
+
+10. Google PageSpeed Insights. Web Performance Testing Tool. URL: https://pagespeed.web.dev/
+
+11. Google Mobile-Friendly Test. Mobile Website Testing Tool. URL: https://search.google.com/test/mobile-friendly
+
+12. YouTube. (n.d.). How to Measure SEO Dwell Time with Google Analytics. YouTube Video. URL: https://www.youtube.com/watch?v=FS0KKzOyUrw
+
+13. Bing. (2011). Building Quality Content. Bing Webmaster Blog. URL: https://blogs.bing.com/webmaster/2011/08/02/how-to-build-quality-content
+
+14. Pilot Holding. Business Services Company. URL: https://www.pilotholding.com/
+
+15. Measureschool. Digital Analytics Training Platform. URL: https://measureschool.com/

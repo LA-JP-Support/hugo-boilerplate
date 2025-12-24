@@ -240,11 +240,19 @@ Quick Replies integrate seamlessly with broader conversational AI architectures,
 
 ## References
 
-- [SendPulse: The Quick Replies Element in Chatbots](https://sendpulse.com/knowledge-base/chatbot/quick-replies)
-- [LivePerson: Quick Replies User Guide](https://community.liveperson.com/kb/articles/1397-quick-replies-user-guide)
-- [Messenger Platform Quick Replies Documentation](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies/)
-- [Activechat.ai: Chatbot Buttons vs Quick Replies](https://activechat.ai/news/chatbot-buttons-vs-quick-replies/)
-- [BotPenguin: Quick Reply Glossary](https://botpenguin.com/glossary/quick-reply)
-- [Genesys: Work with Quick Replies in Bot Conversations](https://help.mypurecloud.com/articles/work-with-quick-replies-in-bot-conversations/)
-- [BOTwiki: Quick Reply / Chips](https://botfriends.de/en/blog/botwiki/quick-reply/)
-- [LivePerson Developer Documentation](https://developers.liveperson.com/quick-replies-introduction-to-quick-replies.html)
+
+1. SendPulse. (n.d.). The Quick Replies Element in Chatbots. SendPulse Knowledge Base. URL: https://sendpulse.com/knowledge-base/chatbot/quick-replies
+
+2. LivePerson. (n.d.). Quick Replies User Guide. LivePerson Community. URL: https://community.liveperson.com/kb/articles/1397-quick-replies-user-guide
+
+3. Facebook. (n.d.). Messenger Platform Quick Replies Documentation. Facebook Developers. URL: https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies/
+
+4. Activechat.ai. (n.d.). Chatbot Buttons vs Quick Replies. Activechat.ai News. URL: https://activechat.ai/news/chatbot-buttons-vs-quick-replies/
+
+5. BotPenguin. (n.d.). Quick Reply Glossary. BotPenguin. URL: https://botpenguin.com/glossary/quick-reply
+
+6. Genesys. (n.d.). Work with Quick Replies in Bot Conversations. Genesys Help. URL: https://help.mypurecloud.com/articles/work-with-quick-replies-in-bot-conversations/
+
+7. BOTwiki. (n.d.). Quick Reply / Chips. BOTfriends. URL: https://botfriends.de/en/blog/botwiki/quick-reply/
+
+8. LivePerson. (n.d.). Developer Documentation. LivePerson Developers. URL: https://developers.liveperson.com/quick-replies-introduction-to-quick-replies.html

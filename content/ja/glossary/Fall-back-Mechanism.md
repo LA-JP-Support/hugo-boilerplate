@@ -222,12 +222,13 @@ A: フェイルオーバーはシステムレベルのインフラストラク�
 
 ## 参考文献
 
-- [ChatBot.com: What is fallback interaction?](https://www.chatbot.com/help/interactions/what-is-fallback-interaction/)
-- [BotPenguin: Fallback—Types and Advantages](https://botpenguin.com/glossary/fallback)
-- [Adopt AI: Agent Fallback Mechanisms](https://www.adopt.ai/glossary/agent-fallback-mechanisms)
-- [UX Content: Designing chatbot fallbacks](https://uxcontent.com/designing-chatbots-fallbacks/)
-- [Tencent Cloud: Conversation fallback strategies](https://www.tencentcloud.com/techpedia/127616)
-- [Palantir: Fallback effect in automation](https://palantir.com/docs/foundry/automate/effect-fallback/)
-- [BotPenguin: Human Fallback](https://botpenguin.com/glossary/human-fallback)
-- [TeamDynamix: Study Shows Traditional Chatbots Are Failing](https://www.teamdynamix.com/blog/study-shows-traditional-chatbots-are-failing/)
-- [Forbes: These Chatbot Mistakes Could Cost You Customers](https://www.forbes.com/sites/garydrenik/2025/08/21/these-chatbot-mistakes-could-cost-you-customers/)
+
+1. ChatBot.com. (n.d.). What is fallback interaction?. ChatBot Help.
+2. BotPenguin. (n.d.). Fallback—Types and Advantages. BotPenguin Glossary.
+3. Adopt AI. (n.d.). Agent Fallback Mechanisms. Adopt AI Glossary.
+4. UX Content. (n.d.). Designing chatbot fallbacks. UX Content.
+5. Tencent Cloud. (n.d.). Conversation fallback strategies. Tencent Cloud Techpedia.
+6. Palantir. (n.d.). Fallback effect in automation. Palantir Foundry Docs.
+7. BotPenguin. (n.d.). Human Fallback. BotPenguin Glossary.
+8. TeamDynamix. (n.d.). Study Shows Traditional Chatbots Are Failing. TeamDynamix Blog.
+9. Forbes. (2025). These Chatbot Mistakes Could Cost You Customers. Forbes.

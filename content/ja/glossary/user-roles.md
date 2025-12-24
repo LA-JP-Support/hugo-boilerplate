@@ -211,17 +211,19 @@ url: "/ja/glossary/user-roles/"
 
 ## 参考文献
 
-1. [Google Cloud Documentation: AI Platform Roles and Permissions](https://docs.cloud.google.com/iam/docs/roles-permissions/ml)  
-2. [CloudFuze: A Complete Guide on SaaS User Permission Management](https://www.cloudfuze.com/a-complete-guide-on-saas-user-permission-management/)  
-3. [Feedly Team Roles](https://blog.feedly.com/introducing-team-roles/)  
-4. [Automation Anywhere Documentation: Roles and Permissions](https://docs.automationanywhere.com/bundle/enterprise-v11.3/page/enterprise-cloud/topics/enterprise-cloud/roles-and-permissions.html)  
-5. [BetterCloud: Effectively Managing SaaS User Access Permissions](https://www.bettercloud.com/monitor/effectively-managing-saas-user-access-permissions/)  
-6. [Principle of Least Privilege (POLP) - TechTarget](https://www.techtarget.com/searchsecurity/definition/least-privilege-least-privilege-principle)  
 
-詳細な実装の詳細については、プラットフォームドキュメントとコンプライアンスフレームワークを参照してください。
+1. Google Cloud. (n.d.). AI Platform Roles and Permissions. Google Cloud Documentation.
 
-**外部リーディングとチュートリアル:**
-- [YouTube: Role-Based Access Control (RBAC) Explained](https://www.youtube.com/watch?v=5JvKpEL4Q2I)
-- [Microsoft Learn: What is RBAC?](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview)
+2. CloudFuze. (n.d.). A Complete Guide on SaaS User Permission Management. CloudFuze Blog.
 
-この用語集は、AIチャットボットおよび自動化環境におけるユーザーロールと権限に関する包括的で実用的なリファレンスを提供し、安全でコンプライアンスに準拠した効率的なプラットフォーム運用をサポートします。
+3. Feedly. (n.d.). Team Roles. Feedly Blog.
+
+4. Automation Anywhere. (n.d.). Roles and Permissions. Automation Anywhere Documentation.
+
+5. BetterCloud. (n.d.). Effectively Managing SaaS User Access Permissions. BetterCloud Blog.
+
+6. TechTarget. (n.d.). Principle of Least Privilege (POLP). TechTarget.
+
+7. YouTube. (n.d.). Role-Based Access Control (RBAC) Explained. YouTube.
+
+8. Microsoft. (n.d.). What is RBAC?. Microsoft Learn.

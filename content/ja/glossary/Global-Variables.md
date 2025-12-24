@@ -242,8 +242,9 @@ https://web.powerva.microsoft.com/webchat/bots/12345?UserName=Ana
 
 ## 参考資料
 
-- [W3Schools: Python Global Variables](https://www.w3schools.com/python/python_variables_global.asp)
-- [GeeksforGeeks: Global Variables in C](https://www.geeksforgeeks.org/c/global-variables-in-c/)
-- [Microsoft Copilot Studio: Work with Global Variables](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-variables-bot)
-- [ServiceNow Community: Global Variables Discussion](https://www.servicenow.com/community/developer-forum/global-variables/m-p/2608732#M1014639)
-- [YouTube: Python Global Variables](https://youtu.be/VZW9CGZymqU&list=PLP9IO4UYNF0UgPfkTBECSKIJGdc_9FYZ9)
+
+1. W3Schools. (n.d.). Python Global Variables. W3Schools.
+2. GeeksforGeeks. (n.d.). Global Variables in C. GeeksforGeeks.
+3. Microsoft. (n.d.). Work with Global Variables. Microsoft Copilot Studio.
+4. ServiceNow Community. (n.d.). Global Variables Discussion. ServiceNow Community.
+5. YouTube. (n.d.). Python Global Variables. YouTube.

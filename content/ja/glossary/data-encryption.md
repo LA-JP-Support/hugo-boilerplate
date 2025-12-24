@@ -356,19 +356,20 @@ A: 多くのクラウドプロバイダーはサーバー側暗号化を提供�
 
 ## 参考文献
 
-- [IBM: What is encryption?](https://www.ibm.com/think/topics/encryption)
-- [Kaspersky: What is Data Encryption?](https://www.kaspersky.com/resource-center/definitions/encryption)
-- [Google Cloud: Encryption explained](https://cloud.google.com/learn/what-is-encryption)
-- [GeeksforGeeks: What is Data Encryption?](https://www.geeksforgeeks.org/computer-networks/what-is-data-encryption/)
-- [Fortra: What is Data Encryption?](https://www.fortra.com/blog/what-data-encryption)
-- [Frontegg: How does data encryption work?](https://frontegg.com/blog/data-encryption-what-it-is-how-it-works-and-best-practices)
-- [Sealpath: Types of Encryption Guide](https://www.sealpath.com/blog/types-of-encryption-guide/)
-- [PreyProject: Symmetric vs. Asymmetric Encryption](https://preyproject.com/blog/types-of-encryption-symmetric-or-asymmetric-rsa-or-aes)
-- [Satori Cyber: Data Encryption Algorithms & Best Practices](https://satoricyber.com/data-masking/data-encryption-top-7-algorithms-and-5-best-practices/)
-- [The SSL Store: Types of Encryption Algorithms](https://www.thesslstore.com/blog/types-of-encryption-encryption-algorithms-how-to-choose-the-right-one/)
-- [Splunk: End-to-End Encryption Explained](https://www.splunk.com/en_us/blog/learn/end-to-end-encryption.html)
-- [Mimecast: Data at Rest vs In Transit vs In Use](https://www.mimecast.com/blog/data-in-transit-vs-motion-vs-rest/)
-- [Serverion: Data-at-Rest vs. Data-in-Transit Encryption](https://www.serverion.com/uncategorized/data-at-rest-vs-data-in-transit-encryption-explained/)
-- [CData: What is Data Encryption?](https://www.cdata.com/blog/what-is-data-encryption)
-- [SentinelOne: What is Encryption?](https://www.sentinelone.com/cybersecurity-101/cybersecurity/what-is-encryption/)
-- [Venn: Data Encryption in 2025](https://www.venn.com/learn/data-security/data-encryption/)
+
+1. IBM. (n.d.). What is encryption?. IBM Think Topics.
+2. Kaspersky. (n.d.). What is Data Encryption?. Kaspersky Resource Center.
+3. Google Cloud. (n.d.). Encryption explained. Google Cloud Learn.
+4. GeeksforGeeks. (n.d.). What is Data Encryption?. GeeksforGeeks.
+5. Fortra. (n.d.). What is Data Encryption?. Fortra Blog.
+6. Frontegg. (n.d.). How does data encryption work?. Frontegg Blog.
+7. Sealpath. (n.d.). Types of Encryption Guide. Sealpath Blog.
+8. PreyProject. (n.d.). Symmetric vs. Asymmetric Encryption. PreyProject Blog.
+9. Satori Cyber. (n.d.). Data Encryption Algorithms & Best Practices. Satori Cyber.
+10. The SSL Store. (n.d.). Types of Encryption Algorithms. The SSL Store Blog.
+11. Splunk. (n.d.). End-to-End Encryption Explained. Splunk Blog.
+12. Mimecast. (n.d.). Data at Rest vs In Transit vs In Use. Mimecast Blog.
+13. Serverion. (n.d.). Data-at-Rest vs. Data-in-Transit Encryption Explained. Serverion.
+14. CData. (n.d.). What is Data Encryption?. CData Blog.
+15. SentinelOne. (n.d.). What is Encryption?. SentinelOne Cybersecurity 101.
+16. Venn. (n.d.). Data Encryption in 2025. Venn Learn.

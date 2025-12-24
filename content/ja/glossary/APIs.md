@@ -296,12 +296,13 @@ APIテストは機能性、セキュリティ、パフォーマンスを確認�
 
 ## 参考文献
 
-- [AWS – What is an API? (Application Programming Interface)](https://aws.amazon.com/what-is/api/)
-- [IBM – What is an API (Application Programming Interface)?](https://www.ibm.com/think/topics/api)
-- [Postman – What is API Testing?](https://www.postman.com/api-platform/api-testing/)
-- [Postman – API Security](https://www.postman.com/api-platform/api-security/)
-- [Postman – API Test Automation Best Practices](https://www.postman.com/postman-best-practices/api-test-automation/)
-- [YouTube – Postman API Testing Guide](https://www.youtube.com/watch?v=RYsBgP-RwVI)
-- [AWS: RESTful API Guide](https://aws.amazon.com/what-is/restful-api/)
-- [Postman: API-First Guide](https://www.postman.com/api-first/)
-- [IBM API Connect Developer Portal](https://www.ibm.com/products/api-connect/developer-portal)
+
+1. AWS. (n.d.). What is an API? (Application Programming Interface). AWS.
+2. IBM. (n.d.). What is an API (Application Programming Interface)?. IBM Think Topics.
+3. Postman. (n.d.). What is API Testing?. Postman.
+4. Postman. (n.d.). API Security. Postman.
+5. Postman. (n.d.). API Test Automation Best Practices. Postman.
+6. YouTube. (n.d.). Postman API Testing Guide. YouTube.
+7. AWS. (n.d.). RESTful API Guide. AWS.
+8. Postman. (n.d.). API-First Guide. Postman.
+9. IBM. (n.d.). API Connect Developer Portal. IBM.

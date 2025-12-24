@@ -232,16 +232,29 @@ Network management, service provisioning, billing systems, troubleshooting autom
 
 ## References
 
-- [GeeksforGeeks: Rule-Based System in AI](https://www.geeksforgeeks.org/artificial-intelligence/rule-based-system-in-ai/)
-- [Nected: Rule-Based Inference Engine](https://www.nected.ai/us/blog-us/rule-based-inference-engine)
-- [WeAreBrain: Rule-based AI vs. Machine Learning](https://wearebrain.com/blog/rule-based-ai-vs-machine-learning-whats-the-difference/)
-- [Sapien: Rule-Based System Glossary](https://www.sapien.io/glossary/definition/rule-based-system)
-- [DeepAI: Rule-Based System Definition](https://deepai.org/machine-learning-glossary-and-terms/rule-based-system)
-- [MYCIN Case Study (Wikipedia)](https://en.wikipedia.org/wiki/Mycin)
-- [IBM: Types of Chatbots](https://www.ibm.com/think/topics/chatbot-types)
-- [Expert Systems (GeeksforGeeks)](https://www.geeksforgeeks.org/artificial-intelligence/expert-systems/)
-- [Business Rules Management (Nected)](https://www.nected.ai/us/blog-us/business-rules-management-system)
-- [Rules Engine Design Pattern (Nected)](https://www.nected.ai/us/blog-us/rules-engine-design-pattern)
-- [Production Systems and Rule-Based Inference (PSU PDF)](https://acs.ist.psu.edu/papers/jonesR03b.pdf)
-- [Cloud-Based Rule Engine (Nected)](https://www.nected.ai/us/blog-us/cloud-based-rule-engine)
-- [Dynamic Pricing Rule Engine (Nected)](https://www.nected.ai/us/blog-us/dynamic-pricing-rule-engine)
+
+1. GeeksforGeeks. (n.d.). Rule-Based System in AI. GeeksforGeeks.
+
+2. Nected. (n.d.). Rule-Based Inference Engine. Nected Blog.
+
+3. WeAreBrain. (n.d.). Rule-Based AI vs. Machine Learning: What's the Difference?. WeAreBrain Blog.
+
+4. Sapien. (n.d.). Rule-Based System Glossary. Sapien Glossary.
+
+5. DeepAI. (n.d.). Rule-Based System Definition. DeepAI Machine Learning Glossary.
+
+6. Wikipedia. (n.d.). MYCIN Case Study. Wikipedia.
+
+7. IBM. (n.d.). Types of Chatbots. IBM Think Topics.
+
+8. GeeksforGeeks. (n.d.). Expert Systems. GeeksforGeeks.
+
+9. Nected. (n.d.). Business Rules Management. Nected Blog.
+
+10. Nected. (n.d.). Rules Engine Design Pattern. Nected Blog.
+
+11. Pennsylvania State University. (n.d.). Production Systems and Rule-Based Inference. PSU Research Paper.
+
+12. Nected. (n.d.). Cloud-Based Rule Engine. Nected Blog.
+
+13. Nected. (n.d.). Dynamic Pricing Rule Engine. Nected Blog.

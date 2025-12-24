@@ -250,13 +250,23 @@ Well-designed watermarks remain imperceptible, maintaining full quality. Trade-o
 
 ## References
 
-- [EY: Identifying AI Generated Content in the Digital Age - The Role of Watermarking (2024)](https://www.ey.com/content/dam/ey-unified-site/ey-com/en-in/insights/ai/documents/ey-identifying-ai-generated-content-in-the-digital-age-the-role-of-watermarking.pdf)
-- [TechTarget: What is AI Watermarking?](https://www.techtarget.com/searchenterpriseai/definition/AI-watermarking)
-- [Brookings: Detecting AI Fingerprints - A Guide to Watermarking and Beyond](https://www.brookings.edu/articles/detecting-ai-fingerprints-a-guide-to-watermarking-and-beyond/)
-- [ITU: AI Watermarking - A Watershed for Multimedia Authenticity](https://www.itu.int/hub/2024/05/ai-watermarking-a-watershed-for-multimedia-authenticity/)
-- [CertLibrary: Understanding AI Watermarking - Definition and Significance](https://www.certlibrary.com/blog/understanding-ai-watermarking-definition-and-significance/)
-- [Access Now: Watermarking & Generative AI - What, How, Why (and Why Not)](https://www.accessnow.org/watermarking-generative-ai-what-how-why-and-why-not/)
-- [Hugging Face: AI Watermarking 101](https://huggingface.co/blog/watermarking)
-- [Google DeepMind: SynthID - Watermarking AI-Generated Images](https://www.deepmind.com/blog/synthid-watermarking-ai-generated-images)
-- [C2PA: Coalition for Content Provenance and Authenticity](https://c2pa.org/)
-- [ITU: AI for Good Global Summit](https://aiforgood.itu.int/summit24/programme/)
+
+1. EY. (2024). Identifying AI Generated Content in the Digital Age - The Role of Watermarking. EY Insights.
+
+2. TechTarget. (n.d.). What is AI Watermarking?. TechTarget.
+
+3. Brookings. (n.d.). Detecting AI Fingerprints - A Guide to Watermarking and Beyond. Brookings.
+
+4. ITU. (2024). AI Watermarking - A Watershed for Multimedia Authenticity. ITU Hub.
+
+5. CertLibrary. (n.d.). Understanding AI Watermarking - Definition and Significance. CertLibrary Blog.
+
+6. Access Now. (n.d.). Watermarking & Generative AI - What, How, Why (and Why Not). Access Now.
+
+7. Hugging Face. (n.d.). AI Watermarking 101. Hugging Face Blog.
+
+8. Google DeepMind. (n.d.). SynthID - Watermarking AI-Generated Images. DeepMind Blog.
+
+9. C2PA. Coalition for Content Provenance and Authenticity. URL: https://c2pa.org/
+
+10. ITU. AI for Good Global Summit. URL: https://aiforgood.itu.int/summit24/programme/

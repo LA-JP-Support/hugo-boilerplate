@@ -263,19 +263,20 @@ LangChainは基盤となるフレームワークです。LangFlowはLangChainの
 
 ## 参考文献
 
-- [LangFlow公式ドキュメント](https://docs.langflow.org/)
-- [LangFlow公式ウェブサイト](https://www.langflow.org/)
-- [LangFlow概念:コンポーネント](https://docs.langflow.org/concepts-components)
-- [LangFlow概念:プレイグラウンド](https://docs.langflow.org/concepts-playground)
-- [LangFlowクイックスタートガイド](https://docs.langflow.org/get-started-quickstart)
-- [LangFlowフロー構築チュートリアル](https://docs.langflow.org/concepts-flows)
-- [LangFlowエージェントドキュメント](https://docs.langflow.org/agents)
-- [LangFlow MCPサーバー](https://docs.langflow.org/mcp-server)
-- [LangFlow MCPクライアント](https://docs.langflow.org/mcp-client)
-- [LangFlowカスタムコンポーネントガイド](https://docs.langflow.org/components-custom-components)
-- [Cohorte: LangFlowビジュアルガイド](https://www.cohorte.co/blog/langflow-a-visual-guide-to-building-llm-apps-with-langchain)
-- [Analytics Vidhya: LangFlow UIガイド](https://www.analyticsvidhya.com/blog/2023/06/langflow-ui-for-langchain-to-develop-applications-with-llms/)
-- [YouTube: LangFlow UIデモ](https://www.youtube.com/watch?v=18b7u_e5tnM)
-- [LangFlow GitHubリポジトリ](https://github.com/langflow-ai/langflow)
-- [FlowiseAI代替](https://flowiseai.com/)
-- [IBM LangGraphドキュメント](https://www.ibm.com/think/topics/langgraph)
+
+1. LangFlow. (n.d.). LangFlow公式ドキュメント. Official Documentation.
+2. LangFlow. (n.d.). LangFlow公式ウェブサイト. Official Website.
+3. LangFlow. (n.d.). LangFlow概念:コンポーネント. Official Documentation.
+4. LangFlow. (n.d.). LangFlow概念:プレイグラウンド. Official Documentation.
+5. LangFlow. (n.d.). LangFlowクイックスタートガイド. Official Documentation.
+6. LangFlow. (n.d.). LangFlowフロー構築チュートリアル. Official Documentation.
+7. LangFlow. (n.d.). LangFlowエージェントドキュメント. Official Documentation.
+8. LangFlow. (n.d.). LangFlow MCPサーバー. Official Documentation.
+9. LangFlow. (n.d.). LangFlow MCPクライアント. Official Documentation.
+10. LangFlow. (n.d.). LangFlowカスタムコンポーネントガイド. Official Documentation.
+11. Cohorte. (2023). LangFlowビジュアルガイド. Cohorte Blog.
+12. Analytics Vidhya. (2023). LangFlow UI Guide. Analytics Vidhya Blog.
+13. YouTube. (n.d.). LangFlow UI Demo. YouTube Video.
+14. LangFlow. (n.d.). LangFlow GitHub Repository. GitHub.
+15. FlowiseAI. (n.d.). FlowiseAI Alternative. URL: https://flowiseai.com/
+16. IBM. (n.d.). IBM LangGraph Documentation. URL: https://www.ibm.com/think/topics/langgraph

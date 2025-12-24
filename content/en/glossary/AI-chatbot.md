@@ -215,11 +215,19 @@ The trajectory is clear: AI chatbots are evolving from simple automated responde
 
 ## References
 
-- [Comprehensive Guide to AI Chatbots: What You Should Know – LivePerson](https://www.liveperson.com/resources/reports/ai-chatbots/)
-- [What is a chatbot? Complete Guide 2025 – Chatbot.com](https://www.chatbot.com/blog/chatbot-guide/)
-- [IBM: What Is a Chatbot?](https://www.ibm.com/think/topics/chatbots)
-- [How Chatbots Work – Chatbot.com](https://www.chatbot.com/blog/chatbot-guide/)
-- [What is a chatbot? – AWS](https://aws.amazon.com/what-is/chatbot/)
-- [Complete Chatbot Guide – Chatbot.com](https://www.chatbot.com/blog/chatbot-guide/#types)
-- [How to create a chatbot – LumApps](https://www.lumapps.com/platform/chatbot/create-chatbot)
-- [AI Chatbot Architecture – DevRev](https://devrev.ai/blog/how-do-chatbots-work)
+
+1. LivePerson. (n.d.). Comprehensive Guide to AI Chatbots: What You Should Know. LivePerson Reports.
+
+2. Chatbot.com. (2025). What is a chatbot? Complete Guide 2025. Chatbot.com Blog.
+
+3. IBM. (n.d.). What Is a Chatbot?. IBM Think Topics.
+
+4. Chatbot.com. (n.d.). How Chatbots Work. Chatbot.com Blog.
+
+5. AWS. (n.d.). What is a chatbot?. AWS Documentation.
+
+6. Chatbot.com. (n.d.). Complete Chatbot Guide. Chatbot.com Blog.
+
+7. LumApps. (n.d.). How to create a chatbot. LumApps Platform.
+
+8. DevRev. (n.d.). AI Chatbot Architecture. DevRev Blog.

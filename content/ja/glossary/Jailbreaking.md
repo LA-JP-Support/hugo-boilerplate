@@ -358,17 +358,18 @@ DANバリエーション、トークン密輸、エンコーディング、マ�
 
 ## 参考文献
 
-- [Microsoft Security Blog: AI Jailbreaks and Mitigation](https://www.microsoft.com/en-us/security/blog/2024/06/04/ai-jailbreaks-what-they-are-and-how-they-can-be-mitigated/)
-- [Microsoft Security Blog: Jailbreaking is (Mostly) Simpler Than You Think](https://www.microsoft.com/en-us/msrc/blog/2025/03/jailbreaking-is-mostly-simpler-than-you-think)
-- [arXiv: Jailbreaking is (Mostly) Simpler Than You Think](https://arxiv.org/abs/2503.05264)
-- [arXiv: Jailbreaking and Mitigation in LLMs](https://arxiv.org/html/2410.15236v1)
-- [Abnormal Security: AI Jailbreak Glossary](https://abnormal.ai/ai-glossary/ai-jailbreak)
-- [IBM Think: AI Jailbreak Insights](https://www.ibm.com/think/insights/ai-jailbreak)
-- [Unit42: Deceptive Delight Attack](https://unit42.paloaltonetworks.com/jailbreak-llms-through-camouflage-distraction/)
-- [IRONSCALES: AI Jailbreaking Glossary](https://ironscales.com/glossary/what-is-ai-jailbreaking)
-- [Leanware: AI Guardrails](https://www.leanware.co/insights/ai-guardrails)
-- [Lakera: Prompt Injection Guide](https://www.lakera.ai/blog/guide-to-prompt-injection)
-- [Confident AI: How to Jailbreak LLMs](https://www.confident-ai.com/blog/how-to-jailbreak-llms-one-step-at-a-time)
-- [TrojAI: What is AI Jailbreaking](https://troj.ai/blog/what-is-ai-jailbreaking)
-- [Simon Willison: Prompt Injection vs Jailbreaking](https://simonwillison.net/2024/Mar/5/prompt-injection-jailbreaking/)
-- [PyRIT: AI Red Team Toolkit](https://github.com/Azure/PyRIT)
+
+1. Microsoft. (2024). AI Jailbreaks and Mitigation. Microsoft Security Blog.
+2. Microsoft. (2025). Jailbreaking is (Mostly) Simpler Than You Think. Microsoft Security Blog.
+3. arXiv. (2025). Jailbreaking is (Mostly) Simpler Than You Think. arXiv.
+4. arXiv. (2024). Jailbreaking and Mitigation in LLMs. arXiv.
+5. Abnormal Security. (n.d.). AI Jailbreak Glossary. Abnormal Security.
+6. IBM. (n.d.). AI Jailbreak Insights. IBM Think.
+7. Unit42. (n.d.). Deceptive Delight Attack. Palo Alto Networks.
+8. IRONSCALES. (n.d.). AI Jailbreaking Glossary. IRONSCALES.
+9. Leanware. (n.d.). AI Guardrails. Leanware.
+10. Lakera. (n.d.). Prompt Injection Guide. Lakera.
+11. Confident AI. (n.d.). How to Jailbreak LLMs. Confident AI.
+12. TrojAI. (n.d.). What is AI Jailbreaking. TrojAI.
+13. Simon Willison. (2024). Prompt Injection vs Jailbreaking. Simon Willison.
+14. PyRIT. (n.d.). AI Red Team Toolkit. URL: https://github.com/Azure/PyRIT

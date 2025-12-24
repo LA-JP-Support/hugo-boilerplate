@@ -213,19 +213,35 @@ Enforce content security policies; use allow-lists for sources.
 
 ## References
 
-- [OWASP GenAI Security Project – LLM01: Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)
-- [MITRE ATLAS: Indirect Prompt Injection](https://atlas.mitre.org/techniques/AML.T0051.001)
-- [Microsoft: Defense Against Indirect Prompt Injection](https://www.microsoft.com/en-us/msrc/blog/2025/07/how-microsoft-defends-against-indirect-prompt-injection-attacks)
-- [Microsoft: Spotlighting Research](https://arxiv.org/pdf/2403.14720)
-- [IBM: What Is a Prompt Injection Attack?](https://www.ibm.com/think/topics/prompt-injection)
-- [Google Security: Mitigating Prompt Injection Attacks](https://security.googleblog.com/2025/06/mitigating-prompt-injection-attacks.html)
-- [SentinelOne: Indirect Prompt Injection Guide](https://www.sentinelone.com/cybersecurity-101/cybersecurity/indirect-prompt-injection-attacks/)
-- [CrowdStrike: AI Security](https://www.crowdstrike.com/en-us/blog/indirect-prompt-injection-attacks-hidden-ai-risks/)
-- [Pillar Security: Anatomy of an Indirect Prompt Injection](https://www.pillar.security/blog/anatomy-of-an-indirect-prompt-injection)
-- [Cornell: Prompt Injection Against LLM-Integrated Applications](https://arxiv.org/abs/2306.05499)
-- [OWASP: LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)
-- [Kudelski Security: Reducing Impact Through Design](https://research.kudelskisecurity.com/2023/05/25/reducing-the-impact-of-prompt-injection-attacks-through-design/)
-- [Splunk: Prompt Injection](https://www.splunk.com/en_us/blog/learn/prompt-injection.html)
-- [NYT: Job Applicant Hid Code in Headshot](https://www.nytimes.com/2025/10/07/business/ai-chatbot-prompts-resumes.html)
-- [Spikee AI Security Tool](https://spikee.ai/)
-- [Rebuff: Prompt Injection Detector](https://github.com/protectai/rebuff)
+
+1. OWASP. (n.d.). GenAI Security Project – LLM01: Prompt Injection. OWASP.
+
+2. MITRE. (n.d.). ATLAS: Indirect Prompt Injection. MITRE.
+
+3. Microsoft. (2025). Defense Against Indirect Prompt Injection. Microsoft MSRC Blog.
+
+4. Microsoft. (n.d.). Spotlighting Research. arXiv.
+
+5. IBM. (n.d.). What Is a Prompt Injection Attack?. IBM Think Topics.
+
+6. Google. (2025). Mitigating Prompt Injection Attacks. Google Security Blog.
+
+7. SentinelOne. (n.d.). Indirect Prompt Injection Guide. SentinelOne Cybersecurity 101.
+
+8. CrowdStrike. (n.d.). AI Security. CrowdStrike Blog.
+
+9. Pillar Security. (n.d.). Anatomy of an Indirect Prompt Injection. Pillar Security Blog.
+
+10. Cornell University. (n.d.). Prompt Injection Against LLM-Integrated Applications. arXiv.
+
+11. OWASP. (n.d.). LLM Prompt Injection Prevention Cheat Sheet. OWASP Cheat Sheets Series.
+
+12. Kudelski Security. (2023). Reducing the Impact of Prompt Injection Attacks Through Design. Kudelski Security Research.
+
+13. Splunk. (n.d.). Prompt Injection. Splunk Blog.
+
+14. New York Times. (2025). Job Applicant Hid Code in Headshot. New York Times.
+
+15. Spikee AI. AI Security Tool. URL: https://spikee.ai/
+
+16. Rebuff. Prompt Injection Detector. URL: https://github.com/protectai/rebuff

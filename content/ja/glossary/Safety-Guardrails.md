@@ -286,17 +286,18 @@ Amazon Bedrockは包括的なガードレール機能を提供します:
 
 ## 参考文献
 
-- [Portkey: AI Guardrails Complete Guide](https://portkey.ai/blog/what-are-ai-guardrails)
-- [Squirro: CISO's Guide to AI Safety Guardrails](https://squirro.com/squirro-blog/ai-safety-guardrails)
-- [DEV.to: AI Guardrails Comprehensive Guide](https://dev.to/techstuff/ai-guardrails-a-comprehensive-guide-from-basic-to-advanced-implementation-39jk)
-- [Amazon Bedrock Guardrails Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html)
-- [IBM: What Are AI Guardrails?](https://www.ibm.com/think/topics/ai-guardrails)
-- [Coralogix: Why AI Guardrails Are Necessary](https://coralogix.com/ai-blog/understanding-why-ai-guardrails-are-necessary-ensuring-ethical-and-responsible-ai-use/)
-- [AltexSoft: AI Guardrails in Agentic Systems](https://www.altexsoft.com/blog/ai-guardrails/)
-- [Squirro: GenAI Attack Surface](https://squirro.com/squirro-blog/what-is-genai-attack-surface)
-- [IBM Cost of a Data Breach Report 2025](https://www.ibm.com/reports/data-breach)
-- [OpenAI Moderation API](https://platform.openai.com/docs/guides/moderation)
-- [Google Perspective API](https://perspectiveapi.com/)
-- [AWS Comprehend for PII Detection](https://aws.amazon.com/comprehend/)
-- [Squirro Enterprise GenAI Platform](https://squirro.com/squirro-enterprise-genai-platform)
-- [Prompt Injection Attack Guide](https://www.promptingguide.ai/risks/adversarial)
+
+1. Portkey. (n.d.). AI Guardrails Complete Guide. Portkey Blog.
+2. Squirro. (n.d.). CISO's Guide to AI Safety Guardrails. Squirro Blog.
+3. DEV.to. (n.d.). AI Guardrails Comprehensive Guide. DEV.to.
+4. Amazon. (n.d.). Bedrock Guardrails Documentation. Amazon Web Services Documentation.
+5. IBM. (n.d.). What Are AI Guardrails?. IBM Think Topics.
+6. Coralogix. (n.d.). Why AI Guardrails Are Necessary. Coralogix AI Blog.
+7. AltexSoft. (n.d.). AI Guardrails in Agentic Systems. AltexSoft Blog.
+8. Squirro. (n.d.). GenAI Attack Surface. Squirro Blog.
+9. IBM. (2025). Cost of a Data Breach Report. IBM Reports.
+10. OpenAI. (n.d.). Moderation API. URL: https://platform.openai.com/docs/guides/moderation
+11. Google Perspective API. URL: https://perspectiveapi.com/
+12. AWS Comprehend. PII Detection Service. URL: https://aws.amazon.com/comprehend/
+13. Squirro Enterprise GenAI Platform. URL: https://squirro.com/squirro-enterprise-genai-platform
+14. Prompt Injection Attack Guide. URL: https://www.promptingguide.ai/risks/adversarial

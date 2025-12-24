@@ -278,18 +278,19 @@ Boomi AtomSphere, Celigo Integrator.io, Cleo Integration Cloud, SAP Integration 
 
 ## References
 
-- [IBM: What Is API Integration?](https://www.ibm.com/topics/api-integration)
-- [SAP: What API integration is and how it transforms enterprise IT](https://www.sap.com/insights/api-integration.html)
-- [Postman: What is API Integration?](https://www.postman.com/api-platform/api-integration/)
-- [Cleo: What is API Integration & Why Businesses Can't Live Without it](https://www.cleo.com/blog/api-integration)
-- [Tray.io: What is an API integration? (for non-technical people)](https://tray.io/blog/what-is-an-api-integration)
-- [Informatica: What is API Integration?](https://www.informatica.com/products/application-integration/api-integration.html)
-- [Astera: What is API Integration? A Guide](https://www.astera.com/type/blog/api-integration/)
-- [ONEiO: What is an API integration? Types, benefits and alternatives](https://www.oneio.cloud/blog/what-is-api-integration)
-- [Solutions Review: The Best API Integration Platforms, Software and Tools](https://solutionsreview.com/data-integration/the-best-api-integration-platforms-software-and-tools/)
-- [Cleo: Leading ERP Integration Tools](https://www.cleo.com/blog/top-erp-integration-tools)
-- [The CTO Club: Best API Integration Tools](https://thectoclub.com/tools/best-api-integration-tools/)
-- [Postman: What is an API? (YouTube)](https://www.youtube.com/watch?v=s7wmiS2mSXY)
-- [IBM Technology: API Integration Explained (YouTube)](https://www.youtube.com/watch?v=GH5q-_vF5nE)
-- [Cleo Integration Cloud Overview (YouTube)](https://www.youtube.com/watch?v=_4A3A2q5RjQ)
-- [BrowserStack: Types of API Integration](https://www.browserstack.com/guide/api-integration-tool#toc6)
+
+1. IBM. (n.d.). What Is API Integration?. IBM Topics.
+2. SAP. (n.d.). What API Integration is and How it Transforms Enterprise IT. SAP Insights.
+3. Postman. (n.d.). What is API Integration?. Postman API Platform.
+4. Cleo. (n.d.). What is API Integration & Why Businesses Can't Live Without it. Cleo Blog.
+5. Tray.io. (n.d.). What is an API Integration? (for Non-Technical People). Tray.io Blog.
+6. Informatica. (n.d.). What is API Integration?. Informatica Products.
+7. Astera. (n.d.). What is API Integration? A Guide. Astera Blog.
+8. ONEiO. (n.d.). What is an API Integration? Types, Benefits and Alternatives. ONEiO Blog.
+9. Solutions Review. (n.d.). The Best API Integration Platforms, Software and Tools. Solutions Review.
+10. Cleo. (n.d.). Leading ERP Integration Tools. Cleo Blog.
+11. The CTO Club. (n.d.). Best API Integration Tools. The CTO Club.
+12. Postman. (n.d.). What is an API?. YouTube.
+13. IBM Technology. (n.d.). API Integration Explained. YouTube.
+14. Cleo. (n.d.). Cleo Integration Cloud Overview. YouTube.
+15. BrowserStack. (n.d.). Types of API Integration. BrowserStack Guide.

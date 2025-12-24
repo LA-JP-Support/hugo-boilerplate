@@ -189,11 +189,19 @@ term: こうりじゅようよそく
 
 ## 参考文献
 
-- [Demand Forecasting Best Practices - McKinsey & Company](https://www.mckinsey.com/industries/retail/our-insights/demand-forecasting-best-practices)
-- [Retail Analytics and Forecasting - MIT Sloan Management Review](https://sloanreview.mit.edu/article/retail-analytics-forecasting)
-- [Machine Learning for Retail Demand Forecasting - Harvard Business Review](https://hbr.org/2021/03/machine-learning-retail-demand-forecasting)
-- [Supply Chain Forecasting Fundamentals - Council of Supply Chain Management Professionals](https://cscmp.org/supply-chain-forecasting-fundamentals)
-- [Advanced Forecasting Techniques - International Journal of Forecasting](https://www.journals.elsevier.com/international-journal-of-forecasting)
-- [Retail Technology and Analytics - National Retail Federation](https://nrf.com/research/retail-technology-analytics)
-- [Demand Planning and Forecasting - APICS Supply Chain Operations Reference](https://www.ascm.org/learning-development/certifications-credentials/apics-supply-chain-operations-reference-scor-model)
-- [AI in Retail Forecasting - Gartner Research](https://www.gartner.com/en/supply-chain/insights/ai-retail-forecasting)
+
+1. McKinsey & Company. (n.d.). Demand Forecasting Best Practices. McKinsey Insights.
+
+2. MIT Sloan Management Review. (n.d.). Retail Analytics and Forecasting. MIT Sloan Management Review.
+
+3. Harvard Business Review. (2021). Machine Learning for Retail Demand Forecasting. Harvard Business Review.
+
+4. Council of Supply Chain Management Professionals. (n.d.). Supply Chain Forecasting Fundamentals. CSCMP.
+
+5. International Journal of Forecasting. (n.d.). Advanced Forecasting Techniques. Elsevier.
+
+6. National Retail Federation. (n.d.). Retail Technology and Analytics. NRF Research.
+
+7. APICS. (n.d.). Demand Planning and Forecasting. ASCM Supply Chain Operations Reference.
+
+8. Gartner Research. (n.d.). AI in Retail Forecasting. Gartner Supply Chain Insights.

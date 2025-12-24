@@ -28,6 +28,7 @@ Usage:
 
 import argparse
 import ast
+import csv
 import json
 import re
 from pathlib import Path
@@ -112,13 +113,40 @@ def get_keyword_variations(keyword: str) -> List[str]:
 class GlossaryDatabase:
     """Manages glossary entries and their metadata."""
     
-    def __init__(self, glossary_dir: Path, lang: str = "en"):
+    def __init__(self, glossary_dir: Path, lang: str = "en", denylist_csv: Optional[Path] = None):
         self.glossary_dir = glossary_dir
         self.lang = lang
         self.entries: Dict[str, Dict] = {}  # slug -> {title, url, description}
         # Index for fast lookup: normalized_keyword -> slug
         self.keyword_index: Dict[str, str] = {}
+        self.denylist_csv = denylist_csv
+        self.deny_normalized: Set[str] = set()
+        self._load_denylist()
         self.load_entries()
+
+    def _load_denylist(self) -> None:
+        deny_path = self.denylist_csv
+        if deny_path is None:
+            deny_path = PROJECT_ROOT / "databases" / f"danger_terms_{self.lang}.csv"
+
+        if not deny_path.exists():
+            return
+
+        try:
+            with open(deny_path, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    keyword = (row.get('keyword') or '').strip()
+                    normalized = (row.get('normalized') or '').strip()
+                    base = normalized or keyword
+                    if not base:
+                        continue
+                    self.deny_normalized.add(normalize_keyword(base))
+
+            if self.deny_normalized:
+                print(f"🚫 Loaded {len(self.deny_normalized)} danger terms from {deny_path}")
+        except Exception as e:
+            print(f"⚠️  Failed to load danger terms from {deny_path}: {e}")
     
     def load_entries(self):
         """Load all glossary entries."""
@@ -157,9 +185,12 @@ class GlossaryDatabase:
                     }
                     
                     # Build keyword index with variations
-                    for variation in get_keyword_variations(title):
-                        if variation not in self.keyword_index:
-                            self.keyword_index[variation] = slug.lower()
+                    if normalize_keyword(title) not in self.deny_normalized:
+                        for variation in get_keyword_variations(title):
+                            if normalize_keyword(variation) in self.deny_normalized:
+                                continue
+                            if variation not in self.keyword_index:
+                                self.keyword_index[variation] = slug.lower()
                     
             except Exception as e:
                 print(f"⚠️  Error loading {md_file.name}: {e}")
@@ -177,8 +208,12 @@ class GlossaryDatabase:
     
     def find_by_keyword(self, keyword: str) -> Optional[Dict]:
         """Find glossary entry by keyword with smart matching."""
+        if normalize_keyword(keyword) in self.deny_normalized:
+            return None
         # Try all variations
         for variation in get_keyword_variations(keyword):
+            if normalize_keyword(variation) in self.deny_normalized:
+                continue
             if variation in self.keyword_index:
                 slug = self.keyword_index[variation]
                 return self.entries.get(slug)
@@ -209,6 +244,12 @@ class TooltipConverter:
         
         # Clean keyword
         keyword = keyword_raw.strip().strip('*').strip('`')
+
+        # Denylist: never convert denied keywords
+        if normalize_keyword(keyword) in self.glossary_db.deny_normalized:
+            self.skipped_count += 1
+            self.skipped_keywords.append(keyword)
+            return keyword
         
         # Find matching glossary entry
         entry = self.glossary_db.find_by_keyword(keyword)
@@ -258,6 +299,11 @@ class InternalLinkEnricher:
         
         # Protect existing markdown links
         result = INTERNAL_LINK_PATTERN.sub(protect_match, result)
+
+        # Protect HTML comments and tags (avoid inserting links inside attributes)
+        result = re.sub(r'<!--[\s\S]*?-->', protect_match, result)
+        result = re.sub(r'<(script|style)\b[\s\S]*?</\1>', protect_match, result, flags=re.IGNORECASE)
+        result = re.sub(r'<[^>]+?>', protect_match, result)
         
         # Protect code blocks
         result = re.sub(r'```[\s\S]*?```', protect_match, result)
@@ -269,7 +315,7 @@ class InternalLinkEnricher:
         
         # Protect headings
         result = re.sub(r'^#{1,6}\s+.*$', protect_match, result, flags=re.MULTILINE)
-        
+
         # Protect bold/italic
         result = re.sub(r'\*\*[^*]+\*\*', protect_match, result)
         
@@ -281,6 +327,8 @@ class InternalLinkEnricher:
                 continue
             
             title = entry['title']
+            if normalize_keyword(title) in self.glossary_db.deny_normalized:
+                continue
             # Only link terms with 4+ characters
             if len(title) >= 4:
                 sorted_entries.append((title, entry, slug))
@@ -335,6 +383,7 @@ def process_file(
     src: Path,
     dest: Path,
     glossary_db: GlossaryDatabase,
+    add_internal_links: bool = False,
     convert_tooltips: bool = False,
     dry_run: bool = False
 ) -> None:
@@ -357,12 +406,13 @@ def process_file(
             if converter.skipped_keywords:
                 print(f"      Keywords: {', '.join(set(converter.skipped_keywords[:5]))}")
     
-    # Step 2: Add internal links
-    enricher = InternalLinkEnricher(glossary_db, current_slug=current_slug)
-    body = enricher.add_links(body)
-    
-    if len(enricher.linked_slugs) > 0:
-        print(f"  🔗 Added {len(enricher.linked_slugs)} internal links")
+    # Step 2: Add internal links (opt-in)
+    if add_internal_links:
+        enricher = InternalLinkEnricher(glossary_db, current_slug=current_slug)
+        body = enricher.add_links(body)
+        
+        if len(enricher.linked_slugs) > 0:
+            print(f"  🔗 Added {len(enricher.linked_slugs)} internal links")
     
     # Reconstruct file
     new_content = f"---\n{front.strip()}\n---\n{body.lstrip()}"
@@ -400,6 +450,9 @@ def main():
     parser.add_argument('--output', help='Optional output directory (default: update in place)')
     parser.add_argument('--convert-tooltips', action='store_true',
                        help='Convert tooltips to internal links (for blog posts)')
+    parser.add_argument('--add-internal-links', action='store_true',
+                       help='Add internal links to glossary terms (opt-in; default: disabled)')
+    parser.add_argument('--denylist', help='Path to danger-term denylist CSV (optional)')
     parser.add_argument('--dry-run', action='store_true',
                        help='Show changes without writing files')
     
@@ -414,7 +467,8 @@ def main():
     
     # Load glossary database
     glossary_dir = PROJECT_ROOT / "content" / lang / "glossary"
-    glossary_db = GlossaryDatabase(glossary_dir, lang=lang)
+    denylist_csv = Path(args.denylist) if args.denylist else None
+    glossary_db = GlossaryDatabase(glossary_dir, lang=lang, denylist_csv=denylist_csv)
     
     # Get files to process
     files = iter_markdown_files(input_path)
@@ -440,6 +494,7 @@ def main():
                 file_path,
                 destination,
                 glossary_db,
+                add_internal_links=args.add_internal_links,
                 convert_tooltips=args.convert_tooltips,
                 dry_run=args.dry_run
             )

@@ -212,9 +212,15 @@ Inference costs depend on number of candidate classes and embedding model size. 
 
 ## References
 
-- [IBM: What Is Zero-Shot Learning?](https://www.ibm.com/think/topics/zero-shot-learning)
-- [Lightly AI: Zero-Shot Learning Practical Guide](https://www.lightly.ai/blog/zero-shot-learning)
-- [Towards AI: Zero-Shot Learning Deep Dive](https://towardsai.net/p/l/zero-shot-learning-deep-dive-how-to-select-one-and-present-day-challenges)
-- [Google AI Blog: Zero-Shot Learning for Visual Recognition](https://ai.googleblog.com/2021/06/zero-shot-learning-for-visual.html)
-- [Hugging Face: Zero-Shot Classification Pipeline](https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.ZeroShotClassificationPipeline)
-- [ArXiv: Survey on Zero-Shot Learning](https://arxiv.org/abs/1904.01198)
+
+1. IBM. (n.d.). What Is Zero-Shot Learning?. IBM Think Topics.
+
+2. Lightly AI. (n.d.). Zero-Shot Learning Practical Guide. Lightly Blog.
+
+3. Towards AI. (n.d.). Zero-Shot Learning Deep Dive. Towards AI.
+
+4. Google. (2021). Zero-Shot Learning for Visual Recognition. Google AI Blog.
+
+5. Hugging Face. (n.d.). Zero-Shot Classification Pipeline. Hugging Face Transformers Documentation.
+
+6. ArXiv. (n.d.). Survey on Zero-Shot Learning. ArXiv.

@@ -249,11 +249,12 @@ Join Discord community, submit PRs or issues on GitHub, access onboarding guides
 
 ## References
 
-- [Flowise Official Website](https://flowiseai.com/)
-- [Flowise Documentation](https://docs.flowiseai.com)
-- [GitHub Repository](https://github.com/FlowiseAI/Flowise)
-- [Discord Community](https://discord.gg/jbaHfsRVBW)
-- [Flowise Cloud Marketplace](https://cloud.flowiseai.com/marketplace)
-- [YouTube Tutorial: Building AI Document Chatbot](https://www.youtube.com/watch?v=riXpu1tHzl0)
-- [Flowise Cloud Sign Up](https://cloud.flowiseai.com/signin)
-- [Comprehensive LLM Glossary](https://main--dasarpai.netlify.app/dsblog/Comprehensive-Glossary-of-LLM/#what-is-flowiseai)
+
+1. Flowise. Official Website. URL: https://flowiseai.com/
+2. Flowise. Documentation. URL: https://docs.flowiseai.com
+3. Flowise. GitHub Repository. URL: https://github.com/FlowiseAI/Flowise
+4. Flowise. Discord Community. URL: https://discord.gg/jbaHfsRVBW
+5. Flowise. Cloud Marketplace. URL: https://cloud.flowiseai.com/marketplace
+6. (n.d.). Building AI Document Chatbot. YouTube Tutorial. URL: https://www.youtube.com/watch?v=riXpu1tHzl0
+7. Flowise. Cloud Sign Up. URL: https://cloud.flowiseai.com/signin
+8. (n.d.). Comprehensive LLM Glossary. URL: https://main--dasarpai.netlify.app/dsblog/Comprehensive-Glossary-of-LLM/#what-is-flowiseai

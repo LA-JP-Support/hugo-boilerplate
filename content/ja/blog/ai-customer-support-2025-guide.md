@@ -11,7 +11,7 @@ url: "/ja/blog/ai-customer-support-2025-guide/"
 ---
 ## AIカスタマーサポートとは何か
 
-AI[カスタマーサポート](/ja/glossary/customer-support/)は、[人工知能](/ja/glossary/artificial-intelligence/)を使って[顧客](/ja/glossary/Risk-Assessment--Customer-/)からの問い合わせに自動で応答する仕組みです。人が対応する場合と違い、[AI](/ja/glossary/artificial-intelligence/)は24時間365日いつでも対応できます。すぐに返事を返せることや、多言語での対応ができることも大きな特徴です。
+AI[カスタマーサポート](/ja/glossary/customer-support/)は、[人工知能](/ja/glossary/artificial-intelligence/)を使って顧客からの問い合わせに自動で応答する仕組みです。人が対応する場合と違い、[AI](/ja/glossary/artificial-intelligence/)は24時間365日いつでも対応できます。すぐに返事を返せることや、多言語での対応ができることも大きな特徴です。
 
 このシステムにはいくつかの技術が使われています。自然言語処理（NLP）は、[AI](/ja/glossary/artificial-intelligence/)が人間の言葉を理解して答えるのに役立ちます。[機械学習](/ja/glossary/machine-learning/)は、[AI](/ja/glossary/artificial-intelligence/)が使う知識を増やしたり改善したりする仕組みです。データベースと連携することで、AIは多くの情報を参照できます。[音声認識](/ja/glossary/speech-recognition/)や画像認識も加わることで、テキスト以外の入力にも対応できます。
 
@@ -29,7 +29,7 @@ AI[カスタマーサポート](/ja/glossary/customer-support/)の始まりは19
 
 ### リアルタイム応答・感情分析
 
-AIは多くの問い合わせにすぐに対応できるだけでなく、[顧客](/ja/glossary/Risk-Assessment--Customer-/)の感情や話の流れも理解して、よりその人に合った答えを返します。これによって、[顧客](/ja/glossary/Risk-Assessment--Customer-/)の満足度や企業の[業務効率](/ja/glossary/Operational-Efficiency/)が高くなっています。
+AIは多くの問い合わせにすぐに対応できるだけでなく、顧客の感情や話の流れも理解して、よりその人に合った答えを返します。これによって、顧客の満足度や企業の[業務効率](/ja/glossary/Operational-Efficiency/)が高くなっています。
 
 ### 生成AIによる知識自動進化
 
@@ -37,9 +37,9 @@ AIは[FAQ](/ja/glossary/FAQ/)やマニュアルの内容を自分で更新し、
 
 ## グローバルにおける普及と標準化
 
-AI[カスタマーサポート](/ja/glossary/customer-support/)は、欧米やアジアをはじめ、世界中の企業で広がっています。2025年現在、大企業だけでなく[中小企業](/ja/glossary/SMB--Small-and-Medium-Business-/)やスタートアップもAIサポートを取り入れています。AIによるサポートは、[顧客](/ja/glossary/Risk-Assessment--Customer-/)体験（CX）を高め、企業の競争力を強くするために使われています。
+AI[カスタマーサポート](/ja/glossary/customer-support/)は、欧米やアジアをはじめ、世界中の企業で広がっています。2025年現在、大企業だけでなく[中小企業](/ja/glossary/SMB--Small-and-Medium-Business-/)やスタートアップもAIサポートを取り入れています。AIによるサポートは、顧客体験（CX）を高め、企業の競争力を強くするために使われています。
 
-科学的な調査では、AIの性能は半年ごとに倍増しています。[顧客](/ja/glossary/Risk-Assessment--Customer-/)もAIによるサポートに期待するようになっています。
+科学的な調査では、AIの性能は半年ごとに倍増しています。顧客もAIによるサポートに期待するようになっています。
 
 ## 2025年のAIカスタマーサポート世界潮流
 
@@ -59,7 +59,7 @@ AI[カスタマーサポート](/ja/glossary/customer-support/)は、欧米や�
 
 カスタマーサポートの分野では、AIによる自動応答が一般的になっています。FAQの自動進化や、24時間365日対応、多言語や複数のチャネルでの対応が求められています。
 
-業界別に見ると、Eコマース、航空、金融、通信などの大手企業で早くから使われ始め、スタートアップや[中小企業](/ja/glossary/SMB--Small-and-Medium-Business-/)にも広がっています。人手不足や海外進出に対応するために、AIカスタマーサポートが効率化やコスト削減、[顧客](/ja/glossary/Risk-Assessment--Customer-/)満足度の向上に役立つ技術として使われています。
+業界別に見ると、Eコマース、航空、金融、通信などの大手企業で早くから使われ始め、スタートアップや[中小企業](/ja/glossary/SMB--Small-and-Medium-Business-/)にも広がっています。人手不足や海外進出に対応するために、AIカスタマーサポートが効率化やコスト削減、顧客満足度の向上に役立つ技術として使われています。
 
 ## 世界で進化するAIカスタマーサポート最新事例5選
 

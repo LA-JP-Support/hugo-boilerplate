@@ -260,9 +260,15 @@ Extending beyond text to personalized voice messages and dynamic video content c
 
 ## References
 
-- [McKinsey: The Future of Personalization](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-future-of-personalization-and-how-to-get-ready-for-it)
-- [Salesforce: State of Marketing Report](https://www.salesforce.com/resources/research-reports/state-of-marketing/)
-- [HubSpot: Email Marketing Statistics](https://blog.hubspot.com/marketing/email-marketing-stats)
-- [Campaign Monitor: Email Marketing Benchmarks](https://www.campaignmonitor.com/resources/guides/email-marketing-benchmarks/)
-- [Litmus: State of Email Analytics](https://www.litmus.com/resources/state-of-email-analytics/)
-- [Epsilon: The Power of Me Report](https://www.epsilon.com/us/about-us/pressroom/new-epsilon-research-indicates-80-of-consumers-are-more-likely-to-make-a-purchase-when-brands-offer-personalized-experiences)
+
+1. McKinsey. (n.d.). The Future of Personalization. McKinsey Insights.
+
+2. Salesforce. (n.d.). State of Marketing Report. Salesforce Research.
+
+3. HubSpot. (n.d.). Email Marketing Statistics. HubSpot Blog.
+
+4. Campaign Monitor. (n.d.). Email Marketing Benchmarks. Campaign Monitor Resources.
+
+5. Litmus. (n.d.). State of Email Analytics. Litmus Resources.
+
+6. Epsilon. (n.d.). The Power of Me Report. Epsilon Pressroom.

@@ -282,13 +282,23 @@ url: "/ja/glossary/Disambiguation/"
 
 ## 参考文献
 
-- [SiteSpeakAI: Disambiguation in Chatbots](https://sitespeak.ai/ai-chatbot-terms/disambiguation)
-- [Amazon Lex: Intent Disambiguation](https://docs.aws.amazon.com/lexv2/latest/dg/generative-intent-disambiguation.html)
-- [HumanFirst: Intent Disambiguation](https://www.humanfirst.ai/blog/intent-disambiguation)
-- [Microsoft Copilot Studio: Disambiguate Customer Intents](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/cux-disambiguate-intent)
-- [LivePerson: Disambiguation Dialogs](https://developers.liveperson.com/conversation-builder-dialogs-disambiguation-dialogs.html)
-- [The CAI Company: Understanding Disambiguation in Conversational AI](https://www.linkedin.com/posts/the-cai-company_cai-terminology-disambiguation-activity-7396517564253773824-M5ms)
-- [Amazon Lex: Supported Languages and Locales](https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html)
-- [Microsoft Copilot Studio: Slot Filling and Entities](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-entities-slot-filling)
-- [Chatbots, Disambiguation & IBM Watson Assistant Actions](https://cobusgreyling.medium.com/chatbots-disambiguation-ibm-watson-assistant-actions-2f865bda8090)
-- [IBM Watson Assistant: Disambiguation Documentation](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-dialog-runtime)
+
+1. SiteSpeakAI. (n.d.). Disambiguation in Chatbots. URL: https://sitespeak.ai/ai-chatbot-terms/disambiguation
+
+2. Amazon Lex. (n.d.). Intent Disambiguation. URL: https://docs.aws.amazon.com/lexv2/latest/dg/generative-intent-disambiguation.html
+
+3. HumanFirst. (n.d.). Intent Disambiguation. URL: https://www.humanfirst.ai/blog/intent-disambiguation
+
+4. Microsoft Copilot Studio. (n.d.). Disambiguate Customer Intents. URL: https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/cux-disambiguate-intent
+
+5. LivePerson. (n.d.). Disambiguation Dialogs. URL: https://developers.liveperson.com/conversation-builder-dialogs-disambiguation-dialogs.html
+
+6. The CAI Company. (n.d.). Understanding Disambiguation in Conversational AI. URL: https://www.linkedin.com/posts/the-cai-company_cai-terminology-disambiguation-activity-7396517564253773824-M5ms
+
+7. Amazon Lex. (n.d.). Supported Languages and Locales. URL: https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html
+
+8. Microsoft Copilot Studio. (n.d.). Slot Filling and Entities. URL: https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-entities-slot-filling
+
+9. Cobus Greyling. (n.d.). Chatbots, Disambiguation & IBM Watson Assistant Actions. URL: https://cobusgreyling.medium.com/chatbots-disambiguation-ibm-watson-assistant-actions-2f865bda8090
+
+10. IBM Watson Assistant. (n.d.). Disambiguation Documentation. URL: https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-dialog-runtime

@@ -283,13 +283,23 @@ Simulate long, complex sessions to surface edge-case drift.
 
 ## References
 
-- [Armstrong et al.: AI Conversation Drift (AMCIS 2025)](https://aisel.aisnet.org/treos_amcis2025/15/)
-- [Tim Williams: How to Recover from Drift in AI Conversations (LinkedIn)](https://www.linkedin.com/posts/timwilliamsau_ai-productmanagement-startuplife-activity-7371722234735878144-zmgG)
-- [Magai: How to Detect and Manage Model Drift in AI](https://magai.co/how-to-detect-and-manage-model-drift-in-ai/)
-- [DEV.to: How to Detect Model Drift and Set Up Real-Time Alerts](https://dev.to/kuldeep_paul/how-to-detect-model-drift-and-set-up-real-time-alerts-for-ai-systems-332l)
-- [GPTBots: 2025 Drift AI Chatbot Full Review](https://www.gptbots.ai/blog/drift-chatbot)
-- [Salesloft: Drift Platform Overview](https://www.salesloft.com/platform/drift)
-- [Salesloft: Conversational AI Marketing Trends Report](https://www.salesloft.com/resources/guides/conversational-ai-marketing-trends-report)
-- [Psychology Today: How AI Chatbots May Blur Reality](https://www.psychologytoday.com/us/blog/the-algorithmic-mind/202508/how-ai-chatbots-may-blur-reality)
-- [Tencent Cloud: Chatbot Intent Drift Detection](https://www.tencentcloud.com/techpedia/127715)
-- [Microsoft Bing: Learning from our first week](https://blogs.bing.com/search/february-2023/The-new-Bing-Edge-Learning-from-our-first-week)
+
+1. Armstrong, et al. (2025). AI Conversation Drift. Americas Conference on Information Systems (AMCIS).
+
+2. Williams, T. (n.d.). How to Recover from Drift in AI Conversations. LinkedIn.
+
+3. Magai. (n.d.). How to Detect and Manage Model Drift in AI. Magai Blog.
+
+4. Paul, K. (n.d.). How to Detect Model Drift and Set Up Real-Time Alerts for AI Systems. DEV.to.
+
+5. GPTBots. (2025). Drift AI Chatbot Full Review. GPTBots Blog.
+
+6. Salesloft. Drift Platform. URL: https://www.salesloft.com/platform/drift
+
+7. Salesloft. (n.d.). Conversational AI Marketing Trends Report. Salesloft Resources.
+
+8. Psychology Today. (2025). How AI Chatbots May Blur Reality. Psychology Today Blog.
+
+9. Tencent Cloud. (n.d.). Chatbot Intent Drift Detection. Tencent Cloud Techpedia.
+
+10. Microsoft. (2023). Learning from our first week. Bing Blog.

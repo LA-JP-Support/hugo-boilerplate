@@ -194,14 +194,25 @@ WorldView-Benchおよび類似のフレームワークは、多様な文化的�
 
 ## 参考文献
 
-- [CultureStrategyFit: Culture Benchmarks—A Dangerous Practice](https://www.culturestrategyfit.com/culture-benchmarks-a-dangerous-practice)
-- [MyCulture.ai: Organizational Culture Assessment Guide for Modern Companies](https://www.myculture.ai/blog/organizational-culture-assessment-guide-modern-companies)
-- [MyCulture.ai: Organizational Culture Assessment Tools](https://www.myculture.ai/blog/organizational-culture-assessment-tools)
-- [AIHR: How To Measure Company Culture](https://www.aihr.com/blog/how-to-measure-company-culture/)
-- [Culture Amp: Culture Benchmarks](https://www.cultureamp.com/benchmarks)
-- [Emergent Mind: Cultural Commonsense Benchmarks in AI](https://www.emergentmind.com/topics/cultural-commonsense-benchmarks)
-- [CANDLE: Cultural Commonsense Reasoning Benchmark (Nguyen et al., 2022)](https://www.emergentmind.com/papers/2210.07763)
-- [WorldView-Bench: Pluralistic Evaluation Framework (Mushtaq et al., 2025)](https://www.emergentmind.com/papers/2505.09595)
-- [ArabCulture: Arabic Cultural Practices Benchmark](https://www.emergentmind.com/papers/2402.09369)
-- [arXiv: Paradigms of AI Evaluation - Mapping Goals and Culture](https://arxiv.org/html/2502.15620v2)
-- [CultureStrategyFit: M&A Culture Survey](https://www.culturestrategyfit.com/ma-culture-survey)
+
+1. CultureStrategyFit. (n.d.). Culture Benchmarks—A Dangerous Practice. CultureStrategyFit.
+
+2. MyCulture.ai. (n.d.). Organizational Culture Assessment Guide for Modern Companies. MyCulture.ai Blog.
+
+3. MyCulture.ai. (n.d.). Organizational Culture Assessment Tools. MyCulture.ai Blog.
+
+4. AIHR. (n.d.). How To Measure Company Culture. AIHR Blog.
+
+5. Culture Amp. (n.d.). Culture Benchmarks. Culture Amp.
+
+6. Emergent Mind. (n.d.). Cultural Commonsense Benchmarks in AI. Emergent Mind.
+
+7. Nguyen et al. (2022). CANDLE: Cultural Commonsense Reasoning Benchmark. Emergent Mind.
+
+8. Mushtaq et al. (2025). WorldView-Bench: Pluralistic Evaluation Framework. Emergent Mind.
+
+9. ArabCulture. (n.d.). Arabic Cultural Practices Benchmark. Emergent Mind.
+
+10. arXiv. (n.d.). Paradigms of AI Evaluation - Mapping Goals and Culture. arXiv.
+
+11. CultureStrategyFit. (n.d.). M&A Culture Survey. CultureStrategyFit.

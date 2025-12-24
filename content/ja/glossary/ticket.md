@@ -209,13 +209,14 @@ AI駆動型プラットフォームは、チケットを自動的に分類して
 
 ## 参考文献
 
-- [InvGate: Ticketing System Guide](https://blog.invgate.com/ticketing-system)
-- [InvGate: Automated Ticketing System](https://blog.invgate.com/automated-ticketing-system)
-- [HelpDesk: A Guide to Efficient Ticket Management](https://www.helpdesk.com/learn/a-guide-to-efficient-ticket-management-in-helpdesk/)
-- [ProProfsDesk: Ticketing System Explained](https://www.proprofsdesk.com/blog/ticketing-system/)
-- [Giva: What is AI Ticketing and Its Benefits](https://www.givainc.com/blog/index.cfm/2023/11/2/what-is-ai-ticketing)
-- [Zendesk: What is a Support Ticket?](https://www.zendesk.com/blog/what-is-a-support-ticket/)
-- [GEM Corporation: AI Ticketing](https://gem.com/blog/ai-ticketing)
-- [NiCE: AI Customer Support Ticketing System](https://www.nice.com/engage/ai-customer-support-ticketing-system/)
-- [Fullview: Customer Support Ticket Overview](https://www.fullview.io/blog/customer-support-ticket)
-- [Relevance AI: Ticket Categorization](https://www.relevance.ai/blog/customer-support-ticket-categorization-ai-agents)
+
+1. InvGate. (n.d.). Ticketing System Guide. InvGate Blog.
+2. InvGate. (n.d.). Automated Ticketing System. InvGate Blog.
+3. HelpDesk. (n.d.). A Guide to Efficient Ticket Management. HelpDesk Learn.
+4. ProProfs. (n.d.). Ticketing System Explained. ProProfs Desk Blog.
+5. Giva. (2023). What is AI Ticketing and Its Benefits. Giva Blog.
+6. Zendesk. (n.d.). What is a Support Ticket?. Zendesk Blog.
+7. GEM Corporation. (n.d.). AI Ticketing. GEM Blog.
+8. NiCE. (n.d.). AI Customer Support Ticketing System. NiCE Engage.
+9. Fullview. (n.d.). Customer Support Ticket Overview. Fullview Blog.
+10. Relevance AI. (n.d.). Ticket Categorization. Relevance AI Blog.

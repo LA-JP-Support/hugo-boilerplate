@@ -262,12 +262,13 @@ Most production LLM APIs use KV cache automatically. Check provider documentatio
 
 ## References
 
-- [Hugging Face: KV Caching Explained](https://huggingface.co/blog/not-lain/kv-caching)
-- [Sebastian Raschka: Understanding and Coding the KV Cache in LLMs](https://magazine.sebastianraschka.com/p/coding-the-kv-cache-in-llms)
-- [Neptune: Transformers Key-Value Caching Explained](https://neptune.ai/blog/transformers-key-value-caching)
-- [Data Science Dojo: Unlocking the Power of KV Cache](https://datasciencedojo.com/blog/kv-cache-how-to-speed-up-llm-inference/)
-- [Kapil Sharma: KV Caching Illustrated](https://kapilsh.github.io/posts/kv-caching-visualized/)
-- [Akira AI: KV Caches and Time-to-First-Token](https://www.akira.ai/blog/kv-caches-and-time-to-first-token)
-- [Andrew Szot: KV Cache](https://www.andrewszot.com/posts/kv_cache/)
-- [Transformers Documentation: Generation Strategies - KV Caching](https://huggingface.co/docs/transformers/main/en/generation_strategies#kv-caching)
-- [Joaolages: KV Caching Explained (Medium)](https://medium.com/@joaolages/kv-caching-explained-276520203249)
+
+1. Hugging Face. (n.d.). KV Caching Explained. Hugging Face Blog.
+2. Raschka, Sebastian. (n.d.). Understanding and Coding the KV Cache in LLMs. Sebastian Raschka Magazine.
+3. Neptune. (n.d.). Transformers Key-Value Caching Explained. Neptune Blog.
+4. Data Science Dojo. (n.d.). Unlocking the Power of KV Cache. Data Science Dojo Blog.
+5. Sharma, Kapil. (n.d.). KV Caching Illustrated. Personal Blog.
+6. Akira AI. (n.d.). KV Caches and Time-to-First-Token. Akira AI Blog.
+7. Szot, Andrew. (n.d.). KV Cache. Personal Blog.
+8. Hugging Face. (n.d.). Generation Strategies - KV Caching. Transformers Documentation.
+9. Lages, Joao. (n.d.). KV Caching Explained. Medium.

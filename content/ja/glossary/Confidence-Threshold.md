@@ -208,13 +208,14 @@ Plattスケーリングやアイソトニック回帰などの技術を使用し
 
 ## 参考文献
 
-- [Microsoft: Confidence score](https://learn.microsoft.com/en-us/azure/ai-services/language-service/question-answering/concepts/confidence-score)
-- [Microsoft: Choose a score threshold](https://learn.microsoft.com/en-us/azure/ai-services/language-service/question-answering/concepts/confidence-score)
-- [Ultralytics: Confidence Score in AI/ML Explained](https://www.ultralytics.com/glossary/confidence)
-- [Ultralytics: Activation Function](https://www.ultralytics.com/glossary/activation-function)
-- [Ultralytics: Softmax Function](https://www.ultralytics.com/glossary/softmax)
-- [Zendesk: About confidence thresholds for advanced AI agents](https://support.zendesk.com/hc/en-us/articles/8357749625498-About-confidence-thresholds-for-advanced-AI-agents)
-- [Mindee: How to Use Confidence Scores in ML Models](https://www.mindee.com/blog/how-use-confidence-scores-ml-models)
-- [Leverege: Computer Vision Basics](https://www.leverege.com/blogpost/computer-vision-basics-how-confidence-accuracy-and-thresholds-impact-performance)
-- [Iterate.ai: Confident Thresholding](https://www.iterate.ai/ai-glossary/confident-thresholding)
-- [Wikipedia: Sigmoid Function](https://en.wikipedia.org/wiki/Sigmoid_function)
+
+1. Microsoft. (n.d.). Confidence Score. Microsoft Learn.
+2. Microsoft. (n.d.). Choose a Score Threshold. Microsoft Learn.
+3. Ultralytics. (n.d.). Confidence Score in AI/ML Explained. Ultralytics Glossary.
+4. Ultralytics. (n.d.). Activation Function. Ultralytics Glossary.
+5. Ultralytics. (n.d.). Softmax Function. Ultralytics Glossary.
+6. Zendesk. (n.d.). About Confidence Thresholds for Advanced AI Agents. Zendesk Support.
+7. Mindee. (n.d.). How to Use Confidence Scores in ML Models. Mindee Blog.
+8. Leverege. (n.d.). Computer Vision Basics. Leverege Blog.
+9. Iterate.ai. (n.d.). Confident Thresholding. Iterate.ai AI Glossary.
+10. Wikipedia. (n.d.). Sigmoid Function. Wikipedia.

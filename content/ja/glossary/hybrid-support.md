@@ -554,11 +554,19 @@ AI: [緊急性+フラストレーションを検出] → 人間にエスカレ�
 
 ## 参考文献
 
-- [Startek: The Power of Hybrid AI-Human Support](https://www.startek.com/insights/blog/hybrid-ai-human-support/)
-- [Zendesk CX Trends 2026](https://cxtrends.zendesk.com/)
-- [Epicenter: AI-Human Hybrid Support & Customer Preference](https://epicenterinnovation.com/ai-human-hybrid-support-why-73-of-customers-still-want-human-interaction/)
-- [Psychology Today: Hybrid Intelligence](https://www.psychologytoday.com/us/basics/hybrid-intelligence)
-- [Gartner: Customer Service Virtual Assistants](https://www.gartner.com/en/newsroom/press-releases/2025-12-02-gartner-survey-finds-only-20-percent-of-customer-service-leaders-report-ai-driven-headcount-reduction)
-- [Forbes: AI vs. Human Agent Preferences](https://www.forbes.com/sites/forbestechcouncil/2023/07/06/ai-vs-human-customer-service-why-the-human-touch-matters-more-than-ever/)
-- [HubSpot: Chatbot Marketing Future](https://blog.hubspot.com/marketing/chatbot-marketing)
-- [IBM: Human-in-the-Loop AI](https://www.ibm.com/cloud/blog/human-in-the-loop)
+
+1. Startek. (n.d.). The Power of Hybrid AI-Human Support. Startek Insights.
+
+2. Zendesk. (2026). CX Trends 2026. Zendesk CX Trends.
+
+3. Epicenter. (n.d.). AI-Human Hybrid Support & Customer Preference. Epicenter Innovation.
+
+4. Psychology Today. (n.d.). Hybrid Intelligence. Psychology Today.
+
+5. Gartner. (2025). Customer Service Virtual Assistants. Gartner Newsroom.
+
+6. Forbes. (2023). AI vs. Human Agent Preferences. Forbes Tech Council.
+
+7. HubSpot. (n.d.). Chatbot Marketing Future. HubSpot Blog.
+
+8. IBM. (n.d.). Human-in-the-Loop AI. IBM Cloud Blog.

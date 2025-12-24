@@ -273,13 +273,23 @@ Knowledge cutoffs vary by model: Haiku 4.5 (February 2025), other models have ea
 
 ## References
 
-- [Claude Official Site](https://claude.ai/)
-- [Anthropic Company Profile](Anthropic.md)
-- [Claude Opus 4.5 Announcement](https://www.anthropic.com/news/claude-opus-4-5)
-- [Claude Sonnet 4.5 Announcement](https://www.anthropic.com/news/claude-sonnet-4-5)
-- [Claude API Documentation](https://docs.anthropic.com/)
-- [Constitutional AI Research](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback)
-- [Claude Pricing](https://www.anthropic.com/pricing)
-- [Claude System Card](https://www-cdn.anthropic.com/4263b940cabb546aa0e3283f35b686f4f3b2ff47.pdf)
-- [Amazon Bedrock - Claude](https://aws.amazon.com/bedrock/claude/)
-- [Google Vertex AI - Claude](https://cloud.google.com/vertex-ai/docs/generative-ai/model-reference/anthropic-claude)
+
+1. Claude. Official Site. URL: https://claude.ai/
+
+2. Anthropic. Company Profile. URL: Anthropic.md
+
+3. Anthropic. (2024). Claude Opus 4.5 Announcement. Anthropic News. URL: https://www.anthropic.com/news/claude-opus-4-5
+
+4. Anthropic. (2024). Claude Sonnet 4.5 Announcement. Anthropic News. URL: https://www.anthropic.com/news/claude-sonnet-4-5
+
+5. Anthropic. Claude API Documentation. URL: https://docs.anthropic.com/
+
+6. Anthropic. Constitutional AI Research. URL: https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback
+
+7. Anthropic. Claude Pricing. URL: https://www.anthropic.com/pricing
+
+8. Anthropic. (n.d.). Claude System Card. URL: https://www-cdn.anthropic.com/4263b940cabb546aa0e3283f35b686f4f3b2ff47.pdf
+
+9. Amazon Web Services. Amazon Bedrock - Claude. URL: https://aws.amazon.com/bedrock/claude/
+
+10. Google Cloud. Google Vertex AI - Claude. URL: https://cloud.google.com/vertex-ai/docs/generative-ai/model-reference/anthropic-claude

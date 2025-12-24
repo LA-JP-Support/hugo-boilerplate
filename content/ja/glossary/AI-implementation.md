@@ -271,23 +271,43 @@ AI実装とは、人工知能技術をビジネスオペレーション、ワー
 
 ## 参考文献
 
-- [IBM: Artificial intelligence implementation – 8 steps for success](https://www.ibm.com/think/insights/artificial-intelligence-implementation)
-- [Future Processing: AI implementation in business – strategy, benefits and examples](https://www.future-processing.com/blog/ai-implementation-in-business/)
-- [Deloitte: AI Use Cases by Industry, Function, and Type](https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/ai-use-cases.html)
-- [Google Cloud: 1,001 Real-World Gen AI Use Cases](https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders)
-- [IBM: AI Examples & Business Use Cases](https://www.ibm.com/think/topics/artificial-intelligence-business-use-cases)
-- [IBM: AI for Business Benefits](https://www.ibm.com/think/insights/ai-for-business-benefits)
-- [IBM: Data Quality](https://www.ibm.com/topics/data-quality)
-- [IBM: AI Ethics](https://www.ibm.com/policy/ai-ethics/)
-- [IBM: AI Trends](https://www.ibm.com/think/insights/top-ai-trends)
-- [Google Cloud: What's Next for Gen AI](https://cloud.google.com/transform/the-prompt-prototype-to-production-gen-ai)
-- [Tidio](https://www.tidio.com/)
-- [HubSpot](https://www.hubspot.com/products/crm)
-- [Google Analytics](https://analytics.google.com/)
-- [OpenAI](https://openai.com/gpt-3/)
-- [Buffer](https://buffer.com/)
-- [Hootsuite](https://hootsuite.com/)
-- [Wave](https://www.waveapps.com/)
-- [IBM Watson](https://www.ibm.com/watson)
-- [Azure AI](https://azure.microsoft.com/en-us/products/ai-services/)
-- [Google Cloud AI](https://cloud.google.com/ai-platform)
+
+1. IBM. (n.d.). Artificial Intelligence Implementation – 8 Steps for Success. IBM Think Insights.
+
+2. Future Processing. (n.d.). AI Implementation in Business – Strategy, Benefits and Examples. Future Processing Blog.
+
+3. Deloitte. (n.d.). AI Use Cases by Industry, Function, and Type. Deloitte Capabilities.
+
+4. Google Cloud. (n.d.). 1,001 Real-World Gen AI Use Cases. Google Cloud Transform.
+
+5. IBM. (n.d.). AI Examples & Business Use Cases. IBM Think Topics.
+
+6. IBM. (n.d.). AI for Business Benefits. IBM Think Insights.
+
+7. IBM. (n.d.). Data Quality. IBM Topics.
+
+8. IBM. (n.d.). AI Ethics. IBM Policy.
+
+9. IBM. (n.d.). AI Trends. IBM Think Insights.
+
+10. Google Cloud. (n.d.). What's Next for Gen AI. Google Cloud Transform.
+
+11. Tidio. Customer Service Chatbot Platform. URL: https://www.tidio.com/
+
+12. HubSpot. CRM Software Platform. URL: https://www.hubspot.com/products/crm
+
+13. Google Analytics. Web Analytics Service. URL: https://analytics.google.com/
+
+14. OpenAI. AI Research and Deployment Platform. URL: https://openai.com/gpt-3/
+
+15. Buffer. Social Media Management Tool. URL: https://buffer.com/
+
+16. Hootsuite. Social Media Marketing Platform. URL: https://hootsuite.com/
+
+17. Wave. Accounting and Invoicing Software. URL: https://www.waveapps.com/
+
+18. IBM Watson. AI and Machine Learning Platform. URL: https://www.ibm.com/watson
+
+19. Azure AI. Microsoft AI Services Platform. URL: https://azure.microsoft.com/en-us/products/ai-services/
+
+20. Google Cloud AI. Artificial Intelligence Services Platform. URL: https://cloud.google.com/ai-platform

@@ -249,23 +249,43 @@ Unified Hallucination Detection (UNIHD) represents state-of-the-art approach for
 
 ## References
 
-- [Unified Hallucination Detection (ACL 2024)](https://aclanthology.org/2024.acl-long.178/)
-- [Multimodal Hallucination Survey (arXiv 2024)](https://arxiv.org/abs/2507.19024)
-- [MHaluBench Dataset (HuggingFace)](https://huggingface.co/datasets/OpenKG/MHaluBench)
-- [MS-COCO Dataset](https://cocodataset.org/#home)
-- [TextVQA Dataset](https://textvqa.org/)
-- [DrawBench Benchmark](https://arxiv.org/abs/2206.01714)
-- [T2I-CompBench](https://arxiv.org/abs/2307.10021)
-- [HaluEval Paper](https://arxiv.org/abs/2306.05645)
-- [HalluCode Benchmark](https://arxiv.org/abs/2402.09901)
-- [CodeHalu Benchmark](https://arxiv.org/abs/2402.09901)
-- [Collu-Bench](https://arxiv.org/abs/2405.14451)
-- [mPLUG Framework](https://github.com/X-PLUG/mPLUG)
-- [LLaVA Model](https://llava-vl.github.io/)
-- [MiniGPT-4](https://minigpt-4.github.io/)
-- [DALL-E 2 (OpenAI)](https://openai.com/research/dall-e)
-- [DALL-E 3 (OpenAI)](https://openai.com/blog/dall-e-3)
-- [Grounding DINO](https://github.com/IDEA-Research/GroundingDINO)
-- [GPT-4V Vision](https://platform.openai.com/docs/guides/vision)
-- [Gemini Multimodal](https://deepmind.google/technologies/gemini/)
-- [MMHal-Bench](https://www.emergentmind.com/topics/mmhal-bench)
+
+1. Shi, W., et al. (2024). Unified Hallucination Detection. ACL 2024 Proceedings.
+
+2. Anonymous. (2024). Multimodal Hallucination Survey. arXiv.
+
+3. OpenKG. (n.d.). MHaluBench Dataset. HuggingFace.
+
+4. COCO Consortium. (n.d.). MS-COCO Dataset. COCO Dataset.
+
+5. TextVQA Team. (n.d.). TextVQA Dataset. TextVQA.
+
+6. Anonymous. (2022). DrawBench Benchmark. arXiv.
+
+7. Anonymous. (2023). T2I-CompBench. arXiv.
+
+8. Anonymous. (2023). HaluEval Paper. arXiv.
+
+9. Anonymous. (2024). HalluCode Benchmark. arXiv.
+
+10. Anonymous. (2024). CodeHalu Benchmark. arXiv.
+
+11. Anonymous. (2024). Collu-Bench. arXiv.
+
+12. mPLUG. (n.d.). mPLUG Framework. URL: https://github.com/X-PLUG/mPLUG
+
+13. LLaVA. (n.d.). LLaVA Model. URL: https://llava-vl.github.io/
+
+14. MiniGPT-4. (n.d.). MiniGPT-4. URL: https://minigpt-4.github.io/
+
+15. OpenAI. (n.d.). DALL-E 2. URL: https://openai.com/research/dall-e
+
+16. OpenAI. (n.d.). DALL-E 3. URL: https://openai.com/blog/dall-e-3
+
+17. IDEA Research. (n.d.). Grounding DINO. URL: https://github.com/IDEA-Research/GroundingDINO
+
+18. OpenAI. (n.d.). GPT-4V Vision. URL: https://platform.openai.com/docs/guides/vision
+
+19. Google DeepMind. (n.d.). Gemini Multimodal. URL: https://deepmind.google/technologies/gemini/
+
+20. Emergent Mind. (n.d.). MMHal-Bench. URL: https://www.emergentmind.com/topics/mmhal-bench

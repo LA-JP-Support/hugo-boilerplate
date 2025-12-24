@@ -205,15 +205,27 @@ Engagement scores should be tracked continuously, with periodic in-depth analysi
 
 ## References
 
-- [Salesforce: What is a Customer Engagement Score?](https://www.salesforce.com/marketing/customer-engagement-score/)
-- [Pipedrive: Engagement Score Guide](https://www.pipedrive.com/en/blog/engagement-score)
-- [Userpilot: Customer Engagement Score - Formula + Tips](https://userpilot.com/blog/customer-engagement-score/)
-- [Corporate Finance Institute: Customer Engagement Score (CES)](https://corporatefinanceinstitute.com/resources/valuation/customer-engagement-score-ces/)
-- [Together Platform: Employee Engagement Score](https://www.togetherplatform.com/blog/employee-engagement-score)
-- [Braze: Product Engagement - How to Measure & Improve It](https://www.braze.com/resources/articles/product-engagement)
-- [Omniconvert: Engagement Metrics - Measurement, Types and Business Uses](https://www.omniconvert.com/blog/engagement-metrics/)
-- [Adobe Marketo Engage: Understanding the Engagement Score](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/email-marketing/drip-nurturing/reports-and-notifications/understanding-the-engagement-score)
-- [Drivetrain: What is Churn Rate - Definition, Formula, Benchmarks](https://www.drivetrain.ai/strategic-finance-glossary/what-is-churn-rate-definition-formula-benchmarks)
-- [Corporate Finance Institute: Net Promoter Score (NPS)](https://corporatefinanceinstitute.com/resources/valuation/net-promoter-score-nps/)
-- [Userpilot: SaaS Metrics 101 - LTV Lifetime Value](https://userpilot.com/blog/saas-metrics-101-ltv-lifetime-value/)
-- [Drivetrain: Customer Retention Cost (CRC)](https://www.drivetrain.ai/strategic-finance-glossary/customer-retention-cost-crc)
+
+1. Salesforce. (n.d.). What is a Customer Engagement Score?. Salesforce Marketing.
+
+2. Pipedrive. (n.d.). Engagement Score Guide. Pipedrive Blog.
+
+3. Userpilot. (n.d.). Customer Engagement Score - Formula + Tips. Userpilot Blog.
+
+4. Corporate Finance Institute. (n.d.). Customer Engagement Score (CES). Corporate Finance Institute Resources.
+
+5. Together Platform. (n.d.). Employee Engagement Score. Together Platform Blog.
+
+6. Braze. (n.d.). Product Engagement - How to Measure & Improve It. Braze Resources.
+
+7. Omniconvert. (n.d.). Engagement Metrics - Measurement, Types and Business Uses. Omniconvert Blog.
+
+8. Adobe Marketo Engage. (n.d.). Understanding the Engagement Score. Adobe Experience League.
+
+9. Drivetrain. (n.d.). What is Churn Rate - Definition, Formula, Benchmarks. Drivetrain Strategic Finance Glossary.
+
+10. Corporate Finance Institute. (n.d.). Net Promoter Score (NPS). Corporate Finance Institute Resources.
+
+11. Userpilot. (n.d.). SaaS Metrics 101 - LTV Lifetime Value. Userpilot Blog.
+
+12. Drivetrain. (n.d.). Customer Retention Cost (CRC). Drivetrain Strategic Finance Glossary.

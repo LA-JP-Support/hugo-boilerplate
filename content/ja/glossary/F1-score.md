@@ -223,15 +223,16 @@ F1スコアは、適合率と再現率をバランスさせる単一の指標を
 
 ## 参考文献
 
-- [V7 Labs: F1 Score in Machine Learning](https://www.v7labs.com/blog/f1-score-guide)
-- [GeeksforGeeks: F1 Score in Machine Learning](https://www.geeksforgeeks.org/machine-learning/f1-score-in-machine-learning/)
-- [KDnuggets: Confusion Matrix, Precision, and Recall Explained](https://www.kdnuggets.com/2022/11/confusion-matrix-precision-recall-explained.html)
-- [Google Developers: Classification Metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall)
-- [Towards Data Science: Performance Metrics](https://towardsdatascience.com/performance-metrics-confusion-matrix-precision-recall-and-f1-score-a8fe076a2262/)
-- [Permetrics: F-Beta Score](https://permetrics.readthedocs.io/en/latest/pages/classification/FBS.html)
-- [scikit-learn: f1_score Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
-- [Arize: Understanding and Applying F1 Score](https://arize.com/blog-course/f1-score/)
-- [ScienceDirect: Fraud Detection in Healthcare](https://www.sciencedirect.com/science/article/pii/S0933365724003038)
-- [Galileo AI: F1 Score in AI Evaluation](https://galileo.ai/blog/f1-score-ai-evaluation-precision-recall)
-- [Wikipedia: F-score](https://en.wikipedia.org/wiki/F-score)
-- [scikit-learn: Model Evaluation Guide](https://scikit-learn.org/stable/modules/model_evaluation.html#f1-score)
+
+1. V7 Labs. (n.d.). F1 Score in Machine Learning. V7 Labs Blog.
+2. GeeksforGeeks. (n.d.). F1 Score in Machine Learning. GeeksforGeeks.
+3. KDnuggets. (2022). Confusion Matrix, Precision, and Recall Explained. KDnuggets.
+4. Google Developers. (n.d.). Classification Metrics. Google Developers.
+5. Towards Data Science. (n.d.). Performance Metrics. Towards Data Science.
+6. Permetrics. (n.d.). F-Beta Score. Permetrics Documentation.
+7. scikit-learn. (n.d.). f1_score Documentation. scikit-learn Documentation.
+8. Arize. (n.d.). Understanding and Applying F1 Score. Arize Blog.
+9. ScienceDirect. (2024). Fraud Detection in Healthcare. ScienceDirect.
+10. Galileo AI. (n.d.). F1 Score in AI Evaluation. Galileo AI Blog.
+11. Wikipedia. (n.d.). F-score. Wikipedia.
+12. scikit-learn. (n.d.). Model Evaluation Guide. scikit-learn Documentation.

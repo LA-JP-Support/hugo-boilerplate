@@ -273,28 +273,29 @@ Weaviateは、埋め込み生成のために主要なLLMプロバイダーと統
 
 ## 参考文献
 
-- [Weaviate公式ウェブサイト](https://weaviate.io/)
-- [Weaviateプラットフォーム概要](https://weaviate.io/platform)
-- [Weaviate GitHubリポジトリ](https://github.com/weaviate/weaviate)
-- [Weaviateドキュメント](https://docs.weaviate.io/weaviate)
-- [Weaviateデプロイメントガイド](https://docs.weaviate.io/deploy)
-- [Weaviateブログ:ベクトルデータベースとは?](https://weaviate.io/blog/what-is-a-vector-database)
-- [Weaviateブログ:ベクトル埋め込みの説明](https://weaviate.io/blog/vector-embeddings-explained)
-- [Weaviateブログ:スケーリングとWeaviate](https://weaviate.io/blog/scaling-and-weaviate)
-- [Weaviate:ベクトルインデックスドキュメント](https://docs.weaviate.io/weaviate/concepts/vector-index)
-- [Weaviate:クラスター概念](https://docs.weaviate.io/weaviate/concepts/cluster)
-- [Weaviate:レプリケーションアーキテクチャ](https://docs.weaviate.io/weaviate/concepts/replication-architecture/cluster-architecture)
-- [Weaviate:モデルプロバイダー](https://docs.weaviate.io/weaviate/model-providers)
-- [Weaviate:ハイブリッド検索](https://docs.weaviate.io/weaviate/search/hybrid)
-- [Weaviate:マルチテナンシー](https://docs.weaviate.io/weaviate/concepts/data#multi-tenancy)
-- [Weaviate:圧縮設定](https://docs.weaviate.io/weaviate/configuration/compression)
-- [Weaviateクイックスタートガイド](https://docs.weaviate.io/weaviate/quickstart)
-- [Weaviate Cloud](https://weaviate.io/cloud)
-- [Weaviate Academy](https://academy.weaviate.io/)
-- [WeaviateコミュニティSlack](https://weaviate.io/slack)
-- [Weaviate RAGドキュメント](https://weaviate.io/rag)
-- [Weaviate Recipes GitHub](https://github.com/weaviate/recipes)
-- [Weaviateソリューション](https://weaviate.io/solutions)
-- [DataCamp:ベクトル埋め込み](https://www.datacamp.com/blog/vector-embedding)
-- [Medium:埋め込みとベクトルデータベース](https://medium.com/@vladris/embeddings-and-vector-databases-732f9927b377)
-- [Weaviate LangChain統合](https://weaviate.io/blog/enterprise-workflow-langchain-weaviate)
+
+1. Weaviate. (n.d.). Weaviate公式ウェブサイト. Weaviate.
+2. Weaviate. (n.d.). Weaviateプラットフォーム概要. Weaviate Platform.
+3. Weaviate. (n.d.). Weaviate GitHubリポジトリ. GitHub.
+4. Weaviate. (n.d.). Weaviateドキュメント. Weaviate Docs.
+5. Weaviate. (n.d.). Weaviateデプロイメントガイド. Weaviate Docs.
+6. Weaviate. (n.d.). ベクトルデータベースとは?. Weaviate Blog.
+7. Weaviate. (n.d.). ベクトル埋め込みの説明. Weaviate Blog.
+8. Weaviate. (n.d.). スケーリングとWeaviate. Weaviate Blog.
+9. Weaviate. (n.d.). ベクトルインデックスドキュメント. Weaviate Docs.
+10. Weaviate. (n.d.). クラスター概念. Weaviate Docs.
+11. Weaviate. (n.d.). レプリケーションアーキテクチャ. Weaviate Docs.
+12. Weaviate. (n.d.). モデルプロバイダー. Weaviate Docs.
+13. Weaviate. (n.d.). ハイブリッド検索. Weaviate Docs.
+14. Weaviate. (n.d.). マルチテナンシー. Weaviate Docs.
+15. Weaviate. (n.d.). 圧縮設定. Weaviate Docs.
+16. Weaviate. (n.d.). Weaviateクイックスタートガイド. Weaviate Docs.
+17. Weaviate. (n.d.). Weaviate Cloud. Weaviate.
+18. Weaviate. (n.d.). Weaviate Academy. Weaviate Academy.
+19. Weaviate. (n.d.). WeaviateコミュニティSlack. Weaviate.
+20. Weaviate. (n.d.). Weaviate RAGドキュメント. Weaviate.
+21. Weaviate. (n.d.). Weaviate Recipes GitHub. GitHub.
+22. Weaviate. (n.d.). Weaviateソリューション. Weaviate.
+23. DataCamp. (n.d.). ベクトル埋め込み. DataCamp Blog.
+24. Medium. (n.d.). 埋め込みとベクトルデータベース. Medium.
+25. Weaviate. (n.d.). Weaviate LangChain統合. Weaviate Blog.

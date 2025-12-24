@@ -200,20 +200,37 @@ UXは間違いなく学習できます。共感と好奇心は役立ちますが
 
 ## 参考文献
 
-- [User Experience Basics: Complete UX Design Guide & Process - Userpilot](https://userpilot.com/blog/user-experience-basics/)
-- [UX Basics: Study Guide - Nielsen Norman Group](https://www.nngroup.com/articles/ux-basics-study-guide/)
-- [What is User Experience (UX)? - IBM](https://www.ibm.com/topics/user-experience)
-- [The Ultimate Guide to User Experience (UX) in 2024 - EMERGE](https://www.emergeagency.com/insights/detail/user-experience-ux-ultimate-guide/)
-- [User Experience (UX): Definition, Design & Best Practices - Userback](https://www.userback.io/blog/user-experience-ux-definition-design-best-practices)
-- [Top Chatbot UX Tips and Best Practices for 2025 - Netguru](https://www.netguru.com/blog/chatbot-ux-tips)
-- [The User Experience of Chatbots - Nielsen Norman Group](https://www.nngroup.com/articles/chatbots/)
-- [Nine UX best practices for AI chatbots - Mind the Product](https://www.mindtheproduct.com/deep-dive-ux-best-practices-for-ai-chatbots/)
-- [ISO 9241-210: Human-centered design for interactive systems](https://www.iso.org/standard/52075.html)
-- [Don Norman: The term "UX" - Nielsen Norman Group](https://www.nngroup.com/videos/don-norman-term-ux/)
-- [UX vs. UI - Nielsen Norman Group](https://www.nngroup.com/videos/ux-vs-ui/)
-- [Principles of Human-Centered Design - Nielsen Norman Group](https://www.nngroup.com/videos/principles-human-centered-design-don-norman/)
-- [The Design of Everyday Things - Nielsen Norman Group](https://www.nngroup.com/videos/don-norman-design-everyday-things/)
-- [Jakob's Law of Internet User Experience - Nielsen Norman Group](https://www.nngroup.com/videos/jakobs-law-internet-user-experience/)
-- [Interaction Design Foundation: UX Design](https://www.interaction-design.org/literature/topics/ux-design)
-- [Web Content Accessibility Guidelines (WCAG) - W3C](https://www.w3.org/WAI/standards-guidelines/wcag/)
-- [Design Thinking 101 - Nielsen Norman Group](https://www.nngroup.com/articles/design-thinking/)
+
+1. Userpilot. (n.d.). User Experience Basics: Complete UX Design Guide & Process. Userpilot Blog.
+
+2. Nielsen Norman Group. (n.d.). UX Basics: Study Guide. Nielsen Norman Group Articles.
+
+3. IBM. (n.d.). What is User Experience (UX)?. IBM Topics.
+
+4. EMERGE. (2024). The Ultimate Guide to User Experience (UX) in 2024. EMERGE Insights.
+
+5. Userback. (n.d.). User Experience (UX): Definition, Design & Best Practices. Userback Blog.
+
+6. Netguru. (2025). Top Chatbot UX Tips and Best Practices. Netguru Blog.
+
+7. Nielsen Norman Group. (n.d.). The User Experience of Chatbots. Nielsen Norman Group Articles.
+
+8. Mind the Product. (n.d.). Nine UX best practices for AI chatbots. Mind the Product.
+
+9. ISO. (n.d.). ISO 9241-210: Human-centered design for interactive systems. ISO Standard.
+
+10. Don Norman. (n.d.). The term "UX". Nielsen Norman Group Video.
+
+11. Nielsen Norman Group. (n.d.). UX vs. UI. Nielsen Norman Group Video.
+
+12. Don Norman. (n.d.). Principles of Human-Centered Design. Nielsen Norman Group Video.
+
+13. Don Norman. (n.d.). The Design of Everyday Things. Nielsen Norman Group Video.
+
+14. Nielsen Norman Group. (n.d.). Jakob's Law of Internet User Experience. Nielsen Norman Group Video.
+
+15. Interaction Design Foundation. UX Design. URL: https://www.interaction-design.org/literature/topics/ux-design
+
+16. W3C. Web Content Accessibility Guidelines (WCAG). URL: https://www.w3.org/WAI/standards-guidelines/wcag/
+
+17. Nielsen Norman Group. (n.d.). Design Thinking 101. Nielsen Norman Group Articles.

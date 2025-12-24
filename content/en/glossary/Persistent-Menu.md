@@ -297,10 +297,11 @@ Test on all target channels and devices for visibility and function before full 
 
 ## References
 
-- [Chatfuel Blog: Persistent Menu](https://chatfuel.com/blog/persistent-menu)
-- [ChatbotBuilder.ai Documentation](https://docs.chatbotbuilder.ai/support/solutions/articles/150000166613-persistent-menu)
-- [Certainly Knowledge Base: Add a Persistent Menu](https://support.certainly.io/knowledge/add-a-persistent-menu-to-your-chat)
-- [Messenger Platform API: persistent_menu](https://developers.facebook.com/docs/messenger-platform/reference/messenger-profile-api/persistent-menu/)
-- [YouTube: Persistent Menu in Website Chatbot](https://www.youtube.com/watch?v=4kAlBEgCvwM)
-- [YouTube: Using Persistent Menu Entry Point in Chatfuel](https://www.youtube.com/watch?v=DWovaAjFOOk)
-- [Certainly Bot Settings](https://support.certainly.io/knowledge/Individualize-your-chatbot-in-Bot-Settings)
+
+1. Chatfuel. (n.d.). Persistent Menu. Chatfuel Blog.
+2. ChatbotBuilder.ai. (n.d.). Persistent Menu Documentation. ChatbotBuilder.ai Documentation.
+3. Certainly. (n.d.). Add a Persistent Menu. Certainly Knowledge Base.
+4. Facebook. (n.d.). Persistent Menu. Messenger Platform API.
+5. Unknown. (n.d.). Persistent Menu in Website Chatbot. YouTube.
+6. Unknown. (n.d.). Using Persistent Menu Entry Point in Chatfuel. YouTube.
+7. Certainly. (n.d.). Bot Settings. Certainly Bot Settings.

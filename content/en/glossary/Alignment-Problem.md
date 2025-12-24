@@ -259,14 +259,25 @@ Alignment requires action at multiple levels:
 
 ## References
 
-- [AI Alignment: A Comprehensive Survey (arXiv)](https://arxiv.org/abs/2310.19852)
-- [AI Alignment: Field Survey Website](http://www.alignmentsurvey.com)
-- [World Economic Forum: AI Value Alignment](https://www.weforum.org/stories/2024/10/ai-value-alignment-how-we-can-align-artificial-intelligence-with-human-values/)
-- [IBM: What is AI Alignment?](https://www.ibm.com/think/topics/ai-alignment)
-- [Markkula Center: Multilevel Framework](https://www.scu.edu/ethics/focus-areas/technology-ethics/resources/a-multilevel-framework-for-the-ai-alignment-problem/)
-- [Alignment Research Center](https://alignmentresearchcenter.org/)
-- [Google DeepMind: Frontier Safety Framework](https://www.deepmind.com/blog/frontier-safety-framework)
-- [ISO/IEC 42001: AI Management Standard](https://www.iso.org/standard/81228.html)
-- [Issues in Information Systems (2024), AI and Management: Navigating the Alignment Problem (PDF)](https://iacis.org/iis/2024/4_iis_2024_194-204.pdf)
-- [Nature Medicine: AI in Healthcare (2023)](https://www.nature.com/articles/s41591-023-02387-9)
-- [IBM: RLHF](https://www.ibm.com/topics/rlhf)
+
+1. Unknown Author. (2024). AI Alignment: A Comprehensive Survey. arXiv.
+
+2. AI Alignment: Field Survey Website. Research Website. URL: http://www.alignmentsurvey.com
+
+3. World Economic Forum. (2024). AI Value Alignment: How We Can Align Artificial Intelligence with Human Values. WEF Stories.
+
+4. IBM. (2024). What is AI Alignment?. IBM Think Topics.
+
+5. Markkula Center. (n.d.). Multilevel Framework for the AI Alignment Problem. Santa Clara University Ethics Center.
+
+6. Alignment Research Center. Research Organization. URL: https://alignmentresearchcenter.org/
+
+7. Google DeepMind. (2024). Frontier Safety Framework. DeepMind Blog.
+
+8. International Organization for Standardization. (2024). ISO/IEC 42001: AI Management Standard. ISO Standards.
+
+9. Unknown Author. (2024). AI and Management: Navigating the Alignment Problem. Issues in Information Systems.
+
+10. Unknown Author. (2023). AI in Healthcare. Nature Medicine.
+
+11. IBM. (n.d.). RLHF. IBM Topics.

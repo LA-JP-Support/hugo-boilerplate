@@ -248,16 +248,17 @@ State / Context Memory により以下が可能になります:
 
 ## 参考文献
 
-- [Arize AI: Memory and State in LLM Applications](https://arize.com/blog/memory-and-state-in-llm-applications/)
-- [HackerNoon: The Role of Context Memory in AI Chatbots](https://hackernoon.com/the-role-of-context-memory-in-ai-chatbots-why-yesterdays-messages-matter)
-- [IBM: What is a Context Window?](https://www.ibm.com/think/topics/context-window)
-- [McKinsey: What is a Context Window?](https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-a-context-window)
-- [TechTarget: Persistent Storage](https://www.techtarget.com/searchstorage/definition/Persistent-storage)
-- [GeeksforGeeks: What is Persistent Storage?](https://www.geeksforgeeks.org/cloud-computing/what-is-persistent-storage/)
-- [IBM: Retrieval Augmented Generation (RAG)](https://www.ibm.com/think/topics/retrieval-augmented-generation)
-- [TechTarget: How Persistent Container Storage Works](https://www.techtarget.com/searchstorage/tip/How-persistent-container-storage-works-and-why-it-matters)
-- [GeeksforGeeks: Software Engineering Introduction](https://www.geeksforgeeks.org/software-engineering/software-engineering-introduction/)
-- [GeeksforGeeks: Object Storage vs Block Storage](https://www.geeksforgeeks.org/cloud-computing/object-storage-vs-block-storage-in-cloud/)
-- [GeeksforGeeks: Introduction to Solid State Drive (SSD)](https://www.geeksforgeeks.org/computer-organization-architecture/introduction-to-solid-state-drive-ssd/)
-- [TechTarget: Container Containerization](https://www.techtarget.com/searchitoperations/definition/container-containerization-or-container-based-virtualization)
-- [GeeksforGeeks: What is an Operating System?](https://www.geeksforgeeks.org/operating-systems/what-is-an-operating-system/)
+
+1. Arize AI. (n.d.). Memory and State in LLM Applications. Arize AI Blog.
+2. HackerNoon. (n.d.). The Role of Context Memory in AI Chatbots. HackerNoon.
+3. IBM. (n.d.). What is a Context Window?. IBM Think Topics.
+4. McKinsey. (n.d.). What is a Context Window?. McKinsey Featured Insights.
+5. TechTarget. (n.d.). Persistent Storage. TechTarget SearchStorage.
+6. GeeksforGeeks. (n.d.). What is Persistent Storage?. GeeksforGeeks Cloud Computing.
+7. IBM. (n.d.). Retrieval Augmented Generation (RAG). IBM Think Topics.
+8. TechTarget. (n.d.). How Persistent Container Storage Works. TechTarget SearchStorage.
+9. GeeksforGeeks. (n.d.). Software Engineering Introduction. GeeksforGeeks Software Engineering.
+10. GeeksforGeeks. (n.d.). Object Storage vs Block Storage. GeeksforGeeks Cloud Computing.
+11. GeeksforGeeks. (n.d.). Introduction to Solid State Drive (SSD). GeeksforGeeks Computer Organization and Architecture.
+12. TechTarget. (n.d.). Container Containerization. TechTarget SearchITOperations.
+13. GeeksforGeeks. (n.d.). What is an Operating System?. GeeksforGeeks Operating Systems.

@@ -120,8 +120,9 @@ List 5-6 advanced concepts with **Bold Headers** and explanations (each 2-3 sent
 List 5-6 future trends with **Bold Headers** and explanations (each 2-3 sentences)
 
 ## References
-Include 6-8 authoritative references:
-- [Title - Source](https://full-url.com)
+Include 6-8 authoritative references in standard bibliographic format.
+- For articles/reports/books: Author/Organization. (Year). Title. Source Name. (NO LINKS/URLs)
+- For services/tools: Name of Service. Description. URL: https://... (Explicit URL)
 
 QUALITY CHECKLIST:
 ✓ 2,700-2,900 words (count carefully)
@@ -130,7 +131,7 @@ QUALITY CHECKLIST:
 ✓ Comparison table included
 ✓ Professional tone, specific examples
 ✓ No redundancy, clear structure
-✓ All external links in References only
+✓ References formatted correctly (Text-only for articles, URL text for services)
 ✓ Proper English grammar throughout
 
 DO NOT:
@@ -138,6 +139,7 @@ DO NOT:
 ✗ Stop writing before 2,700 words
 ✗ Summarize or abbreviate content
 ✗ Include inline external links outside References
+✗ Include Markdown links in References (use text citations or explicit URL text)
 ✗ Forget articles (a/an/the) where grammatically required
 
 IMPORTANT: Write the COMPLETE article to 2,700-2,900 words. Do not stop early."""

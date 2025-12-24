@@ -223,22 +223,41 @@ Milvusを使用している組織には、NVIDIA、Salesforce、eBay、Walmart�
 
 ## 参考文献
 
-- [Milvus公式ドキュメント](https://milvus.io/docs/)
-- [Milvusアーキテクチャ概要](https://milvus.io/docs/architecture_overview.md)
-- [Milvus GitHubリポジトリ](https://github.com/milvus-io/milvus)
-- [Zilliz公式サイト](https://zilliz.com/)
-- [インストール概要](https://milvus.io/docs/install-overview.md)
-- [インデックスの説明](https://milvus.io/docs/index-explained.md)
-- [PyMilvus APIリファレンス](https://milvus.io/api-reference/pymilvus/v2.3.x/)
-- [LangChain統合](https://python.langchain.com/docs/integrations/vectorstores/milvus)
-- [LlamaIndex統合](https://gpt-index.readthedocs.io/en/latest/how_to/vector_stores/milvus.html)
-- [OpenAI統合ガイド](https://milvus.io/docs/integrate_with_openai.md)
-- [Apache Sparkコネクタ](https://github.com/milvus-io/spark-connector)
-- [Attu GUIツール](https://attu.zilliz.com/)
-- [Prometheus監視](https://prometheus.io/)
-- [Grafanaダッシュボード](https://grafana.com/)
-- [Hugging Face Hub](https://huggingface.co/)
-- [DSPyフレームワーク](https://github.com/stanfordnlp/dspy)
-- [Haystack統合](https://haystack.deepset.ai/)
-- [Ragasフレームワーク](https://github.com/explodinggradients/ragas)
-- [MemGPT](https://github.com/cpacker/MemGPT)
+
+1. Milvus. (n.d.). Milvus Official Documentation. URL: https://milvus.io/docs/
+
+2. Milvus. (n.d.). Milvus Architecture Overview. URL: https://milvus.io/docs/architecture_overview.md
+
+3. Milvus. (n.d.). Milvus GitHub Repository. URL: https://github.com/milvus-io/milvus
+
+4. Zilliz. (n.d.). Zilliz Official Site. URL: https://zilliz.com/
+
+5. Milvus. (n.d.). Installation Overview. URL: https://milvus.io/docs/install-overview.md
+
+6. Milvus. (n.d.). Index Explained. URL: https://milvus.io/docs/index-explained.md
+
+7. Milvus. (n.d.). PyMilvus API Reference. URL: https://milvus.io/api-reference/pymilvus/v2.3.x/
+
+8. LangChain. (n.d.). Milvus Integration. URL: https://python.langchain.com/docs/integrations/vectorstores/milvus
+
+9. LlamaIndex. (n.d.). Milvus Integration. URL: https://gpt-index.readthedocs.io/en/latest/how_to/vector_stores/milvus.html
+
+10. Milvus. (n.d.). OpenAI Integration Guide. URL: https://milvus.io/docs/integrate_with_openai.md
+
+11. Milvus. (n.d.). Apache Spark Connector. URL: https://github.com/milvus-io/spark-connector
+
+12. Attu. (n.d.). Attu GUI Tool. URL: https://attu.zilliz.com/
+
+13. Prometheus. (n.d.). Prometheus Monitoring. URL: https://prometheus.io/
+
+14. Grafana. (n.d.). Grafana Dashboard. URL: https://grafana.com/
+
+15. Hugging Face. (n.d.). Hugging Face Hub. URL: https://huggingface.co/
+
+16. Stanford NLP. (n.d.). DSPy Framework. URL: https://github.com/stanfordnlp/dspy
+
+17. Deepset. (n.d.). Haystack Integration. URL: https://haystack.deepset.ai/
+
+18. Exploding Gradients. (n.d.). Ragas Framework. URL: https://github.com/explodinggradients/ragas
+
+19. MemGPT. (n.d.). MemGPT Project. URL: https://github.com/cpacker/MemGPT

@@ -206,18 +206,19 @@ Real-time, high-volume processing requires efficiency. Distributed/cloud-based a
 
 ## References
 
-- [Encord: What is Named Entity Recognition?](https://encord.com/blog/named-entity-recognition/)
-- [Kairntech: Complete Guide to NER](https://kairntech.com/blog/articles/the-complete-guide-to-named-entity-recognition-ner/)
-- [Babel Street: Evaluating NLP for NER](https://www.babelstreet.com/blog/evaluating-nlp-annotating-evaluation-data-and-scoring-results)
-- [Prodigy: NER Annotation Tool](https://prodi.gy/docs/named-entity-recognition)
-- [Doccano: Open Source Annotation Tool](https://github.com/doccano/doccano)
-- [BRAT: Web-based Annotation Tool](https://brat.nlplab.org/)
-- [NetOwl: Entity Extraction](https://www.netowl.com/what-is-entity-extraction)
-- [NetOwl: Relationship Extraction](https://www.netowl.com/what-is-relationship-extraction)
-- [NetOwl: Event Extraction](https://www.netowl.com/what-is-event-extraction)
-- [Decagon AI: What is a Knowledge Graph](https://decagon.ai/glossary/what-is-a-knowledge-graph)
-- [Decagon AI: What is Few-Shot Learning](https://decagon.ai/glossary/what-is-few-shot-learning)
-- [Planet AI: Entity Extraction - Powerful OCR](https://planet-ai.com/entity-extraction/#a-powerful-ocr-they-key-for-efficient-entity-extraction)
-- [Engati: What is Sentiment Analysis](https://www.engati.com/glossary/what-is-sentiment-analysis)
-- [Babel Street: Coreference Resolution](https://craft-babelstreet.ddev.site/glossary#coreference-resolution)
-- [Wikipedia: Named Entity Recognition](https://en.wikipedia.org/wiki/Named-entity_recognition)
+
+1. Encord. (n.d.). What is Named Entity Recognition?. Encord Blog.
+2. Kairntech. (n.d.). Complete Guide to NER. Kairntech Blog.
+3. Babel Street. (n.d.). Evaluating NLP for NER. Babel Street Blog.
+4. Prodigy. (n.d.). NER Annotation Tool. Prodigy Documentation.
+5. Doccano. Open Source Annotation Tool. URL: https://github.com/doccano/doccano
+6. BRAT. Web-based Annotation Tool. URL: https://brat.nlplab.org/
+7. NetOwl. (n.d.). Entity Extraction. NetOwl.
+8. NetOwl. (n.d.). Relationship Extraction. NetOwl.
+9. NetOwl. (n.d.). Event Extraction. NetOwl.
+10. Decagon AI. (n.d.). What is a Knowledge Graph. Decagon AI Glossary.
+11. Decagon AI. (n.d.). What is Few-Shot Learning. Decagon AI Glossary.
+12. Planet AI. (n.d.). Entity Extraction - Powerful OCR. Planet AI.
+13. Engati. (n.d.). What is Sentiment Analysis. Engati Glossary.
+14. Babel Street. (n.d.). Coreference Resolution. Babel Street Glossary.
+15. Wikipedia. (n.d.). Named Entity Recognition. Wikipedia.

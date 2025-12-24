@@ -664,10 +664,17 @@ A: Primary costs include:
 
 ## References
 
-- [HDWEBSOFT: AI Image Analysis Guide](https://www.hdwebsoft.com/blog/ai-image-analysis-guide-to-machines-that-truly-see.html)
-- [ZEISS AI for Advanced Image Analysis (PDF)](https://nif.hms.harvard.edu/sites/nif.hms.harvard.edu/files/education-files/Zeiss%20AI%20eBook.pdf)
-- [Microsoft: Computer Vision Concepts](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/)
-- [Google Cloud: Vision AI](https://cloud.google.com/vision)
-- [AWS: Amazon Rekognition](https://aws.amazon.com/rekognition/)
-- [PyTorch: Torchvision Models](https://pytorch.org/vision/stable/models.html)
-- [TensorFlow: Computer Vision Tutorials](https://www.tensorflow.org/tutorials/images)
+
+1. HDWEBSOFT. (n.d.). AI Image Analysis Guide. HDWEBSOFT Blog.
+
+2. ZEISS. (n.d.). AI for Advanced Image Analysis. ZEISS eBook.
+
+3. Microsoft. (n.d.). Computer Vision Concepts. Microsoft Azure Documentation.
+
+4. Google Cloud. (n.d.). Vision AI. Google Cloud Platform.
+
+5. Amazon Web Services. (n.d.). Amazon Rekognition. AWS Services.
+
+6. PyTorch. (n.d.). Torchvision Models. PyTorch Documentation.
+
+7. TensorFlow. (n.d.). Computer Vision Tutorials. TensorFlow Tutorials.

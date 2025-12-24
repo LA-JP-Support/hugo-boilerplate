@@ -195,14 +195,15 @@ Apache Hadoop、Spark、Databricks、AWS Batch、Google Dataflow、Apache Airflo
 
 ## 参考文献
 
-- [Confluent: Batch Processing](https://www.confluent.io/learn/batch-processing/)
-- [Splunk: An Introduction to Batch Processing](https://www.splunk.com/en_us/blog/learn/batch-processing.html)
-- [Talend: Batch Processing Guide](https://www.talend.com/resources/batch-processing/)
-- [GeeksforGeeks: Batch vs Stream Processing](https://www.geeksforgeeks.org/operating-systems/difference-between-batch-processing-and-stream-processing/)
-- [DigitalRoute: Batch Processing](https://www.digitalroute.com/resources/glossary/batch-processing/)
-- [Databricks: Batch Inference](https://www.databricks.com/blog/introducing-serverless-batch-inference)
-- [Tetrate: Batch Processing](https://tetrate.io/learn/ai/batch-processing)
-- [Mirantis: Building AI Infrastructure](https://www.mirantis.com/blog/build-ai-infrastructure-your-definitive-guide-to-getting-ai-right/)
-- [Rivery: Batch vs Stream](https://rivery.io/blog/batch-vs-stream-processing-pros-and-cons-2/)
-- [Atlan: Batch vs Stream Processing](https://atlan.com/batch-processing-vs-stream-processing/)
-- [Monte Carlo: Stream vs Batch](https://www.montecarlodata.com/blog-stream-vs-batch-processing/)
+
+1. Confluent. (n.d.). Batch Processing. Confluent Learn.
+2. Splunk. (n.d.). An Introduction to Batch Processing. Splunk Blog.
+3. Talend. (n.d.). Batch Processing Guide. Talend Resources.
+4. GeeksforGeeks. (n.d.). Batch vs Stream Processing. GeeksforGeeks.
+5. DigitalRoute. (n.d.). Batch Processing. DigitalRoute Glossary.
+6. Databricks. (n.d.). Batch Inference. Databricks Blog.
+7. Tetrate. (n.d.). Batch Processing. Tetrate Learn.
+8. Mirantis. (n.d.). Building AI Infrastructure. Mirantis Blog.
+9. Rivery. (n.d.). Batch vs Stream. Rivery Blog.
+10. Atlan. (n.d.). Batch vs Stream Processing. Atlan.
+11. Monte Carlo. (n.d.). Stream vs Batch Processing. Monte Carlo Data Blog.

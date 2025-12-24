@@ -314,9 +314,15 @@ A: For high-volume, specialized tasks needing absolute consistency.
 
 ## References
 
-- [Analytics Vidhya: Comprehensive Guide to Output Parsers](https://www.analyticsvidhya.com/blog/2024/11/output-parsers/)
-- [Deepchecks: LLM Output Parsing Glossary](https://www.deepchecks.com/glossary/llm-output-parsing/)
-- [LangChain: Output parsers Reference](https://reference.langchain.com/python/langchain_core/output_parsers/)
-- [OpenAI: JSON Mode Documentation](https://platform.openai.com/docs/guides/text-generation/json-mode)
-- [Xcitium: What is Parsing?](https://www.xcitium.com/blog/news/what-is-parsing/)
-- [GeeksforGeeks: Output Parsers in LangChain](https://www.geeksforgeeks.org/artificial-intelligence/output-parsers-in-langchain/)
+
+1. Analytics Vidhya. (2024). Comprehensive Guide to Output Parsers. Analytics Vidhya Blog.
+
+2. Deepchecks. (2024). LLM Output Parsing Glossary. Deepchecks Glossary.
+
+3. LangChain. (n.d.). Output Parsers Reference. LangChain Python Reference.
+
+4. OpenAI. (n.d.). JSON Mode Documentation. OpenAI Platform Documentation.
+
+5. Xcitium. (n.d.). What is Parsing?. Xcitium Blog.
+
+6. GeeksforGeeks. (n.d.). Output Parsers in LangChain. GeeksforGeeks AI Section.

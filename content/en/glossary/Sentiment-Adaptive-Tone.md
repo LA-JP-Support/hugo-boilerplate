@@ -227,11 +227,19 @@ Engage 360 by Voxtron uses a comprehensive process:
 
 ## References
 
-- [Voxtron: How Chatbot Sentiment Analysis is Transforming Customer Experience in Contact Centers](https://www.voxtronme.com/2025/11/24/how-chatbot-sentiment-analysis-is-transforming-customer-experience-in-contact-centers/)
-- [Bitcot: Humanizing Chatbot Personality with Conversational AI](https://www.bitcot.com/chatbot-personality/)
-- [DialZara: Top 7 Sentiment Analysis Techniques for Voice AI](https://dialzara.com/blog/top-7-sentiment-analysis-techniques-for-voice-ai)
-- [LinkedIn: Meaning-Aware Chatbots That Adapt Tone](https://www.linkedin.com/pulse/meaning-aware-chatbots-adapt-tone-evolution-future-andre-g5sze)
-- [Retell AI: Sentiment Analysis Glossary](https://www.retellai.com/glossary/sentiment-analysis)
-- [QEval Pro: AI Sentiment Analysis for Customer Experience](https://www.qevalpro.com/blog/ai-sentiment-analysis-improves-customer-experience/)
-- [Bitcot: AI Automation Solutions](https://www.bitcot.com/services/ai-automation-agency/)
-- [Voxtron: Engage 360 Platform](https://www.voxtronme.com/engage-360-platform/)
+
+1. Voxtron. (2025). How Chatbot Sentiment Analysis is Transforming Customer Experience in Contact Centers. Voxtron Blog.
+
+2. Bitcot. (n.d.). Humanizing Chatbot Personality with Conversational AI. Bitcot Blog.
+
+3. DialZara. (n.d.). Top 7 Sentiment Analysis Techniques for Voice AI. DialZara Blog.
+
+4. Andre, G. (n.d.). Meaning-Aware Chatbots That Adapt Tone. LinkedIn Pulse.
+
+5. Retell AI. (n.d.). Sentiment Analysis Glossary. Retell AI.
+
+6. QEval Pro. (n.d.). AI Sentiment Analysis for Customer Experience. QEval Pro Blog.
+
+7. Bitcot. AI Automation Solutions. URL: https://www.bitcot.com/services/ai-automation-agency/
+
+8. Voxtron. Engage 360 Platform. URL: https://www.voxtronme.com/engage-360-platform/

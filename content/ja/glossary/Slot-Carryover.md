@@ -245,12 +245,21 @@ url: "/ja/glossary/Slot-Carryover/"
 
 ## 参考文献
 
-- [Amazon Science: Improving Long Distance Slot Carryover in Spoken Dialogue Systems](https://www.amazon.science/publications/improving-long-distance-slot-carryover-in-spoken-dialogue-systems)
-- [arXiv: Improving Long Distance Slot Carryover in Spoken Dialogue Systems (Chen et al., 2019)](https://arxiv.org/abs/1906.01149)
-- [ACL Anthology: Improving Long Distance Slot Carryover in Spoken Dialogue Systems](https://aclanthology.org/W19-4111/)
-- [Interspeech 2018: Contextual Slot Carryover for Disparate Schemas (Naik et al.)](https://www.isca-archive.org/interspeech_2018/naik18_interspeech.html)
-- [Hugging Face: Dialogue State Tracking Datasets Collection](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets)
-- [Mozilla Foundation: How to Protect Your Privacy from ChatGPT and Other AI Chatbots](https://www.mozillafoundation.org/en/privacynotincluded/articles/how-to-protect-your-privacy-from-chatgpt-and-other-ai-chatbots/)
-- [Tencent Cloud Techpedia: Memory Types](https://www.tencentcloud.com/techpedia/127640)
-- [Microsoft Research: Dialog State Tracking Challenge](https://www.microsoft.com/en-us/research/event/dialog-state-tracking-challenge/)
-- [Hugging Face Datasets: Schema-Guided DSTC8](https://huggingface.co/datasets/schema_guided_dstc8)
+
+1. Chen, et al. (2019). Improving Long Distance Slot Carryover in Spoken Dialogue Systems. arXiv.
+
+2. Naik, et al. (2018). Contextual Slot Carryover for Disparate Schemas. Interspeech.
+
+3. Amazon Science. (n.d.). Improving Long Distance Slot Carryover in Spoken Dialogue Systems. Amazon Science Publications.
+
+4. ACL Anthology. (n.d.). Improving Long Distance Slot Carryover in Spoken Dialogue Systems. ACL Anthology.
+
+5. Mozilla Foundation. (n.d.). How to Protect Your Privacy from ChatGPT and Other AI Chatbots. Mozilla Foundation.
+
+6. Tencent Cloud Techpedia. (n.d.). Memory Types. Tencent Cloud Techpedia.
+
+7. Microsoft Research. (n.d.). Dialog State Tracking Challenge. Microsoft Research.
+
+8. Hugging Face. Dialogue State Tracking Datasets Collection. URL: https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets
+
+9. Hugging Face Datasets. Schema-Guided DSTC8. URL: https://huggingface.co/datasets/schema_guided_dstc8

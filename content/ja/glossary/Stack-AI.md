@@ -298,27 +298,28 @@ SOC2、HIPAA、GDPR準拠。オンプレミス/VPCデプロイメントとロー
 
 ## 参考文献
 
-- [Stack AI公式ウェブサイト](https://www.stack-ai.com/)
-- [Stack AIドキュメント](https://docs.stack-ai.com/stack-ai/)
-- [Stack AIセキュリティページ](https://www.stack-ai.com/security)
-- [Stack AI統合ドキュメント](https://docs.stack-ai.com/integrations)
-- [Stack AI価格FAQ](https://docs.stack-ai.com/pricing)
-- [Stack AI金融ソリューション](https://www.stack-ai.com/solutions/finance)
-- [Stack AI保険ソリューション](https://www.stack-ai.com/solutions/insurance)
-- [Stack AIヘルスケアソリューション](https://www.stack-ai.com/solutions/healthcare)
-- [Stack AI教育ソリューション](https://www.stack-ai.com/solutions/education)
-- [Stack AI顧客事例](https://www.stack-ai.com/customers)
-- [Stack AIユースケース](https://www.stack-ai.com/solutions)
-- [Marketer Milk Stack AIレビュー](https://www.marketermilk.com/blog/stack-ai-review)
-- [Voiceflow Stack AI比較](https://www.voiceflow.com/blog/stack-ai)
-- [G2 Stack AIレビュー](https://www.g2.com/products/stack-ai/reviews)
-- [G2 Stack AIレビュー例](https://www.g2.com/products/stack-ai/reviews/stack-ai-review-10491200)
-- [MongoDB AIスタック](https://www.mongodb.com/resources/basics/artificial-intelligence/ai-stack)
-- [PromptLoop Stack AIディレクトリ](https://www.promptloop.com/directory/what-does-stack-ai-do)
-- [IBM AIスタック概要](https://www.ibm.com/think/topics/ai-stack)
-- [NWAI AIスタック概要](https://nwai.co/what-is-an-ai-stack-a-comprehensive-overview/)
-- [Marketer Milk: ベストAIエージェントプラットフォーム](https://www.marketermilk.com/blog/best-ai-agent-platforms)
-- [IBM Cloud AI用語集](https://www.ibm.com/cloud/learn/ai)
-- [Zapierワークフロー自動化ガイド](https://zapier.com/learn/automation/workflow-automation/)
-- [OpenAI GPT-4](https://openai.com/gpt-4)
-- [Pineconeベクトルデータベース](https://www.pinecone.io/learn/vector-database/)
+
+1. Stack AI. (n.d.). 公式ウェブサイト. Stack AI.
+2. Stack AI. (n.d.). ドキュメント. Stack AI Docs.
+3. Stack AI. (n.d.). セキュリティページ. Stack AI.
+4. Stack AI. (n.d.). 統合ドキュメント. Stack AI Docs.
+5. Stack AI. (n.d.). 価格FAQ. Stack AI Docs.
+6. Stack AI. (n.d.). 金融ソリューション. Stack AI.
+7. Stack AI. (n.d.). 保険ソリューション. Stack AI.
+8. Stack AI. (n.d.). ヘルスケアソリューション. Stack AI.
+9. Stack AI. (n.d.). 教育ソリューション. Stack AI.
+10. Stack AI. (n.d.). 顧客事例. Stack AI.
+11. Stack AI. (n.d.). ユースケース. Stack AI.
+12. Marketer Milk. (n.d.). Stack AIレビュー. Marketer Milk Blog.
+13. Voiceflow. (n.d.). Stack AI比較. Voiceflow Blog.
+14. G2. (n.d.). Stack AIレビュー. G2.
+15. G2. (n.d.). Stack AIレビュー例. G2.
+16. MongoDB. (n.d.). AIスタック. MongoDB Resources.
+17. PromptLoop. (n.d.). Stack AIディレクトリ. PromptLoop.
+18. IBM. (n.d.). AIスタック概要. IBM Think Topics.
+19. NWAI. (n.d.). AIスタック概要. NWAI.
+20. Marketer Milk. (n.d.). ベストAIエージェントプラットフォーム. Marketer Milk Blog.
+21. IBM. (n.d.). Cloud AI用語集. IBM Cloud.
+22. Zapier. (n.d.). ワークフロー自動化ガイド. Zapier Learn.
+23. OpenAI. (n.d.). GPT-4. OpenAI.
+24. Pinecone. (n.d.). ベクトルデータベース. Pinecone Learn.

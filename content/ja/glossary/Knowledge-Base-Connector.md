@@ -282,12 +282,13 @@ url: "/ja/glossary/Knowledge-Base-Connector/"
 
 ## 参考文献
 
-- [n8n: Build a Custom Knowledge RAG Chatbot](https://blog.n8n.io/rag-chatbot/)
-- [Automation Anywhere: Knowledge Base Feature (YouTube)](https://www.youtube.com/watch?v=Z6JWTrpObQo)
-- [Stack AI: Healthcare Chatbot Tutorial](https://www.stack-ai.com/blog/how-to-build-ai-chatbot-with-knowledge-base-rag)
-- [Amazon Bedrock Knowledge Base Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html)
-- [Odin AI: What is a Knowledge Base?](https://blog.getodin.ai/what-is-a-knowledge-base-complete-beginners-guide-2024/)
-- [YouTube: Step-by-step RAG Agent with Pinecone and n8n](https://www.youtube.com/watch?v=iT9xpiUwVbI)
-- [Utility Analytics: RAG Architecture Guide](https://utilityanalytics.com/how-rag-architecture-improves-knowledge-base-interactions/)
-- [n8n: Vector Database Guide](https://docs.n8n.io/advanced-ai/examples/understand-vector-databases/)
-- [Amazon Bedrock Agents Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html)
+
+1. n8n. (n.d.). Build a Custom Knowledge RAG Chatbot. n8n Blog.
+2. Automation Anywhere. (n.d.). Knowledge Base Feature. YouTube.
+3. Stack AI. (n.d.). Healthcare Chatbot Tutorial. Stack AI Blog.
+4. Amazon Web Services. (n.d.). Bedrock Knowledge Base Documentation. AWS Documentation.
+5. Odin AI. (2024). What is a Knowledge Base?. Odin AI Blog.
+6. YouTube. (n.d.). Step-by-step RAG Agent with Pinecone and n8n. YouTube.
+7. Utility Analytics. (n.d.). RAG Architecture Guide. Utility Analytics.
+8. n8n. (n.d.). Vector Database Guide. n8n Documentation.
+9. Amazon Web Services. (n.d.). Bedrock Agents Documentation. AWS Documentation.

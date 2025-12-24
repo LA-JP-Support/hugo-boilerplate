@@ -201,18 +201,33 @@ Ambient intelligence is about embedding systems into human environments to monit
 
 ## References
 
-- [Coursera: What Is Ambient Intelligence?](https://www.coursera.org/articles/ambient-intelligence)
-- [TechTarget: Ambient Intelligence (AmI)](https://www.techtarget.com/searchenterpriseai/definition/ambient-intelligence-AmI)
-- [Heidi Health: Ambient Intelligence in Healthcare](https://www.heidihealth.com/blog/ambient-intelligence)
-- [Microsoft: A New Era of Ambient Intelligence in Healthcare](https://www.microsoft.com/en-us/industry/blog/healthcare/2025/02/27/a-new-era-of-ambient-intelligence-in-healthcare/)
-- [Emorphis Health: Ambient Intelligence in Healthcare](https://emorphis.health/blogs/ambient-intelligence-in-healthcare/)
-- [6hour.ai: Ambient Agent Architecture](https://www.6hour.ai/post/ambient-agent-architecture-the-future-of-intelligent-context-aware-systems)
-- [ClickUp Blog: Ambient AI](https://clickup.com/blog/hub/ai/agentic-ai/ambient/)
-- [YouTube: Career Spotlight—AI Engineer](https://www.youtube.com/watch?v=As0ewhVMBSU)
-- [USF Health: Ambient AI in Healthcare](https://www.usfhealthonline.com/resources/industry-news/what-is-ambient-ai-and-how-is-it-impacting-healthcare/)
-- [TechTarget: Machine Learning](https://www.techtarget.com/searchenterpriseai/definition/machine-learning-ML)
-- [TechTarget: Context Awareness](https://www.techtarget.com/whatis/definition/context-awareness)
-- [TechTarget: IoT Basics](https://www.techtarget.com/whatis/feature/IoT-basics-A-guide-for-beginners)
-- [Whatsnext Nuance: Ambient Clinical Intelligence](https://whatsnext.nuance.com/healthcare-ai/what-is-ambient-clinical-intelligence-and-how-is-it-transforming-care/)
-- [ACM Digital Library: Architecting AmI Systems](https://dl.acm.org/doi/10.1145/1462027.1462036)
-- [Career Chat on LinkedIn](https://www.linkedin.com/newsletters/career-chat-7055249714664853504/)
+
+1. Coursera. (n.d.). What Is Ambient Intelligence?. Coursera Articles.
+
+2. TechTarget. (n.d.). Ambient Intelligence (AmI). TechTarget Enterprise AI.
+
+3. Heidi Health. (n.d.). Ambient Intelligence in Healthcare. Heidi Health Blog.
+
+4. Microsoft. (2025). A New Era of Ambient Intelligence in Healthcare. Microsoft Industry Blog.
+
+5. Emorphis Health. (n.d.). Ambient Intelligence in Healthcare. Emorphis Health Blogs.
+
+6. 6hour.ai. (n.d.). Ambient Agent Architecture. 6hour.ai Post.
+
+7. ClickUp. (n.d.). Ambient AI. ClickUp Blog.
+
+8. YouTube. (n.d.). Career Spotlight—AI Engineer. YouTube Video.
+
+9. USF Health. (n.d.). Ambient AI in Healthcare. USF Health Online Resources.
+
+10. TechTarget. (n.d.). Machine Learning. TechTarget Enterprise AI.
+
+11. TechTarget. (n.d.). Context Awareness. TechTarget What Is.
+
+12. TechTarget. (n.d.). IoT Basics. TechTarget What Is.
+
+13. Nuance. (n.d.). Ambient Clinical Intelligence. Whatsnext Nuance.
+
+14. ACM Digital Library. (n.d.). Architecting AmI Systems. ACM Digital Library.
+
+15. LinkedIn. (n.d.). Career Chat. LinkedIn Newsletter.

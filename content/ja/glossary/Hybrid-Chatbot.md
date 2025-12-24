@@ -207,19 +207,27 @@ url: "/ja/glossary/Hybrid-Chatbot/"
 
 ## 参考文献
 
-- [Jotform: Hybrid chatbots—Everything you need to know](https://www.jotform.com/ai/agents/hybrid-chatbots/)
-- [OMQ: What are Hybrid Chatbots?](https://omq.ai/lexicon/what-are-hybrid-chatbots/)
-- [Quidget: Hybrid AI Chatbots—The Best Examples & How They Work](https://quidget.ai/blog/ai-automation/hybrid-ai-chatbots-the-best-examples-and-how-they-work/)
-- [Zoho: Hybrid chatbots—merging AI with rule-based efficiency](https://www.zoho.com/blog/salesiq/hybrid-chatbot.html)
-- [RingCentral: Hybrid chatbot: how to make humans and robots work together](https://www.ringcentral.com/us/en/blog/integration-agents-chatbots-botmind/)
-- [Fast Simon: What Are Hybrid Chatbots?](https://www.fastsimon.com/ecommerce-wiki/optimized-ecommerce-experience/what-are-hybrid-chatbots/)
-- [IBM: Types of Chatbots](https://www.ibm.com/think/topics/chatbot-types)
 
-**関連トピック:**  
-- [AI Chatbot](https://www.moin.ai/en/product/chatbot)
-- [Customer Support Automation](https://www.jotform.com/customer-service/)
-- [Natural Language Processing (NLP)](https://omq.ai/lexicon/nlp-chatbot/)
-- [Human Handover](https://www.moin.ai/en/chatbot-wiki/human-takeover-the-chatbot-human-handover)
-- [E-commerce Chatbots](https://quidget.ai/blog/ai-automation/how-chatbots-transform-customer-support/)
+1. Jotform. (n.d.). Hybrid chatbots—Everything you need to know. Jotform Blog.
 
-**ハイブリッドチャットボットの導入について相談するには、[Quidgetチームに連絡](https://quidget.ai/)するか、[Fast Simonで無料相談を予約](https://www.fastsimon.com/schedule-demo/)してください。**
+2. OMQ. (n.d.). What are Hybrid Chatbots?. OMQ Lexicon.
+
+3. Quidget. (n.d.). Hybrid AI Chatbots—The Best Examples & How They Work. Quidget Blog.
+
+4. Zoho. (n.d.). Hybrid chatbots—merging AI with rule-based efficiency. Zoho Blog.
+
+5. RingCentral. (n.d.). Hybrid chatbot: how to make humans and robots work together. RingCentral Blog.
+
+6. Fast Simon. (n.d.). What Are Hybrid Chatbots?. Fast Simon E-commerce Wiki.
+
+7. IBM. (n.d.). Types of Chatbots. IBM Think Topics.
+
+8. Moin AI. AI Chatbot. URL: https://www.moin.ai/en/product/chatbot
+
+9. Jotform. Customer Support Automation. URL: https://www.jotform.com/customer-service/
+
+10. OMQ. Natural Language Processing (NLP). URL: https://omq.ai/lexicon/nlp-chatbot/
+
+11. Moin AI. Human Handover. URL: https://www.moin.ai/en/chatbot-wiki/human-takeover-the-chatbot-human-handover
+
+12. Quidget. E-commerce Chatbots. URL: https://quidget.ai/blog/ai-automation/how-chatbots-transform-customer-support/

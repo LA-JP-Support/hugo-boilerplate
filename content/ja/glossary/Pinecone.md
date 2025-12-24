@@ -261,20 +261,37 @@ Pineconeは、リアルタイム更新、メタデータフィルタリング、
 
 ## 参考文献
 
-- [Pinecone公式ドキュメント](https://docs.pinecone.io/)
-- [ベクトルデータベースとは?](https://www.pinecone.io/learn/vector-database/)
-- [Pinecone製品ページ](https://www.pinecone.io/)
-- [ベクトル埋め込みの説明](https://www.pinecone.io/learn/vector-embeddings/)
-- [Pineconeアーキテクチャドキュメント](https://docs.pinecone.io/guides/get-started/database-architecture)
-- [ベクトルインデックスとANNアルゴリズム](https://www.pinecone.io/learn/series/faiss/vector-indexes/)
-- [HNSWアルゴリズムの説明](https://www.pinecone.io/learn/series/faiss/hnsw/)
-- [Pineconeクイックスタートガイド](https://docs.pinecone.io/guides/get-started/quickstart)
-- [インデックスの作成と管理](https://docs.pinecone.io/guides/index-data/create-an-index)
-- [メタデータによるフィルタリング](https://docs.pinecone.io/guides/search/filter-by-metadata)
-- [Pineconeセキュリティ](https://www.pinecone.io/security/)
-- [Pinecone統合概要](https://docs.pinecone.io/integrations/overview)
-- [Vanguardケーススタディ](https://www.pinecone.io/customers/vanguard/)
-- [Spotifyポッドキャスト検索](https://www.pinecone.io/learn/spotify-podcast-search/)
-- [Estuary: Pinecone AIとは](https://estuary.dev/blog/what-is-pinecone-ai/)
-- [F22 Labs: Pineconeベクトルデータベースガイド](https://www.f22labs.com/blogs/pinecone-vector-db-guide-core-concepts-explained/)
-- [Oracle: Pineconeとは](https://www.oracle.com/ca-en/database/vector-database/pinecone/)
+
+1. Pinecone. (n.d.). Pinecone Official Documentation. URL: https://docs.pinecone.io/
+
+2. Pinecone. (n.d.). What is a Vector Database?. URL: https://www.pinecone.io/learn/vector-database/
+
+3. Pinecone. (n.d.). Pinecone Product Page. URL: https://www.pinecone.io/
+
+4. Pinecone. (n.d.). Vector Embeddings Explanation. URL: https://www.pinecone.io/learn/vector-embeddings/
+
+5. Pinecone. (n.d.). Pinecone Architecture Documentation. URL: https://docs.pinecone.io/guides/get-started/database-architecture
+
+6. Pinecone. (n.d.). Vector Indexes and ANN Algorithms. URL: https://www.pinecone.io/learn/series/faiss/vector-indexes/
+
+7. Pinecone. (n.d.). HNSW Algorithm Explanation. URL: https://www.pinecone.io/learn/series/faiss/hnsw/
+
+8. Pinecone. (n.d.). Pinecone Quickstart Guide. URL: https://docs.pinecone.io/guides/get-started/quickstart
+
+9. Pinecone. (n.d.). Creating and Managing Indexes. URL: https://docs.pinecone.io/guides/index-data/create-an-index
+
+10. Pinecone. (n.d.). Filtering by Metadata. URL: https://docs.pinecone.io/guides/search/filter-by-metadata
+
+11. Pinecone. (n.d.). Pinecone Security. URL: https://www.pinecone.io/security/
+
+12. Pinecone. (n.d.). Pinecone Integrations Overview. URL: https://docs.pinecone.io/integrations/overview
+
+13. Pinecone. (n.d.). Vanguard Case Study. URL: https://www.pinecone.io/customers/vanguard/
+
+14. Pinecone. (n.d.). Spotify Podcast Search. URL: https://www.pinecone.io/learn/spotify-podcast-search/
+
+15. Estuary. (n.d.). What is Pinecone AI?. URL: https://estuary.dev/blog/what-is-pinecone-ai/
+
+16. F22 Labs. (n.d.). Pinecone Vector Database Guide: Core Concepts Explained. URL: https://www.f22labs.com/blogs/pinecone-vector-db-guide-core-concepts-explained/
+
+17. Oracle. (n.d.). What is Pinecone?. URL: https://www.oracle.com/ca-en/database/vector-database/pinecone/

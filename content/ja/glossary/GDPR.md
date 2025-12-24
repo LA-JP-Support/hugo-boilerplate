@@ -289,21 +289,22 @@ EU/EEAユーザーのデータを処理するチャットボットは、適法�
 
 ## 参考文献
 
-- [GDPR公式テキスト - EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
-- [GDPR.eu - GDPRとは?](https://gdpr.eu/)
-- [GDPR.eu - コンプライアンスガイド](https://gdpr.eu/compliance/)
-- [GDPR.eu - 用語集](https://gdpr.eu/glossary/)
-- [GDPR.eu - 同意要件](https://gdpr.eu/consent/)
-- [GDPR.eu - データ主体の権利](https://gdpr.eu/rights/)
-- [GDPR.eu - 地域的範囲](https://gdpr.eu/companies-outside-of-europe/)
-- [GDPR.eu - AIとGDPR](https://gdpr.eu/artificial-intelligence/)
-- [OneTrust - GDPRコンプライアンスガイド](https://www.onetrust.com/blog/gdpr-compliance/)
-- [EDPB - ガイドラインとベストプラクティス](https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en)
-- [EDPB - AIとデータ保護ガイドライン](https://edpb.europa.eu/our-work-tools/documents/public-consultations/2021/guidelines-052021-artificial-intelligence-and_en)
-- [EDPB - 同意ガイドライン](https://edpb.europa.eu/our-work-tools/documents/public-consultations/2018/guidelines-052020-consent-under-regulation-eu_en)
-- [EDPB - 自動化された意思決定ガイドライン](https://edpb.europa.eu/our-work-tools/documents/public-consultations/2018/guidelines-022018-automated-individual_en)
-- [EDPB - DPIAガイドライン](https://edpb.europa.eu/our-work-tools/documents/public-consultations/2017/guidelines-012017-data-protection-impact_en)
-- [EDPB - 国際転送](https://www.edpb.europa.eu/our-work-tools/our-documents/topic/international-transfers-data_en)
-- [GDPR-Info.eu - 完全な法的テキスト](https://gdpr-info.eu/)
-- [CNIL - Google 5,000万ユーロ罰金](https://www.cnil.fr/en/cnils-restricted-committee-imposes-financial-penalty-50-million-euros-against-google-llc)
-- [ICO - British Airways罰金](https://www.ico.org.uk/about-the-ico/news-and-events/news-and-blogs/2020/10/ico-fines-british-airways-20m-for-data-breach/)
+
+1. European Union. (2016). General Data Protection Regulation (GDPR). EUR-Lex.
+2. GDPR.eu. (n.d.). GDPRとは?. GDPR.eu.
+3. GDPR.eu. (n.d.). コンプライアンスガイド. GDPR.eu.
+4. GDPR.eu. (n.d.). 用語集. GDPR.eu.
+5. GDPR.eu. (n.d.). 同意要件. GDPR.eu.
+6. GDPR.eu. (n.d.). データ主体の権利. GDPR.eu.
+7. GDPR.eu. (n.d.). 地域的範囲. GDPR.eu.
+8. GDPR.eu. (n.d.). AIとGDPR. GDPR.eu.
+9. OneTrust. (n.d.). GDPRコンプライアンスガイド. OneTrust Blog.
+10. European Data Protection Board (EDPB). (n.d.). ガイドラインとベストプラクティス. EDPB.
+11. European Data Protection Board (EDPB). (2021). AIとデータ保護ガイドライン. EDPB.
+12. European Data Protection Board (EDPB). (2020). 同意ガイドライン. EDPB.
+13. European Data Protection Board (EDPB). (2018). 自動化された意思決定ガイドライン. EDPB.
+14. European Data Protection Board (EDPB). (2017). DPIAガイドライン. EDPB.
+15. European Data Protection Board (EDPB). (n.d.). 国際転送. EDPB.
+16. GDPR-Info.eu. (n.d.). 完全な法的テキスト. GDPR-Info.eu.
+17. Commission Nationale de l'Informatique et des Libertés (CNIL). (n.d.). Google 5,000万ユーロ罰金. CNIL.
+18. Information Commissioner's Office (ICO). (2020). British Airways罰金. ICO.

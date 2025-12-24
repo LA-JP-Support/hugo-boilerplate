@@ -158,13 +158,14 @@ FAQやポリシーなどのテキスト重視のセクション化された情�
 
 ## 参考文献
 
-- [NN/g: Designing Effective Carousels](https://www.nngroup.com/articles/designing-effective-carousels/)
-- [W3C: Carousel Accessibility Full Guide](https://www.w3.org/WAI/tutorials/carousels/)
-- [Smart Interface Design Patterns: Better Carousel UX](https://smart-interface-design-patterns.com/articles/better-carousel-ux/)
-- [Erik Runyon: Carousel Interaction Stats](https://erikrunyon.com/2013/01/carousel-interaction-stats/)
-- [NN/g: Banner Blindness Research](https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/)
-- [Swiper.js: React Integration](https://swiperjs.com/react)
-- [Splide.js: React Integration](https://splidejs.com/integration/react/)
-- [PrimeVue Carousel](https://www.primefaces.org/primevue/carousel)
-- [Justinmind: Carousel Examples and Templates](https://www.justinmind.com/ui-design/carousels)
-- [Mobbin: Carousel Design Patterns](https://mobbin.com/browse/ios/patterns/carousel)
+
+1. Nielsen Norman Group. (n.d.). Designing Effective Carousels. Nielsen Norman Group Articles.
+2. W3C. (n.d.). Carousel Accessibility Full Guide. W3C Web Accessibility Tutorials.
+3. Smart Interface Design Patterns. (n.d.). Better Carousel UX. Smart Interface Design Patterns Articles.
+4. Runyon, E. (2013). Carousel Interaction Stats. Erik Runyon Blog.
+5. Nielsen Norman Group. (n.d.). Banner Blindness Research. Nielsen Norman Group Articles.
+6. Swiper.js. React Integration. URL: https://swiperjs.com/react
+7. Splide.js. React Integration. URL: https://splidejs.com/integration/react/
+8. PrimeVue. Carousel Component. URL: https://www.primefaces.org/primevue/carousel
+9. Justinmind. Carousel Examples and Templates. URL: https://www.justinmind.com/ui-design/carousels
+10. Mobbin. Carousel Design Patterns. URL: https://mobbin.com/browse/ios/patterns/carousel

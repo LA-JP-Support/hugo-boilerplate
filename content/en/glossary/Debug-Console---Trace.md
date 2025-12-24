@@ -203,17 +203,18 @@ Many tools offer simulation or rollback modes; always check before running on li
 
 ## References
 
-- [Leena AI: Debug Console in KM](https://docs.leena.ai/docs/debug-console-in-km)
-- [Honeycomb: What Are Traces?](https://www.honeycomb.io/blog/what-are-traces)
-- [NickFrates: How to Debug Salesforce Flows](https://www.nickfrates.com/blog/how-to-debug-salesforce-flows-step-by-step-troubleshooting-guide)
-- [Lamatic: Flow Debugging](https://lamatic.ai/docs/tests/flow-debugging)
-- [Apigee: Using the Trace tool](https://docs.apigee.com/api-platform/debug/using-trace-tool-0)
-- [OpenTelemetry: Glossary](https://opentelemetry.io/docs/concepts/glossary/)
-- [OpenTelemetry: Traces](https://opentelemetry.io/docs/concepts/signals/traces/)
-- [OpenTelemetry: Spans](https://opentelemetry.io/docs/concepts/signals/traces/#spans)
-- [OpenTelemetry: Context Propagation](https://opentelemetry.io/docs/concepts/context-propagation)
-- [OpenTelemetry: Trace Exporters](https://opentelemetry.io/docs/concepts/signals/traces/#trace-exporters)
-- [OpenTelemetry: Tracer Provider](https://opentelemetry.io/docs/concepts/signals/traces/#tracer-provider)
-- [OpenTelemetry: Distributed Tracing](https://opentelemetry.io/docs/concepts/glossary/#distributed-tracing)
-- [OpenTelemetry: Aggregation](https://opentelemetry.io/docs/concepts/glossary/#aggregation)
-- [Neon: The 3 Levels of Debugging With AI](https://neon.com/blog/the-3-levels-of-debugging-with-ai)
+
+1. Leena AI. (n.d.). Debug Console in KM. Leena AI Documentation.
+2. Honeycomb. (n.d.). What Are Traces?. Honeycomb Blog.
+3. Nick Frates. (n.d.). How to Debug Salesforce Flows Step by Step Troubleshooting Guide. Nick Frates Blog.
+4. Lamatic. (n.d.). Flow Debugging. Lamatic Documentation.
+5. Apigee. (n.d.). Using the Trace Tool. Apigee Documentation.
+6. OpenTelemetry. (n.d.). Glossary. OpenTelemetry Documentation.
+7. OpenTelemetry. (n.d.). Traces. OpenTelemetry Documentation.
+8. OpenTelemetry. (n.d.). Spans. OpenTelemetry Documentation.
+9. OpenTelemetry. (n.d.). Context Propagation. OpenTelemetry Documentation.
+10. OpenTelemetry. (n.d.). Trace Exporters. OpenTelemetry Documentation.
+11. OpenTelemetry. (n.d.). Tracer Provider. OpenTelemetry Documentation.
+12. OpenTelemetry. (n.d.). Distributed Tracing. OpenTelemetry Documentation.
+13. OpenTelemetry. (n.d.). Aggregation. OpenTelemetry Documentation.
+14. Neon. (n.d.). The 3 Levels of Debugging With AI. Neon Blog.

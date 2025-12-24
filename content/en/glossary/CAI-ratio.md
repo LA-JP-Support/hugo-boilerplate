@@ -205,13 +205,23 @@ Most effective for classification and labeling tasks. May be less informative fo
 
 ## References
 
-- [Chen, C., Yin, H., Tsang, I.W.: Evaluating LLMs Without Oracle Feedback (2024)](https://arxiv.org/abs/2509.08809)
-- [Chen et al.: Agentic Annotation Evaluation Through Unsupervised Consistency Signals (PDF)](https://arxiv.org/pdf/2509.08809)
-- [Encord: The Top 11 AI Metrics for Generative AI](https://encord.com/blog/generative-ai-metrics/)
-- [AryaXAI: The Unseen KPI for AI Success—CAIR](https://www.aryaxai.com/article/the-unseen-kpi-for-ai-success-designing-for-confidence-in-ai-results-cair-lmpva)
-- [Lu, Z. et al.: Small Language Models: Survey, Measurements, and Insights (2024)](https://arxiv.org/abs/2409.15790)
-- [Mayoral-Vilches, V. et al.: CAI: An Open, Bug Bounty-Ready Cybersecurity AI (2024)](https://arxiv.org/abs/2504.06017v2)
-- [AryaXAI: AI Wiki - Evaluation Metrics](https://www.aryaxai.com/ai-wikis)
-- [Encord Blog: AI Metrics and Evaluation](https://encord.com/blog/)
-- [YouTube: Unsupervised AI Model Evaluation](https://www.youtube.com/results?search_query=unsupervised+ai+model+evaluation)
-- [YouTube: Annotation Consistency in NLP](https://www.youtube.com/results?search_query=annotation+consistency+nlp)
+
+1. Chen, C., Yin, H., Tsang, I.W. (2024). Evaluating LLMs Without Oracle Feedback. arXiv.
+
+2. Chen, C., et al. (2024). Agentic Annotation Evaluation Through Unsupervised Consistency Signals. arXiv.
+
+3. Encord. (2024). The Top 11 AI Metrics for Generative AI. Encord Blog.
+
+4. AryaXAI. (n.d.). The Unseen KPI for AI Success—CAIR. AryaXAI Article.
+
+5. Lu, Z., et al. (2024). Small Language Models: Survey, Measurements, and Insights. arXiv.
+
+6. Mayoral-Vilches, V., et al. (2024). CAI: An Open, Bug Bounty-Ready Cybersecurity AI. arXiv.
+
+7. AryaXAI. (n.d.). AI Wiki - Evaluation Metrics. AryaXAI.
+
+8. Encord. (n.d.). AI Metrics and Evaluation. Encord Blog.
+
+9. YouTube. (n.d.). Unsupervised AI Model Evaluation. YouTube.
+
+10. YouTube. (n.d.). Annotation Consistency in NLP. YouTube.

@@ -189,13 +189,23 @@ The community building process follows a systematic approach that begins with st
 
 ## References
 
-- [How to Build a Successful Online Community: A Step-by-Step Guide - HubSpot](https://blog.hubspot.com/marketing/online-community-launch)
-- [7 Steps To Building An Online Community (With Examples) - Thinkific](https://www.thinkific.com/blog/how-to-build-an-online-community/)
-- [How to Build an Online Community for a Small Business - Business.com](https://www.business.com/articles/7-highly-effective-ways-to-build-an-online-community-for-your-business/)
-- [7 Steps to Building an Online Community in 2025 - Innoloft](https://innoloft.com/en-us/blog/how-to-build-an-online-community)
-- [Here's How to Build an Online Community in 2025 (9 Steps) - Mighty Networks](https://www.mightynetworks.com/resources/how-to-build-an-online-community)
-- [5 Community Building Strategies For Your Business - Modash](https://www.modash.io/blog/community-building-strategies)
-- [Strategies for Building Strong Online Communities - Zapnito](https://knowledge.zapnito.com/posts/strategies-for-building-strong-online-communities)
-- [How to Build an Online Community in 8 Steps - Khoros](https://khoros.com/blog/how-to-build-an-online-community)
-- [How to Build an Online Community: Tips for Beginners - BrandChamp](https://brandchamp.io/blog/how-to-build-community-online/)
-- [How to Build an Online Community Strategy That Drives Business Impact - Britopian](https://www.britopian.com/content/online-community-strategy/)
+
+1. HubSpot. (n.d.). How to Build a Successful Online Community: A Step-by-Step Guide. HubSpot Blog.
+
+2. Thinkific. (n.d.). 7 Steps To Building An Online Community (With Examples). Thinkific Blog.
+
+3. Business.com. (n.d.). How to Build an Online Community for a Small Business. Business.com Articles.
+
+4. Innoloft. (2025). 7 Steps to Building an Online Community in 2025. Innoloft Blog.
+
+5. Mighty Networks. (2025). Here's How to Build an Online Community in 2025 (9 Steps). Mighty Networks Resources.
+
+6. Modash. (n.d.). 5 Community Building Strategies For Your Business. Modash Blog.
+
+7. Zapnito. (n.d.). Strategies for Building Strong Online Communities. Zapnito Knowledge.
+
+8. Khoros. (n.d.). How to Build an Online Community in 8 Steps. Khoros Blog.
+
+9. BrandChamp. (n.d.). How to Build an Online Community: Tips for Beginners. BrandChamp Blog.
+
+10. Britopian. (n.d.). How to Build an Online Community Strategy That Drives Business Impact. Britopian Content.

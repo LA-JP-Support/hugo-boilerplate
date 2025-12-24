@@ -212,15 +212,27 @@ COMPAS再犯評価ツールにおける人種的バイアスや、医療アル�
 
 ## 参考文献
 
-- [arXiv Survey: Evaluating Bias in Machine Learning](https://arxiv.org/abs/1908.09635)
-- [Holistic AI: Bias Mitigation Strategies and Techniques for Classification Tasks](https://www.holisticai.com/blog/bias-mitigation-strategies-techniques-for-classification-tasks)
-- [Encord: Reducing Bias in Machine Learning](https://encord.com/blog/reducing-bias-machine-learning/)
-- [Google Developers: Mitigating Bias in Machine Learning](https://developers.google.com/machine-learning/crash-course/fairness/mitigating-bias)
-- [GeeksforGeeks: Bias in Machine Learning - Identifying, Mitigating and Preventing Discrimination](https://www.geeksforgeeks.org/machine-learning/bias-in-machine-learning-identifying-mitigating-and-preventing-discrimination/)
-- [EU AI Act Summary](https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence)
-- [ProPublica: Machine Bias in Criminal Sentencing](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)
-- [Science: Bias in Healthcare Algorithms (Obermeyer et al., 2019)](https://www.science.org/doi/abs/10.1126/science.aax2342)
-- [Washington Post: Gender Bias in Job Advertisements](https://www.washingtonpost.com/news/the-intersect/wp/2015/07/06/googles-algorithm-shows-prestigious-job-ads-to-men-but-not-to-women-heres-why-that-should-worry-you/)
-- [IBM AI Fairness 360](https://aif360.mybluemix.net/)
-- [Microsoft Fairlearn](https://fairlearn.org/)
-- [Joy Buolamwini, MIT Media Lab: Gender Shades](https://www.media.mit.edu/projects/gender-shades/overview/)
+
+1. arXiv. (2019). Survey: Evaluating Bias in Machine Learning. arXiv.
+
+2. Holistic AI. (n.d.). Bias Mitigation Strategies and Techniques for Classification Tasks. Holistic AI Blog.
+
+3. Encord. (n.d.). Reducing Bias in Machine Learning. Encord Blog.
+
+4. Google Developers. (n.d.). Mitigating Bias in Machine Learning. Google Developers.
+
+5. GeeksforGeeks. (n.d.). Bias in Machine Learning - Identifying, Mitigating and Preventing Discrimination. GeeksforGeeks.
+
+6. European Commission. (n.d.). EU AI Act Summary. Digital Strategy.
+
+7. ProPublica. (n.d.). Machine Bias in Criminal Sentencing. ProPublica.
+
+8. Obermeyer, Z., et al. (2019). Bias in Healthcare Algorithms. Science.
+
+9. Washington Post. (2015). Gender Bias in Job Advertisements. Washington Post.
+
+10. IBM AI Fairness 360. Open-source bias detection and mitigation toolkit. URL: https://aif360.mybluemix.net/
+
+11. Microsoft Fairlearn. Open-source fairness assessment and mitigation library. URL: https://fairlearn.org/
+
+12. Buolamwini, J. (n.d.). Gender Shades. MIT Media Lab Project. URL: https://www.media.mit.edu/projects/gender-shades/overview/

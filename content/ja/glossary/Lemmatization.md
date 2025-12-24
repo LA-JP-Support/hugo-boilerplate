@@ -291,15 +291,27 @@ for word in words:
 
 ## 参考文献
 
-- [Built In: Lemmatization in NLP and Machine Learning](https://builtin.com/machine-learning/lemmatization)
-- [IBM: What Are Stemming and Lemmatization?](https://www.ibm.com/think/topics/stemming-lemmatization)
-- [spaCy: Linguistic Features](https://spacy.io/usage/linguistic-features#lemmatization)
-- [GeeksforGeeks: Python Lemmatization with NLTK](https://www.geeksforgeeks.org/python/python-lemmatization-with-nltk/)
-- [GeeksforGeeks: Python Lemmatization Approaches](https://www.geeksforgeeks.org/machine-learning/python-lemmatization-approaches-with-examples/)
-- [GeeksforGeeks: Lemmatization vs. Stemming](https://www.geeksforgeeks.org/nlp/lemmatization-vs-stemming-a-deep-dive-into-nlps-text-normalization-techniques/)
-- [TechTarget: What is Lemmatization?](https://www.techtarget.com/searchenterpriseai/definition/lemmatization)
-- [Coursera: What Is Lemmatization?](https://www.coursera.org/articles/what-is-lemmatization)
-- [Babel Street: What is Lemmatization?](https://www.babelstreet.com/blog/what-is-lemmatization-learn-why-this-process-is-vital-to-language-processing)
-- [Codebasics: Stemming and Lemmatization (YouTube)](https://www.youtube.com/watch?v=4vryPwLtjIg)
-- [WordNet Princeton](https://wordnet.princeton.edu/)
-- [NLTK Documentation](http://www.nltk.org/)
+
+1. Built In. (n.d.). Lemmatization in NLP and Machine Learning. Built In.
+
+2. IBM. (n.d.). What Are Stemming and Lemmatization?. IBM Think Topics.
+
+3. spaCy. (n.d.). Linguistic Features. spaCy.
+
+4. GeeksforGeeks. (n.d.). Python Lemmatization with NLTK. GeeksforGeeks.
+
+5. GeeksforGeeks. (n.d.). Python Lemmatization Approaches. GeeksforGeeks.
+
+6. GeeksforGeeks. (n.d.). Lemmatization vs. Stemming. GeeksforGeeks.
+
+7. TechTarget. (n.d.). What is Lemmatization?. TechTarget.
+
+8. Coursera. (n.d.). What Is Lemmatization?. Coursera.
+
+9. Babel Street. (n.d.). What is Lemmatization?. Babel Street.
+
+10. Codebasics. (n.d.). Stemming and Lemmatization. YouTube.
+
+11. WordNet Princeton. Description. URL: https://wordnet.princeton.edu/
+
+12. NLTK. Documentation. URL: http://www.nltk.org/

@@ -284,20 +284,21 @@ A: 外部ツール(Cronitor、Healthchecks.io)を使用するか、ログを有�
 
 ## 参考文献
 
-- [Cronitor: Cron Jobs Guide](https://cronitor.io/guides/cron-jobs)
-- [Cronitor: Cron Reference](https://cronitor.io/docs/cron-reference)
-- [Cronitor: Cron Job Monitoring](https://cronitor.io/cron-job-monitoring)
-- [Cronitor: Debugging Cron Jobs](https://cronitor.io/guides/cron-jobs#troubleshooting)
-- [Hostinger: Cron Job Tutorial](https://www.hostinger.com/tutorials/cron-job)
-- [OSTechNix: A Beginner's Guide to Cron Jobs](https://ostechnix.com/a-beginners-guide-to-cron-jobs/)
-- [Splunk: What Are Cron Jobs?](https://www.splunk.com/en_us/blog/learn/cron-jobs.html)
-- [Cloudflare Workers: Cron Triggers](https://developers.cloudflare.com/workers/configuration/cron-triggers/)
-- [Cloudflare: Cron Trigger Syntax](https://developers.cloudflare.com/workers/configuration/cron-triggers/#syntax)
-- [Cloudflare: View Past Events](https://developers.cloudflare.com/workers/configuration/cron-triggers/#view-past-events)
-- [RobilityAI: Cron-based Schedulers](https://docs.robility.ai/docs/robility-manager/project-management/scheduler/cron-based-schedulers/)
-- [StackOverflow: How does cron internally schedule jobs?](https://stackoverflow.com/questions/3982957/how-does-cron-internally-schedule-jobs)
-- [CodeSignal: Scheduling Tasks with Cron](https://codesignal.com/learn/courses/system-automation-with-shell-scripts/lessons/scheduling-tasks-with-cron)
-- [Crontab.guru: Cron Expression Editor](https://crontab.guru/)
-- [Crontab Generator](https://crontab-generator.org/)
-- [Quartz Scheduler: CronTriggers](https://www.quartz-scheduler.net/documentation/quartz-3.x/tutorial/crontriggers.html)
-- [Healthchecks.io](https://healthchecks.io/)
+
+1. Cronitor. (n.d.). Cron Jobs Guide. Cronitor Guide.
+2. Cronitor. (n.d.). Cron Reference. Cronitor Documentation.
+3. Cronitor. (n.d.). Cron Job Monitoring. Cronitor.
+4. Cronitor. (n.d.). Debugging Cron Jobs. Cronitor Guide.
+5. Hostinger. (n.d.). Cron Job Tutorial. Hostinger Tutorials.
+6. OSTechNix. (n.d.). A Beginner's Guide to Cron Jobs. OSTechNix.
+7. Splunk. (n.d.). What Are Cron Jobs?. Splunk Blog.
+8. Cloudflare. (n.d.). Cron Triggers. Cloudflare Developers.
+9. Cloudflare. (n.d.). Cron Trigger Syntax. Cloudflare Developers.
+10. Cloudflare. (n.d.). View Past Events. Cloudflare Developers.
+11. RobilityAI. (n.d.). Cron-based Schedulers. RobilityAI Documentation.
+12. StackOverflow. (n.d.). How does cron internally schedule jobs?. StackOverflow.
+13. CodeSignal. (n.d.). Scheduling Tasks with Cron. CodeSignal Learn.
+14. Crontab.guru. (n.d.). Cron Expression Editor. Crontab.guru.
+15. Crontab Generator. (n.d.). Crontab Generator. Crontab Generator.
+16. Quartz Scheduler. (n.d.). CronTriggers. Quartz Scheduler Documentation.
+17. Healthchecks.io. Monitoring Service. URL: https://healthchecks.io/

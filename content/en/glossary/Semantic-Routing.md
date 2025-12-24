@@ -253,16 +253,29 @@ Continuously update routes and utterances based on real usage patterns and user 
 
 ## References
 
-- [Deepchecks: Semantic Router Glossary](https://www.deepchecks.com/glossary/semantic-router/)
-- [Giskard: Semantic Router - Efficient Routing for AI](https://www.giskard.ai/glossary/semantic-router)
-- [The New Stack: Semantic Router and Agentic Workflows](https://thenewstack.io/semantic-router-and-its-role-in-designing-agentic-workflows/)
-- [Microsoft ISE: Semantic Routing using Azure AI Search](https://devblogs.microsoft.com/ise/semantic-routing-using-azure-ai-search/)
-- [Shakudo: How to Automatically Route AI Queries](https://www.shakudo.io/blog/how-to-automatically-route-ai-queries)
-- [Aurelio Labs: Semantic Router GitHub](https://github.com/aurelio-labs/semantic-router)
-- [Pryon: RAG Definition and LLM Glossary](https://www.pryon.com/landing/rag-definition-and-llm-glossary)
-- [DataRobot: Agentic AI Glossary](https://docs.datarobot.com/en/docs/agentic-ai/agentic-glossary.html)
-- [OpenAI: Embeddings Guide](https://platform.openai.com/docs/guides/embeddings)
-- [Cohere: Embed API](https://cohere.com/embed)
-- [Hugging Face: Tokenizers Documentation](https://huggingface.co/docs/tokenizers/en/api/encoding)
-- [Pinecone: Vector Database](https://www.pinecone.io/)
-- [Qdrant: Vector Search Engine](https://qdrant.tech/)
+
+1. Deepchecks. (n.d.). Semantic Router Glossary. Deepchecks.
+
+2. Giskard. (n.d.). Semantic Router - Efficient Routing for AI. Giskard.
+
+3. The New Stack. (n.d.). Semantic Router and Agentic Workflows. The New Stack.
+
+4. Microsoft ISE. (n.d.). Semantic Routing using Azure AI Search. Microsoft DevBlogs.
+
+5. Shakudo. (n.d.). How to Automatically Route AI Queries. Shakudo Blog.
+
+6. Aurelio Labs. (n.d.). Semantic Router GitHub. GitHub.
+
+7. Pryon. (n.d.). RAG Definition and LLM Glossary. Pryon.
+
+8. DataRobot. (n.d.). Agentic AI Glossary. DataRobot Documentation.
+
+9. OpenAI. (n.d.). Embeddings Guide. OpenAI Platform.
+
+10. Cohere. (n.d.). Embed API. Cohere.
+
+11. Hugging Face. (n.d.). Tokenizers Documentation. Hugging Face.
+
+12. Pinecone. Vector Database. URL: https://www.pinecone.io/
+
+13. Qdrant. Vector Search Engine. URL: https://qdrant.tech/

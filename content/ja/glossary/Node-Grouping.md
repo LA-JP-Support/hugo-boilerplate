@@ -240,12 +240,13 @@ A: Kore.ai、Microsoft HPC Pack、Node-RED、R/Visone、Kubernetes、および�
 
 ## 参考文献
 
-- [Kore.ai Documentation: Grouping Nodes (v8.0)](https://developer.kore.ai/v8-0/docs/bots/bot-builder-tool/dialog-task/grouping-nodes/)
-- [Node-RED Docs: Using Groups](https://nodered.org/docs/user-guide/editor/groups/)
-- [Microsoft Learn: Grouping Nodes](https://learn.microsoft.com/en-us/powershell/high-performance-computing/grouping-nodes?view=hpc19-ps)
-- [Kubernetes Documentation: Nodes & Node Pools](https://kubernetes.io/docs/concepts/architecture/nodes/)
-- [Node-RED Kubernetes Client](https://flows.nodered.org/node/node-red-contrib-kubernetes-client)
-- [Cyfuture.ai Blog: What Are AI Nodes?](https://cyfuture.ai/blog/what-are-ai-nodes)
-- [STCA.guide: Clustering and Cluster Visualization](https://stca.guide/clustering-cluster-visualization/)
-- [R-bloggers: Community Detection with Louvain and Infomap](https://www.r-bloggers.com/2020/03/community-detection-with-louvain-and-infomap/)
-- [YouTube: 7 Node Automation Building Blocks (n8n)](https://www.youtube.com/watch?v=dQDN5OpJANE)
+
+1. Kore.ai. (n.d.). Grouping Nodes. Kore.ai Documentation.
+2. Node-RED. (n.d.). Using Groups. Node-RED Documentation.
+3. Microsoft. (n.d.). Grouping Nodes. Microsoft Learn.
+4. Kubernetes. (n.d.). Nodes & Node Pools. Kubernetes Documentation.
+5. Node-RED. (n.d.). Kubernetes Client. Node-RED Flows.
+6. Cyfuture.ai. (n.d.). What Are AI Nodes?. Cyfuture.ai Blog.
+7. STCA.guide. (n.d.). Clustering and Cluster Visualization. STCA.guide.
+8. R-bloggers. (2020). Community Detection with Louvain and Infomap. R-bloggers.
+9. n8n. (n.d.). 7 Node Automation Building Blocks. YouTube Video.

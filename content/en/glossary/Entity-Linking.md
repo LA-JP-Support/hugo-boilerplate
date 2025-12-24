@@ -182,18 +182,33 @@ Entity linking transforms text mentions into structured knowledge base connectio
 
 ## References
 
-- [Ontotext: What is Entity Linking](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/)
-- [Amazon Science: Improving Entity Linking Between Texts and Knowledge Bases](https://www.amazon.science/blog/improving-entity-linking-between-texts-and-knowledge-bases)
-- [Schema App: What is Entity Linking](https://www.schemaapp.com/schema-markup/what-is-entity-linking/)
-- [Wei Shen et al.: Entity Linking with a Knowledge Base (PDF)](https://dbgroup.cs.tsinghua.edu.cn/wangjy/papers/TKDE14-entitylinking.pdf)
-- [Microsoft Azure: Entity Linking Overview](https://learn.microsoft.com/en-us/azure/ai-services/language-service/entity-linking/overview)
-- [Ontotext: Common English Entity Linking](https://www.ontotext.com/blog/common-english-entity-linking-linking-text-to-knowledge-fast-and-efficient/)
-- [Ontotext: Semantic Search](https://www.ontotext.com/knowledgehub/fundamentals/what-is-semantic-search/)
-- [Amazon Science: ReFinED Paper](https://www.amazon.science/publications/refined-an-efficient-zero-shot-capable-approach-to-end-to-end-entity-linking)
-- [Google Cloud: Natural Language API](https://cloud.google.com/natural-language/docs)
-- [Facebook Research: BLINK](https://github.com/facebookresearch/BLINK)
-- [Ontotext: Knowledge Graph Embeddings](https://www.ontotext.com/knowledgehub/fundamentals/what-are-knowledge-graph-embeddings/)
-- [Ontotext: Natural Language Querying](https://www.ontotext.com/knowledgehub/fundamentals/what-is-natural-language-querying/)
-- [Ontotext: Graph RAG](https://www.ontotext.com/knowledgehub/fundamentals/what-is-graph-rag/)
-- [Schema App: Marshfield Clinic Case Study](https://www.schemaapp.com/customer-stories/how-marshfield-clinic-leveraged-schema-markup-to-improve-search-traffic-prepare-for-ai-search/)
-- [Ontotext: Products - Ontotext Metadata Studio](https://www.ontotext.com/products/ontotext-metadata-studio/)
+
+1. Ontotext. (n.d.). What is Entity Linking. Ontotext Knowledge Hub.
+
+2. Amazon Science. (n.d.). Improving Entity Linking Between Texts and Knowledge Bases. Amazon Science Blog.
+
+3. Schema App. (n.d.). What is Entity Linking. Schema App.
+
+4. Wei Shen et al. (n.d.). Entity Linking with a Knowledge Base. Research Paper.
+
+5. Microsoft Azure. (n.d.). Entity Linking Overview. Microsoft Learn.
+
+6. Ontotext. (n.d.). Common English Entity Linking. Ontotext Blog.
+
+7. Ontotext. (n.d.). Semantic Search. Ontotext Knowledge Hub.
+
+8. Amazon Science. (n.d.). ReFinED Paper. Amazon Science Publications.
+
+9. Google Cloud. (n.d.). Natural Language API. Google Cloud Documentation.
+
+10. Facebook Research. (n.d.). BLINK. URL: https://github.com/facebookresearch/BLINK
+
+11. Ontotext. (n.d.). Knowledge Graph Embeddings. Ontotext Knowledge Hub.
+
+12. Ontotext. (n.d.). Natural Language Querying. Ontotext Knowledge Hub.
+
+13. Ontotext. (n.d.). Graph RAG. Ontotext Knowledge Hub.
+
+14. Schema App. (n.d.). Marshfield Clinic Case Study. Schema App Customer Stories.
+
+15. Ontotext Metadata Studio. Metadata Management Tool. URL: https://www.ontotext.com/products/ontotext-metadata-studio/

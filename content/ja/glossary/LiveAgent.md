@@ -232,12 +232,21 @@ Salesforce、HubSpot、Shopify、Magento、Slack、Twilio、Zapierを含む200�
 
 ## 参考資料
 
-- [LiveAgent公式サイト](https://www.liveagent.com/#interworkcorp)
-- [ライブカスタマーサービスの説明:重要性とヒント](https://www.liveagent.com/customer-support-glossary/live-customer-service/#interworkcorp)
-- [統合会話](https://www.liveagent.com/customer-support-glossary/unified-conversations/#interworkcorp)
-- [Eコマースライブチャットソフトウェア:2024年のベストピックとヒント](https://www.liveagent.com/blog/best-ecommerce-live-chat-software/#interworkcorp)
-- [LiveAgent AI機能](https://www.liveagent.com/features/ai-features/#interworkcorp)
-- [ナレッジベースソフトウェア](https://www.liveagent.com/knowledge-base-software/#interworkcorp)
-- [LiveAgent統合](https://www.liveagent.com/integrations/#interworkcorp)
-- [LiveAgent料金プラン](https://www.liveagent.com/pricing/#interworkcorp)
-- [無料トライアルを開始](https://www.liveagent.com/trial/#interworkcorp)
+
+1. LiveAgent. (n.d.). LiveAgent Official Site. Service. URL: https://www.liveagent.com/
+
+2. LiveAgent. (n.d.). Live Customer Service: Importance and Tips. Article. URL: https://www.liveagent.com/customer-support-glossary/live-customer-service/
+
+3. LiveAgent. (n.d.). Unified Conversations. Article. URL: https://www.liveagent.com/customer-support-glossary/unified-conversations/
+
+4. LiveAgent. (2024). E-commerce Live Chat Software: Best Picks and Tips for 2024. Article. URL: https://www.liveagent.com/blog/best-ecommerce-live-chat-software/
+
+5. LiveAgent. (n.d.). LiveAgent AI Features. Article. URL: https://www.liveagent.com/features/ai-features/
+
+6. LiveAgent. (n.d.). Knowledge Base Software. Article. URL: https://www.liveagent.com/knowledge-base-software/
+
+7. LiveAgent. (n.d.). LiveAgent Integrations. Article. URL: https://www.liveagent.com/integrations/
+
+8. LiveAgent. (n.d.). LiveAgent Pricing Plans. Article. URL: https://www.liveagent.com/pricing/
+
+9. LiveAgent. (n.d.). Start Free Trial. Service. URL: https://www.liveagent.com/trial/

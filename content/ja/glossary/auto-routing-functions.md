@@ -230,15 +230,27 @@ NLUを使用してリクエストの目的を理解し、明示的な分類で�
 
 ## 参考文献
 
-- [Xyte: Ticket Routing Glossary](https://www.xyte.ai/glossary/ticket-routing)
-- [ProProfs: Automated Ticket Routing Benefits](https://www.proprofsdesk.com/blog/automated-ticket-routing/)
-- [Helpshift: Ticket Routing Guide](https://www.helpshift.com/glossary/ticket-routing/)
-- [Genesys: Automated Call Routing](https://www.genesys.com/definitions/what-is-automated-call-routing)
-- [Retell AI: AI Call Routing](https://www.retellai.com/glossary/ai-call-routing)
-- [NiCE: Workflow AI Automation](https://www.nice.com/glossary/workflow-ai-automation)
-- [Gnani AI: Workflow Automation](https://www.gnani.ai/glossary/workflow-automation)
-- [Rezolve.ai: AI Terms Glossary](https://www.rezolve.ai/ai-terms-glossary)
-- [FarEye: Automated Route Planning](https://fareye.com/resources/blogs/automated-routing)
-- [Smartsupp: Routing Between Chatbots](https://help.smartsupp.com/en_US/chatbots-automation/routing-between-chatbots)
-- [Tidio: Automated Ticket Routing](https://www.tidio.com/blog/automated-ticket-routing/)
-- [LivePerson: Generative AI Routing](https://developers.liveperson.com/conversation-builder-generative-ai-routing-ai-agents-route-consumers-conversationally.html)
+
+1. Xyte. (n.d.). Ticket Routing Glossary. Xyte.
+
+2. ProProfs. (n.d.). Automated Ticket Routing Benefits. ProProfs Blog.
+
+3. Helpshift. (n.d.). Ticket Routing Guide. Helpshift.
+
+4. Genesys. (n.d.). Automated Call Routing. Genesys Definitions.
+
+5. Retell AI. (n.d.). AI Call Routing. Retell AI Glossary.
+
+6. NiCE. (n.d.). Workflow AI Automation. NiCE Glossary.
+
+7. Gnani AI. (n.d.). Workflow Automation. Gnani AI Glossary.
+
+8. Rezolve.ai. (n.d.). AI Terms Glossary. Rezolve.ai.
+
+9. FarEye. (n.d.). Automated Route Planning. FarEye Resources.
+
+10. Smartsupp. (n.d.). Routing Between Chatbots. Smartsupp Help Center.
+
+11. Tidio. (n.d.). Automated Ticket Routing. Tidio Blog.
+
+12. LivePerson. (n.d.). Generative AI Routing. LivePerson Developers.

@@ -251,13 +251,14 @@ CAGRは中間キャッシュフローを考慮しません。継続的な預金�
 
 ## 参考文献
 
-- [Corporate Finance Institute: What is CAGR?](https://corporatefinanceinstitute.com/resources/valuation/what-is-cagr/)
-- [Wall Street Prep: CAGR Formula and Calculations](https://www.wallstreetprep.com/knowledge/cagr-compound-annual-growth-rate/)
-- [Wall Street Prep: CAGR vs. AAGR](https://www.wallstreetprep.com/knowledge/average-annual-growth-rate-aagr/)
-- [ICICI Direct: CAGR Calculator](https://www.icicidirect.com/calculators/cagr-calculator)
-- [Investopedia: Compound Annual Growth Rate](https://www.investopedia.com/terms/c/cagr.asp)
-- [Groww: CAGR Definition & Calculator](https://groww.in/calculators/cagr-calculator)
-- [Public.com: What is CAGR?](https://public.com/learn/what-is-cagr)
-- [Corporate Finance Institute: IRR vs. CAGR](https://corporatefinanceinstitute.com/resources/valuation/internal-rate-return-irr/)
-- [YouTube: What is CAGR? Compound Annual Growth Rate Explained](https://www.youtube.com/watch?v=WSYcW_GtTW8)
-- [YouTube: CAGR vs. Average Annual Return](https://www.youtube.com/watch?v=jQ8ZC2T-8g4)
+
+1. Corporate Finance Institute. (n.d.). What is CAGR?. Corporate Finance Institute.
+2. Wall Street Prep. (n.d.). CAGR Formula and Calculations. Wall Street Prep.
+3. Wall Street Prep. (n.d.). CAGR vs. AAGR. Wall Street Prep.
+4. ICICI Direct. (n.d.). CAGR Calculator. ICICI Direct.
+5. Investopedia. (n.d.). Compound Annual Growth Rate. Investopedia.
+6. Groww. (n.d.). CAGR Definition & Calculator. Groww.
+7. Public.com. (n.d.). What is CAGR?. Public.com.
+8. Corporate Finance Institute. (n.d.). IRR vs. CAGR. Corporate Finance Institute.
+9. YouTube. (n.d.). What is CAGR? Compound Annual Growth Rate Explained. YouTube.
+10. YouTube. (n.d.). CAGR vs. Average Annual Return. YouTube.

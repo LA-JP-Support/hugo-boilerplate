@@ -330,23 +330,24 @@ Consider use case requirements, integration needs, language support, scalability
 
 ## References
 
-- [Floatbot: Voicebot - An Ultimate Guide](https://floatbot.ai/blog/voicebot-an-ultimate-guide)
-- [Puzzel: AI Voicebot Guide](https://www.puzzel.com/blog/ai-voicebot-guide)
-- [AssemblyAI: What is ASR?](https://assemblyai.com/blog/what-is-asr)
-- [NVIDIA: Essential Guide to Automatic Speech Recognition Technology](https://developer.nvidia.com/blog/essential-guide-to-automatic-speech-recognition-technology/)
-- [Teneo: The Role of NLU in Improving Voicebots Accuracy](https://www.teneo.ai/blog/the-role-of-nlu-in-improving-voicebots-accuracy)
-- [Convin AI: Natural Language Conversational AI](https://convin.ai/blog/natural-language-conversational-ai)
-- [Exotel: The Magic of AI Voice Bots - Bringing Text to Life with TTS](https://exotel.com/blog/the-magic-of-ai-voice-bots-bringing-text-to-life-with-text-to-speech-technology/)
-- [LivePerson: Text to Speech AI](https://www.liveperson.com/blog/text-to-speech-ai/)
-- [Teneo: Voice Bot Solutions - Role of Conversational AI](https://www.teneo.ai/blog/voice-bot-solutions-role-of-conversational-ai)
-- [Sobot: Conversational AI Voice Bot Benefits](https://www.sobot.io/article/conversational-ai-voice-bot-benefits-for-modern-businesses/)
-- [Floatbot: Conversational AI Voice Bot Use Cases](https://floatbot.ai/blog/conversational-aI-voice-bot-use-cases-in-different-industries)
-- [CMSWire: How Digital Voice Technology is Changing Customer Service](https://www.cmswire.com/customer-experience/how-digital-voice-technology-is-changing-customer-service/)
-- [CompTIA: Artificial Intelligence Statistics Facts](https://connect.comptia.org/blog/artificial-intelligence-statistics-facts)
-- [Voiceflow: Voicebot Guide](https://www.voiceflow.com/blog/voicebot)
-- [YouTube: Build a Voicebot in 10 Minutes](https://www.youtube.com/watch?v=qgAEB_acB3c)
-- [Teneo: 6 Benefits of Implementing Voicebots for Businesses](https://www.teneo.ai/blog/6-benefits-of-implementing-voicebots-for-businesses)
-- [Teneo: NLU Benchmark](https://www.teneo.ai/learning-hub/whitepapers/nlu-benchmark-teneo)
-- [Floatbot: Voice Biometrics - Future of User Authentication](https://floatbot.ai/blog/is-voice-biometrics-the-future-of-user-authentication)
-- [Genesys: What is a Voicebot?](https://www.genesys.com/definitions/what-is-a-voicebot)
-- [Talkative: ROI Calculator](https://gettalkative.com/roi-calculator)
+
+1. Floatbot. (n.d.). Voicebot - An Ultimate Guide. Floatbot Blog.
+2. Puzzel. (n.d.). AI Voicebot Guide. Puzzel Blog.
+3. AssemblyAI. (n.d.). What is ASR?. AssemblyAI Blog.
+4. NVIDIA. (n.d.). Essential Guide to Automatic Speech Recognition Technology. NVIDIA Developer Blog.
+5. Teneo. (n.d.). The Role of NLU in Improving Voicebots Accuracy. Teneo Blog.
+6. Convin AI. (n.d.). Natural Language Conversational AI. Convin AI Blog.
+7. Exotel. (n.d.). The Magic of AI Voice Bots - Bringing Text to Life with TTS. Exotel Blog.
+8. LivePerson. (n.d.). Text to Speech AI. LivePerson Blog.
+9. Teneo. (n.d.). Voice Bot Solutions - Role of Conversational AI. Teneo Blog.
+10. Sobot. (n.d.). Conversational AI Voice Bot Benefits for Modern Businesses. Sobot Article.
+11. Floatbot. (n.d.). Conversational AI Voice Bot Use Cases in Different Industries. Floatbot Blog.
+12. CMSWire. (n.d.). How Digital Voice Technology is Changing Customer Service. CMSWire.
+13. CompTIA. (n.d.). Artificial Intelligence Statistics Facts. CompTIA Connect.
+14. Voiceflow. (n.d.). Voicebot Guide. Voiceflow Blog.
+15. YouTube. (n.d.). Build a Voicebot in 10 Minutes. YouTube Video.
+16. Teneo. (n.d.). 6 Benefits of Implementing Voicebots for Businesses. Teneo Blog.
+17. Teneo. (n.d.). NLU Benchmark. Teneo Learning Hub.
+18. Floatbot. (n.d.). Voice Biometrics - Future of User Authentication. Floatbot Blog.
+19. Genesys. (n.d.). What is a Voicebot?. Genesys Definitions.
+20. Talkative. ROI Calculator. URL: https://gettalkative.com/roi-calculator

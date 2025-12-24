@@ -173,14 +173,15 @@ CRM、ERP、データベース、クラウドアプリケーション、レガ�
 
 ## 参考文献
 
-- [Nutrient.io: What Is an Automation Platform?](https://www.nutrient.io/blog/automation-platform/)
-- [IBM: What is Automation?](https://www.ibm.com/think/topics/automation)
-- [IBM: Business Process Automation](https://www.ibm.com/think/topics/business-process-automation)
-- [Wikipedia: Business Process Automation](https://en.wikipedia.org/wiki/Business_process_automation)
-- [Spiffy.co: Automation Platform Glossary](https://spiffy.co/glossary/automation-platform/)
-- [ApiX-Drive: Automation Platform Meaning](https://apix-drive.com/en/blog/other/automation-platform-meaning)
-- [JIFFY.ai: Automation Software Guide](https://www.jiffy.ai/guides/automation-software/)
-- [Blue Prism: Automation Software Overview](https://www.blueprism.com/guides/what-is-automation-software/)
-- [Wrike: Process Automation Software Features](https://www.wrike.com/blog/process-automation-software/)
-- [Red Hat: Ansible Automation Platform](https://www.redhat.com/en/technologies/management/ansible/features)
-- [Lindy.ai: Automation Software Comparison](https://www.lindy.ai/blog/automation-software)
+
+1. Nutrient.io. (n.d.). What Is an Automation Platform?. Nutrient.io Blog.
+2. IBM. (n.d.). What is Automation?. IBM Think Topics.
+3. IBM. (n.d.). Business Process Automation. IBM Think Topics.
+4. Wikipedia. (n.d.). Business Process Automation. Wikipedia.
+5. Spiffy.co. (n.d.). Automation Platform Glossary. Spiffy.co Glossary.
+6. ApiX-Drive. (n.d.). Automation Platform Meaning. ApiX-Drive Blog.
+7. JIFFY.ai. (n.d.). Automation Software Guide. JIFFY.ai Guides.
+8. Blue Prism. (n.d.). Automation Software Overview. Blue Prism Guides.
+9. Wrike. (n.d.). Process Automation Software Features. Wrike Blog.
+10. Red Hat. (n.d.). Ansible Automation Platform. Red Hat Technologies.
+11. Lindy.ai. (n.d.). Automation Software Comparison. Lindy.ai Blog.

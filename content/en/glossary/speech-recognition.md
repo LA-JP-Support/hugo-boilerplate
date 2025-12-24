@@ -348,17 +348,31 @@ Data safety depends on the provider and deployment model. Cloud-based systems tr
 
 ## References
 
-- [Twilio: What is Speech Recognition?](https://www.twilio.com/en-us/blog/insights/ai/what-is-speech-recognition)
-- [TechTarget: What is Speech Recognition?](https://www.techtarget.com/searchcustomerexperience/definition/speech-recognition)
-- [Wikipedia: Speech Recognition](https://en.wikipedia.org/wiki/Speech_recognition)
-- [IBM: Speech Recognition Overview](https://www.ibm.com/think/topics/speech-recognition)
-- [Shaip: Voice Recognition Overview and Applications](https://www.shaip.com/blog/voice-recognition-overview-and-applications/)
-- [OpenCV: Applications of Speech Recognition](https://opencv.org/blog/applications-of-speech-recognition/)
-- [Microsoft Research: Advancing End-to-End ASR](https://www.microsoft.com/en-us/research/wp-content/uploads/2022/12/Advancing-end-to-end-automatic-speech-recognition-and-beyond_1hr.pdf)
-- [Nature: Transformer-based End-to-End Speech Recognition](https://www.nature.com/articles/s41598-022-12260-y)
-- [ScienceDirect: Survey of Deep Learning in ASR](https://www.sciencedirect.com/science/article/pii/S2666307424000573)
-- [IBM: AI Advantages & Disadvantages](https://www.ibm.com/think/insights/artificial-intelligence-advantages-disadvantages)
-- [IBM Watson Speech to Text](https://www.ibm.com/cloud/watson-speech-to-text)
-- [Microsoft Azure Speech Services](https://azure.microsoft.com/en-us/products/ai-services/speech-to-text)
-- [Google Cloud Speech-to-Text](https://cloud.google.com/speech-to-text)
-- [Amazon Transcribe](https://aws.amazon.com/transcribe/)
+
+1. Twilio. (n.d.). What is Speech Recognition?. Twilio Blog.
+
+2. TechTarget. (n.d.). What is Speech Recognition?. TechTarget SearchCustomerExperience.
+
+3. Wikipedia. (n.d.). Speech Recognition. Wikipedia.
+
+4. IBM. (n.d.). Speech Recognition Overview. IBM Think Topics.
+
+5. Shaip. (n.d.). Voice Recognition Overview and Applications. Shaip Blog.
+
+6. OpenCV. (n.d.). Applications of Speech Recognition. OpenCV Blog.
+
+7. Microsoft Research. (2022). Advancing End-to-End ASR. Microsoft Research.
+
+8. Nature. (2022). Transformer-based End-to-End Speech Recognition. Nature.
+
+9. ScienceDirect. (2024). Survey of Deep Learning in ASR. ScienceDirect.
+
+10. IBM. (n.d.). AI Advantages & Disadvantages. IBM Think Insights.
+
+11. IBM Watson Speech to Text. AI-powered Speech Recognition Service. URL: https://www.ibm.com/cloud/watson-speech-to-text
+
+12. Microsoft Azure Speech Services. Cloud Speech Recognition Platform. URL: https://azure.microsoft.com/en-us/products/ai-services/speech-to-text
+
+13. Google Cloud Speech-to-Text. AI Speech Recognition Service. URL: https://cloud.google.com/speech-to-text
+
+14. Amazon Transcribe. Automatic Speech Recognition Service. URL: https://aws.amazon.com/transcribe/

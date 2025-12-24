@@ -565,13 +565,23 @@ Information represents organized data providing answers to specific questions, w
 
 ## References
 
-- [Wikipedia: Explicit Knowledge](https://en.wikipedia.org/wiki/Explicit_knowledge)
-- [Bloomfire: Different Types of Knowledge: Implicit, Tacit, and Explicit](https://bloomfire.com/blog/implicit-tacit-explicit-knowledge/)
-- [Document360: Explicit Knowledge - Definition, Examples, and Methods](https://document360.com/blog/explicit-knowledge/)
-- [Bloomfire: What Is Knowledge Management?](https://bloomfire.com/resources/what-is-knowledge-management/)
-- [Bloomfire: Advantages of AI in Knowledge Management](https://bloomfire.com/blog/advantages-of-ai-in-knowledge-management/)
-- [Bloomfire: Knowledge Management Strategy](https://bloomfire.com/blog/knowledge-management-strategy/)
-- [Bloomfire: Why Knowledge Management Is Important](https://bloomfire.com/blog/why-knowledge-management-is-important/)
-- [Bloomfire: Knowledge Worker Productivity](https://bloomfire.com/blog/knowledge-worker-productivity/)
-- [Bloomfire: What Is Explicit Knowledge?](https://bloomfire.com/resources/what-is-explicit-knowledge/)
-- [Bloomfire: Knowledge Management Challenges](https://bloomfire.com/blog/knowledge-management-challenges/)
+
+1. Wikipedia. (n.d.). Explicit Knowledge. Wikipedia.
+
+2. Bloomfire. (n.d.). Different Types of Knowledge: Implicit, Tacit, and Explicit. Bloomfire Blog.
+
+3. Document360. (n.d.). Explicit Knowledge - Definition, Examples, and Methods. Document360 Blog.
+
+4. Bloomfire. (n.d.). What Is Knowledge Management?. Bloomfire Resources.
+
+5. Bloomfire. (n.d.). Advantages of AI in Knowledge Management. Bloomfire Blog.
+
+6. Bloomfire. (n.d.). Knowledge Management Strategy. Bloomfire Blog.
+
+7. Bloomfire. (n.d.). Why Knowledge Management Is Important. Bloomfire Blog.
+
+8. Bloomfire. (n.d.). Knowledge Worker Productivity. Bloomfire Blog.
+
+9. Bloomfire. (n.d.). What Is Explicit Knowledge?. Bloomfire Resources.
+
+10. Bloomfire. (n.d.). Knowledge Management Challenges. Bloomfire Blog.

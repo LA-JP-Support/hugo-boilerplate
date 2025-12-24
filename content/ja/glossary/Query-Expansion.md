@@ -268,11 +268,12 @@ Word2Vec、GloVe、BERTなどを使用したベクトルベースの意味的拡
 
 ## 参考文献
 
-- [ITU Online: What Is Query Expansion?](https://www.ituonline.com/tech-definitions/what-is-query-expansion/)
-- [Stanford NLP: Relevance Feedback and Query Expansion (PDF)](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf)
-- [Medium: Query Expansion in Enhancing RAG](https://medium.com/@sahin.samia/query-expansion-in-enhancing-retrieval-augmented-generation-rag-d41153317383)
-- [Glean: RAG Use Cases](https://www.glean.com/blog/rag-examples)
-- [Signity Solutions: 10 Real-World RAG Examples](https://www.signitysolutions.com/blog/real-world-examples-of-retrieval-augmented-generation)
-- [Haystack: Advanced RAG - Query Expansion](https://haystack.deepset.ai/blog/query-expansion)
-- [MongoDB: Maximizing Search Efficiency with Query Expansion](https://www.mongodb.com/resources/basics/search-relevance-query-expansion)
-- [Sandgarden: How Query Expansion Revolutionized AI Search](https://www.sandgarden.com/learn/query-expansion)
+
+1. ITU Online. (n.d.). What Is Query Expansion?. ITU Online.
+2. Stanford NLP. (n.d.). Relevance Feedback and Query Expansion. Stanford NLP.
+3. Sahin, M. (n.d.). Query Expansion in Enhancing RAG. Medium.
+4. Glean. (n.d.). RAG Use Cases. Glean Blog.
+5. Signity Solutions. (n.d.). 10 Real-World RAG Examples. Signity Solutions Blog.
+6. Haystack. (n.d.). Advanced RAG - Query Expansion. Haystack.
+7. MongoDB. (n.d.). Maximizing Search Efficiency with Query Expansion. MongoDB Resources.
+8. Sandgarden. (n.d.). How Query Expansion Revolutionized AI Search. Sandgarden.

@@ -256,17 +256,31 @@ AIアシスタントは、作業活動の60〜70%を自動化できます。ユ�
 
 ## 参考文献
 
-- [Gmelius Blog: AI Assistant Examples](https://gmelius.com/blog/what-is-an-ai-assistant)
-- [Simpplr Glossary: AI Assistant](https://www.simpplr.com/glossary/ai-assistant/)
-- [Moveworks: AI Assistant for Employee Support](https://www.moveworks.com/us/en/resources/blog/enteprise-ai-assistant-examples-for-business)
-- [Google Gemini](https://workspace.google.com/intl/en/products/gemini/)
-- [Stack-AI: AI in Developer Tools](https://www.stack-ai.com/blog/top-examples-of-ai-use-in-the-enterprise)
-- [Grammarly](https://www.grammarly.com/)
-- [Moveworks: AI Assistant Examples Table](https://www.moveworks.com/us/en/resources/blog/enteprise-ai-assistant-examples-for-business)
-- [Moveworks: How to Choose an AI Assistant](https://www.moveworks.com/us/en/resources/blog/enteprise-ai-assistant-examples-for-business)
-- [GetGuru: AI Assistant 2025 Ultimate Guide](https://www.getguru.com/reference/ai-assistant)
-- [Xenoss: RAG Architecture for Enterprise Knowledge Bases](https://xenoss.io/blog/enterprise-knowledge-base-llm-rag-architecture)
-- [Gartner: 22.6% productivity boost](https://www.gartner.com/en/documents/5188263)
-- [McKinsey: Economic Potential of Generative AI](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier)
-- [Microsoft WorkLab: Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part#section1)
-- [Moveworks: AI Onboarding Automation](https://www.moveworks.com/us/en/solutions/employee-onboarding)
+
+1. Gmelius. (n.d.). AI Assistant Examples. Gmelius Blog.
+
+2. Simpplr. (n.d.). AI Assistant. Simpplr Glossary.
+
+3. Moveworks. (n.d.). AI Assistant for Employee Support. Moveworks Blog.
+
+4. Google. (n.d.). Gemini. Google Workspace.
+
+5. Stack-AI. (n.d.). AI in Developer Tools. Stack-AI Blog.
+
+6. Grammarly. Writing Assistant Tool. URL: https://www.grammarly.com/
+
+7. Moveworks. (n.d.). AI Assistant Examples Table. Moveworks Blog.
+
+8. Moveworks. (n.d.). How to Choose an AI Assistant. Moveworks Blog.
+
+9. GetGuru. (2025). AI Assistant Ultimate Guide. GetGuru Reference.
+
+10. Xenoss. (n.d.). RAG Architecture for Enterprise Knowledge Bases. Xenoss Blog.
+
+11. Gartner. (n.d.). 22.6% Productivity Boost. Gartner Research.
+
+12. McKinsey. (n.d.). Economic Potential of Generative AI. McKinsey Digital Insights.
+
+13. Microsoft. (n.d.). Work Trend Index: AI at Work. Microsoft WorkLab.
+
+14. Moveworks. (n.d.). AI Onboarding Automation. Moveworks Solutions.

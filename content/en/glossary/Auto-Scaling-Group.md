@@ -206,17 +206,31 @@ During a major event (e.g., live streaming), the ASG detects a spike in load and
 
 ## References
 
-- [Amazon EC2 Auto Scaling documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html)
-- [AWS: Create Your First Auto Scaling Group (Tutorial)](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-your-first-auto-scaling-group.html)
-- [Spot.io: Understanding EC2 Auto Scaling Groups](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/)
-- [IBM: What is auto scaling?](https://www.ibm.com/think/topics/autoscaling)
-- [CloudZero: AWS Auto Scaling 101](https://www.cloudzero.com/blog/aws-auto-scaling/)
-- [Datadog: What is Auto-scaling?](https://www.datadoghq.com/knowledge-center/auto-scaling/)
-- [Graph AI: Auto Scaling Groups](https://www.graphapp.ai/engineering-glossary/cloud-computing/auto-scaling-groups)
-- [Spot.io: EC2 Auto Scaling Best Practices](https://spot.io/resources/aws-autoscaling/scaling-ec2-ecs-rds-and-more/ec2-autoscaling-the-basics-and-4-best-practices/)
-- [AWS: ELB Integration with ASGs](https://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-load-balancer-asg.html)
-- [Spot.io: Capacity Rebalancing](https://spot.io/blog/predictive-rebalancing/)
-- [AWS: Mixed Instances Policy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html)
-- [Amazon EC2](https://aws.amazon.com/ec2/)
-- [CloudWatch](https://aws.amazon.com/cloudwatch/)
-- [Spot.io: Multi-AZ vs Multi-Region](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/#a2)
+
+1. Amazon Web Services. (n.d.). Amazon EC2 Auto Scaling documentation. AWS Documentation.
+
+2. Amazon Web Services. (n.d.). AWS: Create Your First Auto Scaling Group (Tutorial). AWS Documentation.
+
+3. Spot.io. (n.d.). Understanding EC2 Auto Scaling Groups. Spot.io Resources.
+
+4. IBM. (n.d.). What is auto scaling?. IBM Think Topics.
+
+5. CloudZero. (n.d.). AWS Auto Scaling 101. CloudZero Blog.
+
+6. Datadog. (n.d.). What is Auto-scaling?. Datadog Knowledge Center.
+
+7. Graph AI. (n.d.). Auto Scaling Groups. Graph AI Engineering Glossary.
+
+8. Spot.io. (n.d.). EC2 Auto Scaling Best Practices. Spot.io Resources.
+
+9. Amazon Web Services. (n.d.). ELB Integration with ASGs. AWS Documentation.
+
+10. Spot.io. (n.d.). Capacity Rebalancing. Spot.io Blog.
+
+11. Amazon Web Services. (n.d.). Mixed Instances Policy. AWS Documentation.
+
+12. Amazon EC2. Cloud Computing Service. URL: https://aws.amazon.com/ec2/
+
+13. CloudWatch. Monitoring Service. URL: https://aws.amazon.com/cloudwatch/
+
+14. Spot.io. (n.d.). Multi-AZ vs Multi-Region. Spot.io Resources.

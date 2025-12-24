@@ -203,26 +203,49 @@ NumPy、scikit-learn、TensorFlow、またはpgvectorの組み込み関数を使
 
 ## 参考文献
 
-- [GeeksforGeeks: Cosine Similarity](https://www.geeksforgeeks.org/dbms/cosine-similarity/)
-- [IBM: What is Cosine Similarity](https://www.ibm.com/think/topics/cosine-similarity)
-- [IBM: Natural Language Processing](https://www.ibm.com/think/topics/natural-language-processing)
-- [IBM: Recommendation Engines](https://www.ibm.com/think/topics/recommendation-engine)
-- [IBM: Embedding Techniques](https://www.ibm.com/think/topics/embedding)
-- [IBM: Image Recognition](https://www.ibm.com/think/topics/image-recognition)
-- [IBM: Fraud Detection](https://www.ibm.com/think/topics/fraud-detection)
-- [IBM: Bag of Words (TF-IDF)](https://www.ibm.com/think/topics/bag-of-words)
-- [IBM: Principal Component Analysis](https://www.ibm.com/think/topics/principal-component-analysis)
-- [Wikipedia: Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)
-- [Wikipedia: Jaccard index](https://en.wikipedia.org/wiki/Jaccard_index)
-- [Built In: Understanding Cosine Similarity](https://builtin.com/machine-learning/cosine-similarity)
-- [Tiger Data: A Guide to Cosine Similarity](https://www.tigerdata.com/learn/understanding-cosine-similarity)
-- [YouTube: Cosine Similarity, StatQuest](https://www.youtube.com/watch?v=e9U0QAFbfLI)
-- [GeeksforGeeks: Python Measure Similarity Between Two Sentences](https://www.geeksforgeeks.org/machine-learning/python-measure-similarity-between-two-sentences-using-cosine-similarity/)
-- [GeeksforGeeks: Euclidean Distance](https://www.geeksforgeeks.org/maths/euclidean-distance/)
-- [scikit-learn: Cosine Similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html)
-- [scikit-learn: Euclidean Distance](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.euclidean_distances.html)
-- [scikit-learn: Sparse Matrices](https://scikit-learn.org/stable/modules/scipy_sparse.html)
-- [NumPy: Linear Algebra (linalg)](https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html)
-- [TensorFlow: CosineSimilarity Loss](https://www.tensorflow.org/api_docs/python/tf/keras/losses/CosineSimilarity)
-- [PyTorch: CosineSimilarity](https://pytorch.org/docs/stable/generated/torch.nn.CosineSimilarity.html)
-- [pgvector: PostgreSQL Vector Search](https://github.com/pgvector/pgvector)
+
+1. GeeksforGeeks. (n.d.). Cosine Similarity. GeeksforGeeks.
+
+2. IBM. (n.d.). What is Cosine Similarity. IBM Think Topics.
+
+3. IBM. (n.d.). Natural Language Processing. IBM Think Topics.
+
+4. IBM. (n.d.). Recommendation Engines. IBM Think Topics.
+
+5. IBM. (n.d.). Embedding Techniques. IBM Think Topics.
+
+6. IBM. (n.d.). Image Recognition. IBM Think Topics.
+
+7. IBM. (n.d.). Fraud Detection. IBM Think Topics.
+
+8. IBM. (n.d.). Bag of Words (TF-IDF). IBM Think Topics.
+
+9. IBM. (n.d.). Principal Component Analysis. IBM Think Topics.
+
+10. Wikipedia. (n.d.). Cosine Similarity. Wikipedia.
+
+11. Wikipedia. (n.d.). Jaccard index. Wikipedia.
+
+12. Built In. (n.d.). Understanding Cosine Similarity. Built In.
+
+13. Tiger Data. (n.d.). A Guide to Cosine Similarity. Tiger Data.
+
+14. StatQuest. (n.d.). Cosine Similarity. YouTube.
+
+15. GeeksforGeeks. (n.d.). Python Measure Similarity Between Two Sentences Using Cosine Similarity. GeeksforGeeks.
+
+16. GeeksforGeeks. (n.d.). Euclidean Distance. GeeksforGeeks.
+
+17. scikit-learn. (n.d.). Cosine Similarity. URL: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html
+
+18. scikit-learn. (n.d.). Euclidean Distance. URL: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.euclidean_distances.html
+
+19. scikit-learn. (n.d.). Sparse Matrices. URL: https://scikit-learn.org/stable/modules/scipy_sparse.html
+
+20. NumPy. (n.d.). Linear Algebra (linalg). URL: https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html
+
+21. TensorFlow. (n.d.). CosineSimilarity Loss. URL: https://www.tensorflow.org/api_docs/python/tf/keras/losses/CosineSimilarity
+
+22. PyTorch. (n.d.). CosineSimilarity. URL: https://pytorch.org/docs/stable/generated/torch.nn.CosineSimilarity.html
+
+23. pgvector. (n.d.). PostgreSQL Vector Search. URL: https://github.com/pgvector/pgvector

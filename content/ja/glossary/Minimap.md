@@ -222,11 +222,12 @@ VS Codeのミニマップは、構文ハイライトとエラーマーカーを�
 
 ## 参考文献
 
-- [React Flow: MiniMap Component](https://reactflow.dev/api-reference/components/minimap)
-- [Svelte Flow: MiniMap Component](https://svelteflow.dev/api-reference/components/mini-map)
-- [Lenovo Glossary: Minimap](https://www.lenovo.com/us/en/glossary/mini-map/)
-- [Crisp AI Chatbot & Automations](https://help.crisp.chat/en/category/ai-chatbot-automations-1yxt4vb/)
-- [Game UI Database: Minimap](https://www.gameuidatabase.com/index.php?scrn=135)
-- [Reddit: How Games Code Minimaps](https://www.reddit.com/r/howdidtheycodeit/comments/zxg62w/how_do_most_games_code_minimaps_and_your_movement/)
-- [EqualWeb: Accessible Navigation Design](https://www.equalweb.com/a/44195/11527/accessible_navigation_design:_best_practices_for_2025)
-- [Material Design: Accessibility](https://m2.material.io/design/usability/accessibility.html)
+
+1. React Flow. (n.d.). MiniMap Component. React Flow API Reference.
+2. Svelte Flow. (n.d.). MiniMap Component. Svelte Flow API Reference.
+3. Lenovo. (n.d.). Minimap. Lenovo Glossary.
+4. Crisp. (n.d.). AI Chatbot & Automations. Crisp Help Center.
+5. Game UI Database. (n.d.). Minimap. Game UI Database.
+6. Reddit. (n.d.). How Games Code Minimaps. Reddit Discussion.
+7. EqualWeb. (n.d.). Accessible Navigation Design: Best Practices for 2025. EqualWeb.
+8. Material Design. (n.d.). Accessibility. Material Design Guidelines.

@@ -237,9 +237,10 @@ Auto manufacturers use generative AI simulating diverse driving scenarios includ
 
 ## References
 
-- [AWS: What is Generative AI?](https://aws.amazon.com/what-is/generative-ai/)
-- [IBM: What is Generative AI?](https://www.ibm.com/think/topics/generative-ai)
-- [Coveo: Complete Guide to Generative AI Models](https://www.coveo.com/blog/generative-models/)
-- [TechTarget: Generative Models—VAEs, GANs, Diffusion, Transformers, NeRFs](https://www.techtarget.com/searchenterpriseai/tip/Generative-models-VAEs-GANs-diffusion-transformers-NeRFs)
-- [AWS: Generative AI Industry Applications](https://aws.amazon.com/what-is/generative-ai/)
-- [AWS: Generative AI Best Practices](https://aws.amazon.com/what-is/generative-ai/)
+
+1. AWS. (n.d.). What is Generative AI?. AWS.
+2. IBM. (n.d.). What is Generative AI?. IBM Think Topics.
+3. Coveo. (n.d.). Complete Guide to Generative AI Models. Coveo Blog.
+4. TechTarget. (n.d.). Generative Models—VAEs, GANs, Diffusion, Transformers, NeRFs. TechTarget.
+5. AWS. (n.d.). Generative AI Industry Applications. AWS.
+6. AWS. (n.d.). Generative AI Best Practices. AWS.

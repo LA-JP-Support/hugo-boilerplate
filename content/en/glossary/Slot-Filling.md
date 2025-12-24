@@ -335,15 +335,16 @@ Configure the slot with "Is Array" set to true to accept multiple values (e.g., 
 
 ## References
 
-- [Microsoft Copilot Studio: Use Entities and Slot Filling in Agents](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-entities-slot-filling)
-- [Dydu Documentation: Slot Filling](https://docs-en.dydu.ai/contents/knowledge/knowledge-types/slot-filling)
-- [Just AI Conversational Cloud: Slot Filling](https://help.cloud.just-ai.com/en/jaicp/NLU_core/slot_filling)
-- [Microsoft Copilot Studio: Prebuilt Entities](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-variables-about#entities)
-- [Microsoft Copilot Studio: Closed List Entities](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-entities-slot-filling#closed-list-entities)
-- [Just AI: Entities Guide](https://help.cloud.just-ai.com/en/jaicp/platform_ux/nlu_core/entities)
-- [Just AI: Slot Parameters](https://help.cloud.just-ai.com/en/jaicp/NLU_core/slot_filling#slot-parameters)
-- [Dydu: Slot Configuration](https://docs-en.dydu.ai/contents/knowledge/knowledge-types/slot-filling#id-1-configuration-of-the-slots)
-- [Just AI: Slot Extraction](https://help.cloud.just-ai.com/en/jaicp/NLU_core/slot_filling#slot-extraction)
-- [Just AI: Interruption of Slot Filling](https://help.cloud.just-ai.com/en/jaicp/NLU_core/slot_filling#interruption-of-slot-filling)
-- [Microsoft Copilot Studio: Slot Filling Best Practices](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/slot-filling-best-practices)
-- [Analytics Vidhya: Enhancing Conversational AI with BERT](https://www.analyticsvidhya.com/blog/2023/10/conversational-ai-with-bert/)
+
+1. Microsoft. (n.d.). Use Entities and Slot Filling in Agents. Microsoft Copilot Studio.
+2. Dydu. (n.d.). Slot Filling. Dydu Documentation.
+3. Just AI. (n.d.). Slot Filling. Just AI Conversational Cloud.
+4. Microsoft. (n.d.). Prebuilt Entities. Microsoft Copilot Studio.
+5. Microsoft. (n.d.). Closed List Entities. Microsoft Copilot Studio.
+6. Just AI. (n.d.). Entities Guide. Just AI.
+7. Just AI. (n.d.). Slot Parameters. Just AI.
+8. Dydu. (n.d.). Slot Configuration. Dydu.
+9. Just AI. (n.d.). Slot Extraction. Just AI.
+10. Just AI. (n.d.). Interruption of Slot Filling. Just AI.
+11. Microsoft. (n.d.). Slot Filling Best Practices. Microsoft Copilot Studio.
+12. Analytics Vidhya. (2023). Enhancing Conversational AI with BERT. Analytics Vidhya Blog.

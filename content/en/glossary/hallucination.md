@@ -553,11 +553,19 @@ A: Generally yes, but improvements are incremental. Larger models with better tr
 
 ## References
 
-- [Oxford University: Hallucination Detection with Semantic Entropy](https://www.ox.ac.uk/news/2024-06-20-major-research-hallucinating-generative-models-advances-reliability-artificial)
-- [CASMI Northwestern: Hallucination—A Feature, Not a Bug](https://casmi.northwestern.edu/news/articles/2024/the-hallucination-problem-a-feature-not-a-bug.html)
-- [Google Cloud: What are AI Hallucinations?](https://cloud.google.com/discover/what-are-ai-hallucinations)
-- [Wikipedia: Hallucination (Artificial Intelligence)](https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence))
-- [Nature: AI Hallucination Classification](https://www.nature.com/articles/s41599-024-03811-x)
-- [TechCrunch: Cornell Study on Hallucination Inevitability](https://techcrunch.com/2024/08/14/study-suggests-that-even-the-best-ai-models-hallucinate-a-bunch/)
-- [RSNA: Risks in Medical AI](https://pubs.rsna.org/doi/full/10.1148/radiol.230163)
-- [Business Standard: Fabricated Legal Precedents Case](https://www.business-standard.com/world-news/us-lawyer-in-legal-trouble-after-citing-cases-invented-by-chatgpt-123052800935_1.html)
+
+1. Oxford University. (2024). Hallucination Detection with Semantic Entropy. Oxford News.
+
+2. CASMI Northwestern. (2024). Hallucination—A Feature, Not a Bug. CASMI Northwestern News.
+
+3. Google Cloud. (2024). What are AI Hallucinations?. Google Cloud Discover.
+
+4. Wikipedia. (n.d.). Hallucination (Artificial Intelligence). Wikipedia.
+
+5. Nature. (2024). AI Hallucination Classification. Nature.
+
+6. TechCrunch. (2024). Cornell Study on Hallucination Inevitability. TechCrunch.
+
+7. RSNA. (n.d.). Risks in Medical AI. RSNA Publications.
+
+8. Business Standard. (2023). Fabricated Legal Precedents Case. Business Standard World News.

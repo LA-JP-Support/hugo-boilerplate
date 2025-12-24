@@ -290,15 +290,27 @@ const orderMachine = createMachine({
 
 ## 参考文献
 
-- [freeCodeCamp: Understanding State Machines](https://www.freecodecamp.org/news/state-machines-basics-of-computer-science-d42855debc66/)
-- [Stately Blog: What is a State Machine?](https://stately.ai/blog/2023-10-05-what-is-a-state-machine)
-- [Prompt Engineering: Guiding AI Conversations](https://promptengineering.org/guiding-ai-conversations-through-dynamic-state-transitions/)
-- [XState Documentation](https://stately.ai/docs/xstate)
-- [Stately Editor](https://state.new)
-- [Tencent Cloud: Conversational FSM](https://www.tencentcloud.com/techpedia/127736)
-- [YouTube: Stately Introduction](https://www.youtube.com/watch?v=EzYIerEutgk)
-- [Medium: Building a Chatbot with State Machines](https://rogerjunior.medium.com/how-to-build-a-chatbot-from-scratch-with-javascript-using-state-machines-95597c436517)
-- [XState VS Code Extension](https://marketplace.visualstudio.com/items?itemName=statelyai.stately-vscode)
-- [NCBI: State Machine Based Human-Bot Conversation Model](https://pmc.ncbi.nlm.nih.gov/articles/PMC7266438/)
-- [Mermaid Diagramming Tool](https://mermaid-js.github.io/mermaid/)
-- [Stately.ai](https://stately.ai/)
+
+1. freeCodeCamp. (n.d.). Understanding State Machines. freeCodeCamp.
+
+2. Stately. (2023). What is a State Machine?. Stately Blog.
+
+3. Prompt Engineering. (n.d.). Guiding AI Conversations through Dynamic State Transitions. Prompt Engineering.
+
+4. XState. (n.d.). XState Documentation. XState.
+
+5. Stately Editor. (n.d.). Stately Editor. URL: https://state.new
+
+6. Tencent Cloud. (n.d.). Conversational FSM. Tencent Cloud.
+
+7. YouTube. (n.d.). Stately Introduction. YouTube.
+
+8. Roger Junior. (n.d.). Building a Chatbot with State Machines. Medium.
+
+9. XState VS Code Extension. (n.d.). XState VS Code Extension. URL: https://marketplace.visualstudio.com/items?itemName=statelyai.stately-vscode
+
+10. NCBI. (n.d.). State Machine Based Human-Bot Conversation Model. NCBI.
+
+11. Mermaid. (n.d.). Mermaid Diagramming Tool. URL: https://mermaid-js.github.io/mermaid/
+
+12. Stately.ai. (n.d.). Stately.ai. URL: https://stately.ai/

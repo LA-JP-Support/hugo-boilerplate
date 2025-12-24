@@ -216,16 +216,29 @@ A: Blurry images (increase steps or resolution), unwanted objects (add negative 
 
 ## References
 
-- [ComfyUI GitHub](https://github.com/comfyanonymous/ComfyUI)
-- [ComfyUI Community Manual](https://blenderneko.github.io/ComfyUI-docs/)
-- [ComfyUI Official Documentation](https://docs.comfy.org/)
-- [ComfyUI Built-in Nodes Overview](https://docs.comfy.org/built-in-nodes/overview)
-- [ComfyUI Development Core Concepts](https://docs.comfy.org/development/core-concepts/workflow)
-- [Awesome ComfyUI Custom Nodes](https://github.com/ComfyUI-Workflow/awesome-comfyui)
-- [DigitalOcean: Understanding AI Image Generation](https://www.digitalocean.com/community/tutorials/understanding-ai-image-generation-models-tools-and-techniques)
-- [OpenAI: DALL-E Image Generation Guide](https://platform.openai.com/docs/guides/image-generation)
-- [Stable Diffusion Web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
-- [MidJourney: Getting Started Guide](https://docs.midjourney.com/hc/en-us/articles/33329261836941-Getting-Started-Guide)
-- [Node-RED](https://nodered.org/)
-- [n8n](https://n8n.io/)
-- [Adobe Firefly AI Image Generator Tutorial (YouTube)](https://www.youtube.com/watch?v=l_knqdYkRiw)
+
+1. ComfyUI. (n.d.). ComfyUI GitHub Repository. GitHub. URL: https://github.com/comfyanonymous/ComfyUI
+
+2. ComfyUI. (n.d.). ComfyUI Community Manual. Blender Neko. URL: https://blenderneko.github.io/ComfyUI-docs/
+
+3. ComfyUI. (n.d.). ComfyUI Official Documentation. ComfyUI Docs. URL: https://docs.comfy.org/
+
+4. ComfyUI. (n.d.). ComfyUI Built-in Nodes Overview. ComfyUI Docs. URL: https://docs.comfy.org/built-in-nodes/overview
+
+5. ComfyUI. (n.d.). ComfyUI Development Core Concepts. ComfyUI Docs. URL: https://docs.comfy.org/development/core-concepts/workflow
+
+6. ComfyUI Workflow. (n.d.). Awesome ComfyUI Custom Nodes. GitHub. URL: https://github.com/ComfyUI-Workflow/awesome-comfyui
+
+7. DigitalOcean. (n.d.). Understanding AI Image Generation Models, Tools, and Techniques. DigitalOcean Community. URL: https://www.digitalocean.com/community/tutorials/understanding-ai-image-generation-models-tools-and-techniques
+
+8. OpenAI. (n.d.). DALL-E Image Generation Guide. OpenAI Platform. URL: https://platform.openai.com/docs/guides/image-generation
+
+9. AUTOMATIC1111. (n.d.). Stable Diffusion Web UI. GitHub. URL: https://github.com/AUTOMATIC1111/stable-diffusion-webui
+
+10. MidJourney. (n.d.). Getting Started Guide. MidJourney Docs. URL: https://docs.midjourney.com/hc/en-us/articles/33329261836941-Getting-Started-Guide
+
+11. Node-RED. (n.d.). Node-RED Platform. Node-RED. URL: https://nodered.org/
+
+12. n8n. (n.d.). n8n Workflow Automation Platform. n8n. URL: https://n8n.io/
+
+13. Adobe. (n.d.). Adobe Firefly AI Image Generator Tutorial. YouTube. URL: https://www.youtube.com/watch?v=l_knqdYkRiw

@@ -218,16 +218,23 @@ Hybrid systems will continue to evolve as AI becomes more sophisticated and huma
 
 ## References
 
-1. [Psychology Today: Hybrid Intelligence - The Future of Human-AI Collaboration](https://www.psychologytoday.com/us/blog/harnessing-hybrid-intelligence/202503/hybrid-intelligence-the-future-of-human-ai-collaboration)
-2. [FIM Research: Designing Human-AI Hybrids - Challenges and Good Practices](https://www.fim-rc.de/Paperbibliothek/Veroeffentlicht/4961/id-4961.pdf)
-3. [Functionly: Designing Hybrid Teams - Blending AI with Human Expertise](https://www.functionly.com/orginometry/the-ai-revolution/designing-hybrid-teams-blending-ai-with-human-expertise)
-4. [LinkedIn: Hybrid AI-Human Hiring Study (Stanford)](https://www.linkedin.com/pulse/cracking-code-hybrid-ai-human-combo-improves-hiring-success-brown-cfnkc)
-5. [moinAI: Hybrid Chatbot - Definition, Benefits & Practical Examples](https://moin.ai/en/hybrid-chatbot/)
-6. [Wharton: Why Hybrid Intelligence Is the Future of Human-AI Collaboration](https://knowledge.wharton.upenn.edu/article/why-hybrid-intelligence-is-the-future-of-human-ai-collaboration/)
-7. [Brookings Institution: Algorithmic Bias Detection and Mitigation](https://www.brookings.edu/articles/algorithmic-bias-detection-and-mitigation-best-practices-and-policies-to-reduce-consumer-harms/)
-8. [MIT Media Lab: Human-AI Collaboration](https://www.media.mit.edu/projects/human-ai-collaboration/overview/)
-9. [Yale Human Nature Lab: Hybrid Systems of Humans and AI Agents](https://humannaturelab.net/)
-10. [Forbes: The Rise Of The Hybrid Workforce: Humans And AI Working Together](https://www.forbes.com/sites/jeannemeister/2025/02/15/the-rise-of-the-hybrid-workforce-humans-and-ai-working-together/)
 
-For further reading and deep dives, explore the provided links, and consult the referenced research for implementation frameworks, case studies, and ethical best practices on hybrid systems.
+1. Psychology Today. (2025). Hybrid Intelligence - The Future of Human-AI Collaboration. Psychology Today.
 
+2. FIM Research. (n.d.). Designing Human-AI Hybrids - Challenges and Good Practices. FIM Research.
+
+3. Functionly. (n.d.). Designing Hybrid Teams - Blending AI with Human Expertise. Functionly.
+
+4. Brown. (n.d.). Hybrid AI-Human Hiring Study (Stanford). LinkedIn Pulse.
+
+5. moinAI. (n.d.). Hybrid Chatbot - Definition, Benefits & Practical Examples. moinAI.
+
+6. Wharton. (n.d.). Why Hybrid Intelligence Is the Future of Human-AI Collaboration. Wharton Knowledge.
+
+7. Brookings Institution. (n.d.). Algorithmic Bias Detection and Mitigation. Brookings Institution.
+
+8. MIT Media Lab. (n.d.). Human-AI Collaboration. MIT Media Lab.
+
+9. Yale Human Nature Lab. (n.d.). Hybrid Systems of Humans and AI Agents. Yale Human Nature Lab.
+
+10. Forbes. (2025). The Rise Of The Hybrid Workforce: Humans And AI Working Together. Forbes.

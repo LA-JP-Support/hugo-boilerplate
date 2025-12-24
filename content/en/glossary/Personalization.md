@@ -250,13 +250,23 @@ Hyper-personalization uses real-time, multi-channel data with advanced AI for mo
 
 ## References
 
-- [Salesforce: AI Personalization Complete Guide](https://www.salesforce.com/marketing/personalization/ai/)
-- [IBM: AI Personalization](https://www.ibm.com/think/topics/ai-personalization)
-- [Bloomreach: AI Personalization Examples and Challenges](https://www.bloomreach.com/en/blog/ai-personalization-5-examples-business-challenges)
-- [Zendesk: Personalization 101](https://www.zendesk.de/blog/complete-guide-personalization/)
-- [McKinsey: The Value of Getting Personalization Right](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-value-of-getting-personalization-right-or-wrong-is-multiplying)
-- [Future of Privacy Forum: Personality vs. Personalization in AI Systems](https://fpf.org/blog/personality-vs-personalization-in-ai-systems-an-introduction-part-1/)
-- [IBM: Generative AI](https://www.ibm.com/think/topics/generative-ai)
-- [IBM: AI in Finance](https://www.ibm.com/topics/artificial-intelligence-finance)
-- [Bloomreach: Hyper-Personalization Strategies](https://www.bloomreach.com/en/blog/3-personalization-strategies-from-bloomreach-and-kps)
-- [Bloomreach: What is Agentic AI](https://www.bloomreach.com/en/blog/what-is-agentic-ai)
+
+1. Salesforce. (n.d.). AI Personalization Complete Guide. Salesforce Marketing.
+
+2. IBM. (n.d.). AI Personalization. IBM Think Topics.
+
+3. Bloomreach. (n.d.). AI Personalization Examples and Challenges. Bloomreach Blog.
+
+4. Zendesk. (n.d.). Personalization 101. Zendesk Blog.
+
+5. McKinsey. (n.d.). The Value of Getting Personalization Right. McKinsey Insights.
+
+6. Future of Privacy Forum. (n.d.). Personality vs. Personalization in AI Systems. FPF Blog.
+
+7. IBM. (n.d.). Generative AI. IBM Think Topics.
+
+8. IBM. (n.d.). AI in Finance. IBM Topics.
+
+9. Bloomreach. (n.d.). Hyper-Personalization Strategies. Bloomreach Blog.
+
+10. Bloomreach. (n.d.). What is Agentic AI. Bloomreach Blog.

@@ -258,26 +258,47 @@ AIバイアスは、初期のデータ収集からモデルトレーニング、
 
 ## 参考文献
 
-- [Aidbase: What is AI Bias?](https://www.aidbase.ai/blog/what-is-ai-bias)
-- [NIST SP 1270: Identifying and Managing Bias in AI](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1270.pdf)
-- [NIST: More to AI Bias Than Biased Data](https://www.nist.gov/news-events/news/2022/03/theres-more-ai-bias-biased-data-nist-report-highlights)
-- [EU AI Act Official Text](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689)
-- [EU AI Act Article 5: Prohibited Practices](https://artificialintelligenceact.eu/article/5/)
-- [EU: AI Act Overview](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
-- [EU: Guidelines on Prohibited AI Practices](https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-prohibited-artificial-intelligence-ai-practices-defined-ai-act)
-- [EU AI Act Implementation Timeline](https://artificialintelligenceact.eu/implementation-timeline/)
-- [AuditBoard: EU AI Act Compliance](https://auditboard.com/blog/eu-ai-act)
-- [MIT Gender Shades Project](http://gendershades.org/)
-- [Bloomberg: Generative AI Bias](https://www.bloomberg.com/graphics/2023-generative-ai-bias/)
-- [ProPublica: Machine Bias](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)
-- [Stanford HAI: AI Index Report 2023](https://aiindex.stanford.edu/wp-content/uploads/2023/04/HAI_AI-Index-Report_2023.pdf)
-- [IBM: What is AI Bias?](https://www.ibm.com/cloud/learn/ai-bias)
-- [SAP: AI Bias Mitigation](https://www.sap.com/insights/what-is-ai-bias.html)
-- [U.S. AI Bill of Rights Blueprint](https://www.whitehouse.gov/ostp/ai-bill-of-rights/)
-- [NIST: AI Risk Management Framework](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework)
-- [NIST: AI Fundamental Research Free of Bias](https://www.nist.gov/artificial-intelligence/ai-fundamental-research-free-bias)
-- [OECD AI Principles](https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449)
-- [U.S. Equal Credit Opportunity Act](https://www.justice.gov/crt/equal-credit-opportunity-act-15-usc-1691-1691f)
-- [IBM AI Fairness 360](https://aif360.mybluemix.net/)
-- [Google What-If Tool](https://pair-code.github.io/what-if-tool/)
-- [EU AI Act Service Desk](https://ai-act-service-desk.ec.europa.eu/en)
+
+1. NIST. (2022). More to AI Bias Than Biased Data. NIST News Events.
+
+2. NIST. (n.d.). SP 1270: Identifying and Managing Bias in AI. NIST Special Publications.
+
+3. European Union. (2024). EU AI Act Official Text. EUR-Lex.
+
+4. European Union. (2024). AI Act Article 5: Prohibited Practices. Artificial Intelligence Act.
+
+5. European Commission. (2024). AI Act Overview. Digital Strategy.
+
+6. European Commission. (2024). Guidelines on Prohibited AI Practices. Digital Strategy.
+
+7. European Union. (2024). EU AI Act Implementation Timeline. Artificial Intelligence Act.
+
+8. AuditBoard. (2024). EU AI Act Compliance. AuditBoard Blog.
+
+9. MIT. (n.d.). Gender Shades Project. MIT Media Lab.
+
+10. Bloomberg. (2023). Generative AI Bias. Bloomberg Graphics.
+
+11. ProPublica. (n.d.). Machine Bias. ProPublica.
+
+12. Stanford HAI. (2023). AI Index Report 2023. Stanford Human-Centered AI Institute.
+
+13. IBM. (n.d.). What is AI Bias?. IBM Cloud Learn.
+
+14. SAP. (n.d.). AI Bias Mitigation. SAP Insights.
+
+15. U.S. White House. (n.d.). AI Bill of Rights Blueprint. Office of Science and Technology Policy.
+
+16. NIST. (n.d.). AI Risk Management Framework. NIST.
+
+17. NIST. (n.d.). AI Fundamental Research Free of Bias. NIST.
+
+18. OECD. (n.d.). AI Principles. OECD Legal Instruments.
+
+19. U.S. Department of Justice. (n.d.). Equal Credit Opportunity Act. Civil Rights Division.
+
+20. IBM. AI Fairness 360. URL: https://aif360.mybluemix.net/
+
+21. Google. What-If Tool. URL: https://pair-code.github.io/what-if-tool/
+
+22. European Commission. EU AI Act Service Desk. URL: https://ai-act-service-desk.ec.europa.eu/en

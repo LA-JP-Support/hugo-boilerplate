@@ -288,9 +288,15 @@ AI generating radiation therapy plans, surgical approaches, and personalized tre
 
 ## References
 
-- [FDA: AI/ML-Based Medical Devices](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices)
-- [Radiology: AI in Medical Imaging](https://pubs.rsna.org/doi/10.1148/radiol.2020192224)
-- [Nature Medicine: Deep Learning for Medical Image Analysis](https://www.nature.com/articles/s41591-018-0316-z)
-- [NEJM: High-Performance Medicine Through AI](https://www.nejm.org/doi/full/10.1056/NEJMra1814259)
-- [ACR Data Science Institute: AI Resources](https://www.acrdsi.org/)
-- [European Society of Radiology: AI in Radiology](https://www.myesr.org/research/ai-in-radiology)
+
+1. U.S. Food and Drug Administration (FDA). (n.d.). Artificial Intelligence and Machine Learning (AI/ML) Enabled Medical Devices. FDA Medical Devices.
+
+2. Radiological Society of North America (RSNA). (2020). AI in Medical Imaging. Radiology.
+
+3. Nature Medicine. (2018). Deep Learning for Medical Image Analysis. Nature Medicine.
+
+4. New England Journal of Medicine (NEJM). (n.d.). High-Performance Medicine Through AI. New England Journal of Medicine.
+
+5. American College of Radiology (ACR) Data Science Institute. (n.d.). AI Resources. ACR DSI.
+
+6. European Society of Radiology. (n.d.). AI in Radiology. European Society of Radiology.

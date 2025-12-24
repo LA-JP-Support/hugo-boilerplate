@@ -261,17 +261,31 @@ Not necessarily. Modern optimized models like Cobra VAD are designed for real-ti
 
 ## References
 
-- [Aalto Speech Processing Book: Voice Activity Detection](https://speechprocessingbook.aalto.fi/Recognition/Voice_activity_detection.html)
-- [Picovoice: Complete Guide to Voice Activity Detection (VAD)](https://picovoice.ai/blog/complete-guide-voice-activity-detection-vad/)
-- [Picovoice VAD Benchmark](https://picovoice.ai/docs/benchmark/vad/)
-- [Retell AI: Voice Activity Detection (VAD)](https://www.retellai.com/glossary/voice-activity-detection-vad)
-- [Tavus: Voice Activity Detection](https://www.tavus.io/post/voice-activity-detection)
-- [Picovoice Cobra VAD Product Page](https://picovoice.ai/platform/cobra/)
-- [Decagon AI: What is Automatic Speech Recognition](https://decagon.ai/glossary/what-is-automatic-speech-recognition)
-- [Retell AI: Speech Processing](https://www.retellai.com/glossary/speech-processing)
-- [Omniscien: Speech Recognition Glossary - Voice Biometrics](https://omniscien.com/blog/speech-recognition-speech-synthesis-glossary-v-z/#Voice_Biometrics)
-- [Retell AI: Turn-Taking Endpoints](https://www.retellai.com/glossary/turn-taking-endpoints)
-- [Picovoice: Speaker Diarization](https://picovoice.ai/docs/glossary/#speaker-diarization)
-- [Picovoice: Complete Guide to Wake Word Detection](https://picovoice.ai/blog/complete-guide-to-wake-word/)
-- [py-webrtcvad on GitHub](https://github.com/wiseman/py-webrtcvad)
-- [silero-vad on GitHub](https://github.com/snakers4/silero-vad)
+
+1. Aalto University. (n.d.). Voice Activity Detection. Aalto Speech Processing Book.
+
+2. Picovoice. (n.d.). Complete Guide to Voice Activity Detection (VAD). Picovoice Blog.
+
+3. Picovoice. (n.d.). VAD Benchmark. Picovoice Documentation.
+
+4. Retell AI. (n.d.). Voice Activity Detection (VAD). Retell AI Glossary.
+
+5. Tavus. (n.d.). Voice Activity Detection. Tavus Blog.
+
+6. Picovoice. (n.d.). Cobra VAD Product Page. Picovoice Platform.
+
+7. Decagon AI. (n.d.). What is Automatic Speech Recognition. Decagon AI Glossary.
+
+8. Retell AI. (n.d.). Speech Processing. Retell AI Glossary.
+
+9. Omniscien. (n.d.). Speech Recognition Glossary - Voice Biometrics. Omniscien Blog.
+
+10. Retell AI. (n.d.). Turn-Taking Endpoints. Retell AI Glossary.
+
+11. Picovoice. (n.d.). Speaker Diarization. Picovoice Glossary.
+
+12. Picovoice. (n.d.). Complete Guide to Wake Word Detection. Picovoice Blog.
+
+13. py-webrtcvad. Open-source Voice Activity Detection Library. URL: https://github.com/wiseman/py-webrtcvad
+
+14. silero-vad. Open-source Voice Activity Detection Library. URL: https://github.com/snakers4/silero-vad

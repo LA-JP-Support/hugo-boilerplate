@@ -421,12 +421,21 @@ $.messages[?(@.intent == 'purchase')].text
 
 ## References
 
-- [RFC 9535: JSONPath Specification](https://datatracker.ietf.org/doc/html/rfc9535)
-- [SmartBear JSONPath Syntax Documentation](https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html)
-- [Microsoft: JSON Path Expressions in SQL Server](https://learn.microsoft.com/en-us/sql/relational-databases/json/json-path-expressions-sql-server?view=sql-server-ver17)
-- [Postman: JSONPath Variables](https://learning.postman.com/docs/writing-scripts/script-references/variables-list/)
-- [ToolsQA: REST-Assured JSONPath](https://toolsqa.com/rest-assured/jsonpath-and-query-json-using-jsonpath/)
-- [jsonpath (JavaScript Library)](https://github.com/dchester/jsonpath)
-- [jsonpath-ng (Python Library)](https://github.com/h2non/jsonpath-ng)
-- [JsonPath (Java Library)](https://github.com/json-path/JsonPath)
-- [Flow\JSONPath (PHP Library)](https://github.com/Flow-Communications/JSONPath)
+
+1. IETF. (2023). RFC 9535: JSONPath Specification. IETF RFC.
+
+2. SmartBear. (n.d.). JSONPath Syntax Documentation. SmartBear Support.
+
+3. Microsoft. (n.d.). JSON Path Expressions in SQL Server. Microsoft Learn.
+
+4. Postman. (n.d.). JSONPath Variables. Postman Learning.
+
+5. ToolsQA. (n.d.). REST-Assured JSONPath. ToolsQA.
+
+6. jsonpath. JavaScript Library. URL: https://github.com/dchester/jsonpath
+
+7. jsonpath-ng. Python Library. URL: https://github.com/h2non/jsonpath-ng
+
+8. JsonPath. Java Library. URL: https://github.com/json-path/JsonPath
+
+9. Flow\JSONPath. PHP Library. URL: https://github.com/Flow-Communications/JSONPath

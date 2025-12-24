@@ -249,17 +249,31 @@ Environment variables provide secure, flexible secret injection into application
 
 ## References
 
-- [OWASP: Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)
-- [Microsoft Learn: Best Practices for Protecting Secrets](https://learn.microsoft.com/en-us/azure/security/fundamentals/secrets-best-practices)
-- [Microsoft Docs: Safe Storage of App Secrets in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-10.0)
-- [Kinsta: What Is an Environment Variable?](https://kinsta.com/blog/what-is-an-environment-variable/)
-- [DreamHost: Environment Variables Explained](https://www.dreamhost.com/blog/environment-variables/)
-- [Render Docs: Environment Variables and Secrets](https://render.com/docs/configure-environment-variables)
-- [Netlify Docs: Environment Variables](https://docs.netlify.com/configure-builds/environment-variables/)
-- [Vercel Docs: Environment Variables](https://vercel.com/docs/concepts/projects/environment-variables)
-- [AWS Secrets Manager Documentation](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
-- [Azure Key Vault Documentation](https://learn.microsoft.com/en-us/azure/key-vault/)
-- [HashiCorp Vault Documentation](https://www.vaultproject.io/docs)
-- [GitHub Secret Scanning](https://docs.github.com/en/code-security/secret-security/about-secret-scanning)
-- [Azure DevOps Credential Scanner](https://learn.microsoft.com/en-us/azure/devops/repos/security/github-advanced-security-secret-scanning)
-- [Stack Overflow: Storing API Keys with Gatsby](https://stackoverflow.com/questions/62231572/how-to-store-and-access-api-keys-and-passwords-with-gatsby)
+
+1. OWASP. (n.d.). Secrets Management Cheat Sheet. OWASP Cheat Sheets Series.
+
+2. Microsoft. (n.d.). Best Practices for Protecting Secrets. Microsoft Learn.
+
+3. Microsoft. (n.d.). Safe Storage of App Secrets in ASP.NET Core. Microsoft Docs.
+
+4. Kinsta. (n.d.). What Is an Environment Variable?. Kinsta Blog.
+
+5. DreamHost. (n.d.). Environment Variables Explained. DreamHost Blog.
+
+6. Render. (n.d.). Environment Variables and Secrets. Render Documentation.
+
+7. Netlify. (n.d.). Environment Variables. Netlify Documentation.
+
+8. Vercel. (n.d.). Environment Variables. Vercel Documentation.
+
+9. AWS. (n.d.). AWS Secrets Manager Documentation. AWS Documentation.
+
+10. Microsoft. (n.d.). Azure Key Vault Documentation. Azure Documentation.
+
+11. HashiCorp. (n.d.). HashiCorp Vault Documentation. HashiCorp Documentation.
+
+12. GitHub. (n.d.). Secret Scanning. GitHub Documentation.
+
+13. Microsoft. (n.d.). Azure DevOps Credential Scanner. Azure DevOps Documentation.
+
+14. Stack Overflow. (n.d.). Storing API Keys with Gatsby. Stack Overflow.

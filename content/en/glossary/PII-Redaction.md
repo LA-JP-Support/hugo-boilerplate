@@ -241,19 +241,35 @@ A: Yes. Tools like AWS Transcribe and AssemblyAI support real-time PII redaction
 
 ## References
 
-- [AssemblyAI: PII Redaction Model](https://assemblyai.com/docs/pii-redaction)
-- [Microsoft Azure: PII Redaction Documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/personally-identifiable-information/how-to/redact-text-pii)
-- [AWS Transcribe: Redacting or Identifying PII](https://docs.aws.amazon.com/transcribe/latest/dg/pii-redaction.html)
-- [NIST: Guide to Protecting PII (SP 800-122)](https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-122.pdf)
-- [US Department of Homeland Security: What is PII?](https://www.dhs.gov/privacy-training/what-is-personally-identifiable-information-pii)
-- [IBM Data Breach Report](https://www.ibm.com/reports/data-breach)
-- [GDPR Info](https://gdpr-info.eu)
-- [HIPAA Information](https://www.hhs.gov/hipaa)
-- [CCPA Information](https://oag.ca.gov/privacy/ccpa)
-- [PCI DSS Information](https://www.pcisecuritystandards.org/)
-- [FOIA Information](https://www.foia.gov/)
-- [FERPA Information](https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html)
-- [VIDIZMO Redactor](https://vidizmo.com/products/redact-video-online/)
-- [Enthu.AI PII Redaction](https://enthu.ai/pii-redaction-software/)
-- [Retell AI PII Redaction](https://www.retellai.com/blog/introducing-retell-ai-pii-redaction-data-security-made-easy)
-- [Private AI](https://www.private-ai.com/en/blog/pii-review-data)
+
+1. AssemblyAI. PII Redaction Model. URL: https://assemblyai.com/docs/pii-redaction
+
+2. Microsoft Azure. PII Redaction Documentation. URL: https://learn.microsoft.com/en-us/azure/ai-services/language-service/personally-identifiable-information/how-to/redact-text-pii
+
+3. AWS Transcribe. Redacting or Identifying PII. URL: https://docs.aws.amazon.com/transcribe/latest/dg/pii-redaction.html
+
+4. National Institute of Standards and Technology (NIST). (2010). Guide to Protecting PII (SP 800-122). NIST Special Publication.
+
+5. US Department of Homeland Security. (n.d.). What is PII?. DHS Privacy Training.
+
+6. IBM. (2023). Data Breach Report. IBM Security.
+
+7. GDPR Info. GDPR Regulations. URL: https://gdpr-info.eu
+
+8. US Department of Health and Human Services. HIPAA Information. URL: https://www.hhs.gov/hipaa
+
+9. California Office of the Attorney General. CCPA Information. URL: https://oag.ca.gov/privacy/ccpa
+
+10. PCI Security Standards Council. PCI DSS Information. URL: https://www.pcisecuritystandards.org/
+
+11. US Government. FOIA Information. URL: https://www.foia.gov/
+
+12. US Department of Education. FERPA Information. URL: https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html
+
+13. VIDIZMO. Video Redaction Software. URL: https://vidizmo.com/products/redact-video-online/
+
+14. Enthu.AI. PII Redaction Software. URL: https://enthu.ai/pii-redaction-software/
+
+15. Retell AI. (2023). PII Redaction: Data Security Made Easy. Retell AI Blog.
+
+16. Private AI. PII Review and Data Protection. URL: https://www.private-ai.com/en/blog/pii-review-data

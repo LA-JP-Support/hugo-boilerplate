@@ -221,9 +221,15 @@ User: "Refill my prescription."
 
 ## References
 
-- [OnyxGS: What Dialogue Management Is, and Why It Matters in AI](https://www.onyxgs.com/blog/what-dialogue-management-and-why-it-matters-ai)
-- [LinkedIn: Mastering Dialogue Management in Conversational AI](https://www.linkedin.com/pulse/mastering-dialogue-management-conversational-ai-rajiv-kedia-oxywe)
-- [Medium: Dialog Management Considerations for Chatbots](https://cobusgreyling.medium.com/dialog-management-considerations-for-chatbots-6ed4dca65a80)
-- [Rootstack: Rasa vs Dialogflow vs Microsoft Bot Framework](https://rootstack.com/en/blog/rasa-vs-dialogflow-vs-microsoft-bot-framework-which-chatbot-platform-best-fits-your)
-- [Ideas2IT: Rasa vs Dialogflow vs Lex](https://www.ideas2it.com/blogs/battle-of-the-bots-rasa-vs-google-dialogflow-vs-aws-lex)
-- [Stack Overflow: Difference between Dialogflow, Bot Framework, Rasa NLU](https://stackoverflow.com/questions/47388497/what-is-the-difference-between-dialogflow-bot-framework-vs-rasa-nlu-bot-framewor)
+
+1. OnyxGS. (n.d.). What Dialogue Management Is, and Why It Matters in AI. OnyxGS Blog.
+
+2. Kedia, R. (n.d.). Mastering Dialogue Management in Conversational AI. LinkedIn Pulse.
+
+3. Greyling, C. (n.d.). Dialog Management Considerations for Chatbots. Medium.
+
+4. Rootstack. (n.d.). Rasa vs Dialogflow vs Microsoft Bot Framework. Rootstack Blog.
+
+5. Ideas2IT. (n.d.). Rasa vs Dialogflow vs Lex. Ideas2IT Blog.
+
+6. Stack Overflow. (n.d.). Difference between Dialogflow, Bot Framework, Rasa NLU. Stack Overflow.

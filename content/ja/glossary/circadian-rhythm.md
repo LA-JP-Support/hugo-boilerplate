@@ -228,10 +228,17 @@ url: "/ja/glossary/circadian-rhythm/"
 
 ## 参考文献
 
-- [Cleveland Clinic: Circadian Rhythm](https://my.clevelandclinic.org/health/articles/circadian-rhythm)
-- [Sleep Foundation: What Is Circadian Rhythm?](https://www.sleepfoundation.org/circadian-rhythm)
-- [Cleveland Clinic: Circadian Rhythm Disorders](https://my.clevelandclinic.org/health/diseases/12115-circadian-rhythm-disorders)
-- [Frontiers: Circadian Rhythms Revealed](https://www.frontiersin.org/journals/sleep/articles/10.3389/frsle.2025.1544945/full)
-- [Nature: Molecular Regulations of Circadian Rhythm](https://www.nature.com/articles/s41392-022-00899-y)
-- [PMC: Molecular Architecture of Circadian Clock](https://pmc.ncbi.nlm.nih.gov/articles/PMC3946763/)
-- [YouTube: Understanding Your Circadian Rhythm](https://www.youtube.com/watch?v=1SkpRbB_Pxw)
+
+1. Cleveland Clinic. (n.d.). Circadian Rhythm. Cleveland Clinic.
+
+2. Sleep Foundation. (n.d.). What Is Circadian Rhythm?. Sleep Foundation.
+
+3. Cleveland Clinic. (n.d.). Circadian Rhythm Disorders. Cleveland Clinic.
+
+4. Frontiers. (2025). Circadian Rhythms Revealed. Frontiers in Sleep.
+
+5. Nature. (2022). Molecular Regulations of Circadian Rhythm. Nature.
+
+6. PMC. (n.d.). Molecular Architecture of Circadian Clock. PubMed Central.
+
+7. YouTube. (n.d.). Understanding Your Circadian Rhythm. YouTube.

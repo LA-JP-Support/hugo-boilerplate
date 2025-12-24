@@ -351,21 +351,22 @@ Choose between streaming (real-time) and batch processing based on latency requi
 
 ## References
 
-- [Kore.ai Audio to Text Node Documentation](https://docs.kore.ai/agent-platform/ai-agents/tools/tool-flows/types-of-nodes/audio-to-text-node/)
-- [OpenAI Whisper Documentation](https://platform.openai.com/docs/guides/speech-to-text)
-- [Google Cloud Speech-to-Text](https://cloud.google.com/speech-to-text)
-- [Google Speech-to-Text Supported Languages](https://cloud.google.com/speech-to-text/docs/speech-to-text-supported-languages)
-- [Google Speech-to-Text Encoding](https://cloud.google.com/speech-to-text/docs/encoding)
-- [Google Speech-to-Text Adaptation](https://cloud.google.com/speech-to-text/docs/adaptation)
-- [Google Cloud Monitoring](https://cloud.google.com/monitoring)
-- [Azure Speech Service Overview](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-to-text)
-- [Azure Batch Transcription](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/batch-transcription)
-- [Rev AI](https://www.rev.ai/)
-- [LiveKit STT Documentation](https://docs.livekit.io/agents/models/stt/)
-- [LiveKit STT Inference](https://docs.livekit.io/agents/models/stt/#inference)
-- [LiveKit STT Plugins](https://docs.livekit.io/agents/models/stt/#plugins)
-- [LiveKit STT Usage](https://docs.livekit.io/agents/models/stt/#usage)
-- [LiveKit STT Additional Parameters](https://docs.livekit.io/agents/models/stt/#additional-parameters)
-- [VectorShift Speech-to-Text Documentation](https://docs.vectorshift.ai/platform/pipelines/multi-modal/speech-to-text)
-- [Kore.ai Model Analytics Dashboard](https://docs.kore.ai/agent-platform/settings/monitoring/analytics/model-analytics-dashboard/)
-- [Google Codelabs: Cloud Speech Text Node](https://codelabs.developers.google.com/codelabs/cloud-speech-text-node)
+
+1. Kore.ai. (n.d.). Audio to Text Node Documentation. Kore.ai Documentation.
+2. OpenAI. (n.d.). Whisper Documentation. OpenAI Platform.
+3. Google Cloud. (n.d.). Speech-to-Text. Google Cloud Documentation.
+4. Google Cloud. (n.d.). Speech-to-Text Supported Languages. Google Cloud Documentation.
+5. Google Cloud. (n.d.). Speech-to-Text Encoding. Google Cloud Documentation.
+6. Google Cloud. (n.d.). Speech-to-Text Adaptation. Google Cloud Documentation.
+7. Google Cloud. (n.d.). Cloud Monitoring. Google Cloud Documentation.
+8. Microsoft. (n.d.). Azure Speech Service Overview. Microsoft Learn.
+9. Microsoft. (n.d.). Azure Batch Transcription. Microsoft Learn.
+10. Rev AI. Speech-to-Text Service. URL: https://www.rev.ai/
+11. LiveKit. (n.d.). STT Documentation. LiveKit Documentation.
+12. LiveKit. (n.d.). STT Inference. LiveKit Documentation.
+13. LiveKit. (n.d.). STT Plugins. LiveKit Documentation.
+14. LiveKit. (n.d.). STT Usage. LiveKit Documentation.
+15. LiveKit. (n.d.). STT Additional Parameters. LiveKit Documentation.
+16. VectorShift. (n.d.). Speech-to-Text Documentation. VectorShift Documentation.
+17. Kore.ai. (n.d.). Model Analytics Dashboard. Kore.ai Documentation.
+18. Google. (n.d.). Codelabs: Cloud Speech Text Node. Google Codelabs.

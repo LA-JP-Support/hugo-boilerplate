@@ -250,9 +250,10 @@ AIが個別化された候補者体験を提供—カスタマイズされた求
 
 ## 参考文献
 
-- [Harvard Business Review: AI and Recruiting](https://hbr.org/2019/05/recruiting-in-the-age-of-ai)
-- [SHRM: Artificial Intelligence in HR](https://www.shrm.org/topics-tools/news/technology/artificial-intelligence-transforming-hiring)
-- [MIT Sloan: AI in Talent Acquisition](https://sloanreview.mit.edu/article/ai-in-hiring-its-time-to-get-real/)
-- [EEOC: The ADA and Automated Employment Decisions](https://www.eeoc.gov/laws/guidance/americans-disabilities-act-and-use-software-algorithms-and-artificial-intelligence)
-- [Deloitte: AI-Powered Recruiting](https://www2.deloitte.com/us/en/insights/focus/human-capital-trends/2019/ai-in-talent-acquisition.html)
-- [Gartner: AI in Talent Acquisition](https://www.gartner.com/en/human-resources/trends/ai-in-talent-acquisition)
+
+1. Harvard Business Review. (2019). AI and Recruiting. Harvard Business Review.
+2. SHRM. (n.d.). Artificial Intelligence in HR. SHRM Topics & Tools.
+3. MIT Sloan. (n.d.). AI in Talent Acquisition. MIT Sloan Review.
+4. EEOC. (n.d.). The ADA and Automated Employment Decisions. EEOC Laws and Guidance.
+5. Deloitte. (2019). AI-Powered Recruiting. Deloitte Insights.
+6. Gartner. (n.d.). AI in Talent Acquisition. Gartner Human Resources Trends.

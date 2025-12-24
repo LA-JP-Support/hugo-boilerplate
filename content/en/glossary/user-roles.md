@@ -195,18 +195,19 @@ See full permission breakdown in [Google Cloud documentation](https://docs.cloud
 
 ## References
 
-1. [Google Cloud Documentation: AI Platform Roles and Permissions](https://docs.cloud.google.com/iam/docs/roles-permissions/ml)  
-2. [CloudFuze: A Complete Guide on SaaS User Permission Management](https://www.cloudfuze.com/a-complete-guide-on-saas-user-permission-management/)  
-3. [Feedly Team Roles](https://blog.feedly.com/introducing-team-roles/)  
-4. [Automation Anywhere Documentation: Roles and Permissions](https://docs.automationanywhere.com/bundle/enterprise-v11.3/page/enterprise-cloud/topics/enterprise-cloud/roles-and-permissions.html)  
-5. [BetterCloud: Effectively Managing SaaS User Access Permissions](https://www.bettercloud.com/monitor/effectively-managing-saas-user-access-permissions/)  
-6. [Principle of Least Privilege (POLP) - TechTarget](https://www.techtarget.com/searchsecurity/definition/least-privilege-least-privilege-principle)  
 
-For further reading and specific implementation details, refer to platform documentation and compliance frameworks.
+1. Google Cloud. (n.d.). AI Platform Roles and Permissions. Google Cloud Documentation.
 
-**External Reading and Tutorials:**
-- [YouTube: Role-Based Access Control (RBAC) Explained](https://www.youtube.com/watch?v=5JvKpEL4Q2I)
-- [Microsoft Learn: What is RBAC?](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview)
+2. CloudFuze. (n.d.). A Complete Guide on SaaS User Permission Management. CloudFuze Blog.
 
-This glossary provides a comprehensive, actionable reference for user roles and permissions in AI chatbot and automation environments, supporting secure, compliant, and efficient platform operation.
+3. Feedly. (n.d.). Team Roles. Feedly Blog.
 
+4. Automation Anywhere. (n.d.). Roles and Permissions. Automation Anywhere Documentation.
+
+5. BetterCloud. (n.d.). Effectively Managing SaaS User Access Permissions. BetterCloud Blog.
+
+6. TechTarget. (n.d.). Principle of Least Privilege (POLP). TechTarget.
+
+7. YouTube. (n.d.). Role-Based Access Control (RBAC) Explained. YouTube Video.
+
+8. Microsoft. (n.d.). What is RBAC?. Microsoft Learn.

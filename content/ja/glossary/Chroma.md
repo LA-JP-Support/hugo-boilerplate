@@ -266,12 +266,13 @@ collection.add(
 
 ## 参考文献
 
-- [Chroma GitHubリポジトリ](https://github.com/chroma-core/chroma)
-- [Chromaドキュメント](https://docs.trychroma.com/)
-- [LangChain Chroma統合](https://docs.langchain.com/oss/python/integrations/providers/chroma)
-- [Netflix Chaos Monkey](https://netflix.github.io/chaosmonkey/)
-- [Pineconeドキュメント](https://www.pinecone.io/)
-- [Faiss GitHubリポジトリ](https://github.com/facebookresearch/faiss)
-- [Weaviateドキュメント](https://weaviate.io/)
-- [Qdrantドキュメント](https://qdrant.tech/)
-- [Milvusドキュメント](https://milvus.io/)
+
+1. Chroma. GitHub Repository. URL: https://github.com/chroma-core/chroma
+2. Chroma. Documentation. URL: https://docs.trychroma.com/
+3. LangChain. Chroma Integration Documentation. URL: https://docs.langchain.com/oss/python/integrations/providers/chroma
+4. Netflix. Chaos Monkey. URL: https://netflix.github.io/chaosmonkey/
+5. Pinecone. Documentation. URL: https://www.pinecone.io/
+6. Facebook Research. Faiss GitHub Repository. URL: https://github.com/facebookresearch/faiss
+7. Weaviate. Documentation. URL: https://weaviate.io/
+8. Qdrant. Documentation. URL: https://qdrant.tech/
+9. Milvus. Documentation. URL: https://milvus.io/

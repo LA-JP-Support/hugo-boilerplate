@@ -185,13 +185,23 @@ Upon completion of the whisper message, the secondary audio channel is cleanly t
 
 ## References
 
-- [Call Center Whisper Coaching - Voicent](https://www.voicent.com/call-center-whisper-coaching.php)
-- [What is Call Whisper? Key Phone Service Feature - MightyCall](https://www.mightycall.com/features/call-whisper/)
-- [Call Whisper: How to Use This Contact Center Feature - Nextiva](https://www.nextiva.com/blog/what-is-call-whisper.html)
-- [What is a Call Whisper? The Call Center Agent's Secret Helper - babelforce](https://www.babelforce.com/blog/what-is-a-call-whisper-the-call-center-agents-secret-helper/)
-- [What is Call Whispering and How Does It Enhance Customer Interactions - CallHippo](https://callhippo.com/blog/callcenter/what-is-call-whispering)
-- [What Is Call Whisper? Boost Sales Agent Performance - Aircall](https://aircall.io/blog/call-center/call-whisper/)
-- [Call Coaching & Whispering Solutions for Call Centers - Aircall](https://aircall.io/call-center-software-features/call-monitoring/)
-- [Live Call Whispering For Call Centers & Businesses - KrispCall](https://krispcall.com/feature/call-whispering/)
-- [Using Call Whisper to Improve Contact Center Performance - Landis Technologies](https://landistechnologies.com/call-whisper-to-improve-call-center-performance/)
-- [What is Call Whisper and What Can It Do for Your Business? - Vonage](https://www.vonage.com/resources/articles/call-whisper-your-business/)
+
+1. Voicent. (n.d.). Call Center Whisper Coaching. Service Description.
+
+2. MightyCall. (n.d.). Call Whisper: Key Phone Service Feature. Service Description.
+
+3. Nextiva. (n.d.). Call Whisper: How to Use This Contact Center Feature. Article.
+
+4. Babelforce. (n.d.). What is a Call Whisper? The Call Center Agent's Secret Helper. Article.
+
+5. CallHippo. (n.d.). What is Call Whispering and How Does It Enhance Customer Interactions. Article.
+
+6. Aircall. (n.d.). What Is Call Whisper? Boost Sales Agent Performance. Article.
+
+7. Aircall. (n.d.). Call Coaching & Whispering Solutions for Call Centers. Article.
+
+8. KrispCall. (n.d.). Live Call Whispering For Call Centers & Businesses. Service Description.
+
+9. Landis Technologies. (n.d.). Using Call Whisper to Improve Contact Center Performance. Article.
+
+10. Vonage. (n.d.). What is Call Whisper and What Can It Do for Your Business?. Article.

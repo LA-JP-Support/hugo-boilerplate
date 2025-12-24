@@ -24,7 +24,7 @@ echo "🔍 Test 2: Dry run on single blog file..."
 SAMPLE_BLOG="content/en/blog/ai-chatbot-types-guide.md"
 
 if [ -f "$SAMPLE_BLOG" ]; then
-    python3 scripts/enrich_glossary_blog.py "$SAMPLE_BLOG" --convert-tooltips --dry-run
+    python3 scripts/enrich_glossary_blog.py "$SAMPLE_BLOG" --dry-run
     echo ""
     echo "✅ Dry run complete!"
 else

@@ -218,17 +218,18 @@ AIマルチタスキングの概要については:
 
 ## 参考文献
 
-1. [Wake Forest University News: The 'switch cost' of multitasking](https://news.wfu.edu/2024/04/16/the-switch-cost-of-multitasking/)
-2. [USC MAPP Online: Are There Benefits of Multitasking?](https://appliedpsychologydegree.usc.edu/blog/benefits-of-multitasking)
-3. [American Psychological Association, Multitasking: Switching Costs](https://www.apa.org/topics/research/multitasking)
-4. [Journal of Experimental Psychology: Task Switching](https://www.apa.org/pubs/journals/releases/xhp274763.pdf)
-5. [Cleveland Clinic: Why Multitasking Doesn't Work](https://health.clevelandclinic.org/science-clear-multitasking-doesnt-work/)
-6. [Pennsylvania Bar Institute: How Multitasking Adversely Affects Your Brain](https://www.pbi.org/blog/how-multitasking-adversely-affects-your-brain/)
-7. [Harvard Business Review: How to Spend Less Time on Email Every Day](https://hbr.org/2019/01/how-to-spend-way-less-time-on-email-every-day)
-8. [Smartsupp: Mastering Multitasking in Live Chat](https://www.smartsupp.com/blog/mastering-multitasking-how-to-handle-multiple-live-chats/)
-9. [DevRev: Chatbot Automation](https://devrev.ai/blog/chatbot-automation)
-10. [Frontiers in Psychology: Media Multitasking](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905209/)
-11. [ScienceDirect: Multitasking Overview](https://www.sciencedirect.com/topics/psychology/multitasking)
+
+1. Wake Forest University News. (2024). The 'switch cost' of multitasking. WFU News.
+2. USC MAPP Online. (n.d.). Are There Benefits of Multitasking?. USC Applied Psychology Blog.
+3. American Psychological Association. (n.d.). Multitasking: Switching Costs. APA Topics.
+4. Journal of Experimental Psychology. (n.d.). Task Switching. APA Publications.
+5. Cleveland Clinic. (n.d.). Why Multitasking Doesn't Work. Cleveland Clinic Health.
+6. Pennsylvania Bar Institute. (n.d.). How Multitasking Adversely Affects Your Brain. PBI Blog.
+7. Harvard Business Review. (2019). How to Spend Less Time on Email Every Day. HBR.
+8. Smartsupp. (n.d.). Mastering Multitasking in Live Chat. Smartsupp Blog. URL: https://www.smartsupp.com/blog/mastering-multitasking-how-to-handle-multiple-live-chats/
+9. DevRev. (n.d.). Chatbot Automation. DevRev Blog. URL: https://devrev.ai/blog/chatbot-automation
+10. Frontiers in Psychology. (n.d.). Media Multitasking. NCBI.
+11. ScienceDirect. (n.d.). Multitasking Overview. ScienceDirect Topics.
 
 ## さらなる読み物と動画
 

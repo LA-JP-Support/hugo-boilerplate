@@ -281,10 +281,11 @@ Software-as-Serviceプロバイダーは、既存のプラットフォーム内�
 
 ## 参考文献
 
-- [Botpress: 8 Best White-Label Chatbot Platforms](https://botpress.com/blog/white-label-chatbot-platform)
-- [Quickchat AI: White Label Chatbot Guide](https://quickchat.ai/post/white-label-chatbot-guide)
-- [SpurNow: White Label Chatbot Guide](https://www.spurnow.com/en/blogs/white-label-chatbot-platform)
-- [ProProfs: White Label Chatbots Guide](https://www.proprofschat.com/blog/white-label-chatbots/)
-- [Collect.chat: Remove Branding](https://collect.chat/help/article/1157-what-does-remove-branding-mean)
-- [Stammer AI: White Label AI Agents](https://stammer.ai/)
-- [Botpress YouTube Tutorials](https://www.youtube.com/botpress)
+
+1. Botpress. (n.d.). 8 Best White-Label Chatbot Platforms. Botpress Blog.
+2. Quickchat AI. (n.d.). White Label Chatbot Guide. Quickchat AI Blog.
+3. SpurNow. (n.d.). White Label Chatbot Platform. SpurNow Blog.
+4. ProProfs. (n.d.). White Label Chatbots Guide. ProProfs Blog.
+5. Collect.chat. (n.d.). Remove Branding. Collect.chat Help Center.
+6. Stammer AI. White Label AI Agents. URL: https://stammer.ai/
+7. Botpress. YouTube Tutorials. URL: https://www.youtube.com/botpress

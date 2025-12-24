@@ -270,17 +270,31 @@ Security Hubオートメーションルールは、アカウント、リソー�
 
 ## 参考文献
 
-- [Salesforce: Automation Rules Overview](https://help.salesforce.com/s/articleView?id=mktg.pardot_automation_rules_overview.htm)
-- [AWS: Security Hub Automation Rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html)
-- [Atlassian: Jira Automation Rules](https://support.atlassian.com/cloud-automation/docs/create-and-edit-jira-automation-rules/)
-- [Atlassian: Jira Automation Triggers](https://support.atlassian.com/cloud-automation/docs/jira-automation-triggers/)
-- [Atlassian: Jira Automation Actions](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/)
-- [Titanapps: Jira Automation Best Practices](https://titanapps.io/blog/jira-automation)
-- [Progress: Business Rules Best Practices](https://www.progress.com/blogs/6-best-practices-assigning-business-rules-automation)
-- [Freshdesk: Automation Rules Overview](https://support.freshdesk.com/support/solutions/articles/207276-overview-of-automation-rules)
-- [Google Ads: Automated Rules Tips](https://support.google.com/google-ads/answer/16719424?hl=en)
-- [Higher Logic: Automation Rules](https://support.higherlogic.com/hc/en-us/articles/360032700472-Automation-Rules-Overview)
-- [Zendesk: Workflow Automation](https://www.zendesk.de/blog/workflow-automation/)
-- [Atlassian: Automation Template Library](https://www.atlassian.com/software/jira/automation-template-library)
-- [IBM: Business Rules](https://www.ibm.com/ph-en/topics/business-rules)
-- [Appivo: Business Process Automation](https://www.appivo.com/)
+
+1. Salesforce. (n.d.). Automation Rules Overview. Salesforce Help.
+
+2. AWS. (n.d.). Security Hub Automation Rules. AWS Documentation.
+
+3. Atlassian. (n.d.). Jira Automation Rules. Atlassian Support.
+
+4. Atlassian. (n.d.). Jira Automation Triggers. Atlassian Support.
+
+5. Atlassian. (n.d.). Jira Automation Actions. Atlassian Support.
+
+6. Titanapps. (n.d.). Jira Automation Best Practices. Titanapps Blog.
+
+7. Progress. (n.d.). Business Rules Best Practices. Progress Blog.
+
+8. Freshdesk. (n.d.). Automation Rules Overview. Freshdesk Support.
+
+9. Google Ads. (n.d.). Automated Rules Tips. Google Ads Support.
+
+10. Higher Logic. (n.d.). Automation Rules Overview. Higher Logic Support.
+
+11. Zendesk. (n.d.). Workflow Automation. Zendesk Blog.
+
+12. Atlassian. (n.d.). Automation Template Library. Atlassian Software.
+
+13. IBM. (n.d.). Business Rules. IBM Topics.
+
+14. Appivo. Business Process Automation. URL: https://www.appivo.com/

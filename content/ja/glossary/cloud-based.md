@@ -237,11 +237,12 @@ Webブラウザを通じて提供される完全なアプリケーションで�
 
 ## 参考文献
 
-- [IBM: What Is Cloud Computing?](https://www.ibm.com/think/topics/cloud-computing)
-- [Microsoft Azure: Cloud Computing Dictionary](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-cloud-computing)
-- [Unity Connect: Cloud-Based Systems](https://unity-connect.com/our-resources/tech-insights/what-is-a-cloud-based-system-and-how-does-it-work/)
-- [Built In: What Is Cloud Computing?](https://builtin.com/cloud-computing)
-- [Google Cloud: What is Cloud Storage?](https://cloud.google.com/learn/what-is-cloud-storage)
-- [IBM: Public vs. Private vs. Hybrid Cloud](https://www.ibm.com/think/topics/public-cloud-vs-private-cloud-vs-hybrid-cloud)
-- [Spacelift: Cloud Deployment Models](https://spacelift.io/blog/cloud-deployment-models)
-- [GeeksforGeeks: Cloud Deployment Models](https://www.geeksforgeeks.org/computer-science-fundamentals/cloud-deployment-models/)
+
+1. IBM. (n.d.). What Is Cloud Computing?. IBM Think Topics.
+2. Microsoft Azure. (n.d.). Cloud Computing Dictionary. Microsoft Azure Resources.
+3. Unity Connect. (n.d.). Cloud-Based Systems. Unity Connect Tech Insights.
+4. Built In. (n.d.). What Is Cloud Computing?. Built In.
+5. Google Cloud. (n.d.). What is Cloud Storage?. Google Cloud Learn.
+6. IBM. (n.d.). Public vs. Private vs. Hybrid Cloud. IBM Think Topics.
+7. Spacelift. (n.d.). Cloud Deployment Models. Spacelift Blog.
+8. GeeksforGeeks. (n.d.). Cloud Deployment Models. GeeksforGeeks Computer Science Fundamentals.

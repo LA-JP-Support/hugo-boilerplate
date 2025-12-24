@@ -290,20 +290,37 @@ SRE GameDaysの一環として検出と修復を実践し、チームをトレ�
 
 ## 参考文献
 
-- [Principles of Chaos Engineering](https://principlesofchaos.org/)
-- [IBM: What is Chaos Engineering?](https://www.ibm.com/think/topics/chaos-engineering)
-- [eG Innovations: What is Chaos Engineering?](https://www.eginnovations.com/glossary/chaos-engineering)
-- [phoenixNAP: Chaos Engineering – Definition, Principles, Best Practices](https://phoenixnap.com/blog/chaos-engineering)
-- [Gremlin: Chaos Engineering](https://www.gremlin.com/chaos-engineering)
-- [Gremlin: Security Chaos Engineering](https://www.gremlin.com/chaos-engineering/security/)
-- [Gremlin: GameDay Chaos Engineering Exercises](https://www.gremlin.com/gameday/)
-- [Netflix Chaos Monkey](https://netflix.github.io/chaosmonkey/)
-- [Netflix Tech Blog: Simian Army](https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116)
-- [Chaos Toolkit Documentation](https://chaostoolkit.org/)
-- [Chaos Mesh](https://chaos-mesh.org/)
-- [Pumba GitHub Repository](https://github.com/alexei-led/pumba)
-- [LitmusChaos](https://litmuschaos.io/)
-- [AWS Fault Injection Simulator (FIS)](https://aws.amazon.com/fis/)
-- [Google SRE Book: Disaster Testing (DiRT)](https://sre.google/sre-book/disaster-testing-dirt/)
-- [Dynatrace: What is Chaos Engineering?](https://www.dynatrace.com/news/blog/what-is-chaos-engineering/)
-- [Google Cloud: Chaos Engineering Recipes](https://github.com/GoogleCloudPlatform/chaos-engineering/blob/main/Chaos-Engineering-Recipes-Book.md)
+
+1. Principles of Chaos Engineering. (n.d.). Principles of Chaos Engineering. URL: https://principlesofchaos.org/
+
+2. IBM. (n.d.). What is Chaos Engineering?. IBM Think Topics. URL: https://www.ibm.com/think/topics/chaos-engineering
+
+3. eG Innovations. (n.d.). What is Chaos Engineering?. eG Innovations Glossary. URL: https://www.eginnovations.com/glossary/chaos-engineering
+
+4. phoenixNAP. (n.d.). Chaos Engineering – Definition, Principles, Best Practices. phoenixNAP Blog. URL: https://phoenixnap.com/blog/chaos-engineering
+
+5. Gremlin. (n.d.). Chaos Engineering. Gremlin. URL: https://www.gremlin.com/chaos-engineering
+
+6. Gremlin. (n.d.). Security Chaos Engineering. Gremlin. URL: https://www.gremlin.com/chaos-engineering/security/
+
+7. Gremlin. (n.d.). GameDay Chaos Engineering Exercises. Gremlin. URL: https://www.gremlin.com/gameday/
+
+8. Netflix. (n.d.). Chaos Monkey. Netflix GitHub. URL: https://netflix.github.io/chaosmonkey/
+
+9. Netflix. (n.d.). The Netflix Simian Army. Netflix Tech Blog. URL: https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116
+
+10. Chaos Toolkit. (n.d.). Chaos Toolkit Documentation. URL: https://chaostoolkit.org/
+
+11. Chaos Mesh. (n.d.). Chaos Mesh. URL: https://chaos-mesh.org/
+
+12. Pumba. (n.d.). Pumba GitHub Repository. URL: https://github.com/alexei-led/pumba
+
+13. LitmusChaos. (n.d.). LitmusChaos. URL: https://litmuschaos.io/
+
+14. AWS. (n.d.). Fault Injection Simulator (FIS). AWS. URL: https://aws.amazon.com/fis/
+
+15. Google. (n.d.). SRE Book: Disaster Testing (DiRT). Google SRE Book. URL: https://sre.google/sre-book/disaster-testing-dirt/
+
+16. Dynatrace. (n.d.). What is Chaos Engineering?. Dynatrace News Blog. URL: https://www.dynatrace.com/news/blog/what-is-chaos-engineering/
+
+17. Google Cloud. (n.d.). Chaos Engineering Recipes. Google Cloud GitHub. URL: https://github.com/GoogleCloudPlatform/chaos-engineering/blob/main/Chaos-Engineering-Recipes-Book.md

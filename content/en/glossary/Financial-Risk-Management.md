@@ -233,9 +233,15 @@ Applying models trained on one risk domain to related domains with limited data,
 
 ## References
 
-- [Financial Risk Management Principles - BIS](https://www.bis.org/publ/bcbs189.htm)
-- [Machine Learning in Financial Risk Management - MIT](https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained)
-- [Risk Management and AI - McKinsey](https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/the-next-generation-of-risk-management)
-- [Basel Committee on Banking Supervision](https://www.bis.org/bcbs/)
-- [Financial Risk Management with ML - Towards Data Science](https://towardsdatascience.com/machine-learning-for-financial-risk-management-c3a4f51c4f9d)
-- [AI in Risk Management - Deloitte](https://www2.deloitte.com/us/en/pages/risk/articles/artificial-intelligence-risk-management.html)
+
+1. Bank for International Settlements (BIS). (n.d.). Financial Risk Management Principles. BIS Publications.
+
+2. MIT Sloan School of Management. (n.d.). Machine Learning in Financial Risk Management. MIT Sloan Ideas Made to Matter.
+
+3. McKinsey & Company. (n.d.). Risk Management and AI. McKinsey Insights.
+
+4. Basel Committee on Banking Supervision. (n.d.). Basel Committee Overview. BIS Publications.
+
+5. Towards Data Science. (n.d.). Financial Risk Management with ML. Towards Data Science.
+
+6. Deloitte. (n.d.). AI in Risk Management. Deloitte Risk Insights.

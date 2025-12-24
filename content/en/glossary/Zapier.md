@@ -242,18 +242,33 @@ Team and Enterprise plans support workspace sharing, collaborative editing, cent
 
 ## References
 
-- [Zapier Official Homepage](https://zapier.com/)
-- [How Zapier Works](https://zapier.com/how-it-works)
-- [Zapier Documentation](https://docs.zapier.com/platform/quickstart/how-zapier-works)
-- [Zapier Apps Directory](https://zapier.com/apps)
-- [Zapier Agents Guide](https://zapier.com/blog/zapier-agents-guide/)
-- [Zapier AI Tools Overview](https://zapier.com/blog/zapier-ai-guide/)
-- [Zapier Security and Compliance](https://zapier.com/security-compliance)
-- [Zapier Pricing](https://zapier.com/pricing)
-- [Zapier Templates](https://zapier.com/templates)
-- [Multi-Step Zaps](https://zapier.com/blog/multi-step-zaps/)
-- [Webhook Integration](https://zapier.com/apps/webhook/integrations/formatter)
-- [Customer Stories](https://zapier.com/customer-stories)
-- [Developer Platform](https://docs.zapier.com/platform/home)
-- [Getting Started Guide](https://zapier.com/help/create/basics/get-started-workflow-automation)
-- [Zapier YouTube Channel](https://www.youtube.com/watch?v=JtdUgJGI_Oo)
+
+1. Zapier. Service for Workflow Automation and App Integration. URL: https://zapier.com/
+
+2. Zapier. (n.d.). How Zapier Works. Zapier Documentation. URL: https://zapier.com/how-it-works
+
+3. Zapier. (n.d.). Zapier Documentation. Zapier Platform Docs. URL: https://docs.zapier.com/platform/quickstart/how-zapier-works
+
+4. Zapier. (n.d.). Zapier Apps Directory. Zapier App Integrations. URL: https://zapier.com/apps
+
+5. Zapier. (n.d.). Zapier Agents Guide. Zapier Blog. URL: https://zapier.com/blog/zapier-agents-guide/
+
+6. Zapier. (n.d.). Zapier AI Tools Overview. Zapier Blog. URL: https://zapier.com/blog/zapier-ai-guide/
+
+7. Zapier. (n.d.). Zapier Security and Compliance. Zapier Security Page. URL: https://zapier.com/security-compliance
+
+8. Zapier. (n.d.). Zapier Pricing. Zapier Pricing Page. URL: https://zapier.com/pricing
+
+9. Zapier. (n.d.). Zapier Templates. Zapier Workflow Templates. URL: https://zapier.com/templates
+
+10. Zapier. (n.d.). Multi-Step Zaps. Zapier Blog. URL: https://zapier.com/blog/multi-step-zaps/
+
+11. Zapier. (n.d.). Webhook Integration. Zapier App Integration. URL: https://zapier.com/apps/webhook/integrations/formatter
+
+12. Zapier. (n.d.). Customer Stories. Zapier Customer Testimonials. URL: https://zapier.com/customer-stories
+
+13. Zapier. (n.d.). Developer Platform. Zapier Developer Documentation. URL: https://docs.zapier.com/platform/home
+
+14. Zapier. (n.d.). Getting Started Guide. Zapier Help Center. URL: https://zapier.com/help/create/basics/get-started-workflow-automation
+
+15. Zapier. (n.d.). Zapier YouTube Channel. YouTube Video. URL: https://www.youtube.com/watch?v=JtdUgJGI_Oo

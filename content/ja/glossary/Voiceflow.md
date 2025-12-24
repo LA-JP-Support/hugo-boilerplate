@@ -248,17 +248,31 @@ API、ネイティブコネクタ(Salesforce、Zendesk、Shopify)、またはカ
 
 ## 参考文献
 
-- [Voiceflow公式ウェブサイト](https://www.voiceflow.com/)
-- [Voiceflowブログ:カスタマーサポート自動化ケーススタディ](https://www.voiceflow.com/blog/automating-60-of-customer-support-for-90-products-in-12-weeks-how-ai-automation-transformed-trilogy)
-- [Voiceflowブログ:Roam Autoケーススタディ](https://www.voiceflow.com/blog/how-roam-saved-30-hours-a-week-in-customer-support-hours)
-- [Voiceflowブログ:Sanlam Financial Servicesケーススタディ](https://www.voiceflow.com/blog/how-sanlam-studios-ai-coach-drives-leads-and-financial-literacy)
-- [Voiceflow価格](https://www.voiceflow.com/pricing)
-- [Voiceflow Salesforce統合](https://www.voiceflow.com/integrations/salesforce)
-- [Voiceflow:会話設計入門](https://www.voiceflow.com/pathways/getting-started-in-conversation-design-heres-what-you-need-to-know)
-- [Voiceflow:会話設計ソリューション](https://www.voiceflow.com/solutions/conversation-design)
-- [Voiceflowブログ](https://www.voiceflow.com/blog)
-- [Voiceflowデモ](https://www.voiceflow.com/demo)
-- [Voiceflowサインアップ](https://creator.voiceflow.com/signup)
-- [Callpod AI:Voiceflowレビュー](https://www.callpod.ai/blog/voiceflow-review)
-- [Synthflow:Voiceflowレビュー](https://synthflow.ai/blog/voiceflow-review)
-- [Cathy Pearl著『音声ユーザーインターフェースの設計』](https://www.cathypearl.com/book)
+
+1. Voiceflow. (n.d.). Official Website. URL: https://www.voiceflow.com/
+
+2. Voiceflow. (n.d.). カスタマーサポート自動化ケーススタディ. Voiceflow Blog. URL: https://www.voiceflow.com/blog/automating-60-of-customer-support-for-90-products-in-12-weeks-how-ai-automation-transformed-trilogy
+
+3. Voiceflow. (n.d.). Roam Autoケーススタディ. Voiceflow Blog. URL: https://www.voiceflow.com/blog/how-roam-saved-30-hours-a-week-in-customer-support-hours
+
+4. Voiceflow. (n.d.). Sanlam Financial Servicesケーススタディ. Voiceflow Blog. URL: https://www.voiceflow.com/blog/how-sanlam-studios-ai-coach-drives-leads-and-financial-literacy
+
+5. Voiceflow. (n.d.). Pricing. URL: https://www.voiceflow.com/pricing
+
+6. Voiceflow. (n.d.). Salesforce Integration. URL: https://www.voiceflow.com/integrations/salesforce
+
+7. Voiceflow. (n.d.). 会話設計入門. URL: https://www.voiceflow.com/pathways/getting-started-in-conversation-design-heres-what-you-need-to-know
+
+8. Voiceflow. (n.d.). 会話設計ソリューション. URL: https://www.voiceflow.com/solutions/conversation-design
+
+9. Voiceflow. (n.d.). Blog. URL: https://www.voiceflow.com/blog
+
+10. Voiceflow. (n.d.). Demo. URL: https://www.voiceflow.com/demo
+
+11. Voiceflow. (n.d.). Sign Up. URL: https://creator.voiceflow.com/signup
+
+12. Callpod AI. (n.d.). Voiceflowレビュー. URL: https://www.callpod.ai/blog/voiceflow-review
+
+13. Synthflow. (n.d.). Voiceflowレビュー. URL: https://synthflow.ai/blog/voiceflow-review
+
+14. Pearl, Cathy. (n.d.). 音声ユーザーインターフェースの設計. URL: https://www.cathypearl.com/book

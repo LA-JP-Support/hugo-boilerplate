@@ -550,18 +550,33 @@ A: Yes, but requires significant hardware (high-end GPUs with 24GB+ VRAM for 7-1
 
 ## References
 
-- [Google: Introduction to Large Language Models](https://developers.google.com/machine-learning/resources/intro-llms)
-- [AIMultiple: Large Language Models Complete Guide](https://research.aimultiple.com/large-language-models/)
-- [Elastic: Understanding Large Language Models](https://www.elastic.co/what-is/large-language-models)
-- [arXiv: A Primer on Large Language Models and their Limitations](https://arxiv.org/html/2412.04503v1)
-- [BuiltIn: Transformer Neural Networks Explained](https://builtin.com/artificial-intelligence/transformer-neural-network)
-- [6clicks: Unveiling the Power and Limitations of LLMs](https://www.6clicks.com/resources/blog/unveiling-the-power-of-large-language-models)
-- [Intuitive Data Analytics: LLM Limitations and Challenges](https://www.intuitivedataanalytics.com/gne-blogs/the-limitations-and-challenges-of-large-language-models-llms/)
-- [Attention Is All You Need - Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762)
-- [OpenAI: Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
-- [IBM: Natural Language Processing](https://www.ibm.com/think/topics/natural-language-processing)
-- [IBM: Deep Learning](https://www.ibm.com/think/topics/deep-learning)
-- [Google ML Glossary](https://developers.google.com/machine-learning/glossary)
-- [Elastic: Vector Embedding](https://www.elastic.co/what-is/vector-embedding)
-- [AIMultiple: LLM Training](https://research.aimultiple.com/large-language-model-training/)
-- [YouTube: Transformer Neural Networks Clearly Explained](https://www.youtube.com/watch?v=zxQyTK8quyY)
+
+1. Google. (n.d.). Introduction to Large Language Models. Google Developers.
+
+2. AIMultiple. (n.d.). Large Language Models Complete Guide. AIMultiple Research.
+
+3. Elastic. (n.d.). Understanding Large Language Models. Elastic.
+
+4. arXiv. (2024). A Primer on Large Language Models and their Limitations. arXiv.
+
+5. BuiltIn. (n.d.). Transformer Neural Networks Explained. BuiltIn.
+
+6. 6clicks. (n.d.). Unveiling the Power and Limitations of LLMs. 6clicks Blog.
+
+7. Intuitive Data Analytics. (n.d.). LLM Limitations and Challenges. Intuitive Data Analytics Blog.
+
+8. Vaswani, A. et al. (2017). Attention Is All You Need. arXiv.
+
+9. OpenAI. (2020). Language Models are Few-Shot Learners. arXiv.
+
+10. IBM. (n.d.). Natural Language Processing. IBM Think Topics.
+
+11. IBM. (n.d.). Deep Learning. IBM Think Topics.
+
+12. Google. (n.d.). ML Glossary. Google Developers.
+
+13. Elastic. (n.d.). Vector Embedding. Elastic.
+
+14. AIMultiple. (n.d.). LLM Training. AIMultiple Research.
+
+15. YouTube. (n.d.). Transformer Neural Networks Clearly Explained. YouTube.

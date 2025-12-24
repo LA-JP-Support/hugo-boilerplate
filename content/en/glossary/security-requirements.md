@@ -357,15 +357,27 @@ Yes. Overly prescriptive requirements can limit flexibility, hinder innovation, 
 
 ## References
 
-- [NIST SP 800-53: Security and Privacy Controls for Information Systems and Organizations](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
-- [ISO/IEC 27001: Information Security Management](https://www.iso.org/isoiec-27001-information-security.html)
-- [PCI DSS: Payment Card Industry Data Security Standard](https://www.pcisecuritystandards.org/document_library)
-- [HIPAA Security Rule Overview](https://www.hhs.gov/hipaa/for-professionals/security/index.html)
-- [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/)
-- [OWASP Top 10 Proactive Controls](https://owasp.org/www-project-proactive-controls/)
-- [NIST Mappings to ISO/IEC 27001](https://csrc.nist.gov/projects/olir/informative-reference-catalog/details?referenceId=155#/)
-- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
-- [What Are Security Requirements? - Requirements.com](https://requirements.com/Content/What-is/what-are-security-requirements)
-- [6 Key Cybersecurity Standards - Invensis](https://www.invensis.net/blog/key-cybersecurity-standards)
-- [10 Application Security Standards to Implement Today - Jit.io](https://www.jit.io/resources/security-standards/10-application-security-standards-to-implement-today)
-- [OWASP Official YouTube Channel](https://www.youtube.com/user/OWASPGLOBAL)
+
+1. NIST. (n.d.). NIST SP 800-53: Security and Privacy Controls for Information Systems and Organizations. NIST Special Publication.
+
+2. ISO. (n.d.). ISO/IEC 27001: Information Security Management. ISO Standards.
+
+3. PCI Security Standards Council. (n.d.). PCI DSS: Payment Card Industry Data Security Standard. PCI Security Standards.
+
+4. U.S. Department of Health and Human Services. (n.d.). HIPAA Security Rule Overview. HHS Official Website.
+
+5. OWASP. (n.d.). OWASP Application Security Verification Standard (ASVS). OWASP Project.
+
+6. OWASP. (n.d.). OWASP Top 10 Proactive Controls. OWASP Project.
+
+7. NIST. (n.d.). NIST Mappings to ISO/IEC 27001. NIST Cybersecurity Resources.
+
+8. NIST. (n.d.). NIST Cybersecurity Framework. NIST Official Website.
+
+9. Requirements.com. (n.d.). What Are Security Requirements?. Requirements.com.
+
+10. Invensis. (n.d.). 6 Key Cybersecurity Standards. Invensis Blog.
+
+11. Jit.io. (n.d.). 10 Application Security Standards to Implement Today. Jit.io Resources.
+
+12. OWASP. (n.d.). OWASP Official YouTube Channel. YouTube.

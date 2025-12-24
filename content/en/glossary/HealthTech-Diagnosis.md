@@ -241,9 +241,15 @@ AR overlays presenting AI diagnostic insights directly in the physician's field 
 
 ## References
 
-- [FDA Artificial Intelligence and Machine Learning in Medical Devices](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-software-medical-device)
-- [Nature Medicine: AI in Medical Diagnosis](https://www.nature.com/articles/s41591-021-01614-0)
-- [Journal of the American Medical Association: Deep Learning for Healthcare](https://jamanetwork.com/journals/jama/fullarticle/2762645)
-- [McKinsey: AI in Healthcare](https://www.mckinsey.com/industries/healthcare/our-insights/transforming-healthcare-with-ai)
-- [WHO: Ethics and Governance of AI for Health](https://www.who.int/publications/i/item/9789240029200)
-- [Radiology: AI Applications in Medical Imaging](https://pubs.rsna.org/doi/10.1148/radiol.2020192224)
+
+1. FDA. (n.d.). Artificial Intelligence and Machine Learning in Medical Devices. FDA Medical Devices.
+
+2. Nature Medicine. (2021). AI in Medical Diagnosis. Nature Medicine.
+
+3. Journal of the American Medical Association. (n.d.). Deep Learning for Healthcare. JAMA.
+
+4. McKinsey. (n.d.). AI in Healthcare. McKinsey Insights.
+
+5. World Health Organization. (n.d.). Ethics and Governance of AI for Health. WHO Publications.
+
+6. Radiology. (n.d.). AI Applications in Medical Imaging. Radiology.

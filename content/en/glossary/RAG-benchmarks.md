@@ -244,24 +244,25 @@ Retrieve regulations and filings for compliance queries and investment research,
 
 ## References
 
-- [Evidently AI: A Complete Guide to RAG Evaluation](https://www.evidentlyai.com/llm-guide/rag-evaluation)
-- [Evidently AI: 7 RAG Benchmarks](https://www.evidentlyai.com/blog/rag-benchmarks)
-- [Statsig: RAG Evaluation Metrics, Methods, and Benchmarks](https://www.statsig.com/perspectives/rag-evaluation-metrics-methods-benchmarks)
-- [Braintrust: The 5 Best RAG Evaluation Tools in 2025](https://www.braintrust.dev/articles/best-rag-evaluation-tools)
-- [Braintrust: RAG Evaluation Metrics](https://www.braintrust.dev/articles/rag-evaluation-metrics)
-- [Greg Kamradt: Needle-in-a-Haystack GitHub Repository](https://github.com/gkamradt/LLMTest_NeedleInAHaystack)
-- [Greg Kamradt: Needle-in-a-Haystack Video](https://www.youtube.com/watch?v=KwRRuiCCdmc)
-- [BEIR: Benchmark for Information Retrieval](https://arxiv.org/abs/2104.08663)
-- [FEVER: Fact Extraction and Verification Dataset](https://fever.ai/)
-- [Google AI: Natural Questions Dataset](https://ai.google.com/research/NaturalQuestions)
-- [Microsoft: MS MARCO Dataset](https://microsoft.github.io/msmarco/)
-- [HotpotQA Dataset](https://hotpotqa.github.io/)
-- [TriviaQA Dataset](http://nlp.cs.washington.edu/triviaqa/)
-- [Evidently: LLM Evaluation Benchmarks Database](https://www.evidentlyai.com/llm-evaluation-benchmarks-datasets)
-- [LangChain: RAG Evaluation Tutorial](https://docs.langchain.com/langsmith/evaluate-rag-tutorial)
-- [RAGAS GitHub Repository](https://github.com/explodinggradients/ragas)
-- [Maxim: RAG Evaluation Metrics](https://www.getmaxim.ai/blog/rag-evaluation-metrics/)
-- [DeepEval GitHub Repository](https://github.com/confident-ai/deepeval)
-- [OpenAI: Evaluation Guide](https://platform.openai.com/docs/guides/evals)
-- [CBC News: Air Canada Chatbot Case](https://www.cbc.ca/news/business/air-canada-chatbot-refund-1.7129533)
-- [Evidently AI: RAG Production Examples](https://www.evidentlyai.com/blog/rag-examples)
+
+1. Evidently AI. (n.d.). A Complete Guide to RAG Evaluation. Evidently AI.
+2. Evidently AI. (n.d.). 7 RAG Benchmarks. Evidently AI Blog.
+3. Statsig. (n.d.). RAG Evaluation Metrics, Methods, and Benchmarks. Statsig Perspectives.
+4. Braintrust. (2025). The 5 Best RAG Evaluation Tools in 2025. Braintrust Articles.
+5. Braintrust. (n.d.). RAG Evaluation Metrics. Braintrust Articles.
+6. Greg Kamradt. (n.d.). Needle-in-a-Haystack GitHub Repository. GitHub.
+7. Greg Kamradt. (n.d.). Needle-in-a-Haystack Video. YouTube.
+8. BEIR. (2021). Benchmark for Information Retrieval. arXiv.
+9. FEVER. (n.d.). Fact Extraction and Verification Dataset. FEVER AI.
+10. Google AI. (n.d.). Natural Questions Dataset. Google AI Research.
+11. Microsoft. (n.d.). MS MARCO Dataset. Microsoft GitHub.
+12. HotpotQA. (n.d.). HotpotQA Dataset. HotpotQA.
+13. TriviaQA. (n.d.). TriviaQA Dataset. University of Washington.
+14. Evidently AI. (n.d.). LLM Evaluation Benchmarks Database. Evidently AI.
+15. LangChain. (n.d.). RAG Evaluation Tutorial. LangChain Documentation.
+16. RAGAS. (n.d.). RAGAS GitHub Repository. GitHub.
+17. Maxim. (n.d.). RAG Evaluation Metrics. Maxim Blog.
+18. DeepEval. (n.d.). DeepEval GitHub Repository. GitHub.
+19. OpenAI. (n.d.). Evaluation Guide. OpenAI Platform.
+20. CBC News. (2024). Air Canada Chatbot Case. CBC News.
+21. Evidently AI. (n.d.). RAG Production Examples. Evidently AI Blog.

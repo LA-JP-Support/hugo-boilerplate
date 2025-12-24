@@ -326,13 +326,14 @@ Most users build simple workflows within hours. Complex enterprise workflows may
 
 ## References
 
-- [Salesforce: Flow Building Visual Workflows](https://www.default.com/post/salesforce-flow-building-visual-workflows-in-salesforce)
-- [EmbedWorkflow: No-Code Visual Workflow Builder Features](https://embedworkflow.com/features/no-code-visual-workflow-builder/)
-- [Zapier: Visual Workflow Guide](https://zapier.com/blog/visual-workflow/)
-- [Zapier: Project Management Automation](https://zapier.com/blog/project-management-automation/)
-- [Lindy AI: AI Workflow Builders](https://www.lindy.ai/blog/ai-workflow-builders)
-- [Lindy AI: Sales Coach Template](https://www.lindy.ai/templates/sales-coach)
-- [Quixy: Visual Workflow Builder - Simplify Process Automation](https://quixy.com/blog/visual-workflow-builder-simplify-process-automation/)
-- [Vellum AI: No-Code AI Workflow Automation Tools Guide](https://www.vellum.ai/blog/no-code-ai-workflow-automation-tools-guide)
-- [NocoBase: Top 11 GitHub Open Source No-Code AI Tools](https://www.nocobase.com/en/blog/top-11-github-open-source-no-code-ai-tools)
-- [YouTube: How to Create a No-Code Visual Workflow Builder for AI Agents](https://www.youtube.com/watch?v=yAj4CwsWUBk)
+
+1. Salesforce. (n.d.). Flow Building Visual Workflows. Salesforce Blog.
+2. EmbedWorkflow. No-Code Visual Workflow Builder Features. URL: https://embedworkflow.com/features/no-code-visual-workflow-builder/
+3. Zapier. (n.d.). Visual Workflow Guide. Zapier Blog.
+4. Zapier. (n.d.). Project Management Automation. Zapier Blog.
+5. Lindy AI. (n.d.). AI Workflow Builders. Lindy AI Blog.
+6. Lindy AI. (n.d.). Sales Coach Template. Lindy AI Templates.
+7. Quixy. (n.d.). Visual Workflow Builder - Simplify Process Automation. Quixy Blog.
+8. Vellum AI. (n.d.). No-Code AI Workflow Automation Tools Guide. Vellum AI Blog.
+9. NocoBase. (n.d.). Top 11 GitHub Open Source No-Code AI Tools. NocoBase Blog.
+10. YouTube. (n.d.). How to Create a No-Code Visual Workflow Builder for AI Agents. YouTube.

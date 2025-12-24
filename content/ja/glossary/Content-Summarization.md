@@ -112,11 +112,19 @@ AI駆動の要約システムは、トレーニングデータに存在するバ
 
 ## 参考文献
 
-- [Natural Language Processing with Python - O'Reilly Media](https://www.oreilly.com/library/view/natural-language-processing/9780596516499/)
-- [Attention Is All You Need - Google Research](https://research.google/pubs/pub46201/)
-- [PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization - Google AI](https://ai.googleblog.com/2020/06/pegasus-state-of-art-model-for.html)
-- [Text Summarization Techniques: A Brief Survey - International Journal of Advanced Computer Science and Applications](https://thesai.org/Publications/ViewPaper?Volume=8&Issue=10&Code=IJACSA&SerialNo=29)
-- [Automatic Text Summarization Using Machine Learning - IEEE Xplore](https://ieeexplore.ieee.org/document/8424706)
-- [Enterprise Content Summarization: Best Practices and Implementation Guide - Gartner Research](https://www.gartner.com/en/information-technology)
-- [The State of AI in Document Processing - McKinsey & Company](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights)
-- [Natural Language Processing in Practice - MIT Technology Review](https://www.technologyreview.com/topic/artificial-intelligence/)
+
+1. O'Reilly Media. (n.d.). Natural Language Processing with Python. Book.
+
+2. Google Research. (n.d.). Attention Is All You Need. Research Publication.
+
+3. Google AI. (2020). PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization. Google AI Blog.
+
+4. International Journal of Advanced Computer Science and Applications. (n.d.). Text Summarization Techniques: A Brief Survey. Research Article.
+
+5. IEEE Xplore. (n.d.). Automatic Text Summarization Using Machine Learning. Research Article.
+
+6. Gartner Research. (n.d.). Enterprise Content Summarization: Best Practices and Implementation Guide. Research Report.
+
+7. McKinsey & Company. (n.d.). The State of AI in Document Processing. Research Report.
+
+8. MIT Technology Review. (n.d.). Natural Language Processing in Practice. Article.

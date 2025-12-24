@@ -256,9 +256,15 @@ AI契約分析プラットフォームが特権保護を維持することを確
 
 ## 参考文献
 
-- [Thomson Reuters: Legal AI and Contract Analysis](https://legal.thomsonreuters.com/en/insights/articles/contract-analysis-powered-by-ai)
-- [Harvard Law School: AI in Legal Practice](https://hls.harvard.edu/today/artificial-intelligence-in-legal-practice/)
-- [MIT Technology Review: AI Transforming Legal Work](https://www.technologyreview.com/2020/04/15/999375/ai-is-transforming-the-legal-profession/)
-- [American Bar Association: AI and Legal Ethics](https://www.americanbar.org/groups/centers_commissions/center-for-innovation/resources/artificial-intelligence/)
-- [LawGeex: AI Contract Review](https://www.lawgeex.com/resources/how-ai-contract-review-works/)
-- [Kira Systems: Contract Analysis Guide](https://kirasystems.com/learn/contract-analysis/)
+
+1. Thomson Reuters. (n.d.). Legal AI and Contract Analysis. Thomson Reuters Insights.
+
+2. Harvard Law School. (n.d.). AI in Legal Practice. Harvard Law School Today.
+
+3. MIT Technology Review. (2020). AI Transforming Legal Work. MIT Technology Review.
+
+4. American Bar Association. (n.d.). AI and Legal Ethics. ABA Center for Innovation Resources.
+
+5. LawGeex. AI Contract Review. URL: https://www.lawgeex.com/resources/how-ai-contract-review-works/
+
+6. Kira Systems. Contract Analysis Guide. URL: https://kirasystems.com/learn/contract-analysis/

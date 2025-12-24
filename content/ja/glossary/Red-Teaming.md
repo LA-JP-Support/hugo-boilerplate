@@ -263,27 +263,37 @@ AIシステムのアーキテクチャ、データソース、意図された用
 
 ## 参考文献
 
-- [Mindgard: What is AI Red Teaming?](https://mindgard.ai/blog/what-is-ai-red-teaming)
-- [Mindgard: AI Security Platform](https://mindgard.ai/ai-security-platform)
-- [Mindgard: Red Teaming Resources](https://mindgard.ai/learn/resources)
-- [Mindgard: Penetration Testing vs Red Teaming](https://mindgard.ai/blog/red-teaming)
-- [Prompt Security: AI Red Teaming Ultimate Guide](https://www.prompt.security/blog/what-is-ai-red-teaming-the-ultimate-guide)
-- [HackTheBox: AI Red Teaming Explained](https://www.hackthebox.com/blog/ai-red-teaming-explained)
-- [IBM Research: What is Red Teaming for Gen AI?](https://research.ibm.com/blog/what-is-red-teaming-gen-AI)
-- [Rootshell Security: AI Red Teaming](https://www.rootshellsecurity.net/what-is-ai-red-teaming/)
-- [Rootshell Security: Penetration Testing as a Service](https://www.rootshellsecurity.net/penetration-testing-as-a-service/)
-- [Rootshell Security: Vulnerability Scanning](https://www.rootshellsecurity.net/what-is-vulnerability-scanning/)
-- [T3 Consultants: AI Red Teaming](https://t3-consultants.com/ai-red-teaming-how-ethical-hackers-fortify-ai-security/)
-- [OpenAI: External Red Teaming PDF](https://cdn.openai.com/papers/openais-approach-to-external-red-teaming.pdf)
-- [Anthropic: Red Teaming for AI Safety](https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety)
-- [NIST: AI Risk Management Framework](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework)
-- [EU: Artificial Intelligence Act](https://artificialintelligenceact.eu/)
-- [MITRE ATLAS](https://atlas.mitre.org/)
-- [OWASP: AI Security Project](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
-- [GitHub: AI Red Teaming Guide](https://github.com/requie/AI-Red-Teaming-Guide)
-- [GitHub: Garak](https://github.com/leondz/garak)
-- [GitHub: PyRIT](https://github.com/microsoft/pyrit)
-- [GitHub: Adversarial Robustness Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
-- [GitHub: Foolbox](https://github.com/bethgelab/foolbox)
-- [GitHub: Meerkat](https://github.com/robustness-gym/meerkat)
-- [IBM: AI Fairness 360](https://aif360.mybluemix.net/)
+
+1. Mindgard. (n.d.). What is AI Red Teaming?. Mindgard Blog.
+2. Mindgard. (n.d.). AI Security Platform. Mindgard.
+3. Mindgard. (n.d.). Red Teaming Resources. Mindgard Learn.
+4. Mindgard. (n.d.). Penetration Testing vs Red Teaming. Mindgard Blog.
+5. Prompt Security. (n.d.). AI Red Teaming Ultimate Guide. Prompt Security Blog.
+6. HackTheBox. (n.d.). AI Red Teaming Explained. HackTheBox Blog.
+7. IBM Research. (n.d.). What is Red Teaming for Gen AI?. IBM Research Blog.
+8. Rootshell Security. (n.d.). AI Red Teaming. Rootshell Security.
+9. Rootshell Security. (n.d.). Penetration Testing as a Service. Rootshell Security.
+10. Rootshell Security. (n.d.). Vulnerability Scanning. Rootshell Security.
+11. T3 Consultants. (n.d.). AI Red Teaming. T3 Consultants.
+12. OpenAI. (n.d.). External Red Teaming. OpenAI PDF.
+13. Anthropic. (n.d.). Red Teaming for AI Safety. Anthropic News.
+14. NIST. (n.d.). AI Risk Management Framework. NIST.
+15. European Union. (n.d.). Artificial Intelligence Act. EU Legislation.
+16. MITRE. (n.d.). ATLAS. MITRE.
+17. OWASP. (n.d.). AI Security Project. OWASP.
+18. GitHub. (n.d.). AI Red Teaming Guide. GitHub Repository.
+19. Garak. (n.d.). Garak. GitHub Repository.
+20. Microsoft. (n.d.). PyRIT. GitHub Repository.
+21. Trusted AI. (n.d.). Adversarial Robustness Toolbox. GitHub Repository.
+22. Bethge Lab. (n.d.). Foolbox. GitHub Repository.
+23. Robustness Gym. (n.d.). Meerkat. GitHub Repository.
+24. IBM. (n.d.). AI Fairness 360. IBM.
+
+25. MITRE ATLAS. Cybersecurity and AI Threat Framework. URL: https://atlas.mitre.org/
+26. GitHub AI Red Teaming Guide. Comprehensive Guide for AI Security Testing. URL: https://github.com/requie/AI-Red-Teaming-Guide
+27. Garak. AI Testing and Probing Tool. URL: https://github.com/leondz/garak
+28. PyRIT. Microsoft AI Red Teaming Tool. URL: https://github.com/microsoft/pyrit
+29. Adversarial Robustness Toolbox. AI Security Testing Library. URL: https://github.com/Trusted-AI/adversarial-robustness-toolbox
+30. Foolbox. Neural Network Robustness Testing Tool. URL: https://github.com/bethgelab/foolbox
+31. Meerkat. Machine Learning Evaluation Framework. URL: https://github.com/robustness-gym/meerkat
+32. IBM AI Fairness 360. AI Bias Detection Tool. URL: https://aif360.mybluemix.net/

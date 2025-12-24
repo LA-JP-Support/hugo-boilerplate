@@ -253,9 +253,15 @@ Individual-level analysis creating unique purchase pattern models for each custo
 
 ## References
 
-- [Microsoft: Market Basket Analysis](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-market-basket-analysis/)
-- [IBM: Association Rule Mining](https://www.ibm.com/topics/association-rules)
-- [Harvard Business Review: The Discipline of Market Leaders](https://hbr.org/1993/01/customer-intimacy-and-other-value-disciplines)
-- [Stanford: Mining of Massive Datasets - Association Rules](http://www.mmds.org/)
-- [Towards Data Science: Market Basket Analysis Guide](https://towardsdatascience.com/a-gentle-introduction-on-market-basket-analysis-association-rules-fa4b986a40ce)
-- [SAS: Market Basket Analysis](https://www.sas.com/en_us/insights/analytics/market-basket-analysis.html)
+
+1. Microsoft. (n.d.). Market Basket Analysis. Azure Cloud Computing Dictionary.
+
+2. IBM. (n.d.). Association Rule Mining. IBM Topics.
+
+3. Harvard Business Review. (1993). The Discipline of Market Leaders. Harvard Business Review.
+
+4. Stanford University. (n.d.). Mining of Massive Datasets - Association Rules. MMDS.
+
+5. Towards Data Science. (n.d.). Market Basket Analysis Guide. Towards Data Science.
+
+6. SAS. (n.d.). Market Basket Analysis. SAS Insights.

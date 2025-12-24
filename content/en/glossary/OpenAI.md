@@ -418,27 +418,28 @@ OpenAI continues to invest in research, product development, and collaboration t
 
 ## References
 
-- [OpenAI Official Site](https://openai.com/)
-- [OpenAI About](https://openai.com/about/)
-- [OpenAI Wikipedia](https://en.wikipedia.org/wiki/OpenAI)
-- [Introducing GPT-5.2](https://openai.com/index/introducing-gpt-5-2/)
-- [Introducing GPT-5 for developers](https://openai.com/index/introducing-gpt-5-for-developers/)
-- [Introducing GPT-5](https://openai.com/index/introducing-gpt-5/)
-- [GPT-5 is here](https://openai.com/gpt-5/)
-- [Advancing science and math with GPT-5.2](https://openai.com/index/gpt-5-2-for-science-and-math/)
-- [GPT-5.2 System Card](https://openai.com/index/gpt-5-system-card-update-gpt-5-2/)
-- [GPT-4 Research](https://openai.com/index/gpt-4-research/)
-- [Introducing GPT-4o](https://openai.com/index/hello-gpt-4o/)
-- [DALL-E 3 Overview](https://openai.com/index/dall-e-3/)
-- [DALL-E 3 API Documentation](https://platform.openai.com/docs/models/dall-e-3)
-- [Codex Overview](https://openai.com/codex/)
-- [Codex Developer Documentation](https://developers.openai.com/codex/)
-- [Introducing Whisper](https://openai.com/index/whisper/)
-- [Speech-to-Text API Guide](https://platform.openai.com/docs/guides/speech-to-text)
-- [API Reference](https://platform.openai.com/docs/api-reference/introduction)
-- [OpenAI's Structure](https://openai.com/our-structure/)
-- [Evolving OpenAI's Structure](https://openai.com/index/evolving-our-structure/)
-- [OpenAI's Revenue and Growth](https://epoch.ai/data-insights/openai-revenue)
-- [TechCrunch: OpenAI GPT-5.2 Launch](https://techcrunch.com/2025/12/11/openai-fires-back-at-google-with-gpt-5-2-after-code-red-memo/)
-- [CNBC: GPT-5.2 Announcement](https://www.cnbc.com/2025/12/11/openai-intros-new-ai-model-gpt-5point2-says-better-at-professional-tasks.html)
-- [GitHub: GPT-5.2 in GitHub Copilot](https://github.blog/changelog/2025-12-11-openais-gpt-5-2-is-now-in-public-preview-for-github-copilot/)
+
+1. OpenAI. (n.d.). OpenAI Official Site. URL: https://openai.com/
+2. OpenAI. (n.d.). OpenAI About. URL: https://openai.com/about/
+3. Wikipedia. (n.d.). OpenAI. Wikipedia.
+4. OpenAI. (n.d.). Introducing GPT-5.2. URL: https://openai.com/index/introducing-gpt-5-2/
+5. OpenAI. (n.d.). Introducing GPT-5 for developers. URL: https://openai.com/index/introducing-gpt-5-for-developers/
+6. OpenAI. (n.d.). Introducing GPT-5. URL: https://openai.com/index/introducing-gpt-5/
+7. OpenAI. (n.d.). GPT-5 is here. URL: https://openai.com/gpt-5/
+8. OpenAI. (n.d.). Advancing science and math with GPT-5.2. URL: https://openai.com/index/gpt-5-2-for-science-and-math/
+9. OpenAI. (n.d.). GPT-5.2 System Card. URL: https://openai.com/index/gpt-5-system-card-update-gpt-5-2/
+10. OpenAI. (n.d.). GPT-4 Research. URL: https://openai.com/index/gpt-4-research/
+11. OpenAI. (n.d.). Introducing GPT-4o. URL: https://openai.com/index/hello-gpt-4o/
+12. OpenAI. (n.d.). DALL-E 3 Overview. URL: https://openai.com/index/dall-e-3/
+13. OpenAI. (n.d.). DALL-E 3 API Documentation. URL: https://platform.openai.com/docs/models/dall-e-3
+14. OpenAI. (n.d.). Codex Overview. URL: https://openai.com/codex/
+15. OpenAI. (n.d.). Codex Developer Documentation. URL: https://developers.openai.com/codex/
+16. OpenAI. (n.d.). Introducing Whisper. URL: https://openai.com/index/whisper/
+17. OpenAI. (n.d.). Speech-to-Text API Guide. URL: https://platform.openai.com/docs/guides/speech-to-text
+18. OpenAI. (n.d.). API Reference. URL: https://platform.openai.com/docs/api-reference/introduction
+19. OpenAI. (n.d.). OpenAI's Structure. URL: https://openai.com/our-structure/
+20. OpenAI. (n.d.). Evolving OpenAI's Structure. URL: https://openai.com/index/evolving-our-structure/
+21. Epoch AI. (n.d.). OpenAI's Revenue and Growth. URL: https://epoch.ai/data-insights/openai-revenue
+22. TechCrunch. (2025). OpenAI GPT-5.2 Launch. TechCrunch.
+23. CNBC. (2025). GPT-5.2 Announcement. CNBC.
+24. GitHub. (2025). GPT-5.2 in GitHub Copilot. GitHub Blog.

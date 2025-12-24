@@ -302,15 +302,27 @@ Implement retry logic, fallback sub-flows, and compensation transactions for rob
 
 ## References
 
-- [Activepieces: Nested Flows](https://resources.activepieces.com/glossary/nested-flows)
-- [Way We Do: Introducing Sub-Processes](https://www.waywedo.com/blog/introducing-sub-processes/)
-- [Mastra: Nested Workflows (Legacy)](https://mastra.ai/docs/workflows-legacy/nested-workflows)
-- [AWS: Modularizing Step Functions Workflows](https://aws.amazon.com/blogs/compute/breaking-down-monolith-workflows-modularizing-aws-step-functions-workflows/)
-- [Microsoft: Power Automate Subflows Workshop](https://learn.microsoft.com/en-us/training/modules/create-subflows-web-automation-online-workshop/)
-- [ServiceNow: Flow Designer Documentation](https://docs.servicenow.com/csh?version=latest&topicname=flow-designer)
-- [ServiceNow: Workflow Studio](https://docs.servicenow.com/csh?version=latest&topicname=workflow-studio)
-- [ServiceNow: Zurich Release Notes](https://www.servicenow.com/docs/bundle/zurich-release-notes/page/release-notes/now-platform-app-engine/flow-designer-rn.html)
-- [AWS: Step Functions Nested Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-nested-workflows.html)
-- [AWS: Step Functions Best Practices](https://docs.aws.amazon.com/step-functions/latest/dg/best-practices.html)
-- [ServiceNow: Flow Guidance & Best Practices](https://sn.works/CoE/StartFlow#h_320418873381665150474199)
-- [YouTube: ServiceNow Subflows in Conversational AI](https://www.youtube.com/watch?v=jbRhPq6jREY)
+
+1. Activepieces. (n.d.). Nested Flows. Activepieces Glossary.
+
+2. Way We Do. (n.d.). Introducing Sub-Processes. Way We Do Blog.
+
+3. Mastra. (n.d.). Nested Workflows (Legacy). Mastra Documentation.
+
+4. AWS. (n.d.). Modularizing Step Functions Workflows. AWS Compute Blog.
+
+5. Microsoft. (n.d.). Power Automate Subflows Workshop. Microsoft Learn.
+
+6. ServiceNow. (n.d.). Flow Designer Documentation. ServiceNow Docs.
+
+7. ServiceNow. (n.d.). Workflow Studio. ServiceNow Docs.
+
+8. ServiceNow. (n.d.). Zurich Release Notes. ServiceNow Release Notes.
+
+9. AWS. (n.d.). Step Functions Nested Workflows. AWS Step Functions Documentation.
+
+10. AWS. (n.d.). Step Functions Best Practices. AWS Step Functions Documentation.
+
+11. ServiceNow. (n.d.). Flow Guidance & Best Practices. ServiceNow Works.
+
+12. YouTube. (n.d.). ServiceNow Subflows in Conversational AI. YouTube Video.

@@ -185,14 +185,15 @@ FAQ、チケットタグ付け、自動応答にチャットボットを使用�
 
 ## 参考文献
 
-- [HiverHQ: Multi-channel Customer Support Strategy](https://hiverhq.com/blog/multi-channel-customer-support-strategy)
-- [Tidio: What Is Multichannel Customer Service?](https://www.tidio.com/blog/multichannel-customer-service/)
-- [NICE: Multi-channel Customer Service Functions](https://www.nice.com/info/customer-service-and-support-functions-are-multi-channel)
-- [Nextiva: Multichannel Contact Center Guide](https://www.nextiva.com/blog/multichannel-contact-center.html)
-- [BotPenguin: Multi-Channel Support Significance](https://botpenguin.com/glossary/multi-channel-support)
-- [Front: Omnichannel vs Multichannel Customer Service](https://front.com/blog/omnichannel-vs-multichannel-customer-service)
-- [Frontline Group: What is Multi-channel Contact Center?](https://frontline.group/what-is-a-multi-channel-contact-center/)
-- [Richpanel: Multi Channel Customer Service](https://www.richpanel.com/blog/multi-channel-customer-service)
-- [Sycurio: Multichannel Customer Service Strategies](https://sycurio.com/blog/what-is-multichannel-customer-service-and-why-is-it-important)
-- [YouTube: What is Multichannel Customer Support - Tidio](https://www.youtube.com/watch?v=2_5MRn4a8nA)
-- [YouTube: Omnichannel vs Multichannel Support](https://www.youtube.com/watch?v=9u7wFZKRYeU)
+
+1. HiverHQ. (n.d.). Multi-channel Customer Support Strategy. HiverHQ Blog.
+2. Tidio. (n.d.). What Is Multichannel Customer Service?. Tidio Blog.
+3. NICE. (n.d.). Multi-channel Customer Service Functions. NICE Information.
+4. Nextiva. (n.d.). Multichannel Contact Center Guide. Nextiva Blog.
+5. BotPenguin. (n.d.). Multi-Channel Support Significance. BotPenguin Glossary.
+6. Front. (n.d.). Omnichannel vs Multichannel Customer Service. Front Blog.
+7. Frontline Group. (n.d.). What is Multi-channel Contact Center?. Frontline Group.
+8. Richpanel. (n.d.). Multi Channel Customer Service. Richpanel Blog.
+9. Sycurio. (n.d.). Multichannel Customer Service Strategies. Sycurio Blog.
+10. Tidio. (n.d.). What is Multichannel Customer Support. YouTube.
+11. Unknown. (n.d.). Omnichannel vs Multichannel Support. YouTube.

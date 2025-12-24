@@ -275,33 +275,63 @@ print(result)
 
 ## 参考資料
 
-- [公式Hugging Faceサイト](https://huggingface.co/)
-- [Model Hubドキュメント](https://huggingface.co/docs/hub/en/models-the-hub)
-- [Datasets Hubドキュメント](https://huggingface.co/docs/hub/en/datasets-overview)
-- [Spaces概要](https://huggingface.co/docs/hub/en/spaces-overview)
-- [Transformersライブラリドキュメント](https://huggingface.co/docs/transformers/en/index)
-- [Datasetsライブラリドキュメント](https://huggingface.co/docs/datasets/index)
-- [Diffusersドキュメント](https://huggingface.co/docs/diffusers)
-- [Tokenizersドキュメント](https://huggingface.co/docs/tokenizers)
-- [Gradioドキュメント](https://gradio.app/docs/)
-- [PEFTドキュメント](https://huggingface.co/docs/peft)
-- [Safetensorsドキュメント](https://huggingface.co/docs/safetensors)
-- [TRLドキュメント](https://huggingface.co/docs/trl)
-- [Inference Providersドキュメント](https://huggingface.co/docs/hub/en/models-inference)
-- [推論モデルを探索](https://huggingface.co/inference/models)
-- [モデルカード](https://huggingface.co/docs/hub/en/model-cards)
-- [データセットカード](https://huggingface.co/docs/hub/en/datasets-cards)
-- [モデルアップロードガイド](https://huggingface.co/docs/hub/en/models-uploading)
-- [モデルリリースチェックリスト](https://huggingface.co/docs/hub/en/model-release-checklist)
-- [モデルダウンロードガイド](https://huggingface.co/docs/hub/en/models-downloading)
-- [モデルウィジェットドキュメント](https://huggingface.co/docs/hub/en/models-widgets)
-- [データセット追加ガイド](https://huggingface.co/docs/hub/en/datasets-adding)
-- [Spaces Dev Mode](https://huggingface.co/docs/hub/en/spaces-dev-mode)
-- [Spaces GPUアップグレード](https://huggingface.co/docs/hub/en/spaces-gpus)
-- [Spacesストレージ](https://huggingface.co/docs/hub/en/spaces-storage)
-- [テキスト生成パイプライン](https://huggingface.co/docs/transformers/en/main_classes/pipelines#transformers.TextGenerationPipeline)
-- [Trainer API](https://huggingface.co/docs/transformers/en/main_classes/trainer)
-- [サインアップ](https://huggingface.co/join)
-- [コミュニティガイドライン](https://huggingface.co/code-of-conduct)
-- [コンテンツガイドライン](https://huggingface.co/content-guidelines)
-- [コミュニティフォーラム](https://discuss.huggingface.co/)
+
+1. Hugging Face. (n.d.). 公式Hugging Faceサイト. Service. URL: https://huggingface.co/
+
+2. Hugging Face. (n.d.). Model Hubドキュメント. Documentation. URL: https://huggingface.co/docs/hub/en/models-the-hub
+
+3. Hugging Face. (n.d.). Datasets Hubドキュメント. Documentation. URL: https://huggingface.co/docs/hub/en/datasets-overview
+
+4. Hugging Face. (n.d.). Spaces概要. Documentation. URL: https://huggingface.co/docs/hub/en/spaces-overview
+
+5. Hugging Face. (n.d.). Transformersライブラリドキュメント. Documentation. URL: https://huggingface.co/docs/transformers/en/index
+
+6. Hugging Face. (n.d.). Datasetsライブラリドキュメント. Documentation. URL: https://huggingface.co/docs/datasets/index
+
+7. Hugging Face. (n.d.). Diffusersドキュメント. Documentation. URL: https://huggingface.co/docs/diffusers
+
+8. Hugging Face. (n.d.). Tokenizersドキュメント. Documentation. URL: https://huggingface.co/docs/tokenizers
+
+9. Gradio. (n.d.). Gradioドキュメント. Documentation. URL: https://gradio.app/docs/
+
+10. Hugging Face. (n.d.). PEFTドキュメント. Documentation. URL: https://huggingface.co/docs/peft
+
+11. Hugging Face. (n.d.). Safetensorsドキュメント. Documentation. URL: https://huggingface.co/docs/safetensors
+
+12. Hugging Face. (n.d.). TRLドキュメント. Documentation. URL: https://huggingface.co/docs/trl
+
+13. Hugging Face. (n.d.). Inference Providersドキュメント. Documentation. URL: https://huggingface.co/docs/hub/en/models-inference
+
+14. Hugging Face. (n.d.). 推論モデルを探索. Documentation. URL: https://huggingface.co/inference/models
+
+15. Hugging Face. (n.d.). モデルカード. Documentation. URL: https://huggingface.co/docs/hub/en/model-cards
+
+16. Hugging Face. (n.d.). データセットカード. Documentation. URL: https://huggingface.co/docs/hub/en/datasets-cards
+
+17. Hugging Face. (n.d.). モデルアップロードガイド. Documentation. URL: https://huggingface.co/docs/hub/en/models-uploading
+
+18. Hugging Face. (n.d.). モデルリリースチェックリスト. Documentation. URL: https://huggingface.co/docs/hub/en/model-release-checklist
+
+19. Hugging Face. (n.d.). モデルダウンロードガイド. Documentation. URL: https://huggingface.co/docs/hub/en/models-downloading
+
+20. Hugging Face. (n.d.). モデルウィジェットドキュメント. Documentation. URL: https://huggingface.co/docs/hub/en/models-widgets
+
+21. Hugging Face. (n.d.). データセット追加ガイド. Documentation. URL: https://huggingface.co/docs/hub/en/datasets-adding
+
+22. Hugging Face. (n.d.). Spaces Dev Mode. Documentation. URL: https://huggingface.co/docs/hub/en/spaces-dev-mode
+
+23. Hugging Face. (n.d.). Spaces GPUアップグレード. Documentation. URL: https://huggingface.co/docs/hub/en/spaces-gpus
+
+24. Hugging Face. (n.d.). Spacesストレージ. Documentation. URL: https://huggingface.co/docs/hub/en/spaces-storage
+
+25. Hugging Face. (n.d.). テキスト生成パイプライン. Documentation. URL: https://huggingface.co/docs/transformers/en/main_classes/pipelines#transformers.TextGenerationPipeline
+
+26. Hugging Face. (n.d.). Trainer API. Documentation. URL: https://huggingface.co/docs/transformers/en/main_classes/trainer
+
+27. Hugging Face. (n.d.). サインアップ. Service. URL: https://huggingface.co/join
+
+28. Hugging Face. (n.d.). コミュニティガイドライン. Documentation. URL: https://huggingface.co/code-of-conduct
+
+29. Hugging Face. (n.d.). コンテンツガイドライン. Documentation. URL: https://huggingface.co/content-guidelines
+
+30. Hugging Face. (n.d.). コミュニティフォーラム. Service. URL: https://discuss.huggingface.co/

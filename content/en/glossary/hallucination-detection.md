@@ -690,12 +690,21 @@ Dashboard View:
 
 ## References
 
-- [Hallucination Detection in LLMs: Fast and Memory-Efficient Finetuned Models (arXiv)](https://arxiv.org/html/2409.02976v1)
-- [AWS: Detect Hallucinations for RAG-based systems](https://aws.amazon.com/blogs/machine-learning/detect-hallucinations-for-rag-based-systems/)
-- [Datadog: Detecting LLM Hallucinations: Prompt Engineering](https://www.datadoghq.com/blog/ai/llm-hallucination-detection/)
-- [Sendbird: Automatic Hallucination Detection](https://sendbird.com/blog/automatic-hallucination-detection)
-- [Amazon Bedrock](https://aws.amazon.com/bedrock/)
-- [Google Vertex AI](https://cloud.google.com/vertex-ai)
-- [IBM: What Are AI Hallucinations?](https://www.ibm.com/topics/ai-hallucinations)
-- [K2View: What is grounding and hallucinations in AI?](https://www.k2view.com/data-management-blog/grounding-ai-hallucinations/)
-- [Wikipedia: BLEU](https://en.wikipedia.org/wiki/BLEU)
+
+1. Hallucination Detection in LLMs: Fast and Memory-Efficient Finetuned Models. (n.d.). arXiv.
+
+2. AWS. (2024). Detect Hallucinations for RAG-based systems. AWS Machine Learning Blog.
+
+3. Datadog. (2024). Detecting LLM Hallucinations: Prompt Engineering. Datadog Blog.
+
+4. Sendbird. (2024). Automatic Hallucination Detection. Sendbird Blog.
+
+5. Amazon Bedrock. Cloud AI Service. URL: https://aws.amazon.com/bedrock/
+
+6. Google Vertex AI. Cloud AI Service. URL: https://cloud.google.com/vertex-ai
+
+7. IBM. (2024). What Are AI Hallucinations?. IBM Topics.
+
+8. K2View. (2024). What is grounding and hallucinations in AI?. K2View Data Management Blog.
+
+9. Wikipedia. (n.d.). BLEU. Wikipedia.

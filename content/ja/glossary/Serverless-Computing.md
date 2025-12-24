@@ -228,27 +228,28 @@ SaaSツール間でデータを同期したり、スケジュールされたレ�
 
 ## 参考文献
 
-- [AWS: What is Serverless Computing?](https://aws.amazon.com/what-is/serverless-computing/)
-- [Google Cloud: What is Serverless Computing?](https://cloud.google.com/discover/what-is-serverless-computing)
-- [Red Hat: What is Serverless?](https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless)
-- [IBM: What is Serverless Computing?](https://www.ibm.com/think/topics/serverless)
-- [Alpacked: Full Guide to Serverless](https://alpacked.io/blog/what-is-serverless-computing/)
-- [TechTarget: Top Benefits and Disadvantages](https://www.techtarget.com/searchcloudcomputing/tip/Top-benefits-and-disadvantages-of-serverless-computing)
-- [Okta: Serverless Computing](https://www.okta.com/identity-101/serverless-computing/)
-- [YouTube: Serverless Essentials by Google Cloud](https://www.youtube.com/watch?v=PBw9vD_BO5A)
-- [Red Hat: What is FaaS?](https://www.redhat.com/en/topics/cloud-native-apps/what-is-faas)
-- [Firebase](https://firebase.google.com/)
-- [AWS Lambda](https://aws.amazon.com/lambda/)
-- [Google Cloud Functions](https://cloud.google.com/functions)
-- [Azure Functions](https://azure.microsoft.com/en-us/products/functions/)
-- [IBM Cloud Code Engine](https://cloud.ibm.com/codeengine)
-- [AWS Amplify](https://aws.amazon.com/amplify/)
-- [Auth0](https://auth0.com/)
-- [Amazon Aurora Serverless](https://aws.amazon.com/rds/aurora/serverless/)
-- [AWS Fargate](https://aws.amazon.com/fargate/)
-- [Google Cloud Run](https://cloud.google.com/run)
-- [Cloudflare Workers](https://workers.cloudflare.com/)
-- [Azure Event Grid](https://azure.microsoft.com/en-us/products/event-grid/)
-- [AWS EventBridge](https://aws.amazon.com/eventbridge/)
-- [Knative: Serverless on Kubernetes](https://knative.dev/)
-- [Red Hat OpenShift Serverless](https://www.redhat.com/en/technologies/cloud-computing/openshift/serverless)
+
+1. AWS. (n.d.). What is Serverless Computing?. AWS.
+2. Google Cloud. (n.d.). What is Serverless Computing?. Google Cloud.
+3. Red Hat. (n.d.). What is Serverless?. Red Hat.
+4. IBM. (n.d.). What is Serverless Computing?. IBM Think Topics.
+5. Alpacked. (n.d.). Full Guide to Serverless. Alpacked Blog.
+6. TechTarget. (n.d.). Top Benefits and Disadvantages. TechTarget.
+7. Okta. (n.d.). Serverless Computing. Okta Identity 101.
+8. Google Cloud. (n.d.). Serverless Essentials. YouTube.
+9. Red Hat. (n.d.). What is FaaS?. Red Hat.
+10. Firebase. Serverless Backend Platform. URL: https://firebase.google.com/
+11. AWS Lambda. Serverless Compute Service. URL: https://aws.amazon.com/lambda/
+12. Google Cloud Functions. Serverless Compute Platform. URL: https://cloud.google.com/functions
+13. Azure Functions. Serverless Compute Service. URL: https://azure.microsoft.com/en-us/products/functions/
+14. IBM Cloud Code Engine. Serverless Compute Platform. URL: https://cloud.ibm.com/codeengine
+15. AWS Amplify. Serverless Development Platform. URL: https://aws.amazon.com/amplify/
+16. Auth0. Identity Management Service. URL: https://auth0.com/
+17. Amazon Aurora Serverless. Serverless Database Service. URL: https://aws.amazon.com/rds/aurora/serverless/
+18. AWS Fargate. Serverless Container Service. URL: https://aws.amazon.com/fargate/
+19. Google Cloud Run. Serverless Container Platform. URL: https://cloud.google.com/run
+20. Cloudflare Workers. Serverless Compute Platform. URL: https://workers.cloudflare.com/
+21. Azure Event Grid. Event Management Service. URL: https://azure.microsoft.com/en-us/products/event-grid/
+22. AWS EventBridge. Event Bus Service. URL: https://aws.amazon.com/eventbridge/
+23. Knative. Serverless on Kubernetes Platform. URL: https://knative.dev/
+24. Red Hat OpenShift Serverless. Kubernetes Serverless Platform. URL: https://www.redhat.com/en/technologies/cloud-computing/openshift/serverless

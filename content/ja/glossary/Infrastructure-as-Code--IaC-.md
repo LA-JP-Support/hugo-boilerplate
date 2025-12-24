@@ -236,23 +236,43 @@ IaC外での手動変更は不整合を引き起こす可能性があります�
 
 ## 参考文献
 
-- [AWS: What is Infrastructure as Code?](https://aws.amazon.com/what-is/iac/)
-- [Spacelift: Infrastructure as Code — Best Practices, Benefits & Examples](https://spacelift.io/blog/infrastructure-as-code)
-- [Red Hat: What is Infrastructure as Code (IaC)?](https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac)
-- [Microsoft Learn: What is infrastructure as code (IaC)?](https://learn.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code)
-- [IBM: What Is Infrastructure as Code (IaC)?](https://www.ibm.com/think/topics/infrastructure-as-code)
-- [IBM: GitOps](https://www.ibm.com/think/topics/gitops)
-- [Red Hat: Policy as Code](https://www.redhat.com/en/technologies/management/ansible/automated-policy-as-code)
-- [Red Hat: Configuration Management](https://www.redhat.com/en/topics/automation/what-is-configuration-management)
-- [Red Hat: CI/CD](https://www.redhat.com/en/topics/devops/what-is-ci-cd)
-- [Terraform Documentation](https://www.terraform.io/docs/)
-- [AWS CloudFormation User Guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html)
-- [Azure Resource Manager Templates Overview](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview)
-- [Google Cloud Deployment Manager Documentation](https://cloud.google.com/deployment-manager/docs)
-- [Pulumi Documentation](https://www.pulumi.com/docs/)
-- [Ansible Documentation](https://docs.ansible.com/)
-- [Puppet Documentation](https://puppet.com/docs/)
-- [Chef Documentation](https://docs.chef.io/)
-- [Salt Documentation](https://docs.saltproject.io/)
-- [Kubernetes Documentation](https://kubernetes.io/docs/home/)
-- [Docker Compose Documentation](https://docs.docker.com/compose/)
+
+1. AWS. (n.d.). What is Infrastructure as Code?. AWS Documentation. URL: https://aws.amazon.com/what-is/iac/
+
+2. Spacelift. (n.d.). Infrastructure as Code — Best Practices, Benefits & Examples. Spacelift Blog. URL: https://spacelift.io/blog/infrastructure-as-code
+
+3. Red Hat. (n.d.). What is Infrastructure as Code (IaC)?. Red Hat Topics. URL: https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac
+
+4. Microsoft. (n.d.). What is infrastructure as code (IaC)?. Microsoft Learn. URL: https://learn.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code
+
+5. IBM. (n.d.). What Is Infrastructure as Code (IaC)?. IBM Think Topics. URL: https://www.ibm.com/think/topics/infrastructure-as-code
+
+6. IBM. (n.d.). GitOps. IBM Think Topics. URL: https://www.ibm.com/think/topics/gitops
+
+7. Red Hat. (n.d.). Policy as Code. Red Hat Technologies. URL: https://www.redhat.com/en/technologies/management/ansible/automated-policy-as-code
+
+8. Red Hat. (n.d.). Configuration Management. Red Hat Topics. URL: https://www.redhat.com/en/topics/automation/what-is-configuration-management
+
+9. Red Hat. (n.d.). CI/CD. Red Hat Topics. URL: https://www.redhat.com/en/topics/devops/what-is-ci-cd
+
+10. Terraform. Documentation. URL: https://www.terraform.io/docs/
+
+11. AWS CloudFormation. User Guide. URL: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html
+
+12. Azure Resource Manager. Templates Overview. URL: https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
+
+13. Google Cloud Deployment Manager. Documentation. URL: https://cloud.google.com/deployment-manager/docs
+
+14. Pulumi. Documentation. URL: https://www.pulumi.com/docs/
+
+15. Ansible. Documentation. URL: https://docs.ansible.com/
+
+16. Puppet. Documentation. URL: https://puppet.com/docs/
+
+17. Chef. Documentation. URL: https://docs.chef.io/
+
+18. Salt. Documentation. URL: https://docs.saltproject.io/
+
+19. Kubernetes. Documentation. URL: https://kubernetes.io/docs/home/
+
+20. Docker Compose. Documentation. URL: https://docs.docker.com/compose/

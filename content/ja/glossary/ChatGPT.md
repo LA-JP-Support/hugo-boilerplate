@@ -332,13 +332,14 @@ ChatGPTは統合された会話型の応答を提供し、情報について推�
 
 ## 参考文献
 
-- [ChatGPT公式サイト](https://chat.openai.com/)
-- [OpenAI企業プロフィール](OpenAI.md)
-- [ChatGPTヘルプセンター](https://help.openai.com/)
-- [OpenAI APIドキュメント](https://platform.openai.com/docs/)
-- [GPT-5発表](https://openai.com/gpt-5/)
-- [GPT-5.2技術詳細](https://openai.com/index/introducing-gpt-5-2/)
-- [ChatGPT Plus機能](https://openai.com/chatgpt/pricing/)
-- [ChatGPT Enterprise](https://openai.com/enterprise/)
-- [GPTストア](https://openai.com/gpt-store/)
-- [OpenAI使用ポリシー](https://openai.com/policies/usage-policies/)
+
+1. ChatGPT. Official Website. URL: https://chat.openai.com/
+2. OpenAI. Company Profile. URL: https://openai.com/
+3. ChatGPT. Help Center. URL: https://help.openai.com/
+4. OpenAI. API Documentation. URL: https://platform.openai.com/docs/
+5. OpenAI. (n.d.). GPT-5 Announcement. URL: https://openai.com/gpt-5/
+6. OpenAI. (n.d.). GPT-5.2 Technical Details. URL: https://openai.com/index/introducing-gpt-5-2/
+7. ChatGPT Plus. Service Features. URL: https://openai.com/chatgpt/pricing/
+8. ChatGPT Enterprise. Enterprise Solution. URL: https://openai.com/enterprise/
+9. OpenAI. GPT Store. URL: https://openai.com/gpt-store/
+10. OpenAI. Usage Policies. URL: https://openai.com/policies/usage-policies/

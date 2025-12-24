@@ -239,20 +239,37 @@ Terraform、AWS CloudFormation、Ansibleなどのツールにより、BlueとGre
 
 ## 参考文献
 
-- [Martin Fowler: BlueGreenDeployment](https://martinfowler.com/bliki/BlueGreenDeployment.html)
-- [AWS Whitepapers: Overview of Deployment Options on AWS](https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/welcome.html)
-- [AWS: What Is Blue/Green Deployment?](https://docs.aws.amazon.com/whitepapers/latest/blue-green-deployments/introduction.html)
-- [Azure Container Apps: Blue-Green Deployment](https://learn.microsoft.com/en-us/azure/container-apps/blue-green-deployment)
-- [Azure Container Apps: Revisions](https://learn.microsoft.com/en-us/azure/container-apps/revisions)
-- [Azure Container Apps: Traffic Splitting](https://learn.microsoft.com/en-us/azure/container-apps/traffic-splitting)
-- [Google Cloud: Traffic Migration and Splitting Concepts](https://cloud.google.com/architecture/application-deployment-and-testing-strategies)
-- [Kubernetes Documentation: Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
-- [Liquibase: Blue-Green Deployments](https://www.liquibase.com/blog/blue-green-deployments-liquibase)
-- [AWS RDS: Blue/Green Deployments Overview](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments-overview.html)
-- [AWS RDS: Blue/Green Deployment Considerations](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments-considerations.html)
-- [Terraform Documentation](https://www.terraform.io/)
-- [Spinnaker: Continuous Delivery Platform](https://spinnaker.io/)
-- [AWS CodeDeploy Documentation](https://docs.aws.amazon.com/codedeploy/)
-- [Prometheus Monitoring](https://prometheus.io/)
-- [Grafana Observability Platform](https://grafana.com/)
-- [Datadog Monitoring and Analytics](https://www.datadoghq.com/)
+
+1. Fowler, M. (n.d.). Blue Green Deployment. Martin Fowler Blog.
+
+2. AWS. (n.d.). Overview of Deployment Options on AWS. AWS Whitepapers.
+
+3. AWS. (n.d.). What Is Blue/Green Deployment?. AWS Whitepapers.
+
+4. Microsoft. (n.d.). Blue-Green Deployment. Azure Container Apps Documentation.
+
+5. Microsoft. (n.d.). Revisions. Azure Container Apps Documentation.
+
+6. Microsoft. (n.d.). Traffic Splitting. Azure Container Apps Documentation.
+
+7. Google Cloud. (n.d.). Traffic Migration and Splitting Concepts. Google Cloud Architecture.
+
+8. Kubernetes. (n.d.). Deployments. Kubernetes Documentation.
+
+9. Liquibase. (n.d.). Blue-Green Deployments. Liquibase Blog.
+
+10. AWS. (n.d.). Blue/Green Deployments Overview. AWS RDS Documentation.
+
+11. AWS. (n.d.). Blue/Green Deployment Considerations. AWS RDS Documentation.
+
+12. Terraform. Infrastructure as Code Tool. URL: https://www.terraform.io/
+
+13. Spinnaker. Continuous Delivery Platform. URL: https://spinnaker.io/
+
+14. AWS CodeDeploy. Deployment Service. URL: https://docs.aws.amazon.com/codedeploy/
+
+15. Prometheus. Monitoring Tool. URL: https://prometheus.io/
+
+16. Grafana. Observability Platform. URL: https://grafana.com/
+
+17. Datadog. Monitoring and Analytics Platform. URL: https://www.datadoghq.com/

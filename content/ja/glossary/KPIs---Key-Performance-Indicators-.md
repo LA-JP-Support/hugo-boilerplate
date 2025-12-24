@@ -281,14 +281,15 @@ KPIは、インプット、プロセス、アウトプット、またはアウ�
 
 ## 参考文献
 
-- [Perdoo: 2025 KPI Guide](https://www.perdoo.com/resources/online-guides/kpi-guide)
-- [KPI.org: KPI Basics](https://www.kpi.org/kpi-basics/)
-- [SimpleKPI: Key Performance Indicators Resources](https://www.simplekpi.com/Resources/Key-Performance-Indicators)
-- [Spider Strategies: KPI Types](https://www.spiderstrategies.com/kpi/)
-- [ClearPoint Strategy: 70 KPI Examples](https://www.clearpointstrategy.com/blog/18-key-performance-indicators)
-- [OnStrategyHQ: Elements of a KPI](https://onstrategyhq.com/resources/27-examples-of-key-performance-indicators/)
-- [SimpleKPI: SMART KPI Dashboards](https://www.simplekpi.com/Blog/SMART-and-SMARTER-KPI-Dashboards)
-- [Perdoo: What is an OKR?](https://www.perdoo.com/resources/online-guides/okr-guide)
-- [SimpleKPI: KPI Dashboards](https://www.simplekpi.com/Features/KPI-Dashboards)
-- [Spider Strategies: KPIs by Department](https://www.spiderstrategies.com/kpi/#by-department)
-- [Spider Strategies: KPIs by Industry](https://www.spiderstrategies.com/kpi/#by-industry)
+
+1. Perdoo. (2025). 2025 KPI Guide. Perdoo Resources.
+2. KPI.org. (n.d.). KPI Basics. KPI.org.
+3. SimpleKPI. (n.d.). Key Performance Indicators Resources. SimpleKPI Resources.
+4. Spider Strategies. (n.d.). KPI Types. Spider Strategies.
+5. ClearPoint Strategy. (n.d.). 70 KPI Examples. ClearPoint Strategy Blog.
+6. OnStrategyHQ. (n.d.). Elements of a KPI. OnStrategyHQ Resources.
+7. SimpleKPI. (n.d.). SMART KPI Dashboards. SimpleKPI Blog.
+8. Perdoo. (n.d.). What is an OKR?. Perdoo Resources.
+9. SimpleKPI. (n.d.). KPI Dashboards. SimpleKPI Features.
+10. Spider Strategies. (n.d.). KPIs by Department. Spider Strategies.
+11. Spider Strategies. (n.d.). KPIs by Industry. Spider Strategies.

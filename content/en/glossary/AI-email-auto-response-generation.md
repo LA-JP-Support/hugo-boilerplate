@@ -235,16 +235,29 @@ Follow-up emails after a sales call can increase conversion rates by 220%. AI to
 
 ## References
 
-- [AI Email Response: The Easiest Reply Generator for Emails – Mailmeteor](https://mailmeteor.com/tools/ai-email-response)
-- [AI email response generator – free email reply tool by Planable](https://planable.io/email-response-generator/)
-- [Top 10 AI Email Generator Tools in 2024 – Fireflies.ai](https://fireflies.ai/blog/ai-email-generator)
-- [Top 8 AI Email Response Generators to Try in 2025 – HiverHQ](https://hiverhq.com/blog/ai-email-response-generator)
-- [Belkins.io Sales Follow-Up Statistics](https://belkins.io/blog/sales-follow-up-statistics?ref=fireflies.ai)
-- [Microsoft Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/will-ai-fix-work/?ref=fireflies.ai)
-- [OpenAI API Documentation](https://platform.openai.com/docs)
-- [Google Gemini AI Overview](https://blog.google/technology/ai/google-gemini-ai/)
-- [Mailmeteor Privacy Statement](https://mailmeteor.com/privacy)
-- [How to write emails using Fireflies](https://fireflies.ai/blog/ai-email-writer#how-to-use-fireflies-as-an-ai-email-writer)
-- [YouTube: How to Automate Your Gmail Replies with AI (Easy Tutorial)](https://www.youtube.com/watch?v=7ons5SrfyWY)
-- [YouTube: How to Create an AI Email Autoresponder [make, airtable, chatgpt]](https://www.youtube.com/watch?v=P3TKFVTVfrE)
-- [OpenAI API Data Usage Policies](https://platform.openai.com/docs/guides/data-usage-policies)
+
+1. Mailmeteor. AI Email Response Tool. URL: https://mailmeteor.com/tools/ai-email-response
+
+2. Planable. AI Email Response Generator Tool. URL: https://planable.io/email-response-generator/
+
+3. Fireflies.ai. (2024). Top 10 AI Email Generator Tools in 2024. Fireflies.ai Blog.
+
+4. HiverHQ. (2025). Top 8 AI Email Response Generators to Try in 2025. HiverHQ Blog.
+
+5. Belkins.io. (n.d.). Sales Follow-Up Statistics. Belkins.io Blog.
+
+6. Microsoft. (n.d.). Microsoft Work Trend Index. Microsoft Work Lab.
+
+7. OpenAI. (n.d.). OpenAI API Documentation. URL: https://platform.openai.com/docs
+
+8. Google. (n.d.). Google Gemini AI Overview. Google Blog.
+
+9. Mailmeteor. (n.d.). Mailmeteor Privacy Statement. URL: https://mailmeteor.com/privacy
+
+10. Fireflies.ai. (n.d.). How to Write Emails Using Fireflies. Fireflies.ai Blog.
+
+11. YouTube. (n.d.). How to Automate Your Gmail Replies with AI (Easy Tutorial). YouTube.
+
+12. YouTube. (n.d.). How to Create an AI Email Autoresponder [make, airtable, chatgpt]. YouTube.
+
+13. OpenAI. (n.d.). OpenAI API Data Usage Policies. URL: https://platform.openai.com/docs/guides/data-usage-policies

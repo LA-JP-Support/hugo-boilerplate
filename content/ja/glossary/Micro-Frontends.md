@@ -227,12 +227,21 @@ window.customElements.define('order-food', OrderFood);
 
 ## 参考文献
 
-- [Martin Fowler: Micro Frontends](https://martinfowler.com/articles/micro-frontends.html)
-- [Micro-Frontends.org](https://micro-frontends.org/)
-- [Wikipedia: Micro Frontend](https://en.wikipedia.org/wiki/Micro_frontend)
-- [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar/techniques/micro-frontends)
-- [Webpack: Module Federation](https://webpack.js.org/concepts/module-federation/)
-- [Google: Custom Elements](https://developers.google.com/web/fundamentals/web-components/customelements)
-- [Nginx SSI Documentation](https://nginx.org/en/docs/http/ngx_http_ssi_module.html)
-- [MDN: CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)
-- [YouTube: Edge-Side Includes](https://youtu.be/A3n1n5QRmF0?t=442)
+
+1. Fowler, M. (n.d.). Micro Frontends. Martin Fowler.
+
+2. Micro-Frontends.org. (n.d.). Micro Frontends. Micro-Frontends.org.
+
+3. Wikipedia. (n.d.). Micro Frontend. Wikipedia.
+
+4. ThoughtWorks. (n.d.). Micro Frontends. ThoughtWorks Technology Radar.
+
+5. Webpack. (n.d.). Module Federation. Webpack Documentation.
+
+6. Google. (n.d.). Custom Elements. Google Web Fundamentals.
+
+7. Nginx. (n.d.). Server Side Includes Module. Nginx Documentation.
+
+8. Mozilla. (n.d.). CustomEvent. MDN Web Docs.
+
+9. YouTube. (n.d.). Edge-Side Includes. YouTube Video.

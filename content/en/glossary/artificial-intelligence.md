@@ -238,18 +238,19 @@ Requirements vary by application. Some AI needs millions of labeled examples; ot
 
 ## References
 
-- [IBM: What Is Artificial Intelligence?](https://www.ibm.com/think/topics/artificial-intelligence)
-- [IBM: Machine Learning](https://www.ibm.com/think/topics/machine-learning)
-- [IBM: Deep Learning](https://www.ibm.com/think/topics/deep-learning)
-- [IBM: Natural Language Processing](https://www.ibm.com/think/topics/natural-language-processing)
-- [IBM: Neural Networks](https://www.ibm.com/think/topics/neural-networks)
-- [IBM: Generative AI](https://www.ibm.com/think/topics/generative-ai)
-- [IBM: Large Language Models](https://www.ibm.com/topics/large-language-models)
-- [IBM: Computer Vision](https://www.ibm.com/topics/computer-vision)
-- [IBM: AI Models](https://www.ibm.com/think/topics/ai-model)
-- [IBM: Machine Learning Algorithms](https://www.ibm.com/think/topics/machine-learning-algorithms)
-- [University of Florida: AI Glossary](https://guides.uflib.ufl.edu/c.php?g=1451497&p=10953235)
-- [UNESCO: Recommendation on the Ethics of Artificial Intelligence](https://unesdoc.unesco.org/ark:/48223/pf0000381137)
-- [UNESCO: AI Ethics Overview](https://www.unesco.org/en/artificial-intelligence/recommendation-ethics)
-- [NIH: AI Ethics in Healthcare](https://pmc.ncbi.nlm.nih.gov/articles/PMC12057767/)
-- [ScienceDirect: AI Regulation](https://www.sciencedirect.com/science/article/pii/S2949948825000241)
+
+1. IBM. (n.d.). What Is Artificial Intelligence?. IBM Think Topics.
+2. IBM. (n.d.). Machine Learning. IBM Think Topics.
+3. IBM. (n.d.). Deep Learning. IBM Think Topics.
+4. IBM. (n.d.). Natural Language Processing. IBM Think Topics.
+5. IBM. (n.d.). Neural Networks. IBM Think Topics.
+6. IBM. (n.d.). Generative AI. IBM Think Topics.
+7. IBM. (n.d.). Large Language Models. IBM Topics.
+8. IBM. (n.d.). Computer Vision. IBM Topics.
+9. IBM. (n.d.). AI Models. IBM Think Topics.
+10. IBM. (n.d.). Machine Learning Algorithms. IBM Think Topics.
+11. University of Florida. (n.d.). AI Glossary. University of Florida Library Guides.
+12. UNESCO. (n.d.). Recommendation on the Ethics of Artificial Intelligence. UNESCO.
+13. UNESCO. (n.d.). AI Ethics Overview. UNESCO.
+14. NIH. (n.d.). AI Ethics in Healthcare. NIH.
+15. ScienceDirect. (n.d.). AI Regulation. ScienceDirect.

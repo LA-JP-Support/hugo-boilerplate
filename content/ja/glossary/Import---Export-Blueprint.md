@@ -238,18 +238,33 @@ A: CLIツールまたはAPIを使用してエクスポートをスクリプト�
 
 ## 参考資料
 
-- [Make.com YouTube: Export and Import Blueprints](https://www.youtube.com/watch?v=VF4jkZ6-m-Y)
-- [Make Community: Importing JSON Blueprint](https://community.make.com/t/importing-json-blueprint/88348)
-- [Make Academy](https://academy.make.com)
-- [Make Help Centre](https://www.make.com/en/help)
-- [Microsoft Learn: Import and Export Blueprints with PowerShell](https://learn.microsoft.com/en-us/azure/governance/blueprints/how-to/import-export-ps)
-- [Microsoft: Azure Blueprints Deprecated](https://learn.microsoft.com/en-us/azure/governance/blueprints/deprecated)
-- [Microsoft: Template Specs](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/template-specs)
-- [Microsoft: Deployment Stacks](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deployment-stacks)
-- [Microsoft: Azure Blueprints Lifecycle](https://learn.microsoft.com/en-us/azure/governance/blueprints/concepts/lifecycle)
-- [BMC Documentation: Exporting or Importing a Blueprint](https://docs.bmc.com/xwiki/bin/view/Automation-DevSecOps/Client-Management/BMC-Cloud-Lifecycle-Management/clm46/Administering-the-product/Services/Building-service-blueprints/Exporting-or-importing-a-blueprint/)
-- [Blueprint Help Center: Migrate - Import/Export](https://blueprint.helpdocs.io/article/ajmht7bg69-migrate-import-export)
-- [Autonoly: Switching Automation Platforms Guide](https://www.autonoly.com/blog/68a2aa89d4fe118dae2a444b/switching-automation-platforms-complete-data-export-and-import-guide)
-- [BMC Communities](https://community.bmc.com/)
-- [GitHub: Source Control Fundamentals](https://docs.github.com/en/get-started/quickstart/hello-world)
-- [Microsoft: CI/CD with Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-cicd)
+
+1. Make.com. (n.d.). Export and Import Blueprints. YouTube.
+
+2. Make Community. (n.d.). Importing JSON Blueprint. Make Community Forum.
+
+3. Make Academy. Online Learning Platform. URL: https://academy.make.com
+
+4. Make Help Centre. Support Resource. URL: https://www.make.com/en/help
+
+5. Microsoft. (n.d.). Import and Export Blueprints with PowerShell. Microsoft Learn.
+
+6. Microsoft. (n.d.). Azure Blueprints Deprecated. Microsoft Learn.
+
+7. Microsoft. (n.d.). Template Specs. Microsoft Learn.
+
+8. Microsoft. (n.d.). Deployment Stacks. Microsoft Learn.
+
+9. Microsoft. (n.d.). Azure Blueprints Lifecycle. Microsoft Learn.
+
+10. BMC. (n.d.). Exporting or Importing a Blueprint. BMC Documentation.
+
+11. Blueprint Help Center. (n.d.). Migrate - Import/Export. Blueprint Help Docs.
+
+12. Autonoly. (n.d.). Switching Automation Platforms Guide. Autonoly Blog.
+
+13. BMC Communities. Online Community Platform. URL: https://community.bmc.com/
+
+14. GitHub. (n.d.). Source Control Fundamentals. GitHub Docs.
+
+15. Microsoft. (n.d.). CI/CD with Azure DevOps. Microsoft Learn.

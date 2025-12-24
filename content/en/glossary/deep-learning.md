@@ -437,22 +437,41 @@ Deep learning excels when large datasets are available and automatic feature lea
 
 ## References
 
-- [AWS: What is Deep Learning?](https://aws.amazon.com/what-is/deep-learning/)
-- [GeeksforGeeks: Introduction to Deep Learning](https://www.geeksforgeeks.org/deep-learning/introduction-deep-learning/)
-- [Analytics Vidhya: 12 Types of Neural Networks](https://www.analyticsvidhya.com/blog/2020/02/cnn-vs-rnn-vs-mlp-analyzing-3-types-of-neural-networks-in-deep-learning/)
-- [TechTarget: What is Deep Learning?](https://www.techtarget.com/searchenterpriseai/definition/deep-learning)
-- [Columbia University: AI vs. Machine Learning](https://datascience.columbia.edu/about-us/news/artificial-intelligence-ai-vs-machine-learning/)
-- [GeeksforGeeks: Neural Networks Guide](https://www.geeksforgeeks.org/machine-learning/neural-networks-a-beginners-guide/)
-- [Analytics Vidhya: How Neural Networks Work](https://www.analyticsvidhya.com/blog/2020/02/cnn-vs-rnn-vs-mlp-analyzing-3-types-of-neural-networks-in-deep-learning/)
-- [Analytics Vidhya: Perceptron](https://www.analyticsvidhya.com/blog/2021/10/perceptron-building-block-of-artificial-neural-network/)
-- [Analytics Vidhya: CNN Basics](https://www.analyticsvidhya.com/blog/2022/03/basics-of-cnn-in-deep-learning/)
-- [GeeksforGeeks: Convolutional Neural Networks](https://www.geeksforgeeks.org/machine-learning/introduction-convolution-neural-network/)
-- [Analytics Vidhya: RNNs Overview](https://www.analyticsvidhya.com/blog/2022/03/a-brief-overview-of-recurrent-neural-networks-rnn/)
-- [GeeksforGeeks: Recurrent Neural Networks](https://www.geeksforgeeks.org/machine-learning/introduction-to-recurrent-neural-network/)
-- [Analytics Vidhya: LSTM Introduction](https://www.analyticsvidhya.com/blog/2021/03/introduction-to-long-short-term-memory-lstm/)
-- [Analytics Vidhya: Understanding Transformers](https://www.analyticsvidhya.com/blog/2024/04/understanding-transformers-a-deep-dive-into-nlps-core-technology/)
-- [GeeksforGeeks: Getting Started with Transformers](https://www.geeksforgeeks.org/machine-learning/getting-started-with-transformers/)
-- [GeeksforGeeks: Auto-Encoders](https://www.geeksforgeeks.org/machine-learning/auto-encoders/)
-- [GeeksforGeeks: Generative Adversarial Networks](https://www.geeksforgeeks.org/deep-learning/generative-adversarial-network-gan/)
-- [Wikipedia: Types of Artificial Neural Networks](https://en.wikipedia.org/wiki/Types_of_artificial_neural_networks)
-- [IBM: What is Deep Learning?](https://www.ibm.com/topics/deep-learning)
+
+1. AWS. (n.d.). What is Deep Learning?. URL: https://aws.amazon.com/what-is/deep-learning/
+
+2. GeeksforGeeks. (n.d.). Introduction to Deep Learning. URL: https://www.geeksforgeeks.org/deep-learning/introduction-deep-learning/
+
+3. Analytics Vidhya. (2020). 12 Types of Neural Networks. URL: https://www.analyticsvidhya.com/blog/2020/02/cnn-vs-rnn-vs-mlp-analyzing-3-types-of-neural-networks-in-deep-learning/
+
+4. TechTarget. (n.d.). What is Deep Learning?. URL: https://www.techtarget.com/searchenterpriseai/definition/deep-learning
+
+5. Columbia University. (n.d.). AI vs. Machine Learning. URL: https://datascience.columbia.edu/about-us/news/artificial-intelligence-ai-vs-machine-learning/
+
+6. GeeksforGeeks. (n.d.). Neural Networks Guide. URL: https://www.geeksforgeeks.org/machine-learning/neural-networks-a-beginners-guide/
+
+7. Analytics Vidhya. (2020). How Neural Networks Work. URL: https://www.analyticsvidhya.com/blog/2020/02/cnn-vs-rnn-vs-mlp-analyzing-3-types-of-neural-networks-in-deep-learning/
+
+8. Analytics Vidhya. (2021). Perceptron. URL: https://www.analyticsvidhya.com/blog/2021/10/perceptron-building-block-of-artificial-neural-network/
+
+9. Analytics Vidhya. (2022). CNN Basics. URL: https://www.analyticsvidhya.com/blog/2022/03/basics-of-cnn-in-deep-learning/
+
+10. GeeksforGeeks. (n.d.). Convolutional Neural Networks. URL: https://www.geeksforgeeks.org/machine-learning/introduction-convolution-neural-network/
+
+11. Analytics Vidhya. (2022). RNNs Overview. URL: https://www.analyticsvidhya.com/blog/2022/03/a-brief-overview-of-recurrent-neural-networks-rnn/
+
+12. GeeksforGeeks. (n.d.). Recurrent Neural Networks. URL: https://www.geeksforgeeks.org/machine-learning/introduction-to-recurrent-neural-network/
+
+13. Analytics Vidhya. (2021). LSTM Introduction. URL: https://www.analyticsvidhya.com/blog/2021/03/introduction-to-long-short-term-memory-lstm/
+
+14. Analytics Vidhya. (2024). Understanding Transformers. URL: https://www.analyticsvidhya.com/blog/2024/04/understanding-transformers-a-deep-dive-into-nlps-core-technology/
+
+15. GeeksforGeeks. (n.d.). Getting Started with Transformers. URL: https://www.geeksforgeeks.org/machine-learning/getting-started-with-transformers/
+
+16. GeeksforGeeks. (n.d.). Auto-Encoders. URL: https://www.geeksforgeeks.org/machine-learning/auto-encoders/
+
+17. GeeksforGeeks. (n.d.). Generative Adversarial Networks. URL: https://www.geeksforgeeks.org/deep-learning/generative-adversarial-network-gan/
+
+18. Wikipedia. (n.d.). Types of Artificial Neural Networks. URL: https://en.wikipedia.org/wiki/Types_of_artificial_neural_networks
+
+19. IBM. (n.d.). What is Deep Learning?. URL: https://www.ibm.com/topics/deep-learning

@@ -224,20 +224,21 @@ Authorization: Bearer <token>
 
 ## References
 
-- [IBM: What Is an API Endpoint?](https://www.ibm.com/think/topics/api-endpoint)
-- [Stack Overflow: Best Practices for REST API Design](https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/)
-- [Microsoft Learn: RESTful API Design](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design)
-- [impart.security: API Security Monitoring Best Practices](https://www.impart.security/api-security-best-practices/api-security-monitoring)
-- [Moesif: API Monitoring](https://www.moesif.com/blog/technical/api-development/Understanding-API-Endpoint-A-Beginners-Guide/)
-- [Kinsta: API Endpoint Explained](https://kinsta.com/blog/api-endpoint/)
-- [BotPenguin: Chatbot API Guide](https://botpenguin.com/blogs/chatbot-api)
-- [Curity: API Security Best Practices](https://curity.io/resources/learn/api-security-best-practices/)
-- [SentinelOne: API Endpoint Security](https://www.sentinelone.com/cybersecurity-101/endpoint-security/api-endpoint-security/)
-- [impart.ai: Guide to API Rate Limiting](https://www.impart.ai/blog/a-comprehensive-guide-to-rate-limiting-in-the-age-of-apis-and-microservices)
-- [Curity: Split Token Pattern](https://curity.io/resources/learn/split-token-pattern/)
-- [Kinsta: API Documentation Best Practices](https://kinsta.com/blog/api-documentation/)
-- [Swagger/OpenAPI Specification](https://swagger.io/specification/)
-- [AWS CloudWatch](https://aws.amazon.com/cloudwatch/)
-- [Twitter API Documentation](https://developer.twitter.com/en/docs/twitter-api)
-- [AWS: EndpointConfiguration](https://docs.aws.amazon.com/apigateway/latest/api/API_EndpointConfiguration.html)
-- [NPR: T-Mobile Data Breach](https://www.npr.org/2023/01/20/1150215382/t-mobile-data-37-million-customers-stolen)
+
+1. IBM. (n.d.). What Is an API Endpoint?. IBM Think Topics.
+2. Stack Overflow. (2020). Best Practices for REST API Design. Stack Overflow Blog.
+3. Microsoft. (n.d.). RESTful API Design. Microsoft Learn.
+4. impart.security. (n.d.). API Security Monitoring Best Practices. impart.security.
+5. Moesif. (n.d.). API Monitoring. Moesif Blog.
+6. Kinsta. (n.d.). API Endpoint Explained. Kinsta Blog.
+7. BotPenguin. (n.d.). Chatbot API Guide. BotPenguin Blog.
+8. Curity. (n.d.). API Security Best Practices. Curity Resources.
+9. SentinelOne. (n.d.). API Endpoint Security. SentinelOne Cybersecurity 101.
+10. impart.ai. (n.d.). Guide to API Rate Limiting. impart.ai Blog.
+11. Curity. (n.d.). Split Token Pattern. Curity Resources.
+12. Kinsta. (n.d.). API Documentation Best Practices. Kinsta Blog.
+13. Swagger. (n.d.). OpenAPI Specification. Swagger.
+14. AWS CloudWatch. Cloud Monitoring Service. URL: https://aws.amazon.com/cloudwatch/
+15. Twitter API. API Documentation Service. URL: https://developer.twitter.com/en/docs/twitter-api
+16. AWS. (n.d.). EndpointConfiguration. AWS Documentation.
+17. NPR. (2023). T-Mobile Data Breach. NPR News.

@@ -319,18 +319,33 @@ Yes, webhook architectures scale horizontally through load balancing, parallel p
 
 ## References
 
-- [Slack Developer Docs: Creating Webhook Triggers](https://docs.slack.dev/tools/deno-slack-sdk/guides/creating-webhook-triggers)
-- [Microsoft Learn: Use a Webhook as a Trigger](https://learn.microsoft.com/en-us/connectors/custom-connectors/create-webhook-trigger)
-- [Red Hat: What is a Webhook?](https://www.redhat.com/en/topics/automation/what-is-a-webhook)
-- [GitHub Docs: About Webhooks](https://docs.github.com/en/webhooks/about-webhooks)
-- [Kestra: Webhook Trigger](https://kestra.io/docs/workflow-components/triggers/webhook-trigger)
-- [MindStudio: Webhook-Triggered Agents](https://university.mindstudio.ai/docs/deployment-of-ai-agents/webhook-triggered)
-- [Snyk: Webhook Security Best Practices](https://snyk.io/blog/creating-secure-webhooks/)
-- [GitHub: Use HTTPS and SSL Verification](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#use-https-and-ssl-verification)
-- [Snyk: Encrypt Data Sent Through Webhooks](https://snyk.io/blog/creating-secure-webhooks/#Encrypt-data-sent-through-webhooks)
-- [GitHub: Use a Webhook Secret](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#use-a-webhook-secret)
-- [Snyk: Sign Webhooks](https://snyk.io/blog/creating-secure-webhooks/#Sign-webhooks)
-- [GitHub: Subscribe to Minimum Number of Events](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#subscribe-to-the-minimum-number-of-events)
-- [GitHub: Respond Within 10 Seconds](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks#respond-within-10-seconds)
-- [Jenkins Plugins: Generic Webhook Trigger](https://plugins.jenkins.io/generic-webhook-trigger/)
-- [RequestBin Website](https://requestbin.com/)
+
+1. Slack. (n.d.). Creating Webhook Triggers. Slack Developer Docs.
+
+2. Microsoft. (n.d.). Use a Webhook as a Trigger. Microsoft Learn.
+
+3. Red Hat. (n.d.). What is a Webhook?. Red Hat Topics.
+
+4. GitHub. (n.d.). About Webhooks. GitHub Docs.
+
+5. Kestra. (n.d.). Webhook Trigger. Kestra Documentation.
+
+6. MindStudio. (n.d.). Webhook-Triggered Agents. MindStudio University.
+
+7. Snyk. (n.d.). Webhook Security Best Practices. Snyk Blog.
+
+8. GitHub. (n.d.). Use HTTPS and SSL Verification. GitHub Docs.
+
+9. Snyk. (n.d.). Encrypt Data Sent Through Webhooks. Snyk Blog.
+
+10. GitHub. (n.d.). Use a Webhook Secret. GitHub Docs.
+
+11. Snyk. (n.d.). Sign Webhooks. Snyk Blog.
+
+12. GitHub. (n.d.). Subscribe to Minimum Number of Events. GitHub Docs.
+
+13. GitHub. (n.d.). Respond Within 10 Seconds. GitHub Docs.
+
+14. Jenkins. (n.d.). Generic Webhook Trigger. Jenkins Plugins.
+
+15. RequestBin. Web-based Request Inspection Tool. URL: https://requestbin.com/

@@ -341,15 +341,27 @@ url: "/ja/glossary/Rich-Media-Cards/"
 
 ## 参考文献
 
-- [Google RCS Business Messaging: Rich Cards](https://developers.google.com/business-communications/rcs-business-messaging/guides/learn/rich-cards)
-- [Microsoft Bot Framework: Add Rich Card Attachments](https://learn.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards?view=azure-bot-service-4.0)
-- [Sprinklr: Chatbot Analytics](https://www.sprinklr.com/blog/chatbot-analytics/)
-- [Tars: Improve Chatbot Conversion Rate Using Rich Media](https://hellotars.com/blog/improve-chatbot-conversion-rate-rich-media)
-- [Kommunicate: Best Chatbot Practices](https://www.kommunicate.io/blog/best-chatbot-practices/)
-- [Quickchat: Chatbot Analytics Deep Dive](https://quickchat.ai/post/chatbot-analytics)
-- [Adaptive Cards Designer](https://adaptivecards.io/designer/)
-- [Facebook Messenger Platform Templates](https://developers.facebook.com/docs/messenger-platform/send-messages/template/)
-- [WhatsApp Business Messaging Templates](https://developers.facebook.com/docs/whatsapp/api/messages/message-templates)
-- [Sendbird: What is Rich Media?](https://sendbird.com/learn/what-is-rich-media)
-- [Madgicx: Rich Media Ads](https://madgicx.com/blog/rich-media)
-- [Conferbot: Rich Media Features](https://www.conferbot.com/features/rich-media)
+
+1. Google. (n.d.). RCS Business Messaging: Rich Cards. Google Developers.
+
+2. Microsoft. (n.d.). Bot Framework: Add Rich Card Attachments. Microsoft Learn.
+
+3. Sprinklr. (n.d.). Chatbot Analytics. Sprinklr Blog.
+
+4. Tars. (n.d.). Improve Chatbot Conversion Rate Using Rich Media. Tars Blog.
+
+5. Kommunicate. (n.d.). Best Chatbot Practices. Kommunicate Blog.
+
+6. Quickchat. (n.d.). Chatbot Analytics Deep Dive. Quickchat Blog.
+
+7. Adaptive Cards. Service for designing interactive card interfaces. URL: https://adaptivecards.io/designer/
+
+8. Facebook. (n.d.). Messenger Platform Templates. Facebook Developers.
+
+9. Facebook. (n.d.). WhatsApp Business Messaging Templates. Facebook Developers.
+
+10. Sendbird. (n.d.). What is Rich Media?. Sendbird Learn.
+
+11. Madgicx. (n.d.). Rich Media Ads. Madgicx Blog.
+
+12. Conferbot. (n.d.). Rich Media Features. Conferbot Features.

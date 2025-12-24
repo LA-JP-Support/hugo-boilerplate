@@ -257,11 +257,19 @@ Large-scale computing (especially AI training) consumes substantial energy. Opti
 
 ## References
 
-- [PCBONLINE: GPU vs FPGA vs ASIC vs CPU Comparison](https://www.pcbonline.com/blog/gpu-vs-fpga-vs-asic-vs-cpu.html)
-- [Ampheo: Understanding Differences Between Processing Units](https://www.ampheo.com/blog/understand-the-differences-between-cpu-gpu-ipu-npu-tpu-lpu-mcu-mpu-soc-dsp-fpga-asic-gpp-and-ecu)
-- [LinkedIn: CPU vs GPU vs TPU - Ultimate Showdown](https://www.linkedin.com/pulse/cpu-vs-gpu-tpu-dpu-qpu-ultimate-showdown-processing-units-dragutoiu)
-- [Harvard FAS Informatics: Computing Glossary](https://informatics.fas.harvard.edu/resources/glossary/)
-- [K12CS: Computer Science Glossary](https://k12cs.org/glossary/)
-- [Amazon Web Services: EC2 Instances](https://aws.amazon.com/ec2/)
-- [Microsoft Azure: Cloud Computing Overview](https://azure.microsoft.com/en-us/overview/cloud-computing/)
-- [Google Cloud Platform: Compute Engine](https://cloud.google.com/compute)
+
+1. PCBONLINE. (n.d.). GPU vs FPGA vs ASIC vs CPU Comparison. PCBONLINE Blog.
+
+2. Ampheo. (n.d.). Understanding Differences Between Processing Units. Ampheo Blog.
+
+3. Dragutoiu. (n.d.). CPU vs GPU vs TPU - Ultimate Showdown. LinkedIn Pulse.
+
+4. Harvard FAS Informatics. (n.d.). Computing Glossary. Harvard FAS Informatics.
+
+5. K12CS. (n.d.). Computer Science Glossary. K12CS.
+
+6. Amazon Web Services. Cloud Computing Service. URL: https://aws.amazon.com/ec2/
+
+7. Microsoft Azure. Cloud Computing Service. URL: https://azure.microsoft.com/en-us/overview/cloud-computing/
+
+8. Google Cloud Platform. Cloud Computing Service. URL: https://cloud.google.com/compute

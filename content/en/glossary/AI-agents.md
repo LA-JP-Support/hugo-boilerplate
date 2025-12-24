@@ -242,27 +242,28 @@ This iterative approach enables continual learning, context awareness, and dynam
 
 ## References
 
-- [Botpress: Real-World Applications of AI Agents](https://botpress.com/blog/real-world-applications-of-ai-agents)
-- [IBM: Multi-agent Systems in Practice](https://www.ibm.com/think/topics/multiagent-system)
-- [Google Cloud: What are AI agents?](https://cloud.google.com/discover/what-are-ai-agents)
-- [IBM: What Are AI Agents?](https://www.ibm.com/think/topics/ai-agents)
-- [Salesforce: AI Agents – Definition, Types, Examples](https://www.salesforce.com/agentforce/ai-agents/)
-- [IBM: Components of AI Agents](https://www.ibm.com/think/topics/components-of-ai-agents)
-- [Google Cloud: AI agent architecture](https://cloud.google.com/products/agent-builder)
-- [IBM: ReAct Reasoning](https://www.ibm.com/think/topics/react-agent)
-- [Nutrient.io: ReAct vs ReWOO](https://www.nutrient.io/blog/rewoo-vs-react-choosing-right-agent-architecture/)
-- [IBM: AI agents vs AI assistants](https://www.ibm.com/think/topics/ai-agents-vs-ai-assistants)
-- [IBM: Simple Reflex Agent](https://www.ibm.com/think/topics/simple-reflex-agent)
-- [Botpress: Simple Reflex Agents](https://botpress.com/blog/types-of-ai-agents)
-- [IBM: Model-based Reflex Agent](https://www.ibm.com/think/topics/model-based-reflex-agent)
-- [IBM: Goal-based Agent](https://www.ibm.com/think/topics/goal-based-agent)
-- [IBM: Utility-based Agent](https://www.ibm.com/think/topics/utility-based-agent)
-- [IBM: Learning](https://www.ibm.com/think/topics/ai-agent-learning)
-- [IBM: Hierarchical AI Agents](https://www.ibm.com/think/topics/hierarchical-ai-agents)
-- [Sprinklr: Types of AI Agents](https://www.sprinklr.com/blog/types-of-ai-agents/)
-- [IBM: Agentic Workflows](https://www.ibm.com/think/topics/agentic-workflows)
-- [IBM: AI Agent Orchestration](https://www.ibm.com/think/topics/ai-agent-orchestration)
-- [Salesforce: AI in Customer Service](https://www.salesforce.com/agentforce/use-cases/)
-- [IBM: How to Build an AI Agent](https://www.ibm.com/think/topics/how-to-build-an-ai-agent)
-- [AWS: What are AI Agents?](https://aws.amazon.com/what-is/ai-agents/)
-- [YouTube: AI Agents, Clearly Explained](https://www.youtube.com/watch?v=FwOTs4UxQS4)
+
+1. Botpress. (n.d.). Real-World Applications of AI Agents. Botpress Blog.
+2. IBM. (n.d.). Multi-agent Systems in Practice. IBM Think Topics.
+3. Google Cloud. (n.d.). What are AI agents?. Google Cloud Discover.
+4. IBM. (n.d.). What Are AI Agents?. IBM Think Topics.
+5. Salesforce. (n.d.). AI Agents – Definition, Types, Examples. Salesforce AgentForce.
+6. IBM. (n.d.). Components of AI Agents. IBM Think Topics.
+7. Google Cloud. (n.d.). AI agent architecture. Google Cloud Products.
+8. IBM. (n.d.). ReAct Reasoning. IBM Think Topics.
+9. Nutrient.io. (n.d.). ReAct vs ReWOO. Nutrient.io Blog.
+10. IBM. (n.d.). AI agents vs AI assistants. IBM Think Topics.
+11. IBM. (n.d.). Simple Reflex Agent. IBM Think Topics.
+12. Botpress. (n.d.). Simple Reflex Agents. Botpress Blog.
+13. IBM. (n.d.). Model-based Reflex Agent. IBM Think Topics.
+14. IBM. (n.d.). Goal-based Agent. IBM Think Topics.
+15. IBM. (n.d.). Utility-based Agent. IBM Think Topics.
+16. IBM. (n.d.). Learning. IBM Think Topics.
+17. IBM. (n.d.). Hierarchical AI Agents. IBM Think Topics.
+18. Sprinklr. (n.d.). Types of AI Agents. Sprinklr Blog.
+19. IBM. (n.d.). Agentic Workflows. IBM Think Topics.
+20. IBM. (n.d.). AI Agent Orchestration. IBM Think Topics.
+21. Salesforce. (n.d.). AI in Customer Service. Salesforce AgentForce.
+22. IBM. (n.d.). How to Build an AI Agent. IBM Think Topics.
+23. AWS. (n.d.). What are AI Agents?. AWS.
+24. YouTube. (n.d.). AI Agents, Clearly Explained. YouTube.

@@ -306,11 +306,19 @@ Review analytics, refine flows based on performance data, update knowledge sourc
 
 ## References
 
-- [FlowHunt Official Website](https://www.flowhunt.io/)
-- [FlowHunt AI Chatbot Integration Guide](https://support.qualityunit.com/549524-FlowHunt-AI-Chatbot-Integration)
-- [AI Agents Directory: FlowHunt Overview](https://aiagentsdirectory.com/agent/flowhunt)
-- [FlowHunt Features](https://www.flowhunt.io/features/)
-- [FlowHunt Integrations](https://www.flowhunt.io/integrations/)
-- [FlowHunt Blog](https://www.flowhunt.io/blog/)
-- [LiveAgent FAQ: What is FlowHunt?](https://faq.liveagent.com/653339-What-is-FlowHunt)
-- [Book FlowHunt Demo Session](https://www.flowhunt.io/demo/)
+
+1. FlowHunt. Official Website. URL: https://www.flowhunt.io/
+
+2. FlowHunt. AI Chatbot Integration Guide. URL: https://support.qualityunit.com/549524-FlowHunt-AI-Chatbot-Integration
+
+3. AI Agents Directory. FlowHunt Overview. URL: https://aiagentsdirectory.com/agent/flowhunt
+
+4. FlowHunt. Features. URL: https://www.flowhunt.io/features/
+
+5. FlowHunt. Integrations. URL: https://www.flowhunt.io/integrations/
+
+6. FlowHunt. Blog. URL: https://www.flowhunt.io/blog/
+
+7. LiveAgent. FAQ: What is FlowHunt?. URL: https://faq.liveagent.com/653339-What-is-FlowHunt
+
+8. FlowHunt. Book Demo Session. URL: https://www.flowhunt.io/demo/

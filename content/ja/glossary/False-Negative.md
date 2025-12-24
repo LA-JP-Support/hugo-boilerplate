@@ -205,13 +205,14 @@ A: テスト信頼性のためのLambdaTest、ライブチャットボット分�
 
 ## 参考文献
 
-- [Alessa: AI Blind Spots & False Negatives](https://alessa.com/blog/ai-blind-spots-and-false-negatives/)
-- [Decagon: AI Chatbot Challenges & Solutions](https://decagon.ai/resources/ai-chatbot-challenges)
-- [Sapien AI Glossary: False Negative](https://www.sapien.io/glossary/definition/false-negative)
-- [Prompts.ai: Real-Time Chatbot Issue Detection](https://www.prompts.ai/en/blog/real-time-chatbot-issue-detection-techniques)
-- [LambdaTest: How False Positive and False Negative Affect Product Quality](https://www.lambdatest.com/blog/false-positive-and-false-negative/)
-- [USD Law: Problems with AI Detectors – False Negatives](https://lawlibguides.sandiego.edu/c.php?g=1443311&p=10721367)
-- [T2D2: The Confusion Matrix – False Positives and False Negatives](https://t2d2.ai/blog/the-confusion-matrix-false-positives-and-false-negatives-in-ai)
-- [Google ML Crash Course: Thresholds and Confusion Matrix](https://developers.google.com/machine-learning/crash-course/classification/thresholding)
-- [Oracle: Building a Confusion Matrix](https://blogs.oracle.com/ai-and-datascience/a-simple-guide-to-building-a-confusion-matrix)
-- [ScienceDirect: False Positives and Negatives in Generative AI Detection](https://www.sciencedirect.com/science/article/abs/pii/S1472811723000605)
+
+1. Alessa. (n.d.). AI Blind Spots & False Negatives. Alessa Blog.
+2. Decagon. (n.d.). AI Chatbot Challenges & Solutions. Decagon Resources.
+3. Sapien AI. (n.d.). False Negative. Sapien AI Glossary.
+4. Prompts.ai. (n.d.). Real-Time Chatbot Issue Detection Techniques. Prompts.ai Blog.
+5. LambdaTest. (n.d.). How False Positive and False Negative Affect Product Quality. LambdaTest Blog.
+6. USD Law. (n.d.). Problems with AI Detectors – False Negatives. USD Law Library Guides.
+7. T2D2. (n.d.). The Confusion Matrix – False Positives and False Negatives in AI. T2D2 Blog.
+8. Google. (n.d.). Thresholds and Confusion Matrix. Google ML Crash Course.
+9. Oracle. (n.d.). Building a Confusion Matrix. Oracle AI and Data Science Blog.
+10. ScienceDirect. (n.d.). False Positives and Negatives in Generative AI Detection. ScienceDirect.

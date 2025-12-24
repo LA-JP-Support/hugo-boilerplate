@@ -305,12 +305,13 @@ Node.jsイベントループは、根本的に異なる概念を表します—�
 
 ## 参考資料
 
-- [MindPal: Loop Node Documentation](https://docs.mindpal.space/workflow/build/loop-node)
-- [n8n: Looping Documentation](https://docs.n8n.io/flow-logic/looping/)
-- [n8n: Node Exceptions](https://docs.n8n.io/flow-logic/looping/#node-exceptions)
-- [Power Automate: Loops Reference](https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/loops)
-- [Power Automate: Using Loops](https://learn.microsoft.com/en-us/power-automate/desktop-flows/use-loops)
-- [Node.js: Event Loop Guide](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
-- [GeeksforGeeks: Node.js Event Loop](https://www.geeksforgeeks.org/node-js/node-js-event-loop/)
-- [Master Loop Node in n8n (YouTube)](https://www.youtube.com/watch?v=acFkskQj-kw)
-- [Loops in Power Automate (YouTube)](https://www.youtube.com/watch?v=54ZFR4SCkO0)
+
+1. MindPal. (n.d.). Loop Node Documentation. MindPal Docs.
+2. n8n. (n.d.). Looping Documentation. n8n Docs.
+3. n8n. (n.d.). Node Exceptions. n8n Docs.
+4. Microsoft. (n.d.). Loops Reference. Power Automate Learn.
+5. Microsoft. (n.d.). Using Loops. Power Automate Learn.
+6. Node.js. (n.d.). Event Loop Guide. Node.js Learn.
+7. GeeksforGeeks. (n.d.). Node.js Event Loop. GeeksforGeeks.
+8. Unknown. (n.d.). Master Loop Node in n8n. YouTube.
+9. Unknown. (n.d.). Loops in Power Automate. YouTube.

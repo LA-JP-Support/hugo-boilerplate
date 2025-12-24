@@ -203,17 +203,31 @@ url: "/ja/glossary/Model-Cards/"
 
 ## 参考文献
 
-- [Google: Model Cards for Model Reporting (arXiv)](https://arxiv.org/abs/1810.03993)
-- [Google Model Cards Overview](https://modelcards.withgoogle.com/)
-- [Hugging Face: Model Cards Documentation](https://huggingface.co/docs/hub/en/model-cards)
-- [Hugging Face: Model Card Guidebook](https://huggingface.co/docs/hub/en/model-card-guidebook)
-- [Hugging Face: Annotated Model Card Template](https://huggingface.co/docs/hub/en/model-card-annotated)
-- [Google: Model Card Toolkit](https://ai.googleblog.com/2020/07/introducing-model-card-toolkit-for.html)
-- [GitHub: Model Card Toolkit](https://github.com/tensorflow/model-card-toolkit)
-- [GitHub: Hugging Face Model Card Template](https://github.com/huggingface/huggingface_hub/blob/main/src/huggingface_hub/templates/modelcard_template.md)
-- [Meta: Llama Model Card](https://github.com/facebookresearch/llama/blob/main/MODEL_CARD.md)
-- [OpenAI: GPT-3 Model Card](https://github.com/openai/gpt-3/blob/master/model-card.md)
-- [Google: Face Detection Model Card](https://modelcards.withgoogle.com/face-detection)
-- [IBM: AI FactSheets](https://aifs360.mybluemix.net/introduction)
-- [Datatonic: Responsible AI Data and Model Cards](https://datatonic.com/insights/responsible-ai-data-model-cards/)
-- [arXiv: Datasheets for Datasets](https://arxiv.org/abs/1803.09010)
+
+1. Google. (2018). Model Cards for Model Reporting. arXiv.
+
+2. Google. (n.d.). Model Cards Overview. URL: https://modelcards.withgoogle.com/
+
+3. Hugging Face. (n.d.). Model Cards Documentation. URL: https://huggingface.co/docs/hub/en/model-cards)
+
+4. Hugging Face. (n.d.). Model Card Guidebook. URL: https://huggingface.co/docs/hub/en/model-card-guidebook)
+
+5. Hugging Face. (n.d.). Annotated Model Card Template. URL: https://huggingface.co/docs/hub/en/model-card-annotated)
+
+6. Google. (2020). Model Card Toolkit. AI Google Blog.
+
+7. TensorFlow. (n.d.). Model Card Toolkit. URL: https://github.com/tensorflow/model-card-toolkit)
+
+8. Hugging Face. (n.d.). Model Card Template. URL: https://github.com/huggingface/huggingface_hub/blob/main/src/huggingface_hub/templates/modelcard_template.md)
+
+9. Meta. (n.d.). Llama Model Card. URL: https://github.com/facebookresearch/llama/blob/main/MODEL_CARD.md)
+
+10. OpenAI. (n.d.). GPT-3 Model Card. URL: https://github.com/openai/gpt-3/blob/master/model-card.md)
+
+11. Google. (n.d.). Face Detection Model Card. URL: https://modelcards.withgoogle.com/face-detection)
+
+12. IBM. (n.d.). AI FactSheets. URL: https://aifs360.mybluemix.net/introduction)
+
+13. Datatonic. (n.d.). Responsible AI Data and Model Cards. URL: https://datatonic.com/insights/responsible-ai-data-model-cards/)
+
+14. (n.d.). Datasheets for Datasets. arXiv.

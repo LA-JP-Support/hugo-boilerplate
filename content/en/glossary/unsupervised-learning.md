@@ -336,19 +336,35 @@ Dimensionality reduction creates features for supervised models, clustering gene
 
 ## References
 
-- [DeepAI: Unsupervised Learning](https://deepai.org/machine-learning-glossary-and-terms/unsupervised-learning)
-- [IBM: What is Unsupervised Learning?](https://www.ibm.com/think/topics/unsupervised-learning)
-- [Vation Ventures: Unsupervised Learning](https://www.vationventures.com/glossary/unsupervised-learning-definition-explanation-and-use-cases)
-- [Mind Foundry: Unsupervised Learning Glossary](https://www.mindfoundry.ai/ai-glossary/unsupervised-learning)
-- [GeeksforGeeks: What is Unsupervised Learning](https://www.geeksforgeeks.org/machine-learning/unsupervised-learning/)
-- [GeeksforGeeks: Clustering in Machine Learning](https://www.geeksforgeeks.org/machine-learning/clustering-in-machine-learning/)
-- [GeeksforGeeks: K-Means Clustering](https://www.geeksforgeeks.org/machine-learning/k-means-clustering-introduction/)
-- [GeeksforGeeks: DBSCAN Clustering](https://www.geeksforgeeks.org/machine-learning/dbscan-clustering-in-ml-density-based-clustering/)
-- [GeeksforGeeks: Hierarchical Clustering](https://www.geeksforgeeks.org/machine-learning/agglomerative-methods-in-machine-learning/)
-- [GeeksforGeeks: Dimensionality Reduction](https://www.geeksforgeeks.org/machine-learning/dimensionality-reduction/)
-- [GeeksforGeeks: Principal Component Analysis](https://www.geeksforgeeks.org/data-analysis/principal-component-analysis-pca/)
-- [GeeksforGeeks: Association Rule Learning](https://www.geeksforgeeks.org/machine-learning/association-rule/)
-- [GeeksforGeeks: Apriori Algorithm](https://www.geeksforgeeks.org/machine-learning/apriori-algorithm/)
-- [Scikit-learn: Unsupervised Dimensionality Reduction](https://scikit-learn.org/stable/modules/unsupervised_reduction.html)
-- [Scikit-learn: Clustering](https://scikit-learn.org/stable/modules/clustering.html)
-- [Wikipedia: Association Rule Learning](https://en.wikipedia.org/wiki/Association_rule_learning)
+
+1. DeepAI. (n.d.). Unsupervised Learning. DeepAI Machine Learning Glossary. URL: https://deepai.org/machine-learning-glossary-and-terms/unsupervised-learning
+
+2. IBM. (n.d.). What is Unsupervised Learning?. IBM Think Topics. URL: https://www.ibm.com/think/topics/unsupervised-learning
+
+3. Vation Ventures. (n.d.). Unsupervised Learning. Vation Ventures Glossary. URL: https://www.vationventures.com/glossary/unsupervised-learning-definition-explanation-and-use-cases
+
+4. Mind Foundry. (n.d.). Unsupervised Learning Glossary. Mind Foundry AI Glossary. URL: https://www.mindfoundry.ai/ai-glossary/unsupervised-learning
+
+5. GeeksforGeeks. (n.d.). What is Unsupervised Learning. GeeksforGeeks Machine Learning. URL: https://www.geeksforgeeks.org/machine-learning/unsupervised-learning/
+
+6. GeeksforGeeks. (n.d.). Clustering in Machine Learning. GeeksforGeeks Machine Learning. URL: https://www.geeksforgeeks.org/machine-learning/clustering-in-machine-learning/
+
+7. GeeksforGeeks. (n.d.). K-Means Clustering. GeeksforGeeks Machine Learning. URL: https://www.geeksforgeeks.org/machine-learning/k-means-clustering-introduction/
+
+8. GeeksforGeeks. (n.d.). DBSCAN Clustering. GeeksforGeeks Machine Learning. URL: https://www.geeksforgeeks.org/machine-learning/dbscan-clustering-in-ml-density-based-clustering/
+
+9. GeeksforGeeks. (n.d.). Hierarchical Clustering. GeeksforGeeks Machine Learning. URL: https://www.geeksforgeeks.org/machine-learning/agglomerative-methods-in-machine-learning/
+
+10. GeeksforGeeks. (n.d.). Dimensionality Reduction. GeeksforGeeks Machine Learning. URL: https://www.geeksforgeeks.org/machine-learning/dimensionality-reduction/
+
+11. GeeksforGeeks. (n.d.). Principal Component Analysis. GeeksforGeeks Data Analysis. URL: https://www.geeksforgeeks.org/data-analysis/principal-component-analysis-pca/
+
+12. GeeksforGeeks. (n.d.). Association Rule Learning. GeeksforGeeks Machine Learning. URL: https://www.geeksforgeeks.org/machine-learning/association-rule/
+
+13. GeeksforGeeks. (n.d.). Apriori Algorithm. GeeksforGeeks Machine Learning. URL: https://www.geeksforgeeks.org/machine-learning/apriori-algorithm/
+
+14. Scikit-learn. (n.d.). Unsupervised Dimensionality Reduction. Scikit-learn Documentation. URL: https://scikit-learn.org/stable/modules/unsupervised_reduction.html
+
+15. Scikit-learn. (n.d.). Clustering. Scikit-learn Documentation. URL: https://scikit-learn.org/stable/modules/clustering.html
+
+16. Wikipedia. (n.d.). Association Rule Learning. Wikipedia. URL: https://en.wikipedia.org/wiki/Association_rule_learning

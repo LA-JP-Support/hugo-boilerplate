@@ -284,14 +284,25 @@ AI、リアルタイム分析、シームレスな自動化が、ソーシャル
 
 ## 参考文献
 
-1. DataReportal. [Global Social Media Statistics](https://datareportal.com/social-media-users)
-2. Pew Research Center. [Social Media and News Fact Sheet](https://www.pewresearch.org/journalism/fact-sheet/social-media-and-news-fact-sheet/)
-3. Investopedia. [Social Media: Definition, Importance, Top Websites, and Apps](https://www.investopedia.com/terms/s/social-media.asp)
-4. Hootsuite. [What is social media automation? A guide for businesses in 2025](https://blog.hootsuite.com/social-media-automation/)
-5. Wix. [What are social media platforms? | a definition](https://www.wix.com/encyclopedia/definition/social-media-platforms)
-6. Local Marketing Group. [Exploring Social Media Platforms and Their Unique Characteristics](https://teamlmg.au/post/exploring-social-media-platforms-and-their-unique-characteristics)
-7. Justin Welsh. [What are Social Media Platforms?](https://www.justinwelsh.me/glossary/what-are-social-media-platforms)
-8. Clutch. [How Social Media is Transforming PR and the Consumer-Business Relationship](https://clutch.co/resources/how-social-media-is-transforming-pr-and-the-consumer-business-relationship)
-9. Talkwalker by Hootsuite. [Talkwalker](https://www.hootsuite.com/talkwalker)
-10. Later. [Later Social Media Scheduler](https://later.com/try/trial/get-started/)
-11. Meta Platforms, Inc., Form 10-K, For the Fiscal Year Ended December 31, 2024 [SEC Filing](https://d18rn0p25nwr6d.cloudfront.net/CIK-0001326801/a8eb8302-b52c-4db5-964f-a2d796c05f4b.pdf)
+
+1. DataReportal. (n.d.). Global Social Media Statistics. DataReportal.
+
+2. Pew Research Center. (n.d.). Social Media and News Fact Sheet. Pew Research Center.
+
+3. Investopedia. (n.d.). Social Media: Definition, Importance, Top Websites, and Apps. Investopedia.
+
+4. Hootsuite. (2025). What is social media automation? A guide for businesses in 2025. Hootsuite Blog.
+
+5. Wix. (n.d.). What are social media platforms? | a definition. Wix.
+
+6. Local Marketing Group. (n.d.). Exploring Social Media Platforms and Their Unique Characteristics. Local Marketing Group.
+
+7. Welsh, J. (n.d.). What are Social Media Platforms?. Justin Welsh.
+
+8. Clutch. (n.d.). How Social Media is Transforming PR and the Consumer-Business Relationship. Clutch.
+
+9. Talkwalker. Social Media Analytics Tool. URL: https://www.hootsuite.com/talkwalker
+
+10. Later. Social Media Scheduler. URL: https://later.com/try/trial/get-started/
+
+11. Meta Platforms, Inc. (2024). Form 10-K, For the Fiscal Year Ended December 31, 2024. SEC Filing.

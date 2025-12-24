@@ -192,13 +192,14 @@ Process of managing changes to service APIs or data contracts ensuring backward 
 
 ## References
 
-- [Microservices.io: Glossary](https://microservices.io/articles/glossary)
-- [AWS Microservices Glossary](https://docs.aws.amazon.com/whitepapers/latest/microservices-on-aws/glossary.html)
-- [Azure: Microservices Architecture](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)
-- [Google Cloud: Microservices Architecture](https://cloud.google.com/learn/what-is-microservices-architecture)
-- [GeeksforGeeks: Microservices System Design](https://www.geeksforgeeks.org/system-design/microservices/)
-- [Microservices.io: Patterns](https://microservices.io/patterns/index.html)
-- [Microservices.io: Anti-Patterns](https://microservices.io/patterns/anti-patterns/index.html)
-- [Eventuate: Distributed Data Patterns](https://eventuate.io/)
-- [GeeksforGeeks: System Design Fundamentals](https://www.geeksforgeeks.org/system-design/get)
-- [YouTube: Microservices Explained](https://www.youtube.com/watch?v=lL_j7ilk7rc)
+
+1. Microservices.io. (n.d.). Glossary. Microservices.io.
+2. AWS. (n.d.). Microservices Glossary. AWS Documentation.
+3. Microsoft. (n.d.). Microservices Architecture. Azure Learn.
+4. Google Cloud. (n.d.). Microservices Architecture. Google Cloud.
+5. GeeksforGeeks. (n.d.). Microservices System Design. GeeksforGeeks.
+6. Microservices.io. (n.d.). Patterns. Microservices.io.
+7. Microservices.io. (n.d.). Anti-Patterns. Microservices.io.
+8. Eventuate. (n.d.). Distributed Data Patterns. Eventuate.
+9. GeeksforGeeks. (n.d.). System Design Fundamentals. GeeksforGeeks.
+10. YouTube. (n.d.). Microservices Explained. YouTube.

@@ -189,13 +189,14 @@ Advanced analytics engines process interaction data to identify trends, predict 
 
 ## References
 
-- [What is Contact Center as a Service (CCaaS)? - NICE](https://www.nice.com/glossary/what-is-ccaas-contact-center-as-a-service)
-- [What is Contact Center as a Service (CCaaS)? - IBM](https://www.ibm.com/think/topics/contact-center-as-a-service)
-- [What is Contact Center as a Service? - ServiceNow](https://www.servicenow.com/products/customer-service-management/what-is-ccaas.html)
-- [What is CCaaS / Contact Center as a Service? - Webex](https://www.webex.com/what-is-ccaas.html)
-- [What Is Contact Center as a Service (CCaaS)? A Full Guide - Nextiva](https://www.nextiva.com/blog/contact-center-as-a-service.html)
-- [Contact Center as a Service (CCaaS) - AWS](https://aws.amazon.com/marketplace/solutions/business-applications/what-is/contact-center-as-a-service-ccaas)
-- [What is Contact Center as a Service (CCaaS)? - Talkdesk](https://www.talkdesk.com/blog/what-is-ccaas-a-brief-history-of-contact-center-as-a-service/)
-- [What is Contact Center as a Service (CCaaS)? - TechTarget](https://www.techtarget.com/searchcustomerexperience/definition/contact-center-as-a-service-CCaS)
-- [Contact Center AI Platform (CCAI Platform) - Google Cloud](https://docs.cloud.google.com/contact-center/ccai-platform/docs)
-- [What is CCaaS? A Guide to Contact Center as a Service - Puzzel](https://www.puzzel.com/blog/what-is-ccaas)
+
+1. NICE. (n.d.). What is Contact Center as a Service (CCaaS)?. NICE Glossary.
+2. IBM. (n.d.). What is Contact Center as a Service (CCaaS)?. IBM Think Topics.
+3. ServiceNow. (n.d.). What is Contact Center as a Service?. ServiceNow Products.
+4. Webex. (n.d.). What is CCaaS / Contact Center as a Service?. Webex.
+5. Nextiva. (n.d.). What Is Contact Center as a Service (CCaaS)? A Full Guide. Nextiva Blog.
+6. AWS. (n.d.). Contact Center as a Service (CCaaS). AWS Marketplace.
+7. Talkdesk. (n.d.). What is Contact Center as a Service (CCaaS)? A Brief History of Contact Center as a Service. Talkdesk Blog.
+8. TechTarget. (n.d.). What is Contact Center as a Service (CCaaS)?. TechTarget SearchCustomerExperience.
+9. Google Cloud. (n.d.). Contact Center AI Platform (CCAI Platform). Google Cloud Docs.
+10. Puzzel. (n.d.). What is CCaaS? A Guide to Contact Center as a Service. Puzzel Blog.

@@ -326,11 +326,12 @@ Dashboard platforms range from free open-source tools to enterprise solutions co
 
 ## References
 
-- [Sigma Computing: Guide to Dashboards](https://www.sigmacomputing.com/blog/guide-to-dashboards)
-- [Monday.com: AI Dashboard](https://monday.com/blog/project-management/ai-dashboard/)
-- [Skykit: What is a Dashboard Display?](https://www.skykit.com/blog/what-is-a-dashboard-display/)
-- [Excelmatic: What is a Dashboard?](https://excelmatic.ai/blog/what-is-a-dashboard/)
-- [Gartner: Dashboard Glossary](https://www.gartner.com/en/information-technology/glossary/dashboard)
-- [ThoughtSpot: What is a Dashboard?](https://www.thoughtspot.com/data-trends/dashboard/what-is-a-dashboard)
-- [Ingentis: Dashboards in Data Management](https://www.ingentis.com/en/blog/dashboards-in-datamanagement/)
-- [ArcGIS Dashboards: What is a Dashboard?](https://doc.arcgis.com/en/dashboards/latest/get-started/what-is-a-dashboard.htm)
+
+1. Sigma Computing. (n.d.). Guide to Dashboards. Sigma Computing Blog.
+2. Monday.com. (n.d.). AI Dashboard. Monday.com Blog.
+3. Skykit. (n.d.). What is a Dashboard Display?. Skykit Blog.
+4. Excelmatic. (n.d.). What is a Dashboard?. Excelmatic Blog.
+5. Gartner. (n.d.). Dashboard Glossary. Gartner IT Glossary.
+6. ThoughtSpot. (n.d.). What is a Dashboard?. ThoughtSpot Data Trends.
+7. Ingentis. (n.d.). Dashboards in Data Management. Ingentis Blog.
+8. ArcGIS. (n.d.). What is a Dashboard?. ArcGIS Documentation.

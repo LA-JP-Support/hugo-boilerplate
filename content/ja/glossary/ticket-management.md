@@ -320,12 +320,21 @@ CRM、コミュニケーション、監視、ビジネスプラットフォー�
 
 ## 参考文献
 
-- [HappyFox: What is a Ticketing System? A Complete Guide in 2024](https://www.happyfox.com/ticketing-system/)
-- [Apps365: Ticket Management Process - A Comprehensive Guide In 2025](https://www.apps365.com/blog/ticket-management-process/)
-- [InvGate: Ticketing System Guide - How They Work, Features, Top Options](https://blog.invgate.com/ticketing-system)
-- [Freshdesk: What is Ticket Management - Complete Guide](https://www.freshworks.com/ticketing-system/management-guide/)
-- [LiveAgent: Ticket Management Explained - Tools and Tips](https://www.liveagent.com/customer-support-glossary/ticket-management/)
-- [Zendesk: Omnichannel Support](https://www.zendesk.com/omnichannel/)
-- [Zoho Desk: Customer Portal](https://www.zoho.com/desk/customer-portal.html)
-- [Help Scout: Shared Inbox](https://www.helpscout.com/shared-inbox/)
-- [ProProfs: What is a Ticket Management System? A Complete Guide](https://www.proprofsdesk.com/blog/what-is-a-ticket-management-system/)
+
+1. HappyFox. (2024). What is a Ticketing System? A Complete Guide in 2024. HappyFox Blog.
+
+2. Apps365. (2025). Ticket Management Process - A Comprehensive Guide In 2025. Apps365 Blog.
+
+3. InvGate. (n.d.). Ticketing System Guide - How They Work, Features, Top Options. InvGate Blog.
+
+4. Freshdesk. (n.d.). What is Ticket Management - Complete Guide. Freshworks Blog.
+
+5. LiveAgent. (n.d.). Ticket Management Explained - Tools and Tips. LiveAgent Customer Support Glossary.
+
+6. Zendesk. Omnichannel Support. URL: https://www.zendesk.com/omnichannel/
+
+7. Zoho Desk. Customer Portal. URL: https://www.zoho.com/desk/customer-portal.html
+
+8. Help Scout. Shared Inbox. URL: https://www.helpscout.com/shared-inbox/
+
+9. ProProfs. (n.d.). What is a Ticket Management System? A Complete Guide. ProProfs Desk Blog.

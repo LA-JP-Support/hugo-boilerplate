@@ -287,16 +287,17 @@ Manage product catalog updates, inventory synchronization, and order processing 
 
 ## References
 
-- [Zuplo: 10 Best Practices for API Rate Limiting in 2025](https://zuplo.com/learning-center/10-best-practices-for-api-rate-limiting-in-2025)
-- [Zuplo: What is API Rate Limiting?](https://zuplo.com/features/rate-limiting)
-- [Zuplo: The Subtle Art of Rate Limiting](https://zuplo.com/learning-center/subtle-art-of-rate-limiting-an-api)
-- [Cloudflare: Rate Limiting Best Practices](https://developers.cloudflare.com/waf/rate-limiting-rules/best-practices/)
-- [KongHQ: What is API Rate Limiting?](https://konghq.com/blog/learning-center/what-is-api-rate-limiting)
-- [MDN: HTTP 429 Too Many Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)
-- [Solo.io: Rate Limiting Algorithms](https://www.solo.io/topics/rate-limiting)
-- [DataDome: What is API Rate Limiting?](https://datadome.co/bot-management-protection/what-is-api-rate-limiting/)
-- [Testfully: API Rate Limit Explained](https://testfully.io/blog/api-rate-limit/)
-- [Tenacity: Python Retry Library](https://tenacity.readthedocs.io/en/latest/)
-- [Reddit: Best Practices for Handling API Rate Limits](https://www.reddit.com/r/node/comments/1hsrlrf/best_practices_for_handling_thirdparty_api_rate/)
-- [YouTube: Rate Limiting System Design](https://www.youtube.com/watch?v=F1YQ7YRjttI)
-- [YouTube: How to Design a Rate Limiter](https://www.youtube.com/watch?v=V4z1rJQyImM)
+
+1. Zuplo. (2025). 10 Best Practices for API Rate Limiting in 2025. Zuplo Learning Center.
+2. Zuplo. (n.d.). What is API Rate Limiting?. Zuplo Features.
+3. Zuplo. (n.d.). The Subtle Art of Rate Limiting. Zuplo Learning Center.
+4. Cloudflare. (n.d.). Rate Limiting Best Practices. Cloudflare Developers.
+5. KongHQ. (n.d.). What is API Rate Limiting?. KongHQ Blog.
+6. Mozilla Developer Network. (n.d.). HTTP 429 Too Many Requests. MDN Web Docs.
+7. Solo.io. (n.d.). Rate Limiting Algorithms. Solo.io Topics.
+8. DataDome. (n.d.). What is API Rate Limiting?. DataDome Blog.
+9. Testfully. (n.d.). API Rate Limit Explained. Testfully Blog.
+10. Tenacity. (n.d.). Python Retry Library. Tenacity Documentation.
+11. Reddit. (n.d.). Best Practices for Handling API Rate Limits. Reddit r/node.
+12. YouTube. (n.d.). Rate Limiting System Design. YouTube.
+13. YouTube. (n.d.). How to Design a Rate Limiter. YouTube.

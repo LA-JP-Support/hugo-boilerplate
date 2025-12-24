@@ -251,22 +251,23 @@ Metrics like retention rate, NPS, and return frequency are strong indicators of 
 
 ## References
 
-- [Contentsquare: 8 Pivotal User Engagement Metrics to Track and Measure](https://contentsquare.com/guides/user-engagement/metrics/)
-- [Zendesk: 4 Customer Engagement Metrics and How to Measure Them](https://www.zendesk.de/blog/4-customer-engagement-metrics-measure/)
-- [Sprout Social: The Social Media Metrics to Track in 2025](https://sproutsocial.com/insights/social-media-metrics/)
-- [Omniconvert: Engagement Metrics - Measurement, Types and Business Uses](https://www.omniconvert.com/blog/engagement-metrics/)
-- [Splunk: User Engagement UX Metrics](https://www.splunk.com/en_us/blog/learn/user-engagement-ux-metrics.html)
-- [Google Analytics: Conversion Tracking](https://support.google.com/analytics/answer/9267568?hl=en)
-- [Google Analytics: Bounce Rate](https://support.google.com/analytics/answer/10094009?hl=en)
-- [Google Analytics: User Engagement](https://support.google.com/analytics/answer/11109416?hl=en)
-- [Google Analytics: Pages per Session](https://support.google.com/analytics/answer/9103001)
-- [Contentsquare: Goal Conversion Rate](https://contentsquare.com/guides/google-analytics-glossary/goal-conversion-rate/)
-- [Contentsquare: Bounce Rate Guide](https://contentsquare.com/guides/google-analytics-glossary/bounce-rate/)
-- [Contentsquare: Click-Through Rate](https://contentsquare.com/guides/conversion-rate-optimization-glossary/click-through-rate/)
-- [Contentsquare: Web Analytics Platform](https://contentsquare.com/platform/web-analytics/)
-- [Contentsquare: Heatmaps](https://contentsquare.com/platform/capabilities/heatmaps/)
-- [Contentsquare: Product Analytics](https://contentsquare.com/platform/product-analytics/)
-- [Sprout Social: Social Media Conversion](https://sproutsocial.com/insights/social-media-conversion/)
-- [Sprout Social: Net Promoter Score](https://sproutsocial.com/insights/net-promoter-score/)
-- [Zendesk: Creating NPS Survey](https://support.zendesk.com/hc/en-us/articles/203755166-Creating-and-sending-a-Net-Promoter-Score-survey-to-measure-customer-loyalty)
-- [Google Analytics: Scroll Depth Plugin](https://scrolldepth.parsnip.io/)
+
+1. Contentsquare. (n.d.). 8 Pivotal User Engagement Metrics to Track and Measure. Contentsquare Guide.
+2. Zendesk. (n.d.). 4 Customer Engagement Metrics and How to Measure Them. Zendesk Blog.
+3. Sprout Social. (2025). The Social Media Metrics to Track in 2025. Sprout Social Insights.
+4. Omniconvert. (n.d.). Engagement Metrics - Measurement, Types and Business Uses. Omniconvert Blog.
+5. Splunk. (n.d.). User Engagement UX Metrics. Splunk Blog.
+6. Google Analytics. (n.d.). Conversion Tracking. Google Analytics Support.
+7. Google Analytics. (n.d.). Bounce Rate. Google Analytics Support.
+8. Google Analytics. (n.d.). User Engagement. Google Analytics Support.
+9. Google Analytics. (n.d.). Pages per Session. Google Analytics Support.
+10. Contentsquare. (n.d.). Goal Conversion Rate. Contentsquare Guide.
+11. Contentsquare. (n.d.). Bounce Rate Guide. Contentsquare Guide.
+12. Contentsquare. (n.d.). Click-Through Rate. Contentsquare Guide.
+13. Contentsquare. Web Analytics Platform. URL: https://contentsquare.com/platform/web-analytics/
+14. Contentsquare. Heatmaps. URL: https://contentsquare.com/platform/capabilities/heatmaps/
+15. Contentsquare. Product Analytics. URL: https://contentsquare.com/platform/product-analytics/
+16. Sprout Social. (n.d.). Social Media Conversion. Sprout Social Insights.
+17. Sprout Social. (n.d.). Net Promoter Score. Sprout Social Insights.
+18. Zendesk. (n.d.). Creating NPS Survey. Zendesk Support.
+19. Google Analytics. Scroll Depth Plugin. URL: https://scrolldepth.parsnip.io/

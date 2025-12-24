@@ -272,16 +272,14 @@ Consider AI-powered solutions, knowledge base refinement, or demos of leading pl
 
 ## References
 
-1. [IBM: What is Customer Support?](https://www.ibm.com/think/topics/customer-support)
-2. [Zendesk: Customer Support vs. Customer Service](https://www.zendesk.com/blog/customer-support-vs-customer-service/)
-3. [Zendesk: Customer Service Statistics (2025)](https://www.zendesk.com/blog/customer-service-statistics/)
-4. [AmplifAI: Customer Service Statistics 2025](https://www.amplifai.com/blog/customer-service-statistics)
-5. [Help Scout: Customer Service vs. Customer Support](https://www.helpscout.com/blog/customer-service-vs-customer-support/)
-6. [RingCentral: Customer Service and Customer Support](https://www.ringcentral.com/us/en/blog/customer-service-vs-customer-support/)
-7. [Help Scout: Customer Service Facts & Quotes](https://www.helpscout.com/75-customer-service-facts-quotes-statistics/)
-8. [IBM: Chatbots for Customer Experience](https://www.ibm.com/think/topics/chatbots-for-customer-experience)
-9. [Zendesk: Customer Support Team Keys](https://www.zendesk.com/blog/customer-support-vs-customer-service/#Key%20features)
-10. [Zendesk CX Trends 2025](https://cxtrends.zendesk.com/)
 
-*All statistics and examples are drawn from the latest industry research as of 2025. For further reading and ongoing updates, consult the referenced sources.*
-
+1. IBM. (2025). What is Customer Support?. IBM Think Topics.
+2. Zendesk. (2025). Customer Support vs. Customer Service. Zendesk Blog.
+3. Zendesk. (2025). Customer Service Statistics. Zendesk Blog.
+4. AmplifAI. (2025). Customer Service Statistics. AmplifAI Blog.
+5. Help Scout. Customer Service vs. Customer Support. Help Scout Blog.
+6. RingCentral. (2025). Customer Service and Customer Support. RingCentral Blog.
+7. Help Scout. Customer Service Facts & Quotes. Help Scout Blog.
+8. IBM. (2025). Chatbots for Customer Experience. IBM Think Topics.
+9. Zendesk. (2025). Customer Support Team Keys. Zendesk Blog.
+10. Zendesk. (2025). CX Trends. Zendesk CX Trends.

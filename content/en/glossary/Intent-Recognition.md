@@ -201,26 +201,49 @@ Models will self-improve from ongoing interactions.
 
 ## References
 
-- [Lyzr: Intent Recognition](https://www.lyzr.ai/glossaries/intent-recognition/)
-- [Lyzr: Model Training](https://www.lyzr.ai/glossaries/model-training)
-- [TAUS: Intent Recognition in NLP](https://www.taus.net/resources/blog/intent-recognition-in-nlp)
-- [TAUS HLP](https://www.taus.net/hlp)
-- [Nurix: AI Intent Recognition - Benefits and Use Cases](https://www.nurix.ai/blogs/ai-intent-recognition-benefits-and-use-cases)
-- [Nurix: AI Chatbot for Customer Support](https://www.nurix.ai/resources/ai-chatbot-for-customer-support)
-- [Tidio: Chatbot Intents](https://www.tidio.com/blog/chatbot-intents/)
-- [Tidio: How to Build an NLP Chatbot](https://www.tidio.com/blog/nlp-chatbots/)
-- [Tidio: Customer Satisfaction](https://www.tidio.com/blog/customer-satisfaction/)
-- [Decagon: What is Intent Detection?](https://decagon.ai/glossary/what-is-intent-detection)
-- [Decagon: What is Conversational AI Design?](https://decagon.ai/glossary/what-is-conversational-ai-design)
-- [Sally.io: What is Intent Recognition Guide](https://www.sally.io/blog/what-is-intent-recognition-guide)
-- [ThinkOwl: The Power of Intent Recognition](https://www.thinkowl.com/blog/the-power-of-intent-recognition)
-- [Dialzara: AI Intent Recognition for Customer Satisfaction](https://dialzara.com/blog/ai-intent-recognition-for-customer-satisfaction)
-- [Dialzara: AI in the Contact Center - Reducing Costs](https://dialzara.com/blog/ai-in-the-contact-center-reducing-costs/)
-- [McKinsey: AI-Enabled Customer Service](https://www.mckinsey.com/capabilities/operations/our-insights/the-next-frontier-of-customer-engagement-ai-enabled-customer-service)
-- [Medium: AI Automation Cut Costs and Save Time](https://medium.com/@tomskiecke/ai-automation-cut-costs-and-save-time-99922bd03704)
-- [Towards Data Science: Introduction to Word Embedding and Word2Vec](https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa)
-- [arXiv: BERT - Pre-training of Deep Bidirectional Transformers](https://arxiv.org/abs/1810.04805)
-- [Bank of America: Erica Surpasses 1.5 Billion Interactions](https://newsroom.bankofamerica.com/content/newsroom/press-releases/2023/07/bofa-s-erica-surpasses-1-5-billion-client-interactions--totaling.html)
-- [Bank of America: Erica Digital Assistant](https://promotions.bankofamerica.com/digitalbanking/mobilebanking/erica)
-- [Mayo Clinic: Voice-Powered Web Chat Strategy](https://patientexperience.wbresearch.com/blog/mayo-clinic-google-assistant-voice-powered-web-chat-strategy-health-wellness-information-to-at-home-patients)
-- [Expedia Group: ChatGPT Assist With Travel Planning](https://www.expediagroup.com/investors/news-and-events/financial-releases/news/news-details/2023/Chatgpt-Wrote-This-Press-Release--No-It-Didnt-But-It-Can-Now-Assist-With-Travel-Planning-In-The-Expedia-App/default.aspx)
+
+1. Lyzr. (n.d.). Intent Recognition. URL: https://www.lyzr.ai/glossaries/intent-recognition/
+
+2. Lyzr. (n.d.). Model Training. URL: https://www.lyzr.ai/glossaries/model-training
+
+3. TAUS. (n.d.). Intent Recognition in NLP. URL: https://www.taus.net/resources/blog/intent-recognition-in-nlp
+
+4. TAUS. (n.d.). HLP. URL: https://www.taus.net/hlp
+
+5. Nurix. (n.d.). AI Intent Recognition - Benefits and Use Cases. URL: https://www.nurix.ai/blogs/ai-intent-recognition-benefits-and-use-cases
+
+6. Nurix. (n.d.). AI Chatbot for Customer Support. URL: https://www.nurix.ai/resources/ai-chatbot-for-customer-support
+
+7. Tidio. (n.d.). Chatbot Intents. URL: https://www.tidio.com/blog/chatbot-intents/
+
+8. Tidio. (n.d.). How to Build an NLP Chatbot. URL: https://www.tidio.com/blog/nlp-chatbots/
+
+9. Tidio. (n.d.). Customer Satisfaction. URL: https://www.tidio.com/blog/customer-satisfaction/
+
+10. Decagon. (n.d.). What is Intent Detection?. URL: https://decagon.ai/glossary/what-is-intent-detection
+
+11. Decagon. (n.d.). What is Conversational AI Design?. URL: https://decagon.ai/glossary/what-is-conversational-ai-design
+
+12. Sally.io. (n.d.). What is Intent Recognition Guide. URL: https://www.sally.io/blog/what-is-intent-recognition-guide
+
+13. ThinkOwl. (n.d.). The Power of Intent Recognition. URL: https://www.thinkowl.com/blog/the-power-of-intent-recognition
+
+14. Dialzara. (n.d.). AI Intent Recognition for Customer Satisfaction. URL: https://dialzara.com/blog/ai-intent-recognition-for-customer-satisfaction
+
+15. Dialzara. (n.d.). AI in the Contact Center - Reducing Costs. URL: https://dialzara.com/blog/ai-in-the-contact-center-reducing-costs/
+
+16. McKinsey. (n.d.). AI-Enabled Customer Service. URL: https://www.mckinsey.com/capabilities/operations/our-insights/the-next-frontier-of-customer-engagement-ai-enabled-customer-service
+
+17. Medium. (n.d.). AI Automation Cut Costs and Save Time. URL: https://medium.com/@tomskiecke/ai-automation-cut-costs-and-save-time-99922bd03704
+
+18. Towards Data Science. (n.d.). Introduction to Word Embedding and Word2Vec. URL: https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa
+
+19. arXiv. (n.d.). BERT - Pre-training of Deep Bidirectional Transformers. URL: https://arxiv.org/abs/1810.04805
+
+20. Bank of America. (2023). Erica Surpasses 1.5 Billion Interactions. Bank of America Newsroom.
+
+21. Bank of America. (n.d.). Erica Digital Assistant. URL: https://promotions.bankofamerica.com/digitalbanking/mobilebanking/erica
+
+22. Mayo Clinic. (n.d.). Voice-Powered Web Chat Strategy. URL: https://patientexperience.wbresearch.com/blog/mayo-clinic-google-assistant-voice-powered-web-chat-strategy-health-wellness-information-to-at-home-patients
+
+23. Expedia Group. (2023). ChatGPT Assist With Travel Planning. Expedia Group Investor News.

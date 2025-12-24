@@ -210,7 +210,11 @@ DSTは、会話コンテキストの維持(前のターンの記憶を保持す�
 
 ## 参考文献
 
-- [AAAI 2020: MA-DST](https://ojs.aaai.org/index.php/AAAI/article/download/6322/6178)
-- [arXiv: Chain of Thought for DST](https://arxiv.org/html/2403.04656v1)
-- [Google Research: DSTC](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/44018.pdf)
-- [Kaggle: Deepfake Detection Challenge](https://www.kaggle.com/c/deepfake-detection-challenge/overview)
+
+1. AAAI. (2020). MA-DST. AAAI Conference Proceedings.
+
+2. arXiv. (2024). Chain of Thought for DST. arXiv.
+
+3. Google Research. (n.d.). DSTC. Google Research Publications.
+
+4. Kaggle. (n.d.). Deepfake Detection Challenge. Kaggle Competitions.

@@ -158,11 +158,12 @@ Healthcare organizations implement Adaptive Cards for patient appointment schedu
 
 ## References
 
-- [Adaptive Cards Official Documentation - Microsoft](https://docs.microsoft.com/en-us/adaptive-cards/)
-- [Adaptive Cards Schema Explorer - Microsoft](https://adaptivecards.io/explorer/)
-- [Adaptive Cards Designer Tool - Microsoft](https://adaptivecards.io/designer/)
-- [GitHub Repository for Adaptive Cards - Microsoft](https://github.com/Microsoft/AdaptiveCards)
-- [Adaptive Cards SDK Downloads and Documentation - Microsoft](https://docs.microsoft.com/en-us/adaptive-cards/sdk/)
-- [Bot Framework and Adaptive Cards Integration Guide - Microsoft](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-send-adaptive-cards)
-- [Microsoft Teams Adaptive Cards Development Guide - Microsoft](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards)
-- [Adaptive Cards Community Resources and Samples - Microsoft](https://adaptivecards.io/samples/)
+
+1. Microsoft. (n.d.). Adaptive Cards Official Documentation. Microsoft Docs.
+2. Microsoft. (n.d.). Adaptive Cards Schema Explorer. Adaptive Cards.
+3. Microsoft. (n.d.). Adaptive Cards Designer Tool. Adaptive Cards.
+4. Microsoft. (n.d.). GitHub Repository for Adaptive Cards. GitHub.
+5. Microsoft. (n.d.). Adaptive Cards SDK Downloads and Documentation. Microsoft Docs.
+6. Microsoft. (n.d.). Bot Framework and Adaptive Cards Integration Guide. Azure Bot Service Documentation.
+7. Microsoft. (n.d.). Microsoft Teams Adaptive Cards Development Guide. Microsoft Teams Documentation.
+8. Microsoft. (n.d.). Adaptive Cards Community Resources and Samples. Adaptive Cards.

@@ -214,11 +214,12 @@ Progressive NetworksとDynamic Expandable Networksは、共有表現を維持し
 
 ## 参考文献
 
-- [Splunk: Continual Learning in AI](https://www.splunk.com/en_us/blog/learn/continual-learning.html)
-- [IBM: What is Continual Learning?](https://www.ibm.com/think/topics/continual-learning)
-- [Superhuman: Continuous Learning AI in Business](https://blog.superhuman.com/how-continuous-learning-ai-is-transforming-business/)
-- [Algolia: Continuous Learning in Machine Learning](https://www.algolia.com/blog/ai/continuous-learning-in-machine-learning/)
-- [arXiv: Comprehensive Survey of Continual Learning (2023)](https://arxiv.org/abs/2302.00487)
-- [arXiv: Continual Learning and Catastrophic Forgetting (2024)](https://arxiv.org/abs/2403.05175)
-- [Medium: Continual Learning and Catastrophic Forgetting - Challenges and Strategies](https://medium.com/@siddharthapramanik771/continual-learning-and-catastrophic-forgetting-the-challenges-and-strategies-in-ai-636e79a6a449)
-- [Datacamp: What is Continuous Learning?](https://www.datacamp.com/blog/what-is-continuous-learning)
+
+1. Splunk. (n.d.). Continual Learning in AI. Splunk Blog.
+2. IBM. (n.d.). What is Continual Learning?. IBM Think Topics.
+3. Superhuman. (n.d.). Continuous Learning AI in Business. Superhuman Blog.
+4. Algolia. (n.d.). Continuous Learning in Machine Learning. Algolia Blog.
+5. arXiv. (2023). Comprehensive Survey of Continual Learning. arXiv.
+6. arXiv. (2024). Continual Learning and Catastrophic Forgetting. arXiv.
+7. Pramanik, S. (n.d.). Continual Learning and Catastrophic Forgetting - Challenges and Strategies. Medium.
+8. Datacamp. (n.d.). What is Continuous Learning?. Datacamp Blog.

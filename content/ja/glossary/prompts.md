@@ -387,15 +387,27 @@ A: 複数回テストし、要件に対して測定し、代替の言い回し�
 
 ## 参考文献
 
-- [TechTarget: What is an AI Prompt? Definition and Guide](https://www.techtarget.com/searchenterpriseai/definition/AI-prompt)
-- [Harvard University: Getting Started with Prompts](https://www.huit.harvard.edu/news/ai-prompts)
-- [Google Cloud: Prompt Engineering for AI Guide](https://cloud.google.com/discover/what-is-prompt-engineering)
-- [Atlassian: Ultimate Guide to Writing Effective AI Prompts](https://www.atlassian.com/blog/artificial-intelligence/ultimate-guide-writing-ai-prompts)
-- [Glean: Complete Guide to AI Prompting](https://glean.com/blog/ai-prompting-guide)
-- [MIT Sloan: Effective Prompts for AI](https://mitsloanedtech.mit.edu/ai/basics/effective-prompts/)
-- [Stack AI: Guide to Prompt Engineering](https://www.stack-ai.com/blog/guide-to-prompt-engineering)
-- [University of Kansas: Prompting AI Chatbots](https://cte.ku.edu/prompting-ai-chatbots)
-- [Google Vertex AI: Introduction to Prompt Design](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/introduction-prompt-design)
-- [YouTube: Tips to Becoming a World-Class Prompt Engineer](https://www.youtube.com/watch?v=RywP7cCYUWE)
-- [OpenAI: Best Practices for Prompt Engineering](https://platform.openai.com/docs/guides/prompt-engineering)
-- [Anthropic: Introduction to Prompt Engineering](https://docs.anthropic.com/claude/docs/introduction-to-prompt-engineering)
+
+1. TechTarget. (n.d.). What is an AI Prompt? Definition and Guide. TechTarget.
+
+2. Harvard University. (n.d.). Getting Started with Prompts. Harvard University.
+
+3. Google Cloud. (n.d.). Prompt Engineering for AI Guide. Google Cloud.
+
+4. Atlassian. (n.d.). Ultimate Guide to Writing Effective AI Prompts. Atlassian Blog.
+
+5. Glean. (n.d.). Complete Guide to AI Prompting. Glean Blog.
+
+6. MIT Sloan. (n.d.). Effective Prompts for AI. MIT Sloan.
+
+7. Stack AI. (n.d.). Guide to Prompt Engineering. Stack AI Blog.
+
+8. University of Kansas. (n.d.). Prompting AI Chatbots. University of Kansas.
+
+9. Google Vertex AI. (n.d.). Introduction to Prompt Design. Google Vertex AI.
+
+10. YouTube. (n.d.). Tips to Becoming a World-Class Prompt Engineer. YouTube.
+
+11. OpenAI. (n.d.). Best Practices for Prompt Engineering. OpenAI.
+
+12. Anthropic. (n.d.). Introduction to Prompt Engineering. Anthropic.

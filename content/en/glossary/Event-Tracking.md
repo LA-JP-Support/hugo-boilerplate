@@ -253,13 +253,14 @@ Track these meta-metrics demonstrating event tracking's business impact beyond i
 
 ## References
 
-- [Countly: Complete Guide to Event Tracking](https://countly.com/blog/event-tracking-digital-analytics)
-- [UXCam: Event Analytics Guide](https://uxcam.com/blog/event-analytics/)
-- [PostHog: Complete Guide to Event Tracking](https://posthog.com/tutorials/event-tracking-guide)
-- [RudderStack: What is Event Tracking?](https://www.rudderstack.com/blog/what-is-event-tracking/)
-- [Reteno: Event Tracking](https://reteno.com/glossary/event-tracking)
-- [Clay: Event Tracking Glossary](https://www.clay.com/glossary/event-tracking)
-- [Google Analytics Events Documentation](https://developers.google.com/analytics/devguides/collection/ga4/events)
-- [Abralytics: Event Tracking Explained](https://abralytics.com/event-tracking-explained/)
-- [Hightouch: What is Event Tracking?](https://hightouch.com/blog/event-tracking)
-- [Statsig: Event Tracking Knowledge](https://www.statsig.com/perspectives/what-you-need-to-know-about-event-tracking)
+
+1. Countly. (n.d.). Complete Guide to Event Tracking. Countly Blog.
+2. UXCam. (n.d.). Event Analytics Guide. UXCam Blog.
+3. PostHog. (n.d.). Complete Guide to Event Tracking. PostHog Tutorials.
+4. RudderStack. (n.d.). What is Event Tracking?. RudderStack Blog.
+5. Reteno. (n.d.). Event Tracking. Reteno Glossary.
+6. Clay. (n.d.). Event Tracking Glossary. Clay Glossary.
+7. Google. (n.d.). Google Analytics Events Documentation. Google Developers.
+8. Abralytics. (n.d.). Event Tracking Explained. Abralytics.
+9. Hightouch. (n.d.). What is Event Tracking?. Hightouch Blog.
+10. Statsig. (n.d.). Event Tracking Knowledge. Statsig Perspectives.

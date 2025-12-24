@@ -194,28 +194,53 @@ ISO 42001 provides governance, structure, and lifecycle management for AI. NIST 
 
 ## References
 
-- [Algorithmic Accountability: Moving Beyond Audits – AI Now Institute](https://ainowinstitute.org/publications/algorithmic-accountability)
-- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
-- [ISO 42001 and NIST AI RMF Alignment – RSI Security](https://blog.rsisecurity.com/iso-42001-nist-ai-rmf-alignment/)
-- [Algorithmic Accountability Act of 2023 Summary (U.S. Senate)](https://www.wyden.senate.gov/imo/media/doc/algorithmic_accountability_act_of_2023_summary.pdf)
-- [Algorithmic accountability – VerifyWise AI Lexicon](https://verifywise.ai/lexicon)
-- [The Terry Group: Algorithmic Accountability](https://terrygroup.com/algorithmic-accountability-what-is-it-and-why-does-it-matter/)
-- [Model Cards for Model Reporting – Google AI Blog](https://ai.googleblog.com/2019/03/introducing-model-cards-for-model.html)
-- [Gender Shades Project](http://gendershades.org/)
-- [NIST AI RMF PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
-- [ISO/IEC 42001](https://www.iso.org/standard/81230.html)
-- [OECD AI Principles](https://oecd.ai/en/ai-principles)
-- [EU AI Act](https://artificialintelligenceact.eu/)
-- [IBM AI Factsheets](https://aif360.mybluemix.net)
-- [Aequitas](https://github.com/dssg/aequitas)
-- [Fairlearn](https://fairlearn.org/)
-- [Truera](https://truera.com/)
-- [GAO AI Accountability Framework](https://www.gao.gov/products/gao-21-519sp)
-- [NYC Automated Employment Decision Tools Law](https://ogletree.com/insights/new-york-citys-automated-employment-decision-tools-law-proposed-rules-are-finally-here/)
-- [Canada AIDA](https://www.justice.gc.ca/eng/csj-sjc/pl/charter-charte/c27_1.html)
-- [ProPublica: Machine Bias](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)
-- [VerifyWise: AI Bias Mitigation](https://verifywise.ai/lexicon/ai-bias-mitigation)
-- [The Verge: Arkansas Medicaid Algorithm](https://www.theverge.com/2018/3/21/17144260/healthcare-medicaid-algorithm-arkansas-cerebral-palsy)
-- [Forbes: Understanding Bias in AI-Enabled Hiring](https://www.forbes.com/sites/forbeshumanresourcescouncil/2021/10/14/understanding-bias-in-ai-enabled-hiring/?sh=5dd003307b96)
-- [UN Declaration of Human Rights](https://www.un.org/en/about-us/universal-declaration-of-human-rights)
-- [Constitutional AI: Harmlessness from AI Feedback](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback)
+
+1. AI Now Institute. (n.d.). Algorithmic Accountability: Moving Beyond Audits. AI Now Institute.
+
+2. NIST. (2023). NIST AI Risk Management Framework. National Institute of Standards and Technology.
+
+3. RSI Security. (2023). ISO 42001 and NIST AI RMF Alignment. RSI Security Blog.
+
+4. U.S. Senate. (2023). Algorithmic Accountability Act of 2023 Summary. U.S. Senate.
+
+5. VerifyWise. (n.d.). Algorithmic Accountability. VerifyWise AI Lexicon.
+
+6. Terry Group. (n.d.). Algorithmic Accountability: What Is It and Why Does It Matter?. Terry Group.
+
+7. Google AI. (2019). Model Cards for Model Reporting. Google AI Blog.
+
+8. Gender Shades Project. (n.d.). Gender Shades Project. Gender Shades.
+
+9. NIST. (2023). NIST AI Risk Management Framework. NIST Publications.
+
+10. ISO/IEC. (2023). ISO/IEC 42001. International Organization for Standardization.
+
+11. OECD. (n.d.). OECD AI Principles. OECD.
+
+12. European Union. (n.d.). EU AI Act. European Union.
+
+13. IBM. (n.d.). IBM AI Factsheets. IBM.
+
+14. Aequitas. (n.d.). Aequitas. URL: https://github.com/dssg/aequitas
+
+15. Fairlearn. (n.d.). Fairlearn. URL: https://fairlearn.org/
+
+16. Truera. (n.d.). Truera. URL: https://truera.com/
+
+17. GAO. (2021). AI Accountability Framework. U.S. Government Accountability Office.
+
+18. Ogletree Deakins. (n.d.). NYC Automated Employment Decision Tools Law. Ogletree Insights.
+
+19. Government of Canada. (n.d.). Artificial Intelligence and Data Act (AIDA). Department of Justice Canada.
+
+20. ProPublica. (n.d.). Machine Bias: Risk Assessments in Criminal Sentencing. ProPublica.
+
+21. VerifyWise. (n.d.). AI Bias Mitigation. VerifyWise AI Lexicon.
+
+22. The Verge. (2018). Arkansas Medicaid Algorithm. The Verge.
+
+23. Forbes. (2021). Understanding Bias in AI-Enabled Hiring. Forbes.
+
+24. United Nations. (1948). Universal Declaration of Human Rights. United Nations.
+
+25. Anthropic. (n.d.). Constitutional AI: Harmlessness from AI Feedback. Anthropic Research.

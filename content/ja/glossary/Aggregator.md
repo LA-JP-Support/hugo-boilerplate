@@ -116,11 +116,19 @@ IoT実装では、アグリゲーターを使用して、複数のデバイス�
 
 ## 参考文献
 
-- [Data Integration Patterns and Best Practices - IBM](https://www.ibm.com/cloud/learn/data-integration)
-- [API Aggregation Strategies - Microsoft Azure](https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-aggregation)
-- [Enterprise Integration Patterns - Apache Camel](https://camel.apache.org/components/latest/eips/aggregate-eip.html)
-- [Microservices Data Aggregation - AWS Architecture Center](https://aws.amazon.com/architecture/microservices/)
-- [Real-time Data Processing Patterns - Google Cloud](https://cloud.google.com/architecture/stream-processing)
-- [Chatbot Integration Best Practices - Salesforce](https://developer.salesforce.com/docs/atlas.en-us.chatbots_dev.meta/chatbots_dev/)
-- [Automation Workflow Design - Zapier Platform](https://platform.zapier.com/docs/automation)
-- [Data Quality in Integration Systems - Informatica](https://www.informatica.com/resources/articles/what-is-data-quality.html)
+
+1. IBM. (n.d.). Data Integration Patterns and Best Practices. IBM Cloud Learn.
+
+2. Microsoft Azure. (n.d.). API Aggregation Strategies. Microsoft Azure Documentation.
+
+3. Apache Camel. (n.d.). Enterprise Integration Patterns. Apache Camel Components.
+
+4. AWS. (n.d.). Microservices Data Aggregation. AWS Architecture Center.
+
+5. Google Cloud. (n.d.). Real-time Data Processing Patterns. Google Cloud Architecture.
+
+6. Salesforce. (n.d.). Chatbot Integration Best Practices. Salesforce Developer Documentation.
+
+7. Zapier. (n.d.). Automation Workflow Design. Zapier Platform Documentation.
+
+8. Informatica. (n.d.). Data Quality in Integration Systems. Informatica Resources.

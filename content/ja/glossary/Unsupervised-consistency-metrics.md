@@ -208,10 +208,17 @@ url: "/ja/glossary/Unsupervised-consistency-metrics/"
 
 ## 参考文献
 
-- [Clustering Metrics in Machine Learning - GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/clustering-metrics/)
-- [Unsupervised Temporal Consistency Metric for Video Segmentation in Highly-Automated Driving - CVPRW 2020](https://openaccess.thecvf.com/content_CVPRW_2020/papers/w20/Varghese_Unsupervised_Temporal_Consistency_Metric_for_Video_Segmentation_in_Highly-Automated_Driving_CVPRW_2020_paper.pdf)
-- [Metrics for Evaluating LLM Chatbot Agents - Galileo AI](https://galileo.ai/blog/metrics-for-evaluating-llm-chatbots-part-1)
-- [An Overview of Unsupervised Drift Detection Methods - Wiley](https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.1381)
-- [Open-ended Evaluations with LLMs - Towards Data Science](https://towardsdatascience.com/open-ended-evaluations-with-llms-385beded97a4)
-- [LLM Evaluation: Metrics, Frameworks, and Best Practices - Weights & Biases](https://wandb.ai/onlineinference/genai-research/reports/LLM-evaluation-Metrics-frameworks-and-best-practices--VmlldzoxMTMxNjQ4NA)
-- [Metrics for Unsupervised Learning - AlmaBetter](https://www.almabetter.com/bytes/tutorials/data-science/metrics-for-unsupervised-learning)
+
+1. GeeksforGeeks. (n.d.). Clustering Metrics in Machine Learning. GeeksforGeeks.
+
+2. Varghese, et al. (2020). Unsupervised Temporal Consistency Metric for Video Segmentation in Highly-Automated Driving. CVPRW 2020.
+
+3. Galileo AI. (n.d.). Metrics for Evaluating LLM Chatbot Agents. Galileo AI Blog.
+
+4. Wiley. (n.d.). An Overview of Unsupervised Drift Detection Methods. Wiley Online Library.
+
+5. Towards Data Science. (n.d.). Open-ended Evaluations with LLMs. Towards Data Science.
+
+6. Weights & Biases. (n.d.). LLM Evaluation: Metrics, Frameworks, and Best Practices. Weights & Biases Reports.
+
+7. AlmaBetter. (n.d.). Metrics for Unsupervised Learning. AlmaBetter Bytes.

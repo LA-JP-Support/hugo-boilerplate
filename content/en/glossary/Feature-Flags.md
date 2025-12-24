@@ -201,17 +201,18 @@ Multiple ML models live behind flags. Team toggles between them, rolling out to 
 
 ## References
 
-- [LaunchDarkly: What Are Feature Flags?](https://launchdarkly.com/blog/what-are-feature-flags/)
-- [Martin Fowler: Feature Toggles](https://martinfowler.com/articles/feature-toggles.html)
-- [Unleash: What is a Feature Flag?](https://docs.getunleash.io/get-started/what-is-a-feature-flag)
-- [Optimizely: Feature Flags](https://www.optimizely.com/optimization-glossary/feature-flags/)
-- [Octopus: Types of Feature Flags](https://octopus.com/devops/feature-flags/)
-- [Sendbird: What Are Feature Flags? A Deep Dive](https://sendbird.com/developer/tutorials/what-are-feature-flags)
-- [AWS: Feature Flags Best Practices](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
-- [Stack Overflow: What is a Feature Flag?](https://stackoverflow.com/questions/7707383/what-is-a-feature-flag)
-- [Flickr: Flipping Out (Historical)](http://code.flickr.com/blog/2009/12/02/flipping-out)
-- [AWS AppConfig Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html)
-- [YouTube: Facebook's Gatekeeper Feature Flag System](https://youtu.be/dDf2t-E_Ea8?t=11m20s)
-- [LaunchDarkly: Trunk-Based Development](https://launchdarkly.com/blog/introduction-to-trunk-based-development/)
-- [Octopus: Feature Flag Best Practices](https://octopus.com/devops/feature-flags/feature-flag-best-practices/)
-- [LaunchDarkly: Build vs Buy Feature Flags](https://launchdarkly.com/blog/manufacturing-feature-flags-build-vs-buy/)
+
+1. LaunchDarkly. (n.d.). What Are Feature Flags?. LaunchDarkly Blog.
+2. Fowler, Martin. (n.d.). Feature Toggles. Martin Fowler Blog.
+3. Unleash. (n.d.). What is a Feature Flag?. Unleash Documentation.
+4. Optimizely. (n.d.). Feature Flags. Optimizely Optimization Glossary.
+5. Octopus. (n.d.). Types of Feature Flags. Octopus DevOps.
+6. Sendbird. (n.d.). What Are Feature Flags? A Deep Dive. Sendbird Developer Tutorials.
+7. AWS. (n.d.). Feature Flags Best Practices. AWS TV.
+8. Stack Overflow. (n.d.). What is a Feature Flag?. Stack Overflow.
+9. Flickr. (2009). Flipping Out. Flickr Code Blog.
+10. AWS. (n.d.). AppConfig Documentation. AWS Documentation.
+11. YouTube. (n.d.). Facebook's Gatekeeper Feature Flag System. YouTube.
+12. LaunchDarkly. (n.d.). Trunk-Based Development. LaunchDarkly Blog.
+13. Octopus. (n.d.). Feature Flag Best Practices. Octopus DevOps.
+14. LaunchDarkly. (n.d.). Build vs Buy Feature Flags. LaunchDarkly Blog.

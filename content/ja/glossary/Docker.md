@@ -297,19 +297,35 @@ docker-compose up
 
 ## 参考文献
 
-- [Docker公式ドキュメント](https://docs.docker.com/get-started/docker-overview/)
-- [Docker: コンテナとは?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/)
-- [Docker Curriculum(初心者から上級者まで)](https://docker-curriculum.com)
-- [AWS: Dockerとは?](https://aws.amazon.com/docker/)
-- [Oracle: Dockerとは?](https://www.oracle.com/cloud/cloud-native/container-registry/what-is-docker/)
-- [GeeksforGeeks: Dockerを使用したコンテナ化](https://www.geeksforgeeks.org/blogs/containerization-using-docker/)
-- [Docker Composeドキュメント](https://docs.docker.com/compose/)
-- [Kubernetesドキュメント](https://kubernetes.io/docs/)
-- [Docker CLIリファレンス](https://docs.docker.com/engine/reference/commandline/cli/)
-- [Dockerベストプラクティス](https://docs.docker.com/develop/dev-best-practices/)
-- [Docker Hub](https://hub.docker.com)
-- [Dockerネットワーキング](https://docs.docker.com/network/)
-- [Dockerレジストリドキュメント](https://docs.docker.com/registry/)
-- [機械学習のためのDocker](https://www.docker.com/blog/tag/machine-learning/)
-- [Docker Scout](https://docs.docker.com/scout/)
-- [コンテナ vs. VM(Dockerドキュメント)](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/#containers-versus-virtual-machines-vms)
+
+1. Docker. (n.d.). Docker Overview. Docker Official Documentation. URL: https://docs.docker.com/get-started/docker-overview/
+
+2. Docker. (n.d.). What is a Container?. Docker Official Documentation. URL: https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/
+
+3. Docker Curriculum. (n.d.). Docker Curriculum for Beginners to Advanced. URL: https://docker-curriculum.com
+
+4. AWS. (n.d.). What is Docker?. AWS Documentation. URL: https://aws.amazon.com/docker/
+
+5. Oracle. (n.d.). What is Docker?. Oracle Cloud Documentation. URL: https://www.oracle.com/cloud/cloud-native/container-registry/what-is-docker/
+
+6. GeeksforGeeks. (n.d.). Containerization Using Docker. GeeksforGeeks Blog. URL: https://www.geeksforgeeks.org/blogs/containerization-using-docker/
+
+7. Docker. (n.d.). Docker Compose Documentation. Docker Official Documentation. URL: https://docs.docker.com/compose/
+
+8. Kubernetes. (n.d.). Kubernetes Documentation. URL: https://kubernetes.io/docs/
+
+9. Docker. (n.d.). Docker CLI Reference. Docker Official Documentation. URL: https://docs.docker.com/engine/reference/commandline/cli/
+
+10. Docker. (n.d.). Docker Development Best Practices. Docker Official Documentation. URL: https://docs.docker.com/develop/dev-best-practices/
+
+11. Docker Hub. Container Registry Service. URL: https://hub.docker.com
+
+12. Docker. (n.d.). Docker Networking. Docker Official Documentation. URL: https://docs.docker.com/network/
+
+13. Docker. (n.d.). Docker Registry Documentation. Docker Official Documentation. URL: https://docs.docker.com/registry/
+
+14. Docker. (n.d.). Docker for Machine Learning. Docker Blog. URL: https://www.docker.com/blog/tag/machine-learning/
+
+15. Docker Scout. Container Security Scanning Tool. URL: https://docs.docker.com/scout/
+
+16. Docker. (n.d.). Containers vs. Virtual Machines. Docker Official Documentation. URL: https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/#containers-versus-virtual-machines-vms

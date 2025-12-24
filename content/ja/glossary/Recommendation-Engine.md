@@ -189,10 +189,11 @@ term: レコメンデーションエンジン
 
 ## 参考文献
 
-- [Recommender Systems Handbook - Springer](https://link.springer.com/book/10.1007/978-1-4899-7637-6)
-- [Deep Learning for Recommender Systems - ACM Computing Surveys](https://dl.acm.org/doi/10.1145/3285029)
-- [Machine Learning for Recommender Systems - MIT Press](https://mitpress.mit.edu/books/machine-learning-recommender-systems)
-- [Netflix Technology Blog - Recommendation Systems](https://netflixtechblog.com/tagged/recommendation-systems)
-- [Amazon Science - Personalization and Recommendation](https://www.amazon.science/tag/personalization)
-- [Google AI Research - Recommendation Systems](https://ai.googleblog.com/search/label/recommendation%20systems)
-- [Facebook Research - Recommendation an
+
+1. Springer. (n.d.). Recommender Systems Handbook. Springer Book.
+2. ACM Computing Surveys. (n.d.). Deep Learning for Recommender Systems. ACM Digital Library.
+3. MIT Press. (n.d.). Machine Learning for Recommender Systems. MIT Press Book.
+4. Netflix. (n.d.). Recommendation Systems. Netflix Technology Blog.
+5. Amazon Science. (n.d.). Personalization and Recommendation. Amazon Science.
+6. Google AI. (n.d.). Recommendation Systems. Google AI Research Blog.
+7. Facebook Research. (n.d.). Recommendation. Facebook Research.

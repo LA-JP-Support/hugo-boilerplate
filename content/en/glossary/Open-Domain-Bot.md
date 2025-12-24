@@ -163,19 +163,35 @@ Blender is preferred over Meena in human evaluations, but human-human conversati
 
 ## References
 
-- [ACL Anthology: How "open" are conversations with open-domain chatbots?](https://aclanthology.org/2021.sigdial-1.41.pdf)
-- [IJEAT: Research Perspectives in Open-Domain Chatbots](https://www.ijeat.org/wp-content/uploads/papers/v9i4/D8734049420.pdf)
-- [YouTube: Open Domain Q&A AI Chatbot DEMO](https://www.youtube.com/watch?v=UTeErvuadbM)
-- [Wisdomlib: Open-Domain Chatbot Concept](https://www.wisdomlib.org/concept/open-domain-chatbot)
-- [Facebook AI: Blender Project](https://parl.ai/projects/blender/)
-- [Google AI Blog: Meena](https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html)
-- [arXiv: ACUTE-Eval](https://arxiv.org/abs/1904.03461)
-- [Symbl.ai: Open Domain vs. Closed Domain](https://symbl.ai/blog/conversation-understanding-open-domain-vs-closed-domain/)
-- [Rasa Forum: Open Domain Chatbot Discussion](https://forum.rasa.com/t/open-domain-chatbot/24319)
-- [Rasa Forum: Deployment and Integration Issues](https://forum.rasa.com/t/rasa-chat-bot-deployment-and-integration-issues/47964)
-- [ParlAI Platform](https://parl.ai/)
-- [OpenAI Research](https://openai.com/research/)
-- [SQuAD: Stanford Question Answering Dataset](https://rajpurkar.github.io/SQuAD-explorer/)
-- [Springer: Chatbot vs. Dialogue System](https://link.springer.com/chapter/10.1007/978-981-15-1384-8_22)
-- [Wikipedia: Transformer (deep learning)](https://en.wikipedia.org/wiki/Transformer_(deep_learning))
-- [DataCamp: How Transformers Work](https://www.datacamp.com/tutorial/how-transformers-work)
+
+1. ACL Anthology. (2021). How "open" are conversations with open-domain chatbots?. ACL Anthology.
+
+2. IJEAT. (n.d.). Research Perspectives in Open-Domain Chatbots. IJEAT.
+
+3. YouTube. (n.d.). Open Domain Q&A AI Chatbot DEMO. YouTube.
+
+4. Wisdomlib. (n.d.). Open-Domain Chatbot Concept. Wisdomlib.
+
+5. Facebook AI. (n.d.). Blender Project. Facebook AI.
+
+6. Google AI Blog. (2020). Meena. Google AI Blog.
+
+7. arXiv. (n.d.). ACUTE-Eval. arXiv.
+
+8. Symbl.ai. (n.d.). Open Domain vs. Closed Domain. Symbl.ai Blog.
+
+9. Rasa Forum. (n.d.). Open Domain Chatbot Discussion. Rasa Forum.
+
+10. Rasa Forum. (n.d.). Deployment and Integration Issues. Rasa Forum.
+
+11. ParlAI Platform. Open-source conversational AI platform. URL: https://parl.ai/
+
+12. OpenAI Research. AI research organization. URL: https://openai.com/research/
+
+13. SQuAD. Stanford Question Answering Dataset. URL: https://rajpurkar.github.io/SQuAD-explorer/
+
+14. Springer. (n.d.). Chatbot vs. Dialogue System. Springer.
+
+15. Wikipedia. (n.d.). Transformer (deep learning). Wikipedia.
+
+16. DataCamp. (n.d.). How Transformers Work. DataCamp.

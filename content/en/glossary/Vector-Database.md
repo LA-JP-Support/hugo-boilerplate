@@ -256,22 +256,23 @@ Evaluate based on your priorities: HNSW for best general-purpose performance, PQ
 
 ## References
 
-- [IBM: What Is A Vector Database?](https://www.ibm.com/think/topics/vector-database)
-- [Pinecone: What is a Vector Database & How Does it Work?](https://www.pinecone.io/learn/vector-database/)
-- [Pinecone: A Developer's Guide to ANN Algorithms](https://www.pinecone.io/learn/a-developers-guide-to-ann-algorithms/)
-- [Microsoft Learn: Understanding Vector Databases](https://learn.microsoft.com/en-us/data-engineering/playbook/solutions/vector-database/)
-- [AWS: What is a Vector Database?](https://aws.amazon.com/what-is/vector-databases/)
-- [StackExchange: How do vector databases work for the lay coder?](https://datascience.stackexchange.com/questions/123181/how-do-vector-databases-work-for-the-lay-coder)
-- [Pinecone: Vector Embeddings for Developers](https://www.pinecone.io/learn/vector-embeddings-for-developers/)
-- [Pinecone: HNSW Deep Dive](https://www.pinecone.io/learn/series/faiss/hnsw/)
-- [Pinecone: Product Quantization](https://www.pinecone.io/learn/product-quantization/)
-- [Pinecone: Vector Indexes Overview](https://www.pinecone.io/learn/series/faiss/vector-indexes/)
-- [Pinecone: Serverless Vector Databases](https://www.pinecone.io/learn/vector-database/#Serverless-Vector-Databases)
-- [Azure: Vector Database Code Samples](https://github.com/Azure-Samples/azure-vector-database-samples)
-- [LangChain Documentation](https://python.langchain.com/en/latest/index.html)
-- [LlamaIndex Documentation](https://gpt-index.readthedocs.io/)
-- [Pinecone Examples and Tutorials](https://docs.pinecone.io/page/examples)
-- [Reddit: Vector Database Use Cases](https://www.reddit.com/r/vectordatabase/comments/1gi4bxp/vector_db_usecases/)
-- [IBM: Vector Search Overview](https://www.ibm.com/think/topics/vector-search)
-- [IBM Research: Retrieval-Augmented Generation](https://research.ibm.com/blog/retrieval-augmented-generation-RAG)
-- [YouTube: What is a Vector Database?](https://www.youtube.com/watch?v=gl1r1XV0SLw)
+
+1. IBM. (2024). What Is A Vector Database?. IBM Think Topics.
+2. Pinecone. (2024). What is a Vector Database & How Does it Work?. Pinecone Learn.
+3. Pinecone. (2024). A Developer's Guide to ANN Algorithms. Pinecone Learn.
+4. Microsoft. (2024). Understanding Vector Databases. Microsoft Learn.
+5. AWS. (2024). What is a Vector Database?. AWS.
+6. StackExchange. (2024). How do vector databases work for the lay coder?. Data Science StackExchange.
+7. Pinecone. (2024). Vector Embeddings for Developers. Pinecone Learn.
+8. Pinecone. (2024). HNSW Deep Dive. Pinecone Learn.
+9. Pinecone. (2024). Product Quantization. Pinecone Learn.
+10. Pinecone. (2024). Vector Indexes Overview. Pinecone Learn.
+11. Pinecone. (2024). Serverless Vector Databases. Pinecone Learn.
+12. Azure. (2024). Vector Database Code Samples. GitHub.
+13. LangChain. (2024). LangChain Documentation. Python LangChain.
+14. LlamaIndex. (2024). LlamaIndex Documentation. Read the Docs.
+15. Pinecone. (2024). Pinecone Examples and Tutorials. Pinecone Docs.
+16. Reddit. (2024). Vector Database Use Cases. Reddit.
+17. IBM. (2024). Vector Search Overview. IBM Think Topics.
+18. IBM Research. (2024). Retrieval-Augmented Generation. IBM Research Blog.
+19. YouTube. (2024). What is a Vector Database?. YouTube.

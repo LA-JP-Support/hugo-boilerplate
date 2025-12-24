@@ -8,23 +8,62 @@ import csv
 import re
 import uuid
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 from collections import defaultdict
 import argparse
 
 class DatabaseLinkBuilder:
-    def __init__(self, database_csv: Path):
+    def __init__(self, database_csv: Path, denylist_csv: Optional[Path] = None):
         self.database_csv = database_csv
+        self.denylist_csv = denylist_csv
         self.link_database: List[Dict] = []
+        self.deny_normalized: Set[str] = set()
+        self.load_denylist()
         self.load_database()
         self.debug = False
     
+    def load_denylist(self):
+        """Load denylist CSV (danger terms) to prevent accidental auto-linking."""
+        deny_path = self.denylist_csv
+
+        if deny_path is None:
+            name = self.database_csv.name.lower()
+            if "_en" in name:
+                deny_path = Path("databases/danger_terms_en.csv")
+            elif "_ja" in name:
+                deny_path = Path("databases/danger_terms_ja.csv")
+
+        if deny_path is None or not deny_path.exists():
+            return
+
+        try:
+            with open(deny_path, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    norm = (row.get('normalized') or row.get('keyword') or '').strip()
+                    if not norm:
+                        continue
+                    self.deny_normalized.add(norm.lower())
+
+            print(f"Loaded {len(self.deny_normalized)} denylist terms from {deny_path}")
+        except Exception as e:
+            print(f"Warning: failed to load denylist {deny_path}: {e}")
+
     def load_database(self):
         """Load link database from CSV and sort by keyword length (longest first)"""
         if self.database_csv.exists():
             with open(self.database_csv, 'r', encoding='utf-8') as f:
                 reader = csv.DictReader(f)
                 self.link_database = list(reader)
+
+            if self.deny_normalized:
+                before = len(self.link_database)
+                self.link_database = [
+                    row for row in self.link_database
+                    if (row.get('normalized', '').strip().lower() not in self.deny_normalized)
+                ]
+                after = len(self.link_database)
+                print(f"Filtered {before - after} keyword variations via denylist")
             
             # Sort by keyword length descending
             self.link_database.sort(key=lambda x: len(x['keyword']), reverse=True)
@@ -226,6 +265,7 @@ def main():
     parser = argparse.ArgumentParser(description="Add internal links safely")
     parser.add_argument("content_dir", type=Path, help="Directory containing markdown files")
     parser.add_argument("--database", type=Path, required=True, help="Path to link database CSV")
+    parser.add_argument("--denylist", type=Path, default=None, help="Path to danger-term denylist CSV (optional)")
     parser.add_argument("--dry-run", action="store_true", help="Preview changes")
     parser.add_argument("--debug", action="store_true", help="Enable debug logging")
     
@@ -235,7 +275,7 @@ def main():
         print(f"Error: Directory not found: {args.content_dir}")
         return
     
-    builder = DatabaseLinkBuilder(args.database)
+    builder = DatabaseLinkBuilder(args.database, denylist_csv=args.denylist)
     builder.process_directory(args.content_dir, dry_run=args.dry_run, debug=args.debug)
 
 if __name__ == "__main__":

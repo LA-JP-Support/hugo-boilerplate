@@ -187,13 +187,23 @@ The evolution of outbound dialing technology has been driven by the increasing n
 
 ## References
 
-- [What is Outbound Dialing? - Five9](https://www.five9.com/products/capabilities/outbound)
-- [Outbound Dialer Solutions - RingCentral](https://www.ringcentral.com/office/features/auto-dialer/overview.html)
-- [Auto Dialer and Outbound Calling - Aircall](https://aircall.io/call-center-software-features/auto-dialer/)
-- [Outbound Call Center Software - Talkdesk](https://www.talkdesk.com/cloud-contact-center/outbound/)
-- [What is an Auto Dialer? - Nextiva](https://www.nextiva.com/blog/auto-dialer.html)
-- [Outbound Dialing Solutions - Genesys](https://www.genesys.com/capabilities/outbound-dialing)
-- [Power Dialer vs Predictive Dialer - NICE](https://www.nice.com/glossary/power-dialer-vs-predictive-dialer)
-- [Outbound Call Center - 8x8](https://www.8x8.com/solutions/use-case/outbound-call-center)
-- [Auto Dialer Software - Vonage](https://www.vonage.com/unified-communications/features/auto-dialer/)
-- [What is Predictive Dialing? - Convoso](https://www.convoso.com/blog/what-is-predictive-dialing/)
+
+1. Five9. (n.d.). What is Outbound Dialing?. Five9. URL: https://www.five9.com/products/capabilities/outbound
+
+2. RingCentral. (n.d.). Outbound Dialer Solutions. RingCentral. URL: https://www.ringcentral.com/office/features/auto-dialer/overview.html
+
+3. Aircall. (n.d.). Auto Dialer and Outbound Calling. Aircall. URL: https://aircall.io/call-center-software-features/auto-dialer/
+
+4. Talkdesk. (n.d.). Outbound Call Center Software. Talkdesk. URL: https://www.talkdesk.com/cloud-contact-center/outbound/
+
+5. Nextiva. (n.d.). What is an Auto Dialer?. Nextiva Blog. URL: https://www.nextiva.com/blog/auto-dialer.html
+
+6. Genesys. (n.d.). Outbound Dialing Solutions. Genesys. URL: https://www.genesys.com/capabilities/outbound-dialing
+
+7. NICE. (n.d.). Power Dialer vs Predictive Dialer. NICE Glossary. URL: https://www.nice.com/glossary/power-dialer-vs-predictive-dialer
+
+8. 8x8. (n.d.). Outbound Call Center. 8x8. URL: https://www.8x8.com/solutions/use-case/outbound-call-center
+
+9. Vonage. (n.d.). Auto Dialer Software. Vonage. URL: https://www.vonage.com/unified-communications/features/auto-dialer/
+
+10. Convoso. (n.d.). What is Predictive Dialing?. Convoso Blog. URL: https://www.convoso.com/blog/what-is-predictive-dialing/

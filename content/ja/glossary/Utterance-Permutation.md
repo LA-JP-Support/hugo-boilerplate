@@ -256,12 +256,21 @@ SNIPS、MultiWOZ、特殊ドメインデータセットなどの公開データ�
 
 ## 参考文献
 
-- [BotPenguin: Utterance - Types and Challenges](https://botpenguin.com/glossary/utterance)
-- [Shaip: Why Conversational AI Needs Good Utterance Data](https://www.shaip.com/blog/why-conversationalai-needs-good-utterance-data/)
-- [Springer: Novel utterance data augmentation for intent classification using large language models](https://link.springer.com/article/10.1007/s00521-025-11642-3)
-- [Emplifi: AI Utterances Documentation](https://docs.emplifi.io/platform/latest/home/ai-utterances)
-- [Nuance: Adding natural language capabilities](https://docs.nuance.com/speech-suite/nr-gram/nrg_nlg_adv_NLUover.html)
-- [A Dependency-Aware Utterances Permutation Strategy - ECIR 2022](https://www.dei.unipd.it/~ferro/papers/2022/ECIR2022-FFFPT.pdf)
-- [Voiceflow: 5 Principles for Good NLU Design](https://www.voiceflow.com/pathways/5-principles-for-good-natural-language-understanding-nlu-design)
-- [LinkedIn: Best Practices in Writing Utterances](https://www.linkedin.com/pulse/training-your-nlp-model-best-practices-writing-grant-ronald)
-- [Shaip: Sample Datasets](https://www.shaip.com/resources/sample-datasets/)
+
+1. BotPenguin. (n.d.). Utterance - Types and Challenges. BotPenguin Glossary.
+
+2. Shaip. (n.d.). Why Conversational AI Needs Good Utterance Data. Shaip Blog.
+
+3. Springer. (2025). Novel utterance data augmentation for intent classification using large language models. Springer.
+
+4. Emplifi. (n.d.). AI Utterances Documentation. Emplifi Platform Docs.
+
+5. Nuance. (n.d.). Adding natural language capabilities. Nuance Documentation.
+
+6. Ferro, et al. (2022). A Dependency-Aware Utterances Permutation Strategy. ECIR 2022 Conference.
+
+7. Voiceflow. (n.d.). 5 Principles for Good NLU Design. Voiceflow Pathways.
+
+8. Ronald, G. (n.d.). Best Practices in Writing Utterances. LinkedIn Pulse.
+
+9. Shaip. (n.d.). Sample Datasets. Shaip Resources.

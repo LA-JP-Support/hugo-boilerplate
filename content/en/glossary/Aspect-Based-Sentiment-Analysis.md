@@ -230,9 +230,15 @@ Emerging approaches enable ABSA on new domains or aspect categories with minimal
 
 ## References
 
-- [Aspect-Based Sentiment Analysis - A Comprehensive Survey](https://arxiv.org/abs/2203.01054)
-- [ABSA Tutorial - ACL](https://www.aclweb.org/anthology/P16-5002/)
-- [Aspect Extraction and Sentiment Analysis - Towards Data Science](https://towardsdatascience.com/aspect-based-sentiment-analysis-using-bert-pytorch-f03e8f2e6b44)
-- [ABSA with Deep Learning - Papers with Code](https://paperswithcode.com/task/aspect-based-sentiment-analysis)
-- [Sentiment Analysis for Aspect-Level Opinion Mining - IEEE](https://ieeexplore.ieee.org/document/8424605)
-- [Practical Guide to ABSA - MonkeyLearn](https://monkeylearn.com/blog/aspect-based-sentiment-analysis/)
+
+1. Zhang, L., et al. (2022). Aspect-Based Sentiment Analysis - A Comprehensive Survey. arXiv.
+
+2. Association for Computational Linguistics. (2016). ABSA Tutorial. ACL Anthology.
+
+3. Towards Data Science. (n.d.). Aspect Extraction and Sentiment Analysis. Towards Data Science.
+
+4. Papers with Code. (n.d.). ABSA with Deep Learning. Papers with Code.
+
+5. IEEE. (n.d.). Sentiment Analysis for Aspect-Level Opinion Mining. IEEE Xplore.
+
+6. MonkeyLearn. (n.d.). Practical Guide to ABSA. MonkeyLearn Blog.

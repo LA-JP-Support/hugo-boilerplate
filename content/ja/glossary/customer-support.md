@@ -279,15 +279,14 @@ AI搭載ソリューション、ナレッジベースの改善、または主要
 
 ## 参考文献
 
-1. [IBM: What is Customer Support?](https://www.ibm.com/think/topics/customer-support)
-2. [Zendesk: Customer Support vs. Customer Service](https://www.zendesk.com/blog/customer-support-vs-customer-service/)
-3. [Zendesk: Customer Service Statistics (2025)](https://www.zendesk.com/blog/customer-service-statistics/)
-4. [AmplifAI: Customer Service Statistics 2025](https://www.amplifai.com/blog/customer-service-statistics)
-5. [Help Scout: Customer Service vs. Customer Support](https://www.helpscout.com/blog/customer-service-vs-customer-support/)
-6. [RingCentral: Customer Service and Customer Support](https://www.ringcentral.com/us/en/blog/customer-service-vs-customer-support/)
-7. [Help Scout: Customer Service Facts & Quotes](https://www.helpscout.com/75-customer-service-facts-quotes-statistics/)
-8. [IBM: Chatbots for Customer Experience](https://www.ibm.com/think/topics/chatbots-for-customer-experience)
-9. [Zendesk: Customer Support Team Keys](https://www.zendesk.com/blog/customer-support-vs-customer-service/#Key%20features)
-10. [Zendesk CX Trends 2025](https://cxtrends.zendesk.com/)
 
-*すべての統計と例は、2025年時点の最新の業界調査から引用されています。さらなる情報と継続的な更新については、参照元をご確認ください。*
+1. IBM. (n.d.). What is Customer Support?. IBM Think Topics.
+2. Zendesk. (n.d.). Customer Support vs. Customer Service. Zendesk Blog.
+3. Zendesk. (2025). Customer Service Statistics. Zendesk Blog.
+4. AmplifAI. (2025). Customer Service Statistics. AmplifAI Blog.
+5. Help Scout. (n.d.). Customer Service vs. Customer Support. Help Scout Blog.
+6. RingCentral. (n.d.). Customer Service and Customer Support. RingCentral Blog.
+7. Help Scout. (n.d.). Customer Service Facts & Quotes. Help Scout Blog.
+8. IBM. (n.d.). Chatbots for Customer Experience. IBM Think Topics.
+9. Zendesk. (n.d.). Customer Support Team Keys. Zendesk Blog.
+10. Zendesk. (2025). CX Trends. Zendesk CX Trends.

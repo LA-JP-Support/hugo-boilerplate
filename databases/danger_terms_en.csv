@@ -1,0 +1,10 @@
+keyword,normalized,reason,score,source
+Make,make,Common English verb; clashes with Make (Integromat),100,seed
+did,did,Common English verb; clashes with DID acronym and general usage,100,seed
+do,do,Common English verb,90,seed
+get,get,Common English verb,90,seed
+set,set,Common English verb,90,seed
+use,use,Common English verb,80,seed
+Platform,platform,Generic noun; often appears as plain text,60,seed
+Token,token,Generic noun; appears frequently in AI/tech text,60,seed
+Workflow,workflow,Generic noun; appears frequently in business/tech text,60,seed

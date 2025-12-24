@@ -119,11 +119,12 @@ url: "/ja/glossary/Code-Interpreter/"
 
 ## 参考文献
 
-- [OpenAI Code Interpreter Documentation - OpenAI](https://platform.openai.com/docs/guides/code-interpreter)
-- [Introduction to Computational Notebooks and Code Execution - Nature](https://www.nature.com/articles/d41586-018-07196-1)
-- [AI-Assisted Programming: A Survey - ACM Computing Surveys](https://dl.acm.org/doi/10.1145/3564121)
-- [Interactive Computing and AI in Data Science - IEEE Computer Society](https://www.computer.org/csdl/magazine/co/2023/08/10251063/1QaXiHzMfHG)
-- [Security Considerations for AI Code Generation - NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
-- [The Future of Programming: AI-Human Collaboration - Communications of the ACM](https://cacm.acm.org/magazines/2023/5/271890-the-future-of-programming/fulltext)
-- [Jupyter Notebooks and Interactive Computing - Project Jupyter](https://jupyter.org/documentation)
-- [Best Practices for AI-Assisted Development - GitHub](https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot)
+
+1. OpenAI. (n.d.). Code Interpreter Documentation. OpenAI Platform.
+2. Nature. (2018). Introduction to Computational Notebooks and Code Execution. Nature.
+3. ACM Computing Surveys. (n.d.). AI-Assisted Programming: A Survey. ACM Digital Library.
+4. IEEE Computer Society. (2023). Interactive Computing and AI in Data Science. IEEE Computer.
+5. NIST. (n.d.). Security Considerations for AI Code Generation. NIST Cybersecurity Framework.
+6. Communications of the ACM. (2023). The Future of Programming: AI-Human Collaboration. ACM Communications.
+7. Project Jupyter. (n.d.). Jupyter Notebooks and Interactive Computing. Jupyter Documentation.
+8. GitHub. (n.d.). Best Practices for AI-Assisted Development. GitHub Documentation.

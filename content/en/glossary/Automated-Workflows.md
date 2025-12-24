@@ -232,13 +232,14 @@ Workflow automation orchestrates multi-step processes; RPA automates individual,
 
 ## References
 
-- [Atlassian: What is Workflow Automation?](https://www.atlassian.com/agile/project-management/workflow-automation)
-- [Zapier: Workflow Automation Guide](https://zapier.com/blog/workflow-automation/)
-- [Salesforce: What is Workflow Automation?](https://www.salesforce.com/mulesoft/workflow-automation/)
-- [IBM: What Is Workflow Automation?](https://www.ibm.com/think/topics/workflow-automation)
-- [Pipefy: What Is Workflow Automation?](https://www.pipefy.com/blog/what-is-workflow-automation/)
-- [TechTarget: Workflow Automation Definition](https://www.techtarget.com/searchcontentmanagement/definition/workflow-automation)
-- [NiCE: Workflow AI Automation](https://www.nice.com/glossary/workflow-ai-automation)
-- [Xurrent: Workflow Automation AI Guide](https://www.xurrent.com/blog/workflow-automation-ai-business-efficiency-guide)
-- [Windward Studios: Guide on Workflow Automation](https://www.windwardstudios.com/blog/guide-on-workflow-automation)
-- [McKinsey: Workplace Automation](https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/four-fundamentals-of-workplace-automation)
+
+1. Atlassian. (n.d.). What is Workflow Automation?. Atlassian Blog.
+2. Zapier. (n.d.). Workflow Automation Guide. Zapier Blog.
+3. Salesforce. (n.d.). What is Workflow Automation?. Salesforce MuleSoft.
+4. IBM. (n.d.). What Is Workflow Automation?. IBM Think Topics.
+5. Pipefy. (n.d.). What Is Workflow Automation?. Pipefy Blog.
+6. TechTarget. (n.d.). Workflow Automation Definition. TechTarget SearchContentManagement.
+7. NiCE. (n.d.). Workflow AI Automation. NiCE Glossary.
+8. Xurrent. (n.d.). Workflow Automation AI Guide. Xurrent Blog.
+9. Windward Studios. (n.d.). Guide on Workflow Automation. Windward Studios Blog.
+10. McKinsey. (n.d.). Workplace Automation. McKinsey Digital Insights.

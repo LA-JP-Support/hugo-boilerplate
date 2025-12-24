@@ -263,19 +263,35 @@ Yes. Export flows to Python code or deploy as API endpoints. Supports containeri
 
 ## References
 
-- [LangFlow Official Documentation](https://docs.langflow.org/)
-- [LangFlow Official Website](https://www.langflow.org/)
-- [LangFlow Concepts: Components](https://docs.langflow.org/concepts-components)
-- [LangFlow Concepts: Playground](https://docs.langflow.org/concepts-playground)
-- [LangFlow Quickstart Guide](https://docs.langflow.org/get-started-quickstart)
-- [LangFlow Build a Flow Tutorial](https://docs.langflow.org/concepts-flows)
-- [LangFlow Agents Documentation](https://docs.langflow.org/agents)
-- [LangFlow MCP Server](https://docs.langflow.org/mcp-server)
-- [LangFlow MCP Client](https://docs.langflow.org/mcp-client)
-- [LangFlow Custom Components Guide](https://docs.langflow.org/components-custom-components)
-- [Cohorte: LangFlow Visual Guide](https://www.cohorte.co/blog/langflow-a-visual-guide-to-building-llm-apps-with-langchain)
-- [Analytics Vidhya: LangFlow UI Guide](https://www.analyticsvidhya.com/blog/2023/06/langflow-ui-for-langchain-to-develop-applications-with-llms/)
-- [YouTube: LangFlow UI Demo](https://www.youtube.com/watch?v=18b7u_e5tnM)
-- [LangFlow GitHub Repository](https://github.com/langflow-ai/langflow)
-- [FlowiseAI Alternative](https://flowiseai.com/)
-- [IBM LangGraph Documentation](https://www.ibm.com/think/topics/langgraph)
+
+1. LangFlow. (n.d.). Official Documentation. LangFlow Docs. URL: https://docs.langflow.org/
+
+2. LangFlow. (n.d.). Official Website. LangFlow. URL: https://www.langflow.org/
+
+3. LangFlow. (n.d.). Concepts: Components. LangFlow Docs. URL: https://docs.langflow.org/concepts-components
+
+4. LangFlow. (n.d.). Concepts: Playground. LangFlow Docs. URL: https://docs.langflow.org/concepts-playground
+
+5. LangFlow. (n.d.). Quickstart Guide. LangFlow Docs. URL: https://docs.langflow.org/get-started-quickstart
+
+6. LangFlow. (n.d.). Build a Flow Tutorial. LangFlow Docs. URL: https://docs.langflow.org/concepts-flows
+
+7. LangFlow. (n.d.). Agents Documentation. LangFlow Docs. URL: https://docs.langflow.org/agents
+
+8. LangFlow. (n.d.). MCP Server. LangFlow Docs. URL: https://docs.langflow.org/mcp-server
+
+9. LangFlow. (n.d.). MCP Client. LangFlow Docs. URL: https://docs.langflow.org/mcp-client
+
+10. LangFlow. (n.d.). Custom Components Guide. LangFlow Docs. URL: https://docs.langflow.org/components-custom-components
+
+11. Cohorte. (2023). LangFlow Visual Guide to Building LLM Apps with Langchain. Cohorte Blog. URL: https://www.cohorte.co/blog/langflow-a-visual-guide-to-building-llm-apps-with-langchain
+
+12. Analytics Vidhya. (2023). LangFlow UI Guide for Langchain to Develop Applications with LLMs. Analytics Vidhya Blog. URL: https://www.analyticsvidhya.com/blog/2023/06/langflow-ui-for-langchain-to-develop-applications-with-llms/
+
+13. YouTube. (n.d.). LangFlow UI Demo. YouTube. URL: https://www.youtube.com/watch?v=18b7u_e5tnM
+
+14. LangFlow. (n.d.). GitHub Repository. GitHub. URL: https://github.com/langflow-ai/langflow
+
+15. FlowiseAI. (n.d.). Alternative Platform. FlowiseAI. URL: https://flowiseai.com/
+
+16. IBM. (n.d.). LangGraph Documentation. IBM Think Topics. URL: https://www.ibm.com/think/topics/langgraph

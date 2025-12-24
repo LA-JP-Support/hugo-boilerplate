@@ -159,17 +159,18 @@ DTMFにより、キーパッド入力を介して自動システム(IVR、チャ
 
 ## 参考文献
 
-- [Sycurio: DTMF Technology Guide](https://sycurio.com/knowledge/glossaries/dual-tone-multiple-frequency-dtmf)
-- [Sycurio: DTMF Masking Guide](https://sycurio.com/blog/dtmf-masking)
-- [TechTarget: What is DTMF?](https://www.techtarget.com/searchnetworking/definition/DTMF)
-- [Wikipedia: DTMF Signaling (PDF)](https://www.ece.iastate.edu/~alexs/classes/2021_Spring_575/code/19_Audio/02_Phone_Digits/Wikipedia-Dual-Tone.pdf)
-- [Twilio: What are DTMF Tones?](https://www.twilio.com/docs/glossary/what-is-dtmf)
-- [Twilio: The Introduction of Touch Tone Phones](https://www.twilio.com/docs/glossary/what-is-dtmf#the-introduction-of-touch-tone-phones)
-- [Twilio: In-Band vs. Out-of-Band Signaling](https://www.twilio.com/docs/glossary/what-is-dtmf)
-- [VoIP Nuggets: DTMF in SIP and RFC 2833](https://voipnuggets.com/2023/06/12/different-types-of-dtmf-in-sip-and-why-dtmf-via-rfc2833-is-more-reliable/)
-- [NICE: What is Call Center DTMF?](https://www.nice.com/glossary/what-is-call-center-dual-tone-multi-frequency-dtmf)
-- [NICE: IVR Products](https://www.nice.com/products/interactive-voice-response-ivr)
-- [ITU-T: Recommendation Q.23](https://www.itu.int/rec/T-REC-Q.23/en)
-- [PCI Pal: Agent Assist for NICE](https://cxexchange.niceincontact.com/apps/197219/pci-pal-agent-assist)
-- [YouTube: Sycurio DTMF Masking Demo](https://www.youtube.com/watch?v=-iMrUREflUY)
-- [YouTube: DTMF Explainer Video](https://www.youtube.com/watch?v=bAbNl8O6sSY)
+
+1. Sycurio. (n.d.). DTMF Technology Guide. Sycurio Knowledge Base.
+2. Sycurio. (n.d.). DTMF Masking Guide. Sycurio Blog.
+3. TechTarget. (n.d.). What is DTMF?. TechTarget SearchNetworking.
+4. Wikipedia. (n.d.). DTMF Signaling. Wikipedia.
+5. Twilio. (n.d.). What are DTMF Tones?. Twilio Documentation.
+6. Twilio. (n.d.). The Introduction of Touch Tone Phones. Twilio Documentation.
+7. Twilio. (n.d.). In-Band vs. Out-of-Band Signaling. Twilio Documentation.
+8. VoIP Nuggets. (2023). DTMF in SIP and RFC 2833. VoIP Nuggets.
+9. NICE. (n.d.). What is Call Center DTMF?. NICE Glossary.
+10. NICE. (n.d.). IVR Products. NICE Products.
+11. ITU-T. (n.d.). Recommendation Q.23. ITU-T.
+12. PCI Pal. (n.d.). Agent Assist for NICE. CX Exchange.
+13. Sycurio. (n.d.). DTMF Masking Demo. YouTube.
+14. Unknown. (n.d.). DTMF Explainer Video. YouTube.

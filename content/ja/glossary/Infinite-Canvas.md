@@ -229,15 +229,16 @@ AR/VRが成熟するにつれて、無限キャンバスは三次元化し、新
 
 ## 参考文献
 
-- [Infinite Canvas: Tools That Work the Way We Think](https://infinitecanvas.tools)
-- [An Infinite Canvas Tutorial (Technical)](https://infinitecanvas.cc/)
-- [InfiniteCanvas.cc: What is an Infinite Canvas?](https://infinitecanvas.cc/guide/what-is-an-infinite-canvas.html)
-- [InfiniteCanvas.cc: Lesson 001 Tutorial](https://infinitecanvas.cc/guide/lesson-001)
-- [NodeLand: The Infinite Canvas as a Second Brain](https://nodeland.io/blog/posts/the-infinite-canvas-as-a-second-brain)
-- [Kittl Blog: Infinite Canvas](https://www.kittl.com/blogs/infinite-canvas/)
-- [Concepts Infinite Canvas Walkthrough (YouTube)](https://www.youtube.com/watch?v=Vvz8FofKusw)
-- [YouTube: How the Brain Organizes Information Spatially](https://www.youtube.com/watch?v=wMCiVL2qduQ)
-- [dbslice: Infinite Canvas Approach (PDF)](https://www.dbslice.org/static/img/AIAA-2025-dbslice.pdf)
-- [Miro: Infinite Whiteboard](https://miro.com/)
-- [Figma: Infinite Design Canvas](https://www.figma.com/)
-- [FigJam](https://www.figma.com/figjam/)
+
+1. Infinite Canvas. (n.d.). Tools That Work the Way We Think. Infinite Canvas.
+2. Infinite Canvas. (n.d.). An Infinite Canvas Tutorial (Technical). Infinite Canvas.
+3. Infinite Canvas. (n.d.). What is an Infinite Canvas?. InfiniteCanvas.cc Guide.
+4. Infinite Canvas. (n.d.). Lesson 001 Tutorial. InfiniteCanvas.cc Guide.
+5. NodeLand. (n.d.). The Infinite Canvas as a Second Brain. NodeLand Blog.
+6. Kittl. (n.d.). Infinite Canvas. Kittl Blog.
+7. Concepts. (n.d.). Infinite Canvas Walkthrough. YouTube.
+8. YouTube. (n.d.). How the Brain Organizes Information Spatially. YouTube.
+9. dbslice. (n.d.). Infinite Canvas Approach. AIAA-2025 PDF.
+10. Miro. Infinite Whiteboard. URL: https://miro.com/
+11. Figma. Infinite Design Canvas. URL: https://www.figma.com/
+12. Figma. FigJam. URL: https://www.figma.com/figjam/

@@ -274,16 +274,17 @@ print("Hello, world!")
 
 ## 参考文献
 
-- [Python Execution Model](https://docs.python.org/3/reference/executionmodel.html)
-- [PEP 8: Python Style Guide](https://peps.python.org/pep-0008/)
-- [PEP 8: Indentation](https://peps.python.org/pep-0008/#indentation)
-- [PEP 8: Tabs or Spaces](https://peps.python.org/pep-0008/#tabs-or-spaces)
-- [MDN: JavaScript Block Statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block)
-- [MDN: Block Statement Examples](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block#examples)
-- [MDN: Block Scoping Rules with var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block#block_scoping_rules_with_var_or_function_declaration_in_non-strict_mode)
-- [MDN: JavaScript Control Flow](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement)
-- [Contentstack: Code Block Documentation](https://www.contentstack.com/docs/developers/automation-hub-connectors/code-block)
-- [n8n: Code Node Documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/)
-- [Microsoft Teams: Bot Message Formatting](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages)
-- [Stack Overflow: Python Blocks](https://stackoverflow.com/questions/50083391/what-are-blocks-of-code-in-python-the-definitions-are-all-confusing)
-- [Mimo: Python Glossary - Code Block](https://mimo.org/glossary/python/code-block)
+
+1. Python Software Foundation. (n.d.). Python Execution Model. Python Documentation.
+2. Python Software Foundation. (n.d.). PEP 8: Python Style Guide. Python Enhancement Proposals.
+3. Python Software Foundation. (n.d.). PEP 8: Indentation. Python Enhancement Proposals.
+4. Python Software Foundation. (n.d.). PEP 8: Tabs or Spaces. Python Enhancement Proposals.
+5. Mozilla. (n.d.). JavaScript Block Statement. MDN Web Docs.
+6. Mozilla. (n.d.). Block Statement Examples. MDN Web Docs.
+7. Mozilla. (n.d.). Block Scoping Rules with var. MDN Web Docs.
+8. Mozilla. (n.d.). JavaScript Control Flow. MDN Web Docs.
+9. Contentstack. (n.d.). Code Block Documentation. Contentstack Docs.
+10. n8n. (n.d.). Code Node Documentation. n8n Documentation.
+11. Microsoft. (n.d.). Bot Message Formatting. Microsoft Teams Documentation.
+12. Stack Overflow. (n.d.). Python Blocks. Stack Overflow.
+13. Mimo. (n.d.). Python Glossary - Code Block. Mimo Learning Platform.

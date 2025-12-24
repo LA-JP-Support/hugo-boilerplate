@@ -259,11 +259,19 @@ Major platforms like Microsoft LUIS, IBM Watson, Emplifi, and Dialogflow provide
 
 ## References
 
-- [Microsoft LUIS: Utterances](https://learn.microsoft.com/en-us/azure/ai-services/luis/concepts/utterances)
-- [SiteSpeakAI: What is an Utterance?](https://sitespeak.ai/ai-chatbot-terms/utterance)
-- [Emplifi: AI Utterances Documentation](https://docs.emplifi.io/platform/latest/home/ai-utterances)
-- [LinkedIn: What is Utterance, Intent & Entity in Conversational AI](https://www.linkedin.com/pulse/what-utterance-intent-entity-conversational-ai-paul-blocchi)
-- [CogniTech: Intents, Entities, Synonyms in Natural Language Understanding](https://www.cognitech.systems/blog/artificial-intelligence/entry/intents-entities-synonyms-retrieval-natural-language-understanding)
-- [BotPenguin: Utterance - Types and Challenges](https://botpenguin.com/glossary/utterance)
-- [IBM Cloud: Conversational AI Videos](https://www.youtube.com/results?search_query=ibm+cloud+conversational+ai)
-- [Microsoft Azure AI: NLP and Chatbots](https://www.youtube.com/results?search_query=microsoft+azure+ai+chatbot)
+
+1. Microsoft. (n.d.). LUIS: Utterances. Microsoft Learn.
+
+2. SiteSpeakAI. (n.d.). What is an Utterance?. SiteSpeakAI Glossary.
+
+3. Emplifi. (n.d.). AI Utterances Documentation. Emplifi Documentation.
+
+4. Blocchi, P. (n.d.). What is Utterance, Intent & Entity in Conversational AI. LinkedIn.
+
+5. CogniTech. (n.d.). Intents, Entities, Synonyms in Natural Language Understanding. CogniTech Blog.
+
+6. BotPenguin. (n.d.). Utterance - Types and Challenges. BotPenguin Glossary.
+
+7. IBM. (n.d.). Conversational AI Videos. YouTube.
+
+8. Microsoft. (n.d.). Azure AI: NLP and Chatbots. YouTube.

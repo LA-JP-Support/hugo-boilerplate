@@ -211,20 +211,37 @@ Provides webhook authentication, encrypted connections, granular permissions, au
 
 ## References
 
-- [Make Official Website](https://www.make.com/en)
-- [Make Templates Library](https://www.make.com/en/templates)
-- [Make Integrations Directory](https://www.make.com/en/integrations)
-- [Make Academy](https://academy.make.com/)
-- [Make Pricing](https://www.make.com/en/pricing)
-- [Make Documentation](https://www.make.com/en/help)
-- [Make Error Handling](https://www.make.com/en/help/errors)
-- [Make Custom Functions](https://www.make.com/en/blog/custom-functions-in-make-best-practices)
-- [Make AI Features](https://app.archbee.com/public/PREVIEW-TDD_JYughqVhdcQ3sZF9_/PREVIEW-CqL-zHgSWS_WjgsU_f0TK)
-- [XRay Tech: Make Beginner Guide 2024](https://www.xray.tech/post/make-beginner-2024)
-- [Google Sheets Integration](https://apps.make.com/google-sheets)
-- [Slack Integration](https://apps.make.com/slack)
-- [Shopify Integration](https://apps.make.com/shopify)
-- [Mailchimp Integration](https://apps.make.com/mailchimp)
-- [Airtable Integration](https://apps.make.com/airtable)
-- [Notion Integration](https://apps.make.com/notion)
-- [OpenAI Integration](https://apps.make.com/openai-gpt-3)
+
+1. Make. Service for Workflow Automation and Integration Platform. URL: https://www.make.com/en
+
+2. Make. Templates Library for Workflow Automation. URL: https://www.make.com/en/templates
+
+3. Make. Integrations Directory for Various Applications. URL: https://www.make.com/en/integrations
+
+4. Make. Online Learning Platform for Workflow Automation. URL: https://academy.make.com/
+
+5. Make. Pricing Information for Workflow Automation Services. URL: https://www.make.com/en/pricing
+
+6. Make. Official Documentation and Help Center. URL: https://www.make.com/en/help
+
+7. Make. Error Handling Guide. URL: https://www.make.com/en/help/errors
+
+8. XRay Tech. (2024). Make Custom Functions Best Practices. Make Blog. URL: https://www.make.com/en/blog/custom-functions-in-make-best-practices
+
+9. Make. AI Features Documentation. URL: https://app.archbee.com/public/PREVIEW-TDD_JYughqVhdcQ3sZF9_/PREVIEW-CqL-zHgSWS_WjgsU_f0TK
+
+10. XRay Tech. (2024). Make Beginner Guide 2024. XRay Tech Blog.
+
+11. Make. Google Sheets Integration. URL: https://apps.make.com/google-sheets
+
+12. Make. Slack Integration. URL: https://apps.make.com/slack
+
+13. Make. Shopify Integration. URL: https://apps.make.com/shopify
+
+14. Make. Mailchimp Integration. URL: https://apps.make.com/mailchimp
+
+15. Make. Airtable Integration. URL: https://apps.make.com/airtable
+
+16. Make. Notion Integration. URL: https://apps.make.com/notion
+
+17. Make. OpenAI GPT-3 Integration. URL: https://apps.make.com/openai-gpt-3

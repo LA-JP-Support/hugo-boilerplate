@@ -268,15 +268,27 @@ Delay/Sleep ノードは、コードとモダンなワークフロー自動化�
 
 ## 参考文献
 
-- [Stack Overflow: What is the JavaScript version of sleep()?](https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep)
-- [Mimo: JavaScript Sleep Function](https://mimo.org/glossary/javascript/sleep-function)
-- [Zignuts: Nodejs Sleep Function: Pause for a Period of Time](https://www.zignuts.com/blog/nodejs-sleep-function)
-- [Index.dev: JavaScript Sleep, Wait & Delay Guide](https://www.index.dev/blog/javascript-sleep-wait-delay-guide)
-- [AWS: SSM Sleep Action](https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-action-sleep.html)
-- [Cognigy: Sleep Node](https://docs.cognigy.com//ai/agents/develop/node-reference/logic/sleep)
-- [n8n Community: Delays Between Array Items](https://community.n8n.io/t/processing-array-items-individually-with-delays-between-each-item/86897)
-- [n8n Community: Wait Node & Parallel Execution](https://community.n8n.io/t/wait-node-parelle-node-workflow-execution/154867)
-- [Jira: Support for delay / pause / wait step](https://jira.atlassian.com/browse/AUTO-238)
-- [Atlassian Community: Can I set a delay in Jira Automation?](https://community.atlassian.com/forums/Jira-questions/Can-I-set-a-delay-in-Jira-Automation/qaq-p/3074180)
-- [LinkedIn: Intelligent Delay Node](https://www.linkedin.com/posts/muhammedadnanvv_alright-lets-cut-through-the-noise-youre-activity-7341374262135373825-6xUv)
-- [Real Python: LangChain Chatbot Tutorial](https://realpython.com/build-llm-rag-chatbot-with-langchain/)
+
+1. Stack Overflow. (n.d.). What is the JavaScript version of sleep()?. Stack Overflow.
+
+2. Mimo. (n.d.). JavaScript Sleep Function. Mimo Glossary.
+
+3. Zignuts. (n.d.). Nodejs Sleep Function: Pause for a Period of Time. Zignuts Blog.
+
+4. Index.dev. (n.d.). JavaScript Sleep, Wait & Delay Guide. Index.dev Blog.
+
+5. AWS. (n.d.). SSM Sleep Action. AWS Documentation.
+
+6. Cognigy. (n.d.). Sleep Node. Cognigy Documentation.
+
+7. n8n Community. (n.d.). Delays Between Array Items. n8n Community Forum.
+
+8. n8n Community. (n.d.). Wait Node & Parallel Execution. n8n Community Forum.
+
+9. Jira. (n.d.). Support for delay / pause / wait step. Jira Issue Tracker.
+
+10. Atlassian Community. (n.d.). Can I set a delay in Jira Automation?. Atlassian Community Forum.
+
+11. LinkedIn. (n.d.). Intelligent Delay Node. LinkedIn Post.
+
+12. Real Python. (n.d.). LangChain Chatbot Tutorial. Real Python.

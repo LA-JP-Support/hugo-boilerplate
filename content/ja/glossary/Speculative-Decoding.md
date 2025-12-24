@@ -325,14 +325,25 @@ Speculative Decodingを備えた高性能デプロイメント。
 
 ## 参考文献
 
-- [Google Research Blog: Looking Back at Speculative Decoding](https://research.google/blog/looking-back-at-speculative-decoding/)
-- [arXiv: Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192)
-- [NVIDIA Technical Blog: An Introduction to Speculative Decoding](https://developer.nvidia.com/blog/an-introduction-to-speculative-decoding-for-reducing-latency-in-ai-inference/)
-- [BentoML: Speculative Decoding](https://bentoml.com/llm/inference-optimization/speculative-decoding)
-- [Baseten: A Quick Introduction to Speculative Decoding](https://www.baseten.co/blog/a-quick-introduction-to-speculative-decoding/)
-- [arXiv: Speculative Sampling (Stern et al., 2018)](https://arxiv.org/abs/1811.03115)
-- [arXiv: Distributed Speculative Decoding](https://arxiv.org/abs/2302.01318)
-- [vLLM Documentation: Speculative Decoding](https://docs.vllm.ai/en/latest/features/spec_decode/)
-- [BentoML Blog: Structured Decoding in vLLM](https://www.bentoml.com/blog/structured-decoding-in-vllm-a-gentle-introduction)
-- [Modular MAX: Speculative Decoding Documentation](https://docs.modular.com/max/serve/speculative-decoding)
-- [GitHub: vLLM Project](https://github.com/vllm-project/vllm)
+
+1. Google Research. (n.d.). Looking Back at Speculative Decoding. Google Research Blog.
+
+2. Anonymous. (2022). Fast Inference from Transformers via Speculative Decoding. arXiv.
+
+3. NVIDIA. (n.d.). An Introduction to Speculative Decoding for Reducing Latency in AI Inference. NVIDIA Technical Blog.
+
+4. BentoML. (n.d.). Speculative Decoding. URL: https://bentoml.com/llm/inference-optimization/speculative-decoding
+
+5. Baseten. (n.d.). A Quick Introduction to Speculative Decoding. Baseten Blog.
+
+6. Stern et al. (2018). Speculative Sampling. arXiv.
+
+7. Anonymous. (2023). Distributed Speculative Decoding. arXiv.
+
+8. vLLM. (n.d.). Speculative Decoding. vLLM Documentation.
+
+9. BentoML. (n.d.). Structured Decoding in vLLM: A Gentle Introduction. BentoML Blog.
+
+10. Modular MAX. (n.d.). Speculative Decoding Documentation. URL: https://docs.modular.com/max/serve/speculative-decoding
+
+11. vLLM Project. (n.d.). vLLM Project Repository. URL: https://github.com/vllm-project/vllm

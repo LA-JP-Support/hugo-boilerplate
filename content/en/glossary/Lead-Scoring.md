@@ -233,9 +233,15 @@ Analyze email responses, chat interactions, and survey feedback for sentiment si
 
 ## References
 
-- [HubSpot: Lead Scoring Guide](https://blog.hubspot.com/marketing/lead-scoring)
-- [Salesforce: Predictive Lead Scoring](https://www.salesforce.com/products/einstein/features/lead-scoring/)
-- [Forrester: Predictive Analytics for B2B Marketing](https://www.forrester.com/report/The-Forrester-Wave-Predictive-Analytics-And-Machine-Learning-Solutions-Q1-2021/RES159379)
-- [Marketo: Lead Scoring Best Practices](https://business.adobe.com/products/marketo/lead-scoring.html)
-- [Gartner: AI in Sales](https://www.gartner.com/en/sales/insights/b2b-sales-ai)
-- [Harvard Business Review: Using AI to Improve Sales](https://hbr.org/2021/03/how-ai-can-help-you-build-a-better-sales-team)
+
+1. HubSpot. (n.d.). Lead Scoring Guide. HubSpot Blog.
+
+2. Salesforce. (n.d.). Predictive Lead Scoring. Salesforce Products.
+
+3. Forrester. (2021). Predictive Analytics for B2B Marketing. Forrester Wave Report.
+
+4. Marketo. (n.d.). Lead Scoring Best Practices. Adobe Business.
+
+5. Gartner. (n.d.). AI in Sales. Gartner Sales Insights.
+
+6. Harvard Business Review. (2021). Using AI to Improve Sales. Harvard Business Review.

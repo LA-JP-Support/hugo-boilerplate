@@ -251,11 +251,19 @@ Discordコミュニティに参加し、GitHubでPRまたはissueを提出し、
 
 ## 参考文献
 
-- [Flowise公式ウェブサイト](https://flowiseai.com/)
-- [Flowiseドキュメント](https://docs.flowiseai.com)
-- [GitHubリポジトリ](https://github.com/FlowiseAI/Flowise)
-- [Discordコミュニティ](https://discord.gg/jbaHfsRVBW)
-- [Flowise Cloudマーケットプレイス](https://cloud.flowiseai.com/marketplace)
-- [YouTubeチュートリアル: AIドキュメントチャットボットの構築](https://www.youtube.com/watch?v=riXpu1tHzl0)
-- [Flowise Cloudサインアップ](https://cloud.flowiseai.com/signin)
-- [包括的なLLM用語集](https://main--dasarpai.netlify.app/dsblog/Comprehensive-Glossary-of-LLM/#what-is-flowiseai)
+
+1. Flowise. (n.d.). Official Website. Service. URL: https://flowiseai.com/
+
+2. Flowise. (n.d.). Documentation. Service. URL: https://docs.flowiseai.com
+
+3. FlowiseAI. (n.d.). GitHub Repository. Service. URL: https://github.com/FlowiseAI/Flowise
+
+4. Flowise. (n.d.). Discord Community. Service. URL: https://discord.gg/jbaHfsRVBW
+
+5. Flowise. (n.d.). Cloud Marketplace. Service. URL: https://cloud.flowiseai.com/marketplace
+
+6. Unknown. (n.d.). YouTube Tutorial: Building an AI Document Chatbot. Video. URL: https://www.youtube.com/watch?v=riXpu1tHzl0
+
+7. Flowise. (n.d.). Cloud Sign-up. Service. URL: https://cloud.flowiseai.com/signin
+
+8. DasarpAI. (n.d.). Comprehensive Glossary of LLM. Article. URL: https://main--dasarpai.netlify.app/dsblog/Comprehensive-Glossary-of-LLM/#what-is-flowiseai

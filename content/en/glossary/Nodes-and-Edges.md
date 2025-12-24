@@ -280,10 +280,11 @@ A: Many modern systems and frameworks support dynamic graph construction/modific
 
 ## References
 
-- [Relevance AI: Introduction to Nodes](https://relevanceai.com/docs/workforce/build-an-ai-workforce/introduction-to-nodes)
-- [Solutions Review: Knowledge Graph Definition](https://solutionsreview.com/data-management/knowledge-graph-definition-101-how-nodes-and-edges-connect-data/)
-- [Cyfuture: What Are AI Nodes?](https://cyfuture.ai/blog/what-are-ai-nodes)
-- [Stack Overflow: GraphQL edges and node meaning](https://stackoverflow.com/questions/42622912/in-graphql-whats-the-meaning-of-edges-and-node)
-- [Nature: Explainable AI through graph theory](https://www.nature.com/articles/s41598-022-19419-7)
-- [YouTube: Introduction to LangGraph](https://www.youtube.com/watch?v=qRxsCunfhws)
-- [YouTube: Graph Engine Fundamentals](https://www.youtube.com/watch?v=Y0sHBKg2XOg)
+
+1. Relevance AI. (n.d.). Introduction to Nodes. Relevance AI Documentation.
+2. Solutions Review. (n.d.). Knowledge Graph Definition 101: How Nodes and Edges Connect Data. Solutions Review.
+3. Cyfuture. (n.d.). What Are AI Nodes?. Cyfuture Blog.
+4. Stack Overflow. (n.d.). GraphQL Edges and Node Meaning. Stack Overflow.
+5. Nature. (2022). Explainable AI through graph theory. Nature.
+6. YouTube. (n.d.). Introduction to LangGraph. YouTube.
+7. YouTube. (n.d.). Graph Engine Fundamentals. YouTube.

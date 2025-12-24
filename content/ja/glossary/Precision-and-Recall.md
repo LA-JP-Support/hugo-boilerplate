@@ -272,16 +272,29 @@ F1スコアを含めますが、完全な理解のために常に適合率と再
 
 ## 参考文献
 
-- [Google ML Crash Course: Accuracy, Precision, Recall](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall)
-- [EvidentlyAI: Accuracy vs Precision vs Recall](https://www.evidentlyai.com/classification-metrics/accuracy-precision-recall)
-- [EvidentlyAI: Confusion Matrix Explained](https://www.evidentlyai.com/classification-metrics/confusion-matrix)
-- [EvidentlyAI: Classification Metrics Guide](https://www.evidentlyai.com/classification-metrics)
-- [GeeksforGeeks: Precision and Recall in Machine Learning](https://www.geeksforgeeks.org/machine-learning/precision-and-recall-in-machine-learning/)
-- [DeepAI: Precision and Recall](https://deepai.org/machine-learning-glossary-and-terms/precision-and-recall)
-- [DeepAI: ROC Curve](https://deepai.org/machine-learning-glossary-and-terms/receiver-operating-characteristic-curve)
-- [BuiltIn: Precision and Recall](https://builtin.com/data-science/precision-and-recall)
-- [BuiltIn: F1 Score and Advanced Metrics](https://builtin.com/data-science/f1-score)
-- [Lyzr: Glossary - Precision and Recall](https://www.lyzr.ai/glossaries/precision-and-recall/)
-- [scikit-learn: Precision-Recall Curves](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
-- [StatQuest: Precision and Recall Clearly Explained (YouTube)](https://www.youtube.com/watch?v=0pP4EwWJgIU)
-- [Corey Schafer: Precision and Recall Explained (YouTube)](https://www.youtube.com/watch?v=Kdsp6soqA7o)
+
+1. Google. (n.d.). ML Crash Course: Accuracy, Precision, Recall. Google Developers.
+
+2. EvidentlyAI. (n.d.). Accuracy vs Precision vs Recall. EvidentlyAI Blog.
+
+3. EvidentlyAI. (n.d.). Confusion Matrix Explained. EvidentlyAI Blog.
+
+4. EvidentlyAI. (n.d.). Classification Metrics Guide. EvidentlyAI Blog.
+
+5. GeeksforGeeks. (n.d.). Precision and Recall in Machine Learning. GeeksforGeeks.
+
+6. DeepAI. (n.d.). Precision and Recall. DeepAI Machine Learning Glossary.
+
+7. DeepAI. (n.d.). ROC Curve. DeepAI Machine Learning Glossary.
+
+8. BuiltIn. (n.d.). Precision and Recall. BuiltIn.
+
+9. BuiltIn. (n.d.). F1 Score and Advanced Metrics. BuiltIn.
+
+10. Lyzr. (n.d.). Glossary - Precision and Recall. Lyzr.
+
+11. scikit-learn. (n.d.). Precision-Recall Curves. scikit-learn Documentation.
+
+12. StatQuest. (n.d.). Precision and Recall Clearly Explained. YouTube.
+
+13. Corey Schafer. (n.d.). Precision and Recall Explained. YouTube.

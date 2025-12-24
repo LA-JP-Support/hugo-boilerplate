@@ -236,24 +236,25 @@ Through careful data curation, testing for bias across demographic groups, using
 
 ## References
 
-- [IBM: What is Data Science?](https://www.ibm.com/topics/data-science)
-- [UC Berkeley: What is Data Science?](https://ischoolonline.berkeley.edu/data-science/what-is-data-science/)
-- [GeeksforGeeks: Data Science Tutorial](https://www.geeksforgeeks.org/data-science/data-science-for-beginners/)
-- [DataScience-PM: Data Science Life Cycle](https://www.datascience-pm.com/data-science-life-cycle/)
-- [GeeksforGeeks: Statistics for Data Science](https://www.geeksforgeeks.org/data-science/statistics-for-data-science/)
-- [GeeksforGeeks: Python for Data Science](https://www.geeksforgeeks.org/data-science/data-science-with-python-tutorial/)
-- [GeeksforGeeks: Data Preprocessing](https://www.geeksforgeeks.org/dbms/data-preprocessing-in-data-mining/)
-- [GeeksforGeeks: Exploratory Data Analysis](https://www.geeksforgeeks.org/data-analysis/what-is-exploratory-data-analysis/)
-- [GeeksforGeeks: Machine Learning Tutorial](https://www.geeksforgeeks.org/machine-learning/machine-learning/)
-- [GeeksforGeeks: Data Wrangling](https://www.geeksforgeeks.org/data-science/data-wrangling/)
-- [GeeksforGeeks: Data Visualization](https://www.geeksforgeeks.org/data-visualization/data-visualization-and-its-importance/)
-- [GeeksforGeeks: Data Quality Issues](https://www.geeksforgeeks.org/data-science/data-quality-issues-in-data-science/)
-- [DataScience-PM: Data Science Ethics Questions](https://www.datascience-pm.com/10-data-science-ethics-questions/)
-- [GeeksforGeeks: Data Scientist Roadmap](https://www.geeksforgeeks.org/blogs/data-scientist-roadmap/)
-- [GeeksforGeeks: Data Analyst Roadmap](https://www.geeksforgeeks.org/blogs/data-analyst-roadmap/)
-- [GeeksforGeeks: Data Architect Guide](https://www.geeksforgeeks.org/gfg-academy/data-architect-roles-skills-and-how-to-become-one-in-2024/)
-- [GeeksforGeeks: Data Science Projects](https://www.geeksforgeeks.org/data-science/top-data-science-projects/)
-- [GeeksforGeeks: Data Science Interview Questions](https://www.geeksforgeeks.org/data-science/data-science-interview-questions-and-answers/)
-- [Qlik: Data Science vs Data Analytics](https://www.qlik.com/us/data-analytics/data-science-vs-data-analytics)
-- [freeCodeCamp: Data Analysis with Python](https://www.youtube.com/watch?v=r-uOLxNrNk8)
-- [Kaggle: Data Science Competitions](https://www.kaggle.com/)
+
+1. IBM. (n.d.). What is Data Science?. IBM Topics.
+2. UC Berkeley. (n.d.). What is Data Science?. UC Berkeley iSchool Online.
+3. GeeksforGeeks. (n.d.). Data Science Tutorial. GeeksforGeeks.
+4. DataScience-PM. (n.d.). Data Science Life Cycle. DataScience-PM.
+5. GeeksforGeeks. (n.d.). Statistics for Data Science. GeeksforGeeks.
+6. GeeksforGeeks. (n.d.). Python for Data Science. GeeksforGeeks.
+7. GeeksforGeeks. (n.d.). Data Preprocessing. GeeksforGeeks.
+8. GeeksforGeeks. (n.d.). Exploratory Data Analysis. GeeksforGeeks.
+9. GeeksforGeeks. (n.d.). Machine Learning Tutorial. GeeksforGeeks.
+10. GeeksforGeeks. (n.d.). Data Wrangling. GeeksforGeeks.
+11. GeeksforGeeks. (n.d.). Data Visualization. GeeksforGeeks.
+12. GeeksforGeeks. (n.d.). Data Quality Issues. GeeksforGeeks.
+13. DataScience-PM. (n.d.). Data Science Ethics Questions. DataScience-PM.
+14. GeeksforGeeks. (n.d.). Data Scientist Roadmap. GeeksforGeeks.
+15. GeeksforGeeks. (n.d.). Data Analyst Roadmap. GeeksforGeeks.
+16. GeeksforGeeks. (n.d.). Data Architect Guide. GeeksforGeeks.
+17. GeeksforGeeks. (n.d.). Data Science Projects. GeeksforGeeks.
+18. GeeksforGeeks. (n.d.). Data Science Interview Questions. GeeksforGeeks.
+19. Qlik. (n.d.). Data Science vs Data Analytics. Qlik.
+20. freeCodeCamp. (n.d.). Data Analysis with Python. YouTube.
+21. Kaggle. (n.d.). Data Science Competitions. Kaggle.

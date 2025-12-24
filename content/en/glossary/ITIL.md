@@ -209,20 +209,37 @@ Cybersecurity risk management; ITIL complements with structured incident respons
 
 ## References
 
-- [Atlassian: What Is ITIL? Core Principles & Best Practices](https://www.atlassian.com/itsm/itil)
-- [AuditBoard: ITIL Framework Overview](https://auditboard.com/blog/the-itil-framework-tips-and-tricks)
-- [ITIL.com: Certification Pathways and Business Impact](https://www.itil.com/certifications)
-- [ITIL.com: Professionals Certifications](https://www.itil.com/professionals/certifications)
-- [ITIL.com: Benefits for Organizations](https://www.itil.com/organizations/benefits)
-- [ITIL.com: How to Implement ITIL](https://www.itil.com/organizations/itil-how-to-implement)
-- [ITIL.com: Capability Maturity Assessment](https://www.itil.com/organizations/capability-maturity-assessment)
-- [ITIL.com: ITIL-Aligned Tools](https://www.itil.com/organizations/itil-aligned-tools)
-- [ITIL.com: Success Stories](https://www.itil.com/organizations/success-stories)
-- [ITIL.com: ITIL in Focus Videos and Case Studies](https://www.itil.com/itil-in-focus)
-- [ITIL.com: Global Community](https://www.itil.com/global-community)
-- [Learning Tree: Mastering the ITIL Certification Pathway](https://www.learningtree.com/blog/mastering-itil-certification-pathway/)
-- [New Horizons: Guide to ITIL Certification Levels](https://www.newhorizons.com/resources/blog/itil-levels)
-- [PeopleCert: IT Governance & Service Management](https://www.peoplecert.org/browse-certifications/it-governance-and-service-management)
-- [ISACA: COBIT Governance Framework](https://www.isaca.org/resources/cobit)
-- [ISO: ISO/IEC 20000 ITSM Standard](https://www.iso.org/isoiec-20000-it-service-management.html)
-- [NIST: Cybersecurity Framework](https://www.nist.gov/cyberframework)
+
+1. Atlassian. (n.d.). What Is ITIL? Core Principles & Best Practices. Atlassian Blog.
+
+2. AuditBoard. (n.d.). ITIL Framework Overview. AuditBoard Blog.
+
+3. ITIL.com. (n.d.). Certification Pathways and Business Impact. ITIL.com Resources.
+
+4. ITIL.com. (n.d.). Professionals Certifications. ITIL.com Professional Guide.
+
+5. ITIL.com. (n.d.). Benefits for Organizations. ITIL.com Organizational Resources.
+
+6. ITIL.com. (n.d.). How to Implement ITIL. ITIL.com Implementation Guide.
+
+7. ITIL.com. (n.d.). Capability Maturity Assessment. ITIL.com Assessment Resources.
+
+8. ITIL.com. (n.d.). ITIL-Aligned Tools. ITIL.com Tool Guide.
+
+9. ITIL.com. (n.d.). Success Stories. ITIL.com Case Studies.
+
+10. ITIL.com. (n.d.). ITIL in Focus Videos and Case Studies. ITIL.com Media Resources.
+
+11. ITIL.com. (n.d.). Global Community. ITIL.com Community Resources.
+
+12. Learning Tree. (n.d.). Mastering the ITIL Certification Pathway. Learning Tree Blog.
+
+13. New Horizons. (n.d.). Guide to ITIL Certification Levels. New Horizons Resources.
+
+14. PeopleCert. (n.d.). IT Governance & Service Management. PeopleCert Certification Guide.
+
+15. ISACA. (n.d.). COBIT Governance Framework. ISACA Resources.
+
+16. ISO. (n.d.). ISO/IEC 20000 ITSM Standard. ISO Standards.
+
+17. NIST. (n.d.). Cybersecurity Framework. NIST Cybersecurity Resources.

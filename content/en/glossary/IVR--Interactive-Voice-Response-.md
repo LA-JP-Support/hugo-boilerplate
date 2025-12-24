@@ -187,13 +187,23 @@ Throughout the entire process, the IVR system maintains session state and contex
 
 ## References
 
-- [What Is IVR? Interactive Voice Response Explained - AWS](https://aws.amazon.com/what-is/interactive-voice-response/)
-- [Interactive Voice Response - Wikipedia](https://en.wikipedia.org/wiki/Interactive_voice_response)
-- [What Is Interactive Voice Response (IVR)? - IBM](https://www.ibm.com/think/topics/interactive-voice-response)
-- [IVR: Interactive Voice Response System for VoIP - Aircall](https://aircall.io/call-center-software-features/ivr/)
-- [IVR System for Business: Benefits & How It Works - RingCentral](https://www.ringcentral.com/contact-center/interactive-voice-response.html)
-- [IVR System - IVR Contact Center - Five9](https://www.five9.com/products/capabilities/omnichannel/visual-interactive-voice-response)
-- [What is Interactive Voice Response (IVR)? - TTEC](https://www.ttec.com/glossary/interactive-voice-response-ivr)
-- [What is Interactive Voice Response (IVR)? A Complete Guide - Zendesk](https://www.zendesk.com/blog/what-is-ivr/)
-- [IVR - Call Center Interactive Voice Response - Ringover](https://www.ringover.com/multi-level-ivr)
-- [What is IVR in Call Centers - Five9](https://www.five9.com/faq/what-is-ivr)
+
+1. AWS. (n.d.). What Is IVR? Interactive Voice Response Explained. AWS.
+
+2. Wikipedia. (n.d.). Interactive Voice Response. Wikipedia.
+
+3. IBM. (n.d.). What Is Interactive Voice Response (IVR)?. IBM Think Topics.
+
+4. Aircall. (n.d.). IVR: Interactive Voice Response System for VoIP. Aircall.
+
+5. RingCentral. (n.d.). IVR System for Business: Benefits & How It Works. RingCentral.
+
+6. Five9. (n.d.). IVR System - IVR Contact Center. Five9.
+
+7. TTEC. (n.d.). What is Interactive Voice Response (IVR)?. TTEC.
+
+8. Zendesk. (n.d.). What is Interactive Voice Response (IVR)? A Complete Guide. Zendesk Blog.
+
+9. Ringover. (n.d.). IVR - Call Center Interactive Voice Response. Ringover.
+
+10. Five9. (n.d.). What is IVR in Call Centers. Five9.

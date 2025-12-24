@@ -235,13 +235,23 @@ Wizards should focus on authentic system simulation rather than personal perform
 
 ## References
 
-- [Nielsen Norman Group: The Wizard of Oz Method in UX](https://www.nngroup.com/articles/wizard-of-oz/)
-- [Interaction Design Foundation: Wizard of Oz Prototypes](https://www.interaction-design.org/literature/topics/wizard-of-oz-prototypes)
-- [Nielsen Norman Group: Wizard of Oz Method Video](https://www.youtube.com/watch?v=gDsb0vW_LM8)
-- [AnswerLab: What in the UX is Wizard of Oz Testing?](https://www.answerlab.com/insights/wizard-of-oz-testing)
-- [Bonsaibrain: The Wizard of Oz Technique in Testing Conversational Agents](https://bonsaibrain.net/the-wizard-of-oz-technique-in-testing-conversational-agents-an-exploration/)
-- [UX SideQuest: What is Wizard of Oz Testing?](https://www.uxsidequest.com/p/what-is-wizard-of-oz-testing)
-- [Wikipedia: Wizard of Oz Experiment](https://en.wikipedia.org/wiki/Wizard_of_Oz_experiment)
-- [CDS: What is Wizard of Oz Testing and How Can It Be Used?](https://blog.cds.co.uk/what-is-wizard-of-oz-testing-and-how-can-it-be-used)
-- [Nielsen Norman Group: Do You Need to Reveal the Wizard?](https://www.nngroup.com/articles/wizard-of-oz/#toc-do-you-need-to-reveal-the-wizard-5)
-- [Nielsen Norman Group: Ethical Dilemmas in User Research](https://www.nngroup.com/articles/ethical-dilemmas/)
+
+1. Nielsen Norman Group. (n.d.). The Wizard of Oz Method in UX. Nielsen Norman Group.
+
+2. Interaction Design Foundation. (n.d.). Wizard of Oz Prototypes. Interaction Design Foundation.
+
+3. Nielsen Norman Group. (n.d.). Wizard of Oz Method Video. YouTube.
+
+4. AnswerLab. (n.d.). What in the UX is Wizard of Oz Testing?. AnswerLab.
+
+5. Bonsaibrain. (n.d.). The Wizard of Oz Technique in Testing Conversational Agents. Bonsaibrain.
+
+6. UX SideQuest. (n.d.). What is Wizard of Oz Testing?. UX SideQuest.
+
+7. Wikipedia. (n.d.). Wizard of Oz Experiment. Wikipedia.
+
+8. CDS. (n.d.). What is Wizard of Oz Testing and How Can It Be Used?. CDS Blog.
+
+9. Nielsen Norman Group. (n.d.). Do You Need to Reveal the Wizard?. Nielsen Norman Group.
+
+10. Nielsen Norman Group. (n.d.). Ethical Dilemmas in User Research. Nielsen Norman Group.

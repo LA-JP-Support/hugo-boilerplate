@@ -223,14 +223,25 @@ Cart Abandonment Rate is a core ecommerce metric with global averages hovering a
 
 ## References
 
-- [Baymard Institute: Cart Abandonment Rate Statistics](https://baymard.com/lists/cart-abandonment-rate)
-- [Baymard Institute: Checkout Usability Report and Benchmark](https://baymard.com/blog/ecommerce-checkout-usability-report-and-benchmark)
-- [Dynamic Yield: Cart Abandonment Rate Benchmarks](https://marketing.dynamicyield.com/benchmarks/cart-abandonment-rate/)
-- [Optimizely: Shopping Cart Abandonment](https://www.optimizely.com/optimization-glossary/shopping-cart-abandonment/)
-- [Stripe: Top 8 Reasons for Cart Abandonment](https://stripe.com/resources/more/top-8-reasons-for-cart-abandonment)
-- [Geckoboard: Shopping Cart Abandonment Rate KPI](https://www.geckoboard.com/best-practice/kpi-examples/ecommerce/shopping-cart-abandonment-rate/)
-- [Shopify: Reduce Shopping Cart Abandonment by Optimizing Checkout](https://www.shopify.com/enterprise/blog/44272899-how-to-reduce-shopping-cart-abandonment-by-optimizing-the-checkout)
-- [Primer: Understanding Cart Abandonment Rate](https://primer.io/blog/cart-abandonment-rate/)
-- [SaleCycle: 2023 Ecommerce Stats & Trends Report](https://www.salecycle.com/resources/)
-- [Fresh Relevance: Real-Time Marketing Report](https://www.freshrelevance.com/resources/real-time-marketing-report-may-2022)
-- [Listrak: Shopping Cart Abandonment Index](https://www.listrak.com/ecommerce-marketing-automation/channels/email/shopping-cart-abandonment-index.aspx)
+
+1. Baymard Institute. (n.d.). Cart Abandonment Rate Statistics. Baymard Institute.
+
+2. Baymard Institute. (n.d.). Checkout Usability Report and Benchmark. Baymard Institute.
+
+3. Dynamic Yield. (n.d.). Cart Abandonment Rate Benchmarks. Dynamic Yield.
+
+4. Optimizely. (n.d.). Shopping Cart Abandonment. Optimizely.
+
+5. Stripe. (n.d.). Top 8 Reasons for Cart Abandonment. Stripe.
+
+6. Geckoboard. (n.d.). Shopping Cart Abandonment Rate KPI. Geckoboard.
+
+7. Shopify. (n.d.). Reduce Shopping Cart Abandonment by Optimizing Checkout. Shopify.
+
+8. Primer. (n.d.). Understanding Cart Abandonment Rate. Primer.
+
+9. SaleCycle. (2023). 2023 Ecommerce Stats & Trends Report. SaleCycle.
+
+10. Fresh Relevance. (2022). Real-Time Marketing Report. Fresh Relevance.
+
+11. Listrak. (n.d.). Shopping Cart Abandonment Index. Listrak.

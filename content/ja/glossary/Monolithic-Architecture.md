@@ -198,19 +198,20 @@ Web、デスクトップ、モバイルUIを含むすべてのクライアント
 
 ## 参考文献
 
-- [GeeksforGeeks: Monolithic Architecture System Design](https://www.geeksforgeeks.org/system-design/monolithic-architecture-system-design/)
-- [Atlassian: Microservices vs. Monolith](https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith)
-- [IBM: What is Monolithic Architecture?](https://www.ibm.com/think/topics/monolithic-architecture)
-- [TechTarget: Monolithic Architecture Definition](https://www.techtarget.com/whatis/definition/monolithic-architecture)
-- [AWS: Monolithic vs. Microservices Architecture](https://aws.amazon.com/compare/the-difference-between-monolithic-and-microservices-architecture/)
-- [Talend: Monolithic Architecture Guide](https://www.talend.com/resources/monolithic-architecture/)
-- [Strapi: Monolithic Architecture Pros, Cons, and Evolution](https://strapi.io/blog/monolithic-architecture-pros-cons-evolution-guide)
-- [ShadeCoder: Monolithic Architecture Guide for 2025](https://www.shadecoder.com/topics/a-monolithic-architecture-a-comprehensive-guide-for-2025)
-- [GeeksforGeeks: Microservices Architecture](https://www.geeksforgeeks.org/system-design/microservices/)
-- [GeeksforGeeks: Event-Driven Architecture](https://www.geeksforgeeks.org/system-design/event-driven-architecture-system-design/)
-- [GeeksforGeeks: Strangler Pattern](https://www.geeksforgeeks.org/system-design/strangler-pattern-in-micro-services-system-design/)
-- [GeeksforGeeks: System Design Fundamentals](https://www.geeksforgeeks.org/system-design/)
-- [GeeksforGeeks: Horizontal and Vertical Scaling](https://www.geeksforgeeks.org/system-design/system-design-horizontal-and-vertical-scaling/)
-- [GeeksforGeeks: Database Sharding](https://www.geeksforgeeks.org/system-design/database-sharding-a-system-design-concept/)
-- [IBM: Relational Databases](https://www.ibm.com/think/topics/relational-databases)
-- [Atlassian: Continuous Delivery](https://www.atlassian.com/continuous-delivery)
+
+1. GeeksforGeeks. (n.d.). Monolithic Architecture System Design. GeeksforGeeks.
+2. Atlassian. (n.d.). Microservices vs. Monolith. Atlassian.
+3. IBM. (n.d.). What is Monolithic Architecture?. IBM Think Topics.
+4. TechTarget. (n.d.). Monolithic Architecture Definition. TechTarget.
+5. AWS. (n.d.). Monolithic vs. Microservices Architecture. AWS.
+6. Talend. (n.d.). Monolithic Architecture Guide. Talend.
+7. Strapi. (n.d.). Monolithic Architecture Pros, Cons, and Evolution. Strapi Blog.
+8. ShadeCoder. (2025). Monolithic Architecture Guide for 2025. ShadeCoder.
+9. GeeksforGeeks. (n.d.). Microservices Architecture. GeeksforGeeks.
+10. GeeksforGeeks. (n.d.). Event-Driven Architecture. GeeksforGeeks.
+11. GeeksforGeeks. (n.d.). Strangler Pattern. GeeksforGeeks.
+12. GeeksforGeeks. (n.d.). System Design Fundamentals. GeeksforGeeks.
+13. GeeksforGeeks. (n.d.). Horizontal and Vertical Scaling. GeeksforGeeks.
+14. GeeksforGeeks. (n.d.). Database Sharding. GeeksforGeeks.
+15. IBM. (n.d.). Relational Databases. IBM Think Topics.
+16. Atlassian. (n.d.). Continuous Delivery. Atlassian.

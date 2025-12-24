@@ -287,21 +287,39 @@ Major fines (up to €20 million or 4% turnover), legal action, reputational har
 
 ## References
 
-- [GDPR Official Text - EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
-- [GDPR.eu - What is the GDPR?](https://gdpr.eu/)
-- [GDPR.eu - Compliance Guide](https://gdpr.eu/compliance/)
-- [GDPR.eu - Glossary](https://gdpr.eu/glossary/)
-- [GDPR.eu - Consent Requirements](https://gdpr.eu/consent/)
-- [GDPR.eu - Data Subject Rights](https://gdpr.eu/rights/)
-- [GDPR.eu - Territorial Scope](https://gdpr.eu/companies-outside-of-europe/)
-- [GDPR.eu - AI and GDPR](https://gdpr.eu/artificial-intelligence/)
-- [OneTrust - GDPR Compliance Guide](https://www.onetrust.com/blog/gdpr-compliance/)
-- [EDPB - Guidelines and Best Practices](https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en)
-- [EDPB - AI and Data Protection Guidelines](https://edpb.europa.eu/our-work-tools/documents/public-consultations/2021/guidelines-052021-artificial-intelligence-and_en)
-- [EDPB - Consent Guidelines](https://edpb.europa.eu/our-work-tools/documents/public-consultations/2018/guidelines-052020-consent-under-regulation-eu_en)
-- [EDPB - Automated Decision-Making Guidelines](https://edpb.europa.eu/our-work-tools/documents/public-consultations/2018/guidelines-022018-automated-individual_en)
-- [EDPB - DPIA Guidelines](https://edpb.europa.eu/our-work-tools/documents/public-consultations/2017/guidelines-012017-data-protection-impact_en)
-- [EDPB - International Transfers](https://www.edpb.europa.eu/our-work-tools/our-documents/topic/international-transfers-data_en)
-- [GDPR-Info.eu - Full Legal Text](https://gdpr-info.eu/)
-- [CNIL - Google €50M Fine](https://www.cnil.fr/en/cnils-restricted-committee-imposes-financial-penalty-50-million-euros-against-google-llc)
-- [ICO - British Airways Fine](https://www.ico.org.uk/about-the-ico/news-and-events/news-and-blogs/2020/10/ico-fines-british-airways-20m-for-data-breach/)
+
+1. European Union. (2016). General Data Protection Regulation (GDPR). EUR-Lex.
+
+2. GDPR.eu. (n.d.). What is the GDPR?. GDPR.eu.
+
+3. GDPR.eu. (n.d.). Compliance Guide. GDPR.eu.
+
+4. GDPR.eu. (n.d.). Glossary. GDPR.eu.
+
+5. GDPR.eu. (n.d.). Consent Requirements. GDPR.eu.
+
+6. GDPR.eu. (n.d.). Data Subject Rights. GDPR.eu.
+
+7. GDPR.eu. (n.d.). Territorial Scope. GDPR.eu.
+
+8. GDPR.eu. (n.d.). AI and GDPR. GDPR.eu.
+
+9. OneTrust. (n.d.). GDPR Compliance Guide. OneTrust Blog.
+
+10. European Data Protection Board (EDPB). (n.d.). Guidelines and Best Practices. EDPB.
+
+11. European Data Protection Board (EDPB). (2021). AI and Data Protection Guidelines. EDPB.
+
+12. European Data Protection Board (EDPB). (2020). Consent Guidelines. EDPB.
+
+13. European Data Protection Board (EDPB). (2018). Automated Decision-Making Guidelines. EDPB.
+
+14. European Data Protection Board (EDPB). (2017). DPIA Guidelines. EDPB.
+
+15. European Data Protection Board (EDPB). (n.d.). International Transfers. EDPB.
+
+16. GDPR-Info.eu. (n.d.). Full Legal Text. GDPR-Info.eu.
+
+17. Commission Nationale de l'Informatique et des Libertés (CNIL). (n.d.). Google €50M Fine. CNIL.
+
+18. Information Commissioner's Office (ICO). (2020). British Airways Fine. ICO.

@@ -224,12 +224,13 @@ JavaScriptベースのトラッキングは、広告ブロッカー、遅いペ�
 
 ## 参考文献
 
-- [Siteimprove: What is a Click Map?](https://help.siteimprove.com/support/solutions/articles/80000448144-what-is-a-click-map-and-how-does-it-show-visitors-interactions-)
-- [Contentsquare: Click Maps Guide](https://contentsquare.com/guides/heatmaps/click-maps/)
-- [Microsoft Clarity: Click Maps](https://learn.microsoft.com/en-us/clarity/heatmaps/click-maps)
-- [Microsoft Clarity: Semantic Metrics - Dead Clicks](https://learn.microsoft.com/en-us/clarity/insights/semantic-metrics#dead-clicks)
-- [Microsoft Clarity: Heatmaps Overview](https://learn.microsoft.com/en-us/clarity/heatmaps/heatmaps-overview)
-- [Microsoft Clarity: Setup Guide](https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-setup)
-- [Siteimprove: How Behavior Maps Work](https://help.siteimprove.com/support/solutions/articles/80000448201)
-- [Crazy Egg: Click Map Use Cases](https://www.crazyegg.com/blog/clickmap/)
-- [Mailchimp: How Click Maps Work](https://mailchimp.com/help/about-click-maps/)
+
+1. Siteimprove. (n.d.). What is a Click Map?. Siteimprove Help Center.
+2. Contentsquare. (n.d.). Click Maps Guide. Contentsquare Guides.
+3. Microsoft. (n.d.). Click Maps. Microsoft Clarity Documentation.
+4. Microsoft. (n.d.). Semantic Metrics - Dead Clicks. Microsoft Clarity Documentation.
+5. Microsoft. (n.d.). Heatmaps Overview. Microsoft Clarity Documentation.
+6. Microsoft. (n.d.). Setup Guide. Microsoft Clarity Documentation.
+7. Siteimprove. (n.d.). How Behavior Maps Work. Siteimprove Help Center.
+8. Crazy Egg. (n.d.). Click Map Use Cases. Crazy Egg Blog.
+9. Mailchimp. (n.d.). How Click Maps Work. Mailchimp Help Center.

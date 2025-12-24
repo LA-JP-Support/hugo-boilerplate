@@ -266,10 +266,17 @@ CPIベースのEACは、現在のパフォーマンスが継続すると仮定�
 
 ## 参考文献
 
-- [Logikal Projects: Understanding the Cost Performance Index (CPI)](https://logikalprojects.com/insights/understanding-the-cost-performance-index-cpi-on-your-project/)
-- [Atlassian: Understanding Cost Performance Index](https://www.atlassian.com/work-management/project-management/cost-performance-index)
-- [TrueProject Insight: How Predictive CPI Could Save Your Next Project](https://www.trueprojectinsight.com/blog/project-office/cost-performance-index)
-- [PMI: Project Management Body of Knowledge (PMBOK Guide)](https://www.pmi.org/pmbok-guide-standards/foundational/pmbok)
-- [Cleopatra Enterprise: Cost Performance Index Definition and Use](https://www.costmanagement.eu/cost-performance-index-cpi-definition-formula-use/)
-- [Adobe Workfront: Calculate Cost Performance Index](https://experienceleague.adobe.com/docs/workfront/using/reporting/reports/calculated-fields/calculate-cpi.html)
-- [McKinsey: Rethinking How New Factories Are Built](https://www.mckinsey.com/capabilities/operations/our-insights/smarter-growth-lower-risk-rethinking-how-new-factories-are-built)
+
+1. Logikal Projects. (n.d.). Understanding the Cost Performance Index (CPI). Logikal Projects Insights.
+
+2. Atlassian. (n.d.). Understanding Cost Performance Index. Atlassian Work Management.
+
+3. TrueProject Insight. (n.d.). How Predictive CPI Could Save Your Next Project. TrueProject Blog.
+
+4. Project Management Institute (PMI). (n.d.). Project Management Body of Knowledge (PMBOK Guide). PMI Standards.
+
+5. Cleopatra Enterprise. (n.d.). Cost Performance Index Definition and Use. Cost Management.
+
+6. Adobe Workfront. (n.d.). Calculate Cost Performance Index. Adobe Experience League.
+
+7. McKinsey. (n.d.). Rethinking How New Factories Are Built. McKinsey Operations Insights.

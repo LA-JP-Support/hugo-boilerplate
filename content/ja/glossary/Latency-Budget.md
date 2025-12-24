@@ -302,11 +302,12 @@ url: "/ja/glossary/Latency-Budget/"
 
 ## 参考文献
 
-- [Galileo AI: Understanding Latency in AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
-- [Mitrix: Real-time AI Performance](https://mitrix.io/blog/real-time-ai-performance-latency-challenges-and-optimization/)
-- [Axon Trade: Trading Execution Latency (LinkedIn)](https://www.linkedin.com/posts/axontrade_trading-execution-latency-activity-7384575340595027968-_6IK)
-- [Thor Signia: AI System Survivability (LinkedIn)](https://www.linkedin.com/posts/thorsignia_aisystemsengineering-latencyarchitecture-activity-7396045682123624448-B8uF)
-- [Galileo Evaluate Documentation](https://docs.galileo.ai/galileo/gen-ai-studio-products/galileo-evaluate)
-- [Galileo Observe Documentation](https://docs.galileo.ai/galileo/gen-ai-studio-products/galileo-observe)
-- [Materialize: Low-latency Context Engineering](https://materialize.com/blog/low-latency-context-engineering-for-production-ai/)
-- [Google Cloud TPU Introduction](https://cloud.google.com/tpu/docs/intro-to-tpu)
+
+1. Galileo AI. (n.d.). Understanding Latency in AI. Galileo AI Blog.
+2. Mitrix. (n.d.). Real-time AI Performance. Mitrix Blog.
+3. Axon Trade. (n.d.). Trading Execution Latency. LinkedIn Post.
+4. Thor Signia. (n.d.). AI System Survivability. LinkedIn Post.
+5. Galileo. (n.d.). Galileo Evaluate Documentation. Galileo Documentation.
+6. Galileo. (n.d.). Galileo Observe Documentation. Galileo Documentation.
+7. Materialize. (n.d.). Low-latency Context Engineering for Production AI. Materialize Blog.
+8. Google Cloud. (n.d.). TPU Introduction. Google Cloud Documentation.

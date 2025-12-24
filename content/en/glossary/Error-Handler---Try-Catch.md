@@ -225,16 +225,17 @@ Try-Catch error handlers prevent uncontrolled crashes by intercepting exceptions
 
 ## References
 
-- [MDN: try...catch (JavaScript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
-- [JavaScript.info: Error Handling](https://javascript.info/try-catch)
-- [Microsoft Learn: Exception Handling in C#](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/exception-handling-statements)
-- [Stack Overflow: Try/Catch Best Practices (C#)](https://stackoverflow.com/questions/14973642/how-using-try-catch-for-exception-handling-is-best-practice)
-- [Software Engineering Stack Exchange: Try/Catch as Logical Operators](https://softwareengineering.stackexchange.com/questions/107723/arguments-for-or-against-using-try-catch-as-logical-operators)
-- [Node.js: Cluster & Error Handling](https://stackoverflow.com/questions/5999373/how-do-i-prevent-node-js-from-crashing-try-catch-doesnt-work)
-- [W3Schools: Java Try...Catch](https://www.w3schools.com/java/java_try_catch.asp)
-- [UiPath Forum: Best Practices Try Catch](https://forum.uipath.com/t/best-practices-try-catch/402586)
-- [UiPath Forum: Global Exception Handler vs Try-Catch](https://forum.uipath.com/t/global-exception-handler-vs-try-catch-when-to-use-which/177630)
-- [UiPath Forum: Exception Handling in Large Projects](https://forum.uipath.com/t/what-is-the-best-approach-for-exception-handling-in-uipath-if-you-have-hundred-of-activities-and-many-workflows-error-handling/529943)
-- [Stackify: 9 Best Practices for Java Exceptions](https://stackify.com/best-practices-exceptions-java/)
-- [Baeldung: Java Exceptions](https://www.baeldung.com/java-exceptions)
-- [UiPath Official Docs: Try Catch](https://docs.uipath.com/activities/docs/try-catch)
+
+1. MDN. (n.d.). try...catch (JavaScript). MDN Web Docs.
+2. JavaScript.info. (n.d.). Error Handling. JavaScript.info.
+3. Microsoft. (n.d.). Exception Handling in C#. Microsoft Learn.
+4. Stack Overflow. (n.d.). Try/Catch Best Practices (C#). Stack Overflow.
+5. Software Engineering Stack Exchange. (n.d.). Try/Catch as Logical Operators. Software Engineering Stack Exchange.
+6. Stack Overflow. (n.d.). Node.js: Cluster & Error Handling. Stack Overflow.
+7. W3Schools. (n.d.). Java Try...Catch. W3Schools.
+8. UiPath Forum. (n.d.). Best Practices Try Catch. UiPath Forum.
+9. UiPath Forum. (n.d.). Global Exception Handler vs Try-Catch. UiPath Forum.
+10. UiPath Forum. (n.d.). Exception Handling in Large Projects. UiPath Forum.
+11. Stackify. (n.d.). 9 Best Practices for Java Exceptions. Stackify.
+12. Baeldung. (n.d.). Java Exceptions. Baeldung.
+13. UiPath. (n.d.). Try Catch. UiPath Official Docs.

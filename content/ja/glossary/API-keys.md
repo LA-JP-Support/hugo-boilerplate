@@ -195,19 +195,35 @@ API キーは、アプリケーションプログラミングインターフェ�
 
 ## 参考文献
 
-- [IBM — What Is an API Key?](https://www.ibm.com/think/topics/api-key)
-- [Algolia — What is an API key & how is it used for security?](https://www.algolia.com/blog/engineering/search-101-what-is-an-api-key-how-does-it-provide-api-security)
-- [Google Cloud Documentation — Manage API keys](https://docs.cloud.google.com/docs/authentication/api-keys)
-- [Frontegg — API Authentication and Authorization: 6 Methods and Tips for Success](https://frontegg.com/blog/api-authentication-authorization)
-- [Esri Developer Documentation — Introduction to API key authentication](https://developers.arcgis.com/documentation/core-concepts/security-and-authentication/api-keys/)
-- [OpenAI — Best Practices for API Key Safety](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety)
-- [Zuplo — Top 7 API Authentication Methods Compared](https://zuplo.com/learning-center/top-7-api-authentication-methods-compared)
-- [Testfully — API Authentication Methods](https://testfully.io/blog/api-authentication/)
-- [LegitSecurity — API Key Security Best Practices](https://www.legitsecurity.com/aspm-knowledge-base/api-key-security-best-practices)
-- [YouTube: What is an API Key? (CodeAcademy)](https://www.youtube.com/watch?v=GZvSYJDk-us)
-- [Google: Using API Keys](https://cloud.google.com/docs/authentication/api-keys-use)
-- [Algolia: API Keys vs JWT Auth](https://www.algolia.com/blog/engineering/api-keys-vs-json-web-tokens/)
-- [IBM Docs: Enhanced Access Administration API Overview](https://www.ibm.com/docs/en/apptio-platform/access-administration/saas?topic=apis-enhanced-access-administration-api-overview-api-keys-faq)
-- [Google Cloud: API Key Security Best Practices](https://docs.cloud.google.com/docs/authentication/api-keys-best-practices)
-- [Algolia: API Keys Documentation](https://algolia.com/doc/guides/security/api-keys)
-- [Google Maps API Documentation](https://developers.google.com/maps/documentation)
+
+1. IBM. (n.d.). What Is an API Key?. IBM Think Topics.
+
+2. Algolia. (n.d.). What is an API key & how is it used for security?. Algolia Engineering Blog.
+
+3. Google Cloud. (n.d.). Manage API keys. Google Cloud Documentation.
+
+4. Frontegg. (n.d.). API Authentication and Authorization: 6 Methods and Tips for Success. Frontegg Blog.
+
+5. Esri. (n.d.). Introduction to API key authentication. Esri Developer Documentation.
+
+6. OpenAI. (n.d.). Best Practices for API Key Safety. OpenAI Help Center.
+
+7. Zuplo. (n.d.). Top 7 API Authentication Methods Compared. Zuplo Learning Center.
+
+8. Testfully. (n.d.). API Authentication Methods. Testfully Blog.
+
+9. LegitSecurity. (n.d.). API Key Security Best Practices. LegitSecurity ASPM Knowledge Base.
+
+10. CodeAcademy. (n.d.). What is an API Key?. YouTube Video.
+
+11. Google. (n.d.). Using API Keys. Google Cloud Documentation.
+
+12. Algolia. (n.d.). API Keys vs JWT Auth. Algolia Engineering Blog.
+
+13. IBM. (n.d.). Enhanced Access Administration API Overview. IBM Documentation.
+
+14. Google Cloud. (n.d.). API Key Security Best Practices. Google Cloud Documentation.
+
+15. Algolia. (n.d.). API Keys Documentation. Algolia Documentation.
+
+16. Google. (n.d.). Google Maps API Documentation. Google Developers.

@@ -236,11 +236,19 @@ CPU、メモリ、ネットワークスループット、アプリケーショ�
 
 ## 参考文献
 
-- [IBM: What is Auto Scaling?](https://www.ibm.com/think/topics/autoscaling)
-- [AWS Auto Scaling Overview](https://aws.amazon.com/autoscaling/)
-- [DigitalOcean: Cloud Auto Scaling Techniques](https://www.digitalocean.com/community/tutorials/auto-scaling-techniques-guide)
-- [Datadog: Auto-scaling Knowledge Center](https://www.datadoghq.com/knowledge-center/auto-scaling/)
-- [GeeksforGeeks: What is Auto Scaling?](https://www.geeksforgeeks.org/system-design/what-is-auto-scaling/)
-- [Hydrolix: Autoscaling in Cloud Computing](https://hydrolix.io/glossary/autoscaling/)
-- [Middleware: What is Autoscaling?](https://middleware.io/blog/what-is-autoscaling/)
-- [Zesty: Autoscaling Glossary](https://zesty.co/finops-glossary/autoscaling/)
+
+1. IBM. (n.d.). What is Auto Scaling?. IBM Think Topics. URL: https://www.ibm.com/think/topics/autoscaling
+
+2. AWS. (n.d.). Auto Scaling Overview. AWS Documentation. URL: https://aws.amazon.com/autoscaling/
+
+3. DigitalOcean. (n.d.). Cloud Auto Scaling Techniques. DigitalOcean Community Tutorials. URL: https://www.digitalocean.com/community/tutorials/auto-scaling-techniques-guide
+
+4. Datadog. (n.d.). Auto-scaling Knowledge Center. Datadog Knowledge Base. URL: https://www.datadoghq.com/knowledge-center/auto-scaling/
+
+5. GeeksforGeeks. (n.d.). What is Auto Scaling?. GeeksforGeeks System Design. URL: https://www.geeksforgeeks.org/system-design/what-is-auto-scaling/
+
+6. Hydrolix. (n.d.). Autoscaling in Cloud Computing. Hydrolix Glossary. URL: https://hydrolix.io/glossary/autoscaling/
+
+7. Middleware. (n.d.). What is Autoscaling?. Middleware Blog. URL: https://middleware.io/blog/what-is-autoscaling/
+
+8. Zesty. (n.d.). Autoscaling Glossary. Zesty FinOps Glossary. URL: https://zesty.co/finops-glossary/autoscaling/

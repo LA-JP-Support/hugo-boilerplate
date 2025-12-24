@@ -240,13 +240,14 @@ url: "/ja/glossary/Multi-Tenancy/"
 
 ## 参考文献
 
-- [IBM: What is Multi-Tenant?](https://www.ibm.com/think/topics/multi-tenant)
-- [Wikipedia: Multitenancy](https://en.wikipedia.org/wiki/Multitenancy)
-- [Salesforce: Platform Multitenant Architecture](https://architect.salesforce.com/fundamentals/platform-multitenant-architecture)
-- [Microsoft Azure: Multitenant Storage and Data Approaches](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/approaches/storage-data)
-- [Qrvey: Multi-Tenant Security—Risks and Best Practices](https://qrvey.com/blog/multi-tenant-security/)
-- [Neon: The Noisy Neighbor Problem in Multitenant Architectures](https://neon.com/blog/noisy-neighbor-multitenant)
-- [Spectro Cloud: Managing the Noisy Neighbor Problem in Kubernetes](https://www.spectrocloud.com/blog/managing-the-noisy-neighbor-problem-in-kubernetes-multi-tenancy)
-- [GoodData: Multi-Tenant Architecture](https://www.gooddata.com/blog/multi-tenant-architecture/)
-- [Cigen: AI in SaaS Use Cases and Applications](https://www.cigen.io/insights/ai-in-saas-use-cases-benefits-and-real-world-applications)
-- [LinkedIn: Multi-tenant SaaS in the Real World](https://www.linkedin.com/pulse/multi-tenant-saas-real-world-5-uses-youll-actually-see-2025-xmtqf)
+
+1. IBM. (n.d.). What is Multi-Tenant?. IBM Think Topics.
+2. Wikipedia. (n.d.). Multitenancy. Wikipedia.
+3. Salesforce. (n.d.). Platform Multitenant Architecture. Salesforce Architect.
+4. Microsoft Azure. (n.d.). Multitenant Storage and Data Approaches. Microsoft Learn.
+5. Qrvey. (n.d.). Multi-Tenant Security—Risks and Best Practices. Qrvey Blog.
+6. Neon. (n.d.). The Noisy Neighbor Problem in Multitenant Architectures. Neon Blog.
+7. Spectro Cloud. (n.d.). Managing the Noisy Neighbor Problem in Kubernetes. Spectro Cloud Blog.
+8. GoodData. (n.d.). Multi-Tenant Architecture. GoodData Blog.
+9. Cigen. (n.d.). AI in SaaS Use Cases and Applications. Cigen Insights.
+10. LinkedIn. (n.d.). Multi-tenant SaaS in the Real World. LinkedIn Pulse.

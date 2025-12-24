@@ -462,14 +462,25 @@ A: Typical ROI comes from reduced development time (60-80%), improved agility, a
 
 ## References
 
-- [Higson: What is a Rules Engine and Why Do You Need It?](https://www.higson.io/blog/what-is-a-rules-engine)
-- [Camunda: What is a Business Rules Engine: Benefits and Use Cases](https://camunda.com/blog/2024/07/the-business-process-rules-engine/)
-- [Nected.ai: Rules Engine Design Patterns](https://www.nected.ai/us/blog-us/rules-engine-design-pattern)
-- [Camunda: DMN Documentation](https://docs.camunda.io/docs/components/modeler/dmn/)
-- [Higson: Open Source vs. Proprietary Rules Engines](https://www.higson.io/blog/open-source-vs-proprietary-rules-engines)
-- [Higson: Common Business Rules Examples](https://higson.io/blog/common-business-rules-examples)
-- [Martin Fowler: Rules Engine (Bliki)](https://martinfowler.com/bliki/RulesEngine.html)
-- [IBM: Operational Decision Manager](https://www.ibm.com/products/operational-decision-manager)
-- [Red Hat: Drools Documentation](https://www.drools.org/)
-- [FICO: Blaze Advisor](https://www.fico.com/en/products/fico-blaze-advisor)
-- [Pegasystems: Decision Management](https://www.pega.com/products/platform/decision-management)
+
+1. Higson. (n.d.). What is a Rules Engine and Why Do You Need It?. Higson Blog.
+
+2. Camunda. (2024). What is a Business Rules Engine: Benefits and Use Cases. Camunda Blog.
+
+3. Nected.ai. (n.d.). Rules Engine Design Patterns. Nected.ai Blog.
+
+4. Camunda. (n.d.). DMN Documentation. Camunda Documentation.
+
+5. Higson. (n.d.). Open Source vs. Proprietary Rules Engines. Higson Blog.
+
+6. Higson. (n.d.). Common Business Rules Examples. Higson Blog.
+
+7. Fowler, Martin. (n.d.). Rules Engine. Martin Fowler Bliki.
+
+8. IBM. (n.d.). Operational Decision Manager. IBM Product.
+
+9. Red Hat. (n.d.). Drools Documentation. Drools Documentation.
+
+10. FICO. (n.d.). Blaze Advisor. FICO Product.
+
+11. Pegasystems. (n.d.). Decision Management. Pega Platform Product.

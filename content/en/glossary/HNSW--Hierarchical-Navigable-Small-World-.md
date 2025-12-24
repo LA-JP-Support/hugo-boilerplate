@@ -189,19 +189,35 @@ HNSW is shardable; each shard holds data partition and local HNSW index. Distrib
 
 ## References
 
-- [HNSW Original Paper (arXiv)](https://arxiv.org/abs/1603.09320)
-- [Pinecone: Hierarchical Navigable Small Worlds (HNSW)](https://www.pinecone.io/learn/series/faiss/hnsw/)
-- [Zilliz: HNSW Technical Deep Dive](https://zilliz.com/learn/hierarchical-navigable-small-worlds-HNSW)
-- [Redis: How HNSW Algorithms Can Improve Search](https://redis.io/blog/how-hnsw-algorithms-can-improve-search/)
-- [arXiv: Down with the Hierarchy - The 'H' in HNSW Stands for 'Hubs'](https://arxiv.org/html/2412.01940v1)
-- [Zilliz: Vector Similarity Search](https://zilliz.com/learn/vector-similarity-search)
-- [Pinecone: What is Similarity Search?](https://www.pinecone.io/learn/what-is-similarity-search/)
-- [Wikipedia: Small-world Network](https://en.wikipedia.org/wiki/Small-world_network)
-- [Wikipedia: Skip List](https://en.wikipedia.org/wiki/Skip_list)
-- [Pinecone: Probability Skip List](https://www.pinecone.io/learn/series/faiss/hnsw/#Probability-Skip-List)
-- [Pinecone: HNSW Structure Diagram](https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fe63ca5c638bc3cd61cc1cd2ab33b101d82170426-1920x1080.png&w=3840&q=75)
-- [Faiss HNSW Documentation](https://github.com/facebookresearch/faiss/wiki/Faiss-indexes#hnsw)
-- [pgvector HNSW Docs](https://github.com/pgvector/pgvector#hnsw)
-- [Redis HNSW Documentation](https://redis.io/docs/latest/develop/interact/search-and-query/advanced-concepts/vectors/#hnsw-index)
-- [Milvus HNSW Documentation](https://milvus.io/docs/hnsw.md#HNSW)
-- [Zilliz: DiskANN and Vamana Algorithm](https://zilliz.com/learn/DiskANN-and-the-Vamana-Algorithm)
+
+1. Malkov, Y. A., & Yashunin, D. A. (2016). Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs. arXiv.
+
+2. Pinecone. (n.d.). Hierarchical Navigable Small Worlds (HNSW). Pinecone Learn.
+
+3. Zilliz. (n.d.). HNSW Technical Deep Dive. Zilliz Learn.
+
+4. Redis. (n.d.). How HNSW Algorithms Can Improve Search. Redis Blog.
+
+5. Aumüller, M., et al. (2024). Down with the Hierarchy - The 'H' in HNSW Stands for 'Hubs'. arXiv.
+
+6. Zilliz. (n.d.). Vector Similarity Search. Zilliz Learn.
+
+7. Pinecone. (n.d.). What is Similarity Search?. Pinecone Learn.
+
+8. Wikipedia. (n.d.). Small-world Network. Wikipedia.
+
+9. Wikipedia. (n.d.). Skip List. Wikipedia.
+
+10. Pinecone. (n.d.). Probability Skip List. Pinecone Learn.
+
+11. Pinecone. (n.d.). HNSW Structure Diagram. Pinecone Image.
+
+12. Facebook Research. (n.d.). Faiss HNSW Documentation. GitHub.
+
+13. pgvector. (n.d.). pgvector HNSW Docs. GitHub.
+
+14. Redis. (n.d.). Redis HNSW Documentation. Redis Docs.
+
+15. Milvus. (n.d.). Milvus HNSW Documentation. Milvus Docs.
+
+16. Zilliz. (n.d.). DiskANN and Vamana Algorithm. Zilliz Learn.

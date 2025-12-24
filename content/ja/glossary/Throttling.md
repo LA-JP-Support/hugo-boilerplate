@@ -374,13 +374,23 @@ A: トラフィックパターン、ビジネス要件、技術的制約を考�
 
 ## 参考文献
 
-- [AWS: Throttle API Requests for Better Throughput](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html)
-- [Gravitee: API Throttling Best Practices](https://www.gravitee.io/blog/api-throttling-best-practices)
-- [Knit.dev: 10 Best Practices for API Rate Limiting and Throttling](https://www.getknit.dev/blog/10-best-practices-for-api-rate-limiting-and-throttling)
-- [RFC 6585: Additional HTTP Status Codes](https://datatracker.ietf.org/doc/html/rfc6585#section-4)
-- [Twitter API Rate Limits](https://developer.twitter.com/en/docs/twitter-api/rate-limits)
-- [AWS S3 Performance Optimization](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html)
-- [TIBCO: What is API Throttling?](https://www.tibco.com/glossary/what-is-api-throttling)
-- [GetStream: API Throttling Glossary](https://getstream.io/glossary/api-throttling/)
-- [YouTube: What is Rate Limiting / API Throttling?](https://www.youtube.com/watch?v=9CIjoWPwAhU)
-- [Gravitee API Gateway Platform](https://www.gravitee.io/platform/api-gateway)
+
+1. AWS. (n.d.). Throttle API Requests for Better Throughput. AWS Documentation.
+
+2. Gravitee. (n.d.). API Throttling Best Practices. Gravitee Blog.
+
+3. Knit.dev. (n.d.). 10 Best Practices for API Rate Limiting and Throttling. Knit.dev Blog.
+
+4. IETF. (n.d.). RFC 6585: Additional HTTP Status Codes. IETF Datatracker.
+
+5. Twitter. (n.d.). Twitter API Rate Limits. Twitter Developer Documentation.
+
+6. AWS. (n.d.). S3 Performance Optimization. AWS Documentation.
+
+7. TIBCO. (n.d.). What is API Throttling?. TIBCO Glossary.
+
+8. GetStream. (n.d.). API Throttling Glossary. GetStream Glossary.
+
+9. YouTube. (n.d.). What is Rate Limiting / API Throttling?. YouTube.
+
+10. Gravitee. (n.d.). Gravitee API Gateway Platform. Gravitee Platform.

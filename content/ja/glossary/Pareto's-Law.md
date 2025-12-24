@@ -264,14 +264,25 @@ AIに「些細な多数」、つまりルーチンで構造化されたタスク
 
 ## 参考文献
 
-- [Understanding the Pareto Principle (The 80/20 Rule) – BetterExplained](https://betterexplained.com/articles/understanding-the-pareto-principle-the-8020-rule/)
-- [The Pareto Principle—aka the Pareto Rule or 80/20 Rule – Investopedia](https://www.investopedia.com/terms/p/paretoprinciple.asp)
-- [Pareto Examples: How the 80/20 Rule Solves Real-World Problems – HEFLO](https://www.heflo.com/blog/pareto-80-20-rule-examples)
-- [Artificial Intelligence, jobs and the Pareto Principle – Marchex](https://www.marchex.com/artificial-intelligence-jobs-and-the-pareto-principle/)
-- [Pareto Principle Explained: How the 80/20 Rule Changes Everything (YouTube)](https://www.youtube.com/watch?v=lsGwqk_agcQ)
-- [MIT: AI is Going to Change the 80/20 Rule](https://ide.mit.edu/insights/ai-is-going-to-change-the-80-20-rule/)
-- [ActiveCollab: 80/20 Rule in Productivity](https://activecollab.com/blog/productivity/pareto-principle)
-- [Growth Method: What is Pareto's Law?](https://growthmethod.com/what-is-paretos-law/)
-- [University of York: Study & Revision Guide](https://subjectguides.york.ac.uk/study-revision/pareto-principle)
-- [Investopedia: 80-20 Rule](https://www.investopedia.com/terms/1/80-20-rule.asp)
-- [HEFLO Pareto Video](https://www.youtube-nocookie.com/watch?v=odyJ8Pzi_u8)
+
+1. BetterExplained. (n.d.). Understanding the Pareto Principle (The 80/20 Rule). BetterExplained.
+
+2. Investopedia. (n.d.). The Pareto Principle—aka the Pareto Rule or 80/20 Rule. Investopedia.
+
+3. HEFLO. (n.d.). Pareto Examples: How the 80/20 Rule Solves Real-World Problems. HEFLO Blog.
+
+4. Marchex. (n.d.). Artificial Intelligence, jobs and the Pareto Principle. Marchex.
+
+5. Unknown. (n.d.). Pareto Principle Explained: How the 80/20 Rule Changes Everything. YouTube.
+
+6. MIT. (n.d.). AI is Going to Change the 80/20 Rule. MIT Insights.
+
+7. ActiveCollab. (n.d.). 80/20 Rule in Productivity. ActiveCollab Blog.
+
+8. Growth Method. (n.d.). What is Pareto's Law?. Growth Method.
+
+9. University of York. (n.d.). Study & Revision Guide. University of York Subject Guides.
+
+10. Investopedia. (n.d.). 80-20 Rule. Investopedia.
+
+11. HEFLO. (n.d.). HEFLO Pareto Video. YouTube.

@@ -212,26 +212,27 @@ Smart city infrastructure relies on HA for sensor networks and real-time respons
 
 ## References
 
-- [IBM: What is High Availability?](https://www.ibm.com/think/topics/high-availability)
-- [TechTarget: High Availability (HA)](https://www.techtarget.com/searchdatacenter/definition/high-availability)
-- [Aerospike: HA in Cloud Computing](https://aerospike.com/blog/what-is-high-availability/)
-- [Red Hat: HA Clustering Guide](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/system_design_guide/assembly_overview-of-high-availability-system-design-guide)
-- [Memgraph: High Availability Clustering](https://memgraph.com/docs/clustering/high-availability)
-- [Memgraph: How High Availability Works](https://memgraph.com/docs/clustering/high-availability/how-high-availability-works)
-- [Memgraph: HA Best Practices](https://memgraph.com/docs/clustering/high-availability/best-practices)
-- [Memgraph: Setup HA Cluster with Docker](https://memgraph.com/docs/clustering/high-availability/setup-ha-cluster-docker)
-- [Memgraph: Setup HA Cluster with Kubernetes](https://memgraph.com/docs/clustering/high-availability/setup-ha-cluster-k8s)
-- [Memgraph: How Replication Works](https://memgraph.com/docs/clustering/replication/how-replication-works)
-- [Nobl9: High Availability Design](https://www.nobl9.com/service-availability/high-availability-design)
-- [Nobl9: Incident Response Metrics](https://www.nobl9.com/service-availability/incident-response-metrics)
-- [Nobl9: HA vs Fault Tolerance](https://www.nobl9.com/service-availability/high-availability-vs-fault-tolerance)
-- [Cisco: What Is High Availability?](https://www.cisco.com/site/us/en/learn/topics/networking/what-is-high-availability.html)
-- [F5: What Is High Availability?](https://www.f5.com/glossary/high-availability)
-- [TechTarget: Redundancy](https://www.techtarget.com/whatis/definition/redundancy)
-- [TechTarget: Single Point of Failure](https://www.techtarget.com/searchdatacenter/definition/Single-point-of-failure-SPOF)
-- [TechTarget: Load Balancing](https://www.techtarget.com/searchnetworking/definition/load-balancing)
-- [IBM: Disaster Recovery](https://www.ibm.com/topics/disaster-recovery)
-- [IBM: Cloud Computing](https://www.ibm.com/topics/cloud-computing)
-- [TechTarget: Self-driving Car](https://www.techtarget.com/searchenterpriseai/definition/driverless-car)
-- [Aerospike: Database Clustering Use Cases](https://aerospike.com/blog/database-clustering-use-cases/)
-- [Aerospike: Measuring High Availability](https://aerospike.com/blog/what-is-high-availability/#measuring_high_availability)
+
+1. IBM. (n.d.). What is High Availability?. IBM Think Topics.
+2. TechTarget. (n.d.). High Availability (HA). TechTarget.
+3. Aerospike. (n.d.). HA in Cloud Computing. Aerospike Blog.
+4. Red Hat. (n.d.). HA Clustering Guide. Red Hat Documentation.
+5. Memgraph. (n.d.). High Availability Clustering. Memgraph Documentation.
+6. Memgraph. (n.d.). How High Availability Works. Memgraph Documentation.
+7. Memgraph. (n.d.). HA Best Practices. Memgraph Documentation.
+8. Memgraph. (n.d.). Setup HA Cluster with Docker. Memgraph Documentation.
+9. Memgraph. (n.d.). Setup HA Cluster with Kubernetes. Memgraph Documentation.
+10. Memgraph. (n.d.). How Replication Works. Memgraph Documentation.
+11. Nobl9. (n.d.). High Availability Design. Nobl9.
+12. Nobl9. (n.d.). Incident Response Metrics. Nobl9.
+13. Nobl9. (n.d.). HA vs Fault Tolerance. Nobl9.
+14. Cisco. (n.d.). What Is High Availability?. Cisco Learn.
+15. F5. (n.d.). What Is High Availability?. F5 Glossary.
+16. TechTarget. (n.d.). Redundancy. TechTarget.
+17. TechTarget. (n.d.). Single Point of Failure. TechTarget.
+18. TechTarget. (n.d.). Load Balancing. TechTarget.
+19. IBM. (n.d.). Disaster Recovery. IBM Topics.
+20. IBM. (n.d.). Cloud Computing. IBM Topics.
+21. TechTarget. (n.d.). Self-driving Car. TechTarget.
+22. Aerospike. (n.d.). Database Clustering Use Cases. Aerospike Blog.
+23. Aerospike. (n.d.). Measuring High Availability. Aerospike Blog.

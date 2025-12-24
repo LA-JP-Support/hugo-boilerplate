@@ -243,22 +243,23 @@ AI翻訳と人間のレビューを組み合わせたハイブリッドモデル
 
 ## 参考文献
 
-- [Smartling: Real-Time Translation Software](https://www.smartling.com/blog/real-time-translation)
-- [Smartling: Neural Machine Translation Guide](https://www.smartling.com/resources/product/neural-machine-translation/)
-- [Smartling: LLM Translation](https://www.smartling.com/resources/101/llm-translation/)
-- [Smartling: How Smartling Works](https://www.smartling.com/resources/101/how-smartling-works/)
-- [Localize: Ultimate Guide to Real-Time Translation](https://localizejs.com/articles/everything-you-want-to-know-about-real-time-translation)
-- [Localize: Natural Language Processing](https://localizejs.com/articles/natural-language-processing-nlp)
-- [Floatbot: Real-Time Translation for Customer Service](https://floatbot.ai/blog/real-time-translation-for-customer-service)
-- [Dialzara: Real-Time AI Translation for Customer Support](https://dialzara.com/blog/real-time-ai-translation-customer-support)
-- [LanguageIO: State of Real-Time Chat Translation](https://languageio.com/resources/blogs/the-state-of-real-time-chat-translation-in-modern-customer-service/)
-- [Samsung: Live Translate on Galaxy](https://www.samsung.com/us/support/answer/ANS10000935/)
-- [Google: Pixel Earbuds Translation Guide](https://support.google.com/googlepixelbuds/answer/7573100)
-- [JotMe: Best AI Live Translation Tools](https://www.jotme.io/blog/best-live-translation)
-- [Business Age: Secure AI Translation for Businesses](https://www.businessage.com/post/secure-ai-translation-for-businesses-protecting-data-privacy-and-accuracy)
-- [Straker.ai: AI Translation for Compliance Documents](https://www.straker.ai/blogs/ai-translation-for-compliance-documents-is-the-risk-worth-the-reward)
-- [Wordly: AI Translation for Meetings](https://www.wordly.ai/)
-- [Wordly: Overview Video](https://www.wordly.ai/videos/wordly-ai-translation-overview-video)
-- [Wordly: Live Translation Features](https://www.wordly.ai/live-translation)
-- [CSA Research: Language Preference Survey](https://slator.com/third-global-survey-by-csa-research-finds-language-preference-of-consumers-in-29-countries/)
-- [Google Vertex AI: Gemini Translation LLM](https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/translate-llm)
+
+1. Smartling. (n.d.). Real-Time Translation Software. Smartling Blog.
+2. Smartling. (n.d.). Neural Machine Translation Guide. Smartling Resources.
+3. Smartling. (n.d.). LLM Translation. Smartling Resources.
+4. Smartling. (n.d.). How Smartling Works. Smartling Resources.
+5. Localize. (n.d.). Ultimate Guide to Real-Time Translation. Localize Articles.
+6. Localize. (n.d.). Natural Language Processing. Localize Articles.
+7. Floatbot. (n.d.). Real-Time Translation for Customer Service. Floatbot Blog.
+8. Dialzara. (n.d.). Real-Time AI Translation for Customer Support. Dialzara Blog.
+9. LanguageIO. (n.d.). State of Real-Time Chat Translation. LanguageIO Resources.
+10. Samsung. (n.d.). Live Translate on Galaxy. Samsung Support.
+11. Google. (n.d.). Pixel Earbuds Translation Guide. Google Support.
+12. JotMe. (n.d.). Best AI Live Translation Tools. JotMe Blog.
+13. Business Age. (n.d.). Secure AI Translation for Businesses. Business Age.
+14. Straker.ai. (n.d.). AI Translation for Compliance Documents. Straker.ai Blogs.
+15. Wordly. AI Translation for Meetings. URL: https://www.wordly.ai/
+16. Wordly. (n.d.). Overview Video. URL: https://www.wordly.ai/videos/wordly-ai-translation-overview-video
+17. Wordly. Live Translation Features. URL: https://www.wordly.ai/live-translation
+18. CSA Research. (n.d.). Language Preference Survey. Slator.
+19. Google. Gemini Translation LLM. URL: https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/translate-llm

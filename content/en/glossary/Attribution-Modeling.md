@@ -228,12 +228,13 @@ Attribution modeling helps marketers answer questions such as which marketing ac
 
 ## References
 
-- [Amplitude: Attribution Model Frameworks](https://amplitude.com/blog/attribution-model-frameworks)
-- [AgencyAnalytics: Marketing Attribution Models](https://agencyanalytics.com/blog/marketing-attribution-models)
-- [Adobe: Marketing Attribution Models](https://business.adobe.com/blog/basics/marketing-attribution)
-- [HubSpot: What Is Attribution Modeling](https://blog.hubspot.com/marketing/attribution-modeling)
-- [AppsFlyer: Attribution Modeling](https://www.appsflyer.com/glossary/attribution-modeling/)
-- [Google Ads: About Attribution Models](https://support.google.com/google-ads/answer/6259715?hl=en)
-- [YouTube: What is Attribution Modelling?](https://www.youtube.com/embed/o3rIwaquMF4)
-- [Google Analytics 4](https://support.google.com/analytics/answer/10596866?hl=en)
-- [HubSpot Attribution](https://knowledge.hubspot.com/reports/understand-attribution-reporting)
+
+1. Amplitude. (n.d.). Attribution Model Frameworks. Amplitude Blog.
+2. AgencyAnalytics. (n.d.). Marketing Attribution Models. AgencyAnalytics Blog.
+3. Adobe. (n.d.). Marketing Attribution Models. Adobe Business Blog.
+4. HubSpot. (n.d.). What Is Attribution Modeling. HubSpot Blog.
+5. AppsFlyer. (n.d.). Attribution Modeling. AppsFlyer Glossary.
+6. Google Ads. (n.d.). About Attribution Models. Google Ads Support.
+7. YouTube. (n.d.). What is Attribution Modelling?. YouTube Video.
+8. Google Analytics 4. Google Analytics Support. URL: https://support.google.com/analytics/answer/10596866?hl=en
+9. HubSpot Attribution. HubSpot Attribution Reporting. URL: https://knowledge.hubspot.com/reports/understand-attribution-reporting

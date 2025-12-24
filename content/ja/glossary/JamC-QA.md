@@ -281,12 +281,21 @@ JamC-QAは、成長する日本語LLM評価エコシステムの一部です:
 
 ## 参考文献
 
-- [JamC-QA on Hugging Face](https://huggingface.co/datasets/sbintuitions/JamC-QA)
-- [JamC-QA README](https://huggingface.co/datasets/sbintuitions/JamC-QA/blob/main/README.md)
-- [Swallow LLM Leaderboard](https://x.com/chokkanorg/status/1984170094076031297)
-- [FlexEval Framework](https://ryokan0123.github.io/)
-- [MMLU-ProX (Japanese)](https://arxiv.org/abs/2503.10497)
-- [GPQA (Japanese)](https://arxiv.org/abs/2502.07346)
-- [JHumanEval Benchmark](https://anlp.jp/proceedings/annual_meeting/2024/pdf_dir/B1-4.pdf)
-- [M-IFEval-Ja](https://aclanthology.org/2025.naacl-main.123/)
-- [Hugging Face Datasets Documentation](https://huggingface.co/docs/datasets/index)
+
+1. JamC-QA. Service. Dataset for Question Answering. URL: https://huggingface.co/datasets/sbintuitions/JamC-QA
+
+2. JamC-QA. Report. Dataset README Documentation. URL: https://huggingface.co/datasets/sbintuitions/JamC-QA/blob/main/README.md
+
+3. Chokkan. (n.d.). Swallow LLM Leaderboard. Social Media Post. URL: https://x.com/chokkanorg/status/1984170094076031297
+
+4. Ryokan. (n.d.). FlexEval Framework. Research Project Website. URL: https://ryokan0123.github.io/
+
+5. Anonymous. (2025). MMLU-ProX (Japanese). Research Paper. URL: https://arxiv.org/abs/2503.10497
+
+6. Anonymous. (2025). GPQA (Japanese). Research Paper. URL: https://arxiv.org/abs/2502.07346
+
+7. Anonymous. (2024). JHumanEval Benchmark. Conference Proceedings. URL: https://anlp.jp/proceedings/annual_meeting/2024/pdf_dir/B1-4.pdf
+
+8. Anonymous. (2025). M-IFEval-Ja. Conference Paper. URL: https://aclanthology.org/2025.naacl-main.123/
+
+9. Hugging Face. (n.d.). Hugging Face Datasets Documentation. Technical Documentation. URL: https://huggingface.co/docs/datasets/index

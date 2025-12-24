@@ -223,13 +223,14 @@ response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
 ## References
 
-- [Hugging Face Optimum: Quantization Guide](https://huggingface.co/docs/optimum/en/concept_guides/quantization)
-- [IBM: What is Quantization?](https://www.ibm.com/think/topics/quantization)
-- [DigitalOcean: Model Quantization in LLMs](https://www.digitalocean.com/community/tutorials/model-quantization-large-language-models)
-- [Clarifai: Model Quantization – Meaning, Benefits & Techniques](https://www.clarifai.com/blog/model-quantization)
-- [GeeksforGeeks: Quantization in Deep Learning](https://www.geeksforgeeks.org/deep-learning/quantization-in-deep-learning/)
-- [arXiv: Quantization and Training of Neural Networks](https://arxiv.org/abs/1712.05877)
-- [Lei Mao: Neural Networks Quantization](https://leimao.github.io/article/Neural-Networks-Quantization/)
-- [arXiv: Comprehensive Study on Quantization Techniques for LLMs](https://arxiv.org/abs/2411.02530)
-- [Hugging Face: BitsAndBytes Quantization](https://huggingface.co/docs/transformers/en/quantization/bitsandbytes)
-- [PyTorch: Quantization Documentation](https://pytorch.org/docs/stable/quantization.html)
+
+1. Hugging Face. (n.d.). Optimum: Quantization Guide. Hugging Face Documentation.
+2. IBM. (n.d.). What is Quantization?. IBM Think Topics.
+3. DigitalOcean. (n.d.). Model Quantization in LLMs. DigitalOcean Community Tutorials.
+4. Clarifai. (n.d.). Model Quantization – Meaning, Benefits & Techniques. Clarifai Blog.
+5. GeeksforGeeks. (n.d.). Quantization in Deep Learning. GeeksforGeeks.
+6. arXiv. (2017). Quantization and Training of Neural Networks. arXiv.
+7. Mao, L. (n.d.). Neural Networks Quantization. Lei Mao Blog.
+8. arXiv. (2024). Comprehensive Study on Quantization Techniques for LLMs. arXiv.
+9. Hugging Face. (n.d.). BitsAndBytes Quantization. Hugging Face Documentation.
+10. PyTorch. (n.d.). Quantization Documentation. PyTorch Documentation.

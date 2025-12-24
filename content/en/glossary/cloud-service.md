@@ -253,13 +253,14 @@ Yes. Cloud services require internet access. Critical applications should plan f
 
 ## References
 
-- [Red Hat: What Are Cloud Services?](https://www.redhat.com/en/topics/cloud-computing/what-are-cloud-services)
-- [Citrix: What is a Cloud Service?](https://www.citrix.com/glossary/what-is-a-cloud-service.html)
-- [GeeksforGeeks: Cloud Based Services](https://www.geeksforgeeks.org/cloud-computing/cloud-based-services/)
-- [AWS: Types of Cloud Computing](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/types-of-cloud-computing.html)
-- [Spot.io: Cloud Infrastructure Components](https://spot.io/resources/cloud-optimization/cloud-infrastructure-4-key-components-and-deployment-models/)
-- [Brainhub: Cloud Architecture Models](https://brainhub.eu/library/cloud-architecture-saas-faas-xaas)
-- [Auvik: As-a-Service Offerings](https://www.auvik.com/franklyit/blog/aas-as-a-service-list/)
-- [Lumenalta: Cloud Computing Use Cases](https://lumenalta.com/insights/10-cloud-computing-use-cases)
-- [Oracle: Industry Cloud Platforms](https://www.oracle.com/cloud/industry-cloud/)
-- [GeeksforGeeks: Cloud Deployment Models](https://www.geeksforgeeks.org/computer-science-fundamentals/cloud-deployment-models/)
+
+1. Red Hat. (n.d.). What Are Cloud Services?. Red Hat Topics.
+2. Citrix. (n.d.). What is a Cloud Service?. Citrix Glossary.
+3. GeeksforGeeks. (n.d.). Cloud Based Services. GeeksforGeeks.
+4. AWS. (n.d.). Types of Cloud Computing. AWS Whitepapers.
+5. Spot.io. (n.d.). Cloud Infrastructure Components. Spot.io Resources.
+6. Brainhub. (n.d.). Cloud Architecture Models. Brainhub Library.
+7. Auvik. (n.d.). As-a-Service Offerings. Auvik Blog.
+8. Lumenalta. (n.d.). Cloud Computing Use Cases. Lumenalta Insights.
+9. Oracle. (n.d.). Industry Cloud Platforms. Oracle Cloud.
+10. GeeksforGeeks. (n.d.). Cloud Deployment Models. GeeksforGeeks.

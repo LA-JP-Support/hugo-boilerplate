@@ -217,22 +217,23 @@ Organizations using Milvus include: NVIDIA, Salesforce, eBay, Walmart, IBM, Shop
 
 ## References
 
-- [Milvus Official Documentation](https://milvus.io/docs/)
-- [Milvus Architecture Overview](https://milvus.io/docs/architecture_overview.md)
-- [Milvus GitHub Repository](https://github.com/milvus-io/milvus)
-- [Zilliz Official Site](https://zilliz.com/)
-- [Install Overview](https://milvus.io/docs/install-overview.md)
-- [Index Explained](https://milvus.io/docs/index-explained.md)
-- [PyMilvus API Reference](https://milvus.io/api-reference/pymilvus/v2.3.x/)
-- [LangChain Integration](https://python.langchain.com/docs/integrations/vectorstores/milvus)
-- [LlamaIndex Integration](https://gpt-index.readthedocs.io/en/latest/how_to/vector_stores/milvus.html)
-- [OpenAI Integration Guide](https://milvus.io/docs/integrate_with_openai.md)
-- [Apache Spark Connector](https://github.com/milvus-io/spark-connector)
-- [Attu GUI Tool](https://attu.zilliz.com/)
-- [Prometheus Monitoring](https://prometheus.io/)
-- [Grafana Dashboards](https://grafana.com/)
-- [Hugging Face Hub](https://huggingface.co/)
-- [DSPy Framework](https://github.com/stanfordnlp/dspy)
-- [Haystack Integration](https://haystack.deepset.ai/)
-- [Ragas Framework](https://github.com/explodinggradients/ragas)
-- [MemGPT](https://github.com/cpacker/MemGPT)
+
+1. Milvus. (n.d.). Official Documentation. Milvus Docs.
+2. Milvus. (n.d.). Architecture Overview. Milvus Docs.
+3. Milvus. (n.d.). GitHub Repository. GitHub.
+4. Zilliz. (n.d.). Official Site. Zilliz.
+5. Milvus. (n.d.). Install Overview. Milvus Docs.
+6. Milvus. (n.d.). Index Explained. Milvus Docs.
+7. Milvus. (n.d.). PyMilvus API Reference. Milvus API.
+8. LangChain. (n.d.). Milvus Vector Store Integration. LangChain Documentation.
+9. LlamaIndex. (n.d.). Milvus Vector Store Integration. LlamaIndex Documentation.
+10. Milvus. (n.d.). OpenAI Integration Guide. Milvus Docs.
+11. Milvus. (n.d.). Apache Spark Connector. GitHub.
+12. Attu. (n.d.). GUI Tool. URL: https://attu.zilliz.com/
+13. Prometheus. (n.d.). Monitoring System. URL: https://prometheus.io/
+14. Grafana. (n.d.). Dashboards. URL: https://grafana.com/
+15. Hugging Face. (n.d.). Machine Learning Hub. URL: https://huggingface.co/
+16. DSPy. (n.d.). Programming Framework. URL: https://github.com/stanfordnlp/dspy
+17. Haystack. (n.d.). NLP Integration. URL: https://haystack.deepset.ai/
+18. Ragas. (n.d.). Evaluation Framework. URL: https://github.com/explodinggradients/ragas
+19. MemGPT. (n.d.). Memory Management Tool. URL: https://github.com/cpacker/MemGPT

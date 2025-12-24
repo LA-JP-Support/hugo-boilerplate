@@ -279,13 +279,23 @@ AIがプロファイリング、信用スコアリング、またはその他の
 
 ## 参考文献
 
-- [全国人民代表大会:PIPL公式テキスト(中国語)](http://www.npc.gov.cn/npc/c30834/202108/6146e5b1b8244b5b9d4b1d1b4b1c6b8e.shtml)
-- [DLA Piper:中国のデータ保護法](https://www.dlapiperdataprotection.com/index.html?c=CN)
-- [PrivacyEngine:中国のPIPLの包括的ガイド](https://www.privacyengine.io/blog/chinas-personal-information-protection-law/)
-- [Hawksford:PIPLコンプライアンスガイド](https://www.hawksford.com/insights-and-guides/china-pipl-compliance-guide)
-- [Columbia Journal of Transnational Law:PIPL対GDPR](https://www.jtl.columbia.edu/)
-- [Varonis:米国プライバシー法ガイド](https://www.varonis.com/blog/us-privacy-laws)
-- [欧州連合GDPRポータル](https://gdpr.eu/)
-- [Stanford DigiChina:PIPL英語翻訳](https://digichina.stanford.edu/work/translation-personal-information-protection-law-of-the-peoples-republic-of-china-effective-nov-1-2021/)
-- [国家インターネット情報弁公室(CAC)](http://www.cac.gov.cn/)
-- [個人情報セキュリティ仕様(中国国家標準)](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=6C4A1B0C7E668CFAB0C2C6D6F4B2E5A8)
+
+1. 全国人民代表大会. (2021). PIPL公式テキスト. 中国全国人民代表大会公式サイト.
+
+2. DLA Piper. (n.d.). 中国のデータ保護法. DLA Piper Data Protection.
+
+3. PrivacyEngine. (n.d.). 中国のPIPLの包括的ガイド. PrivacyEngine Blog.
+
+4. Hawksford. (n.d.). PIPLコンプライアンスガイド. Hawksford Insights.
+
+5. Columbia Journal of Transnational Law. (n.d.). PIPL対GDPR. Columbia Journal of Transnational Law.
+
+6. Varonis. (n.d.). 米国プライバシー法ガイド. Varonis Blog.
+
+7. 欧州連合. (n.d.). GDPRポータル. EU GDPR Portal.
+
+8. Stanford DigiChina. (2021). PIPL英語翻訳. Stanford DigiChina.
+
+9. 国家インターネット情報弁公室(CAC). (n.d.). 公式サイト. 中国インターネット情報弁公室.
+
+10. 中国国家標準化管理委員会. (n.d.). 個人情報セキュリティ仕様. 中国国家標準.

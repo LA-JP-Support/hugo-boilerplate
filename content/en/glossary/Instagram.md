@@ -276,13 +276,14 @@ Quality over quantity matters most. Consistency is valuable, but 3-7 posts weekl
 
 ## References
 
-- [Instagram Official Site](https://www.instagram.com/)
-- [Meta Company Profile](Meta.md)
-- [Instagram for Business](https://business.instagram.com/)
-- [Instagram Creator Account](https://creators.instagram.com/)
-- [Instagram Shopping](https://business.instagram.com/shopping/)
-- [Instagram Help Center](https://help.instagram.com/)
-- [Meta Business Suite](https://business.facebook.com/)
-- [Instagram Creator Marketplace](https://creators.instagram.com/earn-money/branded-content)
-- [Instagram Blog](https://about.instagram.com/blog)
-- [Instagram Privacy Center](https://help.instagram.com/privacy/)
+
+1. Instagram. Social Media Platform Official Site. URL: https://www.instagram.com/
+2. Meta. Company Profile. URL: https://www.meta.com/
+3. Instagram. Business Platform. URL: https://business.instagram.com/
+4. Instagram. Creator Account Platform. URL: https://creators.instagram.com/
+5. Instagram. Shopping Platform. URL: https://business.instagram.com/shopping/
+6. Instagram. Help Support Center. URL: https://help.instagram.com/
+7. Meta. Business Management Suite. URL: https://business.facebook.com/
+8. Instagram. Creator Monetization Marketplace. URL: https://creators.instagram.com/earn-money/branded-content
+9. Instagram. Official Company Blog. URL: https://about.instagram.com/blog
+10. Instagram. Privacy Information Center. URL: https://help.instagram.com/privacy/

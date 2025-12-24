@@ -185,13 +185,14 @@ The screen pop process follows a systematic workflow that begins when a customer
 
 ## References
 
-- [What is Screen Pop? - Zendesk](https://www.zendesk.com/service/ticketing-system/screen-pop/)
-- [Screen Pop Feature - Five9](https://www.five9.com/products/features/screen-pop)
-- [CTI Screen Pop - Salesforce](https://help.salesforce.com/s/articleView?id=sf.cti_screen_pops.htm)
-- [What is Screen Pop? - Talkdesk](https://www.talkdesk.com/blog/what-is-screen-pop/)
-- [Screen Pop Technology - Genesys](https://www.genesys.com/en-sg/definitions/what-is-screen-pop)
-- [CTI and Screen Pop - RingCentral](https://www.ringcentral.com/office/features/computer-telephony-integration.html)
-- [Screen Pop in Contact Centers - NICE](https://www.nice.com/glossary/what-is-screen-pop)
-- [What is CTI Screen Pop? - Nextiva](https://www.nextiva.com/blog/cti-screen-pop.html)
-- [Screen Pop Functionality - 8x8](https://www.8x8.com/products/integrations/cti)
-- [CRM Screen Pop Integration - HubSpot](https://knowledge.hubspot.com/calling/use-screen-pop-in-the-hubspot-calling-tool)
+
+1. Zendesk. (n.d.). What is Screen Pop?. Zendesk Service Ticketing System.
+2. Five9. (n.d.). Screen Pop Feature. Five9 Product Features.
+3. Salesforce. (n.d.). CTI Screen Pop. Salesforce Help.
+4. Talkdesk. (n.d.). What is Screen Pop?. Talkdesk Blog.
+5. Genesys. (n.d.). Screen Pop Technology. Genesys Definitions.
+6. RingCentral. (n.d.). CTI and Screen Pop. RingCentral Office Features.
+7. NICE. (n.d.). Screen Pop in Contact Centers. NICE Glossary.
+8. Nextiva. (n.d.). What is CTI Screen Pop?. Nextiva Blog.
+9. 8x8. (n.d.). Screen Pop Functionality. 8x8 Product Integrations.
+10. HubSpot. (n.d.). CRM Screen Pop Integration. HubSpot Knowledge Base.

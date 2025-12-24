@@ -302,13 +302,23 @@ NPSは価値ある高レベルの指標ですが、定性的フィードバッ�
 
 ## 参考文献
 
-- [Qualtrics: Net Promoter Score (NPS) Guide](https://www.qualtrics.com/articles/customer-experience/net-promoter-score/)
-- [Contentsquare: What is Net Promoter Score (NPS)?](https://contentsquare.com/guides/net-promoter-score/)
-- [Pendo.io: NPS Glossary](https://www.pendo.io/glossary/net-promoter-score-nps/)
-- [Retently: What is a Good Net Promoter Score? (2025 NPS Benchmark)](https://www.retently.com/blog/good-net-promoter-score/)
-- [NPS Prism: US NPS Benchmarks 2024](https://www.npsprism.com/blog/us-nps-benchmarks-2024-0)
-- [Qualtrics XM Institute: NPS 2024 Industry Report (PDF)](https://www.qualtrics.com/m/www.xminstitute.com/wp-content/uploads/2025/01/XMI_DataSnippet_XMICustomerRatings-NPS-2024-1.pdf?ty=mktocd-thank-you)
-- [Harvard Business Review: The One Number You Need to Grow](https://hbr.org/2003/12/the-one-number-you-need-to-grow)
-- [Pendo.io: Pros and Cons of NPS Alternatives](https://www.pendo.io/pendo-blog/the-pros-and-cons-of-nps-alternatives/)
-- [Pendo.io: How to Use NPS for Mobile App Success](https://www.pendo.io/pendo-blog/how-to-use-net-promoter-score-to-drive-mobile-app-success-pendo-blog/)
-- [Fortune Business Insights: NLP Market Growth](https://www.fortunebusinessinsights.com/natural-language-processing-nlp-market-101931)
+
+1. Qualtrics. (n.d.). Net Promoter Score (NPS) Guide. Qualtrics.
+
+2. Contentsquare. (n.d.). What is Net Promoter Score (NPS)?. Contentsquare.
+
+3. Pendo.io. (n.d.). NPS Glossary. Pendo.io.
+
+4. Retently. (2025). What is a Good Net Promoter Score? (2025 NPS Benchmark). Retently Blog.
+
+5. NPS Prism. (2024). US NPS Benchmarks 2024. NPS Prism Blog.
+
+6. Qualtrics XM Institute. (2024). NPS 2024 Industry Report. Qualtrics XM Institute.
+
+7. Reichheld, F. (2003). The One Number You Need to Grow. Harvard Business Review.
+
+8. Pendo.io. (n.d.). Pros and Cons of NPS Alternatives. Pendo.io Blog.
+
+9. Pendo.io. (n.d.). How to Use NPS for Mobile App Success. Pendo.io Blog.
+
+10. Fortune Business Insights. (n.d.). NLP Market Growth. Fortune Business Insights.

@@ -346,18 +346,33 @@ HTTPSを排他的に実装し、リクエスト署名または認証トークン
 
 ## 参考文献
 
-- [Robbie Cahill: What Are Webhooks? A Comprehensive Guide for Developers](https://dev.to/robbiecahill/what-are-webhooks-a-comprehensive-guide-for-developers-4l72)
-- [Google Cloud Dialogflow ES: Fulfillment Webhook Guide](https://docs.cloud.google.com/dialogflow/es/docs/fulfillment-webhook)
-- [Red Hat: What is a Webhook?](https://www.redhat.com/en/topics/automation/what-is-a-webhook)
-- [GetStream: What is a Webhook?](https://getstream.io/glossary/webhook/)
-- [Chatbot.com: Webhooks in Chatbot](https://www.chatbot.com/help/webhooks/what-are-webhooks/)
-- [Red Hat: What is Event-Driven Architecture?](https://www.redhat.com/en/topics/integration/what-is-event-driven-architecture)
-- [Google Cloud: Dialogflow WebhookRequest Reference](https://cloud.google.com/dialogflow/es/docs/reference/rpc/google.cloud.dialogflow.v2#webhookrequest)
-- [Google Support: Why HTTPS?](https://support.google.com/domains/answer/7630973)
-- [Hookdeck: Complete Guide to Webhook Security](https://hookdeck.com/webhooks/guides/complete-guide-to-webhook-security)
-- [Google Cloud Dialogflow: Authentication Options](https://docs.cloud.google.com/dialogflow/es/docs/fulfillment-webhook#authentication)
-- [Racklify: Implementing a Webhook: Step-by-Step Beginner Guide](https://racklify.com/encyclopedia/implementing-a-webhook-a-step-by-step-beginner-guide/)
-- [ngrok Website](https://ngrok.com/)
-- [Tunnelmole Website](https://tunnelmole.com/)
-- [Google Cloud Dialogflow: Webhook Code Samples](https://cloud.google.com/dialogflow/es/docs/fulfillment-webhook#example)
-- [Google Cloud Dialogflow: Fulfillment Use Cases](https://docs.cloud.google.com/dialogflow/es/docs/fulfillment-webhook)
+
+1. Cahill, R. (n.d.). What Are Webhooks? A Comprehensive Guide for Developers. Dev.to.
+
+2. Google Cloud. (n.d.). Dialogflow ES: Fulfillment Webhook Guide. Google Cloud Documentation.
+
+3. Red Hat. (n.d.). What is a Webhook?. Red Hat Topics.
+
+4. GetStream. (n.d.). What is a Webhook?. GetStream Glossary.
+
+5. Chatbot.com. (n.d.). Webhooks in Chatbot. Chatbot Help.
+
+6. Red Hat. (n.d.). What is Event-Driven Architecture?. Red Hat Topics.
+
+7. Google Cloud. (n.d.). Dialogflow WebhookRequest Reference. Google Cloud Documentation.
+
+8. Google Support. (n.d.). Why HTTPS?. Google Support.
+
+9. Hookdeck. (n.d.). Complete Guide to Webhook Security. Hookdeck Guides.
+
+10. Google Cloud. (n.d.). Dialogflow: Authentication Options. Google Cloud Documentation.
+
+11. Racklify. (n.d.). Implementing a Webhook: Step-by-Step Beginner Guide. Racklify Encyclopedia.
+
+12. ngrok. Web Tunneling Service. URL: https://ngrok.com/
+
+13. Tunnelmole. Web Tunneling Service. URL: https://tunnelmole.com/
+
+14. Google Cloud. (n.d.). Dialogflow: Webhook Code Samples. Google Cloud Documentation.
+
+15. Google Cloud. (n.d.). Dialogflow: Fulfillment Use Cases. Google Cloud Documentation.

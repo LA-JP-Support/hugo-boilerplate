@@ -254,11 +254,19 @@ According to industry research, self-healing AI agents can reduce downtime by 40
 
 ## References
 
-- [Bloomfire: AI-Powered Knowledge Management](https://bloomfire.com/)
-- [Vitria: AI Knowledge for Self-Healing Networks](https://vitria.com/blog/aiknowledge-a-better-foundation-for-self-healing-networks/)
-- [ITSM.tools: Self-Healing Service Desk AI Agents](https://itsm.tools/self-healing-service-desk-ai-agents/)
-- [SuperAGI: Self-Healing AI Agents Case Studies](https://superagi.com/how-self-healing-ai-agents-are-revolutionizing-it-healthcare-and-manufacturing-real-world-case-studies/)
-- [Digitalisation World: AI's Role in Self-Healing Technologies](https://digitalisationworld.com/blog/58272/ais-role-in-the-rise-of-self-healing-technologies)
-- [Deepgram: Self-Healing AI Glossary](https://deepgram.com/ai-glossary/self-healing-ai)
-- [ACCELQ: Self-Healing Test Automation](https://www.accelq.com/blog/self-healing-test-automation/)
-- [Mayo Clinic AI Implementation](https://www.mayoclinic.org)
+
+1. Bloomfire. AI-Powered Knowledge Management. URL: https://bloomfire.com/
+
+2. Vitria. (n.d.). AI Knowledge for Self-Healing Networks. Vitria Blog. URL: https://vitria.com/blog/aiknowledge-a-better-foundation-for-self-healing-networks/
+
+3. ITSM.tools. (n.d.). Self-Healing Service Desk AI Agents. ITSM.tools. URL: https://itsm.tools/self-healing-service-desk-ai-agents/
+
+4. SuperAGI. (n.d.). Self-Healing AI Agents Case Studies. SuperAGI. URL: https://superagi.com/how-self-healing-ai-agents-are-revolutionizing-it-healthcare-and-manufacturing-real-world-case-studies/
+
+5. Digitalisation World. (n.d.). AI's Role in Self-Healing Technologies. Digitalisation World Blog. URL: https://digitalisationworld.com/blog/58272/ais-role-in-the-rise-of-self-healing-technologies
+
+6. Deepgram. (n.d.). Self-Healing AI Glossary. Deepgram. URL: https://deepgram.com/ai-glossary/self-healing-ai
+
+7. ACCELQ. (n.d.). Self-Healing Test Automation. ACCELQ Blog. URL: https://www.accelq.com/blog/self-healing-test-automation/
+
+8. Mayo Clinic. (n.d.). AI Implementation. Mayo Clinic. URL: https://www.mayoclinic.org

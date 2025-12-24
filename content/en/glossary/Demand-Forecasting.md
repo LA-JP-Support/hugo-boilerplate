@@ -230,9 +230,15 @@ Quantify the isolated impact of specific interventions (promotions, price change
 
 ## References
 
-- [Demand Forecasting Best Practices - McKinsey](https://www.mckinsey.com/capabilities/operations/our-insights/getting-supply-chain-forecasting-right)
-- [Machine Learning for Demand Forecasting - Towards Data Science](https://towardsdatascience.com/demand-forecasting-with-machine-learning-a-deep-dive-9e7e4b92b1e4)
-- [Forecasting: Principles and Practice - Hyndman & Athanasopoulos](https://otexts.com/fpp3/)
-- [Amazon's Demand Forecasting at Scale](https://www.amazon.science/latest-news/making-accurate-demand-forecasts)
-- [Demand Forecasting Methods - IBM](https://www.ibm.com/topics/demand-forecasting)
-- [AI-Powered Forecasting - Gartner](https://www.gartner.com/en/supply-chain/trends/ai-in-supply-chain)
+
+1. McKinsey. (n.d.). Demand Forecasting Best Practices. McKinsey Insights.
+
+2. Towards Data Science. (n.d.). Machine Learning for Demand Forecasting. Towards Data Science.
+
+3. Hyndman, R., & Athanasopoulos, G. (n.d.). Forecasting: Principles and Practice. OTexts.
+
+4. Amazon Science. (n.d.). Amazon's Demand Forecasting at Scale. Amazon Science.
+
+5. IBM. (n.d.). Demand Forecasting Methods. IBM Topics.
+
+6. Gartner. (n.d.). AI-Powered Forecasting. Gartner Supply Chain Trends.

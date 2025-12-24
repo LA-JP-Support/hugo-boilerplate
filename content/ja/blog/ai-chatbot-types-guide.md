@@ -29,7 +29,7 @@ AI[チャットボット](/ja/glossary/Chatbot/)は、[人工知能](/ja/glossar
 
 昔の[チャットボット](/ja/glossary/Chatbot/)は、決まったルールや[シナリオ](/ja/glossary/scenarios/)にもとづいて返事をしていました。今の[AIチャットボット](/ja/glossary/AI-chatbot/)は、大量のテキストデータからパターンや文脈を学びます。そのため、初めて聞かれる質問にも柔軟に対応できます。
 
-例えば、[顧客](/ja/glossary/Risk-Assessment--Customer-/)サポートや[FAQ](/ja/glossary/FAQ/)、自動案内などさまざまな場面で、お客様が何を求めているかを正確に読み取り、必要な情報や提案を出せます。
+例えば、顧客サポートや[FAQ](/ja/glossary/FAQ/)、自動案内などさまざまな場面で、お客様が何を求めているかを正確に読み取り、必要な情報や提案を出せます。
 
 ### 活用と進化
 
@@ -252,7 +252,7 @@ AIチャットボットを導入するときは、まず解決したい課題や
 
 **具体的な目標例：**
 - 問い合わせ件数を30％減らす
-- [顧客](/ja/glossary/Risk-Assessment--Customer-/)満足度を80点以上にする
+- 顧客満足度を80点以上にする
 - 対応時間を50％短縮する
 
 目的があいまいだと、どのシステムを選ぶべきか分かりづらくなり、導入した後で効果を測るのも難しくなります。
@@ -370,7 +370,7 @@ SmartWebでは、[LiveAgent](/ja/glossary/LiveAgent/)を活用し、[Web](/ja/gl
 | マルチ[チャネル統合](/ja/glossary/Channel-Integration/) | [Web](/ja/glossary/Accessibility--Web-/)、LINE、メールを一元管理 | 対応品質の統一 |
 | [チケット管理](/ja/glossary/ticket-management/) | 問い合わせ履歴を一括管理 | 対応状況の可視化 |
 
-これにより、[顧客](/ja/glossary/Risk-Assessment--Customer-/)対応の質を保ちながら業務を効率化できます。AIによるメール自動回答の実力については「AIは本当に問合せメールの返事を書けるのか？実例で見る精度と実力」で具体的な事例をご覧いただけます。
+これにより、顧客対応の質を保ちながら業務を効率化できます。AIによるメール自動回答の実力については「AIは本当に問合せメールの返事を書けるのか？実例で見る精度と実力」で具体的な事例をご覧いただけます。
 
 ### 継続学習とカスタマイズ性
 
@@ -394,4 +394,4 @@ SmartWebのAIチャットボット構築サービスを導入すると、以下�
 4. **最新AI技術の活用** - [OpenAI](/ja/glossary/OpenAI/ "OpenAIは、ChatGPT、[GPT](/ja/glossary/GPT/ "GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。")-5.2、[GPT](/ja/glossary/GPT/)-4o、[DALL-E](/ja/glossary/DALL-E/) 3などの先進的なモデルを開発することで知られる、AI分野をリードする企業です。そのミッション、製品、および影響力について探ります。")、[Google](/ja/glossary/Google/ "AI分野のリーダーとしてのGoogleの進化を探る。Geminiモデル、マルチモーダル理解、高度な推論、そして自動化、クリエイティブ生成、エンタープライズにおける応用を紹介します。")、[Anthropic](/ja/glossary/Anthropic/)の最新モデルを使用し、常に高品質な応答を提供
 5. **[ハルシネーション](/ja/glossary/hallucination/)対策** - RAG技術により、事実と異なる情報の生成を大幅に削減
 
-SmartWebのAIチャットボット構築サービスは、FlowHuntと[LiveAgent](/ja/glossary/LiveAgent/)を組み合わせることで、企業の[顧客](/ja/glossary/Risk-Assessment--Customer-/)対応や業務自動化を支える次世代のソリューションです。
+SmartWebのAIチャットボット構築サービスは、FlowHuntと[LiveAgent](/ja/glossary/LiveAgent/)を組み合わせることで、企業の顧客対応や業務自動化を支える次世代のソリューションです。

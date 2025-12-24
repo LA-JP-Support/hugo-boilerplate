@@ -229,22 +229,23 @@ Yes. Qdrant typically complements SQL/NoSQL stores, handling unstructured, high-
 
 ## References
 
-- [Qdrant Official Documentation](https://qdrant.tech/documentation/)
-- [What is a Vector Database?](https://qdrant.tech/articles/what-is-a-vector-database/)
-- [Qdrant Product Page](https://www.qdrant.tech/)
-- [Vector Embeddings Explained](https://www.pinecone.io/learn/vector-embeddings/)
-- [Qdrant Architecture Documentation](https://qdrant.tech/documentation/guides/get-started/database-architecture)
-- [HNSW Algorithm Explained](https://www.pinecone.io/learn/series/faiss/hnsw/)
-- [Qdrant Quickstart Guide](https://qdrant.tech/documentation/quick-start/)
-- [Create and Manage Indexes](https://qdrant.tech/documentation/concepts/indexing/)
-- [Filter by Metadata](https://qdrant.tech/documentation/guides/search/filter-by-metadata)
-- [Qdrant Security](https://www.qdrant.tech/security/)
-- [Qdrant Cloud Overview](https://qdrant.tech/cloud/)
-- [Qdrant Collections Documentation](https://qdrant.tech/documentation/concepts/collections/)
-- [Distance Metrics Reference](https://qdrant.tech/documentation/concepts/collections/#distance-metrics)
-- [Payloads in Qdrant](https://qdrant.tech/documentation/concepts/payload/)
-- [Quantization Guide](https://qdrant.tech/documentation/guides/quantization/)
-- [Hybrid Search Documentation](https://qdrant.tech/articles/hybrid-search/)
-- [Vector Search Resource Optimization](https://qdrant.tech/articles/vector-search-resource-optimization/)
-- [A Developer's Friendly Guide to Qdrant](https://www.cohorte.co/blog/a-developers-friendly-guide-to-qdrant-vector-database)
-- [LangChain Integration for RAG](https://docs.langchain.com/oss/python/integrations/vectorstores/qdrant)
+
+1. Qdrant. (n.d.). Official Documentation. Qdrant Documentation.
+2. Qdrant. (n.d.). What is a Vector Database?. Qdrant Articles.
+3. Qdrant. (n.d.). Product Page. Qdrant Website.
+4. Pinecone. (n.d.). Vector Embeddings Explained. Pinecone Learn.
+5. Qdrant. (n.d.). Architecture Documentation. Qdrant Documentation.
+6. Pinecone. (n.d.). HNSW Algorithm Explained. Pinecone Learn.
+7. Qdrant. (n.d.). Quickstart Guide. Qdrant Documentation.
+8. Qdrant. (n.d.). Create and Manage Indexes. Qdrant Documentation.
+9. Qdrant. (n.d.). Filter by Metadata. Qdrant Documentation.
+10. Qdrant. (n.d.). Security. Qdrant Website.
+11. Qdrant. (n.d.). Cloud Overview. Qdrant Documentation.
+12. Qdrant. (n.d.). Collections Documentation. Qdrant Documentation.
+13. Qdrant. (n.d.). Distance Metrics Reference. Qdrant Documentation.
+14. Qdrant. (n.d.). Payloads in Qdrant. Qdrant Documentation.
+15. Qdrant. (n.d.). Quantization Guide. Qdrant Documentation.
+16. Qdrant. (n.d.). Hybrid Search Documentation. Qdrant Articles.
+17. Qdrant. (n.d.). Vector Search Resource Optimization. Qdrant Articles.
+18. Cohorte. (n.d.). A Developer's Friendly Guide to Qdrant. Cohorte Blog.
+19. LangChain. (n.d.). LangChain Integration for RAG. LangChain Documentation.

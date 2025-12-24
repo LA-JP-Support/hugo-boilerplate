@@ -227,18 +227,33 @@ Word、Excel、PowerPoint、Teamsに組み込まれ、作成、データ分析�
 
 ## 参考文献
 
-- [Microsoft: Copilot and AI Agents Overview](https://www.microsoft.com/en-us/microsoft-copilot/copilot-101/copilot-ai-agents)
-- [Microsoft: Getting Started with Copilot](https://www.microsoft.com/en-us/microsoft-copilot/copilot-101/copilot-ai-agents#Getting-started)
-- [Microsoft: Copilot Glossary](https://learn.microsoft.com/en-us/copilot/glossary)
-- [Microsoft: Responsible AI](https://www.microsoft.com/en-us/ai/responsible-ai)
-- [Microsoft: 365 Copilot for Work](https://www.microsoft.com/en-us/microsoft-365/copilot/copilot-for-work)
-- [SAP: What is an AI Copilot?](https://www.sap.com/resources/what-is-ai-copilot)
-- [SAP: AI-generated content is not immune to biases](https://www.sap.com/resources/what-is-ai-bias)
-- [SAP Joule: AI Assistant](https://www.sap.com/products/artificial-intelligence/ai-assistant.html)
-- [Assembled: Guide to AI Copilots in Customer Service](https://www.assembled.com/page/ai-copilots-customer-service)
-- [Moveworks: What does an AI copilot do?](https://www.moveworks.com/us/en/resources/blog/what-does-an-ai-copilot-do)
-- [Salesforce: What is an AI Copilot?](https://www.salesforce.com/agentforce/ai-copilot/)
-- [Salesforce: Agentforce](https://www.salesforce.com/agentforce/ai-copilot/)
-- [ThoughtSpot: Copilots vs. Agents](https://www.thoughtspot.com/data-trends/ai/ai-copilot-and-ai-agent)
-- [ThoughtSpot: Spotter](https://www.thoughtspot.com/product/ai-analyst)
-- [GitHub Copilot](https://github.com/features/copilot)
+
+1. Microsoft. (n.d.). Copilot and AI Agents Overview. Microsoft.
+
+2. Microsoft. (n.d.). Getting Started with Copilot. Microsoft.
+
+3. Microsoft. (n.d.). Copilot Glossary. Microsoft Learn.
+
+4. Microsoft. (n.d.). Responsible AI. Microsoft.
+
+5. Microsoft. (n.d.). 365 Copilot for Work. Microsoft 365.
+
+6. SAP. (n.d.). What is an AI Copilot?. SAP Resources.
+
+7. SAP. (n.d.). AI-generated content is not immune to biases. SAP Resources.
+
+8. SAP. (n.d.). Joule: AI Assistant. SAP Products.
+
+9. Assembled. (n.d.). Guide to AI Copilots in Customer Service. Assembled.
+
+10. Moveworks. (n.d.). What does an AI copilot do?. Moveworks Blog.
+
+11. Salesforce. (n.d.). What is an AI Copilot?. Salesforce Agentforce.
+
+12. Salesforce. (n.d.). Agentforce. Salesforce.
+
+13. ThoughtSpot. (n.d.). Copilots vs. Agents. ThoughtSpot.
+
+14. ThoughtSpot. (n.d.). Spotter. ThoughtSpot Product.
+
+15. GitHub Copilot. Service for AI-powered code completion. URL: https://github.com/features/copilot

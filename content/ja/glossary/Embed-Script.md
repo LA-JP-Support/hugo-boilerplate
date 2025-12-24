@@ -292,14 +292,15 @@ HTMLに貼り付けることで、AIチャットボットやウィジェット�
 
 ## 参考文献
 
-- [Chatbase: JavaScript Embed Quick Start Guide](https://chatbase.co/docs/developer-guides/javascript-embed#quick-start-guide)
-- [Chatbase: Identity Verification](https://chatbase.co/docs/developer-guides/identity-verification)
-- [Chatbase: Event Listeners and Advanced Features](https://chatbase.co/docs/developer-guides/javascript-embed#advanced-features)
-- [Chatbase: Troubleshooting Guide](https://chatbase.co/docs/developer-guides/javascript-embed#troubleshooting)
-- [Chatbase: Language Options](https://chatbase.co/docs/developer-guides/javascript-embed#user-experience)
-- [ChatBot.com: Chat Widget API](https://www.chatbot.com/docs/chat-widget-api/)
-- [ChatBot.com: Widget Installation Guide](https://www.chatbot.com/help/install-chatbot/widget-installation/)
-- [ChatBot.com for WordPress Plugin](https://wordpress.org/plugins/chatbot/)
-- [Knack Community: Embed Chatbot Example](https://forums.knack.com/t/embed-chatbot/18777)
-- [Wix: Embedding Custom Code to Your Site](https://support.wix.com/en/article/embedding-custom-code-to-your-site)
-- [WCAG Guidelines for Accessibility](https://www.w3.org/WAI/standards-guidelines/wcag/)
+
+1. Chatbase. (n.d.). JavaScript Embed Quick Start Guide. Chatbase Developer Guides.
+2. Chatbase. (n.d.). Identity Verification. Chatbase Developer Guides.
+3. Chatbase. (n.d.). Event Listeners and Advanced Features. Chatbase Developer Guides.
+4. Chatbase. (n.d.). Troubleshooting Guide. Chatbase Developer Guides.
+5. Chatbase. (n.d.). Language Options. Chatbase Developer Guides.
+6. ChatBot.com. (n.d.). Chat Widget API. ChatBot.com Documentation.
+7. ChatBot.com. (n.d.). Widget Installation Guide. ChatBot.com Help.
+8. ChatBot.com. (n.d.). WordPress Plugin. WordPress Plugin Repository.
+9. Knack Community. (n.d.). Embed Chatbot Example. Knack Forums.
+10. Wix. (n.d.). Embedding Custom Code to Your Site. Wix Support.
+11. W3C. (n.d.). WCAG Guidelines for Accessibility. W3C Web Accessibility Initiative.

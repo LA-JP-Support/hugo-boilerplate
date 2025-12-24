@@ -338,20 +338,37 @@ KPI(例:レビュー時間、誤検知/見逃し率)を追跡し、適応しま�
 
 ## 参考文献
 
-- [Content Moderation: Immersive Truth](https://opentextbooks.library.arizona.edu/immersivetruth/chapter/content-moderation-new/)
-- [Imagga: What Is Content Moderation?](https://imagga.com/blog/what-is-content-moderation/)
-- [Checkstep: Content Moderation - A Comprehensive Guide](https://www.checkstep.com/content-moderation-a-comprehensive-guide)
-- [Checkstep: AI Text Moderation](https://www.checkstep.com/ai-text-moderation/)
-- [Checkstep: AI Image Moderation](https://www.checkstep.com/ai-image-moderation/)
-- [Checkstep: AI Video Moderation](https://www.checkstep.com/ai-video-moderation/)
-- [Checkstep: AI Audio Moderation](https://www.checkstep.com/ai-audio-moderation/)
-- [Checkstep: Digital Services Act](https://www.checkstep.com/digital-services-act/)
-- [Sendbird: What is a content moderator?](https://sendbird.com/blog/what-is-a-content-moderator)
-- [Sendbird: Content Moderation Product](https://sendbird.com/products/chat-messaging/content-moderation)
-- [Meedan: Toolkit for Civil Society and Moderation Inventory](https://meedan.com/post/toolkit-for-civil-society-and-moderation-inventory)
-- [TechTarget: 6 types of AI content moderation](https://www.techtarget.com/searchcontentmanagement/tip/Types-of-AI-content-moderation-and-how-they-work)
-- [Utopia AI Moderator](https://www.utopiaanalytics.com/utopia-ai-moderator)
-- [Utopia AI Moderator Demo (YouTube)](https://www.youtube.com/watch?v=0oAnq0egb2c)
-- [Imagga: Adult Content Moderation](https://imagga.com/solutions/adult-content-moderation)
-- [Cyberpsychology: The psychological impacts of content moderation](https://cyberpsychology.eu/article/view/33166)
-- [PMC: Content Moderation and Mental Health](https://pmc.ncbi.nlm.nih.gov/articles/PMC12024403/)
+
+1. University of Arizona. (n.d.). Content Moderation: Immersive Truth. Open Textbooks Library.
+
+2. Imagga. (n.d.). What Is Content Moderation?. Imagga Blog.
+
+3. Checkstep. (n.d.). Content Moderation - A Comprehensive Guide. Checkstep.
+
+4. Checkstep. (n.d.). AI Text Moderation. Checkstep.
+
+5. Checkstep. (n.d.). AI Image Moderation. Checkstep.
+
+6. Checkstep. (n.d.). AI Video Moderation. Checkstep.
+
+7. Checkstep. (n.d.). AI Audio Moderation. Checkstep.
+
+8. Checkstep. (n.d.). Digital Services Act. Checkstep.
+
+9. Sendbird. (n.d.). What is a content moderator?. Sendbird Blog.
+
+10. Sendbird. (n.d.). Content Moderation Product. Sendbird.
+
+11. Meedan. (n.d.). Toolkit for Civil Society and Moderation Inventory. Meedan.
+
+12. TechTarget. (n.d.). 6 types of AI content moderation. TechTarget.
+
+13. Utopia Analytics. (n.d.). Utopia AI Moderator. URL: https://www.utopiaanalytics.com/utopia-ai-moderator
+
+14. Utopia Analytics. (n.d.). Utopia AI Moderator Demo. URL: https://www.youtube.com/watch?v=0oAnq0egb2c
+
+15. Imagga. (n.d.). Adult Content Moderation. Imagga.
+
+16. Cyberpsychology. (n.d.). The psychological impacts of content moderation. Cyberpsychology.
+
+17. PMC. (n.d.). Content Moderation and Mental Health. PMC.

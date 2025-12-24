@@ -579,17 +579,31 @@ Timelines vary based on scope and organizational readiness. Initial projects mig
 
 ## References
 
-- [Honeywell: What is Digitalization?](https://www.honeywell.com/us/en/news/2023/11/what-is-digitalization-and-why-its-important)
-- [Cambridge Dictionary: Digitalization](https://dictionary.cambridge.org/us/dictionary/english/digitalization)
-- [SmartB Solutions: Digitization vs Digitalization](https://www.smartb.co/the-difference-between-digitization-digitalization-automation-and-digital-transformation/)
-- [Yokogawa: Digitization, Digitalization, Digital Transformation](https://www.yokogawa.com/library/resources/white-papers/the-differences-between-digitization-digitalization-and-digital-transformation-in-manufacturing/)
-- [GlobalSign: Digitization, Digitalization & Digital Transformation](https://www.globalsign.com/en/blog/difference-and-similarities-digitization-digitalization-and-digital-transformation)
-- [Quixy: Digital Transformation Examples](https://quixy.com/blog/examples-of-digital-transformation/)
-- [IBM: Digital Transformation Use Cases](https://www.ibm.com/think/topics/digital-transformation-use-cases)
-- [Forbes: Benefits of Digitalization](https://www.forbes.com/councils/forbescoachescouncil/2023/04/07/unlocking-the-benefits-of-digitalization-simple-strategies-for-rapid-success/)
-- [Thales: Benefits of Digital Transformation](https://cpl.thalesgroup.com/software-monetization/benefits-of-digital-transformation)
-- [Whatfix: Digital Transformation Challenges](https://whatfix.com/blog/digital-transformation-challenges/)
-- [Triangility: Challenges of Digitalization](https://triangility.com/industry-4-0-the-challenges-of-digitalization/)
-- [IBM Cloud Platform](https://www.ibm.com/cloud)
-- [IBM AI Platform](https://www.ibm.com/topics/artificial-intelligence)
-- [IBM Blockchain](https://www.ibm.com/topics/blockchain)
+
+1. Honeywell. (2023). What is Digitalization?. Honeywell News.
+
+2. Cambridge Dictionary. (n.d.). Digitalization. Cambridge Dictionary.
+
+3. SmartB Solutions. (n.d.). Digitization vs Digitalization. SmartB Solutions Blog.
+
+4. Yokogawa. (n.d.). Digitization, Digitalization, Digital Transformation. Yokogawa Library.
+
+5. GlobalSign. (n.d.). Digitization, Digitalization & Digital Transformation. GlobalSign Blog.
+
+6. Quixy. (n.d.). Digital Transformation Examples. Quixy Blog.
+
+7. IBM. (n.d.). Digital Transformation Use Cases. IBM Think Topics.
+
+8. Forbes. (2023). Benefits of Digitalization. Forbes Coaches Council.
+
+9. Thales. (n.d.). Benefits of Digital Transformation. Thales Group.
+
+10. Whatfix. (n.d.). Digital Transformation Challenges. Whatfix Blog.
+
+11. Triangility. (n.d.). Challenges of Digitalization. Triangility Blog.
+
+12. IBM Cloud Platform. Cloud Computing Service. URL: https://www.ibm.com/cloud
+
+13. IBM AI Platform. Artificial Intelligence Platform. URL: https://www.ibm.com/topics/artificial-intelligence
+
+14. IBM Blockchain. Blockchain Technology Platform. URL: https://www.ibm.com/topics/blockchain

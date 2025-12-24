@@ -307,11 +307,22 @@ AIモデルを設定し、ナレッジソースを接続し、コンポーネン
 
 ## 参考資料
 
-- [FlowHunt公式ウェブサイト](https://www.flowhunt.io/)
-- [FlowHunt AIチャットボット統合ガイド](https://support.qualityunit.com/549524-FlowHunt-AI-Chatbot-Integration)
-- [AIエージェントディレクトリ:FlowHunt概要](https://aiagentsdirectory.com/agent/flowhunt)
-- [FlowHunt機能](https://www.flowhunt.io/features/)
-- [FlowHunt統合](https://www.flowhunt.io/integrations/)
-- [FlowHuntブログ](https://www.flowhunt.io/blog/)
-- [LiveAgent FAQ:FlowHuntとは?](https://faq.liveagent.com/653339-What-is-FlowHunt)
-- [FlowHuntデモセッション予約](https://www.flowhunt.io/demo/)
+
+1. FlowHunt. Official Website. URL: https://www.flowhunt.io/
+
+2. FlowHunt. (n.d.). AIチャットボット統合ガイド. Quality Unit Support.
+URL: https://support.qualityunit.com/549524-FlowHunt-AI-Chatbot-Integration
+
+3. AI Agents Directory. (n.d.). FlowHunt概要. AI Agents Directory.
+URL: https://aiagentsdirectory.com/agent/flowhunt
+
+4. FlowHunt. Features. URL: https://www.flowhunt.io/features/
+
+5. FlowHunt. Integrations. URL: https://www.flowhunt.io/integrations/
+
+6. FlowHunt. Blog. URL: https://www.flowhunt.io/blog/
+
+7. LiveAgent. (n.d.). FAQ: FlowHuntとは?. LiveAgent FAQ.
+URL: https://faq.liveagent.com/653339-What-is-FlowHunt
+
+8. FlowHunt. Demo Session Booking. URL: https://www.flowhunt.io/demo/

@@ -634,12 +634,13 @@ A: Match your audience's knowledge level. External content should assume minimal
 
 ## References
 
-- [Bloomfire: What Is a Knowledge Base?](https://bloomfire.com/resources/what-is-a-knowledge-base/)
-- [Zendesk: What is a Knowledge Base?](https://www.zendesk.com/blog/knowledge-base/)
-- [Goodspeed Studio: What is a Knowledge Base?](https://goodspeed.studio/blog/knowledge-base/)
-- [Atlassian: What is a Knowledge Base?](https://www.atlassian.com/itsm/knowledge-management/what-is-a-knowledge-base)
-- [HubSpot: Knowledge Base](https://www.hubspot.com/products/service/knowledge-base)
-- [Helpjuice: Knowledge Base Software Guide](https://helpjuice.com/knowledge-base)
-- [McKinsey: The Social Economy - Productivity Report (PDF)](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy)
-- [Zendesk: Customer Self-Service Portal](https://www.zendesk.com/service/help-center/customer-self-service/)
-- [Wikipedia: Knowledge Management System](https://en.wikipedia.org/wiki/Knowledge_management_system)
+
+1. Bloomfire. (n.d.). What Is a Knowledge Base?. Bloomfire Resources.
+2. Zendesk. (n.d.). What is a Knowledge Base?. Zendesk Blog.
+3. Goodspeed Studio. (n.d.). What is a Knowledge Base?. Goodspeed Studio Blog.
+4. Atlassian. (n.d.). What is a Knowledge Base?. Atlassian IT Service Management.
+5. HubSpot. (n.d.). Knowledge Base. HubSpot Products.
+6. Helpjuice. (n.d.). Knowledge Base Software Guide. Helpjuice.
+7. McKinsey. (n.d.). The Social Economy - Productivity Report. McKinsey Insights.
+8. Zendesk. (n.d.). Customer Self-Service Portal. Zendesk Service.
+9. Wikipedia. (n.d.). Knowledge Management System. Wikipedia.

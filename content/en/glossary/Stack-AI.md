@@ -297,27 +297,28 @@ Input (file, email, API) → Data extraction (OCR, LLM) → Analysis → Output 
 
 ## References
 
-- [Stack AI Official Website](https://www.stack-ai.com/)
-- [Stack AI Documentation](https://docs.stack-ai.com/stack-ai/)
-- [Stack AI Security Page](https://www.stack-ai.com/security)
-- [Stack AI Integrations Documentation](https://docs.stack-ai.com/integrations)
-- [Stack AI Pricing FAQ](https://docs.stack-ai.com/pricing)
-- [Stack AI Finance Solutions](https://www.stack-ai.com/solutions/finance)
-- [Stack AI Insurance Solutions](https://www.stack-ai.com/solutions/insurance)
-- [Stack AI Healthcare Solutions](https://www.stack-ai.com/solutions/healthcare)
-- [Stack AI Education Solutions](https://www.stack-ai.com/solutions/education)
-- [Stack AI Customer Stories](https://www.stack-ai.com/customers)
-- [Stack AI Use Cases](https://www.stack-ai.com/solutions)
-- [Marketer Milk Stack AI Review](https://www.marketermilk.com/blog/stack-ai-review)
-- [Voiceflow Stack AI Comparison](https://www.voiceflow.com/blog/stack-ai)
-- [G2 Stack AI Reviews](https://www.g2.com/products/stack-ai/reviews)
-- [G2 Stack AI Review Example](https://www.g2.com/products/stack-ai/reviews/stack-ai-review-10491200)
-- [MongoDB AI Stack](https://www.mongodb.com/resources/basics/artificial-intelligence/ai-stack)
-- [PromptLoop Stack AI Directory](https://www.promptloop.com/directory/what-does-stack-ai-do)
-- [IBM AI Stack Overview](https://www.ibm.com/think/topics/ai-stack)
-- [NWAI AI Stack Overview](https://nwai.co/what-is-an-ai-stack-a-comprehensive-overview/)
-- [Marketer Milk: Best AI Agent Platforms](https://www.marketermilk.com/blog/best-ai-agent-platforms)
-- [IBM Cloud AI Glossary](https://www.ibm.com/cloud/learn/ai)
-- [Zapier Workflow Automation Guide](https://zapier.com/learn/automation/workflow-automation/)
-- [OpenAI GPT-4](https://openai.com/gpt-4)
-- [Pinecone Vector Database](https://www.pinecone.io/learn/vector-database/)
+
+1. Stack AI. Official Website. URL: https://www.stack-ai.com/
+2. Stack AI. Documentation. URL: https://docs.stack-ai.com/stack-ai/
+3. Stack AI. Security Page. URL: https://www.stack-ai.com/security
+4. Stack AI. Integrations Documentation. URL: https://docs.stack-ai.com/integrations
+5. Stack AI. Pricing FAQ. URL: https://docs.stack-ai.com/pricing
+6. Stack AI. Finance Solutions. URL: https://www.stack-ai.com/solutions/finance
+7. Stack AI. Insurance Solutions. URL: https://www.stack-ai.com/solutions/insurance
+8. Stack AI. Healthcare Solutions. URL: https://www.stack-ai.com/solutions/healthcare
+9. Stack AI. Education Solutions. URL: https://www.stack-ai.com/solutions/education
+10. Stack AI. Customer Stories. URL: https://www.stack-ai.com/customers
+11. Stack AI. Use Cases. URL: https://www.stack-ai.com/solutions
+12. Marketer Milk. (n.d.). Stack AI Review. Marketer Milk Blog. URL: https://www.marketermilk.com/blog/stack-ai-review
+13. Voiceflow. (n.d.). Stack AI Comparison. Voiceflow Blog. URL: https://www.voiceflow.com/blog/stack-ai
+14. G2. Stack AI Reviews. URL: https://www.g2.com/products/stack-ai/reviews
+15. G2. Stack AI Review Example. URL: https://www.g2.com/products/stack-ai/reviews/stack-ai-review-10491200
+16. MongoDB. (n.d.). AI Stack. MongoDB Resources. URL: https://www.mongodb.com/resources/basics/artificial-intelligence/ai-stack
+17. PromptLoop. Stack AI Directory. URL: https://www.promptloop.com/directory/what-does-stack-ai-do
+18. IBM. (n.d.). AI Stack Overview. IBM Think Topics. URL: https://www.ibm.com/think/topics/ai-stack
+19. NWAI. (n.d.). What is an AI Stack: A Comprehensive Overview. NWAI. URL: https://nwai.co/what-is-an-ai-stack-a-comprehensive-overview/
+20. Marketer Milk. (n.d.). Best AI Agent Platforms. Marketer Milk Blog. URL: https://www.marketermilk.com/blog/best-ai-agent-platforms
+21. IBM. (n.d.). Cloud AI Glossary. IBM Cloud. URL: https://www.ibm.com/cloud/learn/ai
+22. Zapier. (n.d.). Workflow Automation Guide. Zapier Learn. URL: https://zapier.com/learn/automation/workflow-automation/
+23. OpenAI. GPT-4. URL: https://openai.com/gpt-4
+24. Pinecone. Vector Database. URL: https://www.pinecone.io/learn/vector-database/

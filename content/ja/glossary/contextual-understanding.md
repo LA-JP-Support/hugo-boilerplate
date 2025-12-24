@@ -265,10 +265,17 @@ AIシステムは、取引履歴と支出パターンを分析し、パーソナ
 
 ## 参考文献
 
-- [BotPenguin: Complete Guide to Contextual Chatbots](https://botpenguin.com/blogs/a-complete-guide-to-contextual-chatbots)
-- [Anthropic: Contextual Retrieval in AI Systems](https://www.anthropic.com/news/contextual-retrieval)
-- [Anthropic: Contextual Embeddings - Technical Cookbook](https://github.com/anthropics/anthropic-cookbook/tree/main/skills/contextual-embeddings)
-- [Anthropic: Prompt Caching Techniques](https://github.com/anthropics/anthropic-cookbook/blob/main/misc/prompt_caching.ipynb)
-- [Park University IT: Privacy & Security in AI Chatbots](https://support.park.edu/support/solutions/articles/6000275001-using-ai-chatbots-privacy-and-information-security-considerations)
-- [AAAI/ACM 2025: Privacy Norms in LLM-Based Chatbots (PDF)](https://ojs.aaai.org/index.php/AIES/article/view/36735/38873)
-- [arXiv: User Privacy Expectations in Conversational AI](https://arxiv.org/html/2508.06760v1)
+
+1. BotPenguin. (n.d.). Complete Guide to Contextual Chatbots. BotPenguin Blog.
+
+2. Anthropic. (n.d.). Contextual Retrieval in AI Systems. Anthropic News.
+
+3. Anthropic. (n.d.). Contextual Embeddings - Technical Cookbook. Anthropic GitHub Repository.
+
+4. Anthropic. (n.d.). Prompt Caching Techniques. Anthropic GitHub Repository.
+
+5. Park University IT. (n.d.). Privacy & Security in AI Chatbots. Park University Support.
+
+6. AAAI/ACM. (2025). Privacy Norms in LLM-Based Chatbots. AAAI/ACM Conference Proceedings.
+
+7. arXiv. (n.d.). User Privacy Expectations in Conversational AI. arXiv.

@@ -265,17 +265,18 @@ A: ほとんどのルーターは排他的(評価ごとに単一パス)です。
 
 ## 参考文献
 
-- [AWS Glue: Conditional Router](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
-- [FlowHunt: Conditional Router](https://www.flowhunt.io/components/ConditionalRouter/)
-- [Haystack: ConditionalRouter](https://docs.haystack.deepset.ai/docs/conditionalrouter)
-- [Portkey AI: Conditional Routing](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing)
-- [Portkey AI: Combined Routing with Multiple Conditions](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing#combined-routing-with-multiple-conditions)
-- [Fluix: Conditional Logic Tutorial](https://fluix.io/help/conditional-logic-tutorial)
-- [Slack: Conditional Branching Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder)
-- [Slack: Guide to Slack Workflow Builder](https://slack.com/help/articles/360035692513-Guide-to-Slack-Workflow-Builder)
-- [Frontline AI: Understanding Conditional Routing in AI Agent Flows](https://help.getfrontline.ai/en/articles/10174140-understanding-conditional-routing-in-ai-agent-flows)
-- [Rapidomize: Conditional Routing](https://rapidomize.com/docs/services/router/)
-- [FlowHunt: Live Demo](https://www.flowhunt.io/demo/)
-- [Conditional Routing in Slack Workflow Builder (YouTube)](https://www.youtube.com/watch?v=3O4c7iYhD5Y)
-- [How to Use Conditional Router in FlowHunt (YouTube)](https://www.youtube.com/watch?v=rgqX7Qj3QAo)
-- [AWS Glue Conditional Router Tutorial (YouTube)](https://www.youtube.com/watch?v=90p4Vq8F9pQ)
+
+1. AWS. (n.d.). AWS Glue: Conditional Router. AWS Documentation.
+2. FlowHunt. (n.d.). FlowHunt: Conditional Router. FlowHunt Documentation.
+3. Haystack. (n.d.). Haystack: ConditionalRouter. Haystack Documentation.
+4. Portkey AI. (n.d.). Portkey AI: Conditional Routing. Portkey AI Documentation.
+5. Portkey AI. (n.d.). Portkey AI: Combined Routing with Multiple Conditions. Portkey AI Documentation.
+6. Fluix. (n.d.). Fluix: Conditional Logic Tutorial. Fluix Help.
+7. Slack. (n.d.). Slack: Conditional Branching Workflow Builder. Slack Blog.
+8. Slack. (n.d.). Slack: Guide to Slack Workflow Builder. Slack Help.
+9. Frontline AI. (n.d.). Frontline AI: Understanding Conditional Routing in AI Agent Flows. Frontline AI Help.
+10. Rapidomize. (n.d.). Rapidomize: Conditional Routing. Rapidomize Documentation.
+11. FlowHunt. (n.d.). FlowHunt: Live Demo. FlowHunt Website.
+12. Unknown. (n.d.). Conditional Routing in Slack Workflow Builder. YouTube.
+13. Unknown. (n.d.). How to Use Conditional Router in FlowHunt. YouTube.
+14. Unknown. (n.d.). AWS Glue Conditional Router Tutorial. YouTube.

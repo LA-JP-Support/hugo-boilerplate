@@ -246,10 +246,17 @@ Warning signs include frequent delays, missed steps, ownership confusion, redund
 
 ## References
 
-- [Asana: Workflow Examples](https://asana.com/resources/workflow-examples)
-- [Slack: What is a Workflow?](https://slack.com/blog/productivity/what-is-a-workflow-a-guide-to-building-smarter-business-processes)
-- [Blue Prism: Workflow Guide](https://www.blueprism.com/guides/workflow/)
-- [IBM: Workflow Overview](https://www.ibm.com/think/topics/workflow)
-- [TechTarget: Workflow Definition](https://www.techtarget.com/searchcio/definition/workflow)
-- [Kissflow: Workflow vs Process](https://kissflow.com/workflow/workflow-vs-process-whats-difference/)
-- [Zendesk: Workflow Automation](https://www.zendesk.de/blog/workflow-automation/)
+
+1. Asana. (n.d.). Workflow Examples. Asana Resources. URL: https://asana.com/resources/workflow-examples
+
+2. Slack. (n.d.). What is a Workflow? A Guide to Building Smarter Business Processes. Slack Blog. URL: https://slack.com/blog/productivity/what-is-a-workflow-a-guide-to-building-smarter-business-processes
+
+3. Blue Prism. (n.d.). Workflow Guide. Blue Prism Guides. URL: https://www.blueprism.com/guides/workflow/
+
+4. IBM. (n.d.). Workflow Overview. IBM Think Topics. URL: https://www.ibm.com/think/topics/workflow
+
+5. TechTarget. (n.d.). Workflow Definition. TechTarget SearchCIO. URL: https://www.techtarget.com/searchcio/definition/workflow
+
+6. Kissflow. (n.d.). Workflow vs Process: What's the Difference?. Kissflow Blog. URL: https://kissflow.com/workflow/workflow-vs-process-whats-difference/
+
+7. Zendesk. (n.d.). Workflow Automation. Zendesk Blog. URL: https://www.zendesk.de/blog/workflow-automation/

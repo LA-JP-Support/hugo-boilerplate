@@ -270,14 +270,25 @@ A: エンゲージメント(チャット頻度、セッション時間)、ユー
 
 ## 参考文献
 
-- [Zendesk: Chatbot Persona - What It Is and How to Create One](https://www.zendesk.de/blog/chatbot-persona/)
-- [D-ID: What Is an AI Avatar Chatbot?](https://www.d-id.com/resources/glossary/ai-avatar-chatbot/)
-- [BotPenguin: Chatbot Avatar Glossary](https://botpenguin.com/glossary/chatbot-avatar)
-- [FHSTP: Designing a Chatbot - From Simple Interfaces to Engaging Avatars](https://mobile.fhstp.ac.at/allgemein/designing-a-chatbot-from-simple-interfaces-to-engaging-avatars/)
-- [Chatbot.com: How to Build an AI Chatbot's Persona in 2025](https://www.chatbot.com/blog/personality/)
-- [Akool: Using AI Chatbots with Avatars](https://akool.com/blog-posts/ai-chatbot-avatar)
-- [Akool: Create Real-Time Streaming Avatars with AI](https://akool.com/ai-tools/create-real-time-streaming-avatars-with-ai)
-- [Akool: Avatar Builder](https://akool.com/avatar-landing)
-- [D-ID: Digital Humans Technology](https://www.d-id.com/resources/glossary/digital-humans/)
-- [D-ID: Digital Avatar Glossary](https://www.d-id.com/resources/glossary/digital-avatar/)
-- [YouTube: AI Avatars for Chatbot Applications](https://www.youtube.com/watch?v=5hiYWYXnKH8)
+
+1. Zendesk. (n.d.). Chatbot Persona - What It Is and How to Create One. Zendesk Blog.
+
+2. D-ID. (n.d.). What Is an AI Avatar Chatbot?. D-ID Resources.
+
+3. BotPenguin. (n.d.). Chatbot Avatar Glossary. BotPenguin Glossary.
+
+4. FHSTP. (n.d.). Designing a Chatbot - From Simple Interfaces to Engaging Avatars. FHSTP Mobile.
+
+5. Chatbot.com. (2025). How to Build an AI Chatbot's Persona in 2025. Chatbot.com Blog.
+
+6. Akool. (n.d.). Using AI Chatbots with Avatars. Akool Blog.
+
+7. Akool. (n.d.). Create Real-Time Streaming Avatars with AI. Akool Blog.
+
+8. Akool. (n.d.). Avatar Builder. Akool.
+
+9. D-ID. (n.d.). Digital Humans Technology. D-ID Resources.
+
+10. D-ID. (n.d.). Digital Avatar Glossary. D-ID Resources.
+
+11. YouTube. (n.d.). AI Avatars for Chatbot Applications. YouTube Video.

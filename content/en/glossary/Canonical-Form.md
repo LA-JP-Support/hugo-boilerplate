@@ -229,11 +229,12 @@ Yes. Canonicalization is vital for input validation and security, preventing exp
 
 ## References
 
-- [Stack Overflow: Canonical Form or Canonical Representation in Java](https://stackoverflow.com/questions/280107/what-does-the-term-canonical-form-or-canonical-representation-in-java-mean)
-- [BMC: What Is a Canonical Data Model? CDMs Explained](https://www.bmc.com/blogs/canonical-data-model/)
-- [Splunk: Data Normalization Explained](https://www.splunk.com/en_us/blog/learn/data-normalization.html)
-- [Stack Overflow: Normalizing vs. Canonicalizing Data](https://stackoverflow.com/questions/55286086/is-there-a-well-defined-difference-between-normalizing-and-canonicalizing-da)
-- [GeeksforGeeks: Canonical and Standard Form](https://www.geeksforgeeks.org/digital-logic/canonical-and-standard-form/)
-- [Pinecone: NeMo Guardrails—Canonical Forms in Colang](https://www.pinecone.io/learn/nemo-guardrails-intro/)
-- [Wikipedia: Canonicalization](https://en.wikipedia.org/wiki/Canonicalization)
-- [W3C XML Schema: Boolean Canonical Representation](http://www.w3.org/TR/xmlschema-2/#boolean)
+
+1. Stack Overflow. (n.d.). Canonical Form or Canonical Representation in Java. Stack Overflow.
+2. BMC. (n.d.). What Is a Canonical Data Model? CDMs Explained. BMC Blog.
+3. Splunk. (n.d.). Data Normalization Explained. Splunk Blog.
+4. Stack Overflow. (n.d.). Normalizing vs. Canonicalizing Data. Stack Overflow.
+5. GeeksforGeeks. (n.d.). Canonical and Standard Form. GeeksforGeeks.
+6. Pinecone. (n.d.). NeMo Guardrails—Canonical Forms in Colang. Pinecone Learn.
+7. Wikipedia. (n.d.). Canonicalization. Wikipedia.
+8. W3C. (n.d.). XML Schema: Boolean Canonical Representation. W3C Technical Report.

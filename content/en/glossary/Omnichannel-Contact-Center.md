@@ -191,13 +191,14 @@ The omnichannel contact center operates through a sophisticated workflow that en
 
 ## References
 
-- [What is Omnichannel Contact Center? - Talkdesk](https://www.talkdesk.com/blog/what-is-omnichannel-contact-center/)
-- [Omnichannel Contact Center Solutions - Five9](https://www.five9.com/products/omnichannel)
-- [What is an Omnichannel Contact Center? - Genesys](https://www.genesys.com/en-sg/omnichannel)
-- [Omnichannel Customer Service Guide - Zendesk](https://www.zendesk.com/service/omnichannel/)
-- [What is Omnichannel? - Salesforce](https://www.salesforce.com/products/service-cloud/what-is-omnichannel/)
-- [Omnichannel Contact Center - NICE](https://www.nice.com/solutions/omnichannel-customer-experience)
-- [What is Omnichannel Contact Center? - AWS](https://aws.amazon.com/connect/omnichannel/)
-- [Omnichannel Customer Experience - RingCentral](https://www.ringcentral.com/us/en/blog/definitions/omnichannel/)
-- [Omnichannel Contact Center Platform - 8x8](https://www.8x8.com/products/contact-center/omnichannel)
-- [What is Omnichannel Customer Service? - HubSpot](https://blog.hubspot.com/service/omnichannel-customer-service)
+
+1. Talkdesk. (n.d.). What is Omnichannel Contact Center?. Talkdesk Blog.
+2. Five9. (n.d.). Omnichannel Contact Center Solutions. Five9 Products.
+3. Genesys. (n.d.). What is an Omnichannel Contact Center?. Genesys Blog.
+4. Zendesk. (n.d.). Omnichannel Customer Service Guide. Zendesk Resources.
+5. Salesforce. (n.d.). What is Omnichannel?. Salesforce Product Page.
+6. NICE. (n.d.). Omnichannel Contact Center. NICE Solutions.
+7. AWS. (n.d.). What is Omnichannel Contact Center?. AWS Connect.
+8. RingCentral. (n.d.). Omnichannel Customer Experience. RingCentral Blog.
+9. 8x8. (n.d.). Omnichannel Contact Center Platform. 8x8 Products.
+10. HubSpot. (n.d.). What is Omnichannel Customer Service?. HubSpot Blog.

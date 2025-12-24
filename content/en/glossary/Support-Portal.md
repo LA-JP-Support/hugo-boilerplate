@@ -288,11 +288,19 @@ Self-service portals that lack intuitive design or updated resources often see l
 
 ## References
 
-- [Zendesk: What is a Customer Portal? A Complete Guide](https://www.zendesk.com/blog/what-is-a-customer-portal/)
-- [Salesforce: What Is a Customer Portal? Benefits & More](https://www.salesforce.com/service/customer-self-service/customer-portal/)
-- [Knack: Customer Support Platform Portals (List + How to Make One)](https://www.knack.com/blog/customer-support-platform-portal/)
-- [Supportbench: What Is a Customer Self-Service Portal?](https://www.supportbench.com/what-is-a-customer-self-service-portal/)
-- [Softr: Everything You Need to Know About Customer Service Portals](https://www.softr.io/blog/customer-service-portal)
-- [SPP: 10 Must-Have Customer Portal Features & Implementation Tips](https://spp.co/blog/customer-portal-features/)
-- [Five: Create a Customer Support Portal In 3 Steps](https://five.co/blog/create-a-customer-support-portal/)
-- [HappyFox: Building a Customer Self-Service Portal: Best Practices](https://blog.happyfox.com/customer-self-service-portal/)
+
+1. Zendesk. (n.d.). What is a Customer Portal? A Complete Guide. Zendesk Blog.
+
+2. Salesforce. (n.d.). What Is a Customer Portal? Benefits & More. Salesforce Service Blog.
+
+3. Knack. (n.d.). Customer Support Platform Portals (List + How to Make One). Knack Blog.
+
+4. Supportbench. (n.d.). What Is a Customer Self-Service Portal?. Supportbench Blog.
+
+5. Softr. (n.d.). Everything You Need to Know About Customer Service Portals. Softr Blog.
+
+6. SPP. (n.d.). 10 Must-Have Customer Portal Features & Implementation Tips. SPP Blog.
+
+7. Five. (n.d.). Create a Customer Support Portal In 3 Steps. Five Blog.
+
+8. HappyFox. (n.d.). Building a Customer Self-Service Portal: Best Practices. HappyFox Blog.

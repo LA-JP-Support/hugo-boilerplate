@@ -250,10 +250,17 @@ This causes data sparsity (many N-grams never appear in corpus) and high dimensi
 
 ## References
 
-- [Stanford Speech and Language Processing: N-gram Language Models (PDF)](https://web.stanford.edu/~jurafsky/slp3/3.pdf)
-- [Wikipedia: N-gram](https://en.wikipedia.org/wiki/N-gram)
-- [GeeksforGeeks: N-gram in NLP](https://www.geeksforgeeks.org/nlp/n-gram-in-nlp/)
-- [LinkedIn: Comprehensive Guide to Feature Engineering with N-Grams](https://www.linkedin.com/pulse/comprehensive-guide-feature-engineering-n-grams-david-adamson-mbcs)
-- [GeeksforGeeks: Getting Started with Transformers](https://www.geeksforgeeks.org/machine-learning/getting-started-with-transformers/)
-- [GeeksforGeeks: Hidden Markov Model in Machine Learning](https://www.geeksforgeeks.org/machine-learning/hidden-markov-model-in-machine-learning/)
-- [GeeksforGeeks: Understanding RNN (Recurrent Neural Network)](https://www.geeksforgeeks.org/understanding-rnn-recurrent-neural-network/)
+
+1. Jurafsky, D., & Martin, J. H. (n.d.). Stanford Speech and Language Processing: N-gram Language Models. Stanford University.
+
+2. Wikipedia. (n.d.). N-gram. Wikipedia.
+
+3. GeeksforGeeks. (n.d.). N-gram in NLP. GeeksforGeeks.
+
+4. Adamson, D. (n.d.). Comprehensive Guide to Feature Engineering with N-Grams. LinkedIn.
+
+5. GeeksforGeeks. (n.d.). Getting Started with Transformers. GeeksforGeeks.
+
+6. GeeksforGeeks. (n.d.). Hidden Markov Model in Machine Learning. GeeksforGeeks.
+
+7. GeeksforGeeks. (n.d.). Understanding RNN (Recurrent Neural Network). GeeksforGeeks.

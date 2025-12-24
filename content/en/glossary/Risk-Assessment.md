@@ -1,7 +1,7 @@
 ---
-title: "Risk Assessment (Customer)"
+title: "Risk Assessment"
 date: 2025-12-19
-translationKey: Risk-Assessment--Customer-
+translationKey: Risk-Assessment
 description: "A systematic process to evaluate potential risks associated with a customer, such as credit risk or fraud risk, to help organizations make informed decisions about lending, pricing, and relationship management."
 keywords:
 - customer risk assessment

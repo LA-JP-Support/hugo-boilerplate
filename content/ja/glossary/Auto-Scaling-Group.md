@@ -212,17 +212,31 @@ ASGは、手動介入なしに、インスタンスの起動、監視、終了�
 
 ## 参考文献
 
-- [Amazon EC2 Auto Scalingドキュメント](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html)
-- [AWS: 最初のAuto Scaling Groupを作成する(チュートリアル)](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-your-first-auto-scaling-group.html)
-- [Spot.io: EC2 Auto Scaling Groupsの理解](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/)
-- [IBM: オートスケーリングとは?](https://www.ibm.com/think/topics/autoscaling)
-- [CloudZero: AWS Auto Scaling 101](https://www.cloudzero.com/blog/aws-auto-scaling/)
-- [Datadog: オートスケーリングとは?](https://www.datadoghq.com/knowledge-center/auto-scaling/)
-- [Graph AI: Auto Scaling Groups](https://www.graphapp.ai/engineering-glossary/cloud-computing/auto-scaling-groups)
-- [Spot.io: EC2 Auto Scalingベストプラクティス](https://spot.io/resources/aws-autoscaling/scaling-ec2-ecs-rds-and-more/ec2-autoscaling-the-basics-and-4-best-practices/)
-- [AWS: ASGとのELB統合](https://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-load-balancer-asg.html)
-- [Spot.io: 容量リバランシング](https://spot.io/blog/predictive-rebalancing/)
-- [AWS: 混合インスタンスポリシー](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html)
-- [Amazon EC2](https://aws.amazon.com/ec2/)
-- [CloudWatch](https://aws.amazon.com/cloudwatch/)
-- [Spot.io: マルチAZ vs マルチリージョン](https://spot.io/resources/aws-autoscaling/understanding-ec2-auto-scaling-groups/#a2)
+
+1. Amazon. (n.d.). EC2 Auto Scalingドキュメント. AWS Documentation.
+
+2. Amazon. (n.d.). AWS: 最初のAuto Scaling Groupを作成する(チュートリアル). AWS Documentation.
+
+3. Spot.io. (n.d.). EC2 Auto Scaling Groupsの理解. Spot.io Resources.
+
+4. IBM. (n.d.). オートスケーリングとは?. IBM Think Topics.
+
+5. CloudZero. (n.d.). AWS Auto Scaling 101. CloudZero Blog.
+
+6. Datadog. (n.d.). オートスケーリングとは?. Datadog Knowledge Center.
+
+7. Graph AI. (n.d.). Auto Scaling Groups. Graph AI Engineering Glossary.
+
+8. Spot.io. (n.d.). EC2 Auto Scalingベストプラクティス. Spot.io Resources.
+
+9. Amazon. (n.d.). ASGとのELB統合. AWS Documentation.
+
+10. Spot.io. (n.d.). 容量リバランシング. Spot.io Blog.
+
+11. Amazon. (n.d.). 混合インスタンスポリシー. AWS Documentation.
+
+12. Amazon EC2. Cloud Computing Service. URL: https://aws.amazon.com/ec2/
+
+13. CloudWatch. Monitoring Service. URL: https://aws.amazon.com/cloudwatch/
+
+14. Spot.io. (n.d.). マルチAZ vs マルチリージョン. Spot.io Resources.

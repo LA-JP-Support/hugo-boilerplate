@@ -180,22 +180,23 @@ url: "/ja/glossary/Deepfake-Detection/"
 
 ## 参考文献
 
-- [Sardine: Deepfake Detection](https://www.sardine.ai/blog/ai-deepfake-detection)
-- [Paravision: Whitepaper Guide to Deepfake Detection](https://www.paravision.ai/whitepaper-a-practical-guide-to-deepfake-detection/)
-- [MIT Media Lab: Detect DeepFakes Project Overview](https://www.media.mit.edu/projects/detect-fakes/overview/)
-- [DetectFakes Experiment](https://detectfakes.kellogg.northwestern.edu/)
-- [DetectFakes MIT](https://detectfakes.media.mit.edu/)
-- [How to Distinguish AI-Generated Images (arXiv, 2024)](https://arxiv.org/abs/2406.08651)
-- [Pindrop: Deepfake Detection](https://www.pindrop.com/glossary/deepfake-detection/)
-- [Pindrop Research Library](https://www.pindrop.com/research/)
-- [Pindrop: MSUFCU Case Study](https://www.pindrop.com/resource/msufcu-minimizes-fraud-exposure-by-millions/)
-- [Unit21 Fraud & AML Dictionary: Deepfake](https://www.unit21.ai/fraud-aml-dictionary/deepfake)
-- [Unit21: Synthetic ID Detection & Prevention](https://www.unit21.ai/blog/synthetic-id-detection-prevention)
-- [Kaggle Deepfake Detection Challenge](https://www.kaggle.com/c/deepfake-detection-challenge/overview)
-- [Science: Spotting Political Deepfakes](https://www.science.org/content/article/how-spot-deepfake-and-prevent-it-causing-political-chaos)
-- [Election Misinformation Symposium](https://youtu.be/QlNGD_QLcZE)
-- [BBC Deepfake Discussions](https://www.bbc.co.uk/sounds/play/w3ct4vc0)
-- [WSJ: Tools to Spot Bots](https://www.wsj.com/articles/is-it-human-or-ai-new-tools-help-you-spot-the-bots-11673356404)
-- [NYT: Risks of New AI Technology](https://www.nytimes.com/2018/10/22/business/efforts-to-acknowledge-the-risks-of-new-ai-technology.html)
-- [DeepFaceLab GitHub](https://github.com/iperov/DeepFaceLab)
-- [Forbes: Voice Deepfake CEO Scam Case Study](https://www.forbes.com/sites/jessedamiani/2019/09/03/a-voice-deepfake-was-used-to-scam-a-ceo-out-of-243000)
+
+1. Sardine. (n.d.). Deepfake Detection. Sardine Blog.
+2. Paravision. (n.d.). Whitepaper Guide to Deepfake Detection. Paravision Whitepaper.
+3. MIT Media Lab. (n.d.). Detect DeepFakes Project Overview. MIT Media Lab Projects.
+4. Northwestern University. (n.d.). DetectFakes Experiment. Kellogg Research.
+5. MIT Media Lab. (n.d.). DetectFakes MIT. MIT Research.
+6. Anonymous. (2024). How to Distinguish AI-Generated Images. arXiv.
+7. Pindrop. (n.d.). Deepfake Detection. Pindrop Glossary.
+8. Pindrop. (n.d.). Pindrop Research Library. Pindrop Research.
+9. Pindrop. (n.d.). MSUFCU Case Study. Pindrop Resources.
+10. Unit21. (n.d.). Deepfake. Fraud & AML Dictionary.
+11. Unit21. (n.d.). Synthetic ID Detection & Prevention. Unit21 Blog.
+12. Kaggle. (n.d.). Deepfake Detection Challenge. Kaggle Competition.
+13. Science. (n.d.). How to Spot Deepfake and Prevent Political Chaos. Science Article.
+14. Anonymous. (n.d.). Election Misinformation Symposium. YouTube Video.
+15. BBC. (n.d.). Deepfake Discussions. BBC Sounds.
+16. Wall Street Journal. (n.d.). Is It Human or AI: New Tools to Spot Bots. WSJ Article.
+17. New York Times. (2018). Risks of New AI Technology. NYT Article.
+18. DeepFaceLab. (n.d.). DeepFaceLab. GitHub Repository.
+19. Forbes. (2019). Voice Deepfake CEO Scam Case Study. Forbes Article.

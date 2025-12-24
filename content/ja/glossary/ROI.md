@@ -261,17 +261,18 @@ ROIはシンプルさから広く使用されていますが、重要な制限�
 
 ## 参考文献
 
-- [BizBot: Chatbot ROI Ultimate Guide 2025](https://www.bizbot.com/blog/chatbot-roi-ultimate-guide-2025/)
-- [Talkative: How to Calculate Chatbot ROI](https://gettalkative.com/info/chatbot-roi)
-- [Talkative: ROI Calculator Tool](https://gettalkative.com/roi-calculator)
-- [Quickchat AI: Practical Chatbot ROI Guide](https://quickchat.ai/post/calculate-chatbot-roi)
-- [Quickchat AI: True Cost of Chatbot Implementations](https://quickchat.ai/post/how-much-does-chatbot-cost)
-- [Investopedia: What is ROI?](https://www.investopedia.com/terms/r/returnoninvestment.asp)
-- [Investopedia: Net Present Value](https://www.investopedia.com/terms/n/npv.asp)
-- [Investopedia: Internal Rate of Return](https://www.investopedia.com/terms/i/irr.asp)
-- [Salesforce: ROI Meaning and Formulas](https://www.salesforce.com/resources/articles/roi-return-on-investment/)
-- [DemandSage: Chatbot Statistics](https://www.demandsage.com/chatbot-statistics/)
-- [Sprinklr: Customer Service ROI Benchmarks](https://sprinklr.com/blog/customer-service-roi/)
-- [Forrester: Total Economic Impact of Chatbots](https://www.forrester.com/report/the-total-economic-impact-of-chatbots/)
-- [HubSpot: Marketing Statistics](https://www.hubspot.com/marketing-statistics)
-- [Harvard Business Review: Business Decision Making](https://hbr.org/topic/subject/business-decision-making)
+
+1. BizBot. (2025). Chatbot ROI Ultimate Guide 2025. BizBot Blog.
+2. Talkative. (n.d.). How to Calculate Chatbot ROI. Talkative Blog.
+3. Talkative. (n.d.). ROI Calculator Tool. URL: https://gettalkative.com/roi-calculator
+4. Quickchat AI. (n.d.). Practical Chatbot ROI Guide. Quickchat AI Blog.
+5. Quickchat AI. (n.d.). True Cost of Chatbot Implementations. Quickchat AI Blog.
+6. Investopedia. (n.d.). What is ROI?. Investopedia.
+7. Investopedia. (n.d.). Net Present Value. Investopedia.
+8. Investopedia. (n.d.). Internal Rate of Return. Investopedia.
+9. Salesforce. (n.d.). ROI Meaning and Formulas. Salesforce Resources.
+10. DemandSage. (n.d.). Chatbot Statistics. DemandSage.
+11. Sprinklr. (n.d.). Customer Service ROI Benchmarks. Sprinklr Blog.
+12. Forrester. (n.d.). Total Economic Impact of Chatbots. Forrester Report.
+13. HubSpot. (n.d.). Marketing Statistics. HubSpot.
+14. Harvard Business Review. (n.d.). Business Decision Making. Harvard Business Review.

@@ -369,25 +369,26 @@ Healthcare, manufacturing, retail, autonomous vehicles, security, smart cities, 
 
 ## References
 
-- [Cisco: What is Edge AI?](https://www.cisco.com/site/us/en/learn/topics/artificial-intelligence/what-is-edge-ai.html)
-- [NVIDIA: What is Edge AI?](https://blogs.nvidia.com/blog/what-is-edge-ai/)
-- [IBM: Edge AI](https://www.ibm.com/think/topics/edge-ai)
-- [EdgeAI Tech: Security & Privacy](https://edge-ai-tech.eu/edge-ai-security-privacy-protecting-data-where-it-matters-most/)
-- [Scaleout Systems: Edge Computing and AI Guide](https://www.scaleoutsystems.com/edge-computing-and-ai)
-- [Jaycon Systems: Top 10 Edge AI Hardware for 2025](https://www.jaycon.com/top-10-edge-ai-hardware-for-2025/)
-- [STMicroelectronics: Edge AI Hardware](https://stm32ai.st.com/edge-ai-hardware/)
-- [GitHub: edge-ai](https://github.com/crespum/edge-ai)
-- [NVIDIA Jetson AGX Orin](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/)
-- [Google Coral Dev Board](https://coral.ai/products/dev-board/)
-- [Intel Neural Compute Stick 2 Specifications](https://www.intel.com/content/www/us/en/products/sku/140109/intel-neural-compute-stick-2/specifications.html)
-- [STM32 NanoEdge AI Studio](https://stm32ai.st.com/nanoedge-ai/)
-- [TensorFlow Lite Documentation](https://www.tensorflow.org/lite)
-- [PyTorch Mobile Documentation](https://pytorch.org/mobile/home/)
-- [ONNX Runtime](https://onnxruntime.ai/)
-- [Intel OpenVINO Toolkit](https://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/overview.html)
-- [Google MediaPipe](https://mediapipe.dev/)
-- [NVIDIA DeepStream SDK](https://developer.nvidia.com/deepstream-sdk)
-- [NVIDIA Autonomous Vehicles](https://www.nvidia.com/en-us/self-driving-cars/)
-- [IBM Edge Computing Solutions](https://www.ibm.com/solutions/edge-computing)
-- [Splunk: Federated AI](https://www.splunk.com/en_us/blog/learn/federated-ai.html)
-- [Kubernetes Documentation](https://kubernetes.io/docs/)
+
+1. Cisco. (n.d.). What is Edge AI?. Cisco Learn Topics.
+2. NVIDIA. (n.d.). What is Edge AI?. NVIDIA Blog.
+3. IBM. (n.d.). Edge AI. IBM Think Topics.
+4. EdgeAI Tech. (n.d.). Security & Privacy. EdgeAI Tech.
+5. Scaleout Systems. (n.d.). Edge Computing and AI Guide. Scaleout Systems.
+6. Jaycon Systems. (2025). Top 10 Edge AI Hardware for 2025. Jaycon Systems.
+7. STMicroelectronics. (n.d.). Edge AI Hardware. STM32 AI.
+8. GitHub. (n.d.). edge-ai. GitHub Repository.
+9. NVIDIA Jetson AGX Orin. Device Specifications. URL: https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/
+10. Google Coral Dev Board. Device Specifications. URL: https://coral.ai/products/dev-board/
+11. Intel Neural Compute Stick 2. Device Specifications. URL: https://www.intel.com/content/www/us/en/products/sku/140109/intel-neural-compute-stick-2/specifications.html
+12. STM32 NanoEdge AI Studio. Development Tool. URL: https://stm32ai.st.com/nanoedge-ai/
+13. TensorFlow Lite. Machine Learning Framework. URL: https://www.tensorflow.org/lite
+14. PyTorch Mobile. Machine Learning Framework. URL: https://pytorch.org/mobile/home/
+15. ONNX Runtime. Machine Learning Runtime. URL: https://onnxruntime.ai/
+16. Intel OpenVINO Toolkit. Development Tool. URL: https://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/overview.html
+17. Google MediaPipe. Development Framework. URL: https://mediapipe.dev/
+18. NVIDIA DeepStream SDK. Development SDK. URL: https://developer.nvidia.com/deepstream-sdk
+19. NVIDIA. (n.d.). Autonomous Vehicles. NVIDIA Technology.
+20. IBM. (n.d.). Edge Computing Solutions. IBM Solutions.
+21. Splunk. (n.d.). Federated AI. Splunk Blog.
+22. Kubernetes. Documentation. URL: https://kubernetes.io/docs/

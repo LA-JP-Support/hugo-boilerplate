@@ -189,13 +189,23 @@ The callback queue operates through a sophisticated coordination mechanism betwe
 
 ## References
 
-- [Understanding the Event Loop, Callback Queue, and Call Stack in JavaScript - DEV Community](https://dev.to/rajatoberoi/understanding-the-event-loop-callback-queue-and-call-stack-in-javascript-1k7c)
-- [JavaScript Execution Model - MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model)
-- [The Node.js Event Loop - Node.js Documentation](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
-- [The Event Loop and Callback Hell - Wes Bos](https://wesbos.com/javascript/12-advanced-flow-control/66-the-event-loop-and-callback-hell)
-- [Understanding the Event Loop, Callbacks, Promises, and Async/Await in JavaScript - DigitalOcean](https://www.digitalocean.com/community/tutorials/understanding-the-event-loop-callbacks-promises-and-async-await-in-javascript)
-- [Event Loop in JavaScript - GeeksforGeeks](https://www.geeksforgeeks.org/javascript/what-is-an-event-loop-in-javascript/)
-- [The Event Loop - MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop)
-- [Inside the Event Loop: How Node.js Handles Asynchronous Operations - JavaScript in Plain English](https://javascript.plainenglish.io/inside-the-event-loop-how-node-js-handles-asynchronous-operations-f973e2bfb4ef)
-- [Callback Queue and Event Loop - Dillion's Blog](https://dillionmegida.com/p/callback-queue-and-event-loop/)
-- [Javascript Runtime: JS Engine, Event Loop, Call Stack - ITNEXT](https://itnext.io/javascript-runtime-js-engine-event-loop-call-stack-execution-contexts-heap-and-queues-4826d064ad76)
+
+1. Oberoi, R. (n.d.). Understanding the Event Loop, Callback Queue, and Call Stack in JavaScript. DEV Community.
+
+2. MDN Web Docs. (n.d.). JavaScript Execution Model. MDN Web Docs.
+
+3. Node.js. (n.d.). The Node.js Event Loop. Node.js Documentation.
+
+4. Bos, W. (n.d.). The Event Loop and Callback Hell. Wes Bos.
+
+5. DigitalOcean. (n.d.). Understanding the Event Loop, Callbacks, Promises, and Async/Await in JavaScript. DigitalOcean Community.
+
+6. GeeksforGeeks. (n.d.). Event Loop in JavaScript. GeeksforGeeks.
+
+7. MDN Web Docs. (n.d.). The Event Loop. MDN Web Docs.
+
+8. JavaScript in Plain English. (n.d.). Inside the Event Loop: How Node.js Handles Asynchronous Operations. JavaScript in Plain English.
+
+9. Megida, D. (n.d.). Callback Queue and Event Loop. Dillion's Blog.
+
+10. ITNEXT. (n.d.). Javascript Runtime: JS Engine, Event Loop, Call Stack. ITNEXT.

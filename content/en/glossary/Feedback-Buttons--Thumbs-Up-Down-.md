@@ -198,10 +198,17 @@ Monitor for demographic patterns, ensure representative samples, and supplement 
 
 ## References
 
-- [Qualaroo: Website Feedback Buttons & Tabs](https://qualaroo.com/blog/feedback-buttons/)
-- [Microsoft Learn: Collect Thumbs Up or Down Feedback](https://learn.microsoft.com/en-us/power-platform/release-plan/2025wave1/microsoft-copilot-studio/collect-thumbs-up-or-down-feedback-comments-agents)
-- [Microsoft Copilot Studio Analytics](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-effectiveness)
-- [NNGroup: Prompt Controls in GenAI Chatbots](https://www.nngroup.com/articles/prompt-controls-genai/)
-- [ViewPoint Feedback: Design Guide](https://www.viewpointfeedback.com/blog/feedback-buttons-essential-guide-to-design/)
-- [Zendesk: AI Feedback Loops](https://www.zendesk.de/blog/ai-feedback-loop/)
-- [UX StackExchange: Button Placement](https://ux.stackexchange.com/questions/98733/how-to-position-thumbs-up-thumbs-down-with-progression-on-one-line)
+
+1. Qualaroo. Website Feedback Buttons & Tabs. URL: https://qualaroo.com/blog/feedback-buttons/
+
+2. Microsoft Learn. (2025). Collect Thumbs Up or Down Feedback. Microsoft Power Platform Release Plan.
+
+3. Microsoft Copilot Studio. (n.d.). Microsoft Copilot Studio Analytics. Microsoft Learn.
+
+4. Nielsen Norman Group. (n.d.). Prompt Controls in GenAI Chatbots. NNGroup Articles.
+
+5. ViewPoint Feedback. (n.d.). Feedback Buttons: Essential Guide to Design. ViewPoint Feedback Blog.
+
+6. Zendesk. (n.d.). AI Feedback Loops. Zendesk Blog.
+
+7. UX StackExchange. (n.d.). Button Placement. UX StackExchange Discussion.

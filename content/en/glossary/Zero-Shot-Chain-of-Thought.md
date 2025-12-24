@@ -241,11 +241,19 @@ Append reasoning instructions to user queries before submitting to LLM API, opti
 
 ## References
 
-- [Kojima et al.: Large Language Models are Zero-Shot Reasoners (arXiv)](https://arxiv.org/abs/2205.11916)
-- [LearnPrompting: Zero-Shot Chain-of-Thought Prompting](https://learnprompting.org/docs/intermediate/zero_shot_cot)
-- [Prompting Guide: Chain-of-Thought Techniques](https://www.promptingguide.ai/techniques/cot)
-- [IBM: Chain of Thought Prompting](https://www.ibm.com/think/topics/chain-of-thoughts)
-- [Vellum: Chain of Thought Prompting Explained](https://www.vellum.ai/blog/chain-of-thought-prompting-cot-everything-you-need-to-know)
-- [Zhang et al.: Automatic Chain of Thought Prompting (arXiv)](https://arxiv.org/abs/2302.00923)
-- [Wei et al.: Chain-of-Thought Prompting Elicits Reasoning (arXiv)](https://arxiv.org/abs/2201.11903)
-- [Recent Research on Zero-Shot vs Few-Shot Performance (arXiv)](https://arxiv.org/abs/2506.14641)
+
+1. Kojima et al. (2022). Large Language Models are Zero-Shot Reasoners. arXiv.
+
+2. LearnPrompting. (n.d.). Zero-Shot Chain-of-Thought Prompting. LearnPrompting Docs.
+
+3. Prompting Guide. (n.d.). Chain-of-Thought Techniques. Prompting Guide.
+
+4. IBM. (n.d.). Chain of Thought Prompting. IBM Think Topics.
+
+5. Vellum. (n.d.). Chain of Thought Prompting Explained. Vellum Blog.
+
+6. Zhang et al. (2023). Automatic Chain of Thought Prompting. arXiv.
+
+7. Wei et al. (2022). Chain-of-Thought Prompting Elicits Reasoning. arXiv.
+
+8. Anonymous. (2025). Recent Research on Zero-Shot vs Few-Shot Performance. arXiv.

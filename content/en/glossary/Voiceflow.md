@@ -244,17 +244,31 @@ Yes, bring-your-own-LLM available on Enterprise plan for full control and privac
 
 ## References
 
-- [Voiceflow Official Website](https://www.voiceflow.com/)
-- [Voiceflow Blog: Customer Support Automation Case Study](https://www.voiceflow.com/blog/automating-60-of-customer-support-for-90-products-in-12-weeks-how-ai-automation-transformed-trilogy)
-- [Voiceflow Blog: Roam Auto Case Study](https://www.voiceflow.com/blog/how-roam-saved-30-hours-a-week-in-customer-support-hours)
-- [Voiceflow Blog: Sanlam Financial Services Case Study](https://www.voiceflow.com/blog/how-sanlam-studios-ai-coach-drives-leads-and-financial-literacy)
-- [Voiceflow Pricing](https://www.voiceflow.com/pricing)
-- [Voiceflow Salesforce Integration](https://www.voiceflow.com/integrations/salesforce)
-- [Voiceflow: Getting Started in Conversation Design](https://www.voiceflow.com/pathways/getting-started-in-conversation-design-heres-what-you-need-to-know)
-- [Voiceflow: Conversation Design Solutions](https://www.voiceflow.com/solutions/conversation-design)
-- [Voiceflow Blog](https://www.voiceflow.com/blog)
-- [Voiceflow Demo](https://www.voiceflow.com/demo)
-- [Voiceflow Signup](https://creator.voiceflow.com/signup)
-- [Callpod AI: Voiceflow Review](https://www.callpod.ai/blog/voiceflow-review)
-- [Synthflow: Voiceflow Review](https://synthflow.ai/blog/voiceflow-review)
-- [Designing Voice User Interfaces by Cathy Pearl](https://www.cathypearl.com/book)
+
+1. Voiceflow. Service for Conversation Design and AI Automation. URL: https://www.voiceflow.com/
+
+2. Voiceflow. (n.d.). Customer Support Automation Case Study. Voiceflow Blog.
+
+3. Voiceflow. (n.d.). Roam Auto Case Study. Voiceflow Blog.
+
+4. Voiceflow. (n.d.). Sanlam Financial Services Case Study. Voiceflow Blog.
+
+5. Voiceflow. Pricing Information. URL: https://www.voiceflow.com/pricing
+
+6. Voiceflow. Salesforce Integration. URL: https://www.voiceflow.com/integrations/salesforce
+
+7. Voiceflow. (n.d.). Getting Started in Conversation Design. Voiceflow Pathways.
+
+8. Voiceflow. Conversation Design Solutions. URL: https://www.voiceflow.com/solutions/conversation-design
+
+9. Voiceflow Blog. URL: https://www.voiceflow.com/blog
+
+10. Voiceflow Demo. URL: https://www.voiceflow.com/demo
+
+11. Voiceflow Signup. URL: https://creator.voiceflow.com/signup
+
+12. Callpod AI. (n.d.). Voiceflow Review. Callpod AI Blog.
+
+13. Synthflow. (n.d.). Voiceflow Review. Synthflow Blog.
+
+14. Pearl, Cathy. (n.d.). Designing Voice User Interfaces. Book.

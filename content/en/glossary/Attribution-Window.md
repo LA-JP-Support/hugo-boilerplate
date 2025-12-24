@@ -177,14 +177,15 @@ No universal "best" window exists. The optimal length depends on your business m
 
 ## References
 
-- [Usermaven on Attribution Window](https://usermaven.com/blog/attribution-window)
-- [Fairing: What are Attribution Windows](https://fairing.co/resources/measurement-faqs/what-are-attribution-windows)
-- [Anderson Collaborative: Attribution Window](https://www.andersoncollaborative.com/knowledge-base/what-is-an-attribution-window-choose-the-right-settings-in-2025/)
-- [Ongage Glossary: Attribution Window](https://www.ongage.com/glossary/attribution-window/)
-- [Cometly: What Is Conversion Window Attribution](https://www.cometly.com/post/what-is-conversion-window-attribution)
-- [AttributionApp: Attribution Windows Guide](https://www.attributionapp.com/blog/attribution-windows/)
-- [AppsFlyer: What is an attribution window?](https://www.appsflyer.com/glossary/attribution-window/)
-- [Google Ads Help: About conversion windows](https://support.google.com/google-ads/answer/3123169?hl=en)
-- [YouTube - Cometly Channel](https://www.youtube.com/@Cometly)
-- [Meta Attribution Settings](https://www.facebook.com/business/help/460276478298895)
-- [Adjust Glossary](https://www.adjust.com/glossary/attribution-window/)
+
+1. Usermaven. (n.d.). Attribution Window. Usermaven Blog.
+2. Fairing. (n.d.). What are Attribution Windows. Fairing Resources.
+3. Anderson Collaborative. (2025). Attribution Window. Anderson Collaborative Knowledge Base.
+4. Ongage. (n.d.). Attribution Window. Ongage Glossary.
+5. Cometly. (n.d.). What Is Conversion Window Attribution. Cometly Blog.
+6. AttributionApp. (n.d.). Attribution Windows Guide. AttributionApp Blog.
+7. AppsFlyer. (n.d.). What is an attribution window?. AppsFlyer Glossary.
+8. Google. (n.d.). About conversion windows. Google Ads Help.
+9. Cometly. (n.d.). Cometly Channel. YouTube.
+10. Meta. (n.d.). Attribution Settings. Meta Business Help.
+11. Adjust. (n.d.). Attribution Window. Adjust Glossary.

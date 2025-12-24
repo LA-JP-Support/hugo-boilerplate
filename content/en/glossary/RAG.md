@@ -218,9 +218,10 @@ Ensuring data quality, managing retrieval relevance, handling prompt length cons
 
 ## References
 
-- [AWS: What is Retrieval-Augmented Generation?](https://aws.amazon.com/what-is/retrieval-augmented-generation/)
-- [NVIDIA: What is Retrieval-Augmented Generation (RAG)?](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)
-- [IBM Research: RAG Explained (YouTube)](https://www.youtube.com/watch?v=T-D1OfcDW1M)
-- [Nexla: RAG Tutorial & Best Practices](https://nexla.com/ai-infrastructure/retrieval-augmented-generation/)
-- [Orkes: Best Practices for RAG](https://orkes.io/blog/rag-best-practices/)
-- [AWS Prescriptive Guidance - Writing best practices to optimize RAG applications (PDF)](https://docs.aws.amazon.com/pdfs/prescriptive-guidance/latest/writing-best-practices-rag/writing-best-practices-rag.pdf)
+
+1. AWS. (n.d.). What is Retrieval-Augmented Generation?. AWS Documentation.
+2. NVIDIA. (n.d.). What is Retrieval-Augmented Generation (RAG)?. NVIDIA Blog.
+3. IBM Research. (n.d.). RAG Explained. YouTube.
+4. Nexla. (n.d.). RAG Tutorial & Best Practices. Nexla AI Infrastructure.
+5. Orkes. (n.d.). Best Practices for RAG. Orkes Blog.
+6. AWS. (n.d.). Writing Best Practices to Optimize RAG Applications. AWS Prescriptive Guidance.

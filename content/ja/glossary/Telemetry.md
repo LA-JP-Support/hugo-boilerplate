@@ -268,23 +268,24 @@ HTTP、gRPC、MQTT(IoT)、SNMP(ネットワーク)、OTLP(OpenTelemetry)。
 
 ## 参考文献
 
-- [Splunk: What is Telemetry?](https://www.splunk.com/en_us/blog/learn/what-is-telemetry.html)
-- [IBM: What is Telemetry?](https://www.ibm.com/think/topics/telemetry)
-- [TechTarget: What is Telemetry?](https://www.techtarget.com/whatis/definition/telemetry)
-- [Proofpoint: What is Telemetry?](https://www.proofpoint.com/us/threat-reference/telemetry)
-- [OpenTelemetry Documentation](https://opentelemetry.io/docs/)
-- [Edge Delta: What is Telemetry Data?](https://edgedelta.com/company/blog/what-is-telemetry-data)
-- [OpenTelemetry: What is OpenTelemetry?](https://opentelemetry.io/docs/what-is-opentelemetry/)
-- [OpenTelemetry: OTLP Specification](https://opentelemetry.io/docs/specs/otlp/)
-- [OpenTelemetry: Collector](https://opentelemetry.io/docs/collector)
-- [OpenTelemetry: Metrics](https://opentelemetry.io/docs/concepts/signals/metrics/)
-- [OpenTelemetry: Logs](https://opentelemetry.io/docs/concepts/signals/logs/)
-- [OpenTelemetry: Traces](https://opentelemetry.io/docs/concepts/signals/traces/)
-- [OpenTelemetry: Instrumentation](https://opentelemetry.io/docs/concepts/instrumentation/)
-- [Grafana](https://grafana.com/)
-- [Splunk](https://www.splunk.com/)
-- [New Relic](https://newrelic.com/)
-- [Datadog](https://www.datadoghq.com/)
-- [Prometheus](https://prometheus.io/)
-- [Practical OpenTelemetry (Book)](https://www.amazon.com/Practical-OpenTelemetry-Observability-Standards-Organization-ebook/dp/B0BSKT6DZ4)
-- [Learning OpenTelemetry (O'Reilly)](https://www.oreilly.com/library/view/learning-opentelemetry/9781098147174/)
+
+1. Splunk. (n.d.). What is Telemetry?. Splunk Blog.
+2. IBM. (n.d.). What is Telemetry?. IBM Think Topics.
+3. TechTarget. (n.d.). What is Telemetry?. TechTarget.
+4. Proofpoint. (n.d.). What is Telemetry?. Proofpoint Threat Reference.
+5. OpenTelemetry. (n.d.). OpenTelemetry Documentation. OpenTelemetry Docs.
+6. Edge Delta. (n.d.). What is Telemetry Data?. Edge Delta Blog.
+7. OpenTelemetry. (n.d.). What is OpenTelemetry?. OpenTelemetry Docs.
+8. OpenTelemetry. (n.d.). OTLP Specification. OpenTelemetry Docs.
+9. OpenTelemetry. (n.d.). Collector. OpenTelemetry Docs.
+10. OpenTelemetry. (n.d.). Metrics. OpenTelemetry Docs.
+11. OpenTelemetry. (n.d.). Logs. OpenTelemetry Docs.
+12. OpenTelemetry. (n.d.). Traces. OpenTelemetry Docs.
+13. OpenTelemetry. (n.d.). Instrumentation. OpenTelemetry Docs.
+14. Grafana. Observability Platform. URL: https://grafana.com/
+15. Splunk. Observability Platform. URL: https://www.splunk.com/
+16. New Relic. Observability Platform. URL: https://newrelic.com/
+17. Datadog. Observability Platform. URL: https://www.datadoghq.com/
+18. Prometheus. Monitoring System. URL: https://prometheus.io/
+19. Luca Wendel. (2022). Practical OpenTelemetry. O'Reilly Media.
+20. Juraci Paixão Kröhling, Yuri Oliveira. (2022). Learning OpenTelemetry. O'Reilly Media.

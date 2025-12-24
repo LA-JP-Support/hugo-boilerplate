@@ -304,7 +304,8 @@ POS自動化を評価する小売業者は、ロイヤルティプログラム�
 
 ## 参考文献
 
-- [AgentiveAIQ: AI Chatbot Cost in 2025—Hidden Fees & True TCO](https://agentiveaiq.com/blog/how-much-does-an-ai-chatbot-cost-in-2025)
-- [MondaySys: AI Total Cost of Ownership](https://mondaysys.com/ai-total-cost-of-ownership/)
-- [Xenoss: Total Cost of Ownership for Enterprise AI](https://xenoss.io/blog/total-cost-of-ownership-for-enterprise-ai)
-- [Gartner: Worldwide AI Spending Will Total 1.5 Trillion in 2025](https://www.gartner.com/en/newsroom/press-releases/2025-09-17-gartner-says-worldwide-ai-spending-will-total-1-point-5-trillion-in-2025)
+
+1. AgentiveAIQ. (2025). AI Chatbot Cost in 2025—Hidden Fees & True TCO. AgentiveAIQ Blog.
+2. MondaySys. (2025). AI Total Cost of Ownership. MondaySys Blog.
+3. Xenoss. (2025). Total Cost of Ownership for Enterprise AI. Xenoss Blog.
+4. Gartner. (2025). Worldwide AI Spending Will Total 1.5 Trillion in 2025. Gartner Press Releases.

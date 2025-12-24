@@ -348,17 +348,31 @@ No formal degree required. Success depends on strong communication, technical pr
 
 ## References
 
-- [Investopedia: What Is a Virtual Assistant?](https://www.investopedia.com/terms/v/virtual-assistant.asp)
-- [Prialto: The Ultimate Guide to Hiring Virtual Assistants in 2025](https://www.prialto.com/blog/virtual-assistants)
-- [Prialto: Virtual Assistant Statistics](https://www.prialto.com/blog/virtual-assistant-statistics)
-- [Prialto: How Much Does a Virtual Assistant Cost?](https://www.prialto.com/blog/how-much-does-a-virtual-assistant-cost)
-- [Indeed: How To Become a Virtual Assistant](https://www.indeed.com/career-advice/career-development/become-a-virtual-assistant)
-- [Wishup: Virtual Assistant Industry Trends & Stats](https://www.wishup.co/blog/virtual-assistant-industry-trends/)
-- [INSIDEA: Latest Virtual Assistant Stats](https://insidea.com/blog/virtual-assistant/latest-virtual-assistant-stats/)
-- [MyOutDesk: Virtual Assistant Statistics](https://www.myoutdesk.com/blog/virtual-assistant-statistics/)
-- [Zipdo: Virtual Assistant Statistics](https://zipdo.co/statistics/virtual-assistant/)
-- [Zippia: Virtual Assistant Demographics and Statistics](https://www.zippia.com/virtual-assistant-jobs/demographics/)
-- [Zippia: Virtual Assistant Skills](https://www.zippia.com/virtual-assistant-jobs/skills/)
-- [Grand View Research: Intelligent Virtual Assistant Market](https://www.grandviewresearch.com/industry-analysis/intelligent-virtual-assistant-industry)
-- [Dialpad: AI Virtual Assistant Guide](https://www.dialpad.com/blog/ai-virtual-assistant/)
-- [YouTube: What Is a Virtual Assistant? (This Replaced My Income in 30 Days)](https://www.youtube.com/watch?v=z5MhZo98lxM)
+
+1. Investopedia. (n.d.). What Is a Virtual Assistant?. Investopedia.
+
+2. Prialto. (2025). The Ultimate Guide to Hiring Virtual Assistants in 2025. Prialto Blog.
+
+3. Prialto. (n.d.). Virtual Assistant Statistics. Prialto Blog.
+
+4. Prialto. (n.d.). How Much Does a Virtual Assistant Cost?. Prialto Blog.
+
+5. Indeed. (n.d.). How To Become a Virtual Assistant. Indeed Career Advice.
+
+6. Wishup. (n.d.). Virtual Assistant Industry Trends & Stats. Wishup Blog.
+
+7. INSIDEA. (n.d.). Latest Virtual Assistant Stats. INSIDEA Blog.
+
+8. MyOutDesk. (n.d.). Virtual Assistant Statistics. MyOutDesk Blog.
+
+9. Zipdo. (n.d.). Virtual Assistant Statistics. Zipdo.
+
+10. Zippia. (n.d.). Virtual Assistant Demographics and Statistics. Zippia.
+
+11. Zippia. (n.d.). Virtual Assistant Skills. Zippia.
+
+12. Grand View Research. (n.d.). Intelligent Virtual Assistant Market. Grand View Research.
+
+13. Dialpad. (n.d.). AI Virtual Assistant Guide. Dialpad Blog.
+
+14. YouTube. (n.d.). What Is a Virtual Assistant? (This Replaced My Income in 30 Days). YouTube.

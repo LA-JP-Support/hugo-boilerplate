@@ -279,11 +279,19 @@ Consider these options before committing to sharding.
 
 ## References
 
-- [GeeksforGeeks: Database Sharding – System Design](https://www.geeksforgeeks.org/system-design/database-sharding-a-system-design-concept/)
-- [Hello Interview: Sharding in System Design](https://www.hellointerview.com/learn/system-design/core-concepts/sharding)
-- [Medium: Understanding Sharding in System Design](https://medium.com/@hksrise/understanding-sharding-in-system-design-a-key-to-scalability-214ad71784c4)
-- [Microsoft Learn: Sharding Pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding)
-- [MongoDB: Database Sharding Explained](https://www.mongodb.com/resources/products/capabilities/database-sharding-explained)
-- [DigitalOcean: Understanding Database Sharding](https://www.digitalocean.com/community/tutorials/understanding-database-sharding)
-- [Aerospike: What is Sharding?](https://aerospike.com/blog/what-is-sharding/)
-- [YouTube: What is Database Sharding?](https://www.youtube.com/watch?v=hdxdhCpgYo8)
+
+1. GeeksforGeeks. (n.d.). Database Sharding – System Design. GeeksforGeeks.
+
+2. Hello Interview. (n.d.). Sharding in System Design. Hello Interview.
+
+3. Medium. (n.d.). Understanding Sharding in System Design. Medium.
+
+4. Microsoft. (n.d.). Sharding Pattern. Microsoft Learn.
+
+5. MongoDB. (n.d.). Database Sharding Explained. MongoDB.
+
+6. DigitalOcean. (n.d.). Understanding Database Sharding. DigitalOcean Community.
+
+7. Aerospike. (n.d.). What is Sharding?. Aerospike Blog.
+
+8. YouTube. (n.d.). What is Database Sharding?. YouTube.

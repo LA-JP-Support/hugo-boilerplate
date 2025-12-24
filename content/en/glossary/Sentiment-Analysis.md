@@ -274,15 +274,16 @@ Analyzing competitors' reviews uncovers frequent complaints about "poor battery 
 
 ## References
 
-- [IBM: What Is Sentiment Analysis?](https://www.ibm.com/think/topics/sentiment-analysis)
-- [Thematic: A Complete Guide to Sentiment Analysis](https://getthematic.com/sentiment-analysis)
-- [Elastic: Technical Guide to Sentiment Analysis](https://www.elastic.co/what-is/sentiment-analysis)
-- [AWS: What is Sentiment Analysis?](https://aws.amazon.com/what-is/sentiment-analysis/)
-- [GeeksforGeeks: What is Sentiment Analysis?](https://www.geeksforgeeks.org/machine-learning/what-is-sentiment-analysis/)
-- [Codefinity: Comprehensive Guide to Sentiment Analysis with Python](https://codefinity.com/blog/A-Comprehensive-Guide-to-Sentiment-Analysis-with-Python)
-- [CareerFoundry: Sentiment Analysis Complete Guide](https://careerfoundry.com/en/blog/data-analytics/sentiment-analysis/)
-- [Thematic: Automated Sentiment Analysis - How to Get Started](https://getthematic.com/insights/automated-sentiment-analysis)
-- [YouTube: Sentiment Analysis with Python Tutorial](https://www.youtube.com/watch?v=Oa0p_MhZ8Wc)
-- [YouTube: Sentiment Analysis with Deep Learning using BERT](https://www.youtube.com/watch?v=xvqsFTUsOmc)
-- [YouTube: NLTK Tokenization Example](https://www.youtube.com/watch?v=X2vAabgKiuM)
-- [YouTube: Word Embeddings Visualization](https://www.youtube.com/watch?v=ERibwqs9p38)
+
+1. IBM. (n.d.). What Is Sentiment Analysis?. IBM Think Topics.
+2. Thematic. (n.d.). A Complete Guide to Sentiment Analysis. Thematic.
+3. Elastic. (n.d.). Technical Guide to Sentiment Analysis. Elastic.
+4. AWS. (n.d.). What is Sentiment Analysis?. AWS.
+5. GeeksforGeeks. (n.d.). What is Sentiment Analysis?. GeeksforGeeks.
+6. Codefinity. (n.d.). Comprehensive Guide to Sentiment Analysis with Python. Codefinity Blog.
+7. CareerFoundry. (n.d.). Sentiment Analysis Complete Guide. CareerFoundry.
+8. Thematic. (n.d.). Automated Sentiment Analysis - How to Get Started. Thematic Insights.
+9. YouTube. (n.d.). Sentiment Analysis with Python Tutorial. YouTube.
+10. YouTube. (n.d.). Sentiment Analysis with Deep Learning using BERT. YouTube.
+11. YouTube. (n.d.). NLTK Tokenization Example. YouTube.
+12. YouTube. (n.d.). Word Embeddings Visualization. YouTube.

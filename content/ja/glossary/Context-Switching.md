@@ -217,14 +217,25 @@ NLPモデルを使用して、ユーザーがトピックを切り替えるタ�
 
 ## 参考文献
 
-- [OpenAI Community: Dealing with context switching in a conversation](https://community.openai.com/t/dealing-with-context-switching-in-a-conversation-that-uses-embeddings-for-information-retrieval/87836)
-- [Milvus: How do LLMs handle context switching in conversations?](https://milvus.io/ai-quick-reference/how-do-llms-handle-context-switching-in-conversations)
-- [Asana: Context switching is killing your productivity](https://asana.com/resources/context-switching)
-- [Todoist: How context switching sabotages your productivity](https://www.todoist.com/inspiration/context-switching)
-- [APA: Multitasking and Switching Costs](https://www.apa.org/topics/research/multitasking)
-- [HubSpot: Forget multi-tasking. It's context switching that matters.](https://product.hubspot.com/blog/forget-multitasking-try-context-switching)
-- [Seer Interactive: What is Context Switching?](https://www.seerinteractive.com/insights/context-switching-impact-team)
-- [Atlassian: Context switching—How to reduce productivity killers](https://www.atlassian.com/ru/work-management/project-management/context-switching)
-- [LeRoy, Sophie: Attention Residue](https://ideas.repec.org/a/eee/jobhdp/v109y2009i2p168-181.html)
-- [Wikipedia: Context switch](https://en.wikipedia.org/wiki/Context_switch)
-- [YouTube: How to learn to juggle three balls](https://www.youtube.com/watch?v=kCt1bmSASCI)
+
+1. OpenAI Community. (n.d.). Dealing with Context Switching in a Conversation. OpenAI Community.
+
+2. Milvus. (n.d.). How do LLMs Handle Context Switching in Conversations. Milvus.
+
+3. Asana. (n.d.). Context Switching is Killing Your Productivity. Asana Resources.
+
+4. Todoist. (n.d.). How Context Switching Sabotages Your Productivity. Todoist Inspiration.
+
+5. American Psychological Association. (n.d.). Multitasking and Switching Costs. APA Topics.
+
+6. HubSpot. (n.d.). Forget Multi-tasking. It's Context Switching That Matters. HubSpot Product Blog.
+
+7. Seer Interactive. (n.d.). What is Context Switching?. Seer Interactive Insights.
+
+8. Atlassian. (n.d.). Context Switching—How to Reduce Productivity Killers. Atlassian Work Management.
+
+9. LeRoy, Sophie. (2009). Attention Residue. Job and Organizational Behavior.
+
+10. Wikipedia. (n.d.). Context Switch. Wikipedia.
+
+11. YouTube. (n.d.). How to Learn to Juggle Three Balls. YouTube.

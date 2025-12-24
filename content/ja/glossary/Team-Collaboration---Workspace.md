@@ -281,21 +281,39 @@ A: フローは、ビジネスタスクを効率化するために協働的に�
 
 ## 参考文献
 
-- [Google Workspace Essentials](https://workspace.google.com/essentials/)
-- [Google Workspace Flows About](https://sites.google.com/view/workspace-flows/about)
-- [Ably: 10 Key Features for Multiplayer Collaboration Tools and Software](https://ably.com/blog/10-key-features-for-multiplayer-collaboration-tools-and-software)
-- [Ninety: Team Collaboration](https://www.ninety.io/blog/team-collaboration)
-- [Demo Video: Workspace Flows in Action](https://www.youtube.com/shorts/1l4nXcC6rII)
-- [Stanford: Hybrid Work and Productivity](https://news.stanford.edu/stories/2024/06/hybrid-work-is-a-win-win-win-for-companies-workers)
-- [Deloitte: Collaborative Economy Report](https://www2.deloitte.com/content/dam/Deloitte/au/Documents/Economics/deloitte-au-economics-collaborative-economy-google-170614.pdf)
-- [Zippia: Workplace Collaboration Statistics](https://www.zippia.com/advice/workplace-collaboration-statistics/)
-- [Superhuman: Best Collaborative AI Tools to Accelerate Team Decisions in 2025](https://blog.superhuman.com/collaborative-ai-tools/)
-- [Google Workspace Blog: 10 Best Practices for Deploying AI at Scale](https://workspace.google.com/blog/ai-and-machine-learning/10-best-practices-for-deploying-ai-at-scale)
-- [Microsoft: Reimagining How We Collaborate with Microsoft Teams and AI Agents](https://www.microsoft.com/insidetrack/blog/reimagining-how-we-collaborate-with-microsoft-teams-and-ai-agents/)
-- [Superhuman: State of Productivity AI Report](https://superhuman.com/state-of-productivity-ai?ref=blog.superhuman.com)
-- [Google Workspace: Products - Docs](https://workspace.google.com/products/docs/)
-- [Google Workspace: Products - Sites](https://workspace.google.com/products/sites/)
-- [Microsoft Teams: Group Chat Software](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software)
-- [Slack](https://slack.com/)
-- [Ably Spaces](https://ably.com/spaces)
-- [Google Workspace Essentials FAQ](https://workspace.google.com/essentials/)
+
+1. Google Workspace Essentials. Cloud Collaboration Service. URL: https://workspace.google.com/essentials/
+
+2. Google Workspace Flows. Workflow Management Tool. URL: https://sites.google.com/view/workspace-flows/about
+
+3. Ably. (2024). 10 Key Features for Multiplayer Collaboration Tools and Software. Ably Blog.
+
+4. Ninety. (2024). Team Collaboration. Ninety Blog.
+
+5. Google. (2024). Demo Video: Workspace Flows in Action. YouTube.
+
+6. Stanford. (2024). Hybrid Work and Productivity. Stanford News.
+
+7. Deloitte. (2024). Collaborative Economy Report. Deloitte Research.
+
+8. Zippia. (2024). Workplace Collaboration Statistics. Zippia Advice.
+
+9. Superhuman. (2025). Best Collaborative AI Tools to Accelerate Team Decisions in 2025. Superhuman Blog.
+
+10. Google Workspace. (2024). 10 Best Practices for Deploying AI at Scale. Google Workspace Blog.
+
+11. Microsoft. (2024). Reimagining How We Collaborate with Microsoft Teams and AI Agents. Microsoft Inside Track Blog.
+
+12. Superhuman. (2024). State of Productivity AI Report. Superhuman Research.
+
+13. Google Workspace: Docs. Productivity Tool. URL: https://workspace.google.com/products/docs/
+
+14. Google Workspace: Sites. Website Creation Tool. URL: https://workspace.google.com/products/sites/
+
+15. Microsoft Teams. Group Chat Software. URL: https://www.microsoft.com/en-us/microsoft-teams/group-chat-software
+
+16. Slack. Messaging Platform. URL: https://slack.com/
+
+17. Ably Spaces. Collaborative Spaces Tool. URL: https://ably.com/spaces
+
+18. Google Workspace Essentials. FAQ Service. URL: https://workspace.google.com/essentials/

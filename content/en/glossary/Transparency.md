@@ -388,24 +388,25 @@ Stay current with evolving regulations and adjust practices accordingly.
 
 ## References
 
-- [IBM: What is AI Transparency?](https://www.ibm.com/think/topics/ai-transparency)
-- [TechTarget: AI Transparency—What is it and Why Do We Need It?](https://www.techtarget.com/searchcio/tip/AI-transparency-What-is-it-and-why-do-we-need-it)
-- [OCEG: What Does Transparency Really Mean in AI Governance?](https://www.oceg.org/what-does-transparency-really-mean-in-the-context-of-ai-governance/)
-- [Zendesk: AI Transparency Guide](https://www.zendesk.com/blog/ai-transparency/)
-- [F5: Crucial Concepts in AI: Transparency and Explainability](https://www.f5.com/company/blog/crucial-concepts-in-ai-transparency-and-explainability)
-- [Holistic AI: What is AI Transparency?](https://www.holisticai.com/blog/ai-transparency)
-- [Sendbird: AI Transparency Guide](https://sendbird.com/blog/ai-transparency-guide)
-- [IBM: Explainable AI](https://www.ibm.com/topics/explainable-ai)
-- [IBM: EU AI Act](https://www.ibm.com/topics/eu-ai-act)
-- [IBM: AI Governance](https://www.ibm.com/think/topics/ai-governance)
-- [GDPR: What is GDPR?](https://gdpr.eu/what-is-gdpr/)
-- [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
-- [OECD: AI Principles](https://oecd.ai/en/ai-principles)
-- [White House: Blueprint for an AI Bill of Rights](https://www.whitehouse.gov/ostp/ai-bill-of-rights/)
-- [G7: Hiroshima AI Process](https://www.mofa.go.jp/files/100555944.pdf)
-- [Witness.AI: AI Compliance Framework](https://witness.ai/blog/ai-compliance-framework/)
-- [Google: Model Cards](https://modelcards.withgoogle.com/about)
-- [arXiv: Datasheets for Datasets](https://arxiv.org/abs/1803.09010)
-- [IBM: AI Fairness 360](https://aif360.mybluemix.net/)
-- [Google: Fairness Indicators](https://developers.google.com/machine-learning/fairness-overview/)
-- [TechTarget: Interpretability in Machine Learning](https://www.techtarget.com/searchenterpriseai/tip/How-to-ensure-interpretability-in-machine-learning-models)
+
+1. IBM. (n.d.). What is AI Transparency?. IBM Think Topics.
+2. TechTarget. (n.d.). AI Transparency—What is it and Why Do We Need It?. TechTarget.
+3. OCEG. (n.d.). What Does Transparency Really Mean in AI Governance?. OCEG.
+4. Zendesk. (n.d.). AI Transparency Guide. Zendesk Blog.
+5. F5. (n.d.). Crucial Concepts in AI: Transparency and Explainability. F5 Blog.
+6. Holistic AI. (n.d.). What is AI Transparency?. Holistic AI Blog.
+7. Sendbird. (n.d.). AI Transparency Guide. Sendbird Blog.
+8. IBM. (n.d.). Explainable AI. IBM Topics.
+9. IBM. (n.d.). EU AI Act. IBM Topics.
+10. IBM. (n.d.). AI Governance. IBM Think Topics.
+11. GDPR. (n.d.). What is GDPR?. GDPR.eu.
+12. NIST. (n.d.). AI Risk Management Framework. NIST.
+13. OECD. (n.d.). AI Principles. OECD AI.
+14. White House. (n.d.). Blueprint for an AI Bill of Rights. White House OSTP.
+15. G7. (n.d.). Hiroshima AI Process. Ministry of Foreign Affairs of Japan.
+16. Witness.AI. (n.d.). AI Compliance Framework. Witness.AI Blog.
+17. Google. (n.d.). Model Cards. Google.
+18. arXiv. (2018). Datasheets for Datasets. arXiv.
+19. IBM. (n.d.). AI Fairness 360. IBM.
+20. Google. (n.d.). Fairness Indicators. Google Developers.
+21. TechTarget. (n.d.). Interpretability in Machine Learning. TechTarget.

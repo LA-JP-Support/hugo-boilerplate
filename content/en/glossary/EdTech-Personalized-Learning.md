@@ -137,11 +137,19 @@ Personalized learning implementations may exacerbate existing educational inequa
 
 ## References
 
-- [Personalized Learning: A Guide for Engaging Students with Technology - U.S. Department of Education](https://tech.ed.gov/files/2017/01/NETP17.pdf)
-- [Artificial Intelligence and the Future of Teaching and Learning - U.S. Department of Education](https://www2.ed.gov/documents/ai-report/ai-report.pdf)
-- [Personalized Learning Technology: Research Review and Recommendations - RAND Corporation](https://www.rand.org/pubs/research_reports/RR2955.html)
-- [EdTech Evidence Exchange: Personalized Learning - Digital Promise](https://digitalpromise.org/initiative/edtech-evidence-exchange/)
-- [The Future of Education: Personalized Learning and AI - McKinsey & Company](https://www.mckinsey.com/industries/education/our-insights/the-future-of-education-personalized-learning-and-ai)
-- [Adaptive Learning Technology: Research and Practice - Educause](https://www.educause.edu/research-and-publications/research/2019/adaptive-learning-technology)
-- [Personalized Learning: What You Need to Know - Khan Academy](https://www.khanacademy.org/about/blog/post/175685331755/personalized-learning-what-you-need-to-know)
-- [AI in Education: Promises and Implications - UNESCO](https://unesdoc.unesco.org/ark:/48223/pf0000366994)
+
+1. U.S. Department of Education. (2017). Personalized Learning: A Guide for Engaging Students with Technology. U.S. Department of Education.
+
+2. U.S. Department of Education. (n.d.). Artificial Intelligence and the Future of Teaching and Learning. U.S. Department of Education.
+
+3. RAND Corporation. (n.d.). Personalized Learning Technology: Research Review and Recommendations. RAND Corporation.
+
+4. Digital Promise. (n.d.). EdTech Evidence Exchange: Personalized Learning. Digital Promise.
+
+5. McKinsey & Company. (n.d.). The Future of Education: Personalized Learning and AI. McKinsey & Company.
+
+6. Educause. (2019). Adaptive Learning Technology: Research and Practice. Educause.
+
+7. Khan Academy. (n.d.). Personalized Learning: What You Need to Know. Khan Academy.
+
+8. UNESCO. (n.d.). AI in Education: Promises and Implications. UNESCO.

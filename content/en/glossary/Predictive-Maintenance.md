@@ -243,9 +243,15 @@ Quantum algorithms potentially enabling real-time optimization of maintenance sc
 
 ## References
 
-- [McKinsey: Predictive Maintenance and the Smart Factory](https://www.mckinsey.com/capabilities/operations/our-insights/predictive-maintenance-and-the-smart-factory)
-- [Deloitte: Predictive Maintenance and the Smart Factory](https://www2.deloitte.com/us/en/insights/focus/industry-4-0/predictive-maintenance-strategy-asset-management.html)
-- [IBM: What is Predictive Maintenance?](https://www.ibm.com/topics/predictive-maintenance)
-- [MIT Technology Review: AI and Predictive Maintenance](https://www.technologyreview.com/2020/01/29/276088/ai-based-predictive-maintenance/)
-- [PwC: Predictive Maintenance 4.0](https://www.pwc.com/gx/en/industries/industrial-manufacturing/publications/predictive-maintenance.html)
-- [GE Digital: Predix Predictive Maintenance](https://www.ge.com/digital/applications/asset-performance-management)
+
+1. McKinsey. (n.d.). Predictive Maintenance and the Smart Factory. McKinsey Insights.
+
+2. Deloitte. (n.d.). Predictive Maintenance and the Smart Factory. Deloitte Insights.
+
+3. IBM. (n.d.). What is Predictive Maintenance?. IBM Topics.
+
+4. MIT Technology Review. (2020). AI and Predictive Maintenance. MIT Technology Review.
+
+5. PwC. (n.d.). Predictive Maintenance 4.0. PwC Publications.
+
+6. GE Digital. (n.d.). Predix Predictive Maintenance. GE Digital Applications.

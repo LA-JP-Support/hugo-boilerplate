@@ -274,22 +274,23 @@ Latitude Token Usage CalculatorやPrompts.ai Estimatorなどのオンライン�
 
 ## 参考文献
 
-- [Quickchat AI: How Much Does a Chatbot Really Cost in 2025?](https://quickchat.ai/post/how-much-does-chatbot-cost)
-- [Quickchat AI: Chatbot Pricing Models](https://quickchat.ai/post/how-much-does-chatbot-cost#2-chatbot-pricing-models-understanding-your-options)
-- [Quickchat AI: Eight Key Cost Drivers](https://quickchat.ai/post/how-much-does-chatbot-cost#3-eight-key-cost-drivers-to-budget-for)
-- [Invent: Complete Guide to AI Chatbot per-message pricing](https://www.useinvent.com/blog/complete-guide-to-ai-chatbot-per-message-pricing-for-customer-support-lead-engagement-and-more)
-- [Invent: Pricing Calculator](https://www.useinvent.com/pricing)
-- [Latitude: Token Usage Calculator for AI Cost Planning](https://latitude-blog.ghost.io/blog/token-usage-calculator-ai-cost-planning/)
-- [Prompts.ai: AI Token Cost Estimator](https://www.prompts.ai/zh/blog/ai-token-cost-estimator)
-- [Avaza: Project Cost Estimation](https://www.avaza.com/project-cost-estimation/)
-- [Avaza: Expense Management Software](https://www.avaza.com/expense-management-software)
-- [Coherent Solutions: AI Development Cost Estimation](https://www.coherentsolutions.com/insights/ai-development-cost-estimation-pricing-structure-roi)
-- [OpenAI: Pricing](https://openai.com/pricing)
-- [OpenAI: Tokenizer](https://platform.openai.com/tokenizer)
-- [Microsoft: New study validates business value of AI](https://blogs.microsoft.com/blog/2023/11/02/new-study-validates-the-business-value-and-opportunity-of-ai/)
-- [Rebuy Engine: Netflix Case Study](https://www.rebuyengine.com/blog/netflix)
-- [AI Expert Network: Walmart AI Supply Chain](https://aiexpert.network/case-study-walmarts-ai-enhanced-supply-chain-operations/)
-- [Siemens: Senseye Predictive Maintenance](https://www.siemens.com/global/en/products/services/digital-enterprise-services/analytics-artificial-intelligence-services/predictive-services/senseye-predictive-maintenance/getting-started.html)
-- [PMI: PMBOK Guide](https://www.pmi.org/pmbok-guide-standards/foundational/pmbok)
-- [Atlassian: Jira Align](https://www.atlassian.com/software/jira/align)
-- [Prompt Engineering Guide](https://www.promptingguide.ai/)
+
+1. Quickchat AI. (2025). How Much Does a Chatbot Really Cost in 2025?. Quickchat AI Blog.
+2. Quickchat AI. (2025). Chatbot Pricing Models. Quickchat AI Blog.
+3. Quickchat AI. (2025). Eight Key Cost Drivers. Quickchat AI Blog.
+4. Invent. (n.d.). Complete Guide to AI Chatbot per-message pricing. Invent Blog.
+5. Invent. (n.d.). Pricing Calculator. Invent.
+6. Latitude. (n.d.). Token Usage Calculator for AI Cost Planning. Latitude Blog.
+7. Prompts.ai. (n.d.). AI Token Cost Estimator. Prompts.ai Blog.
+8. Avaza. (n.d.). Project Cost Estimation. Avaza.
+9. Avaza. (n.d.). Expense Management Software. Avaza.
+10. Coherent Solutions. (n.d.). AI Development Cost Estimation. Coherent Solutions Insights.
+11. OpenAI. (n.d.). Pricing. OpenAI.
+12. OpenAI. (n.d.). Tokenizer. OpenAI Platform.
+13. Microsoft. (2023). New study validates business value of AI. Microsoft Blog.
+14. Rebuy Engine. (n.d.). Netflix Case Study. Rebuy Engine Blog.
+15. AI Expert Network. (n.d.). Walmart AI Supply Chain. AI Expert Network.
+16. Siemens. (n.d.). Senseye Predictive Maintenance. Siemens Global.
+17. PMI. (n.d.). PMBOK Guide. Project Management Institute.
+18. Atlassian. (n.d.). Jira Align. Atlassian.
+19. Prompt Engineering Guide. (n.d.). Prompt Engineering Guide. Prompt Engineering Guide.

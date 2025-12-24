@@ -215,10 +215,17 @@ AI実験にクォータを設定。環境タグ付けと個別請求を使用し
 
 ## 参考文献
 
-- [FinOps Foundation: FinOps for AI Overview](https://www.finops.org/wg/finops-for-ai-overview/)
-- [CloudZero: FinOps for AI](https://www.cloudzero.com/blog/finops-for-ai/)
-- [Flexera: 8 Steps to Managing AI Costs](https://www.flexera.com/blog/finops/finops-for-ai-8-steps-to-managing-ai-costs-and-resources/)
-- [FinOps Foundation: Best Practices](https://www.finops.org/wg/finops-for-ai-overview/#best-practices)
-- [FinOps Foundation: Personas](https://www.finops.org/framework/personas)
-- [FinOps Foundation: KPIs and Metrics](https://www.finops.org/wg/finops-for-ai-overview/#kpis-metrics)
-- [CloudZero: AI Solutions](https://www.cloudzero.com/solutions/ai/)
+
+1. FinOps Foundation. (n.d.). FinOps for AI Overview. FinOps Foundation.
+
+2. CloudZero. (n.d.). FinOps for AI. CloudZero Blog.
+
+3. Flexera. (n.d.). 8 Steps to Managing AI Costs. Flexera Blog.
+
+4. FinOps Foundation. (n.d.). Best Practices. FinOps Foundation.
+
+5. FinOps Foundation. (n.d.). Personas. FinOps Foundation.
+
+6. FinOps Foundation. (n.d.). KPIs and Metrics. FinOps Foundation.
+
+7. CloudZero. (n.d.). AI Solutions. CloudZero.

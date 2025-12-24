@@ -253,13 +253,23 @@ Biomedical (genes, proteins, diseases), legal (cases, statutes), financial (tick
 
 ## References
 
-- [Wikipedia: Named Entity Recognition](https://en.wikipedia.org/wiki/Named-entity_recognition)
-- [IBM: What is Named Entity Recognition?](https://www.ibm.com/think/topics/named-entity-recognition)
-- [Encord: Named Entity Recognition Guide](https://encord.com/blog/named-entity-recognition/)
-- [AltexSoft: Named Entity Recognition Overview](https://www.altexsoft.com/blog/named-entity-recognition/)
-- [GeeksforGeeks: Named Entity Recognition](https://www.geeksforgeeks.org/nlp/named-entity-recognition/)
-- [Stanford NLP: CRFClassifier](https://nlp.stanford.edu/software/CRF-NER.html)
-- [Machine Learning Mastery: How to Do NER with BERT](https://machinelearningmastery.com/how-to-do-named-entity-recognition-ner-with-a-bert-model/)
-- [arXiv: Recent Advances in NER](https://arxiv.org/html/2401.10825v3)
-- [spaCy: Named Entities Documentation](https://spacy.io/usage/linguistic-features#named-entities)
-- [Hugging Face: NER Models](https://huggingface.co/models?pipeline_tag=token-classification)
+
+1. Wikipedia. (n.d.). Named Entity Recognition. Wikipedia.
+
+2. IBM. (n.d.). What is Named Entity Recognition?. IBM Think Topics.
+
+3. Encord. (n.d.). Named Entity Recognition Guide. Encord Blog.
+
+4. AltexSoft. (n.d.). Named Entity Recognition Overview. AltexSoft Blog.
+
+5. GeeksforGeeks. (n.d.). Named Entity Recognition. GeeksforGeeks.
+
+6. Stanford NLP. (n.d.). CRFClassifier. Stanford NLP Software.
+
+7. Machine Learning Mastery. (n.d.). How to Do NER with BERT. Machine Learning Mastery.
+
+8. arXiv. (2024). Recent Advances in NER. arXiv.
+
+9. spaCy. (n.d.). Named Entities Documentation. spaCy Documentation.
+
+10. Hugging Face. (n.d.). NER Models. Hugging Face Models.

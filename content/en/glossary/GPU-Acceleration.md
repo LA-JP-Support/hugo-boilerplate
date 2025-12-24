@@ -201,13 +201,14 @@ No. GPUs excel when workloads are highly parallelizable. For serial or branch-he
 
 ## References
 
-- [Penguin Solutions: What is GPU-Accelerated Computing?](https://www.penguinsolutions.com/en-us/resources/blog/what-is-gpu-accelerated-computing)
-- [ElcomSoft: Eighteen Years of GPU Acceleration](https://blog.elcomsoft.com/2025/11/eighteen-years-of-gpu-acceleration/)
-- [Scale Computing: Understanding GPU Architecture](https://www.scalecomputing.com/resources/understanding-gpu-architecture)
-- [Sandgarden: GPU Acceleration](https://www.sandgarden.com/learn/gpu-acceleration)
-- [Alluxio: What is GPU Acceleration](https://www.alluxio.io/learn/what-is-gpu-acceleration-a-data-science-powerhouse)
-- [GeeksforGeeks: What is GPU Acceleration](https://www.geeksforgeeks.org/data-science/what-is-gpu-acceleration/)
-- [IBM: AI Accelerators vs. GPUs](https://www.ibm.com/think/topics/ai-accelerator-vs-gpu)
-- [Meegle: GPU Acceleration in AI](https://www.meegle.com/en_us/topics/gpu-acceleration/gpu-acceleration-in-ai)
-- [LarkSuite: GPU Glossary](https://www.larksuite.com/en_us/topics/ai-glossary/gpu-graphics-processing-unit)
-- [NVIDIA: Deep Learning Resources](https://developer.nvidia.com/deep-learning)
+
+1. Penguin Solutions. (n.d.). What is GPU-Accelerated Computing?. Penguin Solutions Blog.
+2. ElcomSoft. (2025). Eighteen Years of GPU Acceleration. ElcomSoft Blog.
+3. Scale Computing. (n.d.). Understanding GPU Architecture. Scale Computing Resources.
+4. Sandgarden. (n.d.). GPU Acceleration. Sandgarden Learn.
+5. Alluxio. (n.d.). What is GPU Acceleration. Alluxio Learn.
+6. GeeksforGeeks. (n.d.). What is GPU Acceleration. GeeksforGeeks Data Science.
+7. IBM. (n.d.). AI Accelerators vs. GPUs. IBM Think Topics.
+8. Meegle. (n.d.). GPU Acceleration in AI. Meegle Topics.
+9. LarkSuite. (n.d.). GPU Glossary. LarkSuite AI Glossary.
+10. NVIDIA. (n.d.). Deep Learning Resources. NVIDIA Developer.

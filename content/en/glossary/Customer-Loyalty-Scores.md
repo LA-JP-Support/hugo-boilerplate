@@ -257,22 +257,23 @@ A: Yes. AI chatbots can automate survey delivery, track sentiment, and trigger i
 
 ## References
 
-- [Qualtrics: Guide to Measuring Customer Loyalty](https://www.qualtrics.com/en-gb/experience-management/customer/measure-customer-loyalty/)
-- [Qualtrics: Net Promoter Score Guide](https://www.qualtrics.com/en-gb/experience-management/customer/net-promoter-score/)
-- [Qualtrics: CSAT Guide](https://www.qualtrics.com/en-gb/experience-management/customer/customer-satisfaction-guide/)
-- [Qualtrics: CES Overview](https://www.qualtrics.com/experience-management/customer/customer-effort-score/)
-- [Qualtrics: CLI Explanation](https://www.qualtrics.com/en-gb/experience-management/customer/measure-customer-loyalty/)
-- [Qualtrics: AI CX Guide](https://www.qualtrics.com/experience-management/customer/customer-loyalty/)
-- [CustomerGauge: Essential Metrics](https://customergauge.com/blog/how-to-measure-customer-loyalty)
-- [CustomerGauge: CLV Guide](https://customergauge.com/blog/how-to-measure-customer-loyalty)
-- [CustomerGauge: Churn Rate Metric](https://customergauge.com/blog/how-to-measure-customer-loyalty)
-- [CustomerGauge: Industry Benchmarks](https://customergauge.com/benchmarks-report)
-- [CustomerGauge: B2B Loyalty](https://customergauge.com/customer-loyalty)
-- [CustomerGauge: Use Cases](https://customergauge.com/blog/how-to-measure-customer-loyalty)
-- [CleverTap: Metrics + Formulas](https://clevertap.com/blog/how-to-measure-customer-loyalty/)
-- [CleverTap: NPS Metric](https://clevertap.com/blog/how-to-measure-customer-loyalty/)
-- [CleverTap: CRR Metric](https://clevertap.com/blog/how-to-measure-customer-loyalty/)
-- [CleverTap: Repeat Purchase Rate](https://clevertap.com/blog/how-to-measure-customer-loyalty/)
-- [CleverTap: Loyalty Types](https://clevertap.com/blog/how-to-measure-customer-loyalty/)
-- [CleverTap: Loyalty Benchmarks](https://clevertap.com/blog/how-to-measure-customer-loyalty/)
-- [Harvard Business Review: The Value of Keeping the Right Customers](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers)
+
+1. Qualtrics. (n.d.). Guide to Measuring Customer Loyalty. Qualtrics Blog.
+2. Qualtrics. (n.d.). Net Promoter Score Guide. Qualtrics Blog.
+3. Qualtrics. (n.d.). CSAT Guide. Qualtrics Blog.
+4. Qualtrics. (n.d.). CES Overview. Qualtrics Blog.
+5. Qualtrics. (n.d.). CLI Explanation. Qualtrics Blog.
+6. Qualtrics. (n.d.). AI CX Guide. Qualtrics Blog.
+7. CustomerGauge. (n.d.). Essential Metrics. CustomerGauge Blog.
+8. CustomerGauge. (n.d.). CLV Guide. CustomerGauge Blog.
+9. CustomerGauge. (n.d.). Churn Rate Metric. CustomerGauge Blog.
+10. CustomerGauge. (n.d.). Industry Benchmarks. CustomerGauge Benchmarks Report.
+11. CustomerGauge. (n.d.). B2B Loyalty. CustomerGauge Blog.
+12. CustomerGauge. (n.d.). Use Cases. CustomerGauge Blog.
+13. CleverTap. (n.d.). Metrics + Formulas. CleverTap Blog.
+14. CleverTap. (n.d.). NPS Metric. CleverTap Blog.
+15. CleverTap. (n.d.). CRR Metric. CleverTap Blog.
+16. CleverTap. (n.d.). Repeat Purchase Rate. CleverTap Blog.
+17. CleverTap. (n.d.). Loyalty Types. CleverTap Blog.
+18. CleverTap. (n.d.). Loyalty Benchmarks. CleverTap Blog.
+19. Harvard Business Review. (2014). The Value of Keeping the Right Customers. Harvard Business Review.

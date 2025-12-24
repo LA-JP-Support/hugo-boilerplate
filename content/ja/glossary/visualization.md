@@ -280,19 +280,35 @@ AI駆動の自動化された洞察は、トレーニングデータまたはア
 
 ## 参考文献
 
-- [GoodData: How To Use AI for Data Visualizations and Dashboards](https://www.gooddata.com/blog/how-to-use-ai-for-data-visualizations-and-dashboards/)
-- [Cambridge Intelligence: Data Visualization and AI - Powering the Intelligence Cycle](https://cambridge-intelligence.com/ai-and-data-visualization/)
-- [Friendly, M.: A Brief History of Data Visualization](https://doi.org/10.1007/978-3-540-33037-0_2)
-- [DASCA: The Rise of AI in Advancing Data Visualization](https://www.dasca.org/world-of-data-science/article/the-rise-of-ai-in-advancing-data-visualization)
-- [TechTarget: What is Data Visualization and Why is it Important?](https://www.techtarget.com/searchbusinessanalytics/definition/data-visualization)
-- [Tableau: Data Visualization Types - A Complete Guide](https://www.tableau.com/learn/articles/data-visualization)
-- [Pixelixe: How Automation Is Revolutionizing Data Visualization](https://pixelixe.com/blog/how-automation-is-revolutionizing-data-visualization/)
-- [Hwang & Kim (2023): JourneyBot - Journey Map Visualization](https://doi.org/10.57698/v17i3.06)
-- [LinkedIn: Integrating GenAI Chatbots with Dashboard Visualization - DHL Case Study](https://www.linkedin.com/pulse/integrating-genai-chatbots-dashboard-visualization-dhl-greg-urban-zbief/)
-- [Quantilope: How To Use AI for Automated Data Analysis and Visualization](https://www.quantilope.com/resources/how-to-use-ai-for-automated-data-analysis-and-visualization)
-- [International Journal of Technology and Systems: AI-enhanced Data Visualization](https://doi.org/10.47941/jts.1911)
-- [D3.js - Data-Driven Documents](https://d3js.org/)
-- [Matplotlib - Visualization with Python](https://matplotlib.org/)
-- [Seaborn - Statistical Data Visualization](https://seaborn.pydata.org/)
-- [ggplot2 - Create Elegant Data Visualisations Using the Grammar of Graphics](https://ggplot2.tidyverse.org/)
-- [Google Data Studio](https://datastudio.google.com/)
+
+1. GoodData. (n.d.). How To Use AI for Data Visualizations and Dashboards. GoodData Blog.
+
+2. Cambridge Intelligence. (n.d.). Data Visualization and AI - Powering the Intelligence Cycle. Cambridge Intelligence.
+
+3. Friendly, M. (n.d.). A Brief History of Data Visualization. Springer.
+
+4. DASCA. (n.d.). The Rise of AI in Advancing Data Visualization. DASCA World of Data Science.
+
+5. TechTarget. (n.d.). What is Data Visualization and Why is it Important?. TechTarget.
+
+6. Tableau. (n.d.). Data Visualization Types - A Complete Guide. Tableau Learn.
+
+7. Pixelixe. (n.d.). How Automation Is Revolutionizing Data Visualization. Pixelixe Blog.
+
+8. Hwang & Kim. (2023). JourneyBot - Journey Map Visualization. International Journal of Technology and Systems.
+
+9. Urban, G. (n.d.). Integrating GenAI Chatbots with Dashboard Visualization - DHL Case Study. LinkedIn.
+
+10. Quantilope. (n.d.). How To Use AI for Automated Data Analysis and Visualization. Quantilope Resources.
+
+11. International Journal of Technology and Systems. (n.d.). AI-enhanced Data Visualization. Journal of Technology and Systems.
+
+12. D3.js. Data-Driven Documents. URL: https://d3js.org/
+
+13. Matplotlib. Visualization with Python. URL: https://matplotlib.org/
+
+14. Seaborn. Statistical Data Visualization. URL: https://seaborn.pydata.org/
+
+15. ggplot2. Create Elegant Data Visualisations Using the Grammar of Graphics. URL: https://ggplot2.tidyverse.org/
+
+16. Google Data Studio. Data Visualization Tool. URL: https://datastudio.google.com/

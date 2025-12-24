@@ -221,20 +221,21 @@ Webhook認証、暗号化接続、詳細な権限、監査ログ、エンター�
 
 ## 参考資料
 
-- [Make公式ウェブサイト](https://www.make.com/en)
-- [Makeテンプレートライブラリ](https://www.make.com/en/templates)
-- [Make統合ディレクトリ](https://www.make.com/en/integrations)
-- [Makeアカデミー](https://academy.make.com/)
-- [Make価格](https://www.make.com/en/pricing)
-- [Makeドキュメント](https://www.make.com/en/help)
-- [Makeエラー処理](https://www.make.com/en/help/errors)
-- [Makeカスタム関数](https://www.make.com/en/blog/custom-functions-in-make-best-practices)
-- [Make AI機能](https://app.archbee.com/public/PREVIEW-TDD_JYughqVhdcQ3sZF9_/PREVIEW-CqL-zHgSWS_WjgsU_f0TK)
-- [XRay Tech: Make初心者ガイド2024](https://www.xray.tech/post/make-beginner-2024)
-- [Google Sheets統合](https://apps.make.com/google-sheets)
-- [Slack統合](https://apps.make.com/slack)
-- [Shopify統合](https://apps.make.com/shopify)
-- [Mailchimp統合](https://apps.make.com/mailchimp)
-- [Airtable統合](https://apps.make.com/airtable)
-- [Notion統合](https://apps.make.com/notion)
-- [OpenAI統合](https://apps.make.com/openai-gpt-3)
+
+1. Make. (n.d.). Make Official Website. URL: https://www.make.com/en
+2. Make. (n.d.). Make Template Library. URL: https://www.make.com/en/templates
+3. Make. (n.d.). Make Integration Directory. URL: https://www.make.com/en/integrations
+4. Make. (n.d.). Make Academy. URL: https://academy.make.com/
+5. Make. (n.d.). Make Pricing. URL: https://www.make.com/en/pricing
+6. Make. (n.d.). Make Documentation. URL: https://www.make.com/en/help
+7. Make. (n.d.). Make Error Handling. URL: https://www.make.com/en/help/errors
+8. Make. (2024). Custom Functions in Make: Best Practices. Make Blog.
+9. Make. (n.d.). Make AI Features. URL: https://app.archbee.com/public/PREVIEW-TDD_JYughqVhdcQ3sZF9_/PREVIEW-CqL-zHgSWS_WjgsU_f0TK
+10. XRay Tech. (2024). Make Beginner Guide 2024. XRay Tech Blog.
+11. Make. (n.d.). Google Sheets Integration. URL: https://apps.make.com/google-sheets
+12. Make. (n.d.). Slack Integration. URL: https://apps.make.com/slack
+13. Make. (n.d.). Shopify Integration. URL: https://apps.make.com/shopify
+14. Make. (n.d.). Mailchimp Integration. URL: https://apps.make.com/mailchimp
+15. Make. (n.d.). Airtable Integration. URL: https://apps.make.com/airtable
+16. Make. (n.d.). Notion Integration. URL: https://apps.make.com/notion
+17. Make. (n.d.). OpenAI Integration. URL: https://apps.make.com/openai-gpt-3

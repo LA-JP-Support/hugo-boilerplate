@@ -279,21 +279,39 @@ Typical B2B SaaS funnel stages and average conversion rates:
 
 ## References
 
-- [Unbounce: Conversion Funnel Optimization: The Basics](https://unbounce.com/campaign-strategy/conversion-funnel/)
-- [FullStory: What is a Conversion Funnel?](https://www.fullstory.com/blog/conversion-funnels/)
-- [FullStory: How to create an effective conversion funnel](https://www.fullstory.com/blog/conversion-funnels/)
-- [FullStory: Conversion Funnel Optimization: Step-By-Step Guide](https://www.fullstory.com/blog/conversion-funnel-optimization/)
-- [FullStory: Conversion Rate Optimization](https://www.fullstory.com/blog/conversion-rate-optimization/)
-- [FullStory: Customer Journey Maps](https://www.fullstory.com/blog/customer-journey-maps/)
-- [Landingi: Conversion Funnel: Definition, 5 Stages & Examples](https://landingi.com/blog/funnel-what-is-it-and-how-to-use-it/)
-- [Landingi: Landing Page Optimisation - 5 Steps](https://landingi.com/blog/landing-page-optimisation-5-steps/)
-- [Improvado: Conversion Funnel: The Ultimate Guide to Stages & Optimization](https://improvado.io/blog/conversion-funnel)
-- [Qualtrics: The Ecommerce Conversion Funnel Explained](https://www.qualtrics.com/en-gb/experience-management/customer/ecommerce-conversion-funnel/)
-- [Amplitude: What is a Conversion Funnel?](https://amplitude.com/glossary/terms/conversion-funnel)
-- [Smart Insights: E-commerce conversion rate benchmarks](https://www.smartinsights.com/ecommerce/ecommerce-analytics/ecommerce-conversion-rates/)
-- [First Page Sage: B2B SaaS Funnel Conversion Benchmarks](https://firstpagesage.com/seo-blog/b2b-saas-funnel-conversion-benchmarks-fc/)
-- [Matomo: Conversion Funnel Optimisation](https://matomo.org/blog/2024/01/conversion-funnel-optimisation/)
-- [Matomo: 10 Ways to Convert More](https://matomo.org/blog/2024/01/conversion-funnel-optimisation/)
-- [Wikipedia: Conversion funnel](https://en.wikipedia.org/wiki/Conversion_funnel)
-- [Google Analytics 4: Funnels](https://support.google.com/analytics/answer/9327974?hl=en)
-- [Unbounce: Customer Journey Map](https://unbounce.com/campaign-strategy/customer-journey-map/)
+
+1. Unbounce. (n.d.). Conversion Funnel Optimization: The Basics. Unbounce Blog.
+
+2. FullStory. (n.d.). What is a Conversion Funnel?. FullStory Blog.
+
+3. FullStory. (n.d.). How to create an effective conversion funnel. FullStory Blog.
+
+4. FullStory. (n.d.). Conversion Funnel Optimization: Step-By-Step Guide. FullStory Blog.
+
+5. FullStory. (n.d.). Conversion Rate Optimization. FullStory Blog.
+
+6. FullStory. (n.d.). Customer Journey Maps. FullStory Blog.
+
+7. Landingi. (n.d.). Conversion Funnel: Definition, 5 Stages & Examples. Landingi Blog.
+
+8. Landingi. (n.d.). Landing Page Optimisation - 5 Steps. Landingi Blog.
+
+9. Improvado. (n.d.). Conversion Funnel: The Ultimate Guide to Stages & Optimization. Improvado Blog.
+
+10. Qualtrics. (n.d.). The Ecommerce Conversion Funnel Explained. Qualtrics Blog.
+
+11. Amplitude. (n.d.). What is a Conversion Funnel?. Amplitude Glossary.
+
+12. Smart Insights. (n.d.). E-commerce conversion rate benchmarks. Smart Insights Blog.
+
+13. First Page Sage. (n.d.). B2B SaaS Funnel Conversion Benchmarks. First Page Sage Blog.
+
+14. Matomo. (2024). Conversion Funnel Optimisation. Matomo Blog.
+
+15. Matomo. (2024). 10 Ways to Convert More. Matomo Blog.
+
+16. Wikipedia. (n.d.). Conversion funnel. Wikipedia.
+
+17. Google. (n.d.). Google Analytics 4: Funnels. Google Support.
+
+18. Unbounce. (n.d.). Customer Journey Map. Unbounce Blog.

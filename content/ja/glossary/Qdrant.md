@@ -235,22 +235,23 @@ Qdrantは、リアルタイム更新、メタデータフィルタリング、�
 
 ## 参考文献
 
-- [Qdrant公式ドキュメント](https://qdrant.tech/documentation/)
-- [ベクトルデータベースとは?](https://qdrant.tech/articles/what-is-a-vector-database/)
-- [Qdrant製品ページ](https://www.qdrant.tech/)
-- [ベクトル埋め込みの説明](https://www.pinecone.io/learn/vector-embeddings/)
-- [Qdrantアーキテクチャドキュメント](https://qdrant.tech/documentation/guides/get-started/database-architecture)
-- [HNSWアルゴリズムの説明](https://www.pinecone.io/learn/series/faiss/hnsw/)
-- [Qdrantクイックスタートガイド](https://qdrant.tech/documentation/quick-start/)
-- [インデックスの作成と管理](https://qdrant.tech/documentation/concepts/indexing/)
-- [メタデータによるフィルタリング](https://qdrant.tech/documentation/guides/search/filter-by-metadata)
-- [Qdrantセキュリティ](https://www.qdrant.tech/security/)
-- [Qdrant Cloud概要](https://qdrant.tech/cloud/)
-- [Qdrantコレクションドキュメント](https://qdrant.tech/documentation/concepts/collections/)
-- [距離メトリクスリファレンス](https://qdrant.tech/documentation/concepts/collections/#distance-metrics)
-- [Qdrantのペイロード](https://qdrant.tech/documentation/concepts/payload/)
-- [量子化ガイド](https://qdrant.tech/documentation/guides/quantization/)
-- [ハイブリッド検索ドキュメント](https://qdrant.tech/articles/hybrid-search/)
-- [ベクトル検索リソース最適化](https://qdrant.tech/articles/vector-search-resource-optimization/)
-- [開発者向けQdrantフレンドリーガイド](https://www.cohorte.co/blog/a-developers-friendly-guide-to-qdrant-vector-database)
-- [RAGのためのLangChain統合](https://docs.langchain.com/oss/python/integrations/vectorstores/qdrant)
+
+1. Qdrant. (n.d.). Qdrant Official Documentation. Qdrant Documentation.
+2. Qdrant. (n.d.). What is a Vector Database?. Qdrant Articles.
+3. Qdrant. (n.d.). Qdrant Product Page. Qdrant Website.
+4. Pinecone. (n.d.). Vector Embeddings Explanation. Pinecone Learn.
+5. Qdrant. (n.d.). Qdrant Architecture Documentation. Qdrant Documentation.
+6. Pinecone. (n.d.). HNSW Algorithm Explanation. Pinecone Learn.
+7. Qdrant. (n.d.). Qdrant Quick Start Guide. Qdrant Documentation.
+8. Qdrant. (n.d.). Creating and Managing Indexes. Qdrant Documentation.
+9. Qdrant. (n.d.). Filtering by Metadata. Qdrant Documentation.
+10. Qdrant. (n.d.). Qdrant Security. Qdrant Website.
+11. Qdrant. (n.d.). Qdrant Cloud Overview. Qdrant Documentation.
+12. Qdrant. (n.d.). Qdrant Collections Documentation. Qdrant Documentation.
+13. Qdrant. (n.d.). Distance Metrics Reference. Qdrant Documentation.
+14. Qdrant. (n.d.). Qdrant Payload. Qdrant Documentation.
+15. Qdrant. (n.d.). Quantization Guide. Qdrant Documentation.
+16. Qdrant. (n.d.). Hybrid Search Documentation. Qdrant Articles.
+17. Qdrant. (n.d.). Vector Search Resource Optimization. Qdrant Articles.
+18. Cohorte. (n.d.). A Developer's Friendly Guide to Qdrant Vector Database. Cohorte Blog.
+19. LangChain. (n.d.). LangChain Integration for RAG. LangChain Documentation.

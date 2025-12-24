@@ -1,7 +1,7 @@
 ---
-title: リスクアセスメント(顧客)
+title: リスクアセスメント
 date: 2025-12-19
-translationKey: Risk-Assessment--Customer-
+translationKey: Risk-Assessment
 description: 顧客リスク評価の手法、フレームワーク、ベストプラクティスに関する包括的なガイド。効果的なリスク管理と意思決定を実現します。
 keywords:
 - 顧客リスク評価
@@ -12,9 +12,9 @@ keywords:
 category: Application & Use-Cases
 type: glossary
 draft: false
-e-title: Risk Assessment (Customer)
-url: /ja/glossary/Risk-Assessment--Customer-/
-term: りすくあせすめんと(こきゃく)
+e-title: Risk Assessment
+url: /ja/glossary/Risk-Assessment/
+term: りすくあせすめんと
 ---
 
 ## リスクアセスメント(顧客)とは

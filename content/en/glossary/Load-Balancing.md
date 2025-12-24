@@ -288,21 +288,39 @@ Load balancers perform continuous health monitoring:
 
 ## References
 
-- [IBM: What Is Load Balancing?](https://www.ibm.com/think/topics/load-balancing)
-- [AWS: What is Load Balancing?](https://aws.amazon.com/what-is/load-balancing/)
-- [AWS Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/)
-- [Kemp: What Is Load Balancing](https://kemptechnologies.com/what-is-load-balancing)
-- [F5: What Is a Load Balancer?](https://www.f5.com/glossary/load-balancer)
-- [F5 BIG-IP](https://www.f5.com/products/big-ip-services.html)
-- [Google Cloud Load Balancing](https://cloud.google.com/load-balancing)
-- [Google Cloud Load Balancing Overview](https://docs.cloud.google.com/load-balancing/docs/load-balancing-overview)
-- [Google Cloud Health Check Concepts](https://cloud.google.com/load-balancing/docs/health-check-concepts)
-- [Google Cloud Service Mesh: Advanced Load Balancing](https://docs.cloud.google.com/service-mesh/docs/service-routing/advanced-load-balancing-overview)
-- [Loadbalancer.org: Layer 4 vs Layer 7](https://www.loadbalancer.org/blog/comparing-layer-4-layer-7-and-gslb-load-balancing-techniques/)
-- [Kemp: Round Robin Load Balancing](https://kemptechnologies.com/load-balancer/round-robin-load-balancing)
-- [Kemp: Weighted Round Robin](https://kemptechnologies.com/load-balancer/weighted-round-robin-load-balancing)
-- [Kemp: Least Connections](https://kemptechnologies.com/load-balancer/least-connections-load-balancing)
-- [Kemp: Load Balancing Algorithms](https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques)
-- [NGINX: Load Balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
-- [HAProxy Official Site](https://www.haproxy.org/)
-- [Kubernetes Service Load Balancing](https://kubernetes.io/docs/concepts/services-networking/service/)
+
+1. IBM. (n.d.). What Is Load Balancing?. IBM Think Topics.
+
+2. AWS. (n.d.). What is Load Balancing?. AWS Documentation.
+
+3. AWS. (n.d.). Elastic Load Balancing. AWS Documentation.
+
+4. Kemp Technologies. (n.d.). What Is Load Balancing. Kemp Technologies.
+
+5. F5. (n.d.). What Is a Load Balancer?. F5 Glossary.
+
+6. F5. (n.d.). BIG-IP Services. F5 Products.
+
+7. Google Cloud. (n.d.). Load Balancing. Google Cloud Documentation.
+
+8. Google Cloud. (n.d.). Load Balancing Overview. Google Cloud Documentation.
+
+9. Google Cloud. (n.d.). Health Check Concepts. Google Cloud Load Balancing Documentation.
+
+10. Google Cloud. (n.d.). Service Mesh: Advanced Load Balancing. Google Cloud Service Mesh Documentation.
+
+11. Loadbalancer.org. (n.d.). Layer 4 vs Layer 7. Loadbalancer.org Blog.
+
+12. Kemp Technologies. (n.d.). Round Robin Load Balancing. Kemp Technologies.
+
+13. Kemp Technologies. (n.d.). Weighted Round Robin. Kemp Technologies.
+
+14. Kemp Technologies. (n.d.). Least Connections. Kemp Technologies.
+
+15. Kemp Technologies. (n.d.). Load Balancing Algorithms. Kemp Technologies.
+
+16. NGINX. (n.d.). Load Balancing. NGINX Documentation.
+
+17. HAProxy. Load Balancing Software. URL: https://www.haproxy.org/
+
+18. Kubernetes. (n.d.). Service Load Balancing. Kubernetes Documentation.

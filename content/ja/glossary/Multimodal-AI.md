@@ -234,19 +234,35 @@ OCR(画像)とNLP(テキスト)の両方を使用して、スキャンされた�
 
 ## 参考文献
 
-- [IBM: What is Multimodal AI?](https://www.ibm.com/think/topics/multimodal-ai)
-- [Google Cloud: Multimodal AI Use Cases](https://cloud.google.com/use-cases/multimodal-ai)
-- [SuperAnnotate: Multimodal AI](https://www.superannotate.com/blog/multimodal-ai)
-- [Salesforce: Multimodal AI](https://www.salesforce.com/artificial-intelligence/multimodal-ai/)
-- [Splunk: Multimodal AI](https://www.splunk.com/en_us/blog/learn/multimodal-ai.html)
-- [OpenAI: Hello GPT-4o](https://openai.com/index/hello-gpt-4o/)
-- [DeepMind: Gemini](https://deepmind.google/technologies/gemini/)
-- [Meta: ImageBind](https://imagebind.metademolab.com/)
-- [OpenAI: CLIP](https://openai.com/index/clip/)
-- [LLaVA: Large Language and Vision Assistant](https://llava-vl.github.io/)
-- [PaLM-E: Google Research](https://palm-e.github.io/)
-- [OpenAI: DALL-E 3](https://openai.com/index/dall-e-3/)
-- [Anthropic: Claude 3 Family](https://www.anthropic.com/news/claude-3-family)
-- [Addepto: Multimodal AI Models](https://addepto.com/blog/multimodal-ai-models-understanding-their-complexity/)
-- [Medium: Multimodal Models and Fusion](https://medium.com/@raj.pulapakura/multimodal-models-and-fusion-a-complete-guide-225ca91f6861)
-- [ScienceDirect: Deep Learning-Based Multimodal Fusion](https://www.sciencedirect.com/science/article/pii/S0010482524007200)
+
+1. IBM. (n.d.). What is Multimodal AI?. IBM Think Topics.
+
+2. Google Cloud. (n.d.). Multimodal AI Use Cases. Google Cloud.
+
+3. SuperAnnotate. (n.d.). Multimodal AI. SuperAnnotate Blog.
+
+4. Salesforce. (n.d.). Multimodal AI. Salesforce.
+
+5. Splunk. (n.d.). Multimodal AI. Splunk Blog.
+
+6. OpenAI. (2024). Hello GPT-4o. OpenAI.
+
+7. DeepMind. (n.d.). Gemini. DeepMind Technologies.
+
+8. Meta. (n.d.). ImageBind. Meta Demo Lab.
+
+9. OpenAI. (n.d.). CLIP. OpenAI.
+
+10. LLaVA. (n.d.). Large Language and Vision Assistant. LLaVA Research.
+
+11. Google Research. (n.d.). PaLM-E. Google Research.
+
+12. OpenAI. (n.d.). DALL-E 3. OpenAI.
+
+13. Anthropic. (2024). Claude 3 Family. Anthropic News.
+
+14. Addepto. (n.d.). Multimodal AI Models. Addepto Blog.
+
+15. Pulapakura, R. (n.d.). Multimodal Models and Fusion. Medium.
+
+16. ScienceDirect. (2024). Deep Learning-Based Multimodal Fusion. ScienceDirect.

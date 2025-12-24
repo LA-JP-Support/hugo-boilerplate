@@ -232,22 +232,41 @@ Begin with threat modeling, evaluate available open-source tools, start with sim
 
 ## References
 
-- [Microsoft Research: Privacy Preserving Machine Learning](https://www.microsoft.com/en-us/research/blog/privacy-preserving-machine-learning-maintaining-confidentiality-and-preserving-trust/)
-- [arXiv: Privacy-Preserving Machine Learning: Methods, Challenges and Directions](https://arxiv.org/abs/2108.04417)
-- [Wikipedia: Differential Privacy](https://en.wikipedia.org/wiki/Differential_privacy)
-- [Ted Desfontaines: A Glossary of Differential Privacy Terms](https://desfontain.es/blog/differential-privacy-glossary.html)
-- [TensorFlow Privacy Toolkit](https://github.com/tensorflow/privacy)
-- [Microsoft SEAL Homomorphic Encryption Library](https://github.com/Microsoft/SEAL)
-- [Nightfall AI: Homomorphic Encryption](https://www.nightfall.ai/ai-security-101/homomorphic-encryption)
-- [Apple ML Research: Homomorphic Encryption](https://machinelearning.apple.com/research/homomorphic-encryption)
-- [GeeksforGeeks: Secure Multiparty Computation](https://www.geeksforgeeks.org/blogs/what-is-secure-multiparty-computation/)
-- [Cyfrin: Multi-Party Computation Overview](https://www.cyfrin.io/blog/multi-party-computation-secure-private-collaboration)
-- [EzPC: Easy Secure Multi-Party Computation](https://www.microsoft.com/en-us/research/project/ezpc-easy-secure-multi-party-computation/)
-- [IBM Research: What is Federated Learning?](https://research.ibm.com/blog/what-is-federated-learning)
-- [DataCamp: Federated Learning Guide](https://www.datacamp.com/blog/federated-learning)
-- [ScienceDirect: Privacy Preserving Machine Learning](https://www.sciencedirect.com/topics/computer-science/privacy-preserving-machine-learning)
-- [ScienceDirect: Preserving Data Privacy in Machine Learning Systems](https://www.sciencedirect.com/science/article/pii/S0167404823005151)
-- [ResearchGate: PPML Techniques, Challenges And Research Directions](https://www.researchgate.net/publication/379244515_Privacy-Preserving_Machine_Learning_Techniques_Challenges_And_Research_Directions)
-- [Microsoft Research: Differentially Private Fine-Tuning of Language Models](https://www.microsoft.com/en-us/research/publication/differentially-private-fine-tuning-of-language-models/)
-- [Microsoft Research: Private Synthetic Data for Generative AI](https://www.microsoft.com/en-us/research/blog/the-crossroads-of-innovation-and-privacy-private-synthetic-data-for-generative-ai/)
-- [Azure Confidential Computing](https://azure.microsoft.com/en-us/solutions/confidential-compute/)
+
+1. Microsoft Research. (n.d.). Privacy Preserving Machine Learning: Maintaining Confidentiality and Preserving Trust. Microsoft Research Blog.
+
+2. Anonymous. (2021). Privacy-Preserving Machine Learning: Methods, Challenges and Directions. arXiv.
+
+3. Wikipedia. (n.d.). Differential Privacy. Wikipedia.
+
+4. Desfontaines, T. (n.d.). A Glossary of Differential Privacy Terms. Personal Blog.
+
+5. TensorFlow Privacy Toolkit. Open-source Privacy Library. URL: https://github.com/tensorflow/privacy
+
+6. Microsoft SEAL. Homomorphic Encryption Library. URL: https://github.com/Microsoft/SEAL
+
+7. Nightfall AI. (n.d.). Homomorphic Encryption. AI Security 101.
+
+8. Apple ML Research. (n.d.). Homomorphic Encryption. Apple Machine Learning Research.
+
+9. GeeksforGeeks. (n.d.). Secure Multiparty Computation. GeeksforGeeks Blog.
+
+10. Cyfrin. (n.d.). Multi-Party Computation Overview. Cyfrin Blog.
+
+11. Microsoft Research. (n.d.). EzPC: Easy Secure Multi-Party Computation. Microsoft Research Project.
+
+12. IBM Research. (n.d.). What is Federated Learning?. IBM Research Blog.
+
+13. DataCamp. (n.d.). Federated Learning Guide. DataCamp Blog.
+
+14. ScienceDirect. (n.d.). Privacy Preserving Machine Learning. ScienceDirect Topics.
+
+15. ScienceDirect. (2023). Preserving Data Privacy in Machine Learning Systems. ScienceDirect Article.
+
+16. ResearchGate. (2024). PPML Techniques, Challenges And Research Directions. ResearchGate Publication.
+
+17. Microsoft Research. (n.d.). Differentially Private Fine-Tuning of Language Models. Microsoft Research Publication.
+
+18. Microsoft Research. (n.d.). Private Synthetic Data for Generative AI. Microsoft Research Blog.
+
+19. Azure Confidential Computing. Cloud Computing Service. URL: https://azure.microsoft.com/en-us/solutions/confidential-compute/

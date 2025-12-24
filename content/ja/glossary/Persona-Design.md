@@ -256,18 +256,33 @@ url: "/ja/glossary/Persona-Design/"
 
 ## 参考文献
 
-- [Chatbot persona: What it is + how to create one – Zendesk](https://www.zendesk.com/blog/chatbot-persona/)
-- [What's a Chatbot Persona? Why You Need One and How to Build It – ProProfsChat](https://www.proprofschat.com/blog/chatbot-persona/)
-- [Top 25 Chatbot Case Studies & Success Stories – AIMultiple](https://research.aimultiple.com/top-chatbot-success/)
-- [The Ultimate Guide to Crafting a Chatbot Persona – Tidio](https://www.tidio.com/blog/chatbot-persona/)
-- [How to Build an AI Chatbot's Persona – Chatbot.com](https://www.chatbot.com/blog/personality/)
-- [Personas – A Simple Introduction – IxDF](https://www.interaction-design.org/literature/article/personas-why-and-how-you-should-use-them)
-- [How to Create The Perfect Chatbot Persona in 10 Steps – Chatbase](https://www.chatbase.co/blog/chatbot-persona)
-- [Google Conversation Design: Create a Persona](https://developers.google.com/assistant/conversation-design/create-a-persona)
-- [Good chatbot design, persona, prompt injection – Reddit](https://www.reddit.com/r/chatgpt_promptDesign/comments/17z5k45/good_chatbot_design_persona_prompt_injection_etc/)
-- [Chatbots Persona Part 4: Personality Traits and Design – Medium](https://medium.com/@HuggyMonkey/chatbots-persona-part-4-personality-traits-and-design-12425c9fb0dd)
-- [Tidio AI Chatbot Persona Generator](https://www.tidio.com/chatbot-ai/)
-- [Chatbase: Build AI Agents](https://www.chatbase.co/)
-- [Zendesk AI Chatbot Builder](https://www.zendesk.com/service/ai/)
-- [Tidio: Customer Engagement](https://www.tidio.com/blog/customer-engagement/)
-- [Tidio: Customer Feedback](https://www.tidio.com/blog/customer-feedback/)
+
+1. Zendesk. (n.d.). Chatbot persona: What it is + how to create one. Zendesk Blog.
+
+2. ProProfsChat. (n.d.). What's a Chatbot Persona? Why You Need One and How to Build It. ProProfsChat Blog.
+
+3. AIMultiple. (n.d.). Top 25 Chatbot Case Studies & Success Stories. AIMultiple Research.
+
+4. Tidio. (n.d.). The Ultimate Guide to Crafting a Chatbot Persona. Tidio Blog.
+
+5. Chatbot.com. (n.d.). How to Build an AI Chatbot's Persona. Chatbot.com Blog.
+
+6. IxDF. (n.d.). Personas – A Simple Introduction. Interaction Design Foundation.
+
+7. Chatbase. (n.d.). How to Create The Perfect Chatbot Persona in 10 Steps. Chatbase Blog.
+
+8. Google. (n.d.). Conversation Design: Create a Persona. Google Developers.
+
+9. Reddit. (n.d.). Good chatbot design, persona, prompt injection. Reddit r/chatgpt_promptDesign.
+
+10. Medium. (n.d.). Chatbots Persona Part 4: Personality Traits and Design. Medium.
+
+11. Tidio AI Chatbot Persona Generator. AI Chatbot Persona Creation Tool. URL: https://www.tidio.com/chatbot-ai/
+
+12. Chatbase. Build AI Agents Platform. URL: https://www.chatbase.co/
+
+13. Zendesk AI Chatbot Builder. Customer Service AI Tool. URL: https://www.zendesk.com/service/ai/
+
+14. Tidio. Customer Engagement Platform. URL: https://www.tidio.com/blog/customer-engagement/
+
+15. Tidio. Customer Feedback Tool. URL: https://www.tidio.com/blog/customer-feedback/

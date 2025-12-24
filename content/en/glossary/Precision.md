@@ -284,15 +284,27 @@ Use the F1 score for a single balanced metric, adjust the classification thresho
 
 ## References
 
-- [Evidently AI: Accuracy vs Precision vs Recall in Machine Learning](https://www.evidentlyai.com/classification-metrics/accuracy-precision-recall)
-- [Google Machine Learning Crash Course: Accuracy, Recall, Precision](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall)
-- [FlintK12: AI Precision Definition and Meaning](https://flintk12.com/ai-glossary/ai-precision)
-- [Palo Alto Networks: What Is Precision AI](https://www.paloaltonetworks.com/cyberpedia/what-is-precision-ai)
-- [Iterate.ai: What is Precision](https://www.iterate.ai/ai-glossary/what-is-precision-in-seo)
-- [Tidio: Different Types of Chatbots](https://www.tidio.com/blog/chatbot-types/)
-- [Encord: Accuracy vs Precision vs Recall in Machine Learning](https://encord.com/blog/classification-metrics-accuracy-precision-recall/)
-- [Mage AI: Definitive Guide to Accuracy, Precision, and Recall](https://www.mage.ai/blog/definitive-guide-to-accuracy-precision-recall-for-product-developers)
-- [DelveInsight: Top Applications of Artificial Intelligence in Healthcare](https://www.delveinsight.com/blog/top-applications-of-artificial-intelligence-in-healthcare)
-- [Digital Adoption: 13 AI Examples in Industry](https://www.digital-adoption.com/ai-examples-in-industry/)
-- [GeeksforGeeks: Precision and Recall in Machine Learning](https://www.geeksforgeeks.org/machine-learning/precision-and-recall-in-machine-learning/)
-- [DataCamp: 25 Practical Examples of AI Transforming Industries](https://www.datacamp.com/blog/examples-of-ai)
+
+1. Evidently AI. (n.d.). Accuracy vs Precision vs Recall in Machine Learning. Evidently AI Blog.
+
+2. Google. (n.d.). Machine Learning Crash Course: Accuracy, Recall, Precision. Google Developers.
+
+3. FlintK12. (n.d.). AI Precision Definition and Meaning. FlintK12 AI Glossary.
+
+4. Palo Alto Networks. (n.d.). What Is Precision AI. Palo Alto Networks Cyberpedia.
+
+5. Iterate.ai. (n.d.). What is Precision. Iterate.ai AI Glossary.
+
+6. Tidio. (n.d.). Different Types of Chatbots. Tidio Blog.
+
+7. Encord. (n.d.). Accuracy vs Precision vs Recall in Machine Learning. Encord Blog.
+
+8. Mage AI. (n.d.). Definitive Guide to Accuracy, Precision, and Recall for Product Developers. Mage AI Blog.
+
+9. DelveInsight. (n.d.). Top Applications of Artificial Intelligence in Healthcare. DelveInsight Blog.
+
+10. Digital Adoption. (n.d.). 13 AI Examples in Industry. Digital Adoption.
+
+11. GeeksforGeeks. (n.d.). Precision and Recall in Machine Learning. GeeksforGeeks.
+
+12. DataCamp. (n.d.). 25 Practical Examples of AI Transforming Industries. DataCamp Blog.

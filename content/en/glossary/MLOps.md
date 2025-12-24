@@ -195,22 +195,23 @@ Key difference: DevOps automates code delivery; MLOps extends automation to data
 
 ## References
 
-- [AWS: What is MLOps?](https://aws.amazon.com/what-is/mlops/)
-- [Databricks: MLOps Glossary](https://www.databricks.com/glossary/mlops)
-- [NVIDIA: What is MLOps?](https://www.nvidia.com/en-us/glossary/mlops/)
-- [Google Cloud: MLOps Guide](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
-- [Hopsworks: MLOps Dictionary](https://www.hopsworks.ai/mlops-dictionary)
-- [ML-Ops.org: Principles](https://ml-ops.org/content/mlops-principles)
-- [Databricks: Model Monitoring](https://www.databricks.com/product/machine-learning/lakehouse-monitoring)
-- [Databricks: Model Governance](https://www.databricks.com/solutions/model-governance)
-- [Hopsworks: Feature Store](https://www.hopsworks.ai/feature-store)
-- [Hopsworks: CI/CD for MLOps](https://www.hopsworks.ai/dictionary/ci-cd-for-mlops)
-- [MLflow Tracking](https://mlflow.org/docs/latest/tracking.html)
-- [Neptune.ai Platform](https://neptune.ai/)
-- [Weights & Biases](https://wandb.ai/)
-- [NVIDIA Triton Server](https://developer.nvidia.com/nvidia-triton-inference-server)
-- [DVC Data Versioning](https://dvc.org/)
-- [Google: Hidden Technical Debt in ML](https://research.google/pubs/machine-learning-the-high-interest-credit-card-of-technical-debt/)
-- [Neptune.ai: MLOps Best Practices](https://neptune.ai/blog/mlops-best-practices)
-- [Databricks: Big Book of MLOps](https://www.databricks.com/resources/ebook/the-big-book-of-mlops)
-- [Databricks: ML Use Cases](https://www.databricks.com/resources/ebook/big-book-of-machine-learning-use-cases)
+
+1. AWS. (n.d.). What is MLOps?. AWS Documentation.
+2. Databricks. (n.d.). MLOps Glossary. Databricks Glossary.
+3. NVIDIA. (n.d.). What is MLOps?. NVIDIA Glossary.
+4. Google Cloud. (n.d.). MLOps Guide. Google Cloud Architecture.
+5. Hopsworks. (n.d.). MLOps Dictionary. Hopsworks Resources.
+6. ML-Ops.org. (n.d.). Principles. ML-Ops.org.
+7. Databricks. (n.d.). Model Monitoring. Databricks Product.
+8. Databricks. (n.d.). Model Governance. Databricks Solutions.
+9. Hopsworks. (n.d.). Feature Store. Hopsworks Resources.
+10. Hopsworks. (n.d.). CI/CD for MLOps. Hopsworks Dictionary.
+11. MLflow. (n.d.). MLflow Tracking. MLflow Documentation.
+12. Neptune.ai. (n.d.). Neptune.ai Platform. Neptune.ai.
+13. Weights & Biases. (n.d.). Weights & Biases. Weights & Biases Platform.
+14. NVIDIA. (n.d.). NVIDIA Triton Server. NVIDIA Developer.
+15. DVC. (n.d.). DVC Data Versioning. DVC Platform.
+16. Google. (n.d.). Hidden Technical Debt in ML. Google Research Publications.
+17. Neptune.ai. (n.d.). MLOps Best Practices. Neptune.ai Blog.
+18. Databricks. (n.d.). Big Book of MLOps. Databricks Resources.
+19. Databricks. (n.d.). ML Use Cases. Databricks Resources.

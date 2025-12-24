@@ -245,35 +245,36 @@ IaaS (raw infrastructure), PaaS (managed platforms), SaaS (ready-to-use applicat
 
 ## References
 
-- [Salesforce: What is Cloud AI & How Does it Work?](https://www.salesforce.com/artificial-intelligence/what-is-cloud-ai/)
-- [Salesforce: The Benefits of Cloud AI](https://www.salesforce.com/artificial-intelligence/what-is-cloud-ai/#the-benefits-of-cloud-ai)
-- [Salesforce: Woolworths Cloud AI Example](https://www.salesforce.com/artificial-intelligence/what-is-cloud-ai/#woolworths-cloud-ai-example)
-- [Salesforce: Cloud AI Challenges](https://www.salesforce.com/artificial-intelligence/what-is-cloud-ai/#cloud-ai-challenges)
-- [Salesforce: How Salesforce Can Help](https://www.salesforce.com/artificial-intelligence/what-is-cloud-ai/#how-salesforce-can-help)
-- [Salesforce: What is a Data Lake?](https://www.salesforce.com/data/what-is-a-data-lake/)
-- [Salesforce Einstein](https://www.salesforce.com/products/einstein/overview/)
-- [LeewayHertz: Cloud AI Services—A Comprehensive Guide](https://www.leewayhertz.com/cloud-ai-services/)
-- [LeewayHertz: Types of Cloud AI Services](https://www.leewayhertz.com/cloud-ai-services/#Types-of-cloud-AI-services)
-- [LeewayHertz: Benefits of Cloud AI Services](https://www.leewayhertz.com/cloud-ai-services/#Benefits-of-cloud-AI-services)
-- [LeewayHertz: Key Cloud AI Use Cases](https://www.leewayhertz.com/cloud-ai-services/#Key-cloud-AI-use-cases)
-- [LeewayHertz: Challenges and Considerations](https://www.leewayhertz.com/cloud-ai-services/#Challenges-and-considerations-in-cloud-AI-services)
-- [LeewayHertz: How to Choose Provider](https://www.leewayhertz.com/cloud-ai-services/#How-to-choose-the-right-cloud-AI-services-provider)
-- [LeewayHertz: Business Problem Solutions](https://www.leewayhertz.com/cloud-ai-services/#How-cloud-AI-services-can-solve-your-business-problems)
-- [Google Cloud: Data Center Locations](https://cloud.google.com/about/locations)
-- [Google Vertex AI](https://cloud.google.com/vertex-ai)
-- [Google Cloud AutoML](https://cloud.google.com/automl)
-- [Google AI APIs](https://cloud.google.com/products/ai)
-- [Google Cloud Compute Engine](https://cloud.google.com/compute)
-- [Google Gemini](https://cloud.google.com/gemini)
-- [AWS SageMaker](https://aws.amazon.com/sagemaker/)
-- [AWS AI Services](https://aws.amazon.com/machine-learning/ai-services/)
-- [AWS EC2 with GPU Instances](https://aws.amazon.com/ec2/instance-types/g4/)
-- [Amazon Bedrock](https://aws.amazon.com/bedrock/)
-- [Azure AI](https://azure.microsoft.com/en-us/products/ai-services/)
-- [Azure AutoML](https://azure.microsoft.com/en-us/services/machine-learning/automatedml/)
-- [Azure Virtual Machines](https://azure.microsoft.com/en-us/products/virtual-machines/)
-- [Azure Machine Learning](https://azure.microsoft.com/en-us/products/machine-learning/)
-- [IBM watsonx](https://www.ibm.com/products/watsonx)
-- [IBM Watson Discovery](https://www.ibm.com/cloud/watson-discovery)
-- [Oracle Cloud AI](https://www.oracle.com/cloud/ai/)
-- [NVIDIA AI](https://www.nvidia.com/en-us/ai-data-science/)
+
+1. Salesforce. (n.d.). What is Cloud AI & How Does it Work?. Salesforce Website.
+2. Salesforce. (n.d.). The Benefits of Cloud AI. Salesforce Website.
+3. Salesforce. (n.d.). Woolworths Cloud AI Example. Salesforce Website.
+4. Salesforce. (n.d.). Cloud AI Challenges. Salesforce Website.
+5. Salesforce. (n.d.). How Salesforce Can Help. Salesforce Website.
+6. Salesforce. (n.d.). What is a Data Lake?. Salesforce Website.
+7. Salesforce Einstein. AI Platform. URL: https://www.salesforce.com/products/einstein/overview/
+8. LeewayHertz. (n.d.). Cloud AI Services—A Comprehensive Guide. LeewayHertz Website.
+9. LeewayHertz. (n.d.). Types of Cloud AI Services. LeewayHertz Website.
+10. LeewayHertz. (n.d.). Benefits of Cloud AI Services. LeewayHertz Website.
+11. LeewayHertz. (n.d.). Key Cloud AI Use Cases. LeewayHertz Website.
+12. LeewayHertz. (n.d.). Challenges and Considerations. LeewayHertz Website.
+13. LeewayHertz. (n.d.). How to Choose Provider. LeewayHertz Website.
+14. LeewayHertz. (n.d.). Business Problem Solutions. LeewayHertz Website.
+15. Google Cloud. (n.d.). Data Center Locations. Google Cloud Website.
+16. Google Vertex AI. AI Platform. URL: https://cloud.google.com/vertex-ai
+17. Google Cloud AutoML. Machine Learning Service. URL: https://cloud.google.com/automl
+18. Google AI APIs. AI Services. URL: https://cloud.google.com/products/ai
+19. Google Cloud Compute Engine. Cloud Computing Service. URL: https://cloud.google.com/compute
+20. Google Gemini. AI Model. URL: https://cloud.google.com/gemini
+21. AWS SageMaker. Machine Learning Platform. URL: https://aws.amazon.com/sagemaker/
+22. AWS AI Services. Artificial Intelligence Services. URL: https://aws.amazon.com/machine-learning/ai-services/
+23. AWS EC2 with GPU Instances. Cloud Computing Service. URL: https://aws.amazon.com/ec2/instance-types/g4/
+24. Amazon Bedrock. AI Service Platform. URL: https://aws.amazon.com/bedrock/
+25. Azure AI. AI Services. URL: https://azure.microsoft.com/en-us/products/ai-services/
+26. Azure AutoML. Automated Machine Learning Service. URL: https://azure.microsoft.com/en-us/services/machine-learning/automatedml/
+27. Azure Virtual Machines. Cloud Computing Service. URL: https://azure.microsoft.com/en-us/products/virtual-machines/
+28. Azure Machine Learning. Machine Learning Platform. URL: https://azure.microsoft.com/en-us/products/machine-learning/
+29. IBM watsonx. AI Platform. URL: https://www.ibm.com/products/watsonx
+30. IBM Watson Discovery. AI Service. URL: https://www.ibm.com/cloud/watson-discovery
+31. Oracle Cloud AI. AI Services. URL: https://www.oracle.com/cloud/ai/
+32. NVIDIA AI. AI and Data Science Platform. URL: https://www.nvidia.com/en-us/ai-data-science/

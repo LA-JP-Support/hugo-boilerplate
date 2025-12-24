@@ -339,14 +339,25 @@ TTSにテキストを特定のタイプとして読み上げるよう指示し�
 
 ## 参考文献
 
-- [W3C Speech Synthesis Markup Language (SSML) Version 1.1](https://www.w3.org/TR/speech-synthesis11/)
-- [Amazon Alexa: SSML Reference](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html)
-- [Google Cloud: SSML Documentation](https://cloud.google.com/text-to-speech/docs/ssml)
-- [Microsoft Azure: Speech Synthesis Markup](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup)
-- [IBM Watson: SSML Elements](https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-ssml)
-- [Speechify: SSML Features](https://docs.sws.speechify.com/docs/features/ssml)
-- [International Phonetic Alphabet (IPA)](https://en.wikipedia.org/wiki/International_Phonetic_Alphabet)
-- [Azure Speech Voice Gallery](https://speech.microsoft.com/portal/voicegallery)
-- [Google Cloud Supported SSML Elements](https://cloud.google.com/text-to-speech/docs/ssml#supported_ssml)
-- [Microsoft Azure Supported SSML Elements](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-structure#ssml-supported-elements)
-- [Adaptive Cards Designer](https://adaptivecards.io/designer/)
+
+1. W3C. (n.d.). Speech Synthesis Markup Language (SSML) Version 1.1. W3C Technical Report.
+
+2. Amazon. (n.d.). Alexa: SSML Reference. Amazon Developer Documentation.
+
+3. Google Cloud. (n.d.). SSML Documentation. Google Cloud Documentation.
+
+4. Microsoft. (n.d.). Azure: Speech Synthesis Markup. Microsoft Learn.
+
+5. IBM Watson. (n.d.). SSML Elements. IBM Cloud Documentation.
+
+6. Speechify. (n.d.). SSML Features. Speechify Documentation.
+
+7. Wikipedia. (n.d.). International Phonetic Alphabet (IPA). Wikipedia.
+
+8. Microsoft. (n.d.). Azure Speech Voice Gallery. URL: https://speech.microsoft.com/portal/voicegallery
+
+9. Google Cloud. (n.d.). Supported SSML Elements. Google Cloud Documentation.
+
+10. Microsoft. (n.d.). Azure Supported SSML Elements. Microsoft Learn.
+
+11. Adaptive Cards. (n.d.). Adaptive Cards Designer. URL: https://adaptivecards.io/designer/

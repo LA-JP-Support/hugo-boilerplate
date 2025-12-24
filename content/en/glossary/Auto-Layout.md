@@ -186,12 +186,21 @@ Imagine a bookshelf that automatically shifts and spaces its books every time yo
 
 ## References
 
-- [Figma Auto-Layout YouTube Tutorial](https://www.youtube.com/watch?v=1odqpkfkDL8)
-- [Figma Help Center – Guide to auto layout](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout)
-- [Figma Handbook – Advanced Auto Layout (Design+Code)](https://designcode.io/figma-handbook-advanced-layout)
-- [CSS Flexbox Guide (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
-- [CSS Grid Guide (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
-- [Apple Auto Layout Documentation](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
-- [Android ConstraintLayout Guide](https://developer.android.com/develop/ui/views/layout/constraint-layout)
-- [ConstraintLayout in Jetpack Compose](https://developer.android.com/develop/ui/compose/layouts/constraintlayout)
-- [Apple Developer: Layout](https://developer.apple.com/documentation/appkit/layout?language=objc)
+
+1. Figma. (n.d.). Auto-Layout YouTube Tutorial. YouTube.
+
+2. Figma. (n.d.). Guide to auto layout. Figma Help Center.
+
+3. Design+Code. (n.d.). Figma Handbook – Advanced Auto Layout. Design+Code.
+
+4. MDN. (n.d.). CSS Flexbox Guide. Mozilla Developer Network.
+
+5. MDN. (n.d.). CSS Grid Guide. Mozilla Developer Network.
+
+6. Apple. (n.d.). Auto Layout Documentation. Apple Developer Library.
+
+7. Google. (n.d.). Android ConstraintLayout Guide. Android Developers.
+
+8. Google. (n.d.). ConstraintLayout in Jetpack Compose. Android Developers.
+
+9. Apple. (n.d.). Developer: Layout. Apple Developer Documentation.

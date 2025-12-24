@@ -213,27 +213,51 @@ The Contact Lens feature set is now part of Amazon Connect's conversational anal
 
 ## References
 
-- [Amazon Connect: Contact Lens Admin Guide](https://docs.aws.amazon.com/connect/latest/adminguide/contact-lens.html)
-- [Amazon Connect: Enable Conversational Analytics](https://docs.aws.amazon.com/connect/latest/adminguide/enable-analytics.html)
-- [Amazon Connect: Analyze Conversations](https://docs.aws.amazon.com/connect/latest/adminguide/analyze-conversations.html)
-- [Amazon Connect: Conversational Analytics Overview](https://aws.amazon.com/connect/conversational-analytics/)
-- [AWS Blog: Contact Lens for Amazon Connect GA](https://aws.amazon.com/blogs/contact-center/contact-lens-for-amazon-connect-ga/)
-- [Amazon Connect: Pricing](https://aws.amazon.com/connect/pricing/)
-- [Amazon Connect: Supported Languages](https://docs.aws.amazon.com/connect/latest/adminguide/supported-languages.html)
-- [AWS: Data Privacy FAQs](https://aws.amazon.com/compliance/data-privacy-faq/)
-- [AWS: AI Services Opt-out Policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ai-opt-out.html)
-- [Amazon Connect: Set Recording and Analytics Behavior](https://docs.aws.amazon.com/connect/latest/adminguide/set-recording-behavior.html)
-- [Amazon Connect: Sensitive Data Redaction](https://docs.aws.amazon.com/connect/latest/adminguide/sensitive-data-redaction.html)
-- [Amazon Connect: Sentiment Scores Guide](https://docs.aws.amazon.com/connect/latest/adminguide/sentiment-scores.html)
-- [Amazon Connect: Real-time Alerts Guide](https://docs.aws.amazon.com/connect/latest/adminguide/add-rules-for-alerts.html)
-- [Amazon Connect: Example Output Locations](https://docs.aws.amazon.com/connect/latest/adminguide/example-contact-lens-output-locations.html)
-- [Amazon Connect: Contact Analysis Segment Streams](https://docs.aws.amazon.com/connect/latest/adminguide/contact-analysis-segment-streams.html)
-- [Amazon Connect: Contact Lens API](https://docs.aws.amazon.com/connect/latest/adminguide/contact-lens-api.html)
-- [Amazon Connect: Contact Search](https://docs.aws.amazon.com/connect/latest/adminguide/contact-search.html)
-- [Amazon Connect: Agent Workspace](https://docs.aws.amazon.com/connect/latest/adminguide/agent-workspace.html)
-- [Amazon Connect: Wisdom](https://aws.amazon.com/connect/wisdom/)
-- [Amazon QuickSight](https://aws.amazon.com/quicksight/)
-- [Amazon SageMaker](https://aws.amazon.com/sagemaker/)
-- [Amazon Connect Streams API (GitHub)](https://github.com/aws/amazon-connect-streams)
-- [Contact Lens for Amazon Connect: YouTube Overview](https://www.youtube.com/watch?v=HrGgI0bUuC8)
-- [AWS Contact Center: Case Studies](https://aws.amazon.com/connect/customers/)
+
+1. Amazon. (n.d.). Contact Lens Admin Guide. Amazon Connect Documentation.
+
+2. Amazon. (n.d.). Enable Conversational Analytics. Amazon Connect Documentation.
+
+3. Amazon. (n.d.). Analyze Conversations. Amazon Connect Documentation.
+
+4. Amazon. (n.d.). Conversational Analytics Overview. AWS Connect.
+
+5. Amazon. (n.d.). Contact Lens for Amazon Connect GA. AWS Blog.
+
+6. Amazon. (n.d.). Pricing. Amazon Connect.
+
+7. Amazon. (n.d.). Supported Languages. Amazon Connect Documentation.
+
+8. Amazon. (n.d.). Data Privacy FAQs. AWS.
+
+9. Amazon. (n.d.). AI Services Opt-out Policies. AWS Organizations Documentation.
+
+10. Amazon. (n.d.). Set Recording and Analytics Behavior. Amazon Connect Documentation.
+
+11. Amazon. (n.d.). Sensitive Data Redaction. Amazon Connect Documentation.
+
+12. Amazon. (n.d.). Sentiment Scores Guide. Amazon Connect Documentation.
+
+13. Amazon. (n.d.). Real-time Alerts Guide. Amazon Connect Documentation.
+
+14. Amazon. (n.d.). Example Output Locations. Amazon Connect Documentation.
+
+15. Amazon. (n.d.). Contact Analysis Segment Streams. Amazon Connect Documentation.
+
+16. Amazon. (n.d.). Contact Lens API. Amazon Connect Documentation.
+
+17. Amazon. (n.d.). Contact Search. Amazon Connect Documentation.
+
+18. Amazon. (n.d.). Agent Workspace. Amazon Connect Documentation.
+
+19. Amazon. (n.d.). Wisdom. Amazon Connect.
+
+20. Amazon QuickSight. Business Intelligence Tool. URL: https://aws.amazon.com/quicksight/
+
+21. Amazon SageMaker. Machine Learning Platform. URL: https://aws.amazon.com/sagemaker/
+
+22. Amazon Connect Streams API. Open Source Streaming Library. URL: https://github.com/aws/amazon-connect-streams
+
+23. Amazon. (n.d.). Contact Lens for Amazon Connect Overview. YouTube Video.
+
+24. Amazon. (n.d.). Contact Center Case Studies. AWS Connect.

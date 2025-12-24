@@ -263,12 +263,13 @@ Technology enables automation, provides visibility, facilitates analysis, and in
 
 ## References
 
-- [Investopedia: Bottlenecks in Production](https://www.investopedia.com/terms/b/bottleneck.asp)
-- [Pipedrive: What Is a Bottleneck?](https://www.pipedrive.com/en/blog/what-is-a-bottleneck-in-business)
-- [Orderful: Bottleneck in Business](https://www.orderful.com/blog/what-is-a-bottleneck-in-business)
-- [Whatfix: Identify and Fix Bottlenecks](https://whatfix.com/blog/bottlenecks/)
-- [Cflow: Bottleneck Process](https://www.cflowapps.com/bottleneck-process/)
-- [Thomson Reuters: Identify and Fix Bottlenecks](https://tax.thomsonreuters.com/blog/3-steps-to-identify-and-fix-bottlenecks-in-your-firms-workflow/)
-- [Denser.ai: Enterprise Internal AI Chatbot](https://denser.ai/blog/enterprise-internal-ai-chatbot/)
-- [BizTech Magazine: AI Chatbots for Small Business](https://biztechmagazine.com/article/2025/10/can-ai-chatbots-solve-small-business-staffing-challenges)
-- [LivePerson: Power of AI Business Solutions](https://www.liveperson.com/blog/power-of-ai-business-solutions/)
+
+1. Investopedia. (n.d.). Bottlenecks in Production. Investopedia.
+2. Pipedrive. (n.d.). What Is a Bottleneck?. Pipedrive Blog.
+3. Orderful. (n.d.). Bottleneck in Business. Orderful Blog.
+4. Whatfix. (n.d.). Identify and Fix Bottlenecks. Whatfix Blog.
+5. Cflow. (n.d.). Bottleneck Process. Cflow Blog.
+6. Thomson Reuters. (n.d.). Identify and Fix Bottlenecks. Thomson Reuters Blog.
+7. Denser.ai. (n.d.). Enterprise Internal AI Chatbot. Denser.ai Blog.
+8. BizTech Magazine. (2025). AI Chatbots for Small Business. BizTech Magazine.
+9. LivePerson. (n.d.). Power of AI Business Solutions. LivePerson Blog.

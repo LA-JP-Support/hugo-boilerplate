@@ -141,21 +141,22 @@ Salesforce provides comprehensive onboarding, documentation, certified partner s
 
 ## References
 
-- [Salesforce Newsroom: Einstein Service Agent Announcement](https://www.salesforce.com/news/stories/einstein-service-agent-announcement/)
-- [Salesforce Agentforce Guide](https://www.salesforce.com/agentforce/guide/)
-- [Engineering Salesforce: Inside the Brain of Agentforce - Atlas Reasoning Engine](https://engineering.salesforce.com/inside-the-brain-of-agentforce-revealing-the-atlas-reasoning-engine/)
-- [Salesforce: How Agentforce Is Redefining Productivity](https://www.salesforce.com/news/stories/agentforce-boosts-customer-experience-sales/)
-- [CEPTES: Salesforce Data Cloud](https://ceptes.com/salesforce-data-cloud/)
-- [Salesforce: How the Atlas Reasoning Engine Powers Agentforce](https://www.salesforce.com/agentforce/what-is-a-reasoning-engine/atlas/)
-- [Chain-of-Thought Reasoning Research](https://arxiv.org/abs/2201.11903)
-- [Salesforce: Unified Knowledge](https://www.salesforce.com/news/stories/unified-knowledge-news/)
-- [Salesforce AI Service Cloud](https://www.salesforce.com/service/?d=cta-body-promo-8)
-- [Einstein Trust Layer](https://www.salesforce.com/artificial-intelligence/trusted-ai/?d=cta-body-promo-8)
-- [Salesforce Ben: Dreamforce 24 Announcements](https://www.salesforceben.com/biggest-dreamforce-24-announcements-everything-in-a-nutshell/)
-- [Futurum Group: Salesforce Debuts Einstein Service Agent](https://futurumgroup.com/insights/salesforce-debuts-einstein-service-agent/)
-- [CEPTES: Next-Gen Agentforce Platform](https://ceptes.com/blogs/salesforces-next-gen-agentforce-platform-revolutionizing-customer-support-with-einstein-service-agent/)
-- [Service Einstein Partner Pocket Guide](https://cloud.mail.salesforce.com/stagingserviceeinsteinpartnerpocketguide)
-- [Trailhead: Agentforce Service Agent Quick Look](https://trailhead.salesforce.com/content/learn/modules/agentforce-service-agent-quick-look/get-started-with-agentforce-service-agent)
-- [Salesforce: Agentforce General Availability Announcement](https://www.salesforce.com/news/press-releases/2024/10/29/agentforce-general-availability-announcement/)
-- [Introduction To Salesforce Einstein Service Agent (YouTube)](https://www.youtube.com/watch?v=qAuxzkgDEkM)
-- [Salesforce: Einstein Service Agent (YouTube)](https://www.youtube.com/watch?v=D0HaL38kXBM)
+
+1. Salesforce. (2024). Einstein Service Agent Announcement. Salesforce Newsroom.
+2. Salesforce. (n.d.). Agentforce Guide. Salesforce Documentation.
+3. Salesforce Engineering. (n.d.). Inside the Brain of Agentforce - Atlas Reasoning Engine. Salesforce Engineering Blog.
+4. Salesforce. (n.d.). How Agentforce Is Redefining Productivity. Salesforce News Stories.
+5. CEPTES. (n.d.). Salesforce Data Cloud. CEPTES.
+6. Salesforce. (n.d.). How the Atlas Reasoning Engine Powers Agentforce. Salesforce Agentforce.
+7. Anonymous. (2022). Chain-of-Thought Reasoning Research. arXiv.
+8. Salesforce. (n.d.). Unified Knowledge. Salesforce News Stories.
+9. Salesforce. (n.d.). AI Service Cloud. Salesforce Service.
+10. Salesforce. (n.d.). Einstein Trust Layer. Salesforce Artificial Intelligence.
+11. Salesforce Ben. (2024). Dreamforce 24 Announcements. Salesforce Ben.
+12. Futurum Group. (n.d.). Salesforce Debuts Einstein Service Agent. Futurum Group Insights.
+13. CEPTES. (n.d.). Next-Gen Agentforce Platform. CEPTES Blogs.
+14. Salesforce. (n.d.). Service Einstein Partner Pocket Guide. Salesforce Cloud.
+15. Trailhead. (n.d.). Agentforce Service Agent Quick Look. Salesforce Trailhead.
+16. Salesforce. (2024). Agentforce General Availability Announcement. Salesforce Press Releases.
+17. Anonymous. (n.d.). Introduction To Salesforce Einstein Service Agent. YouTube.
+18. Salesforce. (n.d.). Einstein Service Agent. YouTube.

@@ -560,13 +560,23 @@ A: Cross-validation, regularization, more data, simpler models, dropout, early s
 
 ## References
 
-- [IBM: What is Machine Learning?](https://www.ibm.com/topics/machine-learning)
-- [Google Developers: Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
-- [Deepchecks: Machine Learning Glossary](https://www.deepchecks.com/glossary/)
-- [Syracuse University: What Is Machine Learning?](https://ischool.syr.edu/news/what-is-machine-learning-key-concepts-and-real-world-uses/)
-- [AWS: What is Machine Learning?](https://aws.amazon.com/what-is/machine-learning/)
-- [Columbia University: Data Science vs. ML](https://datascience.columbia.edu/education/masters/ms-in-data-science/what-is-data-science/)
-- [McKinsey: AI and Machine Learning](https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-ai)
-- [Stanford: Machine Learning Course](https://www.coursera.org/learn/machine-learning)
-- [Scikit-learn Documentation](https://scikit-learn.org/stable/)
-- [TensorFlow Documentation](https://www.tensorflow.org/)
+
+1. IBM. (n.d.). What is Machine Learning?. IBM Topics.
+
+2. Google Developers. (n.d.). Machine Learning Glossary. Google Developers.
+
+3. Deepchecks. (n.d.). Machine Learning Glossary. Deepchecks.
+
+4. Syracuse University. (n.d.). What Is Machine Learning? Key Concepts and Real-World Uses. Syracuse University iSchool.
+
+5. AWS. (n.d.). What is Machine Learning?. Amazon Web Services.
+
+6. Columbia University. (n.d.). Data Science vs. ML. Columbia University.
+
+7. McKinsey. (n.d.). AI and Machine Learning. McKinsey Insights.
+
+8. Stanford University. (n.d.). Machine Learning Course. Coursera.
+
+9. Scikit-learn. Machine Learning Library. URL: https://scikit-learn.org/stable/
+
+10. TensorFlow. Machine Learning Platform. URL: https://www.tensorflow.org/

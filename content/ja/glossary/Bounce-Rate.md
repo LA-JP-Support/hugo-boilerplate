@@ -269,15 +269,27 @@ Google Analytics 4、Hotjar、Mixpanel、Adobe Analytics、Fullstory、SEMrush�
 
 ## 参考文献
 
-- [Search Engine Land: High Bounce Rate? Identify & Fix the Issues](https://searchengineland.com/guide/bounce-rate)
-- [Leadpages: Understand Your Bounce Rate](https://www.leadpages.com/blog/average-bounce-rate)
-- [Jetpack: 6 Proven Ways to Reduce Bounce Rate](https://jetpack.com/resources/how-to-reduce-bounce-rate/)
-- [Google Analytics 4: Engagement Metrics](https://support.google.com/analytics/answer/12195621?hl=en)
-- [Hotjar: Website Heatmaps & Analytics](https://www.hotjar.com/)
-- [SEMrush: What is Bounce Rate](https://www.semrush.com/blog/bounce-rate/)
-- [HubSpot: Bounce Rate Benchmarks](https://blog.hubspot.com/marketing/decrease-website-bounce-rate-infographic)
-- [Fullstory: What is a Good Bounce Rate](https://www.fullstory.com/blog/what-is-a-good-bounce-rate/)
-- [Adobe Analytics: Bounce Rate Metric](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/bounce-rate)
-- [Google: PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
-- [Google: Think with Google - Mobile Page Speed](https://www.thinkwithgoogle.com/marketing-resources/data-measurement/mobile-page-speed-new-industry-benchmarks/)
-- [Search Engine Journal: Is Bounce Rate a Ranking Factor?](https://www.searchenginejournal.com/ranking-factors/bounce-rate/)
+
+1. Search Engine Land. (n.d.). High Bounce Rate? Identify & Fix the Issues. Search Engine Land.
+
+2. Leadpages. (n.d.). Understand Your Bounce Rate. Leadpages Blog.
+
+3. Jetpack. (n.d.). 6 Proven Ways to Reduce Bounce Rate. Jetpack Resources.
+
+4. Google. (n.d.). Google Analytics 4: Engagement Metrics. Google Support.
+
+5. Hotjar. Website Heatmaps & Analytics. URL: https://www.hotjar.com/
+
+6. SEMrush. (n.d.). What is Bounce Rate. SEMrush Blog.
+
+7. HubSpot. (n.d.). Bounce Rate Benchmarks. HubSpot Blog.
+
+8. Fullstory. (n.d.). What is a Good Bounce Rate. Fullstory Blog.
+
+9. Adobe. (n.d.). Bounce Rate Metric. Adobe Experience League.
+
+10. Google. PageSpeed Insights. URL: https://developers.google.com/speed/pagespeed/insights/
+
+11. Google. (n.d.). Think with Google - Mobile Page Speed. Think with Google.
+
+12. Search Engine Journal. (n.d.). Is Bounce Rate a Ranking Factor?. Search Engine Journal.

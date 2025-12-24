@@ -290,19 +290,20 @@ docker-compose up
 
 ## References
 
-- [Docker Official Documentation](https://docs.docker.com/get-started/docker-overview/)
-- [Docker: What is a Container?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/)
-- [Docker Curriculum (Beginner to Advanced)](https://docker-curriculum.com)
-- [AWS: What is Docker?](https://aws.amazon.com/docker/)
-- [Oracle: What is Docker?](https://www.oracle.com/cloud/cloud-native/container-registry/what-is-docker/)
-- [GeeksforGeeks: Containerization using Docker](https://www.geeksforgeeks.org/blogs/containerization-using-docker/)
-- [Docker Compose Documentation](https://docs.docker.com/compose/)
-- [Kubernetes Documentation](https://kubernetes.io/docs/)
-- [Docker CLI Reference](https://docs.docker.com/engine/reference/commandline/cli/)
-- [Docker Best Practices](https://docs.docker.com/develop/dev-best-practices/)
-- [Docker Hub](https://hub.docker.com)
-- [Docker Networking](https://docs.docker.com/network/)
-- [Docker Registry Docs](https://docs.docker.com/registry/)
-- [Docker for Machine Learning](https://www.docker.com/blog/tag/machine-learning/)
-- [Docker Scout](https://docs.docker.com/scout/)
-- [Containers vs. VMs (Docker Docs)](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/#containers-versus-virtual-machines-vms)
+
+1. Docker. (n.d.). Docker Official Documentation. Docker Docs.
+2. Docker. (n.d.). Docker: What is a Container?. Docker Docs.
+3. Docker Curriculum. (n.d.). Docker Curriculum (Beginner to Advanced). Docker Curriculum.
+4. AWS. (n.d.). What is Docker?. AWS.
+5. Oracle. (n.d.). What is Docker?. Oracle Cloud.
+6. GeeksforGeeks. (n.d.). Containerization using Docker. GeeksforGeeks Blog.
+7. Docker. (n.d.). Docker Compose Documentation. Docker Docs.
+8. Kubernetes. (n.d.). Kubernetes Documentation. Kubernetes Docs.
+9. Docker. (n.d.). Docker CLI Reference. Docker Docs.
+10. Docker. (n.d.). Docker Best Practices. Docker Docs.
+11. Docker Hub. Docker Container Registry. URL: https://hub.docker.com
+12. Docker. (n.d.). Docker Networking. Docker Docs.
+13. Docker. (n.d.). Docker Registry Docs. Docker Docs.
+14. Docker. (n.d.). Docker for Machine Learning. Docker Blog.
+15. Docker. (n.d.). Docker Scout. Docker Docs.
+16. Docker. (n.d.). Containers vs. VMs. Docker Docs.

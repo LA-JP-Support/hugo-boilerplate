@@ -551,12 +551,21 @@ Modern scenarios leverage AI capabilities:
 
 ## References
 
-- [Chatbot.com: How to Write a Chatbot Script – Examples Included](https://www.chatbot.com/blog/chatbot-script/)
-- [Marutitech: How do Chatbots Work? A Guide to Chatbot Architecture](https://marutitech.com/chatbots-work-guide-chatbot-architecture/)
-- [Interaction Design Foundation: What are User Scenarios?](https://www.interaction-design.org/literature/topics/user-scenarios)
-- [Interaction Design Foundation: Design Scenarios – Communicating the Small Steps](https://www.interaction-design.org/literature/topics/scenarios)
-- [Make.com: Scenarios for AI Agents – Help Center](https://www.make.com/en/help/scenarios)
-- [Zendesk: Was ist ein Chatbot? Funktionen & Vorteile](https://www.zendesk.de/blog/chatbot-vorteile/)
-- [OpenAI: Chatbot Best Practices](https://platform.openai.com/docs/guides/gpt)
-- [Chatbot.com: Documentation and Help Center](https://www.chatbot.com/help/)
-- [Google Dialogflow: Conversation Design Best Practices](https://cloud.google.com/dialogflow/docs/best-practices)
+
+1. Chatbot.com. (n.d.). How to Write a Chatbot Script – Examples Included. Chatbot.com Blog.
+
+2. Marutitech. (n.d.). How do Chatbots Work? A Guide to Chatbot Architecture. Marutitech Blog.
+
+3. Interaction Design Foundation. (n.d.). What are User Scenarios?. Interaction Design Foundation Literature.
+
+4. Interaction Design Foundation. (n.d.). Design Scenarios – Communicating the Small Steps. Interaction Design Foundation Literature.
+
+5. Make.com. (n.d.). Scenarios for AI Agents – Help Center. Make Help Center.
+
+6. Zendesk. (n.d.). Was ist ein Chatbot? Funktionen & Vorteile. Zendesk Blog.
+
+7. OpenAI. (n.d.). Chatbot Best Practices. OpenAI Platform Documentation.
+
+8. Chatbot.com. (n.d.). Documentation and Help Center. Chatbot.com Help Center.
+
+9. Google. (n.d.). Conversation Design Best Practices. Google Dialogflow Documentation.

@@ -279,26 +279,27 @@ A: 音声形式の不一致、誤った音声/言語、サポートされてい�
 
 ## 参考資料
 
-- [Microsoft Azure: Text to Speech Overview](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/text-to-speech)
-- [Google Cloud: Text-to-Speech Documentation](https://cloud.google.com/text-to-speech/docs)
-- [OpenAI: Text-to-Speech Guide](https://platform.openai.com/docs/guides/text-to-speech)
-- [Botpress: What is Text-to-Speech (TTS)?](https://botpress.com/blog/text-to-speech)
-- [LearningFlow.AI: Text to Speech Node Docs](https://www.learningflow.ai/docs/nodes/text-to-speech)
-- [Home Assistant: TTS Integration](https://www.home-assistant.io/integrations/tts/)
-- [W3C: Speech Synthesis Markup Language (SSML) Specification](https://www.w3.org/TR/speech-synthesis/)
-- [GetTalkative: TTS vs. Speech-to-Speech](https://gettalkative.com/info/text-to-speech-vs-speech-to-speech)
-- [Google Codelabs: TTS API with Node.js](https://codelabs.developers.google.com/codelabs/cloud-text-speech-node)
-- [Advanced TTS MCP (Open Source Neural TTS Server)](https://github.com/samihalawa/advanced-tts-mcp)
-- [Azure: SSML Documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup)
-- [Google Cloud: Voice List](https://cloud.google.com/text-to-speech/docs/voices)
-- [Microsoft: Voice Gallery](https://speech.microsoft.com/portal/voicegallery)
-- [Azure: Custom Neural Voice](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/custom-neural-voice)
-- [Google Cloud: API Synthesize Reference](https://cloud.google.com/text-to-speech/docs/reference/rest/v1/text/synthesize)
-- [Google Cloud: TTS Samples](https://cloud.google.com/text-to-speech/docs/samples/texttospeech-synthesize-text)
-- [Google Cloud: TTS Quickstart](https://cloud.google.com/text-to-speech/docs/quickstart-client-libraries)
-- [Google Cloud: TTS Overview](https://cloud.google.com/text-to-speech/docs/overview)
-- [OpenAI: Streaming API](https://platform.openai.com/docs/guides/text-to-speech/streaming)
-- [ElevenLabs API Documentation](https://docs.elevenlabs.io/)
-- [LearningFlow.AI: Setting Up TTS](https://www.learningflow.ai/docs/nodes/text-to-speech#setting-up-text-to-speech)
-- [LearningFlow.AI: Example Workflows](https://www.learningflow.ai/docs/nodes/text-to-speech#example-workflows)
-- [Home Assistant: TTS Troubleshooting](https://www.home-assistant.io/integrations/tts/#troubleshooting)
+
+1. Microsoft. (n.d.). Text to Speech Overview. Azure AI Services.
+2. Google. (n.d.). Text-to-Speech Documentation. Google Cloud.
+3. OpenAI. (n.d.). Text-to-Speech Guide. OpenAI Platform.
+4. Botpress. (n.d.). What is Text-to-Speech (TTS)?. Botpress Blog.
+5. LearningFlow.AI. (n.d.). Text to Speech Node Docs. LearningFlow.AI Documentation.
+6. Home Assistant. (n.d.). TTS Integration. Home Assistant Integrations.
+7. W3C. (n.d.). Speech Synthesis Markup Language (SSML) Specification. W3C Technical Report.
+8. GetTalkative. (n.d.). TTS vs. Speech-to-Speech. GetTalkative Information.
+9. Google. (n.d.). TTS API with Node.js. Google Codelabs.
+10. Advanced TTS MCP. (n.d.). Open Source Neural TTS Server. GitHub.
+11. Microsoft. (n.d.). SSML Documentation. Azure AI Services.
+12. Google. (n.d.). Voice List. Google Cloud.
+13. Microsoft. (n.d.). Voice Gallery. Microsoft Speech Portal.
+14. Microsoft. (n.d.). Custom Neural Voice. Azure AI Services.
+15. Google. (n.d.). API Synthesize Reference. Google Cloud.
+16. Google. (n.d.). TTS Samples. Google Cloud.
+17. Google. (n.d.). TTS Quickstart. Google Cloud.
+18. Google. (n.d.). TTS Overview. Google Cloud.
+19. OpenAI. (n.d.). Streaming API. OpenAI Platform.
+20. ElevenLabs. (n.d.). API Documentation. ElevenLabs.
+21. LearningFlow.AI. (n.d.). Setting Up TTS. LearningFlow.AI Documentation.
+22. LearningFlow.AI. (n.d.). Example Workflows. LearningFlow.AI Documentation.
+23. Home Assistant. (n.d.). TTS Troubleshooting. Home Assistant Integrations.

@@ -238,10 +238,11 @@ Sendbird、CometChat、PubNubなどの確立されたSDKとAPIを使用して、
 
 ## 参考文献
 
-- [Sendbird: What Are Typing Indicators?](https://sendbird.com/learn/what-are-typing-indicators)
-- [CometChat: Typing Indicators – How Real-time Feedback Improves Chat Experience](https://www.cometchat.com/blog/typing-indicators)
-- [PubNub: Typing Indicator Docs](https://www.pubnub.com/docs/chat/features/typing)
-- [PubNub: How a Typing Indicator Enables Chat Engagement](https://www.pubnub.com/guides/how-a-typing-indicator-enables-chat-engagement/)
-- [Shyft: Typing Indicators in Scheduling](https://www.myshyft.com/blog/typing-indicators/)
-- [dev.to: Adding Typing Indicators to Real-Time Chat Applications](https://dev.to/hexshift/adding-typing-indicators-to-real-time-chat-applications-76p)
-- [Sendbird: Mobile App Engagement – The Ultimate Guide](https://sendbird.com/resources/mobile-app-engagement-the-ultimate-guide)
+
+1. Sendbird. (n.d.). What Are Typing Indicators?. Sendbird Learn.
+2. CometChat. (n.d.). Typing Indicators – How Real-time Feedback Improves Chat Experience. CometChat Blog.
+3. PubNub. (n.d.). Typing Indicator Docs. PubNub Documentation.
+4. PubNub. (n.d.). How a Typing Indicator Enables Chat Engagement. PubNub Guides.
+5. Shyft. (n.d.). Typing Indicators in Scheduling. Shyft Blog.
+6. Hexshift. (n.d.). Adding Typing Indicators to Real-Time Chat Applications. dev.to.
+7. Sendbird. (n.d.). Mobile App Engagement – The Ultimate Guide. Sendbird Resources.

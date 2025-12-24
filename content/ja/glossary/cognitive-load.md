@@ -193,13 +193,23 @@ UX研究者が、アイトラッキングと瞳孔拡張分析を使用してチ
 
 ## 参考文献
 
-- [Sweller, J. (1988). Cognitive Load during Problem Solving: Effects on Learning - Cognitive Science](https://psycnet.apa.org/record/1989-17881-001)
-- [Baddeley, A.D. & Hitch, G. (1974). Working Memory - Psychology of Learning and Motivation](https://www.sciencedirect.com/science/article/pii/S0079742108604521)
-- [Chandler, P. & Sweller, J. (1991). Cognitive Load Theory and Format of Instruction - Cognition and Instruction](https://www.jstor.org/stable/3233566)
-- [Clark, R.C., Nguyen, F., & Sweller, J. (2006). Efficiency in Learning: Evidence-Based Guidelines - Pfeiffer](https://www.wiley.com/en-us/Efficiency+in+Learning%3A+Evidence-Based+Guidelines+to+Manage+Cognitive+Load-p-9780787972418)
-- [PUXLAB: How to Measure Cognitive Load in UX Research](https://www.puxlab.com/post/how-to-measure-cognitive-load-in-ux-research)
-- [arXiv: Critical Analysis of Cognitive Load Measurement Methods](https://arxiv.org/pdf/2402.11820)
-- [Structural Learning: Cognitive Load Theory—A Teacher's Guide](https://www.structural-learning.com/post/cognitive-load-theory-a-teachers-guide)
-- [The Education Hub: Introduction to Cognitive Load Theory](https://theeducationhub.org.nz/an-introduction-to-cognitive-load-theory/)
-- [LinkedIn: How To Reduce Cognitive Load in UX - Vitaly Friedman](https://www.linkedin.com/pulse/how-reduce-cognitive-load-ux-vitaly-friedman-v0wle)
-- [Wikipedia: Cognitive Load](https://en.wikipedia.org/wiki/Cognitive_load)
+
+1. Sweller, J. (1988). Cognitive Load during Problem Solving: Effects on Learning. Cognitive Science.
+
+2. Baddeley, A.D. & Hitch, G. (1974). Working Memory. Psychology of Learning and Motivation.
+
+3. Chandler, P. & Sweller, J. (1991). Cognitive Load Theory and Format of Instruction. Cognition and Instruction.
+
+4. Clark, R.C., Nguyen, F., & Sweller, J. (2006). Efficiency in Learning: Evidence-Based Guidelines. Pfeiffer.
+
+5. PUXLAB. (n.d.). How to Measure Cognitive Load in UX Research. PUXLAB Blog. URL: https://www.puxlab.com/post/how-to-measure-cognitive-load-in-ux-research
+
+6. arXiv. (n.d.). Critical Analysis of Cognitive Load Measurement Methods. arXiv. URL: https://arxiv.org/pdf/2402.11820
+
+7. Structural Learning. (n.d.). Cognitive Load Theory—A Teacher's Guide. Structural Learning Blog. URL: https://www.structural-learning.com/post/cognitive-load-theory-a-teachers-guide
+
+8. The Education Hub. (n.d.). Introduction to Cognitive Load Theory. The Education Hub. URL: https://theeducationhub.org.nz/an-introduction-to-cognitive-load-theory/
+
+9. Friedman, V. (n.d.). How To Reduce Cognitive Load in UX. LinkedIn. URL: https://www.linkedin.com/pulse/how-reduce-cognitive-load-ux-vitaly-friedman-v0wle
+
+10. Wikipedia. (n.d.). Cognitive Load. Wikipedia. URL: https://en.wikipedia.org/wiki/Cognitive_load

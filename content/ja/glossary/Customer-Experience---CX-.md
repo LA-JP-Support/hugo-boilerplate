@@ -271,23 +271,24 @@ CXは顧客対応チームだけの領域ではありません。製品、物流
 
 ## 参考文献
 
-- [McKinsey: What is CX?](https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-cx)
-- [NICE: What Does Customer Experience Mean?](https://www.nice.com/info/what-does-customer-experience-mean)
-- [NICE: Key Components of Customer Experience](https://www.nice.com/info/what-does-customer-experience-mean#key-components-of-customer-experience)
-- [NICE: Positive vs. Negative CX](https://www.nice.com/info/what-does-customer-experience-mean#what-does-a-positive-customer-experience-look-like)
-- [NICE: Journey Mapping](https://www.nice.com/info/what-does-customer-experience-mean#how-to-measure-the-customer-journey)
-- [NICE: CX Management Strategies](https://www.nice.com/info/what-does-customer-experience-mean#strategies-to-improve-customer-experience-management)
-- [NICE: Role of Technology in CX](https://www.nice.com/info/what-does-customer-experience-mean#the-role-of-technology-in-customer-experience)
-- [NICE: Continuous Improvement](https://www.nice.com/info/what-does-customer-experience-mean#strategies-to-improve-customer-experience-management)
-- [WalkerXM: What is Customer Experience? Your Complete Guide](https://walkerxm.com/blog/what-is-customer-experience-cx-your-complete-guide)
-- [WalkerXM: Cross-Functional CX](https://walkerxm.com/blog/what-is-customer-experience-cx-your-complete-guide)
-- [Exploding Topics: Customer Experience Statistics](https://explodingtopics.com/blog/customer-experience-stats)
-- [Zendesk: Customer Experience Statistics 2025](https://www.zendesk.com/blog/customer-experience-statistics/)
-- [Zendesk: CX Trends 2023](https://cxtrends.zendesk.com/)
-- [Genroe: Customer Experience Metrics](https://www.genroe.com/blog/customer-experience-metrics/15678)
-- [Genroe: Net Promoter Score (NPS)](https://www.genroe.com/blog/customer-experience-metrics/15678#net-promoter-score-nps)
-- [Genroe: Choosing the Right CX Metrics](https://www.genroe.com/blog/customer-experience-metrics/15678#choosing-the-right-cx-metrics-for-your-business)
-- [Genroe: Net Promoter Score Guide](https://www.genroe.com/net-promoter-score)
-- [Gainsight: Customer Experience Metrics - Essential Guide for 2025](https://www.gainsight.com/blog/customer-experience-metrics-the-essential-guide-for-2025/)
-- [Gartner: Customer Experience Management (CEM) Glossary](https://www.gartner.com/en/information-technology/glossary/customer-experience-management-cem)
-- [Oracle: What is CX?](https://www.oracle.com/cx/what-is-cx/)
+
+1. McKinsey. (n.d.). What is CX?. McKinsey Featured Insights.
+2. NICE. (n.d.). What Does Customer Experience Mean?. NICE Info.
+3. NICE. (n.d.). Key Components of Customer Experience. NICE Info.
+4. NICE. (n.d.). Positive vs. Negative CX. NICE Info.
+5. NICE. (n.d.). Journey Mapping. NICE Info.
+6. NICE. (n.d.). CX Management Strategies. NICE Info.
+7. NICE. (n.d.). Role of Technology in CX. NICE Info.
+8. NICE. (n.d.). Continuous Improvement. NICE Info.
+9. WalkerXM. (n.d.). What is Customer Experience? Your Complete Guide. WalkerXM Blog.
+10. WalkerXM. (n.d.). Cross-Functional CX. WalkerXM Blog.
+11. Exploding Topics. (n.d.). Customer Experience Statistics. Exploding Topics Blog.
+12. Zendesk. (2025). Customer Experience Statistics 2025. Zendesk Blog.
+13. Zendesk. (2023). CX Trends 2023. Zendesk CX Trends.
+14. Genroe. (n.d.). Customer Experience Metrics. Genroe Blog.
+15. Genroe. (n.d.). Net Promoter Score (NPS). Genroe Blog.
+16. Genroe. (n.d.). Choosing the Right CX Metrics. Genroe Blog.
+17. Genroe. (n.d.). Net Promoter Score Guide. Genroe.
+18. Gainsight. (2025). Customer Experience Metrics - Essential Guide for 2025. Gainsight Blog.
+19. Gartner. (n.d.). Customer Experience Management (CEM) Glossary. Gartner.
+20. Oracle. (n.d.). What is CX?. Oracle CX.

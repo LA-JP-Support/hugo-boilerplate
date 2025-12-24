@@ -429,27 +429,51 @@ OpenAIは、責任を持ってAIを進歩させるために、研究、製品開
 
 ## 参考文献
 
-- [OpenAI公式サイト](https://openai.com/)
-- [OpenAI About](https://openai.com/about/)
-- [OpenAI Wikipedia](https://en.wikipedia.org/wiki/OpenAI)
-- [GPT-5.2の紹介](https://openai.com/index/introducing-gpt-5-2/)
-- [開発者向けGPT-5の紹介](https://openai.com/index/introducing-gpt-5-for-developers/)
-- [GPT-5の紹介](https://openai.com/index/introducing-gpt-5/)
-- [GPT-5はここに](https://openai.com/gpt-5/)
-- [GPT-5.2による科学と数学の進歩](https://openai.com/index/gpt-5-2-for-science-and-math/)
-- [GPT-5.2システムカード](https://openai.com/index/gpt-5-system-card-update-gpt-5-2/)
-- [GPT-4研究](https://openai.com/index/gpt-4-research/)
-- [GPT-4oの紹介](https://openai.com/index/hello-gpt-4o/)
-- [DALL-E 3概要](https://openai.com/index/dall-e-3/)
-- [DALL-E 3 APIドキュメント](https://platform.openai.com/docs/models/dall-e-3)
-- [Codex概要](https://openai.com/codex/)
-- [Codex開発者ドキュメント](https://developers.openai.com/codex/)
-- [Whisperの紹介](https://openai.com/index/whisper/)
-- [音声テキスト変換APIガイド](https://platform.openai.com/docs/guides/speech-to-text)
-- [APIリファレンス](https://platform.openai.com/docs/api-reference/introduction)
-- [OpenAIの構造](https://openai.com/our-structure/)
-- [OpenAIの構造の進化](https://openai.com/index/evolving-our-structure/)
-- [OpenAIの収益と成長](https://epoch.ai/data-insights/openai-revenue)
-- [TechCrunch: OpenAI GPT-5.2リリース](https://techcrunch.com/2025/12/11/openai-fires-back-at-google-with-gpt-5-2-after-code-red-memo/)
-- [CNBC: GPT-5.2発表](https://www.cnbc.com/2025/12/11/openai-intros-new-ai-model-gpt-5point2-says-better-at-professional-tasks.html)
-- [GitHub: GitHub CopilotのGPT-5.2](https://github.blog/changelog/2025-12-11-openais-gpt-5-2-is-now-in-public-preview-for-github-copilot/)
+
+1. OpenAI. (n.d.). OpenAI Official Site. Service/Tool. URL: https://openai.com/
+
+2. OpenAI. (n.d.). About OpenAI. Service/Tool. URL: https://openai.com/about/
+
+3. Wikipedia. (n.d.). OpenAI. Article. Wikipedia.
+
+4. OpenAI. (n.d.). Introducing GPT-5.2. Article. OpenAI Index.
+
+5. OpenAI. (n.d.). Introducing GPT-5 for Developers. Article. OpenAI Index.
+
+6. OpenAI. (n.d.). Introducing GPT-5. Article. OpenAI Index.
+
+7. OpenAI. (n.d.). GPT-5 is Here. Article. OpenAI.
+
+8. OpenAI. (n.d.). GPT-5.2 for Science and Math. Article. OpenAI Index.
+
+9. OpenAI. (n.d.). GPT-5.2 System Card Update. Article. OpenAI Index.
+
+10. OpenAI. (n.d.). GPT-4 Research. Article. OpenAI Index.
+
+11. OpenAI. (n.d.). Hello GPT-4o. Article. OpenAI Index.
+
+12. OpenAI. (n.d.). DALL-E 3 Overview. Article. OpenAI Index.
+
+13. OpenAI. (n.d.). DALL-E 3 API Documentation. Service/Tool. URL: https://platform.openai.com/docs/models/dall-e-3
+
+14. OpenAI. (n.d.). Codex Overview. Article. OpenAI.
+
+15. OpenAI. (n.d.). Codex Developer Documentation. Service/Tool. URL: https://developers.openai.com/codex/
+
+16. OpenAI. (n.d.). Introducing Whisper. Article. OpenAI Index.
+
+17. OpenAI. (n.d.). Speech to Text API Guide. Service/Tool. URL: https://platform.openai.com/docs/guides/speech-to-text
+
+18. OpenAI. (n.d.). API Reference. Service/Tool. URL: https://platform.openai.com/docs/api-reference/introduction
+
+19. OpenAI. (n.d.). Our Structure. Article. OpenAI.
+
+20. OpenAI. (n.d.). Evolving Our Structure. Article. OpenAI Index.
+
+21. Epoch.ai. (n.d.). OpenAI Revenue and Growth. Article. Epoch.ai Data Insights.
+
+22. TechCrunch. (2025). OpenAI Fires Back at Google with GPT-5.2 After Code Red Memo. Article. TechCrunch.
+
+23. CNBC. (2025). OpenAI Intros New AI Model GPT-5.2, Says Better at Professional Tasks. Article. CNBC.
+
+24. GitHub. (2025). OpenAI's GPT-5.2 Now in Public Preview for GitHub Copilot. Article. GitHub Blog.

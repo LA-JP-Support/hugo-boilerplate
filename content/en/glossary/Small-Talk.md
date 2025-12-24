@@ -330,11 +330,19 @@ Overuse can frustrate users who want quick, direct answers. It should be balance
 
 ## References
 
-- [Kore.ai: Small Talk Documentation](https://developer.kore.ai/docs/bots/bot-builder-tool/small-talk/)
-- [Enterprise Bot: How Small Talk Enhances the Chatbot Experience](https://www.enterprisebot.ai/blog/how-small-talk-enhances-the-chatbot-experience)
-- [Kore.ai Blog: How Small Talk Delivers a Great Deal by Elevating Chatbot Experience](https://blog.kore.ai/how-small-talk-delivers-a-great-deal-by-elevating-chatbot-experience)
-- [Medium: 40 Small Talk Questions Your Chatbot Needs to Know](https://medium.com/twyla-ai/40-small-talk-questions-your-chatbot-needs-to-know-and-why-it-matters-63caf03347f6)
-- [My AI Front Desk: The Death of Small Talk - AI and the Evolution of Social Niceties](https://www.myaifrontdesk.com/blogs/the-death-of-small-talk-ai-and-the-evolution-of-social-niceties)
-- [Gartner: Virtual Customer Assistants Press Release](https://www.gartner.com/en/newsroom/press-releases/2018-02-19-gartner-says-25-percent-of-customer-service-operations-will-use-virtual-customer-assistants-by-2020)
-- [InvespCRO: Chatbots Customer Service Statistics](https://www.invespcro.com/blog/chatbots-customer-service/)
-- [YouTube: Small Talk Demo Video](https://youtu.be/2kNWv3mJcQ0)
+
+1. Kore.ai. (n.d.). Small Talk Documentation. Kore.ai Developer Documentation.
+
+2. Enterprise Bot. (n.d.). How Small Talk Enhances the Chatbot Experience. Enterprise Bot Blog.
+
+3. Kore.ai. (n.d.). How Small Talk Delivers a Great Deal by Elevating Chatbot Experience. Kore.ai Blog.
+
+4. Medium. (n.d.). 40 Small Talk Questions Your Chatbot Needs to Know. Medium.
+
+5. My AI Front Desk. (n.d.). The Death of Small Talk - AI and the Evolution of Social Niceties. My AI Front Desk Blogs.
+
+6. Gartner. (2018). Virtual Customer Assistants Press Release. Gartner Newsroom.
+
+7. InvespCRO. (n.d.). Chatbots Customer Service Statistics. InvespCRO Blog.
+
+8. YouTube. (n.d.). Small Talk Demo Video. YouTube.

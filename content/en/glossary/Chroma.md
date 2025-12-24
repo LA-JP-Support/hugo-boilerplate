@@ -259,12 +259,21 @@ collection.add(
 
 ## References
 
-- [Chroma GitHub Repository](https://github.com/chroma-core/chroma)
-- [Chroma Documentation](https://docs.trychroma.com/)
-- [LangChain Chroma Integration](https://docs.langchain.com/oss/python/integrations/providers/chroma)
-- [Netflix Chaos Monkey](https://netflix.github.io/chaosmonkey/)
-- [Pinecone Documentation](https://www.pinecone.io/)
-- [Faiss GitHub Repository](https://github.com/facebookresearch/faiss)
-- [Weaviate Documentation](https://weaviate.io/)
-- [Qdrant Documentation](https://qdrant.tech/)
-- [Milvus Documentation](https://milvus.io/)
+
+1. Chroma. (n.d.). Chroma GitHub Repository. GitHub. URL: https://github.com/chroma-core/chroma
+
+2. Chroma. (n.d.). Chroma Documentation. Chroma Docs. URL: https://docs.trychroma.com/
+
+3. LangChain. (n.d.). LangChain Chroma Integration. LangChain Documentation. URL: https://docs.langchain.com/oss/python/integrations/providers/chroma
+
+4. Netflix. (n.d.). Netflix Chaos Monkey. Netflix GitHub. URL: https://netflix.github.io/chaosmonkey/
+
+5. Pinecone. (n.d.). Pinecone Documentation. Pinecone. URL: https://www.pinecone.io/
+
+6. Facebook Research. (n.d.). Faiss GitHub Repository. GitHub. URL: https://github.com/facebookresearch/faiss
+
+7. Weaviate. (n.d.). Weaviate Documentation. Weaviate. URL: https://weaviate.io/
+
+8. Qdrant. (n.d.). Qdrant Documentation. Qdrant. URL: https://qdrant.tech/
+
+9. Milvus. (n.d.). Milvus Documentation. Milvus. URL: https://milvus.io/

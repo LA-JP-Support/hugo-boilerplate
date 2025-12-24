@@ -575,15 +575,16 @@ A: 推論のための構造化された背景知識を提供し、LLMの幻覚�
 
 ## 参考文献
 
-- [Ontotext: What Is a Knowledge Graph?](https://www.ontotext.com/knowledgehub/fundamentals/what-is-a-knowledge-graph/)
-- [Neo4j: What Is a Knowledge Graph?](https://neo4j.com/blog/knowledge-graph/what-is-knowledge-graph/)
-- [IBM: What is a Knowledge Graph?](https://www.ibm.com/think/topics/knowledge-graph)
-- [Splunk: Knowledge Graphs](https://www.splunk.com/en_us/blog/learn/knowledge-graphs.html)
-- [Schema App: Anatomy of a Content Knowledge Graph](https://www.schemaapp.com/schema-markup/the-anatomy-of-a-content-knowledge-graph/)
-- [Stanford: Knowledge Graph Inference Algorithms](https://web.stanford.edu/class/cs520/2020/notes/What_Are_Some_Inference_Algorithms.html)
-- [AIMultiple: Knowledge Graph Use Cases](https://research.aimultiple.com/knowledge-graph/)
-- [PuppyGraph: Knowledge Graph Examples](https://www.puppygraph.com/blog/knowledge-graph-examples)
-- [Wikipedia: Knowledge Graph](https://en.wikipedia.org/wiki/Knowledge_graph)
-- [DBpedia](https://wiki.dbpedia.org/)
-- [Wikidata](https://www.wikidata.org/)
-- [Google: Introducing the Knowledge Graph](https://blog.google/products/search/introducing-knowledge-graph-things-not/)
+
+1. Ontotext. (n.d.). What Is a Knowledge Graph?. Ontotext Knowledge Hub.
+2. Neo4j. (n.d.). What Is a Knowledge Graph?. Neo4j Blog.
+3. IBM. (n.d.). What is a Knowledge Graph?. IBM Think Topics.
+4. Splunk. (n.d.). Knowledge Graphs. Splunk Blog.
+5. Schema App. (n.d.). Anatomy of a Content Knowledge Graph. Schema App.
+6. Stanford University. (2020). Knowledge Graph Inference Algorithms. Stanford Web.
+7. AIMultiple. (n.d.). Knowledge Graph Use Cases. AIMultiple Research.
+8. PuppyGraph. (n.d.). Knowledge Graph Examples. PuppyGraph Blog.
+9. Wikipedia. (n.d.). Knowledge Graph. Wikipedia.
+10. DBpedia. Online Knowledge Base. URL: https://wiki.dbpedia.org/
+11. Wikidata. Online Knowledge Base. URL: https://www.wikidata.org/
+12. Google. (n.d.). Introducing the Knowledge Graph. Google Blog.

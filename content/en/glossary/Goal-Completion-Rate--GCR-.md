@@ -216,20 +216,21 @@ Generally yes, but only if goal is meaningful. Easy goals (clicking links) may i
 
 ## References
 
-- [EBI.AI: What is Goal Completion Rate?](https://ebi.ai/blog/goal-completion-rate/)
-- [EBI.AI: Cost Per Call UK Average](https://ebi.ai/blog/cost-per-call/)
-- [EBI.AI: Barking Council AI Case Study](https://ebi.ai/blog/barking-council-ai-case-study/)
-- [EBI.AI: Savings Calculator](https://ebi.ai/savings-calculator/)
-- [Prompts.ai: Task-Specific Chatbot Evaluation Metrics](https://www.prompts.ai/en/blog/guide-to-task-specific-chatbot-evaluation-metrics)
-- [DashThis: Goal Completion Rate KPI Examples](https://dashthis.com/kpi-examples/goal-completion-rate/)
-- [DashThis: Dashboard Templates](https://dashthis.com/app/view/dashboard-d_RzR1aMxE28z1MEoDNtcg)
-- [DashThis: Sign Up](https://dashthis.com/app/admin/security/register)
-- [Klipfolio: Goal Completion Rate KPI](https://www.klipfolio.com/resources/kpi-examples/digital-marketing/goal-completion-rate)
-- [Mopinion: Goal Completion Rates in Ordering Funnels](https://mopinion.com/collecting-goal-completion-rates-and-customer-effort-scores-in-online-ordering-funnels/)
-- [Mopinion: Demo Request](https://mopinion.com/demo/?track=blog-post)
-- [TheWordsmith.AI: What is Goal Completion Rate](https://www.thewordsmith.ai/glossary/what-is-goal-completion-rate)
-- [Chatbase: Chatbot Analytics](https://www.chatbase.co/blog/chatbot-analytics)
-- [HiverHQ: Chatbot Analytics](https://hiverhq.com/blog/chatbot-analytics)
-- [Google Analytics](https://analytics.google.com)
-- [Chatbase Platform](https://www.chatbase.co/)
-- [Prompts.ai Platform](https://www.prompts.ai)
+
+1. EBI.AI. (n.d.). What is Goal Completion Rate?. EBI.AI Blog.
+2. EBI.AI. (n.d.). Cost Per Call UK Average. EBI.AI Blog.
+3. EBI.AI. (n.d.). Barking Council AI Case Study. EBI.AI Blog.
+4. EBI.AI. Savings Calculator. URL: https://ebi.ai/savings-calculator/
+5. Prompts.ai. (n.d.). Task-Specific Chatbot Evaluation Metrics. Prompts.ai Blog.
+6. DashThis. (n.d.). Goal Completion Rate KPI Examples. DashThis.
+7. DashThis. Dashboard Templates. URL: https://dashthis.com/app/view/dashboard-d_RzR1aMxE28z1MEoDNtcg
+8. DashThis. Sign Up. URL: https://dashthis.com/app/admin/security/register
+9. Klipfolio. (n.d.). Goal Completion Rate KPI. Klipfolio Resources.
+10. Mopinion. (n.d.). Goal Completion Rates in Ordering Funnels. Mopinion.
+11. Mopinion. Demo Request. URL: https://mopinion.com/demo/?track=blog-post
+12. TheWordsmith.AI. (n.d.). What is Goal Completion Rate. TheWordsmith.AI Glossary.
+13. Chatbase. (n.d.). Chatbot Analytics. Chatbase Blog.
+14. HiverHQ. (n.d.). Chatbot Analytics. HiverHQ Blog.
+15. Google Analytics. Web Analytics Service. URL: https://analytics.google.com
+16. Chatbase. Chatbot Analytics Platform. URL: https://www.chatbase.co/
+17. Prompts.ai. AI Platform. URL: https://www.prompts.ai

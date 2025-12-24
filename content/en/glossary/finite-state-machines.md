@@ -642,8 +642,13 @@ class Context:
 
 ## References
 
-- [BLT Inc: A Guide to Finite State Machines](https://bltinc.com/2024/11/04/finite-state-machines-guide/)
-- [SiliconVeda: FSM Comprehensive Guide](https://www.siliconveda.com/2024/10/finite-state-machine-fsm-comprehensive.html)
-- [Game Programming Patterns: State](https://gameprogrammingpatterns.com/state.html)
-- [Software Engineering Stack Exchange: FSM Examples](https://softwareengineering.stackexchange.com/questions/47806/examples-of-finite-state-machines)
-- [Quora: Real-world FSM Examples and Code](https://www.quora.com/What-are-some-real-world-examples-of-where-finite-state-machines-can-be-used-Can-you-provide-any-code-examples)
+
+1. BLT Inc. (2024). A Guide to Finite State Machines. BLT Inc.
+
+2. SiliconVeda. (2024). FSM Comprehensive Guide. SiliconVeda.
+
+3. Game Programming Patterns. (n.d.). State. Game Programming Patterns.
+
+4. Software Engineering Stack Exchange. (n.d.). FSM Examples. Stack Exchange.
+
+5. Quora. (n.d.). Real-world FSM Examples and Code. Quora.

@@ -244,14 +244,15 @@ LTVが収益だけでなく利益を反映するようにするため—運用�
 
 ## 参考文献
 
-- [Contentsquare: Customer Lifetime Value in SaaS](https://contentsquare.com/guides/customer-lifetime-value/saas/)
-- [LTVplus: AI-Powered Customer Support](https://www.ltvplus.com/customer-service/ai-powered-customer-support/)
-- [Stripe: Customer Lifetime Value Guide](https://stripe.com/en-de/resources/more/customer-lifetime-value)
-- [HiBob: What is Customer Lifetime Value (CLV or LTV)](https://www.hibob.com/financial-metrics/ltv-lifetime-value/)
-- [IBM: What is Customer Lifetime Value (CLV)?](https://www.ibm.com/think/topics/customer-lifetime-value)
-- [Cube Software: Customer Lifetime Value Guide](https://www.cubesoftware.com/blog/customer-lifetime-value)
-- [Drivetrain: Lifetime Value (LTV) in SaaS](https://www.drivetrain.ai/strategic-finance-glossary/lifetime-value-ltv)
-- [Optimizely: What is Lifetime Value (LTV)?](https://www.optimizely.com/optimization-glossary/lifetime-value/)
-- [Contentsquare: How to Increase Customer LTV](https://contentsquare.com/guides/customer-lifetime-value/increase/)
-- [Contentsquare: Customer Retention Metrics](https://contentsquare.com/guides/customer-retention/metrics/)
-- [LTVplus: When AI Meets CX](https://www.ltvplus.com/guides/ai-cx-future-of-customer-service/)
+
+1. Contentsquare. (n.d.). Customer Lifetime Value in SaaS. Contentsquare Guides.
+2. LTVplus. (n.d.). AI-Powered Customer Support. LTVplus Customer Service.
+3. Stripe. (n.d.). Customer Lifetime Value Guide. Stripe Resources.
+4. HiBob. (n.d.). What is Customer Lifetime Value (CLV or LTV). HiBob Financial Metrics.
+5. IBM. (n.d.). What is Customer Lifetime Value (CLV)?. IBM Think Topics.
+6. Cube Software. (n.d.). Customer Lifetime Value Guide. Cube Software Blog.
+7. Drivetrain. (n.d.). Lifetime Value (LTV) in SaaS. Drivetrain Strategic Finance Glossary.
+8. Optimizely. (n.d.). What is Lifetime Value (LTV)?. Optimizely Optimization Glossary.
+9. Contentsquare. (n.d.). How to Increase Customer LTV. Contentsquare Guides.
+10. Contentsquare. (n.d.). Customer Retention Metrics. Contentsquare Guides.
+11. LTVplus. (n.d.). When AI Meets CX. LTVplus Guides.

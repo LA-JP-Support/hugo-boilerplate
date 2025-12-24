@@ -370,17 +370,31 @@ IT近代化は技術システムのアップグレードに焦点を当てます
 
 ## 参考文献
 
-- [IBM: What Is Digital Transformation?](https://www.ibm.com/think/topics/digital-transformation)
-- [The Enterprisers Project: What is digital transformation?](https://enterprisersproject.com/what-is-digital-transformation)
-- [Salesforce: What is Digital Transformation?](https://www.salesforce.com/digital-transformation/)
-- [McKinsey: What is Digital Transformation?](https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-digital-transformation)
-- [McKinsey: Top Tech Trends 2025](https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-top-trends-in-tech)
-- [Whatfix: Digital Transformation Examples](https://whatfix.com/blog/digital-transformation-examples/)
-- [Quixy: Digital Transformation Examples](https://quixy.com/blog/examples-of-digital-transformation/)
-- [Whatfix: Digital Transformation Challenges](https://whatfix.com/blog/digital-transformation-challenges/)
-- [Wrike: Impact of Digital Transformation](https://www.wrike.com/blog/impact-of-digital-transformation/)
-- [IMD: Emerging Technologies](https://www.imd.org/blog/digital-transformation/emerging-technologies/)
-- [Prosci: Digital Transformation Frameworks](https://www.prosci.com/blog/digital-transformation-framework)
-- [Product School: Digital Transformation Frameworks](https://productschool.com/blog/digital-transformation/digital-transformation-framework)
-- [Svitla: Digital Transformation Frameworks](https://svitla.com/blog/digital-transformation-frameworks/)
-- [Forrester: Measuring Digital Transformation Success](https://go.forrester.com/blogs/measuring-the-success-of-digital-transformation/)
+
+1. IBM. (n.d.). What Is Digital Transformation?. IBM Think Topics.
+
+2. The Enterprisers Project. (n.d.). What is digital transformation?. The Enterprisers Project.
+
+3. Salesforce. (n.d.). What is Digital Transformation?. Salesforce.
+
+4. McKinsey. (n.d.). What is Digital Transformation?. McKinsey Featured Insights.
+
+5. McKinsey. (n.d.). Top Tech Trends 2025. McKinsey Capabilities.
+
+6. Whatfix. (n.d.). Digital Transformation Examples. Whatfix Blog.
+
+7. Quixy. (n.d.). Digital Transformation Examples. Quixy Blog.
+
+8. Whatfix. (n.d.). Digital Transformation Challenges. Whatfix Blog.
+
+9. Wrike. (n.d.). Impact of Digital Transformation. Wrike Blog.
+
+10. IMD. (n.d.). Emerging Technologies. IMD Blog.
+
+11. Prosci. (n.d.). Digital Transformation Frameworks. Prosci Blog.
+
+12. Product School. (n.d.). Digital Transformation Frameworks. Product School Blog.
+
+13. Svitla. (n.d.). Digital Transformation Frameworks. Svitla Blog.
+
+14. Forrester. (n.d.). Measuring Digital Transformation Success. Forrester Blogs.

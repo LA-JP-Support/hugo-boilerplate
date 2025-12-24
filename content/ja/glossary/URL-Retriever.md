@@ -195,14 +195,25 @@ URL Retrieverは、スケジューリング、データ構造化、統合を含�
 
 ## 参考文献
 
-- [rtrvr.ai – Retrieve, Research, Robotize the Web with AI](https://rtrvr.ai/)
-- [RTRVR AI v2: YouTube Demo – Automate Anything in Your Browser](https://www.youtube.com/watch?v=ZB_U5QlyY0Y)
-- [RTRVR AI API Documentation](https://www.rtrvr.ai/docs/api-reference)
-- [RTRVR AI User Testimonials](https://rtrvr.ai/)
-- [Web Bench Results – rtrvr.ai Performance](https://www.rtrvr.ai/blog/web-bench-results)
-- [What is a URL? – MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
-- [rtrvr.ai Reddit Review – User Experiences](https://www.reddit.com/r/AISEOInsider/comments/1k6znfn/rtrvr_ai_the_secret_browser_automation_tool_thats/)
-- [RTRVR Sheets Workflow Documentation](https://www.rtrvr.ai/docs/sheets-workflows)
-- [RTRVR Scheduling & Automation Docs](https://www.rtrvr.ai/docs/schedules)
-- [RTRVR Webhooks & Integration](https://www.rtrvr.ai/docs/webhooks)
-- [RTRVR AI LinkedIn Job Automation (YouTube)](https://www.youtube.com/watch?v=R0BRJTDZiCU)
+
+1. rtrvr.ai. Service. Web Automation and Research Tool. URL: https://rtrvr.ai/
+
+2. rtrvr.ai. (n.d.). RTRVR AI v2: YouTube Demo – Automate Anything in Your Browser. YouTube.
+
+3. rtrvr.ai. (n.d.). RTRVR AI API Documentation. rtrvr.ai Docs.
+
+4. rtrvr.ai. (n.d.). RTRVR AI User Testimonials. rtrvr.ai.
+
+5. rtrvr.ai. (n.d.). Web Bench Results – rtrvr.ai Performance. rtrvr.ai Blog.
+
+6. MDN. (n.d.). What is a URL?. MDN Web Docs.
+
+7. Reddit. (n.d.). rtrvr.ai Reddit Review – User Experiences. Reddit r/AISEOInsider.
+
+8. rtrvr.ai. (n.d.). RTRVR Sheets Workflow Documentation. rtrvr.ai Docs.
+
+9. rtrvr.ai. (n.d.). RTRVR Scheduling & Automation Docs. rtrvr.ai Docs.
+
+10. rtrvr.ai. (n.d.). RTRVR Webhooks & Integration. rtrvr.ai Docs.
+
+11. rtrvr.ai. (n.d.). RTRVR AI LinkedIn Job Automation. YouTube.

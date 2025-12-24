@@ -275,30 +275,31 @@ CI/CDパイプラインと自動テストを実装する。
 
 ## 参考文献
 
-- [Atlassian: What is Tech Debt?](https://www.atlassian.com/agile/software-development/technical-debt)
-- [IBM: What is Technical Debt?](https://www.ibm.com/think/topics/technical-debt)
-- [Ardoq: An Introduction to Tech Debt](https://www.ardoq.com/knowledge-hub/technical-debt)
-- [Martin Fowler: Technical Debt Quadrant](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html)
-- [Ward Cunningham Explains Debt Metaphor](https://wiki.c2.com/?WardExplainsDebtMetaphor)
-- [SIG: Five Types of Technical Debt](https://www.softwareimprovementgroup.com/five-types-of-technical-debt-that-are-often-overlooked/)
-- [NeurIPS: Hidden Technical Debt in Machine Learning Systems (PDF)](https://papers.neurips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)
-- [SQALE Technical Debt Framework (PDF)](http://www.sqale.org/wp-content/uploads/2016/08/SQALE-Method-EN-V1-1.pdf)
-- [AWS Transform Custom for Code Modernization](https://aws.amazon.com/transform/custom)
-- [Wikipedia: Technical Debt](https://en.wikipedia.org/wiki/Technical_debt)
-- [ProductPlan: Technical Debt](https://www.productplan.com/glossary/technical-debt/)
-- [Mendix: What is Technical Debt?](https://www.mendix.com/blog/what-is-technical-debt/)
-- [Forbes: Measuring and Managing Technical Debt](https://www.forbes.com/sites/forbestechcouncil/2022/08/10/measuring-and-managing-technical-debt/?sh=34d418472c23)
-- [AWS Blog: Introducing AWS Transform Custom](https://aws.amazon.com/blogs/aws/introducing-aws-transform-custom-crush-tech-debt-with-ai-powered-code-modernization/)
-- [CircleCI: Manage and Measure Technical Debt](https://circleci.com/blog/manage-and-measure-technical-debt/)
-- [OpsLevel: How to Measure Technical Debt](https://www.opslevel.com/resources/how-to-measure-technical-debt-a-step-by-step-introduction)
-- [vFunction: How to Measure Technical Debt](https://vfunction.com/blog/how-to-measure-technical-debt/)
-- [ResearchGate: Towards an Ontology of Terms on Technical Debt](https://www.researchgate.net/publication/286010286_Towards_an_Ontology_of_Terms_on_Technical_Debt)
-- [Atlassian: Jira Templates](https://www.atlassian.com/software/jira/templates)
-- [Atlassian: Jira Software](https://www.atlassian.com/software/jira)
-- [SonarQube](https://www.sonarqube.org/)
-- [CodeClimate](https://codeclimate.com/)
-- [SQALE Method](http://www.sqale.org/)
-- [Atlassian: Agile Software Development](https://www.atlassian.com/agile/software-development)
-- [Atlassian: Agile Project Management](https://www.atlassian.com/agile/project-management)
-- [IBM Think: Artificial Intelligence](https://www.ibm.com/think/topics/artificial-intelligence)
-- [IBM Think: DevOps](https://www.ibm.com/think/topics/devops)
+
+1. Atlassian. (n.d.). What is Tech Debt?. Atlassian Blog.
+2. IBM. (n.d.). What is Technical Debt?. IBM Think Topics.
+3. Ardoq. (n.d.). An Introduction to Tech Debt. Ardoq Knowledge Hub.
+4. Martin Fowler. (n.d.). Technical Debt Quadrant. Martin Fowler Blog.
+5. Ward Cunningham. (n.d.). Debt Metaphor. C2 Wiki.
+6. Software Improvement Group. (n.d.). Five Types of Technical Debt That Are Often Overlooked. SIG Website.
+7. NeurIPS. (n.d.). Hidden Technical Debt in Machine Learning Systems. NeurIPS Papers.
+8. SQALE. (n.d.). SQALE Technical Debt Framework. SQALE Method.
+9. AWS. (n.d.). Transform Custom for Code Modernization. AWS Transform.
+10. Wikipedia. (n.d.). Technical Debt. Wikipedia.
+11. ProductPlan. (n.d.). Technical Debt. ProductPlan Glossary.
+12. Mendix. (n.d.). What is Technical Debt?. Mendix Blog.
+13. Forbes. (2022). Measuring and Managing Technical Debt. Forbes Tech Council.
+14. AWS. (n.d.). Introducing AWS Transform Custom. AWS Blog.
+15. CircleCI. (n.d.). Manage and Measure Technical Debt. CircleCI Blog.
+16. OpsLevel. (n.d.). How to Measure Technical Debt. OpsLevel Resources.
+17. vFunction. (n.d.). How to Measure Technical Debt. vFunction Blog.
+18. ResearchGate. (n.d.). Towards an Ontology of Terms on Technical Debt. ResearchGate Publication.
+19. Atlassian Jira Templates. Description of project management templates. URL: https://www.atlassian.com/software/jira/templates
+20. Atlassian Jira Software. Project management and issue tracking tool. URL: https://www.atlassian.com/software/jira
+21. SonarQube. Code quality and security analysis tool. URL: https://www.sonarqube.org/
+22. CodeClimate. Code quality and technical debt measurement tool. URL: https://codeclimate.com/
+23. SQALE Method. Technical debt assessment framework. URL: http://www.sqale.org/
+24. Atlassian Agile Software Development. Agile methodology resource. URL: https://www.atlassian.com/agile/software-development
+25. Atlassian Agile Project Management. Project management methodology guide. URL: https://www.atlassian.com/agile/project-management
+26. IBM Think Artificial Intelligence. AI topic resource. URL: https://www.ibm.com/think/topics/artificial-intelligence
+27. IBM Think DevOps. DevOps topic resource. URL: https://www.ibm.com/think/topics/devops

@@ -325,16 +325,17 @@ Yes. Tasks that depend on previous step outputs or modify shared state must be s
 
 ## References
 
-- [Virtuoso QA: Parallel Test Execution for 10x Faster Testing](https://www.virtuosoqa.com/post/parallel-test-execution)
-- [LambdaTest: What Is Parallel Testing And Why Is It Important?](https://www.lambdatest.com/blog/what-is-parallel-testing-and-why-to-adopt-it/)
-- [BrowserStack: Parallel Testing—The Essential Guide](https://www.browserstack.com/guide/what-is-parallel-testing)
-- [Functionize: What is Parallel Execution?](https://www.functionize.com/blog/what-is-parallel-execution)
-- [Microsoft: Optimize flows with parallel execution and concurrency](https://learn.microsoft.com/en-us/power-automate/guidance/coding-guidelines/implement-parallel-execution)
-- [HowStuffWorks: How Parallel Processing Works](https://computer.howstuffworks.com/parallel-processing.htm)
-- [Selenium Grid Documentation](https://www.selenium.dev/documentation/grid/)
-- [TestNG Parallel Running](https://testng.org/doc/documentation-main.html#parallel-running)
-- [Pytest-xdist Documentation](https://pypi.org/project/pytest-xdist/)
-- [Cypress Cloud Parallelization](https://docs.cypress.io/guides/cloud/parallelization)
-- [LambdaTest Parallel Testing](https://www.lambdatest.com/support/docs/parallel-testing/)
-- [BrowserStack Parallel Testing](https://www.browserstack.com/docs/automate/selenium/parallel-testing)
-- [Kubernetes Jobs Documentation](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
+
+1. Virtuoso QA. (n.d.). Parallel Test Execution for 10x Faster Testing. Virtuoso QA Blog.
+2. LambdaTest. (n.d.). What Is Parallel Testing And Why Is It Important?. LambdaTest Blog.
+3. BrowserStack. (n.d.). Parallel Testing—The Essential Guide. BrowserStack Guide.
+4. Functionize. (n.d.). What is Parallel Execution?. Functionize Blog.
+5. Microsoft. (n.d.). Optimize flows with parallel execution and concurrency. Microsoft Learn.
+6. HowStuffWorks. (n.d.). How Parallel Processing Works. HowStuffWorks.
+7. Selenium. (n.d.). Selenium Grid Documentation. Selenium Documentation.
+8. TestNG. (n.d.). TestNG Parallel Running. TestNG Documentation.
+9. pytest-xdist. (n.d.). Pytest-xdist Documentation. PyPI.
+10. Cypress. (n.d.). Cypress Cloud Parallelization. Cypress Documentation.
+11. LambdaTest. (n.d.). LambdaTest Parallel Testing. LambdaTest Support Docs.
+12. BrowserStack. (n.d.). BrowserStack Parallel Testing. BrowserStack Documentation.
+13. Kubernetes. (n.d.). Kubernetes Jobs Documentation. Kubernetes Documentation.

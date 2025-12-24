@@ -288,17 +288,31 @@ s_r = sqrt(Σ(x̄_i - x̄_total)² / (n - 1))
 
 ## 参考文献
 
-- [AIMultiple: Reproducible AI Guide](https://research.aimultiple.com/reproducible-ai/)
-- [Science: Reproducibility Crisis in AI Research](https://www.science.org/doi/10.1126/science.359.6377.725)
-- [MIT Technology Review: AI Replication Crisis](https://www.technologyreview.com/2020/11/12/1011944/artificial-intelligence-replication-crisis-science-big-tech-google-deepmind-facebook-openai/)
-- [Nature: Reproducibility Standards](https://www.nature.com/articles/s41586-020-2766-y)
-- [AAAI Conference: Reproducibility in AI](https://ojs.aaai.org/index.php/AAAI/article/view/11503)
-- [Union.ai: Reproducible Workflows for Compound AI](https://www.union.ai/blog-post/reproducible-workflows-for-compound-ai-reliable-and-scalable-ai-development)
-- [ISO 5725-2:1994: Accuracy Standards](https://www.iso.org/standard/11834.html)
-- [JCGM 200:2012: International Vocabulary of Metrology](https://www.bipm.org/en/publications/guides/vim)
-- [NeurIPS: Reproducibility Checklist](https://neurips.cc/public/guides/Reproducibility)
-- [MLflow Documentation](https://mlflow.org/)
-- [Weights & Biases Documentation](https://wandb.ai/)
-- [DVC: Data Version Control](https://dvc.org/)
-- [AIMultiple: MLOps Tools Guide](https://research.aimultiple.com/mlops-tools/)
-- [AIMultiple: MLOps Overview](https://research.aimultiple.com/mlops/)
+
+1. Science. (2018). Reproducibility Crisis in AI Research. Science, 359(6377), 725.
+
+2. MIT Technology Review. (2020). AI Replication Crisis. MIT Technology Review.
+
+3. Nature. (2020). Reproducibility Standards. Nature.
+
+4. AAAI Conference. (2021). Reproducibility in AI. AAAI Conference Proceedings.
+
+5. Union.ai. (n.d.). Reproducible Workflows for Compound AI. Union.ai Blog.
+
+6. International Organization for Standardization. (1994). ISO 5725-2:1994: Accuracy Standards. ISO.
+
+7. JCGM. (2012). International Vocabulary of Metrology. BIPM.
+
+8. NeurIPS. (n.d.). Reproducibility Checklist. NeurIPS Conference Guide.
+
+9. MLflow. MLflow Documentation. URL: https://mlflow.org/
+
+10. Weights & Biases. Machine Learning Experiment Tracking. URL: https://wandb.ai/
+
+11. DVC. Data Version Control Tool. URL: https://dvc.org/
+
+12. AIMultiple. (n.d.). MLOps Tools Guide. AIMultiple Research.
+
+13. AIMultiple. (n.d.). MLOps Overview. AIMultiple Research.
+
+14. AIMultiple. (n.d.). Reproducible AI Guide. AIMultiple Research.

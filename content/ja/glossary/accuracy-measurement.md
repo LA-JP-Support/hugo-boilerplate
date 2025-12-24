@@ -275,11 +275,12 @@ F1スコアは適合率と再現率の調和平均を取り、両方のエラー
 
 ## 参考文献
 
-- [Galileo AI: Understanding Accuracy in AI](https://galileo.ai/blog/understanding-accuracy-in-ai)
-- [GeeksforGeeks: Confusion Matrix in Machine Learning](https://www.geeksforgeeks.org/machine-learning/confusion-matrix-machine-learning/)
-- [GeeksforGeeks: Precision and Recall](https://www.geeksforgeeks.org/machine-learning/precision-and-recall-in-machine-learning/)
-- [GeeksforGeeks: F1 Score](https://www.geeksforgeeks.org/r-language/precision-recall-and-f1-score-using-r/)
-- [GeeksforGeeks: Type I and Type II Errors](https://www.geeksforgeeks.org/maths/type-i-and-type-ii-errors/)
-- [Wikipedia: BLEU Score](https://en.wikipedia.org/wiki/BLEU)
-- [Wikipedia: ROUGE Metric](https://en.wikipedia.org/wiki/ROUGE_(metric))
-- [ArXiv: BERTScore Paper](https://arxiv.org/abs/1904.09675)
+
+1. Galileo AI. (n.d.). Understanding Accuracy in AI. Galileo AI Blog.
+2. GeeksforGeeks. (n.d.). Confusion Matrix in Machine Learning. GeeksforGeeks.
+3. GeeksforGeeks. (n.d.). Precision and Recall. GeeksforGeeks.
+4. GeeksforGeeks. (n.d.). F1 Score. GeeksforGeeks.
+5. GeeksforGeeks. (n.d.). Type I and Type II Errors. GeeksforGeeks.
+6. Wikipedia. (n.d.). BLEU Score. Wikipedia.
+7. Wikipedia. (n.d.). ROUGE Metric. Wikipedia.
+8. ArXiv. (2019). BERTScore Paper. ArXiv.

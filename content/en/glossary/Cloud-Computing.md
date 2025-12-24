@@ -267,48 +267,49 @@ Security is a shared responsibility between providers and users.
 
 ## References
 
-- [AWS: What is Cloud Computing?](https://aws.amazon.com/what-is-cloud-computing/)
-- [AWS: Types of Cloud Computing](https://aws.amazon.com/types-of-cloud-computing/)
-- [AWS: What is IaaS?](https://aws.amazon.com/what-is/iaas/)
-- [AWS: What is iPaaS?](https://aws.amazon.com/what-is/ipaas/)
-- [AWS: What is SaaS?](https://aws.amazon.com/what-is/saas/)
-- [AWS Serverless](https://aws.amazon.com/serverless/)
-- [AWS: Case Studies](https://aws.amazon.com/solutions/case-studies/?hp=tile&tile=customerstories)
-- [AWS: What is Cloud Infrastructure?](https://aws.amazon.com/what-is/cloud-infrastructure/)
-- [AWS EC2](https://aws.amazon.com/ec2/)
-- [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
-- [AWS Lambda](https://aws.amazon.com/lambda/)
-- [AWS Outposts](https://aws.amazon.com/outposts/)
-- [Google Cloud: What is Cloud Computing?](https://cloud.google.com/learn/what-is-cloud-computing)
-- [Google Cloud: What is Cloud Architecture?](https://cloud.google.com/learn/what-is-cloud-architecture)
-- [Google Cloud: PaaS vs IaaS vs SaaS](https://cloud.google.com/learn/paas-vs-iaas-vs-saas)
-- [Google Cloud: What is IaaS?](https://cloud.google.com/learn/what-is-iaas)
-- [Google Cloud: What is PaaS?](https://cloud.google.com/learn/what-is-paas)
-- [Google Cloud: What is SaaS?](https://cloud.google.com/learn/what-is-saas)
-- [Google Cloud: What is Public Cloud?](https://cloud.google.com/learn/what-is-public-cloud)
-- [Google Cloud: What is a Private Cloud?](https://cloud.google.com/discover/what-is-a-private-cloud)
-- [Google Cloud: What is Hybrid Cloud?](https://cloud.google.com/learn/what-is-hybrid-cloud)
-- [Google Cloud Serverless](https://cloud.google.com/serverless)
-- [Google Compute Engine](https://cloud.google.com/compute)
-- [Google App Engine](https://cloud.google.com/appengine)
-- [Google Cloud Functions](https://cloud.google.com/functions)
-- [Google Workspace](https://workspace.google.com/)
-- [IBM: What is Cloud Computing?](https://www.ibm.com/think/topics/cloud-computing)
-- [IBM: Cloud Architecture](https://www.ibm.com/think/topics/cloud-architecture)
-- [IBM: IaaS, PaaS, SaaS](https://www.ibm.com/think/topics/iaas-paas-saas)
-- [IBM: What is IaaS?](https://www.ibm.com/think/topics/iaas)
-- [IBM: What is PaaS?](https://www.ibm.com/think/topics/paas)
-- [IBM: What is SaaS?](https://www.ibm.com/think/topics/saas)
-- [IBM: Cloud Security](https://www.ibm.com/think/topics/cloud-security)
-- [Azure Virtual Machines](https://azure.microsoft.com/en-us/services/virtual-machines/)
-- [Azure Functions](https://azure.microsoft.com/en-us/services/functions/)
-- [Azure Arc](https://azure.microsoft.com/en-us/services/azure-arc/)
-- [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365)
-- [Salesforce CRM](https://www.salesforce.com/)
-- [Red Hat OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift)
-- [VMware vSphere](https://www.vmware.com/products/vsphere.html)
-- [OpenStack](https://www.openstack.org/)
-- [OpenMetal: What is Cloud Computing?](https://openmetal.io/resources/blog/what-is-cloud-computing/)
-- [GeeksforGeeks: Cloud Computing Architecture](https://www.geeksforgeeks.org/cloud-computing/architecture-of-cloud-computing/)
-- [GeeksforGeeks: Cloud Computing Infrastructure](https://www.geeksforgeeks.org/software-engineering/cloud-computing-infrastructure/)
-- [Spot.io: Cloud Infrastructure Components and Deployment Models](https://spot.io/resources/cloud-optimization/cloud-infrastructure-4-key-components-and-deployment-models/)
+
+1. AWS. (n.d.). What is Cloud Computing?. AWS.
+2. AWS. (n.d.). Types of Cloud Computing. AWS.
+3. AWS. (n.d.). What is IaaS?. AWS.
+4. AWS. (n.d.). What is iPaaS?. AWS.
+5. AWS. (n.d.). What is SaaS?. AWS.
+6. AWS. (n.d.). AWS Serverless. AWS.
+7. AWS. (n.d.). Case Studies. AWS.
+8. AWS. (n.d.). What is Cloud Infrastructure?. AWS.
+9. AWS EC2. Cloud Computing Service. URL: https://aws.amazon.com/ec2/
+10. AWS Elastic Beanstalk. Cloud Computing Service. URL: https://aws.amazon.com/elasticbeanstalk/
+11. AWS Lambda. Cloud Computing Service. URL: https://aws.amazon.com/lambda/
+12. AWS Outposts. Cloud Computing Service. URL: https://aws.amazon.com/outposts/
+13. Google Cloud. (n.d.). What is Cloud Computing?. Google Cloud.
+14. Google Cloud. (n.d.). What is Cloud Architecture?. Google Cloud.
+15. Google Cloud. (n.d.). PaaS vs IaaS vs SaaS. Google Cloud.
+16. Google Cloud. (n.d.). What is IaaS?. Google Cloud.
+17. Google Cloud. (n.d.). What is PaaS?. Google Cloud.
+18. Google Cloud. (n.d.). What is SaaS?. Google Cloud.
+19. Google Cloud. (n.d.). What is Public Cloud?. Google Cloud.
+20. Google Cloud. (n.d.). What is a Private Cloud?. Google Cloud.
+21. Google Cloud. (n.d.). What is Hybrid Cloud?. Google Cloud.
+22. Google Cloud. (n.d.). Google Cloud Serverless. Google Cloud.
+23. Google Compute Engine. Cloud Computing Service. URL: https://cloud.google.com/compute
+24. Google App Engine. Cloud Computing Service. URL: https://cloud.google.com/appengine
+25. Google Cloud Functions. Cloud Computing Service. URL: https://cloud.google.com/functions
+26. Google Workspace. Cloud Service. URL: https://workspace.google.com/
+27. IBM. (n.d.). What is Cloud Computing?. IBM Think Topics.
+28. IBM. (n.d.). Cloud Architecture. IBM Think Topics.
+29. IBM. (n.d.). IaaS, PaaS, SaaS. IBM Think Topics.
+30. IBM. (n.d.). What is IaaS?. IBM Think Topics.
+31. IBM. (n.d.). What is PaaS?. IBM Think Topics.
+32. IBM. (n.d.). What is SaaS?. IBM Think Topics.
+33. IBM. (n.d.). Cloud Security. IBM Think Topics.
+34. Azure Virtual Machines. Cloud Computing Service. URL: https://azure.microsoft.com/en-us/services/virtual-machines/
+35. Azure Functions. Cloud Computing Service. URL: https://azure.microsoft.com/en-us/services/functions/
+36. Azure Arc. Cloud Computing Service. URL: https://azure.microsoft.com/en-us/services/azure-arc/
+37. Microsoft 365. Cloud Service. URL: https://www.microsoft.com/en-us/microsoft-365
+38. Salesforce CRM. Cloud Service. URL: https://www.salesforce.com/
+39. Red Hat OpenShift. Cloud Computing Platform. URL: https://www.redhat.com/en/technologies/cloud-computing/openshift
+40. VMware vSphere. Cloud Computing Platform. URL: https://www.vmware.com/products/vsphere.html
+41. OpenStack. Open Source Cloud Computing Platform. URL: https://www.openstack.org/
+42. OpenMetal. (n.d.). What is Cloud Computing?. OpenMetal Blog.
+43. GeeksforGeeks. (n.d.). Cloud Computing Architecture. GeeksforGeeks.
+44. GeeksforGeeks. (n.d.). Cloud Computing Infrastructure. GeeksforGeeks.
+45. Spot.io. (n.d.). Cloud Infrastructure Components and Deployment Models. Spot.io Resources.

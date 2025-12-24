@@ -197,16 +197,17 @@ url: "/ja/glossary/Task-Oriented-Bot/"
 
 ## 参考文献
 
-- [Oracle: What Is a Chatbot?](https://www.oracle.com/chatbots/what-is-a-chatbot/)
-- [AWS: What is a Chatbot?](https://aws.amazon.com/what-is/chatbot/)
-- [ContactFusion: Comprehensive Guide to Different Types of AI Chatbots](https://www.contactfusion.co.uk/comprehensive-guide-to-different-types-of-ai-chatbots/)
-- [Qualimero: Types of Chatbots](https://www.qualimero.com/en/blog/types-of-chatbots-guide)
-- [Insider: Glossary – Task-Oriented AI Agent](https://useinsider.com/glossary/task-oriented-ai-agent/)
-- [Tencent Cloud: How Does a Chatbot Fill and Confirm Slots?](https://www.tencentcloud.com/techpedia/127699)
-- [Medium: Slot Filling – A First Step Towards Ambitious NLP Systems](https://medium.com/@aixplain/slot-filling-a-first-step-towards-ambitious-nlp-systems-ead102ea6c01)
-- [YouTube: Oracle – How to Build a Chatbot in Five Minutes](https://www.oracle.com/chatbots/what-is-a-chatbot/?ytid=v5KGZ2UF-bI)
-- [AWS: Chatbot Best Practices](https://aws.amazon.com/what-is/chatbot/#what-are-the-best-practices-in-building-chatbots--1xgzrhn)
-- [AWS: Chatbot Use Cases](https://aws.amazon.com/what-is/chatbot/#what-are-use-cases-for-chatbots--1xgzrhn)
-- [AWS: What is Natural Language Processing?](https://aws.amazon.com/what-is/nlp/)
-- [AWS: What is Artificial Intelligence?](https://aws.amazon.com/what-is/artificial-intelligence/)
-- [AWS: What is Machine Learning?](https://aws.amazon.com/what-is/machine-learning/)
+
+1. Oracle. (n.d.). What Is a Chatbot?. Oracle.
+2. AWS. (n.d.). What is a Chatbot?. AWS.
+3. ContactFusion. (n.d.). Comprehensive Guide to Different Types of AI Chatbots. ContactFusion.
+4. Qualimero. (n.d.). Types of Chatbots. Qualimero Blog.
+5. Insider. (n.d.). Glossary – Task-Oriented AI Agent. Insider.
+6. Tencent Cloud. (n.d.). How Does a Chatbot Fill and Confirm Slots?. Tencent Cloud.
+7. Medium. (n.d.). Slot Filling – A First Step Towards Ambitious NLP Systems. Medium.
+8. Oracle. (n.d.). How to Build a Chatbot in Five Minutes. YouTube.
+9. AWS. (n.d.). Chatbot Best Practices. AWS.
+10. AWS. (n.d.). Chatbot Use Cases. AWS.
+11. AWS. (n.d.). What is Natural Language Processing?. AWS.
+12. AWS. (n.d.). What is Artificial Intelligence?. AWS.
+13. AWS. (n.d.). What is Machine Learning?. AWS.

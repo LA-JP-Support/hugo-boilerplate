@@ -206,24 +206,45 @@ A: See References section for documentation, forum, GitHub, Discord, and YouTube
 
 ## References
 
-- [Dify Official Website](https://dify.ai/)
-- [Dify Documentation](https://docs.dify.ai/en/introduction)
-- [Dify Quick Start Guide](https://docs.dify.ai/en/use-dify/getting-started/quick-start)
-- [Dify Tutorials: Customer Service Bot](https://docs.dify.ai/en/use-dify/tutorials/customer-service-bot)
-- [Dify Workflow RAG](https://docs.dify.ai/en/use-dify/workflow/rag)
-- [Dify API Integration](https://docs.dify.ai/en/use-dify/integrate/api)
-- [Dify Self-hosting Security](https://docs.dify.ai/en/self-host/security)
-- [Dify Self-hosting Quick Start: Docker Compose](https://docs.dify.ai/en/self-host/quick-start/docker-compose)
-- [Dify GitHub](https://github.com/langgenius/dify)
-- [Dify Product Roadmap](https://roadmap.dify.ai/roadmap)
-- [Dify Community Forum](https://forum.dify.ai/)
-- [Dify Discord](https://discord.com/invite/FngNHpbcY7)
-- [Dify YouTube Channel](https://www.youtube.com/@dify_ai)
-- [Dify Cloud Sign In](https://cloud.dify.ai/signin)
-- [Dify Partner & Integration Info](https://dify.ai/partner)
-- [Dify Affiliate Program](https://dify.ai/dify-affiliate-program-agreement)
-- [AI Agents List: Dify](https://aiagentslist.com/agents/dify)
-- [Baytech Consulting: Dify Overview](https://www.baytechconsulting.com/blog/what-is-dify-ai-2025)
-- [GPTBots: Dify Review](https://www.gptbots.ai/blog/dify-ai)
-- [LangChain GitHub](https://github.com/langchain-ai/langchain)
-- [Flowise GitHub](https://github.com/FlowiseAI/Flowise)
+
+1. Dify. Service for AI Application Development. URL: https://dify.ai/
+
+2. Dify. (n.d.). Dify Documentation. URL: https://docs.dify.ai/en/introduction
+
+3. Dify. (n.d.). Quick Start Guide. Dify Documentation.
+
+4. Dify. (n.d.). Tutorials: Customer Service Bot. Dify Documentation.
+
+5. Dify. (n.d.). Workflow RAG. Dify Documentation.
+
+6. Dify. (n.d.). API Integration. Dify Documentation.
+
+7. Dify. (n.d.). Self-hosting Security. Dify Documentation.
+
+8. Dify. (n.d.). Self-hosting Quick Start: Docker Compose. Dify Documentation.
+
+9. Dify. GitHub Repository. URL: https://github.com/langgenius/dify
+
+10. Dify. Product Roadmap. URL: https://roadmap.dify.ai/roadmap
+
+11. Dify. Community Forum. URL: https://forum.dify.ai/
+
+12. Dify. Discord Community. URL: https://discord.com/invite/FngNHpbcY7
+
+13. Dify. YouTube Channel. URL: https://www.youtube.com/@dify_ai
+
+14. Dify. Cloud Sign In Platform. URL: https://cloud.dify.ai/signin
+
+15. Dify. Partner & Integration Information. URL: https://dify.ai/partner
+
+16. Dify. Affiliate Program. URL: https://dify.ai/dify-affiliate-program-agreement
+
+17. AI Agents List. Dify Agent Listing. URL: https://aiagentslist.com/agents/dify
+
+18. Baytech Consulting. (2025). Dify AI Overview. Baytech Consulting Blog.
+
+19. GPTBots. (n.d.). Dify Review. GPTBots Blog.
+
+20. LangChain. GitHub Repository. URL: https://github.com/langchain-ai/langchain
+
+21. Flowise. GitHub Repository. URL: https://github.com/FlowiseAI/Flowise

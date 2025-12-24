@@ -263,11 +263,12 @@ Use clear instructions, descriptive variables, regular testing, and update templ
 
 ## References
 
-- [Google Cloud: Use Prompt Templates](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-templates)
-- [PromptLayer: What is a Prompt Template?](https://www.promptlayer.com/glossary/prompt-template)
-- [Salesforce: Understand Prompt Templates](https://trailhead.salesforce.com/content/learn/modules/prompt-fundamentals/understand-prompt-templates)
-- [GeeksforGeeks: Prompt Templates](https://www.geeksforgeeks.org/artificial-intelligence/prompt-templates/)
-- [Zapier: 8 AI Prompt Templates](https://zapier.com/blog/ai-prompt-templates/)
-- [Notion: AI Prompt Templates Directory](https://www.notion.com/templates/category/ai-prompts)
-- [Prompt Engineering Guide: Best Practices](https://www.promptingguide.ai/introduction/tips)
-- [LangChain: Prompt Templates Documentation](https://python.langchain.com/docs/modules/prompts/prompt_templates/)
+
+1. Google Cloud. (n.d.). Use Prompt Templates. Google Cloud Documentation.
+2. PromptLayer. (n.d.). What is a Prompt Template?. PromptLayer Glossary.
+3. Salesforce. (n.d.). Understand Prompt Templates. Salesforce Trailhead.
+4. GeeksforGeeks. (n.d.). Prompt Templates. GeeksforGeeks AI Section.
+5. Zapier. (n.d.). 8 AI Prompt Templates. Zapier Blog.
+6. Notion. (n.d.). AI Prompt Templates Directory. Notion Templates.
+7. Prompt Engineering Guide. (n.d.). Best Practices. Prompting Guide.
+8. LangChain. (n.d.). Prompt Templates Documentation. LangChain Python Documentation.

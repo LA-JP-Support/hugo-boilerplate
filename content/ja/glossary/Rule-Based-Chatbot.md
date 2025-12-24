@@ -302,10 +302,17 @@ chat_with_bot()
 
 ## 参考文献
 
-- [HeroThemes: Rule-Based Chatbots Guide](https://herothemes.com/blog/rule-based-chatbots/)
-- [Codecademy: Rule-Based Chatbots Cheat Sheet](https://www.codecademy.com/learn/rule-based-chatbots/modules/rule-based-chatbots/cheatsheet)
-- [Chatfuel Platform](https://chatfuel.com/)
-- [ManyChat Platform](https://manychat.com/)
-- [Landbot Platform](https://landbot.io/)
-- [Tidio Platform](https://www.tidio.com/)
-- [Botsify Platform](https://botsify.com/)
+
+1. HeroThemes. (n.d.). Rule-Based Chatbots Guide. HeroThemes Blog.
+
+2. Codecademy. (n.d.). Rule-Based Chatbots Cheat Sheet. Codecademy Learn.
+
+3. Chatfuel. Chatbot Creation Platform. URL: https://chatfuel.com/
+
+4. ManyChat. Chatbot Creation Platform. URL: https://manychat.com/
+
+5. Landbot. Chatbot Creation Platform. URL: https://landbot.io/
+
+6. Tidio. Chatbot Creation Platform. URL: https://www.tidio.com/
+
+7. Botsify. Chatbot Creation Platform. URL: https://botsify.com/

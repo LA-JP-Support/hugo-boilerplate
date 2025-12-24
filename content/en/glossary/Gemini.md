@@ -286,13 +286,23 @@ Yes, through integration with Google's Imagen model, though this is separate fro
 
 ## References
 
-- [Gemini Official Site](https://gemini.google.com/)
-- [Google AI Company Profile](Google.md)
-- [Gemini 2.5 Pro Documentation](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-pro)
-- [Gemini Model Card](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf)
-- [Vertex AI Platform](https://cloud.google.com/vertex-ai)
-- [Gemini API Documentation](https://docs.cloud.google.com/vertex-ai/docs)
-- [Google DeepMind Research](https://deepmind.google/)
-- [Gemini Advanced](https://one.google.com/about/plans)
-- [LMArena Leaderboard](https://lmarena.org/)
-- [Google AI Principles](https://ai.google/responsibility/principles/)
+
+1. Gemini. Service for AI-powered conversational and generative AI. URL: https://gemini.google.com/
+
+2. Google. (n.d.). Google AI Company Profile. Internal Document.
+
+3. Google. (2024). Gemini 2.5 Pro Documentation. Vertex AI Generative AI Documentation. URL: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-pro
+
+4. Google. (2024). Gemini Model Card. Model Documentation. URL: https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf
+
+5. Google Cloud. Service for machine learning and AI platform. URL: https://cloud.google.com/vertex-ai
+
+6. Google. (2024). Gemini API Documentation. Technical Documentation. URL: https://docs.cloud.google.com/vertex-ai/docs
+
+7. Google DeepMind. Research organization for artificial intelligence. URL: https://deepmind.google/
+
+8. Google. (n.d.). Gemini Advanced. Subscription Service. URL: https://one.google.com/about/plans
+
+9. LMArena. AI Model Performance Leaderboard. URL: https://lmarena.org/
+
+10. Google. (n.d.). Google AI Principles. Ethical AI Guidelines. URL: https://ai.google/responsibility/principles/

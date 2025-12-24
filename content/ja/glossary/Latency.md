@@ -286,18 +286,19 @@ NVMe SSD:読み取りで<0.1 ms
 
 ## 参考文献
 
-- [AWS: What Is Latency?](https://aws.amazon.com/what-is/latency/)
-- [IBM: What Is Latency?](https://www.ibm.com/think/topics/latency)
-- [MDN: Understanding Latency](https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency)
-- [Fortinet: What Is Latency](https://www.fortinet.com/resources/cyberglossary/latency)
-- [Galileo AI: Understanding Latency in AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
-- [AI21: Retrieval Latency](https://www.ai21.com/glossary/foundational-llm/retrieval-latency/)
-- [WEKA: Solving Latency Challenges](https://www.weka.io/blog/ai-ml/solving-latency-challenges-in-ai-data-centers/)
-- [DriveNets: Latency in AI Networking](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
-- [AWS CloudFront](https://aws.amazon.com/cloudfront/)
-- [AWS Direct Connect](https://aws.amazon.com/directconnect/)
-- [AWS Global Accelerator](https://aws.amazon.com/global-accelerator/)
-- [AWS Local Zones](https://aws.amazon.com/about-aws/global-infrastructure/localzones/)
-- [Investopedia: High-Frequency Trading](https://www.investopedia.com/terms/h/high-frequency-trading.asp)
-- [MDN: Time to First Byte](https://developer.mozilla.org/en-US/docs/Glossary/Time_to_first_byte)
-- [AWS: What is Throughput?](https://aws.amazon.com/what-is/throughput/)
+
+1. AWS. (n.d.). What Is Latency?. AWS.
+2. IBM. (n.d.). What Is Latency?. IBM Think Topics.
+3. MDN. (n.d.). Understanding Latency. Mozilla Developer Network.
+4. Fortinet. (n.d.). What Is Latency. Fortinet Cyber Glossary.
+5. Galileo AI. (n.d.). Understanding Latency in AI. Galileo AI Blog.
+6. AI21. (n.d.). Retrieval Latency. AI21 Glossary.
+7. WEKA. (n.d.). Solving Latency Challenges. WEKA Blog.
+8. DriveNets. (n.d.). Latency in AI Networking. DriveNets Blog.
+9. AWS CloudFront. Cloud Content Delivery Network Service. URL: https://aws.amazon.com/cloudfront/
+10. AWS Direct Connect. Private Network Connection Service. URL: https://aws.amazon.com/directconnect/
+11. AWS Global Accelerator. Network Performance Optimization Service. URL: https://aws.amazon.com/global-accelerator/
+12. AWS Local Zones. Localized Cloud Infrastructure Service. URL: https://aws.amazon.com/about-aws/global-infrastructure/localzones/
+13. Investopedia. (n.d.). High-Frequency Trading. Investopedia.
+14. MDN. (n.d.). Time to First Byte. Mozilla Developer Network.
+15. AWS. (n.d.). What is Throughput?. AWS.

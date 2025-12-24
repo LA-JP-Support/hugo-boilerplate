@@ -298,15 +298,16 @@ if (user_response == "yes" && account_verified) {
 
 ## 参考文献
 
-- [BotStacks: Conditions and Logic Branching](https://docs.botstacks.ai/common-tasks/conversation-design/conditions-logic/)
-- [Kore.ai: Working with Logic Node](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/working-with-the-logic-node/)
-- [Kore.ai: Bot Action Node](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/bot-action-node/)
-- [Yellow.ai: Logic Nodes](https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes/logic-nodes)
-- [Yellow.ai: Node Types](https://docs.yellow.ai/docs/platform_concepts/studio/build/nodes)
-- [HubSpot: If/Then Branches](https://knowledge.hubspot.com/chatflows/use-if-then-branches-with-chatflows)
-- [Slack: Conditional Branching Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder)
-- [Slack: Workflow Builder Guide](https://slack.com/help/articles/360035692513-Guide-to-Slack-Workflow-Builder)
-- [TextIt: Introduction to Flows](https://help.textit.com/en/article/introduction-to-flows-1vmh15z/)
-- [Kore.ai: Managing Namespace](https://developer.kore.ai/docs/bots/bot-settings/bot-management/managing-namespace/)
-- [Kore.ai: Custom Meta Tags](https://developer.kore.ai/docs/bots/bot-builder-tool/dialog-task/custom-meta-tags/)
-- [Noca AI: Logic Nodes](https://support.noca.ai/logic-nodes/)
+
+1. BotStacks. (n.d.). Conditions and Logic Branching. BotStacks Documentation.
+2. Kore.ai. (n.d.). Working with Logic Node. Kore.ai Developer Documentation.
+3. Kore.ai. (n.d.). Bot Action Node. Kore.ai Developer Documentation.
+4. Yellow.ai. (n.d.). Logic Nodes. Yellow.ai Documentation.
+5. Yellow.ai. (n.d.). Node Types. Yellow.ai Documentation.
+6. HubSpot. (n.d.). If/Then Branches. HubSpot Knowledge Base.
+7. Slack. (n.d.). Conditional Branching Workflow Builder. Slack Blog.
+8. Slack. (n.d.). Workflow Builder Guide. Slack Help Center.
+9. TextIt. (n.d.). Introduction to Flows. TextIt Help Center.
+10. Kore.ai. (n.d.). Managing Namespace. Kore.ai Developer Documentation.
+11. Kore.ai. (n.d.). Custom Meta Tags. Kore.ai Developer Documentation.
+12. Noca AI. (n.d.). Logic Nodes. Noca AI Support.

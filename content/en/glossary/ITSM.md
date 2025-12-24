@@ -237,27 +237,28 @@ Ongoing reviews, user feedback, and data analysis ensure ITSM evolves with busin
 
 ## References
 
-- [Salesforce: What is ITSM? A Complete Guide](https://www.salesforce.com/service/it-service-management/what-is-itsm/)
-- [Salesforce: What is Incident Management?](https://www.salesforce.com/service/what-is-incident-management/)
-- [Salesforce: ITSM Examples](https://www.salesforce.com/service/it-service-management/what-is-itsm/#examples-of-itsm-in-action)
-- [Salesforce: ITSM Resources](https://www.salesforce.com/service/it-service-management/)
-- [ITSM.tools: What is ITSM?](https://itsm.tools/what-is-itsm/)
-- [InvGate: Definitive Guide to ITSM Frameworks](https://blog.invgate.com/itsm-frameworks)
-- [InvGate: ITSM Guides](https://invgate.com/guides/itsm/)
-- [ManageEngine: ITIL vs. ITSM vs. DevOps](https://www.manageengine.com/products/service-desk/itsm/itil-vs-devops-vs-itsm.html)
-- [NovelVista: ITIL vs COBIT vs ISO 20000](https://www.novelvista.com/blogs/it-service-management/difference-between-cobit-itil-iso20000)
-- [Atlassian: ITSM Processes and Maturity](https://www.atlassian.com/itsm/processes)
-- [Atlassian: ITSM Tutorials](https://www.atlassian.com/itsm)
-- [Atlassian: What is ITSM?](https://www.atlassian.com/itsm)
-- [Atlassian: DevOps](https://www.atlassian.com/devops)
-- [Axelos: ITIL 4](https://www.axelos.com/best-practice-solutions/itil)
-- [ISACA: COBIT Framework](https://www.isaca.org/resources/cobit)
-- [ISO: ISO/IEC 20000 IT Service Management](https://www.iso.org/isoiec-20000-it-service-management.html)
-- [FitSM](https://fitsm.eu/)
-- [IFDC: VeriSM](https://www.ifdc.global/verism/)
-- [SCOPISM: SIAM](https://www.scopism.com/siam/)
-- [Red Hat: What is ITSM?](https://www.redhat.com/en/topics/automation/what-is-itsm)
-- [ServiceNow: ITSM](https://www.servicenow.com/products/itsm.html)
-- [Jira Service Management](https://www.atlassian.com/software/jira/service-management)
-- [Ivanti: ITSM](https://www.ivanti.com/products/ivanti-neurons-itsm)
-- [BMC: Helix ITSM](https://www.bmc.com/it-solutions/helix-itsm.html)
+
+1. Salesforce. (n.d.). What is ITSM? A Complete Guide. Salesforce Service.
+2. Salesforce. (n.d.). What is Incident Management?. Salesforce Service.
+3. Salesforce. (n.d.). ITSM Examples. Salesforce Service.
+4. Salesforce. (n.d.). ITSM Resources. Salesforce Service.
+5. ITSM.tools. (n.d.). What is ITSM?. ITSM.tools.
+6. InvGate. (n.d.). Definitive Guide to ITSM Frameworks. InvGate Blog.
+7. InvGate. (n.d.). ITSM Guides. InvGate.
+8. ManageEngine. (n.d.). ITIL vs. ITSM vs. DevOps. ManageEngine.
+9. NovelVista. (n.d.). ITIL vs COBIT vs ISO 20000. NovelVista Blog.
+10. Atlassian. (n.d.). ITSM Processes and Maturity. Atlassian.
+11. Atlassian. (n.d.). ITSM Tutorials. Atlassian.
+12. Atlassian. (n.d.). What is ITSM?. Atlassian.
+13. Atlassian. (n.d.). DevOps. Atlassian.
+14. Axelos. (n.d.). ITIL 4. Axelos.
+15. ISACA. (n.d.). COBIT Framework. ISACA.
+16. ISO. (n.d.). ISO/IEC 20000 IT Service Management. ISO.
+17. FitSM. FitSM Framework. URL: https://fitsm.eu/
+18. IFDC. VeriSM Framework. URL: https://www.ifdc.global/verism/
+19. SCOPISM. SIAM Framework. URL: https://www.scopism.com/siam/
+20. Red Hat. (n.d.). What is ITSM?. Red Hat.
+21. ServiceNow. ITSM Service. URL: https://www.servicenow.com/products/itsm.html
+22. Jira Service Management. ITSM Tool. URL: https://www.atlassian.com/software/jira/service-management
+23. Ivanti. ITSM Solution. URL: https://www.ivanti.com/products/ivanti-neurons-itsm
+24. BMC. Helix ITSM Solution. URL: https://www.bmc.com/it-solutions/helix-itsm.html

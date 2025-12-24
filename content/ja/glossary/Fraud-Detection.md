@@ -242,9 +242,15 @@ Transformerアーキテクチャは、取引シーケンスの長距離依存関
 
 ## 参考文献
 
-- [Machine Learning for Fraud Detection - Towards Data Science](https://towardsdatascience.com/machine-learning-for-fraud-detection-a-comprehensive-guide-6b623e2e7a0e)
-- [Fraud Detection Systems - McKinsey](https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/fighting-fraud-with-machine-learning)
-- [Payment Fraud Prevention - Stripe](https://stripe.com/guides/fraud-detection)
-- [AI in Fraud Detection - Deloitte](https://www2.deloitte.com/us/en/pages/advisory/articles/using-ai-for-fraud-detection.html)
-- [Graph ML for Fraud Detection - NVIDIA](https://developer.nvidia.com/blog/using-graph-neural-networks-for-fraud-detection/)
-- [AML and Fraud Prevention - FinCEN](https://www.fincen.gov/resources/advisories)
+
+1. Towards Data Science. (n.d.). Machine Learning for Fraud Detection. Towards Data Science.
+
+2. McKinsey. (n.d.). Fraud Detection Systems. McKinsey Insights.
+
+3. Stripe. (n.d.). Payment Fraud Prevention. Stripe Guides.
+
+4. Deloitte. (n.d.). AI in Fraud Detection. Deloitte Advisory.
+
+5. NVIDIA. (n.d.). Graph ML for Fraud Detection. NVIDIA Developer Blog.
+
+6. FinCEN. (n.d.). AML and Fraud Prevention. FinCEN Resources.

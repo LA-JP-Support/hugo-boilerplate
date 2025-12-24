@@ -334,17 +334,31 @@ Requirement "response time under 1 second" traces to architectural decisions (ca
 
 ## References
 
-- [SEBoK: System Requirements Definition](https://sebokwiki.org/wiki/System_Requirements_Definition)
-- [IEEE Std 830-1998: Software Requirements Specifications (PDF)](https://www.utdallas.edu/~chung/RE/IEEE830-1993.pdf)
-- [ISO/IEC/IEEE 29148:2018 Standard (PDF)](https://drkasbokar.com/wp-content/uploads/2024/09/29148-2018-ISOIECIEEE.pdf)
-- [FHWA: Systems Engineering for ITS - Requirements](https://ops.fhwa.dot.gov/seits/sections/section3/3_3_6.html)
-- [Aqua Cloud: 8 Essential Strategies for Requirements Elicitation](https://aqua-cloud.io/8-essential-strategies-effective-requirements-elicitation/)
-- [Modern Requirements: AI Requirements Elicitation Best Practices](https://www.modernrequirements.com/blogs/best-practices-for-ai-requirements-elicitation-techniques/)
-- [IBM: Requirements Management](https://www.ibm.com/products/requirements-management)
-- [NASA Systems Engineering Handbook (PDF)](https://ntrs.nasa.gov/api/citations/20080008301/downloads/20080008301.pdf)
-- [INCOSE: Systems Engineering Handbook](https://www.incose.org/products-and-publications/se-handbook)
-- [ISO/IEC 15288: System Life Cycle Processes](https://www.iso.org/standard/63711.html)
-- [Jama Software](https://www.jamasoftware.com/)
-- [Atlassian Jira](https://www.atlassian.com/software/jira)
-- [Microsoft Azure DevOps](https://azure.microsoft.com/en-us/services/devops/boards/)
-- [ReqIF Academy](https://www.reqif.academy/)
+
+1. SEBoK. (n.d.). System Requirements Definition. SEBoK Wiki.
+
+2. IEEE. (1998). Software Requirements Specifications. IEEE Standard 830-1998.
+
+3. ISO/IEC/IEEE. (2018). Systems and Software Engineering - Life Cycle Processes - Requirements Engineering. ISO/IEC/IEEE Standard 29148:2018.
+
+4. FHWA. (n.d.). Systems Engineering for ITS - Requirements. Federal Highway Administration.
+
+5. Aqua Cloud. (n.d.). 8 Essential Strategies for Requirements Elicitation. Aqua Cloud Blog.
+
+6. Modern Requirements. (n.d.). AI Requirements Elicitation Best Practices. Modern Requirements Blog.
+
+7. IBM. (n.d.). Requirements Management. IBM Product.
+
+8. NASA. (n.d.). Systems Engineering Handbook. NASA Technical Reports.
+
+9. INCOSE. (n.d.). Systems Engineering Handbook. INCOSE Publication.
+
+10. ISO/IEC. (n.d.). System Life Cycle Processes. ISO/IEC Standard 15288.
+
+11. Jama Software. Requirements Management Platform. URL: https://www.jamasoftware.com/
+
+12. Atlassian Jira. Project Management and Issue Tracking Tool. URL: https://www.atlassian.com/software/jira
+
+13. Microsoft Azure DevOps. Software Development and Collaboration Platform. URL: https://azure.microsoft.com/en-us/services/devops/boards/
+
+14. ReqIF Academy. Requirements Interchange Format Resource. URL: https://www.reqif.academy/

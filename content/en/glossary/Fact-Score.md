@@ -198,20 +198,37 @@ Organizations deploying LLMs in customer-facing applications monitor FActScore t
 
 ## References
 
-- [Min et al., 2023: FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation (EMNLP)](https://arxiv.org/abs/2305.14251)
-- [Emergent Mind: FActScore Topic Overview](https://www.emergentmind.com/topics/factscore)
-- [OpenFActScore: Open-Source Atomic Evaluation of Factuality in Text Generation](https://www.emergentmind.com/papers/2507.05965)
-- [Multi-FAct: Assessing Factuality of Multilingual LLMs using FActScore](https://www.emergentmind.com/papers/2402.18045)
-- [Multilingual Hallucination Gaps in Large Language Models](https://www.emergentmind.com/papers/2410.18270)
-- [An Analysis of Multilingual FActScore](https://www.emergentmind.com/papers/2406.19415)
-- [A Closer Look at Claim Decomposition](https://arxiv.org/html/2403.11903v1)
-- [Core: Robust Factual Precision with Informative Sub-Claim Identification](https://www.emergentmind.com/papers/2407.03572)
-- [PFME: A Modular Approach for Fine-grained Hallucination Detection and Editing](https://www.emergentmind.com/papers/2407.00488)
-- [Mask-DPO: Generalizable Fine-grained Factuality Alignment of LLMs](https://www.emergentmind.com/papers/2503.02846)
-- [Improving Model Factuality with Fine-grained Critique-based Evaluator](https://www.emergentmind.com/papers/2410.18359)
-- [Learning to Reason for Factuality](https://www.emergentmind.com/papers/2508.05618)
-- [CLAImate: AI-Enabled Climate Change Communication](https://www.emergentmind.com/papers/2507.11677)
-- [Long-Form Information Alignment Evaluation Beyond Atomic Facts](https://arxiv.org/html/2505.15792v1)
-- [TruthTorchLM: A Comprehensive Library for Predicting Truthfulness in LLM Outputs](https://www.emergentmind.com/papers/2507.08203)
-- [GitHub: FActScore Repository](https://github.com/shmsw25/FActScore)
-- [PyPI: FActScore Package](https://pypi.org/project/factscore/)
+
+1. Min et al. (2023). FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation. EMNLP.
+
+2. Emergent Mind. (n.d.). FActScore Topic Overview.
+
+3. Emergent Mind. (n.d.). OpenFActScore: Open-Source Atomic Evaluation of Factuality in Text Generation.
+
+4. Emergent Mind. (n.d.). Multi-FAct: Assessing Factuality of Multilingual LLMs using FActScore.
+
+5. Emergent Mind. (n.d.). Multilingual Hallucination Gaps in Large Language Models.
+
+6. Emergent Mind. (n.d.). An Analysis of Multilingual FActScore.
+
+7. (n.d.). A Closer Look at Claim Decomposition.
+
+8. Emergent Mind. (n.d.). Core: Robust Factual Precision with Informative Sub-Claim Identification.
+
+9. Emergent Mind. (n.d.). PFME: A Modular Approach for Fine-grained Hallucination Detection and Editing.
+
+10. Emergent Mind. (n.d.). Mask-DPO: Generalizable Fine-grained Factuality Alignment of LLMs.
+
+11. Emergent Mind. (n.d.). Improving Model Factuality with Fine-grained Critique-based Evaluator.
+
+12. Emergent Mind. (n.d.). Learning to Reason for Factuality.
+
+13. Emergent Mind. (n.d.). CLAImate: AI-Enabled Climate Change Communication.
+
+14. (n.d.). Long-Form Information Alignment Evaluation Beyond Atomic Facts.
+
+15. Emergent Mind. (n.d.). TruthTorchLM: A Comprehensive Library for Predicting Truthfulness in LLM Outputs.
+
+16. GitHub. FActScore Repository. URL: https://github.com/shmsw25/FActScore
+
+17. PyPI. FActScore Package. URL: https://pypi.org/project/factscore/

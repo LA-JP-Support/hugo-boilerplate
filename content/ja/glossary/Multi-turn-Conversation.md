@@ -207,15 +207,27 @@ Bot: Your flight has been booked. Confirmation sent to your email.
 
 ## 参考文献
 
-- [Sendbird: What are Multi-turn Conversations?](https://sendbird.com/blog/what-are-multi-turn-conversations)
-- [Microsoft Learn: Multi-turn Conversations - QnA Maker](https://learn.microsoft.com/en-us/azure/ai-services/qnamaker/how-to/multi-turn)
-- [Retell AI Glossary: Multi-Turn Conversation](https://www.retellai.com/glossary/multi-turn-conversation)
-- [Vapi AI: Multi-turn Conversations](https://vapi.ai/blog/multi-turn-conversations)
-- [DataStudios: Multi-Turn Dialogue Explained](https://www.datastudios.org/post/how-chatbots-handle-follow-up-questions-multi-turn-dialogue-explained)
-- [PromptLayer: Multi-Turn Chat](https://docs.promptlayer.com/why-promptlayer/multi-turn-chat)
-- [Maxim AI: Ensuring Consistency in Multi-Turn AI](https://www.getmaxim.ai/articles/how-to-ensure-consistency-in-multi-turn-ai-conversations/)
-- [OpenAI Community: Multi-turn Conversation Best Practice](https://community.openai.com/t/multi-turn-conversation-best-practice/282349)
-- [Microsoft Bot Builder: Conceptual Bot Design](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-conversations)
-- [Sendbird: Multi-turn Conversation Testing Framework](https://sendbird.com/blog/what-are-multi-turn-conversations/ai-agent-testing)
-- [PromptLayer Blog: Evaluating Multi-Turn AI](https://blog.promptlayer.com/best-practi-to-evaluate-back-and-forth-conversational-ai-in-promptlayer/)
-- [YouTube: QnA Maker Multi-turn Example](https://aka.ms/multiturnexample)
+
+1. Sendbird. (n.d.). What are Multi-turn Conversations?. Sendbird Blog.
+
+2. Microsoft. (n.d.). Multi-turn Conversations - QnA Maker. Microsoft Learn.
+
+3. Retell AI. (n.d.). Multi-Turn Conversation. Retell AI Glossary.
+
+4. Vapi AI. (n.d.). Multi-turn Conversations. Vapi AI Blog.
+
+5. DataStudios. (n.d.). How Chatbots Handle Follow-up Questions: Multi-Turn Dialogue Explained. DataStudios.
+
+6. PromptLayer. (n.d.). Multi-Turn Chat. PromptLayer Documentation.
+
+7. Maxim AI. (n.d.). How to Ensure Consistency in Multi-Turn AI Conversations. Maxim AI Articles.
+
+8. OpenAI Community. (n.d.). Multi-turn Conversation Best Practice. OpenAI Community Forum.
+
+9. Microsoft. (n.d.). Conceptual Bot Design. Microsoft Bot Builder.
+
+10. Sendbird. (n.d.). Multi-turn Conversation Testing Framework. Sendbird Blog.
+
+11. PromptLayer. (n.d.). Evaluating Multi-Turn AI. PromptLayer Blog.
+
+12. YouTube. (n.d.). QnA Maker Multi-turn Example. YouTube.

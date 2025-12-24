@@ -134,11 +134,19 @@ Over-reliance on code generation tools may lead to skill atrophy among developme
 
 ## References
 
-- [GitHub Copilot: AI-powered code completion - GitHub](https://github.com/features/copilot)
-- [OpenAI Codex: Translating Natural Language to Code - OpenAI](https://openai.com/blog/openai-codex/)
-- [Amazon CodeWhisperer: ML-powered code generator - AWS](https://aws.amazon.com/codewhisperer/)
-- [The State of AI in Software Development 2023 - Stack Overflow](https://stackoverflow.blog/2023/06/13/developer-survey-results-are-in/)
-- [Code Generation with Large Language Models - Google Research](https://research.google/pubs/pub50949/)
-- [Evaluating Large Language Models Trained on Code - arXiv](https://arxiv.org/abs/2107.03374)
-- [AI-Assisted Programming: A Survey - IEEE Computer Society](https://www.computer.org/csdl/magazine/co/2023/01/10040755/1KjHhbWMWmQ)
-- [Microsoft IntelliCode: AI-assisted development - Microsoft](https://visualstudio.microsoft.com/services/intellicode/)
+
+1. GitHub Copilot. Service. AI-powered code completion. URL: https://github.com/features/copilot
+
+2. OpenAI. (2022). OpenAI Codex: Translating Natural Language to Code. OpenAI Blog.
+
+3. Amazon. (2023). CodeWhisperer: ML-powered code generator. AWS.
+
+4. Stack Overflow. (2023). The State of AI in Software Development 2023. Stack Overflow Blog.
+
+5. Google Research. (2023). Code Generation with Large Language Models. Google Research Publications.
+
+6. arXiv. (2021). Evaluating Large Language Models Trained on Code. arXiv.
+
+7. IEEE Computer Society. (2023). AI-Assisted Programming: A Survey. IEEE Computer Society Magazine.
+
+8. Microsoft. (n.d.). IntelliCode: AI-assisted development. Microsoft Visual Studio.

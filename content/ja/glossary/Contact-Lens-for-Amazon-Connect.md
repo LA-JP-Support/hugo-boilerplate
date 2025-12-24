@@ -219,27 +219,28 @@ Contact Lens機能セットは、現在Amazon Connectの会話分析スイート
 
 ## 参考文献
 
-- [Amazon Connect: Contact Lens管理者ガイド](https://docs.aws.amazon.com/connect/latest/adminguide/contact-lens.html)
-- [Amazon Connect: 会話分析の有効化](https://docs.aws.amazon.com/connect/latest/adminguide/enable-analytics.html)
-- [Amazon Connect: 会話の分析](https://docs.aws.amazon.com/connect/latest/adminguide/analyze-conversations.html)
-- [Amazon Connect: 会話分析概要](https://aws.amazon.com/connect/conversational-analytics/)
-- [AWSブログ: Contact Lens for Amazon Connect GA](https://aws.amazon.com/blogs/contact-center/contact-lens-for-amazon-connect-ga/)
-- [Amazon Connect: 料金](https://aws.amazon.com/connect/pricing/)
-- [Amazon Connect: サポート言語](https://docs.aws.amazon.com/connect/latest/adminguide/supported-languages.html)
-- [AWS: データプライバシーFAQ](https://aws.amazon.com/compliance/data-privacy-faq/)
-- [AWS: AIサービスオプトアウトポリシー](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ai-opt-out.html)
-- [Amazon Connect: 録音と分析動作の設定](https://docs.aws.amazon.com/connect/latest/adminguide/set-recording-behavior.html)
-- [Amazon Connect: 機密データの編集](https://docs.aws.amazon.com/connect/latest/adminguide/sensitive-data-redaction.html)
-- [Amazon Connect: 感情スコアガイド](https://docs.aws.amazon.com/connect/latest/adminguide/sentiment-scores.html)
-- [Amazon Connect: リアルタイムアラートガイド](https://docs.aws.amazon.com/connect/latest/adminguide/add-rules-for-alerts.html)
-- [Amazon Connect: 出力場所の例](https://docs.aws.amazon.com/connect/latest/adminguide/example-contact-lens-output-locations.html)
-- [Amazon Connect: コンタクト分析セグメントストリーム](https://docs.aws.amazon.com/connect/latest/adminguide/contact-analysis-segment-streams.html)
-- [Amazon Connect: Contact Lens API](https://docs.aws.amazon.com/connect/latest/adminguide/contact-lens-api.html)
-- [Amazon Connect: コンタクト検索](https://docs.aws.amazon.com/connect/latest/adminguide/contact-search.html)
-- [Amazon Connect: エージェントワークスペース](https://docs.aws.amazon.com/connect/latest/adminguide/agent-workspace.html)
-- [Amazon Connect: Wisdom](https://aws.amazon.com/connect/wisdom/)
-- [Amazon QuickSight](https://aws.amazon.com/quicksight/)
-- [Amazon SageMaker](https://aws.amazon.com/sagemaker/)
-- [Amazon Connect Streams API (GitHub)](https://github.com/aws/amazon-connect-streams)
-- [Contact Lens for Amazon Connect: YouTube概要](https://www.youtube.com/watch?v=HrGgI0bUuC8)
-- [AWSコンタクトセンター: ケーススタディ](https://aws.amazon.com/connect/customers/)
+
+1. Amazon. (n.d.). Contact Lens管理者ガイド. Amazon Connect Documentation.
+2. Amazon. (n.d.). 会話分析の有効化. Amazon Connect Documentation.
+3. Amazon. (n.d.). 会話の分析. Amazon Connect Documentation.
+4. Amazon. (n.d.). 会話分析概要. AWS Connect.
+5. Amazon. (n.d.). Contact Lens for Amazon Connect GA. AWS Blog.
+6. Amazon. (n.d.). Amazon Connect: 料金. AWS Connect.
+7. Amazon. (n.d.). サポート言語. Amazon Connect Documentation.
+8. Amazon. (n.d.). データプライバシーFAQ. AWS Compliance.
+9. Amazon. (n.d.). AIサービスオプトアウトポリシー. AWS Organizations Documentation.
+10. Amazon. (n.d.). 録音と分析動作の設定. Amazon Connect Documentation.
+11. Amazon. (n.d.). 機密データの編集. Amazon Connect Documentation.
+12. Amazon. (n.d.). 感情スコアガイド. Amazon Connect Documentation.
+13. Amazon. (n.d.). リアルタイムアラートガイド. Amazon Connect Documentation.
+14. Amazon. (n.d.). 出力場所の例. Amazon Connect Documentation.
+15. Amazon. (n.d.). コンタクト分析セグメントストリーム. Amazon Connect Documentation.
+16. Amazon. (n.d.). Contact Lens API. Amazon Connect Documentation.
+17. Amazon. (n.d.). コンタクト検索. Amazon Connect Documentation.
+18. Amazon. (n.d.). エージェントワークスペース. Amazon Connect Documentation.
+19. Amazon. (n.d.). Wisdom. AWS Connect.
+20. Amazon. (n.d.). QuickSight. AWS.
+21. Amazon. (n.d.). SageMaker. AWS.
+22. Amazon. (2023). Amazon Connect Streams API. URL: https://github.com/aws/amazon-connect-streams
+23. Amazon. (n.d.). Contact Lens for Amazon Connect: YouTube概要. YouTube.
+24. Amazon. (n.d.). AWSコンタクトセンター: ケーススタディ. AWS Connect.

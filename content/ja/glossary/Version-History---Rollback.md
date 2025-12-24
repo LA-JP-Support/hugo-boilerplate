@@ -288,15 +288,27 @@ UIまたはAPIを介したユーザー主導の以前のバージョンへの復
 
 ## 参考文献
 
-- [ChatBot.com: Version History Documentation](https://www.chatbot.com/help/build-your-chatbot/version-history/)
-- [ChatBot.com: How to Save a New Bot Version](https://www.chatbot.com/help/build-your-chatbot/version-history/#how-to-save-a-new-bot-version)
-- [ChatBot.com: How to Restore Previous Bot Version](https://www.chatbot.com/help/build-your-chatbot/version-history/#how-to-restore-the-previous-bot-version)
-- [ChatBot.com: Pricing Plans](https://www.chatbot.com/pricing/)
-- [SAP Community: Managing the Chatbot Lifecycle with Versions](https://community.sap.com/t5/technology-blog-posts-by-sap/managing-the-chatbot-lifecycle-with-versions/ba-p/13432953)
-- [Tencent Cloud Techpedia: Model Rollback](https://www.tencentcloud.com/techpedia/127632)
-- [LaunchDarkly: Prompt Versioning & Management Guide](https://launchdarkly.com/blog/prompt-versioning-and-management/)
-- [AWS: Roll Back a Flow - Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/flow-version-control.html)
-- [AWS: Tag-Based Access Control - Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/tag-based-access-control.html)
-- [Microsoft: Managing State in Bots](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0)
-- [arXiv: Thought Rollback in LLMs](https://arxiv.org/abs/2412.19707)
-- [Sandgarden: Hitting the Undo Button - Rollback Basics](https://www.sandgarden.com/learn/rollback)
+
+1. ChatBot.com. (n.d.). Version History Documentation. ChatBot Help.
+
+2. ChatBot.com. (n.d.). How to Save a New Bot Version. ChatBot Help.
+
+3. ChatBot.com. (n.d.). How to Restore Previous Bot Version. ChatBot Help.
+
+4. ChatBot.com. (n.d.). Pricing Plans. ChatBot Pricing.
+
+5. SAP Community. (n.d.). Managing the Chatbot Lifecycle with Versions. SAP Community Blog.
+
+6. Tencent Cloud Techpedia. (n.d.). Model Rollback. Tencent Cloud Techpedia.
+
+7. LaunchDarkly. (n.d.). Prompt Versioning & Management Guide. LaunchDarkly Blog.
+
+8. AWS. (n.d.). Roll Back a Flow - Amazon Connect. AWS Documentation.
+
+9. AWS. (n.d.). Tag-Based Access Control - Amazon Connect. AWS Documentation.
+
+10. Microsoft. (n.d.). Managing State in Bots. Microsoft Learn.
+
+11. arXiv. (2024). Thought Rollback in LLMs. arXiv.
+
+12. Sandgarden. (n.d.). Hitting the Undo Button - Rollback Basics. Sandgarden Learn.

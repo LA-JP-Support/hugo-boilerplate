@@ -265,17 +265,31 @@ Modern access control platforms provide extensive integration capabilities throu
 
 ## References
 
-- [Microsoft Security: What Is Access Control?](https://www.microsoft.com/en-us/security/business/security-101/what-is-access-control)
-- [Fortinet Cyberglossary: Access Control](https://www.fortinet.com/resources/cyberglossary/access-control)
-- [Frontegg: Access Control in Security](https://frontegg.com/guides/access-control-in-security)
-- [ProdataKey: Physical Access Control Systems](https://www.prodatakey.com/single-post/implementing-physical-access-control-systems)
-- [SentinelOne: What is Access Control?](https://www.sentinelone.com/cybersecurity-101/cybersecurity/what-is-access-control/)
-- [Strata Identity: Access Control Glossary](https://www.strata.io/glossary/access-control/)
-- [Microsoft: Multi-Factor Authentication](https://www.microsoft.com/en-us/security/business/identity-access/azure-active-directory-mfa-multi-factor-authentication)
-- [Microsoft: Identity Access Management](https://www.microsoft.com/en-us/security/business/security-101/what-is-identity-access-management-iam)
-- [Fortinet: Zero Trust Architecture](https://global.fortinet.com/lp-en-eb-zta-for-dummies)
-- [GDPR Official Site](https://gdpr-info.eu/)
-- [HIPAA Information](https://www.hhs.gov/hipaa/for-professionals/index.html)
-- [PCI Security Standards](https://www.pcisecuritystandards.org/)
-- [AICPA SOC 2](https://www.aicpa.org/resources/article/aicpa-soc-2-report)
-- [ISO 27001 Standard](https://www.iso.org/isoiec-27001-information-security.html)
+
+1. Microsoft. (n.d.). Security: What Is Access Control?. Microsoft Security.
+
+2. Fortinet. (n.d.). Cyberglossary: Access Control. Fortinet Resources.
+
+3. Frontegg. (n.d.). Access Control in Security. Frontegg Guides.
+
+4. ProdataKey. (n.d.). Physical Access Control Systems. ProdataKey Blog.
+
+5. SentinelOne. (n.d.). What is Access Control?. SentinelOne Cybersecurity 101.
+
+6. Strata Identity. (n.d.). Access Control Glossary. Strata Identity.
+
+7. Microsoft. (n.d.). Multi-Factor Authentication. Microsoft Security.
+
+8. Microsoft. (n.d.). Identity Access Management. Microsoft Security.
+
+9. Fortinet. (n.d.). Zero Trust Architecture. Fortinet.
+
+10. GDPR. (n.d.). Official Site. GDPR Information.
+
+11. U.S. Department of Health and Human Services. (n.d.). HIPAA Information. HHS.
+
+12. PCI Security Standards Council. (n.d.). PCI Security Standards. PCI SSC.
+
+13. AICPA. (n.d.). SOC 2 Report. AICPA Resources.
+
+14. ISO. (n.d.). ISO 27001 Standard. ISO.

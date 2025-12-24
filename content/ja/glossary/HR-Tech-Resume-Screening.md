@@ -249,9 +249,15 @@ AIスクリーニングに基づいて拒否された候補者は、説明を受
 
 ## 参考文献
 
-- [Harvard Business Review: AI in Resume Screening](https://hbr.org/2019/04/the-risk-of-algorithmic-bias-in-hiring)
-- [SHRM: Automated Resume Screening](https://www.shrm.org/topics-tools/news/technology/automated-resume-screening-systems-transforming-hiring)
-- [MIT Technology Review: AI Resume Bias](https://www.technologyreview.com/2021/07/07/1027916/ai-bias-resume-screening/)
-- [EEOC: Use of AI in Employment Decisions](https://www.eeoc.gov/laws/guidance/americans-disabilities-act-and-use-software-algorithms-and-artificial-intelligence)
-- [Ideal: Resume Screening Best Practices](https://ideal.com/resume-screening/)
-- [LinkedIn Talent Blog: AI in Recruiting](https://www.linkedin.com/business/talent/blog/talent-acquisition/ai-in-recruiting)
+
+1. Harvard Business Review. (2019). The Risk of Algorithmic Bias in Hiring. Harvard Business Review.
+
+2. SHRM. (n.d.). Automated Resume Screening Systems Transforming Hiring. SHRM Topics & Tools.
+
+3. MIT Technology Review. (2021). AI Resume Bias. MIT Technology Review.
+
+4. EEOC. (n.d.). Americans with Disabilities Act and Use of Software, Algorithms, and Artificial Intelligence. EEOC Laws and Guidance.
+
+5. Ideal. (n.d.). Resume Screening Best Practices. Ideal.
+
+6. LinkedIn Talent Blog. (n.d.). AI in Recruiting. LinkedIn Talent Blog.

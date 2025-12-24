@@ -250,11 +250,19 @@ url: "/ja/glossary/supplementary-indicator/"
 
 ## 参考文献
 
-- [KPIs for Gen AI: Measuring Your AI Success - Google Cloud Blog](https://cloud.google.com/transform/gen-ai-kpis-measuring-ai-success-deep-dive)
-- [AI Metrics: How to Measure and Evaluate AI Performance - Sendbird](https://sendbird.com/blog/ai-metrics-guide)
-- [How to Measure AI Performance: Key Metrics and Best Practices - Neontri](https://neontri.com/blog/measure-ai-performance/)
-- [A Study on AI-based Composite Supplementary Index - Korea Science](https://www.koreascience.kr/article/JAKO202330366560310.page)
-- [USAID: Selecting Performance Indicators](https://pdf.usaid.gov/pdf_docs/PNABY214.pdf)
-- [scikit-learn: Classification Metrics](https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics)
-- [ISO/IEC 25010:2011 Software Quality Models](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010)
-- [AI Transparency Guide - Sendbird](https://sendbird.com/blog/ai-transparency-guide)
+
+1. Google Cloud. (2024). KPIs for Gen AI: Measuring Your AI Success. Google Cloud Blog.
+
+2. Sendbird. (2024). AI Metrics: How to Measure and Evaluate AI Performance. Sendbird Blog.
+
+3. Neontri. (2024). How to Measure AI Performance: Key Metrics and Best Practices. Neontri Blog.
+
+4. Korea Science. (n.d.). A Study on AI-based Composite Supplementary Index. Korea Science.
+
+5. USAID. (n.d.). Selecting Performance Indicators. USAID.
+
+6. scikit-learn. Classification Metrics. URL: https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics
+
+7. ISO. (2011). ISO/IEC 25010:2011 Software Quality Models. ISO 25000.
+
+8. Sendbird. (2024). AI Transparency Guide. Sendbird Blog.

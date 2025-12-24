@@ -268,20 +268,21 @@ AI生成コードの実行に最適化されたサンドボックスで、強力
 
 ## 参考文献
 
-- [OPSWAT: What is Sandboxing](https://www.opswat.com/blog/what-is-sandboxing)
-- [TestGrid: Sandbox Environment for Testing](https://testgrid.io/blog/sandbox-environment-for-testing/)
-- [Palo Alto Networks: Sandboxing](https://www.paloaltonetworks.com/cyberpedia/sandboxing)
-- [Salesforce: Sandboxes Guide](https://www.salesforce.com/platform/sandboxes-environments/guide/)
-- [Windows Sandbox Documentation](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/)
-- [Modal: What is AI Code Sandbox](https://modal.com/blog/what-is-ai-code-sandbox)
-- [Docker Platform](https://www.docker.com/)
-- [gVisor: Secure Container Runtime](https://gvisor.dev)
-- [Proofpoint: Sandbox Reference](https://www.proofpoint.com/us/threat-reference/sandbox)
-- [Gopher Security: Sandboxing Techniques](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)
-- [Global App Testing: Sandbox Testing](https://www.globalapptesting.com/blog/sandbox-testing)
-- [Dev.to: Ultimate Guide to Sandbox Environments](https://dev.to/testwithtorin/the-ultimate-guide-to-sandbox-environments-safe-efficient-software-testing-lb5)
-- [Salesforce Data Mask](https://www.salesforce.com/platform/data-masking/)
-- [Fortinet: What is Sandboxing](https://www.fortinet.com/resources/cyberglossary/what-is-sandboxing)
-- [Frugal Testing: Sandboxing Blog](https://www.frugaltesting.com/blog/what-is-sandboxing-in-software-testing-everything-you-need-to-know)
-- [Cuckoo Sandbox](https://cuckoosandbox.org/)
-- [Proofpoint TAP](https://www.proofpoint.com/us/products/advanced-threat-protection/targeted-attack-protection)
+
+1. OPSWAT. (n.d.). What is Sandboxing. OPSWAT Blog.
+2. TestGrid. (n.d.). Sandbox Environment for Testing. TestGrid Blog.
+3. Palo Alto Networks. (n.d.). Sandboxing. Cyberpedia.
+4. Salesforce. (n.d.). Sandboxes Guide. Salesforce Platform.
+5. Microsoft. (n.d.). Windows Sandbox Documentation. Microsoft Learn.
+6. Modal. (n.d.). What is AI Code Sandbox. Modal Blog.
+7. Docker. Docker Platform. URL: https://www.docker.com/
+8. gVisor. Secure Container Runtime. URL: https://gvisor.dev
+9. Proofpoint. (n.d.). Sandbox Reference. Proofpoint Threat Reference.
+10. Gopher Security. (n.d.). Sandboxing Techniques. Gopher Security Blog.
+11. Global App Testing. (n.d.). Sandbox Testing. Global App Testing Blog.
+12. Dev.to. (n.d.). Ultimate Guide to Sandbox Environments. Dev.to.
+13. Salesforce. Salesforce Data Mask. URL: https://www.salesforce.com/platform/data-masking/
+14. Fortinet. (n.d.). What is Sandboxing. Fortinet Cyber Glossary.
+15. Frugal Testing. (n.d.). Sandboxing Blog. Frugal Testing Blog.
+16. Cuckoo Sandbox. Malware Analysis Sandbox. URL: https://cuckoosandbox.org/
+17. Proofpoint TAP. Advanced Threat Protection Service. URL: https://www.proofpoint.com/us/products/advanced-threat-protection/targeted-attack-protection

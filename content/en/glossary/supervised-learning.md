@@ -321,15 +321,16 @@ Models that continuously learn from new data without catastrophic forgetting ena
 
 ## References
 
-- [IBM: What is Supervised Learning?](https://www.ibm.com/think/topics/supervised-learning)
-- [IBM: Types of Machine Learning](https://www.ibm.com/think/topics/machine-learning-types)
-- [IBM: Statistical Machine Learning](https://www.ibm.com/think/topics/statistical-machine-learning)
-- [GeeksforGeeks: Supervised Machine Learning](https://www.geeksforgeeks.org/machine-learning/supervised-machine-learning/)
-- [GeeksforGeeks: Linear Regression](https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/)
-- [GeeksforGeeks: Logistic Regression](https://www.geeksforgeeks.org/machine-learning/understanding-logistic-regression/)
-- [GeeksforGeeks: Decision Trees](https://www.geeksforgeeks.org/machine-learning/decision-tree/)
-- [GeeksforGeeks: Random Forest](https://www.geeksforgeeks.org/machine-learning/random-forest-regression-in-python/)
-- [GeeksforGeeks: Support Vector Machine](https://www.geeksforgeeks.org/machine-learning/support-vector-machine-algorithm/)
-- [GeeksforGeeks: K-Nearest Neighbors](https://www.geeksforgeeks.org/machine-learning/k-nearest-neighbours/)
-- [GeeksforGeeks: Naive Bayes Classifiers](https://www.geeksforgeeks.org/machine-learning/naive-bayes-classifiers/)
-- [GeeksforGeeks: Gradient Boosting](https://www.geeksforgeeks.org/machine-learning/ml-gradient-boosting/)
+
+1. IBM. (n.d.). What is Supervised Learning?. IBM Think Topics.
+2. IBM. (n.d.). Types of Machine Learning. IBM Think Topics.
+3. IBM. (n.d.). Statistical Machine Learning. IBM Think Topics.
+4. GeeksforGeeks. (n.d.). Supervised Machine Learning. GeeksforGeeks.
+5. GeeksforGeeks. (n.d.). Linear Regression. GeeksforGeeks.
+6. GeeksforGeeks. (n.d.). Logistic Regression. GeeksforGeeks.
+7. GeeksforGeeks. (n.d.). Decision Trees. GeeksforGeeks.
+8. GeeksforGeeks. (n.d.). Random Forest. GeeksforGeeks.
+9. GeeksforGeeks. (n.d.). Support Vector Machine. GeeksforGeeks.
+10. GeeksforGeeks. (n.d.). K-Nearest Neighbors. GeeksforGeeks.
+11. GeeksforGeeks. (n.d.). Naive Bayes Classifiers. GeeksforGeeks.
+12. GeeksforGeeks. (n.d.). Gradient Boosting. GeeksforGeeks.

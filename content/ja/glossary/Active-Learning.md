@@ -234,9 +234,15 @@ term: アクティブラーニング
 
 ## 参考文献
 
-- [Active Learning Literature Survey - Burr Settles](http://burrsettles.com/pub/settles.activelearning.pdf)
-- [Active Learning - Machine Learning Mastery](https://machinelearningmastery.com/what-is-active-learning/)
-- [Active Learning with Python - Towards Data Science](https://towardsdatascience.com/active-learning-in-machine-learning-525e61be16e5)
-- [The Power of Active Learning in ML - Google Research](https://research.google/pubs/pub45390/)
-- [Active Learning Strategies - Papers with Code](https://paperswithcode.com/task/active-learning)
-- [Active Learning in Practice - arXiv](https://arxiv.org/abs/2007.15555)
+
+1. Settles, B. (n.d.). Active Learning Literature Survey. Burr Settles Publication.
+
+2. Machine Learning Mastery. (n.d.). Active Learning. Machine Learning Mastery Blog.
+
+3. Towards Data Science. (n.d.). Active Learning with Python. Towards Data Science.
+
+4. Google Research. (n.d.). The Power of Active Learning in ML. Google Research Publications.
+
+5. Papers with Code. (n.d.). Active Learning Strategies. Papers with Code.
+
+6. arXiv. (n.d.). Active Learning in Practice. arXiv Research Repository.

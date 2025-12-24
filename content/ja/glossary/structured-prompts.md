@@ -482,13 +482,23 @@ Constraints: 不確実な場合は、人間のレビューのためにフラグ�
 
 ## 参考文献
 
-- [LearnPrompting.org: Understanding Prompt Structure](https://learnprompting.org/docs/basics/prompt_structure)
-- [StructuredPrompt.com: Prompt Engineering Tool and Framework](https://structuredprompt.com/)
-- [Google Vertex AI: Prompt Design Strategies](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies)
-- [Google Gemini API: Prompting Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies)
-- [Nielsen Norman Group: Prompt Structure in Generative AI](https://www.nngroup.com/articles/prompt-structure-generative-ai/)
-- [Prompting Guide: General Tips for Designing Prompts](https://promptingguide.ai/)
-- [Hypha: Optimizing AI Results with Structured Prompting](https://www.hypha.co/blog/optimizing-ai-results-with-structured-prompting)
-- [Google Cloud: What is Prompt Engineering?](https://cloud.google.com/discover/what-is-prompt-engineering)
-- [Google Colab: Prompt Design Notebook](https://colab.research.google.com/github/GoogleCloudPlatform/generative-ai/blob/main/gemini/prompts/intro_prompt_design.ipynb)
-- [Structured Prompt Notation Editor (Free Tool)](https://structuredprompt.com/free-structured-prompt-notation-editor/)
+
+1. LearnPrompting.org. (n.d.). Understanding Prompt Structure. LearnPrompting.org.
+
+2. StructuredPrompt.com. (n.d.). Prompt Engineering Tool and Framework. StructuredPrompt.com.
+
+3. Google. (n.d.). Prompt Design Strategies. Google Vertex AI Documentation.
+
+4. Google. (n.d.). Prompting Strategies. Google Gemini API Documentation.
+
+5. Nielsen Norman Group. (n.d.). Prompt Structure in Generative AI. Nielsen Norman Group Articles.
+
+6. Prompting Guide. (n.d.). General Tips for Designing Prompts. Prompting Guide.
+
+7. Hypha. (n.d.). Optimizing AI Results with Structured Prompting. Hypha Blog.
+
+8. Google Cloud. (n.d.). What is Prompt Engineering?. Google Cloud.
+
+9. Google. (n.d.). Prompt Design Notebook. Google Colab.
+
+10. Structured Prompt Notation Editor. Free Structured Prompt Notation Editor. URL: https://structuredprompt.com/free-structured-prompt-notation-editor/

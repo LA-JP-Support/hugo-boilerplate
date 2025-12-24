@@ -253,19 +253,20 @@ AI搭載チャットボットは、機械学習を使用して時間とともに
 
 ## 参考文献
 
-- [IBM: What Is a Chatbot?](https://www.ibm.com/think/topics/chatbots)
-- [DevRev: How Do Chatbots Work?](https://devrev.ai/blog/how-do-chatbots-work)
-- [Boost.ai: How do chatbots work?](https://boost.ai/learn/chatbot/how-do-chatbots-work/)
-- [Salesforce: How Do Chatbots Work?](https://www.salesforce.com/agentforce/chatbot/)
-- [WhosOn: Chatbot Terminology: A Working Handbook](https://www.whoson.com/chatbots-ai/chatbot-terminology-a-working-handbook/)
-- [ChatBot.com: Chatbot Terminology: 29 Must-know Terms](https://www.chatbot.com/blog/chatbot-terminology/)
-- [Cyara: Glossary: Essential Guide to Common Chatbot Terms](https://cyara.com/resource/glossary-essential-guide-to-common-chatbot-terms/)
-- [ChatBot.com: Chatbot Use Cases](https://www.chatbot.com/blog/chatbot-use-cases/)
-- [ChatBot.com: Complete List of Features](https://www.chatbot.com/features/)
-- [Crescendo.ai: Must-Have Features in a Chatbot](https://www.crescendo.ai/blog/must-have-features-in-a-chatbot)
-- [WhosOn: Hybrid Chat](https://www.whoson.com/product/chatbots/hybrid/)
-- [Gartner: Agentic AI](https://www.gartner.com/en/articles/ai-agents)
-- [IBM: Virtual Agents](https://www.ibm.com/think/topics/virtual-agent)
-- [IBM: Generative AI in Chatbots](https://research.ibm.com/blog/what-is-generative-AI)
-- [Zendesk: Chatbot Risks](https://www.zendesk.de/blog/what-is-a-chatbot/)
-- [PwC: Customer Experience Research](https://www.pwc.com/us/en/advisory-services/publications/consumer-intelligence-series/pwc-consumer-intelligence-series-customer-experience.pdf)
+
+1. IBM. (n.d.). What Is a Chatbot?. IBM Think Topics.
+2. DevRev. (n.d.). How Do Chatbots Work?. DevRev Blog.
+3. Boost.ai. (n.d.). How do chatbots work?. Boost.ai Learn.
+4. Salesforce. (n.d.). How Do Chatbots Work?. Salesforce AgentForce.
+5. WhosOn. (n.d.). Chatbot Terminology: A Working Handbook. WhosOn.
+6. ChatBot.com. (n.d.). Chatbot Terminology: 29 Must-know Terms. ChatBot.com Blog.
+7. Cyara. (n.d.). Glossary: Essential Guide to Common Chatbot Terms. Cyara Resource.
+8. ChatBot.com. (n.d.). Chatbot Use Cases. ChatBot.com Blog.
+9. ChatBot.com. (n.d.). Complete List of Features. ChatBot.com.
+10. Crescendo.ai. (n.d.). Must-Have Features in a Chatbot. Crescendo.ai Blog.
+11. WhosOn. (n.d.). Hybrid Chat. WhosOn Product.
+12. Gartner. (n.d.). Agentic AI. Gartner Articles.
+13. IBM. (n.d.). Virtual Agents. IBM Think Topics.
+14. IBM. (n.d.). Generative AI in Chatbots. IBM Research Blog.
+15. Zendesk. (n.d.). Chatbot Risks. Zendesk Blog.
+16. PwC. (n.d.). Customer Experience Research. PwC Advisory Services Publications.

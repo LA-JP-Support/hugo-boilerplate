@@ -453,17 +453,31 @@ Anthropic remains privately held and has not pursued public stock listing.
 
 ## References
 
-- [Anthropic: Company Values](https://www.anthropic.com/company)
-- [Introducing Claude Opus 4.5](https://www.anthropic.com/news/claude-opus-4-5)
-- [Introducing Claude Sonnet 4.5](https://www.anthropic.com/news/claude-sonnet-4-5)
-- [Introducing Claude 4](https://www.anthropic.com/news/claude-4)
-- [Claude Opus 4.5 Product Page](https://www.anthropic.com/claude/opus)
-- [Claude Sonnet 4.5 Product Page](https://www.anthropic.com/claude/sonnet)
-- [System Card: Claude Opus 4 & Sonnet 4](https://www-cdn.anthropic.com/4263b940cabb546aa0e3283f35b686f4f3b2ff47.pdf)
-- [Constitutional AI: Harmlessness from AI Feedback](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback)
-- [Anthropic News: Introducing Claude](https://www.anthropic.com/news/introducing-claude)
-- [Claude's Constitution Explained](https://www.anthropic.com/news/claudes-constitution)
-- [Updates to Consumer Terms and Privacy Policy](https://www.anthropic.com/news/updates-to-our-consumer-terms)
-- [Wikipedia: Claude (language model)](https://en.wikipedia.org/wiki/Claude_(language_model))
-- [GitHub: Claude Sonnet 4 and Opus 4 in Copilot](https://github.blog/changelog/2025-06-25-anthropic-claude-sonnet-4-and-claude-opus-4-are-now-generally-available-in-github-copilot/)
-- [PromptLayer: Claude 4 Release](https://blog.promptlayer.com/claude-4/)
+
+1. Anthropic. (n.d.). Company Values. Anthropic.
+
+2. Anthropic. (2024). Introducing Claude Opus 4.5. Anthropic News.
+
+3. Anthropic. (2024). Introducing Claude Sonnet 4.5. Anthropic News.
+
+4. Anthropic. (2024). Introducing Claude 4. Anthropic News.
+
+5. Anthropic. (n.d.). Claude Opus 4.5 Product Page. Anthropic.
+
+6. Anthropic. (n.d.). Claude Sonnet 4.5 Product Page. Anthropic.
+
+7. Anthropic. (n.d.). System Card: Claude Opus 4 & Sonnet 4. Anthropic Research.
+
+8. Anthropic. (n.d.). Constitutional AI: Harmlessness from AI Feedback. Anthropic Research.
+
+9. Anthropic. (n.d.). Anthropic News: Introducing Claude. Anthropic News.
+
+10. Anthropic. (n.d.). Claude's Constitution Explained. Anthropic News.
+
+11. Anthropic. (n.d.). Updates to Consumer Terms and Privacy Policy. Anthropic News.
+
+12. Wikipedia. (n.d.). Claude (language model). Wikipedia.
+
+13. GitHub. (2025). Claude Sonnet 4 and Opus 4 in Copilot. GitHub Blog.
+
+14. PromptLayer. (n.d.). Claude 4 Release. PromptLayer Blog.

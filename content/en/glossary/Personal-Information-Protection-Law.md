@@ -270,13 +270,23 @@ Organizations should monitor CAC guidance and industry best practices for update
 
 ## References
 
-- [National People's Congress: PIPL Official Text (Chinese)](http://www.npc.gov.cn/npc/c30834/202108/6146e5b1b8244b5b9d4b1d1b4b1c6b8e.shtml)
-- [DLA Piper: Data Protection Laws in China](https://www.dlapiperdataprotection.com/index.html?c=CN)
-- [PrivacyEngine: Comprehensive Guide to China's PIPL](https://www.privacyengine.io/blog/chinas-personal-information-protection-law/)
-- [Hawksford: PIPL Compliance Guide](https://www.hawksford.com/insights-and-guides/china-pipl-compliance-guide)
-- [Columbia Journal of Transnational Law: PIPL vs GDPR](https://www.jtl.columbia.edu/)
-- [Varonis: U.S. Privacy Laws Guide](https://www.varonis.com/blog/us-privacy-laws)
-- [European Union GDPR Portal](https://gdpr.eu/)
-- [Stanford DigiChina: PIPL English Translation](https://digichina.stanford.edu/work/translation-personal-information-protection-law-of-the-peoples-republic-of-china-effective-nov-1-2021/)
-- [Cyberspace Administration of China (CAC)](http://www.cac.gov.cn/)
-- [Personal Information Security Specification (Chinese National Standard)](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=6C4A1B0C7E668CFAB0C2C6D6F4B2E5A8)
+
+1. National People's Congress. (2021). Personal Information Protection Law (PIPL) Official Text. National People's Congress.
+
+2. DLA Piper. (n.d.). Data Protection Laws in China. DLA Piper Data Protection.
+
+3. PrivacyEngine. (n.d.). Comprehensive Guide to China's Personal Information Protection Law. PrivacyEngine Blog.
+
+4. Hawksford. (n.d.). PIPL Compliance Guide. Hawksford Insights.
+
+5. Columbia Journal of Transnational Law. (n.d.). PIPL vs GDPR Comparative Analysis. Columbia Journal of Transnational Law.
+
+6. Varonis. (n.d.). U.S. Privacy Laws Guide. Varonis Blog.
+
+7. European Union. (n.d.). General Data Protection Regulation (GDPR) Portal. EU GDPR.
+
+8. Stanford DigiChina. (2021). Translation: Personal Information Protection Law of the People's Republic of China. Stanford DigiChina.
+
+9. Cyberspace Administration of China. (n.d.). Official Government Website. CAC.
+
+10. Standardization Administration of China. (n.d.). Personal Information Security Specification. Chinese National Standard.

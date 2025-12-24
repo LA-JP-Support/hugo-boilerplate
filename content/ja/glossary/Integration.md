@@ -273,27 +273,29 @@ ONEiOのIntegration Opsモデルを採用し、プロジェクトベースから
 
 ## 参考文献
 
-- [Coursera: What Is AI Integration?](https://www.coursera.org/articles/ai-integration)
-- [AltexSoft: System Integration: Definition, Types, and Approaches](https://www.altexsoft.com/blog/system-integration/)
-- [x]cube LABS: Building Custom AI Chatbots with Integration and Automation Tools](https://www.xcubelabs.com/blog/building-custom-ai-chatbots-with-integration-and-automation-tools/)
-- [AgentiveAIQ: AI Chatbot System Integration Support Explained](https://agentiveaiq.com/blog/what-is-system-integration-support-for-ai-chatbots)
-- [ONEiO: What is system integration? Types, examples, and best practices](https://www.oneio.cloud/blog/what-are-system-integrations)
-- [Datagrid: Transform Content Marketing with AI Agents](https://www.datagrid.com/blog/ai-automates-keyword-integration-content-marketers)
-- [Social Intents: Chatbot Automation](https://www.socialintents.com/blog/chatbot-automation/)
-- [Vendasta: Chatbots Integration](https://www.vendasta.com/blog/chatbots-integration/)
-- [DevRev: Chatbot Automation](https://devrev.ai/blog/chatbot-automation)
-- [Workato](https://www.workato.com/)
-- [Boomi](https://boomi.com/)
-- [Celigo](https://www.celigo.com/)
-- [Torocloud: Martini](https://www.torocloud.com/platform/martini)
-- [MuleSoft](https://www.mulesoft.com/)
-- [Software AG](https://www.softwareag.com/en_corporate.html)
-- [Axway](https://www.axway.com/en)
-- [Cleo](https://www.cleo.com/)
-- [Zapier](https://zapier.com/)
-- [Make](https://www.make.com/)
-- [Microsoft Power Automate](https://powerautomate.microsoft.com/)
-- [AgentiveAIQ](https://agentiveaiq.com/)
-- [LiveChatAI](https://livechatai.com/)
-- [HubSpot Chatbots](https://www.hubspot.com/products/conversations/chatbots)
-- [Chatbase](https://www.chatbase.co/)
+
+1. Coursera. (n.d.). What Is AI Integration?. Coursera Articles.
+2. AltexSoft. (n.d.). System Integration: Definition, Types, and Approaches. AltexSoft Blog.
+3. x]cube LABS. (n.d.). Building Custom AI Chatbots with Integration and Automation Tools. x]cube LABS Blog.
+4. AgentiveAIQ. (n.d.). AI Chatbot System Integration Support Explained. AgentiveAIQ Blog.
+5. ONEiO. (n.d.). What is system integration? Types, examples, and best practices. ONEiO Blog.
+6. Datagrid. (n.d.). Transform Content Marketing with AI Agents. Datagrid Blog.
+7. Social Intents. (n.d.). Chatbot Automation. Social Intents Blog.
+8. Vendasta. (n.d.). Chatbots Integration. Vendasta Blog.
+9. DevRev. (n.d.). Chatbot Automation. DevRev Blog.
+
+10. Workato. Integration Automation Platform. URL: https://www.workato.com/
+11. Boomi. Cloud Integration Platform. URL: https://boomi.com/
+12. Celigo. Integration Platform. URL: https://www.celigo.com/
+13. Torocloud Martini. Enterprise Integration Platform. URL: https://www.torocloud.com/platform/martini
+14. MuleSoft. Integration Platform. URL: https://www.mulesoft.com/
+15. Software AG. Enterprise Integration Solutions. URL: https://www.softwareag.com/en_corporate.html
+16. Axway. Integration Platform. URL: https://www.axway.com/en
+17. Cleo. Integration Platform. URL: https://www.cleo.com/
+18. Zapier. Workflow Automation Tool. URL: https://zapier.com/
+19. Make. Automation Platform. URL: https://www.make.com/
+20. Microsoft Power Automate. Workflow Automation Tool. URL: https://powerautomate.microsoft.com/
+21. AgentiveAIQ. AI Integration Platform. URL: https://agentiveaiq.com/
+22. LiveChatAI. AI Chatbot Platform. URL: https://livechatai.com/
+23. HubSpot Chatbots. Conversational Marketing Tool. URL: https://www.hubspot.com/products/conversations/chatbots
+24. Chatbase. AI Chatbot Platform. URL: https://www.chatbase.co/

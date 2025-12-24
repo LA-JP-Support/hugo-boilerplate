@@ -298,16 +298,17 @@ UIの設計は、ISO 9241-210に沿った反復的でユーザー中心のプロ
 
 ## 参考文献
 
-- [Spaceo Technologies: What is User Interface?](https://www.spaceotechnologies.com/glossary/tech-terms/what-is-user-interface/)
-- [TechTarget: User Interface (UI)](https://www.techtarget.com/searchapparchitecture/definition/user-interface-UI)
-- [BrowserStack: What is User Interface?](https://www.browserstack.com/guide/what-is-user-interface)
-- [Budibase: AI Chat UIs](https://budibase.com/blog/ai-chat-uis/)
-- [Daffodil Software: Conversational UI](https://insights.daffodilsw.com/blog/what-is-conversational-ui)
-- [Alan AI Blog: Types of User Interface](https://alan.app/blog/types-of-user-interface/)
-- [Picovoice: Types of User Interfaces](https://picovoice.ai/blog/types-of-user-interfaces/)
-- [Interaction Design Foundation: UI Design](https://www.interaction-design.org/literature/topics/ui-design)
-- [Konrad: What is UI Design?](https://www.konrad.com/research/what-is-ui-design)
-- [Chet Tailor: ISO 9241 for UX/UI](https://chet-tailor.com/articles/iso-9241)
-- [Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines)
-- [Material Design Principles](https://m3.material.io/foundations/principles/overview)
-- [Konrad: Design Thinking Process](https://www.konrad.com/research/design-thinking-process)
+
+1. Spaceo Technologies. (n.d.). What is User Interface?. Spaceo Technologies Glossary.
+2. TechTarget. (n.d.). User Interface (UI). TechTarget Search App Architecture.
+3. BrowserStack. (n.d.). What is User Interface?. BrowserStack Guide.
+4. Budibase. (n.d.). AI Chat UIs. Budibase Blog.
+5. Daffodil Software. (n.d.). Conversational UI. Daffodil Software Insights.
+6. Alan AI. (n.d.). Types of User Interface. Alan AI Blog.
+7. Picovoice. (n.d.). Types of User Interfaces. Picovoice Blog.
+8. Interaction Design Foundation. (n.d.). UI Design. Interaction Design Foundation Literature.
+9. Konrad. (n.d.). What is UI Design?. Konrad Research.
+10. Chet Tailor. (n.d.). ISO 9241 for UX/UI. Chet Tailor Articles.
+11. Apple. (n.d.). Apple Human Interface Guidelines. Apple Developer.
+12. Google. (n.d.). Material Design Principles. Material Design.
+13. Konrad. (n.d.). Design Thinking Process. Konrad Research.

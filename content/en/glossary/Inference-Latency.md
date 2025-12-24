@@ -275,16 +275,29 @@ A: The high-percentile (e.g., 95th or 99th) latency representing slowest respons
 
 ## References
 
-- [AWS: Optimizing AI Responsiveness - Latency Optimized Inference](https://aws.amazon.com/blogs/machine-learning/optimizing-ai-responsiveness-a-practical-guide-to-amazon-bedrock-latency-optimized-inference/)
-- [Roboflow: Inference Latency](https://blog.roboflow.com/inference-latency/)
-- [Roboflow: Autonomous Vehicle Object Detection](https://blog.roboflow.com/autonomous-vehicle-object-detection/)
-- [Roboflow: What is ONNX?](https://blog.roboflow.com/what-is-onnx/)
-- [Roboflow: What is TensorFlow Lite?](https://blog.roboflow.com/what-is-tensorflow-lite/)
-- [Roboflow Inference](https://inference.roboflow.com/)
-- [NVIDIA: Optimize AI Inference Performance](https://developer.nvidia.com/blog/optimize-ai-inference-performance-with-nvidia-full-stack-solutions/)
-- [NVIDIA: Think SMART - Optimize AI Factory Inference](https://blogs.nvidia.com/blog/think-smart-optimize-ai-factory-inference-performance/)
-- [NVIDIA Triton Inference Server](https://developer.nvidia.com/nvidia-triton-inference-server)
-- [ONNX Runtime Profiling](https://onnxruntime.ai/docs/performance/profiling/)
-- [TensorFlow Profiler](https://www.tensorflow.org/guide/profiler)
-- [Medium: Benchmarking vLLM Inference Performance](https://medium.com/@kimdoil1211/benchmarking-vllm-inference-performance-measuring-latency-throughput-and-more-1dba830c5444)
-- [Towards Data Science: Word Embedding and Word2Vec](https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa)
+
+1. AWS. (n.d.). Optimizing AI Responsiveness - Latency Optimized Inference. AWS Blog.
+
+2. Roboflow. (n.d.). Inference Latency. Roboflow Blog.
+
+3. Roboflow. (n.d.). Autonomous Vehicle Object Detection. Roboflow Blog.
+
+4. Roboflow. (n.d.). What is ONNX?. Roboflow Blog.
+
+5. Roboflow. (n.d.). What is TensorFlow Lite?. Roboflow Blog.
+
+6. Roboflow Inference. Inference Platform. URL: https://inference.roboflow.com/
+
+7. NVIDIA. (n.d.). Optimize AI Inference Performance. NVIDIA Developer Blog.
+
+8. NVIDIA. (n.d.). Think SMART - Optimize AI Factory Inference. NVIDIA Blog.
+
+9. NVIDIA Triton Inference Server. Inference Server Platform. URL: https://developer.nvidia.com/nvidia-triton-inference-server
+
+10. ONNX Runtime Profiling. Performance Profiling Documentation. URL: https://onnxruntime.ai/docs/performance/profiling/
+
+11. TensorFlow Profiler. Performance Analysis Tool. URL: https://www.tensorflow.org/guide/profiler
+
+12. Kim, D. (n.d.). Benchmarking vLLM Inference Performance. Medium.
+
+13. Towards Data Science. (n.d.). Word Embedding and Word2Vec. Towards Data Science.

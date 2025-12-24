@@ -659,9 +659,15 @@ guardrails = {
 
 ## 参考文献
 
-- [Tredence: Mitigating Hallucination in Large Language Models](https://www.tredence.com/blog/mitigating-hallucination-in-large-language-models)
-- [FactSet: AI Strategies Series—7 Ways to Overcome Hallucinations](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations)
-- [arXiv: Comprehensive Survey of Hallucination Mitigation Techniques](https://arxiv.org/abs/2401.01313)
-- [Google Bard Telescope Error News](https://gizmodo.com/google-bard-ai-ad-incorrect-webb-telescope-facts-1850087798)
-- [OpenAI API Reference: Temperature Parameter](https://platform.openai.com/docs/api-reference/chat/create)
-- [Legal Citation Hallucinations](https://www.youtube.com/watch?v=rQ7-HqEgF40)
+
+1. Tredence. (n.d.). Mitigating Hallucination in Large Language Models. Tredence Blog.
+
+2. FactSet. (n.d.). AI Strategies Series—7 Ways to Overcome Hallucinations. FactSet Insight.
+
+3. arXiv. (2024). Comprehensive Survey of Hallucination Mitigation Techniques. arXiv.
+
+4. Gizmodo. (2024). Google Bard Telescope Error News. Gizmodo.
+
+5. OpenAI. (n.d.). Temperature Parameter. OpenAI API Reference. URL: https://platform.openai.com/docs/api-reference/chat/create
+
+6. YouTube. (n.d.). Legal Citation Hallucinations. YouTube Video.

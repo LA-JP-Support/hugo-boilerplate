@@ -397,26 +397,27 @@ GoogleおよびサードパーティのAIモデルを含む、Vertex AI上で展
 
 ## 参考文献
 
-- [Gemini 2.5 Pro | Vertex AI Documentation](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-pro)
-- [Gemini 2.5 Pro Model Card (PDF)](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf)
-- [Google DeepMind: Gemini Model Update](https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/)
-- [Google DeepMind](https://deepmind.google/)
-- [Vertex AI Platform | Google Cloud](https://cloud.google.com/vertex-ai)
-- [Vertex AI Documentation](https://docs.cloud.google.com/vertex-ai/docs)
-- [Vertex AI Studio](https://cloud.google.com/generative-ai-studio)
-- [Model Garden | Vertex AI](https://docs.cloud.google.com/vertex-ai/docs/start/explore-models)
-- [Vertex AI Agent Builder](https://cloud.google.com/products/agent-builder/)
-- [Vertex AI Generative Models](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models)
-- [Gemini Code Assist](https://cloud.google.com/vertex-ai/docs/generative-ai/code-assist)
-- [SAIF: Google's Guide to Secure AI](https://saif.google/)
-- [Google AI Safety](https://ai.google/safety/)
-- [Google AI Education](https://ai.google/education/)
-- [BigQuery ML](https://cloud.google.com/bigquery-ml/docs/introduction)
-- [601 Real-World Gen AI Use Cases](https://cloud.google.com/blog/products/ai-machine-learning/real-world-gen-ai-use-cases-with-technical-blueprints)
-- [LMArena Leaderboard](https://lmarena.org/)
-- [Imagen](https://imagen.research.google/)
-- [Veo AI Video Generation](https://blog.google/technology/ai/veo-ai-video-generation/)
-- [Lyria Music Model](https://deepmind.google/discover/blog/lyria-music-model/)
-- [AlphaFold by DeepMind](https://deepmind.com/research/highlighted-research/alphafold)
-- [AlphaGo Research](https://www.deepmind.com/research/highlighted-research/alphago)
-- [Chain-of-Thought Prompting Research Paper](https://arxiv.org/abs/2201.11903)
+
+1. Google Cloud. (n.d.). Gemini 2.5 Pro | Vertex AI Documentation. Vertex AI Documentation.
+2. Google. (n.d.). Gemini 2.5 Pro Model Card. Model Card.
+3. Google DeepMind. (2025). Gemini Model Update. Google Blog.
+4. Google DeepMind. (n.d.). Google DeepMind. Official Website.
+5. Google Cloud. (n.d.). Vertex AI Platform. Google Cloud.
+6. Google Cloud. (n.d.). Vertex AI Documentation. Documentation.
+7. Google Cloud. (n.d.). Vertex AI Studio. Generative AI Studio.
+8. Google Cloud. (n.d.). Model Garden | Vertex AI. Vertex AI Documentation.
+9. Google Cloud. (n.d.). Vertex AI Agent Builder. Product Page.
+10. Google Cloud. (n.d.). Vertex AI Generative Models. Documentation.
+11. Google Cloud. (n.d.). Gemini Code Assist. Vertex AI Documentation.
+12. Google. (n.d.). SAIF: Google's Guide to Secure AI. AI Safety Guide.
+13. Google. (n.d.). Google AI Safety. Safety Resource.
+14. Google. (n.d.). Google AI Education. Education Resource.
+15. Google Cloud. (n.d.). BigQuery ML. Documentation.
+16. Google Cloud. (2024). 601 Real-World Gen AI Use Cases. Cloud Blog.
+17. LMArena. (n.d.). LMArena Leaderboard. AI Model Comparison.
+18. Google Research. (n.d.). Imagen. Research Project.
+19. Google. (n.d.). Veo AI Video Generation. Technology Blog.
+20. DeepMind. (n.d.). Lyria Music Model. Research Blog.
+21. DeepMind. (n.d.). AlphaFold. Research Project.
+22. DeepMind. (n.d.). AlphaGo Research. Research Project.
+23. Wei et al. (2022). Chain-of-Thought Prompting Research Paper. arXiv.

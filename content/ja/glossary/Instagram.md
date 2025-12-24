@@ -278,13 +278,14 @@ Metaのデータ収集慣行とプライバシー論争が、ユーザーの躊�
 
 ## 参考文献
 
-- [Instagram公式サイト](https://www.instagram.com/)
-- [Meta企業プロフィール](Meta.md)
-- [Instagram for Business](https://business.instagram.com/)
-- [Instagramクリエイターアカウント](https://creators.instagram.com/)
-- [Instagramショッピング](https://business.instagram.com/shopping/)
-- [Instagramヘルプセンター](https://help.instagram.com/)
-- [Meta Business Suite](https://business.facebook.com/)
-- [Instagram Creator Marketplace](https://creators.instagram.com/earn-money/branded-content)
-- [Instagramブログ](https://about.instagram.com/blog)
-- [Instagramプライバシーセンター](https://help.instagram.com/privacy/)
+
+1. Instagram. Service for Photo and Video Sharing. URL: https://www.instagram.com/
+2. Meta. Company Profile. URL: https://www.meta.com/
+3. Instagram for Business. Business Marketing Platform. URL: https://business.instagram.com/
+4. Instagram Creators. Creator Account Platform. URL: https://creators.instagram.com/
+5. Instagram Shopping. E-commerce Feature. URL: https://business.instagram.com/shopping/
+6. Instagram Help Center. Support and Guidance Platform. URL: https://help.instagram.com/
+7. Meta Business Suite. Business Management Tool. URL: https://business.facebook.com/
+8. Instagram Creator Marketplace. Branded Content Monetization Platform. URL: https://creators.instagram.com/earn-money/branded-content
+9. Instagram Blog. Company News and Updates. URL: https://about.instagram.com/blog
+10. Instagram Privacy Center. Privacy Information and Settings. URL: https://help.instagram.com/privacy/

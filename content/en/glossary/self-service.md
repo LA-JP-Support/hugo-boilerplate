@@ -401,13 +401,23 @@ Make self-service prominent and easy to find, demonstrate value through customer
 
 ## References
 
-- [Salesforce: What is Self-Service Customer Service](https://www.salesforce.com/blog/self-service-customer-service/)
-- [Zendesk: Customer Self-Service Guide](https://www.zendesk.com/blog/customer-self-service-guide-helping-customers-help/)
-- [Userpilot: Self-Service Support 101 for SaaS](https://userpilot.com/blog/self-service-support-saas/)
-- [NiCE: Top Benefits of AI Chatbots for Self-Service Solutions](https://www.nice.com/info/top-benefits-of-ai-chatbots-for-self-service-solutions)
-- [IBM: Unlocking the Power of Chatbots - Key Benefits](https://www.ibm.com/think/insights/unlocking-the-power-of-chatbots-key-benefits-for-businesses-and-customers)
-- [Zendesk: 5 Knowledge Base Design Best Practices](https://www.zendesk.com/blog/5-knowledge-base-design-best-practices/)
-- [Librestream: Guide to Building an Effective Customer Service Knowledge Base](https://librestream.com/blog/a-guide-to-building-an-effective-customer-service-knowledge-base/)
-- [Talkdesk: What is an IVR and 6 Benefits of Using One](https://www.talkdesk.com/blog/what-is-an-ivr-and-6-benefits-of-using-one/)
-- [Ozonetel: Contact Center IVR Guide](https://ozonetel.com/contact-center-ivr-guide/)
-- [Gartner: Self-Service is the Most Popular Channel for Customer Service](https://www.gartner.com/en/newsroom/press-releases/2023-05-08-gartner-says-self-service-is-the-most-popular-channel-for-customer-service)
+
+1. Salesforce. (n.d.). What is Self-Service Customer Service. Salesforce Blog.
+
+2. Zendesk. (n.d.). Customer Self-Service Guide. Zendesk Blog.
+
+3. Userpilot. (n.d.). Self-Service Support 101 for SaaS. Userpilot Blog.
+
+4. NiCE. (n.d.). Top Benefits of AI Chatbots for Self-Service Solutions. NiCE Info.
+
+5. IBM. (n.d.). Unlocking the Power of Chatbots - Key Benefits. IBM Think Insights.
+
+6. Zendesk. (n.d.). 5 Knowledge Base Design Best Practices. Zendesk Blog.
+
+7. Librestream. (n.d.). Guide to Building an Effective Customer Service Knowledge Base. Librestream Blog.
+
+8. Talkdesk. (n.d.). What is an IVR and 6 Benefits of Using One. Talkdesk Blog.
+
+9. Ozonetel. (n.d.). Contact Center IVR Guide. Ozonetel Blog.
+
+10. Gartner. (2023). Self-Service is the Most Popular Channel for Customer Service. Gartner Newsroom.

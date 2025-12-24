@@ -224,12 +224,21 @@ AIレポーティングは、人工知能—特に機械学習(ML)、自然言�
 
 ## 参考文献
 
-- [Improvado – AI Reporting Tools for Automated Analytics in 2025](https://improvado.io/blog/ai-report-generation)
-- [Akkio – Guide to AI Reporting: Transforming Data into Actionable Insights](https://www.akkio.com/post/guide-to-ai-reporting-transforming-data-into-actionable-insights)
-- [IBM – Natural Language Processing](https://www.ibm.com/topics/natural-language-processing)
-- [Improvado – Data Platform](https://improvado.io/products/connect-extract)
-- [Improvado – AI Agent Example](https://improvado.io/products/discovery-insights)
-- [GWU – AI Guidance and Best Practices](https://it.gwu.edu/ai-guidance-and-best-practices)
-- [YouTube: How AI Reporting Works (Qlik)](https://www.youtube.com/watch?v=O2wqPzXul6k)
-- [Whatagraph: 9 Best AI Reporting Tools in 2025](https://whatagraph.com/blog/articles/ai-reporting-tools)
-- [ThoughtSpot: AI Analytics Explained](https://www.thoughtspot.com/data-trends/ai-analytics)
+
+1. Improvado. (2025). AI Reporting Tools for Automated Analytics in 2025. Improvado Blog.
+
+2. Akkio. (2025). Guide to AI Reporting: Transforming Data into Actionable Insights. Akkio Blog.
+
+3. IBM. (n.d.). Natural Language Processing. IBM Topics.
+
+4. Improvado. (n.d.). Data Platform. URL: https://improvado.io/products/connect-extract
+
+5. Improvado. (n.d.). AI Agent Example. URL: https://improvado.io/products/discovery-insights
+
+6. George Washington University. (n.d.). AI Guidance and Best Practices. URL: https://it.gwu.edu/ai-guidance-and-best-practices
+
+7. Qlik. (n.d.). How AI Reporting Works. YouTube.
+
+8. Whatagraph. (2025). 9 Best AI Reporting Tools in 2025. Whatagraph Blog.
+
+9. ThoughtSpot. (n.d.). AI Analytics Explained. URL: https://www.thoughtspot.com/data-trends/ai-analytics

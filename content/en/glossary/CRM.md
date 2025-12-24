@@ -276,15 +276,16 @@ Common risks are poor data quality, low user adoption, integration issues, under
 
 ## References
 
-- [Salesforce: What Is CRM?](https://www.salesforce.com/crm/what-is-crm/)
-- [IBM: What Is CRM?](https://www.ibm.com/think/topics/crm)
-- [TechTarget: What is CRM?](https://www.techtarget.com/searchcustomerexperience/definition/CRM-customer-relationship-management)
-- [Oracle: What is CRM?](https://www.oracle.com/cx/what-is-crm/)
-- [Microsoft: What is CRM?](https://www.microsoft.com/en-us/dynamics-365/resources/what-is-crm)
-- [Oracle: AI in CRM](https://www.oracle.com/cx/what-is-crm/#link12)
-- [Microsoft: The Future of CRM](https://www.microsoft.com/en-us/dynamics-365/resources/what-is-crm#The-future-of-CRM)
-- [Salesforce: AI and CRM](https://www.salesforce.com/artificial-intelligence/)
-- [IBM: ERP and CRM](https://www.ibm.com/think/topics/enterprise-resource-planning)
-- [Oracle: CRM vs Marketing Automation](https://www.oracle.com/cx/what-is-crm/#link11)
-- [YouTube: What is CRM? - Salesforce Animated Guide](https://www.youtube.com/watch?v=7q6XTnK7QyQ)
-- [YouTube: CRM Explained in 5 Minutes - TechTarget](https://www.youtube.com/watch?v=s0a6Q0VBd5Q)
+
+1. Salesforce. (n.d.). What Is CRM?. Salesforce.
+2. IBM. (n.d.). What Is CRM?. IBM Think Topics.
+3. TechTarget. (n.d.). What is CRM?. TechTarget SearchCustomerExperience.
+4. Oracle. (n.d.). What is CRM?. Oracle CX.
+5. Microsoft. (n.d.). What is CRM?. Microsoft Dynamics 365 Resources.
+6. Oracle. (n.d.). AI in CRM. Oracle CX.
+7. Microsoft. (n.d.). The Future of CRM. Microsoft Dynamics 365 Resources.
+8. Salesforce. (n.d.). AI and CRM. Salesforce.
+9. IBM. (n.d.). ERP and CRM. IBM Think Topics.
+10. Oracle. (n.d.). CRM vs Marketing Automation. Oracle CX.
+11. Salesforce. (n.d.). What is CRM? - Salesforce Animated Guide. YouTube.
+12. TechTarget. (n.d.). CRM Explained in 5 Minutes. YouTube.

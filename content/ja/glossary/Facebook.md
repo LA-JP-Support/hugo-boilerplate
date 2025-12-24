@@ -275,13 +275,23 @@ Ads ManagerまたはBusiness Suiteにアクセスし、キャンペーンの目�
 
 ## 参考文献
 
-- [Facebook公式サイト](https://www.facebook.com/)
-- [Meta企業プロフィール](Meta.md)
-- [Meta Business Suite](https://business.facebook.com/)
-- [Facebook Ads Manager](https://www.facebook.com/business/tools/ads-manager)
-- [Facebook for Business](https://www.facebook.com/business/)
-- [Facebookヘルプセンター](https://www.facebook.com/help/)
-- [Metaプライバシーセンター](https://www.facebook.com/privacy/center/)
-- [Facebook Shops](https://www.facebook.com/business/shops)
-- [Facebook Creator Studio](https://business.facebook.com/creatorstudio/)
-- [Facebookグループ](https://www.facebook.com/groups/)
+
+1. Facebook. Service. Official Website. URL: https://www.facebook.com/
+
+2. Meta. Service. Corporate Profile. URL: https://www.facebook.com/meta
+
+3. Meta Business Suite. Service. Business Management Platform. URL: https://business.facebook.com/
+
+4. Facebook Ads Manager. Service. Advertising Management Tool. URL: https://www.facebook.com/business/tools/ads-manager
+
+5. Facebook for Business. Service. Business Solutions Platform. URL: https://www.facebook.com/business/
+
+6. Facebook Help Center. Service. Customer Support Portal. URL: https://www.facebook.com/help/
+
+7. Meta Privacy Center. Service. Privacy Information and Controls. URL: https://www.facebook.com/privacy/center/
+
+8. Facebook Shops. Service. E-commerce Platform. URL: https://www.facebook.com/business/shops
+
+9. Facebook Creator Studio. Service. Content Management Tool. URL: https://business.facebook.com/creatorstudio/
+
+10. Facebook Groups. Service. Community Interaction Platform. URL: https://www.facebook.com/groups/

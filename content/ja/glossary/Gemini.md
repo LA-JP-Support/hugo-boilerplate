@@ -289,13 +289,33 @@ Geminiは数十の言語を強力なパフォーマンスでサポートして�
 
 ## 参考文献
 
-- [Gemini公式サイト](https://gemini.google.com/)
-- [Google AI企業プロファイル](Google.md)
-- [Gemini 2.5 Proドキュメント](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-pro)
-- [Geminiモデルカード](https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf)
-- [Vertex AIプラットフォーム](https://cloud.google.com/vertex-ai)
-- [Gemini APIドキュメント](https://docs.cloud.google.com/vertex-ai/docs)
-- [Google DeepMind研究](https://deepmind.google/)
-- [Gemini Advanced](https://one.google.com/about/plans)
-- [LMArenaリーダーボード](https://lmarena.org/)
-- [Google AI原則](https://ai.google/responsibility/principles/)
+
+1. Gemini. (n.d.). Gemini Official Site. Service.
+URL: https://gemini.google.com/
+
+2. Google. (n.d.). Google AI Corporate Profile. Service.
+URL: Google.md
+
+3. Google. (n.d.). Gemini 2.5 Pro Documentation. Technical Document.
+URL: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-pro
+
+4. Google. (n.d.). Gemini Model Card. Technical Document.
+URL: https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf
+
+5. Google. (n.d.). Vertex AI Platform. Service.
+URL: https://cloud.google.com/vertex-ai
+
+6. Google. (n.d.). Gemini API Documentation. Technical Document.
+URL: https://docs.cloud.google.com/vertex-ai/docs
+
+7. Google DeepMind. (n.d.). Google DeepMind Research. Service.
+URL: https://deepmind.google/
+
+8. Google. (n.d.). Gemini Advanced. Service.
+URL: https://one.google.com/about/plans
+
+9. LMArena. (n.d.). LMArena Leaderboard. Service.
+URL: https://lmarena.org/
+
+10. Google. (n.d.). Google AI Principles. Technical Document.
+URL: https://ai.google/responsibility/principles/

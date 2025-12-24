@@ -213,18 +213,19 @@ url: "/ja/glossary/Bot-Containment-Rate/"
 
 ## 参考文献
 
-- [Botpress: Complete Guide to Chatbot Containment Rates](https://botpress.com/blog/containment-rate)
-- [Decagon: What is Chatbot Containment Rate?](https://decagon.ai/glossary/what-is-chatbot-containment-rate)
-- [Calabrio: Demystifying Chatbot Containment Rates](https://www.calabrio.com/wfo/contact-center-ai/understanding-chatbot-containment-rates/)
-- [GetTalkative: Chatbot Containment Rate](https://gettalkative.com/info/chatbot-containment-rate)
-- [Kommunicate: What is Chatbot Containment Rate?](https://www.kommunicate.io/what-is/chatbot-containment-rate/)
-- [Kodif: What is Chat Containment Rate and Why It Matters](https://kodif.ai/blog/what-is-chat-containment-rate-and-why-it-matters-for-your-business/)
-- [NexgenCloud Case Study: How AI and RAG Chatbots Cut Customer Service Costs](https://www.nexgencloud.com/blog/case-studies/how-ai-and-rag-chatbots-cut-customer-service-costs-by-millions)
-- [Decagon Glossary: Customer Effort Score (CES)](https://decagon.ai/glossary/customer-effort-score-ces)
-- [Decagon Glossary: Deflection Rate](https://decagon.ai/glossary/deflection-rate)
-- [Decagon Glossary: First Response Time (FRT)](https://decagon.ai/glossary/what-is-first-response-time-frt)
-- [Decagon Glossary: Resolution Rate](https://decagon.ai/glossary/what-is-resolution-rate)
-- [Botpress Blog: AI Chatbot Guide](https://botpress.com/blog/ai-chatbot)
-- [Botpress Blog: Chatbot Analytics](https://botpress.com/blog/chatbot-analytics)
-- [Industry Chatbot Statistics](https://ecommercebonsai.com/chatbot-statistics/)
-- [Gartner AI Agent Predictions](https://www.wired.com/story/uncanny-valley-podcast-unpacking-ai-agents/)
+
+1. Botpress. (n.d.). Complete Guide to Chatbot Containment Rates. Botpress Blog.
+2. Decagon. (n.d.). What is Chatbot Containment Rate?. Decagon Glossary.
+3. Calabrio. (n.d.). Demystifying Chatbot Containment Rates. Calabrio WFO.
+4. GetTalkative. (n.d.). Chatbot Containment Rate. GetTalkative Info.
+5. Kommunicate. (n.d.). What is Chatbot Containment Rate?. Kommunicate Blog.
+6. Kodif. (n.d.). What is Chat Containment Rate and Why It Matters for Your Business. Kodif Blog.
+7. NexgenCloud. (n.d.). How AI and RAG Chatbots Cut Customer Service Costs by Millions. NexgenCloud Case Studies.
+8. Decagon. (n.d.). Customer Effort Score (CES). Decagon Glossary.
+9. Decagon. (n.d.). Deflection Rate. Decagon Glossary.
+10. Decagon. (n.d.). First Response Time (FRT). Decagon Glossary.
+11. Decagon. (n.d.). Resolution Rate. Decagon Glossary.
+12. Botpress. (n.d.). AI Chatbot Guide. Botpress Blog.
+13. Botpress. (n.d.). Chatbot Analytics. Botpress Blog.
+14. Ecommerce Bonsai. (n.d.). Industry Chatbot Statistics. Ecommerce Bonsai.
+15. Wired. (n.d.). Gartner AI Agent Predictions. Wired.

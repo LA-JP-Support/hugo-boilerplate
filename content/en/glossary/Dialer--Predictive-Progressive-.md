@@ -189,13 +189,23 @@ The dialer system workflow begins with **campaign configuration**, where adminis
 
 ## References
 
-- [Outbound Calls: Predictive Dialer vs. Progressive Dialer - Vonage](https://www.vonage.com/resources/articles/what-is-the-difference-between-preview-progressive-and-predictive-diallers/)
-- [Predictive vs Progressive Dialer - RingCentral](https://www.ringcentral.com/what-is-the-difference-between-predictive-and-progressive-dialer.html)
-- [What is a Predictive Dialer & How it Works - RingCentral](https://www.ringcentral.com/predictive-dialer.html)
-- [Predictive Dialers vs Progressive Dialers: Which Is Right for Your Business? - AVOXI](https://www.avoxi.com/blog/predictive-dialers-vs-progressive-dialers/)
-- [Predictive Dialers vs Progressive Dialers: Which One Is Best - Ecosmob](https://www.ecosmob.com/predictive-vs-progressive-dialers/)
-- [Predictive Dialer - Voicent](https://www.voicent.com/predictive-dialer.php)
-- [Predictive Dialer - 8x8](https://www.8x8.com/s/predictive-dialer)
-- [When to Use Predictive Dialer Vs. Progressive Dialer - Crazy Egg](https://www.crazyegg.com/blog/predictive-dialer-vs-progressive-dialer/)
-- [What is Predictive Dialing - Five9](https://www.five9.com/faq/what-is-predictive-dialing)
-- [What Is a Progressive Dialer? - Convoso](https://www.convoso.com/blog/what-is-a-progressive-dialer/)
+
+1. Vonage. (n.d.). Outbound Calls: Predictive Dialer vs. Progressive Dialer. Vonage Resources.
+
+2. RingCentral. (n.d.). Predictive vs Progressive Dialer. RingCentral Blog.
+
+3. RingCentral. (n.d.). What is a Predictive Dialer & How it Works. RingCentral Blog.
+
+4. AVOXI. (n.d.). Predictive Dialers vs Progressive Dialers: Which Is Right for Your Business?. AVOXI Blog.
+
+5. Ecosmob. (n.d.). Predictive Dialers vs Progressive Dialers: Which One Is Best. Ecosmob Blog.
+
+6. Voicent. Predictive Dialer. URL: https://www.voicent.com/predictive-dialer.php
+
+7. 8x8. Predictive Dialer. URL: https://www.8x8.com/s/predictive-dialer
+
+8. Crazy Egg. (n.d.). When to Use Predictive Dialer Vs. Progressive Dialer. Crazy Egg Blog.
+
+9. Five9. (n.d.). What is Predictive Dialing. Five9 FAQ.
+
+10. Convoso. (n.d.). What Is a Progressive Dialer?. Convoso Blog.

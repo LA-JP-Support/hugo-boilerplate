@@ -239,12 +239,13 @@ Costs vary by provider and usage. Batch processing and efficient prompt design c
 
 ## References
 
-- [AI21 Labs: What is LLM-as-a-Judge?](https://www.ai21.com/glossary/foundational-llm/llm-as-a-judge/)
-- [Evidently AI: LLM-as-a-Judge Guide](https://www.evidentlyai.com/llm-guide/llm-as-a-judge)
-- [Product Talk: LLM-as-Judge Overview](https://www.producttalk.org/glossary-ai-llm-as-judge/)
-- [Langfuse: LLM Judge Evaluation Documentation](https://langfuse.com/docs/evaluation)
-- [Amazon Bedrock: Model Evaluation](https://aws.amazon.com/bedrock)
-- [DeepEval: LLM Evaluation Framework (GitHub)](https://github.com/confident-ai/deepeval)
-- [Evidently: LLM-as-a-Judge Tutorial (YouTube)](https://www.youtube.com/watch?v=kP_aaFnXLmY&list=PL9omX6impEuNTr0KGLChHwhvN-q3ZF12d&index=6)
-- [Toloka: LLM Judge Pipelines](https://toloka.ai)
-- [Evidently: LLM Evaluation Framework (GitHub)](https://github.com/evidentlyai/evidently)
+
+1. AI21 Labs. (n.d.). What is LLM-as-a-Judge?. AI21 Labs Glossary.
+2. Evidently AI. (n.d.). LLM-as-a-Judge Guide. Evidently AI.
+3. Product Talk. (n.d.). LLM-as-Judge Overview. Product Talk.
+4. Langfuse. (n.d.). LLM Judge Evaluation Documentation. Langfuse.
+5. Amazon. (n.d.). Bedrock Model Evaluation. Amazon Web Services.
+6. DeepEval. (n.d.). LLM Evaluation Framework. GitHub.
+7. Evidently. (n.d.). LLM-as-a-Judge Tutorial. YouTube.
+8. Toloka. (n.d.). LLM Judge Pipelines. Toloka AI.
+9. Evidently. (n.d.). LLM Evaluation Framework. GitHub.

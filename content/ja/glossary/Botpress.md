@@ -229,26 +229,49 @@ GPT-4、Claude、Gemini、Llamaなど。独自のAPIキーを持ち込むか、B
 
 ## 参考文献
 
-- [Botpressホームページ](https://botpress.com)
-- [Botpressドキュメント](https://botpress.com/docs/)
-- [ナレッジベースドキュメント](https://botpress.com/docs/knowledge-base)
-- [独自のAIチャットボットを構築する方法(Botpressブログ)](https://botpress.com/blog/how-to-build-your-own-ai-chatbot)
-- [Botpress価格](https://botpress.com/pricing)
-- [AIチャットボット概要](https://botpress.com/blog/ai-chatbot)
-- [最高の大規模言語モデル](https://botpress.com/blog/best-large-language-models)
-- [RAGとは?](https://botpress.com/blog/rag-in-ai)
-- [Google AI統合](https://botpress.com/integrations/google-ai)
-- [ベクトルデータベース解説](https://botpress.com/blog/vector-database)
-- [ベクトルデータベースストレージ](https://botpress.com/academy-lesson/vector-database-storage)
-- [ナレッジベースベストプラクティス](https://botpress.com/docs/studio/concepts/knowledge-base/knowledge-base-best-practices)
-- [サポートされているすべてのチャネル](https://www.botpress.com/hub?type_equal=%5B%22Channel%22%5D)
-- [統合ハブ](https://www.botpress.com/hub?type_equal=%5B%22Integration%22%5D)
-- [SDK概要](https://botpress.com/docs/for-developers/sdk/overview)
-- [エンタープライズセキュリティ](https://botpress.com/enterprise)
-- [チャットボットセキュリティガイド](https://botpress.com/blog/chatbot-security)
-- [GPTBotsによるBotpressレビュー](https://www.gptbots.ai/blog/botpress-alternatives)
-- [Chatimizeレビュー](https://chatimize.com/reviews/botpress/)
-- [AIToolsTribe概要](https://www.aitoolstribe.com/what-is-botpress/)
-- [Voiceflow独立レビュー](https://www.voiceflow.com/blog/botpress)
-- [Botpressフローエディタ](https://botpress.com/academy-lesson/studio-ui-flow-editor)
-- [DiscordのBotpressコミュニティ](https://discord.com/invite/botpress)
+
+1. Botpress. Service for AI Chatbot Development. URL: https://botpress.com/
+
+2. Botpress. (n.d.). Botpress Documentation. Botpress Docs.
+
+3. Botpress. (n.d.). Knowledge Base Documentation. Botpress Docs.
+
+4. Botpress. (n.d.). How to Build Your Own AI Chatbot. Botpress Blog.
+
+5. Botpress. (n.d.). Pricing. Botpress Website.
+
+6. Botpress. (n.d.). AI Chatbot Overview. Botpress Blog.
+
+7. Botpress. (n.d.). Best Large Language Models. Botpress Blog.
+
+8. Botpress. (n.d.). What is RAG?. Botpress Blog.
+
+9. Botpress. (n.d.). Google AI Integration. Botpress Integrations.
+
+10. Botpress. (n.d.). Vector Database Explanation. Botpress Blog.
+
+11. Botpress. (n.d.). Vector Database Storage. Botpress Academy.
+
+12. Botpress. (n.d.). Knowledge Base Best Practices. Botpress Documentation.
+
+13. Botpress. (n.d.). All Supported Channels. Botpress Hub.
+
+14. Botpress. (n.d.). Integration Hub. Botpress Hub.
+
+15. Botpress. (n.d.). SDK Overview. Botpress Documentation.
+
+16. Botpress. (n.d.). Enterprise Security. Botpress Enterprise.
+
+17. Botpress. (n.d.). Chatbot Security Guide. Botpress Blog.
+
+18. GPTBots. (n.d.). Botpress Review. GPTBots Blog.
+
+19. Chatimize. (n.d.). Botpress Review. Chatimize Reviews.
+
+20. AIToolsTribe. (n.d.). Botpress Overview. AIToolsTribe.
+
+21. Voiceflow. (n.d.). Botpress Independent Review. Voiceflow Blog.
+
+22. Botpress. (n.d.). Flow Editor. Botpress Academy.
+
+23. Botpress. (n.d.). Discord Community. Discord Invite.

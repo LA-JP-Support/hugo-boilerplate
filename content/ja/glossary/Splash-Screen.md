@@ -242,13 +242,14 @@ A: 厳密には必須ではありませんが、読み込み時間が顕著な�
 
 ## 参考文献
 
-- [Android Developers: Splash Screens](https://developer.android.com/develop/ui/views/launch/splash-screen)
-- [Android SplashScreen API Reference](https://developer.android.com/reference/android/window/SplashScreen)
-- [Apple Human Interface Guidelines: Launch Screen](https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/launch-screen/)
-- [Built In: What Is a Splash Screen?](https://builtin.com/articles/splash-screen)
-- [UX StackExchange: Best Practices for Splash Screens](https://ux.stackexchange.com/questions/50363/why-have-a-splash-screen-and-best-practices-for-native-app)
-- [ChatBot.com: Chat Widget Integration](https://www.chatbot.com/integrations/chat-widget/)
-- [HelpCrunch: Chatbot Best Practices](https://helpcrunch.com/blog/chatbot-best-practices/)
-- [Figma: Free App Splash Screen Templates & Examples](https://www.figma.com/community/mobile-apps/splash-screens)
-- [Dribbble: AI Chatbot Splash Screen Inspiration](https://dribbble.com/search/ai-chatbot-splash-screen)
-- [YouTube: What is a Splash Page?](https://www.youtube.com/watch?v=UimHoQpv3gs)
+
+1. Android Developers. (n.d.). Splash Screens. Android Developers.
+2. Android Developers. (n.d.). SplashScreen API Reference. Android Developers.
+3. Apple. (n.d.). Launch Screen. Apple Human Interface Guidelines.
+4. Built In. (n.d.). What Is a Splash Screen?. Built In Articles.
+5. UX StackExchange. (n.d.). Best Practices for Splash Screens. UX StackExchange.
+6. ChatBot.com. Chat Widget Integration. URL: https://www.chatbot.com/integrations/chat-widget/
+7. HelpCrunch. (n.d.). Chatbot Best Practices. HelpCrunch Blog.
+8. Figma. Free App Splash Screen Templates & Examples. URL: https://www.figma.com/community/mobile-apps/splash-screens
+9. Dribbble. AI Chatbot Splash Screen Inspiration. URL: https://dribbble.com/search/ai-chatbot-splash-screen
+10. YouTube. (n.d.). What is a Splash Page?. YouTube.

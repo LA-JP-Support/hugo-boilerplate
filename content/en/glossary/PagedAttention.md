@@ -256,15 +256,27 @@ Replace `<model_name>` with any supported model identifier.
 
 ## References
 
-- [Efficient Memory Management for Large Language Model Serving with PagedAttention (arXiv)](https://arxiv.org/abs/2309.06180)
-- [vLLM Blog: Easy, Fast, and Cheap LLM Serving with PagedAttention](https://blog.vllm.ai/2023/06/20/vllm.html)
-- [Hopsworks Dictionary: PagedAttention](https://www.hopsworks.ai/dictionary/pagedattention)
-- [Doubleword: Optimizing GPU Memory for LLMs](https://www.doubleword.ai/resources/optimizing-gpu-memory-for-llms-a-deep-dive-into-paged-attention)
-- [Runpod Blog: Introduction to vLLM and PagedAttention](https://www.runpod.io/blog/introduction-to-vllm-and-pagedattention)
-- [KV Cache Optimization Deep Dive - Medium](https://medium.com/foundation-models-deep-dive/kv-cache-guide-part-4-of-5-system-superpowers-framework-realities-kv-cache-in-action-6fb4fb575cf8)
-- [Red Hat Developer: How PagedAttention Resolves Memory Waste](https://developers.redhat.com/articles/2025/07/24/how-pagedattention-resolves-memory-waste-llm-systems)
-- [YouTube: vLLM/PagedAttention Technical Explanation](https://www.youtube.com/watch?v=5ZlavKF_98U&t=351s)
-- [vLLM Documentation](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)
-- [vLLM GitHub Repository](https://github.com/vllm-project/vllm)
-- [Operating Systems: Three Easy Pieces - Virtual Memory](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf)
-- [vLLM Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)
+
+1. Efficient Memory Management Research Team. (2023). Efficient Memory Management for Large Language Model Serving with PagedAttention. arXiv.
+
+2. vLLM. (2023). Easy, Fast, and Cheap LLM Serving with PagedAttention. vLLM Blog.
+
+3. Hopsworks. (n.d.). PagedAttention. Hopsworks Dictionary.
+
+4. Doubleword. (n.d.). Optimizing GPU Memory for LLMs: A Deep Dive into Paged Attention. Doubleword Resources.
+
+5. Runpod. (n.d.). Introduction to vLLM and PagedAttention. Runpod Blog.
+
+6. Unknown Author. (n.d.). KV Cache Optimization Deep Dive. Medium.
+
+7. Red Hat Developer. (2025). How PagedAttention Resolves Memory Waste. Red Hat Developer.
+
+8. Unknown Creator. (n.d.). vLLM/PagedAttention Technical Explanation. YouTube.
+
+9. vLLM. (n.d.). vLLM Documentation. URL: https://docs.vllm.ai/en/latest/getting_started/quickstart.html
+
+10. vLLM Project. (n.d.). vLLM GitHub Repository. URL: https://github.com/vllm-project/vllm
+
+11. Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau. (n.d.). Operating Systems: Three Easy Pieces - Virtual Memory. URL: https://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf
+
+12. vLLM. (n.d.). vLLM Supported Models. URL: https://docs.vllm.ai/en/latest/models/supported_models.html

@@ -203,18 +203,33 @@ Shadow AI represents a significant challenge for modern organizations, combining
 
 ## References
 
-- [IBM: What Is Shadow AI?](https://www.ibm.com/think/topics/shadow-ai)
-- [Cloud Security Alliance: AI Gone Wild—Why Shadow AI Is Your IT Team's Worst Nightmare](https://cloudsecurityalliance.org/blog/2025/03/04/ai-gone-wild-why-shadow-ai-is-your-it-team-s-worst-nightmare)
-- [Forbes: What Is Shadow AI And What Can IT Do About It?](https://www.forbes.com/sites/delltechnologies/2023/10/31/what-is-shadow-ai-and-what-can-it-do-about-it/)
-- [Zscaler: What Is Shadow AI?](https://www.zscaler.com/zpedia/what-is-shadow-ai)
-- [Lasso Security: What Is Shadow AI?](https://www.lasso.security/blog/what-is-shadow-ai)
-- [Wiz: What is Shadow AI? Why It's a Threat and How to Embrace and Manage It](https://www.wiz.io/academy/shadow-ai)
-- [EU Artificial Intelligence Act, Article 99 (Penalties)](https://artificialintelligenceact.eu/article/99/)
-- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
-- [GDPR Overview](https://gdpr-info.eu/)
-- [CybSafe & NCA: Study - Almost 40% of Workers Share Sensitive Information with AI Tools](https://www.cybsafe.com/press-releases/study-almost-40-of-workers-share-sensitive-information-with-ai-tools-without-employers-knowledge/)
-- [Infosecurity Magazine: Fifth of CISOs Say Staff Leaked Data via GenAI](https://www.infosecurity-magazine.com/news/fifth-cisos-staff-leaked-data-genai/)
-- [PCMag: Samsung Software Engineers Busted for Pasting Proprietary Code into ChatGPT](https://www.pcmag.com/news/samsung-software-engineers-busted-for-pasting-proprietary-code-into-chatgpt)
-- [Fortune: Lawyers Fined for Filing ChatGPT Hallucinations in Court](https://fortune.com/2023/06/23/lawyers-fined-filing-chatgpt-hallucinations-in-court/)
-- [The Verge: Sports Illustrated AI-Generated Articles](https://www.theverge.com/2023/11/27/23978983/sports-illustrated-ai-generated-articles-fake-authors)
-- [Zscaler: Checklist for Defending Against Shadow AI](https://www.zscaler.com/campaign/shadow-ai-security-checklist)
+
+1. IBM. (n.d.). What Is Shadow AI?. IBM Think Topics.
+
+2. Cloud Security Alliance. (2025). AI Gone Wild—Why Shadow AI Is Your IT Team's Worst Nightmare. Cloud Security Alliance Blog.
+
+3. Forbes. (2023). What Is Shadow AI And What Can IT Do About It?. Forbes.
+
+4. Zscaler. (n.d.). What Is Shadow AI?. Zscaler Zpedia.
+
+5. Lasso Security. (n.d.). What Is Shadow AI?. Lasso Security Blog.
+
+6. Wiz. (n.d.). What is Shadow AI? Why It's a Threat and How to Embrace and Manage It. Wiz Academy.
+
+7. European Union. (n.d.). Artificial Intelligence Act, Article 99 (Penalties). EU Artificial Intelligence Act.
+
+8. National Institute of Standards and Technology. (n.d.). NIST AI Risk Management Framework. NIST.
+
+9. European Union. (n.d.). GDPR Overview. GDPR Info.
+
+10. CybSafe & National Crime Agency. (n.d.). Study - Almost 40% of Workers Share Sensitive Information with AI Tools. CybSafe Press Releases.
+
+11. Infosecurity Magazine. (n.d.). Fifth of CISOs Say Staff Leaked Data via GenAI. Infosecurity Magazine.
+
+12. PCMag. (n.d.). Samsung Software Engineers Busted for Pasting Proprietary Code into ChatGPT. PCMag.
+
+13. Fortune. (2023). Lawyers Fined for Filing ChatGPT Hallucinations in Court. Fortune.
+
+14. The Verge. (2023). Sports Illustrated AI-Generated Articles. The Verge.
+
+15. Zscaler. (n.d.). Checklist for Defending Against Shadow AI. Zscaler Campaign.

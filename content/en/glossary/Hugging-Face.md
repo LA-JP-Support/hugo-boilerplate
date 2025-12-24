@@ -268,33 +268,63 @@ print(result)
 
 ## References
 
-- [Official Hugging Face Site](https://huggingface.co/)
-- [Model Hub Documentation](https://huggingface.co/docs/hub/en/models-the-hub)
-- [Datasets Hub Documentation](https://huggingface.co/docs/hub/en/datasets-overview)
-- [Spaces Overview](https://huggingface.co/docs/hub/en/spaces-overview)
-- [Transformers Library Documentation](https://huggingface.co/docs/transformers/en/index)
-- [Datasets Library Documentation](https://huggingface.co/docs/datasets/index)
-- [Diffusers Documentation](https://huggingface.co/docs/diffusers)
-- [Tokenizers Documentation](https://huggingface.co/docs/tokenizers)
-- [Gradio Documentation](https://gradio.app/docs/)
-- [PEFT Documentation](https://huggingface.co/docs/peft)
-- [Safetensors Documentation](https://huggingface.co/docs/safetensors)
-- [TRL Documentation](https://huggingface.co/docs/trl)
-- [Inference Providers Documentation](https://huggingface.co/docs/hub/en/models-inference)
-- [Explore Inference Models](https://huggingface.co/inference/models)
-- [Model Cards](https://huggingface.co/docs/hub/en/model-cards)
-- [Dataset Cards](https://huggingface.co/docs/hub/en/datasets-cards)
-- [Uploading Models Guide](https://huggingface.co/docs/hub/en/models-uploading)
-- [Model Release Checklist](https://huggingface.co/docs/hub/en/model-release-checklist)
-- [Downloading Models Guide](https://huggingface.co/docs/hub/en/models-downloading)
-- [Model Widgets Documentation](https://huggingface.co/docs/hub/en/models-widgets)
-- [Adding Datasets Guide](https://huggingface.co/docs/hub/en/datasets-adding)
-- [Spaces Dev Mode](https://huggingface.co/docs/hub/en/spaces-dev-mode)
-- [Spaces GPU Upgrades](https://huggingface.co/docs/hub/en/spaces-gpus)
-- [Spaces Storage](https://huggingface.co/docs/hub/en/spaces-storage)
-- [Text Generation Pipeline](https://huggingface.co/docs/transformers/en/main_classes/pipelines#transformers.TextGenerationPipeline)
-- [Trainer API](https://huggingface.co/docs/transformers/en/main_classes/trainer)
-- [Sign Up](https://huggingface.co/join)
-- [Community Guidelines](https://huggingface.co/code-of-conduct)
-- [Content Guidelines](https://huggingface.co/content-guidelines)
-- [Community Forums](https://discuss.huggingface.co/)
+
+1. Hugging Face. (n.d.). Official Hugging Face Site. URL: https://huggingface.co/
+
+2. Hugging Face. (n.d.). Model Hub Documentation. URL: https://huggingface.co/docs/hub/en/models-the-hub
+
+3. Hugging Face. (n.d.). Datasets Hub Documentation. URL: https://huggingface.co/docs/hub/en/datasets-overview
+
+4. Hugging Face. (n.d.). Spaces Overview. URL: https://huggingface.co/docs/hub/en/spaces-overview
+
+5. Hugging Face. (n.d.). Transformers Library Documentation. URL: https://huggingface.co/docs/transformers/en/index
+
+6. Hugging Face. (n.d.). Datasets Library Documentation. URL: https://huggingface.co/docs/datasets/index
+
+7. Hugging Face. (n.d.). Diffusers Documentation. URL: https://huggingface.co/docs/diffusers
+
+8. Hugging Face. (n.d.). Tokenizers Documentation. URL: https://huggingface.co/docs/tokenizers
+
+9. Gradio. (n.d.). Gradio Documentation. URL: https://gradio.app/docs/
+
+10. Hugging Face. (n.d.). PEFT Documentation. URL: https://huggingface.co/docs/peft
+
+11. Hugging Face. (n.d.). Safetensors Documentation. URL: https://huggingface.co/docs/safetensors
+
+12. Hugging Face. (n.d.). TRL Documentation. URL: https://huggingface.co/docs/trl
+
+13. Hugging Face. (n.d.). Inference Providers Documentation. URL: https://huggingface.co/docs/hub/en/models-inference
+
+14. Hugging Face. (n.d.). Explore Inference Models. URL: https://huggingface.co/inference/models
+
+15. Hugging Face. (n.d.). Model Cards. URL: https://huggingface.co/docs/hub/en/model-cards
+
+16. Hugging Face. (n.d.). Dataset Cards. URL: https://huggingface.co/docs/hub/en/datasets-cards
+
+17. Hugging Face. (n.d.). Uploading Models Guide. URL: https://huggingface.co/docs/hub/en/models-uploading
+
+18. Hugging Face. (n.d.). Model Release Checklist. URL: https://huggingface.co/docs/hub/en/model-release-checklist
+
+19. Hugging Face. (n.d.). Downloading Models Guide. URL: https://huggingface.co/docs/hub/en/models-downloading
+
+20. Hugging Face. (n.d.). Model Widgets Documentation. URL: https://huggingface.co/docs/hub/en/models-widgets
+
+21. Hugging Face. (n.d.). Adding Datasets Guide. URL: https://huggingface.co/docs/hub/en/datasets-adding
+
+22. Hugging Face. (n.d.). Spaces Dev Mode. URL: https://huggingface.co/docs/hub/en/spaces-dev-mode
+
+23. Hugging Face. (n.d.). Spaces GPU Upgrades. URL: https://huggingface.co/docs/hub/en/spaces-gpus
+
+24. Hugging Face. (n.d.). Spaces Storage. URL: https://huggingface.co/docs/hub/en/spaces-storage
+
+25. Hugging Face. (n.d.). Text Generation Pipeline. URL: https://huggingface.co/docs/transformers/en/main_classes/pipelines#transformers.TextGenerationPipeline
+
+26. Hugging Face. (n.d.). Trainer API. URL: https://huggingface.co/docs/transformers/en/main_classes/trainer
+
+27. Hugging Face. (n.d.). Sign Up. URL: https://huggingface.co/join
+
+28. Hugging Face. (n.d.). Community Guidelines. URL: https://huggingface.co/code-of-conduct
+
+29. Hugging Face. (n.d.). Content Guidelines. URL: https://huggingface.co/content-guidelines
+
+30. Hugging Face. (n.d.). Community Forums. URL: https://discuss.huggingface.co/

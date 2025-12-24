@@ -270,12 +270,21 @@ AIによってトリガーされる機密アクションには手動承認を要
 
 ## 参考文献
 
-- [AWS: Safeguard your generative AI workloads from prompt injections](https://aws.amazon.com/blogs/security/safeguard-your-generative-ai-workloads-from-prompt-injections/)
-- [Palo Alto Networks: What is a Prompt Injection Attack?](https://www.paloaltonetworks.com/cyberpedia/what-is-a-prompt-injection-attack)
-- [Invicti: Prompt Injection Attacks on Applications That Use LLMs](https://www.invicti.com/white-papers/prompt-injection-attacks-on-llm-applications-ebook)
-- [Prompt Security: Prompt Injection 101](https://www.prompt.security/blog/prompt-injection-101)
-- [IBM: Protect Against Prompt Injection](https://www.ibm.com/think/insights/prevent-prompt-injection)
-- [IBM: Prompt Engineering Guide](https://www.ibm.com/think/prompt-engineering#605511093)
-- [OWASP: Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
-- [GitHub: Awesome Claude Prompts](https://github.com/langgptai/awesome-claude-prompts)
-- [YouTube: Variable Injection Timing Explained](https://www.youtube.com/watch?v=huy7UhIWqKc)
+
+1. AWS. (n.d.). Safeguard your generative AI workloads from prompt injections. AWS Blog.
+
+2. Palo Alto Networks. (n.d.). What is a Prompt Injection Attack?. Palo Alto Networks Cyberpedia.
+
+3. Invicti. (n.d.). Prompt Injection Attacks on Applications That Use LLMs. Invicti White Papers.
+
+4. Prompt Security. (n.d.). Prompt Injection 101. Prompt Security Blog.
+
+5. IBM. (n.d.). Protect Against Prompt Injection. IBM Think Insights.
+
+6. IBM. (n.d.). Prompt Engineering Guide. IBM Think.
+
+7. OWASP. (n.d.). Top 10 for Large Language Model Applications. OWASP Project.
+
+8. GitHub. (n.d.). Awesome Claude Prompts. GitHub Repository.
+
+9. YouTube. (n.d.). Variable Injection Timing Explained. YouTube Video.

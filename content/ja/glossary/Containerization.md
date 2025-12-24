@@ -207,47 +207,48 @@ Docker Hub、Google Artifact Registry、Amazon ECR、Red Hat Quay
 
 ## 参考文献
 
-- [IBM: What Is Containerization?](https://www.ibm.com/think/topics/containerization)
-- [IBM: The Benefits of Containerization](https://www.ibm.com/think/insights/the-benefits-of-containerization-and-what-it-means-for-you)
-- [IBM: What is Kubernetes?](https://www.ibm.com/topics/kubernetes)
-- [IBM: Container Security](https://www.ibm.com/topics/container-security)
-- [Red Hat: What is containerization?](https://www.redhat.com/en/topics/cloud-native-apps/what-is-containerization)
-- [Red Hat: What is Linux?](https://www.redhat.com/en/topics/linux/what-is-linux)
-- [Red Hat OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift)
-- [Red Hat Quay](https://quay.io/)
-- [AWS: What is Containerization?](https://aws.amazon.com/what-is/containerization/)
-- [Amazon ECR](https://aws.amazon.com/ecr/)
-- [Google Cloud: What is Containerization?](https://cloud.google.com/discover/what-is-containerization)
-- [Google Cloud: Containers vs. VMs](https://cloud.google.com/discover/containers-vs-vms)
-- [Google Artifact Registry](https://cloud.google.com/artifact-registry)
-- [Microsoft Learn: Containers vs. VMs](https://learn.microsoft.com/en-us/virtualization/windowscontainers/about/containers-vs-vm)
-- [CrowdStrike: Containerization Explained](https://www.crowdstrike.com/en-us/cybersecurity-101/cloud-security/containerization/)
-- [CircleCI: Benefits of containerization](https://circleci.com/blog/benefits-of-containerization/)
-- [Atlassian: Containers vs Virtual Machines](https://www.atlassian.com/microservices/cloud-computing/containers-vs-vms)
-- [Mirantis: How Containerization Is Revolutionizing Data Science Workflows](https://www.mirantis.com/blog/how-containerization-is-revolutionizing-data-science-workflows/)
-- [Hostinger: 15 Popular Docker Use Cases](https://www.hostinger.com/tutorials/docker-use-cases)
-- [Simform: 14 Containerization Use Cases](https://www.simform.com/blog/containerization-use-cases/)
-- [Dev.to: Top 5 Containerization Tools 2024](https://dev.to/fazly_fathhy/top-5-containerization-tools-you-should-know-in-2024-for-devops-success-kln)
-- [Spacelift: 16 Most Useful Container Orchestration Tools](https://spacelift.io/blog/container-orchestration-tools)
-- [Docker](https://www.docker.com/)
-- [Docker Hub](https://hub.docker.com/)
-- [Docker Swarm](https://docs.docker.com/engine/swarm/)
-- [Podman](https://podman.io/)
-- [containerd](https://containerd.io/)
-- [Linux Containers (LXC/LXD)](https://linuxcontainers.org/)
-- [CRI-O](https://cri-o.io/)
-- [Buildah](https://buildah.io/)
-- [Kubernetes](https://kubernetes.io/)
-- [Apache Mesos](http://mesos.apache.org/)
-- [HashiCorp Nomad](https://www.nomadproject.io/)
-- [Rancher](https://rancher.com/)
-- [Helm](https://helm.sh/)
-- [Istio](https://istio.io/)
-- [Open Container Initiative (OCI)](https://opencontainers.org/)
-- [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/)
-- [Aqua Security](https://www.aquasec.com/)
-- [Sysdig](https://sysdig.com/)
-- [CrowdStrike Falcon](https://www.crowdstrike.com/en-us/cybersecurity-101/cloud-security/containerization/)
-- [Netflix Titus (GitHub)](https://github.com/Netflix/titus)
-- [VMware vSphere](https://www.vmware.com/products/vsphere.html)
-- [OpenStack](https://www.openstack.org/)
+
+1. IBM. (n.d.). What Is Containerization?. IBM Think Topics.
+2. IBM. (n.d.). The Benefits of Containerization. IBM Think Insights.
+3. IBM. (n.d.). What is Kubernetes?. IBM Topics.
+4. IBM. (n.d.). Container Security. IBM Topics.
+5. Red Hat. (n.d.). What is containerization?. Red Hat Topics.
+6. Red Hat. (n.d.). What is Linux?. Red Hat Topics.
+7. Red Hat OpenShift. Description of Cloud Computing Platform. URL: https://www.redhat.com/en/technologies/cloud-computing/openshift
+8. Red Hat Quay. Container Registry Platform. URL: https://quay.io/
+9. AWS. (n.d.). What is Containerization?. AWS Topics.
+10. Amazon ECR. Container Registry Service. URL: https://aws.amazon.com/ecr/
+11. Google Cloud. (n.d.). What is Containerization?. Google Cloud Topics.
+12. Google Cloud. (n.d.). Containers vs. VMs. Google Cloud Topics.
+13. Google Artifact Registry. Container and Artifact Management Service. URL: https://cloud.google.com/artifact-registry
+14. Microsoft. (n.d.). Containers vs. VMs. Microsoft Learn.
+15. CrowdStrike. (n.d.). Containerization Explained. CrowdStrike Cybersecurity 101.
+16. CircleCI. (n.d.). Benefits of containerization. CircleCI Blog.
+17. Atlassian. (n.d.). Containers vs Virtual Machines. Atlassian Microservices.
+18. Mirantis. (n.d.). How Containerization Is Revolutionizing Data Science Workflows. Mirantis Blog.
+19. Hostinger. (n.d.). 15 Popular Docker Use Cases. Hostinger Tutorials.
+20. Simform. (n.d.). 14 Containerization Use Cases. Simform Blog.
+21. Dev.to. (2024). Top 5 Containerization Tools 2024. Dev.to.
+22. Spacelift. (n.d.). 16 Most Useful Container Orchestration Tools. Spacelift Blog.
+23. Docker. Container Platform. URL: https://www.docker.com/
+24. Docker Hub. Container Image Repository. URL: https://hub.docker.com/
+25. Docker Swarm. Container Orchestration Tool. URL: https://docs.docker.com/engine/swarm/
+26. Podman. Container Management Tool. URL: https://podman.io/
+27. containerd. Container Runtime. URL: https://containerd.io/
+28. Linux Containers. Container Virtualization Platform. URL: https://linuxcontainers.org/
+29. CRI-O. Container Runtime. URL: https://cri-o.io/
+30. Buildah. Container Building Tool. URL: https://buildah.io/
+31. Kubernetes. Container Orchestration Platform. URL: https://kubernetes.io/
+32. Apache Mesos. Distributed Systems Kernel. URL: http://mesos.apache.org/
+33. HashiCorp Nomad. Workload Orchestrator. URL: https://www.nomadproject.io/
+34. Rancher. Container Management Platform. URL: https://rancher.com/
+35. Helm. Kubernetes Package Manager. URL: https://helm.sh/
+36. Istio. Service Mesh Platform. URL: https://istio.io/
+37. Open Container Initiative. Container Standards Organization. URL: https://opencontainers.org/
+38. Cloud Native Computing Foundation. Cloud Native Technology Ecosystem. URL: https://www.cncf.io/
+39. Aqua Security. Container Security Platform. URL: https://www.aquasec.com/
+40. Sysdig. Container Monitoring and Security Tool. URL: https://sysdig.com/
+41. CrowdStrike Falcon. Cloud Security Platform. URL: https://www.crowdstrike.com/en-us/cybersecurity-101/cloud-security/containerization/
+42. Netflix Titus. Container Management Platform. URL: https://github.com/Netflix/titus
+43. VMware vSphere. Virtualization Platform. URL: https://www.vmware.com/products/vsphere.html
+44. OpenStack. Cloud Computing Platform. URL: https://www.openstack.org/

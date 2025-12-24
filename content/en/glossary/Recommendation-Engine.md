@@ -187,11 +187,12 @@ Continuous learning and model updates incorporate new user interactions and feed
 
 ## References
 
-- [Recommender Systems Handbook - Springer](https://link.springer.com/book/10.1007/978-1-4899-7637-6)
-- [Deep Learning for Recommender Systems - ACM Computing Surveys](https://dl.acm.org/doi/10.1145/3285029)
-- [Machine Learning for Recommender Systems - MIT Press](https://mitpress.mit.edu/books/machine-learning-recommender-systems)
-- [Netflix Technology Blog - Recommendation Systems](https://netflixtechblog.com/tagged/recommendation-systems)
-- [Amazon Science - Personalization and Recommendation](https://www.amazon.science/tag/personalization)
-- [Google AI Research - Recommendation Systems](https://ai.googleblog.com/search/label/recommendation%20systems)
-- [Facebook Research - Recommendation and Ranking](https://research.facebook.com/publications/topic/recommendation-and-ranking/)
-- [Microsoft Research - Recommender Systems](https://www.microsoft.com/en-us/research/research-area/recommender-systems/)
+
+1. Springer. (n.d.). Recommender Systems Handbook. Springer Book.
+2. ACM. (n.d.). Deep Learning for Recommender Systems. ACM Computing Surveys.
+3. MIT Press. (n.d.). Machine Learning for Recommender Systems. MIT Press Book.
+4. Netflix. (n.d.). Recommendation Systems. Netflix Technology Blog.
+5. Amazon Science. (n.d.). Personalization and Recommendation. Amazon Science.
+6. Google AI. (n.d.). Recommendation Systems. Google AI Research Blog.
+7. Facebook Research. (n.d.). Recommendation and Ranking. Facebook Research Publications.
+8. Microsoft Research. (n.d.). Recommender Systems. Microsoft Research.

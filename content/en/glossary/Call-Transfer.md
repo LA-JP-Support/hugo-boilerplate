@@ -189,13 +189,23 @@ The call transfer process involves a complex sequence of signaling and media han
 
 ## References
 
-- [A Comprehensive Guide To VoIP Call Transfers - Emitrr](https://emitrr.com/blog/call-transfer/)
-- [Types of Call Transfers: Cold (Blind) and Warm (Attended) Transfers - OnSIP](https://www.onsip.com/voip-resources/voip-fundamentals/types-of-call-transfers-cold-blind-and-warm-attended-transfers)
-- [Call Transfer - Wikipedia](https://en.wikipedia.org/wiki/Call_transfer)
-- [Transfer Calls Like a Pro: Talkroute's Complete Guide - Talkroute](https://talkroute.com/transfer-calls-like-a-pro-talkroutes-complete-guide/)
-- [Call Transfer: How It Works & Types - Yeastar](https://www.yeastar.com/voip-phone-system-feature/call-transfer/)
-- [What is Call Transfer & How to Transfer Calls Between Devices? - Calilio](https://www.calilio.com/blogs/what-is-call-transfer)
-- [What is a Call Transfer? Types, How-to, & Features - Dialpad](https://www.dialpad.com/features/call-transfer/)
-- [How To Transfer a Call Effectively: A Step-By-Step Guide - CloudTalk](https://www.cloudtalk.io/blog/how-to-transfer-a-call-effectively-a-step-by-step-guide/)
-- [Call Transfer: What It Is, Types, and How to Transfer Calls - Spoke Phone](https://spokephone.com/call-transfer-voip/)
-- [How to Transfer a Call & Effective Routing Techniques - Fit Small Business](https://fitsmallbusiness.com/call-transfer/)
+
+1. Emitrr. (n.d.). A Comprehensive Guide To VoIP Call Transfers. Emitrr Blog.
+
+2. OnSIP. (n.d.). Types of Call Transfers: Cold (Blind) and Warm (Attended) Transfers. OnSIP Resources.
+
+3. Wikipedia. (n.d.). Call Transfer. Wikipedia.
+
+4. Talkroute. (n.d.). Transfer Calls Like a Pro: Talkroute's Complete Guide. Talkroute Blog.
+
+5. Yeastar. (n.d.). Call Transfer: How It Works & Types. Yeastar Blog.
+
+6. Calilio. (n.d.). What is Call Transfer & How to Transfer Calls Between Devices?. Calilio Blog.
+
+7. Dialpad. (n.d.). What is a Call Transfer? Types, How-to, & Features. Dialpad Blog.
+
+8. CloudTalk. (n.d.). How To Transfer a Call Effectively: A Step-By-Step Guide. CloudTalk Blog.
+
+9. Spoke Phone. (n.d.). Call Transfer: What It Is, Types, and How to Transfer Calls. Spoke Phone Blog.
+
+10. Fit Small Business. (n.d.). How to Transfer a Call & Effective Routing Techniques. Fit Small Business.

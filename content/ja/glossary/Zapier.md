@@ -248,18 +248,33 @@ Zapierは、エンタープライズグレードの暗号化、SOC 2コンプラ
 
 ## 参考文献
 
-- [Zapier公式ホームページ](https://zapier.com/)
-- [Zapierの仕組み](https://zapier.com/how-it-works)
-- [Zapierドキュメント](https://docs.zapier.com/platform/quickstart/how-zapier-works)
-- [Zapierアプリディレクトリ](https://zapier.com/apps)
-- [Zapier Agentsガイド](https://zapier.com/blog/zapier-agents-guide/)
-- [Zapier AIツール概要](https://zapier.com/blog/zapier-ai-guide/)
-- [Zapierセキュリティとコンプライアンス](https://zapier.com/security-compliance)
-- [Zapier価格](https://zapier.com/pricing)
-- [Zapierテンプレート](https://zapier.com/templates)
-- [マルチステップZap](https://zapier.com/blog/multi-step-zaps/)
-- [ウェブフック統合](https://zapier.com/apps/webhook/integrations/formatter)
-- [顧客事例](https://zapier.com/customer-stories)
-- [開発者プラットフォーム](https://docs.zapier.com/platform/home)
-- [開始ガイド](https://zapier.com/help/create/basics/get-started-workflow-automation)
-- [Zapier YouTubeチャンネル](https://www.youtube.com/watch?v=JtdUgJGI_Oo)
+
+1. Zapier. Service for Workflow Automation and App Integration. URL: https://zapier.com/
+
+2. Zapier. (n.d.). Zapierの仕組み. Zapier How It Works. URL: https://zapier.com/how-it-works
+
+3. Zapier. (n.d.). Zapierドキュメント. Zapier Platform Documentation. URL: https://docs.zapier.com/platform/quickstart/how-zapier-works
+
+4. Zapier. App Directory. URL: https://zapier.com/apps
+
+5. Zapier. (n.d.). Zapier Agentsガイド. Zapier Blog. URL: https://zapier.com/blog/zapier-agents-guide/
+
+6. Zapier. (n.d.). Zapier AIツール概要. Zapier Blog. URL: https://zapier.com/blog/zapier-ai-guide/
+
+7. Zapier. Security and Compliance Information. URL: https://zapier.com/security-compliance
+
+8. Zapier. Pricing Information. URL: https://zapier.com/pricing
+
+9. Zapier. Workflow Templates. URL: https://zapier.com/templates
+
+10. Zapier. (n.d.). マルチステップZap. Zapier Blog. URL: https://zapier.com/blog/multi-step-zaps/
+
+11. Zapier. Webhook Integration Formatter. URL: https://zapier.com/apps/webhook/integrations/formatter
+
+12. Zapier. Customer Stories. URL: https://zapier.com/customer-stories
+
+13. Zapier. (n.d.). 開発者プラットフォーム. Zapier Developer Platform. URL: https://docs.zapier.com/platform/home
+
+14. Zapier. (n.d.). 開始ガイド. Zapier Help Center. URL: https://zapier.com/help/create/basics/get-started-workflow-automation
+
+15. Zapier. (n.d.). Zapier YouTube Channel. YouTube. URL: https://www.youtube.com/watch?v=JtdUgJGI_Oo

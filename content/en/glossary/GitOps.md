@@ -202,25 +202,26 @@ Accelerate feature delivery and time-to-market. Increase system reliability and 
 
 ## References
 
-- [GitLab: What is GitOps?](https://about.gitlab.com/topics/gitops/)
-- [Red Hat: What is GitOps?](https://www.redhat.com/en/topics/devops/what-is-gitops)
-- [Harness: What is GitOps?](https://www.harness.io/harness-devops-academy/what-is-gitops)
-- [Codefresh: What is GitOps?](https://codefresh.io/learn/gitops/)
-- [Sysdig: What is GitOps?](https://www.sysdig.com/learn-cloud-native/what-is-gitops)
-- [Spot.io: Understanding GitOps Principles](https://spot.io/resources/gitops/understanding-gitops-principles-workflows-deployment-types/)
-- [Datadog: GitOps Principles and Components](https://www.datadoghq.com/blog/gitops-principles-and-components/)
-- [Dynatrace: What is GitOps?](https://www.dynatrace.com/knowledge-base/gitops/)
-- [Zuplo: What is GitOps?](https://zuplo.com/learning-center/what-is-gitops)
-- [Spacelift: GitOps vs DevOps](https://spacelift.io/blog/gitops-vs-devops)
-- [Codefresh: GitOps Benefits](https://codefresh.io/blog/gitops-benefits-and-considerations/)
-- [Harness: GitOps Benefits](https://www.harness.io/blog/gitops-benefits)
-- [Humanitec: GitOps Pros and Cons](https://humanitec.com/blog/gitops-pros-and-cons)
-- [AWS: GitOps Tools Comparison](https://docs.aws.amazon.com/prescriptive-guidance/latest/eks-gitops-tools/comparison.html)
-- [Spacelift: Top GitOps Tools 2025](https://spacelift.io/blog/gitops-tools)
-- [Medium: The 6 Best GitOps Tools](https://medium.com/@rphilogene/the-6-best-gitops-tools-for-developers-544aed052c6a)
-- [OpenGitOps](https://opengitops.dev/)
-- [Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets)
-- [HashiCorp Vault](https://www.vaultproject.io/)
-- [GitOps Explained - GitLab YouTube](https://www.youtube.com/watch?v=7kKQfYbKxU0)
-- [Argo CD GitOps Tutorial - TechWorld with Nana](https://www.youtube.com/watch?v=VFu7fdEcvYw)
-- [Flux GitOps Demo - CNCF](https://www.youtube.com/watch?v=0IoE3F5v3R4)
+
+1. GitLab. (n.d.). What is GitOps?. GitLab Topics.
+2. Red Hat. (n.d.). What is GitOps?. Red Hat DevOps Topics.
+3. Harness. (n.d.). What is GitOps?. Harness DevOps Academy.
+4. Codefresh. (n.d.). What is GitOps?. Codefresh Learn.
+5. Sysdig. (n.d.). What is GitOps?. Sysdig Learn Cloud Native.
+6. Spot.io. (n.d.). Understanding GitOps Principles. Spot.io Resources.
+7. Datadog. (n.d.). GitOps Principles and Components. Datadog Blog.
+8. Dynatrace. (n.d.). What is GitOps?. Dynatrace Knowledge Base.
+9. Zuplo. (n.d.). What is GitOps?. Zuplo Learning Center.
+10. Spacelift. (n.d.). GitOps vs DevOps. Spacelift Blog.
+11. Codefresh. (n.d.). GitOps Benefits. Codefresh Blog.
+12. Harness. (n.d.). GitOps Benefits. Harness Blog.
+13. Humanitec. (n.d.). GitOps Pros and Cons. Humanitec Blog.
+14. AWS. (n.d.). GitOps Tools Comparison. AWS Prescriptive Guidance.
+15. Spacelift. (n.d.). Top GitOps Tools 2025. Spacelift Blog.
+16. Medium. (n.d.). The 6 Best GitOps Tools. Medium Article.
+17. OpenGitOps. Description. URL: https://opengitops.dev/
+18. Sealed Secrets. Kubernetes Secret Management Tool. URL: https://github.com/bitnami-labs/sealed-secrets
+19. HashiCorp Vault. Secret Management and Protection Tool. URL: https://www.vaultproject.io/
+20. GitLab. (n.d.). GitOps Explained. YouTube Video.
+21. TechWorld with Nana. (n.d.). Argo CD GitOps Tutorial. YouTube Video.
+22. CNCF. (n.d.). Flux GitOps Demo. YouTube Video.

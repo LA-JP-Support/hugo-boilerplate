@@ -184,13 +184,14 @@ Customer calls → Encounters 15-minute wait → Selects callback option → Pro
 
 ## References
 
-- [Configure Direct Callback - Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/voice-channel-direct-callback)
-- [Customer Service Callback: What It Is & Why Use It - LiveAgent](https://www.liveagent.com/customer-support-glossary/callback/)
-- [Customer Callback Software to Boost Call Center Operations - MightyCall](https://www.mightycall.com/features/customer-callback/)
-- [Reduce Missed Calls and Boost CX with a Callback Service - CloudTalk](https://www.cloudtalk.io/callback/)
-- [How Implementing Customer Callback Feature Can Benefit Your Brand - Customer Direct](https://customerdirect.com/resources/news/callback-feature/)
-- [What is Customer Callback & Why It Matters - GetVoIP](https://getvoip.com/blog/customer-callback/)
-- [Advantages & Best Practices for Managing Callbacks in Contact Centers - NobelBiz](https://nobelbiz.com/blog/best-practices-for-managing-callbacks-in-contact-centers/)
-- [What is Contact Center Automatic Callback? - NICE](https://www.nice.com/glossary/what-is-contact-center-automatic-callback)
-- [Introduce Callback System in Your Call Center - XCALLY](https://www.xcally.com/news/frustrated-customers-and-stressed-agents-introduce-callback-system-in-your-call-center/)
-- [What is a Callback Service? - VoiceNEXT](https://www.voicenext.com/what-is-a-callback-service-answered/)
+
+1. Microsoft. (n.d.). Configure Direct Callback. Microsoft Learn.
+2. LiveAgent. (n.d.). Customer Service Callback: What It Is & Why Use It. LiveAgent.
+3. MightyCall. (n.d.). Customer Callback Software to Boost Call Center Operations. MightyCall.
+4. CloudTalk. (n.d.). Reduce Missed Calls and Boost CX with a Callback Service. CloudTalk.
+5. Customer Direct. (n.d.). How Implementing Customer Callback Feature Can Benefit Your Brand. Customer Direct.
+6. GetVoIP. (n.d.). What is Customer Callback & Why It Matters. GetVoIP.
+7. NobelBiz. (n.d.). Advantages & Best Practices for Managing Callbacks in Contact Centers. NobelBiz.
+8. NICE. (n.d.). What is Contact Center Automatic Callback?. NICE.
+9. XCALLY. (n.d.). Introduce Callback System in Your Call Center. XCALLY.
+10. VoiceNEXT. (n.d.). What is a Callback Service?. VoiceNEXT.

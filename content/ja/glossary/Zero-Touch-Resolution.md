@@ -242,16 +242,17 @@ AI駆動のイベント相関、根本原因分析、予測保守が、ユーザ
 
 ## 参考文献
 
-- [Splunk: What Is Zero Touch In IT?](https://www.splunk.com/en_us/blog/learn/zero-touch.html)
-- [Lumos: What is Zero-Touch IT?](https://www.lumos.com/topic/zero-touch-it)
-- [Zenarmor: What is Zero-Touch Deployment?](https://www.zenarmor.com/docs/network-security-tutorials/what-is-zero-touch-deployment)
-- [Addigy: What is Zero-Touch Deployment?](https://addigy.com/blog/what-is-zero-touch-deployment/)
-- [Healthcare Business Today: Zero Touch Resolution](https://medevolve.com/rcm-effective-intelligence/healthcare-business-today-get-claims-paid-without-human-action/)
-- [Splunk: Intelligent Automation](https://www.splunk.com/en_us/blog/learn/intelligent-automation.html)
-- [Splunk: AIOps](https://www.splunk.com/en_us/blog/learn/aiops.html)
-- [Splunk: Artificial Intelligence Solutions](https://www.splunk.com/en_us/solutions/splunk-artificial-intelligence.html)
-- [Zenarmor: Key Components of Zero-Touch Deployment](https://www.zenarmor.com/docs/network-security-tutorials/what-is-zero-touch-deployment#what-are-the-key-components-of-a-zero-touch-deployment-solution)
-- [Zenarmor: How Zero-Touch Deployment Works](https://www.zenarmor.com/docs/network-security-tutorials/what-is-zero-touch-deployment#how-does-zero-touch-deployment-work)
-- [Zenarmor: Challenges and Considerations](https://www.zenarmor.com/docs/network-security-tutorials/what-is-zero-touch-deployment#challenges-and-considerations)
-- [LinkedIn: Airtel Customer Service Case](https://www.linkedin.com/posts/ashish-hooda-947786282_airtel-airtel-customerservice-activity-7325207901814300672-iB98)
-- [LinkedIn: Nectar Innovations Chatbot Case](https://www.linkedin.com/posts/nectar-innovations-llc_chatbots-customer-experience-activity-7381720030717173760-VJe3)
+
+1. Splunk. (n.d.). What Is Zero Touch In IT?. Splunk Blog.
+2. Lumos. (n.d.). What is Zero-Touch IT?. Lumos Topic.
+3. Zenarmor. (n.d.). What is Zero-Touch Deployment?. Zenarmor Documentation.
+4. Addigy. (n.d.). What is Zero-Touch Deployment?. Addigy Blog.
+5. Healthcare Business Today. (n.d.). Zero Touch Resolution. MedEvolve RCM Effective Intelligence.
+6. Splunk. (n.d.). Intelligent Automation. Splunk Blog.
+7. Splunk. (n.d.). AIOps. Splunk Blog.
+8. Splunk. (n.d.). Artificial Intelligence Solutions. Splunk Solutions.
+9. Zenarmor. (n.d.). Key Components of Zero-Touch Deployment. Zenarmor Documentation.
+10. Zenarmor. (n.d.). How Zero-Touch Deployment Works. Zenarmor Documentation.
+11. Zenarmor. (n.d.). Challenges and Considerations. Zenarmor Documentation.
+12. LinkedIn. (n.d.). Airtel Customer Service Case. LinkedIn Post.
+13. LinkedIn. (n.d.). Nectar Innovations Chatbot Case. LinkedIn Post.

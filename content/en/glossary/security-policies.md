@@ -484,17 +484,31 @@ A: Require annual policy acknowledgment, provide training, use plain language, o
 
 ## References
 
-- [NIST SP 800-12 Rev. 1: An Introduction to Information Security](https://csrc.nist.gov/publications/detail/sp/800-12/rev-1/final)
-- [NIST SP 800-53 Rev. 5: Security and Privacy Controls](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
-- [NIST Glossary: Information Security Policy](https://csrc.nist.gov/glossary/term/information_security_policy)
-- [ISO/IEC 27001: Information Security Management](https://www.isms.online/iso-27001/annex-a-2022/5-1-information-security-policies-2022/)
-- [SANS: Information Security Policy Templates](https://www.sans.org/information-security-policy)
-- [Varonis: What is a Security Policy?](https://www.varonis.com/blog/what-is-a-security-policy)
-- [SentinelOne: What is Security Policy?](https://www.sentinelone.com/cybersecurity-101/cybersecurity/what-is-security-policy/)
-- [Sprinto: List of ISO 27001 Policies](https://sprinto.com/blog/list-of-iso-27001-policies/)
-- [URM Consulting: Developing an ISO 27001 Information Security Policy](https://www.urmconsulting.com/blog/developing-an-iso-27001-information-security-policy)
-- [GDPR Official Text](https://gdpr.eu/)
-- [HIPAA Security Rule](https://www.hhs.gov/hipaa/for-professionals/security/index.html)
-- [PCI Security Standards Council](https://www.pcisecuritystandards.org/)
-- [SOC 2 Trust Service Criteria](https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/aicpasoc2report)
-- [CNSSI 4009-2015: National IA Glossary](https://csrc.nist.gov/glossary/term/information_security_policy)
+
+1. NIST. (n.d.). SP 800-12 Rev. 1: An Introduction to Information Security. NIST Publications.
+
+2. NIST. (n.d.). SP 800-53 Rev. 5: Security and Privacy Controls. NIST Publications.
+
+3. NIST. (n.d.). Glossary: Information Security Policy. NIST Glossary.
+
+4. ISO/IEC. (n.d.). ISO/IEC 27001: Information Security Management. ISO Standards.
+
+5. SANS. (n.d.). Information Security Policy Templates. SANS Resources.
+
+6. Varonis. (n.d.). What is a Security Policy?. Varonis Blog.
+
+7. SentinelOne. (n.d.). What is Security Policy?. SentinelOne Cybersecurity 101.
+
+8. Sprinto. (n.d.). List of ISO 27001 Policies. Sprinto Blog.
+
+9. URM Consulting. (n.d.). Developing an ISO 27001 Information Security Policy. URM Consulting Blog.
+
+10. GDPR. (n.d.). GDPR Official Text. GDPR Official Website.
+
+11. HHS. (n.d.). HIPAA Security Rule. U.S. Department of Health & Human Services.
+
+12. PCI Security Standards Council. (n.d.). PCI Security Standards. PCI SSC Website.
+
+13. AICPA. (n.d.). SOC 2 Trust Service Criteria. AICPA Assurance Advisory Services.
+
+14. NIST. (n.d.). CNSSI 4009-2015: National IA Glossary. NIST Glossary.

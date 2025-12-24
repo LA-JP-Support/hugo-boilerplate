@@ -231,12 +231,21 @@ All-in-one platform combining ticketing, live chat, call center, AI automation, 
 
 ## References
 
-- [LiveAgent Official Site](https://www.liveagent.com/#interworkcorp)
-- [Live Customer Service Explained: Importance & Tips](https://www.liveagent.com/customer-support-glossary/live-customer-service/#interworkcorp)
-- [Unified Conversations](https://www.liveagent.com/customer-support-glossary/unified-conversations/#interworkcorp)
-- [Ecommerce Live Chat Software: Best Picks and Tips for 2024](https://www.liveagent.com/blog/best-ecommerce-live-chat-software/#interworkcorp)
-- [LiveAgent AI Features](https://www.liveagent.com/features/ai-features/#interworkcorp)
-- [Knowledge Base Software](https://www.liveagent.com/knowledge-base-software/#interworkcorp)
-- [LiveAgent Integrations](https://www.liveagent.com/integrations/#interworkcorp)
-- [LiveAgent Pricing Plans](https://www.liveagent.com/pricing/#interworkcorp)
-- [Start Free Trial](https://www.liveagent.com/trial/#interworkcorp)
+
+1. LiveAgent. Official Site. URL: https://www.liveagent.com/
+
+2. LiveAgent. (n.d.). Live Customer Service Explained: Importance & Tips. LiveAgent Customer Support Glossary. URL: https://www.liveagent.com/customer-support-glossary/live-customer-service/
+
+3. LiveAgent. (n.d.). Unified Conversations. LiveAgent Customer Support Glossary. URL: https://www.liveagent.com/customer-support-glossary/unified-conversations/
+
+4. LiveAgent. (2024). Ecommerce Live Chat Software: Best Picks and Tips for 2024. LiveAgent Blog. URL: https://www.liveagent.com/blog/best-ecommerce-live-chat-software/
+
+5. LiveAgent. AI Features. URL: https://www.liveagent.com/features/ai-features/
+
+6. LiveAgent. Knowledge Base Software. URL: https://www.liveagent.com/knowledge-base-software/
+
+7. LiveAgent. Integrations. URL: https://www.liveagent.com/integrations/
+
+8. LiveAgent. Pricing Plans. URL: https://www.liveagent.com/pricing/
+
+9. LiveAgent. Start Free Trial. URL: https://www.liveagent.com/trial/

@@ -242,13 +242,23 @@ ARシステムは、実世界の状況に専門家のガイダンスをオーバ
 
 ## 参考文献
 
-- [Helpjuice: Tacit Knowledge - Definition, Examples, and Importance](https://helpjuice.com/blog/tacit-knowledge)
-- [Commoncog: Why Tacit Knowledge is More Important Than Deliberate Practice](https://commoncog.com/tacit-knowledge-is-a-real-thing/)
-- [Commoncog: The Tacit Knowledge Series](https://commoncog.com/the-tacit-knowledge-series/)
-- [Cambridge Dictionary: Tacit Knowledge](https://dictionary.cambridge.org/us/dictionary/english/tacit-knowledge)
-- [Wikipedia: Tacit Knowledge](https://en.wikipedia.org/wiki/Tacit_knowledge)
-- [ScreenSteps: Tacit Knowledge - Definition, Benefits, and Examples](https://blog.screensteps.com/tacit-knowledge-definition)
-- [Psychology Today: Unpacking Tacit Knowledge](https://www.psychologytoday.com/us/blog/seeing-what-others-dont/202307/unpacking-tacit-knowledge)
-- [Indeed: What Is Tacit Knowledge? Definition, Examples and Importance](https://www.indeed.com/career-advice/career-development/tacit-knowledge-example)
-- [Polanyi, Michael: The Tacit Dimension - University of Chicago Press, 2009](https://press.uchicago.edu/ucp/books/book/chicago/T/bo5952342.html)
-- [Collins, Harry: Tacit and Explicit Knowledge - University of Chicago Press, 2010](https://press.uchicago.edu/ucp/books/book/chicago/T/bo8724932.html)
+
+1. Helpjuice. (n.d.). Tacit Knowledge - Definition, Examples, and Importance. Helpjuice Blog.
+
+2. Commoncog. (n.d.). Why Tacit Knowledge is More Important Than Deliberate Practice. Commoncog.
+
+3. Commoncog. (n.d.). The Tacit Knowledge Series. Commoncog.
+
+4. Cambridge Dictionary. (n.d.). Tacit Knowledge. Cambridge Dictionary.
+
+5. Wikipedia. (n.d.). Tacit Knowledge. Wikipedia.
+
+6. ScreenSteps. (n.d.). Tacit Knowledge - Definition, Benefits, and Examples. ScreenSteps Blog.
+
+7. Psychology Today. (2023). Unpacking Tacit Knowledge. Psychology Today.
+
+8. Indeed. (n.d.). What Is Tacit Knowledge? Definition, Examples and Importance. Indeed Career Advice.
+
+9. Polanyi, Michael. (2009). The Tacit Dimension. University of Chicago Press.
+
+10. Collins, Harry. (2010). Tacit and Explicit Knowledge. University of Chicago Press.

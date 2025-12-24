@@ -266,28 +266,49 @@ Weaviate integrates with major LLM providers for embedding generation and serves
 
 ## References
 
-- [Weaviate Official Website](https://weaviate.io/)
-- [Weaviate Platform Overview](https://weaviate.io/platform)
-- [Weaviate GitHub Repository](https://github.com/weaviate/weaviate)
-- [Weaviate Documentation](https://docs.weaviate.io/weaviate)
-- [Weaviate Deployment Guide](https://docs.weaviate.io/deploy)
-- [Weaviate Blog: What is a Vector Database?](https://weaviate.io/blog/what-is-a-vector-database)
-- [Weaviate Blog: Vector Embeddings Explained](https://weaviate.io/blog/vector-embeddings-explained)
-- [Weaviate Blog: Scaling and Weaviate](https://weaviate.io/blog/scaling-and-weaviate)
-- [Weaviate: Vector Index Documentation](https://docs.weaviate.io/weaviate/concepts/vector-index)
-- [Weaviate: Cluster Concepts](https://docs.weaviate.io/weaviate/concepts/cluster)
-- [Weaviate: Replication Architecture](https://docs.weaviate.io/weaviate/concepts/replication-architecture/cluster-architecture)
-- [Weaviate: Model Providers](https://docs.weaviate.io/weaviate/model-providers)
-- [Weaviate: Hybrid Search](https://docs.weaviate.io/weaviate/search/hybrid)
-- [Weaviate: Multi-Tenancy](https://docs.weaviate.io/weaviate/concepts/data#multi-tenancy)
-- [Weaviate: Compression Configuration](https://docs.weaviate.io/weaviate/configuration/compression)
-- [Weaviate Quickstart Guide](https://docs.weaviate.io/weaviate/quickstart)
-- [Weaviate Cloud](https://weaviate.io/cloud)
-- [Weaviate Academy](https://academy.weaviate.io/)
-- [Weaviate Community Slack](https://weaviate.io/slack)
-- [Weaviate RAG Documentation](https://weaviate.io/rag)
-- [Weaviate Recipes GitHub](https://github.com/weaviate/recipes)
-- [Weaviate Solutions](https://weaviate.io/solutions)
-- [DataCamp: Vector Embeddings](https://www.datacamp.com/blog/vector-embedding)
-- [Medium: Embeddings and Vector Databases](https://medium.com/@vladris/embeddings-and-vector-databases-732f9927b377)
-- [Weaviate LangChain Integration](https://weaviate.io/blog/enterprise-workflow-langchain-weaviate)
+
+1. Weaviate. (n.d.). Weaviate Platform Overview. URL: https://weaviate.io/platform
+
+2. Weaviate. (n.d.). Weaviate Documentation. URL: https://docs.weaviate.io/weaviate
+
+3. Weaviate. (n.d.). What is a Vector Database?. Weaviate Blog.
+
+4. Weaviate. (n.d.). Vector Embeddings Explained. Weaviate Blog.
+
+5. Weaviate. (n.d.). Scaling and Weaviate. Weaviate Blog.
+
+6. Weaviate. (n.d.). Vector Index Documentation. URL: https://docs.weaviate.io/weaviate/concepts/vector-index
+
+7. Weaviate. (n.d.). Cluster Concepts. URL: https://docs.weaviate.io/weaviate/concepts/cluster
+
+8. Weaviate. (n.d.). Replication Architecture. URL: https://docs.weaviate.io/weaviate/concepts/replication-architecture/cluster-architecture
+
+9. Weaviate. (n.d.). Model Providers. URL: https://docs.weaviate.io/weaviate/model-providers
+
+10. Weaviate. (n.d.). Hybrid Search. URL: https://docs.weaviate.io/weaviate/search/hybrid
+
+11. Weaviate. (n.d.). Multi-Tenancy. URL: https://docs.weaviate.io/weaviate/concepts/data#multi-tenancy
+
+12. Weaviate. (n.d.). Compression Configuration. URL: https://docs.weaviate.io/weaviate/configuration/compression
+
+13. Weaviate. (n.d.). Quickstart Guide. URL: https://docs.weaviate.io/weaviate/quickstart
+
+14. Weaviate. (n.d.). Weaviate Cloud. URL: https://weaviate.io/cloud
+
+15. Weaviate. (n.d.). Weaviate Academy. URL: https://academy.weaviate.io/
+
+16. Weaviate. (n.d.). Weaviate Community Slack. URL: https://weaviate.io/slack
+
+17. Weaviate. (n.d.). Weaviate RAG Documentation. URL: https://weaviate.io/rag
+
+18. Weaviate. (n.d.). Weaviate Solutions. URL: https://weaviate.io/solutions
+
+19. Weaviate. (n.d.). Weaviate LangChain Integration. Weaviate Blog.
+
+20. DataCamp. (n.d.). Vector Embeddings. DataCamp Blog.
+
+21. Vladris. (n.d.). Embeddings and Vector Databases. Medium.
+
+22. Weaviate. (n.d.). Weaviate GitHub Repository. URL: https://github.com/weaviate/weaviate
+
+23. Weaviate. (n.d.). Weaviate Recipes GitHub. URL: https://github.com/weaviate/recipes

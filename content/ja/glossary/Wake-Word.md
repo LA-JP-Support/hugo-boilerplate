@@ -319,20 +319,37 @@ while True:
 
 ## 参考文献
 
-- [Cambridge Dictionary: Wake Word Definition](https://dictionary.cambridge.org/us/dictionary/english/wake-word)
-- [Picovoice: Complete Guide to Wake Word](https://picovoice.ai/blog/complete-guide-to-wake-word/)
-- [SoundHound: What You Need to Know About Wake Word Detection](https://www.soundhound.com/voice-ai-blog/what-you-need-to-know-about-wake-word-detection/)
-- [Picovoice: Using ASR for Wake Word Recognition](https://picovoice.ai/blog/using-asr-for-wake-word-recognition/)
-- [Picovoice Console](https://console.picovoice.ai/)
-- [Picovoice Platform: Porcupine](https://picovoice.ai/platform/porcupine/)
-- [Sensory: Wake Word Technology](https://www.sensory.com/wake-word/)
-- [SoundHound Houndify: Wake Word](https://www.houndify.com/products/wake-word)
-- [Picovoice: Open-Source Keyword Spotting Data](https://picovoice.ai/blog/open-source-keyword-spotting-data/)
-- [Picovoice: How to Add Custom Wake Words to Web Apps](https://picovoice.ai/blog/how-to-add-custom-wake-words-to-any-web-app/)
-- [Picovoice: iOS Speech Recognition](https://picovoice.ai/blog/ios-speech-recognition/)
-- [Picovoice: Android Speech Recognition](https://picovoice.ai/blog/android-speech-recognition/)
-- [Picovoice: Speech Recognition on Raspberry Pi](https://picovoice.ai/blog/speech-recognition-on-raspberrypi/)
-- [Picovoice: Arduino Voice Recognition](https://picovoice.ai/blog/arduino-voice-recognition-in-ten-minutes-or-less/)
-- [SoundHound Voices: Understanding Accents](https://voices.soundhound.com/why-voice-assistants-need-to-understand-accents/)
-- [openWakeWord GitHub](https://github.com/dscripka/openWakeWord)
-- [PocketSphinx GitHub](https://github.com/cmusphinx/pocketsphinx)
+
+1. Cambridge Dictionary. (n.d.). Wake Word Definition. Cambridge Dictionary.
+
+2. Picovoice. (n.d.). Complete Guide to Wake Word. Picovoice Blog.
+
+3. SoundHound. (n.d.). What You Need to Know About Wake Word Detection. SoundHound Voice AI Blog.
+
+4. Picovoice. (n.d.). Using ASR for Wake Word Recognition. Picovoice Blog.
+
+5. Picovoice Console. Service for Voice AI Development. URL: https://console.picovoice.ai/
+
+6. Picovoice Platform: Porcupine. Wake Word Engine. URL: https://picovoice.ai/platform/porcupine/
+
+7. Sensory. (n.d.). Wake Word Technology. Sensory.
+
+8. SoundHound Houndify. Wake Word Product. URL: https://www.houndify.com/products/wake-word
+
+9. Picovoice. (n.d.). Open-Source Keyword Spotting Data. Picovoice Blog.
+
+10. Picovoice. (n.d.). How to Add Custom Wake Words to Web Apps. Picovoice Blog.
+
+11. Picovoice. (n.d.). iOS Speech Recognition. Picovoice Blog.
+
+12. Picovoice. (n.d.). Android Speech Recognition. Picovoice Blog.
+
+13. Picovoice. (n.d.). Speech Recognition on Raspberry Pi. Picovoice Blog.
+
+14. Picovoice. (n.d.). Arduino Voice Recognition in Ten Minutes or Less. Picovoice Blog.
+
+15. SoundHound Voices. (n.d.). Understanding Accents. SoundHound Voices.
+
+16. openWakeWord. Open-Source Wake Word Project. URL: https://github.com/dscripka/openWakeWord
+
+17. PocketSphinx. Open-Source Speech Recognition Library. URL: https://github.com/cmusphinx/pocketsphinx

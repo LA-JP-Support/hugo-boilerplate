@@ -257,25 +257,26 @@ Webスクレイパーノードには、特殊な解析エンジン、セレク�
 
 ## 参考文献
 
-- [ScrapingBee: Web Scraping with JavaScript and Node.js](https://www.scrapingbee.com/blog/web-scraping-javascript/)
-- [GeeksforGeeks: What is Web Scraping in Node.js?](https://www.geeksforgeeks.org/node-js/what-is-web-scraping-in-node-js/)
-- [ZenRows: 7 Best JavaScript & Node.js Web Scraping Libraries](https://www.zenrows.com/blog/javascript-nodejs-web-scraping-libraries)
-- [Firecrawl: n8n Web Scraping Workflow Templates](https://www.firecrawl.dev/blog/n8n-web-scraping-workflow-templates)
-- [Imperva: Data Scraping Overview](https://www.imperva.com/learn/application-security/data-scraping/)
-- [Firecrawl Documentation](https://docs.firecrawl.dev/)
-- [n8n Quickstart Guide](https://docs.n8n.io/try-it-out/quickstart/)
-- [n8n Workflows: AI Agent Chatbot with Jina.ai Webpage Scraper](https://n8n.io/workflows/2943-ai-agent-chatbot-with-jinaai-webpage-scraper/)
-- [Stack Overflow: Scrape Web Pages in Real Time with Node.js](https://stackoverflow.com/questions/5211486/scrape-web-pages-in-real-time-with-node-js)
-- [npm: nodejs-web-scraper](https://www.npmjs.com/package/nodejs-web-scraper)
-- [Puppeteer Documentation](https://pptr.dev/)
-- [Cheerio Documentation](https://cheerio.js.org/)
-- [Playwright Documentation](https://playwright.dev/)
-- [Selenium Documentation](https://www.selenium.dev/)
-- [Axios GitHub Repository](https://github.com/axios/axios)
-- [node-fetch GitHub Repository](https://github.com/node-fetch/node-fetch)
-- [jsdom GitHub Repository](https://github.com/jsdom/jsdom)
-- [Node Crawler GitHub Repository](https://github.com/bda-research/node-crawler)
-- [ZenRows Documentation](https://www.zenrows.com/docs)
-- [ScrapingBee Website](https://www.scrapingbee.com/)
-- [n8n Website](https://n8n.io/)
-- [Firecrawl Website](https://www.firecrawl.dev/)
+
+1. ScrapingBee. (n.d.). Web Scraping with JavaScript and Node.js. ScrapingBee Blog.
+2. GeeksforGeeks. (n.d.). What is Web Scraping in Node.js?. GeeksforGeeks.
+3. ZenRows. (n.d.). 7 Best JavaScript & Node.js Web Scraping Libraries. ZenRows Blog.
+4. Firecrawl. (n.d.). n8n Web Scraping Workflow Templates. Firecrawl Blog.
+5. Imperva. (n.d.). Data Scraping Overview. Imperva Learn.
+6. Firecrawl. Documentation. URL: https://docs.firecrawl.dev/
+7. n8n. Quickstart Guide. URL: https://docs.n8n.io/try-it-out/quickstart/
+8. n8n. (n.d.). Workflows: AI Agent Chatbot with Jina.ai Webpage Scraper. n8n Workflows.
+9. Stack Overflow. (n.d.). Scrape Web Pages in Real Time with Node.js. Stack Overflow.
+10. npm. nodejs-web-scraper. URL: https://www.npmjs.com/package/nodejs-web-scraper
+11. Puppeteer. Documentation. URL: https://pptr.dev/
+12. Cheerio. Documentation. URL: https://cheerio.js.org/
+13. Playwright. Documentation. URL: https://playwright.dev/
+14. Selenium. Documentation. URL: https://www.selenium.dev/
+15. Axios. GitHub Repository. URL: https://github.com/axios/axios
+16. node-fetch. GitHub Repository. URL: https://github.com/node-fetch/node-fetch
+17. jsdom. GitHub Repository. URL: https://github.com/jsdom/jsdom
+18. Node Crawler. GitHub Repository. URL: https://github.com/bda-research/node-crawler
+19. ZenRows. Documentation. URL: https://www.zenrows.com/docs
+20. ScrapingBee. Web Scraping Service. URL: https://www.scrapingbee.com/
+21. n8n. Workflow Automation Platform. URL: https://n8n.io/
+22. Firecrawl. Web Scraping Tool. URL: https://www.firecrawl.dev/

@@ -214,9 +214,15 @@ No; they measure lexical overlap, not semantic meaning. Combine with embedding-b
 
 ## References
 
-- [GeeksforGeeks: Understanding BLEU and ROUGE Score](https://www.geeksforgeeks.org/nlp/understanding-bleu-and-rouge-score-for-nlp-evaluation/)
-- [SuperAnnotate: BLEU - ROUGE Guide](https://doc.superannotate.com/docs/guide-bleu-rouge)
-- [Elastic: Evaluating RAG Metrics](https://www.elastic.co/search-labs/blog/evaluating-rag-metrics)
-- [BLEU Score - Wikipedia](https://en.wikipedia.org/wiki/BLEU)
-- [NLTK BLEU Documentation](https://www.nltk.org/api/nltk.translate.html#nltk.translate.bleu_score.sentence_bleu)
-- [rouge-score PyPI](https://pypi.org/project/rouge-score/)
+
+1. GeeksforGeeks. (n.d.). Understanding BLEU and ROUGE Score. GeeksforGeeks.
+
+2. SuperAnnotate. (n.d.). BLEU - ROUGE Guide. SuperAnnotate Documentation.
+
+3. Elastic. (n.d.). Evaluating RAG Metrics. Elastic Search Labs Blog.
+
+4. Wikipedia. (n.d.). BLEU Score. Wikipedia.
+
+5. NLTK. (n.d.). BLEU Score Documentation. NLTK API.
+
+6. rouge-score. (n.d.). Python Package. PyPI. URL: https://pypi.org/project/rouge-score/

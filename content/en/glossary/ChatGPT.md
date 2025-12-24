@@ -330,13 +330,14 @@ ChatGPT provides synthesized, conversational responses and can reason about info
 
 ## References
 
-- [ChatGPT Official Site](https://chat.openai.com/)
-- [OpenAI Company Profile](OpenAI.md)
-- [ChatGPT Help Center](https://help.openai.com/)
-- [OpenAI API Documentation](https://platform.openai.com/docs/)
-- [GPT-5 Announcement](https://openai.com/gpt-5/)
-- [GPT-5.2 Technical Details](https://openai.com/index/introducing-gpt-5-2/)
-- [ChatGPT Plus Features](https://openai.com/chatgpt/pricing/)
-- [ChatGPT Enterprise](https://openai.com/enterprise/)
-- [GPT Store](https://openai.com/gpt-store/)
-- [OpenAI Usage Policies](https://openai.com/policies/usage-policies/)
+
+1. ChatGPT. AI Conversational Service. URL: https://chat.openai.com/
+2. OpenAI. Company Profile. URL: OpenAI.md
+3. ChatGPT Help Center. Customer Support Resource. URL: https://help.openai.com/
+4. OpenAI. API Documentation. URL: https://platform.openai.com/docs/
+5. OpenAI. (n.d.). GPT-5 Announcement. URL: https://openai.com/gpt-5/
+6. OpenAI. (n.d.). GPT-5.2 Technical Details. URL: https://openai.com/index/introducing-gpt-5-2/
+7. ChatGPT Plus. Subscription Features. URL: https://openai.com/chatgpt/pricing/
+8. ChatGPT Enterprise. Business Solution. URL: https://openai.com/enterprise/
+9. GPT Store. AI Model Marketplace. URL: https://openai.com/gpt-store/
+10. OpenAI. Usage Policies. URL: https://openai.com/policies/usage-policies/

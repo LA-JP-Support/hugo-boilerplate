@@ -238,13 +238,14 @@ CSATは、より広範な顧客体験測定戦略の一部です。他の2つの
 
 ## 参考文献
 
-- [IBM: What is CSAT and How to Calculate It?](https://www.ibm.com/think/topics/csat-customer-satisfaction-score)
-- [IBM: AI for Customer Service](https://www.ibm.com/think/videos/ai-academy/generative-ai-for-customer-service)
-- [IBM: Customer Experience](https://www.ibm.com/topics/customer-experience)
-- [IBM: Customer Engagement](https://www.ibm.com/topics/customer-engagement)
-- [CMSWire: What Is CSAT and How Do You Measure It?](https://www.cmswire.com/customer-experience/what-is-customer-satisfaction-score-csat/)
-- [CMSWire: Customer Experience Resources](https://www.cmswire.com/customer-experience/)
-- [Qualtrics: What is CSAT and how do you measure it?](https://www.qualtrics.com/articles/customer-experience/what-is-csat/)
-- [Qualtrics: Customer Satisfaction Survey Template](https://www.qualtrics.com/marketplace/customer-satisfaction-survey/?utm_lp=hub-what-is-csat)
-- [Qualtrics: Free CSAT Survey Template](https://www.qualtrics.com/marketplace/customer-satisfaction-survey/?utm_lp=hub-what-is-csat)
-- [American Customer Satisfaction Index: Industry Benchmarks](https://www.theacsi.org/industry-benchmarks/)
+
+1. IBM. (n.d.). What is CSAT and How to Calculate It?. IBM Think Topics.
+2. IBM. (n.d.). AI for Customer Service. IBM Videos.
+3. IBM. (n.d.). Customer Experience. IBM Topics.
+4. IBM. (n.d.). Customer Engagement. IBM Topics.
+5. CMSWire. (n.d.). What Is CSAT and How Do You Measure It?. CMSWire Customer Experience.
+6. CMSWire. (n.d.). Customer Experience Resources. CMSWire.
+7. Qualtrics. (n.d.). What is CSAT and how do you measure it?. Qualtrics Articles.
+8. Qualtrics. (n.d.). Customer Satisfaction Survey Template. Qualtrics Marketplace.
+9. Qualtrics. (n.d.). Free CSAT Survey Template. Qualtrics Marketplace.
+10. American Customer Satisfaction Index. (n.d.). Industry Benchmarks. ACSI.

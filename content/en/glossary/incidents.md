@@ -664,16 +664,29 @@ A: Document the breach, notify stakeholders, analyze root cause, and implement c
 
 ## References
 
-- [What are incidents? - Jira Service Management (Atlassian)](https://support.atlassian.com/jira-service-management-cloud/docs/what-are-incidents/)
-- [How ITIL Differentiates Problems and Incidents - Global Knowledge](https://www.globalknowledge.com/us-en/resources/resource-library/articles/how-itil-differentiates-problems-and-incidents/)
-- [Automated Incident Management - Workato](https://www.workato.com/the-connector/automated-incident-management/)
-- [What is Incident Management? - AWS](https://aws.amazon.com/what-is/incident-management/)
-- [Incident Management - ServiceNow Community](https://www.servicenow.com/community/incident-management-forum/what-is-incident/m-p/2663299)
-- [AI for Incident Response - Microtica](https://www.microtica.com/blog/ai-in-incident-management)
-- [Incident vs Service Request - Freshworks](https://www.freshworks.com/explore-it/incident-service-request/)
-- [Incident Management - IT Process Wiki](https://wiki.en.it-processmaps.com/index.php/Incident_Management)
-- [Reduce MTTR With Incident Management Automation - Moveworks](https://www.moveworks.com/us/en/resources/blog/what-is-incident-management-automation)
-- [Using AIOps for Better Incident Management - PagerDuty](https://www.pagerduty.com/resources/aiops/learn/aiops-incident-management/)
-- [6 Top Incident Management Use Cases for AI Copilots - BigPanda](https://www.bigpanda.io/blog/ai-copilot-use-cases/)
-- [5 Steps of Incident Management Process - Pulpstream](https://pulpstream.com/resources/blog/incident-management-process)
-- [5 Steps of the Incident Management Lifecycle - RSI Security](https://blog.rsisecurity.com/5-steps-of-the-incident-management-lifecycle/)
+
+1. Atlassian. (n.d.). What are incidents?. Jira Service Management.
+
+2. Global Knowledge. (n.d.). How ITIL Differentiates Problems and Incidents. Global Knowledge Resource Library.
+
+3. Workato. (n.d.). Automated Incident Management. Workato Blog.
+
+4. AWS. (n.d.). What is Incident Management?. AWS.
+
+5. ServiceNow Community. (n.d.). Incident Management. ServiceNow Community Forum.
+
+6. Microtica. (n.d.). AI for Incident Response. Microtica Blog.
+
+7. Freshworks. (n.d.). Incident vs Service Request. Freshworks Explore IT.
+
+8. IT Process Wiki. (n.d.). Incident Management. IT Process Wiki.
+
+9. Moveworks. (n.d.). Reduce MTTR With Incident Management Automation. Moveworks Blog.
+
+10. PagerDuty. (n.d.). Using AIOps for Better Incident Management. PagerDuty Resources.
+
+11. BigPanda. (n.d.). 6 Top Incident Management Use Cases for AI Copilots. BigPanda Blog.
+
+12. Pulpstream. (n.d.). 5 Steps of Incident Management Process. Pulpstream Blog.
+
+13. RSI Security. (n.d.). 5 Steps of the Incident Management Lifecycle. RSI Security Blog.

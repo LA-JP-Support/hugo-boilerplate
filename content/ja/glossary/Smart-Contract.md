@@ -189,11 +189,19 @@ term: すまーとこんとらくと
 
 ## 参考文献
 
-- [Ethereum Smart Contract Development Guide - Ethereum Foundation](https://ethereum.org/en/developers/docs/smart-contracts/)
-- [Smart Contract Security Best Practices - ConsenSys](https://consensys.github.io/smart-contract-best-practices/)
-- [Solidity Documentation - Solidity Programming Language](https://docs.soliditylang.org/)
-- [DeFi Pulse - Decentralized Finance Analytics](https://defipulse.com/)
-- [OpenZeppelin Smart Contract Security Patterns](https://docs.openzeppelin.com/contracts/)
-- [Chainlink Oracle Network Documentation](https://docs.chain.link/)
-- [Web3 Foundation Research Papers](https://research.web3.foundation/)
-- [MIT OpenCourseWare - Blockchain and Money](https://ocw.mit.edu/courses/sloan-school-of-management/)
+
+1. Ethereum Foundation. (n.d.). Ethereum Smart Contract Development Guide. Ethereum Documentation.
+
+2. ConsenSys. (n.d.). Smart Contract Security Best Practices. ConsenSys GitHub.
+
+3. Solidity. (n.d.). Solidity Documentation. Solidity Programming Language.
+
+4. DeFi Pulse. (n.d.). Decentralized Finance Analytics. DeFi Pulse.
+
+5. OpenZeppelin. (n.d.). Smart Contract Security Patterns. OpenZeppelin Documentation.
+
+6. Chainlink. (n.d.). Oracle Network Documentation. Chainlink Documentation.
+
+7. Web3 Foundation. (n.d.). Web3 Foundation Research Papers. Web3 Research.
+
+8. MIT Sloan School of Management. (n.d.). Blockchain and Money. MIT OpenCourseWare.

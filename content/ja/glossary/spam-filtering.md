@@ -354,13 +354,14 @@ SPFは、送信サーバーがドメイン所有者によって承認されて�
 
 ## 参考文献
 
-- [Spamhaus: Understanding Email Authentication](https://www.spamhaus.org/organization/understanding-email-authentication/)
-- [DMARC.org: Domain-based Message Authentication](https://dmarc.org/)
-- [Cisco Talos: Email Security Resources](https://www.talosintelligence.com/)
-- [Microsoft: Email Authentication Best Practices](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/email-authentication-about)
-- [NIST: Secure Email Deployment Guide](https://www.nist.gov/publications/trustworthy-email)
-- [CISA: Email Security Best Practices](https://www.cisa.gov/email-security)
-- [Google: Email Sender Guidelines](https://support.google.com/mail/answer/81126)
-- [OWASP: Email Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Email_Security_Cheat_Sheet.html)
-- [Anti-Phishing Working Group (APWG): Resources](https://apwg.org/)
-- [M3AAWG: Email Authentication Best Practices](https://www.m3aawg.org/)
+
+1. Spamhaus. (n.d.). Understanding Email Authentication. Spamhaus.
+2. DMARC.org. (n.d.). Domain-based Message Authentication. DMARC.
+3. Cisco Talos. (n.d.). Email Security Resources. Cisco Talos Intelligence.
+4. Microsoft. (n.d.). Email Authentication Best Practices. Microsoft Learn.
+5. NIST. (n.d.). Secure Email Deployment Guide. NIST Publications.
+6. CISA. (n.d.). Email Security Best Practices. CISA.
+7. Google. (n.d.). Email Sender Guidelines. Google Support.
+8. OWASP. (n.d.). Email Security Cheat Sheet. OWASP Cheat Sheets Series.
+9. Anti-Phishing Working Group (APWG). (n.d.). Resources. APWG.
+10. M3AAWG. (n.d.). Email Authentication Best Practices. M3AAWG.

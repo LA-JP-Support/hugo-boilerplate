@@ -255,20 +255,21 @@ Yes. Pinecone typically complements SQL/NoSQL stores, handling unstructured, hig
 
 ## References
 
-- [Pinecone Official Documentation](https://docs.pinecone.io/)
-- [What is a Vector Database?](https://www.pinecone.io/learn/vector-database/)
-- [Pinecone Product Page](https://www.pinecone.io/)
-- [Vector Embeddings Explained](https://www.pinecone.io/learn/vector-embeddings/)
-- [Pinecone Architecture Documentation](https://docs.pinecone.io/guides/get-started/database-architecture)
-- [Vector Indexes and ANN Algorithms](https://www.pinecone.io/learn/series/faiss/vector-indexes/)
-- [HNSW Algorithm Explained](https://www.pinecone.io/learn/series/faiss/hnsw/)
-- [Pinecone Quickstart Guide](https://docs.pinecone.io/guides/get-started/quickstart)
-- [Create and Manage Indexes](https://docs.pinecone.io/guides/index-data/create-an-index)
-- [Filter by Metadata](https://docs.pinecone.io/guides/search/filter-by-metadata)
-- [Pinecone Security](https://www.pinecone.io/security/)
-- [Pinecone Integrations Overview](https://docs.pinecone.io/integrations/overview)
-- [Vanguard Case Study](https://www.pinecone.io/customers/vanguard/)
-- [Spotify Podcast Search](https://www.pinecone.io/learn/spotify-podcast-search/)
-- [Estuary: What is Pinecone AI](https://estuary.dev/blog/what-is-pinecone-ai/)
-- [F22 Labs: Pinecone Vector DB Guide](https://www.f22labs.com/blogs/pinecone-vector-db-guide-core-concepts-explained/)
-- [Oracle: What is Pinecone](https://www.oracle.com/ca-en/database/vector-database/pinecone/)
+
+1. Pinecone. (n.d.). Pinecone Official Documentation. Pinecone Docs.
+2. Pinecone. (n.d.). What is a Vector Database?. Pinecone Learn.
+3. Pinecone. (n.d.). Pinecone Product Page. Pinecone Website.
+4. Pinecone. (n.d.). Vector Embeddings Explained. Pinecone Learn.
+5. Pinecone. (n.d.). Pinecone Architecture Documentation. Pinecone Docs.
+6. Pinecone. (n.d.). Vector Indexes and ANN Algorithms. Pinecone Learn.
+7. Pinecone. (n.d.). HNSW Algorithm Explained. Pinecone Learn.
+8. Pinecone. (n.d.). Pinecone Quickstart Guide. Pinecone Docs.
+9. Pinecone. (n.d.). Create and Manage Indexes. Pinecone Docs.
+10. Pinecone. (n.d.). Filter by Metadata. Pinecone Docs.
+11. Pinecone. (n.d.). Pinecone Security. Pinecone Website.
+12. Pinecone. (n.d.). Pinecone Integrations Overview. Pinecone Docs.
+13. Pinecone. (n.d.). Vanguard Case Study. Pinecone Customers.
+14. Pinecone. (n.d.). Spotify Podcast Search. Pinecone Learn.
+15. Estuary. (n.d.). Estuary: What is Pinecone AI. Estuary Blog.
+16. F22 Labs. (n.d.). Pinecone Vector DB Guide. F22 Labs Blog.
+17. Oracle. (n.d.). Oracle: What is Pinecone. Oracle Database Resources.

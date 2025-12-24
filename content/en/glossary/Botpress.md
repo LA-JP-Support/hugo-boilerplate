@@ -222,26 +222,49 @@ Developers, enterprises, and SMBs needing flexible, scalable, secure AI agents.
 
 ## References
 
-- [Botpress Homepage](https://botpress.com)
-- [Botpress Documentation](https://botpress.com/docs/)
-- [Knowledge Base Documentation](https://botpress.com/docs/knowledge-base)
-- [How to Build Your Own AI Chatbot (Botpress Blog)](https://botpress.com/blog/how-to-build-your-own-ai-chatbot)
-- [Botpress Pricing](https://botpress.com/pricing)
-- [AI Chatbot Overview](https://botpress.com/blog/ai-chatbot)
-- [Best Large Language Models](https://botpress.com/blog/best-large-language-models)
-- [What is RAG?](https://botpress.com/blog/rag-in-ai)
-- [Google AI Integration](https://botpress.com/integrations/google-ai)
-- [Vector Database Explained](https://botpress.com/blog/vector-database)
-- [Vector Database Storage](https://botpress.com/academy-lesson/vector-database-storage)
-- [Knowledge Base Best Practices](https://botpress.com/docs/studio/concepts/knowledge-base/knowledge-base-best-practices)
-- [All Supported Channels](https://www.botpress.com/hub?type_equal=%5B%22Channel%22%5D)
-- [Integration Hub](https://www.botpress.com/hub?type_equal=%5B%22Integration%22%5D)
-- [SDK Overview](https://botpress.com/docs/for-developers/sdk/overview)
-- [Enterprise Security](https://botpress.com/enterprise)
-- [Chatbot Security Guide](https://botpress.com/blog/chatbot-security)
-- [GPTBots Review of Botpress](https://www.gptbots.ai/blog/botpress-alternatives)
-- [Chatimize Review](https://chatimize.com/reviews/botpress/)
-- [AIToolsTribe Overview](https://www.aitoolstribe.com/what-is-botpress/)
-- [Voiceflow Independent Review](https://www.voiceflow.com/blog/botpress)
-- [Botpress Flow Editor](https://botpress.com/academy-lesson/studio-ui-flow-editor)
-- [Botpress Community on Discord](https://discord.com/invite/botpress)
+
+1. Botpress. Service for AI Chatbot Development Platform. URL: https://botpress.com/
+
+2. Botpress. (n.d.). How to Build Your Own AI Chatbot. Botpress Blog.
+
+3. Botpress. (n.d.). AI Chatbot Overview. Botpress Blog.
+
+4. Botpress. (n.d.). Best Large Language Models. Botpress Blog.
+
+5. Botpress. (n.d.). What is RAG?. Botpress Blog.
+
+6. Botpress. (n.d.). Vector Database Explained. Botpress Blog.
+
+7. Botpress. (n.d.). Chatbot Security Guide. Botpress Blog.
+
+8. GPTBots. (n.d.). GPTBots Review of Botpress. GPTBots Blog.
+
+9. Chatimize. (n.d.). Chatimize Review of Botpress. Chatimize Reviews.
+
+10. AIToolsTribe. (n.d.). Overview of Botpress. AIToolsTribe.
+
+11. Voiceflow. (n.d.). Voiceflow Independent Review of Botpress. Voiceflow Blog.
+
+12. Botpress. Service Documentation. URL: https://botpress.com/docs/
+
+13. Botpress. Knowledge Base Documentation. URL: https://botpress.com/docs/knowledge-base
+
+14. Botpress. Pricing Information. URL: https://botpress.com/pricing
+
+15. Botpress. Google AI Integration. URL: https://botpress.com/integrations/google-ai
+
+16. Botpress. Vector Database Storage. URL: https://botpress.com/academy-lesson/vector-database-storage
+
+17. Botpress. Knowledge Base Best Practices. URL: https://botpress.com/docs/studio/concepts/knowledge-base/knowledge-base-best-practices
+
+18. Botpress. All Supported Channels. URL: https://www.botpress.com/hub?type_equal=%5B%22Channel%22%5D
+
+19. Botpress. Integration Hub. URL: https://www.botpress.com/hub?type_equal=%5B%22Integration%22%5D
+
+20. Botpress. SDK Overview. URL: https://botpress.com/docs/for-developers/sdk/overview
+
+21. Botpress. Enterprise Security. URL: https://botpress.com/enterprise
+
+22. Botpress. Flow Editor. URL: https://botpress.com/academy-lesson/studio-ui-flow-editor
+
+23. Botpress. Community Discord. URL: https://discord.com/invite/botpress

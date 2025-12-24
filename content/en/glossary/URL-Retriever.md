@@ -189,14 +189,25 @@ Yes. Many URL Retrievers, including RTRVR AI, integrate directly with Google She
 
 ## References
 
-- [rtrvr.ai – Retrieve, Research, Robotize the Web with AI](https://rtrvr.ai/)
-- [RTRVR AI v2: YouTube Demo – Automate Anything in Your Browser](https://www.youtube.com/watch?v=ZB_U5QlyY0Y)
-- [RTRVR AI API Documentation](https://www.rtrvr.ai/docs/api-reference)
-- [RTRVR AI User Testimonials](https://rtrvr.ai/)
-- [Web Bench Results – rtrvr.ai Performance](https://www.rtrvr.ai/blog/web-bench-results)
-- [What is a URL? – MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
-- [rtrvr.ai Reddit Review – User Experiences](https://www.reddit.com/r/AISEOInsider/comments/1k6znfn/rtrvr_ai_the_secret_browser_automation_tool_thats/)
-- [RTRVR Sheets Workflow Documentation](https://www.rtrvr.ai/docs/sheets-workflows)
-- [RTRVR Scheduling & Automation Docs](https://www.rtrvr.ai/docs/schedules)
-- [RTRVR Webhooks & Integration](https://www.rtrvr.ai/docs/webhooks)
-- [RTRVR AI LinkedIn Job Automation (YouTube)](https://www.youtube.com/watch?v=R0BRJTDZiCU)
+
+1. rtrvr.ai. Service for web retrieval and browser automation. URL: https://rtrvr.ai/
+
+2. RTRVR AI. (n.d.). RTRVR AI v2: YouTube Demo – Automate Anything in Your Browser. YouTube.
+
+3. RTRVR AI. (n.d.). RTRVR AI API Documentation. RTRVR AI Docs.
+
+4. RTRVR AI. (n.d.). RTRVR AI User Testimonials. RTRVR AI.
+
+5. RTRVR AI. (n.d.). Web Bench Results – rtrvr.ai Performance. RTRVR AI Blog.
+
+6. MDN Web Docs. (n.d.). What is a URL?. Mozilla Developer Network.
+
+7. Reddit. (n.d.). rtrvr.ai Reddit Review – User Experiences. r/AISEOInsider.
+
+8. RTRVR AI. (n.d.). RTRVR Sheets Workflow Documentation. RTRVR AI Docs.
+
+9. RTRVR AI. (n.d.). RTRVR Scheduling & Automation Docs. RTRVR AI Docs.
+
+10. RTRVR AI. (n.d.). RTRVR Webhooks & Integration. RTRVR AI Docs.
+
+11. RTRVR AI. (n.d.). RTRVR AI LinkedIn Job Automation. YouTube.

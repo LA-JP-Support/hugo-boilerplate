@@ -120,11 +120,19 @@ Venmo、PayPal、Cash AppなどのP2P決済サービスは、不審な送金、�
 
 ## 参考文献
 
-- [Federal Trade Commission - Consumer Fraud and Identity Theft Data - FTC](https://www.ftc.gov/policy/reports/policy-reports/commission-staff-reports/consumer-fraud-identity-theft-data)
-- [Association of Certified Fraud Examiners - Report to the Nations - ACFE](https://www.acfe.com/report-to-the-nations/)
-- [PwC Global Economic Crime and Fraud Survey - PwC](https://www.pwc.com/gx/en/forensics/global-economic-crime-and-fraud-survey-2022.pdf)
-- [Bank for International Settlements - Sound Practices for Banks' Use of Artificial Intelligence - BIS](https://www.bis.org/bcbs/publ/d518.htm)
-- [European Banking Authority - Guidelines on Fraud Reporting - EBA](https://www.eba.europa.eu/regulation-and-policy/payment-services-and-electronic-money/guidelines-on-fraud-reporting)
-- [Federal Financial Institutions Examination Council - Authentication Guidance - FFIEC](https://www.ffiec.gov/press/pr101205.htm)
-- [Financial Action Task Force - Money Laundering and Terrorist Financing Red Flag Indicators - FATF](https://www.fatf-gafi.org/publications/methodsandtrends/documents/ml-tf-red-flag-indicators.html)
-- [National Institute of Standards and Technology - Cybersecurity Framework - NIST](https://www.nist.gov/cyberframework)
+
+1. Federal Trade Commission. (n.d.). Consumer Fraud and Identity Theft Data. FTC Report.
+
+2. Association of Certified Fraud Examiners. (n.d.). Report to the Nations. ACFE Publication.
+
+3. PwC. (2022). Global Economic Crime and Fraud Survey. PwC Research Report.
+
+4. Bank for International Settlements. (n.d.). Sound Practices for Banks' Use of Artificial Intelligence. BIS Guidelines.
+
+5. European Banking Authority. (n.d.). Guidelines on Fraud Reporting. EBA Policy Document.
+
+6. Federal Financial Institutions Examination Council. (n.d.). Authentication Guidance. FFIEC Guidance.
+
+7. Financial Action Task Force. (n.d.). Money Laundering and Terrorist Financing Red Flag Indicators. FATF Publication.
+
+8. National Institute of Standards and Technology. (n.d.). Cybersecurity Framework. NIST Framework.

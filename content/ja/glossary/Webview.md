@@ -296,14 +296,15 @@ Facebook Messenger、WhatsApp Business API、Telegram、ほとんどのモバイ
 
 ## 参考文献
 
-- [Facebook Developers: Messenger Platform Webview Documentation](https://developers.facebook.com/docs/messenger-platform/webview/)
-- [Hubtype: WhatsApp Webviews Features & Benefits Guide](https://www.hubtype.com/blog/whatsapp-webviews-features-benefits-guide)
-- [Botonic: Webviews Concepts](https://botonic.io/docs/concepts/webviews)
-- [Oracle: Digital Assistant Webviews](https://docs.oracle.com/en/cloud/paas/digital-assistant/use-chatbot/webviews.html)
-- [Smartly.AI: Mobile Webview Documentation](https://docs.smartly.ai/docs/mobile-webview)
-- [Facebook Developers: Messenger Webview Height Ratios](https://developers.facebook.com/docs/messenger-platform/webview/#height)
-- [Botonic: Invoking Webview with Parameters](https://botonic.io/docs/concepts/webviews#invoking-the-webview)
-- [Botonic: Creating Webview Components](https://botonic.io/docs/concepts/webviews#creating-a-webview-component)
-- [BotStar: Webview Configuration](https://docs.botstar.com/docs/en/display-web-inside-chatbots-using-webview/#how-to-use-botstar-webview)
-- [BotStar: Webview YouTube Example](https://docs.botstar.com/docs/en/display-web-inside-chatbots-using-webview/#webview-example-as-a-youtube-video)
-- [W3C: Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)
+
+1. Facebook Developers. (n.d.). Messenger Platform Webview Documentation. Facebook Developers.
+2. Hubtype. (n.d.). WhatsApp Webviews Features & Benefits Guide. Hubtype Blog.
+3. Botonic. (n.d.). Webviews Concepts. Botonic Documentation.
+4. Oracle. (n.d.). Digital Assistant Webviews. Oracle Cloud Documentation.
+5. Smartly.AI. (n.d.). Mobile Webview Documentation. Smartly.AI Documentation.
+6. Facebook Developers. (n.d.). Messenger Webview Height Ratios. Facebook Developers.
+7. Botonic. (n.d.). Invoking Webview with Parameters. Botonic Documentation.
+8. Botonic. (n.d.). Creating Webview Components. Botonic Documentation.
+9. BotStar. (n.d.). Webview Configuration. BotStar Documentation.
+10. BotStar. (n.d.). Webview YouTube Example. BotStar Documentation.
+11. W3C. (n.d.). Web Content Accessibility Guidelines (WCAG). W3C Standards.

@@ -248,15 +248,16 @@ Use HTTP Request Node in LLM workflow. Attach node, configure optimized response
 
 ## References
 
-- [n8n HTTP Request Node Documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
-- [Mastering the n8n HTTP Request Node](https://automategeniushub.com/mastering-the-n8n-http-request-node/)
-- [Node-RED HTTP Request Node](https://flowfuse.com/node-red/core-nodes/http-request/)
-- [Node-RED Securing Guide](https://nodered.org/docs/user-guide/runtime/securing-node-red)
-- [Node-RED HTTPS Configuration](https://nodered.org/docs/user-guide/runtime/securing-node-red#enabling-https-access)
-- [Node-RED Proxy Configuration](https://flowfuse.com/node-red/core-nodes/http-proxy/)
-- [Node.js HTTP Module Documentation](https://nodejs.org/api/http.html)
-- [W3Schools: Node.js HTTP Module](https://www.w3schools.com/nodejs/nodejs_http.asp)
-- [Axios Documentation](https://axios-http.com/docs/intro)
-- [Node.js Fetch API Guide](https://oxylabs.io/blog/nodejs-fetch-api)
-- [Stack Overflow: HTTP POST in Node.js](https://stackoverflow.com/questions/6158933/how-is-an-http-post-request-made-in-node-js)
-- [Postman](https://www.postman.com/)
+
+1. n8n. (n.d.). HTTP Request Node Documentation. n8n Documentation.
+2. Automate Genius Hub. (n.d.). Mastering the n8n HTTP Request Node. Automate Genius Hub Blog.
+3. FlowFuse. (n.d.). Node-RED HTTP Request Node. FlowFuse Documentation.
+4. Node-RED. (n.d.). Node-RED Securing Guide. Node-RED Documentation.
+5. Node-RED. (n.d.). Node-RED HTTPS Configuration. Node-RED Documentation.
+6. FlowFuse. (n.d.). Node-RED Proxy Configuration. FlowFuse Documentation.
+7. Node.js. (n.d.). HTTP Module Documentation. Node.js API Reference.
+8. W3Schools. (n.d.). Node.js HTTP Module. W3Schools Tutorial.
+9. Axios. (n.d.). Axios Documentation. Axios Official Documentation.
+10. Oxylabs. (n.d.). Node.js Fetch API Guide. Oxylabs Blog.
+11. Stack Overflow. (n.d.). HTTP POST in Node.js. Stack Overflow Discussion.
+12. Postman. Postman API Development Tool. URL: https://www.postman.com/

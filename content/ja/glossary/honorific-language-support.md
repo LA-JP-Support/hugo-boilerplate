@@ -471,11 +471,19 @@ A:相手のリードに従い、場面(ビジネス vs. 社交)を考慮し、�
 
 ## 参考文献
 
-- [Mastering the Art of Japanese Keigo - Nichijougo](https://nichijougo.com/a-comprehensive-guide-to-honorific-language)
-- [Mastering Honorifics: Japanese Keigo Translation Guide – OTranslator](https://otranslator.com/en/blog/japanese-translation)
-- [Ultimate Guide to Japanese Language Levels – Kylian.ai](https://www.kylian.ai/blog/en/japanese-language-levels)
-- [Busuu: Japanese Honorifics: San, Chan, Kun and Beyond](https://www.busuu.com/en/japanese/honorifics)
-- [VerbalPlanet: Introduction to Japanese Keigo](https://www.verbalplanet.com/learn-japanese/blog/japanese-keigo-honorific-language.asp)
-- [Coto Academy: Introduction to Japanese Keigo](https://cotoacademy.com/japanese-keigo/)
-- [Japanese Keigo Explained – YouTube](https://www.youtube.com/watch?v=2i5A6qU3qN8)
-- [Business Japanese: Mastering Keigo – YouTube](https://www.youtube.com/watch?v=3ScLzKZ0n7M)
+
+1. Nichijougo. (n.d.). Mastering the Art of Japanese Keigo. Nichijougo Blog.
+
+2. OTranslator. (n.d.). Mastering Honorifics: Japanese Keigo Translation Guide. OTranslator Blog.
+
+3. Kylian.ai. (n.d.). Ultimate Guide to Japanese Language Levels. Kylian.ai Blog.
+
+4. Busuu. (n.d.). Japanese Honorifics: San, Chan, Kun and Beyond. Busuu Blog.
+
+5. VerbalPlanet. (n.d.). Introduction to Japanese Keigo. VerbalPlanet Blog.
+
+6. Coto Academy. (n.d.). Introduction to Japanese Keigo. Coto Academy Blog.
+
+7. Unknown. (n.d.). Japanese Keigo Explained. YouTube.
+
+8. Unknown. (n.d.). Business Japanese: Mastering Keigo. YouTube.

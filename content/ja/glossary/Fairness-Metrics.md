@@ -175,16 +175,29 @@ AIシステムが採用、医療、法執行、金融、教育における重要
 
 ## 参考文献
 
-- [Shelf.io: Fairness Metrics in AI](https://shelf.io/blog/fairness-metrics-in-ai/)
-- [Forbes: AI & Fairness Metrics](https://councils.forbes.com/blog/ai-and-fairness-metrics)
-- [Google ML Fairness Guide](https://developers.google.com/machine-learning/crash-course/fairness/evaluating-for-bias)
-- [AI Evaluation Metrics – Bias & Fairness](https://www.francescatabor.com/articles/2025/7/10/ai-evaluation-metrics-bias-amp-fairness)
-- [Fairlearn Documentation](https://fairlearn.org/)
-- [AIF360 Documentation](https://aif360.res.ibm.com/)
-- [EU AI Act Summary](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence)
-- [Fair Credit Reporting Act](https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act)
-- [Equal Credit Opportunity Act](https://www.consumerfinance.gov/compliance/compliance-resources/other-applicable-requirements/equal-credit-opportunity-act/)
-- [GDPR](https://gdpr.eu/)
-- [Algorithmic Accountability Act](https://www.congress.gov/bill/117th-congress/house-bill/6580/text)
-- [YouTube: ML Fairness (Google Crash Course)](https://www.youtube.com/watch?v=59bMh59JQDo)
-- [YouTube: Responsible AI—Fairness and Bias](https://www.youtube.com/watch?v=F03lK5q6ohM)
+
+1. Shelf.io. (n.d.). Fairness Metrics in AI. Shelf.io Blog. URL: https://shelf.io/blog/fairness-metrics-in-ai/
+
+2. Forbes. (n.d.). AI & Fairness Metrics. Forbes Councils Blog. URL: https://councils.forbes.com/blog/ai-and-fairness-metrics
+
+3. Google. (n.d.). ML Fairness Guide. Google Developers. URL: https://developers.google.com/machine-learning/crash-course/fairness/evaluating-for-bias
+
+4. Tabor, F. (2025). AI Evaluation Metrics – Bias & Fairness. Personal Blog. URL: https://www.francescatabor.com/articles/2025/7/10/ai-evaluation-metrics-bias-amp-fairness
+
+5. Fairlearn. (n.d.). Fairlearn Documentation. URL: https://fairlearn.org/
+
+6. IBM. (n.d.). AIF360 Documentation. URL: https://aif360.res.ibm.com/
+
+7. European Parliament. (2023). EU AI Act Summary. EU Topics. URL: https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence
+
+8. Federal Trade Commission. (n.d.). Fair Credit Reporting Act. Legal Library. URL: https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act
+
+9. Consumer Financial Protection Bureau. (n.d.). Equal Credit Opportunity Act. Compliance Resources. URL: https://www.consumerfinance.gov/compliance/compliance-resources/other-applicable-requirements/equal-credit-opportunity-act/
+
+10. European Union. (n.d.). GDPR. URL: https://gdpr.eu/
+
+11. U.S. Congress. (n.d.). Algorithmic Accountability Act. Bill Text. URL: https://www.congress.gov/bill/117th-congress/house-bill/6580/text
+
+12. Google. (n.d.). ML Fairness (Google Crash Course). YouTube Video. URL: https://www.youtube.com/watch?v=59bMh59JQDo
+
+13. (n.d.). Responsible AI—Fairness and Bias. YouTube Video. URL: https://www.youtube.com/watch?v=F03lK5q6ohM

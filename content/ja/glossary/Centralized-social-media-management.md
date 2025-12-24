@@ -149,22 +149,23 @@ CRM、ヘルプデスク、マーケティングオートメーション、分�
 
 ## 参考文献
 
-- [Brandwatch: Social Media Management Glossary](https://social-media-management-help.brandwatch.com/hc/en-us/articles/4499768825629-Glossary-of-Terms)
-- [Yellowhead: Social Media Marketing Terms](https://www.yellowhead.com/blog/social-media-terms/)
-- [Sprout Social: Social Media Management Guide](https://sproutsocial.com/insights/social-media-management/)
-- [Hootsuite: Social Media Glossary](https://blog.hootsuite.com/social-media-glossary-definitions/)
-- [Oktopost: Social Media Approval Workflow](https://www.oktopost.com/blog/social-media-approval-workflow/)
-- [Brandle: Centralized Social Media Governance](https://www.brandle.net/blog/why-centralized-social-media-governance-works-best)
-- [Sprout Social: Smart Inbox](https://sproutsocial.com/features/smart-inbox/)
-- [Hootsuite: Unified Social Inbox](https://help.hootsuite.com/hc/en-us/articles/1260804305430-Manage-your-messages-in-Inbox)
-- [Hootsuite: Team Roles & Permissions](https://help.hootsuite.com/hc/en-us/articles/1260804263789-Add-and-manage-team-members)
-- [Sprout Social: User Roles](https://support.sproutsocial.com/hc/en-us/articles/115001575606-Understanding-User-Roles)
-- [Sprout Social: Asset Library](https://sproutsocial.com/features/asset-library/)
-- [Hootsuite: Content Library](https://help.hootsuite.com/hc/en-us/articles/1260804305369-Content-Library)
-- [Hootsuite: Chatbot](https://hootsuite.com/platform/chatbots)
-- [Sprout Social: Bot Builder](https://sproutsocial.com/features/bot-builder/)
-- [Brandwatch: Consumer Intelligence](https://www.brandwatch.com/consumer-intelligence/)
-- [Sprout Social: Social Listening](https://sproutsocial.com/features/social-listening/)
-- [Hootsuite: Social Media Policy Guide](https://blog.hootsuite.com/social-media-policy-for-employees/)
-- [Sprout Social: Crisis Management](https://sproutsocial.com/insights/social-media-crisis-management/)
-- [Brandwatch: Share of Voice](https://www.brandwatch.com/blog/share-of-voice/)
+
+1. Brandwatch. (n.d.). Social Media Management Glossary. Brandwatch Help Center.
+2. Yellowhead. (n.d.). Social Media Marketing Terms. Yellowhead Blog.
+3. Sprout Social. (n.d.). Social Media Management Guide. Sprout Social Insights.
+4. Hootsuite. (n.d.). Social Media Glossary. Hootsuite Blog.
+5. Oktopost. (n.d.). Social Media Approval Workflow. Oktopost Blog.
+6. Brandle. (n.d.). Centralized Social Media Governance. Brandle Blog.
+7. Sprout Social. Smart Inbox. URL: https://sproutsocial.com/features/smart-inbox/
+8. Hootsuite. Unified Social Inbox. URL: https://help.hootsuite.com/hc/en-us/articles/1260804305430-Manage-your-messages-in-Inbox
+9. Hootsuite. Team Roles & Permissions. URL: https://help.hootsuite.com/hc/en-us/articles/1260804263789-Add-and-manage-team-members
+10. Sprout Social. User Roles. URL: https://support.sproutsocial.com/hc/en-us/articles/115001575606-Understanding-User-Roles
+11. Sprout Social. Asset Library. URL: https://sproutsocial.com/features/asset-library/
+12. Hootsuite. Content Library. URL: https://help.hootsocial.com/hc/en-us/articles/1260804305369-Content-Library
+13. Hootsuite. Chatbot. URL: https://hootsuite.com/platform/chatbots
+14. Sprout Social. Bot Builder. URL: https://sproutsocial.com/features/bot-builder/
+15. Brandwatch. Consumer Intelligence. URL: https://www.brandwatch.com/consumer-intelligence/
+16. Sprout Social. Social Listening. URL: https://sproutsocial.com/features/social-listening/
+17. Hootsuite. (n.d.). Social Media Policy Guide. Hootsuite Blog.
+18. Sprout Social. (n.d.). Crisis Management. Sprout Social Insights.
+19. Brandwatch. (n.d.). Share of Voice. Brandwatch Blog.

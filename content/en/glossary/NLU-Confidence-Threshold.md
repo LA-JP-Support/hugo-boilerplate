@@ -248,8 +248,13 @@ Recommends dataset balance and real-world testing for thresholds.
 
 ## References
 
-- [Amazon Lex: Using Intent Confidence Scores](https://docs.aws.amazon.com/lexv2/latest/dg/using-intent-confidence-scores.html)
-- [Genesys: Best Practices for Natural Language Understanding](https://help.mypurecloud.com/articles/best-practices-to-build-and-test-your-natural-language-understanding/)
-- [Genesys: Set Bot Confidence Thresholds](https://www.genesys.com/blog/post/set-bot-confidence-thresholds)
-- [Voiceflow: 5 Principles for NLU Design](https://www.voiceflow.com/pathways/5-principles-for-good-natural-language-understanding-nlu-design)
-- [ServiceNow Community: NLU Confidence Threshold](https://www.servicenow.com/community/developer-forum/how-is-the-nlu-confidence-threshold-calculated/m-p/2142617#M799543)
+
+1. Amazon Web Services. (n.d.). Amazon Lex: Using Intent Confidence Scores. AWS Documentation.
+
+2. Genesys. (n.d.). Best Practices for Natural Language Understanding. Genesys Help Center.
+
+3. Genesys. (n.d.). Set Bot Confidence Thresholds. Genesys Blog.
+
+4. Voiceflow. (n.d.). 5 Principles for NLU Design. Voiceflow Pathways.
+
+5. ServiceNow. (n.d.). NLU Confidence Threshold. ServiceNow Community Forum.

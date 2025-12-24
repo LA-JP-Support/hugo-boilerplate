@@ -559,11 +559,19 @@ A: 一般的にはそうですが、改善は段階的です。より良い訓�
 
 ## 参考文献
 
-- [オックスフォード大学:意味的エントロピーによるハルシネーション検出](https://www.ox.ac.uk/news/2024-06-20-major-research-hallucinating-generative-models-advances-reliability-artificial)
-- [CASMIノースウェスタン:ハルシネーション—バグではなく機能](https://casmi.northwestern.edu/news/articles/2024/the-hallucination-problem-a-feature-not-a-bug.html)
-- [Google Cloud:AIハルシネーションとは?](https://cloud.google.com/discover/what-are-ai-hallucinations)
-- [Wikipedia:ハルシネーション(人工知能)](https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence))
-- [Nature:AIハルシネーション分類](https://www.nature.com/articles/s41599-024-03811-x)
-- [TechCrunch:ハルシネーション不可避性に関するコーネル研究](https://techcrunch.com/2024/08/14/study-suggests-that-even-the-best-ai-models-hallucinate-a-bunch/)
-- [RSNA:医療AIにおけるリスク](https://pubs.rsna.org/doi/full/10.1148/radiol.230163)
-- [Business Standard:捏造された法的先例事件](https://www.business-standard.com/world-news/us-lawyer-in-legal-trouble-after-citing-cases-invented-by-chatgpt-123052800935_1.html)
+
+1. オックスフォード大学. (2024). 意味的エントロピーによるハルシネーション検出. オックスフォード大学ニュース.
+
+2. CASMI ノースウェスタン. (2024). ハルシネーション—バグではなく機能. CASMIニュース記事.
+
+3. Google Cloud. (2024). AIハルシネーションとは?. Google Cloud Discover.
+
+4. Wikipedia. (n.d.). ハルシネーション(人工知能). Wikipedia.
+
+5. Nature. (2024). AIハルシネーション分類. Nature.
+
+6. TechCrunch. (2024). ハルシネーション不可避性に関するコーネル研究. TechCrunch.
+
+7. RSNA. (n.d.). 医療AIにおけるリスク. RSNA Publications.
+
+8. Business Standard. (2023). 捏造された法的先例事件. Business Standard.

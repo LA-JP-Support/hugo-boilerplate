@@ -274,13 +274,23 @@ Requires partnerships among content providers, privacy advocates, and domain exp
 
 ## References
 
-- [Turnitin: Understanding False Positives in AI Writing Detection](https://www.turnitin.com/blog/understanding-false-positives-within-our-ai-writing-detection-capabilities)
-- [Gaslighting Check: False Positives in AI – Emotional Fallout](https://www.gaslightingcheck.com/blog/false-positives-ai-emotional-fallout)
-- [Originality.AI: AI Content Detector False Positives](https://originality.ai/blog/ai-content-detector-false-positives)
-- [Stanford HAI: AI Detectors Biased Against Non-Native English Writers](https://hai.stanford.edu/news/ai-detectors-biased-against-non-native-english-writers)
-- [Protecto: The Case of False Positives and Negatives in AI Privacy Tools](https://www.protecto.ai/blog/false-positives-and-negatives-in-ai-privacy-tools/)
-- [Patterns: GPT Detectors are Biased against Non-Native English Writers](https://www.cell.com/patterns/fulltext/S2666-3899(23)00130-7)
-- [Originality.AI: AI Detection Accuracy Study](https://originality.ai/blog/ai-accuracy)
-- [Washington Post: AI Content Detection Failures](https://www.washingtonpost.com/technology/2023/04/01/chatgpt-cheating-detection-turnitin/)
-- [Reddit: Falsely Accused of Using ChatGPT](https://www.reddit.com/r/GPT3/comments/10qfyly/my_professor_falsely_accused_me_of_using_chatgpt/)
-- [Euronews: Why Do AI Chatbots Show False Information?](https://www.euronews.com/next/2024/05/31/hallucinations-why-do-ai-chatbots-sometimes-show-false-or-misleading-information)
+
+1. Turnitin. (n.d.). Understanding False Positives in AI Writing Detection. Turnitin Blog.
+
+2. Gaslighting Check. (n.d.). Gaslighting Check: False Positives in AI – Emotional Fallout. Gaslighting Check Blog.
+
+3. Originality.AI. (n.d.). AI Content Detector False Positives. Originality.AI Blog.
+
+4. Stanford HAI. (2023). AI Detectors Biased Against Non-Native English Writers. Stanford HAI News.
+
+5. Protecto. (n.d.). The Case of False Positives and Negatives in AI Privacy Tools. Protecto Blog.
+
+6. Patterns. (2023). GPT Detectors are Biased against Non-Native English Writers. Cell Press Patterns.
+
+7. Originality.AI. (n.d.). AI Detection Accuracy Study. Originality.AI Blog.
+
+8. Washington Post. (2023). AI Content Detection Failures. Washington Post Technology.
+
+9. Reddit. (2023). Falsely Accused of Using ChatGPT. Reddit r/GPT3.
+
+10. Euronews. (2024). Why Do AI Chatbots Show False Information?. Euronews Next.

@@ -215,10 +215,17 @@ Evaluating consistency is a nuanced, evolving field. As models grow in size, new
 
 ## References
 
-- [Patwardhan et al.: Automated Consistency Analysis of LLMs (arXiv:2502.07036)](https://arxiv.org/abs/2502.07036)
-- [Stanford HAI: Can AI Hold Consistent Values?](https://hai.stanford.edu/news/can-ai-hold-consistent-values-stanford-researchers-probe-llm-consistency-and-bias)
-- [Evidently AI: A complete guide to RAG evaluation](https://www.evidentlyai.com/llm-guide/rag-evaluation)
-- [Evidently AI: RAG Testing and Evaluation](https://www.evidentlyai.com/rag-testing)
-- [Evidently AI: Open-source RAG evaluation tool](https://www.evidentlyai.com/blog/open-source-rag-evaluation-tool)
-- [Evidently AI: GitHub Repository](https://github.com/evidentlyai/evidently)
-- [Lewis et al.: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (arXiv:2005.11401)](https://arxiv.org/abs/2005.11401)
+
+1. Patwardhan, et al. (2025). Automated Consistency Analysis of LLMs. arXiv.
+
+2. Stanford HAI. (n.d.). Can AI Hold Consistent Values?. Stanford HAI News.
+
+3. Evidently AI. (n.d.). A Complete Guide to RAG Evaluation. Evidently AI Blog.
+
+4. Evidently AI. (n.d.). RAG Testing and Evaluation. Evidently AI Blog.
+
+5. Evidently AI. (n.d.). Open-source RAG Evaluation Tool. Evidently AI Blog.
+
+6. Evidently AI. GitHub Repository. URL: https://github.com/evidentlyai/evidently
+
+7. Lewis, et al. (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. arXiv.

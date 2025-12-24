@@ -428,12 +428,21 @@ $.messages[?(@.intent == 'purchase')].text
 
 ## 参考資料
 
-- [RFC 9535: JSONPath仕様](https://datatracker.ietf.org/doc/html/rfc9535)
-- [SmartBear JSONPath構文ドキュメント](https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html)
-- [Microsoft: SQL ServerのJSON Path式](https://learn.microsoft.com/en-us/sql/relational-databases/json/json-path-expressions-sql-server?view=sql-server-ver17)
-- [Postman: JSONPath変数](https://learning.postman.com/docs/writing-scripts/script-references/variables-list/)
-- [ToolsQA: REST-Assured JSONPath](https://toolsqa.com/rest-assured/jsonpath-and-query-json-using-jsonpath/)
-- [jsonpath (JavaScriptライブラリ)](https://github.com/dchester/jsonpath)
-- [jsonpath-ng (Pythonライブラリ)](https://github.com/h2non/jsonpath-ng)
-- [JsonPath (Javaライブラリ)](https://github.com/json-path/JsonPath)
-- [Flow\JSONPath (PHPライブラリ)](https://github.com/Flow-Communications/JSONPath)
+
+1. IETF. (2023). RFC 9535: JSONPath仕様. IETF RFC.
+
+2. SmartBear. (n.d.). JSONPath構文ドキュメント. SmartBear Support Documentation.
+
+3. Microsoft. (n.d.). SQL ServerのJSON Path式. Microsoft Learn.
+
+4. Postman. (n.d.). JSONPath変数. Postman Learning Center.
+
+5. ToolsQA. (n.d.). REST-Assured JSONPath. ToolsQA Tutorial.
+
+6. jsonpath. JavaScript Library. URL: https://github.com/dchester/jsonpath
+
+7. jsonpath-ng. Python Library. URL: https://github.com/h2non/jsonpath-ng
+
+8. JsonPath. Java Library. URL: https://github.com/json-path/JsonPath
+
+9. Flow\JSONPath. PHP Library. URL: https://github.com/Flow-Communications/JSONPath

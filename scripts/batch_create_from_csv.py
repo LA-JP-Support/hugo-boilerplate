@@ -19,9 +19,9 @@ load_dotenv()
 
 # 設定
 API_KEY = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("CLAUDE_API_KEY")
-MODEL = "claude-sonnet-4-20250514"
+MODEL = "claude-sonnet-4-5-20250929"
 OUTPUT_DIR = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/content/en/glossary")
-CSV_PATH = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/docs/prioritized_keywords.csv")
+DEFAULT_CSV_PATH = Path("/Users/TM-MBP1/Documents/GitHub/hugo-boilerplate/docs/prioritized_keywords.csv")
 
 def needs_article(keyword: str) -> bool:
     """冠詞が必要かを判定"""
@@ -179,7 +179,7 @@ def get_pending_keywords(csv_path: Path, output_dir: Path, limit: int = None) ->
 
 def batch_generate(keywords: list, output_dir: Path, max_workers: int = 10):
     """複数記事を並列生成"""
-    date = "2025-12-19"
+    date = "2025-12-21"
     results = []
     total_cost = 0.0
     total_time = 0.0

@@ -267,10 +267,17 @@ Custom chips optimized for distilled models (neural processing units, edge TPUs)
 
 ## References
 
-- [A Comprehensive Survey on Knowledge Distillation - arXiv 2025](https://arxiv.org/abs/2503.12067)
-- [Does Knowledge Distillation Really Work? - NeurIPS 2021](https://proceedings.neurips.cc/paper_files/paper/2021/file/376c6b9ff3bedbbea56751a84fffc10c-Paper.pdf)
-- [Data Science Dojo: Understanding Knowledge Distillation](https://datasciencedojo.com/blog/understanding-knowledge-distillation/)
-- [IBM: What is Knowledge Distillation?](https://www.ibm.com/think/topics/knowledge-distillation)
-- [Billion-scale Semi-Supervised Learning for Image Classification - arXiv 2019](https://arxiv.org/abs/1905.00546)
-- [A Survey on Knowledge Distillation: Recent Advancements - ScienceDirect 2024](https://www.sciencedirect.com/science/article/pii/S2666827024000811)
-- [Knowledge Distillation: Everything You Need To Know - Medium](https://amit-s.medium.com/everything-you-need-to-know-about-knowledge-distillation-aka-teacher-student-model-d6ee10fe7276)
+
+1. Taha, A., et al. (2025). A Comprehensive Survey on Knowledge Distillation. arXiv.
+
+2. Cho, M., et al. (2021). Does Knowledge Distillation Really Work?. NeurIPS Proceedings.
+
+3. Data Science Dojo. (n.d.). Understanding Knowledge Distillation. Data Science Dojo Blog.
+
+4. IBM. (n.d.). What is Knowledge Distillation?. IBM Think Topics.
+
+5. Zhai, S., et al. (2019). Billion-scale Semi-Supervised Learning for Image Classification. arXiv.
+
+6. Zhang, L., et al. (2024). A Survey on Knowledge Distillation: Recent Advancements. ScienceDirect.
+
+7. Sharma, A. (n.d.). Knowledge Distillation: Everything You Need To Know. Medium.

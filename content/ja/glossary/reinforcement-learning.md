@@ -496,18 +496,33 @@ A: はい、訓練後は適しています。訓練は計算集約的ですが�
 
 ## 参考文献
 
-- [Sutton & Barto: Reinforcement Learning: An Introduction (2nd Edition)](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf)
-- [Wikipedia: Reinforcement Learning](https://en.wikipedia.org/wiki/Reinforcement_learning)
-- [GeeksforGeeks: What is Reinforcement Learning?](https://www.geeksforgeeks.org/machine-learning/what-is-reinforcement-learning/)
-- [IBM: What is Reinforcement Learning?](https://www.ibm.com/topics/reinforcement-learning)
-- [AWS: What is Reinforcement Learning?](https://aws.amazon.com/machine-learning/what-is-reinforcement-learning/)
-- [Synopsys: What is Reinforcement Learning?](https://www.synopsys.com/glossary/what-is-reinforcement-learning.html)
-- [Salesforce: What is Reinforcement Learning?](https://www.salesforce.com/blog/reinforcement-learning/)
-- [Wayve: Reinforcement Learning for Autonomous Driving](https://wayve.ai/blog/reinforcement-learning-for-autonomous-driving/)
-- [Nature: Mastering the Game of Go with Deep Neural Networks](https://www.nature.com/articles/nature16961)
-- [DeepMind: Atari Playing Agent (YouTube)](https://www.youtube.com/watch?v=V1eYniJ0Rnk)
-- [OpenAI: Spinning Up in Deep RL](https://spinningup.openai.com/)
-- [Stanford CS234: Reinforcement Learning](http://web.stanford.edu/class/cs234/)
-- [UC Berkeley CS285: Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/)
-- [GeeksforGeeks: Markov Decision Process](https://www.geeksforgeeks.org/machine-learning/markov-decision-process/)
-- [GeeksforGeeks: Q-Learning in Python](https://www.geeksforgeeks.org/machine-learning/q-learning-in-python/)
+
+1. Sutton, R. S., & Barto, A. G. (n.d.). Reinforcement Learning: An Introduction (2nd Edition). Book.
+
+2. Wikipedia. (n.d.). Reinforcement Learning. Wikipedia.
+
+3. GeeksforGeeks. (n.d.). What is Reinforcement Learning?. GeeksforGeeks.
+
+4. IBM. (n.d.). What is Reinforcement Learning?. IBM Topics.
+
+5. AWS. (n.d.). What is Reinforcement Learning?. AWS Machine Learning.
+
+6. Synopsys. (n.d.). What is Reinforcement Learning?. Synopsys Glossary.
+
+7. Salesforce. (n.d.). What is Reinforcement Learning?. Salesforce Blog.
+
+8. Wayve. (n.d.). Reinforcement Learning for Autonomous Driving. Wayve Blog.
+
+9. Silver, D., et al. (2016). Mastering the Game of Go with Deep Neural Networks. Nature.
+
+10. DeepMind. (n.d.). Atari Playing Agent. YouTube Video.
+
+11. OpenAI. (n.d.). Spinning Up in Deep RL. URL: https://spinningup.openai.com/
+
+12. Stanford University. (n.d.). CS234: Reinforcement Learning. URL: http://web.stanford.edu/class/cs234/
+
+13. UC Berkeley. (n.d.). CS285: Deep Reinforcement Learning. URL: https://rail.eecs.berkeley.edu/deeprlcourse/
+
+14. GeeksforGeeks. (n.d.). Markov Decision Process. GeeksforGeeks.
+
+15. GeeksforGeeks. (n.d.). Q-Learning in Python. GeeksforGeeks.

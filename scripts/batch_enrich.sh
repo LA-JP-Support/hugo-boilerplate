@@ -49,9 +49,9 @@ process_language() {
     echo -e "\n${GREEN}📚 Step 2: Enriching glossary files...${NC}"
     python3 scripts/enrich_glossary_blog.py "content/${lang}/glossary/" $DRY_RUN
     
-    # Step 3: Enrich blog (with tooltip conversion)
-    echo -e "\n${GREEN}📝 Step 3: Enriching blog files (converting tooltips)...${NC}"
-    python3 scripts/enrich_glossary_blog.py "content/${lang}/blog/" --convert-tooltips $DRY_RUN
+    # Step 3: Enrich blog 
+    echo -e "\n${GREEN}📝 Step 3: Enriching blog files...${NC}"
+    python3 scripts/enrich_glossary_blog.py "content/${lang}/blog/" $DRY_RUN
     
     echo -e "\n${GREEN}✅ Completed processing ${lang^^}${NC}\n"
 }

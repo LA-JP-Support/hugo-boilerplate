@@ -223,11 +223,19 @@ CSATと顧客維持率の向上。
 
 ## 参考文献
 
-- [Quickchat AI: Chatbot Analytics Guide](https://quickchat.ai/post/chatbot-analytics)
-- [Amazon Lex: Analytics Key Definitions](https://docs.aws.amazon.com/lexv2/latest/dg/analytics-key-definitions.html)
-- [CMU/Microsoft: Modeling Cost of Misunderstanding](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/mcmu.pdf)
-- [Prompts.ai: Task-Specific Chatbot Evaluation Metrics](https://www.prompts.ai/en/blog/guide-to-task-specific-chatbot-evaluation-metrics)
-- [Forbes: Chatbot Mistakes and Customer Impact](https://www.forbes.com/sites/garydrenik/2025/08/21/these-chatbot-mistakes-could-cost-you-customers/)
-- [Bridgepointe: Disadvantages of Chatbots](https://bridgepointetechnologies.com/customer-experience/disadvantages-of-chatbots/)
-- [Botsquad: Chatbot Conversation Rate Metrics](https://botsquad.ai/chatbot-conversation-rate-metrics)
-- [BBC: Air Canada Chatbot Case](https://www.bbc.com/travel/article/20240222-air-canada-chatbot-misinformation-what-travellers-should-know)
+
+1. Quickchat AI. (n.d.). Chatbot Analytics Guide. Quickchat AI Blog.
+
+2. Amazon Web Services. (n.d.). Analytics Key Definitions. AWS Lex Documentation.
+
+3. Carnegie Mellon University & Microsoft Research. (2017). Modeling Cost of Misunderstanding. Microsoft Research.
+
+4. Prompts.ai. (n.d.). Task-Specific Chatbot Evaluation Metrics. Prompts.ai Blog.
+
+5. Forbes. (2025). Chatbot Mistakes and Customer Impact. Forbes.
+
+6. Bridgepointe Technologies. (n.d.). Disadvantages of Chatbots. Bridgepointe Technologies Blog.
+
+7. Botsquad. (n.d.). Chatbot Conversation Rate Metrics. Botsquad Blog.
+
+8. BBC. (2024). Air Canada Chatbot Case. BBC Travel.

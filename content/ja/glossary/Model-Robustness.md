@@ -216,15 +216,27 @@ url: "/ja/glossary/Model-Robustness/"
 
 ## 参考文献
 
-- [arXiv: Machine Learning Robustness – A Primer](https://arxiv.org/html/2404.00897v2)
-- [Encord: Model Robustness – Building Reliable AI Models](https://encord.com/blog/model-robustness-machine-learning-strategies/)
-- [Fiddler AI: The Importance of Model Robustness](https://www.fiddler.ai/blog/expect-the-unexpected-the-importance-of-model-robustness)
-- [XenonStack: The Importance of Model Robustness](https://www.xenonstack.com/blog/model-robustness)
-- [InvisibleTech: Model Robustness Explained](https://invisibletech.ai/blog/model-robustness-explained-methods-testing-and-best-practice)
-- [VerifyWise: AI Model Robustness Lexicon](https://verifywise.ai/lexicon)
-- [Lark: Robustness Glossary](https://www.larksuite.com/en_us/topics/ai-glossary/robustness)
-- [Robustness Gym Documentation](https://robustness-gym.readthedocs.io/en/latest/)
-- [GitHub: Adversarial Robustness Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
-- [GitHub: CleverHans](https://github.com/cleverhans-lab/cleverhans)
-- [GitHub: Foolbox](https://github.com/bethgelab/foolbox)
-- [IBM: AI Fairness 360](https://aif360.mybluemix.net/)
+
+1. arXiv. (n.d.). Machine Learning Robustness – A Primer. arXiv.
+
+2. Encord. (n.d.). Model Robustness – Building Reliable AI Models. Encord Blog.
+
+3. Fiddler AI. (n.d.). The Importance of Model Robustness. Fiddler AI Blog.
+
+4. XenonStack. (n.d.). The Importance of Model Robustness. XenonStack Blog.
+
+5. InvisibleTech. (n.d.). Model Robustness Explained. InvisibleTech Blog.
+
+6. VerifyWise. (n.d.). AI Model Robustness Lexicon. VerifyWise.
+
+7. Lark. (n.d.). Robustness Glossary. Lark AI Glossary.
+
+8. Robustness Gym. Documentation. URL: https://robustness-gym.readthedocs.io/en/latest/
+
+9. Adversarial Robustness Toolbox. Open Source Tool. URL: https://github.com/Trusted-AI/adversarial-robustness-toolbox
+
+10. CleverHans. Open Source Tool. URL: https://github.com/cleverhans-lab/cleverhans
+
+11. Foolbox. Open Source Tool. URL: https://github.com/bethgelab/foolbox
+
+12. IBM AI Fairness 360. Open Source Tool. URL: https://aif360.mybluemix.net/

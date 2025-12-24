@@ -689,13 +689,23 @@ This provides more actionable insights than a single blended rate.
 
 ## References
 
-- [SQM Group: FCR - A Comprehensive Guide](https://www.sqmgroup.com/resources/library/blog/fcr-metric-operating-philosophy)
-- [Zendesk: What is first contact resolution (FCR)?](https://www.zendesk.com/blog/first-contact-resolution-friend-foe-frenemy/)
-- [Atlassian: First Call Resolution (FCR): What it is, Why It Matters](https://www.atlassian.com/itsm/service-request-management/first-call-resolution)
-- [Sprinklr: What is first contact resolution (Formula + Best practices)](https://www.sprinklr.com/blog/first-contact-resolution/)
-- [Talkdesk: FCR – What it is and how to improve it](https://www.talkdesk.com/blog/first-contact-resolution-fcr/)
-- [Knowmax: What Is First Contact Resolution? Importance & Ways To Improve It](https://knowmax.ai/blog/first-contact-resolution/)
-- [Fullview AI: FCR Industry Benchmarks 2024](https://www.fullview.io/blog/first-call-resolution-rate-industry-standards)
-- [Salesforce: First Call Resolution: How to Measure and Tips to Improve](https://www.salesforce.com/service/contact-center/first-call-resolution/)
-- [Harvard Business Review: Kick-Ass Customer Service](https://hbr.org/2017/01/kick-ass-customer-service)
-- [Zendesk Customer Experience Trends Report 2024](https://www.zendesk.com/customer-experience-trends/)
+
+1. SQM Group. (n.d.). FCR - A Comprehensive Guide. SQM Group Blog.
+
+2. Zendesk. (n.d.). What is first contact resolution (FCR)?. Zendesk Blog.
+
+3. Atlassian. (n.d.). First Call Resolution (FCR): What it is, Why It Matters. Atlassian Blog.
+
+4. Sprinklr. (n.d.). What is first contact resolution (Formula + Best practices). Sprinklr Blog.
+
+5. Talkdesk. (n.d.). FCR – What it is and how to improve it. Talkdesk Blog.
+
+6. Knowmax. (n.d.). What Is First Contact Resolution? Importance & Ways To Improve It. Knowmax Blog.
+
+7. Fullview AI. (2024). FCR Industry Benchmarks 2024. Fullview AI Blog.
+
+8. Salesforce. (n.d.). First Call Resolution: How to Measure and Tips to Improve. Salesforce Blog.
+
+9. Harvard Business Review. (2017). Kick-Ass Customer Service. Harvard Business Review.
+
+10. Zendesk. (2024). Customer Experience Trends Report 2024. Zendesk Research.

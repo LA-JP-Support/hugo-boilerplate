@@ -280,12 +280,21 @@ EU全体の国家AIサンドボックスは、データ保護、アルゴリズ�
 
 ## 参考文献
 
-- [OECD: Regulatory Sandboxes in Artificial Intelligence (2023, PDF)](https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/07/regulatory-sandboxes-in-artificial-intelligence_a44aae4f/8f80a0e6-en.pdf)
-- [Baker McKenzie: International Guide to Regulatory Fintech Sandboxes (2021, PDF)](https://www.bakermckenzie.com/en-/media/files/insight/publications/2021/03/baker-mckenzie--a-guide-to-regulatory-fintech-sandboxes-internationally_230321.pdf)
-- [EU Parliament: Artificial Intelligence Act and Regulatory Sandboxes (PDF)](https://www.europarl.europa.eu/RegData/etudes/BRIE/2022/733544/EPRS_BRI(2022)733544_EN.pdf)
-- [OECD: Regulatory Sandboxes Can Facilitate Experimentation in AI](https://oecd.ai/en/wonk/sandboxes)
-- [UK FCA: Regulatory Sandbox](https://www.fca.org.uk/firms/innovation/regulatory-sandbox)
-- [Monetary Authority of Singapore: FinTech Regulatory Sandbox](https://www.mas.gov.sg/development/fintech/sandbox)
-- [UK Care Quality Commission: Regulatory Sandbox](https://www.cqc.org.uk/what-we-do/how-we-work-people/regulatory-sandbox)
-- [UK Civil Aviation Authority: Innovation](https://www.caa.co.uk/Our-work/Innovation/Regulatory-challenges-for-innovation-in-aviation/)
-- [State Policy Network: What is a Regulatory Sandbox?](https://spn.org/what-is-a-regulatory-sandbox/)
+
+1. OECD. (2023). Regulatory Sandboxes in Artificial Intelligence. OECD Publications.
+
+2. Baker McKenzie. (2021). International Guide to Regulatory Fintech Sandboxes. Baker McKenzie Insights.
+
+3. EU Parliament. (2022). Artificial Intelligence Act and Regulatory Sandboxes. EU Parliament Research Brief.
+
+4. OECD. (n.d.). Regulatory Sandboxes Can Facilitate Experimentation in AI. OECD AI Wonk.
+
+5. UK Financial Conduct Authority. Regulatory Sandbox. URL: https://www.fca.org.uk/firms/innovation/regulatory-sandbox
+
+6. Monetary Authority of Singapore. FinTech Regulatory Sandbox. URL: https://www.mas.gov.sg/development/fintech/sandbox
+
+7. UK Care Quality Commission. Regulatory Sandbox. URL: https://www.cqc.org.uk/what-we-do/how-we-work-people/regulatory-sandbox
+
+8. UK Civil Aviation Authority. Innovation. URL: https://www.caa.co.uk/Our-work/Innovation/Regulatory-challenges-for-innovation-in-aviation/
+
+9. State Policy Network. What is a Regulatory Sandbox?. URL: https://spn.org/what-is-a-regulatory-sandbox/

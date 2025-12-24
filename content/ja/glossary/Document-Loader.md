@@ -349,15 +349,27 @@ documents = loader.load()
 
 ## 参考文献
 
-- [LangChain Document Loaders: Complete Guide to Loading Files + Code Examples - Latenode](https://latenode.com/blog/ai-frameworks-technical-infrastructure/langchain-setup-tools-agents-memory/langchain-document-loaders-complete-guide-to-loading-files-code-examples-2025)
-- [Feeding Your LLM Right: Mastering LangChain's Document Loaders - Medium](https://medium.com/@ashutoshsharmaengg/feeding-your-llm-right-mastering-langchains-document-loaders-64ff06675c7b)
-- [LangChain Document Loaders - Official Docs](https://docs.langchain.com/oss/python/integrations/document_loaders)
-- [PyPDFLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/pypdfloader)
-- [PDFPlumberLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/pdfplumber)
-- [UnstructuredPDFLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/unstructured_file)
-- [TextLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/text)
-- [CSVLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/csv)
-- [WebBaseLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/web_base)
-- [SitemapLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/sitemap)
-- [RecursiveURLLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/recursive_url)
-- [S3DirectoryLoader - LangChain](https://docs.langchain.com/oss/python/integrations/document_loaders/aws_s3_directory)
+
+1. Latenode. (2025). LangChain Document Loaders: Complete Guide to Loading Files + Code Examples. Latenode Blog.
+
+2. Sharma, A. (n.d.). Feeding Your LLM Right: Mastering LangChain's Document Loaders. Medium.
+
+3. LangChain. (n.d.). LangChain Document Loaders. Official Documentation.
+
+4. LangChain. (n.d.). PyPDFLoader. Official Documentation.
+
+5. LangChain. (n.d.). PDFPlumberLoader. Official Documentation.
+
+6. LangChain. (n.d.). UnstructuredPDFLoader. Official Documentation.
+
+7. LangChain. (n.d.). TextLoader. Official Documentation.
+
+8. LangChain. (n.d.). CSVLoader. Official Documentation.
+
+9. LangChain. (n.d.). WebBaseLoader. Official Documentation.
+
+10. LangChain. (n.d.). SitemapLoader. Official Documentation.
+
+11. LangChain. (n.d.). RecursiveURLLoader. Official Documentation.
+
+12. LangChain. (n.d.). S3DirectoryLoader. Official Documentation.

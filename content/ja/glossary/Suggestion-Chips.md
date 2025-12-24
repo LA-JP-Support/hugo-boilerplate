@@ -272,16 +272,17 @@ A: Material Designのアクセシビリティガイドラインに従って、�
 
 ## 参考文献
 
-- [Dialogflow Rich Responses Documentation](https://developers.google.com/assistant/df-asdk/rich-responses)
-- [Material Design 3: Chips](https://m3.material.io/components/chips/guidelines)
-- [Facebook Messenger Quick Replies](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies/)
-- [Telegram Bot API: ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup)
-- [Dialogflow Fulfillment Library (Node.js)](https://github.com/dialogflow/dialogflow-fulfillment-nodejs)
-- [Activechat: Chatbot Buttons vs Quick Replies](https://activechat.ai/news/chatbot-buttons-vs-quick-replies/)
-- [Stack Overflow: Slot Filling Chatbot, Suggestion Chips in Prompts](https://stackoverflow.com/questions/48091538/slot-filling-chatbot-suggestion-chips-in-prompts)
-- [YouTube: Dialogflow Chatbot Bot Prompt Suggestion Chips](https://www.youtube.com/watch?v=SZBMD435mV0)
-- [Google Docs: Insert Smart Chips](https://support.google.com/docs/answer/10710316?hl=en)
-- [Wikipedia: Natural Language Understanding](https://en.wikipedia.org/wiki/Natural-language_understanding)
-- [Dialogflow: Slot Filling](https://cloud.google.com/dialogflow/es/docs/slots)
-- [Activechat: Privacy Policy](https://activechat.ai/privacy-policy/)
-- [Activechat: Terms of Service](https://activechat.ai/terms-of-service/)
+
+1. Google. (n.d.). Dialogflow Rich Responses Documentation. Google Developers.
+2. Google. (n.d.). Material Design 3: Chips. Material Design.
+3. Facebook. (n.d.). Facebook Messenger Quick Replies. Facebook Developers.
+4. Telegram. (n.d.). Telegram Bot API: ReplyKeyboardMarkup. Telegram Core.
+5. Dialogflow. (n.d.). Dialogflow Fulfillment Library (Node.js). GitHub.
+6. Activechat. (n.d.). Chatbot Buttons vs Quick Replies. Activechat News.
+7. Stack Overflow. (n.d.). Slot Filling Chatbot, Suggestion Chips in Prompts. Stack Overflow.
+8. YouTube. (n.d.). Dialogflow Chatbot Bot Prompt Suggestion Chips. YouTube.
+9. Google. (n.d.). Google Docs: Insert Smart Chips. Google Support.
+10. Wikipedia. (n.d.). Natural Language Understanding. Wikipedia.
+11. Google. (n.d.). Dialogflow: Slot Filling. Google Cloud.
+12. Activechat. (n.d.). Privacy Policy. Activechat.
+13. Activechat. (n.d.). Terms of Service. Activechat.

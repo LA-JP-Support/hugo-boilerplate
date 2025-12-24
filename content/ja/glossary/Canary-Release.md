@@ -222,18 +222,19 @@ Webサービス、API、集中デプロイメントを持つクラウドネイ�
 
 ## 参考文献
 
-- [Martin Fowler: Canary Release](https://martinfowler.com/bliki/CanaryRelease.html)
-- [Martin Fowler: Blue-Green Deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html)
-- [Martin Fowler: Dark Launching](https://martinfowler.com/bliki/DarkLaunching.html)
-- [Martin Fowler: Parallel Change (Expand-Contract)](https://martinfowler.com/bliki/ParallelChange.html)
-- [Google Cloud: Use a Canary Deployment Strategy](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary)
-- [Google Cloud: Canary Deployments with Kubernetes](https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary/gke/service-networking)
-- [Gravitee: Comprehensive Guide to Canary Releases](https://www.gravitee.io/blog/comprehensive-guide-to-canary-releases)
-- [LaunchDarkly: What Is a Canary Release?](https://launchdarkly.com/blog/what-is-a-canary-release/)
-- [Semaphore: What Is Canary Deployment?](https://semaphore.io/blog/what-is-canary-deployment)
-- [Harness: What is a Canary Deployment?](https://www.harness.io/harness-devops-academy/what-is-a-canary-deployment)
-- [Netflix: Automated Canary Analysis with Kayenta](https://medium.com/netflix-techblog/automated-canary-analysis-at-netflix-with-kayenta-3260bc7acc69)
-- [IMVU: Continuous Deployment QA](http://engineering.imvu.com/2010/04/09/imvus-approach-to-integrating-quality-assurance-with-continuous-deployment/)
-- [AWS CodeDeploy: Rolling Deployment](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-type-rolling.html)
-- [Wikipedia: Feature Toggle](https://en.wikipedia.org/wiki/Feature_toggle)
-- [Wikipedia: A/B Testing](https://en.wikipedia.org/wiki/A/B_testing)
+
+1. Fowler, M. (n.d.). Canary Release. Martin Fowler Blog.
+2. Fowler, M. (n.d.). Blue-Green Deployment. Martin Fowler Blog.
+3. Fowler, M. (n.d.). Dark Launching. Martin Fowler Blog.
+4. Fowler, M. (n.d.). Parallel Change (Expand-Contract). Martin Fowler Blog.
+5. Google Cloud. (n.d.). Use a Canary Deployment Strategy. Google Cloud Documentation.
+6. Google Cloud. (n.d.). Canary Deployments with Kubernetes. Google Cloud Documentation.
+7. Gravitee. (n.d.). Comprehensive Guide to Canary Releases. Gravitee Blog.
+8. LaunchDarkly. (n.d.). What Is a Canary Release?. LaunchDarkly Blog.
+9. Semaphore. (n.d.). What Is Canary Deployment?. Semaphore Blog.
+10. Harness. (n.d.). What is a Canary Deployment?. Harness DevOps Academy.
+11. Netflix. (n.d.). Automated Canary Analysis with Kayenta. Netflix Tech Blog.
+12. IMVU. (2010). Continuous Deployment QA. IMVU Engineering Blog.
+13. AWS. (n.d.). Rolling Deployment. AWS CodeDeploy Documentation.
+14. Wikipedia. (n.d.). Feature Toggle. Wikipedia.
+15. Wikipedia. (n.d.). A/B Testing. Wikipedia.

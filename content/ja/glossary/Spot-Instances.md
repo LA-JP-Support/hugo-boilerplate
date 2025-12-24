@@ -228,34 +228,35 @@ A: いいえ。プロバイダーはスポットインスタンスの稼働時�
 
 ## 参考文献
 
-- [AWS Spot Instances Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
-- [AWS EC2 Spot Pricing](https://aws.amazon.com/ec2/spot/pricing/)
-- [AWS Spot Interruptions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html)
-- [AWS Instance Rebalance Recommendations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html#instance-rebalance-recommendations)
-- [AWS Spot Use Cases](https://aws.amazon.com/ec2/spot/use-cases/)
-- [AWS Spot HPC Use Case](https://aws.amazon.com/ec2/spot/use-cases/hpc/)
-- [AWS Billing & Purchasing Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-purchasing-options.html)
-- [AWS Spot Price History](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances-history.html)
-- [AWS Spot Instance Advisor](https://aws.amazon.com/ec2/spot/instance-advisor/)
-- [AWS EC2 Spot Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Fleets.html)
-- [AWS Spot Requests](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html)
-- [AWS Spot Savings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-savings.html)
-- [AWS Billing for Interrupted Spot Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-for-interrupted-spot-instances.html)
-- [AWS Spot Best Practices](https://aws.amazon.com/blogs/compute/best-practices-to-optimize-your-amazon-ec2-spot-instances-usage/)
-- [AWS Spot FAQ](https://aws.amazon.com/ec2/spot/faqs/)
-- [Google Cloud Spot VMs](https://cloud.google.com/compute/docs/instances/spot)
-- [Google Cloud Spot Preemption](https://cloud.google.com/compute/docs/instances/spot#preemption)
-- [Google Cloud Pricing](https://cloud.google.com/compute/pricing)
-- [Azure Spot Virtual Machines](https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms)
-- [Azure Spot Pricing](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/spot/)
-- [Spot.io: Azure Spot VMs Guide](https://spot.io/resources/azure-pricing/the-complete-guide/what-are-azure-spot-virtual-machines/)
-- [Spot.io: Spot vs On-Demand](https://spot.io/resources/spot-instances/spot-instances-vs-on-demand-instances-pros-and-cons/)
-- [Spot.io: Provider Comparison](https://spot.io/resources/spot-instances/spot-instances-aws-azure-google-cloud/)
-- [Spot.io: Suitable Use Cases](https://spot.io/resources/spot-instances/spot-instances-aws-azure-google-cloud/#Suitable-Use-Cases-for-Spot-Instances)
-- [Spot.io: Risks & Strategies](https://spot.io/resources/spot-instances/spot-instances-aws-azure-google-cloud/#Strategies-to-Optimize-the-Use-of-Spot-Instances)
-- [Spot.io Ultimate Guide](https://spot.io/resources/spot-instances/spot-instances-aws-azure-google-cloud/)
-- [Spot.io Eco](https://spot.io/products/eco/)
-- [CloudZero Spot Instances Guide](https://www.cloudzero.com/blog/spot-instances/)
-- [Infracost Spot Instances Glossary](https://www.infracost.io/glossary/spot-instances/)
-- [Cast AI Spot Guide](https://cast.ai/blog/reduce-cloud-costs-with-spot-instances/)
-- [Milvus AI Quick Reference: Spot Instances](https://milvus.io/ai-quick-reference/what-are-spot-instances-in-cloud-computing)
+
+1. Amazon Web Services (AWS). (n.d.). AWS Spot Instances Documentation. AWS EC2 User Guide.
+2. Amazon Web Services (AWS). (n.d.). AWS EC2 Spot Pricing. AWS Pricing.
+3. Amazon Web Services (AWS). (n.d.). AWS Spot Interruptions. AWS EC2 User Guide.
+4. Amazon Web Services (AWS). (n.d.). AWS Instance Rebalance Recommendations. AWS EC2 User Guide.
+5. Amazon Web Services (AWS). (n.d.). AWS Spot Use Cases. AWS Website.
+6. Amazon Web Services (AWS). (n.d.). AWS Spot HPC Use Case. AWS Website.
+7. Amazon Web Services (AWS). (n.d.). AWS Billing & Purchasing Options. AWS EC2 User Guide.
+8. Amazon Web Services (AWS). (n.d.). AWS Spot Price History. AWS EC2 User Guide.
+9. Amazon Web Services (AWS). (n.d.). AWS Spot Instance Advisor. AWS Website.
+10. Amazon Web Services (AWS). (n.d.). AWS EC2 Spot Fleet. AWS EC2 User Guide.
+11. Amazon Web Services (AWS). (n.d.). AWS Spot Requests. AWS EC2 User Guide.
+12. Amazon Web Services (AWS). (n.d.). AWS Spot Savings. AWS EC2 User Guide.
+13. Amazon Web Services (AWS). (n.d.). AWS Billing for Interrupted Spot Instances. AWS EC2 User Guide.
+14. Amazon Web Services (AWS). (n.d.). AWS Spot Best Practices. AWS Compute Blog.
+15. Amazon Web Services (AWS). (n.d.). AWS Spot FAQ. AWS Website.
+16. Google Cloud. (n.d.). Google Cloud Spot VMs. Google Cloud Documentation.
+17. Google Cloud. (n.d.). Google Cloud Spot Preemption. Google Cloud Documentation.
+18. Google Cloud. (n.d.). Google Cloud Pricing. Google Cloud Website.
+19. Microsoft. (n.d.). Azure Spot Virtual Machines. Microsoft Learn.
+20. Microsoft. (n.d.). Azure Spot Pricing. Azure Website.
+21. Spot.io. (n.d.). Azure Spot VMs Guide. Spot.io Resources.
+22. Spot.io. (n.d.). Spot vs On-Demand. Spot.io Resources.
+23. Spot.io. (n.d.). Provider Comparison. Spot.io Resources.
+24. Spot.io. (n.d.). Suitable Use Cases. Spot.io Resources.
+25. Spot.io. (n.d.). Risks & Strategies. Spot.io Resources.
+26. Spot.io. (n.d.). Ultimate Guide. Spot.io Resources.
+27. Spot.io. (n.d.). Spot.io Eco. Spot.io Products.
+28. CloudZero. (n.d.). Spot Instances Guide. CloudZero Blog.
+29. Infracost. (n.d.). Spot Instances Glossary. Infracost Website.
+30. Cast AI. (n.d.). Spot Guide. Cast AI Blog.
+31. Milvus. (n.d.). AI Quick Reference: Spot Instances. Milvus AI Reference.

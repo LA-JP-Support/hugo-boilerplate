@@ -208,22 +208,23 @@ Prominent for a single primary action.
 
 ## References
 
-- [Interaction Design Foundation: Hamburger Menu UX](https://www.interaction-design.org/literature/article/hamburger-menu-ux)
-- [NNG: The Hamburger-Menu Icon Today](https://www.nngroup.com/articles/hamburger-menu-icon-recognizability/)
-- [Justinmind: Guide to Hamburger Menu Design](https://www.justinmind.com/ui-design/hamburger-menu)
-- [HubSpot: What is a Hamburger Button?](https://blog.hubspot.com/website/hamburger-button)
-- [TechTarget: Hamburger Icon Definition](https://www.techtarget.com/whatis/definition/hamburger-icon-slide-drawer-navigation)
-- [NNG YouTube: Hamburger Menu Icon Update](https://www.youtube.com/watch?v=1au4Gff9cSo)
-- [NNG: Hidden Navigation Hurts UX Metrics](https://www.nngroup.com/articles/hamburger-menus/)
-- [Justinmind: Navigation Design Patterns](https://www.justinmind.com/blog/navigation-design-almost-everything-you-need-to-know/)
-- [Netwizard: Hamburger Menu Pros and Cons](https://netwizarddesign.com.au/the-three-line-menu-option-called-hamburger-menu-what-are-the-pros-and-cons/)
-- [UserWay: Website Navigation Best Practices](https://userway.org/blog/website-navigation/)
-- [UXDesign.cc: Create an Accessible Hamburger Menu](https://uxdesign.cc/create-an-accessible-hamburger-menu-869b0301cfd7)
-- [Medium: A Conversation with Norm Cox](https://medium.com/readme-mic/a-conversation-with-norm-cox-creator-of-the-hamburger-menu-c913daea5f9e)
-- [Interaction Design Foundation: Progressive Disclosure](https://www.interaction-design.org/literature/topics/progressive-disclosure)
-- [NNG: Interaction Cost Definition](https://www.nngroup.com/articles/interaction-cost-definition/)
-- [CodePen Example](https://codepen.io/Danilo06/pen/PoNNvGm)
-- [Squarespace](https://www.squarespace.com/)
-- [HubSpot CMS](https://www.hubspot.com/products/cms)
-- [Material UI AppBar](https://mui.com/components/app-bar/)
-- [Bootstrap Navbar](https://getbootstrap.com/docs/5.0/components/navbar/)
+
+1. Interaction Design Foundation. (n.d.). Hamburger Menu UX. Interaction Design Foundation.
+2. Nielsen Norman Group (NNG). (n.d.). The Hamburger-Menu Icon Today. Nielsen Norman Group.
+3. Justinmind. (n.d.). Guide to Hamburger Menu Design. Justinmind.
+4. HubSpot. (n.d.). What is a Hamburger Button?. HubSpot Blog.
+5. TechTarget. (n.d.). Hamburger Icon Definition. TechTarget.
+6. Nielsen Norman Group (NNG). (n.d.). Hamburger Menu Icon Update. YouTube.
+7. Nielsen Norman Group (NNG). (n.d.). Hidden Navigation Hurts UX Metrics. Nielsen Norman Group.
+8. Justinmind. (n.d.). Navigation Design Patterns. Justinmind Blog.
+9. Netwizard. (n.d.). Hamburger Menu Pros and Cons. Netwizard Design.
+10. UserWay. (n.d.). Website Navigation Best Practices. UserWay.
+11. UXDesign.cc. (n.d.). Create an Accessible Hamburger Menu. UXDesign.cc.
+12. Medium. (n.d.). A Conversation with Norm Cox. Medium.
+13. Interaction Design Foundation. (n.d.). Progressive Disclosure. Interaction Design Foundation.
+14. Nielsen Norman Group (NNG). (n.d.). Interaction Cost Definition. Nielsen Norman Group.
+15. CodePen. Hamburger Menu Example. URL: https://codepen.io/Danilo06/pen/PoNNvGm
+16. Squarespace. Website Builder Platform. URL: https://www.squarespace.com/
+17. HubSpot CMS. Content Management System. URL: https://www.hubspot.com/products/cms
+18. Material UI AppBar. UI Component Library. URL: https://mui.com/components/app-bar/
+19. Bootstrap Navbar. UI Component Library. URL: https://getbootstrap.com/docs/5.0/components/navbar/

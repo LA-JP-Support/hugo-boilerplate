@@ -184,20 +184,37 @@ Adversarial Attackは、AIシステムの信頼性と信用性を損なう可能
 
 ## 参考文献
 
-- [Sysdig: Adversarial AI – Understanding and Mitigating the Threat](https://www.sysdig.com/learn-cloud-native/adversarial-ai-understanding-and-mitigating-the-threat)
-- [Mindgard: 6 Key Adversarial Attacks and Their Consequences](https://mindgard.ai/blog/ai-under-attack-six-key-adversarial-attacks-and-their-consequences)
-- [CrowdStrike: Adversarial AI & Machine Learning](https://www.crowdstrike.com/en-us/cybersecurity-101/artificial-intelligence/adversarial-ai-and-machine-learning/)
-- [Palo Alto Networks: What Are Adversarial AI Attacks on Machine Learning?](https://www.paloaltonetworks.com/cyberpedia/what-are-adversarial-attacks-on-AI-Machine-Learning)
-- [YouTube: Stopping AI-Powered Adversaries](https://www.youtube.com/watch?v=5Oe0E0l6W5k)
-- [DeepFool Paper](https://arxiv.org/abs/1511.04599)
-- [PLeak Attack](https://arxiv.org/abs/2405.06823)
-- [Crescendo Jailbreak](https://arxiv.org/abs/2404.01833)
-- [Label-Only Model Inversion](https://arxiv.org/abs/2310.19342)
-- [Label-Only Membership Inference](https://arxiv.org/abs/2007.14321)
-- [DeepSniffer](https://dl.acm.org/doi/10.1145/3373376.3378460)
-- [The Guardian: Microsoft Tay Chatbot](https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter)
-- [Forbes: Tesla Autopilot](https://www.forbes.com/sites/thomasbrewster/2019/04/01/hackers-use-little-stickers-to-trick-tesla-autopilot-into-the-wrong-lane/)
-- [Ars Technica: LAION-5B Dataset](https://arstechnica.com/information-technology/2022/09/artist-finds-private-medical-record-photos-in-popular-ai-training-data-set/)
-- [Business Insider: Chevrolet Chatbot Incident](https://www.businessinsider.com/car-dealership-chevrolet-chatbot-chatgpt-pranks-chevy-2023-12)
-- [CrowdStrike: ML Efficacy Against Adversarial Samples](https://www.crowdstrike.com/en-us/blog/how-crowdstrike-boosts-machine-learning-efficacy-against-adversarial-samples/)
-- [Wikipedia: Differential Privacy](https://en.wikipedia.org/wiki/Differential_privacy)
+
+1. Sysdig. (n.d.). Adversarial AI – Understanding and Mitigating the Threat. Sysdig Learn Cloud Native.
+
+2. Mindgard. (n.d.). 6 Key Adversarial Attacks and Their Consequences. Mindgard Blog.
+
+3. CrowdStrike. (n.d.). Adversarial AI & Machine Learning. CrowdStrike Cybersecurity 101.
+
+4. Palo Alto Networks. (n.d.). What Are Adversarial AI Attacks on Machine Learning?. Palo Alto Networks Cyberpedia.
+
+5. YouTube. (n.d.). Stopping AI-Powered Adversaries. YouTube Video.
+
+6. DeepFool. (2015). DeepFool Paper. arXiv.
+
+7. PLeak Attack. (2024). PLeak Attack. arXiv.
+
+8. Crescendo Jailbreak. (2024). Crescendo Jailbreak. arXiv.
+
+9. Label-Only Model Inversion. (2023). Label-Only Model Inversion. arXiv.
+
+10. Label-Only Membership Inference. (2020). Label-Only Membership Inference. arXiv.
+
+11. DeepSniffer. (2020). DeepSniffer. ACM Digital Library.
+
+12. The Guardian. (2016). Microsoft Tay Chatbot. The Guardian.
+
+13. Forbes. (2019). Tesla Autopilot. Forbes.
+
+14. Ars Technica. (2022). LAION-5B Dataset. Ars Technica.
+
+15. Business Insider. (2023). Chevrolet Chatbot Incident. Business Insider.
+
+16. CrowdStrike. (n.d.). ML Efficacy Against Adversarial Samples. CrowdStrike Blog.
+
+17. Wikipedia. (n.d.). Differential Privacy. Wikipedia.

@@ -758,13 +758,23 @@ Functional escalation transfers cases laterally to different specialties or depa
 
 ## References
 
-- [Twig AI: Guide to Using AI for Support Escalation Management](https://www.twig.so/blog/ai-support-escalation-management-guide)
-- [Social Intents: Chatbot Escalation – How and When to Do It](https://help.socialintents.com/article/228-chatbot-escalation-how-and-when-to-do-it)
-- [Cuppa: Escalation Management in Customer Service – Best Practices for Success](https://www.cuppa.so/post/escalation-management-in-customer-service-best-practices-for-success)
-- [Khoros: 8 Best Practices for Customer Escalation Management](https://khoros.com/blog/customer-escalation)
-- [PartnerHero: Escalation Management – Best Practices for Customer Support](https://www.partnerhero.com/blog/escalation-management)
-- [HubSpot: Customer Service Frustration Data](https://blog.hubspot.com/service/customer-service-stats)
-- [Zendesk: Escalation Management Best Practices](https://www.zendesk.com/blog/escalation-management/)
-- [HiverHQ: Escalation Management Process, Types & Tips](https://hiverhq.com/blog/escalation-management)
-- [Sprinklr: Escalation Management – How to Manage It Effectively](https://www.sprinklr.com/blog/escalation-management/)
-- [Gartner Study: Customer Service and Support Self-Service Resolution Statistics](https://www.gartner.com/en/newsroom/press-releases/2022-03-16-gartner-says-only-9-percent-of-customers-report-successful-issue-resolution-without-human-assistance)
+
+1. Twig AI. (n.d.). Guide to Using AI for Support Escalation Management. Twig Blog.
+
+2. Social Intents. (n.d.). Chatbot Escalation – How and When to Do It. Social Intents Help Center.
+
+3. Cuppa. (n.d.). Escalation Management in Customer Service – Best Practices for Success. Cuppa Blog.
+
+4. Khoros. (n.d.). 8 Best Practices for Customer Escalation Management. Khoros Blog.
+
+5. PartnerHero. (n.d.). Escalation Management – Best Practices for Customer Support. PartnerHero Blog.
+
+6. HubSpot. (n.d.). Customer Service Frustration Data. HubSpot Blog.
+
+7. Zendesk. (n.d.). Escalation Management Best Practices. Zendesk Blog.
+
+8. HiverHQ. (n.d.). Escalation Management Process, Types & Tips. HiverHQ Blog.
+
+9. Sprinklr. (n.d.). Escalation Management – How to Manage It Effectively. Sprinklr Blog.
+
+10. Gartner. (2022). Customer Service and Support Self-Service Resolution Statistics. Gartner Press Release.

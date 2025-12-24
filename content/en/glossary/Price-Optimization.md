@@ -257,9 +257,10 @@ Holistic optimization across pricing, promotions, assortment, inventory, and mar
 
 ## References
 
-- [McKinsey: The Power of Pricing](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-power-of-pricing)
-- [Boston Consulting Group: Dynamic Pricing](https://www.bcg.com/publications/2017/retail-pricing-dynamic-pricing-done-right)
-- [Harvard Business Review: The Good-Better-Best Approach to Pricing](https://hbr.org/2018/09/the-good-better-best-approach-to-pricing)
-- [MIT Sloan: AI-Powered Pricing](https://sloanreview.mit.edu/article/ai-powered-pricing-strategies/)
-- [Deloitte: Price Optimization and Management](https://www2.deloitte.com/us/en/pages/operations/solutions/price-optimization-management.html)
-- [PROS: Dynamic Pricing Guide](https://pros.com/resources/dynamic-pricing/)
+
+1. McKinsey. (n.d.). The Power of Pricing. McKinsey Insights.
+2. Boston Consulting Group. (2017). Dynamic Pricing. BCG Publications.
+3. Harvard Business Review. (2018). The Good-Better-Best Approach to Pricing. Harvard Business Review.
+4. MIT Sloan. (n.d.). AI-Powered Pricing Strategies. MIT Sloan Review.
+5. Deloitte. (n.d.). Price Optimization and Management. Deloitte Operations Solutions.
+6. PROS. (n.d.). Dynamic Pricing Guide. PROS Resources.

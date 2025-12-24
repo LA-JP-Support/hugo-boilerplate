@@ -228,13 +228,21 @@ AIがノートの内容を分析し、チケットのインテントと緊急度
 
 ## 参考文献
 
-1. [Support Adventure: The Ultimate Guide to Improving Ticketing System Note Writing for MSPs!](https://www.supportadventure.com/msp-ticketing-system-notes/)
-2. [ProProfs: What Is an Internal Ticketing System?](https://www.proprofsdesk.com/blog/internal-ticketing-system/)
-3. [Helpt: The Crucial Role of Ticket Notes in Tech Support](https://helpt.com/blog/ticket-notes-in-tech-support/)
-4. [Zendesk Blog: AI-powered ticketing automation](https://www.zendesk.com/blog/ai-powered-ticketing/)
-5. [InternalNote: Road to Automation](https://internalnote.com/road-to-automation/)
-6. [Zluri: Internal Ticketing System: A Beginner's Guide](https://www.zluri.com/blog/internal-ticketing-system/)
-7. [SAP Community: Service Cloud: Internal Memo vs. Internal Note in Tickets](https://community.sap.com/t5/technology-blogs-by-sap/service-cloud-internal-memo-vs-internal-note-in-tickets/ba-p/13547023)
-8. [YouTube: MSP Helpdesk Ticket Note Writing Guide [MSP Best Practices]](https://www.youtube.com/watch?v=2sW8XJXDywU)
 
-*さらなる学習については、上記のリンクおよびお使いのシステム(Zendesk、ServiceNow、Jira、Freshdeskなど)のベンダー固有のドキュメントを参照してください。*
+1. Support Adventure. (n.d.). The Ultimate Guide to Improving Ticketing System Note Writing for MSPs!. Support Adventure Blog.
+
+2. ProProfs. (n.d.). What Is an Internal Ticketing System?. ProProfs Blog.
+
+3. Helpt. (n.d.). The Crucial Role of Ticket Notes in Tech Support. Helpt Blog.
+
+4. Zendesk. (n.d.). AI-powered ticketing automation. Zendesk Blog.
+
+5. InternalNote. (n.d.). Road to Automation. InternalNote Blog.
+
+6. Zluri. (n.d.). Internal Ticketing System: A Beginner's Guide. Zluri Blog.
+
+7. SAP Community. (n.d.). Service Cloud: Internal Memo vs. Internal Note in Tickets. SAP Community Technology Blogs.
+
+8. YouTube. (n.d.). MSP Helpdesk Ticket Note Writing Guide [MSP Best Practices]. YouTube Video.
+
+さらなる学習については、上記のリンクおよびお使いのシステム(Zendesk、ServiceNow、Jira、Freshdeskなど)のベンダー固有のドキュメントを参照してください。

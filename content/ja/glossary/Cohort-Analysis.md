@@ -230,14 +230,15 @@ Eコマース企業は、獲得チャネル別にコホートを比較します�
 
 ## 参考文献
 
-- [Mixpanel: Ultimate Guide to Cohort Analysis](https://mixpanel.com/blog/cohort-analysis/)
-- [Mixpanel: Cohorts Documentation](https://docs.mixpanel.com/docs/users/cohorts)
-- [Mixpanel: Cohort Analysis YouTube Tutorial](https://www.youtube.com/watch?v=kbjkUeu8v3M)
-- [Mixpanel: Cohort Templates Video](https://www.youtube.com/watch?v=hBZn3a8RSMw)
-- [CleverTap: Cohort Analysis Guide](https://clevertap.com/blog/cohort-analysis/)
-- [Userpilot: Cohort Analysis Guide](https://userpilot.com/blog/cohort-analysis/)
-- [mParticle: What is Cohort Analysis?](https://www.mparticle.com/blog/what-is-cohort-analysis-a-guide-to-increasing-customer-retention/)
-- [Optimizely: Cohort Analysis Glossary](https://www.optimizely.com/optimization-glossary/cohort-analysis/)
-- [Appcues: Beginner's Guide to Cohort Analysis](https://www.appcues.com/blog/cohort-analysis)
-- [Corporate Finance Institute: Cohort Analysis](https://corporatefinanceinstitute.com/resources/business-intelligence/cohort-analysis/)
-- [ProfitWell: Cohort Analysis Template](https://docs.google.com/spreadsheets/d/1cHgCk1WeegbQ96yAmhLL1U3VWWkwQEwY50-UJLuM-sc/edit#gid=1491702461)
+
+1. Mixpanel. (n.d.). Ultimate Guide to Cohort Analysis. Mixpanel Blog.
+2. Mixpanel. (n.d.). Cohorts Documentation. Mixpanel Docs.
+3. Mixpanel. (n.d.). Cohort Analysis YouTube Tutorial. YouTube.
+4. Mixpanel. (n.d.). Cohort Templates Video. YouTube.
+5. CleverTap. (n.d.). Cohort Analysis Guide. CleverTap Blog.
+6. Userpilot. (n.d.). Cohort Analysis Guide. Userpilot Blog.
+7. mParticle. (n.d.). What is Cohort Analysis?. mParticle Blog.
+8. Optimizely. (n.d.). Cohort Analysis Glossary. Optimizely Optimization Glossary.
+9. Appcues. (n.d.). Beginner's Guide to Cohort Analysis. Appcues Blog.
+10. Corporate Finance Institute. (n.d.). Cohort Analysis. Corporate Finance Institute Resources.
+11. ProfitWell. (n.d.). Cohort Analysis Template. URL: https://docs.google.com/spreadsheets/d/1cHgCk1WeegbQ96yAmhLL1U3VWWkwQEwY50-UJLuM-sc/edit#gid=1491702461

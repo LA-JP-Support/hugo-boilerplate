@@ -229,11 +229,19 @@ Botium、LivePerson Conversation Simulator、DeepEvalは、最も人気のある
 
 ## 参考文献
 
-- [LivePerson Conversation Simulator](https://www.liveperson.com/conversation-simulator/)
-- [Botium Documentation: Conversational AI Testing](https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html)
-- [FrugalTesting: Chatbot Testing Guide](https://www.frugaltesting.com/blog/chatbot-testing-your-guide-to-accuracy-and-user-experience)
-- [DeepEval: Chatbot Evaluation Quickstart](https://deepeval.com/docs/getting-started-chatbots)
-- [Deskpro: What is a Chatbot?](https://www.deskpro.com/blog/chatbots)
-- [AWS: What is a Chatbot?](https://aws.amazon.com/what-is/chatbot/)
-- [IBM: Types of Chatbots](https://www.ibm.com/think/topics/chatbot-types)
-- [ScienceDirect: Chatbots and LLMs](https://www.sciencedirect.com/science/article/pii/S2949719125000044)
+
+1. LivePerson. Conversation Simulator. URL: https://www.liveperson.com/conversation-simulator/
+
+2. Botium. Conversational AI Testing Documentation. URL: https://botium-docs.readthedocs.io/en/latest/03_testing/01_testing_conversational_ai.html
+
+3. FrugalTesting. (n.d.). Chatbot Testing Guide. URL: https://www.frugaltesting.com/blog/chatbot-testing-your-guide-to-accuracy-and-user-experience
+
+4. DeepEval. Chatbot Evaluation Quickstart. URL: https://deepeval.com/docs/getting-started-chatbots
+
+5. Deskpro. (n.d.). What is a Chatbot?. Deskpro Blog. URL: https://www.deskpro.com/blog/chatbots
+
+6. AWS. (n.d.). What is a Chatbot?. AWS Topics. URL: https://aws.amazon.com/what-is/chatbot/
+
+7. IBM. (n.d.). Types of Chatbots. IBM Think Topics. URL: https://www.ibm.com/think/topics/chatbot-types
+
+8. ScienceDirect. (n.d.). Chatbots and LLMs. ScienceDirect. URL: https://www.sciencedirect.com/science/article/pii/S2949719125000044

@@ -189,19 +189,35 @@ AIシステムは現在、自動運転、医療診断、銀行業務、コンテ
 
 ## 参考文献
 
-- [IBM Research: Securing AI workflows with adversarial robustness](https://research.ibm.com/blog/securing-ai-workflows-with-adversarial-robustness)
-- [DataScientest: What is Adversarial Robustness?](https://datascientest.com/en/all-about-adversarial-robustness)
-- [Adversarial ML Tutorial](http://adversarial-ml-tutorial.org/introduction/)
-- [Fiddler AI: A Practical Guide to Adversarial Robustness](https://www.fiddler.ai/blog/a-practical-guide-to-adversarial-robustness)
-- [Palo Alto Networks: What Are Adversarial AI Attacks?](https://www.paloaltonetworks.com/cyberpedia/what-are-adversarial-attacks-on-AI-Machine-Learning)
-- [Arxiv: Machine Learning Robustness: A Primer](https://arxiv.org/html/2404.00897v2)
-- [YouTube: IBM Research – Securing AI with Adversarial Robustness](https://www.youtube.com/watch?v=9B2jKXGUZtc)
-- [Scale AI Leaderboard: Adversarial Robustness](https://scale.com/leaderboard/adversarial_robustness)
-- [Goodfellow et al.: Explaining and Harnessing Adversarial Examples](https://arxiv.org/abs/1412.6572)
-- [Tsipras et al.: Robustness May Be at Odds with Accuracy](https://arxiv.org/abs/1805.12152)
-- [Madry et al.: Towards Deep Learning Models Resistant to Adversarial Attacks](https://arxiv.org/abs/1706.06083)
-- [CleverHans Library](https://github.com/cleverhans-lab/cleverhans)
-- [IBM Adversarial Robustness Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
-- [Foolbox](https://github.com/bethgelab/foolbox)
-- [ACM Digital Library: Architecting AmI Systems](https://dl.acm.org/doi/10.1145/1462027.1462036)
-- [IBM Research: Poisoned Data and UDA](https://research.ibm.com/publications/understanding-the-limits-of-unsupervised-domain-adaptation-via-data-poisoning)
+
+1. IBM Research. (n.d.). Securing AI workflows with adversarial robustness. IBM Research Blog.
+
+2. DataScientest. (n.d.). What is Adversarial Robustness?. DataScientest.
+
+3. (n.d.). Adversarial ML Tutorial. Adversarial ML Tutorial.
+
+4. Fiddler AI. (n.d.). A Practical Guide to Adversarial Robustness. Fiddler AI Blog.
+
+5. Palo Alto Networks. (n.d.). What Are Adversarial AI Attacks?. Palo Alto Networks Cyberpedia.
+
+6. (n.d.). Machine Learning Robustness: A Primer. Arxiv.
+
+7. IBM Research. (n.d.). IBM Research – Securing AI with Adversarial Robustness. YouTube.
+
+8. Scale AI. (n.d.). Adversarial Robustness Leaderboard. Scale AI.
+
+9. Goodfellow, I., et al. (n.d.). Explaining and Harnessing Adversarial Examples. Arxiv.
+
+10. Tsipras, D., et al. (n.d.). Robustness May Be at Odds with Accuracy. Arxiv.
+
+11. Madry, A., et al. (n.d.). Towards Deep Learning Models Resistant to Adversarial Attacks. Arxiv.
+
+12. CleverHans Library. Open-source adversarial machine learning library. URL: https://github.com/cleverhans-lab/cleverhans
+
+13. IBM Adversarial Robustness Toolbox. AI security and robustness toolkit. URL: https://github.com/Trusted-AI/adversarial-robustness-toolbox
+
+14. Foolbox. Adversarial machine learning library. URL: https://github.com/bethgelab/foolbox
+
+15. ACM. (n.d.). Architecting AmI Systems. ACM Digital Library.
+
+16. IBM Research. (n.d.). Poisoned Data and UDA. IBM Research Publications.

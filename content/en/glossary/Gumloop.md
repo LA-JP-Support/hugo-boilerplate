@@ -257,13 +257,14 @@ Shopify, Instacart, Webflow, and other tech-forward companies use it for interna
 
 ## References
 
-- [Softailed: Gumloop Review](https://softailed.com/blog/gumloop-review)
-- [Gumloop Official Blog: Best AI Workflow Tools](https://www.gumloop.com/blog/best-ai-workflow-automation-tools)
-- [Gumloop: MCP Scripting Introduction](https://www.gumloop.com/blog/a-different-take-on-mcp-introducing-mcp-scripting)
-- [Gumloop Documentation: Getting Started](https://docs.gumloop.com/getting-started/introduction)
-- [Gumloop Templates Gallery](https://www.gumloop.com/templates)
-- [Gumloop Hub](https://www.gumloop.com/hub)
-- [Gumloop Pricing](https://www.gumloop.com/pricing)
-- [Gumloop Community Forum](https://forum.gumloop.com/)
-- [Gumloop YouTube Channel](https://www.youtube.com/@gumloop)
-- [Lindy Review: Gumloop Comparison](https://www.lindy.ai/blog/gumloop)
+
+1. Softailed. (n.d.). Gumloop Review. Softailed Blog.
+2. Gumloop. (n.d.). Best AI Workflow Automation Tools. Gumloop Blog.
+3. Gumloop. (n.d.). A Different Take on MCP: Introducing MCP Scripting. Gumloop Blog.
+4. Gumloop. (n.d.). Getting Started: Introduction. Gumloop Documentation.
+5. Gumloop. (n.d.). Templates Gallery. URL: https://www.gumloop.com/templates
+6. Gumloop. (n.d.). Gumloop Hub. URL: https://www.gumloop.com/hub
+7. Gumloop. (n.d.). Pricing. URL: https://www.gumloop.com/pricing
+8. Gumloop. (n.d.). Community Forum. URL: https://forum.gumloop.com/
+9. Gumloop. (n.d.). Gumloop YouTube Channel. URL: https://www.youtube.com/@gumloop
+10. Lindy. (n.d.). Gumloop Comparison. Lindy Blog.

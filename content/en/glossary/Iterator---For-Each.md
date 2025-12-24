@@ -435,10 +435,11 @@ time_map = timeit.timeit(lambda: list(map(lambda x: x*2, range(1000))))
 
 ## References
 
-- [Python Iterator Protocol - GeeksforGeeks](https://www.geeksforgeeks.org/python/python-difference-iterable-iterator/)
-- [JavaScript Iterators and Generators - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
-- [Java Iterator Interface - W3Schools](https://www.w3schools.com/java/java_iterator.asp)
-- [C# IEnumerator Interface - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerator)
-- [C# Iterators - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/iterators)
-- [C# Foreach Best Practices - Stackify](https://stackify.com/c-foreach-definition-and-best-practices/)
-- [Relay.app Iterator Documentation](https://docs.relay.app/flow-control/iterators)
+
+1. GeeksforGeeks. (n.d.). Python Iterator Protocol. GeeksforGeeks.
+2. Mozilla Developer Network. (n.d.). JavaScript Iterators and Generators. MDN Web Docs.
+3. W3Schools. (n.d.). Java Iterator Interface. W3Schools.
+4. Microsoft. (n.d.). C# IEnumerator Interface. Microsoft Learn.
+5. Microsoft. (n.d.). C# Iterators. Microsoft Learn.
+6. Stackify. (n.d.). C# Foreach Best Practices. Stackify.
+7. Relay.app. (n.d.). Iterator Documentation. Relay.app Docs.

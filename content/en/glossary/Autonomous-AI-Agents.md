@@ -234,16 +234,17 @@ Varies by use case; typical benefits include cost savings, efficiency gains, imp
 
 ## References
 
-- [IBM: What Are AI Agents?](https://www.ibm.com/think/topics/ai-agents)
-- [Shelf.io: The Evolution of AI - Autonomous AI Agents](https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents/)
-- [IBM: Components of AI Agents](https://www.ibm.com/think/topics/components-of-ai-agents)
-- [IBM: Simple Reflex Agent](https://www.ibm.com/think/topics/simple-reflex-agent)
-- [IBM: Model-Based Reflex Agent](https://www.ibm.com/think/topics/model-based-reflex-agent)
-- [IBM: Goal-Based Agent](https://www.ibm.com/think/topics/goal-based-agent)
-- [IBM: Utility-Based Agent](https://www.ibm.com/think/topics/utility-based-agent)
-- [IBM: Multi-Agent Systems](https://www.ibm.com/think/topics/multiagent-system)
-- [IBM: AI Agents vs AI Assistants](https://www.ibm.com/think/topics/ai-agents-vs-ai-assistants)
-- [IBM: Agentic AI vs Generative AI](https://www.ibm.com/think/topics/agentic-ai-vs-generative-ai)
-- [McKinsey: Economic Potential of Generative AI](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier)
-- [Markets and Markets: AI Agents Market](https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html)
-- [AWS: The Rise of Autonomous Agents](https://aws.amazon.com/blogs/aws-insights/the-rise-of-autonomous-agents-what-enterprise-leaders-need-to-know-about-the-next-wave-of-ai/)
+
+1. IBM. (n.d.). What Are AI Agents?. IBM Think Topics.
+2. Shelf.io. (n.d.). The Evolution of AI - Autonomous AI Agents. Shelf.io Blog.
+3. IBM. (n.d.). Components of AI Agents. IBM Think Topics.
+4. IBM. (n.d.). Simple Reflex Agent. IBM Think Topics.
+5. IBM. (n.d.). Model-Based Reflex Agent. IBM Think Topics.
+6. IBM. (n.d.). Goal-Based Agent. IBM Think Topics.
+7. IBM. (n.d.). Utility-Based Agent. IBM Think Topics.
+8. IBM. (n.d.). Multi-Agent Systems. IBM Think Topics.
+9. IBM. (n.d.). AI Agents vs AI Assistants. IBM Think Topics.
+10. IBM. (n.d.). Agentic AI vs Generative AI. IBM Think Topics.
+11. McKinsey. (n.d.). Economic Potential of Generative AI. McKinsey Digital.
+12. Markets and Markets. (n.d.). AI Agents Market. Markets and Markets.
+13. AWS. (n.d.). The Rise of Autonomous Agents. AWS Insights Blog.

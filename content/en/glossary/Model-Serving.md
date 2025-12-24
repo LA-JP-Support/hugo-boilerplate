@@ -224,19 +224,20 @@ Deployment is how you deliver model to production; serving is how you make it av
 
 ## References
 
-- [Databricks: Model Serving Documentation](https://docs.databricks.com/aws/en/machine-learning/model-serving/)
-- [Databricks: Model Serving Tutorial](https://docs.databricks.com/aws/en/machine-learning/model-serving/model-serving-intro)
-- [Backblaze: AI 101 – What Is Model Serving?](https://www.backblaze.com/blog/ai-101-what-is-model-serving/)
-- [Hopsworks: Model Serving Dictionary](https://www.hopsworks.ai/dictionary/model-serving)
-- [Hopsworks: KServe Documentation](https://www.hopsworks.ai/dictionary/kserve)
-- [UbiOps: What Is AI Model Serving?](https://ubiops.com/what-is-ai-model-serving/)
-- [Unify: Model Serving Multi-Layered Landscape](https://unify.ai/blog/cloud-model-serving)
-- [Seldon: ML Model Serving Strategies Guide](https://www.seldon.io/an-essential-guide-to-ml-model-serving-strategies-including-llms/)
-- [TensorFlow: Serving Guide](https://www.tensorflow.org/tfx/guide/serving)
-- [PyTorch: TorchServe Documentation](https://pytorch.org/serve/)
-- [FastAPI Documentation](https://fastapi.tiangolo.com/)
-- [Amazon SageMaker](https://aws.amazon.com/sagemaker/)
-- [Azure Machine Learning](https://azure.microsoft.com/en-us/products/machine-learning)
-- [Hugging Face Inference Endpoints](https://huggingface.co/docs/inference-endpoints/index)
-- [AWS EC2 Pricing](https://aws.amazon.com/ec2/pricing/)
-- [YouTube: Model Serving 101](https://www.youtube.com/watch?v=YAxDyHvLzoE)
+
+1. Databricks. (n.d.). Model Serving Documentation. Databricks Docs.
+2. Databricks. (n.d.). Model Serving Tutorial. Databricks Docs.
+3. Backblaze. (n.d.). AI 101 – What Is Model Serving?. Backblaze Blog.
+4. Hopsworks. (n.d.). Model Serving Dictionary. Hopsworks Dictionary.
+5. Hopsworks. (n.d.). KServe Documentation. Hopsworks Dictionary.
+6. UbiOps. (n.d.). What Is AI Model Serving?. UbiOps Blog.
+7. Unify. (n.d.). Model Serving Multi-Layered Landscape. Unify Blog.
+8. Seldon. (n.d.). ML Model Serving Strategies Guide. Seldon Blog.
+9. TensorFlow. (n.d.). Serving Guide. TensorFlow Documentation.
+10. PyTorch. (n.d.). TorchServe Documentation. PyTorch Documentation.
+11. FastAPI. (n.d.). FastAPI Documentation. FastAPI Docs.
+12. Amazon SageMaker. Cloud Machine Learning Platform. URL: https://aws.amazon.com/sagemaker/
+13. Azure Machine Learning. Cloud Machine Learning Platform. URL: https://azure.microsoft.com/en-us/products/machine-learning
+14. Hugging Face Inference Endpoints. Machine Learning Model Deployment Service. URL: https://huggingface.co/docs/inference-endpoints/index
+15. AWS EC2. Cloud Computing Service. URL: https://aws.amazon.com/ec2/pricing/
+16. YouTube. (n.d.). Model Serving 101. YouTube Video.

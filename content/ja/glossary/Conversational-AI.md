@@ -227,33 +227,34 @@ AIがニーズを予測し、会話を開始し、アクションを推奨しま
 
 ## 参考文献
 
-- [Nextiva: What is Conversational AI?](https://www.nextiva.com/blog/what-is-conversational-ai.html)
-- [Gupshup: Conversational AI - Comprehensive Guide](https://www.gupshup.ai/resources/guide/conversational-ai-comprehensive-guide)
-- [Gupshup: Components of Conversational AI](https://www.gupshup.ai/resources/guide/conversational-ai-comprehensive-guide#toc_692e65b782089_section_4)
-- [Gupshup: Why Conversational AI Matters](https://www.gupshup.ai/resources/guide/conversational-ai-comprehensive-guide#toc_692e65b782089_section_1)
-- [Gupshup: Industry Applications](https://www.gupshup.ai/resources/guide/conversational-ai-comprehensive-guide#toc_692e65b782089_section_6)
-- [Gupshup: How to get started](https://www.gupshup.ai/resources/guide/conversational-ai-comprehensive-guide#toc_692e65b782089_section_7)
-- [Gupshup: The Future of Conversational AI](https://www.gupshup.ai/resources/guide/conversational-ai-comprehensive-guide#toc_692e65b782089_section_8)
-- [Gupshup: Conversational Messaging Platform](https://www.gupshup.ai/conversational-messaging-platform/conversational-ai)
-- [Yellow.ai: What is Conversational AI?](https://yellow.ai/conversational-ai/)
-- [Yellow.ai: How Conversational AI Works](https://yellow.ai/conversational-ai/#how-does-conversational-ai-work)
-- [Yellow.ai: Benefits](https://yellow.ai/conversational-ai/#What-are-the-benefits-of-conversational-AI-chatbots)
-- [Yellow.ai: Examples](https://yellow.ai/conversational-ai/#Examples-of-Conversational-AI)
-- [Yellow.ai: How to Get Started](https://yellow.ai/conversational-ai/#how-to-get-started-with-conversational-ai)
-- [Yellow.ai: FAQs](https://yellow.ai/conversational-ai/#FAQs)
-- [IBM: What is Conversational AI?](https://www.ibm.com/think/topics/conversational-ai)
-- [IBM: Natural Language Processing](https://www.ibm.com/topics/natural-language-processing)
-- [AWS: What is Conversational AI?](https://aws.amazon.com/what-is/conversational-ai/)
-- [AWS: Building Conversational AI](https://aws.amazon.com/what-is/conversational-ai/#ams#what-isc6#pattern-data)
-- [Google Cloud: Conversational AI](https://cloud.google.com/conversational-ai)
-- [Google Cloud: Conversational AI in Action (YouTube)](https://www.youtube.com/watch?v=I-lEf2kMjTg)
-- [Google Cloud: Dialogflow Agent Builder](https://cloud.google.com/dialogflow)
-- [K2View: Conversational AI vs Generative AI](https://www.k2view.com/blog/conversational-ai-vs-generative-ai/)
-- [Zendesk: What customers really feel about conversational AI](https://www.zendesk.de/blog/customers-really-feel-conversational-ai/)
-- [Hyro: Conversational AI Glossary](https://www.hyro.ai/glossary/)
-- [Cognigy: Conversational AI & Chatbot Glossary](https://www.cognigy.com/resources/conversational-artificial-intelligence-glossary)
-- [DevRev: Conversational AI](https://devrev.ai/blog/conversational-ai)
-- [qBotica: AI in Healthcare](https://qbotica.com/usecases/medical-coding/)
-- [qBotica: Future of Conversational AI](https://qbotica.com/conversational-ai-a-complete-guide-for-2024/)
-- [NextMSC: AI in BFSI](https://www.nextmsc.com/report/chatbot-market-in-bfsi)
-- [ZipDo: Conversational AI Statistics](https://zipdo.co/statistics/conversational-ai/)
+
+1. Nextiva. (n.d.). What is Conversational AI?. Nextiva Blog.
+2. Gupshup. (n.d.). Conversational AI - Comprehensive Guide. Gupshup Resources.
+3. Gupshup. (n.d.). Components of Conversational AI. Gupshup Resources.
+4. Gupshup. (n.d.). Why Conversational AI Matters. Gupshup Resources.
+5. Gupshup. (n.d.). Industry Applications. Gupshup Resources.
+6. Gupshup. (n.d.). How to get started. Gupshup Resources.
+7. Gupshup. (n.d.). The Future of Conversational AI. Gupshup Resources.
+8. Gupshup. (n.d.). Conversational Messaging Platform. Gupshup.
+9. Yellow.ai. (n.d.). What is Conversational AI?. Yellow.ai.
+10. Yellow.ai. (n.d.). How Conversational AI Works. Yellow.ai.
+11. Yellow.ai. (n.d.). Benefits. Yellow.ai.
+12. Yellow.ai. (n.d.). Examples. Yellow.ai.
+13. Yellow.ai. (n.d.). How to Get Started. Yellow.ai.
+14. Yellow.ai. (n.d.). FAQs. Yellow.ai.
+15. IBM. (n.d.). What is Conversational AI?. IBM Think Topics.
+16. IBM. (n.d.). Natural Language Processing. IBM Topics.
+17. AWS. (n.d.). What is Conversational AI?. AWS.
+18. AWS. (n.d.). Building Conversational AI. AWS.
+19. Google Cloud. (n.d.). Conversational AI. Google Cloud.
+20. Google Cloud. (n.d.). Conversational AI in Action. YouTube.
+21. Google Cloud. (n.d.). Dialogflow Agent Builder. Google Cloud.
+22. K2View. (n.d.). Conversational AI vs Generative AI. K2View Blog.
+23. Zendesk. (n.d.). What customers really feel about conversational AI. Zendesk Blog.
+24. Hyro. (n.d.). Conversational AI Glossary. Hyro.
+25. Cognigy. (n.d.). Conversational AI & Chatbot Glossary. Cognigy Resources.
+26. DevRev. (n.d.). Conversational AI. DevRev Blog.
+27. qBotica. (n.d.). AI in Healthcare. qBotica.
+28. qBotica. (n.d.). Future of Conversational AI. qBotica.
+29. NextMSC. (n.d.). AI in BFSI. NextMSC Report.
+30. ZipDo. (n.d.). Conversational AI Statistics. ZipDo.
