@@ -311,7 +311,6 @@
     @apply text-sm font-semibold text-button-text-dark hover:text-button-text-dark-hover btn-transition;
   }
 
-  /* Button arrow animation */
   .btn-arrow {
     @apply font-semibold inline-block transition-transform duration-300;
   }

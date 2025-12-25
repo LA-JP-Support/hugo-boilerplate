@@ -1,5 +1,156 @@
 {{ define "main" }}
 <style>
+  /* Hero Carousel Styles */
+  .hero-carousel {
+    position: relative;
+    width: 100%;
+  }
+  
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  }
+  
+  .hero-slide.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .hero-slide h1,
+  .hero-slide p,
+  .hero-slide .cta-buttons {
+    animation: none;
+  }
+  
+  .hero-slide.active h1 {
+    animation: slideInDown 0.8s ease-out;
+  }
+  
+  .hero-slide.active p {
+    animation: slideInUp 0.8s ease-out 0.1s both;
+  }
+  
+  .hero-slide.active .cta-buttons {
+    animation: slideInUp 0.8s ease-out 0.2s both;
+  }
+  
+  /* Carousel Indicators */
+  .hero-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 2rem;
+  }
+  
+  .hero-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-indicator:hover {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  
+  .hero-indicator.active {
+    background: white;
+    border-color: white;
+    transform: scale(1.2);
+  }
+  
+  /* Gradient Themes for Slides */
+  .antigravity-hero.gradient-support {
+    background: linear-gradient(135deg, 
+      #2a3d78 0%, 
+      #3a2d65 25%, 
+      #8b4db5 50%, 
+      #2d6da4 75%, 
+      #0097a9 100%);
+  }
+  
+  .antigravity-hero.gradient-content {
+    background: linear-gradient(135deg, 
+      #0d4f4f 0%, 
+      #1a5c45 25%, 
+      #2d8b6e 50%, 
+      #1e6a7a 75%, 
+      #0097a9 100%);
+  }
+  
+  .dark .antigravity-hero.gradient-support {
+    background: linear-gradient(135deg, 
+      #0a0f2f 0%, 
+      #12102d 25%, 
+      #2a1a4b 50%, 
+      #06344a 75%, 
+      #023a3a 100%);
+  }
+  
+  .dark .antigravity-hero.gradient-content {
+    background: linear-gradient(135deg, 
+      #021a1a 0%, 
+      #0a2a20 25%, 
+      #0f3d2d 50%, 
+      #0a2a35 75%, 
+      #023a3a 100%);
+  }
+
+  /* Carousel Navigation Arrows */
+  .hero-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 20;
+    backdrop-filter: blur(4px);
+  }
+  
+  .hero-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .hero-nav-prev {
+    left: 20px;
+  }
+  
+  .hero-nav-next {
+    right: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-nav {
+      width: 36px;
+      height: 36px;
+    }
+    .hero-nav-prev {
+      left: 10px;
+    }
+    .hero-nav-next {
+      right: 10px;
+    }
+  }
+
   /* Antigravity Hero Styles */
   @keyframes gradientShift {
     0% { background-position: 0% 50%; }
@@ -34,12 +185,13 @@
       #0097a9 100%);
     background-size: 400% 400%;
     animation: gradientShift 12s ease infinite;
-    min-height: 70vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    transition: background 1s ease-in-out;
   }
   
   /* Background Image Layer with darker overlay */
@@ -50,6 +202,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+    overflow: hidden;
   }
   
   .hero-background-image::before {
@@ -60,18 +213,29 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    z-index: 2;
   }
   
-  .hero-background-image img {
+  .hero-background-image img,
+  .hero-background-image video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.45;
+    object-position: 70% center;
+    opacity: 0;
     mix-blend-mode: overlay;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 1;
   }
   
-  .dark .hero-background-image img {
+  .hero-background-image .hero-bg-media.active {
+    opacity: 0.45;
+  }
+  
+  .dark .hero-background-image .hero-bg-media.active {
     opacity: 0.35;
   }
   
@@ -102,17 +266,6 @@
     animation: float 30s ease-in-out infinite reverse;
     filter: blur(60px);
     z-index: 2;
-  }
-  
-  /* Particle Canvas */
-  #particles-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 3;
   }
   
   /* Glow Effect */
@@ -168,14 +321,21 @@
   }
 </style>
 
-<div class="antigravity-hero">
-  <!-- Background Image (darker) -->
+<div class="antigravity-hero gradient-support" id="antigravityHero" data-gradients="{{ if .Params.hero_slides }}{{ range $index, $slide := .Params.hero_slides }}{{ if $index }},{{ end }}{{ $slide.gradient | default "support" }}{{ end }}{{ end }}" data-backgrounds="{{ if .Params.hero_slides }}{{ range $index, $slide := .Params.hero_slides }}{{ if $index }},{{ end }}{{ $slide.background_image | default $slide.background_video | default "/images/hero-customer-support.jpg" }}{{ end }}{{ end }}" data-background-types="{{ if .Params.hero_slides }}{{ range $index, $slide := .Params.hero_slides }}{{ if $index }},{{ end }}{{ if $slide.background_video }}video{{ else }}image{{ end }}{{ end }}{{ end }}">
+  <!-- Background Media -->
   <div class="hero-background-image">
-    <img src="/images/a_modern_customer_support.jpg" alt="Customer Support Background" loading="eager">
+    {{ if .Params.hero_slides }}
+      {{ range $index, $slide := .Params.hero_slides }}
+        {{ if $slide.background_video }}
+          <video class="hero-bg-media{{ if eq $index 0 }} active{{ end }}" data-slide="{{ $index }}" src="{{ $slide.background_video }}" autoplay loop muted playsinline preload="auto"></video>
+        {{ else }}
+          <img class="hero-bg-media{{ if eq $index 0 }} active{{ end }}" data-slide="{{ $index }}" src="{{ $slide.background_image | default "/images/hero-customer-support.jpg" }}" alt="Hero Background" loading="eager">
+        {{ end }}
+      {{ end }}
+    {{ else }}
+      <img class="hero-bg-media active" src="/images/hero-customer-support.jpg" alt="Hero Background" loading="eager">
+    {{ end }}
   </div>
-  
-  <!-- Particle Canvas -->
-  <canvas id="particles-canvas"></canvas>
   
   <!-- Glow Effect -->
   <div class="hero-glow" id="heroGlow">
@@ -186,7 +346,66 @@
   <div class="relative isolate z-10 w-full">
     <div class="wrapper py-16 sm:py-20">
       <div class="hero-content mx-auto max-w-3xl text-center">
-        <!-- Main Heading -->
+        
+        {{ if .Params.hero_slides }}
+        <!-- Carousel Navigation Arrows -->
+        <button class="hero-nav hero-nav-prev" onclick="prevSlide()" aria-label="Previous slide">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+        <button class="hero-nav hero-nav-next" onclick="nextSlide()" aria-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+        
+        <!-- Hero Carousel -->
+        <div class="hero-carousel" id="heroCarousel">
+          {{ range $index, $slide := .Params.hero_slides }}
+          <div class="hero-slide{{ if eq $index 0 }} active{{ end }}" data-slide="{{ $index }}">
+            <h1 class="text-5xl font-semibold tracking-tight text-balance text-white drop-shadow-lg sm:text-7xl">
+              {{ $slide.heading | safeHTML }}
+            </h1>
+            
+            {{ if $slide.description }}
+            <p class="mt-9 text-lg font-medium text-pretty text-white drop-shadow-md sm:text-xl/8">
+              {{ $slide.description | safeHTML }}
+            </p>
+            {{ end }}
+            
+            {{ if or $slide.cta_primary $slide.cta_secondary }}
+            <div class="cta-buttons mt-9 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
+              {{ if $slide.cta_primary }}
+              <a href="{{ $slide.cta_primary.url }}" 
+                 class="rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-indigo-600 shadow-lg hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all hover:scale-105">
+                {{ $slide.cta_primary.text }}
+              </a>
+              {{ end }}
+              {{ if $slide.cta_secondary }}
+              <a href="{{ $slide.cta_secondary.url }}" 
+                 class="text-sm font-semibold text-white hover:text-white/80 transition-colors drop-shadow-md">
+                {{ $slide.cta_secondary.text }} <span aria-hidden="true">→</span>
+              </a>
+              {{ end }}
+            </div>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+        
+        <!-- Carousel Indicators -->
+        <div class="hero-indicators" id="heroIndicators">
+          {{ range $index, $slide := .Params.hero_slides }}
+          <button class="hero-indicator{{ if eq $index 0 }} active{{ end }}" 
+                  data-slide="{{ $index }}" 
+                  onclick="goToSlide({{ $index }})"
+                  aria-label="Go to slide {{ add $index 1 }}"></button>
+          {{ end }}
+        </div>
+        
+        {{ else }}
+        <!-- Single Hero (Fallback) -->
         {{ if .Params.hero_heading }}
           <h1 class="text-5xl font-semibold tracking-tight text-balance text-white drop-shadow-lg sm:text-7xl">
             {{ .Params.hero_heading }}
@@ -197,7 +416,6 @@
           </h1>
         {{ end }}
 
-        <!-- Description (Pure White) -->
         {{ if .Params.hero_description }}
           <p class="mt-9 text-lg font-medium text-pretty text-white drop-shadow-md sm:text-xl/8">
             {{ .Params.hero_description | safeHTML }}
@@ -208,7 +426,6 @@
           </p>
         {{ end }}
 
-        <!-- CTA Buttons -->
         {{ if or .Params.cta_primary .Params.cta_secondary }}
           <div class="cta-buttons mt-9 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
             {{ if .Params.cta_primary }}
@@ -225,6 +442,7 @@
             {{ end }}
           </div>
         {{ end }}
+        {{ end }}
 
         <!-- Hero Image -->
         {{ if .Params.hero_image }}
@@ -239,355 +457,22 @@
       </div>
     </div>
   </div>
-  
-  <script>
-  (function() {
-    'use strict';
-    
-    // Content Section Floating Particles
-    class ContentParticleSystem {
-      constructor(canvas) {
-        this.canvas = canvas;
-        this.ctx = canvas.getContext('2d');
-        this.particles = [];
-        this.particleCount = 30;
-        this.mouse = { x: null, y: null, radius: 180 };
-        
-        this.init();
-        this.animate();
-        this.setupEventListeners();
-      }
-      
-      init() {
-        this.resize();
-        this.createParticles();
-      }
-      
-      resize() {
-        this.canvas.width = this.canvas.offsetWidth;
-        this.canvas.height = this.canvas.offsetHeight;
-      }
-      
-      createParticles() {
-        this.particles = [];
-        for (let i = 0; i < this.particleCount; i++) {
-          this.particles.push({
-            x: Math.random() * this.canvas.width,
-            y: Math.random() * this.canvas.height,
-            radius: Math.random() * 2 + 0.8,
-            vx: (Math.random() - 0.5) * 0.25,
-            vy: (Math.random() - 0.5) * 0.25,
-            opacity: Math.random() * 0.3 + 0.15,
-            wobbleSpeed: Math.random() * 0.015 + 0.008,
-            wobbleAmount: Math.random() * 1.5 + 0.8,
-            wobbleOffset: Math.random() * Math.PI * 2
-          });
-        }
-      }
-      
-      drawParticles() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        
-        this.particles.forEach((particle, i) => {
-          particle.wobbleOffset += particle.wobbleSpeed;
-          const wobbleX = Math.sin(particle.wobbleOffset) * particle.wobbleAmount;
-          const wobbleY = Math.cos(particle.wobbleOffset * 1.5) * particle.wobbleAmount;
-          
-          particle.x += particle.vx + wobbleX * 0.1;
-          particle.y += particle.vy + wobbleY * 0.1;
-          
-          if (this.mouse.x !== null && this.mouse.y !== null) {
-            const rect = this.canvas.getBoundingClientRect();
-            const mouseX = this.mouse.x - rect.left;
-            const mouseY = this.mouse.y - rect.top;
-            
-            const dx = mouseX - particle.x;
-            const dy = mouseY - particle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            
-            if (distance < this.mouse.radius) {
-              const force = (this.mouse.radius - distance) / this.mouse.radius;
-              const angle = Math.atan2(dy, dx);
-              particle.vx -= Math.cos(angle) * force * 0.3;
-              particle.vy -= Math.sin(angle) * force * 0.3;
-            }
-          }
-          
-          particle.vx *= 0.98;
-          particle.vy *= 0.98;
-          
-          if (particle.x < 0 || particle.x > this.canvas.width) {
-            particle.vx *= -0.8;
-            particle.x = Math.max(0, Math.min(this.canvas.width, particle.x));
-          }
-          if (particle.y < 0 || particle.y > this.canvas.height) {
-            particle.vy *= -0.8;
-            particle.y = Math.max(0, Math.min(this.canvas.height, particle.y));
-          }
-          
-          this.ctx.beginPath();
-          this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-          this.ctx.fillStyle = `rgba(99, 102, 241, ${particle.opacity})`;
-          this.ctx.shadowBlur = 6;
-          this.ctx.shadowColor = `rgba(99, 102, 241, ${particle.opacity * 0.6})`;
-          this.ctx.fill();
-          this.ctx.shadowBlur = 0;
-          
-          this.particles.slice(i + 1).forEach(otherParticle => {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            
-            if (distance < 100) {
-              this.ctx.beginPath();
-              this.ctx.strokeStyle = `rgba(99, 102, 241, ${0.12 * (1 - distance / 100)})`;
-              this.ctx.lineWidth = 0.5;
-              this.ctx.moveTo(particle.x, particle.y);
-              this.ctx.lineTo(otherParticle.x, otherParticle.y);
-              this.ctx.stroke();
-            }
-          });
-        });
-      }
-      
-      animate() {
-        this.drawParticles();
-        this.animationId = requestAnimationFrame(() => this.animate());
-      }
-      
-      setupEventListeners() {
-        window.addEventListener('resize', () => {
-          this.resize();
-          this.createParticles();
-        });
-        
-        const mouseMoveHandler = (e) => {
-          this.mouse.x = e.clientX;
-          this.mouse.y = e.clientY;
-        };
-        
-        const mouseLeaveHandler = () => {
-          this.mouse.x = null;
-          this.mouse.y = null;
-        };
-        
-        document.addEventListener('mousemove', mouseMoveHandler);
-        document.addEventListener('mouseleave', mouseLeaveHandler);
-        
-        this.cleanupListeners = () => {
-          document.removeEventListener('mousemove', mouseMoveHandler);
-          document.removeEventListener('mouseleave', mouseLeaveHandler);
-        };
-      }
-      
-      destroy() {
-        if (this.animationId) {
-          cancelAnimationFrame(this.animationId);
-        }
-        if (this.cleanupListeners) {
-          this.cleanupListeners();
-        }
-      }
-    }
-    
-    function initContentParticles() {
-      const canvas = document.getElementById('content-particles-canvas');
-      if (canvas && !canvas.particleSystem) {
-        canvas.particleSystem = new ContentParticleSystem(canvas);
-      }
-    }
-    
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initContentParticles);
-    } else {
-      initContentParticles();
-    }
-  })();
-  </script>
-  
-  <script>
-  (function() {
-    'use strict';
-    
-    // Features Section Floating Particles (Drone-like)
-    class FeaturesParticleSystem {
-      constructor(canvas) {
-        this.canvas = canvas;
-        this.ctx = canvas.getContext('2d');
-        this.particles = [];
-        this.particleCount = 40;
-        this.mouse = { x: null, y: null, radius: 180 };
-        
-        this.init();
-        this.animate();
-        this.setupEventListeners();
-      }
-      
-      init() {
-        this.resize();
-        this.createParticles();
-      }
-      
-      resize() {
-        this.canvas.width = this.canvas.offsetWidth;
-        this.canvas.height = this.canvas.offsetHeight;
-      }
-      
-      createParticles() {
-        this.particles = [];
-        for (let i = 0; i < this.particleCount; i++) {
-          this.particles.push({
-            x: Math.random() * this.canvas.width,
-            y: Math.random() * this.canvas.height,
-            radius: Math.random() * 2.5 + 1,
-            vx: (Math.random() - 0.5) * 0.3,
-            vy: (Math.random() - 0.5) * 0.3,
-            opacity: Math.random() * 0.4 + 0.2,
-            // Drone-like wobble
-            wobbleSpeed: Math.random() * 0.02 + 0.01,
-            wobbleAmount: Math.random() * 2 + 1,
-            wobbleOffset: Math.random() * Math.PI * 2
-          });
-        }
-      }
-      
-      drawParticles() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        
-        this.particles.forEach((particle, i) => {
-          // Drone-like floating motion
-          particle.wobbleOffset += particle.wobbleSpeed;
-          const wobbleX = Math.sin(particle.wobbleOffset) * particle.wobbleAmount;
-          const wobbleY = Math.cos(particle.wobbleOffset * 1.5) * particle.wobbleAmount;
-          
-          particle.x += particle.vx + wobbleX * 0.1;
-          particle.y += particle.vy + wobbleY * 0.1;
-          
-          // Mouse antigravity effect
-          if (this.mouse.x !== null && this.mouse.y !== null) {
-            const rect = this.canvas.getBoundingClientRect();
-            const mouseX = this.mouse.x - rect.left;
-            const mouseY = this.mouse.y - rect.top;
-            
-            const dx = mouseX - particle.x;
-            const dy = mouseY - particle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            
-            if (distance < this.mouse.radius) {
-              const force = (this.mouse.radius - distance) / this.mouse.radius;
-              const angle = Math.atan2(dy, dx);
-              // Push away from mouse (antigravity)
-              particle.vx -= Math.cos(angle) * force * 0.3;
-              particle.vy -= Math.sin(angle) * force * 0.3;
-            }
-          }
-          
-          // Damping
-          particle.vx *= 0.98;
-          particle.vy *= 0.98;
-          
-          // Boundary check with bounce
-          if (particle.x < 0 || particle.x > this.canvas.width) {
-            particle.vx *= -0.8;
-            particle.x = Math.max(0, Math.min(this.canvas.width, particle.x));
-          }
-          if (particle.y < 0 || particle.y > this.canvas.height) {
-            particle.vy *= -0.8;
-            particle.y = Math.max(0, Math.min(this.canvas.height, particle.y));
-          }
-          
-          // Draw particle with glow
-          this.ctx.beginPath();
-          this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-          this.ctx.fillStyle = `rgba(99, 102, 241, ${particle.opacity})`;
-          this.ctx.shadowBlur = 8;
-          this.ctx.shadowColor = `rgba(99, 102, 241, ${particle.opacity * 0.8})`;
-          this.ctx.fill();
-          this.ctx.shadowBlur = 0;
-          
-          // Draw connections (lighter)
-          this.particles.slice(i + 1).forEach(otherParticle => {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            
-            if (distance < 120) {
-              this.ctx.beginPath();
-              this.ctx.strokeStyle = `rgba(99, 102, 241, ${0.15 * (1 - distance / 120)})`;
-              this.ctx.lineWidth = 0.5;
-              this.ctx.moveTo(particle.x, particle.y);
-              this.ctx.lineTo(otherParticle.x, otherParticle.y);
-              this.ctx.stroke();
-            }
-          });
-        });
-      }
-      
-      animate() {
-        this.drawParticles();
-        this.animationId = requestAnimationFrame(() => this.animate());
-      }
-      
-      setupEventListeners() {
-        window.addEventListener('resize', () => {
-          this.resize();
-          this.createParticles();
-        });
-        
-        const mouseMoveHandler = (e) => {
-          this.mouse.x = e.clientX;
-          this.mouse.y = e.clientY;
-        };
-        
-        const mouseLeaveHandler = () => {
-          this.mouse.x = null;
-          this.mouse.y = null;
-        };
-        
-        document.addEventListener('mousemove', mouseMoveHandler);
-        document.addEventListener('mouseleave', mouseLeaveHandler);
-        
-        this.cleanupListeners = () => {
-          document.removeEventListener('mousemove', mouseMoveHandler);
-          document.removeEventListener('mouseleave', mouseLeaveHandler);
-        };
-      }
-      
-      destroy() {
-        if (this.animationId) {
-          cancelAnimationFrame(this.animationId);
-        }
-        if (this.cleanupListeners) {
-          this.cleanupListeners();
-        }
-      }
-    }
-    
-    // Initialize features particles
-    function initFeaturesParticles() {
-      const canvas = document.getElementById('features-particles-canvas');
-      if (canvas && !canvas.particleSystem) {
-        canvas.particleSystem = new FeaturesParticleSystem(canvas);
-      }
-    }
-    
-    // Initialize when DOM is ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initFeaturesParticles);
-    } else {
-      initFeaturesParticles();
-    }
-  })();
-  </script>
 </div>
 
-<!-- Features Section (optional) -->
-{{ if .Params.features }}
-  <div class="py-24 sm:py-32 bg-white dark:bg-gray-900" style="position: relative; overflow: hidden;">
-    <!-- Floating Particles Canvas -->
-    <canvas id="features-particles-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></canvas>
-    
-    <div class="wrapper" style="position: relative; z-index: 10;">
+<!-- Features Section -->
+{{ if and .Params.detailed_features .Params.detailed_features.enable }}
+  {{ partial "sections/features/with_alternating_sections.html" (dict
+    "heading" .Params.detailed_features.heading
+    "description" .Params.detailed_features.description
+    "features" .Params.detailed_features.items
+    "layoutSize" "balanced"
+    "headingClass" "text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl"
+    "descriptionClass" "mt-6 text-xl leading-8 text-gray-600"
+    "page" .
+  ) }}
+{{ else if .Params.features }}
+  <div class="py-24 sm:py-32 bg-white dark:bg-gray-900">
+    <div class="wrapper">
       <div class="mx-auto max-w-2xl lg:text-center mb-16">
         {{ if .Params.features_heading }}
           <h2 class="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">{{ .Params.features_heading }}</h2>
@@ -631,11 +516,8 @@
 
 <!-- Content from Markdown -->
 {{ if .Content }}
-  <div class="py-16 bg-gray-50 dark:bg-gray-800" style="position: relative; overflow: hidden;">
-    <!-- Floating Particles Canvas -->
-    <canvas id="content-particles-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></canvas>
-    
-    <div class="wrapper" style="position: relative; z-index: 10;">
+  <div class="py-16 bg-gray-50 dark:bg-gray-800">
+    <div class="wrapper">
       <div class="prose prose-lg dark:prose-invert mx-auto max-w-3xl">
         {{ .Content }}
       </div>
@@ -644,125 +526,132 @@
 {{ end }}
 
 <script>
-(function() {
-  'use strict';
+// Hero Carousel Functions
+let currentSlide = 0;
+let slideCount = 0;
+let autoSlideInterval = null;
+let gradients = [];
+let backgrounds = [];
+let backgroundTypes = [];
+const AUTO_SLIDE_DELAY = 6000; // 6 seconds
+
+function initCarousel() {
+  const slides = document.querySelectorAll('.hero-slide');
+  slideCount = slides.length;
   
-  // Particle System (Antigravity Effect)
-  class ParticleSystem {
-    constructor(canvas) {
-      this.canvas = canvas;
-      this.ctx = canvas.getContext('2d');
-      this.particles = [];
-      this.particleCount = 80;
-      this.mouse = { x: null, y: null, radius: 150 };
-      
-      this.init();
-      this.animate();
-      this.setupEventListeners();
+  // Get gradient, background, and type data
+  const hero = document.getElementById('antigravityHero');
+  if (hero) {
+    if (hero.dataset.gradients) {
+      gradients = hero.dataset.gradients.split(',');
     }
-    
-    init() {
-      this.resize();
-      this.createParticles();
+    if (hero.dataset.backgrounds) {
+      backgrounds = hero.dataset.backgrounds.split(',');
     }
-    
-    resize() {
-      this.canvas.width = window.innerWidth;
-      this.canvas.height = window.innerHeight;
-    }
-    
-    createParticles() {
-      this.particles = [];
-      for (let i = 0; i < this.particleCount; i++) {
-        this.particles.push({
-          x: Math.random() * this.canvas.width,
-          y: Math.random() * this.canvas.height,
-          radius: Math.random() * 3 + 1,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          opacity: Math.random() * 0.5 + 0.2
-        });
-      }
-    }
-    
-    drawParticles() {
-      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-      
-      this.particles.forEach((particle, i) => {
-        // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        
-        // Mouse interaction (antigravity effect)
-        if (this.mouse.x !== null && this.mouse.y !== null) {
-          const dx = this.mouse.x - particle.x;
-          const dy = this.mouse.y - particle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          
-          if (distance < this.mouse.radius) {
-            const force = (this.mouse.radius - distance) / this.mouse.radius;
-            const angle = Math.atan2(dy, dx);
-            // Push away from mouse (antigravity)
-            particle.vx -= Math.cos(angle) * force * 0.5;
-            particle.vy -= Math.sin(angle) * force * 0.5;
-          }
-        }
-        
-        // Damping
-        particle.vx *= 0.99;
-        particle.vy *= 0.99;
-        
-        // Boundary check
-        if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
-        
-        // Clamp position
-        particle.x = Math.max(0, Math.min(this.canvas.width, particle.x));
-        particle.y = Math.max(0, Math.min(this.canvas.height, particle.y));
-        
-        // Draw particle
-        this.ctx.beginPath();
-        this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        this.ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`;
-        this.ctx.fill();
-        
-        // Draw connections - BRIGHTER AND THICKER
-        this.particles.slice(i + 1).forEach(otherParticle => {
-          const dx = particle.x - otherParticle.x;
-          const dy = particle.y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          
-          if (distance < 150) {
-            this.ctx.beginPath();
-            this.ctx.strokeStyle = `rgba(255, 255, 255, ${0.4 * (1 - distance / 150)})`;
-            this.ctx.lineWidth = 1.5;
-            this.ctx.moveTo(particle.x, particle.y);
-            this.ctx.lineTo(otherParticle.x, otherParticle.y);
-            this.ctx.stroke();
-          }
-        });
-      });
-    }
-    
-    animate() {
-      this.drawParticles();
-      requestAnimationFrame(() => this.animate());
-    }
-    
-    setupEventListeners() {
-      window.addEventListener('resize', () => this.resize());
-      
-      window.addEventListener('mousemove', (e) => {
-        this.mouse.x = e.clientX;
-        this.mouse.y = e.clientY;
-      });
-      
-      window.addEventListener('mouseleave', () => {
-        this.mouse.x = null;
-        this.mouse.y = null;
-      });
+    if (hero.dataset.backgroundTypes) {
+      backgroundTypes = hero.dataset.backgroundTypes.split(',');
     }
   }
+  
+  if (slideCount > 1) {
+    startAutoSlide();
+    
+    // Pause on hover
+    const carousel = document.getElementById('heroCarousel');
+    if (carousel) {
+      carousel.addEventListener('mouseenter', stopAutoSlide);
+      carousel.addEventListener('mouseleave', startAutoSlide);
+    }
+  }
+}
+
+function updateGradient(index) {
+  const hero = document.getElementById('antigravityHero');
+  if (!hero || gradients.length === 0) return;
+  
+  // Remove all gradient classes
+  hero.classList.remove('gradient-support', 'gradient-content');
+  
+  // Add the appropriate gradient class
+  const gradient = gradients[index] || 'support';
+  hero.classList.add('gradient-' + gradient);
+}
+
+function updateBackground(index) {
+  const allMedia = document.querySelectorAll('.hero-bg-media');
+  allMedia.forEach((media, i) => {
+    const slideIndex = parseInt(media.dataset.slide);
+    if (slideIndex === index) {
+      media.classList.add('active');
+      // 動画の場合は再生位置をリセット
+      if (media.tagName === 'VIDEO') {
+        media.currentTime = 0;
+      }
+    } else {
+      media.classList.remove('active');
+    }
+  });
+}
+
+function goToSlide(index) {
+  const slides = document.querySelectorAll('.hero-slide');
+  const indicators = document.querySelectorAll('.hero-indicator');
+  
+  if (index < 0) index = slideCount - 1;
+  if (index >= slideCount) index = 0;
+  
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+  
+  indicators.forEach((indicator, i) => {
+    indicator.classList.toggle('active', i === index);
+  });
+  
+  // Update gradient and background
+  updateGradient(index);
+  updateBackground(index);
+  
+  currentSlide = index;
+  resetAutoSlide();
+}
+
+function nextSlide() {
+  goToSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  goToSlide(currentSlide - 1);
+}
+
+function startAutoSlide() {
+  if (autoSlideInterval) return;
+  autoSlideInterval = setInterval(nextSlide, AUTO_SLIDE_DELAY);
+}
+
+function stopAutoSlide() {
+  if (autoSlideInterval) {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = null;
+  }
+}
+
+function resetAutoSlide() {
+  stopAutoSlide();
+  startAutoSlide();
+}
+
+// Initialize carousel when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCarousel);
+} else {
+  initCarousel();
+}
+</script>
+
+<script>
+(function() {
+  'use strict';
   
   // Glow Orb Effect
   function setupGlowOrb() {
@@ -785,10 +674,6 @@
   
   // Initialize
   document.addEventListener('DOMContentLoaded', function() {
-    const canvas = document.getElementById('particles-canvas');
-    if (canvas) {
-      new ParticleSystem(canvas);
-    }
     setupGlowOrb();
   });
 })();
