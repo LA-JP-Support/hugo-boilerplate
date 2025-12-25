@@ -1,25 +1,76 @@
 ---
 title: "SmartWeb"
 date: 2025-11-18
+heroType: "enhanced"
 draft: false
 description: "Next-generation web experience for you"
 
-# Hero Section
-hero_heading: "Web Solutions to Create the Future"
-hero_description: "SmartWeb leads your business to the next level with cutting-edge technology and design. We provide innovative web services powered by AI."
+# Hero Slides (Carousel)
+hero_slides:
+  - heading: "Make customer support smarter with AI."
+    description: "Fully integrated with LiveAgent × FlowHunt AI.<br>Reduce response time and streamline operations<br><strong>100+ languages • 24/7 availability</strong>"
+    gradient: "support"
+    background_video: "/videos/hero-customer-support.mp4"
+    cta_primary:
+      text: "Book a free consultation"
+      url: "/en/contact/"
+    cta_secondary:
+      text: "See details"
+      url: "#customer-support"
 
-# CTA Buttons
-cta_primary:
-  text: "Get Started"
-  url: "/en/blog/"
-cta_secondary:
-  text: "Learn More"
-  url: "#features"
+  - heading: "Accelerate content creation with AI."
+    description: "AI generates blogs, glossary pages, and video-based articles<br>Plus lightning-fast Hugo builds—end to end<br><strong>Create multilingual content at the same time</strong>"
+    gradient: "content"
+    background_video: "/videos/hero-content-creation.mp4"
+    cta_primary:
+      text: "Book a free consultation"
+      url: "/en/contact/"
+    cta_secondary:
+      text: "See details"
+      url: "#content-creation"
 
 # Features Section
 features_heading: "Why SmartWeb"
 features_title: "All-in-One Solution"
 features_description: "We combine the latest AI technology with user-friendly interfaces to provide web services that anyone can easily use."
+
+# Features Section - Detailed (Alternating Layout)
+detailed_features:
+  enable: true
+  heading: "Two Solutions"
+  description: "SmartWeb combines the latest AI technology with a high-performance web foundation to deliver two powerful solutions that accelerate business growth."
+  items:
+    - title: "AI Customer Support"
+      description: "Fully integrated with LiveAgent and FlowHunt AI. Automate customer support 24/7 in multiple languages and dramatically improve efficiency without compromising quality."
+      video: "frmB19r0k58"
+      videoTitle: "Smart Customer Support in 10 Minutes"
+      imageAlt: "AI Customer Support Dashboard"
+      imagePosition: "right"
+      logos:
+        - "/images/liveagent-logo.png"
+        - "/images/flowhunt-logo.png"
+      listItems:
+        - "Instant answers with an AI chatbot supporting 100+ languages"
+        - "High-accuracy responses generated from historical support context"
+        - "Seamless escalation to human agents for complex cases"
+        - "Reduce workload by up to 82% and improve customer satisfaction"
+      ctaText: "See Support Features"
+      ctaUrl: "#customer-support"
+      ctaStyle: "bg-indigo-600 hover:bg-indigo-500 text-white"
+
+    - title: "AI Content Creation & Web Build"
+      description: "Automate your entire content marketing workflow with AI—from blog posts and glossary pages to ultra-fast Hugo website builds."
+      imageUrl: "/images/hero-content-creation.jpg"
+      imageAlt: "AI Content Creation Tools"
+      imagePosition: "left"
+      listItems:
+        - "Auto-generate glossary pages, blog posts, and video-to-article summaries"
+        - "Automatically add SEO metadata and structured data"
+        - "Lightning-fast delivery with static site generation (Hugo)"
+        - "Secure, low-cost operations with a serverless-friendly setup"
+      ctaText: "See Creation Features"
+      ctaUrl: "#content-creation"
+      ctaStyle: "bg-indigo-600 hover:bg-indigo-500 text-white"
 
 features:
   - name: "AI-Driven Automation"
@@ -43,5 +94,3 @@ ctaPrimaryURL: "/en/blog/"
 ctaSecondaryText: "Contact us"
 ctaSecondaryURL: "/en/contact/"
 ---
-
-{{< youtube frmB19r0k58 >}}
