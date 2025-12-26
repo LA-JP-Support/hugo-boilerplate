@@ -364,7 +364,7 @@
         <div class="hero-carousel" id="heroCarousel">
           {{ range $index, $slide := .Params.hero_slides }}
           <div class="hero-slide{{ if eq $index 0 }} active{{ end }}" data-slide="{{ $index }}">
-            <h1 class="text-5xl font-semibold tracking-tight text-balance text-white drop-shadow-lg sm:text-7xl">
+            <h1 class="text-5xl font-bold font-mincho tracking-tight text-balance text-white drop-shadow-lg sm:text-7xl">
               {{ $slide.heading | safeHTML }}
             </h1>
             
@@ -407,11 +407,11 @@
         {{ else }}
         <!-- Single Hero (Fallback) -->
         {{ if .Params.hero_heading }}
-          <h1 class="text-5xl font-semibold tracking-tight text-balance text-white drop-shadow-lg sm:text-7xl">
+          <h1 class="text-5xl font-bold font-mincho tracking-tight text-balance text-white drop-shadow-lg sm:text-7xl">
             {{ .Params.hero_heading }}
           </h1>
         {{ else }}
-          <h1 class="text-5xl font-semibold tracking-tight text-balance text-white drop-shadow-lg sm:text-7xl">
+          <h1 class="text-5xl font-bold font-mincho tracking-tight text-balance text-white drop-shadow-lg sm:text-7xl">
             {{ .Title }}
           </h1>
         {{ end }}
@@ -466,7 +466,7 @@
     "description" .Params.detailed_features.description
     "features" .Params.detailed_features.items
     "layoutSize" "balanced"
-    "headingClass" "text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl"
+    "headingClass" "text-4xl font-bold font-mincho tracking-tight text-gray-900 sm:text-5xl"
     "descriptionClass" "mt-6 text-xl leading-8 text-gray-600"
     "page" .
   ) }}

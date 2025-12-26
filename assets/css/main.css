@@ -1,10 +1,24 @@
 /* 🎨 CSS IMPORTS - ALL IMPORTS MUST BE FIRST */
 @import "./variables.css";
-@import "./fonts.css";
+/* @import "./fonts.css"; */
 @import "./typewriter.css";
 @import "./lazy-images.css";
 @import "./lazy-videos.css";
 @import "./tooltip.css";
+
+/* Inter font - Variable Font implementation */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900; /* supports all weights from 100-900 */
+  src: url('/fonts/inter/Inter-VariableFont_opsz,wght.woff2') format('woff2-variations');
+  font-display: swap;
+}
+
+/* Explicit Mincho font class to force Noto Serif JP application */
+.font-mincho {
+  font-family: "Noto Serif JP", "游明朝", "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "MS P明朝", serif !important;
+}
 
 /* 🎯 TAILWIND LAYERS */
 @tailwind base;
