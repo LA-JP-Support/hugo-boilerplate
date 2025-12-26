@@ -81,6 +81,29 @@ features:
     description: "AIブログ記事作成、YouTube記事変換、用語集作成、高速Webサイト構築（Hugo）。情報発信・マーケティングを効率化します。"
     icon: "M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z"
 
+# AI Customer Support - 4 Pillars
+pillars_support:
+  label: "AIカスタマーサポート"
+  heading: "4つの柱"
+  description: "御社のナレッジを賢いAIに変える。マニュアル・FAQ・ドキュメントを学習させるだけで、24時間365日、100言語で対応する御社専用のAIが誕生します。"
+  items:
+    - title: "AIチャットボット"
+      label: "訪問者の質問に即座に回答"
+      image: "/images/pillars/ai-chatbot.jpg"
+      description: "Webサイトに設置するだけで、御社のマニュアル・FAQ・製品情報を学習したAIが、お客様の質問に24時間対応。「送料は？」「返品できる？」といったよくある質問から、製品の詳細な仕様まで、人間のような自然な会話で回答します。"
+    - title: "LiveAgent完全統合"
+      label: "業界唯一のシームレス連携"
+      image: "/images/pillars/liveagent-integration.jpg"
+      description: "AIチャットボットとチケットシステムが同じ画面で一元管理できる唯一のソリューション。メール、SNS、電話、チャットすべての問い合わせ履歴を集約。AIから人間への引き継ぎもボタンひとつで完了し、お客様は最初から説明し直す必要がありません。"
+    - title: "メール自動回答"
+      label: "受信から回答案作成まで自動化"
+      image: "/images/pillars/email-automation.jpg"
+      description: "お問い合わせメールを受信すると、AIが内容を分析し、御社のナレッジベースを参照して回答案を自動作成。担当者は内容を確認して送信するだけ。1通あたりの対応時間を大幅に短縮し、より多くのお客様に迅速な対応が可能になります。"
+    - title: "100言語・24時間対応"
+      label: "日本語で学習、世界中に対応"
+      image: "/images/pillars/multilingual-support.jpg"
+      description: "日本語で学習させたAIが、英語で質問されれば英語で、中国語なら中国語で自動的に回答。約100言語に対応し、追加の翻訳コストや多言語スタッフは不要。深夜も休日も休むことなく稼働し、営業時間外の機会損失をゼロにします。"
+
 # CTA Section (Bottom)
 showCTA: true
 ctaHeading: "まずは無料相談から"

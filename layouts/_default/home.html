@@ -514,6 +514,165 @@
   </div>
 {{ end }}
 
+<!-- AI Customer Support - 4 Pillars Section -->
+{{ if .Params.pillars_support }}
+<section id="customer-support" class="pillars-section py-24 sm:py-32 bg-gray-50 dark:bg-gray-900">
+  <style>
+    .pillars-section {
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    }
+    .dark .pillars-section {
+      background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
+    }
+    .pillar-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .dark .pillar-card {
+      background: #1f2937;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    }
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    }
+    .dark .pillar-card:hover {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+    }
+    .pillar-image-container {
+      position: relative;
+      width: 100%;
+      padding-top: 60%;
+      overflow: hidden;
+      background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+    }
+    .dark .pillar-image-container {
+      background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
+    }
+    .pillar-image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      z-index: 2;
+    }
+    .pillar-card:hover .pillar-image-container img {
+      transform: scale(1.05);
+    }
+    .pillar-image-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+    .pillar-content {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .pillar-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #4f46e5;
+      margin-bottom: 0.5rem;
+    }
+    .dark .pillar-label {
+      color: #818cf8;
+    }
+    .pillar-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+    .dark .pillar-title {
+      color: #f9fafb;
+    }
+    .pillar-description {
+      font-size: 0.9375rem;
+      color: #4b5563;
+      line-height: 1.7;
+      flex: 1;
+    }
+    .dark .pillar-description {
+      color: #9ca3af;
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    @media (max-width: 768px) {
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  
+  <div class="wrapper">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      {{ if .Params.pillars_support.label }}
+      <p class="text-base font-semibold text-indigo-600 dark:text-indigo-400 mb-3">
+        {{ .Params.pillars_support.label }}
+      </p>
+      {{ end }}
+      {{ if .Params.pillars_support.heading }}
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl mb-6">
+        {{ .Params.pillars_support.heading }}
+      </h2>
+      {{ end }}
+      {{ if .Params.pillars_support.description }}
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+        {{ .Params.pillars_support.description }}
+      </p>
+      {{ end }}
+    </div>
+    
+    <!-- 2x2 Grid -->
+    <div class="pillars-grid max-w-5xl mx-auto">
+      {{ range .Params.pillars_support.items }}
+      <div class="pillar-card">
+        <div class="pillar-image-container">
+          {{ if .image }}
+          <img src="{{ .image }}" alt="{{ .title }}" loading="lazy" onerror="this.style.display='none'">
+          {{ end }}
+          <div class="pillar-image-placeholder">
+            <svg class="w-16 h-16 text-indigo-300 dark:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+            </svg>
+          </div>
+        </div>
+        <div class="pillar-content">
+          {{ if .label }}
+          <p class="pillar-label">{{ .label }}</p>
+          {{ end }}
+          <h3 class="pillar-title">{{ .title }}</h3>
+          <p class="pillar-description">{{ .description }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
 <!-- Content from Markdown -->
 {{ if .Content }}
   <div class="py-16 bg-gray-50 dark:bg-gray-800">
