@@ -85,12 +85,12 @@ features:
 pillars_support:
   label: "AIカスタマーサポート"
   heading: "4つの柱"
-  description: "御社のナレッジを賢いAIに変える。マニュアル・FAQ・ドキュメントを学習させるだけで、24時間365日、100言語で対応する御社専用のAIが誕生します。"
+  description: "御社のナレッジを賢いAIに変える。SmartWebはRAG（検索拡張生成）技術を採用し、マニュアル・FAQ・ドキュメントから最適な情報を検索・参照しながら回答を生成。常に最新の正確な情報に基づいた、御社専用のAIが誕生します。"
   items:
     - title: "AIチャットボット"
-      label: "訪問者の質問に即座に回答"
+      label: "100言語対応・24時間365日稼働"
       image: "/images/pillars/ai-chatbot.jpg"
-      description: "Webサイトに設置するだけで、御社のマニュアル・FAQ・製品情報を学習したAIが、お客様の質問に24時間対応。「送料は？」「返品できる？」といったよくある質問から、製品の詳細な仕様まで、人間のような自然な会話で回答します。"
+      description: "Webサイトに設置するだけで、御社のマニュアル・FAQ・製品情報を学習したAIが24時間対応。日本語で学習させたAIが、英語や中国語など約100言語で自動的に回答。深夜も休日も稼働し、営業時間外の機会損失をゼロにします。"
     - title: "LiveAgent完全統合"
       label: "業界唯一のシームレス連携"
       image: "/images/pillars/liveagent-integration.jpg"
@@ -99,10 +99,10 @@ pillars_support:
       label: "受信から回答案作成まで自動化"
       image: "/images/pillars/email-automation.jpg"
       description: "お問い合わせメールを受信すると、AIが内容を分析し、御社のナレッジベースを参照して回答案を自動作成。担当者は内容を確認して送信するだけ。1通あたりの対応時間を大幅に短縮し、より多くのお客様に迅速な対応が可能になります。"
-    - title: "100言語・24時間対応"
-      label: "日本語で学習、世界中に対応"
-      image: "/images/pillars/multilingual-support.jpg"
-      description: "日本語で学習させたAIが、英語で質問されれば英語で、中国語なら中国語で自動的に回答。約100言語に対応し、追加の翻訳コストや多言語スタッフは不要。深夜も休日も休むことなく稼働し、営業時間外の機会損失をゼロにします。"
+    - title: "AI回答アシスタント"
+      label: "オペレーターの文章作成をAIが支援"
+      image: "/images/pillars/ai-answer-assistant.jpg"
+      description: "チケットの会話履歴をAIが分析し、文脈に沿った回答案を自動作成。「もっと丁寧に」「簡潔に」といった指示で瞬時にブラッシュアップも可能。新人オペレーターでもベテラン並みの回答品質を実現し、対応時間を大幅に短縮します。"
 
 # CTA Section (Bottom)
 showCTA: true
