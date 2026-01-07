@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>連合学習 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Federated-Learning/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="連合学習の包括的ガイド：データプライバシーを保護しながら、分散デバイス全体でモデルをトレーニングする分散型機械学習について解説します。" name="description"/>
+<meta content="連合学習, 分散機械学習, プライバシー保護AI, 分散型トレーニング, エッジコンピューティング" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Federated-Learning/" property="og:url"/>
+<meta content="連合学習 | SmartWeb" property="og:title"/>
+<meta content="連合学習の包括的ガイド：データプライバシーを保護しながら、分散デバイス全体でモデルをトレーニングする分散型機械学習について解説します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Federated-Learning/" name="twitter:url"/>
+<meta content="連合学習 | SmartWeb" name="twitter:title"/>
+<meta content="連合学習の包括的ガイド：データプライバシーを保護しながら、分散デバイス全体でモデルをトレーニングする分散型機械学習について解説します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">連合学習</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        連合学習
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Federated Learning
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          連合学習の包括的ガイド：データプライバシーを保護しながら、分散デバイス全体でモデルをトレーニングする分散型機械学習について解説します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                連合学習
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                分散機械学習
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                プライバシー保護AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                分散型トレーニング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エッジコンピューティング
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="連合学習とは何か">連合学習とは何か?</h2>
+<p>連合学習は、複数の分散デバイスや組織間で人工知能モデルを訓練できる革新的な機械学習のパラダイムであり、生データの集中化を必要としません。このアプローチは、参加者が機密データをローカルに保存したまま共有モデルに貢献でき、外部サーバーにデータを送信することなく実現できるため、<a data-lb="1" href="/ja/glossary/Data-Privacy/" title="デジタル時代における個人情報保護のためのデータプライバシーの原則、規制、ベストプラクティスに関する包括的なガイド。">データプライバシー</a>、モデル訓練、協調的<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>に関する考え方を根本的に変革します。</p>
+<p>この概念は、大規模機械学習の利点と、ますます厳格化するプライバシー要件およびデータ保護規制とのバランスを取る必要性から生まれました。従来の機械学習アプローチでは、集中リポジトリに膨大な量のデータを収集する必要があり、これが重大なプライバシーリスク、規制コンプライアンスの課題、潜在的な<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>脆弱性を生み出します。<a data-lb="1" href="/ja/glossary/Federated-Learning/" title="連合学習の包括的ガイド：データプライバシーを保護しながら、分散デバイス全体でモデルをトレーニングする分散型機械学習について解説します。">連合学習</a>は、データをモデルに持ち込むのではなく、モデルをデータに持ち込むことでこれらの懸念に対処し、組織や個人がデータ主権を損なうことなく協調的な<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>開発に参加できるようにします。</p>
+<p>連合学習の核心は、中央サーバーがグローバルモデルを参加クライアントに配布し、クライアントがプライベートデータセットでモデルをローカルに訓練する協調プロセスを通じて動作します。生データを共有する代わりに、クライアントは勾配やパラメータ変更などのモデル更新のみを共有し、これらが集約されてグローバルモデルが改善されます。このプロセスは、厳格なデータプライバシー境界を維持しながら、すべての参加者の集合知識から恩恵を受ける最適解にモデルが収束するまで反復されます。このアプローチは、データプライバシーが最重要であるが協調学習が大きな利益をもたらす、医療、金融、<a data-lb="1" href="/ja/glossary/DTMF--Dual-Tone-Multi-Frequency-/" title="DTMF(デュアルトーン多重周波数)は、キーパッド押下時に発生する固有の音声トーンを使用してコマンドを解釈し、通話をルーティングし、自動メニューナビゲーション、リモートコントロール、および電話ネットワークやデジタルプラットフォームにおける安全なデータ入力を可能にする通信信号システムです。">通信</a>、消費者技術などの業界で大きな注目を集めています。</p>
+<h2 id="連合学習の主要コンポーネント">連合学習の主要コンポーネント</h2>
+<p><strong>中央集約サーバー</strong> - グローバルモデルを維持し、参加クライアントに配布し、クライアントから受信したローカル更新を集約してグローバルモデルの改善版を作成する調整エンティティ。</p>
+<p><strong>連合クライアント</strong> - ローカルデータセットでグローバルモデルを訓練し、結果として得られるモデル更新のみを共有することで連合学習プロセスに参加する個々のデバイス、組織、またはデータサイロ。</p>
+<p><strong>モデル集約アルゴリズム</strong> - 連合平均化(FedAvg)などの数学的技術で、データ分布やクライアントの信頼性などの要因を考慮しながら、複数のローカルモデル更新を単一の改善されたグローバルモデルに結合します。</p>
+<p><strong>通信プロトコル</strong> - 中央サーバーと連合クライアント間でモデルパラメータを送信するための安全なチャネルと標準化された方法で、多くの場合、暗号化と<a data-lb="1" href="/ja/glossary/Privacy-Preserving-ML/" title="プライバシー保護機械学習(PPML)について探求します。差分プライバシー、準同型暗号、マルチパーティ計算、連合学習などの手法を用いて、機械学習モデルにおける機密データを保護する方法を解説します。">差分プライバシー</a>メカニズムを組み込んでいます。</p>
+<p><strong>ローカル訓練手順</strong> - 各クライアントが更新を共有する前に、ローカルデータでグローバルモデルを訓練するために使用する特定の<a data-lb="1" href="/ja/glossary/Ensemble-Learning/" title="機械学習における予測精度向上のためのアンサンブル学習手法、アルゴリズム、および応用に関する包括的ガイド。">機械学習アルゴリズム</a>と最適化技術。</p>
+<p><strong>プライバシー保護メカニズム</strong> - 差分プライバシー、セキュアマルチパーティ計算、準同型暗号化などの技術的保護措置で、個々のデータポイントとモデル貢献が逆エンジニアリングされることを防ぎます。</p>
+<p><strong>クライアント選択戦略</strong> - 計算能力、<a data-lb="1" href="/ja/glossary/Data-Quality/" title="正確で完全、かつ信頼性の高いデータ資産を確保するための、データ品質管理、評価フレームワーク、ベストプラクティスに関する包括的なガイド。">データ品質</a>、ネットワーク接続性、統計的多様性などの要因に基づいて、各訓練ラウンドに参加すべき利用可能なクライアントのサブセットを決定するアルゴリズム。</p>
+<h2 id="連合学習の仕組み">連合学習の仕組み</h2>
+<p>連合学習プロセスは、データプライバシーを維持しながら協調的なモデル訓練を保証する体系的な<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>に従います:</p>
+<ol>
+<li>
+<p><strong>グローバルモデルの初期化</strong> - 中央サーバーがランダムに初期化されたパラメータを持つ初期機械学習モデルを作成し、学習目標、アーキテクチャ、訓練ハイパーパラメータを定義します。</p>
+</li>
+<li>
+<p><strong>クライアント選択とモデル配布</strong> - サーバーが事前定義された基準に基づいて利用可能なクライアントのサブセットを選択し、現在のグローバルモデルパラメータをこれらの選択された参加者に安全に送信します。</p>
+</li>
+<li>
+<p><strong>ローカルデータ準備</strong> - 選択された各クライアントが、生データを外部に共有することなく、必要な前処理、<a data-lb="1" href="/ja/glossary/Data-Augmentation/" title="機械学習とAIアプリケーションのためのデータ拡張技術、メリット、実装戦略に関する包括的なガイド。">データ拡張</a>、品質チェックを適用してローカルデータセットを訓練用に準備します。</p>
+</li>
+<li>
+<p><strong>ローカルモデル訓練</strong> - クライアントが標準的な<a data-lb="1" href="/ja/glossary/Loss-Function/" title="機械学習における損失関数の包括的ガイド - 種類、実装、メリット、最適化アルゴリズムのベストプラクティスを解説">機械学習最適化</a>技術を使用して、受信したグローバルモデルをローカルデータセットで独立に訓練し、通常は複数エポックの訓練を実行します。</p>
+</li>
+<li>
+<p><strong>ローカル更新の計算</strong> - ローカル訓練後、各クライアントが更新されたモデルパラメータと元のグローバルモデルパラメータの差を計算し、ローカル更新ベクトルを作成します。</p>
+</li>
+<li>
+<p><strong>安全な更新送信</strong> - クライアントがローカル更新に<a data-lb="1" href="/ja/glossary/Data-Anonymization/" title="プライバシーを保護しながら分析におけるデータの有用性を維持するための、データ匿名化技術、手法、ベストプラクティスに関する包括的なガイド。">プライバシー保護</a>技術を適用し、これらの保護された更新を中央サーバーに安全に送信します。</p>
+</li>
+<li>
+<p><strong>グローバル集約</strong> - サーバーがすべてのローカル更新を収集し、集約アルゴリズムを適用してそれらを単一の改善されたグローバルモデルに結合します。多くの場合、ローカルデータセットサイズに基づく重み付け平均を使用します。</p>
+</li>
+<li>
+<p><strong>モデル検証と収束チェック</strong> - サーバーが更新されたグローバルモデルのパフォーマンスを評価し、訓練プロセスが収束したか、追加のラウンドが必要かを判断します。</p>
+</li>
+<li>
+<p><strong>反復とデプロイ</strong> - 収束基準が満たされていない場合、改善されたグローバルモデルでステップ2からプロセスを繰り返します。満たされている場合は、最終モデルをデプロイ用に準備します。</p>
+</li>
+</ol>
+<p><strong>ワークフロー例</strong>: 医療コンソーシアムが診断<a data-lb="1" href="/ja/glossary/Generative-AI/" title="生成AIは、学習したパターンから、テキスト、画像、コードなどの新しいコンテンツを作成します。その定義、モデル(GAN、VAE、Transformer)、応用例、メリット、課題について解説します。">AIモデル</a>を開発したいと考えています。病院Aは1,000件の患者記録で初期モデルを訓練し、病院Bは1,500件の記録で訓練し、病院Cは800件の記録で訓練します。各病院はローカル更新を計算し、これらの数学的変更のみを中央サーバーに送信します。中央サーバーはそれらを結合して、どの病院も実際の患者データを共有することなく、全3,300件の患者記録から恩恵を受ける改善されたグローバルモデルを作成します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>強化されたデータプライバシー</strong> - 連合学習は機密データを集中化する必要性を排除し、組織が独自情報を完全に管理し、プライバシー規制に準拠しながら協調的機械学習に参加できるようにします。</p>
+<p><strong>規制コンプライアンス</strong> - このアプローチは、個人データや機密データが元の場所を離れないことを保証することで、GDPR、HIPAA、CCPAなどの<a data-lb="1" href="/ja/glossary/Encryption-at-Rest/" title="保存データの暗号化に関する包括的なガイド - 暗号化手法によるストレージデータの保護、実装戦略、セキュリティのベストプラクティスについて解説します。">データ保護</a>法と自然に整合し、コンプライアンス負担と法的リスクを軽減します。</p>
+<p><strong>データ転送コストの削減</strong> - 生データセットではなくモデル更新のみを共有することで、連合学習は帯域幅要件とデータ送信コストを大幅に削減します。これは、大規模データセットを持つ組織やネットワーク容量が限られている組織にとって特に重要です。</p>
+<p><strong>モデル汎化性能の向上</strong> - 連合学習を通じて訓練されたモデルは、複数の組織やデバイスにわたる多様なデータセットから恩恵を受け、単一データセットで訓練されたモデルと比較して、より優れた汎化能力と<a data-lb="1" href="/ja/glossary/Regularization/" title="機械学習における正則化技術の包括的なガイド。L1/L2正則化、ドロップアウト、過学習を防ぐための高度な手法について解説します。">過学習</a>の軽減につながります。</p>
+<p><strong>スケーラブルな協調学習</strong> - このフレームワークは、複雑なデータ共有契約や集中データインフラストラクチャを必要とせずに、数百または数千の参加者間での大規模な協力を可能にします。</p>
+<p><strong>エッジコンピューティング統合</strong> - 連合学習は、データ処理がローカルデバイスで行われる<a data-lb="1" href="/ja/glossary/Edge-Function/" title="遠隔地のデータセンターではなく、ユーザーに近いサーバー上で実行される軽量プログラムで、リクエストをローカルで処理することでウェブサイトやアプリの応答速度を向上させます。">エッジコンピューティング</a>シナリオを自然にサポートし、プライバシーを保持しながら<a data-lb="1" href="/ja/glossary/Latency/" title="レイテンシとは、リクエストとシステムの応答との間の時間遅延のことで、AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。">レイテンシ</a>を削減し、リアルタイムアプリケーションを可能にします。</p>
+<p><strong>単一障害点の削減</strong> - 連合学習の分散性により、一部の参加者が利用できなくなったり技術的問題が発生したりしても動作を継続できる、より回復力のあるシステムが作成されます。</p>
+<p><strong>データ主権の保持</strong> - 組織と個人は、データ所有権を放棄することなく、連合学習イニシアチブにいつどのように参加するかを決定し、データに対する完全な主権を維持します。</p>
+<p><strong>クロスドメイン知識転移</strong> - このアプローチは、競争上の境界と知的財産の懸念を尊重しながら、異なるドメインと業界間での<a data-lb="1" href="/ja/glossary/Expert-Community/" title="エキスパートコミュニティの包括的ガイド - 専門家を結びつけ、コラボレーションを促進し、イノベーションを推進する専門知識ネットワーク。">知識共有</a>を可能にします。</p>
+<p><strong>リソース最適化</strong> - 連合学習は分散<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>を効率的に活用し、大規模な集中コンピューティングインフラストラクチャの必要性を減らし、より持続可能なAI開発を可能にします。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>医療診断</strong> - 病院が医療画像、電子健康記録、臨床データに関する診断モデルを訓練するために協力し、複数の医療システム全体で患者のプライバシーと<a data-lb="1" href="/ja/glossary/HIPAA--Health-Insurance-Portability-/" title="プライバシー、セキュリティ、相互運用性要件、コンプライアンス戦略、実装のベストプラクティスをカバーする、HIPAA規制の包括的なガイド。">HIPAAコンプライアンス</a>を維持します。</p>
+<p><strong>金融詐欺検出</strong> - 銀行と金融機関が、機密性の高い顧客取引データや独自の<a data-lb="1" href="/ja/glossary/Financial-Risk-Management/" title="財務リスク管理は、AI、機械学習、高度な分析手法を活用して、市場リスク、信用リスク、オペレーショナルリスク、流動性リスクなどの財務リスクを特定、評価、監視、軽減し、組織資産を保護し、規制コンプライアンスを確保します。">リスク評価</a>方法を公開することなく、モデルの洞察を共有することで詐欺検出アルゴリズムを共同開発します。</p>
+<p><strong>自動運転車開発</strong> - 自動車メーカーとフリート運営者が、独自のセンサーデータやルート情報を保護しながら、運転パターンの洞察を共有することで自動運転アルゴリズムを改善するために協力します。</p>
+<p><strong>モバイルキーボード予測</strong> - スマートフォンメーカーが、個人的なメッセージや通信にアクセスすることなく、数百万のデバイス全体でユーザーのタイピングパターンから学習することで、予測テキストと自動修正機能を強化します。</p>
+<p><strong>スマートシティインフラストラクチャ</strong> - 地方自治体と公益事業会社が、市民のプライバシーと機密インフラストラクチャデータを保持しながら、交通最適化、エネルギー管理、都市計画モデルを開発します。</p>
+<p><strong>製薬創薬</strong> - 研究機関と製薬会社が、独自の化合物ライブラリと研究方法を保護しながら、分子分析の洞察を共有することで創薬を加速します。</p>
+<p><strong>通信ネットワーク最適化</strong> - モバイルネットワーク事業者が、競争上の優位性と顧客プライバシーを維持しながら、カバレッジの改善、レイテンシの削減、スペクトル使用の最適化のために協力します。</p>
+<p><strong>産業IoT予知保全</strong> - 製造会社が、独自の製造プロセスと企業秘密を保護しながら、運用の洞察を共有することで産業機器の<a data-lb="1" href="/ja/glossary/Predictive-Maintenance/" title="予知保全は、AI、機械学習、IoTセンサーデータを活用して、設備の故障を事前に予測する手法です。これにより、ダウンタイムを最小限に抑え、コストを削減し、資産の寿命を延ばし、固定的な間隔ではなく実際の設備状態に基づいて保守スケジュールを最適化する、プロアクティブなメンテナンスが可能になります。">予知保全</a>モデルを開発します。</p>
+<p><strong>小売パーソナライゼーション</strong> - <a data-lb="1" href="/ja/glossary/Cart-Abandonment-Rate/" title="カート放棄率の定義、計算方法、業界ベンチマーク、放棄の主な理由、そしてカート放棄を削減し失われた売上を回復するための実践的な戦略を理解しましょう。">eコマース</a>プラットフォームと小売業者が、個々の購買履歴と競争力のある価格戦略を保持しながら、顧客行動パターンから学習することで推奨システムを強化します。</p>
+<p><strong>サイバーセキュリティ脅威検出</strong> - 組織が、機密性の高いセキュリティインフラストラクチャと<a data-lb="1" href="/ja/glossary/Data-Breach-Response/" title="サイバーセキュリティ専門家向けの、データ侵害対応戦略、インシデント管理、復旧手順に関する包括的なガイド。">インシデント対応</a>手順を保護しながら、攻撃パターンの洞察を共有することでサイバー脅威を特定し対応するために協力します。</p>
+<h2 id="連合学習と従来の機械学習の比較">連合学習と従来の機械学習の比較</h2>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>連合学習</th>
+<th>従来の機械学習</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>データの場所</strong></td>
+<td>データはクライアント全体に分散したまま</td>
+<td>データは単一リポジトリに集中</td>
+</tr>
+<tr>
+<td><strong>プライバシーレベル</strong></td>
+<td>高 - 生データは共有されない</td>
+<td>低 - データの集中化が必要</td>
+</tr>
+<tr>
+<td><strong>通信オーバーヘッド</strong></td>
+<td>中程度 - モデル更新のみ</td>
+<td>高 - データセット全体が転送される</td>
+</tr>
+<tr>
+<td><strong>スケーラビリティ</strong></td>
+<td>参加者全体で高度にスケーラブル</td>
+<td>中央インフラストラクチャによって制限される</td>
+</tr>
+<tr>
+<td><strong>規制コンプライアンス</strong></td>
+<td>プライバシー法に自然に準拠</td>
+<td>広範なコンプライアンス措置が必要</td>
+</tr>
+<tr>
+<td><strong>訓練速度</strong></td>
+<td>可変 - クライアントの可用性に依存</td>
+<td>一貫性 - 制御された環境</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>統計的不均一性</strong> - 参加クライアントは多くの場合、同一に分布していないデータを持っており、集中訓練<a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>と比較して収束を遅らせ、モデルパフォーマンスを低下させる統計的課題につながります。</p>
+<p><strong>通信ボトルネック</strong> - クライアントとサーバー間のモデル更新の反復的な交換は、特に帯域幅が限られているか、ネットワーク接続が不安定なシナリオで、重大な通信オーバーヘッドを生み出す可能性があります。</p>
+<p><strong>クライアントの可用性と信頼性</strong> - 連合学習システムは、訓練プロセスを中断し、モデル品質に影響を与える可能性のある断続的なクライアント参加、デバイス障害、さまざまな計算能力を処理する必要があります。</p>
+<p><strong>モデル収束の複雑さ</strong> - 部分的なクライアント参加、不均一なデータ分布、非同期更新パターンにより、連合設定での収束の達成は集中訓練よりも困難です。</p>
+<p><strong>セキュリティとプライバシー攻撃</strong> - プライバシー保護設計にもかかわらず、連合学習システムは、機密情報を抽出しようとする推論攻撃、モデルポイズニング、敵対的参加者に対して脆弱なままです。</p>
+<p><strong>計算リソースの不均衡</strong> - クライアントの計算能力の大きな変動は、遅いデバイスが連合システムの全体的な訓練速度と効率を制限する<a data-lb="1" href="/ja/glossary/bottlenecks/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ボトルネック</a>を生み出す可能性があります。</p>
+<p><strong>品質管理と検証</strong> - 訓練データが分散され、中央コーディネーターによる検査や前処理のために直接アクセスできない場合、データ品質と<a data-lb="1" href="/ja/glossary/Cross-Validation/" title="機械学習におけるモデル評価、パフォーマンス評価、堅牢な検証戦略のための交差検証技術に関する包括的なガイド。">モデル検証</a>の確保がより複雑になります。</p>
+<p><strong>インセンティブの調整</strong> - 連合学習への一貫した参加をクライアントに動機付けるには、特に参加に即座の利益なしに計算コストが伴う場合、インセンティブ構造の慎重な検討が必要です。</p>
+<p><strong>規制と法的複雑性</strong> - 多管轄の連合学習デプロイメントは、さまざまなプライバシー法、データ保護規制、国境を越えた<a data-lb="1" href="/ja/glossary/Metadata-Management/" title="データ資産を効果的に整理し統制するための、メタデータ管理システム、プロセス、ベストプラクティスに関する包括的なガイド。">データガバナンス</a>要件をナビゲートする必要があります。</p>
+<p><strong>デバッグと監視の困難</strong> - 連合学習システムのトラブルシューティングは、クライアント側の操作への可視性が限られており、分散障害モードがあるため、集中アプローチよりも困難です。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>堅牢なクライアント選択</strong> - デバイス能力、ネットワーク条件、データ品質、過去の参加パターンを考慮したインテリジェントなクライアント選択アルゴリズムを実装し、訓練効率とモデルパフォーマンスを最適化します。</p>
+<p><strong>差分プライバシー統合</strong> - 送信前にモデル更新に差分プライバシー技術を適用し、全体的なモデルの有用性を維持しながら個々のデータポイントを保護するために較正されたノイズを追加します。</p>
+<p><strong>セキュアな集約プロトコル</strong> - セキュアマルチパーティ計算や準同型暗号化などの暗号技術を展開し、送信と集約プロセス中にモデル更新を保護します。</p>
+<p><strong>適応的通信戦略</strong> - <a data-lb="1" href="/ja/glossary/Codec/" title="コーデックの包括的ガイド - 効率的なストレージと伝送のために、オーディオ、ビデオ、データをエンコードおよびデコードするデジタル圧縮アルゴリズムです。">圧縮</a>技術、勾配量子化、適応的通信スケジュールを実装して、帯域幅使用を最小限に抑え、クライアント全体のさまざまなネットワーク条件に対応します。</p>
+<p><strong>不均一性を考慮したアルゴリズム</strong> - 標準的な連合平均化アプローチではなく、FedProxやFedNovaなど、非IIDデータ分布を処理するために特別に設計された連合学習アルゴリズムを使用します。</p>
+<p><strong>包括的な監視システム</strong> - 連合学習プロセス全体を通じて、モデルパフォーマンス、クライアント参加率、通信コスト、潜在的なセキュリティ異常を追跡する監視フレームワークを確立します。</p>
+<p><strong>インセンティブメカニズム設計</strong> - データ品質、計算貢献、連合システムへの長期的な関与に基づいてクライアント参加に報いる公正で透明なインセンティブ構造を開発します。</p>
+<p><strong>フォールトトレランスアーキテクチャ</strong> - 全体的な訓練プロセスやモデルの整合性を損なうことなく、クライアントのドロップアウト、ネットワーク障害、悪意のある参加者を処理できる回復力のあるシステムを構築します。</p>
+<p><strong>データ品質保証</strong> - ローカルデータセットがグローバルモデルへの貢献のための最低基準を満たしていることを保証するために、クライアント側のデータ検証と品質評価メカニズムを実装します。</p>
+<p><strong>規制コンプライアンスフレームワーク</strong> - すべての参加クライアントに関連するデータ保護法、監査要件、管轄を越えた法的考慮事項に対処する包括的なコンプライアンス手順を確立します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>パーソナライズド連合学習</strong> - グローバルモデルの知識とローカルパーソナライゼーションのバランスを取る高度なアプローチで、クライアントが協調学習から恩恵を受けながら、特定のデータ分布を反映するカスタマイズされたモデルを維持できるようにします。</p>
+<p><strong>階層的連合学習</strong> - クライアントを階層構造に編成する多レベル連合アーキテクチャで、より効率的な通信パターンを可能にし、数千の参加者を持つ大規模デプロイメントのより良い処理を実現します。</p>
+<p><strong>非同期連合学習</strong> - 同期された訓練ラウンドの必要性を排除する技術で、クライアントが自分のペースで更新を貢献でき、動的環境でのより柔軟な参加パターンを可能にします。</p>
+<p><strong>連合転移学習</strong> - 連合学習と転移学習の原則を組み合わせる方法で、プライバシー制約を維持し、事前訓練されたモデルを活用しながら、異なるドメインとタスク間での知識転移を可能にします。</p>
+<p><strong>ビザンチン耐性集約</strong> - 敵対的更新を通じてグローバルモデルを毒しようとする悪意のあるまたは侵害されたクライアントの影響を検出し軽減するために設計された高度な集約アルゴリズム。</p>
+<p><strong>クロスサイロとクロスデバイス最適化</strong> - 組織間のクロスサイロ学習と、異なる要件と制約を持つ消費者デバイス間のクロスデバイス学習を含む、異なる連合学習シナリオに最適化された専門技術。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p><strong>量子強化連合学習</strong> - 量子コンピューティングの原則と連合学習の統合により、より効率的なプライバシー保護計算と、特定の機械学習タスクにおける潜在的な指数関数的改善を可能にします。</p>
+<p><strong>ブロックチェーンベースの調整</strong> - 集中サーバーを必要とせずに、調整、インセンティブ配分、信頼管理にブロックチェーン技術を使用する分散連合学習システムの開発。</p>
+<p><strong>自動化された連合学習</strong> - 人間の介入なしにハイパーパラメータを自己最適化し、最適なクライアントを選択し、変化する条件に適応できる完全に自動化された連合学習システムへの進化。</p>
+<p><strong>エッジネイティブ連合インテリジェンス</strong> - 超低レイテンシ要件と自律的意思決定能力を持つリアルタイム連合学習アプリケーションを可能にするエッジコンピューティングインフラストラクチャとの高度な統合。</p>
+<p><strong>クロスモーダル連合学習</strong> - 複数のデータモダリティを同時に処理するための連合学習の拡張で、プライバシーを保持しながら多様なデータタイプから学習できるより洗練されたAIアプリケーションを可能にします。</p>
+<p><strong>持続可能な連合学習</strong> - 大規模で環境的に持続可能なAI開発をサポートするために、計算と通信コストを最小限に抑えるエネルギー効率の高い連合学習アルゴリズムとフレームワークの開発。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>McMahan, B., Moore, E., Ramage, D., Hampson, S., &amp; y Arcas, B. A. (2017). Communication-efficient learning of deep networks from decentralized data. Proceedings of the 20th International Conference on Artificial Intelligence and Statistics.</p>
+</li>
+<li>
+<p>Li, T., Sahu, A. K., Talwalkar, A., &amp; Smith, V. (2020). Federated learning: Challenges, methods, and future directions. IEEE Signal Processing Magazine, 37(3), 50-60.</p>
+</li>
+<li>
+<p>Kairouz, P., McMahan, H. B., Avent, B., et al. (2021). Advances and open problems in federated learning. Foundations and Trends in Machine Learning, 14(1-2), 1-210.</p>
+</li>
+<li>
+<p>Yang, Q., Liu, Y., Chen, T., &amp; Tong, Y. (2019). Federated machine learning: Concept and applications. ACM Transactions on Intelligent Systems and Technology, 10(2), 1-19.</p>
+</li>
+<li>
+<p>Wang, H., Yurochkin, M., Sun, Y., Papailiopoulos, D., &amp; Khazaeni, Y. (2020). Federated learning with matched averaging. International Conference on Learning Representations.</p>
+</li>
+<li>
+<p>Bonawitz, K., Eichner, H., Grieskamp, W., et al. (2019). Towards federated learning at scale: System design. Proceedings of Machine Learning and Systems, 1, 374-388.</p>
+</li>
+<li>
+<p>Lyu, L., Yu, H., &amp; Yang, Q. (2020). Threats to federated learning: A survey. arXiv preprint arXiv:2003.02133.</p>
+</li>
+<li>
+<p>Mothukuri, V., Parizi, R. M., Pouriyeh, S., Huang, Y., Dehghantanha, A., &amp; Srivastava, G. (2021). A survey on security and privacy of federated learning. Future Generation Computer Systems, 115, 619-640.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/CDN--Content-Delivery-Network-/">
+                    CDN(コンテンツデリバリーネットワーク)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    コンテンツデリバリーネットワーク(CDN)の包括的ガイド - アーキテクチャ、メリット、実装戦略、グローバルコンテンツ配信のベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/CDN--Content-Delivery-Network-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Edge-Function/">
+                    エッジファンクション
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    遠隔地のデータセンターではなく、ユーザーに近いサーバー上で実行される軽量プログラムで、リクエストをローカルで処理することでウェブサイトやアプリの応答速度を向上させます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Edge-Function/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Edge-AI/">
+                    エッジAI
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    エッジAIは、ネットワークのエッジに位置するデバイス上で人工知能アルゴリズムを直接展開・実行し、リアルタイムの分析、推論、自動意思決定をローカルで可能にします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Edge-AI/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Privacy-Preserving-ML/">
+                    プライバシー保護機械学習(PPML)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    プライバシー保護機械学習(PPML)について探求します。差分プライバシー、準同型暗号、マルチパーティ計算、連合学習などの手法を用いて、機械学習モデルにおける機密データを保護する方法を解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Privacy-Preserving-ML/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/federated-learning/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

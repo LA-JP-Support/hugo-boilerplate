@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>プロンプトエンジニアリング | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Prompt-Engineering/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="AI言語モデルとのインタラクションと出力を最適化するための、プロンプトエンジニアリング技術、ベストプラクティス、および応用に関する包括的なガイド。" name="description"/>
+<meta content="プロンプトエンジニアリング, AI言語モデル, プロンプト最適化, 対話型AI, 自然言語処理" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Prompt-Engineering/" property="og:url"/>
+<meta content="プロンプトエンジニアリング | SmartWeb" property="og:title"/>
+<meta content="AI言語モデルとのインタラクションと出力を最適化するための、プロンプトエンジニアリング技術、ベストプラクティス、および応用に関する包括的なガイド。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Prompt-Engineering/" name="twitter:url"/>
+<meta content="プロンプトエンジニアリング | SmartWeb" name="twitter:title"/>
+<meta content="AI言語モデルとのインタラクションと出力を最適化するための、プロンプトエンジニアリング技術、ベストプラクティス、および応用に関する包括的なガイド。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">プロンプトエンジニアリング</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        プロンプトエンジニアリング
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Prompt Engineering
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          AI言語モデルとのインタラクションと出力を最適化するための、プロンプトエンジニアリング技術、ベストプラクティス、および応用に関する包括的なガイド。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                プロンプトエンジニアリング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI言語モデル
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                プロンプト最適化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                対話型AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                自然言語処理
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="プロンプトエンジニアリングとは">プロンプトエンジニアリングとは?</h2>
+<p><a data-lb="1" href="/ja/glossary/Zero-Shot-Chain-of-Thought/" title="ゼロショット思考連鎖(CoT)は、LLMのためのプロンプトエンジニアリング技術であり、例を示さずにモデルに段階的な推論を指示することで、複雑な問題解決能力を向上させます。">プロンプトエンジニアリング</a>とは、人工知能言語モデルから望ましい応答を引き出すために、入力プロンプトを体系的に設計、作成、最適化する実践です。この新興分野は、言語学、心理学、コンピュータサイエンスの要素を組み合わせ、人間と<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">AIシステム</a>間の効果的なコミュニケーション戦略を構築します。その核心は、言語モデルがさまざまな種類の指示、質問、文脈情報をどのように解釈し応答するかを理解し、その知識を活用して特定の成果を達成することにあります。</p>
+<p>この分野は、GPT、Claude、Bardなどの<a data-lb="1" href="/ja/glossary/hallucination/" title="AIにおけるハルシネーションとは、生成モデルがもっともらしいものの事実として誤っている、意味をなさない、または捏造されたコンテンツを生成することを指します。その原因、種類、リスク、および軽減戦略について学びます。">大規模言語モデル</a>(<a data-lb="1" href="/ja/glossary/Output-Parsing/" title="出力パースは、AI言語モデルのテキスト応答から構造化データ(JSON、Pythonオブジェクト)を抽出し、自動化、分析、システム統合に活用する技術です。">LLM</a>)の広範な採用により、大きな注目を集めています。開発者が望ましい機能を実現するために明示的なコードを記述する従来のプログラミングとは異なり、プロンプトエンジニアリングは自然言語の指示に依存して<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>の動作を導きます。このアプローチには、これらのモデルが情報を処理する方法、固有のバイアス、制限、能力についての深い理解が必要です。効果的なプロンプトエンジニアは、トークン制限、コンテキストウィンドウ、トレーニングデータのパターン、言語モデル応答の確率的性質などの要因を考慮する必要があります。</p>
+<p>プロンプトエンジニアリングは、シンプルな指示のフォーマットから複雑な多段階推論フレームワークまで、さまざまな技術を包含します。この実践には、反復的な改善、さまざまなアプローチのテスト、言葉遣い、構造、文脈のわずかな変更がAI出力に劇的な影響を与える微妙な方法の理解が含まれます。AIシステムがより洗練され、<a data-lb="1" href="/ja/glossary/bottlenecks/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ビジネスプロセス</a>、教育環境、クリエイティブ<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>に統合されるにつれて、適切に作成されたプロンプトを通じてこれらのシステムと効果的にコミュニケーションする能力は、その潜在能力を最大化し、信頼性の高い高品質な結果を確保するための必須スキルとなっています。</p>
+<h2 id="プロンプトエンジニアリングの主要技術">プロンプトエンジニアリングの主要技術</h2>
+<p><strong>ゼロショットプロンプティング</strong>は、例を提供せずにタスクの説明を提供し、モデルの<a data-lb="1" href="/ja/glossary/Pre-Training/" title="機械学習における事前学習の包括的ガイド:タスク固有のファインチューニングの前に、大規模データセットを使用してニューラルネットワークを訓練する基礎的な学習フェーズ。">事前学習</a>された知識に依存してリクエストを理解し実行します。この技術は、モデルが文脈と要件を理解するのに十分なトレーニングデータを持つ一般的なタスクに適しています。</p>
+<p><strong>フューショットプロンプティング</strong>は、望ましい出力形式や推論パターンを示すために、プロンプト内に1つ以上の例を含めます。このアプローチは、モデルが特定の要件を理解し、類似タスク全体で一貫性を維持するのに役立ちます。</p>
+<p><strong>思考連鎖プロンプティング</strong>は、モデルが複雑な問題を段階的な推論プロセスに分解することを促します。モデルに作業を示すよう明示的に要求することで、この技術は数学的、論理的、分析的タスクの精度を向上させます。</p>
+<p><strong>ロールベースプロンプティング</strong>は、「ファイナンシャルアドバイザーとして行動する」や「クリエイティブライティング教師として応答する」など、<a data-lb="1" href="/ja/glossary/Generative-AI/" title="生成AIは、学習したパターンから、テキスト、画像、コードなどの新しいコンテンツを作成します。その定義、モデル(GAN、VAE、Transformer)、応用例、メリット、課題について解説します。">AIモデル</a>に特定のペルソナや専門役割を割り当てます。この技術は、役割固有の言語パターンと知識に関するモデルのトレーニングを活用します。</p>
+<p><strong>テンプレートベースプロンプティング</strong>は、変数のプレースホルダーを持つ構造化された形式を使用し、複数の類似タスク全体で一貫したプロンプト構築を可能にします。テンプレートは、プロンプト設計における再現性と標準化を保証します。</p>
+<p><strong>コンテキストプロンプティング</strong>は、関連する背景情報、制約、環境の詳細を提供し、モデルがより正確で適切な応答を生成するのを支援します。この技術は、ドメイン固有のアプリケーションに不可欠です。</p>
+<p><strong>反復的改善</strong>は、出力品質に基づいてプロンプトを体系的にテストおよび修正し、成功した要素を改善版に組み込みます。このアプローチは、プロンプト開発を継続的な最適化を必要とする実験プロセスとして扱います。</p>
+<h2 id="プロンプトエンジニアリングの仕組み">プロンプトエンジニアリングの仕組み</h2>
+<p>プロンプトエンジニアリングプロセスは<strong>目的の定義</strong>から始まり、実践者がAIインタラクションの望ましい結果、対象オーディエンス、成功基準を明確に特定します。この基礎的なステップにより、その後のプロンプト開発の取り組みが焦点を絞られ、測定可能なものとなります。</p>
+<p><strong>コンテキスト分析</strong>が続き、プロンプト設計に影響を与えるドメイン、利用可能な情報、制約の検討が含まれます。エンジニアは、技術的複雑さ、必要な専門知識レベル、プロンプトが効果的に処理する必要がある潜在的な<a data-lb="1" href="/ja/glossary/Nodes-and-Edges/" title="ノードはシステムにおける基本的な構成要素(アクションまたはエンティティ)であり、エッジは関係性、データフロー、または依存関係を定義する接続(線)です。">エッジ</a>ケースなどの要因を考慮します。</p>
+<p><strong>初期プロンプトの作成</strong>は、タスクの複雑さとモデルの能力に基づいて適切な技術を使用して最初のバージョンを作成します。このドラフトには、関連するコンテキスト、明確な指示、必要な例やフォーマット要件が組み込まれます。</p>
+<p><strong>テストと評価</strong>には、ターゲットAIモデルで複数の反復を通じてプロンプトを実行し、出力を文書化し、確立された基準に対してパフォーマンスを評価することが含まれます。このステップは、予期しない動作や改善の余地を明らかにすることがよくあります。</p>
+<p><strong>分析と改善</strong>は、成功した出力と失敗した出力を調査してパターンを特定し、それに応じてプロンプトの構造、言葉遣い、アプローチを修正します。エンジニアは、指示の明確さを調整したり、制約を追加したり、追加のコンテキストを組み込んだりする場合があります。</p>
+<p><strong>検証テスト</strong>は、改善されたプロンプトがさまざまな<a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>やエッジケース全体で一貫して望ましい結果を生み出すことを確認します。このステップは、本番環境への展開前に信頼性と堅牢性を保証します。</p>
+<p><strong>文書化と標準化</strong>は、類似の将来のタスクのための再利用可能なテンプレート、ガイドライン、ベストプラクティスを作成します。この知識の獲得により、チームやプロジェクト全体でのスケーリングと一貫性が可能になります。</p>
+<p><strong>ワークフローの例</strong>:<a data-lb="1" href="/ja/glossary/customer-support/" title="カスタマーサポート業務、その重要性、種類、チャネル、そしてAIと自動化の役割について解説します。効果的なカスタマーサポートのためのベストプラクティス、チーム構成、主要指標を学びましょう。">カスタマーサービス</a>チャットボットのプロンプトは、「顧客を支援する」から「あなたは親切なカスタマーサービス担当者です。製品返品に関する顧客の問い合わせに専門的に対応してください。常に注文番号を尋ね、明確な次のステップを提供してください。問題を解決できない場合は、人間のサポートに<a data-lb="1" href="/ja/glossary/escalation/" title="カスタマーサポート、IT、AIチャットボットにおけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な問題解決をどのように効率化するかを解説します。">エスカレーション</a>してください。」へと進化する可能性があります。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>出力品質の向上</strong>は、明確な指示、適切なコンテキスト、特定のフォーマット要件を提供する慎重に作成されたプロンプトから生じ、より正確で有用なAI応答につながります。</p>
+<p><strong>一貫性の向上</strong>は、標準化された<a data-lb="1" href="/ja/glossary/Prompt-Template/" title="プロンプトテンプレートとは、静的な指示と変数プレースホルダーを含む事前設定されたプロンプト構造であり、AIチャットボットや自動化システムで繰り返し使用するために設計されています。">プロンプトテンプレート</a>と一般的なタスクへの構造化されたアプローチを確立することで、AIシステムが複数のインタラクション全体で信頼性の高い出力を生成することを保証します。</p>
+<p><strong>反復時間の短縮</strong>は、初期プロンプトに明確さと具体性を前もって組み込むことで、やり取りの改善プロセスを最小限に抑え、時間と<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>を節約します。</p>
+<p><strong>タスク特異性の向上</strong>は、ターゲットを絞ったプロンプト設計と文脈情報を通じて、AIモデルが微妙な要件とドメイン固有のニーズを理解できるようにします。</p>
+<p><strong>信頼性の向上</strong>は、プロンプト構造内に明確な境界、制約、期待される応答パターンを確立することで、より予測可能なAI動作を作成します。</p>
+<p><strong>コスト最適化</strong>は、より少ない反復で望ましい結果を達成する効率的なプロンプトを作成することで、トークン使用量と<a data-lb="1" href="/ja/glossary/APIs/" title="API(アプリケーション・プログラミング・インターフェース)を詳しく解説:定義、仕組み、種類(REST、SOAP)、実例、メリット、セキュリティ、ベストプラクティスを網羅した総合ガイドです。">API</a>コールを削減し、運用コストに直接影響します。</p>
+<p><strong>スケーラビリティの向上</strong>は、さまざまなシナリオに適応できる再利用可能なプロンプトフレームワークとテンプレートを開発することで、組織が複数のユースケース全体でAIソリューションを展開できるようにします。</p>
+<p><strong>リスク軽減</strong>は、安全ガイドライン、倫理的制約、コンテンツフィルターをプロンプト設計に直接組み込むことで、不適切または有害なAI出力を防ぐのに役立ちます。</p>
+<p><strong>ユーザーエクスペリエンスの向上</strong>は、モデルの応答をユーザーの期待とコミュニケーションの好みに合わせることで、より直感的で役立つAIインタラクションを作成します。</p>
+<p><strong>知識の移転</strong>は、効果的なプロンプト戦略をチーム全体で獲得し共有することを促進し、AI活用における<a data-lb="1" href="/ja/glossary/Knowledge-Sharing/" title="現代の職場における組織学習とコラボレーションのための、ナレッジシェアリングシステム、プロセス、ベストプラクティスに関する包括的なガイド。">組織学習</a>と能力構築を可能にします。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>コンテンツ作成とマーケティング</strong>は、プロンプトエンジニアリングを活用して、特定のブランドボイス、トーン、メッセージング要件を持つブログ投稿、<a data-lb="1" href="/ja/glossary/Instagram/" title="Instagramは、写真と動画の共有に特化したビジュアル型ソーシャルメディアプラットフォームです。機能、ビジネスツール、インフルエンサーマーケティング、オーディエンス構築について学びましょう。">ソーシャルメディア</a>コンテンツ、製品説明、広告コピーを生成します。</p>
+<p><strong>カスタマーサポートの自動化</strong>は、構造化されたプロンプトを使用して、一般的な問い合わせを処理し、問題をトラブルシューティングし、複雑な問題を適切にエスカレーションできる<a data-lb="1" href="/ja/glossary/Quick-Replies/" title="クイックリプライは、チャットインターフェースに表示される一時的で選択可能なボタンで、事前定義されたオプションを提供します。選択後に消えるため、画面の煩雑さを防ぎ、会話の流れを維持します。">チャットボット</a>と仮想アシスタントを作成します。</p>
+<p><strong>教育アプリケーション</strong>は、プロンプトエンジニアリングを採用して、チュータリングシステムを開発し、練習問題を生成し、適切な読解レベルで説明を作成し、パーソナライズされた学習体験を提供します。</p>
+<p><strong>コード生成とレビュー</strong>は、プロンプトを利用して、さまざまなプログラミング言語とフレームワーク全体でコードの記述、デバッグ、文書化を開発者に支援します。</p>
+<p><strong>データ分析とレポート作成</strong>は、プロンプトエンジニアリングを適用して、インサイト生成を<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>し、エグゼクティブサマリーを作成し、複雑なデータの発見をアクセス可能なビジネス言語に翻訳します。</p>
+<p><strong>クリエイティブライティングとストーリーテリング</strong>は、プロンプトを使用して、著者、脚本家、コンテンツクリエイターにプロット開発、キャラクター作成、物語構造を支援します。</p>
+<p><strong>研究と情報統合</strong>は、構造化されたプロンプトを採用して、学術論文を要約し、主要な発見を抽出し、複数のソースからの情報を統合します。</p>
+<p><strong>翻訳とローカライゼーション</strong>は、プロンプトエンジニアリングを活用して、言語間でコンテキスト、トーン、技術的正確さを維持する文化的に適切な翻訳を保証します。</p>
+<p><strong>法的文書分析</strong>は、プロンプトを使用して契約をレビューし、主要な条項を特定し、正確さとコンプライアンス要件を維持しながら法的文書を要約します。</p>
+<p><strong>医療文書作成</strong>は、プロンプトエンジニアリングを適用して、プライバシー規制を遵守しながら、医療記録の要約、患者コミュニケーション、臨床意思決定支援を支援します。</p>
+<h2 id="プロンプトエンジニアリング技術の比較">プロンプトエンジニアリング技術の比較</h2>
+<table>
+<thead>
+<tr>
+<th>技術</th>
+<th>複雑さ</th>
+<th>ユースケース</th>
+<th>精度</th>
+<th>リソース使用量</th>
+<th>学習曲線</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ゼロショット</td>
+<td>低</td>
+<td>一般的なタスク、一般的なクエリ</td>
+<td>中</td>
+<td>低</td>
+<td>初級</td>
+</tr>
+<tr>
+<td>フューショット</td>
+<td>中</td>
+<td>パターン認識、フォーマット</td>
+<td>高</td>
+<td>中</td>
+<td>中級</td>
+</tr>
+<tr>
+<td>思考連鎖</td>
+<td>高</td>
+<td>複雑な推論、数学問題</td>
+<td>非常に高い</td>
+<td>高</td>
+<td>上級</td>
+</tr>
+<tr>
+<td>ロールベース</td>
+<td>中</td>
+<td>ドメイン専門知識、専門タスク</td>
+<td>高</td>
+<td>中</td>
+<td>中級</td>
+</tr>
+<tr>
+<td>テンプレートベース</td>
+<td>低</td>
+<td>反復的なタスク、標準化</td>
+<td>中</td>
+<td>低</td>
+<td>初級</td>
+</tr>
+<tr>
+<td>コンテキスト</td>
+<td>中</td>
+<td>ドメイン固有のアプリケーション</td>
+<td>高</td>
+<td>中</td>
+<td>中級</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>モデルの制限とバイアス</strong>は、AIモデルがトレーニングデータのバイアス、知識のカットオフ、プロンプトの効果と出力品質に影響を与える固有の制限を示す可能性があるため、慎重な考慮が必要です。</p>
+<p><strong>プロンプトの脆弱性</strong>は、言葉遣いや構造のわずかな変更がAI応答を劇的に変える場合に課題を提示し、さまざまなシナリオ全体で堅牢で信頼性の高いプロンプトを作成することを困難にします。</p>
+<p><strong>コンテキストウィンドウの制約</strong>は、プロンプトに含めることができる情報量を制限し、十分なコンテキストを提供することとトークン制限内に留まることの間の慎重なバランスを必要とします。</p>
+<p><strong>一貫性のないモデル動作</strong>は、異なるAIシステム全体で、1つのモデル用に最適化されたプロンプトが他のモデルでは効果的に機能しない可能性があることを意味し、プラットフォーム固有の適応が必要です。</p>
+<p><strong>評価の困難さ</strong>は、多くのAI出力の主観的な性質から生じ、プロンプトの効果と成功のための客観的な指標を確立することを困難にします。</p>
+<p><strong>バージョン管理と管理</strong>は、複数のプロンプトバリエーションを扱う際に複雑になり、変更を追跡しプロンプトライブラリを維持するための体系的なアプローチが必要です。</p>
+<p><strong>セキュリティと安全性の懸念</strong>には、潜在的な<a data-lb="1" href="/ja/glossary/Prompt-Injection/" title="AIの言語モデルとアプリケーションにおけるプロンプトインジェクション攻撃、防御メカニズム、セキュリティのベストプラクティスに関する包括的なガイド。">プロンプトインジェクション</a>攻撃、ジェイルブレイクの試み、有害または不適切なコンテンツの生成を防ぐ必要性が含まれます。</p>
+<p><strong>スケーラビリティの問題</strong>は、適切なガバナンスフレームワークなしで大規模な組織や多様なユースケース全体でプロンプトの品質と一貫性を維持しようとする際に発生します。</p>
+<p><strong>コスト管理</strong>は、特に反復的な改善プロセスや複雑な多段階プロンプティング技術を使用する場合、トークン使用量とAPIコールの慎重な監視が必要です。</p>
+<p><strong>スキル開発要件</strong>は、プロンプトエンジニアリング技術が進化し、新しいAIモデルが異なる能力と制限を導入するにつれて、継続的なトレーニングと教育を要求します。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>明確な目的から始める</strong>ことで、プロンプト開発の取り組みを開始する前に、AIインタラクションの具体的で測定可能な目標を定義し、成功基準を確立します。</p>
+<p><strong>反復的開発を使用する</strong>アプローチは、効果に関する仮定ではなく、実際のパフォーマンスデータに基づいてプロンプトをテスト、測定、改善することを含みます。</p>
+<p><strong>バージョン管理を実装する</strong>システムは、プロンプトの変更を追跡し、履歴バージョンを維持し、修正がパフォーマンスを改善しない場合のロールバック機能を可能にします。</p>
+<p><strong>テストプロトコルを確立する</strong>ことで、さまざまな条件全体でプロンプトの堅牢性を保証するために、多様なシナリオ、エッジケース、代表的なユーザー入力を含めます。</p>
+<p><strong>プロンプトライブラリを作成する</strong>ことで、チームやプロジェクト全体で共有できる再利用可能なテンプレート、成功したパターン、文書化されたベストプラクティスを提供します。</p>
+<p><strong>パフォーマンスメトリクスを監視する</strong>ことで、応答品質、一貫性、ユーザー満足度、コスト効率を含め、改善と最適化の領域を特定します。</p>
+<p><strong>安全対策を実装する</strong>ことで、不適切または有害なAI応答を防ぐために、コンテンツフィルター、倫理ガイドライン、出力検証などを含めます。</p>
+<p><strong>プロンプトの根拠を文書化する</strong>ことで、設計決定の背後にある理由、成功した技術、将来の参照と<a data-lb="1" href="/ja/glossary/Expert-Community/" title="エキスパートコミュニティの包括的ガイド - 専門家を結びつけ、コラボレーションを促進し、イノベーションを推進する専門知識ネットワーク。">知識共有</a>のために学んだ教訓を記録します。</p>
+<p><strong>チームメンバーをトレーニングする</strong>ことで、プロンプトエンジニアリングの原則、技術、ツールについて、組織の能力を構築し、ベストプラクティスの一貫した適用を保証します。</p>
+<p><strong>ガバナンスフレームワークを確立する</strong>ことで、本番環境でのプロンプト開発と展開のための役割、責任、<a data-lb="1" href="/ja/glossary/Review-Workflow/" title="レビューワークフローの包括的ガイド:品質保証と承認システムのためのプロセス、実装方法、メリット、ベストプラクティスを解説します。">承認プロセス</a>、品質基準を定義します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>多段階推論チェーン</strong>は、各ステップが前の出力に基づいて構築される連続したステップに複雑なタスクを分解し、より洗練された<a data-lb="1" href="/ja/glossary/Escalation-Management/" title="フロントラインのスタッフが解決できない複雑な問題を、より高度な専門家に引き継ぐシステムです。迅速な解決と優れた顧客サービスを実現します。">問題解決</a>能力を可能にします。</p>
+<p><strong>動的プロンプト生成</strong>は、アルゴリズムまたはルールを使用して、ユーザー入力、コンテキスト変数、環境条件に基づいてプロンプトを自動的に構築し、パーソナライズされたAIインタラクションを可能にします。</p>
+<p><strong>プロンプトチェーンとオーケストレーション</strong>は、複数のAIモデルコールを順番に接続し、1つのプロンプトからの出力が後続のプロンプトの入力として機能し、複雑なワークフローを作成します。</p>
+<p><strong>メタプロンプティング戦略</strong>は、AIモデルを使用してプロンプト自体を生成、評価、または最適化し、自己改善型のプロンプトエンジニアリングシステムを作成します。</p>
+<p><strong>検索拡張プロンプティング</strong>は、外部知識ソースとプロンプトエンジニアリングを組み合わせて、AIモデルにトレーニングデータを超えた最新のドメイン固有の情報を提供します。</p>
+<p><strong>敵対的プロンプトテスト</strong>は、展開前に脆弱性、エッジケース、潜在的な<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>問題を特定するために、プロンプトを体系的に破壊または操作しようとします。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>自動プロンプト最適化</strong>は、<a data-lb="1" href="/ja/glossary/Ensemble-Learning/" title="機械学習における予測精度向上のためのアンサンブル学習手法、アルゴリズム、および応用に関する包括的ガイド。">機械学習アルゴリズム</a>を活用して、パフォーマンスデータとユーザーフィードバックに基づいてプロンプトを自動的に生成、テスト、改善します。</p>
+<p><strong>マルチモーダルプロンプトエンジニアリング</strong>は、テキストを超えて画像、音声、ビデオ入力を組み込むように拡張され、クロスモーダルプロンプト設計と最適化のための新しい技術が必要になります。</p>
+<p><strong>パーソナライズされたプロンプト適応</strong>は、個々のユーザーの好み、コミュニケーションスタイル、過去のインタラクションパターンに基づいて、AIシステムがプロンプト戦略を自動的に調整できるようにします。</p>
+<p><strong>業界固有のフレームワーク</strong>は、医療、金融、法律、その他の規制された業界における独自の要件に対処するために、専門的なプロンプトエンジニアリング方法論とともに登場します。</p>
+<p><strong>リアルタイムプロンプト調整</strong>は、アクティブなAIインタラクション中に、会話のコンテキスト、ユーザーフィードバック、<a data-lb="1" href="/ja/glossary/Model-Evaluation/" title="機械学習モデルのパフォーマンスと信頼性を評価するためのモデル評価技術、メトリクス、ベストプラクティスに関する包括的なガイド。">パフォーマンスメトリクス</a>に基づいてプロンプトを動的に修正できるようにします。</p>
+<p><strong>協調的プロンプト開発</strong>プラットフォームは、プロンプトワークフロー専用に設計された<a data-lb="1" href="/ja/glossary/Version-Control/" title="バージョン管理システムの包括的なガイド。Git、SVN、ワークフロー、ベストプラクティス、ソフトウェア開発チームのための実装戦略をカバーしています。">バージョン管理</a>、テストフレームワーク、知識共有機能を備えたチームベースのプロンプトエンジニアリングを促進します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Wei, J., et al. (2022). “Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.” <em>Advances in Neural Information Processing Systems</em>.</p>
+</li>
+<li>
+<p>Brown, T., et al. (2020). “Language Models are Few-Shot Learners.” <em>Advances in Neural Information Processing Systems</em>.</p>
+</li>
+<li>
+<p>Liu, P., et al. (2023). “Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing.” <em>ACM Computing Surveys</em>.</p>
+</li>
+<li>
+<p><a data-lb="1" href="/ja/glossary/ChatGPT/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">OpenAI</a>. (2023). “GPT-4 Technical Report.” <em>OpenAI Research</em>.</p>
+</li>
+<li>
+<p>Kojima, T., et al. (2022). “Large Language Models are Zero-Shot Reasoners.” <em>Advances in Neural Information Processing Systems</em>.</p>
+</li>
+<li>
+<p>Zhou, D., et al. (2022). “Least-to-Most Prompting Enables Complex Reasoning in Large Language Models.” <em>International Conference on Learning Representations</em>.</p>
+</li>
+<li>
+<p>White, J., et al. (2023). “A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT.” <em>arXiv preprint arXiv:2302.11382</em>.</p>
+</li>
+<li>
+<p>Sahoo, P., et al. (2024). “A Systematic Survey of Prompt Engineering in Large Language Models.” <em>IEEE Transactions on Artificial Intelligence</em>.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Ernie-Bot/">
+                    Ernie-Bot
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    高度な推論、画像認識、コード生成機能を備え、中国語で理解し応答する<a data-lb="1" href="/ja/glossary/Baidu/" title="Baiduは中国最大の検索エンジンであり、人々がオンラインで情報を見つけることを支援しながら、自動運転や音声認識などの人工知能技術を開発する大手AI企業です。">Baidu</a>のAIアシスタント。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Ernie-Bot/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Contextual-Prompt/">
+                    コンテクスチュアルプロンプト
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIシステムにおけるコンテクスチュアルプロンプトの包括的ガイド。実装戦略、メリット、AIインタラクションを強化するためのベストプラクティスを網羅しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Contextual-Prompt/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Conversational-AI/">
+                    対話型AI
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    対話型AIを探求:自然言語処理、自然言語理解、機械学習、音声認識を用いて人間の会話をシミュレートする技術。その仕組み、メリット、ユースケース、将来のトレンドを学びます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Conversational-AI/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/AI-Copywriting/">
+                    AIコピーライティング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    自動コンテンツ作成とマーケティング最適化のためのAIコピーライティングツール、テクニック、アプリケーションに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/AI-Copywriting/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/BERT/">
+                    BERT
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    BERT(Bidirectional Encoder Representations from Transformers)の包括的ガイド - 言語理解のためのGoogleの革新的なNLPモデル...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/BERT/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Content-Summarization/">
+                    Content Summarization（コンテンツ要約）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI駆動のテキスト要約は、重要な情報とコンテキストを保持しながら大規模なドキュメントを凝縮し、効率的な情報処理を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Content-Summarization/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/prompt-engineering/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

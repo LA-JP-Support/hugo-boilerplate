@@ -1,0 +1,2501 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="utf-8">
+<meta name="viewport" content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+
+<title>Webhook Fulfillment | SmartWeb</title>
+<link rel="canonical" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/webhook-fulfillment/">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/faivicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/faivicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/faivicon.png">
+<link rel="shortcut icon" href="/images/faivicon.png">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+  
+
+
+
+
+
+
+
+  
+  
+    
+    
+      
+      
+      
+      
+    
+  
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="%!s(<nil>)/glossary/Webhook-Fulfillment/">
+
+<link rel="alternate" hreflang="ja" href="%!s(<nil>)/ja/glossary/Webhook-Fulfillment/">
+
+<link rel="alternate" hreflang="x-default" href="%!s(<nil>)/glossary/Webhook-Fulfillment/">
+
+
+
+<meta name="description" content="A backend system that automatically processes chatbot requests by fetching real-time data from databases and APIs to deliver personalized, context-aware responses.">
+<meta name="keywords" content="webhook, fulfillment, AI chatbots, automation, APIs">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/webhook-fulfillment/">
+<meta property="og:title" content="Webhook Fulfillment | SmartWeb">
+<meta property="og:description" content="A backend system that automatically processes chatbot requests by fetching real-time data from databases and APIs to deliver personalized, context-aware responses.">
+
+
+
+
+
+
+
+  
+  
+
+
+<meta property="og:image" content="">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/webhook-fulfillment/">
+<meta name="twitter:title" content="Webhook Fulfillment | SmartWeb">
+<meta name="twitter:description" content="A backend system that automatically processes chatbot requests by fetching real-time data from databases and APIs to deliver personalized, context-aware responses.">
+<meta name="twitter:image" content="">
+
+
+
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+
+<link rel="preload" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/main.css?v=20260106210129" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/custom-code-blockquote.css?v=20260106210129" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<script src="/js/main.js?v=20260106210129" defer></script>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+</head>
+<body class="antialiased bg-white">
+
+
+
+
+
+
+
+
+
+
+  
+  <header class="bg-white">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="/en/" class="-m-1.5 p-1.5">
+        <span class="sr-only">SmartWeb</span>
+        
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="200px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+      </a>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12"><a href="/en/" class="text-sm/6 font-semibold text-gray-900">Home</a><a href="/en/blog/" class="text-sm/6 font-semibold text-gray-900">Blog</a><a href="/en/glossary/" class="text-sm/6 font-semibold text-gray-900">Glossary</a><a href="https://www.intwk.co.jp/about/" class="text-sm/6 font-semibold text-gray-900">Company</a></div>
+    <div class="flex flex-1 items-center justify-end gap-x-6">
+      <a href="https://support.smartweb.jp/" class="hidden text-sm/6 font-semibold text-gray-900 lg:block">Support</a>
+      <a href="/en/blog/" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" aria-expanded="false" aria-controls="mobile-menu-1767700889227765000">
+        <span class="sr-only">Open main menu</span>
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  
+  <div id="mobile-menu-1767700889227765000" class="lg:hidden hidden relative z-50" role="dialog" aria-modal="true">
+    
+    <div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+      <div class="flex items-center gap-x-6">
+        <a href="/en/" class="-m-1.5 p-1.5">
+          <span class="sr-only">SmartWeb</span>
+          
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+      
+        
+      
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+          
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+            
+            
+        
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="3000"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="(max-width: 466px) 466px, 3000px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+        </a>
+        <a href="/en/blog/" class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+        <button type="button" class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu">
+          <span class="sr-only">Close menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6"><a href="/en/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a><a href="/en/blog/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a><a href="/en/glossary/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Glossary</a><a href="https://www.intwk.co.jp/about/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a></div>
+          <div class="py-6">
+            <a href="https://support.smartweb.jp/" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700889227765000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700889227765000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+
+
+
+<main class="w-full">
+  
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+  
+  <header class="py-12 sm:py-16">
+    <div class="mx-auto max-w-4xl">
+      
+      <div class="mb-8">
+        <nav class="text-sm hidden sm:block">
+          <ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+            <li class="flex items-center">
+              <a href="/en/" class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center">
+                <img src="/images/home-icon.png" alt="Home" class="h-4 w-4 opacity-60">
+              </a>
+            </li>
+            <li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+            <li>
+              <a href="/en/glossary/" class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors">
+                Glossary
+              </a>
+            </li>
+            <li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+            <li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Webhook Fulfillment</li>
+          </ol>
+        </nav>
+      </div>
+
+      
+      
+        <div class="mb-6">
+          <span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+            <svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+            </svg>
+            AI Chatbot &amp; Automation
+          </span>
+        </div>
+      
+
+      
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Webhook Fulfillment
+      </h1>
+      
+        <div class="mb-6"></div>
+      
+
+      
+      
+        <p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A backend system that automatically processes chatbot requests by fetching real-time data from databases and APIs to deliver personalized, context-aware responses.
+        </p>
+      
+
+      
+      <div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+
+      
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        
+        
+          <div class="flex flex-wrap gap-2">
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                webhook
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                fulfillment
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI chatbots
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                automation
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                APIs
+              </span>
+            
+          </div>
+        
+
+        
+        
+
+
+
+
+
+
+
+
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+  
+    <span class="inline-flex items-center justify-end">
+      <svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
+      </svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+  
+
+  
+</div>
+
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+    <h2 id="what-is-webhook-fulfillment">What Is Webhook Fulfillment?</h2>
+<p>Webhook fulfillment is a real-time, event-driven mechanism enabling AI chatbots, automation platforms, and modern web applications to delegate business logic execution to backend services. When triggering events occur—such as user messages matching specific intents, workflow state transitions, or external system notifications—the platform constructs and transmits a structured HTTP request (webhook) to a designated endpoint. The backend processes this event by querying databases, invoking APIs, executing calculations, or orchestrating complex business workflows, then returns dynamic responses enabling the platform to deliver personalized, contextually appropriate outcomes.</p>
+<p>This architecture represents a fundamental shift from static, pre-programmed responses to dynamic, data-driven interactions. Webhook fulfillment transforms conversational AI from simple pattern matching to intelligent systems capable of real-time data access, transaction processing, and adaptive decision-making. The approach eliminates polling overhead, reduces latency, and enables scalable integration patterns essential for production AI systems.</p>
+<p><strong>Core Components:</strong></p>
+<p><strong>Event Source</strong> – The chatbot platform, automation system, or application detecting events requiring external processing</p>
+<p><strong>Webhook Handler</strong> – Backend service receiving HTTP requests, processing business logic, and generating responses</p>
+<p><strong>Payload</strong> – Structured data transmitted in JSON format containing event details, user context, session parameters, and metadata</p>
+<p><strong>Response</strong> – Formatted data returned to the source system enabling dynamic content generation, workflow progression, or user interaction</p>
+<h2 id="webhook-vs-traditional-api-integration">Webhook vs. Traditional API Integration</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Aspect</th>
+          <th>Webhook (Push)</th>
+          <th>API Polling (Pull)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Data Flow</strong></td>
+          <td>Server-initiated, event-based</td>
+          <td>Client-initiated, scheduled</td>
+      </tr>
+      <tr>
+          <td><strong>Trigger</strong></td>
+          <td>Automatic on event occurrence</td>
+          <td>Manual at defined intervals</td>
+      </tr>
+      <tr>
+          <td><strong>Latency</strong></td>
+          <td>Near-instantaneous (&lt; 1 second)</td>
+          <td>Interval-dependent (seconds to minutes)</td>
+      </tr>
+      <tr>
+          <td><strong>Efficiency</strong></td>
+          <td>High (events only)</td>
+          <td>Low (frequent empty requests)</td>
+      </tr>
+      <tr>
+          <td><strong>Resource Usage</strong></td>
+          <td>Minimal (stateless endpoints)</td>
+          <td>Significant (continuous polling)</td>
+      </tr>
+      <tr>
+          <td><strong>Scalability</strong></td>
+          <td>Excellent (parallel processing)</td>
+          <td>Limited (rate limiting required)</td>
+      </tr>
+      <tr>
+          <td><strong>Implementation</strong></td>
+          <td>Register endpoint URL</td>
+          <td>Build polling scheduler</td>
+      </tr>
+      <tr>
+          <td><strong>Error Recovery</strong></td>
+          <td>Automatic retries</td>
+          <td>Client-managed</td>
+      </tr>
+      <tr>
+          <td><strong>Security</strong></td>
+          <td>HMAC signatures, mTLS, tokens</td>
+          <td>API keys, OAuth, certificates</td>
+      </tr>
+      <tr>
+          <td><strong>Use Cases</strong></td>
+          <td>Real-time notifications, integrations</td>
+          <td>Batch processing, periodic synchronization</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>When to Use Webhooks:</strong> Real-time requirements, event-driven workflows, high-frequency updates, resource-efficient architectures</p>
+<p><strong>When to Use Polling:</strong> Legacy systems, firewall restrictions, controlled update schedules, simple integration requirements</p>
+<h2 id="technical-architecture">Technical Architecture</h2>
+<h3 id="request-lifecycle">Request Lifecycle</h3>
+<p><strong>1. Event Detection</strong><br>
+Platform identifies triggering condition: intent match, user action, data change, scheduled task, or external notification</p>
+<p><strong>2. Payload Construction</strong><br>
+System assembles JSON structure containing event type, timestamp, user/session identifiers, extracted parameters, context history, and platform-specific metadata</p>
+<p><strong>3. Authentication Preparation</strong><br>
+Platform generates authentication credentials: bearer tokens, HMAC signatures, or custom headers based on configuration</p>
+<p><strong>4. HTTP Transmission</strong><br>
+HTTPS POST request delivers payload to registered webhook URL with appropriate headers, timeout configuration, and retry parameters</p>
+<p><strong>5. Handler Processing</strong><br>
+Backend validates authenticity, parses payload, executes business logic (API calls, database queries, calculations), and constructs response</p>
+<p><strong>6. Response Return</strong><br>
+Handler returns HTTP 200-series status with JSON response containing fulfillment text, updated parameters, session modifications, or error information</p>
+<p><strong>7. Platform Integration</strong><br>
+Source system incorporates response data into conversation flow, updates UI, triggers subsequent actions, or logs transaction details</p>
+<p><strong>8. Retry Management</strong><br>
+On failure (5xx errors, timeouts, network issues), platform implements exponential backoff retry strategy up to configured attempt limits</p>
+<h3 id="payload-structure">Payload Structure</h3>
+<p><strong>Request Payload Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&#34;responseId&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;ea3d77e8-ae27-41a4-9e1d-174bd461b68c&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&#34;session&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;projects/project-id/agent/sessions/session-id&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&#34;queryResult&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&#34;queryText&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;What is my account balance?&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&#34;intent&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;GetAccountBalance&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&#34;displayName&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;Get Account Balance&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&#34;parameters&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&#34;user_id&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;12345&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&#34;account_type&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;checking&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&#34;intentDetectionConfidence&#34;</span>: <span style="color:#ff0;font-weight:bold">0.95</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&#34;originalDetectIntentRequest&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&#34;payload&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&#34;timestamp&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;2025-06-24T12:34:56Z&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Response Payload Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&#34;fulfillmentText&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;Your checking account balance is $3,247.82. Would you like to see recent transactions?&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&#34;fulfillmentMessages&#34;</span>: [{
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&#34;text&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&#34;text&#34;</span>: [<span style="color:#0ff;font-weight:bold">&#34;Your checking account balance is $3,247.82.&#34;</span>]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }],
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&#34;outputContexts&#34;</span>: [{
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&#34;name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;projects/project-id/agent/sessions/session-id/contexts/account-info&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&#34;lifespanCount&#34;</span>: <span style="color:#ff0;font-weight:bold">5</span>,
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&#34;parameters&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&#34;balance&#34;</span>: <span style="color:#ff0;font-weight:bold">3247.82</span>,
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&#34;account_type&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;checking&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="font-weight:bold">&#34;last_updated&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;2025-06-24T12:34:56Z&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }],
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&#34;source&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;banking-api&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="security-implementation">Security Implementation</h2>
+<h3 id="authentication-methods">Authentication Methods</h3>
+<p><strong>Bearer Token Authentication</strong><br>
+Client includes token in Authorization header verified against API gateway or identity provider. Suitable for service-to-service communication with managed token lifecycle.</p>
+<pre tabindex="0"><code>Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+</code></pre><p><strong>Basic Authentication</strong><br>
+Username and password base64-encoded in Authorization header. Simple but less secure; appropriate for development environments or internal networks.</p>
+<pre tabindex="0"><code>Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+</code></pre><p><strong>HMAC Signature Verification</strong><br>
+Shared secret generates cryptographic signature of request body. Receiver recomputes signature verifying request authenticity and integrity.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">const</span> crypto = require(<span style="color:#0ff;font-weight:bold">&#39;crypto&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">function</span> verifySignature(secret, payload, signature) {
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">const</span> computed = crypto
+</span></span><span style="display:flex;"><span>    .createHmac(<span style="color:#0ff;font-weight:bold">&#39;sha256&#39;</span>, secret)
+</span></span><span style="display:flex;"><span>    .update(payload)
+</span></span><span style="display:flex;"><span>    .digest(<span style="color:#0ff;font-weight:bold">&#39;hex&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">return</span> crypto.timingSafeEqual(
+</span></span><span style="display:flex;"><span>    Buffer.from(signature),
+</span></span><span style="display:flex;"><span>    Buffer.from(computed)
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>OAuth 2.0 Bearer Tokens</strong><br>
+Industry-standard authorization framework enabling secure delegated access with scoped permissions and token expiration.</p>
+<p><strong>Mutual TLS (mTLS)</strong><br>
+Both client and server present certificates enabling bidirectional authentication. Highest security level appropriate for sensitive financial or healthcare applications.</p>
+<p><strong>Service Identity Tokens</strong><br>
+Cloud platforms (Google Cloud, AWS) provide managed identity tokens automatically rotating and validated without manual credential management.</p>
+<h3 id="security-best-practices">Security Best Practices</h3>
+<p><strong>Enforce HTTPS</strong> – Never accept webhook requests over unencrypted HTTP preventing eavesdropping and tampering</p>
+<p><strong>Validate All Requests</strong> – Verify signatures, tokens, or certificates before processing preventing spoofed or malicious payloads</p>
+<p><strong>Implement IP Allowlisting</strong> – Restrict accepted requests to known source IP ranges when applicable (limited effectiveness with cloud platforms using dynamic IPs)</p>
+<p><strong>Use Request Timestamps</strong> – Include and validate timestamps preventing replay attacks with acceptable time windows (typically 5 minutes)</p>
+<p><strong>Log Security Events</strong> – Maintain audit trails of authentication failures, rejected requests, and suspicious patterns</p>
+<p><strong>Rotate Credentials</strong> – Periodically update secrets, tokens, and certificates minimizing exposure from potential compromises</p>
+<p><strong>Rate Limiting</strong> – Implement request throttling preventing abuse and denial-of-service scenarios</p>
+<h2 id="implementation-patterns">Implementation Patterns</h2>
+<h3 id="synchronous-fulfillment">Synchronous Fulfillment</h3>
+<p>Handler processes request and returns result immediately within webhook timeout window (typically 5-10 seconds). Appropriate for database queries, simple calculations, or cached data retrieval.</p>
+<p><strong>Use Cases:</strong> Account balance checks, order status lookups, availability verification, simple data validation</p>
+<p><strong>Advantages:</strong> Immediate user feedback, simplified error handling, straightforward implementation</p>
+<p><strong>Limitations:</strong> Timeout constraints, resource blocking, limited scalability for complex operations</p>
+<h3 id="asynchronous-fulfillment">Asynchronous Fulfillment</h3>
+<p>Handler acknowledges receipt immediately (HTTP 200) then processes request in background. Results delivered via separate callback or retrieved through polling mechanisms.</p>
+<p><strong>Use Cases:</strong> Long-running transactions, batch processing, third-party API calls with uncertain latency, document generation</p>
+<p><strong>Advantages:</strong> Timeout avoidance, resource efficiency, scalability for complex workflows</p>
+<p><strong>Limitations:</strong> Increased complexity, delayed user feedback, callback infrastructure requirements</p>
+<h3 id="idempotent-design">Idempotent Design</h3>
+<p>Handlers designed to safely process duplicate requests without unintended side effects. Critical for reliable webhook systems given retry mechanisms and network uncertainties.</p>
+<p><strong>Implementation Strategies:</strong></p>
+<ul>
+<li>Track unique request identifiers preventing duplicate processing</li>
+<li>Use database transactions with conflict detection</li>
+<li>Implement idempotency keys for state-changing operations</li>
+<li>Design operations as naturally idempotent (GET-like behaviors)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">const</span> processedRequests = <span style="color:#fff;font-weight:bold">new</span> Set();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.post(<span style="color:#0ff;font-weight:bold">&#39;/webhook&#39;</span>, <span style="color:#fff;font-weight:bold">async</span> (req, res) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">const</span> requestId = req.body.responseId;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">if</span> (processedRequests.has(requestId)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> res.json(getCachedResponse(requestId));
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">const</span> result = <span style="color:#fff;font-weight:bold">await</span> processBusinessLogic(req.body);
+</span></span><span style="display:flex;"><span>  processedRequests.add(requestId);
+</span></span><span style="display:flex;"><span>  cacheResponse(requestId, result);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  res.json(result);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="common-use-cases">Common Use Cases</h2>
+<h3 id="ai-chatbot-dynamic-responses">AI Chatbot Dynamic Responses</h3>
+<p><strong>Account Information Retrieval</strong> – Banking chatbots query core systems for balances, transaction history, or account details</p>
+<p><strong>Inventory Verification</strong> – E-commerce assistants check real-time stock levels, shipping estimates, or product availability</p>
+<p><strong>Appointment Scheduling</strong> – Healthcare bots integrate with calendar systems validating availability and booking appointments</p>
+<p><strong>Order Processing</strong> – Fulfillment systems validate payment methods, calculate shipping, process transactions, and generate confirmations</p>
+<p><strong>User Authentication</strong> – Verification workflows validate credentials, retrieve user profiles, and establish authorized sessions</p>
+<h3 id="payment-and-e-commerce-integration">Payment and E-Commerce Integration</h3>
+<p><strong>Transaction Processing</strong> – Webhook handlers integrate with payment gateways (Stripe, PayPal, Square) executing charges and verifying completion</p>
+<p><strong>Order Fulfillment</strong> – Backend systems update inventory, generate packing slips, notify warehouses, and trigger shipping workflows</p>
+<p><strong>Fraud Detection</strong> – Real-time risk assessment engines analyze transaction patterns, verify addresses, and flag suspicious activities</p>
+<p><strong>Subscription Management</strong> – Automated billing systems process recurring charges, manage trial periods, and handle cancellations</p>
+<h3 id="crm-and-marketing-automation">CRM and Marketing Automation</h3>
+<p><strong>Lead Qualification</strong> – Scoring engines analyze prospect data, assign priority levels, and route to appropriate sales teams</p>
+<p><strong>Contact Synchronization</strong> – Real-time updates propagate customer information changes across CRM, marketing platforms, and support systems</p>
+<p><strong>Campaign Triggers</strong> – Automated marketing workflows launch based on user behaviors, lifecycle stages, or engagement patterns</p>
+<p><strong>Data Enrichment</strong> – External data providers append firmographic, demographic, or behavioral data to contact records</p>
+<h3 id="workflow-orchestration">Workflow Orchestration</h3>
+<p><strong>Multi-Step Processes</strong> – Complex workflows chain webhook calls triggering sequential or parallel operations across multiple systems</p>
+<p><strong>Conditional Logic</strong> – Business rules engines evaluate conditions routing workflows through appropriate paths</p>
+<p><strong>Error Recovery</strong> – Automated compensation logic handles failures through retry strategies, alternative paths, or manual escalation</p>
+<p><strong>State Management</strong> – Workflow engines maintain execution state enabling pause/resume, rollback, and audit trail functionality</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<p><strong>Response Time Management</strong> – Design handlers responding within platform timeout limits (typically 5-10 seconds) deferring heavy operations to background workers</p>
+<p><strong>Caching Strategy</strong> – Store frequently accessed data reducing database load and improving response times for common queries</p>
+<p><strong>Connection Pooling</strong> – Maintain database connection pools and HTTP client reuse preventing connection overhead</p>
+<p><strong>Asynchronous Processing</strong> – Offload time-consuming operations to message queues (RabbitMQ, AWS SQS) enabling immediate acknowledgment</p>
+<p><strong>Load Balancing</strong> – Distribute webhook traffic across multiple handler instances enabling horizontal scaling</p>
+<p><strong>Resource Monitoring</strong> – Track CPU, memory, database connections, and API rate limits preventing resource exhaustion</p>
+<p><strong>Database Optimization</strong> – Implement proper indexing, query optimization, and read replicas for data-intensive operations</p>
+<h2 id="testing-and-development">Testing and Development</h2>
+<p><strong>Local Development Tools</strong><br>
+Tunneling services (ngrok, Tunnelmole, LocalTunnel) expose local development servers via public URLs enabling webhook testing without deployment.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ngrok http <span style="color:#ff0;font-weight:bold">3000</span>
+</span></span><span style="display:flex;"><span><span style="color:#007f7f"># Provides public URL: https://abc123.ngrok.io → localhost:3000</span>
+</span></span></code></pre></div><p><strong>Request Inspection</strong><br>
+Services like RequestBin, Webhook.site, or platform-specific testing tools capture and display webhook payloads facilitating debugging.</p>
+<p><strong>Mock Responses</strong><br>
+Test platforms simulate webhook responses enabling frontend development independent of backend availability.</p>
+<p><strong>Integration Testing</strong><br>
+Automated test suites verify webhook handling across success scenarios, error conditions, timeout behaviors, and retry logic.</p>
+<p><strong>Staging Environments</strong><br>
+Separate test and production webhook endpoints enable safe testing without impacting live users.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>How does webhook fulfillment differ from traditional APIs?</strong><br>
+Webhooks are server-initiated push notifications delivering real-time event data, while traditional APIs require client-initiated polling at scheduled intervals. Webhooks provide lower latency and higher efficiency for event-driven architectures.</p>
+<p><strong>What happens if the webhook endpoint is unavailable?</strong><br>
+Platforms implement retry mechanisms with exponential backoff attempting delivery multiple times (typically 3-5 attempts). Events may be queued temporarily or logged for manual review if repeated failures occur.</p>
+<p><strong>Can webhook payloads be customized?</strong><br>
+Most platforms support flexible payload configuration enabling parameter mapping, custom field inclusion, and conditional data transmission based on event types or user attributes.</p>
+<p><strong>How should webhook failures be handled?</strong><br>
+Implement comprehensive error handling returning appropriate HTTP status codes (4xx for client errors, 5xx for server errors), logging failures for analysis, and designing idempotent operations supporting safe retries.</p>
+<p><strong>What are typical webhook timeout limits?</strong><br>
+Platforms typically enforce 5-10 second response timeouts. Operations exceeding these limits should use asynchronous processing patterns acknowledging immediately while processing in background.</p>
+<p><strong>How do you secure webhook endpoints?</strong><br>
+Implement HTTPS exclusively, validate request signatures or authentication tokens, use IP allowlisting where applicable, log security events, and rotate credentials periodically.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Cahill, R. (n.d.). What Are Webhooks? A Comprehensive Guide for Developers. Dev.to.</p>
+</li>
+<li>
+<p>Google Cloud. (n.d.). Dialogflow ES: Fulfillment Webhook Guide. Google Cloud Documentation.</p>
+</li>
+<li>
+<p>Red Hat. (n.d.). What is a Webhook?. Red Hat Topics.</p>
+</li>
+<li>
+<p>GetStream. (n.d.). What is a Webhook?. GetStream Glossary.</p>
+</li>
+<li>
+<p>Chatbot.com. (n.d.). Webhooks in Chatbot. Chatbot Help.</p>
+</li>
+<li>
+<p>Red Hat. (n.d.). What is Event-Driven Architecture?. Red Hat Topics.</p>
+</li>
+<li>
+<p>Google Cloud. (n.d.). Dialogflow WebhookRequest Reference. Google Cloud Documentation.</p>
+</li>
+<li>
+<p>Google Support. (n.d.). Why HTTPS?. Google Support.</p>
+</li>
+<li>
+<p>Hookdeck. (n.d.). Complete Guide to Webhook Security. Hookdeck Guides.</p>
+</li>
+<li>
+<p>Google Cloud. (n.d.). Dialogflow: Authentication Options. Google Cloud Documentation.</p>
+</li>
+<li>
+<p>Racklify. (n.d.). Implementing a Webhook: Step-by-Step Beginner Guide. Racklify Encyclopedia.</p>
+</li>
+<li>
+<p>ngrok. Web Tunneling Service. URL: <a href="https://ngrok.com/" target="_blank" rel="nofollow noopener noreferrer">https://ngrok.com/</a></p>
+</li>
+<li>
+<p>Tunnelmole. Web Tunneling Service. URL: <a href="https://tunnelmole.com/" target="_blank" rel="nofollow noopener noreferrer">https://tunnelmole.com/</a></p>
+</li>
+<li>
+<p>Google Cloud. (n.d.). Dialogflow: Webhook Code Samples. Google Cloud Documentation.</p>
+</li>
+<li>
+<p>Google Cloud. (n.d.). Dialogflow: Fulfillment Use Cases. Google Cloud Documentation.</p>
+</li>
+</ol>
+
+  </div>
+
+  
+  
+  
+  
+  
+    
+    <div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+      <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/integration/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Integration
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Integration connects different software and data sources so they work together seamlessly, allowing ...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/integration/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/context-switching/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Context Switching
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Context switching is when a user suddenly changes topics during a conversation, requiring AI chatbot...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/context-switching/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/customer-support/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Customer Support
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Customer support is a team and set of tools that help customers solve problems, answer questions, an...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/customer-support/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/fall-back-mechanism/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Fall-back Mechanism (Fallback Mechanism)
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A fall-back mechanism in AI chatbots ensures continuity when the bot fails to interpret or fulfill a...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/fall-back-mechanism/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/honorific-language-support/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Honorific Language Support
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Honorific Language Support is the ability to recognize and use Japanese polite expressions appropria...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/honorific-language-support/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/personalization/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Personalization
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Personalization is technology that automatically tailors products, services, and interactions to eac...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/personalization/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      </div>
+    
+
+
+  
+  <div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+    <a 
+      href="/en/glossary/" 
+      class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+    >
+      <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+      </svg>
+      
+        Back to Glossary
+      
+    </a>
+  </div>
+</article>
+
+</main>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer style="background-color: #000000;">
+  
+  <div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+    
+    <svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="curveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      
+      
+      <path class="curve" data-speed="0.8" stroke="url(#curveGrad1)" stroke-width="2" fill="none" />
+      <path class="curve" data-speed="1.2" stroke="url(#curveGrad2)" stroke-width="2.5" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.6" stroke="url(#curveGrad3)" stroke-width="1.5" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.5" stroke="url(#curveGrad1)" stroke-width="2" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="0.9" stroke="url(#curveGrad2)" stroke-width="3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.3" stroke="url(#curveGrad3)" stroke-width="1.8" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.7" stroke="url(#curveGrad1)" stroke-width="2.2" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.1" stroke="url(#curveGrad2)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="1.4" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="0.85" stroke="url(#curveGrad1)" stroke-width="1.5" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="1.0" stroke="url(#curveGrad2)" stroke-width="2.8" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.25" stroke="url(#curveGrad3)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.95" stroke="url(#curveGrad1)" stroke-width="2.3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.35" stroke="url(#curveGrad2)" stroke-width="1.7" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.75" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.7" />
+    </svg>
+    
+    
+    <div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    
+    <div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+      <h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+      <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+      <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+      <div class="mt-8 flex justify-center">
+        <a href="/en/blog/" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get started</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+  
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+    <div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+      
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/webp"
+        
+        data-srcset="/images/interwork-logo-white-1.webp 568w"
+        
+        sizes="200px"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/interwork-logo-white-1.webp"
+        
+        alt="Interwork"
+        class="lazy-image h-9"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+    </picture>
+
+
+  
+
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Services</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">AI Solutions</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Web Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">System Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Consulting</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Support</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://support.smartweb.jp/" class="text-sm/6 text-gray-400 hover:text-white">Support Portal</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Documentation</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Company</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://www.intwk.co.jp/about/" class="text-sm/6 text-gray-400 hover:text-white">About</a>
+              </li>
+              
+              <li>
+                <a href="/en/blog/" class="text-sm/6 text-gray-400 hover:text-white">Blog</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Careers</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">News</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="/en/privacy-policy/" class="text-sm/6 text-gray-400 hover:text-white">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="/en/ai-chatbot-terms-of-use/" class="text-sm/6 text-gray-400 hover:text-white">AI Chatbot Terms of Use</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div>
+        <p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+        
+          
+
+
+
+
+<div class="language-selector">
+  <div class="flex flex-wrap items-center justify-center gap-3">
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+          
+            
+            
+          
+        
+        
+        
+        
+        
+        <a href="/ja/glossary/Webhook-Fulfillment/"
+           class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
+           title="日本語"
+           aria-label="日本語"
+           hreflang="ja">
+          <img 
+            src="/flags/jp.png"
+            alt="日本語"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </a>
+      
+    
+      
+      
+      
+      
+      
+      
+        
+        <span class="inline-flex items-center text-sm opacity-50" title="English">
+          <img 
+            src="/flags/gb.png"
+            alt="English"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </span>
+      
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+    <div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex gap-x-6 md:order-2">
+        
+        <a href="https://github.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">GitHub</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://x.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">X</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://youtube.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">YouTube</span>
+          
+
+
+
+        </a>
+        
+      </div>
+      <p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">&copy; 2026 Interwork Corporation All rights reserved.</p>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<div id="cookie-consent-banner" data-cookie-consent-banner class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark">
+    <div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+        <p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br> We use cookies to enhance your browsing experience and analyze our traffic. See our <a href="/en/privacy-policy/" class="font-semibold text-primary hover:text-primary-500">privacy policy</a>.</p>
+        <div class="mt-4 flex items-center gap-x-3 flex-wrap">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Accept All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-all
+    >
+      Accept All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Reject All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-necessary
+    >
+      Reject All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Cookie Settings"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=settings
+    >
+      Cookie Settings
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="cookie-settings-modal" class="fixed inset-0 z-50 hidden dark">
+    <div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close></div>
+    <div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+            <button type="button" class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close>
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="necessary-cookies" name="necessary-cookies" type="checkbox" checked disabled class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="analytics-cookies" name="analytics-cookies" type="checkbox" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 flex justify-end gap-x-3">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2  not-prose group"
+      aria-label="Cancel"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-close
+    >
+      Cancel
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2  not-prose group"
+      aria-label="Save Preferences"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-save
+    >
+      Save Preferences
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+<button
+  id="back-to-top-btn"
+  aria-label="Back to Top"
+  class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg 
+         transition-all duration-300 transform translate-y-12 opacity-0 invisible
+         hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+         dark:bg-indigo-500 dark:hover:bg-indigo-400"
+  onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+  </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+
+
+
+
+<script src="/js/app.js?v=20260106210129"></script>
+
+
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+
+</body>
+</html>

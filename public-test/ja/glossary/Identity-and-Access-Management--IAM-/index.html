@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>アイデンティティ・アクセス管理（IAM） | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Identity-and-Access-Management--IAM-/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="アイデンティティ・アクセス管理（IAM）システムの包括的ガイド。認証、認可、ガバナンス、セキュリティのベストプラクティスを網羅しています。" name="description"/>
+<meta content="アイデンティティ管理, アクセス制御, 認証, 認可, セキュリティガバナンス" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Identity-and-Access-Management--IAM-/" property="og:url"/>
+<meta content="アイデンティティ・アクセス管理（IAM） | SmartWeb" property="og:title"/>
+<meta content="アイデンティティ・アクセス管理（IAM）システムの包括的ガイド。認証、認可、ガバナンス、セキュリティのベストプラクティスを網羅しています。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Identity-and-Access-Management--IAM-/" name="twitter:url"/>
+<meta content="アイデンティティ・アクセス管理（IAM） | SmartWeb" name="twitter:title"/>
+<meta content="アイデンティティ・アクセス管理（IAM）システムの包括的ガイド。認証、認可、ガバナンス、セキュリティのベストプラクティスを網羅しています。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">アイデンティティ・アクセス管理（IAM）</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        アイデンティティ・アクセス管理（IAM）
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Identity and Access Management (IAM)
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          アイデンティティ・アクセス管理（IAM）システムの包括的ガイド。認証、認可、ガバナンス、セキュリティのベストプラクティスを網羅しています。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                アイデンティティ管理
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                アクセス制御
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                認証
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                認可
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                セキュリティガバナンス
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="identity-and-access-management-iamとは">Identity and Access Management (IAM)とは?</h2>
+<p>Identity and Access Management(IAM)は、組織がデジタルアイデンティティを管理し、リソース、アプリケーション、データへのアクセスを制御するための包括的なポリシー、テクノロジー、プロセスのフレームワークです。その核心において、IAMは適切な個人が適切なタイミングで適切な理由により適切なリソースへの適切なアクセス権を持つことを保証します。この基本的な<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>規律は、デジタルアイデンティティのライフサイクル全体を包含し、初期プロビジョニングと<a data-lb="1" href="/ja/glossary/Authentication/" title="デジタル環境およびアプリケーションにおける安全な本人確認のための認証システム、方法、ベストプラクティスに関する包括的なガイド。">認証</a>から継続的なアクセスガバナンス、そしてアクセスが不要になった際の最終的なデプロビジョニングまでをカバーします。</p>
+<p>現代のIAMの状況は、シンプルなユーザー名とパスワードのシステムから、複数の認証方法、リスクベースのアクセス制御、インテリジェントなガバナンス機能を統合する洗練されたプラットフォームへと大きく進化してきました。現代のIAMソリューションは、ハイブリッドおよびマルチクラウド環境、リモートワークフォース、そして安全なアクセスを必要とするアプリケーションやサービスの急増という複雑な課題に対処します。これらのシステムは、セキュリティ要件と<a data-lb="1" href="/ja/glossary/UX/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">ユーザーエクスペリエンス</a>のバランスを取り、正当なユーザーが必要なリソースに効率的にアクセスできるようにしながら、不正アクセスを防止し、規制要件へのコンプライアンスを維持する必要があります。</p>
+<p>IAMは、ゼロトラストセキュリティアーキテクチャの基盤として機能し、ユーザーの場所や以前の認証ステータスに関係なく、すべてのアクセスリクエストが検証および確認されます。このアプローチは、組織が高度なサイバー脅威、規制コンプライアンス要件、そして従業員、契約者、パートナー、顧客を含む多様なユーザー集団をサポートする必要性に直面する中で、ますます重要になっています。効果的なIAM実装は、セキュリティリスクを軽減し、運用効率を向上させ、ユーザーの生産性を高め、現代のサイバーセキュリティガバナンスに必要な可視性と制御を提供します。この規律は、技術的な実装と組織的プロセスの両方を包含し、<a data-lb="1" href="/ja/glossary/Authorization/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a>がビジネス要件と整合しながら適切なセキュリティ態勢を維持することを保証するために、ITセキュリティチーム、ビジネス関係者、コンプライアンス機能間の調整を必要とします。</p>
+<h2 id="iamの主要コンポーネント">IAMの主要コンポーネント</h2>
+<p><strong>Identity Governance and Administration(IGA)</strong> - デジタルアイデンティティの完全なライフサイクルを管理する基盤コンポーネントで、ユーザープロビジョニング、ロール管理、アクセス認証を含みます。IGAプラットフォームは、誰がどのリソースにアクセスできるかについての一元的な可視性を提供し、アクセスリクエストと承認のための自動化された<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>を可能にします。</p>
+<p><strong>認証システム</strong> - パスワード、多要素認証、生体認証、証明書ベースの認証など、さまざまな方法を通じてユーザーアイデンティティを検証するテクノロジーとプロセス。現代の認証システムは、リスク要因とコンテキストに基づいて<a data-lb="1" href="/ja/glossary/security-requirements/" title="セキュリティ要件について学ぶ:情報の機密性、完全性、可用性(CIA)を確保するためにシステムが満たすべき明確で実行可能な条件。デジタル資産を保護するために不可欠です。">セキュリティ要件</a>を調整する適応型認証をサポートします。</p>
+<p><strong>認可とアクセス制御</strong> - 認証されたユーザーがシステムやアプリケーション内で何を実行できるかを決定するメカニズム。これには、<a data-lb="1" href="/ja/glossary/Role-Based-Access-Control--RBAC-/" title="ロールベースアクセス制御（RBAC）の包括的ガイド - 実装方法、メリット、課題、そして安全なアクセス管理のためのベストプラクティスを解説します。">ロールベースアクセス制御</a>(RBAC)、属性ベースアクセス制御(ABAC)、およびユーザー属性、リソース特性、環境要因に基づいて詳細な権限を強制するポリシーベースアクセス制御が含まれます。</p>
+<p><strong>シングルサインオン(SSO)</strong> - ユーザーが一度認証するだけで、繰り返しログインプロンプトなしに複数のアプリケーションやシステムにアクセスできるようにするテクノロジー。SSOはユーザーエクスペリエンスを向上させながら、セキュリティチームに一元的な認証制御と監査機能を提供します。</p>
+<p><strong>特権アクセス管理(PAM)</strong> - 管理者アカウント、サービスアカウント、緊急アクセス資格情報を含む、昇格された特権を持つ高リスクアカウントの管理と監視のための専門的な制御。PAMソリューションは、セッション記録、ジャストインタイムアクセス、資格情報保管機能を提供します。</p>
+<p><strong>アイデンティティフェデレーション</strong> - 組織の境界を越えて安全なアイデンティティと認証情報の共有を可能にする標準とプロトコル。フェデレーションにより、組織は信頼関係を確立し、セキュリティ制御を維持しながらパートナーリソースへのシームレスなアクセスを可能にします。</p>
+<p><strong>ディレクトリサービス</strong> - アイデンティティ情報、ユーザー属性、組織構造データを保存および管理する一元化されたリポジトリ。現代のディレクトリサービスは、クラウドネイティブアーキテクチャをサポートし、さまざまなアプリケーションやサービスとの統合のための<a data-lb="1" href="/ja/glossary/APIs/" title="API(アプリケーション・プログラミング・インターフェース)を詳しく解説:定義、仕組み、種類(REST、SOAP)、実例、メリット、セキュリティ、ベストプラクティスを網羅した総合ガイドです。">API</a>を提供します。</p>
+<h2 id="identity-and-access-managementiamの仕組み">Identity and Access Management(IAM)の仕組み</h2>
+<p>IAMワークフローは、<strong>アイデンティティの確立</strong>から始まります。新しいユーザーは、<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>または手動のプロビジョニングプロセスを通じてシステムにオンボーディングされ、デジタルアイデンティティが作成され、ロール、部門、または特定のビジネス要件に基づいて初期アクセス権が割り当てられます。</p>
+<p><strong>認証の開始</strong>は、ユーザーが保護されたリソースへのアクセスを試みたときに発生し、IAMシステムが設定された認証方法を通じてアイデンティティを検証するようトリガーします。これには、セキュリティコンテキストに応じて、従来の資格情報、<a data-lb="1" href="/ja/glossary/Multi-Factor-Authentication--MFA-/" title="多要素認証（MFA）の包括的なガイド。実装方法、メリット、課題、セキュリティ強化のためのベストプラクティスを網羅しています。">多要素認証</a>、またはリスクベースの適応型認証が含まれる場合があります。</p>
+<p><strong>リスク評価とコンテキスト評価</strong>は、システムがユーザーの場所、デバイス特性、アクセス時間、行動パターンなどの要因を分析して、適用すべき認証の厳格さとアクセス制御の適切なレベルを決定する際に、リアルタイムで行われます。</p>
+<p><strong>認可の決定</strong>は、認証されたユーザーのアイデンティティ、割り当てられたロール、属性、およびアクセスされる特定のリソースに基づいて行われ、ポリシーエンジンが複雑なルールを評価して、アクセスを許可、拒否、または追加の承認を要求すべきかを決定します。</p>
+<p><strong>アクセスプロビジョニング</strong>は、認可が付与されたときに発生し、システムがユーザーに適切な権限を提供し、追加の関連リソースへのアクセスのための<a data-lb="1" href="/ja/glossary/SAML--Security-Assertion-Markup-Language-/" title="SAML認証プロトコルの包括的なガイド。安全なシングルサインオンソリューションの実装、メリット、ユースケース、ベストプラクティスを網羅しています。">シングルサインオン</a>機能を含む可能性のある安全なセッションを確立します。</p>
+<p><strong>セッション監視と管理</strong>は、ユーザーのアクティブなセッション全体を通じて継続され、IAMシステムがアクティビティを追跡し、セッションタイムアウトを強制し、資格情報の侵害やポリシー違反を示す可能性のある疑わしい行動を監視します。</p>
+<p><strong>アクセスレビューとガバナンス</strong>プロセスは、バックグラウンドで継続的に実行され、自動化されたシステムと手動レビューがアクセス権が適切なままであることを保証し、孤立したアカウントを特定し、ポリシーやコンプライアンス要件に違反する可能性のあるアクセスにフラグを立てます。</p>
+<p><strong>監査ログと報告</strong>は、すべての認証試行、認可決定、アクセスアクティビティをキャプチャして、セキュリティ調査、コンプライアンス報告、アクセスポリシーの継続的改善のための包括的な監査証跡を提供します。</p>
+<p><strong>ワークフローの例</strong>:従業員がマーケティング部門に参加すると、HRシステムが自動的にIAMプラットフォームでアイデンティティプロビジョニングをトリガーし、マーケティングロール権限を持つアカウントを作成します。従業員は多要素認証を使用して認証し、SSOを通じてマーケティングアプリケーションにアクセスし、そのアクティビティはセキュリティとコンプライアンスの目的で継続的に監視およびログに記録されます。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>セキュリティ態勢の強化</strong> - IAMは、一貫したアクセス制御を実装し、共有アカウントを排除し、組織全体でどのリソースに誰がアクセスできるかについての包括的な可視性を提供することで、セキュリティリスクを大幅に軽減します。</p>
+<p><strong>規制コンプライアンス</strong> - 自動化されたアクセスガバナンス、詳細な監査証跡、ポリシー強制機能により、組織はSOX、<a data-lb="1" href="/ja/glossary/GDPR/" title="EUの包括的なデータ保護規則であるGDPRについて理解しましょう。その原則、コンプライアンス要件、データ主体の権利、そしてAIチャットボットへの影響について学びます。">GDPR</a>、HIPAA、業界固有の標準などの規制のコンプライアンス要件を満たすことができます。</p>
+<p><strong>ユーザーエクスペリエンスの向上</strong> - シングルサインオン機能、<a data-lb="1" href="/ja/glossary/self-service/" title="カスタマーサポートのためのセルフサービスソリューション、ツール、戦略を探求します。FAQ、ナレッジベース、AIチャットボットが顧客をエンパワーメントし、運用コストを削減する方法を学びます。">セルフサービス</a>パスワードリセット、合理化されたアクセスリクエストプロセスにより、セキュリティ制御を維持しながら正当なユーザーの摩擦を軽減します。</p>
+<p><strong>運用効率</strong> - 自動化されたプロビジョニングとデプロビジョニングプロセスにより、手動の管理オーバーヘッドが削減され、アクセス変更がすべてのシステムで一貫して迅速に実装されることが保証されます。</p>
+<p><strong>コスト削減</strong> - 一元化された<a data-lb="1" href="/ja/glossary/Identity-and-Access-Management--IAM-/" title="アイデンティティ・アクセス管理（IAM）システムの包括的ガイド。認証、認可、ガバナンス、セキュリティのベストプラクティスを網羅しています。">アイデンティティ管理</a>により、アクセス制御システムの<a data-lb="1" href="/ja/glossary/Total-Cost-of-Ownership--TCO-/" title="総所有コスト (TCO) は、資産の購入、使用、廃棄にかかるすべての費用をライフサイクル全体にわたって計算する財務分析手法であり、組織がより賢明な購買意思決定を行うために役立ちます。">総所有コスト</a>が削減され、パスワードリセットやアクセス問題に関連するヘルプデスクチケットが減少します。</p>
+<p><strong>リスク軽減</strong> - 高度な脅威検出、行動分析、適応型認証機能により、重大な損害を引き起こす前に潜在的なセキュリティ脅威を特定し対応することができます。</p>
+<p><strong>スケーラビリティと柔軟性</strong> - 現代のIAMプラットフォームは、クラウドネイティブアーキテクチャをサポートし、セキュリティやパフォーマンスを損なうことなく、増加するユーザー集団と拡大するアプリケーションポートフォリオに対応するためにスケールできます。</p>
+<p><strong>ビジネスアジリティ</strong> - 迅速なプロビジョニング機能と柔軟なアクセスポリシーにより、組織は適切なセキュリティ制御を維持しながら、新しい従業員、パートナー、顧客を迅速にオンボーディングできます。</p>
+<p><strong>可視性と制御</strong> - 包括的な報告と分析により、セキュリティチームはIT環境全体のアクセスパターン、ポリシー違反、潜在的なセキュリティリスクに関する詳細な洞察を得ることができます。</p>
+<p><strong>ゼロトラストの実現</strong> - IAMは、決して信頼せず常に検証するアプローチに必要なアイデンティティ検証とアクセス制御機能を提供することで、ゼロトラストセキュリティアーキテクチャの基盤として機能します。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>従業員ライフサイクル管理</strong> - 従業員が入社、役割変更、または退職する際のアクセス権のプロビジョニングとデプロビジョニングを自動化し、セキュリティギャップなしに適切なアクセスを保証します。</p>
+<p><strong>契約者とパートナーのアクセス</strong> - セキュリティ境界と監査機能を維持しながら、定義された期間に特定のリソースを必要とする外部ユーザーの一時的または制限付きアクセスを管理します。</p>
+<p><strong>顧客アイデンティティ管理</strong> - 機密データを保護し、パーソナライズされたエクスペリエンスを可能にしながら、顧客向けアプリケーションに安全でユーザーフレンドリーな認証と認可を提供します。</p>
+<p><strong>クラウドアプリケーションセキュリティ</strong> - ハイブリッド環境全体で一元化された認証と一貫したポリシー強制を通じて、Software-as-a-Serviceアプリケーションとクラウドインフラストラクチャへのアクセスを保護します。</p>
+<p><strong>特権アカウント保護</strong> - 不正な特権アクセスと内部脅威を防ぐために、高リスクの管理者アカウント、サービスアカウント、緊急アクセス資格情報を管理および監視します。</p>
+<p><strong>規制コンプライアンスプログラム</strong> - 自動化されたアクセスレビュー、職務分離の強制、規制報告のための包括的な監査証跡生成を通じて、コンプライアンスイニシアチブをサポートします。</p>
+<p><strong>合併と買収の統合</strong> - 組織変更中にセキュリティ制御を維持し、ビジネス継続性を可能にしながら、買収した組織のユーザーとシステムを迅速に統合します。</p>
+<p><strong>リモートワークフォースの実現</strong> - 場所、デバイス、ネットワーク特性に基づいてセキュリティ制御を適応させながら、リモートおよびモバイルワーカーに企業リソースへの安全なアクセスを提供します。</p>
+<p><strong>DevOpsとAPIセキュリティ</strong> - 現代の開発環境における自動化されたプロセスとアプリケーション間<a data-lb="1" href="/ja/glossary/DTMF--Dual-Tone-Multi-Frequency-/" title="DTMF(デュアルトーン多重周波数)は、キーパッド押下時に発生する固有の音声トーンを使用してコマンドを解釈し、通話をルーティングし、自動メニューナビゲーション、リモートコントロール、および電話ネットワークやデジタルプラットフォームにおける安全なデータ入力を可能にする通信信号システムです。">通信</a>を保護するために、マシンアイデンティティ、サービスアカウント、API アクセス資格情報を管理します。</p>
+<p><strong>ゼロトラスト実装</strong> - ユーザーの場所やネットワーク位置に関係なくすべてのアクセスリクエストを検証するゼロトラストセキュリティアーキテクチャのアイデンティティとアクセス制御の基盤として機能します。</p>
+<h2 id="iam展開モデルの比較">IAM展開モデルの比較</h2>
+<table>
+<thead>
+<tr>
+<th>展開モデル</th>
+<th>制御レベル</th>
+<th>スケーラビリティ</th>
+<th>コスト構造</th>
+<th>メンテナンス</th>
+<th>最適な用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>オンプレミス</td>
+<td>高</td>
+<td>限定的</td>
+<td>高い初期費用</td>
+<td>内部チーム</td>
+<td>高度に規制された業界</td>
+</tr>
+<tr>
+<td>クラウドネイティブ</td>
+<td>中</td>
+<td>優秀</td>
+<td>サブスクリプション</td>
+<td>ベンダー管理</td>
+<td>成長中の組織</td>
+</tr>
+<tr>
+<td>ハイブリッド</td>
+<td>高</td>
+<td>良好</td>
+<td>混合</td>
+<td>共有</td>
+<td>複雑な環境</td>
+</tr>
+<tr>
+<td>Identity-as-a-Service</td>
+<td>低</td>
+<td>優秀</td>
+<td>従量課金</td>
+<td>ベンダー管理</td>
+<td>中小企業</td>
+</tr>
+<tr>
+<td>フェデレーション</td>
+<td>可変</td>
+<td>良好</td>
+<td>分散</td>
+<td>共有</td>
+<td>複数組織シナリオ</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>複雑性管理</strong> - 現代のIAM実装は非常に複雑になる可能性があり、セキュリティ<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">脆弱性</a>や運用上の問題を引き起こす可能性のある設定エラーを回避するために、慎重な計画と継続的な管理が必要です。</p>
+<p><strong>ユーザー採用とエクスペリエンス</strong> - セキュリティ要件とユーザーの利便性のバランスを取ることは依然として困難であり、過度に制限的な制御はユーザーの不満とセキュリティを損なう回避行動につながる可能性があります。</p>
+<p><strong>レガシーシステムの統合</strong> - 現代の認証機能を欠く古いアプリケーションやシステムとIAMソリューションを統合するには、多くの場合、カスタム開発または追加のインフラストラクチャコンポーネントが必要です。</p>
+<p><strong>スケーラビリティとパフォーマンス</strong> - IAMシステムがピーク認証負荷を処理し、アプリケーションのパフォーマンスやユーザーエクスペリエンスに影響を与えることなく、増加するユーザー集団をサポートするためにスケールできることを保証します。</p>
+<p><strong>プライバシーとデータ保護</strong> - プライバシー規制に準拠しながら機密アイデンティティ情報を管理し、アイデンティティデータが不正アクセスや悪用から保護されることを保証します。</p>
+<p><strong>ベンダーロックインリスク</strong> - 相互運用性を確保し、ビジネス要件が変更された場合に代替ソリューションに移行する能力を確保しながら、特定のIAMベンダーへの過度な依存を回避します。</p>
+<p><strong>コスト管理</strong> - 複雑な環境全体でのライセンス、実装、メンテナンス、継続的な運用費用を含む、IAMソリューションの総所有コストを管理します。</p>
+<p><strong>スキルと専門知識のギャップ</strong> - 資格のあるIAM専門家の不足に対処し、内部チームが洗練されたIAMソリューションを効果的に実装および管理するために必要なスキルを持つことを保証します。</p>
+<p><strong>規制コンプライアンスの複雑性</strong> - 異なる管轄区域や業界にわたって運用効率とユーザーエクスペリエンスを維持しながら、複数の、時には矛盾する規制要件をナビゲートします。</p>
+<p><strong>脅威の状況の進化</strong> - 特にアイデンティティとアクセス管理システムを標的とする新たな脅威、攻撃ベクトル、高度な敵対者に対処するために、IAM制御を継続的に適応させます。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>包括的なアイデンティティガバナンス戦略</strong> - 組織全体の関係者の賛同を確保しながら、IAM実装をビジネス目標、規制要件、リスク管理の優先事項と整合させる総合的なアプローチを開発します。</p>
+<p><strong>リスクベースのアクセス制御</strong> - ユーザーの行動、場所、デバイス特性、その他のコンテキスト要因に基づいてセキュリティ要件を調整する適応型認証と認可メカニズムを実装します。</p>
+<p><strong>最小権限の原則</strong> - ユーザーが職務を遂行するために必要な最小限の権限を付与するアクセスポリシーを設計し、過剰または未使用の権限の定期的なレビューと自動クリーンアップを行います。</p>
+<p><strong>自動化されたプロビジョニングとデプロビジョニング</strong> - ユーザーライフサイクルイベントを自動的に管理するワークフローを確立し、新しいユーザーへのタイムリーなアクセスプロビジョニングと、不要になったアクセスの迅速な削除を保証します。</p>
+<p><strong>多要素認証の実装</strong> - パスワード、トークン、生体認証、または証明書などの複数の要素を組み合わせた強力な認証メカニズムを展開し、資格情報侵害のリスクを大幅に軽減します。</p>
+<p><strong>定期的なアクセスレビューと認証</strong> - マネージャーとデータ所有者がユーザーアクセス権をレビューおよび検証することを要求する定期的なアクセス認証プロセスを実装し、特定された問題の自動修復を行います。</p>
+<p><strong>包括的な監視とアラート</strong> - 認証イベント、アクセスパターン、ポリシー違反を追跡し、疑わしいアクティビティやセキュリティインシデントのリアルタイムアラートを提供する監視システムを展開します。</p>
+<p><strong>アイデンティティフェデレーション標準</strong> - SAML、OAuth、OpenID Connectなどの業界標準プロトコルを利用して、パートナー組織や<a data-lb="1" href="/ja/glossary/cloud-service/" title="クラウドサービスとは、サードパーティベンダーがインターネット経由で提供するITリソースです。SaaS、PaaS、IaaS、FaaS、XaaSモデルの特徴、メリット、ユースケースを理解しましょう。">クラウドサービス</a>との安全なアイデンティティフェデレーションと相互運用性を可能にします。</p>
+<p><strong>災害復旧とビジネス継続性</strong> - システム障害やセキュリティインシデント時に重要なリソースへの継続的なアクセスを保証するために、IAMシステムの堅牢なバックアップと復旧手順を開発します。</p>
+<p><strong>継続的なトレーニングと意識向上</strong> - IAMポリシー、手順、セキュリティのベストプラクティスの適切な理解を保証するために、技術チームとエンドユーザーの両方に継続的な教育を提供します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>行動分析と機械学習</strong> - 人工知能と<a data-lb="1" href="/ja/glossary/Ensemble-Learning/" title="機械学習における予測精度向上のためのアンサンブル学習手法、アルゴリズム、および応用に関する包括的ガイド。">機械学習アルゴリズム</a>を実装して、ユーザーの行動パターンを分析し、異常を検出し、<a data-lb="1" href="/ja/glossary/Financial-Risk-Management/" title="財務リスク管理は、AI、機械学習、高度な分析手法を活用して、市場リスク、信用リスク、オペレーショナルリスク、流動性リスクなどの財務リスクを特定、評価、監視、軽減し、組織資産を保護し、規制コンプライアンスを確保します。">リスク評価</a>と脅威インテリジェンスに基づいてアクセス制御を自動的に調整します。</p>
+<p><strong>ゼロトラストアーキテクチャの統合</strong> - ネットワークの場所や以前の認証ステータスに関係なく、ユーザーアイデンティティとデバイスの信頼レベルを継続的に検証することでゼロトラストの原則をサポートするIAMシステムを設計します。</p>
+<p><strong>ブロックチェーンベースのアイデンティティ管理</strong> - 改ざん防止のアイデンティティレコードを作成し、ユーザーが個人情報をより制御できる自己主権アイデンティティモデルを可能にするために、分散台帳技術を探索します。</p>
+<p><strong>生体認証システム</strong> - 指紋、顔認識、<a data-lb="1" href="/ja/glossary/speech-recognition/" title="音声認識(ASR)は、話し言葉をテキストに変換する技術です。このAI技術の仕組み、アルゴリズム、機能、応用分野、そして今後のトレンドについて解説します。">音声認識</a>、行動生体認証を含む高度な生体認証技術を展開して、強力でユーザーフレンドリーな認証方法を提供します。</p>
+<p><strong>ジャストインタイムアクセスプロビジョニング</strong> - 必要なときにのみ権限を付与し、指定された期間またはタスク完了後に自動的に取り消す動的アクセス制御を実装して、露出ウィンドウを最小限に抑えます。</p>
+<p><strong>API ファーストアーキテクチャ設計</strong> - 現代のアプリケーション、<a data-lb="1" href="/ja/glossary/API-Gateway/" title="現代のマイクロサービスと分散システムにおけるAPIゲートウェイのアーキテクチャ、実装、メリット、ベストプラクティスに関する包括的なガイド。">マイクロサービスアーキテクチャ</a>、クラウドネイティブ開発プラクティスとのシームレスな統合を可能にする包括的なAPIを備えたIAMプラットフォームを構築します。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p><strong>人工知能の統合</strong> - 高度なAIと<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>機能により、IAMプラットフォーム内でより洗練されたリスク評価、自動化されたポリシー推奨、インテリジェントな脅威検出が可能になります。</p>
+<p><strong>分散型アイデンティティモデル</strong> - 自己主権アイデンティティと分散型アイデンティティ管理アプローチにより、ユーザーは個人情報をより制御できるようになり、アイデンティティ<a data-lb="1" href="/ja/glossary/Encryption-at-Rest/" title="保存データの暗号化に関する包括的なガイド - 暗号化手法によるストレージデータの保護、実装戦略、セキュリティのベストプラクティスについて解説します。">データ保護</a>に対する組織の責任が軽減されます。</p>
+<p><strong>量子耐性暗号</strong> - 現在の暗号化方法を侵害する可能性のある将来の量子コンピューティング脅威からアイデンティティと認証システムを保護するために、ポスト量子暗号アルゴリズムを実装します。</p>
+<p><strong>拡張現実認証</strong> - アイデンティティ検証とアクセス制御への新しいアプローチを必要とする仮想現実、拡張現実、複合現実環境専用に設計された認証方法の開発。</p>
+<p><strong>IoTとエッジコンピューティングの統合</strong> - 軽量で分散されたアイデンティティ管理ソリューションを必要とするInternet of Thingsデバイスと<a data-lb="1" href="/ja/glossary/Edge-Function/" title="遠隔地のデータセンターではなく、ユーザーに近いサーバー上で実行される軽量プログラムで、リクエストをローカルで処理することでウェブサイトやアプリの応答速度を向上させます。">エッジコンピューティング</a><a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>の大規模なスケールをサポートするためのIAM機能の拡張。</p>
+<p><strong>パスワードレス認証の採用</strong> - パスワード関連のセキュリティリスクを排除し、ユーザーエクスペリエンスを向上させるFIDO2、WebAuthn、証明書ベースの認証を含むパスワードレス認証技術の広範な採用。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>National Institute of Standards and Technology. (2017). Digital Identity Guidelines. NIST Special Publication 800-63-3.</p>
+</li>
+<li>
+<p>Cloud Security Alliance. (2021). Identity and Access Management Guidance. CSA Guidance Document.</p>
+</li>
+<li>
+<p>SANS Institute. (2022). Identity and Access Management: A Comprehensive Guide. SANS White Paper.</p>
+</li>
+<li>
+<p>Gartner Research. (2023). Market Guide for Identity Governance and Administration. Gartner Report.</p>
+</li>
+<li>
+<p>International Organization for Standardization. (2020). Information Security Management Systems - Requirements. ISO/IEC 27001:2013.</p>
+</li>
+<li>
+<p>Open Web Application Security Project. (2021). OWASP Identity and Access Management Cheat Sheet. OWASP Foundation.</p>
+</li>
+<li>
+<p>Federal Identity, Credential, and Access Management Architecture. (2022). FICAM Roadmap and Implementation Guidance. U.S. General Services Administration.</p>
+</li>
+<li>
+<p>European Union Agency for Cybersecurity. (2021). Good Practices for Security of Identity and Access Management Systems. ENISA Technical Report.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/access-control/">
+                    アクセス制御
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/access-control/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/API-Security/">
+                    APIセキュリティ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    認証、認可、暗号化、およびアプリケーションインターフェースを保護するためのベストプラクティスを網羅した、<a data-lb="1" href="/ja/glossary/API-Endpoint-Configuration/" title="APIエンドポイント設定について、統合、自動化、セキュリティにおける重要性、およびAPIエンドポイントの設計、保護、文書化のベストプラクティスを学びます。">APIセキュリティ</a>の包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/API-Security/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Authorization/">
+                    認可
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Authorization/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Authentication/">
+                    認証
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    デジタル環境およびアプリケーションにおける安全な本人確認のための認証システム、方法、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Authentication/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Credential-Management/">
+                    認証情報管理
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    デジタルアイデンティティとアクセスを保護するための認証<a data-lb="1" href="/ja/glossary/Knowledge-Base-Architecture/" title="エンタープライズシステムにおけるナレッジベースアーキテクチャの設計、コンポーネント、実装戦略、ベストプラクティスに関する包括的なガイド。">情報管理システム</a>、セキュリティプラクティス、実装戦略に関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Credential-Management/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Single-Sign-On--SSO-/">
+                    シングルサインオン(SSO)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    シングルサインオン(SSO)認証システム、プロトコル、実装戦略、および企業向けセキュリティ考慮事項に関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Single-Sign-On--SSO-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/identity-and-access-management--iam-/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

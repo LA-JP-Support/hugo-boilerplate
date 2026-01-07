@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>JamC-QA | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/JamC-QA/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/JamC-QA/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/JamC-QA/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/JamC-QA/" hreflang="x-default" rel="alternate"/>
+<meta content="JamC-QAは、文化、歴史、地理、医療など多様な領域にわたる多肢選択式QAにおいて、日本語LLMを評価するための大規模ベンチマークデータセットです。" name="description"/>
+<meta content="JamC-QA, 日本語LLM, ベンチマークデータセット, 多肢選択式QA, LLM評価" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/JamC-QA/" property="og:url"/>
+<meta content="JamC-QA | SmartWeb" property="og:title"/>
+<meta content="JamC-QAは、文化、歴史、地理、医療など多様な領域にわたる多肢選択式QAにおいて、日本語LLMを評価するための大規模ベンチマークデータセットです。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/JamC-QA/" name="twitter:url"/>
+<meta content="JamC-QA | SmartWeb" name="twitter:title"/>
+<meta content="JamC-QAは、文化、歴史、地理、医療など多様な領域にわたる多肢選択式QAにおいて、日本語LLMを評価するための大規模ベンチマークデータセットです。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">JamC-QA</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Natural Language Processing
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        JamC-QA
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          JamC-QA
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          JamC-QAは、文化、歴史、地理、医療など多様な領域にわたる多肢選択式QAにおいて、日本語LLMを評価するための大規模ベンチマークデータセットです。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                JamC-QA
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                日本語LLM
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ベンチマークデータセット
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                多肢選択式QA
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                LLM評価
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="jamc-qaとは">JamC-QAとは?</h2>
+<p>JamC-QA(Japanese Multiple Choice Question Answering)は、<a data-lb="1" href="/ja/glossary/hallucination/" title="AIにおけるハルシネーションとは、生成モデルがもっともらしいものの事実として誤っている、意味をなさない、または捏造されたコンテンツを生成することを指します。その原因、種類、リスク、および軽減戦略について学びます。">大規模言語モデル</a>の日本固有の知識と文化的理解を評価するために特別に設計された大規模ベンチマークデータセットです。このデータセットは、日本文化、慣習、地域性、地理、歴史、政治、法律、医療という8つの厳選されたドメインにわたってモデルをテストします。</p>
+<p>このベンチマークは、MMLU、HellaSwag、SQuADなどの主要な国際ベンチマークでは十分に扱われていない、または全く含まれていない知識領域に焦点を当てることで、LLM評価における重要なギャップを埋めています。<a data-lb="1" href="/ja/glossary/JamC-QA/" title="JamC-QAは、文化、歴史、地理、医療など多様な領域にわたる多肢選択式QAにおいて、日本語LLMを評価するための大規模ベンチマークデータセットです。">JamC-QA</a>は、日本語LLMと多言語LLMの公平でドメイン固有の比較を可能にし、リーダーボード評価とアブレーション研究をサポートし、日本語話者向け<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">AIシステム</a>に不可欠な検証を提供します。</p>
+<p>JamC-QAは日本語モデルのベンチマークとして広く採用されており、Swallow <a data-lb="1" href="/ja/glossary/Output-Parsing/" title="出力パースは、AI言語モデルのテキスト応答から構造化データ(JSON、Pythonオブジェクト)を抽出し、自動化、分析、システム統合に活用する技術です。">LLM</a>リーダーボードを含む主要なリーダーボードに掲載され、日本中心の事実知識と一般知識の習熟度を測る標準として学術文献で参照されています。</p>
+<h2 id="データセット構成">データセット構成</h2>
+<h3 id="知識カテゴリ">知識カテゴリ</h3>
+<p>JamC-QAは、日本社会との関連性が高く、他の人気QAベンチマークには含まれていない8つの知識カテゴリにわたる2,341問の多肢選択問題で構成されています:</p>
+<table>
+<thead>
+<tr>
+<th>カテゴリ</th>
+<th>Dev</th>
+<th>Test</th>
+<th>焦点領域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文化</td>
+<td>4</td>
+<td>640</td>
+<td>芸術、映画、文学、音楽、文化的リテラシー</td>
+</tr>
+<tr>
+<td>慣習</td>
+<td>4</td>
+<td>200</td>
+<td>社会的慣習、エチケット、祭り、伝統</td>
+</tr>
+<tr>
+<td>地域性</td>
+<td>4</td>
+<td>397</td>
+<td>地域知識、方言、地域現象</td>
+</tr>
+<tr>
+<td>地理</td>
+<td>4</td>
+<td>272</td>
+<td>自然地理、地名、自然的特徴</td>
+</tr>
+<tr>
+<td>歴史</td>
+<td>4</td>
+<td>343</td>
+<td>歴史的出来事、人物、時代、文化的変遷</td>
+</tr>
+<tr>
+<td>政治</td>
+<td>4</td>
+<td>110</td>
+<td>政治システム、政策、政府の役割</td>
+</tr>
+<tr>
+<td>法律</td>
+<td>4</td>
+<td>299</td>
+<td>法制度、法体系、権利、規制</td>
+</tr>
+<tr>
+<td>医療</td>
+<td>4</td>
+<td>48</td>
+<td>医療システム、用語、公衆衛生</td>
+</tr>
+<tr>
+<td><strong>合計</strong></td>
+<td><strong>32</strong></td>
+<td><strong>2,309</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>カテゴリ選定の根拠:</strong></p>
+<ul>
+<li>日本の日常生活と文化の中核</li>
+<li>グローバルベンチマークでは十分に扱われていない</li>
+<li>特定の文化的・言語的知識が必要</li>
+<li>事実の想起から文脈的理解まで幅広くカバー</li>
+</ul>
+<h3 id="データ分割">データ分割</h3>
+<p><strong>開発分割(32問)</strong></p>
+<ul>
+<li>カテゴリごとに4問</li>
+<li>Few-shot評価に使用</li>
+<li>最小限の露出でモデルの調整が可能</li>
+<li>プロンプトエンジニアリングとファインチューニングをサポート</li>
+</ul>
+<p><strong>テスト分割(2,309問)</strong></p>
+<ul>
+<li>メイン評価テストベッド</li>
+<li>カテゴリごとに統計的に堅牢なサンプル</li>
+<li>リーダーボードランキングに使用</li>
+<li>詳細なパフォーマンス分析が可能</li>
+</ul>
+<h2 id="データセット構造">データセット構造</h2>
+<h3 id="データ形式">データ形式</h3>
+<p>各インスタンスは、4つの選択肢と1つの正解を持つ単一の多肢選択問題です。データセットはHugging Faceの<code>datasets</code>ライブラリ統合用にフォーマットされており、FlexEvalなどの評価フレームワークをサポートしています。</p>
+<p><strong>インスタンス例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"qid"</span>: <span style="color:#0ff;font-weight:bold">"jamcqa-test-culture-00001"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"category"</span>: <span style="color:#0ff;font-weight:bold">"culture"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"question"</span>: <span style="color:#0ff;font-weight:bold">"「狂った世で気が狂うなら気は確かだ」の名言を残した映画はどれ?"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"choice0"</span>: <span style="color:#0ff;font-weight:bold">"影武者"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"choice1"</span>: <span style="color:#0ff;font-weight:bold">"羅生門"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"choice2"</span>: <span style="color:#0ff;font-weight:bold">"隠し砦の三悪人"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"choice3"</span>: <span style="color:#0ff;font-weight:bold">"乱"</span>,
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">"answer_index"</span>: <span style="color:#ff0;font-weight:bold">3</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="フィールド定義">フィールド定義</h3>
+<table>
+<thead>
+<tr>
+<th>フィールド</th>
+<th>型</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>qid</code></td>
+<td>string</td>
+<td>一意の質問識別子</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td>string</td>
+<td>知識カテゴリラベル</td>
+</tr>
+<tr>
+<td><code>question</code></td>
+<td>string</td>
+<td>日本語の質問文(カタカナ以外は半角)</td>
+</tr>
+<tr>
+<td><code>choice0-3</code></td>
+<td>string</td>
+<td>4つの選択肢(カタカナ以外は半角)</td>
+</tr>
+<tr>
+<td><code>answer_index</code></td>
+<td>integer</td>
+<td>正解のインデックス(0-3)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>データ制約:</strong></p>
+<ul>
+<li>すべてのフィールドに改行なし</li>
+<li>先頭と末尾の空白を削除</li>
+<li>カタカナを除き半角文字</li>
+<li>各質問は文化的正確性のためにキュレーション</li>
+</ul>
+<h2 id="評価方法論">評価方法論</h2>
+<h3 id="主要指標">主要指標</h3>
+<p><strong>完全一致精度</strong><br/>
+モデルは正確な答えの文字列を出力する必要があります(ラベルやインデックスだけではありません)。この厳格な基準により、近似ではなく真の検索または生成能力が保証されます。</p>
+<p><strong>計算式:</strong></p>
+<pre tabindex="0"><code>精度 = (完全一致数) / (総質問数)
+</code></pre><p><strong>カテゴリレベル分析</strong><br/>
+カテゴリごとに報告される<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">精度</a>により、知識ドメイン全体でのモデルの強みと弱みの詳細な分析が可能になります。</p>
+<p><strong>なぜ完全一致か?</strong></p>
+<ul>
+<li>正確な答え生成能力を保証</li>
+<li>事実的で文化的にニュアンスのある質問に不可欠</li>
+<li>近いが不正確な答えへの部分点を防止</li>
+<li>パターンマッチングではなく真の理解を検証</li>
+</ul>
+<h3 id="パフォーマンス分析">パフォーマンス分析</h3>
+<p>カテゴリレベルの結果により以下が明らかになります:</p>
+<ul>
+<li>ドメイン固有のモデルの強み</li>
+<li>注意が必要な知識ギャップ</li>
+<li>転移学習の効果</li>
+<li>文化適応の成功度</li>
+</ul>
+<h2 id="リーダーボード結果">リーダーボード結果</h2>
+<p>主要な日本語LLMリーダーボードからの代表的なパフォーマンス(精度スコア):</p>
+<table>
+<thead>
+<tr>
+<th>モデル</th>
+<th>全体</th>
+<th>文化</th>
+<th>慣習</th>
+<th>地域性</th>
+<th>地理</th>
+<th>歴史</th>
+<th>政治</th>
+<th>法律</th>
+<th>医療</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sarashina2-8x70b</td>
+<td>0.725</td>
+<td>0.714</td>
+<td>0.775</td>
+<td>0.761</td>
+<td>0.654</td>
+<td>0.784</td>
+<td>0.736</td>
+<td>0.632</td>
+<td>0.917</td>
+</tr>
+<tr>
+<td>sarashina2-70b</td>
+<td>0.725</td>
+<td>0.719</td>
+<td>0.745</td>
+<td>0.736</td>
+<td>0.673</td>
+<td>0.764</td>
+<td>0.764</td>
+<td>0.666</td>
+<td>0.917</td>
+</tr>
+<tr>
+<td>Llama-3.3-Swallow-70B-v0.4</td>
+<td>0.697</td>
+<td>0.689</td>
+<td>0.775</td>
+<td>0.589</td>
+<td>0.566</td>
+<td>0.776</td>
+<td>0.773</td>
+<td>0.783</td>
+<td>0.854</td>
+</tr>
+<tr>
+<td>RakutenAI-2.0-8x7B</td>
+<td>0.633</td>
+<td>0.622</td>
+<td>0.725</td>
+<td>0.617</td>
+<td>0.511</td>
+<td>0.714</td>
+<td>0.709</td>
+<td>0.575</td>
+<td>0.813</td>
+</tr>
+<tr>
+<td>plamo-100b</td>
+<td>0.603</td>
+<td>0.602</td>
+<td>0.650</td>
+<td>0.637</td>
+<td>0.504</td>
+<td>0.682</td>
+<td>0.609</td>
+<td>0.515</td>
+<td>0.688</td>
+</tr>
+</tbody>
+</table>
+<p><strong>主要な観察結果:</strong></p>
+<ul>
+<li>最高の全体パフォーマンス: sarashina2モデル(0.725)</li>
+<li>最強カテゴリ: 医療(最大0.917)</li>
+<li>最大のばらつき: 地域性と地理</li>
+<li>モデルの多様性: 日本語特化型と多言語LLM</li>
+</ul>
+<h2 id="使用方法と実装">使用方法と実装</h2>
+<h3 id="hugging-faceでの読み込み">Hugging Faceでの読み込み</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">import</span> datasets
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007f7f"># データセットの読み込み</span>
+</span></span><span style="display:flex;"><span>jamcqa = datasets.load_dataset(<span style="color:#0ff;font-weight:bold">'sbintuitions/JamC-QA'</span>, <span style="color:#0ff;font-weight:bold">'v1.0'</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007f7f"># 分割へのアクセス</span>
+</span></span><span style="display:flex;"><span>jamcqa_test = jamcqa[<span style="color:#0ff;font-weight:bold">'test'</span>]
+</span></span><span style="display:flex;"><span>jamcqa_dev = jamcqa[<span style="color:#0ff;font-weight:bold">'dev'</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007f7f"># 質問の確認</span>
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">print</span>(jamcqa_test[<span style="color:#ff0;font-weight:bold">0</span>])
+</span></span></code></pre></div><p><strong>データセットビューア:</strong><br/>
+Hugging Face Data Studioでインタラクティブに閲覧とフィルタリングが可能です。</p>
+<h3 id="flexevalでの評価">FlexEvalでの評価</h3>
+<p>FlexEval(v0.13.3+)は、多様なタスクと指標の統一評価を提供します:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>flexeval_lm <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --language_model HuggingFaceLM <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --language_model.model <span style="color:#0ff;font-weight:bold">"sbintuitions/sarashina2.2-0.5b"</span> <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --language_model.default_gen_kwargs <span style="color:#0ff;font-weight:bold">"{ do_sample: false }"</span> <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --eval_setup <span style="color:#0ff;font-weight:bold">"jamcqa"</span> <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --save_dir <span style="color:#0ff;font-weight:bold">"results/jamcqa"</span>
+</span></span></code></pre></div><p><strong>設定:</strong></p>
+<ul>
+<li><code>do_sample: false</code>は決定論的(貪欲)デコーディングを保証</li>
+<li>出力には完全一致精度と生成統計が含まれる</li>
+<li>バッチ処理と並列評価をサポート</li>
+</ul>
+<h2 id="実用的な応用">実用的な応用</h2>
+<h3 id="llmベンチマーキング">LLMベンチマーキング</h3>
+<p><strong>標準比較:</strong></p>
+<ul>
+<li>日本語LLMの定量的評価</li>
+<li>モデルアーキテクチャ間の公平な比較</li>
+<li>バージョン間のパフォーマンス追跡</li>
+<li>転移学習の評価</li>
+</ul>
+<p><strong>モデル選択:</strong></p>
+<ul>
+<li>日本語アプリケーションに最適なモデルの特定</li>
+<li>文化適応の効果の検証</li>
+<li>特化型モデルと多言語モデルの比較</li>
+<li>デプロイメント決定のガイド</li>
+</ul>
+<h3 id="研究応用">研究応用</h3>
+<p><strong>アブレーション研究:</strong></p>
+<ul>
+<li>ドメイン固有の強みと弱みの特定</li>
+<li>トレーニングデータの影響評価</li>
+<li>アーキテクチャバリエーションのテスト</li>
+<li>ファインチューニングの効果分析</li>
+</ul>
+<p><strong>言語間転移:</strong></p>
+<ul>
+<li>多言語トレーニングからの知識転移の評価</li>
+<li>翻訳ベースアプローチの評価</li>
+<li>文化適応戦略のテスト</li>
+<li>単一言語と多言語のパフォーマンス比較</li>
+</ul>
+<h3 id="教育技術">教育技術</h3>
+<p><strong>AIチューター開発:</strong></p>
+<ul>
+<li>日本語知識の正確性の検証</li>
+<li>文化的理解のテスト</li>
+<li>適切なコンテンツ配信の保証</li>
+<li>地域認識の検証</li>
+</ul>
+<p><strong>評価システム:</strong></p>
+<ul>
+<li>質問生成システムのベンチマーク</li>
+<li>答え評価の正確性の検証</li>
+<li>適応学習アルゴリズムのテスト</li>
+<li>文化的適切性の保証</li>
+</ul>
+<h3 id="文化適応">文化適応</h3>
+<p><strong>ローカライゼーション検証:</strong></p>
+<ul>
+<li>AIが地域の知識期待を満たすことの検証</li>
+<li>文化的感受性のテスト</li>
+<li>地域理解の検証</li>
+<li>適切なコンテンツ生成の保証</li>
+</ul>
+<h2 id="関連ベンチマーク">関連ベンチマーク</h2>
+<p>JamC-QAは、成長する日本語<a data-lb="1" href="/ja/glossary/LLM-as-Judge/" title="LLM-as-a-Judge(LaaJ)は、LLMが他のLLMの出力を評価する手法です。スケーラブルで繊細なAI評価のための定義、手法、ベストプラクティス、ユースケースについて解説します。">LLM評価</a>エコシステムの一部です:</p>
+<p><strong>補完的ベンチマーク:</strong></p>
+<ul>
+<li><strong>MMLU-ProX(日本語):</strong> 多分野の大学レベル推論</li>
+<li><strong>GPQA(日本語):</strong> 大学院レベルの科学QA</li>
+<li><strong>JHumanEval:</strong> 日本語コード生成</li>
+<li><strong>MATH-100(日本語):</strong> 競技レベルの数学</li>
+<li><strong>M-IFEval-Ja:</strong> 指示追従制御</li>
+</ul>
+<p><strong>ベンチマークエコシステムの利点:</strong></p>
+<ul>
+<li>ベンチマーク間の転移研究</li>
+<li>包括的なモデル診断</li>
+<li>地域関連性の検証</li>
+<li>国際比較ベースライン</li>
+</ul>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>評価設定:</strong></p>
+<ul>
+<li>再現性のために決定論的デコーディングを使用</li>
+<li>カテゴリレベルの結果を報告</li>
+<li>信頼区間を含める</li>
+<li>評価パラメータを文書化</li>
+</ul>
+<p><strong>モデル準備:</strong></p>
+<ul>
+<li>日本語テキスト処理を検証</li>
+<li>トークン化を適切にテスト</li>
+<li>エンコーディング処理を検証</li>
+<li>適切なフォーマットを保証</li>
+</ul>
+<p><strong>結果分析:</strong></p>
+<ul>
+<li>カテゴリ間で比較</li>
+<li>体系的な弱点を特定</li>
+<li>エラーパターンを分析</li>
+<li>エッジケースをテスト</li>
+</ul>
+<p><strong>継続的改善:</strong></p>
+<ul>
+<li>定期的なベンチマーク更新</li>
+<li>時間経過によるパフォーマンス追跡</li>
+<li>分布シフトの監視</li>
+<li>新しいモデルバージョンの検証</li>
+</ul>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>JamC-QA. Service. Dataset for Question Answering. URL: <a href="https://huggingface.co/datasets/sbintuitions/JamC-QA" rel="nofollow noopener noreferrer" target="_blank">https://huggingface.co/datasets/sbintuitions/JamC-QA</a></p>
+</li>
+<li>
+<p>JamC-QA. Report. Dataset README Documentation. URL: <a href="https://huggingface.co/datasets/sbintuitions/JamC-QA/blob/main/README.md" rel="nofollow noopener noreferrer" target="_blank">https://huggingface.co/datasets/sbintuitions/JamC-QA/blob/main/README.md</a></p>
+</li>
+<li>
+<p>Chokkan. (n.d.). Swallow LLM Leaderboard. Social Media Post. URL: <a href="https://x.com/chokkanorg/status/1984170094076031297" rel="nofollow noopener noreferrer" target="_blank">https://x.com/chokkanorg/status/1984170094076031297</a></p>
+</li>
+<li>
+<p>Ryokan. (n.d.). FlexEval Framework. Research Project Website. URL: <a href="https://ryokan0123.github.io/" rel="nofollow noopener noreferrer" target="_blank">https://ryokan0123.github.io/</a></p>
+</li>
+<li>
+<p>Anonymous. (2025). MMLU-ProX (Japanese). Research Paper. URL: <a href="https://arxiv.org/abs/2503.10497" rel="nofollow noopener noreferrer" target="_blank">https://arxiv.org/abs/2503.10497</a></p>
+</li>
+<li>
+<p>Anonymous. (2025). GPQA (Japanese). Research Paper. URL: <a href="https://arxiv.org/abs/2502.07346" rel="nofollow noopener noreferrer" target="_blank">https://arxiv.org/abs/2502.07346</a></p>
+</li>
+<li>
+<p>Anonymous. (2024). JHumanEval Benchmark. Conference Proceedings. URL: <a href="https://anlp.jp/proceedings/annual_meeting/2024/pdf_dir/B1-4.pdf" rel="nofollow noopener noreferrer" target="_blank">https://anlp.jp/proceedings/annual_meeting/2024/pdf_dir/B1-4.pdf</a></p>
+</li>
+<li>
+<p>Anonymous. (2025). M-IFEval-Ja. Conference Paper. URL: <a href="https://aclanthology.org/2025.naacl-main.123/" rel="nofollow noopener noreferrer" target="_blank">https://aclanthology.org/2025.naacl-main.123/</a></p>
+</li>
+<li>
+<p>Hugging Face. (n.d.). Hugging Face Datasets Documentation. Technical Documentation. URL: <a href="https://huggingface.co/docs/datasets/index" rel="nofollow noopener noreferrer" target="_blank">https://huggingface.co/docs/datasets/index</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Fact-Score/">
+                    Fact-Score (FActScore)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Fact-Score/" title="FActScoreは、AI生成テキストにおける事実の正確性を定量化する自動評価指標です。出力を原子的事実に分解し、信頼できる外部知識ソースからの裏付けを検証します。">FActScore</a>は、AI生成テキストにおける事実の正確性を定量化する自動評価指標です。出力を原子的事実に分解し、信頼できる外部知識ソースからの裏付けを検証します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Fact-Score/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/LLM-as-Judge/">
+                    LLM as Judge(LLMによる評価)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    LLM-as-a-Judge(LaaJ)は、LLMが他のLLMの出力を評価する手法です。スケーラブルで繊細なAI評価のための定義、手法、ベストプラクティス、ユースケースについて解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/LLM-as-Judge/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/jamc-qa/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ペネトレーションテスト | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Penetration-Testing/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="サイバーセキュリティの脆弱性評価とセキュリティ検証のための、ペネトレーションテストの手法、ツール、ベストプラクティスに関する包括的なガイド。" name="description"/>
+<meta content="ペネトレーションテスト, エシカルハッキング, 脆弱性評価, セキュリティテスト, サイバーセキュリティ監査" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Penetration-Testing/" property="og:url"/>
+<meta content="ペネトレーションテスト | SmartWeb" property="og:title"/>
+<meta content="サイバーセキュリティの脆弱性評価とセキュリティ検証のための、ペネトレーションテストの手法、ツール、ベストプラクティスに関する包括的なガイド。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Penetration-Testing/" name="twitter:url"/>
+<meta content="ペネトレーションテスト | SmartWeb" name="twitter:title"/>
+<meta content="サイバーセキュリティの脆弱性評価とセキュリティ検証のための、ペネトレーションテストの手法、ツール、ベストプラクティスに関する包括的なガイド。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ペネトレーションテスト</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ペネトレーションテスト
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Penetration Testing
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          サイバーセキュリティの脆弱性評価とセキュリティ検証のための、ペネトレーションテストの手法、ツール、ベストプラクティスに関する包括的なガイド。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ペネトレーションテスト
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エシカルハッキング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                脆弱性評価
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                セキュリティテスト
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                サイバーセキュリティ監査
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ペネトレーションテストとは何か">ペネトレーションテストとは何か?</h2>
+<p><a data-lb="1" href="/ja/glossary/Penetration-Testing/" title="サイバーセキュリティの脆弱性評価とセキュリティ検証のための、ペネトレーションテストの手法、ツール、ベストプラクティスに関する包括的なガイド。">ペネトレーションテスト</a>は、一般的に「ペンテスト」または「倫理的ハッキング」と呼ばれ、悪意のある攻撃者が脆弱性を悪用する前に、組織のデジタルインフラストラクチャ、アプリケーション、システムに対して実際のサイバー攻撃をシミュレートし、<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>の<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">脆弱性</a>を特定する体系的なサイバーセキュリティ実践です。この承認された制御されたセキュリティ評価手法は、サイバー犯罪者が使用するのと同じ技術、ツール、アプローチを採用しますが、対象組織の明示的な許可と協力のもとで実施されます。主な目的は、既存のセキュリティ制御の有効性を評価し、セキュリティ態勢の弱点を特定し、修復のための実行可能な推奨事項を提供することです。</p>
+<p>ペネトレーションテストの実践は、1960年代に政府機関や大企業がコンピュータシステムのセキュリティをテストするために初めて使用されて以来、大きく進化してきました。今日、ペネトレーションテストは、規制要件の増加、高度化する脅威の状況、そして従来のセキュリティ対策だけでは決意した攻撃者から保護するには不十分であるという認識の高まりによって、業界全体の包括的なサイバーセキュリティプログラムの不可欠な要素となっています。現代のペネトレーションテストは、<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>された脆弱性スキャンから、高度持続的脅威(APT)やゼロデイエクスプロイトをシミュレートする洗練された手動テスト技術まで、さまざまな方法論を包含しています。</p>
+<p>ペネトレーションテストは、そのアプローチと深さにおいて<a data-lb="1" href="/ja/glossary/Vulnerability-Assessment/" title="システムやネットワークのセキュリティ上の弱点を特定するための脆弱性評価手法、ツール、ベストプラクティスに関する包括的なガイド。">脆弱性評価</a>とは根本的に異なります。脆弱性評価が潜在的なセキュリティの弱点を特定してカタログ化することに焦点を当てているのに対し、ペネトレーションテストは、これらの脆弱性を積極的に悪用しようと試みることで、実際の影響と攻撃者がシステムを侵害し、機密データにアクセスし、またはビジネス運営を妨害できる範囲を判断するという、さらに数段階進んだアプローチを取ります。この実践的なアプローチにより、組織は自社のセキュリティ態勢を現実的に理解し、理論的な脆弱性ではなく実際のリスクに基づいて修復作業の優先順位を付けることができます。テストプロセスには通常、偵察、スキャン、列挙、エクスプロイト、エクスプロイト後の活動、および技術的な発見とビジネスへの影響評価の両方を含む包括的な報告が含まれます。</p>
+<h2 id="主要なペネトレーションテスト方法論">主要なペネトレーションテスト方法論</h2>
+<p>**オープンソースセキュリティテスト方法論マニュアル(OSSTMM)**は、運用セキュリティメトリクスと事実分析に焦点を当てたセキュリティテストの科学的方法論を提供します。このフレームワークは、異なる環境や組織間で検証および妥当性確認が可能な、反復可能で一貫性のあるテスト手順を重視しています。</p>
+<p>**ペネトレーションテスト実行標準(PTES)**は、事前エンゲージメントのやり取りから報告までのペネトレーションテストのすべてのフェーズをカバーする包括的なフレームワークを提供します。PTESは、スコーピング、インテリジェンス収集、脅威モデリング、脆弱性分析、エクスプロイト、エクスプロイト後の活動に関する詳細なガイダンスを提供します。</p>
+<p><strong>NIST SP 800-115</strong>は、<a data-lb="1" href="/ja/glossary/security-requirements/" title="セキュリティ要件について学ぶ:情報の機密性、完全性、可用性(CIA)を確保するためにシステムが満たすべき明確で実行可能な条件。デジタル資産を保護するために不可欠です。">情報セキュリティ</a>テストと評価のガイドラインを確立し、技術的セキュリティテストプログラムの計画、実施、維持のための構造化されたアプローチを提供します。この方法論は、リスクベースのテストアプローチと、より広範なセキュリティ管理プログラムとの統合を重視しています。</p>
+<p><strong>OWASPテストガイド</strong>は、Webアプリケーションセキュリティテストに特化し、一般的なWebアプリケーションの脆弱性を特定して悪用するための詳細な方法論を提供します。このガイドは、包括的なWebアプリケーション評価のための手動テスト技術と自動テストアプローチの両方をカバーしています。</p>
+<p>**<a data-lb="1" href="/ja/glossary/Knowledge-Management/" title="組織学習と情報共有のためのナレッジマネジメントシステム、プロセス、ベストプラクティスに関する包括的なガイド。">情報システム</a>セキュリティ評価フレームワーク(ISSAF)**は、計画、評価、処理、認定、保守のフェーズをカバーするセキュリティ評価のための構造化された方法論を提供します。ISSAFは、ペネトレーションテストとより広範な情報セキュリティ管理実践との統合を重視しています。</p>
+<p><strong>情報セキュリティテストと評価の技術ガイド</strong>は、<a data-lb="1" href="/ja/glossary/Zero-Trust-Security/" title="ゼロトラストセキュリティアーキテクチャ、実装戦略、メリット、および現代のサイバーセキュリティにおけるベストプラクティスに関する包括的なガイド。">ネットワークセキュリティ</a>テスト、ワイヤレスセキュリティテスト、データベースセキュリティテスト方法論を含む、さまざまなタイプのセキュリティ評価を実施するための実用的なガイダンスを提供します。</p>
+<h2 id="ペネトレーションテストの仕組み">ペネトレーションテストの仕組み</h2>
+<p>ペネトレーションテストプロセスは、厳格な倫理的および法的境界を維持しながら、実際の攻撃者が使用する戦術と技術を反映する体系的なアプローチに従います:</p>
+<ol>
+<li>
+<p><strong>事前エンゲージメントとスコーピング</strong>: テスト目標、スコープの境界、エンゲージメントルール、法的合意を定義します。ビジネスへの影響を最小限に抑えるために、コミュニケーションプロトコル、緊急連絡先、テストウィンドウを確立します。</p>
+</li>
+<li>
+<p><strong>偵察と情報収集</strong>: パッシブインテリジェンス収集技術を通じて、ドメイン名、IPアドレス、従業員情報、技術スタックの詳細、組織構造を含む、対象組織に関する公開情報を収集します。</p>
+</li>
+<li>
+<p><strong>スキャンと列挙</strong>: アクティブな偵察を実行して、稼働中のシステム、開いているポート、実行中のサービス、潜在的な侵入ポイントを特定します。このフェーズには、自動ツールと手動技術の両方を使用したネットワークマッピング、サービスフィンガープリンティング、脆弱性の特定が含まれます。</p>
+</li>
+<li>
+<p><strong>脆弱性分析</strong>: 特定された脆弱性を分析して、悪用可能性、潜在的な影響、攻撃ベクトルを判断します。<a data-lb="1" href="/ja/glossary/Financial-Risk-Management/" title="財務リスク管理は、AI、機械学習、高度な分析手法を活用して、市場リスク、信用リスク、オペレーショナルリスク、流動性リスクなどの財務リスクを特定、評価、監視、軽減し、組織資産を保護し、規制コンプライアンスを確保します。">リスク評価</a>に基づいて脆弱性の優先順位を付け、優先度の高いターゲットのためのエクスプロイト戦略を開発します。</p>
+</li>
+<li>
+<p><strong>エクスプロイト</strong>: 特定された脆弱性を悪用して、システムへの不正アクセスを取得し、権限を昇格させ、または機密情報にアクセスしようと試みます。成功したエクスプロイトを文書化し、すべてのテスト活動の詳細なログを維持します。</p>
+</li>
+<li>
+<p><strong>エクスプロイト後</strong>: 侵害の範囲を調査し、アクセス可能な追加システムを特定し、横方向の移動を試み、ステルス性を維持して検出を回避しながら、データ流出やシステム操作の可能性を評価します。</p>
+</li>
+<li>
+<p><strong>報告と文書化</strong>: エグゼクティブサマリー、技術的発見、リスク評価、詳細な修復推奨事項を含む包括的なレポートを作成します。適切なコンテキストと優先順位付けを伴って、技術的およびビジネスの利害関係者の両方に発見事項を提示します。</p>
+</li>
+</ol>
+<p><strong>ワークフローの例</strong>: 典型的なWebアプリケーションペネトレーションテストは、OWASP ZAPやBurp Suiteなどのツールを使用した自動スキャンから始まり、<a data-lb="1" href="/ja/glossary/Authentication/" title="デジタル環境およびアプリケーションにおける安全な本人確認のための認証システム、方法、ベストプラクティスに関する包括的なガイド。">認証</a>メカニズム、入力検証、セッション管理、ビジネスロジックの欠陥の手動テストが続き、SQLインジェクションやクロスサイトスクリプティングなどの特定された脆弱性を悪用して実際の影響を実証する試みで終わります。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>リスクの特定と検証</strong>により、組織は攻撃者によって悪用される可能性のある真のセキュリティリスクを特定でき、理論的な脆弱性を超えて実際の悪用可能性と潜在的なビジネスへの影響を実証できます。</p>
+<p><strong>コンプライアンスと規制要件</strong>は、包括的なセキュリティプログラムの一部として定期的なセキュリティテストと脆弱性評価を義務付けるPCI DSS、HIPAA、SOX、<a data-lb="1" href="/ja/glossary/GDPR/" title="EUの包括的なデータ保護規則であるGDPRについて理解しましょう。その原則、コンプライアンス要件、データ主体の権利、そしてAIチャットボットへの影響について学びます。">GDPR</a>などのさまざまな規制基準を組織が満たすのに役立ちます。</p>
+<p><strong>セキュリティ制御の有効性テスト</strong>は、実際の攻撃シナリオの下で、ファイアウォール、侵入検知システム、アクセス制御、<a data-lb="1" href="/ja/glossary/security-policies/" title="セキュリティポリシーの目的、種類、情報資産保護における重要性を理解します。コンプライアンス、ベストプラクティス、CIA三原則について学びます。">セキュリティポリシー</a>を含む既存のセキュリティ制御の有効性を検証します。</p>
+<p><strong>インシデント対応の準備</strong>は、実際の攻撃が発生する前に、セキュリティインシデントを検出、対応、回復する組織の能力をテストし、監視、アラート、対応手順のギャップを特定するのに役立ちます。</p>
+<p><strong>セキュリティ意識向上とトレーニング</strong>は、セキュリティ意識向上トレーニングプログラムを強化し、従業員にセキュリティベストプラクティスの重要性を実証するために使用できる、セキュリティ脆弱性と攻撃技術の具体的な例を提供します。</p>
+<p><strong>費用対効果の高いセキュリティ投資</strong>は、最も重要な脆弱性を特定し、攻撃成功の潜在的なビジネスへの影響を実証することで、組織がセキュリティ投資の優先順位を付けるのに役立ち、より情報に基づいた<a data-lb="1" href="/ja/glossary/Support-Capacity-Planning/" title="サポート容量計画とは、カスタマーサポートのニーズを予測し、サービス品質目標を達成しながら効率的に対応するためのスタッフとリソースを配分するプロセスです。">リソース配分</a>の意思決定を可能にします。</p>
+<p><strong>サードパーティリスク評価</strong>は、ベンダー、パートナー、サービスプロバイダーのセキュリティ態勢を評価し、組織のセキュリティ基準を満たし、ビジネスに追加のリスクをもたらさないことを確認します。</p>
+<p><strong>継続的なセキュリティ改善</strong>は、ベースラインセキュリティメトリクスを確立し、時間の経過とともに改善を追跡することで、組織がセキュリティイニシアチブの有効性を測定し、セキュリティプログラムへの<a data-lb="1" href="/ja/glossary/ROI/" title="投資収益率(ROI)は、投資効率を定量化する財務指標です。AIチャットボットと自動化のROI計算方法、主要な構成要素、指標、実際の事例について学びましょう。">投資収益率</a>を実証できるようにします。</p>
+<p><strong>事業継続性の保証</strong>は、ビジネス運営を妨害する可能性のある脆弱性を特定し、現実的な脅威<a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>に基づいて、より堅牢な事業継続性と災害復旧計画を組織が策定するのに役立ちます。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>Webアプリケーションセキュリティテスト</strong>は、インジェクション欠陥、認証の破損、機密データの露出、セキュリティ設定ミスなど、データ侵害やシステム侵害につながる可能性のある一般的な脆弱性についてWebアプリケーションを包括的に評価することを含みます。</p>
+<p><strong>ネットワークインフラストラクチャ評価</strong>は、ネットワークセキュリティ制御の評価、不正アクセスポイントの特定、ファイアウォール構成のテスト、ネットワークデバイスとプロトコルのセキュリティ評価に焦点を当てています。</p>
+<p><strong>ワイヤレスネットワークセキュリティテスト</strong>は、Wi-Fiネットワーク、Bluetooth実装、その他のワイヤレス技術を含むワイヤレスネットワークのセキュリティを調査し、不正アクセスポイントと弱い暗号化実装を特定します。</p>
+<p><strong>ソーシャルエンジニアリング評価</strong>は、フィッシング攻撃、口実、おとり、その他のソーシャルエンジニアリング技術をシミュレートすることで、セキュリティにおける人的要因をテストし、従業員のセキュリティ意識と人間ベースの攻撃に対する組織の感受性を評価します。</p>
+<p><strong>物理的セキュリティテスト</strong>は、建物のセキュリティ、バッジシステム、監視システム、物理的障壁を含む物理的<a data-lb="1" href="/ja/glossary/Authorization/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a>を評価し、攻撃者が施設への不正な物理的アクセスを取得できるかどうかを判断します。</p>
+<p><strong>クラウドセキュリティ評価</strong>は、さまざまな<a data-lb="1" href="/ja/glossary/cloud-service/" title="クラウドサービスとは、サードパーティベンダーがインターネット経由で提供するITリソースです。SaaS、PaaS、IaaS、FaaS、XaaSモデルの特徴、メリット、ユースケースを理解しましょう。">クラウドサービス</a>モデルとプロバイダー全体で、クラウドインフラストラクチャ構成、アクセス制御、<a data-lb="1" href="/ja/glossary/Encryption-at-Rest/" title="保存データの暗号化に関する包括的なガイド - 暗号化手法によるストレージデータの保護、実装戦略、セキュリティのベストプラクティスについて解説します。">データ保護</a>メカニズム、クラウドセキュリティベストプラクティスへのコンプライアンスを調査します。</p>
+<p><strong>モバイルアプリケーションセキュリティテスト</strong>は、安全でないデータストレージ、弱い暗号化、不適切なセッション処理、プラットフォーム固有のセキュリティ問題を含む、モバイルアプリケーションの脆弱性の特定に焦点を当てています。</p>
+<p><strong>産業制御システム(ICS)テスト</strong>は、重要インフラストラクチャを管理するSCADAシステム、プログラマブルロジックコントローラー(PLC)、その他の産業制御システムを含む、運用技術環境のセキュリティを評価します。</p>
+<p><strong>レッドチーム演習</strong>は、高度持続的脅威をシミュレートし、技術的制御、プロセス、人的要因を含む組織の全体的なセキュリティ態勢をテストする、包括的な多ベクトル攻撃を実施します。</p>
+<h2 id="ペネトレーションテストタイプの比較">ペネトレーションテストタイプの比較</h2>
+<table>
+<thead>
+<tr>
+<th>テストタイプ</th>
+<th>スコープ</th>
+<th>期間</th>
+<th>複雑さ</th>
+<th>コスト</th>
+<th>主な焦点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ブラックボックス</td>
+<td>外部視点</td>
+<td>1-2週間</td>
+<td>中</td>
+<td>中程度</td>
+<td>外部攻撃シミュレーション</td>
+</tr>
+<tr>
+<td>ホワイトボックス</td>
+<td>完全なシステム知識</td>
+<td>2-4週間</td>
+<td>高</td>
+<td>高</td>
+<td>包括的な脆弱性分析</td>
+</tr>
+<tr>
+<td>グレーボックス</td>
+<td>部分的なシステム知識</td>
+<td>1-3週間</td>
+<td>中-高</td>
+<td>中-高</td>
+<td>コンテキストを伴うターゲット評価</td>
+</tr>
+<tr>
+<td>レッドチーム</td>
+<td>組織全体</td>
+<td>4-12週間</td>
+<td>非常に高</td>
+<td>非常に高</td>
+<td>高度な脅威シミュレーション</td>
+</tr>
+<tr>
+<td>自動化</td>
+<td>ツールベースのスキャン</td>
+<td>1-3日</td>
+<td>低</td>
+<td>低</td>
+<td>迅速な脆弱性特定</td>
+</tr>
+<tr>
+<td>手動</td>
+<td>人間主導のテスト</td>
+<td>1-4週間</td>
+<td>高</td>
+<td>高</td>
+<td>深い技術分析</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>スコープの定義と管理</strong>は、包括的なテストカバレッジと、時間、予算、ビジネス運営などの実際的な制約との間の慎重なバランスを必要とし、テストに含めるまたは除外するシステムとアプリケーションについて困難な決定を下すことにつながることがよくあります。</p>
+<p><strong>誤検知の管理</strong>は、自動ツールによって生成された真のセキュリティ脆弱性と誤警報を区別することを含み、発見事項を検証し、存在しない問題にリソースを浪費することを避けるために、重要な専門知識と時間投資を必要とします。</p>
+<p><strong>ビジネス中断の最小化</strong>は、テスト活動が重要なビジネス運営を妨げないようにするための慎重な計画と調整を要求し、詳細なスケジューリング、コミュニケーション、そして時には限られたテストウィンドウの受け入れを必要とします。</p>
+<p><strong>法的およびコンプライアンスの考慮事項</strong>は、包括的な法的合意、適切な承認文書、およびテスト活動を制限したり、特定の報告形式とタイムラインを要求したりする可能性のあるさまざまな規制要件への準拠を必要とします。</p>
+<p><strong>スキルとリソースの要件</strong>は、特に高度なテスト技術や産業制御システムなどの専門環境において、見つけることが難しいか、取得するのに費用がかかる可能性のある、高度に専門化された技術的専門知識を要求します。</p>
+<p><strong>進化する脅威の状況</strong>は、新しい攻撃ベクトル、新興技術、そして常に新しい悪用方法を開発する洗練された脅威アクターに対応するために、テスト方法論、ツール、技術の継続的な更新を必要とします。</p>
+<p><strong>結果の解釈と優先順位付け</strong>は、技術的発見をビジネスリスク評価に変換し、複数の競合するセキュリティイニシアチブ全体で修復の優先順位とリソース配分について情報に基づいた意思決定を可能にすることを含みます。</p>
+<p><strong>ツールの制限と依存関係</strong>には、複雑な脆弱性を見逃したり、過剰な誤検知を生成したり、発見するために人間の分析と創造性を必要とするビジネスロジックの欠陥を特定できなかったりする可能性のある自動ツールへの依存が含まれます。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>明確なエンゲージメントルールの確立</strong>は、テストが許容可能なリスクパラメータと法的境界内に留まることを保証するために、テストの境界、承認された技術、緊急手順、コミュニケーションプロトコルを定義します。</p>
+<p><strong>包括的な文書化基準の実装</strong>は、技術チームとエグゼクティブの利害関係者の両方に適した形式で、すべてのテスト活動、発見事項、証拠、修復推奨事項を捕捉します。</p>
+<p><strong>リスクベースのテストアプローチの開発</strong>は、すべてを同等の強度とリソースでテストしようとするのではなく、ビジネスの重要性、脅威の可能性、潜在的な影響に基づいてテスト作業の優先順位を付けます。</p>
+<p><strong>厳格な変更管理手順の維持</strong>は、テスト活動が適切に承認され、スケジュールされ、他のビジネス活動と調整されて、競合と運用の中断を最小限に抑えることを保証します。</p>
+<p><strong>継続的なテストプログラムの確立</strong>は、ペネトレーションテストを一度限りの活動として扱うのではなく、定期的なセキュリティ運用に統合し、継続的なセキュリティ検証と改善を可能にします。</p>
+<p><strong>品質保証プロセスの実装</strong>は、テスト方法論のピアレビュー、発見事項の検証、レポート品質チェックを含み、異なるエンゲージメント全体で一貫性のある信頼性の高いテスト結果を保証します。</p>
+<p><strong>利害関係者コミュニケーション計画の開発</strong>は、異なるオーディエンスのニーズに合わせた定期的な更新と構造化された報告メカニズムを通じて、適切な関係者がテスト活動、進捗、発見事項について情報を得られるようにします。</p>
+<p><strong>修復追跡システムの作成</strong>は、推奨されるセキュリティ改善の実装を監視し、修正が新しいセキュリティ問題を導入することなく、特定された脆弱性を実際に対処することを検証します。</p>
+<p><strong>ベンダー管理手順の確立</strong>は、外部ペネトレーションテストサービスを使用する組織のために、品質とコンプライアンスを保証するためのベンダー資格基準、契約要件、監視メカニズムを含みます。</p>
+<p><strong>知識移転メカニズムの実装</strong>は、学んだ教訓、テスト方法論、組織固有の発見事項を捕捉して、内部セキュリティ専門知識を構築し、将来のテストの有効性を向上させます。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>高度持続的脅威(APT)シミュレーション</strong>は、カスタムマルウェア開発、ゼロデイエクスプロイトシミュレーション、長期的な持続性技術を含む、国家主体や高度な犯罪組織を模倣する洗練された多段階攻撃を含みます。</p>
+<p><strong>レッドチーム作戦</strong>は、技術的セキュリティ制御だけでなく、人的要因、物理的セキュリティ、調整された多ベクトル攻撃キャンペーンを通じた組織の対応能力もテストする包括的な敵対的シミュレーションを実施します。</p>
+<p><strong>パープルチーム演習</strong>は、協調的なテストと改善サイクルを通じて、検出能力、<a data-lb="1" href="/ja/glossary/Data-Breach-Response/" title="サイバーセキュリティ専門家向けの、データ侵害対応戦略、インシデント管理、復旧手順に関する包括的なガイド。">インシデント対応</a>手順、全体的なセキュリティ態勢を改善するために、攻撃的なレッドチーム活動と防御的なブルーチーム作戦を組み合わせます。</p>
+<p><strong>侵害想定テスト</strong>は、初期侵害がすでに発生したという仮定から始まり、組織の環境内での横方向の移動能力、権限昇格の機会、データ流出の可能性のテストに焦点を当てます。</p>
+<p><strong>ゼロデイエクスプロイト開発</strong>は、以前に知られていない脆弱性のカスタムエクスプロイトを作成することを含み、高度なリバースエンジニアリングスキル、エクスプロイト開発の専門知識、システム内部とセキュリティメカニズムの深い理解を必要とします。</p>
+<p><strong>人工知能と機械学習の統合</strong>は、自動化された脆弱性発見、インテリジェントファジング、行動分析、従来の方法では見逃す可能性のある複雑なセキュリティ問題を特定できる適応的なテスト戦略のための<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>駆動ツールを活用します。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p><strong>クラウドネイティブセキュリティテスト</strong>は、<a data-lb="1" href="/ja/glossary/Containerization/" title="コンテナ化は、ソフトウェアコードと依存関係をポータブルで分離されたコンテナにパッケージ化し、開発環境からクラウドまで、あらゆる環境で一貫したアプリケーション実行を保証します。">コンテナ化</a>されたアプリケーション、サーバーレスアーキテクチャ、マルチクラウド環境の独自の課題に対処するために進化し、クラウドネイティブ技術専用に設計された新しい方法論とツールを必要とします。</p>
+<p><strong>モノのインターネット(IoT)と<a data-lb="1" href="/ja/glossary/Edge-Function/" title="遠隔地のデータセンターではなく、ユーザーに近いサーバー上で実行される軽量プログラムで、リクエストをローカルで処理することでウェブサイトやアプリの応答速度を向上させます。">エッジコンピューティング</a>評価</strong>は、組織がより多くの接続デバイスと<a data-lb="1" href="/ja/glossary/Nodes-and-Edges/" title="ノードはシステムにおける基本的な構成要素(アクションまたはエンティティ)であり、エッジは関係性、データフロー、または依存関係を定義する接続(線)です。">エッジ</a>コンピューティングソリューションを展開するにつれて、リソース制約のあるデバイスと分散アーキテクチャのための専門的なテストアプローチを必要とし、ますます重要になります。</p>
+<p><strong>人工知能と機械学習のセキュリティ</strong>は、AIシステムに対する敵対的攻撃、モデルポイズニング、<a data-lb="1" href="/ja/glossary/Data-Privacy/" title="デジタル時代における個人情報保護のためのデータプライバシーの原則、規制、ベストプラクティスに関する包括的なガイド。">データプライバシー</a>の問題、ビジネス運営と意思決定に影響を与える可能性のあるアルゴリズムバイアスに焦点を当てた、重要なテストドメインとして浮上します。</p>
+<p><strong>量子コンピューティング影響評価</strong>は、現在の暗号実装に対する量子コンピューティングの影響を評価し、ポスト量子暗号への移行に備えるための新しいテスト方法論の開発を必要とします。</p>
+<p><strong>継続的なセキュリティ検証</strong>は、ペネトレーションテストをDevSecOpsパイプラインに統合し、定期的な評価活動ではなく、<a data-lb="1" href="/ja/glossary/Build-Automation/" title="コードのコンパイル、テストの実行、アプリケーションのデプロイなど、反復的なソフトウェア開発タスクを自動的に処理するシステムで、手作業とエラーを削減します。">継続的インテグレーション</a>とデプロイメントプロセスの一部としてリアルタイムのセキュリティテストと検証を可能にします。</p>
+<p><strong>規制技術(RegTech)統合</strong>は、コンプライアンス検証と報告を自動化し、ペネトレーションテスト活動がさまざまな規制フレームワークと監査要件のために必要な文書と証拠を自動的に生成することを保証します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>National Institute of Standards and Technology. (2008). Technical Guide to Information Security Testing and Assessment. NIST Special Publication 800-115.</p>
+</li>
+<li>
+<p>Open Web Application Security Project. (2021). OWASP Testing Guide v4.2. Retrieved from <a href="https://owasp.org/www-project-web-security-testing-guide/" rel="nofollow noopener noreferrer" target="_blank">https://owasp.org/www-project-web-security-testing-guide/</a></p>
+</li>
+<li>
+<p>Penetration Testing Execution Standard. (2014). Technical Guidelines. Retrieved from <a href="http://www.pentest-standard.org/" rel="nofollow noopener noreferrer" target="_blank">http://www.pentest-standard.org/</a></p>
+</li>
+<li>
+<p>Institute for Security and Open Methodologies. (2010). Open Source Security Testing Methodology Manual (OSSTMM) 3. Retrieved from <a href="https://www.isecom.org/OSSTMM.3.pdf" rel="nofollow noopener noreferrer" target="_blank">https://www.isecom.org/OSSTMM.3.pdf</a></p>
+</li>
+<li>
+<p>SANS Institute. (2020). Penetration Testing: Assessing Your Overall Security Before Attackers Do. SANS White Paper.</p>
+</li>
+<li>
+<p>Information Systems Audit and Control Association. (2019). Penetration Testing Guide. ISACA Professional Standards.</p>
+</li>
+<li>
+<p>Carnegie Mellon University Software Engineering Institute. (2018). Penetration Testing and Red Team Exercises. Technical Report CMU/SEI-2018-TR-007.</p>
+</li>
+<li>
+<p>European Union Agency for Cybersecurity. (2021). Guidelines for SMEs on the security of personal data processing. ENISA Technical Guidelines.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Vulnerability-Assessment/">
+                    脆弱性評価
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    システムやネットワークのセキュリティ上の弱点を特定するための脆弱性評価手法、ツール、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Vulnerability-Assessment/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/penetration-testing/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

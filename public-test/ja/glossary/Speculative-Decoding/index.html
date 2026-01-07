@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>投機的デコーディング | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Speculative-Decoding/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Speculative-Decoding/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Speculative-Decoding/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Speculative-Decoding/" hreflang="x-default" rel="alternate"/>
+<meta content="投機的デコーディングは、高速なドラフトモデルを使用してトークンを提案し、より大規模なターゲットモデルで検証することで、LLM推論を高速化します。出力品質を維持しながらレイテンシを削減します。" name="description"/>
+<meta content="投機的デコーディング, LLM推論, ドラフトモデル, ターゲットモデル, レイテンシ削減" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Speculative-Decoding/" property="og:url"/>
+<meta content="投機的デコーディング | SmartWeb" property="og:title"/>
+<meta content="投機的デコーディングは、高速なドラフトモデルを使用してトークンを提案し、より大規模なターゲットモデルで検証することで、LLM推論を高速化します。出力品質を維持しながらレイテンシを削減します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Speculative-Decoding/" name="twitter:url"/>
+<meta content="投機的デコーディング | SmartWeb" name="twitter:title"/>
+<meta content="投機的デコーディングは、高速なドラフトモデルを使用してトークンを提案し、より大規模なターゲットモデルで検証することで、LLM推論を高速化します。出力品質を維持しながらレイテンシを削減します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">投機的デコーディング</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Infrastructure &amp; Deployment
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        投機的デコーディング
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Speculative Decoding
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          投機的デコーディングは、高速なドラフトモデルを使用してトークンを提案し、より大規模なターゲットモデルで検証することで、LLM推論を高速化します。出力品質を維持しながらレイテンシを削減します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                投機的デコーディング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                LLM推論
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ドラフトモデル
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ターゲットモデル
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                レイテンシ削減
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="speculative-decoding投機的デコーディングとは">Speculative Decoding(投機的デコーディング)とは?</h2>
+<p>Speculative Decoding(<a data-lb="1" href="/ja/glossary/Speculative-Decoding/" title="投機的デコーディングは、高速なドラフトモデルを使用してトークンを提案し、より大規模なターゲットモデルで検証することで、LLM推論を高速化します。出力品質を維持しながらレイテンシを削減します。">投機的デコーディング</a>)は、<a data-lb="1" href="/ja/glossary/hallucination/" title="AIにおけるハルシネーションとは、生成モデルがもっともらしいものの事実として誤っている、意味をなさない、または捏造されたコンテンツを生成することを指します。その原因、種類、リスク、および軽減戦略について学びます。">大規模言語モデル</a>(LLM)の推論最適化技術であり、小型で高速なドラフトモデルを活用して複数のトークンを事前に提案し、大型で正確なターゲットモデルがドラフトを検証して最長一致プレフィックスを受け入れることで、より高速なトークン生成を実現します。このプロセスはターゲットモデルの出力分布を維持し、純粋な逐次デコーディングと数学的に同一の結果を保証しながら、<a data-lb="1" href="/ja/glossary/Latency/" title="レイテンシとは、リクエストとシステムの応答との間の時間遅延のことで、AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。">レイテンシ</a>を大幅に削減します。</p>
+<p>重要な洞察は、<a data-lb="1" href="/ja/glossary/Output-Parsing/" title="出力パースは、AI言語モデルのテキスト応答から構造化データ(JSON、Pythonオブジェクト)を抽出し、自動化、分析、システム統合に活用する技術です。">LLM</a>出力シーケンスの多くのトークンは、はるかに小型のモデルでも正確に推測でき、大型モデルで複数のトークンをまとめて検証する方が、各トークンを厳密に順次生成するよりも効率的であるということです。</p>
+<p>Speculative Decodingは、ターゲットモデルの正確な出力品質を維持しながら、本番システムで2~3倍以上のレイテンシ削減を実現する<strong>ドラフト-検証</strong>プロセスとして構成されています。</p>
+<h2 id="speculative-decodingの仕組み">Speculative Decodingの仕組み</h2>
+<h3 id="ドラフト-検証プロセス">ドラフト-検証プロセス</h3>
+<p><strong>1. ドラフトステップ</strong><br/>
+ドラフトモデル(小型で高速なLLM)が、候補となる次のトークンのバッチ(通常3~8個)を生成します。このモデルは「先読み推測」を行うように設計されており、ターゲットモデルが受け入れる可能性の高いトークンを生成します。</p>
+<p><strong>2. 検証ステップ</strong><br/>
+大型で正確なターゲットモデルが、同じコンテキスト(入力とこれまでに生成されたすべてのトークン)を評価し、次のトークンバッチの確率分布を計算します。ターゲットモデルは、どのドラフトトークンが自身の最も確率の高い次トークン予測と一致するかをチェックします。最長一致プレフィックスを受け入れます。これは、すべて、一部、またはドラフトトークンのいずれも含まない場合があります。</p>
+<p><strong>3. 継続</strong><br/>
+ドラフトが完全に受け入れられた場合、出力は継続されます。不一致がある場合、ターゲットモデル自身が次のトークンを生成し、それが次の投機的ラウンドの新しいコンテキストになります。</p>
+<p><strong>4. 繰り返し</strong><br/>
+このプロセスは、出力シーケンスが完了するまで続きます。</p>
+<p><strong>保証:</strong><br/>
+最終的な出力は、ターゲットモデルが単純な逐次デコーディングで生成するものと証明可能に同一です。</p>
+<h2 id="主要な用語">主要な用語</h2>
+<p><strong>自己回帰生成(Autoregressive Generation):</strong><br/>
+トークンを一度に1つずつ生成し、各トークンが以前のすべてのトークンに依存します。これは<a data-lb="1" href="/ja/glossary/GPT/" title="GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。">GPT</a>、T5、LlamaなどのLLMの標準です。</p>
+<p><strong>ドラフトモデル(Draft Model):</strong><br/>
+候補トークンを事前に提案するために使用される小型で高速なモデル。ターゲットモデルの出力分布にできるだけ近づくように訓練または微調整する必要があります。</p>
+<p><strong>ターゲットモデル(Target Model):</strong><br/>
+出力を正確に保持する必要がある大型で正確なLLM。</p>
+<p><strong>ドラフトトークン(Draft Tokens):</strong><br/>
+ドラフトモデルが次のシーケンス位置のために推測したトークンのバッチ。</p>
+<p><strong>棄却サンプリング(Rejection Sampling):</strong><br/>
+ターゲットモデルが自身の最も確率の高い予測と一致するドラフトトークンのみを受け入れることで、ターゲットの出力分布を保持する統計的メカニズム。</p>
+<p><strong>受け入れ率(Acceptance Rate、α):</strong><br/>
+ターゲットモデルが受け入れたドラフトトークンの割合。高いαは、ドラフトモデルがターゲットモデルによく整合していることを意味します。</p>
+<p><strong>投機的トークン数(Speculative Token Count、γ):</strong><br/>
+各投機的ラウンドでドラフトモデルが生成するトークンの数。</p>
+<p><strong>受け入れ長(Acceptance Length、τ):</strong><br/>
+投機的ラウンドごとに受け入れられるドラフトトークンの平均数:τ = (1 - α^(γ+1)) / (1 - α)</p>
+<p><strong>トークン間レイテンシ(Inter-Token Latency、ITL):</strong><br/>
+1つの出力トークンを発行してから次のトークンまでの時間。</p>
+<p><strong>EAGLE-3:</strong><br/>
+ターゲットモデル自体の内部レイヤーに軽量な予測ヘッドを接続し、別個のドラフトモデルを不要にする高度なSpeculative Decoding技術。</p>
+<h2 id="動機">動機</h2>
+<h3 id="llm推論のボトルネック">LLM推論のボトルネック</h3>
+<p><strong>問題:</strong></p>
+<ul>
+<li>新しいトークンを生成するたびに、ターゲットモデル全体を通じた完全なフォワードパスが必要であり、これは遅い(特に10Bパラメータ以上のモデルの場合)</li>
+<li>この逐次依存性により、高いレイテンシと最新のGPUにおける並列計算の活用不足が生じる</li>
+</ul>
+<p><strong>解決策:</strong></p>
+<ul>
+<li>ドラフトモデルに「先読み推測」を許可し、検証のためにのみ大型モデルを呼び出すことで、トークン生成を並列化できる</li>
+<li>これにより、全体的なレイテンシが削減され、スループットが向上し、よりレスポンシブなLLM駆動アプリケーション(<a data-lb="1" href="/ja/glossary/Quick-Replies/" title="クイックリプライは、チャットインターフェースに表示される一時的で選択可能なボタンで、事前定義されたオプションを提供します。選択後に消えるため、画面の煩雑さを防ぎ、会話の流れを維持します。">チャットボット</a>、コードアシスタント、リアルタイム要約)が可能になる</li>
+</ul>
+<p><strong>業界のニーズ:</strong><br/>
+Google Searchの<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a> Overviewsなどの実世界の製品は、Speculative Decodingを活用して、数十億のユーザーに高品質で低レイテンシの結果を提供しています。</p>
+<h2 id="コアアルゴリズム">コアアルゴリズム</h2>
+<h3 id="疑似コード">疑似コード</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span>context = input_tokens
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">while</span> not finished:
+</span></span><span style="display:flex;"><span>    draft_tokens = draft_model.generate(context, num_tokens=γ)
+</span></span><span style="display:flex;"><span>    target_distributions = target_model.predict(context, num_tokens=γ)
+</span></span><span style="display:flex;"><span>    accepted = []
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">for</span> i in <span style="color:#fff;font-weight:bold">range</span>(γ):
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">if</span> draft_tokens[i] == argmax(target_distributions[i]):
+</span></span><span style="display:flex;"><span>            accepted.append(draft_tokens[i])
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">break</span>
+</span></span><span style="display:flex;"><span>    context += accepted
+</span></span><span style="display:flex;"><span>    next_token = target_model.generate(context, num_tokens=<span style="color:#ff0;font-weight:bold">1</span>)
+</span></span><span style="display:flex;"><span>    context.append(next_token)
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">if</span> next_token == stop_token:
+</span></span><span style="display:flex;"><span>        finished = <span style="color:#fff;font-weight:bold">True</span>
+</span></span></code></pre></div><h3 id="詳細なアルゴリズム">詳細なアルゴリズム</h3>
+<p><strong>1. 初期化:</strong><br/>
+ターゲットモデルが標準デコーディングを使用して最初のトークンを生成します。</p>
+<p><strong>2. ドラフト:</strong><br/>
+ドラフトモデルが現在のコンテキストを受け取り、γ個のトークンを提案します。</p>
+<p><strong>3. 検証:</strong><br/>
+ターゲットモデルが次のγ個のトークンに対する確率分布を計算し、ドラフトの提案と比較します。一致するトークンの最長プレフィックスを受け入れます。不一致が発生した場合、それ以上のドラフトトークンの受け入れを停止します。</p>
+<p><strong>4. ターゲットトークン生成:</strong><br/>
+h個のトークン(h ≤ γ)を受け入れた後、ターゲットモデルが次のトークンを生成します。</p>
+<p><strong>5. 繰り返し:</strong><br/>
+コンテキストが更新され、シーケンスが終了するまでプロセスが続きます。</p>
+<h2 id="パフォーマンス指標">パフォーマンス指標</h2>
+<h3 id="主要指標">主要指標</h3>
+<p><strong>受け入れ率(Acceptance Rate、α):</strong><br/>
+α = (受け入れられたドラフトトークン数) / (ドラフトモデルが提案したトークン数)</p>
+<p><strong>投機的トークン数(Speculative Token Count、γ):</strong><br/>
+投機的ラウンドごとに提案されるトークンの数。γの調整は、高速化とリソース使用に影響します。</p>
+<p><strong>受け入れ長(Acceptance Length、τ):</strong><br/>
+投機的ラウンドごとに受け入れられるドラフトトークンの平均数</p>
+<p><strong>トークン間レイテンシ(Inter-Token Latency、ITL):</strong><br/>
+生成されたトークン間の時間</p>
+<p><strong>スループット(Throughput):</strong><br/>
+1秒あたりに生成されるトークン数</p>
+<h3 id="実用例">実用例</h3>
+<p>仮定:</p>
+<ul>
+<li>ターゲットモデル生成:10 ms/トークン</li>
+<li>ドラフトモデル:γ=4トークンで1 ms</li>
+<li>ターゲット検証:γ=4トークンで1 ms</li>
+</ul>
+<p>ラウンドごとに平均2.5個のドラフトトークンが受け入れられる場合、15 ms(1 msドラフト、1 ms検証、受け入れられなかったトークンに10 ms)で3.5トークンを取得します。</p>
+<p><strong>実効トークン時間:</strong> ≈4.3 ms/トークン(ベースライン10 ms/トークンと比較)</p>
+<h3 id="主要要因">主要要因</h3>
+<p><strong>ドラフトモデルの整合性:</strong><br/>
+高い受け入れ率は、出力分布がターゲットモデルの分布に密接に一致するドラフトモデルから得られます。</p>
+<p><strong>モデルサイズ/アーキテクチャ:</strong><br/>
+大型モデルはSpeculative Decodingからより多くの恩恵を受けます。ドラフトモデルは大幅に高速である必要がありますが、ターゲットを不十分に予測するほど小さくてはいけません。</p>
+<p><strong>ハードウェア制約:</strong><br/>
+両方のモデルとそのキー-バリューキャッシュがメモリに収まる必要があります。</p>
+<p><strong>バッチサイズ:</strong><br/>
+Speculative Decodingは、低バッチサイズ(レイテンシクリティカルなアプリケーション)で最も効果的です。</p>
+<p><strong>オーケストレーションオーバーヘッド:</strong><br/>
+モデル間の効率的な通信とスケジューリングが重要です。</p>
+<h2 id="利点">利点</h2>
+<p><strong>2~3倍以上のレイテンシ削減:</strong><br/>
+Google製品や学術ベンチマークで実証的に証明された高速化。</p>
+<p><strong>出力品質の保証:</strong><br/>
+出力はターゲットモデルの逐次デコーディングと数学的に同一です。</p>
+<p><strong>ハードウェア活用の向上:</strong><br/>
+トークンチェックを<a data-lb="1" href="/ja/glossary/Batch-Processing/" title="バッチ処理は、大量のデータを収集し、設定された期間ごとにグループ単位で処理するデータアプローチです。高スループットのAI、分析、ビジネスオペレーションに最適です。">バッチ処理</a>することで、GPU/TPUの潜在的な計算能力を解放します。</p>
+<p><strong>再訓練不要:</strong><br/>
+事前訓練済みのモデルをドラフト/ターゲットとして使用できますが、より高いαのためにドラフトを微調整することは有益です。</p>
+<p><strong>サービング費用の削減:</strong><br/>
+同じスループットに必要なマシンが少なくなります。</p>
+<p><strong>主要な本番システムで使用:</strong><br/>
+Google Search AI Overviews、コードアシスタント、要約ツール。</p>
+<h2 id="制限と注意事項">制限と注意事項</h2>
+<p><strong>メモリ使用量の増加:</strong><br/>
+両方のモデル(キャッシュ付き)がメモリに収まる必要があり、バッチサイズが減少します。</p>
+<p><strong>スループットのトレードオフ:</strong><br/>
+高バッチサイズでは、Speculative Decodingは改善されず、競合によりスループットが低下する可能性があります。</p>
+<p><strong>ドラフトの整合性が低い場合の無駄:</strong><br/>
+受け入れ率が低い場合(例:0.5未満)、Speculative Decodingは高速化なしにオーバーヘッドを追加します。</p>
+<p><strong>モデル互換性の制約:</strong><br/>
+最良の結果を得るには、ドラフトとターゲットは同じトークナイザーと類似のアーキテクチャを使用する必要があります。</p>
+<p><strong>オーケストレーションの複雑さ:</strong><br/>
+効率的なモデル相互作用とキャッシュ管理のための慎重なエンジニアリングが必要です。</p>
+<p><strong>小型モデルまたは高バッチ負荷では効果が低い:</strong><br/>
+高速化は、大型モデルとレイテンシに敏感なアプリケーションで最も顕著です。</p>
+<h2 id="実装ガイダンス">実装ガイダンス</h2>
+<h3 id="speculative-decodingを使用すべき場合">Speculative Decodingを使用すべき場合</h3>
+<p><strong>レイテンシクリティカルなアプリケーション:</strong><br/>
+チャットボット、コード補完、リアルタイム要約。</p>
+<p><strong>大型モデル:</strong><br/>
+10Bパラメータ以上で、トークンあたりのレイテンシが最も高い場合。</p>
+<p><strong>低~中程度のバッチサイズ:</strong><br/>
+ユーザー向けレイテンシがスループットよりも重要な場合。</p>
+<h3 id="避けるべき場合">避けるべき場合</h3>
+<p><strong>GPUメモリが最大:</strong><br/>
+大きなバッチサイズ、長いコンテキストウィンドウ。</p>
+<p><strong>低いドラフト受け入れ率:</strong><br/>
+ドラフトモデルがターゲットを模倣するのに苦労する場合。</p>
+<p><strong>小型LLM:</strong><br/>
+わずかな利益が複雑さを正当化しない場合。</p>
+<h3 id="設定と調整">設定と調整</h3>
+<p><strong>ドラフトモデルの選択:</strong><br/>
+ターゲットの小型バージョンから始め、可能であれば微調整します。</p>
+<p><strong>投機的トークン数(γ):</strong><br/>
+典型的:ラウンドあたり3~8。ワークロードに合わせて調整します。</p>
+<p><strong>受け入れ率の監視:</strong><br/>
+本番環境でαを追跡します。α &lt; 0.6の場合、調整またはフォールバックを検討します。</p>
+<p><strong>メモリ管理:</strong><br/>
+GPUメモリを監視します。必要に応じて量子化またはモデル分割を使用します。</p>
+<h3 id="例vllm-python-api">例:vLLM Python API</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">from</span> vllm <span style="color:#fff;font-weight:bold">import</span> LLM, SamplingParams
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>llm = LLM(model=<span style="color:#0ff;font-weight:bold">"your-target-model"</span>, draft_model=<span style="color:#0ff;font-weight:bold">"your-draft-model"</span>)
+</span></span><span style="display:flex;"><span>params = SamplingParams(max_tokens=<span style="color:#ff0;font-weight:bold">100</span>, speculative_tokens=<span style="color:#ff0;font-weight:bold">4</span>)
+</span></span><span style="display:flex;"><span>output = llm.generate(<span style="color:#0ff;font-weight:bold">"Prompt text"</span>, sampling_params=params)
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">print</span>(output)
+</span></span></code></pre></div><h2 id="ユースケースと例">ユースケースと例</h2>
+<h3 id="実世界のデプロイメント">実世界のデプロイメント</h3>
+<p><strong>Google Search AI Overviews:</strong><br/>
+数十億のユーザーに高品質で低レイテンシの要約を提供します。</p>
+<p><strong>コード生成ツール:</strong><br/>
+高速なコード補完のためにIDEアシスタントで使用されます。</p>
+<p><strong>エンタープライズチャットボット:</strong><br/>
+<a data-lb="1" href="/ja/glossary/UX/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">ユーザーエクスペリエンス</a>を向上させ、大量のカスタマーサポートのサービング費用を削減します。</p>
+<p><strong>バッチ翻訳/要約:</strong><br/>
+サンプルあたりのレイテンシが高い長いドキュメントの高速出力を可能にします。</p>
+<h3 id="研究ベンチマーク">研究ベンチマーク</h3>
+<p><strong>T5-XXL(11B)とT5-small(60M):</strong><br/>
+翻訳タスクで2~3倍の高速化を示します。</p>
+<p><strong>Llama 70B:</strong><br/>
+Speculative Decodingによる大幅なレイテンシ改善を報告しています。</p>
+<h2 id="ベストプラクティスと調整">ベストプラクティスと調整</h2>
+<p><strong>1. ドラフトモデルの選択:</strong><br/>
+同じファミリーとトークナイザーの小型モデルを使用します。可能であれば、ユースケースに合わせて微調整します。</p>
+<p><strong>2. γの調整:</strong><br/>
+γ=3~5から始め、αが高いままであれば増やします。</p>
+<p><strong>3. αの監視:</strong><br/>
+αが0.5を下回る場合、γを減らすか、ドラフトモデルを再整合します。</p>
+<p><strong>4. メモリの最適化:</strong><br/>
+必要に応じて量子化、マルチGPU、またはバッチ/コンテキストの削減を使用します。</p>
+<p><strong>5. ベンチマーク:</strong><br/>
+実際のワークロードとハードウェアでテストします。</p>
+<p><strong>6. フォールバックの自動化:</strong><br/>
+αまたはメモリ圧力がしきい値を超えた場合、Speculative Decodingを無効にします。</p>
+<h2 id="オープンソースツールとフレームワーク">オープンソースツールとフレームワーク</h2>
+<p><strong>vLLM:</strong><br/>
+Speculative Decodingを備えた高スループット<a data-lb="1" href="/ja/glossary/PagedAttention/" title="PagedAttentionは、LLMのKVキャッシュを固定サイズのブロックに分割するメモリ管理アルゴリズムです。推論時のGPUメモリの無駄を削減し、vLLMを支える技術として活用されています。">LLM推論</a>エンジン。</p>
+<p><strong>BentoML:</strong><br/>
+ガイドとフレームワーク統合。</p>
+<p><strong>Modular MAX:</strong><br/>
+設定による標準サポート。</p>
+<p><strong>TensorRT-LLM(Baseten):</strong><br/>
+Speculative Decodingを備えた高性能デプロイメント。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Google Research. (n.d.). Looking Back at Speculative Decoding. Google Research Blog.</p>
+</li>
+<li>
+<p>Anonymous. (2022). Fast Inference from Transformers via Speculative Decoding. arXiv.</p>
+</li>
+<li>
+<p>NVIDIA. (n.d.). An Introduction to Speculative Decoding for Reducing Latency in AI Inference. NVIDIA Technical Blog.</p>
+</li>
+<li>
+<p>BentoML. (n.d.). Speculative Decoding. URL: <a href="https://bentoml.com/llm/inference-optimization/speculative-decoding" rel="nofollow noopener noreferrer" target="_blank">https://bentoml.com/llm/inference-optimization/speculative-decoding</a></p>
+</li>
+<li>
+<p>Baseten. (n.d.). A Quick Introduction to Speculative Decoding. Baseten Blog.</p>
+</li>
+<li>
+<p>Stern et al. (2018). Speculative Sampling. arXiv.</p>
+</li>
+<li>
+<p>Anonymous. (2023). Distributed Speculative Decoding. arXiv.</p>
+</li>
+<li>
+<p>vLLM. (n.d.). Speculative Decoding. vLLM Documentation.</p>
+</li>
+<li>
+<p>BentoML. (n.d.). Structured Decoding in vLLM: A Gentle Introduction. BentoML Blog.</p>
+</li>
+<li>
+<p>Modular MAX. (n.d.). Speculative Decoding Documentation. URL: <a href="https://docs.modular.com/max/serve/speculative-decoding" rel="nofollow noopener noreferrer" target="_blank">https://docs.modular.com/max/serve/speculative-decoding</a></p>
+</li>
+<li>
+<p>vLLM Project. (n.d.). vLLM Project Repository. URL: <a href="https://github.com/vllm-project/vllm" rel="nofollow noopener noreferrer" target="_blank">https://github.com/vllm-project/vllm</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/PagedAttention/">
+                    PagedAttention
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    PagedAttentionは、LLMの<a data-lb="1" href="/ja/glossary/KV-Cache/" title="KVキャッシュは、TransformerモデルとLLMの推論時最適化技術であり、KeyとValueテンソルを保存することで、自己回帰的なトークン生成を劇的に高速化し、計算コストを削減します。">KVキャッシュ</a>を固定サイズのブロックに分割するメモリ管理アルゴリズムです。推論時のGPUメモリの無駄を削減し、vLLMを支える技術として活用されています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/PagedAttention/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/speculative-decoding/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

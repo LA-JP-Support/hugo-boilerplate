@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>重複コンテンツ | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Duplicate-Content/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="複数のWebページに同一または非常に類似したコンテンツが表示されることで、検索エンジンを混乱させ、検索結果におけるWebサイトの可視性を低下させる可能性があります。" name="description"/>
+<meta content="重複コンテンツ, SEO最適化, canonicalタグ, コンテンツ管理, 検索エンジンペナルティ" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Duplicate-Content/" property="og:url"/>
+<meta content="重複コンテンツ | SmartWeb" property="og:title"/>
+<meta content="複数のWebページに同一または非常に類似したコンテンツが表示されることで、検索エンジンを混乱させ、検索結果におけるWebサイトの可視性を低下させる可能性があります。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Duplicate-Content/" name="twitter:url"/>
+<meta content="重複コンテンツ | SmartWeb" name="twitter:title"/>
+<meta content="複数のWebページに同一または非常に類似したコンテンツが表示されることで、検索エンジンを混乱させ、検索結果におけるWebサイトの可視性を低下させる可能性があります。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">重複コンテンツ</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        重複コンテンツ
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Duplicate Content
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          複数のWebページに同一または非常に類似したコンテンツが表示されることで、検索エンジンを混乱させ、検索結果におけるWebサイトの可視性を低下させる可能性があります。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                重複コンテンツ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                SEO最適化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                canonicalタグ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コンテンツ管理
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                検索エンジンペナルティ
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="重複コンテンツとは">重複コンテンツとは</h2>
+<p><a data-lb="1" href="/ja/glossary/Canonical-URL/" title="カノニカルURLの包括的なガイド。実装方法、メリット、SEO最適化と重複コンテンツ管理のベストプラクティスを解説します。">重複コンテンツ</a>とは、同一のウェブサイト内(内部重複)または異なるウェブサイト間(外部重複)で、複数のウェブページに実質的に類似または同一のコンテンツが表示されることを指します。Googleなどの検索エンジンは、テキスト、構造、または意味の大部分を他のインデックス済みページと共有している場合、そのコンテンツを重複とみなします。この現象は、同じコンテンツブロックが複数のウェブアドレスに表示される場合に発生し、どのバージョンにランキング優先度を与えるべきかを判断しようとする検索エンジンアルゴリズムに混乱を引き起こします。</p>
+<p>重複コンテンツの概念は、単純なコピー&amp;ペーストの<a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>を超えて、さまざまな形式のコンテンツ重複を含みます。ヘッダー、フッター、サイドバー要素などの軽微な違いを含みながらメインコンテンツが同一である準重複コンテンツも、このカテゴリに該当します。検索エンジンは、テキストの重複、意味的な意味、構造パターンなどの要素を分析し、コンテンツの類似性を検出するための高度なアルゴリズムを採用しています。重複コンテンツが特定されると、検索エンジンはどのバージョンをインデックスに含め、どれを除外するかを決定する必要があり、影響を受けるページの可視性とランキングに影響を与える可能性があります。</p>
+<p>重複コンテンツを理解することは、ウェブサイト所有者、コンテンツ制作者、SEO専門家にとって極めて重要です。なぜなら、それは検索エンジン最適化の取り組みと<a data-lb="1" href="/ja/glossary/Organic-Traffic/" title="Googleなどの検索エンジンで、広告を使わずに自然検索結果から訪れる訪問者のことです。コンテンツがユーザーの検索意図と一致したときに、自然に発生します。">オーガニックトラフィック</a>の潜在力に直接影響するからです。重複コンテンツが検索エンジンから直接ペナルティを受けることはまれですが、複数のURLに権威シグナルが分散されることでランキング力が大幅に希薄化される可能性があります。この希薄化は、検索エンジンがコンテンツの権威あるバージョンを判断するのに苦労するために発生し、すべての重複バージョンの可視性が低下します。さらに、重複コンテンツはクロールバジェットを浪費し、同じ情報の複数のバージョンに遭遇するユーザーを混乱させ、全体的な<a data-lb="1" href="/ja/glossary/UX/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">ユーザーエクスペリエンス</a>を低下させる可能性があります。効果的な重複<a data-lb="1" href="/ja/glossary/Structured-Content/" title="構造化コンテンツの包括的ガイド:定義、実装方法、メリット、および組織化されたデジタル情報システムのベストプラクティスを解説します。">コンテンツ管理</a>には、最適な検索エンジンパフォーマンスとユーザー満足度を維持するために、さまざまな形式、検出方法、予防戦略の包括的な理解が必要です。</p>
+<h2 id="コンテンツ重複の主要タイプ">コンテンツ重複の主要タイプ</h2>
+<p><strong>内部重複コンテンツ</strong>は、同一または実質的に類似したコンテンツが同じウェブサイト内の複数のページに表示される場合に発生します。これは、製品説明、カテゴリページ、または<a data-lb="1" href="/ja/glossary/CMS--Content-Management-System-/" title="コンテンツ管理システム(CMS)の包括的ガイド - デジタルコンテンツ管理のための機能、メリット、実装戦略、ベストプラクティスを解説します。">コンテンツ管理システム</a>が同じコンテンツに対して複数のURLを自動生成する場合によく発生します。</p>
+<p><strong>外部重複コンテンツ</strong>は、異なるウェブサイトまたはドメイン間で同一のコンテンツが表示されることを指します。これは、<a data-lb="1" href="/ja/glossary/Content-Syndication/" title="リーチを拡大し、コンテンツROIを最大化するためのコンテンツシンジケーション戦略、テクノロジー、ベストプラクティスに関する包括的なガイド。">コンテンツシンジケーション</a>、盗用、またはパートナーサイト間の正当なコンテンツ共有契約から生じる可能性があります。</p>
+<p><strong>準重複コンテンツ</strong>は、異なるナビゲーション要素、タイムスタンプ、ユーザー生成コメント<a data-lb="1" href="/ja/glossary/Section/" title="関連するコンテンツや情報をグループ化し、ドキュメント、ウェブサイト、アプリケーション全体で素材を論理的で管理しやすい部分に整理・構造化するためのコンテナ。">セクション</a>などの軽微な違いを含みながら、コンテンツの大部分を共有するページを指します。</p>
+<p><strong>スクレイピングコンテンツ</strong>は、自動スクレイピングツールまたは手動コピープロセスを通じて、許可なく他のウェブサイトからコピーされたコンテンツを表します。</p>
+<p><strong>シンジケートコンテンツ</strong>は、通常<a data-lb="1" href="/ja/glossary/RSS-Feed/" title="RSSフィードの包括的ガイド - ウェブコンテンツを購読者やアプリケーションに自動配信するためのXMLベースの配信フォーマット。">RSSフィード</a>、プレスリリース、またはコンテンツパートナーシップ契約を通じて、複数のプラットフォームまたはウェブサイトにわたる正当な<a data-lb="1" href="/ja/glossary/Social-Sharing/" title="デジタルコンテンツ配信におけるソーシャルシェアリングの仕組み、実装戦略、最適化テクニックに関する包括的なガイド">コンテンツ配信</a>を含みます。</p>
+<p><strong>定型コンテンツ</strong>には、著作権表示、利用規約、標準的な免責事項など、複数のページに表示されるが必要な機能的目的を果たす反復的な要素が含まれます。</p>
+<p><strong>パラメータベースの重複</strong>は、セッションID、トラッキングコード、ソートオプションなどのURLパラメータが同一のコンテンツに対して異なるURLを生成する場合に発生します。</p>
+<h2 id="重複コンテンツの仕組み">重複コンテンツの仕組み</h2>
+<p>重複コンテンツの検出と処理プロセスには、検索エンジンがクロールとインデックス作成操作中に実行するいくつかの相互接続されたステップが含まれます:</p>
+<ol>
+<li>
+<p><strong>コンテンツの発見</strong>: 検索エンジンクローラーは、<a data-lb="1" href="/ja/glossary/Sitemap/" title="ウェブサイト上のすべてのページをリスト化したファイルで、検索エンジンがコンテンツをより簡単に発見しインデックス化できるようにするためのものです。">サイトマップ</a>、<a data-lb="1" href="/ja/glossary/Internal-Linking-Strategy/" title="SEO最適化、ユーザーエクスペリエンス向上、ウェブサイトオーソリティ分散のための内部リンク戦略の包括的ガイド。">内部リンク</a>、外部リンク、直接送信などのさまざまな方法を通じてウェブページを発見し、潜在的なインデックス作成のためにURLを収集します。</p>
+</li>
+<li>
+<p><strong>コンテンツの抽出</strong>: クローラーは発見されたページからテキストコンテンツを抽出し、HTML要素を解析してメインコンテンツ領域を識別しながら、ナビゲーション、広告、定型要素をフィルタリングします。</p>
+</li>
+<li>
+<p><strong>フィンガープリント生成</strong>: 検索エンジンは各ページのコンテンツに対して一意のデジタルフィンガープリントまたはハッシュ値を作成し、膨大なデータベース全体で迅速な比較と類似性検出を可能にします。</p>
+</li>
+<li>
+<p><strong>類似性分析</strong>: 高度なアルゴリズムがコンテンツフィンガープリントを比較して、同一または実質的に類似したコンテンツを持つページを識別し、シングリング、<a data-lb="1" href="/ja/glossary/N-Gram/" title="N-gramとは、テキストや音声から抽出されるn個の連続したアイテム(単語、文字、記号)のシーケンスであり、自然言語処理における言語モデリングやテキスト分析の基礎となる手法です。">n-gram</a>分析、意味的比較などの技術を使用します。</p>
+</li>
+<li>
+<p><strong>クラスタリングプロセス</strong>: 類似したコンテンツを持つページはクラスターにグループ化され、検索エンジンは各クラスター内でオリジナルまたは最も権威のあるバージョンを識別しようとします。</p>
+</li>
+<li>
+<p><strong>正規版の選択</strong>: 検索エンジンは、公開日、ドメイン権威、内部リンク、明示的な正規シグナルなどの要素に基づいて、各重複コンテンツクラスターから正規(優先)バージョンを選択します。</p>
+</li>
+<li>
+<p><strong>インデックスフィルタリング</strong>: 非正規バージョンは通常検索結果からフィルタリングされますが、参照目的と将来の再評価の可能性のためにインデックスに残る場合があります。</p>
+</li>
+<li>
+<p><strong>ランキング統合</strong>: バックリンク、<a data-lb="1" href="/ja/glossary/Scroll-Depth/" title="ユーザーがウェブページをどこまでスクロールしたかを追跡する指標で、コンテンツのエンゲージメントを測定し、ページのどの部分が訪問者の注意を引いているかを特定するのに役立ちます。">ユーザーエンゲージメント指標</a>、権威指標などのランキングシグナルは、シグナルの希薄化を避けるために選択された正規バージョンに統合されます。</p>
+</li>
+</ol>
+<p><strong>ワークフローの例</strong>: <a data-lb="1" href="/ja/glossary/Cart-Abandonment-Rate/" title="カート放棄率の定義、計算方法、業界ベンチマーク、放棄の主な理由、そしてカート放棄を削減し失われた売上を回復するための実践的な戦略を理解しましょう。">eコマース</a>サイトが複数のカテゴリページに同じ製品説明を公開します。検索エンジンはこの重複を検出し、類似したページをクラスター化し、内部リンクパターンに基づいてメイン製品ページを正規版として選択し、重複するカテゴリページを検索結果からフィルタリングしながらランキングシグナルを統合します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>検索ランキングの向上</strong>は、コンテンツの重複を排除することで、検索エンジンが複数の重複ページにランキングシグナルを分散させるのではなく、単一の権威あるバージョンに集中できるようになることから生じます。</p>
+<p><strong>クロール効率の向上</strong>は、検索エンジンボットが重複ページにリソースを浪費するのではなく、ユニークなコンテンツに<a data-lb="1" href="/ja/glossary/Crawl-Budget/" title="Googleが一定期間内にサイト上でクロールおよびインデックス登録するウェブページの数。新しいコンテンツが発見され、ランク付けされる速度に影響します。">クロールバジェット</a>をより効果的に割り当てることができる場合に発生します。</p>
+<p><strong>ユーザーエクスペリエンスの向上</strong>は、訪問者に明確で権威のあるコンテンツソースを提供し、同じ情報の複数のバージョンによって引き起こされる混乱を排除することから生まれます。</p>
+<p><strong>オーガニックトラフィックの増加</strong>は、統合されたランキングシグナルが正規コンテンツバージョンの可視性と検索パフォーマンスを強化することで発展します。</p>
+<p><strong>ドメイン権威の強化</strong>は、リンクエクイティとランキングシグナルが重複バージョンに分散するのではなく、ユニークで価値のあるコンテンツに集中する場合に構築されます。</p>
+<p><strong>直帰率の低下</strong>は、ユーザーが最も関連性が高く権威のあるバージョンのコンテンツを見つけることで、<a data-lb="1" href="/ja/glossary/Engagement-Metrics/" title="エンゲージメント指標は、ウェブサイト、アプリ、ソーシャルメディアなどのデジタル資産に対するユーザーのインタラクションを定量化します。クリック、スクロール、共有、コンバージョンなどのユーザー行動を明らかにし、最適化の指針となります。">エンゲージメント指標</a>とユーザー満足度の向上につながる場合に発生します。</p>
+<p><strong>サイトアーキテクチャのクリーン化</strong>は、適切な重複コンテンツ管理を実装することで、より論理的でナビゲートしやすいウェブサイト構造を作成することから生じます。</p>
+<p><strong>コンテンツ価値の向上</strong>は、既存の素材の複数のバージョンを管理するのではなく、ユニークで高品質なコンテンツの作成にリソースを集中させる場合に発生します。</p>
+<p><strong>分析精度の向上</strong>は、トラフィックとエンゲージメント指標が正規コンテンツバージョンを中心に統合され、より明確なパフォーマンスインサイトを提供する場合に発展します。</p>
+<p><strong>コンバージョン率の向上</strong>は、最高のユーザーエクスペリエンスとコンバージョン機会を提供する最適化された権威あるページにユーザーを誘導することから生まれます。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>eコマース製品管理</strong>には、複数のカテゴリ、サイズバリエーション、カラーオプションにわたる重複製品説明を処理しながら、各製品バリアントに対してユニークで最適化されたコンテンツを維持することが含まれます。</p>
+<p><strong>コンテンツシンジケーションプログラム</strong>は、記事、<a data-lb="1" href="/ja/glossary/Press-Release/" title="プレスリリースの包括的ガイド:構成、配信、ベストプラクティス、効果的なメディアアウトリーチとブランド認知度向上のための戦略的コミュニケーション。">プレスリリース</a>、ブログ投稿を複数のパートナーウェブサイトやプラットフォームに配信する際の重複コンテンツ問題の管理を必要とします。</p>
+<p><strong>複数拠点ビジネスウェブサイト</strong>は、異なる地理的エリアにわたって類似したサービス説明と会社情報を含む拠点固有のページを作成する際に、重複コンテンツの課題に直面します。</p>
+<p><strong>印刷用ページバージョン</strong>は、ウェブサイトが同じ記事やドキュメントの標準版と印刷最適化版の両方を提供する場合に、重複コンテンツシナリオを作成します。</p>
+<p><strong>モバイルとデスクトップサイトバージョン</strong>は、別個のモバイルサイト(m.domain.com)がデスクトップバージョンと同一のコンテンツを含む場合に、重複コンテンツ問題を生成する可能性があります。</p>
+<p><strong>セッションIDとパラメータ管理</strong>は、トラッキング、ソート、フィルタリング、またはセッション管理のためのURLパラメータが同一のコンテンツに対して複数のURLを生成することによって作成される重複コンテンツに対処します。</p>
+<p><strong>アーカイブとカテゴリページの最適化</strong>には、類似した投稿の抜粋や要約を表示する可能性のあるブログアーカイブ、カテゴリページ、タグページ間の重複コンテンツの管理が含まれます。</p>
+<p><strong>国際ウェブサイト管理</strong>は、適切な<a data-lb="1" href="/ja/glossary/Hreflang/" title="検索エンジンに対して、どの言語バージョンのウェブページをユーザーに表示すべきかを伝えるHTMLタグで、多言語ウェブサイトが適切なオーディエンスにリーチするのを支援します。">hreflang</a>と正規シグナルを実装しながら、異なる国のドメインまたは言語バージョン間の重複コンテンツを処理する必要があります。</p>
+<p><strong>プレスリリース配信</strong>には、複数のニュースアウトレットやプレスリリース配信サービスにプレスリリースを配信する際の重複コンテンツの管理が含まれます。</p>
+<p><strong>ユーザー生成コンテンツプラットフォーム</strong>は、プラットフォーム内の複数の場所に表示される可能性のあるユーザー投稿、レビュー、フォーラム投稿からの重複コンテンツに対処する必要があります。</p>
+<h2 id="コンテンツ重複比較表">コンテンツ重複比較表</h2>
+<table>
+<thead>
+<tr>
+<th>重複タイプ</th>
+<th>SEOへの影響</th>
+<th>検出難易度</th>
+<th>解決の複雑さ</th>
+<th>一般的な原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内部完全一致</td>
+<td>高い負の影響</td>
+<td>検出が容易</td>
+<td>中程度の複雑さ</td>
+<td>CMS問題、URLパラメータ</td>
+</tr>
+<tr>
+<td>外部完全一致</td>
+<td>非常に高い負の影響</td>
+<td>中程度の難易度</td>
+<td>高い複雑さ</td>
+<td>コンテンツスクレイピング、シンジケーション</td>
+</tr>
+<tr>
+<td>準重複</td>
+<td>中程度の負の影響</td>
+<td>検出が困難</td>
+<td>高い複雑さ</td>
+<td>テンプレートバリエーション、定型文</td>
+</tr>
+<tr>
+<td>スクレイピングコンテンツ</td>
+<td>深刻な負の影響</td>
+<td>検出が容易</td>
+<td>低い複雑さ</td>
+<td>自動スクレイピング、盗用</td>
+</tr>
+<tr>
+<td>シンジケートコンテンツ</td>
+<td>低~中程度の影響</td>
+<td>検出が容易</td>
+<td>中程度の複雑さ</td>
+<td>正当なコンテンツ共有</td>
+</tr>
+<tr>
+<td>パラメータベース</td>
+<td>中程度の負の影響</td>
+<td>検出が容易</td>
+<td>低い複雑さ</td>
+<td>URLパラメータ、セッションID</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>検出の複雑さ</strong>は、現代の重複コンテンツの高度な性質から生じ、大規模なウェブサイト全体で微妙なバリエーションや準重複シナリオを識別するための高度なツールと技術を必要とします。</p>
+<p><strong>技術実装の障壁</strong>は、正規タグ、リダイレクト、またはその他の技術的ソリューションの実装が、さまざまなコンテンツ管理システムにおいて重要な開発リソースと専門知識を必要とする場合に発生します。</p>
+<p><strong>コンテンツシンジケーションのバランス</strong>には、適切な帰属と正規シグナルを維持しながら、コンテンツ配信の利点と潜在的な重複コンテンツペナルティを管理することが含まれます。</p>
+<p><strong>動的コンテンツ管理</strong>は、<a data-lb="1" href="/ja/glossary/Content-Moderation/" title="コンテンツモデレーションについて解説します。ユーザー生成コンテンツの監視、評価、管理を通じて、プラットフォームのガイドライン、コミュニティ基準、法的コンプライアンスを確保する仕組みです。">ユーザー生成コンテンツ</a>、<a data-lb="1" href="/ja/glossary/Automated-Content-Generation/" title="AIを活用したコンテンツ作成システムのための自動コンテンツ生成技術、応用例、ベストプラクティスに関する包括的なガイド。">自動コンテンツ生成</a>、または一時的な重複問題を引き起こす可能性のある頻繁に変更されるコンテンツを扱う際に課題を提示します。</p>
+<p><strong>クロスドメイン調整</strong>は、異なる技術インフラストラクチャを持つ複数のドメイン、サブドメイン、またはウェブサイトの国際バージョン間で重複コンテンツを管理する場合に複雑になります。</p>
+<p><strong>リソース配分の制約</strong>は、個別の注意を必要とする数千のページを持つ大規模なウェブサイトにとって、重複コンテンツ問題を包括的に対処する能力を制限します。</p>
+<p><strong>アルゴリズム更新の影響</strong>は、検索エンジンアルゴリズムが重複コンテンツの検出と処理方法を進化させるにつれて継続的な課題を生み出し、継続的な監視と適応を必要とします。</p>
+<p><strong>ユーザーエクスペリエンスの競合</strong>は、技術的な重複コンテンツソリューションがユーザーナビゲーション、アクセシビリティ、または機能要件に悪影響を与える可能性がある場合に発生します。</p>
+<p><strong>分析とトラッキングの複雑化</strong>は、重複コンテンツソリューションがウェブサイト分析、<a data-lb="1" href="/ja/glossary/Conversion-Tracking/" title="ウェブサイト上での購入や登録などの特定のユーザーアクションを監視・測定するシステムで、企業がマーケティングキャンペーンの効果を理解するのに役立ちます。">コンバージョントラッキング</a>、<a data-lb="1" href="/ja/glossary/Goal-Tracking/" title="個人および組織の成功測定のための、ゴールトラッキングシステム、方法論、ベストプラクティスに関する包括的なガイド。">パフォーマンス測定</a>システムの精度に影響を与える場合に発生します。</p>
+<p><strong>法的およびコンプライアンス問題</strong>は、外部重複コンテンツへの対処が著作権の懸念、コンテンツライセンス契約、または国際的な法的考慮事項を含む場合に生じます。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>正規タグの実装</strong>は、すべての関連ページにわたって重複または類似したコンテンツの優先バージョンを指定するために、rel=“canonical"タグを適切に使用する必要があります。</p>
+<p><strong>301リダイレクト戦略</strong>には、重複ページから正規バージョンへの永続的なリダイレクトを実装し、リンクエクイティを統合して重複コンテンツ問題を排除することが含まれます。</p>
+<p><strong>パラメータ処理設定</strong>には、パラメータベースの重複を防ぐために、<a data-lb="1" href="/ja/glossary/Google-Search-Console/" title="ウェブサイトの所有者が検索結果での自サイトの表示状況を監視し、視認性に影響する問題を修正するのに役立つ、Googleの無料ツールです。">Google Search Console</a>やその他のウェブマスターツールで適切なURLパラメータ処理を設定することが含まれます。</p>
+<p><strong>コンテンツユニークネス基準</strong>は、類似したトピックや製品をカバーする場合でも、明確な価値を提供するユニークで価値のあるコンテンツを作成するためのガイドラインを確立します。</p>
+<p><strong>定期的なコンテンツ監査</strong>には、検索エンジンパフォーマンスに影響を与える前に重複コンテンツ問題を識別して対処するための、ウェブサイトコンテンツの体系的なレビューが含まれます。</p>
+<p><strong>構造化データの一貫性</strong>は、正規コンテンツ識別をサポートしながら、関連ページ間で<a data-lb="1" href="/ja/glossary/Structured-Data/" title="検索エンジンやコンピュータがWebページのコンテンツをより適切に理解できるよう、標準化された形式で整理された情報。評価、価格、その他の詳細情報を含むリッチな検索結果の表示を可能にします。">スキーママークアップ</a>と構造化データが一貫していることを保証します。</p>
+<p><strong>内部リンクの最適化</strong>は、正規コンテンツバージョンに内部リンクを集中させて、その権威を強化し、検索エンジンが優先ページを識別するのを支援します。</p>
+<p><strong>シンジケーションガイドライン</strong>は、重複コンテンツの影響を最小限に抑えるために、適切な帰属、正規シグナル、タイミングの考慮事項を含むコンテンツシンジケーションの明確なプロトコルを確立します。</p>
+<p><strong>監視とアラートシステム</strong>は、新しい重複コンテンツ問題が発生したときに検出し、関連チームメンバーに警告する<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>されたツールとプロセスを実装します。</p>
+<p><strong>チーム間の調整</strong>は、コンテンツ制作者、開発者、<a data-lb="1" href="/ja/glossary/Dwell-Time/" title="滞在時間とは、ユーザーが検索結果ページ(SERP)からクリックした後、戻るまでにそのページで過ごす時間を測定する指標です。SEOへの影響、測定方法、ユーザーエンゲージメントを向上させる戦略について解説します。">SEO</a>専門家が協力して重複コンテンツの作成を防ぎ、ベストプラクティスを維持することを保証します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>意味的コンテンツ分析</strong>は、<a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">自然言語処理</a>と<a data-lb="1" href="/ja/glossary/Ensemble-Learning/" title="機械学習における予測精度向上のためのアンサンブル学習手法、アルゴリズム、および応用に関する包括的ガイド。">機械学習アルゴリズム</a>を採用して、正確なテキストを共有していないが同一のトピックやテーマをカバーする概念的に類似したコンテンツを検出します。</p>
+<p><strong>動的正規管理</strong>は、コンテンツ類似性アルゴリズム、<a data-lb="1" href="/ja/glossary/Behavioral-Trigger/" title="ボタンのクリックやショッピングカートの放棄など、ユーザーの行動に自動的に応答し、タイムリーでパーソナライズされたメッセージや体験を提供するシステム。">ユーザー行動</a>パターン、検索エンジンパフォーマンスデータに基づいて正規タグを動的に生成する自動化システムを実装します。</p>
+<p><strong>コンテンツフィンガープリントシステム</strong>は、プロアクティブな重複検出と管理のための包括的なコンテンツデータベースを作成するために、高度なハッシュアルゴリズムと類似性検出方法を利用します。</p>
+<p><strong>クロスプラットフォームコンテンツトラッキング</strong>には、複数のプラットフォーム、ソーシャルメディア、シンジケーションネットワーク全体でコンテンツ配信を追跡して、不正な重複を識別する高度な監視システムが含まれます。</p>
+<p><strong>アルゴリズムコンテンツバリエーション</strong>は、意味的な意味とユーザー価値を維持しながら、類似したコンテンツのユニークなバリエーションを自動的に生成するために人工知能を採用します。</p>
+<p><strong>予測的重複防止</strong>は、機械学習モデルを使用してコンテンツ作成プロセス中に潜在的な重複コンテンツシナリオを予測し、プロアクティブな予防戦略を可能にします。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>AI駆動コンテンツ分析</strong>は、重複コンテンツ検出におけるコンテンツの類似性、コンテキスト、ユーザー意図をよりよく理解するために、高度な人工知能と自然言語処理を活用します。</p>
+<p><strong>リアルタイム重複監視</strong>は、オンラインに表示される重複コンテンツを即座に検出して警告するシステムを提供し、即座の対応と解決を可能にします。</p>
+<p><strong>ブロックチェーンコンテンツ検証</strong>は、分散型台帳技術と暗号証明システムを通じてコンテンツの所有権と独創性を確立する方法として登場する可能性があります。</p>
+<p><strong>意味検索統合</strong>は、異なるユーザーニーズやコンテキストに対応する重複コンテンツと正当に類似したコンテンツを区別する検索エンジンの能力を向上させます。</p>
+<p><strong>自動解決システム</strong>は、コンテンツ品質を維持しながら、手動介入なしで一般的な重複コンテンツ問題を解決できる、より洗練された自動化ツールを開発します。</p>
+<p><strong>多言語重複検出</strong>は、翻訳された重複コンテンツをよりよく識別し、複数の言語と地域にわたる国際的なコンテンツ戦略を管理するために進歩します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Google Search Central Documentation. “Duplicate Content Guidelines and Best Practices.” Google Developers, 2024.</p>
+</li>
+<li>
+<p>Moz SEO Learning Center. “Duplicate Content: Causes, Consequences, and Solutions.” Moz, Inc., 2024.</p>
+</li>
+<li>
+<p>Search Engine Land. “The Complete Guide to Duplicate Content for SEO.” Third Door Media, 2024.</p>
+</li>
+<li>
+<p>Ahrefs Academy. “Duplicate Content: How to Find, Fix and Avoid It.” Ahrefs Pte Ltd., 2024.</p>
+</li>
+<li>
+<p>SEMrush Blog. “Duplicate Content Issues: Detection and Resolution Strategies.” Semrush Inc., 2024.</p>
+</li>
+<li>
+<p>Yoast SEO Blog. “Duplicate Content and SEO: What You Need to Know.” Yoast BV, 2024.</p>
+</li>
+<li>
+<p>Screaming Frog. “Technical SEO Guide to Duplicate Content Management.” Screaming Frog Ltd., 2024.</p>
+</li>
+<li>
+<p>BrightEdge Research. “The Impact of Duplicate Content on Search Performance.” BrightEdge Technologies, 2024.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Canonical-URL/">
+                    カノニカルURL
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    カノニカルURLの包括的なガイド。実装方法、メリット、SEO最適化と重複コンテンツ管理のベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Canonical-URL/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Shortcode/">
+                    Hugoショートコード
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugoにおける再利用可能なコードスニペットで、コンテンツ制作者がHTMLを記述することなく、インタラクティブな要素やカスタムレイアウトをMarkdownに直接埋め込むことができます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Shortcode/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Module/">
+                    Hugoモジュール
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugoウェブサイト向けの再利用可能なコンポーネントシステムで、開発者がテーマ、レイアウト、コンテンツブロックをビルディングブロックのように共有・管理でき、自動バージョン管理機能を備えています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Module/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Nofollow-Link/">
+                    Nofollowリンク
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Nofollowリンクは、検索エンジンにリンク先のウェブサイトへの支持票としてカウントしないよう指示する特殊なHTMLリンクです。推奨したくないコンテンツへのリンクや、スパム防止のために使用されます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Nofollow-Link/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Robots-txt/">
+                    Robots.txt
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    検索エンジンのクローラーに対して、ウェブサイトのどの部分にアクセスしてインデックス化できるか、またはできないかを指示するテキストファイルです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Robots-txt/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/URL-Slug/">
+                    URLスラッグ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    URLスラッグの包括的なガイド - ユーザー体験と検索エンジン最適化を向上させる、読みやすくSEOフレンドリーなURLの一部分について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/URL-Slug/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/duplicate-content/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

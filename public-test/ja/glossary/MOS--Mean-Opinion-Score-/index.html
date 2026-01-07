@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>MOS(平均オピニオン評点) | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/MOS--Mean-Opinion-Score-/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="平均オピニオン評点(MOS)の包括的ガイド - オーディオ、ビデオ、マルチメディアアプリケーションにおける標準的な主観的品質測定手法です。" name="description"/>
+<meta content="平均オピニオン評点, MOSテスト, 品質評価, 主観的評価, オーディオ品質測定" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/MOS--Mean-Opinion-Score-/" property="og:url"/>
+<meta content="MOS(平均オピニオン評点) | SmartWeb" property="og:title"/>
+<meta content="平均オピニオン評点(MOS)の包括的ガイド - オーディオ、ビデオ、マルチメディアアプリケーションにおける標準的な主観的品質測定手法です。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/MOS--Mean-Opinion-Score-/" name="twitter:url"/>
+<meta content="MOS(平均オピニオン評点) | SmartWeb" name="twitter:title"/>
+<meta content="平均オピニオン評点(MOS)の包括的ガイド - オーディオ、ビデオ、マルチメディアアプリケーションにおける標準的な主観的品質測定手法です。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">MOS(平均オピニオン評点)</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        MOS(平均オピニオン評点)
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          MOS (Mean Opinion Score)
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          平均オピニオン評点(MOS)の包括的ガイド - オーディオ、ビデオ、マルチメディアアプリケーションにおける標準的な主観的品質測定手法です。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                平均オピニオン評点
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                MOSテスト
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                品質評価
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                主観的評価
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                オーディオ品質測定
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="mos平均オピニオン評価とは何か">MOS(平均オピニオン評価)とは何か?</h2>
+<p>平均オピニオン評価(MOS)は、エンドユーザーの視点から音声、映像、マルチメディアコンテンツの知覚品質を評価するために使用される標準化された数値指標です。この主観的品質評価手法では、人間の評価者が事前に定義されたスケール(通常1(不良)から5(優秀)の範囲)で自身の体験を評価します。MOS手法は、<a data-lb="1" href="/ja/glossary/Channel-Switching/" title="電気通信におけるチャネルスイッチングの包括的ガイド。技術、メリット、実装戦略、ベストプラクティスを網羅しています。">電気通信</a>、放送、ストリーミングサービス、およびユーザー体験がサービスの受容性と商業的成功に直接影響を与えるさまざまなマルチメディアアプリケーションにおける品質評価のゴールドスタンダードとなっています。</p>
+<p>MOSの概念は、音声<a data-lb="1" href="/ja/glossary/DTMF--Dual-Tone-Multi-Frequency-/" title="DTMF(デュアルトーン多重周波数)は、キーパッド押下時に発生する固有の音声トーンを使用してコマンドを解釈し、通話をルーティングし、自動メニューナビゲーション、リモートコントロール、および電話ネットワークやデジタルプラットフォームにおける安全なデータ入力を可能にする通信信号システムです。">通信</a>システムの初期開発期における電気通信業界で生まれました。エンジニアは、実際のユーザーが知覚する音声品質を定量化する信頼性の高い方法を必要としていました。信号対雑音比やビット誤り率などの技術的パラメータに依存する客観的測定とは異なり、MOSは品質に対する主観的な人間の知覚を捉えます。これは純粋に技術的な評価とは大きく異なることがよくあります。この人間中心のアプローチは、通信品質の最終的な判断者がエンドユーザーであることを認識しており、技術的制約とユーザー満足度のバランスを取る必要があるサービスプロバイダー、機器メーカー、コンテンツ制作者にとってMOSを非常に貴重なツールにしています。</p>
+<p>MOSフレームワークは、会話品質、聴取品質、全体的なユーザー体験を含むさまざまなタイプの品質評価を包含するように進化してきました。現代のMOS実装は、従来の音声通信を超えて、ビデオストリーミング、バーチャルリアリティアプリケーション、ゲーム体験、拡張現実や没入型オーディオシステムなどの新興技術にまで拡張されています。この手法の柔軟性と実証された信頼性により、複数の業界にわたる<a data-lb="1" href="/ja/glossary/Quality-Monitoring/" title="製品、サービス、またはプロセスを設定された基準に照らして継続的にチェックし、品質を確保し、問題を特定し、改善を促進する体系的なプロセス。">品質保証</a>プロセス、<a data-lb="1" href="/ja/glossary/Compliance-Audit/" title="コンプライアンス監査の包括的ガイド:規制遵守とリスク管理のためのプロセス、フレームワーク、メリット、ベストプラクティス。">規制遵守</a>、競争力のあるベンチマーキングの重要な構成要素となっています。デジタル通信が進化し続ける中、MOSは技術革新と人間の知覚の間の重要な架け橋であり続け、技術的進歩がユーザー体験の意味のある改善につながることを保証しています。</p>
+<h2 id="mosの主要な評価カテゴリー">MOSの主要な評価カテゴリー</h2>
+<p><strong>絶対カテゴリー評価(ACR)</strong> - 最も一般的なMOS手法で、評価者が参照資料との直接比較なしに個々のサンプルを評価します。参加者は、個人的な品質期待と経験に基づいて、標準的な1-5スケールで各刺激を独立して評価します。</p>
+<p><strong>劣化カテゴリー評価(DCR)</strong> - 評価者が劣化したサンプルを高品質の参照バージョンと比較する比較評価手法です。このアプローチは、特定の品質劣化とその知覚される深刻度を特定するのに役立ち、コーデック開発と<a data-lb="1" href="/ja/glossary/Intelligent-Routing/" title="最適化されたネットワークトラフィック管理と意思決定のための、インテリジェントルーティングシステム、アルゴリズム、実装戦略に関する包括的なガイド。">ネットワーク最適化</a>に特に有用です。</p>
+<p><strong>比較カテゴリー評価(CCR)</strong> - 参加者が2つ以上のサンプルを直接比較し、相対的な品質差を評価する並列評価技術です。この方法は、類似した品質レベル間のより敏感な識別を提供し、個人的なバイアス効果を軽減します。</p>
+<p><strong>隠れ参照付き絶対カテゴリー評価(ACR-HR)</strong> - テストシーケンス内に識別されていない参照サンプルを含む強化されたACR手法です。このアプローチにより、品質スケールの較正が可能になり、評価プロセス中の評価者の信頼性の問題を検出するのに役立ちます。</p>
+<p><strong>隠れ参照とアンカー付き劣化カテゴリー評価(DCR-HRA)</strong> - 参照比較と既知の品質レベルを表すアンカーサンプルを組み合わせた最も包括的なMOS手法です。この技術は最高の測定<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">精度</a>を提供し、標準化活動でよく使用されます。</p>
+<p><strong>連続評価手法</strong> - 参加者が拡張されたコンテンツ再生中にリアルタイムで品質評価を提供する動的評価アプローチです。これらの方法は時間的な品質変動を捉え、適応ストリーミングシステムや時間変動するネットワーク条件の評価に特に有用です。</p>
+<h2 id="mos平均オピニオン評価の仕組み">MOS(平均オピニオン評価)の仕組み</h2>
+<p>MOS評価プロセスは、<strong>テスト設計とサンプル準備</strong>から始まります。研究者は品質評価の範囲を定義し、代表的なコンテンツサンプルを選択し、適切な劣化条件を決定します。このフェーズでは、対象アプリケーション、ユーザー層、品質知覚に影響を与える可能性のある技術的パラメータを慎重に考慮します。</p>
+<p><strong>参加者の募集とスクリーニング</strong>は、評価の妥当性を損なう可能性のある聴覚障害、言語障壁、その他の要因を持つ個人を除外しながら、代表的なユーザー集団を確保するための確立された基準に従います。参加者は通常、評価手順と品質期待に慣れるための短いトレーニングセッションを受けます。</p>
+<p><strong>テスト環境のセットアップ</strong>は、品質知覚に対する外部の影響を最小限に抑える制御された条件を作成します。これには、音声評価のための音響処理、ビデオ評価のための較正されたディスプレイ、すべての参加者にわたって一貫した評価状況を確保する標準化された照明条件が含まれます。</p>
+<p><strong>サンプル提示と評価収集</strong>は、事前に決定されたランダム化スキームに従ってテスト刺激を体系的に再生することを含みます。参加者は標準化されたインターフェースを使用して数値評価を提供し、疲労効果を防ぎ、独立した評価を確保するためにサンプル間に十分な時間を設けます。</p>
+<p><strong>データ検証と外れ値検出</strong>は、個々の評価パターンの統計分析を通じて、潜在的に信頼性の低い応答を特定します。グループのコンセンサスから大きく逸脱した応答を示す評価者は、全体的な測定精度を向上させるために最終計算から除外される場合があります。</p>
+<p><strong>統計分析と信頼区間の計算</strong>は、収集された評価を処理して、各テスト条件の平均値、標準偏差、信頼区間を決定します。この分析には、サンプル間の意味のある品質差を特定するための有意性検定が含まれることがよくあります。</p>
+<p><strong>結果の解釈と報告</strong>は、数値MOS値をシステム最適化、標準準拠検証、または競争力のあるベンチマーキング目的のための実用的な洞察に変換します。レポートには通常、再現性と結果の適切な解釈を確保するための詳細な方法論の説明が含まれます。</p>
+<p><strong>ワークフローの例</strong>: 新しいビデオ圧縮アルゴリズムを評価するストリーミングサービスは、さまざまな<a data-lb="1" href="/ja/glossary/Content-Types/" title="デジタルシステムにおけるコンテンツタイプの包括的なガイド。分類、実装、構造化されたコンテンツ管理のベストプラクティスを網羅しています。">コンテンツタイプ</a>を表すテストシーケンスを準備し、多様な視聴者パネルを募集し、制御された視聴環境でランダム化されたサンプルを提示し、標準化されたスケールで品質評価を収集し、統計的有意性の結果を分析し、ユーザー体験を向上させるためにエンコーダー設定を最適化するために調査結果を使用します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>本物のユーザー視点</strong> - MOSは品質に対する真の人間の知覚を捉え、純粋に技術的な測定では明らかにできない洞察を提供します。このユーザー中心のアプローチにより、品質評価が実際の<a data-lb="1" href="/ja/glossary/Service-Recovery/" title="サービスリカバリー:問題が発生した後、企業がサービスの問題を修正し、顧客満足度を回復するために取る行動。ネガティブな体験をロイヤルティを構築する機会に変えるプロセスです。">顧客満足度</a>とサービス受容率と一致することが保証されます。</p>
+<p><strong>標準化された測定フレームワーク</strong> - ITU-T P.800やITU-R BT.500などの国際規格は、世界中のさまざまなシステム、ベンダー、研究組織間で信頼性の高い比較を可能にする一貫した方法論を提供します。</p>
+<p><strong>規制遵守のサポート</strong> - 多くの電気通信当局や業界団体は、サービスライセンス、機器<a data-lb="1" href="/ja/glossary/Authentication/" title="デジタル環境およびアプリケーションにおける安全な本人確認のための認証システム、方法、ベストプラクティスに関する包括的なガイド。">認証</a>、性能監視のためにMOSベースの品質検証を要求しており、市場アクセスと規制承認に不可欠です。</p>
+<p><strong>費用対効果の高い品質保証</strong> - 人間の評価者を含むにもかかわらず、<a data-lb="1" href="/ja/glossary/MOS--Mean-Opinion-Score-/" title="平均オピニオン評点(MOS)の包括的ガイド - オーディオ、ビデオ、マルチメディアアプリケーションにおける標準的な主観的品質測定手法です。">MOSテスト</a>は、広範なフィールドトライアルや顧客満足度調査よりも経済的であることが多く、管理可能なリソース要件で信頼性の高い品質洞察を提供します。</p>
+<p><strong>知覚要因への感度</strong> - MOS評価は、時間的アーティファクト、クロスモーダル相互作用、ユーザー体験に影響を与える文脈効果など、客観的測定では現れない可能性のある品質劣化を検出します。</p>
+<p><strong>柔軟な適用範囲</strong> - MOSフレームワークは、従来の音声通信からバーチャルリアリティ、空間オーディオ、インタラクティブマルチメディアシステムなどの新興技術まで、多様なアプリケーションに適応します。</p>
+<p><strong>ベンチマーキングと競争分析</strong> - MOSスコアは、競合する技術、サービス、またはベンダー間の定量的比較を提供し、調達、パートナーシップ、<a data-lb="1" href="/ja/glossary/Product-Roadmap/" title="プロダクトロードマップの包括的ガイド:チームを整合させ、ビジョンを伝え、成功するプロダクト開発を推進する戦略的計画ツールです。">戦略的計画</a>活動のための情報に基づいた意思決定をサポートします。</p>
+<p><strong>研究開発のガイダンス</strong> - MOS結果は、ユーザー満足度と受容性に最も大きな影響を与える品質要因を特定することにより、アルゴリズム開発、システム最適化、機能の優先順位付けをガイドします。</p>
+<p><strong>品質閾値の確立</strong> - MOSデータは、さまざまなアプリケーションとユーザーコンテキストの最小許容品質レベルを確立するのに役立ち、<a data-lb="1" href="/ja/glossary/Service-Level-Agreement--SLA-/" title="サービスレベル契約(SLA)の包括的ガイド - 定義、構成要素、実装のベストプラクティス、およびサービス管理における将来のトレンドを解説します。">サービスレベル契約</a>の定義と品質管理プロセスをサポートします。</p>
+<p><strong>客観的メトリクスの検証</strong> - MOSスコアは、自動品質測定システムの開発と較正のためのグラウンドトゥルース参照として機能し、スケーラブルな品質監視ソリューションを可能にします。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>電気通信ネットワークの最適化</strong> - サービスプロバイダーは、さまざまなネットワーク条件、<a data-lb="1" href="/ja/glossary/Codec/" title="コーデックの包括的ガイド - 効率的なストレージと伝送のために、オーディオ、ビデオ、データをエンコードおよびデコードするデジタル圧縮アルゴリズムです。">コーデック</a>構成、インフラストラクチャ展開にわたる音声通話品質を評価するためにMOSテストを使用し、カバレッジエリア全体で一貫したユーザー体験を確保します。</p>
+<p><strong>ビデオストリーミングサービスの開発</strong> - <a data-lb="1" href="/ja/glossary/Social-Sharing/" title="デジタルコンテンツ配信におけるソーシャルシェアリングの仕組み、実装戦略、最適化テクニックに関する包括的なガイド">コンテンツ配信</a>プラットフォームは、さまざまなデバイスタイプとネットワーク条件に対してエンコーディングパラメータ、適応ビットレートアルゴリズム、コンテンツ配信ネットワーク構成を最適化するためにMOS評価を採用します。</p>
+<p><strong>VoIPアプリケーションのテスト</strong> - <a data-lb="1" href="/ja/glossary/Technical-Debt/" title="技術的負債とは、堅牢なアプローチではなく短期的な解決策を選択した際に発生する、将来的な作り直しに伴う潜在的なコストを指します。ソフトウェア開発やAIシステムにおいて、メンテナンス、複雑性、修復にかかるコストの増加につながります。">ソフトウェア開発</a>者は、インターネットベースの通信アプリケーションにおける音声品質を評価し、さまざまな音声処理アルゴリズムとネットワーク適応戦略を比較するためにMOS評価を利用します。</p>
+<p><strong>放送品質監視</strong> - テレビとラジオの放送局は、さまざまな伝送方法と受信条件にわたって一貫したコンテンツ品質を維持するためにMOSベースの品質保証プロセスを実装します。</p>
+<p><strong>ゲームオーディオ評価</strong> - ゲーム開発者は、全体的なゲーム体験に貢献する空間オーディオシステム、ボイスチャット品質、没入型サウンドデザイン要素を評価するためにMOS手法を適用します。</p>
+<p><strong>補聴器とオーディオデバイスの開発</strong> - 医療機器メーカーは、補聴技術における音声強調アルゴリズム、ノイズ低減システム、音声処理機能を評価するためにMOSテストを使用します。</p>
+<p><strong>自動車インフォテインメントシステム</strong> - 自動車メーカーは、困難な音響環境におけるハンズフリー通話システム、エンターテインメントオーディオ品質、<a data-lb="1" href="/ja/glossary/speech-recognition/" title="音声認識(ASR)は、話し言葉をテキストに変換する技術です。このAI技術の仕組み、アルゴリズム、機能、応用分野、そして今後のトレンドについて解説します。">音声認識</a>インターフェースを最適化するためにMOS評価を採用します。</p>
+<p><strong>ビデオ会議プラットフォームの最適化</strong> - 通信ソフトウェアプロバイダーは、多様なネットワーク条件にわたって最適なユーザー体験を確保するために、音声と映像の品質と帯域幅効率のバランスを取るためにMOS評価を利用します。</p>
+<p><strong>コーデック開発と標準化</strong> - 技術企業と標準化組織は、新しい圧縮アルゴリズムを評価し、業界採用のための性能ベンチマークを確立するためにMOSテストに依存しています。</p>
+<p><strong>体験品質研究</strong> - 学術機関と研究組織は、人間の知覚要因を調査し、新しい品質モデルを開発し、マルチメディア品質評価の理解を進めるためにMOS手法を使用します。</p>
+<h2 id="mos評価スケールの比較">MOS評価スケールの比較</h2>
+<table>
+<thead>
+<tr>
+<th>MOSスコア</th>
+<th>品質レベル</th>
+<th>ユーザー満足度</th>
+<th>典型的なアプリケーション</th>
+<th>受容性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>優秀</td>
+<td>非常に満足</td>
+<td>参照品質、プレミアムサービス</td>
+<td>非常に受容可能</td>
+</tr>
+<tr>
+<td>4</td>
+<td>良好</td>
+<td>満足</td>
+<td>商用サービス、標準品質</td>
+<td>受容可能</td>
+</tr>
+<tr>
+<td>3</td>
+<td>普通</td>
+<td>一部のユーザーが不満</td>
+<td>最小限の商用品質</td>
+<td>わずかに受容可能</td>
+</tr>
+<tr>
+<td>2</td>
+<td>不良</td>
+<td>多くのユーザーが不満</td>
+<td>緊急通信のみ</td>
+<td>一般的に受容不可</td>
+</tr>
+<tr>
+<td>1</td>
+<td>劣悪</td>
+<td>ほぼすべてのユーザーが不満</td>
+<td>かろうじて理解可能</td>
+<td>完全に受容不可</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>主観的変動性</strong> - 品質知覚、文化的背景、個人的嗜好における個人差は、MOS評価に大きな分散を導入する可能性があり、信頼性の高い結果を達成するために慎重な統計分析と適切なサンプルサイズが必要です。</p>
+<p><strong>テスト環境の制御</strong> - さまざまな場所、期間、参加者グループにわたって一貫した評価条件を維持することは、測定の妥当性と再現性に大きな影響を与える可能性のある物流上の課題を提示します。</p>
+<p><strong>参加者の疲労効果</strong> - 長時間の評価セッションは、注意力の低下、<a data-lb="1" href="/ja/glossary/Technology-Evaluation/" title="購入または導入の意思決定を行う前に、テクノロジーソリューションが組織のニーズ、コスト、目標を満たしているかどうかを評価・比較する体系的なプロセス。">評価基準</a>の変更、識別能力の低下につながる可能性があり、慎重なセッション設計と期間管理が必要です。</p>
+<p><strong>文化的および人口統計学的バイアス</strong> - 品質期待と評価行動は、さまざまな文化グループ、年齢層、技術的専門知識レベルにわたって異なる可能性があり、MOS結果の一般化可能性を制限する可能性があります。</p>
+<p><strong>コストと時間の要件</strong> - 包括的なMOS研究の実施には、参加者の募集、施設の準備、データ収集のための重要なリソースが必要であり、予算が限られている組織や開発スケジュールが厳しい組織にとって困難です。</p>
+<p><strong>限定的なスケーラビリティ</strong> - MOSテストの人間集約的な性質により、多数の条件を評価したり、継続的な品質監視を実施したりすることが困難になり、開発と展開プロセスに<a data-lb="1" href="/ja/glossary/bottlenecks/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ボトルネック</a>が生じます。</p>
+<p><strong>コンテキスト依存性</strong> - 品質知覚は、使用コンテキスト、ユーザー期待、アプリケーション<a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>に基づいて大きく異なる可能性があり、普遍的な品質閾値と基準を確立することが困難になります。</p>
+<p><strong>時間的品質変動</strong> - 従来のMOS手法は、特に適応ストリーミングシステムや時間変動するネットワーク条件に関連する、時間経過に伴う品質変動を適切に捉えられない可能性があります。</p>
+<p><strong>クロスモーダル相互作用</strong> - マルチメディアアプリケーションでは、音声と映像の品質相互作用が、単一モダリティのMOSテストでは完全に捉えられない可能性のある複雑な方法で全体的な知覚に影響を与える可能性があります。</p>
+<p><strong>標準化の制限</strong> - 国際規格は方法論的フレームワークを提供しますが、新興技術や新しいアプリケーションシナリオに対応していない可能性があり、カスタム評価アプローチが必要です。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>厳格な参加者スクリーニング</strong> - 代表的で信頼性の高い評価パネルを確保するために、聴力、言語能力、関連経験に基づいた明確な包含および除外基準を確立します。</p>
+<p><strong>包括的なトレーニングプロトコル</strong> - 参加者に評価手順、品質期待、評価インターフェースを慣れさせる標準化されたトレーニングセッションを提供しますが、その後の判断にバイアスをかけないようにします。</p>
+<p><strong>バランスの取れたテスト設計</strong> - 体系的なバイアスを最小限に抑え、統計的妥当性を確保するために、適切なランダム化スキーム、カウンターバランシング手順、サンプル順序戦略を実装します。</p>
+<p><strong>環境の標準化</strong> - 交絡する環境要因を排除するために、すべての評価セッションにわたって一貫した音響条件、照明レベル、機器較正を維持します。</p>
+<p><strong>適切なサンプルサイズ</strong> - 意味のある信頼性の高い結果を確保するために、予想される効果サイズ、望ましい統計的検出力、許容可能な信頼区間に基づいて必要な参加者数を計算します。</p>
+<p><strong>品質管理監視</strong> - データ収集中に問題を特定して対処するために、参加者の注意、評価の一貫性、機器の機能性のリアルタイムチェックを実装します。</p>
+<p><strong>統計的検証手順</strong> - <a data-lb="1" href="/ja/glossary/Data-Quality/" title="正確で完全、かつ信頼性の高いデータ資産を確保するための、データ品質管理、評価フレームワーク、ベストプラクティスに関する包括的なガイド。">データ品質</a>と結果の意味のある解釈を確保するために、適切な外れ値検出方法、信頼性評価、有意性検定を適用します。</p>
+<p><strong>文書化と再現性</strong> - 結果の検証と研究の複製を可能にするために、方法論、機器設定、環境条件の詳細な記録を維持します。</p>
+<p><strong>パイロットテストと改良</strong> - 本格的なデータ収集の前に、潜在的な問題を特定し、手順を最適化し、実験設計を検証するために予備評価を実施します。</p>
+<p><strong>倫理的考慮事項と同意</strong> - すべての人間被験者研究活動について、適切なインフォームドコンセント手順、参加者の<a data-lb="1" href="/ja/glossary/Data-Anonymization/" title="プライバシーを保護しながら分析におけるデータの有用性を維持するための、データ匿名化技術、手法、ベストプラクティスに関する包括的なガイド。">プライバシー保護</a>、倫理審査の遵守を確保します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>連続品質評価</strong> - 拡張されたコンテンツ再生中の時間的品質変動を捉えるリアルタイム評価方法で、ストリーミングアプリケーションにおける動的品質知覚と適応効果に関する洞察を提供します。</p>
+<p><strong>マルチモーダル品質統合</strong> - マルチメディアシステムにおける複合的な音声-視覚品質知覚を評価し、クロスモーダル相互作用と全体的なユーザー体験を考慮する洗練された評価アプローチです。</p>
+<p><strong>コンテキスト品質評価</strong> - 生態学的妥当性と実用的関連性を向上させるために、現実的な使用シナリオ、環境条件、タスク固有の要件を組み込んだ評価方法論です。</p>
+<p><strong>クラウドソースMOS収集</strong> - 品質管理の課題を管理しながら、より広範な人口統計学的カバレッジと増加した統計的検出力を達成するために、分散参加者ネットワークを活用する大規模品質評価プラットフォームです。</p>
+<p><strong>機械学習強化分析</strong> - MOSデータと客観的測定を組み合わせて、改善された精度で予測品質モデルと自動評価システムを開発する高度な統計技術です。</p>
+<p><strong>没入型品質評価</strong> - 空間オーディオ、視覚的没入感、これらの新興技術に固有のインタラクティブ品質要因を考慮した、バーチャルおよび拡張現実アプリケーション用の専門的な評価方法です。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>自動MOS予測</strong> - 人間の評価者なしでスケーラブルな品質監視を可能にする、客観的測定から人間の品質評価を正確に予測できる洗練された<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>モデルの開発。</p>
+<p><strong>拡張現実品質メトリクス</strong> - プレゼンス、没入感、モーションからフォトンまでの<a data-lb="1" href="/ja/glossary/Latency/" title="レイテンシとは、リクエストとシステムの応答との間の時間遅延のことで、AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。">レイテンシ</a>効果を含む、バーチャルリアリティ、拡張現実、混合現実アプリケーションにおける独自の品質要因に対処するためのMOS手法の進化。</p>
+<p><strong>パーソナライズされた品質評価</strong> - 特定のユーザーに対してより正確で関連性の高い品質予測を提供するために、個人の嗜好、使用パターン、コンテキスト要因を考慮する適応評価システム。</p>
+<p><strong>リアルタイム品質最適化</strong> - 純粋に技術的なメトリクスではなく、予測されるユーザー満足度に基づいた動的最適化のための、適応ストリーミングおよび通信システムへのMOSベースの品質モデルの統合。</p>
+<p><strong>異文化品質基準</strong> - グローバルユーザー集団にわたる品質知覚と期待における地域差を考慮した、文化的に認識された品質評価フレームワークの開発。</p>
+<p><strong>神経生理学的品質測定</strong> - 知覚処理と感情的反応の客観的測定で従来のMOS評価を補完するための、脳画像化と生理学的監視技術の探求。</p>
+<h2 id="参考文献">参考文献</h2>
+<p>ITU-T勧告P.800:伝送品質の主観的決定方法。国際電気通信連合、2019年。</p>
+<p>ITU-R勧告BT.500-14:テレビ画像の品質の主観的評価のための方法論。国際電気通信連合、2019年。</p>
+<p>Möller, S., &amp; Raake, A. (編). Quality of experience: Advanced concepts, applications and methods. Springer, 2014.</p>
+<p>Wältermann, M. Dimension-based quality modeling of transmitted speech. Springer Science &amp; Business Media, 2013.</p>
+<p>Pinson, M. H., &amp; Wolf, S. A new standardized method for objectively measuring video quality. IEEE Transactions on broadcasting, 50(3), 312-322, 2004.</p>
+<p>Streijl, R. C., Winkler, S., &amp; Hands, D. S. Mean opinion score (MOS) revisited: methods and applications, limitations and alternatives. Multimedia Systems, 22(2), 213-227, 2016.</p>
+<p>Hoßfeld, T., Schatz, R., &amp; Seufert, M. Internet video delivery in YouTube: From traffic measurements to quality of experience. In Data Traffic Monitoring and Analysis (pp. 264-301). Springer, 2013.</p>
+<p>Laghari, K. U. R., &amp; Connelly, K. Toward total quality of experience: A QoE model in a communication ecosystem. IEEE Communications Magazine, 50(4), 58-65, 2012.</p>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/mos--mean-opinion-score-/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

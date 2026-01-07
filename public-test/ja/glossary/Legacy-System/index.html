@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>レガシーシステム | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Legacy-System/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="組織が使い続けている古いコンピュータシステムやソフトウェアのこと。より新しい技術が存在するにもかかわらず、置き換えにはコストがかかりリスクも高いため、継続して使用されている。" name="description"/>
+<meta content="レガシーシステム, システムモダナイゼーション, 技術的負債, レガシーマイグレーション, システム統合" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Legacy-System/" property="og:url"/>
+<meta content="レガシーシステム | SmartWeb" property="og:title"/>
+<meta content="組織が使い続けている古いコンピュータシステムやソフトウェアのこと。より新しい技術が存在するにもかかわらず、置き換えにはコストがかかりリスクも高いため、継続して使用されている。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Legacy-System/" name="twitter:url"/>
+<meta content="レガシーシステム | SmartWeb" name="twitter:title"/>
+<meta content="組織が使い続けている古いコンピュータシステムやソフトウェアのこと。より新しい技術が存在するにもかかわらず、置き換えにはコストがかかりリスクも高いため、継続して使用されている。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">レガシーシステム</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        レガシーシステム
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Legacy System
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          組織が使い続けている古いコンピュータシステムやソフトウェアのこと。より新しい技術が存在するにもかかわらず、置き換えにはコストがかかりリスクも高いため、継続して使用されている。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                レガシーシステム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                システムモダナイゼーション
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                技術的負債
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                レガシーマイグレーション
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                システム統合
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="レガシーシステムとは">レガシーシステムとは?</h2>
+<p><a data-lb="1" href="/ja/glossary/Legacy-System/" title="組織が使い続けている古いコンピュータシステムやソフトウェアのこと。より新しい技術が存在するにもかかわらず、置き換えにはコストがかかりリスクも高いため、継続して使用されている。">レガシーシステム</a>とは、より新しい技術が利用可能であるにもかかわらず、引き続き使用されている旧式のコンピュータシステム、プログラミング言語、またはアプリケーションソフトウェアを指します。これらのシステムは通常、その古さ、時代遅れの技術スタック、そして組織が重要なビジネス運用においてそれらに依存し続けていることによって特徴付けられます。レガシーシステムは、多くの場合、数年または数十年前に行われた多額の投資を表しており、組織の運用インフラに深く組み込まれているため、置き換えや近代化が困難でコストがかかります。</p>
+<p>この文脈における「レガシー」という用語は、必ずしもシステムが故障しているか機能していないことを意味するものではありません。多くのレガシーシステムは、意図された機能を確実かつ効率的に実行し続けています。しかし、それらは保守、最新システムとの統合、<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>の<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">脆弱性</a>、スケーラビリティの制限という点で独特の課題を提示します。レガシーシステムは、銀行、医療、政府、製造、<a data-lb="1" href="/ja/glossary/DTMF--Dual-Tone-Multi-Frequency-/" title="DTMF(デュアルトーン多重周波数)は、キーパッド押下時に発生する固有の音声トーンを使用してコマンドを解釈し、通話をルーティングし、自動メニューナビゲーション、リモートコントロール、および電話ネットワークやデジタルプラットフォームにおける安全なデータ入力を可能にする通信信号システムです。">通信</a>などの業界で一般的に見られ、これらの業界では、古い技術を使用してミッションクリティカルなアプリケーションが開発され、長期間にわたって保守されてきました。</p>
+<p>現代の組織におけるレガシーシステムの存続は、古いシステムと新しいシステムが共存し相互作用しなければならない複雑な技術環境を生み出します。この状況はしばしば「技術的負債」として知られるものにつながり、レガシーの制限を維持し回避するコストが時間とともに蓄積されます。組織は、レガシーシステムを運用し続けるリスクとコストと、近代化または置き換えに必要な多額の投資とのバランスを取らなければなりません。レガシーシステムを理解することは、運用の継続性を維持しながら<a data-lb="1" href="/ja/glossary/Digital-Adoption/" title="デジタル技術を日常業務やビジネスオペレーションに統合するプロセス。効果的に活用するために必要なトレーニングや組織文化の変革を含みます。">デジタルトランスフォーメーション</a>の課題に対処しなければならないIT専門家、ビジネスリーダー、意思決定者にとって極めて重要です。</p>
+<h2 id="レガシーシステムの主要コンポーネント">レガシーシステムの主要コンポーネント</h2>
+<p>• <strong>メインフレームインフラ</strong>: 1960年代から1980年代にかけて普及した大規模な集中型コンピューティングシステムで、多くの場合COBOLまたはFORTRANアプリケーションを実行します。これらのシステムは通常、大量のトランザクション処理を扱い、多くの金融機関や政府機関の運用にとって依然として重要です。</p>
+<p>• <strong>モノリシックアーキテクチャ</strong>: すべてのコンポーネントが相互接続され相互依存している<a data-lb="1" href="/ja/glossary/Monolithic-Architecture/" title="モノリシックアーキテクチャは、アプリケーション全体を単一の不可分なユニットとして構築・デプロイするソフトウェア設計手法です。その構造、利点、欠点、ユースケースについて解説します。">ソフトウェア設計</a>で、システム全体に影響を与えることなく個々の部分を変更または更新することが困難です。このアーキテクチャは、現代の<a data-lb="1" href="/ja/glossary/Microservices/" title="API Gateway、Bounded Context、CQRSなど、マイクロサービスアーキテクチャの重要な概念、パターン、テクノロジーを網羅した包括的な用語集をご覧ください。">マイクロサービス</a>アプローチとは対照的です。</p>
+<p>• <strong>プロプライエタリデータベース</strong>: 非標準のクエリ言語やデータ形式を使用する可能性のあるカスタムまたはベンダー固有のデータベースシステムで、ベンダーロックインや最新アプリケーションとの統合の課題を生み出します。</p>
+<p>• <strong>時代遅れのプログラミング言語</strong>: COBOL、FORTRAN、または初期バージョンのCなどの言語で書かれたコードで、現代の開発ツール、ライブラリ、現在の雇用市場における開発者の専門知識が不足している可能性があります。</p>
+<p>• <strong>レガシーユーザーインターフェース</strong>: テキストベースまたは初期のグラフィカルインターフェースで、現在のユーザビリティ基準やアクセシビリティ要件を満たしていない可能性があり、多くの場合、ユーザーに専門的なトレーニングが必要です。</p>
+<p>• <strong>カスタムハードウェア依存性</strong>: 特定のハードウェア構成、プロプライエタリコンポーネント、または保守や交換が困難な廃止された機器に依存するシステム。</p>
+<p>• <strong>組み込まれたビジネスロジック</strong>: レガシーシステムにハードコーディングされた重要な<a data-lb="1" href="/ja/glossary/rules-engine/" title="ルールエンジンは、事前定義された「if-then」ルールに対してデータを評価することで意思決定を自動化し、ビジネスロジックをコードから分離して効率的な管理と更新を実現します。">ビジネスルール</a>とプロセスで、この知識を抽出して新しいプラットフォームに移行することが困難です。</p>
+<h2 id="レガシーシステムの動作原理">レガシーシステムの動作原理</h2>
+<p>レガシーシステムの動作は、通常、長年の使用を通じて洗練された確立されたパターンに従います:</p>
+<ol>
+<li>
+<p><strong>データ入力処理</strong>: レガシーシステムは、バッチファイルのアップロード、直接端末入力、または他のシステムとのインターフェースを含むさまざまなチャネルを通じてデータを受信し、多くの場合、古いデータ形式とプロトコルを使用します。</p>
+</li>
+<li>
+<p><strong>ビジネスロジックの実行</strong>: システムは、数十年にわたる運用を通じて開発され洗練された可能性のある組み込みのビジネスルールとアルゴリズムに従って入力データを処理します。</p>
+</li>
+<li>
+<p><strong>データベース操作</strong>: データは、最新のデータベースとは異なるインデックス作成、クエリ、ストレージメカニズムを採用している可能性のある古いデータベース管理システムを使用して、レガシーデータベースに保存および取得されます。</p>
+</li>
+<li>
+<p><strong>トランザクション処理</strong>: システムは、データの整合性と一貫性を確保する確立された<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>を使用してビジネストランザクションを処理し、多くの場合、古いトランザクション管理アプローチを採用しています。</p>
+</li>
+<li>
+<p><strong>レポート生成</strong>: レガシーシステムは通常、事前定義された形式でレポートと出力を生成し、多くの場合、システムへの影響を最小限に抑えるためにオフピーク時間中に実行されるバッチプロセスとして行われます。</p>
+</li>
+<li>
+<p><strong>ユーザーインターフェースの相互作用</strong>: ユーザーは、端末エミュレータ、文字ベースの画面、または初期のグラフィカル<a data-lb="1" href="/ja/glossary/UI/" title="ユーザーインターフェース(UI)の定義、種類、デザイン原則、実用的なユースケースを解説します。アプリからAIチャットボットまで、UIが人間とデジタルの相互作用をどのように促進するかを学びましょう。">ユーザーインターフェース</a>を含む確立されたインターフェースを通じてシステムと対話します。</p>
+</li>
+<li>
+<p><strong>システム統合</strong>: レガシーシステムは、ファイル転送、データベース接続、またはカスタム<a data-lb="1" href="/ja/glossary/APIs/" title="API(アプリケーション・プログラミング・インターフェース)を詳しく解説:定義、仕組み、種類(REST、SOAP)、実例、メリット、セキュリティ、ベストプラクティスを網羅した総合ガイドです。">API</a>を含む可能性のある確立された統合ポイントを通じて他のアプリケーションと通信します。</p>
+</li>
+<li>
+<p><strong>バックアップとリカバリ</strong>: <a data-lb="1" href="/ja/glossary/Encryption-at-Rest/" title="保存データの暗号化に関する包括的なガイド - 暗号化手法によるストレージデータの保護、実装戦略、セキュリティのベストプラクティスについて解説します。">データ保護</a>は、テープバックアップ、データベースダンプ、またはその他の従来のバックアップ方法を含む可能性のある確立された手順に従います。</p>
+</li>
+</ol>
+<p><strong>ワークフローの例</strong>: 銀行のレガシーシステムは、夜間にバッチファイルを受信し、メインフレームデータベースに対してアカウント情報を検証し、利息計算と手数料評価のビジネスルールを実行し、顧客記録を更新し、支店業務のための日次レポートを生成することによって、日次トランザクションを処理します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p>• <strong>実証済みの信頼性</strong>: レガシーシステムは、多くの場合、何年または何十年にもわたって正常に動作しており、大きな障害なく重要なビジネス運用を処理する際の安定性と信頼性を実証しています。</p>
+<p>• <strong>深いビジネス知識</strong>: これらのシステムには、重要な組織の知識と専門知識を表す、長年蓄積されたビジネスロジック、ルール、プロセスが含まれています。</p>
+<p>• <strong>高性能</strong>: 多くのレガシーシステムは特定のタスク用に設計されており、特に<a data-lb="1" href="/ja/glossary/Batch-Processing/" title="バッチ処理は、大量のデータを収集し、設定された期間ごとにグループ単位で処理するデータアプローチです。高スループットのAI、分析、ビジネスオペレーションに最適です。">バッチ処理</a><a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>において、大量のデータを非常に効率的に処理できます。</p>
+<p>• <strong>規制コンプライアンス</strong>: 確立されたレガシーシステムは、すでに業界固有の規制要件を満たしており、広範なコンプライアンステストと<a data-lb="1" href="/ja/glossary/Authentication/" title="デジタル環境およびアプリケーションにおける安全な本人確認のための認証システム、方法、ベストプラクティスに関する包括的なガイド。">認証</a>を受けている可能性があります。</p>
+<p>• <strong>ユーザーの習熟度</strong>: 従業員は多くの場合、レガシーシステムについて高度に訓練され経験を積んでおり、トレーニングコストと運用エラーを削減します。</p>
+<p>• <strong>コストの予測可能性</strong>: 成熟したレガシーシステムの運用コストは通常、十分に理解され予測可能であり、確立された保守手順とベンダー関係があります。</p>
+<p>• <strong>データの整合性</strong>: レガシーシステムには、長年の運用を通じて洗練された堅牢なデータ検証と整合性メカニズムがあることが多いです。</p>
+<p>• <strong>カスタマイズ</strong>: 多くのレガシーシステムは、特定の組織のニーズと<a data-lb="1" href="/ja/glossary/bottlenecks/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ビジネスプロセス</a>を満たすために広範にカスタマイズされています。</p>
+<p>• <strong>統合の安定性</strong>: 他のシステムとの既存の統合は、時間をかけてテストされ実証されており、安定したデータ交換メカニズムを提供します。</p>
+<p>• <strong>リスク軽減</strong>: 既知のシステムを引き続き運用することは、大規模なシステム置き換えプロジェクトを実施するよりも低いリスクを提示する可能性があります。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p>• <strong>銀行の基幹システム</strong>: システムの信頼性とデータの正確性が最も重要な金融機関における顧客アカウント、トランザクション、ローン、規制報告の処理。</p>
+<p>• <strong>医療情報システム</strong>: 患者ケアにとってシステムの可用性が重要な病院や医療機関における患者記録、請求、臨床データの管理。</p>
+<p>• <strong>政府行政</strong>: 複雑な要件を持つ政府機関における市民サービス、税務処理、給付管理、規制コンプライアンスのサポート。</p>
+<p>• <strong>製造リソース計画</strong>: 確立されたワークフローを持つ製造環境における生産プロセス、<a data-lb="1" href="/ja/glossary/Retail-Demand-Forecasting/" title="正確な在庫計画と販売予測のための小売需要予測手法、テクノロジー、ベストプラクティスに関する包括的なガイド。">在庫管理</a>、サプライチェーン運用の制御。</p>
+<p>• <strong>保険契約管理</strong>: 複雑なビジネスルールを持つ保険会社における請求処理、引受、契約管理、保険数理計算の処理。</p>
+<p>• <strong>通信請求</strong>: 通信会社における顧客アカウント、使用状況追跡、請求計算、ネットワークリソース割り当ての管理。</p>
+<p>• <strong>航空予約システム</strong>: 航空業界の運用におけるフライト予約、乗客管理、乗務員スケジューリング、航空機メンテナンス追跡の処理。</p>
+<p>• <strong>公益事業管理</strong>: 公益事業会社におけるエネルギー配分、顧客請求、規制報告、インフラ管理の監視。</p>
+<p>• <strong>給与処理</strong>: 大規模組織における従業員報酬、福利厚生管理、税金計算、規制コンプライアンスの管理。</p>
+<p>• <strong>サプライチェーン管理</strong>: 複雑なサプライチェーンにおけるベンダー関係、調達プロセス、在庫追跡、物流運用の調整。</p>
+<h2 id="レガシーシステムと最新システムの比較">レガシーシステムと最新システムの比較</h2>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>レガシーシステム</th>
+<th>最新システム</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>アーキテクチャ</strong></td>
+<td>モノリシック、密結合コンポーネント</td>
+<td>マイクロサービス、疎結合、モジュラー設計</td>
+</tr>
+<tr>
+<td><strong>技術スタック</strong></td>
+<td>古い言語(COBOL、FORTRAN)、プロプライエタリプラットフォーム</td>
+<td>最新言語(Java、<a data-lb="1" href="/ja/glossary/Code-Block--Python-JS-/" title="コードブロックは、統一された実行のためにプログラミング文をグループ化したもので、Pythonではインデント、JavaScriptでは中括弧によって定義されます。自動化やチャットボットにおいて、カスタムロジックの実装に使用されます。">Python</a>、JavaScript)、オープン標準</td>
+</tr>
+<tr>
+<td><strong>ユーザーインターフェース</strong></td>
+<td>テキストベース端末、基本的なGUI</td>
+<td>Webベース、モバイル対応、直感的な設計</td>
+</tr>
+<tr>
+<td><strong>統合</strong></td>
+<td>ポイントツーポイント、ファイルベース、カスタムプロトコル</td>
+<td>API駆動、標準化されたプロトコル、クラウドネイティブ</td>
+</tr>
+<tr>
+<td><strong>スケーラビリティ</strong></td>
+<td>垂直スケーリング、ハードウェア依存</td>
+<td>水平スケーリング、クラウド弾力性、コンテナ化</td>
+</tr>
+<tr>
+<td><strong>保守</strong></td>
+<td>専門スキル、ベンダー依存、高コスト</td>
+<td>標準スキル、コミュニティサポート、自動化ツール</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p>• <strong>技術的負債の蓄積</strong>: 長年にわたるパッチ、回避策、迅速な修正により、保守と変更が困難になる、ますます複雑で脆弱なシステムアーキテクチャが生まれます。</p>
+<p>• <strong>スキル不足</strong>: 専門家が退職し、教育機関が最新技術に焦点を当てるにつれて、レガシー技術の専門知識を持つ開発者や管理者を見つけることがますます困難になります。</p>
+<p>• <strong>セキュリティの脆弱性</strong>: 古いシステムには最新のセキュリティ機能が欠けている可能性があり、定期的なセキュリティ更新を受けていない可能性があるため、サイバー脅威やデータ侵害への潜在的な露出が生じます。</p>
+<p>• <strong>統合の困難</strong>: レガシーシステムを最新のアプリケーションと接続するには、技術的なギャップを埋めるために複雑な<a data-lb="1" href="/ja/glossary/Middleware/" title="ミドルウェアの包括的ガイド - アプリケーション、サービス、システムを接続し、シームレスな通信と統合を実現するソフトウェア層について解説します。">ミドルウェア</a>ソリューションとカスタム開発作業が必要になることがよくあります。</p>
+<p>• <strong>スケーラビリティの制限</strong>: レガシーシステムは、最新のデータ量、ユーザー負荷、またはパフォーマンス要件を処理するように設計されていない可能性があり、ビジネスの成長と俊敏性を制限します。</p>
+<p>• <strong>コンプライアンスリスク</strong>: 進化する規制要件は、柔軟性と最新の監査機能を欠くレガシーシステムでは実装が困難な場合があります。</p>
+<p>• <strong>高い保守コスト</strong>: レガシーシステムのサポートには、多くの場合、高価な専門リソース、プロプライエタリ<a data-lb="1" href="/ja/glossary/Per-Seat-Pricing/" title="ソフトウェアにアクセスする各ユーザーまたは従業員ごとに固定料金を支払うソフトウェア価格設定モデルで、コストがチームの規模に応じて直接スケールします。">ソフトウェアライセンス</a>、老朽化したハードウェアコンポーネントが必要です。</p>
+<p>• <strong>柔軟性の制限</strong>: レガシーシステムに変更を加えることは時間がかかりリスクが高く、市場の変化やビジネス要件に迅速に対応する組織の能力を低下させます。</p>
+<p>• <strong>ベンダー依存性</strong>: サポートと保守のために特定のベンダーに依存することは、ベンダーが製品を廃止したりサポート条件を変更したりした場合にリスクを生み出す可能性があります。</p>
+<p>• <strong>データ移行の複雑さ</strong>: 最新のアプリケーションで使用するためにレガシーシステムからデータを抽出して変換することは、技術的に困難で時間がかかる場合があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p>• <strong>包括的な評価</strong>: 近代化の決定を下す前に、レガシーシステムの機能、依存関係、ビジネス価値の徹底的な分析を実施します。</p>
+<p>• <strong>リスク管理戦略</strong>: 移行期間中の潜在的なシステム障害、データ損失、ビジネス継続性に対処する詳細なリスク軽減計画を策定します。</p>
+<p>• <strong>段階的な近代化アプローチ</strong>: システムコンポーネントと機能を段階的に更新しながら、混乱を最小限に抑える段階的な近代化戦略を実装します。</p>
+<p>• <strong>文書化基準</strong>: 組織の知識を保存するために、レガシーシステムの機能、インターフェース、ビジネスルールの包括的な文書を作成し維持します。</p>
+<p>• <strong>統合レイヤーの開発</strong>: レガシーシステムが最新のアプリケーションやサービスと効果的に通信できるようにする堅牢なミドルウェアとAPIレイヤーを構築します。</p>
+<p>• <strong>セキュリティの強化</strong>: ネットワークセグメンテーション、<a data-lb="1" href="/ja/glossary/Authorization/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a>、監視機能を含む、レガシーシステム周辺の追加のセキュリティ対策を実装します。</p>
+<p>• <strong>バックアップとリカバリ手順</strong>: レガシーシステムの制限とリカバリ要件を考慮した包括的なデータ保護戦略を確立します。</p>
+<p>• <strong>スタッフトレーニングプログラム</strong>: 将来の移行のための最新技術スキルを開発しながら、レガシーシステムの保守について既存のスタッフをトレーニングすることに投資します。</p>
+<p>• <strong>ベンダー関係管理</strong>: レガシーシステムベンダーとの強力な関係を維持し、重要なシステムの延長サポートオプションを探ります。</p>
+<p>• <strong>パフォーマンス監視</strong>: レガシーシステムのパフォーマンス、可用性、容量使用率を追跡するための監視ツールと手順を実装します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p>• <strong>ストラングラーフィグパターン</strong>: 既存のシステムの周りに新しいサービスを構築し、レガシーシステムを廃止できるまで機能を徐々に移行することによって、レガシーシステムの機能を段階的に置き換えます。</p>
+<p>• <strong>APIラッピング</strong>: 既存の機能とデータを保持しながら、現代のアプリケーションとの統合を可能にするために、レガシーシステムの周りに最新のAPIインターフェースを作成します。</p>
+<p>• <strong>データ仮想化</strong>: 物理的なデータ移行を必要とせずに、レガシーと最新のデータソースへの統一されたアクセスを提供するデータ抽象化レイヤーを実装します。</p>
+<p>• <strong>コンテナ化戦略</strong>: 互換性を維持しながら、移植性、スケーラビリティ、デプロイメントの柔軟性を向上させるために、レガシーアプリケーションを<a data-lb="1" href="/ja/glossary/Containerization/" title="コンテナ化は、ソフトウェアコードと依存関係をポータブルで分離されたコンテナにパッケージ化し、開発環境からクラウドまで、あらゆる環境で一貫したアプリケーション実行を保証します。">コンテナ</a>にパッケージ化します。</p>
+<p>• <strong>イベント駆動アーキテクチャ</strong>: レガシーシステムを最新のアプリケーションから切り離し、リアルタイムのデータ同期を可能にするために、イベントストリーミングとメッセージングパターンを実装します。</p>
+<p>• <strong>機械学習統合</strong>: レガシーデータソースに最新の分析と<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>機能を適用して、追加のビジネス価値と洞察を抽出します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p>• <strong>クラウド移行戦略</strong>: 機能とパフォーマンスを維持しながら、レガシーシステムをクラウドプラットフォームに移行するための専門ツールと方法論の開発。</p>
+<p>• <strong>ローコード近代化</strong>: 最新の技術スタックとユーザーインターフェースでレガシーシステムの機能を再現するために特別に設計されたローコードプラットフォームの出現。</p>
+<p>• <strong>AI支援コード変換</strong>: ビジネスロジックを保持しながら、レガシーコードを最新のプログラミング言語に自動的に変換できる高度な<a data-lb="1" href="/ja/glossary/Autonomous-Systems/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>ツール。</p>
+<p>• <strong>ハイブリッドアーキテクチャパターン</strong>: パフォーマンス、コスト、機能を最適化するために、レガシーシステムと最新システムをシームレスにブレンドするアーキテクチャアプローチの進化。</p>
+<p>• <strong>自動レガシー分析</strong>: レガシーシステムを自動的に分析して、近代化の機会と移行戦略を特定できる高度なツールの開発。</p>
+<p>• <strong>量子対応準備</strong>: レガシーシステムのセキュリティに対する量子コンピューティングの影響と、量子耐性暗号化とセキュリティ対策の必要性の考慮。</p>
+<h2 id="参考文献">参考文献</h2>
+<p>• Brodie, M.L., &amp; Stonebraker, M. (1995). <em>Migrating Legacy Systems: Gateways, Interfaces &amp; the Incremental Approach</em>. Morgan Kaufmann Publishers.</p>
+<p>• Seacord, R.C., Plakosh, D., &amp; Lewis, G.A. (2003). <em>Modernizing Legacy Systems: Software Technologies, Engineering Processes, and Business Practices</em>. Addison-Wesley Professional.</p>
+<p>• Ulrich, W.M., &amp; Newcomb, P. (2010). <em>Information Systems Transformation: Architecture-Driven Modernization Case Studies</em>. Morgan Kaufmann Publishers.</p>
+<p>• IEEE Computer Society. (2017). “IEEE Standard for Software and System Engineering - Life Cycle Processes - Risk Management.” IEEE Std 16085-2006.</p>
+<p>• Gartner Research. (2023). “Magic Quadrant for Application Modernization and Integration Services.” Gartner Inc.</p>
+<p>• McKinsey &amp; Company. (2022). “The Art of Application Modernization: Lessons from Successful Digital Transformations.” McKinsey Digital.</p>
+<p>• Forrester Research. (2023). “The State of Application Modernization: Legacy System Challenges and Opportunities.” Forrester Inc.</p>
+<p>• Red Hat Inc. (2023). “Enterprise Application Modernization: Strategies for Legacy System Transformation.” Red Hat Technical Publications.</p>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Connector/">
+                    コネクター
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    テクノロジーシステムにおける<a data-lb="1" href="/ja/glossary/Connector/" title="テクノロジーシステムにおけるコネクターの包括的ガイド - シームレスな統合ソリューションのための種類、実装、メリット、ベストプラクティスを解説します。">コネクター</a>の包括的ガイド - シームレスな統合ソリューションのための種類、実装、メリット、ベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Connector/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Channel-Connector/">
+                    チャネルコネクター
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Channel-Connector/" title="チャネルコネクターの包括的ガイド - 異なるシステムやアプリケーション間のシームレスな統合を可能にするミドルウェアソリューション。">チャネルコネクター</a>の包括的ガイド - 異なるシステムやアプリケーション間のシームレスな統合を可能にするミドルウェアソリューション。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Channel-Connector/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Data-Connector/">
+                    データコネクタ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Data-Connector/" title="データコネクタの包括的ガイド:モダンアーキテクチャにおいて、システム、アプリケーション、プラットフォーム間のシームレスなデータフローを実現する統合ツールについて解説します。">データコネクタ</a>の包括的ガイド:モダンアーキテクチャにおいて、システム、アプリケーション、プラットフォーム間のシームレスなデータフローを実現する統合ツールについて解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Data-Connector/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Pre-Built-Connector/">
+                    プレビルトコネクタ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    カスタム開発を必要とせず、異なるアプリケーションやシステム間のシームレスな統合を可能にする、すぐに使えるソフトウェアコンポーネントです。<a data-lb="1" href="/ja/glossary/Pre-Built-Connector/" title="カスタム開発を必要とせず、異なるアプリケーションやシステム間のシームレスな統合を可能にする、すぐに使えるソフトウェアコンポーネントです。プレビルトコネクタは、事前設定されたマッピング、認証、データ変換機能を提供し、組織が広範なコーディングではなく直感的なインターフェースを通じて、プラットフォームを迅速に接続できるようにします。">プレビルトコネクタ</a>は、事前設定されたマッピング、認証、データ変換...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Pre-Built-Connector/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Easy-Implementation/">
+                    簡単な実装
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Easy-Implementation/" title="簡単な実装とは、シンプルさとスピードを優先したソフトウェアの開発・導入アプローチであり、デプロイを迅速化し、ユーザーが採用・習得しやすくすることを目的としています。">簡単な実装</a>とは、シンプルさとスピードを優先したソフトウェアの開発・導入アプローチであり、デプロイを迅速化し、ユーザーが採用・習得しやすくすることを目的としています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Easy-Implementation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Webhook-Trigger/">
+                    Webhookトリガー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。<a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">AIチャットボット</a>、自動化、システム統合に不可欠な機能です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Webhook-Trigger/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/legacy-system/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

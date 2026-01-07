@@ -23,7 +23,7 @@ Moreover, cutting-edge research has developed "[unsupervised consistency evaluat
 
 In the 2025 paper "Evaluating [LLMs](/en/glossary/large-language-models/) Without [Oracle Feedback](/en/glossary/oracle-feedback---ground-truth-labels-/)," researchers calculate the CAI ratio by analyzing the consistency and inconsistency between [student models](/en/glossary/student-models/) and [LLM](/en/glossary/Temperature--LLM-/) outputs. Models with higher agreement rates show strong correlation with traditional metrics like accuracy, proving useful as a heuristic for model selection.
 
-However, since this metric remains in the research phase and isn't yet standardized across all tasks, it should be understood as a "supplementary indicator."
+However, since this metric remains in the research phase and isn't yet standardized across all tasks, it should be understood as a "[supplementary indicator](/en/glossary/supplementary-indicator/)."
 
 ## Hallucination Problem: The Causes of AI "Lies" and Countermeasures
 
@@ -55,7 +55,7 @@ Evaluating Japanese AI models presents language-specific complexities. Honorific
 |---|---|---|
 | ** [JMMLU](https://github.com/nlp-waseda/JMMLU)** | Multi-domain knowledge questions | Factual knowledge and reasoning ability |
 | ** [JGLUE](https://github.com/yahoojapan/JGLUE)** | NLP task collection | Contextual comprehension and logical thinking |
-| ** [JamC-QA](https://huggingface.co/datasets/sbintuitions/jamc-qa)** | Japan-culture specialized | Japan-specific common sense and cultural knowledge |
+| ** [JamC-QA](https://huggingface.co/datasets/sbintuitions/[jamc-qa](/en/glossary/JamC-QA/))** | Japan-culture specialized | Japan-specific common sense and cultural knowledge |
 | ** [Nejumi Leaderboard4](https://wandb.ai/wandb-japan/llm-leaderboard)** | Comprehensive evaluation environment | Multi-faceted performance comparison |
 
 ### Trends in International Comparison
@@ -96,7 +96,7 @@ Effective AI utilization requires careful design and evaluation of [prompts](/en
 
 ## JamC-QA: Innovative Benchmark for Measuring Japan-Specific Cultural Knowledge
 
-** [JamC-QA](https://huggingface.co/datasets/sbintuitions/jamc-qa)** is a revolutionary tool for evaluating genuine "Japaneseness"—something translation-based benchmarks cannot measure.
+** [JamC-QA](https://huggingface.co/datasets/sbintuitions/[jamc-qa](/en/glossary/JamC-QA/))** is a revolutionary tool for evaluating genuine "Japaneseness"—something translation-based benchmarks cannot measure.
 
 ### Characteristics and Design Purpose
 
@@ -107,7 +107,7 @@ Effective AI utilization requires careful design and evaluation of [prompts](/en
 ### Evaluation Result Trends
 
 **Global Models vs. Japanese-Specialized Models**
-- Overseas models like [GPT](/en/glossary/GPT/)-5 and Llama-3: Significant score drops on JamC-QA
+- Overseas models like [GPT](/en/glossary/GPT/)-5 and Llama-3: Significant score drops on [JamC-QA](/en/glossary/JamC-QA/)
 - Japanese-specialized models: Better suited for culture-specific questions
 - Clear score differences enable objective model selection criteria
 
@@ -138,11 +138,11 @@ A: Yes. Using no-code AI building tools like [FlowHunt](/en/glossary/FlowHunt/),
 
 ## Real-World Case Study: Advanced Methods Adopted by SmartWeb's AI Chatbot
 
-How are the LLM evaluation techniques and [hallucination mitigation strategies](/en/glossary/hallucination-mitigation-strategies/) discussed in this article applied in actual business settings? SmartWeb's [AI chatbot](/en/glossary/AI-chatbot/) service exemplifies a practical combination of these cutting-edge technologies.
+How are the LLM evaluation techniques and [hallucination mitigation strategies](/en/glossary/hallucination-mitigation-strategies/) discussed in this article applied in actual business settings? SmartWeb's [AI [chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-[chatbot](/en/glossary/Chatbot/)/) service exemplifies a practical combination of these cutting-edge technologies.
 
 ### Utilizing High-Quality LLMs
 
-SmartWeb's [AI chatbot](/en/glossary/AI-chatbot/) employs industry-leading LLMs including ** [OpenAI](https://openai.com/gpt-5/)**'s latest GPT-5 model, ** [Google](https://deepmind.google/models/gemini/)**'s [Gemini](/en/glossary/Gemini/) 2.5 Pro, and ** [Anthropic](https://www.anthropic.com/claude)**'s Claude Sonnet 4. These models have demonstrated high performance across the various benchmarks introduced in this article.
+SmartWeb's [AI [chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-chatbot/) employs industry-leading LLMs including ** [OpenAI](https://openai.com/gpt-5/)**'s latest GPT-5 model, ** [Google](https://deepmind.google/models/gemini/)**'s [Gemini](/en/glossary/Gemini/) 2.5 Pro, and ** [Anthropic](https://www.anthropic.com/[claude](/en/glossary/Claude/))**'s [Claude](/en/glossary/Claude/) Sonnet 4. These models have demonstrated high performance across the various benchmarks introduced in this article.
 
 ### Practical Countermeasures Against Hallucination Problems
 

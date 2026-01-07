@@ -256,15 +256,11 @@
                             {{ range $featureIndex, $feature := $category.features }}
                                 <tr>
                                     <th scope="row" class="not-prose py-4 text-sm/6 font-normal text-heading">
-                                        {{ if $feature.tooltip }}
-                                            {{ partial "components/tooltip/tooltip.html" (dict "content" (i18n $feature.name) "text" (i18n $feature.tooltip)) }}
-                                        {{ else }}
-                                            {{ i18n $feature.name }}
-                                        {{ end }}
-                                        <div class="max-lg:hidden absolute inset-x-8 mt-4 h-px bg-gray-900/5"></div>
+                                        {{ i18n $feature.name }}
                                     </th>
-
                                     {{ range $tierIndex, $tier := $tiersComparison }}
+                                        <td class="py-4 px-6 xl:px-8">
+                                            {{ $value := index $feature.tiersComparison $tier.name }}
                                         {{ $tierValue := "" }}
                                         {{ $promoKey := printf "%sPromo" $tier.name }}
                                         {{ $promoValue := "" }}

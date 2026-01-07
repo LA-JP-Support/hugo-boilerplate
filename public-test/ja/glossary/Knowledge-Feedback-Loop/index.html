@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ナレッジフィードバックループ | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Feedback-Loop/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="ナレッジフィードバックループの包括的ガイド - 反復的なデータ収集、分析、改善プロセスを通じて向上する継続的学習システムについて解説します。" name="description"/>
+<meta content="ナレッジフィードバックループ, 継続的学習, 反復的改善, ナレッジマネジメント, 組織学習" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Feedback-Loop/" property="og:url"/>
+<meta content="ナレッジフィードバックループ | SmartWeb" property="og:title"/>
+<meta content="ナレッジフィードバックループの包括的ガイド - 反復的なデータ収集、分析、改善プロセスを通じて向上する継続的学習システムについて解説します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Feedback-Loop/" name="twitter:url"/>
+<meta content="ナレッジフィードバックループ | SmartWeb" name="twitter:title"/>
+<meta content="ナレッジフィードバックループの包括的ガイド - 反復的なデータ収集、分析、改善プロセスを通じて向上する継続的学習システムについて解説します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ナレッジフィードバックループ</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ナレッジフィードバックループ
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Knowledge Feedback Loop
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ナレッジフィードバックループの包括的ガイド - 反復的なデータ収集、分析、改善プロセスを通じて向上する継続的学習システムについて解説します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ナレッジフィードバックループ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                継続的学習
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                反復的改善
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ナレッジマネジメント
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                組織学習
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ナレッジフィードバックループとは">ナレッジフィードバックループとは</h2>
+<p><a data-lb="1" href="/ja/glossary/Knowledge-Feedback-Loop/" title="ナレッジフィードバックループの包括的ガイド - 反復的なデータ収集、分析、改善プロセスを通じて向上する継続的学習システムについて解説します。">ナレッジフィードバックループ</a>とは、情報、洞察、学習成果を継続的に収集、分析し、システムに還元することで、将来のパフォーマンスと意思決定を改善する体系的なプロセスを表します。この循環的なメカニズムは適応学習システムの基盤を形成し、組織、個人、技術プラットフォームが反復的な改善を通じて進化し、知識ベースを最適化することを可能にします。この概念はサイバネティクスとシステム理論に由来しており、フィードバックメカニズムが自己修正と改善の主要な推進力として機能します。</p>
+<p>ナレッジフィードバックループの根底にある基本原理は、経験を実行可能なインテリジェンスに変換することです。行動が取られたり意思決定が行われたりすると、その結果として生成されるデータを捕捉、処理、分析して、意味のあるパターンと洞察を抽出できます。これらの洞察は知識ベースに統合され、将来の行動と意思決定に影響を与えます。これにより、学習と適応の継続的なサイクルが生まれ、システムがより多くのデータポイントを蓄積し、因果関係についてより微妙な理解を深めるにつれて、時間とともにますます洗練されていきます。</p>
+<p>ナレッジフィードバックループは、個人の学習プロセスから企業全体の<a data-lb="1" href="/ja/glossary/Knowledge-Maintenance/" title="組織のナレッジマネジメントシステムにおけるナレッジメンテナンスのプロセス、戦略、ベストプラクティスに関する包括的なガイド。">ナレッジマネジメント</a>イニシアチブまで、組織やシステム内の複数のレベルで機能します。これらは正式または非公式、自動または手動であり、人間の認知、人工知能、またはハイブリッドアプローチを含む場合があります。これらのループの有効性は、データ収集メカニズムの品質、分析ツールの洗練度、フィードバック統合の速度、変化と学習に対する組織文化の受容性など、いくつかの重要な要因に依存します。現代の実装では、<a data-lb="1" href="/ja/glossary/Ensemble-Learning/" title="機械学習における予測精度向上のためのアンサンブル学習手法、アルゴリズム、および応用に関する包括的ガイド。">機械学習アルゴリズム</a>、<a data-lb="1" href="/ja/glossary/Business-Intelligence--BI-/" title="ビジネスインテリジェンス（BI）システム、テクノロジー、実装戦略、およびデータドリブンな意思決定のためのベストプラクティスに関する包括的なガイド。">データ分析</a>プラットフォーム、自動監視システムなどの高度な技術を活用して、フィードバックプロセスの速度と精度を向上させることがよくあります。</p>
+<h2 id="コアナレッジマネジメントコンポーネント">コアナレッジマネジメントコンポーネント</h2>
+<p><strong>ナレッジキャプチャシステム</strong>は、組織内のさまざまなソースから情報、経験、洞察を体系的に収集し文書化することを含みます。これらのシステムは、構造化データベース、非<a data-lb="1" href="/ja/glossary/Structured-Content/" title="構造化コンテンツの包括的ガイド:定義、実装方法、メリット、および組織化されたデジタル情報システムのベストプラクティスを解説します。">構造化コンテンツ</a>リポジトリ、リアルタイムデータストリームを含む複数のチャネルを使用して、包括的なナレッジ取得を保証します。</p>
+<p><strong>分析・処理エンジン</strong>は、統計分析、パターン認識、トレンド識別を通じて生データを実行可能な洞察に変換します。これらのコンポーネントは、高度なアルゴリズムと分析フレームワークを利用して、複雑なデータセットから意味のあるパターンを抽出し、改善のための推奨事項を生成します。</p>
+<p><strong>フィードバック統合メカニズム</strong>は、処理された洞察が運用プロセスと意思決定フレームワークに効果的に組み込まれることを保証します。これらのメカニズムには、自動ルール更新、推奨システム、ナレッジ転送を促進する構造化されたコミュニケーションチャネルが含まれます。</p>
+<p><strong>パフォーマンス監視システム</strong>は、実装された変更の有効性を継続的に追跡し、フィードバック統合がシステム全体のパフォーマンスに与える影響を測定します。これらのシステムは、主要業績評価指標へのリアルタイムの可視性を提供し、さらなる最適化が必要な領域の迅速な識別を可能にします。</p>
+<p><strong>ナレッジ検証フレームワーク</strong>は、フィードバックループへの統合前に、捕捉されたナレッジの正確性と信頼性を保証するための品質管理措置を確立します。これらのフレームワークには、ピアレビュープロセス、自動検証チェック、専門家検証システムが含まれます。</p>
+<p><strong>適応学習アルゴリズム</strong>は、蓄積されたナレッジと変化する環境条件に基づいて、システムが自動的に動作を調整できるようにします。これらのアルゴリズムは、反復学習サイクルを通じて意思決定プロセスを継続的に改善し、パフォーマンスを最適化します。</p>
+<p><strong>ステークホルダーエンゲージメントプラットフォーム</strong>は、フィードバックループのさまざまな参加者間のコラボレーションとナレッジ共有を促進し、多様な<a data-lb="1" href="/ja/glossary/POV--Point-of-View-/" title="物語が語られる際の語り手の視点であり、読者が何を見て何を体験するかを決定します。POVは情報がどのように明かされるかを形作り、物語への感情的なつながりに影響を与えます。">視点</a>と専門知識が学習プロセスに組み込まれることを保証します。</p>
+<h2 id="ナレッジフィードバックループの仕組み">ナレッジフィードバックループの仕組み</h2>
+<p>ナレッジフィードバックループは、<strong>データ収集</strong>から始まる体系的なワークフローを通じて機能します。ここでは、ユーザーインタラクション、システム<a data-lb="1" href="/ja/glossary/Model-Evaluation/" title="機械学習モデルのパフォーマンスと信頼性を評価するためのモデル評価技術、メトリクス、ベストプラクティスに関する包括的なガイド。">パフォーマンスメトリクス</a>、環境センサー、ステークホルダーフィードバックを含む複数のソースから関連情報が収集されます。このフェーズでは、自動ログ記録、調査、インタビュー、観察研究などのさまざまな収集方法を使用して、包括的なデータキャプチャを保証します。</p>
+<p><strong>データ処理と分析</strong>が続き、収集された情報はクリーニング、正規化、分析処理を経て、パターン、トレンド、異常を識別します。高度な統計手法、<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>アルゴリズム、ドメイン専門知識が適用され、生データから意味のある洞察を抽出します。</p>
+<p><strong>洞察生成</strong>は、解釈、文脈化、統合を通じて、処理されたデータを実行可能なナレッジに変換します。主題専門家と分析ツールが協力して、推奨事項を開発し、改善機会を特定し、戦略的洞察を策定します。</p>
+<p><strong>ナレッジ統合</strong>は、生成された洞察を既存の<a data-lb="1" href="/ja/glossary/Entity-Linking/" title="エンティティリンキングは、テキストから抽出されたエンティティをナレッジベース内の一意のエントリに接続し、曖昧性を解決することで、AI、検索、レコメンデーションのための構造化データを実現します。">ナレッジベース</a>に組み込み、運用手順を更新し、意思決定フレームワークを修正することを含みます。このステップは、新しい学習が組織の記憶の一部となり、将来の行動に影響を与えることを保証します。</p>
+<p><strong>実装とアクション</strong>は、更新されたプロセス、修正された行動、強化された意思決定アプローチを通じて、統合されたナレッジを実践に移します。このフェーズには、トレーニングプログラム、システム更新、手順変更が含まれる場合があります。</p>
+<p><strong>パフォーマンス監視</strong>は、実装された変更の有効性を追跡し、望ましい結果への影響を測定します。主要業績評価指標は、フィードバック統合の成功を評価するために継続的に監視されます。</p>
+<p><strong>評価と改善</strong>は、実装された変更の結果を分析し、さらなる改善が必要な領域を特定します。このステップでは、追加のデータ収集、改善された分析方法、または修正された統合アプローチの必要性が明らかになる場合があります。</p>
+<p><strong>サイクルの継続</strong>は、フィードバックループが変化する条件に対してアクティブで応答性を保つことを保証します。プロセスはデータ収集フェーズに戻り、以前の反復から学んだ教訓を組み込みます。</p>
+<p><strong>ワークフローの例</strong>:<a data-lb="1" href="/ja/glossary/Support-Team-Structure/" title="カスタマーサービススタッフを役割とチームに編成する組織システムで、誰がどの問題を処理するか、リクエストが組織内をどのように移動するかを定義し、迅速かつ効果的な問題解決を実現します。">カスタマーサービス組織</a>は、顧客インタラクションデータを収集し、苦情パターンを分析し、サービス改善機会を特定し、トレーニング資料を更新し、新しい手順を実装し、<a data-lb="1" href="/ja/glossary/Service-Recovery/" title="サービスリカバリー:問題が発生した後、企業がサービスの問題を修正し、顧客満足度を回復するために取る行動。ネガティブな体験をロイヤルティを構築する機会に変えるプロセスです。">顧客満足度</a>スコアを監視し、変更の有効性を評価し、継続的なフィードバックに基づいてアプローチを継続的に改善することで、ナレッジフィードバックループを実装します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>意思決定品質の向上</strong>は、経験的ナレッジの継続的な蓄積と統合から生じ、履歴データと実証された結果に基づいて、より情報に基づいた効果的な選択を可能にします。</p>
+<p><strong>学習曲線の加速</strong>は、組織や個人が以前の経験を迅速に活用し、ミスの繰り返しを避けることができるため、新しい領域で熟練度を達成するために必要な時間を大幅に短縮します。</p>
+<p><strong>運用効率の向上</strong>は、非効率的なプロセスの識別と排除、<a data-lb="1" href="/ja/glossary/Support-Capacity-Planning/" title="サポート容量計画とは、カスタマーサポートのニーズを予測し、サービス品質目標を達成しながら効率的に対応するためのスタッフとリソースを配分するプロセスです。">リソース配分</a>の最適化、パフォーマンスフィードバックに基づく<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>の合理化を通じて実現されます。</p>
+<p><strong>イノベーション能力の向上</strong>は、フィードバックループが新しい機会を明らかにし、新たなトレンドを強調し、既存の課題に対する創造的なソリューションと新しいアプローチを刺激する洞察を提供することで発展します。</p>
+<p><strong>リスク軽減と予防</strong>は、潜在的な問題の早期識別、履歴パターンに基づく予防措置の開発、リスク管理戦略の継続的な改善を通じて、より効果的になります。</p>
+<p><strong>適応性とレジリエンスの向上</strong>は、組織が蓄積されたナレッジと実証された適応戦略を活用することで、変化する条件、市場動向、予期しない課題により効果的に対応できるようにします。</p>
+<p><strong>ステークホルダー満足度の向上</strong>は、ユーザーフィードバックとパフォーマンスデータに基づく製品、サービス、プロセスの継続的な改善から生じ、ステークホルダーのニーズと期待とのより良い整合性につながります。</p>
+<p><strong>ナレッジの保存と転送</strong>は、貴重な洞察と専門知識が捕捉、文書化され、将来の使用のために利用可能になることを保証し、ナレッジの損失を防ぎ、<a data-lb="1" href="/ja/glossary/Knowledge-Sharing/" title="現代の職場における組織学習とコラボレーションのための、ナレッジシェアリングシステム、プロセス、ベストプラクティスに関する包括的なガイド。">組織学習</a>を促進します。</p>
+<p><strong>競争優位性の開発</strong>は、ナレッジフィードバックループを効果的に実装する組織が、優れた学習能力と市場条件へのより効果的な適応を通じて競合他社を上回ることができるため、発生します。</p>
+<p><strong>コスト削減とリソース最適化</strong>は、非効率性の識別、冗長な活動の排除、パフォーマンスデータとフィードバック分析に基づくリソース配分の最適化を通じて実現されます。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>カスタマーエクスペリエンスの最適化</strong>は、<a data-lb="1" href="/ja/glossary/Voice-of-Customer--VoC-/" title="顧客インサイトとフィードバックを収集するための、ボイス・オブ・カスタマー（VoC）プログラム、方法論、実装戦略に関する包括的なガイド。">顧客フィードバック</a>を収集し、インタラクションパターンを分析し、ユーザーの洞察と満足度メトリクスに基づいて製品とサービスを継続的に改善することを含みます。</p>
+<p><strong>製品開発とイノベーション</strong>は、市場フィードバック、ユーザーテスト結果、パフォーマンスデータを利用して、製品の機能、機能性、デザイン要素を反復的に改善します。</p>
+<p><strong>従業員トレーニングと開発</strong>は、パフォーマンス評価、<a data-lb="1" href="/ja/glossary/Skills-Gap-Analysis/" title="スキルギャップ分析の包括的ガイド:方法論、実装戦略、メリット、および人材育成のベストプラクティス。">スキルギャップ分析</a>、学習成果を活用して、トレーニングプログラムと専門能力開発イニシアチブを継続的に改善します。</p>
+<p><strong>品質管理システム</strong>は、製品品質を監視し、欠陥を識別し、製造プロセスと品質管理手順を継続的に改善するためのフィードバックループを実装します。</p>
+<p><strong>戦略計画と実行</strong>は、市場インテリジェンス、パフォーマンスメトリクス、ステークホルダーフィードバックを組み込んで、戦略的イニシアチブを改善し、実行の有効性を向上させます。</p>
+<p><strong>リスク管理とコンプライアンス</strong>は、インシデントレポート、監査結果、規制フィードバックを使用して、リスク軽減戦略とコンプライアンスフレームワークを継続的に強化します。</p>
+<p><strong>サプライチェーンの最適化</strong>は、サプライヤーパフォーマンスデータ、物流メトリクス、コスト分析を使用して、サプライチェーンの効率性と信頼性を継続的に改善します。</p>
+<p><strong>医療品質改善</strong>は、患者の転帰、治療効果データ、臨床フィードバックを利用して、ケアプロトコルと医療手順を強化します。</p>
+<p><strong>教育プログラムの強化</strong>は、学生のパフォーマンスデータ、学習分析、インストラクターフィードバックを活用して、カリキュラム設計と教育方法論を継続的に改善します。</p>
+<p><strong>技術システムの最適化</strong>は、監視データ、ユーザーフィードバック、パフォーマンスメトリクスを実装して、システムの信頼性、セキュリティ、<a data-lb="1" href="/ja/glossary/UX/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">ユーザーエクスペリエンス</a>を継続的に強化します。</p>
+<h2 id="ナレッジフィードバックループ成熟度比較">ナレッジフィードバックループ成熟度比較</h2>
+<table>
+<thead>
+<tr>
+<th>成熟度レベル</th>
+<th>データ収集</th>
+<th>分析能力</th>
+<th>統合速度</th>
+<th>自動化レベル</th>
+<th>影響測定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>基本</strong></td>
+<td>手動、散発的</td>
+<td>シンプルなレポート</td>
+<td>数週間から数ヶ月</td>
+<td>最小限</td>
+<td>逸話的</td>
+</tr>
+<tr>
+<td><strong>発展中</strong></td>
+<td>構造化、定期的</td>
+<td>統計分析</td>
+<td>数日から数週間</td>
+<td>部分的</td>
+<td>基本メトリクス</td>
+</tr>
+<tr>
+<td><strong>中級</strong></td>
+<td>自動化、包括的</td>
+<td>高度な分析</td>
+<td>数時間から数日</td>
+<td>中程度</td>
+<td>KPI追跡</td>
+</tr>
+<tr>
+<td><strong>上級</strong></td>
+<td>リアルタイム、マルチソース</td>
+<td>予測モデリング</td>
+<td>数分から数時間</td>
+<td>高い</td>
+<td>ROI分析</td>
+</tr>
+<tr>
+<td><strong>最適化</strong></td>
+<td>インテリジェント、適応的</td>
+<td>AI駆動の洞察</td>
+<td>リアルタイム</td>
+<td>完全自動化</td>
+<td>予測的影響</td>
+</tr>
+<tr>
+<td><strong>変革的</strong></td>
+<td>エコシステム全体</td>
+<td>コグニティブコンピューティング</td>
+<td>瞬時</td>
+<td>自己進化</td>
+<td>戦略的価値</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>データ品質と信頼性の問題</strong>は、情報が不完全、不正確、または偏っている場合、フィードバックループの有効性に大きな影響を与え、欠陥のある洞察と潜在的に有害な意思決定につながる可能性があります。</p>
+<p><strong>情報過多と分析麻痺</strong>は、組織が適切な処理能力なしに過剰な量のデータを収集すると発生する可能性があり、意思決定の遅延と応答性の低下をもたらします。</p>
+<p><strong>変化に対する組織的抵抗</strong>は、特にステークホルダーが確立されたプロセスを修正したり、既存の仮定に挑戦したりすることに消極的な場合、フィードバック駆動の改善の実装を妨げる可能性があります。</p>
+<p><strong>技術統合の複雑さ</strong>は、組織の境界を越えてシームレスなフィードバックループを作成するために、異種のシステム、データベース、プラットフォームを接続しようとする際に重大な課題を提示します。</p>
+<p><strong>プライバシーとセキュリティの懸念</strong>は、機密情報を収集および処理する際に発生し、ナレッジ取得と<a data-lb="1" href="/ja/glossary/Encryption-at-Rest/" title="保存データの暗号化に関する包括的なガイド - 暗号化手法によるストレージデータの保護、実装戦略、セキュリティのベストプラクティスについて解説します。">データ保護</a>要件の間の慎重なバランスが必要です。</p>
+<p><strong>リソース配分とコスト管理</strong>の課題は、組織が効果的なフィードバックループシステムを確立し維持するために、多大な時間、資金、人員を投資しなければならない場合に発生します。</p>
+<p><strong>フィードバックループの遅延とタイミング</strong>の問題は、データ収集、分析、改善の実装の間に大きな遅延がある場合、有効性を低下させる可能性があります。</p>
+<p><strong>文化的およびコミュニケーションの障壁</strong>は、特にサイロ化された部門や階層構造を持つ組織において、効果的なナレッジ共有とフィードバック統合を妨げる可能性があります。</p>
+<p><strong>測定と評価の困難</strong>は、フィードバックループ実装の影響を定量化し、ステークホルダーに<a data-lb="1" href="/ja/glossary/ROI/" title="投資収益率(ROI)は、投資効率を定量化する財務指標です。AIチャットボットと自動化のROI計算方法、主要な構成要素、指標、実際の事例について学びましょう。">投資収益率</a>を示そうとする際に発生します。</p>
+<p><strong>スケーラビリティと持続可能性の懸念</strong>は、組織が成長し、フィードバックループシステムが増加する複雑さと変化する要件に適応しなければならない場合に明らかになります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>明確な目標と成功メトリクスの確立</strong>は、フィードバックループの実装と評価プロセスを導く具体的な目標、測定可能な成果、主要業績評価指標を定義することによって行います。</p>
+<p><strong>包括的なデータ収集戦略の設計</strong>は、<a data-lb="1" href="/ja/glossary/Data-Quality/" title="正確で完全、かつ信頼性の高いデータ資産を確保するための、データ品質管理、評価フレームワーク、ベストプラクティスに関する包括的なガイド。">データ品質</a>基準を維持し、プライバシー規制への準拠を保証しながら、複数のソースから関連情報を捕捉します。</p>
+<p><strong>堅牢な分析と処理能力の実装</strong>は、適切なツール、技術、方法論を使用して、収集されたデータから意味のある洞察を抽出し、実行可能な推奨事項を生成します。</p>
+<p><strong>効率的な統合とコミュニケーションチャネルの作成</strong>は、迅速なナレッジ転送を促進し、洞察がタイムリーでアクセス可能な形式で関連するステークホルダーに届くことを保証します。</p>
+<p><strong>学習志向の組織文化の育成</strong>は、実験を奨励し、失敗を学習の機会として受け入れ、ナレッジ共有と継続的改善イニシアチブを報酬します。</p>
+<p><strong>適切な技術インフラへの投資</strong>は、データ収集、分析、統合要件をサポートし、将来の成長と進化のためのスケーラビリティを提供します。</p>
+<p><strong>強力なガバナンスと品質管理フレームワークの開発</strong>は、データの正確性を保証し、システムの整合性を維持し、フィードバックループの運用と成果に対する監視を提供します。</p>
+<p><strong>適切なトレーニングとサポートの提供</strong>は、フィードバックループプロセスに関与するすべてのステークホルダーに対して行い、彼らが自分の役割を理解し、効果的に貢献するために必要なスキルを持っていることを保証します。</p>
+<p><strong>反復的改善プロセスの実装</strong>は、フィードバックループシステム自体を継続的に改善し、学んだ教訓を組み込み、変化する組織のニーズと環境条件に適応します。</p>
+<p><strong>定期的なレビューと評価手順の確立</strong>は、フィードバックループ実装の有効性を評価し、最適化と強化の機会を特定します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>機械学習統合</strong>は、洗練されたアルゴリズムを使用して、複雑なデータセットからパターンを自動的に識別し、結果を予測し、洞察を生成し、フィードバックループ操作の速度と<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">精度</a>を大幅に向上させます。</p>
+<p><strong>リアルタイム分析と処理</strong>は、入ってくるデータストリームの即時分析を可能にし、変化する条件への迅速な対応とほぼ瞬時のフィードバック統合を可能にします。</p>
+<p><strong>予測モデリングと予測</strong>は、履歴データと高度な統計手法を利用して将来のトレンドを予測し、問題が発生する前に潜在的な問題を特定し、<a data-lb="1" href="/ja/glossary/Wait-Time/" title="様々なシステムやアプリケーションにおける待機時間の概念、実装戦略、最適化技術に関する包括的なガイド。">システムパフォーマンス</a>を積極的に最適化します。</p>
+<p><strong>自然言語処理と感情分析</strong>は、顧客フィードバック、<a data-lb="1" href="/ja/glossary/Instagram/" title="Instagramは、写真と動画の共有に特化したビジュアル型ソーシャルメディアプラットフォームです。機能、ビジネスツール、インフルエンサーマーケティング、オーディエンス構築について学びましょう。">ソーシャルメディア</a>投稿、内部コミュニケーションを含む非構造化テキストデータから洞察を抽出し、意思決定のためのより豊かなコンテキストを提供します。</p>
+<p><strong>部門横断的統合とオーケストレーション</strong>は、さまざまな部門、システム、組織レベルにわたってフィードバックループを接続し、多様な視点と専門知識を活用する包括的な学習エコシステムを作成します。</p>
+<p><strong>適応アルゴリズム開発</strong>は、パフォーマンスフィードバックに基づいて動作を自動的に調整する自己修正システムを作成し、人間の介入なしに有効性を継続的に最適化します。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p><strong>人工知能とコグニティブコンピューティング</strong>は、ナレッジフィードバックループをますます強化し、人間の認知限界を超えるより洗練された分析、パターン認識、自動意思決定能力を可能にします。</p>
+<p><strong>モノのインターネットとセンサーネットワーク</strong>は、データ収集能力を拡大し、以前は監視と分析が困難だった物理環境、機器、プロセスからのリアルタイムの洞察を提供します。</p>
+<p><strong>ブロックチェーンと分散台帳技術</strong>は、データの出所と意思決定プロセスの不変の記録を提供することにより、ナレッジフィードバックループの<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>、透明性、信頼性を向上させます。</p>
+<p><strong>拡張現実と仮想現実の統合</strong>は、没入型フィードバック体験の新しい機会を創出し、体験学習環境を通じてより効果的なナレッジ転送とトレーニングを可能にします。</p>
+<p><strong>量子コンピューティングアプリケーション</strong>は、最終的にはるかに大きなデータセットとより複雑な分析モデルの処理を可能にし、ナレッジフィードバックループ実装の規模と洗練度を革命的に変えます。</p>
+<p><strong>エコシステム全体のコラボレーションプラットフォーム</strong>は、組織の境界を越えたナレッジ共有とフィードバック統合を促進し、すべての参加者に利益をもたらす業界全体の学習ネットワークを作成します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Senge, P. M. (2006). The Fifth Discipline: The Art and Practice of the Learning Organization. Doubleday Business.</p>
+</li>
+<li>
+<p>Nonaka, I., &amp; Takeuchi, H. (1995). The Knowledge-Creating Company: How Japanese Companies Create the Dynamics of Innovation. Oxford University Press.</p>
+</li>
+<li>
+<p>Argyris, C., &amp; Schön, D. A. (1996). Organizational Learning II: Theory, Method, and Practice. Addison-Wesley.</p>
+</li>
+<li>
+<p>Davenport, T. H., &amp; Prusak, L. (1998). Working Knowledge: How Organizations Manage What They Know. Harvard Business School Press.</p>
+</li>
+<li>
+<p>Wiener, N. (1948). Cybernetics: Or Control and Communication in the Animal and the Machine. MIT Press.</p>
+</li>
+<li>
+<p>Garvin, D. A. (1993). Building a Learning Organization. Harvard Business Review, 71(4), 78-91.</p>
+</li>
+<li>
+<p>Brown, J. S., &amp; Duguid, P. (2000). The Social Life of Information. Harvard Business School Press.</p>
+</li>
+<li>
+<p>Von Krogh, G., Ichijo, K., &amp; Nonaka, I. (2000). Enabling Knowledge Creation: How to Unlock the Mystery of Tacit Knowledge. Oxford University Press.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Reuse/">
+                    ナレッジの再利用
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Knowledge-Reuse/" title="ナレッジの再利用戦略、実装方法、組織学習と効率化のためのベストプラクティスに関する包括的なガイド。">ナレッジの再利用</a>戦略、実装方法、組織学習と効率化のためのベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Reuse/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Capture/">
+                    ナレッジキャプチャー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    組織学習と<a data-lb="1" href="/ja/glossary/Knowledge-Base-Software/" title="ナレッジベースソフトウェアの包括的ガイド:機能、メリット、導入戦略、および組織的なナレッジマネジメントのベストプラクティスを解説します。">ナレッジマネジメントシステム</a>のための、<a data-lb="1" href="/ja/glossary/Knowledge-Capture/" title="組織学習とナレッジマネジメントシステムのための、ナレッジキャプチャープロセス、方法論、ベストプラクティスに関する包括的なガイド。">ナレッジキャプチャー</a>プロセス、方法論、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Capture/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Sharing/">
+                    ナレッジシェアリング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    現代の職場における組織学習とコラボレーションのための、ナレッジシェアリングシステム、プロセス、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Sharing/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Transfer/">
+                    ナレッジトランスファー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    効果的な組織学習と情報共有のための、<a data-lb="1" href="/ja/glossary/Knowledge-Transfer/" title="効果的な組織学習と情報共有のための、ナレッジトランスファーのプロセス、方法論、ベストプラクティスに関する包括的なガイド。">ナレッジトランスファー</a>のプロセス、方法論、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Transfer/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Management/">
+                    ナレッジマネジメント
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    組織学習と<a data-lb="1" href="/ja/glossary/Knowledge-Silos/" title="ナレッジサイロの包括的ガイド:組織における情報障壁を打破するための原因、影響、解決策、ベストプラクティスを解説します。">情報共有</a>のためのナレッジマネジメントシステム、プロセス、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Management/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Maintenance/">
+                    ナレッジメンテナンス
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    組織のナレッジマネジメントシステムにおけるナレッジメンテナンスのプロセス、戦略、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Maintenance/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/knowledge-feedback-loop/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

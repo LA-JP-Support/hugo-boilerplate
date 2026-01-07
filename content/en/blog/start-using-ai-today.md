@@ -11,7 +11,7 @@ categories: ["Business"]
 ---
 In recent years, [AI implementation](/en/glossary/AI-implementation/) for small and medium-sized enterprises (SMEs) has gained attention as a realistic option for achieving [operational efficiency](/en/glossary/Operational-Efficiency/) and [digital transformation](/en/glossary/digital-transformation/).
 
-Many SMEs face challenges such as "not knowing who handled what" and "missing responses" that arise from individually managing diverse inquiry channels—email, phone, SNS, and chat. The key to fundamentally resolving this confusion lies in implementing [AI chatbots](/en/glossary/AI-chatbot/), [AI email auto-response generation](/en/glossary/AI-email-auto-response-generation/), and [ticket systems](/en/glossary/Ticket-System/).
+Many SMEs face challenges such as "not knowing who handled what" and "missing responses" that arise from individually managing diverse inquiry channels—email, phone, SNS, and chat. The key to fundamentally resolving this confusion lies in implementing [AI chatbots](/en/glossary/AI-[chatbot](/en/glossary/Chatbot/)/), [AI email auto-response generation](/en/glossary/AI-email-auto-response-generation/), and [ticket systems](/en/glossary/Ticket-System/).
 
 SmartWeb provides services combining the [LiveAgent](/en/glossary/LiveAgent/) [ticket](/en/glossary/ticket/) system used by over 40,000 companies worldwide with the " [FlowHunt](/en/glossary/FlowHunt/)" [automation platform](/en/glossary/automation-platform/) utilizing the latest AI technology. AI handles [customer support](/en/glossary/customer-support/) 24/7 automatically, creating response drafts for emails and inquiry forms. Staff simply review, modify, and send—eliminating the need to compose messages from scratch.
 
@@ -23,7 +23,7 @@ Thus, AI implementation for SMEs has become a powerful means of simultaneously a
 
 ## Three Core Functions SmartWeb Provides
 
-By implementing " [ticket](/en/glossary/ticket/) systems," "AI email auto-response generation," and "AI chatbots," SMEs can achieve high-quality [customer support](/en/glossary/customer-support/) previously available only to large enterprises. SmartWeb is chosen by many SMEs as an all-in-one service that even IT beginners can use with confidence.
+By implementing " [ticket](/en/glossary/ticket/) systems," "[AI email auto-response generation](/en/glossary/AI-email-auto-response-generation/)," and "AI chatbots," SMEs can achieve high-quality [customer support](/en/glossary/customer-support/) previously available only to large enterprises. SmartWeb is chosen by many SMEs as an all-in-one service that even IT beginners can use with confidence.
 
 ### Ticket System: Centralized Inquiry Management
 
@@ -34,14 +34,14 @@ A [ticket system](/en/glossary/Ticket-System/) is a mechanism that can centrally
 - **Multi-channel Centralization**: Manage inquiries from all channels on a single screen, eliminating response gaps
 - **Information Sharing and Quality Improvement**: Immediately access past interactions, enabling smooth handoffs when staff changes
 - **Automatic Recording and AI Utilization**: All interactions are automatically recorded and utilized as AI learning data
-- **Flexible Work from Anywhere**: Being [cloud-based](/en/glossary/cloud-based/), responses are possible from remote work locations, on the go, or via smartphone
+- **Flexible Work from Anywhere**: Being [cloud-based](/en/glossary/[cloud-based](/en/glossary/cloud-based/)/), responses are possible from remote work locations, on the go, or via smartphone
 - ** [Business Automation](/en/glossary/Business-Automation/)**: Significantly reduce [response time](/en/glossary/Response-Time/) through automatic replies with standard templates for common questions and automatic assignment to staff
 
 ### AI Email Auto-Response Generation: Dramatically Reduce Staff Burden
 
 [AI email auto-response generation](/en/glossary/AI-email-auto-response-generation/) is a feature where AI automatically creates response drafts for questions from emails, inquiry forms, and SNS, presenting them to staff. Employees no longer need to compose messages from scratch, significantly reducing work time.
 
-**AI Email Auto-Response Generation Process:**
+**[AI Email Auto-Response Generation](/en/glossary/AI-email-auto-response-generation/) Process:**
 
 **❶ Receive Email or Inquiry Form**
 Following [automation rules](/en/glossary/automation-rules/) configured in [LiveAgent](/en/glossary/LiveAgent/), AI retrieves the full email text. At this stage, [spam filtering](/en/glossary/spam-filtering/) automatically executes for not only general spam but also sales emails. Since response drafts aren't created for unnecessary emails, staff's wasted work is reduced.
@@ -65,7 +65,7 @@ If needed, use the [AI answer assistant](/en/glossary/AI-answer-assistant/) to r
 
 ### AI Chatbot: 24/7 Automated Response
 
-An [AI chatbot](/en/glossary/AI-chatbot/) is a system where AI handles [customer support](/en/glossary/customer-support/) automatically 24/7. It responds immediately even outside business hours, late at night, or on holidays, significantly improving customer satisfaction.
+An [AI [chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-[chatbot](/en/glossary/Chatbot/)/) is a system where AI handles [customer support](/en/glossary/customer-support/) automatically 24/7. It responds immediately even outside business hours, late at night, or on holidays, significantly improving customer satisfaction.
 
 **Key Benefits:**
 
@@ -95,7 +95,7 @@ SmartWeb's pricing plans focus on lowering the "cost" hurdle that SMEs worry abo
 ### Flexible Plan Design
 
 - **Small Start Possible**: A mechanism allowing you to start with minimal functions and gradually add options and users as needed
-- **Starting from ¥30,000/Month**: Even including AI email auto-response generation, AI chatbots, and multi-channel ticket systems, you can start from ¥30,000/month
+- **Starting from ¥30,000/Month**: Even including [AI email auto-response generation](/en/glossary/AI-email-auto-response-generation/), AI chatbots, and multi-channel ticket systems, you can start from ¥30,000/month
 - **Managed as Variable Costs**: Add staff or functions temporarily only during busy periods—incur costs only when needed
 
 ### Free Consultation for Optimal Plan Proposals
@@ -104,7 +104,7 @@ Even concerns like "worried about costs" or "anxious about operations without IT
 
 ## Summary: Improve Customer Satisfaction Through AI Implementation
 
-SmartWeb is a [cloud service](/en/glossary/cloud-service/) combining a "ticket system" that can centrally manage diverse inquiry channels, "AI email auto-response generation" that streamlines email handling, and an "AI chatbot" capable of 24/7 automated response.
+SmartWeb is a [cloud service](/en/glossary/cloud-service/) combining a "ticket system" that can centrally manage diverse inquiry channels, "[AI email auto-response generation](/en/glossary/AI-email-auto-response-generation/)" that streamlines email handling, and an "[AI chatbot](/en/glossary/AI-chatbot/)" capable of 24/7 automated response.
 
 Through spam filtering functionality that automatically identifies unnecessary emails like sales messages, staff can focus only on truly necessary inquiries. Even without specialized knowledge, anyone who can use email can start immediately, enabling SMEs to achieve customer support on par with large enterprises.
 

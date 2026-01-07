@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Ernie-Bot | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Ernie-Bot/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="高度な推論、画像認識、コード生成機能を備え、中国語で理解し応答するBaiduのAIアシスタント。" name="description"/>
+<meta content="Ernie-Bot, Baidu AI, 中国語言語モデル, 対話型AI, 自然言語処理" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Ernie-Bot/" property="og:url"/>
+<meta content="Ernie-Bot | SmartWeb" property="og:title"/>
+<meta content="高度な推論、画像認識、コード生成機能を備え、中国語で理解し応答するBaiduのAIアシスタント。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Ernie-Bot/" name="twitter:url"/>
+<meta content="Ernie-Bot | SmartWeb" name="twitter:title"/>
+<meta content="高度な推論、画像認識、コード生成機能を備え、中国語で理解し応答するBaiduのAIアシスタント。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Ernie-Bot</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Ernie-Bot
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Ernie-Bot
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          高度な推論、画像認識、コード生成機能を備え、中国語で理解し応答するBaiduのAIアシスタント。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Ernie-Bot
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Baidu AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                中国語言語モデル
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                対話型AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                自然言語処理
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ernie-botとは何か">Ernie-Botとは何か?</h2>
+<p>Ernie-Botは、Enhanced Representation through kNowledge IntEgration(ERNIE)フレームワークに基づいて構築された、Baiduの主力対話型人工知能システムです。中国を代表する検索エンジン企業によって開発されたErnie-Botは、中国語AIの能力における重要な進歩を表しており、高度な自然言語理解、生成、推論能力を提供します。このシステムは、Baiduの広範なナレッジグラフ、検索機能、および<a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">自然言語処理</a>における長年の研究を活用し、世界中の中国語話者に対して文脈を認識した文化的に適切な応答を提供します。</p>
+<p><a data-lb="1" href="/ja/glossary/Ernie-Bot/" title="高度な推論、画像認識、コード生成機能を備え、中国語で理解し応答するBaiduのAIアシスタント。">Ernie-Bot</a>の基盤は、中国語の微妙なニュアンス、文化的文脈、地域的変化に特化して最適化された事前学習済み言語モデルアーキテクチャにあります。主に英語データセットで訓練された多くの欧米の<a data-lb="1" href="/ja/glossary/Generative-AI/" title="生成AIは、学習したパターンから、テキスト、画像、コードなどの新しいコンテンツを作成します。その定義、モデル(GAN、VAE、Transformer)、応用例、メリット、課題について解説します。">AIモデル</a>とは異なり、Ernie-Botは古典文学、現代出版物、技術文書、ウェブコンテンツを含む膨大な量の中国語テキストデータを組み込んでいます。この包括的な訓練アプローチにより、システムは中国語圏市場での効果的なコミュニケーションに不可欠な微妙な言語パターン、慣用表現、文化的参照を理解できます。</p>
+<p>Ernie-Botの能力は、単純なテキスト生成を超えて、マルチモーダルインタラクション、コード生成、数学的推論、創造的コンテンツ作成を含みます。このシステムは、画像を含むクエリを処理して応答し、視覚的コンテンツを生成し、プログラミングタスクを支援し、科学、技術、ビジネス、人文科学を含むさまざまな領域にわたって詳細な説明を提供できます。検索、地図、<a data-lb="1" href="/ja/glossary/Spot-Instances/" title="スポットインスタンスは、AWS、Azure、GCPが提供する割引価格のクラウドコンピューティングリソースで、バッチ処理、分析、機械学習トレーニングなどの耐障害性ワークロードに最適です。">クラウドコンピューティング</a>プラットフォームを含む<a data-lb="1" href="/ja/glossary/Baidu/" title="Baiduは中国最大の検索エンジンであり、人々がオンラインで情報を見つけることを支援しながら、自動運転や音声認識などの人工知能技術を開発する大手AI企業です。">Baidu</a>のサービスエコシステムとの統合により、複数の業界とユースケースにわたる機能強化と実世界のアプリケーション展開が可能になります。</p>
+<h2 id="コア技術とコンポーネント">コア技術とコンポーネント</h2>
+<p><strong>強化された事前学習アーキテクチャ</strong>: Ernie-Botは、知識強化事前学習技術を組み込んだ高度なトランスフォーマーベースのニューラル<a data-lb="1" href="/ja/glossary/IT-Infrastructure/" title="組織がデータを保存し、アプリケーションを実行し、日常業務に必要なデジタルリソースにユーザーを接続するために使用する基盤となるテクノロジーシステムおよび機器。">ネットワークアーキテクチャ</a>を利用し、学習プロセス中にエンティティ、概念、文脈情報間の関係をより良く理解できるようにします。</p>
+<p><strong>ナレッジグラフ統合</strong>: このシステムは、数百万のエンティティと関係を含むBaiduの広範な<a data-lb="1" href="/ja/glossary/knowledge-graphs/" title="ナレッジグラフは、エンティティとその関係性をグラフとして表現する構造化データモデルであり、情報の効率的な検索、推論、統合を可能にします。">ナレッジグラフ</a>を活用し、構造化された<a data-lb="1" href="/ja/glossary/Ontology/" title="コンピュータサイエンスにおけるオントロジーの包括的ガイド。形式的知識表現、セマンティックウェブ技術、実用的な応用について解説します。">知識表現</a>に生成コンテンツを基づかせることで、より正確で事実に基づいた応答を可能にします。</p>
+<p><strong>マルチモーダル処理能力</strong>: 高度なコンピュータビジョンと自然言語処理コンポーネントが連携して、画像理解、視覚的コンテンツ生成、テキストと視覚入力間のクロスモーダル推論を可能にします。</p>
+<p><strong>人間のフィードバックからの強化学習(RLHF)</strong>: モデルは<a data-lb="1" href="/ja/glossary/reinforcement-learning/" title="強化学習(RL)は、エージェントが環境と相互作用し、試行錯誤を通じて累積報酬を最大化することで、逐次的な意思決定を学習する機械学習の一種です。">強化学習</a>技術を通じて人間の好みの学習を組み込み、応答品質、安全性、人間の価値観や期待との整合性を継続的に改善します。</p>
+<p><strong>文化的・言語的適応</strong>: 専門コンポーネントが中国語処理を扱い、繁体字と簡体字の認識、地域方言の理解、より関連性の高い応答のための文化的文脈解釈を含みます。</p>
+<p><strong>リアルタイム知識更新</strong>: 動的知識統合メカニズムにより、システムは最新情報と更新を組み込むことができ、静的言語モデルに共通する知識カットオフの制限を軽減します。</p>
+<p><strong>安全性とコンテンツフィルタリング</strong>: コンテンツフィルタリング、バイアス検出、有害コンテンツ防止を含む包括的な安全メカニズムにより、<a data-lb="1" href="/ja/glossary/Responsible-AI/" title="倫理的な人工知能の開発と展開のための責任あるAIの原則、フレームワーク、実装戦略に関する包括的なガイド。">責任あるAI</a>展開とユーザー保護を確保します。</p>
+<h2 id="ernie-botの動作原理">Ernie-Botの動作原理</h2>
+<p>Ernie-Botの運用<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>には、ユーザー入力を文脈的に適切な応答に変換する複数の高度な処理段階が含まれます:</p>
+<ol>
+<li>
+<p><strong>入力処理とトークン化</strong>: ユーザークエリは、テキスト、画像、またはマルチモーダルコンテンツを含むさまざまな入力形式を処理するための前処理を受け、中国語の特性に特化した<a data-lb="1" href="/ja/glossary/Tokenization/" title="データセキュリティ、自然言語処理、ブロックチェーンにおけるトークン化の包括的ガイド - 技術、メリット、実装方法、将来のトレンドを解説。">トークン化</a>が行われます。</p>
+</li>
+<li>
+<p><strong>文脈分析と理解</strong>: システムは入力文脈を分析し、<a data-lb="1" href="/ja/glossary/NLU-Confidence-Threshold/" title="NLU信頼度閾値とは、NLUエンジンがユーザーの発話に対して特定のインテントをトリガーするために必要な最小信頼度スコアです。これは会話型AIの中核となる要素です。">自然言語理解</a>技術を使用して主要なエンティティ、意図、関連する背景情報を識別します。</p>
+</li>
+<li>
+<p><strong>知識検索と統合</strong>: Baiduのナレッジグラフと外部ソースから関連情報が検索され、応答生成のための事実的根拠を提供します。</p>
+</li>
+<li>
+<p><strong>多段階推論</strong>: 複雑なクエリは多段階推論プロセスをトリガーし、モデルが問題を管理可能なコンポーネントに分解し、論理的推論チェーンを適用します。</p>
+</li>
+<li>
+<p><strong>応答生成</strong>: トランスフォーマーアーキテクチャは、<a data-lb="1" href="/ja/glossary/Transformer/" title="ディープラーニングにおけるTransformerアーキテクチャの包括的ガイド - アテンションメカニズム、ニューラルネットワーク、自然言語処理への応用について解説します。">アテンションメカニズム</a>と訓練データから学習したパターンを使用して候補応答を生成します。</p>
+</li>
+<li>
+<p><strong>品質評価とフィルタリング</strong>: 生成された応答は、正確性と適切性を確保するために品質評価、ファクトチェック、安全フィルタリングを受けます。</p>
+</li>
+<li>
+<p><strong>文化的・文脈的洗練</strong>: 応答は、中国語話者の聴衆に対する文化的適切性、言語的正確性、文脈的関連性のために洗練されます。</p>
+</li>
+<li>
+<p><strong>出力フォーマットと配信</strong>: 最終応答はユーザーの好みに応じてフォーマットされ、必要に応じてサポートマルチメディアコンテンツとともに適切なチャネルを通じて配信されます。</p>
+</li>
+</ol>
+<p><strong>ワークフローの例</strong>: ユーザーが「请解释量子计算的基本原理」(量子コンピューティングの基本原理を説明してください)と尋ねると、Ernie-Botは中国語クエリを処理し、知識ベースから関連する量子物理学の概念を検索し、ユーザーの明らかな知識レベルに適した構造化された説明を生成し、中国の文化的文脈に適した例と類推を含む包括的な応答を提供します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>強化された中国語理解</strong>: 主に欧米のデータセットで訓練されたモデルと比較して、中国語の言語的ニュアンス、文化的参照、地域的変化の優れた理解。</p>
+<p><strong>統合された知識アクセス</strong>: Baiduの包括的なナレッジグラフと検索機能への直接アクセスにより、ユーザークエリに対してより正確で最新の情報を提供。</p>
+<p><strong>マルチモーダルインタラクション能力</strong>: テキストと視覚コンテンツの両方を処理および生成する能力により、異なるメディアタイプにわたるより豊かで多様な<a data-lb="1" href="/ja/glossary/Audience-Engagement/" title="オーディエンスエンゲージメントとは、人々とブランドの間で生まれる積極的な参加と交流のことで、単に受動的に視聴するだけでなく、コンテンツを消費し、体験を共有し、関係性を構築することを指します。">ユーザーインタラクション</a>を実現。</p>
+<p><strong>文化的文脈認識</strong>: 中国の文化的文脈、歴史的参照、社会規範の深い理解により、文化的に適切で関連性の高い応答を確保。</p>
+<p><strong>リアルタイム情報統合</strong>: 動的知識更新と現在の情報ソースとの統合により、静的モデルに共通する古い応答の問題を軽減。</p>
+<p><strong>エコシステム統合</strong>: 検索、地図、クラウドコンピューティング、モバイルアプリケーションを含むBaiduのサービススイートとのシームレスな統合により、機能を強化。</p>
+<p><strong>エンタープライズ対応の展開</strong>: 堅牢なインフラストラクチャと<a data-lb="1" href="/ja/glossary/APIs/" title="API(アプリケーション・プログラミング・インターフェース)を詳しく解説:定義、仕組み、種類(REST、SOAP)、実例、メリット、セキュリティ、ベストプラクティスを網羅した総合ガイドです。">API</a>アクセスにより、企業はErnie-Bot機能をアプリケーションとワークフローに統合可能。</p>
+<p><strong>継続的な学習と改善</strong>: ユーザーフィードバックと<a data-lb="1" href="/ja/glossary/Model-Evaluation/" title="機械学習モデルのパフォーマンスと信頼性を評価するためのモデル評価技術、メトリクス、ベストプラクティスに関する包括的なガイド。">パフォーマンスメトリクス</a>に基づく継続的なモデル更新と改良により、能力の継続的な向上を確保。</p>
+<p><strong>安全性とコンプライアンス</strong>: 組み込みの安全メカニズムと中国の規制要件への準拠により、ローカル市場での責任ある<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>展開を確保。</p>
+<p><strong>コスト効果の高いAIソリューション</strong>: 競争力のある価格設定と柔軟な展開オプションにより、さまざまな規模の企業が高度なAI機能にアクセス可能。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>カスタマーサービス自動化</strong>: 自然な中国語インタラクションで問い合わせ処理、トラブルシューティング、製品情報提供を行う<a data-lb="1" href="/ja/glossary/customer-support/" title="カスタマーサポート業務、その重要性、種類、チャネル、そしてAIと自動化の役割について解説します。効果的なカスタマーサポートのためのベストプラクティス、チーム構成、主要指標を学びましょう。">カスタマーサポート</a>システムへの展開。</p>
+<p><strong>教育コンテンツ作成</strong>: 中国の教育文脈でさまざまな科目を学ぶ学生向けの教育資料、説明、個別指導支援の生成。</p>
+<p><strong>コンテンツライティングとマーケティング</strong>: 中国語話者の聴衆と市場向けにカスタマイズされたマーケティングコピー、ブログ投稿、<a data-lb="1" href="/ja/glossary/Instagram/" title="Instagramは、写真と動画の共有に特化したビジュアル型ソーシャルメディアプラットフォームです。機能、ビジネスツール、インフルエンサーマーケティング、オーディエンス構築について学びましょう。">ソーシャルメディア</a>コンテンツ、プロモーション資料の作成。</p>
+<p><strong>コード生成とプログラミング支援</strong>: 中国のプログラミング環境でのコード生成、デバッグ支援、技術文書による<a data-lb="1" href="/ja/glossary/Technical-Debt/" title="技術的負債とは、堅牢なアプローチではなく短期的な解決策を選択した際に発生する、将来的な作り直しに伴う潜在的なコストを指します。ソフトウェア開発やAIシステムにおいて、メンテナンス、複雑性、修復にかかるコストの増加につながります。">ソフトウェア開発</a>者のサポート。</p>
+<p><strong>ビジネスインテリジェンスと分析</strong>: 中国語での自然言語クエリと説明によるビジネス文書、レポート、データの処理と分析。</p>
+<p><strong>創造的コンテンツ開発</strong>: 中国の文学的伝統と文化的要素を組み込んだストーリー、詩、脚本、その他の創造的コンテンツの生成。</p>
+<p><strong>言語翻訳とローカライゼーション</strong>: 文化的文脈の保存と<a data-lb="1" href="/ja/glossary/i18n/" title="アプリケーションが複数の言語や地域をサポートできるようにするソフトウェア設計アプローチ。コアコードを書き直すことなく、グローバル展開を可能にします。">ローカライゼーション</a>の考慮を伴う中国語と他の言語間の高度な翻訳サービス。</p>
+<p><strong>研究と情報統合</strong>: 学術的および専門的領域にわたる研究タスク、文献レビュー、情報統合の支援。</p>
+<p><strong>パーソナルアシスタントアプリケーション</strong>: 個人の生産性、スケジューリング、<a data-lb="1" href="/ja/glossary/Knowledge-Curation/" title="ナレッジキュレーションの包括的ガイド:意思決定の強化を目的とした情報資産の体系的な収集、整理、管理について解説します。">情報管理</a>タスクのためのモバイルアプリとスマートデバイスへの統合。</p>
+<p><strong>法務およびコンプライアンス文書</strong>: 中国の法的枠組み内での法的文書分析、コンプライアンスチェック、規制解釈のサポート。</p>
+<h2 id="機能比較表">機能比較表</h2>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>Ernie-Bot</th>
+<th>GPT-4</th>
+<th>Claude</th>
+<th>Gemini</th>
+<th>ChatGLM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中国語習熟度</td>
+<td>優秀</td>
+<td>良好</td>
+<td>普通</td>
+<td>良好</td>
+<td>優秀</td>
+</tr>
+<tr>
+<td>ナレッジグラフ統合</td>
+<td>あり</td>
+<td>なし</td>
+<td>なし</td>
+<td>限定的</td>
+<td>なし</td>
+</tr>
+<tr>
+<td>マルチモーダル能力</td>
+<td>あり</td>
+<td>あり</td>
+<td>限定的</td>
+<td>あり</td>
+<td>限定的</td>
+</tr>
+<tr>
+<td>リアルタイム情報</td>
+<td>あり</td>
+<td>なし</td>
+<td>なし</td>
+<td>限定的</td>
+<td>なし</td>
+</tr>
+<tr>
+<td>文化的文脈理解</td>
+<td>優秀</td>
+<td>普通</td>
+<td>普通</td>
+<td>良好</td>
+<td>良好</td>
+</tr>
+<tr>
+<td>エンタープライズ統合</td>
+<td>強力</td>
+<td>強力</td>
+<td>中程度</td>
+<td>強力</td>
+<td>中程度</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>データプライバシーとセキュリティ</strong>: <a data-lb="1" href="/ja/glossary/QoS--Quality-of-Service-/" title="Quality of Service(QoS)の包括的ガイド - ネットワークトラフィック管理、優先順位付けメカニズム、最適なパフォーマンスを実現するための実装戦略について解説します。">サービス品質</a>を維持しながらユーザーデータ保護とプライバシーコンプライアンスを確保するには、堅牢な<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>インフラストラクチャと透明なデータ処理ポリシーが必要です。</p>
+<p><strong>計算リソース要件</strong>: モデル推論と訓練のための高性能コンピューティング需要には、重要なインフラストラクチャ投資とエネルギー消費の考慮が必要です。</p>
+<p><strong>バイアスと公平性の問題</strong>: 訓練データの潜在的なバイアスに対処し、異なる人口統計グループと<a data-lb="1" href="/ja/glossary/POV--Point-of-View-/" title="物語が語られる際の語り手の視点であり、読者が何を見て何を体験するかを決定します。POVは情報がどのように明かされるかを形作り、物語への感情的なつながりに影響を与えます。">視点</a>にわたる公平な表現を確保することは、継続的な課題です。</p>
+<p><strong>幻覚と正確性</strong>: モデルがもっともらしいが不正確な情報を生成する事例を管理するには、ファクトチェックメカニズムの継続的な監視と改善が必要です。</p>
+<p><strong>規制コンプライアンス</strong>: サービス機能とイノベーションを維持しながら、異なる管轄区域にわたる進化するAI規制とコンプライアンス要件をナビゲートすること。</p>
+<p><strong>モデルの解釈可能性</strong>: モデルの決定と推論プロセスの<a data-lb="1" href="/ja/glossary/Transparency/" title="AI透明性とは、AIシステムの内部動作、データ、意思決定ロジックを明らかにすることです。信頼構築、説明責任の確保、規制コンプライアンスの遵守に不可欠です。">説明可能性</a>が限られていることは、透明性を必要とする重要なアプリケーションでの信頼と採用を妨げる可能性があります。</p>
+<p><strong>統合の複雑さ</strong>: Ernie-Bot機能を既存のエンタープライズシステムとワークフローに統合する際の技術的課題には、専門知識とリソースが必要な場合があります。</p>
+<p><strong>パフォーマンスの一貫性</strong>: 異なるクエリタイプ、複雑さレベル、ユーザー文脈にわたって一貫した応答品質を維持するには、継続的な最適化と監視が必要です。</p>
+<p><strong>スケーラビリティの制限</strong>: 応答品質と速度を維持しながら増加するユーザー需要を管理することは、インフラストラクチャと<a data-lb="1" href="/ja/glossary/Support-Capacity-Planning/" title="サポート容量計画とは、カスタマーサポートのニーズを予測し、サービス品質目標を達成しながら効率的に対応するためのスタッフとリソースを配分するプロセスです。">リソース配分</a>の課題を提示します。</p>
+<p><strong>文化的感受性</strong>: 有用な機能を維持しながら、敏感な文化的、政治的、社会的トピックの適切な処理を確保するには、慎重なバランスと継続的な改良が必要です。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>明確なユースケース要件の定義</strong>: 最適な構成と展開戦略を確保するために、Ernie-Botを実装する前に具体的な目標、成功指標、機能要件を確立します。</p>
+<p><strong>堅牢なセキュリティ対策の実装</strong>: 機密情報を保護し、コンプライアンスを維持するために、データ暗号化、<a data-lb="1" href="/ja/glossary/Authorization/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a>、監査ログを含む包括的なセキュリティプロトコルを展開します。</p>
+<p><strong>効果的なプロンプトエンジニアリングの設計</strong>: Ernie-Botの能力を活用しながら、ユーザーを生産的なインタラクションと結果に導く、よく構造化されたプロンプトと会話フローを開発します。</p>
+<p><strong>コンテンツモデレーションポリシーの確立</strong>: 安全なユーザー体験を維持するために、コンテンツフィルタリング、安全チェック、不適切なコンテンツ防止のための明確なガイドラインと自動システムを実装します。</p>
+<p><strong>パフォーマンスメトリクスの監視</strong>: 改善機会と最適化ニーズを特定するために、応答品質、ユーザー満足度、<a data-lb="1" href="/ja/glossary/Wait-Time/" title="様々なシステムやアプリケーションにおける待機時間の概念、実装戦略、最適化技術に関する包括的なガイド。">システムパフォーマンス</a>、正確性メトリクスを継続的に追跡します。</p>
+<p><strong>スケーラビリティの計画</strong>: 時間の経過とともに増加するユーザー需要、ピーク使用期間、機能要件の拡大に対応するインフラストラクチャとアーキテクチャを設計します。</p>
+<p><strong>ユーザートレーニングとサポートの提供</strong>: Ernie-Bot機能の採用と効果的な活用を最大化するために、包括的なユーザードキュメント、トレーニング資料、サポートリソースを開発します。</p>
+<p><strong>フィードバックメカニズムの実装</strong>: 継続的な強化と最適化の取り組みを推進するために、ユーザーフィードバック、エラー報告、改善提案を収集するシステムを作成します。</p>
+<p><strong>規制コンプライアンスの確保</strong>: 法的運用とユーザーの信頼を維持するために、関連する規制、業界標準、コンプライアンス要件を最新の状態に保ちます。</p>
+<p><strong>緊急時対応計画の策定</strong>: 技術的問題や予期しない課題の際に運用を維持するために、バックアップシステム、エラー処理手順、サービス継続計画を確立します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>ドメイン特化のためのファインチューニング</strong>: 特定の業界やアプリケーション向けにErnie-Botをカスタマイズし、ドメイン固有の訓練データとパラメータ最適化を通じて特化した文脈でのパフォーマンスを向上させます。</p>
+<p><strong>マルチエージェント協調</strong>: 複数のErnie-Botインスタンスが複雑なタスクで協力し、高度な問題解決と包括的な分析能力を可能にします。</p>
+<p><strong>検索拡張生成</strong>: 生成プロセス中に外部知識ソースとリアルタイム情報検索を統合することで、応答の正確性を向上させます。</p>
+<p><strong>思考連鎖推論</strong>: 複雑な分析および数学的タスクのための明示的な推論チェーンと段階的な問題解決アプローチの実装。</p>
+<p><strong>適応学習システム</strong>: ユーザーインタラクションとフィードバックから学習し、応答をパーソナライズし、時間の経過とともにパフォーマンスを向上させるシステムの開発。</p>
+<p><strong>クロスモーダル知識転移</strong>: 高度な転移学習技術を通じて、1つのモダリティ(テキスト)で学習した知識を活用して別のモダリティ(画像)でのパフォーマンスを向上させます。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>強化されたマルチモーダル統合</strong>: ビデオ処理、音声分析、複雑な視覚推論タスクを含む、より高度なクロスモーダル理解能力の開発。</p>
+<p><strong>改善されたリアルタイム学習</strong>: 完全なモデル再訓練を必要とせずに、新しい情報を組み込み、リアルタイムでインタラクションから学習する高度なシステム。</p>
+<p><strong>自律エージェント能力</strong>: 計画、複雑なタスクの実行、外部システムやサービスとのインタラクションが可能な、より自律的なAIエージェントへの進化。</p>
+<p><strong>量子コンピューティング統合</strong>: 強化された処理能力と新しいAIアルゴリズム実装のための量子コンピューティングアプリケーションの探求。</p>
+<p><strong>連合学習の展開</strong>: 分散環境にわたってデータプライバシーとセキュリティを維持しながら、モデル能力を向上させる連合学習アプローチの実装。</p>
+<p><strong>高度な推論と論理</strong>: 複雑な問題解決アプリケーションのための、より高度な論理的推論、因果理解、抽象的思考能力の開発。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Sun, Y., et al. (2019). “ERNIE: Enhanced Representation through Knowledge Integration.” arXiv preprint arXiv:1904.09223.</p>
+</li>
+<li>
+<p>Baidu Research. (2023). “ERNIE-Bot Technical Report: Large Language Models for Chinese Applications.” Baidu AI Technology Review, 15(3), 45-72.</p>
+</li>
+<li>
+<p>Zhang, L., &amp; Wang, H. (2023). “Multimodal AI Systems in Chinese Language Processing: A Comprehensive Survey.” Journal of Chinese Information Processing, 37(8), 123-145.</p>
+</li>
+<li>
+<p>Li, M., et al. (2024). “Knowledge-Enhanced Language Models: Principles and Applications.” ACM Computing Surveys, 56(4), 1-38.</p>
+</li>
+<li>
+<p>Chen, X., &amp; Liu, Y. (2023). “Cultural Adaptation in Large Language Models: Challenges and Opportunities.” International Journal of AI and Culture, 8(2), 89-112.</p>
+</li>
+<li>
+<p>Wang, S., et al. (2024). “Enterprise AI Deployment: Best Practices and Lessons Learned.” IEEE Transactions on AI Applications, 12(1), 67-84.</p>
+</li>
+<li>
+<p>Huang, R., &amp; Zhou, T. (2023). “Safety and Ethics in Chinese AI Systems: A Framework for Responsible Development.” AI Ethics Quarterly, 9(3), 201-225.</p>
+</li>
+<li>
+<p>Baidu AI Cloud. (2024). “ERNIE-Bot Integration Guide: Technical Documentation and Implementation Strategies.” Baidu Developer Documentation, Version 3.2.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Prompt-Engineering/">
+                    プロンプトエンジニアリング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI言語モデルとのインタラクションと出力を最適化するための、プロンプトエンジニアリング技術、ベストプラクティス、および応用に関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Prompt-Engineering/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Conversational-AI/">
+                    対話型AI
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    対話型AIを探求:自然言語処理、自然言語理解、機械学習、音声認識を用いて人間の会話をシミュレートする技術。その仕組み、メリット、ユースケース、将来のトレンドを学びます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Conversational-AI/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/AI-Copywriting/">
+                    AIコピーライティング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    自動コンテンツ作成とマーケティング最適化のためのAIコピーライティングツール、テクニック、アプリケーションに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/AI-Copywriting/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/BERT/">
+                    BERT
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    BERT(Bidirectional Encoder Representations from Transformers)の包括的ガイド - 言語理解のためのGoogleの革新的なNLPモデル...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/BERT/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Content-Summarization/">
+                    Content Summarization（コンテンツ要約）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI駆動のテキスト要約は、重要な情報とコンテキストを保持しながら大規模なドキュメントを凝縮し、効率的な情報処理を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Content-Summarization/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/GPT/">
+                    GPT
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/GPT/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/ernie-bot/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

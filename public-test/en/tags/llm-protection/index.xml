@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LLM Protection on SmartWeb</title>
+    <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/tags/llm-protection/</link>
+    <description>Recent content in LLM Protection on SmartWeb</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Jan 2026 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/tags/llm-protection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mastering AI Security: A Comprehensive Guide to Threats, Vulnerabilities, and Defense Strategies</title>
+      <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/mastering-ai-security-threats-vulnerabilities-and-defense-strategies/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0900</pubDate>
+      <guid>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/mastering-ai-security-threats-vulnerabilities-and-defense-strategies/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;As artificial intelligence becomes increasingly integrated into organizational workflows and business-critical systems, the security landscape surrounding these technologies has fundamentally shifted. What was once a theoretical concern has become an urgent, practical reality that organizations cannot afford to ignore. The power of AI systems—their ability to process vast amounts of data, make autonomous decisions, and interact with sensitive information—creates an equally powerful attack surface that malicious actors are actively exploiting. Understanding AI security is no longer optional for organizations deploying AI; it has become a fundamental requirement for protecting intellectual property, customer data, and operational integrity. This comprehensive guide explores the critical security risks inherent in AI systems, examines the vulnerabilities that exist across the entire AI lifecycle, and provides actionable strategies for building more secure and resilient AI architectures.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

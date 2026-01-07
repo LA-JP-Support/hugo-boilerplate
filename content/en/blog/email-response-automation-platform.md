@@ -145,7 +145,7 @@ SmartWeb is a next-generation platform integrating [LiveAgent](/en/glossary/Live
 | Manual/ [FAQ](/en/glossary/FAQ/) Development | Time-consuming creation/updates | Easy creation with knowledge base, automatic utilization |
 | Maintaining [Personalization](/en/glossary/Personalization/) | Manual individual responses required | AI response generation automatically adapts to situations |
 | [Knowledge Sharing](/en/glossary/Knowledge-Sharing/) Mechanisms | Separate system management required | Naturally realized through full function [integration](/en/glossary/Integration/) |
-| 24-Hour Support | Staff increase required | [AI chatbot](/en/glossary/AI-chatbot/) automated response |
+| 24-Hour Support | Staff increase required | [AI [chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-[chatbot](/en/glossary/Chatbot/)/) automated response |
 
 ### 1. LiveAgent Ticket System: Integrated Realization of "Automation Tools" and "Email Management"
 
@@ -176,10 +176,10 @@ Traditional FAQ systems required HTML knowledge or had complex update procedures
 
 **Key Functions:**
 
-- **Customer [Self-Service Portal](/en/glossary/Self-Service-Portal/)**: Customers resolve common questions themselves
+- **Customer [Self-Service Portal](/en/glossary/[Self-Service](/en/glossary/[self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/) refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.")/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/) refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.")-Portal/)**: Customers resolve common questions themselves
 - **Internal FAQ**: Enables high-quality responses even from newcomers immediately
 - **Search Function**: Quickly discover necessary information by keywords
-- ** [AI Chatbot](/en/glossary/AI-chatbot/) [Integration](/en/glossary/Integration/)**: Automatically presents appropriate articles
+- ** [AI [Chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-chatbot/) [Integration](/en/glossary/Integration/)**: Automatically presents appropriate articles
 
 **Effects:**
 
@@ -207,7 +207,7 @@ Traditionally, nighttime and holiday support required additional personnel. AI c
 - Reduce initial [response time](/en/glossary/Response-Time/) to zero
 - Improve customer satisfaction
 
-> **Related Article:** [How AI Chatbot Implementation Transforms Customer Support](#)
+> **Related Article:** [How [AI Chatbot](/en/glossary/AI-chatbot/) Implementation Transforms Customer Support](#)
 
 ### 4. AI Email Auto-Response Generation: Next-Generation Evolution of "Template Utilization"
 
@@ -248,7 +248,7 @@ SmartWeb's greatest strength is that all these functions are **fully coordinated
 
 Business email handling efficiency requires information organization and prioritization, business flow [visualization](/en/glossary/visualization/), and template and automation tool utilization. However, implementing these individually requires considerable time and cost.
 
-With an integrated platform like SmartWeb, all functions—ticket management, knowledge base, AI chatbot, AI response generation—coordinate fully in one system. Without spending effort and cost on individual tool implementation, you can construct an ideal email handling structure via the shortest route.
+With an integrated platform like SmartWeb, all functions—ticket management, knowledge base, [AI chatbot](/en/glossary/AI-chatbot/), AI response generation—coordinate fully in one system. Without spending effort and cost on individual tool implementation, you can construct an ideal email handling structure via the shortest route.
 
 While [generative AI](/en/glossary/Generative-AI/) and automated response technologies are rapidly evolving, AI is a tool supporting human work. The collaborative structure where AI handles routine tasks and humans concentrate on complex judgments and individual responses is the ideal form for future [customer support](/en/glossary/customer-support/). Utilize SmartWeb to realize further email handling efficiency and quality improvement in a new style of human-AI collaboration.
 

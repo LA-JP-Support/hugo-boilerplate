@@ -14,7 +14,10 @@ url: "/ja/blog/introduction-to-rag/"
 ## RAG（Retrieval-Augmented Generation）の基本と活用方法
 
 ### RAGの基本構造
-RAG | 項目 | 従来の生成AI | RAG |
+
+RAG（Retrieval-Augmented Generation）は、従来の生成AIと比べて次のような特徴があります。
+
+| 項目 | 従来の生成AI | RAG |
 |---|---|---|
 | 知識源 | 学習済みデータのみ | 外部データも動的に参照 |
 | 情報鮮度 | 学習時点で止まる | 常に最新情報を検索・利用 |

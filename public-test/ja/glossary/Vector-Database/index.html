@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ベクトルデータベース | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Vector-Database/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Vector-Database/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Vector-Database/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Vector-Database/" hreflang="x-default" rel="alternate"/>
+<meta content="ベクトルデータベースは、高次元ベクトル埋め込みの保存、インデックス化、クエリに特化したシステムで、効率的な類似性検索を可能にし、RAGなどの最新AI アプリケーションを支えます。" name="description"/>
+<meta content="ベクトルデータベース, ベクトル埋め込み, 類似性検索, 近似最近傍探索, AIワークフロー" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Vector-Database/" property="og:url"/>
+<meta content="ベクトルデータベース | SmartWeb" property="og:title"/>
+<meta content="ベクトルデータベースは、高次元ベクトル埋め込みの保存、インデックス化、クエリに特化したシステムで、効率的な類似性検索を可能にし、RAGなどの最新AI アプリケーションを支えます。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Vector-Database/" name="twitter:url"/>
+<meta content="ベクトルデータベース | SmartWeb" name="twitter:title"/>
+<meta content="ベクトルデータベースは、高次元ベクトル埋め込みの保存、インデックス化、クエリに特化したシステムで、効率的な類似性検索を可能にし、RAGなどの最新AI アプリケーションを支えます。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ベクトルデータベース</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Infrastructure &amp; Deployment
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ベクトルデータベース
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Vector Database
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ベクトルデータベースは、高次元ベクトル埋め込みの保存、インデックス化、クエリに特化したシステムで、効率的な類似性検索を可能にし、RAGなどの最新AI アプリケーションを支えます。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ベクトルデータベース
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ベクトル埋め込み
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                類似性検索
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                近似最近傍探索
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIワークフロー
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ベクトルデータベースとは">ベクトルデータベースとは?</h2>
+<p><a data-lb="1" href="/ja/glossary/Weaviate/" title="Weaviateは、オブジェクトと高次元埋め込みを保存するオープンソースのクラウドネイティブなベクトルデータベースです。セマンティック検索、ハイブリッド検索、大規模なAI/MLアプリケーションを可能にします。">ベクトルデータベース</a>は、高次元ベクトル(一般的に<a data-lb="1" href="/ja/glossary/Vector-Database/" title="ベクトルデータベースは、高次元ベクトル埋め込みの保存、インデックス化、クエリに特化したシステムで、効率的な類似性検索を可能にし、RAGなどの最新AI アプリケーションを支えます。">ベクトル埋め込み</a>として知られる)を保存、インデックス化し、効率的に検索するために構築された専門的なデータ管理システムです。これらの埋め込みは、機械学習モデルによって生成される数値表現であり、非<a data-lb="1" href="/ja/glossary/Structured-Data/" title="検索エンジンやコンピュータがWebページのコンテンツをより適切に理解できるよう、標準化された形式で整理された情報。評価、価格、その他の詳細情報を含むリッチな検索結果の表示を可能にします。">構造化データ</a>(テキスト、画像、音声など)を浮動小数点数の密な配列にエンコードします。ベクトルデータベースは類似性検索に最適化されており、完全一致ではなく、与えられたクエリに意味や内容が近いアイテムを見つけることを目的としています。</p>
+<p>構造化データ(数値、文字列、日付)を保存し、完全一致または部分一致によるクエリを可能にする従来のリレーショナルデータベースとは異なり、ベクトルデータベースは高次元空間における最近傍探索および近似最近傍探索(ANN)のために設計されています。この機能は、セマンティック検索、<a data-lb="1" href="/ja/glossary/Recommendation-Engine/" title="レコメンデーションエンジンの包括的ガイド:アルゴリズム、実装、メリット、パーソナライズされたコンテンツ配信システムのベストプラクティス。">レコメンデーションエンジン</a>、異常検知、検索拡張生成(<a data-lb="1" href="/ja/glossary/RAG/" title="RAG(Retrieval-Augmented Generation)は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。">RAG</a>)を含む現代の<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>アプリケーションの中核をなしています。</p>
+<p>ベクトルデータベースは、AIにおける根本的な課題を解決します。従来のデータベースは完全一致や単純な範囲クエリには優れていますが、セマンティックな類似性には対応できません。「<a data-lb="1" href="/ja/glossary/Service-Recovery/" title="サービスリカバリー:問題が発生した後、企業がサービスの問題を修正し、顧客満足度を回復するために取る行動。ネガティブな体験をロイヤルティを構築する機会に変えるプロセスです。">顧客満足度</a>に関する文書を検索」と問いかけた場合、従来のデータベースは正確なキーワードしか一致させることができず、「クライアントの幸福」や「ユーザーの満足」といったセマンティックに類似したコンテンツを見逃してしまいます。ベクトルデータベースは、数学的表現を通じて意味を理解することで、このギャップを埋めます。</p>
+<h2 id="核となる概念と基礎">核となる概念と基礎</h2>
+<h3 id="ベクトル埋め込み">ベクトル埋め込み</h3>
+<p>ベクトル埋め込みは、通常数百から数千の要素を持つ連続数値(浮動小数点数)の高次元配列です。各埋め込みは、文、画像、音声クリップなどのオブジェクトを多次元数学空間における点としてエンコードします。</p>
+<p><strong>生成プロセス:</strong><br/>
+埋め込みは、大規模なデータセットで訓練された専門的な埋め込みモデルによって生成されます。人気のあるモデルには、テキスト用の<a data-lb="1" href="/ja/glossary/ChatGPT/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">OpenAI</a>のAda、画像用のCLIP、単語表現用のGloVe、音声処理用のWav2vecなどがあります。</p>
+<p><strong>セマンティックな近接性:</strong><br/>
+埋め込みの基本原理は、セマンティックに類似したアイテムがベクトル空間で互いに近くに配置され、類似していないアイテムは遠くに配置されることです。例えば、「パスワードをリセットする方法は?」と「アカウントにログインできません」という文は、共通の単語を持たないにもかかわらず、関連する意味のために高い<a data-lb="1" href="/ja/glossary/Cosine-Similarity/" title="コサイン類似度は、2つの非ゼロベクトル間の角度のコサインを測定する指標で、大きさではなく方向性に基づいてそれらの類似性を評価します。機械学習、自然言語処理、レコメンデーションシステムで広く使用されています。">コサイン類似度</a>を持つベクトルにマッピングされます。</p>
+<p><strong>次元数:</strong><br/>
+埋め込みは、しばしば256、512、1024以上の次元を持ちます。各次元は潜在的な特徴、つまり埋め込みモデルによって学習されたデータの抽象的な特性を表します。これらの特徴は直接解釈可能ではありませんが、複雑なセマンティック関係を捉えています。</p>
+<h3 id="高次元空間の特性">高次元空間の特性</h3>
+<p>高次元データを扱うことは、独特の課題と機会をもたらします。都市が近接性によってグループ化された2次元マップを想像してください。512次元のベクトル空間では、類似した文書や画像が類似の方法でクラスター化されますが、人間が簡単に視覚化したり直感的に理解したりできない方法で行われます。</p>
+<p><strong>密ベクトルとスパースベクトル:</strong></p>
+<ul>
+<li><strong>密ベクトル</strong>は、ほとんどの要素が非ゼロ値を持ち、現代の<a data-lb="1" href="/ja/glossary/deep-learning/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ディープラーニング</a>埋め込みに典型的です</li>
+<li><strong>スパースベクトル</strong>は、ほとんどの要素がゼロであり、ワンホットエンコーディングやbag-of-wordsモデルのような従来の<a data-lb="1" href="/ja/glossary/Query-Expansion/" title="クエリ拡張は、ユーザーの検索クエリに同義語や関連用語を追加して再構成することで、検索エンジン、AIチャットボット、RAGシステムにおける関連性を向上させ、意図のギャップを埋める手法です。">情報検索</a>手法で一般的です</li>
+</ul>
+<p>現代のベクトルデータベースは主に密ベクトルを扱い、より豊かなセマンティック表現を提供しますが、効率的な検索のために特殊なインデックスアルゴリズムを必要とします。</p>
+<h2 id="ベクトルデータベースと従来のデータベースの比較">ベクトルデータベースと従来のデータベースの比較</h2>
+<table>
+<thead>
+<tr>
+<th>特徴</th>
+<th>従来のデータベース</th>
+<th>ベクトルデータベース</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>データモデル</strong></td>
+<td>行、テーブル、列</td>
+<td>ベクトル(浮動小数点配列) + メタデータ</td>
+</tr>
+<tr>
+<td><strong>クエリタイプ</strong></td>
+<td>完全一致、範囲、キーワード</td>
+<td>類似性(NN/ANN)、ハイブリッド</td>
+</tr>
+<tr>
+<td><strong>インデックス</strong></td>
+<td>B-tree、ハッシュ、テキストインデックス</td>
+<td>ANNアルゴリズム: HNSW、PQ、IVF</td>
+</tr>
+<tr>
+<td><strong>スキーマ</strong></td>
+<td>厳格、明確に定義</td>
+<td>柔軟、しばしばスキーマレス</td>
+</tr>
+<tr>
+<td><strong>最適用途</strong></td>
+<td>構造化トランザクションデータ</td>
+<td>非構造化/半構造化データ</td>
+</tr>
+<tr>
+<td><strong>ユースケース</strong></td>
+<td>トランザクション、レポート、分析</td>
+<td>セマンティック検索、AI拡張、RAG</td>
+</tr>
+<tr>
+<td><strong>スケーラビリティ</strong></td>
+<td>垂直および水平</td>
+<td>水平、AIワークロードに最適化</td>
+</tr>
+<tr>
+<td><strong>クエリ速度</strong></td>
+<td>完全一致でミリ秒</td>
+<td>近似類似性でミリ秒</td>
+</tr>
+</tbody>
+</table>
+<p><strong>それぞれを使用するタイミング:</strong><br/>
+従来のデータベースは、ACID保証と複雑なリレーショナルクエリを持つ構造化されたトランザクションワークロードに優れています。ベクトルデータベースは、特にAI駆動型アプリケーションにおいて、大規模な非構造化データに対する高速でセマンティックな検索に不可欠です。</p>
+<h2 id="技術アーキテクチャとコンポーネント">技術アーキテクチャとコンポーネント</h2>
+<h3 id="ストレージとインデックスシステム">ストレージとインデックスシステム</h3>
+<p>ベクトルデータベースは、高速な類似性検索を可能にするために洗練されたインデックス構造を採用しています。</p>
+<p><strong>近似最近傍探索(ANN)アルゴリズム:</strong></p>
+<table>
+<thead>
+<tr>
+<th>アルゴリズム</th>
+<th>説明</th>
+<th>強み</th>
+<th>トレードオフ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HNSW</strong> (Hierarchical Navigable Small World)</td>
+<td>階層的でナビゲート可能なグラフ構造を構築</td>
+<td>高い再現率、低レイテンシ、本番環境対応</td>
+<td>より高いRAM使用量、複雑な更新</td>
+</tr>
+<tr>
+<td><strong>Product Quantization (PQ)</strong></td>
+<td>コードブックを介してベクトルを圧縮</td>
+<td>空間効率的、高速検索</td>
+<td>精度の若干の損失、チューニングが必要</td>
+</tr>
+<tr>
+<td><strong>Locality Sensitive Hashing (LSH)</strong></td>
+<td>ハッシュ関数を使用して類似ベクトルをバケット化</td>
+<td>低次元で高速</td>
+<td>高次元データには効果が低い</td>
+</tr>
+<tr>
+<td><strong>IVF</strong> (Inverted File Index)</td>
+<td>パーティションベース検索のためにベクトルをクラスター化</td>
+<td>検索空間を削減</td>
+<td>精度損失、クラスターチューニングが必要</td>
+</tr>
+</tbody>
+</table>
+<p><strong>HNSWの詳細:</strong><br/>
+HNSWは、本番システムで最も広く採用されているANNアルゴリズムです。ノードがベクトルを表し、エッジが類似ベクトルを接続する多層グラフを構築します。検索は、粗い層から細かい層へとこのグラフをナビゲートし、効率的に最近傍を見つけます。<a data-lb="1" href="/ja/glossary/Pinecone/" title="Pineconeは、高性能でスケーラブルなベクトル検索とAIメモリアプリケーションのための、フルマネージド型クラウドネイティブベクトルデータベースです。高次元ベクトル埋め込みのインデックス化と検索を行います。">Pinecone</a>やFAISSなどの主要プラットフォームは、速度、精度、スケーラビリティの優れたバランスのために<a data-lb="1" href="/ja/glossary/HNSW--Hierarchical-Navigable-Small-World-/" title="HNSW(Hierarchical Navigable Small World)は、ベクトルデータベースにおける高速かつ高精度な近似最近傍(ANN)検索のためのグラフベースアルゴリズムで、高次元データに最適です。">HNSW</a>を使用しています。</p>
+<p><strong>Product Quantization:</strong><br/>
+PQは、<a data-lb="1" href="/ja/glossary/unsupervised-learning/" title="教師なし学習に関する包括的な用語集。定義、クラスタリング、アソシエーションルール、次元削減などのアルゴリズム、応用例、利点、課題について解説しています。">クラスタリング</a>とコードブック技術を通じてベクトルを<a data-lb="1" href="/ja/glossary/Codec/" title="コーデックの包括的ガイド - 効率的なストレージと伝送のために、オーディオ、ビデオ、データをエンコードおよびデコードするデジタル圧縮アルゴリズムです。">圧縮</a>することで、メモリ要件を劇的に削減します。完全精度の浮動小数点数を保存する代わりに、PQは元のベクトルを近似するコンパクトなコードを保存します。これにより、コモディティハードウェアで数十億のベクトルを処理できます。</p>
+<h3 id="ストレージメディアとシステム設計">ストレージメディアとシステム設計</h3>
+<p><strong>メモリベースストレージ:</strong><br/>
+ミリ秒のクエリ時間で最速のパフォーマンスを提供しますが、最も高価です。即座の応答を必要とする低<a data-lb="1" href="/ja/glossary/Latency/" title="レイテンシとは、リクエストとシステムの応答との間の時間遅延のことで、AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。">レイテンシ</a>、高スループットアプリケーションに最適です。</p>
+<p><strong>ディスクベースストレージ:</strong><br/>
+フラッシュまたはSSDストレージは、より低コストで中程度のパフォーマンスを提供します。サブ秒のレイテンシが許容される大規模データセットに適しています。</p>
+<p><strong>クラウドオブジェクトストレージ:</strong><br/>
+大規模なアーカイブまたはコールドストレージのための最も遅いが最も安価なオプション。アクセス頻度の低いベクトルに最適です。</p>
+<p><strong>サーバーレスアーキテクチャ:</strong><br/>
+現代のベクトルデータベースは、ストレージとコンピュートを分離し、弾力的なスケーリングと<a data-lb="1" href="/ja/glossary/Cost-Optimization/" title="コスト最適化とは、すべての業務において無駄を特定し排除することで、品質と効率性を維持しながらビジネス費用を削減する戦略的アプローチです。">コスト最適化</a>を可能にします。コンピュートリソースはクエリ負荷に基づいて独立してスケールし、ストレージはデータ量に基づいてスケールします。</p>
+<h2 id="運用ワークフロー">運用ワークフロー</h2>
+<h3 id="エンドツーエンドのベクトルデータベースプロセス">エンドツーエンドのベクトルデータベースプロセス</h3>
+<p><strong>1. データ取り込みと埋め込み</strong><br/>
+生の非構造化データ(テキスト文書、画像、音声)は埋め込みモデルを通じて処理され、<a data-lb="1" href="/ja/glossary/Embedding/" title="機械学習におけるエンベディングの包括的ガイド。ベクトル表現、ニューラルネットワーク、自然言語処理およびAIシステムにおける応用について解説します。">ベクトル表現</a>を生成します。各ベクトルは、関連する<a data-lb="1" href="/ja/glossary/Meta/" title="メタとは、他の情報を説明する情報のことで、検索エンジンやソーシャルプラットフォームがウェブコンテンツを効果的に理解し整理するのに役立ちます。">メタデータ</a>(文書ID、タイムスタンプ、タグ、カテゴリ)とともに保存されます。</p>
+<p><strong>2. インデックス構築</strong><br/>
+ベクトルは、効率的な類似性検索を可能にするためにANNアルゴリズムを使用して整理されます。インデックス構築は大規模データセットでは計算集約的ですが、通常はオフラインまたは段階的に実行されます。</p>
+<p><strong>3. クエリ処理</strong><br/>
+ユーザーがクエリを送信すると、保存されたベクトルを作成したのと同じモデルを使用して埋め込まれます。データベースは、選択された距離メトリック(コサイン類似度、ユークリッド距離、内積)を使用して類似性検索を実行します。</p>
+<p><strong>4. 結果取得</strong><br/>
+データベースは、関連するメタデータとともにk個の最近傍ベクトルを返します。結果は、メタデータ制約によってフィルタリングされ、再ランク付けされ、または提示前に後処理されることができます。</p>
+<p><strong>クエリの例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span>query_vector = embedding_model.encode(<span style="color:#0ff;font-weight:bold">"How do I reset my password?"</span>)
+</span></span><span style="display:flex;"><span>results = vector_db.query(
+</span></span><span style="display:flex;"><span>    vector=query_vector,
+</span></span><span style="display:flex;"><span>    top_k=<span style="color:#ff0;font-weight:bold">3</span>,
+</span></span><span style="display:flex;"><span>    similarity_metric=<span style="color:#0ff;font-weight:bold">"cosine"</span>,
+</span></span><span style="display:flex;"><span>    min_score=<span style="color:#ff0;font-weight:bold">0.8</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">filter</span>={<span style="color:#0ff;font-weight:bold">"type"</span>: <span style="color:#0ff;font-weight:bold">"help_article"</span>}
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h2 id="高度な機能と能力">高度な機能と能力</h2>
+<h3 id="ハイブリッド検索">ハイブリッド検索</h3>
+<p>ハイブリッド検索は、ベクトル類似性と従来のキーワードまたは全文検索を組み合わせ、再現率と関連性の両方を最大化します。このアプローチは、セマンティックと完全一致の要件を混合したクエリに特に効果的です。例えば、「<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>」(セマンティック)に関する「2024年」(完全一致)に公開された文書を見つける場合などです。</p>
+<h3 id="メタデータフィルタリング">メタデータフィルタリング</h3>
+<p>ベクトルは、類似性と属性ベースのフィルタリングを組み合わせた複雑なクエリを可能にする豊富なメタデータとともに保存されます。日付範囲、カテゴリ、著者、またはカスタムフィールドで文書をフィルタリングしながら、<a data-lb="1" href="/ja/glossary/Semantic-Search/" title="セマンティック検索技術の包括的ガイド。実装戦略、メリット、AI駆動型情報検索の将来トレンドを解説します。">セマンティック検索</a>機能を維持します。</p>
+<h3 id="リアルタイム更新">リアルタイム更新</h3>
+<p>現代のベクトルデータベースは、段階的な更新をサポートし、完全なインデックス再構築なしに新しいベクトルを数秒以内にクエリ可能にします。フレッシュネス層は、バックグラウンドプロセスがインデックスを最適化する間、最近のデータが即座に利用可能であることを保証します。</p>
+<h3 id="マルチテナンシーと名前空間">マルチテナンシーと名前空間</h3>
+<p>エンタープライズシステムは、名前空間を通じた論理的なデータ分離をサポートし、複数のチームまたは顧客がデータ分離と<a data-lb="1" href="/ja/glossary/Authorization/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a>を維持しながらインフラストラクチャを共有できるようにします。</p>
+<h3 id="aiフレームワークとの統合">AIフレームワークとの統合</h3>
+<p>ベクトルデータベースは、<a data-lb="1" href="/ja/glossary/LangChain/" title="大規模言語モデル、チェーン、エージェント、メモリシステムを活用したアプリケーション構築のためのLangChainフレームワークの包括的ガイド。">LangChain</a>やLlamaIndexなどの人気のあるAIフレームワークとシームレスに統合され、開発者が最小限のコードで洗練されたRAGアプリケーション、会話型<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">AIシステム</a>、セマンティック検索ソリューションを構築できるようにします。</p>
+<h2 id="実世界のアプリケーションとユースケース">実世界のアプリケーションとユースケース</h2>
+<h3 id="セマンティック検索">セマンティック検索</h3>
+<p><strong>シナリオ:</strong> ユーザーがトラブルシューティングのヘルプを検索する製品ドキュメントシステム。<br/>
+<strong>実装:</strong> すべてのドキュメントが埋め込まれ、ベクトルデータベースに保存されます。ユーザークエリは埋め込まれ、保存された文書と照合され、正確なキーワードが一致しない場合でも関連するコンテンツを見つけます。<br/>
+<strong>利点:</strong> ユーザーは正確な用語を知る必要なく、自然言語を使用して回答を見つけることができます。</p>
+<h3 id="検索拡張生成rag">検索拡張生成(RAG)</h3>
+<p><strong>ワークフロー:</strong></p>
+<ol>
+<li>ナレッジベース記事を埋め込み、ベクトルデータベースに保存</li>
+<li>ユーザーが質問すると、クエリを埋め込み、関連記事を取得</li>
+<li>取得したコンテキストとクエリをLLMに供給して回答を生成</li>
+<li>LLMは特定のソースを引用した正確で根拠のある応答を生成</li>
+</ol>
+<p><strong>コード例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span>query_vector = embed(<span style="color:#0ff;font-weight:bold">"How to troubleshoot Wi-Fi issues?"</span>)
+</span></span><span style="display:flex;"><span>docs = vector_db.query(query_vector, top_k=<span style="color:#ff0;font-weight:bold">5</span>)
+</span></span><span style="display:flex;"><span>context = <span style="color:#0ff;font-weight:bold">"</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">"</span>.join([doc[<span style="color:#0ff;font-weight:bold">'content'</span>] <span style="color:#fff;font-weight:bold">for</span> doc in docs])
+</span></span><span style="display:flex;"><span>answer = llm.generate(
+</span></span><span style="display:flex;"><span>    context=context, 
+</span></span><span style="display:flex;"><span>    question=<span style="color:#0ff;font-weight:bold">"How to troubleshoot Wi-Fi issues?"</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h3 id="レコメンデーションシステム">レコメンデーションシステム</h3>
+<p>eコマースプラットフォームは、製品と<a data-lb="1" href="/ja/glossary/Behavioral-Trigger/" title="ボタンのクリックやショッピングカートの放棄など、ユーザーの行動に自動的に応答し、タイムリーでパーソナライズされたメッセージや体験を提供するシステム。">ユーザー行動</a>パターンを埋め込みます。レコメンデーションは、ユーザーのプロファイルまたは最近閲覧したアイテムに近いベクトルを見つけることによって生成され、カテゴリタグだけでなく、特徴、説明、使用パターンに基づいて類似製品を発見します。</p>
+<h3 id="異常検知">異常検知</h3>
+<p>システムは、正常および異常な行動パターンを埋め込みます。ベクトル空間における外れ値、つまり典型的なクラスターから遠い点は、調査を必要とする潜在的な異常、<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>脅威、またはシステム障害を示します。</p>
+<h3 id="マルチモーダル検索">マルチモーダル検索</h3>
+<p>画像、音声、テキスト、ビデオは比較可能なベクトル空間に埋め込まれ、クロスモーダル類似性検索を可能にします。テキスト説明を使用して画像を検索したり、参照画像に類似したビデオを見つけたり、テキストクエリに一致する音声クリップを発見したりできます。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>適切な埋め込みモデルを選択:</strong><br/>
+ユースケースに類似したドメインで訓練されたモデルを選択します。ドメイン固有のモデル(医療、法律、技術)は、専門的なアプリケーションでは汎用モデルを上回ることがよくあります。</p>
+<p><strong>精度と速度のバランス:</strong><br/>
+ANNアルゴリズムは、劇的な速度向上のために若干の精度を犠牲にします。アプリケーション要件に基づいて<a data-lb="1" href="/ja/glossary/Precision-and-Recall/" title="適合率と再現率は、分類システムや情報検索システムを評価するための中核的な指標です。適合率は正しい陽性予測を測定し、再現率はすべての実際の陽性を見つけ出します。">再現率</a>のしきい値を調整します。高リスクアプリケーションは、レイテンシを犠牲にしてより高い再現率を必要とする場合があります。</p>
+<p><strong>メタデータを戦略的に活用:</strong><br/>
+効率的なフィルタリングを可能にする<a data-lb="1" href="/ja/glossary/Metadata-Schema/" title="メタデータスキーマの包括的ガイド - システムやアプリケーション全体でデータを整理、記述、管理するための構造化されたフレームワークです。">メタデータスキーマ</a>を設計します。可能な場合は、ベクトル検索の前にメタデータでプレフィルタリングして検索空間を削減し、パフォーマンスを向上させます。</p>
+<p><strong>ハイブリッド検索を実装:</strong><br/>
+包括的なカバレッジのためにベクトルとキーワード検索を組み合わせます。セマンティック理解にはベクトル検索を、正確な用語マッチングにはキーワード検索を使用します。</p>
+<p><strong>監視と最適化:</strong><br/>
+クエリレイテンシ、再現率メトリック、インデックスサイズを追跡します。より良いオプションが利用可能になったら、定期的に埋め込みモデルを評価および更新します。</p>
+<p><strong>スケールを計画:</strong><br/>
+増加するワークロードのために水平スケーリングとサーバーレスデプロイメントをサポートするプラットフォームを選択します。マルチテナントまたは地理的に分散したデプロイメントのためのデータパーティショニング戦略を検討します。</p>
+<p><strong>データの鮮度を確保:</strong><br/>
+更新されたコンテンツの定期的な再埋め込みのためのプロセスを実装します。陳腐化メトリックを監視し、データの変動性に適した更新頻度を確立します。</p>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>次元の呪い:</strong><br/>
+次元数が増加すると、距離メトリックの意味が薄れ、検索がより計算コストが高くなります。これが、特殊なANNアルゴリズムが不可欠である理由です。</p>
+<p><strong>埋め込み品質:</strong><br/>
+ベクトルデータベースのパフォーマンスは、埋め込み品質に完全に依存します。貧弱な埋め込みは、データベースの洗練度に関係なく、無関係な検索結果につながります。</p>
+<p><strong>モデル互換性:</strong><br/>
+クエリは、保存されたベクトルを生成したのと同じ埋め込みモデルを使用する必要があります。モデルの更新には、データセット全体の再埋め込みが必要です。</p>
+<p><strong>コスト管理:</strong><br/>
+高次元ベクトルは、かなりのストレージとコンピュートを消費します。精度(次元数)とインフラストラクチャコストのバランスを取ります。</p>
+<p><strong>コールドスタート問題:</strong><br/>
+使用パターンのない新しいアイテムは推奨が困難です。コンテンツ埋め込みと協調フィルタリングを組み合わせたハイブリッドアプローチがこの問題を軽減します。</p>
+<h2 id="人気のあるベクトルデータベースソリューション">人気のあるベクトルデータベースソリューション</h2>
+<p><strong>Pinecone:</strong> 本番デプロイメントに最適化された完全管理型サーバーレスベクトルデータベース。強力なエンタープライズ機能と優れたドキュメント。</p>
+<p><strong>Weaviate:</strong> ハイブリッド検索機能を備えたオープンソース。複数の埋め込みモデルと複雑なフィルタリングをサポート。</p>
+<p><strong>Milvus:</strong> 大規模データセット向けの高度にスケーラブルなオープンソースソリューション。強力なコミュニティとクラウドネイティブアーキテクチャ。</p>
+<p><strong>Qdrant:</strong> 高度なフィルタリング機能と効率的なリソース使用を備えたRustベースの高性能ベクトル検索エンジン。</p>
+<p><strong>FAISS:</strong> <a data-lb="1" href="/ja/glossary/Facebook/" title="Facebookは世界最大のソーシャルネットワーキングプラットフォームで、数十億人のユーザーを繋いでいます。機能、ビジネスツール、広告、コミュニティ構築について学びましょう。">Facebook</a> AI Similarity Searchライブラリ、研究と本番環境で広く使用されています。より多くの手動管理が必要ですが、非常に柔軟です。</p>
+<p><strong>Chroma:</strong> AIアプリケーション向けに設計された開発者フレンドリーな埋め込み重視のデータベース。シンプルな<a data-lb="1" href="/ja/glossary/APIs/" title="API(アプリケーション・プログラミング・インターフェース)を詳しく解説:定義、仕組み、種類(REST、SOAP)、実例、メリット、セキュリティ、ベストプラクティスを網羅した総合ガイドです。">API</a>と強力なLangChain統合。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>ベクトルデータベースは従来の検索エンジンとどう違いますか?</strong><br/>
+従来の検索エンジンは主にキーワードマッチングと統計的関連性に依存しています。ベクトルデータベースはセマンティックな意味を理解し、キーワードの重複がなくても概念的に類似したコンテンツを見つけます。</p>
+<p><strong>構造化データにベクトルデータベースを使用できますか?</strong><br/>
+可能ですが、ベクトルデータベースは非構造化データに対する類似性検索に最適化されています。構造化トランザクションデータには従来のデータベースを使用し、セマンティック検索にはベクトルデータベースを使用してください。</p>
+<p><strong>データを再埋め込みする頻度はどのくらいですか?</strong><br/>
+コンテンツの変更頻度と埋め込みモデルの更新に依存します。高速度のコンテンツは毎日の更新が必要な場合があり、静的なナレッジベースは週次または月次で更新できます。</p>
+<p><strong>埋め込みモデルを変更するとどうなりますか?</strong><br/>
+モデルを変更すると、保存されているすべてのベクトルの再埋め込みが必要になります。移行を慎重に計画し、移行期間中に複数のインデックスを維持することを検討してください。</p>
+<p><strong>異なるANNアルゴリズムの中からどのように選択しますか?</strong><br/>
+優先事項に基づいて評価します。最高の汎用パフォーマンスにはHNSW、メモリ効率にはPQ、大規模スケールにはIVF。実際のデータとクエリパターンでベンチマークを行ってください。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>IBM. (2024). What Is A Vector Database?. IBM Think Topics.</li>
+<li>Pinecone. (2024). What is a Vector Database &amp; How Does it Work?. Pinecone Learn.</li>
+<li>Pinecone. (2024). A Developer’s Guide to ANN Algorithms. Pinecone Learn.</li>
+<li>Microsoft. (2024). Understanding Vector Databases. Microsoft Learn.</li>
+<li>AWS. (2024). What is a Vector Database?. AWS.</li>
+<li>StackExchange. (2024). How do vector databases work for the lay coder?. Data Science StackExchange.</li>
+<li>Pinecone. (2024). Vector Embeddings for Developers. Pinecone Learn.</li>
+<li>Pinecone. (2024). HNSW Deep Dive. Pinecone Learn.</li>
+<li>Pinecone. (2024). Product Quantization. Pinecone Learn.</li>
+<li>Pinecone. (2024). Vector Indexes Overview. Pinecone Learn.</li>
+<li>Pinecone. (2024). Serverless Vector Databases. Pinecone Learn.</li>
+<li>Azure. (2024). Vector Database Code Samples. GitHub.</li>
+<li>LangChain. (2024). LangChain Documentation. Python LangChain.</li>
+<li>LlamaIndex. (2024). LlamaIndex Documentation. Read the Docs.</li>
+<li>Pinecone. (2024). Pinecone Examples and Tutorials. Pinecone Docs.</li>
+<li>Reddit. (2024). Vector Database Use Cases. Reddit.</li>
+<li>IBM. (2024). Vector Search Overview. IBM Think Topics.</li>
+<li>IBM Research. (2024). Retrieval-Augmented Generation. IBM Research Blog.</li>
+<li>YouTube. (2024). What is a Vector Database?. YouTube.</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Milvus/">
+                    Milvus
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Milvusは、非構造化データに対するスケーラブルな類似性検索を実現する、オープンソースのクラウドネイティブなベクトルデータベースです。そのアーキテクチャ、機能、ユースケース、および他のベクトルデータ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Milvus/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/HNSW--Hierarchical-Navigable-Small-World-/">
+                    HNSW(階層的ナビゲート可能スモールワールド)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    HNSW(Hierarchical Navigable Small World)は、ベクトルデータベースにおける高速かつ高精度な近似最近傍(ANN)検索のためのグラフベースアルゴリズムで、高次元データ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/HNSW--Hierarchical-Navigable-Small-World-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Pinecone/">
+                    Pinecone
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Pineconeは、高性能でスケーラブルなベクトル検索とAIメモリアプリケーションのための、フルマネージド型クラウドネイティブベクトルデータベースです。高次元ベクトル埋め込みのインデックス化と検索を行...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Pinecone/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Weaviate/">
+                    Weaviate
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Weaviateは、オブジェクトと高次元埋め込みを保存するオープンソースのクラウドネイティブなベクトルデータベースです。セマンティック検索、ハイブリッド検索、大規模なAI/MLアプリケーションを可能に...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Weaviate/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Qdrant/">
+                    Qdrant
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Qdrantは、高次元ベクトルデータ向けのオープンソースベクトル類似検索エンジン兼ベクトルデータベースで、セマンティック検索、RAG、レコメンデーションを可能にします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Qdrant/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Chroma/">
+                    Chroma
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI ネイティブアプリケーション向けのオープンソースベクトルデータベース、Chroma について解説します。コアコンセプト、アーキテクチャ、RAG やセマンティック検索などのユースケース、そして代替ソ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Chroma/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/vector-database/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

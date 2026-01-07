@@ -17,7 +17,7 @@ AI [customer support](/en/glossary/customer-support/) includes various forms suc
 
 ## Evolution of Technology and Its History
 
-The origins of AI customer support [trace](/en/glossary/Debug-Console---Trace/) back to the 1960s [chatbot](/en/glossary/Chatbot/) "ELIZA." Subsequently, in the 1990s, rule-based automated response systems became widespread. In the 2010s, advancements in machine learning and [Deep Learning](/en/glossary/deep-learning/) enabled AI to handle more natural conversations and complex questions.
+The origins of AI customer support [trace](/en/glossary/Debug-Console---Trace/) back to the 1960s [chatbot](/en/glossary/Chatbot/) "ELIZA." Subsequently, in the 1990s, [rule-based](/en/glossary/Rule-based/) automated response systems became widespread. In the 2010s, advancements in machine learning and [Deep Learning](/en/glossary/deep-learning/) enabled AI to handle more natural conversations and complex questions.
 
 From 2016, [Cloud AI](/en/glossary/Cloud-AI/) and [Generative AI](/en/glossary/Generative-AI/) became available, evolving AI customer support as follows:
 
@@ -51,7 +51,7 @@ While North America and Europe lead this field, adoption is also progressing in 
 
 Multimodal AI is attracting attention as a major technology trend in 2025. Multimodal AI can analyze not only text but also images, voice, and video together. This transforms [FAQ](/en/glossary/FAQ/) and manual searches from "reading and searching" tasks into "conversational" experiences.
 
-Using generative AI enables deeper understanding of individual user intent and question context, allowing for personalized responses. Real-time AI, emotion analysis, and [Autonomous AI Agents](/en/glossary/Autonomous-AI-Agents/) are emerging, enabling higher accuracy and more flexible responses than traditional [Rule-based](/en/glossary/Rule-based/) mechanisms.
+Using generative AI enables deeper understanding of individual user intent and question context, allowing for personalized responses. Real-time AI, emotion analysis, and [Autonomous AI Agents](/en/glossary/Autonomous-AI-Agents/) are emerging, enabling higher accuracy and more flexible responses than traditional [Rule-based](/en/glossary/[Rule-based](/en/glossary/Rule-based/)/) mechanisms.
 
 ### Market Trends and Adoption Expansion
 

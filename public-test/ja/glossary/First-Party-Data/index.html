@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ファーストパーティデータ | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/First-Party-Data/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="ファーストパーティデータの収集、管理、活用に関する包括的なガイド。顧客インサイトの強化とプライバシーに準拠したマーケティング戦略の実現方法を解説します。" name="description"/>
+<meta content="ファーストパーティデータ, 顧客データ収集, データプライバシーコンプライアンス, 顧客インサイト, データ管理プラットフォーム" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/First-Party-Data/" property="og:url"/>
+<meta content="ファーストパーティデータ | SmartWeb" property="og:title"/>
+<meta content="ファーストパーティデータの収集、管理、活用に関する包括的なガイド。顧客インサイトの強化とプライバシーに準拠したマーケティング戦略の実現方法を解説します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/First-Party-Data/" name="twitter:url"/>
+<meta content="ファーストパーティデータ | SmartWeb" name="twitter:title"/>
+<meta content="ファーストパーティデータの収集、管理、活用に関する包括的なガイド。顧客インサイトの強化とプライバシーに準拠したマーケティング戦略の実現方法を解説します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ファーストパーティデータ</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ファーストパーティデータ
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          First-Party Data
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ファーストパーティデータの収集、管理、活用に関する包括的なガイド。顧客インサイトの強化とプライバシーに準拠したマーケティング戦略の実現方法を解説します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ファーストパーティデータ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                顧客データ収集
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                データプライバシーコンプライアンス
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                顧客インサイト
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                データ管理プラットフォーム
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ファーストパーティデータとは何か">ファーストパーティデータとは何か?</h2>
+<p>ファーストパーティデータは、組織が顧客、見込み客、ウェブサイト訪問者について収集できる最も価値があり信頼性の高い情報を表します。このデータは、ウェブサイト、モバイルアプリケーション、カスタマーサービスのやり取り、販売時点情報管理システム、メールコミュニケーション、<a data-lb="1" href="/ja/glossary/platform/" title="Facebook、Instagram、TikTokなどのソーシャルメディアプラットフォームを探索します。その定義、ビジネス活用、種類、そしてAIチャットボットと自動化がどのようにエンゲージメントを向上させるかを学びます。">ソーシャルメディアプラットフォーム</a>など、企業が所有するチャネルを通じて、企業とオーディエンスとの直接的なインタラクションから収集されます。外部ソースから購入するサードパーティデータや、パートナー間で共有されるセカンドパーティデータとは異なり、<a data-lb="1" href="/ja/glossary/First-Party-Data/" title="ファーストパーティデータの収集、管理、活用に関する包括的なガイド。顧客インサイトの強化とプライバシーに準拠したマーケティング戦略の実現方法を解説します。">ファーストパーティデータ</a>は、ブランドのデジタル資産や物理的な拠点とのエンゲージメントを選択したユーザーから、明示的または暗黙的な同意を得て収集されます。</p>
+<p>ファーストパーティデータの重要性は、プライバシー規制の強化、サードパーティCookieの廃止、消費者のデータプライバシーに対する意識の高まりにより、近年飛躍的に高まっています。ファーストパーティデータを効果的に収集、管理、活用する組織は、より深い顧客理解、改善された<a data-lb="1" href="/ja/glossary/Personalization/" title="AIチャットボットと自動化におけるパーソナライゼーションは、高度なアルゴリズムを使用して、個々のユーザーの嗜好や行動に合わせてサービス、コンテンツ、インタラクションをカスタマイズします。">パーソナライゼーション</a>機能、外部データソースへの依存度の低減を通じて競争優位性を獲得します。このデータには、人口統計の詳細、行動パターン、購入履歴、<a data-lb="1" href="/ja/glossary/Engagement-Metrics/" title="エンゲージメント指標は、ウェブサイト、アプリ、ソーシャルメディアなどのデジタル資産に対するユーザーのインタラクションを定量化します。クリック、スクロール、共有、コンバージョンなどのユーザー行動を明らかにし、最適化の指針となります。">エンゲージメント指標</a>、設定の好み、<a data-lb="1" href="/ja/glossary/Conversion-Path/" title="顧客がブランドを初めて知ってから購入や目的のアクションを起こすまでの完全な道のりで、ウェブサイト、メール、広告、ソーシャルメディアなど、あらゆる接点でのインタラクションを含みます。">カスタマージャーニー</a>における複数のタッチポイント全体でのインタラクションのタイムスタンプなど、幅広い情報タイプが含まれます。</p>
+<p>ファーストパーティデータの収集は、フォーム、アンケート、アカウント登録を通じた明示的なデータ収集から、ウェブサイト分析、モバイルアプリの使用パターン、<a data-lb="1" href="/ja/glossary/customer-support/" title="カスタマーサポート業務、その重要性、種類、チャネル、そしてAIと自動化の役割について解説します。効果的なカスタマーサポートのためのベストプラクティス、チーム構成、主要指標を学びましょう。">カスタマーサービス</a>のやり取りを通じた暗黙的な収集まで、さまざまなメカニズムを通じて行われます。ファーストパーティデータの品質と精度は、推測またはモデル化された属性ではなく、実際の顧客の行動と好みを反映しているため、通常、<a data-lb="1" href="/ja/glossary/Third-Party-Data/" title="サードパーティデータの包括的ガイド:ビジネスインテリジェンスにおける外部データセットの活用に関する情報源、メリット、課題、ベストプラクティスを解説します。">外部データソース</a>のそれを上回ります。データ収集と顧客インタラクションの間のこの直接的な関係により、組織は信頼を構築し、パーソナライズされた体験を提供し、GDPR、CCPA、その他の地域の<a data-lb="1" href="/ja/glossary/Encryption-at-Rest/" title="保存データの暗号化に関する包括的なガイド - 暗号化手法によるストレージデータの保護、実装戦略、セキュリティのベストプラクティスについて解説します。">データ保護</a>法などのプライバシー規制への準拠を維持しながら、長期的な顧客関係を発展させる機会を創出します。</p>
+<h2 id="コアデータ収集テクノロジー">コアデータ収集テクノロジー</h2>
+<p>**<a data-lb="1" href="/ja/glossary/Customer-Data-Platform--CDP-/" title="カスタマーデータプラットフォーム(CDP)の包括的ガイド - 統合された顧客データ管理、リアルタイムパーソナライゼーション、オムニチャネルマーケティングソリューション。">カスタマーデータプラットフォーム</a>(CDP)**は、複数のソースからのファーストパーティデータを統合する集中リポジトリとして機能し、包括的な顧客プロファイルを作成し、マーケティングチャネル全体でリアルタイムの<a data-lb="1" href="/ja/glossary/Reverse-ETL/" title="リバースETLの包括的ガイド:データウェアハウスから運用システムへデータを移動し、リアルタイムのビジネス活性化と顧客エンゲージメントを実現する方法を解説します。">データアクティベーション</a>を可能にします。これらのプラットフォームは、効果的なファーストパーティデータ管理に不可欠なIDレゾリューション機能と<a data-lb="1" href="/ja/glossary/Metadata-Management/" title="データ資産を効果的に整理し統制するための、メタデータ管理システム、プロセス、ベストプラクティスに関する包括的なガイド。">データガバナンス</a>機能を提供します。</p>
+<p><strong>ウェブ分析とトラッキングシステム</strong>は、ページビュー、クリックパターン、セッション時間、コンバージョンイベント、<a data-lb="1" href="/ja/glossary/User-Flow/" title="アプリやウェブサイトでユーザーがタスクを完了するまでの段階的な経路を示すビジュアル図で、デザイナーが問題を特定し、体験を改善するのに役立ちます。">ユーザーフロー</a>分析など、ウェブサイトのインタラクションを通じて<a data-lb="1" href="/ja/glossary/Behavioral-Trigger/" title="ボタンのクリックやショッピングカートの放棄など、ユーザーの行動に自動的に応答し、タイムリーでパーソナライズされたメッセージや体験を提供するシステム。">ユーザー行動</a>データをキャプチャします。最新の分析プラットフォームは、準拠したデータ収集を確保するための強化されたプライバシー制御と同意管理機能を提供します。</p>
+<p><strong>顧客関係管理(CRM)システム</strong>は、連絡先情報、コミュニケーション履歴、営業活動、関係ステータスなど、顧客インタラクションデータを保存および管理します。<a data-lb="1" href="/ja/glossary/CRM/" title="CRM(顧客関係管理)システムは、顧客とのやり取りを管理・最適化するソフトウェアです。データを一元化し、プロセスを自動化し、顧客エンゲージメントとビジネスパフォーマンスを向上させるためのインサイトを提供します。">CRM</a>プラットフォームは、顧客ライフサイクルデータと関係インテリジェンスの主要なリポジトリとして機能します。</p>
+<p><strong>マーケティングオートメーションプラットフォーム</strong>は、メールキャンペーン、<a data-lb="1" href="/ja/glossary/Instagram/" title="Instagramは、写真と動画の共有に特化したビジュアル型ソーシャルメディアプラットフォームです。機能、ビジネスツール、インフルエンサーマーケティング、オーディエンス構築について学びましょう。">ソーシャルメディア</a>のインタラクション、マルチチャネルマーケティング活動からのエンゲージメントデータを収集し、顧客の反応と行動トリガーを追跡します。これらのシステムは、顧客の好みとコミュニケーションの効果に関する詳細な洞察を提供します。</p>
+<p><strong>販売時点情報管理と取引システム</strong>は、取引履歴、製品の好み、支払い方法、季節的な購買パターンなど、貴重な購入データを生成します。この取引データは、顧客価値と購買行動に関する具体的な洞察を提供します。</p>
+<p><strong>モバイルアプリケーション分析</strong>は、機能の使用、セッションパターン、アプリ内購入、デバイス固有の情報など、モバイルアプリ内のユーザー行動をキャプチャします。モバイルデータは、異なるコンテキストにわたる顧客の好みとエンゲージメントパターンに関するユニークな洞察を提供します。</p>
+<p><strong>アンケートとフィードバックプラットフォーム</strong>は、構造化されたアンケートとフィードバックメカニズムを通じて、顧客の意見、満足度スコア、好みデータ、質的洞察を直接収集することを可能にします。この明示的なデータ収集は、行動データの解釈に貴重なコンテキストを提供します。</p>
+<h2 id="ファーストパーティデータの仕組み">ファーストパーティデータの仕組み</h2>
+<p>ファーストパーティデータのライフサイクルは、<strong>データ収集戦略の策定</strong>から始まります。組織は主要な<a data-lb="1" href="/ja/glossary/Touchpoint/" title="カスタマーエクスペリエンスにおけるタッチポイントの包括的ガイド。デジタルおよび物理的なインタラクションポイント、最適化戦略、実装のベストプラクティスを網羅しています。">タッチポイント</a>を特定し、データ収集の目的を定義し、プライバシーコンプライアンスフレームワークを確立します。この基礎的なステップは、ビジネス目標と規制要件に沿った体系的で目的のあるデータ収集を保証します。</p>
+<p><strong>トラッキングメカニズムの実装</strong>には、分析ツールの展開、<a data-lb="1" href="/ja/glossary/Conversion-Tracking/" title="ウェブサイト上での購入や登録などの特定のユーザーアクションを監視・測定するシステムで、企業がマーケティングキャンペーンの効果を理解するのに役立ちます。">コンバージョントラッキング</a>の設定、顧客識別システムの構成、デジタルおよび物理チャネル全体でのデータキャプチャポイントの確立が含まれます。この技術的実装により、包括的なデータ収集に必要なインフラストラクチャが作成されます。</p>
+<p><strong>データの取り込みと統合</strong>プロセスは、複数のソースからの情報を集中データリポジトリに統合し、データ検証、重複排除、品質チェックを実行します。このステップにより、データの正確性が確保され、断片化されたタッチポイントのインタラクションから統一された顧客レコードが作成されます。</p>
+<p><strong>IDレゾリューションと顧客マッチング</strong>活動は、デバイスとチャネル全体で個々の顧客にデータポイントをリンクし、包括的な顧客プロファイルを作成し、クロスチャネルアトリビューションを可能にします。このプロセスは、完全なカスタマージャーニーを理解し、一貫した体験を提供するために重要です。</p>
+<p><strong>データ処理とエンリッチメント</strong>には、収集されたデータのクリーニング、標準化、追加属性、計算フィールド、派生洞察による強化が含まれます。このステップは、生データを分析とアクティベーションに適した実用的な顧客インテリジェンスに変換します。</p>
+<p><strong>セグメンテーションとオーディエンス作成</strong>は、処理されたデータを利用して顧客グループを特定し、行動セグメントを作成し、人口統計、行動、好みに基づいてターゲットオーディエンスリストを開発します。このセグメンテーションにより、パーソナライズされたマーケティングと<a data-lb="1" href="/ja/glossary/Omnichannel-Strategy/" title="すべてのタッチポイントでシームレスな顧客体験を実現するための、オムニチャネル戦略の実装、メリット、課題、ベストプラクティスに関する包括的なガイド。">顧客体験</a>戦略が可能になります。</p>
+<p><strong>データのアクティベーションと活用</strong>は、ファーストパーティデータの洞察をマーケティングキャンペーン、<a data-lb="1" href="/ja/glossary/Personalization-Engine/" title="パーソナライゼーションエンジンの包括的ガイド:データ分析と機械学習アルゴリズムを通じてカスタマイズされたユーザー体験を提供するAI駆動型システムです。">パーソナライゼーションエンジン</a>、カスタマーサービスのインタラクション、ビジネス意思決定プロセスに適用します。このアクティベーションステップは、改善された顧客体験とビジネス成果を通じて、収集されたデータの価値を実現します。</p>
+<p><strong>パフォーマンス測定と最適化</strong>には、データ活用の効果の分析、キャンペーンパフォーマンスの測定、データ収集とアクティベーションの改善機会の特定が含まれます。この継続的な最適化により、ファーストパーティデータ投資からの最大価値抽出が保証されます。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>強化された顧客理解</strong>により、組織は仮定や外部データソースではなく、実際の行動と好みに基づいて包括的な顧客プロファイルを開発できます。この深い理解により、より効果的な顧客<a data-lb="1" href="/ja/glossary/Community-Building/" title="プラットフォーム全体でエンゲージメントの高い持続可能なコミュニティを構築するための、包括的な戦略、テクニック、ベストプラクティスガイド。">エンゲージメント戦略</a>と製品開発の意思決定が促進されます。</p>
+<p><strong>改善されたパーソナライゼーション機能</strong>により、ブランドは個々の顧客データと行動パターンに基づいて、カスタマイズされた体験、関連性の高いコンテンツ推奨、カスタマイズされた製品提供を提供できます。パーソナライゼーションは、より高い<a data-lb="1" href="/ja/glossary/Social-Media-Metrics/" title="ソーシャルメディア指標とは、いいね、シェア、売上結果など、オンラインでのコンテンツパフォーマンスを追跡する測定値です。企業が何が効果的かを理解し、マーケティングを改善するのに役立ちます。">エンゲージメント率</a>と<a data-lb="1" href="/ja/glossary/Service-Recovery/" title="サービスリカバリー:問題が発生した後、企業がサービスの問題を修正し、顧客満足度を回復するために取る行動。ネガティブな体験をロイヤルティを構築する機会に変えるプロセスです。">顧客満足度</a>レベルを促進します。</p>
+<p><strong>データの精度と信頼性の向上</strong>は、直接的なデータ収集関係から生じ、中間的な<a data-lb="1" href="/ja/glossary/Data-Quality/" title="正確で完全、かつ信頼性の高いデータ資産を確保するための、データ品質管理、評価フレームワーク、ベストプラクティスに関する包括的なガイド。">データ品質</a>の問題を排除し、情報が実際の顧客特性と行動を反映することを保証します。この<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">精度</a>により、意思決定の信頼性とキャンペーンの効果が向上します。</p>
+<p><strong>プライバシーコンプライアンスと制御の改善</strong>により、組織はデータ収集慣行、同意管理、プライバシー規制の遵守を直接監督できます。ファーストパーティデータ収集には、通常、より明確な同意メカニズムと透明なデータ使用ポリシーが含まれます。</p>
+<p><strong>サードパーティデータへの依存度の低減</strong>により、時間の経過とともに利用できなくなったり、高価になったり、精度が低下したりする可能性のある外部データソースへの依存が減少します。この独立性は、戦略的優位性とコスト削減を提供し、データ品質の一貫性を向上させます。</p>
+<p><strong>マーケティング投資収益率の向上</strong>は、正確な顧客洞察に基づく、より正確なターゲティング、メディアの無駄の削減、キャンペーンパフォーマンスの向上を通じて発生します。ファーストパーティデータにより、より効率的な<a data-lb="1" href="/ja/glossary/Support-Capacity-Planning/" title="サポート容量計画とは、カスタマーサポートのニーズを予測し、サービス品質目標を達成しながら効率的に対応するためのスタッフとリソースを配分するプロセスです。">リソース配分</a>とマーケティング支出の最適化が可能になります。</p>
+<p><strong>より強固な顧客関係</strong>は、透明なデータ慣行、関連性の高いコミュニケーション、個々の顧客のニーズと好みの理解を示すパーソナライズされた体験を通じて発展します。これらの関係は、<a data-lb="1" href="/ja/glossary/Customer-Retention/" title="顧客維持戦略、指標、ベストプラクティスに関する包括的なガイド。長期的な顧客関係の構築とビジネス成長のための実践的な手法を解説します。">顧客ロイヤルティ</a>とライフタイムバリューを促進します。</p>
+<p><strong>競争優位性の創出</strong>は、競合他社が利用できないユニークな顧客洞察から生まれ、独自のデータ資産に基づく差別化されたポジショニング、優れた顧客体験、より効果的な市場戦略を可能にします。</p>
+<p><strong>データ管理におけるコスト効率</strong>は、外部データの購入に関連する費用を削減しながら、ビジネス運営のためのより高品質な情報を提供します。内部データの収集と管理は、多くの場合、外部データの取得よりもコスト効率が高いことが証明されています。</p>
+<p><strong>リアルタイム意思決定機能</strong>により、顧客の行動への即座の対応、動的な<a data-lb="1" href="/ja/glossary/Content-Refresh/" title="コンテンツリフレッシュ:ゼロから全く新しいコンテンツを作成するのではなく、既存のWebコンテンツを更新・改善し、正確性、関連性、検索結果での可視性を維持するプロセス。">コンテンツ最適化</a>、履歴的な外部情報ではなく現在のデータに基づく機敏なマーケティング調整が可能になります。この応答性により、顧客体験とビジネスの俊敏性が向上します。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>Eコマースパーソナライゼーション</strong>は、閲覧履歴、購入パターン、顧客の好みを活用して、製品を推奨し、ウェブサイト体験をカスタマイズし、個々の買い物客のコンバージョンパスを最適化します。</p>
+<p><strong>メールマーケティングの最適化</strong>は、エンゲージメントデータ、人口統計情報、行動トリガーを活用して、ターゲットを絞ったメールキャンペーンを作成し、配信率を向上させ、<a data-lb="1" href="/ja/glossary/Engagement-Score/" title="エンゲージメントスコアとは何か、このコンポジット指標がユーザー、顧客、または従業員のコンテンツ、製品、サービスとのインタラクションをどのように定量化するか、そしてその戦略的な活用方法について学びます。">顧客エンゲージメント</a>を高めます。</p>
+<p><strong>顧客維持プログラム</strong>は、購入履歴、エンゲージメントパターン、ライフサイクルステージデータを分析して、リスクのある顧客を特定し、ターゲットを絞った維持戦略とロイヤルティプログラムを開発します。</p>
+<p><strong>コンテンツマーケティング戦略</strong>は、オーディエンスの関心、コンテンツ消費パターン、エンゲージメント指標を使用して、関連性の高いコンテンツを作成し、公開スケジュールを最適化し、コンテンツパフォーマンスを向上させます。</p>
+<p><strong>広告キャンペーンのターゲティング</strong>は、顧客セグメント、類似モデリング、行動データを適用して、デジタルチャネル全体で有料広告の効果を向上させ、顧客獲得コストを削減します。</p>
+<p><strong>製品開発の洞察</strong>は、<a data-lb="1" href="/ja/glossary/Voice-of-Customer--VoC-/" title="顧客インサイトとフィードバックを収集するための、ボイス・オブ・カスタマー（VoC）プログラム、方法論、実装戦略に関する包括的なガイド。">顧客フィードバック</a>、使用パターン、好みデータを組み込んで、製品ロードマップ、機能の優先順位付け、市場機会の特定に情報を提供します。</p>
+<p><strong>カスタマーサービスの強化</strong>は、インタラクション履歴、好みデータ、行動洞察を活用して、パーソナライズされたサポート体験とプロアクティブなカスタマーサービス介入を提供します。</p>
+<p><strong>価格戦略の最適化</strong>は、購買行動、価格感度指標、顧客価値データを分析して、動的価格戦略とプロモーションキャンペーンの効果を開発します。</p>
+<p><strong>クロスセリングとアップセリング</strong>は、購入履歴、製品親和性データ、顧客ライフサイクルステージに基づいて機会を特定し、平均注文額と顧客ライフタイムバリューを増加させます。</p>
+<p><strong>オムニチャネル体験の調整</strong>は、タッチポイント全体で<a data-lb="1" href="/ja/glossary/Customer-Context/" title="カスタマーコンテキストの包括的ガイド - 顧客データ、行動、嗜好を理解し、パーソナライズされた体験を提供してビジネス成長を促進する方法について解説します。">顧客データ</a>を同期して、一貫した体験とオンラインとオフラインのインタラクション間のシームレスな移行を提供します。</p>
+<h2 id="データソース比較表">データソース比較表</h2>
+<table>
+<thead>
+<tr>
+<th>データソース</th>
+<th>収集方法</th>
+<th>データ品質</th>
+<th>プライバシー制御</th>
+<th>コスト</th>
+<th>更新頻度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ウェブサイト分析</td>
+<td>自動トラッキング</td>
+<td>高精度</td>
+<td>完全制御</td>
+<td>低い継続コスト</td>
+<td>リアルタイム</td>
+</tr>
+<tr>
+<td>CRMシステム</td>
+<td>手動/自動入力</td>
+<td>非常に高い</td>
+<td>完全制御</td>
+<td>中程度のセットアップコスト</td>
+<td>継続的</td>
+</tr>
+<tr>
+<td>メールプラットフォーム</td>
+<td>エンゲージメントトラッキング</td>
+<td>高信頼性</td>
+<td>直接制御</td>
+<td>低い運用コスト</td>
+<td>リアルタイム</td>
+</tr>
+<tr>
+<td>モバイルアプリ</td>
+<td>ユーザーインタラクションデータ</td>
+<td>高精度</td>
+<td>完全監督</td>
+<td>中程度の開発コスト</td>
+<td>即時</td>
+</tr>
+<tr>
+<td>アンケートデータ</td>
+<td>直接顧客入力</td>
+<td>最高精度</td>
+<td>完全透明性</td>
+<td>変動コスト</td>
+<td>定期的</td>
+</tr>
+<tr>
+<td>取引システム</td>
+<td>購入トラッキング</td>
+<td>完璧な精度</td>
+<td>完全制御</td>
+<td>低い増分コスト</td>
+<td>即座</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>データ品質管理</strong>には、複数の収集ポイントとシステム全体での正確性、完全性、一貫性への継続的な注意が必要です。データ品質の低さは、分析の効果を損ない、誤ったビジネス意思決定につながる可能性があります。</p>
+<p><strong>プライバシー規制のコンプライアンス</strong>には、組織が事業を展開するさまざまな管轄区域にわたる進化するプライバシー法、同意管理要件、データ保護義務の継続的な監視が必要です。</p>
+<p><strong>技術統合の複雑さ</strong>には、異種システムの接続、データ形式の管理、データの整合性とセキュリティ基準を維持しながらプラットフォーム間のシームレスなデータフローの確保が含まれます。</p>
+<p><strong>顧客同意管理</strong>には、データ収集慣行に関する透明なコミュニケーション、明確なオプトイン/オプトアウトメカニズムの提供、データライフサイクル全体を通じた顧客のプライバシー設定の尊重が必要です。</p>
+<p><strong>データセキュリティと保護</strong>には、機密性の高い顧客情報を侵害や不正アクセスから保護するための堅牢なサイバーセキュリティ対策、アクセス制御、データ暗号化が必要です。</p>
+<p><strong>スケーラビリティとパフォーマンスの問題</strong>は、データ量が増加するにつれて発生し、システムパフォーマンスとデータ処理能力を維持するためのインフラストラクチャ投資と最適化戦略が必要になります。</p>
+<p><strong>リソースとスキルの要件</strong>には、データスペシャリストの雇用、既存スタッフのトレーニング、効果的なファーストパーティデータ管理と活用に必要なテクノロジープラットフォームへの投資が含まれます。</p>
+<p><strong>クロスチャネルデータアトリビューション</strong>は、正確なカスタマージャーニーマッピングとコンバージョンアトリビューションを維持しながら、複数のタッチポイントとデバイス全体で顧客インタラクションを接続する際の課題を提示します。</p>
+<p><strong>データガバナンスと標準化</strong>には、一貫性とコンプライアンスを確保するために、組織全体でのデータ収集、保存、使用、保持のためのポリシー、手順、基準の確立が必要です。</p>
+<p><strong>投資収益率の測定</strong>には、ファーストパーティデータイニシアチブのビジネス価値を定量化し、データ機能への継続的な投資を正当化するための指標と方法論の開発が含まれます。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>包括的なデータ戦略の策定</strong>により、データ収集の目的をビジネス目標と整合させ、主要業績評価指標を特定し、データ管理と活用のための明確なガバナンスフレームワークを確立します。</p>
+<p><strong>段階的なデータ収集の実装</strong>により、価値交換を通じて顧客情報を徐々に収集し、初期のインタラクション中にユーザーに広範なデータリクエストで圧倒することを避けます。</p>
+<p><strong>透明なプライバシー慣行の確保</strong>により、明確なプライバシーポリシー、明示的な同意メカニズム、データ使用に関する定期的なコミュニケーションを通じて、顧客の信頼を構築し、コンプライアンスを維持します。</p>
+<p><strong>データ品質基準の確立</strong>には、検証ルール、クレンジング手順、定期的な監査が含まれ、正確な分析と意思決定をサポートする高品質なデータ資産を維持します。</p>
+<p><strong>統一された顧客プロファイルの作成</strong>により、チャネルとデバイス全体でデータポイントを接続するIDレゾリューションプロセスを実装し、包括的な顧客理解を発展させます。</p>
+<p><strong>適切なテクノロジーインフラストラクチャへの投資</strong>には、スケーラブルなデータ収集、処理、アクティベーションをサポートするカスタマーデータプラットフォーム、分析ツール、統合機能が含まれます。</p>
+<p><strong>データベストプラクティスに関するスタッフのトレーニング</strong>により、データプライバシー、品質管理、活用技術をカバーする定期的な教育プログラムを通じて、組織全体のデータコンピテンシーを確保します。</p>
+<p><strong>リアルタイムデータ処理の実装</strong>により、顧客の行動への即座の対応と体験とキャンペーンの動的最適化を可能にする機能を実現します。</p>
+<p><strong>データ保持ポリシーの確立</strong>により、ビジネスニーズとプライバシー要件およびストレージコストのバランスを取りながら、規制上の保持要件へのコンプライアンスを確保します。</p>
+<p><strong>継続的な監視と最適化</strong>により、定期的なパフォーマンスレビュー、データ品質評価、プロセス改善を通じて、ファーストパーティデータ投資の価値を最大化します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>機械学習の統合</strong>は、予測分析、顧客ライフタイムバリューモデリング、顧客タッチポイント全体での大規模な自動パーソナライゼーションのために、ファーストパーティデータに人工知能アルゴリズムを適用します。</p>
+<p><strong>リアルタイムパーソナライゼーションエンジン</strong>は、ストリーミングデータ処理と意思決定エンジンを活用して、即座の顧客行動とコンテキストに基づいて動的なコンテンツ、製品推奨、体験を提供します。</p>
+<p><strong>高度なアトリビューションモデリング</strong>は、複雑なマルチチャネルカスタマージャーニー全体でコンバージョンと顧客アクションを正確にアトリビュートするために、洗練された統計手法と機械学習を採用します。</p>
+<p><strong>予測顧客分析</strong>は、履歴ファーストパーティデータパターンを活用して顧客行動を予測し、解約リスクを特定し、プロアクティブなエンゲージメント戦略のための将来の購入確率を予測します。</p>
+<p><strong>クロスデバイスIDレゾリューション</strong>は、包括的なジャーニー理解のために、複数のデバイスとプラットフォーム全体で顧客インタラクションを接続するための確率的および決定論的マッチング技術を実装します。</p>
+<p><strong>動的セグメンテーションとマイクロターゲティング</strong>は、リアルタイムの行動変化に基づいて自動的に更新される流動的な顧客セグメントを作成し、マーケティングキャンペーンのための非常に具体的なオーディエンスターゲティングを可能にします。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p><strong>プライバシー第一のデータ収集</strong>は、ゼロパーティデータ戦略、強化された同意管理、効果的なデータ活用を可能にしながら顧客の信頼を維持するプライバシー保護分析技術を強調します。</p>
+<p><strong>人工知能の統合</strong>は、自動データ品質管理、インテリジェントな顧客洞察生成、リアルタイムで個々の顧客の好みに適応するAI駆動のパーソナライゼーションを含むように拡大します。</p>
+<p><strong>エッジコンピューティングとデータ処理</strong>により、より高速なデータ処理、パーソナライゼーション配信の遅延の削減、ローカライズされたデータ処理機能を通じた改善されたプライバシーが可能になります。</p>
+<p><strong>ブロックチェーンベースのデータ管理</strong>は、ファーストパーティデータエコシステムのための強化されたデータセキュリティ、透明な同意追跡、分散型ID管理ソリューションを提供する可能性があります。</p>
+<p><strong>音声と会話データ</strong>は、音声アシスタントと会話インターフェースが専門的な収集と分析アプローチを必要とする新しいタイプのファーストパーティデータを生成するにつれて、ますます重要になります。</p>
+<p><strong>拡張現実とIoT統合</strong>は、没入型体験と接続されたデバイスのインタラクションを通じて新しいファーストパーティデータソースを作成し、顧客行動理解の範囲を拡大します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Interactive Advertising Bureau. (2023). “First-Party Data Marketing Guide.” IAB Tech Lab Standards and Guidelines.</p>
+</li>
+<li>
+<p>Salesforce Research. (2023). “State of the Connected Customer Report.” Salesforce Customer Success Platform.</p>
+</li>
+<li>
+<p>Google Analytics Intelligence. (2023). “Privacy-First Marketing with First-Party Data.” Google Marketing Platform Documentation.</p>
+</li>
+<li>
+<p>Adobe Experience Cloud. (2023). “Customer Data Platform Implementation Guide.” Adobe Digital Experience Solutions.</p>
+</li>
+<li>
+<p>Gartner Research. (2023). “Magic Quadrant for Customer Data Platforms.” Gartner Digital Marketing Research.</p>
+</li>
+<li>
+<p>McKinsey &amp; Company. (2023). “The Value of Getting Personalization Right.” McKinsey Digital Strategy Insights.</p>
+</li>
+<li>
+<p>Forrester Research. (2023). “The Forrester Wave: Customer Data Platforms.” Forrester Marketing Technology Research.</p>
+</li>
+<li>
+<p>Privacy International. (2023). “Global Data Protection Regulation Compliance Guide.” Privacy Rights and Data Protection Resources.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Zero-Party-Data/">
+                    ゼロパーティデータ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ゼロパーティデータの包括的ガイド:パーソナライゼーションとプライバシー準拠のマーケティング戦略を推進する、顧客が自ら共有する情報について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Zero-Party-Data/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/CRM-Analytics/">
+                    CRM分析
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    CRM分析は、顧客データを分析してパターンやインサイトを明らかにするツールです。企業が顧客行動を理解し、関係性を改善するためのより良い意思決定を支援します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/CRM-Analytics/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Customer-Feedback-Analysis/">
+                    カスタマーフィードバック分析
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    顧客データから実用的なインサイトを抽出するための、カスタマーフィードバック分析の手法、ツール、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Customer-Feedback-Analysis/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Customer-Profile/">
+                    カスタマープロファイル
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    カスタマープロファイルの包括的ガイド:作成、管理、そしてビジネスインテリジェンスとパーソナライゼーションを強化するための最適化戦略。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Customer-Profile/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Voice-of-Customer--VoC-/">
+                    ボイス・オブ・カスタマー（VoC）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    顧客インサイトとフィードバックを収集するための、ボイス・オブ・カスタマー（VoC）プログラム、方法論、実装戦略に関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Voice-of-Customer--VoC-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/first-party-data/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

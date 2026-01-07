@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>クエリ拡張 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Query-Expansion/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Query-Expansion/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Query-Expansion/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Query-Expansion/" hreflang="x-default" rel="alternate"/>
+<meta content="クエリ拡張は、ユーザーの検索クエリに同義語や関連用語を追加して再構成することで、検索エンジン、AIチャットボット、RAGシステムにおける関連性を向上させ、意図のギャップを埋める手法です。" name="description"/>
+<meta content="クエリ拡張, 情報検索, AIチャットボット, RAG, 検索エンジン" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Query-Expansion/" property="og:url"/>
+<meta content="クエリ拡張 | SmartWeb" property="og:title"/>
+<meta content="クエリ拡張は、ユーザーの検索クエリに同義語や関連用語を追加して再構成することで、検索エンジン、AIチャットボット、RAGシステムにおける関連性を向上させ、意図のギャップを埋める手法です。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Query-Expansion/" name="twitter:url"/>
+<meta content="クエリ拡張 | SmartWeb" name="twitter:title"/>
+<meta content="クエリ拡張は、ユーザーの検索クエリに同義語や関連用語を追加して再構成することで、検索エンジン、AIチャットボット、RAGシステムにおける関連性を向上させ、意図のギャップを埋める手法です。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">クエリ拡張</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        クエリ拡張
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Query Expansion
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          クエリ拡張は、ユーザーの検索クエリに同義語や関連用語を追加して再構成することで、検索エンジン、AIチャットボット、RAGシステムにおける関連性を向上させ、意図のギャップを埋める手法です。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                クエリ拡張
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                情報検索
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIチャットボット
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                RAG
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                検索エンジン
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="クエリ拡張とは何か">クエリ拡張とは何か?</h2>
+<p><a data-lb="1" href="/ja/glossary/Query-Expansion/" title="クエリ拡張は、ユーザーの検索クエリに同義語や関連用語を追加して再構成することで、検索エンジン、AIチャットボット、RAGシステムにおける関連性を向上させ、意図のギャップを埋める手法です。">クエリ拡張</a>は、情報検索および検索システムにおける技術で、ユーザーの元のクエリに関連用語、同義語、または文脈的に関連するフレーズを追加することで、検索精度と<a data-lb="1" href="/ja/glossary/Precision-and-Recall/" title="適合率と再現率は、分類システムや情報検索システムを評価するための中核的な指標です。適合率は正しい陽性予測を測定し、再現率はすべての実際の陽性を見つけ出します。">再現率</a>を大幅に向上させます。例えば、「心臓病」を検索すると、「心血管疾患」「心筋梗塞」「心臓発作」などの用語が自動的に含まれ、より広範囲の関連文書を捕捉できます。</p>
+<p>クエリ拡張は、現代の検索エンジン、エンタープライズ検索、医学文献データベース、法律検索システム、<a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">AIチャットボット</a>、そしてユーザークエリを多様で大規模な情報リソースにマッチングする必要があるあらゆるシステムにとって不可欠です。これは人間の言語が持つ自然な変動性と曖昧性を補い、人間の意図と機械の理解の間のコミュニケーションギャップを埋めます。</p>
+<p>この技術は3つの基本的な課題に対処します:同義性(異なる単語が同じ意味を持つこと)、多義性(同じ単語が異なる意味を持つこと)、文脈的マッチング(文字通りのクエリを超えてユーザーの意図を理解すること)。意味的に関連する用語でクエリを自動的に拡張することで、システムは語彙の不一致を克服し、元のクエリとは異なる用語を使用している関連文書を取得できます。</p>
+<h2 id="クエリ拡張が必要な理由">クエリ拡張が必要な理由</h2>
+<h3 id="語彙不一致の問題">語彙不一致の問題</h3>
+<p>ユーザーは関連文書に存在する単語とは異なる単語を使用することがよくあります。例えば、ユーザーが「格安航空券」を検索すると、「割引航空運賃」や「予算旅行」を使用している文書を見逃す可能性があります。この語彙の不一致は、検索と情報検索における中心的な問題です。</p>
+<h3 id="短く曖昧なクエリ">短く曖昧なクエリ</h3>
+<p>多くのユーザークエリは短いか曖昧です。「Spring」は季節、コイル、またはJavaフレームワークを指す可能性があります。文脈がなければ、システムはユーザーの真の意図を推測するのに苦労します。</p>
+<h3 id="暗黙的なユーザー意図">暗黙的なユーザー意図</h3>
+<p>ユーザーはすべての文脈的詳細を指定することはほとんどありません。「最高のレストラン」の検索は、場所、料理、予算、営業時間を暗示している可能性がありますが、これらのいずれも指定されていません。クエリ拡張はこのギャップを埋めます。</p>
+<h2 id="タイプと技術">タイプと技術</h2>
+<h3 id="古典的技術">古典的技術</h3>
+<p><strong>同義語拡張:</strong> 元の用語の同義語を追加(「car」→「automobile」「vehicle」)</p>
+<p><strong>ステミング/レンマ化:</strong> 単語を語根形式に縮小(「running」「ran」「runs」→「run」)</p>
+<p><strong>関連用語拡張:</strong> 文脈的に関連する用語を追加(「diabetes」→「insulin」「glucose」)</p>
+<p><strong>自動シソーラス生成:</strong> キュレーションされた、または機械構築されたシソーラスを使用</p>
+<p><strong>文脈的拡張:</strong> クエリの文脈またはユーザープロファイルを考慮(例:開発者向けの「Spring」を「Javaフレームワーク」として)</p>
+<h3 id="高度なai駆動技術">高度な/AI駆動技術</h3>
+<p><strong>適合性フィードバック:</strong> ユーザーが結果を関連性ありまたはなしとマークし、システムが拡張を改善</p>
+<p><strong>疑似適合性フィードバック:</strong> システムが上位N件の結果を関連性ありと仮定し、拡張用の用語を抽出</p>
+<p><strong>意味的埋め込み:</strong> <a data-lb="1" href="/ja/glossary/Word2Vec/" title="Word2Vecニューラルネットワークモデルの包括的なガイド。NLPアプリケーション向けのCBOWおよびSkip-gramアーキテクチャを含む単語埋め込み技術について解説します。">Word2Vec</a>、GloVe、BERTなどのモデルを使用して意味的に類似した用語を見つける</p>
+<p><strong>共起分析:</strong> 関連文書で頻繁に一緒に現れる用語を特定</p>
+<p><strong>ハイブリッドアプローチ:</strong> 手動キュレーションと自動拡張を組み合わせる</p>
+<h3 id="実装アプローチ">実装アプローチ</h3>
+<p><strong>手動拡張:</strong> 人間の専門家によってキュレーション(法律、医学で一般的)</p>
+<p><strong>自動拡張:</strong> データ駆動型でアルゴリズム的</p>
+<p><strong>ハイブリッド拡張:</strong> 人間の専門知識と自動化を融合</p>
+<h2 id="包括的技術リファレンス">包括的技術リファレンス</h2>
+<table>
+<thead>
+<tr>
+<th>技術</th>
+<th>動作方法</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同義語拡張</td>
+<td>同義語を追加</td>
+<td>「car」→「automobile」「vehicle」</td>
+</tr>
+<tr>
+<td>ステミング/レンマ化</td>
+<td>単語形式を正規化</td>
+<td>「running」→「run」</td>
+</tr>
+<tr>
+<td>関連用語拡張</td>
+<td>文脈的に関連する用語を追加</td>
+<td>「heart attack」→「myocardial infarction」</td>
+</tr>
+<tr>
+<td>適合性フィードバック</td>
+<td>ユーザーフィードバックから拡張を改善</td>
+<td>クリックされた文書が追加用語に影響</td>
+</tr>
+<tr>
+<td>埋め込みベース拡張</td>
+<td>ベクトル空間での意味的類似性を使用</td>
+<td>「<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>」→「artificial intelligence」「ML」</td>
+</tr>
+<tr>
+<td>共起分析</td>
+<td>頻繁に一緒に見つかる用語を追加</td>
+<td>「solar」+「energy」</td>
+</tr>
+<tr>
+<td>文脈的拡張</td>
+<td>ユーザー/場所/文脈を活用</td>
+<td>「Spring」+開発者プロファイル→「Java」</td>
+</tr>
+</tbody>
+</table>
+<h2 id="クエリ拡張の動作方法">クエリ拡張の動作方法</h2>
+<h3 id="基本パイプライン">基本パイプライン</h3>
+<p><strong>1. クエリ分析:</strong> システムがユーザーのクエリを受信(例:「気候変動」)</p>
+<p><strong>2. 用語選択:</strong> 主要用語、同義語、可能な曖昧性を特定</p>
+<p><strong>3. 拡張生成:</strong> 関連用語/フレーズを生成(例:「地球温暖化」「温室効果ガス排出」)</p>
+<p><strong>4. クエリ再構成:</strong> 元の用語と拡張用語を新しいクエリに結合</p>
+<p><strong>5. 検索実行:</strong> 拡張されたクエリを実行して、より広範で関連性の高い結果セットを取得</p>
+<h3 id="ragシステム実装">RAGシステム実装</h3>
+<p>AI駆動パイプライン、特に検索拡張生成(<a data-lb="1" href="/ja/glossary/RAG/" title="RAG(Retrieval-Augmented Generation)は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。">RAG</a>)システムの場合、プロセスにはクエリをベクトルとしてエンコードし、意味的に関連する文書を取得し、ランク付けし、クエリと取得した文書の両方を言語モデルに供給して最終的な回答を生成することが含まれます。</p>
+<p><strong>Pythonの例(Haystack):</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span>query_expander = QueryExpander()
+</span></span><span style="display:flex;"><span>retriever = MultiQueryInMemoryBM25Retriever(InMemoryBM25Retriever(document_store=doc_store))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>expanded_retrieval_pipeline = Pipeline()
+</span></span><span style="display:flex;"><span>expanded_retrieval_pipeline.add_component(<span style="color:#0ff;font-weight:bold">"expander"</span>, query_expander)
+</span></span><span style="display:flex;"><span>expanded_retrieval_pipeline.add_component(<span style="color:#0ff;font-weight:bold">"keyword_retriever"</span>, retriever)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>expanded_retrieval_pipeline.connect(<span style="color:#0ff;font-weight:bold">"expander.queries"</span>, <span style="color:#0ff;font-weight:bold">"keyword_retriever.queries"</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>results = expanded_retrieval_pipeline.run({<span style="color:#0ff;font-weight:bold">"expander"</span>: {<span style="color:#0ff;font-weight:bold">"query"</span>: <span style="color:#0ff;font-weight:bold">"climate change"</span>}})
+</span></span></code></pre></div><h2 id="歴史的進化">歴史的進化</h2>
+<table>
+<thead>
+<tr>
+<th>時代</th>
+<th>主要技術</th>
+<th>特徴/強み</th>
+<th>制限事項</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初期Web(1990年代)</td>
+<td>同義語リスト</td>
+<td>高速、予測可能</td>
+<td>硬直的、文脈非対応</td>
+</tr>
+<tr>
+<td>2000年代</td>
+<td>統計分析</td>
+<td>データ駆動、一部パーソナライゼーション</td>
+<td>大量データが必要、プライバシー問題</td>
+</tr>
+<tr>
+<td>2010年代</td>
+<td>疑似適合性フィードバック</td>
+<td>文脈的、自己改善</td>
+<td>ノイズを導入する可能性</td>
+</tr>
+<tr>
+<td>2020年代</td>
+<td>LLM、埋め込み</td>
+<td>深い文脈、曖昧性解消</td>
+<td>リソース集約的、過剰拡張リスク</td>
+</tr>
+</tbody>
+</table>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>再現率の向上:</strong> 異なる用語を使用している関連文書を回収</p>
+<p><strong>検索精度の向上:</strong> 文字通りの入力だけでなく、ユーザーの意図により適合</p>
+<p><strong>ユーザーエクスペリエンスの向上:</strong> 繰り返し検索の減少、フラストレーションの軽減</p>
+<p><strong>曖昧性解消:</strong> 文脈を使用して短いまたは曖昧なクエリを処理</p>
+<p><strong>自然言語サポート:</strong> ユーザーが自分の言葉で検索可能</p>
+<p><strong>パーソナライゼーション:</strong> 拡張をユーザー履歴とプロファイルに合わせて調整可能</p>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>過剰拡張:</strong> 過度または無関係な用語が精度を低下させる</p>
+<p><strong>計算オーバーヘッド:</strong> より多くの用語がシステム負荷と遅延を増加させる</p>
+<p><strong>関連性の維持:</strong> 追加された用語はユーザーの意図と一致する必要がある</p>
+<p><strong>プライバシー:</strong> 個人データの使用は規制上の懸念を引き起こす可能性がある</p>
+<p><strong>バイアスの増幅:</strong> 拡張アルゴリズムがバイアスを永続化する可能性がある</p>
+<p><strong>透明性:</strong> 拡張が不透明な場合、ユーザーは結果を理解できない可能性がある</p>
+<p><strong>敵対的操作:</strong> SEOやスパム攻撃が拡張を悪用する可能性がある</p>
+<h2 id="業界での応用">業界での応用</h2>
+<h3 id="検索エンジン">検索エンジン</h3>
+<p>Google、Bing、エンタープライズ検索エンジンは、より正確で文脈を考慮した検索のためにクエリ拡張を使用しています。</p>
+<h3 id="aiチャットボットとカスタマーサポート">AIチャットボットとカスタマーサポート</h3>
+<p><a data-lb="1" href="/ja/glossary/Quick-Replies/" title="クイックリプライは、チャットインターフェースに表示される一時的で選択可能なボタンで、事前定義されたオプションを提供します。選択後に消えるため、画面の煩雑さを防ぎ、会話の流れを維持します。">チャットボット</a>は、クエリ拡張とRAGを使用して、多様なユーザーの言い回しを解釈し、クエリを解決します。</p>
+<h3 id="eコマース">Eコマース</h3>
+<p>「ランニングシューズ」を「アスレチックフットウェア」「ジョギングスニーカー」などに拡張し、製品発見とコンバージョンを改善します。</p>
+<h3 id="ヘルスケア">ヘルスケア</h3>
+<p>医療検索は「心臓発作」を「心筋梗塞」に拡張し、臨床医のための包括的な検索を保証します。</p>
+<h3 id="法律と研究">法律と研究</h3>
+<p>「契約紛争」を関連する法令や判例法に拡張し、法律研究とコンプライアンスをサポートします。</p>
+<h3 id="検索拡張生成rag">検索拡張生成(RAG)</h3>
+<p><a data-lb="1" href="/ja/glossary/Output-Parsing/" title="出力パースは、AI言語モデルのテキスト応答から構造化データ(JSON、Pythonオブジェクト)を抽出し、自動化、分析、システム統合に活用する技術です。">LLM</a>駆動システムは、回答を生成する前にすべての関連文脈を取得するために拡張を使用します。</p>
+<h3 id="教育">教育</h3>
+<p>学習プラットフォームは、学生の文脈に基づいてクエリを拡張し、関連リソースの発見を保証します。</p>
+<h3 id="多言語アプリケーション">多言語アプリケーション</h3>
+<p>言語/文化を超えてクエリを拡張し、意味的ギャップを埋めます。</p>
+<h2 id="実装例">実装例</h2>
+<h3 id="キーワードベース検索と拡張">キーワードベース検索と拡張</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span>expander = QueryExpander()
+</span></span><span style="display:flex;"><span>expanded_queries = expander.run(query=<span style="color:#0ff;font-weight:bold">"open source NLP frameworks"</span>, number=<span style="color:#ff0;font-weight:bold">4</span>)
+</span></span><span style="display:flex;"><span><span style="color:#007f7f"># 出力: ['natural language processing tools', 'free nlp libraries', ...]</span>
+</span></span></code></pre></div><h3 id="bm25--クエリ拡張">BM25 + クエリ拡張</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span>expanded_retrieval_pipeline = Pipeline()
+</span></span><span style="display:flex;"><span>expanded_retrieval_pipeline.add_component(<span style="color:#0ff;font-weight:bold">"expander"</span>, query_expander)
+</span></span><span style="display:flex;"><span>expanded_retrieval_pipeline.add_component(<span style="color:#0ff;font-weight:bold">"keyword_retriever"</span>, retriever)
+</span></span><span style="display:flex;"><span>expanded_retrieval_pipeline.connect(<span style="color:#0ff;font-weight:bold">"expander.queries"</span>, <span style="color:#0ff;font-weight:bold">"keyword_retriever.queries"</span>)
+</span></span></code></pre></div><h3 id="埋め込み意味検索">埋め込み/意味検索</h3>
+<p>Word2Vec、GloVe、<a data-lb="1" href="/ja/glossary/BERT/" title="BERT(Bidirectional Encoder Representations from Transformers)の包括的ガイド - 言語理解のためのGoogleの革新的なNLPモデル">BERT</a>などを使用したベクトルベースの意味的拡張。</p>
+<h2 id="新たなトレンド">新たなトレンド</h2>
+<p><strong>大規模言語モデル(LLM):</strong> <a data-lb="1" href="/ja/glossary/GPT/" title="GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。">GPT</a>-4、BERTなどが文脈を考慮した適応的拡張を可能にする</p>
+<p><strong>パーソナライズされた拡張:</strong> ユーザープロファイル、検索履歴、デバイス文脈へのリアルタイム適応</p>
+<p><strong>マルチモーダル拡張:</strong> テキスト、画像、音声、その他のモダリティを使用したクエリ拡張</p>
+<p><strong>説明可能なAI(XAI):</strong> 拡張プロセスをユーザーに対して透明にする</p>
+<p><strong>リアルタイムフィードバック:</strong> ユーザーインタラクションからの継続的学習</p>
+<p><strong>多言語拡張:</strong> 多言語クエリとコンテンツの処理</p>
+<p><strong>公平性と責任あるAI:</strong> バイアス、プライバシー、説明可能性への対処</p>
+<h2 id="ベストプラクティス">ベストプラクティス</h2>
+<p><strong>精度と再現率のバランス:</strong> 精度を低下させる過剰拡張を避ける</p>
+<p><strong>パフォーマンスの監視:</strong> クエリ遅延、関連性メトリクス、ユーザー満足度を追跡</p>
+<p><strong>フィードバックループの実装:</strong> ユーザーインタラクションと関連性シグナルから継続的に学習</p>
+<p><strong>ドメイン横断テスト:</strong> 異なるドメインには異なる拡張戦略が必要な場合がある</p>
+<p><strong>技術の組み合わせ:</strong> ハイブリッドアプローチが最良の結果をもたらすことが多い</p>
+<p><strong>透明性の確保:</strong> ユーザーはクエリがいつどのように変更されるかを理解すべき</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>情報検索におけるクエリ拡張とは何ですか?</strong><br/>
+ユーザーの元のクエリに同義語、関連用語、または文脈的に関連するフレーズを追加して再構成し、関連文書の検索を改善する技術です。</p>
+<p><strong>同義語拡張はどのように検索結果を改善しますか?</strong><br/>
+同義語を含めることで、同じ概念に対して異なる単語を使用している文書の検索が可能になり、再現率が向上します。</p>
+<p><strong>主な課題は何ですか?</strong><br/>
+過剰拡張、計算の複雑さ、関連性の維持、プライバシー/バイアスの問題、透明性の欠如です。</p>
+<p><strong>クエリ拡張は曖昧なクエリに役立ちますか?</strong><br/>
+はい。文脈的拡張は、短いまたは曖昧なクエリの背後にある可能性の高い意図を推測するのに役立ちます。</p>
+<p><strong>クエリ拡張はどこで使用されていますか?</strong><br/>
+検索エンジン、AIチャットボット、Eコマース、ヘルスケア、法律研究、教育プラットフォーム、RAGシステムです。</p>
+<p><strong>クエリ拡張は常に結果を改善しますか?</strong><br/>
+必ずしもそうではありません。調整が不十分な拡張は精度を低下させる可能性があります。慎重なバランスが必要です。</p>
+<p><strong>クエリ拡張はどのように実装されますか?</strong><br/>
+同義語リスト、統計分析、<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>、埋め込み、LLMを通じて、多くの場合、検索パイプラインに統合されます。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>ITU Online. (n.d.). What Is Query Expansion?. ITU Online.</li>
+<li>Stanford <a data-lb="1" href="/ja/glossary/AI-answer-assistant/" title="AI回答アシスタントは、自然言語処理(NLP)、機械学習(ML)、大規模言語モデル(LLM)、RAG技術を活用し、複雑なテキストや専門用語を明確化・洗練・解説する高度なAI駆動型ソフトウェアシステムです。">NLP</a>. (n.d.). Relevance Feedback and Query Expansion. Stanford NLP.</li>
+<li>Sahin, M. (n.d.). Query Expansion in Enhancing RAG. Medium.</li>
+<li>Glean. (n.d.). RAG Use Cases. Glean Blog.</li>
+<li>Signity Solutions. (n.d.). 10 Real-World RAG Examples. Signity Solutions Blog.</li>
+<li>Haystack. (n.d.). Advanced RAG - Query Expansion. Haystack.</li>
+<li>MongoDB. (n.d.). Maximizing Search Efficiency with Query Expansion. MongoDB Resources.</li>
+<li>Sandgarden. (n.d.). How Query Expansion Revolutionized AI Search. Sandgarden.</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Consistency-evaluation/">
+                    一貫性評価
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    一貫性評価は、LLMやチャットボットなどの<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">AIシステム</a>が同一の入力に対して安定した一貫性のある応答を生成するかどうかを評価します。信頼性、信頼、<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>において不可欠です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Consistency-evaluation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/AI-answer-assistant/">
+                    AI回答アシスタント
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI回答アシスタントは、<a data-lb="1" href="/ja/glossary/Misunderstood-Rate/" title="誤解率は、チャットボットがユーザーの意図を理解できず、フォールバック応答をトリガーする失敗を測定する指標です。これは、NLU（自然言語理解）のパフォーマンス、ユーザーエクスペリエンス、および会話型AIの改善における重要な指標です。">自然言語処理(NLP)</a>、機械学習(ML)、<a data-lb="1" href="/ja/glossary/hallucination/" title="AIにおけるハルシネーションとは、生成モデルがもっともらしいものの事実として誤っている、意味をなさない、または捏造されたコンテンツを生成することを指します。その原因、種類、リスク、および軽減戦略について学びます。">大規模言語モデル</a>(LLM)、RAG技術を活用し、複雑なテキストや専門用語を明確化・洗練・解説する高度なAI駆動型ソフトウェアシステムで...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/AI-answer-assistant/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Aggregator/">
+                    Aggregator（アグリゲーター）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    複数の実行パスやループからの出力を収集し、単一の結果に統合する<a data-lb="1" href="/ja/glossary/Nodes-and-Edges/" title="ノードはシステムにおける基本的な構成要素(アクションまたはエンティティ)であり、エッジは関係性、データフロー、または依存関係を定義する接続(線)です。">ノード</a>。効率的なデータ処理を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Aggregator/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Botpress/">
+                    Botpress
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Botpress/" title="Botpressは、ビジュアルフローエディタ、高度なAI、LLM統合を備えた、AIチャットボットと会話エージェントを構築するための開発者フレンドリーなプラットフォームです。">Botpress</a>は、ビジュアルフローエディタ、高度なAI、LLM統合を備えた、AIチャットボットと会話エージェントを構築するための開発者フレンドリーなプラットフォームです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Botpress/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ChatGPT/">
+                    ChatGPT
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/ChatGPT/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">ChatGPT</a>は、大規模言語モデルを活用したOpenAIの高度な<a data-lb="1" href="/ja/glossary/Conversational-AI/" title="対話型AIを探求:自然言語処理、自然言語理解、機械学習、音声認識を用いて人間の会話をシミュレートする技術。その仕組み、メリット、ユースケース、将来のトレンドを学びます。">対話型AI</a>アシスタントです。機能、性能、料金体系、実際の活用事例について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ChatGPT/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Dify/">
+                    Dify
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Difyは、BaaSと<a data-lb="1" href="/ja/glossary/Dify/" title="Difyは、BaaSとLLMOpsを統合したオープンソースのLLMアプリ開発プラットフォームです。最小限のコードで、AIアプリケーション、エージェントワークフロー、RAGパイプラインを視覚的に構築、デプロイ、管理できます。">LLMOps</a>を統合したオープンソースのLLMアプリ開発プラットフォームです。最小限のコードで、AIアプリケーション、エージェント<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>、RAGパイプラインを視覚的に構築、デ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Dify/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/query-expansion/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>カスタマーヘルススコア | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Customer-Health-Score/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="カスタマーヘルススコアの指標、実装戦略、顧客の成功と維持を予測するためのベストプラクティスに関する包括的なガイド。" name="description"/>
+<meta content="カスタマーヘルススコア, カスタマーサクセス指標, チャーン予測, 顧客維持, ヘルススコアリングモデル" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Customer-Health-Score/" property="og:url"/>
+<meta content="カスタマーヘルススコア | SmartWeb" property="og:title"/>
+<meta content="カスタマーヘルススコアの指標、実装戦略、顧客の成功と維持を予測するためのベストプラクティスに関する包括的なガイド。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Customer-Health-Score/" name="twitter:url"/>
+<meta content="カスタマーヘルススコア | SmartWeb" name="twitter:title"/>
+<meta content="カスタマーヘルススコアの指標、実装戦略、顧客の成功と維持を予測するためのベストプラクティスに関する包括的なガイド。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">カスタマーヘルススコア</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        カスタマーヘルススコア
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Customer Health Score
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          カスタマーヘルススコアの指標、実装戦略、顧客の成功と維持を予測するためのベストプラクティスに関する包括的なガイド。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                カスタマーヘルススコア
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                カスタマーサクセス指標
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                チャーン予測
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                顧客維持
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ヘルススコアリングモデル
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="カスタマーヘルススコアとは何か">カスタマーヘルススコアとは何か?</h2>
+<p><a data-lb="1" href="/ja/glossary/Customer-Health-Score/" title="カスタマーヘルススコアの指標、実装戦略、顧客の成功と維持を予測するためのベストプラクティスに関する包括的なガイド。">カスタマーヘルススコア</a>は、ビジネス関係における個々の顧客やアカウントの全体的な健全性と成功の可能性を測定する定量的指標です。この複合スコアは、複数のデータポイントと行動指標を集約し、顧客満足度、維持確率、拡大の可能性を予測する単一の実行可能な測定値を提供します。カスタマーヘルススコアは、<a data-lb="1" href="/ja/glossary/Proactive-Engagement/" title="カスタマーサクセスとビジネス成長のための、プロアクティブ・エンゲージメント戦略、実装方法、ベストプラクティスに関する包括的ガイド。">カスタマーサクセス</a>チームにとって早期警告システムとして機能し、問題が解約や契約不更新にエスカレートする前に、プロアクティブな介入を可能にします。</p>
+<p>カスタマーヘルススコアリングの概念は、サポートチケットや支払い遅延などの従来の遅行指標では、顧客の結果を予測するには不十分であるという認識の高まりから生まれました。現代のヘルススコアリングシステムは、製品使用パターン、エンゲージメントレベル、機能採用率、関係性の強さの指標などの先行指標を組み込んでいます。これらのスコアは通常、0〜100の範囲、または色分けシステム(赤、黄、緑)を使用して、アカウントステータスの即座の視覚的理解を提供します。この方法論は、さまざまな<a data-lb="1" href="/ja/glossary/Touchpoint/" title="カスタマーエクスペリエンスにおけるタッチポイントの包括的ガイド。デジタルおよび物理的なインタラクションポイント、最適化戦略、実装のベストプラクティスを網羅しています。">タッチポイント</a>からの定量的データと、顧客対応チームからの定性的評価を組み合わせて、顧客の軌跡の包括的なビューを作成します。</p>
+<p>カスタマーヘルススコアは、<a data-lb="1" href="/ja/glossary/Customer-Lifetime-Value--CLV-/" title="顧客生涯価値(CLV)の包括的ガイド - 計算方法、メリット、実装戦略、ビジネス成長のためのベストプラクティスを解説します。">顧客生涯価値</a>が獲得コストを大幅に上回るサブスクリプションエコノミーやB2B <a data-lb="1" href="/ja/glossary/cloud-service/" title="クラウドサービスとは、サードパーティベンダーがインターネット経由で提供するITリソースです。SaaS、PaaS、IaaS、FaaS、XaaSモデルの特徴、メリット、ユースケースを理解しましょう。">SaaS</a>環境において、不可欠なツールとなっています。組織はこれらのスコアを使用して、カスタマーサクセスリソースの優先順位付け、拡大機会の特定、ターゲットを絞った維持戦略の実装を行います。スコアリングフレームワークは、過去の結果と変化するビジネスダイナミクスに基づいて継続的に改善される必要があります。成功する実装には、すべての関連データソースが適切にキャプチャされ、重み付けされることを保証するために、カスタマーサクセス、営業、マーケティング、製品チーム間の部門横断的な協力が必要です。最終的な目標は、リアクティブな顧客管理を、顧客の成果とビジネスの成長を最大化するプロアクティブでデータ駆動型のアプローチに変革することです。</p>
+<h2 id="ヘルススコアリングの主要コンポーネント">ヘルススコアリングの主要コンポーネント</h2>
+<p><strong>使用状況指標</strong>は、ログイン頻度、機能利用、採用の深さなど、顧客が製品やサービスにどれだけ積極的に関与しているかを追跡します。これらの行動指標は、<a data-lb="1" href="/ja/glossary/Service-Recovery/" title="サービスリカバリー:問題が発生した後、企業がサービスの問題を修正し、顧客満足度を回復するために取る行動。ネガティブな体験をロイヤルティを構築する機会に変えるプロセスです。">顧客満足度</a>と維持可能性の最も強力な予測因子として機能することがよくあります。</p>
+<p><strong>エンゲージメント指標</strong>は、サポートインタラクション、トレーニング参加、コミュニティへの関与、コミュニケーションへの応答率を含む、顧客と組織間のインタラクションの質と頻度を測定します。</p>
+<p><strong>ビジネス成果</strong>は、顧客が望ましい結果を達成し、ソリューションから価値を実現しているかどうかを評価します。これは、目標達成、<a data-lb="1" href="/ja/glossary/ROI/" title="投資収益率(ROI)は、投資効率を定量化する財務指標です。AIチャットボットと自動化のROI計算方法、主要な構成要素、指標、実際の事例について学びましょう。">ROI</a>指標、成功マイルストーンの完了を通じて測定されることがよくあります。</p>
+<p><strong>関係性の健全性</strong>は、顧客のステークホルダーとベンダーチーム間の対人関係の強さを評価します。これには、エグゼクティブスポンサーシップ、チャンピオンの特定、全体的なセンチメント指標が含まれます。</p>
+<p><strong>財務健全性</strong>は、支払い履歴、契約遵守、予算配分、および関係を継続または拡大する顧客の能力に影響を与える可能性のある財務安定性指標を調査します。</p>
+<p><strong>サポートパターン</strong>は、顧客サポートリクエストの量、重大度、解決傾向を分析して、維持に影響を与える可能性のある潜在的な満足度の問題や技術的課題を特定します。</p>
+<p><strong>採用速度</strong>は、顧客がオンボーディングマイルストーンを進み、成功した顧客コホートと比較して主要な採用ベンチマークを達成する速度を測定します。</p>
+<h2 id="カスタマーヘルススコアの仕組み">カスタマーヘルススコアの仕組み</h2>
+<p>カスタマーヘルススコアのプロセスは、CRMシステム、製品分析プラットフォーム、サポートチケットシステム、財務記録、直接的な<a data-lb="1" href="/ja/glossary/Voice-of-Customer--VoC-/" title="顧客インサイトとフィードバックを収集するための、ボイス・オブ・カスタマー（VoC）プログラム、方法論、実装戦略に関する包括的なガイド。">顧客フィードバック</a>など、複数のソースからの<strong>データ収集</strong>から始まります。この包括的なデータ収集により、すべての関連する顧客タッチポイントが分析のためにキャプチャされます。</p>
+<p><strong>データ正規化</strong>は、異なるスケールと時間枠にわたって指標を標準化し、生データを比較可能な形式に変換します。このステップは、測定単位、報告期間、<a data-lb="1" href="/ja/glossary/Data-Quality/" title="正確で完全、かつ信頼性の高いデータ資産を確保するための、データ品質管理、評価フレームワーク、ベストプラクティスに関する包括的なガイド。">データ品質</a>のばらつきに対処し、正確なスコアリング計算を保証します。</p>
+<p><strong>重み付けの割り当て</strong>は、顧客の結果との過去の相関関係に基づいて、各指標に相対的な重要度係数を適用します。製品使用などの重要な指標は、メール開封率などの二次的な指標よりも高い重みを受け取る場合があります。</p>
+<p><strong>スコア計算</strong>は、事前に決定されたアルゴリズムを使用して重み付けされた指標を組み合わせます。多くの場合、変数間のパターンと関係を識別する<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>モデルを組み込んでいます。計算により、各顧客の数値スコアまたはカテゴリ評価が生成されます。</p>
+<p><strong>しきい値の設定</strong>は、リスクあり(0〜40)、安定(41〜70)、健全(71〜100)などの特定のアクションまたは<a data-lb="1" href="/ja/glossary/Taxonomy/" title="タクソノミーシステム、分類方法、階層構造、および情報整理のための実装ベストプラクティスに関する包括的なガイド。">分類</a>をトリガーするスコア範囲を定義し、カスタマーサクセスチームの対応を導きます。</p>
+<p><strong>自動監視</strong>は、新しいデータが利用可能になるとスコアを継続的に更新し、変化する顧客の状況へのリアルタイムの可視性を確保し、タイムリーな介入を可能にします。</p>
+<p><strong>アラート生成</strong>は、スコアが重要なしきい値を超えたり、懸念される傾向を示したりしたときに関連するチームメンバーに通知し、プロアクティブなアウトリーチとサポート活動を促進します。</p>
+<p><strong>アクションプランニング</strong>は、スコアの洞察を、リスクのあるアカウントに対するエグゼクティブビジネスレビューや、高度にエンゲージしている顧客に対する拡大の会話などの具体的な介入に変換します。</p>
+<p><strong>成果追跡</strong>は、介入の有効性とカスタマーヘルススコアへの影響を測定し、将来のスコアリング<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">精度</a>と対応戦略を改善するフィードバックループを作成します。</p>
+<p><strong>モデルの改善</strong>は、新しいデータパターンとビジネス成果に基づいてスコアリングアルゴリズムを定期的に更新し、ヘルススコアが時間の経過とともに予測的で実行可能であることを保証します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>プロアクティブなリスク管理</strong>により、組織は顧客の問題が解約にエスカレートする前に特定して対処できるようになり、維持率が大幅に向上し、予期しない離脱による収益損失が削減されます。</p>
+<p><strong>リソースの最適化</strong>は、カスタマーサクセスチームが、最も高いリスクまたは機会の可能性を持つアカウントに努力を優先するのを支援し、限られたリソースの影響を最大化し、全体的なチーム効率を向上させます。</p>
+<p><strong>予測的洞察</strong>は、顧客の軌跡への前向きな可視性を提供し、組織が収益を予測し、容量を計画し、顧客の健全性トレンドに基づいて情報に基づいた戦略的決定を下すことを可能にします。</p>
+<p><strong>標準化された評価</strong>は、すべての顧客アカウントにわたって一貫した<a data-lb="1" href="/ja/glossary/Technology-Evaluation/" title="購入または導入の意思決定を行う前に、テクノロジーソリューションが組織のニーズ、コスト、目標を満たしているかどうかを評価・比較する体系的なプロセス。">評価基準</a>を作成し、主観的なバイアスを排除し、アカウントマネージャーやチームの割り当てに関係なく公平な扱いを保証します。</p>
+<p><strong>早期警告システム</strong>は、従来の遅行指標が明らかになる前に、顧客の健全性の低下をチームに警告し、是正措置と回復戦略を実装するためのより多くの時間を提供します。</p>
+<p><strong>拡大の特定</strong>は、<a data-lb="1" href="/ja/glossary/Upsell/" title="ビジネスにおける顧客価値と収益成長を高めるためのアップセル戦略、テクニック、ベストプラクティスに関する包括的なガイド。">アップセル</a>またはクロスセルの機会の候補となる可能性のある、強力なヘルススコアを持つ顧客を強調し、既存のアカウントからの収益成長を促進します。</p>
+<p><strong>エグゼクティブの可視性</strong>は、リーダーシップに顧客ポートフォリオの健全性に関する明確で定量化可能な指標を提供し、<a data-lb="1" href="/ja/glossary/Support-Capacity-Planning/" title="サポート容量計画とは、カスタマーサポートのニーズを予測し、サービス品質目標を達成しながら効率的に対応するためのスタッフとリソースを配分するプロセスです。">リソース配分</a>と戦略的イニシアチブに関するデータ駆動型の意思決定を可能にします。</p>
+<p><strong>自動化されたワークフロー</strong>は、ヘルススコアの変化に対する体系的な対応をトリガーし、一貫したフォローアップアクションを保証し、アカウントが運用上の隙間から漏れるリスクを減らします。</p>
+<p><strong>パフォーマンスベンチマーキング</strong>は、カスタマーサクセスチームのパフォーマンスに対する測定可能な基準を確立し、異なるセグメントまたは期間にわたるヘルススコアの改善の比較を可能にします。</p>
+<p><strong>顧客セグメンテーション</strong>は、ヘルススコアカテゴリに基づいてターゲットを絞った処理戦略を促進し、カスタマイズされたコミュニケーション、サポートレベル、エンゲージメントアプローチを可能にします。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>解約防止プログラム</strong>は、ヘルススコアを利用してリスクのある顧客を特定し、エグゼクティブアウトリーチ、追加トレーニング、サービス調整を含むターゲットを絞った維持キャンペーンを実装します。</p>
+<p><strong>カスタマーサクセスプランニング</strong>は、ヘルススコアを四半期ごとのビジネスレビューと成功計画セッションに組み込み、優先事項を調整し、改善戦略を開発します。</p>
+<p><strong>アカウントの優先順位付け</strong>は、<a data-lb="1" href="/ja/glossary/Customer-Success-Manager/" title="カスタマーサクセスマネージャーの包括的ガイド:顧客維持と成長を促進するための役割、責任、戦略、ベストプラクティス。">カスタマーサクセスマネージャー</a>がポートフォリオ全体で時間と注意を配分する際のガイドとなり、最も大きなニーズまたは機会を持つアカウントにハイタッチ活動を集中させます。</p>
+<p><strong>更新予測</strong>は、ヘルススコアのトレンドを活用して契約更新の可能性を予測し、今後の更新期間の<a data-lb="1" href="/ja/glossary/Sales-Forecasting/" title="過去の売上データ、市場トレンド、顧客行動を分析することで将来の売上を予測する手法。企業が予算計画、在庫管理、戦略的意思決定を行うために活用されます。">収益予測</a>に情報を提供します。</p>
+<p><strong>拡大収益のターゲティング</strong>は、強力なエンゲージメントと満足度指標に基づいて、追加の製品、サービス、または使用レベルの増加の準備ができている可能性のある健全な顧客を特定します。</p>
+<p><strong>エグゼクティブエスカレーショントリガー</strong>は、戦略的アカウントがヘルススコアの低下を示したときに、シニアリーダーシップに自動的に警告し、適切なエグゼクティブの注意と介入を保証します。</p>
+<p><strong>オンボーディングの最適化</strong>は、実装フェーズ中の新規顧客のヘルススコアを追跡して、一般的な失敗ポイントを特定し、オンボーディングプロセスを改善します。</p>
+<p><strong>製品開発の洞察</strong>は、顧客セグメント全体のヘルススコアパターンを分析して、全体的な顧客満足度を向上させる可能性のある機能ギャップ、使いやすさの問題、または強化の機会を特定します。</p>
+<p><strong>サポートリソースの配分</strong>は、顧客ベース全体のヘルススコアの分布とトレンドパターンに基づいて、サポートチームの容量と専門知識の配分を調整します。</p>
+<p><strong>マーケティングキャンペーンのターゲティング</strong>は、ヘルススコアによって顧客をセグメント化し、カスタマイズされたマーケティングメッセージを提供します。健全な顧客は拡大に焦点を当てたコンテンツを受け取り、リスクのある顧客は価値の再確認コミュニケーションを受け取ります。</p>
+<h2 id="ヘルススコア方法論の比較">ヘルススコア方法論の比較</h2>
+<table>
+<thead>
+<tr>
+<th>アプローチ</th>
+<th>複雑さ</th>
+<th>データ要件</th>
+<th>精度</th>
+<th>実装時間</th>
+<th>メンテナンス労力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ルールベーススコアリング</strong></td>
+<td>低</td>
+<td>中程度</td>
+<td>中程度</td>
+<td>2〜4週間</td>
+<td>低</td>
+</tr>
+<tr>
+<td><strong>加重平均</strong></td>
+<td>中</td>
+<td>高</td>
+<td>良好</td>
+<td>4〜8週間</td>
+<td>中程度</td>
+</tr>
+<tr>
+<td><strong>機械学習</strong></td>
+<td>高</td>
+<td>非常に高い</td>
+<td>優秀</td>
+<td>8〜16週間</td>
+<td>高</td>
+</tr>
+<tr>
+<td><strong>ハイブリッドモデル</strong></td>
+<td>中〜高</td>
+<td>高</td>
+<td>非常に良好</td>
+<td>6〜12週間</td>
+<td>中〜高</td>
+</tr>
+<tr>
+<td><strong>予測分析</strong></td>
+<td>非常に高い</td>
+<td>広範囲</td>
+<td>優秀</td>
+<td>12〜20週間</td>
+<td>非常に高い</td>
+</tr>
+<tr>
+<td><strong>行動クラスタリング</strong></td>
+<td>中</td>
+<td>中〜高</td>
+<td>良好</td>
+<td>6〜10週間</td>
+<td>中程度</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>データ品質の問題</strong>は、ヘルススコアの精度に大きな影響を与える可能性があり、すべての入力ソース全体で完全性、一貫性、信頼性を保証するための堅牢な<a data-lb="1" href="/ja/glossary/Metadata-Management/" title="データ資産を効果的に整理し統制するための、メタデータ管理システム、プロセス、ベストプラクティスに関する包括的なガイド。">データガバナンス</a>プロセスが必要です。</p>
+<p><strong>指標選択の複雑さ</strong>は、顧客の成功と真に相関する指標を決定することを含み、特定のビジネスモデルに対して最も予測的な変数を特定するための広範な分析とテストが必要です。</p>
+<p><strong>重み付けの調整</strong>は、異なる指標に適切な重要度レベルを割り当てる際の継続的な課題を提示します。最適な重み付けは、顧客セグメント、製品ライン、または市場状況によって異なる場合があるためです。</p>
+<p><strong>偽陽性の管理</strong>は、高いスコアにもかかわらず健全に見える顧客が依然として解約する場合に発生し、継続的なモデルの改善と追加の定性的評価レイヤーが必要になります。</p>
+<p><strong>部門横断的な調整</strong>は、組織全体で一貫したデータ収集、解釈、対応プロトコルを保証するために、複数の部門間の調整が必要です。</p>
+<p><strong>スケーラビリティの制約</strong>は、顧客ベースが成長するにつれて現れ、エンタープライズスケールでスコアリングの精度と応答性を維持できる<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>されたシステムとプロセスが必要になります。</p>
+<p><strong>時間的感度</strong>は、顧客の状況が急速に変化するため、スコアの関連性に影響を与え、予測値を維持するために頻繁な更新とリアルタイム<a data-lb="1" href="/ja/glossary/Pre-Built-Connector/" title="カスタム開発を必要とせず、異なるアプリケーションやシステム間のシームレスな統合を可能にする、すぐに使えるソフトウェアコンポーネントです。プレビルトコネクタは、事前設定されたマッピング、認証、データ変換機能を提供し、組織が広範なコーディングではなく直感的なインターフェースを通じて、プラットフォームを迅速に接続できるようにします。">データ統合</a>が必要になります。</p>
+<p><strong>業界の変動性</strong>は、スコアリングモデルが一般的なアプローチを使用するのではなく、特定のビジネスタイプ、顧客行動、市場ダイナミクスに合わせてカスタマイズされる必要があることを意味します。</p>
+<p><strong>プライバシーコンプライアンス</strong>の考慮事項は、顧客の行動データを収集および分析する際に重要になり、<a data-lb="1" href="/ja/glossary/GDPR/" title="EUの包括的なデータ保護規則であるGDPRについて理解しましょう。その原則、コンプライアンス要件、データ主体の権利、そしてAIチャットボットへの影響について学びます。">GDPR</a>やCCPAなどの規制への準拠が必要になります。</p>
+<p><strong>変更管理の抵抗</strong>は、チームが新しいスコアリングシステムを採用し、確立された顧客管理プロセスを変更するよう求められたときに発生する可能性があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>明確な目標から始める</strong>ことで、解約削減目標や拡大収益目標など、ヘルススコアが予測すべき特定のビジネス成果を定義し、戦略的優先事項との整合性を保証します。</p>
+<p><strong>部門横断的なチームを最初から関与させる</strong>ことで、カスタマーサクセス、営業、マーケティング、製品、分析チームからの意見を収集し、賛同と包括的な指標カバレッジを作成します。</p>
+<p><strong>シンプルなモデルから始める</strong>ことで、複雑な機械学習アプローチに進む前に、基本的な加重平均またはルールベースのシステムを使用し、より迅速な実装とより簡単なトラブルシューティングを可能にします。</p>
+<p><strong>データガバナンスを確立する</strong>ことで、一貫したデータ収集、品質基準、および時間の経過とともにスコアリングの精度を維持する定期的な監査プロセスを保証するプロトコルを確立します。</p>
+<p><strong>アクショントリガーを定義する</strong>ことで、特定のスコアしきい値と対応する対応プロトコルを作成し、ヘルススコアが具体的なカスタマーサクセス活動に変換されることを保証します。</p>
+<p><strong>段階的なロールアウトを実装する</strong>ことで、完全な展開前にパイロット顧客セグメントでヘルススコアをテストし、スコアリング精度の改善と検証を可能にします。</p>
+<p><strong>フィードバックループを作成する</strong>ことで、実際の顧客の成果をキャプチャし、予測されたスコアと比較し、継続的なモデルの改善と調整の調整を可能にします。</p>
+<p><strong>チームトレーニングを提供する</strong>ことで、ヘルススコアの解釈と対応戦略について、すべての顧客対応チームメンバー全体で一貫した適用を保証します。</p>
+<p><strong>スコア分布を定期的に監視する</strong>ことで、顧客の健全性パターンの変化を特定し、ビジネス条件が変化するにつれてスコアリングしきい値または重みを調整します。</p>
+<p><strong>方法論を徹底的に文書化する</strong>ことで、指標の定義、計算式、決定の根拠を含め、一貫性を保証し、将来の更新やチームの移行を促進します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>機械学習の統合</strong>は、ランダムフォレスト、勾配ブースティング、または<a data-lb="1" href="/ja/glossary/deep-learning/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>などのアルゴリズムを使用して、従来のスコアリング方法では見逃される可能性のある顧客の行動と成果の間の複雑なパターンと関係を特定します。</p>
+<p><strong>予測モデリング</strong>は、現在の健全性評価を超えて将来の顧客の軌跡を予測し、現在の状況への反応的な対応ではなく、予測されるスコアの変化に基づくプロアクティブな介入を可能にします。</p>
+<p><strong>コホートベースのスコアリング</strong>は、異なる顧客セグメントに対して異なるヘルススコアモデルを開発し、成功指標が業界、会社規模、またはユースケース全体で大きく異なる可能性があることを認識します。</p>
+<p><strong>リアルタイム分析</strong>は、顧客の行動が発生するとヘルススコアを継続的に更新するストリーミングデータ処理を実装し、変化する状況への即座の可視性を提供し、迅速な対応を可能にします。</p>
+<p><strong>センチメント分析の統合</strong>は、顧客のコミュニケーション、サポートチケット、フィードバックの<a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">自然言語処理</a>を組み込み、定量的な行動指標に定性的な感情指標を追加します。</p>
+<p><strong>多次元スコアリング</strong>は、技術的健全性、ビジネス健全性、関係性の健全性など、顧客関係のさまざまな側面に対して個別のヘルススコアを作成し、ターゲットを絞った介入のためのより詳細な洞察を提供します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>人工知能の強化</strong>は、高度なAI機能を活用して、新しい<a data-lb="1" href="/ja/glossary/Forecasting-Accuracy/" title="予測精度は、予測値が実際の結果とどの程度一致しているかを測定するもので、組織が予測手法を実際の状況で信頼性高く活用できるかどうかを評価するのに役立ちます。">予測指標</a>を自動的に特定し、スコアリングの重みを最適化し、各顧客の状況に対してパーソナライズされた介入の推奨事項を生成します。</p>
+<p><strong>予測的カスタマージャーニーマッピング</strong>は、ヘルススコアとジャーニー分析を組み合わせて、顧客の成果だけでなく、顧客が成功または解約に向かう可能性のある特定のパスも予測します。</p>
+<p><strong>カスタマーエクスペリエンスプラットフォームとの統合</strong>は、ヘルススコアと包括的な<a data-lb="1" href="/ja/glossary/Member-Journey/" title="メンバージャーニーマッピング、最適化戦略、タッチポイント、メンバー体験とリテンション向上のためのベストプラクティスに関する包括的なガイド。">カスタマーエクスペリエンス</a>指標を組み合わせた統一されたビューを作成し、顧客満足度と成功に関する全体的な洞察を提供します。</p>
+<p><strong>リアルタイムパーソナライゼーション</strong>は、ヘルススコアの洞察を使用して、個々の顧客の健全性指標に基づいて製品エクスペリエンス、コミュニケーションのケイデンス、サポートインタラクションを自動的にカスタマイズします。</p>
+<p><strong>ブロックチェーンベースの信頼指標</strong>は、プライバシーと<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>を維持しながら、ベンダーエコシステム全体で共有できる顧客の健全性指標の透明で不変の記録を作成するために出現する可能性があります。</p>
+<p><strong>量子コンピューティングアプリケーション</strong>は、最終的にはるかに複雑な<a data-lb="1" href="/ja/glossary/Customer-Context/" title="カスタマーコンテキストの包括的ガイド - 顧客データ、行動、嗜好を理解し、パーソナライズされた体験を提供してビジネス成長を促進する方法について解説します。">顧客データ</a>セットと関係の処理を可能にし、ヘルススコアの精度と予測能力を劇的に向上させる可能性があります。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Mehta, N., Steinman, D., &amp; Murphy, L. (2016). <em>Customer Success: How Innovative Companies Are Reducing Churn and Growing Recurring Revenue</em>. Wiley.</p>
+</li>
+<li>
+<p>Gainsight. (2023). “The Complete Guide to Customer Health Scoring.” <em>Customer Success Resources</em>. Retrieved from gainsight.com</p>
+</li>
+<li>
+<p>Murphy, L. (2019). “The Customer Success Economy: Why Every Aspect of Your Business Model Needs A Paradigm Shift.” <em>Harvard Business Review Press</em>.</p>
+</li>
+<li>
+<p>ChurnZero. (2023). “Customer Health Score Best Practices and Implementation Guide.” <em>Customer Success Platform Documentation</em>.</p>
+</li>
+<li>
+<p>Totango. (2022). “Advanced Customer Health Scoring Methodologies.” <em>Customer Success Intelligence Reports</em>.</p>
+</li>
+<li>
+<p>Krogue, K. (2021). “Predictive Analytics in Customer Success: Beyond Traditional Health Scoring.” <em>Journal of Customer Success Management</em>, 15(3), 45-62.</p>
+</li>
+<li>
+<p>Salesforce. (2023). “State of Customer Success Report: Health Scoring Trends and Benchmarks.” <em>Annual Customer Success Survey</em>.</p>
+</li>
+<li>
+<p>Success Hacker. (2022). “Machine Learning Applications in Customer Health Scoring.” <em>Customer Success Technology Review</em>, 8(4), 23-38.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Account-Health-Score/">
+                    アカウントヘルススコア
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Account-Health-Score/" title="アカウントヘルススコアの指標、実装戦略、カスタマーサクセス管理のベストプラクティスに関する包括的なガイド。">アカウントヘルススコア</a>の指標、実装戦略、カスタマーサクセス管理のベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Account-Health-Score/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Churn-Prediction/">
+                    チャーン予測
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Churn-Prediction/" title="チャーン予測の包括的ガイド:機械学習技術、実装戦略、顧客維持分析のベストプラクティスを解説します。">チャーン予測</a>の包括的ガイド:機械学習技術、実装戦略、<a data-lb="1" href="/ja/glossary/Churn-Rate/" title="サブスクリプションビジネスにおける顧客離脱を削減するための、チャーンレート指標、計算方法、戦略に関する包括的なガイド。">顧客維持</a>分析のベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Churn-Prediction/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Win-Back-Campaign/">
+                    ウィンバックキャンペーン
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ウィンバックキャンペーンの包括的ガイド:非アクティブな顧客や購読者を再エンゲージメントするための戦略、実装方法、ベストプラクティス。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Win-Back-Campaign/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Audience-Engagement/">
+                    オーディエンスエンゲージメント
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    オーディエンスエンゲージメントとは、人々とブランドの間で生まれる積極的な参加と交流のことで、単に受動的に視聴するだけでなく、コンテンツを消費し、体験を共有し、関係性を構築することを指します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Audience-Engagement/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Customer-Success-Manager/">
+                    カスタマーサクセスマネージャー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    カスタマーサクセスマネージャーの包括的ガイド:顧客維持と成長を促進するための役割、責任、戦略、ベストプラクティス。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Customer-Success-Manager/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Subscription-Model/">
+                    サブスクリプションモデル
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    顧客が製品やサービスを一度だけ購入するのではなく、継続的にアクセスするために定期的な料金を支払うビジネスモデル。企業にとっては予測可能な収益を生み出し、顧客にとっては継続的な価値を提供します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Subscription-Model/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/customer-health-score/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

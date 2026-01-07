@@ -1,4 +1,5 @@
-{{- if .Params.math | default (in .Content "$") -}}
+{{- $raw := .RawContent | default "" -}}
+{{- if .Params.math | default (in $raw "$") -}}
 <!-- KaTeX CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 <!-- KaTeX JS -->

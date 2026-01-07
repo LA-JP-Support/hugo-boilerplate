@@ -1,0 +1,2227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="utf-8">
+<meta name="viewport" content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+
+<title>RAG vs. CAG: Understanding Knowledge Augmentation Strategies for AI Models | SmartWeb</title>
+<link rel="canonical" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/rag-vs-cag-knowledge-augmentation/">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/faivicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/faivicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/faivicon.png">
+<link rel="shortcut icon" href="/images/faivicon.png">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+  
+
+
+
+
+
+
+
+  
+  
+    
+    
+      
+      
+      
+      
+    
+  
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="%!s(<nil>)%!s(<nil>)">
+
+<link rel="alternate" hreflang="ja" href="%!s(<nil>)%!s(<nil>)">
+
+<link rel="alternate" hreflang="x-default" href="%!s(<nil>)%!s(<nil>)">
+
+
+
+<meta name="description" content="Explore the differences between Retrieval-Augmented Generation (RAG) and Cache-Augmented Generation (CAG), two powerful techniques for enhancing large language models with external knowledge. Learn when to use each approach and how they solve the knowledge gap problem in AI.">
+<meta name="keywords" content="RAG, CAG, retrieval augmented generation, cache augmented generation, LLM knowledge, AI augmentation, vector database, KV cache, knowledge retrieval">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/rag-vs-cag-knowledge-augmentation/">
+<meta property="og:title" content="RAG vs. CAG: Understanding Knowledge Augmentation Strategies for AI Models | SmartWeb">
+<meta property="og:description" content="Explore the differences between Retrieval-Augmented Generation (RAG) and Cache-Augmented Generation (CAG), two powerful techniques for enhancing large language models with external knowledge. Learn when to use each approach and how they solve the knowledge gap problem in AI.">
+
+
+
+
+  
+
+
+
+
+
+<meta property="og:image" content="https://img.youtube.com/vi/HdafI0t3sEY/maxresdefault.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/rag-vs-cag-knowledge-augmentation/">
+<meta name="twitter:title" content="RAG vs. CAG: Understanding Knowledge Augmentation Strategies for AI Models | SmartWeb">
+<meta name="twitter:description" content="Explore the differences between Retrieval-Augmented Generation (RAG) and Cache-Augmented Generation (CAG), two powerful techniques for enhancing large language models with external knowledge. Learn when to use each approach and how they solve the knowledge gap problem in AI.">
+<meta name="twitter:image" content="https://img.youtube.com/vi/HdafI0t3sEY/maxresdefault.jpg">
+
+
+
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+
+<link rel="preload" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/main.css?v=20260106210129" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/custom-code-blockquote.css?v=20260106210129" crossorigin="anonymous">
+
+
+
+<script src="/js/main.js?v=20260106210129" defer></script>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+</head>
+<body class="antialiased bg-white">
+
+
+
+
+
+
+
+
+
+
+  
+  <header class="bg-white">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="/en/" class="-m-1.5 p-1.5">
+        <span class="sr-only">SmartWeb</span>
+        
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="200px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+      </a>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12"><a href="/en/" class="text-sm/6 font-semibold text-gray-900">Home</a><a href="/en/blog/" class="text-sm/6 font-semibold text-gray-900">Blog</a><a href="/en/glossary/" class="text-sm/6 font-semibold text-gray-900">Glossary</a><a href="https://www.intwk.co.jp/about/" class="text-sm/6 font-semibold text-gray-900">Company</a></div>
+    <div class="flex flex-1 items-center justify-end gap-x-6">
+      <a href="https://support.smartweb.jp/" class="hidden text-sm/6 font-semibold text-gray-900 lg:block">Support</a>
+      <a href="/en/blog/" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" aria-expanded="false" aria-controls="mobile-menu-1767700889227765000">
+        <span class="sr-only">Open main menu</span>
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  
+  <div id="mobile-menu-1767700889227765000" class="lg:hidden hidden relative z-50" role="dialog" aria-modal="true">
+    
+    <div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+      <div class="flex items-center gap-x-6">
+        <a href="/en/" class="-m-1.5 p-1.5">
+          <span class="sr-only">SmartWeb</span>
+          
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+      
+        
+      
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+          
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+            
+            
+        
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="3000"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="(max-width: 466px) 466px, 3000px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+        </a>
+        <a href="/en/blog/" class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+        <button type="button" class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu">
+          <span class="sr-only">Close menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6"><a href="/en/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a><a href="/en/blog/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a><a href="/en/glossary/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Glossary</a><a href="https://www.intwk.co.jp/about/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a></div>
+          <div class="py-6">
+            <a href="https://support.smartweb.jp/" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700889227765000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700889227765000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+
+
+
+<main class="w-full">
+  
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+  
+  <header class="py-8 sm:py-12">
+    <div class="mx-auto max-w-5xl">
+      
+      <div class="mb-6">
+        
+        <nav class="text-sm hidden sm:block">
+          <ol class="flex items-center space-x-2 text-gray-500">
+            <li class="flex items-center">
+              <a href="/en/" class="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center">
+                <img src="/images/home-icon.png" alt="Home" class="h-5 w-5">
+              </a>
+            </li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="/en/blog/" class="hover:text-indigo-600 dark:hover:text-indigo-400">Blog</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li class="text-gray-900 dark:text-white truncate max-w-xs">RAG vs. CAG: Understanding Knowledge Augmentation Strategies for AI Models</li>
+          </ol>
+        </nav>
+      </div>
+
+      
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight">
+        RAG vs. CAG: Understanding Knowledge Augmentation Strategies for AI Models
+      </h1>
+
+      
+      <div class="mt-3 sm:mt-4 flex flex-wrap sm:flex-nowrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
+        
+          <div class="flex flex-wrap gap-2 sm:flex-1 min-w-0">
+            
+              <a 
+                href="/en/tags/ai/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                AI
+              </a>
+            
+              <a 
+                href="/en/tags/llm/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                LLM
+              </a>
+            
+              <a 
+                href="/en/tags/knowledge-management/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                Knowledge Management
+              </a>
+            
+              <a 
+                href="/en/tags/generative-ai/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                Generative AI
+              </a>
+            
+              <a 
+                href="/en/tags/ai-architecture/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                AI Architecture
+              </a>
+            
+          </div>
+        
+
+        <div class="w-full sm:w-auto sm:ml-auto">
+          
+
+  
+
+
+  
+
+
+
+
+
+
+
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+  
+
+  
+</div>
+
+        </div>
+      </div>
+
+      
+      
+        <div class="mt-5 sm:mt-6 w-full">
+          <img 
+            src="https://img.youtube.com/vi/HdafI0t3sEY/maxresdefault.jpg" 
+            alt="RAG vs. CAG: Understanding Knowledge Augmentation Strategies for AI Models" 
+            class="w-full h-auto rounded-lg shadow-lg object-cover"
+            style="max-height: 400px; object-fit: cover;"
+          >
+        </div>
+      
+
+      
+      
+        <p class="mt-3 sm:mt-5 text-base sm:text-lg leading-6 sm:leading-7 text-gray-600 dark:text-gray-400">
+          Explore the differences between Retrieval-Augmented Generation (RAG) and Cache-Augmented Generation (CAG), two powerful techniques for enhancing large language models with external knowledge. Learn when to use each approach and how they solve the knowledge gap problem in AI.
+        </p>
+      
+    </div>
+  </header>
+
+  
+  <div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-5xl py-6 sm:py-8">
+    <h2 id="introduction">Introduction</h2>
+<p>Large language models have revolutionized how we interact with artificial intelligence, but they face a fundamental challenge: <strong>knowledge cutoff</strong>. If information wasn&rsquo;t included in a model&rsquo;s training data, the model simply cannot recall it. Whether it&rsquo;s recent news events, proprietary business data, or real-time information, traditional LLMs struggle to provide accurate answers about knowledge beyond their training window. This limitation has sparked the development of augmented generation techniques—methods that extend an AI model&rsquo;s capabilities by connecting it to external knowledge sources. Two prominent approaches have emerged to solve this problem: <strong>Retrieval-Augmented Generation (RAG)</strong> and <strong>Cache-Augmented Generation (CAG)</strong>. Each offers distinct advantages and trade-offs, and understanding when to use each approach is crucial for building effective AI systems. This comprehensive guide explores both techniques in depth, examining their architectures, capabilities, and real-world applications.</p>
+<div class="youtube-embed-wrapper">
+  <div class="youtube-embed-container">
+    <iframe 
+      src="https://www.youtube.com/embed/HdafI0t3sEY" 
+      title="RAG vs. CAG: Solving Knowledge Gaps in AI Models"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen 
+      loading="lazy"
+      frameborder="0">
+    </iframe>
+  </div>
+</div>
+<style>
+ 
+.youtube-embed-wrapper {
+  max-width: 768px !important;
+  margin: 2rem auto 3rem !important;
+  padding: 0 !important;
+}
+
+ 
+.youtube-embed-container {
+  position: relative !important;
+  width: 100% !important;
+  padding-top: 56.25% !important;  
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25) !important;
+  background: #000 !important;
+}
+
+ 
+.youtube-embed-container iframe {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+}
+
+ 
+.dark .youtube-embed-container {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+ 
+@media (max-width: 768px) {
+  .youtube-embed-wrapper {
+    margin: 1.5rem auto 2rem !important;
+    padding: 0 1rem !important;
+  }
+  
+  .youtube-embed-container {
+    border-radius: 12px !important;
+  }
+}
+</style>
+<h2 id="the-knowledge-problem-in-large-language-models">The Knowledge Problem in Large Language Models</h2>
+<p>Before diving into solutions, it&rsquo;s essential to understand the core problem that RAG and CAG address. Large language models are trained on massive datasets collected at a specific point in time. Once training is complete, the model&rsquo;s knowledge becomes static—it cannot learn new information or update its understanding of the world. This creates several critical issues for real-world applications. <strong>First</strong>, models lack awareness of recent events. If you ask a model about the 2025 Academy Awards winner for Best Picture, it may not have this information if the training data was collected before the ceremony. <strong>Second</strong>, models cannot access proprietary or confidential information. A customer service <a href="/en/glossary/Chatbot/">chatbot</a> cannot answer questions about a specific client&rsquo;s purchase history or account details because this information was never part of the training dataset. <strong>Third</strong>, models may provide outdated information when facts change. Medical guidelines, legal precedents, product specifications, and company policies all evolve over time, but a static model cannot reflect these changes. These limitations make it impossible to deploy LLMs in many enterprise and mission-critical applications without some mechanism to augment their knowledge with current, relevant information.</p>
+<h2 id="understanding-knowledge-augmentation-the-foundation-for-modern-ai">Understanding Knowledge Augmentation: The Foundation for Modern AI</h2>
+<p>Knowledge augmentation represents a paradigm shift in how we approach AI system design. Rather than relying solely on what a model learned during training, augmentation techniques create a bridge between the model&rsquo;s inherent capabilities and external information sources. This approach acknowledges a fundamental truth: <strong>the best AI systems are not those with the largest training datasets, but those that can dynamically access and integrate relevant information when needed</strong>. Knowledge augmentation techniques come in various forms, but they all share a common goal—to enhance the model&rsquo;s ability to provide accurate, contextual, and current responses. The beauty of augmentation is that it decouples knowledge storage from model training. You can update your <a href="/en/glossary/knowledge-base/" title="A centralized digital library that organizes information so customers and employees can find answers quickly without asking for help.">knowledge base</a> without retraining the model, add new information without expensive <a href="/en/glossary/Fine-Tuning/">fine-tuning</a> processes, and scale your system&rsquo;s knowledge far beyond what any single model could contain. This flexibility has made augmentation techniques essential for building production-grade AI systems that must operate in dynamic, real-world environments where information constantly changes.</p>
+<h2 id="knowledge-augmentation-in-practice">Knowledge Augmentation in Practice</h2>
+<p>The RAG and CAG techniques discussed in this guide are already being applied in real-world AI platforms. <a href="https://www.flowhunt.io/" target="_blank" rel="nofollow noopener noreferrer">FlowHunt</a> implements RAG through its Knowledge Sources feature, allowing businesses to connect AI chatbots and workflows to company documents, FAQs, and websites. This enables AI responses grounded in verified company information rather than general training data. <a href="https://www.liveagent.com/" target="_blank" rel="nofollow noopener noreferrer">LiveAgent</a> integrates AI features like AI Answer Improver and AI Chatbot that can reference knowledge bases to provide accurate customer support responses.</p>
+<p><strong>SmartWeb</strong> leverages both platforms to build AI solutions that use controlled knowledge sources—company FAQs, product manuals, and support documentation—ensuring responses remain accurate and consistent with company policies. As knowledge augmentation techniques continue to advance, these platforms evolve alongside them, meaning businesses that implement RAG-based solutions today can benefit from future improvements in retrieval accuracy and response quality.</p>
+<h2 id="rag-retrieval-augmented-generation-explained">RAG: Retrieval-Augmented Generation Explained</h2>
+<p>Retrieval-Augmented Generation represents the more established and widely-adopted approach to knowledge augmentation. RAG operates on a simple but powerful principle: <strong>retrieve only the information you need, when you need it</strong>. Rather than loading all knowledge upfront, RAG maintains a searchable index of your <a href="/en/glossary/knowledge-base/" title="A centralized digital library that organizes information so customers and employees can find answers quickly without asking for help.">knowledge base</a> and retrieves relevant pieces on-demand during the query process. This two-phase architecture—offline <a href="/en/glossary/Indexing/">indexing</a> and online retrieval—provides remarkable flexibility and scalability.</p>
+<h3 id="the-rag-architecture-offline-and-online-phases">The RAG Architecture: Offline and Online Phases</h3>
+<p>RAG&rsquo;s power comes from its modular design, which separates knowledge preparation from query processing. <strong>In the offline phase</strong>, your <a href="/en/glossary/knowledge-base/" title="A centralized digital library that organizes information so customers and employees can find answers quickly without asking for help.">knowledge base</a> is prepared for efficient retrieval. This begins with document ingestion, where you gather all your knowledge sources—Word documents, PDFs, web pages, database records, or any other format containing information you want the model to access. These documents are then broken into manageable chunks, typically ranging from a few sentences to a few paragraphs. This chunking process is critical because it determines the granularity of information the model will receive. Too-large chunks may include irrelevant information; too-small chunks may fragment important context. Once documents are chunked, an <strong><a href="/en/glossary/Embedding/">embedding</a> model</strong> converts each chunk into a numerical vector representation. This <a href="/en/glossary/Embedding/">embedding</a> captures the semantic meaning of the text—chunks with similar meanings will have similar embeddings, even if they use different words. These embeddings are stored in a <strong><a href="/en/glossary/Vector-Database/">vector database</a></strong>, a specialized database optimized for similarity search. The <a href="/en/glossary/Vector-Database/">vector database</a> creates a searchable index of your entire knowledge base, enabling fast retrieval of relevant information.</p>
+<p><strong>In the online phase</strong>, when a user submits a query, the system springs into action. The user&rsquo;s question is converted into a vector using the same <a href="/en/glossary/Embedding/">embedding</a> model that processed the documents. This query vector is then used to search the <a href="/en/glossary/Vector-Database/">vector database</a>, finding the most similar document chunks. The system typically retrieves the top K results—often three to five passages most likely to contain the answer. These retrieved chunks are then placed into the context window of the large language model, alongside the original user query. The model now has both the question and relevant contextual information, allowing it to generate a more accurate, informed response. Importantly, the model can see where the information came from, enabling it to cite sources and provide transparency about its reasoning.</p>
+<h3 id="key-advantages-of-rag">Key Advantages of RAG</h3>
+<p><strong>Scalability</strong> stands as RAG&rsquo;s most compelling advantage. Because the system only retrieves small slices of data per query, it can handle enormous knowledge bases. A RAG system could index ten million documents and still retrieve only the few most relevant ones for any given question. The language model never sees all ten million documents at once—it only processes the retrieved subset. This scalability is crucial for enterprise applications where knowledge bases grow continuously. <strong>Data freshness</strong> is another critical strength. When your knowledge base changes, RAG can update the index incrementally. New documents can be added, outdated information can be removed, and the system can immediately use this new knowledge without any retraining or recomputation. This makes RAG ideal for domains where information changes frequently—legal research with new case rulings, medical systems with updated treatment guidelines, or <a href="/en/glossary/customer-support/" title="Customer support is a team and set of tools that help customers solve problems, answer questions, and get the most value from a product or service.">customer support</a> with evolving product information. <strong>Transparency and citations</strong> provide significant value in regulated or professional contexts. Because RAG retrieves specific documents, the system can tell you exactly where information came from. A lawyer using RAG for legal research can see which cases support a particular argument. A doctor using RAG for clinical decisions can reference the specific research papers or guidelines that informed a recommendation. This traceability builds trust and enables verification of the system&rsquo;s reasoning.</p>
+<h3 id="rag-limitations-and-trade-offs">RAG Limitations and Trade-offs</h3>
+<p>Despite its advantages, RAG introduces <strong>retrieval <a href="/en/glossary/Latency/">latency</a></strong>. Each query requires embedding the question, searching the vector database, and retrieving relevant documents before the language model can even begin generating an answer. This adds measurable overhead compared to systems that don&rsquo;t require retrieval. For applications where <a href="/en/glossary/Response-Time/">response time</a> is critical, this <a href="/en/glossary/Latency/">latency</a> can be problematic. <strong>Retriever quality</strong> is another crucial consideration. RAG&rsquo;s accuracy depends entirely on whether the retriever successfully finds relevant documents. If the retrieval step fails—if the embedding search doesn&rsquo;t return documents containing the answer—then the language model won&rsquo;t have the information needed to respond correctly. A poorly configured embedding model or vector database can significantly degrade system performance. <strong>System complexity</strong> increases with RAG implementation. You must manage multiple components: the embedding model, the vector database, the retrieval mechanism, and the language model. Each component introduces potential failure points and requires careful tuning and <a href="/en/glossary/monitoring/" title="Monitoring is the continuous process of collecting and analyzing data about systems and applications to detect problems and ensure everything runs smoothly and securely.">monitoring</a>. This complexity can make RAG systems more challenging to deploy and maintain compared to simpler approaches.</p>
+<h2 id="cag-cache-augmented-generation-explained">CAG: Cache-Augmented Generation Explained</h2>
+<p>Cache-Augmented Generation takes a fundamentally different approach to the knowledge problem. Rather than retrieving information on-demand, CAG preloads all relevant knowledge into the model&rsquo;s context window before processing any queries. This strategy trades flexibility for speed, creating a system optimized for rapid, consistent responses with a fixed knowledge base.</p>
+<h3 id="the-cag-architecture-preloading-and-kv-caching">The CAG Architecture: Preloading and KV Caching</h3>
+<p>CAG&rsquo;s architecture is elegantly simple compared to RAG. Instead of maintaining a separate vector database and retrieval mechanism, CAG works directly with the language model&rsquo;s internal architecture. The process begins by formatting all your knowledge into a single, massive prompt that fits within the model&rsquo;s context window. This could be tens or even hundreds of thousands of tokens—everything from product manuals to legal documents to medical guidelines, all concatenated into one enormous input. The language model then processes this entire knowledge blob in a single forward pass through its neural network. As the model reads and processes all this information, it creates an internal representation called the <strong><a href="/en/glossary/KV-Cache/">KV cache</a></strong> (Key-Value cache). This cache is created from each self-attention layer in the <a href="/en/glossary/Transformer/">transformer</a> architecture and represents the model&rsquo;s encoded understanding of all the preloaded documents. Think of it as the model having already read and memorized all your documents—the <a href="/en/glossary/KV-Cache/">KV cache</a> is the model&rsquo;s internal memory of that knowledge.</p>
+<p>Once the <a href="/en/glossary/KV-Cache/">KV cache</a> is created and stored, it becomes the foundation for all subsequent queries. When a user submits a question, the system doesn&rsquo;t need to retrieve anything or reprocess the documents. Instead, it simply appends the user&rsquo;s query to the KV cache and sends everything to the language model. Because the <a href="/en/glossary/Transformer/">transformer</a>&rsquo;s cache already contains all the knowledge tokens, the model can reference any relevant information as it generates an answer without having to reread or reprocess the original documents. This is remarkably efficient—the model can generate responses using information from anywhere in the preloaded knowledge base without the computational cost of searching or retrieving.</p>
+<h3 id="key-advantages-of-cag">Key Advantages of CAG</h3>
+<p><strong><a href="/en/glossary/Latency/">Latency</a> reduction</strong> is CAG&rsquo;s defining strength. Once the knowledge is cached, answering queries becomes a single forward pass of the language model on the user prompt plus generation. There&rsquo;s no retrieval lookup time, no embedding computation, no vector database search. The <a href="/en/glossary/Response-Time/">response time</a> depends only on the model&rsquo;s generation speed, not on any external retrieval mechanism. For applications where speed is paramount—real-time customer interactions, time-sensitive decision support, or high-volume query processing—CAG&rsquo;s low latency is invaluable. <strong>Computational efficiency</strong> follows naturally from the latency advantage. By eliminating the retrieval step, CAG reduces overall computational overhead. You don&rsquo;t need to maintain a separate embedding model or vector database. You don&rsquo;t need to perform similarity searches. The system is simpler, leaner, and more resource-efficient. This efficiency translates directly to lower operational costs, making CAG attractive for cost-sensitive applications. <strong>Simplicity of deployment</strong> cannot be overstated. CAG requires fewer moving parts than RAG. You don&rsquo;t need to manage vector databases, embedding models, or retrieval pipelines. The system is more straightforward to implement, test, and deploy. This simplicity reduces the surface area for bugs and makes the system easier to understand and maintain.</p>
+<h3 id="cag-limitations-and-trade-offs">CAG Limitations and Trade-offs</h3>
+<p><strong>Context window constraints</strong> represent CAG&rsquo;s fundamental limitation. Modern language models have context windows ranging from 32,000 to 100,000 tokens, with some larger models pushing beyond this. However, this is still finite. Everything you want the model to know must fit within this window. For a 100,000-token context window, you might fit a few hundred documents at most. This hard limit means CAG cannot scale to the massive knowledge bases that RAG handles effortlessly. If your knowledge base grows beyond what fits in the context window, CAG becomes impractical. <strong>Static knowledge</strong> is another critical constraint. CAG preloads knowledge once and caches it. If your knowledge base changes—new documents are added, information is updated, or outdated content needs to be removed—you must recompute the entire KV cache. This recomputation negates the caching benefit and introduces significant overhead. For domains with frequently changing information, CAG&rsquo;s static nature becomes a liability. <strong>Potential for confusion</strong> in the model&rsquo;s responses is a subtle but important consideration. When you preload all possible relevant information, you&rsquo;re not just giving the model the answer—you&rsquo;re giving it everything. The model must extract the right information from this large context and avoid mixing in unrelated information. While modern language models are generally good at this, there&rsquo;s always a risk that the model might conflate information or provide answers that blend multiple unrelated pieces of knowledge inappropriately.</p>
+<h2 id="comparing-rag-and-cag-accuracy-latency-scalability-and-data-freshness">Comparing RAG and CAG: Accuracy, Latency, Scalability, and Data Freshness</h2>
+<p>Understanding the trade-offs between RAG and CAG requires examining them across multiple dimensions that matter for real-world applications.</p>
+<h3 id="accuracy-retrieval-vs-comprehensiveness">Accuracy: Retrieval vs. Comprehensiveness</h3>
+<p><strong>RAG&rsquo;s accuracy</strong> depends critically on the retriever component. If the retriever successfully finds relevant documents, the language model has the information needed to answer correctly. The retriever acts as a filter, shielding the model from irrelevant information and focusing its attention on what matters. However, if the retriever fails—if it doesn&rsquo;t find the relevant documents—then the model lacks the facts needed for an accurate answer. RAG&rsquo;s accuracy is only as good as its retrieval mechanism. <strong>CAG&rsquo;s accuracy</strong> works differently. By preloading all potential relevant information, CAG guarantees that the information is present somewhere in the context. Assuming your knowledge base actually contains the answer to the question being asked, the information is definitely there. However, the burden shifts to the model to extract the right information from the large context. There&rsquo;s potential for the model to get confused, to mix in unrelated information, or to provide answers that blend multiple pieces of knowledge inappropriately. CAG trades the risk of retrieval failure for the risk of model confusion.</p>
+<h3 id="latency-speed-matters">Latency: Speed Matters</h3>
+<p><strong>RAG introduces latency</strong> through its retrieval step. Each query requires embedding the question, searching the vector database, and retrieving relevant documents before the language model can generate an answer. This overhead is measurable and becomes more significant as your knowledge base grows or as your retrieval infrastructure becomes more complex. For applications where <a href="/en/glossary/Response-Time/">response time</a> is critical, this latency can be problematic. <strong>CAG minimizes latency</strong> by eliminating the retrieval step entirely. Once knowledge is cached, answering a query is just one forward pass of the model. The response time is determined solely by the model&rsquo;s generation speed, not by any external retrieval mechanism. This makes CAG significantly faster for query processing, though the initial caching step requires computation upfront.</p>
+<h3 id="scalability-size-of-knowledge-base">Scalability: Size of Knowledge Base</h3>
+<p><strong>RAG scales to massive knowledge bases</strong> because it only retrieves small pieces per query. You could have ten million documents indexed in your vector database, and the model would still only see the few most relevant ones for any given question. This scalability is crucial for enterprise applications where knowledge bases grow continuously. <strong>CAG has a hard scalability limit</strong> determined by the model&rsquo;s context window size. With typical context windows of 32,000 to 100,000 tokens, you can fit a few hundred documents at most. Even as context windows grow—and they are expected to—RAG will likely maintain an edge in scalability because the retrieval mechanism allows you to handle arbitrarily large knowledge bases.</p>
+<h3 id="data-freshness-keeping-knowledge-current">Data Freshness: Keeping Knowledge Current</h3>
+<p><strong>RAG handles data freshness elegantly</strong>. When your knowledge base changes, you simply update the vector database. New documents can be added incrementally, outdated documents can be removed, and the system immediately uses this new information. There&rsquo;s minimal downtime and no need to recompute anything. This makes RAG ideal for domains where information changes frequently. <strong>CAG requires recomputation</strong> when data changes. If your knowledge base is updated, you must recompute the KV cache to reflect the new information. This recomputation negates the caching benefit and introduces significant overhead. If your knowledge base changes frequently, CAG loses much of its appeal because you&rsquo;re constantly reloading and recomputing, which defeats the purpose of caching.</p>
+<h2 id="real-world-application-scenarios-rag-or-cag">Real-World Application Scenarios: RAG or CAG?</h2>
+<p>The choice between RAG and CAG isn&rsquo;t abstract—it depends on your specific use case. Let&rsquo;s examine several scenarios to understand how to make this decision.</p>
+<h3 id="scenario-1-it-help-desk-bot-with-product-manual">Scenario 1: IT Help Desk Bot with Product Manual</h3>
+<p>Imagine you&rsquo;re building an IT help desk <a href="/en/glossary/Chatbot/">chatbot</a> that uses a 200-page product manual to augment its answers. The manual is updated only a few times per year, and users submit questions about how to use the product. <strong>This is a CAG scenario.</strong> The knowledge base is small enough to fit comfortably in most language model context windows. The information is static, so the KV cache won&rsquo;t need frequent updates. By caching the product manual, the system can answer user questions with minimal latency, providing fast support responses. The simplicity of CAG deployment also makes sense for this use case—you don&rsquo;t need the complexity of a vector database and retrieval pipeline for a small, static knowledge base.</p>
+<h3 id="scenario-2-legal-research-assistant-for-law-firm">Scenario 2: Legal Research Assistant for Law Firm</h3>
+<p>Now consider a research assistant for a law firm that must search through thousands of legal cases that are constantly being updated with new rulings and amendments. Lawyers need answers with accurate citations to relevant legal documents. <strong>This is clearly a RAG scenario.</strong> The knowledge base is massive and dynamic, with new content being added continuously. Attempting to cache all this information would quickly exceed most models&rsquo; context windows. The requirement for precise citations to source materials is something RAG naturally supports through its retrieval mechanism—it tells you exactly where information came from. The ability to incrementally update the vector database as new legal documents emerge means the system always has access to the most current information without requiring full cache recomputation.</p>
+<h3 id="scenario-3-clinical-decision-support-system-for-hospitals">Scenario 3: Clinical Decision Support System for Hospitals</h3>
+<p>Consider a clinical decision support system where doctors query patient records, treatment guides, and drug interactions. Responses must be comprehensive and highly accurate because they&rsquo;ll be used during patient consultations. Doctors often ask complex follow-up questions. <strong>This is a hybrid scenario.</strong> The system could first use RAG to retrieve the most relevant subset from the massive knowledge base—pulling specific sections of a patient&rsquo;s history and relevant research papers based on the doctor&rsquo;s query. Rather than simply passing those retrieved chunks to the language model, the system could load all that retrieved content into a long-context model that uses CAG, creating a temporary working memory for the specific patient case. This hybrid approach combines RAG&rsquo;s ability to efficiently search enormous knowledge bases with CAG&rsquo;s capability to provide comprehensive knowledge for follow-up questions without repeatedly querying the database.</p>
+<h2 id="advanced-insights-hybrid-approaches-and-future-directions">Advanced Insights: Hybrid Approaches and Future Directions</h2>
+<p>The most sophisticated AI systems don&rsquo;t choose between RAG and CAG—they use both strategically. <strong>Hybrid architectures</strong> leverage RAG&rsquo;s scalability and data freshness for initial retrieval, then use CAG&rsquo;s speed and comprehensiveness for detailed processing. This approach is particularly powerful for complex, multi-turn conversations where the system needs to maintain context across multiple questions while also accessing a large knowledge base.</p>
+<p><strong>Context window expansion</strong> is changing the RAG vs. CAG calculus. As language models develop larger context windows—some now supporting 200,000 tokens or more—CAG becomes viable for larger knowledge bases. However, even with expanded context windows, RAG will likely maintain advantages for truly massive knowledge bases and frequently updated information. <strong>Retrieval optimization</strong> continues to improve RAG&rsquo;s latency. Techniques like dense passage retrieval, hybrid search combining keyword and <a href="/en/glossary/Semantic-Search/">semantic search</a>, and learned retrieval mechanisms are making RAG faster and more accurate. These improvements narrow the latency gap between RAG and CAG. <strong>Caching innovations</strong> are making CAG more flexible. Techniques for partial cache updates and selective recomputation could eventually allow CAG to handle more dynamic knowledge bases without full recomputation. The future likely involves increasingly sophisticated hybrid approaches that combine the strengths of both techniques.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>RAG and CAG represent two fundamentally different philosophies for augmenting language models with external knowledge. RAG retrieves only what&rsquo;s needed on-demand, offering unmatched scalability, data freshness, and transparency at the cost of retrieval latency. CAG preloads all knowledge upfront, delivering exceptional speed and simplicity but constrained by context window size and static knowledge. The choice between them—or the decision to use both in a hybrid approach—depends on your specific requirements: the size of your knowledge base, how frequently information changes, whether you need source citations, and how critical response latency is to your application. Modern AI systems increasingly recognize that this isn&rsquo;t a binary choice but rather a spectrum of strategies that can be combined and optimized for specific use cases. By understanding the strengths and limitations of each approach, you can architect AI systems that deliver both accuracy and efficiency in real-world applications.</p>
+
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="mt-10 sm:mt-14 border-t border-gray-200 dark:border-gray-700 pt-8 sm:pt-10">
+      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 sm:mb-8">
+        Related Posts
+      </h2>
+      <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="/images/blog/ai-chatbot-types-guide.jpg" 
+                  alt="AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-chatbot-types-guide/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points
+                </a>
+              </h3>
+              
+                
+                
+                  
+                
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  A comprehensive guide to the 5 types of AI chatbots (rule-based, AI-powered, generative AI, RAG, and...
+                </p>
+              
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-chatbot-types-guide/" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="/images/blog/ai-evaluation-japanese-benchmarks.jpg" 
+                  alt="Complete Guide to AI Language Model Evaluation: Japanese Benchmarks and Practical Implementation" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-evaluation-japanese-benchmarks/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  Complete Guide to AI Language Model Evaluation: Japanese Benchmarks and Practical Implementation
+                </a>
+              </h3>
+              
+                
+                
+                  
+                
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  From automatic LLM evaluation methods to Japanese-specific benchmarks and hallucination mitigation s...
+                </p>
+              
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-evaluation-japanese-benchmarks/" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="/images/blog/rag-paint.jpg" 
+                  alt="How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/introduction-to-rag/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)
+                </a>
+              </h3>
+              
+                
+                
+                  
+                
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed covera...
+                </p>
+              
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/introduction-to-rag/" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+      </div>
+    </div>
+  
+</article>
+
+</main>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer style="background-color: #000000;">
+  
+  <div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+    
+    <svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="curveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      
+      
+      <path class="curve" data-speed="0.8" stroke="url(#curveGrad1)" stroke-width="2" fill="none" />
+      <path class="curve" data-speed="1.2" stroke="url(#curveGrad2)" stroke-width="2.5" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.6" stroke="url(#curveGrad3)" stroke-width="1.5" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.5" stroke="url(#curveGrad1)" stroke-width="2" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="0.9" stroke="url(#curveGrad2)" stroke-width="3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.3" stroke="url(#curveGrad3)" stroke-width="1.8" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.7" stroke="url(#curveGrad1)" stroke-width="2.2" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.1" stroke="url(#curveGrad2)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="1.4" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="0.85" stroke="url(#curveGrad1)" stroke-width="1.5" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="1.0" stroke="url(#curveGrad2)" stroke-width="2.8" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.25" stroke="url(#curveGrad3)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.95" stroke="url(#curveGrad1)" stroke-width="2.3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.35" stroke="url(#curveGrad2)" stroke-width="1.7" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.75" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.7" />
+    </svg>
+    
+    
+    <div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    
+    <div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+      <h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+      <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+      <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+      <div class="mt-8 flex justify-center">
+        <a href="/en/blog/" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get started</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+  
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+    <div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+      
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/webp"
+        
+        data-srcset="/images/interwork-logo-white-1.webp 568w"
+        
+        sizes="200px"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/interwork-logo-white-1.webp"
+        
+        alt="Interwork"
+        class="lazy-image h-9"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+    </picture>
+
+
+  
+
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Services</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">AI Solutions</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Web Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">System Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Consulting</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Support</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://support.smartweb.jp/" class="text-sm/6 text-gray-400 hover:text-white">Support Portal</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Documentation</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Company</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://www.intwk.co.jp/about/" class="text-sm/6 text-gray-400 hover:text-white">About</a>
+              </li>
+              
+              <li>
+                <a href="/en/blog/" class="text-sm/6 text-gray-400 hover:text-white">Blog</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Careers</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">News</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="/en/privacy-policy/" class="text-sm/6 text-gray-400 hover:text-white">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="/en/ai-chatbot-terms-of-use/" class="text-sm/6 text-gray-400 hover:text-white">AI Chatbot Terms of Use</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div>
+        <p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+        
+          
+
+
+
+
+<div class="language-selector">
+  <div class="flex flex-wrap items-center justify-center gap-3">
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+          
+            
+            
+          
+        
+        
+        
+        
+        
+        <a href="/ja/blog/rag-vs-cag-knowledge-augmentation/"
+           class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
+           title="日本語"
+           aria-label="日本語"
+           hreflang="ja">
+          <img 
+            src="/flags/jp.png"
+            alt="日本語"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </a>
+      
+    
+      
+      
+      
+      
+      
+      
+        
+        <span class="inline-flex items-center text-sm opacity-50" title="English">
+          <img 
+            src="/flags/gb.png"
+            alt="English"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </span>
+      
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+    <div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex gap-x-6 md:order-2">
+        
+        <a href="https://github.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">GitHub</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://x.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">X</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://youtube.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">YouTube</span>
+          
+
+
+
+        </a>
+        
+      </div>
+      <p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">&copy; 2026 Interwork Corporation All rights reserved.</p>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<div id="cookie-consent-banner" data-cookie-consent-banner class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark">
+    <div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+        <p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br> We use cookies to enhance your browsing experience and analyze our traffic. See our <a href="/en/privacy-policy/" class="font-semibold text-primary hover:text-primary-500">privacy policy</a>.</p>
+        <div class="mt-4 flex items-center gap-x-3 flex-wrap">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Accept All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-all
+    >
+      Accept All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Reject All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-necessary
+    >
+      Reject All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Cookie Settings"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=settings
+    >
+      Cookie Settings
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="cookie-settings-modal" class="fixed inset-0 z-50 hidden dark">
+    <div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close></div>
+    <div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+            <button type="button" class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close>
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="necessary-cookies" name="necessary-cookies" type="checkbox" checked disabled class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="analytics-cookies" name="analytics-cookies" type="checkbox" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 flex justify-end gap-x-3">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2  not-prose group"
+      aria-label="Cancel"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-close
+    >
+      Cancel
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2  not-prose group"
+      aria-label="Save Preferences"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-save
+    >
+      Save Preferences
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+<button
+  id="back-to-top-btn"
+  aria-label="Back to Top"
+  class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg 
+         transition-all duration-300 transform translate-y-12 opacity-0 invisible
+         hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+         dark:bg-indigo-500 dark:hover:bg-indigo-400"
+  onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+  </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+
+
+
+
+<script src="/js/app.js?v=20260106210129"></script>
+
+
+
+
+</body>
+</html>

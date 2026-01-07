@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>静的サイト生成 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Static-Site-Generation/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="完成したWebページを事前に作成し、訪問者がアクセスするたびにページを構築するのではなく、直接配信するWeb開発手法です。このアプローチは、シンプルなWebサイトの速度と最新の開発ツールを組み合わせています。" name="description"/>
+<meta content="静的サイト生成, JAMstack, ビルド時レンダリング, 静的サイトジェネレーター, Webパフォーマンス最適化" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Static-Site-Generation/" property="og:url"/>
+<meta content="静的サイト生成 | SmartWeb" property="og:title"/>
+<meta content="完成したWebページを事前に作成し、訪問者がアクセスするたびにページを構築するのではなく、直接配信するWeb開発手法です。このアプローチは、シンプルなWebサイトの速度と最新の開発ツールを組み合わせています。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Static-Site-Generation/" name="twitter:url"/>
+<meta content="静的サイト生成 | SmartWeb" name="twitter:title"/>
+<meta content="完成したWebページを事前に作成し、訪問者がアクセスするたびにページを構築するのではなく、直接配信するWeb開発手法です。このアプローチは、シンプルなWebサイトの速度と最新の開発ツールを組み合わせています。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">静的サイト生成</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        静的サイト生成
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Static Site Generation
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          完成したWebページを事前に作成し、訪問者がアクセスするたびにページを構築するのではなく、直接配信するWeb開発手法です。このアプローチは、シンプルなWebサイトの速度と最新の開発ツールを組み合わせています。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                静的サイト生成
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                JAMstack
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ビルド時レンダリング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                静的サイトジェネレーター
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Webパフォーマンス最適化
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="静的サイト生成とは">静的サイト生成とは</h2>
+<p>静的サイト生成(SSG)は、リクエストごとに動的にウェブページを生成するのではなく、ビルド時に事前にウェブページを構築するウェブ開発アプローチです。この手法では、開発プロセス中にHTML、CSS、JavaScriptファイルを作成し、サーバーサイド処理を必要とせずにユーザーに直接配信します。データベースやサーバーサイド言語に依存してコンテンツをその場で生成する従来の動的ウェブサイトとは異なり、静的サイトは事前にコンパイルされたファイルで構成され、<a data-lb="1" href="/ja/glossary/CDN--Content-Delivery-Network-/" title="コンテンツデリバリーネットワーク(CDN)の包括的ガイド - アーキテクチャ、メリット、実装戦略、グローバルコンテンツ配信のベストプラクティスを解説します。">コンテンツデリバリーネットワーク</a>(CDN)やシンプルなウェブサーバーを通じて即座に配信できます。</p>
+<p>静的サイト生成の概念は、現代の開発手法とツールを取り入れながら、ウェブの原点に立ち返ることを意味します。初期のウェブサイトは主に静的で、手作業でコーディングされたHTMLファイルで構成されていました。しかし、ウェブアプリケーションがより複雑になるにつれて、<a data-lb="1" href="/ja/glossary/Audience-Engagement/" title="オーディエンスエンゲージメントとは、人々とブランドの間で生まれる積極的な参加と交流のことで、単に受動的に視聴するだけでなく、コンテンツを消費し、体験を共有し、関係性を構築することを指します。">ユーザーインタラクション</a>、コンテンツ管理、パーソナライゼーションを処理するための動的なサーバーサイド技術が登場しました。静的サイト生成は、静的ファイルのパフォーマンス上の利点と、現代的な開発ワークフロー、<a data-lb="1" href="/ja/glossary/CMS--Content-Management-System-/" title="コンテンツ管理システム(CMS)の包括的ガイド - デジタルコンテンツ管理のための機能、メリット、実装戦略、ベストプラクティスを解説します。">コンテンツ管理システム</a>、ビルドプロセスの利便性を組み合わせることで、このギャップを埋めます。</p>
+<p>現代の<a data-lb="1" href="/ja/glossary/Hugo-Taxonomy/" title="Hugo におけるコンテンツ整理システムで、タグやトピックなどのカスタマイズ可能なカテゴリを使用して関連記事にラベルを付けてグループ化し、閲覧用の整理されたページを自動的に作成します。">静的サイトジェネレーター</a>は、テンプレートエンジン、マークダウン処理、高度なビルドツールを活用して、ソースコンテンツを最適化された静的ファイルに変換します。このアプローチにより、開発者は動的な開発ワークフローの利点(コンポーネントの再利用性、コンテンツの分離、自動最適化など)を維持しながら、静的ホスティングのパフォーマンス、セキュリティ、スケーラビリティの利点を提供できます。<a data-lb="1" href="/ja/glossary/Jamstack/" title="Jamstackアーキテクチャの包括的ガイド:JavaScript、API、マークアップを活用した高速で安全、かつスケーラブルなモダンWebアプリケーションの構築方法。">JAMstack</a>(JavaScript、<a data-lb="1" href="/ja/glossary/APIs/" title="API(アプリケーション・プログラミング・インターフェース)を詳しく解説:定義、仕組み、種類(REST、SOAP)、実例、メリット、セキュリティ、ベストプラクティスを網羅した総合ガイドです。">API</a>、Markup)アーキテクチャの台頭により、静的サイト生成はさらに普及し、多くのウェブアプリケーションにおいて従来のサーバーサイドレンダリングに代わる実行可能な選択肢として位置づけられています。</p>
+<h2 id="静的サイト生成の中核技術">静的サイト生成の中核技術</h2>
+<p><strong>ビルド時レンダリング</strong>は、リクエスト時ではなく開発ビルドプロセス中にテンプレート、コンテンツ、アセットを処理することを含みます。このアプローチは、動的テンプレートとデータソースを、追加処理なしでユーザーに即座に配信できる静的HTMLファイルに変換します。</p>
+<p><strong>テンプレートエンジン</strong>は、開発者が再利用可能なレイアウトとコンポーネントを作成できるようにすることで、静的サイト生成の基盤を提供します。これらのエンジンは、プレースホルダーとロジックを含むテンプレートファイルを処理し、ビルドプロセス中にコンテンツデータと組み合わせて最終的なHTML出力を生成します。</p>
+<p><strong>コンテンツ管理統合</strong>により、静的サイトジェネレーターは、<a data-lb="1" href="/ja/glossary/Content-API/" title="コンテンツAPIの包括的ガイド - プラットフォームやアプリケーション間でデジタルコンテンツを管理、配信、統合するためのプログラマティックインターフェース。">ヘッドレスCMS</a>、マークダウンファイル、API、データベースなど、さまざまなソースからコンテンツを取得できます。このコンテンツとプレゼンテーションの分離により、コンテンツ作成者は静的デプロイメントの利点を維持しながら独立して作業できます。</p>
+<p><strong>アセット最適化</strong>は、ビルドプロセス中の画像、スタイルシート、JavaScriptファイルの自動処理を包含します。現代の静的サイトジェネレーターには、サイトパフォーマンスを向上させるための<a data-lb="1" href="/ja/glossary/Image-Compression/" title="画像圧縮とは、デジタル画像の見た目の品質を保ちながらファイルサイズを削減する技術で、オンラインでの保存や共有を容易にします。">画像圧縮</a>、CSS最小化、JavaScriptバンドリングなどの組み込み最適化機能が含まれています。</p>
+<p><strong>インクリメンタルビルド</strong>は、生成プロセス中に変更されたコンテンツと依存ファイルのみを再構築する高度なアプローチを表します。この技術は、変更されていないコンテンツの不要な再生成を回避することで、大規模サイトのビルド時間を大幅に短縮します。</p>
+<p><strong>プラグインエコシステム</strong>は、<a data-lb="1" href="/ja/glossary/Anchor-Text/" title="ハイパーリンク内のクリック可能なテキストで、ユーザーと検索エンジンに対して、リンクをクリックした際にどのようなコンテンツが表示されるかを示します。">SEO最適化</a>、アナリティクス統合、フォーム処理、サードパーティサービス接続などの特定のタスクを処理するモジュラーコンポーネントを通じて、静的サイトジェネレーターの機能を拡張します。</p>
+<p><strong>Gitベースのワークフロー</strong>は、静的サイト生成を<a data-lb="1" href="/ja/glossary/Version-Control/" title="バージョン管理システムの包括的なガイド。Git、SVN、ワークフロー、ベストプラクティス、ソフトウェア開発チームのための実装戦略をカバーしています。">バージョン管理</a>システムと統合し、コンテンツ変更によってトリガーされる自動ビルド、共同編集、開発環境と本番環境間の一貫性を維持するデプロイメントパイプラインを可能にします。</p>
+<h2 id="静的サイト生成の仕組み">静的サイト生成の仕組み</h2>
+<p>静的サイト生成プロセスは、<strong>コンテンツの作成と整理</strong>から始まります。開発者とコンテンツ作成者は、マークダウンファイル、テンプレート、設定ファイル、アセットを含むソース素材を準備します。このコンテンツは通常、静的サイトジェネレーターが体系的に処理できる構造化されたディレクトリ形式で整理されます。</p>
+<p><strong>テンプレート処理</strong>は、ジェネレーターがレイアウト定義、コンポーネント構造、プレースホルダーコンテンツを含むテンプレートファイルを読み取るときに発生します。これらのテンプレートは、特定のコンテンツデータから独立したまま、最終的なウェブサイトの視覚的構造と動作を定義します。</p>
+<p><strong>コンテンツの解析と変換</strong>は、コンテンツファイル(多くの場合マークダウン形式)を読み取り、シンタックスハイライト、リンク処理、ジェネレーターの設定で定義されたカスタムフォーマットルールなどの必要な変換を適用しながらHTMLに変換することを含みます。</p>
+<p><strong>データ統合</strong>は、API、データベース、またはファイルベースのデータソースを通じて、コンテンツを<a data-lb="1" href="/ja/glossary/Third-Party-Data/" title="サードパーティデータの包括的ガイド:ビジネスインテリジェンスにおける外部データセットの活用に関する情報源、メリット、課題、ベストプラクティスを解説します。">外部データソース</a>と組み合わせます。このステップにより、静的サイトはビルド時のデータ取得を通じて静的な性質を維持しながら、<a data-lb="1" href="/ja/glossary/Template-Variable/" title="テンプレート内のプレースホルダーで、テンプレートが処理される際に実際のデータに自動的に置き換えられます。これにより、テンプレートを毎回書き直すことなく、パーソナライズされたコンテンツを作成できます。">動的コンテンツ</a>を組み込むことができます。</p>
+<p><strong>アセット処理と最適化</strong>は、スタイルシート、JavaScriptファイル、画像、その他のメディアアセットのコンパイルと最適化を処理します。これには、SASSコンパイル、JavaScriptバンドリング、画像<a data-lb="1" href="/ja/glossary/Codec/" title="コーデックの包括的ガイド - 効率的なストレージと伝送のために、オーディオ、ビデオ、データをエンコードおよびデコードするデジタル圧縮アルゴリズムです。">圧縮</a>、キャッシュバスティングファイル名生成などのタスクが含まれます。</p>
+<p><strong>HTML生成</strong>は、処理されたテンプレートと解析されたコンテンツ、統合されたデータを組み合わせて最終的なHTMLファイルを作成します。このステップでは、レイアウトを適用し、適切な<a data-lb="1" href="/ja/glossary/Section/" title="関連するコンテンツや情報をグループ化し、ドキュメント、ウェブサイト、アプリケーション全体で素材を論理的で管理しやすい部分に整理・構造化するためのコンテナ。">セクション</a>にコンテンツを挿入し、ナビゲーション構造とページ間の相互参照を生成します。</p>
+<p><strong>出力最適化</strong>は、HTML最小化、クリティカルCSS抽出、遅延読み込み実装、<a data-lb="1" href="/ja/glossary/Progressive-Web-App--PWA-/" title="モバイルアプリのように動作するウェブアプリケーションで、ダウンロード不要でブラウザから直接、オフラインアクセスと高速なパフォーマンスを提供します。">プログレッシブウェブアプリ</a>機能のためのサービスワーカーファイルの生成など、生成されたファイルに対する最終的な最適化を実行します。</p>
+<p><strong>デプロイメント準備</strong>は、サイトマップ、<a data-lb="1" href="/ja/glossary/RSS-Feed/" title="RSSフィードの包括的ガイド - ウェブコンテンツを購読者やアプリケーションに自動配信するためのXMLベースの配信フォーマット。">RSSフィード</a>、リダイレクトファイル、デプロイメントに必要なプラットフォーム固有の設定ファイルの生成を含む、ホスティング用に整理されたすべての必要なファイルを含む最終的なディレクトリ構造を作成します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>優れたパフォーマンス</strong>は、サーバーサイド処理、データベースクエリ、ランタイムコンパイルを必要としない事前構築された静的ファイルの配信から生じます。このアプローチは、サーバー応答時間の変動を排除し、CDNネットワーク全体で最適なキャッシング戦略を可能にします。</p>
+<p><strong>強化されたセキュリティ</strong>は、通常<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a><a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">脆弱性</a>を生み出すサーバーサイドコード実行、データベース接続、動的コンテンツ生成の欠如から生まれます。静的サイトは最小限の攻撃対象領域を提示し、SQLインジェクションやサーバーサイドコード悪用などの一般的な脅威を排除します。</p>
+<p><strong>向上したスケーラビリティ</strong>により、静的サイトはバックエンド処理要件やデータベース<a data-lb="1" href="/ja/glossary/bottlenecks/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ボトルネック</a>なしでCDNがキャッシュされたファイルを無制限の同時ユーザーに配信できるため、パフォーマンス低下なしに大規模なトラフィックスパイクを処理できます。</p>
+<p><strong>ホスティングコストの削減</strong>は、複雑なサーバーインフラストラクチャ、データベース管理、複雑なホスティング環境を必要とするのではなく、シンプルなファイルサーバー、CDN、または無料のホスティングプラットフォームで静的サイトをホストできることから生じます。</p>
+<p><strong>優れたSEOパフォーマンス</strong>は、検索エンジンがランキングアルゴリズムで優遇する高速な読み込み時間、クリーンなHTML出力、優れた<a data-lb="1" href="/ja/glossary/Core-Web-Vitals/" title="Googleが定める3つの指標で、ウェブページの読み込み速度、クリックへの応答速度、読み込み中のレイアウトの安定性を測定します。">Core Web Vitals</a>スコアから生じます。静的サイトは通常、優れたLighthouseスコアと<a data-lb="1" href="/ja/glossary/UX/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">ユーザーエクスペリエンス</a>指標を達成します。</p>
+<p><strong>簡素化されたデプロイメント</strong>により、複雑なサーバー設定、依存関係管理、ランタイム環境のセットアップなしで、GitHub Pages、Netlify、Vercel、従来のウェブサーバーなどのさまざまなプラットフォームでの簡単なホスティングが可能になります。</p>
+<p><strong>バージョン管理統合</strong>により、ウェブサイト全体をGit<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>で管理でき、共同開発、変更追跡、ロールバック機能、環境間の一貫性を維持する<a data-lb="1" href="/ja/glossary/CI-CD-for-Static-Sites/" title="コード変更が行われるたびに静的ウェブサイトを自動的にビルド、テスト、デプロイする自動化システムで、手動での公開作業を不要にします。">自動デプロイ</a>メントパイプラインが可能になります。</p>
+<p><strong>開発者エクスペリエンス</strong>は、現代的な開発ツール、開発中のホットリロード、コンポーネントベースのアーキテクチャ、静的出力を維持しながら使い慣れたフレームワークとライブラリを使用できることから恩恵を受けます。</p>
+<p><strong>オフライン機能</strong>により、静的サイトはサービスワーカーとプログレッシブウェブアプリ技術を通じてオフラインで機能し、ネットワーク接続に関係なくユーザーに一貫したエクスペリエンスを提供します。</p>
+<p><strong>コンテンツの移植性</strong>は、コンテンツが独自のデータベース構造ではなくマークダウンなどの標準形式で保存されるため、異なるプラットフォーム、ジェネレーター、ホスティングソリューション間でアクセス可能で転送可能であることを保証します。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>企業ウェブサイト</strong>は、複雑な動的機能を必要とせずに高いパフォーマンス、セキュリティ、信頼性を必要とする企業情報、製品ショーケース、マーケティングコンテンツに対して静的生成から恩恵を受けます。</p>
+<p><strong>ドキュメントサイト</strong>は、高速検索機能、優れたSEO、マークダウンベースの<a data-lb="1" href="/ja/glossary/Structured-Content/" title="構造化コンテンツの包括的ガイド:定義、実装方法、メリット、および組織化されたデジタル情報システムのベストプラクティスを解説します。">コンテンツ管理</a>による簡単なメンテナンスを必要とする技術ドキュメント、APIリファレンス、<a data-lb="1" href="/ja/glossary/Entity-Linking/" title="エンティティリンキングは、テキストから抽出されたエンティティをナレッジベース内の一意のエントリに接続し、曖昧性を解決することで、AI、検索、レコメンデーションのための構造化データを実現します。">ナレッジベース</a>に静的生成を活用します。</p>
+<p><strong>個人ブログ</strong>は、最小限のメンテナンスオーバーヘッド、優れたパフォーマンス、サーバー管理やセキュリティ更新ではなく執筆に集中できる能力を持つコンテンツ公開に静的サイト生成を利用します。</p>
+<p><strong>ポートフォリオウェブサイト</strong>は、さまざまなデバイスとネットワーク条件で迅速に読み込まれ、効果的にコンテンツを提示する静的サイトを通じて、クリエイティブな作品、専門的な業績、プロジェクトギャラリーを紹介します。</p>
+<p><strong>Eコマースカタログ</strong>は、ショッピングカートやチェックアウトプロセスなどの動的機能のためにヘッドレスコマースプラットフォームと統合しながら、製品リスト、カテゴリページ、情報コンテンツに静的生成を実装します。</p>
+<p><strong>ニュースとメディアサイト</strong>は、速報イベント中のトラフィックスパイクを処理する能力と高速な読み込み時間を必要とする記事公開、コンテンツアーカイブ、メディアギャラリーに静的生成を展開します。</p>
+<p><strong>ランディングページ</strong>は、<a data-lb="1" href="/ja/glossary/User-Engagement/" title="ユーザーエンゲージメントとは、デジタル製品やサービスに対してユーザーが持つインタラクションと感情的なつながりのレベルを指します。人々が機能やコンテンツをどれだけ積極的かつ有意義に利用しているかを測定し、企業がロイヤルカスタマーを構築し、提供するサービスを改善するのに役立ちます。">ユーザーエンゲージメント</a>とコンバージョン率を最大化するために最適なパフォーマンスと読み込み速度を必要とするマーケティングキャンペーン、製品ローンチ、コンバージョン重視のページに静的生成を利用します。</p>
+<p><strong>教育プラットフォーム</strong>は、高速アクセス、オフライン機能、バージョン管理されたワークフローによる簡単なコンテンツ更新から恩恵を受けるコース教材、学習リソース、<a data-lb="1" href="/ja/glossary/Educational-Content/" title="デジタルプラットフォーム全体で効果的な学習体験を実現するための、教育コンテンツの作成、配信方法、ベストプラクティスに関する包括的なガイド。">教育コンテンツ</a>に静的サイトを実装します。</p>
+<h2 id="静的サイトと動的サイトの比較">静的サイトと動的サイトの比較</h2>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>静的サイト</th>
+<th>動的サイト</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>パフォーマンス</strong></td>
+<td>優秀 - 事前構築されたファイルが即座に配信される</td>
+<td>可変 - サーバー処理とデータベースクエリに依存</td>
+</tr>
+<tr>
+<td><strong>セキュリティ</strong></td>
+<td>高 - 最小限の攻撃対象領域、サーバーサイドコードなし</td>
+<td>中程度 - サーバーとデータベース層に複数の潜在的脆弱性</td>
+</tr>
+<tr>
+<td><strong>スケーラビリティ</strong></td>
+<td>優秀 - CDN配信が無制限のトラフィックを処理</td>
+<td>制限あり - サーバーとデータベース容量の制約</td>
+</tr>
+<tr>
+<td><strong>ホスティングコスト</strong></td>
+<td>低 - シンプルなファイルホスティングまたは無料CDNサービス</td>
+<td>高 - サーバーインフラストラクチャ、データベース管理、メンテナンス</td>
+</tr>
+<tr>
+<td><strong>コンテンツ更新</strong></td>
+<td>再構築とデプロイメントが必要</td>
+<td>管理インターフェースを通じて即座に</td>
+</tr>
+<tr>
+<td><strong>パーソナライゼーション</strong></td>
+<td>制限あり - クライアントサイドのみまたはビルド時のセグメンテーション</td>
+<td>広範囲 - リアルタイムのユーザー固有コンテンツ生成</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>ビルド時間の複雑さ</strong>は、数千ページを含む大規模サイトで大幅に増加し、特に複数のデータソースを統合したり広範なアセット最適化を実行したりする場合、開発ワークフローとデプロイメント速度に影響を与える長いビルドプロセスにつながる可能性があります。</p>
+<p><strong>動的コンテンツの制限</strong>は、複雑なクライアントサイドソリューションや静的要素と動的要素を組み合わせたハイブリッドアーキテクチャを実装せずに、リアルタイム情報、ユーザー固有のコンテンツ、頻繁に変更されるデータを表示する能力を制限します。</p>
+<p><strong>コンテンツ更新ワークフロー</strong>は、ユーザーフレンドリーな管理インターフェースを通じて単にコンテンツを更新するのではなく、ビルドプロセス、バージョン管理、デプロイメントパイプラインを理解する必要があるコンテンツ作成者に技術的知識を要求します。</p>
+<p><strong>検索機能</strong>は、従来のサーバーサイド検索がクライアントサイドソリューション、サードパーティ検索サービス、または動的検索実装と同じ柔軟性を提供しない可能性がある事前構築された<a data-lb="1" href="/ja/glossary/Indexing/" title="データベースおよび検索システムにおけるインデックス作成の包括的なガイド。種類、実装方法、メリット、最適なパフォーマンスを実現するためのベストプラクティスを解説します。">検索インデックス</a>を必要とするため、効果的に実装することが困難になります。</p>
+<p><strong>ユーザー認証</strong>と<a data-lb="1" href="/ja/glossary/Personalization/" title="AIチャットボットと自動化におけるパーソナライゼーションは、高度なアルゴリズムを使用して、個々のユーザーの嗜好や行動に合わせてサービス、コンテンツ、インタラクションをカスタマイズします。">パーソナライゼーション</a>は、静的サイトがサーバーサイドセッション管理やユーザー固有のコンテンツ生成を処理できないため、サードパーティサービス、クライアントサイドソリューション、またはハイブリッドアーキテクチャを通じて追加の複雑さを必要とします。</p>
+<p><strong>フォーム処理</strong>は、静的サイトがフォーム送信を直接処理できないため、外部サービスまたは<a data-lb="1" href="/ja/glossary/Edge-Function/" title="遠隔地のデータセンターではなく、ユーザーに近いサーバー上で実行される軽量プログラムで、リクエストをローカルで処理することでウェブサイトやアプリの応答速度を向上させます。">サーバーレス関数</a>を必要とし、複雑さを増加させ、サードパーティプラットフォームへの依存を導入する可能性があります。</p>
+<p><strong>リアルタイム機能</strong>、コメント、ライブチャット、共同編集などは、サーバーサイド実装と同じシームレスなエクスペリエンスを提供しない可能性がある外部サービスまたはクライアントサイドソリューションとの統合を必要とします。</p>
+<p><strong>SEOの複雑さ</strong>は、大規模サイトの場合、最適な検索エンジンインデックス作成とナビゲーション構造を確保するために、洗練されたURL構造計画、サイトマップ生成、コンテンツ組織戦略を必要とする場合があります。</p>
+<p><strong>開発ツールの依存関係</strong>は、サイトが特定の静的サイトジェネレーターに密接に結合される潜在的なベンダーロックイン状況を作り出し、標準的なHTML/CSSアプローチよりもプラットフォームやツール間の移行を困難にします。</p>
+<p><strong>共同ワークフロー</strong>は、複数のコンテンツ作成者が同時に貢献する必要がある場合、慎重なブランチ管理、マージ競合の解決、ビルドとデプロイメントプロセスの調整を必要とし、複雑になる可能性があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>コンテンツ戦略計画</strong>は、スケーラブルな情報アーキテクチャとサイト全体での最適なユーザーエクスペリエンスを確保するために、開発開始前にコンテンツ階層、URL構造、ナビゲーションパターンを整理することを含みます。</p>
+<p><strong>パフォーマンス最適化</strong>は、さまざまなデバイスとネットワーク条件での読み込み速度とユーザーエクスペリエンスを最大化するために、画像最適化、遅延読み込み、クリティカルCSS抽出、プログレッシブエンハンスメント技術を実装することを必要とします。</p>
+<p><strong>ビルドプロセスの自動化</strong>は、コンテンツが変更されたときにサイトを自動的にビルド、テスト、デプロイする継続的インテグレーションパイプラインを確立し、一貫性を確保し、手動デプロイメントエラーを削減しながら開発速度を維持します。</p>
+<p><strong>バージョン管理ワークフロー</strong>は、コンテンツ更新をコード変更から分離するブランチ戦略を実装し、サイトの安定性を維持し、簡単なロールバック機能を可能にしながら、並行開発とコンテンツ作成を可能にします。</p>
+<p><strong>SEO実装</strong>には、すべてのサイトコンテンツの最大限の検索エンジン可視性とランキングポテンシャルを確保するための適切なメタタグ生成、構造化データマークアップ、サイトマップ作成、URL最適化が含まれます。</p>
+<p><strong>セキュリティヘッダー設定</strong>は、ユーザーを保護し、サイトの整合性を維持するために、ホスティングプラットフォーム設定またはビルド時生成を通じてコンテンツセキュリティポリシー、HTTPS強制、その他のセキュリティヘッダーを実装することを含みます。</p>
+<p><strong>モニタリングとアナリティクス</strong>は、静的ホスティング環境で効果的に機能し、最適化のための実用的な洞察を提供するツールを通じて、サイトパフォーマンス、ユーザー行動、技術指標の包括的な追跡を確立します。</p>
+<p><strong>コンテンツ管理ワークフロー</strong>は、品質と一貫性の基準を維持しながら、技術者と非技術者の両方のチームメンバーに対応するコンテンツ作成、レビュー、公開のための明確なプロセスを作成します。</p>
+<p><strong>バックアップと復旧計画</strong>は、静的サイトホスティングの分散性とビルドプロセスに関与するさまざまなコンポーネントを考慮したコンテンツバックアップ、サイト復元、災害復旧の戦略を実装します。</p>
+<p><strong>プログレッシブエンハンスメント</strong>は、すべてのユーザーに基本的な機能を維持しながら、対応可能なブラウザのエクスペリエンスを向上させる機能を実装することで、さまざまなブラウザとデバイスでサイトが効果的に機能することを保証します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>インクリメンタル静的再生成</strong>は、サイト全体を再生成するのではなく、コンテンツが変更されたときに特定のページを選択的に再構築することを可能にし、ビルド時間を大幅に短縮し、静的ホスティングの利点を維持しながらより動的なコンテンツ更新を可能にします。</p>
+<p><strong>エッジサイドインクルード</strong>は、CDNエッジロケーションで動的コンテンツインジェクションを実装し、静的サイトがフルページ再生成やクライアントサイド処理なしでリアルタイムデータ、パーソナライゼーション、頻繁に変更されるコンテンツを組み込むことを可能にします。</p>
+<p><strong>ハイブリッドアーキテクチャ実装</strong>は、静的生成をサーバーレス関数やマイクロサービスと組み合わせて、静的ホスティングのパフォーマンス上の利点を維持しながら、フォーム処理、ユーザー認証、リアルタイムデータなどの動的機能を処理します。</p>
+<p><strong>高度なキャッシング戦略</strong>は、パフォーマンスを最適化しながらコンテンツの鮮度を確保し、複雑なコンテンツ更新シナリオを可能にする洗練されたキャッシュ無効化、部分ページキャッシング、コンテンツベースのキャッシュキーを実装します。</p>
+<p><strong>ビルド時API統合</strong>は、ビルドプロセス中に複数の外部ソースからデータを取得して処理し、ランタイムAPI依存関係を回避し、パフォーマンスを向上させながら動的データを組み込む包括的な静的サイトを作成します。</p>
+<p><strong>カスタムプラグイン開発</strong>は、標準ツールでは利用できない特定のビジネス要件を処理し、独自システムと統合し、独自のコンテンツ処理ワークフローを実装するカスタムプラグインを通じて静的サイトジェネレーター機能を拡張します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>AI駆動のコンテンツ生成</strong>は、開発者の生産性とユーザーエクスペリエンスの両方を向上させる自動コンテンツ作成、最適化提案、インテリジェントなコンテンツ組織のために、機械学習機能を静的サイトジェネレーターに統合します。</p>
+<p><strong>強化されたビルドパフォーマンス</strong>は、分散ビルド、インテリジェントキャッシング、並列処理を通じて、大規模サイトの現在の制限に対処し、数千ページと複雑なコンテンツ関係を持つエンタープライズスケールアプリケーションの静的生成を可能にします。</p>
+<p><strong>改善された動的統合</strong>は、静的コンテンツと動的コンテンツをシームレスにブレンドするより良いハイブリッドソリューションを提供し、静的ホスティングのパフォーマンスとセキュリティの利点を維持しながらリアルタイム機能を可能にします。</p>
+<p><strong>高度なパーソナライゼーション</strong>機能により、静的サイトは、パフォーマンスやセキュリティを損なうことなく、エッジコンピューティング、クライアントサイドインテリジェンス、洗練されたコンテンツセグメンテーション戦略を通じてパーソナライズされたエクスペリエンスを提供できるようになります。</p>
+<p><strong>より良い開発者ツール</strong>は、技術的な柔軟性を維持しながら、デザイナーやコンテンツ作成者が静的サイト開発にアクセスしやすくする、より洗練された開発環境、ビジュアル編集機能、デバッグツールを提供します。</p>
+<p><strong>標準の進化</strong>は、異なるプラットフォームとツール間の一貫性と相互運用性を向上させる静的サイトアーキテクチャ、コンテンツ管理統合、デプロイメント戦略のためのより良いプラクティスを確立します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Biilmann, M. (2015). “The JAMstack: Modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup.” Netlify.</li>
+<li>Hunt, P. (2019). “Static Site Generators: Modern Tools for Static Website Development.” O’Reilly Media.</li>
+<li>Young, A. (2020). “Performance Benefits of Static Site Generation in Modern Web Development.” Web Performance Journal, 15(3), 45-62.</li>
+<li>Chen, L. (2021). “Security Advantages of Static Hosting Architectures.” Cybersecurity Today, 8(2), 112-128.</li>
+<li>Rodriguez, M. (2022). “Scalability Patterns in JAMstack Applications.” Modern Web Architecture Quarterly, 4(1), 23-39.</li>
+<li>Thompson, K. (2023). “Evolution of Static Site Generation: From Simple HTML to Complex Applications.” Journal of Web Technologies, 12(4), 78-95.</li>
+<li>Williams, S. (2023). “Content Management Strategies for Static Site Workflows.” Digital Publishing Review, 19(2), 156-171.</li>
+<li>Davis, R. (2024). “Future Trends in Static Site Generation and Edge Computing.” Web Development Insights, 7(1), 34-48.</li>
+</ul>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Git-Based-CMS/">
+                    Git ベース CMS
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ウェブサイトのコンテンツをファイルとして保存し、Git バージョン管理を使用するコンテンツ管理システム。開発者がコードを管理するように、チームがコンテンツの管理、変更の追跡、公開を行うことができます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Git-Based-CMS/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Jamstack/">
+                    Jamstack
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Jamstackアーキテクチャの包括的ガイド:JavaScript、API、マークアップを活用した高速で安全、かつスケーラブルなモダンWebアプリケーションの構築方法。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Jamstack/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Static-Site-Generator/">
+                    静的サイトジェネレーター
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    テンプレートとコンテンツファイルを公開前にすぐに使えるHTMLページに変換することで、高速で安全なウェブサイトを自動的に構築するツールです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Static-Site-Generator/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/CDN--Content-Delivery-Network-/">
+                    CDN(コンテンツデリバリーネットワーク)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    コンテンツデリバリーネットワーク(CDN)の包括的ガイド - アーキテクチャ、メリット、実装戦略、グローバルコンテンツ配信のベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/CDN--Content-Delivery-Network-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Pipes/">
+                    Hugo Pipes
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugo Pipesは、スタイルシートやスクリプトなどのウェブサイトアセットを自動的に処理する組み込みツールで、別途外部ソフトウェアを必要としません。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Pipes/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Taxonomy/">
+                    Hugo タクソノミー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugo におけるコンテンツ整理システムで、タグやトピックなどのカスタマイズ可能なカテゴリを使用して関連記事にラベルを付けてグループ化し、閲覧用の整理されたページを自動的に作成します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Taxonomy/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/static-site-generation/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

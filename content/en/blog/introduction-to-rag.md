@@ -93,7 +93,7 @@ Recent scientific papers and technical developments predict that RAG will advanc
 
 ### RAG Use Cases at SmartWeb
 
-SmartWeb develops [AI chatbot](/en/glossary/AI-chatbot/) and AI email auto-response services combining [LiveAgent](/en/glossary/LiveAgent/) and FlowHunt. Using RAG technology, it immediately searches and provides the latest information from manuals, FAQs, and specialized documents collected for each company. It is used in scenarios like:
+SmartWeb develops [AI [chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-[chatbot](/en/glossary/Chatbot/)/) and AI email auto-response services combining [LiveAgent](/en/glossary/LiveAgent/) and FlowHunt. Using RAG technology, it immediately searches and provides the latest information from manuals, FAQs, and specialized documents collected for each company. It is used in scenarios like:
 
 - **24/7/365 Auto-Response with Latest Information**  
 Even outside business hours or late at night, AI immediately answers customer questions. It cross-searches the latest manuals and FAQs to return optimal answers on the spot.

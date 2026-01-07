@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>精度(Precision) | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Precision/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Precision/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Precision/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Precision/" hreflang="x-default" rel="alternate"/>
+<meta content="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。" name="description"/>
+<meta content="精度, AI, 機械学習, モデル評価, 偽陽性" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Precision/" property="og:url"/>
+<meta content="精度(Precision) | SmartWeb" property="og:title"/>
+<meta content="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Precision/" name="twitter:url"/>
+<meta content="精度(Precision) | SmartWeb" name="twitter:title"/>
+<meta content="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">精度(Precision)</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        精度(Precision)
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Precision
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                精度
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                機械学習
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                モデル評価
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                偽陽性
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="aiにおける適合率precisionとは">AIにおける適合率(Precision)とは</h2>
+<p>適合率(Precision)は、人工知能(AI)、機械学習(ML)、<a data-lb="1" href="/ja/glossary/Quick-Replies/" title="クイックリプライは、チャットインターフェースに表示される一時的で選択可能なボタンで、事前定義されたオプションを提供します。選択後に消えるため、画面の煩雑さを防ぎ、会話の流れを維持します。">チャットボット</a>、<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>における分類モデルの品質を評価するための基本的な指標です。<a data-lb="1" href="/ja/glossary/F1-score/" title="F1スコアは、機械学習における重要な評価指標であり、適合率と再現率の調和平均を表します。偽陽性と偽陰性のバランスを取るため、不均衡なデータセットに最適です。">適合率</a>は、モデルが陽性と判定した項目のうち、実際に陽性である項目の割合を測定します。言い換えれば、「AIが何かを重要である、または対象グループに属すると予測したとき、それが正しい頻度はどれくらいか」という質問に答えます。</p>
+<p>適合率は、偽陽性(false positive)—陰性を陽性と誤って識別すること—のコストが高いユースケースにおいて特に重要です。不正検知、<a data-lb="1" href="/ja/glossary/spam-filtering/" title="スパムフィルタリングとは、迷惑メール、大量送信メール、または悪意のあるメールを自動的に検出、分類、管理し、ユーザーの受信トレイに届かないようにするプロセスです。その仕組み、種類、メールセキュリティにおけるメリットについて解説します。">スパムフィルタリング</a>、サイバー<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>、医療診断、教育推薦システムにおいて、高い適合率を持つ<a data-lb="1" href="/ja/glossary/Generative-AI/" title="生成AIは、学習したパターンから、テキスト、画像、コードなどの新しいコンテンツを作成します。その定義、モデル(GAN、VAE、Transformer)、応用例、メリット、課題について解説します。">AIモデル</a>は、何かを重要と判定したときに通常は正しいことを保証し、コストのかかる、または破壊的なミスを回避します。</p>
+<p>すべての予測の全体的な正確性を測定する正解率(accuracy)とは異なり、適合率は陽性予測の信頼性に特化して焦点を当てます。この区別は、クラスが不均衡である場合や、異なるエラータイプの結果が大きく異なる場合に重要になります。高い適合率を持つスパムフィルターは、実際のスパムを時々見逃すことがあっても、正当なメールをスパムフォルダに送ることはほとんどありません。逆に、正解率だけに最適化されたモデルは、単に多数派クラスを予測することで高いスコアを達成する可能性がありますが、実用的な価値はほとんど提供しません。</p>
+<h2 id="適合率定義と計算">適合率:定義と計算</h2>
+<p>適合率は、モデルが行ったすべての陽性予測の中で真陽性の結果の割合を定量化します。</p>
+<h3 id="計算式">計算式</h3>
+<pre tabindex="0"><code>適合率 = 真陽性 / (真陽性 + 偽陽性)
+</code></pre><p><strong>ここで:</strong></p>
+<ul>
+<li><strong>真陽性(TP):</strong> 陽性として正しく識別された項目</li>
+<li><strong>偽陽性(FP):</strong> 陽性として誤って識別された項目(モデルは陽性と判定したが、実際には陰性)</li>
+</ul>
+<p><strong>パーセンテージで表現:</strong></p>
+<pre tabindex="0"><code>適合率 = TP / (TP + FP) × 100%
+</code></pre><p>高い適合率を持つモデルは、<a data-lb="1" href="/ja/glossary/False-Positive/" title="偽陽性とは、AIシステム(チャットボット、検知ツール、プライバシーフィルター)が、状況やコンテンツを誤って基準に一致すると識別し、エラーを引き起こすことです。">偽陽性</a>エラーをほとんど起こしません。その陽性予測のほとんどが正しいのです。</p>
+<h3 id="計算例">計算例</h3>
+<p>スパムフィルターが50通のメールをスパムとしてフラグ付けし、そのうち40通が実際にスパム(TP)で、10通が正当なメール(FP)である場合:</p>
+<pre tabindex="0"><code>適合率 = 40 / (40 + 10) = 0.8 または 80%
+</code></pre><p>これは、スパムとしてフラグ付けされたメールの80%が本当にスパムであり、20%が誤検知であったことを意味します。</p>
+<h2 id="適合率と正解率再現率の違い">適合率と正解率、再現率の違い</h2>
+<p>適合率、正解率、<a data-lb="1" href="/ja/glossary/Precision-and-Recall/" title="適合率と再現率は、分類システムや情報検索システムを評価するための中核的な指標です。適合率は正しい陽性予測を測定し、再現率はすべての実際の陽性を見つけ出します。">再現率</a>は関連していますが異なる指標であり、それぞれがモデルのパフォーマンスについて独自の洞察を提供します:</p>
+<table>
+<thead>
+<tr>
+<th>指標</th>
+<th>測定内容</th>
+<th>計算式</th>
+<th>使用すべき場合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>正解率(Accuracy)</strong></td>
+<td>全体的な正確性(すべての予測)</td>
+<td>(TP + TN) / (TP + TN + FP + FN)</td>
+<td>クラスが均衡している場合;一般的な正確性が重要</td>
+</tr>
+<tr>
+<td><strong>適合率(Precision)</strong></td>
+<td>陽性予測の正確性</td>
+<td>TP / (TP + FP)</td>
+<td>偽陽性のコストが高い場合</td>
+</tr>
+<tr>
+<td><strong>再現率(Recall)</strong></td>
+<td>すべての実際の陽性を見つける能力</td>
+<td>TP / (TP + FN)</td>
+<td>偽陰性のコストが高い場合</td>
+</tr>
+</tbody>
+</table>
+<p><strong>主な違い:</strong></p>
+<p><strong>正解率</strong>は、すべての予測のうち、陽性と陰性の両方の正しい予測の割合を測定します。クラスが不均衡な場合、誤解を招く可能性があります。</p>
+<p><strong>適合率</strong>は、予測された陽性のうち真陽性の割合に焦点を当てます。<a data-lb="1" href="/ja/glossary/False-Negative/" title="偽陰性とは、チャットボットのようなAIシステムが実際の問題や意図を検出できない状態を指します。自動化における影響、原因、削減戦略について解説します。">偽陰性</a>は無視されます。</p>
+<p><strong>再現率</strong>は、すべての実際の陽性のうち真陽性の割合を測定します。偽陽性は無視されます。</p>
+<p><strong>実世界の例え:</strong> 適合率は、「赤い」として選んだリンゴのうち、実際に赤いものがどれだけあるかをチェックするようなものです。再現率は、バスケット内のすべての赤いリンゴのうち、どれだけ選べたかをチェックすることです。正解率は、すべてのリンゴの<a data-lb="1" href="/ja/glossary/Taxonomy/" title="タクソノミーシステム、分類方法、階層構造、および情報整理のための実装ベストプラクティスに関する包括的なガイド。">分類</a>(赤または緑)のうち、何パーセントが正しかったかをチェックすることです。</p>
+<h2 id="適合率が重要な理由">適合率が重要な理由</h2>
+<p>適合率は、誤った陽性予測がコストがかかる、破壊的である、または望ましくない<a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>において不可欠です:</p>
+<p><strong>誤警報の最小化</strong></p>
+<p>スパムフィルタリングにおいて、偽陽性は正当なメールがスパムフォルダに送られることを意味し、重要なコミュニケーションを見逃す可能性があります。</p>
+<p><strong>ユーザーの信頼</strong></p>
+<p>教育<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>において、高い適合率は推薦や介入が信頼できることを保証し、学生と教師がシステムの判断を信頼できるようにします。</p>
+<p><strong>リソース配分</strong></p>
+<p><a data-lb="1" href="/ja/glossary/Fraud-Detection/" title="不正検知は、機械学習、人工知能、行動分析を活用して、金融取引、保険請求、Eコマース、デジタルプラットフォーム全体で疑わしいパターン、異常、不正行為をリアルタイムで特定し、組織と顧客を金銭的損失から保護します。">不正検知</a>において、偽陽性の調査は調査員の時間とリソースを浪費します。高い適合率は不要な調査を減らします。</p>
+<p><strong>規制と倫理的コンプライアンス</strong></p>
+<p>医療AIにおいて、偽陽性診断は不必要なストレス、侵襲的なフォローアップ処置、患者の不安を引き起こす可能性があります。</p>
+<p><strong>ビジネスへの影響</strong></p>
+<p>広告ターゲティングにおいて、低い適合率は興味のない視聴者に広告を表示することでマーケティング予算を浪費します。</p>
+<p>適合率は、偽陽性のコストが偽陰性のコストを大幅に上回る場合に主要な指標として使用するのが最適です。ただし、適合率を単独で考慮することはほとんどありません—包括的な評価のために再現率や他の指標とバランスを取る必要があります。</p>
+<h2 id="具体例">具体例</h2>
+<h3 id="スパムメールフィルター">スパムメールフィルター</h3>
+<p><a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">AIシステム</a>が1,000通のメールをレビューし、50通をスパムとして分類します。</p>
+<ul>
+<li><strong>真陽性(TP):</strong> フラグ付けされた50通のうち40通が実際にスパム</li>
+<li><strong>偽陽性(FP):</strong> 10通のメールが誤ってスパムとしてフラグ付けされた</li>
+</ul>
+<pre tabindex="0"><code>適合率 = 40 / (40 + 10) = 0.8 または 80%
+</code></pre><p><strong>解釈:</strong> スパムとしてフラグ付けされたメールの80%が本当にスパムでした;20%が誤警報でした。</p>
+<h3 id="銀行における不正検知">銀行における不正検知</h3>
+<p>AIが200件の取引を不正としてフラグ付けします。</p>
+<ul>
+<li>180件が実際に不正(TP)</li>
+<li>20件が正当だが誤ってフラグ付けされた(FP)</li>
+</ul>
+<pre tabindex="0"><code>適合率 = 180 / (180 + 20) = 0.9 または 90%
+</code></pre><p><strong>解釈:</strong> フラグ付けされた取引の90%が本当に不正でした。</p>
+<h3 id="教育ai推薦">教育AI推薦</h3>
+<p>AIが30人の生徒に読解介入が必要だと提案します。</p>
+<ul>
+<li>24人が本当に支援が必要(TP)</li>
+<li>6人は不要(FP)</li>
+</ul>
+<pre tabindex="0"><code>適合率 = 24 / 30 = 0.8 または 80%
+</code></pre><p><strong>解釈:</strong> 介入推薦の80%が適切でした。</p>
+<h3 id="医療診断">医療診断</h3>
+<p>AIシステムが100人の患者が稀な疾患を持っていると予測します。</p>
+<ul>
+<li>90人が実際に疾患を持っている(TP)</li>
+<li>10人は持っていない(FP)</li>
+</ul>
+<pre tabindex="0"><code>適合率 = 90 / 100 = 0.9 または 90%
+</code></pre><p><strong>解釈:</strong> 陽性診断の90%が正しかった。</p>
+<h2 id="混同行列における適合率">混同行列における適合率</h2>
+<p>混同行列は予測結果を要約する表です:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>予測陽性</th>
+<th>予測陰性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>実際陽性</strong></td>
+<td>真陽性(TP)</td>
+<td>偽陰性(FN)</td>
+</tr>
+<tr>
+<td><strong>実際陰性</strong></td>
+<td>偽陽性(FP)</td>
+<td>真陰性(TN)</td>
+</tr>
+</tbody>
+</table>
+<p>適合率は「予測陽性」列に焦点を当てます:陽性と予測されたすべてのインスタンスのうち、実際に陽性である割合はどれくらいか?</p>
+<h2 id="適合率を使用することの長所と短所">適合率を使用することの長所と短所</h2>
+<h3 id="長所">長所</h3>
+<ul>
+<li>陽性が稀な不均衡データセットに有用</li>
+<li>モデルの偽陽性を回避する能力を強調</li>
+<li>偽陽性がコストがかかる、または破壊的な場合に重要</li>
+<li>ステークホルダーにとって明確で解釈可能</li>
+<li>多くのアプリケーションでビジネスコストに直接関連</li>
+</ul>
+<h3 id="短所">短所</h3>
+<ul>
+<li>偽陰性を無視(実際の陽性を見逃す可能性)</li>
+<li>モデルが非常に保守的な場合、人為的に高くなる可能性</li>
+<li>単独では不十分;再現率で補完すべき</li>
+<li>非常に少ない陽性予測を行うことで操作される可能性</li>
+<li>陽性予測が行われない場合は未定義</li>
+</ul>
+<h2 id="トレードオフ適合率-vs-再現率">トレードオフ:適合率 vs. 再現率</h2>
+<p>適合率と再現率はしばしば逆の関係にあります:一方を改善すると他方が低下する可能性があります。</p>
+<p><strong>閾値を上げる</strong>(モデルをより保守的にする):</p>
+<ul>
+<li>適合率が増加(偽陽性が減少)</li>
+<li>再現率が減少(偽陰性が増加—陽性の見逃しが増える)</li>
+</ul>
+<p><strong>閾値を下げる</strong>(モデルをより保守的でなくする):</p>
+<ul>
+<li>再現率が増加(陽性の見逃しが減少)</li>
+<li>適合率が減少(偽陽性が増加)</li>
+</ul>
+<h3 id="適切な指標の選択">適切な指標の選択</h3>
+<p><strong>適合率を使用する場合:</strong></p>
+<ul>
+<li>偽陽性がより問題である(スパムフィルター、医療スクリーニング)</li>
+<li>予測を調査するためのリソースが限られている</li>
+<li>ユーザーの信頼が予測精度に依存している</li>
+</ul>
+<p><strong>再現率を使用する場合:</strong></p>
+<ul>
+<li>陽性を見逃すことがより問題である(疾患スクリーニング、安全警告)</li>
+<li>フォローアッププロセスが偽陽性を効率的にフィルタリングできる</li>
+<li>すべての陽性ケースを見つけることが重要</li>
+</ul>
+<p><strong>F1スコアを使用する場合:</strong></p>
+<ul>
+<li>適合率と再現率の両方をバランスさせる必要がある</li>
+<li>両方のエラータイプに結果がある</li>
+<li>モデル比較のために単一の指標が必要</li>
+</ul>
+<p>F1スコアは適合率と再現率の調和平均です:</p>
+<pre tabindex="0"><code>F1 = 2 × (適合率 × 再現率) / (適合率 + 再現率)
+</code></pre><h2 id="業界での応用">業界での応用</h2>
+<h3 id="ビジネスとマーケティング">ビジネスとマーケティング</h3>
+<p><strong>広告ターゲティング:</strong> 高い適合率は、ターゲット広告が購入する可能性の高い人に届くことを保証し、無駄な支出を削減し、<a data-lb="1" href="/ja/glossary/ROI/" title="投資収益率(ROI)は、投資効率を定量化する財務指標です。AIチャットボットと自動化のROI計算方法、主要な構成要素、指標、実際の事例について学びましょう。">ROI</a>を向上させます。</p>
+<p><strong>リードスコアリング:</strong> 高い適合率は、AIによってフラグ付けされた「ホット」リードが本当にコンバージョンする可能性が高いことを保証し、営業効率とチームの士気を向上させます。</p>
+<h3 id="サイバーセキュリティ">サイバーセキュリティ</h3>
+<p><strong>侵入検知:</strong> 高い適合率は誤警報を減らし、セキュリティチームの警告疲労を最小限に抑え、実際の脅威を無視することを防ぎます。</p>
+<p><strong>マルウェア検知:</strong> 悪意があるとフラグ付けされたファイルが本当に脅威であることを保証し、正当なファイルを隔離するリスクを減らします。</p>
+<p><strong>ヘルスケアサイバーセキュリティ:</strong> AIシステムは、正当な医療活動をセキュリティ脅威として誤ってフラグ付けすることを避けるために、高い適合率を維持する必要があります。</p>
+<h3 id="教育">教育</h3>
+<p><strong>自動化された生徒介入:</strong> 高い適合率は、フラグ付けされた生徒が本当に支援を必要としていることを意味し、不要な介入を避け、信頼を維持します。</p>
+<p><strong>適応学習:</strong> AIモデルは高い適合率で<a data-lb="1" href="/ja/glossary/Educational-Content/" title="デジタルプラットフォーム全体で効果的な学習体験を実現するための、教育コンテンツの作成、配信方法、ベストプラクティスに関する包括的なガイド。">学習教材</a>を推薦し、生徒が関連性があり効果的なコンテンツを受け取ることを保証します。</p>
+<h3 id="ヘルスケア">ヘルスケア</h3>
+<p><strong>診断:</strong> 高い適合率は、特に稀な疾患の検出において、不要なフォローアップや治療を避け、偽陽性が患者に大きな不安を引き起こすことを防ぎます。</p>
+<p><strong>個別化医療:</strong> 適合率モデルは患者を効果的な治療に適合させ、不適切または効果のない治療を最小限に抑えます。</p>
+<p><strong>創薬:</strong> 高い適合率を持つAIモデルは有望な化合物を特定し、臨床試験のコストと時間を削減します。</p>
+<p><strong>患者モニタリング:</strong> AI駆動システムは、介護者を誤警報で圧倒することなく、即座の注意が必要な患者を特定するために高い適合率に依存しています。</p>
+<h3 id="チャットボットと自動化">チャットボットと自動化</h3>
+<p><strong>カスタマーサービスボット:</strong> 高い適合率は、本当に必要な場合を除いて人間への<a data-lb="1" href="/ja/glossary/escalation/" title="カスタマーサポート、IT、AIチャットボットにおけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な問題解決をどのように効率化するかを解説します。">エスカレーション</a>を減らし、サービス品質と効率を維持します。</p>
+<p><strong>自動モデレーション:</strong> 高い適合率は、本当に問題のあるメッセージのみがフラグ付けされることを保証し、正当なコンテンツの検閲を避けます。</p>
+<h3 id="金融と不正検知">金融と不正検知</h3>
+<p><strong>取引監視:</strong> 高い適合率は、不正としてフラグ付けされる正当な取引を最小限に抑え、顧客の摩擦と調査作業負荷を削減します。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>モデルは100%の適合率を持つことができますか?</strong></p>
+<p>はい、偽陽性予測を行わない場合です。ただし、これは通常、非常に低い再現率(多くの実際の陽性を見逃す)を犠牲にします。一度だけ陽性を予測し、それが正しいモデルは100%の適合率を持ちますが、おそらく非常に低い再現率です。</p>
+<p><strong>適合率は常に最も重要な指標ですか?</strong></p>
+<p>いいえ。選択はユースケースに依存します。特定のアプリケーションにおける偽陽性と偽陰性の相対的なコストを考慮してください。</p>
+<p><strong>適合率は顧客満足度とどのように関連していますか?</strong></p>
+<p>チャットボットや自動化における高い適合率は、ユーザーがエラーに遭遇する可能性が低いことを意味し、システムへの信頼と満足度を向上させます。</p>
+<p><strong>適合率と正解率の違いは何ですか?</strong></p>
+<p>適合率は陽性予測の正確性のみに焦点を当てます。正解率はすべての予測(陽性と陰性の両方)とその正確性を考慮します。</p>
+<p><strong>適合率と再現率のバランスをどのように取りますか?</strong></p>
+<p>単一のバランスの取れた指標としてF1スコアを使用し、ビジネス要件に基づいて分類閾値を調整し、ドメインにおける各エラータイプの実用的な影響を常に考慮してください。</p>
+<h2 id="重要なポイント">重要なポイント</h2>
+<ul>
+<li>適合率は陽性予測の信頼性を測定します</li>
+<li>偽陽性がコストがかかる、または破壊的な場合に重要です</li>
+<li>特に不均衡データセットでは、常に適合率を再現率と一緒に考慮してください</li>
+<li>混同行列を使用してモデルのパフォーマンスを解釈し改善します</li>
+<li>適合率、再現率、正解率の選択は、ビジネス目標とエラータイプの実世界への影響に依存します</li>
+<li>F1スコアは、適合率と再現率の両方が重要な場合にバランスの取れた<a data-lb="1" href="/ja/glossary/POV--Point-of-View-/" title="物語が語られる際の語り手の視点であり、読者が何を見て何を体験するかを決定します。POVは情報がどのように明かされるかを形作り、物語への感情的なつながりに影響を与えます。">視点</a>を提供します</li>
+<li>適切な指標を選択するには、コンテキストとドメイン知識が不可欠です</li>
+</ul>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Evidently AI. (n.d.). Accuracy vs Precision vs Recall in Machine Learning. Evidently AI Blog.</p>
+</li>
+<li>
+<p>Google. (n.d.). Machine Learning Crash Course: Accuracy, Recall, Precision. Google Developers.</p>
+</li>
+<li>
+<p>FlintK12. (n.d.). AI Precision Definition and Meaning. FlintK12 AI Glossary.</p>
+</li>
+<li>
+<p>Palo Alto Networks. (n.d.). What Is Precision AI. Palo Alto Networks Cyberpedia.</p>
+</li>
+<li>
+<p>Iterate.ai. (n.d.). What is Precision. Iterate.ai AI Glossary.</p>
+</li>
+<li>
+<p>Tidio. (n.d.). Different Types of Chatbots. Tidio Blog.</p>
+</li>
+<li>
+<p>Encord. (n.d.). Accuracy vs Precision vs Recall in Machine Learning. Encord Blog.</p>
+</li>
+<li>
+<p>Mage AI. (n.d.). Definitive Guide to Accuracy, Precision, and Recall for Product Developers. Mage AI Blog.</p>
+</li>
+<li>
+<p>DelveInsight. (n.d.). Top Applications of Artificial Intelligence in Healthcare. DelveInsight Blog.</p>
+</li>
+<li>
+<p>Digital Adoption. (n.d.). 13 AI Examples in Industry. Digital Adoption.</p>
+</li>
+<li>
+<p>GeeksforGeeks. (n.d.). Precision and Recall in Machine Learning. GeeksforGeeks.</p>
+</li>
+<li>
+<p>DataCamp. (n.d.). 25 Practical Examples of AI Transforming Industries. DataCamp Blog.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/accuracy-measurement/">
+                    精度測定
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AI、<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>、自動化システムにおける精度について学びます。その計算方法、重要性、限界、および改善と監視のためのベストプラクティスを理解します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/accuracy-measurement/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/continuous-learning/">
+                    AIにおける継続学習
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIにおける<a data-lb="1" href="/ja/glossary/continuous-learning/" title="AIにおける継続学習を探求します。システムが忘却することなく段階的に適応し知識を獲得できるようにする技術です。そのプロセス、破滅的忘却などの課題、実世界での応用について理解を深めます。">継続学習</a>を探求します。システムが忘却することなく段階的に適応し知識を獲得できるようにする技術です。そのプロセス、破滅的忘却などの課題、実世界での応用について理解を深めます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/continuous-learning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Chatbot/">
+                    チャットボット
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    チャットボットは、テキストまたは音声を使用して人間の会話をシミュレートするソフトウェアプログラムで、24時間365日利用可能です。チャットボットの種類、用途、メリット、そしてAI、<a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">自然言語処理</a>、機械学...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Chatbot/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/reinforcement-learning/">
+                    強化学習
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/reinforcement-learning/" title="強化学習(RL)は、エージェントが環境と相互作用し、試行錯誤を通じて累積報酬を最大化することで、逐次的な意思決定を学習する機械学習の一種です。">強化学習</a>(RL)は、エージェントが環境と相互作用し、試行錯誤を通じて累積報酬を最大化することで、逐次的な意思決定を学習する機械学習の一種です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/reinforcement-learning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Intent-Recognition/">
+                    インテント認識
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Intent-Recognition/" title="インテント認識は、ユーザーの入力を解釈して特定の目標を理解する、AI/NLPのコア技術です。システムが文脈に応じて効率的に応答することを可能にします。">インテント認識</a>は、ユーザーの入力を解釈して特定の目標を理解する、AI/<a data-lb="1" href="/ja/glossary/AI-answer-assistant/" title="AI回答アシスタントは、自然言語処理(NLP)、機械学習(ML)、大規模言語モデル(LLM)、RAG技術を活用し、複雑なテキストや専門用語を明確化・洗練・解説する高度なAI駆動型ソフトウェアシステムです。">NLP</a>のコア技術です。システムが文脈に応じて効率的に応答することを可能にします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Intent-Recognition/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Model-Serving/">
+                    モデルサービング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Model-Serving/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/precision/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

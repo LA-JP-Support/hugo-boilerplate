@@ -65,6 +65,7 @@ Aggregator（アグリゲーター）,aggregator（アグリゲーター）,Aggr
 ナレッジセンタードサービス (KCS),ナレッジセンタードサービス (kcs),ナレッジセンタードサービス (KCS),/ja/glossary/Knowledge-Centered-Service--KCS-/,カスタマーサポート、ナレッジマネジメント、サービスエクセレンスのためのナレッジセンタードサービス (KCS) 手法の包括的ガイド。,1038,exact,true
 ナレッジホーディング(知識の囲い込み),ナレッジホーディング(知識の囲い込み),ナレッジホーディング(知識の囲い込み),/ja/glossary/Knowledge-Hoarding/,ナレッジホーディングの包括的ガイド:原因、影響、予防戦略、および効果的な知識共有のための組織的ソリューションについて解説します。,1038,exact,true
 Meta Business Suite,meta business suite,Meta Business Suite,/ja/glossary/Meta-Business-Suite/,FacebookとInstagramのアカウント、投稿、広告、パフォーマンスデータを一元管理できる統合ダッシュボード。ビジネスのソーシャルメディア運用を効率化します。,1038,exact,true
+Mistral AI(ミストラルAI),mistral ai(ミストラルai),Mistral AI(ミストラルAI),/ja/glossary/Mistral-AI/,Mistral AIは、オープンウェイト大規模言語モデルとLe Chatアシスタントを開発するフランスの人工知能企業で、OpenAIやAnthropicに対抗するヨーロッパを代表するAI企業として位置づけられています。,1038,exact,true
 ネットレベニューリテンション（NRR）,ネットレベニューリテンション（nrr）,ネットレベニューリテンション（NRR）,/ja/glossary/Net-Revenue-Retention--NRR-/,ネットレベニューリテンション（NRR）の包括的ガイド - 既存顧客からの収益成長を拡張とチャーン分析を通じて測定する、重要なSaaS指標です。,1038,exact,true
 オンラインコミュニティプラットフォーム,オンラインコミュニティプラットフォーム,オンラインコミュニティプラットフォーム,/ja/glossary/Online-Community-Platform/,オンラインコミュニティプラットフォームの包括的なガイド。機能、実装戦略、エンゲージメントの高いデジタルコミュニティを構築するためのベストプラクティスを解説します。,1038,exact,true
 パーソナライズドEメールマーケティング,パーソナライズドeメールマーケティング,パーソナライズドEメールマーケティング,/ja/glossary/Personalized-Email-Marketing/,パーソナライズドEメールマーケティングは、AI、機械学習、行動分析を活用して、受信者の好み、行動、予測される関心に基づいて、メールコンテンツ、件名、送信時間、オファーを個別に自動カスタマイズします。これにより、開封率、クリック率、コンバージョン率が劇的に向上し、配信停止を減少させることができます。,1038,exact,true
@@ -251,7 +252,6 @@ Tongyi-Qianwen,tongyi-qianwen,Tongyi-Qianwen,/ja/glossary/Tongyi-Qianwen/,Alibab
 ReActプロンプティング,reactプロンプティング,ReActプロンプティング,/ja/glossary/ReAct-Prompting/,推論と行動を組み合わせたReActプロンプティング手法の包括的ガイド。AIの問題解決能力と意思決定能力を強化します。,1026,exact,true
 レコメンデーションエンジン,レコメンデーションエンジン,レコメンデーションエンジン,/ja/glossary/Recommendation-Engine/,レコメンデーションエンジンの包括的ガイド:アルゴリズム、実装、メリット、パーソナライズされたコンテンツ配信システムのベストプラクティス。,1026,exact,true
 レベニューインテリジェンス,レベニューインテリジェンス,レベニューインテリジェンス,/ja/glossary/Revenue-Intelligence/,セールス会話と顧客インタラクションを分析するAI搭載アナリティクスで、企業が営業パフォーマンスを理解し、成果を予測し、より良い収益決定を行うことを支援します。,1026,exact,true
-リスクアセスメント(顧客),リスクアセスメント(顧客),リスクアセスメント(顧客),/ja/glossary/Risk-Assessment--Customer-/,顧客リスク評価の手法、フレームワーク、ベストプラクティスに関する包括的なガイド。効果的なリスク管理と意思決定を実現します。,1026,exact,true
 ルールベースチャットボット,ルールベースチャットボット,ルールベースチャットボット,/ja/glossary/Rule-Based-Chatbot/,ルールベースチャットボットは、事前に定義されたルールとスクリプトに従ってユーザーと対話し、AIによる学習を行わずに特定のキーワードやボタン選択に応答します。,1026,exact,true
 SMBテクノロジースタック,smbテクノロジースタック,SMBテクノロジースタック,/ja/glossary/SMB-Technology-Stack/,中小企業が業務管理、チーム協働、大企業との競争力強化のために利用する、手頃な価格のソフトウェアとクラウドツールの集合体。,1026,exact,true
 SOC 2コンプライアンス,soc 2コンプライアンス,SOC 2コンプライアンス,/ja/glossary/SOC-2-Compliance/,SOC 2コンプライアンスフレームワーク、トラストサービス基準、監査プロセス、および組織向け実装のベストプラクティスに関する包括的なガイド。,1026,exact,true
@@ -676,6 +676,7 @@ RAGベンチマーク,ragベンチマーク,RAGベンチマーク,/ja/glossary/R
 規制サンドボックス,規制サンドボックス,規制サンドボックス,/ja/glossary/Regulatory-Sandbox/,規制サンドボックスとは、規制当局が革新的な企業に対して新製品やサービスをテストできるよう設けた管理された環境であり、規制を緩和しながら消費者の安全を確保し、イノベーションを促進するものです。,1018,exact,true
 リテンションレート,リテンションレート,リテンションレート,/ja/glossary/Retention-Rate/,ビジネス成長と顧客成功のためのリテンションレート指標、計算方法、最適化戦略に関する包括的ガイド。,1018,exact,true
 レベニューファネル,レベニューファネル,レベニューファネル,/ja/glossary/Revenue-Funnel/,潜在顧客が製品を初めて知ってから購入し、ロイヤルカスタマーになるまでの各段階を追跡する視覚的なモデルで、企業が販売プロセスを理解し改善するのに役立ちます。,1018,exact,true
+リスクアセスメント,リスクアセスメント,リスクアセスメント,/ja/glossary/Risk-Assessment/,顧客リスク評価の手法、フレームワーク、ベストプラクティスに関する包括的なガイド。効果的なリスク管理と意思決定を実現します。,1018,exact,true
 SIPトランキング,sipトランキング,SIPトランキング,/ja/glossary/SIP-Trunking/,SIPトランキング技術、実装方法、メリット、および現代のビジネスコミュニケーションシステムにおけるベストプラクティスに関する包括的なガイド。,1018,exact,true
 SMB(中小企業),smb(中小企業),SMB(中小企業),/ja/glossary/SMB--Small-and-Medium-Business-/,従業員数500名未満の企業で、経済の基盤を形成しています。大企業よりも高い機動性を持って事業を展開する一方、テクノロジーや人材面でのリソース制約に直面しています。,1018,exact,true
 セールスコーチング,セールスコーチング,セールスコーチング,/ja/glossary/Sales-Coaching/,セールスコーチングは、パーソナライズされた指導、フィードバック、実践を通じて、営業担当者がスキルとパフォーマンスを向上させるための継続的なプロセスです。改善が必要な領域を特定し、成功に向けて継続的なサポートを提供することに焦点を当てています。,1018,exact,true
@@ -1297,12 +1298,12 @@ Fact-Score,fact-score,Fact-Score (FActScore),/ja/glossary/Fact-Score/,FActScore�
 フィードバックボタン,フィードバックボタン,フィードバックボタン(サムズアップ/ダウン),/ja/glossary/Feedback-Buttons--Thumbs-Up-Down-/,AIチャットボットやデジタルコンテンツ向けのフィードバックボタン(サムズアップ/ダウン)について学びます。そのメリット、ベストプラクティス、継続的な改善を推進する方法を解説します。,920,without_parens,false
 ジェイルブレイキング,ジェイルブレイキング,ジェイルブレイキング(AIジェイルブレイキング),/ja/glossary/Jailbreaking/,AIジェイルブレイキングとは、AIの安全ガードレールを回避して禁止されたコンテンツを生成させる行為です。大規模言語モデル(LLM)における手法、リスク、および緩和戦略について解説します。,920,without_parens,false
 ナレッジホーディング,ナレッジホーディング,ナレッジホーディング(知識の囲い込み),/ja/glossary/Knowledge-Hoarding/,ナレッジホーディングの包括的ガイド:原因、影響、予防戦略、および効果的な知識共有のための組織的ソリューションについて解説します。,920,without_parens,false
+Mistral AI,mistral ai,Mistral AI(ミストラルAI),/ja/glossary/Mistral-AI/,Mistral AIは、オープンウェイト大規模言語モデルとLe Chatアシスタントを開発するフランスの人工知能企業で、OpenAIやAnthropicに対抗するヨーロッパを代表するAI企業として位置づけられています。,920,without_parens,false
 初回コンタクト解決率,初回コンタクト解決率,初回コンタクト解決率(FCR),/ja/glossary/first-contact-resolution/,初回コンタクト解決率(FCR)について学びましょう。これは、最初の接触で顧客の問題を解決できたかを測定する重要な指標です。顧客満足度、業務効率への重要性、および改善のためのベストプラクティスをご紹介します。,920,without_parens,false
 コンタクトセンター・アズ・ア・サービス,コンタクトセンター・アズ・ア・サービス,コンタクトセンター・アズ・ア・サービス（CCaaS）,/ja/glossary/Contact-Center-as-a-Service--CCaaS-/,コンタクトセンター・アズ・ア・サービス（CCaaS）の包括的ガイド - クラウドベースのカスタマーサービスソリューション、メリット、導入方法、ベストプラクティスについて解説します。,918,without_fullwidth_parens,false
 アクセス制御リスト,アクセス制御リスト,アクセス制御リスト(ACL),/ja/glossary/Access-Control-List--ACL-/,アクセス制御リスト(ACL)の包括的ガイド - ITシステムにおけるユーザーとリソースの権限とアクセス権を定義するセキュリティメカニズムについて解説します。,918,without_parens,false
 コンタクトリーズン,コンタクトリーズン,コンタクトリーズン(問い合わせ理由),/ja/glossary/Contact-Reason/,カスタマーサービスにおけるコンタクトリーズン(問い合わせ理由)の包括的ガイド。分類システム、実装戦略、最適化のためのベストプラクティスを含みます。,918,without_parens,false
 フォールバック機構,フォールバック機構,フォールバック機構(Fallback Mechanism),/ja/glossary/Fall-back-Mechanism/,AIチャットボットにおけるフォールバック機構は、ボットがリクエストを解釈または実行できない場合に、会話をリダイレクト、明確化、またはエスカレーションすることで継続性を確保します。,918,without_parens,false
-リスクアセスメント,リスクアセスメント,リスクアセスメント(顧客),/ja/glossary/Risk-Assessment--Customer-/,顧客リスク評価の手法、フレームワーク、ベストプラクティスに関する包括的なガイド。効果的なリスク管理と意思決定を実現します。,918,without_parens,false
 検索エンジン最適化,検索エンジン最適化,検索エンジン最適化(SEO),/ja/glossary/Search-Engine-Optimization--SEO-/,SEOとは、コンテンツ、構造、技術的要素を最適化することで、Googleなどの検索エンジンからより多くのオーガニックトラフィックを獲得するために、ウェブサイトの検索結果における可視性を向上させる実践手法です。,918,without_parens,false
 サービスレベル契約,サービスレベル契約,サービスレベル契約(SLA),/ja/glossary/Service-Level-Agreement--SLA-/,サービスレベル契約(SLA)の包括的ガイド - 定義、構成要素、実装のベストプラクティス、およびサービス管理における将来のトレンドを解説します。,918,without_parens,false
 シングルサインオン,シングルサインオン,シングルサインオン(SSO),/ja/glossary/Single-Sign-On--SSO-/,シングルサインオン(SSO)認証システム、プロトコル、実装戦略、および企業向けセキュリティ考慮事項に関する包括的なガイド。,918,without_parens,false
@@ -1445,6 +1446,7 @@ LLMによる評価,llmによる評価,LLM as Judge(LLMによる評価),/ja/gloss
 自動着信呼分配,自動着信呼分配,ACD(自動着信呼分配),/ja/glossary/ACD--Automatic-Call-Distribution-/,自動着信呼分配システムの包括的ガイド。コールセンター向けのコア技術、実装戦略、ベストプラクティスを網羅しています。,814,parens_content,false
 問い合わせ理由,問い合わせ理由,コンタクトリーズン(問い合わせ理由),/ja/glossary/Contact-Reason/,カスタマーサービスにおけるコンタクトリーズン(問い合わせ理由)の包括的ガイド。分類システム、実装戦略、最適化のためのベストプラクティスを含みます。,814,parens_content,false
 知識の囲い込み,知識の囲い込み,ナレッジホーディング(知識の囲い込み),/ja/glossary/Knowledge-Hoarding/,ナレッジホーディングの包括的ガイド:原因、影響、予防戦略、および効果的な知識共有のための組織的ソリューションについて解説します。,814,parens_content,false
+ミストラルAI,ミストラルai,Mistral AI(ミストラルAI),/ja/glossary/Mistral-AI/,Mistral AIは、オープンウェイト大規模言語モデルとLe Chatアシスタントを開発するフランスの人工知能企業で、OpenAIやAnthropicに対抗するヨーロッパを代表するAI企業として位置づけられています。,814,parens_content,false
 年平均成長率,年平均成長率,CAGR(年平均成長率),/ja/glossary/CAGR/,年平均成長率(CAGR)について学びましょう。投資や指標の経時的な平均年間成長を測定する財務指標です。その計算式、算出方法、および応用例を理解できます。,812,parens_content,false
 顧客関係管理,顧客関係管理,CRM(顧客関係管理),/ja/glossary/CRM/,CRM(顧客関係管理)システムは、顧客とのやり取りを管理・最適化するソフトウェアです。データを一元化し、プロセスを自動化し、顧客エンゲージメントとビジネスパフォーマンスを向上させるためのインサイトを提供します。,812,parens_content,false
 シークレット,シークレット,環境変数(シークレット):詳細ガイド,/ja/glossary/Environment-Variables--Secrets-/,アプリケーションの安全な設定のための環境変数(シークレット)について学びます。APIキーやパスワードなどの機密データをコードから分離し、セキュリティと柔軟性を確保します。,812,parens_content,false
@@ -1468,7 +1470,6 @@ IaC,iac,Infrastructure as Code (IaC),/ja/glossary/Infrastructure-as-Code--IaC-/,
 WoZ,woz,ウィザード・オブ・オズ・テスティング(WoZ),/ja/glossary/Wizard-of-Oz-Testing--WoZ-/,ウィザード・オブ・オズ・テスティング(WoZ)は、ユーザーが隠れた人間によって制御されるシステムと対話し、AIをシミュレートすることで、コスト効率的にデザインをテストするユーザーリサーチ手法です。,806,parens_content,false
 視点,視点,POV(視点),/ja/glossary/POV--Point-of-View-/,物語が語られる際の語り手の視点であり、読者が何を見て何を体験するかを決定します。POVは情報がどのように明かされるかを形作り、物語への感情的なつながりに影響を与えます。,804,parens_content,false
 中国,中国,個人情報保護法(中国),/ja/glossary/Personal-Information-Protection-Law/,,804,parens_content,false
-顧客,顧客,リスクアセスメント(顧客),/ja/glossary/Risk-Assessment--Customer-/,顧客リスク評価の手法、フレームワーク、ベストプラクティスに関する包括的なガイド。効果的なリスク管理と意思決定を実現します。,804,parens_content,false
 コードインタープリター,コードインタープリター,Code Interpreter（コードインタープリター）,/ja/glossary/Code-Interpreter/,会話中にリアルタイムでコードを書き、実行し、デバッグするAIツール。インタラクティブなプログラミングとデータ分析を可能にします。,802,fullwidth_parens_content,false
 固有表現認識、NER,固有表現認識、ner,エンティティ抽出（固有表現認識、NER）,/ja/glossary/Entity-Extraction/,エンティティ抽出（NER）は、非構造化テキストから人名、組織名、日付などの重要な情報を識別・分類する自然言語処理技術です。これにより、テキストデータを構造化データに変換し、分析や自動化に活用できます。,800,fullwidth_parens_content,false
 フィンテック不正検知,フィンテック不正検知,FinTech Fraud Detection（フィンテック不正検知）,/ja/glossary/FinTech-Fraud-Detection/,AIと機械学習を使用して不正な金融取引をリアルタイムで特定・防止するフィンテック不正検知システムの包括的ガイド。,800,fullwidth_parens_content,false

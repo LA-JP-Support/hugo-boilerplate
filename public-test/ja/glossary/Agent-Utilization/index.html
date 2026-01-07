@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>エージェント稼働率 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Agent-Utilization/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="エージェント稼働率は、コンタクトセンターの従業員が勤務時間のうち、実際に顧客対応に費やしている時間の割合を測定する指標です。マネージャーが適切な人員配置を行い、業務が公平に配分されているかを確認するのに役立ちます。" name="description"/>
+<meta content="エージェント稼働率, ワークフォース最適化, コンタクトセンター指標, エージェント生産性, リソース管理" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Agent-Utilization/" property="og:url"/>
+<meta content="エージェント稼働率 | SmartWeb" property="og:title"/>
+<meta content="エージェント稼働率は、コンタクトセンターの従業員が勤務時間のうち、実際に顧客対応に費やしている時間の割合を測定する指標です。マネージャーが適切な人員配置を行い、業務が公平に配分されているかを確認するのに役立ちます。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Agent-Utilization/" name="twitter:url"/>
+<meta content="エージェント稼働率 | SmartWeb" name="twitter:title"/>
+<meta content="エージェント稼働率は、コンタクトセンターの従業員が勤務時間のうち、実際に顧客対応に費やしている時間の割合を測定する指標です。マネージャーが適切な人員配置を行い、業務が公平に配分されているかを確認するのに役立ちます。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">エージェント稼働率</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        エージェント稼働率
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Agent Utilization
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          エージェント稼働率は、コンタクトセンターの従業員が勤務時間のうち、実際に顧客対応に費やしている時間の割合を測定する指標です。マネージャーが適切な人員配置を行い、業務が公平に配分されているかを確認するのに役立ちます。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エージェント稼働率
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ワークフォース最適化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コンタクトセンター指標
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エージェント生産性
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                リソース管理
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="エージェント稼働率とは">エージェント稼働率とは</h2>
+<p><a data-lb="1" href="/ja/glossary/Agent-Utilization/" title="エージェント稼働率は、コンタクトセンターの従業員が勤務時間のうち、実際に顧客対応に費やしている時間の割合を測定する指標です。マネージャーが適切な人員配置を行い、業務が公平に配分されているかを確認するのに役立ちます。">エージェント稼働率</a>は、エージェントが顧客対応に実際に費やす時間の割合を、総利用可能な勤務時間と比較して測定する重要な<a data-lb="1" href="/ja/glossary/Operational-Metrics/" title="オペレーショナルメトリクスとは、企業が日常業務をどれだけ効率的に運営しているかを追跡する測定可能な指標であり、組織が問題を早期に発見し、プロセスを継続的に改善するのに役立ちます。">パフォーマンス指標</a>です。この主要業績評価指標(KPI)は、コンタクトセンターのリソースがどれだけ効率的に配置されているかを表し、運用効率、人員配置の適切性、全体的な生産性レベルに関する洞察を提供します。エージェント稼働率には、インバウンドコールの対応、アウトバウンドコールの発信、メール処理、チャットセッションの管理、通話後処理の完了、予定されたトレーニングセッションへの参加など、すべての生産的活動が含まれます。</p>
+<p>エージェント稼働率の計算は、生産的な業務活動に費やした総時間を、予定された総時間または利用可能な総時間で割り、結果をパーセンテージで表すために100を掛けることで行われます。この指標は、コンタクトセンターマネージャーが、労働力が適切な規模で、効率的にスケジュールされ、さまざまなチャネルや時間帯に最適に配置されているかを評価するための基本的なベンチマークとして機能します。高い稼働率は、エージェントが一貫して付加価値のある活動に従事していることを示し、低い稼働率は人員過剰、非効率なプロセス、または不適切な業務配分を示唆する可能性があります。</p>
+<p>エージェント稼働率の理解は、単純な数学的計算を超えて、運用効率と従業員満足度および<a data-lb="1" href="/ja/glossary/QoS--Quality-of-Service-/" title="Quality of Service(QoS)の包括的ガイド - ネットワークトラフィック管理、優先順位付けメカニズム、最適なパフォーマンスを実現するための実装戦略について解説します。">サービス品質</a>のバランスを取る戦略的な<a data-lb="1" href="/ja/glossary/Employee-Engagement-Platform/" title="従業員エンゲージメントプラットフォームの包括的ガイド:機能、メリット、導入戦略、および労働力最適化のためのベストプラクティス。">労働力管理</a>原則を包含します。効果的な稼働率管理には、通話量パターン、季節変動、エージェントのスキルセット、トレーニング要件、休憩スケジュール、<a data-lb="1" href="/ja/glossary/Quality-Monitoring/" title="製品、サービス、またはプロセスを設定された基準に照らして継続的にチェックし、品質を確保し、問題を特定し、改善を促進する体系的なプロセス。">品質保証</a>活動などの要因を慎重に考慮する必要があります。組織は、生産性を最大化しながら、エージェントの燃え尽き症候群を防ぎ、離職率を減らし、サービス品質基準を維持する持続可能な労働条件を維持する最適なバランスを取る必要があります。現代のコンタクトセンターは通常、75〜85%の稼働率を目標としており、高い生産性レベルを維持しながら、休憩、トレーニング、コーチング、予期しない量の急増に十分な時間を確保しています。</p>
+<h2 id="主要な労働力管理コンポーネント">主要な労働力管理コンポーネント</h2>
+<p><strong>占有率</strong>は、ログイン時間のうち、エージェントが顧客対応に費やす時間の割合を測定し、休憩や管理業務を除外します。この指標は、利用可能な時間帯における顧客対応活動に特に焦点を当てることで、稼働率とは異なります。</p>
+<p><strong>遵守率追跡</strong>は、エージェントがログイン時間、休憩時間、割り当てられたタスクなど、予定された活動にどれだけ厳密に従っているかを監視します。高い遵守率は予測可能な能力を保証し、将来の人員配置要件の正確な予測をサポートします。</p>
+<p><strong>縮小管理</strong>は、休憩、トレーニング、会議、病欠、休暇など、エージェントが顧客サービスに利用できない計画的および計画外の時間を考慮します。効果的な縮小計画は、必要な非生産的活動に対応しながら、適切なカバレッジを確保します。</p>
+<p><strong>リアルタイム監視</strong>は、エージェントのステータス、キューの状態、パフォーマンス指標への即時の可視性を提供し、スーパーバイザーが一日を通じて稼働率を最適化するための動的な調整を行えるようにします。</p>
+<p><strong>キャパシティプランニング</strong>は、履歴データ、ビジネス予測、季節パターンに基づいて将来の人員配置ニーズを予測し、予想される業務量に対して適切なエージェントの可用性を確保します。</p>
+<p><strong>マルチチャネル最適化</strong>は、音声、メール、チャット、ソーシャルメディアチャネル全体でエージェントの割り当てを調整し、すべての顧客接点で<a data-lb="1" href="/ja/glossary/Service-Level-Agreement--SLA-/" title="サービスレベル契約(SLA)の包括的ガイド - 定義、構成要素、実装のベストプラクティス、およびサービス管理における将来のトレンドを解説します。">サービスレベル契約</a>を維持しながら稼働率を最大化します。</p>
+<p><strong>スキルベースルーティング</strong>は、顧客の問い合わせを適切な資格を持つエージェントとマッチングし、初回解決率を向上させ、労働力内の専門知識の使用を最適化します。</p>
+<h2 id="エージェント稼働率の仕組み">エージェント稼働率の仕組み</h2>
+<p>エージェント稼働率プロセスは、<strong>労働力予測</strong>から始まります。マネージャーは履歴データ、季節トレンド、ビジネス予測を分析して、異なる時間帯とチャネルにわたる将来の人員配置要件を予測します。</p>
+<p><strong>スケジュール作成</strong>は予測に続き、労働力管理システムが予測される業務量と利用可能なリソースのバランスを取りながら、休憩、トレーニング、その他の必要な活動に対応する最適なエージェントスケジュールを生成します。</p>
+<p><strong>リアルタイム監視</strong>は、シフト全体を通じてエージェントの活動を追跡し、ログイン時間、通話処理時間、通話後作業期間、休憩時間、予定された活動からの逸脱を記録します。</p>
+<p><strong>自動通話分配</strong>システムは、スキル、優先度レベル、現在の業務量に基づいて、着信コンタクトを利用可能なエージェントにルーティングし、チーム全体の稼働率を最適化します。</p>
+<p><strong>活動追跡</strong>は、通話時間、保留時間、まとめ作業、非電話タスクを含むすべてのエージェントのやり取りを記録し、勤務日全体で時間がどのように配分されているかについての包括的な可視性を提供します。</p>
+<p><strong>パフォーマンス計算</strong>は、システムが生産的時間を総利用可能時間と比較して、個々のエージェントとチーム集計の稼働率パーセンテージを計算することで継続的に行われます。</p>
+<p><strong>例外管理</strong>は、エージェントが長時間のアイドル時間、過度の業務量、または全体的な稼働率に影響を与える重大なスケジュール遵守の問題を経験している状況を特定し、対処します。</p>
+<p><strong>レポートと分析</strong>は、トレンドを強調し、最適化の機会を特定し、将来の労働力計画のためのデータ駆動型意思決定をサポートする詳細な稼働率レポートを生成します。</p>
+<p><strong>ワークフローの例</strong>:エージェントが午前8時に8時間のシフトでログインし、合計1時間の予定された休憩があり、7時間の利用可能時間を提供します。日中、彼らは5.5時間通話を処理し、1時間管理業務を完了し、6.5時間の生産的時間と93%の稼働率になります。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>運用効率の向上</strong>は、エージェントの配置を最適化し、アイドル時間を最小限に抑えることで実現され、<a data-lb="1" href="/ja/glossary/Support-Capacity-Planning/" title="サポート容量計画とは、カスタマーサポートのニーズを予測し、サービス品質目標を達成しながら効率的に対応するためのスタッフとリソースを配分するプロセスです。">リソース配分</a>の改善と処理されたコンタクトあたりの運用コストの削減につながります。</p>
+<p><strong>コスト管理の強化</strong>により、組織は労働力を適正規模化し、サービスレベルのコミットメントと顧客期待を満たすための適切なカバレッジを確保しながら、人員過剰コストを回避できます。</p>
+<p><strong>サービスレベル達成の向上</strong>は、適切な稼働率管理がピーク時に十分なエージェントの可用性を確保し、すべての顧客対応を通じて品質基準を維持することで発生します。</p>
+<p><strong>エージェント生産性の向上</strong>は、一貫したエンゲージメントと専門的な開発を促進する構造化された活動管理と明確なパフォーマンス期待を通じて発展します。</p>
+<p><strong>データ駆動型意思決定</strong>は、採用決定、トレーニング投資、運用改善を通知する正確な指標とトレンドで戦略的労働力計画をサポートします。</p>
+<p><strong>予測精度の向上</strong>は、将来の労働力計画を強化し、新製品や季節変動の人員配置ニーズを予測するのに役立つ詳細な稼働率データから生まれます。</p>
+<p><strong>従業員満足度の向上</strong>は、燃え尽き症候群を防ぎながら専門的成長の機会を提供する公平な業務配分と現実的なパフォーマンス期待から生じます。</p>
+<p><strong>競争優位性</strong>は、最適化されていない競合他社と比較して、より低いコストでより優れた顧客サービス提供を可能にする優れた運用効率を通じて発展します。</p>
+<p><strong>品質の一貫性</strong>は、顧客対応を急ぐことなく、適切な通話処理、文書化、フォローアップ活動のための十分な時間を確保することでサービス基準を維持します。</p>
+<p><strong>スケーラビリティサポート</strong>は、より大きなチームとより複雑な運用要件を効率的に管理するためのフレームワークを提供することで、ビジネスの成長を促進します。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>インバウンドコールセンター</strong>は、目標応答時間とサービス品質基準を維持しながら、一日を通じて変動する通話量を処理するためにエージェント稼働率を最適化します。</p>
+<p><strong>アウトバウンド営業業務</strong>は、アイドル期間を最小限に抑え、エージェントが継続的なダイヤル活動のための適切な見込み客リストとシステムアクセスを持つことを保証することで、生産的な通話時間を最大化します。</p>
+<p><strong>テクニカルサポートセンター</strong>は、稼働率とケースの複雑さの要件のバランスを取り、スキルレベル全体で効率的なリソース配置を維持しながら、<a data-lb="1" href="/ja/glossary/Escalation-Management/" title="フロントラインのスタッフが解決できない複雑な問題を、より高度な専門家に引き継ぐシステムです。迅速な解決と優れた顧客サービスを実現します。">問題解決</a>のための十分な時間を確保します。</p>
+<p><strong>カスタマーサービス業務</strong>は、電話、メール、チャット、<a data-lb="1" href="/ja/glossary/Instagram/" title="Instagramは、写真と動画の共有に特化したビジュアル型ソーシャルメディアプラットフォームです。機能、ビジネスツール、インフルエンサーマーケティング、オーディエンス構築について学びましょう。">ソーシャルメディア</a>を含む複数のチャネル全体で稼働率を調整し、連絡方法に関係なく一貫したサービスレベルを提供します。</p>
+<p><strong>ヘルスケアコールセンター</strong>は、規制要件、患者のプライバシーの考慮事項、詳細な文書化とフォローアップ活動の必要性に対応しながら稼働率を管理します。</p>
+<p><strong>金融サービスコンタクトセンター</strong>は、規制要件への準拠を確保し、機密性の高い顧客情報処理のための<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>プロトコルを維持しながら稼働率を最適化します。</p>
+<p><strong>Eコマースサポート業務</strong>は、年間を通じて大きな業務量の変動を生み出す季節的な量の変動とプロモーションキャンペーンを処理するために稼働率管理をスケールします。</p>
+<p><strong>緊急サービス派遣</strong>は、重要な状況への即時の可用性を確保し、高リスクコミュニケーションに関連するストレス要因を管理しながら、最適な稼働率を維持します。</p>
+<p><strong>多言語サポートセンター</strong>は、専門的な言語能力の効率を最大化しながら、グローバルカバレッジを提供するために、異なる言語スキルとタイムゾーン全体で稼働率を調整します。</p>
+<p><strong>アウトソーシングサービスプロバイダー</strong>は、複数の顧客プログラムを同時にサービス品質基準を維持しながら、優れた稼働率指標を通じてクライアントに価値を示します。</p>
+<h2 id="エージェント稼働率比較表">エージェント稼働率比較表</h2>
+<table>
+<thead>
+<tr>
+<th>稼働率レベル</th>
+<th>パーセンテージ範囲</th>
+<th>特徴</th>
+<th>利点</th>
+<th>欠点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>低稼働率</td>
+<td>50-65%</td>
+<td>大幅なアイドル時間、人員過剰</td>
+<td>高いサービスレベル、低ストレス</td>
+<td>高コスト、効率の悪さ</td>
+</tr>
+<tr>
+<td>中程度の稼働率</td>
+<td>65-75%</td>
+<td>バランスの取れた業務量、適切な休憩</td>
+<td>良好なワークライフバランス、持続可能</td>
+<td>中程度の効率、高コスト</td>
+</tr>
+<tr>
+<td>最適稼働率</td>
+<td>75-85%</td>
+<td>効率的なリソース使用、最小限のアイドル時間</td>
+<td>費用対効果が高く、生産的</td>
+<td>慎重な管理が必要</td>
+</tr>
+<tr>
+<td>高稼働率</td>
+<td>85-95%</td>
+<td>集中的な業務量、限られたダウンタイム</td>
+<td>最大効率、低コスト</td>
+<td>燃え尽き症候群のリスク、品質問題</td>
+</tr>
+<tr>
+<td>過度の稼働率</td>
+<td>95%以上</td>
+<td>継続的な活動、バッファ時間なし</td>
+<td>コンタクトあたりの最低コスト</td>
+<td>高い離職率、サービス品質の低下</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>効率と品質のバランス</strong>は、高い稼働率が急いだやり取りや不十分な問題解決を通じてサービス品質や<a data-lb="1" href="/ja/glossary/Service-Recovery/" title="サービスリカバリー:問題が発生した後、企業がサービスの問題を修正し、顧客満足度を回復するために取る行動。ネガティブな体験をロイヤルティを構築する機会に変えるプロセスです。">顧客満足度</a>を損なわないように慎重な管理を必要とします。</p>
+<p><strong>エージェントの燃え尽き症候群の防止</strong>は、適切な回復時間なしの継続的な活動がストレス、パフォーマンスの低下、離職率の増加につながる可能性がある高い稼働率レベルで重要になります。</p>
+<p><strong>季節的な量の変動</strong>は、休日、プロモーションキャンペーン、または人員配置要件に影響を与えるビジネスサイクルにより通話量が大幅に変動する場合、一貫した稼働率を維持する上で課題を生み出します。</p>
+<p><strong>マルチチャネルの複雑さ</strong>は、エージェントが音声、メール、チャット、ソーシャルメディアチャネル全体で異なる時間要件とスキル要求を持つ異なるタイプのやり取りを処理する場合、稼働率管理を複雑にします。</p>
+<p><strong>リアルタイム調整の困難</strong>は、予期しない量の急増やエージェントの欠勤が、サービスレベルや稼働率目標に影響を与えることなく可能でない可能性がある即時の人員配置変更を必要とする場合に発生します。</p>
+<p><strong>テクノロジーへの依存</strong>は、システム障害、ソフトウェアの問題、またはネットワークの問題がエージェントの効果的な作業を妨げ、エージェントの可用性にもかかわらず稼働率を人為的に低下させる場合にリスクを生み出します。</p>
+<p><strong>スキルセットの変動</strong>は、エージェントがさまざまなタイプの顧客の問い合わせを効率的に処理する能力に影響を与える異なる能力とトレーニングレベルを持っている場合、稼働率の最適化を複雑にします。</p>
+<p><strong>規制遵守要件</strong>は、稼働率の計算と最適化戦略に影響を与える特定の休憩時間、最大労働時間、または文書化活動を義務付ける場合があります。</p>
+<p><strong>パフォーマンス測定の精度</strong>は、生産的時間を減らす管理負担を作成することなく、すべてのエージェント活動と時間配分を正確に捕捉する信頼性の高いデータ収集システムに依存します。</p>
+<p><strong>変更管理への抵抗</strong>は、エージェントが日常活動の圧力の増加またはマイクロマネジメントとして認識する新しい稼働率目標または監視システムを実装する場合に発生する可能性があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>現実的な目標を設定する</strong>ことは、長期的に持続不可能な可能性がある最大理論稼働率を追求するのではなく、業界ベンチマーク、履歴パフォーマンス、運用要件に基づいて行います。</p>
+<p><strong>段階的な変更を実装する</strong>ことは、稼働率目標またはプロセスを調整する際に、ストレスや新しいパフォーマンス期待への抵抗を生み出すことなく、エージェントとスーパーバイザーが適応する時間を確保します。</p>
+<p><strong>包括的なトレーニングを提供する</strong>ことは、スーパーバイザーとエージェントが期待と改善の機会を理解できるように、稼働率の概念、測定方法、最適化戦略について行います。</p>
+<p><strong>テクノロジーを効果的に使用する</strong>ことは、データ収集を<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>し、リアルタイムの可視性を提供し、継続的改善のための実用的な洞察を生成する労働力管理システムを実装することで行います。</p>
+<p><strong>品質指標を監視する</strong>ことは、効率の改善がサービス品質、顧客満足度、または初回解決率を損なわないように、稼働率と並行して行います。</p>
+<p><strong>柔軟なスケジューリングを作成する</strong>オプションは、適切なカバレッジを維持し、予期しない量の変動やエージェントの可用性の変化を可能にしながら、変動する業務パターンに対応します。</p>
+<p><strong>明確なコミュニケーションを開発する</strong>チャネルは、労働力管理、スーパーバイザー、エージェント間で稼働率の問題に迅速に対処し、協力して改善ソリューションを特定します。</p>
+<p><strong>定期的なパフォーマンスレビュー</strong>は、目標を達成するのに苦労しているエージェントに対する懲罰的措置ではなく、コーチングと開発に焦点を当てた稼働率の議論を含める必要があります。</p>
+<p><strong>業界標準とベンチマーク</strong>を行うことは、稼働率目標が競争力があり現実的であることを確保しながら、ビジネスと顧客ベースの特定の特性を考慮します。</p>
+<p><strong>継続的なプロセス改善</strong>は、稼働率データを定期的にレビューし、トレンドとパターンを特定し、時間の経過とともにパフォーマンスを最適化するための体系的な変更を実装することを含みます。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>予測分析</strong>は、<a data-lb="1" href="/ja/glossary/Ensemble-Learning/" title="機械学習における予測精度向上のためのアンサンブル学習手法、アルゴリズム、および応用に関する包括的ガイド。">機械学習アルゴリズム</a>を活用して、履歴データ、季節トレンド、コンタクト量に影響を与える外部要因に基づいて稼働率パターンを予測し、最適化の機会を特定します。</p>
+<p><strong>動的スケジューリング</strong>は、リアルタイムデータと予測モデルを使用して、サービスレベル契約を維持しながら稼働率を最適化するために、一日を通じてエージェントのスケジュールと休憩時間を自動的に調整します。</p>
+<p><strong>スキルベース最適化</strong>は、エージェントの能力、トレーニングレベル、パフォーマンス履歴を考慮した高度なルーティングアルゴリズムを採用し、顧客の問い合わせに対する適切な専門知識を確保しながら稼働率を最大化します。</p>
+<p><strong>クロスチャネルリソース配分</strong>は、すべての顧客接点全体で全体的な稼働率を最適化するために、リアルタイムの需要パターンに基づいて音声、メール、チャット、その他のチャネル間でエージェントを動的にシフトします。</p>
+<p><strong>ゲーミフィケーション戦略</strong>は、魅力的で動機付けのアプローチを通じて品質基準を維持しながら稼働率を改善するようエージェントを奨励する競争要素と認識プログラムを実装します。</p>
+<p><strong>高度なレポート分析</strong>は、<a data-lb="1" href="/ja/glossary/Data-Warehouse/" title="データウェアハウスの包括的ガイド:アーキテクチャ、実装、メリット、エンタープライズデータ管理と分析のベストプラクティス。">ビジネスインテリジェンス</a>ツールを利用して、複雑な稼働率パターン、他のパフォーマンス指標との相関関係、戦略的労働力最適化イニシアチブの機会を特定します。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p><strong>人工知能の統合</strong>は、インテリジェントな予測、自動化されたスケジューリング調整、より高い精度で人員配置ニーズを予測する<a data-lb="1" href="/ja/glossary/Demand-Forecasting/" title="需要予測は、AI、機械学習、統計モデルを活用して、製品やサービスに対する将来の顧客需要を予測します。これにより、組織は在庫、生産、人員配置、リソース配分を最適化しながら、コストと欠品を最小限に抑えることができます。">予測分析</a>を通じて稼働率の最適化を強化します。</p>
+<p><strong>リモートワークの最適化</strong>は、従来の稼働率測定方法が仮想環境への適応を必要とする可能性がある分散チームのための新しい指標と管理アプローチの開発に焦点を当てています。</p>
+<p><strong>オムニチャネル稼働率管理</strong>は、ビデオ、メッセージングアプリ、新興デジタルプラットフォームを含む拡大する<a data-lb="1" href="/ja/glossary/Channel-Preference/" title="顧客コミュニケーションにおけるチャネルプリファレンスの包括的ガイド。マルチチャネルエンゲージメントのための戦略、実装、最適化テクニックをカバーします。">顧客コミュニケーション</a>チャネルの配列全体でエージェント活動をシームレスに調整するように進化します。</p>
+<p><strong>リアルタイムAIコーチング</strong>は、インテリジェントなパフォーマンス監視システムを通じて品質基準を維持しながら稼働率を最適化するために、エージェントとスーパーバイザーに即座のフィードバックと提案を提供します。</p>
+<p><strong>予測的労働力計画</strong>は、<a data-lb="1" href="/ja/glossary/Third-Party-Data/" title="サードパーティデータの包括的ガイド:ビジネスインテリジェンスにおける外部データセットの活用に関する情報源、メリット、課題、ベストプラクティスを解説します。">外部データソース</a>、経済指標、ビジネスインテリジェンスを組み込んで、より高い<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">精度</a>とより長い計画期間で稼働率要件を予測します。</p>
+<p><strong>従業員体験の統合</strong>は、長期的な定着とエンゲージメントをサポートする持続可能なパフォーマンス改善を確保するために、包括的な従業員満足度指標と稼働率の最適化のバランスを取ります。</p>
+<h2 id="参考文献">参考文献</h2>
+<p>Society of Workforce Planning Professionals. (2024). Workforce Management Best Practices Guide. SWPP Publications.</p>
+<p>International Customer Management Institute. (2024). Contact Center Metrics and KPI Handbook. ICMI Press.</p>
+<p>Workforce Management Research Institute. (2023). Agent Utilization Optimization Strategies. WMRI Publications.</p>
+<p>Call Center Industry Association. (2024). Performance Management Standards and Guidelines. CCIA Publications.</p>
+<p>Customer Contact Management Association. (2023). Workforce Analytics and Optimization Report. CCMA Research.</p>
+<p>Business Process Outsourcing Institute. (2024). Global Contact Center Performance Benchmarks. BPOI Publications.</p>
+<p>Human Resources Management Society. (2023). Employee Engagement in Contact Center Operations. HRMS Publications.</p>
+<p>Technology and Workforce Innovation Council. (2024). Future of Contact Center Management. TWIC Research.</p>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Agent-Schedule-Adherence/">
+                    エージェントスケジュール遵守率
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    コンタクトセンターの従業員が割り当てられた勤務スケジュールをどの程度遵守しているかを測定する指標で、企業が生産性を追跡し、円滑な業務運営を確保するために役立ちます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Agent-Schedule-Adherence/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Agent-Occupancy/">
+                    エージェント占有率
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    コンタクトセンターにおける<a data-lb="1" href="/ja/glossary/Agent-Occupancy/" title="コンタクトセンターにおけるエージェント占有率指標の包括的ガイド。計算方法、最適化戦略、パフォーマンス管理について解説します。">エージェント占有率</a>指標の包括的ガイド。計算方法、最適化戦略、<a data-lb="1" href="/ja/glossary/Employee-Feedback/" title="組織開発とパフォーマンス向上のための従業員フィードバックシステム、プロセス、ベストプラクティスに関する包括的なガイド。">パフォーマンス管理</a>について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Agent-Occupancy/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Handle-Time/">
+                    ハンドルタイム
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    コンタクトセンターにおけるハンドルタイムの包括的ガイド - 測定方法、最適化戦略、<a data-lb="1" href="/ja/glossary/customer-support/" title="カスタマーサポート業務、その重要性、種類、チャネル、そしてAIと自動化の役割について解説します。効果的なカスタマーサポートのためのベストプラクティス、チーム構成、主要指標を学びましょう。">カスタマーサービス</a>効率を向上させるためのベストプラクティス。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Handle-Time/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Agent-Productivity/">
+                    エージェント生産性
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Agent-Productivity/" title="エージェント生産性とは、AIエージェントがタスクを完了する効率性の測定と改善を指し、その精度、速度、および時間の経過とともに学習し適応する能力を含みます。">エージェント生産性</a>とは、<a data-lb="1" href="/ja/glossary/AI-agents/" title="AIエージェントは、環境を認識し、推論し、最小限の人間の介入で行動する自律的なソフトウェアシステムです。自動化と意思決定の強化を通じて、さまざまな業界を変革しています。">AIエージェント</a>がタスクを完了する効率性の測定と改善を指し、その精度、速度、および時間の経過とともに学習し適応する能力を含みます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Agent-Productivity/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Page-Bundle/">
+                    ページバンドル
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ウェブページとそれに関連するすべてのファイル(画像、ドキュメントなど)を1つの場所にまとめるフォルダで、リンクを壊すことなくコンテンツの管理や移動を容易にします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Page-Bundle/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Workforce-Optimization/">
+                    ワークフォース最適化
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    データとテクノロジーを活用して、採用、スケジューリング、パフォーマンス、リソース配分を改善することで、従業員の生産性と組織の効率性を最大化する戦略的アプローチ。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Workforce-Optimization/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/agent-utilization/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

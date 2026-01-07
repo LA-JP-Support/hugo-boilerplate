@@ -1,0 +1,2221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="utf-8">
+<meta name="viewport" content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+
+<title>How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation) | SmartWeb</title>
+<link rel="canonical" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/introduction-to-rag/">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/faivicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/faivicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/faivicon.png">
+<link rel="shortcut icon" href="/images/faivicon.png">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+  
+
+
+
+
+
+
+
+  
+  
+    
+    
+      
+      
+      
+      
+    
+  
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="%!s(<nil>)/blog/introduction-to-rag/">
+
+<link rel="alternate" hreflang="ja" href="%!s(<nil>)/ja/blog/introduction-to-rag/">
+
+<link rel="alternate" hreflang="x-default" href="%!s(<nil>)/blog/introduction-to-rag/">
+
+
+
+<meta name="description" content="Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed coverage from differences with traditional AI to benefits and real-world use cases.">
+<meta name="keywords" content="RAG, Retrieval-Augmented Generation, AI, Generative AI, Chatbot, FlowHunt">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/introduction-to-rag/">
+<meta property="og:title" content="How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation) | SmartWeb">
+<meta property="og:description" content="Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed coverage from differences with traditional AI to benefits and real-world use cases.">
+
+
+
+
+  
+
+
+
+
+
+<meta property="og:image" content="https://main.d1jtfhinlastnr.amplifyapp.com/images/blog/rag-paint.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/introduction-to-rag/">
+<meta name="twitter:title" content="How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation) | SmartWeb">
+<meta name="twitter:description" content="Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed coverage from differences with traditional AI to benefits and real-world use cases.">
+<meta name="twitter:image" content="https://main.d1jtfhinlastnr.amplifyapp.com/images/blog/rag-paint.jpg">
+
+
+
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+
+<link rel="preload" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/main.css?v=20260106210129" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/custom-code-blockquote.css?v=20260106210129" crossorigin="anonymous">
+
+
+
+<script src="/js/main.js?v=20260106210129" defer></script>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+</head>
+<body class="antialiased bg-white">
+
+
+
+
+
+
+
+
+
+
+  
+  <header class="bg-white">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="/en/" class="-m-1.5 p-1.5">
+        <span class="sr-only">SmartWeb</span>
+        
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="200px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+      </a>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12"><a href="/en/" class="text-sm/6 font-semibold text-gray-900">Home</a><a href="/en/blog/" class="text-sm/6 font-semibold text-gray-900">Blog</a><a href="/en/glossary/" class="text-sm/6 font-semibold text-gray-900">Glossary</a><a href="https://www.intwk.co.jp/about/" class="text-sm/6 font-semibold text-gray-900">Company</a></div>
+    <div class="flex flex-1 items-center justify-end gap-x-6">
+      <a href="https://support.smartweb.jp/" class="hidden text-sm/6 font-semibold text-gray-900 lg:block">Support</a>
+      <a href="/en/blog/" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" aria-expanded="false" aria-controls="mobile-menu-1767700889227765000">
+        <span class="sr-only">Open main menu</span>
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  
+  <div id="mobile-menu-1767700889227765000" class="lg:hidden hidden relative z-50" role="dialog" aria-modal="true">
+    
+    <div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+      <div class="flex items-center gap-x-6">
+        <a href="/en/" class="-m-1.5 p-1.5">
+          <span class="sr-only">SmartWeb</span>
+          
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+      
+        
+      
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+          
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+            
+            
+        
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="3000"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="(max-width: 466px) 466px, 3000px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+        </a>
+        <a href="/en/blog/" class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+        <button type="button" class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu">
+          <span class="sr-only">Close menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6"><a href="/en/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a><a href="/en/blog/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a><a href="/en/glossary/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Glossary</a><a href="https://www.intwk.co.jp/about/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a></div>
+          <div class="py-6">
+            <a href="https://support.smartweb.jp/" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700889227765000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700889227765000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+
+
+
+<main class="w-full">
+  
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+  
+  <header class="py-8 sm:py-12">
+    <div class="mx-auto max-w-5xl">
+      
+      <div class="mb-6">
+        
+        <nav class="text-sm hidden sm:block">
+          <ol class="flex items-center space-x-2 text-gray-500">
+            <li class="flex items-center">
+              <a href="/en/" class="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center">
+                <img src="/images/home-icon.png" alt="Home" class="h-5 w-5">
+              </a>
+            </li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="/en/blog/" class="hover:text-indigo-600 dark:hover:text-indigo-400">Blog</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li class="text-gray-900 dark:text-white truncate max-w-xs">How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)</li>
+          </ol>
+        </nav>
+      </div>
+
+      
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight">
+        How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)
+      </h1>
+
+      
+      <div class="mt-3 sm:mt-4 flex flex-wrap sm:flex-nowrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
+        
+          <div class="flex flex-wrap gap-2 sm:flex-1 min-w-0">
+            
+              <a 
+                href="/en/tags/ai-technology/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                AI Technology
+              </a>
+            
+              <a 
+                href="/en/tags/rag/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                RAG
+              </a>
+            
+              <a 
+                href="/en/tags/chatbot/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                Chatbot
+              </a>
+            
+          </div>
+        
+
+        <div class="w-full sm:w-auto sm:ml-auto">
+          
+
+
+
+
+
+
+
+
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+  
+    <span class="inline-flex items-center justify-end">
+      <svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
+      </svg>
+      
+        Created: November 19, 2025
+      
+    </span>
+  
+
+  
+</div>
+
+        </div>
+      </div>
+
+      
+      
+        <div class="mt-5 sm:mt-6 w-full">
+          <img 
+            src="/images/blog/rag-paint.jpg" 
+            alt="How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)" 
+            class="w-full h-auto rounded-lg shadow-lg object-cover"
+            style="max-height: 400px; object-fit: cover;"
+          >
+        </div>
+      
+
+      
+      
+        <p class="mt-3 sm:mt-5 text-base sm:text-lg leading-6 sm:leading-7 text-gray-600 dark:text-gray-400">
+          Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed coverage from differences with traditional AI to benefits and real-world use cases.
+        </p>
+      
+    </div>
+  </header>
+
+  
+  <div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-5xl py-6 sm:py-8">
+    <h2 id="basics-and-applications-of-rag-retrieval-augmented-generation">Basics and Applications of RAG (Retrieval-Augmented Generation)</h2>
+<h3 id="basic-structure-of-rag">Basic Structure of RAG</h3>
+<p><a href="/en/glossary/RAG/">RAG (Retrieval-Augmented Generation)</a> is a mechanism that combines &ldquo;retrieval&rdquo; and &ldquo;generation&rdquo;. Traditional <a href="/en/glossary/artificial-intelligence/" title="Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions.">AI</a> created text and responses using only learned knowledge. <a href="/en/glossary/RAG/">RAG</a> searches for necessary information from external sources like databases when questions arrive, then creates answers based on that information.</p>
+<p>First, <a href="/en/glossary/artificial-intelligence/" title="Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions.">AI</a> understands the question content and retrieves relevant information from search engines or specific databases. Next, using the found information, it creates answers in natural text. This method enables AI to immediately update knowledge and quickly reflect new information.</p>
+<h3 id="role-of-rag">Role of RAG</h3>
+<p>In today&rsquo;s society, much new information is generated daily. For AI to provide correct answers, it needs constant access to the latest information. Traditional <a href="/en/glossary/Generative-AI/">generative AI</a> only has knowledge from when it was trained, so information becomes outdated over time and may produce incorrect answers.</p>
+<p><a href="/en/glossary/RAG/">RAG</a> solves this problem. It searches for and incorporates information from external sources for each question, creating answers using the latest data. More importantly, RAG allows <strong>limiting reference information sources</strong>. For example, in AI chatbots and AI-generated email auto-responses, using only company FAQs and manuals as information sources enables accurate responses unaffected by other companies&rsquo; information or uncertain online information. This way, it can expand AI knowledge scope while narrowing down to only necessary information. AI can provide accurate support in various <a href="/en/glossary/scenarios/" title="A pre-written conversation blueprint that guides how a chatbot responds to users and performs actions to achieve specific business goals.">scenarios</a> including medical care, education, and business.</p>
+<h3 id="changes-rag-brings-to-society">Changes RAG Brings to Society</h3>
+<p>Using RAG enables AI to provide information more flexibly and intelligently. For example, it can immediately respond to rapidly changing fields like news updates or new research findings. Simultaneously, companies can respond to customers using only their own information, realizing consistent responses aligned with brand image and corporate policy. Users can always receive answers based on new and accurate information, expanding AI utilization <a href="/en/glossary/scenarios/" title="A pre-written conversation blueprint that guides how a chatbot responds to users and performs actions to achieve specific business goals.">scenarios</a>.</p>
+<p>Beyond education and business support, RAG is used in various <a href="/en/glossary/scenarios/" title="A pre-written conversation blueprint that guides how a chatbot responds to users and performs actions to achieve specific business goals.">scenarios</a> including AI chatbots and <a href="/en/glossary/AI-email-auto-response-generation/">AI email auto-response generation</a> provided through SmartWeb&rsquo;s development service using <a href="/en/glossary/FlowHunt/">FlowHunt</a>. These services provide <a href="/en/glossary/FAQ/">FAQ</a> auto-responses and <a href="/en/glossary/customer-support/" title="Customer support is a team and set of tools that help customers solve problems, answer questions, and get the most value from a product or service.">customer support</a> using the latest information, allowing anyone to easily experience cutting- <a href="/en/glossary/Edge-AI/">edge AI</a> technology.</p>
+<h2 id="differences-between-traditional-generative-ai-and-rag-mechanisms-and-use-cases">Differences Between Traditional Generative AI and RAG, Mechanisms, and Use Cases</h2>
+<h3 id="fundamental-differences-between-generative-ai-and-rag">Fundamental Differences Between Generative AI and RAG</h3>
+<p>Traditional generative AI learns much text and data in advance and creates sentences and answers from that knowledge. For example, AI trained on internet content and data up to 2022 cannot answer events or new information that occurred afterward. Therefore, AI knowledge is difficult to update and can only use old information.</p>
+<p>On the other hand, RAG enables AI to search for necessary information in real-time from external databases or specified sources and use that information to create answers. This allows immediate response to new events after training and daily updated data.</p>
+<h4 id="main-differences-in-table-format">Main Differences in Table Format</h4>
+<table>
+  <thead>
+      <tr>
+          <th>Item</th>
+          <th>Traditional Generative AI</th>
+          <th>RAG</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Knowledge Source</td>
+          <td>Only pre-trained data</td>
+          <td>Also dynamically references external data</td>
+      </tr>
+      <tr>
+          <td>Information Freshness</td>
+          <td>Stops at training point</td>
+          <td>Always searches and uses latest information</td>
+      </tr>
+      <tr>
+          <td>Information Scope</td>
+          <td>Learning data from entire internet</td>
+          <td>Can limit to specified sources only</td>
+      </tr>
+      <tr>
+          <td>Flexibility</td>
+          <td>Limited</td>
+          <td>High</td>
+      </tr>
+      <tr>
+          <td>Accuracy</td>
+          <td>Risk of old/incorrect information</td>
+          <td>Improved reliability with clear references</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="easy-explanation-of-rag-mechanism">Easy Explanation of RAG Mechanism</h3>
+<p>RAG creates answers through three steps: &ldquo;question understanding&rdquo;, &ldquo;retrieval&rdquo;, and &ldquo;generation&rdquo;.</p>
+<p>! <a href="/en/images/blog/RAG-123.jpg">Three Steps of RAG</a></p>
+<ol>
+<li>
+<p><strong>Question Understanding</strong><br>
+Generative AI understands user questions and determines what information is needed. At this stage, it analyzes question intent and required answer type.</p>
+</li>
+<li>
+<p><strong>Retrieval</strong><br>
+AI automatically searches for information needed for the question from databases or the <a href="/en/glossary/Accessibility--Web-/">web</a>. Targets include FAQs, manuals, and news articles. For companies, limiting search targets to only company information can exclude irrelevant external information.</p>
+</li>
+<li>
+<p><strong>Generation</strong><br>
+Based on collected information, AI creates easy-to-understand answers in natural Japanese. It explains technical terms and difficult content in ways users can understand.</p>
+</li>
+</ol>
+<p>Through these three steps, RAG provides accurate answers beyond knowledge limitations.</p>
+<h3 id="summary">Summary</h3>
+<p>While traditional generative AI limits answers to &ldquo;what it knows&rdquo;, RAG can &ldquo;search for necessary information before answering&rdquo;, enabling more accurate responses to new information. Furthermore, limiting information sources to only company data enables highly reliable responses unaffected by unnecessary external information.</p>
+<h2 id="benefits-considerations-and-future-potential-of-rag">Benefits, Considerations, and Future Potential of RAG</h2>
+<h3 id="benefits-of-rag">Benefits of RAG</h3>
+<p>The major benefit of RAG is that AI can access external data on the spot while providing answers. This allows AI to always respond using new and accurate information.</p>
+<p>Importantly, RAG has two major advantages. First is <strong>access to latest data</strong>. It can incorporate not just training-time data but also daily updated information in real-time. Second is <strong>access to limited data</strong>. By using only company FAQs, manuals, and internal documents as information sources, it can provide responses unaffected by irrelevant internet information or other companies&rsquo; product information.</p>
+<p>This &ldquo;answering from only company information&rdquo; characteristic is especially important for AI chatbots and <a href="/en/glossary/AI-email-auto-response-generation/">AI email auto-response generation</a>. It enables consistent responses aligned with corporate brand image and policy, providing customers with accurate and reliable information. It also has the effect of preventing <a href="/en/glossary/hallucination/" title="AI models generating content that sounds correct but contains false or made-up information. This occurs due to how these systems work statistically, not from intentional deception.">hallucination</a>.</p>
+<p>RAG searches for necessary information from databases, internal documents, websites, etc., and creates answers based on that content. This method realizes &ldquo;new information&rdquo;, &ldquo;accurate content&rdquo;, and &ldquo;explanations with clear basis&rdquo;.</p>
+<p>In business settings, using RAG reduces incorrect answers. It can also flexibly respond to industry-specific specialized knowledge and special rules. In 2024 market research, many companies are focusing on RAG as core technology for AI utilization.</p>
+<h3 id="considerations-and-limitations">Considerations and Limitations</h3>
+<p>RAG performance is greatly affected by the quality of referenced information sources. If external data contains errors or outdated content, AI answers will also be inaccurate. Also, RAG models themselves are not perfect. Regular work is needed to update information and review operational methods. Furthermore, combining retrieval and <a href="/en/glossary/Text-Generation/">text generation</a> processing uses many <a href="/en/glossary/computational-resources/" title="Computational Resources: The hardware and software infrastructure (processors, memory, storage, networks) needed to run programs and AI models. They power everything from everyday computing to complex data analysis.">computational resources</a>. When creating systems, attention is needed for costs and operation speed.</p>
+<h3 id="future-potential">Future Potential</h3>
+<p>Recent scientific papers and technical developments predict that RAG will advance in cooperation with <a href="/en/glossary/knowledge-graphs/" title="A network of connected information where entities like people and places are linked by their relationships, helping computers understand and find information more intelligently.">knowledge graphs</a> and multiple data sources, with applications to deeper reasoning, high- <a href="/en/glossary/Precision/">precision</a> auto-summarization, and domain-specific AI. RAG is expanding in many fields including education, medical care, government, and <a href="/en/glossary/customer-support/" title="Customer support is a team and set of tools that help customers solve problems, answer questions, and get the most value from a product or service.">customer support</a> where &ldquo;human-like explanations&rdquo; and &ldquo;answers with basis&rdquo; are required.</p>
+<h3 id="rag-use-cases-at-smartweb">RAG Use Cases at SmartWeb</h3>
+<p>SmartWeb develops [AI <a href="/en/glossary/Chatbot/">chatbot</a>](/en/glossary/AI-<a href="/en/glossary/Chatbot/">chatbot</a>/) and AI email auto-response services combining <a href="/en/glossary/LiveAgent/">LiveAgent</a> and FlowHunt. Using RAG technology, it immediately searches and provides the latest information from manuals, FAQs, and specialized documents collected for each company. It is used in scenarios like:</p>
+<ul>
+<li>
+<p><strong>24/7/365 Auto-Response with Latest Information</strong><br>
+Even outside business hours or late at night, AI immediately answers customer questions. It cross-searches the latest manuals and FAQs to return optimal answers on the spot.</p>
+</li>
+<li>
+<p><strong>Accurate Responses Limited to Company Information</strong><br>
+By referencing only company FAQs and manuals, it is unaffected by other companies&rsquo; product information or uncertain online information. It enables consistent responses aligned with company policy and product specifications. Customers receive official company views and accurate product information, realizing highly reliable support experiences.</p>
+</li>
+<li>
+<p><strong>Easy Translation of Difficult Terms</strong><br>
+AI converts technical terms and industry-specific language into easy-to-understand expressions. Even first-time users can inquire with confidence.</p>
+</li>
+<li>
+<p><strong>Batch Cross-Search of Large Volumes of Materials</strong><br>
+Even with hundreds of <a href="/en/glossary/FAQ/">FAQ</a> entries or many manuals, AI immediately finds necessary information and combines it to create answers.</p>
+</li>
+<li>
+<p><strong>Efficiency of Email Auto-Response Creation</strong><br>
+For questions from inquiry forms, AI automatically creates optimal response drafts. This reduces staff workload and speeds up responses. Cases of increased customer satisfaction are growing.</p>
+</li>
+</ul>
+<p>In this way, RAG is advanced technology not only to &ldquo;convey new and accurate information in easily understandable ways at any time&rdquo; but also to &ldquo;provide consistent responses using only company-managed information&rdquo;. It will continue evolving and becoming widely used in the future.</p>
+
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="mt-10 sm:mt-14 border-t border-gray-200 dark:border-gray-700 pt-8 sm:pt-10">
+      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 sm:mb-8">
+        Related Posts
+      </h2>
+      <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="/images/blog/ai-chatbot-types-guide.jpg" 
+                  alt="AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-chatbot-types-guide/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points
+                </a>
+              </h3>
+              
+                
+                
+                  
+                
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  A comprehensive guide to the 5 types of AI chatbots (rule-based, AI-powered, generative AI, RAG, and...
+                </p>
+              
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-chatbot-types-guide/" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="/images/blog/ai-evaluation-japanese-benchmarks.jpg" 
+                  alt="Complete Guide to AI Language Model Evaluation: Japanese Benchmarks and Practical Implementation" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-evaluation-japanese-benchmarks/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  Complete Guide to AI Language Model Evaluation: Japanese Benchmarks and Practical Implementation
+                </a>
+              </h3>
+              
+                
+                
+                  
+                
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  From automatic LLM evaluation methods to Japanese-specific benchmarks and hallucination mitigation s...
+                </p>
+              
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-evaluation-japanese-benchmarks/" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="/images/blog/AI-Email-Auto-Response-Generator-image.png" 
+                  alt="Can AI Really Write Email Responses? Examining Accuracy and Capabilities Through Real Examples" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-email-response-examples/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  Can AI Really Write Email Responses? Examining Accuracy and Capabilities Through Real Examples
+                </a>
+              </h3>
+              
+                
+                
+                  
+                
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  Examining the true capabilities of AI-powered automated response generation through real examples. A...
+                </p>
+              
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-email-response-examples/" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+      </div>
+    </div>
+  
+</article>
+
+</main>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer style="background-color: #000000;">
+  
+  <div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+    
+    <svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="curveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      
+      
+      <path class="curve" data-speed="0.8" stroke="url(#curveGrad1)" stroke-width="2" fill="none" />
+      <path class="curve" data-speed="1.2" stroke="url(#curveGrad2)" stroke-width="2.5" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.6" stroke="url(#curveGrad3)" stroke-width="1.5" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.5" stroke="url(#curveGrad1)" stroke-width="2" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="0.9" stroke="url(#curveGrad2)" stroke-width="3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.3" stroke="url(#curveGrad3)" stroke-width="1.8" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.7" stroke="url(#curveGrad1)" stroke-width="2.2" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.1" stroke="url(#curveGrad2)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="1.4" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="0.85" stroke="url(#curveGrad1)" stroke-width="1.5" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="1.0" stroke="url(#curveGrad2)" stroke-width="2.8" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.25" stroke="url(#curveGrad3)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.95" stroke="url(#curveGrad1)" stroke-width="2.3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.35" stroke="url(#curveGrad2)" stroke-width="1.7" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.75" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.7" />
+    </svg>
+    
+    
+    <div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    
+    <div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+      <h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+      <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+      <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+      <div class="mt-8 flex justify-center">
+        <a href="/en/blog/" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get started</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+  
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+    <div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+      
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/webp"
+        
+        data-srcset="/images/interwork-logo-white-1.webp 568w"
+        
+        sizes="200px"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/interwork-logo-white-1.webp"
+        
+        alt="Interwork"
+        class="lazy-image h-9"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+    </picture>
+
+
+  
+
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Services</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">AI Solutions</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Web Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">System Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Consulting</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Support</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://support.smartweb.jp/" class="text-sm/6 text-gray-400 hover:text-white">Support Portal</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Documentation</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Company</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://www.intwk.co.jp/about/" class="text-sm/6 text-gray-400 hover:text-white">About</a>
+              </li>
+              
+              <li>
+                <a href="/en/blog/" class="text-sm/6 text-gray-400 hover:text-white">Blog</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Careers</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">News</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="/en/privacy-policy/" class="text-sm/6 text-gray-400 hover:text-white">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="/en/ai-chatbot-terms-of-use/" class="text-sm/6 text-gray-400 hover:text-white">AI Chatbot Terms of Use</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div>
+        <p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+        
+          
+
+
+
+
+<div class="language-selector">
+  <div class="flex flex-wrap items-center justify-center gap-3">
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+          
+            
+            
+          
+        
+        
+        
+        
+        
+        <a href="/ja/blog/introduction-to-rag/"
+           class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
+           title="日本語"
+           aria-label="日本語"
+           hreflang="ja">
+          <img 
+            src="/flags/jp.png"
+            alt="日本語"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </a>
+      
+    
+      
+      
+      
+      
+      
+      
+        
+        <span class="inline-flex items-center text-sm opacity-50" title="English">
+          <img 
+            src="/flags/gb.png"
+            alt="English"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </span>
+      
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+    <div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex gap-x-6 md:order-2">
+        
+        <a href="https://github.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">GitHub</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://x.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">X</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://youtube.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">YouTube</span>
+          
+
+
+
+        </a>
+        
+      </div>
+      <p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">&copy; 2026 Interwork Corporation All rights reserved.</p>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<div id="cookie-consent-banner" data-cookie-consent-banner class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark">
+    <div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+        <p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br> We use cookies to enhance your browsing experience and analyze our traffic. See our <a href="/en/privacy-policy/" class="font-semibold text-primary hover:text-primary-500">privacy policy</a>.</p>
+        <div class="mt-4 flex items-center gap-x-3 flex-wrap">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Accept All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-all
+    >
+      Accept All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Reject All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-necessary
+    >
+      Reject All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Cookie Settings"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=settings
+    >
+      Cookie Settings
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="cookie-settings-modal" class="fixed inset-0 z-50 hidden dark">
+    <div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close></div>
+    <div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+            <button type="button" class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close>
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="necessary-cookies" name="necessary-cookies" type="checkbox" checked disabled class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="analytics-cookies" name="analytics-cookies" type="checkbox" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 flex justify-end gap-x-3">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2  not-prose group"
+      aria-label="Cancel"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-close
+    >
+      Cancel
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2  not-prose group"
+      aria-label="Save Preferences"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-save
+    >
+      Save Preferences
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+<button
+  id="back-to-top-btn"
+  aria-label="Back to Top"
+  class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg 
+         transition-all duration-300 transform translate-y-12 opacity-0 invisible
+         hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+         dark:bg-indigo-500 dark:hover:bg-indigo-400"
+  onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+  </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+
+
+
+
+<script src="/js/app.js?v=20260106210129"></script>
+
+
+
+
+</body>
+</html>

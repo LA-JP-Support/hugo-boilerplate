@@ -97,10 +97,8 @@
     {{- end -}}
   {{- end -}}
 
-  {{- if not $isGlossaryLink -}}
-    {{- with $candidate -}}
-      {{- $tooltip = .Params.description | default "" -}}
-    {{- end -}}
+  {{- with $candidate -}}
+    {{- $tooltip = .Params.description | default "" -}}
   {{- end -}}
 {{- end -}}
 
@@ -110,9 +108,4 @@
   {{- $linkTitle = printf "%s — %s" $linkTitle $tooltip -}}
 {{- end -}}
 
-<a href="{{ $url }}"
-   {{- if $target }} target="{{ $target }}"{{ end }}
-   {{- if $rel }} rel="{{ $rel }}"{{ end }}
-   {{- with $linkTitle }} title="{{ . }}"{{ end -}}>
-   {{- .Text -}}
-</a>
+<a href="{{ $url }}"{{- if $target }} target="{{ $target }}"{{ end }}{{- if $rel }} rel="{{ $rel }}"{{ end }}{{- with $linkTitle }} title="{{ . }}"{{ end -}}>{{- .Text | safeHTML -}}</a>{{- "" -}}

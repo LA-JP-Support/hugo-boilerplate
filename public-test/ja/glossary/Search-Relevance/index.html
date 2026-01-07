@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>検索関連性 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Search-Relevance/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="検索結果の品質とユーザー満足度を向上させるための検索関連性アルゴリズム、ランキング要因、最適化技術に関する包括的なガイド。" name="description"/>
+<meta content="検索関連性, ランキングアルゴリズム, 情報検索, 検索最適化, クエリマッチング" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Search-Relevance/" property="og:url"/>
+<meta content="検索関連性 | SmartWeb" property="og:title"/>
+<meta content="検索結果の品質とユーザー満足度を向上させるための検索関連性アルゴリズム、ランキング要因、最適化技術に関する包括的なガイド。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Search-Relevance/" name="twitter:url"/>
+<meta content="検索関連性 | SmartWeb" name="twitter:title"/>
+<meta content="検索結果の品質とユーザー満足度を向上させるための検索関連性アルゴリズム、ランキング要因、最適化技術に関する包括的なガイド。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">検索関連性</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        検索関連性
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Search Relevance
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          検索結果の品質とユーザー満足度を向上させるための検索関連性アルゴリズム、ランキング要因、最適化技術に関する包括的なガイド。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                検索関連性
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ランキングアルゴリズム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                情報検索
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                検索最適化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                クエリマッチング
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="検索関連性とは何か">検索関連性とは何か?</h2>
+<p>検索関連性とは、検索結果がユーザーのクエリの意図と文脈にどの程度一致しているかを示す度合いを指します。これは、現代の検索エンジンと情報検索システムを駆動する基本原則を表しており、返された結果がユーザーが実際に探しているものをどれだけ満たしているかを決定します。検索関連性は、クエリに対してコンテンツを評価する技術的アルゴリズムと、有用で正確かつタイムリーな情報を見つけるという主観的なユーザー体験の両方を包含します。この概念は、単純なキーワードマッチングを超えて、意味的理解、ユーザーコンテキスト、<a data-lb="1" href="/ja/glossary/Personalization/" title="AIチャットボットと自動化におけるパーソナライゼーションは、高度なアルゴリズムを使用して、個々のユーザーの嗜好や行動に合わせてサービス、コンテンツ、インタラクションをカスタマイズします。">パーソナライゼーション</a>要因、およびコンテンツソースの全体的な品質と権威性を含みます。</p>
+<p>検索関連性の測定と最適化には、数百のランキング要因を同時に分析する複雑な数学モデルと機械学習アルゴリズムが含まれます。これらのシステムは、テキストの類似性、トピックの権威性、ユーザーエンゲージメントシグナル、コンテンツの鮮度、地理的関連性、その他多数の変数を評価して、各固有のクエリに最も適切な結果を決定します。現代の検索関連性アルゴリズムは、<a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">自然言語処理</a>、エンティティ認識、文脈理解を組み込んで、ユーザーが情報ニーズを表現する方法とコンテンツ作成者が情報を構造化する方法との間のギャップを埋めます。目標は、最も適切な結果を最初に提示することでユーザーの<a data-lb="1" href="/ja/glossary/cognitive-load/" title="認知負荷とは、情報を処理、保存、使用するために必要な精神的努力のことです。教育、UX、AIにおける認知負荷の種類、測定方法、軽減戦略について学びます。">認知負荷</a>を最小限に抑え、満足のいく答えを見つけるために必要な時間と労力を削減することです。</p>
+<p>検索関連性は、初期のブール検索モデルから、ニュアンスのあるクエリを理解し、曖昧な言語を処理し、時間の経過とともに個々のユーザーの好みに適応できる洗練されたニューラルネットワークへと大きく進化してきました。現代の関連性システムは、正確性、多様性、鮮度、権威性、パーソナライゼーションなど、複数の競合する目標をバランスさせながら、公平性を維持し、バイアスを回避する必要があります。検索関連性の有効性は、ユーザー満足度、エンゲージメント指標、検索プラットフォームの全体的な成功に直接影響を与えるため、情報科学、コンピュータサイエンス、<a data-lb="1" href="/ja/glossary/User-Friendly-Interface/" title="情報を明確に整理し、有用なフィードバックを提供し、あらゆるスキルレベルのユーザーが最小限の学習時間で使用できるようにすることで、テクノロジーを使いやすくする設計アプローチ。">ユーザーエクスペリエンスデザイン</a>における継続的な研究開発の重要な領域となっています。</p>
+<h2 id="コア検索関連性技術">コア検索関連性技術</h2>
+<p><strong>TF-IDF(Term Frequency-Inverse Document Frequency)</strong> - コーパス全体における頻度に対する文書内での頻度に基づいて用語の重要性を重み付けする基本的なテキスト分析技術。このアプローチは、一般的な単語の影響を減らしながら、特定の文書に特に関連する特徴的な用語を識別するのに役立ちます。</p>
+<p><strong>BM25(Best Matching 25)</strong> - 文書長の正規化と用語飽和効果を組み込むことでTF-IDFを改善した高度な確率的ランキング関数。BM25は、人間の関連性判断をより良く反映し、さまざまな文書長をより効果的に処理する、より微妙なスコアリングを提供します。</p>
+<p><strong>ベクトル空間モデル</strong> - テキスト文書とクエリを高次元ベクトルに変換し、幾何学的操作による類似性計算を可能にする数学的表現。これらのモデルは、正確なキーワード対応を超えた意味的マッチングを促進し、より洗練された関連性計算をサポートします。</p>
+<p><strong>ニューラル情報検索</strong> - <a data-lb="1" href="/ja/glossary/deep-learning/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>を使用してクエリの意図と文書コンテンツを意味レベルで理解する深層学習アプローチ。これらのシステムは、概念間の複雑な関係を捉え、従来の統計的手法よりも文脈的に適切な結果を提供できます。</p>
+<p><strong>Learning to Rank</strong> - <a data-lb="1" href="/ja/glossary/Audience-Engagement/" title="オーディエンスエンゲージメントとは、人々とブランドの間で生まれる積極的な参加と交流のことで、単に受動的に視聴するだけでなく、コンテンツを消費し、体験を共有し、関係性を構築することを指します。">ユーザーインタラクション</a>と専門家の判断からのトレーニングデータを使用してランキング関数を最適化する機械学習フレームワーク。これらのシステムは、<a data-lb="1" href="/ja/glossary/Behavioral-Trigger/" title="ボタンのクリックやショッピングカートの放棄など、ユーザーの行動に自動的に応答し、タイムリーでパーソナライズされたメッセージや体験を提供するシステム。">ユーザー行動</a>とフィードバックシグナルのパターンから学習することで、継続的に関連性を改善します。</p>
+<p><strong>エンティティ認識とナレッジグラフ</strong> - クエリと文書で言及されている実世界のエンティティを識別して理解する技術。テキストの類似性だけでなく、概念的関係に基づいたより正確なマッチングを可能にします。</p>
+<p><strong>パーソナライゼーションアルゴリズム</strong> - 個々のユーザーの履歴、好み、場所、文脈要因に基づいて検索結果を適応させ、全体的な検索品質を維持しながら、よりパーソナルに関連性の高い結果を提供するシステム。</p>
+<h2 id="検索関連性の仕組み">検索関連性の仕組み</h2>
+<p>検索関連性プロセスは、ユーザーがクエリを送信することから始まり、入力形式を標準化するための<a data-lb="1" href="/ja/glossary/Tokenization/" title="データセキュリティ、自然言語処理、ブロックチェーンにおけるトークン化の包括的ガイド - 技術、メリット、実装方法、将来のトレンドを解説。">トークン化</a>、ステミング、正規化を含む即座の前処理が行われます。次に、システムはクエリ分析を実行して、検索プロセスをガイドする主要な用語、エンティティ、潜在的な意図シグナルを識別します。</p>
+<p>次に、検索エンジンは、効率的なマッチングアルゴリズムを使用してインデックスから潜在的に関連性のある文書の広範なセットを識別することで、候補検索を実行します。この初期フィルタリングは通常、クエリ用語または意味的に関連する概念を含む文書に焦点を当て、詳細な分析のための管理可能なサブセットを作成します。</p>
+<p>次に、システムはクエリと候補文書の両方に特徴抽出を適用し、テキストの類似性スコア、権威性メトリクス、鮮度指標、<a data-lb="1" href="/ja/glossary/User-Engagement/" title="ユーザーエンゲージメントとは、デジタル製品やサービスに対してユーザーが持つインタラクションと感情的なつながりのレベルを指します。人々が機能やコンテンツをどれだけ積極的かつ有意義に利用しているかを測定し、企業がロイヤルカスタマーを構築し、提供するサービスを改善するのに役立ちます。">ユーザーエンゲージメント</a>データを含む多数の関連性シグナルを計算します。これらの特徴は、各文書の潜在的な関連性を評価する洗練された<a data-lb="1" href="/ja/glossary/Search-Relevance/" title="検索結果の品質とユーザー満足度を向上させるための検索関連性アルゴリズム、ランキング要因、最適化技術に関する包括的なガイド。">ランキングアルゴリズム</a>の入力となります。</p>
+<p>ランキングアルゴリズムは、抽出された特徴を数学モデルまたは<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>システムを通じて処理し、各候補文書に関連性スコアを割り当てます。現代のシステムは、より堅牢で正確な結果を達成するために、複数のランキングアプローチを組み合わせるアンサンブル手法を採用することがよくあります。</p>
+<p>システムは、最終的な結果セットがクエリトピックの包括的なカバレッジを提供しながら、過度な冗長性を回避するために、結果のフィルタリングと多様化を実行します。このステップでは、特定のユーザーとコンテキストに対して結果を最適化するために、パーソナライゼーション要因と品質フィルターも適用される場合があります。</p>
+<p>最後に、検索エンジンはランク付けされた結果をユーザーに提示し、多くの場合、注目のスニペット、関連クエリ、または<a data-lb="1" href="/ja/glossary/Structured-Data/" title="検索エンジンやコンピュータがWebページのコンテンツをより適切に理解できるよう、標準化された形式で整理された情報。評価、価格、その他の詳細情報を含むリッチな検索結果の表示を可能にします。">構造化データ</a>表示などの追加の拡張機能を備えています。システムは、これらの結果とのユーザーインタラクションを継続的に監視して、将来の関連性改善のためのフィードバックシグナルを収集します。</p>
+<p><strong>ワークフローの例</strong>: ユーザーが「近くの最高のイタリアンレストラン」を検索 → クエリ処理が場所の意図とレストランカテゴリを識別 → 候補検索が地元のイタリアンレストランを見つける → 特徴抽出がレビュースコア、距離、人気メトリクスを計算 → ランキングアルゴリズムが評価、近接性、最近のレビューなどの要因を重み付け → 結果がレビューと道順付きで近くの高評価イタリアンレストランを表示。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>ユーザー満足度の向上</strong> - 高い検索関連性は、望ましい情報を見つけるために必要な時間と労力を削減することで、ユーザー満足度と直接相関し、より肯定的な検索体験とプラットフォームロイヤルティの向上につながります。</p>
+<p><strong>情報発見の強化</strong> - 効果的な関連性アルゴリズムは、ユーザーが他の方法では見つけられなかったかもしれない貴重なコンテンツを発見するのを助け、関連する提案された結果を通じて知識を拡大し、偶発的な学習機会を提供します。</p>
+<p><strong>エンゲージメントとリテンションの増加</strong> - 検索結果が一貫してユーザーの期待に応えると、人々はプラットフォームを使い続け、コンテンツとより深く関わる可能性が高くなり、セッション時間の延長とリターン率の向上につながります。</p>
+<p><strong>コンテンツ利用の改善</strong> - 洗練された関連性システムは、高品質のコンテンツが適切な可視性を受けることを保証し、コンテンツ作成者が意図したオーディエンスにリーチし、情報リソースの価値を最大化するのを支援します。</p>
+<p><strong>情報過多の軽減</strong> - 膨大な量の情報を効果的にフィルタリングしてランク付けすることで、検索関連性システムは、無関係または低品質の結果に圧倒されることなく、ユーザーが情報の豊富さをナビゲートするのを支援します。</p>
+<p><strong>パーソナライズされた体験</strong> - 高度な関連性アルゴリズムは、個々のユーザーの好みとコンテキストに適応し、時間の経過とともに特定のニーズと興味により適合する、ますますパーソナライズされた結果を提供できます。</p>
+<p><strong>競争優位性</strong> - 優れた検索関連性機能を持つ組織は、競合他社よりも優れたユーザー体験とより効果的な情報アクセスを提供することで、市場で差別化できます。</p>
+<p><strong>データ駆動型インサイト</strong> - 検索関連性システムは、ユーザー行動、コンテンツパフォーマンス、情報ニーズに関する貴重な分析を生成し、ビジネス上の意思決定と<a data-lb="1" href="/ja/glossary/Content-Lifecycle-Management/" title="コンテンツライフサイクル管理の包括的ガイド。コンテンツの作成から廃棄までを管理するための戦略、ワークフロー、メリット、ベストプラクティスを網羅しています。">コンテンツ戦略</a>に情報を提供できます。</p>
+<p><strong>スケーラブルな情報管理</strong> - <a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>された関連性システムは、膨大な量のコンテンツとクエリを効率的に処理でき、手動キュレーション作業の比例的な増加なしに、組織が情報サービスをスケールできるようにします。</p>
+<p><strong>多言語・異文化サポート</strong> - 現代の関連性システムは、翻訳と<a data-lb="1" href="/ja/glossary/i18n/" title="アプリケーションが複数の言語や地域をサポートできるようにするソフトウェア設計アプローチ。コアコードを書き直すことなく、グローバル展開を可能にします。">ローカライゼーション</a>機能を通じて、言語と文化の障壁を橋渡しし、多様なグローバルオーディエンスにとって情報をよりアクセスしやすくできます。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>Eコマース製品検索</strong> - オンライン小売業者は、検索関連性を使用して、顧客が価格、評価、在庫状況、購入履歴などの要因を組み込んで、ニーズ、好み、予算制約に一致する製品を見つけるのを支援します。</p>
+<p><strong>エンタープライズナレッジマネジメント</strong> - 組織は、従業員が膨大な企業ナレッジベースと<a data-lb="1" href="/ja/glossary/Collaboration-Platform/" title="コラボレーションプラットフォームの包括的ガイド:機能、メリット、導入戦略、そして現代のチーム生産性向上のためのベストプラクティス。">コラボレーションプラットフォーム</a>全体で内部文書、ポリシー、専門知識、リソースを迅速に見つけるのを支援するために、検索関連性システムを実装します。</p>
+<p><strong>学術研究データベース</strong> - 学術プラットフォームは、研究者が複数の分野と方法論を含む複雑なクエリに基づいて、関連する論文、引用、学術リソースを見つけるのを支援するために、洗練された関連性アルゴリズムを採用します。</p>
+<p><strong>ニュースとメディアプラットフォーム</strong> - メディア組織は、検索関連性を使用して、最新性、信頼性、地理的関連性、ユーザーの興味などの要因をバランスさせながら、タイムリーで正確で魅力的なニュースコンテンツを表面化します。</p>
+<p><strong>医療情報システム</strong> - 医療プラットフォームは、医療専門家と患者が安全性と臨床的証拠を優先しながら、正確で権威のある健康情報を見つけるのを支援するために、専門的な関連性アルゴリズムを実装します。</p>
+<p><strong>法律調査プラットフォーム</strong> - 法律データベースは、法律用語、判例法の関係、管轄要因を理解するドメイン固有の関連性モデルを採用して、弁護士と法律専門家が関連する先例と法令を見つけるのを支援します。</p>
+<p><strong>ソーシャルメディアコンテンツ発見</strong> - ソーシャルプラットフォームは、関連性アルゴリズムを使用して、ユーザー行動、ソーシャルシグナル、トレンドトピックに基づいて、パーソナライズされたフィードをキュレートし、つながりを推奨し、魅力的なコンテンツを表面化します。</p>
+<p><strong>旅行とホスピタリティ検索</strong> - 旅行プラットフォームは、場所、日付、好み、予算、レビューを考慮する多面的な関連性システムを実装して、ユーザーが適切な宿泊施設、フライト、アクティビティを見つけるのを支援します。</p>
+<p><strong>求人検索と採用</strong> - 雇用プラットフォームは、関連性マッチングを使用して、求職者を適切な機会と結び付け、雇用主がスキル、経験、文化的適合性に基づいて適格な候補者を見つけるのを支援します。</p>
+<p><strong>教育コンテンツプラットフォーム</strong> - <a data-lb="1" href="/ja/glossary/Training-Resources/" title="トレーニングリソースとは、人々が新しいスキルや知識を習得するために使用されるツール、教材、プラットフォームのことです。オンラインコースや動画から、インタラクティブなシミュレーション、パーソナライズされた学習システムまで、幅広い範囲にわたります。">学習管理システム</a>と教育リソースは、関連性アルゴリズムを採用して、学生の進捗、目標、学習スタイルに基づいて、適切なコース、教材、学習パスを推奨します。</p>
+<h2 id="検索関連性アルゴリズムの比較">検索関連性アルゴリズムの比較</h2>
+<table>
+<thead>
+<tr>
+<th>アルゴリズムタイプ</th>
+<th>強み</th>
+<th>弱み</th>
+<th>最適なユースケース</th>
+<th>計算コスト</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TF-IDF</td>
+<td>シンプル、解釈可能、高速</td>
+<td>意味的理解が限定的</td>
+<td>文書分類、基本検索</td>
+<td>低</td>
+</tr>
+<tr>
+<td>BM25</td>
+<td>文書長を適切に処理、確率的基盤</td>
+<td>依然としてキーワード中心</td>
+<td>Web検索、情報検索</td>
+<td>低〜中</td>
+</tr>
+<tr>
+<td>ベクトル空間モデル</td>
+<td>意味的類似性、柔軟性</td>
+<td>大規模なトレーニングデータが必要</td>
+<td>コンテンツ推奨、類似性検索</td>
+<td>中</td>
+</tr>
+<tr>
+<td>ニューラルネットワーク</td>
+<td>深い意味的理解、文脈的</td>
+<td>ブラックボックス、計算コストが高い</td>
+<td>複雑なクエリ、会話型検索</td>
+<td>高</td>
+</tr>
+<tr>
+<td>Learning to Rank</td>
+<td>ユーザー満足度を最適化</td>
+<td>広範なトレーニングデータが必要</td>
+<td>パーソナライズ検索、Eコマース</td>
+<td>中〜高</td>
+</tr>
+<tr>
+<td>ハイブリッドアプローチ</td>
+<td>複数の強みを組み合わせ</td>
+<td>実装と調整が複雑</td>
+<td>エンタープライズ検索、専門ドメイン</td>
+<td>可変</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>クエリの曖昧性と意図理解</strong> - ユーザーは、曖昧または不完全なクエリを使用して情報ニーズを表現することが多く、システムが真の意図を判断し、適切にターゲットを絞った結果を提供することが困難になります。</p>
+<p><strong>スケーラビリティとパフォーマンス要件</strong> - 検索関連性システムは、ユーザーの期待に応える応答時間を維持しながら、数百万のクエリと文書を効率的に処理する必要があり、洗練された最適化とインフラストラクチャが必要です。</p>
+<p><strong>複数のランキング要因のバランス</strong> - 現代の関連性アルゴリズムは、数百の異なるシグナルを適切に重み付けする必要があり、鮮度、権威性、パーソナライゼーションなどの要因間の最適なバランスを決定することは依然として困難です。</p>
+<p><strong>多様なコンテンツタイプの処理</strong> - 検索システムは、テキスト、画像、ビデオ、構造化データを含むさまざまなメディアタイプにわたって関連性を効果的に評価する必要があり、それぞれに専門的な処理アプローチが必要です。</p>
+<p><strong>パーソナライゼーション vs. フィルターバブル</strong> - パーソナライズされた結果は個々のユーザー満足度を向上させますが、多様な<a data-lb="1" href="/ja/glossary/POV--Point-of-View-/" title="物語が語られる際の語り手の視点であり、読者が何を見て何を体験するかを決定します。POVは情報がどのように明かされるかを形作り、物語への感情的なつながりに影響を与えます。">視点</a>への露出を制限し、既存のバイアスを強化する可能性のある情報サイロを作成するリスクがあります。</p>
+<p><strong>評価と品質測定</strong> - 検索関連性の品質を評価するには、高価な人間による評価プロセスが必要であり、自動化されたメトリクスでは、ユーザー満足度の微妙な側面を完全に捉えられない場合があります。</p>
+<p><strong>スパムと操作への耐性</strong> - 検索関連性システムは、正当な最適化機会を維持しながら、キーワードスタッフィング、リンクスキーム、その他の操作的な戦術を通じてランキングを人為的に膨らませる試みを防御する必要があります。</p>
+<p><strong>多言語と文化的考慮事項</strong> - グローバル検索システムは、異なる市場と言語にわたって一貫した品質を維持しながら、言語のバリエーション、文化的差異、ローカルコンテキストを処理する必要があります。</p>
+<p><strong>リアルタイム更新と鮮度</strong> - 現在の情報の必要性と確立されたコンテンツの安定性と信頼性をバランスさせるには、洗練された時間的関連性モデルと効率的なインデックスシステムが必要です。</p>
+<p><strong>プライバシーとデータ保護</strong> - <a data-lb="1" href="/ja/glossary/Encryption-at-Rest/" title="保存データの暗号化に関する包括的なガイド - 暗号化手法によるストレージデータの保護、実装戦略、セキュリティのベストプラクティスについて解説します。">データ保護</a>規制を遵守しながらユーザーのプライバシーを尊重しつつ、パーソナライズされた関連性を実装するには、データ収集と処理システムの慎重な設計が必要です。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>包括的なユーザー調査</strong> - 関連性アルゴリズムの設計と最適化の優先順位を通知するために、ユーザーの検索行動、意図パターン、満足度メトリクスの徹底的な分析を実施します。</p>
+<p><strong>多層評価フレームワーク</strong> - 関連性の品質とユーザー満足度を包括的に評価するために、自動化されたメトリクス、人間による判断研究、<a data-lb="1" href="/ja/glossary/A-B-Testing/" title="A/Bテストの方法論、実装戦略、統計分析、およびデータ駆動型の意思決定のための最適化技術に関する包括的なガイド。">A/Bテスト</a>を含む多様な評価方法を実装します。</p>
+<p><strong>反復的アルゴリズム開発</strong> - ユーザーフィードバックとパフォーマンスデータに基づいて関連性アルゴリズムを継続的に改良できる<a data-lb="1" href="/ja/glossary/Product-Backlog/" title="アジャイル開発におけるプロダクトバックログの包括的ガイド。管理、優先順位付け、効果的な実装のためのベストプラクティスを網羅しています。">アジャイル開発</a>アプローチを採用します。</p>
+<p><strong>堅牢なデータ品質管理</strong> - 関連性アルゴリズムの高品質な入力データを確保するために、コンテンツ品質評価、重複検出、<a data-lb="1" href="/ja/glossary/spam-filtering/" title="スパムフィルタリングとは、迷惑メール、大量送信メール、または悪意のあるメールを自動的に検出、分類、管理し、ユーザーの受信トレイに届かないようにするプロセスです。その仕組み、種類、メールセキュリティにおけるメリットについて解説します。">スパムフィルタリング</a>のための厳格なプロセスを確立します。</p>
+<p><strong>スケーラブルなインフラストラクチャ設計</strong> - 一貫したパフォーマンスを維持し、迅速な実験を可能にしながら、増加するクエリ量とコンテンツコレクションを処理できるシステムを構築します。</p>
+<p><strong>透明なランキング要因</strong> - アルゴリズムの<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>を維持し、操作を防止しながら、ランキング要因と最適化のベストプラクティスについてコンテンツ作成者に明確なガイダンスを提供します。</p>
+<p><strong>部門横断的なコラボレーション</strong> - 関連性システムが技術的要件とユーザー要件の両方を満たすことを保証するために、データサイエンティスト、<a data-lb="1" href="/ja/glossary/UX/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">ユーザーエクスペリエンス</a>デザイナー、プロダクトマネージャー、ドメインエキスパート間のコラボレーションを促進します。</p>
+<p><strong>継続的な監視とアラート</strong> - 関連性の品質低下、アルゴリズムの障害、検索行動の異常なパターンを検出できる包括的な監視システムを実装します。</p>
+<p><strong>バイアス検出と軽減</strong> - 関連性アルゴリズムの潜在的なバイアスを定期的に監査し、異なるユーザーグループと<a data-lb="1" href="/ja/glossary/Content-Types/" title="デジタルシステムにおけるコンテンツタイプの包括的なガイド。分類、実装、構造化されたコンテンツ管理のベストプラクティスを網羅しています。">コンテンツタイプ</a>の公平で公正な扱いを確保するための是正措置を実装します。</p>
+<p><strong>ドキュメンテーションとナレッジマネジメント</strong> - チームの<a data-lb="1" href="/ja/glossary/Expert-Community/" title="エキスパートコミュニティの包括的ガイド - 専門家を結びつけ、コラボレーションを促進し、イノベーションを推進する専門知識ネットワーク。">知識共有</a>とシステムメンテナンスをサポートするために、アルゴリズムの決定、実験結果、ベストプラクティスの詳細なドキュメンテーションを維持します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>ニューラル言語モデル</strong> - 複雑な言語関係を理解し、より洗練されたクエリ-文書マッチング機能を提供できる<a data-lb="1" href="/ja/glossary/BERT/" title="BERT(Bidirectional Encoder Representations from Transformers)の包括的ガイド - 言語理解のためのGoogleの革新的なNLPモデル">BERT</a>や<a data-lb="1" href="/ja/glossary/GPT/" title="GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。">GPT</a>などのトランスフォーマーベースのアーキテクチャを実装します。</p>
+<p><strong>マルチモーダル関連性評価</strong> - テキスト、視覚、音声シグナルを組み合わせて包括的な理解を実現し、異なるコンテンツタイプにわたって同時に関連性を評価できるシステムを開発します。</p>
+<p><strong>フェデレーテッド検索と結果融合</strong> - 多様なデータソース全体で一貫した関連性ランキングを維持しながら、複数の専門検索システムからの結果を組み合わせることができるアーキテクチャを作成します。</p>
+<p><strong>リアルタイム学習と適応</strong> - 完全な再トレーニングサイクルを必要とせずに、ユーザーインタラクションに基づいて関連性モデルを継続的に適応させることができるオンライン学習システムを実装します。</p>
+<p><strong>文脈的埋め込みと動的表現</strong> - 静的表現よりも文脈依存の意味を捉え、多義語をより効果的に処理できる高度な埋め込み技術を使用します。</p>
+<p><strong>検索関連性のための説明可能なAI</strong> - ランキング決定の解釈可能な説明を提供する方法を開発し、ユーザーが特定の結果が選択された理由を理解し、より良いシステムデバッグを可能にします。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>会話型検索インターフェース</strong> - 複雑な複数ターンのクエリを処理し、拡張された会話全体で文脈を認識した応答を提供できる、より自然な対話ベースの検索インタラクションへの進化。</p>
+<p><strong>拡張現実検索統合</strong> - 空間的および視覚的コンテキストを組み込んで、より没入型の検索体験を実現するために、拡張現実環境でクエリを理解して応答できる関連性アルゴリズムの開発。</p>
+<p><strong>量子コンピューティングアプリケーション</strong> - 複雑な最適化問題を解決し、大規模な類似性計算をより効率的に処理できる可能性のある検索関連性のための<a data-lb="1" href="/ja/glossary/Quantum-Machine-Learning/" title="量子機械学習の包括的ガイド。量子アルゴリズム、応用事例、メリット、次世代AIのための実装戦略を探求します。">量子アルゴリズム</a>の探求。</p>
+<p><strong>倫理的AIと公平性フレームワーク</strong> - 情報への公平なアクセスを確保するために、検索関連性システム専用に設計されたアルゴリズムの公平性技術と倫理ガイドラインの高度な開発。</p>
+<p><strong>ドメイン間知識転移</strong> - あるドメインからの関連性インサイトを活用して、限られたトレーニングデータを持つ関連領域でのパフォーマンスを向上させることができる<a data-lb="1" href="/ja/glossary/Transfer-Learning/" title="機械学習における転移学習の包括的ガイド。技術、メリット、応用例、実装戦略について解説します。">転移学習</a>アプローチの実装。</p>
+<p><strong>予測検索とプロアクティブな情報配信</strong> - ユーザーの情報ニーズを予測し、明示的なクエリが送信される前に関連コンテンツをプロアクティブに表面化できるシステムへの進化。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Manning, C. D., Raghavan, P., &amp; Schütze, H. (2008). Introduction to Information Retrieval. Cambridge University Press.</p>
+</li>
+<li>
+<p>Croft, W. B., Metzler, D., &amp; Strohman, T. (2015). Search Engines: Information Retrieval in Practice. Pearson Education.</p>
+</li>
+<li>
+<p>Liu, T. Y. (2011). Learning to Rank for Information Retrieval. Springer-Verlag.</p>
+</li>
+<li>
+<p>Baeza-Yates, R., &amp; Ribeiro-Neto, B. (2011). Modern Information Retrieval: The Concepts and Technology behind Search. Addison-Wesley Professional.</p>
+</li>
+<li>
+<p>Mitra, B., &amp; Craswell, N. (2018). An Introduction to Neural Information Retrieval. Foundations and Trends in Information Retrieval, 13(1), 1-126.</p>
+</li>
+<li>
+<p>Joachims, T. (2002). Optimizing Search Engines Using Clickthrough Data. Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.</p>
+</li>
+<li>
+<p>Robertson, S., &amp; Zaragoza, H. (2009). The Probabilistic Relevance Framework: BM25 and Beyond. Foundations and Trends in Information Retrieval, 3(4), 333-389.</p>
+</li>
+<li>
+<p>Agichtein, E., Brill, E., &amp; Dumais, S. (2006). Improving Web Search Ranking by Incorporating User Behavior Information. Proceedings of the 29th Annual International ACM SIGIR Conference.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SEO-Metadata/">
+                    SEOメタデータ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    メタタグ、構造化データ、検索エンジンの可視性とランキング向上のための最適化手法を含む、SEOメタデータの包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SEO-Metadata/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Domain-Authority/">
+                    ドメインオーソリティ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ウェブサイトが検索結果でどの程度上位にランクされる可能性があるかを予測する、1から100までのスコアです。SEO専門家が異なるウェブサイトの強さを比較する際に役立ちます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Domain-Authority/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Search/">
+                    ナレッジ検索
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    インテリジェントな情報検索と発見のための、ナレッジ検索システム、テクノロジー、実装戦略に関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Knowledge-Search/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Long-Tail-Keyword/">
+                    ロングテールキーワード
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    3語以上の具体的な検索フレーズで、提供するものを正確に探している人々をターゲットにします。検索順位を上げやすく、顧客を引き付ける可能性が高くなります。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Long-Tail-Keyword/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Search-Analytics/">
+                    検索アナリティクス
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    検索アナリティクスの包括的ガイド：プラットフォームやアプリケーション全体における検索パフォーマンスの測定、最適化、インサイトについて解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Search-Analytics/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Search-Optimization/">
+                    検索最適化
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ウェブサイトの可視性と検索ランキングを向上させるための、検索最適化テクニック、戦略、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Search-Optimization/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/search-relevance/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

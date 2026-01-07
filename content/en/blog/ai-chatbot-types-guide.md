@@ -41,7 +41,7 @@ Chatbots can be categorized into five types based on their response mechanisms a
 
 | Type | Main Features | Suitable Use Cases | Difficulty |
 |--------|---------|--------------|--------|
-| [Rule-Based](/en/glossary/Rule-based/) | Responds with predetermined scenarios | [FAQ](/en/glossary/FAQ/), routine tasks | Low |
+| [Rule-Based](/en/glossary/[Rule-based](/en/glossary/Rule-based/)/) | Responds with predetermined scenarios | [FAQ](/en/glossary/FAQ/), routine tasks | Low |
 | AI-Powered ([Machine Learning](/en/glossary/machine-learning/)) | Flexible responses possible | Complex inquiries | Medium |
 | [Generative AI](/en/glossary/Generative-AI/) | Automatically generates natural text | Creative dialogue | Medium-High |
 | RAG | Searches for and responds with latest information | Specialized knowledge domains | High |
@@ -61,7 +61,7 @@ This type returns predetermined answers based on pre-set keywords, question patt
 - Lacks flexibility
 
 **Technical Background:**  
-[Rule-based](/en/glossary/Rule-based/) systems use [finite state machines](/en/glossary/finite-state-machines/) and [conditional branching](/en/glossary/Logic-Node---Conditional-Branching/). Although simple, they operate reliably and are still widely used by many companies.
+[Rule-based](/en/glossary/[Rule-based](/en/glossary/Rule-based/)/) systems use [finite state machines](/en/glossary/finite-state-machines/) and [conditional branching](/en/glossary/Logic-Node---Conditional-Branching/). Although simple, they operate reliably and are still widely used by many companies.
 
 ### AI-Powered (Machine Learning)
 
@@ -93,7 +93,7 @@ Like [ChatGPT](/en/glossary/ChatGPT/), generative AI automatically creates text 
 - Consistency of responses is a challenge
 
 **Technical Background:**  
-Generative AI is based on large language models. Using the latest models provided by [OpenAI](/en/glossary/OpenAI/), [Google](/en/glossary/Google/), and [Anthropic](/en/glossary/Anthropic/) significantly improves the accuracy of natural text generation.
+Generative AI is based on large language models. Using the latest models provided by [OpenAI](/en/glossary/OpenAI/), [Google](/en/glossary/Google/), and [Anthropic](/en/glossary/Anthropic/) significantly improves the accuracy of natural [text generation](/en/glossary/Text-Generation/).
 
 ### RAG (Retrieval-Augmented Generation)
 [RAG](/en/glossary/RAG/) is a type where AI searches external databases or documents and uses that information to create answers. It provides highly reliable responses when the latest information or specialized knowledge is needed.
@@ -114,7 +114,7 @@ For those interested in learning more about RAG mechanisms and applications, see
 
 ### Hybrid
 
-The hybrid type combines [rule-based](/en/glossary/Rule-based/), AI-powered, and generative AI systems. For example, it uses rules for scenarios and FAQs, while using AI for complex questions, leveraging multiple mechanisms. It can be utilized in various business operations and scenarios.
+The hybrid type combines [rule-based](/en/glossary/[Rule-based](/en/glossary/Rule-based/)/), AI-powered, and generative AI systems. For example, it uses rules for scenarios and FAQs, while using AI for complex questions, leveraging multiple mechanisms. It can be utilized in various business operations and scenarios.
 
 **Advantages:**
 - Leverages strengths of each type
@@ -144,7 +144,7 @@ Performance indicates how accurately and human-like an AI chatbot can respond. E
 | Resolution Rate | Percentage of actual problem resolutions | High |
 | Hallucination Rate | Percentage of incorrect or irrelevant responses | Medium |
 
-Generative AI and AI-powered chatbots have high performance in these areas and can handle natural conversation and difficult questions. Rule-based types are strong with predetermined patterns but have limitations with complex interactions.
+Generative AI and AI-powered chatbots have high performance in these areas and can handle natural conversation and difficult questions. [Rule-based](/en/glossary/Rule-based/) types are strong with predetermined patterns but have limitations with complex interactions.
 
 ### What is AI Chatbot "Functionality"?
 
@@ -207,10 +207,10 @@ When choosing an AI chatbot, thoroughly confirm the implementation objectives an
 
 ### For Customer Support
 
-"Rule-based" or "AI-powered" types are suitable for [FAQ (frequently asked questions)](/en/glossary/FAQ/) and predetermined inquiry responses.
+"[Rule-based](/en/glossary/Rule-based/)" or "AI-powered" types are suitable for [FAQ (frequently asked questions)](/en/glossary/FAQ/) and predetermined inquiry responses.
 
 **Recommended Selection:**
-- Need quick, accurate responses → **Rule-based**
+- Need quick, accurate responses → **[Rule-based](/en/glossary/Rule-based/)**
 - Complex questions, asked in various expressions → **AI-powered** or **Generative AI**
 
 SmartWeb can build efficient customer support systems by combining [LiveAgent](/en/glossary/LiveAgent/) with [FlowHunt](/en/glossary/FlowHunt/). For actual implementation cases and success strategies, see " [2025 AI Customer Support Guide: Success Strategies from Amazon & Salesforce to SMBs](https://www.smartweb.jp/ai-customer-support-2025-guide/)".
@@ -349,7 +349,7 @@ These technologies will add new value to our lives and societal systems.
 
 ### High Flexibility Through Hybrid Architecture
 
-SmartWeb's AI chatbot development service uses FlowHunt to realize a hybrid type combining RAG, generative AI, and rule-based systems.
+SmartWeb's AI chatbot development service uses FlowHunt to realize a hybrid type combining RAG, generative AI, and [rule-based](/en/glossary/Rule-based/) systems.
 
 This mechanism can handle a wide range of content from frequently asked questions to complex customized responses.
 
@@ -357,7 +357,7 @@ This mechanism can handle a wide range of content from frequently asked question
 It searches for relevant information from the customer's unique external [knowledge base](/en/glossary/knowledge-base/), and generative AI creates highly accurate responses based on that information. By using a unique [knowledge base](/en/glossary/knowledge-base/), it can provide reliable responses without using other companies' information or incorrect data.
 
 **System Configuration:**
-- **Rule-Based Engine** - Immediately responds to predetermined questions like FAQs
+- **[Rule-Based](/en/glossary/Rule-based/) Engine** - Immediately responds to predetermined questions like FAQs
 - **Generative AI** - Creates flexible responses even to unregistered questions (using latest models from OpenAI, [Google](/en/glossary/Google/), and Anthropic)
 - **RAG Search** - Retrieves accurate information from customer's unique knowledge base
 
@@ -393,7 +393,7 @@ Because they can be customized to match intended use, they can be implemented in
 Implementing SmartWeb's AI chatbot development service provides the following benefits:
 
 1. **Business Efficiency** - Can manage inquiries from multiple channels in one place, preventing missed responses and dependency on specific individuals
-2. **High- [Precision](/en/glossary/Precision/) Auto-Response** - Leveraging strengths of both AI and rule-based systems enables accurate and efficient auto-responses
+2. **High- [Precision](/en/glossary/Precision/) Auto-Response** - Leveraging strengths of both AI and [rule-based](/en/glossary/Rule-based/) systems enables accurate and efficient auto-responses
 3. **Cost Reduction** - Automated form response suggestions and business [process automation](/en/glossary/Process-Automation/) reduce personnel costs
 4. **Latest AI Technology Utilization** - Uses latest models from OpenAI, [Google](/en/glossary/Google/), and Anthropic to consistently provide high-quality responses
 5. **Hallucination Countermeasures** - RAG technology significantly reduces generation of incorrect information

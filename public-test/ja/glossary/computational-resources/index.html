@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>計算リソース | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/computational-resources/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/computational-resources/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/computational-resources/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/computational-resources/" hreflang="x-default" rel="alternate"/>
+<meta content="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。" name="description"/>
+<meta content="計算リソース, CPU, GPU, AI, クラウドコンピューティング" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/computational-resources/" property="og:url"/>
+<meta content="計算リソース | SmartWeb" property="og:title"/>
+<meta content="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/computational-resources/" name="twitter:url"/>
+<meta content="計算リソース | SmartWeb" name="twitter:title"/>
+<meta content="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">計算リソース</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Technology
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        計算リソース
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Computational Resources
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                計算リソース
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                CPU
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                GPU
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                クラウドコンピューティング
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="計算リソースとは">計算リソースとは?</h2>
+<p><a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>とは、単純なデータ処理から複雑な<a data-lb="1" href="/ja/glossary/Autonomous-Systems/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>モデルのトレーニングまで、計算タスクを実行するために必要な包括的なハードウェア、ソフトウェア、およびネットワークインフラストラクチャを指します。これらのリソースには、処理装置(CPU、GPU、TPU、FPGA、ASIC)、メモリシステム(RAM、キャッシュ、ROM)、ストレージデバイス(HDD、SSD、磁気テープ)、ネットワークインフラストラクチャ(LAN、WAN)、およびそれらの使用を調整・最適化するソフトウェアコンポーネントが含まれます。</p>
+<p>現代の計算リソースは、人工知能、データサイエンス、科学計算、エンタープライズ自動化、<a data-lb="1" href="/ja/glossary/cloud-service/" title="クラウドサービスとは、サードパーティベンダーがインターネット経由で提供するITリソースです。SaaS、PaaS、IaaS、FaaS、XaaSモデルの特徴、メリット、ユースケースを理解しましょう。">クラウドサービス</a>、そして事実上すべてのデジタル技術の基盤として機能しています。<a data-lb="1" href="/ja/glossary/Generative-AI/" title="生成AIは、学習したパターンから、テキスト、画像、コードなどの新しいコンテンツを作成します。その定義、モデル(GAN、VAE、Transformer)、応用例、メリット、課題について解説します。">AIモデル</a>がますます高度化し、データセットがペタバイト規模に拡大するにつれて、計算リソースの選択、展開、最適化の方法を理解することが、組織や開発者にとって重要になっています。</p>
+<p>この分野は、AIワークロード向けの特殊なハードウェアアクセラレータ、データソースに近い場所で処理を行う<a data-lb="1" href="/ja/glossary/Edge-Function/" title="遠隔地のデータセンターではなく、ユーザーに近いサーバー上で実行される軽量プログラムで、リクエストをローカルで処理することでウェブサイトやアプリの応答速度を向上させます。">エッジコンピューティング</a>アーキテクチャ、古典的コンピュータでは扱えない問題に対応する量子コンピューティングシステム、そして世界クラスの計算能力へのアクセスを民主化する効率的なクラウドプラットフォームなど、急速に進化を続けています。</p>
+<h2 id="コア処理装置">コア処理装置</h2>
+<p><strong>CPU(中央処理装置)</strong><br/>
+多様な計算タスク、システム管理、制御フローを処理する汎用プロセッサ。現代のCPUは並列処理のための複数のコアを備えていますが、逐次実行と複雑な論理演算に最適化されています。</p>
+<ul>
+<li><strong>アーキテクチャ</strong>: 複雑な命令セットを持つ少数の強力なコア</li>
+<li><strong>強み</strong>: 汎用性、低<a data-lb="1" href="/ja/glossary/Latency/" title="レイテンシとは、リクエストとシステムの応答との間の時間遅延のことで、AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。">レイテンシ</a>のシングルスレッド性能、システム管理</li>
+<li><strong>用途</strong>: オペレーティングシステム、データベース、一般的なコンピューティング、制御タスク</li>
+<li><strong>消費電力</strong>: デバイスクラスに応じて15-350W</li>
+<li><strong>冷却</strong>: 持続的なワークロードには能動冷却が必要</li>
+</ul>
+<p><strong>GPU(グラフィックス処理装置)</strong><br/>
+並列演算、特にグラフィックスと<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>の基礎となる行列およびベクトル計算に最適化された、数千の小型コアを持つ特殊プロセッサ。</p>
+<ul>
+<li><strong>アーキテクチャ</strong>: 大規模並列処理のための数千の単純なコア</li>
+<li><strong>強み</strong>: 高スループットの並列処理、行列演算</li>
+<li><strong>用途</strong>: <a data-lb="1" href="/ja/glossary/deep-learning/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ディープラーニング</a>のトレーニングと推論、科学シミュレーション、グラフィックスレンダリング、暗号通貨マイニング</li>
+<li><strong>消費電力</strong>: 高性能モデルで150-400W</li>
+<li><strong>冷却</strong>: エンタープライズ展開では液体冷却を含む高度な熱管理ソリューション</li>
+</ul>
+<p><strong>TPU(テンソル処理装置)</strong><br/>
+Googleのカスタム特定用途向け集積回路(ASIC)で、ニューラルネットワーク計算、特にディープラーニングワークロードを支配するテンソル演算専用に設計されています。</p>
+<ul>
+<li><strong>アーキテクチャ</strong>: 行列乗算に最適化されたシストリックアレイ</li>
+<li><strong>強み</strong>: ニューラルネットワーク演算の極めて高い効率性、推論の低レイテンシ</li>
+<li><strong>用途</strong>: 大規模モデルトレーニング(GPT、PaLM)、リアルタイム<a data-lb="1" href="/ja/glossary/Chain-of-Thought-Prompting/" title="言語モデルにおけるAI推論と問題解決能力を向上させるための、チェーン・オブ・ソート・プロンプティング技術の包括的ガイド。">AI推論</a>、Google Cloud AIサービス</li>
+<li><strong>利用可能性</strong>: 主にGoogle Cloud Platformを通じて提供</li>
+<li><strong>エネルギー効率</strong>: <a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>ワークロードにおいてGPUと比較してワットあたりの性能が優れている</li>
+</ul>
+<p><strong>FPGA(フィールドプログラマブルゲートアレイ)</strong><br/>
+製造後にカスタムロジックの実装が可能な再構成可能ハードウェアで、汎用CPUと固定機能ASICの間の柔軟性を提供します。</p>
+<ul>
+<li><strong>アーキテクチャ</strong>: プログラマブルロジックブロックと相互接続</li>
+<li><strong>強み</strong>: ハードウェアレベルのカスタマイズ、低レイテンシ、アルゴリズムの柔軟性</li>
+<li><strong>用途</strong>: <a data-lb="1" href="/ja/glossary/Edge-AI/" title="エッジAIは、ネットワークのエッジに位置するデバイス上で人工知能アルゴリズムを直接展開・実行し、リアルタイムの分析、推論、自動意思決定をローカルで可能にします。">エッジAI</a>、高頻度取引、通信、リアルタイム信号処理、産業オートメーション</li>
+<li><strong>消費電力</strong>: 構成に応じて10-200W</li>
+<li><strong>開発</strong>: ハードウェア記述言語(VHDL、Verilog)が必要</li>
+</ul>
+<p><strong>ASIC(特定用途向け集積回路)</strong><br/>
+特定の計算タスクに最適化されたカスタム設計チップで、柔軟性を犠牲にして最大の効率を提供します。</p>
+<ul>
+<li><strong>アーキテクチャ</strong>: 特定の演算のためのハードワイヤードロジック</li>
+<li><strong>強み</strong>: 対象演算に対して可能な限り最高の効率と性能</li>
+<li><strong>制限事項</strong>: 製造後の柔軟性がない、高い開発コスト</li>
+<li><strong>用途</strong>: 暗号通貨マイニング、AI推論チップ、カスタムニューラル処理装置</li>
+<li><strong>例</strong>: Google TPU、Apple Neural Engine、専用マイニングチップ</li>
+</ul>
+<h2 id="メモリとストレージシステム">メモリとストレージシステム</h2>
+<p><strong>ランダムアクセスメモリ(RAM)</strong><br/>
+アクティブなデータとプログラム命令の一時的な保存を提供する高速揮発性メモリ。RAM容量と帯域幅は、特に大規模データセットへの高速アクセスを必要とする<a data-lb="1" href="/ja/glossary/Aggregator/" title="複数の実行パスやループからの出力を収集し、単一の結果に統合するノード。効率的なデータ処理を実現します。">データ集約</a>型操作において、システム性能に重大な影響を与えます。</p>
+<ul>
+<li><strong>種類</strong>: DDR4、DDR5、GPU用HBM(高帯域幅メモリ)</li>
+<li><strong>容量範囲</strong>: 用途に応じて8GB-2TB以上</li>
+<li><strong>重要な用途</strong>: 大規模モデルトレーニング、ビッグ<a data-lb="1" href="/ja/glossary/Business-Intelligence--BI-/" title="ビジネスインテリジェンス（BI）システム、テクノロジー、実装戦略、およびデータドリブンな意思決定のためのベストプラクティスに関する包括的なガイド。">データ分析</a>、仮想化、インメモリデータベース</li>
+</ul>
+<p><strong>キャッシュメモリ</strong><br/>
+CPUの近くまたは上に配置された超高速メモリで、頻繁にアクセスされるデータを保存し、メモリ階層を通じてレイテンシを最小化し、スループットを最大化します。</p>
+<ul>
+<li><strong>レベル</strong>: L1(最速、最小)、L2(バランス型)、L3(大容量、共有)</li>
+<li><strong>影響</strong>: メモリバウンドアプリケーションの劇的な性能向上</li>
+<li><strong>管理</strong>: ハードウェアとオペレーティングシステムによって自動的に処理</li>
+</ul>
+<p><strong>ストレージデバイス</strong><br/>
+データ、アプリケーション、モデル、システムファイルの永続的なストレージ。ストレージ性能は、データ読み込み、モデルチェックポイント、全体的なシステム応答性に大きく影響します。</p>
+<ul>
+<li><strong>HDD(ハードディスクドライブ)</strong>: 低コストで大容量を提供する磁気ストレージ。バルクおよびアーカイブストレージに適している</li>
+<li><strong>SSD(ソリッドステートドライブ)</strong>: 劇的に高速なアクセス時間と低レイテンシを持つフラッシュベースのストレージ。アクティブなデータセットと頻繁にアクセスされるファイルに不可欠</li>
+<li><strong>NVMe SSD</strong>: PCIeインターフェースを使用する高性能SSD。大規模データセットを用いたAIトレーニングに重要</li>
+<li><strong>磁気テープ</strong>: エンタープライズおよび研究環境における長期保存のための費用対効果の高いアーカイブストレージ</li>
+</ul>
+<p><strong>ネットワークインフラストラクチャ</strong><br/>
+ネットワーク接続により、分散コンピューティング、クラウドアクセス、データ共有、協調<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>が可能になります。</p>
+<ul>
+<li><strong>LAN(ローカルエリアネットワーク)</strong>: オンプレミスリソース、コンピュートクラスタのための高速内部接続</li>
+<li><strong>WAN(ワイドエリアネットワーク)</strong>: リモートアクセス、分散チーム、ハイブリッドクラウドを可能にする地理的接続</li>
+<li><strong>高性能ネットワーキング</strong>: 低レイテンシ相互接続を必要とするHPCクラスタ向けのInfiniBand、100GbE</li>
+</ul>
+<h2 id="ソフトウェアコンポーネントとオーケストレーション">ソフトウェアコンポーネントとオーケストレーション</h2>
+<p><strong>オペレーティングシステム</strong><br/>
+ハードウェアリソースの管理、プロセスのスケジューリング、メモリ割り当ての処理、<a data-lb="1" href="/ja/glossary/security-policies/" title="セキュリティポリシーの目的、種類、情報資産保護における重要性を理解します。コンプライアンス、ベストプラクティス、CIA三原則について学びます。">セキュリティポリシー</a>の実施、アプリケーション向けの抽象化レイヤーの提供を行います。</p>
+<ul>
+<li><strong>例</strong>: Linux(HPCとクラウドで主流)、Windows、macOS、特殊なRTOS</li>
+<li><strong>役割</strong>: リソース割り当て、プロセス管理、<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>、ハードウェア抽象化</li>
+</ul>
+<p><strong>ライブラリとフレームワーク</strong><br/>
+計算タスクの効率的な開発と実行を可能にする最適化されたコードモジュール。</p>
+<ul>
+<li><strong>機械学習</strong>: TensorFlow、PyTorch、JAX、scikit-learn</li>
+<li><strong>科学計算</strong>: NumPy、SciPy、MATLAB</li>
+<li><strong>ビッグデータ</strong>: Apache Spark、Dask、Ray</li>
+<li><strong>線形代数</strong>: BLAS、LAPACK、cuBLAS(GPU高速化)</li>
+</ul>
+<p><strong>ジョブスケジューラとオーケストレーション</strong><br/>
+クラスタおよびクラウド環境全体で計算ワークロードを管理、キューイング、分散するソフトウェア。</p>
+<ul>
+<li><strong>HPCスケジューラ</strong>: 従来のコンピュートクラスタ向けのSLURM、PBS、LSF</li>
+<li><strong>コンテナオーケストレーション</strong>: クラウドネイティブな<a data-lb="1" href="/ja/glossary/Containerization/" title="コンテナ化は、ソフトウェアコードと依存関係をポータブルで分離されたコンテナにパッケージ化し、開発環境からクラウドまで、あらゆる環境で一貫したアプリケーション実行を保証します。">コンテナ化</a>ワークロード向けのKubernetes</li>
+<li><strong>ワークフローマネージャ</strong>: 複雑な<a data-lb="1" href="/ja/glossary/Data-Pipeline/" title="データパイプラインの包括的ガイド:自動化されたデータ処理ワークフローのためのアーキテクチャ、実装、メリット、ベストプラクティスを解説します。">データパイプライン</a>向けのAirflow、Prefect</li>
+</ul>
+<h2 id="アプリケーションとユースケース">アプリケーションとユースケース</h2>
+<p><strong>人工知能と機械学習</strong></p>
+<p><em>モデルトレーニング</em></p>
+<ul>
+<li><strong>要件</strong>: マルチGPUまたはTPUクラスタ、大容量RAM、大規模データセット用の高速ストレージ</li>
+<li><strong>規模</strong>: <a data-lb="1" href="/ja/glossary/GPT/" title="GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。">GPT</a>-4のような基盤モデルのトレーニングには数千のGPU、ペタバイトのストレージが必要</li>
+<li><strong>例</strong>: 大規模言語モデルのトレーニングには、特殊な<a data-lb="1" href="/ja/glossary/network-environment/" title="ネットワーク環境とは、コンピュータシステムやデバイス間のデータ交換を可能にするハードウェア、ソフトウェア、プロトコル、接続の集合体です。AIと自動化において重要な役割を果たします。">ネットワーキング</a>を備えた協調マルチノードクラスタが必要</li>
+</ul>
+<p><em>AI推論</em></p>
+<ul>
+<li><strong>展開</strong>: NPU/ASICを搭載したエッジデバイス、クラウドGPU、または<a data-lb="1" href="/ja/glossary/Cost-Optimization/" title="コスト最適化とは、すべての業務において無駄を特定し排除することで、品質と効率性を維持しながらビジネス費用を削減する戦略的アプローチです。">コスト最適化</a>のためのCPUベース推論</li>
+<li><strong>最適化</strong>: <a data-lb="1" href="/ja/glossary/Model-Quantization/" title="モデル量子化は、機械学習モデルの精度を削減し(例:FP32からINT8へ)、より小さく高速なモデルを作成します。メモリを節約し、推論を高速化し、消費電力を削減し、エッジデバイスへの展開を可能にします。">モデル量子化</a>、プルーニング、特殊な推論エンジンにより計算要求を削減</li>
+<li><strong>リアルタイム</strong>: 自動運転車、音声アシスタント、リアルタイム不正検出には低レイテンシ推論が必要</li>
+</ul>
+<p><strong>データサイエンスと分析</strong><br/>
+大規模データ処理、統計モデリング、インタラクティブな可視化には、相当な計算とメモリリソースが必要です。Apache Sparkのような分散フレームワークにより、クラスタコンピューティングを使用してペタバイト規模のデータセット全体の分析が可能になります。</p>
+<p><strong>クラウドコンピューティング</strong><br/>
+クラウドプラットフォームは、柔軟なオンデマンドインフラストラクチャを通じて計算リソースへのアクセスを民主化します。</p>
+<ul>
+<li><strong>仮想マシン</strong>: 分離された、カスタマイズ可能なコンピュート環境</li>
+<li><strong>コンテナ</strong>: 軽量でポータブルなアプリケーション環境(<a data-lb="1" href="/ja/glossary/Docker/" title="Dockerについて学びましょう。Dockerは、軽量でポータブルなコンテナでアプリケーションをパッケージ化、配布、実行するためのオープンソースプラットフォームです。そのアーキテクチャ、メリット、ユースケースを理解できます。">Docker</a>、Kubernetes)</li>
+<li><strong>サーバーレス</strong>: インフラストラクチャ管理不要のイベント駆動型、自動スケーリングコンピュート</li>
+<li><strong>特殊インスタンス</strong>: ML用GPUインスタンス、分析用高メモリインスタンス、可変ワークロード用バースト可能インスタンス</li>
+</ul>
+<p><strong>科学研究とシミュレーション</strong><br/>
+高性能コンピューティング(HPC)クラスタは、気候モデリング、分子動力学、天体物理学シミュレーション、計算生物学を支えています。これらのアプリケーションには、密結合CPU/GPU<a data-lb="1" href="/ja/glossary/Nodes-and-Edges/" title="ノードはシステムにおける基本的な構成要素(アクションまたはエンティティ)であり、エッジは関係性、データフロー、または依存関係を定義する接続(線)です。">ノード</a>、高速相互接続、特殊な並列プログラミングフレームワークが必要です。</p>
+<p><strong>エンタープライズ自動化</strong><br/>
+ロボティック<a data-lb="1" href="/ja/glossary/Process-Automation/" title="反復的なビジネスタスクを自動的に処理するテクノロジーで、従業員が人間の思考と創造性を必要とするより重要な業務に集中できるようにします。">プロセスオートメーション</a>(RPA)ツールは、スケーラブルなコンピュートインフラストラクチャ全体で反復的なデジタルタスクを自動化します。AIアシスタントと<a data-lb="1" href="/ja/glossary/automation-rules/" title="オートメーションルールについて学びましょう。特定の条件に基づいて自動的にプロセスを実行する設定可能な仕組みで、タスクを効率化し、プラットフォーム全体で一貫性を確保します。">ワークフロー自動化</a>システムは、自然言語を処理し、<a data-lb="1" href="/ja/glossary/bottlenecks/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ビジネスプロセス</a>を調整し、意思決定ワークフローを管理します。</p>
+<p><strong>AIチャットボットと仮想アシスタント</strong><br/>
+会話型AIシステムには、<a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">自然言語処理</a>、リアルタイム応答生成、<a data-lb="1" href="/ja/glossary/Conversation-History/" title="AIシステムにおける会話履歴の包括的ガイド。ストレージ、検索、コンテキスト管理、実装のベストプラクティスを網羅しています。">コンテキスト管理</a>、<a data-lb="1" href="/ja/glossary/Entity-Linking/" title="エンティティリンキングは、テキストから抽出されたエンティティをナレッジベース内の一意のエントリに接続し、曖昧性を解決することで、AI、検索、レコメンデーションのための構造化データを実現します。">ナレッジベース</a>およびビジネスシステムとの統合をサポートするスケーラブルなインフラストラクチャが必要です。エンタープライズ展開では、可変的なユーザー需要に対応するために自動スケーリングクラウドリソースを使用します。</p>
+<h2 id="クラウドコンピューティングモデルとプロバイダー">クラウドコンピューティングモデルとプロバイダー</h2>
+<p><strong>展開モデル</strong></p>
+<p><em>Infrastructure as a Service(IaaS)</em></p>
+<ul>
+<li>仮想マシン、ストレージ、ネットワーキングの完全な制御</li>
+<li>ユーザーがオペレーティングシステム、ミドルウェア、アプリケーションを管理</li>
+<li>最大の柔軟性とカスタマイズ性</li>
+</ul>
+<p><em>Platform as a Service(PaaS)</em></p>
+<ul>
+<li>プロバイダーがインフラストラクチャとランタイム環境を管理</li>
+<li>ユーザーはアプリケーションコードとデータに集中</li>
+<li>簡素化された展開とスケーリング</li>
+</ul>
+<p><em>サーバーレスコンピューティング</em></p>
+<ul>
+<li>完全に管理された実行環境</li>
+<li>需要に基づく自動スケーリング</li>
+<li>実際の計算時間のみに対する支払い</li>
+</ul>
+<p><strong>主要クラウドプロバイダー</strong></p>
+<ul>
+<li><strong>Amazon Web Services(AWS)</strong>: コンピュート用EC2、ストレージ用S3、ML用SageMaker</li>
+<li><strong>Microsoft Azure</strong>: 仮想マシン、Azure ML、コグニティブサービス</li>
+<li><strong>Google Cloud Platform(GCP)</strong>: Compute Engine、Vertex AI、TPUアクセス</li>
+<li><strong>特殊プラットフォーム</strong>: GPU重視のワークロード向けのLambda Labs、CoreWeave</li>
+</ul>
+<h2 id="リソース最適化戦略">リソース最適化戦略</h2>
+<p><strong>コードとアルゴリズムの最適化</strong></p>
+<ul>
+<li><strong>ベクトル化</strong>: SIMD命令とGPU並列処理の活用</li>
+<li><strong>アルゴリズム選択</strong>: 時間/空間計算量が有利なアルゴリズムの選択</li>
+<li><strong>プロファイリング</strong>: プロファイリングツール(cProfile、NVIDIA Nsight)を使用したボトルネックの特定</li>
+<li><strong>並列コンピューティング</strong>: マルチスレッド、マルチプロセス、分散コンピューティングフレームワークの使用</li>
+</ul>
+<p><strong>リソース割り当てと管理</strong></p>
+<ul>
+<li><strong>適正サイジング</strong>: ワークロード要件に合わせたコンピュートとメモリのマッチング</li>
+<li><strong>スポット/プリエンプティブルインスタンス</strong>: 耐障害性のあるワークロードに対して低コストで中断可能なインスタンスを使用</li>
+<li><strong>自動スケーリング</strong>: 需要に基づいてリソースを動的に調整</li>
+<li><strong>ジョブスケジューリング</strong>: 最大スループットのためのクラスタ全体でのタスク配分の最適化</li>
+</ul>
+<p><strong>エネルギー効率と持続可能性</strong></p>
+<ul>
+<li><strong>ハードウェア選択</strong>: エネルギー効率の高いプロセッサとアクセラレータの選択</li>
+<li><strong>ワークロード統合</strong>: 効率的なスケジューリングによる利用率の向上</li>
+<li><strong>再生可能エネルギー</strong>: 再生可能エネルギーで稼働するクラウドリージョンの優先</li>
+<li><strong>アルゴリズム効率</strong>: より良いアルゴリズムとモデル最適化による不要な計算の削減</li>
+</ul>
+<p><strong>モニタリングと可観測性</strong></p>
+<ul>
+<li><strong>メトリクス収集</strong>: CPU、GPU、メモリ、ディスクI/O、ネットワーク使用量の監視</li>
+<li><strong>ダッシュボード</strong>: Grafana、Prometheus、クラウドネイティブ監視ツール</li>
+<li><strong>アラート</strong>: リソース枯渇、性能低下に対する自動アラート</li>
+<li><strong>コスト追跡</strong>: 支出の監視、無駄の特定、リソース割り当ての最適化</li>
+</ul>
+<h2 id="オンプレミス-vs-クラウド-vs-ハイブリッド">オンプレミス vs クラウド vs ハイブリッド</h2>
+<p><strong>オンプレミスインフラストラクチャ</strong></p>
+<ul>
+<li><strong>特徴</strong>: 所有ハードウェア、完全な制御、固定容量、資本支出</li>
+<li><strong>利点</strong>: データ主権、規制コンプライアンス、予測可能な長期コスト</li>
+<li><strong>制限事項</strong>: 限定的なスケーラビリティ、メンテナンス負担、初期投資</li>
+</ul>
+<p><strong>クラウドインフラストラクチャ</strong></p>
+<ul>
+<li><strong>特徴</strong>: レンタルリソース、弾力的なスケーリング、運用支出</li>
+<li><strong>利点</strong>: 初期投資不要、グローバルアクセシビリティ、マネージドサービス、迅速なプロビジョニング</li>
+<li><strong>考慮事項</strong>: 継続的なコスト、潜在的なデータ転送料金、ベンダー依存</li>
+</ul>
+<p><strong>ハイブリッドモデル</strong></p>
+<ul>
+<li><strong>アプローチ</strong>: オンプレミスとクラウドリソースを戦略的に組み合わせる</li>
+<li><strong>ユースケース</strong>: オンプレミスの機密データ、クラウドのスケーラブルワークロード、ピーク需要時のバーストコンピューティング</li>
+<li><strong>利点</strong>: 柔軟性、コンプライアンス、コスト最適化</li>
+</ul>
+<h2 id="新興技術">新興技術</h2>
+<p><strong>量子コンピューティング</strong><br/>
+量子ビット(qubit)を使用する量子コンピュータは、暗号化、最適化、創薬、材料科学を含む特定の問題クラスに対して指数関数的な高速化を約束します。現在は初期段階で、実用的なアプリケーションは限定的です。</p>
+<p><strong>エッジコンピューティング</strong><br/>
+データソース(IoTデバイス、センサー)に近い場所で計算を行うことで、リアルタイム分析、自律システム、分散AI推論のレイテンシと帯域幅要件を削減します。</p>
+<p><strong>ニューロモルフィックコンピューティング</strong><br/>
+脳の構造と機能を模倣したハードウェアアーキテクチャで、AI、感覚処理、自律制御システムのための高効率、並列、適応的な計算を可能にします。</p>
+<p><strong>特殊AI アクセラレータ</strong><br/>
+推論、トレーニング、または特定のAIモダリティに最適化されたドメイン固有プロセッサ(ニューラル処理装置、ビジョンプロセッサ、言語モデルアクセラレータ)の継続的な開発。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>計算リソースとは何ですか?</strong><br/>
+計算タスクを実行するために必要なハードウェア、ソフトウェア、ネットワークインフラストラクチャで、プロセッサ、メモリ、ストレージ、ネットワーク接続、オーケストレーションソフトウェアを含みます。</p>
+<p><strong>なぜ計算リソースはAIにとって重要なのですか?</strong><br/>
+現代のAIモデルは、大規模データセットでのトレーニングとリアルタイムアプリケーションのための高速推論に膨大な計算能力を必要とします。適切な計算リソースは、AI展開の実現可能性、性能、コストを決定します。</p>
+<p><strong>適切な計算リソースをどのように選択すればよいですか?</strong><br/>
+ワークロード特性(データ量、アルゴリズムの複雑さ、リアルタイム要件)を評価し、コストパフォーマンスのトレードオフを検討し、スケーラビリティのニーズを考慮し、特定の要件にリソースをマッチングします。小規模から始め、性能をプロファイリングし、必要に応じてスケールします。</p>
+<p><strong>クラウドコンピューティングにおけるスケーリングとは何ですか?</strong><br/>
+ワークロード需要に合わせて計算リソース(コンピュートインスタンス、メモリ、ストレージ)を動的に調整すること。水平スケーリングはインスタンスを追加し、垂直スケーリングは既存インスタンスの容量を増やします。</p>
+<p><strong>リソース使用をどのように最適化できますか?</strong><br/>
+コードをプロファイリングしてボトルネックを特定し、効率的なアルゴリズムを選択し、リソース割り当てを適正化し、並列処理を活用し、自動スケーリングを実装し、利用率メトリクスを監視し、定期的な監査により無駄を排除します。</p>
+<p><strong>環境への影響はどうですか?</strong><br/>
+大規模コンピューティング(特にAIトレーニング)は相当なエネルギーを消費します。効率性のためにアルゴリズムを最適化し、エネルギー効率の高いハードウェアを使用し、再生可能エネルギーを使用するクラウドリージョンを選択し、持続可能な実践を実施します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>PCBONLINE. (n.d.). GPU vs FPGA vs ASIC vs CPU Comparison. PCBONLINE Blog.</p>
+</li>
+<li>
+<p>Ampheo. (n.d.). Understanding Differences Between Processing Units. Ampheo Blog.</p>
+</li>
+<li>
+<p>Dragutoiu. (n.d.). CPU vs GPU vs TPU - Ultimate Showdown. LinkedIn Pulse.</p>
+</li>
+<li>
+<p>Harvard FAS Informatics. (n.d.). Computing Glossary. Harvard FAS Informatics.</p>
+</li>
+<li>
+<p>K12CS. (n.d.). Computer Science Glossary. K12CS.</p>
+</li>
+<li>
+<p>Amazon Web Services. Cloud Computing Service. URL: <a href="https://aws.amazon.com/ec2/" rel="nofollow noopener noreferrer" target="_blank">https://aws.amazon.com/ec2/</a></p>
+</li>
+<li>
+<p>Microsoft Azure. Cloud Computing Service. URL: <a href="https://azure.microsoft.com/en-us/overview/cloud-computing/" rel="nofollow noopener noreferrer" target="_blank">https://azure.microsoft.com/en-us/overview/cloud-computing/</a></p>
+</li>
+<li>
+<p>Google Cloud Platform. Cloud Computing Service. URL: <a href="https://cloud.google.com/compute" rel="nofollow noopener noreferrer" target="_blank">https://cloud.google.com/compute</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/speech-recognition/">
+                    音声認識
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    音声認識(ASR)は、話し言葉をテキストに変換する技術です。このAI技術の仕組み、アルゴリズム、機能、応用分野、そして今後のトレンドについて解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/speech-recognition/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/continuous-learning/">
+                    AIにおける継続学習
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIにおける継続学習を探求します。システムが忘却することなく段階的に適応し知識を獲得できるようにする技術です。そのプロセス、破滅的忘却などの課題、実世界での応用について理解を深めます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/continuous-learning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Alibaba/">
+                    Alibaba
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Alibabaは、オンラインマーケットプレイスとデジタルサービスを運営する中国のテクノロジー企業で、相互接続されたプラットフォームを通じて、企業と消費者が世界中で製品を購入、販売、決済することを支援し...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Alibaba/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/GPU-Acceleration/">
+                    GPUアクセラレーション
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    GPUアクセラレーションは、グラフィックス処理ユニット(GPU)を活用して大規模な並列処理を実現し、AI、ディープラーニング、データサイエンス、HPCなどの計算集約型ワークロードを大幅に高速化します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/GPU-Acceleration/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SaaS--Software-as-a-Service-/">
+                    SaaS(Software as a Service)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    インターネット経由でサブスクリプション形式で提供されるソフトウェアで、インストールやメンテナンスが不要です。ユーザーは任意のデバイスからいつでも最新バージョンにアクセスできます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SaaS--Software-as-a-Service-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Intent-Recognition/">
+                    インテント認識
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    インテント認識は、ユーザーの入力を解釈して特定の目標を理解する、AI/NLPのコア技術です。システムが文脈に応じて効率的に応答することを可能にします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Intent-Recognition/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/computational-resources/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

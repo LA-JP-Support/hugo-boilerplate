@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="utf-8">
+<meta name="viewport" content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+
+<title>Complete Guide to AI Language Model Evaluation: Japanese Benchmarks and Practical Implementation | SmartWeb</title>
+<link rel="canonical" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-evaluation-japanese-benchmarks/">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/faivicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/faivicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/faivicon.png">
+<link rel="shortcut icon" href="/images/faivicon.png">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+  
+
+
+
+
+
+
+
+  
+  
+    
+    
+      
+      
+      
+      
+    
+  
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="%!s(<nil>)/blog/ai-evaluation-japanese-benchmarks/">
+
+<link rel="alternate" hreflang="ja" href="%!s(<nil>)/ja/blog/ai-evaluation-japanese-benchmarks/">
+
+<link rel="alternate" hreflang="x-default" href="%!s(<nil>)/blog/ai-evaluation-japanese-benchmarks/">
+
+
+
+<meta name="description" content="From automatic LLM evaluation methods to Japanese-specific benchmarks and hallucination mitigation strategies—comprehensive knowledge essential for enterprise AI adoption. Includes FlowHunt case studies.">
+<meta name="keywords" content="LLM evaluation, Japanese benchmarks, hallucination mitigation, RAG, prompt optimization, FlowHunt">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-evaluation-japanese-benchmarks/">
+<meta property="og:title" content="Complete Guide to AI Language Model Evaluation: Japanese Benchmarks and Practical Implementation | SmartWeb">
+<meta property="og:description" content="From automatic LLM evaluation methods to Japanese-specific benchmarks and hallucination mitigation strategies—comprehensive knowledge essential for enterprise AI adoption. Includes FlowHunt case studies.">
+
+
+
+
+  
+
+
+
+
+
+<meta property="og:image" content="https://main.d1jtfhinlastnr.amplifyapp.com/images/blog/ai-evaluation-japanese-benchmarks.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-evaluation-japanese-benchmarks/">
+<meta name="twitter:title" content="Complete Guide to AI Language Model Evaluation: Japanese Benchmarks and Practical Implementation | SmartWeb">
+<meta name="twitter:description" content="From automatic LLM evaluation methods to Japanese-specific benchmarks and hallucination mitigation strategies—comprehensive knowledge essential for enterprise AI adoption. Includes FlowHunt case studies.">
+<meta name="twitter:image" content="https://main.d1jtfhinlastnr.amplifyapp.com/images/blog/ai-evaluation-japanese-benchmarks.jpg">
+
+
+
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+
+<link rel="preload" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/main.css?v=20260106210129" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/custom-code-blockquote.css?v=20260106210129" crossorigin="anonymous">
+
+
+
+<script src="/js/main.js?v=20260106210129" defer></script>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+</head>
+<body class="antialiased bg-white">
+
+
+
+
+
+
+
+
+
+
+  
+  <header class="bg-white">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="/en/" class="-m-1.5 p-1.5">
+        <span class="sr-only">SmartWeb</span>
+        
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="200px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+      </a>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12"><a href="/en/" class="text-sm/6 font-semibold text-gray-900">Home</a><a href="/en/blog/" class="text-sm/6 font-semibold text-gray-900">Blog</a><a href="/en/glossary/" class="text-sm/6 font-semibold text-gray-900">Glossary</a><a href="https://www.intwk.co.jp/about/" class="text-sm/6 font-semibold text-gray-900">Company</a></div>
+    <div class="flex flex-1 items-center justify-end gap-x-6">
+      <a href="https://support.smartweb.jp/" class="hidden text-sm/6 font-semibold text-gray-900 lg:block">Support</a>
+      <a href="/en/blog/" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" aria-expanded="false" aria-controls="mobile-menu-1767700889227765000">
+        <span class="sr-only">Open main menu</span>
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  
+  <div id="mobile-menu-1767700889227765000" class="lg:hidden hidden relative z-50" role="dialog" aria-modal="true">
+    
+    <div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+      <div class="flex items-center gap-x-6">
+        <a href="/en/" class="-m-1.5 p-1.5">
+          <span class="sr-only">SmartWeb</span>
+          
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+      
+        
+      
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+          
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+            
+            
+        
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="3000"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="(max-width: 466px) 466px, 3000px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+        </a>
+        <a href="/en/blog/" class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+        <button type="button" class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu">
+          <span class="sr-only">Close menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6"><a href="/en/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a><a href="/en/blog/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a><a href="/en/glossary/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Glossary</a><a href="https://www.intwk.co.jp/about/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a></div>
+          <div class="py-6">
+            <a href="https://support.smartweb.jp/" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700889227765000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700889227765000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+
+
+
+<main class="w-full">
+  
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+  
+  <header class="py-8 sm:py-12">
+    <div class="mx-auto max-w-5xl">
+      
+      <div class="mb-6">
+        
+        <nav class="text-sm hidden sm:block">
+          <ol class="flex items-center space-x-2 text-gray-500">
+            <li class="flex items-center">
+              <a href="/en/" class="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center">
+                <img src="/images/home-icon.png" alt="Home" class="h-5 w-5">
+              </a>
+            </li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="/en/blog/" class="hover:text-indigo-600 dark:hover:text-indigo-400">Blog</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li class="text-gray-900 dark:text-white truncate max-w-xs">Complete Guide to AI Language Model Evaluation: Japanese Benchmarks and Practical Implementation</li>
+          </ol>
+        </nav>
+      </div>
+
+      
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight">
+        Complete Guide to AI Language Model Evaluation: Japanese Benchmarks and Practical Implementation
+      </h1>
+
+      
+      <div class="mt-3 sm:mt-4 flex flex-wrap sm:flex-nowrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
+        
+          <div class="flex flex-wrap gap-2 sm:flex-1 min-w-0">
+            
+              <a 
+                href="/en/tags/ai-technology/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                AI Technology
+              </a>
+            
+              <a 
+                href="/en/tags/llm-evaluation/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                LLM Evaluation
+              </a>
+            
+              <a 
+                href="/en/tags/benchmarks/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                Benchmarks
+              </a>
+            
+          </div>
+        
+
+        <div class="w-full sm:w-auto sm:ml-auto">
+          
+
+
+
+
+
+
+
+
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+  
+    <span class="inline-flex items-center justify-end">
+      <svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
+      </svg>
+      
+        Created: November 19, 2025
+      
+    </span>
+  
+
+  
+</div>
+
+        </div>
+      </div>
+
+      
+      
+        <div class="mt-5 sm:mt-6 w-full">
+          <img 
+            src="/images/blog/ai-evaluation-japanese-benchmarks.jpg" 
+            alt="Complete Guide to AI Language Model Evaluation: Japanese Benchmarks and Practical Implementation" 
+            class="w-full h-auto rounded-lg shadow-lg object-cover"
+            style="max-height: 400px; object-fit: cover;"
+          >
+        </div>
+      
+
+      
+      
+        <p class="mt-3 sm:mt-5 text-base sm:text-lg leading-6 sm:leading-7 text-gray-600 dark:text-gray-400">
+          From automatic LLM evaluation methods to Japanese-specific benchmarks and hallucination mitigation strategies—comprehensive knowledge essential for enterprise AI adoption. Includes FlowHunt case studies.
+        </p>
+      
+    </div>
+  </header>
+
+  
+  <div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-5xl py-6 sm:py-8">
+    <p>With the rapid advancement of <a href="/en/glossary/artificial-intelligence/" title="Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions.">AI</a> technology, methods for evaluating <a href="/en/glossary/large-language-models/" title="Large Language Models (LLMs) are AI systems trained on vast amounts of text data to understand and generate human language, powering applications like chatbots, translation, and content creation.">large language models</a> (<a href="/en/glossary/large-language-models/" title="Large Language Models (LLMs) are AI systems trained on vast amounts of text data to understand and generate human language, powering applications like chatbots, translation, and content creation.">LLMs</a>) continue to evolve daily. This article comprehensively explains cutting-edge evaluation techniques, challenges specific to Japanese-language models, and practical implementation strategies in language accessible to business leaders. Whether you&rsquo;re considering <a href="/en/glossary/artificial-intelligence/" title="Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions.">AI</a> building tools like <a href="/en/glossary/FlowHunt/">FlowHunt</a>, this serves as an invaluable reference.</p>
+<h2 id="the-frontier-of-llm-automatic-evaluation-the-revolutionary-ai-as-judge-method">The Frontier of LLM Automatic Evaluation: The Revolutionary &ldquo;AI as Judge&rdquo; Method</h2>
+<p>Traditionally, AI performance evaluation relied on two primary approaches. The first was &ldquo;human evaluation,&rdquo; where experts and general users manually reviewed AI responses to assess their accuracy, naturalness, and usefulness. The second involved &ldquo;automatic evaluation metrics like <a href="/en/glossary/BLEU---ROUGE-scores/">BLEU</a> and ROUGE,&rdquo; where computers automatically compared AI-generated text with reference answers and quantified similarity.</p>
+<p>Recently, however, a groundbreaking evaluation method called &quot; <a href="/en/glossary/LLM-as-Judge/">LLM as Judge</a>&quot; has gained significant attention.</p>
+<p>In this approach, AI models themselves become evaluators, assessing other models&rsquo; or their own outputs. Specifically, multiple AIs answer the same question, and another AI compares and evaluates these responses. This enables more efficient and multifaceted evaluation than traditional methods.</p>
+<p>Moreover, cutting-edge research has developed &ldquo;<a href="/en/glossary/unsupervised-consistency-evaluation/" title="Comprehensive guide to unsupervised consistency evaluation methods for assessing model reliability without labeled data or human annotations.">unsupervised consistency evaluation</a>&rdquo; that doesn&rsquo;t rely on ground-truth data. Recently, aiming to assess reliability without <a href="/en/glossary/oracle-feedback---ground-truth-labels-/" title="Explore Oracle feedback and ground-truth labels in AI/ML. Learn how Oracle Select AI and HCM Cloud use authoritative data for model training, evaluation, and continuous improvement.">oracle feedback (ground-truth labels)</a>, researchers have proposed the &ldquo;<a href="/en/glossary/CAI-ratio/">CAI ratio</a>.&rdquo;</p>
+<p>In the 2025 paper &ldquo;Evaluating <a href="/en/glossary/large-language-models/" title="Large Language Models (LLMs) are AI systems trained on vast amounts of text data to understand and generate human language, powering applications like chatbots, translation, and content creation.">LLMs</a> Without <a href="/en/glossary/oracle-feedback---ground-truth-labels-/" title="Explore Oracle feedback and ground-truth labels in AI/ML. Learn how Oracle Select AI and HCM Cloud use authoritative data for model training, evaluation, and continuous improvement.">Oracle Feedback</a>,&rdquo; researchers calculate the CAI ratio by analyzing the consistency and inconsistency between <a href="/en/glossary/student-models/" title="Discover student models, AI systems trained to mimic larger &#39;teacher&#39; models for efficient deployment, model compression, and transfer learning on resource-constrained devices.">student models</a> and <a href="/en/glossary/Temperature--LLM-/">LLM</a> outputs. Models with higher agreement rates show strong correlation with traditional metrics like accuracy, proving useful as a heuristic for model selection.</p>
+<p>However, since this metric remains in the research phase and isn&rsquo;t yet standardized across all tasks, it should be understood as a &ldquo;<a href="/en/glossary/supplementary-indicator/" title="A supplementary indicator is a supporting metric that adds context and validation to main performance measures, helping paint a complete picture of how well a system actually works.">supplementary indicator</a>.&rdquo;</p>
+<h2 id="hallucination-problem-the-causes-of-ai-lies-and-countermeasures">Hallucination Problem: The Causes of AI &ldquo;Lies&rdquo; and Countermeasures</h2>
+<p><a href="/en/glossary/hallucination/" title="AI models generating content that sounds correct but contains false or made-up information. This occurs due to how these systems work statistically, not from intentional deception.">Hallucination phenomena</a> remains one of the greatest risks in <a href="/en/glossary/AI-implementation/">AI implementation</a> today. According to the latest <a href="/en/glossary/OpenAI/">OpenAI</a> research, the primary causes include:</p>
+<h3 id="main-causes-of-occurrence">Main Causes of Occurrence</h3>
+<ul>
+<li><strong>Insufficient training data</strong>: Difficulty learning non-patterned information and rare facts</li>
+<li><strong>Limitations of probabilistic reasoning</strong>: Since <a href="/en/glossary/Text-Generation/">text generation</a> is based on &ldquo;probability of the next word,&rdquo; models can produce naturally-sounding but factually incorrect information</li>
+<li><strong>Evaluation methodology challenges</strong>: Current evaluation methods cannot sufficiently verify the accuracy of generated outputs</li>
+</ul>
+<h3 id="latest-evaluation-techniques">Latest Evaluation Techniques</h3>
+<p>To address these challenges, new evaluation metrics have been developed:</p>
+<ul>
+<li>** <a href="/en/glossary/RAG-benchmarks/">RAG benchmarks</a>**</li>
+<li>** <a href="/en/glossary/Fact-Score/">Fact-Score</a>**</li>
+<li>** <a href="/en/glossary/MHaluBench/">MHaluBench</a>**</li>
+</ul>
+<p>These evaluation methods enable scientific measurement of how trustworthy AI outputs are.</p>
+<h2 id="the-uniqueness-of-japanese-llm-evaluation-and-international-comparison">The Uniqueness of Japanese LLM Evaluation and International Comparison</h2>
+<p>Evaluating Japanese AI models presents language-specific complexities. Honorific distinctions, <a href="/en/glossary/contextual-understanding/" title="An AI system&#39;s ability to remember previous conversations and understand what users really mean by considering their history, preferences, and current situation, rather than treating each question separately.">contextual understanding</a>, and cultural context awareness require evaluation frameworks different from English models.</p>
+<h3 id="major-japanese-language-evaluation-benchmarks">Major Japanese-Language Evaluation Benchmarks</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Benchmark Name</th>
+          <th>Characteristics</th>
+          <th>Evaluation Focus</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>** <a href="https://github.com/nlp-waseda/JMMLU" target="_blank" rel="nofollow noopener noreferrer">JMMLU</a>**</td>
+          <td>Multi-domain knowledge questions</td>
+          <td>Factual knowledge and reasoning ability</td>
+      </tr>
+      <tr>
+          <td>** <a href="https://github.com/yahoojapan/JGLUE" target="_blank" rel="nofollow noopener noreferrer">JGLUE</a>**</td>
+          <td>NLP task collection</td>
+          <td>Contextual comprehension and logical thinking</td>
+      </tr>
+      <tr>
+          <td>** <a href="https://huggingface.co/datasets/sbintuitions/[jamc-qa]%28/en/glossary/JamC-QA/%29" target="_blank" rel="nofollow noopener noreferrer">JamC-QA</a>**</td>
+          <td>Japan-culture specialized</td>
+          <td>Japan-specific common sense and cultural knowledge</td>
+      </tr>
+      <tr>
+          <td>** <a href="https://wandb.ai/wandb-japan/llm-leaderboard" target="_blank" rel="nofollow noopener noreferrer">Nejumi Leaderboard4</a>**</td>
+          <td>Comprehensive evaluation environment</td>
+          <td>Multi-faceted performance comparison</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="trends-in-international-comparison">Trends in International Comparison</h3>
+<p><strong>Characteristics by Parameter Scale</strong></p>
+<ul>
+<li>Under 10B: Japanese-specialized models excel</li>
+<li>30B and above: Overseas large-scale models demonstrate high performance in Japanese</li>
+</ul>
+<p><strong>Differences by Evaluation Category</strong></p>
+<ul>
+<li>Logical reasoning and accuracy: English models maintain high standards</li>
+<li>Honorifics and cultural consideration: Japanese-specialized models significantly superior</li>
+<li>Misinformation resistance: Japanese-specialized models more stable</li>
+</ul>
+<h2 id="practical-prompt-improvement-and-evaluation-methodology">Practical Prompt Improvement and Evaluation Methodology</h2>
+<p>Effective AI utilization requires careful design and evaluation of <a href="/en/glossary/prompts/" title="A prompt is an instruction or question you give to an AI system to get a specific response or result. The clearer and more detailed your prompt, the better the AI&#39;s answer will be.">prompts</a>. This principle remains constant whether using AI building tools like <a href="/en/glossary/FlowHunt/">FlowHunt</a>.</p>
+<h3 id="scientific-improvement-methodology">Scientific Improvement Methodology</h3>
+<p><strong>Step 1: Prompt Design</strong></p>
+<ul>
+<li>Create clear, specific instructions</li>
+<li>Eliminate ambiguous expressions</li>
+<li>Utilize techniques such as <a href="/en/glossary/Zero-Shot-Chain-of-Thought/">Zero-shot</a>, <a href="/en/glossary/Few-Shot-Learning/">Few-shot</a>, and <a href="/en/glossary/Chain-of-Thought-Prompting/">Chain-of-Thought</a></li>
+</ul>
+<p><strong>Step 2: Multi-faceted Evaluation</strong></p>
+<ul>
+<li><a href="/en/glossary/Precision/">Precision</a>, <a href="/en/glossary/F1-score/">F1 score</a>, <a href="/en/glossary/BLEU---ROUGE-scores/">BLEU/ROUGE scores</a></li>
+<li><a href="/en/glossary/Consistency-evaluation/">Consistency evaluation</a></li>
+<li><a href="/en/glossary/Reproducibility-validation/">Reproducibility validation</a></li>
+</ul>
+<p><strong>Step 3: Continuous Improvement</strong></p>
+<ul>
+<li>Create and compare multiple prompt patterns</li>
+<li>Combine automatic and human evaluation</li>
+<li>Iterative refinement based on measured outcomes</li>
+</ul>
+<h3 id="backing-from-latest-research">Backing from Latest Research</h3>
+<p>2024 research has numerically proven that differences in prompt design significantly affect model factuality and logical consistency. Particularly, <a href="/en/glossary/Chain-of-Thought-Prompting/">Chain-of-Thought prompts</a> and <a href="/en/glossary/structured-prompts/" title="Clear, organized instructions given to AI systems to get reliable and consistent results, using labeled sections instead of casual conversation.">structured prompts</a> have proven effective for enhancing output stability.</p>
+<h2 id="jamc-qa-innovative-benchmark-for-measuring-japan-specific-cultural-knowledge">JamC-QA: Innovative Benchmark for Measuring Japan-Specific Cultural Knowledge</h2>
+<p>** <a href="https://huggingface.co/datasets/sbintuitions/[jamc-qa]%28/en/glossary/JamC-QA/%29" target="_blank" rel="nofollow noopener noreferrer">JamC-QA</a>** is a revolutionary tool for evaluating genuine &ldquo;Japaneseness&rdquo;—something translation-based benchmarks cannot measure.</p>
+<h3 id="characteristics-and-design-purpose">Characteristics and Design Purpose</h3>
+<ul>
+<li><strong>Target fields</strong>: Traditional events, etiquette, social systems, food culture, daily customs, and six other categories</li>
+<li><strong>Number of questions</strong>: 2,309 questions (all newly created by native Japanese speakers)</li>
+<li><strong>Difficulty level</strong>: Practical questions requiring cultural background knowledge, such as &ldquo;Which flowers should not be offered at graves?&rdquo;</li>
+</ul>
+<h3 id="evaluation-result-trends">Evaluation Result Trends</h3>
+<p><strong>Global Models vs. Japanese-Specialized Models</strong></p>
+<ul>
+<li>Overseas models like <a href="/en/glossary/GPT/">GPT</a>-5 and Llama-3: Significant score drops on <a href="/en/glossary/JamC-QA/">JamC-QA</a></li>
+<li>Japanese-specialized models: Better suited for culture-specific questions</li>
+<li>Clear score differences enable objective model selection criteria</li>
+</ul>
+<h3 id="future-application-potential">Future Application Potential</h3>
+<ol>
+<li><strong>Industry-specific evaluation</strong>: Development of specialized benchmarks for healthcare, legal, and education sectors</li>
+<li><strong>Real operational data utilization</strong>: Problem creation from actual <a href="/en/glossary/customer-support/" title="Customer support is a team and set of tools that help customers solve problems, answer questions, and get the most value from a product or service.">customer support</a> history</li>
+<li><strong>Continuous quality management</strong>: Establishment of PDCA cycles through periodic evaluation</li>
+<li><strong>Cultural preservation tool</strong>: Digital preservation of disappearing knowledge</li>
+</ol>
+<h2 id="frequently-asked-questions-practical-llm-evaluation-concerns">Frequently Asked Questions: Practical LLM Evaluation Concerns</h2>
+<h3 id="q-why-does-ai-confidently-answer-with-incorrect-information">Q: Why does AI confidently answer with incorrect information?</h3>
+<p>A: This is called <a href="/en/glossary/hallucination/" title="AI models generating content that sounds correct but contains false or made-up information. This occurs due to how these systems work statistically, not from intentional deception.">hallucination</a>, occurring because AI probabilistically &ldquo;guesses&rdquo; to supplement information absent from training data. The particular problem is &ldquo;certainty about uncertainty&rdquo;—confidently generating wrong answers to questions where the model should admit it doesn&rsquo;t know.</p>
+<h3 id="q-what-are-the-differences-between-japanese-ai-and-english-ai">Q: What are the differences between Japanese AI and English AI?</h3>
+<p>A: Japanese AI can handle Japanese-specific complexities including honorific distinctions, cultural consideration, and comprehension of implied subjects. Conversely, multilingual AI trained primarily on English excels at logical reasoning but struggles with Japan&rsquo;s subtle cultural considerations.</p>
+<h3 id="q-which-is-more-accurate-for-ai-evaluationhuman-judgment-or-ai-to-ai-judgment">Q: Which is more accurate for AI evaluation—human judgment or AI-to-AI judgment?</h3>
+<p>A: Both have advantages and disadvantages. Human evaluation can judge nuance and practicality but is time-consuming and subject to evaluator <a href="/en/glossary/bias/" title="AI Bias is systematic unfairness in AI systems that favors or disadvantages certain groups based on characteristics like race or gender, often reflecting historical inequities in training data and processes.">bias</a>. <a href="/en/glossary/LLM-as-Judge/">LLM as Judge</a> efficiently processes large datasets but may be influenced by AI-specific biases. The optimal approach combines both methods.</p>
+<h3 id="q-can-small-to-medium-enterprises-use-these-evaluation-techniques">Q: Can small-to-medium enterprises use these evaluation techniques?</h3>
+<p>A: Yes. Using no-code AI building tools like <a href="/en/glossary/FlowHunt/">FlowHunt</a>, companies without specialized expertise can build and evaluate AI systems. Starting with basic <a href="/en/glossary/Consistency-evaluation/">consistency evaluation</a> and <a href="/en/glossary/accuracy-measurement/" title="Accuracy Measurement is a metric that shows how often an AI system makes correct predictions or decisions, calculated by dividing correct results by total attempts.">accuracy measurement</a>, you can gradually progress to more sophisticated evaluation methods.</p>
+<h2 id="real-world-case-study-advanced-methods-adopted-by-smartwebs-ai-chatbot">Real-World Case Study: Advanced Methods Adopted by SmartWeb&rsquo;s AI Chatbot</h2>
+<p>How are the LLM evaluation techniques and <a href="/en/glossary/hallucination-mitigation-strategies/" title="Techniques and methods that prevent AI systems from generating false or made-up information by improving accuracy and reliability through tools like data verification and prompt refinement.">hallucination mitigation strategies</a> discussed in this article applied in actual business settings? SmartWeb&rsquo;s [AI <a href="/en/glossary/Chatbot/">chatbot</a>](/en/glossary/AI-<a href="/en/glossary/Chatbot/">chatbot</a>/) service exemplifies a practical combination of these cutting-edge technologies.</p>
+<h3 id="utilizing-high-quality-llms">Utilizing High-Quality LLMs</h3>
+<p>SmartWeb&rsquo;s [AI <a href="/en/glossary/Chatbot/">chatbot</a>](/en/glossary/AI-chatbot/) employs industry-leading LLMs including ** <a href="https://openai.com/gpt-5/" target="_blank" rel="nofollow noopener noreferrer">OpenAI</a><strong>&rsquo;s latest GPT-5 model, ** <a href="https://deepmind.google/models/gemini/" target="_blank" rel="nofollow noopener noreferrer">Google</a></strong>&rsquo;s <a href="/en/glossary/Gemini/">Gemini</a> 2.5 Pro, and ** <a href="https://www.anthropic.com/[claude]%28/en/glossary/Claude/%29" target="_blank" rel="nofollow noopener noreferrer">Anthropic</a>**&rsquo;s <a href="/en/glossary/Claude/">Claude</a> Sonnet 4. These models have demonstrated high performance across the various benchmarks introduced in this article.</p>
+<h3 id="practical-countermeasures-against-hallucination-problems">Practical Countermeasures Against Hallucination Problems</h3>
+<p>General AI chatbots face the challenge of providing inaccurate responses to unstudied content—the <a href="/en/glossary/hallucination/" title="AI models generating content that sounds correct but contains false or made-up information. This occurs due to how these systems work statistically, not from intentional deception.">hallucination problem</a>. SmartWeb has implemented the following countermeasures:</p>
+<p><strong>Proprietary Learning Data Management System</strong></p>
+<ul>
+<li>Enterprise-specific response content is registered as training data in advance</li>
+<li><a href="/en/glossary/RAG/">RAG technology</a> selects appropriate answers from registered data</li>
+<li>Honestly responds &ldquo;I don&rsquo;t know&rdquo; to questions outside the training database</li>
+</ul>
+<p><strong>Continuous Quality Improvement</strong></p>
+<ul>
+<li>Continuously improve response accuracy by analyzing actual conversation logs</li>
+<li>Quality management through <a href="/en/glossary/Consistency-evaluation/">consistency evaluation</a></li>
+<li>Optimization of evaluation metrics based on customer satisfaction</li>
+</ul>
+<h3 id="the-superiority-of-the-flowhunt-platform">The Superiority of the FlowHunt Platform</h3>
+<p>SmartWeb&rsquo;s adopted ** <a href="https://flowhunt.io/" target="_blank" rel="nofollow noopener noreferrer">FlowHunt</a>** provides a practical environment for applying the latest evaluation methodologies discussed in this article:</p>
+<ol>
+<li><strong>Comparative evaluation of diverse LLMs</strong>: Actual performance testing of multiple AI models possible</li>
+<li><strong>Prompt optimization features</strong>: Application of advanced techniques like <a href="/en/glossary/Chain-of-Thought-Prompting/">Chain-of-Thought prompts</a></li>
+<li><strong>Real-time <a href="/en/glossary/Quality-Monitoring/">quality monitoring</a></strong>: Continuous performance <a href="/en/glossary/monitoring/" title="Monitoring is the continuous process of collecting and analyzing data about systems and applications to detect problems and ensure everything runs smoothly and securely.">monitoring</a> of operational AI systems</li>
+</ol>
+<h2 id="summary-future-prospects-for-scientific-llm-evaluation">Summary: Future Prospects for Scientific LLM Evaluation</h2>
+<p>LLM evaluation technology is evolving from traditional static metrics toward dynamic, multi-layered frameworks where AI participates in evaluation. <a href="/en/glossary/Unsupervised-consistency-metrics/">Unsupervised consistency metrics</a>, <a href="/en/glossary/hallucination-detection/" title="Technology that automatically identifies when AI systems generate false or made-up information, helping prevent unreliable outputs from reaching users.">hallucination detection</a>, and <a href="/en/glossary/culture-specific-benchmarks/" title="A measurement tool that evaluates how well organizations and AI systems understand and respond to the unique values, behaviors, and customs of specific cultures, helping ensure fairness and relevance across different communities.">culture-specific benchmarks</a> are continually being developed as practical evaluation methodologies.</p>
+<p>The following developmental directions are anticipated:</p>
+<ol>
+<li><strong>Real operational data utilization</strong>: Continuous evaluation systems reflecting actual usage patterns</li>
+<li><strong>International standards coordination</strong>: Harmonizing global evaluation criteria with regional characteristics</li>
+<li><strong>Real-time quality management</strong>: Dynamic performance monitoring during AI system operation</li>
+<li><strong>Industry-specific tools</strong>: Specialized evaluation frameworks optimized for each sector</li>
+</ol>
+<p>SmartWeb&rsquo;s <a href="/en/glossary/AI-chatbot/">AI chatbot</a> service exemplifies applying these cutting-edge technologies in real business environments, effectively solving the <a href="/en/glossary/hallucination/" title="AI models generating content that sounds correct but contains false or made-up information. This occurs due to how these systems work statistically, not from intentional deception.">hallucination problem</a>. By combining evaluation methodologies grounded in scientific evidence with practical solutions, organizations can maximize AI benefits while minimizing risks.</p>
+<p>For those considering AI <a href="/en/glossary/Technology-Adoption/">technology adoption</a>, leveraging solutions with proven track records enables taking that critical first step toward safe, effective AI utilization.</p>
+
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="mt-10 sm:mt-14 border-t border-gray-200 dark:border-gray-700 pt-8 sm:pt-10">
+      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 sm:mb-8">
+        Related Posts
+      </h2>
+      <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="/images/blog/rag-paint.jpg" 
+                  alt="How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/introduction-to-rag/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)
+                </a>
+              </h3>
+              
+                
+                
+                  
+                
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed covera...
+                </p>
+              
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/introduction-to-rag/" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="/images/blog/AI-Email-Auto-Response-Generator-image.png" 
+                  alt="Can AI Really Write Email Responses? Examining Accuracy and Capabilities Through Real Examples" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-email-response-examples/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  Can AI Really Write Email Responses? Examining Accuracy and Capabilities Through Real Examples
+                </a>
+              </h3>
+              
+                
+                
+                  
+                
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  Examining the true capabilities of AI-powered automated response generation through real examples. A...
+                </p>
+              
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-email-response-examples/" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="/images/blog/ai-chatbot-types-guide.jpg" 
+                  alt="AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-chatbot-types-guide/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points
+                </a>
+              </h3>
+              
+                
+                
+                  
+                
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  A comprehensive guide to the 5 types of AI chatbots (rule-based, AI-powered, generative AI, RAG, and...
+                </p>
+              
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-chatbot-types-guide/" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+      </div>
+    </div>
+  
+</article>
+
+</main>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer style="background-color: #000000;">
+  
+  <div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+    
+    <svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="curveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      
+      
+      <path class="curve" data-speed="0.8" stroke="url(#curveGrad1)" stroke-width="2" fill="none" />
+      <path class="curve" data-speed="1.2" stroke="url(#curveGrad2)" stroke-width="2.5" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.6" stroke="url(#curveGrad3)" stroke-width="1.5" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.5" stroke="url(#curveGrad1)" stroke-width="2" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="0.9" stroke="url(#curveGrad2)" stroke-width="3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.3" stroke="url(#curveGrad3)" stroke-width="1.8" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.7" stroke="url(#curveGrad1)" stroke-width="2.2" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.1" stroke="url(#curveGrad2)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="1.4" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="0.85" stroke="url(#curveGrad1)" stroke-width="1.5" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="1.0" stroke="url(#curveGrad2)" stroke-width="2.8" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.25" stroke="url(#curveGrad3)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.95" stroke="url(#curveGrad1)" stroke-width="2.3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.35" stroke="url(#curveGrad2)" stroke-width="1.7" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.75" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.7" />
+    </svg>
+    
+    
+    <div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    
+    <div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+      <h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+      <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+      <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+      <div class="mt-8 flex justify-center">
+        <a href="/en/blog/" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get started</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+  
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+    <div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+      
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/webp"
+        
+        data-srcset="/images/interwork-logo-white-1.webp 568w"
+        
+        sizes="200px"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/interwork-logo-white-1.webp"
+        
+        alt="Interwork"
+        class="lazy-image h-9"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+    </picture>
+
+
+  
+
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Services</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">AI Solutions</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Web Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">System Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Consulting</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Support</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://support.smartweb.jp/" class="text-sm/6 text-gray-400 hover:text-white">Support Portal</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Documentation</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Company</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://www.intwk.co.jp/about/" class="text-sm/6 text-gray-400 hover:text-white">About</a>
+              </li>
+              
+              <li>
+                <a href="/en/blog/" class="text-sm/6 text-gray-400 hover:text-white">Blog</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Careers</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">News</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="/en/privacy-policy/" class="text-sm/6 text-gray-400 hover:text-white">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="/en/ai-chatbot-terms-of-use/" class="text-sm/6 text-gray-400 hover:text-white">AI Chatbot Terms of Use</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div>
+        <p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+        
+          
+
+
+
+
+<div class="language-selector">
+  <div class="flex flex-wrap items-center justify-center gap-3">
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+          
+            
+            
+          
+        
+        
+        
+        
+        
+        <a href="/ja/blog/ai-evaluation-japanese-benchmarks/"
+           class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
+           title="日本語"
+           aria-label="日本語"
+           hreflang="ja">
+          <img 
+            src="/flags/jp.png"
+            alt="日本語"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </a>
+      
+    
+      
+      
+      
+      
+      
+      
+        
+        <span class="inline-flex items-center text-sm opacity-50" title="English">
+          <img 
+            src="/flags/gb.png"
+            alt="English"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </span>
+      
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+    <div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex gap-x-6 md:order-2">
+        
+        <a href="https://github.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">GitHub</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://x.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">X</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://youtube.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">YouTube</span>
+          
+
+
+
+        </a>
+        
+      </div>
+      <p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">&copy; 2026 Interwork Corporation All rights reserved.</p>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<div id="cookie-consent-banner" data-cookie-consent-banner class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark">
+    <div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+        <p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br> We use cookies to enhance your browsing experience and analyze our traffic. See our <a href="/en/privacy-policy/" class="font-semibold text-primary hover:text-primary-500">privacy policy</a>.</p>
+        <div class="mt-4 flex items-center gap-x-3 flex-wrap">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Accept All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-all
+    >
+      Accept All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Reject All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-necessary
+    >
+      Reject All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Cookie Settings"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=settings
+    >
+      Cookie Settings
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="cookie-settings-modal" class="fixed inset-0 z-50 hidden dark">
+    <div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close></div>
+    <div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+            <button type="button" class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close>
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="necessary-cookies" name="necessary-cookies" type="checkbox" checked disabled class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="analytics-cookies" name="analytics-cookies" type="checkbox" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 flex justify-end gap-x-3">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2  not-prose group"
+      aria-label="Cancel"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-close
+    >
+      Cancel
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2  not-prose group"
+      aria-label="Save Preferences"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-save
+    >
+      Save Preferences
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+<button
+  id="back-to-top-btn"
+  aria-label="Back to Top"
+  class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg 
+         transition-all duration-300 transform translate-y-12 opacity-0 invisible
+         hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+         dark:bg-indigo-500 dark:hover:bg-indigo-400"
+  onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+  </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+
+
+
+
+<script src="/js/app.js?v=20260106210129"></script>
+
+
+
+
+</body>
+</html>

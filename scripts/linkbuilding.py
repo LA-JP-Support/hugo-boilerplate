@@ -34,17 +34,58 @@ class Keyword:
         # Normalize keyword for case-insensitive matching
         self.keyword_lower = self.keyword.lower()
         self.keyword_pattern = self._create_pattern()
+        self.is_cjk = self._has_cjk()
+    
+    def _has_cjk(self) -> bool:
+        """Check if keyword contains CJK (Chinese, Japanese, Korean) characters"""
+        for char in self.keyword:
+            code = ord(char)
+            # CJK Unified Ideographs and extensions
+            if 0x4E00 <= code <= 0x9FFF:  # CJK Unified Ideographs
+                return True
+            if 0x3400 <= code <= 0x4DBF:  # CJK Extension A
+                return True
+            if 0x20000 <= code <= 0x2A6DF:  # CJK Extension B
+                return True
+            # Japanese specific
+            if 0x3040 <= code <= 0x309F:  # Hiragana
+                return True
+            if 0x30A0 <= code <= 0x30FF:  # Katakana
+                return True
+            # Korean specific
+            if 0xAC00 <= code <= 0xD7AF:  # Hangul Syllables
+                return True
+            if 0x1100 <= code <= 0x11FF:  # Hangul Jamo
+                return True
+        return False
     
     def _create_pattern(self) -> re.Pattern:
-        """Create regex pattern for keyword matching"""
+        """Create regex pattern for keyword matching
+        
+        For CJK (Japanese, Chinese, Korean) keywords:
+        - No word boundary check needed (these languages don't use spaces)
+        - Direct substring matching
+        
+        For ASCII/Latin keywords:
+        - Use word boundary pattern to avoid partial matches
+        - e.g., 'AI' should not match 'MAIL'
+        """
         escaped = re.escape(self.keyword)
-        if self.exact_match:
-            # Exact word boundary matching
-            pattern = r'\b' + escaped + r'\b'
+        
+        # Check if keyword contains CJK characters
+        if self._has_cjk():
+            # CJK: Direct matching without word boundaries
+            # Japanese/Chinese/Korean don't use spaces between words
+            pattern = f'({escaped})'
+            return re.compile(pattern)
         else:
-            # Word boundary matching
-            pattern = r'\b' + escaped + r'\b'
-        return re.compile(pattern, re.IGNORECASE)
+            # ASCII/Latin: Use word boundary matching
+            # But use lookahead/lookbehind for better control
+            if self.exact_match:
+                pattern = r'(?<![A-Za-z0-9_])' + escaped + r'(?![A-Za-z0-9_])'
+            else:
+                pattern = r'(?<![A-Za-z0-9_])' + escaped + r'(?![A-Za-z0-9_])'
+            return re.compile(pattern, re.IGNORECASE)
 
 
 @dataclass

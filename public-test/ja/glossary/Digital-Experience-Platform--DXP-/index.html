@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>デジタルエクスペリエンスプラットフォーム(DXP) | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Digital-Experience-Platform--DXP-/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="デジタルエクスペリエンスプラットフォーム(DXP)の包括的ガイド - すべてのデジタルタッチポイントにおける顧客体験を管理するための統合ソリューション。" name="description"/>
+<meta content="デジタルエクスペリエンスプラットフォーム, DXPアーキテクチャ, 顧客体験管理, オムニチャネルプラットフォーム, デジタルトランスフォーメーション" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Digital-Experience-Platform--DXP-/" property="og:url"/>
+<meta content="デジタルエクスペリエンスプラットフォーム(DXP) | SmartWeb" property="og:title"/>
+<meta content="デジタルエクスペリエンスプラットフォーム(DXP)の包括的ガイド - すべてのデジタルタッチポイントにおける顧客体験を管理するための統合ソリューション。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Digital-Experience-Platform--DXP-/" name="twitter:url"/>
+<meta content="デジタルエクスペリエンスプラットフォーム(DXP) | SmartWeb" name="twitter:title"/>
+<meta content="デジタルエクスペリエンスプラットフォーム(DXP)の包括的ガイド - すべてのデジタルタッチポイントにおける顧客体験を管理するための統合ソリューション。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">デジタルエクスペリエンスプラットフォーム(DXP)</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        デジタルエクスペリエンスプラットフォーム(DXP)
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Digital Experience Platform (DXP)
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          デジタルエクスペリエンスプラットフォーム(DXP)の包括的ガイド - すべてのデジタルタッチポイントにおける顧客体験を管理するための統合ソリューション。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                デジタルエクスペリエンスプラットフォーム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                DXPアーキテクチャ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                顧客体験管理
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                オムニチャネルプラットフォーム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                デジタルトランスフォーメーション
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="デジタルエクスペリエンスプラットフォームdxpとは">デジタルエクスペリエンスプラットフォーム(DXP)とは?</h2>
+<p><a data-lb="1" href="/ja/glossary/Digital-Experience-Platform--DXP-/" title="デジタルエクスペリエンスプラットフォーム(DXP)の包括的ガイド - すべてのデジタルタッチポイントにおける顧客体験を管理するための統合ソリューション。">デジタルエクスペリエンスプラットフォーム</a>(DXP)は、複数のタッチポイントとチャネルにわたってデジタル体験を作成、管理、配信、最適化するために設計された統合技術スイートです。主にWebコンテンツに焦点を当てた従来のコンテンツ管理システムとは異なり、DXPはコンテンツ管理、顧客データ統合、<a data-lb="1" href="/ja/glossary/Personalization-Engine/" title="パーソナライゼーションエンジンの包括的ガイド:データ分析と機械学習アルゴリズムを通じてカスタマイズされたユーザー体験を提供するAI駆動型システムです。">パーソナライゼーションエンジン</a>、分析、コマース機能を包含する包括的なエコシステムを提供します。これらのプラットフォームは、<a data-lb="1" href="/ja/glossary/Conversion-Path/" title="顧客がブランドを初めて知ってから購入や目的のアクションを起こすまでの完全な道のりで、ウェブサイト、メール、広告、ソーシャルメディアなど、あらゆる接点でのインタラクションを含みます。">カスタマージャーニー</a>全体を通じて一貫性のある、パーソナライズされた、魅力的なデジタル体験を提供しようとする組織にとって、技術的基盤として機能します。</p>
+<p>DXPの進化は、デジタル顧客インタラクションの複雑性の増大と、Webサイト、モバイルアプリケーション、<a data-lb="1" href="/ja/glossary/platform/" title="Facebook、Instagram、TikTokなどのソーシャルメディアプラットフォームを探索します。その定義、ビジネス活用、種類、そしてAIチャットボットと自動化がどのようにエンゲージメントを向上させるかを学びます。">ソーシャルメディアプラットフォーム</a>、メールキャンペーン、音声アシスタントやIoTデバイスなどの新興チャネルにわたって体験を管理する必要性から生まれました。現代のDXPは、コンテンツ管理システム(CMS)、顧客関係管理(CRM)ツール、マーケティング<a data-lb="1" href="/ja/glossary/automation-platform/" title="オートメーションプラットフォームとは何か、その使用方法、種類、主要機能、主なメリットについて解説します。ビジネスに最適なソリューションの選定と導入方法を学びましょう。">オートメーションプラットフォーム</a>、<a data-lb="1" href="/ja/glossary/Cart-Abandonment-Rate/" title="カート放棄率の定義、計算方法、業界ベンチマーク、放棄の主な理由、そしてカート放棄を削減し失われた売上を回復するための実践的な戦略を理解しましょう。">eコマース</a>エンジン、分析ソリューションなど、さまざまな技術を統合プラットフォームに統合します。この統合により、組織はデータサイロを打破し、顧客情報の単一の真実の源を作成し、リアルタイムの顧客行動と嗜好に基づいて文脈的に関連性のある体験を提供できます。</p>
+<p>DXPの戦略的重要性は、現代のビジネス運営に必要なスケーラビリティと柔軟性を提供しながら、<a data-lb="1" href="/ja/glossary/Digital-Adoption/" title="デジタル技術を日常業務やビジネスオペレーションに統合するプロセス。効果的に活用するために必要なトレーニングや組織文化の変革を含みます。">デジタルトランスフォーメーション</a>イニシアチブをサポートする能力にあります。これらのプラットフォームは通常、コンテンツ作成とコンテンツ表示を分離するヘッドレスまたはハイブリッドアーキテクチャを特徴としており、組織は作業を重複させることなく複数のチャネルにわたって体験を提供できます。DXPはまた、<a data-lb="1" href="/ja/glossary/Personalization/" title="AIチャットボットと自動化におけるパーソナライゼーションは、高度なアルゴリズムを使用して、個々のユーザーの嗜好や行動に合わせてサービス、コンテンツ、インタラクションをカスタマイズします。">パーソナライゼーション</a>を自動化し、<a data-lb="1" href="/ja/glossary/Social-Sharing/" title="デジタルコンテンツ配信におけるソーシャルシェアリングの仕組み、実装戦略、最適化テクニックに関する包括的なガイド">コンテンツ配信</a>を最適化し、顧客行動に関する予測的洞察を提供するために、人工知能と機械学習機能を組み込んでいます。企業が製品やサービスだけでなく顧客体験で競争するようになるにつれて、DXPはデジタル市場における競争優位性を維持するための不可欠なインフラストラクチャとなっています。</p>
+<h2 id="dxpの主要コンポーネント">DXPの主要コンポーネント</h2>
+<p><strong>コンテンツ管理システム(CMS)</strong> - コンテンツクリエイターが複数のフォーマットとチャネルにわたってデジタルコンテンツを開発、編集、管理できるようにする基盤レイヤー。現代のDXP CMSコンポーネントは、<a data-lb="1" href="/ja/glossary/Structured-Content/" title="構造化コンテンツの包括的ガイド:定義、実装方法、メリット、および組織化されたデジタル情報システムのベストプラクティスを解説します。">コンテンツ管理</a>をプレゼンテーションレイヤーから分離するヘッドレスアーキテクチャを特徴とすることが多いです。</p>
+<p><strong>顧客データプラットフォーム(CDP)</strong> - さまざまな<a data-lb="1" href="/ja/glossary/Touchpoint/" title="カスタマーエクスペリエンスにおけるタッチポイントの包括的ガイド。デジタルおよび物理的なインタラクションポイント、最適化戦略、実装のベストプラクティスを網羅しています。">タッチポイント</a>からの<a data-lb="1" href="/ja/glossary/Customer-Context/" title="カスタマーコンテキストの包括的ガイド - 顧客データ、行動、嗜好を理解し、パーソナライズされた体験を提供してビジネス成長を促進する方法について解説します。">顧客データ</a>を集約して統合された顧客プロファイルを作成し、リアルタイムのパーソナライゼーションを可能にします。CDPコンポーネントは、行動、取引、人口統計データを集約して、各顧客の包括的なビューを提供します。</p>
+<p><strong>パーソナライゼーションエンジン</strong> - <a data-lb="1" href="/ja/glossary/Ensemble-Learning/" title="機械学習における予測精度向上のためのアンサンブル学習手法、アルゴリズム、および応用に関する包括的ガイド。">機械学習アルゴリズム</a>と顧客データを活用して、個々の嗜好、行動パターン、文脈的要因に基づいてカスタマイズされたコンテンツ、製品推奨、体験を提供します。</p>
+<p><strong>分析とインサイトモジュール</strong> - すべてのデジタルタッチポイントにわたって顧客インタラクション、コンテンツパフォーマンス、体験の効果を監視するための包括的な追跡、測定、分析機能を提供します。</p>
+<p><strong>統合ハブ</strong> - サードパーティシステム、API、<a data-lb="1" href="/ja/glossary/Third-Party-Data/" title="サードパーティデータの包括的ガイド:ビジネスインテリジェンスにおける外部データセットの活用に関する情報源、メリット、課題、ベストプラクティスを解説します。">外部データソース</a>とのシームレスな接続を促進し、DXPが既存の技術エコシステム内で機能し、複雑なビジネス要件をサポートできるようにします。</p>
+<p><strong>デジタルアセット管理(DAM)</strong> - 画像、ビデオ、ドキュメント、マルチメディアコンテンツなどのデジタルアセットを整理、保存、配信し、チャネル全体でバージョン管理と<a data-lb="1" href="/ja/glossary/Style-Guide/" title="スタイルガイドの包括的なガイド:組織全体で一貫したブランディング、ライティング基準、デザイン原則を実現するための必須ドキュメント。">ブランドの一貫性</a>を維持します。</p>
+<p><strong>マーケティングオートメーションツール</strong> - 事前定義されたルールと顧客行動トリガーに基づいて、自動化されたキャンペーン管理、リードナーチャリング、<a data-lb="1" href="/ja/glossary/Email-Newsletter/" title="メールニュースレターの包括的ガイド:効果的なデジタルマーケティングキャンペーンのための戦略、ベストプラクティス、自動化、最適化テクニック。">メールマーケティング</a>、カスタマージャーニーオーケストレーションを可能にします。</p>
+<h2 id="デジタルエクスペリエンスプラットフォームdxpの仕組み">デジタルエクスペリエンスプラットフォーム(DXP)の仕組み</h2>
+<p><strong>データ収集と集約</strong> - DXPは、Webサイト、モバイルアプリ、<a data-lb="1" href="/ja/glossary/Instagram/" title="Instagramは、写真と動画の共有に特化したビジュアル型ソーシャルメディアプラットフォームです。機能、ビジネスツール、インフルエンサーマーケティング、オーディエンス構築について学びましょう。">ソーシャルメディア</a>、メールインタラクション、オフラインチャネルなど、さまざまなタッチポイントから顧客データを継続的に収集し、包括的なデータ基盤を作成します。</p>
+<p><strong>顧客プロファイルの作成</strong> - プラットフォームは収集されたデータを処理して、人口統計情報、行動パターン、嗜好、購入履歴、<a data-lb="1" href="/ja/glossary/Engagement-Metrics/" title="エンゲージメント指標は、ウェブサイト、アプリ、ソーシャルメディアなどのデジタル資産に対するユーザーのインタラクションを定量化します。クリック、スクロール、共有、コンバージョンなどのユーザー行動を明らかにし、最適化の指針となります。">エンゲージメント指標</a>を含む統合された顧客プロファイルを構築します。</p>
+<p><strong>コンテンツの作成と管理</strong> - コンテンツクリエイターはDXPのオーサリングツールを使用してマルチメディアコンテンツを開発し、それは集中リポジトリに保存され、簡単な検索とパーソナライゼーションのために<a data-lb="1" href="/ja/glossary/Meta/" title="メタとは、他の情報を説明する情報のことで、検索エンジンやソーシャルプラットフォームがウェブコンテンツを効果的に理解し整理するのに役立ちます。">メタデータ</a>でタグ付けされます。</p>
+<p><strong>リアルタイム分析とセグメンテーション</strong> - プラットフォームは顧客行動をリアルタイムで分析し、さまざまな基準に基づいてオーディエンスをセグメント化し、パーソナライズされた体験の機会を特定します。</p>
+<p><strong>エクスペリエンスオーケストレーション</strong> - DXPは、顧客のプロファイル、現在のコンテキスト、マーケティングチームが定義した<a data-lb="1" href="/ja/glossary/rules-engine/" title="ルールエンジンは、事前定義された「if-then」ルールに対してデータを評価することで意思決定を自動化し、ビジネスロジックをコードから分離して効率的な管理と更新を実現します。">ビジネスルール</a>に基づいて、各顧客に最も適切なコンテンツ、オファー、インタラクションを決定します。</p>
+<p><strong>マルチチャネル配信</strong> - コンテンツと体験は複数のチャネルに同時に配信され、プラットフォームは各特定のタッチポイントに合わせてフォーマットとプレゼンテーションを適応させます。</p>
+<p><strong>パフォーマンス監視</strong> - システムは、体験の効果を測定するために、エンゲージメント指標、コンバージョン率、<a data-lb="1" href="/ja/glossary/Service-Recovery/" title="サービスリカバリー:問題が発生した後、企業がサービスの問題を修正し、顧客満足度を回復するために取る行動。ネガティブな体験をロイヤルティを構築する機会に変えるプロセスです。">顧客満足度</a>指標を継続的に追跡します。</p>
+<p><strong>最適化と学習</strong> - 機械学習アルゴリズムはパフォーマンスデータを分析して、将来の体験を自動的に最適化し、<a data-lb="1" href="/ja/glossary/Engagement-Score/" title="エンゲージメントスコアとは何か、このコンポジット指標がユーザー、顧客、または従業員のコンテンツ、製品、サービスとのインタラクションをどのように定量化するか、そしてその戦略的な活用方法について学びます。">顧客エンゲージメント</a>を改善するための推奨事項を提供します。</p>
+<p><strong>ワークフローの例</strong>: eコマース小売業者は、DXPを使用して、モバイルアプリで冬用コートを閲覧している顧客を追跡します。プラットフォームは顧客の嗜好を特定し、購入履歴を確認し、メール経由でパーソナライズされた製品推奨を配信すると同時に、顧客がデスクトップコンピューターからアクセスしたときにWebサイトのホームページを関連する冬物衣料のオファーで更新します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>顧客体験の向上</strong> - DXPは、すべてのタッチポイントにわたって一貫性のある、パーソナライズされた体験を可能にし、関連性のあるタイムリーなインタラクションを通じて摩擦を減らし、顧客満足度を高めます。</p>
+<p><strong>運用効率の改善</strong> - 集中化されたコンテンツ管理と自動化された<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>により、手作業が削減され、重複作業が排除され、コンテンツの作成と配信プロセスが合理化されます。</p>
+<p><strong>データ駆動型の意思決定</strong> - 包括的な分析と顧客インサイトにより、組織は<a data-lb="1" href="/ja/glossary/Content-Lifecycle-Management/" title="コンテンツライフサイクル管理の包括的ガイド。コンテンツの作成から廃棄までを管理するための戦略、ワークフロー、メリット、ベストプラクティスを網羅しています。">コンテンツ戦略</a>、マーケティングキャンペーン、体験最適化について情報に基づいた意思決定を行うことができます。</p>
+<p><strong>収益創出の増加</strong> - パーソナライズされた体験とターゲットを絞ったマーケティングキャンペーンは、通常、コンバージョン率の向上、平均注文額の増加、<a data-lb="1" href="/ja/glossary/Customer-Lifetime-Value--CLV-/" title="顧客生涯価値(CLV)の包括的ガイド - 計算方法、メリット、実装戦略、ビジネス成長のためのベストプラクティスを解説します。">顧客生涯価値</a>の改善をもたらします。</p>
+<p><strong>市場投入までの時間の短縮</strong> - 統合されたツールと合理化されたワークフローにより、マーケティングチームは従来の断片化されたアプローチよりも迅速にキャンペーンを開始し、新しい体験を展開できます。</p>
+<p><strong>スケーラビリティと柔軟性</strong> - 現代のDXPアーキテクチャは、完全なシステムの見直しや重大な<a data-lb="1" href="/ja/glossary/Technical-Debt/" title="技術的負債とは、堅牢なアプローチではなく短期的な解決策を選択した際に発生する、将来的な作り直しに伴う潜在的なコストを指します。ソフトウェア開発やAIシステムにおいて、メンテナンス、複雑性、修復にかかるコストの増加につながります。">技術的負債</a>を必要とせずに、ビジネスの成長と変化する要件をサポートします。</p>
+<p><strong>顧客維持率の向上</strong> - 一貫性のある高品質なデジタル体験は、進化する顧客の期待に応えることで<a data-lb="1" href="/ja/glossary/Customer-Retention/" title="顧客維持戦略、指標、ベストプラクティスに関する包括的なガイド。長期的な顧客関係の構築とビジネス成長のための実践的な手法を解説します。">顧客ロイヤルティ</a>を育み、解約率を低減します。</p>
+<p><strong>競争優位性</strong> - DXPを使用する組織は、<a data-lb="1" href="/ja/glossary/Legacy-System/" title="組織が使い続けている古いコンピュータシステムやソフトウェアのこと。より新しい技術が存在するにもかかわらず、置き換えにはコストがかかりリスクも高いため、継続して使用されている。">レガシーシステム</a>を使用する競合他社よりも市場の変化と顧客ニーズに迅速に対応でき、優位性を維持できます。</p>
+<p><strong>コスト最適化</strong> - 統合されたプラットフォームは、複数の個別システムを管理する場合と比較して、ライセンスコスト、統合費用、保守オーバーヘッドを削減します。</p>
+<p><strong>コンプライアンスとセキュリティ</strong> - エンタープライズグレードのDXPには、組織が規制要件を満たし、顧客データを保護するのに役立つ組み込みの<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>機能とコンプライアンスツールが含まれています。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>eコマースのパーソナライゼーション</strong> - オンライン小売業者は、DXPを使用して、顧客の行動と嗜好に基づいてパーソナライズされた製品推奨、動的価格設定、カスタマイズされたショッピング体験を提供します。</p>
+<p><strong>金融サービスの顧客ポータル</strong> - 銀行や金融機関は、DXPを活用して、口座情報、財務計画ツール、ターゲットを絞った製品オファーを提供する安全でパーソナライズされた顧客ポータルを作成します。</p>
+<p><strong>医療における患者エンゲージメント</strong> - 医療機関は、DXPを使用して患者とのコミュニケーション、予約スケジューリング、<a data-lb="1" href="/ja/glossary/Educational-Content/" title="デジタルプラットフォーム全体で効果的な学習体験を実現するための、教育コンテンツの作成、配信方法、ベストプラクティスに関する包括的なガイド。">教育コンテンツ</a>の配信、パーソナライズされた健康管理ツールを管理します。</p>
+<p><strong>製造業のパートナーポータル</strong> - 産業企業は、関係タイプに基づいてカスタマイズされた製品カタログ、価格情報、サポートリソースを提供するパートナーおよびディストリビューターポータルを作成します。</p>
+<p><strong>メディアと出版プラットフォーム</strong> - コンテンツ出版社は、DXPを使用して、複数のデジタルチャネルにわたってパーソナライズされたニュースフィード、サブスクリプション管理、ターゲット広告を配信します。</p>
+<p><strong>高等教育の学生体験</strong> - 大学は、DXPを実装して学生ポータル、コースコンテンツ配信、卒業生エンゲージメント、見込み学生募集キャンペーンを管理します。</p>
+<p><strong>旅行とホスピタリティの予約</strong> - 旅行会社は、DXPを使用して、パーソナライズされた旅行推奨、動的パッケージ価格設定、デバイス間でのシームレスな予約体験を提供します。</p>
+<p><strong>B2Bリード生成とナーチャリング</strong> - プロフェッショナルサービス企業は、DXPを活用して、ターゲットを絞ったコンテンツ体験を作成し、リードスコアリングを管理し、複雑な販売サイクルのためのナーチャリングキャンペーンを自動化します。</p>
+<p><strong>政府の市民サービス</strong> - 公共部門の組織は、DXPを使用して、パーソナライズされたサービス提供、オンライン申請、透明なコミュニケーションチャネルを通じて市民エンゲージメントを改善します。</p>
+<p><strong>小売のオムニチャネル体験</strong> - 実店舗小売業者は、オンライン購入・店舗受取や統合ロイヤルティプログラムなどの機能をサポートするDXPを通じて、オンラインとオフラインの体験を統合します。</p>
+<h2 id="dxpと従来のcmsの比較">DXPと従来のCMSの比較</h2>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>従来のCMS</th>
+<th>デジタルエクスペリエンスプラットフォーム</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>主な焦点</strong></td>
+<td>コンテンツ管理と公開</td>
+<td>包括的な体験オーケストレーション</td>
+</tr>
+<tr>
+<td><strong>アーキテクチャ</strong></td>
+<td>モノリシック、フロントエンド/バックエンド結合</td>
+<td>ヘッドレス、API優先、マイクロサービス</td>
+</tr>
+<tr>
+<td><strong>パーソナライゼーション</strong></td>
+<td>限定的、プラグイン依存</td>
+<td>組み込みのAI駆動パーソナライゼーション</td>
+</tr>
+<tr>
+<td><strong>データ統合</strong></td>
+<td>基本的、カスタム開発が必要</td>
+<td>複数のデータソースとのネイティブ統合</td>
+</tr>
+<tr>
+<td><strong>分析</strong></td>
+<td>基本的なWeb分析</td>
+<td>高度なカスタマージャーニー分析</td>
+</tr>
+<tr>
+<td><strong>チャネルサポート</strong></td>
+<td>主にWeb中心</td>
+<td>オムニチャネル配信機能</td>
+</tr>
+<tr>
+<td><strong>スケーラビリティ</strong></td>
+<td>モノリシックアーキテクチャによる制限</td>
+<td>クラウドネイティブ、水平スケーラブル</td>
+</tr>
+<tr>
+<td><strong>顧客データ</strong></td>
+<td>最小限の顧客プロファイリング</td>
+<td>包括的な顧客データプラットフォーム</td>
+</tr>
+<tr>
+<td><strong>マーケティングツール</strong></td>
+<td>別個のシステムが必要</td>
+<td>統合されたマーケティングオートメーション</td>
+</tr>
+<tr>
+<td><strong>総コスト</strong></td>
+<td>初期コストは低いが統合コストが高い</td>
+<td>初期投資は高いが長期的なTCOは低い</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>実装の複雑性</strong> - DXPを成功裏に実装するには、重要な計画、技術的専門知識、変更管理が必要であり、多くの場合、複雑なデータ移行とシステム統合が含まれます。</p>
+<p><strong>高い初期投資</strong> - DXPライセンス、実装サービス、インフラストラクチャのコストは相当なものになる可能性があり、慎重なROI計画と予算配分が必要です。</p>
+<p><strong>データプライバシーとコンプライアンス</strong> - 複数のタッチポイントにわたって顧客データを管理するには、GDPR、CCPA、業界固有の要件などの規制への準拠と堅牢なプライバシー管理が必要です。</p>
+<p><strong>統合の課題</strong> - DXPを既存のレガシーシステム、サードパーティツール、データソースと接続することは、技術的に複雑で時間がかかる場合があります。</p>
+<p><strong>スキルギャップとトレーニング</strong> - 組織は、既存のスタッフのトレーニングや、DXP固有のスキルとデジタルマーケティングの専門知識を持つ新しい人材の採用に投資する必要があることがよくあります。</p>
+<p><strong>コンテンツガバナンス</strong> - 複数のチャネルとチームにわたってコンテンツの品質、一貫性、承認ワークフローを管理するには、明確に定義されたガバナンスプロセスとポリシーが必要です。</p>
+<p><strong>パフォーマンスの最適化</strong> - パーソナライズされた体験を提供しながら、すべてのチャネルで高速な読み込み時間と最適なパフォーマンスを確保するには、継続的な監視と最適化が必要です。</p>
+<p><strong>ベンダーロックインの懸念</strong> - DXPベンダーを選択すると、変更が困難で費用がかかる依存関係が生じるため、長期的なベンダーの実行可能性を慎重に評価する必要があります。</p>
+<p><strong>データ品質管理</strong> - パーソナライゼーションと分析の効果は、データ品質に大きく依存しており、継続的なデータクレンジングと検証プロセスが必要です。</p>
+<p><strong>セキュリティの脆弱性</strong> - DXPの統合された性質により、包括的なセキュリティ戦略と定期的な更新を必要とする複数の潜在的な攻撃ベクトルが生じます。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>明確なビジネス目標の定義</strong> - 顧客体験の改善、運用効率の向上、収益目標を含む、DXP実装の具体的で測定可能な目標を確立します。</p>
+<p><strong>徹底的な要件分析の実施</strong> - DXPソリューションを選択する前に、現状のプロセスを文書化し、問題点を特定し、詳細な機能要件と技術要件を定義します。</p>
+<p><strong>適切なアーキテクチャの選択</strong> - 組織の技術能力、チャネル要件、将来のスケーラビリティニーズに基づいて、ヘッドレス、ハイブリッド、または従来のアーキテクチャから選択します。</p>
+<p><strong>データ戦略の優先順位付け</strong> - 実装を開始する前に、データ品質基準、プライバシー管理、統合プロトコルを含む包括的なデータガバナンスフレームワークを開発します。</p>
+<p><strong>変更管理の計画</strong> - チームが新しいワークフローと機能に適応できるように、詳細なトレーニングプログラム、コミュニケーション計画、サポート構造を作成します。</p>
+<p><strong>パイロットプロジェクトから開始</strong> - 全面展開の前に、アプローチを検証し、課題を特定し、組織の信頼を構築するために、より小規模でリスクの低い実装から始めます。</p>
+<p><strong>コンテンツガバナンスの確立</strong> - すべてのチャネルにわたるコンテンツの作成、管理、公開のための明確な役割、責任、承認プロセスを定義します。</p>
+<p><strong>堅牢なセキュリティ対策の実装</strong> - 顧客データとシステムの整合性を保護するために、アクセス管理、データ暗号化、定期的なセキュリティ監査を含む包括的なセキュリティ管理を展開します。</p>
+<p><strong>パフォーマンスの継続的な監視</strong> - 初日からシステムパフォーマンス、ユーザー体験、ビジネス成果を追跡するための主要業績評価指標と監視システムを確立します。</p>
+<p><strong>継続的な最適化の計画</strong> - パーソナライゼーションルール、コンテンツパフォーマンス、カスタマージャーニーの効果を定期的にレビューし最適化するプロセスを作成します。</p>
+<h2 id="高度なテクニック">高度なテクニック</h2>
+<p><strong>AI駆動のコンテンツ生成</strong> - 人工知能を活用して、顧客セグメントと行動データに基づいて、パーソナライズされたコンテンツのバリエーション、製品説明、マーケティングコピーを自動的に作成します。</p>
+<p><strong>予測的カスタマージャーニーマッピング</strong> - 機械学習アルゴリズムを使用して顧客の行動パターンを予測し、顧客が摩擦点に遭遇する前に体験を積極的に最適化します。</p>
+<p><strong>リアルタイム意思決定エンジン</strong> - ライブの顧客インタラクション中に最適な体験を提供するために、ミリ秒単位で複数の変数を評価できる高度な意思決定機能を実装します。</p>
+<p><strong>高度なセグメンテーションとマイクロセグメンテーション</strong> - 複雑な行動パターン、嗜好、文脈的要因に基づいて、非常に細かい顧客セグメントを作成するために洗練されたアルゴリズムを活用します。</p>
+<p><strong>クロスチャネルアトリビューションモデリング</strong> - すべてのタッチポイントにわたる完全なカスタマージャーニーを理解し、特定のインタラクションにコンバージョンを正確に帰属させるために、高度な分析を展開します。</p>
+<p><strong>動的コンテンツ最適化</strong> - 手動介入なしでコンテンツパフォーマンスを継続的に最適化する自動化されたA/Bテストと多変量テスト機能を実装します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>人工知能の統合</strong> - 強化されたAI機能により、すべてのタッチポイントにわたって、より洗練されたパーソナライゼーション、自動化されたコンテンツ作成、予測的な顧客体験最適化が可能になります。</p>
+<p><strong>音声と会話型インターフェース</strong> - これらのインタラクション方法が主流になるにつれて、DXPは音声起動体験、チャットボット、会話型コマースをますますサポートするようになります。</p>
+<p><strong>拡張現実と仮想現実のサポート</strong> - AR/VR技術との統合により、製品の視覚化、バーチャルショールーム、強化された顧客エンゲージメントのための没入型デジタル体験が可能になります。</p>
+<p><strong>エッジコンピューティングの最適化</strong> - DXPは、エンドユーザーに近い場所でデータを処理し体験を提供することで、レイテンシを削減しパフォーマンスを向上させるためにエッジコンピューティングを活用します。</p>
+<p><strong>ブロックチェーンの統合</strong> - ブロックチェーン技術は、データセキュリティを強化し、顧客のプライバシー管理を改善し、顧客データの所有権と同意管理のための新しいモデルを可能にします。</p>
+<p><strong>モノのインターネット(IoT)接続</strong> - DXPは、IoTデバイス、スマートホームシステム、接続された製品にわたって体験を管理するように拡張され、シームレスなオムニチャネル体験を作成します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>Gartner. (2024). “Magic Quadrant for Digital Experience Platforms.” Gartner Research.</li>
+<li>Forrester Research. (2024). “The Forrester Wave: Digital Experience Platforms, Q2 2024.” Forrester.</li>
+<li>Adobe. (2024). “Digital Experience Platform Implementation Guide.” Adobe Experience Cloud Documentation.</li>
+<li>Sitecore. (2024). “The Complete Guide to Digital Experience Platforms.” Sitecore Resources.</li>
+<li>Acquia. (2024). “DXP Best Practices and Implementation Strategies.” Acquia Developer Documentation.</li>
+<li>McKinsey &amp; Company. (2024). “The Future of Digital Customer Experience.” McKinsey Digital.</li>
+<li>Salesforce. (2024). “Digital Experience Platform Architecture and Integration Patterns.” Salesforce Trailhead.</li>
+<li>ContentStack. (2024). “Headless DXP: Architecture and Implementation Guide.” ContentStack Resources.</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Omnichannel-Platform/">
+                    オムニチャネルプラットフォーム
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    オムニチャネルプラットフォームの包括的ガイド - 複数のタッチポイントを統合し、シームレスなコマースを実現する統合型カスタマーエクスペリエンスソリューション。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Omnichannel-Platform/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SMB--Small-and-Medium-Business-/">
+                    SMB(中小企業)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    従業員数500名未満の企業で、経済の基盤を形成しています。大企業よりも高い機動性を持って事業を展開する一方、テクノロジーや人材面でのリソース制約に直面しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SMB--Small-and-Medium-Business-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SMB-Technology-Stack/">
+                    SMBテクノロジースタック
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    中小企業が業務管理、チーム協働、大企業との競争力強化のために利用する、手頃な価格のソフトウェアとクラウドツールの集合体。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SMB-Technology-Stack/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Ecosystem-Integration/">
+                    エコシステム統合
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    シームレスなシステム接続と相互運用性を実現するための、エコシステム統合戦略、テクノロジー、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Ecosystem-Integration/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Omnichannel-Strategy/">
+                    オムニチャネル戦略
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    すべてのタッチポイントでシームレスな顧客体験を実現するための、オムニチャネル戦略の実装、メリット、課題、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Omnichannel-Strategy/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Cloud-Migration/">
+                    クラウド移行
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    企業のデータ、アプリケーション、ITシステムを物理サーバーからクラウドプラットフォームに移行し、柔軟性の向上とコスト削減を実現するプロセス。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Cloud-Migration/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/digital-experience-platform--dxp-/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

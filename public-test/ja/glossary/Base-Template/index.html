@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ベーステンプレート | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Base-Template/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="子テンプレートが継承する親テンプレートで、ヘッダーやフッターなどの共通要素を含み、アプリケーション全体で一貫性を保ち、コードの重複を避けるために使用されます。" name="description"/>
+<meta content="ベーステンプレート, テンプレート継承, デザインパターン, コード再利用性, ソフトウェアアーキテクチャ" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Base-Template/" property="og:url"/>
+<meta content="ベーステンプレート | SmartWeb" property="og:title"/>
+<meta content="子テンプレートが継承する親テンプレートで、ヘッダーやフッターなどの共通要素を含み、アプリケーション全体で一貫性を保ち、コードの重複を避けるために使用されます。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Base-Template/" name="twitter:url"/>
+<meta content="ベーステンプレート | SmartWeb" name="twitter:title"/>
+<meta content="子テンプレートが継承する親テンプレートで、ヘッダーやフッターなどの共通要素を含み、アプリケーション全体で一貫性を保ち、コードの重複を避けるために使用されます。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ベーステンプレート</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ベーステンプレート
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Base Template
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          子テンプレートが継承する親テンプレートで、ヘッダーやフッターなどの共通要素を含み、アプリケーション全体で一貫性を保ち、コードの重複を避けるために使用されます。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ベーステンプレート
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                テンプレート継承
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                デザインパターン
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コード再利用性
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ソフトウェアアーキテクチャ
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ベーステンプレートとは">ベーステンプレートとは?</h2>
+<p><a data-lb="1" href="/ja/glossary/Base-Template/" title="子テンプレートが継承する親テンプレートで、ヘッダーやフッターなどの共通要素を含み、アプリケーション全体で一貫性を保ち、コードの重複を避けるために使用されます。">ベーステンプレート</a>は、<a data-lb="1" href="/ja/glossary/Technical-Debt/" title="技術的負債とは、堅牢なアプローチではなく短期的な解決策を選択した際に発生する、将来的な作り直しに伴う潜在的なコストを指します。ソフトウェア開発やAIシステムにおいて、メンテナンス、複雑性、修復にかかるコストの増加につながります。">ソフトウェア開発</a>における基礎的なデザインパターンであり、他のテンプレートが共通の構造、機能、スタイリングを継承する親テンプレートまたはマスターテンプレートとして機能します。このアーキテクチャアプローチは、子テンプレートが全体的なフレームワークと共有コンポーネントを維持しながら、ベーステンプレートの特定のセクションを拡張またはオーバーライドする階層的な関係を確立します。ベーステンプレートは、<a data-lb="1" href="/ja/glossary/URL-Structure/" title="Web開発とSEOパフォーマンスのためのURL構造コンポーネント、ベストプラクティス、最適化テクニックに関する包括的なガイド。">Web開発</a>、デスクトップアプリケーション、モバイルプラットフォームを含む様々なプログラミング言語とフレームワークにおいて、保守性が高く、スケーラブルで、一貫性のあるアプリケーションを作成するための基盤となります。</p>
+<p>ベーステンプレートの概念は、コードの重複を排除し、大規模アプリケーション全体で一貫した<a data-lb="1" href="/ja/glossary/UI/" title="ユーザーインターフェース(UI)の定義、種類、デザイン原則、実用的なユースケースを解説します。アプリからAIチャットボットまで、UIが人間とデジタルの相互作用をどのように促進するかを学びましょう。">ユーザーインターフェース</a>を確立する必要性から生まれました。ヘッダー、フッター、ナビゲーションメニュー、レイアウト構造などの共通要素を単一のベーステンプレートで定義することで、開発者は特定の領域でのカスタマイズを可能にしながら、統一性を確保できます。この継承モデルはDRY(Don’t Repeat Yourself)原則に従い、複数の個別ファイルを更新するのではなく、ベーステンプレートのみを変更することで、チームがグローバルな変更を効率的に行えるようにします。ベーステンプレートは、全体的な構造を定義し、子テンプレートが特定のコンテンツを挿入できる拡張ポイントを提供する契約として機能します。</p>
+<p>Django、Flask、Ruby on Railsなどの現代的なWebフレームワーク、およびJinja2、Handlebars、Twigなどのテンプレートエンジンは、組み込みの<a data-lb="1" href="/ja/glossary/Template-Hierarchy/" title="子テンプレートが親テンプレートからプロパティとレイアウトを継承する階層型テンプレートシステムで、開発者が一貫性のある保守しやすいウェブサイトを効率的に構築できるようにします。">テンプレート継承</a>システムを通じてベーステンプレートパターンを普及させてきました。これらのフレームワークは、子テンプレートがオーバーライドまたは拡張できるブロック、セクション、スロットをベーステンプレート内で定義するための洗練されたメカニズムを提供します。このパターンは、単純なHTMLテンプレートを超えて、React、Vue.js、Angularなどの現代的なJavaScriptフレームワークにおけるコンポーネントベースのアーキテクチャにまで進化しており、ベースコンポーネントが同様の基礎的な役割を果たしています。ベーステンプレートを理解することは、一貫したユーザーインターフェース、保守可能なコード構造、効率的な開発<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>を必要とするあらゆるプロジェクトに取り組む開発者にとって不可欠です。</p>
+<h2 id="テンプレート継承の中核概念">テンプレート継承の中核概念</h2>
+<p><strong>テンプレート階層</strong> - テンプレート間の親子関係を定義する組織構造であり、ベーステンプレートが最上位レベルに位置し、特化したテンプレートがそれらから継承します。この階層は複数レベルの深さを持つことができ、マスターベーステンプレートから継承しながら特定の機能を追加する中間テンプレートを可能にします。</p>
+<p><strong>ブロック定義</strong> - 子テンプレートがオーバーライドまたは拡張できるコンテンツのプレースホルダーとして機能する、ベーステンプレート内の名前付き<a data-lb="1" href="/ja/glossary/Section/" title="関連するコンテンツや情報をグループ化し、ドキュメント、ウェブサイト、アプリケーション全体で素材を論理的で管理しやすい部分に整理・構造化するためのコンテナ。">セクション</a>。ブロックは、全体的なテンプレート構造を維持しながらカスタマイズのメカニズムを提供し、可変コンテンツの一貫した配置を保証します。</p>
+<p><strong>コンテンツインジェクション</strong> - 子テンプレートが親テンプレートで定義されたブロックを埋めるまたは置き換えるために特定のコンテンツを提供するプロセス。このメカニズムにより、継承された要素を保持しながら、テンプレートのどの部分をカスタマイズするかを正確に制御できます。</p>
+<p><strong>テンプレート解決</strong> - 継承チェーンと命名規則に基づいて、適切なテンプレートファイルを検索してロードするためにテンプレートエンジンが使用するアルゴリズム。このプロセスは、テンプレートがどのように発見、コンパイル、正しい階層順序でレンダリングされるかを決定します。</p>
+<p><strong>コンテキスト継承</strong> - 親テンプレートから子テンプレートへの変数、関数、データの受け渡しであり、明示的な再定義なしに共有機能と情報がテンプレート階層全体で利用可能であることを保証します。</p>
+<p><strong>オーバーライドメカニズム</strong> - 子テンプレートが親テンプレートの動作を変更するために利用できる様々な方法であり、完全なブロック置換、コンテンツの追加または前置、特定の基準やコンテキストに基づく条件付きオーバーライドなどが含まれます。</p>
+<p><strong>テンプレート合成</strong> - 複数のベーステンプレートまたはテンプレートフラグメントを組み合わせて複雑なレイアウトを作成する高度なパターンであり、テンプレートシステム内でモジュラーデザインアプローチと再利用可能なコンポーネントライブラリを可能にします。</p>
+<h2 id="ベーステンプレートの動作原理">ベーステンプレートの動作原理</h2>
+<p>ベーステンプレートのワークフローは<strong>テンプレート定義</strong>から始まり、開発者がHTMLスケルトン、CSS参照、JavaScriptインクルード、可変コンテンツ用のプレースホルダーブロックを含む共通構造を持つマスターテンプレートファイルを作成します。このベーステンプレートは、全体的なページアーキテクチャを確立し、フレームワーク固有の構文を使用して名前付きブロックを定義します。</p>
+<p><strong>子テンプレート作成</strong>が続き、開発者はextendsまたは継承ディレクティブを使用してベーステンプレートとの継承関係を宣言する特化したテンプレートを作成します。これらの子テンプレートは、ベースと異なるコンテンツのみに焦点を当て、簡潔で保守可能なものとなります。</p>
+<p><strong>ブロックオーバーライド実装</strong>は、子テンプレートがベーステンプレートで宣言された特定のブロックのコンテンツを定義するときに発生します。テンプレートエンジンは、親テンプレートから継承された他のすべての要素を保持しながら、これらのブロックを子テンプレートのコンテンツで置き換えるまたは拡張します。</p>
+<p><strong>テンプレートコンパイル</strong>は、テンプレートエンジンがベーステンプレートから始まり、子テンプレートからのオーバーライドを適用して継承チェーンを処理するときに発生します。このコンパイルプロセスは、ベース構造と特化したコンテンツを組み合わせた最終的なテンプレートを作成します。</p>
+<p><strong>コンテキストデータバインディング</strong>は、コンパイルされたテンプレートがアプリケーション層からデータを受け取り、テンプレート階層全体でアクセス可能な変数、データベース結果、または計算値で<a data-lb="1" href="/ja/glossary/Template-Variable/" title="テンプレート内のプレースホルダーで、テンプレートが処理される際に実際のデータに自動的に置き換えられます。これにより、テンプレートを毎回書き直すことなく、パーソナライズされたコンテンツを作成できます。">動的コンテンツ</a>領域を埋めるときに行われます。</p>
+<p><strong>レンダリング実行</strong>は、提供されたコンテキストデータでコンパイルされたテンプレートを処理し、ブラウザやアプリケーションがエンドユーザーに表示できるHTML、XML、またはその他のマークアップ形式を生成することで、最終的な出力を生成します。</p>
+<p><strong>ワークフローの例</strong>: ブログアプリケーションには、ヘッダー、ナビゲーション、コンテンツエリア、フッターブロックを定義するベーステンプレートがあるかもしれません。記事ページはこのベースから継承し、ナビゲーションやブランディングなどのサイト全体の要素を維持しながら、コンテンツブロックのみを記事固有のマークアップでオーバーライドします。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>コードの再利用性</strong> - ベーステンプレートは共通要素を一元化することで重複を排除し、開発者が共有コンポーネントを一度書いて複数のページやビューで再利用できるようにし、開発時間と保守オーバーヘッドを大幅に削減します。</p>
+<p><strong>一貫したユーザーエクスペリエンス</strong> - 共通のベースから継承することで、すべてのページが統一されたスタイリング、ナビゲーションパターン、レイアウト構造を維持し、特定のページ機能に関係なく、ユーザーがアプリケーション全体で予測可能なインターフェースに遭遇することを保証します。</p>
+<p><strong>簡素化されたメンテナンス</strong> - 共通要素への変更はベーステンプレートでの更新のみを必要とし、個別ファイルの手動変更なしにすべての継承テンプレートに自動的に伝播し、不整合や更新漏れのリスクを軽減します。</p>
+<p><strong>開発サイクルの高速化</strong> - 開発者は共通のインターフェース要素を再作成するのではなく、ページ固有の機能に集中でき、機能開発を加速し、チームが新しい機能をより迅速に提供できるようにします。</p>
+<p><strong>スケーラビリティの向上</strong> - アプリケーションが成長するにつれて、テンプレート階層は既存のテンプレートを再構築することなく新しいページタイプとセクションに対応でき、進化する要件に適応する柔軟な基盤を提供します。</p>
+<p><strong>コード組織の改善</strong> - テンプレート継承は共有機能と特定機能の間に論理的な分離を作成し、元の開発者と新しいチームメンバーの両方にとってコードベースをナビゲート、理解、変更しやすくします。</p>
+<p><strong>テストオーバーヘッドの削減</strong> - ベーステンプレートでテストされた共通要素は、すべての子テンプレートで再テストする必要がなく、<a data-lb="1" href="/ja/glossary/Quality-Monitoring/" title="製品、サービス、またはプロセスを設定された基準に照らして継続的にチェックし、品質を確保し、問題を特定し、改善を促進する体系的なプロセス。">品質保証</a>の取り組みをページ固有の機能に集中させ、全体的なテスト時間を削減します。</p>
+<p><strong>バージョン管理の利点</strong> - ベーステンプレートへの変更は、複数のページに影響を与える明確で追跡可能な変更を作成し、更新の影響を理解しやすくし、必要に応じて変更をロールバックしやすくします。</p>
+<p><strong>パフォーマンス最適化</strong> - CSSやJavaScriptファイルなどの共有リソースをベーステンプレートレベルで最適化でき、すべての継承ページでロード時間とキャッシング効率を改善します。</p>
+<p><strong>デザインシステム統合</strong> - ベーステンプレートは、承認されたコンポーネント、色、タイポグラフィ、スペーシングの一貫した使用をアプリケーション全体で強制することで、デザインシステムの実装を自然にサポートします。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>Webアプリケーションレイアウト</strong> - ヘッダー、ナビゲーション、サイドバー、フッター要素が一定のままで、メインコンテンツエリアが特定のページ要件と<a data-lb="1" href="/ja/glossary/Audience-Engagement/" title="オーディエンスエンゲージメントとは、人々とブランドの間で生まれる積極的な参加と交流のことで、単に受動的に視聴するだけでなく、コンテンツを消費し、体験を共有し、関係性を構築することを指します。">ユーザーインタラクション</a>に基づいて変化するWebアプリケーションの一貫したページ構造を作成します。</p>
+<p><strong>コンテンツ管理システム</strong> - 異なるコンテンツタイプ(記事、製品ページ、ランディングページ)が共通のブランディングとナビゲーションを共有しながら、特化したコンテンツ形式を表示する<a data-lb="1" href="/ja/glossary/CMS--Content-Management-System-/" title="コンテンツ管理システム(CMS)の包括的ガイド - デジタルコンテンツ管理のための機能、メリット、実装戦略、ベストプラクティスを解説します。">CMSプラットフォーム</a>のテンプレート階層を実装します。</p>
+<p><strong>Eコマースプラットフォーム</strong> - ベーステンプレートがショッピングカート機能、ユーザーアカウントアクセス、<a data-lb="1" href="/ja/glossary/Site-Navigation/" title="サイトナビゲーションシステムの包括的なガイド。デザイン原則、実装戦略、最適なユーザーエクスペリエンスのためのベストプラクティスを解説します。">サイトナビゲーション</a>を提供し、製品固有のテンプレートが詳細な製品情報と購入ワークフローを処理する<a data-lb="1" href="/ja/glossary/Product-Catalog/" title="顧客が製品を見つけて購入するのを支援し、企業がすべての販売チャネルで製品情報を整理して提示するのに役立つ、製品情報のデジタルコレクションです。">製品カタログ</a>インターフェースを開発します。</p>
+<p><strong>企業Webサイト</strong> - ベーステンプレートが部門や<a data-lb="1" href="/ja/glossary/Content-Types/" title="デジタルシステムにおけるコンテンツタイプの包括的なガイド。分類、実装、構造化されたコンテンツ管理のベストプラクティスを網羅しています。">コンテンツタイプ</a>に関係なく、すべてのページに統一されたヘッダーブランディング、連絡先情報、法的コンプライアンス要素が表示されることを保証する企業Webサイト全体で<a data-lb="1" href="/ja/glossary/Style-Guide/" title="スタイルガイドの包括的なガイド:組織全体で一貫したブランディング、ライティング基準、デザイン原則を実現するための必須ドキュメント。">ブランドの一貫性</a>を確立します。</p>
+<p><strong>ドキュメントシステム</strong> - ベーステンプレートが検索機能、ナビゲーション階層、一貫したフォーマットを提供し、個別のページが特定の技術コンテンツとコード例を含む技術ドキュメントサイトを作成します。</p>
+<p><strong>ブログプラットフォーム</strong> - ベーステンプレートが著者情報、<a data-lb="1" href="/ja/glossary/Instagram/" title="Instagramは、写真と動画の共有に特化したビジュアル型ソーシャルメディアプラットフォームです。機能、ビジネスツール、インフルエンサーマーケティング、オーディエンス構築について学びましょう。">ソーシャルメディア</a>リンク、コメントシステムなどのサイト全体の要素を処理し、投稿テンプレートが記事コンテンツと<a data-lb="1" href="/ja/glossary/Meta/" title="メタとは、他の情報を説明する情報のことで、検索エンジンやソーシャルプラットフォームがウェブコンテンツを効果的に理解し整理するのに役立ちます。">メタデータ</a>表示に焦点を当てるブログテーマを実装します。</p>
+<p><strong>ダッシュボードアプリケーション</strong> - ベーステンプレートがユーザー認証ステータス、ナビゲーションメニュー、システム通知を提供し、特定の<a data-lb="1" href="/ja/glossary/dashboard/" title="ダッシュボードとは、複数のソースから主要なデータ、KPI、トレンドを表示するビジュアルインターフェースです。迅速な監視、分析、情報に基づいた意思決定を可能にします。">ダッシュボード</a>ページが関連するメトリクスとコントロールを表示する管理インターフェースを構築します。</p>
+<p><strong>教育プラットフォーム</strong> - ベーステンプレートが学生の進捗追跡、コースナビゲーション、機関のブランディングを処理し、レッスンテンプレートが特定の教育コンテンツとインタラクティブ要素を提示する<a data-lb="1" href="/ja/glossary/Training-Resources/" title="トレーニングリソースとは、人々が新しいスキルや知識を習得するために使用されるツール、教材、プラットフォームのことです。オンラインコースや動画から、インタラクティブなシミュレーション、パーソナライズされた学習システムまで、幅広い範囲にわたります。">学習管理システム</a>を開発します。</p>
+<p><strong>マルチテナントアプリケーション</strong> - ベーステンプレートがコア機能とブランディングカスタマイズポイントを提供し、テナント固有のテンプレートが組織固有の機能とスタイリング設定を実装する<a data-lb="1" href="/ja/glossary/cloud-service/" title="クラウドサービスとは、サードパーティベンダーがインターネット経由で提供するITリソースです。SaaS、PaaS、IaaS、FaaS、XaaSモデルの特徴、メリット、ユースケースを理解しましょう。">SaaS</a>プラットフォームを作成します。</p>
+<p><strong>モバイルアプリケーションビュー</strong> - ベーステンプレートがナビゲーションパターン、ステータスインジケーター、共通UI要素を確立し、特定の画面テンプレートが機能固有のインタラクションとコンテンツ表示を処理するモバイルアプリインターフェースを設計します。</p>
+<h2 id="テンプレート継承の比較">テンプレート継承の比較</h2>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>単一継承</th>
+<th>多重継承</th>
+<th>合成ベース</th>
+<th>コンポーネントベース</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>複雑性</strong></td>
+<td>低 - シンプルな親子関係</td>
+<td>高 - 複雑な依存関係管理</td>
+<td>中 - モジュラーだが構造化</td>
+<td>中 - コンポーネントアーキテクチャが必要</td>
+</tr>
+<tr>
+<td><strong>柔軟性</strong></td>
+<td>限定的 - 単一の継承チェーン</td>
+<td>高 - 複数の親テンプレート</td>
+<td>高 - コンポーネントの組み合わせ</td>
+<td>非常に高 - 動的コンポーネント合成</td>
+</tr>
+<tr>
+<td><strong>メンテナンス</strong></td>
+<td>容易 - 明確な階層</td>
+<td>困難 - 潜在的な競合</td>
+<td>中程度 - コンポーネント依存関係</td>
+<td>容易 - 分離されたコンポーネント更新</td>
+</tr>
+<tr>
+<td><strong>パフォーマンス</strong></td>
+<td>高速 - 最小限の処理オーバーヘッド</td>
+<td>低速 - 複数のテンプレート解決</td>
+<td>高速 - 効率的なコンポーネントロード</td>
+<td>可変 - コンポーネントの複雑性に依存</td>
+</tr>
+<tr>
+<td><strong>学習曲線</strong></td>
+<td>緩やか - 直感的な概念</td>
+<td>急 - 複雑な継承ルール</td>
+<td>中程度 - 合成の理解が必要</td>
+<td>中程度 - コンポーネントライフサイクルの知識</td>
+</tr>
+<tr>
+<td><strong>使用例</strong></td>
+<td>シンプルなWebサイト、基本的なアプリケーション</td>
+<td>複雑なエンタープライズシステム</td>
+<td>現代的なWebアプリケーション</td>
+<td>React/Vue/Angularアプリケーション</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>テンプレート階層の複雑性</strong> - 深い継承チェーンは理解とデバッグが困難になる可能性があり、特に複数レベルのテンプレートが同じブロックをオーバーライドする場合、特定のコンテンツがどこから来ているかを追跡することが困難になります。</p>
+<p><strong>パフォーマンスオーバーヘッド</strong> - テンプレート継承は解決とコンパイルのための追加処理時間を必要とし、特に最終出力をレンダリングする前に複数のテンプレートを解析してマージする必要がある複雑な階層では顕著です。</p>
+<p><strong>デバッグの困難</strong> - 継承されたテンプレートのエラーは特定と修正が困難な場合があり、最終的にレンダリングされた出力が複数のテンプレートファイルを組み合わせるため、問題のあるコードを含むテンプレートを特定することが難しくなります。</p>
+<p><strong>循環依存のリスク</strong> - 設計が不十分なテンプレート階層は、テンプレートが互いに継承しようとする循環参照を作成し、診断が困難な無限ループとアプリケーション障害を引き起こす可能性があります。</p>
+<p><strong>コンテキスト変数の競合</strong> - 継承チェーン内の複数のテンプレートが同じ名前の変数を定義すると、予期しないオーバーライドが発生し、不正確なデータ表示やアプリケーションロジックの失敗につながる可能性があります。</p>
+<p><strong>フレームワークロックイン</strong> - 継承のための特定のテンプレートエンジン機能への強い依存は、大幅なリファクタリング作業なしに異なるフレームワークやテンプレートシステムにアプリケーションを移行することを困難にする可能性があります。</p>
+<p><strong>テストの複雑性</strong> - 継承されたテンプレートの単体テストには、継承チェーン全体の慎重なセットアップが必要であり、テンプレート階層が変更されたときにテストケースがより複雑で潜在的に脆弱になります。</p>
+<p><strong>ドキュメントオーバーヘッド</strong> - テンプレート継承関係、ブロック定義、オーバーライド動作に関する明確なドキュメントを維持するには継続的な努力が必要であり、システムが進化するにつれて古くなる可能性があります。</p>
+<p><strong>バージョン管理の競合</strong> - ベーステンプレートへの変更は、複数の開発者が継承されたテンプレートを同時に変更するときにマージ競合を作成する可能性があり、慎重な調整と競合解決戦略が必要です。</p>
+<p><strong>キャッシングの複雑化</strong> - テンプレート継承はキャッシング戦略を複雑にする可能性があり、ベーステンプレートへの変更がすべての継承テンプレートのキャッシュバージョンを無効にし、更新中にアプリケーションのパフォーマンスに影響を与える可能性があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>明確な命名規則の確立</strong> - テンプレートとブロックに一貫性のある説明的な名前を使用し、その目的と継承関係を明確に示すことで、すべてのチームメンバーにとってコードベースをナビゲートしやすく理解しやすくします。</p>
+<p><strong>継承の深さを制限</strong> - テンプレート階層を浅く保ち(通常は最大2〜3レベル)、可読性とパフォーマンスを維持し、デバッグと保守が困難になる過度に複雑な継承チェーンを避けます。</p>
+<p><strong>ブロックの目的を文書化</strong> - ベーステンプレートの各ブロックに明確なドキュメントを提供し、その意図された使用、期待されるコンテンツタイプ、子テンプレート実装の制約や要件を説明します。</p>
+<p><strong>セマンティックなブロック名を使用</strong> - 視覚的な外観ではなくコンテンツの目的を説明するブロック名を選択し、基礎となる構造に影響を与えることなくデザイン要件が変更されたときにテンプレートが保守可能なままであることを保証します。</p>
+<p><strong>グレースフルフォールバックの実装</strong> - 子テンプレートがオーバーライドしない可能性のあるブロックに対して、ベーステンプレートに適切なデフォルトコンテンツを設計し、継承が不完全または欠落している場合でもページが正しくレンダリングされることを保証します。</p>
+<p><strong>関心事の適切な分離</strong> - レイアウト構造をベーステンプレートに保持し、コンテンツ固有のロジックを子テンプレートに配置し、プレゼンテーションフレームワークと特定の機能の間の明確な分離を維持します。</p>
+<p><strong>テンプレートロードの最適化</strong> - 効率的なテンプレートキャッシングとロード戦略を実装して、特に複雑なテンプレート階層を持つ高トラフィックアプリケーションにおいて、継承解決のパフォーマンス影響を最小限に抑えます。</p>
+<p><strong>テンプレート依存関係のバージョン管理</strong> - <a data-lb="1" href="/ja/glossary/Version-Control/" title="バージョン管理システムの包括的なガイド。Git、SVN、ワークフロー、ベストプラクティス、ソフトウェア開発チームのための実装戦略をカバーしています。">バージョン管理</a>システムでテンプレート間の関係を追跡し、ベーステンプレートへの変更がデプロイ前にすべての継承テンプレートに対して適切にテストされることを保証します。</p>
+<p><strong>テンプレートスタイルガイドの作成</strong> - フォーマット規則、コメント要件、開発チーム全体で一貫性を促進する継承パターンを含む、テンプレート開発のコーディング標準を確立します。</p>
+<p><strong>テンプレートテスト戦略の実装</strong> - 個別のテンプレート機能と継承動作の両方を検証する包括的なテストアプローチを開発し、ベーステンプレートへの変更が依存テンプレートを壊さないことを保証します。</p>
+<h2 id="高度なテクニック">高度なテクニック</h2>
+<p><strong>動的テンプレート選択</strong> - <a data-lb="1" href="/ja/glossary/user-roles/" title="ユーザーロールは、ソフトウェアにおける権限とアクセス権を定義するもので、AIチャットボットや自動化システムにおけるアクセス制御、セキュリティ、運用効率にとって重要です。RBAC、一般的なロール、ベストプラクティスについて学びましょう。">ユーザーロール</a>、デバイスタイプ、またはアプリケーションコンテキストに基づいて適切なベーステンプレートを選択するランタイムロジックを実装し、静的な宣言ではなく動的な条件に基づいて柔軟なテンプレート継承を可能にします。</p>
+<p><strong>テンプレート合成パターン</strong> - 深い継承階層なしに複雑なレイアウトを作成するために複数のテンプレートフラグメントまたはミックスインを組み合わせ、継承よりも合成を使用してより大きな柔軟性と保守性を実現します。</p>
+<p><strong>条件付きブロックレンダリング</strong> - コンテキスト変数、ユーザー権限、または機能フラグに基づいてブロックを条件付きで含めるまたは除外できる高度なテンプレート技術であり、継承構造内で動的なテンプレート動作を提供します。</p>
+<p><strong>テンプレート前処理</strong> - 継承チェーンを事前コンパイルし、すべてのブロックオーバーライドを解決し、本番デプロイ用に最適化されたテンプレートを生成するビルド時テンプレート最適化を実装し、ランタイムパフォーマンスを改善します。</p>
+<p><strong>マルチテーマ継承</strong> - 並列継承階層を通じて複数の視覚テーマをサポートするテンプレートシステムを作成し、一貫した機能を維持しながらアプリケーションが異なるデザインシステム間で切り替えることを可能にします。</p>
+<p><strong>テンプレート依存性注入</strong> - テンプレートが特定のコンポーネントまたはサービスへの依存関係を宣言できるようにする高度なパターンであり、より洗練されたテンプレート合成を可能にし、テンプレート層間の結合を減らします。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>コンポーネントベースの進化</strong> - 現代的なフレームワークにおけるコンポーネントベースのアーキテクチャへのシフトは、テンプレート継承パターンに影響を与えており、ベーステンプレートがより細かい継承と合成オプションを提供する再利用可能なコンポーネントライブラリに進化しています。</p>
+<p><strong>AI支援テンプレート生成</strong> - 機械学習ツールは、既存のテンプレートパターンを分析し、<a data-lb="1" href="/ja/glossary/Content-Audit/" title="コンテンツ監査の包括的ガイド:デジタルコンテンツのパフォーマンスを最適化するための体系的な評価プロセス、方法論、ツール、ベストプラクティス。">コンテンツ分析</a>とデザインシステム要件に基づいてベーステンプレートを自動生成したり、継承構造を提案したりし始めています。</p>
+<p><strong>パフォーマンス最適化の進歩</strong> - テンプレート継承のランタイムオーバーヘッドを最小限に抑えるための新しいコンパイル技術とキャッシング戦略が開発されており、事前コンパイルとインテリジェントなテンプレートバンドリングアプローチが含まれます。</p>
+<p><strong>クロスプラットフォームテンプレートシステム</strong> - Web、モバイル、デスクトッププラットフォーム全体で機能するテンプレート継承パターンを可能にする新しいフレームワークが登場しており、開発者が複数のデプロイメントターゲット全体で一貫したインターフェースを維持できるようにします。</p>
+<p><strong>リアルタイムテンプレート更新</strong> - ベーステンプレートの変更が完全な再デプロイを必要とせずにライブアプリケーションに伝播できるようにする高度なシステムが開発されており、動的なデザイン更新と<a data-lb="1" href="/ja/glossary/A-B-Testing/" title="A/Bテストの方法論、実装戦略、統計分析、およびデータ駆動型の意思決定のための最適化技術に関する包括的なガイド。">A/Bテスト</a><a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>を可能にします。</p>
+<p><strong>宣言的テンプレート設定</strong> - 将来のテンプレートシステムは、継承関係とブロック定義が埋め込まれたテンプレート構文ではなく外部ファイルを通じて設定される、より宣言的なアプローチに移行する可能性があり、保守性とツールサポートが向上します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Django Software Foundation. “Template Inheritance - Django Documentation.” Django Project, 2024. <a href="https://docs.djangoproject.com/en/stable/ref/templates/language/#template-inheritance" rel="nofollow noopener noreferrer" target="_blank">https://docs.djangoproject.com/en/stable/ref/templates/language/#template-inheritance</a></p>
+</li>
+<li>
+<p>Pallets Projects. “Template Inheritance - Jinja2 Documentation.” Jinja2 Template Engine, 2024. <a href="https://jinja.palletsprojects.com/en/3.1.x/templates/#template-inheritance" rel="nofollow noopener noreferrer" target="_blank">https://jinja.palletsprojects.com/en/3.1.x/templates/#template-inheritance</a></p>
+</li>
+<li>
+<p>Ruby on Rails Team. “Layouts and Rendering in Rails.” Ruby on Rails Guides, 2024. <a href="https://guides.rubyonrails.org/layouts_and_rendering.html" rel="nofollow noopener noreferrer" target="_blank">https://guides.rubyonrails.org/layouts_and_rendering.html</a></p>
+</li>
+<li>
+<p>Mozilla Developer Network. “Template Inheritance Patterns.” MDN Web Docs, 2024. <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Template_inheritance" rel="nofollow noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Guide/Template_inheritance</a></p>
+</li>
+<li>
+<p>Gamma, Erich, et al. “Design Patterns: Elements of Reusable Object-Oriented Software.” Addison-Wesley Professional, 1994.</p>
+</li>
+<li>
+<p>Fowler, Martin. “Patterns of Enterprise Application Architecture.” Addison-Wesley Professional, 2002.</p>
+</li>
+<li>
+<p>Freeman, Eric, et al. “Head First Design Patterns.” O’Reilly Media, 2020.</p>
+</li>
+<li>
+<p>Hunt, Andrew, and David Thomas. “The Pragmatic Programmer: Your Journey to Mastery.” Addison-Wesley Professional, 2019.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Template-Hierarchy/">
+                    テンプレート階層
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    子テンプレートが親テンプレートからプロパティとレイアウトを継承する階層型テンプレートシステムで、開発者が一貫性のある保守しやすいウェブサイトを効率的に構築できるようにします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Template-Hierarchy/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Partial-Template/">
+                    パーシャルテンプレート
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Webページテンプレートの一部を含む再利用可能なコードコンポーネントで、他のテンプレートに挿入することでコードの重複を避け、Webサイトを整理された状態に保つように設計されています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Partial-Template/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Middleware/">
+                    ミドルウェア
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Middleware/" title="ミドルウェアの包括的ガイド - アプリケーション、サービス、システムを接続し、シームレスな通信と統合を実現するソフトウェア層について解説します。">ミドルウェア</a>の包括的ガイド - アプリケーション、サービス、システムを接続し、シームレスな<a data-lb="1" href="/ja/glossary/DTMF--Dual-Tone-Multi-Frequency-/" title="DTMF(デュアルトーン多重周波数)は、キーパッド押下時に発生する固有の音声トーンを使用してコマンドを解釈し、通話をルーティングし、自動メニューナビゲーション、リモートコントロール、および電話ネットワークやデジタルプラットフォームにおける安全なデータ入力を可能にする通信信号システムです。">通信</a>と統合を実現するソフトウェア層について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Middleware/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Multi-Tenancy/">
+                    マルチテナンシー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Multi-Tenancy/" title="マルチテナンシーは、単一のアプリケーションインスタンスが複数のテナントにサービスを提供するソフトウェアアーキテクチャです。インフラストラクチャを共有しながら、データを論理的に分離します。SaaSやクラウドプラットフォームに不可欠な技術です。">マルチテナンシー</a>は、単一のアプリケーションインスタンスが複数のテナントにサービスを提供するソフトウェアアーキテクチャです。インフラストラクチャを共有しながら、データを論理的に分離します。SaaSやクラ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Multi-Tenancy/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/base-template/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

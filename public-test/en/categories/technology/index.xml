@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technology on SmartWeb</title>
+    <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/categories/technology/</link>
+    <description>Recent content in Technology on SmartWeb</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Nov 2025 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Chatbot Types and Selection Guide | Comprehensive Analysis of 5 Types and Implementation Points</title>
+      <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-chatbot-types-guide/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0900</pubDate>
+      <guid>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-chatbot-types-guide/</guid>
+      <description>&lt;h2 id=&#34;ai-chatbot-fundamentals&#34;&gt;AI Chatbot Fundamentals&lt;/h2&gt;&#xA;&lt;p&gt;An &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/AI-chatbot/&#34;&gt;AI chatbot&lt;/a&gt; is a program that uses &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/artificial-intelligence/&#34; title=&#34;Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions.&#34;&gt;artificial intelligence&lt;/a&gt; to communicate with customers using natural language. Today, they are used in various scenarios including &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/customer-support/&#34; title=&#34;Customer support is a team and set of tools that help customers solve problems, answer questions, and get the most value from a product or service.&#34;&gt;customer support&lt;/a&gt;, information guidance, and business efficiency improvements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Complete Guide to AI Language Model Evaluation: Japanese Benchmarks and Practical Implementation</title>
+      <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-evaluation-japanese-benchmarks/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0900</pubDate>
+      <guid>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-evaluation-japanese-benchmarks/</guid>
+      <description>&lt;p&gt;With the rapid advancement of &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/artificial-intelligence/&#34; title=&#34;Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions.&#34;&gt;AI&lt;/a&gt; technology, methods for evaluating &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/large-language-models/&#34; title=&#34;Large Language Models (LLMs) are AI systems trained on vast amounts of text data to understand and generate human language, powering applications like chatbots, translation, and content creation.&#34;&gt;large language models&lt;/a&gt; (&lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/large-language-models/&#34; title=&#34;Large Language Models (LLMs) are AI systems trained on vast amounts of text data to understand and generate human language, powering applications like chatbots, translation, and content creation.&#34;&gt;LLMs&lt;/a&gt;) continue to evolve daily. This article comprehensively explains cutting-edge evaluation techniques, challenges specific to Japanese-language models, and practical implementation strategies in language accessible to business leaders. Whether you&amp;rsquo;re considering &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/artificial-intelligence/&#34; title=&#34;Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions.&#34;&gt;AI&lt;/a&gt; building tools like &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/FlowHunt/&#34;&gt;FlowHunt&lt;/a&gt;, this serves as an invaluable reference.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)</title>
+      <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/introduction-to-rag/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0900</pubDate>
+      <guid>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/introduction-to-rag/</guid>
+      <description>&lt;h2 id=&#34;basics-and-applications-of-rag-retrieval-augmented-generation&#34;&gt;Basics and Applications of RAG (Retrieval-Augmented Generation)&lt;/h2&gt;&#xA;&lt;h3 id=&#34;basic-structure-of-rag&#34;&gt;Basic Structure of RAG&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/RAG/&#34;&gt;RAG (Retrieval-Augmented Generation)&lt;/a&gt; is a mechanism that combines &amp;ldquo;retrieval&amp;rdquo; and &amp;ldquo;generation&amp;rdquo;. Traditional &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/artificial-intelligence/&#34; title=&#34;Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions.&#34;&gt;AI&lt;/a&gt; created text and responses using only learned knowledge. &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/RAG/&#34;&gt;RAG&lt;/a&gt; searches for necessary information from external sources like databases when questions arrive, then creates answers based on that information.&lt;/p&gt;&#xA;&lt;p&gt;First, &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/artificial-intelligence/&#34; title=&#34;Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions.&#34;&gt;AI&lt;/a&gt; understands the question content and retrieves relevant information from search engines or specific databases. Next, using the found information, it creates answers in natural text. This method enables AI to immediately update knowledge and quickly reflect new information.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

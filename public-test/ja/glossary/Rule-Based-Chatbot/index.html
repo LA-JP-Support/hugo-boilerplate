@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ルールベースチャットボット | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Rule-Based-Chatbot/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Rule-Based-Chatbot/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Rule-Based-Chatbot/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Rule-Based-Chatbot/" hreflang="x-default" rel="alternate"/>
+<meta content="ルールベースチャットボットは、事前に定義されたルールとスクリプトに従ってユーザーと対話し、AIによる学習を行わずに特定のキーワードやボタン選択に応答します。" name="description"/>
+<meta content="ルールベースチャットボット, チャットボット, デシジョンツリー, 自動化, カスタマーサポート" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Rule-Based-Chatbot/" property="og:url"/>
+<meta content="ルールベースチャットボット | SmartWeb" property="og:title"/>
+<meta content="ルールベースチャットボットは、事前に定義されたルールとスクリプトに従ってユーザーと対話し、AIによる学習を行わずに特定のキーワードやボタン選択に応答します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Rule-Based-Chatbot/" name="twitter:url"/>
+<meta content="ルールベースチャットボット | SmartWeb" name="twitter:title"/>
+<meta content="ルールベースチャットボットは、事前に定義されたルールとスクリプトに従ってユーザーと対話し、AIによる学習を行わずに特定のキーワードやボタン選択に応答します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ルールベースチャットボット</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ルールベースチャットボット
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Rule-Based Chatbot
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ルールベースチャットボットは、事前に定義されたルールとスクリプトに従ってユーザーと対話し、AIによる学習を行わずに特定のキーワードやボタン選択に応答します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ルールベースチャットボット
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                チャットボット
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                デシジョンツリー
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                自動化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                カスタマーサポート
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ルールベースチャットボットとは">ルールベースチャットボットとは?</h2>
+<p><a data-lb="1" href="/ja/glossary/Rule-Based-Chatbot/" title="ルールベースチャットボットは、事前に定義されたルールとスクリプトに従ってユーザーと対話し、AIによる学習を行わずに特定のキーワードやボタン選択に応答します。">ルールベースチャットボット</a>とは、事前定義されたルール、スクリプト、または決定木に従ってユーザーと対話する会話型ソフトウェアです。<a data-lb="1" href="/ja/glossary/Autonomous-Systems/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>や<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>を使用するのではなく、固定された条件ロジックを通じて特定のキーワード、フレーズ、またはボタン選択に応答します。これらのボットは即興で対応したり、ユーザーデータから学習したりすることはできません。その動作は完全に初期プログラミングによって決定されます。</p>
+<p><strong>別名:</strong> 決定木ボット、スクリプトボット、メニューベースボット、キーワード<a data-lb="1" href="/ja/glossary/Quick-Replies/" title="クイックリプライは、チャットインターフェースに表示される一時的で選択可能なボタンで、事前定義されたオプションを提供します。選択後に消えるため、画面の煩雑さを防ぎ、会話の流れを維持します。">チャットボット</a></p>
+<p><strong>主な特徴:</strong></p>
+<ul>
+<li>「真の」AIではない—インテリジェントな理解なしにシンプルな<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>を実行</li>
+<li>すべてのインタラクションが事前にマッピングされた予測可能な動作</li>
+<li>ユーザーがプログラムされたパスから逸脱した場合、一般的な応答または人間への<a data-lb="1" href="/ja/glossary/escalation/" title="カスタマーサポート、IT、AIチャットボットにおけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な問題解決をどのように効率化するかを解説します。">エスカレーション</a>にフォールバック</li>
+<li>動作の変更には手動更新が必要</li>
+</ul>
+<h2 id="ルールベースチャットボットの仕組み">ルールベースチャットボットの仕組み</h2>
+<p>ルールベースチャットボットは、シンプルなコンセプトに基づいたインタラクティブなフローチャートのように動作します:「ユーザーがXと言ったら、Yと応答する」。すべてのユーザー入力は、対応する応答をトリガーするルールにマッピングされます。</p>
+<h3 id="コアコンポーネント">コアコンポーネント</h3>
+<p><strong>トリガー:</strong> ボットの応答を促す特定の単語、フレーズ、またはアクション(例:「注文状況」が注文検索フローをトリガー)</p>
+<p><strong>ルール/ロジック:</strong> トリガーに対する応答を定義する条件文(if/thenロジック)</p>
+<p><strong>事前定義された応答:</strong> トリガーに応じて配信されるスクリプト化された回答(テキスト、リンク、ボタン)</p>
+<p><strong>フォールバック:</strong> ボットがユーザー入力をどのルールにも一致させられない場合のデフォルト応答—通常は丁寧なエラーメッセージまたは人間へのエスカレーション提案</p>
+<p><strong>学習なし:</strong> ボットの機能は時間とともに進化しません。すべての変更には手動介入が必要</p>
+<h3 id="インタラクションフローの例">インタラクションフローの例</h3>
+<p><strong>オンラインストアチャットボット:</strong></p>
+<ol>
+<li>ユーザーがチャットを開く → ボット表示:「こんにちは!どのようにお手伝いできますか?(注文状況、返品、<a data-lb="1" href="/ja/glossary/FAQ/" title="デジタルコミュニケーション、カスタマーサポート、AIチャットボットの基盤となるFAQ(よくある質問)について解説します。その定義、目的、メリット、実装方法を学びましょう。">FAQ</a>)」</li>
+<li>ユーザーが「注文状況」と入力 → ボット:「注文番号を入力してください」</li>
+<li>ユーザーが注文番号を入力 → ボットがデータベースで注文を検索し、追跡情報を返す</li>
+<li>ユーザーがスクリプトにない製品について質問 → ボット:「申し訳ございませんが、それについてはお手伝いできません。人間のエージェントとお話しされますか?」</li>
+</ol>
+<p>フォローアップやユーザーの脱線を含む各ステップは、事前にマッピングされています。即興や動的な理解は発生しません—ユーザーの意図が予測されていない場合、ボットは支援できません。</p>
+<h3 id="決定木の視覚化">決定木の視覚化</h3>
+<p>ルールベースチャットボットは、各ボックスが可能なユーザー入力またはボットの応答を表し、矢印が選択に基づく会話の方向を示し、行き止まりの分岐がフォールバックメッセージまたはエスカレーションにループする分岐フローチャートとして最もよく視覚化されます。</p>
+<h2 id="ルールベースチャットボットの種類">ルールベースチャットボットの種類</h2>
+<h3 id="ボタンベースメニューチャットボット">ボタンベース(メニュー)チャットボット</h3>
+<p>ユーザーはクリック可能なボタンまたはメニューを通じて対話し、各選択が新しいオプションまたは情報をトリガーします。シンプルでトランザクション的なインタラクション—予約、営業時間、サポートトピックの選択に最適です。</p>
+<p><strong>例:</strong> メニュー駆動の予約フローを持つレストラン予約ボット</p>
+<h3 id="キーワードベースチャットボット">キーワードベースチャットボット</h3>
+<p>ボットはユーザーの入力テキスト内の特定のキーワードまたはフレーズを聞き取り、入力をルールに一致させて定型応答を配信します。ボタンベースのボットよりもわずかに柔軟ですが、認識された単語に限定されます。</p>
+<p><strong>キーワードの例:</strong> 「返金」、「返品ポリシー」、「営業時間」、「配送」</p>
+<h3 id="データ収集チャットボット">データ収集チャットボット</h3>
+<p><a data-lb="1" href="/ja/glossary/Lead-Management/" title="見込み顧客の最初の関心から購入に至るまでを追跡し、育成するシステムです。営業チームが見込み客を効率的に購入者へと転換することを支援します。">リード生成</a>、調査、予約スケジューリングのための質問シリーズとして提示されるフォームを通じてユーザーをガイドします。多くの場合、ボタンとテキスト入力ロジックを組み合わせます。</p>
+<p><strong>使用例:</strong> 連絡先フォーム収集、資格審査アンケート、調査回答</p>
+<h3 id="決定木チャットボット">決定木チャットボット</h3>
+<p>視覚的なドラッグアンドドロップエディターで作成されることが多い複雑な分岐会話フロー。各ユーザーの回答が利用可能なオプションを絞り込み、解決に導きます。<a data-lb="1" href="/ja/glossary/customer-support/" title="カスタマーサポート業務、その重要性、種類、チャネル、そしてAIと自動化の役割について解説します。効果的なカスタマーサポートのためのベストプラクティス、チーム構成、主要指標を学びましょう。">カスタマーサポート</a>とトラブルシューティングで一般的です。</p>
+<h3 id="クイズアンケートチャットボット">クイズ/アンケートチャットボット</h3>
+<p>インタラクティブな調査、クイズ、または製品推奨に使用されます。通常、ボタンベースまたはシンプルなテキストマッチングです。</p>
+<p><strong>例:</strong> SaaS/B2Bウェブサイトでのリード資格審査クイズ</p>
+<h2 id="技術的実装">技術的実装</h2>
+<h3 id="パターンマッチングと条件ロジック">パターンマッチングと条件ロジック</h3>
+<p><strong>パターンマッチング:</strong> ボットがユーザー入力を事前に書かれたパターン(多くの場合正規表現)と比較</p>
+<p><strong>If/Then/Elseロジック:</strong> 認識された各パターンに対して、ボットが関連する応答を返す</p>
+<p><strong>ロジックの例:</strong> 「入力が’hi|hello|hey’に一致する場合、‘こんにちは!今日はどのようにお手伝いできますか?‘と応答」</p>
+<p>パターンマッチングがコアです—すべてのルールベースボットは最終的に入力/出力ペアで構成され、switch/case文、辞書、またはルックアップテーブルとして実装されます。</p>
+<h3 id="シンプルなpython実装">シンプルなPython実装</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">import</span> nltk
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">from</span> nltk.chat.util <span style="color:#fff;font-weight:bold">import</span> Chat, reflections
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pairs = [
+</span></span><span style="display:flex;"><span>    [<span style="color:#0ff;font-weight:bold">r</span><span style="color:#0ff;font-weight:bold">"hi|hello|hey"</span>, [<span style="color:#0ff;font-weight:bold">"Hello! How can I help you today?"</span>]],
+</span></span><span style="display:flex;"><span>    [<span style="color:#0ff;font-weight:bold">r</span><span style="color:#0ff;font-weight:bold">"my name is (.*)"</span>, [<span style="color:#0ff;font-weight:bold">"Hello %1! How can I assist you today?"</span>]],
+</span></span><span style="display:flex;"><span>    [<span style="color:#0ff;font-weight:bold">r</span><span style="color:#0ff;font-weight:bold">"(.*) your name?"</span>, [<span style="color:#0ff;font-weight:bold">"I am your friendly chatbot!"</span>]],
+</span></span><span style="display:flex;"><span>    [<span style="color:#0ff;font-weight:bold">r</span><span style="color:#0ff;font-weight:bold">"how are you?"</span>, [<span style="color:#0ff;font-weight:bold">"I'm just a bot, but I'm doing well. How about you?"</span>]],
+</span></span><span style="display:flex;"><span>    [<span style="color:#0ff;font-weight:bold">r</span><span style="color:#0ff;font-weight:bold">"bye|exit"</span>, [<span style="color:#0ff;font-weight:bold">"Goodbye! Have a great day!"</span>]],
+</span></span><span style="display:flex;"><span>    [<span style="color:#0ff;font-weight:bold">r</span><span style="color:#0ff;font-weight:bold">"(.*)"</span>, [<span style="color:#0ff;font-weight:bold">"I'm sorry, I didn't understand that. Could you rephrase?"</span>]]
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">class</span> RuleBasedChatbot:
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">def</span> __init__(<span style="color:#fff;font-weight:bold">self</span>, pairs):
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">self</span>.chat = Chat(pairs, reflections)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">def</span> respond(<span style="color:#fff;font-weight:bold">self</span>, user_input):
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">self</span>.chat.respond(user_input)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chatbot = RuleBasedChatbot(pairs)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">def</span> chat_with_bot():
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">"Hello, I am your chatbot! Type 'exit' to end the conversation."</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">while</span> <span style="color:#fff;font-weight:bold">True</span>:
+</span></span><span style="display:flex;"><span>        user_input = <span style="color:#fff;font-weight:bold">input</span>(<span style="color:#0ff;font-weight:bold">"You: "</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">if</span> user_input.lower() == <span style="color:#0ff;font-weight:bold">'exit'</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">"Chatbot: Goodbye! Have a nice day!"</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#fff;font-weight:bold">break</span>
+</span></span><span style="display:flex;"><span>        response = chatbot.respond(user_input)
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">f</span><span style="color:#0ff;font-weight:bold">"Chatbot: </span><span style="color:#0ff;font-weight:bold">{</span>response<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">"</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chat_with_bot()
+</span></span></code></pre></div><h3 id="開発のベストプラクティス">開発のベストプラクティス</h3>
+<ul>
+<li>明確で保守可能なコードまたは視覚的なフローエディターを使用してルールを整理</li>
+<li>合理的な会話パスをマッピングしてユーザー入力を予測</li>
+<li>スペルのバリエーションをカバーするパターンマッチングに正規表現を使用</li>
+<li>認識されない入力に対するデフォルト応答で堅牢なフォールバックを実装</li>
+<li>人間のエージェントへの引き継ぎを可能にするエスカレーションを計画</li>
+<li>実際の会話をシミュレートして広範囲にテストし、ルールを調整</li>
+</ul>
+<h2 id="ルールベースチャットボットの利点">ルールベースチャットボットの利点</h2>
+<p><strong>実装が簡単で迅速:</strong> 視覚的なドラッグアンドドロップエディターとシンプルなロジックにより、非開発者でもセットアップが可能。基本的なボットは数時間で稼働可能</p>
+<p><strong>コスト効率が高い:</strong> 高価な<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>トレーニング、大規模なデータセット、または外部処理が不要。多くのプラットフォームが無料/手頃なプランを提供</p>
+<p><strong>応答の完全なコントロール:</strong> すべての回答が事前に書かれ、ブランドに沿っており、驚きやスクリプト外の回答がない</p>
+<p><strong>信頼性とセキュリティ:</strong> 予測可能な動作でデータ漏洩リスクが最小限。処理は自社サーバーまたは信頼できるプラットフォームに留まる</p>
+<p><strong>定型タスクに最適:</strong> 営業時間、場所、ステータスチェック、フォームなどの反復的なクエリをほぼ即座の応答で自動化</p>
+<p><strong>簡単な統合:</strong> リアルタイム検索(注文状況、予約枠)のためにデータベースまたは<a data-lb="1" href="/ja/glossary/APIs/" title="API(アプリケーション・プログラミング・インターフェース)を詳しく解説:定義、仕組み、種類(REST、SOAP)、実例、メリット、セキュリティ、ベストプラクティスを網羅した総合ガイドです。">API</a>に接続可能</p>
+<p><strong>静的コンテンツの低メンテナンス:</strong> 変更が少ないビジネスの場合、メンテナンスは最小限</p>
+<h2 id="ルールベースチャットボットの制限">ルールベースチャットボットの制限</h2>
+<p><strong>限定的な理解:</strong> ボットは事前定義されたルールに一致する入力にのみ応答。スペルミス、曖昧、または予期しない質問はフローを壊す</p>
+<p><strong>ロボット的でスクリプト化された体験:</strong> 電話メニューをナビゲートしているような感覚で、自然な会話ではない</p>
+<p><strong>学習や適応なし:</strong> 使用によって改善できない。すべての更新は手動で行う必要がある</p>
+<p><strong>弱いエラー処理:</strong> タイプミス、スラング、または複雑なユーザーニーズに苦戦</p>
+<p><strong>複雑性のスケーリングが困難:</strong> ルールが増えるにつれて、メンテナンスが煩雑になり、エラーが増加</p>
+<p><strong>ユーザーのフラストレーションの可能性:</strong> ボットがユーザーのニーズをカバーしていない場合、または多すぎるメニュークリックが必要な場合、体験が悪化</p>
+<p><strong>動的コンテンツの高メンテナンス:</strong> コンテンツが頻繁に変更される場合、スクリプトの更新は労働集約的</p>
+<h2 id="実用的な使用例">実用的な使用例</h2>
+<h3 id="eコマースサポート">Eコマースサポート</h3>
+<p><strong>例:</strong> H&amp;M Virtual Assistantは、注文追跡、返品、営業時間などのFAQをメニューを通じてユーザーをガイドし、スクリプト外のリクエストは人間のサポートにリダイレクト</p>
+<h3 id="航空会社のfaqとセルフサービス">航空会社のFAQとセルフサービス</h3>
+<p><strong>例:</strong> LufthansaのElisaは、<a data-lb="1" href="/ja/glossary/Decision-Tree/" title="機械学習における決定木の包括的ガイド。アルゴリズム、実装方法、メリット、データサイエンスにおける実際の応用例を網羅しています。">決定木</a>を介してキャンセル、返金、COVID-19旅行情報を支援</p>
+<h3 id="銀行アシスタント">銀行アシスタント</h3>
+<p>アカウントFAQ、支店情報、基本的な取引に回答し、複雑または機密性の高いタスクは人間のエージェントにエスカレート</p>
+<h3 id="レストラン予約">レストラン予約</h3>
+<p>メニュー選択を介してテーブルを予約し、メニューを共有し、営業時間に回答</p>
+<h3 id="リード生成">リード生成</h3>
+<p>スクリプト化されたフロー(「会社の規模は?」「従業員数は?」)でB2Bサイトのリードを資格審査</p>
+<h3 id="社内ヘルプデスクhrit">社内ヘルプデスク(HR/IT)</h3>
+<p>フォーム、ポリシー、パスワードリセットのリクエストを自動化</p>
+<h3 id="その他の業界">その他の業界</h3>
+<ul>
+<li>ヘルスケア: 予約スケジューリング</li>
+<li>旅行: ホテル/アクティビティ予約</li>
+<li>小売: 返品、保証情報</li>
+</ul>
+<h2 id="ルールベース-vs-ai搭載チャットボット">ルールベース vs. AI搭載チャットボット</h2>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>ルールベースチャットボット</th>
+<th>AI搭載チャットボット</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>アプローチ</strong></td>
+<td>事前定義されたスクリプト/決定木</td>
+<td>機械学習とNLP</td>
+</tr>
+<tr>
+<td><strong>学習</strong></td>
+<td>自己学習なし。静的</td>
+<td>データから学習。時間とともに適応</td>
+</tr>
+<tr>
+<td><strong>入力処理</strong></td>
+<td>キーワードマッチング/ボタン。自由テキストは限定的</td>
+<td>意図、同義語、タイプミスを理解。堅牢な解析</td>
+</tr>
+<tr>
+<td><strong>会話フロー</strong></td>
+<td>線形、予測可能、「メニューのような」</td>
+<td>動的、コンテキスト認識、マルチターン対話</td>
+</tr>
+<tr>
+<td><strong>応答の柔軟性</strong></td>
+<td>固定、スクリプト化された回答</td>
+<td>生成的またはコンテキストベース。人間らしい</td>
+</tr>
+<tr>
+<td><strong>セットアップとコスト</strong></td>
+<td>高速、安価、多くの場合ノーコード</td>
+<td>高コスト、セットアップとトレーニングが必要</td>
+</tr>
+<tr>
+<td><strong>最適な用途</strong></td>
+<td>FAQ、定型タスク、リードフォーム</td>
+<td>複雑なクエリ、多様なリクエスト</td>
+</tr>
+<tr>
+<td><strong>メンテナンス</strong></td>
+<td>手動ルール更新</td>
+<td>継続的なデータ/トレーニング管理</td>
+</tr>
+<tr>
+<td><strong>スケーラビリティ</strong></td>
+<td>ルールの複雑さによって制限</td>
+<td>スケールと多様性をより適切に処理</td>
+</tr>
+<tr>
+<td><strong>ユーザー体験</strong></td>
+<td>予測可能、透明、しかし硬直的</td>
+<td>自然、柔軟、しかし時に予測不可能</td>
+</tr>
+<tr>
+<td><strong>エラー処理</strong></td>
+<td>フォールバックまたはエスカレーションのみ</td>
+<td>明確化、言い換え、未知への回答を試みる</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ルールベースチャットボットを使用すべき場合">ルールベースチャットボットを使用すべき場合</h2>
+<p>ルールベースチャットボットは以下の場合に適切な選択です:</p>
+<ul>
+<li>ユーザークエリが<strong>予測可能で反復的</strong>(営業時間、予約リクエスト、注文状況)</li>
+<li>コンプライアンスやブランディングのためにすべての応答の<strong>完全なコントロール</strong>が必要</li>
+<li>予算または技術リソースが限られている—手頃で迅速に起動</li>
+<li><strong>迅速に起動</strong>したい(MVP、パイロットプロジェクト、期間限定キャンペーン)</li>
+<li>AIトレーニング用の<strong>大規模なデータセットがない</strong></li>
+<li><strong>信頼性とセキュリティ</strong>が重要(外部データ処理なし)</li>
+</ul>
+<p><strong>代わりにAIを検討すべき場合:</strong> ユーザーがオープンエンドで「人間らしい」会話を期待する場合、またはユースケースが複雑で多様な場合、ハイブリッドまたはAI搭載ソリューションが必要になる可能性があります。</p>
+<h2 id="ルールベースチャットボットの構築">ルールベースチャットボットの構築</h2>
+<h3 id="ステップバイステッププロセス">ステップバイステッププロセス</h3>
+<p><strong>1. 一般的なクエリをリストアップ:</strong> 自動化する主要なユーザーの質問またはタスクを特定</p>
+<p><strong>2. 会話フローを設計:</strong> フローチャートツールまたは視覚的エディターを使用して可能なパスをマッピング</p>
+<p><strong>3. ルールを書く:</strong> トリガー(キーワード/ボタン)と対応する応答を定義</p>
+<p><strong>4. フォールバックを設定:</strong> 一致しない入力に対して何が起こるかを決定(エスカレート、ヘルプを表示など)</p>
+<p><strong>5. テストと改善:</strong> 実際の会話をシミュレートし、カバレッジと精度のためにルールを調整</p>
+<p><strong>6. システムと統合:</strong> 動的データ(注文、予約)の場合、ボットを内部APIまたはデータベースに接続</p>
+<p><strong>7. デプロイと監視:</strong> 稼働し、ギャップを監視し、必要に応じてルールを更新</p>
+<h3 id="人気のプラットフォーム">人気のプラットフォーム</h3>
+<p><strong>Chatfuel:</strong> Facebook Messengerと<a data-lb="1" href="/ja/glossary/Instagram/" title="Instagramは、写真と動画の共有に特化したビジュアル型ソーシャルメディアプラットフォームです。機能、ビジネスツール、インフルエンサーマーケティング、オーディエンス構築について学びましょう。">Instagram</a>用のノーコードボットビルダー</p>
+<p><strong>ManyChat:</strong> マーケティング自動化用の視覚的ボットビルダー</p>
+<p><strong>MobileMonkey:</strong> オムニチャネルチャットボットプラットフォーム</p>
+<p><strong>Landbot:</strong> WebとWhatsApp用の視覚的会話ビルダー</p>
+<p><strong>Tidio:</strong> Eコマース用のライブチャットとチャットボットの組み合わせ</p>
+<p><strong>Botsify:</strong> テンプレート付きマルチプラットフォームチャットボットビルダー</p>
+<h2 id="ハイブリッドアプローチ">ハイブリッドアプローチ</h2>
+<p>多くの組織は、最適な結果を得るためにルールベースとAI搭載チャットボットを組み合わせています:</p>
+<p><strong>定型にはルールベース:</strong> 予測可能なFAQとトランザクションクエリを処理</p>
+<p><strong>複雑にはAI:</strong> 複雑でオープンエンドの質問をAI搭載システムにルーティング</p>
+<p><strong>人間へのエスカレーション:</strong> 必要に応じてライブエージェントへのシームレスな引き継ぎ</p>
+<p><strong>利点:</strong> ルールベースボットのコスト効率とコントロールを<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">AIシステム</a>の柔軟性とインテリジェンスと組み合わせる</p>
+<h2 id="主要な用語">主要な用語</h2>
+<p><strong>決定木:</strong> すべての可能な会話パスをマッピングする分岐ロジック構造</p>
+<p><strong>トリガー:</strong> 特定のボット応答を開始するキーワードまたはフレーズ</p>
+<p><strong>フォールバック:</strong> ユーザー入力がどのルールにも一致しない場合のデフォルト応答</p>
+<p><strong>ボタンメニュー:</strong> <a data-lb="1" href="/ja/glossary/Audience-Engagement/" title="オーディエンスエンゲージメントとは、人々とブランドの間で生まれる積極的な参加と交流のことで、単に受動的に視聴するだけでなく、コンテンツを消費し、体験を共有し、関係性を構築することを指します。">ユーザーインタラクション</a>をガイドするために提示されるクリック可能なオプション</p>
+<p><strong>パターンマッチング:</strong> ユーザー入力内のキーワードまたはフレーズを識別する技術</p>
+<p><strong>エスカレーション:</strong> ボットから人間のエージェントへの転送</p>
+<p><strong>会話フロー:</strong> ボットとユーザーのインタラクションの計画されたシーケンス</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>HeroThemes. (n.d.). Rule-Based Chatbots Guide. HeroThemes Blog.</p>
+</li>
+<li>
+<p>Codecademy. (n.d.). Rule-Based Chatbots Cheat Sheet. Codecademy Learn.</p>
+</li>
+<li>
+<p>Chatfuel. Chatbot Creation Platform. URL: <a href="https://chatfuel.com/" rel="nofollow noopener noreferrer" target="_blank">https://chatfuel.com/</a></p>
+</li>
+<li>
+<p>ManyChat. Chatbot Creation Platform. URL: <a href="https://manychat.com/" rel="nofollow noopener noreferrer" target="_blank">https://manychat.com/</a></p>
+</li>
+<li>
+<p>Landbot. Chatbot Creation Platform. URL: <a href="https://landbot.io/" rel="nofollow noopener noreferrer" target="_blank">https://landbot.io/</a></p>
+</li>
+<li>
+<p>Tidio. Chatbot Creation Platform. URL: <a href="https://www.tidio.com/" rel="nofollow noopener noreferrer" target="_blank">https://www.tidio.com/</a></p>
+</li>
+<li>
+<p>Botsify. Chatbot Creation Platform. URL: <a href="https://botsify.com/" rel="nofollow noopener noreferrer" target="_blank">https://botsify.com/</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/escalation/">
+                    エスカレーション
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    カスタマーサポート、IT、<a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">AIチャットボット</a>におけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な<a data-lb="1" href="/ja/glossary/Escalation-Management/" title="フロントラインのスタッフが解決できない複雑な問題を、より高度な専門家に引き継ぐシステムです。迅速な解決と優れた顧客サービスを実現します。">問題解決</a>をどのように効率化するかを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/escalation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/customer-support/">
+                    カスタマーサポート
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    カスタマーサポート業務、その重要性、種類、チャネル、そしてAIと自動化の役割について解説します。効果的なカスタマーサポートのためのベストプラクティス、チーム構成、主要指標を学びましょう。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/customer-support/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Code-Block--Python-JS-/">
+                    コードブロック(Python/JS)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Code-Block--Python-JS-/" title="コードブロックは、統一された実行のためにプログラミング文をグループ化したもので、Pythonではインデント、JavaScriptでは中括弧によって定義されます。自動化やチャットボットにおいて、カスタムロジックの実装に使用されます。">コードブロック</a>は、統一された実行のためにプログラミング文をグループ化したもので、Pythonではインデント、JavaScriptでは中括弧によって定義されます。自動化やチャットボットにおいて、カスタム...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Code-Block--Python-JS-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/scenarios/">
+                    シナリオ(事前準備された会話フロー)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIチャットボットおよび自動化システムにおける<a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/scenarios/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Task-Oriented-Bot/">
+                    タスク指向型ボット
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Task-Oriented-Bot/" title="タスク指向型ボットは、予約、追跡、スケジューリングなどの特定の構造化されたプロセスを自動化するために設計された専門的なチャットボットで、自然言語処理とバックエンド統合を活用します。">タスク指向型ボット</a>は、予約、追跡、スケジューリングなどの特定の構造化されたプロセスを自動化するために設計された専門的なチャットボットで、自然言語処理とバックエンド統合を活用します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Task-Oriented-Bot/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Chatbot/">
+                    チャットボット
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    チャットボットは、テキストまたは音声を使用して人間の会話をシミュレートするソフトウェアプログラムで、24時間365日利用可能です。チャットボットの種類、用途、メリット、そしてAI、自然言語処理、機械学...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Chatbot/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/rule-based-chatbot/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

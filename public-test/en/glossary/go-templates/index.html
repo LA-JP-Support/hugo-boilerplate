@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="utf-8">
+<meta name="viewport" content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+
+<title>Go Templates | SmartWeb</title>
+<link rel="canonical" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/go-templates/">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/faivicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/faivicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/faivicon.png">
+<link rel="shortcut icon" href="/images/faivicon.png">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+  
+
+
+
+
+
+
+
+  
+  
+    
+    
+      
+      
+      
+      
+    
+  
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="%!s(<nil>)%!s(<nil>)">
+
+<link rel="alternate" hreflang="ja" href="%!s(<nil>)%!s(<nil>)">
+
+<link rel="alternate" hreflang="x-default" href="%!s(<nil>)%!s(<nil>)">
+
+
+
+<meta name="description" content="A text generation system in Go that combines template files with data to create dynamic content for websites, configuration files, and documents.">
+<meta name="keywords" content="go templates, golang templating, text template, html template, template engine">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/go-templates/">
+<meta property="og:title" content="Go Templates | SmartWeb">
+<meta property="og:description" content="A text generation system in Go that combines template files with data to create dynamic content for websites, configuration files, and documents.">
+
+
+
+
+
+
+
+  
+  
+
+
+<meta property="og:image" content="">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/go-templates/">
+<meta name="twitter:title" content="Go Templates | SmartWeb">
+<meta name="twitter:description" content="A text generation system in Go that combines template files with data to create dynamic content for websites, configuration files, and documents.">
+<meta name="twitter:image" content="">
+
+
+
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+
+<link rel="preload" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/main.css?v=20260106210129" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/custom-code-blockquote.css?v=20260106210129" crossorigin="anonymous">
+
+
+
+<script src="/js/main.js?v=20260106210129" defer></script>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+</head>
+<body class="antialiased bg-white">
+
+
+
+
+
+
+
+
+
+
+  
+  <header class="bg-white">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="/en/" class="-m-1.5 p-1.5">
+        <span class="sr-only">SmartWeb</span>
+        
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="200px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+      </a>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12"><a href="/en/" class="text-sm/6 font-semibold text-gray-900">Home</a><a href="/en/blog/" class="text-sm/6 font-semibold text-gray-900">Blog</a><a href="/en/glossary/" class="text-sm/6 font-semibold text-gray-900">Glossary</a><a href="https://www.intwk.co.jp/about/" class="text-sm/6 font-semibold text-gray-900">Company</a></div>
+    <div class="flex flex-1 items-center justify-end gap-x-6">
+      <a href="https://support.smartweb.jp/" class="hidden text-sm/6 font-semibold text-gray-900 lg:block">Support</a>
+      <a href="/en/blog/" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" aria-expanded="false" aria-controls="mobile-menu-1767700889227765000">
+        <span class="sr-only">Open main menu</span>
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  
+  <div id="mobile-menu-1767700889227765000" class="lg:hidden hidden relative z-50" role="dialog" aria-modal="true">
+    
+    <div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+      <div class="flex items-center gap-x-6">
+        <a href="/en/" class="-m-1.5 p-1.5">
+          <span class="sr-only">SmartWeb</span>
+          
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+      
+        
+      
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+          
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+            
+            
+        
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="3000"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="(max-width: 466px) 466px, 3000px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+        </a>
+        <a href="/en/blog/" class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+        <button type="button" class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu">
+          <span class="sr-only">Close menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6"><a href="/en/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a><a href="/en/blog/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a><a href="/en/glossary/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Glossary</a><a href="https://www.intwk.co.jp/about/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a></div>
+          <div class="py-6">
+            <a href="https://support.smartweb.jp/" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700889227765000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700889227765000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+
+
+
+<main class="w-full">
+  
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+  
+  <header class="py-12 sm:py-16">
+    <div class="mx-auto max-w-4xl">
+      
+      <div class="mb-8">
+        <nav class="text-sm hidden sm:block">
+          <ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+            <li class="flex items-center">
+              <a href="/en/" class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center">
+                <img src="/images/home-icon.png" alt="Home" class="h-4 w-4 opacity-60">
+              </a>
+            </li>
+            <li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+            <li>
+              <a href="/en/glossary/" class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors">
+                Glossary
+              </a>
+            </li>
+            <li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+            <li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Go Templates</li>
+          </ol>
+        </nav>
+      </div>
+
+      
+      
+        <div class="mb-6">
+          <span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+            <svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+            </svg>
+            Application &amp; Use-Cases
+          </span>
+        </div>
+      
+
+      
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Go Templates
+      </h1>
+      
+        <div class="mb-6"></div>
+      
+
+      
+      
+        <p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A text generation system in Go that combines template files with data to create dynamic content for websites, configuration files, and documents.
+        </p>
+      
+
+      
+      <div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+
+      
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        
+        
+          <div class="flex flex-wrap gap-2">
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                go templates
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                golang templating
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                text template
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                html template
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                template engine
+              </span>
+            
+          </div>
+        
+
+        
+        
+
+
+
+
+
+
+
+
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+  
+    <span class="inline-flex items-center justify-end">
+      <svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
+      </svg>
+      
+        Created: December 19, 2025
+      
+    </span>
+  
+
+  
+</div>
+
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+    <h2 id="what-is-go-templates">What is Go Templates?</h2>
+<p>Go Templates represent a powerful and flexible templating system built into the Go programming language, designed to generate dynamic text and HTML content through the combination of static template files and runtime data. The Go template system consists of two primary packages: <code>text/template</code> for general text generation and <code>html/template</code> for web-safe HTML output with automatic escaping capabilities. This templating engine follows a minimalist philosophy while providing robust functionality for separating presentation logic from application code, making it an essential tool for developers building web applications, generating configuration files, creating documentation, and producing any form of dynamic textual content.</p>
+<p>The architecture of Go Templates is built around the concept of parsing template definitions that contain static text interspersed with actions enclosed in double curly braces <code>{{ }}</code>. These actions can include variable substitutions, function calls, conditional statements, loops, and pipeline operations that transform data as it flows through the template. The template engine uses reflection to access fields and methods of Go data structures, allowing developers to pass complex objects including structs, maps, slices, and custom types directly to templates. The system supports template inheritance through nested templates and includes, enabling the creation of modular and reusable template components that can be composed into larger applications.</p>
+<p>Go Templates distinguish themselves from other templating systems through their strong typing, compile-time template parsing, and integration with Go&rsquo;s type system. The template syntax is deliberately simple yet expressive, avoiding the complexity found in many other templating languages while maintaining the power needed for sophisticated text generation tasks. Security is a paramount concern, particularly in the <code>html/template</code> package, which automatically escapes content based on context to prevent cross-site scripting (XSS) attacks. This makes Go Templates particularly suitable for web development where security and performance are critical requirements, while their simplicity and power make them equally valuable for command-line tools, configuration generation, and document processing applications.</p>
+<h2 id="core-template-components">Core Template Components</h2>
+<p><strong>Template Actions</strong> are the fundamental building blocks enclosed in <code>{{ }}</code> delimiters that contain executable code within templates. These actions can include variable references, function calls, method invocations, and control structures that determine how data is processed and displayed in the final output.</p>
+<p><strong>Pipeline Operations</strong> enable data transformation through a series of commands connected by pipe symbols, allowing values to flow from one operation to the next. Pipelines support function calls, method invocations, and built-in operations that can filter, format, and modify data as it moves through the template processing chain.</p>
+<p><strong>Template Variables</strong> provide a mechanism for storing and referencing data within template scope, including dot notation for accessing the current context and named variables created through assignment operations. Variables can reference fields of structs, map keys, slice elements, and results of function calls or pipeline operations.</p>
+<p><strong>Control Structures</strong> implement conditional logic and iteration through <code>if/else</code> statements, <code>range</code> loops, and <code>with</code> blocks that modify the template context. These structures enable templates to generate different output based on data conditions and iterate over collections like slices, arrays, and maps.</p>
+<p><strong>Template Functions</strong> extend template capabilities through built-in functions for common operations and custom functions registered by the application. Built-in functions include formatting, comparison, and utility operations, while custom functions allow applications to expose domain-specific logic to templates.</p>
+<p><strong>Template Inheritance</strong> supports modular template design through nested templates, includes, and template definitions that can be composed and reused. This system enables the creation of base layouts, partial templates, and template libraries that promote code reuse and maintainability.</p>
+<p><strong>Context Management</strong> controls data access and scope through the dot variable and context manipulation functions that determine what data is available to different parts of the template. Context can be modified through control structures and passed between nested templates and includes.</p>
+<h2 id="how-go-templates-works">How Go Templates Works</h2>
+<p><strong>Step 1: Template Definition</strong> - Create template content with static text and dynamic actions enclosed in <code>{{ }}</code> delimiters, defining the structure and logic for content generation.</p>
+<p><strong>Step 2: Template Parsing</strong> - Use <code>template.New()</code> and <code>Parse()</code> methods to parse template content into an internal representation, validating syntax and building an execution tree.</p>
+<p><strong>Step 3: Data Preparation</strong> - Prepare data structures including structs, maps, slices, or any Go type that will be passed to the template for rendering.</p>
+<p><strong>Step 4: Function Registration</strong> - Register custom functions using <code>Funcs()</code> method to extend template capabilities with application-specific logic and formatting operations.</p>
+<p><strong>Step 5: Template Execution</strong> - Call <code>Execute()</code> or <code>ExecuteTemplate()</code> methods with an output writer and data context to generate the final content.</p>
+<p><strong>Step 6: Context Resolution</strong> - The template engine resolves variable references, function calls, and method invocations using reflection to access data structure fields and methods.</p>
+<p><strong>Step 7: Action Processing</strong> - Execute template actions including conditionals, loops, and pipeline operations, transforming and filtering data according to template logic.</p>
+<p><strong>Step 8: Output Generation</strong> - Generate final text or HTML output, applying automatic escaping for HTML templates to ensure security and prevent injection attacks.</p>
+<p><strong>Example Workflow</strong>: A web application defines an HTML template with user data placeholders, parses the template at startup, registers formatting functions, then executes the template for each request with user-specific data to generate personalized web pages.</p>
+<h2 id="key-benefits">Key Benefits</h2>
+<p><strong>Type Safety</strong> - Go Templates leverage Go&rsquo;s strong typing system to provide compile-time validation and runtime type checking, reducing errors and improving code reliability compared to dynamically typed templating systems.</p>
+<p><strong>Security by Default</strong> - HTML templates automatically escape content based on context to prevent XSS attacks, providing built-in security without requiring manual intervention or additional security libraries.</p>
+<p><strong>Performance Optimization</strong> - Templates are parsed once and can be executed multiple times with different data, providing excellent performance characteristics for high-throughput applications with template caching and reuse.</p>
+<p><strong>Standard Library Integration</strong> - Built into Go&rsquo;s standard library without external dependencies, ensuring long-term stability, consistent behavior across Go versions, and reduced dependency management overhead.</p>
+<p><strong>Reflection-Based Access</strong> - Automatic access to struct fields, map keys, and method calls through reflection eliminates the need for manual data binding or complex accessor patterns.</p>
+<p><strong>Pipeline Processing</strong> - Powerful pipeline syntax enables elegant data transformation and formatting through chained operations that improve template readability and maintainability.</p>
+<p><strong>Template Composition</strong> - Support for nested templates, includes, and inheritance enables modular design patterns that promote code reuse and separation of concerns in large applications.</p>
+<p><strong>Minimal Syntax</strong> - Simple and intuitive syntax reduces learning curve and template complexity while maintaining sufficient power for sophisticated text generation requirements.</p>
+<p><strong>Context Awareness</strong> - Intelligent context management and variable scoping provide predictable behavior and clear data access patterns throughout template hierarchies.</p>
+<p><strong>Error Handling</strong> - Comprehensive error reporting with detailed information about template parsing errors, execution failures, and data access issues for effective debugging.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<p><strong>Web Application Rendering</strong> - Generate dynamic HTML pages, forms, and user interfaces by combining templates with user data, session information, and application state for responsive web applications.</p>
+<p><strong>Email Template Generation</strong> - Create personalized email content including newsletters, notifications, and transactional emails with dynamic recipient information and customized messaging.</p>
+<p><strong>Configuration File Generation</strong> - Produce configuration files for applications, services, and infrastructure components by templating configuration patterns with environment-specific values and parameters.</p>
+<p><strong>Documentation Generation</strong> - Generate technical documentation, API references, and user guides by combining template structures with code metadata, examples, and dynamic content.</p>
+<p><strong>Report Generation</strong> - Create formatted reports, invoices, and business documents by applying templates to data from databases, APIs, and business logic systems.</p>
+<p><strong>Code Generation</strong> - Generate source code, database schemas, and API definitions by templating code patterns with metadata from specifications, models, or configuration files.</p>
+<p><strong>Static Site Generation</strong> - Build static websites and blogs by applying templates to content files, creating consistent layouts and navigation across multiple pages and sections.</p>
+<p><strong>Command Line Tool Output</strong> - Format command-line tool output, help text, and user interfaces with templates that adapt to different data conditions and user preferences.</p>
+<p><strong>API Response Formatting</strong> - Generate formatted API responses, error messages, and documentation by templating response structures with dynamic data and metadata.</p>
+<p><strong>Infrastructure as Code</strong> - Create infrastructure configuration files, deployment scripts, and automation templates by combining infrastructure patterns with environment-specific parameters.</p>
+<h2 id="template-package-comparison">Template Package Comparison</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>text/template</th>
+          <th>html/template</th>
+          <th>Third-party Engines</th>
+          <th>Custom Solutions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Security</strong></td>
+          <td>Basic escaping</td>
+          <td>Automatic XSS protection</td>
+          <td>Variable security</td>
+          <td>Manual implementation</td>
+      </tr>
+      <tr>
+          <td><strong>Performance</strong></td>
+          <td>High performance</td>
+          <td>High with safety overhead</td>
+          <td>Variable performance</td>
+          <td>Depends on implementation</td>
+      </tr>
+      <tr>
+          <td><strong>Learning Curve</strong></td>
+          <td>Minimal syntax</td>
+          <td>Minimal syntax</td>
+          <td>Complex features</td>
+          <td>Custom complexity</td>
+      </tr>
+      <tr>
+          <td><strong>Integration</strong></td>
+          <td>Standard library</td>
+          <td>Standard library</td>
+          <td>External dependencies</td>
+          <td>Full control</td>
+      </tr>
+      <tr>
+          <td><strong>Flexibility</strong></td>
+          <td>General purpose</td>
+          <td>Web-focused</td>
+          <td>Feature-rich</td>
+          <td>Unlimited flexibility</td>
+      </tr>
+      <tr>
+          <td><strong>Maintenance</strong></td>
+          <td>Go team supported</td>
+          <td>Go team supported</td>
+          <td>Community dependent</td>
+          <td>Self-maintained</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="challenges-and-considerations">Challenges and Considerations</h2>
+<p><strong>Limited Logic Capabilities</strong> - Template syntax intentionally restricts complex logic operations, requiring developers to prepare data in Go code rather than implementing business logic within templates.</p>
+<p><strong>Debugging Complexity</strong> - Template execution errors can be difficult to trace and debug, particularly in complex template hierarchies with nested includes and inheritance relationships.</p>
+<p><strong>Performance Overhead</strong> - Reflection-based field access and method calls introduce runtime overhead compared to direct code generation or compiled template approaches.</p>
+<p><strong>Learning Curve for Pipelines</strong> - Pipeline syntax and function chaining can be confusing for developers unfamiliar with functional programming concepts or Unix-style command pipelines.</p>
+<p><strong>Limited Built-in Functions</strong> - Standard library provides minimal built-in functions, requiring custom function registration for common formatting and utility operations.</p>
+<p><strong>Template Organization</strong> - Managing large numbers of templates and their dependencies can become complex without proper organization strategies and naming conventions.</p>
+<p><strong>Error Message Quality</strong> - Template parsing and execution errors may lack sufficient context or clarity for rapid problem identification and resolution.</p>
+<p><strong>Memory Usage</strong> - Template parsing and caching can consume significant memory in applications with large numbers of templates or complex template structures.</p>
+<p><strong>Concurrency Considerations</strong> - Template execution is not inherently thread-safe, requiring careful consideration of concurrent access patterns and data sharing.</p>
+<p><strong>Version Compatibility</strong> - Template behavior and features may change between Go versions, requiring testing and validation during Go version upgrades.</p>
+<h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Parse Templates Once</strong> - Parse and cache templates during application initialization rather than parsing them repeatedly during request processing to optimize performance and resource usage.</p>
+<p><strong>Use Template Inheritance</strong> - Implement base templates and template composition patterns to promote code reuse, maintain consistency, and simplify maintenance across large applications.</p>
+<p><strong>Register Custom Functions</strong> - Create and register application-specific template functions for common formatting, validation, and utility operations to keep templates clean and readable.</p>
+<p><strong>Validate Template Data</strong> - Implement data validation and sanitization before passing data to templates to prevent runtime errors and ensure consistent template behavior.</p>
+<p><strong>Implement Error Handling</strong> - Wrap template execution in comprehensive error handling with logging and fallback mechanisms to gracefully handle template failures.</p>
+<p><strong>Organize Template Files</strong> - Use consistent naming conventions, directory structures, and template organization patterns to improve maintainability and developer productivity.</p>
+<p><strong>Minimize Template Logic</strong> - Keep templates focused on presentation concerns and implement business logic in Go code to maintain separation of concerns and testability.</p>
+<p><strong>Use Context Appropriately</strong> - Leverage template context and variable scoping effectively to pass the right data to the right template sections without over-exposing data.</p>
+<p><strong>Test Template Output</strong> - Implement automated testing for template rendering with various data scenarios to ensure consistent output and catch regressions early.</p>
+<p><strong>Document Template APIs</strong> - Provide clear documentation for template data structures, available functions, and usage patterns to support team development and maintenance.</p>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p><strong>Custom Template Functions</strong> - Develop sophisticated custom functions that encapsulate complex formatting logic, data transformations, and integration with external services while maintaining template simplicity.</p>
+<p><strong>Template Middleware</strong> - Implement template middleware patterns that intercept and modify template data, add common variables, and provide cross-cutting concerns like authentication and localization.</p>
+<p><strong>Dynamic Template Loading</strong> - Create systems for loading and reloading templates dynamically from databases, file systems, or remote sources to support runtime template modification and multi-tenant applications.</p>
+<p><strong>Template Compilation</strong> - Build template compilation and optimization systems that pre-process templates for improved runtime performance and advanced static analysis capabilities.</p>
+<p><strong>Context Injection</strong> - Develop advanced context injection patterns that automatically provide common data, utilities, and services to templates without explicit parameter passing.</p>
+<p><strong>Template Debugging Tools</strong> - Create debugging and introspection tools that provide visibility into template execution, variable values, and performance characteristics for complex template systems.</p>
+<h2 id="future-directions">Future Directions</h2>
+<p><strong>Enhanced Performance</strong> - Continued optimization of template parsing, compilation, and execution performance through improved caching strategies, reduced reflection overhead, and compilation techniques.</p>
+<p><strong>Improved Developer Experience</strong> - Development of better debugging tools, IDE integration, syntax highlighting, and error reporting to improve template development productivity and maintainability.</p>
+<p><strong>Advanced Security Features</strong> - Enhanced security capabilities including content security policy integration, advanced escaping options, and security analysis tools for template vulnerabilities.</p>
+<p><strong>Template Language Extensions</strong> - Potential expansion of template syntax and capabilities while maintaining backward compatibility and the philosophy of simplicity and safety.</p>
+<p><strong>Integration Enhancements</strong> - Improved integration with modern Go development tools, frameworks, and deployment pipelines to streamline template-based application development.</p>
+<p><strong>Community Ecosystem</strong> - Growth of community-contributed template libraries, utilities, and best practices that extend the capabilities and adoption of Go Templates across different domains.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>Go Programming Language Documentation - Template Package: <a href="https://golang.org/pkg/text/template/" target="_blank" rel="nofollow noopener noreferrer">https://golang.org/pkg/text/template/</a></li>
+<li>Go HTML Template Package Documentation: <a href="https://golang.org/pkg/html/template/" target="_blank" rel="nofollow noopener noreferrer">https://golang.org/pkg/html/template/</a></li>
+<li>Effective Go - Templates: <a href="https://golang.org/doc/effective_go#templates" target="_blank" rel="nofollow noopener noreferrer">https://golang.org/doc/effective_go#templates</a></li>
+<li>Go Blog - Using Go Templates: <a href="https://blog.golang.org/template" target="_blank" rel="nofollow noopener noreferrer">https://blog.golang.org/template</a></li>
+<li>Go Template Security Best Practices: <a href="https://golang.org/doc/articles/wiki/" target="_blank" rel="nofollow noopener noreferrer">https://golang.org/doc/articles/wiki/</a></li>
+<li>Template Design Patterns in Go: <a href="https://golang.org/doc/articles/" target="_blank" rel="nofollow noopener noreferrer">https://golang.org/doc/articles/</a></li>
+<li>Go Template Performance Optimization Guide: <a href="https://golang.org/doc/diagnostics" target="_blank" rel="nofollow noopener noreferrer">https://golang.org/doc/diagnostics</a></li>
+<li>Advanced Go Template Techniques: <a href="https://golang.org/doc/articles/race_detector" target="_blank" rel="nofollow noopener noreferrer">https://golang.org/doc/articles/race_detector</a></li>
+</ol>
+
+  </div>
+
+  
+  
+  
+  
+  
+    
+    <div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+      <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hugo-theme/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Hugo Theme
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A pre-built design template for Hugo websites that automatically styles and organizes your content i...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/hugo-theme/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/template-variable/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Template Variable
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A placeholder in a template that automatically gets replaced with actual data when the template is p...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/template-variable/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      </div>
+    
+
+
+  
+  <div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+    <a 
+      href="/en/glossary/" 
+      class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+    >
+      <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+      </svg>
+      
+        Back to Glossary
+      
+    </a>
+  </div>
+</article>
+
+</main>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer style="background-color: #000000;">
+  
+  <div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+    
+    <svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="curveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      
+      
+      <path class="curve" data-speed="0.8" stroke="url(#curveGrad1)" stroke-width="2" fill="none" />
+      <path class="curve" data-speed="1.2" stroke="url(#curveGrad2)" stroke-width="2.5" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.6" stroke="url(#curveGrad3)" stroke-width="1.5" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.5" stroke="url(#curveGrad1)" stroke-width="2" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="0.9" stroke="url(#curveGrad2)" stroke-width="3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.3" stroke="url(#curveGrad3)" stroke-width="1.8" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.7" stroke="url(#curveGrad1)" stroke-width="2.2" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.1" stroke="url(#curveGrad2)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="1.4" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="0.85" stroke="url(#curveGrad1)" stroke-width="1.5" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="1.0" stroke="url(#curveGrad2)" stroke-width="2.8" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.25" stroke="url(#curveGrad3)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.95" stroke="url(#curveGrad1)" stroke-width="2.3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.35" stroke="url(#curveGrad2)" stroke-width="1.7" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.75" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.7" />
+    </svg>
+    
+    
+    <div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    
+    <div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+      <h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+      <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+      <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+      <div class="mt-8 flex justify-center">
+        <a href="/en/blog/" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get started</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+  
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+    <div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+      
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/webp"
+        
+        data-srcset="/images/interwork-logo-white-1.webp 568w"
+        
+        sizes="200px"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/interwork-logo-white-1.webp"
+        
+        alt="Interwork"
+        class="lazy-image h-9"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+    </picture>
+
+
+  
+
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Services</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">AI Solutions</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Web Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">System Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Consulting</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Support</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://support.smartweb.jp/" class="text-sm/6 text-gray-400 hover:text-white">Support Portal</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Documentation</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Company</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://www.intwk.co.jp/about/" class="text-sm/6 text-gray-400 hover:text-white">About</a>
+              </li>
+              
+              <li>
+                <a href="/en/blog/" class="text-sm/6 text-gray-400 hover:text-white">Blog</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Careers</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">News</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="/en/privacy-policy/" class="text-sm/6 text-gray-400 hover:text-white">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="/en/ai-chatbot-terms-of-use/" class="text-sm/6 text-gray-400 hover:text-white">AI Chatbot Terms of Use</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div>
+        <p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+        
+          
+
+
+
+
+<div class="language-selector">
+  <div class="flex flex-wrap items-center justify-center gap-3">
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+          
+            
+            
+          
+        
+        
+        
+        
+        
+        <a href="/ja/glossary/Go-Templates/"
+           class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
+           title="日本語"
+           aria-label="日本語"
+           hreflang="ja">
+          <img 
+            src="/flags/jp.png"
+            alt="日本語"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </a>
+      
+    
+      
+      
+      
+      
+      
+      
+        
+        <span class="inline-flex items-center text-sm opacity-50" title="English">
+          <img 
+            src="/flags/gb.png"
+            alt="English"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </span>
+      
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+    <div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex gap-x-6 md:order-2">
+        
+        <a href="https://github.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">GitHub</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://x.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">X</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://youtube.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">YouTube</span>
+          
+
+
+
+        </a>
+        
+      </div>
+      <p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">&copy; 2026 Interwork Corporation All rights reserved.</p>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<div id="cookie-consent-banner" data-cookie-consent-banner class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark">
+    <div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+        <p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br> We use cookies to enhance your browsing experience and analyze our traffic. See our <a href="/en/privacy-policy/" class="font-semibold text-primary hover:text-primary-500">privacy policy</a>.</p>
+        <div class="mt-4 flex items-center gap-x-3 flex-wrap">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Accept All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-all
+    >
+      Accept All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Reject All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-necessary
+    >
+      Reject All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Cookie Settings"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=settings
+    >
+      Cookie Settings
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="cookie-settings-modal" class="fixed inset-0 z-50 hidden dark">
+    <div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close></div>
+    <div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+            <button type="button" class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close>
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="necessary-cookies" name="necessary-cookies" type="checkbox" checked disabled class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="analytics-cookies" name="analytics-cookies" type="checkbox" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 flex justify-end gap-x-3">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2  not-prose group"
+      aria-label="Cancel"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-close
+    >
+      Cancel
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2  not-prose group"
+      aria-label="Save Preferences"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-save
+    >
+      Save Preferences
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+<button
+  id="back-to-top-btn"
+  aria-label="Back to Top"
+  class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg 
+         transition-all duration-300 transform translate-y-12 opacity-0 invisible
+         hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+         dark:bg-indigo-500 dark:hover:bg-indigo-400"
+  onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+  </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+
+
+
+
+<script src="/js/app.js?v=20260106210129"></script>
+
+
+
+
+</body>
+</html>

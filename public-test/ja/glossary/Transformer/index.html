@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>Transformer | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Transformer/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="ディープラーニングにおけるTransformerアーキテクチャの包括的ガイド - アテンションメカニズム、ニューラルネットワーク、自然言語処理への応用について解説します。" name="description"/>
+<meta content="Transformerアーキテクチャ, アテンションメカニズム, ニューラルネットワーク, 自然言語処理, ディープラーニング" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Transformer/" property="og:url"/>
+<meta content="Transformer | SmartWeb" property="og:title"/>
+<meta content="ディープラーニングにおけるTransformerアーキテクチャの包括的ガイド - アテンションメカニズム、ニューラルネットワーク、自然言語処理への応用について解説します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Transformer/" name="twitter:url"/>
+<meta content="Transformer | SmartWeb" name="twitter:title"/>
+<meta content="ディープラーニングにおけるTransformerアーキテクチャの包括的ガイド - アテンションメカニズム、ニューラルネットワーク、自然言語処理への応用について解説します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Transformer</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Transformer
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Transformer
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ディープラーニングにおけるTransformerアーキテクチャの包括的ガイド - アテンションメカニズム、ニューラルネットワーク、自然言語処理への応用について解説します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Transformerアーキテクチャ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                アテンションメカニズム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ニューラルネットワーク
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                自然言語処理
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ディープラーニング
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="transformerとは何か">Transformerとは何か?</h2>
+<p>Transformerは、人工知能の分野、特に<a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">自然言語処理</a>とコンピュータビジョンを根本的に変革した革命的なニューラルネットワークアーキテクチャです。Vaswaniらによる2017年の画期的な論文「Attention Is All You Need」で導入された<a data-lb="1" href="/ja/glossary/Transformer/" title="ディープラーニングにおけるTransformerアーキテクチャの包括的ガイド - アテンションメカニズム、ニューラルネットワーク、自然言語処理への応用について解説します。">Transformerアーキテクチャ</a>は、従来の再帰型および<a data-lb="1" href="/ja/glossary/Convolutional-Neural-Network--CNN-/" title="CNNの包括的ガイド:ディープラーニング画像処理タスクのためのアーキテクチャ、応用、メリット、実装のベストプラクティスを解説します。">畳み込みニューラルネットワーク</a>からのパラダイムシフトを表しており、シーケンシャルデータの処理に完全にアテンションメカニズムのみを使用します。この革新的なアプローチは、再帰と畳み込みの必要性を排除し、より効率的な並列処理を可能にし、以前のアーキテクチャよりも効果的にデータ内の長距離依存関係を捉えることができます。</p>
+<p>Transformerの中核となる革新は、セルフアテンションメカニズムにあります。これにより、モデルは各要素を処理する際に入力シーケンスの異なる部分の重要性を重み付けすることができます。シーケンスを順次処理する再帰型<a data-lb="1" href="/ja/glossary/deep-learning/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>(RNN)とは異なり、Transformerはシーケンス内のすべての位置を同時に調べることができるため、高度に並列化可能で、トレーニングが大幅に高速化されます。このアーキテクチャは、エンコーダー・デコーダー構造で構成されており、エンコーダーが入力シーケンスを処理して表現を作成し、デコーダーが出力シーケンスを生成します。各コンポーネントは、セルフアテンションとフィードフォワードネットワークの複数の層を利用し、残差接続と層正規化を組み合わせて、安定したトレーニングと効果的な情報フローを確保します。</p>
+<p>Transformerの影響は、機械翻訳における当初の応用をはるかに超えています。<a data-lb="1" href="/ja/glossary/BERT/" title="BERT(Bidirectional Encoder Representations from Transformers)の包括的ガイド - 言語理解のためのGoogleの革新的なNLPモデル">BERT</a>、<a data-lb="1" href="/ja/glossary/GPT/" title="GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。">GPT</a>、T5など、さまざまな自然言語処理タスクで顕著な性能を達成した多数の最先端モデルの基盤となっています。このアーキテクチャの汎用性により、Vision Transformers(ViT)を通じてコンピュータビジョンタスクへの適応にも成功しており、シーケンスモデリングとそれ以上の普遍的なアーキテクチャとしての可能性を示しています。可変長シーケンスを処理し、離れた要素間の複雑な関係を捉え、モデルサイズとデータの増加に伴って効果的にスケールするTransformerの能力は、現代の<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>研究とアプリケーションにおいて支配的なアーキテクチャとなっています。</p>
+<h2 id="コアアテンションメカニズムとコンポーネント">コアアテンションメカニズムとコンポーネント</h2>
+<p><strong>セルフアテンションメカニズム</strong>: シーケンス内の各位置が同じシーケンス内のすべての位置にアテンドできるようにする基本的な構成要素で、クエリ、キー、バリュー表現間の類似性に基づいてアテンション重みを計算します。このメカニズムにより、モデルはシーケンス内の距離に関係なく依存関係を捉えることができます。</p>
+<p><strong>マルチヘッドアテンション</strong>: セルフアテンションの拡張で、複数のアテンションメカニズムを並列に実行し、それぞれが異なる表現部分空間と関係のタイプに焦点を当てます。これにより、モデルは異なる位置と表現空間からの情報に同時にアテンドできます。</p>
+<p><strong>位置エンコーディング</strong>: アテンションメカニズム自体が順列不変であるため、シーケンス内のトークンの位置に関する情報を注入する重要なコンポーネントです。これらのエンコーディングは入力埋め込みに追加され、モデルが順序と相対位置を理解するのに役立ちます。</p>
+<p><strong>フィードフォワードネットワーク</strong>: アテンションメカニズムの出力を処理する位置ごとの全結合層で、通常は2つの線形変換とその間のReLU活性化で構成されます。これらのネットワークは、モデルに追加の表現能力と非線形性を提供します。</p>
+<p><strong>層正規化</strong>: 各サブレイヤー(アテンションとフィードフォワード)の前に適用される正規化技術で、特徴次元全体で入力を正規化することでトレーニングを安定化します。これにより、安定した勾配が維持され、より深い<a data-lb="1" href="/ja/glossary/IT-Infrastructure/" title="組織がデータを保存し、アプリケーションを実行し、日常業務に必要なデジタルリソースにユーザーを接続するために使用する基盤となるテクノロジーシステムおよび機器。">ネットワークアーキテクチャ</a>が可能になります。</p>
+<p><strong>残差接続</strong>: 各サブレイヤーの入力を出力に追加するスキップ接続で、深いネットワークを通じた勾配フローを促進し、勾配消失問題を防ぎます。これらの接続は、非常に深いTransformerモデルのトレーニングに不可欠です。</p>
+<p><strong>エンコーダー・デコーダーアーキテクチャ</strong>: エンコーダーが入力シーケンスを処理してコンテキスト表現を作成し、デコーダーがマスクされたセルフアテンションを通じてエンコードされた表現と以前に生成されたトークンの両方を使用して出力シーケンスを生成する全体的な構造です。</p>
+<h2 id="transformerの動作原理">Transformerの動作原理</h2>
+<p>Transformerは、洗練されたマルチステップ<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>を通じてシーケンスを処理します:</p>
+<ol>
+<li>
+<p><strong>入力埋め込みと位置エンコーディング</strong>: 生の入力トークンは埋め込み層を通じて密な<a data-lb="1" href="/ja/glossary/Embedding/" title="機械学習におけるエンベディングの包括的ガイド。ベクトル表現、ニューラルネットワーク、自然言語処理およびAIシステムにおける応用について解説します。">ベクトル表現</a>に変換され、位置エンコーディングが追加されてシーケンス順序情報が提供されます。</p>
+</li>
+<li>
+<p><strong>マルチヘッドセルフアテンション計算</strong>: モデルは、入力埋め込みからクエリ、キー、バリュー行列を作成し、すべての位置ペア間のアテンションスコアを計算し、複数のアテンションヘッドからの情報を組み合わせることで、アテンション重みを計算します。</p>
+</li>
+<li>
+<p><strong>アテンション出力処理</strong>: マルチヘッドアテンション出力は連結され、線形変換され、その後、安定したトレーニングのために残差接続と層正規化を通過します。</p>
+</li>
+<li>
+<p><strong>フィードフォワード処理</strong>: 各位置の表現は、位置ごとのフィードフォワードネットワークを通じて独立して処理され、表現能力を高めるために非線形変換が適用されます。</p>
+</li>
+<li>
+<p><strong>層の積み重ね</strong>: アテンションとフィードフォワード操作は複数の層にわたって繰り返され、各層が入力シーケンスのますます複雑な表現を構築します。</p>
+</li>
+<li>
+<p><strong>エンコーダー出力生成</strong>: 最終的なエンコーダー層は、入力シーケンス全体にわたる関係と依存関係を捉えたコンテキスト表現を生成します。</p>
+</li>
+<li>
+<p><strong>デコーダー処理</strong>(シーケンス間タスクの場合): デコーダーは、マスクされたセルフアテンションを使用して将来の位置からの情報漏洩を防ぎ、エンコーダー・デコーダーアテンションを使用してソースシーケンス情報を組み込みます。</p>
+</li>
+<li>
+<p><strong>出力生成</strong>: 最終的な線形層とソフトマックス関数が、デコーダー表現をシーケンス生成のためのターゲット語彙上の確率分布に変換します。</p>
+</li>
+</ol>
+<p><strong>ワークフローの例</strong>: 機械翻訳では、英語の文「The cat sits」がトークン化され、埋め込まれ、エンコーダー層を通じて処理されて豊かなコンテキスト表現が作成されます。その後、デコーダーは、エンコードされた英語表現と以前に生成されたフランス語トークンの両方を使用して、フランス語翻訳「<a data-lb="1" href="/ja/glossary/Mistral-AI/" title="Mistral AIは、オープンウェイト大規模言語モデルとLe Chatアシスタントを開発するフランスの人工知能企業で、OpenAIやAnthropicに対抗するヨーロッパを代表するAI企業として位置づけられています。">Le chat</a> s’assoit」をトークンごとに生成します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>並列化効率</strong>: シーケンスを順次処理するRNNとは異なり、Transformerはすべての位置を同時に処理できるため、トレーニング時間が劇的に短縮され、最新の並列コンピューティングハードウェアの効率的な利用が可能になります。</p>
+<p><strong>長距離依存関係のモデリング</strong>: セルフアテンションメカニズムは、シーケンス内の離れた位置を直接接続できるため、勾配消失問題により従来のRNNが苦労する長距離依存関係を効果的に捉えることができます。</p>
+<p><strong>スケーラビリティ</strong>: Transformerは、モデルサイズ、データ、計算リソースの増加に伴って非常によくスケールし、これらの要因が増加するにつれて一貫して性能が向上し、ますます強力な<a data-lb="1" href="/ja/glossary/hallucination/" title="AIにおけるハルシネーションとは、生成モデルがもっともらしいものの事実として誤っている、意味をなさない、または捏造されたコンテンツを生成することを指します。その原因、種類、リスク、および軽減戦略について学びます。">大規模言語モデル</a>の開発につながっています。</p>
+<p><strong>転移学習能力</strong>: 事前トレーニングされたTransformerモデルは、アーキテクチャの変更を最小限に抑えてさまざまな下流タスクに微調整でき、異なるドメインとアプリケーション間での効率的な知識転移が可能になります。</p>
+<p><strong>解釈可能性</strong>: アテンション重みは、予測を行う際にモデルが入力のどの部分に焦点を当てているかについての洞察を提供し、モデルの動作と意思決定プロセスを理解するのに役立つある程度の解釈可能性を提供します。</p>
+<p><strong>アーキテクチャの柔軟性</strong>: モジュラー設計により、異なるタスク、シーケンス長、ドメインへの容易な変更と適応が可能になり、Transformerを自然言語処理以外のさまざまなアプリケーションに汎用的にします。</p>
+<p><strong>最先端の性能</strong>: Transformerは、自然言語処理、コンピュータビジョン、その他のドメインにおける多数のベンチマークで一貫して優れた性能を達成し、<a data-lb="1" href="/ja/glossary/Generative-AI/" title="生成AIは、学習したパターンから、テキスト、画像、コードなどの新しいコンテンツを作成します。その定義、モデル(GAN、VAE、Transformer)、応用例、メリット、課題について解説します。">AIモデル</a>能力の新しい基準を確立しています。</p>
+<p><strong>勾配フローの最適化</strong>: 残差接続と層正規化により、深いネットワークを通じた安定した勾配フローが促進され、数百層を持つ非常に大きなモデルのトレーニングが可能になります。</p>
+<p><strong>可変シーケンス長の処理</strong>: Transformerは、固定サイズへのパディングを必要とせずに異なる長さのシーケンスを自然に処理するため、実世界のアプリケーションにとってより効率的で柔軟です。</p>
+<p><strong>アテンションパターンの多様性</strong>: マルチヘッドアテンションにより、モデルは同時に異なるタイプの関係に焦点を当てることができ、同じ層内でさまざまな言語的および意味的パターンを捉えることができます。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>機械翻訳</strong>: Transformerは言語間のテキスト翻訳に優れており、Google翻訳などのサービスを支え、mT5や多言語BERTなどのモデルを通じて多くの言語ペアで人間レベルの性能を達成しています。</p>
+<p><strong>テキスト要約</strong>: 抽出型と抽象型の両方の要約タスクは、文書構造を理解し、重要な情報を保持しながら読みやすさを維持する一貫した要約を生成するTransformerの能力から恩恵を受けています。</p>
+<p><strong>質問応答システム</strong>: BERTやRoBERTaなどのモデルは、Transformerアーキテクチャを使用してコンテキストを理解し、与えられた文章や知識ベースに基づいて質問に正確な回答を提供します。</p>
+<p><strong>感情分析</strong>: Transformerは、従来のアプローチが見逃す可能性のある微妙な言語パターン、コンテキスト、暗黙的な意味を理解することで、テキストの感情を効果的に<a data-lb="1" href="/ja/glossary/Taxonomy/" title="タクソノミーシステム、分類方法、階層構造、および情報整理のための実装ベストプラクティスに関する包括的なガイド。">分類</a>します。</p>
+<p><strong>言語生成</strong>: GPTモデルは、創作、<a data-lb="1" href="/ja/glossary/Code-Generation/" title="AIを活用したコード生成は、自然言語の説明からプログラミングコードを自動作成し、ソフトウェア開発ワークフローを変革します。">コード生成</a>、<a data-lb="1" href="/ja/glossary/Voiceflow/" title="Voiceflowは、チャットボットや音声アシスタントなどの会話型AIエージェントを設計、構築、デプロイするためのノーコードプラットフォームです。複数のチャネルにわたって顧客とのやり取りやワークフローを自動化します。">会話型AI</a>アプリケーションなど、さまざまな目的で人間のようなテキストを生成するTransformerの能力を実証しています。</p>
+<p><strong>固有表現認識</strong>: Transformerは、複数の言語とドメインにわたって、人名、場所、組織、日付などのテキスト内のエンティティを高精度で識別および分類します。</p>
+<p><strong>文書分類</strong>: 大規模な文書分類とトピックモデリングは、正確な分類のために文書構造と意味内容を理解するTransformerの能力を活用しています。</p>
+<p><strong>コード理解と生成</strong>: CodexやCodeBERTなどのプログラミングに焦点を当てたTransformerは、コードの構文と意味を理解し、コード補完、バグ検出、自動プログラミングのアプリケーションを可能にします。</p>
+<p><strong>画像処理</strong>: Vision Transformers(ViT)は、画像分類、物体検出、画像セグメンテーションなどのコンピュータビジョンタスクにアーキテクチャを適用し、畳み込みネットワークに匹敵する性能を発揮します。</p>
+<p><strong>音声認識と合成</strong>: オーディオ処理アプリケーションは、音声からテキストへの変換とテキストから音声への合成にTransformerを使用し、オーディオ信号の時間的依存関係を効果的に処理します。</p>
+<h2 id="transformerと従来のニューラルネットワークの比較">Transformerと従来のニューラルネットワークの比較</h2>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>Transformer</th>
+<th>RNN/LSTM</th>
+<th>CNN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>処理方法</strong></td>
+<td>すべての位置にわたる並列アテンション</td>
+<td>順次処理</td>
+<td>局所畳み込み操作</td>
+</tr>
+<tr>
+<td><strong>トレーニング速度</strong></td>
+<td>並列化により高速</td>
+<td>順次処理により低速</td>
+<td>高速並列畳み込み</td>
+</tr>
+<tr>
+<td><strong>長距離依存関係</strong></td>
+<td>直接接続により優れている</td>
+<td>勾配消失により制限される</td>
+<td>シーケンシャルデータには不向き</td>
+</tr>
+<tr>
+<td><strong>メモリ要件</strong></td>
+<td>アテンション行列により高い</td>
+<td>中程度の順次メモリ</td>
+<td>局所処理により低い</td>
+</tr>
+<tr>
+<td><strong>スケーラビリティ</strong></td>
+<td>モデルサイズで優れている</td>
+<td>順次ボトルネックにより制限される</td>
+<td>空間データに適している</td>
+</tr>
+<tr>
+<td><strong>解釈可能性</strong></td>
+<td>アテンション重みにより高い</td>
+<td>隠れ状態分析により低い</td>
+<td>特徴マップにより中程度</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>計算複雑性</strong>: セルフアテンションメカニズムは、シーケンス長に対して二次的な複雑性を持つため、非常に長いシーケンスでは計算コストが高く、大量のメモリリソースが必要になります。</p>
+<p><strong>メモリ要件</strong>: 大規模なTransformerモデルは、トレーニングと推論に大量のGPUメモリを必要とするため、アクセシビリティが制限され、リソースに制約のある環境での展開の運用コストが増加します。</p>
+<p><strong>トレーニングデータへの依存</strong>: Transformerは通常、最適な性能を達成するために大量のトレーニングデータを必要とするため、データの可用性が限られているドメインには適していません。</p>
+<p><strong>位置エンコーディングの制限</strong>: 標準的な位置エンコーディングは、トレーニング中に見られたものよりも長いシーケンスにうまく一般化できない可能性があり、拡張シーケンスでの性能が制限される可能性があります。</p>
+<p><strong>アテンションパターンの崩壊</strong>: 場合によっては、アテンションヘッドが類似したパターンを学習したり、些細な関係に焦点を当てたりする可能性があり、モデルの表現の多様性と有効性が低下します。</p>
+<p><strong>過学習のリスク</strong>: 大規模なTransformerモデルは、特に小規模なデータセットで過学習しやすく、一般化を確保するために慎重な<a data-lb="1" href="/ja/glossary/Regularization/" title="機械学習における正則化技術の包括的なガイド。L1/L2正則化、ドロップアウト、過学習を防ぐための高度な手法について解説します。">正則化</a>と検証戦略が必要です。</p>
+<p><strong>推論レイテンシ</strong>: トレーニング効率にもかかわらず、生成タスクの順次性とアテンションメカニズムの計算オーバーヘッドにより、リアルタイムアプリケーションでは推論が遅くなる可能性があります。</p>
+<p><strong>ハイパーパラメータの感度</strong>: Transformerには、性能に大きく影響する多数のハイパーパラメータがあり、最適な結果を達成するために広範な調整と実験が必要です。</p>
+<p><strong>環境への影響</strong>: 大規模なTransformerモデルのトレーニングは、大量のエネルギーと<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>を消費し、環境の持続可能性とカーボンフットプリントに関する懸念を引き起こします。</p>
+<p><strong>バイアスと公平性の問題</strong>: 事前トレーニングされたTransformerは、トレーニングデータに存在するバイアスを永続化する可能性があり、公平で倫理的なAIアプリケーションのために慎重な評価と緩和戦略が必要です。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>適切な学習率スケジューリング</strong>: 安定したトレーニングと最適な収束を確保するために、ウォームアップ期間とその後の減衰スケジュールを実装し、通常は初期ウォームアップフェーズ後にコサインまたは線形減衰を使用します。</p>
+<p><strong>勾配クリッピング</strong>: トレーニング中の勾配爆発を防ぐために勾配クリッピングを適用し、特にトレーニングの初期段階で安定した最適化ダイナミクスを維持します。</p>
+<p><strong>層正規化の配置</strong>: モデルの深さとトレーニングの安定性要件に基づいて、層正規化を適切に配置し(プレノルムvsポストノルム)、より深いモデルには一般的にプレノルムが推奨されます。</p>
+<p><strong>アテンションドロップアウト</strong>: 過学習を防ぎ、一般化を改善するために、アテンション重みとフィードフォワード層にドロップアウトを適用し、通常は0.1から0.3の間のレートを使用します。</p>
+<p><strong>混合精度トレーニング</strong>: 半精度浮動小数点演算を利用してメモリ使用量を削減し、慎重な損失スケーリングを通じて数値安定性を維持しながらトレーニングを加速します。</p>
+<p><strong>バッチサイズの最適化</strong>: 可能な限り大きなバッチサイズを使用してトレーニングの安定性と収束を改善し、ハードウェアメモリが制限されている場合は勾配累積を使用します。</p>
+<p><strong>位置エンコーディングの選択</strong>: シーケンス長要件に基づいて適切な位置エンコーディング方法を選択し、学習済みvs固定エンコーディング、相対vs絶対位置付けを考慮します。</p>
+<p><strong>モデルの初期化</strong>: XavierまたはHe初期化などの方法を使用して重みを慎重に初期化し、安定したトレーニングダイナミクスのためにアテンションメカニズムパラメータに特に注意を払います。</p>
+<p><strong>正則化戦略</strong>: ドロップアウト、重み減衰、ラベル平滑化などの複数の正則化技術を実装して、一般化を改善し、過学習を防ぎます。</p>
+<p><strong>検証と早期停止</strong>: 検証メトリクスを注意深く監視し、<a data-lb="1" href="/ja/glossary/Early-Stopping/" title="機械学習における早期停止の包括的ガイド - 最適なモデル訓練のための技術、メリット、実装戦略、ベストプラクティスを解説します。">早期停止</a>を実装して過学習を防ぎながら、未見データでの最適なモデル性能を確保します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>スパースアテンションパターン</strong>: LongformerのスライディングウィンドウアテンションやBigBirdのスパースアテンションなどの効率的なアテンションメカニズムを実装して、計算複雑性を削減しながらより長いシーケンスを処理します。</p>
+<p><strong>知識蒸留</strong>: 大規模な教師モデルから小規模な生徒モデルに知識を転移し、展開<a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>の計算要件を削減しながら性能を維持します。</p>
+<p><strong>マルチタスク学習</strong>: 単一のTransformerモデルを複数の関連タスクで同時にトレーニングして、一般化を改善し、異なるドメイン間で共有表現を活用します。</p>
+<p><strong>適応的アテンションメカニズム</strong>: 入力特性に基づいて適応する動的アテンションパターンを開発し、計算リソースを最適化し、モデル効率を向上させます。</p>
+<p><strong>継続学習アプローチ</strong>: Transformerが以前に学習した知識を忘れることなく新しいタスクを学習できるようにする技術を実装し、順次学習シナリオでの壊滅的忘却に対処します。</p>
+<p><strong>検索拡張生成</strong>: Transformerを外部知識ベースまたは検索システムと組み合わせて、生成能力を強化し、トレーニングデータを超えた最新情報へのアクセスを提供します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>効率性の改善</strong>: 性能能力を維持または向上させながら計算複雑性を削減するための、より効率的なアテンションメカニズムとモデルアーキテクチャの開発。</p>
+<p><strong>マルチモーダル統合</strong>: 異なるメディアタイプにわたる包括的な理解と生成のための、統一されたTransformerアーキテクチャ内でのテキスト、画像、オーディオ、ビデオモダリティの強化された融合。</p>
+<p><strong>少数ショット学習の強化</strong>: 限られた例から学習するための改善された技術により、Transformerが最小限のトレーニングデータで新しいタスクとドメインに迅速に適応できるようにします。</p>
+<p><strong>解釈可能性の進歩</strong>: 改善されたアテンション可視化や因果分析技術を含む、Transformerの意思決定プロセスを理解し説明するためのより良い方法。</p>
+<p><strong>ハードウェアの共同設計</strong>: アテンションメカニズム専用に設計されたカスタムチップやアクセラレータを含む、Transformer計算に最適化された専用ハードウェアアーキテクチャ。</p>
+<p><strong>持続可能なAI開発</strong>: 高い性能基準を維持しながらエネルギー消費を削減する、より環境に優しいトレーニング方法とモデルアーキテクチャの開発に焦点を当てます。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Vaswani, A., et al. (2017). “Attention Is All You Need.” Advances in Neural Information Processing Systems, 30.</p>
+</li>
+<li>
+<p>Devlin, J., et al. (2018). “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.” arXiv preprint arXiv:1810.04805.</p>
+</li>
+<li>
+<p>Brown, T., et al. (2020). “Language Models are Few-Shot Learners.” Advances in Neural Information Processing Systems, 33.</p>
+</li>
+<li>
+<p>Dosovitskiy, A., et al. (2020). “An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale.” arXiv preprint arXiv:2010.11929.</p>
+</li>
+<li>
+<p>Rogers, A., Kovaleva, O., &amp; Rumshisky, A. (2020). “A Primer on Neural Network Models for Natural Language Processing.” Journal of Artificial Intelligence Research, 57.</p>
+</li>
+<li>
+<p>Qiu, X., et al. (2020). “Pre-trained Models for Natural Language Processing: A Survey.” Science China Technological Sciences, 63(10).</p>
+</li>
+<li>
+<p>Tay, Y., et al. (2020). “Efficient Transformers: A Survey.” arXiv preprint arXiv:2009.06732.</p>
+</li>
+<li>
+<p>Kenton, J. D. M. W. C., &amp; Toutanova, L. K. (2019). “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.” Proceedings of NAACL-HLT.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Attention-Mechanism/">
+                    アテンションメカニズム
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ディープラーニングにおけるアテンションメカニズムの包括的ガイド。Transformerアーキテクチャ、セルフアテンション、自然言語処理やコンピュータビジョンへの応用について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Attention-Mechanism/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Embedding/">
+                    エンベディング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    機械学習におけるエンベディングの包括的ガイド。ベクトル表現、ニューラルネットワーク、自然言語処理および<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">AIシステム</a>における応用について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Embedding/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Backpropagation/">
+                    バックプロパゲーション
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ニューラルネットワークにおける<a data-lb="1" href="/ja/glossary/Backpropagation/" title="ニューラルネットワークにおけるバックプロパゲーションアルゴリズムの包括的ガイド。実装方法、メリット、課題、ディープラーニングのベストプラクティスを網羅。">バックプロパゲーション</a>アルゴリズムの包括的ガイド。実装方法、メリット、課題、ディープラーニングのベストプラクティスを網羅。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Backpropagation/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Batch-Normalization/">
+                    バッチ正規化
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ディープラーニングにおける<a data-lb="1" href="/ja/glossary/Batch-Normalization/" title="ディープラーニングにおけるバッチ正規化の包括的ガイド:ニューラルネットワークのための技術、メリット、実装戦略、ベストプラクティス。">バッチ正規化</a>の包括的ガイド:ニューラルネットワークのための技術、メリット、実装戦略、ベストプラクティス。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Batch-Normalization/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Recurrent-Neural-Network--RNN-/">
+                    リカレントニューラルネットワーク(RNN)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Long-Short-Term-Memory--LSTM-/" title="LSTM ニューラルネットワークの包括的ガイド。そのアーキテクチャ、応用例、および逐次データ処理と時系列分析のための実装方法について解説します。">リカレントニューラルネットワーク</a>(RNN)の包括的ガイド - アーキテクチャ、応用例、メリット、課題、実装のベストプラクティスを解説。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Recurrent-Neural-Network--RNN-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/deep-learning/">
+                    ディープラーニング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、<a data-lb="1" href="/ja/glossary/Shadow-AI/" title="シャドーAIとは、従業員による生成AI(ジェネレーティブAI)ツールの無許可使用を指し、データセキュリティ、コンプライアンス、知的財産に重大なリスクをもたらします。">生成AI</a>に不可欠な技術となっています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/deep-learning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/transformer/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

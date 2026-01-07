@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Knowledge Management on SmartWeb</title>
+    <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/tags/knowledge-management/</link>
+    <description>Recent content in Knowledge Management on SmartWeb</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/tags/knowledge-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RAG vs. CAG: Understanding Knowledge Augmentation Strategies for AI Models</title>
+      <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/rag-vs-cag-knowledge-augmentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/rag-vs-cag-knowledge-augmentation/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Large language models have revolutionized how we interact with artificial intelligence, but they face a fundamental challenge: &lt;strong&gt;knowledge cutoff&lt;/strong&gt;. If information wasn&amp;rsquo;t included in a model&amp;rsquo;s training data, the model simply cannot recall it. Whether it&amp;rsquo;s recent news events, proprietary business data, or real-time information, traditional LLMs struggle to provide accurate answers about knowledge beyond their training window. This limitation has sparked the development of augmented generation techniques—methods that extend an AI model&amp;rsquo;s capabilities by connecting it to external knowledge sources. Two prominent approaches have emerged to solve this problem: &lt;strong&gt;Retrieval-Augmented Generation (RAG)&lt;/strong&gt; and &lt;strong&gt;Cache-Augmented Generation (CAG)&lt;/strong&gt;. Each offers distinct advantages and trade-offs, and understanding when to use each approach is crucial for building effective AI systems. This comprehensive guide explores both techniques in depth, examining their architectures, capabilities, and real-world applications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

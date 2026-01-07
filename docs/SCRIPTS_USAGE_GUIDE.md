@@ -326,43 +326,93 @@ python scripts/fix_term_readings_ja.py --ja-dir content/ja/glossary
 
 ## 内部リンク
 
-### 🌟 推奨: 並列リンク構築
+> 📖 **詳細ドキュメント**: `docs/INTERNAL_LINK_SYSTEM_GUIDE.md`
 
-**スクリプト**: `scripts/linkbuilding_parallel.py`
+### 🌟 推奨: CSVデータベースを使用したリンク構築
+
+**スクリプト**: `scripts/add_links_from_database.py`
 
 **特徴**:
-- 並列処理で高速
-- 用語集へのリンクを自動挿入
-- バリエーション対応（複数形、大文字小文字など）
-- 既存リンクは保持
+- CSVデータベースからキーワードを読み込み
+- 禁止用語リスト（danger_terms）で誤リンクを防止
+- コードブロック、既存リンク、ショートコードを保護
+- 日本語・英語両対応
 
 **使用方法**:
 
 ```bash
-# 1. 英語ブログ記事にリンク追加（5並列）
-python scripts/linkbuilding_parallel.py \
-    --content-dir content/en/blog \
-    --glossary-dir content/en/glossary \
-    --workers 5
-
-# 2. 日本語ブログ記事にリンク追加
-python scripts/linkbuilding_parallel.py \
-    --content-dir content/ja/blog \
-    --glossary-dir content/ja/glossary \
-    --workers 5
-
-# 3. 用語集記事同士のリンク
-python scripts/linkbuilding_parallel.py \
-    --content-dir content/en/glossary \
-    --glossary-dir content/en/glossary \
-    --workers 5
-
-# 4. ドライラン（変更なし）
-python scripts/linkbuilding_parallel.py \
-    --content-dir content/en/blog \
-    --glossary-dir content/en/glossary \
+# 英語ブログにリンク追加（プレビュー）
+python3 scripts/add_links_from_database.py \
+    content/en/blog/ \
+    --database databases/link_database_en.csv \
     --dry-run
+
+# 英語ブログにリンク追加（本番）
+python3 scripts/add_links_from_database.py \
+    content/en/blog/ \
+    --database databases/link_database_en.csv
+
+# 日本語ブログにリンク追加
+python3 scripts/add_links_from_database.py \
+    content/ja/blog/ \
+    --database databases/link_database_ja.csv
 ```
+
+**データベース更新**:
+
+```bash
+# 英語DB生成
+python3 scripts/build_link_database.py \
+    --glossary-dir content/en/glossary \
+    --output databases/link_database_en.csv \
+    --lang en
+
+# 日本語DB生成
+python3 scripts/build_link_database.py \
+    --glossary-dir content/ja/glossary \
+    --output databases/link_database_ja.csv \
+    --lang ja
+```
+
+---
+
+### HTML後処理（代替方法）
+
+**スクリプト**: `scripts/linkbuilding_parallel.py`
+
+> ⚠️ **注意**: これはHugoビルド後の`public/`ディレクトリ内のHTMLファイルを処理するスクリプトです。
+> Markdownファイルを直接編集したい場合は、上記の `add_links_from_database.py` を使用してください。
+
+**特徴**:
+- Hugoビルド後のHTMLファイルを処理
+- 複数言語を並列処理
+- JSON設定ファイルを使用
+
+**使用方法**:
+
+```bash
+# 全言語を並列処理
+python scripts/linkbuilding_parallel.py \
+    --linkbuilding-dir data/linkbuilding \
+    --public-dir public \
+    --max-workers 4
+
+# ドライラン（変更なし）
+python scripts/linkbuilding_parallel.py \
+    --linkbuilding-dir data/linkbuilding \
+    --public-dir public \
+    --dry-run
+
+# 特定言語のみ
+python scripts/linkbuilding_parallel.py \
+    --linkbuilding-dir data/linkbuilding \
+    --public-dir public \
+    --languages en ja
+```
+
+**前提条件**:
+- `hugo` ビルドが完了していること
+- `data/linkbuilding/` に JSON 設定ファイルが存在すること
 
 ---
 
@@ -492,27 +542,14 @@ rm content/ja/glossary/Risk-Assessment--Customer-.md
 
 ---
 
-### ツールチップからリンクへ変換
+### ツールチップからリンクへ変換（廃止済み）
 
-**スクリプト**: `scripts/convert_tooltips_to_links.py`
-
-**特徴**:
-- ツールチップ構文を通常のリンクに変換
-- `{{< tooltip "term" >}}text{{< /tooltip >}}` → `[text](/glossary/term/)`
-
-**使用方法**:
-
-```bash
-# 英語記事を変換
-python scripts/convert_tooltips_to_links.py \
-    --content-dir content/en/blog \
-    --lang en
-
-# 日本語記事を変換
-python scripts/convert_tooltips_to_links.py \
-    --content-dir content/ja/blog \
-    --lang ja
-```
+> ⚠️ **注意**: `convert_tooltips_to_links.py` は廃止されました。
+> 旧ツールチップ形式からの移行は完了しています。
+> 
+> 現在の内部リンクシステムについては `docs/INTERNAL_LINK_SYSTEM_GUIDE.md` を参照してください。
+>
+> **旧ドキュメント**: `docs/archive/TOOLTIP_CONVERTER_GUIDE.md`
 
 ---
 

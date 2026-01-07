@@ -32,31 +32,148 @@
         </div>
       </div>
 
-      {{/* ブログタグ一覧（現在の言語・セクションのページからユニークなタグを抽出） */}}
-      {{ $tags := slice }}
-      {{ range .Pages }}
-        {{ with .Params.tags }}
-          {{ range . }}
-            {{ if not (in $tags .) }}
-              {{ $tags = $tags | append . }}
+      {{/* 親タグとそれに属する子タグのマッピング（言語別） */}}
+      {{ if eq .Language.Lang "ja" }}
+        {{/* 日本語版 */}}
+        {{ $parentTags := dict
+          "AI" (slice "AI技術" "AI" "RAG" "LLM" "生成AI" "LLM評価" "ベンチマーク" "ChatGPT" "生産性" "テクノロジー")
+          "チャットボット" (slice "チャットボット")
+          "カスタマーサポート" (slice "カスタマーサポート" "チケットシステム" "FAQ" "ナレッジベース" "LiveAgent")
+          "業務効率化" (slice "業務効率化" "中小企業" "SNS管理")
+          "コンテンツ制作" (slice "コンテンツ制作")
+          "マーケティング" (slice "コンテンツ戦略" "動画マーケティング" "アルゴリズム" "グロース")
+          "YouTube動画紹介" (slice "YouTube")
+        }}
+        {{ $parentTagOrder := slice "AI" "チャットボット" "カスタマーサポート" "業務効率化" "コンテンツ制作" "マーケティング" "YouTube動画紹介" }}
+        {{ $youtubeParentName := "YouTube動画紹介" }}
+
+        {{/* 実際に記事に存在するタグを収集 */}}
+        {{ $existingTags := slice }}
+        {{ range $.Pages }}
+          {{ with .Params.tags }}
+            {{ range . }}
+              {{ if not (in $existingTags .) }}
+                {{ $existingTags = $existingTags | append . }}
+              {{ end }}
             {{ end }}
           {{ end }}
         {{ end }}
-      {{ end }}
 
-      {{ if gt (len $tags) 0 }}
-        <div class="mt-4 mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="flex flex-wrap justify-start gap-2">
-            {{ range sort $tags }}
-              <button
-                type="button"
-                class="blog-tag-filter inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1 text-[10px] sm:text-[11px] font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700"
-                data-tag="{{ . }}">
-                {{ . }}
-              </button>
+        {{/* youtubeVideoIDを持つ記事があるかチェック */}}
+        {{ $hasYoutubeVideo := false }}
+        {{ range $.Pages }}
+          {{ if .Params.youtubeVideoID }}
+            {{ $hasYoutubeVideo = true }}
+          {{ end }}
+        {{ end }}
+
+        {{/* 記事が存在する親タグのみ表示 */}}
+        {{ $activeParentTags := slice }}
+        {{ range $parentTagOrder }}
+          {{ $parent := . }}
+          {{ $childTags := index $parentTags $parent }}
+          {{ if and (eq $parent $youtubeParentName) $hasYoutubeVideo }}
+            {{ if not (in $activeParentTags $parent) }}
+              {{ $activeParentTags = $activeParentTags | append $parent }}
             {{ end }}
+          {{ else }}
+            {{ range $childTags }}
+              {{ if in $existingTags . }}
+                {{ if not (in $activeParentTags $parent) }}
+                  {{ $activeParentTags = $activeParentTags | append $parent }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+
+        {{ if gt (len $activeParentTags) 0 }}
+          <div class="mt-4 mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-2">
+              {{ range $activeParentTags }}
+                {{ $parent := . }}
+                {{ $childTags := index $parentTags $parent }}
+                <button
+                  type="button"
+                  class="blog-tag-filter inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1 text-[10px] sm:text-[11px] font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                  data-tag="{{ delimit $childTags "," }}">
+                  {{ $parent }}
+                </button>
+              {{ end }}
+            </div>
           </div>
-        </div>
+        {{ end }}
+
+      {{ else }}
+        {{/* 英語版 */}}
+        {{ $parentTags := dict
+          "AI" (slice "AI" "AI Technology" "RAG" "LLM" "LLMs" "Generative AI" "ChatGPT" "Productivity" "Technology")
+          "Chatbot" (slice "Chatbot" "AI Chatbot" "Chatbot Types")
+          "Customer Support" (slice "Customer Support" "Ticket System" "FAQ" "Knowledge Base" "LiveAgent" "Customer Experience")
+          "Business Efficiency" (slice "Business Efficiency" "SMB" "SME" "Implementation Guide")
+          "Content Creation" (slice "Content Creation")
+          "Marketing" (slice "Content Strategy" "Video Marketing" "Algorithm" "Growth Hacking" "Marketing")
+          "YouTube Videos" (slice "YouTube")
+        }}
+        {{ $parentTagOrder := slice "AI" "Chatbot" "Customer Support" "Business Efficiency" "Content Creation" "Marketing" "YouTube Videos" }}
+        {{ $youtubeParentName := "YouTube Videos" }}
+
+        {{/* 実際に記事に存在するタグを収集 */}}
+        {{ $existingTags := slice }}
+        {{ range $.Pages }}
+          {{ with .Params.tags }}
+            {{ range . }}
+              {{ if not (in $existingTags .) }}
+                {{ $existingTags = $existingTags | append . }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+
+        {{/* youtubeVideoIDを持つ記事があるかチェック */}}
+        {{ $hasYoutubeVideo := false }}
+        {{ range $.Pages }}
+          {{ if .Params.youtubeVideoID }}
+            {{ $hasYoutubeVideo = true }}
+          {{ end }}
+        {{ end }}
+
+        {{/* 記事が存在する親タグのみ表示 */}}
+        {{ $activeParentTags := slice }}
+        {{ range $parentTagOrder }}
+          {{ $parent := . }}
+          {{ $childTags := index $parentTags $parent }}
+          {{ if and (eq $parent $youtubeParentName) $hasYoutubeVideo }}
+            {{ if not (in $activeParentTags $parent) }}
+              {{ $activeParentTags = $activeParentTags | append $parent }}
+            {{ end }}
+          {{ else }}
+            {{ range $childTags }}
+              {{ if in $existingTags . }}
+                {{ if not (in $activeParentTags $parent) }}
+                  {{ $activeParentTags = $activeParentTags | append $parent }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+
+        {{ if gt (len $activeParentTags) 0 }}
+          <div class="mt-4 mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-2">
+              {{ range $activeParentTags }}
+                {{ $parent := . }}
+                {{ $childTags := index $parentTags $parent }}
+                <button
+                  type="button"
+                  class="blog-tag-filter inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1 text-[10px] sm:text-[11px] font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                  data-tag="{{ delimit $childTags "," }}">
+                  {{ $parent }}
+                </button>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
       {{ end }}
     </div>
     </div>
@@ -68,9 +185,16 @@
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
     <!-- ブログ記事グリッド -->
-    <div class="mx-auto mt-6 grid max-w-2xl auto-rows-fr grid-cols-1 gap-6 sm:gap-8 sm:mt-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+    <div id="blog-articles-grid" class="mx-auto mt-6 grid max-w-2xl auto-rows-fr grid-cols-1 gap-6 sm:gap-8 sm:mt-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       {{ range .Pages }}
-        <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-800 px-6 sm:px-8 pb-6 sm:pb-8 pt-64 sm:pt-48 lg:pt-80 shadow-lg hover:shadow-xl transition-shadow duration-300">
+        {{/* 記事のタグを収集（youtubeVideoIDがあればYouTubeも追加） */}}
+        {{ $articleTags := .Params.tags | default slice }}
+        {{ if .Params.youtubeVideoID }}
+          {{ if not (in $articleTags "YouTube") }}
+            {{ $articleTags = $articleTags | append "YouTube" }}
+          {{ end }}
+        {{ end }}
+        <article class="blog-article relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-800 px-6 sm:px-8 pb-6 sm:pb-8 pt-64 sm:pt-48 lg:pt-80 shadow-lg hover:shadow-xl transition-shadow duration-300" data-tags="{{ delimit $articleTags "," }}">
           {{ if .Params.image }}
             <img 
               src="{{ .Params.image }}" 
@@ -100,7 +224,7 @@
             {{ end }}
           </div>
           <h3 class="mt-3 text-base sm:text-lg font-semibold leading-6 text-white">
-            <a href="{{ .Permalink }}" class="hover:text-indigo-300 transition-colors">
+            <a href="{{ .RelPermalink }}" class="hover:text-indigo-300 transition-colors">
               <span class="absolute inset-0"></span>
               {{ .Title }}
             </a>
@@ -183,18 +307,88 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const input = document.getElementById('popup-search-input-blog-archive-search');
+  const articlesGrid = document.getElementById('blog-articles-grid');
+  const articles = document.querySelectorAll('.blog-article');
+  const buttons = document.querySelectorAll('.blog-tag-filter');
+  let activeFilter = null;
 
-  if (input) {
-    const buttons = document.querySelectorAll('.blog-tag-filter');
-    buttons.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        const tag = this.getAttribute('data-tag');
-        if (!tag) return;
-        input.value = tag;
-        const ev = new Event('input', { bubbles: true });
-        input.dispatchEvent(ev);
-        input.focus();
+  // タグボタンのクリックでOR検索フィルタリング
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const tagString = this.getAttribute('data-tag');
+      if (!tagString) return;
+
+      const filterTags = tagString.split(',').map(t => t.trim().toLowerCase());
+      const parentName = this.textContent.trim();
+
+      // 同じボタンを再度クリックしたらフィルター解除
+      if (activeFilter === parentName) {
+        activeFilter = null;
+        articles.forEach(function(article) {
+          article.style.display = '';
+        });
+        // ボタンのアクティブ状態を解除
+        buttons.forEach(function(b) {
+          b.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+          b.classList.add('bg-white', 'text-gray-700', 'border-gray-300');
+        });
+        if (input) input.value = '';
+        return;
+      }
+
+      activeFilter = parentName;
+
+      // ボタンのアクティブ状態を更新
+      buttons.forEach(function(b) {
+        if (b === btn) {
+          b.classList.remove('bg-white', 'text-gray-700', 'border-gray-300');
+          b.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+        } else {
+          b.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+          b.classList.add('bg-white', 'text-gray-700', 'border-gray-300');
+        }
       });
+
+      // OR検索：いずれかのタグがマッチすれば表示
+      articles.forEach(function(article) {
+        const articleTagsAttr = article.getAttribute('data-tags') || '';
+        const articleTags = articleTagsAttr.split(',').map(t => t.trim().toLowerCase()).filter(t => t.length > 0);
+
+        // タグがない記事はマッチしない
+        if (articleTags.length === 0) {
+          article.style.display = 'none';
+          return;
+        }
+
+        const hasMatch = filterTags.some(function(filterTag) {
+          return articleTags.some(function(articleTag) {
+            return articleTag === filterTag;
+          });
+        });
+
+        article.style.display = hasMatch ? '' : 'none';
+      });
+
+      // 検索ボックスに親タグ名を表示
+      if (input) {
+        input.value = parentName;
+      }
+    });
+  });
+
+  // 検索ボックスの入力をクリアしたらフィルターも解除
+  if (input) {
+    input.addEventListener('input', function() {
+      if (this.value === '') {
+        activeFilter = null;
+        articles.forEach(function(article) {
+          article.style.display = '';
+        });
+        buttons.forEach(function(b) {
+          b.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+          b.classList.add('bg-white', 'text-gray-700', 'border-gray-300');
+        });
+      }
     });
   }
 

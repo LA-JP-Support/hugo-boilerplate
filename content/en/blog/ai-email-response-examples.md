@@ -19,13 +19,13 @@ In fact, automated response generation using the latest [AI](/en/glossary/artifi
 
 Seeing is believing. First, let's introduce two real examples of what kind of response drafts the [AI](/en/glossary/artificial-intelligence/) automated response generation function actually creates.
 
-Note that the system introduced here combines LiveAgent, a software [platform](/en/glossary/platform/) that converts customer inquiries from emails, calls, and messages into organized digital tickets, helping support teams track and resolve issues systematically, with [FlowHunt](/en/glossary/FlowHunt/), which is also utilized in SmartWeb's construction services. It handles not only emails but also inquiries from contact forms and SNS, creating equally high- [precision](/en/glossary/Precision/) response drafts across all reception channels.
+[Note](/en/glossary/note/) that the system introduced here combines [LiveAgent](/en/glossary/LiveAgent/), a software [platform](/en/glossary/platform/) that converts customer inquiries from emails, calls, and messages into organized digital tickets, helping support teams track and resolve issues systematically, with [FlowHunt](/en/glossary/FlowHunt/), which is also utilized in SmartWeb's construction services. It handles not only emails but also inquiries from contact forms and SNS, creating equally high- [precision](/en/glossary/Precision/) response drafts across all reception channels.
 
 ### 【Example 1】Handling Complex Technical Inquiries
 
 **Customer Inquiry Content:**
 
-From Mr. Yamada at XX Corporation, we received detailed questions regarding consideration of [AI chatbot](/en/glossary/AI-chatbot/) plan implementation:
+From Mr. Yamada at XX Corporation, we received detailed questions regarding consideration of [AI [chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-[chatbot](/en/glossary/Chatbot/)/) plan implementation:
 
 - Minimum required content volume (number of [FAQ](/en/glossary/FAQ/) items, [knowledge base](/en/glossary/knowledge-base/) pages, character count guidelines)
 - Recommended content volume and industry-specific differences
@@ -48,7 +48,7 @@ The AI accurately understood these multiple questions and automatically generate
 
 3. **Regarding Content Formats**
    - File formats such as PDF, Word, Excel
-   - Website FAQ pages, LiveAgent knowledge base
+   - Website FAQ pages, [LiveAgent](/en/glossary/LiveAgent/) knowledge base
    - [YouTube](/en/glossary/YouTube/) videos, audio content
    - Automatic acquisition and periodic updates via [URL Retriever](/en/glossary/URL-Retriever/)
    
@@ -110,7 +110,7 @@ The AI understood the seriousness of this complaint and automatically generated 
 3. **Current Response Status**
    Explained that cause investigation is underway with highest priority
    Reported progress of emergency response by technical team
-   Provided real-time status page (https://status.liveagent.com/)
+   Provided real-time status page (https://status.[liveagent](/en/glossary/LiveAgent/).com/)
 
 4. **Proposal of Temporary Workarounds**
    Manual ticket creation for important inquiries

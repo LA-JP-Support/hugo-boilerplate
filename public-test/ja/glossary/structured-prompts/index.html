@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>構造化プロンプト | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/structured-prompts/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/structured-prompts/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/structured-prompts/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/structured-prompts/" hreflang="x-default" rel="alternate"/>
+<meta content="構造化プロンプトを探求:信頼性が高く一貫性のある出力を実現する、整理されたフォーマット駆動型のAI指示。コアコンポーネント、メリット、フレームワーク、エンタープライズユースケースを学びます。" name="description"/>
+<meta content="構造化プロンプト, プロンプトエンジニアリング, AI指示, プロンプト設計, ワークフロー自動化" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/structured-prompts/" property="og:url"/>
+<meta content="構造化プロンプト | SmartWeb" property="og:title"/>
+<meta content="構造化プロンプトを探求:信頼性が高く一貫性のある出力を実現する、整理されたフォーマット駆動型のAI指示。コアコンポーネント、メリット、フレームワーク、エンタープライズユースケースを学びます。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/structured-prompts/" name="twitter:url"/>
+<meta content="構造化プロンプト | SmartWeb" name="twitter:title"/>
+<meta content="構造化プロンプトを探求:信頼性が高く一貫性のある出力を実現する、整理されたフォーマット駆動型のAI指示。コアコンポーネント、メリット、フレームワーク、エンタープライズユースケースを学びます。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">構造化プロンプト</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Prompt Engineering
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        構造化プロンプト
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Structured Prompts
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          構造化プロンプトを探求:信頼性が高く一貫性のある出力を実現する、整理されたフォーマット駆動型のAI指示。コアコンポーネント、メリット、フレームワーク、エンタープライズユースケースを学びます。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                構造化プロンプト
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                プロンプトエンジニアリング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AI指示
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                プロンプト設計
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ワークフロー自動化
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="構造化プロンプトとは何か">構造化プロンプトとは何か?</h2>
+<p><a data-lb="1" href="/ja/glossary/structured-prompts/" title="構造化プロンプトを探求:信頼性が高く一貫性のある出力を実現する、整理されたフォーマット駆動型のAI指示。コアコンポーネント、メリット、フレームワーク、エンタープライズユースケースを学びます。">構造化プロンプト</a>とは、<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">AIシステム</a>が信頼性が高く、一貫性があり、予測可能な出力を生成するように導くために設計された、組織化されたフォーマット駆動型の指示です。ガイダンスが暗黙的で解釈の余地がある自由形式の会話型プロンプトとは異なり、構造化プロンプトは、タスク要件、コンテキスト、制約、出力仕様を明示的で一貫してラベル付けされた<a data-lb="1" href="/ja/glossary/Section/" title="関連するコンテンツや情報をグループ化し、ドキュメント、ウェブサイト、アプリケーション全体で素材を論理的で管理しやすい部分に整理・構造化するためのコンテナ。">セクション</a>に配置します。これらのセクションは、JSON、XML、Markdownなどのテンプレート、スキーマ、または機械可読表記に従うことがよくあります。</p>
+<p>構造化プロンプトは、<a data-lb="1" href="/ja/glossary/Zero-Shot-Chain-of-Thought/" title="ゼロショット思考連鎖(CoT)は、LLMのためのプロンプトエンジニアリング技術であり、例を示さずにモデルに段階的な推論を指示することで、複雑な問題解決能力を向上させます。">プロンプトエンジニアリング</a>(AIモデルの動作を制御し確実に導くためのプロンプトの設計、テスト、最適化の分野)におけるベストプラクティスを表しています。期待を明示的にし、要件を具体的にすることで、構造化プロンプトは自動化、スケーラビリティ、エンタープライズ<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>への統合を可能にし、曖昧さを減らし、出力品質を向上させます。</p>
+<p>構造化アプローチは、AIとのアドホックなやり取りを、本番環境、ビジネス<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>、エンタープライズ規模の展開に適した反復可能なプロセスに変換します。</p>
+<h2 id="中核的特性">中核的特性</h2>
+<h3 id="明示的な組織化">明示的な組織化</h3>
+<p>各機能要素は、その役割を定義する明確にラベル付けされたセクションを占めます。タスク指示、コンテキスト、制約、出力フォーマット、例は、会話の流れに埋め込まれるのではなく、分離され明示的に識別されます。</p>
+<h3 id="機械可読性">機械可読性</h3>
+<p>構造化プロンプトは、シームレスな自動化とプログラム的操作のためにフォーマットできます。JSON、XML、構造化テキストフォーマットにより、手動での再フォーマットなしに<a data-lb="1" href="/ja/glossary/Unified-API/" title="複数の異なるAPIやサービスを標準化された一貫性のあるレイヤーに統合する単一のインターフェース。通信プロトコル、データフォーマット、認証メカニズムを正規化することで複雑性を抽象化し、開発者が各APIを個別に学習することなく、さまざまなサードパーティサービスと統合できるようにします。">API統合</a>、一括処理、ワークフローオーケストレーションが可能になります。</p>
+<h3 id="テンプレートベースの再利用性">テンプレートベースの再利用性</h3>
+<p>標準化されたテンプレートにより、類似タスク全体で一貫した適用が可能になります。適切に設計された単一のテンプレートで、数千の顧客問い合わせの処理、数百の製品説明の生成、または多数の文書の分析を均一な品質で実行できます。</p>
+<h3 id="予測可能な出力">予測可能な出力</h3>
+<p>明示的な制約と仕様により、<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>応答の変動性が減少します。組織は品質ベースラインを確立し、自動検証を実装し、大規模運用全体で一貫性を維持できます。</p>
+<h3 id="バージョン管理とガバナンス">バージョン管理とガバナンス</h3>
+<p>構造化プロンプトは、標準的なソフトウェア開発プラクティスを通じてバージョン管理、レビュー、テスト、保守が可能なコードのような成果物として機能します。これにより、共同開発、変更追跡、<a data-lb="1" href="/ja/glossary/Compliance-Audit/" title="コンプライアンス監査の包括的ガイド:規制遵守とリスク管理のためのプロセス、フレームワーク、メリット、ベストプラクティス。">コンプライアンス監査</a>が可能になります。</p>
+<h2 id="構造化プロンプトが重要な理由">構造化プロンプトが重要な理由</h2>
+<h3 id="ビジネス上の利点">ビジネス上の利点</h3>
+<p><strong>信頼性と一貫性</strong><br/>
+明示的な要件により曖昧さが排除され、<a data-lb="1" href="/ja/glossary/bottlenecks/" title="ビジネス、自動化、AIチャットボット運用におけるボトルネックを理解します。プロセス、リソース、容量の制約を特定、分析、解決し、効率を向上させる方法を学びます。">ビジネスプロセス</a>に不可欠な予測可能で反復可能な出力が生成されます。組織は、数千のやり取り全体で一貫したAI動作に依存できます。</p>
+<p><strong>精度と制御</strong><br/>
+詳細な仕様により、必要に応じてAI動作を正確に指示し、幻覚、エラー、トピック外の応答を減らします。テスト可能な要件により<a data-lb="1" href="/ja/glossary/Quality-Monitoring/" title="製品、サービス、またはプロセスを設定された基準に照らして継続的にチェックし、品質を確保し、問題を特定し、改善を促進する体系的なプロセス。">品質保証</a>が実現可能になります。</p>
+<p><strong>スケーラビリティ</strong><br/>
+テンプレートにより、数千の顧客サポートチケット、自動レポート、コンテンツ生成タスクなどの大量処理が均一な品質で可能になります。単一のプロンプトは、品質を低下させることなくプロトタイプから本番環境にスケールします。</p>
+<p><strong>効率性</strong><br/>
+明確で完全なプロンプトにより、反復的な改良サイクルが減少します。AIシステムは要件を即座に理解し、ターンアラウンドタイムを短縮し、開発サイクルを加速します。</p>
+<p><strong>統合能力</strong><br/>
+機械フレンドリーなフォーマットにより、<a data-lb="1" href="/ja/glossary/APIs/" title="API(アプリケーション・プログラミング・インターフェース)を詳しく解説:定義、仕組み、種類(REST、SOAP)、実例、メリット、セキュリティ、ベストプラクティスを網羅した総合ガイドです。">API</a>、RPAワークフロー、CI/CDパイプライン、エンタープライズシステムへの直接埋め込みが可能になります。構造化プロンプトは、より大きな自動化戦略のプログラム可能なコンポーネントになります。</p>
+<p><strong>ガバナンスとコンプライアンス</strong><br/>
+<a data-lb="1" href="/ja/glossary/Version-Control/" title="バージョン管理システムの包括的なガイド。Git、SVN、ワークフロー、ベストプラクティス、ソフトウェア開発チームのための実装戦略をカバーしています。">バージョン管理</a>されたプロンプトは、監査、コンプライアンス検証、<a data-lb="1" href="/ja/glossary/Change-Management/" title="組織変革イニシアチブを成功させるための変更管理プロセス、方法論、ベストプラクティスに関する包括的なガイド。">変更管理</a>をサポートします。組織は変更を追跡し、文書を維持し、ポリシーと規制への準拠を実証できます。</p>
+<h3 id="技術的利点">技術的利点</h3>
+<p><strong>幻覚リスクの低減</strong><br/>
+明示的な制約と例により、AI応答が指定された要件に基づいて行われ、捏造または不正確な情報が大幅に減少します。</p>
+<p><strong>テスト可能性の向上</strong><br/>
+明確な仕様を持つ構造化プロンプトにより、自動テスト、品質メトリクス、出力の体系的な検証が可能になります。</p>
+<p><strong>保守性の向上</strong><br/>
+組織化された構造により、プロンプトの理解、変更、最適化が時間の経過とともに容易になります。チームはプロンプト開発で効果的に協力できます。</p>
+<h2 id="構造化プロンプトの中核コンポーネント">構造化プロンプトの中核コンポーネント</h2>
+<h3 id="指示--インストラクション">指示 / インストラクション</h3>
+<p><strong>目的:</strong> AIの主要なタスク、アクション、または目標を定義します。<br/>
+<strong>ラベル:</strong> Task、Instruction、Request、Objective、Goal</p>
+<p><strong>特性:</strong></p>
+<ul>
+<li>明確で具体的な動作動詞を使用(分析、要約、翻訳、生成、<a data-lb="1" href="/ja/glossary/Taxonomy/" title="タクソノミーシステム、分類方法、階層構造、および情報整理のための実装ベストプラクティスに関する包括的なガイド。">分類</a>)</li>
+<li>必要な出力を正確に述べる</li>
+<li>複雑なタスクをステップバイステップの指示に分解</li>
+<li>曖昧または不明確な言語を避ける</li>
+</ul>
+<p><strong>例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Task: 以下の記事を正確に3つの箇条書きで要約してください。
+</span></span><span style="display:flex;"><span>Instruction: 以下の段落をフォーマルなトーンを維持しながらスペイン語に翻訳してください。
+</span></span><span style="display:flex;"><span>Objective: 請求書からすべての日付、金額、ベンダー名を抽出してください。
+</span></span></code></pre></div><h3 id="役割--ペルソナ">役割 / ペルソナ</h3>
+<p><strong>目的:</strong> AIに特定の専門知識レベル、専門的役割、またはペルソナを割り当て、知識領域、トーン、アプローチに影響を与えます。<br/>
+<strong>ラベル:</strong> Role、Persona、Perspective、Expertise</p>
+<p><strong>特性:</strong></p>
+<ul>
+<li>タスク要件に関連する役割を選択</li>
+<li>適切な専門知識レベルと知識領域を確立</li>
+<li>トーン、スタイル、コミュニケーションアプローチを設定</li>
+<li>応答の深さと技術レベルに影響</li>
+</ul>
+<p><strong>例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Role: あなたは技術トラブルシューティングの専門知識を持つ経験豊富なカスタマーサポートエージェントです。
+</span></span><span style="display:flex;"><span>Persona: B2B SaaSメッセージングを専門とするシニアマーケティングコピーライターとして行動してください。
+</span></span><span style="display:flex;"><span>Expertise: 株式調査で10年以上の経験を持つ財務アナリストとして応答してください。
+</span></span></code></pre></div><h3 id="コンテキスト--背景">コンテキスト / 背景</h3>
+<p><strong>目的:</strong> AIが状況と要件を理解するために必要な重要な情報、<a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>、またはデータを提供します。<br/>
+<strong>ラベル:</strong> Context、Background、Situation、Additional Information、Scenario</p>
+<p><strong>特性:</strong></p>
+<ul>
+<li>情報に基づいた応答のためのすべての関連詳細を提供</li>
+<li>履歴情報または以前の会話参照を含む</li>
+<li>現在の状況または問題状態を説明</li>
+<li>制約または特別な考慮事項を確立</li>
+</ul>
+<p><strong>例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Context: 顧客は欠陥製品を返品した後、3週間払い戻しを待っています。
+</span></span><span style="display:flex;"><span>Background: 当社はエンタープライズプロジェクト管理を専門とするB2B SaaSプロバイダーです。
+</span></span><span style="display:flex;"><span>Situation: 四半期レポートは48時間以内に提出期限があり、経営レベルの要約が必要です。
+</span></span></code></pre></div><h3 id="例--few-shotデモンストレーション">例 / Few-Shotデモンストレーション</h3>
+<p><strong>目的:</strong> サンプルの入出力ペアを通じて、望ましい出力フォーマット、スタイル、推論、またはアプローチを示します。<br/>
+<strong>ラベル:</strong> Examples、Few-Shot、Demonstrations、Sample Input/Output</p>
+<p><strong>特性:</strong></p>
+<ul>
+<li>実際のタスクの複雑さとスタイルに一致</li>
+<li>1〜5の代表的な例を提供(Few-Shot学習)</li>
+<li>入力と望ましい出力の両方を示す</li>
+<li>エッジケースまたは特別な処理を説明</li>
+</ul>
+<p><strong>例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Examples:
+</span></span><span style="display:flex;"><span>Input: "アカウントにログインできません。"
+</span></span><span style="display:flex;"><span>Output: カテゴリ: 認証問題 | 優先度: 高 | 次のアクション: 認証情報をリセット
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Input: "注文はいつ到着しますか?"
+</span></span><span style="display:flex;"><span>Output: カテゴリ: 注文追跡 | 優先度: 中 | 次のアクション: 配送状況を確認
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Input: "アプリが起動時にクラッシュし続けます。"
+</span></span><span style="display:flex;"><span>Output: カテゴリ: 技術的バグ | 優先度: 重大 | 次のアクション: エンジニアリングにエスカレーション
+</span></span></code></pre></div><h3 id="出力フォーマット仕様">出力フォーマット仕様</h3>
+<p><strong>目的:</strong> 必要な応答の構造、スタイル、フォーマットを明示的に定義します。<br/>
+<strong>ラベル:</strong> Output Format、Response Format、Formatting Requirements、Structure</p>
+<p><strong>特性:</strong></p>
+<ul>
+<li>正確なフォーマットを指定(JSON、テーブル、リスト、散文)</li>
+<li>フィールド名、データ型、構造を定義</li>
+<li>長さの制約または制限を設定</li>
+<li>フォーマット規則を確立</li>
+</ul>
+<p><strong>例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Output Format: 次のフィールドを持つJSONオブジェクトとして応答を提供してください:
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  "category": "&lt;問題カテゴリ&gt;",
+</span></span><span style="display:flex;"><span>  "priority": "&lt;High|Medium|Low&gt;",
+</span></span><span style="display:flex;"><span>  "next_action": "&lt;推奨アクション&gt;",
+</span></span><span style="display:flex;"><span>  "estimated_resolution_time": "&lt;時間&gt;"
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Response Format: 列を持つMarkdownテーブルを作成してください: 機能、利点、使用例
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Structure: 3つの段落を書いてください。最初: 概要。2番目: 主要な課題。3番目: 推奨事項。
+</span></span></code></pre></div><h3 id="制約--制限">制約 / 制限</h3>
+<p><strong>目的:</strong> 出力が満たさなければならない境界、制限、要件を設定します。<br/>
+<strong>ラベル:</strong> Constraints、Limitations、Requirements、Guardrails、Boundaries</p>
+<p><strong>特性:</strong></p>
+<ul>
+<li>含めるべきものまたは除外すべきものを定義</li>
+<li>長さ制限を設定(単語、文字、トークン)</li>
+<li>トーン、スタイル、または対象者の要件を指定</li>
+<li>安全性またはコンプライアンスの境界を確立</li>
+<li>エッジケースまたは不確実性の処理を定義</li>
+</ul>
+<p><strong>例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Constraints:
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> 最大150単語
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> 競合他社名に言及しない
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> 提供された文書からの情報のみを使用
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> プロフェッショナルで中立的なトーンを維持
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> 不確実な場合は、推測ではなく「情報は利用できません」と述べる
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Limitations:
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> 「概要」セクションからのみデータを抽出
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> 欠落値には「不明」をデフォルトとする
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> 計算または推論を実行しない
+</span></span></code></pre></div><h3 id="参照--ソース資料">参照 / ソース資料</h3>
+<p><strong>目的:</strong> AIを特定の情報源、以前の会話ターン、または応答に情報を提供すべきデータに向けます。<br/>
+<strong>ラベル:</strong> References、Sources、Context Documents、Input Data</p>
+<p><strong>特性:</strong></p>
+<ul>
+<li>以前の会話要素にリンク</li>
+<li>特定の文書またはデータセクションを識別</li>
+<li>情報階層または権限を確立</li>
+<li>矛盾する情報の処理方法を指定</li>
+</ul>
+<p><strong>例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>References:
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> 背景については2025-01-15の顧客とのやり取りを参照
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> 権威あるソースとして会社ポリシー文書バージョン3.2を使用
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">-</span> 現在の価格情報については添付のスプレッドシートを参照
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Source Material: 次の記事からの情報のみを使用してください: [記事テキスト]
+</span></span></code></pre></div><h2 id="構造化プロンプトと非構造化プロンプトの比較">構造化プロンプトと非構造化プロンプトの比較</h2>
+<h3 id="比較">比較</h3>
+<table>
+<thead>
+<tr>
+<th>側面</th>
+<th>構造化プロンプト</th>
+<th>非構造化プロンプト</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>フォーマット</strong></td>
+<td>ラベル付きの組織化されたセクション</td>
+<td>自由形式の会話</td>
+</tr>
+<tr>
+<td><strong>明確性</strong></td>
+<td>明示的、曖昧さなし</td>
+<td>暗黙的、解釈的</td>
+</tr>
+<tr>
+<td><strong>一貫性</strong></td>
+<td>高い反復可能性</td>
+<td>可変的な出力</td>
+</tr>
+<tr>
+<td><strong>スケーラビリティ</strong></td>
+<td>本番環境対応</td>
+<td>限定的なスケーラビリティ</td>
+</tr>
+<tr>
+<td><strong>自動化</strong></td>
+<td>API/ワークフローフレンドリー</td>
+<td>手動介入が必要</td>
+</tr>
+<tr>
+<td><strong>テスト</strong></td>
+<td>テスト可能な仕様</td>
+<td>検証が困難</td>
+</tr>
+<tr>
+<td><strong>保守</strong></td>
+<td>バージョン管理</td>
+<td>アドホックな変更</td>
+</tr>
+<tr>
+<td><strong>使用例</strong></td>
+<td>ビジネス自動化、本番環境</td>
+<td>探索、ブレインストーミング</td>
+</tr>
+</tbody>
+</table>
+<h3 id="各アプローチを使用するタイミング">各アプローチを使用するタイミング</h3>
+<p><strong>構造化プロンプト:</strong></p>
+<ul>
+<li>本番ワークフローとビジネスプロセス</li>
+<li>一貫性を必要とする反復タスク</li>
+<li>自動化システムとAPI統合</li>
+<li>信頼性を必要とする重要なアプリケーション</li>
+<li>プロンプト開発におけるチームコラボレーション</li>
+<li>コンプライアンスとガバナンス要件</li>
+<li>大規模コンテンツ生成</li>
+</ul>
+<p><strong>非構造化プロンプト:</strong></p>
+<ul>
+<li>探索的会話とブレインストーミング</li>
+<li>一回限りの質問とカジュアルなやり取り</li>
+<li>急速に進化する、または未定義の要件</li>
+<li>制約のない創造的アイデア創出</li>
+<li>学習と実験</li>
+<li>個人の生産性と支援</li>
+</ul>
+<h2 id="フレームワークと表記システム">フレームワークと表記システム</h2>
+<h3 id="traciフレームワーク">TRACIフレームワーク</h3>
+<p>TRACIは、5つの中核要素を持つプロンプト構築のための構造化テンプレートを提供します:</p>
+<p><strong>T – Task:</strong> 一般的な出力目標または目的<br/>
+<strong>R – Role:</strong> 応答者のペルソナまたは専門知識レベル<br/>
+<strong>A – Audience:</strong> 出力のターゲット受信者<br/>
+<strong>C – Create:</strong> 生成される特定の成果物<br/>
+<strong>I – Intent:</strong> 目的または望ましい結果</p>
+<p><strong>TRACIプロンプトの例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Task: 製品利点メッセージングを作成
+</span></span><span style="display:flex;"><span>Role: シニアB2Bマーケティングコピーライター
+</span></span><span style="display:flex;"><span>Audience: エンタープライズ調達マネージャー
+</span></span><span style="display:flex;"><span>Create: 5つの主要製品利点のリスト
+</span></span><span style="display:flex;"><span>Intent: 競合評価における検討を促進
+</span></span></code></pre></div><p>TRACIは高度にモジュール式です。要素は、制約、例、フォーマット仕様などの追加コンポーネントで、特定のニーズに基づいてカスタマイズ、並べ替え、または拡張できます。</p>
+<h3 id="構造化プロンプト表記法spn">構造化プロンプト表記法(SPN)</h3>
+<p>SPNは、JSON、XML、または他の機械可読フォーマットに変換可能な複雑で再利用可能なプロンプトを作成するためのアウトラインベースのフォーマットです。主な利点:</p>
+<p><strong>フォーマットの柔軟性:</strong> 一度作成し、複数のフォーマットで展開<br/>
+<strong>将来性:</strong> 完全な書き直しなしに新しいLLM要件に適応<br/>
+<strong>バージョン管理:</strong> 変更を体系的に追跡<br/>
+<strong>コラボレーション:</strong> 明確な構造によりチーム開発が可能</p>
+<p><strong>SPN構造の例:</strong></p>
+<pre tabindex="0"><code># カスタマーサポートチケット分類器
+## Role
+- 技術的および請求問題の専門知識を持つカスタマーサポートチケット分類器
+## Task
+- サポートチケットを事前定義されたカテゴリに分類
+- 優先度レベルを割り当て
+- 次のアクションを推奨
+## Input
+- ticket_text: サポートチケットの内容
+## Output Format
+- フィールドを持つJSON: category、priority、next_action、confidence
+## Categories
+- 技術的問題、請求問い合わせ、機能リクエスト、アカウント管理
+## Constraints
+- 定義されたカテゴリのみを使用
+- 信頼度スコア0.0-1.0を提供
+- 信頼度 &lt; 0.7の場合、category = "レビューが必要"
+</code></pre><h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<h3 id="設計原則">設計原則</h3>
+<p><strong>1. 明示的かつ具体的に</strong><br/>
+解釈の余地を残さないでください。何が必要か、どのように構造化すべきか、どのような制約が適用されるかを正確に述べてください。曖昧なプロンプトは曖昧な出力を生成します。</p>
+<p><strong>2. 明確なセクションラベルを使用</strong><br/>
+一貫性のある認識可能なラベルでプロンプトを整理します。組織のプロンプトライブラリ全体で用語を標準化します。</p>
+<p><strong>3. 代表的な例を提供</strong><br/>
+複雑なタスクや特定のフォーマット要件に対して、望ましい出力を示す1〜5の例を含めます。例は曖昧な指示を明確にします。</p>
+<p><strong>4. 出力構造を指定</strong><br/>
+正確なフォーマット、フィールド名、データ型、構造を定義します。JSON/XML出力の<a data-lb="1" href="/ja/glossary/Schema/" title="データベース、Web開発、データ構造におけるスキーマの包括的ガイド - 定義、種類、実装、ベストプラクティス。">スキーマ</a>を含めます。テーブルの列ヘッダーを指定します。</p>
+<p><strong>5. 制約を明示的に定義</strong><br/>
+すべての要件、除外、長さ制限、トーン要件、<a data-lb="1" href="/ja/glossary/Nodes-and-Edges/" title="ノードはシステムにおける基本的な構成要素(アクションまたはエンティティ)であり、エッジは関係性、データフロー、または依存関係を定義する接続(線)です。">エッジ</a>ケース処理をリストします。AIが制約を推測すると仮定しないでください。</p>
+<p><strong>6. プロンプトをモジュール式に保つ</strong><br/>
+再利用可能なコンポーネントを設計します。混合して一致させることができる一般的な役割定義、制約セット、フォーマット仕様のライブラリを作成します。</p>
+<p><strong>7. 反復とテスト</strong><br/>
+プロンプトをコードとして扱います。体系的にテストし、フィードバックを収集し、パフォーマンスを測定し、結果に基づいて改良します。重要なプロンプトのテストスイートを維持します。</p>
+<p><strong>8. 徹底的に文書化</strong><br/>
+<a data-lb="1" href="/ja/glossary/Meta/" title="メタとは、他の情報を説明する情報のことで、検索エンジンやソーシャルプラットフォームがウェブコンテンツを効果的に理解し整理するのに役立ちます。">メタデータ</a>を含めます: 目的、使用例、期待される入力、出力仕様、バージョン履歴、パフォーマンスベンチマーク。</p>
+<h3 id="ガバナンスと保守">ガバナンスと保守</h3>
+<p><strong>バージョン管理</strong><br/>
+プロンプトをバージョン管理システム(Git)に保存します。変更を追跡し、履歴を維持し、ロールバックを可能にし、共同開発をサポートします。</p>
+<p><strong>レビューと承認</strong><br/>
+本番プロンプトのレビュープロセスを確立します。関連ドメインからの利害関係者(法務、コンプライアンス、主題専門家)を含めます。</p>
+<p><strong>テストと検証</strong><br/>
+多様な入力を持つテストスイートを作成します。精度、一貫性、バイアス、エッジケース処理を測定します。可能な限りテストを自動化します。</p>
+<p><strong>パフォーマンス監視</strong><br/>
+成功率、ユーザー満足度、修正頻度、処理時間などのメトリクスを通じてプロンプトの効果を追跡します。</p>
+<p><strong>文書化基準</strong><br/>
+使用例、入力仕様、出力スキーマ、制約、既知の制限、トラブルシューティングガイダンスを含む包括的な文書を維持します。</p>
+<h2 id="エンタープライズ使用例">エンタープライズ使用例</h2>
+<h3 id="カスタマーサポート自動化">カスタマーサポート自動化</h3>
+<p><strong>チケット分類:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Role: カスタマーサポートチケット分類器
+</span></span><span style="display:flex;"><span>Task: サポートチケットを分類し、アクションを推奨
+</span></span><span style="display:flex;"><span>Input: 顧客メッセージテキスト
+</span></span><span style="display:flex;"><span>Output Format: category、priority、sentiment、recommended_actionを持つJSON
+</span></span><span style="display:flex;"><span>Categories: 技術的、請求、アカウント、機能リクエスト、バグレポート
+</span></span><span style="display:flex;"><span>Constraints: 不確実な場合は、人間のレビューのためにフラグを立てる
+</span></span></code></pre></div><p><strong>応答生成:</strong><br/>
+構造化プロンプトは、毎日数千のやり取り全体で一貫したトーン、正確な情報、適切な<a data-lb="1" href="/ja/glossary/escalation/" title="カスタマーサポート、IT、AIチャットボットにおけるエスカレーションについて学びます。種類、トリガー、ベストプラクティス、そして自動化が複雑な問題解決をどのように効率化するかを解説します。">エスカレーション</a>を保証します。</p>
+<h3 id="コンテンツ生成">コンテンツ生成</h3>
+<p><strong>製品説明:</strong><br/>
+テンプレートは、大規模な<a data-lb="1" href="/ja/glossary/Product-Catalog/" title="顧客が製品を見つけて購入するのを支援し、企業がすべての販売チャネルで製品情報を整理して提示するのに役立つ、製品情報のデジタルコレクションです。">製品カタログ</a>全体でブランドボイスを維持し、必要な要素(機能、利点、仕様)を含めます。</p>
+<p><strong>マーケティングコピー:</strong><br/>
+構造化プロンプトは、広告コピー、メールキャンペーン、ランディングページの一貫したメッセージング、適切なCTA、<a data-lb="1" href="/ja/glossary/Brand-Guidelines/" title="ビジュアルアイデンティティ、メッセージング基準、実装戦略、一貫したブランド管理のためのベストプラクティスを網羅した、ブランドガイドラインの包括的なガイドです。">ブランドガイドライン</a>へのコンプライアンスを保証します。</p>
+<h3 id="データ処理と分析">データ処理と分析</h3>
+<p><strong>文書抽出:</strong><br/>
+プロンプトは、請求書、契約書、またはフォームから抽出する正確なフィールドを指定し、自動データ入力と処理を可能にします。</p>
+<p><strong>レポート生成:</strong><br/>
+テンプレートは、生データ入力から一貫したセクション、フォーマット、分析深度を持つ標準化されたレポートを生成します。</p>
+<h3 id="ソフトウェア開発">ソフトウェア開発</h3>
+<p><strong>コード生成:</strong><br/>
+構造化プロンプトは、一貫したコード品質のために言語、フレームワーク、コーディング標準、文書化要件、テストカバレッジを指定します。</p>
+<p><strong>テストケース作成:</strong><br/>
+テンプレートは、定義されたシナリオ、エッジケース、エラー条件のテストケースを体系的に生成することにより、包括的なテストカバレッジを保証します。</p>
+<h3 id="教育とトレーニング">教育とトレーニング</h3>
+<p><strong>評価生成:</strong><br/>
+構造化プロンプトは、指定された難易度レベル、トピック、質問タイプでクイズ、試験、演習を作成します。</p>
+<p><strong>フィードバック自動化:</strong><br/>
+テンプレートは、定義されたルーブリックと基準に基づいて、学生の作品に一貫した建設的なフィードバックを提供します。</p>
+<h2 id="効果の測定">効果の測定</h2>
+<h3 id="品質メトリクス">品質メトリクス</h3>
+<p><strong>精度:</strong> 仕様を満たす出力の割合<br/>
+<strong>一貫性:</strong> 同じ入力での複数実行間の変動性<br/>
+<strong>完全性:</strong> すべての必要な要素のカバレッジ<br/>
+<strong>コンプライアンス:</strong> 制約とガイドラインへの準拠<br/>
+<strong>エラー率:</strong> 幻覚または不正確な情報の頻度</p>
+<h3 id="パフォーマンスメトリクス">パフォーマンスメトリクス</h3>
+<p><strong>処理時間:</strong> 入力から出力までのレイテンシ<br/>
+<strong>成功率:</strong> 人間の介入を必要としない割合<br/>
+<strong>反復回数:</strong> 必要な平均修正数<br/>
+<strong>ユーザー満足度:</strong> エンドユーザーまたはレビュアーからの評価<br/>
+<strong>コスト効率:</strong> 成功した出力あたりに使用されるトークン</p>
+<h3 id="ビジネスインパクト">ビジネスインパクト</h3>
+<p><strong>自動化率:</strong> 完全に自動化されたタスク対人間の関与を必要とするタスク<br/>
+<strong>コスト削減:</strong> 節約された労働時間、削減されたエラー修正コスト<br/>
+<strong>品質向上:</strong> エラー削減、一貫性の向上<br/>
+<strong>スケーラビリティ:</strong> 品質を維持しながら処理されるタスクの量<br/>
+<strong>価値実現までの時間:</strong> 開発から本番展開までの速度</p>
+<h2 id="一般的な課題と解決策">一般的な課題と解決策</h2>
+<h3 id="課題-過剰仕様">課題: 過剰仕様</h3>
+<p><strong>問題:</strong> プロンプトが非常に詳細になり、創造性や適応性が制約されます。<br/>
+<strong>解決策:</strong> 具体性と柔軟性のバランスを取ります。重要な要素には制約を使用し、重要度の低い側面には柔軟性を許可します。</p>
+<h3 id="課題-保守負担">課題: 保守負担</h3>
+<p><strong>問題:</strong> 大規模なプロンプトライブラリには継続的な更新と最適化が必要です。<br/>
+<strong>解決策:</strong> 所有権を確立し、テストを自動化し、バージョン管理を使用し、影響の大きいプロンプトを優先し、古いテンプレートを廃止します。</p>
+<h3 id="課題-コンテキスト長の制限">課題: コンテキスト長の制限</h3>
+<p><strong>問題:</strong> 詳細なプロンプトは大量のコンテキストを消費し、入力データのためのスペースが少なくなります。<br/>
+<strong>解決策:</strong> 効率的な表現を使用し、プロンプトをモジュール化し、モデル固有の機能を活用し、複雑なタスクにはプロンプトチェーンを検討します。</p>
+<h3 id="課題-モデルの変動性">課題: モデルの変動性</h3>
+<p><strong>問題:</strong> 異なるLLMは同じプロンプトに対して異なる応答をします。<br/>
+<strong>解決策:</strong> ターゲットモデル全体でテストし、モデル固有のバリエーションを作成し、モデル依存性を文書化し、移植性のために設計します。</p>
+<h3 id="課題-roiの測定">課題: ROIの測定</h3>
+<p><strong>問題:</strong> プロンプトエンジニアリング投資の価値を定量化することが困難です。<br/>
+<strong>解決策:</strong> ベースラインメトリクスを確立し、時間の経過とともに改善を追跡し、ビジネスインパクト(コスト削減、品質向上)を測定し、ケーススタディを文書化します。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>構造化プロンプトと会話型プロンプトをいつ使用すべきですか?</strong><br/>
+反復タスク、本番システム、自動化、一貫性が重要な場合は構造化プロンプトを使用します。探索、一回限りのタスク、ブレインストーミング、要件が流動的な場合は会話型プロンプトを使用します。</p>
+<p><strong>構造化プロンプトはどのくらいの長さにすべきですか?</strong><br/>
+明確にするために必要な長さですが、コンテキストウィンドウを保持するために可能な限り短くします。典型的な本番プロンプトは100〜500単語の範囲です。複雑なタスクにはより長いプロンプトが必要な場合があります。</p>
+<p><strong>構造化プロンプトはどのLLMでも機能しますか?</strong><br/>
+はい、ただし異なるモデルは指示を異なって解釈する場合があります。ターゲットモデルでプロンプトをテストし、異なるプラットフォームに必要に応じてバリエーションを作成します。</p>
+<p><strong>組織で構造化プロンプトの実装を開始するにはどうすればよいですか?</strong><br/>
+高価値で反復的なタスクから始めます。一般的な使用例のテンプレートを作成します。基準と文書を確立します。パイロットから本番環境へ段階的に構築します。ベストプラクティスについてチームをトレーニングします。</p>
+<p><strong>構造化プロンプト開発をサポートするツールは何ですか?</strong><br/>
+バージョン管理システム(Git)、プロンプト管理プラットフォーム、テストフレームワーク、文書化ツール、専門のプロンプトエンジニアリングIDEはすべて構造化プロンプト開発をサポートします。</p>
+<p><strong>プロンプトはどのくらいの頻度で更新すべきですか?</strong><br/>
+使用頻度の高いプロンプトを四半期ごとにレビューします。ビジネス要件が変更されたとき、モデルのアップグレードが発生したとき、パフォーマンスが低下したとき、または新しい機能が出現したときに更新します。変更ログを維持します。</p>
+<p><strong>構造化プロンプトはAIの幻覚を減らすことができますか?</strong><br/>
+はい、大幅に。明示的な制約、例、ソース帰属により幻覚リスクが減少します。ただし、プロンプト技術では幻覚を完全に排除することはできません。重要なアプリケーションには常に検証を実装してください。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>LearnPrompting.org. (n.d.). Understanding Prompt Structure. LearnPrompting.org.</p>
+</li>
+<li>
+<p>StructuredPrompt.com. (n.d.). Prompt Engineering Tool and Framework. StructuredPrompt.com.</p>
+</li>
+<li>
+<p>Google. (n.d.). Prompt Design Strategies. Google Vertex AI Documentation.</p>
+</li>
+<li>
+<p>Google. (n.d.). Prompting Strategies. Google <a data-lb="1" href="/ja/glossary/Gemini/" title="Geminiは、テキスト、画像、音声、動画の理解に優れたGoogleの先進的なマルチモーダルAIモデルファミリーです。Gemini 2.5 Pro、機能、アプリケーションについて解説します。">Gemini</a> API Documentation.</p>
+</li>
+<li>
+<p>Nielsen Norman Group. (n.d.). Prompt Structure in Generative AI. Nielsen Norman Group Articles.</p>
+</li>
+<li>
+<p>Prompting Guide. (n.d.). General Tips for Designing Prompts. Prompting Guide.</p>
+</li>
+<li>
+<p>Hypha. (n.d.). Optimizing AI Results with Structured Prompting. Hypha Blog.</p>
+</li>
+<li>
+<p>Google Cloud. (n.d.). What is Prompt Engineering?. Google Cloud.</p>
+</li>
+<li>
+<p>Google. (n.d.). Prompt Design Notebook. Google Colab.</p>
+</li>
+<li>
+<p>Structured Prompt Notation Editor. Free Structured Prompt Notation Editor. URL: <a href="https://structuredprompt.com/free-structured-prompt-notation-editor/" rel="nofollow noopener noreferrer" target="_blank">https://structuredprompt.com/free-structured-prompt-notation-editor/</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Aggregator/">
+                    Aggregator（アグリゲーター）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    複数の実行パスやループからの出力を収集し、単一の結果に統合するノード。効率的なデータ処理を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Aggregator/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Asana/">
+                    Asana
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    チームがタスクを整理し、進捗を追跡し、プロジェクトで協力するためのWebベースのプラットフォームです。散在するメールやスプレッドシートの代わりに、一元化されたワークスペースで作業を管理できます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Asana/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/LLM-as-Judge/">
+                    LLM as Judge(LLMによる評価)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Output-Parsing/" title="出力パースは、AI言語モデルのテキスト応答から構造化データ(JSON、Pythonオブジェクト)を抽出し、自動化、分析、システム統合に活用する技術です。">LLM</a>-as-a-Judge(LaaJ)は、LLMが他のLLMの出力を評価する手法です。スケーラブルで繊細なAI評価のための定義、手法、ベストプラクティス、ユースケースについて解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/LLM-as-Judge/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Make--Integromat-/">
+                    Make(Integromat)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Make(旧Integromat)は、シンプルなタスクから複雑なエンタープライズ規模のプロセスまで、ワークフローの設計、構築、自動化を行うビジュアルな<a data-lb="1" href="/ja/glossary/Low-Code-No-Code/" title="ローコードおよびノーコード開発プラットフォームの包括的なガイド。最小限のプログラミング知識で迅速なアプリケーション開発を可能にします。">ノーコードプラットフォーム</a>です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Make--Integromat-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/n8n/">
+                    n8n
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    n8nは、ソースコードが公開されたノードベースの<a data-lb="1" href="/ja/glossary/automation-rules/" title="オートメーションルールについて学びましょう。特定の条件に基づいて自動的にプロセスを実行する設定可能な仕組みで、タスクを効率化し、プラットフォーム全体で一貫性を確保します。">ワークフロー自動化</a>ツールで、高度なAI統合機能を備え、アプリ、API、サービスを接続します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/n8n/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/In-Context-Learning/">
+                    インコンテキスト学習
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/In-Context-Learning/" title="インコンテキスト学習の包括的ガイド:AIモデルがパラメータ更新やファインチューニングなしに、プロンプト内の例から学習する方法を解説します。">インコンテキスト学習</a>の包括的ガイド:AIモデルがパラメータ更新や<a data-lb="1" href="/ja/glossary/Fine-Tuning/" title="機械学習モデルのファインチューニングに関する包括的なガイド。最適なパフォーマンスを実現するための技術、メリット、課題、ベストプラクティスを網羅しています。">ファインチューニング</a>なしに、プロンプト内の例から学習する方法を解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/In-Context-Learning/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/structured-prompts/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

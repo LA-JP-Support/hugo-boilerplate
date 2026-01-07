@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>コンテンツの劣化 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Content-Decay/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="コンテンツが古くなったり新しい競合が現れたりすることで、ウェブサイトの検索ランキングとトラフィックが時間とともに徐々に低下する現象。定期的な更新により、可視性とパフォーマンスを維持することができます。" name="description"/>
+<meta content="コンテンツの劣化, SEOコンテンツの鮮度, コンテンツ最適化, 検索ランキングの低下, コンテンツメンテナンス" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Content-Decay/" property="og:url"/>
+<meta content="コンテンツの劣化 | SmartWeb" property="og:title"/>
+<meta content="コンテンツが古くなったり新しい競合が現れたりすることで、ウェブサイトの検索ランキングとトラフィックが時間とともに徐々に低下する現象。定期的な更新により、可視性とパフォーマンスを維持することができます。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Content-Decay/" name="twitter:url"/>
+<meta content="コンテンツの劣化 | SmartWeb" name="twitter:title"/>
+<meta content="コンテンツが古くなったり新しい競合が現れたりすることで、ウェブサイトの検索ランキングとトラフィックが時間とともに徐々に低下する現象。定期的な更新により、可視性とパフォーマンスを維持することができます。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">コンテンツの劣化</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        コンテンツの劣化
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Content Decay
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          コンテンツが古くなったり新しい競合が現れたりすることで、ウェブサイトの検索ランキングとトラフィックが時間とともに徐々に低下する現象。定期的な更新により、可視性とパフォーマンスを維持することができます。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コンテンツの劣化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                SEOコンテンツの鮮度
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コンテンツ最適化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                検索ランキングの低下
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コンテンツメンテナンス
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="コンテンツ減衰とは">コンテンツ減衰とは</h2>
+<p>コンテンツ減衰とは、ウェブコンテンツの検索エンジンランキング、<a data-lb="1" href="/ja/glossary/Organic-Traffic/" title="Googleなどの検索エンジンで、広告を使わずに自然検索結果から訪れる訪問者のことです。コンテンツがユーザーの検索意図と一致したときに、自然に発生します。">オーガニックトラフィック</a>、および全体的なパフォーマンスが時間の経過とともに徐々に低下する現象を指します。この現象は、以前は良好なパフォーマンスを示していたコンテンツが、検索結果における関連性、正確性、または競争力を失うときに発生します。コンテンツ減衰は、初期の品質や成功度に関係なく、事実上すべてのデジタルコンテンツに影響を与える自然なプロセスです。この低下は通常、検索エンジン結果ページ(SERP)での可視性の低下、クリックスルー率の減少、エンゲージメント指標の低下、そして最終的にはコンバージョン率の減少として現れます。コンテンツ減衰を理解することは、持続可能なSEO戦略を維持し、長期的な<a data-lb="1" href="/ja/glossary/Social-Media-Strategy/" title="組織がソーシャルメディアプラットフォームを活用して顧客にリーチし、関係を構築し、一貫したコンテンツとエンゲージメントを通じてビジネス目標を達成するための指針となる計画。">デジタルマーケティング</a>の成功を確保するために不可欠です。</p>
+<p>コンテンツ減衰の主な要因には、検索エンジンによるアルゴリズムの更新、新しいコンテンツからの競争の激化、ユーザーの検索行動と意図の変化、時代遅れの情報が無関係になること、業界のトレンドやベストプラクティスの変化などがあります。Googleなどの検索エンジンは、ユーザーに最も関連性が高く、正確で、最新の情報を提供するために、アルゴリズムを継続的に改良しています。これらのアルゴリズムが進化するにつれて、かつて高いランキングを獲得していたコンテンツが、品質と関連性に関する更新された基準を満たさなくなる可能性があります。さらに、デジタル環境は非常に競争が激しく、新しいコンテンツが常に公開されています。特にタイムリーさが重要なトピックでは、新鮮なコンテンツが検索エンジンから優遇されることがよくあります。ユーザーの行動も進化しており、検索クエリがより洗練され具体的になるにつれて、古いコンテンツが取り残される可能性があります。</p>
+<p>コンテンツ減衰は単に年齢の問題ではなく、コンテンツのパフォーマンス低下に寄与するさまざまな要因を包含しています。リンク切れ、読み込み速度の遅さ、モバイル最適化の不備などの技術的な問題は、減衰を加速させる可能性があります。事実として誤っている、古い統計を使用している、または時代遅れのツールやテクノロジーを参照しているコンテンツは、自然に価値を失います。さらに、検索エンジンのガイドラインの変更、<a data-lb="1" href="/ja/glossary/UI/" title="ユーザーインターフェース(UI)の定義、種類、デザイン原則、実用的なユースケースを解説します。アプリからAIチャットボットまで、UIが人間とデジタルの相互作用をどのように促進するかを学びましょう。">ユーザーインターフェース</a>の更新、またはコンテンツ形式の好みの変化により、以前は効果的だったコンテンツの競争力が低下する可能性があります。コンテンツ減衰の影響は、個々のページを超えて、ウェブサイト全体の権威性、ブランドの信頼性、収益創出に影響を及ぼします。コンテンツ減衰に対処しない組織は、オーガニックトラフィックの大幅な減少、<a data-lb="1" href="/ja/glossary/Lead-Management/" title="見込み顧客の最初の関心から購入に至るまでを追跡し、育成するシステムです。営業チームが見込み客を効率的に購入者へと転換することを支援します。">リード生成</a>の減少、各業界における市場シェアの低下を経験する可能性があります。</p>
+<h2 id="コンテンツ減衰の主要構成要素">コンテンツ減衰の主要構成要素</h2>
+<p><strong>ランキングの悪化</strong> - コンテンツ減衰の最も目に見える側面で、ページが検索エンジン結果ページでの位置を徐々に失っていきます。この低下は、アルゴリズムの更新により突然発生する場合もあれば、競争の激化やユーザーの好みの変化により徐々に発生する場合もあります。</p>
+<p><strong>トラフィックの減少</strong> - 影響を受けるコンテンツへのオーガニック訪問者の測定可能な減少で、多くの場合、ランキングの低下と直接相関します。タイトルや<a data-lb="1" href="/ja/glossary/Meta-Description/" title="検索結果の下に表示される短いテキスト要約で、Webページの内容を説明し、ユーザーがクリックするかどうかを判断するのに役立ちます。">メタディスクリプション</a>の魅力が低下してクリックスルー率が低下した場合、ランキングが安定していてもトラフィックの減少が発生する可能性があります。</p>
+<p><strong>エンゲージメントの低下</strong> - ページ滞在時間、直帰率、ソーシャルシェア、コメントなどの<a data-lb="1" href="/ja/glossary/Audience-Engagement/" title="オーディエンスエンゲージメントとは、人々とブランドの間で生まれる積極的な参加と交流のことで、単に受動的に視聴するだけでなく、コンテンツを消費し、体験を共有し、関係性を構築することを指します。">ユーザーインタラクション</a>指標の低下。エンゲージメントの低下は、コンテンツがユーザーの期待やニーズを満たしていない可能性があることを検索エンジンに示します。</p>
+<p><strong>関連性の陳腐化</strong> - コンテンツが時間の経過とともに古くなり、不正確になり、またはターゲットオーディエンスにとって有用性が低下すること。これには、事実の誤り、非推奨の情報、リンク切れ、現在の<a data-lb="1" href="/ja/glossary/Search-Intent/" title="ユーザーがオンラインで何かを検索する根本的な理由。ユーザーが実際に何を見つけたいのかを理解することで、そのニーズに合ったコンテンツを作成できます。">ユーザー意図</a>や検索行動との不一致が含まれます。</p>
+<p><strong>競合による置き換え</strong> - 競合他社からのより新しく、より高品質なコンテンツが、検索結果で確立されたページを追い越すこと。この置き換えは、競合他社が類似のトピックについて、より包括的で、更新され、またはより最適化されたコンテンツを公開したときによく発生します。</p>
+<p><strong>技術的劣化</strong> - コンテンツのパフォーマンスに悪影響を与える技術的問題の蓄積。リンク切れ、読み込み速度の遅さ、<a data-lb="1" href="/ja/glossary/Mobile-Optimization/" title="モバイル最適化とは、ウェブサイトやアプリをスマートフォンやタブレットでスムーズに動作するように設計するプロセスであり、小さな画面での高速な読み込み速度と簡単なナビゲーションを確保します。">モバイル最適化</a>の問題、コンテンツが最初に公開されたときには存在しなかったアクセシビリティの問題などが含まれます。</p>
+<p><strong>権威性の侵食</strong> - 検索エンジンがコンテンツの品質を評価するために使用するトピック権威性と専門性シグナルの段階的な喪失。この侵食は、新鮮なコンテンツ更新の欠如、外部リンクの減少、またはブランドの言及や引用の減少から生じる可能性があります。</p>
+<h2 id="コンテンツ減衰の仕組み">コンテンツ減衰の仕組み</h2>
+<p><strong>初期コンテンツパフォーマンスのピーク</strong> - 新しいコンテンツは通常、初期段階で強力なパフォーマンスを経験し、検索エンジンがコンテンツライフサイクルの初期段階でしばしば報酬を与える新鮮さシグナルと新規性要因から恩恵を受けます。</p>
+<p><strong>段階的なアルゴリズム適応</strong> - 検索エンジンのアルゴリズムは継続的に進化し、コンテンツの可視性を決定するランキング要因と品質シグナルを変更する可能性があり、以前は最適化されていたコンテンツが現在の要件との整合性が低下します。</p>
+<p><strong>競合コンテンツの導入</strong> - 競合他社が類似のキーワードやトピックをターゲットとする新しいコンテンツを公開し、多くの場合、更新された情報、より優れた最適化技術、既存のコンテンツ品質を上回る改善された<a data-lb="1" href="/ja/glossary/UX/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">ユーザーエクスペリエンス</a>要素を組み込んでいます。</p>
+<p><strong>ユーザー行動の進化</strong> - 検索パターンとユーザー意図が時間の経過とともに変化し、オーディエンスがより洗練されたクエリと期待を発展させ、古いコンテンツが適切に対処または満足させることができない可能性があります。</p>
+<p><strong>情報の陳腐化の発展</strong> - 事実、統計、ベストプラクティス、業界標準が変化し、以前は正確だったコンテンツが古くなったり、現在の情報を求めるユーザーにとって誤解を招く可能性があります。</p>
+<p><strong>技術的パフォーマンスの劣化</strong> - ウェブサイトの技術的問題が蓄積され、読み込み時間の遅延、内部および外部リンクの切れ、古いプラグイン、ユーザーエクスペリエンスと検索エンジンのクロールに悪影響を与える互換性の問題などが含まれます。</p>
+<p><strong>エンゲージメントシグナルの弱化</strong> - コンテンツの関連性やエンゲージメントが低下するにつれてユーザーインタラクション指標が低下し、コンテンツの品質と有用性について検索エンジンに否定的なシグナルを送ります。</p>
+<p><strong>権威性シグナルの減少</strong> - 失われた<a data-lb="1" href="/ja/glossary/Backlink/" title="他のウェブサイトから自サイトへ向けられたハイパーリンクで、信頼の証として機能し、検索エンジンがページの権威性とランキングを判断する際の指標となります。">バックリンク</a>、ソーシャルシェアの減少、ブランドの言及の減少、競合他社の権威性の成長などの外部要因が、相対的な権威性の低下に寄与します。</p>
+<p><strong>ワークフローの例</strong>: 2020年に公開された<a data-lb="1" href="/ja/glossary/Viral-Content/" title="バイラルコンテンツの作成、配信戦略、およびソーシャルメディアでのエンゲージメントとリーチを最大化するための最適化テクニックに関する包括的なガイド。">ソーシャルメディアマーケティング</a>に関する包括的なガイドが、ターゲットキーワードで最初は3位にランクされます。18か月間で、アルゴリズムの更新がE-A-Tシグナルを優先し、競合他社が2023年の統計を含む更新されたガイドを公開し、言及されているプラットフォーム機能が時代遅れになり、ユーザークエリが<a data-lb="1" href="/ja/glossary/ByteDance/" title="ByteDanceは2012年に設立された中国のテクノロジー企業で、大人気の短編動画アプリTikTokを開発しました。AIアルゴリズムを活用してパーソナライズされたコンテンツを推薦し、ユーザーのエンゲージメントを維持しています。">TikTok</a>やClubhouseなどの新しいプラットフォームに焦点を当てるように進化した結果、ランキングが徐々に2ページ目に低下します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>早期問題検出</strong> - コンテンツ減衰を監視することで、トラフィックや収益に大きな影響を与える前にパフォーマンスの問題を積極的に特定でき、タイムリーな介入と<a data-lb="1" href="/ja/glossary/Content-Refresh/" title="コンテンツリフレッシュ:ゼロから全く新しいコンテンツを作成するのではなく、既存のWebコンテンツを更新・改善し、正確性、関連性、検索結果での可視性を維持するプロセス。">コンテンツ最適化</a>の取り組みが可能になります。</p>
+<p><strong>リソースの最適化</strong> - 減衰パターンを理解することで、コンテンツメンテナンスの取り組みに優先順位を付け、最適化活動に対して最大の<a data-lb="1" href="/ja/glossary/ROI/" title="投資収益率(ROI)は、投資効率を定量化する財務指標です。AIチャットボットと自動化のROI計算方法、主要な構成要素、指標、実際の事例について学びましょう。">投資収益率</a>を提供する影響力の高いページとトピックにリソースを集中させることができます。</p>
+<p><strong>競争優位性の維持</strong> - 定期的な<a data-lb="1" href="/ja/glossary/Content-Audit/" title="コンテンツ監査の包括的ガイド:デジタルコンテンツのパフォーマンスを最適化するための体系的な評価プロセス、方法論、ツール、ベストプラクティス。">コンテンツ監査</a>と更新戦略により、コンテンツが最新で正確であり、競合他社の代替案よりも価値があることを保証することで、競争上の位置づけを維持できます。</p>
+<p><strong>ユーザーエクスペリエンスの向上</strong> - コンテンツ減衰に対処することで、訪問者が現在のニーズと期待を満たす関連性があり、正確で、最新の情報を見つけることができるようにすることで、全体的なユーザーエクスペリエンスが向上します。</p>
+<p><strong>検索エンジンの信頼構築</strong> - 一貫して新鮮で正確なコンテンツを維持することで、検索エンジンとの信頼を構築し、すべてのコンテンツの全体的なドメイン権威性とランキングポテンシャルを向上させる可能性があります。</p>
+<p><strong>収益の保護</strong> - コンテンツ減衰を防ぐことで、オーガニックトラフィックレベルとコンバージョン率を維持し、検索エンジンの可視性と<a data-lb="1" href="/ja/glossary/User-Engagement/" title="ユーザーエンゲージメントとは、デジタル製品やサービスに対してユーザーが持つインタラクションと感情的なつながりのレベルを指します。人々が機能やコンテンツをどれだけ積極的かつ有意義に利用しているかを測定し、企業がロイヤルカスタマーを構築し、提供するサービスを改善するのに役立ちます。">ユーザーエンゲージメント</a>に依存する収益源を保護します。</p>
+<p><strong>ブランド信頼性の保持</strong> - コンテンツを最新かつ正確に保つことで、ブランドの評判と専門性の位置づけを維持し、古いまたは誤った情報による潜在的な損害を防ぎます。</p>
+<p><strong>長期的なSEOの持続可能性</strong> - 積極的なコンテンツメンテナンスにより、短期的な最適化戦術に依存するのではなく、アルゴリズムの変更と市場の進化に適応する持続可能な<a data-lb="1" href="/ja/glossary/Internal-Linking-Strategy/" title="SEO最適化、ユーザーエクスペリエンス向上、ウェブサイトオーソリティ分散のための内部リンク戦略の包括的ガイド。">SEO戦略</a>が構築されます。</p>
+<p><strong>コンテンツROIの最大化</strong> - 既存のコンテンツを更新することは、多くの場合、まったく新しいコンテンツを作成するよりも優れたROIを提供し、以前のコンテンツ投資の貴重な寿命を延ばします。</p>
+<p><strong>戦略的計画の改善</strong> - 減衰パターンを理解することで、トピックの選択、更新スケジュール、最大の長期的影響のためのリソース配分など、より良い<a data-lb="1" href="/ja/glossary/Content-Lifecycle-Management/" title="コンテンツライフサイクル管理の包括的ガイド。コンテンツの作成から廃棄までを管理するための戦略、ワークフロー、メリット、ベストプラクティスを網羅しています。">コンテンツ戦略</a>の決定に情報を提供します。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>Eコマース製品ページ</strong> - 製品の説明、仕様、価格情報は、検索結果とユーザーエクスペリエンスにおける正確性と競争力を維持するために定期的な更新が必要です。</p>
+<p><strong>テクノロジーとソフトウェアガイド</strong> - チュートリアル、ハウツーガイド、ソフトウェアレビューは、デジタルツールとプラットフォームの急速な技術進歩と機能変更により、頻繁な更新が必要です。</p>
+<p><strong>業界ニュースとトレンド</strong> - ニュース記事、トレンド分析、市場レポートはすぐに古くなり、ウェブサイトの信頼性と検索パフォーマンスを維持するために更新またはアーカイブが必要です。</p>
+<p><strong>統計と研究コンテンツ</strong> - データ、統計、研究結果を特集する記事は、正確性と検索エンジンの信頼を維持するために、現在の情報で定期的に更新する必要があります。</p>
+<p><strong>ベストプラクティスとガイドライン</strong> - 専門的なアドバイス、業界標準、ベストプラクティスガイドは、業界が進化し、新しい方法論が出現するにつれて更新が必要です。</p>
+<p><strong>イベントと時間に敏感なコンテンツ</strong> - カンファレンスのカバレッジ、季節的なコンテンツ、イベント関連の記事は、サイト全体のパフォーマンスへの悪影響を防ぐために、戦略的な更新またはアーカイブが必要です。</p>
+<p><strong>ツールとサービスのレビュー</strong> - 比較レビュー、製品評価、サービス評価は、提供内容が変化し、新しい代替案が市場に参入するにつれて更新が必要です。</p>
+<p><strong>教育およびトレーニング資料</strong> - オンラインコース、チュートリアル、<a data-lb="1" href="/ja/glossary/Educational-Content/" title="デジタルプラットフォーム全体で効果的な学習体験を実現するための、教育コンテンツの作成、配信方法、ベストプラクティスに関する包括的なガイド。">教育コンテンツ</a>は、現在の学習目標に対する正確性と関連性を確保するために定期的なレビューと更新が必要です。</p>
+<h2 id="コンテンツ減衰の影響比較">コンテンツ減衰の影響比較</h2>
+<table>
+<thead>
+<tr>
+<th>減衰要因</th>
+<th>トラフィックへの影響</th>
+<th>ランキングへの影響</th>
+<th>ユーザーエクスペリエンス</th>
+<th>回復の難易度</th>
+<th>顕在化までの時間</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アルゴリズムの更新</td>
+<td>高(20-80%)</td>
+<td>深刻</td>
+<td>中程度</td>
+<td>高</td>
+<td>即時〜1週間</td>
+</tr>
+<tr>
+<td>競合による置き換え</td>
+<td>中程度(10-40%)</td>
+<td>段階的</td>
+<td>低</td>
+<td>中程度</td>
+<td>3〜12か月</td>
+</tr>
+<tr>
+<td>情報の陳腐化</td>
+<td>中程度(15-50%)</td>
+<td>中程度</td>
+<td>高</td>
+<td>低</td>
+<td>6〜24か月</td>
+</tr>
+<tr>
+<td>技術的問題</td>
+<td>高(30-70%)</td>
+<td>深刻</td>
+<td>高</td>
+<td>中程度</td>
+<td>1〜6か月</td>
+</tr>
+<tr>
+<td>エンゲージメントの低下</td>
+<td>低(5-25%)</td>
+<td>段階的</td>
+<td>中程度</td>
+<td>低</td>
+<td>6〜18か月</td>
+</tr>
+<tr>
+<td>権威性の侵食</td>
+<td>中程度(20-60%)</td>
+<td>段階的</td>
+<td>低</td>
+<td>高</td>
+<td>12〜36か月</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>リソース配分の複雑さ</strong> - 新しいコンテンツの作成と既存のコンテンツの維持の間で最適な<a data-lb="1" href="/ja/glossary/Support-Capacity-Planning/" title="サポート容量計画とは、カスタマーサポートのニーズを予測し、サービス品質目標を達成しながら効率的に対応するためのスタッフとリソースを配分するプロセスです。">リソース配分</a>を決定するには、パフォーマンスデータ、競争環境、ビジネス目標の慎重な分析が必要です。</p>
+<p><strong>規模管理の困難</strong> - 数千のページを持つ大規模なウェブサイトは、コンテンツポートフォリオ全体でコンテンツ品質を体系的に監視および維持する上で大きな課題に直面します。</p>
+<p><strong>ROI測定の課題</strong> - コンテンツメンテナンス活動の投資収益率を定量化することは複雑であり、洗練されたアトリビューションモデルと長期的なパフォーマンス追跡が必要です。</p>
+<p><strong>競合インテリジェンスの要件</strong> - コンテンツ減衰に先んじるには、競合他社のコンテンツ戦略、業界トレンド、検索エンジンのアルゴリズム変更の継続的な監視が必要です。</p>
+<p><strong>技術統合の複雑さ</strong> - 包括的なコンテンツ減衰監視を実装するには、複数のツールとデータソースの統合が必要であり、技術的および運用上の複雑さが生じます。</p>
+<p><strong>コンテンツ品質評価の主観性</strong> - コンテンツの更新が必要な時期を決定するには、品質、関連性、ユーザー価値に関する主観的な判断が含まれ、チームメンバーや利害関係者間で異なる可能性があります。</p>
+<p><strong>アルゴリズム変更の予測不可能性</strong> - 検索エンジンのアルゴリズムの更新は、事前に予測または準備することが難しい方法でコンテンツのパフォーマンスに突然影響を与える可能性があります。</p>
+<p><strong>ユーザー意図の進化追跡</strong> - ユーザーの検索意図が時間の経過とともにどのように変化するかを理解するには、検索行動パターンとクエリの進化の洗練された分析が必要です。</p>
+<p><strong>クロスプラットフォームの一貫性維持</strong> - 複数のプラットフォームと配信チャネル全体でコンテンツの一貫性と最新性を確保することは、メンテナンスの取り組みに複雑さを加えます。</p>
+<p><strong>法的およびコンプライアンスの考慮事項</strong> - 一部の業界では、規制コンプライアンスのためにコンテンツの更新が必要であり、コンテンツメンテナンススケジュールに追加の複雑さと緊急性が加わります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>定期的な監査スケジュールの確立</strong> - <a data-lb="1" href="/ja/glossary/Content-Types/" title="デジタルシステムにおけるコンテンツタイプの包括的なガイド。分類、実装、構造化されたコンテンツ管理のベストプラクティスを網羅しています。">コンテンツタイプ</a>に基づいて体系的なコンテンツレビューサイクルを作成し、優先度の高いページは四半期ごとに、標準コンテンツは年次でレビューします。</p>
+<p><strong>パフォーマンス監視システムの実装</strong> - すべてのコンテンツアセット全体でランキングの変化、トラフィックパターン、<a data-lb="1" href="/ja/glossary/Engagement-Metrics/" title="エンゲージメント指標は、ウェブサイト、アプリ、ソーシャルメディアなどのデジタル資産に対するユーザーのインタラクションを定量化します。クリック、スクロール、共有、コンバージョンなどのユーザー行動を明らかにし、最適化の指針となります。">エンゲージメント指標</a>を追跡するための包括的な分析および監視ツールを展開します。</p>
+<p><strong>コンテンツ更新基準の開発</strong> - コンテンツの更新が必要な時期を決定するための明確なガイドラインを作成し、特定の指標のしきい値と定性的<a data-lb="1" href="/ja/glossary/Technology-Evaluation/" title="購入または導入の意思決定を行う前に、テクノロジーソリューションが組織のニーズ、コスト、目標を満たしているかどうかを評価・比較する体系的なプロセス。">評価基準</a>を含めます。</p>
+<p><strong>影響力の高いコンテンツの優先順位付け</strong> - 最適化投資の収益を最大化するために、大量のトラフィック、コンバージョン、または戦略的価値を促進するページにメンテナンスの取り組みを集中させます。</p>
+<p><strong>更新ドキュメントプロセスの作成</strong> - 将来の最適化決定に情報を提供するために、コンテンツの変更、更新の根拠、パフォーマンスへの影響の詳細な記録を維持します。</p>
+<p><strong>部門横断的なコラボレーションの構築</strong> - レビューと更新プロセスに主題専門家、SEOスペシャリスト、コンテンツクリエイターを関与させる<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>を確立します。</p>
+<p><strong>競合監視の実装</strong> - 改善と差別化の機会を特定するために、競合他社のコンテンツ戦略とパフォーマンスを定期的に分析します。</p>
+<p><strong>コンテンツライフサイクル管理の開発</strong> - コンテンツの作成、最適化、メンテナンス、最終的なアーカイブまたは統合のための体系的なアプローチを作成します。</p>
+<p><strong>品質保証プロトコルの確立</strong> - 更新されたコンテンツが品質基準を維持し、<a data-lb="1" href="/ja/glossary/Brand-Guidelines/" title="ビジュアルアイデンティティ、メッセージング基準、実装戦略、一貫したブランド管理のためのベストプラクティスを網羅した、ブランドガイドラインの包括的なガイドです。">ブランドガイドライン</a>と<a data-lb="1" href="/ja/glossary/Dwell-Time/" title="滞在時間とは、ユーザーが検索結果ページ(SERP)からクリックした後、戻るまでにそのページで過ごす時間を測定する指標です。SEOへの影響、測定方法、ユーザーエンゲージメントを向上させる戦略について解説します。">SEO</a>ベストプラクティスに沿っていることを確認するためのレビュープロセスを実装します。</p>
+<p><strong>スケーラブルなソリューションの計画</strong> - ビジネスの成長とコンテンツ量の増加に伴って、リソースの比例的な増加なしにスケールできるコンテンツメンテナンスプロセスを設計します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>予測減衰モデリング</strong> - <a data-lb="1" href="/ja/glossary/Ensemble-Learning/" title="機械学習における予測精度向上のためのアンサンブル学習手法、アルゴリズム、および応用に関する包括的ガイド。">機械学習アルゴリズム</a>と過去のパフォーマンスデータを活用して、どのコンテンツが減衰を経験する可能性が高いかを予測し、積極的なメンテナンススケジューリングを可能にします。</p>
+<p><strong>自動コンテンツ監視</strong> - パフォーマンスのしきい値、競合の変化、新鮮さの指標に基づいて、レビューのためにコンテンツを自動的にフラグ付けする洗練された監視システムを実装します。</p>
+<p><strong>動的コンテンツ最適化</strong> - 品質管理のための編集監督を維持しながら、統計、日付、参照などの特定のコンテンツ要素を自動的に更新するシステムを展開します。</p>
+<p><strong>セマンティックコンテンツ分析</strong> - <a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">自然言語処理</a>ツールを使用してコンテンツの関連性を分析し、トピックの拡張とキーワード最適化の改善の機会を特定します。</p>
+<p><strong>ユーザー意図マッピング</strong> - 進化するユーザー意図を追跡し、変化する検索行動パターンと期待に合わせてコンテンツの更新を調整するための高度な分析アプローチを開発します。</p>
+<p><strong>統合ワークフロー自動化</strong> - 複数のチームメンバーと<a data-lb="1" href="/ja/glossary/Review-Workflow/" title="レビューワークフローの包括的ガイド:品質保証と承認システムのためのプロセス、実装方法、メリット、ベストプラクティスを解説します。">承認プロセス</a>全体でコンテンツの監査、更新、再公開を調整する洗練されたワークフローシステムを作成します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>AI駆動のコンテンツメンテナンス</strong> - <a data-lb="1" href="/ja/glossary/Autonomous-Systems/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>は、パフォーマンスデータと競合分析に基づいて、コンテンツ減衰の検出をますます自動化し、特定の最適化改善を提案します。</p>
+<p><strong>リアルタイムコンテンツ最適化</strong> - 将来のシステムは、アルゴリズムの変更とユーザー行動の変化に基づいて、リアルタイムのコンテンツパフォーマンス監視と即座の最適化推奨を提供します。</p>
+<p><strong>予測コンテンツ戦略</strong> - 高度な分析により、コンテンツパフォーマンスのトレンドを予測し、ビジネス結果に影響を与える前に減衰を防ぐための積極的なコンテンツ計画が可能になります。</p>
+<p><strong>統合コンテンツエコシステム</strong> - コンテンツ管理システムは、自動化された減衰防止と最適化ワークフローを備えた包括的なコンテンツライフサイクル管理を提供するように進化します。</p>
+<p><strong>パーソナライズされたコンテンツの新鮮さ</strong> - 将来のコンテンツシステムは、SEO最適化を維持しながら、ユーザーの好みと行動パターンに基づいてパーソナライズされたコンテンツバージョンを配信する可能性があります。</p>
+<p><strong>クロスプラットフォームコンテンツ同期</strong> - 高度なシステムは、複数のプラットフォームと配信チャネル全体でコンテンツの一貫性と新鮮さを自動的に管理します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>Google Search Central Documentation. “Creating helpful, reliable, people-first content.” Google Developers, 2023.</li>
+<li>Patel, Neil. “The Complete Guide to Content Decay and How to Fix It.” Neil Patel Digital, 2023.</li>
+<li>Search Engine Journal. “Content Decay: How to Identify and Fix Declining Content Performance.” SEJ Editorial Team, 2023.</li>
+<li>Moz. “The Beginner’s Guide to Content Audits.” Moz SEO Learning Center, 2023.</li>
+<li>Ahrefs. “Content Decay: How to Identify and Fix Pages Losing Traffic.” Ahrefs Blog, 2023.</li>
+<li>SEMrush. “Content Audit Guide: How to Analyze Your Content Performance.” SEMrush Academy, 2023.</li>
+<li>BrightEdge. “Content Performance Optimization: Preventing and Addressing Content Decay.” BrightEdge Research, 2023.</li>
+<li>Content Marketing Institute. “Content Maintenance: The Key to Long-Term SEO Success.” CMI Research, 2023.</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Content-Update-Strategy/">
+                    コンテンツ更新戦略
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ウェブサイトの既存コンテンツを定期的に更新・改善し、訪問者と検索エンジンの両方にとって最新で正確かつ有用な状態を保つための体系的な計画。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Content-Update-Strategy/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/AI-Copywriting/">
+                    AIコピーライティング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    自動コンテンツ作成とマーケティング最適化のためのAIコピーライティングツール、テクニック、アプリケーションに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/AI-Copywriting/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/AI-Writing-Assistant/">
+                    AIライティングアシスタント
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    AIライティングアシスタントの包括的ガイド:自動コンテンツ作成ツールの機能、メリット、実装戦略、ベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/AI-Writing-Assistant/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/On-Page-SEO/">
+                    オンページSEO
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    オンページSEOとは、検索エンジンがより高くランク付けし、より多くの訪問者を引き付けるために、個々のウェブページをより良いコンテンツ、タイトル、技術的設定で最適化する実践です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/On-Page-SEO/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Keyword-Mapping/">
+                    キーワードマッピング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    SEOコンテンツ最適化と検索可視性向上のための、キーワードマッピング戦略、実装テクニック、ベストプラクティスに関する包括的ガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Keyword-Mapping/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Content-Analytics/">
+                    コンテンツアナリティクス
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    コンテンツアナリティクスの包括的ガイド：デジタルコンテンツのパフォーマンスとオーディエンスエンゲージメントのための測定、最適化、データドリブンインサイト。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Content-Analytics/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/content-decay/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

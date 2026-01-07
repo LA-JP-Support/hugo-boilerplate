@@ -1,0 +1,2419 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="utf-8">
+<meta name="viewport" content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+
+<title>Slot Filling | SmartWeb</title>
+<link rel="canonical" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/slot-filling/">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/faivicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/faivicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/faivicon.png">
+<link rel="shortcut icon" href="/images/faivicon.png">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+  
+
+
+
+
+
+
+
+  
+  
+    
+    
+      
+      
+      
+      
+    
+  
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="%!s(<nil>)/glossary/Slot-Filling/">
+
+<link rel="alternate" hreflang="ja" href="%!s(<nil>)/ja/glossary/Slot-Filling/">
+
+<link rel="alternate" hreflang="x-default" href="%!s(<nil>)/glossary/Slot-Filling/">
+
+
+
+<meta name="description" content="A conversational AI technique that extracts required information from user messages to complete tasks, such as booking flights or ordering food. It gathers missing details through natural conversation until all necessary information is collected.">
+<meta name="keywords" content="Slot Filling, Conversational AI, Chatbot, Entities, Intents">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/slot-filling/">
+<meta property="og:title" content="Slot Filling | SmartWeb">
+<meta property="og:description" content="A conversational AI technique that extracts required information from user messages to complete tasks, such as booking flights or ordering food. It gathers missing details through natural conversation until all necessary information is collected.">
+
+
+
+
+
+
+
+  
+  
+
+
+<meta property="og:image" content="">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/slot-filling/">
+<meta name="twitter:title" content="Slot Filling | SmartWeb">
+<meta name="twitter:description" content="A conversational AI technique that extracts required information from user messages to complete tasks, such as booking flights or ordering food. It gathers missing details through natural conversation until all necessary information is collected.">
+<meta name="twitter:image" content="">
+
+
+
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+
+<link rel="preload" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/main.css?v=20260106210129" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/custom-code-blockquote.css?v=20260106210129" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<script src="/js/main.js?v=20260106210129" defer></script>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+</head>
+<body class="antialiased bg-white">
+
+
+
+
+
+
+
+
+
+
+  
+  <header class="bg-white">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="/en/" class="-m-1.5 p-1.5">
+        <span class="sr-only">SmartWeb</span>
+        
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="200px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+      </a>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12"><a href="/en/" class="text-sm/6 font-semibold text-gray-900">Home</a><a href="/en/blog/" class="text-sm/6 font-semibold text-gray-900">Blog</a><a href="/en/glossary/" class="text-sm/6 font-semibold text-gray-900">Glossary</a><a href="https://www.intwk.co.jp/about/" class="text-sm/6 font-semibold text-gray-900">Company</a></div>
+    <div class="flex flex-1 items-center justify-end gap-x-6">
+      <a href="https://support.smartweb.jp/" class="hidden text-sm/6 font-semibold text-gray-900 lg:block">Support</a>
+      <a href="/en/blog/" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" aria-expanded="false" aria-controls="mobile-menu-1767700889227765000">
+        <span class="sr-only">Open main menu</span>
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  
+  <div id="mobile-menu-1767700889227765000" class="lg:hidden hidden relative z-50" role="dialog" aria-modal="true">
+    
+    <div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+      <div class="flex items-center gap-x-6">
+        <a href="/en/" class="-m-1.5 p-1.5">
+          <span class="sr-only">SmartWeb</span>
+          
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+      
+        
+      
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+          
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+            
+            
+        
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="3000"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="(max-width: 466px) 466px, 3000px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+        </a>
+        <a href="/en/blog/" class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+        <button type="button" class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu">
+          <span class="sr-only">Close menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6"><a href="/en/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a><a href="/en/blog/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a><a href="/en/glossary/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Glossary</a><a href="https://www.intwk.co.jp/about/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a></div>
+          <div class="py-6">
+            <a href="https://support.smartweb.jp/" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700889227765000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700889227765000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+
+
+
+<main class="w-full">
+  
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+  
+  <header class="py-12 sm:py-16">
+    <div class="mx-auto max-w-4xl">
+      
+      <div class="mb-8">
+        <nav class="text-sm hidden sm:block">
+          <ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+            <li class="flex items-center">
+              <a href="/en/" class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center">
+                <img src="/images/home-icon.png" alt="Home" class="h-4 w-4 opacity-60">
+              </a>
+            </li>
+            <li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+            <li>
+              <a href="/en/glossary/" class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors">
+                Glossary
+              </a>
+            </li>
+            <li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+            <li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Slot Filling</li>
+          </ol>
+        </nav>
+      </div>
+
+      
+      
+        <div class="mb-6">
+          <span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+            <svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+            </svg>
+            AI Chatbot &amp; Automation
+          </span>
+        </div>
+      
+
+      
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Slot Filling
+      </h1>
+      
+        <div class="mb-6"></div>
+      
+
+      
+      
+        <p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A conversational AI technique that extracts required information from user messages to complete tasks, such as booking flights or ordering food. It gathers missing details through natural conversation until all necessary information is collected.
+        </p>
+      
+
+      
+      <div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+
+      
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        
+        
+          <div class="flex flex-wrap gap-2">
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Slot Filling
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Conversational AI
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Chatbot
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Entities
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Intents
+              </span>
+            
+          </div>
+        
+
+        
+        
+
+
+
+
+
+
+
+
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+  
+    <span class="inline-flex items-center justify-end">
+      <svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
+      </svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+  
+
+  
+</div>
+
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+    <h2 id="what-is-slot-filling">What is Slot Filling?</h2>
+<p>Slot filling is a core technique in task-oriented dialog systems for conversational AI. It focuses on identifying and extracting required parameters—called slots—from user queries. These slots are necessary to fulfill a specific action, such as booking a flight, ordering food, or scheduling an appointment.</p>
+<p>For example, in the query &ldquo;Book a flight from New York to London on July 20th,&rdquo; the conversational agent should extract:</p>
+<ul>
+<li><strong>Departure city:</strong> New York</li>
+<li><strong>Destination city:</strong> London</li>
+<li><strong>Date:</strong> July 20th</li>
+</ul>
+<p>Slot filling is the mechanism that allows the AI to parse this information, store it, and use it effectively to respond or take action on behalf of the user. If some information is missing, the system prompts the user to provide it, ensuring a complete data set for the task.</p>
+<p>Slot filling is essential for enabling AI systems to gather all necessary data to complete a user&rsquo;s request, allow users to provide information naturally in any order across multiple conversational turns, reduce unnecessary back-and-forth by extracting maximum information from initial queries, and ensure completeness and accuracy before executing any action.</p>
+<h2 id="key-concepts-slots-entities-and-intents">Key Concepts: Slots, Entities, and Intents</h2>
+<p><strong>Intent:</strong> The user&rsquo;s goal or purpose (e.g., &ldquo;Book a hotel,&rdquo; &ldquo;Order pizza&rdquo;).</p>
+<p><strong>Slot:</strong> A placeholder for a required or optional piece of information needed to fulfill the intent (e.g., &ldquo;check-in date,&rdquo; &ldquo;pizza size&rdquo;).</p>
+<p><strong>Entity:</strong> The data type or category of information that a slot expects (e.g., city, date, number, item type).</p>
+<p><strong>Relationship:</strong><br>
+An intent defines the action, slots are parameters needed for that action, and entities describe the kind of data each slot expects.</p>
+<h2 id="types-of-entities">Types of Entities</h2>
+<p>Entities enable chatbots to recognize and extract relevant data from user input:</p>
+<h3 id="built-insystem-entities">Built-in/System Entities</h3>
+<p>Predefined by the conversational platform, these handle common data types:</p>
+<ul>
+<li>Dates and times</li>
+<li>Email addresses</li>
+<li>Phone numbers</li>
+<li>Cities and locations</li>
+<li>Colors, numbers, currency</li>
+</ul>
+<h3 id="custom-entities">Custom Entities</h3>
+<p>Defined by developers to fit domain-specific needs:</p>
+<p><strong>Closed List Entities:</strong> Enumerated set of acceptable values (e.g., pizza toppings, product SKUs).</p>
+<p><strong>Regular Expressions (RegEx):</strong> Patterns for extracting structured data (e.g., ticket numbers like &ldquo;INC000123&rdquo;).</p>
+<p>Custom entities expand the bot&rsquo;s ability to handle specialized vocabulary and data types. Use synonyms and fuzzy matching to broaden entity recognition (e.g., &ldquo;NYC&rdquo; as a synonym for &ldquo;New York City&rdquo;).</p>
+<h2 id="slot-filling-process">Slot Filling Process</h2>
+<p><strong>1. Define Required Slots:</strong><br>
+List all the pieces of information needed to accomplish a specific intent.</p>
+<p><strong>2. Associate Entities with Each Slot:</strong><br>
+Specify which data type or pattern each slot should accept.</p>
+<p><strong>3. Extract Slot Values from User Input:</strong><br>
+Use NLU (Natural Language Understanding) to identify and extract values for each slot.</p>
+<p><strong>4. Prompt for Missing Slots:</strong><br>
+If any required slot is unfilled, the bot asks questions to gather the missing information.</p>
+<p><strong>5. Handle Multi-Turn Dialogs:</strong><br>
+Allow users to fill slots over several messages and in any order.</p>
+<p><strong>6. Confirm Collected Slot Values:</strong><br>
+Optionally present gathered information to the user for confirmation before taking action.</p>
+<p><strong>7. Execute the Task:</strong><br>
+Proceed with the fulfillment (e.g., book, order, support) once all required slots are filled and confirmed.</p>
+<p><strong>Visual Example:</strong></p>
+<pre tabindex="0"><code>User: &#34;I want to order a pizza.&#34;
+Bot: &#34;How many slices would you like?&#34;
+User: &#34;8&#34;
+Bot: &#34;What type of pizza do you want?&#34;
+User: &#34;Pepperoni&#34;
+Bot: &#34;You want an 8-slice Pepperoni pizza. Is that correct?&#34;
+User: &#34;Yes&#34;
+Bot: &#34;Order confirmed!&#34;
+</code></pre><h2 id="slot-configuration-parameters">Slot Configuration Parameters</h2>
+<p>When defining slots, configuration options include:</p>
+<p><strong>Name:</strong> Identifier for the slot (e.g., <code>departure_city</code>).</p>
+<p><strong>Entity:</strong> Data type expected—built-in or custom.</p>
+<p><strong>Required:</strong> Is this slot mandatory for the task? If yes, the bot must prompt until filled or exit.</p>
+<p><strong>Is Array:</strong> Should the slot accept multiple values (e.g., &ldquo;Order two pizzas: one Margherita, one Pepperoni&rdquo;)?</p>
+<p><strong>Clarifying Questions:</strong> Prompts to use when requesting missing slot values.</p>
+<p><strong>Default Value:</strong> Fallback value if the slot is optional and left unfilled.</p>
+<p><strong>Reset/Overwrite:</strong> Should the slot&rsquo;s value be overwritten if the user provides new information?</p>
+<p><strong>Max Retries / Garbage Count:</strong> Maximum times to prompt for required information before abandoning the process.</p>
+<p><strong>Confirmation:</strong> Option to confirm the slot values with the user before proceeding.</p>
+<h2 id="implementation-strategies">Implementation Strategies</h2>
+<h3 id="general-workflow">General Workflow</h3>
+<p><strong>1. Intent Recognition:</strong><br>
+Use NLU models to detect the intent and identify which slots apply.</p>
+<p><strong>2. Entity Extraction:</strong><br>
+Apply entity recognition to extract slot values from user input.</p>
+<p><strong>3. Slot Tracking:</strong><br>
+Maintain the state of filled/unfilled slots throughout the conversation.</p>
+<p><strong>4. Prompt Logic:</strong><br>
+Implement logic to prompt users for unfilled required slots and manage retries or interruptions.</p>
+<p><strong>5. Script/Code Access:</strong><br>
+Access filled slots in conversation scripts or backend code.</p>
+<p><strong>6. Completion &amp; Confirmation:</strong><br>
+Once all required slots are filled, optionally confirm with the user before executing the backend action.</p>
+<p><strong>Example: Slot Extraction in Code (Pseudocode)</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">if</span> not slots[<span style="color:#0ff;font-weight:bold">&#39;city&#39;</span>]:
+</span></span><span style="display:flex;"><span>    prompt(<span style="color:#0ff;font-weight:bold">&#34;Which city are you traveling to?&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">elif</span> not slots[<span style="color:#0ff;font-weight:bold">&#39;date&#39;</span>]:
+</span></span><span style="display:flex;"><span>    prompt(<span style="color:#0ff;font-weight:bold">&#34;What date would you like to travel?&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span>    confirm(<span style="color:#0ff;font-weight:bold">f</span><span style="color:#0ff;font-weight:bold">&#34;Book a ticket to </span><span style="color:#0ff;font-weight:bold">{</span>slots[<span style="color:#0ff;font-weight:bold">&#39;city&#39;</span>]<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold"> on </span><span style="color:#0ff;font-weight:bold">{</span>slots[<span style="color:#0ff;font-weight:bold">&#39;date&#39;</span>]<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">. Is this correct?&#34;</span>)
+</span></span></code></pre></div><h3 id="platform-specific-details">Platform-Specific Details</h3>
+<p><strong>Microsoft Copilot Studio:</strong></p>
+<ul>
+<li>Use prebuilt and custom entities</li>
+<li>Enable &ldquo;Smart Matching&rdquo; for fuzzy matching and autocorrect</li>
+<li>Add synonyms to closed list entities</li>
+<li>Use regular expressions for structured data extraction</li>
+</ul>
+<p><strong>Just AI Conversational Cloud:</strong></p>
+<ul>
+<li>Configure required/optional slots, array types, and retry/timeout logic in <code>chatbot.yaml</code></li>
+<li>Access slots via <code>$parseTree</code> or related variables</li>
+</ul>
+<p><strong>Dydu:</strong></p>
+<ul>
+<li>Define Slot knowledge types and configure the slot filling process visually</li>
+<li>Use introductory, confirmation, and end sentences to manage user flow</li>
+</ul>
+<h2 id="practical-examples">Practical Examples</h2>
+<h3 id="example-1-pizza-order">Example 1: Pizza Order</h3>
+<p><strong>Required Slots:</strong> Number of slices, Pizza type</p>
+<pre tabindex="0"><code>User: &#34;I want to order a pizza.&#34;
+Bot: &#34;How many slices would you like?&#34;
+User: &#34;8&#34;
+Bot: &#34;What type of pizza do you want?&#34;
+User: &#34;Pepperoni&#34;
+Bot: &#34;You want an 8-slice Pepperoni pizza. Is that correct?&#34;
+User: &#34;Yes&#34;
+Bot: &#34;Order confirmed!&#34;
+</code></pre><h3 id="example-2-book-a-train-ticket">Example 2: Book a Train Ticket</h3>
+<p><strong>Required Slots:</strong> Destination city, Date</p>
+<pre tabindex="0"><code>User: &#34;I need to buy a train ticket to Paris.&#34;
+Bot: &#34;For which date do you want to travel?&#34;
+User: &#34;Next Monday.&#34;
+Bot: &#34;Ticket to Paris on next Monday. Shall I proceed?&#34;
+</code></pre><h3 id="example-3-weather-inquiry">Example 3: Weather Inquiry</h3>
+<p><strong>Slots:</strong> City (required), Date (optional)</p>
+<pre tabindex="0"><code>User: &#34;What&#39;s the weather like in London today?&#34;
+Bot: &#34;The weather in London for today is sunny with 20°C.&#34;
+</code></pre><p>If the date is missing:</p>
+<pre tabindex="0"><code>User: &#34;What&#39;s the weather like in Paris?&#34;
+Bot: &#34;For which date do you need the forecast?&#34;
+</code></pre><h2 id="best-practices">Best Practices</h2>
+<p><strong>1. Use Built-in Entities When Possible:</strong><br>
+Leverage platform-provided entities for robust handling of common data types.</p>
+<p><strong>2. Add Synonyms to Closed List Entities:</strong><br>
+Expand recognition with variations and related terms.</p>
+<p><strong>3. Enable Smart or Fuzzy Matching:</strong><br>
+Allow for misspellings and similar terms to broaden entity recognition.</p>
+<p><strong>4. Be Creative with Regular Expressions:</strong><br>
+Use RegEx for structured data formats, especially for codes and IDs.</p>
+<p><strong>5. Confirm Critical Slot Values:</strong><br>
+Always confirm with the user before taking important actions.</p>
+<p><strong>6. Set Maximum Retry/Prompt Limits:</strong><br>
+Prevent endless loops by limiting prompts for unfilled slots.</p>
+<p><strong>7. Design for Interruptions:</strong><br>
+Allow users to exit slot filling flows or switch topics gracefully.</p>
+<p><strong>8. Handle Arrays and Multiple Slot Values:</strong><br>
+Support scenarios where users provide several values for the same slot.</p>
+<h2 id="common-pitfalls-and-how-to-avoid-them">Common Pitfalls and How to Avoid Them</h2>
+<p><strong>Missing Clarifying Questions:</strong><br>
+If no prompt is specified for a required slot, the intent may never be matched.</p>
+<p><strong>Overly Rigid Entity Definitions:</strong><br>
+Avoid restricting entities to a narrow list; use synonyms and smart matching.</p>
+<p><strong>Not Handling Slot Filling Interruptions:</strong><br>
+Always allow users a way to abandon or reset slot filling if stuck.</p>
+<p><strong>Ignoring Confirmation Steps:</strong><br>
+Failing to confirm slot values can lead to errors or user frustration.</p>
+<p><strong>Not Supporting Multi-Turn/Out-of-Order Filling:</strong><br>
+Users expect to give information in any order over several messages.</p>
+<p><strong>No Handling of Maximum Retries/Timeouts:</strong><br>
+Set sensible limits to avoid trapping users in endless clarification loops.</p>
+<h2 id="advanced-approaches-bert">Advanced Approaches: BERT</h2>
+<p>BERT (Bidirectional Encoder Representations from Transformers) has revolutionized slot filling by leveraging deep contextual language understanding:</p>
+<p><strong>Contextual Representations:</strong> BERT captures context from the entire input, aiding in accurate slot boundary detection.</p>
+<p><strong>Ambiguity Resolution:</strong> Handles ambiguous phrasing and abbreviations in user queries.</p>
+<p><strong>OOV Handling:</strong> Subword tokenization supports extraction even when users use rare or misspelled terms.</p>
+<p><strong>Fine-Tuning:</strong> Pre-trained BERT models can be fine-tuned on slot filling datasets for domain adaptation.</p>
+<p><strong>Implementation Steps:</strong></p>
+<ol>
+<li>Data Preparation: Create labeled datasets (tokens + slot labels)</li>
+<li>BERT Tokenization: Convert text to tokens/subwords</li>
+<li>Model Architecture: Use BERT as encoder, with a slot classification layer</li>
+<li>Fine-Tuning: Train on slot-labeled data using cross-entropy loss</li>
+<li>Inference: Predict slot labels for each token in user input</li>
+</ol>
+<p><strong>Python Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">from</span> transformers <span style="color:#fff;font-weight:bold">import</span> BertTokenizer, BertForTokenClassification
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tokenizer = BertTokenizer.from_pretrained(<span style="color:#0ff;font-weight:bold">&#39;bert-base-uncased&#39;</span>)
+</span></span><span style="display:flex;"><span>model = BertForTokenClassification.from_pretrained(<span style="color:#0ff;font-weight:bold">&#39;bert-base-uncased&#39;</span>, num_labels=num_labels)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#007f7f"># Tokenize and predict slots</span>
+</span></span><span style="display:flex;"><span>inputs = tokenizer(<span style="color:#0ff;font-weight:bold">&#34;Book a flight from New York to London&#34;</span>, return_tensors=<span style="color:#0ff;font-weight:bold">&#39;pt&#39;</span>)
+</span></span><span style="display:flex;"><span>outputs = model(**inputs)
+</span></span></code></pre></div><h2 id="common-use-cases">Common Use Cases</h2>
+<p>Slot filling powers a broad range of conversational AI applications:</p>
+<p><strong>Travel Booking:</strong> Departure/arrival cities, dates, passenger counts, class</p>
+<p><strong>E-commerce Orders:</strong> Product types, quantities, sizes, colors, delivery addresses</p>
+<p><strong>Customer Support:</strong> Ticket numbers, account IDs, issue descriptions</p>
+<p><strong>Restaurant Reservations:</strong> Restaurant name, date, time, number of guests, special requests</p>
+<p><strong>Smart Home/Utilities:</strong> Device names, actions, schedules, settings</p>
+<p><strong>Healthcare Chatbots:</strong> Symptoms, appointment dates, doctor names, insurance information</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>Q: What is the difference between a slot and an entity?</strong><br>
+A slot is a placeholder for a specific piece of information required to complete a task (e.g., &ldquo;date&rdquo; in booking a ticket), while an entity is the data category or type (e.g., &ldquo;city&rdquo;, &ldquo;number&rdquo;, &ldquo;date&rdquo;) that can fill that slot.</p>
+<p><strong>Q: How does a chatbot know which slots to fill?</strong><br>
+Each intent is associated with a set of required and optional slots. The chatbot tracks which have been filled and prompts for missing ones, based on user input and dialog state.</p>
+<p><strong>Q: What happens if the user does not provide all required slot values?</strong><br>
+The chatbot will prompt with clarifying questions for missing required slots, up to a maximum retry limit or until the user abandons the process.</p>
+<p><strong>Q: Can users fill multiple slots in one message?</strong><br>
+Yes. Advanced NLU systems can extract multiple slot values from a single user utterance.</p>
+<p><strong>Q: How do I handle slots that can have multiple values?</strong><br>
+Configure the slot with &ldquo;Is Array&rdquo; set to true to accept multiple values (e.g., multiple pizza types in one order).</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Slot filling is fundamental to task-oriented conversational AI, enabling bots to collect all required data for intent fulfillment</li>
+<li>It relies on defining intents, slots, and entities, with robust NLU for extraction</li>
+<li>Multi-turn, flexible dialogs and confirmation steps boost usability and accuracy</li>
+<li>Best practices include leveraging built-in entities, using synonyms and fuzzy matching, and setting sensible retry limits</li>
+<li>State-of-the-art models like BERT enable advanced, high-accuracy slot extraction</li>
+</ul>
+<h2 id="references">References</h2>
+<ol>
+<li>Microsoft. (n.d.). Use Entities and Slot Filling in Agents. Microsoft Copilot Studio.</li>
+<li>Dydu. (n.d.). Slot Filling. Dydu Documentation.</li>
+<li>Just AI. (n.d.). Slot Filling. Just AI Conversational Cloud.</li>
+<li>Microsoft. (n.d.). Prebuilt Entities. Microsoft Copilot Studio.</li>
+<li>Microsoft. (n.d.). Closed List Entities. Microsoft Copilot Studio.</li>
+<li>Just AI. (n.d.). Entities Guide. Just AI.</li>
+<li>Just AI. (n.d.). Slot Parameters. Just AI.</li>
+<li>Dydu. (n.d.). Slot Configuration. Dydu.</li>
+<li>Just AI. (n.d.). Slot Extraction. Just AI.</li>
+<li>Just AI. (n.d.). Interruption of Slot Filling. Just AI.</li>
+<li>Microsoft. (n.d.). Slot Filling Best Practices. Microsoft Copilot Studio.</li>
+<li>Analytics Vidhya. (2023). Enhancing Conversational AI with BERT. Analytics Vidhya Blog.</li>
+</ol>
+
+  </div>
+
+  
+  
+  
+  
+  
+    
+    <div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+      <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/dialogue-state-tracking/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Dialogue State Tracking
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A technology that tracks what a user wants during a conversation, keeping track of important details...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/dialogue-state-tracking/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/rich-media-cards/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Rich Media Cards
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Interactive message cards that combine images, videos, and buttons within chat conversations to crea...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/rich-media-cards/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/utterance/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Utterance
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An utterance is any message, question, or command a user sends to a chatbot—whether typed or spoken....
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/utterance/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chatgpt/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    ChatGPT
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    An AI assistant that understands natural conversation and can answer questions, write content, help ...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chatgpt/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/botpress/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Botpress
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A platform for building AI chatbots using a visual drag-and-drop editor, enabling businesses to auto...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/botpress/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chat-simulator/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Chat Simulator
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A testing tool that lets developers safely practice and improve chatbots by simulating realistic cus...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/chat-simulator/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      </div>
+    
+
+
+  
+  <div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+    <a 
+      href="/en/glossary/" 
+      class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+    >
+      <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+      </svg>
+      
+        Back to Glossary
+      
+    </a>
+  </div>
+</article>
+
+</main>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer style="background-color: #000000;">
+  
+  <div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+    
+    <svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="curveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      
+      
+      <path class="curve" data-speed="0.8" stroke="url(#curveGrad1)" stroke-width="2" fill="none" />
+      <path class="curve" data-speed="1.2" stroke="url(#curveGrad2)" stroke-width="2.5" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.6" stroke="url(#curveGrad3)" stroke-width="1.5" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.5" stroke="url(#curveGrad1)" stroke-width="2" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="0.9" stroke="url(#curveGrad2)" stroke-width="3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.3" stroke="url(#curveGrad3)" stroke-width="1.8" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.7" stroke="url(#curveGrad1)" stroke-width="2.2" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.1" stroke="url(#curveGrad2)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="1.4" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="0.85" stroke="url(#curveGrad1)" stroke-width="1.5" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="1.0" stroke="url(#curveGrad2)" stroke-width="2.8" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.25" stroke="url(#curveGrad3)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.95" stroke="url(#curveGrad1)" stroke-width="2.3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.35" stroke="url(#curveGrad2)" stroke-width="1.7" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.75" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.7" />
+    </svg>
+    
+    
+    <div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    
+    <div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+      <h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+      <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+      <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+      <div class="mt-8 flex justify-center">
+        <a href="/en/blog/" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get started</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+  
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+    <div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+      
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/webp"
+        
+        data-srcset="/images/interwork-logo-white-1.webp 568w"
+        
+        sizes="200px"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/interwork-logo-white-1.webp"
+        
+        alt="Interwork"
+        class="lazy-image h-9"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+    </picture>
+
+
+  
+
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Services</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">AI Solutions</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Web Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">System Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Consulting</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Support</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://support.smartweb.jp/" class="text-sm/6 text-gray-400 hover:text-white">Support Portal</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Documentation</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Company</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://www.intwk.co.jp/about/" class="text-sm/6 text-gray-400 hover:text-white">About</a>
+              </li>
+              
+              <li>
+                <a href="/en/blog/" class="text-sm/6 text-gray-400 hover:text-white">Blog</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Careers</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">News</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="/en/privacy-policy/" class="text-sm/6 text-gray-400 hover:text-white">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="/en/ai-chatbot-terms-of-use/" class="text-sm/6 text-gray-400 hover:text-white">AI Chatbot Terms of Use</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div>
+        <p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+        
+          
+
+
+
+
+<div class="language-selector">
+  <div class="flex flex-wrap items-center justify-center gap-3">
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+          
+            
+            
+          
+        
+        
+        
+        
+        
+        <a href="/ja/glossary/Slot-Filling/"
+           class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
+           title="日本語"
+           aria-label="日本語"
+           hreflang="ja">
+          <img 
+            src="/flags/jp.png"
+            alt="日本語"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </a>
+      
+    
+      
+      
+      
+      
+      
+      
+        
+        <span class="inline-flex items-center text-sm opacity-50" title="English">
+          <img 
+            src="/flags/gb.png"
+            alt="English"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </span>
+      
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+    <div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex gap-x-6 md:order-2">
+        
+        <a href="https://github.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">GitHub</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://x.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">X</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://youtube.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">YouTube</span>
+          
+
+
+
+        </a>
+        
+      </div>
+      <p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">&copy; 2026 Interwork Corporation All rights reserved.</p>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<div id="cookie-consent-banner" data-cookie-consent-banner class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark">
+    <div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+        <p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br> We use cookies to enhance your browsing experience and analyze our traffic. See our <a href="/en/privacy-policy/" class="font-semibold text-primary hover:text-primary-500">privacy policy</a>.</p>
+        <div class="mt-4 flex items-center gap-x-3 flex-wrap">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Accept All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-all
+    >
+      Accept All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Reject All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-necessary
+    >
+      Reject All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Cookie Settings"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=settings
+    >
+      Cookie Settings
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="cookie-settings-modal" class="fixed inset-0 z-50 hidden dark">
+    <div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close></div>
+    <div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+            <button type="button" class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close>
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="necessary-cookies" name="necessary-cookies" type="checkbox" checked disabled class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="analytics-cookies" name="analytics-cookies" type="checkbox" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 flex justify-end gap-x-3">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2  not-prose group"
+      aria-label="Cancel"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-close
+    >
+      Cancel
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2  not-prose group"
+      aria-label="Save Preferences"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-save
+    >
+      Save Preferences
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+<button
+  id="back-to-top-btn"
+  aria-label="Back to Top"
+  class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg 
+         transition-all duration-300 transform translate-y-12 opacity-0 invisible
+         hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+         dark:bg-indigo-500 dark:hover:bg-indigo-400"
+  onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+  </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+
+
+
+
+<script src="/js/app.js?v=20260106210129"></script>
+
+
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+
+</body>
+</html>

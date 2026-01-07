@@ -278,7 +278,7 @@ Some tools are specifically developed for platforms like X (formerly Twitter) an
 - Campaign management
 - Bulk post management
 - Analytics capabilities
-- Approval [workflows](/en/glossary/Workflow/)
+- Approval [workflows](/en/glossary/[Workflow](/en/glossary/Workflow/)/)
 - CSV bulk posting
 - Scheduled posting
 
@@ -366,7 +366,7 @@ Research shows increasing cases where multiple [AI agents](/en/glossary/AI-agent
 
 The following technologies will further improve response quality and [operational efficiency](/en/glossary/Operational-Efficiency/):
 
-- [AI chatbots](/en/glossary/AI-chatbot/)
+- [AI chatbots](/en/glossary/AI-[chatbot](/en/glossary/Chatbot/)/)
 - Auto-response functionality
 - [Sentiment analysis](/en/glossary/sentiment-analysis/) capabilities
 

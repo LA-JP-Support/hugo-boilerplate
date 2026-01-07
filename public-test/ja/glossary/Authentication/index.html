@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>認証 | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Authentication/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="デジタル環境およびアプリケーションにおける安全な本人確認のための認証システム、方法、ベストプラクティスに関する包括的なガイド。" name="description"/>
+<meta content="認証, 本人確認, 多要素認証, 生体認証セキュリティ, アクセス制御" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Authentication/" property="og:url"/>
+<meta content="認証 | SmartWeb" property="og:title"/>
+<meta content="デジタル環境およびアプリケーションにおける安全な本人確認のための認証システム、方法、ベストプラクティスに関する包括的なガイド。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Authentication/" name="twitter:url"/>
+<meta content="認証 | SmartWeb" name="twitter:title"/>
+<meta content="デジタル環境およびアプリケーションにおける安全な本人確認のための認証システム、方法、ベストプラクティスに関する包括的なガイド。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">認証</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        認証
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Authentication
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          デジタル環境およびアプリケーションにおける安全な本人確認のための認証システム、方法、ベストプラクティスに関する包括的なガイド。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                認証
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                本人確認
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                多要素認証
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                生体認証セキュリティ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                アクセス制御
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="認証とは何か">認証とは何か?</h2>
+<p>認証とは、リソースやサービスへのアクセスを試みるユーザー、デバイス、またはシステムの身元を検証する基本的な<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>プロセスです。その核心において、認証は「あなたは誰ですか?」という重要な問いに答えるものであり、主張された身元を証明する資格情報の提示と検証を要求します。このプロセスはサイバーセキュリティにおける第一の防衛線として機能し、機密情報、システム、または物理的な場所へのアクセスを許可する前に信頼を確立します。認証は、認証されたエンティティが何を許可されているかを決定する<a data-lb="1" href="/ja/glossary/Authorization/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">認可</a>や、証明なしに単に身元を主張する識別とは異なります。</p>
+<p>認証プロセスは、伝統的に3つの主要なタイプに分類される1つ以上の認証要素に依存しています:知識要素(パスワードなど、あなたが知っているもの)、所有要素(トークンやスマートカードなど、あなたが持っているもの)、そして生体要素(生体認証特性など、あなた自身であるもの)です。現代の認証システムは、複数の独立した認証要素を攻撃者が侵害する必要があることで、セキュリティを大幅に強化する堅牢な<a data-lb="1" href="/ja/glossary/Multi-Factor-Authentication--MFA-/" title="多要素認証（MFA）の包括的なガイド。実装方法、メリット、課題、セキュリティ強化のためのベストプラクティスを網羅しています。">多要素認証</a>(MFA)スキームを作成するために、複数の要素を組み合わせることが増えています。<a data-lb="1" href="/ja/glossary/Authentication/" title="デジタル環境およびアプリケーションにおける安全な本人確認のための認証システム、方法、ベストプラクティスに関する包括的なガイド。">認証</a>システムの強度は、認証要素の偽造、盗難、または推測の難しさ、および検証プロセス自体のセキュリティに依存します。</p>
+<p>現代の認証システムは、単純なユーザー名とパスワードの組み合わせをはるかに超えて進化し、生体認証スキャナー、ハードウェアセキュリティキー、モバイルデバイスベースの認証、行動分析、リスクベースの適応型認証などの高度な技術を包含しています。これらのシステムは、セキュリティ要件と<a data-lb="1" href="/ja/glossary/UX/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">ユーザーエクスペリエンス</a>の考慮事項のバランスを取り、正当なユーザーが効率的にリソースにアクセスできるようにしながら、不正アクセスの試みに対する強力な保護を維持する必要があります。クラウドサービス、モバイルデバイス、モノのインターネット(IoT)デバイスの普及により、新しい認証の課題と機会が生まれ、パスワードレス認証、継続的認証、複数のドメインや組織にわたる連携<a data-lb="1" href="/ja/glossary/Identity-and-Access-Management--IAM-/" title="アイデンティティ・アクセス管理（IAM）システムの包括的ガイド。認証、認可、ガバナンス、セキュリティのベストプラクティスを網羅しています。">アイデンティティ管理</a>などの分野でイノベーションが推進されています。</p>
+<h2 id="主要な認証方式">主要な認証方式</h2>
+<p><strong>パスワードベース認証</strong>は、最も伝統的で広く使用されている認証方式であり、ユーザーとシステム間で共有される秘密の知識に依存しています。その普及にもかかわらず、パスワードベース認証は、弱いパスワードの選択、パスワードの再利用、ブルートフォース、辞書攻撃、クレデンシャルスタッフィングなどのさまざまな攻撃方法に対する<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">脆弱性</a>など、重大な課題に直面しています。</p>
+<p><strong>トークンベース認証</strong>は、認証資格情報を生成または含む物理的または仮想的なトークンを利用し、ハードウェアトークン、ソフトウェアトークン、スマートカードなどが含まれます。これらのシステムは、特定のデバイスまたはトークンの所有を要求することで、セキュリティを強化し、リモート攻撃をより困難にし、多要素認証実装のための第2の要素を提供します。</p>
+<p><strong>生体認証</strong>は、指紋、顔認識、虹彩スキャン、音声パターン、またはタイピングダイナミクスなどの固有の生物学的または行動的特性を活用します。生体認証システムは、個人に本質的に結びついており、偽造が困難であるという利点を提供しますが、プライバシーの懸念を引き起こし、キャプチャと検証のための専用ハードウェアを必要とします。</p>
+<p><strong>証明書ベース認証</strong>は、信頼された証明機関によって発行されたデジタル証明書を使用して、公開鍵暗号化を通じて身元を検証します。この方式は、ユーザーとシステムの両方に対して強力な認証を提供し、安全な<a data-lb="1" href="/ja/glossary/DTMF--Dual-Tone-Multi-Frequency-/" title="DTMF(デュアルトーン多重周波数)は、キーパッド押下時に発生する固有の音声トーンを使用してコマンドを解釈し、通話をルーティングし、自動メニューナビゲーション、リモートコントロール、および電話ネットワークやデジタルプラットフォームにおける安全なデータ入力を可能にする通信信号システムです。">通信</a>と否認防止を可能にし、特に企業環境や安全な通信において価値があります。</p>
+<p><strong>リスクベース認証</strong>は、場所、デバイス特性、アクセス時間、行動パターンなどのコンテキスト要因に基づいて、認証要件を動的に調整します。この適応型アプローチは、リスク指標が潜在的な脅威を示唆する場合にのみ、より強力な認証措置を適用することで、セキュリティとユーザーエクスペリエンスの両方を強化します。</p>
+<p><strong>連携認証</strong>は、ユーザーが一度認証し、アイデンティティプロバイダーとサービスプロバイダー間の信頼関係を通じて複数のシステムやサービスにアクセスできるようにします。SAML、<a data-lb="1" href="/ja/glossary/OAuth/" title="OAuth認可フレームワークの包括的なガイド。プロトコル、実装、セキュリティのベストプラクティス、実際のアプリケーション事例を網羅しています。">OAuth</a>、OpenID Connectなどの標準が連携認証を促進し、パスワード疲労を軽減し、複数のプラットフォームにわたるユーザーエクスペリエンスを向上させます。</p>
+<p><strong>パスワードレス認証</strong>は、生体認証、ハードウェアキー、またはモバイルデバイスベースの認証などの代替認証方式を支持して、従来のパスワードを排除します。このアプローチは、多くのパスワード関連のセキュリティ脆弱性に対処しながら、より便利な認証方式を通じてユーザーエクスペリエンスを向上させる可能性があります。</p>
+<h2 id="認証の仕組み">認証の仕組み</h2>
+<p>認証プロセスは、安全な身元検証を保証する構造化された<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>に従います:</p>
+<ol>
+<li>
+<p><strong>身元主張の開始</strong>: ユーザーまたはシステムは、通常、ユーザー名、メールアドレス、または検証のために主張されている身元を確立する他の識別子を入力することで、特定の身元を主張して認証プロセスを開始します。</p>
+</li>
+<li>
+<p><strong>資格情報の提示</strong>: 認証するエンティティは、主張された身元の証拠として1つ以上の認証要素を提示します。例えば、パスワードの入力、生体サンプルの提示、またはトークン生成コードの提供などです。</p>
+</li>
+<li>
+<p><strong>資格情報の送信</strong>: 提示された資格情報は、認証システムに安全に送信されます。多くの場合、暗号化プロトコルを使用して、転送中の機密認証データを保護し、悪意のある行為者による傍受を防ぎます。</p>
+</li>
+<li>
+<p><strong>資格情報の検証</strong>: 認証システムは、提示された資格情報を、パスワードハッシュ、生体認証テンプレート、または証明書情報などの保存された参照データと比較し、適切な検証アルゴリズムとセキュリティ対策を使用します。</p>
+</li>
+<li>
+<p><strong>リスク評価</strong>: 現代のシステムは、場所、デバイス特性、時間パターン、行動指標などのコンテキスト要因を評価して、認証試行のリスクレベルを評価し、適切な対応措置を決定します。</p>
+</li>
+<li>
+<p><strong>認証決定</strong>: 資格情報の検証と<a data-lb="1" href="/ja/glossary/Financial-Risk-Management/" title="財務リスク管理は、AI、機械学習、高度な分析手法を活用して、市場リスク、信用リスク、オペレーショナルリスク、流動性リスクなどの財務リスクを特定、評価、監視、軽減し、組織資産を保護し、規制コンプライアンスを確保します。">リスク評価</a>の結果に基づいて、システムは認証決定を行い、アクセスを許可するか、アクセスを拒否するか、または追加の認証要素を要求します。</p>
+</li>
+<li>
+<p><strong>セッションの確立</strong>: 認証が成功すると、システムは認証されたセッションを確立し、通常、再認証を必要とせずに後続のリクエストに対して認証された状態を維持するセッショントークンまたはクッキーを発行します。</p>
+</li>
+<li>
+<p><strong>監査ログ記録</strong>: 認証システムは、<a data-lb="1" href="/ja/glossary/Security-Information-and-Event-Management--SIEM-/" title="SIEMシステムの包括的ガイド:リアルタイムセキュリティ監視、脅威検知、コンプライアンス管理、インシデント対応機能について解説します。">セキュリティ監視</a>、コンプライアンス要件、およびフォレンジック分析の目的で、成功した試行と失敗した試行を含む認証試行の詳細なログを記録します。</p>
+</li>
+</ol>
+<p><strong>ワークフローの例</strong>: 企業の電子メールシステムにアクセスするユーザーは、ユーザー名とパスワードを入力し(知識要素)、登録されたモバイルデバイスで承認を要求するプッシュ通知を受信し(所有要素)、指紋を使用してリクエストを承認し(生体要素)、堅牢な多要素認証エクスペリエンスを作成します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>セキュリティ態勢の強化</strong>は、認証システムを通じて、システムアクセスを許可する前に身元の証明を要求することで、不正アクセスのリスクを大幅に削減し、悪意のある行為者や不正なユーザーから機密データとリソースを保護する基本的なセキュリティバリアを作成します。</p>
+<p><strong>規制コンプライアンス</strong>のサポートは、<a data-lb="1" href="/ja/glossary/GDPR/" title="EUの包括的なデータ保護規則であるGDPRについて理解しましょう。その原則、コンプライアンス要件、データ主体の権利、そしてAIチャットボットへの影響について学びます。">GDPR</a>、HIPAA、SOX、PCI DSSなどのさまざまなコンプライアンス要件を満たすのに役立ちます。これらは、機密データを保護し、アクセス活動の監査証跡を維持するための強力な認証制御を義務付けています。</p>
+<p><strong>ユーザーアカウンタビリティ</strong>の確立により、組織は特定の個人にアクションを追跡および帰属させることができ、フォレンジック調査、<a data-lb="1" href="/ja/glossary/Compliance-Audit/" title="コンプライアンス監査の包括的ガイド:規制遵守とリスク管理のためのプロセス、フレームワーク、メリット、ベストプラクティス。">コンプライアンス監査</a>、および誰がいつどのリソースにアクセスしたかの詳細な記録の維持をサポートします。</p>
+<p><strong>リスク軽減</strong>機能により、組織は脅威指標や疑わしい活動に対応する適応型セキュリティ対策を実装でき、リスクレベルとコンテキスト要因に基づいて認証要件を自動的に調整します。</p>
+<p><strong>集中アイデンティティ管理</strong>は、認証システムを通じて、組織が単一の制御ポイントからユーザーアイデンティティを管理できるようにし、管理オーバーヘッドを削減し、複数のシステムとアプリケーションにわたって一貫した<a data-lb="1" href="/ja/glossary/security-policies/" title="セキュリティポリシーの目的、種類、情報資産保護における重要性を理解します。コンプライアンス、ベストプラクティス、CIA三原則について学びます。">セキュリティポリシー</a>を保証します。</p>
+<p><strong>ユーザーエクスペリエンスの向上</strong>は、適切に実装された場合、現代の認証システムが<a data-lb="1" href="/ja/glossary/SAML--Security-Assertion-Markup-Language-/" title="SAML認証プロトコルの包括的なガイド。安全なシングルサインオンソリューションの実装、メリット、ユースケース、ベストプラクティスを網羅しています。">シングルサインオン</a>機能、パスワードレスオプション、複数のプラットフォームとサービスにわたるシームレスな統合を通じてユーザーの利便性を向上させることができます。</p>
+<p><strong>コスト削減</strong>の利点は、パスワードリセットのためのヘルプデスクコールの削減、セキュリティ<a data-lb="1" href="/ja/glossary/Data-Breach-Response/" title="サイバーセキュリティ専門家向けの、データ侵害対応戦略、インシデント管理、復旧手順に関する包括的なガイド。">インシデント対応</a>コストの削減、<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>された認証プロセスと集中アイデンティティ管理による運用効率の向上から生まれます。</p>
+<p><strong>スケーラビリティのサポート</strong>により、組織は、管理オーバーヘッドやセキュリティ管理の複雑さを比例的に増加させることなく、増加するユーザーベースと拡大するシステムポートフォリオに対応できます。</p>
+<p><strong>統合機能</strong>により、認証システムは既存のインフラストラクチャ、アプリケーション、セキュリティツールとシームレスに連携し、テクノロジーエコシステム全体にわたって包括的なセキュリティカバレッジを提供します。</p>
+<p><strong>事業継続性</strong>の強化は、堅牢な認証システムを通じて、正当なユーザーがセキュリティ基準を維持しながら重要なリソースに確実にアクセスできるようにし、運用の回復力と生産性をサポートします。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>企業ネットワークアクセス</strong>は、従業員の企業ネットワーク、アプリケーション、リソースへのアクセスを制御し、権限のある担当者のみが機密ビジネスシステムとデータにアクセスできるようにしながら、生産性とコラボレーション機能を維持します。</p>
+<p><strong>オンラインバンキングと金融サービス</strong>は、顧客アカウント、金融取引、機密金融データを詐欺や不正アクセスから保護するために強力な認証を実装し、厳格な規制要件と顧客の信頼の期待を満たします。</p>
+<p><strong>医療情報システム</strong>は、電子健康記録、医療機器、患者情報システムへのアクセスを保護し、<a data-lb="1" href="/ja/glossary/HIPAA--Health-Insurance-Portability-/" title="プライバシー、セキュリティ、相互運用性要件、コンプライアンス戦略、実装のベストプラクティスをカバーする、HIPAA規制の包括的なガイド。">HIPAAコンプライアンス</a>を確保しながら、医療提供者が重要な患者データに効率的かつ安全にアクセスできるようにします。</p>
+<p><strong>Eコマースとオンライン小売</strong>プラットフォームは、顧客アカウント、支払い情報、取引データを保護しながら、便利なショッピングエクスペリエンスを提供し、顧客維持のための<a data-lb="1" href="/ja/glossary/security-requirements/" title="セキュリティ要件について学ぶ:情報の機密性、完全性、可用性(CIA)を確保するためにシステムが満たすべき明確で実行可能な条件。デジタル資産を保護するために不可欠です。">セキュリティ要件</a>とユーザーエクスペリエンスの期待のバランスを取ります。</p>
+<p><strong>クラウドサービスアクセス</strong>管理は、クラウドベースのアプリケーション、データストレージ、コンピューティングリソースへの安全なアクセスを可能にし、分散環境と複数のサービスプロバイダーにわたってセキュリティ基準を維持しながら、リモートワーク機能をサポートします。</p>
+<p><strong>政府および公共部門</strong>のシステムは、機密情報、市民サービス、重要インフラへのアクセスに強力な認証を要求し、公共のニーズを効率的かつ透明にサービスしながら、厳格なセキュリティ要件を満たします。</p>
+<p><strong>教育機関アクセス</strong>は、<a data-lb="1" href="/ja/glossary/Training-Resources/" title="トレーニングリソースとは、人々が新しいスキルや知識を習得するために使用されるツール、教材、プラットフォームのことです。オンラインコースや動画から、インタラクティブなシミュレーション、パーソナライズされた学習システムまで、幅広い範囲にわたります。">学習管理システム</a>、研究リソース、管理システムへの学生と教職員のアクセスを制御し、学術的なコラボレーションと学習目標をサポートしながら、機密教育データを保護します。</p>
+<p><strong>IoTデバイス認証</strong>は、モノのインターネットデバイスと中央システム間の通信を保護し、不正なデバイスアクセスを防止し、スマートホーム、産業システム、接続されたインフラストラクチャにおけるIoTネットワークの整合性を保証します。</p>
+<h2 id="認証方式の比較">認証方式の比較</h2>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>セキュリティレベル</th>
+<th>ユーザーの利便性</th>
+<th>実装コスト</th>
+<th>スケーラビリティ</th>
+<th>使用例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>パスワードのみ</td>
+<td>低〜中</td>
+<td>高</td>
+<td>低</td>
+<td>高</td>
+<td>基本的なアプリケーション、低リスク環境</td>
+</tr>
+<tr>
+<td>多要素</td>
+<td>高</td>
+<td>中</td>
+<td>中</td>
+<td>中</td>
+<td>企業システム、金融サービス</td>
+</tr>
+<tr>
+<td>生体認証</td>
+<td>高</td>
+<td>高</td>
+<td>高</td>
+<td>中</td>
+<td>高セキュリティ施設、モバイルデバイス</td>
+</tr>
+<tr>
+<td>証明書ベース</td>
+<td>非常に高</td>
+<td>低</td>
+<td>高</td>
+<td>低</td>
+<td>政府システム、安全な通信</td>
+</tr>
+<tr>
+<td>リスクベース</td>
+<td>可変</td>
+<td>高</td>
+<td>高</td>
+<td>高</td>
+<td>適応型セキュリティ、詐欺防止</td>
+</tr>
+<tr>
+<td>連携</td>
+<td>中〜高</td>
+<td>非常に高</td>
+<td>中</td>
+<td>非常に高</td>
+<td>クロスプラットフォームアクセス、クラウドサービス</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>パスワードセキュリティの脆弱性</strong>は、ユーザーがしばしば弱いパスワードを選択し、複数のシステムで資格情報を再利用し、フィッシング攻撃の犠牲になるため、組織がパスワードポリシーと代替認証方式を実装する必要があるという持続的な課題です。</p>
+<p><strong>ユーザーエクスペリエンスのバランス</strong>は、過度に複雑な認証プロセスがユーザーをイライラさせ、生産性を低下させる可能性がある一方で、過度に単純なプロセスはセキュリティを損なう可能性があるため、慎重な設計と実装アプローチが必要です。</p>
+<p><strong>スケーラビリティの制限</strong>は、組織が成長し、認証システムがパフォーマンスを低下させたり、セキュリティ基準を損なうことなく、増加するユーザー数、デバイス、認証リクエストを処理する必要がある場合に発生する可能性があります。</p>
+<p><strong>統合の複雑さ</strong>は、<a data-lb="1" href="/ja/glossary/Legacy-System/" title="組織が使い続けている古いコンピュータシステムやソフトウェアのこと。より新しい技術が存在するにもかかわらず、置き換えにはコストがかかりリスクも高いため、継続して使用されている。">レガシーシステム</a>、複数のプラットフォーム、現代の認証標準を容易にサポートしない可能性のあるさまざまなセキュリティ要件を持つ多様なテクノロジー環境にわたって認証システムを実装する際に発生します。</p>
+<p><strong>プライバシーの懸念</strong>は、特に生体認証システムにおいて、機密個人情報のデータ収集、保管、潜在的な悪用に関する疑問を提起し、プライバシー規制とユーザーの同意を慎重に考慮する必要があります。</p>
+<p><strong>コストの考慮事項</strong>には、初期実装コストだけでなく、継続的なメンテナンス、ユーザートレーニング、ヘルプデスクサポート、定期的なセキュリティアップデートが含まれ、<a data-lb="1" href="/ja/glossary/Total-Cost-of-Ownership--TCO-/" title="総所有コスト (TCO) は、資産の購入、使用、廃棄にかかるすべての費用をライフサイクル全体にわたって計算する財務分析手法であり、組織がより賢明な購買意思決定を行うために役立ちます。">総所有コスト</a>に大きな影響を与える可能性があります。</p>
+<p><strong>規制コンプライアンス</strong>要件は、業界や管轄区域によって異なり、認証システムが運用効率とユーザー満足度を維持しながらナビゲートする必要がある複雑なコンプライアンス環境を作成します。</p>
+<p><strong>攻撃対象領域の拡大</strong>は、認証システム自体が攻撃者のターゲットになるにつれて発生し、認証インフラストラクチャを保護し、セキュリティ基盤の侵害を防ぐための堅牢なセキュリティ対策が必要です。</p>
+<p><strong>復旧とバックアップ手順</strong>は、主要な認証方式が失敗した場合、ユーザーがアクセス資格情報を失った場合、またはシステムが停止した場合に、セキュリティを損なうことなく事業継続性を確保するために慎重に計画する必要があります。</p>
+<p><strong>パフォーマンスへの影響</strong>の考慮事項には、認証プロセスの計算オーバーヘッド、リモート認証のネットワーク遅延、全体的な<a data-lb="1" href="/ja/glossary/Wait-Time/" title="様々なシステムやアプリケーションにおける待機時間の概念、実装戦略、最適化技術に関する包括的なガイド。">システムパフォーマンス</a>とユーザーエクスペリエンスに影響を与える可能性のあるシステムリソース要件が含まれます。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>多要素認証の展開</strong>は、すべての重要なシステムとユーザーアカウントに実装する必要があり、異なる認証要素を組み合わせて、1つの要素が侵害された場合でも不正アクセスのリスクを大幅に削減する階層化されたセキュリティを作成します。</p>
+<p><strong>強力なパスワードポリシー</strong>は、最小限の複雑さ要件、定期的なパスワード変更、パスワードの再利用の禁止を含めて確立および実施する必要があり、ユーザーに安全なパスワードを作成および管理するためのガイダンスとツールを提供します。</p>
+<p><strong>安全な資格情報の保管</strong>は、保存された認証データに対して適切な暗号化、ハッシュ化、ソルト技術を実装する必要があり、認証データベースが侵害された場合でも、保存された資格情報が不正使用から保護されることを保証します。</p>
+<p><strong>定期的なセキュリティ監査</strong>は、認証システムの有効性を評価し、脆弱性を特定し、セキュリティポリシーと規制要件へのコンプライアンスを確保するために実施する必要があり、侵入テストと<a data-lb="1" href="/ja/glossary/Vulnerability-Assessment/" title="システムやネットワークのセキュリティ上の弱点を特定するための脆弱性評価手法、ツール、ベストプラクティスに関する包括的なガイド。">脆弱性評価</a>が含まれます。</p>
+<p><strong>ユーザー教育とトレーニング</strong>プログラムは、ユーザーが認証セキュリティの重要性を理解し、フィッシングの試みを認識し、適切な認証手順に従うのを助けるために実装する必要があり、セキュリティ意識の高いユーザーベースを作成します。</p>
+<p><strong>インシデント対応計画</strong>には、侵害された資格情報、失敗した認証システム、疑わしい不正アクセスの試みを含む、認証関連のセキュリティインシデントに対する特定の手順を含める必要があり、迅速かつ効果的な対応を保証します。</p>
+<p><strong>継続的な監視</strong>システムは、認証活動を追跡し、疑わしいパターンを検出し、潜在的な脅威やシステムの問題についてセキュリティチームに警告するために展開する必要があり、プロアクティブなセキュリティ管理と脅威対応を可能にします。</p>
+<p><strong>バックアップ認証方式</strong>は、主要な認証方式が失敗した場合でもユーザーが重要なシステムにアクセスできるようにするために確立する必要があり、セキュリティ基準を維持し、バックアップチャネルを通じた不正アクセスを防止します。</p>
+<p><strong>統合テスト</strong>は、既存のアプリケーションとインフラストラクチャに認証システムを実装する際に徹底的に実行する必要があり、テクノロジーエコシステム全体にわたる互換性、パフォーマンス、セキュリティを保証します。</p>
+<p><strong>ドキュメントと手順</strong>は、構成の詳細、運用手順、トラブルシューティングガイドを含む、すべての認証システムに対して維持する必要があり、効果的なシステム管理と知識の移転をサポートします。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>行動生体認証</strong>は、タイピングリズム、マウス移動パターン、タッチスクリーンインタラクション特性などの<a data-lb="1" href="/ja/glossary/Behavioral-Trigger/" title="ボタンのクリックやショッピングカートの放棄など、ユーザーの行動に自動的に応答し、タイムリーでパーソナライズされたメッセージや体験を提供するシステム。">ユーザー行動</a>の固有のパターンを分析して、継続的な認証を提供し、潜在的なアカウント乗っ取りや不正アクセスの試みを検出します。</p>
+<p><strong>ゼロ知識証明</strong>は、機密情報を明らかにすることなく認証を可能にし、ユーザーが検証プロセス中に実際の認証データを潜在的な傍受や侵害にさらすことなく、自分の身元や資格情報を証明できるようにします。</p>
+<p><strong>ブロックチェーンベースの認証</strong>は、分散型台帳技術を活用して、単一障害点を排除し、複数の参加組織にわたって改ざん防止の認証記録を提供する分散型アイデンティティ検証システムを作成します。</p>
+<p><strong>機械学習の統合</strong>は、認証パターンのインテリジェントな分析、リスク評価、異常検出を通じて認証システムを強化し、時間の経過とともにユーザーの行動と脅威パターンから学習する適応型セキュリティ対策を可能にします。</p>
+<p><strong>量子耐性暗号</strong>は、量子コンピューター攻撃に対して安全なままである<a data-lb="1" href="/ja/glossary/data-encryption/" title="データ暗号化、その種類(対称暗号化、非対称暗号化)、鍵とアルゴリズムによる動作原理、および機密情報を保護するサイバーセキュリティにおける役割について解説します。">暗号化アルゴリズム</a>を実装することで、将来の量子コンピューティングの脅威に対して認証システムを準備し、長期的な認証システムの実行可能性を保証します。</p>
+<p><strong>継続的認証</strong>は、アクティブなセッション全体でユーザーの行動と環境要因を監視して、潜在的なセッションハイジャックや不正アクセスを検出し、初期ログイン認証を超えて継続的な身元検証を提供します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>パスワードレス認証の採用</strong>は、組織がパスワード関連の脆弱性を排除し、生体認証、ハードウェアキー、モバイルデバイスベースの認証方式を通じてユーザーエクスペリエンスを向上させようとするにつれて、拡大し続けるでしょう。</p>
+<p><strong>人工知能の統合</strong>は、リアルタイムで新たな脅威と進化するユーザーパターンに対応できる改善されたリスク評価、行動分析、適応型セキュリティ対策を通じて、認証システムを強化します。</p>
+<p><strong>分散型アイデンティティ管理</strong>は、ブロックチェーンと分散型台帳技術により、ユーザーが集中型アイデンティティプロバイダーや認証機関に依存することなく、自分自身のアイデンティティ資格情報を制御できるようになるにつれて、重要性が増すでしょう。</p>
+<p><strong>生体認証技術の進歩</strong>は、高度な顔認識、静脈パターン分析、複数の生物学的特性を組み合わせたマルチモーダル生体認証システムを含む、新しい生体認証モダリティを導入し、既存のものを改善します。</p>
+<p><strong>モノのインターネット認証</strong>は、IoT展開が拡大するにつれて、デバイス認証と通信を保護するための新しいアプローチが必要になり、リソース制約のあるデバイスに適した軽量認証プロトコルが必要になります。</p>
+<p><strong>プライバシー保護認証</strong>は、プライバシー規制が進化するにつれてますます重要になり、個人データの収集と保管要件を最小限に抑えながら身元を検証する認証方式の開発を推進します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>National Institute of Standards and Technology. (2017). Digital Identity Guidelines: Authentication and Lifecycle Management. NIST Special Publication 800-63B.</p>
+</li>
+<li>
+<p>Grassi, P. A., Garcia, M. E., &amp; Fenton, J. L. (2017). Digital Identity Guidelines. NIST Special Publication 800-63-3.</p>
+</li>
+<li>
+<p>Bonneau, J., Herley, C., Van Oorschot, P. C., &amp; Stajano, F. (2012). The quest to replace passwords: A framework for comparative evaluation of web authentication schemes. IEEE Symposium on Security and Privacy.</p>
+</li>
+<li>
+<p>Florêncio, D., Herley, C., &amp; Van Oorschot, P. C. (2014). An administrator’s guide to internet password research. USENIX Conference on Large Installation System Administration.</p>
+</li>
+<li>
+<p>Jain, A. K., Ross, A., &amp; Prabhakar, S. (2004). An introduction to biometric recognition. IEEE Transactions on Circuits and Systems for Video Technology, 14(1), 4-20.</p>
+</li>
+<li>
+<p>Hardt, D. (2012). The OAuth 2.0 Authorization Framework. RFC 6749, Internet Engineering Task Force.</p>
+</li>
+<li>
+<p>Cantor, S., Kemp, J., Philpott, R., &amp; Maler, E. (2005). Assertions and Protocols for the OASIS Security Assertion Markup Language (SAML) V2.0. OASIS Standard.</p>
+</li>
+<li>
+<p>Lyastani, S. G., Schilling, M., Neumayr, M., Backes, M., &amp; Bugiel, S. (2020). Is FIDO2 the kingslayer of user authentication? A comparative usability study of FIDO2 passwordless authentication. IEEE Symposium on Security and Privacy.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Multi-Factor-Authentication--MFA-/">
+                    多要素認証（MFA）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    多要素認証（MFA）の包括的なガイド。実装方法、メリット、課題、セキュリティ強化のためのベストプラクティスを網羅しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Multi-Factor-Authentication--MFA-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Identity-and-Access-Management--IAM-/">
+                    アイデンティティ・アクセス管理（IAM）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アイデンティティ・アクセス管理（IAM）システムの包括的ガイド。認証、認可、ガバナンス、セキュリティのベストプラクティスを網羅しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Identity-and-Access-Management--IAM-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/access-control/">
+                    アクセス制御
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/access-control/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/API-Security/">
+                    APIセキュリティ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    認証、認可、暗号化、およびアプリケーションインターフェースを保護するためのベストプラクティスを網羅した、<a data-lb="1" href="/ja/glossary/API-Endpoint-Configuration/" title="APIエンドポイント設定について、統合、自動化、セキュリティにおける重要性、およびAPIエンドポイントの設計、保護、文書化のベストプラクティスを学びます。">APIセキュリティ</a>の包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/API-Security/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Zero-Trust-Security/">
+                    ゼロトラストセキュリティ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ゼロトラストセキュリティアーキテクチャ、実装戦略、メリット、および現代のサイバーセキュリティにおけるベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Zero-Trust-Security/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/User-Groups/">
+                    ユーザーグループ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    システム管理における<a data-lb="1" href="/ja/glossary/User-Groups/" title="システム管理におけるユーザーグループの包括的なガイド。実装、管理、セキュリティ上のメリット、アクセス制御のベストプラクティスについて解説します。">ユーザーグループ</a>の包括的なガイド。実装、管理、セキュリティ上のメリット、アクセス制御のベストプラクティスについて解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/User-Groups/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/authentication/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

@@ -1,0 +1,2540 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="utf-8">
+<meta name="viewport" content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+
+<title>Blue-Green Deployment | SmartWeb</title>
+<link rel="canonical" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/blue-green-deployment/">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/faivicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/faivicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/faivicon.png">
+<link rel="shortcut icon" href="/images/faivicon.png">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+  
+
+
+
+
+
+
+
+  
+  
+    
+    
+      
+      
+      
+      
+    
+  
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="%!s(<nil>)/glossary/Blue-Green-Deployment/">
+
+<link rel="alternate" hreflang="ja" href="%!s(<nil>)/ja/glossary/Blue-Green-Deployment/">
+
+<link rel="alternate" hreflang="x-default" href="%!s(<nil>)/glossary/Blue-Green-Deployment/">
+
+
+
+<meta name="description" content="A deployment strategy that runs two identical production environments, allowing you to release new software with zero downtime by switching traffic between them and instantly rolling back if problems occur.">
+<meta name="keywords" content="blue-green deployment, deployment strategy, zero-downtime, rollback, CI/CD">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/blue-green-deployment/">
+<meta property="og:title" content="Blue-Green Deployment | SmartWeb">
+<meta property="og:description" content="A deployment strategy that runs two identical production environments, allowing you to release new software with zero downtime by switching traffic between them and instantly rolling back if problems occur.">
+
+
+
+
+
+
+
+  
+  
+
+
+<meta property="og:image" content="">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/blue-green-deployment/">
+<meta name="twitter:title" content="Blue-Green Deployment | SmartWeb">
+<meta name="twitter:description" content="A deployment strategy that runs two identical production environments, allowing you to release new software with zero downtime by switching traffic between them and instantly rolling back if problems occur.">
+<meta name="twitter:image" content="">
+
+
+
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+
+<link rel="preload" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/main.css?v=20260106210129" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/custom-code-blockquote.css?v=20260106210129" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<script src="/js/main.js?v=20260106210129" defer></script>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+</head>
+<body class="antialiased bg-white">
+
+
+
+
+
+
+
+
+
+
+  
+  <header class="bg-white">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="/en/" class="-m-1.5 p-1.5">
+        <span class="sr-only">SmartWeb</span>
+        
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="200px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+      </a>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12"><a href="/en/" class="text-sm/6 font-semibold text-gray-900">Home</a><a href="/en/blog/" class="text-sm/6 font-semibold text-gray-900">Blog</a><a href="/en/glossary/" class="text-sm/6 font-semibold text-gray-900">Glossary</a><a href="https://www.intwk.co.jp/about/" class="text-sm/6 font-semibold text-gray-900">Company</a></div>
+    <div class="flex flex-1 items-center justify-end gap-x-6">
+      <a href="https://support.smartweb.jp/" class="hidden text-sm/6 font-semibold text-gray-900 lg:block">Support</a>
+      <a href="/en/blog/" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" aria-expanded="false" aria-controls="mobile-menu-1767700889227765000">
+        <span class="sr-only">Open main menu</span>
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  
+  <div id="mobile-menu-1767700889227765000" class="lg:hidden hidden relative z-50" role="dialog" aria-modal="true">
+    
+    <div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+      <div class="flex items-center gap-x-6">
+        <a href="/en/" class="-m-1.5 p-1.5">
+          <span class="sr-only">SmartWeb</span>
+          
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+      
+        
+      
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+          
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+            
+            
+        
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="3000"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="(max-width: 466px) 466px, 3000px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+        </a>
+        <a href="/en/blog/" class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+        <button type="button" class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu">
+          <span class="sr-only">Close menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6"><a href="/en/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a><a href="/en/blog/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a><a href="/en/glossary/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Glossary</a><a href="https://www.intwk.co.jp/about/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a></div>
+          <div class="py-6">
+            <a href="https://support.smartweb.jp/" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700889227765000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700889227765000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+
+
+
+<main class="w-full">
+  
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+  
+  <header class="py-12 sm:py-16">
+    <div class="mx-auto max-w-4xl">
+      
+      <div class="mb-8">
+        <nav class="text-sm hidden sm:block">
+          <ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+            <li class="flex items-center">
+              <a href="/en/" class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center">
+                <img src="/images/home-icon.png" alt="Home" class="h-4 w-4 opacity-60">
+              </a>
+            </li>
+            <li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+            <li>
+              <a href="/en/glossary/" class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors">
+                Glossary
+              </a>
+            </li>
+            <li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+            <li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">Blue-Green Deployment</li>
+          </ol>
+        </nav>
+      </div>
+
+      
+      
+        <div class="mb-6">
+          <span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+            <svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+            </svg>
+            AI Infrastructure &amp; Deployment
+          </span>
+        </div>
+      
+
+      
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        Blue-Green Deployment
+      </h1>
+      
+        <div class="mb-6"></div>
+      
+
+      
+      
+        <p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          A deployment strategy that runs two identical production environments, allowing you to release new software with zero downtime by switching traffic between them and instantly rolling back if problems occur.
+        </p>
+      
+
+      
+      <div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+
+      
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        
+        
+          <div class="flex flex-wrap gap-2">
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                blue-green deployment
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                deployment strategy
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                zero-downtime
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                rollback
+              </span>
+            
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                CI/CD
+              </span>
+            
+          </div>
+        
+
+        
+        
+
+
+
+
+
+
+
+
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+  
+    <span class="inline-flex items-center justify-end">
+      <svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
+      </svg>
+      
+        Created: December 18, 2025
+      
+    </span>
+  
+
+  
+</div>
+
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+    <h2 id="what-is-blue-green-deployment">What is Blue-Green Deployment?</h2>
+<p>A <strong>blue-green deployment</strong> is a deployment strategy designed to minimize downtime and reduce risks associated with releasing new versions of software. It involves running two separate, but otherwise identical, environments known as &ldquo;blue&rdquo; (currently live) and &ldquo;green&rdquo; (new or candidate). At any given time, only one environment serves production traffic. When a new version is ready, it is deployed to the idle environment (green), tested, and once validated, traffic is switched from blue to green, usually with zero downtime. If issues occur, the switch can be instantly reversed.</p>
+<p><strong>Key characteristics:</strong></p>
+<ul>
+<li>Two identical production environments: blue (active) and green (idle/candidate)</li>
+<li>Only one environment receives live traffic at a time</li>
+<li>Enables seamless switching and instant rollback</li>
+<li>Supports zero-downtime releases and robust disaster recovery</li>
+</ul>
+<h2 id="how-blue-green-deployment-works">How Blue-Green Deployment Works</h2>
+<p>The process is systematic and minimizes risk by allowing for controlled, reversible releases. Below is a detailed workflow:</p>
+<h3 id="step-by-step-workflow">Step-by-Step Workflow</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Step</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>1. Prepare Release</strong></td>
+          <td>Develop and test the new application version in a staging/dev environment</td>
+      </tr>
+      <tr>
+          <td><strong>2. Deploy to Green</strong></td>
+          <td>Deploy the new version to the green environment, which is a production clone and not live yet</td>
+      </tr>
+      <tr>
+          <td><strong>3. Test Green</strong></td>
+          <td>Run comprehensive tests, including unit, integration, UAT, and performance, on the green environment</td>
+      </tr>
+      <tr>
+          <td><strong>4. Switch Traffic</strong></td>
+          <td>Redirect production traffic from blue to green using a load balancer, DNS update, or service mesh</td>
+      </tr>
+      <tr>
+          <td><strong>5. Monitor</strong></td>
+          <td>Monitor the green environment closely for errors, performance, and user impact</td>
+      </tr>
+      <tr>
+          <td><strong>6. Rollback (if needed)</strong></td>
+          <td>If issues arise, quickly switch traffic back to the blue environment</td>
+      </tr>
+      <tr>
+          <td><strong>7. Cleanup/Rotate</strong></td>
+          <td>After green is validated as stable, blue can be decommissioned, repurposed, or kept as backup</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Traffic Switch Illustration:</strong></p>
+<pre tabindex="0"><code>[Users]
+   |        (traffic switch)
+   |------&gt; [Blue Environment] -----------|
+   |                                     |
+   |------&gt; [Green Environment] &lt;---------|
+</code></pre><p><strong>Key points:</strong></p>
+<ul>
+<li>The switch is typically handled by a load balancer, DNS, or Kubernetes Service selector</li>
+<li>Rollback is immediate, as it simply involves redirecting traffic</li>
+</ul>
+<h2 id="key-concepts-and-terminology">Key Concepts and Terminology</h2>
+<ul>
+<li><strong>Blue Environment:</strong> The currently active, stable production environment</li>
+<li><strong>Green Environment:</strong> The new release candidate environment, deployed in parallel, initially idle</li>
+<li><strong>Traffic Switching:</strong> Redirecting user traffic from one environment to another, typically via a load balancer or DNS update</li>
+<li><strong>Rollback:</strong> Instantly reverting traffic to the previous stable environment if issues arise</li>
+<li><strong>Identical Production Environments:</strong> Both blue and green must have equivalent infrastructure, configuration, and dependencies</li>
+<li><strong>Deployment Automation:</strong> Utilizing CI/CD and Infrastructure as Code (IaC) for repeatable, hands-off deployments and traffic switching</li>
+<li><strong>Continuous Deployment / Delivery:</strong> Automated pipelines that integrate blue-green deployment for faster, safer releases</li>
+<li><strong>Disaster Recovery:</strong> The idle environment serves as a hot standby in case of catastrophic failures</li>
+</ul>
+<h2 id="benefits-of-blue-green-deployment">Benefits of Blue-Green Deployment</h2>
+<p>Blue-green deployments provide significant operational, technical, and business advantages:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Benefit</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Zero-Downtime Releases</strong></td>
+          <td>Seamless transitions prevent user-visible outages</td>
+      </tr>
+      <tr>
+          <td><strong>Instant Rollback</strong></td>
+          <td>Immediate reversion to the previous environment in case of failure</td>
+      </tr>
+      <tr>
+          <td><strong>Improved Reliability &amp; User Experience</strong></td>
+          <td>Users are not disrupted by deployments, enhancing satisfaction</td>
+      </tr>
+      <tr>
+          <td><strong>Production Parity Testing</strong></td>
+          <td>New releases are tested in a live-like environment, reducing unexpected issues</td>
+      </tr>
+      <tr>
+          <td><strong>Compliance and Auditability</strong></td>
+          <td>Clear, auditable deployment steps support regulatory and internal compliance needs</td>
+      </tr>
+      <tr>
+          <td><strong>Disaster Recovery</strong></td>
+          <td>The old environment can serve as a hot standby for quick recoveries</td>
+      </tr>
+      <tr>
+          <td><strong>Supports CI/CD</strong></td>
+          <td>Integrates seamlessly with continuous integration and delivery pipelines</td>
+      </tr>
+      <tr>
+          <td><strong>Performance Benchmarking</strong></td>
+          <td>Enables load and performance testing on the candidate environment before cutover</td>
+      </tr>
+      <tr>
+          <td><strong>Reduced Human Error</strong></td>
+          <td>Automation and repeatable processes minimize manual mistakes</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="challenges-and-drawbacks">Challenges and Drawbacks</h2>
+<p>Despite its strengths, blue-green deployment brings specific challenges:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Challenge</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Resource Cost</strong></td>
+          <td>Maintaining two complete environments doubles infrastructure costs during deployment</td>
+      </tr>
+      <tr>
+          <td><strong>Environment Synchronization</strong></td>
+          <td>Keeping both environments truly identical can be complex and requires automation</td>
+      </tr>
+      <tr>
+          <td><strong>Database Migration Complexity</strong></td>
+          <td>Managing schema changes and data migrations without downtime is challenging</td>
+      </tr>
+      <tr>
+          <td><strong>Load Balancer/DNS Complexity</strong></td>
+          <td>Traffic switching must be precise; misconfigurations can cause outages</td>
+      </tr>
+      <tr>
+          <td><strong>Monitoring Overhead</strong></td>
+          <td>Requires robust, real-time monitoring during and after the switch</td>
+      </tr>
+      <tr>
+          <td><strong>Security Risks</strong></td>
+          <td>Both environments must be equally secured and patched, doubling the attack surface</td>
+      </tr>
+      <tr>
+          <td><strong>Automation Demands</strong></td>
+          <td>Manual intervention increases risk; automation is essential for safe, repeatable results</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="use-cases-and-practical-examples">Use Cases and Practical Examples</h2>
+<p><strong>Common Use Cases:</strong></p>
+<ul>
+<li><strong>High Availability Applications:</strong> E-commerce, SaaS, APIs requiring 24/7 uptime</li>
+<li><strong>Regulated Industries:</strong> Finance, healthcare, and other sectors needing auditable, reversible deployments</li>
+<li><strong>Disaster Recovery:</strong> Use the idle environment as an instant failover target</li>
+<li><strong>Performance Testing:</strong> Run benchmarks on the candidate environment before full cutover</li>
+<li><strong>Feature Rollouts &amp; A/B Testing:</strong> Combine blue-green with gradual traffic shifting for safe feature experimentation</li>
+<li><strong>Cloud Migration:</strong> Switch traffic to a cloud-based green environment from on-premise blue</li>
+</ul>
+<p><strong>Example: Blue-Green Deployment in Azure Container Apps</strong></p>
+<p>Azure Container Apps supports blue-green deployment via revisions, traffic splitting, and labels. You can deploy and test a new container as a &ldquo;green&rdquo; revision, then atomically reassign production traffic:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>az containerapp ingress traffic <span style="color:#fff;font-weight:bold">set</span> <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --name $APP_NAME <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --resource-group $RESOURCE_GROUP <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --label-weight blue=<span style="color:#ff0;font-weight:bold">0</span> green=<span style="color:#ff0;font-weight:bold">100</span>
+</span></span></code></pre></div><p>Rollback with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>az containerapp ingress traffic <span style="color:#fff;font-weight:bold">set</span> <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --name $APP_NAME <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --resource-group $RESOURCE_GROUP <span style="color:#0ff;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>  --label-weight blue=<span style="color:#ff0;font-weight:bold">100</span> green=<span style="color:#ff0;font-weight:bold">0</span>
+</span></span></code></pre></div><h2 id="implementation-patterns">Implementation Patterns</h2>
+<h3 id="on-kubernetes">On Kubernetes</h3>
+<p>Kubernetes is well-suited for blue-green deployments due to its declarative infrastructure and service abstraction.</p>
+<ul>
+<li><strong>Namespaces:</strong> Isolate blue and green deployments in separate namespaces</li>
+<li><strong>Deployments:</strong> Each version is a distinct Deployment resource</li>
+<li><strong>Services:</strong> Switch the service selector to point to the green deployment after validation</li>
+<li><strong>Ingress/Service Mesh:</strong> Route traffic externally or internally to the active environment</li>
+</ul>
+<p><strong>Kubernetes YAML Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="font-weight:bold">apiVersion</span>: apps/v1
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">kind</span>: Deployment
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">name</span>: myapp-blue
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#007f7f"># blue version spec</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">apiVersion</span>: apps/v1
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">kind</span>: Deployment
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">name</span>: myapp-green
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#007f7f"># green version spec</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">apiVersion</span>: v1
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">kind</span>: Service
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">name</span>: myapp-service
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">app</span>: myapp-green <span style="color:#007f7f"># Switch from myapp-blue to myapp-green</span>
+</span></span></code></pre></div><h3 id="on-cloud-platforms">On Cloud Platforms</h3>
+<ul>
+<li><strong>AWS:</strong> AWS enables blue-green deployments using CodeDeploy with Elastic Load Balancing, orchestrating traffic shift and health checks</li>
+<li><strong>Azure:</strong> Azure Container Apps utilizes revisions and traffic weights to manage blue-green strategies</li>
+<li><strong>Google Cloud:</strong> Google Cloud Platform supports blue-green deployments through Cloud Run and Traffic Splitting</li>
+</ul>
+<h3 id="with-infrastructure-as-code-iac">With Infrastructure as Code (IaC)</h3>
+<p>Tools like Terraform, AWS CloudFormation, and Ansible allow reproducible, automated provisioning and switching of blue and green environments.</p>
+<h2 id="database-considerations">Database Considerations</h2>
+<h3 id="the-database-challenge">The Database Challenge</h3>
+<p>While application environments can be duplicated, most blue-green deployments share a single production database, introducing several risks and constraints:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Issue</th>
+          <th>Solution/Best Practice</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Schema Changes</strong></td>
+          <td>Ensure all changes are backward-compatible</td>
+      </tr>
+      <tr>
+          <td><strong>Concurrent Application Versions</strong></td>
+          <td>Both blue and green must work with the same schema/data during transition</td>
+      </tr>
+      <tr>
+          <td><strong>Data Migration</strong></td>
+          <td>Use migration tools to minimize lock time and risk</td>
+      </tr>
+      <tr>
+          <td><strong>Rollback Safety</strong></td>
+          <td>Avoid destructive schema changes until old version is decommissioned</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="aws-rds-bluegreen-deployments">AWS RDS Blue/Green Deployments</h4>
+<ul>
+<li><strong>Green environment</strong> is a production clone, kept in sync via physical or logical replication</li>
+<li><strong>Benefits:</strong> Test changes independently, switch with &lt;1 minute downtime and no data loss</li>
+<li><strong>Limitations:</strong>
+<ul>
+<li>No support for some features (e.g., RDS Proxy, cross-region replicas)</li>
+<li>Schema changes must be backward-compatible</li>
+<li>Logical replication may not support unlogged tables or certain Postgres features</li>
+<li>Switchover requires careful resource and slot management; replication lag is possible if resources are undersized</li>
+</ul>
+</li>
+</ul>
+<h4 id="general-best-practices">General Best Practices</h4>
+<ul>
+<li><strong>Backward-Compatible Migrations:</strong> Add columns/tables, but do not remove/rename until all environments are migrated</li>
+<li><strong>Feature Toggles:</strong> Decouple database and code changes</li>
+<li><strong>Database Versioning:</strong> Use tools like Liquibase to automate schema migrations and rollback</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Best Practice</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Automate Everything</strong></td>
+          <td>Use CI/CD tools (Jenkins, GitHub Actions, etc.) and IaC for deployments and environment setup</td>
+      </tr>
+      <tr>
+          <td><strong>Robust Monitoring &amp; Observability</strong></td>
+          <td>Implement real-time monitoring (Prometheus, Grafana, Datadog) for both environments and during traffic switch</td>
+      </tr>
+      <tr>
+          <td><strong>Thorough Testing Before Cutover</strong></td>
+          <td>Run all tests (unit, integration, performance, UAT) on the green environment</td>
+      </tr>
+      <tr>
+          <td><strong>Gradual Traffic Shifting</strong></td>
+          <td>Optionally shift traffic gradually (canary style) before full cutover</td>
+      </tr>
+      <tr>
+          <td><strong>Maintain Database Compatibility</strong></td>
+          <td>Use phased, backward-compatible migrations for schema changes</td>
+      </tr>
+      <tr>
+          <td><strong>Plan &amp; Regularly Test Rollbacks</strong></td>
+          <td>Document, automate, and rehearse rollback procedures</td>
+      </tr>
+      <tr>
+          <td><strong>Secure Both Environments</strong></td>
+          <td>Patch, scan, and enforce security policies for blue and green equally</td>
+      </tr>
+      <tr>
+          <td><strong>Cleanup &amp; Cost Control</strong></td>
+          <td>Decommission unused environments post-deployment to avoid unnecessary costs</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="comparison-with-other-deployment-strategies">Comparison with Other Deployment Strategies</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Deployment Strategy</th>
+          <th>Environments Needed</th>
+          <th>Traffic Switch</th>
+          <th>Rollback Speed</th>
+          <th>Gradual Exposure</th>
+          <th>Downtime Risk</th>
+          <th>Complexity</th>
+          <th>Use Case</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Blue-Green</strong></td>
+          <td>2</td>
+          <td>All-at-once</td>
+          <td>Instant</td>
+          <td>No (unless combined)</td>
+          <td>Low</td>
+          <td>Medium</td>
+          <td>Zero-downtime, fast rollback</td>
+      </tr>
+      <tr>
+          <td><strong>Canary</strong></td>
+          <td>1+</td>
+          <td>Gradual</td>
+          <td>Fast</td>
+          <td>Yes</td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Risk-averse, incremental rollouts</td>
+      </tr>
+      <tr>
+          <td><strong>Rolling</strong></td>
+          <td>1</td>
+          <td>Sequential</td>
+          <td>Moderate</td>
+          <td>Yes</td>
+          <td>Low-moderate</td>
+          <td>Medium</td>
+          <td>Resource-constrained, large clusters</td>
+      </tr>
+      <tr>
+          <td><strong>A/B Testing</strong></td>
+          <td>2+</td>
+          <td>Partial</td>
+          <td>N/A</td>
+          <td>Yes (by design)</td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Feature experimentation, user studies</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="glossary-of-related-terms">Glossary of Related Terms</h2>
+<ul>
+<li><strong>Traffic Switching:</strong> Redirecting live requests from one environment to another during deployment</li>
+<li><strong>Deployment Automation:</strong> Use of scripts and tools to remove manual intervention from deployment processes</li>
+<li><strong>Continuous Deployment:</strong> Automatically deploying every code change that passes automated tests</li>
+<li><strong>Disaster Recovery:</strong> Procedures and infrastructure to quickly restore service after failure</li>
+<li><strong>Identical Production Environments:</strong> Environments that match configuration, dependencies, and infrastructure as closely as possible</li>
+<li><strong>Rollback:</strong> The process of reverting to a previous stable state/version</li>
+<li><strong>Infrastructure as Code (IaC):</strong> Managing and provisioning computing resources through machine-readable definition files</li>
+<li><strong>Gradual Traffic Shift:</strong> Incrementally increasing the percentage of traffic directed to a new environment, rather than switching all at once</li>
+<li><strong>Load Balancer:</strong> Hardware or software that distributes incoming traffic across multiple servers/environments</li>
+</ul>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Fowler, M. (n.d.). Blue Green Deployment. Martin Fowler Blog.</p>
+</li>
+<li>
+<p>AWS. (n.d.). Overview of Deployment Options on AWS. AWS Whitepapers.</p>
+</li>
+<li>
+<p>AWS. (n.d.). What Is Blue/Green Deployment?. AWS Whitepapers.</p>
+</li>
+<li>
+<p>Microsoft. (n.d.). Blue-Green Deployment. Azure Container Apps Documentation.</p>
+</li>
+<li>
+<p>Microsoft. (n.d.). Revisions. Azure Container Apps Documentation.</p>
+</li>
+<li>
+<p>Microsoft. (n.d.). Traffic Splitting. Azure Container Apps Documentation.</p>
+</li>
+<li>
+<p>Google Cloud. (n.d.). Traffic Migration and Splitting Concepts. Google Cloud Architecture.</p>
+</li>
+<li>
+<p>Kubernetes. (n.d.). Deployments. Kubernetes Documentation.</p>
+</li>
+<li>
+<p>Liquibase. (n.d.). Blue-Green Deployments. Liquibase Blog.</p>
+</li>
+<li>
+<p>AWS. (n.d.). Blue/Green Deployments Overview. AWS RDS Documentation.</p>
+</li>
+<li>
+<p>AWS. (n.d.). Blue/Green Deployment Considerations. AWS RDS Documentation.</p>
+</li>
+<li>
+<p>Terraform. Infrastructure as Code Tool. URL: <a href="https://www.terraform.io/" target="_blank" rel="nofollow noopener noreferrer">https://www.terraform.io/</a></p>
+</li>
+<li>
+<p>Spinnaker. Continuous Delivery Platform. URL: <a href="https://spinnaker.io/" target="_blank" rel="nofollow noopener noreferrer">https://spinnaker.io/</a></p>
+</li>
+<li>
+<p>AWS CodeDeploy. Deployment Service. URL: <a href="https://docs.aws.amazon.com/codedeploy/" target="_blank" rel="nofollow noopener noreferrer">https://docs.aws.amazon.com/codedeploy/</a></p>
+</li>
+<li>
+<p>Prometheus. Monitoring Tool. URL: <a href="https://prometheus.io/" target="_blank" rel="nofollow noopener noreferrer">https://prometheus.io/</a></p>
+</li>
+<li>
+<p>Grafana. Observability Platform. URL: <a href="https://grafana.com/" target="_blank" rel="nofollow noopener noreferrer">https://grafana.com/</a></p>
+</li>
+<li>
+<p>Datadog. Monitoring and Analytics Platform. URL: <a href="https://www.datadoghq.com/" target="_blank" rel="nofollow noopener noreferrer">https://www.datadoghq.com/</a></p>
+</li>
+</ol>
+
+  </div>
+
+  
+  
+  
+  
+  
+    
+    <div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          Related Terms
+        
+      </h2>
+      <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/canary-release/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Canary Release
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A software deployment method that releases new versions to a small group of users first to catch pro...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/canary-release/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/gitops/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    GitOps
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    A modern approach to managing infrastructure and applications by storing all configurations in Git a...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/gitops/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+          <article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+                  <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/version-history---rollback/" class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    Version History / Rollback
+                  </a>
+                </h3>
+                
+                  
+                  
+                    
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Version history is a record of all previous states of a chatbot&#39;s settings and behavior, while rollb...
+                  </p>
+                
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <a 
+                    href="https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/version-history---rollback/" 
+                    class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform"
+                  >
+                    View details
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      </div>
+    
+
+
+  
+  <div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+    <a 
+      href="/en/glossary/" 
+      class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+    >
+      <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+      </svg>
+      
+        Back to Glossary
+      
+    </a>
+  </div>
+</article>
+
+</main>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer style="background-color: #000000;">
+  
+  <div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+    
+    <svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="curveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      
+      
+      <path class="curve" data-speed="0.8" stroke="url(#curveGrad1)" stroke-width="2" fill="none" />
+      <path class="curve" data-speed="1.2" stroke="url(#curveGrad2)" stroke-width="2.5" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.6" stroke="url(#curveGrad3)" stroke-width="1.5" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.5" stroke="url(#curveGrad1)" stroke-width="2" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="0.9" stroke="url(#curveGrad2)" stroke-width="3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.3" stroke="url(#curveGrad3)" stroke-width="1.8" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.7" stroke="url(#curveGrad1)" stroke-width="2.2" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.1" stroke="url(#curveGrad2)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="1.4" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="0.85" stroke="url(#curveGrad1)" stroke-width="1.5" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="1.0" stroke="url(#curveGrad2)" stroke-width="2.8" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.25" stroke="url(#curveGrad3)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.95" stroke="url(#curveGrad1)" stroke-width="2.3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.35" stroke="url(#curveGrad2)" stroke-width="1.7" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.75" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.7" />
+    </svg>
+    
+    
+    <div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    
+    <div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+      <h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+      <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+      <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+      <div class="mt-8 flex justify-center">
+        <a href="/en/blog/" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get started</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+  
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+    <div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+      
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/webp"
+        
+        data-srcset="/images/interwork-logo-white-1.webp 568w"
+        
+        sizes="200px"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/interwork-logo-white-1.webp"
+        
+        alt="Interwork"
+        class="lazy-image h-9"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+    </picture>
+
+
+  
+
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Services</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">AI Solutions</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Web Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">System Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Consulting</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Support</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://support.smartweb.jp/" class="text-sm/6 text-gray-400 hover:text-white">Support Portal</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Documentation</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Company</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://www.intwk.co.jp/about/" class="text-sm/6 text-gray-400 hover:text-white">About</a>
+              </li>
+              
+              <li>
+                <a href="/en/blog/" class="text-sm/6 text-gray-400 hover:text-white">Blog</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Careers</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">News</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="/en/privacy-policy/" class="text-sm/6 text-gray-400 hover:text-white">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="/en/ai-chatbot-terms-of-use/" class="text-sm/6 text-gray-400 hover:text-white">AI Chatbot Terms of Use</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div>
+        <p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+        
+          
+
+
+
+
+<div class="language-selector">
+  <div class="flex flex-wrap items-center justify-center gap-3">
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+          
+            
+            
+          
+        
+        
+        
+        
+        
+        <a href="/ja/glossary/Blue-Green-Deployment/"
+           class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
+           title="日本語"
+           aria-label="日本語"
+           hreflang="ja">
+          <img 
+            src="/flags/jp.png"
+            alt="日本語"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </a>
+      
+    
+      
+      
+      
+      
+      
+      
+        
+        <span class="inline-flex items-center text-sm opacity-50" title="English">
+          <img 
+            src="/flags/gb.png"
+            alt="English"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </span>
+      
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+    <div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex gap-x-6 md:order-2">
+        
+        <a href="https://github.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">GitHub</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://x.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">X</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://youtube.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">YouTube</span>
+          
+
+
+
+        </a>
+        
+      </div>
+      <p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">&copy; 2026 Interwork Corporation All rights reserved.</p>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<div id="cookie-consent-banner" data-cookie-consent-banner class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark">
+    <div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+        <p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br> We use cookies to enhance your browsing experience and analyze our traffic. See our <a href="/en/privacy-policy/" class="font-semibold text-primary hover:text-primary-500">privacy policy</a>.</p>
+        <div class="mt-4 flex items-center gap-x-3 flex-wrap">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Accept All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-all
+    >
+      Accept All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Reject All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-necessary
+    >
+      Reject All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Cookie Settings"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=settings
+    >
+      Cookie Settings
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="cookie-settings-modal" class="fixed inset-0 z-50 hidden dark">
+    <div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close></div>
+    <div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+            <button type="button" class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close>
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="necessary-cookies" name="necessary-cookies" type="checkbox" checked disabled class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="analytics-cookies" name="analytics-cookies" type="checkbox" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 flex justify-end gap-x-3">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2  not-prose group"
+      aria-label="Cancel"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-close
+    >
+      Cancel
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2  not-prose group"
+      aria-label="Save Preferences"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-save
+    >
+      Save Preferences
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+<button
+  id="back-to-top-btn"
+  aria-label="Back to Top"
+  class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg 
+         transition-all duration-300 transform translate-y-12 opacity-0 invisible
+         hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+         dark:bg-indigo-500 dark:hover:bg-indigo-400"
+  onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+  </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+
+
+
+
+<script src="/js/app.js?v=20260106210129"></script>
+
+
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+
+</body>
+</html>

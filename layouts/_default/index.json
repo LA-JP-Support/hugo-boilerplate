@@ -9,12 +9,19 @@
   {{- end -}}
 {{- end -}}
 {{- $eTitle := index .Params "e-title" -}}
+{{/* youtubeVideoIDがある記事にはYouTubeタグを自動追加 */}}
+{{- $tags := .Params.tags | default slice -}}
+{{- if .Params.youtubeVideoID -}}
+  {{- if not (in $tags "YouTube") -}}
+    {{- $tags = $tags | append "YouTube" -}}
+  {{- end -}}
+{{- end -}}
 {{- $.Scratch.Add "index" (dict
   "title" .Title
   "eTitle" $eTitle
   "translationKey" .Params.translationKey
   "term" .Params.term
-  "tags" .Params.tags
+  "tags" $tags
   "categories" .Params.categories
   "keywords" .Params.keywords
   "content" .Params.description

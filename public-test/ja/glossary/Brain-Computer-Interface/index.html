@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ブレイン・コンピュータ・インターフェース | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Brain-Computer-Interface/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="ブレイン・コンピュータ・インターフェース技術、応用分野、実装方法、および神経制御システムの将来的な発展に関する包括的なガイド。" name="description"/>
+<meta content="ブレイン・コンピュータ・インターフェース, 神経制御システム, BCI技術, ニューロテクノロジー, 脳信号処理" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Brain-Computer-Interface/" property="og:url"/>
+<meta content="ブレイン・コンピュータ・インターフェース | SmartWeb" property="og:title"/>
+<meta content="ブレイン・コンピュータ・インターフェース技術、応用分野、実装方法、および神経制御システムの将来的な発展に関する包括的なガイド。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Brain-Computer-Interface/" name="twitter:url"/>
+<meta content="ブレイン・コンピュータ・インターフェース | SmartWeb" name="twitter:title"/>
+<meta content="ブレイン・コンピュータ・インターフェース技術、応用分野、実装方法、および神経制御システムの将来的な発展に関する包括的なガイド。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ブレイン・コンピュータ・インターフェース</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ブレイン・コンピュータ・インターフェース
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Brain-Computer Interface
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ブレイン・コンピュータ・インターフェース技術、応用分野、実装方法、および神経制御システムの将来的な発展に関する包括的なガイド。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ブレイン・コンピュータ・インターフェース
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                神経制御システム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                BCI技術
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ニューロテクノロジー
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                脳信号処理
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ブレインコンピュータインターフェースとは">ブレイン・コンピュータ・インターフェースとは?</h2>
+<p><a data-lb="1" href="/ja/glossary/Brain-Computer-Interface/" title="ブレイン・コンピュータ・インターフェース技術、応用分野、実装方法、および神経制御システムの将来的な発展に関する包括的なガイド。">ブレイン・コンピュータ・インターフェース</a>(BCI)は、従来の神経筋経路を介さずに、脳と外部デバイス間の直接的な<a data-lb="1" href="/ja/glossary/DTMF--Dual-Tone-Multi-Frequency-/" title="DTMF(デュアルトーン多重周波数)は、キーパッド押下時に発生する固有の音声トーンを使用してコマンドを解釈し、通話をルーティングし、自動メニューナビゲーション、リモートコントロール、および電話ネットワークやデジタルプラットフォームにおける安全なデータ入力を可能にする通信信号システムです。">通信</a>経路を確立する革新的な技術です。この高度なシステムは、神経信号を捕捉、分析し、コンピュータ、義肢装置、その他の外部機器を制御するコマンドに変換します。BCIは、思考と行動の間に直接的な橋渡しを作り出すことで、人間とテクノロジーの相互作用を根本的に変革し、個人が精神的な意図だけでデバイスを制御できるようにします。</p>
+<p>この技術は、脳波計(EEG)、皮質脳波(ECoG)、または埋め込み型微小電極など、さまざまな方法で脳内の電気活動を検出することで動作します。これらの信号は、ユーザーの意図を解読し、実行可能なコマンドに変換する高度なアルゴリズムを通じて処理されます。BCIの開発は、麻痺、神経疾患、または四肢欠損のある個人の機能を回復させる必要性によって推進されてきましたが、同時に健常者における人間とコンピュータの相互作用の新たな可能性も開いています。</p>
+<p>現代のBCIは、医療リハビリテーションや支援技術から、認知機能強化やエンターテインメントシステムまで、幅広い応用分野を網羅しています。この分野は、実験的な研究室環境から実用的な臨床応用へと進化し、継続的な研究が神経工学における可能性の限界を押し広げています。技術が進歩し続けるにつれて、BCIはより高解像度の信号検出、改善された信号処理アルゴリズム、個々の神経パターンと学習能力に適応できるより直感的な<a data-lb="1" href="/ja/glossary/UI/" title="ユーザーインターフェース(UI)の定義、種類、デザイン原則、実用的なユースケースを解説します。アプリからAIチャットボットまで、UIが人間とデジタルの相互作用をどのように促進するかを学びましょう。">ユーザーインターフェース</a>を提供し、より洗練されたものになっています。</p>
+<h2 id="コア技術とアプローチ">コア技術とアプローチ</h2>
+<p><strong>侵襲型BCI</strong>は、脳組織に直接埋め込まれた電極を使用して、高解像度の神経信号を捕捉します。これらのシステムは最も正確な制御と最速の応答時間を提供しますが、外科的処置が必要であり、関連する医学的リスクを伴います。</p>
+<p><strong>非侵襲型BCI</strong>は、外部センサー(通常は頭皮に配置されたEEG電極)を使用して、外科的介入なしに脳活動を検出します。より安全でアクセスしやすい一方、これらのシステムは一般的に信号品質が低く、制御<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">精度</a>が低下します。</p>
+<p><strong>半侵襲型BCI</strong>は、頭蓋骨の下、脳組織の外側に電極を配置し、信号品質と侵襲性の間の妥協点を提供します。皮質脳波(ECoG)として知られるこのアプローチは、直接的な脳への侵入を避けながら、EEGよりも優れた空間解像度を提供します。</p>
+<p><strong>運動イメージBCI</strong>は、想像された動きに関連する神経パターンを検出し、ユーザーが特定の運動動作について考えることでデバイスを制御できるようにします。これらのシステムは、運動皮質機能が無傷のまま残っている運動障害のある個人にとって特に価値があります。</p>
+<p><strong>P300ベースのBCI</strong>は、予期しない、または重要な刺激に対する脳の自然な反応を利用し、ユーザーが特徴的な神経反応を引き起こす特定の視覚的または聴覚的手がかりに注意を集中することで選択を行えるインターフェースを作成します。</p>
+<p><strong>定常状態視覚誘発電位(SSVEP)BCI</strong>は、特定の周波数で点滅する視覚刺激に対する脳のリズミカルな反応を利用し、ユーザーが異なる点滅ターゲットに視線を向けることでデバイスを制御できるようにします。</p>
+<p><strong>ハイブリッドBCI</strong>は、複数の信号取得方法を組み合わせるか、BCI技術を他の入力モダリティと統合して、冗長な制御経路を通じてパフォーマンス、信頼性、<a data-lb="1" href="/ja/glossary/UX/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">ユーザーエクスペリエンス</a>を向上させます。</p>
+<h2 id="ブレインコンピュータインターフェースの仕組み">ブレイン・コンピュータ・インターフェースの仕組み</h2>
+<p>BCIワークフローは<strong>信号取得</strong>から始まり、特殊なセンサーが標的脳領域のニューロンからの電気活動を検出します。取得方法の選択は、特定のアプリケーションと必要な信号品質に依存します。</p>
+<p><strong>信号前処理</strong>が続き、増幅、フィルタリング、ノイズ低減を含み、捕捉された神経信号の品質を向上させます。このステップでは、筋肉の動き、まばたき、環境干渉からのアーティファクトを除去します。</p>
+<p><strong>特徴抽出</strong>は、ユーザーの意図と相関する神経信号内の関連特性を識別します。高度なアルゴリズムが、脳活動の周波数成分、時間パターン、空間分布を分析します。</p>
+<p><strong>分類とデコーディング</strong>プロセスは、<a data-lb="1" href="/ja/glossary/Ensemble-Learning/" title="機械学習における予測精度向上のためのアンサンブル学習手法、アルゴリズム、および応用に関する包括的ガイド。">機械学習アルゴリズム</a>を適用して抽出された特徴を解釈し、ユーザーの意図したコマンドを決定します。これらのシステムは、トレーニングセッションを通じて個々の神経パターンを認識することを学習します。</p>
+<p><strong>コマンド生成</strong>は、デコードされた意図を、外部デバイスを操作できる特定の制御信号に変換します。システムは、神経パターンを事前定義されたアクションまたは連続制御パラメータにマッピングします。</p>
+<p><strong>デバイス制御</strong>は、生成されたコマンドを実行し、コンピュータカーソルの制御、義肢の操作、またはテキスト読み上げシステムを通じた通信など、さまざまな操作を行います。</p>
+<p><strong>フィードバック提供</strong>は、<a data-lb="1" href="/ja/glossary/Wait-Time/" title="様々なシステムやアプリケーションにおける待機時間の概念、実装戦略、最適化技術に関する包括的なガイド。">システムパフォーマンス</a>に関する視覚的、聴覚的、または触覚的情報をユーザーに提供し、精神的戦略を調整して制御精度を向上させることを可能にします。</p>
+<p><strong>適応学習</strong>は、ユーザーフィードバックと時間経過に伴う神経パターンの変化に基づいてアルゴリズムを更新することで、システムのパフォーマンスを継続的に改善します。</p>
+<p><strong>ワークフローの例</strong>:ユーザーが右手を動かすことを想像すると、運動皮質に特定の神経パターンが生成されます。EEG電極がこれらの信号を検出し、増幅およびフィルタリングされます。<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>アルゴリズムがパターンを「右手移動意図」として認識し、コンピュータカーソルを右に移動させるコマンドを生成します。ユーザーはカーソルの動きを見て、精度を向上させるために精神的戦略を調整します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>自立性の回復</strong>は、麻痺または運動障害のある個人が、思考だけでコンピュータ、車椅子、通信デバイスを操作し、環境に対する制御を取り戻すことを可能にします。</p>
+<p><strong>コミュニケーションの強化</strong>は、言語障害のある個人に代替コミュニケーションチャネルを提供し、通信インターフェースの神経制御を通じてテキストまたは音声を生成できるようにします。</p>
+<p><strong>生活の質の向上</strong>は、以前は関与の選択肢が限られていた重度の身体的制限のある個人に、エンターテインメント、社会的交流、個人的表現の新たな可能性を提供します。</p>
+<p><strong>リハビリテーションの加速</strong>は、神経可塑性と回復をサポートし、脳損傷または脳卒中後の神経経路の再配線と機能回復を助ける集中的で標的を絞ったトレーニングを提供します。</p>
+<p><strong>精密な制御</strong>は、特定のアプリケーション、特に従来のインターフェースを効果的に使用できない個人にとって、従来の入力方法を上回る高精度のデバイス操作を提供します。</p>
+<p><strong>リアルタイムの応答性</strong>は、神経的意図をデバイスアクションに即座に変換し、ユーザーにシームレスに感じられる自然で直感的な制御体験を作り出します。</p>
+<p><strong>カスタマイズ可能なインターフェース</strong>は、個々の神経パターンと好みに適応し、各ユーザーの独自の脳活動パターンに対してパフォーマンスを最適化するパーソナライズされた制御スキームを作成します。</p>
+<p><strong>疲労のない操作</strong>は、従来の入力方法に関連する身体的負担を軽減し、従来のデバイス操作を制限する可能性のある筋肉疲労なしに長時間使用できるようにします。</p>
+<p><strong>認知機能の強化</strong>は、神経インターフェースを通じて<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">計算リソース</a>と情報処理システムへの直接アクセスを提供することで、人間の認知能力を潜在的に増強します。</p>
+<p><strong>研究の進歩</strong>は、脳機能と神経可塑性の理解に貢献し、神経科学研究を進展させ、神経疾患に対する新しい治療アプローチにつながります。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>義肢制御</strong>は、切断者が神経信号を通じて高度なロボットアームと手を操作できるようにし、自然な動きパターンと器用な操作能力を回復できる直感的な制御を提供します。</p>
+<p><strong>コンピュータアクセス</strong>は、重度の運動障害のある個人が、カーソルとキーボードの直接的な神経制御を通じて、コンピュータを操作し、インターネットを閲覧し、電子メールを送信し、ソフトウェアアプリケーションを使用できるようにします。</p>
+<p><strong>車椅子ナビゲーション</strong>は、電動車椅子のハンズフリー制御を提供し、ユーザーが思考制御のステアリングと速度調整を通じて環境を安全かつ独立してナビゲートできるようにします。</p>
+<p><strong>コミュニケーション支援</strong>は、ALSまたはロックイン症候群などの状態を持つ個人をサポートし、通信ソフトウェアとデバイスの神経制御を通じて音声またはテキストを生成できるようにします。</p>
+<p><strong>ゲームとエンターテインメント</strong>は、プレイヤーが思考を使用してキャラクターを制御し、仮想環境と相互作用できる没入型ゲーム体験を作成し、エンターテインメント技術の新たな可能性を開きます。</p>
+<p><strong>スマートホーム制御</strong>は、ホームオートメーションシステムと統合され、ユーザーが神経コマンドを通じて照明、温度、<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>システム、家電製品を制御できるようにし、アクセシビリティと利便性を向上させます。</p>
+<p><strong>芸術的表現</strong>は、運動障害のあるアーティストが、神経活動を芸術的出力に変換する脳制御インターフェースを通じて、デジタルアート、音楽、その他の創造的作品を作成できるようにします。</p>
+<p><strong>医療モニタリング</strong>は、てんかん予測、睡眠障害分析、その他の神経疾患のために神経活動を継続的に追跡し、早期警告システムと治療最適化を提供します。</p>
+<p><strong>認知トレーニング</strong>は、リアルタイムの神経フィードバックを使用して、ニューロフィードバックプロトコルを通じて注意力、記憶力、その他の認知機能を強化する標的を絞った脳トレーニングプログラムを提供します。</p>
+<p><strong>研究アプリケーション</strong>は、脳機能の研究、治療介入のテスト、行動と認知の基礎となる神経メカニズムの新しい理解の開発のためのツールを提供することで、神経科学研究をサポートします。</p>
+<h2 id="bci信号取得方法の比較">BCI信号取得方法の比較</h2>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>侵襲性</th>
+<th>信号品質</th>
+<th>空間解像度</th>
+<th>時間解像度</th>
+<th>外科的リスク</th>
+<th>長期安定性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EEG</td>
+<td>非侵襲</td>
+<td>中程度</td>
+<td>低</td>
+<td>高</td>
+<td>なし</td>
+<td>高</td>
+</tr>
+<tr>
+<td>ECoG</td>
+<td>半侵襲</td>
+<td>高</td>
+<td>中程度</td>
+<td>高</td>
+<td>中程度</td>
+<td>中程度</td>
+</tr>
+<tr>
+<td>微小電極</td>
+<td>侵襲</td>
+<td>非常に高</td>
+<td>非常に高</td>
+<td>非常に高</td>
+<td>高</td>
+<td>可変</td>
+</tr>
+<tr>
+<td>fMRI</td>
+<td>非侵襲</td>
+<td>高</td>
+<td>非常に高</td>
+<td>低</td>
+<td>なし</td>
+<td>高</td>
+</tr>
+<tr>
+<td>fNIRS</td>
+<td>非侵襲</td>
+<td>中程度</td>
+<td>中程度</td>
+<td>中程度</td>
+<td>なし</td>
+<td>高</td>
+</tr>
+<tr>
+<td>MEG</td>
+<td>非侵襲</td>
+<td>高</td>
+<td>高</td>
+<td>高</td>
+<td>なし</td>
+<td>高</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>信号品質の劣化</strong>は、埋め込まれた電極周囲の瘢痕組織形成、免疫反応、デバイスの経年劣化により時間とともに発生し、継続的なメンテナンスと潜在的な交換手順が必要になります。</p>
+<p><strong>トレーニング要件</strong>は、BCIシステムの習熟度を開発するためにユーザーから大きな時間投資を要求し、信頼性の高い制御パフォーマンスを達成するために数週間または数ヶ月の練習が必要になることがよくあります。</p>
+<p><strong>個人差</strong>は、脳の解剖学、神経パターン、学習能力において存在し、システムが各ユーザーに対して広範囲にカスタマイズされる必要があることを意味し、標準化と大量展開の取り組みを複雑にします。</p>
+<p><strong>倫理的懸念</strong>は、プライバシー、精神的自律性、神経情報への不正アクセスの可能性に関して生じ、<a data-lb="1" href="/ja/glossary/Encryption-at-Rest/" title="保存データの暗号化に関する包括的なガイド - 暗号化手法によるストレージデータの保護、実装戦略、セキュリティのベストプラクティスについて解説します。">データ保護</a>とユーザー同意プロトコルの慎重な検討が必要です。</p>
+<p><strong>規制承認</strong>プロセスは、医療用BCIにとって長く複雑であり、必要とする患者への新技術の利用可能性を遅らせる可能性のある広範な安全性と有効性のテストが必要です。</p>
+<p><strong>コスト障壁</strong>は、保険または医療システムでカバーされない可能性のある高価なハードウェア、外科的処置、継続的なメンテナンス要件により、アクセシビリティを制限します。</p>
+<p><strong>技術的制限</strong>には、帯域幅の制約、処理遅延、精度の制限が含まれ、ユーザーを苛立たせ、現在のBCI技術の実用的なアプリケーションを制限する可能性があります。</p>
+<p><strong>安全リスク</strong>は、侵襲的処置に関連し、感染、出血、潜在的な脳損傷を含み、各患者とアプリケーションに対する慎重なリスク・ベネフィット分析が必要です。</p>
+<p><strong>社会的受容</strong>の課題には、BCI研究開発の採用と資金調達を制限する可能性のある公衆の認識、スティグマ、人間強化に関する懸念が含まれます。</p>
+<p><strong>統合の複雑さ</strong>は、実世界環境で確実に機能するシームレスな体験を作成するために、複数の技術、ソフトウェアシステム、ユーザーインターフェースを調整することを含みます。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>包括的なユーザー評価</strong>は、神経学的状態、認知能力、動機レベル、特定のニーズを評価して、最適な結果のための適切なBCI選択とカスタマイズを確保する必要があります。</p>
+<p><strong>段階的トレーニングプロトコル</strong>は、単純なタスクから始めてより複雑な制御<a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>に進む、ユーザーの習熟度を体系的に構築する段階的なスキル開発プログラムを実装します。</p>
+<p><strong>定期的なキャリブレーション手順</strong>は、神経パターン、電極の位置、時間経過に伴うユーザーの適応の変化を考慮してアルゴリズムを定期的に更新することで、システムの精度を維持します。</p>
+<p><strong>堅牢な信号処理</strong>は、高度なフィルタリング、アーティファクト除去、ノイズ低減技術を採用して、信号品質を最大化し、誤作動または制御エラーを最小化します。</p>
+<p><strong>ユーザー中心設計</strong>は、個々の好みと能力に対応する直感的なインターフェース、明確なフィードバックメカニズム、カスタマイズ可能な制御スキームを優先します。</p>
+<p><strong>安全監視システム</strong>は、デバイスのパフォーマンス、ユーザーの健康指標、潜在的な合併症を継続的に追跡し、安全な操作と必要に応じた迅速な介入を確保します。</p>
+<p><strong>学際的協力</strong>は、神経科学者、エンジニア、臨床医、ユーザーを集めて、技術的、医学的、実用的要件に対処する包括的な開発を確保します。</p>
+<p><strong>標準化されたプロトコル</strong>は、異なるユーザーと環境全体で信頼性の高いパフォーマンスを確保するために、インストール、キャリブレーション、トレーニング、メンテナンスの一貫した手順を確立します。</p>
+<p><strong>品質保証テスト</strong>は、臨床または実世界環境での展開前に、システムのパフォーマンス、安全性、信頼性を検証するための厳格な検証手順を実装します。</p>
+<p><strong>継続的なサポートサービス</strong>は、デバイスのライフサイクル全体を通じて最適なパフォーマンスとユーザー満足度を維持するために、継続的な<a data-lb="1" href="/ja/glossary/Remote-Support/" title="インターネット接続を使用して遠隔地からコンピュータやデバイスに提供される技術支援。サポートスタッフが現地を訪問することなく、問題の診断と解決を行うことができます。">技術支援</a>、トラブルシューティング、システム更新を提供します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>クローズドループニューロフィードバック</strong>は、リアルタイムの神経反応に基づいてパラメータを継続的に調整する適応システムを作成し、動的適応を通じてパフォーマンスを最適化し、より速い学習を促進します。</p>
+<p><strong>マルチモーダル信号融合</strong>は、異なるタイプの神経信号と生理学的測定を組み合わせて、冗長な情報源を通じてBCI制御の精度、信頼性、堅牢性を向上させます。</p>
+<p><strong>ディープラーニングアーキテクチャ</strong>は、複雑な神経パターンをデコードするために高度な<a data-lb="1" href="/ja/glossary/deep-learning/" title="ディープラーニングは、多層ニューラルネットワークを使用してデータから複雑なパターンを学習する高度なAI技術です。画像認識、自然言語処理、生成AIに不可欠な技術となっています。">ニューラルネットワーク</a>を採用し、より自然な制御と個々のユーザー特性および変化する条件へのより良い適応を可能にします。</p>
+<p><strong>ワイヤレス神経インターフェース</strong>は、埋め込まれたデバイスと外部システム間の物理的接続の必要性を排除し、感染リスクを低減し、ユーザーの可動性と生活の質を向上させます。</p>
+<p><strong>高密度電極アレイ</strong>は、前例のない空間解像度で神経活動を捕捉し、より正確な制御と脳機能および<a data-lb="1" href="/ja/glossary/Search-Intent/" title="ユーザーがオンラインで何かを検索する根本的な理由。ユーザーが実際に何を見つけたいのかを理解することで、そのニーズに合ったコンテンツを作成できます。">ユーザー意図</a>に関するより豊富な情報へのアクセスを可能にします。</p>
+<p><strong>双方向通信</strong>は、神経組織からの記録と刺激の両方を可能にし、制御能力に加えて感覚フィードバックと治療介入を提供できるシステムを作成します。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p><strong>小型化と統合</strong>は、ワイヤレス電力と通信を備えた完全埋め込み型システムにつながり、外部ハードウェアを排除し、BCIユーザーにとってより自然で長期的なソリューションを作成します。</p>
+<p><strong>人工知能の強化</strong>は、複雑な神経パターンとユーザーニーズに適応できる高度な機械学習アルゴリズムを通じて、信号デコーディングの精度を向上させ、より洗練された制御スキームを可能にします。</p>
+<p><strong>感覚フィードバック統合</strong>は、BCIユーザーに触覚、固有受容感覚、その他の感覚情報を提供し、感覚運動ループを回復するより完全で自然な制御体験を作成します。</p>
+<p><strong>脳間通信</strong>は、個人間の直接的な神経通信を可能にし、共有体験、強化されたコラボレーション、新しい形態の人間の相互作用の可能性を開く可能性があります。</p>
+<p><strong>認知機能の増強</strong>は、計算リソースと情報データベースへの直接的な神経アクセスを提供することで、人間の知能、記憶、処理能力を強化する可能性があります。</p>
+<p><strong>治療アプリケーション</strong>は、標的を絞った神経刺激とフィードバックプロトコルを通じて、うつ病、不安、依存症、その他の神経学的および精神医学的状態を治療するために拡大します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Wolpaw, J., &amp; Wolpaw, E. W. (Eds.). (2012). Brain-computer interfaces: principles and practice. Oxford University Press.</p>
+</li>
+<li>
+<p>Dornhege, G., Millán, J. D. R., Hinterberger, T., McFarland, D., &amp; Müller, K. R. (Eds.). (2007). Toward brain-computer interfacing. MIT Press.</p>
+</li>
+<li>
+<p>Lebedev, M. A., &amp; Nicolelis, M. A. (2017). Brain-machine interfaces: From basic science to neuroprosthetics and neurorehabilitation. Physiological Reviews, 97(2), 767-837.</p>
+</li>
+<li>
+<p>Shih, J. J., Krusienski, D. J., &amp; Wolpaw, J. R. (2012). Brain-computer interfaces in medicine. Mayo Clinic Proceedings, 87(3), 268-279.</p>
+</li>
+<li>
+<p>Ramsey, N. F., Salari, E., Aarnoutse, E. J., Vansteensel, M. J., Bleichner, M., &amp; Freudenburg, Z. V. (2018). Decoding spoken phonemes from sensorimotor cortex with high-density ECoG grids. NeuroImage, 180, 301-311.</p>
+</li>
+<li>
+<p>Millán, J. D. R., Rupp, R., Müller-Putz, G. R., Murray-Smith, R., Giugliemma, C., Tangermann, M., … &amp; Mattia, D. (2010). Combining brain–computer interfaces and assistive technologies. Computer, 43(9), 66-73.</p>
+</li>
+<li>
+<p>Hochberg, L. R., Bacher, D., Jarosiewicz, B., Masse, N. Y., Simeral, J. D., Vogel, J., … &amp; Donoghue, J. P. (2012). Reach and grasp by people with tetraplegia using a neurally controlled robotic arm. Nature, 485(7398), 372-375.</p>
+</li>
+<li>
+<p>Ienca, M., &amp; Andorno, R. (2017). Towards new human rights in the age of neuroscience and neurotechnology. Life Sciences, Society and Policy, 13(1), 5.</p>
+</li>
+</ol>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/brain-computer-interface/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

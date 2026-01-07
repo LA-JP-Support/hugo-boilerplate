@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ヒートマップ | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Heatmap/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="色の濃淡を使用して数値情報を表示するデータ可視化ツールで、大規模なデータセット内のパターンや傾向を一目で簡単に把握できます。" name="description"/>
+<meta content="ヒートマップ, データ可視化, サーマルマッピング, ユーザー行動分析, ウェブサイト解析" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Heatmap/" property="og:url"/>
+<meta content="ヒートマップ | SmartWeb" property="og:title"/>
+<meta content="色の濃淡を使用して数値情報を表示するデータ可視化ツールで、大規模なデータセット内のパターンや傾向を一目で簡単に把握できます。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Heatmap/" name="twitter:url"/>
+<meta content="ヒートマップ | SmartWeb" name="twitter:title"/>
+<meta content="色の濃淡を使用して数値情報を表示するデータ可視化ツールで、大規模なデータセット内のパターンや傾向を一目で簡単に把握できます。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ヒートマップ</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ヒートマップ
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Heatmap
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          色の濃淡を使用して数値情報を表示するデータ可視化ツールで、大規模なデータセット内のパターンや傾向を一目で簡単に把握できます。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ヒートマップ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                データ可視化
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                サーマルマッピング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ユーザー行動分析
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ウェブサイト解析
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ヒートマップとは何か">ヒートマップとは何か?</h2>
+<p>ヒートマップは、色の濃淡の変化を通じて情報を表現する高度な<a data-lb="1" href="/ja/glossary/Heatmap/" title="色の濃淡を使用して数値情報を表示するデータ可視化ツールで、大規模なデータセット内のパターンや傾向を一目で簡単に把握できます。">データ可視化</a>技術であり、データセット内の異なる値が、冷色(通常は青または緑)から暖色(赤または黄色)までの色として表示されます。この視覚的表現手法は、複雑な数値データを直感的で解釈しやすい形式に変換し、ユーザーが大規模なデータセット内のパターン、傾向、異常を迅速に識別できるようにします。ヒートマップの基本原理は、人間の脳が生の数値データよりも視覚情報をより効率的に処理する自然な能力にあり、これにより多数の分野や業界において非常に貴重なツールとなっています。</p>
+<p>ヒートマップの概念は、統計学とデータ分析の分野から生まれました。研究者たちは相関行列や多次元データの関係を可視化する効果的な方法を必要としていました。時間の経過とともに、この可視化技術は進化し、ウェブサイトの<a data-lb="1" href="/ja/glossary/Scroll-Map/" title="ウェブページ上でユーザーがどこまでスクロールしているかを色分けされたヒートマップで視覚化するツールです。デザイナーがどのコンテンツが注目されているか、訪問者がどこで離脱しているかを理解するのに役立ちます。">ユーザー行動分析</a>、金融市場分析、生物学研究、地理<a data-lb="1" href="/ja/glossary/Knowledge-Management/" title="組織学習と情報共有のためのナレッジマネジメントシステム、プロセス、ベストプラクティスに関する包括的なガイド。">情報システム</a>、パフォーマンス監視など、さまざまな専門的な応用分野に拡大してきました。現代のヒートマップは、高度なアルゴリズムとインタラクティブ技術を活用してリアルタイムの洞察を提供し、組織がより高い信頼性と速度でデータ駆動型の意思決定を行えるようにしています。</p>
+<p>現代のヒートマップ実装は、シンプルな静的可視化から、ドリルダウン機能、フィルタリングオプション、リアルタイムデータ更新をサポートする複雑でインタラクティブなダッシュボードまで多岐にわたります。ヒートマップの汎用性により、関係者が大量のデータを迅速に理解し、外れ値を識別し、パフォーマンス指標を追跡し、多様な聴衆に調査結果を伝える必要があるシナリオで特に価値があります。ウェブサイト上の顧客行動の分析、システムパフォーマンスの監視、科学研究データの可視化など、どのような用途であっても、ヒートマップは複雑な分析プロセスと実行可能な<a data-lb="1" href="/ja/glossary/Data-Warehouse/" title="データウェアハウスの包括的ガイド:アーキテクチャ、実装、メリット、エンタープライズデータ管理と分析のベストプラクティス。">ビジネスインテリジェンス</a>の橋渡しとして機能します。</p>
+<h2 id="コア可視化技術">コア可視化技術</h2>
+<p><strong>カラーマッピングアルゴリズム</strong>は、数学的関数を利用して数値を対応する色の濃度に変換し、異なるデータ範囲全体で正確で一貫した視覚的表現を保証します。これらのアルゴリズムは通常、線形または対数スケーリング手法を採用して、さまざまなデータ分布に対応し、視覚的な明瞭性を維持します。</p>
+<p><strong>インタラクティブレンダリングエンジン</strong>は、リアルタイムの応答性、ズーム機能、動的フィルタリングオプションを提供することで、現代のヒートマップ表示を強化し、<a data-lb="1" href="/ja/glossary/User-Engagement/" title="ユーザーエンゲージメントとは、デジタル製品やサービスに対してユーザーが持つインタラクションと感情的なつながりのレベルを指します。人々が機能やコンテンツをどれだけ積極的かつ有意義に利用しているかを測定し、企業がロイヤルカスタマーを構築し、提供するサービスを改善するのに役立ちます。">ユーザーエンゲージメント</a>と分析の深さを向上させます。これらのエンジンは、大規模なデータセットと複雑な可視化要件を処理しながら、パフォーマンスを最適化します。</p>
+<p><strong>データ集約システム</strong>は、複数のソースから生の情報を処理・統合し、平均化、<a data-lb="1" href="/ja/glossary/unsupervised-learning/" title="教師なし学習に関する包括的な用語集。定義、クラスタリング、アソシエーションルール、次元削減などのアルゴリズム、応用例、利点、課題について解説しています。">クラスタリング</a>、サンプリングなどの統計手法を適用して、意味のある視覚的表現を作成します。これらのシステムは、大規模実装の計算効率を管理しながら、データの整合性を保証します。</p>
+<p><strong>空間マッピングフレームワーク</strong>は、ヒートマップの可視化を地理座標、フロアプラン、またはカスタムレイアウトに重ね合わせることを可能にし、位置ベースの分析に文脈的な関連性を提供します。これらのフレームワークは、正確な空間表現のためにさまざまな座標系と投影法をサポートします。</p>
+<p><strong>時系列分析コンポーネント</strong>は、時間ベースの次元をヒートマップの可視化に組み込み、ユーザーがアニメーションシーケンスまたは比較表示を通じて特定期間の変化と傾向を観察できるようにします。これらのコンポーネントは、履歴分析と予測モデリング機能を可能にします。</p>
+<p><strong>統計処理モジュール</strong>は、相関分析、回帰モデリング、クラスタリングアルゴリズムなどの高度な数学的操作を適用して、ヒートマップ可視化の分析価値を高めます。これらのモジュールは、基本的な視覚的表現を超えたより深い洞察を提供します。</p>
+<h2 id="ヒートマップの仕組み">ヒートマップの仕組み</h2>
+<p>ヒートマップ生成プロセスは、<strong>データ収集と前処理</strong>から始まります。ここでは、さまざまなソースから生の情報が収集され、不整合がクリーニングされ、分析に適した形式に構造化されます。このステップには、データ検証、正規化、視覚的表現を歪める可能性のある外れ値の除去が含まれます。</p>
+<p><strong>データ集約とビニング</strong>が続き、意図された分析目的に基づいて、前処理された情報を論理的なグループまたは空間領域に整理します。このプロセスには、特定のユースケース要件に応じて、地理的クラスタリング、時間ベースのグループ化、またはカテゴリ別セグメンテーションが含まれる場合があります。</p>
+<p><strong>統計分析と計算</strong>は、各データポイントまたは領域の強度値を決定するために数学的操作を適用し、頻度カウント、平均計算、または重み付けスコアリングシステムなどの方法を利用します。これらの計算は、後続のカラーマッピングプロセスの基礎を形成します。</p>
+<p><strong>カラースケールの定義とマッピング</strong>は、異なる値範囲に特定の色を割り当てることで視覚的表現スキームを確立し、対象聴衆に最適なコントラストとアクセシビリティを保証します。このステップでは、色彩理論の原則とユーザー間の潜在的な視覚障害を考慮します。</p>
+<p><strong>レンダリングと可視化生成</strong>は、処理されたデータとカラーマッピングを最終的な視覚出力に変換し、スムージングアルゴリズム、補間技術、最適化手法を適用して、明確で解釈可能な表示を作成します。このプロセスには、複雑な可視化のための複数のレンダリングパスが含まれる場合があります。</p>
+<p><strong>インタラクティブ機能の実装</strong>は、ツールチップ、ズームコントロール、フィルタリングオプション、ドリルダウン機能などの<a data-lb="1" href="/ja/glossary/UI/" title="ユーザーインターフェース(UI)の定義、種類、デザイン原則、実用的なユースケースを解説します。アプリからAIチャットボットまで、UIが人間とデジタルの相互作用をどのように促進するかを学びましょう。">ユーザーインターフェース</a>要素を追加し、ヒートマップ可視化の分析価値と<a data-lb="1" href="/ja/glossary/UX/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">ユーザーエクスペリエンス</a>を向上させます。</p>
+<p><strong>品質保証と検証</strong>は、ソースデータとのクロスリファレンス、視覚検査、ユーザーテストを通じて、生成されたヒートマップの正確性と信頼性を保証し、潜在的な問題や改善点を特定します。</p>
+<p><strong>ワークフロー例</strong>:ウェブサイト分析ヒートマップは、<a data-lb="1" href="/ja/glossary/Audience-Engagement/" title="オーディエンスエンゲージメントとは、人々とブランドの間で生まれる積極的な参加と交流のことで、単に受動的に視聴するだけでなく、コンテンツを消費し、体験を共有し、関係性を構築することを指します。">ユーザーインタラクション</a>データ(クリック、スクロール、マウス移動)を収集することから始まり、この情報をページ領域ごとに集約し、インタラクション頻度を計算し、赤から青のカラースケールを適用し、可視化オーバーレイをレンダリングし、詳細な分析のためのインタラクティブ機能を提供します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>パターン認識の強化</strong>により、ユーザーは従来の数値分析手法では検出が困難な複雑なデータセット内のトレンド、クラスター、異常を迅速に識別できます。この視覚的アプローチは、発見プロセスを加速し、分析<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">精度</a>を向上させます。</p>
+<p><strong>意思決定の改善</strong>は、複雑な統計レポートや生データテーブルを解釈する必要性を排除することで、関係者に明確で直感的な可視化を提供し、より迅速で自信のある意思決定プロセスをサポートします。</p>
+<p><strong>効率的なコミュニケーション</strong>は、専門知識の壁を超え、協調的な分析を促進する、普遍的に理解可能な視覚形式で情報を提示することにより、技術チームメンバーと非技術チームメンバー間の効果的な知識移転を促進します。</p>
+<p><strong>リアルタイム監視</strong>は、動的システムとプロセスの継続的な観察をサポートし、迅速な注意や介入を必要とするパフォーマンスの問題、異常なパターン、または新たな機会の即座の識別を可能にします。</p>
+<p><strong>コスト効率の高い分析</strong>は、広範な手動分析や専門的な統計専門知識を必要とする即座の視覚的洞察を提供することにより、データ解釈に必要な時間とリソースを削減します。</p>
+<p><strong>スケーラブルな可視化</strong>は、小規模なローカル分析から企業全体の監視システムまで、さまざまなサイズと複雑さのデータセットに対応し、視覚的な明瞭性や分析効果を損なうことなく対応します。</p>
+<p><strong>クロスプラットフォーム互換性</strong>は、異なるデバイス、オペレーティングシステム、ソフトウェア環境全体で一貫した可視化エクスペリエンスを保証し、組織内でのアクセシビリティと広範な採用を促進します。</p>
+<p><strong>履歴トレンド分析</strong>は、現在のパフォーマンスを履歴ベースラインと比較することを可能にし、長期的な戦略計画と、時間の経過に伴う周期的なパターンまたは段階的な変化の識別をサポートします。</p>
+<p><strong>カスタマイズ可能なプレゼンテーション</strong>により、ユーザーは組織内の特定の分析要件、ブランディングガイドライン、またはアクセシビリティニーズに合わせて、カラースキーム、スケーリング方法、表示パラメータを調整できます。</p>
+<p><strong>統合の柔軟性</strong>は、重要なインフラストラクチャの変更や専門的なトレーニングプログラムを必要とせずに、既存の分析ワークフロー、<a data-lb="1" href="/ja/glossary/dashboard/" title="ダッシュボードとは、複数のソースから主要なデータ、KPI、トレンドを表示するビジュアルインターフェースです。迅速な監視、分析、情報に基づいた意思決定を可能にします。">ダッシュボード</a>システム、レポートプロセスへのシームレスな組み込みをサポートします。</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>ウェブサイトユーザー行動分析</strong>は、訪問者のインタラクション、クリックパターン、ナビゲーションフローを追跡して、ユーザーエクスペリエンスを最適化し、コンバージョン率を向上させ、ウェブページ上のエンゲージメントが高い領域または低い領域を識別します。</p>
+<p><strong>システムパフォーマンス監視</strong>は、サーバー負荷、ネットワークトラフィック、アプリケーション応答時間、リソース使用パターンを可視化して、ボトルネックを識別し、容量アップグレードを計画し、最適な<a data-lb="1" href="/ja/glossary/Wait-Time/" title="様々なシステムやアプリケーションにおける待機時間の概念、実装戦略、最適化技術に関する包括的なガイド。">システムパフォーマンス</a>を維持します。</p>
+<p><strong>金融市場分析</strong>は、取引量、価格変動、相関パターン、異なる証券、市場、または期間にわたるリスク分布を表示して、投資決定とポートフォリオ管理をサポートします。</p>
+<p><strong>地理データ可視化</strong>は、人口密度、販売地域、気象パターン、または地図全体の人口統計分布を表現して、位置ベースの意思決定と<a data-lb="1" href="/ja/glossary/Support-Capacity-Planning/" title="サポート容量計画とは、カスタマーサポートのニーズを予測し、サービス品質目標を達成しながら効率的に対応するためのスタッフとリソースを配分するプロセスです。">リソース配分</a>戦略をサポートします。</p>
+<p><strong>科学研究可視化</strong>は、実験結果、遺伝子発現パターン、化学反応、または研究データの統計的相関を示して、仮説検証と知識発見プロセスを促進します。</p>
+<p><strong>品質管理監視</strong>は、製造欠陥、製品<a data-lb="1" href="/ja/glossary/Operational-Metrics/" title="オペレーショナルメトリクスとは、企業が日常業務をどれだけ効率的に運営しているかを追跡する測定可能な指標であり、組織が問題を早期に発見し、プロセスを継続的に改善するのに役立ちます。">パフォーマンス指標</a>、または<a data-lb="1" href="/ja/glossary/QoS--Quality-of-Service-/" title="Quality of Service(QoS)の包括的ガイド - ネットワークトラフィック管理、優先順位付けメカニズム、最適なパフォーマンスを実現するための実装戦略について解説します。">サービス品質</a>指標を異なる生産ライン、期間、または地理的位置全体で追跡して、基準を維持し、改善機会を識別します。</p>
+<p><strong>マーケティングキャンペーン分析</strong>は、<a data-lb="1" href="/ja/glossary/Engagement-Score/" title="エンゲージメントスコアとは何か、このコンポジット指標がユーザー、顧客、または従業員のコンテンツ、製品、サービスとのインタラクションをどのように定量化するか、そしてその戦略的な活用方法について学びます。">顧客エンゲージメント</a>、応答率、人口統計ターゲティングの効果、チャネルパフォーマンスを評価して、マーケティング戦略と予算配分の決定を最適化します。</p>
+<p><strong>ソーシャルメディア分析</strong>は、エンゲージメントパターン、センチメント分布、トレンドトピック、異なるプラットフォームと期間にわたるユーザー行動を監視して、コンテンツ戦略と<a data-lb="1" href="/ja/glossary/Community-Management-Tools/" title="オンラインコミュニティを効果的に構築、エンゲージメント、成長させるためのコミュニティ管理ツール、プラットフォーム、戦略に関する包括的なガイド。">コミュニティ管理</a>アプローチを通知します。</p>
+<p><strong>ヘルスケアデータ分析</strong>は、患者の転帰、治療効果、疾患パターン、または異なる部門、期間、または人口統計グループ全体のリソース使用を可視化して、臨床意思決定をサポートします。</p>
+<p><strong>教育パフォーマンス追跡</strong>は、学生の達成パターン、学習進捗、評価結果、または異なる科目、学年、または人口統計グループ全体のカリキュラムの効果を表示して、教育戦略を通知します。</p>
+<h2 id="ヒートマップタイプの比較">ヒートマップタイプの比較</h2>
+<table>
+<thead>
+<tr>
+<th>タイプ</th>
+<th>主な用途</th>
+<th>データ形式</th>
+<th>複雑さ</th>
+<th>リアルタイム機能</th>
+<th>最適な用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>クリックヒートマップ</td>
+<td>ユーザーインタラクション追跡</td>
+<td>座標ベースのイベント</td>
+<td>低</td>
+<td>はい</td>
+<td>ウェブサイト最適化</td>
+</tr>
+<tr>
+<td>スクロールヒートマップ</td>
+<td>コンテンツエンゲージメント分析</td>
+<td>パーセンテージベースの指標</td>
+<td>低</td>
+<td>はい</td>
+<td>コンテンツ戦略</td>
+</tr>
+<tr>
+<td>地理的ヒートマップ</td>
+<td>位置ベースの分析</td>
+<td>地理空間座標</td>
+<td>中</td>
+<td>部分的</td>
+<td>地域計画</td>
+</tr>
+<tr>
+<td>相関ヒートマップ</td>
+<td>統計的関係</td>
+<td>行列データ</td>
+<td>高</td>
+<td>いいえ</td>
+<td>研究分析</td>
+</tr>
+<tr>
+<td>時系列ヒートマップ</td>
+<td>時系列パターン</td>
+<td>タイムスタンプ付き値</td>
+<td>中</td>
+<td>はい</td>
+<td>パフォーマンス監視</td>
+</tr>
+<tr>
+<td>ネットワークヒートマップ</td>
+<td>システム接続性</td>
+<td>グラフベースのデータ</td>
+<td>高</td>
+<td>はい</td>
+<td>インフラストラクチャ管理</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>データ品質への依存</strong>は、意味のある可視化を生成するために高品質で正確なソースデータを必要とします。基礎情報のエラーや不整合は、誤解を招くパターンや誤った分析結論につながる可能性があります。</p>
+<p><strong>色のアクセシビリティの問題</strong>は、色覚障害のあるユーザーに課題を提示し、包括的なデザインと普遍的なアクセシビリティを保証するために、カラーパレットの選択と代替表現方法の慎重な検討を必要とします。</p>
+<p><strong>スケーラビリティの制限</strong>は、非常に大規模なデータセットや高頻度のリアルタイム更新を扱う際に発生する可能性があり、パフォーマンスの低下、メモリ制約、またはユーザーエクスペリエンスに影響を与えるレンダリング遅延を引き起こす可能性があります。</p>
+<p><strong>解釈の複雑さ</strong>は、データ内の複雑な関係の誤解や過度の単純化につながる可能性があり、特にユーザーが可視化されたパターンを適切に解釈するための十分な文脈や統計的背景を欠いている場合に顕著です。</p>
+<p><strong>プライバシーとセキュリティの懸念</strong>は、ヒートマップが機密情報や個人を特定できるデータを表示する場合に発生し、データの匿名化、<a data-lb="1" href="/ja/glossary/Authorization/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a>、関連するプライバシー規制への準拠の慎重な検討を必要とします。</p>
+<p><strong>技術統合の課題</strong>は、既存のシステム内にヒートマップを実装する際に発生する可能性があり、特にデータ形式の互換性、<a data-lb="1" href="/ja/glossary/APIs/" title="API(アプリケーション・プログラミング・インターフェース)を詳しく解説:定義、仕組み、種類(REST、SOAP)、実例、メリット、セキュリティ、ベストプラクティスを網羅した総合ガイドです。">API</a>の制限、または展開プロセスを複雑にするインフラストラクチャ要件に関して顕著です。</p>
+<p><strong>パフォーマンス最適化要件</strong>は、視覚品質とシステム応答性の間の慎重なバランスを要求し、特に複雑な計算を処理しながらスムーズなユーザーエクスペリエンスを維持する必要があるインタラクティブヒートマップにおいて重要です。</p>
+<p><strong>メンテナンスと更新</strong>は、基礎となるデータソース、ビジネス要件、または技術環境が時間の経過とともに進化するにつれて、継続的な正確性と関連性を保証するための継続的な注意を必要とします。</p>
+<p><strong>コストの考慮事項</strong>には、専門ソフトウェアのライセンス料、データ処理とストレージのインフラストラクチャ要件、プロジェクトの実現可能性と持続可能性に影響を与える可能性のある継続的な運用費用が含まれます。</p>
+<p><strong>ユーザートレーニングのニーズ</strong>は、関係者が特定の分析および意思決定要件のためにヒートマップ可視化を効果的に解釈し、利用できるようにするための教育とサポートへの投資を必要とします。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>明確な目標を定義する</strong>ことから実装を開始し、設計決定を導き、ヒートマップが意図された目的を効果的に果たすことを保証するために、特定の分析目標、対象聴衆、成功指標を確立します。</p>
+<p><strong>適切なカラースキームを選択する</strong>ことで、十分なコントラストを提供し、色覚障害に対応し、異なる視聴条件全体で明瞭性と解釈可能性を維持しながら、組織のブランディングと整合させます。</p>
+<p><strong>データ処理を最適化する</strong>ことで、効率的なアルゴリズム、キャッシング戦略、データ<a data-lb="1" href="/ja/glossary/Codec/" title="コーデックの包括的ガイド - 効率的なストレージと伝送のために、オーディオ、ビデオ、データをエンコードおよびデコードするデジタル圧縮アルゴリズムです。">圧縮</a>技術を実装し、大規模なデータセットや高頻度の更新でも応答性の高いパフォーマンスを保証します。</p>
+<p><strong>プログレッシブローディングを実装する</strong>ことで、複雑な可視化のために基本情報を最初に表示し、バックグラウンド処理が完了する間、詳細なレイヤーを段階的に追加して、ユーザーエンゲージメントを維持します。</p>
+<p><strong>インタラクティブコントロールを提供する</strong>ことで、ユーザーがパラメータを調整し、データをフィルタリングし、特定の領域にズームし、ツールチップやドリルダウン機能を通じて詳細情報にアクセスできるようにし、分析の柔軟性を向上させます。</p>
+<p><strong>モバイル対応を保証する</strong>ことで、視覚的な明瞭性と機能性を維持しながら、異なる画面サイズ、タッチインターフェース、さまざまなネットワーク条件に効果的に適応するヒートマップを設計します。</p>
+<p><strong>文脈情報を含める</strong>ことで、凡例、スケール、タイムスタンプ、説明テキストなどを提供し、ユーザーが可視化を適切に解釈し、異なるパターンや値の重要性を理解できるようにします。</p>
+<p><strong>エラー処理を実装する</strong>ことで、データの不整合、ネットワーク中断、または処理の失敗を適切に管理し、制限や問題についてユーザーに意味のあるフィードバックを提供するメカニズムを構築します。</p>
+<p><strong>アクセシビリティのための設計</strong>を行うことで、キーボードナビゲーション、スクリーンリーダー互換性、<a data-lb="1" href="/ja/glossary/Alt-Text/" title="画像が表示されない場合に、スクリーンリーダーを使用するユーザーや検索エンジンが視覚的なコンテンツを理解できるようにするための、画像の文字による説明です。">代替テキスト</a>説明、高コントラストオプションなどの機能を組み込み、包括的なユーザーエクスペリエンスを保証します。</p>
+<p><strong>更新プロトコルを確立する</strong>ことで、データの更新頻度、変更のユーザーへの伝達方法、比較と監査のための履歴バージョンの維持方法を定義します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>機械学習統合</strong>は、予測アルゴリズムとパターン認識機能を組み込んで、ヒートマップデータパターンと履歴分析に基づいて異常を自動的に識別し、トレンドを予測し、インテリジェントな推奨事項を提供します。</p>
+<p><strong>多次元可視化</strong>は、レイヤリング、アニメーション、またはユーザーが複数の変数全体の複雑な関係を同時に探索できるインタラクティブコントロールを通じて、追加のデータ次元を組み込むことで、従来の二次元ヒートマップを拡張します。</p>
+<p><strong>適応型カラーマッピング</strong>は、データ分布特性に基づいてカラースケールと強度範囲を自動的に調整する動的アルゴリズムを採用し、値範囲や統計的特性に関係なく最適な視覚的表現を保証します。</p>
+<p><strong>リアルタイムストリーミング分析</strong>は、連続的なデータフィードを処理してヒートマップ可視化を即座に更新し、ライブ監視アプリケーションをサポートし、変化する条件や新たなパターンへの即座の対応を可能にします。</p>
+<p><strong>協調分析機能</strong>により、複数のユーザーが同時にヒートマップ可視化とインタラクトし、注釈を共有し、統合されたコミュニケーションと<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>管理機能を通じて分析活動を調整できます。</p>
+<p><strong>カスタムアルゴリズム開発</strong>は、標準的なヒートマップ機能を超えて、特定の業界要件、データタイプ、または分析目的に合わせた専門的な処理方法を作成し、独自の競争優位性を提供します。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p><strong>人工知能の強化</strong>は、自動パターン認識、インテリジェントな<a data-lb="1" href="/ja/glossary/Feature-Engineering/" title="機械学習モデルの最適化とデータ変換のための特徴量エンジニアリング技術、手法、ベストプラクティスに関する包括的なガイド。">データ前処理</a>、<a data-lb="1" href="/ja/glossary/Demand-Forecasting/" title="需要予測は、AI、機械学習、統計モデルを活用して、製品やサービスに対する将来の顧客需要を予測します。これにより、組織は在庫、生産、人員配置、リソース配分を最適化しながら、コストと欠品を最小限に抑えることができます。">予測分析</a>のための高度なAI機能を統合し、分析価値を高め、手動解釈要件を削減します。</p>
+<p><strong>拡張現実統合</strong>は、ARデバイスを通じて現実世界の環境にヒートマップ可視化を重ね合わせることを可能にし、フィールド操作、施設管理、位置ベースの意思決定のための文脈的洞察を提供します。</p>
+<p><strong>音声起動分析</strong>は、<a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">自然言語処理</a>機能を組み込んで、ユーザーがヒートマップデータをクエリし、特定の分析を要求し、音声インターフェースと会話型<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">AIシステム</a>を通じて音声による洞察を受け取ることができるようにします。</p>
+<p><strong>ブロックチェーンベースのデータ整合性</strong>は、分散台帳技術を実装してデータの真正性を保証し、監査証跡を作成し、プライバシーとコンプライアンスを維持しながら、組織の境界を越えてヒートマップ洞察の安全な共有を可能にします。</p>
+<p><strong>量子コンピューティングアプリケーション</strong>は、量子処理機能を活用して指数関数的に大きなデータセットを処理し、複雑な計算を実行し、現在計算的に実行不可能な新しいタイプの分析洞察を可能にします。</p>
+<p><strong>没入型バーチャルリアリティ</strong>は、ユーザーがデータランドスケープをナビゲートし、ジェスチャーコントロールを通じて可視化を操作し、共有仮想分析スペースで協力できる三次元ヒートマップ環境を作成します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Wilkinson, L., &amp; Friendly, M. (2009). The history of the cluster heat map. <em>The American Statistician</em>, 63(2), 179-184.</p>
+</li>
+<li>
+<p>Nielsen, J., &amp; Pernice, K. (2010). <em>Eyetracking Web Usability</em>. New Riders Press.</p>
+</li>
+<li>
+<p>Tufte, E. R. (2001). <em>The Visual Display of Quantitative Information</em> (2nd ed.). Graphics Press.</p>
+</li>
+<li>
+<p>Few, S. (2012). <em>Show Me the Numbers: Designing Tables and Graphs to Enlighten</em> (2nd ed.). Analytics Press.</p>
+</li>
+<li>
+<p>Ware, C. (2019). <em>Information Visualization: Perception for Design</em> (4th ed.). Morgan Kaufmann.</p>
+</li>
+<li>
+<p>Kirk, A. (2019). <em>Data Visualisation: A Handbook for Data Driven Design</em> (2nd ed.). SAGE Publications.</p>
+</li>
+<li>
+<p>Cairo, A. (2016). <em>The Truthful Art: Data, Charts, and Maps for Communication</em>. New Riders.</p>
+</li>
+<li>
+<p>Munzner, T. (2014). <em>Visualization Analysis and Design</em>. CRC Press.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Heatmap-Analysis/">
+                    ヒートマップ分析
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    色のグラデーションを使用して数値を表現するデータ可視化手法で、パターンやトレンドを一目で把握できるようにします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Heatmap-Analysis/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Custom-Dimension/">
+                    カスタムディメンション
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    アナリティクスプラットフォームにおける<a data-lb="1" href="/ja/glossary/Custom-Dimension/" title="アナリティクスプラットフォームにおけるカスタムディメンションの包括的ガイド。実装方法、メリット、データトラッキング強化のためのベストプラクティスを網羅しています。">カスタムディメンション</a>の包括的ガイド。実装方法、メリット、データトラッキング強化のためのベストプラクティスを網羅しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Custom-Dimension/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Scroll-Map/">
+                    スクロールマップ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ウェブページ上でユーザーがどこまでスクロールしているかを色分けされたヒートマップで視覚化するツールです。デザイナーがどのコンテンツが注目されているか、訪問者がどこで離脱しているかを理解するのに役立ちま...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Scroll-Map/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Session-Recording/">
+                    セッションレコーディング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ユーザーがウェブサイトやアプリとどのように対話するかを記録し、再生する技術。すべてのクリックやスクロールを表示することで、ユーザビリティの問題を特定し、ユーザーエクスペリエンスの向上に役立てます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Session-Recording/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Self-Service-Analytics/">
+                    セルフサービス分析
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Self-Service-Analytics/" title="セルフサービス分析の包括的ガイド:ビジネスユーザーにデータインサイト、ツール、可視化機能への直接アクセスを提供し、データ活用を促進します。">セルフサービス分析</a>の包括的ガイド:ビジネスユーザーにデータインサイト、ツール、可視化機能への直接アクセスを提供し、データ活用を促進します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Self-Service-Analytics/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Tag-Cloud/">
+                    タグクラウド
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Tag-Cloud/" title="タグクラウドの包括的ガイド:キーワードやメタデータを頻度や重要度に基づいて異なるサイズで表示する視覚的データ表現ツールです。">タグクラウド</a>の包括的ガイド:キーワードや<a data-lb="1" href="/ja/glossary/Meta/" title="メタとは、他の情報を説明する情報のことで、検索エンジンやソーシャルプラットフォームがウェブコンテンツを効果的に理解し整理するのに役立ちます。">メタデータ</a>を頻度や重要度に基づいて異なるサイズで表示する視覚的データ表現ツールです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Tag-Cloud/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/heatmap/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

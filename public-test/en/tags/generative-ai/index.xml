@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Generative AI on SmartWeb</title>
+    <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/tags/generative-ai/</link>
+    <description>Recent content in Generative AI on SmartWeb</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Nov 2025 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://main.d1jtfhinlastnr.amplifyapp.com/en/tags/generative-ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025 AI Customer Support Guide: Success Strategies from Amazon, Salesforce to SMEs</title>
+      <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-customer-support-2025-guide/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0900</pubDate>
+      <guid>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/ai-customer-support-2025-guide/</guid>
+      <description>&lt;h2 id=&#34;what-is-ai-customer-support&#34;&gt;What is AI Customer Support?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/artificial-intelligence/&#34; title=&#34;Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions.&#34;&gt;AI&lt;/a&gt; &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/customer-support/&#34; title=&#34;Customer support is a team and set of tools that help customers solve problems, answer questions, and get the most value from a product or service.&#34;&gt;customer support&lt;/a&gt; is a system that uses &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/artificial-intelligence/&#34; title=&#34;Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions.&#34;&gt;artificial intelligence&lt;/a&gt; to automatically respond to customer inquiries. Unlike human agents, &lt;a href=&#34;https://main.d1jtfhinlastnr.amplifyapp.com/en/glossary/artificial-intelligence/&#34; title=&#34;Technology that enables computers to learn from experience and make decisions like humans do, rather than just following preset instructions.&#34;&gt;AI&lt;/a&gt; can provide support 24/7, 365 days a year. Key features include instant responses and multilingual capabilities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RAG vs. CAG: Understanding Knowledge Augmentation Strategies for AI Models</title>
+      <link>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/rag-vs-cag-knowledge-augmentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/rag-vs-cag-knowledge-augmentation/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Large language models have revolutionized how we interact with artificial intelligence, but they face a fundamental challenge: &lt;strong&gt;knowledge cutoff&lt;/strong&gt;. If information wasn&amp;rsquo;t included in a model&amp;rsquo;s training data, the model simply cannot recall it. Whether it&amp;rsquo;s recent news events, proprietary business data, or real-time information, traditional LLMs struggle to provide accurate answers about knowledge beyond their training window. This limitation has sparked the development of augmented generation techniques—methods that extend an AI model&amp;rsquo;s capabilities by connecting it to external knowledge sources. Two prominent approaches have emerged to solve this problem: &lt;strong&gt;Retrieval-Augmented Generation (RAG)&lt;/strong&gt; and &lt;strong&gt;Cache-Augmented Generation (CAG)&lt;/strong&gt;. Each offers distinct advantages and trade-offs, and understanding when to use each approach is crucial for building effective AI systems. This comprehensive guide explores both techniques in depth, examining their architectures, capabilities, and real-world applications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

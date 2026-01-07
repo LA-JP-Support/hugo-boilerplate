@@ -1,3 +1,4 @@
+
 ---
 title: "What is a Ticket System in Customer Support?"
 date: 2025-11-19

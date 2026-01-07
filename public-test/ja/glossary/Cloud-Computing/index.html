@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>クラウドコンピューティング | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Cloud-Computing/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Cloud-Computing/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/Cloud-Computing/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/Cloud-Computing/" hreflang="x-default" rel="alternate"/>
+<meta content="クラウドコンピューティングを探る:オンデマンドITリソース、サービスモデル(IaaS、PaaS、SaaS)、デプロイメントオプション(パブリック、プライベート、ハイブリッド)、そしてAIインフラストラクチャとデプロイメントにおけるメリット。" name="description"/>
+<meta content="クラウドコンピューティング, IaaS, PaaS, SaaS, AIインフラストラクチャ" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Cloud-Computing/" property="og:url"/>
+<meta content="クラウドコンピューティング | SmartWeb" property="og:title"/>
+<meta content="クラウドコンピューティングを探る:オンデマンドITリソース、サービスモデル(IaaS、PaaS、SaaS)、デプロイメントオプション(パブリック、プライベート、ハイブリッド)、そしてAIインフラストラクチャとデプロイメントにおけるメリット。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Cloud-Computing/" name="twitter:url"/>
+<meta content="クラウドコンピューティング | SmartWeb" name="twitter:title"/>
+<meta content="クラウドコンピューティングを探る:オンデマンドITリソース、サービスモデル(IaaS、PaaS、SaaS)、デプロイメントオプション(パブリック、プライベート、ハイブリッド)、そしてAIインフラストラクチャとデプロイメントにおけるメリット。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">クラウドコンピューティング</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Cloud Computing
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        クラウドコンピューティング
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Cloud Computing
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          クラウドコンピューティングを探る:オンデマンドITリソース、サービスモデル(IaaS、PaaS、SaaS)、デプロイメントオプション(パブリック、プライベート、ハイブリッド)、そしてAIインフラストラクチャとデプロイメントにおけるメリット。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                クラウドコンピューティング
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                IaaS
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                PaaS
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                SaaS
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIインフラストラクチャ
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="クラウドコンピューティングとは">クラウドコンピューティングとは?</h2>
+<p><a data-lb="1" href="/ja/glossary/Spot-Instances/" title="スポットインスタンスは、AWS、Azure、GCPが提供する割引価格のクラウドコンピューティングリソースで、バッチ処理、分析、機械学習トレーニングなどの耐障害性ワークロードに最適です。">クラウドコンピューティング</a>とは、従量課金制でインターネット経由でITリソースをオンデマンドで提供するサービスです。物理的なデータセンターやサーバーへの投資や保守の代わりに、組織や個人は<a data-lb="1" href="/ja/glossary/cloud-service/" title="クラウドサービスとは、サードパーティベンダーがインターネット経由で提供するITリソースです。SaaS、PaaS、IaaS、FaaS、XaaSモデルの特徴、メリット、ユースケースを理解しましょう。">クラウドサービス</a>プロバイダーから、サーバー、ストレージ、データベース、<a data-lb="1" href="/ja/glossary/network-environment/" title="ネットワーク環境とは、コンピュータシステムやデバイス間のデータ交換を可能にするハードウェア、ソフトウェア、プロトコル、接続の集合体です。AIと自動化において重要な役割を果たします。">ネットワーキング</a>、分析、ソフトウェアなどの構成可能なコンピューティングリソースの共有プールにアクセスできます。これらのリソースはインターネット経由でサービスとしてアクセスされ、迅速なスケーリング、コスト最適化、グローバルな展開を可能にします。</p>
+<p>あらゆる規模や業種の組織が、データバックアップ、災害復旧、電子メール、仮想デスクトップ、開発・テスト、ビッグ<a data-lb="1" href="/ja/glossary/Business-Intelligence--BI-/" title="ビジネスインテリジェンス（BI）システム、テクノロジー、実装戦略、およびデータドリブンな意思決定のためのベストプラクティスに関する包括的なガイド。">データ分析</a>、顧客向けWebアプリケーションなど、幅広いユースケースでクラウドを活用しています。</p>
+<p>クラウドコンピューティングにより、組織はより迅速にイノベーションを起こし、初期インフラコストを回避し、使用した分だけ支払うことができます。リソースは数分で展開され、実験と迅速な反復をサポートします。弾力性により、ビジネス需要に合わせて即座にスケーリングできます。クラウドは、アプリケーションやサービスをエンドユーザーの近くに展開することでグローバル展開をサポートし、<a data-lb="1" href="/ja/glossary/Latency/" title="レイテンシとは、リクエストとシステムの応答との間の時間遅延のことで、AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。">レイテンシ</a>を削減し、エクスペリエンスを向上させます。</p>
+<h2 id="クラウドコンピューティングの仕組み">クラウドコンピューティングの仕組み</h2>
+<p>クラウドコンピューティングは、物理的なコンピューティングリソース(サーバー、ストレージ、ネットワーキング)を抽象化、プール化、共有し、クラウドプロバイダーが管理する仮想化環境にすることに基づいています。ユーザーはインターネット経由でこれらのリソースにアクセスし、必要なときに必要なものを割り当てます。</p>
+<h3 id="アーキテクチャコンポーネント">アーキテクチャコンポーネント</h3>
+<p><strong>フロントエンド</strong><br/>
+ユーザーが操作するクライアントインターフェース—Webブラウザ、<a data-lb="1" href="/ja/glossary/APIs/" title="API(アプリケーション・プログラミング・インターフェース)を詳しく解説:定義、仕組み、種類(REST、SOAP)、実例、メリット、セキュリティ、ベストプラクティスを網羅した総合ガイドです。">API</a>、クライアント側アプリケーション。これがユーザーがクラウドリソースにアクセスし管理する方法です。</p>
+<p><strong>バックエンド</strong><br/>
+クラウド自体で、サーバー、ストレージ、データベース、<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>、管理ツールを含みます。バックエンドはリソースのプロビジョニング、スケーリング、セキュリティ、データストレージを管理します。</p>
+<p><strong>ネットワーク</strong><br/>
+クライアントとクラウドリソースを接続し、クラウド内のコンポーネントを相互接続するバックボーン。高速で冗長性のあるネットワークが、サービスへの信頼性の高い低レイテンシアクセスを保証します。</p>
+<p><strong>クラウドベースの配信プラットフォーム</strong><br/>
+リソースをオンデマンドでサービスとして提供するオーケストレーション層。</p>
+<h3 id="主要な運用原則">主要な運用原則</h3>
+<p><strong>オンデマンドセルフサービス</strong> - ユーザーは人間の介入なしに自動的にリソースをプロビジョニングできる<br/>
+<strong>広範なネットワークアクセス</strong> - リソースは標準プロトコルとデバイスを介してアクセス可能<br/>
+<strong>リソースプーリング</strong> - プロバイダーは動的に割り当てられたリソースで複数のテナントにサービスを提供<br/>
+<strong>迅速な弾力性</strong> - リソースは迅速にスケールアップまたはダウンでき、多くの場合自動的に実行される<br/>
+<strong>測定可能なサービス</strong> - 使用量が監視され、消費量に基づいて課金される</p>
+<h3 id="クラウドコンピューティングアーキテクチャ">クラウドコンピューティングアーキテクチャ</h3>
+<p>クラウドアーキテクチャは、フロントエンド(クライアント)とバックエンド(プロバイダー)の要素、ネットワーキング、配信モデルを接続して、柔軟でスケーラブルかつコスト効率の高いIT環境を構築するための戦略的な設計図です。アーキテクチャは、ワークロード要件、運用コスト、セキュリティ、展開モデル(パブリック、プライベート、ハイブリッド、マルチクラウド)を考慮します。</p>
+<p><strong>バックエンドコンポーネント:</strong></p>
+<ul>
+<li><strong>アプリケーション:</strong> フロントエンドによってアクセスおよび調整されるバックエンドソフトウェア</li>
+<li><strong>サービス:</strong> コア機能—ストレージ、分析、開発環境</li>
+<li><strong>ランタイムクラウド:</strong> アプリケーションとサービスを実行するための仮想環境</li>
+<li><strong>ストレージ:</strong> ブロック、ファイル、オブジェクトストレージを含む永続的なデータストレージ</li>
+<li><strong>インフラストラクチャ:</strong> ハードウェア(<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">CPU</a>、GPU、ストレージデバイス)とシステムソフトウェア</li>
+<li><strong>管理:</strong> リソースのプロビジョニング、監視、自動化のための<a data-lb="1" href="/ja/glossary/Middleware/" title="ミドルウェアの包括的ガイド - アプリケーション、サービス、システムを接続し、シームレスな通信と統合を実現するソフトウェア層について解説します。">ミドルウェア</a>とオーケストレーションツール</li>
+<li><strong>セキュリティ:</strong> データ、アプリケーション、インフラストラクチャを保護するメカニズム</li>
+</ul>
+<h2 id="クラウドコンピューティングの主要コンポーネント">クラウドコンピューティングの主要コンポーネント</h2>
+<p>クラウドインフラストラクチャは、クラウドを構成し、サービスとして提供されるハードウェアとソフトウェアリソースの集合体です。</p>
+<h3 id="主要コンポーネント">主要コンポーネント</h3>
+<p><strong>ハードウェア</strong><br/>
+基盤となる物理リソース—サーバー、CPU、メモリ、ストレージデバイス、電源装置—グローバルデータセンターに展開されています。</p>
+<p><strong>仮想化</strong><br/>
+コンピューティングリソースを基盤となるハードウェアから切り離すソフトウェア抽象化で、効率的なリソースプーリングと<a data-lb="1" href="/ja/glossary/Multi-Tenancy/" title="マルチテナンシーは、単一のアプリケーションインスタンスが複数のテナントにサービスを提供するソフトウェアアーキテクチャです。インフラストラクチャを共有しながら、データを論理的に分離します。SaaSやクラウドプラットフォームに不可欠な技術です。">マルチテナンシー</a>を可能にします。ハイパーバイザー(仮想マシンモニター)は、ユーザー間でリソースを分割および割り当てるために不可欠です。</p>
+<p><strong>ストレージ</strong><br/>
+インターネット経由でアクセス可能なスケーラブルで永続的なデータリポジトリ(ブロック、ファイル、オブジェクトストレージ)。</p>
+<p><strong>ネットワーキング</strong><br/>
+ユーザーと内部クラウドコンポーネントを接続する高速ネットワークインフラストラクチャ(ルーター、スイッチ、<a data-lb="1" href="/ja/glossary/Load-Balancing/" title="ロードバランシングについて学ぶ：アプリケーションの可用性、信頼性、パフォーマンスを最適化するために、ネットワークトラフィックを複数のサーバーに分散する技術。AIインフラストラクチャにおける種類、アルゴリズム、メリットを解説します。">ロードバランサー</a>、ケーブル)。</p>
+<p><strong>サーバー</strong><br/>
+さまざまなワークロードにコンピューティングリソースを提供する強力なコンピューター。</p>
+<p><strong>管理ソフトウェア</strong><br/>
+リソースのプロビジョニング、スケーリング、ライフサイクル管理のためのオーケストレーション、監視、<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>ツール。</p>
+<p><strong>展開ソフトウェア</strong><br/>
+仮想コンピューティング環境を展開、統合、構成するためのツール。</p>
+<h2 id="クラウドコンピューティングサービスモデル">クラウドコンピューティングサービスモデル</h2>
+<p>クラウドサービスは、それぞれ異なるレベルの制御、柔軟性、管理を提供するいくつかのモデルを通じて提供されます。</p>
+<h3 id="infrastructure-as-a-service-iaas">Infrastructure as a Service (IaaS)</h3>
+<p><a data-lb="1" href="/ja/glossary/Cloud-Computing/" title="クラウドコンピューティングを探る:オンデマンドITリソース、サービスモデル(IaaS、PaaS、SaaS)、デプロイメントオプション(パブリック、プライベート、ハイブリッド)、そしてAIインフラストラクチャとデプロイメントにおけるメリット。">IaaS</a>は、インターネット経由で基本的なコンピューティングリソース—仮想または物理サーバー、ストレージ、ネットワーキング—を提供します。ユーザーはオペレーティングシステム、アプリケーション、データを管理し、プロバイダーは基盤となるハードウェアと仮想化を管理します。</p>
+<p><strong>特徴:</strong></p>
+<ul>
+<li>高い柔軟性;ユーザーがOS、ストレージ、アプリを制御</li>
+<li>従来のワークロードの移行をサポート</li>
+<li>カスタムソフトウェアスタックを可能にする</li>
+</ul>
+<p><strong>ビジネス適合性:</strong><br/>
+環境の制御、カスタム構成、またはレガシーアプリケーションが必要な組織に最適。</p>
+<p><strong>例:</strong> Amazon EC2、Google Compute Engine、Azure Virtual Machines</p>
+<h3 id="platform-as-a-service-paas">Platform as a Service (PaaS)</h3>
+<p>PaaSは、アプリケーションの開発、実行、管理のための完全に管理された環境を提供します。プロバイダーはサーバー、ストレージ、ネットワーキング、OSを管理し、開発者はアプリケーションコードと展開に集中できます。</p>
+<p><strong>特徴:</strong></p>
+<ul>
+<li>統合された開発および展開ツール</li>
+<li>自動スケーリング、パッチ適用、メンテナンスはプロバイダーが処理</li>
+<li>合理化されたアプリケーションライフサイクル管理</li>
+</ul>
+<p><strong>ビジネス適合性:</strong><br/>
+インフラストラクチャの懸念なしにクラウドネイティブアプリやAPIを構築する開発者に最適。</p>
+<p><strong>例:</strong> Google App Engine、AWS Elastic Beanstalk、Red Hat OpenShift</p>
+<h3 id="software-as-a-service-saas">Software as a Service (SaaS)</h3>
+<p>SaaSは、インターネット経由で完全に管理された、すぐに使用できるアプリケーションを提供します。プロバイダーはすべて—ハードウェア、ソフトウェア、メンテナンス、<a data-lb="1" href="/ja/glossary/Tokenization/" title="データセキュリティ、自然言語処理、ブロックチェーンにおけるトークン化の包括的ガイド - 技術、メリット、実装方法、将来のトレンドを解説。">データセキュリティ</a>—を処理します。</p>
+<p><strong>特徴:</strong></p>
+<ul>
+<li>ブラウザまたはAPIを介してアクセス</li>
+<li>自動更新とパッチ</li>
+<li>サブスクリプションベースまたは使用量ベースの課金</li>
+</ul>
+<p><strong>ビジネス適合性:</strong><br/>
+管理オーバーヘッドなしでビジネスアプリケーションへの迅速なアクセスを求める組織に適しています。</p>
+<p><strong>例:</strong> Salesforce <a data-lb="1" href="/ja/glossary/CRM/" title="CRM(顧客関係管理)システムは、顧客とのやり取りを管理・最適化するソフトウェアです。データを一元化し、プロセスを自動化し、顧客エンゲージメントとビジネスパフォーマンスを向上させるためのインサイトを提供します。">CRM</a>、Microsoft 365、Google Workspace</p>
+<h3 id="サーバーレスコンピューティングfunction-as-a-servicefaas">サーバーレスコンピューティング(Function as a Service、FaaS)</h3>
+<p><a data-lb="1" href="/ja/glossary/Serverless-Computing/" title="サーバーレスコンピューティングは、プロバイダーがインフラストラクチャを管理するクラウド実行モデルであり、開発者はサーバーのプロビジョニングやスケーリングを行うことなく、アプリケーションの構築とデプロイが可能になります。">サーバーレスコンピューティング</a>(またはFaaS)により、開発者はサーバーやランタイム環境を管理することなく、イベントに応答してコードを実行できます。プロバイダーは基盤となるリソースを自動的にプロビジョニング、スケーリング、管理します。</p>
+<p><strong>特徴:</strong></p>
+<ul>
+<li>イベント駆動型、自動スケーリング</li>
+<li>使用したコンピューティング時間のみ支払う</li>
+<li>サーバー管理不要</li>
+</ul>
+<p><strong>ビジネス適合性:</strong><br/>
+軽量でイベント駆動型のワークロードと<a data-lb="1" href="/ja/glossary/Microservices/" title="API Gateway、Bounded Context、CQRSなど、マイクロサービスアーキテクチャの重要な概念、パターン、テクノロジーを網羅した包括的な用語集をご覧ください。">マイクロサービス</a>に最適。</p>
+<p><strong>例:</strong> AWS Lambda、Google Cloud Functions、Azure Functions</p>
+<h2 id="クラウド展開モデル">クラウド展開モデル</h2>
+<p>クラウド展開モデルは、クラウドリソースがどのようにプロビジョニングおよび管理されるかを定義します:</p>
+<h3 id="パブリッククラウド">パブリッククラウド</h3>
+<p>サードパーティプロバイダーによって運営されるパブリッククラウドは、インターネット経由でリソース(コンピューティング、ストレージ、ネットワーキング)を提供し、複数のテナント間で共有されます。</p>
+<p><strong>特徴:</strong></p>
+<ul>
+<li>高いスケーラビリティ、<a data-lb="1" href="/ja/glossary/Usage-Based-Pricing/" title="固定の月額料金ではなく、処理されたデータ量や完了したトランザクション数など、顧客が実際に使用した分だけを支払う課金モデル。">従量課金制</a>の価格設定、迅速なプロビジョニング</li>
+<li>初期コストが低く、リソースはユーザー間で共有される</li>
+</ul>
+<p><strong>ビジネス適合性:</strong><br/>
+迅速なスケーリングとコスト効率を必要とするスタートアップ、<a data-lb="1" href="/ja/glossary/SMB--Small-and-Medium-Business-/" title="従業員数500名未満の企業で、経済の基盤を形成しています。大企業よりも高い機動性を持って事業を展開する一方、テクノロジーや人材面でのリソース制約に直面しています。">中小企業</a>、エンタープライズ。</p>
+<p><strong>例:</strong> AWS、Google Cloud Platform、Microsoft Azure</p>
+<h3 id="プライベートクラウド">プライベートクラウド</h3>
+<p>プライベートクラウドは単一の組織専用で、内部またはサードパーティプロバイダーによって管理されます。</p>
+<p><strong>特徴:</strong></p>
+<ul>
+<li>より高い制御、プライバシー、セキュリティ</li>
+<li>コンプライアンスとパフォーマンスのためにカスタマイズ可能</li>
+<li>オンプレミスまたは外部でホスト可能</li>
+</ul>
+<p><strong>ビジネス適合性:</strong><br/>
+厳格な規制またはデータ主権のニーズを持つ組織。</p>
+<p><strong>例:</strong> VMware vSphere、OpenStack</p>
+<h3 id="ハイブリッドクラウド">ハイブリッドクラウド</h3>
+<p>パブリッククラウドとプライベートクラウドを組み合わせ、データとアプリケーションがそれらの間を移動できるようにして、柔軟性と最適化された展開を実現します。</p>
+<p><strong>特徴:</strong></p>
+<ul>
+<li>セキュリティとスケーラビリティのバランス</li>
+<li>クラウドバースティング、災害復旧、段階的移行をサポート</li>
+</ul>
+<p><strong>ビジネス適合性:</strong><br/>
+機密性の高いワークロードとパブリック向けアプリを併せ持つエンタープライズ。</p>
+<p><strong>例:</strong> Azure Arc、AWS Outposts</p>
+<h3 id="マルチクラウド">マルチクラウド</h3>
+<p>レジリエンス、パフォーマンス、またはベストオブブリードの機能のために、異なるプロバイダーからの複数のクラウドサービスを使用することを含みます。</p>
+<p><strong>特徴:</strong><br/>
+ベンダーロックインを回避し、柔軟性とレジリエンスを向上させます。</p>
+<p><strong>ビジネス適合性:</strong><br/>
+多様なニーズを持つ大規模組織。</p>
+<p><strong>例:</strong> コンピューティングにAWS、<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>/MLにGoogle Cloud、分析にAzureを使用。</p>
+<h2 id="クラウドコンピューティングのメリット">クラウドコンピューティングのメリット</h2>
+<p><strong>コスト効率</strong> - 資本支出を削減;使用した分だけ支払う<br/>
+<strong>スケーラビリティと弾力性</strong> - 需要に基づいて即座にスケールアップまたはダウン<br/>
+<strong>俊敏性</strong> - より迅速なイノベーションのためにリソースを迅速に展開<br/>
+<strong>グローバルリーチ</strong> - 最小限のレイテンシで世界中に展開<br/>
+<strong>信頼性と冗長性</strong> - 組み込みのバックアップと災害復旧<br/>
+<strong>自動更新</strong> - プロバイダーがパッチ適用とメンテナンスを管理<br/>
+<strong>コラボレーションとアクセシビリティ</strong> - どこからでも、どのデバイスからでもアクセス<br/>
+<strong>リソース最適化</strong> - 必要に応じてリソースを動的に割り当て<br/>
+<strong>セキュリティ</strong> - 高度なセキュリティツールと専任チーム<br/>
+<strong>イノベーション</strong> - AI、ML、IoT、分析などへのアクセス</p>
+<h2 id="一般的なユースケース">一般的なユースケース</h2>
+<p><strong>インフラストラクチャのスケーリング</strong> - ビジネスの成長やトラフィックの急増に合わせてリソースを調整<br/>
+<strong>アプリケーション開発とテスト</strong> - 事前構築されたツールでより迅速に構築、テスト、展開<br/>
+<strong>ビッグデータ分析</strong> - オンプレミスクラスターなしで大規模なデータセットを処理および分析<br/>
+<strong>災害復旧とビジネス継続性</strong> - バックアップを保存し、迅速な復旧のためにシステムを複製<br/>
+<strong>リモートコラボレーション</strong> - チームがどこからでも共有ツールとデータにアクセスできるようにする<br/>
+<strong>人工知能と機械学習</strong> - AI/MLトレーニングと推論のための強力なコンピューティングを活用<br/>
+<strong>データストレージとアーカイブ</strong> - 構造化および非<a data-lb="1" href="/ja/glossary/Structured-Data/" title="検索エンジンやコンピュータがWebページのコンテンツをより適切に理解できるよう、標準化された形式で整理された情報。評価、価格、その他の詳細情報を含むリッチな検索結果の表示を可能にします。">構造化データ</a>のための安全でスケーラブルなストレージ</p>
+<p><strong>業界の例:</strong></p>
+<ul>
+<li><strong>ヘルスケア:</strong> 個別化医療、安全なデータ共有</li>
+<li><strong>金融:</strong> リアルタイム不正検出、トランザクション処理</li>
+<li><strong>ゲーミング:</strong> グローバルオーディエンスへのオンライン配信</li>
+<li><strong>製造:</strong> IoTデータ収集、予知保全</li>
+</ul>
+<h2 id="先進技術との統合">先進技術との統合</h2>
+<p>クラウドプラットフォームは、最新技術の採用をサポートし加速します:</p>
+<p><strong>人工知能(AI)</strong> - GPU/TPUインスタンス、管理されたAI/MLサービス、事前構築されたAPI<br/>
+<strong>モノのインターネット(IoT)</strong> - 分散センサー/デバイスデータの集約と分析<br/>
+<strong>ブロックチェーン</strong> - 管理されたブロックチェーンと<a data-lb="1" href="/ja/glossary/Smart-Contract/" title="スマートコントラクトの包括的ガイド：合意を自動化し、仲介者を排除し、ビジネスプロセスを変革する自己実行型ブロックチェーンプログラムについて解説します。">スマートコントラクト</a>サービス<br/>
+<strong>エッジコンピューティング</strong> - 低レイテンシ処理のためにデータソースの近くにワークロードを展開</p>
+<h2 id="クラウドセキュリティと課題">クラウドセキュリティと課題</h2>
+<p>セキュリティは、プロバイダーとユーザー間の共有責任です。</p>
+<h3 id="セキュリティの考慮事項">セキュリティの考慮事項</h3>
+<p><strong>共有責任モデル</strong> - プロバイダーはインフラストラクチャを保護;顧客はデータ、アプリ、アクセスを保護<br/>
+<strong>データ暗号化</strong> - 保存中、転送中、使用中のデータを暗号化<br/>
+<strong>コンプライアンス</strong> - 規制要件(GDPR、HIPAA、PCI DSS)を遵守<br/>
+<strong>アイデンティティとアクセス管理</strong> - 権限を制御し、リソースアクセスを監視</p>
+<h3 id="一般的な課題">一般的な課題</h3>
+<p><strong>コスト管理</strong> - 予期しない料金を避けるために使用量を監視<br/>
+<strong>ベンダーロックイン</strong> - 依存を避けるためにオープンスタンダードとマルチクラウド戦略を使用<br/>
+<strong>複雑性</strong> - ハイブリッドとマルチクラウドは管理の複雑性を増加させる</p>
+<h2 id="クラウドコンピューティングを始める方法">クラウドコンピューティングを始める方法</h2>
+<ol>
+<li><strong>ニーズの評価</strong> - ワークロードとクラウド目標を特定</li>
+<li><strong>モデルの選択</strong> - IaaS、PaaS、SaaS;パブリック、プライベート、ハイブリッド、またはマルチクラウドを選択</li>
+<li><strong>プロバイダーの評価</strong> - AWS、Google Cloud、Azureなどを比較</li>
+<li><strong>移行の計画</strong> - 移行と統合戦略を開発</li>
+<li><strong>セキュリティの実装</strong> - 役割、ポリシー、監視を定義</li>
+<li><strong>監視と最適化</strong> - パフォーマンスとコスト管理のためにプロバイダーツールを使用</li>
+<li><strong>パイロットとスケール</strong> - パイロットから開始;成功したワークロードをスケール</li>
+</ol>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>AWS. (n.d.). What is Cloud Computing?. AWS.</li>
+<li>AWS. (n.d.). Types of Cloud Computing. AWS.</li>
+<li>AWS. (n.d.). What is IaaS?. AWS.</li>
+<li>AWS. (n.d.). What is <a data-lb="1" href="/ja/glossary/Integration-Platform-as-a-Service--iPaaS-/" title="iPaaSプラットフォームの包括的ガイド。クラウドベースの統合ソリューション、API管理、データ変換、エンタープライズ接続について解説します。">iPaaS</a>?. AWS.</li>
+<li>AWS. (n.d.). What is SaaS?. AWS.</li>
+<li>AWS. (n.d.). AWS Serverless. AWS.</li>
+<li>AWS. (n.d.). Case Studies. AWS.</li>
+<li>AWS. (n.d.). What is Cloud Infrastructure?. AWS.</li>
+<li>AWS EC2. Cloud Computing Service. URL: <a href="https://aws.amazon.com/ec2/" rel="nofollow noopener noreferrer" target="_blank">https://aws.amazon.com/ec2/</a></li>
+<li>AWS Elastic Beanstalk. Cloud Computing Service. URL: <a href="https://aws.amazon.com/elasticbeanstalk/" rel="nofollow noopener noreferrer" target="_blank">https://aws.amazon.com/elasticbeanstalk/</a></li>
+<li>AWS Lambda. Cloud Computing Service. URL: <a href="https://aws.amazon.com/lambda/" rel="nofollow noopener noreferrer" target="_blank">https://aws.amazon.com/lambda/</a></li>
+<li>AWS Outposts. Cloud Computing Service. URL: <a href="https://aws.amazon.com/outposts/" rel="nofollow noopener noreferrer" target="_blank">https://aws.amazon.com/outposts/</a></li>
+<li>Google Cloud. (n.d.). What is Cloud Computing?. Google Cloud.</li>
+<li>Google Cloud. (n.d.). What is Cloud Architecture?. Google Cloud.</li>
+<li>Google Cloud. (n.d.). PaaS vs IaaS vs SaaS. Google Cloud.</li>
+<li>Google Cloud. (n.d.). What is IaaS?. Google Cloud.</li>
+<li>Google Cloud. (n.d.). What is PaaS?. Google Cloud.</li>
+<li>Google Cloud. (n.d.). What is SaaS?. Google Cloud.</li>
+<li>Google Cloud. (n.d.). What is Public Cloud?. Google Cloud.</li>
+<li>Google Cloud. (n.d.). What is a Private Cloud?. Google Cloud.</li>
+<li>Google Cloud. (n.d.). What is Hybrid Cloud?. Google Cloud.</li>
+<li>Google Cloud. (n.d.). Google Cloud Serverless. Google Cloud.</li>
+<li>Google Compute Engine. Cloud Computing Service. URL: <a href="https://cloud.google.com/compute" rel="nofollow noopener noreferrer" target="_blank">https://cloud.google.com/compute</a></li>
+<li>Google App Engine. Cloud Computing Service. URL: <a href="https://cloud.google.com/appengine" rel="nofollow noopener noreferrer" target="_blank">https://cloud.google.com/appengine</a></li>
+<li>Google Cloud Functions. Cloud Computing Service. URL: <a href="https://cloud.google.com/functions" rel="nofollow noopener noreferrer" target="_blank">https://cloud.google.com/functions</a></li>
+<li>Google Workspace. Cloud Computing Service. URL: <a href="https://workspace.google.com/" rel="nofollow noopener noreferrer" target="_blank">https://workspace.google.com/</a></li>
+<li>IBM. (n.d.). What is Cloud Computing?. IBM Think Topics.</li>
+<li>IBM. (n.d.). Cloud Architecture. IBM Think Topics.</li>
+<li>IBM. (n.d.). IaaS, PaaS, SaaS. IBM Think Topics.</li>
+<li>IBM. (n.d.). What is IaaS?. IBM Think Topics.</li>
+<li>IBM. (n.d.). What is PaaS?. IBM Think Topics.</li>
+<li>IBM. (n.d.). What is SaaS?. IBM Think Topics.</li>
+<li>IBM. (n.d.). Cloud Security. IBM Think Topics.</li>
+<li>Azure Virtual Machines. Cloud Computing Service. URL: <a href="https://azure.microsoft.com/en-us/services/virtual-machines/" rel="nofollow noopener noreferrer" target="_blank">https://azure.microsoft.com/en-us/services/virtual-machines/</a></li>
+<li>Azure Functions. Cloud Computing Service. URL: <a href="https://azure.microsoft.com/en-us/services/functions/" rel="nofollow noopener noreferrer" target="_blank">https://azure.microsoft.com/en-us/services/functions/</a></li>
+<li>Azure Arc. Cloud Computing Service. URL: <a href="https://azure.microsoft.com/en-us/services/azure-arc/" rel="nofollow noopener noreferrer" target="_blank">https://azure.microsoft.com/en-us/services/azure-arc/</a></li>
+<li>Microsoft 365. Cloud Computing Service. URL: <a href="https://www.microsoft.com/en-us/microsoft-365" rel="nofollow noopener noreferrer" target="_blank">https://www.microsoft.com/en-us/microsoft-365</a></li>
+<li>Salesforce CRM. Cloud Computing Service. URL: <a href="https://www.salesforce.com/" rel="nofollow noopener noreferrer" target="_blank">https://www.salesforce.com/</a></li>
+<li>Red Hat OpenShift. Cloud Computing Service. URL: <a href="https://www.redhat.com/en/technologies/cloud-computing/openshift" rel="nofollow noopener noreferrer" target="_blank">https://www.redhat.com/en/technologies/cloud-computing/openshift</a></li>
+<li>VMware vSphere. Cloud Computing Service. URL: <a href="https://www.vmware.com/products/vsphere.html" rel="nofollow noopener noreferrer" target="_blank">https://www.vmware.com/products/vsphere.html</a></li>
+<li>OpenStack. Cloud Computing Service. URL: <a href="https://www.openstack.org/" rel="nofollow noopener noreferrer" target="_blank">https://www.openstack.org/</a></li>
+<li>OpenMetal. (n.d.). What is Cloud Computing?. OpenMetal Blog.</li>
+<li>GeeksforGeeks. (n.d.). Cloud Computing Architecture. GeeksforGeeks.</li>
+<li>GeeksforGeeks. (n.d.). Cloud Computing Infrastructure. GeeksforGeeks.</li>
+<li>Spot.io. (n.d.). Cloud Infrastructure Components and Deployment Models. Spot.io Resources.</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/cloud-service/">
+                    クラウドサービス
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    クラウドサービスとは、サードパーティベンダーがインターネット経由で提供するITリソースです。SaaS、PaaS、IaaS、FaaS、XaaSモデルの特徴、メリット、ユースケースを理解しましょう。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/cloud-service/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/cloud-based/">
+                    クラウドベース
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    クラウドベースシステムについて学ぶ:定義、歴史、仕組み、デプロイメントモデル(パブリック、プライベート、ハイブリッド)、サービスモデル(SaaS、PaaS、IaaS)、メリット、そして現代のテクノロジ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/cloud-based/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SaaS--Software-as-a-Service-/">
+                    SaaS(Software as a Service)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    インターネット経由でサブスクリプション形式で提供されるソフトウェアで、インストールやメンテナンスが不要です。ユーザーは任意のデバイスからいつでも最新バージョンにアクセスできます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SaaS--Software-as-a-Service-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Multi-Tenancy/">
+                    マルチテナンシー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    マルチテナンシーは、単一のアプリケーションインスタンスが複数のテナントにサービスを提供するソフトウェアアーキテクチャです。インフラストラクチャを共有しながら、データを論理的に分離します。SaaSやクラ...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Multi-Tenancy/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/FinOps-for-AI/">
+                    AI向けFinOps
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/FinOps-for-AI/" title="AI向けFinOpsは、財務管理、クラウド運用、AIインフラストラクチャガバナンスを統合し、AIリソースの財務パフォーマンスを最適化および管理する規律です。">AI向けFinOps</a>は、財務管理、クラウド運用、AIインフラストラクチャガバナンスを統合し、AIリソースの財務パフォーマンスを最適化および管理する規律です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/FinOps-for-AI/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Alibaba/">
+                    Alibaba
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Alibabaは、オンラインマーケットプレイスとデジタルサービスを運営する中国のテクノロジー企業で、相互接続されたプラットフォームを通じて、企業と消費者が世界中で製品を購入、販売、決済することを支援し...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Alibaba/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/cloud-computing/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>コールキュー | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Call-Queue/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="コールキューの包括的ガイド:着信電話を管理し、エージェントに振り分け、カスタマーサービス業務を最適化する自動電話システムについて解説します。" name="description"/>
+<meta content="コールキュー, 電話システム, カスタマーサービス, 通話管理, コンタクトセンター" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Call-Queue/" property="og:url"/>
+<meta content="コールキュー | SmartWeb" property="og:title"/>
+<meta content="コールキューの包括的ガイド:着信電話を管理し、エージェントに振り分け、カスタマーサービス業務を最適化する自動電話システムについて解説します。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Call-Queue/" name="twitter:url"/>
+<meta content="コールキュー | SmartWeb" name="twitter:title"/>
+<meta content="コールキューの包括的ガイド:着信電話を管理し、エージェントに振り分け、カスタマーサービス業務を最適化する自動電話システムについて解説します。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">コールキュー</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        コールキュー
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Call Queue
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          コールキューの包括的ガイド:着信電話を管理し、エージェントに振り分け、カスタマーサービス業務を最適化する自動電話システムについて解説します。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コールキュー
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                電話システム
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                カスタマーサービス
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                通話管理
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コンタクトセンター
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="コールキューとは何か">コールキューとは何か?</h2>
+<p>コールキューとは、すべての利用可能なエージェントまたは担当者が他の通話対応で忙しい場合に、着信通話を構造化された待機列に配置することで管理する自動<a data-lb="1" href="/ja/glossary/Call-Parking/" title="コールパーキング技術、実装方法、メリット、および現代のビジネスコミュニケーションシステムにおけるベストプラクティスに関する包括的なガイド。">電話システム機能</a>です。現代の通信インフラストラクチャにおけるこの基本的なコンポーネントは、音声通信のトラフィック管理システムとして機能し、発信者が組織的かつ公平な方法でサービスを受けられるようにしながら、利用可能な人的リソースの活用を最適化します。<a data-lb="1" href="/ja/glossary/Call-Queue/" title="コールキューの包括的ガイド:着信電話を管理し、エージェントに振り分け、カスタマーサービス業務を最適化する自動電話システムについて解説します。">コールキュー</a>は先入れ先出し(FIFO)処理の原則に基づいて動作しますが、高度なシステムでは優先度ベースのルーティングやインテリジェントな配信アルゴリズムを組み込んで、サービス提供を強化することができます。</p>
+<p>コールキューの背後にある技術は、シンプルな保留システムから、<a data-lb="1" href="/ja/glossary/Social-CRM/" title="顧客データとソーシャルメディア上の会話を統合し、Facebook、Twitter、Instagramなどのプラットフォーム全体で顧客を理解し、エンゲージメントを高めることを支援するビジネスシステムです。">顧客関係管理</a>(CRM)システム、ワークフォース管理ツール、分析プラットフォームと統合する洗練されたプラットフォームへと大きく進化してきました。現代のコールキューシステムは、自動番号識別(ANI)または発信者番号表示を通じて発信者を識別し、<a data-lb="1" href="/ja/glossary/Customer-Context/" title="カスタマーコンテキストの包括的ガイド - 顧客データ、行動、嗜好を理解し、パーソナライズされた体験を提供してビジネス成長を促進する方法について解説します。">顧客データ</a>ベースにアクセスしてアカウント情報を取得し、発信者履歴、エージェントのスキル、言語設定、ビジネス優先度などのさまざまな基準に基づいて通話をルーティングできます。これらのシステムは通常、発信者に推定待ち時間、キュー内の位置の更新、保留を続けるのではなくコールバックを要求するオプションを提供します。</p>
+<p>コールキューは、1日に数十件の通話を管理する小規模企業から、数千件のやり取りを処理する大規模コンタクトセンターまで、業界全体の顧客サービス業務のバックボーンとして機能します。ピーク需要期間中にサービスの継続性を維持し、貴重な<a data-lb="1" href="/ja/glossary/Operational-Metrics/" title="オペレーショナルメトリクスとは、企業が日常業務をどれだけ効率的に運営しているかを追跡する測定可能な指標であり、組織が問題を早期に発見し、プロセスを継続的に改善するのに役立ちます。">パフォーマンス指標</a>を収集し、一貫した<a data-lb="1" href="/ja/glossary/Omnichannel-Strategy/" title="すべてのタッチポイントでシームレスな顧客体験を実現するための、オムニチャネル戦略の実装、メリット、課題、ベストプラクティスに関する包括的なガイド。">顧客体験</a>を提供するシステムの能力により、電話ベースの顧客対応に依存する組織にとって不可欠なツールとなっています。基本的な通話保留機能を超えて、現代のキューシステムは、保留中の音楽、情報アナウンス、通話オーバーフロー管理、デジタル<a data-lb="1" href="/ja/glossary/DTMF--Dual-Tone-Multi-Frequency-/" title="DTMF(デュアルトーン多重周波数)は、キーパッド押下時に発生する固有の音声トーンを使用してコマンドを解釈し、通話をルーティングし、自動メニューナビゲーション、リモートコントロール、および電話ネットワークやデジタルプラットフォームにおける安全なデータ入力を可能にする通信信号システムです。">通信</a>チャネルとの統合などの機能を提供し、オムニチャネルの顧客サービス体験を創出します。</p>
+<h2 id="コールキューの主要コンポーネント">コールキューの主要コンポーネント</h2>
+<p><strong>自動通話分配装置(ACD)</strong> - 着信通話を受信し、事前定義されたルールと現在のシステム状態に基づいてルーティング方法を決定する中央エンジン。ACDシステムは、エージェントの可用性、発信者の優先度、スキルベースのルーティング要件などの要因を評価して、インテリジェントな配信決定を行います。</p>
+<p><strong>対話型音声応答(IVR)</strong> - 発信者が音声コマンドまたはキーパッド入力を通じてキューと対話できる自動メニューシステム。<a data-lb="1" href="/ja/glossary/IVR--Interactive-Voice-Response-/" title="インタラクティブ音声応答システムの包括的ガイド。技術、実装、メリット、自動電話システムのベストプラクティスを網羅しています。">IVRシステム</a>は、発信者情報を収集し、<a data-lb="1" href="/ja/glossary/self-service/" title="カスタマーサポートのためのセルフサービスソリューション、ツール、戦略を探求します。FAQ、ナレッジベース、AIチャットボットが顧客をエンパワーメントし、運用コストを削減する方法を学びます。">セルフサービス</a>オプションを提供し、人間のエージェントとのやり取りの前に適切なキューセグメントに通話を誘導できます。</p>
+<p><strong>キュー管理エンジン</strong> - 通話順序の維持、待ち時間の追跡、キュー容量の管理を担当するソフトウェアコンポーネント。このエンジンはリアルタイムで<a data-lb="1" href="/ja/glossary/Wait-Time/" title="様々なシステムやアプリケーションにおける待機時間の概念、実装戦略、最適化技術に関する包括的なガイド。">システムパフォーマンス</a>を監視し、しきい値を超えた場合にオーバーフローアクションまたはコールバックオプションをトリガーできます。</p>
+<p><strong>エージェントデスクトップインターフェース</strong> - エージェントに通話情報、顧客データ、キュー統計を提供する<a data-lb="1" href="/ja/glossary/UI/" title="ユーザーインターフェース(UI)の定義、種類、デザイン原則、実用的なユースケースを解説します。アプリからAIチャットボットまで、UIが人間とデジタルの相互作用をどのように促進するかを学びましょう。">ユーザーインターフェース</a>。現代のインターフェースはCRMシステムと統合され、通話が配信されたときに関連する顧客情報を含む<a data-lb="1" href="/ja/glossary/Screen-Pop/" title="コンタクトセンターにおけるスクリーンポップ技術の包括的ガイド。実装方法、メリット、カスタマーサービス自動化のベストプラクティスを網羅しています。">スクリーンポップ</a>を提供します。</p>
+<p><strong>レポートおよび分析モジュール</strong> - 平均待ち時間、放棄率、サービスレベル、<a data-lb="1" href="/ja/glossary/Agent-Productivity/" title="エージェント生産性とは、AIエージェントがタスクを完了する効率性の測定と改善を指し、その精度、速度、および時間の経過とともに学習し適応する能力を含みます。">エージェント生産性</a>指標などのパフォーマンスデータを収集、処理、提示するシステムコンポーネント。このモジュールにより、キューパフォーマンスの継続的な最適化が可能になります。</p>
+<p><strong>通話録音および監視システム</strong> - 品質保証、コンプライアンス、トレーニング目的で音声対話をキャプチャする技術。これらのシステムには、ライブ<a data-lb="1" href="/ja/glossary/monitoring/" title="モニタリングとは、システム、アプリケーション、ネットワーク、ビジネスオペレーションに関するデータを収集、分析、対応する体系的かつ継続的なプロセスです。パフォーマンス、セキュリティ、ユーザーエクスペリエンスに関するリアルタイムの可視性を提供します。">モニタリング</a>、ウィスパーコーチング、自動<a data-lb="1" href="/ja/glossary/Quality-Score/" title="検索エンジンが広告の関連性と有用性を測定するために使用する評価システム(1〜10)で、広告の表示頻度とクリック単価に影響を与えます。">品質スコア</a>リングの機能が含まれることがよくあります。</p>
+<p><strong>ワークフォース管理統合</strong> - 通話量を予測し、<a data-lb="1" href="/ja/glossary/Service-Level-Agreement--SLA-/" title="サービスレベル契約(SLA)の包括的ガイド - 定義、構成要素、実装のベストプラクティス、およびサービス管理における将来のトレンドを解説します。">サービスレベル契約</a>を維持し顧客の待ち時間を最小限に抑えるために適切なスタッフレベルを確保するのに役立つスケジューリングおよび予測システムへの接続。</p>
+<h2 id="コールキューの仕組み">コールキューの仕組み</h2>
+<p>コールキュープロセスは、着信通話が組織の電話システムに到達し、ACDがすべての適切なエージェントが現在利用できないと判断したときに始まります。システムは直ちに通話を指定されたキューに配置すると同時に、VIP顧客ステータスやコールバック要求など、キューの位置に影響を与える可能性のある優先度インジケーターをチェックします。</p>
+<p>キューに入ると、システムは発信者に初期挨拶を提供します。これには通常、現在のキューの長さと<a data-lb="1" href="/ja/glossary/Average-Handle-Time--AHT-/" title="平均処理時間(AHT)の包括的ガイド - コンタクトセンターにおける主要指標で、パフォーマンス最適化のための総インタラクション時間を測定します。">平均処理時間</a>統計に基づく推定待ち時間が含まれます。その後、発信者は保留パターンに入り、システムが継続的に位置を監視し待ち時間の推定を更新する間、音楽、プロモーションメッセージ、または情報アナウンスを聞くことがあります。</p>
+<p><a data-lb="1" href="/ja/glossary/Queue-Management/" title="キュー管理システム、アルゴリズム、および様々なアプリケーションにおける待ち行列とリソース割り当ての最適化のためのベストプラクティスに関する包括的なガイド。">キュー管理</a>エンジンは、すべての関連するスキルグループとサービスチャネル全体でエージェントの可用性を常に評価します。エージェントが利用可能になると、システムはルーティングルールに基づいて次の適切な通話を選択します。これには、単純なキュー順序を超えて、発信者の優先度、エージェントのスキル、または専門的なサービス要件などの要因が考慮される場合があります。</p>
+<p>通話をエージェントに接続すると、システムは通常、統合されたデータベースまたは<a data-lb="1" href="/ja/glossary/Contact-Management/" title="顧客情報を整理・保存し、コミュニケーションの改善、関係性の追跡、ビジネス上の意思決定をサポートするシステム。">CRMシステム</a>から取得した関連する顧客情報を含むスクリーンポップを提供します。この情報には、発信者履歴、アカウント詳細、以前のやり取りの要約、以前のサービス対応からのメモが含まれる場合があります。</p>
+<p>プロセス全体を通じて、システムは個々の通話待ち時間、キューの長さ、放棄ポイント、エージェント処理時間などのパフォーマンスデータを継続的に収集します。このデータは、スーパーバイザーがパフォーマンスを監視し運用調整を行えるようにするリアルタイム<a data-lb="1" href="/ja/glossary/dashboard/" title="ダッシュボードとは、複数のソースから主要なデータ、KPI、トレンドを表示するビジュアルインターフェースです。迅速な監視、分析、情報に基づいた意思決定を可能にします。">ダッシュボード</a>と履歴レポートシステムに供給されます。</p>
+<p><strong>ワークフロー例</strong>: 顧客がピーク時間の午後2時に通信会社のサポートラインに電話をかけます。ACDは発信者の番号を認識し、プレミアムサービス顧客として識別します。一般キューに15件の通話が先にあるにもかかわらず、システムはこの通話を優先キューの3番目の位置に配置します。発信者は、プレミアムステータスを認識するパーソナライズされた挨拶と4分の推定待ち時間を受け取ります。エージェントが利用可能になると、システムは顧客のアカウント詳細、サービス履歴、最近の請求情報を表示するスクリーンポップとともに通話を配信します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>顧客体験の向上</strong> - コールキューは話中信号を排除し、すべての発信者がサービスを受けられるようにします。推定待ち時間やキュー内の位置の更新などの機能は、ピーク期間中の顧客の期待を管理し、フラストレーションを軽減するのに役立ちます。</p>
+<p><strong>運用効率の向上</strong> - 利用可能なエージェントに通話を自動的に配信し、組織化されたキューを維持することで、組織はエージェントの活用を最大化し、スタッフコストの比例的な増加なしにより多くの通話量を処理できます。</p>
+<p><strong>公平で一貫したサービス提供</strong> - キューシステムは通話が秩序正しく処理されることを保証し、顧客がランダムなサービス遅延を経験することを防ぎ、すべてのやり取りで予測可能なサービス体験を創出します。</p>
+<p><strong>包括的なパフォーマンスの可視性</strong> - 組み込みのレポートと分析により、通話パターン、エージェントのパフォーマンス、顧客行動に関する詳細な洞察が提供され、サービス改善と<a data-lb="1" href="/ja/glossary/Support-Capacity-Planning/" title="サポート容量計画とは、カスタマーサポートのニーズを予測し、サービス品質目標を達成しながら効率的に対応するためのスタッフとリソースを配分するプロセスです。">リソース配分</a>のためのデータ駆動型の意思決定が可能になります。</p>
+<p><strong>柔軟なルーティング機能</strong> - 高度なキューシステムは、エージェントのスキル、顧客の優先度、言語設定、<a data-lb="1" href="/ja/glossary/rules-engine/" title="ルールエンジンは、事前定義された「if-then」ルールに対してデータを評価することで意思決定を自動化し、ビジネスロジックをコードから分離して効率的な管理と更新を実現します。">ビジネスルール</a>などの複数の基準に基づいて通話をルーティングでき、顧客のニーズとエージェントの能力の最適なマッチングを保証します。</p>
+<p><strong>スケーラビリティと成長サポート</strong> - コールキューシステムは、基本的なシステム変更を必要とせずに、エージェントの追加、キュー容量の拡大、追加の通信チャネルの統合によって、ビジネスの成長に容易に対応できます。</p>
+<p><strong>コスト最適化</strong> - エージェントの効率を向上させ、通話放棄率を削減することで、キューシステムは組織が高い<a data-lb="1" href="/ja/glossary/QoS--Quality-of-Service-/" title="Quality of Service(QoS)の包括的ガイド - ネットワークトラフィック管理、優先順位付けメカニズム、最適なパフォーマンスを実現するための実装戦略について解説します。">サービス品質</a>を維持しながら、顧客サービス業務からより良い<a data-lb="1" href="/ja/glossary/ROI/" title="投資収益率(ROI)は、投資効率を定量化する財務指標です。AIチャットボットと自動化のROI計算方法、主要な構成要素、指標、実際の事例について学びましょう。">投資収益率</a>を達成するのに役立ちます。</p>
+<p><strong>統合機能</strong> - 現代のキューシステムは、CRMプラットフォーム、ワークフォース管理ツール、その他のビジネスアプリケーションとシームレスに統合され、エージェントの生産性と<a data-lb="1" href="/ja/glossary/Service-Recovery/" title="サービスリカバリー:問題が発生した後、企業がサービスの問題を修正し、顧客満足度を回復するために取る行動。ネガティブな体験をロイヤルティを構築する機会に変えるプロセスです。">顧客満足度</a>の両方を向上させる統一された顧客サービスエコシステムを創出します。</p>
+<p><strong>オーバーフローと災害復旧</strong> - キューシステムは、容量制限に達したときに、代替ロケーション、コールバックシステム、またはデジタルチャネルに通話を自動的にリダイレクトでき、予期しない需要急増やシステム停止時のビジネス継続性を保証します。</p>
+<p><strong>コンプライアンスと品質保証</strong> - 組み込みの<a data-lb="1" href="/ja/glossary/Call-Recording/" title="通話録音技術、実装方法、法令遵守、品質保証のためのビジネス活用に関する包括的なガイド。">通話録音</a>、監視、レポート機能により、組織は規制要件を満たし、体系的なパフォーマンス追跡とエージェントコーチングプログラムを通じて一貫したサービス品質を維持できます。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>カスタマーサポートセンター</strong> - 組織はコールキューを使用して、技術サポート、請求に関する問い合わせ、一般的な顧客サービスの通話を管理し、サービスレベル契約を維持しながら多様な顧客ニーズの体系的な処理を保証します。</p>
+<p><strong>営業とリード管理</strong> - 企業はキューを実装して、インバウンド営業電話を適格な担当者に配分します。多くの場合、スキルベースのルーティングを使用して、見込み客を関連する製品の専門知識や業界知識を持つエージェントとマッチングします。</p>
+<p><strong>医療予約スケジューリング</strong> - 医療施設はコールキューを利用して、予約リクエスト、処方箋の補充、患者の問い合わせを管理し、HIPAA準拠と適格な医療スタッフへの適切なルーティングを保証します。</p>
+<p><strong>金融サービスサポート</strong> - 銀行や金融機関は、アカウント照会、ローン申請、詐欺報告を適切な<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>対策とサービスの複雑さに基づく専門的なエージェントルーティングで処理するためにキューシステムを展開します。</p>
+<p><strong>緊急および危機ホットライン</strong> - 危機介入サービスを提供する組織は、優先度ベースのキューシステムを使用して、緊急通話が即座に注意を受けることを保証しながら、すべての発信者のサービス可用性を維持します。</p>
+<p><strong>政府サービスセンター</strong> - 公的機関はコールキューを実装して、サービス、給付、<a data-lb="1" href="/ja/glossary/Compliance-Audit/" title="コンプライアンス監査の包括的ガイド:規制遵守とリスク管理のためのプロセス、フレームワーク、メリット、ベストプラクティス。">規制遵守</a>に関する市民の問い合わせを管理し、多くの場合、包括的なサービス提供のためにケース管理システムと統合します。</p>
+<p><strong>Eコマース注文サポート</strong> - オンライン小売業者はキューシステムを使用して、注文照会、返品処理、配送に関する質問を処理し、多くの場合、注文管理システムと統合してエージェントにリアルタイムの取引情報を提供します。</p>
+<p><strong>技術ヘルプデスク</strong> - ITサービス組織は、技術的専門知識の要件、影響を受けるシステム、インシデントの優先度レベルに基づいて通話をルーティングする洗練されたキューシステムを展開し、効率的な<a data-lb="1" href="/ja/glossary/Escalation-Management/" title="フロントラインのスタッフが解決できない複雑な問題を、より高度な専門家に引き継ぐシステムです。迅速な解決と優れた顧客サービスを実現します。">問題解決</a>を保証します。</p>
+<h2 id="コールキューシステムの比較">コールキューシステムの比較</h2>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>基本キュー</th>
+<th>高度なキュー</th>
+<th>エンタープライズキュー</th>
+<th>クラウドベースキュー</th>
+<th>AI強化キュー</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ルーティングオプション</strong></td>
+<td>FIFOのみ</td>
+<td>スキルベース</td>
+<td>複数基準</td>
+<td>動的ルーティング</td>
+<td>予測ルーティング</td>
+</tr>
+<tr>
+<td><strong>統合機能</strong></td>
+<td>限定的</td>
+<td>CRM統合</td>
+<td>フルエコシステム</td>
+<td>API駆動</td>
+<td>オムニチャネル</td>
+</tr>
+<tr>
+<td><strong>分析の深さ</strong></td>
+<td>基本レポート</td>
+<td>リアルタイムダッシュボード</td>
+<td>予測分析</td>
+<td>クラウド分析</td>
+<td>AI洞察</td>
+</tr>
+<tr>
+<td><strong>スケーラビリティ</strong></td>
+<td>固定容量</td>
+<td>中程度の拡張</td>
+<td>無制限の成長</td>
+<td>弾力的なスケーリング</td>
+<td>自動スケーリング</td>
+</tr>
+<tr>
+<td><strong>コスト構造</strong></td>
+<td>低い初期コスト</td>
+<td>中程度の投資</td>
+<td>高い初期コスト</td>
+<td>サブスクリプションモデル</td>
+<td>使用量ベースの価格設定</td>
+</tr>
+<tr>
+<td><strong>展開時間</strong></td>
+<td>数日</td>
+<td>数週間</td>
+<td>数ヶ月</td>
+<td>数時間</td>
+<td>迅速な展開</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>通話放棄管理</strong> - 高い放棄率は、不適切なスタッフ配置または過度の待ち時間を示す可能性があり、コールバックオプションとキュー管理戦略を実装しながら、サービスレベルと運用コストの間の慎重なバランスが必要です。</p>
+<p><strong>ピーク量の処理</strong> - 緊急事態、プロモーション、または季節的なイベント中の通話量の突然の急増を管理するには、堅牢なオーバーフロー戦略、動的なスタッフ調整、代替サービスチャネルの活性化が必要です。</p>
+<p><strong>エージェントスキルマッチング</strong> - 効果的なスキルベースのルーティングを実装するには、包括的なエージェントプロファイリング、継続的なスキル評価、専門知識のマッチングとキュー効率のバランスをとる洗練されたルーティングアルゴリズムが必要です。</p>
+<p><strong>技術統合の複雑さ</strong> - キューシステムを既存のCRM、ワークフォース管理、通信プラットフォームと接続することは、専門的な専門知識と慎重な<a data-lb="1" href="/ja/glossary/Change-Management/" title="組織変革イニシアチブを成功させるための変更管理プロセス、方法論、ベストプラクティスに関する包括的なガイド。">変更管理</a>を必要とする技術的課題を提示する可能性があります。</p>
+<p><strong>パフォーマンス最適化</strong> - キューパフォーマンスを継続的に改善するには、メトリクスの継続的な分析、定期的なシステムチューニング、変化するビジネス要件と顧客期待への適応が必要です。</p>
+<p><strong>コンプライアンスとセキュリティ</strong> - システム機能を維持しながら、通話録音、データ保護、顧客プライバシーに関する業界規制を満たすには、慎重な構成と継続的な監視が必要です。</p>
+<p><strong>コスト管理</strong> - サービス品質と運用コストのバランスをとることには、顧客満足度とビジネス収益性に直接影響するスタッフレベル、技術投資、サービスレベル目標に関する複雑な決定が含まれます。</p>
+<p><strong>マルチチャネル調整</strong> - 音声キューをデジタル通信チャネルと統合するには、すべてのタッチポイントで一貫したサービス体験を維持するための洗練されたルーティングロジックとエージェントトレーニングが必要です。</p>
+<p><strong>リアルタイム適応性</strong> - キューシステムは、エージェントの可用性、通話の複雑さの変動、予期しないシステムの問題などの変化する状況に動的に対応しながら、サービスの継続性を維持する必要があります。</p>
+<p><strong>顧客期待管理</strong> - 正確な待ち時間の推定を提供し、長時間の保留中に発信者のエンゲージメントを維持するには、洗練された予測アルゴリズムと魅力的な保留体験デザインが必要です。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>包括的な要件分析</strong> - 通話量、ピークパターン、エージェントのスキル、ビジネス目標の徹底的な評価を実施して、組織のニーズと顧客期待に合致するキュー構成を設計します。</p>
+<p><strong>段階的な展開戦略</strong> - 基本機能から始めて段階的に高度な機能を追加することで、キューシステムを段階的に実装し、混乱を最小限に抑え、実際のパフォーマンスに基づくシステム最適化を可能にします。</p>
+<p><strong>エージェントトレーニングと変更管理</strong> - 新しいキューインターフェース、ルーティングロジック、パフォーマンス指標に関する包括的なトレーニングを提供し、監視と生産性測定に関する懸念に対処して、成功した採用を保証します。</p>
+<p><strong>パフォーマンスベースラインの確立</strong> - 実装前に現在のサービスレベル、通話処理メトリクス、顧客満足度スコアを文書化して、キューシステムの影響と投資収益率の正確な測定を可能にします。</p>
+<p><strong>統合テストと検証</strong> - CRMシステム、ワークフォース管理ツール、レポートプラットフォームとの接続を徹底的にテストして、完全な展開前にデータの正確性とシームレスなワークフロー統合を保証します。</p>
+<p><strong>監視とアラート構成</strong> - キューの長さ、待ち時間、放棄率などの主要業績評価指標のリアルタイム監視ダッシュボードと自動アラートを確立して、プロアクティブな管理を可能にします。</p>
+<p><strong>定期的なパフォーマンスレビューと最適化</strong> - キューパフォーマンスデータ、エージェントフィードバック、顧客満足度メトリクスの定期的な分析をスケジュールして、改善機会とシステムチューニング要件を特定します。</p>
+<p><strong>災害復旧とビジネス継続性計画</strong> - システム停止または予期しない需要急増時に運用を維持するための包括的なバックアップ手順、オーバーフロールーティング戦略、代替サービス提供方法を開発します。</p>
+<p><strong>顧客コミュニケーション戦略</strong> - 関連情報またはセルフサービスオプションを通じて価値を提供しながら、期待を管理する明確で有益な保留メッセージと待ち時間アナウンスを設計します。</p>
+<p><strong>継続的改善文化</strong> - 定期的なシステム評価、エージェントフィードバック収集、顧客インプット収集のプロセスを確立して、継続的な強化を推進し、競争力のあるサービス提供を維持します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p><strong>予測通話ルーティング</strong> - 機械学習アルゴリズムを利用して、発信者の行動パターン、履歴対話データ、リアルタイムシステム状態を分析し、最適なルーティング決定を予測し、全体的な処理時間を削減します。</p>
+<p><strong>動的キュー優先順位付け</strong> - 顧客生涯価値、サービス履歴、苦情エスカレーションステータス、ビジネスへの影響に基づくインテリジェントな優先度調整を実装して、リソース配分と顧客満足度を最適化します。</p>
+<p><strong>コールバック最適化</strong> - 顧客の好み、履歴応答率、エージェントの可用性に基づいて最適な連絡時間を予測する洗練されたコールバックシステムを展開して、コールバック試行を最小限に抑え、接続率を向上させます。</p>
+<p><strong>センチメントベースのルーティング</strong> - 音声分析と感情検出技術を統合して、イライラしているまたは動揺している発信者を識別し、エスカレーション解除と問題解決技術のトレーニングを受けた専門エージェントにルーティングします。</p>
+<p><strong>オムニチャネルキュー統合</strong> - 音声、チャット、電子メール、ソーシャルメディアチャネル全体でやり取りを管理する統一されたキューを作成し、エージェントが複数の通信タイプを処理できるようにし、顧客にシームレスなチャネル切り替えを提供します。</p>
+<p><strong>ワークフォース最適化統合</strong> - 人工知能を使用してスタッフのニーズを予測し、スケジュールを最適化し、リアルタイムの状況に基づいてルーティングパラメータを自動的に調整する高度なワークフォース管理プラットフォームとキューシステムを接続します。</p>
+<h2 id="将来の方向性">将来の方向性</h2>
+<p><strong>人工知能統合</strong> - 高度なAIシステムは、より洗練された通話ルーティング、自動化された顧客意図認識、サポート組織に連絡する前に顧客のニーズを予測する予測分析を提供します。</p>
+<p><strong>音声分析と自然言語処理</strong> - 強化された音声認識技術により、通話目的の自動分類、感情検出、顧客体験とエージェントパフォーマンスの両方を改善するリアルタイムコーチング提案が可能になります。</p>
+<p><strong>クラウドネイティブアーキテクチャの進化</strong> - 次世代キューシステムは、クラウドネイティブ技術を活用して、インフラストラクチャコストと展開の複雑さを削減しながら、スケーラビリティ、信頼性、統合機能を向上させます。</p>
+<p><strong>プロアクティブな顧客エンゲージメント</strong> - 将来のシステムは、予測分析を使用して潜在的な顧客の問題を特定し、プロアクティブなアウトリーチを開始し、顧客満足度とロイヤルティを向上させながらインバウンド通話量を削減します。</p>
+<p><strong>拡張現実エージェント支援</strong> - AR技術は、エージェントにリアルタイムの視覚情報、ステップバイステップのガイダンス、強化されたコラボレーションツールを提供し、初回通話解決率を向上させ、トレーニング要件を削減します。</p>
+<p><strong>ブロックチェーンベースの品質保証</strong> - 分散型台帳技術により、不変の通話品質記録、透明なパフォーマンス指標、自動化されたコンプライアンス検証が可能になり、顧客サービス業務における信頼と説明責任が向上する可能性があります。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>International Customer Management Institute. (2024). “Contact Center Technology Trends and Best Practices.” ICMI Research Report.</p>
+</li>
+<li>
+<p>Gartner, Inc. (2024). “Magic Quadrant for Contact Center as a Service.” Gartner Technology Research.</p>
+</li>
+<li>
+<p>Aberdeen Group. (2023). “The State of Customer Experience Management: Benchmarking Contact Center Performance.” Aberdeen Strategy &amp; Research.</p>
+</li>
+<li>
+<p>Frost &amp; Sullivan. (2024). “Global Contact Center Infrastructure Market Analysis and Growth Opportunities.” Technology Research Division.</p>
+</li>
+<li>
+<p>Deloitte Consulting. (2023). “Digital Customer Service Transformation: Technology and Strategy Guide.” Deloitte Digital Publications.</p>
+</li>
+<li>
+<p>McKinsey &amp; Company. (2024). “The Future of Customer Service: AI, Automation, and Human Connection.” McKinsey Global Institute.</p>
+</li>
+<li>
+<p>Forrester Research. (2024). “The Forrester Wave: Contact Center Platforms.” Forrester Technology Research.</p>
+</li>
+<li>
+<p>Society of Workforce Planning Professionals. (2023). “Workforce Optimization in Modern Contact Centers.” SWPP Industry Standards.</p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/first-contact-resolution/">
+                    初回コンタクト解決率(FCR)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    初回コンタクト解決率(FCR)について学びましょう。これは、最初の接触で顧客の問題を解決できたかを測定する重要な指標です。顧客満足度、業務効率への重要性、および改善のためのベストプラクティスをご紹介し...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/first-contact-resolution/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Warm-Transfer/">
+                    ウォームトランスファー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    カスタマーサービスにおけるウォームトランスファーの包括的ガイド。実装戦略、メリット、シームレスな引き継ぎのためのベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Warm-Transfer/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Call-Parking/">
+                    コールパーキング
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    コールパーキング技術、実装方法、メリット、および現代のビジネスコミュニケーションシステムにおけるベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Call-Parking/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Toll-Free-Number/">
+                    フリーダイヤル
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    フリーダイヤルの包括的ガイド:仕組み、メリット、導入方法、ビジネスコミュニケーションのベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Toll-Free-Number/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Live-Chat/">
+                    ライブチャット
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ライブチャットシステムの包括的なガイド。実装戦略、メリット、リアルタイムの顧客コミュニケーションソリューションのベストプラクティスを解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Live-Chat/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/customer-support/">
+                    カスタマーサポート
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    カスタマーサポート業務、その重要性、種類、チャネル、そしてAIと自動化の役割について解説します。効果的なカスタマーサポートのためのベストプラクティス、チーム構成、主要指標を学びましょう。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/customer-support/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/call-queue/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

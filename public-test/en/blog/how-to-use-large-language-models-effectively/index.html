@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="utf-8">
+<meta name="viewport" content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+
+<title>How to Use Large Language Models Effectively: A Practical Guide to ChatGPT and Beyond | SmartWeb</title>
+<link rel="canonical" href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/how-to-use-large-language-models-effectively/">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/faivicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/faivicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/faivicon.png">
+<link rel="shortcut icon" href="/images/faivicon.png">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+      
+      
+
+      
+      
+        
+        
+        
+        
+        
+        
+      
+    
+  
+
+
+
+
+
+
+
+  
+  
+    
+    
+      
+      
+      
+      
+    
+  
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="%!s(<nil>)%!s(<nil>)">
+
+<link rel="alternate" hreflang="ja" href="%!s(<nil>)%!s(<nil>)">
+
+<link rel="alternate" hreflang="x-default" href="%!s(<nil>)%!s(<nil>)">
+
+
+
+<meta name="description" content="Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.">
+<meta name="keywords" content="large language models, ChatGPT, LLM applications, AI tools, prompt engineering, language model settings, AI productivity">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/how-to-use-large-language-models-effectively/">
+<meta property="og:title" content="How to Use Large Language Models Effectively: A Practical Guide to ChatGPT and Beyond | SmartWeb">
+<meta property="og:description" content="Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.">
+
+
+
+
+  
+
+
+
+
+
+<meta property="og:image" content="https://img.youtube.com/vi/EWvNQjAaOHw/maxresdefault.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/how-to-use-large-language-models-effectively/">
+<meta name="twitter:title" content="How to Use Large Language Models Effectively: A Practical Guide to ChatGPT and Beyond | SmartWeb">
+<meta name="twitter:description" content="Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.">
+<meta name="twitter:image" content="https://img.youtube.com/vi/EWvNQjAaOHw/maxresdefault.jpg">
+
+
+
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+
+<link rel="preload" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/main.css?v=20260106210129" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/custom-code-blockquote.css?v=20260106210129" crossorigin="anonymous">
+
+
+
+<script src="/js/main.js?v=20260106210129" defer></script>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+</head>
+<body class="antialiased bg-white">
+
+
+
+
+
+
+
+
+
+
+  
+  <header class="bg-white">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="/en/" class="-m-1.5 p-1.5">
+        <span class="sr-only">SmartWeb</span>
+        
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="200px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+      </a>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12"><a href="/en/" class="text-sm/6 font-semibold text-gray-900">Home</a><a href="/en/blog/" class="text-sm/6 font-semibold text-gray-900">Blog</a><a href="/en/glossary/" class="text-sm/6 font-semibold text-gray-900">Glossary</a><a href="https://www.intwk.co.jp/about/" class="text-sm/6 font-semibold text-gray-900">Company</a></div>
+    <div class="flex flex-1 items-center justify-end gap-x-6">
+      <a href="https://support.smartweb.jp/" class="hidden text-sm/6 font-semibold text-gray-900 lg:block">Support</a>
+      <a href="/en/blog/" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" aria-expanded="false" aria-controls="mobile-menu-1767700889227765000">
+        <span class="sr-only">Open main menu</span>
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  
+  <div id="mobile-menu-1767700889227765000" class="lg:hidden hidden relative z-50" role="dialog" aria-modal="true">
+    
+    <div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+      <div class="flex items-center gap-x-6">
+        <a href="/en/" class="-m-1.5 p-1.5">
+          <span class="sr-only">SmartWeb</span>
+          
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+      
+        
+      
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+          
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+            
+            
+        
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="3000"
+    >
+      
+      <source
+        type="image/png"
+        
+        data-srcset="/images/smartweb-logo.png 466w"
+        
+        sizes="(max-width: 466px) 466px, 3000px"
+        data-original-src="/images/smartweb-logo.png"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/smartweb-logo.png"
+        
+        alt="SmartWeb Logo"
+        class="lazy-image h-6 sm:h-10 md:h-12 w-auto"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/smartweb-logo.png"
+      >
+    </picture>
+
+
+  
+
+        </a>
+        <a href="/en/blog/" class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get Started</a>
+        <button type="button" class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu">
+          <span class="sr-only">Close menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6"><a href="/en/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a><a href="/en/blog/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a><a href="/en/glossary/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Glossary</a><a href="https://www.intwk.co.jp/about/" class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a></div>
+          <div class="py-6">
+            <a href="https://support.smartweb.jp/" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700889227765000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700889227765000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+
+
+
+<main class="w-full">
+  
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+  
+  <header class="py-8 sm:py-12">
+    <div class="mx-auto max-w-5xl">
+      
+      <div class="mb-6">
+        
+        <nav class="text-sm hidden sm:block">
+          <ol class="flex items-center space-x-2 text-gray-500">
+            <li class="flex items-center">
+              <a href="/en/" class="hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center">
+                <img src="/images/home-icon.png" alt="Home" class="h-5 w-5">
+              </a>
+            </li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="/en/blog/" class="hover:text-indigo-600 dark:hover:text-indigo-400">Blog</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li class="text-gray-900 dark:text-white truncate max-w-xs">How to Use Large Language Models Effectively: A Practical Guide to ChatGPT and Beyond</li>
+          </ol>
+        </nav>
+      </div>
+
+      
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight">
+        How to Use Large Language Models Effectively: A Practical Guide to ChatGPT and Beyond
+      </h1>
+
+      
+      <div class="mt-3 sm:mt-4 flex flex-wrap sm:flex-nowrap items-center gap-x-4 gap-y-2 text-sm text-gray-500">
+        
+          <div class="flex flex-wrap gap-2 sm:flex-1 min-w-0">
+            
+              <a 
+                href="/en/tags/ai/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                AI
+              </a>
+            
+              <a 
+                href="/en/tags/chatgpt/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                ChatGPT
+              </a>
+            
+              <a 
+                href="/en/tags/llms/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                LLMs
+              </a>
+            
+              <a 
+                href="/en/tags/productivity/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                Productivity
+              </a>
+            
+              <a 
+                href="/en/tags/technology/" 
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400 sm:px-3 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              >
+                Technology
+              </a>
+            
+          </div>
+        
+
+        <div class="w-full sm:w-auto sm:ml-auto">
+          
+
+  
+
+
+  
+
+
+
+
+
+
+
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+  
+
+  
+</div>
+
+        </div>
+      </div>
+
+      
+      
+        <div class="mt-5 sm:mt-6 w-full">
+          <img 
+            src="https://img.youtube.com/vi/EWvNQjAaOHw/maxresdefault.jpg" 
+            alt="How to Use Large Language Models Effectively: A Practical Guide to ChatGPT and Beyond" 
+            class="w-full h-auto rounded-lg shadow-lg object-cover"
+            style="max-height: 400px; object-fit: cover;"
+          >
+        </div>
+      
+
+      
+      
+        <p class="mt-3 sm:mt-5 text-base sm:text-lg leading-6 sm:leading-7 text-gray-600 dark:text-gray-400">
+          Learn practical applications of large language models like ChatGPT, explore different LLM platforms, understand how these models work under the hood, and discover how to leverage them effectively in your daily work and life.
+        </p>
+      
+    </div>
+  </header>
+
+  
+  <div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-5xl py-6 sm:py-8">
+    <h2 id="introduction">Introduction</h2>
+<p>Large language models have fundamentally transformed how we interact with artificial intelligence. What began with <a href="/en/glossary/ChatGPT/">ChatGPT</a>&rsquo;s viral launch in 2022 has evolved into a rich ecosystem of powerful AI tools that can assist with writing, coding, analysis, research, and countless other tasks. Whether you&rsquo;re a professional looking to enhance your productivity, a student seeking research assistance, or simply curious about how these technologies work, understanding how to effectively use language models is becoming an essential skill. This comprehensive guide walks you through the practical applications of large language models, explores the different platforms available, explains how these models function at a fundamental level, and provides actionable insights on how you can leverage them in your own work and life. By the end of this article, you&rsquo;ll have a clear understanding of not just what these tools can do, but how to use them strategically to achieve your goals.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  
+  (function() {
+    
+    if (!window.videoLightboxCSSLoaded) {
+      var cssLink = document.createElement('link');
+      cssLink.rel = 'stylesheet';
+      cssLink.href = '/css/video-lightbox.css?v=20260106210129';
+      document.head.appendChild(cssLink);
+      window.videoLightboxCSSLoaded = true;
+    }
+    
+    
+    function loadLightbox(callback) {
+      if (!window.videoLightboxLoaded && !window.videoLightboxLoading) {
+        window.videoLightboxLoading = true;
+        
+        var script = document.createElement('script');
+        script.src = '/js/video-lightbox.js?v=20260106210129';
+        script.onload = function() {
+          window.videoLightboxLoaded = true;
+          window.videoLightboxLoading = false;
+          
+          
+          if (typeof window.initVideoLightbox === 'function') {
+            window.initVideoLightbox();
+          }
+          
+          if (typeof callback === 'function') {
+            callback();
+          }
+        };
+        script.onerror = function() {
+          window.videoLightboxLoading = false;
+          console.error('Failed to load video lightbox script');
+          if (typeof callback === 'function') {
+            callback();
+          }
+        };
+        document.head.appendChild(script);
+      } else if (window.videoLightboxLoaded && typeof callback === 'function') {
+        
+        callback();
+      } else if (window.videoLightboxLoading && typeof callback === 'function') {
+        
+        var checkInterval = setInterval(function() {
+          if (window.videoLightboxLoaded) {
+            clearInterval(checkInterval);
+            callback();
+          } else if (!window.videoLightboxLoading) {
+            
+            clearInterval(checkInterval);
+            callback();
+          }
+        }, 100);
+      }
+    }
+    
+    
+    function loadHandler() {
+      if (!window.videoHandlerLoaded && !window.videoHandlerLoading) {
+        window.videoHandlerLoading = true;
+        
+        var script = document.createElement('script');
+        script.src = '/js/video-handler.js?v=20260106210129';
+        script.onload = function() {
+          window.videoHandlerLoaded = true;
+          window.videoHandlerLoading = false;
+          
+          
+          if (window.flowhuntMedia && window.flowhuntMedia.video) {
+            window.flowhuntMedia.video.init();
+          }
+        };
+        script.onerror = function() {
+          window.videoHandlerLoading = false;
+          console.error('Failed to load video handler script');
+        };
+        document.head.appendChild(script);
+      }
+    }
+    
+    
+    loadLightbox(loadHandler);
+  })();
+</script>
+
+
+
+<script>
+  
+  (function() {
+    
+    if (!window.youtubeVideoCSSLoaded) {
+      var cssLink = document.createElement('link');
+      cssLink.rel = 'stylesheet';
+      cssLink.href = '/css/youtube-video.css?v=20260106210129';
+      document.head.appendChild(cssLink);
+      window.youtubeVideoCSSLoaded = true;
+    }
+    
+    
+    if (!window.youtubeVideoLoaded && !window.youtubeVideoLoading) {
+      window.youtubeVideoLoading = true;
+      
+      var script = document.createElement('script');
+      script.src = '/js/youtube-video.js?v=20260106210129';
+      script.onload = function() {
+        window.youtubeVideoLoaded = true;
+        window.youtubeVideoLoading = false;
+      };
+      script.onerror = function() {
+        window.youtubeVideoLoading = false;
+        console.error('Failed to load YouTube video script');
+      };
+      document.head.appendChild(script);
+    }
+  })();
+
+  
+  function findBestThumbnail(img) {
+    
+    function waitForScript() {
+      if (window.findBestThumbnail && typeof window.findBestThumbnail === 'function') {
+        window.findBestThumbnail(img);
+      } else if (!window.youtubeVideoLoading) {
+        
+        console.warn('YouTube video script not loaded, using fallback');
+        
+        if (img && img.dataset && img.dataset.src) {
+          img.src = img.dataset.src;
+        }
+      } else {
+        
+        setTimeout(waitForScript, 100);
+      }
+    }
+    waitForScript();
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "How I use LLMs",
+  "description": "How I use LLMs",
+  "thumbnailUrl": "https://img.youtube.com/vi/EWvNQjAaOHw/maxresdefault.jpg",
+  "uploadDate": "2026-01-06T21:01:29+09:00",
+  "duration": "PT0M0S",
+  "contentUrl": "https://www.youtube.com/watch?v=EWvNQjAaOHw",
+  "embedUrl": "https://www.youtube.com/embed/EWvNQjAaOHw"
+}
+</script>
+
+<div 
+  class="relative w-full overflow-hidden rounded-lg shadow-md rounded-lg shadow-md"
+  data-video-id="EWvNQjAaOHw"
+  data-video-title="How I use LLMs"
+  data-video-provider="youtube"
+  data-video-width="100%"
+  data-video-height="auto"
+  data-video-autoplay="false"
+  data-video-use-lightbox="true"
+  data-video-fallback-url="https://www.youtube.com/watch?v=EWvNQjAaOHw"
+  id="video-1767700889449958000"
+>
+  
+  
+  
+    
+  
+  
+  
+  <div class="lazy-video-thumbnail aspect-ratio video-aspect-ratio relative w-full overflow-hidden cursor-pointer" data-video-trigger="true">
+    <img 
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+      data-src="https://img.youtube.com/vi/EWvNQjAaOHw/maxresdefault.jpg"
+      alt="Thumbnail for How I use LLMs"
+      class="lazy-video-thumb-img lazy-image absolute inset-0 w-full h-full object-cover transition-transform duration-300"
+      data-video-id="EWvNQjAaOHw"
+      loading="lazy"
+      decoding="async"
+      width="100%"
+      height="auto"
+      onload="this.onload=null; if(this.dataset.src === this.src) findBestThumbnail(this);"
+    />
+  </div>
+  
+  <div class="lazy-video-play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center transition-all duration-300 z-10 w-16 h-12 bg-red-600 rounded-lg hover:bg-red-700 hover:scale-110">
+    
+      
+
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24" 
+    class="size-6 text-white ml-1"
+    fill="currentColor"
+>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 5.65257C4.5 4.22644 6.029 3.32239 7.2786 4.00967L18.8192 10.357C20.1144 11.0694 20.1144 12.9304 18.8192 13.6428L7.2786 19.9901C6.029 20.6774 4.5 19.7733 4.5 18.3472V5.65257Z" fill="currentColor"/>
+</svg>
+
+    
+  </div>
+  
+</div>
+
+
+
+
+<h2 id="understanding-large-language-models-the-foundation">Understanding Large Language Models: The Foundation</h2>
+<p>Before diving into practical applications, it&rsquo;s essential to understand what large language models actually are and how they function. A large language model is fundamentally a sophisticated pattern-matching system built on <a href="/en/glossary/neural-networks/" title="A computational model inspired by the human brain that learns patterns in data by processing information through interconnected layers, powering AI applications like image recognition and language understanding.">neural networks</a> containing billions of parameters. These parameters are numerical values that have been carefully tuned through an extensive training process to enable the model to understand and generate human language. When you interact with a language model like <a href="/en/glossary/ChatGPT/">ChatGPT</a>, you&rsquo;re essentially communicating with a compressed representation of vast amounts of text data—think of it as a &ldquo;lossy zip file&rdquo; of the internet. The model doesn&rsquo;t have access to the actual internet or any external databases; instead, all its knowledge is encoded within its parameters. This is a crucial distinction because it means the model&rsquo;s capabilities and limitations are entirely determined by what it learned during training. The model works by taking your input text, breaking it down into small chunks called tokens, and then predicting the next <a href="/en/glossary/Token/">token</a> in a sequence based on patterns it learned. This process repeats iteratively, with each new <a href="/en/glossary/Token/">token</a> prediction building on the previous ones, until the model decides it has completed its response.</p>
+<p>The training process for large language models occurs in two distinct phases, each serving a different purpose. The first phase, called <a href="/en/glossary/Pre-Training/">pre-training</a>, involves exposing the model to enormous amounts of text data from the internet and teaching it to predict the next word in a sequence. This phase is extraordinarily expensive, often costing tens of millions of dollars and requiring months of <a href="/en/glossary/computational-resources/" title="Computational Resources: The hardware and software infrastructure (processors, memory, storage, networks) needed to run programs and AI models. They power everything from everyday computing to complex data analysis.">computational resources</a>. During <a href="/en/glossary/Pre-Training/">pre-training</a>, the model absorbs vast amounts of knowledge about the world, from scientific facts to historical events to cultural references. However, because <a href="/en/glossary/Pre-Training/">pre-training</a> is so costly, it doesn&rsquo;t happen frequently—a model like <a href="/en/glossary/GPT/">GPT</a>-4 might have been pre-trained many months or even a year ago. This creates what&rsquo;s known as a knowledge cutoff, meaning the model&rsquo;s knowledge only extends to the date it was trained. Any events or information that emerged after that date simply aren&rsquo;t part of the model&rsquo;s <a href="/en/glossary/knowledge-base/" title="A centralized digital library that organizes information so customers and employees can find answers quickly without asking for help.">knowledge base</a>. The second phase, called post-training, is where the model is fine-tuned to behave like a helpful assistant. During this phase, human trainers create example conversations showing the model how to respond helpfully to user queries, and the model learns to imitate this helpful behavior. This is why <a href="/en/glossary/ChatGPT/">ChatGPT</a> feels like you&rsquo;re having a conversation with an intelligent assistant rather than just getting raw text predictions—the post-training phase has shaped the model&rsquo;s personality and communication style.</p>
+<h2 id="the-expanding-ecosystem-of-language-models-in-2025">The Expanding Ecosystem of Language Models in 2025</h2>
+<p>The landscape of available language models has expanded dramatically since ChatGPT&rsquo;s initial launch. While ChatGPT remains the incumbent leader—the most popular, most feature-rich, and most widely used language model—it is no longer the only option. The ecosystem now includes offerings from major technology companies and innovative startups, each bringing their own strengths and unique features to the table. <strong><a href="/en/glossary/Google/">Google</a></strong> has deployed <a href="/en/glossary/Gemini/">Gemini</a>, its answer to ChatGPT, which integrates deeply with <a href="/en/glossary/Google/">Google</a>&rsquo;s ecosystem and offers unique capabilities for research and information retrieval. <strong><a href="/en/glossary/Microsoft/">Microsoft</a></strong> has integrated language models into its Copilot assistant, which works across Windows, Office applications, and web browsers, making AI assistance available throughout the <a href="/en/glossary/Microsoft/">Microsoft</a> ecosystem. <strong><a href="/en/glossary/Meta/">Meta</a></strong> has also entered the space with its own language model offerings. Beyond the tech giants, several startups have created compelling alternatives. <strong><a href="/en/glossary/Anthropic/">Anthropic</a></strong>, founded by former <a href="/en/glossary/OpenAI/">OpenAI</a> researchers, has developed <a href="/en/glossary/Claude/">Claude</a>, which many users praise for its nuanced reasoning and safety features. <strong>xAI</strong>, Elon Musk&rsquo;s company, offers Grok, which emphasizes real-time information and a more irreverent communication style. <strong>DeepSeek</strong>, a Chinese company, has gained attention for offering competitive performance at lower costs. <strong>Mistral</strong>, a French company, has created models that balance capability with efficiency. This diversity means that users now have genuine choices based on their specific needs, preferences, and use cases.</p>
+<p>To keep track of this rapidly evolving landscape, several resources have emerged to help users understand which models perform best on different tasks. <strong><a href="/en/glossary/Chatbot/">Chatbot</a> Arena</strong>, created by the team behind LMSYS, allows users to compare different language models side-by-side and vote on which responses they prefer. This crowdsourced approach generates an ELO rating system that ranks models based on their performance in real conversations. <strong>Scale&rsquo;s Leaderboard</strong> provides another perspective, offering detailed evaluations of different models across a wide variety of benchmarks and tasks. These leaderboards are invaluable for understanding the current state of the art and identifying which model might be best suited for your particular needs. The key insight here is that the language model space is no longer dominated by a single player. While ChatGPT remains the most popular and feature-rich option, the ecosystem is increasingly competitive, with different models excelling at different tasks. Some models might be better for creative writing, others for technical coding, and still others for nuanced reasoning or real-time information. Understanding this diversity allows you to choose the right tool for your specific use case rather than defaulting to a single option.</p>
+<h2 id="how-language-models-actually-work-tokens-and-context-windows">How Language Models Actually Work: Tokens and Context Windows</h2>
+<p>To use language models effectively, you need to understand how they process information at a fundamental level. The basic unit of language that models work with is called a <strong><a href="/en/glossary/Token/">token</a></strong>. A token is not a word—it&rsquo;s a small chunk of text that might be a word, part of a word, or even punctuation. For example, the word &ldquo;ChatGPT&rdquo; might be broken down into multiple tokens, while a common word like &ldquo;the&rdquo; might be a single token. The vocabulary of tokens available to a model like <a href="/en/glossary/GPT/">GPT</a>-4 contains roughly 200,000 different tokens. When you type a message to ChatGPT, your text is immediately converted into a sequence of tokens. You can actually see this process yourself using tools like the <strong>Tokenizer</strong> from <a href="/en/glossary/OpenAI/">OpenAI</a>, where you can paste text and watch it get broken down into its constituent tokens. This is important because language models don&rsquo;t see your text the way you do—they see a sequence of numerical token IDs. Understanding <a href="/en/glossary/Tokenization/">tokenization</a> helps explain why language models sometimes behave unexpectedly with certain inputs, why they might struggle with unusual spellings or formatting, and why the length of your input matters (since longer inputs consume more tokens).</p>
+<p>When you interact with a language model through an interface like ChatGPT, what you see are chat bubbles going back and forth between you and the model. However, under the hood, something different is happening. The model maintains what&rsquo;s called a <strong>context window</strong>, which is essentially a one-dimensional sequence of tokens that represents the entire <a href="/en/glossary/Conversation-History/">conversation history</a>. When you start a new chat, this context window is empty. As you type your first message, tokens representing your message are added to the context window. When you hit enter, control transfers to the language model, which then generates its response by predicting tokens one at a time and adding them to the context window. Once the model has finished (indicated by a special &ldquo;end of sequence&rdquo; token), control transfers back to you. This back-and-forth process continues, with both your messages and the model&rsquo;s responses being added to the growing context window. Everything within this context window is directly accessible to the model and influences its next response. This is why earlier messages in a conversation can affect later responses—they&rsquo;re all part of the same context window that the model is reading from.</p>
+<p>The size of the context window is a crucial limitation. Different models have different context window sizes, typically ranging from 4,000 to 200,000 tokens. This means there&rsquo;s a maximum amount of <a href="/en/glossary/Conversation-History/">conversation history</a> that the model can &ldquo;remember&rdquo; or reference. Once you exceed the context window size, older messages are effectively forgotten by the model. This is why very long conversations sometimes feel like the model is losing track of earlier points—it literally can&rsquo;t see them anymore because they&rsquo;ve been pushed out of the context window. Understanding this limitation helps explain why it&rsquo;s sometimes useful to start a new conversation rather than continuing an infinitely long one, and why providing relevant context at the beginning of a conversation is important. The context window is also why language models can&rsquo;t truly &ldquo;learn&rdquo; from conversations—they don&rsquo;t update their underlying parameters based on what you tell them. Each conversation is independent, and the model&rsquo;s knowledge remains fixed at whatever it was during training.</p>
+<h2 id="practical-business-applications-with-ai-platforms">Practical Business Applications with AI Platforms</h2>
+<p>The practical applications discussed in this guide are already available through platforms like <a href="https://www.flowhunt.io/" target="_blank" rel="nofollow noopener noreferrer">FlowHunt</a> and <a href="https://www.liveagent.com/" target="_blank" rel="nofollow noopener noreferrer">LiveAgent</a>. FlowHunt provides a no-code visual builder for creating AI workflows, enabling businesses to build chatbots, automate content generation, and connect AI capabilities to existing tools through integrations. LiveAgent offers AI-enhanced customer service features including AI Answer Improver and AI Answer Composer, which help support teams draft better responses and maintain consistency. <strong>SmartWeb</strong> combines these platforms to deliver AI chatbots, automated email responses, and intelligent ticket handling. As LLM technology continues to evolve, these platforms update their underlying models—meaning businesses that adopt these solutions today can benefit from future improvements without rebuilding their systems.</p>
+<h2 id="practical-applications-how-to-use-language-models-effectively">Practical Applications: How to Use Language Models Effectively</h2>
+<p>The most basic and fundamental way to use a language model is through simple text input and output. You type a question or request, and the model responds with text. This simple interface belies the incredible versatility of what you can accomplish. <strong>Writing tasks</strong> are among the most popular uses for language models. Whether you need to write a haiku, a poem, a cover letter, a resume, an email reply, or a full article, language models excel at generating well-structured, coherent text. They understand grammar, style, tone, and context in ways that make their writing outputs immediately useful. You can ask for a haiku about being a language model, and you&rsquo;ll get something poetic and thoughtful. You can ask for a professional email response, and you&rsquo;ll get something appropriate for a business context. This writing capability extends to creative writing, technical documentation, code comments, and countless other forms of <a href="/en/glossary/Text-Generation/">text generation</a>.</p>
+<p>Beyond simple writing, language models can engage in <strong>reasoning and analysis</strong>. You can present a complex problem and ask the model to work through it step-by-step. You can ask it to explain concepts in different ways, to break down complex topics into simpler components, or to synthesize information from multiple domains. You can use it as a brainstorming partner, asking it to generate ideas, critique your thinking, or explore different perspectives on an issue. You can ask it to help you learn by explaining concepts, answering questions, and providing examples. The model&rsquo;s ability to engage in this kind of intellectual dialogue makes it valuable for research, learning, and problem-solving. <strong>Coding assistance</strong> is another major application area. Language models can help you write code, debug existing code, explain how code works, and suggest optimizations. They can help you learn programming languages, understand algorithms, and solve coding problems. While they&rsquo;re not perfect and sometimes generate code that doesn&rsquo;t work, they&rsquo;re remarkably capable at understanding programming concepts and generating functional code.</p>
+<p><strong>Information synthesis and summarization</strong> is another powerful application. You can paste a long document, article, or transcript and ask the model to summarize it, extract key points, or answer specific questions about it. This is particularly valuable for processing large amounts of information quickly. You can ask the model to compare different perspectives, identify contradictions, or synthesize information from multiple sources. <strong>Creative tasks</strong> beyond basic writing are also well within the model&rsquo;s capabilities. You can ask it to help with worldbuilding for fiction, character development, plot brainstorming, or dialogue writing. You can ask it to help with music composition, game design, or other creative endeavors. The model&rsquo;s broad knowledge and ability to generate novel combinations of ideas make it a useful creative partner.</p>
+<h2 id="advanced-features-and-settings-customizing-your-language-model-experience">Advanced Features and Settings: Customizing Your Language Model Experience</h2>
+<p>While the basic text-in, text-out interface is powerful, language models offer advanced settings that allow you to customize their behavior for different tasks. Understanding these settings helps you get better results and use the models more effectively. The most important setting is <strong>temperature</strong>, which controls the randomness or creativity of the model&rsquo;s responses. Temperature is typically set on a scale from 0 to 2, with 0 being completely deterministic (the model will always give the same response to the same input) and higher values introducing more randomness and creativity. For tasks where you want consistent, factual, reliable answers—like answering factual questions or writing technical documentation—you&rsquo;d use a lower temperature, perhaps 0.3 to 0.7. For creative tasks where you want variety and novelty—like brainstorming ideas, writing fiction, or generating multiple options—you&rsquo;d use a higher temperature, perhaps 1.0 to 1.5. Understanding temperature helps you calibrate the model&rsquo;s behavior to match your needs.</p>
+<p>Another important setting is <strong>top-p</strong> (also called nucleus sampling), which controls diversity in a different way than temperature. While temperature affects the randomness of individual token predictions, top-p limits the model to only considering the most likely tokens that together account for a certain probability mass. For example, top-p of 0.9 means the model only considers tokens that together make up the top 90% of probability. This can produce more coherent results than temperature alone, especially at higher creativity levels. <strong>Maximum length</strong> settings allow you to control how long the model&rsquo;s response can be, which is useful when you want concise answers or when you&rsquo;re working within token limits. <strong>Frequency penalties</strong> and <strong>presence penalties</strong> are more advanced settings that discourage the model from repeating words or phrases, which can be useful for generating more diverse content. Understanding these settings and experimenting with them helps you fine-tune the model&rsquo;s behavior for your specific use case.</p>
+<h2 id="the-limitations-and-constraints-of-language-models">The Limitations and Constraints of Language Models</h2>
+<p>Understanding what language models cannot do is just as important as understanding what they can do. The most significant limitation is the <strong>knowledge cutoff</strong>. Language models have no knowledge of events that occurred after their training date. If you ask ChatGPT about something that happened last week, it won&rsquo;t know about it because that information wasn&rsquo;t part of its training data. This is a fundamental limitation that can&rsquo;t be overcome by adjusting settings or prompting differently. For current information, you need to either use a model with real-time web access (which some platforms now offer) or provide the current information yourself in your prompt.</p>
+<p>Language models also <strong>cannot perform calculations reliably</strong>. While they can sometimes do simple arithmetic, they&rsquo;re not designed for mathematical computation and will often make errors. If you need accurate calculations, you should use a calculator or programming language rather than relying on a language model. Similarly, language models <strong>cannot access external systems or tools</strong> by default. They can&rsquo;t browse the web, access databases, send emails, or interact with other software unless they&rsquo;ve been specifically integrated with those tools. This is why many modern language model platforms are adding &ldquo;tool use&rdquo; capabilities, allowing models to call functions, access APIs, and interact with external systems. However, the base language model itself is a self-contained entity that only generates text.</p>
+<p>Language models can also be <strong>confidently wrong</strong>. They can generate plausible-sounding but completely false information, a phenomenon known as &ldquo;<a href="/en/glossary/hallucination/" title="AI models generating content that sounds correct but contains false or made-up information. This occurs due to how these systems work statistically, not from intentional deception.">hallucination</a>.&rdquo; This happens because the model is trained to predict the next token based on patterns in training data, not to verify factual accuracy. It will happily generate false information if that&rsquo;s what the pattern suggests. This is why it&rsquo;s crucial to verify important information from language models and not to blindly trust their outputs, especially for factual claims. Language models also have <strong>biases</strong> that reflect biases in their training data. They may generate stereotypical or prejudiced content, and they may perform better for some groups of people than others. Being aware of these biases helps you use the models more responsibly and critically evaluate their outputs.</p>
+<h2 id="real-world-use-cases-and-practical-examples">Real-World Use Cases and Practical Examples</h2>
+<p>To illustrate how language models can be used effectively, consider several concrete examples. <strong>Content creators</strong> use language models to generate first drafts of articles, social media posts, and marketing copy. Rather than starting from a blank page, they can ask the model to generate multiple options, then select and refine the best ones. This dramatically speeds up the content creation process while maintaining quality. <strong>Customer service teams</strong> use language models to draft responses to common inquiries, suggest appropriate responses to complex issues, and even handle entire conversations for routine matters. This allows human agents to focus on complex issues that require genuine human judgment. <strong>Software developers</strong> use language models as coding assistants, asking them to help write code, explain how code works, debug problems, and suggest optimizations. This speeds up development and helps developers learn new languages and frameworks. <strong>Researchers and students</strong> use language models to help understand complex topics, summarize research papers, brainstorm ideas, and work through problems. This accelerates learning and research processes.</p>
+<p><strong>Business analysts</strong> use language models to help analyze data, generate reports, and synthesize information from multiple sources. <strong>Marketing teams</strong> use them to brainstorm campaign ideas, write copy, and analyze customer feedback. <strong>HR departments</strong> use them to draft job descriptions, interview questions, and employee communications. The common thread across all these use cases is that language models are most effective when used as assistants to human workers, handling routine and high-volume tasks while humans focus on strategy, creativity, judgment, and quality control. The most successful implementations treat language models as tools that augment human capabilities rather than as replacements for human workers.</p>
+<h2 id="choosing-the-right-language-model-for-your-needs">Choosing the Right Language Model for Your Needs</h2>
+<p>With multiple language models now available, choosing the right one for your specific needs requires understanding the strengths and weaknesses of different options. <strong>ChatGPT</strong> remains the most popular choice for good reason—it&rsquo;s feature-rich, widely available, and performs well across a broad range of tasks. It&rsquo;s a safe default choice if you&rsquo;re just getting started with language models. <strong><a href="/en/glossary/Claude/">Claude</a></strong> from <a href="/en/glossary/Anthropic/">Anthropic</a> is often praised for its nuanced reasoning, ability to handle long documents, and careful approach to safety and ethics. If you need a model that excels at analysis and reasoning, <a href="/en/glossary/Claude/">Claude</a> is worth trying. <strong><a href="/en/glossary/Gemini/">Gemini</a></strong> from <a href="/en/glossary/Google/">Google</a> integrates well with Google&rsquo;s ecosystem and offers unique capabilities for research and information retrieval. If you&rsquo;re already embedded in the Google ecosystem, <a href="/en/glossary/Gemini/">Gemini</a> might be the natural choice. <strong>Copilot</strong> from <a href="/en/glossary/Microsoft/">Microsoft</a> integrates deeply with Windows and Office applications, making it convenient if you use Microsoft products. <strong>Grok</strong> from xAI emphasizes real-time information and a more irreverent communication style, which some users prefer.</p>
+<p>The choice between models often comes down to your specific use case, your existing technology ecosystem, and your personal preferences. Rather than assuming one model is universally best, it&rsquo;s worth experimenting with a few different options to see which one works best for your particular needs. Many of these models offer free or trial versions, so you can test them before committing. As the ecosystem continues to evolve, new models will emerge and existing models will improve, so staying informed about developments in the space is valuable.</p>
+<h2 id="best-practices-for-effective-language-model-usage">Best Practices for Effective Language Model Usage</h2>
+<p>To get the most out of language models, several best practices can significantly improve your results. <strong>Be specific and detailed in your requests</strong>. Rather than asking vague questions, provide context and specify what you&rsquo;re looking for. Instead of &ldquo;write an email,&rdquo; try &ldquo;write a professional email to a client explaining why we missed a deadline, taking responsibility, and outlining our plan to prevent this in the future.&rdquo; The more specific you are, the better the model can tailor its response to your needs. <strong>Provide examples when helpful</strong>. If you want the model to write in a particular style or format, providing an example helps the model understand what you&rsquo;re looking for. You can say &ldquo;write an email in the style of this example&rdquo; and paste an example email. <strong>Iterate and refine</strong>. Rarely will the first output from a language model be exactly what you want. Use follow-up <a href="/en/glossary/prompts/" title="A prompt is an instruction or question you give to an AI system to get a specific response or result. The clearer and more detailed your prompt, the better the AI&#39;s answer will be.">prompts</a> to refine, expand, or modify the output. Ask the model to make it shorter, longer, more formal, more casual, or to focus on different aspects.</p>
+<p><strong>Verify important information</strong>. Don&rsquo;t blindly trust language model outputs, especially for factual claims. Verify important information through other sources. <strong>Use appropriate settings for your task</strong>. Adjust temperature and other settings based on whether you need consistency and accuracy (lower temperature) or creativity and variety (higher temperature). <strong>Understand the limitations</strong>. Remember that language models have a knowledge cutoff, can&rsquo;t perform calculations reliably, and can hallucinate. Work within these limitations rather than fighting against them. <strong>Combine with other tools</strong>. Language models work best as part of a broader toolkit. Combine them with search engines for current information, calculators for math, and specialized tools for specific tasks. <strong>Maintain human oversight</strong>. Always review language model outputs before using them, especially in professional or high-stakes contexts. The model is a tool to augment human judgment, not to replace it.</p>
+<h2 id="the-future-of-language-models-and-emerging-capabilities">The Future of Language Models and Emerging Capabilities</h2>
+<p>The landscape of language models continues to evolve rapidly. One significant emerging capability is <strong>tool use</strong>, where language models can call functions, access APIs, and interact with external systems. This allows models to overcome some of their fundamental limitations—they can now access current information through web search, perform calculations through code execution, and interact with business systems. As tool use becomes more sophisticated, language models will become increasingly integrated into business workflows and automated processes. Another emerging area is <strong>multimodal models</strong>, which can process not just text but also images, audio, and video. These models open up new possibilities for analysis and generation across different media types. <strong>Specialized models</strong> are also emerging, with models fine-tuned for specific domains like medicine, law, or finance, offering better performance in those specialized areas than general-purpose models.</p>
+<p>The competitive landscape will likely continue to intensify, with more companies entering the space and existing models improving. This competition benefits users by driving innovation and offering more choices. However, it also means that the landscape will continue to shift, with new models emerging and older ones becoming obsolete. Staying informed about developments in the space and being willing to experiment with new tools will help you stay ahead of the curve. The integration of language models into business processes through platforms like SmartWeb will likely accelerate, making AI assistance a standard part of how work gets done rather than a novelty or optional feature.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Large language models represent a fundamental shift in how we can interact with artificial intelligence and automate cognitive work. Understanding how these models work—from the token-level mechanics to the broader training process—helps you use them more effectively and understand their capabilities and limitations. The ecosystem of available models has expanded far beyond ChatGPT, offering genuine choices based on your specific needs and preferences. Whether you&rsquo;re using language models for writing, coding, analysis, creative work, or business processes, the key to success is treating them as powerful tools that augment human capabilities rather than as replacements for human judgment. By understanding their strengths and limitations, learning to craft effective <a href="/en/glossary/prompts/" title="A prompt is an instruction or question you give to an AI system to get a specific response or result. The clearer and more detailed your prompt, the better the AI&#39;s answer will be.">prompts</a>, adjusting settings appropriately, and maintaining human oversight, you can leverage language models to dramatically increase your productivity and capabilities. As these tools continue to evolve and become more integrated into business workflows through platforms like SmartWeb, the ability to use them effectively will become an increasingly valuable skill in the modern workplace.</p>
+
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+  
+  
+  
+  
+  
+  
+    <div class="mt-10 sm:mt-14 border-t border-gray-200 dark:border-gray-700 pt-8 sm:pt-10">
+      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 sm:mb-8">
+        Related Posts
+      </h2>
+      <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="https://img.youtube.com/vi/5QmQ49BikQY/maxresdefault.jpg" 
+                  alt="Mastering AI Security: A Comprehensive Guide to Threats, Vulnerabilities, and Defense Strategies" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/mastering-ai-security-threats-vulnerabilities-and-defense-strategies/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  Mastering AI Security: A Comprehensive Guide to Threats, Vulnerabilities, and Defense Strategies
+                </a>
+              </h3>
+              
+                
+                
+                  
+                
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  Learn the critical security risks in AI systems, from data poisoning to prompt injection and jailbre...
+                </p>
+              
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/mastering-ai-security-threats-vulnerabilities-and-defense-strategies/" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="https://img.youtube.com/vi/PqVbypvxDto/maxresdefault.jpg" 
+                  alt="The Future of Intelligence: Scaling, Innovation, and the Path to AGI" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/the-future-of-intelligence-scaling-innovation-and-the-path-to-agi/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  The Future of Intelligence: Scaling, Innovation, and the Path to AGI
+                </a>
+              </h3>
+              
+                
+                
+                  
+                
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  Explore the future of artificial intelligence with DeepMind&#39;s CEO Demis Hassabis as he discusses the...
+                </p>
+              
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/the-future-of-intelligence-scaling-innovation-and-the-path-to-agi/" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
+            
+              <div class="relative h-48 sm:h-52 w-full overflow-hidden">
+                <img 
+                  src="https://img.youtube.com/vi/P2aJ9Br1JRc/maxresdefault.jpg" 
+                  alt="How to Crack the YouTube Algorithm: Data-Driven Insights from 93,421 Videos" 
+                  class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                >
+              </div>
+            
+            <div class="flex flex-1 flex-col p-4 sm:p-5">
+              <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-2">
+                <a href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/how-to-crack-the-youtube-algorithm-data-driven-insights/" class="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  How to Crack the YouTube Algorithm: Data-Driven Insights from 93,421 Videos
+                </a>
+              </h3>
+              
+                
+                
+                  
+                
+                <p class="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex-1">
+                  Discover the exact strategies top 100 YouTubers use to get millions of views. Based on analysis of 9...
+                </p>
+              
+              <div class="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+                <a 
+                  href="https://main.d1jtfhinlastnr.amplifyapp.com/en/blog/how-to-crack-the-youtube-algorithm-data-driven-insights/" 
+                  class="inline-flex items-center text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+      </div>
+    </div>
+  
+</article>
+
+</main>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer style="background-color: #000000;">
+  
+  <div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+    
+    <svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="curveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0" />
+        </linearGradient>
+        <linearGradient id="curveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      
+      
+      <path class="curve" data-speed="0.8" stroke="url(#curveGrad1)" stroke-width="2" fill="none" />
+      <path class="curve" data-speed="1.2" stroke="url(#curveGrad2)" stroke-width="2.5" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.6" stroke="url(#curveGrad3)" stroke-width="1.5" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.5" stroke="url(#curveGrad1)" stroke-width="2" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="0.9" stroke="url(#curveGrad2)" stroke-width="3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.3" stroke="url(#curveGrad3)" stroke-width="1.8" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.7" stroke="url(#curveGrad1)" stroke-width="2.2" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.1" stroke="url(#curveGrad2)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="1.4" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="0.85" stroke="url(#curveGrad1)" stroke-width="1.5" fill="none" opacity="0.7" />
+      <path class="curve" data-speed="1.0" stroke="url(#curveGrad2)" stroke-width="2.8" fill="none" opacity="0.6" />
+      <path class="curve" data-speed="1.25" stroke="url(#curveGrad3)" stroke-width="2" fill="none" opacity="0.8" />
+      <path class="curve" data-speed="0.95" stroke="url(#curveGrad1)" stroke-width="2.3" fill="none" opacity="0.5" />
+      <path class="curve" data-speed="1.35" stroke="url(#curveGrad2)" stroke-width="1.7" fill="none" opacity="0.9" />
+      <path class="curve" data-speed="0.75" stroke="url(#curveGrad3)" stroke-width="2.5" fill="none" opacity="0.7" />
+    </svg>
+    
+    
+    <div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    <div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+    
+    <div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+      <h2 class="text-base/7 font-semibold text-indigo-400">Ready to get started?</h2>
+      <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Start using our services today</p>
+      <p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">Join thousands of satisfied customers who have transformed their business with our solutions.</p>
+      <div class="mt-8 flex justify-center">
+        <a href="/en/blog/" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get started</a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+  
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+    <div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+      
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+          
+            
+              
+            
+          
+        
+      
+    
+
+    
+    
+
+    
+    
+    
+       
+      
+      
+    
+       
+      
+      
+    
+    
+
+    
+    
+      
+      
+      
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+        
+        
+        
+        
+          
+        
+      
+    
+
+    
+    
+     
+    
+      
+      
+      
+        
+      
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+     
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+        
+        
+        
+
+        
+
+        
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+      
+        
+      
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    <picture
+      class="lazy-picture"
+      data-maxWidth="200"
+    >
+      
+      <source
+        type="image/webp"
+        
+        data-srcset="/images/interwork-logo-white-1.webp 568w"
+        
+        sizes="200px"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+      
+      
+      
+      <img
+        
+        data-src="/images/interwork-logo-white-1.webp"
+        
+        alt="Interwork"
+        class="lazy-image h-9"
+        
+        
+        loading="lazy"
+        decoding="async"
+        data-original-src="/images/interwork-logo-white-1.webp"
+      >
+    </picture>
+
+
+  
+
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Services</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">AI Solutions</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Web Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">System Development</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Consulting</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Support</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://support.smartweb.jp/" class="text-sm/6 text-gray-400 hover:text-white">Support Portal</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Documentation</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          
+          <div>
+            <h3 class="text-sm/6 font-semibold text-white">Company</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="https://www.intwk.co.jp/about/" class="text-sm/6 text-gray-400 hover:text-white">About</a>
+              </li>
+              
+              <li>
+                <a href="/en/blog/" class="text-sm/6 text-gray-400 hover:text-white">Blog</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">Careers</a>
+              </li>
+              
+              <li>
+                <a href="#" class="text-sm/6 text-gray-400 hover:text-white">News</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+          
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm/6 font-semibold text-white">Legal</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              
+              <li>
+                <a href="/en/privacy-policy/" class="text-sm/6 text-gray-400 hover:text-white">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="/en/ai-chatbot-terms-of-use/" class="text-sm/6 text-gray-400 hover:text-white">AI Chatbot Terms of Use</a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div>
+        <p class="text-sm/6 font-semibold text-white mb-4">Available Languages</p>
+        
+          
+
+
+
+
+<div class="language-selector">
+  <div class="flex flex-wrap items-center justify-center gap-3">
+    
+      
+      
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+          
+            
+            
+          
+        
+        
+        
+        
+        
+        <a href="/ja/blog/how-to-use-large-language-models-effectively/"
+           class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" 
+           title="日本語"
+           aria-label="日本語"
+           hreflang="ja">
+          <img 
+            src="/flags/jp.png"
+            alt="日本語"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </a>
+      
+    
+      
+      
+      
+      
+      
+      
+        
+        <span class="inline-flex items-center text-sm opacity-50" title="English">
+          <img 
+            src="/flags/gb.png"
+            alt="English"
+            width="24"
+            height="18"
+            class="rounded"
+          >
+        </span>
+      
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+    <div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex gap-x-6 md:order-2">
+        
+        <a href="https://github.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">GitHub</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://x.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">X</span>
+          
+
+
+
+        </a>
+        
+        <a href="https://youtube.com" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">YouTube</span>
+          
+
+
+
+        </a>
+        
+      </div>
+      <p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">&copy; 2026 Interwork Corporation All rights reserved.</p>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<div id="cookie-consent-banner" data-cookie-consent-banner class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark">
+    <div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+        <p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">Cookie Consent</strong><br> We use cookies to enhance your browsing experience and analyze our traffic. See our <a href="/en/privacy-policy/" class="font-semibold text-primary hover:text-primary-500">privacy policy</a>.</p>
+        <div class="mt-4 flex items-center gap-x-3 flex-wrap">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Accept All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-all
+    >
+      Accept All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Reject All"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=accept-necessary
+    >
+      Reject All
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group"
+      aria-label="Cookie Settings"
+      
+      target="_self"
+      
+      
+      data-cookie-consent=settings
+    >
+      Cookie Settings
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="cookie-settings-modal" class="fixed inset-0 z-50 hidden dark">
+    <div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close></div>
+    <div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-heading text-xl font-bold">Cookie Settings</h2>
+            <button type="button" class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close>
+                <span class="sr-only">Close</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Necessary Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies are required for the website to function and cannot be disabled.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="necessary-cookies" name="necessary-cookies" type="checkbox" checked disabled class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-heading text-lg font-medium">Analytics Cookies</h3>
+                        <p class="text-tertiary text-sm">These cookies help us understand how visitors interact with our website.</p>
+                    </div>
+                    <div class="ml-3 flex h-5 items-center">
+                        <input id="analytics-cookies" name="analytics-cookies" type="checkbox" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 flex justify-end gap-x-3">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-secondary dark:btn-secondary-dark px-3 py-2  not-prose group"
+      aria-label="Cancel"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-close
+    >
+      Cancel
+      
+      
+    </a>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <a
+      href="#"
+      class="btn-primary dark:btn-primary-dark px-3 py-2  not-prose group"
+      aria-label="Save Preferences"
+      
+      target="_self"
+      
+      
+      data-cookie-settings-save
+    >
+      Save Preferences
+      
+      
+    </a>
+  
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+<button
+  id="back-to-top-btn"
+  aria-label="Back to Top"
+  class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg 
+         transition-all duration-300 transform translate-y-12 opacity-0 invisible
+         hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+         dark:bg-indigo-500 dark:hover:bg-indigo-400"
+  onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+  </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+
+
+
+
+<script src="/js/app.js?v=20260106210129"></script>
+
+
+
+
+</body>
+</html>

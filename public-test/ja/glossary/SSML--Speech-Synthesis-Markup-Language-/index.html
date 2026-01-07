@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>SSML(音声合成マークアップ言語) | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SSML--Speech-Synthesis-Markup-Language-/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)/glossary/SSML--Speech-Synthesis-Markup-Language-/" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/ja/glossary/SSML--Speech-Synthesis-Markup-Language-/" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)/glossary/SSML--Speech-Synthesis-Markup-Language-/" hreflang="x-default" rel="alternate"/>
+<meta content="SSMLは、合成音声の出力を制御するためのXMLベースのマークアップ言語で、発音、イントネーション、ペース、感情などを調整でき、主要なTTSプロバイダーで使用されています。" name="description"/>
+<meta content="SSML, 音声合成マークアップ言語, Text-to-Speech, TTS, W3C, プロソディ, 音声学, 音声ユーザーインターフェース, AIチャットボット" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SSML--Speech-Synthesis-Markup-Language-/" property="og:url"/>
+<meta content="SSML(音声合成マークアップ言語) | SmartWeb" property="og:title"/>
+<meta content="SSMLは、合成音声の出力を制御するためのXMLベースのマークアップ言語で、発音、イントネーション、ペース、感情などを調整でき、主要なTTSプロバイダーで使用されています。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/SSML--Speech-Synthesis-Markup-Language-/" name="twitter:url"/>
+<meta content="SSML(音声合成マークアップ言語) | SmartWeb" name="twitter:title"/>
+<meta content="SSMLは、合成音声の出力を制御するためのXMLベースのマークアップ言語で、発音、イントネーション、ペース、感情などを調整でき、主要なTTSプロバイダーで使用されています。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">SSML(音声合成マークアップ言語)</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            AI Chatbot &amp; Automation / Text-to-Speech / Voice User Interfaces
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        SSML(音声合成マークアップ言語)
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          SSML (Speech Synthesis Markup Language)
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          SSMLは、合成音声の出力を制御するためのXMLベースのマークアップ言語で、発音、イントネーション、ペース、感情などを調整でき、主要なTTSプロバイダーで使用されています。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                SSML
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                音声合成マークアップ言語
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Text-to-Speech
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                TTS
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                W3C
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                プロソディ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                音声学
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                音声ユーザーインターフェース
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                AIチャットボット
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ssmlとは">SSMLとは?</h2>
+<p>Speech Synthesis Markup Language(SSML)は、W3Cによって開発・維持されているXMLベースのマークアップ標準であり、開発者、デザイナー、言語学者がテキストを合成音声(機械生成音声)でどのようにレンダリングするかを正確に制御できるようにします。SSMLは、<a data-lb="1" href="/AI-chatbot/" title="AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。">AIチャットボット</a>や音声アシスタントから、アクセシビリティツールや<a data-lb="1" href="/ja/glossary/IVR--Interactive-Voice-Response-/" title="インタラクティブ音声応答システムの包括的ガイド。技術、実装、メリット、自動電話システムのベストプラクティスを網羅しています。">インタラクティブ音声応答</a>システムまで、自然で表現豊かな、文脈に適した音声出力を必要とするアプリケーションに不可欠です。</p>
+<p><a data-lb="1" href="/ja/glossary/SSML--Speech-Synthesis-Markup-Language-/" title="SSMLは、合成音声の出力を制御するためのXMLベースのマークアップ言語で、発音、イントネーション、ペース、感情などを調整でき、主要なTTSプロバイダーで使用されています。">SSML</a>がない場合、テキスト読み上げ(<a data-lb="1" href="/ja/glossary/Text-to-Speech-Node/" title="Text-to-Speechノード(TTSノード)は、会話型AIおよび自動化プラットフォームにおけるモジュール式のビルディングブロックで、入力テキストを音声応答用の合成オーディオに変換します。">TTS</a>)出力はロボット的で単調になりがちで、発音ミスや不自然なイントネーションが発生しやすくなります。SSMLは、音声アルファベット(IPA、X-SAMPA)を使用した発音の細かい制御、韻律仕様(ピッチ、速度、音量、強調)、自然な間の挿入と文構造、特殊コンテンツ(日付、時刻、頭字語、通貨)の明示的な処理、音声と言語の途中切り替え、音声ファイルの埋め込みを提供することで、これらの問題を解決します。</p>
+<p><strong>業界での採用:</strong> SSMLは、Amazon Alexa Skills Kit、Google Cloud <a data-lb="1" href="/ja/glossary/Text-to-Speech/" title="Text-to-Speech技術の包括的なガイド。音声合成手法、応用分野、メリット、実装のベストプラクティスを網羅しています。">Text-to-Speech</a>、Microsoft Azure Speech Service、IBM Watson Text-to-Speech、Speechifyを含むすべての主要なクラウドTTSプロバイダーで事実上の標準となっています。</p>
+<h2 id="主要機能">主要機能</h2>
+<h3 id="韻律制御">韻律制御</h3>
+<p>ピッチ、速度、音量の属性を設定してテキストの読み上げ方を調整し、音声をより人間的で表現豊かにします。微妙な韻律の変化は、自然さとエンゲージメントを劇的に向上させます。</p>
+<h3 id="発音管理">発音管理</h3>
+<p>専門用語、ブランド名、外国語の単語について、音声アルファベットやテキスト置換を使用してデフォルトの発音を上書きします。これにより、プロフェッショナルなアプリケーションでの恥ずかしい発音ミスを防ぎます。</p>
+<h3 id="特殊コンテンツの処理">特殊コンテンツの処理</h3>
+<p>日付、時刻、略語、数字、メールアドレス、通貨を明示的に読み上げます。SSMLは「12/25」を「12月25日」として、「$19.99」を「19ドル99セント」として読み上げることを保証します。</p>
+<h3 id="表現力とスタイル">表現力とスタイル</h3>
+<p>属性やベンダー固有の拡張機能を使用して、強調、感情的なニュアンス、スタイルのバリエーションを注入します。Amazon Alexaは興奮や失望の感情をサポートし、Azureはニュース読み上げ、<a data-lb="1" href="/ja/glossary/customer-support/" title="カスタマーサポート業務、その重要性、種類、チャネル、そしてAIと自動化の役割について解説します。効果的なカスタマーサポートのためのベストプラクティス、チーム構成、主要指標を学びましょう。">カスタマーサービス</a>、陽気な配信のためのニューラル音声スタイルを提供します。</p>
+<h3 id="アクセシビリティの向上">アクセシビリティの向上</h3>
+<p>支援技術に依存するユーザーのために音声出力をより明確で理解しやすくし、視覚障害のあるユーザーの理解を向上させます。</p>
+<h3 id="音声統合">音声統合</h3>
+<p>自然な会話の流れに合った間を挿入したり、サウンドや音楽を埋め込んでユーザー体験を向上させます。バックグラウンドミュージック、効果音、音声キューは音声インタラクションを豊かにします。</p>
+<h2 id="基本構造">基本構造</h2>
+<h3 id="ルート要素-speak">ルート要素: <code>&lt;speak&gt;</code></h3>
+<p>すべての有効なSSMLドキュメントは、<a data-lb="1" href="/ja/glossary/Voice-Cloning/" title="音声クローニング技術、アプリケーション、および合成音声生成システムの実装ベストプラクティスに関する包括的なガイド。">音声合成</a>コンテンツの境界を定義する<code>&lt;speak&gt;</code>ルート要素で始まります。これは、SSMLをサポートするすべてのTTSエンジンで必須です。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  Welcome to your AI assistant.
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p><code>&lt;speak&gt;</code>タグを省略すると、エラーが発生するか、TTSエンジンがプレーンテキストレンダリングにフォールバックします。</p>
+<h2 id="必須のssmlタグ">必須のSSMLタグ</h2>
+<h3 id="break-間を挿入"><code>&lt;break&gt;</code>: 間を挿入</h3>
+<p>単語やフレーズの間に間を追加したり、境界を制御します。</p>
+<p><strong>属性:</strong></p>
+<ul>
+<li><code>time</code>: 正確な間の長さ(例:「500ms」、「2s」)</li>
+<li><code>strength</code>: 相対的な間(「none」、「x-weak」、「weak」、「medium」、「strong」、「x-strong」)</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  Please wait.<span style="font-weight:bold">&lt;break</span> <span style="color:#007f7f">time=</span><span style="color:#0ff;font-weight:bold">"1s"</span><span style="font-weight:bold">/&gt;</span>Processing your request.
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><h3 id="prosody-ピッチ速度音量を制御"><code>&lt;prosody&gt;</code>: ピッチ、速度、音量を制御</h3>
+<p>音声の表現力を変更します。</p>
+<p><strong>属性:</strong></p>
+<ul>
+<li><code>pitch</code>: 「x-low」、「low」、「medium」、「high」、「x-high」、またはパーセンテージ(「+20%」)</li>
+<li><code>rate</code>: 「x-slow」、「slow」、「medium」、「fast」、「x-fast」、またはパーセンテージ(「-20%」)</li>
+<li><code>volume</code>: 「silent」、「x-soft」、「soft」、「medium」、「loud」、「x-loud」、デシベル(「-6dB」)、またはパーセンテージ</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;prosody</span> <span style="color:#007f7f">pitch=</span><span style="color:#0ff;font-weight:bold">"high"</span> <span style="color:#007f7f">rate=</span><span style="color:#0ff;font-weight:bold">"fast"</span> <span style="color:#007f7f">volume=</span><span style="color:#0ff;font-weight:bold">"+20%"</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    This is spoken with higher pitch, faster, and louder.
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;/prosody&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p><strong>ベストプラクティス:</strong> 極端な値は避けてください。微妙な変化がより自然な音声を生み出します。</p>
+<h3 id="emphasis-単語を強調"><code>&lt;emphasis&gt;</code>: 単語を強調</h3>
+<p>特定の単語やフレーズの強調を増減します。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  You must <span style="font-weight:bold">&lt;emphasis</span> <span style="color:#007f7f">level=</span><span style="color:#0ff;font-weight:bold">"strong"</span><span style="font-weight:bold">&gt;</span>complete<span style="font-weight:bold">&lt;/emphasis&gt;</span> the task.
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p>レベル:「strong」、「moderate」、「reduced」</p>
+<h3 id="say-as-コンテンツタイプを解釈"><code>&lt;say-as&gt;</code>: コンテンツタイプを解釈</h3>
+<p>TTSにテキストを特定のタイプとして読み上げるよう指示します。</p>
+<p><strong>一般的なinterpret-as値:</strong></p>
+<ul>
+<li>「cardinal」: 数字(123 → 「123」)</li>
+<li>「ordinal」: 序数(1st → 「1番目」)</li>
+<li>「characters」: スペルアウト(「SSML」 → 「エス エス エム エル」)</li>
+<li>「date」: フォーマット指定付きの日付</li>
+<li>「time」: 時刻値</li>
+<li>「telephone」: 電話番号</li>
+<li>「currency」: 通貨金額</li>
+<li>「fraction」: 分数(「3/4」 → 「4分の3」)</li>
+<li>「unit」: 測定値</li>
+</ul>
+<p><strong>例:</strong></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;say-as</span> <span style="color:#007f7f">interpret-as=</span><span style="color:#0ff;font-weight:bold">"characters"</span><span style="font-weight:bold">&gt;</span>SSML<span style="font-weight:bold">&lt;/say-as&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;say-as</span> <span style="color:#007f7f">interpret-as=</span><span style="color:#0ff;font-weight:bold">"date"</span> <span style="color:#007f7f">format=</span><span style="color:#0ff;font-weight:bold">"yyyymmdd"</span><span style="font-weight:bold">&gt;</span>20230610<span style="font-weight:bold">&lt;/say-as&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;say-as</span> <span style="color:#007f7f">interpret-as=</span><span style="color:#0ff;font-weight:bold">"currency"</span> <span style="color:#007f7f">language=</span><span style="color:#0ff;font-weight:bold">"en-US"</span><span style="font-weight:bold">&gt;</span>$19.99<span style="font-weight:bold">&lt;/say-as&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><h3 id="phoneme-カスタム発音"><code>&lt;phoneme&gt;</code>: カスタム発音</h3>
+<p>音声アルファベットを使用して正確な発音を指定します。</p>
+<p><strong>属性:</strong></p>
+<ul>
+<li><code>alphabet</code>: 「ipa」、「x-sampa」</li>
+<li><code>ph</code>: 音声文字列</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;phoneme</span> <span style="color:#007f7f">alphabet=</span><span style="color:#0ff;font-weight:bold">"ipa"</span> <span style="color:#007f7f">ph=</span><span style="color:#0ff;font-weight:bold">"ˈniːʃ"</span><span style="font-weight:bold">&gt;</span>niche<span style="font-weight:bold">&lt;/phoneme&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><h3 id="sub-テキストを置換"><code>&lt;sub&gt;</code>: テキストを置換</h3>
+<p>囲まれたテキストの代わりにエイリアス値を読み上げます。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  Welcome to the <span style="font-weight:bold">&lt;sub</span> <span style="color:#007f7f">alias=</span><span style="color:#0ff;font-weight:bold">"World Wide Web Consortium"</span><span style="font-weight:bold">&gt;</span>W3C<span style="font-weight:bold">&lt;/sub&gt;</span>.
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p><strong>使用例:</strong> ブランド名、頭字語、外国語</p>
+<h3 id="audio-音声クリップを挿入"><code>&lt;audio&gt;</code>: 音声クリップを挿入</h3>
+<p>音声出力に録音された音声(効果音、音楽)を埋め込みます。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  Please listen to this sound.
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;audio</span> <span style="color:#007f7f">src=</span><span style="color:#0ff;font-weight:bold">"https://www.example.com/sound.mp3"</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    Unable to play audio.
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;/audio&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p><strong>プロバイダーの制限:</strong></p>
+<ul>
+<li>Google Cloud: フォーマットと時間の制限が適用されます</li>
+<li>Amazon Alexa: 最大240秒、HTTPS必須、サイズ制限あり</li>
+<li>Azure: 制限付きでサポート</li>
+</ul>
+<h3 id="voice-音声またはペルソナを変更"><code>&lt;voice&gt;</code>: 音声またはペルソナを変更</h3>
+<p>別の音声、言語、またはペルソナに切り替えます。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;voice</span> <span style="color:#007f7f">name=</span><span style="color:#0ff;font-weight:bold">"en-US-Wavenet-D"</span><span style="font-weight:bold">&gt;</span>Hello, I am the default voice.<span style="font-weight:bold">&lt;/voice&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;voice</span> <span style="color:#007f7f">name=</span><span style="color:#0ff;font-weight:bold">"en-GB-Wavenet-B"</span><span style="font-weight:bold">&gt;</span>And I am a British voice.<span style="font-weight:bold">&lt;/voice&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><h3 id="pとs-テキストを構造化"><code>&lt;p&gt;</code>と<code>&lt;s&gt;</code>: テキストを構造化</h3>
+<p>段落(<code>&lt;p&gt;</code>)と文(<code>&lt;s&gt;</code>)を定義して、より良いペーシングとグループ化を実現します。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;p&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&lt;s&gt;</span>This is the first sentence.<span style="font-weight:bold">&lt;/s&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">&lt;s&gt;</span>This is the second sentence.<span style="font-weight:bold">&lt;/s&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;/p&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><h3 id="lang-言語を指定"><code>&lt;lang&gt;</code>: 言語を指定</h3>
+<p>テキストセグメントの言語を指定し、適切な発音とアクセントを可能にします。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  Here is a word in French: <span style="font-weight:bold">&lt;lang</span> <span style="color:#007f7f">xml:lang=</span><span style="color:#0ff;font-weight:bold">"fr-FR"</span><span style="font-weight:bold">&gt;</span>bonjour<span style="font-weight:bold">&lt;/lang&gt;</span>.
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><h2 id="プロバイダー固有の拡張機能">プロバイダー固有の拡張機能</h2>
+<h3 id="amazon-alexa">Amazon Alexa</h3>
+<p><strong><code>&lt;amazon:emotion&gt;</code>:</strong> 「excited」または「disappointed」の感情を追加</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;amazon:emotion</span> <span style="color:#007f7f">name=</span><span style="color:#0ff;font-weight:bold">"excited"</span> <span style="color:#007f7f">intensity=</span><span style="color:#0ff;font-weight:bold">"medium"</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    Congratulations on your achievement!
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;/amazon:emotion&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p><strong><code>&lt;amazon:domain&gt;</code>:</strong> 配信スタイルを変更(ニュース、音楽、会話)</p>
+<h3 id="microsoft-azure">Microsoft Azure</h3>
+<p><strong><code>&lt;mstts:express-as&gt;</code>:</strong> ニューラル音声スタイルとロール</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;mstts:express-as</span> <span style="color:#007f7f">style=</span><span style="color:#0ff;font-weight:bold">"cheerful"</span><span style="font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    Welcome to our service!
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;/mstts:express-as&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p>スタイルには以下が含まれます:cheerful、sad、angry、fearful、friendly、hopeful、newscast、customer-service</p>
+<h3 id="speechify">Speechify</h3>
+<p><strong><code>&lt;speechify:style&gt;</code>:</strong> 読書体験を向上させるための独自のスタイル制御</p>
+<h2 id="実用例">実用例</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;speak&gt;</span>
+</span></span><span style="display:flex;"><span>  Welcome to the demo.
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;break</span> <span style="color:#007f7f">time=</span><span style="color:#0ff;font-weight:bold">"500ms"</span><span style="font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>  Your appointment is on
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;say-as</span> <span style="color:#007f7f">interpret-as=</span><span style="color:#0ff;font-weight:bold">"date"</span> <span style="color:#007f7f">format=</span><span style="color:#0ff;font-weight:bold">"yyyymmdd"</span><span style="font-weight:bold">&gt;</span>20230610<span style="font-weight:bold">&lt;/say-as&gt;</span>.
+</span></span><span style="display:flex;"><span>  The amount due is
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;say-as</span> <span style="color:#007f7f">interpret-as=</span><span style="color:#0ff;font-weight:bold">"currency"</span> <span style="color:#007f7f">language=</span><span style="color:#0ff;font-weight:bold">"en-US"</span><span style="font-weight:bold">&gt;</span>$19.99<span style="font-weight:bold">&lt;/say-as&gt;</span>.
+</span></span><span style="display:flex;"><span>  For assistance, call
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;say-as</span> <span style="color:#007f7f">interpret-as=</span><span style="color:#0ff;font-weight:bold">"telephone"</span><span style="font-weight:bold">&gt;</span>18001234567<span style="font-weight:bold">&lt;/say-as&gt;</span>.
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">&lt;prosody</span> <span style="color:#007f7f">rate=</span><span style="color:#0ff;font-weight:bold">"slow"</span><span style="font-weight:bold">&gt;</span>Thank you for using our service.<span style="font-weight:bold">&lt;/prosody&gt;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">&lt;/speak&gt;</span>
+</span></span></code></pre></div><p><strong>期待される出力:</strong> 「Welcome to the demo. [間] Your appointment is on June tenth, twenty twenty-three. The amount due is nineteen dollars and ninety-nine cents. For assistance, call one eight hundred one two three four five six seven. [遅く] Thank you for using our service.」</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<h3 id="aiチャットボットと仮想アシスタント">AIチャットボットと仮想アシスタント</h3>
+<p>自然な響きの応答、適切な間、感情表現で会話型AIを強化</p>
+<h3 id="カスタマーサービスivrシステム">カスタマーサービスIVRシステム</h3>
+<p>明確な発音とプロフェッショナルなトーンで発信者をメニューに案内</p>
+<h3 id="アクセシビリティアプリケーション">アクセシビリティアプリケーション</h3>
+<p>スクリーンリーダーや支援技術のための高品質な音声出力を提供</p>
+<h3 id="eラーニングプラットフォーム">eラーニングプラットフォーム</h3>
+<p>多様な音声と適切なペーシングで魅力的な教育コンテンツを作成</p>
+<h3 id="オーディオブック制作">オーディオブック制作</h3>
+<p>キャラクターの音声と感情表現を持つ自然な響きのナレーションを生成</p>
+<h3 id="スマートホームデバイス">スマートホームデバイス</h3>
+<p>適切な文脈と感情で通知と応答を配信</p>
+<h2 id="ベストプラクティス">ベストプラクティス</h2>
+<p><strong>微妙な調整:</strong> 小さな韻律の変化は、極端な変更よりも効果的です</p>
+<p><strong>プラットフォーム間でテスト:</strong> ターゲットTTSプロバイダー間でSSMLレンダリングを検証</p>
+<p><strong>音声記号は控えめに使用:</strong> 必要な場合にのみ発音を上書き</p>
+<p><strong>論理的に構造化:</strong> 自然なペーシングのために<code>&lt;p&gt;</code>と<code>&lt;s&gt;</code>タグを使用</p>
+<p><strong>速度のバランス:</strong> 自然な速度を維持し、過度に速いまたは遅い音声を避ける</p>
+<p><strong>音声品質:</strong> 埋め込み音声ファイルが適切にエンコードされ、ホストされていることを確認</p>
+<p><strong>アクセシビリティ重視:</strong> 支援技術を使用するユーザーを含むすべてのユーザーを考慮</p>
+<h2 id="実装上の考慮事項">実装上の考慮事項</h2>
+<p><strong>プラットフォーム互換性:</strong> プロバイダーによってサポートされるタグのサブセットと拡張機能が異なります</p>
+<p><strong>フォールバックコンテンツ:</strong> サポートされていないタグのためのフォールバックテキストを提供</p>
+<p><strong>文字数制限:</strong> プラットフォーム固有のテキスト長制限に注意</p>
+<p><strong>処理オーバーヘッド:</strong> 複雑なSSMLは応答時間を増加させる可能性があります</p>
+<p><strong>コスト管理:</strong> 一部のプロバイダーはマークアップを含む文字数に基づいて課金します</p>
+<p><strong>テストプロトコル:</strong> デバイスとプラットフォーム間で包括的なテストを確立</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>W3C. (n.d.). Speech Synthesis Markup Language (SSML) Version 1.1. W3C Technical Report.</p>
+</li>
+<li>
+<p>Amazon. (n.d.). Alexa: SSML Reference. Amazon Developer Documentation.</p>
+</li>
+<li>
+<p>Google Cloud. (n.d.). SSML Documentation. Google Cloud Documentation.</p>
+</li>
+<li>
+<p>Microsoft. (n.d.). Azure: Speech Synthesis Markup. Microsoft Learn.</p>
+</li>
+<li>
+<p>IBM Watson. (n.d.). SSML Elements. IBM Cloud Documentation.</p>
+</li>
+<li>
+<p>Speechify. (n.d.). SSML Features. Speechify Documentation.</p>
+</li>
+<li>
+<p>Wikipedia. (n.d.). International Phonetic Alphabet (IPA). Wikipedia.</p>
+</li>
+<li>
+<p>Microsoft. (n.d.). Azure Speech Voice Gallery. URL: <a href="https://speech.microsoft.com/portal/voicegallery" rel="nofollow noopener noreferrer" target="_blank">https://speech.microsoft.com/portal/voicegallery</a></p>
+</li>
+<li>
+<p>Google Cloud. (n.d.). Supported SSML Elements. Google Cloud Documentation.</p>
+</li>
+<li>
+<p>Microsoft. (n.d.). Azure Supported SSML Elements. Microsoft Learn.</p>
+</li>
+<li>
+<p><a data-lb="1" href="/ja/glossary/Adaptive-Cards/" title="Adaptive Cardsの包括的ガイド - アプリケーションやプラットフォーム間でリッチコンテンツカードを交換するためのプラットフォーム非依存UIフレームワーク">Adaptive Cards</a>. (n.d.). Adaptive Cards Designer. URL: <a href="https://adaptivecards.io/designer/" rel="nofollow noopener noreferrer" target="_blank">https://adaptivecards.io/designer/</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Text-to-Speech-Node/">
+                    Text-to-Speechノード
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Text-to-Speechノード(TTSノード)は、<a data-lb="1" href="/ja/glossary/Voiceflow/" title="Voiceflowは、チャットボットや音声アシスタントなどの会話型AIエージェントを設計、構築、デプロイするためのノーコードプラットフォームです。複数のチャネルにわたって顧客とのやり取りやワークフローを自動化します。">会話型AI</a>および<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>プラットフォームにおけるモジュール式のビルディングブロックで、入力テキストを音声応答用の合成オーディオに変換します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Text-to-Speech-Node/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Aggregator/">
+                    Aggregator（アグリゲーター）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    複数の実行パスやループからの出力を収集し、単一の結果に統合する<a data-lb="1" href="/ja/glossary/Nodes-and-Edges/" title="ノードはシステムにおける基本的な構成要素(アクションまたはエンティティ)であり、エッジは関係性、データフロー、または依存関係を定義する接続(線)です。">ノード</a>。効率的なデータ処理を実現します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Aggregator/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Botpress/">
+                    Botpress
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Botpress/" title="Botpressは、ビジュアルフローエディタ、高度なAI、LLM統合を備えた、AIチャットボットと会話エージェントを構築するための開発者フレンドリーなプラットフォームです。">Botpress</a>は、ビジュアルフローエディタ、高度なAI、LLM統合を備えた、AI<a data-lb="1" href="/ja/glossary/Quick-Replies/" title="クイックリプライは、チャットインターフェースに表示される一時的で選択可能なボタンで、事前定義されたオプションを提供します。選択後に消えるため、画面の煩雑さを防ぎ、会話の流れを維持します。">チャットボット</a>と会話エージェントを構築するための開発者フレンドリーなプラットフォームです。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Botpress/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ChatGPT/">
+                    ChatGPT
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ChatGPTは、<a data-lb="1" href="/ja/glossary/hallucination/" title="AIにおけるハルシネーションとは、生成モデルがもっともらしいものの事実として誤っている、意味をなさない、または捏造されたコンテンツを生成することを指します。その原因、種類、リスク、および軽減戦略について学びます。">大規模言語モデル</a>を活用した<a data-lb="1" href="/ja/glossary/ChatGPT/" title="ChatGPTは、大規模言語モデルを活用したOpenAIの高度な対話型AIアシスタントです。機能、性能、料金体系、実際の活用事例について解説します。">OpenAI</a>の高度な<a data-lb="1" href="/ja/glossary/Conversational-AI/" title="対話型AIを探求:自然言語処理、自然言語理解、機械学習、音声認識を用いて人間の会話をシミュレートする技術。その仕組み、メリット、ユースケース、将来のトレンドを学びます。">対話型AI</a>アシスタントです。機能、性能、料金体系、実際の活用事例について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/ChatGPT/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/FlowHunt/">
+                    FlowHunt
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    FlowHuntの中核となる概念、機能、統合機能について解説します。この<a data-lb="1" href="/ja/glossary/" title="AIチャットボット、自動化、カスタマーサポートに関する包括的な用語集。技術的な概念をわかりやすく解説します。">用語集</a>では、<a data-lb="1" href="/ja/glossary/Stack-AI/" title="Stack AIは、高度な大規模言語モデル(LLM)を中心とした、AIを活用したワークフローとエージェントの構築、テスト、デプロイを行うための、エンタープライズグレードのノーコード/ローコードプラットフォームです。">ノーコードAI</a>チャットボットおよび自動化プラットフォームに関する詳細な技術的定義を提供します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/FlowHunt/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/GDPR/">
+                    GDPR
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    EUの包括的な<a data-lb="1" href="/ja/glossary/Encryption-at-Rest/" title="保存データの暗号化に関する包括的なガイド - 暗号化手法によるストレージデータの保護、実装戦略、セキュリティのベストプラクティスについて解説します。">データ保護</a>規則である<a data-lb="1" href="/ja/glossary/GDPR/" title="EUの包括的なデータ保護規則であるGDPRについて理解しましょう。その原則、コンプライアンス要件、データ主体の権利、そしてAIチャットボットへの影響について学びます。">GDPR</a>について理解しましょう。その原則、コンプライアンス要件、データ主体の権利、そして<a data-lb="1" href="/ja/glossary/Precision/" title="精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。">AI</a>チャットボットへの影響について学びます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/GDPR/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/ssml--speech-synthesis-markup-language-/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+  });
+</script>
+</body>
+</html>

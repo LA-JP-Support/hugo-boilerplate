@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>ページバンドル | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Page-Bundle/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="ウェブページとそれに関連するすべてのファイル(画像、ドキュメントなど)を1つの場所にまとめるフォルダで、リンクを壊すことなくコンテンツの管理や移動を容易にします。" name="description"/>
+<meta content="ページバンドル, 静的サイトジェネレーター, コンテンツ整理, リソース管理, Hugoフレームワーク" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Page-Bundle/" property="og:url"/>
+<meta content="ページバンドル | SmartWeb" property="og:title"/>
+<meta content="ウェブページとそれに関連するすべてのファイル(画像、ドキュメントなど)を1つの場所にまとめるフォルダで、リンクを壊すことなくコンテンツの管理や移動を容易にします。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Page-Bundle/" name="twitter:url"/>
+<meta content="ページバンドル | SmartWeb" name="twitter:title"/>
+<meta content="ウェブページとそれに関連するすべてのファイル(画像、ドキュメントなど)を1つの場所にまとめるフォルダで、リンクを壊すことなくコンテンツの管理や移動を容易にします。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">ページバンドル</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        ページバンドル
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Page Bundle
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          ウェブページとそれに関連するすべてのファイル(画像、ドキュメントなど)を1つの場所にまとめるフォルダで、リンクを壊すことなくコンテンツの管理や移動を容易にします。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                ページバンドル
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                静的サイトジェネレーター
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                コンテンツ整理
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                リソース管理
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                Hugoフレームワーク
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="ページバンドルとは">ページバンドルとは?</h2>
+<p>ページバンドルは、特にHugoなどの現代的な<a data-lb="1" href="/ja/glossary/Hugo-Taxonomy/" title="Hugo におけるコンテンツ整理システムで、タグやトピックなどのカスタマイズ可能なカテゴリを使用して関連記事にラベルを付けてグループ化し、閲覧用の整理されたページを自動的に作成します。">静的サイトジェネレーター</a>における基本的な組織化概念であり、関連するコンテンツファイルとリソースを単一のディレクトリ構造にまとめるものです。このアプローチは、各ページやセクションを、メインコンテンツファイルだけでなく、画像、ドキュメント、データファイル、その他のリソースなど、関連するすべてのアセットを含む自己完結型のユニットとして扱うことで、開発者やコンテンツ制作者がWebコンテンツを管理する方法を革新します。ページバンドルの概念は、内部参照を壊したり関連リソースを失ったりすることなく、簡単に移動、共有、管理できる、より保守性が高く移植可能な<a data-lb="1" href="/ja/glossary/Content-Modeling/" title="コンテンツモデリングの包括的ガイド - プラットフォームやシステム全体でデジタルコンテンツを整理、定義、管理するための構造化されたアプローチ。">コンテンツ構造</a>を作成する必要性から生まれました。</p>
+<p>ページバンドルのアーキテクチャは、特定のコンテンツに関連するすべてのものが同じディレクトリに存在するという共存の原則を中心としています。これには、主要なコンテンツファイル(通常はMarkdownで記述)、そのコンテンツ内で参照される画像、ダウンロード可能なリソース、カスタムCSSやJavaScriptファイル、さらには動的コンテンツ要素を生成するために使用されるデータファイルなどが含まれます。バンドル構造は、複数のディレクトリにリソースが散在するという従来の問題を解消します。この問題は、コンテンツが移動または再編成されたときにリンク切れを引き起こすことがよくありました。すべてをまとめて保持することで、ページバンドルは、小規模な個人ブログから大規模なエンタープライズWebサイトまで効果的にスケールする、より直感的で信頼性の高い<a data-lb="1" href="/ja/glossary/CMS--Content-Management-System-/" title="コンテンツ管理システム(CMS)の包括的ガイド - デジタルコンテンツ管理のための機能、メリット、実装戦略、ベストプラクティスを解説します。">コンテンツ管理システム</a>を作成します。</p>
+<p><a data-lb="1" href="/ja/glossary/Page-Bundle/" title="ウェブページとそれに関連するすべてのファイル(画像、ドキュメントなど)を1つの場所にまとめるフォルダで、リンクを壊すことなくコンテンツの管理や移動を容易にします。">ページバンドル</a>には、リーフバンドルとブランチバンドルという2つの主要なタイプがあります。リーフバンドルは個々のページや投稿を表し、インデックスファイル(通常はindex.md)とすべての関連リソースを含みます。これらのバンドルは子ページを持つことができず、コンテンツ階層の終端ノードとして設計されています。一方、ブランチバンドルは<a data-lb="1" href="/ja/glossary/Section/" title="関連するコンテンツや情報をグループ化し、ドキュメント、ウェブサイト、アプリケーション全体で素材を論理的で管理しやすい部分に整理・構造化するためのコンテナ。">セクション</a>やカテゴリを表し、_indexファイル(_index.md)をメインコンテンツファイルとして使用します。ブランチバンドルは子ページや他のバンドルを含むことができ、階層的なコンテンツ構造を整理するのに理想的です。この二重アプローチは、さまざまなタイプのコンテンツ構造全体でリソース共存の利点を維持しながら、コンテンツ編成の柔軟性を提供します。</p>
+<h2 id="コアコンテンツ組織化概念">コアコンテンツ組織化概念</h2>
+<p><strong>リーフバンドル構造</strong> - リーフバンドルは、すべての関連リソースが1つのディレクトリ内に含まれる単一ページを表します。バンドルはindex.mdファイルをメインコンテンツとして使用し、複雑なパス参照なしにその特定のページ内で使用できる画像、ドキュメント、その他のアセットを含むことができます。</p>
+<p><strong>ブランチバンドルアーキテクチャ</strong> - ブランチバンドルは、複数の子ページや他のバンドルを含むことができるセクションオーガナイザーとして機能します。_index.mdを主要なコンテンツファイルとして使用し、バンドルシステムのリソース共存の利点を維持しながら、階層的なコンテンツ編成を可能にします。</p>
+<p><strong>リソース管理</strong> - ページバンドルは、画像を自動的に処理および最適化し、ファイル参照を管理し、テンプレート関数やショートコードを通じてバンドルリソースにアクセスするための組み込みメソッドを提供する高度なリソース処理を実装します。</p>
+<p><strong>コンテンツ階層</strong> - バンドルシステムは、ファイルシステム構造がWebサイトの組織構造を直接反映する明確なコンテンツ階層を作成し、コンテンツ制作者がコンテンツアーキテクチャを理解しナビゲートすることを直感的にします。</p>
+<p><strong>アセット処理</strong> - 現代的なページバンドル実装には、外部ツールを必要とせずにビルドプロセス中に発生する画像のリサイズ、フォーマット変換、最小化、最適化などの自動<a data-lb="1" href="/ja/glossary/Hugo-Pipes/" title="Hugo Pipesは、スタイルシートやスクリプトなどのウェブサイトアセットを自動的に処理する組み込みツールで、別途外部ソフトウェアを必要としません。">アセット処理</a>機能が含まれています。</p>
+<p><strong>ポータブルコンテンツユニット</strong> - 各バンドルは、すべての内部参照と関連リソースを無傷のまま維持しながら、プロジェクト間で移動したり他の開発者と共有したりできる完全にポータブルなユニットとして機能します。</p>
+<p><strong>テンプレート統合</strong> - ページバンドルはテンプレートシステムとシームレスに統合され、テンプレートやレイアウト内でバンドルリソース、メタデータ、<a data-lb="1" href="/ja/glossary/Related-Content/" title="関連コンテンツシステムの包括的なガイド。実装戦略、アルゴリズム、ユーザーエンゲージメントとSEOを向上させるためのベストプラクティスを解説します。">関連コンテンツ</a>にアクセスするための特定の関数とメソッドを提供します。</p>
+<h2 id="ページバンドルの仕組み">ページバンドルの仕組み</h2>
+<p>ページバンドルの<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>は、特定の命名規則に従ったディレクトリ構造の作成から始まります。リーフバンドルの場合、開発者は説明的な名前のディレクトリを作成し、その中にindex.mdファイルと関連リソースを配置します。静的サイトジェネレーターはこの構造を認識し、ディレクトリ全体を単一のコンテンツユニットとして扱います。</p>
+<p>コンテンツ検出フェーズでは、サイトジェネレーターがコンテンツディレクトリをスキャンし、インデックスファイルの存在とディレクトリ編成に基づいてバンドル構造を識別します。各バンドル内のすべてのリソースをカタログ化し、テンプレートやコンテンツファイルが簡単な相対パスを使用してこれらのリソースを参照できるようにする内部マッピングを作成します。</p>
+<p>リソース処理段階では、バンドル内のすべてのアセットを分析し、適切な変換を適用します。画像はリサイズ、<a data-lb="1" href="/ja/glossary/Codec/" title="コーデックの包括的ガイド - 効率的なストレージと伝送のために、オーディオ、ビデオ、データをエンコードおよびデコードするデジタル圧縮アルゴリズムです。">圧縮</a>、または異なるフォーマットに変換される場合があります。CSSやJavaScriptファイルは最小化されたり、ビルドツールを通じて処理されたりする可能性があります。ジェネレーターは、将来の処理のために元のファイルを維持しながら、これらのリソースの最適化されたバージョンを作成します。</p>
+<p>コンテンツレンダリングは、ジェネレーターがメインコンテンツファイル(index.mdまたは_index.md)を処理し、適切なテンプレートを適用するときに発生します。このプロセス中に、バンドルリソースへの参照は、以前に作成された内部マッピングを使用して解決され、最終出力ですべてのリンクと参照が正しく機能することを保証します。</p>
+<p>ビルドシステムは最終的なWebサイト構造を生成し、出力フォルダに適切なディレクトリとファイルを作成します。バンドルリソースは最終的な場所にコピーまたは処理され、すべての内部参照は本番ファイルパスとURLを反映するように更新されます。</p>
+<p>バンドル間の関係は、ジェネレーターが異なるバンドル間のリンクや参照を識別したときに確立されます。必要なナビゲーション構造を作成し、バンドル間リンクが最終出力で適切に解決されることを保証します。</p>
+<p><a data-lb="1" href="/ja/glossary/Quality-Monitoring/" title="製品、サービス、またはプロセスを設定された基準に照らして継続的にチェックし、品質を確保し、問題を特定し、改善を促進する体系的なプロセス。">品質保証</a>プロセスは、すべてのバンドルリソースが適切にリンクされていること、孤立したファイルが存在しないこと、バンドル構造がビルドプロセス全体を通じてその整合性を維持していることを検証します。</p>
+<p><a data-lb="1" href="/ja/glossary/Lazy-Loading/" title="ウェブサイトのコンテンツを一度にすべて読み込むのではなく、必要なときにのみ読み込む技術で、ページの表示速度を向上させ、帯域幅を節約します。">パフォーマンス最適化</a>は最終ステップとして発生し、ジェネレーターは画像の遅延読み込み、リソースのプリロード、またはバンドルアセットの<a data-lb="1" href="/ja/glossary/Social-Sharing/" title="デジタルコンテンツ配信におけるソーシャルシェアリングの仕組み、実装戦略、最適化テクニックに関する包括的なガイド">コンテンツ配信</a>ネットワーク統合などの追加の最適化を実装する場合があります。</p>
+<p><strong>ワークフロー例:</strong></p>
+<pre tabindex="0"><code>content/
+├── posts/
+│   ├── my-article/
+│   │   ├── index.md
+│   │   ├── featured-image.jpg
+│   │   └── diagram.png
+│   └── another-post/
+│       ├── index.md
+│       └── resources/
+│           └── data.csv
+</code></pre><h2 id="主な利点">主な利点</h2>
+<p><strong>簡素化されたリソース管理</strong> - ページバンドルは、特定のコンテンツに関連するすべてのものを1つの場所に保持することで、複数のディレクトリに散在するリソースを管理する複雑さを排除し、リンク切れや欠落アセットの可能性を減らします。</p>
+<p><strong>強化された移植性</strong> - コンテンツバンドルは、欠落した依存関係や壊れた内部参照を心配することなく、プロジェクト間で簡単に移動したり、協力者と共有したり、完全なユニットとしてアーカイブしたりできます。</p>
+<p><strong>改善されたコンテンツ編成</strong> - バンドル構造は、ファイルシステムがコンテンツ階層を直接反映する直感的な組織システムを作成し、コンテンツ制作者や開発者がプロジェクト構造をナビゲートして理解しやすくします。</p>
+<p><strong>自動アセット処理</strong> - 現代的なバンドル実装は、外部ビルドツールを必要とせずに、画像を自動的に最適化し、スタイルシートを処理し、その他のリソース変換を処理する組み込みアセット処理機能を提供します。</p>
+<p><strong>削減されたパスの複雑さ</strong> - バンドル内のリソースは、簡単な相対パスまたはバンドル固有の関数を使用して参照できるため、複雑な相対パスを計算したり絶対パス参照を維持したりする必要がなくなります。</p>
+<p><strong>バージョン管理の効率性</strong> - Gitやその他の<a data-lb="1" href="/ja/glossary/Version-Control/" title="バージョン管理システムの包括的なガイド。Git、SVN、ワークフロー、ベストプラクティス、ソフトウェア開発チームのための実装戦略をカバーしています。">バージョン管理</a>システムは、コンテンツとその関連リソースが共存している場合、変更をより効果的に追跡でき、より良い差分の視覚化とマージ競合の解決を提供します。</p>
+<p><strong>テンプレートの簡素化</strong> - バンドル対応テンプレートは、リソースとメタデータにアクセスするための特殊な関数を使用でき、テンプレートの複雑さを軽減し、さまざまな<a data-lb="1" href="/ja/glossary/Content-Types/" title="デジタルシステムにおけるコンテンツタイプの包括的なガイド。分類、実装、構造化されたコンテンツ管理のベストプラクティスを網羅しています。">コンテンツタイプ</a>全体での保守性を向上させます。</p>
+<p><strong>コンテンツの再利用性</strong> - 適切に構造化されたバンドルは、新しいコンテンツのテンプレートまたは出発点として機能し、迅速なコンテンツ作成を可能にし、類似のコンテンツタイプ全体で一貫性を確保します。</p>
+<p><strong>ビルドパフォーマンス</strong> - 静的サイトジェネレーターは、バンドルを個別のユニットとして処理することでビルドプロセスを最適化でき、並列処理と変更されたバンドルのみを更新する増分ビルドを可能にします。</p>
+<p><strong>SEO最適化</strong> - バンドル構造は、バンドルの内容に基づいて<a data-lb="1" href="/ja/glossary/Structured-Data/" title="検索エンジンやコンピュータがWebページのコンテンツをより適切に理解できるよう、標準化された形式で整理された情報。評価、価格、その他の詳細情報を含むリッチな検索結果の表示を可能にします。">構造化データ</a>の自動生成、最適化された画像のaltタグ、適切なリソースのプリロードを可能にすることで、より良い<a data-lb="1" href="/ja/glossary/Dwell-Time/" title="滞在時間とは、ユーザーが検索結果ページ(SERP)からクリックした後、戻るまでにそのページで過ごす時間を測定する指標です。SEOへの影響、測定方法、ユーザーエンゲージメントを向上させる戦略について解説します。">SEO</a>プラクティスを促進します。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>ブログ投稿管理</strong> - 関連する画像、ダウンロード可能なリソース、埋め込みメディアファイルを含む個々のブログ投稿を、簡単に管理および共有できる自己完結型ユニットとして整理します。</p>
+<p><strong>製品ドキュメント</strong> - スクリーンショット、図、コードサンプル、関連ファイルを含む技術ドキュメントページを、簡単なメンテナンスと更新のためにまとめて整理します。</p>
+<p><strong>ポートフォリオプロジェクト</strong> - 各プロジェクトに複数の画像、プロジェクトファイル、ケーススタディ、関連ドキュメントを含むクリエイティブポートフォリオを、包括的なプロジェクトバンドルとして整理します。</p>
+<p><strong>教育コンテンツ</strong> - レッスンコンテンツ、演習、マルチメディアファイル、補足資料を含むコース教材、チュートリアル、学習リソースを、簡単に配布できるようにまとめます。</p>
+<p><strong>ニュース記事</strong> - メイン記事、関連画像、<a data-lb="1" href="/ja/glossary/Visual-Content-Marketing/" title="魅力的なビジュアルストーリーテリングを通じてオーディエンスを惹きつけるための、ビジュアルコンテンツマーケティング戦略、ツール、ベストプラクティスの包括的ガイド。">インフォグラフィック</a>、<a data-lb="1" href="/ja/glossary/Data-Files/" title="データファイルは、特定の形式で整理された情報を保存するデジタルコンテナであり、コンピュータがテキストから画像、動画まであらゆるものを保存、取得、処理することを可能にします。">データファイル</a>、マルチメディア要素を含むジャーナリズムやニュースコンテンツを、完全なストーリーパッケージとして整理します。</p>
+<p><strong>イベントページ</strong> - スケジュール、スピーカー情報、会場詳細、プロモーション資料、関連リソースを含む会議、ワークショップ、またはイベントページをまとめます。</p>
+<p><strong>研究出版物</strong> - メイン出版物、サポートデータ、チャート、グラフ、補足資料を含む学術論文や研究コンテンツを、包括的な研究パッケージとして整理します。</p>
+<p><strong>マーケティングキャンペーン</strong> - コピー、画像、動画、ダウンロード可能なアセット、トラッキングリソースを含むキャンペーン<a data-lb="1" href="/ja/glossary/Landing-Page/" title="購入や登録など、訪問者を1つの特定のアクションへ誘導するために設計された独立したWebページ。気を散らす要素を排除し、単一の目標に注意を集中させることで、コンバージョンを最大化します。">ランディングページ</a>を、簡単な展開と管理のためにまとめて整理します。</p>
+<p><strong>APIドキュメント</strong> - エンドポイントの説明、コード例、SDKファイル、テストリソースを含む技術的な<a data-lb="1" href="/ja/glossary/APIs/" title="API(アプリケーション・プログラミング・インターフェース)を詳しく解説:定義、仕組み、種類(REST、SOAP)、実例、メリット、セキュリティ、ベストプラクティスを網羅した総合ガイドです。">API</a>ドキュメントを、完全な開発者リソースパッケージとして整理します。</p>
+<p><strong>ケーススタディ</strong> - メインナラティブ、サポートデータ、チャート、クライアントの証言、関連資料を含むビジネスケーススタディを、包括的な成功事例パッケージとして整理します。</p>
+<h2 id="バンドルタイプの比較">バンドルタイプの比較</h2>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>リーフバンドル</th>
+<th>ブランチバンドル</th>
+<th>ヘッドレスバンドル</th>
+<th>リソースバンドル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>主要ファイル</strong></td>
+<td>index.md</td>
+<td>_index.md</td>
+<td>index.md</td>
+<td>コンテンツファイルなし</td>
+</tr>
+<tr>
+<td><strong>子ページ</strong></td>
+<td>不可</td>
+<td>サポート</td>
+<td>不可</td>
+<td>該当なし</td>
+</tr>
+<tr>
+<td><strong>URL生成</strong></td>
+<td>単一ページURL</td>
+<td>セクションURL + 子</td>
+<td>URLなし</td>
+<td>URLなし</td>
+</tr>
+<tr>
+<td><strong>リソースアクセス</strong></td>
+<td>ローカルリソース</td>
+<td>ローカル + 子リソース</td>
+<td>ローカルリソース</td>
+<td>共有リソース</td>
+</tr>
+<tr>
+<td><strong>使用例</strong></td>
+<td>個別投稿/ページ</td>
+<td>セクション編成</td>
+<td>データ/部分コンテンツ</td>
+<td>アセットライブラリ</td>
+</tr>
+<tr>
+<td><strong>テンプレートタイプ</strong></td>
+<td>単一ページテンプレート</td>
+<td>リスト + 単一テンプレート</td>
+<td>レンダリングなし</td>
+<td>レンダリングなし</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>ディレクトリ構造の複雑さ</strong> - プロジェクトが大きくなるにつれて、多数のバンドルディレクトリを管理することが圧倒的になる可能性があり、組織と発見可能性を維持するために慎重な計画と一貫した命名規則が必要です。</p>
+<p><strong>ビルドパフォーマンスへの影響</strong> - 広範なリソースを持つ多数のバンドルは、特にアセット処理が関与する場合、ビルド時間を遅くする可能性があり、最適化戦略と選択的処理アプローチが必要です。</p>
+<p><strong>学習曲線</strong> - バンドル概念に不慣れなコンテンツ制作者や開発者は、効果的なバンドル管理のための組織原則とベストプラクティスを理解するためのトレーニングとドキュメントが必要な場合があります。</p>
+<p><strong>テンプレートの複雑さ</strong> - さまざまなバンドルタイプとリソース構成で効果的に機能するテンプレートを作成することは困難であり、エッジケースとフォールバック<a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>を慎重に考慮する必要があります。</p>
+<p><strong>リソースの重複</strong> - 適切な計画がないと、類似のリソースが複数のバンドル間で重複する可能性があり、共有アセットのリポジトリサイズとメンテナンスオーバーヘッドが増加します。</p>
+<p><strong>移行の課題</strong> - 既存のコンテンツ構造をバンドルベースの組織に変換することは、特に複雑な既存階層を持つ大規模サイトの場合、時間がかかりエラーが発生しやすい可能性があります。</p>
+<p><strong>バージョン管理の肥大化</strong> - バンドル内のバイナリアセットは、リポジトリサイズを大幅に増加させ、クローン操作を遅くする可能性があり、大きなファイル管理とアセット最適化のための戦略が必要です。</p>
+<p><strong>バンドル間の依存関係</strong> - 異なるバンドル間の関係と依存関係を管理することは複雑になる可能性があり、特にコンテンツが他のバンドルのリソースやコンテンツを参照する必要がある場合です。</p>
+<p><strong>バックアップとアーカイブ</strong> - バンドルリソースの分散性は、バックアップとアーカイブプロセスを複雑にする可能性があり、すべてのバンドルコンポーネントが適切に保存されることを保証する包括的な戦略が必要です。</p>
+<p><strong>検索と発見</strong> - 適切なインデックス作成と検索メカニズムがないと、特に大規模なコンテンツリポジトリでは、複数のバンドル間で特定のリソースやコンテンツを見つけることが困難になる可能性があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>一貫した命名規則</strong> - プロジェクト全体で一貫性を確保し、発見可能性を向上させるために、バンドルディレクトリ、リソースファイル、コンテンツファイルの明確な命名規則を確立し、実施します。</p>
+<p><strong>リソースの最適化</strong> - 手動介入なしにバンドルサイズを削減し、サイトパフォーマンスを向上させるために、自動<a data-lb="1" href="/ja/glossary/Image-Compression/" title="画像圧縮とは、デジタル画像の見た目の品質を保ちながらファイルサイズを削減する技術で、オンラインでの保存や共有を容易にします。">画像圧縮</a>、ファイル最小化、その他の最適化プロセスを実装します。</p>
+<p><strong>ドキュメント標準</strong> - チームメンバーがコンテンツに効果的に貢献し、維持できるように、バンドル構造、命名規則、リソース編成の包括的なドキュメントを作成します。</p>
+<p><strong>テンプレートの標準化</strong> - バンドル構造で効果的に機能し、バンドルリソースにアクセスして表示するための一貫した機能を提供する標準化されたテンプレートを開発します。</p>
+<p><strong>バージョン管理戦略</strong> - 大きなファイルのGit LFSやアセット管理の明確なガイドラインを含む、バイナリアセットを処理するための適切なバージョン管理プラクティスを実装します。</p>
+<p><strong>ビルドの最適化</strong> - 並列処理、増分ビルド、変更に基づく選択的リソース処理を含む、バンドル処理を効率的に処理するようにビルドプロセスを構成します。</p>
+<p><strong>リソース共有</strong> - 頻繁に使用される要素にグローバルアセットディレクトリを使用するなど、重複を避けながらバンドル間で共通リソースを共有するためのパターンを確立します。</p>
+<p><strong>品質保証</strong> - バンドルの整合性を確保し、リソースリンクを検証し、コンテンツ品質基準を維持するために、自動テストと検証プロセスを実装します。</p>
+<p><strong>パフォーマンス監視</strong> - 最適化の機会を特定し、効率的なバンドル処理を維持するために、ビルド時間、サイトパフォーマンス、リソース使用状況を定期的に監視します。</p>
+<p><strong>バックアップ手順</strong> - バンドルリソースの分散性を考慮し、完全なコンテンツ保存を保証する包括的なバックアップと復旧手順を開発します。</p>
+<h2 id="高度なテクニック">高度なテクニック</h2>
+<p><strong>動的リソース処理</strong> - バンドル構成とサイト要件に基づいて、画像を動的にリサイズし、複数のフォーマットを生成し、レスポンシブ画像セットを作成できる高度なアセット処理パイプラインを実装します。</p>
+<p><strong>バンドル間の関係</strong> - 自動リンク生成、関連コンテンツの提案、コンテンツ階層全体の依存関係追跡を含む、バンドル間の関係を管理するための高度なシステムを開発します。</p>
+<p><strong>条件付きバンドル読み込み</strong> - <a data-lb="1" href="/ja/glossary/Build-Performance/" title="ビルドパフォーマンスとは、ソフトウェア開発ツールがコードをコンパイルし、デプロイメントのために準備する速度と効率性のことです。開発者の生産性とプロジェクトの納期に直接的な影響を与えます。">ビルドパフォーマンス</a>と出力カスタマイズを最適化するために、ビルド条件、ターゲット環境、またはコンテンツフラグに基づいてバンドルを選択的に読み込んで処理できるシステムを作成します。</p>
+<p><strong>バンドルテンプレート</strong> - 迅速なコンテンツ作成のために、事前定義された構造、プレースホルダーコンテンツ、標準リソース構成を持つ新しいバンドルを自動的に生成できるバンドルテンプレートシステムを実装します。</p>
+<p><strong>リソース継承</strong> - バンドル固有のアセットの共存の利点を維持しながら、バンドルが親バンドルまたはグローバルリソースプールからリソースを継承できるメカニズムを開発します。</p>
+<p><strong>自動コンテンツ生成</strong> - <a data-lb="1" href="/ja/glossary/Third-Party-Data/" title="サードパーティデータの包括的ガイド:ビジネスインテリジェンスにおける外部データセットの活用に関する情報源、メリット、課題、ベストプラクティスを解説します。">外部データソース</a>、API、または<a data-lb="1" href="/ja/glossary/Structured-Content/" title="構造化コンテンツの包括的ガイド:定義、実装方法、メリット、および組織化されたデジタル情報システムのベストプラクティスを解説します。">コンテンツ管理</a>システムに基づいて、バンドルコンテンツ、メタデータ、リソースを自動的に生成できるシステムを作成します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>AI駆動の組織化</strong> - セマンティック分析に基づいて、コンテンツを適切なバンドル構造に自動的に整理し、リソースの最適化を提案し、コンテンツ関係を維持するための<a data-lb="1" href="/ja/glossary/Autonomous-Systems/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>の統合。</p>
+<p><strong>強化されたアセット処理</strong> - 使用パターンに基づく自動フォーマット選択、高度な圧縮アルゴリズム、インテリジェントなリソース最適化を含む、より洗練されたアセット処理機能の開発。</p>
+<p><strong>クラウドネイティブバンドル</strong> - パフォーマンスとスケーラビリティを向上させるために、分散ストレージ、<a data-lb="1" href="/ja/glossary/Edge-Function/" title="遠隔地のデータセンターではなく、ユーザーに近いサーバー上で実行される軽量プログラムで、リクエストをローカルで処理することでウェブサイトやアプリの応答速度を向上させます。">エッジコンピューティング</a>、コンテンツ配信ネットワークを活用できるクラウドネイティブバンドルシステムへの進化。</p>
+<p><strong>リアルタイムコラボレーション</strong> - 複数の貢献者がバンドルコンポーネントで同時に作業できるようにする、バンドルコンテンツとリソースのリアルタイム共同編集機能の実装。</p>
+<p><strong>インテリジェントキャッシング</strong> - パフォーマンスを最適化するために、使用パターン、更新頻度、依存関係に基づいてバンドルコンポーネントをインテリジェントにキャッシュできる高度なキャッシングメカニズム。</p>
+<p><strong>クロスプラットフォーム互換性</strong> - 移植性とツールの相互運用性を向上させる、さまざまな静的サイトジェネレーターとコンテンツ管理システム間で機能する標準化されたバンドルフォーマットの開発。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>Hugo Documentation Team. “Page Bundles.” Hugo Static Site Generator Documentation. <a href="https://gohugo.io/content-management/page-bundles/" rel="nofollow noopener noreferrer" target="_blank">https://gohugo.io/content-management/page-bundles/</a></p>
+</li>
+<li>
+<p>Forestry.io Team. “Hugo’s Page Bundles Explained.” Forestry.io Blog. <a href="https://forestry.io/blog/hugo-page-bundles/" rel="nofollow noopener noreferrer" target="_blank">https://forestry.io/blog/hugo-page-bundles/</a></p>
+</li>
+<li>
+<p>Smashing Magazine. “Static Site Generators: Modern Web Development’s Swiss Army Knife.” <a href="https://www.smashingmagazine.com/static-site-generators/" rel="nofollow noopener noreferrer" target="_blank">https://www.smashingmagazine.com/static-site-generators/</a></p>
+</li>
+<li>
+<p><a data-lb="1" href="/ja/glossary/Jamstack/" title="Jamstackアーキテクチャの包括的ガイド:JavaScript、API、マークアップを活用した高速で安全、かつスケーラブルなモダンWebアプリケーションの構築方法。">JAMstack</a>.org. “Best Practices for JAMstack Development.” <a href="https://jamstack.org/best-practices/" rel="nofollow noopener noreferrer" target="_blank">https://jamstack.org/best-practices/</a></p>
+</li>
+<li>
+<p>Netlify Documentation. “File-based CMS and Static Site Generators.” <a href="https://docs.netlify.com/configure-builds/file-based-configuration/" rel="nofollow noopener noreferrer" target="_blank">https://docs.netlify.com/configure-builds/file-based-configuration/</a></p>
+</li>
+<li>
+<p>GitHub. “Git Large File Storage Documentation.” <a href="https://git-lfs.github.io/" rel="nofollow noopener noreferrer" target="_blank">https://git-lfs.github.io/</a></p>
+</li>
+<li>
+<p>Web.dev. “Modern Web Performance Optimization.” <a href="https://web.dev/performance/" rel="nofollow noopener noreferrer" target="_blank">https://web.dev/performance/</a></p>
+</li>
+<li>
+<p>Mozilla Developer Network. “Web Performance Best Practices.” <a href="https://developer.mozilla.org/en-US/docs/Web/Performance" rel="nofollow noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Performance</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Taxonomy/">
+                    Hugo タクソノミー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugo におけるコンテンツ整理システムで、タグやトピックなどのカスタマイズ可能なカテゴリを使用して関連記事にラベルを付けてグループ化し、閲覧用の整理されたページを自動的に作成します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Taxonomy/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/DAM--Digital-Asset-Management-/">
+                    DAM(デジタルアセット管理)
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+<a data-lb="1" href="/ja/glossary/Asset-Library/" title="アセットライブラリの包括的ガイド - ソフトウェア開発とデザインワークフローにおけるデジタルアセット、コンポーネント、リソースの一元管理リポジトリ。">デジタルアセット管理</a>システム、ワークフロー、メリット、および現代組織向けの実装戦略に関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/DAM--Digital-Asset-Management-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Git-Based-CMS/">
+                    Git ベース CMS
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    ウェブサイトのコンテンツをファイルとして保存し、Git バージョン管理を使用するコンテンツ管理システム。開発者がコードを管理するように、チームがコンテンツの管理、変更の追跡、公開を行うことができます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Git-Based-CMS/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Pipes/">
+                    Hugo Pipes
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugo Pipesは、スタイルシートやスクリプトなどのウェブサイトアセットを自動的に処理する組み込みツールで、別途外部ソフトウェアを必要としません。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Pipes/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Shortcode/">
+                    Hugoショートコード
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugoにおける再利用可能なコードスニペットで、コンテンツ制作者がHTMLを記述することなく、インタラクティブな要素やカスタムレイアウトをMarkdownに直接埋め込むことができます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Shortcode/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Theme/">
+                    Hugoテーマ
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    Hugoウェブサイト用の事前構築されたデザインテンプレートで、コンテンツを自動的にスタイリングし、完成度の高いウェブサイトに整理します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Hugo-Theme/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/page-bundle/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>

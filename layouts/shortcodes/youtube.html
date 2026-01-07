@@ -1,85 +1,61 @@
-{{ $id := .Get 0 }}
-<div class="youtube-fullwidth-wrapper">
-  <div class="youtube-wrapper-custom">
-    <div class="youtube-container-custom">
-      <iframe 
-        src="https://www.youtube.com/embed/{{ $id }}" 
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen 
-        loading="lazy"
-        frameborder="0">
-      </iframe>
-    </div>
+{{ $id := .Get "videoID" | default (.Get 0) }}
+{{ $title := .Get "title" | default "YouTube video player" }}
+<div class="youtube-embed-wrapper">
+  <div class="youtube-embed-container">
+    <iframe 
+      src="https://www.youtube.com/embed/{{ $id }}" 
+      title="{{ $title }}"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen 
+      loading="lazy"
+      frameborder="0">
+    </iframe>
   </div>
 </div>
 
 <style>
-/* 親要素の幅制限を突破 */
-.youtube-fullwidth-wrapper {
-  width: 100vw !important;
-  position: relative !important;
-  left: 50% !important;
-  right: 50% !important;
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
-  margin-top: 1.5rem !important;
-  margin-bottom: 1.5rem !important;
-}
-
-/* 外側のラッパー - 画面幅の95% */
-.youtube-wrapper-custom {
-  width: 95% !important;
-  max-width: 95% !important;
-  margin: 0 auto !important;
+/* YouTube埋め込みラッパー - 768px制限 */
+.youtube-embed-wrapper {
+  max-width: 768px !important;
+  margin: 2rem auto 3rem !important;
   padding: 0 !important;
 }
 
-/* YouTubeコンテナ - 角丸 */
-.youtube-container-custom {
+/* YouTubeコンテナ - 角丸・影付き */
+.youtube-embed-container {
   position: relative !important;
   width: 100% !important;
-  padding-bottom: 56.25% !important; /* 16:9 */
-  height: 0 !important;
+  padding-top: 56.25% !important; /* 16:9 */
+  border-radius: 18px !important;
   overflow: hidden !important;
-  border-radius: 24px !important;
-  -webkit-border-radius: 24px !important;
-  -moz-border-radius: 24px !important;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25) !important;
   background: #000 !important;
 }
 
 /* iframe本体 */
-.youtube-container-custom iframe {
+.youtube-embed-container iframe {
   position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
+  inset: 0 !important;
   width: 100% !important;
   height: 100% !important;
   border: 0 !important;
-  border-radius: 0 !important;
 }
 
 /* ダークモード */
-.dark .youtube-container-custom {
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+.dark .youtube-embed-container {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* モバイル最適化 */
 @media (max-width: 768px) {
-  .youtube-wrapper-custom {
-    width: 92% !important;
+  .youtube-embed-wrapper {
+    margin: 1.5rem auto 2rem !important;
+    padding: 0 1rem !important;
   }
   
-  .youtube-container-custom {
-    border-radius: 16px !important;
-    -webkit-border-radius: 16px !important;
-  }
-  
-  .youtube-fullwidth-wrapper {
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
+  .youtube-embed-container {
+    border-radius: 12px !important;
   }
 }
 </style>

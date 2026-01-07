@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta charset="utf-8"/>
+<meta content="minimum-scale=1, width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<title>エンドポイントセキュリティ | SmartWeb</title>
+<link href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Endpoint-Security/" rel="canonical"/>
+<link href="/images/faivicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/faivicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/images/faivicon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/faivicon.png" rel="shortcut icon"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="en" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="ja" rel="alternate"/>
+<link href="%!s(&lt;nil&gt;)%!s(&lt;nil&gt;)" hreflang="x-default" rel="alternate"/>
+<meta content="サイバー脅威からデバイスとネットワークを保護するための、エンドポイントセキュリティソリューション、テクノロジー、ベストプラクティスに関する包括的なガイド。" name="description"/>
+<meta content="エンドポイントセキュリティ, エンドポイント保護, サイバーセキュリティ, マルウェア対策, デバイスセキュリティ" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Endpoint-Security/" property="og:url"/>
+<meta content="エンドポイントセキュリティ | SmartWeb" property="og:title"/>
+<meta content="サイバー脅威からデバイスとネットワークを保護するための、エンドポイントセキュリティソリューション、テクノロジー、ベストプラクティスに関する包括的なガイド。" property="og:description"/>
+<meta content="" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Endpoint-Security/" name="twitter:url"/>
+<meta content="エンドポイントセキュリティ | SmartWeb" name="twitter:title"/>
+<meta content="サイバー脅威からデバイスとネットワークを保護するための、エンドポイントセキュリティソリューション、テクノロジー、ベストプラクティスに関する包括的なガイド。" name="twitter:description"/>
+<meta content="" name="twitter:image"/>
+<style>
+  :root {
+     
+    --color-primary: #1a73e8;
+    --color-primary-light: #4285f4;
+    --color-primary-dark: #1557b0;
+
+    --color-secondary: #34a853;
+    --color-accent: #fbbc05;
+
+    --color-text: #202124;
+    --color-background: #ffffff;
+
+     
+    --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  }
+
+   
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient,
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link as="font" crossorigin="anonymous" href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2" rel="preload" type="font/woff2"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/main.css?v=20260106210125" rel="stylesheet"/>
+<link crossorigin="anonymous" href="/css/custom-code-blockquote.css?v=20260106210125" rel="stylesheet"/>
+<script defer="" src="/js/main.js?v=20260106210125"></script>
+</head>
+<body class="antialiased bg-white">
+<header class="bg-white">
+<nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
+<div class="flex lg:flex-1">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="200px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+</div>
+<div class="hidden lg:flex lg:gap-x-12"><a class="text-sm/6 font-semibold text-gray-900" href="/ja/">ホーム</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/blog/">ブログ</a><a class="text-sm/6 font-semibold text-gray-900" href="/ja/glossary/">用語集</a><a class="text-sm/6 font-semibold text-gray-900" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="flex flex-1 items-center justify-end gap-x-6">
+<a class="hidden text-sm/6 font-semibold text-gray-900 lg:block" href="https://support.smartweb.jp/">サポート</a>
+<a class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+</div>
+<div class="flex lg:hidden">
+<button aria-controls="mobile-menu-1767700885995807000" aria-expanded="false" class="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</nav>
+<div aria-modal="true" class="lg:hidden hidden relative z-50" id="mobile-menu-1767700885995807000" role="dialog">
+<div class="fixed inset-0 z-50 bg-black bg-opacity-25"></div>
+<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ease-in-out translate-x-full">
+<div class="flex items-center gap-x-6">
+<a class="-m-1.5 p-1.5" href="/ja/">
+<span class="sr-only">SmartWeb</span>
+<picture class="lazy-picture" data-maxwidth="3000">
+<source data-original-src="/images/smartweb-logo.png" data-srcset="/images/smartweb-logo.png 466w" sizes="(max-width: 466px) 466px, 3000px" type="image/png"/>
+<img alt="SmartWeb Logo" class="lazy-image h-6 sm:h-10 md:h-12 w-auto" data-original-src="/images/smartweb-logo.png" data-src="/images/smartweb-logo.png" decoding="async" loading="lazy"/>
+</picture>
+</a>
+<a class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/ja/blog/">今すぐ始める</a>
+<button class="-m-2.5 rounded-xl p-2.5 text-gray-700 close-mobile-menu" type="button">
+<span class="sr-only">Close menu</span>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<div class="mt-6 flow-root">
+<div class="-my-6 divide-y divide-gray-500/10">
+<div class="space-y-2 py-6"><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/">ホーム</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/blog/">ブログ</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="/ja/glossary/">用語集</a><a class="-mx-3 block rounded-xl px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://www.intwk.co.jp/about/">会社情報</a></div>
+<div class="py-6">
+<a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" href="https://support.smartweb.jp/">サポート</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu-1767700885995807000"]');
+    const mobileMenu = document.getElementById('mobile-menu-1767700885995807000');
+    const closeButtons = document.querySelectorAll('.close-mobile-menu');
+    const mobileMenuContent = mobileMenu.querySelector('.fixed.inset-y-0');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        if (expanded) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      
+      closeButtons.forEach(button => {
+        button.addEventListener('click', closeMobileMenu);
+      });
+      
+      
+      mobileMenu.addEventListener('click', function(event) {
+        if (event.target === mobileMenu) {
+          closeMobileMenu();
+        }
+      });
+      
+      
+      mobileMenuContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+      
+      function openMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.remove('hidden');
+        
+        
+        mobileMenuContent.offsetHeight;
+        
+        mobileMenuContent.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      function closeMobileMenu() {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuContent.classList.add('translate-x-full');
+        
+        
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 300);
+      }
+    }
+  });
+</script>
+<main class="w-full">
+<article class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header class="py-12 sm:py-16">
+<div class="mx-auto max-w-4xl">
+<div class="mb-8">
+<nav class="text-sm hidden sm:block">
+<ol class="flex items-center space-x-2 text-gray-400 dark:text-gray-500">
+<li class="flex items-center">
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors flex items-center" href="/ja/">
+<img alt="Home" class="h-4 w-4 opacity-60" src="/images/home-icon.png"/>
+</a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li>
+<a class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors" href="/ja/glossary/">
+                用語集
+              </a>
+</li>
+<li><span class="mx-2 text-gray-300 dark:text-gray-600">/</span></li>
+<li class="text-gray-600 dark:text-gray-400 truncate max-w-xs">エンドポイントセキュリティ</li>
+</ol>
+</nav>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center text-xs font-medium tracking-wider uppercase text-gray-500 dark:text-gray-400 border-b border-gray-300 dark:border-gray-600 pb-1">
+<svg class="mr-2 h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Application &amp; Use-Cases
+          </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl leading-tight mb-2">
+        エンドポイントセキュリティ
+      </h1>
+<p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 mb-6">
+          Endpoint Security
+        </p>
+<p class="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300 font-light max-w-3xl">
+          サイバー脅威からデバイスとネットワークを保護するための、エンドポイントセキュリティソリューション、テクノロジー、ベストプラクティスに関する包括的なガイド。
+        </p>
+<div class="mt-6 mb-4 border-t border-gray-100 dark:border-gray-800"></div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エンドポイントセキュリティ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                エンドポイント保護
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                サイバーセキュリティ
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                マルウェア対策
+              </span>
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
+                デバイスセキュリティ
+              </span>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-end gap-y-1 text-right">
+<span class="inline-flex items-center justify-end">
+<svg class="mr-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V5a3 3 0 013-3h2a3 3 0 013 3v2m4 0h-16a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        作成日: 2025年12月19日
+      
+    </span>
+</div>
+</div>
+</div>
+</header>
+<div class="prose prose-base sm:prose-lg dark:prose-invert mx-auto max-w-4xl py-6 sm:py-8">
+<h2 id="エンドポイントセキュリティとは">エンドポイントセキュリティとは</h2>
+<p><a data-lb="1" href="/ja/glossary/Endpoint-Security/" title="サイバー脅威からデバイスとネットワークを保護するための、エンドポイントセキュリティソリューション、テクノロジー、ベストプラクティスに関する包括的なガイド。">エンドポイントセキュリティ</a>は、組織のネットワークに接続する個々のデバイス、すなわちエンドポイントを保護することに焦点を当てた包括的なサイバー<a data-lb="1" href="/ja/glossary/access-control/" title="アクセス制御は、誰がリソースを閲覧、使用、または変更できるかを定義する基本的なセキュリティメカニズムです。不正アクセスを防止し、機密データを保護し、システムの適切な使用を保証します。">セキュリティ</a>アプローチです。これらのエンドポイントには、デスクトップコンピュータ、ラップトップ、モバイルデバイス、タブレット、サーバー、およびIoT(モノのインターネット)デバイスが含まれます。組織のデジタル境界が従来のネットワーク境界を超えて拡大するにつれて、エンドポイントセキュリティは現代のサイバーセキュリティ戦略において重要な要素となっています。エンドポイントセキュリティの基本原則は、各デバイスがサイバー脅威の潜在的な侵入ポイントとなるため、デバイスレベルで堅牢な保護メカニズムを実装することが不可欠であるということです。</p>
+<p>エンドポイントセキュリティの進化は、サイバー脅威の性質の変化と職場環境の変革によって推進されてきました。主にシグネチャベースの検出方法に依存していた従来のアンチウイルスソリューションは、ゼロデイエクスプロイト、高度持続的脅威(APT)、ファイルレスマルウェアなどの高度な現代の脅威に対しては不十分であることが証明されています。現代のエンドポイントセキュリティソリューションは、行動分析、<a data-lb="1" href="/ja/glossary/Ensemble-Learning/" title="機械学習における予測精度向上のためのアンサンブル学習手法、アルゴリズム、および応用に関する包括的ガイド。">機械学習アルゴリズム</a>、脅威インテリジェンス統合、リアルタイム監視機能など、複数の保護層を採用しています。この多層的なアプローチにより、組織はエンドポイントエコシステム全体にわたる可視性を維持しながら、脅威をより効果的に検出、防止、対応できるようになります。</p>
+<p>現代のエンドポイントセキュリティソリューションは、予防、検出、調査、対応の機能を統合システムに組み合わせた統合プラットフォームとして動作します。これらのプラットフォームには通常、エンドポイント検出・対応(EDR)、拡張検出・対応(XDR)、マネージド検出・対応(MDR)、エンドポイント保護プラットフォーム(EPP)などの機能が含まれます。<a data-lb="1" href="/ja/glossary/Autonomous-Systems/" title="自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。">人工知能</a>と<a data-lb="1" href="/ja/glossary/Model-Serving/" title="モデルサービングとは、訓練済みの機械学習モデルをネットワーク経由でアクセス可能なサービスとして提供し、本番システムにおいてAI駆動機能を実現するための運用プロセスです。">機械学習</a>技術の統合により、これらのソリューションが未知の脅威を特定し、進化する攻撃手法に適応する能力が大幅に向上しました。さらに、リモートワークの増加とBYOD(私物デバイスの業務利用)ポリシーにより、デバイスの場所やネットワーク接続状態に関係なく保護できるエンドポイントセキュリティソリューションが必要となっています。</p>
+<h2 id="エンドポイントセキュリティの中核技術">エンドポイントセキュリティの中核技術</h2>
+<p>**エンドポイント保護プラットフォーム(EPP)**は、エンドポイントセキュリティの基盤層として機能し、現代の脅威防止技術で強化された従来のアンチウイルス機能を提供します。EPPソリューションは、シグネチャベースの検出と行動分析、機械学習を組み合わせて、既知および未知の脅威がエンドポイントで実行される前に特定してブロックします。</p>
+<p>**エンドポイント検出・対応(EDR)**は、エンドポイントアクティビティの継続的な監視と分析に焦点を当て、疑わしい動作や潜在的なセキュリティインシデントを検出します。EDRソリューションは詳細なフォレンジック機能を提供し、セキュリティチームが脅威を調査し、攻撃ベクトルを理解し、適切な対応措置を実装できるようにします。</p>
+<p>**拡張検出・対応(XDR)**は、従来のエンドポイント監視を超えて、<a data-lb="1" href="/ja/glossary/IT-Infrastructure/" title="組織がデータを保存し、アプリケーションを実行し、日常業務に必要なデジタルリソースにユーザーを接続するために使用する基盤となるテクノロジーシステムおよび機器。">ITインフラストラクチャ</a>全体の複数のセキュリティツールとソースからのデータを相関させます。XDRプラットフォームはセキュリティイベントの全体的なビューを提供し、より正確な脅威検出と合理化された<a data-lb="1" href="/ja/glossary/Data-Breach-Response/" title="サイバーセキュリティ専門家向けの、データ侵害対応戦略、インシデント管理、復旧手順に関する包括的なガイド。">インシデント対応</a>プロセスを可能にします。</p>
+<p><strong>行動分析と機械学習</strong>技術は、ユーザーとシステムの行動パターンを分析して、悪意のあるアクティビティを示す可能性のある異常を特定します。これらの技術は、従来のシグネチャベースの方法では見逃す可能性のあるゼロデイ脅威や高度な攻撃を検出できます。</p>
+<p><strong>アプリケーション制御とホワイトリスト</strong>メカニズムは、エンドポイント上での未承認のアプリケーションやスクリプトの実行を制限します。これらの制御は、マルウェアの実行を防ぎ、承認されたソフトウェアのみが保護されたデバイスで実行できるようにすることで、攻撃対象領域を削減します。</p>
+<p><strong>デバイス制御とデータ損失防止</strong>機能は、リムーバブルメディア、USBデバイス、その他の周辺機器接続の使用を管理しながら、<a data-lb="1" href="/ja/glossary/Content-Migration/" title="プラットフォームやシステム間でのシームレスなデータ転送を実現するための、コンテンツ移行プロセス、戦略、ベストプラクティスに関する包括的なガイド。">データ転送</a>を監視および制御します。これらの機能は、データの流出を防ぎ、外部デバイスを介したマルウェアの侵入リスクを軽減します。</p>
+<p><strong>脆弱性管理とパッチ評価</strong>コンポーネントは、エンドポイントのセキュリティ脆弱性と不足しているパッチを継続的にスキャンします。これらの機能により、組織は最新のセキュリティ態勢を維持し、<a data-lb="1" href="/ja/glossary/Financial-Risk-Management/" title="財務リスク管理は、AI、機械学習、高度な分析手法を活用して、市場リスク、信用リスク、オペレーショナルリスク、流動性リスクなどの財務リスクを特定、評価、監視、軽減し、組織資産を保護し、規制コンプライアンスを確保します。">リスク評価</a>に基づいて修復作業の優先順位を付けることができます。</p>
+<h2 id="エンドポイントセキュリティの仕組み">エンドポイントセキュリティの仕組み</h2>
+<p>エンドポイントセキュリティプロセスは、組織のネットワーク内のすべての管理対象デバイスへの<strong>エージェント展開</strong>から始まります。これらの軽量ソフトウェアエージェントは、エンドポイントにインストールされ、継続的な監視、保護、および集中管理コンソールとの<a data-lb="1" href="/ja/glossary/DTMF--Dual-Tone-Multi-Frequency-/" title="DTMF(デュアルトーン多重周波数)は、キーパッド押下時に発生する固有の音声トーンを使用してコマンドを解釈し、通話をルーティングし、自動メニューナビゲーション、リモートコントロール、および電話ネットワークやデジタルプラットフォームにおける安全なデータ入力を可能にする通信信号システムです。">通信</a>を提供します。</p>
+<p><strong>リアルタイムスキャンと監視</strong>は、エンドポイントセキュリティソリューションがファイル、プロセス、ネットワーク接続、ユーザーアクティビティを検査する際に継続的に行われます。システムは、着信データストリーム、ファイル実行、システム変更を分析して、潜在的な脅威や疑わしい動作を特定します。</p>
+<p><strong>脅威検出と分析</strong>には、悪意のあるアクティビティを特定するために同時に動作する複数の検出エンジンが含まれます。シグネチャベースの検出は、既知のマルウェアデータベースとファイルを比較し、行動分析はプロセスの動作とシステムの相互作用を異常なパターンについて検査します。</p>
+<p><strong>機械学習アルゴリズム</strong>は、収集されたデータを処理して、以前は未知だった脅威や攻撃パターンを特定します。これらのアルゴリズムは、新しい脅威インテリジェンスから継続的に学習し、新たな攻撃手法やマルウェアの亜種に対する検出能力を適応させます。</p>
+<p><strong>ポリシー適用とアクセス制御</strong>メカニズムは、エンドポイントアクティビティが組織の<a data-lb="1" href="/ja/glossary/security-policies/" title="セキュリティポリシーの目的、種類、情報資産保護における重要性を理解します。コンプライアンス、ベストプラクティス、CIA三原則について学びます。">セキュリティポリシー</a>に準拠していることを保証します。システムは、事前定義されたセキュリティルールとユーザー権限に基づいて、アプリケーションの実行、ネットワークアクセス、データ処理に関する制限を適用します。</p>
+<p><strong>インシデント対応と修復</strong>手順は、脅威が検出されると自動的にアクティブになります。システムは、悪意のあるファイルを隔離し、感染したエンドポイントを分離し、疑わしいプロセスを終了し、脅威を封じ込めて排除するための事前定義された対応<a data-lb="1" href="/ja/glossary/Workflow/" title="ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。">ワークフロー</a>を開始できます。</p>
+<p><strong>脅威インテリジェンス統合</strong>は、外部の脅威フィードと侵害指標(IoC)を組み込むことで検出能力を強化します。この統合により、システムはセキュリティ研究組織や脅威ハンティングチームからの最新のインテリジェンスに基づいて脅威を特定できます。</p>
+<p><strong>レポートとフォレンジック分析</strong>は、セキュリティイベント、脅威トレンド、<a data-lb="1" href="/ja/glossary/Wait-Time/" title="様々なシステムやアプリケーションにおける待機時間の概念、実装戦略、最適化技術に関する包括的なガイド。">システムパフォーマンス</a>に関する詳細情報を提供します。セキュリティチームは、包括的なログ、調査ツール、分析<a data-lb="1" href="/ja/glossary/dashboard/" title="ダッシュボードとは、複数のソースから主要なデータ、KPI、トレンドを表示するビジュアルインターフェースです。迅速な監視、分析、情報に基づいた意思決定を可能にします。">ダッシュボード</a>にアクセスして、攻撃ベクトルを理解し、セキュリティ態勢を改善できます。</p>
+<p><strong>ワークフローの例</strong>:ユーザーが悪意のある添付ファイル付きのフィッシングメールを受信した場合、エンドポイントセキュリティソリューションは、ダウンロード時にファイルをスキャンし、サンドボックス環境でその動作を分析し、脅威インテリジェンスデータベースと比較し、実行をブロックしながらセキュリティ担当者に警告し、脅威を隔離します。</p>
+<h2 id="主な利点">主な利点</h2>
+<p><strong>包括的な脅威保護</strong>は、ウイルス、ランサムウェア、トロイの木馬、高度持続的脅威など、さまざまな種類のマルウェアに対する多層防御を提供します。現代のエンドポイントセキュリティソリューションは、高度な検出技術を通じて既知および未知の脅威を検出および防止できます。</p>
+<p><strong>リアルタイムの可視性と監視</strong>により、組織はデバイスエコシステム全体にわたるエンドポイントアクティビティの継続的な監視を維持できます。セキュリティチームは、ユーザーの動作、アプリケーションの実行、ネットワーク接続をリアルタイムで監視して、潜在的なセキュリティインシデントを特定できます。</p>
+<p><strong>迅速なインシデント対応</strong>機能により、組織はセキュリティ脅威を迅速に検出、調査、対応できます。<a data-lb="1" href="/ja/glossary/Webhook-Trigger/" title="Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。">自動化</a>された対応メカニズムは脅威を即座に封じ込めることができ、詳細なフォレンジックツールはセキュリティチームが攻撃ベクトルを理解し、適切な対策を実装するのに役立ちます。</p>
+<p><strong>集中管理と制御</strong>は、すべてのエンドポイントに対する統一されたダッシュボードと管理インターフェースを提供することで、セキュリティ管理を簡素化します。IT管理者は、単一のコンソールから数千のデバイスにわたってポリシーを展開し、設定を構成し、セキュリティステータスを監視できます。</p>
+<p><strong>コンプライアンスと規制サポート</strong>は、組織が業界固有の<a data-lb="1" href="/ja/glossary/security-requirements/" title="セキュリティ要件について学ぶ:情報の機密性、完全性、可用性(CIA)を確保するためにシステムが満たすべき明確で実行可能な条件。デジタル資産を保護するために不可欠です。">セキュリティ要件</a>と規制基準を満たすのに役立ちます。エンドポイントセキュリティソリューションは、規制コンプライアンスに必要な監査証跡、コンプライアンスレポート、ポリシー適用メカニズムを提供します。</p>
+<p><strong>攻撃対象領域の削減</strong>は、アプリケーション制御、デバイス管理、<a data-lb="1" href="/ja/glossary/Vulnerability-Assessment/" title="システムやネットワークのセキュリティ上の弱点を特定するための脆弱性評価手法、ツール、ベストプラクティスに関する包括的なガイド。">脆弱性評価</a>機能を通じて、サイバー脅威の潜在的な侵入ポイントを最小限に抑えます。組織は、未承認のソフトウェアインストールを制限し、すべてのエンドポイントにわたって最新のセキュリティパッチを維持できます。</p>
+<p><strong>費用対効果の高いセキュリティ運用</strong>は、セキュリティ管理プロセスを合理化し、サイバーセキュリティ運用の総コストを削減します。自動化された脅威検出と対応機能は、全体的なセキュリティ効果を向上させながら、セキュリティチームの作業負荷を軽減します。</p>
+<p><strong>事業継続性の保護</strong>は、セキュリティインシデントが事業運営を大幅に中断しないことを保証します。エンドポイントセキュリティソリューションは、システム機能を維持し、広範なネットワーク侵害を防ぎながら、脅威を分離できます。</p>
+<p><strong>データ保護とプライバシー</strong>は、暗号化、<a data-lb="1" href="/ja/glossary/Data-Loss-Prevention--DLP-/" title="データ損失防止(DLP)システム、テクノロジー、実装戦略、および機密データを保護するためのベストプラクティスに関する包括的なガイド。">データ損失防止</a>、<a data-lb="1" href="/ja/glossary/Authorization/" title="認可システム、アクセス制御モデル、実装戦略、および最新アプリケーションのセキュリティベストプラクティスに関する包括的なガイド。">アクセス制御</a>メカニズムを通じて機密情報を保護します。組織は、知的財産、顧客データ、機密情報を不正アクセスや流出から保護できます。</p>
+<p><strong>スケーラビリティと柔軟性</strong>は、成長する組織と変化する技術環境に対応します。現代のエンドポイントセキュリティプラットフォームは、新しいオペレーティングシステム、アプリケーション、展開<a data-lb="1" href="/ja/glossary/scenarios/" title="AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。">シナリオ</a>に適応しながら、数千のデバイスを保護するようにスケールできます。</p>
+<h2 id="一般的な使用例">一般的な使用例</h2>
+<p><strong>企業ネットワーク保護</strong>は、生産性とシステムパフォーマンスを維持しながら、従業員のワークステーション、サーバー、モバイルデバイスをサイバー脅威から保護するために、企業ネットワーク全体にエンドポイントセキュリティを展開することを含みます。</p>
+<p><strong>リモートワークフォースセキュリティ</strong>は、従来のネットワーク境界外で動作するデバイスを保護する独自の課題に対処し、リモート従業員がオンプレミスの従業員と同じレベルのセキュリティを維持できるようにします。</p>
+<p><strong>医療データ保護</strong>は、患者健康情報(PHI)を保護し、HIPAA規制に準拠しながら、医療機器と医療ITシステムを保護するための専門的なエンドポイントセキュリティ対策を実装します。</p>
+<p><strong>金融サービスコンプライアンス</strong>は、顧客の金融データを保護し、詐欺関連のサイバー攻撃を防ぎながら、金融機関の厳格な規制要件を満たすエンドポイントセキュリティソリューションを展開します。</p>
+<p><strong>教育機関のセキュリティ</strong>は、多様な技術環境を管理し、教育リソースへのオープンアクセスを維持しながら、キャンパスネットワーク全体の学生と教職員のデバイスを保護します。</p>
+<p><strong>政府および防衛アプリケーション</strong>は、機密システムと機密性の高い政府業務に対する高セキュリティのエンドポイント保護を実装し、多くの場合、専門的なセキュリティクリアランスと高度な脅威保護機能を必要とします。</p>
+<p><strong>製造および産業制御</strong>は、知的財産を保護し、生産システムの可用性を維持しながら、運用技術(OT)環境と産業制御システムを保護します。</p>
+<p><strong>小売POSの保護</strong>は、小売環境と支払いカード情報を標的とするサイバー脅威から、決済処理システムと顧客取引データを保護します。</p>
+<p><strong>クラウドインフラストラクチャセキュリティ</strong>は、組織がクラウドプラットフォームに移行する際に、クラウドベースの仮想マシン、コンテナ、<a data-lb="1" href="/ja/glossary/Serverless-Computing/" title="サーバーレスコンピューティングは、プロバイダーがインフラストラクチャを管理するクラウド実行モデルであり、開発者はサーバーのプロビジョニングやスケーリングを行うことなく、アプリケーションの構築とデプロイが可能になります。">サーバーレスコンピューティング</a>環境にエンドポイント保護を拡張します。</p>
+<p><strong>BYODとモバイルデバイス管理</strong>は、従業員のプライバシーに関する懸念と組織のセキュリティ要件のバランスを取りながら、企業環境で使用される個人デバイスのセキュリティを管理します。</p>
+<h2 id="エンドポイントセキュリティソリューションの比較">エンドポイントセキュリティソリューションの比較</h2>
+<table>
+<thead>
+<tr>
+<th>ソリューションタイプ</th>
+<th>主な焦点</th>
+<th>展開モデル</th>
+<th>主要機能</th>
+<th>最適な用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>従来のEPP</td>
+<td>予防</td>
+<td>オンプレミス/クラウド</td>
+<td>アンチウイルス、ファイアウォール、Web保護</td>
+<td>基本的な脅威保護</td>
+</tr>
+<tr>
+<td>EDRプラットフォーム</td>
+<td>検出と対応</td>
+<td>クラウドネイティブ</td>
+<td>行動分析、フォレンジック、ハンティング</td>
+<td>高度な脅威検出</td>
+</tr>
+<tr>
+<td>XDRソリューション</td>
+<td>統合セキュリティ</td>
+<td>クラウド統合</td>
+<td>クロスプラットフォーム相関、自動化</td>
+<td>企業全体の可視性</td>
+</tr>
+<tr>
+<td>MDRサービス</td>
+<td>マネージドセキュリティ</td>
+<td>サービスベース</td>
+<td>24時間365日監視、専門家分析</td>
+<td>アウトソースされたセキュリティ運用</td>
+</tr>
+<tr>
+<td>ZTNA統合</td>
+<td>ゼロトラストアクセス</td>
+<td>クラウド配信</td>
+<td>ID検証、マイクロセグメンテーション</td>
+<td>安全なリモートアクセス</td>
+</tr>
+<tr>
+<td>モバイルEPP</td>
+<td>モバイル保護</td>
+<td>クラウド管理</td>
+<td>アプリセキュリティ、デバイス管理</td>
+<td>モバイルデバイスセキュリティ</td>
+</tr>
+</tbody>
+</table>
+<h2 id="課題と考慮事項">課題と考慮事項</h2>
+<p><strong>パフォーマンスへの影響とシステムリソース</strong>は、セキュリティソリューションが大量の<a data-lb="1" href="/ja/glossary/computational-resources/" title="CPU、GPU、メモリ、ストレージ、ネットワーキングを含む計算リソースについて解説します。AI、データサイエンス、クラウドコンピューティングにおける役割と最適化のヒントを理解できます。">CPU</a>、メモリ、またはネットワーク帯域幅を消費する場合、エンドポイントのパフォーマンスに影響を与える可能性があります。組織は、包括的な保護とシステムパフォーマンス要件およびユーザーの生産性のバランスを取る必要があります。</p>
+<p><strong>誤検知管理</strong>は、不要なアラートやブロックされた正当なアクティビティを減らすために、継続的な調整と最適化が必要です。過度の誤検知は、セキュリティチームを圧倒し、アラート疲労やセキュリティ態勢を弱めるポリシー変更につながる可能性があります。</p>
+<p><strong>複雑な脅威環境の進化</strong>は、サイバー犯罪者が新しい攻撃手法を開発し、以前は未知だった<a data-lb="1" href="/ja/glossary/Red-Teaming/" title="レッドチーミングとは、AIシステムに対する現実世界の攻撃をシミュレートし、脆弱性、バイアス、悪用の可能性を発見する敵対的プロセスです。AIのセキュリティ、倫理、コンプライアンスにおいて不可欠な手法です。">脆弱性</a>を悪用するため、継続的な課題を提示します。エンドポイントセキュリティソリューションは、確立された攻撃ベクトルに対する有効性を維持しながら、新たな脅威に継続的に適応する必要があります。</p>
+<p><strong>統合と相互運用性の問題</strong>は、エンドポイントセキュリティソリューションが既存のセキュリティツール、<a data-lb="1" href="/ja/glossary/Legacy-System/" title="組織が使い続けている古いコンピュータシステムやソフトウェアのこと。より新しい技術が存在するにもかかわらず、置き換えにはコストがかかりリスクも高いため、継続して使用されている。">レガシーシステム</a>、サードパーティアプリケーションと連携する必要がある場合に発生します。統合が不十分だと、セキュリティギャップや運用上の非効率性が生じる可能性があります。</p>
+<p><strong>スケーラビリティと管理オーバーヘッド</strong>は、組織が成長し、数千のデバイスにわたってエンドポイントセキュリティを展開する際に重要な懸念事項となります。大規模なポリシー、更新、構成の管理には、堅牢な管理プラットフォームと熟練した人材が必要です。</p>
+<p><strong>ユーザーエクスペリエンスと生産性のバランス</strong>は、セキュリティ対策が日常業務にどのように影響するかを慎重に考慮する必要があります。過度に制限的なポリシーは生産性を妨げる可能性があり、不十分な制御は組織を不必要なリスクにさらす可能性があります。</p>
+<p><strong>コストと予算の制約</strong>は、組織が利用可能な財源と包括的な保護のバランスを取る必要があるため、エンドポイントセキュリティの決定に影響を与えます。<a data-lb="1" href="/ja/glossary/Total-Cost-of-Ownership--TCO-/" title="総所有コスト (TCO) は、資産の購入、使用、廃棄にかかるすべての費用をライフサイクル全体にわたって計算する財務分析手法であり、組織がより賢明な購買意思決定を行うために役立ちます。">総所有コスト</a>には、ライセンス、実装、管理、継続的な運用費用が含まれます。</p>
+<p><strong>コンプライアンスと規制要件</strong>は、業界や管轄区域によって異なり、一貫した保護レベルを維持しながら、さまざまなコンプライアンスフレームワークに適応できるエンドポイントセキュリティソリューションが必要です。</p>
+<p><strong>スキルギャップと専門知識の要件</strong>は、エンドポイントセキュリティソリューションを効果的に実装、管理、最適化するための十分なサイバーセキュリティの専門知識を欠く組織に課題をもたらします。資格のあるセキュリティ専門家の不足は、多くの組織がセキュリティ投資を最大化する能力に影響を与えます。</p>
+<p><strong>プライバシーとデータ保護の懸念</strong>は、エンドポイントセキュリティソリューションがセキュリティ目的でユーザーアクティビティ、システムの動作、潜在的に機密情報を収集および分析する際に対処する必要があります。</p>
+<h2 id="実装のベストプラクティス">実装のベストプラクティス</h2>
+<p><strong>包括的な資産インベントリと分類</strong>は、エンドポイントセキュリティの展開に先立って行うべきであり、すべてのデバイスが特定、<a data-lb="1" href="/ja/glossary/Taxonomy/" title="タクソノミーシステム、分類方法、階層構造、および情報整理のための実装ベストプラクティスに関する包括的なガイド。">分類</a>され、リスクプロファイルとビジネス上の重要性に基づいて適切に保護されることを保証します。</p>
+<p><strong>リスクベースのセキュリティポリシー開発</strong>は、ユーザーの役割、デバイスタイプ、さまざまなエンドポイントカテゴリのビジネス要件を考慮しながら、特定の組織リスクに対処するカスタマイズされたセキュリティポリシーの作成を含みます。</p>
+<p><strong>段階的な展開とパイロットテスト</strong>は、パイロットグループから始めて、学んだ教訓とパフォーマンス検証に基づいて拡大することで、組織全体にエンドポイントセキュリティソリューションを段階的に展開し、実装リスクを軽減します。</p>
+<p><strong>既存のセキュリティインフラストラクチャとの統合</strong>は、エンドポイントセキュリティソリューションが現在のセキュリティツール、<a data-lb="1" href="/ja/glossary/Security-Information-and-Event-Management--SIEM-/" title="SIEMシステムの包括的ガイド:リアルタイムセキュリティ監視、脅威検知、コンプライアンス管理、インシデント対応機能について解説します。">SIEM</a>プラットフォーム、インシデント対応手順と効果的に連携して、まとまりのあるセキュリティエコシステムを作成することを保証します。</p>
+<p><strong>定期的なポリシーレビューと最適化</strong>は、脅威環境の変化、ビジネス要件の進化、ソリューションの<a data-lb="1" href="/ja/glossary/Model-Evaluation/" title="機械学習モデルのパフォーマンスと信頼性を評価するためのモデル評価技術、メトリクス、ベストプラクティスに関する包括的なガイド。">パフォーマンスメトリクス</a>に基づいてセキュリティポリシーを定期的に評価および更新することで、セキュリティの有効性を維持します。</p>
+<p><strong>ユーザートレーニングと意識向上プログラム</strong>は、エンドポイントセキュリティポリシー、手順、組織のセキュリティを維持する上での従業員の役割について教育し、セキュリティを意識した行動と実践を促進します。</p>
+<p><strong>継続的な監視と脅威ハンティング</strong>は、エンドポイントアクティビティ、セキュリティログ、脅威インテリジェンスフィードの継続的な分析を通じて、潜在的なセキュリティインシデントと新たな脅威を積極的に特定します。</p>
+<p><strong>インシデント対応計画の統合</strong>は、エンドポイントセキュリティ機能をより広範なインシデント対応手順に組み込み、セキュリティチームがセキュリティインシデントと調査中にエンドポイントツールを効果的に活用できるようにします。</p>
+<p><strong>パフォーマンス監視と最適化</strong>は、システムパフォーマンスへの影響と<a data-lb="1" href="/ja/glossary/UX/" title="ユーザーエクスペリエンス(UX)について、その定義、原則、プロセス、価値を網羅的に解説します。UXとUI、ユーザビリティ、CXの違いを学び、AIチャットボットと自動化の文脈におけるUXに焦点を当てます。">ユーザーエクスペリエンス</a>メトリクスを追跡して、セキュリティの有効性を維持しながら、調整と最適化の機会を特定します。</p>
+<p><strong>ベンダー管理とサポート計画</strong>は、サポート手順、エスカレーションパス、<a data-lb="1" href="/ja/glossary/Service-Level-Agreement--SLA-/" title="サービスレベル契約(SLA)の包括的ガイド - 定義、構成要素、実装のベストプラクティス、およびサービス管理における将来のトレンドを解説します。">サービスレベル契約</a>を含む、エンドポイントセキュリティベンダーとの明確な関係を確立し、信頼性の高い継続的な運用と問題解決を保証します。</p>
+<h2 id="高度な技術">高度な技術</h2>
+<p>**行動分析とユーザーエンティティ行動分析(UEBA)**は、機械学習アルゴリズムを活用してユーザーとデバイスのベースライン動作を確立し、侵害されたアカウントや内部脅威を示す可能性のある異常なアクティビティの検出を可能にします。</p>
+<p><strong>脅威ハンティングと積極的調査</strong>機能により、セキュリティチームは、手動分析と仮説駆動型調査を通じて、自動検出システムを回避した可能性のある侵害指標と高度な脅威を積極的に検索できます。</p>
+<p><strong>サンドボックスと動的分析</strong>技術は、疑わしいファイルとアプリケーションを分離された環境で実行して、本番システムやデータをリスクにさらすことなく、その動作を分析し、悪意のあるアクティビティを特定します。</p>
+<p><strong>メモリ保護とエクスプロイト防止</strong>技術は、ランタイムアプリケーション自己保護と制御フロー整合性メカニズムを通じて、バッファオーバーフロー、リターン指向プログラミング、その他のメモリベースのエクスプロイトなどの高度な攻撃方法から保護します。</p>
+<p><strong>欺瞞技術統合</strong>は、エンドポイント上にハニーポット、おとりファイル、偽の認証情報を展開して、横方向の移動と高度持続的脅威を検出しながら、攻撃者の手法と目的に関するインテリジェンスを収集します。</p>
+<p><strong>ゼロトラストアーキテクチャの実装</strong>は、デバイスの信頼性を継続的に検証し、最小権限アクセスを適用し、マイクロセグメンテーションを実装して潜在的な攻撃の影響と横方向の移動を制限することで、エンドポイントセキュリティにゼロトラスト原則を適用します。</p>
+<h2 id="今後の方向性">今後の方向性</h2>
+<p><strong>人工知能と機械学習の強化</strong>は、新たな脅威と攻撃パターンを予測する予測セキュリティ分析、改善された脅威検出精度、自動化された対応最適化を通じて、エンドポイントセキュリティ機能を継続的に進歩させます。</p>
+<p><strong>クラウドネイティブセキュリティアーキテクチャ</strong>は、クラウドのスケーラビリティ、グローバル脅威インテリジェンス、高度な分析機能を活用して、セキュリティの有効性を高めながら、ハイブリッドおよびマルチクラウド環境にシームレスな保護を提供するように進化しています。</p>
+<p><strong>モノのインターネット(IoT)とエッジデバイス保護</strong>は、これらの技術が企業環境でより普及するにつれて、産業用センサー、スマートビルディングシステム、エッジコンピューティングデバイスを含むようにエンドポイントセキュリティカバレッジを拡大します。</p>
+<p><strong>量子耐性暗号の統合</strong>は、量子コンピューティングの進歩が現在の暗号化方法を脅かすため、エンドポイントセキュリティソリューションがポスト量子暗号アルゴリズムと鍵管理システムを実装する必要があるため、必要になります。</p>
+<p><strong>拡張現実(XR)とメタバースセキュリティ</strong>は、これらの技術が企業で採用されるにつれて、仮想現実および拡張現実デバイス、アプリケーション、デジタル環境に対する専門的な保護を必要とする新しいエンドポイントカテゴリとして登場します。</p>
+<p><strong>自律的なセキュリティ運用</strong>は、高度なAIと自動化を活用して、脅威検出と修復アクティビティにおける応答時間と一貫性を向上させながら、エンドポイントセキュリティ管理における人間の介入要件を削減します。</p>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li>
+<p>NIST Cybersecurity Framework - Endpoint Security Guidelines. National Institute of Standards and Technology. <a href="https://www.nist.gov/cyberframework" rel="nofollow noopener noreferrer" target="_blank">https://www.nist.gov/cyberframework</a></p>
+</li>
+<li>
+<p>SANS Institute. “Endpoint Security Best Practices.” SANS Reading Room. <a href="https://www.sans.org/reading-room/" rel="nofollow noopener noreferrer" target="_blank">https://www.sans.org/reading-room/</a></p>
+</li>
+<li>
+<p>Gartner Research. “Market Guide for Endpoint Protection Platforms.” Gartner Inc. <a href="https://www.gartner.com/" rel="nofollow noopener noreferrer" target="_blank">https://www.gartner.com/</a></p>
+</li>
+<li>
+<p>CIS Controls Version 8 - Endpoint Protection. Center for Internet Security. <a href="https://www.cisecurity.org/controls/" rel="nofollow noopener noreferrer" target="_blank">https://www.cisecurity.org/controls/</a></p>
+</li>
+<li>
+<p>MITRE ATT&amp;CK Framework - Endpoint Security Techniques. The MITRE Corporation. <a href="https://attack.mitre.org/" rel="nofollow noopener noreferrer" target="_blank">https://attack.mitre.org/</a></p>
+</li>
+<li>
+<p>IEEE Computer Society. “Standards for Endpoint Security Architecture.” IEEE Xplore Digital Library. <a href="https://ieeexplore.ieee.org/" rel="nofollow noopener noreferrer" target="_blank">https://ieeexplore.ieee.org/</a></p>
+</li>
+<li>
+<p>ENISA Threat Landscape Report - Endpoint Security. European Union Agency for Cybersecurity. <a href="https://www.enisa.europa.eu/" rel="nofollow noopener noreferrer" target="_blank">https://www.enisa.europa.eu/</a></p>
+</li>
+<li>
+<p>ISO/IEC 27001:2013 - Information Security Management for Endpoints. International Organization for Standardization. <a href="https://www.iso.org/" rel="nofollow noopener noreferrer" target="_blank">https://www.iso.org/</a></p>
+</li>
+</ol>
+</div>
+<div class="mt-16 sm:mt-20 border-t border-gray-200 dark:border-gray-800 pt-12 sm:pt-16">
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-8 sm:mb-10">
+        
+          関連用語
+        
+      </h2>
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Multi-Factor-Authentication--MFA-/">
+                    多要素認証（MFA）
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    多要素認証（MFA）の包括的なガイド。実装方法、メリット、課題、セキュリティ強化のためのベストプラクティスを網羅しています。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Multi-Factor-Authentication--MFA-/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Vulnerability-Assessment/">
+                    脆弱性評価
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    システムやネットワークのセキュリティ上の弱点を特定するための脆弱性評価手法、ツール、ベストプラクティスに関する包括的なガイド。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Vulnerability-Assessment/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/security-policies/">
+                    セキュリティポリシー
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    セキュリティポリシーの目的、種類、情報資産保護における重要性を理解します。コンプライアンス、ベストプラクティス、CIA三原則について学びます。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/security-policies/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/security-requirements/">
+                    セキュリティ要件
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    セキュリティ要件について学ぶ:情報の機密性、完全性、可用性(CIA)を確保するためにシステムが満たすべき明確で実行可能な条件。デジタル資産を保護するために不可欠です。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/security-requirements/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/data-encryption/">
+                    データ暗号化
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    データ暗号化、その種類(対称暗号化、非対称暗号化)、鍵とアルゴリズムによる動作原理、および機密情報を保護するサイバーセキュリティにおける役割について解説します。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/data-encryption/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300">
+<div class="flex flex-1 flex-col p-5 sm:p-6">
+<h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white line-clamp-2 mb-3">
+<a class="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Adversarial-Attack/">
+                    敵対的攻撃
+                  </a>
+</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 flex-1 line-clamp-3">
+                    敵対的攻撃は、AI/ML モデルの入力を操作して誤った予測を引き起こし、脆弱性を悪用します。これらの攻撃は AI の信頼性を損ない、サイバーセキュリティ、自動運転車などに影響を及ぼします。...
+                  </p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:translate-x-1 transition-transform" href="https://main.d1jtfhinlastnr.amplifyapp.com/ja/glossary/Adversarial-Attack/">
+                    詳細を見る
+                    <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 py-8 border-t border-gray-200 dark:border-gray-800">
+<a class="inline-flex items-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors" href="/ja/glossary/">
+<svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+      
+        用語集に戻る
+      
+    </a>
+</div>
+</article>
+</main>
+<footer style="background-color: #000000;">
+<div id="cta-curves-container" style="
+    position: relative;
+    background: #000000;
+    padding: 4rem 2rem;
+    overflow: hidden;
+  ">
+<svg id="cta-curves-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.7;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="curveGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(99, 102, 241, 0.9); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(99, 102, 241, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(139, 92, 246, 0.8); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(139, 92, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+<lineargradient id="curveGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+<stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.7); stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:rgba(59, 130, 246, 0); stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="curve" data-speed="0.8" fill="none" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="1.2" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.6" fill="none" opacity="0.6" stroke="url(#curveGrad3)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.5" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="2"></path>
+<path class="curve" data-speed="0.9" fill="none" opacity="0.5" stroke="url(#curveGrad2)" stroke-width="3"></path>
+<path class="curve" data-speed="1.3" fill="none" opacity="0.9" stroke="url(#curveGrad3)" stroke-width="1.8"></path>
+<path class="curve" data-speed="0.7" fill="none" opacity="0.6" stroke="url(#curveGrad1)" stroke-width="2.2"></path>
+<path class="curve" data-speed="1.1" fill="none" opacity="0.8" stroke="url(#curveGrad2)" stroke-width="2"></path>
+<path class="curve" data-speed="1.4" fill="none" opacity="0.5" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+<path class="curve" data-speed="0.85" fill="none" opacity="0.7" stroke="url(#curveGrad1)" stroke-width="1.5"></path>
+<path class="curve" data-speed="1.0" fill="none" opacity="0.6" stroke="url(#curveGrad2)" stroke-width="2.8"></path>
+<path class="curve" data-speed="1.25" fill="none" opacity="0.8" stroke="url(#curveGrad3)" stroke-width="2"></path>
+<path class="curve" data-speed="0.95" fill="none" opacity="0.5" stroke="url(#curveGrad1)" stroke-width="2.3"></path>
+<path class="curve" data-speed="1.35" fill="none" opacity="0.9" stroke="url(#curveGrad2)" stroke-width="1.7"></path>
+<path class="curve" data-speed="0.75" fill="none" opacity="0.7" stroke="url(#curveGrad3)" stroke-width="2.5"></path>
+</svg>
+<div style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-top: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; left: 0; width: 50px; height: 50px; border-left: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div style="position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; border-right: 2px solid rgba(99, 102, 241, 0.3); border-bottom: 2px solid rgba(99, 102, 241, 0.3);"></div>
+<div class="mx-auto max-w-2xl text-center" style="position: relative; z-index: 10;">
+<h2 class="text-base/7 font-semibold text-indigo-400">今すぐ始めませんか？</h2>
+<p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">SmartWebで未来を創る</p>
+<p class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">数千社の企業が私たちのソリューションでビジネスを変革しています。あなたも今日から始めましょう。</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" href="/ja/blog/">無料で始める</a>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    'use strict';
+    
+    const container = document.getElementById('cta-curves-container');
+    const svg = document.getElementById('cta-curves-svg');
+    if (!container || !svg) return;
+    
+    const curves = svg.querySelectorAll('.curve');
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    const mouseInfluence = 150;
+    const mouseStrength = 80;
+    
+    const curveData = Array.from(curves).map((curve, i) => {
+      const speed = parseFloat(curve.getAttribute('data-speed')) || 1;
+      return {
+        element: curve,
+        baseY: 50 + (i * 25),
+        offset: Math.random() * Math.PI * 2,
+        speed: speed,
+        amplitude: 30 + Math.random() * 40
+      };
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      targetMouseX = e.clientX - rect.left;
+      targetMouseY = e.clientY - rect.top;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    });
+    
+    let time = 0;
+    
+    function animate() {
+      time += 0.01;
+      
+      mouseX += (targetMouseX - mouseX) * 0.15;
+      mouseY += (targetMouseY - mouseY) * 0.15;
+      
+      const width = svg.clientWidth;
+      const height = svg.clientHeight;
+      
+      curveData.forEach((data, index) => {
+        const { baseY, offset, speed, amplitude } = data;
+        const phase = time * speed + offset;
+        
+        let path = `M -200,${baseY}`;
+        
+        for (let x = -200; x <= width + 200; x += 50) {
+          const normalY = baseY + Math.sin((x * 0.005) + phase) * amplitude;
+          
+          const dx = x - mouseX;
+          const dy = normalY - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          let y = normalY;
+          if (distance < mouseInfluence) {
+            const influence = (1 - distance / mouseInfluence);
+            const pushY = (normalY - mouseY) * influence * mouseStrength * 0.01;
+            y = normalY + pushY;
+          }
+          
+          const nextX = x + 50;
+          const controlX = x + 25;
+          const controlY = y;
+          path += ` Q ${controlX},${controlY} ${nextX},${y}`;
+        }
+        
+        data.element.setAttribute('d', path);
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  })();
+  </script>
+<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+<div class="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
+<picture class="lazy-picture" data-maxwidth="200">
+<source data-original-src="/images/interwork-logo-white-1.webp" data-srcset="/images/interwork-logo-white-1.webp 568w" sizes="200px" type="image/webp"/>
+<img alt="Interwork" class="lazy-image h-9" data-original-src="/images/interwork-logo-white-1.webp" data-src="/images/interwork-logo-white-1.webp" decoding="async" loading="lazy"/>
+</picture>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">サービス</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">AIソリューション</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">Webサイト制作</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">システム開発</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">コンサルティング</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">サポート</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://support.smartweb.jp/">サポートポータル</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ドキュメント</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm/6 font-semibold text-white">会社情報</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="https://www.intwk.co.jp/about/">会社概要</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/blog/">ブログ</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">採用情報</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="#">ニュース</a>
+</li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm/6 font-semibold text-white">ポリシー</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/privacy-policy/">プライバシーポリシー</a>
+</li>
+<li>
+<a class="text-sm/6 text-gray-400 hover:text-white" href="/ja/ai-chatbot-terms-of-use/">AIチャットボット利用規約</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="language-selector mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div>
+<p class="text-sm/6 font-semibold text-white mb-4">利用可能な言語</p>
+<div class="language-selector">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="inline-flex items-center text-sm opacity-50" title="日本語">
+<img alt="日本語" class="rounded" height="18" src="/flags/jp.png" width="24"/>
+</span>
+<a aria-label="English" class="inline-flex items-center text-sm hover:opacity-75 transition-opacity" href="/en/glossary/endpoint-security/" hreflang="en" title="English">
+<img alt="English" class="rounded" height="18" src="/flags/gb.png" width="24"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+<div class="flex gap-x-6 md:order-2">
+<a class="text-gray-400 hover:text-gray-300" href="https://github.com">
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://x.com">
+<span class="sr-only">X</span>
+</a>
+<a class="text-gray-400 hover:text-gray-300" href="https://youtube.com">
+<span class="sr-only">YouTube</span>
+</a>
+</div>
+<p class="mt-8 text-sm/6 text-gray-400 md:mt-0" style="text-align: center; animation: copyrightGlow 3s ease-in-out infinite;">© 2026 Interwork Corporation All rights reserved.</p>
+</div>
+</div>
+<style>
+    @keyframes copyrightGlow {
+      0%, 100% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgba(99, 102, 241, 0);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+      }
+    }
+  </style>
+</footer>
+<div class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50 dark" data-cookie-consent-banner="" id="cookie-consent-banner">
+<div class="pointer-events-auto max-w-xl rounded-xl section-bg-light dark:section-bg-dark p-6 ring-1 shadow-lg ring-gray-900/10">
+<p class="text-secondary text-sm/6"><strong class="text-heading text-md mb-4 font-semibold">クッキーの同意</strong><br/> 閲覧体験を向上させ、トラフィックを分析するためにクッキーを使用します。 See our <a class="font-semibold text-primary hover:text-primary-500" href="/ja/privacy-policy/">privacy policy</a>.</p>
+<div class="mt-4 flex items-center gap-x-3 flex-wrap">
+<a aria-label="すべてを受け入れる" class="btn-primary dark:btn-primary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-all" href="#" target="_self">
+      すべてを受け入れる
+      
+      
+    </a>
+<a aria-label="必要なものだけを受け入れる" class="btn-secondary dark:btn-secondary-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="accept-necessary" href="#" target="_self">
+      必要なものだけを受け入れる
+      
+      
+    </a>
+<a aria-label="クッキー設定" class="btn-text dark:btn-text-dark px-3 py-2 text-sm not-prose group" data-cookie-consent="settings" href="#" target="_self">
+      クッキー設定
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden dark" id="cookie-settings-modal">
+<div class="absolute inset-0 bg-black bg-opacity-50" data-cookie-settings-close=""></div>
+<div class="relative mx-auto max-w-xl p-4 sm:p-6 section-bg-light dark:section-bg-dark rounded-xl shadow-xl mt-20">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-heading text-xl font-bold">クッキー設定</h2>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-300 dark:hover:text-white" data-cookie-settings-close="" type="button">
+<span class="sr-only">閉じる</span>
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">必要なクッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーはウェブサイトの機能に必要であり、無効にすることはできません。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input checked="" class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" disabled="" id="necessary-cookies" name="necessary-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+<div class="border-gray-200 dark:border-gray-700 border-b pb-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-heading text-lg font-medium">分析クッキー</h3>
+<p class="text-tertiary text-sm">これらのクッキーは、訪問者がウェブサイトとどのように相互作用しているかを理解するのに役立ちます。</p>
+</div>
+<div class="ml-3 flex h-5 items-center">
+<input class="h-4 w-4 rounded-xl border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700" id="analytics-cookies" name="analytics-cookies" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end gap-x-3">
+<a aria-label="キャンセル" class="btn-secondary dark:btn-secondary-dark px-3 py-2 not-prose group" data-cookie-settings-close="" href="#" target="_self">
+      キャンセル
+      
+      
+    </a>
+<a aria-label="設定を保存" class="btn-primary dark:btn-primary-dark px-3 py-2 not-prose group" data-cookie-settings-save="" href="#" target="_self">
+      設定を保存
+      
+      
+    </a>
+</div>
+</div>
+</div>
+<button aria-label="Back to Top" class="fixed bottom-8 right-8 z-[100] p-3 rounded-full bg-indigo-600 text-white shadow-lg transition-all duration-300 transform translate-y-12 opacity-0 invisible hover:bg-indigo-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400" id="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  const scrollThreshold = 300;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > scrollThreshold) {
+      backToTopBtn.classList.remove('translate-y-12', 'opacity-0', 'invisible');
+      backToTopBtn.classList.add('translate-y-0', 'opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.remove('translate-y-0', 'opacity-100', 'visible');
+      backToTopBtn.classList.add('translate-y-12', 'opacity-0', 'invisible');
+    }
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        toggleVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+</script>
+<script src="/js/app.js?v=20260106210125"></script>
+</body>
+</html>
