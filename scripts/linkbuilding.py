@@ -11,6 +11,7 @@ import json
 import csv
 import re
 import argparse
+import yaml
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass, field
@@ -249,12 +250,19 @@ class LinkBuilder:
         '/search/', '/404.html', '/index.xml', '/sitemap.xml'
     }
     
-    def __init__(self, keywords: List[Keyword], config: LinkConfig = None, language: str = None):
+    def __init__(
+        self,
+        keywords: List[Keyword],
+        config: LinkConfig = None,
+        language: str = None,
+        dry_run: bool = False,
+    ):
         self.keywords = sorted(keywords, key=lambda k: (-k.priority, -len(k.keyword)))
         self.config = config or LinkConfig()
         self.stats = LinkStatistics()
         self.current_file = None
         self.language = language or ''  # Language code for progress reporting
+        self.dry_run = dry_run
         self.reset_page_counters()
     
     def reset_page_counters(self):
@@ -305,7 +313,12 @@ class LinkBuilder:
         
         return False
     
-    def process_directory(self, directory: str, exclude_dirs: List[str] = None, is_english: bool = False) -> LinkStatistics:
+    def process_directory(
+        self,
+        directory: str,
+        exclude_dirs: List[str] = None,
+        is_english: bool = False,
+    ) -> LinkStatistics:
         """Process all HTML files in a directory
         
         Args:
@@ -389,12 +402,16 @@ class LinkBuilder:
             self.stats.total_files_processed += 1
             
             if modified and self.page_replacements > 0:
-                # Write back modified content
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(str(soup))
-                
+                if not self.dry_run:
+                    # Write back modified content
+                    with open(file_path, 'w', encoding='utf-8') as f:
+                        f.write(str(soup))
+
                 self.stats.total_files_modified += 1
-                print(f"✓ {file_path}: Added {self.page_replacements} links")
+                if self.dry_run:
+                    print(f"[DRY-RUN] {file_path}: Would add {self.page_replacements} links")
+                else:
+                    print(f"✓ {file_path}: Added {self.page_replacements} links")
                 return True
             else:
                 print(f"  {file_path}: No changes")
@@ -417,6 +434,11 @@ class LinkBuilder:
         if (self.page_total_links >= self.config.max_links_on_page or
             self.page_replacements >= self.config.max_replacements_per_page):
             return False
+        
+        # Special handling for bold/strong tags: check if entire content matches a keyword
+        if hasattr(element, 'name') and element.name in ('strong', 'b', 'em', 'i'):
+            if self.try_wrap_bold_tag(element):
+                return True
         
         # Process children
         if hasattr(element, 'children'):
@@ -447,13 +469,80 @@ class LinkBuilder:
         
         return modified
     
+    def try_wrap_bold_tag(self, bold_tag) -> bool:
+        """Try to wrap entire bold/strong tag in a link if content matches a keyword
+        
+        Returns True if the tag was wrapped, False otherwise
+        """
+        # Get text content of the bold tag
+        text = bold_tag.get_text()
+        
+        if not text or len(text.strip()) < 2:
+            return False
+        
+        # Get the soup object from the tag's parent tree
+        soup = bold_tag.find_parent()
+        while soup and soup.parent:
+            soup = soup.parent
+        
+        if not soup:
+            return False
+        
+        # Check each keyword to see if it matches the entire bold text
+        for keyword in self.keywords:
+            # Check limits
+            if (self.page_replacements >= self.config.max_replacements_per_page or
+                self.page_keyword_counts[keyword.keyword] >= self.config.max_replacements_per_keyword or
+                self.page_url_counts[keyword.url] >= self.config.max_replacements_per_url):
+                continue
+            
+            keyword_url_key = f"{keyword.keyword}|{keyword.url}"
+            if self.page_keyword_url_counts[keyword_url_key] >= self.config.max_replacements_per_keyword_url:
+                continue
+            
+            # Check if the entire text matches the keyword
+            match = keyword.keyword_pattern.fullmatch(text)
+            if match:
+                # Create link wrapper using soup's new_tag method
+                link_tag = soup.new_tag('a')
+                link_tag['href'] = keyword.url
+                link_tag['data-lb'] = '1'
+                
+                if self.config.add_title_attribute and keyword.title:
+                    link_tag['title'] = keyword.title
+                
+                # Wrap the bold tag with the link
+                bold_tag.wrap(link_tag)
+                
+                # Update counters
+                self.page_keyword_counts[keyword.keyword] += 1
+                self.page_url_counts[keyword.url] += 1
+                self.page_keyword_url_counts[keyword_url_key] += 1
+                self.page_replacements += 1
+                self.page_total_links += 1
+                
+                # Update statistics
+                self.stats.add_link(keyword.keyword, keyword.url, self.current_file)
+                
+                return True
+        
+        return False
+    
     def process_text_node(self, text_node: NavigableString, parent_element) -> str:
-        """Process a text node and add links"""
+        """Process a text node and add links
+        
+        Special handling for bold/strong tags to preserve formatting:
+        - If parent is <strong> or <b>, wrap the entire keyword match in the link
+        - This prevents breaking bold formatting in the middle
+        """
         text = str(text_node)
         
         # Skip short text
         if len(text.strip()) < self.config.min_paragraph_length:
             return text
+        
+        # Check if we're inside a bold/strong tag
+        is_bold_context = parent_element and parent_element.name in ('strong', 'b', 'em', 'i')
         
         # Calculate paragraph density limit
         text_length = len(text)
@@ -526,7 +615,12 @@ class LinkBuilder:
                 elif self.config.internal_link_target:
                     link_attrs.append(f'target="{self.config.internal_link_target}"')
                 
-                link_html = f'<a {" ".join(link_attrs)}>{html.escape(matched_text)}</a>'
+                # For bold/strong context, preserve the formatting by wrapping link content in bold
+                if is_bold_context:
+                    # The link will be created, and the parent bold tag will wrap it naturally
+                    link_html = f'<a {" ".join(link_attrs)}>{html.escape(matched_text)}</a>'
+                else:
+                    link_html = f'<a {" ".join(link_attrs)}>{html.escape(matched_text)}</a>'
                 
                 # Add text before the link
                 if start > last_end:
@@ -559,6 +653,22 @@ class LinkBuilder:
             return ''.join(result_parts)
         else:
             return text
+
+
+def load_denylist_terms(denylist_csv: Path) -> set[str]:
+    """Load danger-term denylist and return a set of normalized terms (lowercased)."""
+    terms: set[str] = set()
+    try:
+        with denylist_csv.open('r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                raw = (row.get('normalized') or row.get('keyword') or '').strip()
+                if not raw:
+                    continue
+                terms.add(raw.lower())
+    except Exception as e:
+        print(f"Warning: Failed to load denylist {denylist_csv}: {e}")
+    return terms
 
 
 def load_keywords_from_csv(file_path: str) -> List[Keyword]:
@@ -646,6 +756,55 @@ def load_keywords_from_json(file_path: str) -> List[Keyword]:
     return keywords
 
 
+def load_keywords_from_yaml(file_path: str) -> List[Keyword]:
+    """Load keywords from YAML file
+    
+    Expected format:
+    keywords:
+      - keyword: "AI Tools"
+        url: "/tools/"
+        title: "Browse AI Tools"
+        priority: 10
+        exact: false
+    """
+    keywords = []
+    
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = yaml.safe_load(f)
+    
+    if not data:
+        return keywords
+    
+    # Check if data has "keywords" wrapper
+    if isinstance(data, dict) and "keywords" in data:
+        items = data["keywords"]
+    elif isinstance(data, list):
+        items = data
+    else:
+        return keywords
+    
+    # Process each item
+    for item in items:
+        if isinstance(item, dict):
+            keyword_text = item.get('keyword', '').strip()
+            url = item.get('url', '').strip()
+            title = item.get('title', '').strip()
+            priority = item.get('priority', 0)
+            exact_match = item.get('exact', item.get('exact_match', False))
+            
+            keyword = Keyword(
+                keyword=keyword_text,
+                url=url,
+                title=title,
+                priority=priority,
+                exact_match=exact_match
+            )
+            if keyword.keyword and keyword.url:
+                keywords.append(keyword)
+    
+    return keywords
+
+
 def load_keywords_from_multiple_sources(manual_file: Optional[str] = None,
                                        automatic_file: Optional[str] = None,
                                        manual_priority_boost: int = 10) -> List[Keyword]:
@@ -675,6 +834,8 @@ def load_keywords_from_multiple_sources(manual_file: Optional[str] = None,
         try:
             if manual_file.endswith('.json'):
                 manual_keywords = load_keywords_from_json(manual_file)
+            elif manual_file.endswith('.yaml') or manual_file.endswith('.yml'):
+                manual_keywords = load_keywords_from_yaml(manual_file)
             else:
                 manual_keywords = load_keywords_from_csv(manual_file)
             
@@ -774,6 +935,8 @@ Note: Field names are capitalized (Keyword, URL, Title, Priority, Exact) but low
                        help='Override max replacements per URL')
     parser.add_argument('--manual-priority-boost', type=int, default=10,
                        help='Priority boost for manual keywords over automatic (default: 10)')
+    parser.add_argument('--denylist', type=str, default=None,
+                       help='Path to danger-term denylist CSV (optional)')
     
     args = parser.parse_args()
     
@@ -781,17 +944,53 @@ Note: Field names are capitalized (Keyword, URL, Title, Priority, Exact) but low
     if not args.keywords and not args.automatic:
         parser.error("At least one keyword source is required: use -k/--keywords or -a/--automatic")
     
+    # Determine language being processed (code for logic vs display for progress)
+    language_display = args.language  # could be e.g. "EN" for nicer progress output
+    language: Optional[str] = args.language.lower() if args.language else None
+
+    if not language:
+        # Try to auto-detect language from directory
+        dir_path = Path(args.directory).resolve()
+
+        if dir_path.name in ['ar', 'cs', 'da', 'de', 'es', 'fi', 'fr', 'it', 'ja', 'ko',
+                             'nl', 'no', 'pl', 'pt', 'ro', 'sk', 'sv', 'tr', 'vi', 'zh']:
+            language = dir_path.name
+        elif dir_path.name == 'public' or (args.exclude and len(args.exclude) >= 10):
+            # Check if we're excluding language directories (indicates English processing)
+            common_langs = {'ar', 'cs', 'da', 'de', 'es', 'fi', 'fr', 'it', 'ja', 'ko',
+                           'nl', 'no', 'pl', 'pt', 'ro', 'sk', 'sv', 'tr', 'vi', 'zh'}
+            if args.exclude:
+                excluded_set = set(args.exclude)
+                if len(excluded_set.intersection(common_langs)) >= 10:
+                    language = 'en'
+
     # Load keywords from both sources
     keywords = load_keywords_from_multiple_sources(
         manual_file=args.keywords,
         automatic_file=args.automatic,
         manual_priority_boost=args.manual_priority_boost
     )
-    
+
     if not keywords:
         print("Error: No keywords loaded from any source")
         sys.exit(1)
-    
+
+    deny_terms: set[str] = set()
+    denylist_path: Optional[Path] = Path(args.denylist) if args.denylist else None
+    if denylist_path is None and language in ("en", "ja"):
+        auto_path = Path(f"databases/danger_terms_{language}.csv")
+        if auto_path.exists():
+            denylist_path = auto_path
+
+    if denylist_path is not None and denylist_path.exists():
+        deny_terms = load_denylist_terms(denylist_path)
+        if deny_terms:
+            before = len(keywords)
+            keywords = [kw for kw in keywords if kw.keyword.lower().strip() not in deny_terms]
+            after = len(keywords)
+            print(f"Loaded denylist terms: {len(deny_terms)} from {denylist_path}")
+            print(f"Filtered keywords via denylist: {before - after}")
+
     print(f"Loaded {len(keywords)} total keywords")
     
     # Load or create config
@@ -809,29 +1008,13 @@ Note: Field names are capitalized (Keyword, URL, Title, Priority, Exact) but low
     if args.max_url:
         config.max_replacements_per_url = args.max_url
     
-    # Determine language being processed
-    language = args.language  # Use explicitly provided language if available
-    
-    if not language:
-        # Try to auto-detect language from directory
-        dir_path = Path(args.directory).resolve()
-        
-        if dir_path.name in ['ar', 'cs', 'da', 'de', 'es', 'fi', 'fr', 'it', 'ja', 'ko',
-                             'nl', 'no', 'pl', 'pt', 'ro', 'sk', 'sv', 'tr', 'vi', 'zh']:
-            language = dir_path.name
-        elif dir_path.name == 'public' or (args.exclude and len(args.exclude) >= 10):
-            # Check if we're excluding language directories (indicates English processing)
-            common_langs = {'ar', 'cs', 'da', 'de', 'es', 'fi', 'fr', 'it', 'ja', 'ko',
-                           'nl', 'no', 'pl', 'pt', 'ro', 'sk', 'sv', 'tr', 'vi', 'zh'}
-            if args.exclude:
-                excluded_set = set(args.exclude)
-                if len(excluded_set.intersection(common_langs)) >= 10:
-                    language = 'en'
-    
     # Create link builder with language info
-    builder = LinkBuilder(keywords, config, language=language)
+    language_for_progress = language_display or (language.upper() if language else '')
+    builder = LinkBuilder(keywords, config, language=language_for_progress, dry_run=args.dry_run)
     
     # Process directory
+    if args.dry_run:
+        print("DRY-RUN MODE: No files will be written")
     print(f"Processing directory: {args.directory}")
     if args.exclude:
         print(f"Excluding: {', '.join(args.exclude)}")
@@ -850,7 +1033,10 @@ Note: Field names are capitalized (Keyword, URL, Title, Priority, Exact) but low
     print(f"LINKBUILDING REPORT SUMMARY")
     print(f"{'='*60}")
     print(f"  Files processed: {stats.total_files_processed}")
-    print(f"  Files modified: {stats.total_files_modified}")
+    if args.dry_run:
+        print(f"  Files modified: {stats.total_files_modified} (dry-run: would modify)")
+    else:
+        print(f"  Files modified: {stats.total_files_modified}")
     print(f"  Links added: {stats.total_links_added}")
     print(f"  Keywords used: {len(stats.links_per_keyword)}")
     

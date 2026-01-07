@@ -1,0 +1,179 @@
+english,japanese,type,category,notes,usage_context
+AI,AI,keep_english,ai_ml,Universal acronym,Always use English
+Artificial Intelligence,人工知能,translate,ai_ml,Standard Japanese term exists,Use kanji form
+Machine Learning,機械学習,translate,ai_ml,Standard Japanese term exists,Use kanji form
+Deep Learning,ディープラーニング,katakana,ai_ml,Commonly used in katakana,Technical term
+Neural Network,ニューラルネットワーク,katakana,ai_ml,Technical term katakana standard,Use katakana
+LLM,LLM,keep_english,ai_ml,Acronym,Always use English
+Large Language Model,大規模言語モデル,translate,ai_ml,Descriptive translates well,Use kanji form
+Transformer,Transformer,keep_english,ai_ml,Proper noun (architecture name),Product/architecture name
+GPT,GPT,keep_english,ai_ml,Acronym/brand,Product name
+BERT,BERT,keep_english,ai_ml,Acronym/brand,Product name
+Attention Mechanism,アテンションメカニズム,katakana,ai_ml,Technical term,Use katakana
+Embedding,埋め込み,translate,ai_ml,Standard Japanese term,Use kanji form
+Token,トークン,katakana,ai_ml,Technical term,Use katakana
+Prompt,プロンプト,katakana,ai_ml,New term katakana standard,Use katakana
+Fine-tuning,ファインチューニング,katakana,ai_ml,Technical process,Use katakana
+Inference,推論,translate,ai_ml,Standard Japanese term,Use kanji form
+Training,トレーニング,katakana,ai_ml,Common in ML context,Use katakana
+Hallucination,ハルシネーション,katakana,ai_ml,No good Japanese equivalent,Technical term
+RAG,RAG,keep_english,ai_ml,Acronym,Always use English
+Retrieval-Augmented Generation,検索拡張生成,translate,ai_ml,Descriptive term,Use kanji form
+NLP,NLP,keep_english,ai_ml,Universal acronym,Always use English
+Natural Language Processing,自然言語処理,translate,ai_ml,Standard term,Use kanji form
+Prompt Engineering,プロンプトエンジニアリング,katakana,ai_ml,Technical term,Use katakana
+Pre-training,事前トレーニング,hybrid,ai_ml,Kanji + katakana,Mixed form
+Parameter,パラメータ,katakana,ai_ml,Technical term,Use katakana
+Context Window,コンテキストウィンドウ,katakana,ai_ml,Technical term,Use katakana
+Temperature,温度,translate,ai_ml,Setting parameter,Use kanji for the setting
+Top-p Sampling,Top-pサンプリング,hybrid,ai_ml,Keep Top-p in English,Hybrid format
+Vector,ベクトル,katakana,ai_ml,Mathematical term,Use katakana
+Benchmark,ベンチマーク,katakana,ai_ml,Technical term,Use katakana
+Model Drift,モデルドリフト,katakana,ai_ml,Technical term,Use katakana
+ChatGPT,ChatGPT,keep_english,product,Product name,Never translate
+OpenAI,OpenAI,keep_english,product,Company name,Never translate
+Claude,Claude,keep_english,product,Product name,Never translate
+Anthropic,Anthropic,keep_english,product,Company name,Never translate
+Gemini,Gemini,keep_english,product,Product name,Never translate
+Google,Google,keep_english,product,Company name,Never translate
+Microsoft,Microsoft,keep_english,product,Company name,Never translate
+Copilot,Copilot,keep_english,product,Product name,Never translate
+Meta,Meta,keep_english,product,Company name,Never translate
+DeepSeek,DeepSeek,keep_english,product,Product name,Never translate
+Mistral,Mistral,keep_english,product,Product name,Never translate
+xAI,xAI,keep_english,product,Company name,Never translate
+Grok,Grok,keep_english,product,Product name,Never translate
+GPT-4,GPT-4,keep_english,product,Product version,Never translate
+GPT-3.5,GPT-3.5,keep_english,product,Product version,Never translate
+DALL-E,DALL-E,keep_english,product,Product name,Never translate
+Midjourney,Midjourney,keep_english,product,Product name,Never translate
+Stable Diffusion,Stable Diffusion,keep_english,product,Product name,Never translate
+Customer Support,カスタマーサポート,katakana,customer_service,Industry standard,Use katakana
+Customer Service,カスタマーサービス,katakana,customer_service,Industry standard,Use katakana
+Help Desk,ヘルプデスク,katakana,customer_service,Commonly used,Use katakana
+Ticket,チケット,katakana,customer_service,Industry term,Use katakana
+Ticket System,チケットシステム,katakana,customer_service,Industry term,Use katakana
+Live Chat,ライブチャット,katakana,customer_service,Common term,Use katakana
+Chatbot,チャットボット,katakana,customer_service,Widely used,Use katakana
+Knowledge Base,ナレッジベース,katakana,customer_service,Industry standard,Use katakana
+FAQ,FAQ,keep_english,customer_service,Universal acronym,Always use English
+Self-Service,セルフサービス,katakana,customer_service,Common term,Use katakana
+Agent,エージェント,katakana,customer_service,Industry term,Use katakana
+Customer,顧客,translate,customer_service,Common word,Use kanji form
+User,ユーザー,katakana,customer_service,Common term,Use katakana with long vowel
+Inquiry,問い合わせ,translate,customer_service,Common word,Use kanji form
+Response Time,応答時間,translate,customer_service,Clear Japanese term,Use kanji form
+Resolution,解決,translate,customer_service,Common word,Use kanji form
+Escalation,エスカレーション,katakana,customer_service,Business term,Use katakana
+SLA,SLA,keep_english,customer_service,Universal acronym,Always use English
+Service Level Agreement,サービスレベル契約,translate,customer_service,Descriptive term,Use katakana + kanji
+Automation,自動化,translate,customer_service,Common word,Use kanji form
+Workflow,ワークフロー,katakana,customer_service,Business term,Use katakana
+API,API,keep_english,technical,Universal acronym,Always use English
+REST API,REST API,keep_english,technical,Technical standard,Always use English
+JSON,JSON,keep_english,technical,Data format,Always use English
+YAML,YAML,keep_english,technical,Data format,Always use English
+Markdown,Markdown,keep_english,technical,Format name,Always use English
+HTML,HTML,keep_english,technical,Standard,Always use English
+CSS,CSS,keep_english,technical,Standard,Always use English
+JavaScript,JavaScript,keep_english,technical,Language name,Always use English
+Python,Python,keep_english,technical,Language name,Always use English
+Git,Git,keep_english,technical,Tool name,Always use English
+GitHub,GitHub,keep_english,technical,Platform name,Always use English
+Repository,リポジトリ,katakana,technical,Common term,Use katakana
+Commit,コミット,katakana,technical,Git term,Use katakana
+Pull Request,プルリクエスト,katakana,technical,Git term,Use katakana
+CI/CD,CI/CD,keep_english,technical,Acronym,Always use English
+Docker,Docker,keep_english,technical,Tool name,Always use English
+Kubernetes,Kubernetes,keep_english,technical,Platform name,Always use English
+Cloud,クラウド,katakana,technical,Common term,Use katakana
+Server,サーバー,katakana,technical,Common term,Use katakana with long vowel
+Database,データベース,katakana,technical,Common term,Use katakana
+Framework,フレームワーク,katakana,technical,Technical term,Use katakana
+Library,ライブラリ,katakana,technical,Technical term,Use katakana
+Plugin,プラグイン,katakana,technical,Technical term,Use katakana
+Integration,統合,translate,technical,Common word,Use kanji form
+Deployment,デプロイメント,katakana,technical,Technical term,Use katakana
+Configuration,設定,translate,technical,Common word,Use kanji form
+Hugo,Hugo,keep_english,web_cms,Platform name,Always use English
+Static Site,静的サイト,translate,web_cms,Clear Japanese term,Use kanji form
+CMS,CMS,keep_english,web_cms,Universal acronym,Always use English
+Content Management,コンテンツ管理,hybrid,web_cms,Katakana + kanji,Mixed form
+Blog,ブログ,katakana,web_cms,Common term,Use katakana
+Post,投稿,translate,web_cms,Common word,Use kanji form
+Page,ページ,katakana,web_cms,Common term,Use katakana
+Template,テンプレート,katakana,web_cms,Technical term,Use katakana
+Theme,テーマ,katakana,web_cms,Common term,Use katakana
+SEO,SEO,keep_english,web_cms,Universal acronym,Always use English
+Metadata,メタデータ,katakana,web_cms,Technical term,Use katakana
+URL,URL,keep_english,web_cms,Universal acronym,Always use English
+Link,リンク,katakana,web_cms,Common term,Use katakana
+Internal Link,内部リンク,translate,web_cms,Clear Japanese term,Use kanji + katakana
+External Link,外部リンク,translate,web_cms,Clear Japanese term,Use kanji + katakana
+Anchor Text,アンカーテキスト,katakana,web_cms,Technical term,Use katakana
+Sitemap,サイトマップ,katakana,web_cms,Common term,Use katakana
+RSS,RSS,keep_english,web_cms,Acronym,Always use English
+ROI,ROI,keep_english,business,Universal acronym,Always use English
+Return on Investment,投資収益率,translate,business,Standard term,Use kanji form
+KPI,KPI,keep_english,business,Universal acronym,Always use English
+Key Performance Indicator,重要業績評価指標,translate,business,Standard term,Use kanji form
+Conversion,コンバージョン,katakana,business,Marketing term,Use katakana
+Engagement,エンゲージメント,katakana,business,Marketing term,Use katakana
+Analytics,分析,translate,business,Common word,Use kanji form
+Dashboard,ダッシュボード,katakana,business,UI term,Use katakana
+Metrics,メトリクス,katakana,business,Technical term,Use katakana
+Report,レポート,katakana,business,Common term,Use katakana
+Insights,インサイト,katakana,business,Business term,Use katakana
+Strategy,戦略,translate,business,Common word,Use kanji form
+Campaign,キャンペーン,katakana,business,Common term,Use katakana
+Lead,リード,katakana,business,Marketing term,Use katakana
+Funnel,ファネル,katakana,business,Marketing term,Use katakana
+Retention,定着率,translate,business,Clear Japanese term,Use kanji form
+Churn,解約率,translate,business,Clear Japanese term,Use kanji form
+CTR,CTR,keep_english,business,Acronym,Always use English
+Click-Through Rate,クリック率,translate,business,Descriptive term,Use katakana + kanji
+A/B Testing,A/Bテスト,hybrid,business,Common term,Hybrid format
+UX,UX,keep_english,ux_ui,Universal acronym,Always use English
+User Experience,ユーザーエクスペリエンス,katakana,ux_ui,Industry term,Use katakana
+UI,UI,keep_english,ux_ui,Universal acronym,Always use English
+User Interface,ユーザーインターフェース,katakana,ux_ui,Industry term,Use katakana
+Usability,ユーザビリティ,katakana,ux_ui,Technical term,Use katakana
+Accessibility,アクセシビリティ,katakana,ux_ui,Technical term,Use katakana
+Responsive Design,レスポンシブデザイン,katakana,ux_ui,Technical term,Use katakana
+Mobile-First,モバイルファースト,katakana,ux_ui,Design approach,Use katakana
+Navigation,ナビゲーション,katakana,ux_ui,Common term,Use katakana
+Menu,メニュー,katakana,ux_ui,Common term,Use katakana
+Button,ボタン,katakana,ux_ui,Common term,Use katakana
+Form,フォーム,katakana,ux_ui,Common term,Use katakana
+Input,入力,translate,ux_ui,Common word,Use kanji form
+Output,出力,translate,ux_ui,Common word,Use kanji form
+Feedback,フィードバック,katakana,ux_ui,Common term,Use katakana
+Breadcrumb,パンくずリスト,translate,ux_ui,Japanese term exists,Use kanji + katakana
+Hamburger Menu,ハンバーガーメニュー,katakana,ux_ui,UI term,Use katakana
+Security,セキュリティ,katakana,general,Common term,Use katakana
+Privacy,プライバシー,katakana,general,Common term,Use katakana
+Authentication,認証,translate,general,Standard term,Use kanji form
+Authorization,認可,translate,general,Standard term,Use kanji form
+Encryption,暗号化,translate,general,Standard term,Use kanji form
+Optimization,最適化,translate,general,Common word,Use kanji form
+Migration,移行,translate,general,Common word,Use kanji form
+Backup,バックアップ,katakana,general,Common term,Use katakana
+Restore,復元,translate,general,Common word,Use kanji form
+Archive,アーカイブ,katakana,general,Common term,Use katakana
+Implement,実装する,translate,action,Common word,Use kanji form
+Deploy,デプロイする,katakana,action,Technical term,Use katakana
+Configure,設定する,translate,action,Common word,Use kanji form
+Integrate,統合する,translate,action,Common word,Use kanji form
+Optimize,最適化する,translate,action,Common word,Use kanji form
+Automate,自動化する,translate,action,Common word,Use kanji form
+Analyze,分析する,translate,action,Common word,Use kanji form
+Monitor,監視する,translate,action,Common word,Use kanji form
+Test,テストする,katakana,action,Common term,Use katakana
+Debug,デバッグする,katakana,action,Technical term,Use katakana
+Customize,カスタマイズする,katakana,action,Common term,Use katakana
+Scale,スケールする,katakana,action,Technical term,Use katakana
+Migrate,移行する,translate,action,Common word,Use kanji form
+CRM,CRM,keep_english,business,Universal acronym,Always use English
+Customer Relationship Management,顧客関係管理,translate,business,Descriptive term,Use kanji form
+Search Engine Optimization,検索エンジン最適化,translate,web_cms,Descriptive term,Use kanji + katakana
+Content Management System,コンテンツ管理システム,hybrid,web_cms,Descriptive term,Katakana + kanji

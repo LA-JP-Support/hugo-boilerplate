@@ -107,6 +107,7 @@ Thus, KCS is a modern knowledge sharing method that transforms field knowledge i
 When selecting knowledge base tools, compare and evaluate based on the following six perspectives according to organizational scale and usage purpose:
 
 | Selection Point | Details |
+|---|---|
 | Searchability | Support for full-text search, tag search, and natural language search |
 | Ease of Operation and Updates | Usability of content creation, editing, and management functions |
 | Security | Completeness of access control and log management |

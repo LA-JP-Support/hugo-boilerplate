@@ -1,5 +1,6 @@
 +++ 
 title = "RAG vs. CAG: Understanding Knowledge Augmentation Strategies for AI Models"
+date = 2025-01-05
 youtubeTitle = "RAG vs. CAG: Solving Knowledge Gaps in AI Models"
 youtubeVideoID = "HdafI0t3sEY"
 description = "Explore the differences between Retrieval-Augmented Generation (RAG and Cache-Augmented Generation (CAG, two powerful techniques for enhancing large language models with external knowledge. Learn when to use each approach and how they solve the knowledge gap problem in AI."

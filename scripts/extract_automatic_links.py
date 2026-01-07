@@ -260,11 +260,17 @@ def save_links_to_json(links: List[Dict], output_file: str) -> None:
     output_path = Path(output_file)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
-    # Convert to proper format with capitalized field names
-    formatted_links = []
+    # Deduplicate links: keep highest priority version of each keyword
+    keyword_dict = {}
     for link in links:
-        # Calculate priority based on keyword length
-        # Longer keywords get higher priority
+        # Filter out invalid URLs
+        url = link['url']
+        
+        # Skip URLs containing 'backup' or 'archived' directories
+        if 'backup' in url.lower() or 'archived' in url.lower():
+            continue
+        
+        keyword_lower = link['keyword'].lower()
         keyword_length = len(link['keyword'])
         base_priority = link.get('priority', 1)
         
@@ -275,13 +281,18 @@ def save_links_to_json(links: List[Dict], output_file: str) -> None:
         # Final priority is base priority plus length bonus
         final_priority = base_priority + length_bonus
         
-        formatted_links.append({
-            "Keyword": link['keyword'],
-            "URL": link['url'],
-            "Title": link['title'],
-            "Exact": False,  # Default for automatic links
-            "Priority": final_priority
-        })
+        # Keep only the highest priority version of each keyword
+        if keyword_lower not in keyword_dict or final_priority > keyword_dict[keyword_lower].get('Priority', 0):
+            keyword_dict[keyword_lower] = {
+                "Keyword": link['keyword'],
+                "URL": link['url'],
+                "Title": link['title'],
+                "Exact": False,  # Default for automatic links
+                "Priority": final_priority
+            }
+    
+    # Convert dict to list
+    formatted_links = list(keyword_dict.values())
     
     # Sort links by keyword for consistent output
     sorted_links = sorted(formatted_links, key=lambda x: x['Keyword'].lower())
@@ -293,7 +304,7 @@ def save_links_to_json(links: List[Dict], output_file: str) -> None:
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(output_data, f, indent=2, ensure_ascii=False)
     
-    logger.info(f"Saved {len(sorted_links)} links to {output_file}")
+    logger.info(f"Saved {len(sorted_links)} unique links (deduplicated from {len(links)} total) to {output_file}")
 
 
 def main():

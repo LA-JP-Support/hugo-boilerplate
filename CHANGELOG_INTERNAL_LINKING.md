@@ -1,0 +1,157 @@
+# Changelog - Internal Linking System
+
+## [2.0.0] - 2026-01-07
+
+### 🎯 Major Changes - HTML後処理方式への統一
+
+**Breaking Changes**: 内部リンクシステムを**HTML後処理方式**に完全統一しました。Markdownファイルを直接編集する旧方式は非推奨となり、アーカイブされました。
+
+### ✨ Added
+
+- **HTML後処理方式の確立**
+  - `linkbuilding.py`: BeautifulSoupを使用した安全なHTML編集
+  - `linkbuilding_parallel.py`: EN/JAの並列処理ラッパー
+  - クリーンなMarkdownソース（`content-clean/`）の維持
+
+- **重複除外機能**
+  - `extract_automatic_links.py`: キーワード辞書生成時に自動的に重複を除外
+  - 同一キーワードの最高優先度版のみを保持
+  - EN: 3214個 → 1956個（重複除外）
+  - JA: 2438個 → 1934個（重複除外）
+
+- **Denylist統合**
+  - `linkbuilding.py`: `--denylist` 引数で除外語CSVを指定可能
+  - 言語コード（en/ja）を自動検出し、`databases/danger_terms_{lang}.csv` を自動読み込み
+  - `linkbuilding_parallel.py`: `--denylist-dir` 引数で一括適用
+
+- **太字処理改善**
+  - `try_wrap_bold_tag()`: 太字タグ全体がキーワードにマッチする場合、タグ全体をリンクで囲む
+  - 太字フォーマットの保持を改善
+
+- **新規ユーティリティスクリプト**
+  - `convert_link_database_csv_to_json.py`: CSV形式の辞書をJSON形式に変換
+  - `analyze_keyword_sources.py`: EN/JAのキーワード統計を詳細分析
+
+### 🔄 Changed
+
+- **ワークフロー変更**
+  - 旧: Markdown編集 → Hugoビルド
+  - 新: Hugoビルド → HTML後処理
+
+- **データ形式**
+  - 主要形式: JSON/YAML（`data/linkbuilding/`）
+  - CSV形式: 参考用・変換元として保持（`databases/`）
+
+### 🗄️ Deprecated
+
+以下のスクリプトは `scripts/archived_markdown_based/` に移動し、非推奨となりました：
+
+- `add_internal_links.py` - Markdownファイルに直接リンクを挿入
+- `add_links_from_database.py` - CSVデータベースからMarkdownにリンク追加
+- `remove_internal_links.py` - Markdownからリンクを削除
+
+**理由**:
+- Markdownソースの可読性低下
+- Git履歴の汚染
+- リンク戦略変更の困難さ
+- 保守性の問題
+
+### 📊 Performance
+
+- **処理速度**: EN/JA並列処理で約2.5分（合計2,503ファイル）
+- **リンク数**: 
+  - EN: 18,816リンク（1,263ファイル）
+  - JA: 16,827リンク（1,240ファイル）
+  - 合計: 35,643リンク
+
+### 🐛 Fixed
+
+- `linkbuilding.py`: `--dry-run` モードでファイルが書き込まれる問題を修正
+- `extract_automatic_links.py`: 重複キーワードが生成される問題を修正
+- `linkbuilding.py`: 太字タグ内でリンクを作成する際の `NoneType` エラーを修正
+- `linkbuilding.py`: 言語コードの正規化処理を改善
+
+### 📝 Documentation
+
+- `docs/INTERNAL_LINK_SYSTEM_GUIDE.md`: v2.0.0対応に全面改訂
+- `scripts/archived_markdown_based/README.md`: アーカイブ理由と代替方法を記載
+- `CHANGELOG_INTERNAL_LINKING.md`: 本ファイルを新規作成
+
+### 🔧 Technical Details
+
+**新しい推奨ワークフロー**:
+
+```bash
+# 1. クリーンなMarkdownからHugoビルド
+hugo --contentDir content-clean --destination public --cleanDestinationDir
+
+# 2. 自動キーワード辞書の更新（必要に応じて）
+python3 scripts/extract_automatic_links.py --content-dir content-clean/en/ --output data/linkbuilding/en_automatic.json
+python3 scripts/extract_automatic_links.py --content-dir content-clean/ja/ --output data/linkbuilding/ja_automatic.json
+
+# 3. HTML後処理で内部リンク追加
+python3 scripts/linkbuilding_parallel.py \
+  --linkbuilding-dir data/linkbuilding \
+  --public-dir public \
+  --denylist-dir databases
+```
+
+**データフロー**:
+1. `content-clean/` (Markdown) → Hugo → `public/` (HTML)
+2. `data/linkbuilding/*.json` + `databases/danger_terms_*.csv` → `linkbuilding_parallel.py`
+3. `public/` (HTML + 内部リンク)
+
+---
+
+## [1.x.x] - 2025-01-06以前
+
+### Legacy System (Markdown-based)
+
+旧バージョンの履歴は `scripts/archived_markdown_based/` を参照してください。
+
+主な特徴:
+- Markdownファイルを直接編集
+- CSV形式のデータベース使用
+- 単一言語処理
+
+---
+
+## Migration Guide - v1.x → v2.0.0
+
+### 移行手順
+
+1. **Markdownソースのクリーンアップ**
+   ```bash
+   # 既存のMarkdownから内部リンクを削除（必要に応じて）
+   # content/ → content-clean/ にコピー
+   ```
+
+2. **新しいワークフローの採用**
+   ```bash
+   # 上記「新しい推奨ワークフロー」を参照
+   ```
+
+3. **旧スクリプトの使用停止**
+   - `add_internal_links.py` の使用を停止
+   - `add_links_from_database.py` の使用を停止
+   - `remove_internal_links.py` は不要（HTMLを再生成するだけ）
+
+### 互換性
+
+- **データ**: `databases/*.csv` は引き続き使用可能（denylistとして）
+- **設定**: 新しいJSON/YAML形式への移行を推奨
+- **出力**: HTML形式は変更なし（`data-lb="1"` マーカー付き）
+
+---
+
+## Version Numbering
+
+- **Major (X.0.0)**: システムアーキテクチャの大幅変更
+- **Minor (0.X.0)**: 新機能追加
+- **Patch (0.0.X)**: バグ修正
+
+---
+
+**Maintained by**: Takazumi  
+**Repository**: hugo-boilerplate  
+**Last Updated**: 2026-01-07

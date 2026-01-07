@@ -51,11 +51,13 @@ def find_language_files(linkbuilding_dir: Path, public_dir: Path) -> List[Dict]:
         # Extract language code from filename (e.g., 'en' from 'en_automatic.json')
         lang = auto_file.stem.replace('_automatic', '')
         
-        # Check for corresponding manual file
-        manual_file = linkbuilding_dir / f"{lang}.json"
+        # Check for corresponding manual file (try .yaml first, then .json)
+        manual_file = linkbuilding_dir / f"{lang}.yaml"
         if not manual_file.exists():
-            manual_file = None
-            logger.info(f"No manual file found for language {lang} - will use automatic only")
+            manual_file = linkbuilding_dir / f"{lang}.json"
+            if not manual_file.exists():
+                manual_file = None
+                logger.info(f"No manual file found for language {lang} - will use automatic only")
         
         # Determine HTML directory
         # English content is at the root of public, other languages have subdirectories
@@ -100,7 +102,8 @@ def run_linkbuilding(lang_config: Dict,
                     script_path: str,
                     config_file: Optional[str] = None,
                     dry_run: bool = False,
-                    extra_args: List[str] = None) -> Tuple[str, bool, str]:
+                    extra_args: List[str] = None,
+                    denylist_dir: Optional[str] = None) -> Tuple[str, bool, str]:
     """Run linkbuilding.py for a single language.
     
     Returns: (language, success, output/error message)
@@ -128,6 +131,12 @@ def run_linkbuilding(lang_config: Dict,
         exclude_langs = ['ar', 'cs', 'da', 'de', 'es', 'fi', 'fr', 'it', 'ja', 'ko',
                         'nl', 'no', 'pl', 'pt', 'ro', 'sk', 'sv', 'tr', 'vi', 'zh']
         cmd.extend(['--exclude'] + exclude_langs)
+    
+    # Add denylist if directory is provided
+    if denylist_dir:
+        denylist_path = Path(denylist_dir) / f"danger_terms_{lang}.csv"
+        if denylist_path.exists():
+            cmd.extend(['--denylist', str(denylist_path)])
     
     # Don't add output report file parameter - reports will go to stdout only
     
@@ -269,6 +278,8 @@ Examples:
                        help='Override max replacements per keyword')
     parser.add_argument('--max-url', type=int,
                        help='Override max replacements per URL')
+    parser.add_argument('--denylist-dir', type=str, default='databases',
+                       help='Directory containing danger_terms_*.csv files (default: databases)')
     
     args = parser.parse_args()
     
@@ -401,7 +412,8 @@ Examples:
                 str(script_path),
                 args.config,
                 args.dry_run,
-                extra_args
+                extra_args,
+                args.denylist_dir
             ): lang_config['lang']
             for lang_config in languages
         }
