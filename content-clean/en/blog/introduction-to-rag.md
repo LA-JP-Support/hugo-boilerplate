@@ -3,16 +3,16 @@ title: "How AI Answers Accurately with Latest Information: Introduction to RAG (
 date: 2025-11-19
 draft: false
 translationKey: "introduction-to-rag"
-description: "Learn the basics and practical applications of RAG (Retrieval-Augmented Generation). Detailed coverage from differences with traditional AI to benefits and real-world use cases."
+description: "Learn the basics and practical applications of RAG (Retrieval-Augmented Generation. Detailed coverage from differences with traditional AI to benefits and real-world use cases."
 keywords: ["RAG", "Retrieval-Augmented Generation", "AI", "Generative AI", "Chatbot", "FlowHunt"]
 image: "/images/blog/rag-paint.jpg"
 tags: ["AI Technology", "RAG", "Chatbot"]
 categories: ["Technology"]
 ---
-## Basics and Applications of RAG (Retrieval-Augmented Generation)
+## Basics and Applications of RAG (Retrieval-Augmented Generation
 
 ### Basic Structure of RAG
-RAG (Retrieval-Augmented Generation) is a mechanism that combines "retrieval" and "generation". Traditional AI created text and responses using only learned knowledge. RAG searches for necessary information from external sources like databases when questions arrive, then creates answers based on that information.
+RAG (Retrieval-Augmented Generation is a mechanism that combines "retrieval" and "generation". Traditional AI created text and responses using only learned knowledge. RAG searches for necessary information from external sources like databases when questions arrive, then creates answers based on that information.
 
 First, AI understands the question content and retrieves relevant information from search engines or specific databases. Next, using the found information, it creates answers in natural text. This method enables AI to immediately update knowledge and quickly reflect new information.
 
@@ -26,7 +26,7 @@ RAG solves this problem. It searches for and incorporates information from exter
 
 Using RAG enables AI to provide information more flexibly and intelligently. For example, it can immediately respond to rapidly changing fields like news updates or new research findings. Simultaneously, companies can respond to customers using only their own information, realizing consistent responses aligned with brand image and corporate policy. Users can always receive answers based on new and accurate information, expanding AI utilization scenarios.
 
-Beyond education and business support, RAG is used in various scenarios including AI chatbots and AI email auto-response generation provided through SmartWeb's development service using FlowHunt. These services provide FAQ auto-responses and customer support using the latest information, allowing anyone to easily experience cutting-edge AI technology.
+Beyond education and business support, RAG is used in various scenarios including AI chatbots and AI email auto-response generation provided through SmartWeb's development service using FlowHunt. These services provide FAQ auto-responses and customer support using the latest information, allowing anyone to easily experience cutting- edge AI technology.
 
 
 ## Differences Between Traditional Generative AI and RAG, Mechanisms, and Use Cases
@@ -51,7 +51,7 @@ On the other hand, RAG enables AI to search for necessary information in real-ti
 
 RAG creates answers through three steps: "question understanding", "retrieval", and "generation".
 
-![Three Steps of RAG](/images/blog/RAG-123.jpg)
+! [Three Steps of RAG](/images/blog/RAG-123.jpg
 
 1. **Question Understanding**  
 Generative AI understands user questions and determines what information is needed. At this stage, it analyzes question intent and required answer type.
@@ -89,7 +89,7 @@ RAG performance is greatly affected by the quality of referenced information sou
 
 ### Future Potential
 
-Recent scientific papers and technical developments predict that RAG will advance in cooperation with knowledge graphs and multiple data sources, with applications to deeper reasoning, high-precision auto-summarization, and domain-specific AI. RAG is expanding in many fields including education, medical care, government, and customer support where "human-like explanations" and "answers with basis" are required.
+Recent scientific papers and technical developments predict that RAG will advance in cooperation with knowledge graphs and multiple data sources, with applications to deeper reasoning, high- precision auto-summarization, and domain-specific AI. RAG is expanding in many fields including education, medical care, government, and customer support where "human-like explanations" and "answers with basis" are required.
 
 ### RAG Use Cases at SmartWeb
 
@@ -111,3 +111,4 @@ Even with hundreds of FAQ entries or many manuals, AI immediately finds necessar
 For questions from inquiry forms, AI automatically creates optimal response drafts. This reduces staff workload and speeds up responses. Cases of increased customer satisfaction are growing.
 
 In this way, RAG is advanced technology not only to "convey new and accurate information in easily understandable ways at any time" but also to "provide consistent responses using only company-managed information". It will continue evolving and becoming widely used in the future.
+

@@ -2,7 +2,7 @@
 title: "What is a Knowledge Base (FAQ)? Understanding the Fundamentals and Importance"
 date: 2025-11-19
 draft: false
-description: "Comprehensive guide from Knowledge Base (FAQ) fundamentals to the latest AI utilization methods in 2025. Practical guide covering creation steps, KCS operations, LiveAgent integration, and more to achieve operational efficiency and customer satisfaction improvement."
+description: "Comprehensive guide from Knowledge Base (FAQ fundamentals to the latest AI utilization methods in 2025. Practical guide covering creation steps, KCS operations, LiveAgent integration, and more to achieve operational efficiency and customer satisfaction improvement."
 tags: ["AI", "Knowledge Base", "FAQ", "Customer Support", "Operational Efficiency"]
 categories: ["Operational Efficiency", "AI & Machine Learning"]
 image: "/images/blog/knowledge-base-faq-guide-2025.png"
@@ -11,18 +11,18 @@ image: "/images/blog/knowledge-base-faq-guide-2025.png"
 
 A Knowledge Base is a collection of organized information that includes business knowledge, know-how, work procedures, troubleshooting examples, and success stories used within companies and organizations. It serves as an information infrastructure that allows anyone to quickly look up necessary information when needed.
 
-Knowledge bases manage both tacit knowledge (knowledge gained from experience) and explicit knowledge (knowledge documented in manuals and other materials) in a database format. They are designed to provide efficient access to information using mechanisms such as AI search functionality, tagging, and hierarchical structures.
+Knowledge bases manage both tacit knowledge (knowledge gained from experience and explicit knowledge (knowledge documented in manuals and other materials in a database format. They are designed to provide efficient access to information using mechanisms such as AI search functionality, tagging, and hierarchical structures.
 
 For example, they are useful in standardizing work procedures, preventing knowledge from being concentrated in specific individuals, and facilitating smooth onboarding of new employees.
 
 ## Differences Between FAQ and Knowledge Base
-FAQ (Frequently Asked Questions) is content that compiles common questions from users or employees along with their answers. FAQ is positioned as part of a knowledge base.
+FAQ (Frequently Asked Questions is content that compiles common questions from users or employees along with their answers. FAQ is positioned as part of a knowledge base.
 
 While FAQ follows a simple format of paired "questions" and "answers," knowledge bases organize a broader range of information including detailed operation guides, business workflows, error response methods, and video explanations. FAQ is designed for quickly finding answers to specific questions, while knowledge bases also accommodate users who want to explore various information independently.
 
 ## Background and Value of Knowledge Base Utilization in 2025
 
-In 2025, knowledge bases have incorporated AI-powered automatic classification and natural language search capabilities, with continued expansion of remote work and efforts to improve customer experience (CX). In this context, knowledge bases are treated as core assets for enhancing corporate competitiveness.
+In 2025, knowledge bases have incorporated AI-powered automatic classification and natural language search capabilities, with continued expansion of remote work and efforts to improve customer experience (CX. In this context, knowledge bases are treated as core assets for enhancing corporate competitiveness.
 
 Research shows that approximately 70% of companies that implemented knowledge bases experienced "faster inquiry response," "improved operational efficiency," and "enhanced employee satisfaction and retention rates." For example, companies that established internal knowledge bases reduced new employee training periods by up to 30%, while those that enhanced customer-facing FAQs reduced support costs by 20%.
 
@@ -30,7 +30,7 @@ These results demonstrate that properly constructed knowledge bases can signific
 
 ## Practical Steps for Creating a Knowledge Base
 
-This chapter provides step-by-step learning of basic knowledge base (FAQ) creation methods and key points for design and structuring.
+This chapter provides step-by-step learning of basic knowledge base (FAQ creation methods and key points for design and structuring.
 
 ### Clarifying Purpose and Target Audience
 
@@ -52,7 +52,7 @@ Structure collected information so users can easily search it:
 
 - Classification by categories and tags
 - Search keyword optimization
-- Building clear hierarchical structures (e.g., major category → subcategory → detailed articles)
+- Building clear hierarchical structures (e.g., major category → subcategory → detailed articles
 
 Additionally, utilizing diverse presentation methods such as "question-format titles," "flowcharts," and "diagrams and illustrations" improves intuitive usability. Research confirms that improved hierarchical structure and searchability enhance self-resolution rates.
 
@@ -65,7 +65,7 @@ For efficient operation, utilize templates for Q&A and article creation. For exa
 ## AI-Enhanced Knowledge Base Management and FAQ Automation
 
 ### AI-Powered Automatic Classification and Search Enhancement
-AI (Artificial Intelligence) automatically analyzes and classifies large volumes of knowledge base information. Through Natural Language Processing (NLP) technology, even when users search with ambiguous or colloquial expressions, AI instantly displays optimal answers and related FAQs.
+AI (Artificial Intelligence automatically analyzes and classifies large volumes of knowledge base information. Through Natural Language Processing (NLP technology, even when users search with ambiguous or colloquial expressions, AI instantly displays optimal answers and related FAQs.
 
 For example, generative AI extracts "highly relevant Q&As" from inquiry histories and automatically organizes FAQ structures. This mechanism reduces search time and significantly improves self-resolution rates for employees and customers. This effectiveness has been proven in many domestic and international companies.
 
@@ -78,7 +78,7 @@ By combining with AI chatbots, optimal answers from the knowledge base can be au
 ## Promoting Knowledge Sharing Through Workflow and KCS
 
 ### KCS Fundamentals and Knowledge Sharing Concepts
-KCS (Knowledge-Centered Service) is an operational model that immediately reflects field-acquired knowledge into knowledge bases for organization-wide utilization.
+KCS (Knowledge-Centered Service is an operational model that immediately reflects field-acquired knowledge into knowledge bases for organization-wide utilization.
 
 KCS emphasizes the concept that "organizations are strengthened through knowledge accumulation and sharing." For example, know-how and troubleshooting methods acquired during work are registered in the knowledge base on the spot. This prevents information silos and enables everyone to utilize new and accurate information.
 
@@ -128,7 +128,7 @@ LiveAgent Support Portal, also adopted as a core system in SmartWeb's constructi
 
 LiveAgent Support Portal can integrate and handle multiple communication channels including ticket management, live chat, social media, and email. This enables centralized management of customer inquiries. Combined with FAQs and knowledge bases, it promotes customer self-service problem resolution.
 
-For example, users can search "frequently asked questions" or "troubleshooting guides" on the portal to immediately find solutions. This reduces inquiry volume and improves response speed.
+For example, users can search " frequently asked questions" or "troubleshooting guides" on the portal to immediately find solutions. This reduces inquiry volume and improves response speed.
 
 LiveAgent includes AI chatbots and automatic response features, enabling automatic responses based on FAQ content. It also analyzes inquiry histories in real-time and displays information optimized for each user. This prevents dependence on specific staff and response delays.
 
@@ -140,7 +140,7 @@ Companies that implemented LiveAgent Support Portal have achieved effects includ
 
 Operationally, establishing regular FAQ update mechanisms, UI improvements through customer search behavior analysis, and AI-powered frequent keyword extraction are effective.
 
-## Practical Methods for Customer Experience (CX) Improvement
+## Practical Methods for Customer Experience (CX Improvement
 
 LiveAgent Support Portal improves customer experience through the following practical methods:
 
@@ -155,13 +155,13 @@ LiveAgent Support Portal provides cutting-edge mechanisms that simultaneously ac
 
 ### Deepening Data Utilization and Personalization
 
-Future knowledge base operations will center on advanced data utilization using AI and data science. AI can analyze FAQ and knowledge base access logs and user attributes to automatically display information optimized for individual users (personalized FAQs).
+Future knowledge base operations will center on advanced data utilization using AI and data science. AI can analyze FAQ and knowledge base access logs and user attributes to automatically display information optimized for individual users (personalized FAQs.
 
-With the spread of this mechanism, users can more easily and quickly discover individually optimized solutions, improving self-resolution rates. Indeed, domestic and international surveys report approximately 20-30% reduction in inquiries and improved customer satisfaction (CSAT) at companies implementing FAQ systems with personalization features.
+With the spread of this mechanism, users can more easily and quickly discover individually optimized solutions, improving self-resolution rates. Indeed, domestic and international surveys report approximately 20-30% reduction in inquiries and improved customer satisfaction (CSAT at companies implementing FAQ systems with personalization features.
 
 ### Self-Service Orientation and UX Optimization
 
-Self-service portals with intuitive operation are essential for organizational knowledge base operations. 2025 trends include mobile compatibility, improved search accuracy, and introduction of user-friendly user interfaces (UI).
+Self-service portals with intuitive operation are essential for organizational knowledge base operations. 2025 trends include mobile compatibility, improved search accuracy, and introduction of user-friendly user interfaces (UI.
 
 For example, AI-powered natural language search and automatic question suggestion features are becoming standardized. These improvements reduce traditional issues like "can't find information even when searching" and "difficult to use," promoting self-resolution for diverse users.
 
@@ -171,6 +171,6 @@ To succeed in knowledge base operations, first analyze usage data from existing 
 
 Then, utilize AI automatic analysis and feedback functions to regularly review content and structure from the user perspective. Additionally, rather than implementing all measures like personalization and UI improvements at once, it's effective to start partially, confirm results, and gradually expand.
 
-> Knowledge base operations from 2025 onward will evolve with "AI-powered individual optimization" and "user experience focus." By leveraging analytical data and starting with small improvements for continuous review, operational efficiency and satisfaction improvements can be achieved.
+> Knowledge base operations from 2025 onward will evolve with "AI-powered individual optimization" and " user experience focus." By leveraging analytical data and starting with small improvements for continuous review, operational efficiency and satisfaction improvements can be achieved.
 
-Knowledge bases, when properly constructed and operated, are high-ROI systems that can deliver significant benefits even for small and medium enterprises. We recommend starting small and gradually expanding functionality.
+Knowledge bases, when properly constructed and operated, are high- ROI systems that can deliver significant benefits even for small and medium enterprises. We recommend starting small and gradually expanding functionality.

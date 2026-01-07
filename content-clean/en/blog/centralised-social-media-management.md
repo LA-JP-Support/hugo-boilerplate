@@ -41,7 +41,7 @@ Many progressive companies are achieving efficient operations and rapid informat
 
 ### Data Integration through API Connectivity
 
-Modern management tools (such as those utilized in SmartWeb's construction services) connect directly with major social media platforms like Twitter, Facebook, and Instagram using official APIs.
+Modern management tools (such as those utilized in SmartWeb's construction services connect directly with major social media platforms like Twitter, Facebook, and Instagram using official APIs.
 
 Through APIs, messages, comments, and post data from each platform are received in real-time and securely consolidated for management.
 
@@ -159,7 +159,7 @@ Proper user role configuration allows management of access scope and operational
 
 #### Step 1: Access Integration Settings
 
-Navigate to the "Channel Integration" or "Integration" section in the management interface.
+Navigate to the " Channel Integration" or " Integration" section in the management interface.
 
 #### Step 2: Social Media Selection
 
@@ -271,7 +271,7 @@ When considering centralized social media management, various tools exist in the
 
 #### Social Media-Specialized Tools
 
-Some tools are specifically developed for platforms like X (formerly Twitter) and Instagram, offering comprehensive features including:
+Some tools are specifically developed for platforms like X (formerly Twitter and Instagram, offering comprehensive features including:
 
 **Key Functions**
 
@@ -288,7 +288,7 @@ Integrated tools like LiveAgent can manage not only social media but also the fo
 
 **Supported Channels**
 
-- Social media (various platforms)
+- Social media (various platforms
 - Email
 - Chat
 - Contact forms

@@ -74,7 +74,7 @@ Voice from a small business owner:
 
 A "Support Portal" is like a "customer-dedicated library" that compiles FAQs and manuals.
 
-In fact, **30-52%** of inquiries are things customers can resolve themselves if they have the right information (according to Gartner research).
+In fact, **30-52%** of inquiries are things customers can resolve themselves if they have the right information (according to Gartner research.
 
 #### Common self-resolvable inquiries:
 
@@ -112,15 +112,15 @@ By providing this information 24/7/365, you can reduce late-night and weekend in
 
 ## Implementation Is Surprisingly Easy! 3 Steps
 
-### Step 1: Preparation (1 week)
+### Step 1: Preparation (1 week
 
 - Clarify implementation objectives
 - Organize current inquiry channels
 - Hold staff briefing sessions
 
-### Step 2: Setup (1 week)
+### Step 2: Setup (1 week
 
-- SmartWeb initial configuration (supported by Japanese staff)
+- SmartWeb initial configuration (supported by Japanese staff
 - Register basic FAQ items
 - Confirm operation through test runs
 
