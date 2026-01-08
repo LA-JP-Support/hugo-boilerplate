@@ -125,6 +125,32 @@ with open(output_file, 'w', encoding='utf-8', newline='') as f:
 
 ---
 
+### 5. 用語集検索（日本語/英語/略語）改善
+
+#### 目的
+
+日本語の用語集検索で、略語（例: `AGI`, `NLP`）やカタカナ表記（例: `エージーアイ`）でも検索ヒットするように改善。
+
+#### 実施内容
+
+- ✅ `index.json` に `searchText` フィールドを追加
+  - `title` / `eTitle` / `translationKey` / `term` / `keywords` / `description` 等を結合し、表記揺れを吸収
+- ✅ Fuse.js の検索キーを統一
+  - ヘッダー検索（ポップアップ）と検索ページ（/search）で検索対象フィールドを揃えた
+- ✅ 同義語（クエリ展開）を追加
+  - 例: `AGI` ↔ `エージーアイ`, `汎用人工知能`
+  - 例: `NLP` ↔ `自然言語処理`, `エヌエルピー`
+
+#### 変更したファイル
+
+- `layouts/_default/index.json`
+- `layouts/partials/search_field.html`
+- `layouts/_default/search.html`
+- `docs/SCRIPTS_USAGE_GUIDE.md`
+- `docs/GLOSSARY_OPTIMIZATION_GUIDE.md`
+
+---
+
 ## システムアーキテクチャ
 
 ### データフロー
@@ -208,16 +234,25 @@ python3 scripts/linkbuilding_parallel.py \
 ### 新規作成
 - `docs/CSV_DATABASE_SYSTEM_GUIDE.md` - CSVシステム完全ガイド
 - `docs/WORK_SUMMARY_2026-01-08.md` - 本ドキュメント
+- `docs/00_START_HERE.md` - 最初にお読みください（AI作業の入口/権威ファイル/運用ルール）
 
 ### 更新
 - `databases/link_database_en.csv` - 英語用語集CSV（1,222件）
 - `databases/link_database_ja.csv` - 日本語用語集CSV（1,223件）
 - `databases/danger_terms_ja.csv` - 日本語denylist（「自然言語処理」追加）
 - `data/linkbuilding/ja.yaml` - 279個のtitle最適化
-- `data/linkbuilding/ja_automatic.json` - 「AIシステム」URL修正
+- `data/linkbuilding/en_automatic.json` - 自動キーワード辞書再生成
+- `data/linkbuilding/ja_automatic.json` - 自動キーワード辞書再生成
 - `CHANGELOG_INTERNAL_LINKING.md` - v2.1.0追加
 - `content/en/glossary/*.md` - 1,224件のdescription最適化
 - `content/ja/glossary/*.md` - 1,223件のdescription最適化
+- `docs/SCRIPTS_USAGE_GUIDE.md` - サイト内検索（/search）運用手順を追加
+- `docs/GLOSSARY_OPTIMIZATION_GUIDE.md` - 用語集最適化（検索/表記揺れ含む）を新規作成
+- `docs/INTERNAL_LINKING_QUICK_START.md` - 内部リンク再生成のトラブルシューティング追記
+- `docs/HTML_LINKBUILDING_TEST_GUIDE.md` - `public-test/` 検証フローを廃止（アーカイブ扱い）
+- `README.md` - Start Here への導線追加
+- `.gitignore` - `public-test/` 等の生成物/一時物を除外
+- `content-clean/en/blog/*.md` - FAQフロントマター修正（`[faq]` → `[[faq]]`）
 
 ---
 
@@ -228,9 +263,10 @@ python3 scripts/linkbuilding_parallel.py \
 - **日本語**: 1,223件 → 1,223件（全件成功）
 
 ### 内部リンク
-- **日本語ブログ**: 18記事、267リンク
-- **日本語用語集**: 1,244ページ、18,415リンク
-- **合計**: 18,682個の内部リンク
+- **EN（全体）**: 9,041リンク（`data-lb="1"` 件数）
+- **JA（全体）**: 9,557リンク（`data-lb="1"` 件数）
+- **内訳（EN）**: blog 150 / glossary 8,746
+- **内訳（JA）**: blog 230 / glossary 9,307
 
 ### CSV Database
 - **英語**: 1,222エントリ
@@ -281,6 +317,16 @@ python3 scripts/linkbuilding_parallel.py \
 ### 問題4: Descriptionが冗長
 **症状**: "Comprehensive guide to..."のような冗長な説明
 **解決**: Claude APIで簡潔な説明に最適化
+
+### 問題5: `extract_automatic_links.py` がエラーで停止
+**症状**: `What? faq already exists?` が出て自動キーワード辞書再生成が失敗
+**原因**: TOMLフロントマターでFAQを複数定義する際、`[faq]` を繰り返していた
+**解決**: `[[faq]]`（配列テーブル）に修正
+
+### 問題6: EN側の内部リンクがほとんど増えない
+**症状**: `linkbuilding_parallel.py` 実行後、ENのリンク追加が極端に少ない
+**原因**: `linkbuilding_parallel.py` は「ENは `public/` 直下にある」前提で処理する挙動があるが、今回のビルドでは EN が `public/en/` 配下に出力される
+**解決**: ENのみ `scripts/linkbuilding.py -d public/en` を追加で実行
 
 ---
 

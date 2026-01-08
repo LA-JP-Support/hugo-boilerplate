@@ -2,7 +2,7 @@
 
 このドキュメントでは、Hugo用語集サイトで使用する主要なスクリプトの使い方をまとめています。
 
-**最終更新**: 2025-12-21  
+**最終更新**: 2026-01-08  
 **バージョン**: 2.0
 
 ## 目次
@@ -63,6 +63,13 @@ pip install anthropic python-dotenv pyyaml
 - **語数**: 2,700-2,900語/記事
 - **構成**: 30%散文 / 70%構造化コンテンツ
 - **セクション数**: 11セクション（固定）
+
+**フロントマター品質基準** ⚠️ 重要:
+- **date**: 記事作成日を設定（`YYYY-MM-DD`形式）※スクリプトのデフォルト日付ではなく、実際の作成日に修正
+- **description**: コンテンツの内容を簡潔に説明する文章（150-160文字）
+  - ❌ 禁止: "Comprehensive guide to...", "Complete overview of...", "Everything you need to know about..." など冗長な前置き
+  - ✅ 推奨: 用語の定義や機能を直接的に説明する簡潔な文章
+  - 例: "NLP enables computers to understand, interpret, and generate human language using AI techniques like machine learning."
 
 **使用方法**:
 
@@ -328,9 +335,14 @@ python scripts/fix_term_readings_ja.py --ja-dir content/ja/glossary
 
 > 📖 **詳細ドキュメント**: `docs/INTERNAL_LINK_SYSTEM_GUIDE.md`
 
-### 🌟 推奨: CSVデータベースを使用したリンク構築
+> ⚠️ **重要**: v2.0.0以降、内部リンクは **HTML後処理方式**が標準です（`public/` を対象に処理）。
+> Markdown（`content/` や `content-clean/`）を直接編集してリンクを挿入する方式は非推奨です。
+
+### （非推奨）CSVデータベースを使用したリンク構築（Markdown直接編集）
 
 **スクリプト**: `scripts/add_links_from_database.py`
+
+> ⚠️ v2.0.0以降はこの方式は非推奨です。現在の標準は下記の「HTML後処理」です。
 
 **特徴**:
 - CSVデータベースからキーワードを読み込み
@@ -376,12 +388,11 @@ python3 scripts/build_link_database.py \
 
 ---
 
-### HTML後処理（代替方法）
+### ✅ 標準: HTML後処理（推奨）
 
 **スクリプト**: `scripts/linkbuilding_parallel.py`
 
 > ⚠️ **注意**: これはHugoビルド後の`public/`ディレクトリ内のHTMLファイルを処理するスクリプトです。
-> Markdownファイルを直接編集したい場合は、上記の `add_links_from_database.py` を使用してください。
 
 **特徴**:
 - Hugoビルド後のHTMLファイルを処理
@@ -395,6 +406,7 @@ python3 scripts/build_link_database.py \
 python scripts/linkbuilding_parallel.py \
     --linkbuilding-dir data/linkbuilding \
     --public-dir public \
+    --denylist-dir databases \
     --max-workers 4
 
 # ドライラン（変更なし）
@@ -407,12 +419,18 @@ python scripts/linkbuilding_parallel.py \
 python scripts/linkbuilding_parallel.py \
     --linkbuilding-dir data/linkbuilding \
     --public-dir public \
+    --denylist-dir databases \
     --languages en ja
 ```
 
 **前提条件**:
 - `hugo` ビルドが完了していること
 - `data/linkbuilding/` に JSON 設定ファイルが存在すること
+
+**補足**:
+
+- `extract_automatic_links.py` で `What? faq already exists?` が出る場合は、TOMLフロントマターのFAQを `[[faq]]` に修正してください。
+- `linkbuilding_parallel.py` は「ENは `public/` 直下」前提の挙動があります。ENが `public/en/` 配下に出力される場合は、ENだけ `scripts/linkbuilding.py -d public/en` を実行してください（詳細は `docs/INTERNAL_LINKING_QUICK_START.md`）。
 
 ---
 
@@ -474,6 +492,47 @@ python scripts/enrich_glossary_blog_v3.py \
 ---
 
 ## ブログ記事メンテナンス
+
+## サイト内検索（/search）
+
+サイト内検索は **Fuse.js + `index.json`** で動作します。
+
+権威ファイル:
+
+- **検索インデックス生成**: `layouts/_default/index.json`
+- **ヘッダー検索（ポップアップ）**: `layouts/partials/search_field.html`
+- **検索ページ（/search）**: `layouts/_default/search.html`
+
+### 新規用語追加時のチェック（日本語検索）
+
+日本語用語集（`content/ja/glossary/*.md`）は、検索のために最低限以下が揃っていることを確認します。
+
+- `title`
+- `translationKey`
+- `description`
+- `keywords`（リスト）
+- `e-title`（英語正式名称がある場合）
+- `term`（読み/主要表記。例: ひらがな、カタカナ）
+
+確認手順:
+
+- `http://localhost:1313/ja/index.json` を開き、対象ページに
+  - `term` / `eTitle` / `keywords` / `searchText`
+  が入っていることを確認
+- `/ja/search` とヘッダー検索の両方で検索
+  - 例: `AGI`, `エージーアイ`, `汎用人工知能`
+  - 例: `NLP`, `自然言語処理`, `エヌエルピー`
+
+### 表記揺れ（略語/カタカナ/日本語）を増やす
+
+AGI/NLP/LLM 等は、検索UI側でクエリを展開（同義語）して相互検索できるようにしています。
+
+追加・調整する箇所:
+
+- `layouts/partials/search_field.html` の `expandQuery()`
+- `layouts/_default/search.html` の `expandQuery()`
+
+---
 
 ### ツールチップ削除
 
@@ -631,12 +690,9 @@ python scripts/batch_create_from_csv.py --workers 5
 python scripts/optimize_glossary_descriptions.py --lang en --workers 5
 
 # ===============================================
-# 3. 内部リンク追加（英語用語集同士）
+# 3. content-clean を更新（リンク無しのクリーンMarkdownを作る）
 # ===============================================
-python scripts/linkbuilding_parallel.py \
-    --content-dir content/en/glossary \
-    --glossary-dir content/en/glossary \
-    --workers 5
+python3 scripts/create_clean_content.py content content-clean
 
 # ===============================================
 # 4. 翻訳（英語→日本語）
@@ -654,12 +710,9 @@ python scripts/optimize_glossary_descriptions.py --lang ja --workers 5
 python scripts/fix_term_readings_ja.py --ja-dir content/ja/glossary
 
 # ===============================================
-# 7. 内部リンク追加（日本語用語集同士）
+# 7. Hugoビルド（content-clean → public）
 # ===============================================
-python scripts/linkbuilding_parallel.py \
-    --content-dir content/ja/glossary \
-    --glossary-dir content/ja/glossary \
-    --workers 5
+hugo --contentDir content-clean --destination public --cleanDestinationDir
 
 # ===============================================
 # 8. かなインデックス追加（日本語）
@@ -667,19 +720,13 @@ python scripts/linkbuilding_parallel.py \
 python scripts/add_kana_index.py --glossary-dir content/ja/glossary
 
 # ===============================================
-# 9. ブログ記事にリンク追加
+# 9. 内部リンクを追加（HTML後処理: public/ を処理）
 # ===============================================
-# 英語ブログ
-python scripts/linkbuilding_parallel.py \
-    --content-dir content/en/blog \
-    --glossary-dir content/en/glossary \
-    --workers 5
-
-# 日本語ブログ
-python scripts/linkbuilding_parallel.py \
-    --content-dir content/ja/blog \
-    --glossary-dir content/ja/glossary \
-    --workers 5
+python3 scripts/linkbuilding_parallel.py \
+    --linkbuilding-dir data/linkbuilding \
+    --public-dir public \
+    --denylist-dir databases \
+    --max-workers 4
 
 # ===============================================
 # 10. 最終確認
@@ -928,13 +975,22 @@ head -25 content/ja/glossary/Active-Learning.md | grep -E "(e-title|term|url):"
 
 ## 関連ドキュメント
 
-- **翻訳マニュアル**: `docs/GLOSSARY_CREATION_TRANSLATION_MANUAL.md`
-- **最適化ガイド**: `GLOSSARY_OPTIMIZATION_GUIDE.md`
-- **プロジェクト概要**: `README.md`
+- **Start Here（入口）**: [docs/00_START_HERE.md](00_START_HERE.md)
+- **翻訳ガイドライン**: [docs/TRANSLATION_GUIDELINES.md](TRANSLATION_GUIDELINES.md)
+- **翻訳用語集**: [docs/TRANSLATION_GLOSSARY.md](TRANSLATION_GLOSSARY.md)
+- **最適化ガイド**: [docs/GLOSSARY_OPTIMIZATION_GUIDE.md](GLOSSARY_OPTIMIZATION_GUIDE.md)
+- **用語集タイトル翻訳ガイド**: [docs/GLOSSARY_TITLE_TRANSLATION_GUIDE.md](GLOSSARY_TITLE_TRANSLATION_GUIDE.md)
+- **内部リンクシステム**: [docs/INTERNAL_LINK_SYSTEM_GUIDE.md](INTERNAL_LINK_SYSTEM_GUIDE.md)
+- **CSV Database System**: [docs/CSV_DATABASE_SYSTEM_GUIDE.md](CSV_DATABASE_SYSTEM_GUIDE.md)
+- **プロジェクト概要**: [README.md](../README.md)
 
 ---
 
 ## 更新履歴
+
+- **2026-01-08 (v2.1)**: フロントマター品質基準追加
+  - dateフィールド: 実際の作成日を設定するルールを追加
+  - descriptionフィールド: 冗長な前置き禁止、簡潔な説明文を推奨
 
 - **2025-12-21 (v2.0)**: 大規模改訂
   - 記事作成スクリプトの詳細追加（batch_create_from_csv.py, api_batch_create_v3.py）

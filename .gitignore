@@ -1,5 +1,6 @@
 # Hugo default output directory
 /public/
+/public-test/
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json
@@ -54,3 +55,7 @@ build/
 # FlowHunt raw articles (before cleanup)
 content-drafts/
 content-drafts/**/*.md
+
+# Temporary / generated artifacts
+tmp_batch_*/
+**/__pycache__/

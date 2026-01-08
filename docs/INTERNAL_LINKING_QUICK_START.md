@@ -1,7 +1,7 @@
 # Internal Linking Quick Start Guide
 
 **バージョン**: v2.0.0  
-**最終更新**: 2026-01-07
+**最終更新**: 2026-01-08
 
 ---
 
@@ -57,8 +57,8 @@ grep -r 'data-lb="1"' public/ja/ | wc -l
 ```
 
 **期待される結果**:
-- EN: 約18,000リンク
-- JA: 約17,000リンク
+
+サイト規模により増減しますが、EN/JAともに `data-lb="1"` が十分な件数になることを確認してください。
 
 ---
 
@@ -208,6 +208,49 @@ hugo --contentDir content-clean --destination public --cleanDestinationDir
 python3 scripts/linkbuilding_parallel.py --linkbuilding-dir data/linkbuilding --public-dir public --denylist-dir databases
 ```
 
+### `extract_automatic_links.py` が失敗する（`What? faq already exists?`）
+
+**原因**: TOMLフロントマターで FAQ を複数定義する際に、`[faq]` を繰り返している（TOMLのテーブル重複）
+
+**解決策**:
+
+- FAQが配列になるように `[[faq]]` を使用する
+
+```toml
+[[faq]]
+question = "..."
+answer = "..."
+
+[[faq]]
+question = "..."
+answer = "..."
+```
+
+**探し方（例）**:
+
+```bash
+grep -R '^\[faq\]' content-clean/en/blog
+```
+
+### ENだけリンクがほとんど増えない
+
+**原因**: `linkbuilding_parallel.py` は「ENは `public/` 直下にある」前提で処理します。
+
+このリポジトリのビルド結果では EN は `public/en/` 配下になるため、ENだけ別コマンドで `public/en` を対象に実行します。
+
+**解決策（推奨）**:
+
+```bash
+# ENのみ（public/en を対象にする）
+python3 scripts/linkbuilding.py \
+  -k data/linkbuilding/en.yaml \
+  -a data/linkbuilding/en_automatic.json \
+  -d public/en \
+  --language EN \
+  --denylist databases/danger_terms_en.csv \
+  --max-links 15 --max-keyword 1 --max-url 3
+```
+
 ### 処理が遅い
 
 **原因**: 並列処理のワーカー数が多すぎる、またはメモリ不足
@@ -226,7 +269,10 @@ python3 scripts/linkbuilding_parallel.py \
 
 ## 📚 詳細ドキュメント
 
+- **Start Here（入口）**: `docs/00_START_HERE.md`
 - **システム全体**: `docs/INTERNAL_LINK_SYSTEM_GUIDE.md`
+- **運用（スクリプト）**: `docs/SCRIPTS_USAGE_GUIDE.md`
+- **用語集最適化（検索/表記揺れ）**: `docs/GLOSSARY_OPTIMIZATION_GUIDE.md`
 - **変更履歴**: `CHANGELOG_INTERNAL_LINKING.md`
 - **アーカイブ**: `scripts/archived_markdown_based/README.md`
 

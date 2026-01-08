@@ -874,10 +874,14 @@ python3 scripts/generate_danger_terms.py --lang ja --min-score 50
 
 ## 関連ドキュメント
 
-- `hugo-boilerplate-scripts-documentation.md` - スクリプト全体のドキュメント
-- `docs/danger_terms.md` - 禁止用語レポート（自動生成）
+- [00_START_HERE.md](00_START_HERE.md) - 最初にお読みください（入口）
+- [SCRIPTS_USAGE_GUIDE.md](SCRIPTS_USAGE_GUIDE.md) - スクリプト使用ガイド（運用の入口）
+- [CSV_DATABASE_SYSTEM_GUIDE.md](CSV_DATABASE_SYSTEM_GUIDE.md) - CSV Database System（CSV→JSON変換含む）
+- [INTERNAL_LINKING_QUICK_START.md](INTERNAL_LINKING_QUICK_START.md) - クイックスタート
+- [GLOSSARY_OPTIMIZATION_GUIDE.md](GLOSSARY_OPTIMIZATION_GUIDE.md) - 用語集最適化（検索/表記揺れ含む）
+- [danger_terms.md](danger_terms.md) - 禁止用語レポート（自動生成）
 
 ---
 
-**最終更新**: 2025-01-06  
+**最終更新**: 2026-01-08  
 **メンテナンス**: Takazumi

@@ -2,6 +2,20 @@
 
 このドキュメントでは、MDファイルをクリーンな状態に保ちながら、HTMLビルド時に内部リンクを追加するアプローチの検証手順を説明します。
 
+---
+
+## ⚠️ 廃止（アーカイブ）
+
+この検証フロー（`public-test/` を使う運用）は廃止しました。
+
+今後は以下の標準フローに統一します。
+
+- **Start Here（入口）**: `docs/00_START_HERE.md`
+- **内部リンク Quick Start**: `docs/INTERNAL_LINKING_QUICK_START.md`
+- **内部リンク System Guide**: `docs/INTERNAL_LINK_SYSTEM_GUIDE.md`
+
+以降の内容は、過去の検証経緯として残しています（再実施は推奨しません）。
+
 ## 検証の目的
 
 | 比較項目 | MD編集方式 | HTML編集方式 |

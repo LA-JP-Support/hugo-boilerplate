@@ -45,6 +45,10 @@
 
 - **新規ドキュメント**
   - `docs/CSV_DATABASE_SYSTEM_GUIDE.md` - CSVシステム完全ガイド
+- **運用ドキュメント追加**
+  - `docs/00_START_HERE.md` - AI作業の入口（権威ファイル/ディレクトリ構造/作業別ナビ）
+- **検証フローの廃止（アーカイブ化）**
+  - `docs/HTML_LINKBUILDING_TEST_GUIDE.md` - `public-test/` を使う検証フローは廃止（履歴として残す）
 - **更新予定**
   - `docs/INTERNAL_LINK_SYSTEM_GUIDE.md` - CSV統合情報を追加予定
   - `README.md` - CSVシステムへの参照を追加予定

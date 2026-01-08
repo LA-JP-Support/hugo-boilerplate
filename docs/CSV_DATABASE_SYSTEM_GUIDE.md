@@ -310,8 +310,11 @@ for md_file in Path('content/en/glossary').glob('*.md'):
 
 ## 関連ドキュメント
 
+- [Start Here](00_START_HERE.md) - 最初にお読みください（入口）
 - [Internal Link System Guide](INTERNAL_LINK_SYSTEM_GUIDE.md) - 内部リンクシステム全体
 - [Quick Start Guide](INTERNAL_LINKING_QUICK_START.md) - クイックスタート
+- [Scripts Usage Guide](SCRIPTS_USAGE_GUIDE.md) - スクリプト使用ガイド
+- [Glossary Optimization Guide](GLOSSARY_OPTIMIZATION_GUIDE.md) - 用語集最適化（検索/表記揺れ含む）
 - [Changelog](../CHANGELOG_INTERNAL_LINKING.md) - 変更履歴
 
 ## まとめ
