@@ -126,10 +126,10 @@ RL algorithms are categorized by whether they use a model of the environment and
 
 ### 1. Model-Free vs. Model-Based RL
 
-- **Model-Free RL:** The agent learns good actions directly from experience, without building a model of the environment.
+- **Model-Free RL:**The agent learns good actions directly from experience, without building a model of the environment.
   - Algorithms: Q-Learning, SARSA, Policy Gradient
   - *Reference:* [Sutton & Barto, Ch. 6: Temporal-Difference Learning](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf)
-- **Model-Based RL:** The agent builds and uses a model of the environment for planning.
+- **Model-Based RL:**The agent builds and uses a model of the environment for planning.
   - Algorithms: Dyna-Q, Monte Carlo Tree Search
   - *Reference:* [Sutton & Barto, Ch. 8: Planning and Learning](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf)
 
@@ -177,53 +177,53 @@ RL is applied across various domains, from robotics to finance.
 
 ### Robotics
 
-- **Navigation:** RL enables robots to move through complex environments by trial and error, receiving rewards for reaching targets and penalties for collisions.  
+- **Navigation:**RL enables robots to move through complex environments by trial and error, receiving rewards for reaching targets and penalties for collisions.  
   - *Reference:* [OpenAI Gym Robotics](https://gym.openai.com/envs/#robotics)
-- **Manipulation:** RL trains robotic arms to pick, place, or assemble objects efficiently.
+- **Manipulation:**RL trains robotic arms to pick, place, or assemble objects efficiently.
 
 ### Gaming
 
-- **AlphaGo:** Deep RL enabled AlphaGo to defeat world-champion Go players, learning strategies via self-play and MCTS ([Nature paper](https://www.nature.com/articles/nature16961)).
-- **Atari Games:** RL agents achieve superhuman performance in classic video games, learning solely from pixels ([YouTube: DeepMind Atari](https://www.youtube.com/watch?v=V1eYniJ0Rnk)).
+- **AlphaGo:**Deep RL enabled AlphaGo to defeat world-champion Go players, learning strategies via self-play and MCTS ([Nature paper](https://www.nature.com/articles/nature16961)).
+- **Atari Games:**RL agents achieve superhuman performance in classic video games, learning solely from pixels ([YouTube: DeepMind Atari](https://www.youtube.com/watch?v=V1eYniJ0Rnk)).
 
 ### Autonomous Vehicles
 
-- **Self-Driving Cars:** RL is used for decision-making in lane keeping, path planning, and adaptive cruise control, optimizing long-term safety and efficiency ([Wayve RL for AVs](https://wayve.ai/blog/reinforcement-learning-for-autonomous-driving/)).
+- **Self-Driving Cars:**RL is used for decision-making in lane keeping, path planning, and adaptive cruise control, optimizing long-term safety and efficiency ([Wayve RL for AVs](https://wayve.ai/blog/reinforcement-learning-for-autonomous-driving/)).
 
 ### Industrial Control
 
-- **Process Optimization:** RL controls variables like temperature and flow in industrial plants for improved efficiency and safety.
+- **Process Optimization:**RL controls variables like temperature and flow in industrial plants for improved efficiency and safety.
 
 ### Marketing Personalization
 
-- **Recommendation Systems:** RL customizes product or content recommendations, learning user preferences to maximize engagement ([Salesforce RL](https://www.salesforce.com/blog/reinforcement-learning/)).
+- **Recommendation Systems:**RL customizes product or content recommendations, learning user preferences to maximize engagement ([Salesforce RL](https://www.salesforce.com/blog/reinforcement-learning/)).
 
 ### Financial Prediction
 
-- **Algorithmic Trading:** RL adapts trading strategies in real time, optimizing long-term returns while accounting for transaction costs and volatility ([AWS RL in Finance](https://aws.amazon.com/machine-learning/what-is-reinforcement-learning/)).
+- **Algorithmic Trading:**RL adapts trading strategies in real time, optimizing long-term returns while accounting for transaction costs and volatility ([AWS RL in Finance](https://aws.amazon.com/machine-learning/what-is-reinforcement-learning/)).
 
 ### Energy Management
 
-- **Smart Grids:** RL agents manage energy storage and distribution, adapting to fluctuating demand and supply ([Synopsys Energy RL](https://www.synopsys.com/glossary/what-is-reinforcement-learning.html)).
+- **Smart Grids:**RL agents manage energy storage and distribution, adapting to fluctuating demand and supply ([Synopsys Energy RL](https://www.synopsys.com/glossary/what-is-reinforcement-learning.html)).
 
 ## Benefits of Reinforcement Learning
 
-- **Adaptivity:** Learns optimal strategies in dynamic, uncertain, or partially observable environments.
-- **Autonomy:** Learns directly from experience, no labeled training data required.
-- **Long-Term Optimization:** Focuses on maximizing cumulative (not just immediate) rewards.
-- **Generalization:** Deep RL can generalize across similar but not identical tasks.
-- **Innovation:** May discover novel or non-intuitive solutions.
+- **Adaptivity:**Learns optimal strategies in dynamic, uncertain, or partially observable environments.
+- **Autonomy:**Learns directly from experience, no labeled training data required.
+- **Long-Term Optimization:**Focuses on maximizing cumulative (not just immediate) rewards.
+- **Generalization:**Deep RL can generalize across similar but not identical tasks.
+- **Innovation:**May discover novel or non-intuitive solutions.
 
 - *Further reading:* [IBM: What is RL?](https://www.ibm.com/topics/reinforcement-learning)
 
 ## Challenges and Limitations
 
-- **Sample Inefficiency:** RL often requires millions of interactions, which can be slow or costly in real-world settings.
-- **Reward Design:** Poorly specified reward functions can lead to unintended or unsafe behaviors.
-- **Exploration Risk:** Unsafe exploratory actions can be hazardous in physical environments.
-- **Computational Complexity:** Training RL agents (especially deep RL) is resource-intensive.
-- **Interpretability:** The learned policies can be difficult to interpret or explain.
-- **Delayed Rewards:** Credit assignment for actions that impact distant future outcomes remains challenging.
+- **Sample Inefficiency:**RL often requires millions of interactions, which can be slow or costly in real-world settings.
+- **Reward Design:**Poorly specified reward functions can lead to unintended or unsafe behaviors.
+- **Exploration Risk:**Unsafe exploratory actions can be hazardous in physical environments.
+- **Computational Complexity:**Training RL agents (especially deep RL) is resource-intensive.
+- **Interpretability:**The learned policies can be difficult to interpret or explain.
+- **Delayed Rewards:**Credit assignment for actions that impact distant future outcomes remains challenging.
 
 - *Reference:* [Sutton & Barto, Ch. 1.4: Limitations and Scope](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf)
 
@@ -246,17 +246,17 @@ RL is applied across various domains, from robotics to finance.
 
 ### Positive Reinforcement
 
-- **Definition:** Increases the frequency or strength of behavior by providing a positive outcome.
-- **Example:** A robot receives a reward for successfully reaching a goal location.
-- **Advantages:** Maximizes performance, helps sustain change over time.
-- **Disadvantages:** Overuse can reduce effectiveness.
+- **Definition:**Increases the frequency or strength of behavior by providing a positive outcome.
+- **Example:**A robot receives a reward for successfully reaching a goal location.
+- **Advantages:**Maximizes performance, helps sustain change over time.
+- **Disadvantages:**Overuse can reduce effectiveness.
 
 ### Negative Reinforcement
 
-- **Definition:** Increases behavior by removing an unpleasant outcome or penalty.
-- **Example:** An agent avoids actions that lead to negative rewards.
-- **Advantages:** Increases minimum performance.
-- **Disadvantages:** May only encourage actions to avoid penalty rather than optimize.
+- **Definition:**Increases behavior by removing an unpleasant outcome or penalty.
+- **Example:**An agent avoids actions that lead to negative rewards.
+- **Advantages:**Increases minimum performance.
+- **Disadvantages:**May only encourage actions to avoid penalty rather than optimize.
 
 - *Reference:* [GeeksforGeeks: Types of Reinforcement](https://www.geeksforgeeks.org/machine-learning/what-is-reinforcement-learning/)
 
@@ -280,6 +280,5 @@ This example demonstrates Q-learning for maze navigation, including full impleme
 - Receives reward or penalty, updates its Q-value.
 - Learns over many episodes, improving its path-finding.
 
-**Code and visualization steps:**  
-- [GeeksforGeeks: RL Maze Navigation Python Example](https://www.geeksforgeeks
+**Code and visualization steps:**- [GeeksforGeeks: RL Maze Navigation Python Example](https://www.geeksforgeeks
 

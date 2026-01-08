@@ -104,12 +104,12 @@ Markdown has evolved from a simple text-to-HTML conversion tool into a versatile
 
 | Feature | CommonMark | GitHub Flavored | MultiMarkdown | Pandoc Markdown | R Markdown |
 |---------|------------|-----------------|---------------|-----------------|------------|
-| **Tables** | No | Yes | Yes | Yes | Yes |
-| **Task Lists** | No | Yes | No | Yes | Yes |
-| **Footnotes** | No | No | Yes | Yes | Yes |
-| **Math Support** | No | Limited | Yes | Yes | Yes |
-| **Syntax Highlighting** | No | Yes | Yes | Yes | Yes |
-| **Strikethrough** | No | Yes | Yes | Yes | Yes |
+| **Tables**| No | Yes | Yes | Yes | Yes |
+| **Task Lists**| No | Yes | No | Yes | Yes |
+| **Footnotes**| No | No | Yes | Yes | Yes |
+| **Math Support**| No | Limited | Yes | Yes | Yes |
+| **Syntax Highlighting**| No | Yes | Yes | Yes | Yes |
+| **Strikethrough**| No | Yes | Yes | Yes | Yes |
 
 ## Challenges and Considerations
 

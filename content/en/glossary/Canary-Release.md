@@ -28,14 +28,13 @@ The new application version is first deployed to a limited segment of your infra
 
 ### 2. Select Users for Canary Exposure
 
-**User segmentation strategies:**
-- **Random sampling:** Route a small percentage (1-5%) of user traffic to the canary
-- **Geographic targeting:** Deploy first to certain regions or data centers
-- **User type:** Begin with employees or power users ("dogfooding")
-- **Brand/customer segmentation:** For multi-tenant systems, target specific brands or tenants
-- **Opt-in/opt-out:** Allow users to volunteer for early access
+**User segmentation strategies:**- **Random sampling:**Route a small percentage (1-5%) of user traffic to the canary
+- **Geographic targeting:**Deploy first to certain regions or data centers
+- **User type:**Begin with employees or power users ("dogfooding")
+- **Brand/customer segmentation:**For multi-tenant systems, target specific brands or tenants
+- **Opt-in/opt-out:**Allow users to volunteer for early access
 
-**Example:** Facebook first exposes new versions to employees, then gradually to broader cohorts.
+**Example:**Facebook first exposes new versions to employees, then gradually to broader cohorts.
 
 ### 3. Gradually Increase Exposure
 
@@ -43,14 +42,12 @@ If no issues are detected, the rollout expands incrementally: 1% → 5% → 10% 
 
 ### 4. Monitor Key Metrics and Observability
 
-**Technical Metrics:**
-- Error rates (HTTP 5xx, exceptions)
+**Technical Metrics:**- Error rates (HTTP 5xx, exceptions)
 - Latency and response times
 - Resource consumption (CPU, memory)
 - Crash rates and logs
 
-**Business Metrics:**
-- Conversion rates and transaction success
+**Business Metrics:**- Conversion rates and transaction success
 - Engagement and retention
 - Revenue impact
 
@@ -60,11 +57,9 @@ Observability is managed through dashboards, alerting, and automated anomaly det
 
 If problems are detected:
 
-**Immediate Rollback**  
-Revert all traffic to the previous version instantly.
+**Immediate Rollback**Revert all traffic to the previous version instantly.
 
-**Rollback Strategies:**
-- Reroute via load balancer/API gateway/feature flag
+**Rollback Strategies:**- Reroute via load balancer/API gateway/feature flag
 - Decommission canary pods/instances
 - Restore previous database state if required (plan schema changes carefully)
 
@@ -72,64 +67,49 @@ Automation is highly recommended for rapid, error-free rollbacks.
 
 ## Benefits of Canary Releases
 
-**Risk Mitigation**  
-Limits the "blast radius" of failed releases to a small group of users.
+**Risk Mitigation**Limits the "blast radius" of failed releases to a small group of users.
 
-**Rapid, Production-Grade Feedback**  
-Real-world use exposes issues not found in staging.
+**Rapid, Production-Grade Feedback**Real-world use exposes issues not found in staging.
 
-**High Assurance**  
-Validates new versions under actual production conditions.
+**High Assurance**Validates new versions under actual production conditions.
 
-**Seamless, Fast Rollback**  
-Downtime and user impact minimized.
+**Seamless, Fast Rollback**Downtime and user impact minimized.
 
-**Capacity and Performance Testing**  
-Observe new version at scale before full rollout.
+**Capacity and Performance Testing**Observe new version at scale before full rollout.
 
-**Supports Continuous Delivery**  
-Enables frequent, safe deployments.
+**Supports Continuous Delivery**Enables frequent, safe deployments.
 
 ## Challenges and Limitations
 
-**Infrastructure Complexity**  
-Requires programmable traffic routing and advanced monitoring.
+**Infrastructure Complexity**Requires programmable traffic routing and advanced monitoring.
 
-**Version Compatibility**  
-Old and new versions must often run side-by-side, complicating APIs and databases.
+**Version Compatibility**Old and new versions must often run side-by-side, complicating APIs and databases.
 
-**User Experience Inconsistency**  
-Some users see new features or bugs before others.
+**User Experience Inconsistency**Some users see new features or bugs before others.
 
-**Database Migrations**  
-Schema changes must support both versions, often using the Parallel Change pattern.
+**Database Migrations**Schema changes must support both versions, often using the Parallel Change pattern.
 
-**Observability**  
-Lack of monitoring reduces canary value.
+**Observability**Lack of monitoring reduces canary value.
 
-**Automation**  
-Manual canary management is error-prone.
+**Automation**Manual canary management is error-prone.
 
-**Cost and Overhead**  
-Running duplicate environments increases resource usage.
+**Cost and Overhead**Running duplicate environments increases resource usage.
 
-**Not Suitable for All Systems**  
-Mission/safety-critical systems, or those with irreversible database changes, should avoid canary releases.
+**Not Suitable for All Systems**Mission/safety-critical systems, or those with irreversible database changes, should avoid canary releases.
 
 ## Comparison: Canary vs. Other Deployment Strategies
 
 | Strategy           | Rollout Model                  | Risk Mitigation | Rollback Complexity | User Experience        | Use Cases                |
 |--------------------|-------------------------------|-----------------|---------------------|------------------------|--------------------------|
-| **Canary Release** | Gradual; subset of users       | High            | Easy                | Some see new version early | High-risk, large user bases|
-| **Blue-Green**     | All-at-once; two environments  | Medium          | Easy                | Seamless (if bug-free) | Minor changes            |
-| **Rolling**        | Gradual; server batches        | Medium          | Moderate            | Users may switch versions | Infra upgrades           |
-| **Feature Flags**  | Toggle features per user/group | High            | Very easy           | Highly targeted        | Experiments, A/B tests   |
+| **Canary Release**| Gradual; subset of users       | High            | Easy                | Some see new version early | High-risk, large user bases|
+| **Blue-Green**| All-at-once; two environments  | Medium          | Easy                | Seamless (if bug-free) | Minor changes            |
+| **Rolling**| Gradual; server batches        | Medium          | Moderate            | Users may switch versions | Infra upgrades           |
+| **Feature Flags**| Toggle features per user/group | High            | Very easy           | Highly targeted        | Experiments, A/B tests   |
 
-**Key Differences:**
-- **Blue-green:** All users switch at once, making rollback simple but risking total exposure
-- **Rolling:** Updates infrastructure in waves, not user cohorts
-- **Feature flags:** Control features at granular level, not entire application versions
-- **Canary:** Gradual, cohort-based exposure for high-risk or large-scale deployments
+**Key Differences:**- **Blue-green:**All users switch at once, making rollback simple but risking total exposure
+- **Rolling:**Updates infrastructure in waves, not user cohorts
+- **Feature flags:**Control features at granular level, not entire application versions
+- **Canary:**Gradual, cohort-based exposure for high-risk or large-scale deployments
 
 ## Implementation Best Practices
 
@@ -185,34 +165,25 @@ Mission/safety-critical systems, or those with irreversible database changes, sh
 
 ## Common Anti-Patterns
 
-**Manual, Non-Automated Canaries**  
-Increase human error risk.
+**Manual, Non-Automated Canaries**Increase human error risk.
 
-**Insufficient Monitoring**  
-Can let canary-only issues go undetected.
+**Insufficient Monitoring**Can let canary-only issues go undetected.
 
-**Focusing Solely on Technical Metrics**  
-May miss business regressions.
+**Focusing Solely on Technical Metrics**May miss business regressions.
 
-**Overly Aggressive Ramp-Up**  
-Defeats risk mitigation.
+**Overly Aggressive Ramp-Up**Defeats risk mitigation.
 
-**Confusing Canary with A/B Testing**  
-Canaries are for safety, not product analytics.
+**Confusing Canary with A/B Testing**Canaries are for safety, not product analytics.
 
 ## Frequently Asked Questions
 
-**How is a canary release different from blue-green deployment?**  
-Blue-green switches all users to a new environment at once, while canary releases gradually shift traffic, minimizing early exposure risk.
+**How is a canary release different from blue-green deployment?**Blue-green switches all users to a new environment at once, while canary releases gradually shift traffic, minimizing early exposure risk.
 
-**Can I use canary releases for database changes?**  
-Only if changes are backward-compatible and both versions can run in parallel, often via the Parallel Change pattern.
+**Can I use canary releases for database changes?**Only if changes are backward-compatible and both versions can run in parallel, often via the Parallel Change pattern.
 
-**What infrastructure is required for canary releases?**  
-Programmable load balancers, API gateways, observability stack, and CI/CD automation.
+**What infrastructure is required for canary releases?**Programmable load balancers, API gateways, observability stack, and CI/CD automation.
 
-**Are canary releases suitable for all types of software?**  
-Most effective for web services, APIs, and cloud-native applications with centralized deployment.
+**Are canary releases suitable for all types of software?**Most effective for web services, APIs, and cloud-native applications with centralized deployment.
 
 ## References
 

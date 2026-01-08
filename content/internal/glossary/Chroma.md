@@ -13,7 +13,7 @@ url = "/internal/glossary/Chroma/"
 +++
 ## ¿Qué es Chroma?
 
-**Chroma** es una base de datos vectorial (de embeddings) de código abierto diseñada para aplicaciones nativas de IA, especialmente aquellas que utilizan modelos de lenguaje grandes (LLMs) e IA multimodal. A diferencia de las bases de datos tradicionales, Chroma está especializada en almacenar, indexar y recuperar embeddings vectoriales de alta dimensión: representaciones numéricas de texto, imágenes y otros datos no estructurados.
+**Chroma**es una base de datos vectorial (de embeddings) de código abierto diseñada para aplicaciones nativas de IA, especialmente aquellas que utilizan modelos de lenguaje grandes (LLMs) e IA multimodal. A diferencia de las bases de datos tradicionales, Chroma está especializada en almacenar, indexar y recuperar embeddings vectoriales de alta dimensión: representaciones numéricas de texto, imágenes y otros datos no estructurados.
 
 La misión principal de Chroma es facilitar a desarrolladores y organizaciones la incorporación de búsqueda semántica, recomendaciones, RAG y capacidades nativas de IA en sus aplicaciones, con una configuración mínima y máxima flexibilidad. Ofrece:
 
@@ -28,7 +28,7 @@ La misión principal de Chroma es facilitar a desarrolladores y organizaciones l
 
 ### Embeddings
 
-Los **embeddings** son vectores densos que codifican el significado semántico de los datos. Por ejemplo, una oración, imagen o fragmento de audio puede transformarse en un vector de cientos o miles de números. Los puntos de datos similares en significado tendrán embeddings similares (es decir, estarán “cerca” en el espacio vectorial), aunque los datos originales sean muy diferentes.
+Los **embeddings**son vectores densos que codifican el significado semántico de los datos. Por ejemplo, una oración, imagen o fragmento de audio puede transformarse en un vector de cientos o miles de números. Los puntos de datos similares en significado tendrán embeddings similares (es decir, estarán “cerca” en el espacio vectorial), aunque los datos originales sean muy diferentes.
 
 Chroma soporta embeddings generados por modelos populares, incluyendo:
 - Modelos de OpenAI para embeddings de texto (por ejemplo, `text-embedding-3-small`)
@@ -38,7 +38,7 @@ Chroma soporta embeddings generados por modelos populares, incluyendo:
 Esto es fundamental para la búsqueda semántica, recomendaciones y generación aumentada por recuperación.
 ### Colecciones
 
-Una **colección** en Chroma es un agrupamiento lógico de documentos, embeddings y sus metadatos asociados. Cada colección tiene su propia configuración, incluyendo:
+Una **colección**en Chroma es un agrupamiento lógico de documentos, embeddings y sus metadatos asociados. Cada colección tiene su propia configuración, incluyendo:
 - Función/modelo de embedding
 - Ubicación de almacenamiento (en memoria o persistente)
 - Configuraciones personalizadas opcionales para rendimiento o filtrado
@@ -57,7 +57,7 @@ Los operadores incluyen:
 
 ### Indexado vectorial y búsqueda por similitud
 
-Chroma utiliza grafos **Hierarchical Navigable Small World (HNSW)** para una búsqueda rápida y aproximada de los vecinos más cercanos (ANN). HNSW es un algoritmo de última generación para búsqueda de similitud en vectores de alta dimensión, equilibrando exactitud (recall) y velocidad, y escalando a millones de vectores.
+Chroma utiliza grafos **Hierarchical Navigable Small World (HNSW)**para una búsqueda rápida y aproximada de los vecinos más cercanos (ANN). HNSW es un algoritmo de última generación para búsqueda de similitud en vectores de alta dimensión, equilibrando exactitud (recall) y velocidad, y escalando a millones de vectores.
 
 Propiedades clave:
 - Tiempo de búsqueda sublineal para grandes volúmenes de datos
@@ -79,45 +79,41 @@ Chroma puede almacenar datos:
 ### APIs y librerías cliente
 
 Chroma proporciona una API minimalista e intuitiva con cuatro operaciones principales:
-- **Add:** Inserta documentos (opcionalmente con embeddings y metadatos)
-- **Update:** Modifica entradas almacenadas
-- **Delete:** Elimina entradas
-- **Query:** Recupera documentos similares mediante búsqueda vectorial, con filtros de metadatos opcionales
+- **Add:**Inserta documentos (opcionalmente con embeddings y metadatos)
+- **Update:**Modifica entradas almacenadas
+- **Delete:**Elimina entradas
+- **Query:**Recupera documentos similares mediante búsqueda vectorial, con filtros de metadatos opcionales
 
 Existen librerías cliente para:
-- **Python:** [chromadb](https://pypi.org/project/chromadb/)
-- **JavaScript/TypeScript:** [Chroma Node.js Client](https://github.com/chroma-core/chroma/tree/main/clients/js)
+- **Python:**[chromadb](https://pypi.org/project/chromadb/)
+- **JavaScript/TypeScript:**[Chroma Node.js Client](https://github.com/chroma-core/chroma/tree/main/clients/js)
 
 Chroma se integra de forma nativa con frameworks como:
-- **LangChain** ([guía de integración](https://docs.langchain.com/oss/python/integrations/providers/chroma))
-- **LlamaIndex**
-## Arquitectura y Despliegue
+- **LangChain**([guía de integración](https://docs.langchain.com/oss/python/integrations/providers/chroma))
+- **LlamaIndex**## Arquitectura y Despliegue
 
 ### Código abierto (autogestionado)
 
 Chroma puede ejecutarse localmente o en tu propia infraestructura en tres modos:
-- **En memoria:** Rápido, efímero, ideal para prototipos o pruebas
-- **Persistente:** Almacena datos en disco (SQLite + archivos binarios de vectores), adecuado para local/producción pequeña
-- **Cliente-servidor:** Ejecuta como un servidor independiente, conecta mediante API HTTP (soporta multiusuario, multiproceso)
+- **En memoria:**Rápido, efímero, ideal para prototipos o pruebas
+- **Persistente:**Almacena datos en disco (SQLite + archivos binarios de vectores), adecuado para local/producción pequeña
+- **Cliente-servidor:**Ejecuta como un servidor independiente, conecta mediante API HTTP (soporta multiusuario, multiproceso)
 
-**Ejemplo de inicio de servidor:**
-```shell
+**Ejemplo de inicio de servidor:**```shell
 chroma run --path ./db --port 8000
 ```
-**Cliente Python:**
-```python
+**Cliente Python:**```python
 import chromadb
 client = chromadb.HttpClient(host="localhost", port=8000)
 ```
 ### Chroma Cloud (sin servidor)
 
-**Chroma Cloud** es una implementación totalmente administrada y sin servidor. Se encarga de:
+**Chroma Cloud**es una implementación totalmente administrada y sin servidor. Se encarga de:
 - Escalado elástico
 - Respaldo automático y [alta disponibilidad](/es/glossary/high-availability--ha-/)
 - Mantenimiento y monitoreo
 
-**Ejemplo de conexión:**
-```python
+**Ejemplo de conexión:**```python
 import chromadb
 client = chromadb.HttpClient(
     host="api.trychroma.com",
@@ -128,8 +124,7 @@ client = chromadb.HttpClient(
 
 ### Instalación
 
-**Python:**
-```bash
+**Python:**```bash
 pip install chromadb
 ```
 Para integración con LangChain:
@@ -181,8 +176,7 @@ collection = client.create_collection(
 
 LangChain ofrece un wrapper nativo para Chroma, soportando flujos de trabajo avanzados como RAG, chatbots y memoria.
 
-**Ejemplo:**
-```python
+**Ejemplo:**```python
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 
@@ -221,7 +215,7 @@ Encuentra elementos/usuarios similares mediante similitud de embeddings:
 
 ### Generación aumentada por recuperación (RAG)
 
-**RAG** permite que los LLMs accedan en tiempo real a bases de conocimiento externas, mejorando la precisión y reduciendo alucinaciones.
+**RAG**permite que los LLMs accedan en tiempo real a bases de conocimiento externas, mejorando la precisión y reduciendo alucinaciones.
 - Chatbots citan documentos específicos
 - Asistentes responden con conocimiento actualizado de la empresa
 ### Búsqueda de imágenes, audio y multimodal
@@ -251,8 +245,7 @@ Chroma está diseñado para velocidad y eficiencia del desarrollador, pero algun
 - **Compactación de índices**: Compacta el índice HNSW tras eliminaciones/actualizaciones frecuentes
 - **Prefiltrado por metadatos**: Filtra por metadatos antes de la similitud para reducir el cómputo
 
-**Ejemplo:**
-```python
+**Ejemplo:**```python
 collection.add(
     documents=large_document_list,
     ids=id_list,
@@ -263,8 +256,7 @@ collection.add(
 
 ### Chroma vs. Pinecone, Faiss, Weaviate, Qdrant, Milvus y otros
 
-**Panorama del ecosistema:**
-- **Chroma**: OSS, configuración simple, búsqueda híbrida, ideal para prototipos/velocidad de desarrollo
+**Panorama del ecosistema:**- **Chroma**: OSS, configuración simple, búsqueda híbrida, ideal para prototipos/velocidad de desarrollo
 - **Pinecone**: Administrado, distribuido, nivel empresarial, soporte multi-índice, alta escala
 - **Faiss**: OSS, enfoque en investigación/ML, C++/Python, no es una base de datos (sin almacenamiento de doc/metadatos)
 - **Weaviate**: OSS, distribuido, búsqueda híbrida, esquema, multi-tenant
@@ -272,7 +264,7 @@ collection.add(
 - **Milvus**: OSS, cloud-native, soporte GPU, muy alta escala
 ### Tabla comparativa
 
-| Característica          | **Chroma**       | **Pinecone**    | **Faiss**         | **Weaviate**     | **Qdrant**    | **Milvus**    |
+| Característica          | **Chroma**| **Pinecone**| **Faiss**| **Weaviate**| **Qdrant**| **Milvus**|
 |------------------------|------------------|-----------------|-------------------|------------------|--------------|--------------|
 | Código abierto         | ✅               | ❌              | ✅                | ✅ (open-core)   | ✅           | ✅           |
 | Facilidad de setup     | Muy simple       | Administrado, fácil | Complejo       | Moderado         | Moderado     | Moderado     |

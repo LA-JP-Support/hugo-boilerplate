@@ -21,23 +21,23 @@ Los bots de dominio abierto son sistemas de [IA conversacional](/en/glossary/con
 
 ### Primeros Chatbots
 
-Los primeros chatbots, como **ELIZA** (1966), utilizaban reglas de coincidencia de patrones para simular la conversación, normalmente dentro de un dominio muy reducido (por ejemplo, psicoterapia). Más tarde, **ALICE** (1995) introdujo AIML (Artificial Intelligence Markup Language), pero seguía siendo fundamentalmente de dominio cerrado.
+Los primeros chatbots, como **ELIZA**(1966), utilizaban reglas de coincidencia de patrones para simular la conversación, normalmente dentro de un dominio muy reducido (por ejemplo, psicoterapia). Más tarde, **ALICE**(1995) introdujo AIML (Artificial Intelligence Markup Language), pero seguía siendo fundamentalmente de dominio cerrado.
 
 ### El Auge del Diálogo de Dominio Abierto
 
-Con la llegada de datos a gran escala y arquitecturas de redes neuronales, el campo evolucionó hacia la conversación de dominio abierto. La introducción de los modelos **sequence-to-sequence (seq2seq)** (Vinyals & Le, 2015) marcó un hito importante, permitiendo sistemas de diálogo neuronales de extremo a extremo entrenados con grandes conjuntos de datos extraídos de fuentes públicas en internet (por ejemplo, Reddit).
+Con la llegada de datos a gran escala y arquitecturas de redes neuronales, el campo evolucionó hacia la conversación de dominio abierto. La introducción de los modelos **sequence-to-sequence (seq2seq)**(Vinyals & Le, 2015) marcó un hito importante, permitiendo sistemas de diálogo neuronales de extremo a extremo entrenados con grandes conjuntos de datos extraídos de fuentes públicas en internet (por ejemplo, Reddit).
 
-Modelos posteriores basados en transformers, como **Meena de Google** y **Blender de Facebook**, avanzaron aún más el campo al incorporar mecanismos de atención y aprovechar miles de millones de parámetros conversacionales. Competencias de investigación como el **Alexa Prize** y el **ConvAI Challenge** han acelerado el desarrollo y la evaluación de sistemas de dominio abierto.  
+Modelos posteriores basados en transformers, como **Meena de Google**y **Blender de Facebook**, avanzaron aún más el campo al incorporar mecanismos de atención y aprovechar miles de millones de parámetros conversacionales. Competencias de investigación como el **Alexa Prize**y el **ConvAI Challenge**han acelerado el desarrollo y la evaluación de sistemas de dominio abierto.  
 - Fuente: [ACL Anthology 2021](https://aclanthology.org/2021.sigdial-1.41.pdf), [Investigación IJEAT](https://www.ijeat.org/wp-content/uploads/papers/v9i4/D8734049420.pdf)
 
 ## Términos Clave y Distinciones
 
 ### Dominio Abierto vs. Dominio Cerrado
 
-- **Chatbot de dominio abierto:** Participa en conversaciones sin restricciones, apoyando cualquier tema.  
+- **Chatbot de dominio abierto:**Participa en conversaciones sin restricciones, apoyando cualquier tema.  
   *Ejemplos: Meena, Blender, Mitsuku*
 
-- **Chatbot de dominio cerrado:** Restringido a tareas o dominios específicos y predefinidos (por ejemplo, reserva de vuelos, banca).  
+- **Chatbot de dominio cerrado:**Restringido a tareas o dominios específicos y predefinidos (por ejemplo, reserva de vuelos, banca).  
   *Ejemplos: LegalBot, bots de triaje médico*
 
 | Aspecto                | Bot de Dominio Abierto                           | Bot de Dominio Cerrado             |
@@ -51,14 +51,14 @@ Modelos posteriores basados en transformers, como **Meena de Google** y **Blende
 
 ### Chatbot vs. Sistema de Diálogo
 
-- **Chatbot:** Término informal para sistemas que simulan chat social y libre.
-- **Sistema de diálogo:** Término más amplio, que incluye tanto sistemas de dominio abierto como cerrado (orientados a tareas).
+- **Chatbot:**Término informal para sistemas que simulan chat social y libre.
+- **Sistema de diálogo:**Término más amplio, que incluye tanto sistemas de dominio abierto como cerrado (orientados a tareas).
 - Para distinciones, ver: [SpringerLink](https://link.springer.com/chapter/10.1007/978-981-15-1384-8_22)
 
 ### Preguntas y Respuestas vs. Diálogo de Forma Libre
 
-- **Preguntas y respuestas (QA):** Enfocado en consultas fácticas, a menudo de un solo turno, usando recuperación estructurada (por ej., de Wikipedia).
-- **Diálogo de forma libre:** Conversación de varios turnos, no estructurada, incluyendo [charla trivial](/en/glossary/small-talk/), narración de historias y opiniones.
+- **Preguntas y respuestas (QA):**Enfocado en consultas fácticas, a menudo de un solo turno, usando recuperación estructurada (por ej., de Wikipedia).
+- **Diálogo de forma libre:**Conversación de varios turnos, no estructurada, incluyendo [charla trivial](/en/glossary/small-talk/), narración de historias y opiniones.
 
 ## Arquitecturas subyacentes a Bots de Dominio Abierto
 
@@ -76,8 +76,8 @@ Los transformers, como se introdujo en Vaswani et al. (2017), utilizan mecanismo
 
 ### Enfoques de Recuperación y Generativos
 
-- **Basados en recuperación:** Seleccionan una respuesta óptima de un conjunto predefinido usando métricas de similitud. Son fiables en exactitud pero limitados a datos existentes.
-- **Modelos generativos:** Componen respuestas palabra por palabra, permitiendo enunciados nuevos pero con riesgo de incoherencia.
+- **Basados en recuperación:**Seleccionan una respuesta óptima de un conjunto predefinido usando métricas de similitud. Son fiables en exactitud pero limitados a datos existentes.
+- **Modelos generativos:**Componen respuestas palabra por palabra, permitiendo enunciados nuevos pero con riesgo de incoherencia.
 - Estudios comparativos:  
   - [Investigación IJEAT](https://www.ijeat.org/wp-content/uploads/papers/v9i4/D8734049420.pdf)
 
@@ -86,13 +86,9 @@ Los transformers, como se introdujo en Vaswani et al. (2017), utilizan mecanismo
 ### Aplicaciones Prácticas
 
 Los bots de dominio abierto se implementan para:
-- **Conversación social y compañía**
-- **Búsqueda de información general** (QA de dominio abierto)
-- **Engagement con clientes** (chat de temas amplios)
-- **Investigación y benchmarking en IA**
-- **Práctica de idiomas**
-
-### Ejemplos de Sistemas Destacados
+- **Conversación social y compañía**- **Búsqueda de información general**(QA de dominio abierto)
+- **Engagement con clientes**(chat de temas amplios)
+- **Investigación y benchmarking en IA**- **Práctica de idiomas**### Ejemplos de Sistemas Destacados
 
 | Sistema     | Descripción                                       | Características / Benchmarks |
 |-------------|---------------------------------------------------|-----------------------------|
@@ -107,9 +103,9 @@ Los bots de dominio abierto se implementan para:
 ### Taxonomía de Eventos del Habla
 
 Los eventos del habla representan categorías de actividad conversacional (Goldsmith & Baxter, 1996):
-- **Informal/Superficial:** Charla trivial, chismes, bromas
-- **Implicado:** Quejas, conversación de relaciones
-- **Orientado a objetivos:** Toma de decisiones, instrucciones
+- **Informal/Superficial:**Charla trivial, chismes, bromas
+- **Implicado:**Quejas, conversación de relaciones
+- **Orientado a objetivos:**Toma de decisiones, instrucciones
 
 ### Hallazgos Empíricos y Limitaciones
 
@@ -119,16 +115,16 @@ Los eventos del habla representan categorías de actividad conversacional (Golds
 
 ### Retos para Lograr una Real Apertura
 
-- **Comprensión contextual** limitada, especialmente en intercambios largos o complejos.
-- **Anclaje en el mundo real** (por ejemplo, referencia a eventos en vivo o contexto del usuario) no resuelto.
-- **Eventos complejos del habla** como la persuasión o la planificación colaborativa siguen siendo poco comunes.
+- **Comprensión contextual**limitada, especialmente en intercambios largos o complejos.
+- **Anclaje en el mundo real**(por ejemplo, referencia a eventos en vivo o contexto del usuario) no resuelto.
+- **Eventos complejos del habla**como la persuasión o la planificación colaborativa siguen siendo poco comunes.
 
 ## Marcos de Evaluación y Benchmarks
 
 ### Similitud Humana y Coherencia
 
-- **Coherencia:** Conexión lógica y flujo de la conversación.
-- **Similitud humana:** Grado en que las respuestas del bot son indistinguibles de las de un humano.
+- **Coherencia:**Conexión lógica y flujo de la conversación.
+- **Similitud humana:**Grado en que las respuestas del bot son indistinguibles de las de un humano.
 
 ### Evaluación de Eventos del Habla
 
@@ -142,8 +138,8 @@ Los eventos del habla representan categorías de actividad conversacional (Golds
 
 ### Test de Turing y Otros Métodos
 
-- **Test de Turing:** Mide la imitación de la conversación humana, criticado por enfocarse en el engaño más que en la profundidad.
-- **Evaluación turno a turno:** Evalúa cada respuesta en cuanto a sensatez y especificidad.
+- **Test de Turing:**Mide la imitación de la conversación humana, criticado por enfocarse en el engaño más que en la profundidad.
+- **Evaluación turno a turno:**Evalúa cada respuesta en cuanto a sensatez y especificidad.
 
 ### Resultados Cuantitativos y Benchmarks
 
@@ -154,24 +150,23 @@ Los eventos del habla representan categorías de actividad conversacional (Golds
 
 ### Problemas en Implementaciones Reales
 
-- **Requisitos de datos:** Entrenar bots de dominio abierto requiere datos conversacionales masivos y diversos.
-- **Computación:** Los transformers requieren un gran poder de cómputo.
-- **Seguridad:** Riesgo de generar respuestas inapropiadas, sesgadas o sin sentido.
+- **Requisitos de datos:**Entrenar bots de dominio abierto requiere datos conversacionales masivos y diversos.
+- **Computación:**Los transformers requieren un gran poder de cómputo.
+- **Seguridad:**Riesgo de generar respuestas inapropiadas, sesgadas o sin sentido.
 
 ### Rasa y Limitaciones Prácticas
 
-- **Rasa:** Diseñado principalmente para bots orientados a tareas por intención/entidad.
-- **Retos para dominio abierto en Rasa:**
-  - El diseño exhaustivo de intenciones/entidades es impracticable para dominios sin límites.
+- **Rasa:**Diseñado principalmente para bots orientados a tareas por intención/entidad.
+- **Retos para dominio abierto en Rasa:**- El diseño exhaustivo de intenciones/entidades es impracticable para dominios sin límites.
   - La selección de respuestas y el seguimiento de contexto no escalan para las necesidades de dominio abierto.
   - Ver [Foro Open Domain de Rasa](https://forum.rasa.com/t/open-domain-chatbot/24319) y [Problemas de Implementación](https://forum.rasa.com/t/rasa-chat-bot-deployment-and-integration-issues/47964)
 
 ## Direcciones Futuras y Preguntas Abiertas
 
-- **Amplitud conversacional:** Expandirse más allá de la charla trivial para cubrir todo el rango de eventos conversacionales humanos.
-- **Memoria contextual:** Mejorar la capacidad de los bots para recordar, rememorar y referenciar intercambios previos.
-- **Ética y seguridad:** Desarrollar filtrado y monitorización robusta para un despliegue responsable.
-- **Modelos híbridos:** Combinar recuperación, generación y [curación con humanos en el ciclo](/en/glossary/human-in-the-loop--hitl-/) para mejorar la calidad del diálogo.
+- **Amplitud conversacional:**Expandirse más allá de la charla trivial para cubrir todo el rango de eventos conversacionales humanos.
+- **Memoria contextual:**Mejorar la capacidad de los bots para recordar, rememorar y referenciar intercambios previos.
+- **Ética y seguridad:**Desarrollar filtrado y monitorización robusta para un despliegue responsable.
+- **Modelos híbridos:**Combinar recuperación, generación y [curación con humanos en el ciclo](/en/glossary/human-in-the-loop--hitl-/) para mejorar la calidad del diálogo.
 
 ## Referencias y Lecturas Adicionales
 
@@ -186,13 +181,11 @@ Los eventos del habla representan categorías de actividad conversacional (Golds
 - [Foro Open Domain de Rasa](https://forum.rasa.com/t/open-domain-chatbot/24319)
 - [Problemas de implementación e integración de Rasa Chat Bot](https://forum.rasa.com/t/rasa-chat-bot-deployment-and-integration-issues/47964)
 
-**Términos de glosario relacionados:**  
-- [Chatbot (Wisdomlib)](https://www.wisdomlib.org/concept/chatbot)  
+**Términos de glosario relacionados:**- [Chatbot (Wisdomlib)](https://www.wisdomlib.org/concept/chatbot)  
 - [Agente de diálogo (Wisdomlib)](https://www.wisdomlib.org/concept/dialogue-agent)  
 - [Asistente virtual (Wisdomlib)](https://www.wisdomlib.org/concept/virtual-assistant)
 
-**Para profundizar:**  
-- [Plataforma ParlAI para investigación en chatbots de dominio abierto](https://parl.ai/)
+**Para profundizar:**- [Plataforma ParlAI para investigación en chatbots de dominio abierto](https://parl.ai/)
 - [Modelos GPT de OpenAI](https://openai.com/research/)
 - [SQuAD: Stanford Question Answering Dataset](https://rajpurkar.github.io/SQuAD-explorer/)
 

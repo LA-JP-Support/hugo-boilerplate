@@ -29,7 +29,7 @@ Multi-tenancy enables scalable, cost-efficient, and manageable software delivery
 - **Analytics & AI platforms**: Services like GoodData and cloud-based business intelligence tools.
 - **Collaboration suites**: Microsoft 365, Google Workspace.
 - **Industry-specific vertical SaaS**: Healthcare, financial, and legal SaaS solutions that require configurable compliance.
-- **Embedded analytics** and business intelligence platforms.
+- **Embedded analytics**and business intelligence platforms.
 - Multi-tenant SaaS enables vendors to roll out new features, security patches, and updates to all users at once, reducing maintenance overhead and eliminating version drift.
 
 See:
@@ -53,8 +53,8 @@ See:
 
 A multi-tenant architecture ensures each tenant’s data and configuration remain isolated within a shared infrastructure. Tenants interact with the application through their own accounts but use the same application code and backend systems.
 
-- **Data isolation** is enforced at the application and/or database layer.
-- **Resource allocation** is dynamically managed to optimize infrastructure utilization.
+- **Data isolation**is enforced at the application and/or database layer.
+- **Resource allocation**is dynamically managed to optimize infrastructure utilization.
 
 <a name="data-separation"></a>
 ### Data Separation and Isolation
@@ -85,22 +85,21 @@ Architectures vary by data isolation, cost, scalability, and complexity.
 <a name="single-app-single-db"></a>
 ### 5.1 Single Application, Single Database
 
-- **One app instance, one database.** All tenants’ data coexists in the same tables, partitioned by tenant ID.
+- **One app instance, one database.**All tenants’ data coexists in the same tables, partitioned by tenant ID.
 - **Pros**: Simple, cost-efficient, easy to manage.
 - **Cons**: Risk of data leakage if isolation fails, limited tenant customization.
 
 <a name="single-app-multi-db"></a>
 ### 5.2 Single Application, Multiple Databases
 
-- **One app instance, multiple databases.** Each tenant has a dedicated database.
+- **One app instance, multiple databases.**Each tenant has a dedicated database.
 - **Pros**: Strong data isolation, easier per-tenant backup and migration.
 - **Cons**: Higher operational complexity, costlier at scale.
 
 <a name="multi-app-multi-db"></a>
 ### 5.3 Multiple Applications, Multiple Databases
 
-- **Each tenant has a separate app instance and database.**
-- **Pros**: Maximum security and customization.
+- **Each tenant has a separate app instance and database.**- **Pros**: Maximum security and customization.
 - **Cons**: High cost, complex management, less resource efficient.
 
 <a name="architecture-comparison"></a>
@@ -277,20 +276,15 @@ Recommended if:
 <a name="faqs"></a>
 ## 12. FAQs
 
-**How is tenant data kept secure?**  
-Data is isolated via tenant IDs, schemas, or databases. Access is controlled with RBAC and strict authentication, plus encryption.
+**How is tenant data kept secure?**Data is isolated via tenant IDs, schemas, or databases. Access is controlled with RBAC and strict authentication, plus encryption.
 
-**Can tenants customize the application?**  
-Yes—typically via settings, branding, and business rules. Major code changes are shared across all tenants.
+**Can tenants customize the application?**Yes—typically via settings, branding, and business rules. Major code changes are shared across all tenants.
 
-**How are updates managed?**  
-Updates and patches are deployed centrally, ensuring all tenants benefit simultaneously.
+**How are updates managed?**Updates and patches are deployed centrally, ensuring all tenants benefit simultaneously.
 
-**What is the “noisy neighbor” effect?**  
-Resource-heavy tenants may impact others. Managed with quotas, monitoring, autoscaling, and isolation.
+**What is the “noisy neighbor” effect?**Resource-heavy tenants may impact others. Managed with quotas, monitoring, autoscaling, and isolation.
 
-**Is multi-tenancy only for SaaS?**  
-No—also used in cloud hosting, analytics, embedded services, and more.
+**Is multi-tenancy only for SaaS?**No—also used in cloud hosting, analytics, embedded services, and more.
 
 <a name="references"></a>
 ## 13. Further Reading & References

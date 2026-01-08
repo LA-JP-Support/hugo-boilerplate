@@ -17,7 +17,7 @@ url = "/internal/glossary/Named-Entity-Recognition--NER-/"
 
 En términos prácticos, los modelos NER procesan datos textuales para extraer y anotar información clave, habilitando aplicaciones como búsqueda, respuesta a preguntas, recomendación de contenido y automatización documental.
 
-**Ejemplo:**  
+**Ejemplo:** 
 *"Apple está considerando comprar una startup del Reino Unido por $1 mil millones."*  
 Salida de NER:  
 - "Apple" → Organización (ORG)
@@ -30,14 +30,13 @@ Para un ejemplo visual y más explicación, consulte la [guía de NER de Encord]
 
 La mayoría del contenido digital es no estructurado—correos electrónicos, artículos, chats de clientes, publicaciones en redes sociales, historiales médicos, documentos legales y más. NER permite a las máquinas extraer significado factual de estos datos, apoyando una amplia gama de aplicaciones:
 
-- **Búsqueda:** Mejora la relevancia de los resultados indexando entidades nombradas.
-- **Recomendación:** Sugiere contenido basado en personas, lugares o productos reconocidos.
-- **Automatización:** Extrae datos estructurados de facturas, contratos y formularios.
-- **Cumplimiento:** Identifica y oculta información personal identificable (PII).
-- **Grafos de conocimiento:** Estructura información para análisis y IA.
+- **Búsqueda:**Mejora la relevancia de los resultados indexando entidades nombradas.
+- **Recomendación:**Sugiere contenido basado en personas, lugares o productos reconocidos.
+- **Automatización:**Extrae datos estructurados de facturas, contratos y formularios.
+- **Cumplimiento:**Identifica y oculta información personal identificable (PII).
+- **Grafos de conocimiento:**Estructura información para análisis y IA.
 
-**Ejemplo de manejo de ambigüedad:**  
-Los modelos NER analizan el contexto para resolver nombres ambiguos:
+**Ejemplo de manejo de ambigüedad:**Los modelos NER analizan el contexto para resolver nombres ambiguos:
 - *"Lincoln"* puede referirse a "Abraham Lincoln" (Persona), "Lincoln Motor Company" (Organización) o "Lincoln, Nebraska" (Ubicación).
 
 Para más casos de uso, vea el [resumen de NER de AltexSoft](https://www.altexsoft.com/blog/named-entity-recognition/).
@@ -46,7 +45,7 @@ Para más casos de uso, vea el [resumen de NER de AltexSoft](https://www.altexso
 
 ### Entidad Nombrada (NE)
 Un objeto único del mundo real denotado por un nombre propio o una referencia fija.  
-**Ejemplos:** “Michelle Obama” (Persona), “Londres” (Ubicación), “Google” (Organización), “$500” (Dinero).
+**Ejemplos:**“Michelle Obama” (Persona), “Londres” (Ubicación), “Google” (Organización), “$500” (Dinero).
 
 ### Tipo de Entidad / Etiqueta / Tag
 La categoría asignada a un tramo de entidad, como PER (Persona), ORG (Organización), LOC (Ubicación), DATE, MONEY, etc.
@@ -57,11 +56,10 @@ El proceso de detectar los índices de inicio y fin de las menciones de entidad 
 
 ### Esquemas de Etiquetado
 Los modelos NER suelen usar esquemas de etiquetado para marcar los límites de las entidades:
-- **BIO** (Begin, Inside, Outside): B-ORG, I-ORG, O
-- **IOBES** (Inside, Outside, Begin, End, Single): B-ORG, I-ORG, E-ORG, S-ORG, O
+- **BIO**(Begin, Inside, Outside): B-ORG, I-ORG, O
+- **IOBES**(Inside, Outside, Begin, End, Single): B-ORG, I-ORG, E-ORG, S-ORG, O
 
-**Ejemplos y visuales de etiquetado:**  
-[Encord: Esquemas de etiquetado para NER](https://encord.com/blog/named-entity-recognition/)
+**Ejemplos y visuales de etiquetado:**[Encord: Esquemas de etiquetado para NER](https://encord.com/blog/named-entity-recognition/)
 
 ### Etiquetado de Partes de la Oración (POS)
 Asigna a las palabras su función gramatical (sustantivo, verbo, adjetivo, etc.), a menudo usado como característica para modelos NER.
@@ -83,16 +81,16 @@ Gran colección anotada de textos usada para entrenar y evaluar sistemas NER.
 El proceso NER comprende varias etapas secuenciales:
 
 ### 1. Entrada de texto y preprocesamiento
-- **Tokenización:** Divide el texto en palabras, signos de puntuación y símbolos (tokens).
-- **Segmentación de oraciones:** Identifica los límites de las oraciones.
-- **Normalización:** Minúsculas, stemming o lematización para reducir formas de palabras.
+- **Tokenización:**Divide el texto en palabras, signos de puntuación y símbolos (tokens).
+- **Segmentación de oraciones:**Identifica los límites de las oraciones.
+- **Normalización:**Minúsculas, stemming o lematización para reducir formas de palabras.
 
 ### 2. Extracción de características
 Los modelos NER extraen características para informar sobre los límites y la clasificación de las entidades:
-- **Morfológicas:** Formas de palabras, prefijos, sufijos, uso de mayúsculas.
-- **Sintácticas:** Etiquetas POS, estructura de frases.
-- **Semánticas:** Significado contextual, palabras vecinas.
-- **Externas:** Coincidencias en diccionarios, patrones de expresiones regulares.
+- **Morfológicas:**Formas de palabras, prefijos, sufijos, uso de mayúsculas.
+- **Sintácticas:**Etiquetas POS, estructura de frases.
+- **Semánticas:**Significado contextual, palabras vecinas.
+- **Externas:**Coincidencias en diccionarios, patrones de expresiones regulares.
 
 ### 3. Detección de límites de entidad
 Localiza tramos candidatos que pueden representar entidades, usando señales contextuales y sintácticas.
@@ -101,23 +99,21 @@ Localiza tramos candidatos que pueden representar entidades, usando señales con
 Asigna a cada candidato detectado la etiqueta más probable (por ejemplo, Persona, Ubicación, Organización), usando reglas manuales, modelos estadísticos o aprendizaje profundo.
 
 ### 5. Post-procesamiento
-- **Entidades solapadas/anidadas:** Resolver cuando las entidades se superponen o anidan (por ejemplo, “University of California, Berkeley”).
-- **Resolución de ambigüedades:** Aprovechar el contexto para desambiguar nombres polisémicos.
-- **Consistencia:** Garantizar etiquetado consistente dentro y entre documentos.
+- **Entidades solapadas/anidadas:**Resolver cuando las entidades se superponen o anidan (por ejemplo, “University of California, Berkeley”).
+- **Resolución de ambigüedades:**Aprovechar el contexto para desambiguar nombres polisémicos.
+- **Consistencia:**Garantizar etiquetado consistente dentro y entre documentos.
 
 ### 6. Generación de salida
 Devuelve resultados estructurados, típicamente como texto anotado, JSON o XML.
 
-**Ejemplo de JSON:**  
-```json
+**Ejemplo de JSON:**```json
 [
   { "text": "Steve Jobs", "type": "PERSON", "startOffset": 0, "endOffset": 10 },
   { "text": "Apple", "type": "ORG", "startOffset": 22, "endOffset": 27 }
 ]
 ```
 
-**Lecturas adicionales:**  
-- [Guía NER de Encord](https://encord.com/blog/named-entity-recognition/)
+**Lecturas adicionales:**- [Guía NER de Encord](https://encord.com/blog/named-entity-recognition/)
 - [IBM: ¿Qué es el Reconocimiento de Entidades Nombradas?](https://www.ibm.com/think/topics/named-entity-recognition)
 
 ## Tipos de etiquetas y esquemas de etiquetado en NER
@@ -142,24 +138,19 @@ Devuelve resultados estructurados, típicamente como texto anotado, JSON o XML.
 | LAW          | Documentos legales, tratados                        | “Tratado de Versalles”           |
 | NORP         | Nacionalidades, grupos religiosos o políticos       | “Americano”, “Demócrata”         |
 
-**Para visuales y más detalle:**  
-[Encord: Tabla de etiquetas NER](https://encord.com/blog/named-entity-recognition/)
+**Para visuales y más detalle:**[Encord: Tabla de etiquetas NER](https://encord.com/blog/named-entity-recognition/)
 
 ### Esquemas de Etiquetado
 
-- **BIO (Begin, Inside, Outside):**
-  - B-ORG: Comienzo de una organización
+- **BIO (Begin, Inside, Outside):**- B-ORG: Comienzo de una organización
   - I-ORG: Dentro de una organización
   - O: Fuera de cualquier entidad
 
-- **IOBES/IOB2:**  
-  Expande BIO con E (Fin) y S (Única) para un control más fino de los límites.
+- **IOBES/IOB2:**Expande BIO con E (Fin) y S (Única) para un control más fino de los límites.
 
-- **Etiquetado anidado/solapado:**  
-  Algunos sistemas NER avanzados soportan reconocimiento de entidades anidadas, crucial para textos biomédicos y legales.
+- **Etiquetado anidado/solapado:**Algunos sistemas NER avanzados soportan reconocimiento de entidades anidadas, crucial para textos biomédicos y legales.
 
-**Visuales y ejemplos:**  
-[Encord: Esquemas de etiquetado](https://encord.com/blog/named-entity-recognition/)
+**Visuales y ejemplos:**[Encord: Esquemas de etiquetado](https://encord.com/blog/named-entity-recognition/)
 
 ## Métodos y enfoques
 
@@ -171,7 +162,7 @@ Devuelve resultados estructurados, típicamente como texto anotado, JSON o XML.
 - Aprende de conjuntos de datos anotados utilizando características diseñadas (formas de palabras, POS, contexto).
 - Algoritmos populares: Conditional Random Fields (CRF), Hidden Markov Models (HMM), Support Vector Machines (SVM), Árboles de Decisión.
 - Puede generalizar a ejemplos no vistos pero requiere datos etiquetados y diseño de características.
-- **Más información:** [Stanford NLP CRFClassifier](https://nlp.stanford.edu/software/CRF-NER.html)
+- **Más información:**[Stanford NLP CRFClassifier](https://nlp.stanford.edu/software/CRF-NER.html)
 
 ### 3. Enfoques de aprendizaje profundo
 
@@ -183,14 +174,12 @@ Devuelve resultados estructurados, típicamente como texto anotado, JSON o XML.
 - Usan self-attention para modelar dependencias contextuales complejas.
 - Pre-entrenados en grandes corpus, afinados con datos NER etiquetados.
 - Manejan ambigüedad, contexto, dependencias de largo alcance, subpalabras y entidades anidadas.
-- **BERT para NER:**  
-  - Sensible al contexto, bidireccional, soporta aprendizaje por transferencia.
+- **BERT para NER:**- Sensible al contexto, bidireccional, soporta aprendizaje por transferencia.
   - Soporta etiquetado IOB para entidades de varias palabras.
   - Supera modelos previos en benchmarks estándar.
   - [Cómo hacer NER con BERT: Machine Learning Mastery](https://machinelearningmastery.com/how-to-do-named-entity-recognition-ner-with-a-bert-model/)
   - [Avances recientes en NER: Encuesta arXiv](https://arxiv.org/html/2401.10825v3)
-- **Ejemplo de código:**  
-  ```python
+- **Ejemplo de código:**```python
   from transformers import pipeline
   ner_pipeline = pipeline("ner", model="dbmdz/bert-large-cased-finetuned-conll03-english", aggregation_strategy="simple")
   text = "Apple CEO Tim Cook announced new iPhone models in California yesterday."
@@ -215,17 +204,16 @@ Devuelve resultados estructurados, típicamente como texto anotado, JSON o XML.
 
 NER sigue siendo un problema difícil en PLN debido a:
 
-- **Ambigüedad y polisemia:** Palabras con múltiples tipos de entidad (“Amazon”: empresa o río).
-- **Detección de límites:** Nombres multi-palabra y entidades anidadas (“Martin Luther King Jr.”, “University of California, Berkeley”).
-- **Adaptación de dominio:** Entidades nuevas o raras en dominios especializados (biomedicina, derecho).
-- **Lenguaje evolutivo:** Nuevos términos, marcas, jerga o siglas.
-- **NER multilingüe:** Manejo de code-switching, diferentes alfabetos o tipos de entidad específicos de idioma.
-- **Datos etiquetados escasos:** Anotar grandes corpus es costoso y lento.
-- **Entidades anidadas/solapadas:** Entidades dentro de entidades (especialmente en texto biomédico o legal).
-- **Ruido e informalidad:** Redes sociales, OCR y transcripciones introducen errores y lenguaje informal.
+- **Ambigüedad y polisemia:**Palabras con múltiples tipos de entidad (“Amazon”: empresa o río).
+- **Detección de límites:**Nombres multi-palabra y entidades anidadas (“Martin Luther King Jr.”, “University of California, Berkeley”).
+- **Adaptación de dominio:**Entidades nuevas o raras en dominios especializados (biomedicina, derecho).
+- **Lenguaje evolutivo:**Nuevos términos, marcas, jerga o siglas.
+- **NER multilingüe:**Manejo de code-switching, diferentes alfabetos o tipos de entidad específicos de idioma.
+- **Datos etiquetados escasos:**Anotar grandes corpus es costoso y lento.
+- **Entidades anidadas/solapadas:**Entidades dentro de entidades (especialmente en texto biomédico o legal).
+- **Ruido e informalidad:**Redes sociales, OCR y transcripciones introducen errores y lenguaje informal.
 
-**Para más desafíos, consulte:**  
-[Encord: Retos en NER](https://encord.com/blog/named-entity-recognition/)  
+**Para más desafíos, consulte:**[Encord: Retos en NER](https://encord.com/blog/named-entity-recognition/)  
 [arXiv: Avances recientes en NER](https://arxiv.org/html/2401.10825v3)
 
 ## Casos de uso y aplicaciones de NER
@@ -245,8 +233,7 @@ Crea grafos estructurados de entidades y relaciones a partir de documentos no es
 ### 5. Cumplimiento y privacidad
 Identifica y oculta PII en documentos sensibles para GDPR, HIPAA y otros cumplimientos regulatorios.
 
-  **Ejemplo de redacción:**  
-  “Steve Jobs fundó Apple en Cupertino.”  
+  **Ejemplo de redacción:**“Steve Jobs fundó Apple en Cupertino.”  
   → “[PERSON] fundó [ORG] en [LOCATION].”
 
 ### 6. Mejora de análisis de sentimiento
@@ -258,8 +245,7 @@ Encamina tickets extrayendo nombres de productos, títulos de cursos o temas de 
 ### 8. NER específico de dominio
 Biomedicina (genes, proteínas, enfermedades), legal (casos, estatutos), financiero (tickers, instrumentos), y más.
 
-**Casos de estudio y ejemplos:**  
-- [Aplicaciones NER de AltexSoft](https://www.altexsoft.com/blog/named-entity-recognition/)
+**Casos de estudio y ejemplos:**- [Aplicaciones NER de AltexSoft](https://www.altexsoft.com/blog/named-entity-recognition/)
 - [GeeksforGeeks: Aplicaciones NER](https://www.geeksforgeeks.org/nlp/named-entity-recognition/)
 
 ## Implementación práctica: ejemplo paso a paso con spaCy
@@ -284,8 +270,7 @@ for ent in doc.ents:
     print(ent.text, ent.start_char, ent.end_char, ent.label_)
 ```
 
-**Salida de ejemplo:**
-```
+**Salida de ejemplo:**```
 Steve Jobs 0 10 PERSON
 Steve Wozniak 15 29 PERSON
 Apple 39 44 ORG
@@ -309,9 +294,7 @@ df = pd.DataFrame(entities, columns=['Entity', 'Type'])
 print(df)
 ```
 
-**Resultado:**
-
-| Entity           | Type   |
+**Resultado:**| Entity           | Type   |
 |------------------|--------|
 | Steve Jobs       | PERSON |
 | Steve Wozniak    | PERSON |
@@ -320,8 +303,7 @@ print(df)
 | Cupertino        | GPE    |
 | California       | GPE    |
 
-**Para más tutoriales y ejemplos de código:**  
-- [Documentación de entidades nombradas spaCy](https://spacy.io/usage/linguistic-features#named-entities)
+**Para más tutoriales y ejemplos de código:**- [Documentación de entidades nombradas spaCy](https://spacy.io/usage/linguistic-features#named-entities)
 - [MachineLearningMastery: Cómo hacer NER con BERT](https://machinelearningmastery.com/how-to-do-named-entity-recognition-ner-with-a-bert-model/)
 
 ## Principales herramientas, librerías y APIs para NER

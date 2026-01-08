@@ -20,31 +20,31 @@ A robust model generalizes well to new, unseen data and withstands both random a
 
 High-stakes applications require models perform reliably in unpredictable, real-world environments. Without robustness, AI systems face significant risks including safety hazards (self-driving cars misinterpreting altered road signs), security vulnerabilities (adversarial attacks tricking fraud detection or biometric systems), unfair outcomes (models underperforming for underrepresented groups), and regulatory compliance issues (laws requiring demonstrable robustness).
 
-**Example:** Medical diagnosis model failing to identify rare but critical conditions in patients outside training data can cause harm, legal liability, and loss of public trust.
+**Example:**Medical diagnosis model failing to identify rare but critical conditions in patients outside training data can cause harm, legal liability, and loss of public trust.
 
 ## Core Concepts
 
 ### Accuracy vs. Robustness vs. Reliability
 
-**Accuracy:** Proportion of correct predictions on data similar to training set.
+**Accuracy:**Proportion of correct predictions on data similar to training set.
 
-**Robustness:** Consistency of model performance facing unexpected, noisy, or adversarial inputs, or distribution shifts.
+**Robustness:**Consistency of model performance facing unexpected, noisy, or adversarial inputs, or distribution shifts.
 
-**Reliability:** Encompasses robustness plus system uptime and operational stability.
+**Reliability:**Encompasses robustness plus system uptime and operational stability.
 
 A model can be highly accurate on test data but fail catastrophically under distribution shift or adversarial attack. Robustness complements generalizability.
 
 ### Adversarial vs. Non-Adversarial Robustness
 
-**Adversarial Robustness:** Resistance to purposefully crafted, malicious inputs designed to fool models.
+**Adversarial Robustness:**Resistance to purposefully crafted, malicious inputs designed to fool models.
 
-**Non-Adversarial Robustness:** Performance stability under natural, non-malicious variations and noise including sensor errors, environmental changes, user behavior shifts.
+**Non-Adversarial Robustness:**Performance stability under natural, non-malicious variations and noise including sensor errors, environmental changes, user behavior shifts.
 
 ### Out-of-Distribution (OOD) Data and Drift
 
-**OOD Data:** Inputs that differ significantly from training data (new demographics, different lighting, novel scenarios).
+**OOD Data:**Inputs that differ significantly from training data (new demographics, different lighting, novel scenarios).
 
-**Drift:** Changes in statistical properties of input data over time including concept drift (relationships between inputs and outputs change) or data drift (input distribution changes).
+**Drift:**Changes in statistical properties of input data over time including concept drift (relationships between inputs and outputs change) or data drift (input distribution changes).
 
 ## Threats to Robustness
 
@@ -76,41 +76,41 @@ Ambiguous requirements and insufficient testing lead to overlooked vulnerabiliti
 
 ### Data-Centric Approaches
 
-**Data Augmentation:** Expand training sets with variations—rotation, flipping, cropping, noise addition for images; synonym replacement, back-translation, paraphrasing for text; resampling and noise injection for tabular data.
+**Data Augmentation:**Expand training sets with variations—rotation, flipping, cropping, noise addition for images; synonym replacement, back-translation, paraphrasing for text; resampling and noise injection for tabular data.
 
-**Outlier Detection/Removal:** Address anomalies that mislead models while preserving legitimate rare examples.
+**Outlier Detection/Removal:**Address anomalies that mislead models while preserving legitimate rare examples.
 
-**Synthetic Data Generation:** Fill gaps or rare scenarios using GANs, simulation, or procedural generation.
+**Synthetic Data Generation:**Fill gaps or rare scenarios using GANs, simulation, or procedural generation.
 
-**Balanced, Diverse Datasets:** Represent all demographics and edge cases ensuring fairness and robustness across populations.
+**Balanced, Diverse Datasets:**Represent all demographics and edge cases ensuring fairness and robustness across populations.
 
-**Data Cleaning/Annotation:** Remove label errors and inconsistencies improving training data quality.
+**Data Cleaning/Annotation:**Remove label errors and inconsistencies improving training data quality.
 
 ### Model-Centric Approaches
 
-**Regularization:** L1/L2 penalties, dropout preventing overfitting and improving generalization.
+**Regularization:**L1/L2 penalties, dropout preventing overfitting and improving generalization.
 
-**Adversarial Training:** Train on adversarial examples building resilience to attacks by exposing model to perturbations during training.
+**Adversarial Training:**Train on adversarial examples building resilience to attacks by exposing model to perturbations during training.
 
-**Ensembles:** Combine multiple models (bagging, boosting, stacking) improving robustness through diversity.
+**Ensembles:**Combine multiple models (bagging, boosting, stacking) improving robustness through diversity.
 
-**Domain Adaptation/Transfer Learning:** Adapt models to new domains efficiently leveraging knowledge from source domain.
+**Domain Adaptation/Transfer Learning:**Adapt models to new domains efficiently leveraging knowledge from source domain.
 
-**Randomized Smoothing:** Noise injection for prediction stability creating certified robustness guarantees.
+**Randomized Smoothing:**Noise injection for prediction stability creating certified robustness guarantees.
 
-**Defensive Distillation:** Makes models less sensitive to small input changes reducing attack surface.
+**Defensive Distillation:**Makes models less sensitive to small input changes reducing attack surface.
 
 ### Testing and Evaluation
 
-**Cross-Validation:** Multiple data splits to expose sensitivity to particular train/test divisions.
+**Cross-Validation:**Multiple data splits to expose sensitivity to particular train/test divisions.
 
-**OOD Testing:** Assess performance on out-of-training-distribution data revealing generalization gaps.
+**OOD Testing:**Assess performance on out-of-training-distribution data revealing generalization gaps.
 
-**Adversarial Evaluation:** Use attack algorithms to probe vulnerabilities systematically.
+**Adversarial Evaluation:**Use attack algorithms to probe vulnerabilities systematically.
 
-**Red Teaming:** Simulate attacks and edge cases with dedicated teams identifying failure modes.
+**Red Teaming:**Simulate attacks and edge cases with dedicated teams identifying failure modes.
 
-**Continuous Monitoring:** Post-deployment performance tracking detecting drift, anomalies, and degradation.
+**Continuous Monitoring:**Post-deployment performance tracking detecting drift, anomalies, and degradation.
 
 ## Real-World Applications
 
@@ -132,81 +132,81 @@ Chatbots face slang, typos, or attempts to bypass content filters. Robustness en
 
 ## Evaluation Tools
 
-**IBM AI Fairness 360:** Robustness and bias evaluation toolkit with comprehensive metrics.
+**IBM AI Fairness 360:**Robustness and bias evaluation toolkit with comprehensive metrics.
 
-**Adversarial Robustness Toolbox (ART):** Python library for adversarial attack and defense testing supporting evasion, poisoning, extraction, and inference attacks.
+**Adversarial Robustness Toolbox (ART):**Python library for adversarial attack and defense testing supporting evasion, poisoning, extraction, and inference attacks.
 
-**Robustness Gym:** Toolkit for benchmarking NLP model robustness under various perturbations (synthetic or real-world).
+**Robustness Gym:**Toolkit for benchmarking NLP model robustness under various perturbations (synthetic or real-world).
 
-**DeepChecks:** Automated suite for model and data validation including robustness checks.
+**DeepChecks:**Automated suite for model and data validation including robustness checks.
 
-**CleverHans:** Library for benchmarking adversarial robustness.
+**CleverHans:**Library for benchmarking adversarial robustness.
 
-**Foolbox:** Python toolbox for adversarial attacks on machine learning models.
+**Foolbox:**Python toolbox for adversarial attacks on machine learning models.
 
 ## Trade-offs
 
-**Accuracy vs. Robustness:** Adversarial training and other defenses can reduce peak accuracy on clean, in-distribution data.
+**Accuracy vs. Robustness:**Adversarial training and other defenses can reduce peak accuracy on clean, in-distribution data.
 
-**Complexity:** Ensembles and adversarial training increase engineering and computational overhead.
+**Complexity:**Ensembles and adversarial training increase engineering and computational overhead.
 
-**Interpretability:** Some robust models (deep ensembles, smoothed models) are harder to explain.
+**Interpretability:**Some robust models (deep ensembles, smoothed models) are harder to explain.
 
-**Over-Conservatism:** Excessive robustness can make models too cautious, lowering responsiveness.
+**Over-Conservatism:**Excessive robustness can make models too cautious, lowering responsiveness.
 
-**Resource Cost:** Continuous robustness testing and monitoring require sustained investment.
+**Resource Cost:**Continuous robustness testing and monitoring require sustained investment.
 
 ## Best Practices
 
-**Comprehensive Testing:** Test models on OOD and adversarial data before deployment across multiple scenarios.
+**Comprehensive Testing:**Test models on OOD and adversarial data before deployment across multiple scenarios.
 
-**Cross-Validation:** Use stratified sampling to uncover overfitting and ensure balanced evaluation.
+**Cross-Validation:**Use stratified sampling to uncover overfitting and ensure balanced evaluation.
 
-**Data Augmentation:** Incorporate diverse augmentation strategies for increased coverage.
+**Data Augmentation:**Incorporate diverse augmentation strategies for increased coverage.
 
-**Regularization:** Apply appropriate regularization techniques and consider ensemble methods.
+**Regularization:**Apply appropriate regularization techniques and consider ensemble methods.
 
-**Continuous Monitoring:** Monitor models after deployment for drift and failures with automated alerts.
+**Continuous Monitoring:**Monitor models after deployment for drift and failures with automated alerts.
 
-**Documentation:** Document robustness evaluation protocols and results for auditability.
+**Documentation:**Document robustness evaluation protocols and results for auditability.
 
-**Holistic Evaluation:** Pair robustness testing with fairness and interpretability evaluations.
+**Holistic Evaluation:**Pair robustness testing with fairness and interpretability evaluations.
 
-**Tool Integration:** Use industry-standard tools for systematic testing and validation.
+**Tool Integration:**Use industry-standard tools for systematic testing and validation.
 
 ## Common Pitfalls
 
-**Ignoring Robustness:** Leads to brittle, unsafe, or unfair AI systems vulnerable to real-world challenges.
+**Ignoring Robustness:**Leads to brittle, unsafe, or unfair AI systems vulnerable to real-world challenges.
 
-**Accuracy-Only Focus:** Relying solely on accuracy metrics is insufficient for production readiness.
+**Accuracy-Only Focus:**Relying solely on accuracy metrics is insufficient for production readiness.
 
-**Edge Case Neglect:** Failing to cover rare events and boundary conditions in testing increases risk.
+**Edge Case Neglect:**Failing to cover rare events and boundary conditions in testing increases risk.
 
-**Delayed Action:** Allowing persistent error patterns without addressing root causes.
+**Delayed Action:**Allowing persistent error patterns without addressing root causes.
 
-**Metric Tunnel Vision:** Over-focusing on robustness while neglecting false positives or user satisfaction.
+**Metric Tunnel Vision:**Over-focusing on robustness while neglecting false positives or user satisfaction.
 
 ## Regulatory Context
 
-**EU AI Act:** Requires robustness documentation and testing for high-risk AI systems.
+**EU AI Act:**Requires robustness documentation and testing for high-risk AI systems.
 
-**ISO 42001:** AI management standard includes robustness requirements and testing protocols.
+**ISO 42001:**AI management standard includes robustness requirements and testing protocols.
 
-**NIST AI RMF:** Risk Management Framework requires demonstrable robustness for AI systems.
+**NIST AI RMF:**Risk Management Framework requires demonstrable robustness for AI systems.
 
-**Industry Standards:** Sector-specific regulations (healthcare, finance, automotive) mandate robustness validation.
+**Industry Standards:**Sector-specific regulations (healthcare, finance, automotive) mandate robustness validation.
 
 ## Future Directions
 
-**Automated Verification:** Tools for validating robustness claims against actual model behavior.
+**Automated Verification:**Tools for validating robustness claims against actual model behavior.
 
-**Certified Robustness:** Provable guarantees on model behavior under bounded perturbations.
+**Certified Robustness:**Provable guarantees on model behavior under bounded perturbations.
 
-**Robustness Metrics:** Standardized metrics for comparing robustness across models and domains.
+**Robustness Metrics:**Standardized metrics for comparing robustness across models and domains.
 
-**Continuous Adaptation:** Systems that automatically adapt to distribution shifts maintaining robustness.
+**Continuous Adaptation:**Systems that automatically adapt to distribution shifts maintaining robustness.
 
-**Explainable Robustness:** Methods for understanding and explaining sources of robustness or brittleness.
+**Explainable Robustness:**Methods for understanding and explaining sources of robustness or brittleness.
 
 ## References
 

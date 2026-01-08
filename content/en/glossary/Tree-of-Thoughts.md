@@ -108,12 +108,12 @@ The Tree of Thoughts framework operates through a systematic process that combin
 
 | Aspect | Tree of Thoughts | Chain of Thought | Direct Generation | Beam Search |
 |--------|------------------|------------------|-------------------|-------------|
-| **Reasoning Structure** | Hierarchical tree with backtracking | Linear sequential steps | Single-step output | Parallel linear paths |
-| **Error Recovery** | Full backtracking capability | Limited error correction | No error recovery | Minimal backtracking |
-| **Solution Exploration** | Systematic multi-path exploration | Single reasoning chain | Direct answer generation | Multiple similar paths |
-| **Computational Cost** | High due to tree search | Moderate sequential cost | Low single-pass cost | Moderate parallel cost |
-| **Problem Complexity** | Handles highly complex problems | Moderate complexity tasks | Simple to moderate tasks | Moderate complexity |
-| **Solution Quality** | Often highest quality | Good for linear problems | Variable quality | Good average quality |
+| **Reasoning Structure**| Hierarchical tree with backtracking | Linear sequential steps | Single-step output | Parallel linear paths |
+| **Error Recovery**| Full backtracking capability | Limited error correction | No error recovery | Minimal backtracking |
+| **Solution Exploration**| Systematic multi-path exploration | Single reasoning chain | Direct answer generation | Multiple similar paths |
+| **Computational Cost**| High due to tree search | Moderate sequential cost | Low single-pass cost | Moderate parallel cost |
+| **Problem Complexity**| Handles highly complex problems | Moderate complexity tasks | Simple to moderate tasks | Moderate complexity |
+| **Solution Quality**| Often highest quality | Good for linear problems | Variable quality | Good average quality |
 
 ## Challenges and Considerations
 

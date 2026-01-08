@@ -24,20 +24,15 @@ Piense en registrar temperaturas con un termómetro digital que muestra decimale
 
 ### Motivación
 
-1. **Eficiencia de Memoria:**  
-   Los números de menor precisión requieren menos bits, reduciendo drásticamente la huella de memoria. Por ejemplo, cuantizar de FP32 a INT8 reduce el uso de memoria en un 75%. Para modelos de lenguaje grandes (LLMs) con decenas o cientos de miles de millones de parámetros, esto es fundamental para ajustarlos en GPUs más pequeñas o dispositivos de borde.
+1. **Eficiencia de Memoria:**Los números de menor precisión requieren menos bits, reduciendo drásticamente la huella de memoria. Por ejemplo, cuantizar de FP32 a INT8 reduce el uso de memoria en un 75%. Para modelos de lenguaje grandes (LLMs) con decenas o cientos de miles de millones de parámetros, esto es fundamental para ajustarlos en GPUs más pequeñas o dispositivos de borde.
 
-2. **Inferencia Más Rápida:**  
-   La aritmética entera es más eficiente que la de coma flotante en la mayoría del hardware. Los modelos cuantizados pueden lograr entre 2 y 3 veces más velocidad en inferencia, y hasta 16 veces más rendimiento por vatio en aceleradores especializados.
+2. **Inferencia Más Rápida:**La aritmética entera es más eficiente que la de coma flotante en la mayoría del hardware. Los modelos cuantizados pueden lograr entre 2 y 3 veces más velocidad en inferencia, y hasta 16 veces más rendimiento por vatio en aceleradores especializados.
 
-3. **Menor Consumo Energético:**  
-   Los modelos pequeños y cuantizados consumen menos energía, algo importante para dispositivos alimentados por batería y despliegues con conciencia de sostenibilidad.
+3. **Menor Consumo Energético:**Los modelos pequeños y cuantizados consumen menos energía, algo importante para dispositivos alimentados por batería y despliegues con conciencia de sostenibilidad.
 
-4. **Despliegue en Borde y Móvil:**  
-   Muchos dispositivos de borde (IoT, smartphones, wearables) no tienen hardware para operaciones de alta precisión. La cuantización permite ejecutar modelos de IA avanzados incluso en hardware con recursos limitados.
+4. **Despliegue en Borde y Móvil:**Muchos dispositivos de borde (IoT, smartphones, wearables) no tienen hardware para operaciones de alta precisión. La cuantización permite ejecutar modelos de IA avanzados incluso en hardware con recursos limitados.
 
-5. **Reducción de Costes:**  
-   Al reducir los requisitos de cómputo y memoria, la cuantización disminuye los costes operativos en despliegues en la nube y centros de datos.
+5. **Reducción de Costes:**Al reducir los requisitos de cómputo y memoria, la cuantización disminuye los costes operativos en despliegues en la nube y centros de datos.
 
 #### Ejemplo
 
@@ -51,20 +46,16 @@ La cuantización mapea valores de alta precisión a un dominio de menor precisi�
 
 El esquema de cuantización más común es la cuantización afín. Para un valor de coma flotante \( x \) en el rango \([a, b]\):
 
-**Escala (S):**  
-Determina cómo el rango continuo de coma flotante se mapea al rango entero discreto.
+**Escala (S):**Determina cómo el rango continuo de coma flotante se mapea al rango entero discreto.
 
-**Punto cero (Z):**  
-Permite que el cero de coma flotante se represente exactamente como un entero, lo cual es crucial para el cálculo correcto en redes neuronales.
+**Punto cero (Z):**Permite que el cero de coma flotante se represente exactamente como un entero, lo cual es crucial para el cálculo correcto en redes neuronales.
 
-- **Cuantización:**  
-  \[
+- **Cuantización:**\[
   x_q = \text{round}\left(\frac{x}{S} + Z\right)
   \]
   donde \(x_q\) es el valor entero cuantizado.
 
-- **Descuantización:**  
-  \[
+- **Descuantización:**\[
   x = S \times (x_q - Z)
   \]
   donde \(x\) es el valor de coma flotante reconstruido.
@@ -75,13 +66,13 @@ Ver:
 
 ### Cuantización Simétrica vs. Asimétrica
 
-- **Simétrica:** El rango entero está centrado en cero (\(Z=0\)); ideal para datos centrados en cero.
-- **Asimétrica (Afín):** \(Z\) puede ser cualquier entero, permitiendo que el cero de coma flotante se alinee con un entero arbitrario; útil para distribuciones sesgadas.
+- **Simétrica:**El rango entero está centrado en cero (\(Z=0\)); ideal para datos centrados en cero.
+- **Asimétrica (Afín):**\(Z\) puede ser cualquier entero, permitiendo que el cero de coma flotante se alinee con un entero arbitrario; útil para distribuciones sesgadas.
 
 ### Cuantización por Tensor vs. por Canal
 
-- **Por tensor:** El mismo \(S\) y \(Z\) se aplican a todo el tensor (por ejemplo, todos los pesos de una capa).
-- **Por canal:** Cada canal (por ejemplo, cada filtro convolucional) tiene su propio \(S\) y \(Z\); mejora la precisión, especialmente en redes neuronales convolucionales.
+- **Por tensor:**El mismo \(S\) y \(Z\) se aplican a todo el tensor (por ejemplo, todos los pesos de una capa).
+- **Por canal:**Cada canal (por ejemplo, cada filtro convolucional) tiene su propio \(S\) y \(Z\); mejora la precisión, especialmente en redes neuronales convolucionales.
 
 ## Tipos y Técnicas de Cuantización
 
@@ -91,36 +82,32 @@ La cuantización puede aplicarse de varias formas, cada una con distintos compro
 
 La cuantización se aplica a un modelo ya entrenado, sin reentrenar.
 
-- **PTQ Estática:**  
-  - Usa un conjunto de calibración para estimar rangos de activación.
+- **PTQ Estática:**- Usa un conjunto de calibración para estimar rangos de activación.
   - Cuantiza pesos y activaciones antes de la inferencia.
   - Ofrece mejor precisión pero requiere datos de calibración.
 
-- **PTQ Dinámica:**  
-  - Cuantiza los pesos de forma estática, pero las activaciones se cuantizan en tiempo real durante la inferencia.
+- **PTQ Dinámica:**- Cuantiza los pesos de forma estática, pero las activaciones se cuantizan en tiempo real durante la inferencia.
   - No requiere datos de calibración.
   - Ligeramente menos precisa y más lenta que la estática, pero más fácil de implementar.
 
-**Caso de uso:**  
-Cuando no es posible reentrenar o se dispone de pocos datos; adecuado para muchos modelos transformadores NLP.
+**Caso de uso:**Cuando no es posible reentrenar o se dispone de pocos datos; adecuado para muchos modelos transformadores NLP.
 
 ### 2. Entrenamiento Consciente de Cuantización (QAT)
 
 Simula los efectos de la cuantización durante el entrenamiento del modelo insertando operaciones de "cuantización falsa" en el grafo computacional. El modelo aprende a compensar los errores de cuantización, logrando generalmente mayor precisión tras la cuantización, especialmente a bajos anchos de bit (por ejemplo, INT4).
 
-**Caso de uso:**  
-Cuando se requiere la máxima precisión y el reentrenamiento es factible; a menudo usado en visión por computadora y despliegue en el borde.
+**Caso de uso:**Cuando se requiere la máxima precisión y el reentrenamiento es factible; a menudo usado en visión por computadora y despliegue en el borde.
 
 ### 3. Cuantización Uniforme vs. No Uniforme
 
-- **Uniforme:** Divide el rango en intervalos de igual tamaño (mapeo lineal).
-- **No uniforme:** Usa intervalos de tamaño variable (por ejemplo, escalas logarítmicas, clustering k-medias) para asignar más precisión donde los datos son densos o críticos.
+- **Uniforme:**Divide el rango en intervalos de igual tamaño (mapeo lineal).
+- **No uniforme:**Usa intervalos de tamaño variable (por ejemplo, escalas logarítmicas, clustering k-medias) para asignar más precisión donde los datos son densos o críticos.
 
 ### 4. Cuantización Solo de Pesos, Solo de Activaciones e Híbrida
 
-- **Solo pesos:** Solo se cuantizan los pesos; las activaciones permanecen en alta precisión.
-- **Solo activaciones:** Menos común; solo se cuantizan las activaciones.
-- **Híbrida:** Se cuantizan tanto pesos como activaciones, posiblemente con diferentes precisiones.
+- **Solo pesos:**Solo se cuantizan los pesos; las activaciones permanecen en alta precisión.
+- **Solo activaciones:**Menos común; solo se cuantizan las activaciones.
+- **Híbrida:**Se cuantizan tanto pesos como activaciones, posiblemente con diferentes precisiones.
 
 ### 5. Cuantización Solo Entera
 
@@ -128,9 +115,9 @@ Todos los cálculos, incluidas las acumulaciones, se realizan usando aritmética
 
 ### 6. Técnicas Avanzadas y Especializadas
 
-- **GPTQ (Cuantización Post-Entrenamiento por Gradiente):** Cuantización por capas para transformadores, minimizando el error cuadrático medio entre las salidas originales y cuantizadas. Suele usar precisión mixta INT4/FP16.
-- **QLoRA (Adaptación de Bajo Rango Cuantizada):** Combina adaptación de bajo rango (LoRA) con cuantización, permitiendo un fine-tuning eficiente de LLMs.
-- **ZeroQAT, FlatQuant:** Métodos de investigación recientes para cuantizar LLMs con pérdida mínima de precisión.
+- **GPTQ (Cuantización Post-Entrenamiento por Gradiente):**Cuantización por capas para transformadores, minimizando el error cuadrático medio entre las salidas originales y cuantizadas. Suele usar precisión mixta INT4/FP16.
+- **QLoRA (Adaptación de Bajo Rango Cuantizada):**Combina adaptación de bajo rango (LoRA) con cuantización, permitiendo un fine-tuning eficiente de LLMs.
+- **ZeroQAT, FlatQuant:**Métodos de investigación recientes para cuantizar LLMs con pérdida mínima de precisión.
 
 ## Ejemplo Paso a Paso: Cuantización de un Modelo de Lenguaje Grande
 
@@ -234,27 +221,18 @@ LLMs y sistemas de recomendación a gran escala en la nube se benefician de meno
 
 ### Hardware
 
-- **CPUs:**  
-  La mayoría de CPUs modernas soportan operaciones INT8 y, cada vez más, INT4 (por ejemplo, Intel AVX-512 VNNI, AMD Zen4, Apple Silicon, ARM NEON).
-- **GPUs:**  
-  NVIDIA (Tensor Cores, Hopper FP8), AMD (Radeon AI) y Apple Neural Engine soportan varios formatos de cuantización.
-- **Aceleradores de IA:**  
-  Google Edge TPU, Intel Gaudi, AWS Inferentia, Qualcomm Hexagon y chips de IA dedicados para dispositivos móviles/borde.
-- **FPGAs/ASICs:**  
-  El hardware personalizado suele soportar cuantización flexible (ancho de bit definido por el usuario).
+- **CPUs:**La mayoría de CPUs modernas soportan operaciones INT8 y, cada vez más, INT4 (por ejemplo, Intel AVX-512 VNNI, AMD Zen4, Apple Silicon, ARM NEON).
+- **GPUs:**NVIDIA (Tensor Cores, Hopper FP8), AMD (Radeon AI) y Apple Neural Engine soportan varios formatos de cuantización.
+- **Aceleradores de IA:**Google Edge TPU, Intel Gaudi, AWS Inferentia, Qualcomm Hexagon y chips de IA dedicados para dispositivos móviles/borde.
+- **FPGAs/ASICs:**El hardware personalizado suele soportar cuantización flexible (ancho de bit definido por el usuario).
 
 ### Frameworks
 
-- **PyTorch:**  
-  APIs nativas de cuantización (incluyendo QAT/PTQ), [torch.quantization](https://pytorch.org/docs/stable/quantization.html), y soporte para INT8/FP16.
-- **TensorFlow Lite:**  
-  Enfocado en cuantización post-entrenamiento y despliegue en el borde.
-- **ONNX Runtime:**  
-  Multiplataforma, con extensiones de cuantización.
-- **Hugging Face Optimum:**  
-  Integra cuantización para Transformers y ONNX: [Optimum Quantization](https://huggingface.co/docs/optimum/en/concept_guides/quantization)
-- **BitsAndBytes:**  
-  Enfocado en LLMs y cuantización a 4/8 bits: [BitsAndBytes Quantization](https://huggingface.co/docs/transformers/en/quantization/bitsandbytes)
+- **PyTorch:**APIs nativas de cuantización (incluyendo QAT/PTQ), [torch.quantization](https://pytorch.org/docs/stable/quantization.html), y soporte para INT8/FP16.
+- **TensorFlow Lite:**Enfocado en cuantización post-entrenamiento y despliegue en el borde.
+- **ONNX Runtime:**Multiplataforma, con extensiones de cuantización.
+- **Hugging Face Optimum:**Integra cuantización para Transformers y ONNX: [Optimum Quantization](https://huggingface.co/docs/optimum/en/concept_guides/quantization)
+- **BitsAndBytes:**Enfocado en LLMs y cuantización a 4/8 bits: [BitsAndBytes Quantization](https://huggingface.co/docs/transformers/en/quantization/bitsandbytes)
 
 ## Referencias y Lecturas Adicionales
 
@@ -270,5 +248,4 @@ LLMs y sistemas de recomendación a gran escala en la nube se benefician de meno
 
 ## Ejemplo de Preguntas y Respuestas
 
-**P: ¿Qué es la cuantización de modelos?**  
-R: La cuantización de modelos es el proceso de reducir la precisión numérica de los parámetros y activaciones de un modelo—normalmente de coma flotante de alta precisión (por ejemplo, FP32) a enteros de baja precisión (por ejemplo, INT8)—para reducir
+**P: ¿Qué es la cuantización de modelos?**R: La cuantización de modelos es el proceso de reducir la precisión numérica de los parámetros y activaciones de un modelo—normalmente de coma flotante de alta precisión (por ejemplo, FP32) a enteros de baja precisión (por ejemplo, INT8)—para reducir

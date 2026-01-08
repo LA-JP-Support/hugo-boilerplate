@@ -24,30 +24,24 @@ Iterators and for-each loops form the backbone of collection processing in softw
 
 An iterator must provide a mechanism to return the next item and signal when no more items remain. This is formalized as an iterator protocol across languages:
 
-**Key Requirements:**
-- **Next Method:** Returns the next item in sequence
-- **End Detection:** Signals when traversal is complete (StopIteration, done flag, hasNext returning false)
-- **Consumption:** Most iterators are consumed during traversal and cannot be reset without creating a new instance
+**Key Requirements:**- **Next Method:**Returns the next item in sequence
+- **End Detection:**Signals when traversal is complete (StopIteration, done flag, hasNext returning false)
+- **Consumption:**Most iterators are consumed during traversal and cannot be reset without creating a new instance
 
-**Iterable vs Iterator:**
-- **Iterable:** Object that can produce an iterator (lists, arrays, sets)
-- **Iterator:** Object that delivers items one at a time from an iterable
+**Iterable vs Iterator:**- **Iterable:**Object that can produce an iterator (lists, arrays, sets)
+- **Iterator:**Object that delivers items one at a time from an iterable
 
 In Python, every iterator is also an iterable, but not every iterable is an iterator. Lists are iterable but not iterators—calling `iter()` on a list produces an iterator.
 
 ### For-Each Advantages
 
-**Error Reduction**  
-Eliminates off-by-one errors, index management mistakes, and accidental element skipping that plague traditional for loops.
+**Error Reduction**Eliminates off-by-one errors, index management mistakes, and accidental element skipping that plague traditional for loops.
 
-**Code Clarity**  
-Shorter, more readable code that communicates intent directly. Compare `for item in items` versus managing counters and bounds.
+**Code Clarity**Shorter, more readable code that communicates intent directly. Compare `for item in items` versus managing counters and bounds.
 
-**Safety**  
-Works with any iterable/collection object, reducing coupling to underlying data structure implementation.
+**Safety**Works with any iterable/collection object, reducing coupling to underlying data structure implementation.
 
-**Maintainability**  
-Changes to collection type rarely require changes to iteration code when using for-each.
+**Maintainability**Changes to collection type rarely require changes to iteration code when using for-each.
 
 ## Language-Specific Implementations
 
@@ -55,8 +49,7 @@ Changes to collection type rarely require changes to iteration code when using f
 
 Python formalizes iteration through the iterator protocol. Objects implement `__iter__()` (returns iterator) and `__next__()` (returns next item or raises StopIteration).
 
-**Basic Usage:**
-```python
+**Basic Usage:**```python
 my_list = [10, 20, 30]
 my_iter = iter(my_list)
 print(next(my_iter))  # 10
@@ -65,14 +58,12 @@ print(next(my_iter))  # 30
 # next(my_iter) would raise StopIteration
 ```
 
-**For Loop (Recommended):**
-```python
+**For Loop (Recommended):**```python
 for item in my_list:
     process(item)
 ```
 
-**Custom Iterator:**
-```python
+**Custom Iterator:**```python
 class Counter:
     def __iter__(self):
         self.count = 0
@@ -88,8 +79,7 @@ for num in Counter():
     print(num)  # 1 2 3 4 5
 ```
 
-**Best Practices:**
-- Use for loops for most iteration tasks
+**Best Practices:**- Use for loops for most iteration tasks
 - Avoid modifying collections during iteration
 - Use list comprehensions for transformations: `[x*2 for x in items]`
 
@@ -97,8 +87,7 @@ for num in Counter():
 
 JavaScript implements the iterator protocol through objects with a `next()` method returning `{value, done}`. Built-in types (Array, String, Set, Map) are iterable via their `[Symbol.iterator]()` method.
 
-**Manual Iteration:**
-```javascript
+**Manual Iteration:**```javascript
 const arr = [1, 2, 3];
 const iter = arr[Symbol.iterator]();
 console.log(iter.next()); // {value: 1, done: false}
@@ -107,15 +96,13 @@ console.log(iter.next()); // {value: 3, done: false}
 console.log(iter.next()); // {value: undefined, done: true}
 ```
 
-**For-of Loop (Recommended):**
-```javascript
+**For-of Loop (Recommended):**```javascript
 for (const item of arr) {
     console.log(item);
 }
 ```
 
-**Custom Iterator:**
-```javascript
+**Custom Iterator:**```javascript
 function makeRangeIterator(start = 0, end = 5) {
     let current = start;
     return {
@@ -129,8 +116,7 @@ function makeRangeIterator(start = 0, end = 5) {
 }
 ```
 
-**Generator Functions:**
-```javascript
+**Generator Functions:**```javascript
 function* genNumbers() {
     yield 1;
     yield 2;
@@ -142,8 +128,7 @@ for (const num of genNumbers()) {
 }
 ```
 
-**Best Practices:**
-- Use `for...of` for arrays and iterables
+**Best Practices:**- Use `for...of` for arrays and iterables
 - Remember iterators are consumed after one pass
 - Use generators for complex iteration logic
 
@@ -151,8 +136,7 @@ for (const num of genNumbers()) {
 
 Java provides the `Iterator<E>` interface with three methods: `hasNext()`, `next()`, and `remove()` (optional). Collections framework classes implement this interface for traversal.
 
-**Iterator Usage:**
-```java
+**Iterator Usage:**```java
 ArrayList<String> cars = new ArrayList<>();
 cars.add("Volvo");
 cars.add("BMW");
@@ -163,15 +147,13 @@ while (it.hasNext()) {
 }
 ```
 
-**For-each Loop (Preferred):**
-```java
+**For-each Loop (Preferred):**```java
 for (String car : cars) {
     System.out.println(car);
 }
 ```
 
-**Safe Element Removal:**
-```java
+**Safe Element Removal:**```java
 Iterator<Integer> it = numbers.iterator();
 while (it.hasNext()) {
     if (it.next() < 10) {
@@ -180,8 +162,7 @@ while (it.hasNext()) {
 }
 ```
 
-**Best Practices:**
-- Use for-each for read-only iteration
+**Best Practices:**- Use for-each for read-only iteration
 - Use Iterator directly only when removing elements
 - Never modify collections directly during iteration (throws ConcurrentModificationException)
 
@@ -189,8 +170,7 @@ while (it.hasNext()) {
 
 C# uses the `IEnumerator` interface with `MoveNext()`, `Current`, and `Reset()` methods. The `foreach` statement provides convenient iteration over any `IEnumerable` or `IEnumerable<T>` type.
 
-**Foreach Statement:**
-```csharp
+**Foreach Statement:**```csharp
 List<string> colors = new List<string> {"Red", "Green", "Blue"};
 foreach (var color in colors)
 {
@@ -198,8 +178,7 @@ foreach (var color in colors)
 }
 ```
 
-**Manual Enumeration:**
-```csharp
+**Manual Enumeration:**```csharp
 var enumerator = colors.GetEnumerator();
 while (enumerator.MoveNext())
 {
@@ -207,8 +186,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-**Custom Iterator with yield:**
-```csharp
+**Custom Iterator with yield:**```csharp
 IEnumerable<int> GetNumbers()
 {
     for (int i = 0; i < 3; i++)
@@ -221,16 +199,14 @@ foreach (var n in GetNumbers())
 }
 ```
 
-**Asynchronous Iteration:**
-```csharp
+**Asynchronous Iteration:**```csharp
 await foreach (var item in asyncSequence)
 {
     // Process async data stream
 }
 ```
 
-**Best Practices:**
-- Use `foreach` for readability and safety
+**Best Practices:**- Use `foreach` for readability and safety
 - Direct modification during `foreach` is not allowed
 - Use `yield return` for custom sequences
 
@@ -238,20 +214,17 @@ await foreach (var item in asyncSequence)
 
 Workflow automation platforms provide visual iterator blocks for processing lists without code. These blocks handle common automation tasks like processing spreadsheet rows, email attachments, or API response arrays.
 
-**Setup Process:**
-1. Add iterator block from Flow Control menu
+**Setup Process:**1. Add iterator block from Flow Control menu
 2. Select list to process (from previous step output)
 3. Configure actions to perform on each item
 4. Reference current item data using block variables
 
-**Common Use Cases:**
-- Process each spreadsheet row
+**Common Use Cases:**- Process each spreadsheet row
 - Send individual notifications
 - Update records one by one
 - Transform data items
 
-**Best Practices:**
-- Place all per-item actions inside iterator block
+**Best Practices:**- Place all per-item actions inside iterator block
 - Avoid modifying source list during iteration
 - Use iterator output for downstream steps
 - Handle errors gracefully with fallback actions
@@ -260,13 +233,12 @@ Workflow automation platforms provide visual iterator blocks for processing list
 
 | Concept | Description | When to Use |
 |---------|-------------|-------------|
-| **Iterator** | Object producing items one by one | Fine control over iteration |
-| **Iterable** | Object that can return an iterator | Loop with for-each |
-| **For Loop** | Classic loop with counters | Need index or custom steps |
-| **For-Each** | Simplified loop hiding indices | Just process items |
+| **Iterator**| Object producing items one by one | Fine control over iteration |
+| **Iterable**| Object that can return an iterator | Loop with for-each |
+| **For Loop**| Classic loop with counters | Need index or custom steps |
+| **For-Each**| Simplified loop hiding indices | Just process items |
 
-**Key Differences:**
-- For-each doesn't expose indices directly
+**Key Differences:**- For-each doesn't expose indices directly
 - For-each safer for read-only operations
 - For loops needed for custom step sizes, skipping, reverse order
 - Some languages allow item removal during iteration (Java), others don't (C#)
@@ -275,8 +247,7 @@ Workflow automation platforms provide visual iterator blocks for processing list
 
 ### Processing Collections
 
-**Data Transformation:**
-```python
+**Data Transformation:**```python
 # Python list comprehension
 squared = [x**2 for x in numbers]
 
@@ -284,8 +255,7 @@ squared = [x**2 for x in numbers]
 const squared = numbers.map(x => x**2);
 ```
 
-**Filtering:**
-```python
+**Filtering:**```python
 # Python filter with comprehension
 evens = [x for x in numbers if x % 2 == 0]
 
@@ -293,8 +263,7 @@ evens = [x for x in numbers if x % 2 == 0]
 const evens = numbers.filter(x => x % 2 === 0);
 ```
 
-**Aggregation:**
-```python
+**Aggregation:**```python
 # Python reduce
 from functools import reduce
 total = reduce(lambda acc, x: acc + x, numbers, 0)
@@ -305,8 +274,7 @@ const total = numbers.reduce((acc, x) => acc + x, 0);
 
 ### Avoiding Common Pitfalls
 
-**Don't Modify During Iteration:**
-```python
+**Don't Modify During Iteration:**```python
 # Wrong
 for item in items:
     if condition(item):
@@ -316,15 +284,13 @@ for item in items:
 items = [item for item in items if not condition(item)]
 ```
 
-**Don't Reuse Consumed Iterators:**
-```javascript
+**Don't Reuse Consumed Iterators:**```javascript
 const iter = arr[Symbol.iterator]();
 for (const x of iter) { /* first pass */ }
 for (const x of iter) { /* won't work - iterator consumed */ }
 ```
 
-**Handle Index Requirements:**
-```python
+**Handle Index Requirements:**```python
 # When you need indices
 for i, item in enumerate(items):
     print(f"Item {i}: {item}")
@@ -332,16 +298,13 @@ for i, item in enumerate(items):
 
 ### Special Features
 
-**Asynchronous Iteration:**
-- C#: `await foreach` for async streams
+**Asynchronous Iteration:**- C#: `await foreach` for async streams
 - JavaScript: `for await...of` for async iterables
 
-**Removing Elements:**
-- Java: `Iterator.remove()` during iteration
+**Removing Elements:**- Java: `Iterator.remove()` during iteration
 - Most others: Create new filtered collection
 
-**Infinite Sequences:**
-```python
+**Infinite Sequences:**```python
 def infinite_counter():
     n = 0
     while True:
@@ -353,16 +316,14 @@ def infinite_counter():
 
 ### Spreadsheet Processing
 
-**Python with CSV:**
-```python
+**Python with CSV:**```python
 import csv
 with open('data.csv') as f:
     for row in csv.DictReader(f):
         process_row(row)
 ```
 
-**JavaScript with Arrays:**
-```javascript
+**JavaScript with Arrays:**```javascript
 for (const row of spreadsheetData) {
     validateAndSave(row);
 }
@@ -370,8 +331,7 @@ for (const row of spreadsheetData) {
 
 ### API Response Handling
 
-**Processing JSON Arrays:**
-```javascript
+**Processing JSON Arrays:**```javascript
 const response = await fetch(apiUrl);
 const data = await response.json();
 
@@ -382,16 +342,14 @@ for (const user of data.users) {
 
 ### Batch Operations
 
-**Processing Files:**
-```python
+**Processing Files:**```python
 import os
 for filename in os.listdir('input/'):
     if filename.endswith('.txt'):
         process_file(f'input/{filename}')
 ```
 
-**Database Updates:**
-```csharp
+**Database Updates:**```csharp
 foreach (var record in records)
 {
     record.UpdatedAt = DateTime.Now;
@@ -401,30 +359,25 @@ foreach (var record in records)
 
 ### Workflow Automation
 
-**Email List Processing:**
-- Iterator receives email list from trigger
+**Email List Processing:**- Iterator receives email list from trigger
 - Each iteration sends personalized message
 - Logs results for each recipient
 
-**Data Enrichment:**
-- Iterator processes customer records
+**Data Enrichment:**- Iterator processes customer records
 - Each iteration calls enrichment API
 - Saves enhanced data to database
 
 ## Performance Considerations
 
-**Memory Efficiency:**
-- Iterators process items on-demand (lazy evaluation)
+**Memory Efficiency:**- Iterators process items on-demand (lazy evaluation)
 - Generators and yield statements minimize memory usage
 - Avoid materializing entire collections when possible
 
-**Optimization Tips:**
-- Use built-in iteration methods (map, filter) when available
+**Optimization Tips:**- Use built-in iteration methods (map, filter) when available
 - Consider parallel processing for independent operations
 - Batch database operations when feasible
 
-**Benchmarking:**
-```python
+**Benchmarking:**```python
 # Python timeit for performance testing
 import timeit
 

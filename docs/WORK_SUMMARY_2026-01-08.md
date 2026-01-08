@@ -328,6 +328,15 @@ python3 scripts/linkbuilding_parallel.py \
 **原因**: `linkbuilding_parallel.py` は「ENは `public/` 直下にある」前提で処理する挙動があるが、今回のビルドでは EN が `public/en/` 配下に出力される
 **解決**: ENのみ `scripts/linkbuilding.py -d public/en` を追加で実行
 
+### 問題7: 太字と内部リンクの競合（表示崩れ）
+**症状**: `**Keyword(KW)**` のような太字箇所が崩れる、またはリンクがつかない。日本語の一部がおかしくなる。
+**原因**:
+1. `linkbuilding.py` が太字タグ（`<strong>`）全体をリンクで包もうとして、入れ子構造や不整合を起こしていた。
+2. Markdown内に `** Keyword **` （スペース入り）のような不正な記法があり、Hugoが太字として認識していなかった。
+**解決**:
+1. **Granular Link Injection**: `linkbuilding.py` を修正し、`<strong>` タグ全体ではなく、その中身のテキストだけをピンポイントでリンク化するように変更。
+2. **Markdown修正**: 不正なスペース入り太字を正規表現で一括修正。
+
 ---
 
 ## まとめ

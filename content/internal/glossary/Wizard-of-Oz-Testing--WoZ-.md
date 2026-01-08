@@ -13,7 +13,7 @@ url = "/internal/glossary/Wizard-of-Oz-Testing--WoZ-/"
 +++
 ## Definición
 
-**Wizard of Oz Testing (WoZ)** es un método de investigación de usuarios y prototipado en el que los usuarios interactúan con un sistema (como un chatbot, asistente de voz o dispositivo inteligente) que parece ser autónomo, pero que en realidad está (total o parcialmente) controlado por un operador humano oculto, conocido como el “mago”. El usuario no es consciente de la mediación humana y cree estar interactuando con un sistema real y funcional. Esta técnica permite a los equipos probar, refinar y validar el diseño y el comportamiento de sistemas complejos o inteligentes antes de invertir en el desarrollo completo o la implementación de un backend.
+**Wizard of Oz Testing (WoZ)**es un método de investigación de usuarios y prototipado en el que los usuarios interactúan con un sistema (como un chatbot, asistente de voz o dispositivo inteligente) que parece ser autónomo, pero que en realidad está (total o parcialmente) controlado por un operador humano oculto, conocido como el “mago”. El usuario no es consciente de la mediación humana y cree estar interactuando con un sistema real y funcional. Esta técnica permite a los equipos probar, refinar y validar el diseño y el comportamiento de sistemas complejos o inteligentes antes de invertir en el desarrollo completo o la implementación de un backend.
 ## Origen y concepto
 
 El nombre “Wizard of Oz” proviene de la novela clásica de L. Frank Baum, en la que el supuesto “mago” resulta ser un hombre común que manipula los eventos tras una cortina. El método de prueba refleja esta metáfora al usar un operador humano oculto para simular la inteligencia y respuestas del sistema.
@@ -31,24 +31,22 @@ Este enfoque permite obtener reacciones y comentarios auténticos de los usuario
 
 Una prueba WoZ normalmente involucra:
 
-1. **Participante (Usuario):** Interactúa de forma natural con el sistema, creyendo que es autónomo.
-2. **Mago (Operador Humano):** Controla las respuestas del sistema, imitando automatización.
-3. **Facilitador (Opcional):** Guía la sesión, observa y registra datos.
-4. **Interfaz prototipo:** Puede ir desde maquetas en papel hasta simulaciones digitales o físicas de alta fidelidad.
+1. **Participante (Usuario):**Interactúa de forma natural con el sistema, creyendo que es autónomo.
+2. **Mago (Operador Humano):**Controla las respuestas del sistema, imitando automatización.
+3. **Facilitador (Opcional):**Guía la sesión, observa y registra datos.
+4. **Interfaz prototipo:**Puede ir desde maquetas en papel hasta simulaciones digitales o físicas de alta fidelidad.
 
-**Ilustración:**  
-Una configuración típica tiene al usuario y facilitador en una sala, y al mago en otra, comunicándose con el prototipo a través de un canal oculto. [Ver diagrama de NN/g](https://www.nngroup.com/articles/wizard-of-oz/) para un ejemplo visual.
+**Ilustración:**Una configuración típica tiene al usuario y facilitador en una sala, y al mago en otra, comunicándose con el prototipo a través de un canal oculto. [Ver diagrama de NN/g](https://www.nngroup.com/articles/wizard-of-oz/) para un ejemplo visual.
 
 ### Niveles de fidelidad
 
 Los prototipos WoZ varían en fidelidad según la madurez del concepto y los objetivos de la prueba:
 
-- **Baja fidelidad:** Prototipos simples y fáciles de modificar (pantallas de papel, maquetas digitales básicas). Ideales para exploración temprana e ideación.
-- **Media fidelidad:** Prototipos digitales interactivos (por ejemplo, wireframes en Figma o Axure), posiblemente con “feedback” básico del sistema. Los magos redactan o seleccionan respuestas manualmente.
-- **Alta fidelidad:** Interfaz casi final, gráficos pulidos, a veces voces o animaciones sintetizadas—el mago aún controla la lógica y las respuestas tras bambalinas.
+- **Baja fidelidad:**Prototipos simples y fáciles de modificar (pantallas de papel, maquetas digitales básicas). Ideales para exploración temprana e ideación.
+- **Media fidelidad:**Prototipos digitales interactivos (por ejemplo, wireframes en Figma o Axure), posiblemente con “feedback” básico del sistema. Los magos redactan o seleccionan respuestas manualmente.
+- **Alta fidelidad:**Interfaz casi final, gráficos pulidos, a veces voces o animaciones sintetizadas—el mago aún controla la lógica y las respuestas tras bambalinas.
 
-**Ejemplo:**  
-- Baja: Interfaz en papel, el mago actualiza las pantallas manualmente.
+**Ejemplo:**- Baja: Interfaz en papel, el mago actualiza las pantallas manualmente.
 - Media: Maqueta digital (Figma, Axure), el mago escribe o selecciona respuestas.
 - Alta: UI con salida de voz automatizada activada por el mago, pero la lógica es humana.
 ### El rol del "Mago"
@@ -61,22 +59,19 @@ El mago es responsable de:
 
 La formación del mago es crucial; debe comprender el flujo, los comportamientos esperados y las limitaciones técnicas del sistema deseado.
 
-**Mejores prácticas:**  
-- Utilizar divisiones, salas separadas o herramientas remotas para mantener oculto al mago.
+**Mejores prácticas:**- Utilizar divisiones, salas separadas o herramientas remotas para mantener oculto al mago.
 - Los magos deben recibir información sobre los conceptos del producto, expectativas del usuario y viabilidad tecnológica.
 
 ## Cuándo y por qué usar WoZ Testing
 
 Las pruebas WoZ son más valiosas cuando:
 
-- Se prototipan **sistemas inteligentes** (chatbots, asistentes de voz, motores de recomendación) que son costosos o llevan mucho tiempo de construir.
+- Se prototipan **sistemas inteligentes**(chatbots, asistentes de voz, motores de recomendación) que son costosos o llevan mucho tiempo de construir.
 - La funcionalidad de backend o IA aún no está disponible, o el sistema es demasiado complejo para prototipar con contenido estático.
 - Se exploran conceptos nuevos, arriesgados o innovadores donde los requisitos y comportamientos del usuario son inciertos.
 - Se recopilan interacciones y lenguaje auténtico de usuarios para diseño conversacional o entrenamiento de modelos de IA.
 
-**Escenarios comunes:**
-
-- Pruebas de concepto o usabilidad en etapas tempranas
+**Escenarios comunes:**- Pruebas de concepto o usabilidad en etapas tempranas
 - Investigación sobre expectativas del usuario, puntos de dolor y modelos mentales
 - Iteración rápida de flujos antes de comenzar a programar
 - Pruebas de contenido, tono y estrategias de escalado para asistentes digitales
@@ -90,8 +85,7 @@ WoZ es una herramienta fundamental para diseñar y validar chatbots e interfaces
 - Probar diferentes tonos, personalidades y estrategias de escalado.
 - Identificar intenciones, errores y casos límite comunes para el entrenamiento de IA.
 
-**Ejemplo:**  
-Un chatbot de atención al cliente es simulado por un mago que escribe respuestas en tiempo real según la entrada del usuario. Esto ayuda a los equipos a identificar expectativas del usuario, trampas conversacionales y qué desencadenantes de escalado son necesarios.
+**Ejemplo:**Un chatbot de atención al cliente es simulado por un mago que escribe respuestas en tiempo real según la entrada del usuario. Esto ayuda a los equipos a identificar expectativas del usuario, trampas conversacionales y qué desencadenantes de escalado son necesarios.
 ### Asistentes de voz
 
 WoZ se utiliza para probar experiencias de voz en lenguaje natural, como:
@@ -100,16 +94,14 @@ WoZ se utiliza para probar experiencias de voz en lenguaje natural, como:
 - Asistentes en automóviles
 - Automatización del hogar activada por voz
 
-**Ejemplo:**  
-Un participante habla con un dispositivo (por ejemplo, un altavoz disfrazado). El mago escucha de forma remota y responde mediante texto a voz, simulando la salida de voz impulsada por IA. Los diseñadores pueden probar palabras de activación, naturalidad y condiciones de error.
+**Ejemplo:**Un participante habla con un dispositivo (por ejemplo, un altavoz disfrazado). El mago escucha de forma remota y responde mediante texto a voz, simulando la salida de voz impulsada por IA. Los diseñadores pueden probar palabras de activación, naturalidad y condiciones de error.
 ### Otros prototipos digitales y de servicios
 
-- **Sistemas de recomendación personalizados:** El mago actualiza manualmente el contenido para simular la personalización.
-- **Servicios gubernamentales o de salud:** Probar cómo funcionarían búsquedas en bases de datos en tiempo real o la entrega de datos sensibles.
-- **MVPs de retail:** Simular la gestión de pedidos o verificación de inventario antes de la automatización completa.
+- **Sistemas de recomendación personalizados:**El mago actualiza manualmente el contenido para simular la personalización.
+- **Servicios gubernamentales o de salud:**Probar cómo funcionarían búsquedas en bases de datos en tiempo real o la entrega de datos sensibles.
+- **MVPs de retail:**Simular la gestión de pedidos o verificación de inventario antes de la automatización completa.
 
-**Ejemplo real:**  
-Antes de automatizar un formulario gubernamental en tiempo real, un mago actualizaba manualmente la interfaz para mostrar lo que podría devolver un backend, permitiendo a los investigadores observar reacciones de los usuarios y perfeccionar el diseño.
+**Ejemplo real:**Antes de automatizar un formulario gubernamental en tiempo real, un mago actualizaba manualmente la interfaz para mostrar lo que podría devolver un backend, permitiendo a los investigadores observar reacciones de los usuarios y perfeccionar el diseño.
 ## Guía paso a paso para realizar pruebas WoZ
 
 ### 1. Definir objetivos y preguntas de investigación
@@ -125,9 +117,9 @@ Antes de automatizar un formulario gubernamental en tiempo real, un mago actuali
 
 ### 3. Guionizar respuestas (cerrado, abierto, híbrido)
 
-- **Cerrado:** El mago elige de una lista predefinida de respuestas (rápido, consistente, menos flexible).
-- **Abierto:** El mago redacta respuestas en el momento (natural, requiere habilidad, menos consistencia).
-- **Híbrido:** Combina ambos enfoques.
+- **Cerrado:**El mago elige de una lista predefinida de respuestas (rápido, consistente, menos flexible).
+- **Abierto:**El mago redacta respuestas en el momento (natural, requiere habilidad, menos consistencia).
+- **Híbrido:**Combina ambos enfoques.
 
 | Método   | Ventajas                                 | Desventajas                              |
 |----------|-----------------------------------------|------------------------------------------|
@@ -135,7 +127,7 @@ Antes de automatizar un formulario gubernamental en tiempo real, un mago actuali
 | Abierto  | Flexible, maneja entradas inesperadas   | Exigente, menos consistencia             |
 | Híbrido  | Flexibilidad + eficiencia               | Requiere criterio, posible inconsistencia|
 
-**Consejo:** Los ingenieros deben ayudar a definir respuestas factibles para evitar diseñar funciones imposibles.
+**Consejo:**Los ingenieros deben ayudar a definir respuestas factibles para evitar diseñar funciones imposibles.
 
 ### 4. Reclutar y preparar al mago
 
@@ -167,61 +159,57 @@ Antes de automatizar un formulario gubernamental en tiempo real, un mago actuali
 
 ### Beneficios clave
 
-- **Rentabilidad:** No es necesario construir backend o IA para pruebas tempranas.
-- **Comentarios realistas:** Los usuarios interactúan de manera auténtica, creyendo que el sistema es real.
-- **Iteración rápida:** Prototipos y guiones pueden ajustarse rápidamente entre sesiones.
-- **Reducción de riesgos:** Probar ideas y flujos antes de grandes inversiones.
-- **Datos valiosos:** Recopilar lenguaje y comportamientos auténticos para entrenamiento de IA o mejora de diseño.
+- **Rentabilidad:**No es necesario construir backend o IA para pruebas tempranas.
+- **Comentarios realistas:**Los usuarios interactúan de manera auténtica, creyendo que el sistema es real.
+- **Iteración rápida:**Prototipos y guiones pueden ajustarse rápidamente entre sesiones.
+- **Reducción de riesgos:**Probar ideas y flujos antes de grandes inversiones.
+- **Datos valiosos:**Recopilar lenguaje y comportamientos auténticos para entrenamiento de IA o mejora de diseño.
 
 ### Limitaciones / desafíos típicos
 
-- **Escalabilidad:** Las sesiones requieren esfuerzo manual; no es adecuado para estudios a gran escala.
-- **Fatiga del mago:** Exigente, especialmente con flujos complejos o sesiones largas.
-- **Consistencia:** La variabilidad en las respuestas del mago puede afectar la fiabilidad de los datos.
-- **Riesgo de ilusión:** Si los usuarios sospechan intervención humana, su comportamiento puede cambiar.
-- **No sustituye la validación tecnológica real:** El rendimiento del sistema real debe probarse eventualmente.
+- **Escalabilidad:**Las sesiones requieren esfuerzo manual; no es adecuado para estudios a gran escala.
+- **Fatiga del mago:**Exigente, especialmente con flujos complejos o sesiones largas.
+- **Consistencia:**La variabilidad en las respuestas del mago puede afectar la fiabilidad de los datos.
+- **Riesgo de ilusión:**Si los usuarios sospechan intervención humana, su comportamiento puede cambiar.
+- **No sustituye la validación tecnológica real:**El rendimiento del sistema real debe probarse eventualmente.
 
-**Nota:** WoZ es mejor usarlo en fases tempranas o intermedias del diseño de producto, no como sustituto de la validación final del sistema o IA.
+**Nota:**WoZ es mejor usarlo en fases tempranas o intermedias del diseño de producto, no como sustituto de la validación final del sistema o IA.
 ## Buenas prácticas y consejos
 
-- **Mantener la ilusión:** Utiliza espejos unidireccionales, divisiones o configuraciones remotas para ocultar al mago.
-- **Sesiones piloto:** Prueba primero con miembros del equipo para ajustar detalles.
-- **Guiones flexibles:** Prepárate para caminos comunes, pero permite improvisar.
-- **Sesiones cortas:** Evita la fatiga del mago y mantiene la calidad de los datos.
-- **Debriefing ético:** Explica siempre el engaño después de la sesión.
-- **Graba las sesiones:** Con consentimiento, para análisis y mejoras.
-- **Itera:** Perfecciona prototipo y guiones tras cada sesión.
+- **Mantener la ilusión:**Utiliza espejos unidireccionales, divisiones o configuraciones remotas para ocultar al mago.
+- **Sesiones piloto:**Prueba primero con miembros del equipo para ajustar detalles.
+- **Guiones flexibles:**Prepárate para caminos comunes, pero permite improvisar.
+- **Sesiones cortas:**Evita la fatiga del mago y mantiene la calidad de los datos.
+- **Debriefing ético:**Explica siempre el engaño después de la sesión.
+- **Graba las sesiones:**Con consentimiento, para análisis y mejoras.
+- **Itera:**Perfecciona prototipo y guiones tras cada sesión.
 ## Consideraciones éticas
 
-- **Engaño:** WoZ se basa en ocultar el rol del mago. Es éticamente aceptable en la mayoría de la investigación de diseño si:
+- **Engaño:**WoZ se basa en ocultar el rol del mago. Es éticamente aceptable en la mayoría de la investigación de diseño si:
     - Se informa a los participantes al final y comprenden el motivo.
     - Se obtiene consentimiento informado, con opción de retirar los datos tras la explicación.
     - El engaño se minimiza y justifica por el valor de la investigación.
-- **Privacidad de datos:** Manejar todos los datos recopilados confidencialmente y conforme a leyes de privacidad.
-- **Poblaciones vulnerables:** Extremar precauciones si se prueba con menores, contextos médicos o sensibles.
+- **Privacidad de datos:**Manejar todos los datos recopilados confidencialmente y conforme a leyes de privacidad.
+- **Poblaciones vulnerables:**Extremar precauciones si se prueba con menores, contextos médicos o sensibles.
 
-**Lecturas recomendadas:**  
-- [NN/g: ¿Necesita revelar al mago?](https://www.nngroup.com/articles/wizard-of-oz/#toc-do-you-need-to-reveal-the-wizard-5)
+**Lecturas recomendadas:**- [NN/g: ¿Necesita revelar al mago?](https://www.nngroup.com/articles/wizard-of-oz/#toc-do-you-need-to-reveal-the-wizard-5)
 - [NN/g: Dilemas éticos en la investigación de usuarios](https://www.nngroup.com/articles/ethical-dilemmas/)
 
 ## Preguntas frecuentes
 
-**P: ¿WoZ es solo para chatbots o IA?**  
-R: No. Aunque es especialmente útil para [IA conversacional](/en/glossary/conversational-ai/) y asistentes de voz, WoZ es valioso para cualquier sistema donde la automatización o inteligencia sea difícil de prototipar, incluyendo motores de recomendación, servicios interactivos e incluso dispositivos físicos.
+**P: ¿WoZ es solo para chatbots o IA?**R: No. Aunque es especialmente útil para [IA conversacional](/en/glossary/conversational-ai/) y asistentes de voz, WoZ es valioso para cualquier sistema donde la automatización o inteligencia sea difícil de prototipar, incluyendo motores de recomendación, servicios interactivos e incluso dispositivos físicos.
 
-**P: ¿Qué pasa si los usuarios sospechan que hay una persona detrás del sistema?**  
-R: La mayoría de las sesiones siguen generando información valiosa. Anima a los usuarios a interactuar como si el sistema fuera real y explica siempre la metodología al final.
+**P: ¿Qué pasa si los usuarios sospechan que hay una persona detrás del sistema?**R: La mayoría de las sesiones siguen generando información valiosa. Anima a los usuarios a interactuar como si el sistema fuera real y explica siempre la metodología al final.
 
-**P: ¿Se pueden usar los datos de WoZ para entrenamiento de IA?**  
-R: Sí. Las transcripciones y registros de interacciones usuario-mago proporcionan datos realistas y de alta calidad para entrenar IA conversacional y perfeccionar el diseño del sistema.
+**P: ¿Se pueden usar los datos de WoZ para entrenamiento de IA?**R: Sí. Las transcripciones y registros de interacciones usuario-mago proporcionan datos realistas y de alta calidad para entrenar IA conversacional y perfeccionar el diseño del sistema.
 ## Términos relacionados
 
-- **Test de usabilidad:** Evaluar la eficacia de una interfaz con usuarios reales.
-- **Prototipado:** Crear modelos tempranos para probar conceptos antes del desarrollo.
-- **Diseño de interacción:** Estructurar las interacciones usuario-sistema para usabilidad y satisfacción.
-- **Respuestas del sistema:** Mensajes o acciones (generados por mago o IA) presentados al usuario.
-- **Comportamiento del usuario:** Acciones y reacciones observables de los usuarios durante la interacción.
-- **Producto Mínimo Viable (MVP):** Versión más simple de un producto para validar hipótesis y obtener feedback.
+- **Test de usabilidad:**Evaluar la eficacia de una interfaz con usuarios reales.
+- **Prototipado:**Crear modelos tempranos para probar conceptos antes del desarrollo.
+- **Diseño de interacción:**Estructurar las interacciones usuario-sistema para usabilidad y satisfacción.
+- **Respuestas del sistema:**Mensajes o acciones (generados por mago o IA) presentados al usuario.
+- **Comportamiento del usuario:**Acciones y reacciones observables de los usuarios durante la interacción.
+- **Producto Mínimo Viable (MVP):**Versión más simple de un producto para validar hipótesis y obtener feedback.
 
 ## Lecturas adicionales y fuentes de referencia
 
@@ -236,18 +224,16 @@ R: Sí. Las transcripciones y registros de interacciones usuario-mago proporcion
 
 ## Lista de verificación resumida
 
-**Referencia rápida para pruebas Wizard of Oz**
-
-- [ ] **Definir objetivos claros de investigación** para la sesión.
-- [ ] **Seleccionar la fidelidad de prototipo adecuada** (papel, digital, voz, etc.).
-- [ ] **Preparar guiones o directrices** para respuestas del mago (cerrado, abierto, híbrido).
-- [ ] **Formar al mago** sobre producto, flujos y estilo de respuesta.
-- [ ] **Configurar el entorno** para ocultar al mago y mantener realismo.
-- [ ] **Prueba piloto** con miembros del equipo; perfecciona según sea necesario.
+**Referencia rápida para pruebas Wizard of Oz**- [ ] **Definir objetivos claros de investigación**para la sesión.
+- [ ] **Seleccionar la fidelidad de prototipo adecuada**(papel, digital, voz, etc.).
+- [ ] **Preparar guiones o directrices**para respuestas del mago (cerrado, abierto, híbrido).
+- [ ] **Formar al mago**sobre producto, flujos y estilo de respuesta.
+- [ ] **Configurar el entorno**para ocultar al mago y mantener realismo.
+- [ ] **Prueba piloto**con miembros del equipo; perfecciona según sea necesario.
 - [ ] **Realizar la sesión**, registrando el comportamiento del usuario y las respuestas del sistema.
-- [ ] **Realizar debriefing ético** si hubo engaño.
-- [ ] **Analizar hallazgos** e iterar sobre el diseño.
-- [ ] **Planear próximos pasos** para automatización o investigación adicional.
+- [ ] **Realizar debriefing ético**si hubo engaño.
+- [ ] **Analizar hallazgos**e iterar sobre el diseño.
+- [ ] **Planear próximos pasos**para automatización o investigación adicional.
 
 ## Ideas clave
 

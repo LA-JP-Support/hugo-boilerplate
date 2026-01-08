@@ -29,23 +29,23 @@ Hallucination in MLLMs occurs when generated output content is syntactically pla
 
 ### Hallucination Taxonomy
 
-**Faithfulness Hallucinations:** Output contradicts direct input context. Example: Describing objects or attributes not present in input image, such as claiming "a dog is running" when only a cat appears in the image.
+**Faithfulness Hallucinations:**Output contradicts direct input context. Example: Describing objects or attributes not present in input image, such as claiming "a dog is running" when only a cat appears in the image.
 
-**Factuality Hallucinations:** Output conflicts with established external knowledge despite plausible appearance. Example: Asserting "Eiffel Tower is located in London" when generating captions or answering visual questions.
+**Factuality Hallucinations:**Output conflicts with established external knowledge despite plausible appearance. Example: Asserting "Eiffel Tower is located in London" when generating captions or answering visual questions.
 
-**Modality-Conflicting Hallucinations:** Direct contradictions between modalities in either input or output. Example: Text description states "red car" while associated image shows blue car, or T2I model generates image contradicting input text prompt.
+**Modality-Conflicting Hallucinations:**Direct contradictions between modalities in either input or output. Example: Text description states "red car" while associated image shows blue car, or T2I model generates image contradicting input text prompt.
 
-**Fact-Conflicting Hallucinations:** Output appears reasonable but violates world knowledge or common sense. Example: Claiming person in historical photo is using smartphone, or dating building construction to impossible time period.
+**Fact-Conflicting Hallucinations:**Output appears reasonable but violates world knowledge or common sense. Example: Claiming person in historical photo is using smartphone, or dating building construction to impossible time period.
 
 ### Granularity Levels
 
-**Object-Level:** Incorrect identification, omission, or fabrication of entities. Example: Detecting person where none exists, missing primary subject, or misidentifying object category.
+**Object-Level:**Incorrect identification, omission, or fabrication of entities. Example: Detecting person where none exists, missing primary subject, or misidentifying object category.
 
-**Attribute-Level:** Incorrect properties assigned to correctly identified objects. Example: Wrong colors, incorrect sizes, misattributed materials, or inaccurate spatial relationships.
+**Attribute-Level:**Incorrect properties assigned to correctly identified objects. Example: Wrong colors, incorrect sizes, misattributed materials, or inaccurate spatial relationships.
 
-**Scene-Level:** Misrepresentation of overall context, relationships, or events. Example: Describing indoor scene as outdoor, misidentifying activity or event, incorrect setting characterization.
+**Scene-Level:**Misrepresentation of overall context, relationships, or events. Example: Describing indoor scene as outdoor, misidentifying activity or event, incorrect setting characterization.
 
-**Scene-Text:** Errors in recognizing or generating text within images. Example: Misreading signage, fabricating text content, or generating incorrect written language in T2I outputs.
+**Scene-Text:**Errors in recognizing or generating text within images. Example: Misreading signage, fabricating text content, or generating incorrect written language in T2I outputs.
 
 ## Benchmark Structure
 
@@ -53,18 +53,15 @@ Hallucination in MLLMs occurs when generated output content is syntactically pla
 
 MHaluBench comprises 620 carefully curated instances spanning three task categories, each annotated at both segment and claim levels for comprehensive evaluation.
 
-**Image Captioning (IC) - 200 samples:**
-- Source: MS-COCO 2014 Validation dataset
+**Image Captioning (IC) - 200 samples:**- Source: MS-COCO 2014 Validation dataset
 - Outputs generated from: mPLUG, LLaVA, MiniGPT-4
 - Annotation focus: Faithfulness to visual content, object/attribute accuracy
 
-**Visual Question Answering (VQA) - 200 samples:**
-- Source: TextVQA test set
+**Visual Question Answering (VQA) - 200 samples:**- Source: TextVQA test set
 - Tasks: Scene text recognition, visual reasoning, attribute identification
 - Annotation focus: Answer accuracy, scene-text hallucinations, reasoning correctness
 
-**Text-to-Image Generation (T2I) - 220 samples:**
-- Source prompts: DrawBench, T2I-CompBench
+**Text-to-Image Generation (T2I) - 220 samples:**- Source prompts: DrawBench, T2I-CompBench
 - Models evaluated: DALL-E 2, DALL-E 3, Stable Diffusion variants
 - Annotation focus: Prompt adherence, attribute fidelity, composition accuracy
 
@@ -72,21 +69,18 @@ Total coverage: 620 instances with dual-level annotation (segment and claim), pr
 
 ### Annotation Methodology
 
-**Claim Extraction:**
-- Automated extraction using GPT-4V and Gemini
+**Claim Extraction:**- Automated extraction using GPT-4V and Gemini
 - Manual verification and refinement by annotators
 - Atomic factual assertions isolated from complex sentences
 - Maintained semantic completeness while ensuring independence
 
-**Labeling Process:**
-- Three graduate-level annotators independently label each claim
+**Labeling Process:**- Three graduate-level annotators independently label each claim
 - Binary classification: hallucinatory vs. non-hallucinatory
 - Category assignment: Object, Attribute, Scene-Text, Fact
 - Disagreements resolved by majority vote
 - Inter-annotator agreement: Fleiss's Kappa κ = 0.822 (strong agreement)
 
-**Propagation Rules:**
-- Segment marked hallucinatory if any contained claim is hallucinatory
+**Propagation Rules:**- Segment marked hallucinatory if any contained claim is hallucinatory
 - Response marked hallucinatory if any segment is hallucinatory
 - Preserves fine-grained analysis while enabling coarse-grained evaluation
 
@@ -94,17 +88,17 @@ Total coverage: 620 instances with dual-level annotation (segment and claim), pr
 
 Each benchmark entry includes:
 
-**Identifiers:** Unique ID, task type designation, source dataset reference
+**Identifiers:**Unique ID, task type designation, source dataset reference
 
-**Inputs:** Original image (I2T tasks) or text prompt (T2I tasks)
+**Inputs:**Original image (I2T tasks) or text prompt (T2I tasks)
 
-**Outputs:** Generated text (I2T) or synthesized image (T2I)
+**Outputs:**Generated text (I2T) or synthesized image (T2I)
 
-**Segments:** Logical text divisions (sentences or clauses) with hallucination labels
+**Segments:**Logical text divisions (sentences or clauses) with hallucination labels
 
-**Claims:** Atomic factual assertions with detailed annotations including claim text, category classification, hallucination status, supporting rationale
+**Claims:**Atomic factual assertions with detailed annotations including claim text, category classification, hallucination status, supporting rationale
 
-**Metadata:** Model information, generation parameters, annotation timestamps
+**Metadata:**Model information, generation parameters, annotation timestamps
 
 ## UNIHD Detection Framework
 
@@ -112,14 +106,12 @@ Unified Hallucination Detection (UNIHD) represents state-of-the-art approach for
 
 ### Four-Stage Pipeline
 
-**Stage 1 - Essential Claim Extraction:**
-- Decompose complex outputs into atomic factual claims
+**Stage 1 - Essential Claim Extraction:**- Decompose complex outputs into atomic factual claims
 - Ensure claims are independently verifiable
 - Maintain semantic relationships for context-dependent claims
 - Filter non-factual content (opinions, questions, imperatives)
 
-**Stage 2 - Autonomous Tool Selection:**
-- Analyze each claim for verification requirements
+**Stage 2 - Autonomous Tool Selection:**- Analyze each claim for verification requirements
 - Formulate targeted queries for validation
 - Select appropriate verification tools from toolkit:
   - Object detectors (Grounding DINO, YOLO)
@@ -127,27 +119,25 @@ Unified Hallucination Detection (UNIHD) represents state-of-the-art approach for
   - OCR systems (scene text recognition)
   - Knowledge bases (factual verification)
 
-**Stage 3 - Parallel Tool Execution:**
-- Deploy selected tools concurrently for efficiency
+**Stage 3 - Parallel Tool Execution:**- Deploy selected tools concurrently for efficiency
 - Retrieve verification evidence from multiple sources
 - Handle tool failures and uncertain results gracefully
 - Aggregate results maintaining provenance
 
-**Stage 4 - Hallucination Verification:**
-- Compare claims against verification evidence
+**Stage 4 - Hallucination Verification:**- Compare claims against verification evidence
 - Generate human-readable rationales for decisions
 - Assign confidence scores to detections
 - Produce final hallucinatory/non-hallucinatory labels
 
 ### Detection Approaches
 
-**Black-Box Methods:** Evaluate models using only input-output pairs without internal access. Examples: FaithScore, GAVIE, HaELM. Advantages: Model-agnostic, deployable without architecture knowledge. Limitations: Cannot leverage internal states, limited explainability.
+**Black-Box Methods:**Evaluate models using only input-output pairs without internal access. Examples: FaithScore, GAVIE, HaELM. Advantages: Model-agnostic, deployable without architecture knowledge. Limitations: Cannot leverage internal states, limited explainability.
 
-**White-Box Methods:** Exploit model internals (attention weights, hidden states, token probabilities). Examples: DHCP, OPERA, ContextualLens. Advantages: Direct access to uncertainty signals, detailed interpretability. Limitations: Model-specific implementation, requires architectural knowledge.
+**White-Box Methods:**Exploit model internals (attention weights, hidden states, token probabilities). Examples: DHCP, OPERA, ContextualLens. Advantages: Direct access to uncertainty signals, detailed interpretability. Limitations: Model-specific implementation, requires architectural knowledge.
 
-**Tool-Augmented Methods:** Leverage external verification tools for evidence-based detection. Examples: UNIHD, FactChecker, CutPaste & Find. Advantages: Grounded in external evidence, extensible with new tools. Limitations: Dependent on tool accuracy, potential scalability challenges.
+**Tool-Augmented Methods:**Leverage external verification tools for evidence-based detection. Examples: UNIHD, FactChecker, CutPaste & Find. Advantages: Grounded in external evidence, extensible with new tools. Limitations: Dependent on tool accuracy, potential scalability challenges.
 
-**Hybrid Approaches:** Combine multiple detection paradigms for robust performance across scenarios and failure modes.
+**Hybrid Approaches:**Combine multiple detection paradigms for robust performance across scenarios and failure modes.
 
 ## Benchmark Positioning
 
@@ -155,15 +145,14 @@ Unified Hallucination Detection (UNIHD) represents state-of-the-art approach for
 
 | Benchmark | Modalities | Tasks | Granularity | Categories | Annotation | Unique Features |
 |-----------|-----------|-------|-------------|------------|------------|----------------|
-| **HaluEval** | Text | QA, Summarization | Response | Factuality | Response-level | Large-scale text focus |
-| **POPE** | Image+Text | Captioning | Response | Faithfulness | Response-level | Visual object presence |
-| **HalluCode** | Code | Code generation | Token | Mapping, Naming, Logic | Token-level | Execution-based validation |
-| **CodeHalu** | Code | Code generation | Span | Resource, Logic | Span-level | Comprehensive code analysis |
-| **Collu-Bench** | Code | Gen & Repair | Token | Multiple | Token-level | Multi-LLM comparison |
-| **MHaluBench** | Image+Text | I2T, T2I | Claim | Object, Attribute, Scene, Fact | Claim+Segment | Unified multimodal coverage |
+| **HaluEval**| Text | QA, Summarization | Response | Factuality | Response-level | Large-scale text focus |
+| **POPE**| Image+Text | Captioning | Response | Faithfulness | Response-level | Visual object presence |
+| **HalluCode**| Code | Code generation | Token | Mapping, Naming, Logic | Token-level | Execution-based validation |
+| **CodeHalu**| Code | Code generation | Span | Resource, Logic | Span-level | Comprehensive code analysis |
+| **Collu-Bench**| Code | Gen & Repair | Token | Multiple | Token-level | Multi-LLM comparison |
+| **MHaluBench**| Image+Text | I2T, T2I | Claim | Object, Attribute, Scene, Fact | Claim+Segment | Unified multimodal coverage |
 
-**Distinctive Advantages:**
-- Only benchmark spanning both I2T and T2I tasks comprehensively
+**Distinctive Advantages:**- Only benchmark spanning both I2T and T2I tasks comprehensively
 - Finest granularity with claim-level annotation enabling targeted analysis
 - Explicit taxonomy distinguishing modality vs. fact conflicts
 - Designed specifically for meta-evaluation of detection systems
@@ -173,79 +162,77 @@ Unified Hallucination Detection (UNIHD) represents state-of-the-art approach for
 
 ### Model Development
 
-**Targeted Improvement:** Identify specific failure modes (e.g., attribute hallucinations in medical imaging) enabling focused model refinement.
+**Targeted Improvement:**Identify specific failure modes (e.g., attribute hallucinations in medical imaging) enabling focused model refinement.
 
-**Ablation Studies:** Evaluate impact of architectural changes or training procedures on specific hallucination categories.
+**Ablation Studies:**Evaluate impact of architectural changes or training procedures on specific hallucination categories.
 
-**Comparison Analysis:** Benchmark multiple model variants or architectures on standardized hallucination metrics.
+**Comparison Analysis:**Benchmark multiple model variants or architectures on standardized hallucination metrics.
 
 ### Detection System Evaluation
 
-**Meta-Evaluation:** Assess detection systems against ground truth, measuring precision, recall, F1 across categories.
+**Meta-Evaluation:**Assess detection systems against ground truth, measuring precision, recall, F1 across categories.
 
-**Robustness Testing:** Evaluate detector performance across diverse scenarios, domains, and hallucination types.
+**Robustness Testing:**Evaluate detector performance across diverse scenarios, domains, and hallucination types.
 
-**Tool Development:** Guide development of specialized detection tools for specific hallucination categories.
+**Tool Development:**Guide development of specialized detection tools for specific hallucination categories.
 
 ### Production Deployment
 
-**Quality Assurance:** Establish thresholds and monitoring for acceptable hallucination rates in production systems.
+**Quality Assurance:**Establish thresholds and monitoring for acceptable hallucination rates in production systems.
 
-**User Trust:** Provide evidence-based reliability metrics informing deployment decisions and user expectations.
+**User Trust:**Provide evidence-based reliability metrics informing deployment decisions and user expectations.
 
-**Risk Mitigation:** Identify high-risk scenarios requiring human oversight or additional verification.
+**Risk Mitigation:**Identify high-risk scenarios requiring human oversight or additional verification.
 
 ## Illustrative Examples
 
 ### Image-to-Text Hallucination
 
-**Input:** Soccer match photograph showing athlete in blue uniform on right side
+**Input:**Soccer match photograph showing athlete in blue uniform on right side
 
-**Model Output:** "The athlete on the right side, wearing the red uniform, belongs to Club América."
+**Model Output:**"The athlete on the right side, wearing the red uniform, belongs to Club América."
 
-**Extracted Claims:**
-1. "Athlete on right wears red uniform" - HALLUCINATORY (Attribute-level, Modality-conflicting: Image shows blue uniform)
+**Extracted Claims:**1. "Athlete on right wears red uniform" - HALLUCINATORY (Attribute-level, Modality-conflicting: Image shows blue uniform)
 2. "Athlete belongs to Club América" - REQUIRES FACT-CHECK (Fact-level: Needs external verification of team membership)
 
-**Detection Process:** Object detector confirms athlete presence and location, attribute classifier identifies blue uniform contradicting claim 1, knowledge base query verifies team information for claim 2.
+**Detection Process:**Object detector confirms athlete presence and location, attribute classifier identifies blue uniform contradicting claim 1, knowledge base query verifies team information for claim 2.
 
 ### Text-to-Image Hallucination
 
-**Input Prompt:** "A yellow school bus parked in front of the Eiffel Tower in Paris"
+**Input Prompt:**"A yellow school bus parked in front of the Eiffel Tower in Paris"
 
-**Generated Image:** Red bus in front of unidentified landmark
+**Generated Image:**Red bus in front of unidentified landmark
 
-**Extracted Claims:**
-1. "Image contains yellow school bus" - HALLUCINATORY (Object/Attribute-level, Modality-conflicting: Image shows red bus)
+**Extracted Claims:**1. "Image contains yellow school bus" - HALLUCINATORY (Object/Attribute-level, Modality-conflicting: Image shows red bus)
 2. "Bus positioned in front of Eiffel Tower" - HALLUCINATORY (Fact-level, Modality-conflicting: Landmark not identifiable as Eiffel Tower)
 
-**Detection Process:** Object detection identifies bus but wrong color, landmark recognition fails to confirm Eiffel Tower, attribute verification contradicts yellow color claim.
+**Detection Process:**Object detection identifies bus but wrong color, landmark recognition fails to confirm Eiffel Tower, attribute verification contradicts yellow color claim.
 
 ## Limitations and Future Directions
 
-**Scale Constraints:** Current 620 instances smaller than large-scale text benchmarks. Expansion planned to thousands of instances across more domains and modalities.
+**Scale Constraints:**Current 620 instances smaller than large-scale text benchmarks. Expansion planned to thousands of instances across more domains and modalities.
 
-**Annotation Costs:** Human annotation resource-intensive limiting rapid scaling. Future work explores semi-automatic annotation with human verification.
+**Annotation Costs:**Human annotation resource-intensive limiting rapid scaling. Future work explores semi-automatic annotation with human verification.
 
-**Modality Coverage:** Currently limited to image-text pairs. Extension to video, audio, 3D, and sensor data modalities under consideration.
+**Modality Coverage:**Currently limited to image-text pairs. Extension to video, audio, 3D, and sensor data modalities under consideration.
 
-**Tool Dependency:** Detection performance bounded by external tool accuracy. Improving tool reliability and developing specialized verification systems ongoing.
+**Tool Dependency:**Detection performance bounded by external tool accuracy. Improving tool reliability and developing specialized verification systems ongoing.
 
-**Dynamic Evaluation:** Static benchmark may not reflect real-world deployment challenges. Development of dynamic evaluation protocols for live systems needed.
+**Dynamic Evaluation:**Static benchmark may not reflect real-world deployment challenges. Development of dynamic evaluation protocols for live systems needed.
 
-**Cultural and Linguistic Diversity:** Current focus on English and common image domains. Expansion to multilingual settings and diverse cultural contexts planned.
+**Cultural and Linguistic Diversity:**Current focus on English and common image domains. Expansion to multilingual settings and diverse cultural contexts planned.
 
-**Mitigation Integration:** Benchmark focuses on detection; integration with correction and mitigation systems represents future direction.
+**Mitigation Integration:**Benchmark focuses on detection; integration with correction and mitigation systems represents future direction.
 
 ## Implementation Resources
 
-**Dataset Access:** Available on HuggingFace Datasets platform with comprehensive documentation, evaluation scripts, and baseline results.
+**Dataset Access:**Available on HuggingFace Datasets platform with comprehensive documentation, evaluation scripts, and baseline results.
 
-**Evaluation Tools:** Python toolkit for computing detection metrics, analyzing error patterns, and generating detailed reports.
+**Evaluation Tools:**Python toolkit for computing detection metrics, analyzing error patterns, and generating detailed reports.
 
-**Baseline Implementations:** Reference implementations of UNIHD and other detection approaches for reproduction and extension.
+**Baseline Implementations:**Reference implementations of UNIHD and other detection approaches for reproduction and extension.
 
-**Community Contributions:** Open invitation for submission of detection systems to public leaderboard, expanding benchmark coverage.
+**Community Contributions:**Open invitation for submission of detection systems to public leaderboard, expanding benchmark coverage.
 
 ## References
 

@@ -16,8 +16,7 @@ url = "/internal/glossary/Ambient-Intelligence/"
 
 La Inteligencia Ambiental (AmI) es un paradigma en el que los sistemas y dispositivos digitales se integran de manera imperceptible en los entornos humanos, dotados de la capacidad de detectar, interpretar y responder proactivamente a las necesidades de las personas en tiempo real. Estos sistemas operan de forma autónoma en segundo plano, aprendiendo del comportamiento humano y los datos del entorno, y tomando decisiones contextuales para brindar soporte al usuario, a menudo sin necesidad de comandos explícitos.
 
-**Definiciones autorizadas y lecturas adicionales:**
-- [Coursera: ¿Qué es la Inteligencia Ambiental?](https://www.coursera.org/articles/ambient-intelligence)
+**Definiciones autorizadas y lecturas adicionales:**- [Coursera: ¿Qué es la Inteligencia Ambiental?](https://www.coursera.org/articles/ambient-intelligence)
 - [TechTarget: Inteligencia Ambiental (AmI)](https://www.techtarget.com/searchenterpriseai/definition/ambient-intelligence-AmI)
 - [Heidi Health: Inteligencia Ambiental en Salud](https://www.heidihealth.com/blog/ambient-intelligence)
 - [6hour.ai: Arquitectura de Agentes Ambientales](https://www.6hour.ai/post/ambient-agent-architecture-the-future-of-intelligent-context-aware-systems)
@@ -35,8 +34,8 @@ La inteligencia ambiental es la integración de sistemas impulsados por IA en lo
 
 ### Principales Diferencias con la IA Tradicional
 
-- **La IA tradicional** requiere entrada explícita del usuario (por ejemplo, chatbots, motores de búsqueda).
-- **La Inteligencia Ambiental** opera continuamente, utilizando sensores y contexto para anticipar y satisfacer necesidades de forma proactiva, muchas veces antes de que el usuario lo solicite.
+- **La IA tradicional**requiere entrada explícita del usuario (por ejemplo, chatbots, motores de búsqueda).
+- **La Inteligencia Ambiental**opera continuamente, utilizando sensores y contexto para anticipar y satisfacer necesidades de forma proactiva, muchas veces antes de que el usuario lo solicite.
 
 *Analogía:* La IA tradicional es como un asistente de voz al que debes llamar para cada tarea. AmI es como un mayordomo atento que resuelve las cosas antes de que te des cuenta de que las necesitas.
 
@@ -47,31 +46,30 @@ Los sistemas de inteligencia ambiental emplean un enfoque por capas, combinando 
 
 ### Detección Integrada
 
-- **Dispositivos:** Sensores, cámaras, micrófonos, dispositivos IoT y wearables incorporados en los entornos.
-- **Recopilación de datos:** Recogen información sobre movimiento, voz, ocupación, temperatura y uso de dispositivos.
+- **Dispositivos:**Sensores, cámaras, micrófonos, dispositivos IoT y wearables incorporados en los entornos.
+- **Recopilación de datos:**Recogen información sobre movimiento, voz, ocupación, temperatura y uso de dispositivos.
 
 ### Conciencia Contextual
 
-- **Interpretación:** Los sistemas analizan la entrada sensorial para inferir qué está sucediendo: quién está presente, qué actividades se realizan y otros factores situacionales.
-- **Ejemplo:** Un sistema de sala de reuniones detecta cuándo comienza una llamada y activa la grabación o ajusta la iluminación.
+- **Interpretación:**Los sistemas analizan la entrada sensorial para inferir qué está sucediendo: quién está presente, qué actividades se realizan y otros factores situacionales.
+- **Ejemplo:**Un sistema de sala de reuniones detecta cuándo comienza una llamada y activa la grabación o ajusta la iluminación.
 
 ### Aprendizaje Automático y Reconocimiento de Patrones
 
-- **Adaptación:** Los modelos de IA procesan los datos para identificar patrones en el comportamiento individual, preferencias y cambios en el entorno.
-- **Aprendizaje:** Los sistemas mejoran con el tiempo, refinando continuamente sus respuestas anticipatorias.
+- **Adaptación:**Los modelos de IA procesan los datos para identificar patrones en el comportamiento individual, preferencias y cambios en el entorno.
+- **Aprendizaje:**Los sistemas mejoran con el tiempo, refinando continuamente sus respuestas anticipatorias.
 
 ### Acción Autónoma y Proactiva
 
-- **Predicción:** En lugar de esperar comandos directos, los sistemas AmI predicen necesidades y actúan en consecuencia.
-- **Ejemplos:** Generar notas de reuniones automáticamente, enviar recordatorios o alertar al personal sobre signos vitales anómalos de pacientes en entornos médicos.
+- **Predicción:**En lugar de esperar comandos directos, los sistemas AmI predicen necesidades y actúan en consecuencia.
+- **Ejemplos:**Generar notas de reuniones automáticamente, enviar recordatorios o alertar al personal sobre signos vitales anómalos de pacientes en entornos médicos.
 
 ### Transparencia e Integración Fluida
 
-- **Experiencia de usuario:** Las interacciones son naturales y discretas; la tecnología funciona en segundo plano, a menudo invisible para los usuarios.
-- **Interfaces:** Pueden incluir voz, gestos, aplicaciones móviles o ser completamente automáticas.
+- **Experiencia de usuario:**Las interacciones son naturales y discretas; la tecnología funciona en segundo plano, a menudo invisible para los usuarios.
+- **Interfaces:**Pueden incluir voz, gestos, aplicaciones móviles o ser completamente automáticas.
 
-**Profundización técnica:**  
-- [6hour.ai: Arquitectura de Agentes Ambientales](https://www.6hour.ai/post/ambient-agent-architecture-the-future-of-intelligent-context-aware-systems)
+**Profundización técnica:**- [6hour.ai: Arquitectura de Agentes Ambientales](https://www.6hour.ai/post/ambient-agent-architecture-the-future-of-intelligent-context-aware-systems)
 
 
 ## Inteligencia Ambiental vs. Inteligencia Artificial Tradicional
@@ -94,30 +92,29 @@ Un sistema AmI robusto se construye sobre varios componentes clave:
 
 ### 1. Redes de Sensores
 
-- **Tipos:** Detectores de movimiento, micrófonos, cámaras, sensores de ocupación/temperatura, RFID, wearables.
-- **Función:** Proporcionar datos en tiempo real sobre el entorno y el comportamiento.
+- **Tipos:**Detectores de movimiento, micrófonos, cámaras, sensores de ocupación/temperatura, RFID, wearables.
+- **Función:**Proporcionar datos en tiempo real sobre el entorno y el comportamiento.
 
 ### 2. Motores de Procesamiento Contextual
 
-- **Función:** Agregar e interpretar datos de los sensores para crear un modelo de “lo que está ocurriendo ahora”.
-- **Técnicas:** Lógica basada en reglas, análisis temporal/espacial, aprendizaje automático avanzado.
+- **Función:**Agregar e interpretar datos de los sensores para crear un modelo de “lo que está ocurriendo ahora”.
+- **Técnicas:**Lógica basada en reglas, análisis temporal/espacial, aprendizaje automático avanzado.
 
 ### 3. Modelos Predictivos
 
-- **Función:** Prever necesidades del usuario, cambios en el entorno o riesgos (por ejemplo, mantenimiento de dispositivos o intervención con pacientes).
-- **Ejemplo:** Predecir riesgo de caídas de pacientes en hospitales.
+- **Función:**Prever necesidades del usuario, cambios en el entorno o riesgos (por ejemplo, mantenimiento de dispositivos o intervención con pacientes).
+- **Ejemplo:**Predecir riesgo de caídas de pacientes en hospitales.
 
 ### 4. Agentes Autónomos
 
-- **Función:** Iniciar acciones, orquestar flujos de trabajo y realizar tareas automatizadas.
-- **Ejemplos:** Agentes de IA en herramientas de productividad que generan resúmenes de reuniones y asignan tareas.
+- **Función:**Iniciar acciones, orquestar flujos de trabajo y realizar tareas automatizadas.
+- **Ejemplos:**Agentes de IA en herramientas de productividad que generan resúmenes de reuniones y asignan tareas.
 
 ### 5. Bucles de Retroalimentación
 
-- **Función:** Aprender de los resultados, la retroalimentación del usuario y el desempeño del sistema para mejorar acciones futuras.
+- **Función:**Aprender de los resultados, la retroalimentación del usuario y el desempeño del sistema para mejorar acciones futuras.
 
-**Recursos técnicos en profundidad:**
-- [6hour.ai: Arquitectura de Agentes Ambientales](https://www.6hour.ai/post/ambient-agent-architecture-the-future-of-intelligent-context-aware-systems)
+**Recursos técnicos en profundidad:**- [6hour.ai: Arquitectura de Agentes Ambientales](https://www.6hour.ai/post/ambient-agent-architecture-the-future-of-intelligent-context-aware-systems)
 - [ACM Digital Library: Arquitectura de Sistemas AmI](https://dl.acm.org/doi/10.1145/1462027.1462036) *(Resumen libre, acceso completo requiere suscripción)*
 
 
@@ -127,50 +124,45 @@ La inteligencia ambiental está transformando múltiples sectores mediante imple
 
 ### Salud
 
-- **Inteligencia Clínica Ambiental (ACI):** Sistemas como escribas médicos de IA y herramientas de documentación automatizada reducen la carga administrativa, permitiendo a los clínicos enfocarse en la atención al paciente.  
+- **Inteligencia Clínica Ambiental (ACI):**Sistemas como escribas médicos de IA y herramientas de documentación automatizada reducen la carga administrativa, permitiendo a los clínicos enfocarse en la atención al paciente.  
   Ver [Heidi Health: Inteligencia Ambiental en Salud](https://www.heidihealth.com/blog/ambient-intelligence)
-- **Monitoreo de pacientes:** Sensores e IA monitorizan signos vitales, detectan caídas y alertan sobre emergencias o irregularidades.
-- **Eficiencia operativa:** La IA analiza flujos de trabajo, predice cuellos de botella y sugiere ajustes en tiempo real.
+- **Monitoreo de pacientes:**Sensores e IA monitorizan signos vitales, detectan caídas y alertan sobre emergencias o irregularidades.
+- **Eficiencia operativa:**La IA analiza flujos de trabajo, predice cuellos de botella y sugiere ajustes en tiempo real.
 
-**Caso de estudio:**  
-Un paciente llega a una clínica—el software AmI reconoce su ingreso, recupera sus registros, ajusta el consultorio para su comodidad y graba la consulta, todo sin interrupciones.
+**Caso de estudio:**Un paciente llega a una clínica—el software AmI reconoce su ingreso, recupera sus registros, ajusta el consultorio para su comodidad y graba la consulta, todo sin interrupciones.
 
 - [Microsoft: Una Nueva Era de Inteligencia Ambiental en Salud](https://www.microsoft.com/en-us/industry/blog/healthcare/2025/02/27/a-new-era-of-ambient-intelligence-in-healthcare/)
 - [Emorphis Health: Inteligencia Ambiental en Salud](https://emorphis.health/blogs/ambient-intelligence-in-healthcare/)
 
 ### Productividad Empresarial y Oficinas Inteligentes
 
-- **Automatización de reuniones:** Los sistemas AmI transcriben reuniones, identifican tareas y programan seguimientos.
-- **Control ambiental:** Sensores ajustan iluminación, climatización y reservas en tiempo real.
-- **Optimización de flujos de trabajo:** Plataformas analizan patrones de trabajo y organizan tareas proactivamente.
+- **Automatización de reuniones:**Los sistemas AmI transcriben reuniones, identifican tareas y programan seguimientos.
+- **Control ambiental:**Sensores ajustan iluminación, climatización y reservas en tiempo real.
+- **Optimización de flujos de trabajo:**Plataformas analizan patrones de trabajo y organizan tareas proactivamente.
 
-**Caso de estudio:**  
-Una reunión de equipo se extiende. El sistema encuentra un nuevo horario, notifica a los asistentes y distribuye un resumen de la reunión automáticamente.
+**Caso de estudio:**Una reunión de equipo se extiende. El sistema encuentra un nuevo horario, notifica a los asistentes y distribuye un resumen de la reunión automáticamente.
 
 ### Retail y Entornos Inteligentes
 
-- **Gestión de inventarios:** Estanterías inteligentes con sensores RFID e IoT rastrean inventario y alertan para reposición.
-- **Marketing personalizado:** Analiza movimientos y preferencias para activar promociones dirigidas.
+- **Gestión de inventarios:**Estanterías inteligentes con sensores RFID e IoT rastrean inventario y alertan para reposición.
+- **Marketing personalizado:**Analiza movimientos y preferencias para activar promociones dirigidas.
 
-**Caso de estudio:**  
-Un comprador se detiene en un expositor. El sistema usa el contexto para enviar una oferta relevante a su teléfono.
+**Caso de estudio:**Un comprador se detiene en un expositor. El sistema usa el contexto para enviar una oferta relevante a su teléfono.
 
 ### Dispositivos de Consumo y Hogares Inteligentes
 
-- **Automatización del hogar:** Dispositivos como termostatos Nest aprenden rutinas y ajustan configuraciones proactivamente.
-- **Asistentes de voz:** Alexa, Google Assistant y Siri hacen sugerencias proactivas según el contexto.
-- **Seguridad:** Sensores detectan actividad inusual y activan alertas.
+- **Automatización del hogar:**Dispositivos como termostatos Nest aprenden rutinas y ajustan configuraciones proactivamente.
+- **Asistentes de voz:**Alexa, Google Assistant y Siri hacen sugerencias proactivas según el contexto.
+- **Seguridad:**Sensores detectan actividad inusual y activan alertas.
 
-**Caso de estudio:**  
-Las luces se atenúan y la música suena al entrar al salón—sin necesidad de comandos.
+**Caso de estudio:**Las luces se atenúan y la música suena al entrar al salón—sin necesidad de comandos.
 
 ### Ciudades Inteligentes e Infraestructura
 
-- **Eficiencia urbana:** Sistemas AmI gestionan semáforos adaptativos, alumbrado y seguridad pública.
-- **Monitoreo ambiental:** Sensores rastrean calidad del aire, densidad de multitudes y nivel de residuos.
+- **Eficiencia urbana:**Sistemas AmI gestionan semáforos adaptativos, alumbrado y seguridad pública.
+- **Monitoreo ambiental:**Sensores rastrean calidad del aire, densidad de multitudes y nivel de residuos.
 
-**Caso de estudio:**  
-Las farolas se iluminan al acercarse peatones y se atenúan para ahorrar energía.
+**Caso de estudio:**Las farolas se iluminan al acercarse peatones y se atenúan para ahorrar energía.
 
 
 ## Beneficios de la Inteligencia Ambiental
@@ -207,8 +199,7 @@ Las farolas se iluminan al acercarse peatones y se atenúan para ahorrar energí
 - La recopilación continua de audio, video y datos conductuales implica riesgos de privacidad.
 - Los usuarios pueden desconocer el alcance del monitoreo.
 
-**Mitigación:**  
-Privacidad desde el diseño, políticas transparentes, controles de consentimiento y anonimización de datos.
+**Mitigación:**Privacidad desde el diseño, políticas transparentes, controles de consentimiento y anonimización de datos.
 
 ### Seguridad
 
@@ -233,31 +224,30 @@ Privacidad desde el diseño, políticas transparentes, controles de consentimien
 
 - Se debe abordar el consentimiento, la propiedad de los datos y el monitoreo aceptable en entornos sensibles (por ejemplo, clínicas, lugares de trabajo).
 
-**Lecturas adicionales:**
-- [Coursera: Pros y Contras de la Inteligencia Ambiental](https://www.coursera.org/articles/ambient-intelligence)
+**Lecturas adicionales:**- [Coursera: Pros y Contras de la Inteligencia Ambiental](https://www.coursera.org/articles/ambient-intelligence)
 - [Heidi Health: Privacidad en Inteligencia Ambiental](https://www.heidihealth.com/blog/ambient-intelligence)
 
 
 ## Términos y Conceptos Relacionados
 
-- **Internet de las Cosas (IoT):** Red de dispositivos conectados que recopilan y comparten datos, a menudo los “sentidos” de AmI.  
+- **Internet de las Cosas (IoT):**Red de dispositivos conectados que recopilan y comparten datos, a menudo los “sentidos” de AmI.  
   [Conceptos básicos de IoT](https://www.techtarget.com/whatis/feature/IoT-basics-A-guide-for-beginners)
-- **Conciencia Contextual:** Los sistemas comprenden factores situacionales para adaptar su comportamiento.  
+- **Conciencia Contextual:**Los sistemas comprenden factores situacionales para adaptar su comportamiento.  
   [Computación contextual](https://www.techtarget.com/whatis/definition/context-awareness)
-- **IA Agéntica:** Agentes autónomos que establecen metas, planifican y actúan según el contexto.  
+- **IA Agéntica:**Agentes autónomos que establecen metas, planifican y actúan según el contexto.  
   [IA agéntica explicada](https://clickup.com/blog/hub/ai/agentic-ai/ambient/)
-- **Aprendizaje Automático:** Algoritmos que permiten a los sistemas aprender de los datos.
-- **Inteligencia Clínica Ambiental (ACI):** Aplicación de AmI en documentación y flujos de trabajo de salud.  
+- **Aprendizaje Automático:**Algoritmos que permiten a los sistemas aprender de los datos.
+- **Inteligencia Clínica Ambiental (ACI):**Aplicación de AmI en documentación y flujos de trabajo de salud.  
   [ACI en salud](https://whatsnext.nuance.com/healthcare-ai/what-is-ambient-clinical-intelligence-and-how-is-it-transforming-care/)
-- **Interacción Humano-Computadora (HCI):** Estudio de interfaces tecnológicas naturales e intuitivas.
+- **Interacción Humano-Computadora (HCI):**Estudio de interfaces tecnológicas naturales e intuitivas.
 
 
 ## Primeros Pasos: Formación y Carreras en Inteligencia Ambiental
 
 ### Vías Educativas
 
-- **Títulos:** Informática, tecnologías de la información, ciencia de datos, robótica, informática en salud.
-- **Especializaciones:** Enfoque en IA, aprendizaje automático, IoT, HCI.
+- **Títulos:**Informática, tecnologías de la información, ciencia de datos, robótica, informática en salud.
+- **Especializaciones:**Enfoque en IA, aprendizaje automático, IoT, HCI.
 
 ### Cursos y Certificaciones Online
 
@@ -267,8 +257,8 @@ Privacidad desde el diseño, políticas transparentes, controles de consentimien
 
 ### Experiencia Práctica
 
-- **Proyectos:** Experimenta con dispositivos IoT (Raspberry Pi, Arduino), asistentes de voz, plataformas de hogares inteligentes.
-- **Prácticas:** Busca puestos en empresas de IA, automatización y tecnología en salud.
+- **Proyectos:**Experimenta con dispositivos IoT (Raspberry Pi, Arduino), asistentes de voz, plataformas de hogares inteligentes.
+- **Prácticas:**Busca puestos en empresas de IA, automatización y tecnología en salud.
 
 ### Mantente Actualizado
 
@@ -290,17 +280,13 @@ Privacidad desde el diseño, políticas transparentes, controles de consentimien
 
 ## Preguntas Frecuentes
 
-**¿Cuál es un ejemplo sencillo de inteligencia ambiental?**  
-Un termostato inteligente que aprende y ajusta automáticamente la temperatura según tu rutina es un ejemplo clásico.
+**¿Cuál es un ejemplo sencillo de inteligencia ambiental?**Un termostato inteligente que aprende y ajusta automáticamente la temperatura según tu rutina es un ejemplo clásico.
 
-**¿Cómo mejora la inteligencia ambiental la salud?**  
-Automatiza la documentación, monitoriza pacientes en tiempo real y aporta información accionable, reduciendo el esfuerzo manual y mejorando resultados.
+**¿Cómo mejora la inteligencia ambiental la salud?**Automatiza la documentación, monitoriza pacientes en tiempo real y aporta información accionable, reduciendo el esfuerzo manual y mejorando resultados.
 
-**¿Cuál es la diferencia entre inteligencia ambiental e IA agéntica?**  
-La inteligencia ambiental proporciona detección e interpretación continua y contextual. La IA agéntica utiliza ese contexto para ejecutar flujos de trabajo complejos de manera autónoma.
+**¿Cuál es la diferencia entre inteligencia ambiental e IA agéntica?**La inteligencia ambiental proporciona detección e interpretación continua y contextual. La IA agéntica utiliza ese contexto para ejecutar flujos de trabajo complejos de manera autónoma.
 
-**¿La inteligencia ambiental es segura para la privacidad?**  
-AmI plantea preocupaciones de privacidad por la recolección continua de datos. Es esencial el diseño responsable, la [transparencia](/es/glossary/transparency/) y una seguridad robusta.
+**¿La inteligencia ambiental es segura para la privacidad?**AmI plantea preocupaciones de privacidad por la recolección continua de datos. Es esencial el diseño responsable, la [transparencia](/es/glossary/transparency/) y una seguridad robusta.
 
 
 ## Explora Más

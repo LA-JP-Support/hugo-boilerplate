@@ -48,9 +48,9 @@ Automated pipelines for building, testing, and deploying software changes. Enabl
 
 ### Command and Query
 
-**Command:** Operation that modifies data or state, typically with side effects.
+**Command:**Operation that modifies data or state, typically with side effects.
 
-**Query:** Operation that retrieves data without side effects, adhering to read-only semantics.
+**Query:**Operation that retrieves data without side effects, adhering to read-only semantics.
 
 ### Container
 
@@ -166,29 +166,29 @@ Process of managing changes to service APIs or data contracts ensuring backward 
 
 ## Architecture Benefits
 
-**Independent Deployment:** Services can be deployed separately without coordinating releases across entire application.
+**Independent Deployment:**Services can be deployed separately without coordinating releases across entire application.
 
-**Technology Flexibility:** Teams can choose optimal technologies for each service's specific requirements.
+**Technology Flexibility:**Teams can choose optimal technologies for each service's specific requirements.
 
-**Scalability:** Individual services can be scaled independently based on demand.
+**Scalability:**Individual services can be scaled independently based on demand.
 
-**Fault Isolation:** Failures are contained within services rather than bringing down entire application.
+**Fault Isolation:**Failures are contained within services rather than bringing down entire application.
 
-**Team Autonomy:** Small teams can own complete services, improving velocity and accountability.
+**Team Autonomy:**Small teams can own complete services, improving velocity and accountability.
 
-**Easier Maintenance:** Smaller codebases are easier to understand, modify, and test.
+**Easier Maintenance:**Smaller codebases are easier to understand, modify, and test.
 
 ## Common Challenges
 
-**Distributed System Complexity:** Network latency, partial failures, and eventual consistency require careful handling.
+**Distributed System Complexity:**Network latency, partial failures, and eventual consistency require careful handling.
 
-**Operational Overhead:** More services mean more deployment pipelines, monitoring, and management.
+**Operational Overhead:**More services mean more deployment pipelines, monitoring, and management.
 
-**Data Consistency:** Maintaining consistency across services requires patterns like Saga or event sourcing.
+**Data Consistency:**Maintaining consistency across services requires patterns like Saga or event sourcing.
 
-**Testing Complexity:** End-to-end testing becomes more challenging with multiple independently deployed services.
+**Testing Complexity:**End-to-end testing becomes more challenging with multiple independently deployed services.
 
-**Network Overhead:** Inter-service communication introduces latency and potential failure points.
+**Network Overhead:**Inter-service communication introduces latency and potential failure points.
 
 ## References
 

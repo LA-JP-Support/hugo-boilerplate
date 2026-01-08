@@ -18,33 +18,28 @@ draft: false
 ---
 ## What Is an Embed Script?
 
-An **embed script** is a compact, self-contained JavaScript snippet inserted into a website’s HTML to load and display dynamic third-party content—most commonly AI chatbots or widgets. When added to a site, the script fetches the chatbot’s code and resources from the provider’s servers and renders the widget in the browser.
+An **embed script**is a compact, self-contained JavaScript snippet inserted into a website’s HTML to load and display dynamic third-party content—most commonly AI chatbots or widgets. When added to a site, the script fetches the chatbot’s code and resources from the provider’s servers and renders the widget in the browser.
 
-**Key Characteristics:**
-- **Plug-and-play:** Only requires copy-pasting into the HTML—no advanced coding.
-- **Dynamic:** Loads dependencies and UI from the provider on the fly.
-- **Isolated:** Runs in a sandboxed browser context, minimizing risk of interfering with other site elements.
-- **Universal:** Works with virtually any website platform that allows custom HTML or JavaScript.
+**Key Characteristics:**- **Plug-and-play:**Only requires copy-pasting into the HTML—no advanced coding.
+- **Dynamic:**Loads dependencies and UI from the provider on the fly.
+- **Isolated:**Runs in a sandboxed browser context, minimizing risk of interfering with other site elements.
+- **Universal:**Works with virtually any website platform that allows custom HTML or JavaScript.
 
-**AI Chatbot & Automation Context:**  
-Embed scripts make it possible to deploy chatbots—powered by AI—for sales, support, lead generation, and engagement, directly on your site or web app. Visitors interact with the chatbot in real time, receiving automated, personalized responses.
+**AI Chatbot & Automation Context:**Embed scripts make it possible to deploy chatbots—powered by AI—for sales, support, lead generation, and engagement, directly on your site or web app. Visitors interact with the chatbot in real time, receiving automated, personalized responses.
 ## How Embed Scripts Are Used
 
 ### Basic Integration
 
 Most chatbot providers offer a ready-to-use embed script tied to your account or instance. The basic workflow is:
 
-1. **Obtain the Embed Script:**  
-   - Sign in to the dashboard (e.g., [Chatbase](https://chatbase.co/), [ChatBot.com](https://www.chatbot.com/), [Pickaxe](https://pickaxe.co/)).
+1. **Obtain the Embed Script:**- Sign in to the dashboard (e.g., [Chatbase](https://chatbase.co/), [ChatBot.com](https://www.chatbot.com/), [Pickaxe](https://pickaxe.co/)).
    - Navigate to the “Deploy,” “Publish,” or “Integrations” section.
    - Copy the provided JavaScript snippet ([example for Chatbase](https://chatbase.co/docs/developer-guides/javascript-embed#quick-start-guide)).
 
-2. **Add to Your Website:**  
-   - Paste the script into your HTML, either in the `<head>` or just before the closing `</body>` tag for optimal performance.
+2. **Add to Your Website:**- Paste the script into your HTML, either in the `<head>` or just before the closing `</body>` tag for optimal performance.
    - Save and redeploy or refresh your site.
 
-**Example:**
-```html
+**Example:**```html
 <!-- Chatbase Example Embed Script -->
 <script src="https://www.chatbase.co/embed.min.js" agent-id="YOUR_AGENT_ID" async></script>
 ```
@@ -58,18 +53,15 @@ Or for advanced configuration:
 </script>
 <script src="https://www.chatbase.co/embed.min.js" async></script>
 ```
-**Result:**  
-A chat bubble appears on your website, offering instant AI-powered interaction to visitors.
+**Result:**A chat bubble appears on your website, offering instant AI-powered interaction to visitors.
 ### Advanced Integration Methods
 
 Beyond basic embedding, scripts support deeper integration:
 
-- **Identity Verification:**  
-  Pass user data (e.g., name, email, user ID) for personalized greetings, context-aware responses, and secure actions.  
+- **Identity Verification:**Pass user data (e.g., name, email, user ID) for personalized greetings, context-aware responses, and secure actions.  
   [See Chatbase Identity Verification](https://chatbase.co/docs/developer-guides/identity-verification)
 
-- **Event Listeners:**  
-  React to user or bot actions (e.g., log conversations, trigger analytics, open/close widget programmatically).  
+- **Event Listeners:**React to user or bot actions (e.g., log conversations, trigger analytics, open/close widget programmatically).  
   ```javascript
   window.chatbase.addEventListener("user-message", (event) => {
     console.log("User said:", event.content);
@@ -78,14 +70,11 @@ Beyond basic embedding, scripts support deeper integration:
   ```
   [Chatbase Event Listeners](https://chatbase.co/docs/developer-guides/javascript-embed#advanced-features)
 
-- **Custom Actions:**  
-  Trigger forms, workflows, or API calls from the chat interface.
+- **Custom Actions:**Trigger forms, workflows, or API calls from the chat interface.
 
-- **Dynamic Content:**  
-  Change greetings, widget appearance, or conversation context based on page content or user session.
+- **Dynamic Content:**Change greetings, widget appearance, or conversation context based on page content or user session.
 
-- **Widget Control (API):**  
-  Use JS APIs to open, close, hide, or destroy the widget programmatically (see [ChatBot.com Widget API](https://www.chatbot.com/docs/chat-widget-api/)):
+- **Widget Control (API):**Use JS APIs to open, close, hide, or destroy the widget programmatically (see [ChatBot.com Widget API](https://www.chatbot.com/docs/chat-widget-api/)):
   ```javascript
   OpenWidget.call('maximize');    // Open chat
   OpenWidget.call('minimize');    // Minimize chat
@@ -95,20 +84,16 @@ Beyond basic embedding, scripts support deeper integration:
 
 ### Platform-Specific Usage
 
-**WordPress:**  
-- Use official plugins (e.g., [ChatBot.com for WordPress](https://wordpress.org/plugins/chatbot/)).
+**WordPress:**- Use official plugins (e.g., [ChatBot.com for WordPress](https://wordpress.org/plugins/chatbot/)).
 - Enter your API key or agent ID in plugin settings.
 - No manual script editing needed.
 
-**Shopify, Wix, Squarespace:**  
-- Use app marketplaces or insert embed code via theme/custom code sections.
+**Shopify, Wix, Squarespace:**- Use app marketplaces or insert embed code via theme/custom code sections.
 - [Shopify app example](https://apps.shopify.com/), [Wix custom code guide](https://support.wix.com/en/article/embedding-custom-code-to-your-site).
 
-**Custom HTML/CMS:**  
-- Directly paste the embed code into template files or code injectors.
+**Custom HTML/CMS:**- Directly paste the embed code into template files or code injectors.
 
-**Knack, Webflow, No-Code Builders:**  
-- If HTML is restricted, inject the script dynamically via JavaScript:
+**Knack, Webflow, No-Code Builders:**- If HTML is restricted, inject the script dynamically via JavaScript:
   ```javascript
   (function() {
       var script = document.createElement('script');
@@ -205,42 +190,33 @@ Beyond basic embedding, scripts support deeper integration:
 
 ### Customization Options
 
-- **Visual Appearance:**
-  - Change chat bubble color, widget background, fonts.
+- **Visual Appearance:**- Change chat bubble color, widget background, fonts.
   - Upload a custom company logo or avatar.
   - White-label or remove provider branding (on select plans).
 
-- **Greeting Messages:**
-  - Set static or dynamic welcome messages.
+- **Greeting Messages:**- Set static or dynamic welcome messages.
   - Display custom links, buttons, or calls to action in the initial window.
 
-- **Widget Position:**
-  - Place widget in bottom-left, bottom-right, or assign custom coordinates.
+- **Widget Position:**- Place widget in bottom-left, bottom-right, or assign custom coordinates.
   - Choose auto-launch or require user to click to open.
 
-- **Behavior:**
-  - Enable/disable free text input.
+- **Behavior:**- Enable/disable free text input.
   - Configure conversation flows, bot “personality,” fallback responses, and human agent handoff.
 
-- **Language & Localization:**
-  - Set default language.
+- **Language & Localization:**- Set default language.
   - Enable multi-language detection or allow users to switch language.
   - [Chatbase Language Options](https://chatbase.co/docs/developer-guides/javascript-embed#user-experience)
 
-- **Accessibility:**
-  - Keyboard navigation, ARIA roles, screen reader support, high-contrast mode.
+- **Accessibility:**- Keyboard navigation, ARIA roles, screen reader support, high-contrast mode.
 ## Security and Compliance Considerations
 
 ### API Key Security
 
-- **Never expose secret or privileged API keys in public scripts.**
-- Use only public or restricted keys intended for client-side use.
+- **Never expose secret or privileged API keys in public scripts.**- Use only public or restricted keys intended for client-side use.
 - For user authentication, use secure identity verification (pass tokens or user context from your backend).
 - Consider server-side proxies for sensitive or privileged operations.
 
-**Example Security Checklist:**
-
-| Security Task                                   | Recommendation                                               |
+**Example Security Checklist:**| Security Task                                   | Recommendation                                               |
 |-------------------------------------------------|--------------------------------------------------------------|
 | Use public/restricted API keys                  | ✔️                                                           |
 | Avoid embedding secret/private keys in scripts  | ✔️                                                           |
@@ -249,14 +225,10 @@ Beyond basic embedding, scripts support deeper integration:
 | Validate allowed domains in chatbot settings    | ✔️                                                           |
 ### Privacy & Legal Compliance
 
-- **GDPR / CCPA:**  
-  Obtain user consent before collecting personal data through the chatbot.
-- **Data Access & Deletion:**  
-  Allow users to request, access, or delete their data.
-- **Encryption:**  
-  Ensure all data in transit and at rest is encrypted.
-- **Audit & Logs:**  
-  Keep logs of chatbot interactions for compliance.
+- **GDPR / CCPA:**Obtain user consent before collecting personal data through the chatbot.
+- **Data Access & Deletion:**Allow users to request, access, or delete their data.
+- **Encryption:**Ensure all data in transit and at rest is encrypted.
+- **Audit & Logs:**Keep logs of chatbot interactions for compliance.
 
 Most reputable providers offer built-in compliance features and documentation.
 ### Accessibility
@@ -274,8 +246,7 @@ Most reputable providers offer built-in compliance features and documentation.
 | Widget overlaps site content             | CSS conflicts                                | Adjust widget position or z-index in custom CSS        |
 | Widget not accessible on mobile devices  | Widget not mobile-optimized                  | Test across devices, adjust mobile settings            |
 
-**Step-by-Step Diagnostics:**
-1. Open browser console and check for JavaScript errors.
+**Step-by-Step Diagnostics:**1. Open browser console and check for JavaScript errors.
 2. Validate script URLs, parameters, and agent IDs.
 3. Confirm your website domain is allowed in the chatbot settings.
 4. Test with browser extensions disabled or in incognito mode.
@@ -285,39 +256,26 @@ Most reputable providers offer built-in compliance features and documentation.
 
 ## Best Practices for Embed Scripts
 
-- **Always use the latest official embed code from your chatbot provider.**
-- **Load scripts asynchronously (`async` or `defer`) to prevent blocking site rendering.**
-- **Test the chatbot on all major browsers and mobile devices.**
-- **Minimize the number of third-party scripts to reduce potential security risks.**
-- **Regularly review analytics and user feedback to optimize chatbot performance and UX.**
-- **Update the script if your provider releases new versions.**
+- **Always use the latest official embed code from your chatbot provider.**- **Load scripts asynchronously (`async` or `defer`) to prevent blocking site rendering.**- **Test the chatbot on all major browsers and mobile devices.**- **Minimize the number of third-party scripts to reduce potential security risks.**- **Regularly review analytics and user feedback to optimize chatbot performance and UX.**- **Update the script if your provider releases new versions.**
 
-**Accessibility Tips:**
-- Ensure keyboard navigation and focus states work.
+**Accessibility Tips:**- Ensure keyboard navigation and focus states work.
 - Provide text alternatives for icons and avatars.
 - Follow [WCAG guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/).
 
-**Compliance Tips:**
-- Display privacy/data consent notices before collecting information.
+**Compliance Tips:**- Display privacy/data consent notices before collecting information.
 - Provide users with opt-out and data request options.
 ## Frequently Asked Questions (FAQ)
 
-**Q: What is an embed script?**  
-A: A snippet of JavaScript that loads an AI chatbot or widget onto your website by pasting it into your HTML.
+**Q: What is an embed script?**A: A snippet of JavaScript that loads an AI chatbot or widget onto your website by pasting it into your HTML.
 
-**Q: Where should I place the embed script?**  
-A: Preferably just before the closing `</body>` tag for performance, or in the `<head>` for faster widget loading. Some platforms specify the exact location—check documentation.
+**Q: Where should I place the embed script?**A: Preferably just before the closing `</body>` tag for performance, or in the `<head>` for faster widget loading. Some platforms specify the exact location—check documentation.
 
-**Q: Can I customize the chatbot’s appearance and greetings?**  
-A: Yes. Most providers let you configure appearance, greetings, branding, and more via the dashboard or script configuration.
+**Q: Can I customize the chatbot’s appearance and greetings?**A: Yes. Most providers let you configure appearance, greetings, branding, and more via the dashboard or script configuration.
 
-**Q: Is it safe to include my API key in the embed script?**  
-A: Only if the key is public or restricted for client-side use. Never expose secret or privileged keys.
+**Q: Is it safe to include my API key in the embed script?**A: Only if the key is public or restricted for client-side use. Never expose secret or privileged keys.
 
-**Q: How do I ensure GDPR/CCPA compliance?**  
-A: Use built-in compliance features, show privacy notices, and allow users to manage their data.
+**Q: How do I ensure GDPR/CCPA compliance?**A: Use built-in compliance features, show privacy notices, and allow users to manage their data.
 
-**Q: What if the chatbot widget doesn’t appear?**  
-A: Double-check script placement, API key/agent ID, browser console for errors, and verify domain whitelisting.
+**Q: What if the chatbot widget doesn’t appear?**A: Double-check script placement, API key/agent ID, browser console for errors, and verify domain whitelisting.
 
 **Q:

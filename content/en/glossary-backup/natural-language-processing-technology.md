@@ -36,7 +36,7 @@ NLP powers a wide array of applications and underpins much of modern digital int
 - **Accessibility**: Multilingual and multimodal NLP extend technology access across languages and communication styles.
 - **Operational Scale**: NLP automates the processing of massive text and speech data streams, far beyond human capacity.
 
-- **Applications** include customer support bots, real-time social media monitoring ([see use cases](https://www.deeplearning.ai/resources/natural-language-processing/)), healthcare document analysis, and more.
+- **Applications**include customer support bots, real-time social media monitoring ([see use cases](https://www.deeplearning.ai/resources/natural-language-processing/)), healthcare document analysis, and more.
 
 ## How Does NLP Work?
 
@@ -151,15 +151,15 @@ Transformers are neural network architectures that process sequential data via s
 
 ### Cloud-Based Services
 
-- **Google Cloud Natural Language API** ([Google Cloud](https://cloud.google.com/natural-language))
-- **IBM Watson NLP** ([IBM Watson](https://www.ibm.com/watson/services/natural-language-understanding/))
-- **Amazon Comprehend** ([AWS Comprehend](https://aws.amazon.com/comprehend/))
-- **Microsoft Azure Text Analytics** ([Azure Text Analytics](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/))
+- **Google Cloud Natural Language API**([Google Cloud](https://cloud.google.com/natural-language))
+- **IBM Watson NLP**([IBM Watson](https://www.ibm.com/watson/services/natural-language-understanding/))
+- **Amazon Comprehend**([AWS Comprehend](https://aws.amazon.com/comprehend/))
+- **Microsoft Azure Text Analytics**([Azure Text Analytics](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/))
 
 ### Deep Learning Frameworks
 
-- **TensorFlow** ([TensorFlow](https://www.tensorflow.org/)) and **PyTorch** ([PyTorch](https://pytorch.org/)) for custom neural networks.
-- **Transformers Library by Hugging Face** ([Transformers Docs](https://huggingface.co/docs/transformers/)) for easy access to state-of-the-art models (BERT, GPT, etc.).
+- **TensorFlow**([TensorFlow](https://www.tensorflow.org/)) and **PyTorch**([PyTorch](https://pytorch.org/)) for custom neural networks.
+- **Transformers Library by Hugging Face**([Transformers Docs](https://huggingface.co/docs/transformers/)) for easy access to state-of-the-art models (BERT, GPT, etc.).
 
 ## Future Trends
 

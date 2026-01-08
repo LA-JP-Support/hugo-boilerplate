@@ -62,30 +62,26 @@ Encryption can be categorized by how keys are managed and used.
 
 ### Symmetric Encryption
 
-- **Uses one key for both encryption and decryption**
-- **Fast and efficient for large amounts of data**
-- **Requires secure key distribution**: Both sender and recipient must have the same secret key.
+- **Uses one key for both encryption and decryption**- **Fast and efficient for large amounts of data**- **Requires secure key distribution**: Both sender and recipient must have the same secret key.
 - **Common Algorithms**: AES, DES, Blowfish
 - **Typical Uses**: Disk encryption, file encryption, database encryption, internal network traffic.
 
-**Advantages:** Speed, simplicity, efficient for bulk data  
-**Disadvantages:** Key distribution is challenging; compromise of the key risks all protected data
+**Advantages:**Speed, simplicity, efficient for bulk data  
+**Disadvantages:**Key distribution is challenging; compromise of the key risks all protected data
 
 More details:  
 - [GeeksforGeeks: Symmetric Key Encryption](https://www.geeksforgeeks.org/ethical-hacking/what-is-a-symmetric-encryption/)
 
 ### Asymmetric Encryption
 
-- **Uses a mathematically related key pair (public/private)**
-    - Public key: shared openly, used for encryption
+- **Uses a mathematically related key pair (public/private)**- Public key: shared openly, used for encryption
     - Private key: kept secret, used for decryption
 - **Secure key exchange**: No need to transmit the private key
-- **Enables digital signatures, authentication, and non-repudiation**
-- **Common Algorithms**: RSA, ECC, Diffie-Hellman
+- **Enables digital signatures, authentication, and non-repudiation**- **Common Algorithms**: RSA, ECC, Diffie-Hellman
 - **Typical Uses**: Secure email, digital signatures, SSL/TLS, initial key exchange for symmetric encryption
 
-**Advantages:** Secure for communication and key exchange  
-**Disadvantages:** Slower, more resource-intensive, best for small data amounts or key exchange
+**Advantages:**Secure for communication and key exchange  
+**Disadvantages:**Slower, more resource-intensive, best for small data amounts or key exchange
 
 More details:  
 - [GeeksforGeeks: Asymmetric Key Encryption](https://www.geeksforgeeks.org/computer-networks/what-is-asymmetric-encryption/)
@@ -101,7 +97,7 @@ More details:
 | Security           | Depends on secrecy  | More secure for exchange|
 | Algorithms         | AES, DES, Blowfish  | RSA, ECC, DSA           |
 
-**Hybrid Approach:** Most modern protocols (like SSL/TLS) use asymmetric encryption to exchange a symmetric key, which is then used for the bulk of data transmission.  
+**Hybrid Approach:**Most modern protocols (like SSL/TLS) use asymmetric encryption to exchange a symmetric key, which is then used for the bulk of data transmission.  
 ## Common Data Encryption Algorithms
 
 ### Symmetric Algorithms
@@ -172,11 +168,11 @@ Encryption is mandated or strongly recommended in many regulations:
 
 | Regulation/Standard | Sector                    | Key Encryption Requirements                          |
 |---------------------|---------------------------|------------------------------------------------------|
-| **HIPAA**           | Healthcare                | Encrypt protected health information (PHI)           |
-| **PCI DSS**         | Payment card industry     | Encrypt cardholder data in storage and transit       |
-| **GDPR**            | General data privacy (EU) | Protect personal data; encryption recommended        |
-| **FIPS 140-2**      | US federal government     | Specifies approved encryption algorithms             |
-| **FERPA**           | Education                 | Protects student records                            |
+| **HIPAA**| Healthcare                | Encrypt protected health information (PHI)           |
+| **PCI DSS**| Payment card industry     | Encrypt cardholder data in storage and transit       |
+| **GDPR**| General data privacy (EU) | Protect personal data; encryption recommended        |
+| **FIPS 140-2**| US federal government     | Specifies approved encryption algorithms             |
+| **FERPA**| Education                 | Protects student records                            |
 
 Encryption helps organizations avoid fines, data breaches, and reputational damage by demonstrating compliance with these and other standards.
 
@@ -200,12 +196,12 @@ Further reading:
 
 | Challenge            | Explanation |
 |----------------------|-------------|
-| **Key management**   | Securely creating, storing, rotating, and revoking keys is difficult. Loss of keys can result in permanent data loss. |
-| **Performance impact** | Encryption and decryption require computational resources, potentially affecting speed and system performance. |
-| **Ransomware**       | Attackers may encrypt user data and demand payment for decryption keys. |
+| **Key management**| Securely creating, storing, rotating, and revoking keys is difficult. Loss of keys can result in permanent data loss. |
+| **Performance impact**| Encryption and decryption require computational resources, potentially affecting speed and system performance. |
+| **Ransomware**| Attackers may encrypt user data and demand payment for decryption keys. |
 | **Quantum computing**| Quantum computers may eventually break current algorithms, necessitating quantum-resistant cryptography. |
-| **Usability issues** | Layered encryption solutions can complicate workflows and user access. |
-| **Insider threats**  | Employees or admins with access to keys may compromise data. |
+| **Usability issues**| Layered encryption solutions can complicate workflows and user access. |
+| **Insider threats**| Employees or admins with access to keys may compromise data. |
 
 ## Best Practices for Data Encryption
 

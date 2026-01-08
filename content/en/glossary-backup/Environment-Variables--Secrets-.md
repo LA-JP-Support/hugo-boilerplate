@@ -20,34 +20,28 @@ draft: false
 
 Environment variables are named, externally-defined key-value pairs that provide runtime configuration to applications. When utilized for secrets, they store sensitive data—API keys, passwords, connection strings, tokens—outside codebases, UIs, or logs. The decoupling ensures that secrets are never hardcoded in source code or checked into version control.
 
-- **Analogy:** The value of an environment variable acts as a placeholder in your code. For example, instead of writing `API_KEY = "secret123"`, you reference `API_KEY`, which is only defined at runtime in the execution environment.
-- **Security Context:** Storing secrets in environment variables minimizes the risk of accidental exposure through code leaks, Git repository access, or logs. Sensitive values are injected at runtime and not stored in visual interfaces or configuration files unless specifically required.
-- **Secret Types:** Database passwords, API tokens, OAuth credentials, cryptographic keys, [feature flags](/en/glossary/feature-flags/), and more.
+- **Analogy:**The value of an environment variable acts as a placeholder in your code. For example, instead of writing `API_KEY = "secret123"`, you reference `API_KEY`, which is only defined at runtime in the execution environment.
+- **Security Context:**Storing secrets in environment variables minimizes the risk of accidental exposure through code leaks, Git repository access, or logs. Sensitive values are injected at runtime and not stored in visual interfaces or configuration files unless specifically required.
+- **Secret Types:**Database passwords, API tokens, OAuth credentials, cryptographic keys, [feature flags](/en/glossary/feature-flags/), and more.
 
-**See:**  
-- [OWASP Secrets Management Cheat Sheet—Intro and General Concepts](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#1-introduction)  
+**See:**- [OWASP Secrets Management Cheat Sheet—Intro and General Concepts](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#1-introduction)  
 - [Kinsta: What Is an Environment Variable?](https://kinsta.com/blog/what-is-an-environment-variable/)
 
 ## Why Use Environment Variables for Secrets?
 
-**Separation of Code and Configuration:**  
-- Keeps sensitive data out of codebases and version control.  
+**Separation of Code and Configuration:**- Keeps sensitive data out of codebases and version control.  
 - Enables the same codebase to run in different environments (development, staging, production) with different credentials.
 
-**Security:**  
-- Reduces risk of secret leakage by not embedding them in code or public repositories.
+**Security:**- Reduces risk of secret leakage by not embedding them in code or public repositories.
 - Prevents secrets from being exposed in logs, error messages, or UIs.
 
-**Flexibility and Maintainability:**  
-- Secrets can be updated or rotated without code changes.
+**Flexibility and Maintainability:**- Secrets can be updated or rotated without code changes.
 - Supports rapid response to incidents (e.g., credential leaks) by changing the environment variable and restarting the application.
 
-**Scalability and Consistency:**  
-- Manage environment-specific values (dev/staging/prod) centrally.
+**Scalability and Consistency:**- Manage environment-specific values (dev/staging/prod) centrally.
 - Consistent deployment pipelines (CI/CD) that do not require code changes for configuration updates.
 
-**Process Isolation:**  
-- Each process has access only to relevant secrets, reducing accidental exposure or privilege escalation.
+**Process Isolation:**- Each process has access only to relevant secrets, reducing accidental exposure or privilege escalation.
 ## Types of Environment Variables
 
 ### 1. System Environment Variables
@@ -65,46 +59,41 @@ Environment variables are named, externally-defined key-value pairs that provide
 - Set temporarily for a session or when launching a process.
 
 ### 4. Build-Time vs. Runtime Secrets
-- **Build-Time:** Used during the building/compilation process (e.g., fetching dependencies).
-- **Runtime:** Used while the application is running (e.g., connecting to live services).
+- **Build-Time:**Used during the building/compilation process (e.g., fetching dependencies).
+- **Runtime:**Used while the application is running (e.g., connecting to live services).
 
 ### 5. Application/Project Level (.env Files, Secret Managers)
 - `.env` files store environment variables for local development.
 - Secret managers (e.g., AWS Secrets Manager, Azure Key Vault, HashiCorp Vault) provide encrypted storage with audit, access control, and rotation capabilities.
 
 ### Platform Differences
-- **Windows:** Set via Control Panel, CLI (`set`), or PowerShell (`$env:VAR_NAME`).
-- **Unix/Linux/macOS:** Set via `export VAR=value` in shell, or add to `.bashrc`/`.zshrc` for persistence.
+- **Windows:**Set via Control Panel, CLI (`set`), or PowerShell (`$env:VAR_NAME`).
+- **Unix/Linux/macOS:**Set via `export VAR=value` in shell, or add to `.bashrc`/`.zshrc` for persistence.
 ## How Environment Variables Are Used
 
-**Workflow:**
-1. Define secrets outside the codebase (OS, `.env` file, secret manager, deployment dashboard).
+**Workflow:**1. Define secrets outside the codebase (OS, `.env` file, secret manager, deployment dashboard).
 2. Reference them in application code via environment variable APIs.
 3. Deploy the application—secrets are injected at runtime.
 
-**Example:**  
-Instead of hardcoding `API_KEY = "abc123"`, set the value as an environment variable and let the application read it securely at runtime.
+**Example:**Instead of hardcoding `API_KEY = "abc123"`, set the value as an environment variable and let the application read it securely at runtime.
 
-**Automated Secret Injection:**  
-- In CI/CD, secrets are often injected at build or deployment time.
+**Automated Secret Injection:**- In CI/CD, secrets are often injected at build or deployment time.
 - Secret managers or deployment dashboards provide UIs/APIs for defining and rotating secrets.
 ## Common Use Cases & Examples
 
-- **API Keys:** External services (OpenAI, Google Cloud, Stripe).
-- **Database Credentials:** Securely pass DB usernames, passwords, hostnames.
-- **Secret Tokens:** JWT signing keys, OAuth client secrets, webhook tokens.
-- **Feature Flags:** Enable/disable features dynamically.
-- **Environment Tags:** Indicate `development`, `staging`, or `production`.
+- **API Keys:**External services (OpenAI, Google Cloud, Stripe).
+- **Database Credentials:**Securely pass DB usernames, passwords, hostnames.
+- **Secret Tokens:**JWT signing keys, OAuth client secrets, webhook tokens.
+- **Feature Flags:**Enable/disable features dynamically.
+- **Environment Tags:**Indicate `development`, `staging`, or `production`.
 
-**.env Example:**
-```
+**.env Example:**```
 OPENAI_API_KEY=sk-abc123
 DATABASE_URL=postgres://user:pass@host:5432/db
 MODE=production
 ```
 
-**Platform Examples:**
-- [Netlify Environment Variables](https://docs.netlify.com/configure-builds/environment-variables/)
+**Platform Examples:**- [Netlify Environment Variables](https://docs.netlify.com/configure-builds/environment-variables/)
 - [Vercel Environment Variables](https://vercel.com/docs/concepts/projects/environment-variables)
 
 ## Setting and Accessing Environment Variables
@@ -149,20 +138,20 @@ MODE=production
   API_KEY=abc123
   DB_PASS=supersecret
   ```
-- **Security:** Always add `.env` to `.gitignore` to avoid accidental commits to version control.
+- **Security:**Always add `.env` to `.gitignore` to avoid accidental commits to version control.
 
 #### Secret Managers
 
-- **AWS Secrets Manager:** [Official Docs](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
-- **Azure Key Vault:** [Official Docs](https://learn.microsoft.com/en-us/azure/key-vault/)
-- **HashiCorp Vault:** [Official Docs](https://www.vaultproject.io/docs)
+- **AWS Secrets Manager:**[Official Docs](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
+- **Azure Key Vault:**[Official Docs](https://learn.microsoft.com/en-us/azure/key-vault/)
+- **HashiCorp Vault:**[Official Docs](https://www.vaultproject.io/docs)
 - Secrets are encrypted, access-controlled, and auditable.
 
 #### Platform Dashboards
 
-- **Render:** [Configure Environment Variables](https://render.com/docs/configure-environment-variables)
-- **Netlify:** [Environment Variables](https://docs.netlify.com/configure-builds/environment-variables/)
-- **Vercel:** [Environment Variables](https://vercel.com/docs/concepts/projects/environment-variables)
+- **Render:**[Configure Environment Variables](https://render.com/docs/configure-environment-variables)
+- **Netlify:**[Environment Variables](https://docs.netlify.com/configure-builds/environment-variables/)
+- **Vercel:**[Environment Variables](https://vercel.com/docs/concepts/projects/environment-variables)
 
 ### Code Examples: Node.js, Python, .NET
 
@@ -215,58 +204,42 @@ MODE=production
      ```
 ## Managing & Rotating Secrets
 
-**Secret Lifecycle:**
-- **Set Multiple Secrets:** Batch via `.env` files, platform dashboards, or secret manager APIs.
-- **List Secrets:** CLI tools (e.g., `dotnet user-secrets list`), dashboards, APIs.
-- **Update/Rotate:** Change values in secret managers, `.env` files, or dashboards; redeploy/restart apps if required.
-- **Remove/Expire:** Delete or revoke secrets when no longer needed. Expired secrets should be purged.
+**Secret Lifecycle:**- **Set Multiple Secrets:**Batch via `.env` files, platform dashboards, or secret manager APIs.
+- **List Secrets:**CLI tools (e.g., `dotnet user-secrets list`), dashboards, APIs.
+- **Update/Rotate:**Change values in secret managers, `.env` files, or dashboards; redeploy/restart apps if required.
+- **Remove/Expire:**Delete or revoke secrets when no longer needed. Expired secrets should be purged.
 
-**Automated Rotation:**
-- Use dynamic secrets (where possible) that expire after use or session, e.g., temporary DB credentials via Vault.
+**Automated Rotation:**- Use dynamic secrets (where possible) that expire after use or session, e.g., temporary DB credentials via Vault.
 - Configure scheduled rotation in secret managers (e.g., AWS, Azure, HashiCorp Vault).
 - Ensure application code supports hot-reload or graceful re-authentication on secret changes.
 
-**Mapping to Configuration Objects:**
-- .NET: Map secrets to POCOs for structured access.
+**Mapping to Configuration Objects:**- .NET: Map secrets to POCOs for structured access.
 - Node.js/Python: Use config libraries or custom wrappers for validation and aggregation.
 ## Security Best Practices
 
-- **Never store secrets in version control.**
-- **Add `.env` and similar files to `.gitignore`.**
-- **Use secret managers for production, not plaintext files.**
-- **Principle of Least Privilege:** Restrict access to only those who need it.
-- **Rotate and revoke secrets regularly.**
-- **Audit and log all secret access.**
-- **Never expose runtime secrets to client-side code (e.g., browser JavaScript).**
-- **Automate secret scanning in CI/CD pipelines:**
-    - [GitHub Secret Scanning](https://docs.github.com/en/code-security/secret-security/about-secret-scanning)
+- **Never store secrets in version control.**- **Add `.env` and similar files to `.gitignore`.**- **Use secret managers for production, not plaintext files.**- **Principle of Least Privilege:**Restrict access to only those who need it.
+- **Rotate and revoke secrets regularly.**- **Audit and log all secret access.**- **Never expose runtime secrets to client-side code (e.g., browser JavaScript).**- **Automate secret scanning in CI/CD pipelines:**- [GitHub Secret Scanning](https://docs.github.com/en/code-security/secret-security/about-secret-scanning)
     - [Azure DevOps Credential Scanner](https://learn.microsoft.com/en-us/azure/devops/repos/security/github-advanced-security-secret-scanning)
 
-- **Encrypt secrets at rest and in transit.**
-- **Isolate secrets by environment and service.**
-- **Minimize human interaction with secrets—use automated pipelines.**
-## Advanced Scenarios: Multiple Environments, Secret Files, Environment Groups
+- **Encrypt secrets at rest and in transit.**- **Isolate secrets by environment and service.**- **Minimize human interaction with secrets—use automated pipelines.**## Advanced Scenarios: Multiple Environments, Secret Files, Environment Groups
 
-- **Multiple Environments:** Use separate `.env` files or secret sets for `development`, `staging`, and `production`.
-- **Secret Files:** Upload secret files (e.g., private keys) via platform dashboards (e.g., Render, Vercel).
-- **Environment Groups:** Group variables for microservices or multi-app deployments.
-- **Centralized Configuration:** Use environment groups or secret managers to share secrets across teams/services.
+- **Multiple Environments:**Use separate `.env` files or secret sets for `development`, `staging`, and `production`.
+- **Secret Files:**Upload secret files (e.g., private keys) via platform dashboards (e.g., Render, Vercel).
+- **Environment Groups:**Group variables for microservices or multi-app deployments.
+- **Centralized Configuration:**Use environment groups or secret managers to share secrets across teams/services.
 
-**Architectural Patterns:**
-- **Kubernetes Sidecar:** Use a sidecar container (e.g., Vault Agent) to fetch secrets and mount into main container ([OWASP Example](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#example-1-kubernetes-with-a-sidecar-container)).
-- **Dynamic Secrets:** Applications request secrets at startup and receive temporary, auto-expiring credentials.
+**Architectural Patterns:**- **Kubernetes Sidecar:**Use a sidecar container (e.g., Vault Agent) to fetch secrets and mount into main container ([OWASP Example](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#example-1-kubernetes-with-a-sidecar-container)).
+- **Dynamic Secrets:**Applications request secrets at startup and receive temporary, auto-expiring credentials.
 
 ## Limitations and Alternatives
 
-**Limitations:**
-- **Plaintext Storage:** `.env` files and OS-level variables are unencrypted on disk.
-- **Complex Configs:** Structuring nested or large configs in env variables is difficult.
-- **Manual Sync:** Distributing secrets across teams/environments can be error-prone without a central manager.
+**Limitations:**- **Plaintext Storage:**`.env` files and OS-level variables are unencrypted on disk.
+- **Complex Configs:**Structuring nested or large configs in env variables is difficult.
+- **Manual Sync:**Distributing secrets across teams/environments can be error-prone without a central manager.
 
-**Alternatives:**
-- **Secret Managers:** AWS Secrets Manager, Azure Key Vault, HashiCorp Vault.
-- **Encrypted Configuration Files:** For complex configs (must be excluded from version control).
-- **Platform Tools:** Use deployment dashboards (Render, Vercel, Netlify) for managing and grouping secrets.
+**Alternatives:**- **Secret Managers:**AWS Secrets Manager, Azure Key Vault, HashiCorp Vault.
+- **Encrypted Configuration Files:**For complex configs (must be excluded from version control).
+- **Platform Tools:**Use deployment dashboards (Render, Vercel, Netlify) for managing and grouping secrets.
 ## Key Takeaways
 
 - Environment variables securely inject sensitive values into apps without exposing them in code or UIs.
@@ -296,22 +269,19 @@ Suppose you have an AI chatbot requiring an external LLM API key. Instead of emb
 3. The key is never exposed to users, code, or logs.
 4. To rotate, update it in the dashboard/secret manager and redeploy—no code changes.
 
-**Sample Node.js:**
-```js
+**Sample Node.js:**```js
 require('dotenv').config();
 const openai = require('openai');
 openai.apiKey = process.env.OPENAI_API_KEY;
 ```
-**Sample Python:**
-```python
+**Sample Python:**```python
 import os
 from openai import OpenAI
 
 api_key = os.getenv('OPENAI_API_KEY')
 client = OpenAI(api_key=api_key)
 ```
-**Sample .NET:**
-```csharp
+**Sample .NET:**```csharp
 var builder = WebApplication.CreateBuilder(args);
 var openAiApiKey = builder.Configuration["OPENAI_API_KEY"];
 ```

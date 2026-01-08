@@ -1,4 +1,24 @@
 keywords:
+- keyword: キャッシュ拡張生成
+  url: /ja/blog/rag-vs-cag-knowledge-augmentation/
+  exact: false
+  priority: 11
+  title: 大規模言語モデルに外部知識を組み込む2つの強力な手法、Retrieval-Augmented Generation(RAG)とCache-Augmented Generation(CAG)の違いを探ります。それぞれのアプローチをいつ使用すべきか、そしてAIにおける知識ギャップの問題をどのように解決するかを学びましょう。
+- keyword: CAG
+  url: /ja/blog/rag-vs-cag-knowledge-augmentation/
+  exact: true
+  priority: 11
+  title: 大規模言語モデルに外部知識を組み込む2つの強力な手法、Retrieval-Augmented Generation(RAG)とCache-Augmented Generation(CAG)の違いを探ります。それぞれのアプローチをいつ使用すべきか、そしてAIにおける知識ギャップの問題をどのように解決するかを学びましょう。
+- keyword: 検索拡張生成
+  url: /ja/glossary/RAG/
+  exact: false
+  priority: 11
+  title: RAG(Retrieval-Augmented Generation)は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。
+- keyword: RAG
+  url: /ja/glossary/RAG/
+  exact: true
+  priority: 11
+  title: RAG(Retrieval-Augmented Generation)は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。
 - keyword: AIレポーティング
   url: /ja/glossary/ai-reporting/
   exact: true

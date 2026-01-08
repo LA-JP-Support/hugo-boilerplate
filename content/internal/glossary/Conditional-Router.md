@@ -12,12 +12,11 @@ url = "/internal/glossary/Conditional-Router/"
 +++
 ## Definición
 
-Un **Router Condicional** es un componente o nodo de flujo de trabajo que evalúa los datos entrantes según una o más reglas definidas por el usuario y dirige los datos a una ruta descendente específica según la condición que coincida. Su propósito es habilitar ramificación dinámica y basada en reglas en flujos de automatización, chatbots de IA, automatización de procesos empresariales y arquitecturas de software. Cada puerto de salida corresponde a un posible resultado de enrutamiento, determinado por reglas personalizables utilizando una variedad de operadores.
+Un **Router Condicional**es un componente o nodo de flujo de trabajo que evalúa los datos entrantes según una o más reglas definidas por el usuario y dirige los datos a una ruta descendente específica según la condición que coincida. Su propósito es habilitar ramificación dinámica y basada en reglas en flujos de automatización, chatbots de IA, automatización de procesos empresariales y arquitecturas de software. Cada puerto de salida corresponde a un posible resultado de enrutamiento, determinado por reglas personalizables utilizando una variedad de operadores.
 
-- **Fuente autorizada:** [AWS Glue Conditional Router](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html), [FlowHunt Conditional Router](https://www.flowhunt.io/components/ConditionalRouter/)
+- **Fuente autorizada:**[AWS Glue Conditional Router](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html), [FlowHunt Conditional Router](https://www.flowhunt.io/components/ConditionalRouter/)
 
-**Capacidades clave:**
-- Recibe entrada (texto, objetos estructurados, metadatos, etc.)
+**Capacidades clave:**- Recibe entrada (texto, objetos estructurados, metadatos, etc.)
 - Aplica condiciones definidas por el usuario (ej.: `equals`, `contains`, `is_email`, `regex`)
 - Activa exactamente una salida (ruta) por evaluación, excepto en algunos contextos ETL (ver [AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html))
 - Soporta flujos deterministas y gestionables en automatizaciones complejas
@@ -29,19 +28,19 @@ Un **Router Condicional** es un componente o nodo de flujo de trabajo que evalú
 
 El Router Condicional compara los datos entrantes con valores o expresiones lógicas especificadas utilizando un conjunto de operadores configurables. Cada condición está vinculada a una salida nombrada. El router verifica las condiciones en orden: la primera condición `true` determina la ruta de salida. Si ninguna condición coincide, el router activa una ruta predeterminada o de respaldo (si está configurada).
 
-- **Enrutamiento de un solo camino:** Solo una salida se activa por evaluación (enrutamiento exclusivo), excepto en algunos marcos ETL (ver [AWS Glue: multiple groups](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)).
-- **Reglas configurables:** Las condiciones se definen con operadores y pueden referenciar múltiples campos, incluidos datos anidados.
-- **Extensible:** Permite composición lógica, condiciones anidadas y expresiones personalizadas.
+- **Enrutamiento de un solo camino:**Solo una salida se activa por evaluación (enrutamiento exclusivo), excepto en algunos marcos ETL (ver [AWS Glue: multiple groups](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)).
+- **Reglas configurables:**Las condiciones se definen con operadores y pueden referenciar múltiples campos, incluidos datos anidados.
+- **Extensible:**Permite composición lógica, condiciones anidadas y expresiones personalizadas.
 
 ### Secuencia de evaluación
 
-1. **Recepción de entrada:** Recibe datos y metadatos o parámetros opcionales.
-2. **Evaluación de condición:** Evalúa secuencialmente cada condición definida usando los operadores configurados.
-3. **Decisión de enrutamiento:** La primera condición que resulte `true` determina la salida.
-4. **Manejo predeterminado:** Si ninguna condición coincide, los datos se envían a una ruta predeterminada (si está definida).
-5. **Procesamiento descendente:** Los datos se pasan al siguiente componente o acción.
+1. **Recepción de entrada:**Recibe datos y metadatos o parámetros opcionales.
+2. **Evaluación de condición:**Evalúa secuencialmente cada condición definida usando los operadores configurados.
+3. **Decisión de enrutamiento:**La primera condición que resulte `true` determina la salida.
+4. **Manejo predeterminado:**Si ninguna condición coincide, los datos se envían a una ruta predeterminada (si está definida).
+5. **Procesamiento descendente:**Los datos se pasan al siguiente componente o acción.
 
-- **Ejemplos del mundo real:** [Slack Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder) permite a los usuarios crear flujos de trabajo de múltiples ramas basados en entradas de formularios o metadatos de mensajes sin código.
+- **Ejemplos del mundo real:**[Slack Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder) permite a los usuarios crear flujos de trabajo de múltiples ramas basados en entradas de formularios o metadatos de mensajes sin código.
 
 
 ## Entradas
@@ -57,7 +56,7 @@ Los parámetros de entrada para Routers Condicionales pueden variar según la pl
 | Metadatos/Parámetros | Objeto         | Campos adicionales para enrutamiento (ej.: user_plan, región, modelo) | No    | Sí       |
 | Objeto de mensaje   | Objeto         | Carga útil que se pasa por la ruta                                 | No        | No       |
 
-- **Fuente:** [FlowHunt Inputs](https://www.flowhunt.io/components/ConditionalRouter/), [AWS Glue Documentation](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
+- **Fuente:**[FlowHunt Inputs](https://www.flowhunt.io/components/ConditionalRouter/), [AWS Glue Documentation](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
 - Muchas plataformas (ej.: [Haystack](https://docs.haystack.deepset.ai/docs/conditionalrouter)) soportan enrutamiento basado en plantillas con variables dinámicas.
 
 
@@ -83,8 +82,8 @@ Los Routers Condicionales soportan una amplia variedad de operadores para enruta
 | `$gt`, `$gte`       | Mayor que / mayor o igual (números)               | `score >= 0.8`                        |
 | `$lt`, `$lte`       | Menor que / menor o igual (números)               | `temperature < 0.7`                   |
 
-- **Operadores lógicos:** `$and` (todas las condiciones deben ser verdaderas), `$or` (cualquier condición verdadera)
-- **Fuentes:** [FlowHunt Operator List](https://www.flowhunt.io/components/ConditionalRouter/), [Portkey Conditional Routing](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing), [AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
+- **Operadores lógicos:**`$and` (todas las condiciones deben ser verdaderas), `$or` (cualquier condición verdadera)
+- **Fuentes:**[FlowHunt Operator List](https://www.flowhunt.io/components/ConditionalRouter/), [Portkey Conditional Routing](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing), [AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
 
 
 ## Salidas
@@ -98,11 +97,11 @@ Cada nodo Router Condicional proporciona múltiples puertos de salida:
 | Rutas personalizadas | Salidas nombradas para cada condición | Mensaje/Objeto         |
 | Ruta predeterminada | Cuando ninguna condición coincide     | Mensaje/Objeto         |
 
-- **Puertos de salida nombrados:** Cada condición se vincula a una salida nombrada.
-- **Salida predeterminada:** Maneja datos no coincidentes.
-- **Reenvío de datos:** El mensaje/dato original (o transformado) se pasa por la salida activada.
+- **Puertos de salida nombrados:**Cada condición se vincula a una salida nombrada.
+- **Salida predeterminada:**Maneja datos no coincidentes.
+- **Reenvío de datos:**El mensaje/dato original (o transformado) se pasa por la salida activada.
 
-- **Fuente:** [FlowHunt Outputs](https://www.flowhunt.io/components/ConditionalRouter/), [AWS Glue Routing](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
+- **Fuente:**[FlowHunt Outputs](https://www.flowhunt.io/components/ConditionalRouter/), [AWS Glue Routing](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
 
 
 ## Configuración avanzada
@@ -111,8 +110,7 @@ Cada nodo Router Condicional proporciona múltiples puertos de salida:
 
 Para definir lógica de múltiples condiciones para una sola ruta, utilice operadores lógicos:
 
-**Ejemplo ([Portkey](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing))**
-```json
+**Ejemplo ([Portkey](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing))**```json
 {
   "query": {
     "$and": [
@@ -219,7 +217,7 @@ Enrutar usuarios empresariales con solicitudes de alta creatividad a un modelo p
 
 ### Ejemplo de flujo de trabajo real
 
-- **Slack:** [Automatización de un flujo de solicitudes de soporte](https://slack.com/blog/news/conditional-branching-workflow-builder) donde las entradas de un formulario dirigen la solicitud a diferentes equipos o activan aprobaciones multinivel—sin código.
+- **Slack:**[Automatización de un flujo de solicitudes de soporte](https://slack.com/blog/news/conditional-branching-workflow-builder) donde las entradas de un formulario dirigen la solicitud a diferentes equipos o activan aprobaciones multinivel—sin código.
 
 
 ## Usos típicos
@@ -252,34 +250,28 @@ Enrutar usuarios empresariales con solicitudes de alta creatividad a un modelo p
 
 ## Mejores prácticas
 
-- **Orden de condiciones:** Coloque las condiciones específicas antes que las genéricas para evitar coincidencias prematuras. ([FlowHunt](https://www.flowhunt.io/components/ConditionalRouter/), [AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html))
-- **Valores predeterminados de seguridad:** Configure siempre una salida predeterminada para datos no coincidentes.
-- **Pruebas:** Valide la lógica con datos de prueba para asegurar el enrutamiento correcto; use registros y analítica para monitorear decisiones de enrutamiento.
-- **Documentación:** Comente o documente condiciones complejas para mantenibilidad.
-- **Seguridad:** Evite la evaluación insegura de plantillas a menos que sea esencial y las entradas sean confiables. ([Haystack](https://docs.haystack.deepset.ai/docs/conditionalrouter))
-- **Rendimiento:** Evite anidamientos excesivos o condiciones extremadamente complejas para mantener un enrutamiento rápido y manejable.
-- **Accesibilidad sin código:** Use plataformas con interfaces gráficas o sin código para una accesibilidad más amplia (ver [Slack Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder)).
+- **Orden de condiciones:**Coloque las condiciones específicas antes que las genéricas para evitar coincidencias prematuras. ([FlowHunt](https://www.flowhunt.io/components/ConditionalRouter/), [AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html))
+- **Valores predeterminados de seguridad:**Configure siempre una salida predeterminada para datos no coincidentes.
+- **Pruebas:**Valide la lógica con datos de prueba para asegurar el enrutamiento correcto; use registros y analítica para monitorear decisiones de enrutamiento.
+- **Documentación:**Comente o documente condiciones complejas para mantenibilidad.
+- **Seguridad:**Evite la evaluación insegura de plantillas a menos que sea esencial y las entradas sean confiables. ([Haystack](https://docs.haystack.deepset.ai/docs/conditionalrouter))
+- **Rendimiento:**Evite anidamientos excesivos o condiciones extremadamente complejas para mantener un enrutamiento rápido y manejable.
+- **Accesibilidad sin código:**Use plataformas con interfaces gráficas o sin código para una accesibilidad más amplia (ver [Slack Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder)).
 
 
 ## Solución de problemas y Preguntas frecuentes
 
-**P: ¿Qué ocurre si coinciden múltiples condiciones?**  
-R: Solo se selecciona la primera condición coincidente (en orden); las coincidencias posteriores se ignoran ([FlowHunt](https://www.flowhunt.io/components/ConditionalRouter/), [AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)). En algunas herramientas ETL, los datos pueden enrutarse a múltiples salidas.
+**P: ¿Qué ocurre si coinciden múltiples condiciones?**R: Solo se selecciona la primera condición coincidente (en orden); las coincidencias posteriores se ignoran ([FlowHunt](https://www.flowhunt.io/components/ConditionalRouter/), [AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)). En algunas herramientas ETL, los datos pueden enrutarse a múltiples salidas.
 
-**P: ¿Cómo enrutó según múltiples campos?**  
-R: Use operadores lógicos (`$and`, `$or`) para combinar condiciones sobre varios campos ([Portkey](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing)).
+**P: ¿Cómo enrutó según múltiples campos?**R: Use operadores lógicos (`$and`, `$or`) para combinar condiciones sobre varios campos ([Portkey](https://docs.portkey.ai/docs/product/ai-gateway/conditional-routing)).
 
-**P: ¿Qué pasa si falta un campo referenciado?**  
-R: La condición normalmente se evalúa como `false` y el router continúa a la siguiente condición o predeterminada.
+**P: ¿Qué pasa si falta un campo referenciado?**R: La condición normalmente se evalúa como `false` y el router continúa a la siguiente condición o predeterminada.
 
-**P: ¿Puedo usar regex o coincidencia avanzada?**  
-R: Sí, muchos routers soportan `$regex` o operadores basados en patrones.
+**P: ¿Puedo usar regex o coincidencia avanzada?**R: Sí, muchos routers soportan `$regex` o operadores basados en patrones.
 
-**P: ¿Es adecuado para personas no técnicas?**  
-R: Muchas plataformas ofrecen configuración sin código (ver [Slack Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder)).
+**P: ¿Es adecuado para personas no técnicas?**R: Muchas plataformas ofrecen configuración sin código (ver [Slack Workflow Builder](https://slack.com/blog/news/conditional-branching-workflow-builder)).
 
-**P: ¿Puedo realizar enrutamiento paralelo?**  
-R: La mayoría de routers son exclusivos (una sola ruta por evaluación). Para acciones paralelas, use componentes especializados de múltiples rutas o ramificación.
+**P: ¿Puedo realizar enrutamiento paralelo?**R: La mayoría de routers son exclusivos (una sola ruta por evaluación). Para acciones paralelas, use componentes especializados de múltiples rutas o ramificación.
 
 
 ## Documentación relacionada
@@ -308,8 +300,7 @@ R: La mayoría de routers son exclusivos (una sola ruta por evaluación). Para a
 Para ejemplos de implementación, configuración avanzada y solución de problemas, consulte los enlaces de documentación oficial arriba. Estos cubren detalles específicos de plataforma para herramientas de IA, automatización y procesos empresariales.
 
 
-**Citas:**
-- [Slack Blog: Conditional Branching](https://slack.com/blog/news/conditional-branching-workflow-builder)
+**Citas:**- [Slack Blog: Conditional Branching](https://slack.com/blog/news/conditional-branching-workflow-builder)
 - [AWS Glue Conditional Router](https://docs.aws.amazon.com/glue/latest/dg/transforms-conditional-router.html)
 - [FlowHunt Conditional Router](https://www.flowhunt.io/components/ConditionalRouter/)
 - [Fluix Conditional Routing](https://fluix.io/help/conditional-logic-tutorial)
@@ -319,8 +310,7 @@ Para ejemplos de implementación, configuración avanzada y solución de problem
 Para una introducción interactiva y visual, consulte la [demo de Workflow Builder de Slack](https://slack.com/help/articles/360035692513-Guide-to-Slack-Workflow-Builder) y la [demo en vivo de FlowHunt](https://www.flowhunt.io/demo/).
 
 
-**Video tutoriales:**  
-- [Conditional Routing in Slack Workflow Builder (YouTube)](https://www.youtube.com/watch?v=3O4c7iYhD5Y)  
+**Video tutoriales:**- [Conditional Routing in Slack Workflow Builder (YouTube)](https://www.youtube.com/watch?v=3O4c7iYhD5Y)  
 - [How to Use Conditional Router in FlowHunt (YouTube)](https://www.youtube.com/watch?v=rgqX7Qj3QAo)  
 - [AWS Glue Conditional Router Tutorial (YouTube)](https://www.youtube.com/watch?v=90p4Vq8F9pQ)
 

@@ -13,14 +13,11 @@ url = "/internal/glossary/Iterator---For-Each/"
 +++
 ## ¿Qué es un Iterador / For-Each?
 
-**Iterador:**  
-Un iterador es un objeto o bloque lógico que permite recorrer una colección (como una lista, array o mapa), procesando cada elemento uno a la vez. Los iteradores son fundamentales para manejar colecciones en casi todos los lenguajes de programación modernos. Proporcionan una forma estandarizada de acceder a cada elemento de manera secuencial, sin importar cómo esté estructurada la colección en memoria. Por ejemplo, en Java, la interfaz [Iterator](https://www.w3schools.com/java/java_iterator.asp) permite recorrer `ArrayList`, `HashSet` y otras colecciones sin tener que gestionar directamente los índices o los detalles internos de la estructura de datos.
+**Iterador:**Un iterador es un objeto o bloque lógico que permite recorrer una colección (como una lista, array o mapa), procesando cada elemento uno a la vez. Los iteradores son fundamentales para manejar colecciones en casi todos los lenguajes de programación modernos. Proporcionan una forma estandarizada de acceder a cada elemento de manera secuencial, sin importar cómo esté estructurada la colección en memoria. Por ejemplo, en Java, la interfaz [Iterator](https://www.w3schools.com/java/java_iterator.asp) permite recorrer `ArrayList`, `HashSet` y otras colecciones sin tener que gestionar directamente los índices o los detalles internos de la estructura de datos.
 
-**Estructura For-Each:**  
-Una estructura for-each (también llamada bucle for-each, sentencia foreach o bloque iterador) ejecuta un bloque de código para cada elemento de una colección, abstraiendo los detalles de cómo ocurre la iteración. Muchos lenguajes ofrecen esto como una instrucción integrada—`for ... of` en JavaScript, `foreach` en C#, y el bucle `for` mejorado en Java. Estas estructuras también son básicas en herramientas de automatización de flujos, como Relay.app, donde un bloque iterador procesa cada elemento de una lista paso a paso ([Relay.app Docs](https://docs.relay.app/flow-control/iterators)).
+**Estructura For-Each:**Una estructura for-each (también llamada bucle for-each, sentencia foreach o bloque iterador) ejecuta un bloque de código para cada elemento de una colección, abstraiendo los detalles de cómo ocurre la iteración. Muchos lenguajes ofrecen esto como una instrucción integrada—`for ... of` en JavaScript, `foreach` en C#, y el bucle `for` mejorado en Java. Estas estructuras también son básicas en herramientas de automatización de flujos, como Relay.app, donde un bloque iterador procesa cada elemento de una lista paso a paso ([Relay.app Docs](https://docs.relay.app/flow-control/iterators)).
 
-> **Punto clave:**  
-> Los iteradores y las estructuras for-each simplifican el procesamiento de colecciones, reducen la probabilidad de errores de desbordamiento y hacen que el código sea más legible y mantenible. Son fundamentales tanto en la programación como en la automatización de flujos de trabajo.
+> **Punto clave:**> Los iteradores y las estructuras for-each simplifican el procesamiento de colecciones, reducen la probabilidad de errores de desbordamiento y hacen que el código sea más legible y mantenible. Son fundamentales tanto en la programación como en la automatización de flujos de trabajo.
 
 ## Explicación técnica de los iteradores
 
@@ -28,30 +25,21 @@ Una estructura for-each (también llamada bucle for-each, sentencia foreach o bl
 
 Un iterador debe proporcionar un mecanismo para devolver el siguiente elemento de una secuencia y señalar cuando ya no quedan más elementos. Esto se formaliza como un *protocolo de iterador* en muchos lenguajes:
 
-- **Protocolo de iterador:**  
-  El objeto debe implementar una interfaz específica, como un método `next()` (JavaScript, Python, Java) o `MoveNext()`/`Current` (C#).
-- **Consumo:**  
-  Los iteradores suelen ser *consumidos* a medida que se procesan—una vez que se llega al final, no se puede reiniciar ni reutilizar el mismo objeto iterador; hay que crear uno nuevo si se quiere recorrer la colección de nuevo.
+- **Protocolo de iterador:**El objeto debe implementar una interfaz específica, como un método `next()` (JavaScript, Python, Java) o `MoveNext()`/`Current` (C#).
+- **Consumo:**Los iteradores suelen ser *consumidos* a medida que se procesan—una vez que se llega al final, no se puede reiniciar ni reutilizar el mismo objeto iterador; hay que crear uno nuevo si se quiere recorrer la colección de nuevo.
 
 #### Descripción general de los protocolos por lenguaje
 
-- **Python:**  
-  Los objetos que implementan los métodos `__iter__()` y `__next__()` cumplen con el protocolo de iterador. Una lista u otra colección es *iterable*; al llamar a `iter()` sobre ella se obtiene un iterador ([GeeksforGeeks](https://www.geeksforgeeks.org/python/python-difference-iterable-iterator/)).  
-- **JavaScript:**  
-  Los objetos que implementan el método `next()`, retornando `{value, done}`, son iteradores según el [protocolo de iterador](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators). Muchos tipos integrados (Array, String, Set, Map) son iterables, y el método `[Symbol.iterator]()` produce un iterador.  
-- **Java:**  
-  Los objetos que implementan la interfaz `Iterator<E>` proveen `hasNext()`, `next()` y opcionalmente `remove()` ([W3Schools](https://www.w3schools.com/java/java_iterator.asp)).  
-- **C#:**  
-  Las interfaces [IEnumerator](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerator) y [IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable) definen el protocolo.  
-- **Automatización de flujos (Relay.app):**  
-  Los bloques iteradores procesan visualmente cada elemento de una lista; la herramienta gestiona la lógica de iteración ([Relay.app Docs](https://docs.relay.app/flow-control/iterators)).
+- **Python:**Los objetos que implementan los métodos `__iter__()` y `__next__()` cumplen con el protocolo de iterador. Una lista u otra colección es *iterable*; al llamar a `iter()` sobre ella se obtiene un iterador ([GeeksforGeeks](https://www.geeksforgeeks.org/python/python-difference-iterable-iterator/)).  
+- **JavaScript:**Los objetos que implementan el método `next()`, retornando `{value, done}`, son iteradores según el [protocolo de iterador](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators). Muchos tipos integrados (Array, String, Set, Map) son iterables, y el método `[Symbol.iterator]()` produce un iterador.  
+- **Java:**Los objetos que implementan la interfaz `Iterator<E>` proveen `hasNext()`, `next()` y opcionalmente `remove()` ([W3Schools](https://www.w3schools.com/java/java_iterator.asp)).  
+- **C#:**Las interfaces [IEnumerator](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerator) y [IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable) definen el protocolo.  
+- **Automatización de flujos (Relay.app):**Los bloques iteradores procesan visualmente cada elemento de una lista; la herramienta gestiona la lógica de iteración ([Relay.app Docs](https://docs.relay.app/flow-control/iterators)).
 
 ### Iterador vs Iterable
 
-- **Iterable:**  
-  Un objeto que puede producir un iterador (por ejemplo, una lista, array, set).  
-- **Iterador:**  
-  El objeto que realmente entrega un elemento a la vez del iterable.
+- **Iterable:**Un objeto que puede producir un iterador (por ejemplo, una lista, array, set).  
+- **Iterador:**El objeto que realmente entrega un elemento a la vez del iterable.
 
 *En Python, todo iterador es también un iterable, pero no todo iterable es un iterador* ([GeeksforGeeks](https://www.geeksforgeeks.org/python/python-difference-iterable-iterator/)).
 
@@ -61,12 +49,9 @@ Un bucle o bloque for-each permite procesar automáticamente cada elemento de un
 
 ### Ventajas
 
-- **Reducción de errores:**  
-  Los bucles for-each eliminan errores comunes como desbordamientos y saltos accidentales de elementos.
-- **Claridad de código:**  
-  El código suele ser más corto, fácil de leer y comunica directamente la intención.
-- **Seguridad:**  
-  For-each funciona con cualquier objeto iterable/colección, reduciendo el acoplamiento a la estructura subyacente de la colección.
+- **Reducción de errores:**Los bucles for-each eliminan errores comunes como desbordamientos y saltos accidentales de elementos.
+- **Claridad de código:**El código suele ser más corto, fácil de leer y comunica directamente la intención.
+- **Seguridad:**For-each funciona con cualquier objeto iterable/colección, reduciendo el acoplamiento a la estructura subyacente de la colección.
 
 Por ejemplo, en C#, la sentencia `foreach` funciona perfectamente con cualquier tipo que implemente `IEnumerable<T>` ([Stackify](https://stackify.com/c-foreach-definition-and-best-practices/)). En JavaScript, el bucle `for...of` itera sobre todos los elementos de un objeto iterable ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)).
 
@@ -78,8 +63,8 @@ Por ejemplo, en C#, la sentencia `foreach` funciona perfectamente con cualquier 
 
 En Python, un *iterable* es cualquier objeto que puede pasarse a `iter()` para obtener un iterador. El iterador luego devuelve elementos uno a uno mediante `next()`. Listas, tuplas, diccionarios, sets, cadenas y muchos otros tipos son iterables.
 
-- **Iterables:** implementan `__iter__()`, que debe retornar un objeto iterador.
-- **Iteradores:** implementan tanto `__iter__()` (retorna a sí mismo) como `__next__()` (retorna el siguiente elemento o lanza `StopIteration`).
+- **Iterables:**implementan `__iter__()`, que debe retornar un objeto iterador.
+- **Iteradores:**implementan tanto `__iter__()` (retorna a sí mismo) como `__next__()` (retorna el siguiente elemento o lanza `StopIteration`).
 
 [GeeksforGeeks: Python Iterables vs Iterators](https://www.geeksforgeeks.org/python/python-difference-iterable-iterator/)
 
@@ -116,10 +101,8 @@ for number in Counter():
 
 #### Notas prácticas
 
-- **Mejor práctica:**  
-  Usar bucles for para la mayoría de tareas de iteración.
-- **Precaución:**  
-  Modificar una colección durante la iteración puede provocar errores o resultados inesperados.
+- **Mejor práctica:**Usar bucles for para la mayoría de tareas de iteración.
+- **Precaución:**Modificar una colección durante la iteración puede provocar errores o resultados inesperados.
   [GeeksforGeeks: Python Iterables vs Iterators](https://www.geeksforgeeks.org/python/python-difference-iterable-iterator/)
 
 ### JavaScript
@@ -188,10 +171,8 @@ for (const num of genNumbers()) {
 
 #### Notas prácticas
 
-- **Precaución:**  
-  Los iteradores suelen consumirse tras un recorrido completo.
-- **Mejor práctica:**  
-  Usar `for...of` para una iteración limpia e idiomática.
+- **Precaución:**Los iteradores suelen consumirse tras un recorrido completo.
+- **Mejor práctica:**Usar `for...of` para una iteración limpia e idiomática.
   [MDN: Iterators and generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
 
 ### Java
@@ -244,10 +225,8 @@ while (it.hasNext()) {
 
 #### Notas prácticas
 
-- **Mejor práctica:**  
-  Usar for-each para lectura; usar `Iterator` directamente solo si necesitas eliminar elementos durante la iteración.
-- **Precaución:**  
-  Modificar la colección directamente durante la iteración puede causar excepciones.
+- **Mejor práctica:**Usar for-each para lectura; usar `Iterator` directamente solo si necesitas eliminar elementos durante la iteración.
+- **Precaución:**Modificar la colección directamente durante la iteración puede causar excepciones.
 
 ### C#
 
@@ -305,10 +284,8 @@ await foreach (var item in asyncSequence)
 
 #### Notas prácticas
 
-- **Mejor práctica:**  
-  Usar `foreach` para legibilidad y seguridad a menos que necesites modificar la colección o el índice.
-- **Precaución:**  
-  No está permitido modificar directamente una colección durante la iteración con `foreach`.
+- **Mejor práctica:**Usar `foreach` para legibilidad y seguridad a menos que necesites modificar la colección o el índice.
+- **Precaución:**No está permitido modificar directamente una colección durante la iteración con `foreach`.
   [Stackify: C# foreach definition and best practices](https://stackify.com/c-foreach-definition-and-best-practices/)
 
 ### Plataformas de Automatización de Flujos (Relay.app)
@@ -319,37 +296,27 @@ Plataformas de automatización de flujos como Relay.app ofrecen bloques *iterado
 
 #### Uso de iteradores en Relay.app: paso a paso
 
-1. **Agregar un bloque Iterador:**  
-   - Selecciona 'Iterator' en el menú de control de flujo ([Relay.app Docs](https://docs.relay.app/flow-control/iterators)).
-2. **Seleccionar la lista a procesar:**  
-   - Elige la lista de salida de un paso anterior (por ejemplo, una lista de filas de hoja de cálculo).
-3. **Configurar acciones:**  
-   - Dentro del iterador, agrega pasos para definir qué debe ocurrir con cada elemento (por ejemplo, enviar correo, actualizar un registro).
-4. **Usar los datos del elemento actual:**  
-
-> **Consejo:**  
-> Los bloques iteradores permiten un procesamiento visual y sin código de colecciones, ideal para automatizar tareas repetitivas en flujos de trabajo.
+1. **Agregar un bloque Iterador:**- Selecciona 'Iterator' en el menú de control de flujo ([Relay.app Docs](https://docs.relay.app/flow-control/iterators)).
+2. **Seleccionar la lista a procesar:**- Elige la lista de salida de un paso anterior (por ejemplo, una lista de filas de hoja de cálculo).
+3. **Configurar acciones:**- Dentro del iterador, agrega pasos para definir qué debe ocurrir con cada elemento (por ejemplo, enviar correo, actualizar un registro).
+4. **Usar los datos del elemento actual:**> **Consejo:**> Los bloques iteradores permiten un procesamiento visual y sin código de colecciones, ideal para automatizar tareas repetitivas en flujos de trabajo.
 
 #### Notas prácticas
 
-- **Mejor práctica:**  
-  Coloca todas las acciones que deban ocurrir por elemento dentro del bloque iterador.
-- **Precaución:**  
-  Evita modificar la lista subyacente durante la iteración.
+- **Mejor práctica:**Coloca todas las acciones que deban ocurrir por elemento dentro del bloque iterador.
+- **Precaución:**Evita modificar la lista subyacente durante la iteración.
   [Relay.app Docs: Looping (Iterators)](https://docs.relay.app/flow-control/iterators)
 
 ## Comparación: Iterador vs Iterable, For vs For-Each
 
 | Concepto       | Descripción                                                                                | Cuándo usar                                |
 |----------------|-------------------------------------------------------------------------------------------|--------------------------------------------|
-| **Iterador**   | Objeto que produce elementos de una colección uno a uno                                   | Cuando necesitas control fino de iteración |
-| **Iterable**   | Objeto que puede retornar un iterador (ej. listas, arrays, sets)                          | Cuando quieres iterar usando for-each      |
-| **For Loop**   | Bucle clásico con control sobre índices, condiciones e incrementos                        | Cuando necesitas acceso a índices o saltos |
-| **For-Each**   | Bucle simplificado que procesa cada elemento de una colección, oculta detalles de índice  | Cuando solo quieres procesar elementos     |
+| **Iterador**| Objeto que produce elementos de una colección uno a uno                                   | Cuando necesitas control fino de iteración |
+| **Iterable**| Objeto que puede retornar un iterador (ej. listas, arrays, sets)                          | Cuando quieres iterar usando for-each      |
+| **For Loop**| Bucle clásico con control sobre índices, condiciones e incrementos                        | Cuando necesitas acceso a índices o saltos |
+| **For-Each**| Bucle simplificado que procesa cada elemento de una colección, oculta detalles de índice  | Cuando solo quieres procesar elementos     |
 
-**Diferencias clave:**
-
-- For-each no expone directamente el índice actual.
+**Diferencias clave:**- For-each no expone directamente el índice actual.
 - For-each es más seguro para operaciones de solo lectura; los bucles for se usan para tamaños de paso personalizados, saltos u orden inverso.
 - Algunos lenguajes permiten eliminar elementos durante la iteración (`Iterator.remove()` de Java), otros no (`foreach` en C#).
 
@@ -357,13 +324,10 @@ Plataformas de automatización de flujos como Relay.app ofrecen bloques *iterado
 
 ### Errores comunes
 
-- **Modificar la colección durante la iteración** puede causar errores o comportamientos inesperados (ConcurrentModificationException en Java, error en tiempo de ejecución en C#).
-- **Los iteradores se consumen:**  
-  Una vez finalizados, no se pueden reiniciar sin crear uno nuevo.
-- **For-each no proporciona índice:**  
-  Usa un bucle `for` si necesitas la posición.
-- **Iteración infinita:**  
-  Los iteradores personalizados deben devolver una condición de parada (`StopIteration` en Python).
+- **Modificar la colección durante la iteración**puede causar errores o comportamientos inesperados (ConcurrentModificationException en Java, error en tiempo de ejecución en C#).
+- **Los iteradores se consumen:**Una vez finalizados, no se pueden reiniciar sin crear uno nuevo.
+- **For-each no proporciona índice:**Usa un bucle `for` si necesitas la posición.
+- **Iteración infinita:**Los iteradores personalizados deben devolver una condición de parada (`StopIteration` en Python).
 
 ### Mejores prácticas
 
@@ -373,19 +337,15 @@ Plataformas de automatización de flujos como Relay.app ofrecen bloques *iterado
 
 ### Características especiales
 
-- **Iteración asíncrona:**  
-  Soportado en C# (`await foreach`) y JavaScript (iteradores asíncronos y `for await...of`).
-- **Eliminar elementos:**  
-  Solo permitido en ciertos lenguajes (por ejemplo, `Iterator.remove()` de Java).
+- **Iteración asíncrona:**Soportado en C# (`await foreach`) y JavaScript (iteradores asíncronos y `for await...of`).
+- **Eliminar elementos:**Solo permitido en ciertos lenguajes (por ejemplo, `Iterator.remove()` de Java).
 
 ## Casos de uso y ejemplos
 
 ### Procesar filas de hoja de cálculo
 
-- **Python:**  
-  ```python
+- **Python:**```python
   for row in spreadsheet_rows:
       process(row)
   ```
-- **Relay.app:**  
-  - El bloque iterador procesa cada fila para extracción de datos, notificaciones, etc. ([Relay.app Docs](https://docs.relay
+- **Relay.app:**- El bloque iterador procesa cada fila para extracción de datos, notificaciones, etc. ([Relay.app Docs](https://docs.relay

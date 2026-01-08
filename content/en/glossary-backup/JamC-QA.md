@@ -11,7 +11,7 @@ draft: false
 
 ## Overview
 
-**JamC-QA** is a large-scale benchmark dataset specifically designed to test and evaluate large language models (LLMs) on Japanese-specific multiple-choice question answering. The questions span a wide range of domains including Japanese culture, customs, regional identity, geography, history, government, law, and healthcare.
+**JamC-QA**is a large-scale benchmark dataset specifically designed to test and evaluate large language models (LLMs) on Japanese-specific multiple-choice question answering. The questions span a wide range of domains including Japanese culture, customs, regional identity, geography, history, government, law, and healthcare.
 
 - **Official Hugging Face dataset card**: [sbintuitions/JamC-QA](https://huggingface.co/datasets/sbintuitions/JamC-QA)
 - **Official dataset README**: [README.md](https://huggingface.co/datasets/sbintuitions/JamC-QA/blob/main/README.md)
@@ -22,9 +22,8 @@ JamC-QA is widely adopted for benchmarking and leaderboard evaluations, such as 
 
 JamC-QA fills a crucial gap in LLM evaluation by focusing on domains and knowledge areas that are underrepresented or entirely absent in major international benchmarks like MMLU, HellaSwag, or SQuAD. Its core objectives:
 
-- **Measure LLMs’ ability to answer factual multiple-choice questions relevant to Japanese society.**
-- **Enable fair, domain-specific comparison of Japanese and multilingual LLMs** by focusing on topics not typically covered in global datasets.
-- **Support leaderboard evaluations, ablation studies, and transfer learning research** for Japanese natural language processing (NLP).
+- **Measure LLMs’ ability to answer factual multiple-choice questions relevant to Japanese society.**- **Enable fair, domain-specific comparison of Japanese and multilingual LLMs**by focusing on topics not typically covered in global datasets.
+- **Support leaderboard evaluations, ablation studies, and transfer learning research**for Japanese natural language processing (NLP).
 
 This dataset is thus essential for:
 - Researchers aiming for fair, rigorous LLM comparisons on Japanese knowledge.
@@ -35,7 +34,7 @@ This dataset is thus essential for:
 
 ### Categories
 
-JamC-QA is meticulously structured into **eight knowledge categories** that are core to Japanese society and culture:
+JamC-QA is meticulously structured into **eight knowledge categories**that are core to Japanese society and culture:
 
 | Category           | dev | test |
 |--------------------|-----|------|
@@ -47,17 +46,16 @@ JamC-QA is meticulously structured into **eight knowledge categories** that are 
 | government         | 4   | 110  |
 | law                | 4   | 299  |
 | healthcare         | 4   | 48   |
-| **Total**          | 32  | 2,309|
+| **Total**| 32  | 2,309|
 
-**Key features of the categories:**
-- **Culture:** Japanese arts, cinema, literature, music, and general cultural literacy.
-- **Custom:** Social customs, etiquette, festivals, and traditional practices.
-- **Regional_identity:** Knowledge unique to specific regions, dialects, and local phenomena.
-- **Geography:** Physical geography, place names, natural features, and population distributions.
-- **History:** Chronological events, historical figures, periods, and cultural shifts.
-- **Government:** Organizational structure, political systems, policies, and governmental roles.
-- **Law:** Legislation, legal systems, rights, and societal regulations.
-- **Healthcare:** Medical systems, terminology, public health, and healthcare policy.
+**Key features of the categories:**- **Culture:**Japanese arts, cinema, literature, music, and general cultural literacy.
+- **Custom:**Social customs, etiquette, festivals, and traditional practices.
+- **Regional_identity:**Knowledge unique to specific regions, dialects, and local phenomena.
+- **Geography:**Physical geography, place names, natural features, and population distributions.
+- **History:**Chronological events, historical figures, periods, and cultural shifts.
+- **Government:**Organizational structure, political systems, policies, and governmental roles.
+- **Law:**Legislation, legal systems, rights, and societal regulations.
+- **Healthcare:**Medical systems, terminology, public health, and healthcare policy.
 
 These categories were selected based on their relevance to Japanese life and their absence from other popular QA benchmarks, ensuring robust evaluation of Japan-specific knowledge.
 
@@ -68,10 +66,10 @@ These categories were selected based on their relevance to Japanese life and the
 | dev   | Few-shot evaluation      | 32   | Four per category             |
 | test  | Main evaluation          | 2,309| For leaderboard and analysis  |
 
-- **dev split:** Used for few-shot or prompt-based evaluation, ensuring models can be calibrated or tuned with minimal exposure.
-- **test split:** The main testbed for leaderboard rankings and scientific analysis; contains a statistically robust number of questions per category.
+- **dev split:**Used for few-shot or prompt-based evaluation, ensuring models can be calibrated or tuned with minimal exposure.
+- **test split:**The main testbed for leaderboard rankings and scientific analysis; contains a statistically robust number of questions per category.
 
-**Total dataset size:** 2,341 examples across both splits ([source](https://huggingface.co/datasets/sbintuitions/JamC-QA)).
+**Total dataset size:**2,341 examples across both splits ([source](https://huggingface.co/datasets/sbintuitions/JamC-QA)).
 
 ## Dataset Structure and Fields
 
@@ -102,8 +100,7 @@ Each data instance is a single multiple-choice question with four answer options
 | `choice0`-`3`  | string  | Four answer options, also half-width except for katakana.               |
 | `answer_index` | integer | Index of the correct answer (0–3).                                      |
 
-**Constraints:**
-- No line breaks in any string fields.
+**Constraints:**- No line breaks in any string fields.
 - Leading and trailing whitespace is removed from all fields.
 - Each question is curated for both broad general and detailed knowledge of Japan.
 
@@ -113,15 +110,13 @@ For more schema details, see the [dataset card fields section](https://huggingfa
 
 ### Accuracy and Category-Level Analysis
 
-**Primary metric:** **Accuracy** is used as the main evaluation criterion.
+**Primary metric:** **Accuracy**is used as the main evaluation criterion.
 - The model must output the exact answer string (not just the label/index).
-- **Accuracy is calculated as:**  
-  `Accuracy = (Number of exact matches) / (Total number of questions)`
+- **Accuracy is calculated as:**`Accuracy = (Number of exact matches) / (Total number of questions)`
 
-**Category-level accuracy** is also reported, enabling fine-grained analysis of model strengths and weaknesses across domains.
+**Category-level accuracy**is also reported, enabling fine-grained analysis of model strengths and weaknesses across domains.
 
-**Why exact match?**
-- This strict criterion ensures that models are truly capable of retrieving or generating the precise correct answer, not merely a close approximation or the correct label.
+**Why exact match?**- This strict criterion ensures that models are truly capable of retrieving or generating the precise correct answer, not merely a close approximation or the correct label.
 - This is especially important for factual and culturally nuanced questions where partial correctness is not sufficient.
 
 [JamC-QA Evaluation Metric Documentation](https://huggingface.co/datasets/sbintuitions/JamC-QA/blob/main/README.md#evaluation-metric)
@@ -130,9 +125,7 @@ For more schema details, see the [dataset card fields section](https://huggingfa
 
 JamC-QA is an official benchmark on major Japanese LLM leaderboards such as [Swallow LLM Leaderboard](https://x.com/chokkanorg/status/1984170094076031297). The leaderboard ranks models by overall and per-category accuracy.
 
-**Representative results (as of latest available):**
-
-| Model                                 | All   | culture | custom | regional_identity | geography | history | government | law   | healthcare |
+**Representative results (as of latest available):**| Model                                 | All   | culture | custom | regional_identity | geography | history | government | law   | healthcare |
 |----------------------------------------|-------|---------|--------|------------------|-----------|---------|------------|-------|------------|
 | sarashina2-8x70b                      | 0.725 | 0.714   | 0.775  | 0.761            | 0.654     | 0.784   | 0.736      | 0.632 | 0.917      |
 | sarashina2-70b                        | 0.725 | 0.719   | 0.745  | 0.736            | 0.673     | 0.764   | 0.764      | 0.666 | 0.917      |
@@ -169,8 +162,7 @@ jamcqa_dev = jamcqa['dev']
 print(jamcqa_test[0])
 ```
 
-**Dataset viewer:**  
-Browse, search, and filter the dataset interactively on the [Hugging Face Data Studio](https://huggingface.co/datasets/sbintuitions/JamC-QA/viewer/).
+**Dataset viewer:**Browse, search, and filter the dataset interactively on the [Hugging Face Data Studio](https://huggingface.co/datasets/sbintuitions/JamC-QA/viewer/).
 
 ### Evaluation with FlexEval
 
@@ -194,9 +186,8 @@ For details, see the [README evaluation section](https://huggingface.co/datasets
 
 ## Licensing and Citation
 
-- **License:** Creative Commons Attribution-ShareAlike 4.0 International ([CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/))
-- **Citation:**
-    ```
+- **License:**Creative Commons Attribution-ShareAlike 4.0 International ([CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/))
+- **Citation:**```
     @misc{JamCQA2025,
       title = {JamC-QA: Japanese Multiple Choice QA Benchmark},
       author = {SB Intuitions},
@@ -210,11 +201,11 @@ For details, see the [README evaluation section](https://huggingface.co/datasets
 
 JamC-QA is part of a growing ecosystem of Japanese LLM benchmarks. Notable related datasets include:
 
-- **[MMLU-ProX (Japanese)](https://arxiv.org/abs/2503.10497):** Multi-discipline, college-level understanding and reasoning.
-- **[GPQA (Japanese)](https://arxiv.org/abs/2502.07346):** Graduate-level, science-focused question answering.
-- **[JHumanEval](https://anlp.jp/proceedings/annual_meeting/2024/pdf_dir/B1-4.pdf):** Japanese HumanEval for code generation.
-- **MATH-100 (Japanese):** Competition-level mathematics QA.
-- **[M-IFEval-Ja](https://aclanthology.org/2025.naacl-main.123/):** Instruction following/control in Japanese.
+- **[MMLU-ProX (Japanese)](https://arxiv.org/abs/2503.10497):**Multi-discipline, college-level understanding and reasoning.
+- **[GPQA (Japanese)](https://arxiv.org/abs/2502.07346):**Graduate-level, science-focused question answering.
+- **[JHumanEval](https://anlp.jp/proceedings/annual_meeting/2024/pdf_dir/B1-4.pdf):**Japanese HumanEval for code generation.
+- **MATH-100 (Japanese):**Competition-level mathematics QA.
+- **[M-IFEval-Ja](https://aclanthology.org/2025.naacl-main.123/):**Instruction following/control in Japanese.
 
 These benchmarks collectively allow:
 - Cross-benchmark and cross-lingual transfer studies.
@@ -225,11 +216,11 @@ These benchmarks collectively allow:
 
 JamC-QA is utilized in a range of academic, commercial, and educational settings:
 
-- **LLM benchmarking:** Standard for quantitative comparison of Japanese and multilingual LLMs.
-- **Model ablation studies:** To identify domain strengths and weaknesses.
-- **Cross-lingual transfer analysis:** For evaluating transfer of factual and cultural knowledge from multilingual models.
-- **Educational technology:** For building and evaluating AI tutors and digital assistants in the Japanese language.
-- **Cultural adaptation:** To ensure AI deployed in Japan meets local knowledge and user expectations.
+- **LLM benchmarking:**Standard for quantitative comparison of Japanese and multilingual LLMs.
+- **Model ablation studies:**To identify domain strengths and weaknesses.
+- **Cross-lingual transfer analysis:**For evaluating transfer of factual and cultural knowledge from multilingual models.
+- **Educational technology:**For building and evaluating AI tutors and digital assistants in the Japanese language.
+- **Cultural adaptation:**To ensure AI deployed in Japan meets local knowledge and user expectations.
 
 ## References and Further Reading
 

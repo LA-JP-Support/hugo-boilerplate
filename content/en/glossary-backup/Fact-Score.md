@@ -11,7 +11,7 @@ draft: false
 
 ## 1. Metric Definition and Conceptual Framework
 
-**FActScore** computes the ratio of atomic facts in a generated output that are validated against authoritative references (e.g., Wikipedia) to the total number of atomic facts identified:
+**FActScore**computes the ratio of atomic facts in a generated output that are validated against authoritative references (e.g., Wikipedia) to the total number of atomic facts identified:
 
 \[
 \mathrm{FActScore} = \frac{n_s}{N} \times 100\%
@@ -23,11 +23,10 @@ where \( n_s \) is the number of supported atomic facts, and \( N \) is the tota
 
 Atomic facts are short, context-independent, minimal factual statements derived from the generated passage. Extraction is performed through sentence segmentation and further decomposition using large language models (LLMs) or rule-based templates ([A Closer Look at Claim Decomposition](https://arxiv.org/html/2403.11903v1)). This granularity surpasses binary document/sentence-level judgments and allows nuanced, fine-grained factual precision analysis in long-form text generation.
 
-**Key Properties:**
-- **Fine-grained:** Evaluates each atomic claim independently.
-- **Reference-grounded:** Relies on external, authoritative knowledge bases (e.g., Wikipedia).
-- **Modular:** Supports both human and automated evaluators at different pipeline stages.
-- **Scalable:** Automated variants enable large-scale, low-cost assessment.
+**Key Properties:**- **Fine-grained:**Evaluates each atomic claim independently.
+- **Reference-grounded:**Relies on external, authoritative knowledge bases (e.g., Wikipedia).
+- **Modular:**Supports both human and automated evaluators at different pipeline stages.
+- **Scalable:**Automated variants enable large-scale, low-cost assessment.
 
 ## 2. Decompose-Then-Verify Pipeline: Methodology
 
@@ -45,14 +44,13 @@ FActScore employs a modular, four-step pipeline ([Min et al., 2023](https://arxi
 ### 3. Atomic Fact Validation
 - Each atomic fact is evaluated against retrieved evidence to determine support.
 - Validation can be:
-  - **Human Experts:** Fact-checkers label each atomic fact as “Supported,” “Not-supported,” or “Irrelevant.”
-  - **Automated Models:** LLMs or masked language models compute support likelihood, classifying with thresholds (e.g., 0.3).
+  - **Human Experts:**Fact-checkers label each atomic fact as “Supported,” “Not-supported,” or “Irrelevant.”
+  - **Automated Models:**LLMs or masked language models compute support likelihood, classifying with thresholds (e.g., 0.3).
 
 ### 4. Score Computation
 - FActScore = (Number of Supported Facts / Total Number of Atomic Facts) × 100%.
 
-**Implementation:**  
-Available as an open-source package ([pip install factscore](https://pypi.org/project/factscore/)), supporting human-in-the-loop and fully automated deployments.
+**Implementation:**Available as an open-source package ([pip install factscore](https://pypi.org/project/factscore/)), supporting human-in-the-loop and fully automated deployments.
 
 ## 3. Human and Automated Evaluation Protocols
 
@@ -65,9 +63,9 @@ Available as an open-source package ([pip install factscore](https://pypi.org/pr
 - Automated pipeline uses retrieval-augmented LLMs for both decomposition and verification.
 - Scalable to thousands of outputs; error rate relative to human annotation <2%.
 - Metrics: micro-level F1, precision, and recall:
-  - **Precision** = |Predicted Unsupported ∩ Gold Unsupported| / |Predicted Unsupported|
-  - **Recall** = |Predicted Unsupported ∩ Gold Unsupported| / |Gold Unsupported|
-  - **F1 (micro)** = 2·P·R/(P+R)
+  - **Precision**= |Predicted Unsupported ∩ Gold Unsupported| / |Predicted Unsupported|
+  - **Recall**= |Predicted Unsupported ∩ Gold Unsupported| / |Gold Unsupported|
+  - **F1 (micro)**= 2·P·R/(P+R)
 
 ### 3.3 Correlation and Consistency
 - Strong Pearson correlation (r > 0.99) between open-source and proprietary implementations ([Emergent Mind](https://www.emergentmind.com/papers/2507.05965)).
@@ -83,23 +81,22 @@ Available as an open-source package ([pip install factscore](https://pypi.org/pr
   - Used for cross-lingual LLM benchmarking ([Multilingual Hallucination Gaps](https://www.emergentmind.com/papers/2410.18270)).
 
 ### 4.2 Knowledge Source Constraints
-- **Coverage Gaps:** Limited Wikipedia content for low-resource languages or niche domains can bias FActScore ([An Analysis of Multilingual FActScore](https://www.emergentmind.com/papers/2406.19415)).
-- **Mitigation Strategies:**
-  - Retrieve more passages per claim.
+- **Coverage Gaps:**Limited Wikipedia content for low-resource languages or niche domains can bias FActScore ([An Analysis of Multilingual FActScore](https://www.emergentmind.com/papers/2406.19415)).
+- **Mitigation Strategies:**- Retrieve more passages per claim.
   - Augment with Internet-wide sources (e.g., Google API).
   - LLM-augmented knowledge (prompt GPT-4 for clarifications).
-- **Residual Limitation:** Factuality is still bounded by the coverage and quality of the chosen reference corpus.
+- **Residual Limitation:**Factuality is still bounded by the coverage and quality of the chosen reference corpus.
 
 ## 5. Robustness, Decomposition Quality, and Manipulation
 
 ### 5.1 Sensitivity to Decomposition
 - FActScore’s reliability depends on the atomic fact decomposition method ([A Closer Look at Claim Decomposition](https://arxiv.org/html/2403.11903v1)).
 - Alternative decomposition strategies (semantic parsing, prompt engineering, Russellian/Neo-Davidsonian frameworks) yield variable fact sets.
-- **DecompScore:** Measures atomicity and coverage of decomposition; high DecompScore indicates better decomposition quality.
+- **DecompScore:**Measures atomicity and coverage of decomposition; high DecompScore indicates better decomposition quality.
 
 ### 5.2 Vulnerabilities and Adversarial Manipulation
 - Repetition or trivial/tautological facts can artificially inflate FActScore.
-- **MontageLie Benchmark:** Demonstrates that reordering or montaging true statements into misleading narratives defeats both fine- and coarse-grained evaluators; AUC-ROC values fall below 65% ([Long-Form Information Alignment Evaluation Beyond Atomic Facts](https://arxiv.org/html/2505.15792v1)).
+- **MontageLie Benchmark:**Demonstrates that reordering or montaging true statements into misleading narratives defeats both fine- and coarse-grained evaluators; AUC-ROC values fall below 65% ([Long-Form Information Alignment Evaluation Beyond Atomic Facts](https://arxiv.org/html/2505.15792v1)).
   - Example: All statements are true individually, but their order implies a false or misleading narrative, undetected by atomic-fact metrics.
 
 ### 5.3 Mitigation and Filtering
@@ -108,9 +105,9 @@ Available as an open-source package ([pip install factscore](https://pypi.org/pr
 ## 6. Comparative Model Performance and Applications
 
 ### 6.1 Benchmarking Results
-- **Commercial Models:** GPT-4 and ChatGPT outperform public LLMs (e.g., Alpaca, Vicuna) on FActScore (ChatGPT ≈ 58%; human-written ≈ 88%) ([Min et al., 2023](https://arxiv.org/abs/2305.14251)).
-- **Model Scaling:** Larger models within a family achieve higher FActScore (e.g., Alpaca 65B > 13B > 7B).
-- **Public Models:** Alpaca/Vicuna (≈40%) outperform MPTChat (30%) and StableLM (17%) among 7B LLMs.
+- **Commercial Models:**GPT-4 and ChatGPT outperform public LLMs (e.g., Alpaca, Vicuna) on FActScore (ChatGPT ≈ 58%; human-written ≈ 88%) ([Min et al., 2023](https://arxiv.org/abs/2305.14251)).
+- **Model Scaling:**Larger models within a family achieve higher FActScore (e.g., Alpaca 65B > 13B > 7B).
+- **Public Models:**Alpaca/Vicuna (≈40%) outperform MPTChat (30%) and StableLM (17%) among 7B LLMs.
 
 ### 6.2 Impact of Training and Alignment
 - Modular hallucination detection/editing (e.g., PFME) increases FActScore by up to 16.2 points ([PFME: Fine-grained Hallucination Detection](https://www.emergentmind.com/papers/2407.00488)).
@@ -118,48 +115,45 @@ Available as an open-source package ([pip install factscore](https://pypi.org/pr
 - Critique-based evaluation (FenCE) yields 14–16% increases over baselines ([Improving Model Factuality with Fine-grained Critique-based Evaluator](https://www.emergentmind.com/papers/2410.18359)).
 
 ### 6.3 Open-Source Implementations
-- **OpenFActScore:** Supports any Hugging Face–compatible model, matches original FActScore benchmarks with similar BERTScore-F1 and error rates ([OpenFActScore](https://www.emergentmind.com/papers/2507.05965)).
+- **OpenFActScore:**Supports any Hugging Face–compatible model, matches original FActScore benchmarks with similar BERTScore-F1 and error rates ([OpenFActScore](https://www.emergentmind.com/papers/2507.05965)).
 
 ### 6.4 Example Use Cases
-- **Model Benchmarking:** Ranking LLMs by factual quality in biography or summarization ([TruthTorchLM](https://www.emergentmind.com/papers/2507.08203)).
-- **Fine-grained Alignment:** Summarization, reasoning-intensive outputs ([Long-Form Information Alignment](https://www.emergentmind.com/papers/2505.15792)).
-- **Hallucination Detection:** Monitoring unsupported content in multilingual or domain-specific deployments.
-- **Automated Fact-Checking:** Used in scientific communication, climate reporting, adversarial narrative detection ([CLAImate](https://www.emergentmind.com/papers/2507.11677)).
+- **Model Benchmarking:**Ranking LLMs by factual quality in biography or summarization ([TruthTorchLM](https://www.emergentmind.com/papers/2507.08203)).
+- **Fine-grained Alignment:**Summarization, reasoning-intensive outputs ([Long-Form Information Alignment](https://www.emergentmind.com/papers/2505.15792)).
+- **Hallucination Detection:**Monitoring unsupported content in multilingual or domain-specific deployments.
+- **Automated Fact-Checking:**Used in scientific communication, climate reporting, adversarial narrative detection ([CLAImate](https://www.emergentmind.com/papers/2507.11677)).
 
 ## 7. Limitations and Open Challenges
 
-- **Compositional Factuality:** FActScore does not detect manipulations involving reordering, montage, or selective omission of true statements (MontageLie benchmark).
-- **Reference Coverage:** Limited by the breadth/depth of external knowledge sources.
-- **Decomposition Reliability:** Fact extraction quality varies by domain and language; ongoing work aims to improve atomicity and coverage ([A Closer Look at Claim Decomposition](https://arxiv.org/html/2403.11903v1)).
-- **Gaming the Metric:** Repetitive or trivial fact generation can inflate scores without improving true factuality.
-- **Scalability to Multimodal/Multilingual Tasks:** Extending beyond English Wikipedia and text-only domains introduces retrieval and verification challenges.
+- **Compositional Factuality:**FActScore does not detect manipulations involving reordering, montage, or selective omission of true statements (MontageLie benchmark).
+- **Reference Coverage:**Limited by the breadth/depth of external knowledge sources.
+- **Decomposition Reliability:**Fact extraction quality varies by domain and language; ongoing work aims to improve atomicity and coverage ([A Closer Look at Claim Decomposition](https://arxiv.org/html/2403.11903v1)).
+- **Gaming the Metric:**Repetitive or trivial fact generation can inflate scores without improving true factuality.
+- **Scalability to Multimodal/Multilingual Tasks:**Extending beyond English Wikipedia and text-only domains introduces retrieval and verification challenges.
 
 ## 8. Recent Advances and Future Directions
 
-**Emergent Trends:**
-- **Joint Factuality and Event-Ordering Metrics:** DOVESCORE addresses both factual support and event-order consistency for improved robustness ([Long-Form Information Alignment Evaluation Beyond Atomic Facts](https://arxiv.org/html/2505.15792v1)).
-- **Modular Filtering and Informativeness Weighting:** Core-type modules reward unique and informative claims ([Core: Robust Factual Precision](https://www.emergentmind.com/papers/2407.03572)).
-- **RL-based Online Alignment:** Incorporates fact, detail, and answer relevance into RL reward signals for LLM alignment.
-- **Open-Source Pipelines:** Tools like OpenFActScore democratize high-fidelity factuality evaluation ([OpenFActScore](https://www.emergentmind.com/papers/2507.05965)).
+**Emergent Trends:**- **Joint Factuality and Event-Ordering Metrics:**DOVESCORE addresses both factual support and event-order consistency for improved robustness ([Long-Form Information Alignment Evaluation Beyond Atomic Facts](https://arxiv.org/html/2505.15792v1)).
+- **Modular Filtering and Informativeness Weighting:**Core-type modules reward unique and informative claims ([Core: Robust Factual Precision](https://www.emergentmind.com/papers/2407.03572)).
+- **RL-based Online Alignment:**Incorporates fact, detail, and answer relevance into RL reward signals for LLM alignment.
+- **Open-Source Pipelines:**Tools like OpenFActScore democratize high-fidelity factuality evaluation ([OpenFActScore](https://www.emergentmind.com/papers/2507.05965)).
 
-**Future Research Directions:**
-- Expansion to low-resource languages and multimodal content.
+**Future Research Directions:**- Expansion to low-resource languages and multimodal content.
 - Cross-domain factuality assessment (medical, legal, scientific).
 - Real-time factuality monitoring in production LLMs.
 - Enhanced robustness to adversarial attacks and compositional manipulations.
 
 ## 9. Practical Implementation and Access
 
-- **Availability:** Open-source ([pip install factscore](https://pypi.org/project/factscore/)), research repositories ([GitHub](https://github.com/shmsw25/FActScore), [OpenFActScore](https://www.emergentmind.com/papers/2507.05965)).
-- **Integration:** Supports human-in-the-loop annotation, fully automated evaluation, and third-party LLMs.
-- **Customization:** Extensible to alternative knowledge sources, more languages, and domain-specific fact-checking.
+- **Availability:**Open-source ([pip install factscore](https://pypi.org/project/factscore/)), research repositories ([GitHub](https://github.com/shmsw25/FActScore), [OpenFActScore](https://www.emergentmind.com/papers/2507.05965)).
+- **Integration:**Supports human-in-the-loop annotation, fully automated evaluation, and third-party LLMs.
+- **Customization:**Extensible to alternative knowledge sources, more languages, and domain-specific fact-checking.
 
 ## 10. Example Applications and Use Cases
 
 ### 10.1 Model Benchmarking
 
-**Scenario:**  
-An AI lab compares several LLMs’ factual precision on biography generation.
+**Scenario:**An AI lab compares several LLMs’ factual precision on biography generation.
 - Each model generates a biography.
 - Outputs are processed via FActScore.
 - Results: GPT-4/ChatGPT ≈58%, Alpaca/Vicuna ≈40%, human-written ≈88%.
@@ -186,27 +180,27 @@ An AI lab compares several LLMs’ factual precision on biography generation.
 
 | Property                               | Details                                                                                         |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------|
-| **Granularity**                        | Atomic fact level (fine-grained)                                                                |
-| **Reference Source**                    | Wikipedia (default), extensible to other corpora                                                |
-| **Evaluator**                          | Human or automated (LLM, masked LM)                                                             |
-| **Supported Languages**                 | English (default); multilingual via translation                                                 |
-| **Benchmark Coverage**                  | Long-form generation (biographies, summaries, QA)                                               |
-| **Error Rate (Automated vs. Human)**    | <2%                                                                                             |
-| **Open-Source Availability**            | Yes ([pip install factscore](https://pypi.org/project/factscore/), [OpenFActScore](https://www.emergentmind.com/papers/2507.05965))   |
-| **Known Limitations**                   | Compositionality, knowledge source coverage, decomposition variability, adversarial manipulation |
+| **Granularity**| Atomic fact level (fine-grained)                                                                |
+| **Reference Source**| Wikipedia (default), extensible to other corpora                                                |
+| **Evaluator**| Human or automated (LLM, masked LM)                                                             |
+| **Supported Languages**| English (default); multilingual via translation                                                 |
+| **Benchmark Coverage**| Long-form generation (biographies, summaries, QA)                                               |
+| **Error Rate (Automated vs. Human)**| <2%                                                                                             |
+| **Open-Source Availability**| Yes ([pip install factscore](https://pypi.org/project/factscore/), [OpenFActScore](https://www.emergentmind.com/papers/2507.05965))   |
+| **Known Limitations**| Compositionality, knowledge source coverage, decomposition variability, adversarial manipulation |
 
 ## 12. Glossary of Technical Terms
 
-- **Atomic Fact:** Minimal, context-independent factual statement from generated text ([A Closer Look at Claim Decomposition](https://arxiv.org/html/2403.11903v1)).
-- **Retriever Model:** Model that fetches relevant passages from a knowledge source for fact verification.
-- **Masked Language Modeling (MLM):** Language modeling approach where tokens are masked and predicted, used in automated fact validation.
-- **Factual Precision:** Proportion of supported atomic facts to total atomic facts in generated output.
-- **Hallucination:** Unsupported or fabricated content generated by an AI model.
-- **Decomposition:** Splitting text into atomic facts for granular evaluation.
-- **DecompScore:** Metric for evaluating the quality and atomicity of fact decomposition.
-- **Core Module:** Filtering mechanism to suppress repetitive or trivial subclaims during FActScore computation.
-- **MontageLie Benchmark:** Adversarial benchmark where truthful statements are reordered to create misleading narratives ([Long-Form Information Alignment Evaluation Beyond Atomic Facts](https://arxiv.org/html/2505.15792v1)).
-- **DOVESCORE:** Joint factuality and event-ordering metric to address compositional factuality ([Long-Form Information Alignment Evaluation Beyond Atomic Facts](https://arxiv.org/html/2505.15792v1)).
+- **Atomic Fact:**Minimal, context-independent factual statement from generated text ([A Closer Look at Claim Decomposition](https://arxiv.org/html/2403.11903v1)).
+- **Retriever Model:**Model that fetches relevant passages from a knowledge source for fact verification.
+- **Masked Language Modeling (MLM):**Language modeling approach where tokens are masked and predicted, used in automated fact validation.
+- **Factual Precision:**Proportion of supported atomic facts to total atomic facts in generated output.
+- **Hallucination:**Unsupported or fabricated content generated by an AI model.
+- **Decomposition:**Splitting text into atomic facts for granular evaluation.
+- **DecompScore:**Metric for evaluating the quality and atomicity of fact decomposition.
+- **Core Module:**Filtering mechanism to suppress repetitive or trivial subclaims during FActScore computation.
+- **MontageLie Benchmark:**Adversarial benchmark where truthful statements are reordered to create misleading narratives ([Long-Form Information Alignment Evaluation Beyond Atomic Facts](https://arxiv.org/html/2505.15792v1)).
+- **DOVESCORE:**Joint factuality and event-ordering metric to address compositional factuality ([Long-Form Information Alignment Evaluation Beyond Atomic Facts](https://arxiv.org/html/2505.15792v1)).
 
 ## References
 

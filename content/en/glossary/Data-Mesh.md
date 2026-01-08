@@ -108,12 +108,12 @@ The Data Mesh operates through a distributed yet coordinated approach to data ma
 
 | Aspect | Data Mesh | Traditional Centralized |
 |--------|-----------|------------------------|
-| **Ownership Model** | Distributed across domains | Centralized data team |
-| **Scalability** | Horizontal, domain-based | Vertical, team-dependent |
-| **Data Quality** | Domain accountability | Central team responsibility |
-| **Technology Choice** | Flexible per domain | Standardized across organization |
-| **Time to Market** | Faster, parallel development | Slower, sequential dependencies |
-| **Governance** | Federated, automated | Manual, centralized control |
+| **Ownership Model**| Distributed across domains | Centralized data team |
+| **Scalability**| Horizontal, domain-based | Vertical, team-dependent |
+| **Data Quality**| Domain accountability | Central team responsibility |
+| **Technology Choice**| Flexible per domain | Standardized across organization |
+| **Time to Market**| Faster, parallel development | Slower, sequential dependencies |
+| **Governance**| Federated, automated | Manual, centralized control |
 
 ## Challenges and Considerations
 

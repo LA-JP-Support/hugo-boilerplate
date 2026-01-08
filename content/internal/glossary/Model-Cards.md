@@ -27,16 +27,16 @@ Model cards were first proposed by researchers at Google in 2018 to address the 
 
 ### Motivation
 
-- **Transparency:** Clear articulation of what a model does, how it was trained, and its known limitations.
-- **Accountability:** Enabling stakeholders to understand and audit model behavior, which is increasingly important for regulatory compliance and public trust.
-- **Fairness:** Encouraging explicit reporting and analysis of bias and disparate impact.
+- **Transparency:**Clear articulation of what a model does, how it was trained, and its known limitations.
+- **Accountability:**Enabling stakeholders to understand and audit model behavior, which is increasingly important for regulatory compliance and public trust.
+- **Fairness:**Encouraging explicit reporting and analysis of bias and disparate impact.
 
 ### Adoption
 
 Model cards have become a best practice in the AI community:
-- **Hugging Face:** Thousands of models in the [Model Hub](https://huggingface.co/models) include model cards.
-- **Meta, OpenAI, Google:** Major AI labs publish model cards for flagship models ([Meta Llama](https://github.com/facebookresearch/llama/blob/main/MODEL_CARD.md), [OpenAI GPT-3](https://github.com/openai/gpt-3/blob/master/model-card.md), [Google Face Detection](https://modelcards.withgoogle.com/face-detection)).
-- **IBM:** [AI FactSheets](https://aifs360.mybluemix.net/introduction) extend the model card concept for enterprise governance.
+- **Hugging Face:**Thousands of models in the [Model Hub](https://huggingface.co/models) include model cards.
+- **Meta, OpenAI, Google:**Major AI labs publish model cards for flagship models ([Meta Llama](https://github.com/facebookresearch/llama/blob/main/MODEL_CARD.md), [OpenAI GPT-3](https://github.com/openai/gpt-3/blob/master/model-card.md), [Google Face Detection](https://modelcards.withgoogle.com/face-detection)).
+- **IBM:**[AI FactSheets](https://aifs360.mybluemix.net/introduction) extend the model card concept for enterprise governance.
 
 ## What is a Model Card?
 
@@ -49,8 +49,7 @@ A model card is a concise but comprehensive document that describes the key tech
 - Ethical and societal implications
 - Licensing and contact details
 
-**Analogy:**  
-A model card is to an AI model what a nutrition label is to food: a clear, accessible summary that enables informed, responsible use.
+**Analogy:**A model card is to an AI model what a nutrition label is to food: a clear, accessible summary that enables informed, responsible use.
 ## Why Model Cards Matter: Benefits
 
 ### 1. Transparency and Accountability
@@ -238,30 +237,30 @@ While templates vary, a comprehensive model card usually includes the following 
 
 ### Key Sections (with guidance):
 
-- **Model Details:** Name, version, description, authors, license.
-- **Intended Use:** Tasks, users, out-of-scope uses.
-- **Factors:** Factors affecting model performance (e.g., language, demographic group).
-- **Metrics:** Evaluation metrics, including subgroup analyses.
-- **Training Data:** Description, collection process, privacy considerations.
-- **Training Procedure:** Hyperparameters, compute resources, reproducibility.
-- **Evaluation Data:** Test datasets, limitations of evaluation.
-- **Results:** Quantitative metrics, fairness results.
-- **Bias, Risks, and Limitations:** Known biases, risk scenarios, limitations.
-- **Ethical Considerations:** Societal impact, privacy, misuse potential.
-- **Caveats and Recommendations:** Monitoring, retraining, user warnings.
-- **Model Card Contact:** Responsible party for updates and inquiries.
+- **Model Details:**Name, version, description, authors, license.
+- **Intended Use:**Tasks, users, out-of-scope uses.
+- **Factors:**Factors affecting model performance (e.g., language, demographic group).
+- **Metrics:**Evaluation metrics, including subgroup analyses.
+- **Training Data:**Description, collection process, privacy considerations.
+- **Training Procedure:**Hyperparameters, compute resources, reproducibility.
+- **Evaluation Data:**Test datasets, limitations of evaluation.
+- **Results:**Quantitative metrics, fairness results.
+- **Bias, Risks, and Limitations:**Known biases, risk scenarios, limitations.
+- **Ethical Considerations:**Societal impact, privacy, misuse potential.
+- **Caveats and Recommendations:**Monitoring, retraining, user warnings.
+- **Model Card Contact:**Responsible party for updates and inquiries.
 
-**Guidance:** Filling out a model card often requires input from multiple roles (developer, ethics/society expert, project manager). See [directions in the annotated template](https://huggingface.co/docs/hub/en/model-card-annotated#directions).
+**Guidance:**Filling out a model card often requires input from multiple roles (developer, ethics/society expert, project manager). See [directions in the annotated template](https://huggingface.co/docs/hub/en/model-card-annotated#directions).
 
 ## Actionable Recommendations for Adoption
 
-1. **Inventory Models:** List all ML models in your organization.
-2. **Adopt a Template:** Use standard templates (see above) or adapt as needed.
-3. **Integrate with Pipelines:** Automate documentation as part of training and evaluation.
-4. **Educate Stakeholders:** Train teams on model card use and importance.
-5. **Review & Update Regularly:** Update cards as models evolve.
-6. **Centralize Documentation:** Maintain a registry with access controls.
-7. **Collaborate with Community:** Contribute to open-source model card repositories and stay abreast of regulatory changes.
+1. **Inventory Models:**List all ML models in your organization.
+2. **Adopt a Template:**Use standard templates (see above) or adapt as needed.
+3. **Integrate with Pipelines:**Automate documentation as part of training and evaluation.
+4. **Educate Stakeholders:**Train teams on model card use and importance.
+5. **Review & Update Regularly:**Update cards as models evolve.
+6. **Centralize Documentation:**Maintain a registry with access controls.
+7. **Collaborate with Community:**Contribute to open-source model card repositories and stay abreast of regulatory changes.
 
 ## Further Reading and References
 
@@ -280,8 +279,7 @@ While templates vary, a comprehensive model card usually includes the following 
 
 *This glossary page is intended for practitioners, business leaders, policymakers, and anyone seeking to ensure machine learning models are documented, evaluated, and deployed with [transparency](/en/glossary/transparency/), ethical rigor, and practical effectiveness.*
 
-**Key Links for Further Exploration:**
-- [Hugging Face Annotated Model Card Template](https://huggingface.co/docs/hub/en/model-card-annotated)
+**Key Links for Further Exploration:**- [Hugging Face Annotated Model Card Template](https://huggingface.co/docs/hub/en/model-card-annotated)
 - [Google Model Card Toolkit](https://github.com/tensorflow/model-card-toolkit)
 - [Hugging Face Model Card Guidebook](https://huggingface.co/docs/hub/en/model-card-guidebook)
 - [IBM AI FactSheets](https://aifs360.mybluemix.net/introduction)

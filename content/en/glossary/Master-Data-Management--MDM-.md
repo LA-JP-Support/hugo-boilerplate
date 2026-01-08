@@ -42,19 +42,19 @@ The strategic importance of MDM has grown exponentially as organizations undergo
 
 The MDM process begins with **data discovery and profiling**, where organizations identify all sources of master data across their enterprise systems and analyze the quality, completeness, and consistency of existing data. This phase involves cataloging data sources, understanding data lineage, and establishing baseline quality metrics.
 
-**Data modeling and standardization** follows, where business and technical teams collaborate to define the canonical data model that will serve as the master template. This includes establishing data standards, validation rules, and business logic that will govern how master data is structured and maintained.
+**Data modeling and standardization**follows, where business and technical teams collaborate to define the canonical data model that will serve as the master template. This includes establishing data standards, validation rules, and business logic that will govern how master data is structured and maintained.
 
-**Data extraction and ingestion** involves pulling data from various source systems using batch or real-time integration methods. The MDM platform receives data from ERP systems, CRM applications, databases, and external sources, preparing it for processing and consolidation.
+**Data extraction and ingestion**involves pulling data from various source systems using batch or real-time integration methods. The MDM platform receives data from ERP systems, CRM applications, databases, and external sources, preparing it for processing and consolidation.
 
-**Data matching and deduplication** utilizes sophisticated algorithms to identify records that refer to the same business entity across different systems. Machine learning techniques analyze patterns in names, addresses, and other attributes to determine probabilistic matches and flag potential duplicates.
+**Data matching and deduplication**utilizes sophisticated algorithms to identify records that refer to the same business entity across different systems. Machine learning techniques analyze patterns in names, addresses, and other attributes to determine probabilistic matches and flag potential duplicates.
 
-**Data consolidation and golden record creation** combines information from multiple sources to create the most complete and accurate representation of each master data entity. The system applies business rules to resolve conflicts and determine which source provides the most reliable information for each attribute.
+**Data consolidation and golden record creation**combines information from multiple sources to create the most complete and accurate representation of each master data entity. The system applies business rules to resolve conflicts and determine which source provides the most reliable information for each attribute.
 
-**Data quality validation and cleansing** applies automated and manual processes to correct errors, standardize formats, and ensure compliance with business rules. This includes address validation, name standardization, and verification against external reference data sources.
+**Data quality validation and cleansing**applies automated and manual processes to correct errors, standardize formats, and ensure compliance with business rules. This includes address validation, name standardization, and verification against external reference data sources.
 
-**Data distribution and synchronization** pushes the cleansed, consolidated master data back to consuming systems throughout the enterprise. This ensures that all applications work with consistent, high-quality information while maintaining appropriate update frequencies.
+**Data distribution and synchronization**pushes the cleansed, consolidated master data back to consuming systems throughout the enterprise. This ensures that all applications work with consistent, high-quality information while maintaining appropriate update frequencies.
 
-**Ongoing monitoring and maintenance** continuously tracks data quality metrics, monitors system performance, and manages change requests. Data stewards review exceptions, approve modifications, and ensure that the MDM system continues to meet business requirements.
+**Ongoing monitoring and maintenance**continuously tracks data quality metrics, monitors system performance, and manages change requests. Data stewards review exceptions, approve modifications, and ensure that the MDM system continues to meet business requirements.
 
 **Example Workflow**: A customer places an order through an e-commerce platform, triggering the MDM system to validate the customer information against existing records, identify potential matches, consolidate the data with existing customer profiles, apply data quality rules, and distribute the updated customer master record to CRM, billing, and fulfillment systems.
 
@@ -102,12 +102,12 @@ The MDM process begins with **data discovery and profiling**, where organization
 
 | Architecture Style | Data Storage | Integration Complexity | Implementation Time | Flexibility | Best For |
 |-------------------|--------------|----------------------|-------------------|-------------|----------|
-| **Centralized Hub** | Single master repository | High initial, low ongoing | 12-18 months | Medium | New implementations |
-| **Federated** | Distributed across systems | Medium throughout | 6-12 months | High | Existing system landscapes |
-| **Hybrid** | Combination approach | High complexity | 18-24 months | Very High | Complex enterprises |
-| **Registry Style** | Metadata only | Low to medium | 3-6 months | Medium | Quick wins needed |
-| **Coexistence** | Parallel systems | Medium complexity | 9-15 months | Medium | Gradual migration |
-| **Cloud-Native** | Cloud repositories | Low to medium | 6-12 months | High | Digital-first organizations |
+| **Centralized Hub**| Single master repository | High initial, low ongoing | 12-18 months | Medium | New implementations |
+| **Federated**| Distributed across systems | Medium throughout | 6-12 months | High | Existing system landscapes |
+| **Hybrid**| Combination approach | High complexity | 18-24 months | Very High | Complex enterprises |
+| **Registry Style**| Metadata only | Low to medium | 3-6 months | Medium | Quick wins needed |
+| **Coexistence**| Parallel systems | Medium complexity | 9-15 months | Medium | Gradual migration |
+| **Cloud-Native**| Cloud repositories | Low to medium | 6-12 months | High | Digital-first organizations |
 
 ## Challenges and Considerations
 

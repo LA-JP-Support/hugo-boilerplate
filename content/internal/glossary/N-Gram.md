@@ -13,11 +13,11 @@ url = "/internal/glossary/N-Gram/"
 +++
 ## Definición y visión general
 
-Un **N-grama** es una secuencia contigua de *n* elementos de una muestra dada de texto o habla. En el contexto del [Procesamiento de Lenguaje Natural (PLN)](https://es.wikipedia.org/wiki/Procesamiento_de_lenguaje_natural), los N-gramas suelen ser secuencias de palabras, caracteres o símbolos. El valor de *n* determina la longitud de cada fragmento:
+Un **N-grama**es una secuencia contigua de *n* elementos de una muestra dada de texto o habla. En el contexto del [Procesamiento de Lenguaje Natural (PLN)](https://es.wikipedia.org/wiki/Procesamiento_de_lenguaje_natural), los N-gramas suelen ser secuencias de palabras, caracteres o símbolos. El valor de *n* determina la longitud de cada fragmento:
 
-- Para *n=1*, el modelo utiliza **unigramas** (palabras o tokens individuales).
-- Para *n=2*, utiliza **bigramas** (secuencias de dos palabras).
-- Para *n=3*, utiliza **trigramas** (secuencias de tres palabras).
+- Para *n=1*, el modelo utiliza **unigramas**(palabras o tokens individuales).
+- Para *n=2*, utiliza **bigramas**(secuencias de dos palabras).
+- Para *n=3*, utiliza **trigramas**(secuencias de tres palabras).
 - También se emplean N-gramas de orden superior (*n > 3*) en casos donde se necesita un contexto más amplio.
 
 Los modelos de N-gramas son fundamentales en la lingüística computacional, proporcionando marcos estadísticos para comprender, generar y predecir lenguaje. Son la base de muchos sistemas clásicos de PLN, incluyendo correctores ortográficos, texto predictivo, traducción automática y reconocimiento de voz.
@@ -28,7 +28,7 @@ Un modelo de lenguaje basado en N-gramas asigna una probabilidad a secuencias de
 
 ## Contexto histórico y desarrollo
 
-Los N-gramas tienen una rica historia tanto en lingüística como en teoría de la información. La formalización matemática de los N-gramas se remonta a Andrey Markov, cuyo trabajo sobre **cadenas de Markov** a principios del siglo XX sentó las bases del modelado de secuencias. El aporte de Markov fue que la probabilidad de un evento podía depender solo del evento(s) anterior en una cadena, y no de toda la historia (la "propiedad de Markov").
+Los N-gramas tienen una rica historia tanto en lingüística como en teoría de la información. La formalización matemática de los N-gramas se remonta a Andrey Markov, cuyo trabajo sobre **cadenas de Markov**a principios del siglo XX sentó las bases del modelado de secuencias. El aporte de Markov fue que la probabilidad de un evento podía depender solo del evento(s) anterior en una cadena, y no de toda la historia (la "propiedad de Markov").
 
 En las décadas de 1940 y 1950, Claude Shannon aplicó modelos de Markov al texto en inglés, introduciendo el concepto de modelos N-grama para el lenguaje. Los experimentos de Shannon demostraron que los modelos estadísticos podían generar texto sorprendentemente similar al humano, sentando las bases de la lingüística computacional.
 
@@ -42,35 +42,32 @@ Hoy en día, aunque arquitecturas neuronales avanzadas como los [Transformers](h
 
 ### Unigramas
 
-- **Definición:** Secuencias de elementos individuales (usualmente palabras).
-- **Ejemplo:**  
-  Texto: "[Procesamiento de lenguaje natural](/es/glossary/natural-language-processing--nlp-/) es divertido."  
+- **Definición:**Secuencias de elementos individuales (usualmente palabras).
+- **Ejemplo:**Texto: "[Procesamiento de lenguaje natural](/es/glossary/natural-language-processing--nlp-/) es divertido."  
   Unigramas: "Procesamiento", "de", "lenguaje", "natural", "es", "divertido"
-- **Casos de uso:** Análisis básico de frecuencias de palabras, clasificación de texto, recuperación de información.
+- **Casos de uso:**Análisis básico de frecuencias de palabras, clasificación de texto, recuperación de información.
 
 ### Bigramas
 
-- **Definición:** Secuencias de dos elementos consecutivos.
-- **Ejemplo:**  
-  Texto: "Procesamiento de lenguaje natural es divertido."  
+- **Definición:**Secuencias de dos elementos consecutivos.
+- **Ejemplo:**Texto: "Procesamiento de lenguaje natural es divertido."  
   Bigramas: "Procesamiento de", "de lenguaje", "lenguaje natural", "natural es", "es divertido"
-- **Casos de uso:** Detección de frases, [análisis de sentimiento](/es/glossary/sentiment-analysis/) ("no bueno"), reconocimiento de voz.
+- **Casos de uso:**Detección de frases, [análisis de sentimiento](/es/glossary/sentiment-analysis/) ("no bueno"), reconocimiento de voz.
 
 ### Trigramas
 
-- **Definición:** Secuencias de tres elementos consecutivos.
-- **Ejemplo:**  
-  Texto: "Procesamiento de lenguaje natural es divertido."  
+- **Definición:**Secuencias de tres elementos consecutivos.
+- **Ejemplo:**Texto: "Procesamiento de lenguaje natural es divertido."  
   Trigramas: "Procesamiento de lenguaje", "de lenguaje natural", "lenguaje natural es", "natural es divertido"
-- **Casos de uso:** Captura de contexto más amplio, autocompletado, corrección ortográfica.
+- **Casos de uso:**Captura de contexto más amplio, autocompletado, corrección ortográfica.
 
 ### N-gramas de orden superior
 
-- **Definición:** Secuencias de cuatro o más elementos consecutivos (ej: 4-gramas, 5-gramas).
-- **Ejemplo:** Para "Procesamiento de lenguaje natural es divertido."  
+- **Definición:**Secuencias de cuatro o más elementos consecutivos (ej: 4-gramas, 5-gramas).
+- **Ejemplo:**Para "Procesamiento de lenguaje natural es divertido."  
   4-grama: "Procesamiento de lenguaje natural", "de lenguaje natural es", "lenguaje natural es divertido"
-- **Casos de uso:** Modelado de lenguaje específico de dominio, detección de plagio.
-- **Consideraciones:** A medida que *n* aumenta, el número de posibles N-gramas crece exponencialmente, lo que genera escasez de datos y sobrecarga computacional.
+- **Casos de uso:**Modelado de lenguaje específico de dominio, detección de plagio.
+- **Consideraciones:**A medida que *n* aumenta, el número de posibles N-gramas crece exponencialmente, lo que genera escasez de datos y sobrecarga computacional.
 
 *Fuente: [GeeksforGeeks: N-gram in NLP](https://www.geeksforgeeks.org/nlp/n-gram-in-nlp/)*
 
@@ -78,7 +75,7 @@ Hoy en día, aunque arquitecturas neuronales avanzadas como los [Transformers](h
 
 ### Estimación de probabilidad
 
-Los modelos N-grama estiman la probabilidad de una palabra o token en función de los *n-1* elementos anteriores. La **regla de la cadena de probabilidad** expresa la probabilidad conjunta de una secuencia como producto de probabilidades condicionales:
+Los modelos N-grama estiman la probabilidad de una palabra o token en función de los *n-1* elementos anteriores. La **regla de la cadena de probabilidad**expresa la probabilidad conjunta de una secuencia como producto de probabilidades condicionales:
 
 \[
 P(w_1, w_2, \ldots, w_n) = P(w_1) \cdot P(w_2|w_1) \cdot P(w_3|w_1, w_2) \cdots P(w_n|w_1, \ldots, w_{n-1})
@@ -88,7 +85,7 @@ Esta fórmula es computacionalmente costosa para secuencias largas. Los modelos 
 
 ### Suposición de Markov
 
-La **suposición de Markov** postula que la probabilidad de una palabra depende solo de las *n-1* palabras previas, y no de todo el contexto precedente. Esto es crucial para el cálculo práctico.
+La **suposición de Markov**postula que la probabilidad de una palabra depende solo de las *n-1* palabras previas, y no de todo el contexto precedente. Esto es crucial para el cálculo práctico.
 
 Para un bigrama (*n=2*):
 \[
@@ -121,8 +118,7 @@ Para bigramas, esto se convierte en:
 P(w_n | w_{n-1}) = \frac{C(w_{n-1}, w_n)}{C(w_{n-1})}
 \]
 
-**Ejemplo de cálculo:**  
-Dado el corpus:
+**Ejemplo de cálculo:**Dado el corpus:
 - "Yo soy Sam"
 - "Sam yo soy"
 - "Yo no me gustan los huevos verdes y jamón"
@@ -155,19 +151,19 @@ Esto asegura que ningún N-grama tenga probabilidad cero.
 
 #### Suavizados avanzados: Good-Turing, Kneser-Ney
 
-- **Good-Turing Smoothing:** Ajusta las frecuencias de N-gramas según el número de N-gramas observados una vez, dos veces, etc.
-- **Kneser-Ney Smoothing:** Estado del arte en modelado de lenguaje, considera tanto la frecuencia como la distribución de los contextos en los que aparece un N-grama.
+- **Good-Turing Smoothing:**Ajusta las frecuencias de N-gramas según el número de N-gramas observados una vez, dos veces, etc.
+- **Kneser-Ney Smoothing:**Estado del arte en modelado de lenguaje, considera tanto la frecuencia como la distribución de los contextos en los que aparece un N-grama.
 
 *Explicación detallada: [Stanford PDF, Sección 3.4](https://web.stanford.edu/~jurafsky/slp3/3.pdf)*
 
 ### Perplejidad y entropía
 
-- **Perplejidad** es una medida de qué tan bien un modelo probabilístico predice una muestra. Una perplejidad menor indica un mejor modelo de lenguaje.
+- **Perplejidad**es una medida de qué tan bien un modelo probabilístico predice una muestra. Una perplejidad menor indica un mejor modelo de lenguaje.
   \[
   Perplexity(P) = 2^{H(P)}
   \]
   donde \(H(P)\) es la entropía de la distribución de probabilidad.
-- **Entropía** mide la imprevisibilidad del texto.
+- **Entropía**mide la imprevisibilidad del texto.
 
 *Más detalles: [Stanford PDF, Sección 3.5](https://web.stanford.edu/~jurafsky/slp3/3.pdf)*
 
@@ -217,8 +213,7 @@ smoothed_ngrams = laplace_smoothing(ngrams, vocab_size)
 print("N-gramas suavizados:", smoothed_ngrams)
 ```
 
-**Salida:**
-```
+**Salida:**```
 N-gramas suavizados: {('Geeks', 'for'): 0.25, ('for', 'Geeks'): 0.25, ('Geeks', 'Community'): 0.25}
 ```
 
@@ -239,7 +234,7 @@ Las características de N-gramas se utilizan ampliamente en PLN para modelos de 
 
 ### Modelo Bag-of-N-grams
 
-El enfoque **Bag-of-N-grams** representa un documento como un vector disperso, donde cada dimensión corresponde a un N-grama del vocabulario. El valor suele ser la frecuencia del N-grama en el documento.
+El enfoque **Bag-of-N-grams**representa un documento como un vector disperso, donde cada dimensión corresponde a un N-grama del vocabulario. El valor suele ser la frecuencia del N-grama en el documento.
 
 #### Ejemplo: Python con SciPy
 
@@ -265,8 +260,8 @@ def build_bag_of_ngrams(texto, n, vocabulary):
 
 ### Skip-grams y N-gramas de subpalabra
 
-- **Skip-grams:** N-gramas no contiguos (ej: "Yo ... Sam" en "Yo soy Sam"), útiles para captar dependencias a largo plazo.
-- **N-gramas de subpalabra:** N-gramas a nivel de caracteres o sílabas, esenciales para tratar lenguajes con morfología rica o datos ruidosos (ej: Twitter, OCR).
+- **Skip-grams:**N-gramas no contiguos (ej: "Yo ... Sam" en "Yo soy Sam"), útiles para captar dependencias a largo plazo.
+- **N-gramas de subpalabra:**N-gramas a nivel de caracteres o sílabas, esenciales para tratar lenguajes con morfología rica o datos ruidosos (ej: Twitter, OCR).
 
 ### Representación de secuencias
 
@@ -278,17 +273,16 @@ En lugar de un bag-of-N-grams, algunos modelos utilizan representaciones secuenc
 
 Los N-gramas son fundamentales en numerosas tareas de PLN y automatización de IA:
 
-- **Modelado de lenguaje:** Predicen la próxima palabra en una oración, impulsando el autocompletado, escritura predictiva y respuestas de chatbots.
-- **Clasificación de texto:** Extracción de características para categorizar documentos (temas, sentimiento). Bigramas como "no bueno" mejoran los clasificadores de sentimiento.
-- **Reconocimiento de voz:** Modelan secuencias de palabras para mejorar la precisión de transcripción.
-- **Corrección ortográfica:** Sugiere correcciones basadas en secuencias de palabras probables (ej: "forma" vs. "forma").
-- **Traducción automática:** Los sistemas estadísticos de traducción utilizan probabilidades de N-gramas para construir frases en el idioma destino.
-- **Recuperación de información:** Los motores de búsqueda emplean N-gramas para indexar y clasificar documentos.
-- **Detección de plagio:** Detectan secuencias superpuestas en documentos.
-- **Autocompletado/escritura predictiva:** Sugieren las siguientes palabras a medida que el usuario escribe, usando secuencias frecuentes de N-gramas.
+- **Modelado de lenguaje:**Predicen la próxima palabra en una oración, impulsando el autocompletado, escritura predictiva y respuestas de chatbots.
+- **Clasificación de texto:**Extracción de características para categorizar documentos (temas, sentimiento). Bigramas como "no bueno" mejoran los clasificadores de sentimiento.
+- **Reconocimiento de voz:**Modelan secuencias de palabras para mejorar la precisión de transcripción.
+- **Corrección ortográfica:**Sugiere correcciones basadas en secuencias de palabras probables (ej: "forma" vs. "forma").
+- **Traducción automática:**Los sistemas estadísticos de traducción utilizan probabilidades de N-gramas para construir frases en el idioma destino.
+- **Recuperación de información:**Los motores de búsqueda emplean N-gramas para indexar y clasificar documentos.
+- **Detección de plagio:**Detectan secuencias superpuestas en documentos.
+- **Autocompletado/escritura predictiva:**Sugieren las siguientes palabras a medida que el usuario escribe, usando secuencias frecuentes de N-gramas.
 
-**Ejemplos concretos:**
-- En análisis de sentimiento, bigramas como "muy bueno" o "mala calidad" indican fuertemente sentimiento positivo o negativo.
+**Ejemplos concretos:**- En análisis de sentimiento, bigramas como "muy bueno" o "mala calidad" indican fuertemente sentimiento positivo o negativo.
 - Las sugerencias de búsqueda de Google se basan en el análisis de trigramas frecuentes: al escribir "cómo", sugiere "cómo cocinar", "cómo programar", en base a la frecuencia de N-gramas.
 
 *Fuente: [GeeksforGeeks: N-gram in NLP](https://www.geeksforgeeks.org/nlp/n-gram-in-nlp/)*
@@ -304,9 +298,9 @@ Con valores altos de *n*, el número de posibles N-gramas aumenta exponencialmen
 - 1,000,000,000,000 trigramas
 
 Esto provoca:
-- **Escasez de datos:** Muchos N-gramas nunca aparecen en el corpus.
-- **Alta dimensionalidad:** El almacenamiento y computo se vuelven un reto.
+- **Escasez de datos:**Muchos N-gramas nunca aparecen en el corpus.
+- **Alta dimensionalidad:**El almacenamiento y computo se vuelven un reto.
 
 ### Backoff e interpolación en N-gramas
 
-**Backoff:** Si un N-grama de orden superior
+**Backoff:**Si un N-grama de orden superior

@@ -44,15 +44,14 @@ Logic that compares user query embeddings with route vectors, selects the best m
 
 ### Step-by-Step Workflow
 
-1. **User Query:** User submits a free-form question or command.
-2. **Text Embedding:** Query is converted into a vector using an embedding model.
-3. **Route Definition:** Each route is associated with one or more example utterances, embedded as vectors.
-4. **Similarity Search:** The system computes similarity (e.g., cosine similarity) between the query vector and all route [utterance](/en/glossary/utterance/) vectors.
-5. **Routing Decision:** The route with the highest similarity (above a threshold) is chosen.
-6. **Action/Fallback:** The matched route triggers a specific action or a fallback/default route is used if no match is strong enough.
+1. **User Query:**User submits a free-form question or command.
+2. **Text Embedding:**Query is converted into a vector using an embedding model.
+3. **Route Definition:**Each route is associated with one or more example utterances, embedded as vectors.
+4. **Similarity Search:**The system computes similarity (e.g., cosine similarity) between the query vector and all route [utterance](/en/glossary/utterance/) vectors.
+5. **Routing Decision:**The route with the highest similarity (above a threshold) is chosen.
+6. **Action/Fallback:**The matched route triggers a specific action or a fallback/default route is used if no match is strong enough.
 
-**Diagram:**
-```plaintext
+**Diagram:**```plaintext
 User Query
    |
    v
@@ -75,43 +74,43 @@ User Query
 | RAG (Retrieval-Augmented Generation) | Semantic retrieval + LLM | Contextual, up-to-date answers            | High latency, hallucination risk            | Knowledge-intensive chat          |
 ## Benefits
 
-- **Speed:** Vector similarity search is extremely fast (100ms typical) compared to LLM inference (5000ms+).
-- **Scalability:** Supports thousands of routes, surpassing LLM context limits.
-- **Cost Efficiency:** Reduces need for expensive LLM calls.
-- **Safety and Determinism:** Routes only to pre-defined paths, minimizing risk of hallucinations.
-- **Customizability:** Developers can define, tune, and optimize routes and utterances for any domain.
-- **Extensibility:** New routes added by uploading new utterances—no retraining needed.
-- **Architectural Flexibility:** Works with any embedding model or vector database.
+- **Speed:**Vector similarity search is extremely fast (100ms typical) compared to LLM inference (5000ms+).
+- **Scalability:**Supports thousands of routes, surpassing LLM context limits.
+- **Cost Efficiency:**Reduces need for expensive LLM calls.
+- **Safety and Determinism:**Routes only to pre-defined paths, minimizing risk of hallucinations.
+- **Customizability:**Developers can define, tune, and optimize routes and utterances for any domain.
+- **Extensibility:**New routes added by uploading new utterances—no retraining needed.
+- **Architectural Flexibility:**Works with any embedding model or vector database.
 ## Trade-offs and Limitations
 
-- **Nuanced or Multi-part Queries:** Struggles with queries containing multiple intents or requiring cross-domain reasoning.
-- **Quality of Route Definitions:** Effectiveness depends on well-chosen utterances for each route.
-- **Ambiguity:** Edge-case queries may require fallback mechanisms or escalation to LLM-based routing.
-- **Limited Deep Understanding:** Not a substitute for full language understanding; best as a "first line of defense" in hybrid systems.
+- **Nuanced or Multi-part Queries:**Struggles with queries containing multiple intents or requiring cross-domain reasoning.
+- **Quality of Route Definitions:**Effectiveness depends on well-chosen utterances for each route.
+- **Ambiguity:**Edge-case queries may require fallback mechanisms or escalation to LLM-based routing.
+- **Limited Deep Understanding:**Not a substitute for full language understanding; best as a "first line of defense" in hybrid systems.
 ## Common Use Cases
 
 ### 1. Customer Support
-- **Scenario:** Routing “I can’t access my account” to technical support, “What’s your pricing?” to sales.
-- **Benefit:** Reduces misrouting, ensures domain experts handle the right queries.
+- **Scenario:**Routing “I can’t access my account” to technical support, “What’s your pricing?” to sales.
+- **Benefit:**Reduces misrouting, ensures domain experts handle the right queries.
 
 ### 2. Content Moderation
-- **Use:** Detects and routes toxic or policy-violating content to moderation workflows.
+- **Use:**Detects and routes toxic or policy-violating content to moderation workflows.
 
 ### 3. Personalization
-- **Use:** Recognizes cues like “Can you talk more formally?” and switches response tone/persona.
+- **Use:**Recognizes cues like “Can you talk more formally?” and switches response tone/persona.
 
 ### 4. Multi-Source RAG
-- **Use:** Directs queries to the correct domain-specific database (e.g., HR, finance, technical docs).
+- **Use:**Directs queries to the correct domain-specific database (e.g., HR, finance, technical docs).
 
 ### 5. API Orchestration
-- **Use:** Decides whether to invoke an external API, local function, or LLM for a user request.
+- **Use:**Decides whether to invoke an external API, local function, or LLM for a user request.
 ## Operational and Strategic Considerations
 
-- **First Line of Defense:** Fast, deterministic routing before invoking costly LLMs.
-- **Hybrid Orchestration:** Combine with LLM-as-router and agentic orchestration for control and efficiency.
-- **Updating and Scaling:** Easily update, add, or remove routes via utterance vectors.
-- **Data Security:** Sensitive queries can be routed without sending data to external providers.
-- **Vendor Independence:** Works with both open-source and commercial embedding models/vector stores.
+- **First Line of Defense:**Fast, deterministic routing before invoking costly LLMs.
+- **Hybrid Orchestration:**Combine with LLM-as-router and agentic orchestration for control and efficiency.
+- **Updating and Scaling:**Easily update, add, or remove routes via utterance vectors.
+- **Data Security:**Sensitive queries can be routed without sending data to external providers.
+- **Vendor Independence:**Works with both open-source and commercial embedding models/vector stores.
 ## Implementation Example
 
 Using [Aurelio Labs Semantic Router](https://github.com/aurelio-labs/semantic-router):
@@ -152,14 +151,11 @@ print(result)  # RouteChoice(name='support', ...)
 ```
 ## Open-Source Tools and Frameworks
 
-- **[Aurelio Labs Semantic Router (MIT License)](https://github.com/aurelio-labs/semantic-router)**
-- **Embedding Model Providers:**  
-  - [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings)  
+- **[Aurelio Labs Semantic Router (MIT License)](https://github.com/aurelio-labs/semantic-router)**- **Embedding Model Providers:**- [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings)  
   - [Cohere Embeddings](https://cohere.com/embed)  
   - [Hugging Face Transformers](https://huggingface.co/docs/tokenizers/en/api/encoding)  
   - [Azure AI Search](https://devblogs.microsoft.com/ise/semantic-routing-using-azure-ai-search/)
-- **Vector Stores:**  
-  - [Pinecone](https://www.pinecone.io/)  
+- **Vector Stores:**- [Pinecone](https://www.pinecone.io/)  
   - [Qdrant](https://qdrant.tech/)  
   - [Azure AI Search](https://devblogs.microsoft.com/ise/semantic-routing-using-azure-ai-search/)
 ## Further Reading and References

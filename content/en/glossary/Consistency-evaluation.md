@@ -20,74 +20,61 @@ Stanford HAI research shows that LLMs vary in consistency across topics, being m
 
 ## Why Consistency Matters
 
-**User Trust**  
-Repeatedly changing answers erode confidence in AI advice and support.
+**User Trust**Repeatedly changing answers erode confidence in AI advice and support.
 
-**Compliance and Regulation**  
-Regulated industries require auditable, repeatable outputs for legal and ethical reasons.
+**Compliance and Regulation**Regulated industries require auditable, repeatable outputs for legal and ethical reasons.
 
-**Automation Stability**  
-Inconsistencies can break downstream processes in Robotic Process Automation (RPA) and workflow orchestration.
+**Automation Stability**Inconsistencies can break downstream processes in Robotic Process Automation (RPA) and workflow orchestration.
 
-**Debugging and Improvement**  
-Consistent errors are easier to trace and fix than sporadic or unpredictable failures.
+**Debugging and Improvement**Consistent errors are easier to trace and fix than sporadic or unpredictable failures.
 
 ## Types of Consistency
 
-**Deterministic Consistency**  
-The system is fully deterministic; identical inputs always yield the same output.
+**Deterministic Consistency**The system is fully deterministic; identical inputs always yield the same output.
 
-**Probabilistic Consistency**  
-The system may generate varied outputs, but these are semantically or functionally equivalent.
+**Probabilistic Consistency**The system may generate varied outputs, but these are semantically or functionally equivalent.
 
-**Conversational Consistency**  
-In multi-turn dialogues, the AI maintains a consistent persona, facts, and reasoning across turns.
+**Conversational Consistency**In multi-turn dialogues, the AI maintains a consistent persona, facts, and reasoning across turns.
 
 ## Methodology: How Consistency Evaluation Is Performed
 
 ### 1. Experimental Setup
 
-**a. Input Selection**  
-Curate queries from production logs, open benchmarks (e.g., Boolq), or synthetic test cases. Include edge cases, ambiguous questions, and high-frequency intents.
+**a. Input Selection**Curate queries from production logs, open benchmarks (e.g., Boolq), or synthetic test cases. Include edge cases, ambiguous questions, and high-frequency intents.
 
-**b. Model Invocation**  
-For each input, submit the prompt to the model *n* times (commonly n=3 to 5). Control for nondeterminism by fixing random seeds, temperature, and other settings where possible.
+**b. Model Invocation**For each input, submit the prompt to the model *n* times (commonly n=3 to 5). Control for nondeterminism by fixing random seeds, temperature, and other settings where possible.
 
-**c. Output Collection**  
-Aggregate the model's *n* responses for each input. Normalize outputs (case, whitespace) for surface-level checks.
+**c. Output Collection**Aggregate the model's *n* responses for each input. Normalize outputs (case, whitespace) for surface-level checks.
 
-**d. Consistency Scoring**
-- **Identical Output Check:** Are all *n* outputs for an input exactly the same?
-- **Semantic Equivalence Check:** For non-identical outputs, assess if responses are semantically equivalent using human review or automated metrics
+**d. Consistency Scoring**- **Identical Output Check:**Are all *n* outputs for an input exactly the same?
+- **Semantic Equivalence Check:**For non-identical outputs, assess if responses are semantically equivalent using human review or automated metrics
 
 ### 2. Special Considerations
 
-**Retrieval-Augmented Generation (RAG)**  
-Consistency may depend on both retrieval (search) and generation stability. Evaluate both components.
+**Retrieval-Augmented Generation (RAG)**Consistency may depend on both retrieval (search) and generation stability. Evaluate both components.
 
-**Multi-Turn Dialogue**  
-Evaluate consistency across dialogue turns, ensuring maintenance of facts and persona.
+**Multi-Turn Dialogue**Evaluate consistency across dialogue turns, ensuring maintenance of facts and persona.
 
 ## Metrics and Evaluation Techniques
 
 | Metric | Description |
 |--------|-------------|
-| **Consistency Percentage** | Proportion of inputs for which all outputs are identical or equivalent |
-| **Inconsistency %** | Share of inputs yielding divergent outputs |
-| **Skip Percentage** | Share of inputs for which the model refuses or fails to answer |
-| **BLEU Score** | n-gram overlap between generated responses and reference outputs |
-| **BERT Score** | Semantic similarity between outputs (embedding-based) |
-| **F-1 Score** | Harmonic mean of precision and recall for key information overlap |
-| **Precision@k, Recall@k** | For retrieval, measures relevance among top-k retrieved docs |
-| **Faithfulness** | Whether the generated response is grounded in retrieved context |
-| **Completeness** | Whether the AI fully answers the query |
+| **Consistency Percentage**| Proportion of inputs for which all outputs are identical or equivalent |
+| **Inconsistency %**| Share of inputs yielding divergent outputs |
+| **Skip Percentage**| Share of inputs for which the model refuses or fails to answer |
+| **BLEU Score**| n-gram overlap between generated responses and reference outputs |
+| **BERT Score**| Semantic similarity between outputs (embedding-based) |
+| **F-1 Score**| Harmonic mean of precision and recall for key information overlap |
+| **Precision@k, Recall@k**| For retrieval, measures relevance among top-k retrieved docs |
+| **Faithfulness**| Whether the generated response is grounded in retrieved context |
+| **Completeness**| Whether the AI fully answers the query |
 
 ### Calculation Example
 
 Given a dataset of *n* prompts, each submitted 3 times:
 
-- **Consistency %** = (Number of prompts with identical outputs across all runs / n) × 100
-- **Inconsistency %** = (Number of prompts with at least one divergent output / n) × 100
+- **Consistency %**= (Number of prompts with identical outputs across all runs / n) × 100
+- **Inconsistency %**= (Number of prompts with at least one divergent output / n) × 100
 
 ### Code Snippet: Simple Consistency Check (Python)
 ```python
@@ -98,19 +85,17 @@ def consistency_percentage(responses):
 
 ### Reference-Based vs Reference-Free Metrics
 
-**Reference-Based**  
-Compare outputs to "ground truth" answers (e.g., BLEU, ROUGE, F-1).
+**Reference-Based**Compare outputs to "ground truth" answers (e.g., BLEU, ROUGE, F-1).
 
-**Reference-Free**  
-Evaluate internal consistency (factual alignment, logical coherence) without external labels, often using LLM-as-a-judge or embedding similarity.
+**Reference-Free**Evaluate internal consistency (factual alignment, logical coherence) without external labels, often using LLM-as-a-judge or embedding similarity.
 
 ## Examples and Use Cases
 
 ### 1. Boolq Dataset Consistency Evaluation
 
-**Task:** True/False question answering with explanations  
-**Method:** Each question is submitted 3 times to the model  
-**Criterion:** If all three responses (answer + explanation) match, mark as consistent; otherwise, inconsistent
+**Task:**True/False question answering with explanations  
+**Method:**Each question is submitted 3 times to the model  
+**Criterion:**If all three responses (answer + explanation) match, mark as consistent; otherwise, inconsistent
 
 | Model | Consistency % | Inconsistency % | Skip % |
 |-------|--------------|-----------------|--------|
@@ -121,19 +106,19 @@ Evaluate internal consistency (factual alignment, logical coherence) without ext
 
 ### 2. RAG-Based Chatbot Consistency
 
-**Scenario:** An internal knowledge assistant retrieves company documents before answering.
+**Scenario:**An internal knowledge assistant retrieves company documents before answering.
 
-**Evaluation:** High-value queries are tested for retrieval and generation consistency across runs.
+**Evaluation:**High-value queries are tested for retrieval and generation consistency across runs.
 
-**Metrics:** Precision@k for retrieval; consistency percentage for generated responses.
+**Metrics:**Precision@k for retrieval; consistency percentage for generated responses.
 
 ### 3. Automation Workflow Integration
 
-**Use Case:** Automated compliance checking in banking.
+**Use Case:**Automated compliance checking in banking.
 
-**Requirement:** The AI assistant returns the same regulatory advice for the same scenario, regardless of timing or system load.
+**Requirement:**The AI assistant returns the same regulatory advice for the same scenario, regardless of timing or system load.
 
-**Approach:** Consistency checks are built into CI/CD pipelines, flagging or blocking deployments with degraded consistency.
+**Approach:**Consistency checks are built into CI/CD pipelines, flagging or blocking deployments with degraded consistency.
 
 ## Checklist: Implementing Consistency Evaluation
 
@@ -149,20 +134,15 @@ Evaluate internal consistency (factual alignment, logical coherence) without ext
 
 ## Common Pitfalls and Lessons Learned
 
-**Over-Optimizing for Surface Metrics**  
-Maximizing n-gram overlap (e.g., ROUGE) can neglect semantic or logical consistency.
+**Over-Optimizing for Surface Metrics**Maximizing n-gram overlap (e.g., ROUGE) can neglect semantic or logical consistency.
 
-**Ignoring Retrieval Variability**  
-In RAG, unstable document retrieval can propagate inconsistency even with a stable generative model.
+**Ignoring Retrieval Variability**In RAG, unstable document retrieval can propagate inconsistency even with a stable generative model.
 
-**Lack of Ground Truth**  
-Without references, consistency relies more on subjective or automated semantic similarity, which may miss subtle errors.
+**Lack of Ground Truth**Without references, consistency relies more on subjective or automated semantic similarity, which may miss subtle errors.
 
-**Incomplete Test Coverage**  
-Omitting diverse or adversarial inputs can overstate real-world consistency.
+**Incomplete Test Coverage**Omitting diverse or adversarial inputs can overstate real-world consistency.
 
-**Neglecting Contextual Consistency**  
-Multi-turn chatbots may maintain turn-level consistency but drift over time in persona or factual basis.
+**Neglecting Contextual Consistency**Multi-turn chatbots may maintain turn-level consistency but drift over time in persona or factual basis.
 
 ## Practical Recommendations
 
@@ -191,25 +171,23 @@ Synthetic test sets—generated by prompting LLMs with internal knowledge—help
 
 | Term | Definition |
 |------|------------|
-| **RAG** | AI systems that enhance generation by retrieving external knowledge sources |
-| **Ground Truth Answers** | Reference answers used as benchmarks for evaluation |
-| **Evaluation Metrics** | Quantitative measures such as BLEU, F-1, precision@k for scoring model performance |
-| **Reasoning Consistency** | Stability in the logical explanations provided by the AI |
-| **Internal Knowledge** | Information encoded within the model, as opposed to retrieved externally |
-| **Generated Response** | The output text produced by an AI model in response to a prompt |
-| **Correct Answer** | The expected or ground-truth response for a given prompt |
+| **RAG**| AI systems that enhance generation by retrieving external knowledge sources |
+| **Ground Truth Answers**| Reference answers used as benchmarks for evaluation |
+| **Evaluation Metrics**| Quantitative measures such as BLEU, F-1, precision@k for scoring model performance |
+| **Reasoning Consistency**| Stability in the logical explanations provided by the AI |
+| **Internal Knowledge**| Information encoded within the model, as opposed to retrieved externally |
+| **Generated Response**| The output text produced by an AI model in response to a prompt |
+| **Correct Answer**| The expected or ground-truth response for a given prompt |
 
 ## Meta-Commentary: Challenges and Future Directions
 
 Evaluating consistency is a nuanced, evolving field. As models grow in size, new sources of variability—context window, infrastructure randomness—emerge. Automated metrics are helpful but imperfect; human-in-the-loop evaluation remains valuable, especially for semantic and reasoning consistency.
 
-**Key Challenges:**
-- Aligning evaluation criteria with business and compliance requirements
+**Key Challenges:**- Aligning evaluation criteria with business and compliance requirements
 - Scaling evaluations without excessive manual intervention
 - Capturing nuanced logical or factual inconsistencies not detected by surface metrics
 
-**Areas for Further Research:**
-- Developing robust, reference-free semantic consistency metrics
+**Areas for Further Research:**- Developing robust, reference-free semantic consistency metrics
 - Benchmarks for multi-turn conversational consistency
 - Methods for auditing and tracking consistency drift over time
 

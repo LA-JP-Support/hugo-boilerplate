@@ -31,26 +31,26 @@ El diseño de persona es fundamental en múltiples funciones empresariales, mold
 
 ### 1. Servicio y Soporte al Cliente
 
-- **Voz de Marca Consistente:** Los chatbots mantienen un tono unificado, reflejando la identidad de la empresa en todas las interacciones ([Zendesk](https://www.zendesk.com/blog/chatbot-persona/)).
-- **Conexión Emocional:** Una persona cercana fomenta la confianza y la lealtad, mejorando la satisfacción y la participación recurrente.
-- **Conversaciones Naturales:** Los bots guiados por persona evitan diálogos robóticos o forzados, ofreciendo soporte fluido y humano.
+- **Voz de Marca Consistente:**Los chatbots mantienen un tono unificado, reflejando la identidad de la empresa en todas las interacciones ([Zendesk](https://www.zendesk.com/blog/chatbot-persona/)).
+- **Conexión Emocional:**Una persona cercana fomenta la confianza y la lealtad, mejorando la satisfacción y la participación recurrente.
+- **Conversaciones Naturales:**Los bots guiados por persona evitan diálogos robóticos o forzados, ofreciendo soporte fluido y humano.
 
 ### 2. Ventas y Marketing
 
-- **Generación de Leads:** Personas atractivas calientan prospectos, recaban información y guían a los usuarios por el embudo de ventas.
-- **Diferenciación de Marca:** Voces y personajes únicos hacen memorable a su bot, ayudando a destacarse ([ProProfsChat](https://www.proprofschat.com/blog/chatbot-persona/)).
+- **Generación de Leads:**Personas atractivas calientan prospectos, recaban información y guían a los usuarios por el embudo de ventas.
+- **Diferenciación de Marca:**Voces y personajes únicos hacen memorable a su bot, ayudando a destacarse ([ProProfsChat](https://www.proprofschat.com/blog/chatbot-persona/)).
 
 ### 3. Comunicaciones Internas
 
-- **Bots de Soporte a Empleados:** Herramientas internas con personas adaptadas optimizan el soporte de TI, RRHH y operaciones, haciendo las interacciones accesibles y eficientes.
+- **Bots de Soporte a Empleados:**Herramientas internas con personas adaptadas optimizan el soporte de TI, RRHH y operaciones, haciendo las interacciones accesibles y eficientes.
 
 ### 4. Entretenimiento y Compañía
 
-- **Chatbots Sociales:** Personas juguetonas, ingeniosas o excéntricas pueden brindar entretenimiento, compañía e incluso apoyo emocional (por ejemplo, XiaoIce de Microsoft, ver [AIMultiple](https://research.aimultiple.com/top-chatbot-success/)).
+- **Chatbots Sociales:**Personas juguetonas, ingeniosas o excéntricas pueden brindar entretenimiento, compañía e incluso apoyo emocional (por ejemplo, XiaoIce de Microsoft, ver [AIMultiple](https://research.aimultiple.com/top-chatbot-success/)).
 
 ### 5. Adaptación Multilingüe y Multicultural
 
-- **Personas Localizadas:** Ajustar el tono, el humor y las referencias culturales asegura una experiencia de marca coherente en distintos idiomas y regiones ([Zendesk](https://www.zendesk.com/blog/chatbot-persona/)).
+- **Personas Localizadas:**Ajustar el tono, el humor y las referencias culturales asegura una experiencia de marca coherente en distintos idiomas y regiones ([Zendesk](https://www.zendesk.com/blog/chatbot-persona/)).
 
 #### Ejemplo en Contexto:
 Si una marca promete un servicio “amigable, rápido y divertido”, el chatbot debe encarnar estos rasgos en cada conversación—usando saludos animados, emojis y lenguaje positivo.
@@ -164,36 +164,36 @@ Diversas industrias han implementado con éxito personas de chatbot claras y efe
 
 ### Ejemplo 1: Nike StyleBot – El Fanático de Zapatillas y Estilista Fitness
 
-- **Persona:** Moderna, a la moda, vanguardista.
-- **Rol:** Guía a los usuarios en la selección de zapatillas con consejos personalizados de estilo.
-- **Ajuste de marca:** Habla el idioma de la cultura sneaker y tendencias fitness.
+- **Persona:**Moderna, a la moda, vanguardista.
+- **Rol:**Guía a los usuarios en la selección de zapatillas con consejos personalizados de estilo.
+- **Ajuste de marca:**Habla el idioma de la cultura sneaker y tendencias fitness.
 - [Leer más](https://www.proprofschat.com/blog/chatbot-persona/)
 
 ### Ejemplo 2: Babylon Health – Tu Doctor Virtual Amigable
 
-- **Persona:** Calma, tranquilizadora, muy conocedora.
-- **Rol:** Ayuda a los pacientes a revisar síntomas, agendar citas y obtener información de salud.
-- **Ajuste de marca:** Comunica consejos médicos de forma clara y empática.
+- **Persona:**Calma, tranquilizadora, muy conocedora.
+- **Rol:**Ayuda a los pacientes a revisar síntomas, agendar citas y obtener información de salud.
+- **Ajuste de marca:**Comunica consejos médicos de forma clara y empática.
 
 ### Ejemplo 3: Microsoft XiaoIce – Fenómeno de Redes Sociales
 
-- **Persona:** Cálida, ingeniosa, emocionalmente inteligente.
-- **Rol:** Actúa como compañera digital, entablando conversaciones matizadas y contextuales.
-- **Impacto:** Más de 0.5 mil millones de conversaciones en 3 meses, promedio de 23 turnos de diálogo por sesión, frecuentemente pasa la Prueba de Turing.
+- **Persona:**Cálida, ingeniosa, emocionalmente inteligente.
+- **Rol:**Actúa como compañera digital, entablando conversaciones matizadas y contextuales.
+- **Impacto:**Más de 0.5 mil millones de conversaciones en 3 meses, promedio de 23 turnos de diálogo por sesión, frecuentemente pasa la Prueba de Turing.
 - [Caso de AIMultiple](https://research.aimultiple.com/top-chatbot-success/)
 
 ### Ejemplo 4: Amazon Q en Availity
 
-- **Persona:** Útil, eficiente, enfocada en desarrolladores.
-- **Rol:** Integrada con herramientas empresariales, agilizando flujos y automatizando generación de código.
-- **Impacto:** 33% del nuevo código autogenerado, impulso significativo de productividad.
+- **Persona:**Útil, eficiente, enfocada en desarrolladores.
+- **Rol:**Integrada con herramientas empresariales, agilizando flujos y automatizando generación de código.
+- **Impacto:**33% del nuevo código autogenerado, impulso significativo de productividad.
 - [Caso Completo](https://research.aimultiple.com/top-chatbot-success/)
 
 ### Ejemplo 5: Chatbot Asesor Financiero (Helmi)
 
-- **Persona:** Profesional, orientada a soluciones.
-- **Rol:** Responde preguntas sobre pensiones y finanzas con claridad.
-- **Ajuste de marca:** Avatar minimalista, tono formal.
+- **Persona:**Profesional, orientada a soluciones.
+- **Rol:**Responde preguntas sobre pensiones y finanzas con claridad.
+- **Ajuste de marca:**Avatar minimalista, tono formal.
 
 ### Casos de Uso por Industria
 
@@ -211,11 +211,11 @@ Vea más casos: [Estudios de AIMultiple](https://research.aimultiple.com/top-cha
 
 ### Buenas Prácticas
 
-- **Mantenga la Coherencia:** Sostenga el mismo tono, estilo y comportamiento en todas las interacciones ([Zendesk](https://www.zendesk.com/blog/chatbot-persona/)).
-- **Alinee con la Marca:** Asegure que cada respuesta refleje los valores de su marca.
-- **Recoja Retroalimentación:** Solicite y actúe sobre comentarios para mejorar la relevancia de la persona.
-- **Localice cuando sea necesario:** Adapte rasgos para distintos mercados e idiomas.
-- **Itere Frecuentemente:** Use análisis y tendencias para actualizar la persona regularmente.
+- **Mantenga la Coherencia:**Sostenga el mismo tono, estilo y comportamiento en todas las interacciones ([Zendesk](https://www.zendesk.com/blog/chatbot-persona/)).
+- **Alinee con la Marca:**Asegure que cada respuesta refleje los valores de su marca.
+- **Recoja Retroalimentación:**Solicite y actúe sobre comentarios para mejorar la relevancia de la persona.
+- **Localice cuando sea necesario:**Adapte rasgos para distintos mercados e idiomas.
+- **Itere Frecuentemente:**Use análisis y tendencias para actualizar la persona regularmente.
 
 #### Consejos Adicionales de Buenas Prácticas:
 
@@ -224,23 +224,23 @@ Vea más casos: [Estudios de AIMultiple](https://research.aimultiple.com/top-cha
 
 ### Errores Comunes
 
-- **Exceso de Personalidad:** Demasiadas excentricidades o bromas pueden distraer o confundir a los usuarios.
-- **Ignorar Preferencias de la Audiencia:** Una persona desalineada con las expectativas de la audiencia genera frustración.
-- **Descuidar la Funcionalidad:** La claridad y utilidad deben primar sobre el espectáculo.
-- **Inconsistencia:** Cambiar de tono o estilo durante la conversación erosiona la confianza.
-- **Falta de Actualización:** Dejar que la persona se estanque mientras evoluciona la marca o la base de usuarios.
+- **Exceso de Personalidad:**Demasiadas excentricidades o bromas pueden distraer o confundir a los usuarios.
+- **Ignorar Preferencias de la Audiencia:**Una persona desalineada con las expectativas de la audiencia genera frustración.
+- **Descuidar la Funcionalidad:**La claridad y utilidad deben primar sobre el espectáculo.
+- **Inconsistencia:**Cambiar de tono o estilo durante la conversación erosiona la confianza.
+- **Falta de Actualización:**Dejar que la persona se estanque mientras evoluciona la marca o la base de usuarios.
 
 Para más información, consulte [Buenas Prácticas de Zendesk](https://www.zendesk.com/blog/chatbot-persona/#Best-practices-for-maintaining-a-chatbot-persona) y [la guía de Chatbase](https://www.chatbase.co/blog/chatbot-persona).
 
 ## Términos Relacionados
 
-- **Servicio al Cliente:** Soporte brindado durante y después de la compra, a menudo mediante chatbots con persona.
-- **Soporte al Cliente:** Ayuda técnica o para incidencias, donde la persona influye en claridad y empatía.
-- **Rasgos de Personalidad:** Atributos definitorios (por ejemplo, amistoso, ingenioso) usados en diseño de persona.
-- **Participación del Usuario:** Grado de interacción y disfrute del chatbot, influido por el diseño de persona.
-- **Conexión Emocional:** Confianza o vínculo construido a través de un chatbot cercano.
-- **Lenguaje Natural:** Lenguaje conversacional y humano moldeado por la persona.
-- **Experiencia con el Chatbot:** Percepción general del usuario influida por el diseño de persona.
+- **Servicio al Cliente:**Soporte brindado durante y después de la compra, a menudo mediante chatbots con persona.
+- **Soporte al Cliente:**Ayuda técnica o para incidencias, donde la persona influye en claridad y empatía.
+- **Rasgos de Personalidad:**Atributos definitorios (por ejemplo, amistoso, ingenioso) usados en diseño de persona.
+- **Participación del Usuario:**Grado de interacción y disfrute del chatbot, influido por el diseño de persona.
+- **Conexión Emocional:**Confianza o vínculo construido a través de un chatbot cercano.
+- **Lenguaje Natural:**Lenguaje conversacional y humano moldeado por la persona.
+- **Experiencia con el Chatbot:**Percepción general del usuario influida por el diseño de persona.
 
 ## Más Lecturas y Herramientas
 
@@ -253,16 +253,12 @@ Para más información, consulte [Buenas Prácticas de Zendesk](https://www.zend
 - [Cómo crear la persona perfecta de chatbot en 10 pasos – Chatbase](https://www.chatbase.co/blog/chatbot-persona)
 - [Diseño conversacional de Google: Crear una persona](https://developers.google.com/assistant/conversation-design/create-a-persona)
 
-**Plantillas y Herramientas:**
-
-- [Plantilla de persona atractiva de IxDF](https://www.interaction-design.org/literature/article/personas-why-and-how-you-should-use-them)
+**Plantillas y Herramientas:**- [Plantilla de persona atractiva de IxDF](https://www.interaction-design.org/literature/article/personas-why-and-how-you-should-use-them)
 - [Generador de persona para chatbot de IA de Tidio](https://www.tidio.com/chatbot-ai/)
 - [Chatbase: Crea agentes de IA](https://www.chatbase.co/)
 - [Zendesk AI Chatbot Builder](https://www.zendesk.com/service/ai/)
 
-### **Resumen**
-
-El diseño de persona para chatbots de IA consiste en dotar a su asistente automático de una identidad distintiva y alineada con la marca, logrando que cada interacción sea atractiva, memorable y efectiva. Al definir a fondo nombre, tono, estilo y comportamiento—y refinar mediante análisis y retroalimentación—su chatbot se destaca como un representante valioso y confiable para su empresa. Esto impulsa un mejor servicio, mayor participación y lealtad duradera de los usuarios.
+### **Resumen**El diseño de persona para chatbots de IA consiste en dotar a su asistente automático de una identidad distintiva y alineada con la marca, logrando que cada interacción sea atractiva, memorable y efectiva. Al definir a fondo nombre, tono, estilo y comportamiento—y refinar mediante análisis y retroalimentación—su chatbot se destaca como un representante valioso y confiable para su empresa. Esto impulsa un mejor servicio, mayor participación y lealtad duradera de los usuarios.
 
 Para plantillas prácticas, guías detalladas y herramientas de plataforma, explore los recursos anteriores:
 
@@ -270,8 +266,7 @@ Para plantillas prácticas, guías detalladas y herramientas de plataforma, expl
 - [Pruebe plataformas líderes de persona de chatbot](https://www.tidio.com/chatbot-ai/)
 - [Contacte expertos en diseño de persona](https://www.chatbot.com/blog/personality/)
 
-**Vea también:**  
-[Participación del Cliente](https://www.tidio.com/blog/customer-engagement/),  
+**Vea también:**[Participación del Cliente](https://www.tidio.com/blog/customer-engagement/),  
 [Retroalimentación de Usuario](https://www.tidio.com/blog/customer-feedback/),  
 [Experiencia con el Chatbot](https://www.zendesk.com/blog/chatbot-persona/)
 Este glosario integra los últimos conocimientos prácticos, mejores prácticas y enlaces de referencia para dominar el diseño de persona en chatbots de IA y automatización.

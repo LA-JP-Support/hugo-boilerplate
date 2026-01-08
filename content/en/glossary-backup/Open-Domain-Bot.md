@@ -19,23 +19,23 @@ Open-domain bots are [conversational AI](/en/glossary/conversational-ai/) system
 
 ### Early Chatbots
 
-The earliest chatbots, such as **ELIZA** (1966), used rule-based pattern matching to simulate conversation, typically within a very narrow domain (e.g., psychotherapy). Later, **ALICE** (1995) introduced AIML (Artificial Intelligence Markup Language), but remained fundamentally closed-domain.
+The earliest chatbots, such as **ELIZA**(1966), used rule-based pattern matching to simulate conversation, typically within a very narrow domain (e.g., psychotherapy). Later, **ALICE**(1995) introduced AIML (Artificial Intelligence Markup Language), but remained fundamentally closed-domain.
 
 ### The Rise of Open-Domain Dialogue
 
-With the advent of large-scale data and neural network architectures, the field shifted toward open-domain conversation. The introduction of **sequence-to-sequence (seq2seq)** models (Vinyals & Le, 2015) marked a major milestone, enabling end-to-end neural dialogue systems trained on massive datasets scraped from public internet sources (e.g., Reddit).
+With the advent of large-scale data and neural network architectures, the field shifted toward open-domain conversation. The introduction of **sequence-to-sequence (seq2seq)**models (Vinyals & Le, 2015) marked a major milestone, enabling end-to-end neural dialogue systems trained on massive datasets scraped from public internet sources (e.g., Reddit).
 
-Subsequent transformer-based models, such as **Google’s Meena** and **Facebook’s Blender**, further advanced the field by incorporating attention mechanisms and leveraging billions of conversational parameters. Research competitions, such as the **Alexa Prize** and **ConvAI Challenge**, have accelerated development and evaluation of open-domain systems.  
+Subsequent transformer-based models, such as **Google’s Meena**and **Facebook’s Blender**, further advanced the field by incorporating attention mechanisms and leveraging billions of conversational parameters. Research competitions, such as the **Alexa Prize**and **ConvAI Challenge**, have accelerated development and evaluation of open-domain systems.  
 - Source: [ACL Anthology 2021](https://aclanthology.org/2021.sigdial-1.41.pdf), [IJEAT Research](https://www.ijeat.org/wp-content/uploads/papers/v9i4/D8734049420.pdf)
 
 ## Key Terminology and Distinctions
 
 ### Open-Domain vs. Closed-Domain
 
-- **Open-domain chatbot:** Engages in unconstrained conversation, supporting any subject.  
+- **Open-domain chatbot:**Engages in unconstrained conversation, supporting any subject.  
   *Examples: Meena, Blender, Mitsuku*
 
-- **Closed-domain chatbot:** Restricted to specific, predefined tasks or domains (e.g., flight booking, banking).  
+- **Closed-domain chatbot:**Restricted to specific, predefined tasks or domains (e.g., flight booking, banking).  
   *Examples: LegalBot, medical triage bots*
 
 | Aspect                 | Open-Domain Bot                                  | Closed-Domain Bot                  |
@@ -49,14 +49,14 @@ Subsequent transformer-based models, such as **Google’s Meena** and **Facebook
 
 ### Chatbot vs. Dialogue System
 
-- **Chatbot:** Informal term for systems simulating social, free-form chat.
-- **Dialogue system:** Broader term, including both open-domain and closed-domain (task-oriented) systems.
+- **Chatbot:**Informal term for systems simulating social, free-form chat.
+- **Dialogue system:**Broader term, including both open-domain and closed-domain (task-oriented) systems.
 - For distinctions, see: [SpringerLink](https://link.springer.com/chapter/10.1007/978-981-15-1384-8_22)
 
 ### Question Answering vs. Free-Form Dialogue
 
-- **Question answering (QA):** Focused on factual, often one-turn queries, leveraging structured retrieval (e.g., from Wikipedia).
-- **Free-form dialogue:** Multi-turn, unstructured conversation, including [small talk](/en/glossary/small-talk/), storytelling, and opinions.
+- **Question answering (QA):**Focused on factual, often one-turn queries, leveraging structured retrieval (e.g., from Wikipedia).
+- **Free-form dialogue:**Multi-turn, unstructured conversation, including [small talk](/en/glossary/small-talk/), storytelling, and opinions.
 
 ## Architectures Underlying Open-Domain Bots
 
@@ -74,8 +74,8 @@ Transformers, as introduced by Vaswani et al. (2017), utilize self-attention mec
 
 ### Retrieval-Based and Generative Approaches
 
-- **Retrieval-based:** Selects a best-fit response from a predefined set using similarity metrics. Reliable for accuracy but limited to existing data.
-- **Generative models:** Compose responses one word at a time, allowing novel utterances but risking incoherence.
+- **Retrieval-based:**Selects a best-fit response from a predefined set using similarity metrics. Reliable for accuracy but limited to existing data.
+- **Generative models:**Compose responses one word at a time, allowing novel utterances but risking incoherence.
 - Comparative studies:  
   - [IJEAT Research](https://www.ijeat.org/wp-content/uploads/papers/v9i4/D8734049420.pdf)
 
@@ -84,13 +84,9 @@ Transformers, as introduced by Vaswani et al. (2017), utilize self-attention mec
 ### Practical Applications
 
 Open-domain bots are deployed for:
-- **Social conversation & companionship**
-- **General information seeking** (open-domain QA)
-- **Customer engagement** (broad-topic chat)
-- **AI research and benchmarking**
-- **Language practice**
-
-### Examples of Notable Systems
+- **Social conversation & companionship**- **General information seeking**(open-domain QA)
+- **Customer engagement**(broad-topic chat)
+- **AI research and benchmarking**- **Language practice**### Examples of Notable Systems
 
 | System      | Description                                      | Features / Benchmarks |
 |-------------|--------------------------------------------------|----------------------|
@@ -105,9 +101,9 @@ Open-domain bots are deployed for:
 ### Speech Event Taxonomy
 
 Speech events represent the categories of conversational activity (Goldsmith & Baxter, 1996):
-- **Informal/Superficial:** Small talk, gossip, jokes
-- **Involving:** Complaints, relationship talk
-- **Goal-directed:** Decision making, instructions
+- **Informal/Superficial:**Small talk, gossip, jokes
+- **Involving:**Complaints, relationship talk
+- **Goal-directed:**Decision making, instructions
 
 ### Empirical Findings and Limitations
 
@@ -117,16 +113,16 @@ Speech events represent the categories of conversational activity (Goldsmith & B
 
 ### Challenges in Achieving Real Openness
 
-- **Contextual understanding** is limited, especially across long or complex exchanges.
-- **Real-world grounding** (e.g., referencing live events or user context) is unsolved.
-- **Complex speech events** such as persuasion or collaborative planning remain rare.
+- **Contextual understanding**is limited, especially across long or complex exchanges.
+- **Real-world grounding**(e.g., referencing live events or user context) is unsolved.
+- **Complex speech events**such as persuasion or collaborative planning remain rare.
 
 ## Evaluation Frameworks and Benchmarks
 
 ### Human Likeness and Coherence
 
-- **Coherence:** Logical connection and flow of conversation.
-- **Human-likeness:** Degree to which bot responses are indistinguishable from human.
+- **Coherence:**Logical connection and flow of conversation.
+- **Human-likeness:**Degree to which bot responses are indistinguishable from human.
 
 ### Speech Event Evaluation
 
@@ -140,8 +136,8 @@ Speech events represent the categories of conversational activity (Goldsmith & B
 
 ### Turing Test and Other Methods
 
-- **Turing Test:** Measures imitation of human conversation, criticized for focusing on deception rather than depth.
-- **Turn-by-turn assessment:** Evaluates each response for sensibleness and specificity.
+- **Turing Test:**Measures imitation of human conversation, criticized for focusing on deception rather than depth.
+- **Turn-by-turn assessment:**Evaluates each response for sensibleness and specificity.
 
 ### Quantitative Results and Benchmarks
 
@@ -152,24 +148,23 @@ Speech events represent the categories of conversational activity (Goldsmith & B
 
 ### Real-World Deployment Issues
 
-- **Data requirements:** Training open-domain bots needs massive, diverse conversational data.
-- **Computation:** Transformers require extensive computing power.
-- **Safety:** Risk of generating inappropriate, biased, or nonsensical output.
+- **Data requirements:**Training open-domain bots needs massive, diverse conversational data.
+- **Computation:**Transformers require extensive computing power.
+- **Safety:**Risk of generating inappropriate, biased, or nonsensical output.
 
 ### Rasa and Practical Limitations
 
-- **Rasa:** Primarily designed for intent/entity-driven, task-oriented bots.
-- **Challenges for open-domain in Rasa:**
-  - Exhaustive intent/entity design is impractical for unbounded domains.
+- **Rasa:**Primarily designed for intent/entity-driven, task-oriented bots.
+- **Challenges for open-domain in Rasa:**- Exhaustive intent/entity design is impractical for unbounded domains.
   - Response selection and context tracking do not scale to open-domain needs.
   - See [Rasa Open Domain Forum](https://forum.rasa.com/t/open-domain-chatbot/24319) and [Deployment Issues](https://forum.rasa.com/t/rasa-chat-bot-deployment-and-integration-issues/47964)
 
 ## Future Directions and Open Questions
 
-- **Conversational breadth:** Expanding beyond small talk to cover the full range of human conversational events.
-- **Contextual memory:** Improving bots’ ability to remember, recall, and reference prior exchanges.
-- **Ethics and safety:** Developing robust filtering and monitoring for responsible deployment.
-- **Hybrid models:** Combining retrieval, generation, and [human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/) curation for improved dialogue quality.
+- **Conversational breadth:**Expanding beyond small talk to cover the full range of human conversational events.
+- **Contextual memory:**Improving bots’ ability to remember, recall, and reference prior exchanges.
+- **Ethics and safety:**Developing robust filtering and monitoring for responsible deployment.
+- **Hybrid models:**Combining retrieval, generation, and [human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/) curation for improved dialogue quality.
 
 ## References and Further Reading
 
@@ -184,13 +179,11 @@ Speech events represent the categories of conversational activity (Goldsmith & B
 - [Rasa Open Domain Forum](https://forum.rasa.com/t/open-domain-chatbot/24319)
 - [Rasa Chat Bot - Deployment and Integration Issues](https://forum.rasa.com/t/rasa-chat-bot-deployment-and-integration-issues/47964)
 
-**Related Glossary Terms:**  
-- [Chatbot (Wisdomlib)](https://www.wisdomlib.org/concept/chatbot)  
+**Related Glossary Terms:**- [Chatbot (Wisdomlib)](https://www.wisdomlib.org/concept/chatbot)  
 - [Dialogue agent (Wisdomlib)](https://www.wisdomlib.org/concept/dialogue-agent)  
 - [Virtual assistant (Wisdomlib)](https://www.wisdomlib.org/concept/virtual-assistant)
 
-**For further exploration:**  
-- [ParlAI Platform for Open-Domain Chatbot Research](https://parl.ai/)
+**For further exploration:**- [ParlAI Platform for Open-Domain Chatbot Research](https://parl.ai/)
 - [OpenAI GPT Models](https://openai.com/research/)
 - [SQuAD: Stanford Question Answering Dataset](https://rajpurkar.github.io/SQuAD-explorer/)
 

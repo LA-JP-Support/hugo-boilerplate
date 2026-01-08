@@ -65,8 +65,8 @@ La arquitectura orientada a eventos es un patrón de diseño de sistemas en el q
 
 Los webhooks y las APIs se usan para la integración de sistemas, pero difieren fundamentalmente en cómo y cuándo se transfiere la información:
 
-- **Webhooks (Push):** Los datos se entregan automáticamente a tu endpoint cuando ocurre un evento.
-- **API Polling (Pull):** Tu sistema solicita repetidamente datos a un servidor en intervalos regulares para verificar actualizaciones.
+- **Webhooks (Push):**Los datos se entregan automáticamente a tu endpoint cuando ocurre un evento.
+- **API Polling (Pull):**Tu sistema solicita repetidamente datos a un servidor en intervalos regulares para verificar actualizaciones.
 
 El polling consume muchos recursos e introduce [latencia](/es/glossary/latency/), mientras que los webhooks proveen comunicación eficiente y casi instantánea con mínimo sobrecoste.
 
@@ -92,26 +92,19 @@ El fulfillment por webhook generalmente sigue estos pasos:
 
 ### Pasos del Ciclo de Vida
 
-1. **Disparador de Evento:**  
-   Ocurre un evento (p. ej., coincidencia de intención, acción de usuario, actualización de datos).
+1. **Disparador de Evento:**Ocurre un evento (p. ej., coincidencia de intención, acción de usuario, actualización de datos).
 
-2. **Solicitud Webhook:**  
-   El sistema origen envía una solicitud HTTPS POST al endpoint de webhook registrado. El payload contiene detalles del evento y contexto relevante.
+2. **Solicitud Webhook:**El sistema origen envía una solicitud HTTPS POST al endpoint de webhook registrado. El payload contiene detalles del evento y contexto relevante.
 
-3. **Procesamiento del Payload:**  
-   El manejador del webhook verifica la autenticidad, analiza el payload y ejecuta la lógica de negocio (llamadas API, consultas a BD, cálculos).
+3. **Procesamiento del Payload:**El manejador del webhook verifica la autenticidad, analiza el payload y ejecuta la lógica de negocio (llamadas API, consultas a BD, cálculos).
 
-4. **Generación de Respuesta:**  
-   El manejador del webhook devuelve una respuesta HTTP (usualmente JSON) con el resultado del fulfillment.
+4. **Generación de Respuesta:**El manejador del webhook devuelve una respuesta HTTP (usualmente JSON) con el resultado del fulfillment.
 
-5. **Confirmación y Acuse de Recibo:**  
-   El sistema origen espera un código HTTP 2xx para confirmar el éxito. Si no lo recibe, reintenta la entrega según su política.
+5. **Confirmación y Acuse de Recibo:**El sistema origen espera un código HTTP 2xx para confirmar el éxito. Si no lo recibe, reintenta la entrega según su política.
 
-6. **Reintentos y Manejo de Errores:**  
-   Si el manejador falla o no está disponible, el origen reintenta la entrega con backoff exponencial o un número fijo de intentos.
+6. **Reintentos y Manejo de Errores:**Si el manejador falla o no está disponible, el origen reintenta la entrega con backoff exponencial o un número fijo de intentos.
 
-**Flujo Visual:**
-```
+**Flujo Visual:**```
 [Acción/Intención de Usuario]
       |
       v
@@ -132,8 +125,7 @@ El fulfillment por webhook generalmente sigue estos pasos:
 
 ### Ejemplos de Payload
 
-**Solicitud Webhook (Ejemplo JSON):**
-```json
+**Solicitud Webhook (Ejemplo JSON):**```json
 {
   "event": "intent_matched",
   "intent": "GetAccountBalance",
@@ -145,8 +137,7 @@ El fulfillment por webhook generalmente sigue estos pasos:
 }
 ```
 
-**Ejemplo de Solicitud Dialogflow:**  
-Ver [Referencia WebhookRequest de Dialogflow (en inglés)](https://cloud.google.com/dialogflow/es/docs/reference/rpc/google.cloud.dialogflow.v2#webhookrequest)
+**Ejemplo de Solicitud Dialogflow:**Ver [Referencia WebhookRequest de Dialogflow (en inglés)](https://cloud.google.com/dialogflow/es/docs/reference/rpc/google.cloud.dialogflow.v2#webhookrequest)
 ```json
 {
   "responseId": "response-id",
@@ -160,8 +151,7 @@ Ver [Referencia WebhookRequest de Dialogflow (en inglés)](https://cloud.google.
 }
 ```
 
-**Respuesta Webhook (Ejemplo JSON):**
-```json
+**Respuesta Webhook (Ejemplo JSON):**```json
 {
   "fulfillmentText": "Su saldo actual es $1,250.",
   "parameters": { "balance": 1250 }
@@ -172,11 +162,10 @@ Ver [Referencia WebhookRequest de Dialogflow (en inglés)](https://cloud.google.
 
 ### Protocolos y Formatos de Payload
 
-- **Protocolos:** HTTPS es obligatorio por seguridad.
-- **Métodos HTTP:** POST es el estándar (GET/PATCH/PUT posibles en escenarios flexibles).
-- **Payloads:** JSON es el formato estándar. XML o formularios URL-encoded a veces se usan para sistemas legados.
-- **Encabezados:**  
-  - `Content-Type: application/json`  
+- **Protocolos:**HTTPS es obligatorio por seguridad.
+- **Métodos HTTP:**POST es el estándar (GET/PATCH/PUT posibles en escenarios flexibles).
+- **Payloads:**JSON es el formato estándar. XML o formularios URL-encoded a veces se usan para sistemas legados.
+- **Encabezados:**- `Content-Type: application/json`  
   - `Authorization: Bearer <token>` o encabezados personalizados para autenticación  
   - Encabezados de firma para validación HMAC
 
@@ -186,61 +175,49 @@ Ver [Referencia WebhookRequest de Dialogflow (en inglés)](https://cloud.google.
 
 Asegurar los endpoints de webhook es esencial para prevenir acceso no autorizado y solicitudes falsas.
 
-- **HTTPS Requerido:** Los datos en tránsito deben estar siempre cifrados.  
+- **HTTPS Requerido:**Los datos en tránsito deben estar siempre cifrados.  
   [¿Por qué HTTPS? (Google Support)](https://support.google.com/domains/answer/7630973)
 
-- **Mecanismos de Autenticación:**
-    - **Encabezados de autenticación:** Tokens estáticos o dinámicos en el header `Authorization`.
-    - **Basic Auth:** Usuario/contraseña en base64.
-    - **OAuth:** Tokens Bearer OAuth2 para APIs gestionadas.
-    - **Tokens de Identidad de Servicio:** Para sistemas cloud (ej. Google Cloud).
-    - **mTLS (TLS Mutuo):** Ambos extremos presentan certificados SSL.
-    - **Firmas HMAC:** Un secreto compartido firma el payload; el manejador lo verifica.
-- **Validación:** Siempre valida firmas digitales o tokens en las solicitudes entrantes.
-- **Lista blanca de IPs:** A veces se usa, pero puede ser poco fiable por las IPs dinámicas en la nube.
+- **Mecanismos de Autenticación:**- **Encabezados de autenticación:**Tokens estáticos o dinámicos en el header `Authorization`.
+    - **Basic Auth:**Usuario/contraseña en base64.
+    - **OAuth:**Tokens Bearer OAuth2 para APIs gestionadas.
+    - **Tokens de Identidad de Servicio:**Para sistemas cloud (ej. Google Cloud).
+    - **mTLS (TLS Mutuo):**Ambos extremos presentan certificados SSL.
+    - **Firmas HMAC:**Un secreto compartido firma el payload; el manejador lo verifica.
+- **Validación:**Siempre valida firmas digitales o tokens en las solicitudes entrantes.
+- **Lista blanca de IPs:**A veces se usa, pero puede ser poco fiable por las IPs dinámicas en la nube.
 
 - [Guía de Seguridad Webhook (Hookdeck, en inglés)](https://hookdeck.com/webhooks/guides/complete-guide-to-webhook-security)
 - [Opciones de Autenticación Dialogflow (en inglés)](https://docs.cloud.google.com/dialogflow/es/docs/fulfillment-webhook#authentication)
 
 ### Timeouts, Reintentos e Idempotencia
 
-- **Timeouts:**  
-  Los manejadores deben responder rápido (normalmente entre 1–10 segundos). El trabajo de larga duración debe externalizarse.
-- **Reintentos:**  
-  Los productores reintentan entregas fallidas con backoff exponencial, hasta un número máximo de intentos.
-- **Idempotencia:**  
-  Los manejadores deben ser idempotentes—procesar el mismo evento varias veces no debe causar efectos indeseados. Usa IDs únicos de evento para detectar y saltar duplicados.
+- **Timeouts:**Los manejadores deben responder rápido (normalmente entre 1–10 segundos). El trabajo de larga duración debe externalizarse.
+- **Reintentos:**Los productores reintentan entregas fallidas con backoff exponencial, hasta un número máximo de intentos.
+- **Idempotencia:**Los manejadores deben ser idempotentes—procesar el mismo evento varias veces no debe causar efectos indeseados. Usa IDs únicos de evento para detectar y saltar duplicados.
 
 - [Cómo implementar un Webhook: Guía paso a paso (en inglés)](https://racklify.com/encyclopedia/implementing-a-webhook-a-step-by-step-beginner-guide/)
 
 ### Procesamiento Asíncrono vs. Síncrono
 
-- **Síncrono:**  
-  El manejador procesa y devuelve el resultado inmediatamente (ej. confirmación de pago).
-- **Asíncrono:**  
-  El manejador acusa recibo rápidamente y realiza el trabajo en segundo plano. Útil para tareas que exceden el tiempo límite del webhook.
+- **Síncrono:**El manejador procesa y devuelve el resultado inmediatamente (ej. confirmación de pago).
+- **Asíncrono:**El manejador acusa recibo rápidamente y realiza el trabajo en segundo plano. Útil para tareas que exceden el tiempo límite del webhook.
 
 ## Implementación y Configuración
 
 ### Pasos de Configuración
 
-1. **Definir eventos disparadores:**  
-   Identifica los eventos (coincidencias de intención, transiciones de página) que dispararán llamadas webhook.
+1. **Definir eventos disparadores:**Identifica los eventos (coincidencias de intención, transiciones de página) que dispararán llamadas webhook.
 
-2. **Desarrollar el manejador de webhook:**  
-   Implementa un servicio backend (Node.js, Python, Java, etc.) para recibir y procesar solicitudes HTTPS. Asegúrate de validar firmas/tokens.
+2. **Desarrollar el manejador de webhook:**Implementa un servicio backend (Node.js, Python, Java, etc.) para recibir y procesar solicitudes HTTPS. Asegúrate de validar firmas/tokens.
 
-3. **Desplegar el manejador:**  
-   Hospédalo en un endpoint accesible públicamente. Usa serverless (AWS Lambda, Google Cloud Functions) o servidores tradicionales. Siempre sirve vía HTTPS.
+3. **Desplegar el manejador:**Hospédalo en un endpoint accesible públicamente. Usa serverless (AWS Lambda, Google Cloud Functions) o servidores tradicionales. Siempre sirve vía HTTPS.
 
-4. **Registrar el webhook:**  
-   En la plataforma de chatbot/automatización, configura la URL del webhook, método HTTP, autenticación y parámetros requeridos.
+4. **Registrar el webhook:**En la plataforma de chatbot/automatización, configura la URL del webhook, método HTTP, autenticación y parámetros requeridos.
 
-5. **Configurar mapeo de payload/respuesta:**  
-   Especifica qué parámetros enviar y esperar.
+5. **Configurar mapeo de payload/respuesta:**Especifica qué parámetros enviar y esperar.
 
-6. **Probar la integración:**  
-   Usa herramientas como ngrok o Tunnelmole para exponer tu servidor local y testear.
+6. **Probar la integración:**Usa herramientas como ngrok o Tunnelmole para exponer tu servidor local y testear.
 
 - [Cómo implementar un Webhook: Guía paso a paso (Racklify, en inglés)](https://racklify.com/encyclopedia/implementing-a-webhook-a-step-by-step-beginner-guide/)
 - [Probar Webhooks localmente con ngrok (en inglés)](https://ngrok.com/)
@@ -260,8 +237,7 @@ Asegurar los endpoints de webhook es esencial para prevenir acceso no autorizado
 
 ### Ejemplos de Código
 
-**Ejemplo Express (Node.js):**
-```js
+**Ejemplo Express (Node.js):**```js
 const express = require('express');
 const app = express();
 app.use(express.json());
@@ -289,8 +265,7 @@ function fetchUserBalance(userId) {
 app.listen(3000, () => console.log('Webhook escuchando en el puerto 3000'));
 ```
 
-**Verificación de Firmas (Pseudocódigo):**
-```python
+**Verificación de Firmas (Pseudocódigo):**```python
 import hmac
 import hashlib
 
@@ -299,8 +274,7 @@ def verify_signature(secret, payload, signature):
     return hmac.compare_digest(computed, signature)
 ```
 
-**URL Webhook Flexible con Parámetros:**
-```
+**URL Webhook Flexible con Parámetros:**```
 https://api.example.com/webhook?user_id=$session.params.user_id
 ```
 
@@ -310,22 +284,17 @@ https://api.example.com/webhook?user_id=$session.params.user_id
 
 El fulfillment por webhook habilita numerosos escenarios de automatización:
 
-- **Chatbots de IA:**
-    - Obtener datos de perfil/cuenta de usuario en tiempo real.
+- **Chatbots de IA:**- Obtener datos de perfil/cuenta de usuario en tiempo real.
     - Validar entradas del usuario (ej. códigos promocionales).
     - Proveer respuestas personalizadas y con contexto.
     - Rutar conversaciones por estado de usuario (ej. VIP).
-- **Pagos y e-commerce:**
-    - Notificar sistemas cuando se crea, paga o envía un pedido.
+- **Pagos y e-commerce:**- Notificar sistemas cuando se crea, paga o envía un pedido.
     - Actualizar inventario o disparar procesos de fulfillment.
-- **CRM y Marketing:**
-    - Sincronizar datos de contacto/lead al instante con herramientas externas.
+- **CRM y Marketing:**- Sincronizar datos de contacto/lead al instante con herramientas externas.
     - Disparar campañas de marketing según acciones del usuario.
-- **Automatización IT y DevOps:**
-    - Iniciar cambios de infraestructura ante merges de código.
+- **Automatización IT y DevOps:**- Iniciar cambios de infraestructura ante merges de código.
     - Integrar CI/CD, monitoreo o flujos de gestión de incidentes.
-- **Orquestación de Flujos:**
-    - Encadenar procesos multi-paso disparando sistemas aguas abajo.
+- **Orquestación de Flujos:**- Encadenar procesos multi-paso disparando sistemas aguas abajo.
     - Iniciar pipelines de datos o procesos analíticos al llegar nueva información.
 
 - [Casos de uso de Fulfillment en Dialogflow (en inglés)](https://cloud.google.com/dialogflow/es/docs/fulfillment-webhook)
@@ -333,26 +302,21 @@ El fulfillment por webhook habilita numerosos escenarios de automatización:
 
 ## Buenas Prácticas
 
-**Seguridad:**
-- Usa siempre HTTPS para evitar intercepciones.
+**Seguridad:**- Usa siempre HTTPS para evitar intercepciones.
 - Valida firmas de solicitud o tokens de autenticación.
 - Nunca expongas endpoints sin autenticación.
 
-**Fiabilidad:**
-- Implementa lógica de reintentos en emisor y receptor.
+**Fiabilidad:**- Implementa lógica de reintentos en emisor y receptor.
 - Garantiza idempotencia rastreando IDs de evento.
 - Usa colas/trabajadores en background para tareas lentas.
 
-**Rendimiento:**
-- Responde a los webhooks rápidamente; difiere el trabajo pesado.
+**Rendimiento:**- Responde a los webhooks rápidamente; difiere el trabajo pesado.
 - Monitorea la salud del endpoint y registra todas las solicitudes/fallos.
 
-**Escalabilidad:**
-- Usa balanceadores de carga/infraestructura distribuida para alta demanda.
+**Escalabilidad:**- Usa balanceadores de carga/infraestructura distribuida para alta demanda.
 - Persiste eventos entrantes en una base de datos o cola antes de procesar.
 
-**Mantenibilidad:**
-- Mantén la documentación de endpoints webhook actualizada.
+**Mantenibilidad:**- Mantén la documentación de endpoints webhook actualizada.
 - Separa entornos de test y producción.
 - Versiona los payloads para compatibilidad hacia atrás.
 
@@ -361,26 +325,19 @@ El fulfillment por webhook habilita numerosos escenarios de automatización:
 
 ## Preguntas Frecuentes
 
-**¿Son lo mismo los webhooks y las APIs?**  
-No. Los webhooks son solicitudes HTTP iniciadas por el servidor (orientadas a eventos), mientras que las APIs las inicia el cliente (request/response). Los webhooks te notifican cambios; las APIs te permiten consultar o actualizar datos.
+**¿Son lo mismo los webhooks y las APIs?**No. Los webhooks son solicitudes HTTP iniciadas por el servidor (orientadas a eventos), mientras que las APIs las inicia el cliente (request/response). Los webhooks te notifican cambios; las APIs te permiten consultar o actualizar datos.
 
-**¿Qué pasa si mi endpoint webhook está caído?**  
-El sistema origen reintenta la entrega según su política. Si sigue inactivo tras el límite de reintentos, los eventos pueden perderse.
+**¿Qué pasa si mi endpoint webhook está caído?**El sistema origen reintenta la entrega según su política. Si sigue inactivo tras el límite de reintentos, los eventos pueden perderse.
 
-**¿Se pueden personalizar los payloads de webhook?**  
-Muchas plataformas permiten payloads flexibles y mapeo de parámetros.
+**¿Se pueden personalizar los payloads de webhook?**Muchas plataformas permiten payloads flexibles y mapeo de parámetros.
 
-**¿Cómo pruebo fulfillment webhook localmente?**  
-Utiliza herramientas de tunelado como [ngrok](https://ngrok.com/) o [Tunnelmole](https://tunnelmole.com/) para exponer tu servidor local.
+**¿Cómo pruebo fulfillment webhook localmente?**Utiliza herramientas de tunelado como [ngrok](https://ngrok.com/) o [Tunnelmole](https://tunnelmole.com/) para exponer tu servidor local.
 
-**¿Cómo evito procesamiento duplicado?**  
-Rastrea IDs únicos de evento e ignora repetidos para asegurar idempotencia.
+**¿Cómo evito procesamiento duplicado?**Rastrea IDs únicos de evento e ignora repetidos para asegurar idempotencia.
 
-**¿Qué formatos de payload se soportan?**  
-JSON es el estándar; a veces se usa XML o datos de formulario.
+**¿Qué formatos de payload se soportan?**JSON es el estándar; a veces se usa XML o datos de formulario.
 
-**¿Cómo aseguro los endpoints webhook?**  
-Usa HTTPS, valida firmas HMAC o tokens y restringe IPs si es posible.
+**¿Cómo aseguro los endpoints webhook?**Usa HTTPS, valida firmas HMAC o tokens y restringe IPs si es posible.
 
 ## Referencias y Lecturas Adicionales
 

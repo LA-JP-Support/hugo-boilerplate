@@ -11,9 +11,9 @@ draft: false
 ---
 ## 1. Definition
 
-**Adversarial Robustness** is the property of a machine learning (ML) or artificial intelligence (AI) model to maintain reliable performance when faced with adversarial input—intentionally crafted data designed to induce errors or misclassifications. A robust model resists being fooled by these adversarial manipulations, even when such perturbations are nearly imperceptible to human observers.
+**Adversarial Robustness**is the property of a machine learning (ML) or artificial intelligence (AI) model to maintain reliable performance when faced with adversarial input—intentionally crafted data designed to induce errors or misclassifications. A robust model resists being fooled by these adversarial manipulations, even when such perturbations are nearly imperceptible to human observers.
 
-> **Adversarial Robustness:** The capacity of a machine learning model to withstand the impact of adversarial examples—inputs crafted to cause misclassification or malfunction—without significant performance degradation under specified perturbation constraints.
+> **Adversarial Robustness:**The capacity of a machine learning model to withstand the impact of adversarial examples—inputs crafted to cause misclassification or malfunction—without significant performance degradation under specified perturbation constraints.
 
 Adversarial robustness is a foundational requirement for trustworthy, safe, and secure AI systems, especially in contexts where erroneous predictions can lead to severe consequences.
 
@@ -26,9 +26,9 @@ Adversarial robustness is a foundational requirement for trustworthy, safe, and 
 
 AI systems are now integral to domains such as autonomous driving, healthcare diagnostics, banking, and [content moderation](/en/glossary/content-moderation/). In these areas, targeted adversarial manipulations that may be invisible to humans can force models into catastrophic errors:
 
-- **Autonomous Vehicles:** Small stickers on stop signs can cause vision systems to misclassify them as speed limits, threatening lives ([DataScientest](https://datascientest.com/en/all-about-autonomous-vehicles)).
-- **Fraud Detection:** Slightly altered transaction records can slip past fraud detectors, causing financial losses.
-- **Medical Imaging:** Adversarial noise on radiological images can mask or create false pathologies for diagnostic AI.
+- **Autonomous Vehicles:**Small stickers on stop signs can cause vision systems to misclassify them as speed limits, threatening lives ([DataScientest](https://datascientest.com/en/all-about-autonomous-vehicles)).
+- **Fraud Detection:**Slightly altered transaction records can slip past fraud detectors, causing financial losses.
+- **Medical Imaging:**Adversarial noise on radiological images can mask or create false pathologies for diagnostic AI.
 
 ### 2.2. Relationship to AI Safety and Ethics
 
@@ -42,10 +42,9 @@ Adversarial attacks differ by attacker knowledge, objectives, and the ML pipelin
 
 Attackers have full access to the model’s architecture, parameters, and training data.
 
-- **Mechanism:** Use model gradients to optimize input perturbations that cause misclassification.
-- **Techniques:** Fast Gradient Sign Method (FGSM), Projected Gradient Descent (PGD).
-- **Mathematical Formulation:**  
-  For model $f(x)$ and input $x$, find adversarial example $\hat{x}$:
+- **Mechanism:**Use model gradients to optimize input perturbations that cause misclassification.
+- **Techniques:**Fast Gradient Sign Method (FGSM), Projected Gradient Descent (PGD).
+- **Mathematical Formulation:**For model $f(x)$ and input $x$, find adversarial example $\hat{x}$:
   $$
   \hat{x} = \arg\max_{\|\delta\|\leq \epsilon} \mathcal{L}(f(x+\delta), y)
   $$
@@ -57,29 +56,29 @@ Attackers have full access to the model’s architecture, parameters, and traini
 
 Attackers only access model inputs and outputs (e.g., API endpoint).
 
-- **Mechanism:** Infer model behavior through queries or transfer adversarial examples from surrogate models.
-- **Techniques:** Zeroth-order optimization, transfer attacks, query-based attacks.
+- **Mechanism:**Infer model behavior through queries or transfer adversarial examples from surrogate models.
+- **Techniques:**Zeroth-order optimization, transfer attacks, query-based attacks.
 
 ### 3.3. Poisoning Attacks
 
 Target the model’s training phase by injecting malicious or mislabeled data.
 
-- **Impact:** Corrupts learned model, embedding vulnerabilities or bias.
-- **Variants:** Clean-label poisoning (malicious data with correct labels), label flipping.
+- **Impact:**Corrupts learned model, embedding vulnerabilities or bias.
+- **Variants:**Clean-label poisoning (malicious data with correct labels), label flipping.
 - [IBM Research: Poisoned data and UDA](https://research.ibm.com/publications/understanding-the-limits-of-unsupervised-domain-adaptation-via-data-poisoning)
 
 ### 3.4. Evasion Attacks
 
 At inference/deployment, adversarially perturbed inputs are used to induce errors.
 
-- **Targeted:** Forces a specific incorrect prediction.
-- **Untargeted:** Causes any incorrect prediction.
+- **Targeted:**Forces a specific incorrect prediction.
+- **Untargeted:**Causes any incorrect prediction.
 
 ### 3.5. Physical Attacks
 
 Exploit the physical environment; adversarial examples remain effective in the real world.
 
-- **Example:** Adversarial glasses fooling facial recognition systems.
+- **Example:**Adversarial glasses fooling facial recognition systems.
 
 ## 4. Mechanics of Adversarial Examples
 
@@ -87,17 +86,16 @@ Exploit the physical environment; adversarial examples remain effective in the r
 
 Adversarial examples are generated by optimizing small perturbations to the input, maximizing model error while keeping changes imperceptible.
 
-- **Optimization-based methods:**  
-  $$
+- **Optimization-based methods:**$$
   \text{Find}~\delta~\text{such that}~f(x+\delta) \neq f(x),~\|\delta\|_p \leq \epsilon
   $$
   Where $\|\cdot\|_p$ is an $L_p$ norm.
 
 #### 4.1.1. Perturbation Norms
 
-- **$L_0$ norm:** Number of features changed.
-- **$L_2$ norm:** Euclidean norm (overall energy).
-- **$L_\infty$ norm:** Maximum change to any feature.
+- **$L_0$ norm:**Number of features changed.
+- **$L_2$ norm:**Euclidean norm (overall energy).
+- **$L_\infty$ norm:**Maximum change to any feature.
 
 #### 4.1.2. Example Code (PyTorch)
 
@@ -123,21 +121,21 @@ Adversarial examples exploit the model’s decision boundaries—pushing inputs 
 
 ### 5.1. Computer Vision
 
-- **Stop Sign Misclassification:** Minor modifications cause vision models in autonomous vehicles to misclassify traffic signs, potentially leading to dangerous actions ([DataScientest](https://datascientest.com/en/all-about-autonomous-vehicles)).
+- **Stop Sign Misclassification:**Minor modifications cause vision models in autonomous vehicles to misclassify traffic signs, potentially leading to dangerous actions ([DataScientest](https://datascientest.com/en/all-about-autonomous-vehicles)).
 
 ### 5.2. Security and Fraud
 
-- **Banking:** Adversarial transaction records can bypass fraud detection.
-- **Malware Detection:** Byte-level perturbations can fool static malware classifiers.
+- **Banking:**Adversarial transaction records can bypass fraud detection.
+- **Malware Detection:**Byte-level perturbations can fool static malware classifiers.
 
 ### 5.3. Healthcare
 
-- **Medical Imaging:** Adversarial noise in MRI/X-ray images can cause AI to miss or misdiagnose diseases.
+- **Medical Imaging:**Adversarial noise in MRI/X-ray images can cause AI to miss or misdiagnose diseases.
 
 ### 5.4. Natural Language Processing
 
-- **Toxicity Detection:** Slight rewording can evade content moderation.
-- **Language Models:** Adversarial prompts can induce unsafe or harmful outputs.
+- **Toxicity Detection:**Slight rewording can evade content moderation.
+- **Language Models:**Adversarial prompts can induce unsafe or harmful outputs.
 
 ## 6. Defense Strategies
 
@@ -145,32 +143,32 @@ Defending against adversarial attacks is an ongoing challenge. Key strategies in
 
 ### 6.1. Adversarial Training
 
-- **Definition:** Incorporate adversarial examples during model training.
-- **Strengths:** Increases robustness against known attack types.
-- **Limitations:** Computationally expensive and may not generalize to new attacks.
+- **Definition:**Incorporate adversarial examples during model training.
+- **Strengths:**Increases robustness against known attack types.
+- **Limitations:**Computationally expensive and may not generalize to new attacks.
 
   - [Adversarial Training Overview (DataScientest)](https://datascientest.com/en/all-about-adversarial-robustness)
   - [Madry et al. "Towards Deep Learning Models Resistant to Adversarial Attacks"](https://arxiv.org/abs/1706.06083)
 
 ### 6.2. Input Preprocessing and Validation
 
-- **Techniques:** Apply transformations (e.g., noise reduction, normalization) to sanitize or detect adversarial inputs.
-- **Strengths:** Low overhead for some attacks.
-- **Limitations:** Adaptive attackers can bypass simple defenses.
+- **Techniques:**Apply transformations (e.g., noise reduction, normalization) to sanitize or detect adversarial inputs.
+- **Strengths:**Low overhead for some attacks.
+- **Limitations:**Adaptive attackers can bypass simple defenses.
 
 ### 6.3. Ensemble Methods
 
-- **Use:** Aggregate predictions from multiple models.
-- **Strengths:** Reduces single-point vulnerabilities.
-- **Limitations:** Increases computation and complexity.
+- **Use:**Aggregate predictions from multiple models.
+- **Strengths:**Reduces single-point vulnerabilities.
+- **Limitations:**Increases computation and complexity.
 
 ### 6.4. Monitoring and Anomaly Detection
 
-- **Methods:** Monitor confidence scores, output distributions, or input statistics to detect anomalies.
+- **Methods:**Monitor confidence scores, output distributions, or input statistics to detect anomalies.
 
 ### 6.5. Secure Development Lifecycle
 
-- **Practices:** Integrate security and robustness checks at every stage; includes threat modeling, [red teaming](/en/glossary/red-teaming/), audits, and patching.
+- **Practices:**Integrate security and robustness checks at every stage; includes threat modeling, [red teaming](/en/glossary/red-teaming/), audits, and patching.
 
   - [IBM Research: Securing AI systems](https://research.ibm.com/blog/securing-ai-workflows-with-adversarial-robustness)
 
@@ -180,12 +178,10 @@ Robustness assessment requires systematic testing and benchmarking.
 
 ### 7.1. Common Approaches
 
-- **Benchmarking:** Standard datasets (MNIST, CIFAR-10) under FGSM/PGD attacks.
-- **Red Teaming:** Simulated adversarial attacks by internal or external teams.
-- **Metrics:**
-  - **Accuracy under attack**
-  - **Robustness curves** (performance vs. perturbation size)
-  - **Certified Robustness** (formal guarantees)
+- **Benchmarking:**Standard datasets (MNIST, CIFAR-10) under FGSM/PGD attacks.
+- **Red Teaming:**Simulated adversarial attacks by internal or external teams.
+- **Metrics:**- **Accuracy under attack**- **Robustness curves**(performance vs. perturbation size)
+  - **Certified Robustness**(formal guarantees)
 
 ### 7.2. Toolkits
 
@@ -197,17 +193,17 @@ Robustness assessment requires systematic testing and benchmarking.
 
 ### 8.1. Open Problems
 
-- **Transferability:** Adversarial examples often transfer across models and tasks.
-- **Tradeoffs:** Improving robustness can degrade clean accuracy and increase computation.
-- **Arms Race:** Attack and defense techniques rapidly evolve.
-- **Robustness in the Wild:** Defending against real-world physical and distributional shifts is harder than digital-only attacks.
+- **Transferability:**Adversarial examples often transfer across models and tasks.
+- **Tradeoffs:**Improving robustness can degrade clean accuracy and increase computation.
+- **Arms Race:**Attack and defense techniques rapidly evolve.
+- **Robustness in the Wild:**Defending against real-world physical and distributional shifts is harder than digital-only attacks.
 
 ### 8.2. Current Research Areas
 
-- **Certified Defenses:** Algorithms with provable robustness.
-- **Distribution Shift:** Defenses for both adversarial and natural data variation.
-- **Explainability:** Connecting robustness with interpretability.
-- **LLM Robustness:** Addressing prompt-based attacks and unsafe outputs in large language models.
+- **Certified Defenses:**Algorithms with provable robustness.
+- **Distribution Shift:**Defenses for both adversarial and natural data variation.
+- **Explainability:**Connecting robustness with interpretability.
+- **LLM Robustness:**Addressing prompt-based attacks and unsafe outputs in large language models.
 
   - [Arxiv: Machine Learning Robustness - A Primer](https://arxiv.org/html/2404.00897v2)
 
@@ -223,22 +219,22 @@ Robustness assessment requires systematic testing and benchmarking.
 
 ## 10. Glossary of Related Terms
 
-- **Adversarial Example:** Input crafted to cause model errors.
-- **Adversarial Attack:** The process of generating and deploying adversarial examples.
-- **Model Robustness:** The overall resilience of a model to input variation.
-- **White-Box/Black-Box Attack:** Attack classification by knowledge of the target model.
-- **Poisoning Attack:** Corrupts training data to embed vulnerabilities.
-- **Evasion Attack:** Manipulates inputs at inference time.
-- **Certified Robustness:** Formal proofs of [model robustness](/en/glossary/model-robustness/) within norm bounds.
-- **Red Teaming:** Simulated adversarial testing.
+- **Adversarial Example:**Input crafted to cause model errors.
+- **Adversarial Attack:**The process of generating and deploying adversarial examples.
+- **Model Robustness:**The overall resilience of a model to input variation.
+- **White-Box/Black-Box Attack:**Attack classification by knowledge of the target model.
+- **Poisoning Attack:**Corrupts training data to embed vulnerabilities.
+- **Evasion Attack:**Manipulates inputs at inference time.
+- **Certified Robustness:**Formal proofs of [model robustness](/en/glossary/model-robustness/) within norm bounds.
+- **Red Teaming:**Simulated adversarial testing.
 
 ## 11. Best Practices
 
-1. **Integrate Adversarial Robustness Early:** Address robustness in model development.
-2. **Use Diverse Defenses:** Combine adversarial training, input validation, and ensembles.
-3. **Continuously Monitor:** Implement real-time monitoring and anomaly detection.
-4. **Regularly Evaluate and Update:** Benchmark against new attacks and update defenses.
-5. **Document and Audit:** Maintain transparency and auditability.
+1. **Integrate Adversarial Robustness Early:**Address robustness in model development.
+2. **Use Diverse Defenses:**Combine adversarial training, input validation, and ensembles.
+3. **Continuously Monitor:**Implement real-time monitoring and anomaly detection.
+4. **Regularly Evaluate and Update:**Benchmark against new attacks and update defenses.
+5. **Document and Audit:**Maintain transparency and auditability.
 
 ## 12. Further Reading and References
 
@@ -262,36 +258,35 @@ Robustness assessment requires systematic testing and benchmarking.
 
 | Aspect                | Description                                                                 |
 |-----------------------|-----------------------------------------------------------------------------|
-| **Definition**        | Model’s ability to withstand adversarial attacks and maintain performance.   |
-| **Threats**           | Adversarial examples, poisoning, evasion, model extraction, physical attacks|
-| **Defenses**          | Adversarial training, preprocessing, ensembles, monitoring, robust lifecycle|
-| **Use Cases**         | Autonomous driving, fraud detection, medical imaging, content moderation    |
-| **Challenges**        | Transferability, tradeoffs, evolving attacks, robust certification          |
-| **Best Practices**    | Defense-in-depth, continuous evaluation, documentation, transparency        |
+| **Definition**| Model’s ability to withstand adversarial attacks and maintain performance.   |
+| **Threats**| Adversarial examples, poisoning, evasion, model extraction, physical attacks|
+| **Defenses**| Adversarial training, preprocessing, ensembles, monitoring, robust lifecycle|
+| **Use Cases**| Autonomous driving, fraud detection, medical imaging, content moderation    |
+| **Challenges**| Transferability, tradeoffs, evolving attacks, robust certification          |
+| **Best Practices**| Defense-in-depth, continuous evaluation, documentation, transparency        |
 
 ## 15. FAQ
 
-**Q: Is adversarial robustness the same as general robustness?**  
+**Q: Is adversarial robustness the same as general robustness?** 
 *A: No. General robustness is stability under any input variation (e.g., noise, distribution shift), while adversarial robustness targets resistance to intentional, malicious manipulation.*
 
-**Q: Can adversarial attacks be fully prevented?**  
+**Q: Can adversarial attacks be fully prevented?** 
 *A: No defense is perfect. The aim is to minimize risk and make attacks as difficult and costly as possible.*
 
-**Q: What is the main difference between poisoning and evasion attacks?**  
+**Q: What is the main difference between poisoning and evasion attacks?** 
 *A: Poisoning attacks corrupt training data; evasion attacks manipulate inference-time input.*
 
 ## 16. Visuals
 
-**Figure 1:** Normal image vs. adversarial example (imperceptible noise leads to misclassification).  
+**Figure 1:**Normal image vs. adversarial example (imperceptible noise leads to misclassification).  
 ![Adversarial Example Illustration](https://www.paloaltonetworks.com/content/dam/pan/en_US/images/cyberpedia/what-are-adversarial-attacks-on-ai-ml/difference-between-normal-image-and-adversarial-example.webp)
 
-**Table 1:** Taxonomy of Adversarial Attacks (by threat model and perturbation norm).  
+**Table 1:**Taxonomy of Adversarial Attacks (by threat model and perturbation norm).  
 ![Taxonomy of Adversarial Attacks](https://cdn.prod.website-files.com/67fda64a156dc33e18429935/67fda64a156dc33e1842a648_Taxonomy%20of%20different%20adversarial%20attack%20types.avif)
 
 **Adversarial robustness is a non-negotiable property for deploying secure, reliable, and ethical AI systems.**
 
-**Authoritative Links and Further Reading:**
-- [IBM Research: Securing AI workflows with adversarial robustness](https://research.ibm.com/blog/securing-ai-workflows-with-adversarial-robustness)
+**Authoritative Links and Further Reading:**- [IBM Research: Securing AI workflows with adversarial robustness](https://research.ibm.com/blog/securing-ai-workflows-with-adversarial-robustness)
 - [DataScientest: What is Adversarial Robustness?](https://datascientest.com/en/all-about-adversarial-robustness)
 - [Adversarial ML Tutorial (hands-on)](http://adversarial-ml-tutorial.org/introduction/)
 - [Fiddler AI: Adversarial Robustness Guide](https://www.fiddler.ai/blog/a-practical-guide-to-adversarial-robustness)
@@ -299,8 +294,7 @@ Robustness assessment requires systematic testing and benchmarking.
 - [Scale AI Leaderboard: Adversarial Robustness](https://scale.com/leaderboard/adversarial_robustness)
 - [YouTube: IBM Research – Securing AI with Adversarial Robustness](https://www.youtube.com/watch?v=9B2jKXGUZtc)
 
-**For a hands-on, code-oriented introduction, see:**  
-- [Adversarial ML Tutorial (Jupyter Notebooks)](http://adversarial-ml-tutorial.org/introduction/)  
+**For a hands-on, code-oriented introduction, see:**- [Adversarial ML Tutorial (Jupyter Notebooks)](http://adversarial-ml-tutorial.org/introduction/)  
 - [CleverHans Library](https://github.com/cleverhans-lab/cleverhans)  
 - [IBM Adversarial Robustness Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox)  
 - [Foolbox](https://github.com/bethgelab/foolbox)

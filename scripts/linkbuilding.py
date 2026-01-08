@@ -20,6 +20,11 @@ from datetime import datetime
 from urllib.parse import urlparse, urljoin
 from bs4 import BeautifulSoup, NavigableString, Tag
 import html
+try:
+    from janome.tokenizer import Tokenizer
+    HAS_JANOME = True
+except ImportError:
+    HAS_JANOME = False
 
 
 @dataclass
@@ -264,6 +269,11 @@ class LinkBuilder:
         self.language = language or ''  # Language code for progress reporting
         self.dry_run = dry_run
         self.reset_page_counters()
+        
+        # Initialize Janome tokenizer for Japanese content
+        self.tokenizer = None
+        if HAS_JANOME and self.language.upper() == 'JA':
+            self.tokenizer = Tokenizer()
     
     def reset_page_counters(self):
         """Reset counters for a new page"""
@@ -368,6 +378,7 @@ class LinkBuilder:
         directory: str,
         exclude_dirs: List[str] = None,
         is_english: bool = False,
+        file_pattern: str = None,
     ) -> LinkStatistics:
         """Process all HTML files in a directory
         
@@ -375,6 +386,7 @@ class LinkBuilder:
             directory: Directory to process
             exclude_dirs: List of directory names to exclude
             is_english: True if processing English content (to skip language subdirs)
+            file_pattern: Optional regex pattern to filter files to process
         """
         directory = Path(directory)
         exclude_dirs = exclude_dirs or []
@@ -393,8 +405,14 @@ class LinkBuilder:
         html_files = []
         skipped_lang = 0
         skipped_other = 0
+        skipped_pattern = 0
         
         for file_path in all_html_files:
+            # Skip if it doesn't match the file pattern (if provided)
+            if file_pattern and not re.search(file_pattern, str(file_path)):
+                skipped_pattern += 1
+                continue
+
             # Skip based on path patterns
             if self.should_skip_file(file_path):
                 skipped_other += 1
@@ -488,10 +506,9 @@ class LinkBuilder:
             self.page_replacements >= self.config.max_replacements_per_page):
             return False
         
-        # Special handling for bold/strong tags: check if entire content matches a keyword
-        if hasattr(element, 'name') and element.name in ('strong', 'b', 'em', 'i'):
-            if self.try_wrap_bold_tag(element):
-                return True
+        # Never modify inside existing links to avoid invalid nested anchors.
+        if hasattr(element, 'name') and element.name == 'a':
+            return False
         
         # Process children
         if hasattr(element, 'children'):
@@ -502,8 +519,8 @@ class LinkBuilder:
                 if isinstance(child, NavigableString):
                     # Process text node
                     if child.parent and child.parent.name not in self.SKIP_TAGS:
-                        # Skip if parent is a link with our marker
-                        if child.parent.name == 'a' and child.parent.get('data-lb'):
+                        # Skip if inside ANY link to avoid nested anchors
+                        if child.parent.name == 'a' or child.parent.find_parent('a') is not None:
                             continue
                         new_content = self.process_text_node(child, child.parent)
                         if new_content != str(child):
@@ -514,76 +531,13 @@ class LinkBuilder:
                 elif isinstance(child, Tag):
                     # Skip certain tags and existing linkbuilding links
                     if child.name not in self.SKIP_TAGS:
-                        # Skip links that already have our marker
-                        if child.name == 'a' and child.get('data-lb'):
+                        # Skip ANY link element and anything inside a link
+                        if child.name == 'a' or child.find_parent('a') is not None:
                             continue
                         if self.process_element(child):
                             modified = True
         
         return modified
-    
-    def try_wrap_bold_tag(self, bold_tag) -> bool:
-        """Try to wrap entire bold/strong tag in a link if content matches a keyword
-        
-        Returns True if the tag was wrapped, False otherwise
-        """
-        # Get text content of the bold tag
-        text = bold_tag.get_text()
-        
-        if not text or len(text.strip()) < 2:
-            return False
-        
-        # Get the soup object from the tag's parent tree
-        soup = bold_tag.find_parent()
-        while soup and soup.parent:
-            soup = soup.parent
-        
-        if not soup:
-            return False
-        
-        # Check each keyword to see if it matches the entire bold text
-        for keyword in self.keywords:
-            # Skip self-referencing URLs
-            if self._should_skip_url(keyword.url):
-                continue
-            
-            # Check limits
-            if (self.page_replacements >= self.config.max_replacements_per_page or
-                self.page_keyword_counts[keyword.keyword] >= self.config.max_replacements_per_keyword or
-                self.page_url_counts[keyword.url] >= self.config.max_replacements_per_url):
-                continue
-            
-            keyword_url_key = f"{keyword.keyword}|{keyword.url}"
-            if self.page_keyword_url_counts[keyword_url_key] >= self.config.max_replacements_per_keyword_url:
-                continue
-            
-            # Check if the entire text matches the keyword
-            match = keyword.keyword_pattern.fullmatch(text)
-            if match:
-                # Create link wrapper using soup's new_tag method
-                link_tag = soup.new_tag('a')
-                link_tag['href'] = keyword.url
-                link_tag['data-lb'] = '1'
-                
-                if self.config.add_title_attribute and keyword.title:
-                    link_tag['title'] = keyword.title
-                
-                # Wrap the bold tag with the link
-                bold_tag.wrap(link_tag)
-                
-                # Update counters
-                self.page_keyword_counts[keyword.keyword] += 1
-                self.page_url_counts[keyword.url] += 1
-                self.page_keyword_url_counts[keyword_url_key] += 1
-                self.page_replacements += 1
-                self.page_total_links += 1
-                
-                # Update statistics
-                self.stats.add_link(keyword.keyword, keyword.url, self.current_file)
-                
-                return True
-        
-        return False
     
     def process_text_node(self, text_node: NavigableString, parent_element) -> str:
         """Process a text node and add links
@@ -594,35 +548,52 @@ class LinkBuilder:
         """
         text = str(text_node)
         
-        # Skip short text
-        if len(text.strip()) < self.config.min_paragraph_length:
-            return text
-        
+        # Calculate valid boundaries for Japanese using Janome
+        valid_boundaries = None
+        if self.tokenizer:
+            try:
+                valid_boundaries = set()
+                current_pos = 0
+                valid_boundaries.add(0)
+                for token in self.tokenizer.tokenize(text):
+                    current_pos += len(token.surface)
+                    valid_boundaries.add(current_pos)
+            except Exception as e:
+                # Use debug print only if needed, otherwise silent fail to regex-only matching
+                pass
+
         # Check if we're inside a bold/strong tag
         is_bold_context = parent_element and parent_element.name in ('strong', 'b', 'em', 'i')
+        
+        # Skip short text (unless in bold context, where short text is common)
+        if not is_bold_context and len(text.strip()) < self.config.min_paragraph_length:
+            return text
         
         # Calculate paragraph density limit
         text_length = len(text)
         max_links_density = max(1, text_length // self.config.max_paragraph_density)
         paragraph_links = 0
         
-        # Track positions where we've added links to maintain minimum distance
-        link_positions = []
+        # Track occupied ranges to prevent overlaps: (start, end)
+        occupied_ranges = []
+        # Track replacements to apply: (start, end, html_content)
+        replacements = []
         
-        # Process each keyword
-        result_parts = []
-        last_end = 0
-        
+        # Process keywords (already sorted by priority/length)
         for keyword in self.keywords:
             # Skip self-referencing URLs
             if self._should_skip_url(keyword.url):
                 continue
             
-            # Check if we can add more links
-            if (self.page_replacements >= self.config.max_replacements_per_page or
-                paragraph_links >= self.config.max_replacements_per_paragraph or
-                paragraph_links >= max_links_density):
+            # Check if we can add more links (global/page limits)
+            if (self.page_replacements >= self.config.max_replacements_per_page):
                 break
+                
+            # Check paragraph density limit (skip for bold context)
+            if not is_bold_context:
+                if (paragraph_links >= self.config.max_replacements_per_paragraph or
+                    paragraph_links >= max_links_density):
+                    break
             
             # Check keyword-specific limits
             if (self.page_keyword_counts[keyword.keyword] >= self.config.max_replacements_per_keyword or
@@ -639,21 +610,27 @@ class LinkBuilder:
             for match in matches:
                 start, end = match.span()
                 
-                # Check if this position conflicts with existing links
-                too_close = False
-                for pos in link_positions:
-                    if abs(start - pos) < self.config.min_chars_between_links:
-                        too_close = True
+                # Check morphological boundaries for Japanese
+                if valid_boundaries is not None:
+                    if start not in valid_boundaries or end not in valid_boundaries:
+                        continue
+
+                # Check for overlap with existing replacements
+                is_overlapping = False
+                for occ_start, occ_end in occupied_ranges:
+                    # Check if ranges overlap
+                    if max(start, occ_start) < min(end, occ_end):
+                        is_overlapping = True
+                        break
+                    # Also enforce minimum distance between links
+                    if min(abs(start - occ_end), abs(occ_start - end)) < self.config.min_chars_between_links:
+                        is_overlapping = True
                         break
                 
-                if too_close:
+                if is_overlapping:
                     continue
                 
-                # Check if we're not overlapping with already processed text
-                if start < last_end:
-                    continue
-                
-                # Add the link
+                # Valid match found!
                 matched_text = match.group(0)
                 
                 # Build link HTML
@@ -661,7 +638,7 @@ class LinkBuilder:
                 if self.config.add_title_attribute and keyword.title:
                     link_attrs.append(f'title="{html.escape(keyword.title)}"')
                 
-                # Add marker attribute for linkbuilding-generated links (short to save space)
+                # Add marker attribute for linkbuilding-generated links
                 link_attrs.append('data-lb="1"')
                 
                 # Determine if external link
@@ -676,19 +653,11 @@ class LinkBuilder:
                 elif self.config.internal_link_target:
                     link_attrs.append(f'target="{self.config.internal_link_target}"')
                 
-                # For bold/strong context, preserve the formatting by wrapping link content in bold
-                if is_bold_context:
-                    # The link will be created, and the parent bold tag will wrap it naturally
-                    link_html = f'<a {" ".join(link_attrs)}>{html.escape(matched_text)}</a>'
-                else:
-                    link_html = f'<a {" ".join(link_attrs)}>{html.escape(matched_text)}</a>'
+                link_html = f'<a {" ".join(link_attrs)}>{html.escape(matched_text)}</a>'
                 
-                # Add text before the link
-                if start > last_end:
-                    result_parts.append(html.escape(text[last_end:start]))
-                
-                result_parts.append(link_html)
-                last_end = end
+                # Record replacement
+                replacements.append((start, end, link_html))
+                occupied_ranges.append((start, end))
                 
                 # Update counters
                 self.page_keyword_counts[keyword.keyword] += 1
@@ -697,23 +666,34 @@ class LinkBuilder:
                 self.page_replacements += 1
                 self.page_total_links += 1
                 paragraph_links += 1
-                link_positions.append(start)
                 
                 # Update statistics
                 self.stats.add_link(keyword.keyword, keyword.url, self.current_file)
-                
-                # Move to next keyword after successful replacement
-                break
         
-        # Add remaining text
-        if last_end < len(text):
-            result_parts.append(html.escape(text[last_end:]))
-        
-        # Return the result
-        if result_parts:
-            return ''.join(result_parts)
-        else:
+        # If no replacements, return original text
+        if not replacements:
             return text
+            
+        # Sort replacements by start position
+        replacements.sort(key=lambda x: x[0])
+        
+        # Build final string
+        result_parts = []
+        last_idx = 0
+        
+        for start, end, link_html in replacements:
+            # Append text before link
+            if start > last_idx:
+                result_parts.append(html.escape(text[last_idx:start]))
+            # Append link
+            result_parts.append(link_html)
+            last_idx = end
+            
+        # Append remaining text
+        if last_idx < len(text):
+            result_parts.append(html.escape(text[last_idx:]))
+            
+        return ''.join(result_parts)
 
 
 def load_denylist_terms(denylist_csv: Path) -> set[str]:
@@ -998,6 +978,8 @@ Note: Field names are capitalized (Keyword, URL, Title, Priority, Exact) but low
                        help='Priority boost for manual keywords over automatic (default: 10)')
     parser.add_argument('--denylist', type=str, default=None,
                        help='Path to danger-term denylist CSV (optional)')
+    parser.add_argument('--file-pattern', type=str,
+                       help='Process only files matching this regex pattern')
     
     args = parser.parse_args()
     
@@ -1085,7 +1067,7 @@ Note: Field names are capitalized (Keyword, URL, Title, Priority, Exact) but low
     if is_english:
         print("  Processing English content - will skip 2-letter language subdirectories")
     
-    stats = builder.process_directory(args.directory, args.exclude, is_english)
+    stats = builder.process_directory(args.directory, args.exclude, is_english, file_pattern=args.file_pattern)
     
     # Don't generate HTML report file, just output to console
     

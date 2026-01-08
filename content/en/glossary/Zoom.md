@@ -94,12 +94,12 @@ Meeting recordings, when enabled, are processed and stored in Zoom's cloud infra
 
 | Feature | Zoom | Microsoft Teams | Google Meet | Cisco Webex | GoToMeeting |
 |---------|------|----------------|-------------|-------------|-------------|
-| **Free Tier Limit** | 40 minutes | 60 minutes | 60 minutes | 50 minutes | 14-day trial |
-| **Max Participants** | 1,000 | 1,000 | 500 | 1,000 | 3,000 |
-| **Recording Storage** | Cloud/Local | Cloud/Local | Cloud only | Cloud/Local | Cloud only |
-| **Screen Sharing** | Multiple simultaneous | Single presenter | Single presenter | Multiple simultaneous | Single presenter |
-| **Mobile App Quality** | Excellent | Good | Good | Good | Fair |
-| **Integration Ecosystem** | Extensive | Microsoft-focused | Google-focused | Enterprise-focused | Limited |
+| **Free Tier Limit**| 40 minutes | 60 minutes | 60 minutes | 50 minutes | 14-day trial |
+| **Max Participants**| 1,000 | 1,000 | 500 | 1,000 | 3,000 |
+| **Recording Storage**| Cloud/Local | Cloud/Local | Cloud only | Cloud/Local | Cloud only |
+| **Screen Sharing**| Multiple simultaneous | Single presenter | Single presenter | Multiple simultaneous | Single presenter |
+| **Mobile App Quality**| Excellent | Good | Good | Good | Fair |
+| **Integration Ecosystem**| Extensive | Microsoft-focused | Google-focused | Enterprise-focused | Limited |
 
 ## Challenges and Considerations
 

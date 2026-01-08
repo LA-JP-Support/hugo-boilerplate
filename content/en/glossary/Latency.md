@@ -38,13 +38,13 @@ In AI pipelines, these latency types compound multiplicatively. A 100 ms network
 
 ## Why Latency Matters
 
-**User Experience:** Studies consistently show that response times exceeding 100 ms are perceptible to users, and delays beyond 1 second significantly impact engagement. E-commerce sites experience measurable conversion rate decreases with every 100 ms of additional latency.
+**User Experience:**Studies consistently show that response times exceeding 100 ms are perceptible to users, and delays beyond 1 second significantly impact engagement. E-commerce sites experience measurable conversion rate decreases with every 100 ms of additional latency.
 
-**Application Performance:** Low latency is essential for responsive web and mobile applications, real-time analytics and decision-making, AI-powered search and retrieval, cloud computing and API integration, and interactive media experiences.
+**Application Performance:**Low latency is essential for responsive web and mobile applications, real-time analytics and decision-making, AI-powered search and retrieval, cloud computing and API integration, and interactive media experiences.
 
-**Business Impact:** In high-frequency trading, 1 ms delay can result in significant financial loss or missed opportunities. In streaming services, high latency causes buffering and subscriber churn. In healthcare applications, delays can impede diagnosis or real-time interventions.
+**Business Impact:**In high-frequency trading, 1 ms delay can result in significant financial loss or missed opportunities. In streaming services, high latency causes buffering and subscriber churn. In healthcare applications, delays can impede diagnosis or real-time interventions.
 
-**AI-Specific Concerns:** For AI chatbots, high latency degrades conversational experience. For autonomous systems, even slight delays pose safety risks. For recommendation systems, slow responses lead to user abandonment before recommendations load.
+**AI-Specific Concerns:**For AI chatbots, high latency degrades conversational experience. For autonomous systems, even slight delays pose safety risks. For recommendation systems, slow responses lead to user abandonment before recommendations load.
 
 ## Common Use Cases
 
@@ -130,11 +130,11 @@ Sends ICMP packet to destination, measures return time. Lower ping indicates low
 
 ### Application-Specific Metrics
 
-**Retrieval Latency:** Time from query to data retrieval completion—vital in AI and search systems.
+**Retrieval Latency:**Time from query to data retrieval completion—vital in AI and search systems.
 
-**Inference Latency:** Time from input to model output in AI systems.
+**Inference Latency:**Time from input to model output in AI systems.
 
-**P50/P95/P99 Latency:** Percentile measurements capturing distribution. P95 latency means 95% of requests complete faster than this threshold.
+**P50/P95/P99 Latency:**Percentile measurements capturing distribution. P95 latency means 95% of requests complete faster than this threshold.
 
 | Technology/Medium | Typical Latency |
 |-------------------|----------------|
@@ -225,58 +225,53 @@ Use optimized protocols for specific use cases:
 
 ### AWS Services
 
-**AWS Direct Connect:** Dedicated network connections reducing latency and variability.
+**AWS Direct Connect:**Dedicated network connections reducing latency and variability.
 
-**Amazon CloudFront:** Global CDN for low-latency content delivery with 400+ edge locations.
+**Amazon CloudFront:**Global CDN for low-latency content delivery with 400+ edge locations.
 
-**AWS Global Accelerator:** Routes traffic through optimal AWS edge location using anycast.
+**AWS Global Accelerator:**Routes traffic through optimal AWS edge location using anycast.
 
-**AWS Local Zones:** Deploys AWS services closer to population centers for ultra-low latency.
+**AWS Local Zones:**Deploys AWS services closer to population centers for ultra-low latency.
 
 ### Cloud Providers
 
-**Google Cloud CDN:** Edge caching with Google's global network infrastructure.
+**Google Cloud CDN:**Edge caching with Google's global network infrastructure.
 
-**Azure Front Door:** Global load balancing and CDN with low-latency routing.
+**Azure Front Door:**Global load balancing and CDN with low-latency routing.
 
-**Cloudflare:** Edge computing platform with extensive global presence.
+**Cloudflare:**Edge computing platform with extensive global presence.
 
 ### Specialized Solutions
 
-**IBM Edge Computing:** Deploys compute resources at edge for latency-sensitive workloads.
+**IBM Edge Computing:**Deploys compute resources at edge for latency-sensitive workloads.
 
-**AI21 RAGCache:** Reduces retrieval latency in AI pipelines through intelligent caching.
+**AI21 RAGCache:**Reduces retrieval latency in AI pipelines through intelligent caching.
 
 ## Frequently Asked Questions
 
-**What is considered "good" latency?**
-Depends on use case. Interactive applications: <100 ms. Real-time gaming: <50 ms. High-frequency trading: <10 ms. Voice/video: <150 ms. Each application has specific requirements.
+**What is considered "good" latency?**Depends on use case. Interactive applications: <100 ms. Real-time gaming: <50 ms. High-frequency trading: <10 ms. Voice/video: <150 ms. Each application has specific requirements.
 
-**Does high bandwidth reduce latency?**
-Not necessarily. Bandwidth affects how much data transfers, not how quickly individual packets travel. 10 Gbps satellite link still has 500+ ms latency due to physical distance.
+**Does high bandwidth reduce latency?**Not necessarily. Bandwidth affects how much data transfers, not how quickly individual packets travel. 10 Gbps satellite link still has 500+ ms latency due to physical distance.
 
-**Can latency be completely eliminated?**
-No. Physical limits (speed of light) create minimum latency based on distance. Best achievable latency is physical distance divided by signal propagation speed.
+**Can latency be completely eliminated?**No. Physical limits (speed of light) create minimum latency based on distance. Best achievable latency is physical distance divided by signal propagation speed.
 
-**How does retrieval latency affect AI systems?**
-High retrieval latency slows inference and real-time decision-making, directly impacting effectiveness of AI-powered search, recommendations, and chatbots.
+**How does retrieval latency affect AI systems?**High retrieval latency slows inference and real-time decision-making, directly impacting effectiveness of AI-powered search, recommendations, and chatbots.
 
-**What causes variable latency?**
-Network congestion, resource contention, thermal throttling, background processes, and routing changes all contribute to latency variation (jitter).
+**What causes variable latency?**Network congestion, resource contention, thermal throttling, background processes, and routing changes all contribute to latency variation (jitter).
 
 ## Best Practices
 
-**Measure Continuously:** Implement comprehensive monitoring of latency metrics across all system components.
+**Measure Continuously:**Implement comprehensive monitoring of latency metrics across all system components.
 
-**Set Clear Targets:** Define acceptable latency thresholds based on user experience requirements and business needs.
+**Set Clear Targets:**Define acceptable latency thresholds based on user experience requirements and business needs.
 
-**Optimize Critical Paths:** Focus optimization efforts on components contributing most to end-to-end latency.
+**Optimize Critical Paths:**Focus optimization efforts on components contributing most to end-to-end latency.
 
-**Plan for Scale:** Ensure latency remains acceptable as user base and data volumes grow.
+**Plan for Scale:**Ensure latency remains acceptable as user base and data volumes grow.
 
-**Test Realistically:** Measure latency under production-like loads and geographic distributions.
+**Test Realistically:**Measure latency under production-like loads and geographic distributions.
 
-**Monitor Percentiles:** Track P95 and P99 latency, not just averages, to catch outliers affecting users.
+**Monitor Percentiles:**Track P95 and P99 latency, not just averages, to catch outliers affecting users.
 
 ## References
 

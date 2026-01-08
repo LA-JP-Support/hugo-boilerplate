@@ -13,10 +13,9 @@ url = "/internal/glossary/KV-Cache/"
 +++
 ## Co je KV Cache?
 
-**KV Cache** (Key-Value Cache) je optimalizace pro inference u transformer modelů, zejména *velkých jazykových modelů* (LLMs), která ukládá key (K) a value (V) tenzory vypočtené během attention pro všechny dříve zpracované tokeny. Místo opakovaného výpočtu těchto tenzorů pro každý token při každém kroku inference model znovu použije hodnoty z cache a vypočítá pouze K a V pro nový token. Tento přístup je základem efektivní, rychlé autoregresivní generace textu.
+**KV Cache**(Key-Value Cache) je optimalizace pro inference u transformer modelů, zejména *velkých jazykových modelů* (LLMs), která ukládá key (K) a value (V) tenzory vypočtené během attention pro všechny dříve zpracované tokeny. Místo opakovaného výpočtu těchto tenzorů pro každý token při každém kroku inference model znovu použije hodnoty z cache a vypočítá pouze K a V pro nový token. Tento přístup je základem efektivní, rychlé autoregresivní generace textu.
 
-**Stručně:**  
-> KV Cache je pomocná paměť uchovávající mezivýsledky key a value tenzorů z předchozích tokenů, takže při generování nových tokenů stačí vypočítat a přidat pouze K a V pro nový token. Všechny předchozí K/V jsou okamžitě dostupné z cache.
+**Stručně:**> KV Cache je pomocná paměť uchovávající mezivýsledky key a value tenzorů z předchozích tokenů, takže při generování nových tokenů stačí vypočítat a přidat pouze K a V pro nový token. Všechny předchozí K/V jsou okamžitě dostupné z cache.
 
 ### Autoritativní zdroje:
 - [Hugging Face: KV Caching Explained](https://huggingface.co/blog/not-lain/kv-caching)
@@ -27,10 +26,10 @@ url = "/internal/glossary/KV-Cache/"
 KV Cache se používá výhradně při inference v transformerových modelech pro generování textu po jednotlivých tokenech.
 
 ### Základní vzor použití:
-- **Autoregresivní generování:** LLM generují text po jednom tokenu, přičemž každý predikovaný token závisí na všech předchozích tokenech.
-- **Při každém kroku inference:** Model potřebuje K a V pro celou dosavadní sekvenci, aby vypočítal attention pro další token.
-- **S KV Cache:** Namísto opakovaného výpočtu K a V pro všechny předchozí tokeny při každém kroku se vypočítá a přidá do cache pouze K a V pro nový token.
-- **Výsledek:** Dramaticky nižší výpočty, nižší [latence](/en/glossary/latency/) a výrazné úspory nákladů při inference – zejména u dlouhých sekvencí.
+- **Autoregresivní generování:**LLM generují text po jednom tokenu, přičemž každý predikovaný token závisí na všech předchozích tokenech.
+- **Při každém kroku inference:**Model potřebuje K a V pro celou dosavadní sekvenci, aby vypočítal attention pro další token.
+- **S KV Cache:**Namísto opakovaného výpočtu K a V pro všechny předchozí tokeny při každém kroku se vypočítá a přidá do cache pouze K a V pro nový token.
+- **Výsledek:**Dramaticky nižší výpočty, nižší [latence](/en/glossary/latency/) a výrazné úspory nákladů při inference – zejména u dlouhých sekvencí.
 
 ### Typické kontexty použití:
 - Generování textu pomocí LLM (např. GPT, Llama, Claude, Gemini)
@@ -47,9 +46,9 @@ KV Cache se používá výhradně při inference v transformerových modelech pr
 ### Problém bez KV Cache
 
 Attention mechanismus v transformeru zahrnuje tři projekce na token:
-- **Query (Q):** Co aktuální token „chce vědět“.
-- **Key (K):** „Adresa“ každého tokenu.
-- **Value (V):** „Obsah“ každého tokenu.
+- **Query (Q):**Co aktuální token „chce vědět“.
+- **Key (K):**„Adresa“ každého tokenu.
+- **Value (V):**„Obsah“ každého tokenu.
 
 Při inference zpracovávají LLM vstup po jednom tokenu. Standardní inference opakovaně počítá K a V pro každý token v aktuální sekvenci, včetně těch, které už byly zpracovány. To je u dlouhých sekvencí velmi neefektivní.
 
@@ -64,10 +63,9 @@ Představte si generování „The cat sits“:
 - Pro „cat“ vypočítáme K/V jen pro „cat“ a přidáme do cache.
 - Pro „sits“ vypočítáme K/V jen pro „sits“ a přidáme do cache; K/V pro „The“ a „cat“ se znovu využijí.
 
-**Optimalizace je klíčová pro:**
-- **Rychlost:** Zrychlení inference až 5–20×.
-- **Náklady:** Výrazné snížení výpočetních a API nákladů.
-- **Škálovatelnost:** Umožňuje dlouhý kontext i víceotáčkové konverzace.
+**Optimalizace je klíčová pro:**- **Rychlost:**Zrychlení inference až 5–20×.
+- **Náklady:**Výrazné snížení výpočetních a API nákladů.
+- **Škálovatelnost:**Umožňuje dlouhý kontext i víceotáčkové konverzace.
 
 ##### Další autority:
 - [Neptune: Transformers Key-Value Caching Explained](https://neptune.ai/blog/transformers-key-value-caching)
@@ -81,8 +79,7 @@ Představte si generování „The cat sits“:
 Pro prompt: `["The", "cat", "sits"]`
 - Každý krok znovu počítá K a V pro všechny tokeny v sekvenci.
 
-**Diagram:**
-```
+**Diagram:**```
 Krok 1: "The"           --> K1, V1    (vypočteno)
 Krok 2: "The cat"       --> K1, V1, K2, V2  (K1, V1 znovu)
 Krok 3: "The cat sits"  --> K1, V1, K2, V2, K3, V3 (K1, V1, K2, V2 znovu)
@@ -91,14 +88,12 @@ Krok 3: "The cat sits"  --> K1, V1, K2, V2, K3, V3 (K1, V1, K2, V2 znovu)
 #### S KV Cache:
 - Každý krok vypočítá/přidá K/V jen pro nový token; cache drží předchozí K/V.
 
-**Diagram:**
-```
+**Diagram:**```
 Krok 1: "The"      --> K1, V1    (uloženo do cache)
 Krok 2: "cat"      --> K2, V2    (přidáno do cache)
 Krok 3: "sits"     --> K3, V3    (přidáno do cache)
 ```
-**Cache po kroku 3:**
-```
+**Cache po kroku 3:**```
 K-cache: [K1, K2, K3]
 V-cache: [V1, V2, V3]
 ```
@@ -116,8 +111,8 @@ Pro sekvenci n vstupních tokenů transformerová vrstva počítá:
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right)V
 \]
 
-- **Při tréninku:** Všechny Q, K, V tokenů se počítají paralelně.
-- **Při inference s KV cache:** Počítají se jen Q, K, V pro nový token; předchozí K a V se načítají z cache.
+- **Při tréninku:**Všechny Q, K, V tokenů se počítají paralelně.
+- **Při inference s KV cache:**Počítají se jen Q, K, V pro nový token; předchozí K a V se načítají z cache.
 
 ### Příklad KV Cache v PyTorch
 
@@ -171,10 +166,7 @@ print(tokenizer.decode(output[0]))
 
 #### Benchmarky:
 - Na GPU T4 (SmolLM2-1.7B):
-    - Standardní inference (bez KV cache): **61 sekund**
-    - S KV cache: **11,7 sekundy**
-    - **~5,2× zrychlení**
-- Mnoho API poskytovatelů (např. Anthropic, OpenAI) účtuje méně za cacheované tokeny. Ty mohou být až 10× levnější (např. $0,30 za milion vs $3 za milion).
+    - Standardní inference (bez KV cache): **61 sekund**- S KV cache: **11,7 sekundy**- **~5,2× zrychlení**- Mnoho API poskytovatelů (např. Anthropic, OpenAI) účtuje méně za cacheované tokeny. Ty mohou být až 10× levnější (např. $0,30 za milion vs $3 za milion).
 
 ##### Zdroj:
 - [Hugging Face: KV Caching Explained](https://huggingface.co/blog/not-lain/kv-caching#comparison-kv-caching-vs-standard-inference)
@@ -184,26 +176,18 @@ print(tokenizer.decode(output[0]))
 
 ### Prompt engineering & správa kontextu
 
-- **Stabilní prefix promptu:**  
-  Prefixy promptu musí být mezi tahy identické. Jakákoli změna (i jeden token) přeruší cache od tohoto bodu dál.
-- **Pouze přidávání kontextu:**  
-  Vždy pouze přidávejte nové informace; nikdy nepřepisujte nebo nepřeuspořádávejte předchozí kontext.
-- **Deterministické pořadí:**  
-  Strukturovaná data musí mít konzistentní pořadí, aby nedošlo k nechtěné invalidaci cache.
-- **Explicitní body přerušení cache:**  
-  U víceotáčkových agentů označte místa změny kontextu, aby frameworky udržely efektivitu.
+- **Stabilní prefix promptu:**Prefixy promptu musí být mezi tahy identické. Jakákoli změna (i jeden token) přeruší cache od tohoto bodu dál.
+- **Pouze přidávání kontextu:**Vždy pouze přidávejte nové informace; nikdy nepřepisujte nebo nepřeuspořádávejte předchozí kontext.
+- **Deterministické pořadí:**Strukturovaná data musí mít konzistentní pořadí, aby nedošlo k nechtěné invalidaci cache.
+- **Explicitní body přerušení cache:**U víceotáčkových agentů označte místa změny kontextu, aby frameworky udržely efektivitu.
 
 ### Správa cache v produkci
 
-- **Velikost cache:**  
-  K/V tenzory rostou lineárně s délkou kontextu. U velmi dlouhých sekvencí může být limitem paměť.
-- **Životnost cache:**  
-  Invalidační/vypršení cache při změně kontextu nebo nutnosti uvolnit paměť.
-- **Paralelnost:**  
-  Každý paralelní požadavek může potřebovat vlastní prostor pro cache.
+- **Velikost cache:**K/V tenzory rostou lineárně s délkou kontextu. U velmi dlouhých sekvencí může být limitem paměť.
+- **Životnost cache:**Invalidační/vypršení cache při změně kontextu nebo nutnosti uvolnit paměť.
+- **Paralelnost:**Každý paralelní požadavek může potřebovat vlastní prostor pro cache.
 
-**Tip:**  
-> Pro maximální efektivitu cache udržujte prefix promptu stabilní a kontext pouze přidávejte. Vyhněte se dynamickému kontextu, který mění staré položky.
+**Tip:**> Pro maximální efektivitu cache udržujte prefix promptu stabilní a kontext pouze přidávejte. Vyhněte se dynamickému kontextu, který mění staré položky.
 
 ##### Další čtení:
 - [Hugging Face: How Does KV Caching Work?](https://huggingface.co/blog/not-lain/kv-caching#how-does-kv-caching-work)
@@ -223,9 +207,9 @@ print(tokenizer.decode(output[0]))
 - Snižuje paměť pro KV cache sdílením key/value napříč attention heady.
 
 #### Nové trendy
-- **Prediktivní zahřívání cache:** Předvyplnění cache podle očekávaných potřeb.
-- **Hierarchické cache:** Víceúrovňové strategie (GPU, CPU, disk).
-- **Dynamická velikost cache:** Úprava velikosti cache v reálném čase.
+- **Prediktivní zahřívání cache:**Předvyplnění cache podle očekávaných potřeb.
+- **Hierarchické cache:**Víceúrovňové strategie (GPU, CPU, disk).
+- **Dynamická velikost cache:**Úprava velikosti cache v reálném čase.
 
 ##### Více:
 - [Sebastian Raschka: Coding the KV Cache in LLMs](https://magazine.sebastianraschka.com/p/coding-the-kv-cache-in-llms)
@@ -248,19 +232,14 @@ print(tokenizer.decode(output[0]))
 ### Hry a interaktivní storytelling
 - Herní dialogové enginy cacheují kontext příběhu pro plynulé, rychlé reakce hráče.
 
-**Case study:**  
-API Claude od Anthropic účtuje 10× méně za cacheované tokeny. Udržení stabilního prefixu v chatbotech zákaznické podpory snižuje provozní náklady a zvyšuje rychlost odezvy.
+**Case study:**API Claude od Anthropic účtuje 10× méně za cacheované tokeny. Udržení stabilního prefixu v chatbotech zákaznické podpory snižuje provozní náklady a zvyšuje rychlost odezvy.
 
 ## Omezení a výzvy
 
-- **Růst paměti:**  
-  K/V cache roste lineárně s kontextem. Velmi dlouhé kontexty mohou vyčerpat GPU paměť.
-- **Invalidace cache:**  
-  Jakákoli změna předchozích tokenů (editace promptu, změna kontextu) invaliduje část/celou cache.
-- **Složitá správa:**  
-  Multi-user/multi-turn systémy vyžadují pečlivou správu cache.
-- **Nepoužívá se při trénování:**  
-  KV cache je optimalizace pouze pro inference.
+- **Růst paměti:**K/V cache roste lineárně s kontextem. Velmi dlouhé kontexty mohou vyčerpat GPU paměť.
+- **Invalidace cache:**Jakákoli změna předchozích tokenů (editace promptu, změna kontextu) invaliduje část/celou cache.
+- **Složitá správa:**Multi-user/multi-turn systémy vyžadují pečlivou správu cache.
+- **Nepoužívá se při trénování:**KV cache je optimalizace pouze pro inference.
 
 ##### Autority:
 - [Hugging Face: Standard Inference and the Rise of KV Caching](https://huggingface.co/blog/not-lain/kv-caching#standard-inference-and-the-rise-of-kv-caching)

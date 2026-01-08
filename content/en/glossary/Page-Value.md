@@ -40,17 +40,17 @@ Understanding Page Value enables organizations to make informed decisions about 
 
 The Page Value calculation process begins when Google Analytics tracks user interactions across website pages and identifies conversion events that generate revenue or achieve defined goals. The system maintains detailed records of user sessions, including page sequences, timestamps, and interaction patterns that contribute to the overall user journey.
 
-**Step 1: Conversion Detection** - Google Analytics identifies when a user completes a valuable action, such as making a purchase, submitting a lead form, or achieving a predefined goal, and records the associated monetary value.
+**Step 1: Conversion Detection**- Google Analytics identifies when a user completes a valuable action, such as making a purchase, submitting a lead form, or achieving a predefined goal, and records the associated monetary value.
 
-**Step 2: Session Path Analysis** - The system traces backward through the user's session history to identify all pages visited before the conversion occurred, creating a comprehensive map of the conversion journey.
+**Step 2: Session Path Analysis**- The system traces backward through the user's session history to identify all pages visited before the conversion occurred, creating a comprehensive map of the conversion journey.
 
-**Step 3: Value Distribution** - The total conversion value is distributed across all pages in the conversion path using the selected attribution model, ensuring each contributing page receives appropriate credit for its role in the outcome.
+**Step 3: Value Distribution**- The total conversion value is distributed across all pages in the conversion path using the selected attribution model, ensuring each contributing page receives appropriate credit for its role in the outcome.
 
-**Step 4: Aggregation Calculation** - For each page, Google Analytics sums all the distributed values from multiple conversion events and divides by the total number of pageviews to calculate the average Page Value.
+**Step 4: Aggregation Calculation**- For each page, Google Analytics sums all the distributed values from multiple conversion events and divides by the total number of pageviews to calculate the average Page Value.
 
-**Step 5: Cross-Session Attribution** - The system considers multi-session conversion paths when users return to complete conversions, distributing value across pages viewed in previous sessions within the attribution window.
+**Step 5: Cross-Session Attribution**- The system considers multi-session conversion paths when users return to complete conversions, distributing value across pages viewed in previous sessions within the attribution window.
 
-**Step 6: Real-Time Updates** - Page Value metrics are continuously updated as new conversions occur and additional data becomes available, ensuring reports reflect current performance trends.
+**Step 6: Real-Time Updates**- Page Value metrics are continuously updated as new conversions occur and additional data becomes available, ensuring reports reflect current performance trends.
 
 **Example Workflow**: A user visits a blog post ($0 initial value), navigates to a product category page, views a specific product page, and completes a $100 purchase. The Page Value calculation distributes this $100 across all three pages based on the attribution model, with each page receiving credit for contributing to the conversion outcome.
 

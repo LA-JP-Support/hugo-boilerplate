@@ -24,19 +24,19 @@ Data anonymization has become increasingly critical in today's data-driven econo
 
 ## Core Anonymization Techniques
 
-**K-Anonymity** ensures that each record in a dataset is indistinguishable from at least k-1 other records with respect to certain identifying attributes called quasi-identifiers. This technique groups records with similar characteristics and generalizes or suppresses specific values to create equivalence classes of at least k records.
+**K-Anonymity**ensures that each record in a dataset is indistinguishable from at least k-1 other records with respect to certain identifying attributes called quasi-identifiers. This technique groups records with similar characteristics and generalizes or suppresses specific values to create equivalence classes of at least k records.
 
-**L-Diversity** extends k-anonymity by requiring that each equivalence class contains at least l well-represented values for each sensitive attribute. This approach addresses the limitation of k-anonymity where all records in a group might share the same sensitive value, potentially revealing private information.
+**L-Diversity**extends k-anonymity by requiring that each equivalence class contains at least l well-represented values for each sensitive attribute. This approach addresses the limitation of k-anonymity where all records in a group might share the same sensitive value, potentially revealing private information.
 
-**T-Closeness** further refines privacy protection by ensuring that the distribution of sensitive attributes in each equivalence class is close to the distribution in the overall dataset. This technique prevents attackers from inferring sensitive information based on the skewed distribution of values within anonymized groups.
+**T-Closeness**further refines privacy protection by ensuring that the distribution of sensitive attributes in each equivalence class is close to the distribution in the overall dataset. This technique prevents attackers from inferring sensitive information based on the skewed distribution of values within anonymized groups.
 
-**Differential Privacy** provides mathematical guarantees of privacy by adding carefully calibrated noise to query results or data values. This technique ensures that the presence or absence of any individual record does not significantly affect the probability of any particular output.
+**Differential Privacy**provides mathematical guarantees of privacy by adding carefully calibrated noise to query results or data values. This technique ensures that the presence or absence of any individual record does not significantly affect the probability of any particular output.
 
-**Data Masking** involves replacing sensitive data elements with fictitious but realistic values that maintain the data's format and structure. This technique includes methods such as substitution, shuffling, and character scrambling to obscure original values while preserving data relationships.
+**Data Masking**involves replacing sensitive data elements with fictitious but realistic values that maintain the data's format and structure. This technique includes methods such as substitution, shuffling, and character scrambling to obscure original values while preserving data relationships.
 
-**Synthetic Data Generation** creates entirely artificial datasets that maintain the statistical properties of the original data without containing any actual personal information. Advanced machine learning techniques generate synthetic records that preserve correlations and distributions while eliminating privacy risks.
+**Synthetic Data Generation**creates entirely artificial datasets that maintain the statistical properties of the original data without containing any actual personal information. Advanced machine learning techniques generate synthetic records that preserve correlations and distributions while eliminating privacy risks.
 
-**Tokenization** replaces sensitive data elements with non-sensitive tokens that maintain referential integrity across systems. This technique allows organizations to preserve data relationships while removing actual sensitive values from analytical datasets.
+**Tokenization**replaces sensitive data elements with non-sensitive tokens that maintain referential integrity across systems. This technique allows organizations to preserve data relationships while removing actual sensitive values from analytical datasets.
 
 ## How Data Anonymization Works
 

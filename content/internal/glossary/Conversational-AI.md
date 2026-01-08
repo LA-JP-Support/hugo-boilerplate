@@ -12,10 +12,9 @@ url = "/internal/glossary/Conversational-AI/"
 +++
 ## ¿Qué es la IA conversacional?
 
-La **IA conversacional** se refiere al conjunto de tecnologías de inteligencia artificial que permiten a las computadoras simular y procesar conversaciones humanas, ya sea por texto o por voz. Al aprovechar una combinación de [Procesamiento de Lenguaje Natural (PLN)](/es/glossary/natural-language-processing--nlp-/), Comprensión del Lenguaje Natural (NLU), Aprendizaje Automático (ML) y reconocimiento de voz, estos sistemas pueden interpretar consultas de los usuarios, retener contexto y generar respuestas coherentes y similares a las humanas. La IA conversacional impulsa chatbots, agentes virtuales, sistemas de respuesta de voz interactiva (IVR) y asistentes inteligentes a través de puntos de contacto digitales.
+La **IA conversacional**se refiere al conjunto de tecnologías de inteligencia artificial que permiten a las computadoras simular y procesar conversaciones humanas, ya sea por texto o por voz. Al aprovechar una combinación de [Procesamiento de Lenguaje Natural (PLN)](/es/glossary/natural-language-processing--nlp-/), Comprensión del Lenguaje Natural (NLU), Aprendizaje Automático (ML) y reconocimiento de voz, estos sistemas pueden interpretar consultas de los usuarios, retener contexto y generar respuestas coherentes y similares a las humanas. La IA conversacional impulsa chatbots, agentes virtuales, sistemas de respuesta de voz interactiva (IVR) y asistentes inteligentes a través de puntos de contacto digitales.
 
-- **Atributos clave:**
-  - Entiende el contexto y la intención del usuario.
+- **Atributos clave:**- Entiende el contexto y la intención del usuario.
   - Mantiene conversaciones de múltiples turnos.
   - Aprende y se adapta continuamente a través de los datos.
   - Soporta interacciones omnicanal (web, mensajería, voz).
@@ -36,20 +35,18 @@ Identificar las diferencias entre IA conversacional, IA generativa y chatbots es
 | Tecnología                    | Qué hace                                                                  | Ejemplo de uso                  | Analogía              |
 |-------------------------------|---------------------------------------------------------------------------|----------------------------------|-----------------------|
 | **Chatbot (basado en reglas)**| Sigue flujos predefinidos; solo responde lo que está programado.           | Bot para "consultar estado de vuelo" | Máquina expendedora   |
-| **IA conversacional**         | Entiende intención, gestiona el diálogo, personaliza y se adapta al contexto. | Asistente virtual bancario        | Traductor experto     |
-| **IA generativa**             | Produce contenido nuevo y original como texto, imágenes o código.            | Redacción de emails, texto creativo | Autor/creador         |
+| **IA conversacional**| Entiende intención, gestiona el diálogo, personaliza y se adapta al contexto. | Asistente virtual bancario        | Traductor experto     |
+| **IA generativa**| Produce contenido nuevo y original como texto, imágenes o código.            | Redacción de emails, texto creativo | Autor/creador         |
 
-- **Los chatbots** pueden ser simples (basados en reglas, con botones) o complejos (impulsados por IA). Los chatbots tradicionales están limitados a guiones predefinidos y no pueden gestionar conversaciones complejas o ambiguas.
-- **La IA conversacional** utiliza PLN, NLU y [gestión de diálogo](/es/glossary/dialogue-management/) avanzados para ofrecer conversaciones fluidas, contextuales y de varios turnos.
-- **La IA generativa** (p. ej., GPT-4, DALL-E) es capaz de producir contenido completamente nuevo y a menudo se integra dentro de la IA conversacional para respuestas dinámicas, creativas y contextualmente relevantes.
+- **Los chatbots**pueden ser simples (basados en reglas, con botones) o complejos (impulsados por IA). Los chatbots tradicionales están limitados a guiones predefinidos y no pueden gestionar conversaciones complejas o ambiguas.
+- **La IA conversacional**utiliza PLN, NLU y [gestión de diálogo](/es/glossary/dialogue-management/) avanzados para ofrecer conversaciones fluidas, contextuales y de varios turnos.
+- **La IA generativa**(p. ej., GPT-4, DALL-E) es capaz de producir contenido completamente nuevo y a menudo se integra dentro de la IA conversacional para respuestas dinámicas, creativas y contextualmente relevantes.
 
-**Cómo funcionan juntas:**  
-Las plataformas modernas impulsadas por IA suelen combinar IA conversacional para la intención y el contexto, con IA generativa para respuestas personalizadas y dinámicas, accediendo generalmente mediante un chatbot o interfaz de voz.
+**Cómo funcionan juntas:**Las plataformas modernas impulsadas por IA suelen combinar IA conversacional para la intención y el contexto, con IA generativa para respuestas personalizadas y dinámicas, accediendo generalmente mediante un chatbot o interfaz de voz.
 
 > Ejemplo: ChatGPT utiliza IA conversacional para entender y gestionar el flujo de la conversación, e IA generativa para producir respuestas de texto únicas.
 
-**Para profundizar:**
-- [AWS: ¿Qué es la IA conversacional?](https://aws.amazon.com/what-is/conversational-ai/#ams#what-isc6#pattern-data)
+**Para profundizar:**- [AWS: ¿Qué es la IA conversacional?](https://aws.amazon.com/what-is/conversational-ai/#ams#what-isc6#pattern-data)
 - [K2View: IA conversacional vs IA generativa](https://www.k2view.com/blog/conversational-ai-vs-generative-ai/)
 
 
@@ -58,8 +55,8 @@ Las plataformas modernas impulsadas por IA suelen combinar IA conversacional par
 Los sistemas de IA conversacional procesan la entrada del usuario mediante un flujo de trabajo en varias etapas diseñado para descifrar el significado, determinar la intención y ofrecer respuestas similares a las humanas.
 
 ### 1. Recolección de entrada
-- **Texto:** Los usuarios interactúan a través de chat, mensajería o interfaz web.
-- **Voz:** La entrada hablada se captura y transcribe mediante Reconocimiento Automático de Voz (ASR).
+- **Texto:**Los usuarios interactúan a través de chat, mensajería o interfaz web.
+- **Voz:**La entrada hablada se captura y transcribe mediante Reconocimiento Automático de Voz (ASR).
 
 ### 2. Procesamiento de Lenguaje Natural (PLN)
 - Descompone la entrada del usuario, identifica el idioma, segmenta oraciones y extrae datos clave.
@@ -82,9 +79,7 @@ Los sistemas de IA conversacional procesan la entrada del usuario mediante un fl
 ### 7. Entrega de salida
 - Envía la respuesta como texto o, en sistemas de voz, como habla sintetizada mediante Texto a Voz (TTS).
 
-**Diagrama y flujo detallado:**
-
-```mermaid
+**Diagrama y flujo detallado:**```mermaid
 flowchart LR
     A[Entrada del usuario (Texto/Voz)] --> B[ASR (si es voz)]
     B --> C[PLN/NLU]
@@ -94,11 +89,9 @@ flowchart LR
     F --> G[Salida (Texto o TTS)]
 ```
 
-**Ver una demo:**  
-[IA conversacional de Google Cloud en acción (YouTube)](https://www.youtube.com/watch?v=I-lEf2kMjTg)
+**Ver una demo:**[IA conversacional de Google Cloud en acción (YouTube)](https://www.youtube.com/watch?v=I-lEf2kMjTg)
 
-**Explicaciones técnicas en profundidad:**  
-- [Yellow.ai: Cómo funciona la IA conversacional](https://yellow.ai/conversational-ai/#how-does-conversational-ai-work)
+**Explicaciones técnicas en profundidad:**- [Yellow.ai: Cómo funciona la IA conversacional](https://yellow.ai/conversational-ai/#how-does-conversational-ai-work)
 - [Gupshup: Componentes de la IA conversacional](https://www.gupshup.ai/resources/guide/conversational-ai-comprehensive-guide#toc_692e65b782089_section_4)
 
 
@@ -128,37 +121,29 @@ flowchart LR
 #### Texto a Voz (TTS)
 - Convierte respuestas generadas en texto en habla natural para interfaces de voz.
 
-**Explora más:**
-- [Glosario de IA conversacional de Hyro](https://www.hyro.ai/glossary/)
+**Explora más:**- [Glosario de IA conversacional de Hyro](https://www.hyro.ai/glossary/)
 - [Cognigy: Glosario de IA conversacional y chatbots](https://www.cognigy.com/resources/conversational-artificial-intelligence-glossary)
 
 
 ## Beneficios de la IA conversacional
 
-1. **Atención al cliente 24/7**
-   - Ofrece respuestas instantáneas y siempre disponibles, reduciendo tiempos de espera y mejorando la satisfacción.
+1. **Atención al cliente 24/7**- Ofrece respuestas instantáneas y siempre disponibles, reduciendo tiempos de espera y mejorando la satisfacción.
    - [Zendesk: El 51% de los consumidores](https://www.zendesk.de/blog/customers-really-feel-conversational-ai/) prefiere bots para un servicio inmediato.
 
-2. **Eficiencia operativa**
-   - Automatiza consultas y procesos repetitivos, permitiendo que los agentes humanos se enfoquen en tareas complejas.
+2. **Eficiencia operativa**- Automatiza consultas y procesos repetitivos, permitiendo que los agentes humanos se enfoquen en tareas complejas.
    - Reduce costes de soporte y mejora los tiempos de respuesta.
    - Caso: TaskRabbit desvió el 28% de los tickets a IA ([Zendesk](https://www.zendesk.de/blog/customers-really-feel-conversational-ai/)).
 
-3. **Personalización y engagement**
-   - Recuerda preferencias, interacciones pasadas y contexto para adaptar respuestas.
+3. **Personalización y engagement**- Recuerda preferencias, interacciones pasadas y contexto para adaptar respuestas.
    - Ejemplo: El agente virtual de Fútbol Emotion aprovecha el historial de compras para el soporte ([Zendesk](https://www.zendesk.de/blog/customers-really-feel-conversational-ai/)).
 
-4. **Escalabilidad**
-   - Puede gestionar miles de conversaciones simultáneas sin pérdida de rendimiento.
+4. **Escalabilidad**- Puede gestionar miles de conversaciones simultáneas sin pérdida de rendimiento.
 
-5. **Datos e insights accionables**
-   - Recopila y analiza interacciones de usuarios para informar decisiones empresariales.
+5. **Datos e insights accionables**- Recopila y analiza interacciones de usuarios para informar decisiones empresariales.
 
-6. **Reducción de costes**
-   - [El 57% de las empresas reporta](https://zipdo.co/statistics/conversational-ai/) ahorros significativos al usar chatbots.
+6. **Reducción de costes**- [El 57% de las empresas reporta](https://zipdo.co/statistics/conversational-ai/) ahorros significativos al usar chatbots.
 
-7. **Accesibilidad**
-   - Soporta texto y voz, adaptándose a usuarios con diferentes necesidades y habilidades.
+7. **Accesibilidad**- Soporta texto y voz, adaptándose a usuarios con diferentes necesidades y habilidades.
 
 Para más información:
 - [Yellow.ai: Beneficios de la IA conversacional](https://yellow.ai/conversational-ai/#What-are-the-benefits-of-conversational-AI-chatbots)
@@ -179,8 +164,7 @@ Para más información:
 | [Análisis de sentimiento](/es/glossary/sentiment-analysis/)            | Detecta emociones, ajusta respuestas según corresponda                  | Priorizar clientes molestos          |
 | APIs de integración           | Conecta la IA a sistemas empresariales (CRM, ERP, bases de datos)        | Gestionar pedidos, consultar estados |
 
-- **Conceptos adicionales:**  
-  - [Asistencia al agente](https://www.cognigy.com/resources/conversational-artificial-intelligence-glossary): IA que proporciona soporte en tiempo real a agentes humanos.
+- **Conceptos adicionales:**- [Asistencia al agente](https://www.cognigy.com/resources/conversational-artificial-intelligence-glossary): IA que proporciona soporte en tiempo real a agentes humanos.
   - [Transferencia a agente](https://www.cognigy.com/resources/conversational-artificial-intelligence-glossary): Transferencia fluida del bot al humano para consultas complejas.
 
 Explora:
@@ -257,8 +241,7 @@ Planificar y ejecutar un proyecto de IA conversacional implica varios pasos clav
 ### KPIs y medición
 - Monitorizar tasa de resolución, satisfacción del cliente, desvío y retorno de inversión.
 
-**Guías de implementación:**
-- [AWS: Creando IA conversacional](https://aws.amazon.com/what-is/conversational-ai/)
+**Guías de implementación:**- [AWS: Creando IA conversacional](https://aws.amazon.com/what-is/conversational-ai/)
 - [Google Cloud: Dialogflow Agent Builder](https://cloud.google.com/dialogflow)
 - [Yellow.ai: Cómo empezar](https://yellow.ai/conversational-ai/#how-to-get-started-with-conversational-ai)
 
@@ -267,13 +250,13 @@ Planificar y ejecutar un proyecto de IA conversacional implica varios pasos clav
 
 La IA conversacional es poderosa, pero no está exenta de retos:
 
-- **Comprensión de contexto:** Dificultad con consultas complejas, ambiguas o de varios turnos.
-- **Matices del lenguaje:** Problemas con sarcasmo, modismos, jerga o referencias culturales.
-- **Sesgo y equidad:** La IA puede heredar sesgos de los datos de entrenamiento.
-- **Seguridad:** Los datos sensibles requieren medidas sólidas de seguridad y cumplimiento.
-- **Mantenimiento:** Se requiere ajuste y reentrenamiento continuo para mantener la precisión.
-- **Confianza del usuario:** Algunos usuarios prefieren humanos, especialmente en temas delicados.
-- **Complejidad de integración:** Conectar sistemas heredados puede ser difícil.
+- **Comprensión de contexto:**Dificultad con consultas complejas, ambiguas o de varios turnos.
+- **Matices del lenguaje:**Problemas con sarcasmo, modismos, jerga o referencias culturales.
+- **Sesgo y equidad:**La IA puede heredar sesgos de los datos de entrenamiento.
+- **Seguridad:**Los datos sensibles requieren medidas sólidas de seguridad y cumplimiento.
+- **Mantenimiento:**Se requiere ajuste y reentrenamiento continuo para mantener la precisión.
+- **Confianza del usuario:**Algunos usuarios prefieren humanos, especialmente en temas delicados.
+- **Complejidad de integración:**Conectar sistemas heredados puede ser difícil.
 
 > "Un desafío común para la IA conversacional es entender consultas ambiguas; los avances continuos en PLN y aprendizaje automático siguen abordando estas limitaciones."
 > — [Nextiva](https://www.nextiva.com/blog/what-is-conversational-ai.html)
@@ -287,16 +270,15 @@ Más detalles:
 
 El campo evoluciona rápidamente, con tendencias emergentes como:
 
-- **Inteligencia emocional:** Mejor detección de emociones para respuestas empáticas.
-- **IA multilingüe y multimodal:** Soporte fluido para varios idiomas y tipos de entrada (texto, voz, imágenes).
-- **Engagement proactivo y predictivo:** La IA anticipa necesidades, inicia conversaciones y recomienda acciones.
-- **Integración con IA generativa:** Uso de grandes modelos de lenguaje (LLMs) para respuestas más creativas y adaptativas.
-- **Soluciones sectoriales:** IA adaptada a sectores como salud, finanzas, educación y retail.
-- **Hiperpersonalización:** Integración profunda con CRM y analítica para experiencias individualizadas.
-- **Ética y responsabilidad en IA:** Mayor foco en equidad, [transparencia](/es/glossary/transparency/) y privacidad.
+- **Inteligencia emocional:**Mejor detección de emociones para respuestas empáticas.
+- **IA multilingüe y multimodal:**Soporte fluido para varios idiomas y tipos de entrada (texto, voz, imágenes).
+- **Engagement proactivo y predictivo:**La IA anticipa necesidades, inicia conversaciones y recomienda acciones.
+- **Integración con IA generativa:**Uso de grandes modelos de lenguaje (LLMs) para respuestas más creativas y adaptativas.
+- **Soluciones sectoriales:**IA adaptada a sectores como salud, finanzas, educación y retail.
+- **Hiperpersonalización:**Integración profunda con CRM y analítica para experiencias individualizadas.
+- **Ética y responsabilidad en IA:**Mayor foco en equidad, [transparencia](/es/glossary/transparency/) y privacidad.
 
-**Perspectiva de mercado:**  
-El mercado de IA conversacional en banca y servicios financieros superará los 7.000 millones de dólares en 2030 ([NextMSC](https://www.nextmsc.com/report/chatbot-market-in-bfsi)).
+**Perspectiva de mercado:**El mercado de IA conversacional en banca y servicios financieros superará los 7.000 millones de dólares en 2030 ([NextMSC](https://www.nextmsc.com/report/chatbot-market-in-bfsi)).
 
 Más información:
 - [qBotica: Futuro de la IA conversacional](https://qbotica.com/conversational-ai-a-complete-guide-for-2024/)
@@ -305,11 +287,7 @@ Más información:
 
 ## Visuales, diagramas y demos
 
-- **Flujo de trabajo de IA conversacional:**  
-  ![Diagrama del flujo de IA conversacional](https://www.nextiva.com/cdn-cgi/image/width=850,height=1318,fit=cover,gravity=auto,format=auto/blog/wp-content/uploads/sites/10/2024/12/components-of-conversational-ai.webp?resize=850,1318)
-- **Demo de Google Cloud (YouTube):**  
-  [Ver la demo](https://www.youtube.com/watch?v=I-lEf2kMjTg)
-- **Estadísticas de impacto en la experiencia del cliente:**  
-  ![Zendesk: IA en la experiencia del cliente](https://d1eipm3vz40hy0.cloudfront.net/vorteile-der-konversationellen-ki-de-optimized.png)
-- **Ejemplo de AI Copilot:**  
-  ![[AI Copilot](/es/glossary/copilot/) en soporte al cliente](https://www.nextiva.com/cdn-cgi/image/width=850,height=599
+- **Flujo de trabajo de IA conversacional:**![Diagrama del flujo de IA conversacional](https://www.nextiva.com/cdn-cgi/image/width=850,height=1318,fit=cover,gravity=auto,format=auto/blog/wp-content/uploads/sites/10/2024/12/components-of-conversational-ai.webp?resize=850,1318)
+- **Demo de Google Cloud (YouTube):**[Ver la demo](https://www.youtube.com/watch?v=I-lEf2kMjTg)
+- **Estadísticas de impacto en la experiencia del cliente:**![Zendesk: IA en la experiencia del cliente](https://d1eipm3vz40hy0.cloudfront.net/vorteile-der-konversationellen-ki-de-optimized.png)
+- **Ejemplo de AI Copilot:**![[AI Copilot](/es/glossary/copilot/) en soporte al cliente](https://www.nextiva.com/cdn-cgi/image/width=850,height=599

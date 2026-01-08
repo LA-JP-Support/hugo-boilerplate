@@ -27,17 +27,15 @@ In chatbot development and automation, state machines explicitly track and contr
 
 A state is a snapshot of the system at a given moment. In chatbots, states might include `GREETING`, `ASK_FOR_INFORMATION`, `PROCESSING`, `PROVIDE_SOLUTION`, or `GOODBYE`. The system is always in exactly one state at any time.
 
-**Examples:**
-- **Order processing:** `Pending`, `Shipped`, `Delivered`, `Returned`
-- **Chatbot conversation:** `GREETING`, `ASK_FOR_ISSUE`, `PROCESS_ISSUE`, `PROVIDE_SOLUTION`, `GOODBYE`
-- **Music player:** `Paused`, `Playing`, `Stopped`
+**Examples:**- **Order processing:**`Pending`, `Shipped`, `Delivered`, `Returned`
+- **Chatbot conversation:**`GREETING`, `ASK_FOR_ISSUE`, `PROCESS_ISSUE`, `PROVIDE_SOLUTION`, `GOODBYE`
+- **Music player:**`Paused`, `Playing`, `Stopped`
 
 ### Events
 
 Events are triggers—inputs, actions, or occurrences—that prompt state transitions. Events can be user messages, system actions, timers, or external signals.
 
-**Examples:**
-- `user says hello`
+**Examples:**- `user says hello`
 - `item shipped`
 - `play button pressed`
 - `timeout occurred`
@@ -46,8 +44,7 @@ Events are triggers—inputs, actions, or occurrences—that prompt state transi
 
 A transition defines the movement from one state to another, triggered by an event. Transitions are directional and often labeled with the triggering event.
 
-**Example:**  
-From `Pending` (state), on `item shipped` (event), to `Shipped` (state):  
+**Example:**From `Pending` (state), on `item shipped` (event), to `Shipped` (state):  
 `Pending` + `item shipped` → `Shipped`
 
 State machines are often visualized as circles (states) connected by arrows (transitions), with each arrow labeled by the event that causes the transition.
@@ -62,13 +59,13 @@ A Finite State Machine is the standard type, with a limited, known number of sta
 
 Hierarchical state machines (also called statecharts) allow nesting of states. A parent state can encapsulate multiple child states, reducing complexity in large systems.
 
-**Example:** A `Booking` parent state may include `FlightBooking`, `HotelBooking`, and `CarBooking` as sub-states.
+**Example:**A `Booking` parent state may include `FlightBooking`, `HotelBooking`, and `CarBooking` as sub-states.
 
 ### Deterministic vs Non-Deterministic
 
-**Deterministic:** Each combination of state and input leads to exactly one possible next state.
+**Deterministic:**Each combination of state and input leads to exactly one possible next state.
 
-**Non-Deterministic:** Multiple transitions may be possible for a given state and input; more commonly used for theoretical models or pattern recognition.
+**Non-Deterministic:**Multiple transitions may be possible for a given state and input; more commonly used for theoretical models or pattern recognition.
 
 ## How State Machines Are Used
 
@@ -76,7 +73,7 @@ Hierarchical state machines (also called statecharts) allow nesting of states. A
 
 State machines manage the "memory" and flow of chatbot conversations. Each conversational state reflects a unique stage (e.g., greeting, collecting issue details, processing, providing a solution). Events—typically user inputs—trigger transitions.
 
-**Example:** A customer support chatbot might transition from `GREETING` to `ASK_FOR_ISSUE` upon receiving a user's greeting.
+**Example:**A customer support chatbot might transition from `GREETING` to `ASK_FOR_ISSUE` upon receiving a user's greeting.
 
 ### Automation & Workflow Management
 
@@ -84,30 +81,27 @@ State machines are widely used in process automation and workflow management, re
 
 ### Other Domains
 
-**Game AI:** Models NPC behaviors (idle, patrol, chase, attack)
+**Game AI:**Models NPC behaviors (idle, patrol, chase, attack)
 
-**Robotics:** Controls sequences (move, pick, place, recharge)
+**Robotics:**Controls sequences (move, pick, place, recharge)
 
-**Business Process Automation:** Manages approvals, escalations, and task routing
+**Business Process Automation:**Manages approvals, escalations, and task routing
 
 ## Practical Examples
 
 ### Example 1: Order Processing
 
-**States:** `Pending` → `Shipped` → `Delivered` → `Returned`
+**States:**`Pending` → `Shipped` → `Delivered` → `Returned`
 
-**Transitions:**
-- `Pending` + `item shipped` → `Shipped`
+**Transitions:**- `Pending` + `item shipped` → `Shipped`
 - `Shipped` + `item delivered` → `Delivered`
 - `Delivered` + `item returned` → `Returned`
 
 ### Example 2: Chatbot Conversation
 
-**States:** `GREETING` → `ASK_FOR_ISSUE` → `PROCESS_ISSUE` → `PROVIDE_SOLUTION` → `FOLLOW_UP` → `GOODBYE`
+**States:**`GREETING` → `ASK_FOR_ISSUE` → `PROCESS_ISSUE` → `PROVIDE_SOLUTION` → `FOLLOW_UP` → `GOODBYE`
 
-**Sample Python Implementation:**
-
-```python
+**Sample Python Implementation:**```python
 class ChatbotFSM:
     def __init__(self):
         self.state = 'GREETING'
@@ -135,7 +129,7 @@ class ChatbotFSM:
 
 ### Example 4: Travel Booking Flow
 
-**States:** `Idle`, `Booking Flight`, `Booking Hotel`, `Booking Car`, `Confirmation`, `Error`
+**States:**`Idle`, `Booking Flight`, `Booking Hotel`, `Booking Car`, `Confirmation`, `Error`
 
 Events like "flight booked", "hotel booking failed", or "timeout" trigger transitions. Hierarchical states can be used for error handling.
 
@@ -143,16 +137,15 @@ Events like "flight booked", "hotel booking failed", or "timeout" trigger transi
 
 ### Modular Design
 
-**Separation of Concerns:** Implement each state as a separate function or class for maintainability.
+**Separation of Concerns:**Implement each state as a separate function or class for maintainability.
 
-**Mapping State Handlers:** Use dictionaries or objects to map states to handler functions.
+**Mapping State Handlers:**Use dictionaries or objects to map states to handler functions.
 
 ### Persisting State and Context
 
-**Session Management:** Store the current state and context (such as user input, conversation history) using in-memory storage or a database.
+**Session Management:**Store the current state and context (such as user input, conversation history) using in-memory storage or a database.
 
-**Example:**
-```python
+**Example:**```python
 user_sessions = {
     user_id: {
         'state': 'PROCESS_ISSUE',
@@ -163,19 +156,17 @@ user_sessions = {
 
 ### Tools and Libraries
 
-**XState:** JavaScript/TypeScript library for state machines and statecharts
+**XState:**JavaScript/TypeScript library for state machines and statecharts
 
-**Stately Editor:** Visual editor for designing and exporting state machines
+**Stately Editor:**Visual editor for designing and exporting state machines
 
-**Mermaid:** Diagramming tool for statecharts
+**Mermaid:**Diagramming tool for statecharts
 
-**Language-specific libraries** for Python, Java, and other languages
+**Language-specific libraries**for Python, Java, and other languages
 
 ### Sample Code Snippets
 
-**Python FSM Skeleton:**
-
-```python
+**Python FSM Skeleton:**```python
 class StateMachine:
     def __init__(self, initial_state):
         self.state = initial_state
@@ -192,8 +183,7 @@ class StateMachine:
             print("Invalid transition")
 ```
 
-**XState Example:**
-```javascript
+**XState Example:**```javascript
 import { createMachine } from 'xstate';
 
 const orderMachine = createMachine({
@@ -209,29 +199,29 @@ const orderMachine = createMachine({
 
 ## Advantages of State Machines
 
-**Clarity:** State diagrams visualize logic and improve communication
+**Clarity:**State diagrams visualize logic and improve communication
 
-**Consistency:** Explicit state and transition definitions prevent unexpected behaviors
+**Consistency:**Explicit state and transition definitions prevent unexpected behaviors
 
-**Modularity:** Each state's logic is isolated, supporting easy maintenance and scalability
+**Modularity:**Each state's logic is isolated, supporting easy maintenance and scalability
 
-**Exhaustive Testing:** All paths can be enumerated and tested
+**Exhaustive Testing:**All paths can be enumerated and tested
 
-**Explicit Context:** Maintains conversation or workflow state reliably
+**Explicit Context:**Maintains conversation or workflow state reliably
 
-**Predictability:** Deterministic transitions ensure defined outcomes
+**Predictability:**Deterministic transitions ensure defined outcomes
 
 ## Challenges and Limitations
 
-**Complexity:** Large numbers of states and transitions can lead to state explosion, making diagrams hard to manage
+**Complexity:**Large numbers of states and transitions can lead to state explosion, making diagrams hard to manage
 
-**Scalability:** Open-ended or highly dynamic systems may require hierarchical or compositional state machines
+**Scalability:**Open-ended or highly dynamic systems may require hierarchical or compositional state machines
 
-**Flexibility:** Strict state models can be rigid; creative or nonlinear flows may be harder to capture
+**Flexibility:**Strict state models can be rigid; creative or nonlinear flows may be harder to capture
 
-**Integration:** Combining with databases, APIs, or external services adds complexity
+**Integration:**Combining with databases, APIs, or external services adds complexity
 
-**Context Limitations:** In LLM-powered bots, context window size may limit state recall; explicit context management is essential
+**Context Limitations:**In LLM-powered bots, context window size may limit state recall; explicit context management is essential
 
 ### Mitigation Strategies
 
@@ -247,11 +237,11 @@ Hierarchical state machines (statecharts) allow states to have nested sub-states
 
 ### Integration with Machine Learning
 
-**Hybrid Models:** Combine state machines with ML models for adaptive transitions (e.g., ML classifies user intent; state machine manages conversation flow)
+**Hybrid Models:**Combine state machines with ML models for adaptive transitions (e.g., ML classifies user intent; state machine manages conversation flow)
 
-**Reinforcement Learning:** Agents can learn optimal transitions from experience
+**Reinforcement Learning:**Agents can learn optimal transitions from experience
 
-**Dynamic Transition Logic:** ML models can predict next state based on rich context
+**Dynamic Transition Logic:**ML models can predict next state based on rich context
 
 ### Dynamic Persona Generation
 
@@ -259,15 +249,15 @@ In complex chatbots, state machines can switch the bot's persona or role based o
 
 ## Best Practices
 
-**Start Simple:** Begin with basic FSM before adding hierarchical complexity
+**Start Simple:**Begin with basic FSM before adding hierarchical complexity
 
-**Document Thoroughly:** Maintain clear documentation of states, events, and transitions
+**Document Thoroughly:**Maintain clear documentation of states, events, and transitions
 
-**Test Rigorously:** Validate all possible state transitions and edge cases
+**Test Rigorously:**Validate all possible state transitions and edge cases
 
-**Monitor Performance:** Track state transitions and identify bottlenecks
+**Monitor Performance:**Track state transitions and identify bottlenecks
 
-**Iterate Continuously:** Refine state machine design based on real-world usage
+**Iterate Continuously:**Refine state machine design based on real-world usage
 
 ## Use Case Scenarios
 

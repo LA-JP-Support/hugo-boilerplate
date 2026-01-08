@@ -51,64 +51,52 @@ Chatbots can be categorized into five types based on their response mechanisms a
 
 This type returns predetermined answers based on pre-set keywords, question patterns, or scenarios. It's suitable for FAQ auto-responses and automation of routine tasks.
 
-**Advantages:**
-- Simple system creation and operation
+**Advantages:**- Simple system creation and operation
 - Complete control over response content
 - Relatively low implementation cost
 
-**Disadvantages:**
-- Cannot handle unexpected questions
+**Disadvantages:**- Cannot handle unexpected questions
 - Lacks flexibility
 
-**Technical Background:**  
-[Rule-based](/en/glossary/[Rule-based](/en/glossary/Rule-based/)/) systems use [finite state machines](/en/glossary/finite-state-machines/) and [conditional branching](/en/glossary/Logic-Node---Conditional-Branching/). Although simple, they operate reliably and are still widely used by many companies.
+**Technical Background:**[Rule-based](/en/glossary/[Rule-based](/en/glossary/Rule-based/)/) systems use [finite state machines](/en/glossary/finite-state-machines/) and [conditional branching](/en/glossary/Logic-Node---Conditional-Branching/). Although simple, they operate reliably and are still widely used by many companies.
 
 ### AI-Powered (Machine Learning)
 
 This type analyzes customer statements using natural language processing. It then uses [machine learning](/en/glossary/machine-learning/) to find patterns and respond flexibly. It can handle complex questions and ambiguous expressions.
 
-**Advantages:**
-- Can handle diverse expressions
+**Advantages:**- Can handle diverse expressions
 - Becomes smarter with use
 - Understands ambiguous questions
 
-**Disadvantages:**
-- Requires preparation of training data
+**Disadvantages:**- Requires preparation of training data
 - May generate unexpected responses
 
-**Technical Background:**  
-AI-powered chatbots use classification techniques and [neural networks](/en/glossary/neural-networks/). Their ability to handle diverse statements has been demonstrated. For those interested in AI performance evaluation, see " [AI Report Card: Japanese-Proficient vs. Struggling AI - How to Judge the Difference?](https://www.smartweb.jp/ai-evaluation-japanese-benchmarks/)".
+**Technical Background:**AI-powered chatbots use classification techniques and [neural networks](/en/glossary/neural-networks/). Their ability to handle diverse statements has been demonstrated. For those interested in AI performance evaluation, see " [AI Report Card: Japanese-Proficient vs. Struggling AI - How to Judge the Difference?](https://www.smartweb.jp/ai-evaluation-japanese-benchmarks/)".
 
 ### Generative AI
 
 Like [ChatGPT](/en/glossary/ChatGPT/), generative AI automatically creates text from large-scale data. It utilizes pre-trained knowledge to enable natural conversation and creative responses.
 
-**Advantages:**
-- Human-like natural conversation
+**Advantages:**- Human-like natural conversation
 - Can handle unregistered questions
 - Can make creative suggestions
 
-**Disadvantages:**
-- Risk of [hallucination](/en/glossary/hallucination/)
+**Disadvantages:**- Risk of [hallucination](/en/glossary/hallucination/)
 - Consistency of responses is a challenge
 
-**Technical Background:**  
-Generative AI is based on large language models. Using the latest models provided by [OpenAI](/en/glossary/OpenAI/), [Google](/en/glossary/Google/), and [Anthropic](/en/glossary/Anthropic/) significantly improves the accuracy of natural [text generation](/en/glossary/Text-Generation/).
+**Technical Background:**Generative AI is based on large language models. Using the latest models provided by [OpenAI](/en/glossary/OpenAI/), [Google](/en/glossary/Google/), and [Anthropic](/en/glossary/Anthropic/) significantly improves the accuracy of natural [text generation](/en/glossary/Text-Generation/).
 
 ### RAG (Retrieval-Augmented Generation)
 [RAG](/en/glossary/RAG/) is a type where AI searches external databases or documents and uses that information to create answers. It provides highly reliable responses when the latest information or specialized knowledge is needed.
 
-**Advantages:**
-- Responses based on latest information
+**Advantages:**- Responses based on latest information
 - Significantly reduces [hallucination](/en/glossary/hallucination/)
 - Excels at handling specialized knowledge
 
-**Disadvantages:**
-- Requires building search databases
+**Disadvantages:**- Requires building search databases
 - System becomes complex
 
-**Technical Background:**  
-RAG combines information retrieval with generative AI. It excels at fact-checking and handling new information compared to traditional generative AI. [FlowHunt](/en/glossary/FlowHunt/), used by SmartWeb, enables chatbot construction using this RAG technology.
+**Technical Background:**RAG combines information retrieval with generative AI. It excels at fact-checking and handling new information compared to traditional generative AI. [FlowHunt](/en/glossary/FlowHunt/), used by SmartWeb, enables chatbot construction using this RAG technology.
 
 For those interested in learning more about RAG mechanisms and applications, see " [How AI Answers Accurately with Latest Information: Introduction to RAG (Retrieval-Augmented Generation)](https://www.smartweb.jp/introduction-to-rag/)". We also recommend deepening your understanding of " [Knowledge Base (FAQ)](https://www.smartweb.jp/knowledge-base-faq-guide-2025/)" which can be used in combination with RAG.
 
@@ -116,21 +104,18 @@ For those interested in learning more about RAG mechanisms and applications, see
 
 The hybrid type combines [rule-based](/en/glossary/[Rule-based](/en/glossary/Rule-based/)/), AI-powered, and generative AI systems. For example, it uses rules for scenarios and FAQs, while using AI for complex questions, leveraging multiple mechanisms. It can be utilized in various business operations and scenarios.
 
-**Advantages:**
-- Leverages strengths of each type
+**Advantages:**- Leverages strengths of each type
 - Can handle wide range of operations
 - Balances accuracy and flexibility
 
-**Disadvantages:**
-- Design becomes complex
+**Disadvantages:**- Design becomes complex
 - Requires specialized knowledge for operational management
 
-**Technical Background:**  
-Research shows that dialogue systems combining multiple models improve response accuracy and business usability.
+**Technical Background:**Research shows that dialogue systems combining multiple models improve response accuracy and business usability.
 
 ---
 
-> **Key Point:** Each chatbot type has its own characteristics. Selecting the optimal type based on objectives and required business operations can significantly change customer usability and work efficiency.
+> **Key Point:**Each chatbot type has its own characteristics. Selecting the optimal type based on objectives and required business operations can significantly change customer usability and work efficiency.
 
 ## Performance and Functionality Differences
 
@@ -170,11 +155,9 @@ Understanding how AI chatbots become smarter helps in selecting the appropriate 
 
 In [supervised learning](/en/glossary/supervised-learning/), the AI chatbot is given data with correct answers provided by humans to learn proper response methods.
 
-**Example:**  
-Prepare many examples like "I want to cancel my order" → "I'll guide you through the cancellation process". The AI uses these examples to statistically derive appropriate responses.
+**Example:**Prepare many examples like "I want to cancel my order" → "I'll guide you through the cancellation process". The AI uses these examples to statistically derive appropriate responses.
 
-**Characteristics:**
-- Can answer with high accuracy
+**Characteristics:**- Can answer with high accuracy
 - Requires preparation of quality data
 - Regular updates are essential
 
@@ -182,8 +165,7 @@ Prepare many examples like "I want to cancel my order" → "I'll guide you throu
 
 In [unsupervised learning](/en/glossary/unsupervised-learning/), without providing correct answers, AI finds patterns and features on its own from large amounts of conversation data.
 
-**Characteristics:**
-- Flexibly handles unknown questions
+**Characteristics:**- Flexibly handles unknown questions
 - Data preparation is relatively simple
 - Output quality can be unstable
 
@@ -197,7 +179,7 @@ Correct responses receive "rewards" while incorrect responses receive "penalties
 
 In [continuous learning](/en/glossary/continuous-learning/), the AI chatbot updates knowledge in real-time to adapt to new questions and changes in business content. This allows flexible response to changing situations and new information even after implementation.
 
-> **Key Point:** Each AI chatbot learning method has its own characteristics. Selecting learning methods based on objectives and operational methods enables more practical and accurate chatbot operation.
+> **Key Point:**Each AI chatbot learning method has its own characteristics. Selecting learning methods based on objectives and operational methods enables more practical and accurate chatbot operation.
 
 ## Use Case-Based Chatbot Selection
 
@@ -209,18 +191,13 @@ When choosing an AI chatbot, thoroughly confirm the implementation objectives an
 
 "[Rule-based](/en/glossary/Rule-based/)" or "AI-powered" types are suitable for [FAQ (frequently asked questions)](/en/glossary/FAQ/) and predetermined inquiry responses.
 
-**Recommended Selection:**
-- Need quick, accurate responses → **[Rule-based](/en/glossary/Rule-based/)**
-- Complex questions, asked in various expressions → **AI-powered** or **Generative AI**
-
-SmartWeb can build efficient customer support systems by combining [LiveAgent](/en/glossary/LiveAgent/) with [FlowHunt](/en/glossary/FlowHunt/). For actual implementation cases and success strategies, see " [2025 AI Customer Support Guide: Success Strategies from Amazon & Salesforce to SMBs](https://www.smartweb.jp/ai-customer-support-2025-guide/)".
+**Recommended Selection:**- Need quick, accurate responses → **[Rule-based](/en/glossary/Rule-based/)**- Complex questions, asked in various expressions → **AI-powered**or **Generative AI**SmartWeb can build efficient customer support systems by combining [LiveAgent](/en/glossary/LiveAgent/) with [FlowHunt](/en/glossary/FlowHunt/). For actual implementation cases and success strategies, see " [2025 AI Customer Support Guide: Success Strategies from Amazon & Salesforce to SMBs](https://www.smartweb.jp/ai-customer-support-2025-guide/)".
 
 ### Internal Helpdesk and Business Efficiency
 
 "AI-powered" or "Hybrid" types are suitable for internal inquiries and assisting daily operations.
 
-**Reasons:**
-- Internal operations require specialized terminology and knowledge
+**Reasons:**- Internal operations require specialized terminology and knowledge
 - AI types can continue learning and growing
 - Hybrid types are effective for questions spanning multiple operations
 
@@ -228,8 +205,7 @@ SmartWeb can build efficient customer support systems by combining [LiveAgent](/
 
 "Generative AI" or "RAG" types are convenient for product recommendations and finding new customers.
 
-**Reasons:**
-- Can make personalized suggestions
+**Reasons:**- Can make personalized suggestions
 - Can utilize latest market data
 - Can quickly respond to market changes
 
@@ -244,7 +220,7 @@ When selecting chatbots, make the following points measurable:
 - Percentage of operations that can be automated
 - Customer satisfaction levels
 
-> **Key Point:** After clearly defining business content and objectives, selecting chatbots based on specific evaluation methods and actual case studies makes it easier to achieve maximum effectiveness.
+> **Key Point:**After clearly defining business content and objectives, selecting chatbots based on specific evaluation methods and actual case studies makes it easier to achieve maximum effectiveness.
 
 ## Implementation Considerations
 
@@ -252,8 +228,7 @@ When selecting chatbots, make the following points measurable:
 
 When implementing AI chatbots, first clearly identify the issues to solve and business flows. It's important to specifically determine what functions are needed and which operations will use them.
 
-**Specific Goal Examples:**
-- Reduce inquiries by 30%
+**Specific Goal Examples:**- Reduce inquiries by 30%
 - Achieve customer satisfaction above 80 points
 - Shorten [response time](/en/glossary/Response-Time/) by 50%
 
@@ -263,9 +238,7 @@ Vague objectives make it difficult to determine which system to choose, and meas
 
 AI chatbots require not only initial implementation costs but also ongoing costs for operation, maintenance, and regular updates.
 
-**Items to Consider:**
-
-| Item | Content | Importance |
+**Items to Consider:**| Item | Content | Importance |
 |------|------|--------|
 | Initial Cost | System construction, setup work | High |
 | Monthly Cost | Usage fees, license fees | High |
@@ -280,8 +253,7 @@ Estimating [TCO](/en/glossary/Total-Cost-of-Ownership--TCO-/) in advance can red
 
 Sufficient care is needed to ensure that personal information and confidential information entered by customers are not used for AI training or leaked externally.
 
-**Necessary Measures:**
-- Compliance with Japan's [Personal Information Protection Law](/en/glossary/Personal-Information-Protection-Law/)
+**Necessary Measures:**- Compliance with Japan's [Personal Information Protection Law](/en/glossary/Personal-Information-Protection-Law/)
 - Consideration of Europe's [GDPR](/en/glossary/GDPR/) (for overseas expansion)
 - [Data encryption](/en/glossary/data-encryption/)
 - [Access control](/en/glossary/access-control/) implementation
@@ -293,14 +265,13 @@ Choose designs that prevent chatbot response data from being sent to or stored b
 
 It's necessary to clearly communicate to chatbot users how personal information is handled and the purpose of conversation content usage.
 
-**Areas Requiring Special Attention:**
-- Health consultations
+**Areas Requiring Special Attention:**- Health consultations
 - Mental care
 - Financial advice
 
 In these areas, clearly state what AI responses can and cannot do, and incorporate mechanisms to connect to human operators when necessary. This makes users feel more comfortable using the system.
 
-> **Important:** Thoroughly preparing objectives, operational methods, and legal and ethical rules before implementing AI chatbots helps avoid troubles and operate safely.
+> **Important:**Thoroughly preparing objectives, operational methods, and legal and ethical rules before implementing AI chatbots helps avoid troubles and operate safely.
 
 ## Future of AI Chatbots and Trends
 
@@ -312,8 +283,7 @@ Recently, technologies like [speech recognition](/en/glossary/speech-recognition
 
 Customers can communicate with AI not only through text input but also using voice, photos, and videos.
 
-**Industry Trends:**  
-Research firm Gartner predicts rapid adoption of [multimodal AI](/en/glossary/Multimodal-AI/) by 2026. Generative AI in particular is expected to become capable of integrating text, voice, images, and video in enterprise applications.
+**Industry Trends:**Research firm Gartner predicts rapid adoption of [multimodal AI](/en/glossary/Multimodal-AI/) by 2026. Generative AI in particular is expected to become capable of integrating text, voice, images, and video in enterprise applications.
 
 ### Deepening of Automated Learning and Personalization
 
@@ -325,8 +295,7 @@ With advances in technologies like [continuous learning](/en/glossary/continuous
 
 As AI chatbot usage expands, interest in AI ethics such as fairness, [transparency](/en/glossary/transparency/), and accountability, as well as management methods, is increasing.
 
-**Research Institution Findings:**  
-MIT research points out that while AI usage reduces user burden, it may also affect long-term thinking and memory.
+**Research Institution Findings:**MIT research points out that while AI usage reduces user burden, it may also affect long-term thinking and memory.
 
 Therefore, the following are considered important:
 - Disclosure of AI mechanisms and algorithms
@@ -338,10 +307,10 @@ Therefore, the following are considered important:
 
 Future AI chatbots will evolve in the following directions:
 
-1. **Support for Diverse Inputs** - Freely combining text, voice, images, and video
-2. **Individual Optimization** - Services tailored to each customer
-3. **Improved Reliability** - System design considering ethics
-4. **Utilization Across Various Fields** - Business, education, healthcare, public services, etc.
+1. **Support for Diverse Inputs**- Freely combining text, voice, images, and video
+2. **Individual Optimization**- Services tailored to each customer
+3. **Improved Reliability**- System design considering ethics
+4. **Utilization Across Various Fields**- Business, education, healthcare, public services, etc.
 
 These technologies will add new value to our lives and societal systems.
 
@@ -353,21 +322,17 @@ SmartWeb's AI chatbot development service uses FlowHunt to realize a hybrid type
 
 This mechanism can handle a wide range of content from frequently asked questions to complex customized responses.
 
-**RAG Strengths:**  
-It searches for relevant information from the customer's unique external [knowledge base](/en/glossary/knowledge-base/), and generative AI creates highly accurate responses based on that information. By using a unique [knowledge base](/en/glossary/knowledge-base/), it can provide reliable responses without using other companies' information or incorrect data.
+**RAG Strengths:**It searches for relevant information from the customer's unique external [knowledge base](/en/glossary/knowledge-base/), and generative AI creates highly accurate responses based on that information. By using a unique [knowledge base](/en/glossary/knowledge-base/), it can provide reliable responses without using other companies' information or incorrect data.
 
-**System Configuration:**
-- **[Rule-Based](/en/glossary/Rule-based/) Engine** - Immediately responds to predetermined questions like FAQs
-- **Generative AI** - Creates flexible responses even to unregistered questions (using latest models from OpenAI, [Google](/en/glossary/Google/), and Anthropic)
-- **RAG Search** - Retrieves accurate information from customer's unique knowledge base
+**System Configuration:**- **[Rule-Based](/en/glossary/Rule-based/) Engine**- Immediately responds to predetermined questions like FAQs
+- **Generative AI**- Creates flexible responses even to unregistered questions (using latest models from OpenAI, [Google](/en/glossary/Google/), and Anthropic)
+- **RAG Search**- Retrieves accurate information from customer's unique knowledge base
 
 ### Multi-Channel Unified Management and Auto-Response
 
 SmartWeb utilizes [LiveAgent](/en/glossary/LiveAgent/) to enable unified management of multiple channels including websites, LINE, SNS, and email. Consistent responses are possible regardless of which contact point receives inquiries.
 
-**Main Functions:**
-
-| Function | Content | Effect |
+**Main Functions:**| Function | Content | Effect |
 |------|------|------|
 | 24/7/365 Support | AI auto-response always available | Zero missed responses |
 | AI Email Auto-Response | Automatically creates response drafts for inquiry forms and emails | Dramatically shortens response time |
@@ -380,8 +345,7 @@ This enables business efficiency while maintaining customer response quality. Fo
 
 Chatbots using FlowHunt continue learning after operation begins and are updated to adapt to business and era changes.
 
-**Use Cases:**
-- Order automation for EC sites
+**Use Cases:**- Order automation for EC sites
 - 24/7 internal helpdesk support
 - Sales support bots (product guidance, quote creation)
 - Integration with reservation systems
@@ -392,10 +356,10 @@ Because they can be customized to match intended use, they can be implemented in
 
 Implementing SmartWeb's AI chatbot development service provides the following benefits:
 
-1. **Business Efficiency** - Can manage inquiries from multiple channels in one place, preventing missed responses and dependency on specific individuals
-2. **High- [Precision](/en/glossary/Precision/) Auto-Response** - Leveraging strengths of both AI and [rule-based](/en/glossary/Rule-based/) systems enables accurate and efficient auto-responses
-3. **Cost Reduction** - Automated form response suggestions and business [process automation](/en/glossary/Process-Automation/) reduce personnel costs
-4. **Latest AI Technology Utilization** - Uses latest models from OpenAI, [Google](/en/glossary/Google/), and Anthropic to consistently provide high-quality responses
-5. **Hallucination Countermeasures** - RAG technology significantly reduces generation of incorrect information
+1. **Business Efficiency**- Can manage inquiries from multiple channels in one place, preventing missed responses and dependency on specific individuals
+2. **High- [Precision](/en/glossary/Precision/) Auto-Response**- Leveraging strengths of both AI and [rule-based](/en/glossary/Rule-based/) systems enables accurate and efficient auto-responses
+3. **Cost Reduction**- Automated form response suggestions and business [process automation](/en/glossary/Process-Automation/) reduce personnel costs
+4. **Latest AI Technology Utilization**- Uses latest models from OpenAI, [Google](/en/glossary/Google/), and Anthropic to consistently provide high-quality responses
+5. **Hallucination Countermeasures**- RAG technology significantly reduces generation of incorrect information
 
 SmartWeb's AI chatbot development service is a next-generation solution supporting corporate customer response and [business automation](/en/glossary/Business-Automation/) by combining FlowHunt and LiveAgent.

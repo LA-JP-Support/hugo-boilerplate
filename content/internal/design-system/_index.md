@@ -13,9 +13,9 @@ Internal design system for FlowHunt.
 
 ## Contents
 
-- **Colors** - basic color scheme
-- **Typography** - font styles and headings
-- **Gradients** - standard gradients and their usage
-- **CSS Variables** - complete list of available CSS variables
-- **Icons** - available icons and their usage
-- **Shortcodes** - reusable components and patterns
+- **Colors**- basic color scheme
+- **Typography**- font styles and headings
+- **Gradients**- standard gradients and their usage
+- **CSS Variables**- complete list of available CSS variables
+- **Icons**- available icons and their usage
+- **Shortcodes**- reusable components and patterns

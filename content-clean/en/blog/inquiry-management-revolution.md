@@ -10,13 +10,11 @@ image: "/images/blog/inquiry-management-revolution.png"
 Have you ever been startled by this question from staff first thing Monday morning?
 You frantically open your mailbox to find a mountain of inquiries that have piled up since Friday evening. You open your Excel management sheet and desperately check "Handled" and "Pending." Wait, is Tanaka-san handling this inquiry, or am I?
 Before you know it, the morning is over and your actual work remains untouched...
-**In fact, this scene is happening in small businesses all across Japan.**
-
-## Shocking Fact: 60% of Inquiry Responses Are Still "Manual"
+**In fact, this scene is happening in small businesses all across Japan.**## Shocking Fact: 60% of Inquiry Responses Are Still "Manual"
 
 ### Invisible Losses Are Accumulating
 
-Research shows that approximately **60%** of inquiry responses are still handled manually. And about **70%** of companies have experienced "response errors and oversights due to insufficient information sharing."
+Research shows that approximately **60%**of inquiry responses are still handled manually. And about **70%**of companies have experienced "response errors and oversights due to insufficient information sharing."
 
 Let's think concretely about what this means:
 
@@ -34,7 +32,7 @@ When multiple inquiries come in simultaneously, which should be handled first? A
 
 ### 30% of Customers Leave Due to "Slow Response"
 
-There's even more shocking data. Recent surveys show that delays in customer service and declining service quality are the reason approximately **30%** of customers leave.
+There's even more shocking data. Recent surveys show that delays in customer service and declining service quality are the reason approximately **30%**of customers leave.
 
 In other words, improving inquiry management isn't something you "should do" - it's a "must do to survive" level challenge.
 
@@ -61,20 +59,14 @@ At SmartWeb, we use LiveAgent, a proven ticket system with extensive track recor
 
 #### Results from companies that implemented LiveAgent:
 
-- First contact resolution rate: **28% improvement**
-- Response time: Reduced from 1 hour to **20 minutes**
-- Missed responses: **Nearly zero**
-
-Voice from a small business owner:
-**"Before implementation, every day was panic mode. But now, I can see the status of all inquiries just by looking at the screen. Response speed doubled and complaints drastically decreased."**
-
-## Support Portal: The "Magic Bookshelf" for Customer Self-Service
+- First contact resolution rate: **28% improvement**- Response time: Reduced from 1 hour to **20 minutes**- Missed responses: **Nearly zero**Voice from a small business owner:
+**"Before implementation, every day was panic mode. But now, I can see the status of all inquiries just by looking at the screen. Response speed doubled and complaints drastically decreased."**## Support Portal: The "Magic Bookshelf" for Customer Self-Service
 
 ### 30-52% of Inquiries Disappear!?
 
 A "Support Portal" is like a "customer-dedicated library" that compiles FAQs and manuals.
 
-In fact, **30-52%** of inquiries are things customers can resolve themselves if they have the right information (according to Gartner research.
+In fact, **30-52%**of inquiries are things customers can resolve themselves if they have the right information (according to Gartner research.
 
 #### Common self-resolvable inquiries:
 
@@ -151,13 +143,13 @@ In other words, you can **recover the initial investment in 2 months**.
 ## Answering Common Questions and Concerns
 
 **Q: We're a small company, do we really need this?**
-**A:** Small companies need it even more. To operate efficiently with few people, leveraging system power is crucial.
+**A:**Small companies need it even more. To operate efficiently with few people, leveraging system power is crucial.
 
 **Q: Can we use it even if we're not IT-savvy?**
-**A:** Absolutely. Japanese staff will carefully support you from implementation to operation. The interface is in Japanese and intuitive to operate.
+**A:**Absolutely. Japanese staff will carefully support you from implementation to operation. The interface is in Japanese and intuitive to operate.
 
 **Q: Changing our current methods seems difficult...**
-**A:** The first week does require adjustment, but after one month everyone says "we can never go back to the old way."
+**A:**The first week does require adjustment, but after one month everyone says "we can never go back to the old way."
 
 ## "3 Secrets" Practiced by Successful Companies
 

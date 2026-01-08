@@ -24,16 +24,14 @@ For example, if a user says, “Book a flight to Paris,” and then “Find me a
 
 Effective slot carryover eliminates the need for users to repeat information, supports natural language reference resolution, and ensures that the chatbot maintains an accurate conversational state as the dialogue evolves. As dialogue systems become more sophisticated and handle more complex and varied tasks, robust slot carryover is required to provide context-aware, intelligent assistance.
 
-**Key Source:**  
-- [Amazon Science: Improving long distance slot carryover in spoken dialogue systems](https://www.amazon.science/publications/improving-long-distance-slot-carryover-in-spoken-dialogue-systems)  
+**Key Source:**- [Amazon Science: Improving long distance slot carryover in spoken dialogue systems](https://www.amazon.science/publications/improving-long-distance-slot-carryover-in-spoken-dialogue-systems)  
 - [arXiv:1906.01149](https://arxiv.org/abs/1906.01149)
 
 ## Core Definition
 
-**Slot carryover** is the process by which an AI chatbot or dialogue system determines whether a slot—an extracted piece of structured information such as an entity, value, or attribute—identified in previous user or system turns, remains relevant and should be reused or transferred to fulfill the current user intent.
+**Slot carryover**is the process by which an AI chatbot or dialogue system determines whether a slot—an extracted piece of structured information such as an entity, value, or attribute—identified in previous user or system turns, remains relevant and should be reused or transferred to fulfill the current user intent.
 
-**Formal Definition:**  
-> “Slot carryover is the task where a model makes a binary decision for each candidate slot from previous dialogue context, determining if it should be carried over to the current turn to support intent fulfillment.”  
+**Formal Definition:**> “Slot carryover is the task where a model makes a binary decision for each candidate slot from previous dialogue context, determining if it should be carried over to the current turn to support intent fulfillment.”  
 > — [Chen et al., 2019, arXiv:1906.01149](https://arxiv.org/abs/1906.01149)
 
 This process is fundamental to [dialogue state tracking](/en/glossary/dialogue-state-tracking/) (DST), as it involves:
@@ -42,11 +40,9 @@ This process is fundamental to [dialogue state tracking](/en/glossary/dialogue-s
 - **Mapping**: Translating slots between potentially different schemas or domains (e.g., mapping “WeatherLocation” in a weather app to “City” in a travel booking app).
 - **Selection**: Applying learned models or rules to decide which slots are relevant for the current turn.
 
-**Example Use Case:**  
-In a travel assistant, if a user says, “I want to fly to Berlin,” the slot {Destination: Berlin} is extracted. If the user later says, “Book a hotel there,” the system needs to carry over the “Berlin” slot for correct intent fulfillment.
+**Example Use Case:**In a travel assistant, if a user says, “I want to fly to Berlin,” the slot {Destination: Berlin} is extracted. If the user later says, “Book a hotel there,” the system needs to carry over the “Berlin” slot for correct intent fulfillment.
 
-**Citations:**  
-- [Chen et al., 2019, ACL Anthology](https://aclanthology.org/W19-4111/)
+**Citations:**- [Chen et al., 2019, ACL Anthology](https://aclanthology.org/W19-4111/)
 - [Naik et al., 2018, ISCA Archive](https://www.isca-archive.org/interspeech_2018/naik18_interspeech.html)
 
 ## Technical Deep Dive
@@ -73,32 +69,25 @@ Early slot carryover implementations used hand-crafted rules, such as always car
 - **Naive Baseline**: Always carries over all slots from the immediate previous turn.
 - **Rule Baseline**: Employs hand-crafted rules for certain slot types or based on conversation patterns.
 
-**Limitations:**  
-Rule-based systems are brittle and do not generalize well to unseen dialogue flows or new domains. They perform poorly in cases involving long-distance slot references or schema heterogeneity.  
+**Limitations:**Rule-based systems are brittle and do not generalize well to unseen dialogue flows or new domains. They perform poorly in cases involving long-distance slot references or schema heterogeneity.  
 #### Neural Network Architectures
 
 The state-of-the-art in slot carryover relies on neural models that can dynamically manage context and slot relevance:
 
-**1. Pointer Networks:**  
-Pointer networks allow the model to select and order slots from the dialogue history, capturing explicit references to earlier slots. They model the sequence of slots and their ordering, which is important when multiple slots may be referenced and their order matters.
+**1. Pointer Networks:**Pointer networks allow the model to select and order slots from the dialogue history, capturing explicit references to earlier slots. They model the sequence of slots and their ordering, which is important when multiple slots may be referenced and their order matters.
 
-**2. Transformer-Based Models:**  
-Transformers use self-attention to model dependencies between slots and across dialogue turns. This enables the network to focus on which slots from the entire dialogue history are relevant to the current user turn, regardless of their position.
+**2. Transformer-Based Models:**Transformers use self-attention to model dependencies between slots and across dialogue turns. This enables the network to focus on which slots from the entire dialogue history are relevant to the current user turn, regardless of their position.
 
 > “We propose two neural network architectures, one based on pointer networks that incorporate slot ordering information, and the other based on transformer networks that use self-attention mechanisms to model slot interdependencies.”  
 > — [Chen et al., 2019, arXiv:1906.01149](https://arxiv.org/abs/1906.01149)
 
-**3. Attention Mechanisms:**  
-Both word-level and stream-level attention mechanisms help the model focus on the most relevant utterances and slot mentions, improving the resolution of ambiguous or long-distance references.
+**3. Attention Mechanisms:**Both word-level and stream-level attention mechanisms help the model focus on the most relevant utterances and slot mentions, improving the resolution of ambiguous or long-distance references.
 
-**4. Embedding-Based Schema Mapping:**  
-By representing slot keys and values as embeddings, models can compute similarity between slots across heterogeneous schemas. This is especially important for mapping slots between domains with different naming conventions or structures.
+**4. Embedding-Based Schema Mapping:**By representing slot keys and values as embeddings, models can compute similarity between slots across heterogeneous schemas. This is especially important for mapping slots between domains with different naming conventions or structures.
 
-**5. End-to-End Carryover Decision:**  
-Modern approaches frame slot carryover as a binary classification or selection task over a candidate set of slots, using contextual encodings, slot embeddings, and recency indicators.
+**5. End-to-End Carryover Decision:**Modern approaches frame slot carryover as a binary classification or selection task over a candidate set of slots, using contextual encodings, slot embeddings, and recency indicators.
 
-**Example Pseudocode:**  
-```
+**Example Pseudocode:**```
 For each candidate slot in context:
     1. Encode slot features (key embedding, value embedding)
     2. Encode current utterance and dialogue history (LSTM/Transformer)
@@ -110,21 +99,16 @@ For each candidate slot in context:
 
 Evaluating slot carryover models requires robust datasets that represent real-world conversational complexity. The most prominent benchmarks include:
 
-- **DSTC (Dialog State Tracking Challenge) Series:**  
-  - [DSTC2](https://www.microsoft.com/en-us/research/event/dialog-state-tracking-challenge/): Focused on restaurant booking, widely used for slot carryover and state tracking tasks.
+- **DSTC (Dialog State Tracking Challenge) Series:**- [DSTC2](https://www.microsoft.com/en-us/research/event/dialog-state-tracking-challenge/): Focused on restaurant booking, widely used for slot carryover and state tracking tasks.
   - DSTC8, DSTC9: Later versions introduce multi-domain and more challenging scenarios.
 
-- **Schema-Guided Dialogue (SGD) Dataset:**  
-  - [SGD](https://huggingface.co/datasets/schema_guided_dstc8): Large-scale, multi-domain task-oriented dataset, designed to evaluate schema mapping and carryover across numerous services and domains.
+- **Schema-Guided Dialogue (SGD) Dataset:**- [SGD](https://huggingface.co/datasets/schema_guided_dstc8): Large-scale, multi-domain task-oriented dataset, designed to evaluate schema mapping and carryover across numerous services and domains.
 
-- **Hugging Face Dialogue State Tracking Datasets Collection:**  
-  - [Curated collection of DST datasets](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets) including MultiWOZ, WOZ, and others.
+- **Hugging Face Dialogue State Tracking Datasets Collection:**- [Curated collection of DST datasets](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets) including MultiWOZ, WOZ, and others.
 
-- **Amazon Alexa Internal Dataset:**  
-  - Used in [Chen et al., 2019](https://aclanthology.org/W19-4111/) for evaluating slot carryover in production-like settings.
+- **Amazon Alexa Internal Dataset:**- Used in [Chen et al., 2019](https://aclanthology.org/W19-4111/) for evaluating slot carryover in production-like settings.
 
-**Dataset Resources:**  
-- [Hugging Face Dialogue State Tracking Datasets](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets)
+**Dataset Resources:**- [Hugging Face Dialogue State Tracking Datasets](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets)
 - [DSTC Challenges](https://www.microsoft.com/en-us/research/event/dialog-state-tracking-challenge/)
 
 ## Implementation Considerations
@@ -138,10 +122,8 @@ Slot carryover across domains often requires mapping slot keys and values betwee
 | WeatherLocation: Tokyo| City: Tokyo            | Yes                     |
 | Entity: La Taqueria   | Place: La Taqueria     | Yes                     |
 
-**Techniques:**
-
-- **Label Embeddings:** Averaging pre-trained word embeddings for slot keys and values to compute similarity and candidate mappings.
-- **Data-Driven Mapping:** Learning mappings from data rather than relying on static dictionaries or hand-crafted rules.
+**Techniques:**- **Label Embeddings:**Averaging pre-trained word embeddings for slot keys and values to compute similarity and candidate mappings.
+- **Data-Driven Mapping:**Learning mappings from data rather than relying on static dictionaries or hand-crafted rules.
 
 ### Candidate Slot Generation
 
@@ -184,8 +166,7 @@ Key performance metrics for slot carryover include:
 - **Secure Storage**: Encryption and access controls for sensitive slot values.
 - **Scalability**: Efficient indexing and retrieval to support large user bases and long dialogue histories.
 
-**Privacy Risks and Protection:**  
-Chatbots can inadvertently store sensitive user data (e.g., location, personal identifiers) in slot memories, raising privacy concerns. Best practices include:
+**Privacy Risks and Protection:**Chatbots can inadvertently store sensitive user data (e.g., location, personal identifiers) in slot memories, raising privacy concerns. Best practices include:
 
 - Limiting storage of personally identifiable information (PII).
 - Providing users with explicit options to control what is remembered.
@@ -198,9 +179,7 @@ Chatbots can inadvertently store sensitive user data (e.g., location, personal i
 
 Slot carryover is indispensable for assistants that support multiple domains (e.g., weather, local search, booking). It enables seamless transitions and natural reference resolution.
 
-**Example Dialogue:**
-
-| Turn | Domain       | User Input                             | Slots Extracted/Carried Over  |
+**Example Dialogue:**| Turn | Domain       | User Input                             | Slots Extracted/Carried Over  |
 |------|-------------|----------------------------------------|-------------------------------|
 | U1   | Weather     | "What's the weather in Tokyo?"         | WeatherLocation: Tokyo        |
 | V1   | Weather     | "It's rainy and 15°C."                 | Temperature: 15°C             |
@@ -241,11 +220,11 @@ User: Yes, please.
 
 ## Challenges and Limitations
 
-- **Error Propagation:** Mistakes in slot extraction or carryover can propagate, compounding downstream errors.
-- **Schema Alignment:** Automated mapping of slots across domains with disparate schemas remains complex, especially at scale.
-- **Ambiguity Resolution:** Implicit references, pronouns, and context-dependent expressions require sophisticated co-reference and context modeling.
-- **Data Privacy:** Storing and processing sensitive user data requires robust privacy safeguards, encryption, and compliance (e.g., GDPR).
-- **Computational Cost:** Transformer-based and attention-heavy models increase computational and memory requirements for large context windows.
+- **Error Propagation:**Mistakes in slot extraction or carryover can propagate, compounding downstream errors.
+- **Schema Alignment:**Automated mapping of slots across domains with disparate schemas remains complex, especially at scale.
+- **Ambiguity Resolution:**Implicit references, pronouns, and context-dependent expressions require sophisticated co-reference and context modeling.
+- **Data Privacy:**Storing and processing sensitive user data requires robust privacy safeguards, encryption, and compliance (e.g., GDPR).
+- **Computational Cost:**Transformer-based and attention-heavy models increase computational and memory requirements for large context windows.
 
 ## References and Further Reading
 
@@ -265,8 +244,7 @@ User: Yes, please.
 | Contextual Memory     | Maintain conversational history            | Short/long-term memory, context windows, RAG        |
 | Schema Mapping        | Align slots across domains                 | Embedding-based, data-driven, manual mapping        |
 
-**Note:**  
-For more technical and code-level examples, consult the following resources and their references:  
+**Note:**For more technical and code-level examples, consult the following resources and their references:  
 - [Chen et al., 2019, arXiv PDF](https://arxiv.org/pdf/1906.01149)  
 - [ISCA Archive: Naik et al. 2018](https://www.isca-archive.org/interspeech_2018/naik18_interspeech.html)  
 - [[Hugging Face](/en/glossary/hugging-face/) DST Dataset Collection](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets

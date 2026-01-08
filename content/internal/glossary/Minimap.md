@@ -13,7 +13,7 @@ url = "/internal/glossary/Minimap/"
 +++
 ## Definición y Descripción General
 
-Un **minimapa** es un mapa visual compacto y simplificado incrustado dentro de una interfaz más grande. Proporciona una vista condensada y panorámica de un espacio de trabajo, flujo o entorno, generalmente ubicado en el borde de la pantalla. Los usuarios pueden orientarse rápidamente y navegar por áreas de contenido grandes o complejas sin perder el contexto. Los minimapas son especialmente útiles en **plataformas de chatbots de IA y automatización** para visualizar y gestionar flujos de conversación intrincados o diagramas de procesos, que a menudo contienen cientos de nodos interconectados. Su uso se extiende al diseño de software, videojuegos, visualización de datos, mapeo y editores de código.
+Un **minimapa**es un mapa visual compacto y simplificado incrustado dentro de una interfaz más grande. Proporciona una vista condensada y panorámica de un espacio de trabajo, flujo o entorno, generalmente ubicado en el borde de la pantalla. Los usuarios pueden orientarse rápidamente y navegar por áreas de contenido grandes o complejas sin perder el contexto. Los minimapas son especialmente útiles en **plataformas de chatbots de IA y automatización**para visualizar y gestionar flujos de conversación intrincados o diagramas de procesos, que a menudo contienen cientos de nodos interconectados. Su uso se extiende al diseño de software, videojuegos, visualización de datos, mapeo y editores de código.
 
 - [Documentación Minimap de React Flow](https://reactflow.dev/api-reference/components/minimap)
 - [Documentación Minimap de Svelte Flow](https://svelteflow.dev/api-reference/components/mini-map)
@@ -22,24 +22,19 @@ Un **minimapa** es un mapa visual compacto y simplificado incrustado dentro de u
 
 ## Aplicaciones Prácticas y Beneficios
 
-**Plataformas de Chatbot de IA y Automatización**  
-Los minimapas en plataformas como Crisp o en creadores de automatizaciones personalizadas permiten a los creadores supervisar, editar y depurar flujos de chatbot complejos. Con cientos de nodos y árboles de decisión intrincados, un minimapa ayuda a mantener la visión general, permitiendo saltar instantáneamente a cualquier sección y reduciendo los problemas de “perderse en el flujo”.  
+**Plataformas de Chatbot de IA y Automatización**Los minimapas en plataformas como Crisp o en creadores de automatizaciones personalizadas permiten a los creadores supervisar, editar y depurar flujos de chatbot complejos. Con cientos de nodos y árboles de decisión intrincados, un minimapa ayuda a mantener la visión general, permitiendo saltar instantáneamente a cualquier sección y reduciendo los problemas de “perderse en el flujo”.  
 - Ejemplo: [Crisp AI Chatbot & Automations](https://help.crisp.chat/en/category/ai-chatbot-automations-1yxt4vb/)
 
-**UI/UX de Software**  
-Los minimapas están integrados en editores de código (por ejemplo, VS Code), generadores de diagramas (React Flow, Svelte Flow) y paneles analíticos para facilitar la navegación de documentos, gráficos o diseños grandes.
+**UI/UX de Software**Los minimapas están integrados en editores de código (por ejemplo, VS Code), generadores de diagramas (React Flow, Svelte Flow) y paneles analíticos para facilitar la navegación de documentos, gráficos o diseños grandes.
 - En [VS Code](https://code.visualstudio.com/docs/editor/codebasics#_minimap), el minimapa proporciona un resumen visual del archivo, resaltando bloques de código, coincidencias de búsqueda y errores.
 
-**Videojuegos**  
-Un minimapa es un elemento estándar del HUD (pantalla de visualización) en los juegos, mostrando la posición del jugador, los objetivos y el entorno.  
+**Videojuegos**Un minimapa es un elemento estándar del HUD (pantalla de visualización) en los juegos, mostrando la posición del jugador, los objetivos y el entorno.  
 - [Game UI Database: Minimap](https://www.gameuidatabase.com/index.php?scrn=135)  
 - Técnicas para programar minimapas: [Reddit: How do most games code minimaps?](https://www.reddit.com/r/howdidtheycodeit/comments/zxg62w/how_do_most_games_code_minimaps_and_your_movement/)
 
-**Visualización de Datos**  
-Conjuntos de datos y gráficos grandes (por ejemplo, mapas mentales, diagramas de redes) utilizan minimapas para brindar contexto y movimiento rápido por la visualización.
+**Visualización de Datos**Conjuntos de datos y gráficos grandes (por ejemplo, mapas mentales, diagramas de redes) utilizan minimapas para brindar contexto y movimiento rápido por la visualización.
 
-**Analogía:**  
-Un minimapa en un espacio de trabajo es como un mapa de navegación GPS en el tablero de un auto, ofreciendo una perspectiva de toda la ruta mientras permite enfocarse en la posición y navegación actuales.
+**Analogía:**Un minimapa en un espacio de trabajo es como un mapa de navegación GPS en el tablero de un auto, ofreciendo una perspectiva de toda la ruta mientras permite enfocarse en la posición y navegación actuales.
 
 ## Documentación Técnica: Implementación de Minimap
 
@@ -49,11 +44,10 @@ El componente `<MiniMap />` está disponible tanto en React Flow como en Svelte 
 
 #### [React Flow: Componente MiniMap](https://reactflow.dev/api-reference/components/minimap)
 
-- **Renderiza:** Cada nodo como un elemento SVG.
-- **Visualiza:** El viewport actual relativo al flujo.
+- **Renderiza:**Cada nodo como un elemento SVG.
+- **Visualiza:**El viewport actual relativo al flujo.
 
-**Ejemplo de uso:**
-```jsx
+**Ejemplo de uso:**```jsx
 import { ReactFlow, MiniMap } from '@xyflow/react';
 
 export default function Flow() {
@@ -67,8 +61,7 @@ export default function Flow() {
 
 #### [Svelte Flow: Componente MiniMap](https://svelteflow.dev/api-reference/components/mini-map)
 
-**Ejemplo de uso:**
-```svelte
+**Ejemplo de uso:**```svelte
 <script lang="ts">
   import { SvelteFlow, MiniMap } from '@xyflow/svelte';
   let nodes = [];
@@ -109,19 +102,15 @@ Tanto los minimapas de React Flow como de Svelte Flow comparten un conjunto com�
 | `...props`          | `HTMLAttributes<HTMLDivElement/SVGSVGElement>`   | -                           | Atributos HTML/SVG adicionales.                                            |
 ### Personalización e Interactividad
 
-**Apariencia**  
-Personalice `bgColor`, `nodeColor`, `nodeStrokeColor`, `nodeBorderRadius` y `nodeComponent` para adaptar el minimapa al tema de su aplicación o para indicar el estado de los nodos.
+**Apariencia**Personalice `bgColor`, `nodeColor`, `nodeStrokeColor`, `nodeBorderRadius` y `nodeComponent` para adaptar el minimapa al tema de su aplicación o para indicar el estado de los nodos.
 
-**Posicionamiento**  
-Utilice la prop `position` (`top-left`, `top-right`, `bottom-right`, `bottom-left`) para ubicar el minimapa en la interfaz.
+**Posicionamiento**Utilice la prop `position` (`top-left`, `top-right`, `bottom-right`, `bottom-left`) para ubicar el minimapa en la interfaz.
 
-**Interactividad**  
-- Active `pannable` y `zoomable` para interacción directa.
+**Interactividad**- Active `pannable` y `zoomable` para interacción directa.
 - Use `onClick` y `onNodeClick` para activar navegación o acciones.
 - Ajuste `maskColor`, `maskStrokeColor` y `maskStrokeWidth` para resaltar el viewport.
 
-**Ejemplo de Personalización: Cambiar Color de Nodo por Tipo**
-```jsx
+**Ejemplo de Personalización: Cambiar Color de Nodo por Tipo**```jsx
 function nodeColor(node) {
   switch (node.type) {
     case 'input': return '#6ede87';
@@ -133,8 +122,7 @@ function nodeColor(node) {
 <MiniMap nodeColor={nodeColor} />
 ```
 
-**Ejemplo de Renderizado Personalizado de Nodo**
-```jsx
+**Ejemplo de Renderizado Personalizado de Nodo**```jsx
 function MiniMapNode({ x, y }) {
   return <circle cx={x} cy={y} r="50" />;
 }
@@ -142,8 +130,7 @@ function MiniMapNode({ x, y }) {
 <MiniMap nodeComponent={MiniMapNode} />
 ```
 
-**Minimapa Interactivo**
-```jsx
+**Minimapa Interactivo**```jsx
 <MiniMap pannable zoomable />
 ```
 
@@ -172,45 +159,35 @@ En los juegos, el minimapa muestra la posición del jugador, objetivos y element
 
 ## Preguntas Frecuentes: Minimap en Chatbots de IA y Automatización
 
-**¿Cuál es el propósito principal de un minimapa?**  
-Ofrecer una visión general condensada y navegable de un área grande—como un flujo de chatbot, base de código o mundo de juego—ayudando a mantener el contexto y moverse eficientemente.
+**¿Cuál es el propósito principal de un minimapa?**Ofrecer una visión general condensada y navegable de un área grande—como un flujo de chatbot, base de código o mundo de juego—ayudando a mantener el contexto y moverse eficientemente.
 
-**¿Cómo mejora el minimapa la experiencia en constructores de chatbots?**  
-Permite ver todo el flujo de automatización de un vistazo, ubicar y editar nodos rápidamente y evitar perderse en lógicas complejas de ramificación.
+**¿Cómo mejora el minimapa la experiencia en constructores de chatbots?**Permite ver todo el flujo de automatización de un vistazo, ubicar y editar nodos rápidamente y evitar perderse en lógicas complejas de ramificación.
 
-**¿Puedo personalizar la apariencia y el comportamiento del minimapa?**  
-Sí. Puede cambiar colores, formas, renderizado de nodos, posición, interactividad (desplazamiento, zoom) y más. Use componentes SVG personalizados para visualizaciones especializadas.
+**¿Puedo personalizar la apariencia y el comportamiento del minimapa?**Sí. Puede cambiar colores, formas, renderizado de nodos, posición, interactividad (desplazamiento, zoom) y más. Use componentes SVG personalizados para visualizaciones especializadas.
 
-**¿El minimapa es interactivo por defecto?**  
-No. En React Flow y Svelte Flow, el minimapa no es interactivo a menos que `pannable` o `zoomable` estén activados.
+**¿El minimapa es interactivo por defecto?**No. En React Flow y Svelte Flow, el minimapa no es interactivo a menos que `pannable` o `zoomable` estén activados.
 
-**¿Qué información puede mostrar un minimapa?**  
-Según la implementación: tipos/estado de nodos, límites del viewport, conexiones de nodos y overlays personalizados.
+**¿Qué información puede mostrar un minimapa?**Según la implementación: tipos/estado de nodos, límites del viewport, conexiones de nodos y overlays personalizados.
 
-**¿Cómo mejora el minimapa la eficiencia en flujos grandes?**  
-Permite saltar instantáneamente entre secciones distantes, identificar la estructura visualmente y mantener la conciencia espacial al editar o depurar.
+**¿Cómo mejora el minimapa la eficiencia en flujos grandes?**Permite saltar instantáneamente entre secciones distantes, identificar la estructura visualmente y mantener la conciencia espacial al editar o depurar.
 
-**¿Es accesible el minimapa?**  
-Si se habilitan características de accesibilidad, como `ariaLabel` para lectores de pantalla. Los desarrolladores deben asegurar navegación por teclado y alto contraste de color.
+**¿Es accesible el minimapa?**Si se habilitan características de accesibilidad, como `ariaLabel` para lectores de pantalla. Los desarrolladores deben asegurar navegación por teclado y alto contraste de color.
 
-**¿Cuáles son errores comunes en el diseño de minimapas?**  
-- Demasiado pequeño para ser útil o demasiado grande, tapando contenido
+**¿Cuáles son errores comunes en el diseño de minimapas?**- Demasiado pequeño para ser útil o demasiado grande, tapando contenido
 - Bajo contraste de color o ausencia de etiquetas de accesibilidad
 - Sobrecarga de información
 
-**¿Pueden usarse los minimapas fuera de constructores de chatbots?**  
-Sí. En editores de código, visualización de datos, aplicaciones de mapeo y videojuegos.
+**¿Pueden usarse los minimapas fuera de constructores de chatbots?**Sí. En editores de código, visualización de datos, aplicaciones de mapeo y videojuegos.
 
-**¿Cómo agrego un minimapa a mi proyecto?**  
-Utilice componentes de minimapa de librerías como [React Flow](https://reactflow.dev/api-reference/components/minimap) o [Svelte Flow](https://svelteflow.dev/api-reference/components/mini-map), y configure las props según sus necesidades.
+**¿Cómo agrego un minimapa a mi proyecto?**Utilice componentes de minimapa de librerías como [React Flow](https://reactflow.dev/api-reference/components/minimap) o [Svelte Flow](https://svelteflow.dev/api-reference/components/mini-map), y configure las props según sus necesidades.
 
 ## Accesibilidad y Buenas Prácticas
 
-- **Etiquetas Accesibles:** Configure la prop `ariaLabel` para describir el propósito del minimapa a los lectores de pantalla.
-- **Navegación por Teclado:** Asegure que los usuarios puedan interactuar con el minimapa mediante atajos de teclado.
-- **Contraste de Color:** Utilice esquemas de color con suficiente contraste para usuarios con discapacidad visual ([Material Design: Accesibilidad](https://m2.material.io/design/usability/accessibility.html)).
-- **Tamaño Responsivo:** El minimapa debe ser visible pero no intrusivo.
-- **Rendimiento:** Optimice el renderizado para grandes cantidades de nodos.
+- **Etiquetas Accesibles:**Configure la prop `ariaLabel` para describir el propósito del minimapa a los lectores de pantalla.
+- **Navegación por Teclado:**Asegure que los usuarios puedan interactuar con el minimapa mediante atajos de teclado.
+- **Contraste de Color:**Utilice esquemas de color con suficiente contraste para usuarios con discapacidad visual ([Material Design: Accesibilidad](https://m2.material.io/design/usability/accessibility.html)).
+- **Tamaño Responsivo:**El minimapa debe ser visible pero no intrusivo.
+- **Rendimiento:**Optimice el renderizado para grandes cantidades de nodos.
 
 - [EqualWeb: Buenas Prácticas de Diseño de Navegación Accesible](https://www.equalweb.com/a/44195/11527/accessible_navigation_design:_best_practices_for_2025)
 
@@ -237,9 +214,7 @@ Utilice componentes de minimapa de librerías como [React Flow](https://reactflo
 
 ## Ejemplo Canónico de Uso
 
-**Minimapa interactivo y con colores personalizados en un constructor de automatización de chatbots:**
-
-```jsx
+**Minimapa interactivo y con colores personalizados en un constructor de automatización de chatbots:**```jsx
 import { ReactFlow, MiniMap } from '@xyflow/react';
 
 function nodeColor(node) {
@@ -264,8 +239,7 @@ export default function AutomationFlow() {
 }
 ```
 
-**Para más detalles técnicos o ver ejemplos de código en vivo, visite:**  
-- [Documentación MiniMap de React Flow](https://reactflow.dev/api-reference/components/minimap)  
+**Para más detalles técnicos o ver ejemplos de código en vivo, visite:**- [Documentación MiniMap de React Flow](https://reactflow.dev/api-reference/components/minimap)  
 - [Documentación MiniMap de Svelte Flow](https://svelteflow.dev/api-reference/components/mini-map)  
 - [Crisp AI Chatbot & Automations](https://help.crisp.chat/en/category/ai-chatbot-automations-1yxt4vb/)  
 - [Glosario Lenovo: Minimap](https://www.lenovo.com/us/en/glossary/mini-map/)

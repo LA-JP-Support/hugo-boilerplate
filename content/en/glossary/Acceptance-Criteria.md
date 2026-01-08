@@ -110,12 +110,12 @@ Acceptance criteria operate within the broader framework of behavior-driven deve
 
 | Quality Factor | High-Quality Criteria | Low-Quality Criteria | Impact on Project |
 |---|---|---|---|
-| **Clarity** | Specific, unambiguous language | Vague, interpretable terms | Clear criteria reduce misunderstandings |
-| **Testability** | Measurable, verifiable conditions | Abstract, subjective requirements | Testable criteria enable automation |
-| **Completeness** | Covers all scenarios and edge cases | Missing critical conditions | Complete criteria prevent defects |
-| **Consistency** | Aligned with overall requirements | Contradictory or conflicting | Consistent criteria improve quality |
-| **Relevance** | Directly supports user goals | Unnecessary or tangential | Relevant criteria focus effort |
-| **Maintainability** | Easy to update and modify | Complex, interdependent | Maintainable criteria adapt to change |
+| **Clarity**| Specific, unambiguous language | Vague, interpretable terms | Clear criteria reduce misunderstandings |
+| **Testability**| Measurable, verifiable conditions | Abstract, subjective requirements | Testable criteria enable automation |
+| **Completeness**| Covers all scenarios and edge cases | Missing critical conditions | Complete criteria prevent defects |
+| **Consistency**| Aligned with overall requirements | Contradictory or conflicting | Consistent criteria improve quality |
+| **Relevance**| Directly supports user goals | Unnecessary or tangential | Relevant criteria focus effort |
+| **Maintainability**| Easy to update and modify | Complex, interdependent | Maintainable criteria adapt to change |
 
 ## Challenges and Considerations
 

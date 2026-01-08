@@ -111,12 +111,12 @@ The Hugo Pipes workflow follows a systematic approach to asset processing:
 
 | Feature | Hugo Pipes | Webpack | Gulp | Parcel |
 |---------|------------|---------|------|--------|
-| **Configuration** | Template-based | Config files | Gulpfile.js | Zero-config |
-| **Learning Curve** | Low | High | Medium | Low |
-| **Processing Speed** | Very Fast | Medium | Medium | Fast |
-| **Built-in Optimizations** | Extensive | Plugin-based | Plugin-based | Built-in |
-| **Dependency Management** | Automatic | Manual/Loaders | Manual | Automatic |
-| **Integration Complexity** | Native | External | External | External |
+| **Configuration**| Template-based | Config files | Gulpfile.js | Zero-config |
+| **Learning Curve**| Low | High | Medium | Low |
+| **Processing Speed**| Very Fast | Medium | Medium | Fast |
+| **Built-in Optimizations**| Extensive | Plugin-based | Plugin-based | Built-in |
+| **Dependency Management**| Automatic | Manual/Loaders | Manual | Automatic |
+| **Integration Complexity**| Native | External | External | External |
 
 ## Challenges and Considerations
 

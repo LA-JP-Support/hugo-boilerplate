@@ -11,7 +11,7 @@ draft: false
 
 ## Definition
 
-**Zero-shot learning (ZSL)** is a machine learning paradigm in which a model is able to recognize or classify instances from classes that were not represented in its training data. Rather than relying solely on labeled examples, zero-shot learning enables a model to generalize knowledge by leveraging auxiliary information such as semantic descriptions, attribute vectors, or embeddings, and to apply this generalization to make predictions on previously unseen classes ([IBM](https://www.ibm.com/think/topics/zero-shot-learning), [Lightly AI](https://www.lightly.ai/blog/zero-shot-learning)).
+**Zero-shot learning (ZSL)**is a machine learning paradigm in which a model is able to recognize or classify instances from classes that were not represented in its training data. Rather than relying solely on labeled examples, zero-shot learning enables a model to generalize knowledge by leveraging auxiliary information such as semantic descriptions, attribute vectors, or embeddings, and to apply this generalization to make predictions on previously unseen classes ([IBM](https://www.ibm.com/think/topics/zero-shot-learning), [Lightly AI](https://www.lightly.ai/blog/zero-shot-learning)).
 
 ZSL is particularly impactful in domains where the number of possible classes or categories is large, open-ended, or ever-expanding, making it infeasible to collect labeled data for every class.
 
@@ -19,7 +19,7 @@ ZSL is particularly impactful in domains where the number of possible classes or
 
 ### Knowledge Transfer via Auxiliary Information
 
-The core idea of ZSL is to bridge the gap between **seen classes** (those with labeled training data) and **unseen classes** (those with no labeled examples) using auxiliary knowledge. This auxiliary information can take various forms:
+The core idea of ZSL is to bridge the gap between **seen classes**(those with labeled training data) and **unseen classes**(those with no labeled examples) using auxiliary knowledge. This auxiliary information can take various forms:
 
 - **Semantic Descriptions**: Natural language explanations or definitions of classes.
 - **Attribute Vectors**: Explicitly defined features such as color, shape, or function.
@@ -27,26 +27,21 @@ The core idea of ZSL is to bridge the gap between **seen classes** (those with l
 
 ### Typical Workflow
 
-1. **Model Pre-training**
-   - The model is trained on a large dataset containing many classes (the "seen" classes).
+1. **Model Pre-training**- The model is trained on a large dataset containing many classes (the "seen" classes).
    - During this phase, general representations are learned (using self-supervised or supervised techniques).
    - Example: A vision model trained on ImageNet learns representations for thousands of objects.
 
-2. **Auxiliary Information Acquisition**
-   - For each unseen class, semantic descriptions or attribute vectors are provided.
+2. **Auxiliary Information Acquisition**- For each unseen class, semantic descriptions or attribute vectors are provided.
    - Example: If "zebra" is unseen, an attribute vector might specify "has stripes, is a mammal, is four-legged."
 
-3. **Embedding to a Shared Semantic Space**
-   - Both inputs (e.g., images or text) and class descriptions are mapped to a common embedding space.
+3. **Embedding to a Shared Semantic Space**- Both inputs (e.g., images or text) and class descriptions are mapped to a common embedding space.
    - This is often achieved using neural networks (transformers for text, CNNs for images).
    - The distance or similarity in this space is used for classification.
 
-4. **Similarity-Based Classification**
-   - When presented with a new input, the model computes its embedding and compares it to the embeddings of candidate classes (based on auxiliary info).
+4. **Similarity-Based Classification**- When presented with a new input, the model computes its embedding and compares it to the embeddings of candidate classes (based on auxiliary info).
    - The class whose embedding is most similar (via cosine similarity, Euclidean distance, etc.) is selected.
 
-5. **Prediction**
-   - The model outputs the class label for the input, even if it has never seen labeled data for that class during training.
+5. **Prediction**- The model outputs the class label for the input, even if it has never seen labeled data for that class during training.
 
 ([Lightly AI Guide](https://www.lightly.ai/blog/zero-shot-learning))
 
@@ -69,7 +64,7 @@ The core idea of ZSL is to bridge the gap between **seen classes** (those with l
 
 ### Attribute-Based Methods
 
-- **Attributes** are human-defined characteristics that describe classes (e.g., "has feathers," "can fly").
+- **Attributes**are human-defined characteristics that describe classes (e.g., "has feathers," "can fly").
 - During training, the model learns to recognize these attributes.
 - At inference, unseen classes are described solely by their attributes.
 - **Example**: Classifying "penguin" by "has feathers, cannot fly" even if there are no penguin images in the training set.
@@ -103,7 +98,7 @@ The core idea of ZSL is to bridge the gap between **seen classes** (those with l
 
 ### Joint Embedding Space
 
-- ZSL often employs a **joint embedding space** for heterogeneous data (e.g., images and text).
+- ZSL often employs a **joint embedding space**for heterogeneous data (e.g., images and text).
 - Models are trained so that semantically similar items from different modalities are close in the embedding space.
 - Used for tasks like image-text retrieval, cross-modal classification, and more.
 
@@ -205,12 +200,12 @@ Where:
 
 | Concept | Description | Example Use Case |
 |---|---|---|
-| **Zero-Shot Learning (ZSL)** | Model predicts classes with no labeled examples, using auxiliary information | Chatbots answering novel questions |
-| **Attribute-Based ZSL** | Uses predefined attributes to describe and infer class membership | Vision models classifying unseen animals |
-| **Embedding-Based ZSL** | Represents data and classes as vectors in a shared space | Text classification for new topics |
-| **Generalized ZSL (GZSL)** | Handles both seen and unseen classes at inference | Product categorization as catalogs update |
-| **Few-Shot Learning** | Recognizes new classes from a handful of labeled examples | Disease diagnosis for rare conditions |
-| **Transfer Learning** | Adapts pre-trained models for new tasks | Adapting vision models to new domains |
+| **Zero-Shot Learning (ZSL)**| Model predicts classes with no labeled examples, using auxiliary information | Chatbots answering novel questions |
+| **Attribute-Based ZSL**| Uses predefined attributes to describe and infer class membership | Vision models classifying unseen animals |
+| **Embedding-Based ZSL**| Represents data and classes as vectors in a shared space | Text classification for new topics |
+| **Generalized ZSL (GZSL)**| Handles both seen and unseen classes at inference | Product categorization as catalogs update |
+| **Few-Shot Learning**| Recognizes new classes from a handful of labeled examples | Disease diagnosis for rare conditions |
+| **Transfer Learning**| Adapts pre-trained models for new tasks | Adapting vision models to new domains |
 
 ([Lightly AI Guide](https://www.lightly.ai/blog/zero-shot-learning))
 

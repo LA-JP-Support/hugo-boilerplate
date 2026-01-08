@@ -18,10 +18,9 @@ draft: false
 
 ## What is a Finite State Machine?
 
-A **finite state machine (FSM)** is a computational model comprised of a finite set of states, transitions between these states, and rules that determine how the system changes state in response to inputs. FSMs are used to model sequential logic in engineering, digital circuit design, software development, artificial intelligence, and game development. They excel in systems where behavior changes based on a sequence of events or conditions.
+A **finite state machine (FSM)**is a computational model comprised of a finite set of states, transitions between these states, and rules that determine how the system changes state in response to inputs. FSMs are used to model sequential logic in engineering, digital circuit design, software development, artificial intelligence, and game development. They excel in systems where behavior changes based on a sequence of events or conditions.
 
-**Analogy:**  
-Consider a door lock. The lock can be either `locked` or `unlocked`. A correct key transitions it from `locked` to `unlocked`, while an incorrect key leaves it unchanged. This is a classic FSM: the lock is always in one state, and inputs (keys) dictate valid transitions.
+**Analogy:**Consider a door lock. The lock can be either `locked` or `unlocked`. A correct key transitions it from `locked` to `unlocked`, while an incorrect key leaves it unchanged. This is a classic FSM: the lock is always in one state, and inputs (keys) dictate valid transitions.
 
 - [BLT Inc: A Guide to Finite State Machines](https://bltinc.com/2024/11/04/finite-state-machines-guide/)
 - [SiliconVeda: FSM Comprehensive Guide](https://www.siliconveda.com/2024/10/finite-state-machine-fsm-comprehensive.html)
@@ -30,26 +29,26 @@ Consider a door lock. The lock can be either `locked` or `unlocked`. A correct k
 
 ### States
 
-A **state** is a distinct mode or condition in which the system can exist. At any given time, the FSM is in exactly one state from its set of possible states.
+A **state**is a distinct mode or condition in which the system can exist. At any given time, the FSM is in exactly one state from its set of possible states.
 
 - Example: A vending machine might be in states like `Idle`, `Waiting for Selection`, `Dispensing Item`, or `Out of Service`.
 
 ### Transitions
 
-A **transition** is a rule or function that describes how the FSM moves from one state to another based on an input.
+A **transition**is a rule or function that describes how the FSM moves from one state to another based on an input.
 
 - Example: The vending machine transitions from `Idle` to `Waiting for Selection` when a user inserts money.
 
 ### Inputs and Outputs
 
-**Inputs** are external signals or events (e.g., button presses, sensor triggers) that trigger transitions.  
-**Outputs** are actions or signals produced by the FSM. Output behavior is defined by the FSM type:
+**Inputs**are external signals or events (e.g., button presses, sensor triggers) that trigger transitions.  
+**Outputs**are actions or signals produced by the FSM. Output behavior is defined by the FSM type:
 - **Mealy machine**: Output depends on both current state and input.
 - **Moore machine**: Output depends only on the current state.
 
 ### State Diagrams
 
-A **state diagram** is a graphical representation of an FSM:
+A **state diagram**is a graphical representation of an FSM:
 - **Nodes**: Represent states.
 - **Edges/arrows**: Represent transitions, labeled with the triggering input (and sometimes output).
 - **Initial state**: Marked with an arrow from nowhere.
@@ -61,28 +60,28 @@ See [FSM state diagram example](https://bltinc.com/2024/11/04/finite-state-machi
 
 ### Deterministic Finite State Machine (DFSM/DFA)
 
-A **deterministic FSM** ensures that every combination of current state and input leads to exactly one next state—no ambiguity. These are foundational in digital circuit design and software parsing.
+A **deterministic FSM**ensures that every combination of current state and input leads to exactly one next state—no ambiguity. These are foundational in digital circuit design and software parsing.
 
 - **Example**: Vending machine, password checker.
 - Each state/input pair has only one possible transition.
 
 ### Non-Deterministic Finite State Machine (NDFSM/NFA)
 
-A **non-deterministic FSM** allows multiple possible next states for the same input and current state. Useful in scenarios like pattern matching or where parallel state exploration is needed.
+A **non-deterministic FSM**allows multiple possible next states for the same input and current state. Useful in scenarios like pattern matching or where parallel state exploration is needed.
 
 - **Example**: Elevator control, regex engines.
 - Each state/input pair can have multiple transitions, allowing "branching" behavior.
 
 ### Mealy Machine
 
-A **Mealy machine** produces outputs based on both the current state and the input. Outputs can change immediately in response to inputs, allowing faster system responses.
+A **Mealy machine**produces outputs based on both the current state and the input. Outputs can change immediately in response to inputs, allowing faster system responses.
 
 - **Example**: Turnstile—output `unlock` when in `locked` state and receiving `coin` input.
 - More efficient in terms of required states but can have less stable outputs.
 
 ### Moore Machine
 
-A **Moore machine** produces outputs based solely on the current state, independent of the input. Outputs are stable within a state and change only on state transitions.
+A **Moore machine**produces outputs based solely on the current state, independent of the input. Outputs are stable within a state and change only on state transitions.
 
 - **Example**: Traffic light controller—`Red` state always outputs `STOP`.
 - More predictable, but may require more states for nuanced output.
@@ -113,9 +112,7 @@ A **Moore machine** produces outputs based solely on the current state, independ
 9. **Update State**: FSM moves to the new state.
 10. **Repeat**: The cycle continues for each new input.
 
-**Summary Table: FSM Workflow**
-
-| Step | Description                    |
+**Summary Table: FSM Workflow**| Step | Description                    |
 |------|--------------------------------|
 | 1    | Define states                  |
 | 2    | Define inputs                  |
@@ -130,8 +127,8 @@ A **Moore machine** produces outputs based solely on the current state, independ
 
 ### Code Example: Traffic Light Controller
 
-**States:** Green, Yellow, Red  
-**Transition trigger:** Timer expiry
+**States:**Green, Yellow, Red  
+**Transition trigger:**Timer expiry
 
 #### State Diagram:
 - Green → (timer) → Yellow
@@ -229,9 +226,9 @@ void Heroine::handleInput(Input input) {
 
 ### Hierarchical and Parallel FSMs
 
-Large systems often require **hierarchical FSMs** (HSMs), where states themselves contain nested FSMs. For example, a robot’s `Exploring` state may contain its own FSM for navigating corners.
+Large systems often require **hierarchical FSMs**(HSMs), where states themselves contain nested FSMs. For example, a robot’s `Exploring` state may contain its own FSM for navigating corners.
 
-**Parallel FSMs** allow multiple FSMs to run independently, managing separate concerns (e.g., a door and its lock as separate FSMs).
+**Parallel FSMs**allow multiple FSMs to run independently, managing separate concerns (e.g., a door and its lock as separate FSMs).
 
 - [FSM decomposition and maintainability](https://bltinc.com/2024/11/04/finite-state-machines-guide/)
 
@@ -246,7 +243,7 @@ Complex systems can suffer **state explosion**, where the number of states grows
 
 ### State Pattern in Object-Oriented Design
 
-In OOP, the **State pattern** encapsulates state-specific behavior in separate classes, allowing objects to change behavior at runtime by changing their current state object. This enhances maintainability and avoids complex conditional logic.
+In OOP, the **State pattern**encapsulates state-specific behavior in separate classes, allowing objects to change behavior at runtime by changing their current state object. This enhances maintainability and avoids complex conditional logic.
 
 - [State pattern in games](https://gameprogrammingpatterns.com/state.html)
 

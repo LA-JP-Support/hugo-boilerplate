@@ -29,13 +29,11 @@ By implementing " ticket systems," "AI email auto-response generation," and "AI 
 
 A ticket system is a mechanism that can centrally manage inquiries arriving from diverse channels—email, phone, SNS, chat, inquiry forms.
 
-**Key Benefits:**
-
-- **Multi-channel Centralization**: Manage inquiries from all channels on a single screen, eliminating response gaps
+**Key Benefits:**- **Multi-channel Centralization**: Manage inquiries from all channels on a single screen, eliminating response gaps
 - **Information Sharing and Quality Improvement**: Immediately access past interactions, enabling smooth handoffs when staff changes
 - **Automatic Recording and AI Utilization**: All interactions are automatically recorded and utilized as AI learning data
 - **Flexible Work from Anywhere**: Being cloud-based, responses are possible from remote work locations, on the go, or via smartphone
-- ** Business Automation**: Significantly reduce response time through automatic replies with standard templates for common questions and automatic assignment to staff
+- **Business Automation**: Significantly reduce response time through automatic replies with standard templates for common questions and automatic assignment to staff
 
 ### AI Email Auto-Response Generation: Dramatically Reduce Staff Burden
 
@@ -43,37 +41,29 @@ AI email auto-response generation is a feature where AI automatically creates re
 
 **AI Email Auto-Response Generation Process:**
 
-**❶ Receive Email or Inquiry Form**
-Following automation rules configured in LiveAgent, AI retrieves the full email text. At this stage, spam filtering automatically executes for not only general spam but also sales emails. Since response drafts aren't created for unnecessary emails, staff's wasted work is reduced.
+**❶ Receive Email or Inquiry Form**Following automation rules configured in LiveAgent, AI retrieves the full email text. At this stage, spam filtering automatically executes for not only general spam but also sales emails. Since response drafts aren't created for unnecessary emails, staff's wasted work is reduced.
 
-**❷ AI Understands Questions and Creates Response Drafts**
-For legitimate inquiries that pass spam filtering, AI understands the content and creates optimal response drafts based on pre-learned knowledge bases and internal documents.
+**❷ AI Understands Questions and Creates Response Drafts**For legitimate inquiries that pass spam filtering, AI understands the content and creates optimal response drafts based on pre-learned knowledge bases and internal documents.
 
-**❸ Display Response Draft as Memo on Operation Screen**
-AI presents the response draft as a note on the LiveAgent operation screen. Staff review the content and modify as necessary.
+**❸ Display Response Draft as Memo on Operation Screen**AI presents the response draft as a note on the LiveAgent operation screen. Staff review the content and modify as necessary.
 
-**❹ Further Improve Responses with AI Answer Assistant**
-If needed, use the AI answer assistant to refine text or add explanations for technical terms before replying.
+**❹ Further Improve Responses with AI Answer Assistant**If needed, use the AI answer assistant to refine text or add explanations for technical terms before replying.
 
-**Key Benefits:**
-
-- **Automated Spam Filtering**: Automatically identifies not only general spam but also sales emails, preventing unnecessary response draft creation
+**Key Benefits:**- **Automated Spam Filtering**: Automatically identifies not only general spam but also sales emails, preventing unnecessary response draft creation
 - **Significantly Reduced Work Time**: No need to compose from scratch—reply with just review and modification
 - **Standardized Response Quality**: AI presents consistent quality response drafts, reducing variations in staff responses
 - **Multilingual Support**: AI trained in Japanese supports approximately 100 languages, enabling immediate response to international customers
-- ** Continuous Learning**: AI learns from daily response data, improving answer accuracy
+- **Continuous Learning**: AI learns from daily response data, improving answer accuracy
 
 ### AI Chatbot: 24/7 Automated Response
 
 An AI chatbot is a system where AI handles customer support automatically 24/7. It responds immediately even outside business hours, late at night, or on holidays, significantly improving customer satisfaction.
 
-**Key Benefits:**
-
-- **24/7 Automated Response**: AI operates constantly, responding immediately even outside business hours
+**Key Benefits:**- **24/7 Automated Response**: AI operates constantly, responding immediately even outside business hours
 - **Complete Integration with Ticket System**: AI chat interactions are automatically recorded, with smooth handoff to human staff with one click for complex questions
 - **Seamless Customer Experience**: Customers receive high-quality support without being aware of differences between AI and humans
 - **Multilingual Support**: AI trained in Japanese automatically supports approximately 100 languages, enabling low-cost support for international customers
-- ** Continuous Learning**: AI learns from daily response data, expanding answer scope
+- **Continuous Learning**: AI learns from daily response data, expanding answer scope
 
 ## Easy Implementation and Comprehensive Japanese Support
 
@@ -112,11 +102,9 @@ Even with these comprehensive features, the attractive pricing starting from ¥3
 
 Concerns of SMEs like "no IT staff" or "no specialized knowledge" can be resolved with SmartWeb's comprehensive support from Japanese staff.
 
-**Please also watch this video.**
-
-{{< youtube frmB19r0k58 >}}
+**Please also watch this video.**{{< youtube frmB19r0k58 >}}
 
 Why not begin digital transformation to improve customer satisfaction through AI implementation now?
 
-For **inquiries, document requests, and free consultations** regarding SmartWeb, please feel free to contact us. Take your business to the next stage with SmartWeb, pioneering the future of SMEs.
+For **inquiries, document requests, and free consultations**regarding SmartWeb, please feel free to contact us. Take your business to the next stage with SmartWeb, pioneering the future of SMEs.
 

@@ -106,12 +106,12 @@ Modern data lakes are typically built on distributed storage systems and cloud p
 
 | Aspect | Data Lake | Data Warehouse |
 |--------|-----------|----------------|
-| **Data Structure** | Raw, unstructured, schema-on-read | Processed, structured, schema-on-write |
-| **Storage Cost** | Low cost, especially for large volumes | Higher cost due to processing requirements |
-| **Processing Speed** | Variable, depends on query complexity | Optimized for fast query performance |
-| **Data Types** | All formats: structured, semi-structured, unstructured | Primarily structured, relational data |
-| **Use Cases** | Exploration, ML, advanced analytics | Business intelligence, reporting, dashboards |
-| **Implementation Time** | Faster setup, iterative development | Longer implementation, upfront planning required |
+| **Data Structure**| Raw, unstructured, schema-on-read | Processed, structured, schema-on-write |
+| **Storage Cost**| Low cost, especially for large volumes | Higher cost due to processing requirements |
+| **Processing Speed**| Variable, depends on query complexity | Optimized for fast query performance |
+| **Data Types**| All formats: structured, semi-structured, unstructured | Primarily structured, relational data |
+| **Use Cases**| Exploration, ML, advanced analytics | Business intelligence, reporting, dashboards |
+| **Implementation Time**| Faster setup, iterative development | Longer implementation, upfront planning required |
 
 ## Challenges and Considerations
 

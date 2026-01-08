@@ -38,20 +38,17 @@ if (condition) {
 
 Blocks in Python are defined by consistent indentation, typically four spaces per level ([PEP 8](https://peps.python.org/pep-0008/#indentation)). Indentation signals the start and end of a block, unlike curly braces in other languages.
 
-**Correct Syntax Example:**
-```python
+**Correct Syntax Example:**```python
 if age >= 18:
     print("Adult")
     print("Can vote")
 print("Done")  # Outside the block
 ```
-**Incorrect Syntax Example:**
-```python
+**Incorrect Syntax Example:**```python
 if age >= 18:
 print("Adult")  # Raises IndentationError
 ```
-**Key Points:**
-- All lines in a block must be indented by the same amount.
+**Key Points:**- All lines in a block must be indented by the same amount.
 - Mixing tabs and spaces causes errors. Use spaces only, as per [PEP 8](https://peps.python.org/pep-0008/#tabs-or-spaces).
 - An empty block is invalid; use `pass` as a placeholder if needed:
 ```python
@@ -69,13 +66,12 @@ if (age >= 18) {
 }
 console.log("Done"); // Outside the block
 ```
-**Incorrect Syntax Example:**
-```javascript
+**Incorrect Syntax Example:**```javascript
 if (age >= 18)
     console.log("Adult");
     console.log("Can vote"); // Not part of the if-block!
 ```
-**Best Practice:** Always use curly braces, even for single-statement blocks, to avoid logic errors and improve readability ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block#examples)).
+**Best Practice:**Always use curly braces, even for single-statement blocks, to avoid logic errors and improve readability ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block#examples)).
 
 
 ## Naming, Binding, and Scope
@@ -113,10 +109,10 @@ console.log(y); // 1
 Automation platforms like [Contentstack](https://www.contentstack.com/docs/developers/automation-hub-connectors/code-block), [n8n](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/), and others provide “code block” nodes that let users embed custom Python or JavaScript.
 
 #### Features:
-- **Custom Scripting:** Write bespoke logic for data transformation, validation, or external API calls.
-- **Input/Output Mapping:** Pass data from previous nodes, operate on it, and output results for downstream nodes.
-- **Debugging:** Console logs and error reporting for troubleshooting.
-- **Integration:** Enables operations not possible with standard drag-and-drop nodes.
+- **Custom Scripting:**Write bespoke logic for data transformation, validation, or external API calls.
+- **Input/Output Mapping:**Pass data from previous nodes, operate on it, and output results for downstream nodes.
+- **Debugging:**Console logs and error reporting for troubleshooting.
+- **Integration:**Enables operations not possible with standard drag-and-drop nodes.
 
 #### Example: Contentstack
 - Set up a Code Block action to execute JavaScript code.
@@ -158,16 +154,14 @@ output = { Birthdate: birthday, Gender: sex };
 
 ### Nested Code Blocks
 
-**Python:**
-```python
+**Python:**```python
 x = 10
 if x > 5:
     print("x is greater than 5")
     if x % 2 == 0:
         print("x is even")
 ```
-**JavaScript:**
-```javascript
+**JavaScript:**```javascript
 let x = 10;
 if (x > 5) {
     console.log("x is greater than 5");
@@ -179,14 +173,12 @@ if (x > 5) {
 
 ### Multiple Statements per Block
 
-**Python:**
-```python
+**Python:**```python
 for i in range(3):
     print(i)
     print(i * 2)
 ```
-**JavaScript:**
-```javascript
+**JavaScript:**```javascript
 for (let i = 0; i < 3; i++) {
     console.log(i);
     console.log(i * 2);
@@ -198,20 +190,20 @@ for (let i = 0; i < 3; i++) {
 
 ### Python
 
-- **IndentationError:** Caused by inconsistent indentation. Always use four spaces per level. [PEP 8 – Indentation](https://peps.python.org/pep-0008/#indentation)
-- **Mixing Tabs and Spaces:** Can lead to hidden bugs. Use spaces only.
-- **Empty Blocks:** Not allowed. Use `pass` for placeholder blocks.
+- **IndentationError:**Caused by inconsistent indentation. Always use four spaces per level. [PEP 8 – Indentation](https://peps.python.org/pep-0008/#indentation)
+- **Mixing Tabs and Spaces:**Can lead to hidden bugs. Use spaces only.
+- **Empty Blocks:**Not allowed. Use `pass` for placeholder blocks.
 
 ### JavaScript
 
-- **Missing Braces:** Omitting `{}` can produce logic errors, especially with multiple statements.
-- **Block Scope:** `let` and `const` are block-scoped; `var` is not. Be careful with variable declarations.
+- **Missing Braces:**Omitting `{}` can produce logic errors, especially with multiple statements.
+- **Block Scope:**`let` and `const` are block-scoped; `var` is not. Be careful with variable declarations.
 
 ### Automation/Chatbot Platforms
 
-- **Input/Output Handling:** Ensure your code node expects and emits data matching the workflow requirements.
-- **Debugging:** Use `console.log` for troubleshooting in platforms that support it (e.g., Contentstack, n8n).
-- **Code Formatting:** In chatbots, especially Microsoft Teams, use Markdown with triple backticks for code:
+- **Input/Output Handling:**Ensure your code node expects and emits data matching the workflow requirements.
+- **Debugging:**Use `console.log` for troubleshooting in platforms that support it (e.g., Contentstack, n8n).
+- **Code Formatting:**In chatbots, especially Microsoft Teams, use Markdown with triple backticks for code:
     ```
     ```python
     print("Hello, world!")
@@ -219,15 +211,14 @@ for (let i = 0; i < 3; i++) {
     ```
     [Microsoft Teams Formatting Docs](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages)
 
-- **Formatting Limitations:** Not all formatting is supported on all platforms/devices. Test thoroughly.
+- **Formatting Limitations:**Not all formatting is supported on all platforms/devices. Test thoroughly.
 
 
 ## Formatting Code Blocks in Chatbots
 
-- **Microsoft Teams Bot Messages:** Use the `TextFormat` property set to `markdown` to enable code block formatting.
-- **Supported features:** Preformatted text (code blocks), bold, italic, hyperlinks.
-- **Not all formatting is supported on mobile clients; test across devices.**
-- [Official documentation with compatibility table](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages)
+- **Microsoft Teams Bot Messages:**Use the `TextFormat` property set to `markdown` to enable code block formatting.
+- **Supported features:**Preformatted text (code blocks), bold, italic, hyperlinks.
+- **Not all formatting is supported on mobile clients; test across devices.**- [Official documentation with compatibility table](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages)
 
 
 ## Best Practices

@@ -49,9 +49,9 @@ Los estados de las banderas se gestionan de varias formas:
 Las herramientas modernas permiten actualizaciones dinámicas—activar una bandera desde una interfaz o API cambia el comportamiento al instante para todos o para segmentos seleccionados, sin tiempo de inactividad ni redespiegue.
 
 Las banderas pueden ser:
-- **Globales** (afectan a todos los usuarios)
-- **Dirigidas** (afectan a usuarios, cohortes o entornos específicos)
-- **Booleanas** (on/off) o **multivariantes** (varios estados o variantes)
+- **Globales**(afectan a todos los usuarios)
+- **Dirigidas**(afectan a usuarios, cohortes o entornos específicos)
+- **Booleanas**(on/off) o **multivariantes**(varios estados o variantes)
 
 Para una explicación visual y más detalles técnicos, vea:
 - [AWS: Mejores Prácticas con Banderas de Funcionalidad](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
@@ -63,11 +63,11 @@ La taxonomía de banderas es clave para su buena gestión. Tipos incluyen:
 
 | Tipo                    | Propósito                                         | Vida útil típica      | Ejemplo de uso                                 |
 |-------------------------|---------------------------------------------------|-----------------------|-----------------------------------------------|
-| **Bandera de Lanzamiento**  | Ocultar funcionalidades incompletas o experimentales | Corta (semanas/meses) | Despliegue progresivo de una nueva interfaz   |
-| **Bandera de Experimento**  | Permitir pruebas A/B o multivariantes              | Corta (días/semanas)  | Comparar flujos de pago                       |
-| **Bandera Operativa**       | Control operacional (ej. interruptor de emergencia) | Corta/Media/Larga     | Deshabilitar funcionalidades costosas         |
-| **Bandera de Permiso**      | Limitar funcionalidades por rol/cohorte           | Larga/Permanente      | Funcionalidades premium o solo para admin      |
-| **Interruptor de Emergencia** | Deshabilitar funcionalidades riesgosas            | Larga/Permanente      | Deshabilitar instantáneamente una integración de pagos |
+| **Bandera de Lanzamiento**| Ocultar funcionalidades incompletas o experimentales | Corta (semanas/meses) | Despliegue progresivo de una nueva interfaz   |
+| **Bandera de Experimento**| Permitir pruebas A/B o multivariantes              | Corta (días/semanas)  | Comparar flujos de pago                       |
+| **Bandera Operativa**| Control operacional (ej. interruptor de emergencia) | Corta/Media/Larga     | Deshabilitar funcionalidades costosas         |
+| **Bandera de Permiso**| Limitar funcionalidades por rol/cohorte           | Larga/Permanente      | Funcionalidades premium o solo para admin      |
+| **Interruptor de Emergencia**| Deshabilitar funcionalidades riesgosas            | Larga/Permanente      | Deshabilitar instantáneamente una integración de pagos |
 
 Referencias detalladas:
 - [Martin Fowler: Taxonomía de Banderas de Funcionalidad](https://martinfowler.com/articles/feature-toggles.html#CategoriesOfToggles)
@@ -78,28 +78,21 @@ Referencias detalladas:
 
 Las banderas de funcionalidad permiten entregas de software rápidas, seguras y flexibles. Beneficios clave:
 
-- **Desacoplar Despliegue y Lanzamiento:**  
-  Envíe código a producción pero controle la exposición de funcionalidades hasta que estén listas. [LaunchDarkly](https://launchdarkly.com/blog/what-are-feature-flags/)
+- **Desacoplar Despliegue y Lanzamiento:**Envíe código a producción pero controle la exposición de funcionalidades hasta que estén listas. [LaunchDarkly](https://launchdarkly.com/blog/what-are-feature-flags/)
 
-- **Entrega Progresiva:**  
-  Implemente funcionalidades gradualmente para minimizar riesgos (canario, porcentaje, cohorte, región).  
+- **Entrega Progresiva:**Implemente funcionalidades gradualmente para minimizar riesgos (canario, porcentaje, cohorte, región).  
   [AWS: Despliegues Graduales](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
 
-- **Reversión Rápida (Interruptor de Emergencia):**  
-  Desactive instantáneamente funcionalidades problemáticas sin redespiegue ni hotfixes.
+- **Reversión Rápida (Interruptor de Emergencia):**Desactive instantáneamente funcionalidades problemáticas sin redespiegue ni hotfixes.
 
-- **Integración Continua y Desarrollo Basado en Rama Principal:**  
-  Integre funcionalidades incompletas de forma segura, evitando ramas de larga duración.  
+- **Integración Continua y Desarrollo Basado en Rama Principal:**Integre funcionalidades incompletas de forma segura, evitando ramas de larga duración.  
   [LaunchDarkly: Desarrollo Basado en Rama Principal](https://launchdarkly.com/blog/introduction-to-trunk-based-development/)
 
-- **Pruebas A/B y Experimentación:**  
-  Pruebe variantes y recoja datos de comportamiento para decisiones informadas.
+- **Pruebas A/B y Experimentación:**Pruebe variantes y recoja datos de comportamiento para decisiones informadas.
 
-- **Control Operacional:**  
-  Responda a incidentes desactivando funcionalidades inestables.
+- **Control Operacional:**Responda a incidentes desactivando funcionalidades inestables.
 
-- **Gestión de Permisos y Accesos:**  
-  Restrinja acceso por rol, suscripción, contrato o localización.
+- **Gestión de Permisos y Accesos:**Restrinja acceso por rol, suscripción, contrato o localización.
 
 Para más información:
 - [Optimizely: Beneficios de las Banderas de Funcionalidad](https://www.optimizely.com/optimization-glossary/feature-flags/)
@@ -122,19 +115,17 @@ Envolver la evaluación en un helper centraliza y facilita pruebas.
 
 ### 2. Configuración de Banderas
 
-- **Estática:**  
-  Codificadas o en archivos de configuración; requieren redespiegue para cambios.
-- **Dinámica:**  
-  Almacenadas en bases de datos, APIs o plataformas de gestión; los cambios se propagan al instante.
+- **Estática:**Codificadas o en archivos de configuración; requieren redespiegue para cambios.
+- **Dinámica:**Almacenadas en bases de datos, APIs o plataformas de gestión; los cambios se propagan al instante.
 
 La gestión dinámica es la mejor opción para la mayoría de usos en producción.
 
 ### 3. Segmentación y Evaluación
 
 Las banderas pueden evaluar:
-- **Atributos del usuario:** (ID, rol, región)
-- **Contexto de la petición:** (sesión, dispositivo, cohorte)
-- **Entorno:** (dev, staging, prod)
+- **Atributos del usuario:**(ID, rol, región)
+- **Contexto de la petición:**(sesión, dispositivo, cohorte)
+- **Entorno:**(dev, staging, prod)
 
 Ejemplo: Despliegue al 10% de usuarios
 ```javascript
@@ -196,32 +187,32 @@ Aunque las banderas aportan flexibilidad, introducen complejidad y requieren dis
 
 Muchas banderas = más caminos condicionales.  
 - Puede dificultar la lectura y pruebas del código.  
-- **Mitigación:** Limitar el número de banderas activas, documentar exhaustivamente.
+- **Mitigación:**Limitar el número de banderas activas, documentar exhaustivamente.
 
 ### 2. Deuda Técnica por Banderas Obsoletas
 
 Banderas temporales pueden quedarse y saturar el código.  
-- **Mitigación:** Auditar y eliminar banderas obsoletas regularmente.
+- **Mitigación:**Auditar y eliminar banderas obsoletas regularmente.
 
 ### 3. Sobrecarga de Rendimiento
 
 Comprobaciones frecuentes, especialmente en rutas críticas, pueden degradar el rendimiento.  
-- **Mitigación:** Cachear el estado de la bandera cuando sea posible.
+- **Mitigación:**Cachear el estado de la bandera cuando sea posible.
 
 ### 4. Explosión de Matriz de Pruebas
 
 Varias banderas multiplican los caminos a testear.  
-- **Mitigación:** Priorizar combinaciones de alto impacto, automatizar pruebas.
+- **Mitigación:**Priorizar combinaciones de alto impacto, automatizar pruebas.
 
 ### 5. Consideraciones de Seguridad
 
 Configuraciones incorrectas pueden exponer funcionalidades/datos sensibles.  
-- **Mitigación:** Aplicar control de acceso, auditoría, restringir gestión.
+- **Mitigación:**Aplicar control de acceso, auditoría, restringir gestión.
 
 ### 6. Complejidad Operacional
 
 Sincronizar el estado de la bandera en sistemas distribuidos es complejo.  
-- **Mitigación:** Usar herramientas robustas y centralizadas.
+- **Mitigación:**Usar herramientas robustas y centralizadas.
 
 Más análisis:
 - [Octopus: Desafíos y Riesgos](https://octopus.com/devops/feature-flags/#challenges-and-risks-of-using-feature-flags)
@@ -231,32 +222,23 @@ Más análisis:
 
 Para aprovechar al máximo las banderas:
 
-- **Use una Herramienta Centralizada:**  
-  Proporciona visibilidad, control de acceso y auditoría.
+- **Use una Herramienta Centralizada:**Proporciona visibilidad, control de acceso y auditoría.
 
-- **Convenciones de Nombres:**  
-  Nombre las banderas por propósito y duración esperada.
+- **Convenciones de Nombres:**Nombre las banderas por propósito y duración esperada.
 
-- **Documente Todo:**  
-  Propósito, responsable, dependencias y criterios de eliminación.
+- **Documente Todo:**Propósito, responsable, dependencias y criterios de eliminación.
 
-- **Auditorías Regulares:**  
-  Elimine banderas no usadas para evitar [deuda técnica](/es/glossary/technical-debt/) (“pudrición de banderas”).
+- **Auditorías Regulares:**Elimine banderas no usadas para evitar [deuda técnica](/es/glossary/technical-debt/) (“pudrición de banderas”).
 
-- **Integrar Limpieza de Banderas:**  
-  En CI/CD y listas de verificación de lanzamientos.
+- **Integrar Limpieza de Banderas:**En CI/CD y listas de verificación de lanzamientos.
 
-- **Monitoree Impacto en Rendimiento:**  
-  Optimice la lógica de evaluación.
+- **Monitoree Impacto en Rendimiento:**Optimice la lógica de evaluación.
 
-- **Asegure Interfaces de Gestión:**  
-  Limite acceso, habilite logs de auditoría.
+- **Asegure Interfaces de Gestión:**Limite acceso, habilite logs de auditoría.
 
-- **Eduque a los Equipos:**  
-  Sobre el uso y ciclo de vida de las banderas.
+- **Eduque a los Equipos:**Sobre el uso y ciclo de vida de las banderas.
 
-**Lista de Verificación Accionable:**
-- [ ] Cada bandera tiene un responsable documentado.
+**Lista de Verificación Accionable:**- [ ] Cada bandera tiene un responsable documentado.
 - [ ] Las banderas están categorizadas (lanzamiento, experimento, ops, permiso).
 - [ ] El estado de la bandera es visible en todos los entornos.
 - [ ] Se rastrean fechas de expiración/eliminación.

@@ -108,12 +108,12 @@ The operation of legacy systems typically follows established patterns that have
 
 | Aspect | Legacy Systems | Modern Systems |
 |--------|----------------|----------------|
-| **Architecture** | Monolithic, tightly coupled components | Microservices, loosely coupled, modular design |
-| **Technology Stack** | Older languages (COBOL, FORTRAN), proprietary platforms | Modern languages (Java, Python, JavaScript), open standards |
-| **User Interface** | Text-based terminals, basic GUIs | Web-based, mobile-responsive, intuitive design |
-| **Integration** | Point-to-point, file-based, custom protocols | API-driven, standardized protocols, cloud-native |
-| **Scalability** | Vertical scaling, hardware-dependent | Horizontal scaling, cloud-elastic, containerized |
-| **Maintenance** | Specialized skills, vendor-dependent, expensive | Standard skills, community support, automated tools |
+| **Architecture**| Monolithic, tightly coupled components | Microservices, loosely coupled, modular design |
+| **Technology Stack**| Older languages (COBOL, FORTRAN), proprietary platforms | Modern languages (Java, Python, JavaScript), open standards |
+| **User Interface**| Text-based terminals, basic GUIs | Web-based, mobile-responsive, intuitive design |
+| **Integration**| Point-to-point, file-based, custom protocols | API-driven, standardized protocols, cloud-native |
+| **Scalability**| Vertical scaling, hardware-dependent | Horizontal scaling, cloud-elastic, containerized |
+| **Maintenance**| Specialized skills, vendor-dependent, expensive | Standard skills, community support, automated tools |
 
 ## Challenges and Considerations
 

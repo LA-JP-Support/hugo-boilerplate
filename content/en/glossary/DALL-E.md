@@ -106,12 +106,12 @@ Since its initial release, DALL-E has evolved through multiple iterations, with 
 
 | Feature | DALL-E 1 | DALL-E 2 | DALL-E 3 |
 |---------|----------|----------|----------|
-| **Image Resolution** | 256×256 pixels | Up to 1024×1024 pixels | Up to 1792×1024 pixels |
-| **Training Parameters** | 12 billion parameters | Enhanced architecture | Advanced transformer model |
-| **Image Quality** | Basic coherence | Photorealistic quality | Near-professional quality |
-| **Prompt Understanding** | Simple descriptions | Complex multi-object scenes | Nuanced artistic direction |
-| **Safety Features** | Basic filtering | Enhanced content policies | Comprehensive safety systems |
-| **Generation Speed** | Several minutes | Under 1 minute | Optimized processing time |
+| **Image Resolution**| 256×256 pixels | Up to 1024×1024 pixels | Up to 1792×1024 pixels |
+| **Training Parameters**| 12 billion parameters | Enhanced architecture | Advanced transformer model |
+| **Image Quality**| Basic coherence | Photorealistic quality | Near-professional quality |
+| **Prompt Understanding**| Simple descriptions | Complex multi-object scenes | Nuanced artistic direction |
+| **Safety Features**| Basic filtering | Enhanced content policies | Comprehensive safety systems |
+| **Generation Speed**| Several minutes | Under 1 minute | Optimized processing time |
 
 ## Challenges and Considerations
 

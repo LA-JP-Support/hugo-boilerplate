@@ -21,9 +21,8 @@ url: "/ja/glossary/natural-language-search/"
 
 自然言語検索(NLS)は、ユーザーが検索エンジン、データベース、または情報システムと対話する際に、厳密なキーワード構文やブール演算子に頼るのではなく、完全な文や質問など、日常的で会話的な言語を使用できるようにします。NLSは人間のコミュニケーションと機械の理解の間のギャップを埋め、あらゆる背景を持つユーザーにとって、検索体験をよりアクセスしやすく、正確で、直感的なものにします。
 
-**例:**
-- **キーワード検索:** `password reset`
-- **自然言語検索:** 「パスワードを忘れた場合はどうすればよいですか?」
+<strong>例:</strong>- <strong>キーワード検索:</strong>`password reset`
+- <strong>自然言語検索:</strong>「パスワードを忘れた場合はどうすればよいですか?」
 
 NLSシステムは、自然言語処理(NLP)と機械学習(ML)の進歩を活用して、クエリの背後にある意図、文脈、意味を解釈し、これらのクエリを関連情報を取得するための実行可能な指示に変換します。([Coveo](https://www.coveo.com/blog/what-is-natural-language-search/)、[Algolia](https://www.algolia.com/blog/product/what-is-natural-language-search/))
 
@@ -31,76 +30,76 @@ NLSシステムは、自然言語処理(NLP)と機械学習(ML)の進歩を活�
 
 自然言語検索システムは、意味のある結果を提供するために、いくつかの高度な技術とプロセスを組み合わせています:
 
-| **ステップ**                        | **説明** | **例** |
+| <strong>ステップ</strong>| <strong>説明</strong>| <strong>例</strong>|
 |----------------------------------|----------------|-------------|
-| **クエリ分析**               | ユーザーの入力を解析して、その構造、意図、期待を理解します。 | 「ジムとプールがあり150ドル以下のホテルを探して」<br>意図: 価格と設備によるホテルの推奨 |
-| **エンティティ認識**           | 場所、日付、製品名などの特定のエンティティを識別します。 | 「明日のパリの天気」<br>エンティティ: パリ(場所)、明日(日付) |
-| **意味理解**       | 単語間の関係、文脈、可能な同義語を分析して、より深い理解を得ます。 | 「安いスマートフォン」<br>「手頃な価格の電話」、「予算内の携帯電話」なども考慮 |
-| **クエリ拡張**              | 関連する用語や同義語で入力を補強して、再現率を向上させます。 | 「読むべき最高の本」<br>拡張: 「高評価の小説」、「推奨文学」 |
-| **情報検索**        | 解釈されたクエリに一致するコンテンツを関連データベースまたはインデックスから検索します。 | 「子犬の訓練方法」<br>返される結果: 記事、動画、ガイド |
-| **ランキングと関連性スコアリング**  | ユーザーの意図と文脈にどれだけ一致するかに基づいて結果を順序付けます。 | 「ニューヨーク市の高評価イタリアンレストラン」<br>ランキング: ユーザーレビュー、評価、場所 |
-| **結果の表示**      | 要約、直接的な回答、視覚要素を含む、ユーザーフレンドリーな形式で結果を表示します。 | 「エッフェル塔の高さ」<br>結果: 「エッフェル塔の高さは330メートル(1,083フィート)です。」 |
-| **継続的学習**          | ユーザーフィードバックから学習して、将来の検索精度とパーソナライゼーションを向上させます。 | ユーザーが結果をクリック/無視; システムは将来のランキングを適宜調整 |
+| <strong>クエリ分析</strong>| ユーザーの入力を解析して、その構造、意図、期待を理解します。 | 「ジムとプールがあり150ドル以下のホテルを探して」<br>意図: 価格と設備によるホテルの推奨 |
+| <strong>エンティティ認識</strong>| 場所、日付、製品名などの特定のエンティティを識別します。 | 「明日のパリの天気」<br>エンティティ: パリ(場所)、明日(日付) |
+| <strong>意味理解</strong>| 単語間の関係、文脈、可能な同義語を分析して、より深い理解を得ます。 | 「安いスマートフォン」<br>「手頃な価格の電話」、「予算内の携帯電話」なども考慮 |
+| <strong>クエリ拡張</strong>| 関連する用語や同義語で入力を補強して、再現率を向上させます。 | 「読むべき最高の本」<br>拡張: 「高評価の小説」、「推奨文学」 |
+| <strong>情報検索</strong>| 解釈されたクエリに一致するコンテンツを関連データベースまたはインデックスから検索します。 | 「子犬の訓練方法」<br>返される結果: 記事、動画、ガイド |
+| <strong>ランキングと関連性スコアリング</strong>| ユーザーの意図と文脈にどれだけ一致するかに基づいて結果を順序付けます。 | 「ニューヨーク市の高評価イタリアンレストラン」<br>ランキング: ユーザーレビュー、評価、場所 |
+| <strong>結果の表示</strong>| 要約、直接的な回答、視覚要素を含む、ユーザーフレンドリーな形式で結果を表示します。 | 「エッフェル塔の高さ」<br>結果: 「エッフェル塔の高さは330メートル(1,083フィート)です。」 |
+| <strong>継続的学習</strong>| ユーザーフィードバックから学習して、将来の検索精度とパーソナライゼーションを向上させます。 | ユーザーが結果をクリック/無視; システムは将来のランキングを適宜調整 |
 
 ([Coveo](https://www.coveo.com/blog/what-is-natural-language-search/)、[Algolia](https://www.algolia.com/blog/product/what-is-natural-language-search/))
 
 ## 自然言語検索 vs. キーワード検索
 
-| **側面**            | **キーワード検索** | **自然言語検索** |
+| <strong>側面</strong>| <strong>キーワード検索</strong>| <strong>自然言語検索</strong>|
 |-----------------------|-------------------|----------------------------|
-| **入力スタイル**       | 短く、特定のキーワード | 会話的な質問または完全な文 |
-| **解釈**    | 正確な単語やフレーズに一致 | 意図、文脈、同義語を理解 |
-| **ユーザー体験**   | ユーザーは正しいキーワードを推測する必要があり、イライラすることがある | ユーザーは人に尋ねるように質問; より自然 |
-| **バリエーションの処理** | 同義語、言い換え、文脈に苦労 | 代替表現と意味を認識 |
-| **複雑なクエリ**   | 複数の基準のニーズを表現するのが困難 | 複雑で多面的なクエリを簡単に処理 |
-| **結果の関連性**  | キーワードが曖昧または欠落している場合、無関係な結果を返す可能性 | 解釈された意図に基づいて結果を優先 |
-| **学習能力**  | 通常は静的 | MLとユーザーフィードバックを通じて継続的に改善 |
+| <strong>入力スタイル</strong>| 短く、特定のキーワード | 会話的な質問または完全な文 |
+| <strong>解釈</strong>| 正確な単語やフレーズに一致 | 意図、文脈、同義語を理解 |
+| <strong>ユーザー体験</strong>| ユーザーは正しいキーワードを推測する必要があり、イライラすることがある | ユーザーは人に尋ねるように質問; より自然 |
+| <strong>バリエーションの処理</strong>| 同義語、言い換え、文脈に苦労 | 代替表現と意味を認識 |
+| <strong>複雑なクエリ</strong>| 複数の基準のニーズを表現するのが困難 | 複雑で多面的なクエリを簡単に処理 |
+| <strong>結果の関連性</strong>| キーワードが曖昧または欠落している場合、無関係な結果を返す可能性 | 解釈された意図に基づいて結果を優先 |
+| <strong>学習能力</strong>| 通常は静的 | MLとユーザーフィードバックを通じて継続的に改善 |
 
 ([Algolia](https://www.algolia.com/blog/product/what-is-natural-language-search/)、[Coveo](https://www.coveo.com/blog/what-is-natural-language-search/))
 
 ## NLSを支える主要技術
 
-- **自然言語処理(NLP):** 構文、意味論、意図、感情分析を含む人間の言語を解釈するための中核技術([Coveo](https://www.coveo.com/blog/natural-language-processing-the-future-of-ecommerce-today/))。
-- **機械学習(ML):** ユーザーのインタラクションとフィードバックから学習して、精度とパーソナライゼーションを向上させるアルゴリズム([Coveo](https://www.coveo.com/blog/ai-search-charles-schwab-digital-transformation/))。
-- **エンティティ認識:** クエリ内の主要な概念、名前、日付、場所を識別して、より良い理解を得る([Fast Simon](https://www.fastsimon.com/ecommerce-wiki/site-search/real-world-examples-of-natural-language-search-in-action/))。
-- **セマンティック検索:** 文字通りの単語マッチングを超えて、クエリの背後にある文脈的意味を理解します。
-- **ナレッジグラフ:** より深い文脈理解のためにエンティティ間の関係をマッピングするデータ構造([Google BERT](https://blog.google/products/search/search-language-understanding-bert/))。
-- **音声認識:** 音声クエリをテキストに変換して、さらなる処理を行います。
+- <strong>自然言語処理(NLP):</strong>構文、意味論、意図、感情分析を含む人間の言語を解釈するための中核技術([Coveo](https://www.coveo.com/blog/natural-language-processing-the-future-of-ecommerce-today/))。
+- <strong>機械学習(ML):</strong>ユーザーのインタラクションとフィードバックから学習して、精度とパーソナライゼーションを向上させるアルゴリズム([Coveo](https://www.coveo.com/blog/ai-search-charles-schwab-digital-transformation/))。
+- <strong>エンティティ認識:</strong>クエリ内の主要な概念、名前、日付、場所を識別して、より良い理解を得る([Fast Simon](https://www.fastsimon.com/ecommerce-wiki/site-search/real-world-examples-of-natural-language-search-in-action/))。
+- <strong>セマンティック検索:</strong>文字通りの単語マッチングを超えて、クエリの背後にある文脈的意味を理解します。
+- <strong>ナレッジグラフ:</strong>より深い文脈理解のためにエンティティ間の関係をマッピングするデータ構造([Google BERT](https://blog.google/products/search/search-language-understanding-bert/))。
+- <strong>音声認識:</strong>音声クエリをテキストに変換して、さらなる処理を行います。
 
 ## 自然言語検索の実用例
 
 ### Eコマース
 
-- **キーワード:** `running shoes size 10 blue`
-- **NLS:** 「100ドル以下で利用可能なサイズ10の青いランニングシューズを見せて。」
-- **結果:** システムは色、サイズ、価格を理解し、非常に関連性の高い製品を取得([Fast Simon](https://www.fastsimon.com/ecommerce-wiki/site-search/real-world-examples-of-natural-language-search-in-action/))。
+- <strong>キーワード:</strong>`running shoes size 10 blue`
+- <strong>NLS:</strong>「100ドル以下で利用可能なサイズ10の青いランニングシューズを見せて。」
+- <strong>結果:</strong>システムは色、サイズ、価格を理解し、非常に関連性の高い製品を取得([Fast Simon](https://www.fastsimon.com/ecommerce-wiki/site-search/real-world-examples-of-natural-language-search-in-action/))。
 
 ### カスタマーサポート
 
-- **キーワード:** `password reset`
-- **NLS:** 「パスワードを忘れた場合はどうすればよいですか?」
-- **結果:** ステップバイステップの指示を返すか、リセットワークフローを開始([Coveo](https://www.coveo.com/blog/what-is-natural-language-search/))。
+- <strong>キーワード:</strong>`password reset`
+- <strong>NLS:</strong>「パスワードを忘れた場合はどうすればよいですか?」
+- <strong>結果:</strong>ステップバイステップの指示を返すか、リセットワークフローを開始([Coveo](https://www.coveo.com/blog/what-is-natural-language-search/))。
 
 ### ヘルスケア
 
-- **キーワード:** `lab results John Doe`
-- **NLS:** 「John Doeの最新の検査結果を見せて。」
-- **結果:** 関連する患者記録を迅速に取得。
+- <strong>キーワード:</strong>`lab results John Doe`
+- <strong>NLS:</strong>「John Doeの最新の検査結果を見せて。」
+- <strong>結果:</strong>関連する患者記録を迅速に取得。
 
 ### 分析とビジネスインテリジェンス
 
-- **キーワード:** `sales Europe Q2`
-- **NLS:** 「前四半期のヨーロッパでの総売上高はいくらでしたか?」
-- **結果:** データを集約し、要約または視覚化を提示。
+- <strong>キーワード:</strong>`sales Europe Q2`
+- <strong>NLS:</strong>「前四半期のヨーロッパでの総売上高はいくらでしたか?」
+- <strong>結果:</strong>データを集約し、要約または視覚化を提示。
 
 ### 仮想アシスタントと音声検索
 
-- **クエリ:** 「今日の天気はどうですか?」「午後3時にアレックスに電話するようリマインドして。」
-- **結果:** 意図を理解し、関連するアクションを実行([Algolia](https://www.algolia.com/blog/product/what-is-natural-language-search/))。
+- <strong>クエリ:</strong>「今日の天気はどうですか?」「午後3時にアレックスに電話するようリマインドして。」
+- <strong>結果:</strong>意図を理解し、関連するアクションを実行([Algolia](https://www.algolia.com/blog/product/what-is-natural-language-search/))。
 
 ## 業界別の典型的なユースケース
 
-| **業界/ドメイン**   | **NLSの使用方法** | **サンプルクエリ** |
+| <strong>業界/ドメイン</strong>| <strong>NLSの使用方法</strong>| <strong>サンプルクエリ</strong>|
 |-----------------------|---------------------|------------------|
 | Eコマース            | 会話的な製品検索、推奨 | 「送料無料で200ドル以下の女性用ジャケットを探して」 |
 | カスタマーサポート      | セルフサービスQ&A、トラブルシューティング、自動化 | 「不良品を返品するにはどうすればよいですか?」 |
@@ -116,40 +115,40 @@ NLSシステムは、自然言語処理(NLP)と機械学習(ML)の進歩を活�
 
 ## 自然言語検索のメリット
 
-- **アクセシビリティ:** 技術的でないユーザーにも検索を開放; 複雑な構文は不要([GALILEO/USG](https://www.usg.edu/galileo/skills/unit04/primer04_09.phtml))。
-- **ユーザー体験の向上:** 自然なインタラクションが満足度を高め、フラストレーションを軽減。
-- **スピード:** 関連する結果をより速く提供し、検索に費やす時間を削減。
-- **文脈的関連性:** ユーザーの文脈、意図、関係を考慮して、より正確な回答を提供。
-- **IT依存の削減:** ビジネスユーザーがセルフサービスできるようにし、ITの作業負荷を軽減。
-- **パーソナライゼーション:** ユーザーの行動を学習して、結果と推奨をカスタマイズ。
-- **データ探索の強化:** 反復的で会話的な探索とフォローアップを可能にします。
-- **マルチモーダルインタラクション:** 音声、テキスト、時には画像をサポートして、より大きな柔軟性を提供。
+- <strong>アクセシビリティ:</strong>技術的でないユーザーにも検索を開放; 複雑な構文は不要([GALILEO/USG](https://www.usg.edu/galileo/skills/unit04/primer04_09.phtml))。
+- <strong>ユーザー体験の向上:</strong>自然なインタラクションが満足度を高め、フラストレーションを軽減。
+- <strong>スピード:</strong>関連する結果をより速く提供し、検索に費やす時間を削減。
+- <strong>文脈的関連性:</strong>ユーザーの文脈、意図、関係を考慮して、より正確な回答を提供。
+- <strong>IT依存の削減:</strong>ビジネスユーザーがセルフサービスできるようにし、ITの作業負荷を軽減。
+- <strong>パーソナライゼーション:</strong>ユーザーの行動を学習して、結果と推奨をカスタマイズ。
+- <strong>データ探索の強化:</strong>反復的で会話的な探索とフォローアップを可能にします。
+- <strong>マルチモーダルインタラクション:</strong>音声、テキスト、時には画像をサポートして、より大きな柔軟性を提供。
 
 ([Coveo](https://www.coveo.com/blog/what-is-natural-language-search/)、[Fast Simon](https://www.fastsimon.com/ecommerce-wiki/site-search/real-world-examples-of-natural-language-search-in-action/))
 
 ## 歴史と進化
 
-- **1993年:** MITのSTARTシステムにより、ユーザーは自然な文で百科事典を照会できるようになりました([START System](https://start.csail.mit.edu/start-system.php))。
-- **1996年:** Ask Jeeves(Ask.com)により、平易な英語でのウェブ検索が可能になりました([Ask Jeeves](https://en.wikipedia.org/wiki/Ask.com))。
-- **2019年以降:** Google BERTおよび同様のディープラーニングのブレークスルーにより、消費者およびエンタープライズプラットフォーム全体で文脈を認識した高精度のNLSが可能になりました([Google BERT](https://blog.google/products/search/search-language-understanding-bert/))。
+- <strong>1993年:</strong>MITのSTARTシステムにより、ユーザーは自然な文で百科事典を照会できるようになりました([START System](https://start.csail.mit.edu/start-system.php))。
+- <strong>1996年:</strong>Ask Jeeves(Ask.com)により、平易な英語でのウェブ検索が可能になりました([Ask Jeeves](https://en.wikipedia.org/wiki/Ask.com))。
+- <strong>2019年以降:</strong>Google BERTおよび同様のディープラーニングのブレークスルーにより、消費者およびエンタープライズプラットフォーム全体で文脈を認識した高精度のNLSが可能になりました([Google BERT](https://blog.google/products/search/search-language-understanding-bert/))。
 
 ([Algolia](https://www.algolia.com/blog/product/what-is-natural-language-search/)、[Coveo](https://www.coveo.com/blog/what-is-natural-language-search/))
 
 ## 設計と実装のヒント
 
-- **会話的クエリ用にコンテンツを最適化:** サイトコンテンツとヘルプドキュメントで自然な質問ベースの言語を使用します。
-- **ユーザーコンテキストを活用:** プロファイル、履歴、場所を使用して結果を絞り込みます([Algolia](https://www.algolia.com/blog/product/what-is-natural-language-search/))。
-- **ユーザークエリを分析:** 実際のクエリを研究して、NLPモデルを微調整し、ドメイン固有の言語をカバーします。
-- **実際のシナリオでテスト:** 典型的なクエリとエッジケースのクエリで精度と関連性を評価します。
-- **フィードバックループをサポート:** 結果の評価やフィードバックを許可して、継続的な改善を推進します。
-- **すべての関連データソースと統合:** NLSをすべての必要なデータベースとドキュメントリポジトリに接続します。
-- **セキュリティとプライバシーを優先:** 機密データを保護し、ログと出力でプライバシーを尊重します。
+- <strong>会話的クエリ用にコンテンツを最適化:</strong>サイトコンテンツとヘルプドキュメントで自然な質問ベースの言語を使用します。
+- <strong>ユーザーコンテキストを活用:</strong>プロファイル、履歴、場所を使用して結果を絞り込みます([Algolia](https://www.algolia.com/blog/product/what-is-natural-language-search/))。
+- <strong>ユーザークエリを分析:</strong>実際のクエリを研究して、NLPモデルを微調整し、ドメイン固有の言語をカバーします。
+- <strong>実際のシナリオでテスト:</strong>典型的なクエリとエッジケースのクエリで精度と関連性を評価します。
+- <strong>フィードバックループをサポート:</strong>結果の評価やフィードバックを許可して、継続的な改善を推進します。
+- <strong>すべての関連データソースと統合:</strong>NLSをすべての必要なデータベースとドキュメントリポジトリに接続します。
+- <strong>セキュリティとプライバシーを優先:</strong>機密データを保護し、ログと出力でプライバシーを尊重します。
 
 ([Algolia](https://www.algolia.com/blog/product/what-is-natural-language-search/)、[Coveo](https://www.coveo.com/blog/what-is-natural-language-search/))
 
 ## クエリの例: NLS vs. キーワード検索
 
-| **シナリオ**    | **キーワード検索** | **自然言語検索** |
+| <strong>シナリオ</strong>| <strong>キーワード検索</strong>| <strong>自然言語検索</strong>|
 |-----------------|-------------------|----------------------------|
 | レストラン      | "Italian restaurants NYC" | 「ニューヨーク市で最高のイタリアンレストランはどこで見つけられますか?」 |
 | 製品         | "cheap smartphones" | 「近くで手頃な価格のスマートフォンはどこで買えますか?」 |
@@ -158,26 +157,25 @@ NLSシステムは、自然言語処理(NLP)と機械学習(ML)の進歩を活�
 
 ## 関連用語
 
-- **自然言語処理(NLP):** コンピュータが人間の言語を解釈できるようにすることで、NLSを支えるAI技術([Coveo](https://www.coveo.com/blog/natural-language-processing-the-future-of-ecommerce-today/))。
-- **自然言語クエリ(NLQ):** 自然言語で構造化データ(例: データベース)を照会することに焦点を当てています。
-- **会話型検索:** NLSを含む、対話のような複数ターンのインタラクションに焦点を当てた、より広範なパラダイム。
-- **セマンティック検索:** キーワードだけでなく、クエリの意味と関係を理解します。
+- <strong>自然言語処理(NLP):</strong>コンピュータが人間の言語を解釈できるようにすることで、NLSを支えるAI技術([Coveo](https://www.coveo.com/blog/natural-language-processing-the-future-of-ecommerce-today/))。
+- <strong>自然言語クエリ(NLQ):</strong>自然言語で構造化データ(例: データベース)を照会することに焦点を当てています。
+- <strong>会話型検索:</strong>NLSを含む、対話のような複数ターンのインタラクションに焦点を当てた、より広範なパラダイム。
+- <strong>セマンティック検索:</strong>キーワードだけでなく、クエリの意味と関係を理解します。
 
 ## 一般的な課題と考慮事項
 
-- **曖昧さ:** 人間の言語は曖昧または文脈依存である可能性があり、NLSは複数の意味を処理する必要があり、明確化の質問をする必要がある場合があります([Coveo](https://www.coveo.com/blog/what-is-natural-language-search/))。
-- **ドメイン固有の言語:** 専門的な語彙には、カスタムNLP調整が必要です。
-- **データ品質:** 正確で最新のソースは、信頼性の高い結果に不可欠です。
-- **ユーザープライバシー:** 機密性の高いクエリと結果は、特に規制された業界では保護する必要があります。
+- <strong>曖昧さ:</strong>人間の言語は曖昧または文脈依存である可能性があり、NLSは複数の意味を処理する必要があり、明確化の質問をする必要がある場合があります([Coveo](https://www.coveo.com/blog/what-is-natural-language-search/))。
+- <strong>ドメイン固有の言語:</strong>専門的な語彙には、カスタムNLP調整が必要です。
+- <strong>データ品質:</strong>正確で最新のソースは、信頼性の高い結果に不可欠です。
+- <strong>ユーザープライバシー:</strong>機密性の高いクエリと結果は、特に規制された業界では保護する必要があります。
 
 ## 実世界への影響
 
 自然言語検索は、デジタルインタラクションを変革し、学習曲線を減らし、生産性を高め、情報へのより速く、より関連性の高いアクセスを可能にしています。組織は、顧客満足度の向上、データ駆動型の意思決定、より大きな運用効率から恩恵を受けています。
 
-**ケーススタディ:**
-- **Steve Madden:** ファッション関連のクエリの製品発見と関連性を向上([Fast Simon](https://www.fastsimon.com/success_story/steve-madden/))。
-- **Spiceology:** 口語的で文脈的な用語を使用して、料理製品の検索結果を強化。
-- **Targus:** 技術仕様とユーザーの好みに関する複雑なクエリを正確に処理。
+<strong>ケーススタディ:</strong>- <strong>Steve Madden:</strong>ファッション関連のクエリの製品発見と関連性を向上([Fast Simon](https://www.fastsimon.com/success_story/steve-madden/))。
+- <strong>Spiceology:</strong>口語的で文脈的な用語を使用して、料理製品の検索結果を強化。
+- <strong>Targus:</strong>技術仕様とユーザーの好みに関する複雑なクエリを正確に処理。
 
 より多くの業界ケーススタディについては、[Fast Simonの例](https://www.fastsimon.com/ecommerce-wiki/site-search/real-world-examples-of-natural-language-search-in-action/)および[AIMultipleのNLPユースケース](https://research.aimultiple.com/nlp-use-cases/)を参照してください。
 

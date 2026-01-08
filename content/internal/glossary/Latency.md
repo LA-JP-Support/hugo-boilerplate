@@ -15,12 +15,11 @@ url = "/internal/glossary/Latency/"
 
 La latencia es el retraso temporal que ocurre entre el inicio y la finalización de un proceso. En sistemas en red e infraestructura de IA, es el tiempo que tarda un dato en viajar de un punto a otro; normalmente se mide como el tiempo entre la acción del usuario y la respuesta del sistema. Por lo general, la latencia se cuantifica en milisegundos (ms) y representa el "lag" que perciben los usuarios durante interacciones con aplicaciones web, APIs o servicios impulsados por IA.
 
-**Definición clave:**  
-> La latencia se refiere al retraso que ocurre entre la iniciación de una solicitud (como hacer clic en un botón en una aplicación web) y la recepción de una respuesta por parte del sistema o aplicación.
+**Definición clave:**> La latencia se refiere al retraso que ocurre entre la iniciación de una solicitud (como hacer clic en un botón en una aplicación web) y la recepción de una respuesta por parte del sistema o aplicación.
 
-- **Fuente:** [Galileo AI: Entendiendo la latencia en IA](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
-- **Fuente:** [AWS: ¿Qué es la latencia?](https://aws.amazon.com/what-is/latency/)
-- **Fuente:** [DriveNets: Latencia en redes de IA](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
+- **Fuente:**[Galileo AI: Entendiendo la latencia en IA](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
+- **Fuente:**[AWS: ¿Qué es la latencia?](https://aws.amazon.com/what-is/latency/)
+- **Fuente:**[DriveNets: Latencia en redes de IA](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
 
 ## ¿Por qué importa la latencia en sistemas digitales?
 
@@ -34,8 +33,7 @@ La latencia impacta directamente en la experiencia del usuario, el rendimiento d
 - Telemedicina, monitoreo remoto y aplicaciones sanitarias
 - Juegos en línea y medios interactivos
 
-**Ejemplos:**
-- En trading de alta frecuencia, un retraso de 1 milisegundo puede significar la diferencia entre ganancia y pérdida.  
+**Ejemplos:**- En trading de alta frecuencia, un retraso de 1 milisegundo puede significar la diferencia entre ganancia y pérdida.  
   [Leer: Investopedia sobre latencia en HFT](https://www.investopedia.com/terms/h/high-frequency-trading.asp)
 - En chatbots impulsados por IA, una latencia alta degrada la experiencia conversacional, haciendo que las respuestas parezcan lentas o poco naturales.
 - En vehículos autónomos, incluso ligeros retrasos pueden suponer riesgos de seguridad ([Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)).
@@ -44,69 +42,68 @@ La latencia impacta directamente en la experiencia del usuario, el rendimiento d
 
 La latencia en sistemas digitales se presenta en varias formas:
 
-- **Latencia de red:** Tiempo que tarda un dato en viajar por una red desde el emisor hasta el receptor. Afectada por la distancia física, el medio de transmisión y la congestión de red.
-- **Latencia de recuperación:** Tiempo que tarda un sistema (por ejemplo, un modelo de IA) en recuperar datos relevantes desde almacenamiento o una base de conocimiento tras una consulta.
-- **Latencia de disco/almacenamiento:** Retraso en la lectura/escritura de datos desde dispositivos de almacenamiento. Los SSD tienen menor latencia que los HDD.
-- **Latencia operativa/de cómputo:** Retraso introducido por el procesamiento de la aplicación o el servidor. Modelos de IA complejos o algoritmos ineficientes aumentan la latencia de cómputo.
+- **Latencia de red:**Tiempo que tarda un dato en viajar por una red desde el emisor hasta el receptor. Afectada por la distancia física, el medio de transmisión y la congestión de red.
+- **Latencia de recuperación:**Tiempo que tarda un sistema (por ejemplo, un modelo de IA) en recuperar datos relevantes desde almacenamiento o una base de conocimiento tras una consulta.
+- **Latencia de disco/almacenamiento:**Retraso en la lectura/escritura de datos desde dispositivos de almacenamiento. Los SSD tienen menor latencia que los HDD.
+- **Latencia operativa/de cómputo:**Retraso introducido por el procesamiento de la aplicación o el servidor. Modelos de IA complejos o algoritmos ineficientes aumentan la latencia de cómputo.
 
 En flujos de IA, varios tipos de latencia se combinan, afectando la capacidad de respuesta del sistema.
 
-- **Fuente:** [Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
-- **Fuente:** [DriveNets](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
+- **Fuente:**[Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
+- **Fuente:**[DriveNets](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
 
 ## ¿Cómo se utiliza o se encuentra la latencia?
 
 La latencia es una preocupación principal en el diseño, despliegue y operación de:
 
-- **Inferencia de modelos de IA:** Tiempo desde la entrada del usuario hasta la generación de la salida.
-- **Integraciones de API:** Retraso en llamadas a servicios externos o internos.
-- **Recuperación de base de datos/búsqueda:** Velocidad para obtener información relevante.
-- **Aplicaciones en red:** Apps web, móviles e IoT que requieren retroalimentación rápida.
+- **Inferencia de modelos de IA:**Tiempo desde la entrada del usuario hasta la generación de la salida.
+- **Integraciones de API:**Retraso en llamadas a servicios externos o internos.
+- **Recuperación de base de datos/búsqueda:**Velocidad para obtener información relevante.
+- **Aplicaciones en red:**Apps web, móviles e IoT que requieren retroalimentación rápida.
 
-**Ejemplo:**  
-En un flujo de generación aumentada por recuperación (RAG), la latencia de recuperación determina la rapidez con la que se obtienen documentos o hechos para informar la respuesta del modelo de IA.  
+**Ejemplo:**En un flujo de generación aumentada por recuperación (RAG), la latencia de recuperación determina la rapidez con la que se obtienen documentos o hechos para informar la respuesta del modelo de IA.  
 [Ver: AI21 Labs sobre Latencia de Recuperación](https://www.ai21.com/glossary/foundational-llm/retrieval-latency/)
 
 ## Ejemplos prácticos y casos de uso
 
 ### 1. Juegos
-- **Importancia:** Los juegos multijugador online requieren latencia mínima para interacción en tiempo real.
-- **Impacto:** La latencia alta causa lag, afectando gravemente la jugabilidad y satisfacción del usuario.
+- **Importancia:**Los juegos multijugador online requieren latencia mínima para interacción en tiempo real.
+- **Impacto:**La latencia alta causa lag, afectando gravemente la jugabilidad y satisfacción del usuario.
   - [Fortinet: Juegos y Latencia de Red](https://www.fortinet.com/resources/cyberglossary/latency)
 
 ### 2. Finanzas y Trading de Alta Frecuencia (HFT)
-- **Importancia:** Sistemas de trading automatizado ejecutan órdenes donde los microsegundos cuentan.
-- **Impacto:** Incluso pequeñas latencias pueden resultar en pérdidas financieras significativas u oportunidades perdidas.
+- **Importancia:**Sistemas de trading automatizado ejecutan órdenes donde los microsegundos cuentan.
+- **Impacto:**Incluso pequeñas latencias pueden resultar en pérdidas financieras significativas u oportunidades perdidas.
   - [Investopedia: HFT](https://www.investopedia.com/terms/h/high-frequency-trading.asp)
 
 ### 3. Aplicaciones web en la nube
-- **Importancia:** Los usuarios esperan cargas instantáneas e interacciones sin fricción.
-- **Impacto:** Respuestas lentas de API o consultas a bases de datos degradan el rendimiento de la aplicación.
+- **Importancia:**Los usuarios esperan cargas instantáneas e interacciones sin fricción.
+- **Impacto:**Respuestas lentas de API o consultas a bases de datos degradan el rendimiento de la aplicación.
   - [MDN: Entendiendo la Latencia](https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency)
 
 ### 4. Salud
-- **Importancia:** Telemedicina, cirugía remota y recuperación de datos clínicos requieren baja latencia para seguridad y efectividad.
-- **Impacto:** La latencia alta puede obstaculizar diagnósticos, monitoreo o intervenciones en tiempo real.
+- **Importancia:**Telemedicina, cirugía remota y recuperación de datos clínicos requieren baja latencia para seguridad y efectividad.
+- **Impacto:**La latencia alta puede obstaculizar diagnósticos, monitoreo o intervenciones en tiempo real.
   - [IBM: Latencia en Salud](https://www.ibm.com/think/topics/latency)
 
 ### 5. Flujos de IA/ML
-- **Importancia:** Inferencia en tiempo real y búsqueda semántica dependen de una recuperación de datos rápida.
-- **Impacto:** Alta latencia de recuperación limita el rendimiento del modelo y degrada la experiencia del usuario.
+- **Importancia:**Inferencia en tiempo real y búsqueda semántica dependen de una recuperación de datos rápida.
+- **Impacto:**Alta latencia de recuperación limita el rendimiento del modelo y degrada la experiencia del usuario.
   - [AI21: Latencia de Recuperación](https://www.ai21.com/glossary/foundational-llm/retrieval-latency/)
 
 ## Principales causas y factores que contribuyen a la latencia
 
 Varios factores contribuyen a la latencia en la infraestructura digital:
 
-- **Distancia física:** A mayor distancia, mayor latencia. [AWS: Latencia](https://aws.amazon.com/what-is/latency/)
-- **Medio de transmisión:** Fibra óptica < Cobre < Inalámbrico < Satélite (en orden de latencia). [Fortinet: Medio de Transmisión](https://www.fortinet.com/resources/cyberglossary/latency)
-- **Número de saltos de red:** Cada router, switch o firewall añade tiempo de procesamiento.
-- **Congestión de red:** Alto volumen de tráfico genera retrasos.
-- **Rendimiento del servidor/aplicación:** Procesamiento ineficiente aumenta la latencia.
-- **Rendimiento de almacenamiento:** Los HDD tienen mayor latencia que los SSD. [WEKA: Latencia de Almacenamiento](https://www.weka.io/blog/ai-ml/solving-latency-challenges-in-ai-data-centers/)
-- **Tamaño de paquete y volumen de datos:** Paquetes o volúmenes mayores pueden incrementar el retraso.
-- **Enrutamiento y arquitectura de red:** Enrutamiento ineficiente o saltos innecesarios suman latencia.
-- **Lógica de código y aplicación:** Algoritmos ineficientes o código no optimizado pueden introducir demoras.
+- **Distancia física:**A mayor distancia, mayor latencia. [AWS: Latencia](https://aws.amazon.com/what-is/latency/)
+- **Medio de transmisión:**Fibra óptica < Cobre < Inalámbrico < Satélite (en orden de latencia). [Fortinet: Medio de Transmisión](https://www.fortinet.com/resources/cyberglossary/latency)
+- **Número de saltos de red:**Cada router, switch o firewall añade tiempo de procesamiento.
+- **Congestión de red:**Alto volumen de tráfico genera retrasos.
+- **Rendimiento del servidor/aplicación:**Procesamiento ineficiente aumenta la latencia.
+- **Rendimiento de almacenamiento:**Los HDD tienen mayor latencia que los SSD. [WEKA: Latencia de Almacenamiento](https://www.weka.io/blog/ai-ml/solving-latency-challenges-in-ai-data-centers/)
+- **Tamaño de paquete y volumen de datos:**Paquetes o volúmenes mayores pueden incrementar el retraso.
+- **Enrutamiento y arquitectura de red:**Enrutamiento ineficiente o saltos innecesarios suman latencia.
+- **Lógica de código y aplicación:**Algoritmos ineficientes o código no optimizado pueden introducir demoras.
 
 ### Tabla resumen: Factores comunes que contribuyen a la latencia
 
@@ -120,7 +117,7 @@ Varios factores contribuyen a la latencia en la infraestructura digital:
 | Dispositivo de almacenamiento | SSD vs. HDD vs. almacenamiento en la nube       | Moderado                |
 | Tamaño de paquete de datos | Volumen y tamaño de cada unidad transferida         | Moderado                |
 
-- **Fuente:** [Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works), [WEKA](https://www.weka.io/blog/ai-ml/solving-latency-challenges-in-ai-data-centers/)
+- **Fuente:**[Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works), [WEKA](https://www.weka.io/blog/ai-ml/solving-latency-challenges-in-ai-data-centers/)
 
 ## ¿Cómo se mide la latencia?
 
@@ -155,7 +152,7 @@ La latencia se mide en milisegundos (ms) usando métricas estandarizadas:
 | Almacenamiento HDD      | 5–10                |
 | Almacenamiento SSD      | <1                  |
 
-- **Fuente:** [AWS](https://aws.amazon.com/what-is/latency/), [Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
+- **Fuente:**[AWS](https://aws.amazon.com/what-is/latency/), [Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
 
 ## Latencia vs. conceptos relacionados
 
@@ -188,7 +185,7 @@ La latencia se mide en milisegundos (ms) usando métricas estandarizadas:
 | Jitter        | Variación en el retraso                  | ms               | Fluctuaciones en la presión del agua             |
 | Pérdida de paquetes | Datos perdidos en tránsito         | %                | Fugas en la tubería                              |
 
-- **Fuente:** [Fortinet: Glosario de Latencia](https://www.fortinet.com/resources/cyberglossary/latency)
+- **Fuente:**[Fortinet: Glosario de Latencia](https://www.fortinet.com/resources/cyberglossary/latency)
 
 ## Estrategias para Reducir o Gestionar la Latencia
 
@@ -231,7 +228,7 @@ Optimizar para baja latencia requiere estrategias arquitectónicas, de infraestr
 ### 10. Modelos híbridos de búsqueda para recuperación en IA
 - Combinar búsqueda vectorial y por palabras clave para equilibrar precisión y latencia en aplicaciones de IA.
 
-- **Fuente:** [Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works), [DriveNets](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
+- **Fuente:**[Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works), [DriveNets](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
 
 ## Soluciones de la industria y mejores prácticas
 
@@ -246,21 +243,16 @@ Los líderes del sector ofrecen soluciones especializadas para optimizar la late
 
 ## Preguntas frecuentes (FAQs)
 
-**P1: ¿Qué se considera una "buena" latencia?**  
-R: La latencia aceptable varía según el caso de uso. Para apps interactivas, <100 ms se considera bueno; para trading de alta frecuencia o juegos en tiempo real, puede requerirse <10 ms.  
+**P1: ¿Qué se considera una "buena" latencia?**R: La latencia aceptable varía según el caso de uso. Para apps interactivas, <100 ms se considera bueno; para trading de alta frecuencia o juegos en tiempo real, puede requerirse <10 ms.  
 [Fonte: AWS](https://aws.amazon.com/what-is/latency/)
 
-**P2: ¿Es mejor una latencia alta o baja?**  
-R: Siempre es preferible una latencia baja, lo que permite aplicaciones más rápidas, responsivas y mejor experiencia de usuario.
+**P2: ¿Es mejor una latencia alta o baja?**R: Siempre es preferible una latencia baja, lo que permite aplicaciones más rápidas, responsivas y mejor experiencia de usuario.
 
-**P3: ¿Por qué un ancho de banda alto no mejora la latencia?**  
-R: El ancho de banda es la cantidad de datos que se mueve por segundo, no la velocidad de una transacción individual. Rutas largas o congestión pueden causar alta latencia incluso con gran ancho de banda.
+**P3: ¿Por qué un ancho de banda alto no mejora la latencia?**R: El ancho de banda es la cantidad de datos que se mueve por segundo, no la velocidad de una transacción individual. Rutas largas o congestión pueden causar alta latencia incluso con gran ancho de banda.
 
-**P4: ¿Cuáles son soluciones fáciles para reducir la latencia en apps web?**  
-R: Usar CDNs, optimizar imágenes/scripts, minimizar llamadas a APIs de terceros, habilitar caché y desplegar servidores cerca de los usuarios.
+**P4: ¿Cuáles son soluciones fáciles para reducir la latencia en apps web?**R: Usar CDNs, optimizar imágenes/scripts, minimizar llamadas a APIs de terceros, habilitar caché y desplegar servidores cerca de los usuarios.
 
-**P5: ¿Cómo impacta la latencia de recuperación en sistemas de IA?**  
-R: La latencia alta de recuperación ralentiza la inferencia y la toma de decisiones en tiempo real, afectando directamente la efectividad de búsquedas, recomendaciones y chatbots basados en IA.  
+**P5: ¿Cómo impacta la latencia de recuperación en sistemas de IA?**R: La latencia alta de recuperación ralentiza la inferencia y la toma de decisiones en tiempo real, afectando directamente la efectividad de búsquedas, recomendaciones y chatbots basados en IA.  
 [Fuente: AI21 Labs](https://www.ai21.com/glossary/foundational-llm/retrieval-latency/)
 
 ## Para saber más y recursos de referencia

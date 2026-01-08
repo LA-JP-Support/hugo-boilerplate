@@ -13,16 +13,15 @@ url = "/internal/glossary/Utterance/"
 +++
 ## ¿Qué es una Utterance en IA Conversacional?
 
-Una **utterance** es cualquier entrada, frase o declaración que un usuario comunica a un chatbot o [IA conversacional](/es/glossary/conversational-ai/) durante una conversación, ya sea escribiendo o hablando. Cada mensaje o comando—ya sea una oración, pregunta o fragmento—es una utterance. Por ejemplo:
+Una **utterance**es cualquier entrada, frase o declaración que un usuario comunica a un chatbot o [IA conversacional](/es/glossary/conversational-ai/) durante una conversación, ya sea escribiendo o hablando. Cada mensaje o comando—ya sea una oración, pregunta o fragmento—es una utterance. Por ejemplo:
 
 - Usuario: “¿Cuál es mi saldo de cuenta?” *(utterance)*
 - Usuario: “Cancela mi último pedido.” *(utterance)*
 - Usuario: “¡Hola!” *(utterance)*
 
-Las utterances son los bloques básicos que los sistemas de IA conversacional interpretan para comprender las necesidades del usuario y generar respuestas apropiadas. Son fundamentales para sistemas que dependen del **entendimiento del lenguaje natural (NLU)** y **procesamiento del lenguaje natural (NLP)**.
+Las utterances son los bloques básicos que los sistemas de IA conversacional interpretan para comprender las necesidades del usuario y generar respuestas apropiadas. Son fundamentales para sistemas que dependen del **entendimiento del lenguaje natural (NLU)**y **procesamiento del lenguaje natural (NLP)**.
 
-**Referencia Autoritativa:**  
-- [SiteSpeakAI: ¿Qué es una Utterance?](https://sitespeak.ai/ai-chatbot-terms/utterance)
+**Referencia Autoritativa:**- [SiteSpeakAI: ¿Qué es una Utterance?](https://sitespeak.ai/ai-chatbot-terms/utterance)
 - [Emplifi: Documentación de Utterances de IA](https://docs.emplifi.io/platform/latest/home/ai-utterances)
 - [LinkedIn: Utterance, Intent & Entity en IA Conversacional](https://www.linkedin.com/pulse/what-utterance-intent-entity-conversational-ai-paul-blocchi)
 
@@ -42,16 +41,13 @@ Las utterances pueden variar en complejidad, longitud e intención. Van desde sa
 
 ### Casos de Uso en el Mundo Real
 
-- **Chatbots Bancarios:**  
-  - “¿Cómo consulto mi saldo?”
+- **Chatbots Bancarios:**- “¿Cómo consulto mi saldo?”
   - “Transfiere $100 a ahorros.”
 
-- **Bots de E-commerce:**  
-  - “Rastrea mi pedido.”
+- **Bots de E-commerce:**- “Rastrea mi pedido.”
   - “Quiero devolver estos zapatos.”
 
-- **Soporte al Cliente:**  
-  - “No puedo iniciar sesión en mi cuenta.”
+- **Soporte al Cliente:**- “No puedo iniciar sesión en mi cuenta.”
   - “Restablecer mi contraseña.”
 
 Cada entrada de usuario es una utterance que el chatbot debe comprender para satisfacer la solicitud. Capturar una amplia gama de utterances es vital para entrenar IA conversacional de manera efectiva. ([SiteSpeakAI](https://sitespeak.ai/ai-chatbot-terms/utterance))
@@ -62,39 +58,39 @@ Entender la diversidad de utterances es central para un diseño robusto de chatb
 
 ### 1. Utterances Estructuradas vs. No Estructuradas
 
-- **Estructuradas:** Formato claro y predecible.
+- **Estructuradas:**Formato claro y predecible.
   - Ejemplo: “Estado del pedido: #12345”
-- **No estructuradas:** Fraseo libre y natural.
+- **No estructuradas:**Fraseo libre y natural.
   - Ejemplo: “¿Me puedes decir dónde está mi último pedido?”
 
 ### 2. Utterances Contextuales vs. No Contextuales
 
-- **Contextuales:** Dependen de la conversación previa o datos del usuario.
+- **Contextuales:**Dependen de la conversación previa o datos del usuario.
   - Ejemplo: “¿Cuándo llegará?” (después de hablar de un pedido)
-- **No contextuales:** Independientes, se entienden por sí solas.
+- **No contextuales:**Independientes, se entienden por sí solas.
   - Ejemplo: “¿Cuál es su horario de atención?”
 
 ### 3. Utterances Positivas vs. Negativas
 
-- **Positivas:** Satisfacción o acuerdo.
+- **Positivas:**Satisfacción o acuerdo.
   - “¡Gracias, fue útil!”
-- **Negativas:** Insatisfacción o queja.
+- **Negativas:**Insatisfacción o queja.
   - “Esto no funciona para mí.”
 
 ### 4. Categorías Orientadas a la Intención
 
-- **Comandos directos:** “Cancela mi cita.”
-- **Peticiones corteses:** “¿Podrías cancelar mi cita, por favor?”
-- **Preguntas:** “¿Cómo cancelo mi cita?”
-- **Declaraciones de intención:** “Quiero cancelar mi cita.”
-- **Hipotéticas:** “¿Y si cancelo mi cita?”
-- **Parciales/Fragmentadas:** “Cancelar cita”
-- **Emoción o retroalimentación:** “Esto es muy lento.” / “¡Gran servicio!”
+- **Comandos directos:**“Cancela mi cita.”
+- **Peticiones corteses:**“¿Podrías cancelar mi cita, por favor?”
+- **Preguntas:**“¿Cómo cancelo mi cita?”
+- **Declaraciones de intención:**“Quiero cancelar mi cita.”
+- **Hipotéticas:**“¿Y si cancelo mi cita?”
+- **Parciales/Fragmentadas:**“Cancelar cita”
+- **Emoción o retroalimentación:**“Esto es muy lento.” / “¡Gran servicio!”
 
 ### 5. Variación Lingüística
 
-- **Formal vs. Informal:** “Me gustaría…” vs. “Quiero…”
-- **Jerga, abreviaturas, errores:** “¿Tas ahí?” “Ayuda plz” “No puedo entrar”
+- **Formal vs. Informal:**“Me gustaría…” vs. “Quiero…”
+- **Jerga, abreviaturas, errores:**“¿Tas ahí?” “Ayuda plz” “No puedo entrar”
 
 #### Tabla de Categorías
 
@@ -114,18 +110,18 @@ Entender la diversidad de utterances es central para un diseño robusto de chatb
 
 El flujo de procesamiento de utterances en un chatbot involucra varios pasos:
 
-1. **El usuario envía una utterance:** El usuario escribe o pronuncia un mensaje.
-2. **Procesamiento de Lenguaje Natural (NLP):** El chatbot analiza la utterance usando:
-   - **Tokenización:** Divide la utterance en palabras o tokens.
-   - **Stemming/Lematización:** Reduce palabras a su forma base.
-   - **Etiquetado gramatical:** Identifica roles gramaticales.
-   - **Reconocimiento de Entidades Nombradas (NER):** Extrae detalles clave (como fechas, lugares).
-   - **Análisis de Sentimiento:** Evalúa el tono emocional.
-3. **Clasificación de Intención:** Determina qué desea lograr el usuario.
+1. **El usuario envía una utterance:**El usuario escribe o pronuncia un mensaje.
+2. **Procesamiento de Lenguaje Natural (NLP):**El chatbot analiza la utterance usando:
+   - **Tokenización:**Divide la utterance en palabras o tokens.
+   - **Stemming/Lematización:**Reduce palabras a su forma base.
+   - **Etiquetado gramatical:**Identifica roles gramaticales.
+   - **Reconocimiento de Entidades Nombradas (NER):**Extrae detalles clave (como fechas, lugares).
+   - **Análisis de Sentimiento:**Evalúa el tono emocional.
+3. **Clasificación de Intención:**Determina qué desea lograr el usuario.
    - Ejemplo: “Quiero reservar un vuelo a Tokio.” → Intención: ReservarVuelo
-4. **Extracción de Entidades:** Obtiene detalles específicos de la utterance.
+4. **Extracción de Entidades:**Obtiene detalles específicos de la utterance.
    - Ejemplo: Destino = Tokio
-5. **Generación de Respuesta:** Usa la intención, entidades y contexto identificados para generar una respuesta.
+5. **Generación de Respuesta:**Usa la intención, entidades y contexto identificados para generar una respuesta.
 
 ### Relación: Utterance, Intención y Entidad
 
@@ -138,10 +134,8 @@ El flujo de procesamiento de utterances en un chatbot involucra varios pasos:
 
 ### 1. Ambigüedad Lingüística
 
-- **Homónimos y homófonos:**  
-  - “Reservar una mesa” (acción) vs. “Leer un libro” (objeto)
-- **Intención implícita:**  
-  - “Hace mucho frío aquí” (implícito: subir la calefacción)
+- **Homónimos y homófonos:**- “Reservar una mesa” (acción) vs. “Leer un libro” (objeto)
+- **Intención implícita:**- “Hace mucho frío aquí” (implícito: subir la calefacción)
 
 ### 2. Jerga, Abreviaturas y Lenguaje Informal
 
@@ -234,26 +228,19 @@ Asegura que los datos de utterances no contengan información personal o confide
 | Retroalimentación negativa | “No funciona”                | Sentimiento, escalamiento      | [Análisis de sentimiento](/es/glossary/sentiment-analysis/), disparadores de escalamiento |
 ## Preguntas Frecuentes (FAQ) sobre Utterances
 
-**P: ¿Por qué se necesitan múltiples utterances para entrenar un chatbot?**  
-R: Los usuarios expresan la misma intención de muchas maneras. Entrenar con utterances diversas permite a los chatbots reconocer una amplia variedad de formulaciones, mejorando la precisión y la experiencia del usuario. ([SiteSpeakAI FAQ](https://sitespeak.ai/ai-chatbot-terms/utterance))
+**P: ¿Por qué se necesitan múltiples utterances para entrenar un chatbot?**R: Los usuarios expresan la misma intención de muchas maneras. Entrenar con utterances diversas permite a los chatbots reconocer una amplia variedad de formulaciones, mejorando la precisión y la experiencia del usuario. ([SiteSpeakAI FAQ](https://sitespeak.ai/ai-chatbot-terms/utterance))
 
-**P: ¿Cómo recopilo utterances para un nuevo chatbot?**  
-R: Usa registros de chat históricos, encuestas a usuarios, lluvias de ideas y aprendizaje activo de conversaciones reales.
+**P: ¿Cómo recopilo utterances para un nuevo chatbot?**R: Usa registros de chat históricos, encuestas a usuarios, lluvias de ideas y aprendizaje activo de conversaciones reales.
 
-**P: ¿Cuántas utterances por intención se recomiendan?**  
-R: La guía de la industria (p.ej., Microsoft LUIS, Emplifi) sugiere 10–20 utterances bien elegidas por intención. Demasiadas pueden causar confusión; muy pocas limitan la precisión. ([Guía de Utterances de Emplifi](https://docs.emplifi.io/platform/latest/home/ai-utterances))
+**P: ¿Cuántas utterances por intención se recomiendan?**R: La guía de la industria (p.ej., Microsoft LUIS, Emplifi) sugiere 10–20 utterances bien elegidas por intención. Demasiadas pueden causar confusión; muy pocas limitan la precisión. ([Guía de Utterances de Emplifi](https://docs.emplifi.io/platform/latest/home/ai-utterances))
 
-**P: ¿Debo incluir errores y jerga?**  
-R: Sí. Incluye errores comunes, abreviaturas y jerga para mejorar la robustez.
+**P: ¿Debo incluir errores y jerga?**R: Sí. Incluye errores comunes, abreviaturas y jerga para mejorar la robustez.
 
-**P: ¿Puede una utterance contener múltiples intenciones?**  
-R: Algunos mensajes de usuario pueden expresar más de una intención. Diseña tu chatbot para priorizar, aclarar o manejar utterances multi-intención.
+**P: ¿Puede una utterance contener múltiples intenciones?**R: Algunos mensajes de usuario pueden expresar más de una intención. Diseña tu chatbot para priorizar, aclarar o manejar utterances multi-intención.
 
-**P: ¿Con qué frecuencia debo actualizar la biblioteca de utterances?**  
-R: De forma continua. Revisa regularmente las interacciones en vivo, añade nuevas utterances y elimina ejemplos obsoletos.
+**P: ¿Con qué frecuencia debo actualizar la biblioteca de utterances?**R: De forma continua. Revisa regularmente las interacciones en vivo, añade nuevas utterances y elimina ejemplos obsoletos.
 
-**P: ¿Las utterances son solo entradas de usuario?**  
-R: Principalmente sí, pero algunos sistemas también modelan utterances del bot/sistema para [gestión avanzada del diálogo](/es/glossary/dialogue-management/).
+**P: ¿Las utterances son solo entradas de usuario?**R: Principalmente sí, pero algunos sistemas también modelan utterances del bot/sistema para [gestión avanzada del diálogo](/es/glossary/dialogue-management/).
 
 ## Más Lecturas y Recursos
 
@@ -267,7 +254,7 @@ R: Principalmente sí, pero algunos sistemas también modelan utterances del bot
 
 ## Puntos Clave
 
-- Una **utterance** es cualquier entrada de usuario (texto o voz) proporcionada a un chatbot o IA conversacional.
+- Una **utterance**es cualquier entrada de usuario (texto o voz) proporcionada a un chatbot o IA conversacional.
 - Las utterances impulsan el proceso de entendimiento de intención y extracción de entidades para respuestas significativas.
 - Capturar utterances diversas, naturales y representativas es fundamental para construir IA conversacional efectiva.
 - Revisa y actualiza regularmente la biblioteca de utterances, evita superposición de intenciones y refleja el lenguaje real de los usuarios.

@@ -102,12 +102,12 @@ Baidu's influence extends far beyond traditional search functionality, encompass
 
 | Feature | Baidu | Google | Bing | Yandex |
 |---------|-------|--------|------|--------|
-| **Market Focus** | China-specific | Global | Global with Microsoft integration | Russia/CIS focused |
-| **Language Optimization** | Chinese language mastery | Multi-language support | Multi-language with AI translation | Cyrillic and regional languages |
-| **AI Integration** | ERNIE, deep Chinese NLP | BERT, LaMDA, advanced AI | GPT integration, Copilot | Yandex Neural Networks |
-| **Local Services** | Extensive Chinese business integration | Google My Business, local listings | Bing Places, local search | Regional business directories |
-| **Regulatory Compliance** | Chinese internet regulations | Global privacy laws | GDPR, regional compliance | Russian data localization |
-| **Mobile Experience** | Mobile-first Chinese design | Mobile-responsive global | Mobile optimization | Regional mobile preferences |
+| **Market Focus**| China-specific | Global | Global with Microsoft integration | Russia/CIS focused |
+| **Language Optimization**| Chinese language mastery | Multi-language support | Multi-language with AI translation | Cyrillic and regional languages |
+| **AI Integration**| ERNIE, deep Chinese NLP | BERT, LaMDA, advanced AI | GPT integration, Copilot | Yandex Neural Networks |
+| **Local Services**| Extensive Chinese business integration | Google My Business, local listings | Bing Places, local search | Regional business directories |
+| **Regulatory Compliance**| Chinese internet regulations | Global privacy laws | GDPR, regional compliance | Russian data localization |
+| **Mobile Experience**| Mobile-first Chinese design | Mobile-responsive global | Mobile optimization | Regional mobile preferences |
 
 ## Challenges and Considerations
 

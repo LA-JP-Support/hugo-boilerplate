@@ -24,8 +24,7 @@ According to the Python Execution Model: "A block is a piece of Python program t
 
 In JavaScript, a block statement is used to group zero or more statements, delimited by curly braces `{}`. This is sometimes called a "compound statement." Blocks are essential in control flow constructs such as `if`, `for`, `while`, and function declarations. Blocks also define scope for variables declared with `let` and `const`.
 
-**Example:**
-```javascript
+**Example:**```javascript
 if (condition) {
     // code block: statements here are executed if condition is true
 }
@@ -37,22 +36,19 @@ if (condition) {
 
 Blocks in Python are defined by consistent indentation, typically four spaces per level. Indentation signals the start and end of a block, unlike curly braces in other languages.
 
-**Correct Syntax Example:**
-```python
+**Correct Syntax Example:**```python
 if age >= 18:
     print("Adult")
     print("Can vote")
 print("Done")  # Outside the block
 ```
 
-**Incorrect Syntax Example:**
-```python
+**Incorrect Syntax Example:**```python
 if age >= 18:
 print("Adult")  # Raises IndentationError
 ```
 
-**Key Points:**
-- All lines in a block must be indented by the same amount
+**Key Points:**- All lines in a block must be indented by the same amount
 - Mixing tabs and spaces causes errors. Use spaces only
 - An empty block is invalid; use `pass` as a placeholder if needed:
 ```python
@@ -72,14 +68,13 @@ if (age >= 18) {
 console.log("Done"); // Outside the block
 ```
 
-**Incorrect Syntax Example:**
-```javascript
+**Incorrect Syntax Example:**```javascript
 if (age >= 18)
     console.log("Adult");
     console.log("Can vote"); // Not part of the if-block!
 ```
 
-**Best Practice:** Always use curly braces, even for single-statement blocks, to avoid logic errors and improve readability.
+**Best Practice:**Always use curly braces, even for single-statement blocks, to avoid logic errors and improve readability.
 
 ## Naming, Binding, and Scope
 
@@ -95,8 +90,7 @@ if (age >= 18)
 - Variables declared with `var` are function-scoped, not block-scoped
 - Block scoping is crucial for avoiding unintentional variable leaks or shadowing
 
-**Example:**
-```javascript
+**Example:**```javascript
 var x = 1;
 let y = 1;
 if (true) {
@@ -113,17 +107,14 @@ console.log(y); // 1
 
 Automation platforms like Contentstack, n8n, and others provide "code block" nodes that let users embed custom Python or JavaScript.
 
-**Features:**
-- **Custom Scripting:** Write bespoke logic for data transformation, validation, or external API calls
-- **Input/Output Mapping:** Pass data from previous nodes, operate on it, and output results for downstream nodes
-- **Debugging:** Console logs and error reporting for troubleshooting
-- **Integration:** Enables operations not possible with standard drag-and-drop nodes
+**Features:**- **Custom Scripting:**Write bespoke logic for data transformation, validation, or external API calls
+- **Input/Output Mapping:**Pass data from previous nodes, operate on it, and output results for downstream nodes
+- **Debugging:**Console logs and error reporting for troubleshooting
+- **Integration:**Enables operations not possible with standard drag-and-drop nodes
 
-**Example: Contentstack**  
-Set up a Code Block action to execute JavaScript code. Inputs can be mapped from previous nodes, e.g., user data, API responses. Supports inline debugging with `console.log`.
+**Example: Contentstack**Set up a Code Block action to execute JavaScript code. Inputs can be mapped from previous nodes, e.g., user data, API responses. Supports inline debugging with `console.log`.
 
-**Example: n8n**  
-Supports both JavaScript and Python (via Pyodide). Two execution modes: "Run Once for All Items" or "Run Once for Each Item". Built-in methods and variables for workflow data access.
+**Example: n8n**Supports both JavaScript and Python (via Pyodide). Two execution modes: "Run Once for All Items" or "Run Once for Each Item". Built-in methods and variables for workflow data access.
 
 ## Practical Examples
 
@@ -151,8 +142,7 @@ output = { Birthdate: birthday, Gender: sex };
 
 ### Nested Code Blocks
 
-**Python:**
-```python
+**Python:**```python
 x = 10
 if x > 5:
     print("x is greater than 5")
@@ -160,8 +150,7 @@ if x > 5:
         print("x is even")
 ```
 
-**JavaScript:**
-```javascript
+**JavaScript:**```javascript
 let x = 10;
 if (x > 5) {
     console.log("x is greater than 5");
@@ -173,15 +162,13 @@ if (x > 5) {
 
 ### Multiple Statements per Block
 
-**Python:**
-```python
+**Python:**```python
 for i in range(3):
     print(i)
     print(i * 2)
 ```
 
-**JavaScript:**
-```javascript
+**JavaScript:**```javascript
 for (let i = 0; i < 3; i++) {
     console.log(i);
     console.log(i * 2);
@@ -192,50 +179,40 @@ for (let i = 0; i < 3; i++) {
 
 ### Python
 
-**IndentationError**  
-Caused by inconsistent indentation. Always use four spaces per level.
+**IndentationError**Caused by inconsistent indentation. Always use four spaces per level.
 
-**Mixing Tabs and Spaces**  
-Can lead to hidden bugs. Use spaces only.
+**Mixing Tabs and Spaces**Can lead to hidden bugs. Use spaces only.
 
-**Empty Blocks**  
-Not allowed. Use `pass` for placeholder blocks.
+**Empty Blocks**Not allowed. Use `pass` for placeholder blocks.
 
 ### JavaScript
 
-**Missing Braces**  
-Omitting `{}` can produce logic errors, especially with multiple statements.
+**Missing Braces**Omitting `{}` can produce logic errors, especially with multiple statements.
 
-**Block Scope**  
-`let` and `const` are block-scoped; `var` is not. Be careful with variable declarations.
+**Block Scope**`let` and `const` are block-scoped; `var` is not. Be careful with variable declarations.
 
 ### Automation/Chatbot Platforms
 
-**Input/Output Handling**  
-Ensure your code node expects and emits data matching the workflow requirements.
+**Input/Output Handling**Ensure your code node expects and emits data matching the workflow requirements.
 
-**Debugging**  
-Use `console.log` for troubleshooting in platforms that support it (e.g., Contentstack, n8n).
+**Debugging**Use `console.log` for troubleshooting in platforms that support it (e.g., Contentstack, n8n).
 
-**Code Formatting**  
-In chatbots, especially Microsoft Teams, use Markdown with triple backticks for code:
+**Code Formatting**In chatbots, especially Microsoft Teams, use Markdown with triple backticks for code:
 ````
 ```python
 print("Hello, world!")
 ```
 ````
 
-**Formatting Limitations**  
-Not all formatting is supported on all platforms/devices. Test thoroughly.
+**Formatting Limitations**Not all formatting is supported on all platforms/devices. Test thoroughly.
 
 ## Formatting Code Blocks in Chatbots
 
-**Microsoft Teams Bot Messages:**  
-Use the `TextFormat` property set to `markdown` to enable code block formatting.
+**Microsoft Teams Bot Messages:**Use the `TextFormat` property set to `markdown` to enable code block formatting.
 
-**Supported features:** Preformatted text (code blocks), bold, italic, hyperlinks.
+**Supported features:**Preformatted text (code blocks), bold, italic, hyperlinks.
 
-**Note:** Not all formatting is supported on mobile clients; test across devices.
+**Note:**Not all formatting is supported on mobile clients; test across devices.
 
 ## Best Practices
 

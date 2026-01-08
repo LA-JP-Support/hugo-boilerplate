@@ -21,43 +21,39 @@ Hallucination detection encompasses the technologies, methodologies, and workflo
 
 ### Core Concept
 
-**AI Hallucination:** An output not supported by provided data, context, or real-world facts—appearing plausible but being false or unverifiable.
+**AI Hallucination:**An output not supported by provided data, context, or real-world facts—appearing plausible but being false or unverifiable.
 
-**Detection Goal:** Flag, report, and correct these outputs before they impact users or business processes.
+**Detection Goal:**Flag, report, and correct these outputs before they impact users or business processes.
 
 ### Critical Importance by Industry
 
 | Industry | Accuracy Requirement | Hallucination Risk |
 |----------|---------------------|-------------------|
-| **Healthcare** | Mandatory | Patient safety, misdiagnosis |
-| **Finance** | Regulatory | Investment errors, compliance |
-| **Legal** | Professional liability | Case law misrepresentation |
-| **Customer Support** | Brand reputation | Policy misinformation |
+| **Healthcare**| Mandatory | Patient safety, misdiagnosis |
+| **Finance**| Regulatory | Investment errors, compliance |
+| **Legal**| Professional liability | Case law misrepresentation |
+| **Customer Support**| Brand reputation | Policy misinformation |
 
 ## Why Hallucination Detection Matters
 
 ### Business Risks
 
-**Trust Erosion:**
-- User confidence decline in AI systems
+**Trust Erosion:**- User confidence decline in AI systems
 - Brand reputation damage
 - Customer relationship deterioration
 - Market credibility loss
 
-**Compliance and Legal Exposure:**
-- Regulatory violations and penalties
+**Compliance and Legal Exposure:**- Regulatory violations and penalties
 - Legal disputes and liability
 - Audit failures
 - Contractual breaches
 
-**Operational Errors:**
-- Faulty business decisions
+**Operational Errors:**- Faulty business decisions
 - Process disruptions
 - Financial losses
 - Safety incidents
 
-**Misinformation Spread:**
-- Public-facing AI amplifies falsehoods
+**Misinformation Spread:**- Public-facing AI amplifies falsehoods
 - Viral incorrect information
 - Reputational crisis management
 - Corrective action costs
@@ -66,41 +62,37 @@ Hallucination detection encompasses the technologies, methodologies, and workflo
 
 | Scenario | Impact | Risk Level |
 |----------|--------|------------|
-| **AI bot relays outdated refund policy** | Customer confusion, agent time correcting | Medium |
-| **Clinical AI misclassifies condition** | Unnecessary treatments, patient harm | Critical |
-| **AI summarizer adds false statistics** | Incorrect strategic decisions | High |
-| **Chatbot provides wrong travel info** | Customer inconvenience, complaints | Medium |
+| **AI bot relays outdated refund policy**| Customer confusion, agent time correcting | Medium |
+| **Clinical AI misclassifies condition**| Unnecessary treatments, patient harm | Critical |
+| **AI summarizer adds false statistics**| Incorrect strategic decisions | High |
+| **Chatbot provides wrong travel info**| Customer inconvenience, complaints | Medium |
 
 ## Detection Methods and Techniques
 
 ### 1. Contextual Consistency Checks
 
-**Method:** Direct comparison of AI response to provided context.
+**Method:**Direct comparison of AI response to provided context.
 
-**Process Flow:**
-```
+**Process Flow:**```
 Context provided → AI generates response → Compare for alignment
 ```
 
-**Example:**
-```
+**Example:**```
 Context: "Paris is the capital of France"
 Response: "Paris" → ✓ CONSISTENT
 Response: "Lyon" → ✗ HALLUCINATION
 ```
 
-**Implementation:**
-- Text matching algorithms
+**Implementation:**- Text matching algorithms
 - Semantic alignment verification
 - Fact extraction and comparison
 - Contradiction detection
 
 ### 2. Semantic Similarity Analysis
 
-**Method:** Convert text to embeddings and measure similarity.
+**Method:**Convert text to embeddings and measure similarity.
 
-**Workflow:**
-```
+**Workflow:**```
 1. Generate context embedding (vector)
 2. Generate response embedding (vector)
 3. Calculate cosine similarity
@@ -108,8 +100,7 @@ Response: "Lyon" → ✗ HALLUCINATION
 5. Flag if similarity < threshold
 ```
 
-**Code Example:**
-```python
+**Code Example:**```python
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Generate embeddings
@@ -124,25 +115,21 @@ hallucination_score = 1 - similarity
 is_hallucination = hallucination_score > 0.7
 ```
 
-**Applications:**
-- RAG system validation
+**Applications:**- RAG system validation
 - Context grounding verification
 - Response relevance assessment
 - Confidence scoring
 
 ### 3. Automated Reasoning and Fact Verification
 
-**Implementation Approaches:**
-
-| Approach | Description | Example Use |
+**Implementation Approaches:**| Approach | Description | Example Use |
 |----------|-------------|-------------|
-| **Rule-Based** | Encode domain rules | "Refund max: $500" |
-| **Constraint Checking** | Verify output constraints | Date format validation |
-| **Policy Validation** | Check documented policies | Terms compliance |
-| **Knowledge Graph** | Query structured knowledge | Entity relationships |
+| **Rule-Based**| Encode domain rules | "Refund max: $500" |
+| **Constraint Checking**| Verify output constraints | Date format validation |
+| **Policy Validation**| Check documented policies | Terms compliance |
+| **Knowledge Graph**| Query structured knowledge | Entity relationships |
 
-**Platform Example:**
-```
+**Platform Example:**```
 Amazon Bedrock Guardrails:
   - Configurable policy rules
   - Real-time validation
@@ -152,8 +139,7 @@ Amazon Bedrock Guardrails:
 
 ### 4. LLM Prompt-Based Detection (LLM-as-a-Judge)
 
-**Architecture:**
-```
+**Architecture:**```
 Primary LLM → Generates Response
       ↓
 Secondary LLM → Evaluates Factuality
@@ -161,8 +147,7 @@ Secondary LLM → Evaluates Factuality
 Hallucination Score (0-1)
 ```
 
-**Evaluation Prompt Template:**
-```
+**Evaluation Prompt Template:**```
 You are an expert evaluating factual accuracy.
 
 Context: {retrieved_context}
@@ -172,55 +157,46 @@ Rate grounding in context (0=fully grounded, 1=not grounded).
 Provide only the numeric score.
 ```
 
-**Scoring Interpretation:**
-
-| Score Range | Assessment | Action |
+**Scoring Interpretation:**| Score Range | Assessment | Action |
 |-------------|------------|--------|
 | 0.0 - 0.3 | Fully grounded | Accept |
 | 0.3 - 0.7 | Partially grounded | Review |
 | 0.7 - 1.0 | Not grounded | Flag/Reject |
 
-**Advantages:**
-- Leverages advanced language understanding
+**Advantages:**- Leverages advanced language understanding
 - Domain-adaptable without training
 - Nuanced evaluation capability
 - Contextual judgment
 
-**Considerations:**
-- Additional computational cost
+**Considerations:**- Additional computational cost
 - Latency increase
 - Secondary model quality dependency
 - Potential bias inheritance
 
 ### 5. Token and N-gram Similarity
 
-**Comparison Metrics:**
-
-| Metric | Measures | Best For |
+**Comparison Metrics:**| Metric | Measures | Best For |
 |--------|----------|----------|
-| **BLEU** | Precision of n-gram overlap | Translation quality |
-| **ROUGE** | Recall of n-gram overlap | Summarization |
-| **Token Overlap** | Simple word matching | Quick screening |
+| **BLEU**| Precision of n-gram overlap | Translation quality |
+| **ROUGE**| Recall of n-gram overlap | Summarization |
+| **Token Overlap**| Simple word matching | Quick screening |
 
-**Detection Logic:**
-```
+**Detection Logic:**```
 Context keywords: ["password", "reset", "email"]
 Response keywords: ["username", "recovery"]
 Overlap: LOW → Potential hallucination flag
 ```
 
-**Limitations:**
-- Surface-level matching only
+**Limitations:**- Surface-level matching only
 - Misses semantic equivalence
 - Sensitive to paraphrasing
 - Best as supplementary check
 
 ### 6. Stochastic Consistency Checks
 
-**Principle:** Factual content is stable across generations; hallucinated content varies.
+**Principle:**Factual content is stable across generations; hallucinated content varies.
 
-**Process:**
-```
+**Process:**```
 1. Generate 5 responses to same query with different seeds
 2. Calculate pairwise similarity (BERT Score)
 3. Measure variance
@@ -228,8 +204,7 @@ Overlap: LOW → Potential hallucination flag
    - Low variance → Likely factual
 ```
 
-**Example Results:**
-```
+**Example Results:**```
 Query: "What is 2+2?"
 Responses: [4, 4, 4, 4, 4]
 Variance: ZERO → High confidence ✓
@@ -239,16 +214,14 @@ Responses: [Event A, Event B, Event C, Event D, Event E]
 Variance: HIGH → Low confidence, hallucination risk ✗
 ```
 
-**Trade-offs:**
-- Multiple generations → Higher compute cost
+**Trade-offs:**- Multiple generations → Higher compute cost
 - Increased latency
 - More robust detection
 - Effective for uncertain domains
 
 ### 7. Human-in-the-Loop Validation
 
-**Workflow:**
-```
+**Workflow:**```
 AI Response → Automated Detection → Flags Potential Issue
                                           ↓
                               Human Reviewer Evaluates
@@ -258,15 +231,13 @@ AI Response → Automated Detection → Flags Potential Issue
                          Feedback Improves System
 ```
 
-**Use Cases:**
-- High-stakes outputs (medical, legal, financial)
+**Use Cases:**- High-stakes outputs (medical, legal, financial)
 - Sensitive customer interactions
 - Complex or ambiguous cases
 - Quality assurance sampling
 - System training and improvement
 
-**Best Practices:**
-- Clear evaluation criteria and guidelines
+**Best Practices:**- Clear evaluation criteria and guidelines
 - Efficient review interfaces
 - Feedback loop integration
 - Performance metric tracking
@@ -276,15 +247,13 @@ AI Response → Automated Detection → Flags Potential Issue
 
 ### Memory-Efficient Ensemble Models
 
-**Traditional Challenge:** Multiple models require significant compute resources.
+**Traditional Challenge:**Multiple models require significant compute resources.
 
-**Innovation:**
-- Shared "slow weights" (base model parameters)
+**Innovation:**- Shared "slow weights" (base model parameters)
 - Model-specific "fast weights" (LoRA adapters)
 - Single GPU deployment feasible
 
-**Detection Process:**
-```
+**Detection Process:**```
 Input → [Ensemble: Model₁, Model₂, ..., Modelₙ]
              ↓
       Collect predictions
@@ -294,8 +263,7 @@ Input → [Ensemble: Model₁, Model₂, ..., Modelₙ]
 High disagreement → High uncertainty → Hallucination flag
 ```
 
-**Benefits:**
-- Reliable uncertainty quantification
+**Benefits:**- Reliable uncertainty quantification
 - Efficient resource usage
 - Calibrated confidence scores
 - Improved detection accuracy
@@ -304,21 +272,20 @@ High disagreement → High uncertainty → Hallucination flag
 
 | Cause | Description | Mitigation Strategy |
 |-------|-------------|-------------------|
-| **Insufficient Training Data** | Knowledge gaps | Comprehensive, diverse datasets |
-| **Biased Training Data** | Skewed representation | Balanced data curation |
-| **Lack of Grounding** | No authoritative sources | Implement RAG architecture |
-| **Overfitting** | Memorization vs. understanding | Regularization techniques |
-| **Ambiguous Prompts** | Vague instructions | Prompt engineering |
-| **Model Limitations** | Architectural constraints | Appropriate model selection |
-| **Context Truncation** | Incomplete information | Context management |
-| **Training Cutoff** | Outdated knowledge | Regular updates, RAG |
+| **Insufficient Training Data**| Knowledge gaps | Comprehensive, diverse datasets |
+| **Biased Training Data**| Skewed representation | Balanced data curation |
+| **Lack of Grounding**| No authoritative sources | Implement RAG architecture |
+| **Overfitting**| Memorization vs. understanding | Regularization techniques |
+| **Ambiguous Prompts**| Vague instructions | Prompt engineering |
+| **Model Limitations**| Architectural constraints | Appropriate model selection |
+| **Context Truncation**| Incomplete information | Context management |
+| **Training Cutoff**| Outdated knowledge | Regular updates, RAG |
 
 ## Industry Use Cases
 
 ### Customer Support Automation
 
-**Detection Flow:**
-```
+**Detection Flow:**```
 Customer Query → AI Response Generation
                       ↓
                Hallucination Scan
@@ -327,8 +294,7 @@ Customer Query → AI Response Generation
          Fail → Flag for Human Review
 ```
 
-**Platform: Sendbird AI Agent**
-- Real-time detection
+**Platform: Sendbird AI Agent**- Real-time detection
 - Flagged message dashboard
 - Webhook alerts
 - Conversation transcripts
@@ -336,56 +302,48 @@ Customer Query → AI Response Generation
 
 ### Healthcare Information Systems
 
-**Critical Applications:**
-- Clinical decision support
+**Critical Applications:**- Clinical decision support
 - Patient engagement chatbots
 - Medical documentation assistance
 - Treatment recommendations
 
-**Detection Requirements:**
-- Medical guideline consistency
+**Detection Requirements:**- Medical guideline consistency
 - Drug information accuracy
 - Diagnostic criteria compliance
 - Safety-critical validation
 
 ### Financial Services
 
-**Applications:**
-- Market analysis summaries
+**Applications:**- Market analysis summaries
 - Investment recommendations
 - Regulatory compliance guidance
 - Risk assessments
 
-**Validation Methods:**
-- Real-time market data grounding
+**Validation Methods:**- Real-time market data grounding
 - Regulatory document verification
 - Historical data cross-referencing
 - Compliance rule enforcement
 
 ### Enterprise Knowledge Management
 
-**Use Cases:**
-- Internal AI assistants
+**Use Cases:**- Internal AI assistants
 - HR policy guidance
 - IT support chatbots
 - Operational procedures
 
-**Detection Strategy:**
-- Corporate document grounding
+**Detection Strategy:**- Corporate document grounding
 - Policy version control
 - Update propagation tracking
 - Access control integration
 
 ### Content Creation
 
-**Applications:**
-- Article drafting
+**Applications:**- Article drafting
 - Marketing copy generation
 - Report summarization
 - Social media content
 
-**Quality Controls:**
-- Fact-checking workflows
+**Quality Controls:**- Fact-checking workflows
 - Source attribution requirements
 - Editorial review processes
 - Brand guideline compliance
@@ -394,8 +352,7 @@ Customer Query → AI Response Generation
 
 ### RAG-Based Detection System
 
-**System Architecture:**
-```
+**System Architecture:**```
 User Query
     ↓
 Retrieval System → Relevant Documents
@@ -407,16 +364,13 @@ Hallucination Detector ← Context + Response
 [Pass/Flag Decision] → User or Review Queue
 ```
 
-**Detection Layer Configuration:**
-
-| Method | Threshold | Action on Flag |
+**Detection Layer Configuration:**| Method | Threshold | Action on Flag |
 |--------|-----------|----------------|
-| **Semantic Similarity** | < 0.75 | Send to Layer 2 |
-| **LLM-as-Judge** | > 0.7 | Human review |
-| **Token Overlap** | < 30% | Additional verification |
+| **Semantic Similarity**| < 0.75 | Send to Layer 2 |
+| **LLM-as-Judge**| > 0.7 | Human review |
+| **Token Overlap**| < 30% | Additional verification |
 
-**Python Implementation:**
-```python
+**Python Implementation:**```python
 def detect_hallucination_rag(context, response, threshold=0.75):
     """
     Detect hallucinations in RAG-generated responses
@@ -454,8 +408,7 @@ if result['hallucination_detected']:
 
 ### Multi-Layer Detection Pipeline
 
-**Layered Approach:**
-```
+**Layered Approach:**```
 Layer 1: Fast Rule-Based Checks (< 10ms)
     ↓ (Pass 80%)
 Layer 2: Semantic Similarity (< 50ms)
@@ -465,8 +418,7 @@ Layer 3: LLM-as-Judge Evaluation (< 500ms)
 Layer 4: Human Review (as needed - 1%)
 ```
 
-**Benefits:**
-- Progressive cost optimization
+**Benefits:**- Progressive cost optimization
 - Latency management
 - Accuracy improvement at each layer
 - Resource-efficient filtering
@@ -475,20 +427,17 @@ Layer 4: Human Review (as needed - 1%)
 
 ### Sendbird AI Agent Platform
 
-**Features:**
-
-| Feature | Capability |
+**Features:**| Feature | Capability |
 |---------|-----------|
-| **Real-time Detection** | Inline hallucination scanning |
-| **Dashboard** | Flagged message review interface |
-| **Webhooks** | Integration with notification systems |
-| **Analytics** | Detection rate and pattern tracking |
-| **Audit Trails** | Compliance and quality records |
+| **Real-time Detection**| Inline hallucination scanning |
+| **Dashboard**| Flagged message review interface |
+| **Webhooks**| Integration with notification systems |
+| **Analytics**| Detection rate and pattern tracking |
+| **Audit Trails**| Compliance and quality records |
 
 ### Amazon Bedrock Guardrails
 
-**Capabilities:**
-- Automated reasoning checks
+**Capabilities:**- Automated reasoning checks
 - Contextual grounding validation
 - Configurable content policies
 - Real-time filtering
@@ -497,8 +446,7 @@ Layer 4: Human Review (as needed - 1%)
 
 ### Google Vertex AI
 
-**Tools:**
-- Model evaluation frameworks
+**Tools:**- Model evaluation frameworks
 - Explainable AI features
 - Data quality management
 - Bias detection capabilities
@@ -508,38 +456,32 @@ Layer 4: Human Review (as needed - 1%)
 
 ### Prevention Strategies
 
-**Data Quality:**
-- High-quality, diverse training data
+**Data Quality:**- High-quality, diverse training data
 - Regular data audits and updates
 - Bias detection and mitigation
 - Comprehensive domain coverage
 
-**Prompt Engineering:**
-- Clear, specific instructions
+**Prompt Engineering:**- Clear, specific instructions
 - Explicit constraints and boundaries
 - Format specifications
 - Few-shot examples
 - Chain-of-thought prompting
 
-**System Architecture:**
-- RAG for factual grounding
+**System Architecture:**- RAG for factual grounding
 - Confidence thresholds
 - Graceful degradation
 - Clear human escalation paths
 
 ### Detection Implementation
 
-**Multi-Method Combination:**
-
-| Stage | Methods | Purpose |
+**Multi-Method Combination:**| Stage | Methods | Purpose |
 |-------|---------|---------|
-| **Fast Screening** | Rule-based, token overlap | Quick filtering |
-| **Semantic Analysis** | Embedding similarity | Meaning verification |
-| **Deep Evaluation** | LLM-as-judge | Nuanced assessment |
-| **Final Review** | Human validation | High-stakes confirmation |
+| **Fast Screening**| Rule-based, token overlap | Quick filtering |
+| **Semantic Analysis**| Embedding similarity | Meaning verification |
+| **Deep Evaluation**| LLM-as-judge | Nuanced assessment |
+| **Final Review**| Human validation | High-stakes confirmation |
 
-**Tuning Guidelines:**
-- Start with conservative thresholds
+**Tuning Guidelines:**- Start with conservative thresholds
 - Monitor false positive/negative rates
 - Adjust based on real-world data
 - Segment by use case and risk level
@@ -547,20 +489,17 @@ Layer 4: Human Review (as needed - 1%)
 
 ### Operational Excellence
 
-**Monitoring:**
-- Track detection metrics continuously
+**Monitoring:**- Track detection metrics continuously
 - Analyze flagged content patterns
 - Monitor system drift
 - Regular accuracy assessments
 
-**Feedback Loops:**
-- User reporting mechanisms
+**Feedback Loops:**- User reporting mechanisms
 - Expert review integration
 - Model retraining pipeline
 - Documentation updates
 
-**Governance:**
-- Clear ownership and accountability
+**Governance:**- Clear ownership and accountability
 - Comprehensive audit trails
 - Compliance documentation
 - Regular process reviews
@@ -569,30 +508,25 @@ Layer 4: Human Review (as needed - 1%)
 
 ### Detection Challenges
 
-**Accuracy Trade-offs:**
-
-| Challenge | Impact | Mitigation |
+**Accuracy Trade-offs:**| Challenge | Impact | Mitigation |
 |-----------|--------|------------|
-| **False Positives** | Correct flagged as wrong | Tune thresholds carefully |
-| **False Negatives** | Missed hallucinations | Multi-layer detection |
-| **Context Dependency** | Varying accuracy by domain | Domain-specific tuning |
-| **Edge Cases** | Unexpected scenarios | Continuous learning |
+| **False Positives**| Correct flagged as wrong | Tune thresholds carefully |
+| **False Negatives**| Missed hallucinations | Multi-layer detection |
+| **Context Dependency**| Varying accuracy by domain | Domain-specific tuning |
+| **Edge Cases**| Unexpected scenarios | Continuous learning |
 
 ### Performance Considerations
 
-**System Impacts:**
-
-| Factor | Effect | Optimization |
+**System Impacts:**| Factor | Effect | Optimization |
 |--------|--------|-------------|
-| **Latency** | Slower responses | Layer fast methods first |
-| **Cost** | Higher compute | Efficient method selection |
-| **Complexity** | Integration overhead | Modular architecture |
-| **Maintenance** | Ongoing tuning | Automated monitoring |
+| **Latency**| Slower responses | Layer fast methods first |
+| **Cost**| Higher compute | Efficient method selection |
+| **Complexity**| Integration overhead | Modular architecture |
+| **Maintenance**| Ongoing tuning | Automated monitoring |
 
 ### Threshold Management
 
-**Balancing Act:**
-```
+**Balancing Act:**```
 Strict Thresholds:
   + Fewer missed hallucinations
   - More false positives
@@ -604,8 +538,7 @@ Lenient Thresholds:
   - Higher risk exposure
 ```
 
-**Optimization Process:**
-1. Start conservative
+**Optimization Process:**1. Start conservative
 2. Monitor outcomes
 3. Adjust based on data
 4. Segment by use case
@@ -615,16 +548,16 @@ Lenient Thresholds:
 
 | Term | Definition |
 |------|------------|
-| **AI Hallucination** | Output not grounded in provided context or real-world facts |
-| **Hallucination Detection** | Automated systems identifying fabricated AI outputs |
-| **Grounding** | Connecting AI outputs to authoritative data sources |
-| **RAG** | Retrieval-Augmented Generation—fetching context before generation |
-| **LLM-as-Judge** | Using secondary LLM to evaluate primary LLM outputs |
-| **Semantic Similarity** | Measuring meaning closeness via vector embeddings |
-| **Confidence Score** | Model's self-assessed certainty level |
-| **False Positive** | Correct output incorrectly flagged as hallucination |
-| **False Negative** | Hallucination not detected by system |
-| **Uncertainty Estimation** | Quantifying model confidence in predictions |
+| **AI Hallucination**| Output not grounded in provided context or real-world facts |
+| **Hallucination Detection**| Automated systems identifying fabricated AI outputs |
+| **Grounding**| Connecting AI outputs to authoritative data sources |
+| **RAG**| Retrieval-Augmented Generation—fetching context before generation |
+| **LLM-as-Judge**| Using secondary LLM to evaluate primary LLM outputs |
+| **Semantic Similarity**| Measuring meaning closeness via vector embeddings |
+| **Confidence Score**| Model's self-assessed certainty level |
+| **False Positive**| Correct output incorrectly flagged as hallucination |
+| **False Negative**| Hallucination not detected by system |
+| **Uncertainty Estimation**| Quantifying model confidence in predictions |
 
 ## Example Workflows
 

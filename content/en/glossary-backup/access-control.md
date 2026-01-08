@@ -79,8 +79,7 @@ Permits or denies the requested action, based on authorization outcome.
 
 Logs all access attempts and actions. Audit trails support incident detection, investigation, and compliance reporting.
 
-**Hotel Keycard Analogy:**  
-At check-in, your identity is confirmed (identification and authentication). You receive a keycard programmed for your room (authorization). The card only opens allowed doors (enforcement), and all entries are logged (audit).
+**Hotel Keycard Analogy:**At check-in, your identity is confirmed (identification and authentication). You receive a keycard programmed for your room (authorization). The card only opens allowed doors (enforcement), and all entries are logged (audit).
 
 For more on this process, visit [Fortinet: How Access Control Works](https://www.fortinet.com/resources/cyberglossary/access-control).
 
@@ -203,8 +202,7 @@ For an in-depth methods and best practice guide, explore [Frontegg: Access Contr
 - **Identity Silos**: Multiple identity stores fragment access control and create gaps.
 - **Temporary/External Access**: Contractors and vendors require automated onboarding and deprovisioning.
 
-**Solutions:**
-- Use identity federation and [Single Sign-On (SSO)](https://frontegg.com/guides/enterprise-sso) to bridge silos.
+**Solutions:**- Use identity federation and [Single Sign-On (SSO)](https://frontegg.com/guides/enterprise-sso) to bridge silos.
 - Employ just-in-time (JIT) provisioning for temporary access.
 - Automate deprovisioning for timely access removal.
 - Use AI/analytics to detect anomalies in access patterns.

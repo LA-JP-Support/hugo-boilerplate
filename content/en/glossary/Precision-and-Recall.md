@@ -19,9 +19,9 @@ draft: false
 
 Precision and recall are two of the most widely used evaluation metrics in supervised machine learning, particularly for classification and information retrieval tasks. Together, they provide complementary insights into model performance that accuracy alone cannot capture, especially when dealing with imbalanced datasets or scenarios where different types of errors carry different costs.
 
-**Precision** measures the proportion of positive predictions that are actually correct. It answers: "Of all instances the model labeled as positive, how many were actually positive?" High precision means few false positives—when the model predicts something is positive, it's usually right.
+**Precision**measures the proportion of positive predictions that are actually correct. It answers: "Of all instances the model labeled as positive, how many were actually positive?" High precision means few false positives—when the model predicts something is positive, it's usually right.
 
-**Recall** (also called sensitivity or true positive rate) measures the proportion of actual positives correctly identified by the model. It answers: "Of all true positives in the data, how many did the model catch?" High recall means few false negatives—the model finds most of the actual positive cases.
+**Recall**(also called sensitivity or true positive rate) measures the proportion of actual positives correctly identified by the model. It answers: "Of all true positives in the data, how many did the model catch?" High recall means few false negatives—the model finds most of the actual positive cases.
 
 These metrics are vital for evaluating models when datasets are imbalanced, when costs of false positives and false negatives differ significantly, or when specific business requirements demand minimizing particular types of errors. Understanding and balancing precision and recall, alongside related measures such as F1 score and ROC-AUC, ensures robust, context-aware assessment and deployment of AI and automation systems.
 
@@ -31,16 +31,16 @@ Precision and recall are both derived from the confusion matrix, which summarize
 
 |  | Predicted Positive | Predicted Negative |
 |---|---|---|
-| **Actual Positive** | True Positive (TP) | False Negative (FN) |
-| **Actual Negative** | False Positive (FP) | True Negative (TN) |
+| **Actual Positive**| True Positive (TP) | False Negative (FN) |
+| **Actual Negative**| False Positive (FP) | True Negative (TN) |
 
-**True Positive (TP):** Model correctly predicted a positive instance
+**True Positive (TP):**Model correctly predicted a positive instance
 
-**False Positive (FP):** Model incorrectly predicted positive (was actually negative)
+**False Positive (FP):**Model incorrectly predicted positive (was actually negative)
 
-**True Negative (TN):** Model correctly predicted a negative instance
+**True Negative (TN):**Model correctly predicted a negative instance
 
-**False Negative (FN):** Model incorrectly predicted negative (was actually positive)
+**False Negative (FN):**Model incorrectly predicted negative (was actually positive)
 
 The confusion matrix is the starting point for almost all classification evaluation metrics, including precision, recall, F1 score, accuracy, and specificity.
 
@@ -60,17 +60,17 @@ Precision = TP / (TP + FP)
 
 Precision is high when the model makes very few false positive errors. When it predicts "positive," it's usually correct.
 
-**High Precision:** Few false alarms; most positive predictions are true
+**High Precision:**Few false alarms; most positive predictions are true
 
-**Low Precision:** Many false alarms; positive predictions are often wrong
+**Low Precision:**Many false alarms; positive predictions are often wrong
 
 ### When Precision Matters
 
 Precision is especially important when the cost of a false positive is high:
 
-- **Spam Detection:** High precision ensures legitimate emails are rarely marked as spam
-- **Legal Document Review:** Incorrectly labeling non-relevant documents as relevant wastes expensive attorney time
-- **Medical Screening:** False positives cause unnecessary stress, follow-up procedures, and costs
+- **Spam Detection:**High precision ensures legitimate emails are rarely marked as spam
+- **Legal Document Review:**Incorrectly labeling non-relevant documents as relevant wastes expensive attorney time
+- **Medical Screening:**False positives cause unnecessary stress, follow-up procedures, and costs
 
 ### Limitations
 
@@ -92,17 +92,17 @@ Recall = TP / (TP + FN)
 
 Recall is high when the model misses very few actual positive cases.
 
-**High Recall:** The model finds most of the positives (few false negatives)
+**High Recall:**The model finds most of the positives (few false negatives)
 
-**Low Recall:** The model misses many positives (many false negatives)
+**Low Recall:**The model misses many positives (many false negatives)
 
 ### When Recall Matters
 
 Recall is crucial when missing a positive case has high costs:
 
-- **Medical Diagnosis:** Missing a disease (false negative) can be fatal; high recall ensures most sick patients are found
-- **Fraud Detection:** Missing a fraudulent transaction is costly
-- **Safety-Critical Systems:** Failing to detect hazards can cause serious harm
+- **Medical Diagnosis:**Missing a disease (false negative) can be fatal; high recall ensures most sick patients are found
+- **Fraud Detection:**Missing a fraudulent transaction is costly
+- **Safety-Critical Systems:**Failing to detect hazards can cause serious harm
 
 ### Limitations
 
@@ -110,28 +110,26 @@ Over-optimizing for recall may cause the model to make many false positive error
 
 ## Calculating Precision and Recall: Example
 
-**Scenario:** Detecting fraudulent credit card transactions
+**Scenario:**Detecting fraudulent credit card transactions
 
-- **Dataset:** 1,000 transactions; 50 are fraudulent (positive class), 950 are legitimate
-- **Model predicts:** 40 transactions as fraud
+- **Dataset:**1,000 transactions; 50 are fraudulent (positive class), 950 are legitimate
+- **Model predicts:**40 transactions as fraud
   - 30 are truly fraudulent (TP = 30)
   - 10 are legitimate but flagged (FP = 10)
 - Out of 50 actual frauds, 20 are missed (FN = 20)
 - Model correctly identifies 940 as legitimate (TN = 940)
 
-**Confusion Matrix:**
-
-|  | Predicted Fraud | Predicted Legitimate |
+**Confusion Matrix:**|  | Predicted Fraud | Predicted Legitimate |
 |---|---|---|
-| **Actual Fraud** | 30 (TP) | 20 (FN) |
-| **Actual Legitimate** | 10 (FP) | 940 (TN) |
+| **Actual Fraud**| 30 (TP) | 20 (FN) |
+| **Actual Legitimate**| 10 (FP) | 940 (TN) |
 
 **Calculations:**
 
-**Precision:** TP / (TP + FP) = 30 / (30 + 10) = 0.75 or 75%
+**Precision:**TP / (TP + FP) = 30 / (30 + 10) = 0.75 or 75%
 - *Interpretation: 75% of transactions flagged as fraud were truly fraudulent*
 
-**Recall:** TP / (TP + FN) = 30 / (30 + 20) = 0.60 or 60%
+**Recall:**TP / (TP + FN) = 30 / (30 + 20) = 0.60 or 60%
 - *Interpretation: The model identified 60% of all fraud cases*
 
 ## Precision vs. Recall Trade-offs
@@ -145,33 +143,30 @@ Precision and recall typically trade off against each other:
 
 ### The Precision-Recall Balance
 
-**High precision, low recall:** Model rarely makes positive predictions but they are mostly correct
+**High precision, low recall:**Model rarely makes positive predictions but they are mostly correct
 
-**High recall, low precision:** Model finds most positives but also incorrectly labels many negatives as positives
+**High recall, low precision:**Model finds most positives but also incorrectly labels many negatives as positives
 
 ### Threshold Dependence
 
 The balance between precision and recall can be adjusted using the model's decision threshold:
 
-- **Lowering the threshold** increases recall but reduces precision
-- **Raising the threshold** increases precision but reduces recall
+- **Lowering the threshold**increases recall but reduces precision
+- **Raising the threshold**increases precision but reduces recall
 
 Precision-recall curves plot precision vs. recall at various thresholds, helping identify optimal operating points.
 
 ## When to Use Precision, Recall, or Both
 
-**Focus on Precision When:**
-- False positives have high costs (e.g., marking important emails as spam)
+**Focus on Precision When:**- False positives have high costs (e.g., marking important emails as spam)
 - Resources for investigating predictions are limited
 - User trust depends on prediction accuracy
 
-**Focus on Recall When:**
-- False negatives have high costs (e.g., missing cancer diagnosis)
+**Focus on Recall When:**- False negatives have high costs (e.g., missing cancer diagnosis)
 - Finding all positive cases is critical regardless of false alarms
 - Follow-up processes can filter false positives efficiently
 
-**Balance Both When:**
-- Most real-world problems require considering both metrics
+**Balance Both When:**- Most real-world problems require considering both metrics
 - Both false positives and false negatives have consequences
 - Use F1 score or precision-recall curves for optimization
 
@@ -193,13 +188,13 @@ Use when you need a single metric that balances precision and recall, especially
 Accuracy = (TP + TN) / (TP + FP + TN + FN)
 ```
 
-**Limitation:** Can be misleading when classes are imbalanced. A model predicting all negatives in a 99:1 imbalanced dataset achieves 99% accuracy but 0% recall.
+**Limitation:**Can be misleading when classes are imbalanced. A model predicting all negatives in a 99:1 imbalanced dataset achieves 99% accuracy but 0% recall.
 
 ### ROC-AUC
 
-**ROC Curve:** Plots true positive rate (recall) vs. false positive rate at different thresholds
+**ROC Curve:**Plots true positive rate (recall) vs. false positive rate at different thresholds
 
-**AUC:** Area under the ROC curve; measures model's ability to distinguish between classes across all thresholds
+**AUC:**Area under the ROC curve; measures model's ability to distinguish between classes across all thresholds
 
 Useful for comparing models and visualizing trade-offs.
 
@@ -213,51 +208,29 @@ Measures the proportion of actual negatives correctly identified. Especially rel
 
 ## Best Practices
 
-**Evaluate Both Metrics**
+**Evaluate Both Metrics**Report both precision and recall, not just accuracy. Single metrics can hide critical weaknesses.
 
-Report both precision and recall, not just accuracy. Single metrics can hide critical weaknesses.
+**Use Confusion Matrix**Understand model errors through the confusion matrix before optimizing metrics.
 
-**Use Confusion Matrix**
+**Report F1 Score as Summary**Include F1 score but always show precision and recall separately for complete understanding.
 
-Understand model errors through the confusion matrix before optimizing metrics.
+**Visualize Performance**Use precision-recall curves and ROC curves to understand performance across thresholds.
 
-**Report F1 Score as Summary**
+**Adjust Thresholds**Set decision thresholds to meet business or safety requirements rather than default values.
 
-Include F1 score but always show precision and recall separately for complete understanding.
+**Choose Metrics Based on Costs**Select optimization targets based on real-world costs of different error types in your application.
 
-**Visualize Performance**
-
-Use precision-recall curves and ROC curves to understand performance across thresholds.
-
-**Adjust Thresholds**
-
-Set decision thresholds to meet business or safety requirements rather than default values.
-
-**Choose Metrics Based on Costs**
-
-Select optimization targets based on real-world costs of different error types in your application.
-
-**Complement with Additional Metrics**
-
-For thorough evaluation, include specificity, ROC-AUC, and mean average precision.
+**Complement with Additional Metrics**For thorough evaluation, include specificity, ROC-AUC, and mean average precision.
 
 ## Common Pitfalls
 
-**Ignoring Class Imbalance**
+**Ignoring Class Imbalance**High accuracy can mask poor performance on rare classes; precision and recall provide better insight.
 
-High accuracy can mask poor performance on rare classes; precision and recall provide better insight.
+**Reporting Only One Metric**Can hide critical weaknesses; always report both precision and recall.
 
-**Reporting Only One Metric**
+**Threshold Sensitivity**Precision and recall values depend on the decision threshold; evaluate across multiple thresholds or use curves.
 
-Can hide critical weaknesses; always report both precision and recall.
-
-**Threshold Sensitivity**
-
-Precision and recall values depend on the decision threshold; evaluate across multiple thresholds or use curves.
-
-**Undefined Values**
-
-If there are no positive predictions (TP + FP = 0), precision is undefined. Handle edge cases appropriately.
+**Undefined Values**If there are no positive predictions (TP + FP = 0), precision is undefined. Handle edge cases appropriately.
 
 ## Use Case Examples
 

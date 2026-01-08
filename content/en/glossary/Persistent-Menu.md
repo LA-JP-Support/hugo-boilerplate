@@ -53,29 +53,17 @@ The Persistent Menu is usually accessed by clicking or tapping a menu icon in th
 
 ### Typical Actions
 
-**Restart Bot**
+**Restart Bot**Resets conversation to the start or welcome step, useful when users want to begin fresh or encounter issues.
 
-Resets conversation to the start or welcome step, useful when users want to begin fresh or encounter issues.
+**Access Help/FAQ**Displays support resources or answers to common questions, providing self-service assistance.
 
-**Access Help/FAQ**
+**Jump to Main Menu**Returns users to primary navigation, offering a clear path back from specialized flows.
 
-Displays support resources or answers to common questions, providing self-service assistance.
+**Unsubscribe**Opts users out of future messages or interactions, respecting user preferences and privacy.
 
-**Jump to Main Menu**
+**Open External URLs**Launches web pages for additional resources, documentation, or related services.
 
-Returns users to primary navigation, offering a clear path back from specialized flows.
-
-**Unsubscribe**
-
-Opts users out of future messages or interactions, respecting user preferences and privacy.
-
-**Open External URLs**
-
-Launches web pages for additional resources, documentation, or related services.
-
-**Trigger Quizzes**
-
-Initiates product recommendation or feedback quizzes, engaging users in interactive experiences.
+**Trigger Quizzes**Initiates product recommendation or feedback quizzes, engaging users in interactive experiences.
 
 ## Platform Support and Limitations
 
@@ -88,49 +76,29 @@ Initiates product recommendation or feedback quizzes, engaging users in interact
 
 ### Key Limitations
 
-**Button Limit**
+**Button Limit**Messenger supports up to 3 buttons per menu level. Exceeding this requires nesting or prioritization.
 
-Messenger supports up to 3 buttons per menu level. Exceeding this requires nesting or prioritization.
+**Appearance**Menu icon and location may differ per channel. Consistent branding may require platform-specific customization.
 
-**Appearance**
+**Menu Scope**Some platforms allow only a single menu per bot instance, requiring careful global design.
 
-Menu icon and location may differ per channel. Consistent branding may require platform-specific customization.
-
-**Menu Scope**
-
-Some platforms allow only a single menu per bot instance, requiring careful global design.
-
-**Input Control**
-
-Disabling user input often applies globally, not per flow, requiring careful consideration of use cases.
+**Input Control**Disabling user input often applies globally, not per flow, requiring careful consideration of use cases.
 
 ## Menu Structure and Actions
 
 ### Button Action Types
 
-**Send Message**
+**Send Message**Triggers a specific bot flow or sends a defined message, enabling programmatic conversation control.
 
-Triggers a specific bot flow or sends a defined message, enabling programmatic conversation control.
+**Open URL**Opens a specified web page, often in an in-app browser, for external resources or documentation.
 
-**Open URL**
+**Restart Bot**Resets the conversation to the start or welcome step, providing a clean slate.
 
-Opens a specified web page, often in an in-app browser, for external resources or documentation.
+**Unsubscribe**Opts the user out of future messages or interactions, ensuring compliance with user preferences.
 
-**Restart Bot**
+**Take Quiz**Launches a product or feedback quiz, engaging users in interactive experiences.
 
-Resets the conversation to the start or welcome step, providing a clean slate.
-
-**Unsubscribe**
-
-Opts the user out of future messages or interactions, ensuring compliance with user preferences.
-
-**Take Quiz**
-
-Launches a product or feedback quiz, engaging users in interactive experiences.
-
-**Help/FAQ**
-
-Displays support or answers to common questions, enabling self-service resolution.
+**Help/FAQ**Displays support or answers to common questions, enabling self-service resolution.
 
 ### Nested Menus
 
@@ -138,25 +106,19 @@ Some platforms like Messenger allow menu nesting, grouping related actions under
 
 ### Example Menu Configurations
 
-**E-commerce Chatbot**
-
-| Button | Action |
+**E-commerce Chatbot**| Button | Action |
 |--------|--------|
 | 🛒 Shop | Open main shopping flow |
 | 🚚 Track Order | Show order status |
 | ❓ Help | FAQ or support flow |
 
-**Product Recommendation Quiz**
-
-| Button | Action |
+**Product Recommendation Quiz**| Button | Action |
 |--------|--------|
 | 📝 Take Quiz | Start product quiz flow |
 | 🔁 Restart Bot | Reset conversation |
 | ❌ Unsubscribe | Opt-out of bot messages |
 
-**Restaurant Reservation Bot**
-
-| Button | Action |
+**Restaurant Reservation Bot**| Button | Action |
 |--------|--------|
 | 📅 Book Table | Start reservation flow |
 | 📖 Menu | Open menu URL |
@@ -166,43 +128,34 @@ Some platforms like Messenger allow menu nesting, grouping related actions under
 
 ### General Steps
 
-1. **Log in to Your Bot Platform Dashboard**
-2. **Open Bot Settings or Flow Builder** - Find the "Persistent Menu", "Menu", or "Navigation" section
-3. **Create/Edit the Persistent Menu** - Usually via a "Create" or "Edit" button
-4. **Add Menu Items** - For each slot: Choose action type, label, and target (flow, URL, etc)
-5. **Arrange Order** - Drag and drop to reorder; most important actions first
-6. **Advanced Options** - Localize menu, enable/disable user input, add submenus if supported
-7. **Save & Publish** - Click "Save", "Publish", or toggle menu live
+1. **Log in to Your Bot Platform Dashboard**2. **Open Bot Settings or Flow Builder**- Find the "Persistent Menu", "Menu", or "Navigation" section
+3. **Create/Edit the Persistent Menu**- Usually via a "Create" or "Edit" button
+4. **Add Menu Items**- For each slot: Choose action type, label, and target (flow, URL, etc)
+5. **Arrange Order**- Drag and drop to reorder; most important actions first
+6. **Advanced Options**- Localize menu, enable/disable user input, add submenus if supported
+7. **Save & Publish**- Click "Save", "Publish", or toggle menu live
 
 ### Platform-Specific Instructions
 
-**Facebook Messenger (via Chatfuel)**
-
-1. Go to Chatfuel Dashboard
+**Facebook Messenger (via Chatfuel)**1. Go to Chatfuel Dashboard
 2. Open the Flow tab; create/select your flow
 3. Double-click canvas, select "Entry Points → Persistent Menu"
 4. Add up to 3 buttons (e.g., "Restart Bot", "Help", "Unsubscribe")
 5. Drag to reorder, enable menu with toggle
 6. For localization, click "Localization" to add translations
 
-**ChatbotBuilder.ai**
-
-1. Go to Settings → Channels → Facebook Messenger/Instagram → Persistent Menu
+**ChatbotBuilder.ai**1. Go to Settings → Channels → Facebook Messenger/Instagram → Persistent Menu
 2. Click "Edit" to open setup wizard
 3. Add menu items as needed
 4. To disable user input, uncheck "Allow Keyboard Input"
 5. Save and publish
 
-**Certainly**
-
-1. Open Bot Settings
+**Certainly**1. Open Bot Settings
 2. Select the Persistent Menu tab
 3. Add items (Open URL, Send message, Nested)
 4. Save your changes
 
-**Webchat Widgets**
-
-1. Log in to bot platform dashboard
+**Webchat Widgets**1. Log in to bot platform dashboard
 2. Go to web chatbot manager
 3. Click on "Persistent Menu"
 4. Click "Create", configure menu in the popup
@@ -215,7 +168,7 @@ Some platforms like Messenger allow menu nesting, grouping related actions under
 
 Add translations via a "Localization" or "Add Language" button. Select target language and enter translated button labels. Note that only menu button text is localized, not full conversation flows.
 
-**Best Practice:** Only localize if your bot supports those languages throughout the user journey to maintain consistency.
+**Best Practice:**Only localize if your bot supports those languages throughout the user journey to maintain consistency.
 
 ### Disabling User Input
 
@@ -223,77 +176,43 @@ Disable free text input to restrict users to menu and quick replies only. This i
 
 ### Menu Appearance and Order
 
-**Location**
+**Location**Menu is usually bottom-right in Messenger, but varies per platform.
 
-Menu is usually bottom-right in Messenger, but varies per platform.
+**Order**Place most critical actions at the top as order matters for user attention and accessibility.
 
-**Order**
+**Labels**Use descriptive, short labels (30-character limit is common). Clear, action-oriented language improves usability.
 
-Place most critical actions at the top as order matters for user attention and accessibility.
+**Emojis**Can aid recognition and visual appeal, but keep usage professional and accessible.
 
-**Labels**
-
-Use descriptive, short labels (30-character limit is common). Clear, action-oriented language improves usability.
-
-**Emojis**
-
-Can aid recognition and visual appeal, but keep usage professional and accessible.
-
-**Buttons**
-
-Can open URLs or trigger bot flows, providing flexible functionality.
+**Buttons**Can open URLs or trigger bot flows, providing flexible functionality.
 
 ## Best Practices
 
-**Keep it Simple**
+**Keep it Simple**Limit to 2-3 primary actions to avoid menu clutter and decision paralysis.
 
-Limit to 2-3 primary actions to avoid menu clutter and decision paralysis.
+**Prioritize Critical Functions**"Restart", "Help", and "Unsubscribe" should be easily accessible for user control and compliance.
 
-**Prioritize Critical Functions**
+**Clear Labels**Use terms like "Restart Bot" over vague terms like "Again" for clarity.
 
-"Restart", "Help", and "Unsubscribe" should be easily accessible for user control and compliance.
+**Mix Action Types**Combine links, flows, and submenus as needed to provide comprehensive functionality.
 
-**Clear Labels**
+**Test Thoroughly**Check on all channels and devices to ensure visibility and proper function.
 
-Use terms like "Restart Bot" over vague terms like "Again" for clarity.
+**Maintain Accessibility**Use readable fonts and clear contrast. Ensure screen reader compatibility.
 
-**Mix Action Types**
-
-Combine links, flows, and submenus as needed to provide comprehensive functionality.
-
-**Test Thoroughly**
-
-Check on all channels and devices to ensure visibility and proper function.
-
-**Maintain Accessibility**
-
-Use readable fonts and clear contrast. Ensure screen reader compatibility.
-
-**Update Regularly**
-
-Adjust menu based on analytics and user feedback to maintain relevance.
+**Update Regularly**Adjust menu based on analytics and user feedback to maintain relevance.
 
 ## Troubleshooting
 
-**Menu Not Showing**
+**Menu Not Showing**Confirm menu is enabled and published. Check channel support and configuration settings.
 
-Confirm menu is enabled and published. Check channel support and configuration settings.
+**User Input Disabled Unintentionally**Remember disabling input often applies to the whole bot, not individual flows.
 
-**User Input Disabled Unintentionally**
+**Localization Issues**Verify language settings are correct. Only button text is localized, not conversation flows.
 
-Remember disabling input often applies to the whole bot, not individual flows.
+**Too Many Buttons**Respect platform limits (e.g., Messenger = 3 per menu level). Use nesting if supported or prioritize most important actions.
 
-**Localization Issues**
-
-Verify language settings are correct. Only button text is localized, not conversation flows.
-
-**Too Many Buttons**
-
-Respect platform limits (e.g., Messenger = 3 per menu level). Use nesting if supported or prioritize most important actions.
-
-**Testing**
-
-Test on all target channels and devices for visibility and function before full deployment.
+**Testing**Test on all target channels and devices for visibility and function before full deployment.
 
 ## References
 

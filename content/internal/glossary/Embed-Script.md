@@ -19,16 +19,14 @@ url = "/internal/glossary/Embed-Script/"
 +++
 ## ¿Qué es un Script de Inserción?
 
-Un **script de inserción** es un fragmento compacto y autónomo de JavaScript que se inserta en el HTML de un sitio web para cargar y mostrar contenido dinámico de terceros—comúnmente chatbots o widgets de IA. Al agregarse al sitio, el script recupera el código y los recursos del chatbot desde los servidores del proveedor y muestra el widget en el navegador.
+Un **script de inserción**es un fragmento compacto y autónomo de JavaScript que se inserta en el HTML de un sitio web para cargar y mostrar contenido dinámico de terceros—comúnmente chatbots o widgets de IA. Al agregarse al sitio, el script recupera el código y los recursos del chatbot desde los servidores del proveedor y muestra el widget en el navegador.
 
-**Características clave:**
-- **Plug-and-play:** Solo requiere copiar y pegar en el HTML—sin programación avanzada.
-- **Dinámico:** Carga dependencias e interfaz desde el proveedor en tiempo real.
-- **Aislado:** Se ejecuta en un contexto de navegador aislado, minimizando riesgos de interferencia con otros elementos del sitio.
-- **Universal:** Funciona en prácticamente cualquier plataforma web que permita HTML o JavaScript personalizado.
+**Características clave:**- **Plug-and-play:**Solo requiere copiar y pegar en el HTML—sin programación avanzada.
+- **Dinámico:**Carga dependencias e interfaz desde el proveedor en tiempo real.
+- **Aislado:**Se ejecuta en un contexto de navegador aislado, minimizando riesgos de interferencia con otros elementos del sitio.
+- **Universal:**Funciona en prácticamente cualquier plataforma web que permita HTML o JavaScript personalizado.
 
-**Contexto de Chatbot de IA y Automatización:**  
-Los scripts de inserción permiten desplegar chatbots—impulsados por IA—para ventas, soporte, generación de leads y engagement, directamente en su sitio o aplicación web. Los visitantes interactúan con el chatbot en tiempo real, recibiendo respuestas automatizadas y personalizadas.
+**Contexto de Chatbot de IA y Automatización:**Los scripts de inserción permiten desplegar chatbots—impulsados por IA—para ventas, soporte, generación de leads y engagement, directamente en su sitio o aplicación web. Los visitantes interactúan con el chatbot en tiempo real, recibiendo respuestas automatizadas y personalizadas.
 
 ## Cómo se usan los Scripts de Inserción
 
@@ -36,17 +34,14 @@ Los scripts de inserción permiten desplegar chatbots—impulsados por IA—para
 
 La mayoría de los proveedores de chatbots ofrecen un script de inserción listo para usar vinculado a su cuenta o instancia. El flujo básico es:
 
-1. **Obtener el Script de Inserción:**  
-   - Inicie sesión en el panel de control (por ejemplo, [Chatbase](https://chatbase.co/), [ChatBot.com](https://www.chatbot.com/), [Pickaxe](https://pickaxe.co/)).
+1. **Obtener el Script de Inserción:**- Inicie sesión en el panel de control (por ejemplo, [Chatbase](https://chatbase.co/), [ChatBot.com](https://www.chatbot.com/), [Pickaxe](https://pickaxe.co/)).
    - Navegue a la sección “Desplegar”, “Publicar” o “Integraciones”.
    - Copie el fragmento de JavaScript proporcionado ([ejemplo para Chatbase](https://chatbase.co/docs/developer-guides/javascript-embed#quick-start-guide)).
 
-2. **Agregarlo a su sitio web:**  
-   - Pegue el script en su HTML, ya sea en el `<head>` o justo antes de la etiqueta de cierre `</body>` para mejor rendimiento.
+2. **Agregarlo a su sitio web:**- Pegue el script en su HTML, ya sea en el `<head>` o justo antes de la etiqueta de cierre `</body>` para mejor rendimiento.
    - Guarde y vuelva a publicar o actualice su sitio.
 
-**Ejemplo:**
-```html
+**Ejemplo:**```html
 <!-- Ejemplo de Script de Inserción de Chatbase -->
 <script src="https://www.chatbase.co/embed.min.js" agent-id="YOUR_AGENT_ID" async></script>
 ```
@@ -60,19 +55,16 @@ O para configuración avanzada:
 </script>
 <script src="https://www.chatbase.co/embed.min.js" async></script>
 ```
-**Resultado:**  
-Aparece una burbuja de chat en su sitio web, ofreciendo interacción instantánea impulsada por IA a sus visitantes.
+**Resultado:**Aparece una burbuja de chat en su sitio web, ofreciendo interacción instantánea impulsada por IA a sus visitantes.
 
 ### Métodos Avanzados de Integración
 
 Más allá de la inserción básica, los scripts permiten integraciones más profundas:
 
-- **Verificación de Identidad:**  
-  Pase datos del usuario (por ejemplo, nombre, email, ID de usuario) para saludos personalizados, respuestas contextuales y acciones seguras.  
+- **Verificación de Identidad:**Pase datos del usuario (por ejemplo, nombre, email, ID de usuario) para saludos personalizados, respuestas contextuales y acciones seguras.  
   [Ver Verificación de Identidad de Chatbase](https://chatbase.co/docs/developer-guides/identity-verification)
 
-- **Escuchadores de Eventos:**  
-  Reaccione a acciones del usuario o del bot (por ejemplo, registre conversaciones, active analíticas, abra/cierre el widget programáticamente).  
+- **Escuchadores de Eventos:**Reaccione a acciones del usuario o del bot (por ejemplo, registre conversaciones, active analíticas, abra/cierre el widget programáticamente).  
   ```javascript
   window.chatbase.addEventListener("user-message", (event) => {
     console.log("El usuario dijo:", event.content);
@@ -81,14 +73,11 @@ Más allá de la inserción básica, los scripts permiten integraciones más pro
   ```
   [Escuchadores de Eventos de Chatbase](https://chatbase.co/docs/developer-guides/javascript-embed#advanced-features)
 
-- **Acciones Personalizadas:**  
-  Dispare formularios, flujos de trabajo o llamadas a APIs desde la interfaz de chat.
+- **Acciones Personalizadas:**Dispare formularios, flujos de trabajo o llamadas a APIs desde la interfaz de chat.
 
-- **Contenido Dinámico:**  
-  Cambie saludos, apariencia del widget o contexto de la conversación según el contenido de la página o la sesión del usuario.
+- **Contenido Dinámico:**Cambie saludos, apariencia del widget o contexto de la conversación según el contenido de la página o la sesión del usuario.
 
-- **Control de Widget (API):**  
-  Use APIs de JS para abrir, cerrar, ocultar o destruir el widget programáticamente (ver [API de Widget de ChatBot.com](https://www.chatbot.com/docs/chat-widget-api/)):
+- **Control de Widget (API):**Use APIs de JS para abrir, cerrar, ocultar o destruir el widget programáticamente (ver [API de Widget de ChatBot.com](https://www.chatbot.com/docs/chat-widget-api/)):
   ```javascript
   OpenWidget.call('maximize');    // Abrir chat
   OpenWidget.call('minimize');    // Minimizar chat
@@ -98,20 +87,16 @@ Más allá de la inserción básica, los scripts permiten integraciones más pro
 
 ### Uso Específico por Plataforma
 
-**WordPress:**  
-- Use plugins oficiales (por ejemplo, [ChatBot.com para WordPress](https://wordpress.org/plugins/chatbot/)).
+**WordPress:**- Use plugins oficiales (por ejemplo, [ChatBot.com para WordPress](https://wordpress.org/plugins/chatbot/)).
 - Ingrese su clave API o ID de agente en la configuración del plugin.
 - No se requiere edición manual de scripts.
 
-**Shopify, Wix, Squarespace:**  
-- Use los marketplaces de apps o inserte el código de inserción en las secciones de tema/código personalizado.
+**Shopify, Wix, Squarespace:**- Use los marketplaces de apps o inserte el código de inserción en las secciones de tema/código personalizado.
 - [Ejemplo de app para Shopify](https://apps.shopify.com/), [Guía de código personalizado para Wix](https://support.wix.com/en/article/embedding-custom-code-to-your-site).
 
-**HTML/CMS Personalizado:**  
-- Pegue directamente el código de inserción en archivos de plantilla o inyectores de código.
+**HTML/CMS Personalizado:**- Pegue directamente el código de inserción en archivos de plantilla o inyectores de código.
 
-**Knack, Webflow, Constructores No-Code:**  
-- Si el HTML está restringido, inyecte el script dinámicamente mediante JavaScript:
+**Knack, Webflow, Constructores No-Code:**- Si el HTML está restringido, inyecte el script dinámicamente mediante JavaScript:
   ```javascript
   (function() {
       var script = document.createElement('script');
@@ -210,43 +195,34 @@ Más allá de la inserción básica, los scripts permiten integraciones más pro
 
 ### Opciones de Personalización
 
-- **Apariencia Visual:**
-  - Cambie el color de la burbuja, fondo del widget y fuentes.
+- **Apariencia Visual:**- Cambie el color de la burbuja, fondo del widget y fuentes.
   - Suba un logo o avatar personalizado de la empresa.
   - White-label o elimine el branding del proveedor (en planes seleccionados).
 
-- **Mensajes de Bienvenida:**
-  - Configure mensajes de bienvenida estáticos o dinámicos.
+- **Mensajes de Bienvenida:**- Configure mensajes de bienvenida estáticos o dinámicos.
   - Muestre enlaces, botones o llamados a la acción personalizados en la ventana inicial.
 
-- **Posición del Widget:**
-  - Ubique el widget en la esquina inferior izquierda, derecha o con coordenadas personalizadas.
+- **Posición del Widget:**- Ubique el widget en la esquina inferior izquierda, derecha o con coordenadas personalizadas.
   - Elija auto-lanzamiento o que el usuario deba hacer clic para abrir.
 
-- **Comportamiento:**
-  - Habilite/deshabilite entrada de texto libre.
+- **Comportamiento:**- Habilite/deshabilite entrada de texto libre.
   - Configure flujos conversacionales, “personalidad” del bot, respuestas alternativas y transferencia a agentes humanos.
 
-- **Idioma y Localización:**
-  - Establezca el idioma por defecto.
+- **Idioma y Localización:**- Establezca el idioma por defecto.
   - Active detección multilingüe o permita al usuario cambiar de idioma.
   - [Opciones de idioma de Chatbase](https://chatbase.co/docs/developer-guides/javascript-embed#user-experience)
 
-- **Accesibilidad:**
-  - Navegación por teclado, roles ARIA, soporte para lectores de pantalla, modo de alto contraste.
+- **Accesibilidad:**- Navegación por teclado, roles ARIA, soporte para lectores de pantalla, modo de alto contraste.
 
 ## Consideraciones de Seguridad y Cumplimiento
 
 ### Seguridad de Clave API
 
-- **Nunca exponga claves API secretas o privilegiadas en scripts públicos.**
-- Use solo claves públicas o restringidas para uso en el cliente.
+- **Nunca exponga claves API secretas o privilegiadas en scripts públicos.**- Use solo claves públicas o restringidas para uso en el cliente.
 - Para autenticación de usuario, utilice verificación de identidad segura (pase tokens o contexto de usuario desde su backend).
 - Considere proxies del lado servidor para operaciones sensibles o privilegiadas.
 
-**Lista de Verificación de Seguridad:**
-
-| Tarea de Seguridad                               | Recomendación                                            |
+**Lista de Verificación de Seguridad:**| Tarea de Seguridad                               | Recomendación                                            |
 |--------------------------------------------------|----------------------------------------------------------|
 | Usar claves API públicas/restringidas            | ✔️                                                       |
 | Evitar incrustar claves secretas/privadas en scripts | ✔️                                                   |
@@ -256,14 +232,10 @@ Más allá de la inserción básica, los scripts permiten integraciones más pro
 
 ### Cumplimiento de Privacidad y Legal
 
-- **GDPR / CCPA:**  
-  Obtenga consentimiento antes de recolectar datos personales a través del chatbot.
-- **Acceso y Eliminación de Datos:**  
-  Permita a los usuarios solicitar, acceder o eliminar sus datos.
-- **Encriptación:**  
-  Garantice que todos los datos en tránsito y en reposo estén cifrados.
-- **Auditoría y Logs:**  
-  Mantenga registros de las interacciones del chatbot para cumplimiento.
+- **GDPR / CCPA:**Obtenga consentimiento antes de recolectar datos personales a través del chatbot.
+- **Acceso y Eliminación de Datos:**Permita a los usuarios solicitar, acceder o eliminar sus datos.
+- **Encriptación:**Garantice que todos los datos en tránsito y en reposo estén cifrados.
+- **Auditoría y Logs:**Mantenga registros de las interacciones del chatbot para cumplimiento.
 
 La mayoría de los proveedores reconocidos incluyen funcionalidades y documentación de cumplimiento integrados.
 
@@ -283,8 +255,7 @@ La mayoría de los proveedores reconocidos incluyen funcionalidades y documentac
 | El widget se sobrepone al contenido      | Conflictos de CSS                           | Ajuste posición o z-index en CSS personalizado         |
 | El widget no es accesible en móviles     | Widget no optimizado para móviles           | Pruebe en dispositivos, ajuste configuración móvil     |
 
-**Diagnóstico Paso a Paso:**
-1. Abra la consola del navegador y revise errores de JavaScript.
+**Diagnóstico Paso a Paso:**1. Abra la consola del navegador y revise errores de JavaScript.
 2. Valide URLs de scripts, parámetros e IDs de agente.
 3. Confirme que el dominio de su sitio está permitido en la configuración del chatbot.
 4. Pruebe con extensiones de navegador deshabilitadas o en modo incógnito.
@@ -294,40 +265,27 @@ La mayoría de los proveedores reconocidos incluyen funcionalidades y documentac
 
 ## Mejores Prácticas para Scripts de Inserción
 
-- **Utilice siempre el código oficial más reciente de su proveedor de chatbot.**
-- **Cargue los scripts de forma asíncrona (`async` o `defer`) para no bloquear el renderizado del sitio.**
-- **Pruebe el chatbot en los principales navegadores y dispositivos móviles.**
-- **Minimice la cantidad de scripts de terceros para reducir riesgos de seguridad.**
-- **Revise regularmente analíticas y feedback de usuarios para optimizar el rendimiento y UX del chatbot.**
-- **Actualice el script si su proveedor lanza nuevas versiones.**
+- **Utilice siempre el código oficial más reciente de su proveedor de chatbot.**- **Cargue los scripts de forma asíncrona (`async` o `defer`) para no bloquear el renderizado del sitio.**- **Pruebe el chatbot en los principales navegadores y dispositivos móviles.**- **Minimice la cantidad de scripts de terceros para reducir riesgos de seguridad.**- **Revise regularmente analíticas y feedback de usuarios para optimizar el rendimiento y UX del chatbot.**- **Actualice el script si su proveedor lanza nuevas versiones.**
 
-**Consejos de Accesibilidad:**
-- Asegure la navegación por teclado y los estados de enfoque.
+**Consejos de Accesibilidad:**- Asegure la navegación por teclado y los estados de enfoque.
 - Proporcione alternativas de texto para íconos y avatares.
 - Siga las [directrices WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/).
 
-**Consejos de Cumplimiento:**
-- Muestre avisos de privacidad y consentimiento antes de recolectar información.
+**Consejos de Cumplimiento:**- Muestre avisos de privacidad y consentimiento antes de recolectar información.
 - Brinde a los usuarios opciones para darse de baja o solicitar sus datos.
 
 ## Preguntas Frecuentes (FAQ)
 
-**P: ¿Qué es un script de inserción?**  
-R: Es un fragmento de JavaScript que carga un chatbot o widget de IA en su sitio web al pegarlo en su HTML.
+**P: ¿Qué es un script de inserción?**R: Es un fragmento de JavaScript que carga un chatbot o widget de IA en su sitio web al pegarlo en su HTML.
 
-**P: ¿Dónde debo colocar el script de inserción?**  
-R: Preferiblemente justo antes de la etiqueta de cierre `</body>` por rendimiento, o en el `<head>` para cargar el widget más rápido. Algunas plataformas especifican la ubicación exacta—consulte la documentación.
+**P: ¿Dónde debo colocar el script de inserción?**R: Preferiblemente justo antes de la etiqueta de cierre `</body>` por rendimiento, o en el `<head>` para cargar el widget más rápido. Algunas plataformas especifican la ubicación exacta—consulte la documentación.
 
-**P: ¿Puedo personalizar la apariencia y saludos del chatbot?**  
-R: Sí. La mayoría de los proveedores le permiten configurar apariencia, saludos, branding y más desde el panel de control o la configuración del script.
+**P: ¿Puedo personalizar la apariencia y saludos del chatbot?**R: Sí. La mayoría de los proveedores le permiten configurar apariencia, saludos, branding y más desde el panel de control o la configuración del script.
 
-**P: ¿Es seguro incluir mi clave API en el script de inserción?**  
-R: Solo si la clave es pública o restringida para uso en cliente. Nunca exponga claves secretas o privilegiadas.
+**P: ¿Es seguro incluir mi clave API en el script de inserción?**R: Solo si la clave es pública o restringida para uso en cliente. Nunca exponga claves secretas o privilegiadas.
 
-**P: ¿Cómo aseguro el cumplimiento con GDPR/CCPA?**  
-R: Utilice funciones de cumplimiento integradas, muestre avisos de privacidad y permita a los usuarios gestionar sus datos.
+**P: ¿Cómo aseguro el cumplimiento con GDPR/CCPA?**R: Utilice funciones de cumplimiento integradas, muestre avisos de privacidad y permita a los usuarios gestionar sus datos.
 
-**P: ¿Qué hago si no aparece el widget de chatbot?**  
-R: Revise la ubicación del script, la clave API/ID de agente, la consola del navegador para errores y verifique la lista de dominios permitidos.
+**P: ¿Qué hago si no aparece el widget de chatbot?**R: Revise la ubicación del script, la clave API/ID de agente, la consola del navegador para errores y verifique la lista de dominios permitidos.
 
 **P:

@@ -54,7 +54,7 @@ The Transformer processes sequences through a sophisticated multi-step workflow:
 
 6. **Encoder Output Generation**: The final encoder layer produces contextual representations that capture relationships and dependencies across the entire input sequence.
 
-7. **Decoder Processing** (for sequence-to-sequence tasks): The decoder uses masked self-attention to prevent information leakage from future positions, and encoder-decoder attention to incorporate source sequence information.
+7. **Decoder Processing**(for sequence-to-sequence tasks): The decoder uses masked self-attention to prevent information leakage from future positions, and encoder-decoder attention to incorporate source sequence information.
 
 8. **Output Generation**: Final linear layers and softmax functions convert the decoder representations into probability distributions over the target vocabulary for sequence generation.
 
@@ -108,12 +108,12 @@ The Transformer processes sequences through a sophisticated multi-step workflow:
 
 | Aspect | Transformer | RNN/LSTM | CNN |
 |--------|-------------|----------|-----|
-| **Processing Method** | Parallel attention across all positions | Sequential processing | Local convolution operations |
-| **Training Speed** | Fast due to parallelization | Slow sequential processing | Fast parallel convolution |
-| **Long-range Dependencies** | Excellent direct connections | Limited by vanishing gradients | Poor for sequential data |
-| **Memory Requirements** | High due to attention matrices | Moderate sequential memory | Low local processing |
-| **Scalability** | Excellent with model size | Limited by sequential bottleneck | Good for spatial data |
-| **Interpretability** | High through attention weights | Low hidden state analysis | Moderate through feature maps |
+| **Processing Method**| Parallel attention across all positions | Sequential processing | Local convolution operations |
+| **Training Speed**| Fast due to parallelization | Slow sequential processing | Fast parallel convolution |
+| **Long-range Dependencies**| Excellent direct connections | Limited by vanishing gradients | Poor for sequential data |
+| **Memory Requirements**| High due to attention matrices | Moderate sequential memory | Low local processing |
+| **Scalability**| Excellent with model size | Limited by sequential bottleneck | Good for spatial data |
+| **Interpretability**| High through attention weights | Low hidden state analysis | Moderate through feature maps |
 
 ## Challenges and Considerations
 

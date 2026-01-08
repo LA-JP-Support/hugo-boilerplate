@@ -1,12 +1,12 @@
 # Internal Link System Guide - 内部リンクシステムガイド
 
-**バージョン**: v2.0.0  
+**バージョン**: v2.1.1  
 **作成日**: 2025-01-06  
-**最終更新**: 2026-01-07  
+**最終更新**: 2026-01-08  
 **メンテナンス**: Takazumi
 
 **⚠️ 重要な変更**: v2.0.0より、内部リンクシステムを**HTML後処理方式**に統一しました。  
-Markdownファイルを直接編集する旧方式は非推奨となり、`scripts/archived_markdown_based/`に移動されました。
+v2.1.1では、**日本語形態素解析(Janome)**によるリンク精度向上と、**太字レンダリング修正機能**が追加されました。
 
 ---
 
@@ -33,15 +33,16 @@ Hugo静的サイトのブログ記事やグロッサリーページに、関連�
 
 ### 主な機能
 
-- **HTML後処理方式**: Hugoビルド後のHTMLファイルに対してリンクを追加（v2.0.0～）
+- **HTML後処理方式**: Hugoビルド後のHTMLファイルに対してリンクを追加
+- **日本語形態素解析**: `Janome` を使用し、複合語の一部（例：「交通信号」内の「通信」）への誤リンクを防止 (v2.1.1)
+- **太字レンダリング修正**: Markdownの太字記法（`**`）が記号と隣接して崩れる問題を自動修正 (v2.1.1)
 - **クリーンなMarkdown**: ソースファイル（`content-clean/`）にリンクを含めず、可読性を維持
 - **重複除外**: キーワード辞書から自動的に重複を除外
 - **Denylist統合**: 除外語（danger_terms）を自動適用し、誤リンクを防止
-- **太字処理改善**: 太字タグ全体がキーワードにマッチする場合、適切にリンク化
+- **太字処理改善**: 太字タグ（`<strong>`）内のテキストもピンポイントでリンク化
 - **多言語対応**: 英語（EN）と日本語（JA）の並列処理をサポート
-- **柔軟な設定**: JSON/YAML形式でキーワードと優先度を管理
 
-### システム構成図（v2.0.0～）
+### システム構成図
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -58,6 +59,15 @@ Hugo静的サイトのブログ記事やグロッサリーページに、関連�
            │
            ▼
 ┌──────────────────────────────────────────────────────────────────────────┐
+│  Markdown事前処理（オプション）                                             │
+│  ───────────────────────────────                                         │
+│  fix_bold_syntax_to_html.py                                              │
+│  ・Markdown内の太字記法（**）を <strong> タグに変換                          │
+│  ・レンダリングエラー（記号隣接時の崩れ）を防止                              │
+└──────────┬───────────────────────────────────────────────────────────────┘
+           │
+           ▼
+┌──────────────────────────────────────────────────────────────────────────┐
 │  extract_automatic_links.py                                              │
 │  ─────────────────────────                                               │
 │  ・Markdownフロントマターからキーワード抽出                                 │
@@ -68,10 +78,10 @@ Hugo静的サイトのブログ記事やグロッサリーページに、関連�
            ▼
 ┌──────────────────────────────────┐     ┌─────────────────────┐
 │ data/linkbuilding/               │     │ databases/          │
-│  ├── en_automatic.json (1956)   │     │  ├── danger_terms_  │
-│  ├── ja_automatic.json (1934)   │     │  │   en.csv (9)     │
-│  ├── en.yaml (334)               │     │  └── danger_terms_  │
-│  └── ja.yaml (328)               │     │      ja.csv (10)    │
+│  ├── en_automatic.json           │     │  ├── danger_terms_  │
+│  ├── ja_automatic.json           │     │  │   en.csv         │
+│  ├── en.yaml                     │     │  └── danger_terms_  │
+│  └── ja.yaml                     │     │      ja.csv         │
 └──────────┬───────────────────────┘     └──────────┬──────────┘
            │                                        │
            │  ┌─────────────────────────────────────┘
@@ -89,8 +99,9 @@ Hugo静的サイトのブログ記事やグロッサリーページに、関連�
 │  linkbuilding_parallel.py                                                │
 │  ───────────────────────                                                 │
 │  ・EN/JAを並列処理                                                         │
+│  ・Janomeによる形態素解析（日本語）                                          │
 │  ・denylist自動適用                                                        │
-│  ・太字処理改善                                                            │
+│  ・太字処理改善（Granular Link Injection）                                 │
 │  ・BeautifulSoupで安全にHTML編集                                           │
 └──────────┬───────────────────────────────────────────────────────────────┘
            │
@@ -98,18 +109,12 @@ Hugo静的サイトのブログ記事やグロッサリーページに、関連�
 ┌──────────────────────┐
 │  public/             │  内部リンク付きHTML（公開用）
 │  ├── en/             │  ・data-lb="1" マーカー付き
-│  │   ├── blog/       │  ・EN: 18,816リンク
-│  │   └── glossary/   │  ・JA: 16,827リンク
+│  │   ├── blog/       │
+│  │   └── glossary/   │
 │  └── ja/             │
 │      ├── blog/       │
 │      └── glossary/   │
 └──────────────────────┘
-
-【非推奨・アーカイブ済み】
-  scripts/archived_markdown_based/
-   ├── add_internal_links.py      (Markdown直接編集)
-   ├── add_links_from_database.py (CSV→Markdown)
-   └── remove_internal_links.py   (リンク削除)
 ```
 
 ---
@@ -125,35 +130,31 @@ hugo-boilerplate/
 │   └── danger_terms_ja.csv            # 日本語禁止用語
 │
 ├── scripts/                            # 処理スクリプト
-│   ├── linkbuilding.py                # ★ HTML後処理（メイン）
+│   ├── linkbuilding.py                # ★ HTML後処理（メイン・Janome統合）
 │   ├── linkbuilding_parallel.py       # ★ 並列実行ラッパー（推奨）
+│   ├── fix_bold_syntax_to_html.py     # ★ 太字記法修正（Markdown用）
+│   ├── detect_bold_render_errors.py   # ★ 太字エラー検出
 │   ├── extract_automatic_links.py     # 自動キーワード抽出
 │   ├── generate_linkbuilding_yaml_from_glossary.py  # YAML生成
 │   ├── convert_link_database_csv_to_json.py  # CSV→JSON変換
 │   ├── analyze_keyword_sources.py     # キーワード分析
 │   ├── generate_danger_terms.py       # Denylist生成
 │   └── archived_markdown_based/       # 非推奨スクリプト
-│       ├── add_internal_links.py      # （旧）Markdown編集
-│       ├── add_links_from_database.py # （旧）CSV→Markdown
-│       └── remove_internal_links.py   # （旧）リンク削除
 │
 ├── data/linkbuilding/                 # リンク設定ファイル
-│   ├── en_automatic.json              # EN自動キーワード（1956件）
-│   ├── ja_automatic.json              # JA自動キーワード（1934件）
-│   ├── en.yaml                        # EN手動キーワード（334件）
-│   └── ja.yaml                        # JA手動キーワード（328件）
+│   ├── en_automatic.json              # EN自動キーワード
+│   ├── ja_automatic.json              # JA自動キーワード
+│   ├── en.yaml                        # EN手動キーワード
+│   └── ja.yaml                        # JA手動キーワード
 │
 ├── content/
 │   ├── en/
-│   │   ├── blog/                      # 英語ブログ（リンク挿入対象）
-│   │   └── glossary/                  # 英語グロッサリー（ソース）
 │   └── ja/
-│       ├── blog/                      # 日本語ブログ（リンク挿入対象）
-│       └── glossary/                  # 日本語グロッサリー（ソース）
 │
 └── docs/
     └── INTERNAL_LINK_SYSTEM_GUIDE.md  # このファイル
 ```
+
 
 ---
 

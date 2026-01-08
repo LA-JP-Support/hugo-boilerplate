@@ -24,19 +24,19 @@ The evolution of data connectors has been driven by the increasing need for real
 
 ## Core Data Integration Technologies
 
-**Application Programming Interface (API) Connectors** leverage RESTful APIs, GraphQL endpoints, and SOAP services to establish secure, standardized communication channels between applications. These connectors handle authentication, rate limiting, and data serialization automatically while providing robust error handling and retry mechanisms.
+**Application Programming Interface (API) Connectors**leverage RESTful APIs, GraphQL endpoints, and SOAP services to establish secure, standardized communication channels between applications. These connectors handle authentication, rate limiting, and data serialization automatically while providing robust error handling and retry mechanisms.
 
-**Extract, Transform, Load (ETL) Connectors** facilitate traditional batch processing workflows by extracting data from source systems, applying necessary transformations and business rules, and loading the processed data into target destinations. They support complex data mapping, validation, and cleansing operations.
+**Extract, Transform, Load (ETL) Connectors**facilitate traditional batch processing workflows by extracting data from source systems, applying necessary transformations and business rules, and loading the processed data into target destinations. They support complex data mapping, validation, and cleansing operations.
 
-**Real-time Streaming Connectors** enable continuous data flow through technologies like Apache Kafka, Apache Pulsar, and cloud-based streaming services. These connectors support low-latency data processing and event-driven architectures for time-sensitive applications.
+**Real-time Streaming Connectors**enable continuous data flow through technologies like Apache Kafka, Apache Pulsar, and cloud-based streaming services. These connectors support low-latency data processing and event-driven architectures for time-sensitive applications.
 
-**Database Connectors** provide native connectivity to various database management systems including MySQL, PostgreSQL, Oracle, SQL Server, MongoDB, and Cassandra. They optimize query performance and handle connection pooling, transaction management, and data type conversions.
+**Database Connectors**provide native connectivity to various database management systems including MySQL, PostgreSQL, Oracle, SQL Server, MongoDB, and Cassandra. They optimize query performance and handle connection pooling, transaction management, and data type conversions.
 
-**Cloud Service Connectors** integrate with major cloud platforms such as AWS, Azure, and Google Cloud Platform, enabling seamless data exchange with cloud storage, analytics services, and serverless computing environments. They handle cloud-specific authentication and service configurations.
+**Cloud Service Connectors**integrate with major cloud platforms such as AWS, Azure, and Google Cloud Platform, enabling seamless data exchange with cloud storage, analytics services, and serverless computing environments. They handle cloud-specific authentication and service configurations.
 
-**File System Connectors** manage data exchange with various file formats including CSV, JSON, XML, Parquet, and Avro across local file systems, network drives, and cloud storage solutions. They provide automated file processing and format conversion capabilities.
+**File System Connectors**manage data exchange with various file formats including CSV, JSON, XML, Parquet, and Avro across local file systems, network drives, and cloud storage solutions. They provide automated file processing and format conversion capabilities.
 
-**Message Queue Connectors** integrate with messaging systems like RabbitMQ, Apache ActiveMQ, and cloud-based message services to enable asynchronous communication patterns and reliable message delivery between distributed systems.
+**Message Queue Connectors**integrate with messaging systems like RabbitMQ, Apache ActiveMQ, and cloud-based message services to enable asynchronous communication patterns and reliable message delivery between distributed systems.
 
 ## How Data Connector Works
 

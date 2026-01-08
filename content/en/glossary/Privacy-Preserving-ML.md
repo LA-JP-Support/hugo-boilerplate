@@ -40,109 +40,91 @@ In sectors like healthcare and finance, data is often siloed across organization
 
 ### 1. Differential Privacy (DP)
 
-**Definition:**  
-Differential Privacy is a mathematically rigorous framework that quantifies and limits the information a computation or model reveals about any single data point in its dataset. A mechanism is differentially private if the removal or addition of a single data point does not significantly affect the output.
+**Definition:**Differential Privacy is a mathematically rigorous framework that quantifies and limits the information a computation or model reveals about any single data point in its dataset. A mechanism is differentially private if the removal or addition of a single data point does not significantly affect the output.
 
-**How It Works:**
-- **Noise Injection:** Random noise is added to data queries or model updates, making it statistically difficult to infer the presence or absence of any individual record
-- **Privacy Budget (ε):** Controls the trade-off between privacy and utility; lower ε implies stronger privacy but less utility
-- **Composition:** Privacy loss accumulates across multiple queries or epochs; careful accounting is required
+**How It Works:**- **Noise Injection:**Random noise is added to data queries or model updates, making it statistically difficult to infer the presence or absence of any individual record
+- **Privacy Budget (ε):**Controls the trade-off between privacy and utility; lower ε implies stronger privacy but less utility
+- **Composition:**Privacy loss accumulates across multiple queries or epochs; careful accounting is required
 
-**Key Properties:**
-- Provable, quantifiable privacy guarantees
+**Key Properties:**- Provable, quantifiable privacy guarantees
 - Resilience to attackers with auxiliary information
 - Widely adopted in industry (Google Chrome telemetry, Apple iOS, Microsoft Windows)
 
-**Limitations:**
-- May degrade model accuracy, especially at low ε
+**Limitations:**- May degrade model accuracy, especially at low ε
 - Complex privacy accounting for iterative or streaming tasks
 
 ### 2. Homomorphic Encryption (HE)
 
-**Definition:**  
-Homomorphic Encryption enables computations directly on encrypted data, such that the decrypted result matches the result of performing the computation on plaintext.
+**Definition:**Homomorphic Encryption enables computations directly on encrypted data, such that the decrypted result matches the result of performing the computation on plaintext.
 
-**Types:**
-- **Partially Homomorphic Encryption (PHE):** Supports only one operation (additive or multiplicative)
-- **Somewhat Homomorphic Encryption (SHE):** Supports limited operations
-- **Fully Homomorphic Encryption (FHE):** Supports arbitrary computations on ciphertexts
+**Types:**- **Partially Homomorphic Encryption (PHE):**Supports only one operation (additive or multiplicative)
+- **Somewhat Homomorphic Encryption (SHE):**Supports limited operations
+- **Fully Homomorphic Encryption (FHE):**Supports arbitrary computations on ciphertexts
 
-**Application in ML:**  
-Data owners encrypt sensitive data and share it with a server for training or inference. The server operates on encrypted data; only the owner can decrypt results.
+**Application in ML:**Data owners encrypt sensitive data and share it with a server for training or inference. The server operates on encrypted data; only the owner can decrypt results.
 
-**Strengths:**
-- Data remains encrypted end-to-end; no raw data exposure
+**Strengths:**- Data remains encrypted end-to-end; no raw data exposure
 - Enables secure outsourcing of computation to cloud or third-party providers
 
-**Limitations:**
-- Computationally intensive, especially FHE
+**Limitations:**- Computationally intensive, especially FHE
 - Practical for simple models; active research is improving efficiency
 
 ### 3. Multi-Party Computation (MPC)
 
-**Definition:**  
-Multi-Party Computation is a cryptographic approach enabling multiple parties to jointly compute a function over their private inputs without revealing those inputs to one another.
+**Definition:**Multi-Party Computation is a cryptographic approach enabling multiple parties to jointly compute a function over their private inputs without revealing those inputs to one another.
 
-**How It Works:**  
-Each party encrypts or secret shares their data. Joint computation is performed using protocols such as garbled circuits or Shamir's Secret Sharing. Only the result is revealed; individual inputs remain secret.
+**How It Works:**Each party encrypts or secret shares their data. Joint computation is performed using protocols such as garbled circuits or Shamir's Secret Sharing. Only the result is revealed; individual inputs remain secret.
 
-**Use Cases:**
-- Collaborative fraud detection across banks without exposing customer data
+**Use Cases:**- Collaborative fraud detection across banks without exposing customer data
 - Secure medical analytics across hospitals
 - Privacy-preserving credit scoring
 
-**Strengths:**
-- Flexible protocol design for diverse ML scenarios
+**Strengths:**- Flexible protocol design for diverse ML scenarios
 - Strong privacy even in adversarial settings
 
-**Limitations:**
-- Increased computational and communication overhead
+**Limitations:**- Increased computational and communication overhead
 - Synchronization required among participants
 
 ### 4. Federated Learning (FL)
 
-**Definition:**  
-Federated Learning is a distributed ML paradigm where models are collaboratively trained across decentralized devices or organizations without aggregating raw data centrally.
+**Definition:**Federated Learning is a distributed ML paradigm where models are collaboratively trained across decentralized devices or organizations without aggregating raw data centrally.
 
-**How It Works:**  
-A global model is distributed to local nodes (devices, organizations). Each node trains the model on its local data, sending only model updates (not data) to a central server. The server aggregates updates to refine the global model.
+**How It Works:**A global model is distributed to local nodes (devices, organizations). Each node trains the model on its local data, sending only model updates (not data) to a central server. The server aggregates updates to refine the global model.
 
-**Strengths:**
-- Raw data never leaves the device or organization
+**Strengths:**- Raw data never leaves the device or organization
 - Supports large-scale, real-world deployments (mobile keyboards, healthcare)
 
-**Limitations:**
-- Model updates can still leak information; often combined with DP
+**Limitations:**- Model updates can still leak information; often combined with DP
 - Non-IID data, unreliable connectivity, and stragglers pose challenges
 
 ## Threat Models and Attack Types
 
 ### Common Threat Models
 
-**Honest-but-curious adversary:** Follows protocol but tries to infer private data  
-**Malicious adversary:** Deviates from protocol to extract or poison data  
-**External attacker:** Seeks to extract sensitive information from the model or communications
+**Honest-but-curious adversary:**Follows protocol but tries to infer private data  
+**Malicious adversary:**Deviates from protocol to extract or poison data  
+**External attacker:**Seeks to extract sensitive information from the model or communications
 
 ### Specific Attack Types
 
-**Membership Inference Attacks:** Attackers determine if a specific data sample was used in training
+**Membership Inference Attacks:**Attackers determine if a specific data sample was used in training
 
-**Model Inversion Attacks:** Reconstruct input features or data from model outputs or gradients
+**Model Inversion Attacks:**Reconstruct input features or data from model outputs or gradients
 
-**Training Data Extraction:** Extract verbatim or near-verbatim training data from models, especially LLMs
+**Training Data Extraction:**Extract verbatim or near-verbatim training data from models, especially LLMs
 
-**Poisoning Attacks:** Malicious manipulation of training data to induce leakage or incorrect model behavior
+**Poisoning Attacks:**Malicious manipulation of training data to induce leakage or incorrect model behavior
 
-**Model Update Attacks:** Infer sensitive data by comparing model states before and after updates
+**Model Update Attacks:**Infer sensitive data by comparing model states before and after updates
 
 ## Industry Deployments and Applications
 
 ### Microsoft
 
-**Personalized Text Prediction in Office:** Privacy-preserving language models for productivity applications  
-**Windows Telemetry with Differential Privacy:** Collecting system diagnostics while protecting user privacy  
-**Viva Insights:** Differential privacy for employee analytics  
-**Secure Medical Image Analysis:** Using CryptFlow for privacy-preserving healthcare AI
+**Personalized Text Prediction in Office:**Privacy-preserving language models for productivity applications  
+**Windows Telemetry with Differential Privacy:**Collecting system diagnostics while protecting user privacy  
+**Viva Insights:**Differential privacy for employee analytics  
+**Secure Medical Image Analysis:**Using CryptFlow for privacy-preserving healthcare AI
 
 ### Healthcare
 
@@ -154,13 +136,11 @@ Fraud detection models using MPC across banks enable collaborative threat detect
 
 ## Implementation Framework
 
-**Toolkits and Libraries:**
-
-- **TensorFlow Privacy:** Differential privacy tools for TensorFlow
-- **PySyft:** Federated learning, DP, and MPC for PyTorch/TensorFlow
-- **Microsoft SEAL:** Homomorphic encryption library
-- **EzPC:** MPC compiler for ML code
-- **ML Privacy Meter:** Privacy risk assessment toolkit
+**Toolkits and Libraries:**- **TensorFlow Privacy:**Differential privacy tools for TensorFlow
+- **PySyft:**Federated learning, DP, and MPC for PyTorch/TensorFlow
+- **Microsoft SEAL:**Homomorphic encryption library
+- **EzPC:**MPC compiler for ML code
+- **ML Privacy Meter:**Privacy risk assessment toolkit
 
 ## Summary Table: PPML Techniques
 
@@ -173,62 +153,53 @@ Fraud detection models using MPC across banks enable collaborative threat detect
 
 ## Trade-offs and Considerations
 
-**Utility vs. Privacy:**  
-Tighter privacy (lower ε, stronger cryptography) reduces model accuracy and/or increases noise. Finding the optimal balance requires careful experimentation and domain expertise.
+**Utility vs. Privacy:**Tighter privacy (lower ε, stronger cryptography) reduces model accuracy and/or increases noise. Finding the optimal balance requires careful experimentation and domain expertise.
 
-**Computational Overhead:**  
-Cryptographic techniques (HE, MPC) remain resource-intensive, especially for large models. Infrastructure and operational costs must be factored into deployment decisions.
+**Computational Overhead:**Cryptographic techniques (HE, MPC) remain resource-intensive, especially for large models. Infrastructure and operational costs must be factored into deployment decisions.
 
-**Usability:**  
-Integration into existing ML workflows may require significant changes to data pipelines, training procedures, and deployment architectures.
+**Usability:**Integration into existing ML workflows may require significant changes to data pipelines, training procedures, and deployment architectures.
 
-**Threat Coverage:**  
-No single method covers all attack types. Layered defenses combining multiple PPML techniques provide the strongest protection.
+**Threat Coverage:**No single method covers all attack types. Layered defenses combining multiple PPML techniques provide the strongest protection.
 
 ## Best Practices for Practitioners
 
-**Conduct Threat Modeling:** Assess privacy risks and attack vectors specific to your ML use case and deployment environment
+**Conduct Threat Modeling:**Assess privacy risks and attack vectors specific to your ML use case and deployment environment
 
-**Layer Techniques:** Combine PPML methods (e.g., FL + DP) for stronger protection against multiple threat types
+**Layer Techniques:**Combine PPML methods (e.g., FL + DP) for stronger protection against multiple threat types
 
-**Monitor and Measure:** Quantify privacy risks and monitor for information leakage throughout the ML lifecycle
+**Monitor and Measure:**Quantify privacy risks and monitor for information leakage throughout the ML lifecycle
 
-**Policy Alignment:** Ensure technical safeguards meet regulatory requirements and organizational privacy policies
+**Policy Alignment:**Ensure technical safeguards meet regulatory requirements and organizational privacy policies
 
-**Leverage Open Tools:** Use open-source frameworks for streamlined adoption and community support
+**Leverage Open Tools:**Use open-source frameworks for streamlined adoption and community support
 
-**Stay Current:** Track research and update practices as methods advance and new attacks emerge
+**Stay Current:**Track research and update practices as methods advance and new attacks emerge
 
 ## Ongoing Research and Future Directions
 
-**Advanced Differential Privacy:** More accurate privacy accounting and efficient private fine-tuning for large language models
+**Advanced Differential Privacy:**More accurate privacy accounting and efficient private fine-tuning for large language models
 
-**Private Synthetic Data:** High-fidelity synthetic data for generative AI without leaking real records
+**Private Synthetic Data:**High-fidelity synthetic data for generative AI without leaking real records
 
-**Federated Learning Advances:** Handling non-IID data, adversarial robustness, and DP/HE integration
+**Federated Learning Advances:**Handling non-IID data, adversarial robustness, and DP/HE integration
 
-**Confidential Computing:** Hardware-based trusted execution environments (TEEs) for scalable secure ML
+**Confidential Computing:**Hardware-based trusted execution environments (TEEs) for scalable secure ML
 
-**Formal Verification:** End-to-end privacy guarantees across the ML pipeline
+**Formal Verification:**End-to-end privacy guarantees across the ML pipeline
 
-**Policy and Regulatory Alignment:** Translating technical privacy guarantees to compliance frameworks
+**Policy and Regulatory Alignment:**Translating technical privacy guarantees to compliance frameworks
 
 ## Frequently Asked Questions
 
-**What is Privacy-Preserving Machine Learning?**  
-PPML encompasses techniques that enable ML model training and inference while protecting individual data privacy through cryptographic and algorithmic methods.
+**What is Privacy-Preserving Machine Learning?**PPML encompasses techniques that enable ML model training and inference while protecting individual data privacy through cryptographic and algorithmic methods.
 
-**Which technique should I use?**  
-The choice depends on your threat model, performance requirements, and deployment constraints. Differential Privacy works well for statistical queries, Federated Learning for distributed data, HE for outsourced computation, and MPC for collaborative analytics.
+**Which technique should I use?**The choice depends on your threat model, performance requirements, and deployment constraints. Differential Privacy works well for statistical queries, Federated Learning for distributed data, HE for outsourced computation, and MPC for collaborative analytics.
 
-**Does PPML eliminate all privacy risks?**  
-No. PPML significantly reduces privacy risks but cannot eliminate them entirely. Proper implementation, monitoring, and layered defenses are essential.
+**Does PPML eliminate all privacy risks?**No. PPML significantly reduces privacy risks but cannot eliminate them entirely. Proper implementation, monitoring, and layered defenses are essential.
 
-**What is the performance impact?**  
-Performance impact varies by technique. Differential Privacy adds minimal overhead, while HE and MPC can be computationally expensive. Careful optimization and hardware acceleration can mitigate costs.
+**What is the performance impact?**Performance impact varies by technique. Differential Privacy adds minimal overhead, while HE and MPC can be computationally expensive. Careful optimization and hardware acceleration can mitigate costs.
 
-**How do I get started?**  
-Begin with threat modeling, evaluate available open-source tools, start with simpler techniques like Differential Privacy, and gradually adopt more advanced methods as needed.
+**How do I get started?**Begin with threat modeling, evaluate available open-source tools, start with simpler techniques like Differential Privacy, and gradually adopt more advanced methods as needed.
 
 ## References
 

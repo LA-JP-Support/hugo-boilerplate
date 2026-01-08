@@ -108,12 +108,12 @@ The callback queue operates through a sophisticated coordination mechanism betwe
 
 | Feature | Callback Queue | Promise Chain | Async/Await | Observable Stream |
 |---------|---------------|---------------|-------------|-------------------|
-| **Execution Model** | FIFO queue processing | Chained then/catch calls | Sequential async syntax | Reactive stream processing |
-| **Error Handling** | Manual error checking | Built-in catch mechanisms | Try/catch blocks | Error operators and handlers |
-| **Composability** | Limited composition | Chainable operations | Linear composition | Rich operator composition |
-| **Memory Usage** | Queue overhead | Promise object overhead | Minimal overhead | Stream subscription overhead |
-| **Browser Support** | Universal support | ES6+ support required | ES2017+ support required | Library-dependent support |
-| **Learning Curve** | Moderate complexity | Moderate complexity | Low complexity | High complexity |
+| **Execution Model**| FIFO queue processing | Chained then/catch calls | Sequential async syntax | Reactive stream processing |
+| **Error Handling**| Manual error checking | Built-in catch mechanisms | Try/catch blocks | Error operators and handlers |
+| **Composability**| Limited composition | Chainable operations | Linear composition | Rich operator composition |
+| **Memory Usage**| Queue overhead | Promise object overhead | Minimal overhead | Stream subscription overhead |
+| **Browser Support**| Universal support | ES6+ support required | ES2017+ support required | Library-dependent support |
+| **Learning Curve**| Moderate complexity | Moderate complexity | Low complexity | High complexity |
 
 ## Challenges and Considerations
 

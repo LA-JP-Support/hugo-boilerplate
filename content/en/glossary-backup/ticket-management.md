@@ -24,12 +24,12 @@ Ticket management is widely used in both customer-facing and internal support en
 - **Operations & Back Office**: Streamlines workflow approvals, cross-departmental requests, and logistics.
 
 Key functions include:
-- **Centralizing inquiries** from multiple channels into a single system.
-- **Assigning requests** to appropriate agents/teams based on skillset or workload.
-- **Tracking progress** and providing visibility into each ticket’s status.
-- **Automating** repetitive tasks (creation, routing, escalation, reminders).
-- **Maintaining full history** and audit trails for each ticket.
-- **Analyzing performance** through comprehensive reporting ([Apps365 Guide](https://www.apps365.com/blog/ticket-management-process/)).
+- **Centralizing inquiries**from multiple channels into a single system.
+- **Assigning requests**to appropriate agents/teams based on skillset or workload.
+- **Tracking progress**and providing visibility into each ticket’s status.
+- **Automating**repetitive tasks (creation, routing, escalation, reminders).
+- **Maintaining full history**and audit trails for each ticket.
+- **Analyzing performance**through comprehensive reporting ([Apps365 Guide](https://www.apps365.com/blog/ticket-management-process/)).
 
 ## Key Components and Features of Ticket Management Systems
 
@@ -76,13 +76,7 @@ Dashboards and detailed reports show ticket volumes, response/resolution times, 
 ## Who Uses Ticket Management Systems?
 
 Ticket management software is used across many industries, including:
-- **Customer Support/Service**
-- **IT Help Desk**
-- **HR Departments**
-- **Facilities Management**
-- **Operations, Back Office, and Compliance Teams**
-
-These systems are essential for any department handling a high volume of requests that require tracking, accountability, and resolution transparency ([HappyFox Industries](https://www.happyfox.com/ticketing-system/)).
+- **Customer Support/Service**- **IT Help Desk**- **HR Departments**- **Facilities Management**- **Operations, Back Office, and Compliance Teams**These systems are essential for any department handling a high volume of requests that require tracking, accountability, and resolution transparency ([HappyFox Industries](https://www.happyfox.com/ticketing-system/)).
 
 ## Typical Ticket Management Workflow
 
@@ -152,13 +146,13 @@ These systems are essential for any department handling a high volume of request
 
 | Software         | Key Features                                      | Starting Price (per user/month) |
 |------------------|---------------------------------------------------|---------------------------------|
-| **Freshdesk**    | Omnichannel inbox, automation, SLA management, reporting, knowledge base, integrations | $15                            |
-| **Zendesk**      | Multi-channel support, macros, workflow automation, analytics, community forums | $55                            |
-| **Intercom**     | AI-enhanced shared inbox, ticket creation, workflow automation, chatbots, integrations | $39                            |
-| **Help Scout**   | Shared inbox, knowledge base, private notes, reporting, customer portal | $20                            |
-| **Zoho Desk**    | Omnichannel inbox, auto-tagging, sentiment analysis, integration with Zoho suite | $12                            |
-| **Jira Service Management** | ITSM focus, custom workflows, SLAs, reporting, asset management | $22                            |
-| **LiveAgent**    | Universal inbox, ticket merging, automation, internal chat, reporting | $9                             |
+| **Freshdesk**| Omnichannel inbox, automation, SLA management, reporting, knowledge base, integrations | $15                            |
+| **Zendesk**| Multi-channel support, macros, workflow automation, analytics, community forums | $55                            |
+| **Intercom**| AI-enhanced shared inbox, ticket creation, workflow automation, chatbots, integrations | $39                            |
+| **Help Scout**| Shared inbox, knowledge base, private notes, reporting, customer portal | $20                            |
+| **Zoho Desk**| Omnichannel inbox, auto-tagging, sentiment analysis, integration with Zoho suite | $12                            |
+| **Jira Service Management**| ITSM focus, custom workflows, SLAs, reporting, asset management | $22                            |
+| **LiveAgent**| Universal inbox, ticket merging, automation, internal chat, reporting | $9                             |
 
 *Always verify current features and pricing with the vendor.*
 
@@ -168,20 +162,17 @@ These systems are essential for any department handling a high volume of request
 
 ## Example Ticket Management Scenarios
 
-**Customer Support**
-- Customer submits a troubleshooting request via live chat.
+**Customer Support**- Customer submits a troubleshooting request via live chat.
 - TMS auto-generates a ticket, assigns it to a Tier 1 support agent, and updates the customer.
 - If complex, the agent escalates it to a technical specialist.
 - Ticket is closed upon resolution and a satisfaction survey sent.
 
-**IT Help Desk**
-- Employee emails the IT team about a computer issue.
+**IT Help Desk**- Employee emails the IT team about a computer issue.
 - Ticket is created, categorized as “hardware,” and assigned medium priority.
 - IT logs troubleshooting steps with internal notes.
 - If not resolved after 24 hours, system escalates per SLA.
 
-**HR Request**
-- Employee submits leave request via portal.
+**HR Request**- Employee submits leave request via portal.
 - Ticket is auto-created and assigned to HR.
 - Employee receives automated status updates.
 

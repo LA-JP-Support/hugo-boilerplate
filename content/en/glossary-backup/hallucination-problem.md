@@ -28,22 +28,19 @@ AI hallucinations are akin to the model "seeing" or "describing" patterns or fac
 
 AI chatbots and virtual assistants are designed for natural language interaction, information search, summarization, and task performance. Hallucinations manifest in these systems as credible-seeming but factually false or completely fabricated responses. This is especially true for LLMs and generative AI tools that generate responses by predicting likely sequences of words, not by checking external sources.
 
-**Example:**  
-A user inquires about the latest medical research. The AI, rather than admitting insufficient data, generates a summary citing non-existent studies or misattributing research findings. Such errors can propagate misinformation and harm trust ([IBM](https://www.ibm.com/think/topics/ai-hallucinations), [Google Cloud](https://cloud.google.com/discover/what-are-ai-hallucinations)).
+**Example:**A user inquires about the latest medical research. The AI, rather than admitting insufficient data, generates a summary citing non-existent studies or misattributing research findings. Such errors can propagate misinformation and harm trust ([IBM](https://www.ibm.com/think/topics/ai-hallucinations), [Google Cloud](https://cloud.google.com/discover/what-are-ai-hallucinations)).
 
 ### 2. Automated Content Generation
 
 Generative AI systems are employed to write articles, create reports, and summarize texts. Hallucination arises when these models introduce fabricated statistics, invented events, or false references into generated content.
 
-**Example:**  
-A news summarizer based on generative AI produces a summary featuring quotes or facts not present in the source article, misleading readers or spreading misinformation ([Google Cloud](https://cloud.google.com/discover/what-are-ai-hallucinations)).
+**Example:**A news summarizer based on generative AI produces a summary featuring quotes or facts not present in the source article, misleading readers or spreading misinformation ([Google Cloud](https://cloud.google.com/discover/what-are-ai-hallucinations)).
 
 ### 3. Computer Vision and Pattern Recognition
 
 Hallucinations are not limited to language models. In image generation or recognition, AI may "detect" objects or patterns absent from the actual data.
 
-**Example:**  
-A system analyzing satellite images for disaster response reports evidence of flooding where none exists, causing misallocation of relief resources ([IBM](https://www.ibm.com/think/topics/ai-hallucinations)).
+**Example:**A system analyzing satellite images for disaster response reports evidence of flooding where none exists, causing misallocation of relief resources ([IBM](https://www.ibm.com/think/topics/ai-hallucinations)).
 
 ## Technical Causes and Mechanisms
 
@@ -51,53 +48,53 @@ A system analyzing satellite images for disaster response reports evidence of fl
 
 AI models learn from large datasets. If the data is incomplete, biased, or not representative, the model may learn incorrect associations or fail to recognize its own limitations. This can lead to hallucinated patterns or invented facts.
 
-- **Case:** An AI trained on outdated scientific literature might invent plausible-sounding but non-existent findings when queried about current research ([IBM](https://www.ibm.com/think/topics/ai-hallucinations), [Google Cloud](https://cloud.google.com/discover/what-are-ai-hallucinations)).
+- **Case:**An AI trained on outdated scientific literature might invent plausible-sounding but non-existent findings when queried about current research ([IBM](https://www.ibm.com/think/topics/ai-hallucinations), [Google Cloud](https://cloud.google.com/discover/what-are-ai-hallucinations)).
 
 ### 2. Overfitting and Model Complexity
 
 Overfitting happens when a model becomes too specialized to its training data, losing ability to generalize. Complex models may identify spurious correlations, resulting in outputs that are not reflective of the real world.
 
-- **Case:** A chatbot trained on a single news source may inherit and amplify that source's biases or errors, even when incorrect ([IBM](https://www.ibm.com/topics/overfitting)).
+- **Case:**A chatbot trained on a single news source may inherit and amplify that source's biases or errors, even when incorrect ([IBM](https://www.ibm.com/topics/overfitting)).
 
 ### 3. Lack of Grounding
 
 Most generative models, especially those based on transformers and autoregressive architectures, lack mechanisms to verify factual accuracy. They predict the next word or token based on probability, not on truth.
 
-- **Case:** An LLM completes a biographical sentence by inventing an award a public figure never received, if it fits the expected pattern ([Google Cloud](https://cloud.google.com/discover/what-are-ai-hallucinations)).
+- **Case:**An LLM completes a biographical sentence by inventing an award a public figure never received, if it fits the expected pattern ([Google Cloud](https://cloud.google.com/discover/what-are-ai-hallucinations)).
 
 ### 4. Adversarial Attacks
 
 Attackers can manipulate AI models by subtly altering input data, prompting erroneous predictions or fabricated outputs.
 
-- **Case:** In image recognition, imperceptible noise can cause misclassification, which is a risk in autonomous vehicles and security systems ([IBM](https://www.ibm.com/think/topics/ai-hallucinations)).
+- **Case:**In image recognition, imperceptible noise can cause misclassification, which is a risk in autonomous vehicles and security systems ([IBM](https://www.ibm.com/think/topics/ai-hallucinations)).
 
 ## Examples and Use Cases
 
 ### Negative Examples
 
-- **Fabricated News Summaries:** AI-generated article summaries that include events or statements not present in the source ([Google Cloud](https://cloud.google.com/discover/what-are-ai-hallucinations)).
-- **Erroneous Medical Advice:** Healthcare chatbots misidentifying symptoms or inventing studies ([IBM](https://www.ibm.com/think/topics/ai-hallucinations), Cappellani et al.).
-- **Fake Academic Citations:** LLMs generating plausible but entirely non-existent academic references ([Walters & Wilder]).
-- **Invented Visual Data:** Image generators creating false features or objects ([IBM](https://www.ibm.com/think/topics/ai-hallucinations)).
+- **Fabricated News Summaries:**AI-generated article summaries that include events or statements not present in the source ([Google Cloud](https://cloud.google.com/discover/what-are-ai-hallucinations)).
+- **Erroneous Medical Advice:**Healthcare chatbots misidentifying symptoms or inventing studies ([IBM](https://www.ibm.com/think/topics/ai-hallucinations), Cappellani et al.).
+- **Fake Academic Citations:**LLMs generating plausible but entirely non-existent academic references ([Walters & Wilder]).
+- **Invented Visual Data:**Image generators creating false features or objects ([IBM](https://www.ibm.com/think/topics/ai-hallucinations)).
 
 ### Positive and Creative Applications
 
-- **Art and Design:** Hallucination powers the generation of surreal, imaginative images and novel artistic styles ([IBM](https://www.ibm.com/think/topics/ai-hallucinations), Li, 2024).
-- **Data Visualization:** Generating alternative data perspectives, revealing patterns for exploratory analysis (interpretation with caution advised).
-- **Gaming and Virtual Reality:** Enriching immersive experiences with unexpected or novel AI-generated content ([IBM](https://www.ibm.com/think/topics/ai-hallucinations)).
+- **Art and Design:**Hallucination powers the generation of surreal, imaginative images and novel artistic styles ([IBM](https://www.ibm.com/think/topics/ai-hallucinations), Li, 2024).
+- **Data Visualization:**Generating alternative data perspectives, revealing patterns for exploratory analysis (interpretation with caution advised).
+- **Gaming and Virtual Reality:**Enriching immersive experiences with unexpected or novel AI-generated content ([IBM](https://www.ibm.com/think/topics/ai-hallucinations)).
 
 ## Implications and Risks
 
 ### User-Level Risks
 
-- **Misinformation:** Users may accept fabricated AI outputs as truth, especially if presented with high confidence.
-- **Errors in Decision-Making:** In sensitive fields like healthcare or finance, reliance on hallucinated outputs can result in harm or costly mistakes.
+- **Misinformation:**Users may accept fabricated AI outputs as truth, especially if presented with high confidence.
+- **Errors in Decision-Making:**In sensitive fields like healthcare or finance, reliance on hallucinated outputs can result in harm or costly mistakes.
 
 ### Systemic and Societal Risks
 
-- **Trust Erosion:** Frequent hallucinations undermine confidence in AI, slowing adoption ([CASMI], [Sun et al.]).
-- **Security Vulnerabilities:** Malicious exploitation can spread disinformation or compromise systems.
-- **Reputational and Legal Risks:** Organizations using AI systems prone to hallucination may face reputational damage or legal challenges ([Sun et al.], Polyportis & Pahos).
+- **Trust Erosion:**Frequent hallucinations undermine confidence in AI, slowing adoption ([CASMI], [Sun et al.]).
+- **Security Vulnerabilities:**Malicious exploitation can spread disinformation or compromise systems.
+- **Reputational and Legal Risks:**Organizations using AI systems prone to hallucination may face reputational damage or legal challenges ([Sun et al.], Polyportis & Pahos).
 
 ### Scholarly Debates and Terminology
 
@@ -109,8 +106,7 @@ Multiple classification schemes exist for AI hallucination and error types, aidi
 
 ### Major Typologies
 
-**Sun et al. (2024):**
-- Overfitting Errors
+**Sun et al. (2024):**- Overfitting Errors
 - Logic Errors
 - Reasoning Errors
 - Mathematical Errors
@@ -119,26 +115,21 @@ Multiple classification schemes exist for AI hallucination and error types, aidi
 - Text Output Errors
 - Other Errors
 
-**Further Distinctions:**
-- Input-conflicting Hallucination: Output contradicts input data.
+**Further Distinctions:**- Input-conflicting Hallucination: Output contradicts input data.
 - Context-conflicting Hallucination: Output inconsistent with conversation or prior context.
 - Fact-conflicting Hallucination: Output conflicts with established facts ([Liu et al., 2024]).
 
-**Google Cloud/Datacamp:**
-- Factual errors
+**Google Cloud/Datacamp:**- Factual errors
 - Fabricated content
 - Nonsensical outputs
 - Incorrect predictions
 - False positives
 - False negatives ([Google Cloud](https://cloud.google.com/discover/what-are-ai-hallucinations))
 
-**Disinformation vs. Misinformation:**
-- Disinformation: Deliberate fabrication (by humans or malicious actors).
+**Disinformation vs. Misinformation:**- Disinformation: Deliberate fabrication (by humans or malicious actors).
 - Misinformation: Inaccurate outputs without intent.
 
-**Tabular Summary:**
-
-| Error Type              | Description                                         | Example                                          |
+**Tabular Summary:**| Error Type              | Description                                         | Example                                          |
 |------------------------ |----------------------------------------------------|--------------------------------------------------|
 | Overfitting             | Excessive adaptation to training data              | Repeats rare phrases from dataset                |
 | Logic Errors            | Breakdown in logical reasoning                     | Contradictory statements                         |
@@ -222,18 +213,14 @@ Generative models are inherently prone to hallucination because they generate ou
 10. Liu, H., Xue, W., Chen, Y., et al. "A Survey on Hallucination in Large Vision-Language Models." arXiv, 2024.
 11. Lee, M. "A Mathematical Investigation of Hallucination and Creativity in GPT Models." Mathematics, 2023.
 
-**For further reading and detailed technical treatment, consult the referenced scholarly publications and technology whitepapers.**
-
-- [IBM: AI Hallucinations](https://www.ibm.com/think/topics/ai-hallucinations)
+**For further reading and detailed technical treatment, consult the referenced scholarly publications and technology whitepapers.**- [IBM: AI Hallucinations](https://www.ibm.com/think/topics/ai-hallucinations)
 - [Google Cloud: What are AI Hallucinations?](https://cloud.google.com/discover/what-are-ai-hallucinations)
 - [Wikipedia: Hallucination (artificial intelligence)](https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence))
 
-**Explore tools for responsible AI deployment:**
-- [IBM watsonx.governance](https://www.ibm.com/products/watsonx-governance)
+**Explore tools for responsible AI deployment:**- [IBM watsonx.governance](https://www.ibm.com/products/watsonx-governance)
 - [Google Cloud Vertex AI](https://cloud.google.com/vertex-ai)
 
-**Related Resources:**
-- [How to use Grounding for your LLMs with text embeddings (Google Cloud)](https://cloud.google.com/blog/products/ai-machine-learning/how-to-use-grounding-for-your-llms-with-text-embeddings)
+**Related Resources:**- [How to use Grounding for your LLMs with text embeddings (Google Cloud)](https://cloud.google.com/blog/products/ai-machine-learning/how-to-use-grounding-for-your-llms-with-text-embeddings)
 - [Building a strong data foundation for trustworthy AI (IBM)](https://www.ibm.com/think/insights/data-matters/secure-govern-data-ai)
 
 This glossary draws from industry leaders, academic research, and real-world use cases to provide a comprehensive resource for understanding, preventing, and managing the hallucination problem in modern AI systems.

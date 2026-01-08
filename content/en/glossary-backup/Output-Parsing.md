@@ -28,26 +28,25 @@ LLMs such as GPT-4, Claude, or Gemini generate responses in natural language, wh
 
 ### Problems Solved by Output Parsing
 
-- **Inconsistent Output:** LLMs may return information in different formats, making direct extraction unreliable.
-- **Downstream Automation:** Workflows frequently require only specific data, not the full text response.
-- **Validation and Reliability:** Ensures the output adheres to a predictable schema.
-- **Integration:** Allows natural language models to interact with applications, APIs, and databases that require structured input.
+- **Inconsistent Output:**LLMs may return information in different formats, making direct extraction unreliable.
+- **Downstream Automation:**Workflows frequently require only specific data, not the full text response.
+- **Validation and Reliability:**Ensures the output adheres to a predictable schema.
+- **Integration:**Allows natural language models to interact with applications, APIs, and databases that require structured input.
 
-**Further reading:**  
-- [A Comprehensive Guide to Output Parsers - Analytics Vidhya](https://www.analyticsvidhya.com/blog/2024/11/output-parsers/)
+**Further reading:**- [A Comprehensive Guide to Output Parsers - Analytics Vidhya](https://www.analyticsvidhya.com/blog/2024/11/output-parsers/)
 - [LLM Output Parsing - Deepchecks Glossary](https://www.deepchecks.com/glossary/llm-output-parsing/)
 
 ## Key Concepts and Terminology
 
 | Term                    | Definition                                                                                      |
 |-------------------------|-------------------------------------------------------------------------------------------------|
-| **Output Parser**       | Software component or library that converts unstructured LLM output into a structured format.   |
-| **Schema**              | The expected structure and types for output data, often enforced with Pydantic or JSON Schema.  |
-| **Prompt Engineering**  | Designing prompts to encourage the LLM to respond in a machine-friendly format.                 |
-| **Function Calling**    | Feature (mainly in OpenAI API) where the LLM returns output matching a pre-defined signature.   |
-| **Pydantic Model**      | Python class using [Pydantic](https://docs.pydantic.dev/) for data validation and parsing.      |
-| **Streaming**           | Processing output incrementally as it is generated, useful for real-time applications.          |
-| **Error Fixing Parser** | Component that attempts to correct or repair malformed outputs from the LLM.                    |
+| **Output Parser**| Software component or library that converts unstructured LLM output into a structured format.   |
+| **Schema**| The expected structure and types for output data, often enforced with Pydantic or JSON Schema.  |
+| **Prompt Engineering**| Designing prompts to encourage the LLM to respond in a machine-friendly format.                 |
+| **Function Calling**| Feature (mainly in OpenAI API) where the LLM returns output matching a pre-defined signature.   |
+| **Pydantic Model**| Python class using [Pydantic](https://docs.pydantic.dev/) for data validation and parsing.      |
+| **Streaming**| Processing output incrementally as it is generated, useful for real-time applications.          |
+| **Error Fixing Parser**| Component that attempts to correct or repair malformed outputs from the LLM.                    |
 
 Further reading:  
 - [Output parsers | LangChain Reference](https://reference.langchain.com/python/langchain_core/output_parsers/)
@@ -56,15 +55,14 @@ Further reading:
 
 Output parsing is central to automation, API workflows, and data pipelines. It enables structured hand-off between the AI and downstream business logic.
 
-- **API Integration:** Extracts machine-readable payloads for APIs/webhooks.
-- **Data Pipelines:** Validates and feeds model output into analytics or reporting.
-- **Automation:** Triggers actions in RPA bots or business workflows.
-- **Conversational Agents:** Ensures responses are structured for frontend rendering or logic branching.
+- **API Integration:**Extracts machine-readable payloads for APIs/webhooks.
+- **Data Pipelines:**Validates and feeds model output into analytics or reporting.
+- **Automation:**Triggers actions in RPA bots or business workflows.
+- **Conversational Agents:**Ensures responses are structured for frontend rendering or logic branching.
 
 ### Example Use Cases
 
-1. **Sentiment Analysis:**  
-   ```python
+1. **Sentiment Analysis:**```python
    class Review(BaseModel):
        sentiment: str
        score: int
@@ -72,14 +70,11 @@ Output parsing is central to automation, API workflows, and data pipelines. It e
    ```
    Output: `{'sentiment': 'positive', 'score': 8, 'themes': ['friendly staff', 'quality food', 'parking']}`
 
-2. **Invoice Extraction:**  
-   Parsing invoice text into a structured object containing `invoice_number`, `date`, `amount`.
+2. **Invoice Extraction:**Parsing invoice text into a structured object containing `invoice_number`, `date`, `amount`.
 
-3. **Recipe Generation:**  
-   LLM output parsed into a recipe schema (`name`, `ingredients`, `steps`).
+3. **Recipe Generation:**LLM output parsed into a recipe schema (`name`, `ingredients`, `steps`).
 
-4. **Entity Extraction:**  
-   Extracting names, dates, and locations for use in structured databases.
+4. **Entity Extraction:**Extracting names, dates, and locations for use in structured databases.
 
 ## Strategies for Output Parsing
 
@@ -87,31 +82,28 @@ Output parsing is central to automation, API workflows, and data pipelines. It e
 
 Direct the LLM to reply in a specific structure (such as JSON, YAML, or XML).
 
-**Example Prompt:**
-```
+**Example Prompt:**```
 Please respond with a JSON object containing the fields: sentiment, score, themes.
 ```
-**Pros:** Simple, no dependency.  
-**Cons:** LLMs sometimes ignore instructions, producing invalid output.
+**Pros:**Simple, no dependency.  
+**Cons:**LLMs sometimes ignore instructions, producing invalid output.
 
 ### Output Parsers
 
 Specialized libraries (e.g., LangChain Output Parsers) process the LLM output, enforce schemas, and handle errors.
 
-**Example:**  
-```python
+**Example:**```python
 from langchain_core.output_parsers import JsonOutputParser
 parser = JsonOutputParser(pydantic_object=Review)
 ```
-**Pros:** Validation, error handling, schema enforcement.  
-**Cons:** Adds dependency, some setup required.
+**Pros:**Validation, error handling, schema enforcement.  
+**Cons:**Adds dependency, some setup required.
 
 ### Function/Tool Calling
 
 LLMs (notably OpenAI’s GPT-4/3.5-turbo) can be prompted to respond in a way that matches a function signature, returning structured data natively.
 
-**Example:**  
-```python
+**Example:**```python
 tool_def = {
     "type": "function",
     "function": {
@@ -120,22 +112,21 @@ tool_def = {
     }
 }
 ```
-**Pros:** Highly deterministic output.  
-**Cons:** Only supported in select APIs/models.
+**Pros:**Highly deterministic output.  
+**Cons:**Only supported in select APIs/models.
 
 ### Fine-Tuning
 
 Custom-training an LLM to always output in a certain format.
 
-**Pros:** Maximum reliability for specialized, high-volume use cases.  
-**Cons:** Costly, requires large datasets, less flexible.
+**Pros:**Maximum reliability for specialized, high-volume use cases.  
+**Cons:**Costly, requires large datasets, less flexible.
 
 ## Implementation Examples
 
 ### Parsing JSON Output with LangChain
 
-**Workflow Example:**
-```python
+**Workflow Example:**```python
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
@@ -159,8 +150,7 @@ chain = prompt | model | parser
 response = chain.invoke({"query": "Give me a famous movie quote with the character name."})
 print(response)
 ```
-**Sample Output:**
-```json
+**Sample Output:**```json
 {
   "character": "Darth Vader",
   "quote": "I am your father."
@@ -175,8 +165,7 @@ for chunk in chain.stream({"query": "Give me a famous movie quote with the chara
 Streaming allows partial results and real-time processing.  
 ### Parsing XML and YAML
 
-**XML Example:**
-```python
+**XML Example:**```python
 from langchain_core.output_parsers import XMLOutputParser
 
 parser = XMLOutputParser(tags=["author", "book", "genre", "year"])
@@ -193,8 +182,7 @@ print(custom_output)
 ```
 Parsed output is a hierarchical dict matching XML structure.
 
-**YAML Example:**
-```python
+**YAML Example:**```python
 from langchain.output_parsers import YamlOutputParser
 
 class Recipe(BaseModel):
@@ -207,32 +195,31 @@ parser = YamlOutputParser(pydantic_object=Recipe)
 ```
 ## Features and Benefits
 
-- **Structured Output Generation:** Ensures responses are formatted as JSON, dict, list, or Pydantic objects.
-- **Schema Enforcement:** Validates output against strict schemas.
-- **Error Handling and Correction:** Auto-corrects malformed output (`OutputFixingParser`, `RetryOutputParser`).
-- **Streaming Support:** Real-time output for incremental processing.
-- **Integration with Chains:** Works with LangChain, LlamaIndex, and other frameworks.
-- **Multiple Parser Types:** JSON, XML, YAML, String, List, and custom parsers.
-- **Validation:** Type and logic validation via Pydantic.
-- **Compatibility:** Integrates with APIs, databases, UI frameworks, and analytics tools.
+- **Structured Output Generation:**Ensures responses are formatted as JSON, dict, list, or Pydantic objects.
+- **Schema Enforcement:**Validates output against strict schemas.
+- **Error Handling and Correction:**Auto-corrects malformed output (`OutputFixingParser`, `RetryOutputParser`).
+- **Streaming Support:**Real-time output for incremental processing.
+- **Integration with Chains:**Works with LangChain, LlamaIndex, and other frameworks.
+- **Multiple Parser Types:**JSON, XML, YAML, String, List, and custom parsers.
+- **Validation:**Type and logic validation via Pydantic.
+- **Compatibility:**Integrates with APIs, databases, UI frameworks, and analytics tools.
 ## Challenges and Error Handling
 
 ### Common Issues
 
-- **Malformed Output:** The LLM response is not valid JSON/XML/YAML.
-- **Inconsistent Fields:** Missing or renamed keys, or extra fields.
-- **Schema Mismatches:** Output types do not match the schema.
-- **Non-deterministic Output:** LLMs may output variants for the same prompt.
+- **Malformed Output:**The LLM response is not valid JSON/XML/YAML.
+- **Inconsistent Fields:**Missing or renamed keys, or extra fields.
+- **Schema Mismatches:**Output types do not match the schema.
+- **Non-deterministic Output:**LLMs may output variants for the same prompt.
 
 ### Error Handling Techniques
 
-- **Try/Except Blocks:** Standard Python error handling.
-- **OutputFixingParser:** Re-prompts or repairs malformed output using the LLM itself.
-- **RetryOutputParser:** Attempts to re-parse or regenerate output on error.
-- **Schema Validation:** Use Pydantic or JSON Schema for strict type/field enforcement.
+- **Try/Except Blocks:**Standard Python error handling.
+- **OutputFixingParser:**Re-prompts or repairs malformed output using the LLM itself.
+- **RetryOutputParser:**Attempts to re-parse or regenerate output on error.
+- **Schema Validation:**Use Pydantic or JSON Schema for strict type/field enforcement.
 
-**Example:**  
-```python
+**Example:**```python
 from langchain.output_parsers import OutputFixingParser
 
 parser = OutputFixingParser.from_parser(JsonOutputParser(pydantic_object=Review), llm=model)
@@ -257,12 +244,12 @@ parser = OutputFixingParser.from_parser(JsonOutputParser(pydantic_object=Review)
 
 ## Applications and Real-World Scenarios
 
-- **Customer Review Analysis:** Extracting structured sentiment, topics, and scores.
-- **Lead Qualification:** Parsing unstructured resumes or forms into candidate objects.
-- **Spam Detection:** Structuring submissions for automated classification.
-- **Persona Classification:** Segmenting job titles/personas.
-- **Invoice Processing:** Converting PDFs or scanned data into line-item JSON for ERP.
-- **Survey Automation:** Categorizing free-form survey responses.
+- **Customer Review Analysis:**Extracting structured sentiment, topics, and scores.
+- **Lead Qualification:**Parsing unstructured resumes or forms into candidate objects.
+- **Spam Detection:**Structuring submissions for automated classification.
+- **Persona Classification:**Segmenting job titles/personas.
+- **Invoice Processing:**Converting PDFs or scanned data into line-item JSON for ERP.
+- **Survey Automation:**Categorizing free-form survey responses.
 
 ## Key Takeaways
 
@@ -273,17 +260,13 @@ parser = OutputFixingParser.from_parser(JsonOutputParser(pydantic_object=Review)
 
 ## FAQ
 
-**Q: What if the LLM output is not valid JSON?**  
-A: Use error-correcting parsers like `OutputFixingParser` or retry with `RetryOutputParser`. Always validate output before use.
+**Q: What if the LLM output is not valid JSON?**A: Use error-correcting parsers like `OutputFixingParser` or retry with `RetryOutputParser`. Always validate output before use.
 
-**Q: Can I use output parsing with any LLM?**  
-A: Yes, via prompt engineering and parsers. Function calling requires model/API support.
+**Q: Can I use output parsing with any LLM?**A: Yes, via prompt engineering and parsers. Function calling requires model/API support.
 
-**Q: How do I handle streaming output?**  
-A: Use streaming-compatible parsers and process results as they arrive.
+**Q: How do I handle streaming output?**A: Use streaming-compatible parsers and process results as they arrive.
 
-**Q: When should I consider fine-tuning instead of output parsing?**  
-A: For high-volume, specialized tasks needing absolute consistency.
+**Q: When should I consider fine-tuning instead of output parsing?**A: For high-volume, specialized tasks needing absolute consistency.
 
 ## References and Further Reading
 
@@ -294,12 +277,10 @@ A: For high-volume, specialized tasks needing absolute consistency.
 - [What is Parsing? | Xcitium](https://www.xcitium.com/blog/news/what-is-parsing/)
 - [LangChain Output Parsers - GeeksforGeeks](https://www.geeksforgeeks.org/artificial-intelligence/output-parsers-in-langchain/)
 
-**Related Terms:** output parsers, prompt engineering, structured data, parser jsonoutputparser, function/tool calling, fine-tuning, content uploads, [prompt template](/en/glossary/prompt-template/), machine learning, structured outputs, schema enforcement
+**Related Terms:**output parsers, prompt engineering, structured data, parser jsonoutputparser, function/tool calling, fine-tuning, content uploads, [prompt template](/en/glossary/prompt-template/), machine learning, structured outputs, schema enforcement
 
-**Tip:**  
-Always include explicit format instructions in prompts and validate output with a parser before downstream use.
+**Tip:**Always include explicit format instructions in prompts and validate output with a parser before downstream use.
 
-**For detailed code, error handling, and streaming examples, see:**  
-- [Analytics Vidhya Output Parsers Guide](https://www.analyticsvidhya.com/blog/2024/11/output-parsers/)
+**For detailed code, error handling, and streaming examples, see:**- [Analytics Vidhya Output Parsers Guide](https://www.analyticsvidhya.com/blog/2024/11/output-parsers/)
 - [LangChain Output Parsers Documentation](https://reference.langchain.com/python/langchain_core/output_parsers/)
 - [OpenAI JSON Mode Docs](https://platform.openai.com/docs/guides/text-generation/json-mode)

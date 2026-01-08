@@ -13,12 +13,11 @@ draft: false
 
 JSON Path is a query language designed for navigating, extracting, and evaluating elements within JSON (JavaScript Object Notation) documents. It is analogous to XPath for XML, enabling targeted data retrieval from any depth of a JSON structure using a standardized, readable syntax. JSON Path is extensively used in programming, automation, API testing, data engineering, and configuration management, serving as an essential tool for anyone who needs to work efficiently with JSON data.
 
-- **Standardization:** JSON Path was standardized in [RFC 9535](https://datatracker.ietf.org/doc/html/rfc9535) by the IETF, providing a uniform syntax and semantics for JSONPath query expressions.
-- **Cross-language support:** JSON Path is implemented in numerous programming languages (e.g., JavaScript, Python, Java, PHP, and SQL databases).
-- **Use cases:** API testing, validation, data extraction, ETL (Extract, Transform, Load) processes, configuration management, and chatbot automation.
+- **Standardization:**JSON Path was standardized in [RFC 9535](https://datatracker.ietf.org/doc/html/rfc9535) by the IETF, providing a uniform syntax and semantics for JSONPath query expressions.
+- **Cross-language support:**JSON Path is implemented in numerous programming languages (e.g., JavaScript, Python, Java, PHP, and SQL databases).
+- **Use cases:**API testing, validation, data extraction, ETL (Extract, Transform, Load) processes, configuration management, and chatbot automation.
 
-**Example JSON:**
-```json
+**Example JSON:**```json
 {
   "user": {
     "id": 123,
@@ -29,8 +28,7 @@ JSON Path is a query language designed for navigating, extracting, and evaluatin
   }
 }
 ```
-**Extract the user’s ID:**
-```jsonpath
+**Extract the user’s ID:**```jsonpath
 $.user.id
 // Output: 123
 ```
@@ -43,62 +41,49 @@ JSON Path dramatically simplifies extracting or validating data within deeply ne
 - Select, transform, or validate data in API responses, configuration files, logs, and databases.
 - Automate repetitive data extraction tasks in programming, testing, and analytics.
 
-**Common Use Cases:**
-
-- **API Testing & Automation:** Assert and validate specific fields in REST API responses (e.g., with Postman, Rest-Assured).
-- **Data Processing Pipelines:** Extract targeted data from JSON logs or data lakes for analytics and ETL.
-- **Database Integration:** Query JSON columns in databases (SQL Server, PostgreSQL, MongoDB).
-- **Configuration Management:** Retrieve or update settings in JSON config files.
-- **AI Chatbots:** Parse user attributes, intents, or message history in JSON-formatted conversations.
+**Common Use Cases:**- **API Testing & Automation:**Assert and validate specific fields in REST API responses (e.g., with Postman, Rest-Assured).
+- **Data Processing Pipelines:**Extract targeted data from JSON logs or data lakes for analytics and ETL.
+- **Database Integration:**Query JSON columns in databases (SQL Server, PostgreSQL, MongoDB).
+- **Configuration Management:**Retrieve or update settings in JSON config files.
+- **AI Chatbots:**Parse user attributes, intents, or message history in JSON-formatted conversations.
 ## JSON Path Syntax and Operators
 
 ### Core Syntax Elements
 
 JSON Path expressions consist of selectors and operators to traverse and filter JSON data. The [SmartBear JSONPath Syntax Documentation](https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html) and [RFC 9535](https://datatracker.ietf.org/doc/html/rfc9535) provide a comprehensive reference.
 
-#### 1. **Root Object (`$`)**
-- Denotes the root of the JSON document.
+#### 1. **Root Object (`$`)**- Denotes the root of the JSON document.
 - Example: `$.store` selects the `store` object at the root.
 
-#### 2. **Child Operators (`.` and `[]`)**
-- Dot notation (`.`): Accesses child properties (e.g., `$.user.name`).
+#### 2. **Child Operators (`.` and `[]`)**- Dot notation (`.`): Accesses child properties (e.g., `$.user.name`).
 - Bracket notation (`['property']`): Handles property names with spaces, special characters, or reserved words (e.g., `$['user']['profile']`). Brackets always use single quotes.
 
-#### 3. **Array Access**
-- Index (`[n]`): Selects the nth (0-based) element (`$.store.book[0]`).
+#### 3. **Array Access**- Index (`[n]`): Selects the nth (0-based) element (`$.store.book[0]`).
 - Multiple indices (`[n,m]`): Selects several elements (`$.store.book[0,2]`).
 
-#### 4. **Array Slice Operator (`[start:end:step]`)**
-- Selects a range of array elements (Python-style).
+#### 4. **Array Slice Operator (`[start:end:step]`)**- Selects a range of array elements (Python-style).
 - Examples: `$.store.book[0:2]` selects the first two books; `$.store.book[::2]` selects every other book.
 
-#### 5. **Wildcard (`*`)**
-- Selects all elements at the current level.
+#### 5. **Wildcard (`*`)**- Selects all elements at the current level.
 - Example: `$.store.book[*].author` retrieves all authors in the book array.
 
-#### 6. **Recursive Descent (`..`)**
-- Selects all matching elements at any depth under the current node.
+#### 6. **Recursive Descent (`..`)**- Selects all matching elements at any depth under the current node.
 - Example: `$..price` finds all `price` fields anywhere in the document.
 
-#### 7. **Filter Expressions (`[?(...)]`)**
-- Filters array elements based on a condition.
+#### 7. **Filter Expressions (`[?(...)]`)**- Filters array elements based on a condition.
 - Example: `$.store.book[?(@.price < 10)]` selects books priced below 10.
 - `@` refers to the current element, `$` refers to the document root.
 
-#### 8. **Script Expressions**
-- Some implementations support functions like `length`, `max`, or `min` (not part of the RFC standard).
+#### 8. **Script Expressions**- Some implementations support functions like `length`, `max`, or `min` (not part of the RFC standard).
 - Example: `$.store.book[?(@.author =~ /Evelyn.*/)]` selects authors starting with "Evelyn".
 
-#### 9. **Union Operator (`[,]`)**
-- Selects a union of multiple properties or array indices.
+#### 9. **Union Operator (`[,]`)**- Selects a union of multiple properties or array indices.
 - Example: `$.store.book[0,1]` selects the first and second books.
 
-#### 10. **Current Object (`@`)**
-- Used inside filters to reference the current item.
+#### 10. **Current Object (`@`)**- Used inside filters to reference the current item.
 - Example: `$.store.book[?(@.category == 'fiction')]`
 
-#### 11. **Case Sensitivity**
-- JSON Path is case-sensitive for property names and values.
+#### 11. **Case Sensitivity**- JSON Path is case-sensitive for property names and values.
 
 ## JSON Path Syntax Cheat Sheet
 
@@ -116,8 +101,7 @@ JSON Path expressions consist of selectors and operators to traverse and filter 
 | `*`                | Wildcard (all keys or values at this level)          | `$.store.*`                            |
 ## Practical Examples
 
-**Sample JSON:**
-```json
+**Sample JSON:**```json
 {
   "store": {
     "book": [
@@ -159,56 +143,47 @@ JSON Path expressions consist of selectors and operators to traverse and filter 
 
 ### Example Queries
 
-1. **Get All Book Titles**
-   ```jsonpath
+1. **Get All Book Titles**```jsonpath
    $.store.book[*].title
    // Output: ["Sayings of the Century", "Sword of Honour", "Moby Dick", "The Lord of the Rings"]
    ```
 
-2. **Get All Authors of Fiction Books**
-   ```jsonpath
+2. **Get All Authors of Fiction Books**```jsonpath
    $.store.book[?(@.category == 'fiction')].author
    // Output: ["Evelyn Waugh", "Herman Melville", "J. R. R. Tolkien"]
    ```
 
-3. **Find All Books Priced Below 10**
-   ```jsonpath
+3. **Find All Books Priced Below 10**```jsonpath
    $.store.book[?(@.price < 10)]
    // Output: [ ... two book objects ... ]
    ```
 
-4. **Get All Prices in the Store (Books and Bicycle)**
-   ```jsonpath
+4. **Get All Prices in the Store (Books and Bicycle)**```jsonpath
    $.store..price
    // Output: [8.95, 12.99, 8.99, 22.99, 19.95]
    ```
 
-5. **Select the Last Book in the Array**
-   ```jsonpath
+5. **Select the Last Book in the Array**```jsonpath
    $.store.book[-1]
    // Output: { ... Tolkien book ... }
    ```
 
-6. **Get Titles of the First Two Books**
-   ```jsonpath
+6. **Get Titles of the First Two Books**```jsonpath
    $.store.book[0:2].title
    // Output: ["Sayings of the Century", "Sword of Honour"]
    ```
 
-7. **Get All ISBN Numbers in the Store**
-   ```jsonpath
+7. **Get All ISBN Numbers in the Store**```jsonpath
    $.store.book[*].isbn
    // Output: ["0-553-21311-3", "0-395-19395-8"]
    ```
 
-8. **Get All Items in Store (Books and Bicycle) Using Wildcard**
-   ```jsonpath
+8. **Get All Items in Store (Books and Bicycle) Using Wildcard**```jsonpath
    $.store.*
    // Output: [book array, bicycle object]
    ```
 
-9. **Recursive Descent to Get All Prices Anywhere**
-   ```jsonpath
+9. **Recursive Descent to Get All Prices Anywhere**```jsonpath
    $..price
    // Output: [8.95, 12.99, 8.99, 22.99, 19.95, 10]
    ```
@@ -234,14 +209,14 @@ JSON Path expressions consist of selectors and operators to traverse and filter 
 | `size`   | Array or string has specific length         | `[?(@.name size 4)]` (TestEngine only)               |
 | `empty true/false` | Is empty/non-empty                | `[?(@.name empty true)]` (TestEngine only)           |
 
-**Note:** Operator support may vary by library. See [RFC 9535 Section 2.3.5](https://datatracker.ietf.org/doc/html/rfc9535#section-2.3.5) for standardization.
+**Note:**Operator support may vary by library. See [RFC 9535 Section 2.3.5](https://datatracker.ietf.org/doc/html/rfc9535#section-2.3.5) for standardization.
 
 ## How JSON Path is Used in Practice
 
 ### 1. API Automation and Testing
 
-- **Validate API responses** using JSONPath in tools like [Postman](https://learning.postman.com/docs/writing-scripts/script-references/variables-list/), [Rest-Assured](https://toolsqa.com/rest-assured/jsonpath-and-query-json-using-jsonpath/), or [SoapUI](https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html).
-- **Example:** Assert that the returned user's email matches the expected value:
+- **Validate API responses**using JSONPath in tools like [Postman](https://learning.postman.com/docs/writing-scripts/script-references/variables-list/), [Rest-Assured](https://toolsqa.com/rest-assured/jsonpath-and-query-json-using-jsonpath/), or [SoapUI](https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html).
+- **Example:**Assert that the returned user's email matches the expected value:
   ```javascript
   // Postman
   pm.expect(pm.response.json().user.email).to.eql("test@example.com");
@@ -260,9 +235,8 @@ JSON Path expressions consist of selectors and operators to traverse and filter 
 ### 3. Database Queries
 
 - Query JSON columns in SQL Server or PostgreSQL using JSONPath.
-  - **SQL Server:** [JSON Path Expressions in SQL Server](https://learn.microsoft.com/en-us/sql/relational-databases/json/json-path-expressions-sql-server?view=sql-server-ver17)
-  - **Example:**
-    ```sql
+  - **SQL Server:**[JSON Path Expressions in SQL Server](https://learn.microsoft.com/en-us/sql/relational-databases/json/json-path-expressions-sql-server?view=sql-server-ver17)
+  - **Example:**```sql
     SELECT *
     FROM OPENJSON(@json, '$.store.book[?(@.price < 10)]')
     ```
@@ -347,5 +321,5 @@ print_r($titles->data());
 
 ## Best Practices and Tips
 
-- **Strict vs. Lax Mode:** Some implementations (e.g., SQL Server) offer strict/lax modes for error handling of missing paths.
+- **Strict vs. Lax Mode:**Some implementations (e.g., SQL Server) offer strict/lax modes for error handling of missing paths.
 - **Bracket Not

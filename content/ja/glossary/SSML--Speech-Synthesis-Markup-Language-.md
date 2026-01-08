@@ -27,7 +27,7 @@ Speech Synthesis Markup Language(SSML)は、W3Cによって開発・維持され
 
 SSMLがない場合、テキスト読み上げ(TTS)出力はロボット的で単調になりがちで、発音ミスや不自然なイントネーションが発生しやすくなります。SSMLは、音声アルファベット(IPA、X-SAMPA)を使用した発音の細かい制御、韻律仕様(ピッチ、速度、音量、強調)、自然な間の挿入と文構造、特殊コンテンツ(日付、時刻、頭字語、通貨)の明示的な処理、音声と言語の途中切り替え、音声ファイルの埋め込みを提供することで、これらの問題を解決します。
 
-**業界での採用:** SSMLは、Amazon Alexa Skills Kit、Google Cloud Text-to-Speech、Microsoft Azure Speech Service、IBM Watson Text-to-Speech、Speechifyを含むすべての主要なクラウドTTSプロバイダーで事実上の標準となっています。
+<strong>業界での採用:</strong>SSMLは、Amazon Alexa Skills Kit、Google Cloud Text-to-Speech、Microsoft Azure Speech Service、IBM Watson Text-to-Speech、Speechifyを含むすべての主要なクラウドTTSプロバイダーで事実上の標準となっています。
 
 ## 主要機能
 
@@ -75,8 +75,7 @@ SSMLがない場合、テキスト読み上げ(TTS)出力はロボット的で�
 
 単語やフレーズの間に間を追加したり、境界を制御します。
 
-**属性:**
-- `time`: 正確な間の長さ(例:「500ms」、「2s」)
+<strong>属性:</strong>- `time`: 正確な間の長さ(例:「500ms」、「2s」)
 - `strength`: 相対的な間(「none」、「x-weak」、「weak」、「medium」、「strong」、「x-strong」)
 
 ```xml
@@ -89,8 +88,7 @@ SSMLがない場合、テキスト読み上げ(TTS)出力はロボット的で�
 
 音声の表現力を変更します。
 
-**属性:**
-- `pitch`: 「x-low」、「low」、「medium」、「high」、「x-high」、またはパーセンテージ(「+20%」)
+<strong>属性:</strong>- `pitch`: 「x-low」、「low」、「medium」、「high」、「x-high」、またはパーセンテージ(「+20%」)
 - `rate`: 「x-slow」、「slow」、「medium」、「fast」、「x-fast」、またはパーセンテージ(「-20%」)
 - `volume`: 「silent」、「x-soft」、「soft」、「medium」、「loud」、「x-loud」、デシベル(「-6dB」)、またはパーセンテージ
 
@@ -102,7 +100,7 @@ SSMLがない場合、テキスト読み上げ(TTS)出力はロボット的で�
 </speak>
 ```
 
-**ベストプラクティス:** 極端な値は避けてください。微妙な変化がより自然な音声を生み出します。
+<strong>ベストプラクティス:</strong>極端な値は避けてください。微妙な変化がより自然な音声を生み出します。
 
 ### `<emphasis>`: 単語を強調
 
@@ -120,8 +118,7 @@ SSMLがない場合、テキスト読み上げ(TTS)出力はロボット的で�
 
 TTSにテキストを特定のタイプとして読み上げるよう指示します。
 
-**一般的なinterpret-as値:**
-- 「cardinal」: 数字(123 → 「123」)
+<strong>一般的なinterpret-as値:</strong>- 「cardinal」: 数字(123 → 「123」)
 - 「ordinal」: 序数(1st → 「1番目」)
 - 「characters」: スペルアウト(「SSML」 → 「エス エス エム エル」)
 - 「date」: フォーマット指定付きの日付
@@ -131,9 +128,7 @@ TTSにテキストを特定のタイプとして読み上げるよう指示し�
 - 「fraction」: 分数(「3/4」 → 「4分の3」)
 - 「unit」: 測定値
 
-**例:**
-
-```xml
+<strong>例:</strong>```xml
 <speak>
   <say-as interpret-as="characters">SSML</say-as>
 </speak>
@@ -155,8 +150,7 @@ TTSにテキストを特定のタイプとして読み上げるよう指示し�
 
 音声アルファベットを使用して正確な発音を指定します。
 
-**属性:**
-- `alphabet`: 「ipa」、「x-sampa」
+**属性:**- `alphabet`: 「ipa」、「x-sampa」
 - `ph`: 音声文字列
 
 ```xml
@@ -175,7 +169,7 @@ TTSにテキストを特定のタイプとして読み上げるよう指示し�
 </speak>
 ```
 
-**使用例:** ブランド名、頭字語、外国語
+**使用例:**ブランド名、頭字語、外国語
 
 ### `<audio>`: 音声クリップを挿入
 
@@ -190,8 +184,7 @@ TTSにテキストを特定のタイプとして読み上げるよう指示し�
 </speak>
 ```
 
-**プロバイダーの制限:**
-- Google Cloud: フォーマットと時間の制限が適用されます
+**プロバイダーの制限:**- Google Cloud: フォーマットと時間の制限が適用されます
 - Amazon Alexa: 最大240秒、HTTPS必須、サイズ制限あり
 - Azure: 制限付きでサポート
 
@@ -233,7 +226,7 @@ TTSにテキストを特定のタイプとして読み上げるよう指示し�
 
 ### Amazon Alexa
 
-**`<amazon:emotion>`:** 「excited」または「disappointed」の感情を追加
+**`<amazon:emotion>`:**「excited」または「disappointed」の感情を追加
 
 ```xml
 <speak>
@@ -243,11 +236,11 @@ TTSにテキストを特定のタイプとして読み上げるよう指示し�
 </speak>
 ```
 
-**`<amazon:domain>`:** 配信スタイルを変更(ニュース、音楽、会話)
+**`<amazon:domain>`:**配信スタイルを変更(ニュース、音楽、会話)
 
 ### Microsoft Azure
 
-**`<mstts:express-as>`:** ニューラル音声スタイルとロール
+**`<mstts:express-as>`:**ニューラル音声スタイルとロール
 
 ```xml
 <speak>
@@ -261,7 +254,7 @@ TTSにテキストを特定のタイプとして読み上げるよう指示し�
 
 ### Speechify
 
-**`<speechify:style>`:** 読書体験を向上させるための独自のスタイル制御
+**`<speechify:style>`:**読書体験を向上させるための独自のスタイル制御
 
 ## 実用例
 
@@ -279,7 +272,7 @@ TTSにテキストを特定のタイプとして読み上げるよう指示し�
 </speak>
 ```
 
-**期待される出力:** 「Welcome to the demo. [間] Your appointment is on June tenth, twenty twenty-three. The amount due is nineteen dollars and ninety-nine cents. For assistance, call one eight hundred one two three four five six seven. [遅く] Thank you for using our service.」
+**期待される出力:**「Welcome to the demo. [間] Your appointment is on June tenth, twenty twenty-three. The amount due is nineteen dollars and ninety-nine cents. For assistance, call one eight hundred one two three four five six seven. [遅く] Thank you for using our service.」
 
 ## 一般的な使用例
 
@@ -309,33 +302,33 @@ TTSにテキストを特定のタイプとして読み上げるよう指示し�
 
 ## ベストプラクティス
 
-**微妙な調整:** 小さな韻律の変化は、極端な変更よりも効果的です
+**微妙な調整:**小さな韻律の変化は、極端な変更よりも効果的です
 
-**プラットフォーム間でテスト:** ターゲットTTSプロバイダー間でSSMLレンダリングを検証
+**プラットフォーム間でテスト:**ターゲットTTSプロバイダー間でSSMLレンダリングを検証
 
-**音声記号は控えめに使用:** 必要な場合にのみ発音を上書き
+**音声記号は控えめに使用:**必要な場合にのみ発音を上書き
 
-**論理的に構造化:** 自然なペーシングのために`<p>`と`<s>`タグを使用
+**論理的に構造化:**自然なペーシングのために`<p>`と`<s>`タグを使用
 
-**速度のバランス:** 自然な速度を維持し、過度に速いまたは遅い音声を避ける
+**速度のバランス:**自然な速度を維持し、過度に速いまたは遅い音声を避ける
 
-**音声品質:** 埋め込み音声ファイルが適切にエンコードされ、ホストされていることを確認
+**音声品質:**埋め込み音声ファイルが適切にエンコードされ、ホストされていることを確認
 
-**アクセシビリティ重視:** 支援技術を使用するユーザーを含むすべてのユーザーを考慮
+**アクセシビリティ重視:**支援技術を使用するユーザーを含むすべてのユーザーを考慮
 
 ## 実装上の考慮事項
 
-**プラットフォーム互換性:** プロバイダーによってサポートされるタグのサブセットと拡張機能が異なります
+**プラットフォーム互換性:**プロバイダーによってサポートされるタグのサブセットと拡張機能が異なります
 
-**フォールバックコンテンツ:** サポートされていないタグのためのフォールバックテキストを提供
+**フォールバックコンテンツ:**サポートされていないタグのためのフォールバックテキストを提供
 
-**文字数制限:** プラットフォーム固有のテキスト長制限に注意
+**文字数制限:**プラットフォーム固有のテキスト長制限に注意
 
-**処理オーバーヘッド:** 複雑なSSMLは応答時間を増加させる可能性があります
+**処理オーバーヘッド:**複雑なSSMLは応答時間を増加させる可能性があります
 
-**コスト管理:** 一部のプロバイダーはマークアップを含む文字数に基づいて課金します
+**コスト管理:**一部のプロバイダーはマークアップを含む文字数に基づいて課金します
 
-**テストプロトコル:** デバイスとプラットフォーム間で包括的なテストを確立
+**テストプロトコル:**デバイスとプラットフォーム間で包括的なテストを確立
 
 ## 参考文献
 

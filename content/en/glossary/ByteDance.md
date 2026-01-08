@@ -105,12 +105,12 @@ Beyond its flagship social media platforms, ByteDance has diversified its portfo
 
 | Feature | ByteDance (TikTok) | Meta (Instagram) | Google (YouTube) | Snapchat | Twitter |
 |---------|-------------------|------------------|------------------|----------|---------|
-| **Primary Content Format** | Short-form vertical videos | Mixed media posts | Long and short-form videos | Ephemeral content | Text-based posts |
-| **Algorithm Focus** | AI-driven personalization | Social graph-based | Search and subscription | Location and friends | Chronological timeline |
-| **Target Demographics** | Gen Z and Millennials | Broad age range | All demographics | Younger users | News and opinion leaders |
-| **Monetization Model** | Advertising and creator funds | Advertising and shopping | Advertising and subscriptions | Advertising and AR | Advertising and subscriptions |
-| **Global Reach** | 150+ countries | 190+ countries | 100+ countries | 75+ countries | 190+ countries |
-| **Content Discovery** | For You page algorithm | Explore and hashtags | Recommendations and search | Discover and map | Trending topics |
+| **Primary Content Format**| Short-form vertical videos | Mixed media posts | Long and short-form videos | Ephemeral content | Text-based posts |
+| **Algorithm Focus**| AI-driven personalization | Social graph-based | Search and subscription | Location and friends | Chronological timeline |
+| **Target Demographics**| Gen Z and Millennials | Broad age range | All demographics | Younger users | News and opinion leaders |
+| **Monetization Model**| Advertising and creator funds | Advertising and shopping | Advertising and subscriptions | Advertising and AR | Advertising and subscriptions |
+| **Global Reach**| 150+ countries | 190+ countries | 100+ countries | 75+ countries | 190+ countries |
+| **Content Discovery**| For You page algorithm | Explore and hashtags | Recommendations and search | Discover and map | Trending topics |
 
 ## Challenges and Considerations
 

@@ -108,13 +108,13 @@ The softphone communication process involves multiple coordinated steps that tra
 
 | Feature | Softphone | Traditional Phone System |
 |---------|-----------|-------------------------|
-| **Hardware Requirements** | Uses existing computers/mobile devices | Requires dedicated desk phones and PBX equipment |
-| **Installation Complexity** | Software download and configuration | Physical wiring and hardware installation |
-| **Scalability** | Instant user addition/removal via software | Hardware procurement and installation required |
-| **Mobility** | Full functionality anywhere with internet | Limited to physical phone locations |
-| **Feature Set** | Video, messaging, screen sharing, integrations | Basic calling features, limited advanced options |
-| **Maintenance Costs** | Software updates and licensing fees | Hardware maintenance, replacement, and support contracts |
-| **Disaster Recovery** | Automatic failover and cloud redundancy | Manual failover procedures and backup systems |
+| **Hardware Requirements**| Uses existing computers/mobile devices | Requires dedicated desk phones and PBX equipment |
+| **Installation Complexity**| Software download and configuration | Physical wiring and hardware installation |
+| **Scalability**| Instant user addition/removal via software | Hardware procurement and installation required |
+| **Mobility**| Full functionality anywhere with internet | Limited to physical phone locations |
+| **Feature Set**| Video, messaging, screen sharing, integrations | Basic calling features, limited advanced options |
+| **Maintenance Costs**| Software updates and licensing fees | Hardware maintenance, replacement, and support contracts |
+| **Disaster Recovery**| Automatic failover and cloud redundancy | Manual failover procedures and backup systems |
 
 ## Challenges and Considerations
 

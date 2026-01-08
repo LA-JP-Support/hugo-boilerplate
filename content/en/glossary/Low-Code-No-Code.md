@@ -112,12 +112,12 @@ The low-code/no-code development process follows a systematic workflow that tran
 
 | Feature | No-Code Platforms | Low-Code Platforms | Traditional Development |
 |---------|-------------------|-------------------|------------------------|
-| **Technical Expertise Required** | Minimal to none | Basic to intermediate | Advanced programming skills |
-| **Development Speed** | Very fast (days to weeks) | Fast (weeks to months) | Slow (months to years) |
-| **Customization Level** | Limited to platform capabilities | Moderate with custom code options | Unlimited customization |
-| **Integration Complexity** | Simple with built-in connectors | Moderate with API flexibility | Complex but fully customizable |
-| **Scalability** | Platform-dependent limitations | Good with some constraints | Unlimited with proper architecture |
-| **Total Cost of Ownership** | Low initial, subscription-based | Moderate with licensing costs | High with infrastructure and resources |
+| **Technical Expertise Required**| Minimal to none | Basic to intermediate | Advanced programming skills |
+| **Development Speed**| Very fast (days to weeks) | Fast (weeks to months) | Slow (months to years) |
+| **Customization Level**| Limited to platform capabilities | Moderate with custom code options | Unlimited customization |
+| **Integration Complexity**| Simple with built-in connectors | Moderate with API flexibility | Complex but fully customizable |
+| **Scalability**| Platform-dependent limitations | Good with some constraints | Unlimited with proper architecture |
+| **Total Cost of Ownership**| Low initial, subscription-based | Moderate with licensing costs | High with infrastructure and resources |
 
 ## Challenges and Considerations
 

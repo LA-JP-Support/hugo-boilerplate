@@ -39,11 +39,7 @@ However, since this metric remains in the research phase and isn't yet standardi
 
 To address these challenges, new evaluation metrics have been developed:
 
-- ** [RAG benchmarks](/en/glossary/RAG-benchmarks/)**
-- ** [Fact-Score](/en/glossary/Fact-Score/)**
-- ** [MHaluBench](/en/glossary/MHaluBench/)**
-
-These evaluation methods enable scientific measurement of how trustworthy AI outputs are.
+- **[RAG benchmarks](/en/glossary/RAG-benchmarks/)**- **[Fact-Score](/en/glossary/Fact-Score/)**- **[MHaluBench](/en/glossary/MHaluBench/)**These evaluation methods enable scientific measurement of how trustworthy AI outputs are.
 
 ## The Uniqueness of Japanese LLM Evaluation and International Comparison
 
@@ -53,19 +49,17 @@ Evaluating Japanese AI models presents language-specific complexities. Honorific
 
 | Benchmark Name | Characteristics | Evaluation Focus |
 |---|---|---|
-| ** [JMMLU](https://github.com/nlp-waseda/JMMLU)** | Multi-domain knowledge questions | Factual knowledge and reasoning ability |
-| ** [JGLUE](https://github.com/yahoojapan/JGLUE)** | NLP task collection | Contextual comprehension and logical thinking |
-| ** [JamC-QA](https://huggingface.co/datasets/sbintuitions/[jamc-qa](/en/glossary/JamC-QA/))** | Japan-culture specialized | Japan-specific common sense and cultural knowledge |
-| ** [Nejumi Leaderboard4](https://wandb.ai/wandb-japan/llm-leaderboard)** | Comprehensive evaluation environment | Multi-faceted performance comparison |
+| **[JMMLU](https://github.com/nlp-waseda/JMMLU)**| Multi-domain knowledge questions | Factual knowledge and reasoning ability |
+| **[JGLUE](https://github.com/yahoojapan/JGLUE)**| NLP task collection | Contextual comprehension and logical thinking |
+| **[JamC-QA](https://huggingface.co/datasets/sbintuitions/[jamc-qa](/en/glossary/JamC-QA/))**| Japan-culture specialized | Japan-specific common sense and cultural knowledge |
+| **[Nejumi Leaderboard4](https://wandb.ai/wandb-japan/llm-leaderboard)**| Comprehensive evaluation environment | Multi-faceted performance comparison |
 
 ### Trends in International Comparison
 
-**Characteristics by Parameter Scale**
-- Under 10B: Japanese-specialized models excel
+**Characteristics by Parameter Scale**- Under 10B: Japanese-specialized models excel
 - 30B and above: Overseas large-scale models demonstrate high performance in Japanese
 
-**Differences by Evaluation Category**
-- Logical reasoning and accuracy: English models maintain high standards
+**Differences by Evaluation Category**- Logical reasoning and accuracy: English models maintain high standards
 - Honorifics and cultural consideration: Japanese-specialized models significantly superior
 - Misinformation resistance: Japanese-specialized models more stable
 
@@ -75,18 +69,15 @@ Effective AI utilization requires careful design and evaluation of [prompts](/en
 
 ### Scientific Improvement Methodology
 
-**Step 1: Prompt Design**
-- Create clear, specific instructions
+**Step 1: Prompt Design**- Create clear, specific instructions
 - Eliminate ambiguous expressions
 - Utilize techniques such as [Zero-shot](/en/glossary/Zero-Shot-Chain-of-Thought/), [Few-shot](/en/glossary/Few-Shot-Learning/), and [Chain-of-Thought](/en/glossary/Chain-of-Thought-Prompting/)
 
-**Step 2: Multi-faceted Evaluation**
-- [Precision](/en/glossary/Precision/), [F1 score](/en/glossary/F1-score/), [BLEU/ROUGE scores](/en/glossary/BLEU---ROUGE-scores/)
+**Step 2: Multi-faceted Evaluation**- [Precision](/en/glossary/Precision/), [F1 score](/en/glossary/F1-score/), [BLEU/ROUGE scores](/en/glossary/BLEU---ROUGE-scores/)
 - [Consistency evaluation](/en/glossary/Consistency-evaluation/)
 - [Reproducibility validation](/en/glossary/Reproducibility-validation/)
 
-**Step 3: Continuous Improvement**
-- Create and compare multiple prompt patterns
+**Step 3: Continuous Improvement**- Create and compare multiple prompt patterns
 - Combine automatic and human evaluation
 - Iterative refinement based on measured outcomes
 
@@ -96,7 +87,7 @@ Effective AI utilization requires careful design and evaluation of [prompts](/en
 
 ## JamC-QA: Innovative Benchmark for Measuring Japan-Specific Cultural Knowledge
 
-** [JamC-QA](https://huggingface.co/datasets/sbintuitions/[jamc-qa](/en/glossary/JamC-QA/))** is a revolutionary tool for evaluating genuine "Japaneseness"—something translation-based benchmarks cannot measure.
+**[JamC-QA](https://huggingface.co/datasets/sbintuitions/[jamc-qa](/en/glossary/JamC-QA/))**is a revolutionary tool for evaluating genuine "Japaneseness"—something translation-based benchmarks cannot measure.
 
 ### Characteristics and Design Purpose
 
@@ -106,8 +97,7 @@ Effective AI utilization requires careful design and evaluation of [prompts](/en
 
 ### Evaluation Result Trends
 
-**Global Models vs. Japanese-Specialized Models**
-- Overseas models like [GPT](/en/glossary/GPT/)-5 and Llama-3: Significant score drops on [JamC-QA](/en/glossary/JamC-QA/)
+**Global Models vs. Japanese-Specialized Models**- Overseas models like [GPT](/en/glossary/GPT/)-5 and Llama-3: Significant score drops on [JamC-QA](/en/glossary/JamC-QA/)
 - Japanese-specialized models: Better suited for culture-specific questions
 - Clear score differences enable objective model selection criteria
 
@@ -142,25 +132,23 @@ How are the LLM evaluation techniques and [hallucination mitigation strategies](
 
 ### Utilizing High-Quality LLMs
 
-SmartWeb's [AI [chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-chatbot/) employs industry-leading LLMs including ** [OpenAI](https://openai.com/gpt-5/)**'s latest GPT-5 model, ** [Google](https://deepmind.google/models/gemini/)**'s [Gemini](/en/glossary/Gemini/) 2.5 Pro, and ** [Anthropic](https://www.anthropic.com/[claude](/en/glossary/Claude/))**'s [Claude](/en/glossary/Claude/) Sonnet 4. These models have demonstrated high performance across the various benchmarks introduced in this article.
+SmartWeb's [AI [chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-chatbot/) employs industry-leading LLMs including **[OpenAI](https://openai.com/gpt-5/)**'s latest GPT-5 model, **[Google](https://deepmind.google/models/gemini/)**'s [Gemini](/en/glossary/Gemini/) 2.5 Pro, and **[Anthropic](https://www.anthropic.com/[claude](/en/glossary/Claude/))**'s [Claude](/en/glossary/Claude/) Sonnet 4. These models have demonstrated high performance across the various benchmarks introduced in this article.
 
 ### Practical Countermeasures Against Hallucination Problems
 
 General AI chatbots face the challenge of providing inaccurate responses to unstudied content—the [hallucination problem](/en/glossary/hallucination/). SmartWeb has implemented the following countermeasures:
 
-**Proprietary Learning Data Management System**
-- Enterprise-specific response content is registered as training data in advance
+**Proprietary Learning Data Management System**- Enterprise-specific response content is registered as training data in advance
 - [RAG technology](/en/glossary/RAG/) selects appropriate answers from registered data
 - Honestly responds "I don't know" to questions outside the training database
 
-**Continuous Quality Improvement**
-- Continuously improve response accuracy by analyzing actual conversation logs
+**Continuous Quality Improvement**- Continuously improve response accuracy by analyzing actual conversation logs
 - Quality management through [consistency evaluation](/en/glossary/Consistency-evaluation/)
 - Optimization of evaluation metrics based on customer satisfaction
 
 ### The Superiority of the FlowHunt Platform
 
-SmartWeb's adopted ** [FlowHunt](https://flowhunt.io/)** provides a practical environment for applying the latest evaluation methodologies discussed in this article:
+SmartWeb's adopted **[FlowHunt](https://flowhunt.io/)**provides a practical environment for applying the latest evaluation methodologies discussed in this article:
 
 1. **Comparative evaluation of diverse LLMs**: Actual performance testing of multiple AI models possible
 2. **Prompt optimization features**: Application of advanced techniques like [Chain-of-Thought prompts](/en/glossary/Chain-of-Thought-Prompting/)

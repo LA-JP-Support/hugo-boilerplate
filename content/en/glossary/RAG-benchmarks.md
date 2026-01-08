@@ -26,46 +26,45 @@ Effective benchmarking enables organizations to guide development by comparing r
 
 ### Retrieval Quality Metrics
 
-**Precision@k:** Proportion of retrieved items that are relevant (Relevant items in top-k / k)
+**Precision@k:**Proportion of retrieved items that are relevant (Relevant items in top-k / k)
 
-**Recall@k:** Fraction of all relevant items retrieved in top-k (Relevant items in top-k / Total relevant items)
+**Recall@k:**Fraction of all relevant items retrieved in top-k (Relevant items in top-k / Total relevant items)
 
-**Mean Reciprocal Rank (MRR):** How high the first relevant result appears (Average of 1/rank of first relevant document)
+**Mean Reciprocal Rank (MRR):**How high the first relevant result appears (Average of 1/rank of first relevant document)
 
-**Mean Average Precision (MAP):** Retrieval quality across all ranks (Average precision across recall levels)
+**Mean Average Precision (MAP):**Retrieval quality across all ranks (Average precision across recall levels)
 
-**NDCG@k:** Graded relevance with ranking position weighting (Normalized Discounted Cumulative Gain)
+**NDCG@k:**Graded relevance with ranking position weighting (Normalized Discounted Cumulative Gain)
 
-**Hit Rate:** Basic coverage measure (Did at least one relevant item appear in top-k?)
+**Hit Rate:**Basic coverage measure (Did at least one relevant item appear in top-k?)
 
-**Example Scenario:**  
-Query: "What's Air Canada's refund policy?" retrieves 5 documents, 3 are relevant → Precision@5 = 0.6. If 4 relevant documents exist and 3 are found → Recall@5 = 0.75.
+**Example Scenario:**Query: "What's Air Canada's refund policy?" retrieves 5 documents, 3 are relevant → Precision@5 = 0.6. If 4 relevant documents exist and 3 are found → Recall@5 = 0.75.
 
 ### Generation Quality Metrics
 
-**BLEU:** N-gram overlap precision between generated and reference answers, measuring similarity to reference answers
+**BLEU:**N-gram overlap precision between generated and reference answers, measuring similarity to reference answers
 
-**ROUGE:** N-gram overlap recall between generated and reference answers, assessing summarization quality and coverage
+**ROUGE:**N-gram overlap recall between generated and reference answers, assessing summarization quality and coverage
 
-**BERTScore:** Semantic similarity using transformer embeddings for deep semantic matching
+**BERTScore:**Semantic similarity using transformer embeddings for deep semantic matching
 
-**METEOR:** Flexible similarity measure considering synonyms, paraphrase, and stemming
+**METEOR:**Flexible similarity measure considering synonyms, paraphrase, and stemming
 
-**LLM-as-a-Judge:** LLMs score outputs for factuality, relevance, coherence, and groundedness—scalable and captures nuanced errors
+**LLM-as-a-Judge:**LLMs score outputs for factuality, relevance, coherence, and groundedness—scalable and captures nuanced errors
 
-**Hallucination Rate:** Percentage of outputs with unsupported or fabricated information, measuring faithfulness to context
+**Hallucination Rate:**Percentage of outputs with unsupported or fabricated information, measuring faithfulness to context
 
-**Groundedness:** Degree to which answers are directly supported by retrieved documents, ensuring source attribution and trustworthiness
+**Groundedness:**Degree to which answers are directly supported by retrieved documents, ensuring source attribution and trustworthiness
 
 ### Hallucination Detection Approaches
 
-**Token Similarity Detector:** Flags content absent from retrieved context
+**Token Similarity Detector:**Flags content absent from retrieved context
 
-**Semantic Similarity Detector:** Checks if generated answers are semantically close to context
+**Semantic Similarity Detector:**Checks if generated answers are semantically close to context
 
-**LLM Prompt-Based Detector:** Uses LLMs to assess answer faithfulness with custom prompts
+**LLM Prompt-Based Detector:**Uses LLMs to assess answer faithfulness with custom prompts
 
-**BERT Stochastic Checker:** Uses model uncertainty to identify likely hallucinations
+**BERT Stochastic Checker:**Uses model uncertainty to identify likely hallucinations
 
 Combining fast detectors with occasional LLM scoring offers efficient compromise between speed and accuracy.
 
@@ -73,17 +72,17 @@ Combining fast detectors with occasional LLM scoring offers efficient compromise
 
 | Dataset | Focus Area | Description |
 |---------|-----------|-------------|
-| **NeedleInAHaystack (NIAH)** | Long-context retrieval | Tests ability to find planted facts in large irrelevant corpus |
-| **BEIR** | Cross-domain retrieval | 18 diverse datasets covering fact-checking, QA, duplicate detection |
-| **FRAMES** | Factuality, multi-hop reasoning | Requires integrating information from multiple Wikipedia articles |
-| **RAGTruth** | Hallucination, faithfulness | 18,000+ LLM-generated responses annotated for hallucination |
-| **RULER** | Multi-hop, context window | Synthetic testbed for retrieving and aggregating needles in complex docs |
-| **MMNeedle** | Multimodal retrieval | Find sub-images using text in large image sets |
-| **FEVER** | Fact extraction, verification | 185,000+ claims requiring evidence from Wikipedia |
-| **Natural Questions (NQ)** | Real search queries | Real Google queries with Wikipedia answers |
-| **MS MARCO** | Passage retrieval | Bing search queries with passage retrieval tasks |
-| **HotpotQA** | Multi-hop QA | Combining sources for question answering |
-| **TriviaQA** | Fact-rich questions | Evidence from web and Wikipedia |
+| **NeedleInAHaystack (NIAH)**| Long-context retrieval | Tests ability to find planted facts in large irrelevant corpus |
+| **BEIR**| Cross-domain retrieval | 18 diverse datasets covering fact-checking, QA, duplicate detection |
+| **FRAMES**| Factuality, multi-hop reasoning | Requires integrating information from multiple Wikipedia articles |
+| **RAGTruth**| Hallucination, faithfulness | 18,000+ LLM-generated responses annotated for hallucination |
+| **RULER**| Multi-hop, context window | Synthetic testbed for retrieving and aggregating needles in complex docs |
+| **MMNeedle**| Multimodal retrieval | Find sub-images using text in large image sets |
+| **FEVER**| Fact extraction, verification | 185,000+ claims requiring evidence from Wikipedia |
+| **Natural Questions (NQ)**| Real search queries | Real Google queries with Wikipedia answers |
+| **MS MARCO**| Passage retrieval | Bing search queries with passage retrieval tasks |
+| **HotpotQA**| Multi-hop QA | Combining sources for question answering |
+| **TriviaQA**| Fact-rich questions | Evidence from web and Wikipedia |
 
 Standard datasets are essential for comparing to state-of-the-art performance, while custom datasets are vital for domain-specific and business-specific evaluation.
 
@@ -95,9 +94,9 @@ Pre-label correct documents/passages for each query, compare system retrievals t
 
 ### Manual and LLM-Judged Relevance
 
-**Manual Labeling:** Experts review and score document relevance for high-quality assessment
+**Manual Labeling:**Experts review and score document relevance for high-quality assessment
 
-**LLM-as-a-Judge:** Automate scoring of relevance and groundedness using LLM prompts for scalability
+**LLM-as-a-Judge:**Automate scoring of relevance and groundedness using LLM prompts for scalability
 
 Best for scaling evaluation, open-ended tasks, and iterative improvement.
 
@@ -123,15 +122,15 @@ Track live performance on user queries, watching for drift, regressions, or emer
 
 ## Interpreting Benchmark Results
 
-**Decompose results:** Separate retrieval and generation scores to locate bottlenecks and identify which component needs improvement
+**Decompose results:**Separate retrieval and generation scores to locate bottlenecks and identify which component needs improvement
 
-**Compare configurations:** Test various retrievers, embedding models, chunking strategies, and prompt setups to find optimal combinations
+**Compare configurations:**Test various retrievers, embedding models, chunking strategies, and prompt setups to find optimal combinations
 
-**Monitor over time:** Use "golden datasets" for regression checks and drift detection across model updates
+**Monitor over time:**Use "golden datasets" for regression checks and drift detection across model updates
 
-**Balance trade-offs:** High recall may increase latency; LLM judges catch subtle issues but cost more than automated metrics
+**Balance trade-offs:**High recall may increase latency; LLM judges catch subtle issues but cost more than automated metrics
 
-**Multi-metric analysis:** Rely on dashboards showing multiple metrics rather than single scores for comprehensive assessment
+**Multi-metric analysis:**Rely on dashboards showing multiple metrics rather than single scores for comprehensive assessment
 
 ## Real-World Applications
 
@@ -155,92 +154,91 @@ Assistants answer from textbooks or curated sources, requiring high accuracy and
 
 Retrieve regulations and filings for compliance queries and investment research, ensuring accurate, auditable information retrieval.
 
-**Industry Impact:**
-- Retrieval-augmented models reduce factual inaccuracies by up to 30% compared to static LLMs
+**Industry Impact:**- Retrieval-augmented models reduce factual inaccuracies by up to 30% compared to static LLMs
 - Prompt engineering and tuning from RAG benchmarks can improve e-commerce conversion rates by up to 25%
 - Chatbots can reduce customer support costs by 30% on average when properly benchmarked and optimized
 
 ## Tools and Frameworks
 
-**Evidently:** Open-source library for RAG evaluation, monitoring, and over 100 checks
+**Evidently:**Open-source library for RAG evaluation, monitoring, and over 100 checks
 
-**LangSmith (LangChain):** Dataset creation, evaluation, and LLM-based metrics for RAG systems
+**LangSmith (LangChain):**Dataset creation, evaluation, and LLM-based metrics for RAG systems
 
-**RAGAS:** Library for RAG metrics including context precision/recall and ground-truth mapping
+**RAGAS:**Library for RAG metrics including context precision/recall and ground-truth mapping
 
-**Maxim:** Dataset management, multimodal evaluation, and customizable evaluators
+**Maxim:**Dataset management, multimodal evaluation, and customizable evaluators
 
-**DeepEval & OpenAI Evals:** LLM-based evaluation tools for comprehensive assessment
+**DeepEval & OpenAI Evals:**LLM-based evaluation tools for comprehensive assessment
 
-**ARES & RAGAs:** Synthetic data generation and automated scoring frameworks
+**ARES & RAGAs:**Synthetic data generation and automated scoring frameworks
 
 ## Best Practices
 
-**Set clear objectives:** Define specific measurement goals (relevance, factuality, safety, latency)
+**Set clear objectives:**Define specific measurement goals (relevance, factuality, safety, latency)
 
-**Use representative datasets:** Blend standard and custom data matching real queries and documents
+**Use representative datasets:**Blend standard and custom data matching real queries and documents
 
-**Balance evaluation approaches:** Combine automated metrics (fast, scalable) with LLM/human review (nuanced, comprehensive)
+**Balance evaluation approaches:**Combine automated metrics (fast, scalable) with LLM/human review (nuanced, comprehensive)
 
-**Update benchmarks regularly:** Keep pace with changes in data, business needs, and user expectations
+**Update benchmarks regularly:**Keep pace with changes in data, business needs, and user expectations
 
-**Monitor for bias and fairness:** Analyze performance across different users, topics, and information sources
+**Monitor for bias and fairness:**Analyze performance across different users, topics, and information sources
 
-**Implement multi-metric dashboards:** Track comprehensive suite of metrics rather than relying on single scores
+**Implement multi-metric dashboards:**Track comprehensive suite of metrics rather than relying on single scores
 
-**Document and version:** Maintain clear records of datasets, metrics, and criteria for reproducibility and compliance
+**Document and version:**Maintain clear records of datasets, metrics, and criteria for reproducibility and compliance
 
-**Establish feedback loops:** Use benchmark insights to drive continuous improvement in retrieval and generation
+**Establish feedback loops:**Use benchmark insights to drive continuous improvement in retrieval and generation
 
 ## Implementation Examples
 
 ### Customer Support Chatbot
 
-**Dataset:** 100 real customer refund questions mapped to policy documents
+**Dataset:**100 real customer refund questions mapped to policy documents
 
-**Retrieval Evaluation:** Compute recall@3 to ensure top 3 documents cover relevant policies
+**Retrieval Evaluation:**Compute recall@3 to ensure top 3 documents cover relevant policies
 
-**Generation Evaluation:** LLM-as-a-judge for correctness and grounding in source material
+**Generation Evaluation:**LLM-as-a-judge for correctness and grounding in source material
 
-**Production Monitoring:** Track hallucination rate with alerts when exceeding 1%
+**Production Monitoring:**Track hallucination rate with alerts when exceeding 1%
 
-**Outcome:** Continuous quality assurance preventing policy misrepresentation incidents
+**Outcome:**Continuous quality assurance preventing policy misrepresentation incidents
 
 ### Legal Document Assistant
 
-**Dataset:** Legal queries with annotated answers and supporting statutes
+**Dataset:**Legal queries with annotated answers and supporting statutes
 
-**Metrics:** MAP and NDCG for retrieval; BERTScore and faithfulness for generation
+**Metrics:**MAP and NDCG for retrieval; BERTScore and faithfulness for generation
 
-**Optimization:** 15% retrieval precision improvement after embedding model tuning
+**Optimization:**15% retrieval precision improvement after embedding model tuning
 
-**Outcome:** Faster, more accurate legal research with proper source attribution
+**Outcome:**Faster, more accurate legal research with proper source attribution
 
 ## Summary: RAG Benchmarking at a Glance
 
 | Aspect | Retrieval Evaluation | Generation Evaluation |
 |--------|---------------------|----------------------|
-| **Metrics** | Precision@k, Recall@k, MRR, MAP, NDCG, Hit Rate | BLEU, ROUGE, BERTScore, LLM-as-judge, Hallucination Rate, Groundedness |
-| **Datasets** | NIAH, BEIR, FRAMES, MS MARCO, HotpotQA, Custom | FEVER, RAGTruth, Custom QA pairs |
-| **Methods** | Ground-truth, LLM/human labeling, synthetic data | Reference comparison, reference-free LLM scoring |
-| **Tools** | Evidently, LangSmith, RAGAS, Maxim, OpenAI Evals | Same tools plus human/LLM review workflows |
-| **Use Cases** | Customer support, legal, enterprise search, education, healthcare | Same applications with focus on answer correctness and faithfulness |
+| **Metrics**| Precision@k, Recall@k, MRR, MAP, NDCG, Hit Rate | BLEU, ROUGE, BERTScore, LLM-as-judge, Hallucination Rate, Groundedness |
+| **Datasets**| NIAH, BEIR, FRAMES, MS MARCO, HotpotQA, Custom | FEVER, RAGTruth, Custom QA pairs |
+| **Methods**| Ground-truth, LLM/human labeling, synthetic data | Reference comparison, reference-free LLM scoring |
+| **Tools**| Evidently, LangSmith, RAGAS, Maxim, OpenAI Evals | Same tools plus human/LLM review workflows |
+| **Use Cases**| Customer support, legal, enterprise search, education, healthcare | Same applications with focus on answer correctness and faithfulness |
 
 ## Key Terminology
 
-**Retriever:** Component searching for relevant information from external sources
+**Retriever:**Component searching for relevant information from external sources
 
-**Generator:** LLM crafting final responses using user query and retrieved context
+**Generator:**LLM crafting final responses using user query and retrieved context
 
-**Ground Truth:** Correct answer or context used for evaluation benchmarking
+**Ground Truth:**Correct answer or context used for evaluation benchmarking
 
-**Hallucination:** Model-generated information not grounded in retrieved sources
+**Hallucination:**Model-generated information not grounded in retrieved sources
 
-**Faithfulness:** Alignment of output to supporting evidence and context
+**Faithfulness:**Alignment of output to supporting evidence and context
 
-**Context Window:** Amount of information available to LLM during response generation
+**Context Window:**Amount of information available to LLM during response generation
 
-**Prompt Engineering:** Designing input prompts to control LLM behavior and accuracy
+**Prompt Engineering:**Designing input prompts to control LLM behavior and accuracy
 
 ## References
 

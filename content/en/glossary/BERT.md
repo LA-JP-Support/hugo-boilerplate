@@ -42,8 +42,7 @@ What sets BERT apart from its predecessors is its ability to be fine-tuned for a
 
 The BERT workflow consists of two main phases: pre-training and fine-tuning, each involving specific steps:
 
-**Pre-training Phase:**
-1. **Data Preparation**: Large corpora of unlabeled text (such as Wikipedia and BookCorpus) are tokenized using WordPiece tokenization, which breaks words into subword units to handle out-of-vocabulary terms effectively.
+**Pre-training Phase:**1. **Data Preparation**: Large corpora of unlabeled text (such as Wikipedia and BookCorpus) are tokenized using WordPiece tokenization, which breaks words into subword units to handle out-of-vocabulary terms effectively.
 
 2. **Masked Language Modeling**: Approximately 15% of input tokens are randomly selected for masking, with 80% replaced by [MASK] tokens, 10% replaced by random tokens, and 10% left unchanged to prevent overfitting to the masking strategy.
 
@@ -51,8 +50,7 @@ The BERT workflow consists of two main phases: pre-training and fine-tuning, eac
 
 4. **Bidirectional Training**: The model simultaneously processes all tokens in the sequence, using self-attention to build representations that incorporate context from both directions.
 
-**Fine-tuning Phase:**
-5. **Task-Specific Adaptation**: A task-specific layer is added on top of the pre-trained BERT model, typically a simple classification head or regression layer depending on the downstream task.
+**Fine-tuning Phase:**5. **Task-Specific Adaptation**: A task-specific layer is added on top of the pre-trained BERT model, typically a simple classification head or regression layer depending on the downstream task.
 
 6. **Parameter Initialization**: All parameters from the pre-trained model are used as initialization, providing a strong starting point that already understands language patterns and relationships.
 

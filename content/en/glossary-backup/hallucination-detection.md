@@ -22,18 +22,18 @@ Hallucination detection encompasses the technologies and workflows that automati
 
 Detection systems are built to flag, report, and help correct these outputs before they impact users or business processes. This is especially crucial in industries such as healthcare, finance, customer support, and legal services, where factual accuracy is mandatory.
 
-- **Research Source:** [Hallucination Detection in LLMs: Fast and Memory-Efficient Finetuned Models (arXiv)](https://arxiv.org/html/2409.02976v1)
-- **Industry Example:** [AWS Hallucination Detection for RAG](https://aws.amazon.com/blogs/machine-learning/detect-hallucinations-for-rag-based-systems/)
-- **Prompt Engineering and LLM as Judge:** [Datadog LLM Hallucination Detection](https://www.datadoghq.com/blog/ai/llm-hallucination-detection/)
+- **Research Source:**[Hallucination Detection in LLMs: Fast and Memory-Efficient Finetuned Models (arXiv)](https://arxiv.org/html/2409.02976v1)
+- **Industry Example:**[AWS Hallucination Detection for RAG](https://aws.amazon.com/blogs/machine-learning/detect-hallucinations-for-rag-based-systems/)
+- **Prompt Engineering and LLM as Judge:**[Datadog LLM Hallucination Detection](https://www.datadoghq.com/blog/ai/llm-hallucination-detection/)
 
 ## Why is Hallucination Detection Important?
 
 ### Risks Posed by AI Hallucinations
 
-- **Trust Erosion:** Users lose confidence in AI systems that frequently generate inaccurate or fabricated content.
-- **Compliance/Legal Exposure:** Distribution of incorrect or unsubstantiated information can result in regulatory breaches or legal disputes.
-- **Operational Errors:** Misleading outputs in business processes can trigger faulty actions, leading to financial losses or safety hazards.
-- **Misinformation Spread:** AI-powered public interfaces can amplify the dissemination of falsehoods.
+- **Trust Erosion:**Users lose confidence in AI systems that frequently generate inaccurate or fabricated content.
+- **Compliance/Legal Exposure:**Distribution of incorrect or unsubstantiated information can result in regulatory breaches or legal disputes.
+- **Operational Errors:**Misleading outputs in business processes can trigger faulty actions, leading to financial losses or safety hazards.
+- **Misinformation Spread:**AI-powered public interfaces can amplify the dissemination of falsehoods.
 
 #### Example Scenarios
 
@@ -47,68 +47,68 @@ Detection involves a mix of technical strategies and product features aimed at i
 
 ### 1. Contextual Consistency Checks
 
-**Definition:** Directly compare the AI-generated response to the context (prompt, reference documents, knowledge base) to ascertain alignment.
+**Definition:**Directly compare the AI-generated response to the context (prompt, reference documents, knowledge base) to ascertain alignment.
 
-**Example:** If context states “Paris is the capital of France,” a response of “Paris” is consistent; “Lyon” is flagged as a hallucination.
+**Example:**If context states “Paris is the capital of France,” a response of “Paris” is consistent; “Lyon” is flagged as a hallucination.
 
 ### 2. Semantic Similarity Analysis
 
-**Definition:** Convert both the context and the response into embeddings (numerical vectors) using a language model, then measure their similarity.
+**Definition:**Convert both the context and the response into embeddings (numerical vectors) using a language model, then measure their similarity.
 
-**Example:** In a Retrieval-Augmented Generation (RAG) system, low similarity between the context and the AI’s answer signals a likely hallucination.
+**Example:**In a Retrieval-Augmented Generation (RAG) system, low similarity between the context and the AI’s answer signals a likely hallucination.
 
 - Technical Guide: [Semantic Similarity for Hallucination Detection](https://aws.amazon.com/blogs/machine-learning/detect-hallucinations-for-rag-based-systems/)
 
 ### 3. Automated Reasoning and Fact Verification
 
-**Definition:** Apply logical or rule-based systems to verify the factual consistency of AI outputs.
+**Definition:**Apply logical or rule-based systems to verify the factual consistency of AI outputs.
 
-**Example:** Using encoded domain rules (e.g., via Amazon Bedrock Guardrails), outputs are checked against rules for consistency.
+**Example:**Using encoded domain rules (e.g., via Amazon Bedrock Guardrails), outputs are checked against rules for consistency.
 
 - Product Feature: [Amazon Bedrock Guardrails](https://aws.amazon.com/bedrock/)
 
 ### 4. LLM Prompt-Based Detection (LLM-as-a-Judge)
 
-**Definition:** Use a secondary LLM, separate from the response generator, to assess the factuality of outputs.
+**Definition:**Use a secondary LLM, separate from the response generator, to assess the factuality of outputs.
 
-**Example:** The secondary model receives both the context and the AI answer, generating a hallucination score (e.g., 0 for fully grounded, 1 for entirely hallucinated).
+**Example:**The secondary model receives both the context and the AI answer, generating a hallucination score (e.g., 0 for fully grounded, 1 for entirely hallucinated).
 
 - Implementation: [Datadog LLM-as-a-Judge](https://www.datadoghq.com/blog/ai/llm-hallucination-detection/)
 
 ### 5. Token and BLEU/ROUGE Similarity
 
-**Definition:** Compare the overlap of tokens (words or n-grams) between the response and the reference context.
+**Definition:**Compare the overlap of tokens (words or n-grams) between the response and the reference context.
 
-**Example:** Absence of key terms from the context in the answer may indicate hallucination.
+**Example:**Absence of key terms from the context in the answer may indicate hallucination.
 
 - Technical Details: [BLEU and ROUGE Metrics Explained](https://en.wikipedia.org/wiki/BLEU)
 
 ### 6. Stochastic Consistency Checks (BERT Score)
 
-**Definition:** Generate multiple responses to the same prompt and measure their semantic consistency.
+**Definition:**Generate multiple responses to the same prompt and measure their semantic consistency.
 
-**Example:** Hallucinated content varies across generations, while factual content is more stable.
+**Example:**Hallucinated content varies across generations, while factual content is more stable.
 
 ### 7. Human-in-the-Loop Validation
 
-**Definition:** Human reviewers audit, correct, or approve automated hallucination flags, particularly for high-impact or sensitive outputs.
+**Definition:**Human reviewers audit, correct, or approve automated hallucination flags, particularly for high-impact or sensitive outputs.
 
 ## Advances in Research: Uncertainty Estimation and Ensemble Models
 
 ### Deep Ensembles and Uncertainty Estimation
 
-- **Definition:** Use multiple independently trained models (ensembles) to estimate uncertainty. If ensemble members disagree, the output is likely hallucinated.
-- **Technical Challenge:** Traditional ensembles require significant computational resources.
-- **Innovation:** Recent research (see [arXiv: Hallucination Detection in LLMs](https://arxiv.org/html/2409.02976v1)) presents memory-efficient ensembles using shared slow weights and model-specific fast weights (LoRA matrices), making ensemble uncertainty estimation feasible on a single GPU.
-- **Outcome:** Reliable uncertainty estimates to flag outputs as hallucinated or correct.
+- **Definition:**Use multiple independently trained models (ensembles) to estimate uncertainty. If ensemble members disagree, the output is likely hallucinated.
+- **Technical Challenge:**Traditional ensembles require significant computational resources.
+- **Innovation:**Recent research (see [arXiv: Hallucination Detection in LLMs](https://arxiv.org/html/2409.02976v1)) presents memory-efficient ensembles using shared slow weights and model-specific fast weights (LoRA matrices), making ensemble uncertainty estimation feasible on a single GPU.
+- **Outcome:**Reliable uncertainty estimates to flag outputs as hallucinated or correct.
 
 ## Common Causes of AI Hallucinations
 
-- **Insufficient/Biased Training Data:** Incomplete or skewed data leads to learned inaccuracies.
-- **Lack of Grounding:** The model lacks access to up-to-date or relevant reference data.
-- **Overfitting:** The model memorizes training data, producing spurious outputs in new contexts.
-- **Ambiguous Prompts:** Vague instructions prompt the model to generate plausible yet fabricated content.
-- **Model Limitations:** No model is immune; all can generate factual errors due to inherent limitations.
+- **Insufficient/Biased Training Data:**Incomplete or skewed data leads to learned inaccuracies.
+- **Lack of Grounding:**The model lacks access to up-to-date or relevant reference data.
+- **Overfitting:**The model memorizes training data, producing spurious outputs in new contexts.
+- **Ambiguous Prompts:**Vague instructions prompt the model to generate plausible yet fabricated content.
+- **Model Limitations:**No model is immune; all can generate factual errors due to inherent limitations.
 - Survey: [What is grounding and hallucinations in AI? (K2View)](https://www.k2view.com/data-management-blog/grounding-ai-hallucinations/)
 
 ## Use Cases of Hallucination Detection
@@ -145,15 +145,13 @@ LLMs supplement outputs with retrieved data. Detection ensures generated answers
 
 ### Retrieval-Augmented Generation (RAG) Hallucination Detection
 
-**Workflow:**
-1. User submits a question.
+**Workflow:**1. User submits a question.
 2. System retrieves relevant context.
 3. LLM generates an answer.
 4. Hallucination detection checks consistency with context.
 5. Inconsistencies are flagged for review.
 
-**Technical Example: LLM Prompt-Based Detection**
-```python
+**Technical Example: LLM Prompt-Based Detection**```python
 prompt = """
 Human: You are an expert assistant helping to check if statements are based on the context.
 Read the context and statement, and indicate with a score (0–1) how much the statement is grounded in the context.
@@ -175,8 +173,7 @@ If the score exceeds a threshold (e.g., 0.7), the answer is flagged.
 
 ### Semantic Similarity Detection
 
-**Workflow:**
-1. Embed context and response.
+**Workflow:**1. Embed context and response.
 2. Calculate cosine similarity.
 3. Low similarity triggers hallucination flag.
 
@@ -246,32 +243,30 @@ hallucination_score = 1 - sim_score
 
 ## Glossary Terms Related to Hallucination Detection
 
-- **AI Hallucination:** An output from an AI system that is not grounded in provided context or real-world facts.
-- **Prevent Hallucinations:** Strategies to minimize or eliminate hallucinated outputs.
-- **Retrieval-Augmented Generation (RAG):** AI framework that retrieves external data to ground outputs in factual information.
-- **Machine Learning:** Field focused on building systems that learn from data patterns.
-- **Training Data:** The dataset used to teach an AI model.
-- **Artificial Intelligence (AI):** Systems capable of tasks requiring human intelligence.
-- **Amazon Bedrock:** Platform for building, deploying, and governing generative AI, including hallucination detection.
-- **Natural Language:** Human languages processed by AI.
-- **Large Language Models (LLMs):** Deep neural networks trained on vast text corpora to generate language outputs.
-- **Prompt Engineering:** Designing effective prompts to guide LLM outputs and reduce hallucinations.
-- **Factual Errors/Inaccuracies:** Outputs demonstrably false or misaligned with facts.
-- **Decision Making:** Choices influenced by AI outputs.
-- **Generative Applications:** Software creating new content using AI.
+- **AI Hallucination:**An output from an AI system that is not grounded in provided context or real-world facts.
+- **Prevent Hallucinations:**Strategies to minimize or eliminate hallucinated outputs.
+- **Retrieval-Augmented Generation (RAG):**AI framework that retrieves external data to ground outputs in factual information.
+- **Machine Learning:**Field focused on building systems that learn from data patterns.
+- **Training Data:**The dataset used to teach an AI model.
+- **Artificial Intelligence (AI):**Systems capable of tasks requiring human intelligence.
+- **Amazon Bedrock:**Platform for building, deploying, and governing generative AI, including hallucination detection.
+- **Natural Language:**Human languages processed by AI.
+- **Large Language Models (LLMs):**Deep neural networks trained on vast text corpora to generate language outputs.
+- **Prompt Engineering:**Designing effective prompts to guide LLM outputs and reduce hallucinations.
+- **Factual Errors/Inaccuracies:**Outputs demonstrably false or misaligned with facts.
+- **Decision Making:**Choices influenced by AI outputs.
+- **Generative Applications:**Software creating new content using AI.
 
 ## Example Prompts and Detection Workflows
 
-**Prompt Example for Hallucination Detection:**
-```
+**Prompt Example for Hallucination Detection:**```
 Human: Given the following context, determine if the statement is based on the context or not. Output a score from 0 (fully based) to 1 (not based at all).
 Context: The capital of France is Paris.
 Statement: The capital of France is Lyon.
 Assistant: 1
 ```
 
-**Webhook Payload Example in Automated Detection:**
-```json
+**Webhook Payload Example in Automated Detection:**```json
 {
   "issue_type": "hallucination",
   "flagged_content": "The capital of France is Lyon.",
@@ -283,8 +278,7 @@ Assistant: 1
 }
 ```
 
-**Dashboard Review Workflow:**
-- View flagged messages.
+**Dashboard Review Workflow:**- View flagged messages.
 - See reason for flagging.
 - Access conversation transcript for context.
 - Correct, retrain, or escalate for human review.

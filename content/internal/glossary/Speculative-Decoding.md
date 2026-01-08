@@ -13,87 +13,67 @@ url = "/internal/glossary/Speculative-Decoding/"
 +++
 ## Definition
 
-**Speculative decoding** is an inference optimization technique for large language models (LLMs) that enables faster token generation by leveraging a small, fast draft model to propose multiple tokens ahead of time, while a larger, accurate target model verifies the draft and accepts the longest matching prefix. This process maintains the target model’s output distribution, ensuring that the results are mathematically identical to pure sequential decoding, but with much lower [latency](/en/glossary/latency/).
+**Speculative decoding**is an inference optimization technique for large language models (LLMs) that enables faster token generation by leveraging a small, fast draft model to propose multiple tokens ahead of time, while a larger, accurate target model verifies the draft and accepts the longest matching prefix. This process maintains the target model’s output distribution, ensuring that the results are mathematically identical to pure sequential decoding, but with much lower [latency](/en/glossary/latency/).
 
 > *"Speculative decoding is an inference optimization technique that accelerates large language models (LLMs) by predicting and verifying multiple tokens simultaneously, reducing latency while preserving output quality."*  
 > — [NVIDIA Technical Blog](https://developer.nvidia.com/blog/an-introduction-to-speculative-decoding-for-reducing-latency-in-ai-inference/)
 
 The key insight is that many tokens in LLM output sequences can be guessed correctly by a much smaller model, and verifying a batch of tokens together with the large model is more efficient than generating each token in strict sequence.
 
-**Core references:**
-- [arXiv: Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192)
+**Core references:**- [arXiv: Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192)
 - [Google Research Blog: Looking back at speculative decoding](https://research.google/blog/looking-back-at-speculative-decoding/)
 - [NVIDIA Technical Blog: An introduction to speculative decoding](https://developer.nvidia.com/blog/an-introduction-to-speculative-decoding-for-reducing-latency-in-ai-inference/)
 
 ## How Speculative Decoding Works
 
-Speculative decoding is structured as a **draft-then-verify** process:
+Speculative decoding is structured as a **draft-then-verify**process:
 
 ### Steps
 
-1. **Draft Step**
-   - The draft model, which is a smaller and faster LLM, generates a batch of candidate next tokens (often 3–8 at a time).
+1. **Draft Step**- The draft model, which is a smaller and faster LLM, generates a batch of candidate next tokens (often 3–8 at a time).
    - This model is designed to “guess ahead,” producing tokens that the target model is likely to accept.
 
-2. **Verification Step**
-   - The large, accurate target model evaluates the same context (input plus all generated tokens so far) and computes the probability distributions for the next batch of tokens.
+2. **Verification Step**- The large, accurate target model evaluates the same context (input plus all generated tokens so far) and computes the probability distributions for the next batch of tokens.
    - The target model checks which draft tokens match its own most probable next-token predictions. It accepts the longest matching prefix, which could be all, some, or none of the draft tokens.
 
-3. **Continuation**
-   - If the draft is fully accepted, output continues. If there is a mismatch, the target model generates the next token itself, which becomes the new context for the next speculative round.
+3. **Continuation**- If the draft is fully accepted, output continues. If there is a mismatch, the target model generates the next token itself, which becomes the new context for the next speculative round.
 
-4. **Repeat**
-   - This process continues until the output sequence is complete.
+4. **Repeat**- This process continues until the output sequence is complete.
 
-**Visualization:**  
-![Speculative Decoding Flow](https://developer-blogs.nvidia.com/wp-content/uploads/2025/09/inference-speculative-decoding-llama-eagle-1024x576-jpg.webp)
+**Visualization:**![Speculative Decoding Flow](https://developer-blogs.nvidia.com/wp-content/uploads/2025/09/inference-speculative-decoding-llama-eagle-1024x576-jpg.webp)
 
-**Guarantee:**  
-The final output is provably identical to what the target model would produce via naïve, sequential decoding.
+**Guarantee:**The final output is provably identical to what the target model would produce via naïve, sequential decoding.
 ## Technical Terminology
 
-**Autoregressive Generation:**  
-Generating tokens one at a time, with each depending on all previous tokens. This is the standard for LLMs like GPT, T5, Llama.
+**Autoregressive Generation:**Generating tokens one at a time, with each depending on all previous tokens. This is the standard for LLMs like GPT, T5, Llama.
 
-**Draft Model:**  
-Small, fast model used to propose candidate tokens in advance. Should be trained or fine-tuned to match the output distribution of the target model as closely as possible.
+**Draft Model:**Small, fast model used to propose candidate tokens in advance. Should be trained or fine-tuned to match the output distribution of the target model as closely as possible.
 
-**Target Model:**  
-The large, accurate LLM whose output must be preserved exactly.
+**Target Model:**The large, accurate LLM whose output must be preserved exactly.
 
-**Draft Tokens:**  
-Batch of tokens guessed by the draft model for the next sequence positions.
+**Draft Tokens:**Batch of tokens guessed by the draft model for the next sequence positions.
 
-**Rejection Sampling:**  
-Statistical mechanism whereby the target model accepts only those draft tokens that match its own most probable predictions, thus preserving the target’s output distribution.
+**Rejection Sampling:**Statistical mechanism whereby the target model accepts only those draft tokens that match its own most probable predictions, thus preserving the target’s output distribution.
 
-**Acceptance Rate (α):**  
-Fraction of draft tokens accepted by the target model. High α means the draft model is well aligned to the target model.
+**Acceptance Rate (α):**Fraction of draft tokens accepted by the target model. High α means the draft model is well aligned to the target model.
 
-**Speculative Token Count (γ):**  
-Number of tokens generated by the draft model in each speculative round.
+**Speculative Token Count (γ):**Number of tokens generated by the draft model in each speculative round.
 
-**Acceptance Length (τ):**  
-Average number of draft tokens accepted per speculative round.
+**Acceptance Length (τ):**Average number of draft tokens accepted per speculative round.
 
-**Inter-token Latency (ITL):**  
-Time between emitting one output token and the next.
+**Inter-token Latency (ITL):**Time between emitting one output token and the next.
 
-**EAGLE-3:**  
-An advanced speculative decoding technique that attaches a lightweight prediction head to the internal layers of the target model itself, eliminating the need for a separate draft model ([NVIDIA EAGLE-3](https://developer.nvidia.com/blog/an-introduction-to-speculative-decoding-for-reducing-latency-in-ai-inference/)).
+**EAGLE-3:**An advanced speculative decoding technique that attaches a lightweight prediction head to the internal layers of the target model itself, eliminating the need for a separate draft model ([NVIDIA EAGLE-3](https://developer.nvidia.com/blog/an-introduction-to-speculative-decoding-for-reducing-latency-in-ai-inference/)).
 
 ## Motivation: Why Use Speculative Decoding?
 
-**LLM Inference Bottleneck:**  
-- Generating each new token requires a full forward pass through the entire target model, which is slow (especially for models >10B parameters).
+**LLM Inference Bottleneck:**- Generating each new token requires a full forward pass through the entire target model, which is slow (especially for models >10B parameters).
 - This sequential dependency results in high latency and underutilization of parallel compute in modern GPUs ([Google Research](https://research.google/blog/looking-back-at-speculative-decoding/)).
 
-**Why Speculative Decoding?**  
-- By allowing a draft model to "guess ahead" and only invoking the large model for verification, token generation can be parallelized.
+**Why Speculative Decoding?**- By allowing a draft model to "guess ahead" and only invoking the large model for verification, token generation can be parallelized.
 - This reduces overall latency, increases throughput, and enables more responsive LLM-powered applications (chatbots, code assistants, real-time summarization).
 
-**Industry Need:**  
-- Real-world products such as Google Search’s AI Overviews rely on speculative decoding to serve billions of users with high-quality, low-latency results ([Google Research Blog](https://research.google/blog/looking-back-at-speculative-decoding/)).
+**Industry Need:**- Real-world products such as Google Search’s AI Overviews rely on speculative decoding to serve billions of users with high-quality, low-latency results ([Google Research Blog](https://research.google/blog/looking-back-at-speculative-decoding/)).
 
 ## Core Algorithm: Step-by-Step
 
@@ -136,28 +116,22 @@ while not finished:
 5. **Repeat**:  
    Context is updated and the process continues until the sequence ends.
 
-**Technical Reference:**  
-- [arXiv: Fast Inference from Transformers via Speculative Decoding, Algorithm 1](https://arxiv.org/pdf/2211.17192)
+**Technical Reference:**- [arXiv: Fast Inference from Transformers via Speculative Decoding, Algorithm 1](https://arxiv.org/pdf/2211.17192)
 
 ## Performance Metrics and Key Factors
 
 ### Key Metrics
 
-- **Acceptance Rate (α):**  
-  α = (number of accepted draft tokens) / (number of tokens proposed by draft model).
+- **Acceptance Rate (α):**α = (number of accepted draft tokens) / (number of tokens proposed by draft model).
   
-- **Speculative Token Count (γ):**  
-  Number of tokens proposed per speculative round. Tuning γ impacts speedup and resource use.
+- **Speculative Token Count (γ):**Number of tokens proposed per speculative round. Tuning γ impacts speedup and resource use.
 
-- **Acceptance Length (τ):**  
-  Average number of draft tokens accepted per speculative round:  
+- **Acceptance Length (τ):**Average number of draft tokens accepted per speculative round:  
   τ = (1 - α^(γ+1)) / (1 - α)
 
-- **Inter-token Latency (ITL):**  
-  Time between generated tokens.
+- **Inter-token Latency (ITL):**Time between generated tokens.
 
-- **Throughput:**  
-  Number of tokens generated per second.
+- **Throughput:**Number of tokens generated per second.
 
 ### Practical Example
 
@@ -167,83 +141,55 @@ Suppose:
 - Target verification: 1 ms for γ=4 tokens
 
 If average of 2.5 draft tokens are accepted per round, then in 15 ms (1 ms draft, 1 ms verify, 10 ms for non-accepted token), you get 3.5 tokens.  
-**Effective token time:** ≈4.3 ms/token (vs. 10 ms/token baseline).
+**Effective token time:**≈4.3 ms/token (vs. 10 ms/token baseline).
 
 ### Key Factors
 
-- **Draft Model Alignment:**  
-  Higher acceptance rates come from draft models whose output distribution closely matches the target model’s.
-- **Model Size/Architecture:**  
-  Larger models benefit more from speculative decoding; the draft model should be significantly faster, but not so small that it poorly predicts the target.
-- **Hardware Constraints:**  
-  Both models and their key-value caches must fit in memory.  
-- **Batch Size:**  
-  Speculative decoding is most effective at low batch sizes (latency-critical applications).
-- **Orchestration Overhead:**  
-  Efficient communication and scheduling between models is critical.
+- **Draft Model Alignment:**Higher acceptance rates come from draft models whose output distribution closely matches the target model’s.
+- **Model Size/Architecture:**Larger models benefit more from speculative decoding; the draft model should be significantly faster, but not so small that it poorly predicts the target.
+- **Hardware Constraints:**Both models and their key-value caches must fit in memory.  
+- **Batch Size:**Speculative decoding is most effective at low batch sizes (latency-critical applications).
+- **Orchestration Overhead:**Efficient communication and scheduling between models is critical.
 ## Benefits
 
-- **2–3x+ Latency Reduction:**  
-  Empirically demonstrated speedups in Google products and academic benchmarks ([arXiv](https://arxiv.org/abs/2211.17192), [Google Research](https://research.google/blog/looking-back-at-speculative-decoding/)).
-- **Guaranteed Output Quality:**  
-  Outputs are mathematically identical to target model sequential decoding.
-- **Better Hardware Utilization:**  
-  Unlocks latent compute power on GPUs/TPUs by batching token checks.
-- **No Retraining Required:**  
-  Any pre-trained models can be used as draft/target, though fine-tuning the draft for higher α is beneficial.
-- **Lower Serving Costs:**  
-  Fewer machines required for the same throughput.
-- **Used in Major Production Systems:**  
-  Google Search AI Overviews, code assistants, summarization tools.
+- **2–3x+ Latency Reduction:**Empirically demonstrated speedups in Google products and academic benchmarks ([arXiv](https://arxiv.org/abs/2211.17192), [Google Research](https://research.google/blog/looking-back-at-speculative-decoding/)).
+- **Guaranteed Output Quality:**Outputs are mathematically identical to target model sequential decoding.
+- **Better Hardware Utilization:**Unlocks latent compute power on GPUs/TPUs by batching token checks.
+- **No Retraining Required:**Any pre-trained models can be used as draft/target, though fine-tuning the draft for higher α is beneficial.
+- **Lower Serving Costs:**Fewer machines required for the same throughput.
+- **Used in Major Production Systems:**Google Search AI Overviews, code assistants, summarization tools.
 
-**Links:**  
-- [NVIDIA Blog](https://developer.nvidia.com/blog/an-introduction-to-speculative-decoding-for-reducing-latency-in-ai-inference/)
+**Links:**- [NVIDIA Blog](https://developer.nvidia.com/blog/an-introduction-to-speculative-decoding-for-reducing-latency-in-ai-inference/)
 - [Google Research Blog](https://research.google/blog/looking-back-at-speculative-decoding/)
 
 ## Limitations and Caveats
 
-- **Increased Memory Use:**  
-  Both models (with caches) must fit in memory, reducing batch size.
-- **Throughput Tradeoffs:**  
-  At high batch sizes, speculative decoding may not improve and may even decrease throughput due to contention.
-- **Waste if Draft is Poorly Aligned:**  
-  If acceptance rate is low (e.g., <0.5), speculative decoding adds overhead without speedup.
-- **Model Compatibility Constraints:**  
-  Draft and target should use the same tokenizer and similar architectures for best results.
-- **Orchestration Complexity:**  
-  Requires careful engineering for efficient model interaction and cache management.
-- **Less Effective for Small Models or High Batch Loads:**  
-  Speedup is most pronounced for large models and latency-sensitive applications.
+- **Increased Memory Use:**Both models (with caches) must fit in memory, reducing batch size.
+- **Throughput Tradeoffs:**At high batch sizes, speculative decoding may not improve and may even decrease throughput due to contention.
+- **Waste if Draft is Poorly Aligned:**If acceptance rate is low (e.g., <0.5), speculative decoding adds overhead without speedup.
+- **Model Compatibility Constraints:**Draft and target should use the same tokenizer and similar architectures for best results.
+- **Orchestration Complexity:**Requires careful engineering for efficient model interaction and cache management.
+- **Less Effective for Small Models or High Batch Loads:**Speedup is most pronounced for large models and latency-sensitive applications.
 ## Implementation Guidance
 
 ### When to Use Speculative Decoding
 
-- **Latency-Critical Applications:**  
-  Chatbots, code completion, real-time summarization.
-- **Large Models:**  
-  >10B parameters, where per-token latency is highest.
-- **Low to Moderate Batch Sizes:**  
-  Where user-facing latency is more important than throughput.
+- **Latency-Critical Applications:**Chatbots, code completion, real-time summarization.
+- **Large Models:**>10B parameters, where per-token latency is highest.
+- **Low to Moderate Batch Sizes:**Where user-facing latency is more important than throughput.
 
 ### When to Avoid
 
-- **GPU Memory Maxed Out:**  
-  Large batch sizes, long context windows.
-- **Low Draft Acceptance Rate:**  
-  If draft model struggles to mimic the target.
-- **Small LLMs:**  
-  Marginal gain does not justify complexity.
+- **GPU Memory Maxed Out:**Large batch sizes, long context windows.
+- **Low Draft Acceptance Rate:**If draft model struggles to mimic the target.
+- **Small LLMs:**Marginal gain does not justify complexity.
 
 ### Configuration & Tuning
 
-- **Draft Model Selection:**  
-  Start with a smaller version of your target, fine-tune if possible.
-- **Speculative Token Count (γ):**  
-  Typical: 3–8 per round. Tune for your workload.
-- **Acceptance Rate Monitoring:**  
-  Track α in production. If α < 0.6, consider tuning or fallback.
-- **Memory Management:**  
-  Monitor GPU memory; use quantization or split models if needed.
+- **Draft Model Selection:**Start with a smaller version of your target, fine-tune if possible.
+- **Speculative Token Count (γ):**Typical: 3–8 per round. Tune for your workload.
+- **Acceptance Rate Monitoring:**Track α in production. If α < 0.6, consider tuning or fallback.
+- **Memory Management:**Monitor GPU memory; use quantization or split models if needed.
 
 ### Example: vLLM Python API
 
@@ -259,47 +205,31 @@ print(output)
 
 ### Real-World Deployments
 
-- **Google Search AI Overviews:**  
-  Powers high-quality, low-latency summaries for billions of users ([Google Research](https://research.google/blog/looking-back-at-speculative-decoding/)).
-- **Code Generation Tools:**  
-  Used by IDE assistants for fast code completion.
-- **Enterprise Chatbots:**  
-  Improves user experience and reduces serving cost for high-volume customer support.
-- **Batch Translation/Summarization:**  
-  Enables fast output for long documents with high per-sample latency.
+- **Google Search AI Overviews:**Powers high-quality, low-latency summaries for billions of users ([Google Research](https://research.google/blog/looking-back-at-speculative-decoding/)).
+- **Code Generation Tools:**Used by IDE assistants for fast code completion.
+- **Enterprise Chatbots:**Improves user experience and reduces serving cost for high-volume customer support.
+- **Batch Translation/Summarization:**Enables fast output for long documents with high per-sample latency.
 
 ### Research Benchmarks
 
-- **T5-XXL (11B) with T5-small (60M):**  
-  [arXiv](https://arxiv.org/abs/2211.17192) shows 2–3x speedup on translation tasks.
-- **Llama 70B:**  
-  [vLLM](https://docs.vllm.ai/en/latest/features/spec_decode/) and [BentoML](https://www.bentoml.com/blog/structured-decoding-in-vllm-a-gentle-introduction) report significant latency improvements.
+- **T5-XXL (11B) with T5-small (60M):**[arXiv](https://arxiv.org/abs/2211.17192) shows 2–3x speedup on translation tasks.
+- **Llama 70B:**[vLLM](https://docs.vllm.ai/en/latest/features/spec_decode/) and [BentoML](https://www.bentoml.com/blog/structured-decoding-in-vllm-a-gentle-introduction) report significant latency improvements.
 
 ## Best Practices and Tuning
 
-1. **Draft Model Selection:**  
-   Use a smaller model from the same family and tokenizer; fine-tune for your use-case if possible.
-2. **Tune γ:**  
-   Start with γ=3–5, increase if α remains high.
-3. **Monitor α:**  
-   If α drops below 0.5, reduce γ or re-align draft model.
-4. **Optimize Memory:**  
-   Use quantization, multi-GPU, or reduce batch/context if needed.
-5. **Benchmark:**  
-   Test under real workload and hardware.
-6. **Automate Fallback:**  
-   Disable speculative decoding if α or memory pressure crosses thresholds.
+1. **Draft Model Selection:**Use a smaller model from the same family and tokenizer; fine-tune for your use-case if possible.
+2. **Tune γ:**Start with γ=3–5, increase if α remains high.
+3. **Monitor α:**If α drops below 0.5, reduce γ or re-align draft model.
+4. **Optimize Memory:**Use quantization, multi-GPU, or reduce batch/context if needed.
+5. **Benchmark:**Test under real workload and hardware.
+6. **Automate Fallback:**Disable speculative decoding if α or memory pressure crosses thresholds.
 
 ## Open Source Tools and Frameworks
 
-- **[vLLM](https://github.com/vllm-project/vllm):**  
-  High-throughput LLM inference engine with speculative decoding.
-- **[BentoML](https://bentoml.com/llm/inference-optimization/speculative-decoding):**  
-  Guides and framework integration.
-- **[Modular MAX](https://docs.modular.com/max/serve/speculative-decoding):**  
-  Out-of-the-box support via config.
-- **[TensorRT-LLM (Baseten)](https://www.baseten.co/blog/a-quick-introduction-to-speculative-decoding/):**  
-  High-performance deployment with speculative decoding.
+- **[vLLM](https://github.com/vllm-project/vllm):**High-throughput LLM inference engine with speculative decoding.
+- **[BentoML](https://bentoml.com/llm/inference-optimization/speculative-decoding):**Guides and framework integration.
+- **[Modular MAX](https://docs.modular.com/max/serve/speculative-decoding):**Out-of-the-box support via config.
+- **[TensorRT-LLM (Baseten)](https://www.baseten.co/blog/a-quick-introduction-to-speculative-decoding/):**High-performance deployment with speculative decoding.
 
 ## Further Reading
 

@@ -15,8 +15,7 @@ url = "/internal/glossary/n8n/"
 
 n8n (pronunciado “en-eight-en”, abreviatura de *nodemation*) es una plataforma de automatización de flujos de trabajo basada en nodos y con código fuente disponible, que permite a los usuarios diseñar visualmente, automatizar y orquestar procesos empresariales complejos a través de cientos de aplicaciones y APIs, incluyendo tareas avanzadas potenciadas por IA. A diferencia de las plataformas de código cerrado, n8n ofrece tanto autoalojamiento para control total y privacidad, como nube gestionada para mayor facilidad de uso.
 
-**Puntos clave:**
-- Código fuente disponible (fair-code): [Licencia n8n](https://faircode.io)
+**Puntos clave:**- Código fuente disponible (fair-code): [Licencia n8n](https://faircode.io)
 - Constructor de flujos drag-and-drop
 - Soporte para código personalizado (JavaScript nativo, Python vía nodo)
 - Más de 500 integraciones nativas y [nodo HTTP Request](/es/glossary/http-request-node/) para cualquier API
@@ -27,99 +26,79 @@ n8n (pronunciado “en-eight-en”, abreviatura de *nodemation*) es una platafor
 
 ### Nodos
 
-**Definición:**  
-Los nodos son los bloques modulares que conforman los flujos de trabajo en n8n, y cada uno representa una función o integración específica (por ejemplo, enviar un email, obtener datos de una API, transformar JSON).
+**Definición:**Los nodos son los bloques modulares que conforman los flujos de trabajo en n8n, y cada uno representa una función o integración específica (por ejemplo, enviar un email, obtener datos de una API, transformar JSON).
 
-**Tipos de nodos:**
-- **Nodos disparadores (Trigger):** Inician flujos de trabajo (webhook, programación, eventos de apps).
-- **Nodos de acción:** Ejecutan tareas (enviar mensaje, actualizar base de datos, llamar API).
-- **Nodos lógicos:** Ramificación, combinación, bucles (if/else, switch, merge, loop).
-- **Nodos de código:** Ejecutan JavaScript personalizado (nativo) o Python (vía nodo).
+**Tipos de nodos:**- **Nodos disparadores (Trigger):**Inician flujos de trabajo (webhook, programación, eventos de apps).
+- **Nodos de acción:**Ejecutan tareas (enviar mensaje, actualizar base de datos, llamar API).
+- **Nodos lógicos:**Ramificación, combinación, bucles (if/else, switch, merge, loop).
+- **Nodos de código:**Ejecutan JavaScript personalizado (nativo) o Python (vía nodo).
 
-**Ejemplos de nodos:**
-- Nodo webhook (dispara por solicitud HTTP)
+**Ejemplos de nodos:**- Nodo webhook (dispara por solicitud HTTP)
 - Nodo Google Sheets (agregar fila)
 - Nodo Slack (enviar mensaje)
 - Nodo HTTP Request (integrar cualquier API RESTful)
 
-**Más información:**  
-- [Referencia de Nodos n8n](https://docs.n8n.io/nodes/)
+**Más información:**- [Referencia de Nodos n8n](https://docs.n8n.io/nodes/)
 - [Nodos de la Comunidad](https://docs.n8n.io/integrations/community-nodes/installation/)
 
 ### Flujos de Trabajo
 
-**Definición:**  
-Un flujo de trabajo es una secuencia visual de nodos interconectados que representan un proceso automatizado o lógica de negocio; esencialmente, un diagrama de flujo para automatización.
+**Definición:**Un flujo de trabajo es una secuencia visual de nodos interconectados que representan un proceso automatizado o lógica de negocio; esencialmente, un diagrama de flujo para automatización.
 
-**Características:**
-- Editor visual drag-and-drop
+**Características:**- Editor visual drag-and-drop
 - Ramificación, combinación, lógica condicional y bucles
 - Depuración paso a paso y registros de ejecución
 - Modular: reutiliza flujos entre proyectos
 
-**Ejemplos:**
-- Nuevo envío de formulario → Agregar a CRM → Notificar por Slack → Enviar email de confirmación
+**Ejemplos:**- Nuevo envío de formulario → Agregar a CRM → Notificar por Slack → Enviar email de confirmación
 
-**Más información:**  
-- [Documentación n8n: Flujos de Trabajo](https://docs.n8n.io/workflows/)
+**Más información:**- [Documentación n8n: Flujos de Trabajo](https://docs.n8n.io/workflows/)
 - [Biblioteca de Plantillas](https://n8n.io/workflows/)
 
 ### Credenciales
 
-**Definición:**  
-Detalles de autenticación almacenados de forma segura (claves API, tokens OAuth, etc.) que permiten a los nodos acceder a servicios externos.
+**Definición:**Detalles de autenticación almacenados de forma segura (claves API, tokens OAuth, etc.) que permiten a los nodos acceder a servicios externos.
 
-**Características principales:**
-- Gestión centralizada de credenciales
+**Características principales:**- Gestión centralizada de credenciales
 - Encriptación en reposo y en tránsito
 - Reutilizables en diferentes flujos
 
-**Ejemplos:**
-- Credencial OAuth de Google para Sheets
+**Ejemplos:**- Credencial OAuth de Google para Sheets
 - Token API de Slack
 - Encabezado HTTP personalizado para APIs REST
 ### Disparadores (Triggers)
 
-**Definición:**  
-Eventos que inician flujos de trabajo, como webhooks entrantes, horarios programados o cambios en apps conectadas.
+**Definición:**Eventos que inician flujos de trabajo, como webhooks entrantes, horarios programados o cambios en apps conectadas.
 
-**Disparadores comunes:**
-- Webhook (recibir datos de formularios, APIs, etc.)
+**Disparadores comunes:**- Webhook (recibir datos de formularios, APIs, etc.)
 - Cron (ejecutar en horarios programados)
 - Disparadores específicos de apps (nueva fila en Sheets, nuevo trato en CRM)
 ### Expresiones
 
-**Definición:**  
-Fórmulas dinámicas para referenciar, transformar y mapear datos entre nodos, permitiendo automatización compleja y manipulación de datos.
+**Definición:**Fórmulas dinámicas para referenciar, transformar y mapear datos entre nodos, permitiendo automatización compleja y manipulación de datos.
 
-**Ejemplo de sintaxis:**  
-- `{{$json["email"]}}` para acceder al campo email de un nodo previo
+**Ejemplo de sintaxis:**- `{{$json["email"]}}` para acceder al campo email de un nodo previo
 
-**Uso avanzado:**  
-- Lógica condicional
+**Uso avanzado:**- Lógica condicional
 - Formateo de datos
 - Cálculos y manipulación de cadenas
 ## Editor Visual de Flujos
 
 El editor visual de n8n es una interfaz basada en nodos, drag-and-drop, que permite diseñar, rastrear y depurar flujos de trabajo de forma transparente.
 
-**Beneficios clave:**
-- Fácil de entender y modificar
+**Beneficios clave:**- Fácil de entender y modificar
 - Combina automatización sin código con código personalizado
 - Ejecución y rastreo de errores en tiempo real
 
-**Ejemplo de captura de pantalla:**  
-![Editor de Flujos n8n](https://xcloud.host/wp-content/uploads/2025/08/image-14.png)
+**Ejemplo de captura de pantalla:**![Editor de Flujos n8n](https://xcloud.host/wp-content/uploads/2025/08/image-14.png)
 
-**Más información:**  
-- [Documentación n8n: Interfaz del Editor](https://docs.n8n.io/editor/ui/)
+**Más información:**- [Documentación n8n: Interfaz del Editor](https://docs.n8n.io/editor/ui/)
 
 ## ¿Cómo se usa n8n?
 
 n8n se utiliza para automatizar tareas repetitivas y de varios pasos, ya sean empresariales o personales, a través de aplicaciones y fuentes de datos, con lógica simple o compleja.
 
-**Casos de uso comunes:**
-- Gestión de leads: Captura formularios, actualiza CRM, notifica a ventas, automatiza emails
+**Casos de uso comunes:**- Gestión de leads: Captura formularios, actualiza CRM, notifica a ventas, automatiza emails
 - Sincronización de datos: Mantén información de clientes, pedidos o tickets sincronizados entre herramientas
 - Procesos potenciados por IA: Chatbots, resumen, clasificación de tickets, generación de contenido
 - Reportes: Agrega analíticas, compila informes, entrega notificaciones
@@ -129,8 +108,7 @@ n8n se utiliza para automatizar tareas repetitivas y de varios pasos, ya sean em
 - Web/data scraping: Extrae, transforma y almacena información
 - Smart home: Automatiza dispositivos según ubicación o eventos
 
-**Tipos de usuarios:**
-- IT, DevOps, SecOps
+**Tipos de usuarios:**- IT, DevOps, SecOps
 - Agencias, marketing, ventas y equipos de soporte
 - Desarrolladores y no programadores (gracias al editor visual)
 - Empresas con necesidades de privacidad, cumplimiento o integración personalizada
@@ -139,15 +117,13 @@ n8n se utiliza para automatizar tareas repetitivas y de varios pasos, ya sean em
 
 La automatización de flujos con IA en n8n utiliza nodos para LLMs (OpenAI, Gemini, Claude, etc.), recuperadores y orquestación agentiva, lo que permite procesar datos no estructurados, enrutamiento inteligente y toma de decisiones avanzada.
 
-**Características clave de IA:**
-- Comprensión de Lenguaje Natural: Resumir, clasificar o transformar texto usando nodos LLM ([Docs IA n8n](https://docs.n8n.io/advanced-ai/))
+**Características clave de IA:**- Comprensión de Lenguaje Natural: Resumir, clasificar o transformar texto usando nodos LLM ([Docs IA n8n](https://docs.n8n.io/advanced-ai/))
 - Generación aumentada por recuperación (RAG): Combina LLMs con recuperación de documentos para chatbots y búsqueda interna ([Ejemplo de flujo RAG](https://n8n.io/workflows/2753-rag-chatbot-for-company-documents-using-google-drive-and-gemini/))
 - IA multimodal: Procesa texto, imágenes y documentos (ej. validación de pasaportes con Google Gemini)
 - [Human-in-the-Loop](/es/glossary/human-in-the-loop--hitl-/): Pausa para aprobación manual en flujos automatizados
 - Sistemas multiagente: Orquesta varios modelos de IA, combina resultados y toma decisiones
 
-**Beneficios de la automatización con IA:**
-- Maneja datos no estructurados (emails, docs, imágenes, redes sociales)
+**Beneficios de la automatización con IA:**- Maneja datos no estructurados (emails, docs, imágenes, redes sociales)
 - Automatiza tareas tediosas y propensas a errores
 - Escala con el crecimiento del negocio
 - Se adapta a cambios inesperados en datos o procesos
@@ -167,8 +143,7 @@ La automatización de flujos con IA en n8n utiliza nodos para LLMs (OpenAI, Gemi
 | Manejo de errores                   | Visual, logs detallados                | Básico                     | Bueno                     |
 | Mejor para                          | Complejo, personalizado, alto volumen, privacidad | Tareas simples, de negocio | Visual, complejidad media |
 
-**Fortalezas clave:**
-- Alojamiento flexible: nube o autoalojado
+**Fortalezas clave:**- Alojamiento flexible: nube o autoalojado
 - Ejecuciones ilimitadas (autoalojado)
 - Ramificación, bucles, combinaciones y manejo de errores avanzados
 - Código integrado para casos específicos
@@ -220,37 +195,29 @@ La automatización de flujos con IA en n8n utiliza nodos para LLMs (OpenAI, Gemi
 ### 7. Web Scraping y monitoreo
 - Pasos: Extraer sitio web → Almacenar resultados → Alertar por bajada de precio
 
-**Biblioteca de plantillas:**  
-- [Plantillas de flujos n8n](https://n8n.io/workflows/categories/ai/)
+**Biblioteca de plantillas:**- [Plantillas de flujos n8n](https://n8n.io/workflows/categories/ai/)
 
 ## Temas Avanzados: IA e Integraciones Personalizadas
 
 ### Ejemplos de integración IA
 
-- **Chatbot con base de conocimiento:**  
-  Nodo OpenAI + recuperador Google Drive + salida Slack/WhatsApp  
+- **Chatbot con base de conocimiento:**Nodo OpenAI + recuperador Google Drive + salida Slack/WhatsApp  
   [Ejemplo de chatbot RAG](https://n8n.io/workflows/2753-rag-chatbot-for-company-documents-using-google-drive-and-gemini/)
-- **Orquestación multiagente:**  
-  Coordina varios LLMs para flujos de decisión avanzados
-- **Lenguaje natural a API:**  
-  Convierte inglés simple en tareas IT mediante llamadas API
-- **Human-in-the-Loop:**  
-  Pausa la automatización para aprobación manual antes de ejecutar
+- **Orquestación multiagente:**Coordina varios LLMs para flujos de decisión avanzados
+- **Lenguaje natural a API:**Convierte inglés simple en tareas IT mediante llamadas API
+- **Human-in-the-Loop:**Pausa la automatización para aprobación manual antes de ejecutar
 
 ### Integraciones Personalizadas
 
-- **Nodo HTTP Request:**  
-  Conecta cualquier API REST, con autenticación avanzada
-- **Nodos de la Comunidad:**  
-  Expande n8n con nodos de terceros y personalizados ([Guía de instalación](https://docs.n8n.io/integrations/community-nodes/installation/))
-- **Código personalizado:**  
-  Usa nodos Function/FunctionItem para lógica personalizada, transformación de datos o llamadas a librerías externas
+- **Nodo HTTP Request:**Conecta cualquier API REST, con autenticación avanzada
+- **Nodos de la Comunidad:**Expande n8n con nodos de terceros y personalizados ([Guía de instalación](https://docs.n8n.io/integrations/community-nodes/installation/))
+- **Código personalizado:**Usa nodos Function/FunctionItem para lógica personalizada, transformación de datos o llamadas a librerías externas
 ## Seguridad y Cumplimiento
 
-- **Autoalojamiento:** Todos los datos permanecen en tu infraestructura
-- **Control de acceso:** Permisos basados en roles para flujos y credenciales
-- **Registros de auditoría:** Rastrea todas las ejecuciones y cambios de flujos
-- **SOC2:** n8n Cloud cumple con SOC2 para seguridad empresarial
+- **Autoalojamiento:**Todos los datos permanecen en tu infraestructura
+- **Control de acceso:**Permisos basados en roles para flujos y credenciales
+- **Registros de auditoría:**Rastrea todas las ejecuciones y cambios de flujos
+- **SOC2:**n8n Cloud cumple con SOC2 para seguridad empresarial
 ## Pros y Contras: n8n vs Zapier/Make
 
 | Pros (n8n)                              | Contras (n8n)                             |
@@ -270,33 +237,26 @@ La automatización de flujos con IA en n8n utiliza nodos para LLMs (OpenAI, Gemi
 | Sin configuración, uso instantáneo en la nube | Lógica avanzada/código personalizado limitado |
 | Bueno para automatizaciones simples y lineales | Límites de tasa API y de ejecuciones      |
 
-**Comparativa detallada:**  
-- [Hostinger: n8n vs Zapier](https://www.hostinger.com/tutorials/n8n-vs-zapier)
+**Comparativa detallada:**- [Hostinger: n8n vs Zapier](https://www.hostinger.com/tutorials/n8n-vs-zapier)
 
 ## Preguntas Frecuentes
 
-**¿Necesito ser desarrollador para usar n8n?**  
-No. El editor visual y las plantillas permiten automatizar sin programar. El código es opcional para casos avanzados.  
+**¿Necesito ser desarrollador para usar n8n?**No. El editor visual y las plantillas permiten automatizar sin programar. El código es opcional para casos avanzados.  
 [Guía de inicio](https://contabo.com/blog/the-complete-beginners-guide-to-n8n-your-first-workflow/)
 
-**¿n8n es gratis?**  
-Sí, si lo autoalojas (solo pagas tu servidor). n8n Cloud es de pago pero tiene prueba gratuita.  
+**¿n8n es gratis?**Sí, si lo autoalojas (solo pagas tu servidor). n8n Cloud es de pago pero tiene prueba gratuita.  
 [Precios](https://n8n.io/pricing/)
 
-**¿Puedo conectar cualquier app o API?**  
-Sí. Usa nodos integrados o el nodo HTTP Request para APIs personalizadas.  
+**¿Puedo conectar cualquier app o API?**Sí. Usa nodos integrados o el nodo HTTP Request para APIs personalizadas.  
 [Referencia de nodos](https://docs.n8n.io/nodes/)
 
-**¿Cómo gestiona n8n los errores?**  
-Los flujos permiten nodos de manejo de errores, ramas alternativas y registros de ejecución para depuración.  
+**¿Cómo gestiona n8n los errores?**Los flujos permiten nodos de manejo de errores, ramas alternativas y registros de ejecución para depuración.  
 [Manejo de errores](https://docs.n8n.io/workflows/error-handling/)
 
-**¿Mis datos están seguros?**  
-El autoalojamiento asegura total privacidad. n8n Cloud es compatible con SOC2.  
+**¿Mis datos están seguros?**El autoalojamiento asegura total privacidad. n8n Cloud es compatible con SOC2.  
 [Seguridad](https://docs.n8n.io/security/)
 
-**¿Dónde encuentro ayuda y plantillas?**  
-- [Docs n8n](https://docs.n8n.io/)
+**¿Dónde encuentro ayuda y plantillas?**- [Docs n8n](https://docs.n8n.io/)
 - [Biblioteca de plantillas](https://n8n.io/workflows/)
 - [Foro de la comunidad](https://community.n8n.io/)
 - [Canal de YouTube](https://www.youtube.com/@n8n-automation)

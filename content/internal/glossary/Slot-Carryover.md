@@ -25,16 +25,14 @@ Por ejemplo, si un usuario dice: “Reserva un vuelo a París”, y luego, “B�
 
 Una transferencia de ranuras efectiva elimina la necesidad de que los usuarios repitan información, apoya la resolución natural de referencias en el lenguaje y garantiza que el chatbot mantenga un estado conversacional preciso a medida que evoluciona el diálogo. A medida que los sistemas de diálogo se vuelven más sofisticados y abordan tareas más complejas y variadas, se requiere una transferencia de ranuras robusta para proporcionar asistencia inteligente y consciente del contexto.
 
-**Fuente clave:**  
-- [Amazon Science: Improving long distance slot carryover in spoken dialogue systems](https://www.amazon.science/publications/improving-long-distance-slot-carryover-in-spoken-dialogue-systems)  
+**Fuente clave:**- [Amazon Science: Improving long distance slot carryover in spoken dialogue systems](https://www.amazon.science/publications/improving-long-distance-slot-carryover-in-spoken-dialogue-systems)  
 - [arXiv:1906.01149](https://arxiv.org/abs/1906.01149)
 
 ## Definición principal
 
-**Transferencia de ranuras** es el proceso mediante el cual un chatbot de IA o sistema de diálogo determina si una ranura—un fragmento de información estructurada extraída como una entidad, valor o atributo—identificada en turnos previos de usuario o sistema, sigue siendo relevante y debe ser reutilizada o transferida para cumplir con la intención actual del usuario.
+**Transferencia de ranuras**es el proceso mediante el cual un chatbot de IA o sistema de diálogo determina si una ranura—un fragmento de información estructurada extraída como una entidad, valor o atributo—identificada en turnos previos de usuario o sistema, sigue siendo relevante y debe ser reutilizada o transferida para cumplir con la intención actual del usuario.
 
-**Definición formal:**  
-> “La transferencia de ranuras es la tarea en la que un modelo toma una decisión binaria para cada ranura candidata del contexto previo del diálogo, determinando si debe ser transferida al turno actual para apoyar el cumplimiento de la intención.”  
+**Definición formal:**> “La transferencia de ranuras es la tarea en la que un modelo toma una decisión binaria para cada ranura candidata del contexto previo del diálogo, determinando si debe ser transferida al turno actual para apoyar el cumplimiento de la intención.”  
 > — [Chen et al., 2019, arXiv:1906.01149](https://arxiv.org/abs/1906.01149)
 
 Este proceso es fundamental para el [seguimiento del estado del diálogo](/es/glossary/dialogue-state-tracking/) (DST), ya que implica:
@@ -43,11 +41,9 @@ Este proceso es fundamental para el [seguimiento del estado del diálogo](/es/gl
 - **Mapeo**: Traducir ranuras entre esquemas o dominios potencialmente diferentes (por ejemplo, mapear “WeatherLocation” en una app de clima a “City” en una app de reserva de viajes).
 - **Selección**: Aplicar modelos o reglas aprendidas para decidir qué ranuras son relevantes para el turno actual.
 
-**Ejemplo de uso:**  
-En un asistente de viajes, si un usuario dice: “Quiero volar a Berlín”, se extrae la ranura {Destino: Berlín}. Si el usuario luego dice: “Reserva un hotel allí”, el sistema necesita transferir la ranura “Berlín” para cumplir correctamente la intención.
+**Ejemplo de uso:**En un asistente de viajes, si un usuario dice: “Quiero volar a Berlín”, se extrae la ranura {Destino: Berlín}. Si el usuario luego dice: “Reserva un hotel allí”, el sistema necesita transferir la ranura “Berlín” para cumplir correctamente la intención.
 
-**Citas:**  
-- [Chen et al., 2019, ACL Anthology](https://aclanthology.org/W19-4111/)
+**Citas:**- [Chen et al., 2019, ACL Anthology](https://aclanthology.org/W19-4111/)
 - [Naik et al., 2018, ISCA Archive](https://www.isca-archive.org/interspeech_2018/naik18_interspeech.html)
 
 ## Profundización técnica
@@ -74,32 +70,25 @@ Las primeras implementaciones de transferencia de ranuras usaban reglas manuales
 - **Línea base ingenua**: Transfiere siempre todas las ranuras del turno previo inmediato.
 - **Línea base basada en reglas**: Emplea reglas manuales para ciertos tipos de ranuras o patrones conversacionales.
 
-**Limitaciones:**  
-Los sistemas basados en reglas son frágiles y no se generalizan bien a flujos no vistos o nuevos dominios. Tienen bajo rendimiento en casos de referencias de largo alcance o heterogeneidad de esquemas.  
+**Limitaciones:**Los sistemas basados en reglas son frágiles y no se generalizan bien a flujos no vistos o nuevos dominios. Tienen bajo rendimiento en casos de referencias de largo alcance o heterogeneidad de esquemas.  
 #### Arquitecturas de redes neuronales
 
 El estado del arte en transferencia de ranuras se basa en modelos neuronales que pueden gestionar dinámicamente el contexto y la relevancia de las ranuras:
 
-**1. Redes Pointer:**  
-Permiten al modelo seleccionar y ordenar ranuras del historial de diálogo, capturando referencias explícitas a ranuras previas. Modelan la secuencia y el orden de las ranuras, importante cuando se referencian múltiples ranuras y el orden es relevante.
+**1. Redes Pointer:**Permiten al modelo seleccionar y ordenar ranuras del historial de diálogo, capturando referencias explícitas a ranuras previas. Modelan la secuencia y el orden de las ranuras, importante cuando se referencian múltiples ranuras y el orden es relevante.
 
-**2. Modelos basados en Transformers:**  
-Los transformers emplean self-attention para modelar dependencias entre ranuras y turnos de diálogo. Esto permite a la red enfocar qué ranuras de todo el historial son relevantes para el turno actual, sin importar su posición.
+**2. Modelos basados en Transformers:**Los transformers emplean self-attention para modelar dependencias entre ranuras y turnos de diálogo. Esto permite a la red enfocar qué ranuras de todo el historial son relevantes para el turno actual, sin importar su posición.
 
 > “Proponemos dos arquitecturas de red neuronal, una basada en redes pointer que incorporan información de orden de ranuras, y otra basada en transformers que usan mecanismos de self-attention para modelar interdependencias de ranuras.”  
 > — [Chen et al., 2019, arXiv:1906.01149](https://arxiv.org/abs/1906.01149)
 
-**3. Mecanismos de atención:**  
-Mecanismos de atención a nivel de palabra y flujo ayudan al modelo a enfocarse en las expresiones y menciones de ranuras más relevantes, mejorando la resolución de referencias ambiguas o de largo alcance.
+**3. Mecanismos de atención:**Mecanismos de atención a nivel de palabra y flujo ayudan al modelo a enfocarse en las expresiones y menciones de ranuras más relevantes, mejorando la resolución de referencias ambiguas o de largo alcance.
 
-**4. Mapeo de esquemas basado en embeddings:**  
-Representando claves y valores de ranuras como embeddings, los modelos pueden calcular similitud entre ranuras de esquemas heterogéneos. Es crucial para mapear ranuras entre dominios con convenciones o estructuras diferentes.
+**4. Mapeo de esquemas basado en embeddings:**Representando claves y valores de ranuras como embeddings, los modelos pueden calcular similitud entre ranuras de esquemas heterogéneos. Es crucial para mapear ranuras entre dominios con convenciones o estructuras diferentes.
 
-**5. Decisión de transferencia de extremo a extremo:**  
-Los enfoques modernos plantean la transferencia de ranuras como una tarea de clasificación binaria o selección sobre un conjunto candidato, usando codificaciones contextuales, embeddings de ranura e indicadores de recencia.
+**5. Decisión de transferencia de extremo a extremo:**Los enfoques modernos plantean la transferencia de ranuras como una tarea de clasificación binaria o selección sobre un conjunto candidato, usando codificaciones contextuales, embeddings de ranura e indicadores de recencia.
 
-**Ejemplo de pseudocódigo:**  
-```
+**Ejemplo de pseudocódigo:**```
 Para cada ranura candidata en el contexto:
     1. Codificar características de la ranura (embedding de clave, embedding de valor)
     2. Codificar la expresión actual y el historial de diálogo (LSTM/Transformer)
@@ -111,21 +100,16 @@ Para cada ranura candidata en el contexto:
 
 Evaluar modelos de transferencia de ranuras requiere conjuntos de datos robustos que representen la complejidad conversacional real. Los benchmarks más destacados incluyen:
 
-- **Serie DSTC (Dialog State Tracking Challenge):**  
-  - [DSTC2](https://www.microsoft.com/en-us/research/event/dialog-state-tracking-challenge/): Enfocado en reservas de restaurantes, ampliamente usado para tareas de transferencia y seguimiento de estado.
+- **Serie DSTC (Dialog State Tracking Challenge):**- [DSTC2](https://www.microsoft.com/en-us/research/event/dialog-state-tracking-challenge/): Enfocado en reservas de restaurantes, ampliamente usado para tareas de transferencia y seguimiento de estado.
   - DSTC8, DSTC9: Versiones posteriores con escenarios multidominio más desafiantes.
 
-- **Schema-Guided Dialogue (SGD) Dataset:**  
-  - [SGD](https://huggingface.co/datasets/schema_guided_dstc8): Dataset a gran escala multidominio, diseñado para evaluar mapeo de esquemas y transferencia entre numerosos servicios y dominios.
+- **Schema-Guided Dialogue (SGD) Dataset:**- [SGD](https://huggingface.co/datasets/schema_guided_dstc8): Dataset a gran escala multidominio, diseñado para evaluar mapeo de esquemas y transferencia entre numerosos servicios y dominios.
 
-- **Colección de conjuntos de datos de seguimiento de estado de diálogo en Hugging Face:**  
-  - [Colección curada de DST](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets) incluyendo MultiWOZ, WOZ y otros.
+- **Colección de conjuntos de datos de seguimiento de estado de diálogo en Hugging Face:**- [Colección curada de DST](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets) incluyendo MultiWOZ, WOZ y otros.
 
-- **Dataset interno de Amazon Alexa:**  
-  - Usado en [Chen et al., 2019](https://aclanthology.org/W19-4111/) para evaluar transferencia de ranuras en escenarios de producción.
+- **Dataset interno de Amazon Alexa:**- Usado en [Chen et al., 2019](https://aclanthology.org/W19-4111/) para evaluar transferencia de ranuras en escenarios de producción.
 
-**Recursos de datasets:**  
-- [Hugging Face Dialogue State Tracking Datasets](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets)
+**Recursos de datasets:**- [Hugging Face Dialogue State Tracking Datasets](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets)
 - [DSTC Challenges](https://www.microsoft.com/en-us/research/event/dialog-state-tracking-challenge/)
 
 ## Consideraciones de implementación
@@ -139,10 +123,8 @@ La transferencia de ranuras entre dominios suele requerir mapear claves y valore
 | WeatherLocation: Tokyo   | City: Tokyo                | Sí                       |
 | Entity: La Taqueria      | Place: La Taqueria         | Sí                       |
 
-**Técnicas:**
-
-- **Embeddings de etiquetas:** Promedio de embeddings de palabras preentrenados para claves y valores, para calcular similitud y mapeos candidatos.
-- **Mapeo impulsado por datos:** Aprender mapeos desde los datos en vez de depender de diccionarios estáticos o reglas manuales.
+**Técnicas:**- **Embeddings de etiquetas:**Promedio de embeddings de palabras preentrenados para claves y valores, para calcular similitud y mapeos candidatos.
+- **Mapeo impulsado por datos:**Aprender mapeos desde los datos en vez de depender de diccionarios estáticos o reglas manuales.
 
 ### Generación de ranuras candidatas
 
@@ -185,8 +167,7 @@ Las principales métricas de desempeño para la transferencia de ranuras incluye
 - **Almacenamiento seguro**: Cifrado y control de acceso a valores sensibles de ranura.
 - **Escalabilidad**: Indexado y recuperación eficiente para soportar grandes cantidades de usuarios e historiales largos.
 
-**Riesgos de privacidad y protección:**  
-Los chatbots pueden almacenar inadvertidamente datos sensibles del usuario (por ejemplo, ubicación, identificadores personales) en memorias de ranura, generando inquietudes de privacidad. Buenas prácticas incluyen:
+**Riesgos de privacidad y protección:**Los chatbots pueden almacenar inadvertidamente datos sensibles del usuario (por ejemplo, ubicación, identificadores personales) en memorias de ranura, generando inquietudes de privacidad. Buenas prácticas incluyen:
 
 - Limitar el almacenamiento de información personal identificable (PII).
 - Brindar a los usuarios opciones explícitas para controlar lo que se recuerda.
@@ -199,9 +180,7 @@ Los chatbots pueden almacenar inadvertidamente datos sensibles del usuario (por 
 
 La transferencia de ranuras es indispensable para asistentes que soportan múltiples dominios (por ejemplo, clima, búsqueda local, reservas). Permite transiciones fluidas y resolución natural de referencias.
 
-**Ejemplo de diálogo:**
-
-| Turno | Dominio      | Entrada del usuario                        | Ranuras extraídas/transferidas         |
+**Ejemplo de diálogo:**| Turno | Dominio      | Entrada del usuario                        | Ranuras extraídas/transferidas         |
 |-------|--------------|--------------------------------------------|----------------------------------------|
 | U1    | Clima        | "¿Qué tiempo hace en Tokio?"               | WeatherLocation: Tokyo                 |
 | V1    | Clima        | "Está lluvioso y 15°C."                    | Temperature: 15°C                      |
@@ -242,11 +221,11 @@ Usuario: Sí, por favor.
 
 ## Retos y limitaciones
 
-- **Propagación de errores:** Los errores en la extracción o transferencia de ranuras pueden acumularse y afectar etapas posteriores.
-- **Alineamiento de esquemas:** El mapeo automático de ranuras entre dominios con esquemas dispares sigue siendo complejo, especialmente a gran escala.
-- **Resolución de ambigüedades:** Referencias implícitas, pronombres y expresiones dependientes del contexto requieren modelado avanzado de co-referencia y contexto.
-- **Privacidad de datos:** El almacenamiento y procesamiento de datos sensibles exige salvaguardas robustas, cifrado y cumplimiento (ej. RGPD).
-- **Coste computacional:** Los modelos basados en transformers y mecanismos de atención aumentan los requerimientos computacionales y de memoria para ventanas de contexto amplias.
+- **Propagación de errores:**Los errores en la extracción o transferencia de ranuras pueden acumularse y afectar etapas posteriores.
+- **Alineamiento de esquemas:**El mapeo automático de ranuras entre dominios con esquemas dispares sigue siendo complejo, especialmente a gran escala.
+- **Resolución de ambigüedades:**Referencias implícitas, pronombres y expresiones dependientes del contexto requieren modelado avanzado de co-referencia y contexto.
+- **Privacidad de datos:**El almacenamiento y procesamiento de datos sensibles exige salvaguardas robustas, cifrado y cumplimiento (ej. RGPD).
+- **Coste computacional:**Los modelos basados en transformers y mecanismos de atención aumentan los requerimientos computacionales y de memoria para ventanas de contexto amplias.
 
 ## Referencias y lecturas adicionales
 
@@ -266,8 +245,7 @@ Usuario: Sí, por favor.
 | Memoria contextual     | Mantener historial conversacional           | Memoria corto/largo plazo, ventanas de contexto, RAG   |
 | Mapeo de esquemas      | Alinear ranuras entre dominios              | Basado en embeddings, impulsado por datos, mapeo manual|
 
-**Nota:**  
-Para ejemplos más técnicos y a nivel de código, consulte los siguientes recursos y sus referencias:  
+**Nota:**Para ejemplos más técnicos y a nivel de código, consulte los siguientes recursos y sus referencias:  
 - [Chen et al., 2019, arXiv PDF](https://arxiv.org/pdf/1906.01149)  
 - [ISCA Archive: Naik et al. 2018](https://www.isca-archive.org/interspeech_2018/naik18_interspeech.html)  
 - [[Hugging Face](/es/glossary/hugging-face/) DST Dataset Collection](https://huggingface.co/collections/pietrolesci/dialogue-state-tracking-datasets)

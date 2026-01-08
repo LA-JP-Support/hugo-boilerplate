@@ -47,9 +47,9 @@ Flag states are managed in one of several ways:
 Modern flag management tools allow dynamic updates—so flipping a flag in a UI or API changes behavior instantly for all users or selected segments, without downtime or redeploy.
 
 Flags can be:
-- **Global** (affecting all users)
-- **Targeted** (affecting specific users, cohorts, or environments)
-- **Boolean** (on/off) or **multivariate** (multiple states or variants)
+- **Global**(affecting all users)
+- **Targeted**(affecting specific users, cohorts, or environments)
+- **Boolean**(on/off) or **multivariate**(multiple states or variants)
 
 For a visual explanation and more technical details, see:
 - [AWS: Feature Flags Best Practices](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
@@ -61,11 +61,11 @@ Feature flag taxonomy is crucial for best practice management. Types include:
 
 | Type                | Purpose                                        | Typical Lifespan    | Example Use                                   |
 |---------------------|------------------------------------------------|---------------------|-----------------------------------------------|
-| **Release Toggle**  | Hide incomplete or experimental features       | Short (weeks/months)| Progressive rollout of a new UI               |
-| **Experiment Toggle** | Enable A/B or multivariate testing           | Short (days/weeks)  | Comparing checkout flows                      |
-| **Ops Toggle**      | Operational control (e.g., kill switch)        | Short/Medium/Long   | Disabling resource-intensive features         |
-| **Permission Toggle** | Limit features by roles/cohorts              | Long/Permanent      | Premium or admin-only features                |
-| **Kill Switch**     | Emergency disabling of risky features          | Long/Permanent      | Instantly disabling a payment integration     |
+| **Release Toggle**| Hide incomplete or experimental features       | Short (weeks/months)| Progressive rollout of a new UI               |
+| **Experiment Toggle**| Enable A/B or multivariate testing           | Short (days/weeks)  | Comparing checkout flows                      |
+| **Ops Toggle**| Operational control (e.g., kill switch)        | Short/Medium/Long   | Disabling resource-intensive features         |
+| **Permission Toggle**| Limit features by roles/cohorts              | Long/Permanent      | Premium or admin-only features                |
+| **Kill Switch**| Emergency disabling of risky features          | Long/Permanent      | Instantly disabling a payment integration     |
 
 Deep reference:
 - [Martin Fowler: Feature Toggles Taxonomy](https://martinfowler.com/articles/feature-toggles.html#CategoriesOfToggles)
@@ -76,28 +76,21 @@ Deep reference:
 
 Feature flags enable fast, safe, and flexible software delivery. Key benefits:
 
-- **Decouple Deployment from Release:**  
-  Ship code to production but control exposure of features until ready. [LaunchDarkly](https://launchdarkly.com/blog/what-are-feature-flags/)
+- **Decouple Deployment from Release:**Ship code to production but control exposure of features until ready. [LaunchDarkly](https://launchdarkly.com/blog/what-are-feature-flags/)
 
-- **Progressive Delivery:**  
-  Roll out features gradually to minimize risk (canary, percentage, cohort, region).  
+- **Progressive Delivery:**Roll out features gradually to minimize risk (canary, percentage, cohort, region).  
   [AWS: Gradual Deployments](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
 
-- **Rapid Rollback (Kill Switch):**  
-  Instantly disable problematic features without redeploying or hotfixes.
+- **Rapid Rollback (Kill Switch):**Instantly disable problematic features without redeploying or hotfixes.
 
-- **Continuous Integration & Trunk-Based Development:**  
-  Merge incomplete features into mainline safely, removing the need for long-lived feature branches.  
+- **Continuous Integration & Trunk-Based Development:**Merge incomplete features into mainline safely, removing the need for long-lived feature branches.  
   [LaunchDarkly: Trunk-Based Development](https://launchdarkly.com/blog/introduction-to-trunk-based-development/)
 
-- **A/B Testing & Experimentation:**  
-  Test variants and collect behavioral data for data-driven product decisions.
+- **A/B Testing & Experimentation:**Test variants and collect behavioral data for data-driven product decisions.
 
-- **Operational Control:**  
-  Respond to incidents by toggling off features that cause instability.
+- **Operational Control:**Respond to incidents by toggling off features that cause instability.
 
-- **Entitlement & Permission Management:**  
-  Gate access by user role, subscription, contract, or geography.
+- **Entitlement & Permission Management:**Gate access by user role, subscription, contract, or geography.
 
 For more, see:
 - [Optimizely: Feature Flag Benefits](https://www.optimizely.com/optimization-glossary/feature-flags/)
@@ -120,19 +113,17 @@ Wrap evaluation in a helper for centralization and testability.
 
 ### 2. Configuring Flags
 
-- **Static:**  
-  Hardcoded or in config files; requires redeploy to change.
-- **Dynamic:**  
-  Stored in databases, APIs, or flag management platforms; changes propagate instantly.
+- **Static:**Hardcoded or in config files; requires redeploy to change.
+- **Dynamic:**Stored in databases, APIs, or flag management platforms; changes propagate instantly.
 
 Dynamic management is best for most production use cases.
 
 ### 3. Targeting and Evaluation
 
 Flags may check:
-- **User attributes:** (ID, role, region)
-- **Request context:** (session, device, cohort)
-- **Environment:** (dev, staging, prod)
+- **User attributes:**(ID, role, region)
+- **Request context:**(session, device, cohort)
+- **Environment:**(dev, staging, prod)
 
 Example: Rollout to 10% of users
 ```javascript
@@ -194,32 +185,32 @@ While feature flags add flexibility, they introduce complexity and require disci
 
 Multiple flags = more conditional paths.  
 - Can lead to hard-to-read and hard-to-test code.  
-- **Mitigation:** Limit number of active flags, document thoroughly.
+- **Mitigation:**Limit number of active flags, document thoroughly.
 
 ### 2. Technical Debt from Stale Flags
 
 Flags meant as temporary may linger, cluttering codebase.  
-- **Mitigation:** Audit and remove obsolete flags regularly.
+- **Mitigation:**Audit and remove obsolete flags regularly.
 
 ### 3. Performance Overhead
 
 Frequent flag checks, especially in performance-critical paths, may degrade performance.  
-- **Mitigation:** Cache flag state where possible.
+- **Mitigation:**Cache flag state where possible.
 
 ### 4. Test Matrix Explosion
 
 Multiple flags multiply possible code paths to test.  
-- **Mitigation:** Prioritize high-impact combinations, automate testing.
+- **Mitigation:**Prioritize high-impact combinations, automate testing.
 
 ### 5. Security Considerations
 
 Improper configuration may expose sensitive features/data.  
-- **Mitigation:** Apply access control, audit logs, restrict management access.
+- **Mitigation:**Apply access control, audit logs, restrict management access.
 
 ### 6. Operational Complexity
 
 Synchronizing flag state across distributed systems is non-trivial.  
-- **Mitigation:** Use robust, centralized management tools.
+- **Mitigation:**Use robust, centralized management tools.
 
 Further analysis:
 - [Octopus: Challenges and Risks](https://octopus.com/devops/feature-flags/#challenges-and-risks-of-using-feature-flags)
@@ -229,32 +220,23 @@ Further analysis:
 
 To get the most out of feature flags:
 
-- **Use a Centralized Management Tool:**  
-  Provides visibility, access control, and auditability.
+- **Use a Centralized Management Tool:**Provides visibility, access control, and auditability.
 
-- **Naming Conventions:**  
-  Name flags by purpose and expected lifespan.
+- **Naming Conventions:**Name flags by purpose and expected lifespan.
 
-- **Document Everything:**  
-  Purpose, owner, dependencies, and removal criteria.
+- **Document Everything:**Purpose, owner, dependencies, and removal criteria.
 
-- **Regular Audits:**  
-  Remove unused flags to avoid [technical debt](/en/glossary/technical-debt/) (“flag rot”).
+- **Regular Audits:**Remove unused flags to avoid [technical debt](/en/glossary/technical-debt/) (“flag rot”).
 
-- **Integrate Flag Cleanup:**  
-  Into CI/CD and release checklists.
+- **Integrate Flag Cleanup:**Into CI/CD and release checklists.
 
-- **Monitor Performance Impact:**  
-  Optimize evaluation logic.
+- **Monitor Performance Impact:**Optimize evaluation logic.
 
-- **Secure Management Interfaces:**  
-  Limit access, enable audit logging.
+- **Secure Management Interfaces:**Limit access, enable audit logging.
 
-- **Educate Teams:**  
-  On proper flag usage and lifecycle.
+- **Educate Teams:**On proper flag usage and lifecycle.
 
-**Actionable Checklist:**
-- [ ] Each flag has a documented owner.
+**Actionable Checklist:**- [ ] Each flag has a documented owner.
 - [ ] Flags are categorized (release, experiment, ops, permission).
 - [ ] Flag status is visible in all environments.
 - [ ] Expiry/removal dates are tracked.

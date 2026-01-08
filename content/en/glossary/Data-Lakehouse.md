@@ -108,12 +108,12 @@ The data lakehouse operates through a sophisticated multi-layered architecture t
 
 | Feature | Data Lakehouse | Data Lake | Data Warehouse |
 |---------|---------------|-----------|----------------|
-| **Data Types** | Structured, semi-structured, unstructured | Primarily unstructured/semi-structured | Structured data only |
-| **Schema** | Schema-on-read with enforcement options | Schema-on-read | Schema-on-write |
-| **ACID Transactions** | Full ACID compliance | Limited or no ACID support | Full ACID compliance |
-| **Query Performance** | High performance with optimization | Variable, often slower | Consistently high performance |
-| **Storage Cost** | Low cost object storage | Low cost object storage | High cost proprietary storage |
-| **Governance** | Built-in governance and security | Limited governance capabilities | Strong governance features |
+| **Data Types**| Structured, semi-structured, unstructured | Primarily unstructured/semi-structured | Structured data only |
+| **Schema**| Schema-on-read with enforcement options | Schema-on-read | Schema-on-write |
+| **ACID Transactions**| Full ACID compliance | Limited or no ACID support | Full ACID compliance |
+| **Query Performance**| High performance with optimization | Variable, often slower | Consistently high performance |
+| **Storage Cost**| Low cost object storage | Low cost object storage | High cost proprietary storage |
+| **Governance**| Built-in governance and security | Limited governance capabilities | Strong governance features |
 
 ## Challenges and Considerations
 

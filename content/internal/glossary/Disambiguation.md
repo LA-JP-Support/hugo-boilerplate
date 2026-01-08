@@ -16,13 +16,12 @@ url = "/internal/glossary/Disambiguation/"
 La desambiguación es un enfoque sistemático en la [IA conversacional](/en/glossary/conversational-ai/) para resolver ambigüedades en las entradas de los usuarios. Cuando los mensajes de los usuarios son vagos, se superponen con múltiples intenciones o pueden interpretarse de más de una manera, los chatbots y asistentes virtuales emplean estrategias específicas para descubrir la intención real del usuario. Esto evita que el sistema haga suposiciones incorrectas o brinde respuestas irrelevantes.
 
 Por ejemplo:
-- **Usuario:** “Muéstrame Apple.”
-- **Chatbot:** “¿Te refieres a Apple la fruta, o Apple la empresa de tecnología?”
+- **Usuario:**“Muéstrame Apple.”
+- **Chatbot:**“¿Te refieres a Apple la fruta, o Apple la empresa de tecnología?”
 
 El proceso de desambiguación es vital para la comprensión del lenguaje natural (NLU), ya que cubre la brecha entre cómo se expresan los usuarios y cómo los bots interpretan el lenguaje natural. Esto asegura respuestas más precisas, contextuales y relevantes.
 
-**Detalles adicionales:**
-- La desambiguación puede involucrar puntuaciones de confianza (donde el sistema evalúa qué tan probable es que una intención específica coincida con la entrada), umbrales de activación (si varias intenciones tienen confianza similar) y aclaraciones solicitadas al usuario.
+**Detalles adicionales:**- La desambiguación puede involucrar puntuaciones de confianza (donde el sistema evalúa qué tan probable es que una intención específica coincida con la entrada), umbrales de activación (si varias intenciones tienen confianza similar) y aclaraciones solicitadas al usuario.
 - Los chatbots avanzados utilizan modelos de aprendizaje automático para detectar ambigüedad y activar la desambiguación solo cuando es necesario, equilibrando eficiencia y satisfacción del usuario.
 ## 2. Por qué importa la desambiguación
 
@@ -30,23 +29,17 @@ La desambiguación es un desafío central en la construcción de sistemas de IA 
 
 ### Razones clave para desambiguar:
 
-**1. Precisión y exactitud en las respuestas:**  
-La desambiguación garantiza que la solicitud del usuario se asocie con la intención más relevante, reduciendo el riesgo de respuestas incorrectas o irrelevantes. Si no se desambigua, puede llevar a frustración y pérdida de confianza.
+**1. Precisión y exactitud en las respuestas:**La desambiguación garantiza que la solicitud del usuario se asocie con la intención más relevante, reduciendo el riesgo de respuestas incorrectas o irrelevantes. Si no se desambigua, puede llevar a frustración y pérdida de confianza.
 
-**2. Mejor experiencia de usuario:**  
-Al aclarar solicitudes ambiguas, los chatbots evitan adivinar y dan al usuario el poder de precisar su consulta. Esto genera conversaciones más fluidas y menos frustrantes.
+**2. Mejor experiencia de usuario:**Al aclarar solicitudes ambiguas, los chatbots evitan adivinar y dan al usuario el poder de precisar su consulta. Esto genera conversaciones más fluidas y menos frustrantes.
 
-**3. Escalabilidad y mantenimiento:**  
-A medida que crecen la base de conocimiento y la biblioteca de intenciones del chatbot, aumentan las probabilidades de entradas ambiguas. Una desambiguación robusta permite expandirse sin reducir el rendimiento.
+**3. Escalabilidad y mantenimiento:**A medida que crecen la base de conocimiento y la biblioteca de intenciones del chatbot, aumentan las probabilidades de entradas ambiguas. Una desambiguación robusta permite expandirse sin reducir el rendimiento.
 
-**4. Mejora continua:**  
-Cada evento de desambiguación aporta datos valiosos. Analizar estas interacciones ayuda a refinar los modelos de intención, datos de entrenamiento y la precisión general de NLU.
+**4. Mejora continua:**Cada evento de desambiguación aporta datos valiosos. Analizar estas interacciones ayuda a refinar los modelos de intención, datos de entrenamiento y la precisión general de NLU.
 
-**5. Confianza y adopción:**  
-Los usuarios confían y usan más los bots que comprenden sus necesidades de forma consistente, incluso cuando las consultas son vagas o multifacéticas.
+**5. Confianza y adopción:**Los usuarios confían y usan más los bots que comprenden sus necesidades de forma consistente, incluso cuando las consultas son vagas o multifacéticas.
 
-**Citas:**
-- [SiteSpeakAI: ¿Por qué es importante la desambiguación?](https://sitespeak.ai/ai-chatbot-terms/disambiguation)
+**Citas:**- [SiteSpeakAI: ¿Por qué es importante la desambiguación?](https://sitespeak.ai/ai-chatbot-terms/disambiguation)
 - [Amazon Lex: Resolver entradas ambiguas de usuario](https://docs.aws.amazon.com/lexv2/latest/dg/generative-intent-disambiguation.html)
 - [Microsoft Copilot Studio: Desambiguar intenciones de clientes](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/cux-disambiguate-intent)
 
@@ -56,33 +49,29 @@ La ambigüedad en la entrada del usuario puede surgir de muchas formas, requirie
 
 ### 3.1 Nombres de entidades o marcas ambiguas
 
-**Ejemplo:**
-- **Usuario:** “Muéstrame Jaguar.”
-- **Chatbot:** “¿Te interesa Jaguar la marca de autos o Jaguar el animal?”
+**Ejemplo:**- **Usuario:**“Muéstrame Jaguar.”
+- **Chatbot:**“¿Te interesa Jaguar la marca de autos o Jaguar el animal?”
 
 Consultas así son comunes en industrias con nombres de producto, marca o entidad superpuestos.
 
 ### 3.2 Múltiples acciones posibles
 
-**Ejemplo:**
-- **Usuario:** “Actualizar mi computadora.”
-- **Chatbot:** “¿Deseas actualizar el sistema operativo, el hardware de tu computadora o instalar las últimas actualizaciones de seguridad?”
+**Ejemplo:**- **Usuario:**“Actualizar mi computadora.”
+- **Chatbot:**“¿Deseas actualizar el sistema operativo, el hardware de tu computadora o instalar las últimas actualizaciones de seguridad?”
 
 Este tipo de ambigüedad suele surgir en soporte técnico, mesas de ayuda TI y bots de soporte de productos.
 
 ### 3.3 Intenciones superpuestas
 
-**Ejemplo:**
-- **Usuario:** “Necesito soporte.”
-- **Chatbot:** “¿Quieres soporte técnico, soporte de facturación o ayuda con tu cuenta?”
+**Ejemplo:**- **Usuario:**“Necesito soporte.”
+- **Chatbot:**“¿Quieres soporte técnico, soporte de facturación o ayuda con tu cuenta?”
 
 Aquí, la intención del usuario puede corresponder a varios flujos de soporte diferentes.
 
 ### 3.4 Solicitudes vagas
 
-**Ejemplo:**
-- **Usuario:** “Reservar un servicio.”
-- **Chatbot:** “¿Qué servicio deseas reservar: limpieza, reparación o mantenimiento?”
+**Ejemplo:**- **Usuario:**“Reservar un servicio.”
+- **Chatbot:**“¿Qué servicio deseas reservar: limpieza, reparación o mantenimiento?”
 
 Las solicitudes vagas son especialmente comunes en los servicios y requieren aclarar el tipo de servicio.
 
@@ -97,48 +86,39 @@ Diversas estrategias de desambiguación se emplean en plataformas de IA conversa
 
 El chatbot hace preguntas aclaratorias, solicitando al usuario más detalles.
 
-**Ejemplo de diálogo:**
-- **Usuario:** “Cambiar mi plan.”
-- **Chatbot:** “¿Te refieres a tu plan móvil, plan de internet o paquete de TV?”
+**Ejemplo de diálogo:**- **Usuario:**“Cambiar mi plan.”
+- **Chatbot:**“¿Te refieres a tu plan móvil, plan de internet o paquete de TV?”
 
-**Ventajas:**
-- Imita la conversación humana.
+**Ventajas:**- Imita la conversación humana.
 - Permite precisar de forma abierta.
 
-**Consideraciones:**
-- Puede aumentar el número de turnos conversacionales.
+**Consideraciones:**- Puede aumentar el número de turnos conversacionales.
 - El uso excesivo puede fatigar al usuario.
 
 ### 4.2 Presentación de opciones
 
 El bot muestra una lista de las intenciones o acciones más probables para que el usuario seleccione.
 
-**Ejemplo de diálogo:**
-- **Usuario:** “Estado del pedido.”
-- **Chatbot:** “¿Quieres rastrear un pedido reciente, modificar un pedido o cancelar un pedido?”
+**Ejemplo de diálogo:**- **Usuario:**“Estado del pedido.”
+- **Chatbot:**“¿Quieres rastrear un pedido reciente, modificar un pedido o cancelar un pedido?”
 
-**Ventajas:**
-- Dirige rápido al usuario.
+**Ventajas:**- Dirige rápido al usuario.
 - Reduce la carga cognitiva.
 
-**Consideraciones:**
-- Demasiadas opciones pueden abrumar.
+**Consideraciones:**- Demasiadas opciones pueden abrumar.
 - Las opciones deben ser claras y mutuamente excluyentes.
 
 ### 4.3 Preguntas dirigidas
 
 El bot realiza preguntas específicas y contextuales, aprovechando interacciones previas o datos de sesión.
 
-**Ejemplo de diálogo:**
-- **Usuario:** “¿Cómo reinicio?”
-- **Chatbot:** “¿Deseas restablecer tu contraseña o tu dispositivo?”
+**Ejemplo de diálogo:**- **Usuario:**“¿Cómo reinicio?”
+- **Chatbot:**“¿Deseas restablecer tu contraseña o tu dispositivo?”
 
-**Ventajas:**
-- Acorta las conversaciones.
+**Ventajas:**- Acorta las conversaciones.
 - Usa el contexto para mejorar la precisión.
 
-**Consideraciones:**
-- Requiere gestión de contexto robusta.
+**Consideraciones:**- Requiere gestión de contexto robusta.
 
 ### 4.4 Combinación de enfoques
 
@@ -146,35 +126,29 @@ Los bots efectivos suelen mezclar estos métodos:
 - Comienzan con 2 o 3 opciones probables.
 - Si se selecciona “Ninguna de estas”, hacen una pregunta de seguimiento o escalan a un agente humano.
 
-**Mejores prácticas:**
-- Usa un mensaje personalizado de desambiguación para explicar la necesidad de aclaración.
+**Mejores prácticas:**- Usa un mensaje personalizado de desambiguación para explicar la necesidad de aclaración.
 - Ofrece una salida, como “Ninguna de estas” o “Otra cosa”.
 ## 5. Casos de uso de la desambiguación
 
 ### 5.1 Soporte al cliente
 
-**Escenario:**  
-Un chatbot de telecomunicaciones soporta consultas de cuenta, resolución técnica y facturación. Si el usuario escribe “Tengo un problema”, el bot debe aclarar si el inconveniente es técnico, de facturación u otro.
+**Escenario:**Un chatbot de telecomunicaciones soporta consultas de cuenta, resolución técnica y facturación. Si el usuario escribe “Tengo un problema”, el bot debe aclarar si el inconveniente es técnico, de facturación u otro.
 
 ### 5.2 Comercio electrónico
 
-**Escenario:**  
-Un chatbot de retail gestiona búsquedas de productos, estado de pedidos y devoluciones. Si el usuario dice “Necesito ayuda con mi pedido”, el bot distingue entre rastrear, modificar o devolver un pedido.
+**Escenario:**Un chatbot de retail gestiona búsquedas de productos, estado de pedidos y devoluciones. Si el usuario dice “Necesito ayuda con mi pedido”, el bot distingue entre rastrear, modificar o devolver un pedido.
 
 ### 5.3 Salud
 
-**Escenario:**  
-Un bot sanitario maneja agendamiento de citas, renovación de recetas y facturación. Cuando el usuario dice “Necesito una cita”, el bot pregunta por el tipo de médico o servicio.
+**Escenario:**Un bot sanitario maneja agendamiento de citas, renovación de recetas y facturación. Cuando el usuario dice “Necesito una cita”, el bot pregunta por el tipo de médico o servicio.
 
 ### 5.4 Mesa de ayuda TI
 
-**Escenario:**  
-Un bot de soporte interno responde a empleados ante “Solicitar acceso”. Debe aclarar si el acceso es para un sistema, carpeta o aplicación.
+**Escenario:**Un bot de soporte interno responde a empleados ante “Solicitar acceso”. Debe aclarar si el acceso es para un sistema, carpeta o aplicación.
 
 ### 5.5 Servicios financieros
 
-**Escenario:**  
-Un bot bancario recibe “Transferir fondos”. Debe aclarar entre transferencias internas, externas o pagos.
+**Escenario:**Un bot bancario recibe “Transferir fondos”. Debe aclarar entre transferencias internas, externas o pagos.
 ## 6. Implementación en plataformas conversacionales
 
 ### 6.1 Funcionalidades automáticas de desambiguación
@@ -183,12 +157,11 @@ Muchas plataformas líderes ofrecen capacidades integradas de desambiguación, r
 
 #### Amazon Lex
 
-- **Desambiguación de intenciones** utiliza un gran modelo de lenguaje (LLM) para analizar nombres y descripciones de intenciones, presentando las más probables cuando se detecta ambigüedad.
+- **Desambiguación de intenciones**utiliza un gran modelo de lenguaje (LLM) para analizar nombres y descripciones de intenciones, presentando las más probables cuando se detecta ambigüedad.
 - Soporta 2–5 intenciones candidatas, nombres de pantalla personalizados y mensajes de desambiguación personalizables.
 - Disponible en varios idiomas y regiones.
 
-**Pasos de implementación:**
-1. Habilita la Desambiguación de Intenciones en la consola de Amazon Lex V2.
+**Pasos de implementación:**1. Habilita la Desambiguación de Intenciones en la consola de Amazon Lex V2.
 2. Configura el número de opciones de intención (2–5).
 3. Personaliza el mensaje de desambiguación.
 4. Configura nombres amigables para mostrar intenciones.
@@ -313,14 +286,14 @@ Para bots altamente personalizados o complejos, puede requerirse diseño manual:
 
 ## 10. Glosario de términos clave
 
-- **Intención:** El objetivo o tarea que el usuario desea lograr con el bot.
-- **Entrada ambigua:** Consulta del usuario que puede corresponder a múltiples intenciones o carece de contexto claro.
-- **Diálogo de desambiguación:** Paso conversacional donde el bot pide aclaración al usuario.
-- **Respaldo:** Respuesta o flujo predeterminado activado cuando la entrada no puede asociarse a ninguna intención o aclararse.
-- **Comprensión del Lenguaje Natural (NLU):** Capacidad de IA para interpretar y clasificar la entrada, base para la detección de intenciones y la desambiguación.
-- **Puntaje de confianza:** Valor numérico que indica la probabilidad de que la intención detectada coincida con la entrada del usuario.
-- **Relleno de slots:** Proceso de recopilar información requerida (slots) del usuario para completar una intención.
-- **Intenciones candidatas:** Lista de intenciones que podrían coincidir con la entrada del usuario, presentadas durante la desambiguación.
+- **Intención:**El objetivo o tarea que el usuario desea lograr con el bot.
+- **Entrada ambigua:**Consulta del usuario que puede corresponder a múltiples intenciones o carece de contexto claro.
+- **Diálogo de desambiguación:**Paso conversacional donde el bot pide aclaración al usuario.
+- **Respaldo:**Respuesta o flujo predeterminado activado cuando la entrada no puede asociarse a ninguna intención o aclararse.
+- **Comprensión del Lenguaje Natural (NLU):**Capacidad de IA para interpretar y clasificar la entrada, base para la detección de intenciones y la desambiguación.
+- **Puntaje de confianza:**Valor numérico que indica la probabilidad de que la intención detectada coincida con la entrada del usuario.
+- **Relleno de slots:**Proceso de recopilar información requerida (slots) del usuario para completar una intención.
+- **Intenciones candidatas:**Lista de intenciones que podrían coincidir con la entrada del usuario, presentadas durante la desambiguación.
 
 ## 11. Recursos adicionales
 

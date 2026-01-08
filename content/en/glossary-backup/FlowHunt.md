@@ -18,32 +18,24 @@ draft: false
 
 ## Flow
 
-**Definition:**  
-A Flow in FlowHunt is a self-contained automation sequence or workflow, defined by a series of connected components. Each flow can be designed as a chatbot, an AI-powered assistant, or a complex multi-agent system performing varied tasks.
+**Definition:**A Flow in FlowHunt is a self-contained automation sequence or workflow, defined by a series of connected components. Each flow can be designed as a chatbot, an AI-powered assistant, or a complex multi-agent system performing varied tasks.
 
-**Technical Details:**  
-Flows utilize a visual drag-and-drop builder, allowing users to connect functional blocks (components) without programming. Each block can represent an input, processing step, knowledge retrieval, AI generation, or output. Flows are saved, managed, and deployed from a unified dashboard.
+**Technical Details:**Flows utilize a visual drag-and-drop builder, allowing users to connect functional blocks (components) without programming. Each block can represent an input, processing step, knowledge retrieval, AI generation, or output. Flows are saved, managed, and deployed from a unified dashboard.
 ## Agent
 
-**Definition:**  
-An Agent in FlowHunt is an autonomous AI entity assigned a specific task within a flow. Agents can collaborate, passing context, data, and instructions between each other to achieve complex goals.
+**Definition:**An Agent in FlowHunt is an autonomous AI entity assigned a specific task within a flow. Agents can collaborate, passing context, data, and instructions between each other to achieve complex goals.
 
-**Technical Details:**  
-Agents can be specialized for tasks such as document retrieval, query expansion, summarization, or customer support. Each agent can be configured with a different AI model (e.g., GPT-4, Claude, Gemini) and can access shared or isolated knowledge sources.
+**Technical Details:**Agents can be specialized for tasks such as document retrieval, query expansion, summarization, or customer support. Each agent can be configured with a different AI model (e.g., GPT-4, Claude, Gemini) and can access shared or isolated knowledge sources.
 ## Knowledge Source
 
-**Definition:**  
-A Knowledge Source is any external or internal repository of information connected to a FlowHunt chatbot. This can include websites, uploaded documents (PDFs, DOCX), images, videos, databases, or real-time web content.
+**Definition:**A Knowledge Source is any external or internal repository of information connected to a FlowHunt chatbot. This can include websites, uploaded documents (PDFs, DOCX), images, videos, databases, or real-time web content.
 
-**Technical Details:**  
-Knowledge sources are indexed by FlowHunt’s built-in crawler or upload tools. The platform supports scheduled content refreshes, domain or page-level targeting, and can dynamically update the knowledge base to keep chatbot responses current. Integration with APIs or databases is also supported.
+**Technical Details:**Knowledge sources are indexed by FlowHunt’s built-in crawler or upload tools. The platform supports scheduled content refreshes, domain or page-level targeting, and can dynamically update the knowledge base to keep chatbot responses current. Integration with APIs or databases is also supported.
 ## Component
 
-**Definition:**  
-A Component is a functional block within a Flow. Components handle discrete tasks such as receiving user input, processing data, retrieving documents, generating AI outputs, querying APIs, or scheduling actions.
+**Definition:**A Component is a functional block within a Flow. Components handle discrete tasks such as receiving user input, processing data, retrieving documents, generating AI outputs, querying APIs, or scheduling actions.
 
-**Technical Details:**  
-Components are visually connected in the Flow builder. Types include:
+**Technical Details:**Components are visually connected in the Flow builder. Types include:
 - Input: Receives chat/user data.
 - Retriever: Searches knowledge sources.
 - Generator: Calls AI models to generate responses.
@@ -52,118 +44,86 @@ Components are visually connected in the Flow builder. Types include:
 - API/Integration: Connects external tools via REST/Webhooks.
 ## Template
 
-**Definition:**  
-Templates are pre-built flows or chatbot setups that address common business scenarios (e.g., customer service, lead generation, content summarization).
+**Definition:**Templates are pre-built flows or chatbot setups that address common business scenarios (e.g., customer service, lead generation, content summarization).
 
-**Technical Details:**  
-Templates include pre-configured components and logic. Users can customize templates by editing workflows, replacing AI models, or modifying knowledge sources. Templates accelerate deployment for non-technical users.
+**Technical Details:**Templates include pre-configured components and logic. Users can customize templates by editing workflows, replacing AI models, or modifying knowledge sources. Templates accelerate deployment for non-technical users.
 ## Integration Script
 
-**Definition:**  
-An Integration Script is a JavaScript code snippet generated by FlowHunt for embedding chatbots onto websites, affiliate portals, or within banners.
+**Definition:**An Integration Script is a JavaScript code snippet generated by FlowHunt for embedding chatbots onto websites, affiliate portals, or within banners.
 
-**Technical Details:**  
-Scripts can be placed in website footers or within web app environments. They support custom parameters for affiliate tracking and deep integration with existing UIs. Scripts enable instant deployment of chatbots without backend changes.
+**Technical Details:**Scripts can be placed in website footers or within web app environments. They support custom parameters for affiliate tracking and deep integration with existing UIs. Scripts enable instant deployment of chatbots without backend changes.
 ## Schedule
 
-**Definition:**  
-A Schedule is an automated task in FlowHunt that periodically indexes or updates connected knowledge sources.
+**Definition:**A Schedule is an automated task in FlowHunt that periodically indexes or updates connected knowledge sources.
 
-**Technical Details:**  
-Schedules can be configured for frequency (hourly, daily, weekly), source type (entire website, specific URL, sitemap), and content type (text, documents, multimedia). Schedules ensure chatbots always have the latest information.
+**Technical Details:**Schedules can be configured for frequency (hourly, daily, weekly), source type (entire website, specific URL, sitemap), and content type (text, documents, multimedia). Schedules ensure chatbots always have the latest information.
 ## Banner Chatbot
 
-**Definition:**  
-A Banner Chatbot is a FlowHunt chatbot deployed as a web banner, often for affiliate or partner marketing.
+**Definition:**A Banner Chatbot is a FlowHunt chatbot deployed as a web banner, often for affiliate or partner marketing.
 
-**Technical Details:**  
-Banner chatbots include customizable tracking parameters that attribute user interactions to affiliates. Embedding is achieved via a dedicated integration script. All affiliate links and chat replies can carry unique tracking codes for reporting conversions and referrals.
+**Technical Details:**Banner chatbots include customizable tracking parameters that attribute user interactions to affiliates. Embedding is achieved via a dedicated integration script. All affiliate links and chat replies can carry unique tracking codes for reporting conversions and referrals.
 ## Visual No-Code Workflow Builder
 
-**Definition:**  
-The Visual No-Code Workflow Builder is FlowHunt’s core UI, enabling users to assemble flows by dragging and connecting components in a visual canvas.
+**Definition:**The Visual No-Code Workflow Builder is FlowHunt’s core UI, enabling users to assemble flows by dragging and connecting components in a visual canvas.
 
-**Technical Details:**  
-The builder supports branching logic, multi-agent orchestration, and real-time validation of workflows. Users can preview workflows, test chatbots, and deploy updates instantly.
+**Technical Details:**The builder supports branching logic, multi-agent orchestration, and real-time validation of workflows. Users can preview workflows, test chatbots, and deploy updates instantly.
 ## Multiple AI Model Support
 
-**Definition:**  
-FlowHunt allows users to select and switch between leading AI models (e.g., GPT-4, Claude, Gemini) within a single dashboard.
+**Definition:**FlowHunt allows users to select and switch between leading AI models (e.g., GPT-4, Claude, Gemini) within a single dashboard.
 
-**Technical Details:**  
-Each agent or component in a flow can be assigned a distinct model, enabling hybrid workflows that leverage strengths of different LLMs. Users can also bring proprietary or third-party models via API.
+**Technical Details:**Each agent or component in a flow can be assigned a distinct model, enabling hybrid workflows that leverage strengths of different LLMs. Users can also bring proprietary or third-party models via API.
 ## Pre-Built Templates and Components
 
-**Definition:**  
-A library of ready-made templates and modular components for rapid chatbot and tool creation.
+**Definition:**A library of ready-made templates and modular components for rapid chatbot and tool creation.
 
-**Technical Details:**  
-Templates cover scenarios such as customer support, lead capture, content summarization, and market research. Components are reusable and can be combined to form complex workflows.
+**Technical Details:**Templates cover scenarios such as customer support, lead capture, content summarization, and market research. Components are reusable and can be combined to form complex workflows.
 ## Knowledge Source Integration
 
-**Definition:**  
-Connecting external sources of information (websites, documents, databases) to enhance chatbot intelligence.
+**Definition:**Connecting external sources of information (websites, documents, databases) to enhance chatbot intelligence.
 
-**Technical Details:**  
-Integration is achieved via upload tools, scheduled crawling, and API connectors. FlowHunt supports real-time updates, multimodal inputs (text, image, video), and selective indexing.
+**Technical Details:**Integration is achieved via upload tools, scheduled crawling, and API connectors. FlowHunt supports real-time updates, multimodal inputs (text, image, video), and selective indexing.
 ## Native Integrations and Extensibility
 
-**Definition:**  
-FlowHunt’s capability to connect with third-party platforms (CRM, helpdesk, e-commerce, communication tools) natively or through APIs.
+**Definition:**FlowHunt’s capability to connect with third-party platforms (CRM, helpdesk, e-commerce, communication tools) natively or through APIs.
 
-**Technical Details:**  
-Native integrations include Smartsupp, LiveChat, HubSpot, Shopify, Slack, and LiveAgent. Custom integrations use REST APIs, webhooks, or custom connectors for bespoke workflows.
+**Technical Details:**Native integrations include Smartsupp, LiveChat, HubSpot, Shopify, Slack, and LiveAgent. Custom integrations use REST APIs, webhooks, or custom connectors for bespoke workflows.
 ## Multimodal and Multilingual Capabilities
 
-**Definition:**  
-FlowHunt supports processing and generation of text, audio, video, and image-based content in over 100 languages.
+**Definition:**FlowHunt supports processing and generation of text, audio, video, and image-based content in over 100 languages.
 
-**Technical Details:**  
-Chatbots auto-detect user language and respond fluently. Multimodal support enables uploading, analyzing, and retrieving content from a variety of file types, including social media, YouTube, PDFs, and images.
+**Technical Details:**Chatbots auto-detect user language and respond fluently. Multimodal support enables uploading, analyzing, and retrieving content from a variety of file types, including social media, YouTube, PDFs, and images.
 ## Branding and Customization
 
-**Definition:**  
-Personalizing chatbot UI, messages, and interaction logic to match organization branding and customer experience goals.
+**Definition:**Personalizing chatbot UI, messages, and interaction logic to match organization branding and customer experience goals.
 
-**Technical Details:**  
-Users can apply company logos, select styles, set custom welcome messages, and define chatbot personalities. Multiple bots can be managed from a single dashboard.
+**Technical Details:**Users can apply company logos, select styles, set custom welcome messages, and define chatbot personalities. Multiple bots can be managed from a single dashboard.
 ## Advanced AI Agent Collaboration
 
-**Definition:**  
-Orchestrating multiple AI agents within a flow to handle complex, multi-step tasks, share context, and deliver context-aware automation.
+**Definition:**Orchestrating multiple AI agents within a flow to handle complex, multi-step tasks, share context, and deliver context-aware automation.
 
-**Technical Details:**  
-Agents can be chained, run in parallel, or conditionally triggered. Shared chat history and dynamic knowledge updates allow for human-like, context-rich responses.
+**Technical Details:**Agents can be chained, run in parallel, or conditionally triggered. Shared chat history and dynamic knowledge updates allow for human-like, context-rich responses.
 ## User-Friendly Deployment
 
-**Definition:**  
-Deploying chatbots across websites and platforms with minimal setup effort.
+**Definition:**Deploying chatbots across websites and platforms with minimal setup effort.
 
-**Technical Details:**  
-Deployment is achieved via integration scripts, embeddable banners, or direct platform integrations. Updates to flows are reflected in real-time for all deployed instances.
+**Technical Details:**Deployment is achieved via integration scripts, embeddable banners, or direct platform integrations. Updates to flows are reflected in real-time for all deployed instances.
 ## Comprehensive Analytics and History
 
-**Definition:**  
-Monitoring, analyzing, and optimizing chatbot interactions, usage, and performance.
+**Definition:**Monitoring, analyzing, and optimizing chatbot interactions, usage, and performance.
 
-**Technical Details:**  
-The analytics dashboard tracks chat history, engagement rates, user satisfaction, and conversion metrics. Insights are used to refine flows and improve AI accuracy.
-**For a complete step-by-step guide to onboarding, flow creation, and deployment, see:**  
-- [FlowHunt AI Chatbot Integration Guide](https://support.qualityunit.com/549524-FlowHunt-AI-Chatbot-Integration)
+**Technical Details:**The analytics dashboard tracks chat history, engagement rates, user satisfaction, and conversion metrics. Insights are used to refine flows and improve AI accuracy.
+**For a complete step-by-step guide to onboarding, flow creation, and deployment, see:**- [FlowHunt AI Chatbot Integration Guide](https://support.qualityunit.com/549524-FlowHunt-AI-Chatbot-Integration)
 
-**Explore more features, use cases, and technical details:**  
-- [FlowHunt Official Website](https://www.flowhunt.io/)
+**Explore more features, use cases, and technical details:**- [FlowHunt Official Website](https://www.flowhunt.io/)
 - [AI Agents Directory: FlowHunt Overview](https://aiagentsdirectory.com/agent/flowhunt)
 - [FlowHunt Features](https://www.flowhunt.io/features/)
 - [FlowHunt Integrations](https://www.flowhunt.io/integrations/)
 - [FlowHunt Blog](https://www.flowhunt.io/blog/)
 
-**See real-world deployment and testimonial examples:**  
-- [Customer Testimonials](https://www.flowhunt.io/)
+**See real-world deployment and testimonial examples:**- [Customer Testimonials](https://www.flowhunt.io/)
 - [LiveAgent FAQ: What is FlowHunt?](https://faq.liveagent.com/653339-What-is-FlowHunt)
 
-**For further assistance or to schedule a demo:**  
-- [Book a FlowHunt Demo Session](https://www.flowhunt.io/demo/)
+**For further assistance or to schedule a demo:**- [Book a FlowHunt Demo Session](https://www.flowhunt.io/demo/)
 - [Contact Support](mailto:support@flowhunt.io)
 
 This glossary is designed to provide both newcomers and advanced users with a deeply technical understanding of FlowHunt’s architecture, capabilities, and integration landscape. For even more granular, scenario-based information, consult the linked guides and documentation.

@@ -24,7 +24,7 @@ url = "/internal/glossary/Sandbox-Mode/"
 +++
 ## Introducción y Definición
 
-**Sandbox Mode** es un entorno de pruebas aislado y desechable utilizado para ejecutar flujos, automatizaciones, software o código no confiable sin ningún impacto en los sistemas de producción ni en los datos en vivo. Actúa como un espacio digital para la innovación, depuración, análisis de seguridad y validación, permitiendo la experimentación segura lejos de los activos operativos. El concepto de sandbox surgió de la necesidad de ejecutar software o código no confiable de manera segura, permitiendo a investigadores, desarrolladores y analistas de seguridad observar, analizar e iterar sin riesgo de dañar la infraestructura central o exponer datos sensibles ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [TestGrid](https://testgrid.io/blog/sandbox-environment-for-testing/), [Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing)).
+**Sandbox Mode**es un entorno de pruebas aislado y desechable utilizado para ejecutar flujos, automatizaciones, software o código no confiable sin ningún impacto en los sistemas de producción ni en los datos en vivo. Actúa como un espacio digital para la innovación, depuración, análisis de seguridad y validación, permitiendo la experimentación segura lejos de los activos operativos. El concepto de sandbox surgió de la necesidad de ejecutar software o código no confiable de manera segura, permitiendo a investigadores, desarrolladores y analistas de seguridad observar, analizar e iterar sin riesgo de dañar la infraestructura central o exponer datos sensibles ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [TestGrid](https://testgrid.io/blog/sandbox-environment-for-testing/), [Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing)).
 
 Un sandbox proporciona un entorno estrictamente controlado y aislado, normalmente logrado mediante virtualización o [containerización](/es/glossary/containerization/), de modo que todo lo que se ejecute dentro no puede escapar de sus límites, propagar errores ni filtrar información. Esta separación estricta es fundamental para los flujos de trabajo modernos en IA/ML, automatización, ciberseguridad y desarrollo de software.
 
@@ -175,8 +175,7 @@ El modo Sandbox se apoya en tecnologías superpuestas para lograr aislamiento ro
 - Habilita registro integral para seguridad y cumplimiento ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing)).
 - Monitorea consumo de recursos para evitar cuellos de botella.
 
-**Pro Tips:**
-- Para sandboxes de IA/LLM, asegúrate que las dependencias coincidan con las requeridas por el código generado.
+**Pro Tips:**- Para sandboxes de IA/LLM, asegúrate que las dependencias coincidan con las requeridas por el código generado.
 - Prefiere sandboxes efímeros para experimentos rápidos; persistentes para proyectos extensos.
 
 ## Desafíos y Limitaciones
@@ -211,40 +210,32 @@ El modo Sandbox se apoya en tecnologías superpuestas para lograr aislamiento ro
 
 | Concepto                             | Nivel de Aislamiento   | Caso de Uso Típico                             | Overhead       |
 |--------------------------------------|-----------------------|-----------------------------------------------|----------------|
-| **Sandbox Mode**                     | Alto                  | Pruebas y experimentación seguras y repetibles | Variable       |
-| **Máquinas Virtuales (VMs)**         | SO completo           | Pruebas de apps a nivel SO, investigación      | Alto           |
-| **Contenedores**                     | Proceso/App           | Microservicios dev/test, aislamiento rápido     | Bajo/Medio     |
-| **Aislamiento de Proceso**           | Por proceso           | Seguridad a nivel SO, compartimentación básica | Bajo           |
-| **Pruebas Bare-metal**               | Ninguno               | QA hardware, benchmarks de rendimiento         | Más alto       |
-| **UAT (User Acceptance Testing)**    | Proceso, no entorno   | Validación de usuario en entorno similar prod. | N/A            |
+| **Sandbox Mode**| Alto                  | Pruebas y experimentación seguras y repetibles | Variable       |
+| **Máquinas Virtuales (VMs)**| SO completo           | Pruebas de apps a nivel SO, investigación      | Alto           |
+| **Contenedores**| Proceso/App           | Microservicios dev/test, aislamiento rápido     | Bajo/Medio     |
+| **Aislamiento de Proceso**| Por proceso           | Seguridad a nivel SO, compartimentación básica | Bajo           |
+| **Pruebas Bare-metal**| Ninguno               | QA hardware, benchmarks de rendimiento         | Más alto       |
+| **UAT (User Acceptance Testing)**| Proceso, no entorno   | Validación de usuario en entorno similar prod. | N/A            |
 
-**Analogía:** Una VM es una casa completa con puertas cerradas; un contenedor es una habitación con paredes fuertes; un sandbox es un corral sellado dentro de esa habitación, para experimentación segura y desechable.
+**Analogía:**Una VM es una casa completa con puertas cerradas; un contenedor es una habitación con paredes fuertes; un sandbox es un corral sellado dentro de esa habitación, para experimentación segura y desechable.
 
 ## Preguntas Frecuentes (FAQs)
 
-**¿En qué se diferencia Sandbox Mode de un entorno de pruebas regular?**  
-Un sandbox está diseñado para aislamiento estricto y desechabilidad: nada afecta producción y todos los artefactos se descartan tras su uso. Los entornos de prueba regulares pueden no garantizar esto.
+**¿En qué se diferencia Sandbox Mode de un entorno de pruebas regular?**Un sandbox está diseñado para aislamiento estricto y desechabilidad: nada afecta producción y todos los artefactos se descartan tras su uso. Los entornos de prueba regulares pueden no garantizar esto.
 
-**¿Puedo usar datos de producción en un sandbox?**  
-Mejor práctica: usa datos enmascarados o sintéticos. Si es necesario usar datos reales, anonímizalos para evitar exposición ([Salesforce Data Mask](https://www.salesforce.com/platform/data-masking/)).
+**¿Puedo usar datos de producción en un sandbox?**Mejor práctica: usa datos enmascarados o sintéticos. Si es necesario usar datos reales, anonímizalos para evitar exposición ([Salesforce Data Mask](https://www.salesforce.com/platform/data-masking/)).
 
-**¿Con qué frecuencia debo refrescar mi sandbox?**  
-La frecuencia depende de la plataforma y el caso de uso: los sandboxes de desarrollador pueden refrescarse a diario, los completos mensualmente ([Salesforce Guide](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
+**¿Con qué frecuencia debo refrescar mi sandbox?**La frecuencia depende de la plataforma y el caso de uso: los sandboxes de desarrollador pueden refrescarse a diario, los completos mensualmente ([Salesforce Guide](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
 
-**¿Cuál es la diferencia entre Sandbox Mode y UAT?**  
-UAT (User Acceptance Testing) es un proceso. Sandbox Mode es el entorno aislado que permite UAT y otras pruebas seguras.
+**¿Cuál es la diferencia entre Sandbox Mode y UAT?**UAT (User Acceptance Testing) es un proceso. Sandbox Mode es el entorno aislado que permite UAT y otras pruebas seguras.
 
-**¿Cómo ayuda el sandbox con la seguridad?**  
-Restringe código o comportamientos riesgosos, permitiendo análisis y detección de amenazas de forma segura, sin riesgo para el sistema anfitrión ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
+**¿Cómo ayuda el sandbox con la seguridad?**Restringe código o comportamientos riesgosos, permitiendo análisis y detección de amenazas de forma segura, sin riesgo para el sistema anfitrión ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
 
-**¿Son los sandboxes solo para seguridad?**  
-No, los sandboxes son vitales para desarrollo, QA, integración, capacitación y cumplimiento también.
+**¿Son los sandboxes solo para seguridad?**No, los sandboxes son vitales para desarrollo, QA, integración, capacitación y cumplimiento también.
 
-**¿Los sandboxes usan la misma infraestructura que producción?**  
-A menudo replican configuraciones de producción, pero se ejecutan en recursos de cómputo aislados para mayor seguridad.
+**¿Los sandboxes usan la misma infraestructura que producción?**A menudo replican configuraciones de producción, pero se ejecutan en recursos de cómputo aislados para mayor seguridad.
 
-**¿Qué es un sandbox de código IA?**  
-Un sandbox optimizado para ejecutar código generado por IA, con aislamiento fuerte, gestión de dependencias y monitoreo avanzado ([Modal AI Code Sandbox](https://modal.com/blog/what-is-ai-code-sandbox)).
+**¿Qué es un sandbox de código IA?**Un sandbox optimizado para ejecutar código generado por IA, con aislamiento fuerte, gestión de dependencias y monitoreo avanzado ([Modal AI Code Sandbox](https://modal.com/blog/what-is-ai-code-sandbox)).
 
 ## Recursos y Llamadas a la Acción
 

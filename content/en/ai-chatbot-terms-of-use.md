@@ -81,9 +81,7 @@ Please refrain from the following:
 
 ### 3-3. Important Notice
 
-**⚠️ Important Notices**
-
-- Information once entered may be difficult to completely delete
+**⚠️ Important Notices**- Information once entered may be difficult to completely delete
 - The information may be used as learning data for the AI system
 - Your input may be unintentionally reflected in responses to other users
 

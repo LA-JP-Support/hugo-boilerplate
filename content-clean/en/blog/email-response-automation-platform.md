@@ -23,17 +23,11 @@ Particularly serious is the problem of spending most of the morning on email han
 
 The three main reasons inquiry handling takes time:
 
-**1. Difficulty in Information Organization and Prioritization**
+**1. Difficulty in Information Organization and Prioritization**When multiple inquiries arrive simultaneously, numerous tasks arise for each case: judging urgency and importance, confirming past exchanges, and gathering related information.
 
-When multiple inquiries arrive simultaneously, numerous tasks arise for each case: judging urgency and importance, confirming past exchanges, and gathering related information.
+**2. Burden of Non-Standard and Individual Responses**Content that cannot be handled with templates and individual reply creation considering past exchanges require more time and effort.
 
-**2. Burden of Non-Standard and Individual Responses**
-
-Content that cannot be handled with templates and individual reply creation considering past exchanges require more time and effort.
-
-**3. Complexity of Confirmation and Approval Flows**
-
-When internal coordination or supervisor confirmation is needed, responses take time, keeping customers waiting.
+**3. Complexity of Confirmation and Approval Flows**When internal coordination or supervisor confirmation is needed, responses take time, keeping customers waiting.
 
 ### Field Example: Mornings End with "Email Handling Only"
 
@@ -85,29 +79,19 @@ Using folders and labels for organization, setting automatic sorting rules, etc.
 
 When advancing efficiency, the following two points are important:
 
-**1. Manual and FAQ Development**
+**1. Manual and FAQ Development**Response standardization reduces errors and enables consistent level responses even from newcomers. However, creation and updates require considerable time.
 
-Response standardization reduces errors and enables consistent level responses even from newcomers. However, creation and updates require considerable time.
-
-**2. Maintaining Personalization**
-
-Even when using templates, adding a line based on customer names and past exchanges avoids mechanical impressions.
+**2. Maintaining Personalization**Even when using templates, adding a line based on customer names and past exchanges avoids mechanical impressions.
 
 ## Importance of Internal Structure and Education
 
-** Knowledge Sharing Mechanisms**
+**Knowledge Sharing Mechanisms**Sharing success cases and response know-how across the organization reduces dependence on specific staff and standardizes response quality.
 
-Sharing success cases and response know-how across the organization reduces dependence on specific staff and standardizes response quality.
-
-**Continuous Education**
-
-Enhance member skills through e-learning and role-playing.
+**Continuous Education**Enhance member skills through e-learning and role-playing.
 
 ## Traditional Method Limitations: Challenges Individual Implementation Cannot Solve
 
-The methods introduced so far are all effective. However, **attempting individual implementation faces four major barriers:**
-
-### 1. Cost and Effort Problems
+The methods introduced so far are all effective. However, **attempting individual implementation faces four major barriers:**### 1. Cost and Effort Problems
 
 Template management, ticket systems, chatbots, FAQ systems... implementing each as separate tools inflates both initial and operational costs.
 
@@ -123,9 +107,7 @@ Mastering multiple tool operations takes time, increasing newcomer training burd
 
 Data is managed separately in each tool, making overall analysis and improvement activities difficult.
 
-**What's needed is an "integrated platform."**
-
-If there were a solution where necessary functions are consolidated into one system and fully coordinated, these challenges could be resolved at once.
+**What's needed is an "integrated platform."**If there were a solution where necessary functions are consolidated into one system and fully coordinated, these challenges could be resolved at once.
 
 The next section introduces "SmartWeb," the integrated customer support platform that realizes this ideal.
 
@@ -133,9 +115,7 @@ The next section introduces "SmartWeb," the integrated customer support platform
 
 ### What is SmartWeb?
 
-SmartWeb is a next-generation platform integrating LiveAgent (ticket system and FlowHunt (AI automation. **It realizes all the efficiency techniques introduced in the previous chapter in one system.**
-
-### Correspondence Table: Traditional Efficiency Methods and SmartWeb Functions
+SmartWeb is a next-generation platform integrating LiveAgent (ticket system and FlowHunt (AI automation. **It realizes all the efficiency techniques introduced in the previous chapter in one system.**### Correspondence Table: Traditional Efficiency Methods and SmartWeb Functions
 
 | Traditional Efficiency Method | Challenge | SmartWeb Corresponding Function |
 |---|---|---|
@@ -149,97 +129,69 @@ SmartWeb is a next-generation platform integrating LiveAgent (ticket system and 
 
 ### 1. LiveAgent Ticket System: Integrated Realization of "Automation Tools" and "Email Management"
 
-**Integrating Previously Individually Required Functions**
+**Integrating Previously Individually Required Functions**Traditionally, email sorting tools, ticket management systems, and progress management tools each required separate implementation. With LiveAgent, all of these are included as standard functions.
 
-Traditionally, email sorting tools, ticket management systems, and progress management tools each required separate implementation. With LiveAgent, all of these are included as standard functions.
-
-**Key Functions:**
-
-- **Multi-channel Integrated Management**: Manage email, chat, and phone in one interface
+**Key Functions:**- **Multi-channel Integrated Management**: Manage email, chat, and phone in one interface
 - **Automatic Sorting and Priority Setting**: Automatically to appropriate staff based on content and urgency
 - **Team-wide Visualization**: Real-time awareness of who's handling what
 - **Complete Response History Storage**: Centrally manage all customer interactions
 
-**Effects:**
-
-- Reduce response time by up to 73%
+**Effects:**- Reduce response time by up to 73%
 - Eliminate response gaps and duplicate responses
 - Reduce multiple tool management costs
 
-> **Related Article:** [Complete Guide to Using LiveAgent](#)
+> **Related Article:**[Complete Guide to Using LiveAgent](#)
 
 ### 2. Knowledge Base: Easy Realization of "Manual/FAQ Development"
 
-**Creation and Updates Surprisingly Easy**
+**Creation and Updates Surprisingly Easy**Traditional FAQ systems required HTML knowledge or had complex update procedures. SmartWeb's knowledge base allows anyone to easily create and update with an intuitive editor.
 
-Traditional FAQ systems required HTML knowledge or had complex update procedures. SmartWeb's knowledge base allows anyone to easily create and update with an intuitive editor.
-
-**Key Functions:**
-
-- **Customer Self-Service Portal**: Customers resolve common questions themselves
+**Key Functions:**- **Customer Self-Service Portal**: Customers resolve common questions themselves
 - **Internal FAQ**: Enables high-quality responses even from newcomers immediately
 - **Search Function**: Quickly discover necessary information by keywords
-- ** AI Chatbot Integration**: Automatically presents appropriate articles
+- **AI Chatbot Integration**: Automatically presents appropriate articles
 
-**Effects:**
-
-- Auto-resolve 82% of simple inquiries
+**Effects:**- Auto-resolve 82% of simple inquiries
 - Significantly shorten newcomer training period
 - Standardize response quality
 
-> **Related Article:** [How to Create Effective Knowledge Bases](#)
+> **Related Article:**[How to Create Effective Knowledge Bases](#)
 
 ### 3. AI Chatbot: Low-Cost Realization of "24-Hour Support"
 
-**24/7 Support Without Staff Increase**
+**24/7 Support Without Staff Increase**Traditionally, nighttime and holiday support required additional personnel. AI chatbots enable constant support without additional costs.
 
-Traditionally, nighttime and holiday support required additional personnel. AI chatbots enable constant support without additional costs.
-
-**Key Functions:**
-
-- **Immediate Initial Response**: Don't keep customers waiting even outside business hours
+**Key Functions:**- **Immediate Initial Response**: Don't keep customers waiting even outside business hours
 - **Knowledge Base Integration**: Accurate answers based on accumulated information
 - **Automatic Escalation**: Transfer to human operators when users request or for complex questions
 
-**Effects:**
-
-- 100% outside business hours response rate
+**Effects:**- 100% outside business hours response rate
 - Reduce initial response time to zero
 - Improve customer satisfaction
 
-> **Related Article:** [How AI Chatbot Implementation Transforms Customer Support](#)
+> **Related Article:**[How AI Chatbot Implementation Transforms Customer Support](#)
 
 ### 4. AI Email Auto-Response Generation: Next-Generation Evolution of "Template Utilization"
 
-**Not Just Templates—AI Generates Optimal Responses Based on Situations**
+**Not Just Templates—AI Generates Optimal Responses Based on Situations**Traditional templates were static, requiring situation-based adjustments. SmartWeb's AI Answer Assistant uses RAG (Retrieval-Augmented Generation technology, referencing company-specific knowledge bases to **automatically generate response drafts optimal for that customer and situation**.
 
-Traditional templates were static, requiring situation-based adjustments. SmartWeb's AI Answer Assistant uses RAG (Retrieval-Augmented Generation technology, referencing company-specific knowledge bases to **automatically generate response drafts optimal for that customer and situation**.
-
-**Key Functions:**
-
-- **Accurate Response Generation via RAG Technology**: References company manuals and FAQs
+**Key Functions:**- **Accurate Response Generation via RAG Technology**: References company manuals and FAQs
 - **Human Final Confirmation**: Send after confirming AI-generated responses
 - **Customizable**: Adjustable to industry and company-specific requirements
 - **Accuracy Improvement Through Data Updates**: Response accuracy continuously improves with reference database updates
 
-**Effects:**
-
-- Reduce email reply creation time from average 5 minutes to 1 minute (80% reduction
+**Effects:**- Reduce email reply creation time from average 5 minutes to 1 minute (80% reduction
 - Standardize and improve response quality
 - Significantly reduce staff workload
 - Freedom from "template management" hassle
 
-> **Related Article:** [What is RAG Technology? How AI Utilizes Company Knowledge](#)
+> **Related Article:**[What is RAG Technology? How AI Utilizes Company Knowledge](#)
 
 ### 5. Synergistic Effects Through Integration: Natural Realization of "Internal Structure and Knowledge Sharing"
 
-**True Information Sharing Impossible with Scattered Tools**
+**True Information Sharing Impossible with Scattered Tools**SmartWeb's greatest strength is that all these functions are **fully coordinated on one platform**.
 
-SmartWeb's greatest strength is that all these functions are **fully coordinated on one platform**.
-
-**Effects Integration Brings:**
-
-- **Complete Customer Information Centralization**: Confirm response history across all channels in one place
+**Effects Integration Brings:**- **Complete Customer Information Centralization**: Confirm response history across all channels in one place
 - **Natural Knowledge Sharing**: Response content automatically accumulates in knowledge base
 - **Team-wide Visualization**: At-a-glance view of who's handling which inquiries
 - **Data-Based Improvement**: Discover improvement points from all response data

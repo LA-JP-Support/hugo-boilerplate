@@ -11,7 +11,7 @@ draft: false
 ---
 ## What Is an Adversarial Attack?
 
-An **adversarial attack** is a deliberate manipulation of inputs to an artificial intelligence (AI) or machine learning (ML) model, designed to induce incorrect predictions, classifications, or decisions. These attacks exploit mathematical and statistical vulnerabilities in the model’s decision boundaries, allowing attackers to craft **adversarial examples**—inputs that appear normal to humans but are engineered to deceive or subvert the AI system. 
+An **adversarial attack**is a deliberate manipulation of inputs to an artificial intelligence (AI) or machine learning (ML) model, designed to induce incorrect predictions, classifications, or decisions. These attacks exploit mathematical and statistical vulnerabilities in the model’s decision boundaries, allowing attackers to craft **adversarial examples**—inputs that appear normal to humans but are engineered to deceive or subvert the AI system. 
 
 Adversarial attacks can undermine the reliability and trustworthiness of AI systems, affecting applications from cybersecurity and autonomous vehicles to healthcare and finance. Compromising a model in this way can degrade security, erode user confidence, and cause significant operational and reputational harm.  
 
@@ -19,17 +19,17 @@ Adversarial attacks can undermine the reliability and trustworthiness of AI syst
 
 Adversarial attacks are leveraged to:
 
-- **Bypass Security Controls:** Attackers modify malware, spam, or fraudulent content so it is misclassified as benign by AI security systems.
-- **Compromise Decision Making:** Manipulated inputs cause automated systems to make unsafe or unethical decisions, such as misclassifying road signs for autonomous vehicles.
-- **Steal or Leak Sensitive Information:** Certain attacks allow extraction of private data or intellectual property from the model.
-- **Undermine Trust and Reputation:** Repeated attacks erode user trust in AI-enabled services.
-- **Test and Harden Defenses:** Security researchers simulate attacks ([red teaming](/en/glossary/red-teaming/)) to discover vulnerabilities and improve robustness.
+- **Bypass Security Controls:**Attackers modify malware, spam, or fraudulent content so it is misclassified as benign by AI security systems.
+- **Compromise Decision Making:**Manipulated inputs cause automated systems to make unsafe or unethical decisions, such as misclassifying road signs for autonomous vehicles.
+- **Steal or Leak Sensitive Information:**Certain attacks allow extraction of private data or intellectual property from the model.
+- **Undermine Trust and Reputation:**Repeated attacks erode user trust in AI-enabled services.
+- **Test and Harden Defenses:**Security researchers simulate attacks ([red teaming](/en/glossary/red-teaming/)) to discover vulnerabilities and improve robustness.
 
 ## Core Concepts and Mechanisms
 
 ### Adversarial Examples
 
-**Adversarial examples** are purposefully crafted inputs that appear normal but cause AI models to make mistakes. For example, a barely-noticeable change in an image can make a classifier mislabel a stop sign as a speed limit sign.  
+**Adversarial examples**are purposefully crafted inputs that appear normal but cause AI models to make mistakes. For example, a barely-noticeable change in an image can make a classifier mislabel a stop sign as a speed limit sign.  
 
 ### Decision Boundaries
 
@@ -44,8 +44,8 @@ AI models separate classes using complex decision boundaries in high-dimensional
 | Complexity                 | Lower (with knowledge)            | Higher (iterative, surrogate)    |
 | Applicability              | Specific (known models)           | Broad (unknown/closed models)    |
 
-- **White-Box Attacks:** Attacker has complete model knowledge, allowing precise, gradient-based manipulations.
-- **Black-Box Attacks:** Attacker has no direct access to internals and must probe the model with inputs and observe outputs.
+- **White-Box Attacks:**Attacker has complete model knowledge, allowing precise, gradient-based manipulations.
+- **Black-Box Attacks:**Attacker has no direct access to internals and must probe the model with inputs and observe outputs.
 
 ## Types of Adversarial Attacks
 
@@ -53,53 +53,51 @@ AI models separate classes using complex decision boundaries in high-dimensional
 
 Manipulate input data at inference time so models misclassify or fail to detect threats. Subtle perturbations (e.g., pixel changes in images or noise in audio) lead to evasion.
 
-- **Example:** [DeepFool](https://arxiv.org/abs/1511.04599) alters images to fool deep networks.
-- **Consequences:** Unauthorized access, safety risks in autonomous vehicles.
-- **Defenses:** [Adversarial training](https://www.crowdstrike.com/en-us/blog/how-crowdstrike-boosts-machine-learning-efficacy-against-adversarial-samples/), input validation.
+- **Example:**[DeepFool](https://arxiv.org/abs/1511.04599) alters images to fool deep networks.
+- **Consequences:**Unauthorized access, safety risks in autonomous vehicles.
+- **Defenses:**[Adversarial training](https://www.crowdstrike.com/en-us/blog/how-crowdstrike-boosts-machine-learning-efficacy-against-adversarial-samples/), input validation.
 
 ### 2. Poisoning Attacks
 
 Corrupt the model during training by injecting malicious or mislabeled data into the dataset.
 
-- **Example:** The [Microsoft Tay chatbot](https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter) was manipulated to produce offensive outputs.
-- **Consequences:** Model bias, systemic vulnerabilities.
-- **Defenses:** Data sanitization, anomaly detection.
+- **Example:**The [Microsoft Tay chatbot](https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter) was manipulated to produce offensive outputs.
+- **Consequences:**Model bias, systemic vulnerabilities.
+- **Defenses:**Data sanitization, anomaly detection.
 
 ### 3. Prompt Injection (LLMs/NLP)
 
 Manipulate prompts given to large language models to induce harmful or unintended outputs.
 
-- **Example:** [PLeak attack](https://arxiv.org/abs/2405.06823), [Crescendo jailbreak](https://arxiv.org/abs/2404.01833).
-- **Consequences:** Information leakage, reputational harm.
-- **Defenses:** Input filtering, adversarial prompt training.
+- **Example:**[PLeak attack](https://arxiv.org/abs/2405.06823), [Crescendo jailbreak](https://arxiv.org/abs/2404.01833).
+- **Consequences:**Information leakage, reputational harm.
+- **Defenses:**Input filtering, adversarial prompt training.
 
 ### 4. Model Inversion Attacks
 
 Reverse-engineer a model to reconstruct sensitive data from outputs.
 
-- **Example:** [Label-Only Model Inversion](https://arxiv.org/abs/2310.19342).
-- **Consequences:** Privacy violations, regulatory breaches.
-- **Defenses:** Output limiting, [differential privacy](https://en.wikipedia.org/wiki/Differential_privacy).
+- **Example:**[Label-Only Model Inversion](https://arxiv.org/abs/2310.19342).
+- **Consequences:**Privacy violations, regulatory breaches.
+- **Defenses:**Output limiting, [differential privacy](https://en.wikipedia.org/wiki/Differential_privacy).
 
 ### 5. Membership Inference Attacks
 
 Determine whether a specific data point was part of a model’s training dataset.
 
-- **Example:** [Label-Only Membership Inference](https://arxiv.org/abs/2007.14321).
-- **Consequences:** Breaches of confidentiality, targeted attacks.
-- **Defenses:** Regularization, privacy techniques.
+- **Example:**[Label-Only Membership Inference](https://arxiv.org/abs/2007.14321).
+- **Consequences:**Breaches of confidentiality, targeted attacks.
+- **Defenses:**Regularization, privacy techniques.
 
 ### 6. Model Extraction (Stealing) Attacks
 
 Replicate a deployed model’s functionality by systematically querying it and reconstructing its logic.
 
-- **Example:** [DeepSniffer](https://dl.acm.org/doi/10.1145/3373376.3378460).
-- **Consequences:** Intellectual property theft.
-- **Defenses:** Rate limiting, query monitoring.
+- **Example:**[DeepSniffer](https://dl.acm.org/doi/10.1145/3373376.3378460).
+- **Consequences:**Intellectual property theft.
+- **Defenses:**Rate limiting, query monitoring.
 
-#### **Comparison Table of Major Adversarial Attack Types**
-
-| Attack Type         | Target Stage | Goal/Impact            | Common Defenses            | Example Scenario             |
+#### **Comparison Table of Major Adversarial Attack Types**| Attack Type         | Target Stage | Goal/Impact            | Common Defenses            | Example Scenario             |
 |---------------------|--------------|------------------------|----------------------------|------------------------------|
 | Evasion             | Inference    | Misclassify input      | Adversarial training       | Bypassing malware detection  |
 | Poisoning           | Training     | Bias/corrupt model     | Data sanitization          | Tay chatbot incident         |
@@ -110,11 +108,11 @@ Replicate a deployed model’s functionality by systematically querying it and r
 
 ## Real-World Examples and Use Cases
 
-- **Security and Fraud:** Adversaries modify malware or spam to bypass detection ([Sysdig](https://www.sysdig.com/learn-cloud-native/adversarial-ai-understanding-and-mitigating-the-threat)).
-- **Autonomous Vehicles:** Road sign perturbations cause misclassification, risking passenger safety ([Forbes: Tesla Autopilot](https://www.forbes.com/sites/thomasbrewster/2019/04/01/hackers-use-little-stickers-to-trick-tesla-autopilot-into-the-wrong-lane/)).
-- **Privacy:** Model inversion reconstructs patient records ([Ars Technica: LAION-5B dataset](https://arstechnica.com/information-technology/2022/09/artist-finds-private-medical-record-photos-in-popular-ai-training-data-set/)).
-- **LLMs:** Prompt injection causes chatbots to output forbidden content ([Business Insider: Chevrolet Chatbot Incident](https://www.businessinsider.com/car-dealership-chevrolet-chatbot-chatgpt-pranks-chevy-2023-12)).
-- **Intellectual Property:** Model stealing enables competitors to clone proprietary models ([Mindgard](https://mindgard.ai/blog/ai-under-attack-six-key-adversarial-attacks-and-their-consequences)).
+- **Security and Fraud:**Adversaries modify malware or spam to bypass detection ([Sysdig](https://www.sysdig.com/learn-cloud-native/adversarial-ai-understanding-and-mitigating-the-threat)).
+- **Autonomous Vehicles:**Road sign perturbations cause misclassification, risking passenger safety ([Forbes: Tesla Autopilot](https://www.forbes.com/sites/thomasbrewster/2019/04/01/hackers-use-little-stickers-to-trick-tesla-autopilot-into-the-wrong-lane/)).
+- **Privacy:**Model inversion reconstructs patient records ([Ars Technica: LAION-5B dataset](https://arstechnica.com/information-technology/2022/09/artist-finds-private-medical-record-photos-in-popular-ai-training-data-set/)).
+- **LLMs:**Prompt injection causes chatbots to output forbidden content ([Business Insider: Chevrolet Chatbot Incident](https://www.businessinsider.com/car-dealership-chevrolet-chatbot-chatgpt-pranks-chevy-2023-12)).
+- **Intellectual Property:**Model stealing enables competitors to clone proprietary models ([Mindgard](https://mindgard.ai/blog/ai-under-attack-six-key-adversarial-attacks-and-their-consequences)).
 
 ## Adversarial Attacks vs. Traditional Cyberattacks
 
@@ -131,15 +129,13 @@ Traditional security tools often fail to detect adversarial attacks because mani
 
 ## Defensive Strategies and Best Practices
 
-**Perfect defense is unattainable, but risk can be reduced through layered strategies:**
-
-1. **Adversarial Training:** Train models with adversarial examples to improve robustness.
-2. **Input Validation and Sanitization:** Preprocess and filter suspicious inputs.
-3. **Differential Privacy:** Add noise to outputs or training to obscure individual data.
-4. **Output Obfuscation:** Limit output granularity, use [watermarking](/en/glossary/watermarking/).
-5. **Rate Limiting and Monitoring:** Restrict queries, monitor for probing.
-6. **Red Teaming and Security Testing:** Regularly simulate attacks and audit systems.
-7. **Secure Development Lifecycle:** Integrate security from data collection to deployment.
+**Perfect defense is unattainable, but risk can be reduced through layered strategies:**1. **Adversarial Training:**Train models with adversarial examples to improve robustness.
+2. **Input Validation and Sanitization:**Preprocess and filter suspicious inputs.
+3. **Differential Privacy:**Add noise to outputs or training to obscure individual data.
+4. **Output Obfuscation:**Limit output granularity, use [watermarking](/en/glossary/watermarking/).
+5. **Rate Limiting and Monitoring:**Restrict queries, monitor for probing.
+6. **Red Teaming and Security Testing:**Regularly simulate attacks and audit systems.
+7. **Secure Development Lifecycle:**Integrate security from data collection to deployment.
 ## Frequently Asked Questions (FAQs)
 
 ### What makes AI models vulnerable to adversarial attacks?

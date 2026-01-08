@@ -13,27 +13,23 @@ url = "/internal/glossary/Hamburger-Menu/"
 +++
 ## ¿Qué es un Menú Hamburguesa?
 
-Un **menú hamburguesa** es un elemento de interfaz gráfica de usuario (GUI), generalmente representado por tres líneas horizontales apiladas (el "icono de hamburguesa"). Al hacer clic o tocar, revela un menú oculto que contiene opciones de navegación, ajustes u otras funciones.
+Un **menú hamburguesa**es un elemento de interfaz gráfica de usuario (GUI), generalmente representado por tres líneas horizontales apiladas (el "icono de hamburguesa"). Al hacer clic o tocar, revela un menú oculto que contiene opciones de navegación, ajustes u otras funciones.
 
 En **chatbots de IA y plataformas de automatización**, el menú hamburguesa suele estar integrado en la ventana del chat, proporcionando acceso a opciones persistentes—como configuración de cuenta, historial de chat, ayuda o cambio entre bots—sin saturar la interfaz principal de conversación.
 
-**¿Por qué el nombre?** Las tres líneas del icono recuerdan visualmente a una hamburguesa estilizada: una carne entre dos panes. Esta metáfora es hoy casi universal para la navegación oculta.
+**¿Por qué el nombre?**Las tres líneas del icono recuerdan visualmente a una hamburguesa estilizada: una carne entre dos panes. Esta metáfora es hoy casi universal para la navegación oculta.
 
 *Lectura adicional: [Interaction Design Foundation: Guía del Menú Hamburguesa](https://www.interaction-design.org/literature/article/hamburger-menu-ux)*
 
 ## Origen Histórico y Evolución
 
-- **Primera Aparición:**  
-  El icono de hamburguesa fue creado por el diseñador Norm Cox en 1981 para la estación de trabajo personal Xerox Star, representando una lista de opciones. Su diseño fue intencionalmente simple y memorable debido al espacio limitado de píxeles (16x16px o 13x13px). [Lee la entrevista a Cox](https://medium.com/readme-mic/a-conversation-with-norm-cox-creator-of-the-hamburger-menu-c913daea5f9e) y consulta [la historia en Interaction Design Foundation](https://www.interaction-design.org/literature/article/hamburger-menu-ux).
+- **Primera Aparición:**El icono de hamburguesa fue creado por el diseñador Norm Cox en 1981 para la estación de trabajo personal Xerox Star, representando una lista de opciones. Su diseño fue intencionalmente simple y memorable debido al espacio limitado de píxeles (16x16px o 13x13px). [Lee la entrevista a Cox](https://medium.com/readme-mic/a-conversation-with-norm-cox-creator-of-the-hamburger-menu-c913daea5f9e) y consulta [la historia en Interaction Design Foundation](https://www.interaction-design.org/literature/article/hamburger-menu-ux).
 
-- **Adopción Temprana:**  
-  Tras su uso en Xerox Star y Windows 1.0 (1985), el menú hamburguesa desapareció de las interfaces principales durante décadas.
+- **Adopción Temprana:**Tras su uso en Xerox Star y Windows 1.0 (1985), el menú hamburguesa desapareció de las interfaces principales durante décadas.
 
-- **Resurgimiento en Móviles:**  
-  El auge de las apps móviles a finales de los 2000 revivió el menú hamburguesa. La app móvil de Twitter en 2008 y el iOS de Apple lo usaron para maximizar el espacio en pantalla, seguidos por apps de Facebook, Gmail y Amazon.
+- **Resurgimiento en Móviles:**El auge de las apps móviles a finales de los 2000 revivió el menú hamburguesa. La app móvil de Twitter en 2008 y el iOS de Apple lo usaron para maximizar el espacio en pantalla, seguidos por apps de Facebook, Gmail y Amazon.
 
-- **Estado Actual:**  
-  El menú hamburguesa es tan reconocible como la lupa de búsqueda o el engranaje de configuración. Es una solución estándar para la navegación móvil y web responsiva.
+- **Estado Actual:**El menú hamburguesa es tan reconocible como la lupa de búsqueda o el engranaje de configuración. Es una solución estándar para la navegación móvil y web responsiva.
 
 *Línea de tiempo visual: [Historia ilustrada de Justinmind](https://www.justinmind.com/ui-design/hamburger-menu), [Análisis de NNG](https://www.nngroup.com/articles/hamburger-menu-icon-recognizability/).*
 
@@ -41,48 +37,41 @@ En **chatbots de IA y plataformas de automatización**, el menú hamburguesa sue
 
 ### Casos de Uso Típicos
 
-- **Apps Móviles y Sitios Web Responsivos:**  
-  Los menús hamburguesa se usan para ocultar la navegación menos crítica en pantallas pequeñas, preservando el espacio visual.
+- **Apps Móviles y Sitios Web Responsivos:**Los menús hamburguesa se usan para ocultar la navegación menos crítica en pantallas pequeñas, preservando el espacio visual.
 
-- **Chatbots de IA y Automatización:**  
-  En interfaces de chat, el menú hamburguesa suele contener ajustes de usuario, historial de chat, cambio de bot o documentación de ayuda.
+- **Chatbots de IA y Automatización:**En interfaces de chat, el menú hamburguesa suele contener ajustes de usuario, historial de chat, cambio de bot o documentación de ayuda.
 
-- **Aplicaciones de Escritorio:**  
-  Menos común, pero a veces se usa para herramientas secundarias o preferencias.
+- **Aplicaciones de Escritorio:**Menos común, pero a veces se usa para herramientas secundarias o preferencias.
 
-- **Apps Web Complejas:**  
-  Aplicaciones con muchas opciones secundarias (por ejemplo, configuración de pagos de Uber, estructura de carpetas de Gmail) usan menús hamburguesa para simplificar los flujos principales.
+- **Apps Web Complejas:**Aplicaciones con muchas opciones secundarias (por ejemplo, configuración de pagos de Uber, estructura de carpetas de Gmail) usan menús hamburguesa para simplificar los flujos principales.
 
 *Fuente: [Interaction Design Foundation](https://www.interaction-design.org/literature/article/hamburger-menu-ux)*
 
 ### Ejemplos en Chatbots de IA & Automatización
 
-- **Ajustes del Chatbot:**  
-  Herramientas como Intercom o Drift colocan preferencias de usuario, notificaciones y recursos dentro del menú hamburguesa en el widget de chat.
+- **Ajustes del Chatbot:**Herramientas como Intercom o Drift colocan preferencias de usuario, notificaciones y recursos dentro del menú hamburguesa en el widget de chat.
 
-- **Opciones Persistentes:**  
-  El cambio de idioma, controles de privacidad o formularios de feedback suelen estar accesibles desde el menú hamburguesa.
+- **Opciones Persistentes:**El cambio de idioma, controles de privacidad o formularios de feedback suelen estar accesibles desde el menú hamburguesa.
 
-- **Navegación Multi-Bot:**  
-  En paneles empresariales, los usuarios pueden alternar entre bots o canales usando el menú hamburguesa.
+- **Navegación Multi-Bot:**En paneles empresariales, los usuarios pueden alternar entre bots o canales usando el menú hamburguesa.
 
 ## Conceptos UX Clave: Revelado Progresivo & Costo de Interacción
 
 ### Revelado Progresivo
 
-El **revelado progresivo** es un principio de diseño en el que solo se muestra la información más relevante por defecto, revelando opciones adicionales según se necesiten. El menú hamburguesa es un ejemplo clásico: las acciones principales permanecen visibles; las secundarias, accesibles bajo demanda.
+El **revelado progresivo**es un principio de diseño en el que solo se muestra la información más relevante por defecto, revelando opciones adicionales según se necesiten. El menú hamburguesa es un ejemplo clásico: las acciones principales permanecen visibles; las secundarias, accesibles bajo demanda.
 
-- **Beneficio:** Reduce el desorden visual y la sobrecarga cognitiva, especialmente en móviles.
-- **Desventaja:** Riesgo de ocultar opciones importantes, lo que reduce la descubribilidad.
+- **Beneficio:**Reduce el desorden visual y la sobrecarga cognitiva, especialmente en móviles.
+- **Desventaja:**Riesgo de ocultar opciones importantes, lo que reduce la descubribilidad.
 
 *Profundiza: [Interaction Design Foundation: Progressive Disclosure](https://www.interaction-design.org/literature/topics/progressive-disclosure)*
 
 ### Costo de Interacción
 
-El **costo de interacción** es el tiempo, esfuerzo y número de acciones que los usuarios necesitan para lograr un objetivo. Los menús hamburguesa aumentan el costo de interacción porque los usuarios deben hacer un clic o toque extra para acceder a las funciones.
+El **costo de interacción**es el tiempo, esfuerzo y número de acciones que los usuarios necesitan para lograr un objetivo. Los menús hamburguesa aumentan el costo de interacción porque los usuarios deben hacer un clic o toque extra para acceder a las funciones.
 
-- **Alto costo de interacción:** Los usuarios pueden estar menos comprometidos y ser más lentos en completar tareas.
-- **Bajo costo de interacción:** Mejora la eficiencia pero puede aumentar el desorden visual.
+- **Alto costo de interacción:**Los usuarios pueden estar menos comprometidos y ser más lentos en completar tareas.
+- **Bajo costo de interacción:**Mejora la eficiencia pero puede aumentar el desorden visual.
 
 *Más información: [NNG: Definición de Costo de Interacción](https://www.nngroup.com/articles/interaction-cost-definition/)*
 
@@ -90,35 +79,23 @@ El **costo de interacción** es el tiempo, esfuerzo y número de acciones que lo
 
 ### Pros
 
-- **Simplifican la Interfaz:**  
-  Ocultan opciones de navegación para crear una interfaz más limpia y menos cargada. Especialmente valioso en diseños minimalistas y móviles.
-- **Mejoran la Usabilidad Móvil:**  
-  Maximizan el espacio limitado en pantalla y mantienen las acciones accesibles con un toque.
-- **Acomodan Muchos Enlaces:**  
-  Manejan estructuras de navegación complejas sin saturar al usuario.
-- **Favorecen el Revelado Progresivo:**  
-  Mantienen funciones secundarias accesibles pero apartadas.
-- **Icono Ubicuo:**  
-  Reconocido por la mayoría de usuarios, lo que lo convierte en un modelo mental fiable.
-- **Facilitan la Consistencia:**  
-  Ofrecen un enfoque unificado de navegación en múltiples plataformas.
+- **Simplifican la Interfaz:**Ocultan opciones de navegación para crear una interfaz más limpia y menos cargada. Especialmente valioso en diseños minimalistas y móviles.
+- **Mejoran la Usabilidad Móvil:**Maximizan el espacio limitado en pantalla y mantienen las acciones accesibles con un toque.
+- **Acomodan Muchos Enlaces:**Manejan estructuras de navegación complejas sin saturar al usuario.
+- **Favorecen el Revelado Progresivo:**Mantienen funciones secundarias accesibles pero apartadas.
+- **Icono Ubicuo:**Reconocido por la mayoría de usuarios, lo que lo convierte en un modelo mental fiable.
+- **Facilitan la Consistencia:**Ofrecen un enfoque unificado de navegación en múltiples plataformas.
 
 *Fuente: [Interaction Design Foundation](https://www.interaction-design.org/literature/article/hamburger-menu-ux)*
 
 ### Contras
 
-- **Reducen la Descubribilidad:**  
-  La navegación oculta disminuye la visibilidad de secciones y funciones importantes.
-- **Ralentizan la Navegación:**  
-  Requieren clics/toques adicionales, lo que puede frustrar a usuarios que necesitan acceso rápido.
-- **Saturan al Abrirse:**  
-  Menús grandes pueden presentar demasiadas opciones y saturar al usuario.
-- **Menos Familiar para Algunos Usuarios:**  
-  No todos los grupos demográficos reconocen el icono; personas mayores o menos tecnológicas pueden tener dificultades.
-- **No Siempre Apropiados:**  
-  Son una mala elección para sitios simples o escenarios que requieren acción inmediata.
-- **Barreras de Accesibilidad:**  
-  Si no se implementan con etiquetas y soporte de teclado adecuados, pueden dificultar el acceso a usuarios con discapacidades.
+- **Reducen la Descubribilidad:**La navegación oculta disminuye la visibilidad de secciones y funciones importantes.
+- **Ralentizan la Navegación:**Requieren clics/toques adicionales, lo que puede frustrar a usuarios que necesitan acceso rápido.
+- **Saturan al Abrirse:**Menús grandes pueden presentar demasiadas opciones y saturar al usuario.
+- **Menos Familiar para Algunos Usuarios:**No todos los grupos demográficos reconocen el icono; personas mayores o menos tecnológicas pueden tener dificultades.
+- **No Siempre Apropiados:**Son una mala elección para sitios simples o escenarios que requieren acción inmediata.
+- **Barreras de Accesibilidad:**Si no se implementan con etiquetas y soporte de teclado adecuados, pueden dificultar el acceso a usuarios con discapacidades.
 
 ## Principios de Diseño y Buenas Prácticas
 
@@ -158,18 +135,18 @@ El **costo de interacción** es el tiempo, esfuerzo y número de acciones que lo
 
 ### Aplicaciones Web y Móviles
 
-- **Gmail (Android/iOS):** Menú hamburguesa en la esquina superior izquierda que revela carpetas y opciones de cuenta.  
+- **Gmail (Android/iOS):**Menú hamburguesa en la esquina superior izquierda que revela carpetas y opciones de cuenta.  
   [Gmail en Google Play](https://play.google.com/store/apps/details?id=com.google.android.gm)
-- **Uber:** Se usa para historial de viajes, recibos y ajustes.
-- **Amazon Móvil:** El menú hamburguesa da acceso a navegación secundaria y preferencias.
-- **Pipcorn:** El menú hamburguesa móvil despliega un panel de navegación.  
+- **Uber:**Se usa para historial de viajes, recibos y ajustes.
+- **Amazon Móvil:**El menú hamburguesa da acceso a navegación secundaria y preferencias.
+- **Pipcorn:**El menú hamburguesa móvil despliega un panel de navegación.  
   [Pipsnacks.com](https://www.pipsnacks.com/)
 
 ### Interfaces de Chatbot de IA
 
-- **Widgets de Chatbot Empresarial:** Menú hamburguesa dentro de la ventana de chat para perfil, notificaciones, historial y soporte.
-- **Bots de Soporte al Cliente:** El menú incluye enlaces a artículos de conocimiento y opciones de escalado.
-- **Plataformas Multi-bot:** El menú permite cambiar entre bots o canales.
+- **Widgets de Chatbot Empresarial:**Menú hamburguesa dentro de la ventana de chat para perfil, notificaciones, historial y soporte.
+- **Bots de Soporte al Cliente:**El menú incluye enlaces a artículos de conocimiento y opciones de escalado.
+- **Plataformas Multi-bot:**El menú permite cambiar entre bots o canales.
 
 *Cita de Netwizard: “El menú hamburguesa es un gran lugar para botones de navegación que no sirven directamente al objetivo principal de tu página web.” ([Netwizard Design](https://netwizarddesign.com.au/the-three-line-menu-option-called-hamburger-menu-what-are-the-pros-and-cons/))*
 
@@ -177,11 +154,11 @@ El **costo de interacción** es el tiempo, esfuerzo y número de acciones que lo
 
 Patrones de navegación a considerar en lugar de, o junto al, menú hamburguesa:
 
-- **Barras de Pestañas:** Fila visible de opciones de navegación. Mejor para 3-5 secciones principales (Instagram, Facebook).
-- **Barras de Navegación Inferiores:** Amigables para móviles, mantienen acciones clave al alcance del pulgar.
-- **Barras Laterales Visibles:** Para escritorio o pantallas grandes; menús laterales siempre visibles.
-- **Menús Desplegables:** El hover o click activa un menú desde la barra superior (escritorio).
-- **Botones de Acción Flotante (FAB):** Prominentes para una acción primaria.
+- **Barras de Pestañas:**Fila visible de opciones de navegación. Mejor para 3-5 secciones principales (Instagram, Facebook).
+- **Barras de Navegación Inferiores:**Amigables para móviles, mantienen acciones clave al alcance del pulgar.
+- **Barras Laterales Visibles:**Para escritorio o pantallas grandes; menús laterales siempre visibles.
+- **Menús Desplegables:**El hover o click activa un menú desde la barra superior (escritorio).
+- **Botones de Acción Flotante (FAB):**Prominentes para una acción primaria.
 
 ### Comparaciones y Cuándo Usar Cada Patrón
 
@@ -198,14 +175,12 @@ Elige el modelo que se ajuste a las necesidades de tus usuarios y la importancia
 
 ## Cuándo Usar o Evitar Menús Hamburguesa
 
-**Usa un menú hamburguesa cuando:**
-- El espacio es limitado (diseños mobile-first).
+**Usa un menú hamburguesa cuando:**- El espacio es limitado (diseños mobile-first).
 - Las opciones de navegación superan el espacio visible de la interfaz.
 - Las opciones son secundarias o no críticas.
 - Es vital la consistencia entre dispositivos.
 
-**Evita o replantea el menú hamburguesa cuando:**
-- Se ocultarían funciones críticas.
+**Evita o replantea el menú hamburguesa cuando:**- Se ocultarían funciones críticas.
 - Las analíticas muestran poco uso de los elementos ocultos.
 - Tus usuarios objetivo no reconocen el icono.
 - La experiencia ya implica muchas interacciones.
@@ -217,9 +192,7 @@ Elige el modelo que se ajuste a las necesidades de tus usuarios y la importancia
 
 ### Menú Hamburguesa Simple en HTML/CSS
 
-**Ejemplo de Icono Estático:**
-
-```html
+**Ejemplo de Icono Estático:**```html
 <div class="hamburger-menu">
   <div></div>
   <div></div>
@@ -236,9 +209,7 @@ Elige el modelo que se ajuste a las necesidades de tus usuarios y la importancia
 }
 ```
 
-**Ejemplo Accesible e Interactivo:**
-
-```html
+**Ejemplo Accesible e Interactivo:**```html
 <button aria-label="Abrir menú" class="hamburger-menu" tabindex="0">
   <span></span>
   <span></span>
@@ -254,9 +225,9 @@ Elige el modelo que se ajuste a las necesidades de tus usuarios y la importancia
 
 ### Herramientas y Recursos
 
-- **Constructores No-code:** [Squarespace](https://www.squarespace.com/), [Webnode](https://us.webnode.com/), [Site123](https://www.site123.com/), [HubSpot CMS](https://www.hubspot.com/products/cms)
-- **Prototipado:** [Justinmind Wireframe Tool](https://www.justinmind.com/free-wireframe-tool)
-- **Librerías UI:** [Material UI AppBar](https://mui.com/components/app-bar/), [Bootstrap Navbar](https://getbootstrap.com/docs/5.0/components/navbar/)
+- **Constructores No-code:**[Squarespace](https://www.squarespace.com/), [Webnode](https://us.webnode.com/), [Site123](https://www.site123.com/), [HubSpot CMS](https://www.hubspot.com/products/cms)
+- **Prototipado:**[Justinmind Wireframe Tool](https://www.justinmind.com/free-wireframe-tool)
+- **Librerías UI:**[Material UI AppBar](https://mui.com/components/app-bar/), [Bootstrap Navbar](https://getbootstrap.com/docs/5.0/components/navbar/)
 
 ## Recomendaciones Resumidas
 
@@ -284,8 +255,7 @@ Elige el modelo que se ajuste a las necesidades de tus usuarios y la importancia
 - [UserWay: Navegación Web, UX y Accesibilidad](https://userway.org/blog/website-navigation/)
 - [UXDesign.cc: Crea un Menú Hamburguesa Accesible](https://uxdesign.cc/create-an-accessible-hamburger-menu-869b0301cfd7)
 
-**Términos Relacionados del Glosario**  
-- [Opciones de Navegación](#)
+**Términos Relacionados del Glosario**- [Opciones de Navegación](#)
 - [Revelado Progresivo](#)
 - [Costo de Interacción](#)
 - [Sitio Web Adaptado a Móviles](#)

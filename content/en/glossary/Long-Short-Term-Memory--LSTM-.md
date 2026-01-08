@@ -104,12 +104,12 @@ The LSTM processing workflow follows a systematic approach through its gating me
 
 | Aspect | Traditional RNN | LSTM |
 |--------|----------------|------|
-| **Memory Mechanism** | Simple hidden state | Cell state with gating |
-| **Gradient Flow** | Vanishing/exploding gradients | Stable gradient flow |
-| **Long-term Dependencies** | Poor performance | Excellent handling |
-| **Training Complexity** | Simple but unstable | Complex but stable |
-| **Computational Cost** | Lower | Higher due to gates |
-| **Parameter Count** | Fewer parameters | 4x more parameters |
+| **Memory Mechanism**| Simple hidden state | Cell state with gating |
+| **Gradient Flow**| Vanishing/exploding gradients | Stable gradient flow |
+| **Long-term Dependencies**| Poor performance | Excellent handling |
+| **Training Complexity**| Simple but unstable | Complex but stable |
+| **Computational Cost**| Lower | Higher due to gates |
+| **Parameter Count**| Fewer parameters | 4x more parameters |
 
 ## Challenges and Considerations
 

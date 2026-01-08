@@ -108,12 +108,12 @@ The Alibaba ecosystem operates through a sophisticated multi-layered architectur
 
 | Feature | Alibaba.com | Amazon Business | eBay Business | DHgate | Global Sources |
 |---------|-------------|-----------------|---------------|---------|----------------|
-| **Primary Focus** | B2B Manufacturing | B2B Procurement | Mixed B2B/B2C | Small Orders | Trade Shows |
-| **Geographic Strength** | Asia-Pacific | North America/Europe | Global | China-focused | Asia Manufacturing |
-| **Minimum Orders** | Variable/Negotiable | Low/No Minimums | Flexible | Low Minimums | High Volume |
-| **Payment Protection** | Trade Assurance | Amazon Pay | PayPal/Escrow | Buyer Protection | Letter of Credit |
-| **Supplier Verification** | Gold Supplier | Business Verified | Top Rated | Verified Supplier | Verified Supplier |
-| **Integration Services** | Full Ecosystem | AWS Integration | Limited | Basic Tools | Trade Services |
+| **Primary Focus**| B2B Manufacturing | B2B Procurement | Mixed B2B/B2C | Small Orders | Trade Shows |
+| **Geographic Strength**| Asia-Pacific | North America/Europe | Global | China-focused | Asia Manufacturing |
+| **Minimum Orders**| Variable/Negotiable | Low/No Minimums | Flexible | Low Minimums | High Volume |
+| **Payment Protection**| Trade Assurance | Amazon Pay | PayPal/Escrow | Buyer Protection | Letter of Credit |
+| **Supplier Verification**| Gold Supplier | Business Verified | Top Rated | Verified Supplier | Verified Supplier |
+| **Integration Services**| Full Ecosystem | AWS Integration | Limited | Basic Tools | Trade Services |
 
 ## Challenges and Considerations
 

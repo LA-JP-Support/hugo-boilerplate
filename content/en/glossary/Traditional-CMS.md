@@ -106,12 +106,12 @@ Finally, the complete HTML page is sent back through the web server to the user'
 
 | Feature | Traditional CMS | Headless CMS |
 |---------|----------------|--------------|
-| **Architecture** | Monolithic, coupled frontend and backend | Decoupled, API-driven backend only |
-| **Content Delivery** | Server-side rendering through templates | API delivery to multiple frontends |
-| **Technical Complexity** | Lower barrier to entry, user-friendly | Higher technical requirements |
-| **Performance** | Database queries on each request | Faster delivery through APIs and CDNs |
-| **Flexibility** | Template-based customization | Complete frontend freedom |
-| **Development Speed** | Rapid deployment with themes | Longer initial development time |
+| **Architecture**| Monolithic, coupled frontend and backend | Decoupled, API-driven backend only |
+| **Content Delivery**| Server-side rendering through templates | API delivery to multiple frontends |
+| **Technical Complexity**| Lower barrier to entry, user-friendly | Higher technical requirements |
+| **Performance**| Database queries on each request | Faster delivery through APIs and CDNs |
+| **Flexibility**| Template-based customization | Complete frontend freedom |
+| **Development Speed**| Rapid deployment with themes | Longer initial development time |
 
 ## Challenges and Considerations
 

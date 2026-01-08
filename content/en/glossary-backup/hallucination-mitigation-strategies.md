@@ -20,7 +20,7 @@ Hallucination mitigation strategies encompass technologies, technical processes,
 
 ## Key Terms and Related Concepts
 
-| **Keyword**                        | **Description**                                                                                                  |
+| **Keyword**| **Description**|
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | Large language models (LLMs)        | Advanced AI models trained on vast text data to generate human-like language and answer queries.                 |
 | Artificial intelligence (AI)        | Computers performing tasks that typically require human intelligence, such as understanding or generating text.  |
@@ -40,20 +40,19 @@ Hallucination mitigation strategies encompass technologies, technical processes,
 
 A hallucination in artificial intelligence, particularly in LLMs, refers to the generation of content that is plausible-sounding but false, misleading, or unsubstantiated. Hallucinations manifest as:
 
-- **Factual errors:** Incorrect statements or invented facts.  
-- **Contextual errors:** Adding or inferring information not present in the input or source material.  
-- **Intrinsic errors:** Self-contradictory or logically inconsistent outputs.  
-- **Extrinsic errors:** Outputs unsupported by the provided or referenced data.  
-- **Linguistic errors:** Grammatically correct but incoherent sentences.
+- **Factual errors:**Incorrect statements or invented facts.  
+- **Contextual errors:**Adding or inferring information not present in the input or source material.  
+- **Intrinsic errors:**Self-contradictory or logically inconsistent outputs.  
+- **Extrinsic errors:**Outputs unsupported by the provided or referenced data.  
+- **Linguistic errors:**Grammatically correct but incoherent sentences.
 
-**Example:**  
-A chatbot claims the James Webb Space Telescope captured the first images of an exoplanet—an event that never occurred. This led to reputational and financial consequences for Google Bard ([FactSet](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations), [news link](https://gizmodo.com/google-bard-ai-ad-incorrect-webb-telescope-facts-1850087798?utm_source=twitter&utm_medium=SocialMarketing&utm_campaign=dlvrit&utm_content=gizmodo)).
+**Example:**A chatbot claims the James Webb Space Telescope captured the first images of an exoplanet—an event that never occurred. This led to reputational and financial consequences for Google Bard ([FactSet](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations), [news link](https://gizmodo.com/google-bard-ai-ad-incorrect-webb-telescope-facts-1850087798?utm_source=twitter&utm_medium=SocialMarketing&utm_campaign=dlvrit&utm_content=gizmodo)).
 
 ## Why Do Hallucinations Occur?
 
 ### Root Causes
 
-| **Cause**                  | **Description**                                                                                                                                      |
+| **Cause**| **Description**|
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Model architecture         | LLMs predict the next word based on probability, not on verified knowledge. They generate plausible-sounding text rather than fact-checked answers. |
 | Training data limitations  | Models trained on incomplete, outdated, or biased data lack the context to answer certain questions accurately.                                      |
@@ -62,27 +61,25 @@ A chatbot claims the James Webb Space Telescope captured the first images of an 
 | Overconfidence bias        | LLMs are designed to always provide an answer, even when none exists, leading to authoritative but incorrect outputs.                                |
 | Adversarial inputs         | Malicious or misleading prompts can deliberately exploit model weaknesses to trigger hallucinations or unsafe outputs.                                |
 
-**Supporting research:**  
-- [FactSet: 7 Ways to Overcome Hallucinations](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations)  
+**Supporting research:**- [FactSet: 7 Ways to Overcome Hallucinations](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations)  
 - [arXiv: Comprehensive Survey of Hallucination Mitigation Techniques](https://arxiv.org/abs/2401.01313)
 
 ## Business and Technical Risks of Hallucinations
 
-- **Reputational harm:** Public AI mistakes (e.g., Google Bard’s telescope error) can damage brand trust and impact stock prices.  
-- **Security vulnerabilities:** Hallucinated references may suggest non-existent or malicious code packages, leading to supply chain risks.  
-- **Legal and compliance risk:** Fabricated citations or information can cause lawsuits or regulatory penalties.  
-- **Operational inefficiency:** Incorrect AI outputs lead to wasted time, errors in decision-making, and increased review workloads.  
-- **Misinformation:** Hallucinations can propagate falsehoods, especially in sensitive domains such as healthcare or finance.
+- **Reputational harm:**Public AI mistakes (e.g., Google Bard’s telescope error) can damage brand trust and impact stock prices.  
+- **Security vulnerabilities:**Hallucinated references may suggest non-existent or malicious code packages, leading to supply chain risks.  
+- **Legal and compliance risk:**Fabricated citations or information can cause lawsuits or regulatory penalties.  
+- **Operational inefficiency:**Incorrect AI outputs lead to wasted time, errors in decision-making, and increased review workloads.  
+- **Misinformation:**Hallucinations can propagate falsehoods, especially in sensitive domains such as healthcare or finance.
 
-**Case studies and examples:**  
-- [Legal citation hallucinations](https://www.youtube.com/watch?v=rQ7-HqEgF40)  
+**Case studies and examples:**- [Legal citation hallucinations](https://www.youtube.com/watch?v=rQ7-HqEgF40)  
 - [FactSet: AI Strategies Series](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations)
 
 ## How Are Hallucination Mitigation Strategies Used?
 
 ### Application Areas
 
-| **Use Case**                                  | **Purpose of Mitigation**                                                                                         | **Example**                                                       |
+| **Use Case**| **Purpose of Mitigation**| **Example**|
 |------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
 | AI chatbots and virtual assistants             | Ensure customer queries receive accurate and reliable answers.                                                    | Enterprise helpdesk bots using RAG to answer policy questions.    |
 | Automated document summarization               | Prevent summaries from including fabricated or misattributed statements.                                          | Summarizing financial reports with context provided as reference. |
@@ -91,52 +88,43 @@ A chatbot claims the James Webb Space Telescope captured the first images of an 
 | Code generation tools                         | Prevent AI from suggesting insecure or non-existent libraries.                                                    | Fact-checking code snippets before deployment.                    |
 | Financial analytics                           | Minimize risk of erroneous investment advice or market summaries.                                                 | RAG-based bots referencing up-to-date market data.                |
 
-**Detailed use cases:**  
-- [Tredence: Mitigating Hallucination in LLMs](https://www.tredence.com/blog/mitigating-hallucination-in-large-language-models)  
+**Detailed use cases:**- [Tredence: Mitigating Hallucination in LLMs](https://www.tredence.com/blog/mitigating-hallucination-in-large-language-models)  
 - [FactSet: AI Strategies Series](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations)
 
 ## Stepwise Hallucination Mitigation Strategies
 
 ### 1. Retrieval-Augmented Generation (RAG) and Knowledge Base Grounding
 
-**Definition:**  
-RAG combines the generative power of LLMs with real-time, context-specific retrieval from trusted data sources (PDFs, databases, SharePoint, etc.). The model’s output is explicitly grounded in retrieved documents, reducing the risk of fabricated content.
+**Definition:**RAG combines the generative power of LLMs with real-time, context-specific retrieval from trusted data sources (PDFs, databases, SharePoint, etc.). The model’s output is explicitly grounded in retrieved documents, reducing the risk of fabricated content.
 
-**How it works:**  
-- User query is embedded and used to search a vector or hybrid database for relevant documents.  
+**How it works:**- User query is embedded and used to search a vector or hybrid database for relevant documents.  
 - Top-k relevant chunks are retrieved and provided as context to the LLM.  
 - The LLM generates its answer, referencing the retrieved material.
 
-**Best practices:**  
-- Curate and update knowledge bases regularly.  
+**Best practices:**- Curate and update knowledge bases regularly.  
 - Tune chunk size and overlap for optimal context ([see Tredence guide](https://www.tredence.com/blog/mitigating-hallucination-in-large-language-models)).  
 - Use hybrid search (vector + keyword) for nuanced queries.  
 - Filter retrievals by metadata (recency, source).  
 - Monitor and audit for data quality and biases.
 
-**Limitations:**  
-- Retrievals are only as good as the underlying data.  
+**Limitations:**- Retrievals are only as good as the underlying data.  
 - Not all queries can be grounded; fallback logic is needed.  
 - May require significant infrastructure (vector databases, indexing).
 
-**Further reading:**  
-- [arXiv: Survey on Hallucination Mitigation Techniques](https://arxiv.org/pdf/2401.01313.pdf)  
+**Further reading:**- [arXiv: Survey on Hallucination Mitigation Techniques](https://arxiv.org/pdf/2401.01313.pdf)  
 - [Tredence: Mitigating Hallucination](https://www.tredence.com/blog/mitigating-hallucination-in-large-language-models)
 
 ### 2. Prompt Engineering
 
-**Definition:**  
-Prompt engineering is the practice of crafting clear, specific, and constrained instructions to guide LLM outputs and minimize ambiguity.
+**Definition:**Prompt engineering is the practice of crafting clear, specific, and constrained instructions to guide LLM outputs and minimize ambiguity.
 
-**How it works:**  
-- Define the AI’s role, task, and output format in the prompt.  
+**How it works:**- Define the AI’s role, task, and output format in the prompt.  
 - Use explicit instructions, constraints, and fallback behavior (e.g., “If unsure, respond with ‘I don’t know’”).  
 - Provide example answers (few-shot prompting).  
 - Use chain-of-thought to encourage stepwise reasoning.  
 - Repeat key constraints at the start and end of prompts.
 
-**Best practices:**  
-- Use structured templates:  
+**Best practices:**- Use structured templates:  
   ```
   ## ROLE: You are a financial analyst.
   ## TASK: Summarize the attached Q1 2023 report using only the provided document.
@@ -146,110 +134,88 @@ Prompt engineering is the practice of crafting clear, specific, and constrained 
 - Test prompts iteratively with real queries.  
 - Insist on “no answer is better than an incorrect answer” logic.
 
-**Limitations:**  
-- Can reduce creativity if overly restrictive.  
+**Limitations:**- Can reduce creativity if overly restrictive.  
 - Does not fully eliminate hallucinations, especially for complex or open-ended tasks.
 
-**Further reading:**  
-- [FactSet: Prompt Engineering for Hallucination Reduction](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations)
+**Further reading:**- [FactSet: Prompt Engineering for Hallucination Reduction](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations)
 
 ### 3. Model Fine-Tuning and Domain Adaptation
 
-**Definition:**  
-Fine-tuning adapts a pre-trained LLM to a specific domain or task using high-quality, domain-relevant data.
+**Definition:**Fine-tuning adapts a pre-trained LLM to a specific domain or task using high-quality, domain-relevant data.
 
-**How it works:**  
-- Gather and curate domain-specific training data.  
+**How it works:**- Gather and curate domain-specific training data.  
 - Train or align the model further on this data.  
 - Evaluate outputs for accuracy and relevance.
 
-**Best practices:**  
-- Use open-source tools (e.g., InstructLab) for taxonomy-based curation.  
+**Best practices:**- Use open-source tools (e.g., InstructLab) for taxonomy-based curation.  
 - Regularly refresh training sets to prevent staleness.  
 - Monitor for overfitting and maintain evaluation pipelines.
 
-**Limitations:**  
-- Resource-intensive (data collection, compute, expertise).  
+**Limitations:**- Resource-intensive (data collection, compute, expertise).  
 - May not capture emergent or real-time knowledge.
 
-**Further reading:**  
-- [Tredence: Fine-Tuning for Hallucination Mitigation](https://www.tredence.com/blog/mitigating-hallucination-in-large-language-models)  
+**Further reading:**- [Tredence: Fine-Tuning for Hallucination Mitigation](https://www.tredence.com/blog/mitigating-hallucination-in-large-language-models)  
 - [arXiv: Survey on Hallucination Mitigation](https://arxiv.org/pdf/2401.01313.pdf)
 
 ### 4. System-Level Controls (Guardrails, Security, Access)
 
-**Definition:**  
-Guardrails are programmable controls that enforce boundaries on AI behavior, filter unsafe outputs, and ensure compliance.
+**Definition:**Guardrails are programmable controls that enforce boundaries on AI behavior, filter unsafe outputs, and ensure compliance.
 
-**How it works:**  
-- Define metaprompts or system instructions (e.g., “Answer only from retrieved documents”).  
+**How it works:**- Define metaprompts or system instructions (e.g., “Answer only from retrieved documents”).  
 - Integrate content safety filters to block harmful, biased, or off-topic content.  
 - Use role-based access control, private networking, and secure APIs to limit exposure.
 
-**Best practices:**  
-- Regularly audit and update system policies.  
+**Best practices:**- Regularly audit and update system policies.  
 - Monitor for adversarial prompts.  
 - Document guardrail logic for transparency and compliance.
 
-**Limitations:**  
-- Overly aggressive filters can block valid outputs.  
+**Limitations:**- Overly aggressive filters can block valid outputs.  
 - Requires ongoing tuning to match organizational risk tolerance.
 
-**Further reading:**  
-- [arXiv: Survey—Taxonomy of Guardrail Approaches](https://arxiv.org/pdf/2401.01313.pdf)
+**Further reading:**- [arXiv: Survey—Taxonomy of Guardrail Approaches](https://arxiv.org/pdf/2401.01313.pdf)
 
 ### 5. Evaluation and Human-in-the-Loop Review
 
-**Definition:**  
-Continuous evaluation of AI outputs using both automated metrics and expert human review to detect, flag, and correct hallucinations.
+**Definition:**Continuous evaluation of AI outputs using both automated metrics and expert human review to detect, flag, and correct hallucinations.
 
-**How it works:**  
-- Labeling teams review edge cases and high-risk outputs.  
+**How it works:**- Labeling teams review edge cases and high-risk outputs.  
 - Use automated test generation and cross-LLM evaluations.  
 - Track real-time user feedback (thumbs up/down, star ratings).  
 - Route low-confidence or ungrounded outputs for human review.
 
-**Best practices:**  
-- Use metrics such as relevance, groundedness, and user trust scores.  
+**Best practices:**- Use metrics such as relevance, groundedness, and user trust scores.  
 - Include accuracy audits in CI/CD pipelines.  
 - Incorporate feedback loops to improve models over time.
 
-**Limitations:**  
-- Human review is resource-intensive.  
+**Limitations:**- Human review is resource-intensive.  
 - Automated metrics may miss subtle semantic errors.
 
-**Further reading:**  
-- [FactSet: HITL in Hallucination Mitigation](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations)  
+**Further reading:**- [FactSet: HITL in Hallucination Mitigation](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations)  
 - [arXiv: Survey on Feedback Mechanisms](https://arxiv.org/pdf/2401.01313.pdf)
 
 ### 6. Organizational Risk Frameworks and Processes
 
-**Definition:**  
-Enterprise-level processes for risk assessment, use case selection, upskilling, and governance to systematically manage hallucination risks.
+**Definition:**Enterprise-level processes for risk assessment, use case selection, upskilling, and governance to systematically manage hallucination risks.
 
-**How it works:**  
-- Select and prioritize use cases with a risk lens.  
+**How it works:**- Select and prioritize use cases with a risk lens.  
 - Evaluate hallucination risks and potential impact at project outset.  
 - Educate end-users on prompt design, error detection, and escalation paths.  
 - Establish escalation channels for suspicious or high-impact outputs.  
 - Track regulatory developments and update controls as needed.
 
-**Best practices:**  
-- Combine technical and process controls for “defense in depth.”  
+**Best practices:**- Combine technical and process controls for “defense in depth.”  
 - Align hallucination mitigation with Responsible AI and compliance frameworks.  
 - Document lessons learned and best practices for continuous improvement.
 
-**Limitations:**  
-- Cultural and change management barriers may slow adoption.  
+**Limitations:**- Cultural and change management barriers may slow adoption.  
 - Requires ongoing investment in training and process optimization.
 
-**Further reading:**  
-- [FactSet: Organizational AI Governance](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations)  
+**Further reading:**- [FactSet: Organizational AI Governance](https://insight.factset.com/ai-strategies-series-7-ways-to-overcome-hallucinations)  
 - [arXiv: Governance in Hallucination Mitigation](https://arxiv.org/pdf/2401.01313.pdf)
 
 ## Summary Table: Hallucination Mitigation Techniques
 
-| **Strategy**           | **Key Activities**                                                                                   | **When to Use**                                 | **Limitations**                      |
+| **Strategy**| **Key Activities**| **When to Use**| **Limitations**|
 |------------------------|------------------------------------------------------------------------------------------------------|--------------------------------------------------|--------------------------------------|
 | RAG & Knowledge Grounding | Integrate real-time retrieval from knowledge bases; ensure data is curated and up-to-date           | QA, summarization, regulated domains             | Data completeness, infra complexity  |
 | Prompt Engineering     | Design clear, structured prompts; set constraints; use templates and examples                        | All LLM interactions, especially open-ended tasks| May limit creativity, not foolproof  |

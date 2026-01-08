@@ -69,13 +69,13 @@ Shared assumptions, values, and practices embedded in teams, organizations, or c
 
 ## Tacit vs. Explicit vs. Implicit Knowledge
 
-| **Dimension** | **Tacit Knowledge** | **Implicit Knowledge** | **Explicit Knowledge** |
+| **Dimension**| **Tacit Knowledge**| **Implicit Knowledge**| **Explicit Knowledge**|
 |--------------|---------------------|------------------------|----------------------|
-| **Definition** | Experiential know-how, difficult to articulate | Unconscious knowledge, can be made explicit with effort | Documented, codified, easily shared |
-| **Articulation** | Extremely difficult | Possible through reflection | Straightforward |
-| **Transfer Method** | Observation, mentoring, practice | Discussion, reflection, documentation | Reading, training, databases |
-| **Examples** | Expert intuition, skilled performance | Unspoken assumptions, habitual practices | Manuals, procedures, databases |
-| **Capture Approach** | Shadowing, storytelling, demonstration | Interviews, retrospectives, reflection exercises | Documentation, recording, codification |
+| **Definition**| Experiential know-how, difficult to articulate | Unconscious knowledge, can be made explicit with effort | Documented, codified, easily shared |
+| **Articulation**| Extremely difficult | Possible through reflection | Straightforward |
+| **Transfer Method**| Observation, mentoring, practice | Discussion, reflection, documentation | Reading, training, databases |
+| **Examples**| Expert intuition, skilled performance | Unspoken assumptions, habitual practices | Manuals, procedures, databases |
+| **Capture Approach**| Shadowing, storytelling, demonstration | Interviews, retrospectives, reflection exercises | Documentation, recording, codification |
 
 Understanding these distinctions guides knowledge management strategies. Explicit knowledge transfers through documentation. Implicit knowledge requires facilitated reflection to surface and articulate. Tacit knowledge demands experiential learning methods.
 
@@ -111,43 +111,43 @@ Manufacturing excellence, quality control, and process optimization depend subst
 
 Pairing experienced practitioners with less experienced colleagues enables tacit knowledge transfer through observation and guided practice. Novices absorb expert decision-making approaches, situational judgment, and subtle techniques through extended interaction.
 
-**Implementation:** Structure shadowing with reflection sessions where novices ask questions about observed decisions. Rotate novices through multiple mentors to capture diverse tacit knowledge.
+**Implementation:**Structure shadowing with reflection sessions where novices ask questions about observed decisions. Rotate novices through multiple mentors to capture diverse tacit knowledge.
 
 ### Storytelling and Case Studies
 
 Narrative captures contextual richness that procedural documentation misses. Expert stories about challenging situations, unusual problems, or innovative solutions convey tacit knowledge about when standard procedures don't apply and how to adapt.
 
-**Implementation:** Record and catalog expert stories. Use storytelling sessions where experienced practitioners share "war stories." Develop case libraries illustrating tacit judgment application.
+**Implementation:**Record and catalog expert stories. Use storytelling sessions where experienced practitioners share "war stories." Develop case libraries illustrating tacit judgment application.
 
 ### Communities of Practice
 
 Creating spaces where practitioners share experiences, discuss challenges, and collectively problem-solve enables tacit knowledge exchange. These communities develop shared understanding through ongoing interaction.
 
-**Implementation:** Facilitate regular community meetings, online forums, or collaborative problem-solving sessions. Encourage experience sharing rather than just information exchange.
+**Implementation:**Facilitate regular community meetings, online forums, or collaborative problem-solving sessions. Encourage experience sharing rather than just information exchange.
 
 ### After-Action Reviews
 
 Systematic reflection after projects, incidents, or significant events surfaces tacit knowledge by examining what worked, what didn't, and why. These reviews make implicit decision-making explicit.
 
-**Implementation:** Conduct structured debriefs asking "What did we learn that wasn't in the plan?" and "What expertise made the difference?" Document insights for future reference.
+**Implementation:**Conduct structured debriefs asking "What did we learn that wasn't in the plan?" and "What expertise made the difference?" Document insights for future reference.
 
 ### Video Documentation
 
 Recording expert performance with think-aloud protocols captures both actions and reasoning. Video preserves nuances that written descriptions miss—body language, timing, subtle techniques.
 
-**Implementation:** Film experts performing complex tasks while explaining their thinking. Annotate videos highlighting key decision points and expert techniques.
+**Implementation:**Film experts performing complex tasks while explaining their thinking. Annotate videos highlighting key decision points and expert techniques.
 
 ### Expert Interviews and Cognitive Task Analysis
 
 Systematic questioning techniques help experts articulate their normally unconscious knowledge. Cognitive task analysis specifically uncovers mental models, cues recognized, and decision strategies.
 
-**Implementation:** Use structured interview protocols asking experts to reconstruct challenging situations, explaining what they noticed, how they knew what to do, and what alternatives they considered.
+**Implementation:**Use structured interview protocols asking experts to reconstruct challenging situations, explaining what they noticed, how they knew what to do, and what alternatives they considered.
 
 ### Apprenticeship Models
 
 Extended learning relationships combining instruction, observation, guided practice, and feedback enable comprehensive tacit knowledge transfer. Apprentices gradually absorb expert knowledge through sustained engagement.
 
-**Implementation:** Design multi-year development programs where learners progressively take on more responsibility under expert guidance, with structured checkpoints and skill assessments.
+**Implementation:**Design multi-year development programs where learners progressively take on more responsibility under expert guidance, with structured checkpoints and skill assessments.
 
 ## Application in AI Chatbot Development
 

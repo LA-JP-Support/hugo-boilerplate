@@ -52,7 +52,7 @@ Organizations can specify which data sources are accessible, enforce security an
 RAG combines semantic search with LLMs, enabling effective retrieval from diverse and unstructured sources such as emails, PDFs, wikis, and more.
 ## How Does RAG Work?
 
-RAG consists of two main phases: **Preparation** and **Retrieval/Generation**.
+RAG consists of two main phases: **Preparation**and **Retrieval/Generation**.
 
 ### A. Preparation Phase
 
@@ -145,12 +145,9 @@ Key decisions and best practices for RAG system implementation:
 - RAG reduces retraining costs, but infrastructure and query volumes must be managed.
 ## Illustrative Example
 
-**Scenario:**  
-An employee asks a chatbot, “How much annual leave do I have left?”
+**Scenario:**An employee asks a chatbot, “How much annual leave do I have left?”
 
-**RAG Workflow:**
-
-1. The chatbot converts the question into an embedding.
+**RAG Workflow:**1. The chatbot converts the question into an embedding.
 2. Searches the company’s vector database for relevant HR documents and the employee’s leave record.
 3. Retrieved documents are combined with the query to form an augmented prompt.
 4. The LLM generates a personalized response: “You have 8 days of annual leave remaining. According to company policy, you may carry over up to 5 days to the next year.”
@@ -171,26 +168,19 @@ An employee asks a chatbot, “How much annual leave do I have left?”
 Regularly update knowledge bases, monitor retrieval quality, and maintain robust data governance.
 ## Frequently Asked Questions (FAQ)
 
-**What is RAG?**  
-RAG stands for Retrieval-Augmented Generation. It enhances LLMs by retrieving relevant information from external knowledge bases before generating a response.
+**What is RAG?**RAG stands for Retrieval-Augmented Generation. It enhances LLMs by retrieving relevant information from external knowledge bases before generating a response.
 
-**How does RAG improve LLM responses?**  
-By grounding outputs in up-to-date data, RAG reduces hallucinations and increases response accuracy.
+**How does RAG improve LLM responses?**By grounding outputs in up-to-date data, RAG reduces hallucinations and increases response accuracy.
 
-**When should RAG be used?**  
-RAG is ideal when AI applications require access to proprietary, confidential, or frequently updated information not present in the LLM’s training data.
+**When should RAG be used?**RAG is ideal when AI applications require access to proprietary, confidential, or frequently updated information not present in the LLM’s training data.
 
-**What types of data can RAG retrieve?**  
-Both structured and unstructured data: documents, PDFs, emails, databases, and real-time feeds.
+**What types of data can RAG retrieve?**Both structured and unstructured data: documents, PDFs, emails, databases, and real-time feeds.
 
-**Does RAG require retraining the LLM?**  
-No. RAG expands knowledge without retraining, reducing costs and complexity.
+**Does RAG require retraining the LLM?**No. RAG expands knowledge without retraining, reducing costs and complexity.
 
-**What are the key components of a RAG system?**  
-A retriever for finding documents and a generator (LLM) for synthesizing responses.
+**What are the key components of a RAG system?**A retriever for finding documents and a generator (LLM) for synthesizing responses.
 
-**What are the main implementation challenges?**  
-Ensuring data quality, managing retrieval relevance, prompt length, and enforcing data security.
+**What are the main implementation challenges?**Ensuring data quality, managing retrieval relevance, prompt length, and enforcing data security.
 ## Actionable Next Steps for Implementation
 
 1. **Assess Suitability**: Identify scenarios requiring up-to-date, domain-specific, or proprietary knowledge.

@@ -112,12 +112,12 @@ The message queue workflow follows a systematic process that ensures reliable me
 
 | Feature | Apache Kafka | RabbitMQ | Amazon SQS | Redis Pub/Sub | Apache ActiveMQ |
 |---------|--------------|----------|------------|---------------|------------------|
-| **Message Ordering** | Partition-level ordering | Queue-level ordering | FIFO queues available | No ordering guarantees | Queue-level ordering |
-| **Persistence** | Disk-based, configurable retention | Memory/disk options | Managed persistence | Memory-based, optional disk | Memory/disk options |
-| **Throughput** | Very high (millions/sec) | High (thousands/sec) | High (managed scaling) | Very high (in-memory) | Moderate to high |
-| **Delivery Guarantees** | At-least-once, exactly-once | At-least-once, at-most-once | At-least-once | At-most-once | At-least-once |
-| **Scalability** | Horizontal partitioning | Clustering support | Auto-scaling | Clustering support | Master-slave clustering |
-| **Protocol Support** | Custom binary protocol | AMQP, MQTT, STOMP | HTTP/HTTPS REST API | Redis protocol | JMS, AMQP, STOMP, MQTT |
+| **Message Ordering**| Partition-level ordering | Queue-level ordering | FIFO queues available | No ordering guarantees | Queue-level ordering |
+| **Persistence**| Disk-based, configurable retention | Memory/disk options | Managed persistence | Memory-based, optional disk | Memory/disk options |
+| **Throughput**| Very high (millions/sec) | High (thousands/sec) | High (managed scaling) | Very high (in-memory) | Moderate to high |
+| **Delivery Guarantees**| At-least-once, exactly-once | At-least-once, at-most-once | At-least-once | At-most-once | At-least-once |
+| **Scalability**| Horizontal partitioning | Clustering support | Auto-scaling | Clustering support | Master-slave clustering |
+| **Protocol Support**| Custom binary protocol | AMQP, MQTT, STOMP | HTTP/HTTPS REST API | Redis protocol | JMS, AMQP, STOMP, MQTT |
 
 ## Challenges and Considerations
 

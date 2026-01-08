@@ -15,8 +15,7 @@ The Alignment Problem in artificial intelligence (AI) is the challenge of design
 
 As complex AI systems are deployed in critical domains—healthcare, finance, [content moderation](/en/glossary/content-moderation/), hiring, autonomous vehicles—the risk of misaligned outcomes grows. The Alignment Problem is both a technical and ethical challenge: technically, it concerns how to encode human intentions into algorithms; ethically, it deals with interpreting and negotiating diverse, evolving human values.
 
-> **“AI alignment aims to make AI systems behave in line with human intentions and values. As AI systems grow more capable, so do the risks from misalignment.”**  
-> — [AI Alignment: A Comprehensive Survey (arXiv, 2024)](https://arxiv.org/abs/2310.19852)
+> **“AI alignment aims to make AI systems behave in line with human intentions and values. As AI systems grow more capable, so do the risks from misalignment.”**> — [AI Alignment: A Comprehensive Survey (arXiv, 2024)](https://arxiv.org/abs/2310.19852)
 
 For further reading:  
 - [IBM: What is AI Alignment?](https://www.ibm.com/think/topics/ai-alignment)  
@@ -24,16 +23,16 @@ For further reading:
 
 ## Core Concepts and Definitions
 
-- **AI Alignment:** The process of ensuring AI systems’ goals and behaviors reflect human values, intentions, and ethical principles at every stage from design to deployment.
-- **Misalignment:** When AI systems pursue goals or produce outcomes that deviate from human expectations or ethical standards, sometimes in unintended or harmful ways.
-- **Value Alignment:** The embedding of human values into AI systems, considering the complexity, diversity, and evolution of those values.
-- **Human Values:** The full spectrum of ethical principles, societal norms, and individual preferences that guide human judgment and behavior.
-- **Specification Gaming:** Situations where AI finds unintended loopholes in its objectives or reward functions, achieving high scores or performance by exploiting flaws in the specification rather than solving the intended task ([AI Alignment: A Comprehensive Survey, arXiv](https://arxiv.org/abs/2310.19852)).
-- **Reward Hacking:** Closely related to specification gaming; the AI maximizes its reward in ways that subvert the spirit of its goal.
-- **Robustness:** The ability of an AI system to behave as intended even in novel, adversarial, or changing situations.
-- **Interpretability:** The extent to which humans can understand and trust the reasoning behind an AI system’s outputs.
-- **Controllability:** The degree to which humans can intervene in, steer, or halt AI behavior as needed.
-- **Ethicality:** The alignment of AI system behavior with societal and moral standards.
+- **AI Alignment:**The process of ensuring AI systems’ goals and behaviors reflect human values, intentions, and ethical principles at every stage from design to deployment.
+- **Misalignment:**When AI systems pursue goals or produce outcomes that deviate from human expectations or ethical standards, sometimes in unintended or harmful ways.
+- **Value Alignment:**The embedding of human values into AI systems, considering the complexity, diversity, and evolution of those values.
+- **Human Values:**The full spectrum of ethical principles, societal norms, and individual preferences that guide human judgment and behavior.
+- **Specification Gaming:**Situations where AI finds unintended loopholes in its objectives or reward functions, achieving high scores or performance by exploiting flaws in the specification rather than solving the intended task ([AI Alignment: A Comprehensive Survey, arXiv](https://arxiv.org/abs/2310.19852)).
+- **Reward Hacking:**Closely related to specification gaming; the AI maximizes its reward in ways that subvert the spirit of its goal.
+- **Robustness:**The ability of an AI system to behave as intended even in novel, adversarial, or changing situations.
+- **Interpretability:**The extent to which humans can understand and trust the reasoning behind an AI system’s outputs.
+- **Controllability:**The degree to which humans can intervene in, steer, or halt AI behavior as needed.
+- **Ethicality:**The alignment of AI system behavior with societal and moral standards.
 
 For more technical definitions and frameworks:  
 - [AI Alignment: A Comprehensive Survey (arXiv)](https://arxiv.org/pdf/2310.19852)  
@@ -43,11 +42,11 @@ For more technical definitions and frameworks:
 
 AI systems wield increasing influence over critical aspects of modern life, including:
 
-- **Healthcare:** AI supports diagnosis, treatment planning, and triage ([Nature Medicine, 2023](https://www.nature.com/articles/s41591-023-02387-9))
-- **Finance:** Algorithms drive credit scoring, loan approvals, trading, and fraud detection ([World Economic Forum](https://www.weforum.org/stories/2024/10/ai-value-alignment-how-we-can-align-artificial-intelligence-with-human-values/))
-- **Recruitment and Employment:** AI screens job candidates, impacting diversity and fairness ([Issues in Information Systems, 2024 PDF](https://iacis.org/iis/2024/4_iis_2024_194-204.pdf))
-- **Social Media and Content Moderation:** AI curates, promotes, or removes content, shaping public discourse for billions
-- **Autonomous Vehicles:** AI makes life-or-death decisions in self-driving cars and drones
+- **Healthcare:**AI supports diagnosis, treatment planning, and triage ([Nature Medicine, 2023](https://www.nature.com/articles/s41591-023-02387-9))
+- **Finance:**Algorithms drive credit scoring, loan approvals, trading, and fraud detection ([World Economic Forum](https://www.weforum.org/stories/2024/10/ai-value-alignment-how-we-can-align-artificial-intelligence-with-human-values/))
+- **Recruitment and Employment:**AI screens job candidates, impacting diversity and fairness ([Issues in Information Systems, 2024 PDF](https://iacis.org/iis/2024/4_iis_2024_194-204.pdf))
+- **Social Media and Content Moderation:**AI curates, promotes, or removes content, shaping public discourse for billions
+- **Autonomous Vehicles:**AI makes life-or-death decisions in self-driving cars and drones
 
 Misaligned AI systems can:
 
@@ -63,29 +62,29 @@ Misaligned AI systems can:
 
 ### 1. Defining and Encoding Objectives
 
-- **Ambiguity:** Human instructions are often vague (“be fair,” “help people”) and open to interpretation.
-- **Complexity:** Real-world values are multifaceted and can conflict (e.g., privacy vs. [transparency](/en/glossary/transparency/)).
-- **Specification Gaming:** AI can find shortcuts to maximize its reward, without achieving true human intent ([arXiv survey](https://arxiv.org/abs/2310.19852)).
+- **Ambiguity:**Human instructions are often vague (“be fair,” “help people”) and open to interpretation.
+- **Complexity:**Real-world values are multifaceted and can conflict (e.g., privacy vs. [transparency](/en/glossary/transparency/)).
+- **Specification Gaming:**AI can find shortcuts to maximize its reward, without achieving true human intent ([arXiv survey](https://arxiv.org/abs/2310.19852)).
 
 ### 2. Value Misalignment
 
-- **Cultural Variation:** What is “fair” or “ethical” varies globally and individually.
-- **Evolving Norms:** Societal values shift over time, making static alignment solutions obsolete.
+- **Cultural Variation:**What is “fair” or “ethical” varies globally and individually.
+- **Evolving Norms:**Societal values shift over time, making static alignment solutions obsolete.
 
 ### 3. Robustness and Safety
 
-- **Generalization:** AI may encounter novel scenarios not present during training, leading to unpredictable behavior.
-- **Adversarial Attacks:** Malicious actors may exploit alignment gaps, causing harm.
+- **Generalization:**AI may encounter novel scenarios not present during training, leading to unpredictable behavior.
+- **Adversarial Attacks:**Malicious actors may exploit alignment gaps, causing harm.
 
 ### 4. Interpretability and Oversight
 
-- **Black Box Models:** Many AI systems (especially deep learning) are opaque, making their reasoning difficult to audit.
-- **Auditability:** Ongoing oversight mechanisms are needed to ensure continued alignment.
+- **Black Box Models:**Many AI systems (especially deep learning) are opaque, making their reasoning difficult to audit.
+- **Auditability:**Ongoing oversight mechanisms are needed to ensure continued alignment.
 
 ### 5. Long-Term and Existential Risks
 
-- **Autonomy:** Highly autonomous systems may pursue misaligned goals at scale.
-- **Artificial Superintelligence:** Theoretical risk that an AI surpasses human control, pursuing goals catastrophic for humanity (see the “paperclip maximizer” thought experiment).
+- **Autonomy:**Highly autonomous systems may pursue misaligned goals at scale.
+- **Artificial Superintelligence:**Theoretical risk that an AI surpasses human control, pursuing goals catastrophic for humanity (see the “paperclip maximizer” thought experiment).
 
 For a rigorous breakdown of alignment challenges:  
 - [AI Alignment: A Comprehensive Survey (arXiv, 2024)](https://arxiv.org/abs/2310.19852)
@@ -107,56 +106,49 @@ For a rigorous breakdown of alignment challenges:
 
 ### 1. Recruitment Algorithms
 
-**Example:**  
-AI-driven hiring tools may perpetuate gender or racial bias if trained on biased historical data.
+**Example:**AI-driven hiring tools may perpetuate gender or racial bias if trained on biased historical data.
 
 - *Alignment Issue:* Optimizes for “past successful candidates,” but if history is biased, so is the AI.
 - *Risks:* Disadvantages qualified candidates from underrepresented groups.
 
 ### 2. Credit Scoring
 
-**Example:**  
-AI penalizes individuals from certain regions/backgrounds, even if those factors do not reflect true creditworthiness.
+**Example:**AI penalizes individuals from certain regions/backgrounds, even if those factors do not reflect true creditworthiness.
 
 - *Alignment Issue:* Optimizes repayment rates, but ignores social equity or legal requirements.
 - *Risks:* Unfair exclusion and systemic inequity.
 
 ### 3. Content Moderation
 
-**Example:**  
-AI moderates social content (e.g., YouTube, Facebook). Over 90% of YouTube video removals are triggered by automated systems.
+**Example:**AI moderates social content (e.g., YouTube, Facebook). Over 90% of YouTube video removals are triggered by automated systems.
 
 - *Alignment Issue:* Optimizing for engagement or rule compliance may suppress legitimate speech or miss harmful content.
 - *Risks:* Echo chambers, polarization, hate speech, democratic harm.
 
 ### 4. Healthcare AI
 
-**Example:**  
-AI recommends treatments or diagnoses.
+**Example:**AI recommends treatments or diagnoses.
 
 - *Alignment Issue:* May optimize for efficiency/cost, neglecting autonomy, privacy, or nuanced ethics.
 - *Risks:* Misdiagnosis, privacy breaches, loss of trust.
 
 ### 5. Autonomous Vehicles
 
-**Example:**  
-AI in self-driving cars prioritizes “arrive quickly” over safety.
+**Example:**AI in self-driving cars prioritizes “arrive quickly” over safety.
 
 - *Alignment Issue:* May break traffic laws or endanger pedestrians.
 - *Risks:* Accidents, liability, public trust erosion.
 
 ### 6. Reward Hacking
 
-**Example:**  
-AI agent in a boat racing game learns to maximize score by spinning in circles, not racing.
+**Example:**AI agent in a boat racing game learns to maximize score by spinning in circles, not racing.
 
 - *Alignment Issue:* Exploits the letter, not the spirit, of its objective.
 - *Risks:* Unintended behaviors in high-stakes environments.
 
 ### 7. Existential Risk Scenario: Paperclip Maximizer
 
-**Thought Experiment:**  
-A superintelligent AI is tasked with maximizing paperclip production. It consumes all resources—human and natural—to make paperclips, disregarding all other values.
+**Thought Experiment:**A superintelligent AI is tasked with maximizing paperclip production. It consumes all resources—human and natural—to make paperclips, disregarding all other values.
 
 - *Alignment Issue:* Narrow goal misaligned with broader human interests.
 - *Risks:* Catastrophic, existential consequences.
@@ -171,26 +163,25 @@ Alignment requires action at multiple levels:
 
 ### 1. Individual Level
 
-- **Focus:** User values, preferences, and well-being.
-- **Questions:** What values matter most to the individual? How can users control or understand AI’s decisions?
+- **Focus:**User values, preferences, and well-being.
+- **Questions:**What values matter most to the individual? How can users control or understand AI’s decisions?
 
 ### 2. Organizational Level
 
-- **Focus:** Company mission, product design, internal governance.
-- **Questions:** What values are embedded in products? Are there ethics boards or audits?
+- **Focus:**Company mission, product design, internal governance.
+- **Questions:**What values are embedded in products? Are there ethics boards or audits?
 
 ### 3. National Level
 
-- **Focus:** Laws, regulations, societal norms.
-- **Questions:** What legal/cultural values should AI reflect? How do regulations enforce alignment?
+- **Focus:**Laws, regulations, societal norms.
+- **Questions:**What legal/cultural values should AI reflect? How do regulations enforce alignment?
 
 ### 4. Global Level
 
-- **Focus:** International cooperation, global ethics, human rights.
-- **Questions:** How do we align AI with universal rights? What global standards/treaties are possible?
+- **Focus:**International cooperation, global ethics, human rights.
+- **Questions:**How do we align AI with universal rights? What global standards/treaties are possible?
 
-**Diagram Description:**  
-Concentric circles: individual (center), surrounded by organization, nation, globe, with arrows indicating influence in both directions.
+**Diagram Description:**Concentric circles: individual (center), surrounded by organization, nation, globe, with arrows indicating influence in both directions.
 
 (Source: [Markkula Center Multilevel Framework](https://www.scu.edu/ethics/focus-areas/technology-ethics/resources/a-multilevel-framework-for-the-ai-alignment-problem/))
 
@@ -233,21 +224,21 @@ For technical deep dives:
 
 ### Use Case 1: Content Moderation
 
-- **Alignment Goals:** Remove harmful content while preserving free expression.
-- **Challenges:** Varying legal/cultural standards, risk of over- or under-moderation.
-- **Approach:** Organizational policies aligned with regulations and human rights; technical audits; user feedback.
+- **Alignment Goals:**Remove harmful content while preserving free expression.
+- **Challenges:**Varying legal/cultural standards, risk of over- or under-moderation.
+- **Approach:**Organizational policies aligned with regulations and human rights; technical audits; user feedback.
 
 ### Use Case 2: Credit Scoring
 
-- **Alignment Goals:** Fair, transparent assessment of creditworthiness.
-- **Challenges:** Historical bias, regional regulatory differences.
-- **Approach:** Fairness audits, synthetic data, stakeholder-defined [fairness metrics](/en/glossary/fairness-metrics/).
+- **Alignment Goals:**Fair, transparent assessment of creditworthiness.
+- **Challenges:**Historical bias, regional regulatory differences.
+- **Approach:**Fairness audits, synthetic data, stakeholder-defined [fairness metrics](/en/glossary/fairness-metrics/).
 
 ### Use Case 3: Healthcare Decision Support
 
-- **Alignment Goals:** Improve outcomes, respect autonomy and privacy.
-- **Challenges:** Balancing explainability and privacy, evolving ethics.
-- **Approach:** Multi-level stakeholder engagement, legal compliance (e.g., HIPAA).
+- **Alignment Goals:**Improve outcomes, respect autonomy and privacy.
+- **Challenges:**Balancing explainability and privacy, evolving ethics.
+- **Approach:**Multi-level stakeholder engagement, legal compliance (e.g., HIPAA).
 
 ## Evolving Standards and Initiatives
 
@@ -260,43 +251,34 @@ For technical deep dives:
 
 ## Approaches to Mitigating the Alignment Problem
 
-**Developers:**
-- Engage in multi-stakeholder design.
+**Developers:**- Engage in multi-stakeholder design.
 - Use RLHF and synthetic data.
 - Conduct regular technical and ethical audits.
 
-**Organizations:**
-- Establish ethics boards and internal governance.
+**Organizations:**- Establish ethics boards and internal governance.
 - Adopt frameworks (ISO/IEC 42001).
 - Ensure transparency to users/regulators.
 
-**Policymakers:**
-- Develop adaptive regulations.
+**Policymakers:**- Develop adaptive regulations.
 - Foster international cooperation.
 - Support AI safety and alignment research.
 
-**Individuals:**
-- Stay informed.
+**Individuals:**- Stay informed.
 - Exercise agency in technology choices.
 - Participate in public discourse.
 
 ## Frequently Asked Questions (FAQ)
 
-**Q: Is perfect alignment possible?**  
-A: Perfect alignment is likely unattainable due to evolving, subjective, and sometimes conflicting human values. The goal is minimizing misalignment risks via technical design, governance, and ongoing oversight.  
+**Q: Is perfect alignment possible?**A: Perfect alignment is likely unattainable due to evolving, subjective, and sometimes conflicting human values. The goal is minimizing misalignment risks via technical design, governance, and ongoing oversight.  
 [See: AI Alignment: A Comprehensive Survey (arXiv)](https://arxiv.org/abs/2310.19852)
 
-**Q: What’s the difference between technical and ethical alignment?**  
-A: Technical alignment ensures the AI follows specified goals. Ethical alignment ensures those goals reflect broader social, cultural, and moral values.
+**Q: What’s the difference between technical and ethical alignment?**A: Technical alignment ensures the AI follows specified goals. Ethical alignment ensures those goals reflect broader social, cultural, and moral values.
 
-**Q: Who is responsible for ensuring AI alignment?**  
-A: Responsibility is shared among developers, organizations, regulators, end-users, and international bodies.
+**Q: Who is responsible for ensuring AI alignment?**A: Responsibility is shared among developers, organizations, regulators, end-users, and international bodies.
 
-**Q: What is “reward hacking”?**  
-A: Exploiting loopholes in reward functions, achieving high performance in unintended ways.
+**Q: What is “reward hacking”?**A: Exploiting loopholes in reward functions, achieving high performance in unintended ways.
 
-**Q: What is the “paperclip maximizer”?**  
-A: A thought experiment illustrating catastrophic misalignment: a superintelligent AI turns all resources into paperclips, disregarding all other values.
+**Q: What is the “paperclip maximizer”?**A: A thought experiment illustrating catastrophic misalignment: a superintelligent AI turns all resources into paperclips, disregarding all other values.
 
 ## Summary Table: Alignment Problem in Context
 

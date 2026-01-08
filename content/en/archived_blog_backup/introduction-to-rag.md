@@ -53,14 +53,11 @@ RAG creates answers through three steps: "question understanding", "retrieval", 
 
 ! [Three Steps of RAG](/images/blog/RAG-123.jpg)
 
-1. **Question Understanding**  
-Generative AI understands user questions and determines what information is needed. At this stage, it analyzes question intent and required answer type.
+1. **Question Understanding**Generative AI understands user questions and determines what information is needed. At this stage, it analyzes question intent and required answer type.
 
-2. **Retrieval**  
-AI automatically searches for information needed for the question from databases or the [web](/en/glossary/Accessibility--Web-/). Targets include FAQs, manuals, and news articles. For companies, limiting search targets to only company information can exclude irrelevant external information.
+2. **Retrieval**AI automatically searches for information needed for the question from databases or the [web](/en/glossary/Accessibility--Web-/). Targets include FAQs, manuals, and news articles. For companies, limiting search targets to only company information can exclude irrelevant external information.
 
-3. **Generation**  
-Based on collected information, AI creates easy-to-understand answers in natural Japanese. It explains technical terms and difficult content in ways users can understand.
+3. **Generation**Based on collected information, AI creates easy-to-understand answers in natural Japanese. It explains technical terms and difficult content in ways users can understand.
 
 Through these three steps, RAG provides accurate answers beyond knowledge limitations.
 
@@ -95,19 +92,14 @@ Recent scientific papers and technical developments predict that RAG will advanc
 
 SmartWeb develops [AI [chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-[chatbot](/en/glossary/Chatbot/)/) and AI email auto-response services combining [LiveAgent](/en/glossary/LiveAgent/) and FlowHunt. Using RAG technology, it immediately searches and provides the latest information from manuals, FAQs, and specialized documents collected for each company. It is used in scenarios like:
 
-- **24/7/365 Auto-Response with Latest Information**  
-Even outside business hours or late at night, AI immediately answers customer questions. It cross-searches the latest manuals and FAQs to return optimal answers on the spot.
+- **24/7/365 Auto-Response with Latest Information**Even outside business hours or late at night, AI immediately answers customer questions. It cross-searches the latest manuals and FAQs to return optimal answers on the spot.
 
-- **Accurate Responses Limited to Company Information**  
-By referencing only company FAQs and manuals, it is unaffected by other companies' product information or uncertain online information. It enables consistent responses aligned with company policy and product specifications. Customers receive official company views and accurate product information, realizing highly reliable support experiences.
+- **Accurate Responses Limited to Company Information**By referencing only company FAQs and manuals, it is unaffected by other companies' product information or uncertain online information. It enables consistent responses aligned with company policy and product specifications. Customers receive official company views and accurate product information, realizing highly reliable support experiences.
 
-- **Easy Translation of Difficult Terms**  
-AI converts technical terms and industry-specific language into easy-to-understand expressions. Even first-time users can inquire with confidence.
+- **Easy Translation of Difficult Terms**AI converts technical terms and industry-specific language into easy-to-understand expressions. Even first-time users can inquire with confidence.
 
-- **Batch Cross-Search of Large Volumes of Materials**  
-Even with hundreds of [FAQ](/en/glossary/FAQ/) entries or many manuals, AI immediately finds necessary information and combines it to create answers.
+- **Batch Cross-Search of Large Volumes of Materials**Even with hundreds of [FAQ](/en/glossary/FAQ/) entries or many manuals, AI immediately finds necessary information and combines it to create answers.
 
-- **Efficiency of Email Auto-Response Creation**  
-For questions from inquiry forms, AI automatically creates optimal response drafts. This reduces staff workload and speeds up responses. Cases of increased customer satisfaction are growing.
+- **Efficiency of Email Auto-Response Creation**For questions from inquiry forms, AI automatically creates optimal response drafts. This reduces staff workload and speeds up responses. Cases of increased customer satisfaction are growing.
 
 In this way, RAG is advanced technology not only to "convey new and accurate information in easily understandable ways at any time" but also to "provide consistent responses using only company-managed information". It will continue evolving and becoming widely used in the future.

@@ -17,7 +17,7 @@ El autoscaling en [computación en la nube](/en/glossary/cloud-computing/) ajust
 
 ## Definición de Autoscaling
 
-**Autoscaling** es una capacidad fundamental de la computación en la nube que asigna o libera automáticamente recursos computacionales—como máquinas virtuales (VMs), contenedores, funciones serverless o almacenamiento—basándose en la demanda de la carga de trabajo en tiempo real y reglas definidas por políticas. El autoscaling garantiza que las aplicaciones cuenten con los recursos necesarios para mantener una disponibilidad y rendimiento constantes, mientras minimiza los costos al reducir el sobreaprovisionamiento y la infrautilización.
+**Autoscaling**es una capacidad fundamental de la computación en la nube que asigna o libera automáticamente recursos computacionales—como máquinas virtuales (VMs), contenedores, funciones serverless o almacenamiento—basándose en la demanda de la carga de trabajo en tiempo real y reglas definidas por políticas. El autoscaling garantiza que las aplicaciones cuenten con los recursos necesarios para mantener una disponibilidad y rendimiento constantes, mientras minimiza los costos al reducir el sobreaprovisionamiento y la infrautilización.
 
 Proveedores de nube como AWS, Azure, Google Cloud, IBM y Oracle ofrecen el autoscaling como una función básica, permitiendo la asignación dinámica de recursos para cómputo, memoria y otros tipos de servicios.
 
@@ -64,20 +64,20 @@ El autoscaling puede categorizarse en dos enfoques principales:
 
 El escalado horizontal ajusta el número de instancias de recursos en ejecución para acomodar los cambios en la carga de trabajo.
 
-- **Cómo funciona:** Agrega o elimina VMs, contenedores o instancias de servidor.
-- **Ejemplo:** Durante un pico de tráfico, se agregan más servidores web detrás de un balanceador de carga; en horas valle, se eliminan servidores.
-- **Ventajas:** Sin tiempos de inactividad, altamente escalable para cargas de trabajo distribuidas y sin estado, mejor tolerancia a fallos.
-- **Ideal para:** Microservicios, aplicaciones web, APIs y cargas de trabajo en contenedores.
+- **Cómo funciona:**Agrega o elimina VMs, contenedores o instancias de servidor.
+- **Ejemplo:**Durante un pico de tráfico, se agregan más servidores web detrás de un balanceador de carga; en horas valle, se eliminan servidores.
+- **Ventajas:**Sin tiempos de inactividad, altamente escalable para cargas de trabajo distribuidas y sin estado, mejor tolerancia a fallos.
+- **Ideal para:**Microservicios, aplicaciones web, APIs y cargas de trabajo en contenedores.
 
 ### Escalado Vertical (Escalar Arriba/Abajo)
 
 El escalado vertical cambia la asignación de recursos de instancias existentes.
 
-- **Cómo funciona:** Aumenta o disminuye CPU, RAM o almacenamiento de una VM o contenedor en ejecución.
-- **Ejemplo:** Escalar una VM de 2 vCPUs/8GB RAM a 8 vCPUs/32GB RAM.
-- **Ventajas:** Útil para aplicaciones monolíticas o con estado que no pueden distribuirse fácilmente.
-- **Limitaciones:** Puede requerir tiempo de inactividad o migración; limitado por restricciones físicas del hardware.
-- **Ideal para:** Aplicaciones heredadas, bases de datos o cargas de trabajo que no están diseñadas para distribución.
+- **Cómo funciona:**Aumenta o disminuye CPU, RAM o almacenamiento de una VM o contenedor en ejecución.
+- **Ejemplo:**Escalar una VM de 2 vCPUs/8GB RAM a 8 vCPUs/32GB RAM.
+- **Ventajas:**Útil para aplicaciones monolíticas o con estado que no pueden distribuirse fácilmente.
+- **Limitaciones:**Puede requerir tiempo de inactividad o migración; limitado por restricciones físicas del hardware.
+- **Ideal para:**Aplicaciones heredadas, bases de datos o cargas de trabajo que no están diseñadas para distribución.
 
 | Aspecto                | Escalado Horizontal                | Escalado Vertical                    |
 |------------------------|------------------------------------|--------------------------------------|
@@ -94,16 +94,11 @@ El escalado vertical cambia la asignación de recursos de instancias existentes.
 
 Las políticas de autoscaling gobiernan cuándo y cómo ocurren las acciones de escalado. Las estrategias más comunes incluyen:
 
-- **Escalado basado en umbrales (reactivo)**  
-  Dispara acciones de escalado cuando una métrica monitoreada supera un umbral definido (por ejemplo, CPU > 80% durante 5 minutos).
-- **Escalado por seguimiento de objetivo**  
-  Ajusta continuamente los recursos para mantener un valor objetivo de una métrica (por ejemplo, mantener el uso promedio de CPU al 60%).
-- **Escalado predictivo (proactivo)**  
-  Utiliza patrones históricos de uso o aprendizaje automático para predecir la demanda y escalar por anticipado.
-- **Escalado programado**  
-  Escala recursos en horarios o fechas predeterminadas (por ejemplo, escalar durante el horario laboral).
-- **Escalado manual**  
-  Los administradores ajustan los recursos manualmente, típicamente como respaldo.
+- **Escalado basado en umbrales (reactivo)**Dispara acciones de escalado cuando una métrica monitoreada supera un umbral definido (por ejemplo, CPU > 80% durante 5 minutos).
+- **Escalado por seguimiento de objetivo**Ajusta continuamente los recursos para mantener un valor objetivo de una métrica (por ejemplo, mantener el uso promedio de CPU al 60%).
+- **Escalado predictivo (proactivo)**Utiliza patrones históricos de uso o aprendizaje automático para predecir la demanda y escalar por anticipado.
+- **Escalado programado**Escala recursos en horarios o fechas predeterminadas (por ejemplo, escalar durante el horario laboral).
+- **Escalado manual**Los administradores ajustan los recursos manualmente, típicamente como respaldo.
 
 > [Datadog: Centro de Conocimiento de Auto-scaling](https://www.datadoghq.com/knowledge-center/auto-scaling/)  
 > [Hydrolix: Autoscaling en la nube](https://hydrolix.io/glossary/autoscaling/)
@@ -141,24 +136,24 @@ A pesar de sus ventajas, el autoscaling presenta una serie de desafíos:
 El autoscaling se utiliza ampliamente en diversas industrias y escenarios:
 
 ### Plataformas de E-Commerce
-- **Escenario:** Las ventas de Black Friday causan picos de tráfico impredecibles.
-- **Solución:** El autoscaling aprovisiona servidores adicionales de aplicación y base de datos, asegurando disponibilidad y pagos rápidos.
+- **Escenario:**Las ventas de Black Friday causan picos de tráfico impredecibles.
+- **Solución:**El autoscaling aprovisiona servidores adicionales de aplicación y base de datos, asegurando disponibilidad y pagos rápidos.
 
 ### Servicios de Streaming de Medios
-- **Escenario:** Un evento viral o un gran estreno incrementa los espectadores simultáneos.
-- **Solución:** Los servidores de streaming escalan en tiempo real para mantener la reproducción fluida.
+- **Escenario:**Un evento viral o un gran estreno incrementa los espectadores simultáneos.
+- **Solución:**Los servidores de streaming escalan en tiempo real para mantener la reproducción fluida.
 
 ### Startups SaaS
-- **Escenario:** El marketing viral impulsa un crecimiento repentino de usuarios.
-- **Solución:** Los recursos backend escalan automáticamente, permitiendo crecimiento rápido sin sobreaprovisionamiento.
+- **Escenario:**El marketing viral impulsa un crecimiento repentino de usuarios.
+- **Solución:**Los recursos backend escalan automáticamente, permitiendo crecimiento rápido sin sobreaprovisionamiento.
 
 ### Cargas de Big Data y AI/ML
-- **Escenario:** El entrenamiento de modelos o trabajos analíticos requieren cómputo fluctuante.
-- **Solución:** Los clústeres de cómputo escalan para procesamiento paralelo y se reducen tras finalizar los trabajos.
+- **Escenario:**El entrenamiento de modelos o trabajos analíticos requieren cómputo fluctuante.
+- **Solución:**Los clústeres de cómputo escalan para procesamiento paralelo y se reducen tras finalizar los trabajos.
 
 ### APIs y Microservicios
-- **Escenario:** Distintos endpoints o servicios experimentan tasas variables de solicitudes.
-- **Solución:** Cada servicio escala automáticamente de forma independiente según su propia carga.
+- **Escenario:**Distintos endpoints o servicios experimentan tasas variables de solicitudes.
+- **Solución:**Cada servicio escala automáticamente de forma independiente según su propia carga.
 
 > [Zesty: Glosario de Autoscaling](https://zesty.co/finops-glossary/autoscaling/)  
 > [DigitalOcean: Guía detallada de técnicas de Auto Scaling en la nube](https://www.digitalocean.com/community/tutorials/auto-scaling-techniques-guide)
@@ -184,7 +179,7 @@ Para maximizar la efectividad del autoscaling, siga estas mejores prácticas:
 
 El autoscaling y el balanceo de carga suelen usarse juntos pero tienen propósitos diferentes.
 
-| Aspecto         | **Autoscaling**                                 | **Balanceo de Carga**                        |
+| Aspecto         | **Autoscaling**| **Balanceo de Carga**|
 |-----------------|-------------------------------------------------|----------------------------------------------|
 | Propósito       | Ajusta número o tamaño de recursos              | Distribuye el tráfico entrante               |
 | Funcionalidad   | Agrega/elimina instancias; escala recursos      | Redirige solicitudes a servidores saludables |
@@ -201,11 +196,11 @@ El autoscaling aporta capacidad elástica, mientras que el balanceo de carga ase
 
 | Proveedor        | Servicio(s) de Autoscaling                                                                                       | Características clave y casos de uso                                                             |
 |------------------|------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| **AWS**          | [EC2 Auto Scaling Groups](https://aws.amazon.com/ec2/autoscaling/), [Application Auto Scaling](https://aws.amazon.com/autoscaling/) | Gestiona EC2, ECS, DynamoDB, Aurora; admite políticas objetivo/predictivas/programadas; integración con ELB y CloudWatch |
-| **Azure**        | [Virtual Machine Scale Sets](https://azure.microsoft.com/en-us/services/virtual-machine-scale-sets/), [Azure Autoscale](https://learn.microsoft.com/en-us/azure/azure-monitor/autoscale/autoscale-get-started) | Escala VMs, App Services; soporta escalado por métricas y programado; soporte para nube híbrida   |
-| **GCP**          | [Managed Instance Groups](https://cloud.google.com/compute/docs/instance-groups), [GKE Cluster Autoscaler](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler) | Escala VMs de Compute Engine y nodos/pods de Kubernetes; soporta métricas personalizadas y escalado por HTTP load |
-| **IBM Cloud**    | [VPC Auto Scaling](https://www.ibm.com/cloud/vpc), [Kubernetes Autoscaler](https://www.ibm.com/cloud/kubernetes-service/autoscaling) | Soporta VMs y clústeres de Kubernetes; integración con IBM Cloud Load Balancer                   |
-| **Oracle Cloud** | [Instance Pools & Autoscaling](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm) | Escala pools de cómputo; soporta escalado por métricas y programado; integración con OCI Load Balancer|
+| **AWS**| [EC2 Auto Scaling Groups](https://aws.amazon.com/ec2/autoscaling/), [Application Auto Scaling](https://aws.amazon.com/autoscaling/) | Gestiona EC2, ECS, DynamoDB, Aurora; admite políticas objetivo/predictivas/programadas; integración con ELB y CloudWatch |
+| **Azure**| [Virtual Machine Scale Sets](https://azure.microsoft.com/en-us/services/virtual-machine-scale-sets/), [Azure Autoscale](https://learn.microsoft.com/en-us/azure/azure-monitor/autoscale/autoscale-get-started) | Escala VMs, App Services; soporta escalado por métricas y programado; soporte para nube híbrida   |
+| **GCP**| [Managed Instance Groups](https://cloud.google.com/compute/docs/instance-groups), [GKE Cluster Autoscaler](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler) | Escala VMs de Compute Engine y nodos/pods de Kubernetes; soporta métricas personalizadas y escalado por HTTP load |
+| **IBM Cloud**| [VPC Auto Scaling](https://www.ibm.com/cloud/vpc), [Kubernetes Autoscaler](https://www.ibm.com/cloud/kubernetes-service/autoscaling) | Soporta VMs y clústeres de Kubernetes; integración con IBM Cloud Load Balancer                   |
+| **Oracle Cloud**| [Instance Pools & Autoscaling](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm) | Escala pools de cómputo; soporta escalado por métricas y programado; integración con OCI Load Balancer|
 
 > [Hydrolix: Autoscaling en la nube](https://hydrolix.io/glossary/autoscaling/)  
 > [IBM: ¿Qué es el Auto Scaling?](https://www.ibm.com/think/topics/autoscaling)
@@ -233,7 +228,6 @@ El autoscaling aporta capacidad elástica, mientras que el balanceo de carga ase
 - [Middleware: ¿Qué es Autoscaling?](https://middleware.io/blog/what-is-autoscaling/)
 - [Zesty: Glosario de Autoscaling](https://zesty.co/finops-glossary/autoscaling/)
 
-> **Idea Clave**  
-> El autoscaling permite que los entornos en la nube asignen recursos dinámicamente a medida que fluctúa la demanda, optimizando tanto el rendimiento como el costo. Es un pilar fundamental para organizaciones que implementan IA, big data o plataformas orientadas al cliente.
+> **Idea Clave**> El autoscaling permite que los entornos en la nube asignen recursos dinámicamente a medida que fluctúa la demanda, optimizando tanto el rendimiento como el costo. Es un pilar fundamental para organizaciones que implementan IA, big data o plataformas orientadas al cliente.
 
 **Para análisis técnicos más profundos o guías de implementación, consulte [DigitalOcean: Técnicas de Auto Scaling](https://www.digitalocean.com/community/tutorials/auto-scaling-techniques-guide) o [IBM: Documentación de Auto Scaling](https://www.ibm.com/think/topics/autoscaling).**

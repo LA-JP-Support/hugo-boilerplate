@@ -31,43 +31,34 @@ A data science project typically follows a structured, iterative lifecycle that 
 
 ### General Data Science Lifecycle
 
-1. **Problem Definition**  
-   - Clearly articulate the business or research problem and its potential impact.
+1. **Problem Definition**- Clearly articulate the business or research problem and its potential impact.
    - Identify stakeholders, necessary resources, and ethical considerations.
    - Example: Reducing employee churn in a manufacturing company by predicting voluntary departures ([DataScience-PM: Data Science Life Cycle](https://www.datascience-pm.com/data-science-life-cycle/)).
 
-2. **Data Collection / Ingestion**
-   - Source data from internal databases, APIs, web scraping, IoT sensors, etc.
+2. **Data Collection / Ingestion**- Source data from internal databases, APIs, web scraping, IoT sensors, etc.
    - Data may be structured (like sales records) or unstructured (like customer reviews).
    - Ensure data governance and privacy compliance ([IBM: Data Ingestion](https://www.ibm.com/topics/data-science)).
 
-3. **Data Storage and Integration**
-   - Store data using appropriate systems: relational databases, data warehouses, data lakes, or cloud storage.
+3. **Data Storage and Integration**- Store data using appropriate systems: relational databases, data warehouses, data lakes, or cloud storage.
    - Integrate disparate datasets and standardize formats using ETL (Extract, Transform, Load) processes ([IBM: ETL](https://www.ibm.com/think/topics/etl)).
 
-4. **Data Cleaning and Preparation**
-   - Address missing values, remove duplicates, correct errors, and handle outliers.
+4. **Data Cleaning and Preparation**- Address missing values, remove duplicates, correct errors, and handle outliers.
    - Perform feature engineering and selection to improve model performance ([What is Data Preprocessing?](https://www.geeksforgeeks.org/dbms/data-preprocessing-in-data-mining/)).
 
-5. **Exploratory Data Analysis (EDA)**
-   - Apply statistical summaries and visualizations to understand data distributions, relationships, and anomalies.
+5. **Exploratory Data Analysis (EDA)**- Apply statistical summaries and visualizations to understand data distributions, relationships, and anomalies.
    - Generate hypotheses and identify relevant features ([Exploratory Data Analysis](https://www.geeksforgeeks.org/data-analysis/what-is-exploratory-data-analysis/)).
 
-6. **Modeling and Algorithm Development**
-   - Choose and develop suitable machine learning or statistical models.
+6. **Modeling and Algorithm Development**- Choose and develop suitable machine learning or statistical models.
    - Train, validate, and test models using data splits to assess performance (train/test/validation).
    - Minimal Viable Model: Quickly create a basic, functioning model to collect feedback and iterate ([Minimal Viable Model](https://www.datascience-pm.com/data-science-life-cycle/#III_Minimal_Viable_Model)).
 
-7. **Deployment**
-   - Integrate models into production systems (e.g., web apps, dashboards).
+7. **Deployment**- Integrate models into production systems (e.g., web apps, dashboards).
    - Automate decision-making or provide actionable outputs to users or stakeholders.
 
-8. **Monitoring and Maintenance**
-   - Continuously track model performance in production.
+8. **Monitoring and Maintenance**- Continuously track model performance in production.
    - Update data pipelines and retrain models as business needs or data distributions change ([Data Science Ops](https://www.datascience-pm.com/data-science-life-cycle/#V_Data_Science_Ops)).
 
-9. **Communication and Visualization**
-   - Present findings using clear visualizations and reports.
+9. **Communication and Visualization**- Present findings using clear visualizations and reports.
    - Translate technical insights into actionable recommendations for decision-makers ([Data Visualization](https://www.geeksforgeeks.org/data-visualization/data-visualization-and-its-importance/)).
 
 ### Alternative Lifecycle Frameworks
@@ -189,23 +180,17 @@ Build a strong foundation in mathematics, programming, and communication skills.
 
 ## Frequently Asked Questions (FAQs)
 
-**Q: What is data science in simple terms?**  
-A: Data science is using technology and analytical methods to find patterns and make predictions from large sets of data ([IBM](https://www.ibm.com/topics/data-science)).
+**Q: What is data science in simple terms?**A: Data science is using technology and analytical methods to find patterns and make predictions from large sets of data ([IBM](https://www.ibm.com/topics/data-science)).
 
-**Q: What is the difference between data science and data analytics?**  
-A: Data analytics focuses on understanding what happened in the past, while data science includes building predictive models and algorithms to foresee or influence future outcomes ([Qlik](https://www.qlik.com/us/data-analytics/data-science-vs-data-analytics)).
+**Q: What is the difference between data science and data analytics?**A: Data analytics focuses on understanding what happened in the past, while data science includes building predictive models and algorithms to foresee or influence future outcomes ([Qlik](https://www.qlik.com/us/data-analytics/data-science-vs-data-analytics)).
 
-**Q: Is data science only about programming?**  
-A: No. Programming is essential, but so are statistics, domain knowledge, business understanding, and communication skills.
+**Q: Is data science only about programming?**A: No. Programming is essential, but so are statistics, domain knowledge, business understanding, and communication skills.
 
-**Q: What industries use data science?**  
-A: Healthcare, finance, retail, manufacturing, logistics, media, government, energy, transportation, and more.
+**Q: What industries use data science?**A: Healthcare, finance, retail, manufacturing, logistics, media, government, energy, transportation, and more.
 
-**Q: What educational background is needed for data science?**  
-A: Typically, a bachelor’s degree in computer science, statistics, mathematics, or a related field; advanced roles may require a master’s or PhD.
+**Q: What educational background is needed for data science?**A: Typically, a bachelor’s degree in computer science, statistics, mathematics, or a related field; advanced roles may require a master’s or PhD.
 
-**Q: How do data scientists ensure models are fair and unbiased?**  
-A: By curating training data, testing for bias, and continually monitoring and updating models to mitigate unintended consequences.
+**Q: How do data scientists ensure models are fair and unbiased?**A: By curating training data, testing for bias, and continually monitoring and updating models to mitigate unintended consequences.
 
 ## Further Learning and References
 

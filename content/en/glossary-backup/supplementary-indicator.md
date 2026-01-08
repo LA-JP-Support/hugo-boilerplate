@@ -19,27 +19,23 @@ This glossary entry delivers a comprehensive, detail-rich overview of the concep
 
 A supplementary indicator is an auxiliary metric or qualitative factor integrated into a performance assessment framework to provide context, validation, or additional perspective alongside the primary evaluation metric. While a primary indicator measures the core objective or outcome, supplementary indicators help explain, qualify, and support the interpretation of that outcome.
 
-**Key characteristics:**
-- **Secondary, not replacement:** They do not supplant the primary metric but enrich its meaning.
-- **Contextualization:** They clarify, validate, or elaborate on primary results, especially in cases of ambiguity or borderline outcomes.
-- **Flexible types:** Supplementary indicators can be quantitative (numeric scores), qualitative (user feedback, descriptive notes), or composite (aggregations of several types of data).
+**Key characteristics:**- **Secondary, not replacement:**They do not supplant the primary metric but enrich its meaning.
+- **Contextualization:**They clarify, validate, or elaborate on primary results, especially in cases of ambiguity or borderline outcomes.
+- **Flexible types:**Supplementary indicators can be quantitative (numeric scores), qualitative (user feedback, descriptive notes), or composite (aggregations of several types of data).
 
-**Example:**  
-In an AI-driven customer support chatbot, the primary indicator may be "resolution rate" (percentage of queries solved without escalation). Supplementary indicators could include "average response time," "user satisfaction score," or "number of escalations to human agents." These indicators enable more comprehensive monitoring of customer experience and operational efficiency.
+**Example:**In an AI-driven customer support chatbot, the primary indicator may be "resolution rate" (percentage of queries solved without escalation). Supplementary indicators could include "average response time," "user satisfaction score," or "number of escalations to human agents." These indicators enable more comprehensive monitoring of customer experience and operational efficiency.
 ## Related Terms and Distinctions
 
 Supplementary indicators are part of a broader family of evaluation metrics, each with distinct roles:
 
 | Term                      | Definition                                                                | Role in Evaluation                                   |
 |---------------------------|---------------------------------------------------------------------------|------------------------------------------------------|
-| **Primary Indicator**     | Main metric directly measuring the core objective                         | Central focus; determines overall success/failure    |
-| **Supplementary Indicator** | Additional measure providing context/validation/elaboration               | Secondary; supports and interprets primary outcomes  |
-| **Complementary Indicator** | Captures a different but related aspect, filling gaps in the primary      | Parallel; expands scope and multidimensional insight |
-| **Proxy Indicator**       | Indirect measure used when direct measurement is impractical               | Stand-in for primary when direct data unavailable    |
+| **Primary Indicator**| Main metric directly measuring the core objective                         | Central focus; determines overall success/failure    |
+| **Supplementary Indicator**| Additional measure providing context/validation/elaboration               | Secondary; supports and interprets primary outcomes  |
+| **Complementary Indicator**| Captures a different but related aspect, filling gaps in the primary      | Parallel; expands scope and multidimensional insight |
+| **Proxy Indicator**| Indirect measure used when direct measurement is impractical               | Stand-in for primary when direct data unavailable    |
 
-**Summary Table: Types of Evaluation Indicators**
-
-| Indicator Type     | Purpose                           | Example in AI Chatbot Evaluation        |
+**Summary Table: Types of Evaluation Indicators**| Indicator Type     | Purpose                           | Example in AI Chatbot Evaluation        |
 |--------------------|-----------------------------------|-----------------------------------------|
 | Primary            | Directly measures main goal       | Resolution rate                         |
 | Supplementary      | Contextualizes or validates       | Avg. Response Time, User Satisfaction   |
@@ -51,8 +47,7 @@ Supplementary indicators are part of a broader family of evaluation metrics, eac
 
 No single indicator captures the complexity of systems involving AI, automation, or human-machine collaboration. Over-reliance on primary metrics can obscure underlying issues or yield misleading conclusions.
 
-**Supplementary indicators:**
-- Validate the robustness and reliability of primary outcomes (e.g., confirming high accuracy with acceptable response latency).
+**Supplementary indicators:**- Validate the robustness and reliability of primary outcomes (e.g., confirming high accuracy with acceptable response latency).
 - Enable multi-dimensional analysis, supporting triangulation of findings for greater confidence.
 - Reveal new insights in ambiguous or edge cases, e.g., high resolution rate but poor user satisfaction indicating hidden pain points.
 
@@ -63,20 +58,16 @@ Supplementary indicators originate from evaluation theory in social sciences and
 
 ### Typical Scenarios
 
-1. **AI/ML Model Evaluation:**  
-   - *Primary indicator*: Exact match accuracy  
+1. **AI/ML Model Evaluation:**- *Primary indicator*: Exact match accuracy  
    - *Supplementary*: F1-score, recall, precision, user engagement, error typology
 
-2. **Automation Workflow Monitoring:**  
-   - *Primary*: Task completion rate  
+2. **Automation Workflow Monitoring:**- *Primary*: Task completion rate  
    - *Supplementary*: Average processing time, exception rate, manual intervention frequency
 
-3. **Human-AI Collaboration:**  
-   - *Primary*: Decision accuracy  
+3. **Human-AI Collaboration:**- *Primary*: Decision accuracy  
    - *Supplementary*: User trust scores, time-to-decision, frequency of AI overrides
 
-4. **Healthcare AI Recommendations:**  
-   - *Primary*: Diagnostic accuracy  
+4. **Healthcare AI Recommendations:**- *Primary*: Diagnostic accuracy  
    - *Supplementary*: Patient satisfaction, time-to-result, false positive/negative rates
 
 ### Workflow Integration
@@ -89,35 +80,28 @@ Supplementary indicators are integrated into evaluation dashboards, automated re
 
 ### Step-by-Step Guide
 
-**1. Clarify Evaluation Objectives**
-   - Define the core outcome(s) and processes.
+**1. Clarify Evaluation Objectives**- Define the core outcome(s) and processes.
    - Establish what the primary indicator can and cannot capture.
 
-**2. Identify Gaps and Contextual Needs**
-   - Analyze where the primary metric may be insufficient (timeliness, qualitative factors, user experience).
+**2. Identify Gaps and Contextual Needs**- Analyze where the primary metric may be insufficient (timeliness, qualitative factors, user experience).
    - Engage stakeholders to surface practical information needs.
 
-**3. Develop a List of Candidate Supplementary Indicators**
-   - Collaborate with domain experts and practitioners.
+**3. Develop a List of Candidate Supplementary Indicators**- Collaborate with domain experts and practitioners.
    - Reference established indicator libraries or frameworks (e.g., [scikit-learn documentation](https://scikit-learn.org/stable/)), [ISO/IEC 25010 for software quality](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010).
 
-**4. Assess Each Candidate Using Established Criteria**
-   - **Directness:** Linked to the supplementary aspect of interest.
-   - **Objectivity:** Measurable, unambiguous.
-   - **Adequacy:** Collectively covers the evaluation context.
-   - **Practicality:** Data is readily collectible at reasonable cost.
-   - **Reliability:** Data is stable and trustworthy.
+**4. Assess Each Candidate Using Established Criteria**- **Directness:**Linked to the supplementary aspect of interest.
+   - **Objectivity:**Measurable, unambiguous.
+   - **Adequacy:**Collectively covers the evaluation context.
+   - **Practicality:**Data is readily collectible at reasonable cost.
+   - **Reliability:**Data is stable and trustworthy.
 
-**5. Select and Prioritize**
-   - Choose a manageable number of high-value supplementary indicators.
+**5. Select and Prioritize**- Choose a manageable number of high-value supplementary indicators.
    - Avoid redundancy.
 
-**6. Operationalize and Integrate**
-   - Define data collection methods, frequency, and responsibility.
+**6. Operationalize and Integrate**- Define data collection methods, frequency, and responsibility.
    - Implement in dashboards and reporting tools.
 
-**7. Review and Refine**
-   - Periodically reassess indicators for continued relevance.
+**7. Review and Refine**- Periodically reassess indicators for continued relevance.
    - Adjust as objectives or contexts shift.
 ### Checklist for Supplementary Indicator Selection
 
@@ -132,44 +116,34 @@ Supplementary indicators are integrated into evaluation dashboards, automated re
 
 ### Example 1: AI Chatbot Performance
 
-**Scenario:**  
-A company deploys an AI-powered customer support chatbot with "resolution rate" as the primary indicator. Management observes that this metric does not fully reflect customer experience or operational efficiency.
+**Scenario:**A company deploys an AI-powered customer support chatbot with "resolution rate" as the primary indicator. Management observes that this metric does not fully reflect customer experience or operational efficiency.
 
-**Supplementary Indicators:**
-- *Average response time* (measures speed)
+**Supplementary Indicators:**- *Average response time* (measures speed)
 - *User satisfaction score* (qualitative feedback)
 - *Escalation rate* (frequency of hand-offs to humans)
 
-**Application:**  
-A high resolution rate with slow response times or low user satisfaction prompts targeted improvement beyond the surface metric.
+**Application:**A high resolution rate with slow response times or low user satisfaction prompts targeted improvement beyond the surface metric.
 ### Example 2: Machine Learning Model Assessment
 
-**Scenario:**  
-A healthcare provider deploys an ML model to recommend supplements based on patient screening.
+**Scenario:**A healthcare provider deploys an ML model to recommend supplements based on patient screening.
 
-**Primary Indicator:**  
-- *Exact match accuracy*
+**Primary Indicator:**- *Exact match accuracy*
 
-**Supplementary Indicators:**  
-- *F1-score* (balance of precision and recall)
+**Supplementary Indicators:**- *F1-score* (balance of precision and recall)
 - *Recall* (true positive sensitivity)
 - *Precision* (avoiding unnecessary recommendations)
 - *Support* (case count per supplement)
 
-**Application:**  
-High F1 and recall, even with moderate exact match, may indicate the model successfully identifies key needs, guiding further deployment or retraining.
+**Application:**High F1 and recall, even with moderate exact match, may indicate the model successfully identifies key needs, guiding further deployment or retraining.
 ### Example 3: Automation in Decision Making
 
-**Scenario:**  
-An enterprise automates invoice processing, measuring "percentage of invoices processed automatically" as the primary indicator.
+**Scenario:**An enterprise automates invoice processing, measuring "percentage of invoices processed automatically" as the primary indicator.
 
-**Supplementary Indicators:**  
-- *Exception rate* (manual interventions)
+**Supplementary Indicators:**- *Exception rate* (manual interventions)
 - *Processing time*
 - *Error rate* (accuracy of automated entries)
 
-**Application:**  
-High automation rates are only meaningful if exception and error rates remain low.
+**Application:**High automation rates are only meaningful if exception and error rates remain low.
 
 ### Use Case Table: Supplementary Indicators in AI-Driven Performance Monitoring
 
@@ -182,25 +156,19 @@ High automation rates are only meaningful if exception and error rates remain lo
 | Employee Analytics                  | Task Completion Rate     | Peer Reviews, Error Frequency, Training Hours         | Offers holistic view                       |
 ## Nuanced Discussion: Limitations and Considerations
 
-**Potential Redundancy:**  
-Excessive overlap with primary or complementary indicators can dilute insights.
+**Potential Redundancy:**Excessive overlap with primary or complementary indicators can dilute insights.
 
-**Conflicting Signals:**  
-Indicators may sometimes yield contradictory results, requiring domain expertise for interpretation.
+**Conflicting Signals:**Indicators may sometimes yield contradictory results, requiring domain expertise for interpretation.
 
-**Data Quality:**  
-The utility of supplementary indicators rests on the robustness and consistency of underlying data sources.
+**Data Quality:**The utility of supplementary indicators rests on the robustness and consistency of underlying data sources.
 
-**Resource Constraints:**  
-Collecting and maintaining supplementary indicators can require significant investment, particularly in manual or qualitative data.
+**Resource Constraints:**Collecting and maintaining supplementary indicators can require significant investment, particularly in manual or qualitative data.
 
-**Overcomplexity:**  
-Too many supplementary indicators may overwhelm users and obscure critical results.
+**Overcomplexity:**Too many supplementary indicators may overwhelm users and obscure critical results.
 
-**Ethical and Strategic Considerations:**  
-- **Transparency:** Disclose which indicators are used and why, for accountability.
-- **Bias and Fairness:** Avoid indicators that could introduce bias, especially in high-stakes domains (recruitment, healthcare).
-- **Privacy:** Ensure compliance with data protection regulations when collecting supplementary data (e.g., qualitative user feedback).
+**Ethical and Strategic Considerations:**- **Transparency:**Disclose which indicators are used and why, for accountability.
+- **Bias and Fairness:**Avoid indicators that could introduce bias, especially in high-stakes domains (recruitment, healthcare).
+- **Privacy:**Ensure compliance with data protection regulations when collecting supplementary data (e.g., qualitative user feedback).
 ## Advanced Perspectives: Composite Supplementary Indices
 
 Recent research explores AI-based composite supplementary indices (CSIs), which aggregate multiple indicators (economic, operational, technical) using machine learning (MLP, RNN, LSTM, GRU) to predict complex phenomena (e.g., business cycles). These indices serve as high-precision supplementary tools for decision support, policy, and strategic forecasting.

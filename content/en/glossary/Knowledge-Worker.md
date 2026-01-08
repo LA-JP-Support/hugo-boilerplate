@@ -108,12 +108,12 @@ The knowledge worker's workflow typically follows a structured yet flexible proc
 
 | Aspect | Knowledge Worker | Traditional Worker |
 |--------|------------------|-------------------|
-| **Primary Output** | Ideas, analysis, solutions, strategies | Physical products, completed tasks |
-| **Work Environment** | Office, remote, flexible locations | Factory, field, fixed locations |
-| **Tools and Equipment** | Computers, software, digital platforms | Machinery, hand tools, equipment |
-| **Skill Requirements** | Advanced education, specialized expertise | Technical training, manual skills |
-| **Performance Measurement** | Quality of insights, innovation, impact | Quantity produced, efficiency metrics |
-| **Autonomy Level** | High self-direction, flexible schedules | Structured processes, supervised work |
+| **Primary Output**| Ideas, analysis, solutions, strategies | Physical products, completed tasks |
+| **Work Environment**| Office, remote, flexible locations | Factory, field, fixed locations |
+| **Tools and Equipment**| Computers, software, digital platforms | Machinery, hand tools, equipment |
+| **Skill Requirements**| Advanced education, specialized expertise | Technical training, manual skills |
+| **Performance Measurement**| Quality of insights, innovation, impact | Quantity produced, efficiency metrics |
+| **Autonomy Level**| High self-direction, flexible schedules | Structured processes, supervised work |
 
 ## Challenges and Considerations
 

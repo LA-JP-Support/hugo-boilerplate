@@ -16,47 +16,35 @@ A Speech-to-Text Node is a foundational component in conversational AI, automati
 
 The node functions as a modular workflow component that receives audio input, processes it through an Automatic Speech Recognition (ASR) model, and outputs a transcript. This transcript can optionally include word-level timestamps, speaker labels, translations, or structured metadata for further processing.
 
-**Typical Workflow:**
-1. Audio input received (file upload, URL, or workflow variable)
+**Typical Workflow:**1. Audio input received (file upload, URL, or workflow variable)
 2. Processing via ASR model (OpenAI Whisper, Google Speech-to-Text, Azure Speech, Rev AI)
 3. Output transcript with optional metadata (timestamps, speaker labels, translations)
 
-**Role in Automation:**
-- Enables chatbots to process voice queries
+**Role in Automation:**- Enables chatbots to process voice queries
 - Transcribes meetings, interviews, and lectures for knowledge management
 - Automates content indexing and data extraction from voice interactions
 
 ## Key Capabilities
 
-**Automatic Speech Recognition (ASR)**  
-Converts audio to text using advanced models with high accuracy across diverse accents and audio conditions.
+**Automatic Speech Recognition (ASR)**Converts audio to text using advanced models with high accuracy across diverse accents and audio conditions.
 
-**Multilingual Support**  
-Transcribes speech in 50-125+ languages and dialects, depending on provider. Major models support global language coverage for international deployments.
+**Multilingual Support**Transcribes speech in 50-125+ languages and dialects, depending on provider. Major models support global language coverage for international deployments.
 
-**Translation**  
-Translates non-English speech into English or other supported languages in a single processing step, eliminating the need for separate translation workflows.
+**Translation**Translates non-English speech into English or other supported languages in a single processing step, eliminating the need for separate translation workflows.
 
-**Custom Prompt Instructions**  
-Accepts natural language instructions for transcription style, speaker labeling, terminology preferences, or error handling approaches.
+**Custom Prompt Instructions**Accepts natural language instructions for transcription style, speaker labeling, terminology preferences, or error handling approaches.
 
-**Flexible Audio Input**  
-Accepts file uploads, URLs, or variables from previous workflow steps, supporting diverse integration patterns.
+**Flexible Audio Input**Accepts file uploads, URLs, or variables from previous workflow steps, supporting diverse integration patterns.
 
-**Large File Handling**  
-Processes files up to provider-specific limits (typically 25 MB), with guidance on segmenting larger files at logical boundaries.
+**Large File Handling**Processes files up to provider-specific limits (typically 25 MB), with guidance on segmenting larger files at logical boundaries.
 
-**Timestamps & Speaker Diarization**  
-Optionally includes word-level or utterance-level timing and identifies individual speakers in multi-party conversations.
+**Timestamps & Speaker Diarization**Optionally includes word-level or utterance-level timing and identifies individual speakers in multi-party conversations.
 
-**Profanity Filtering**  
-Removes or masks offensive content according to configuration or model defaults.
+**Profanity Filtering**Removes or masks offensive content according to configuration or model defaults.
 
-**Custom Vocabulary & Model Adaptation**  
-Improves recognition of domain-specific terms through vocabulary lists and model fine-tuning.
+**Custom Vocabulary & Model Adaptation**Improves recognition of domain-specific terms through vocabulary lists and model fine-tuning.
 
-**Structured Output (JSON)**  
-Returns data in schemas suitable for downstream processing, including nested metadata.
+**Structured Output (JSON)**Returns data in schemas suitable for downstream processing, including nested metadata.
 
 ## How Speech-to-Text Nodes Work
 
@@ -66,9 +54,9 @@ The node receives an audio file or URL from user upload, cloud storage, or a pre
 
 ### Model Selection & Preprocessing
 
-**Choose ASR Provider:** Select from OpenAI Whisper, Google Speech-to-Text, Azure Speech Service, AssemblyAI, Deepgram, or other providers.
+**Choose ASR Provider:**Select from OpenAI Whisper, Google Speech-to-Text, Azure Speech Service, AssemblyAI, Deepgram, or other providers.
 
-**Configure Features:** Enable language detection, translation, timestamps, speaker identification, and custom prompts.
+**Configure Features:**Enable language detection, translation, timestamps, speaker identification, and custom prompts.
 
 ### Transcription Process
 
@@ -80,17 +68,14 @@ The node outputs the transcript in plain text or structured JSON format. Downstr
 
 ## Supported Audio Formats & File Limits
 
-**Audio Formats:**
-- M4A, MP3, WebM, MP4, MPGA, WAV, MPEG
+**Audio Formats:**- M4A, MP3, WebM, MP4, MPGA, WAV, MPEG
 - Provider support varies; verify compatibility with your chosen ASR service
 
-**File Size Limits:**
-- Typical maximum: 25 MB per file
+**File Size Limits:**- Typical maximum: 25 MB per file
 - Larger files must be split into segments ≤25 MB
 - Segment at logical sentence boundaries to preserve context and accuracy
 
-**Input Methods:**
-- Direct file upload
+**Input Methods:**- Direct file upload
 - URL reference to hosted audio
 - Variable reference from previous workflow steps
 
@@ -106,25 +91,21 @@ Some platforms accept only URLs for security and scalability reasons.
 
 ### Step-by-Step Configuration
 
-**1. Add Node to Workflow**  
-Open your automation builder and drag the Speech-to-Text or Audio to Text node into your workflow.
+**1. Add Node to Workflow**Open your automation builder and drag the Speech-to-Text or Audio to Text node into your workflow.
 
-**2. Configure Node Properties**
-- **Node Name:** Assign unique, descriptive name (e.g., "MeetingTranscription")
-- **Audio File Input:** Reference variable holding audio URL
-- **Model Selection:** Choose ASR provider and specific model
-- **Feature Toggles:** Enable translation, timestamps, speaker diarization, profanity filtering
+**2. Configure Node Properties**- **Node Name:**Assign unique, descriptive name (e.g., "MeetingTranscription")
+- **Audio File Input:**Reference variable holding audio URL
+- **Model Selection:**Choose ASR provider and specific model
+- **Feature Toggles:**Enable translation, timestamps, speaker diarization, profanity filtering
 
-**3. Set Custom Prompt Instructions**  
-Define transcription style, speaker labeling requirements, terminology preferences, or error handling approaches in natural language.
+**3. Set Custom Prompt Instructions**Define transcription style, speaker labeling requirements, terminology preferences, or error handling approaches in natural language.
 
 Example:
 ```
 Provide a clean transcript, omitting filler words, with clear speaker labels and correct technical terms.
 ```
 
-**4. Define JSON Schema for Output (Optional)**  
-Specify structured output schema for downstream processing:
+**4. Define JSON Schema for Output (Optional)**Specify structured output schema for downstream processing:
 
 ```json
 {
@@ -146,12 +127,10 @@ Specify structured output schema for downstream processing:
 }
 ```
 
-**5. Connect Success & Failure Paths**
-- **On Success:** Route to summarization, translation, or analysis nodes
-- **On Failure:** Route to error handling or fallback nodes
+**5. Connect Success & Failure Paths**- **On Success:**Route to summarization, translation, or analysis nodes
+- **On Failure:**Route to error handling or fallback nodes
 
-**6. Test and Validate**  
-Run workflow with sample inputs, review output for completeness and correctness, and adjust configuration as needed.
+**6. Test and Validate**Run workflow with sample inputs, review output for completeness and correctness, and adjust configuration as needed.
 
 ## Configuration Parameters
 
@@ -171,14 +150,11 @@ Run workflow with sample inputs, review output for completeness and correctness,
 
 ## Response Formats & Output
 
-**Plain Text Output:**  
-Default transcript as continuous text string.
+**Plain Text Output:**Default transcript as continuous text string.
 
-**Structured JSON Output:**  
-Includes transcript, timestamps, speaker labels, and confidence scores.
+**Structured JSON Output:**Includes transcript, timestamps, speaker labels, and confidence scores.
 
-**Example:**
-```json
+**Example:**```json
 {
   "transcript": "Hello, thank you for calling AcmeCorp. How may I assist you today?",
   "timestamps": [
@@ -191,57 +167,41 @@ Includes transcript, timestamps, speaker labels, and confidence scores.
 }
 ```
 
-**Advanced Features:**  
-Rev AI offers sentiment analysis, topic extraction, summarization, and forced alignment as additional output options.
+**Advanced Features:**Rev AI offers sentiment analysis, topic extraction, summarization, and forced alignment as additional output options.
 
 ## Common Use Cases
 
-**Meeting and Lecture Transcription**  
-Transcribe meetings, interviews, or lectures into searchable, indexable text for knowledge management and compliance.
+**Meeting and Lecture Transcription**Transcribe meetings, interviews, or lectures into searchable, indexable text for knowledge management and compliance.
 
-**Customer Support Automation**  
-Transcribe voice interactions for chatbots, CRM systems, and help desk platforms to enable automated routing and analysis.
+**Customer Support Automation**Transcribe voice interactions for chatbots, CRM systems, and help desk platforms to enable automated routing and analysis.
 
-**Subtitle and Caption Generation**  
-Generate subtitles for video content with timestamp alignment for accessibility and localization.
+**Subtitle and Caption Generation**Generate subtitles for video content with timestamp alignment for accessibility and localization.
 
-**Voice Command Processing**  
-Convert spoken commands into actionable text for voice-enabled applications and smart devices.
+**Voice Command Processing**Convert spoken commands into actionable text for voice-enabled applications and smart devices.
 
-**Audio-Based Translation**  
-Transcribe and translate multilingual audio in a single step for localization and accessibility.
+**Audio-Based Translation**Transcribe and translate multilingual audio in a single step for localization and accessibility.
 
-**Healthcare Documentation**  
-Convert medical dictations and consultations into patient records with specialized medical vocabulary support.
+**Healthcare Documentation**Convert medical dictations and consultations into patient records with specialized medical vocabulary support.
 
-**Call Center Analysis**  
-Transcribe recorded calls for quality assurance, compliance monitoring, and performance analytics.
+**Call Center Analysis**Transcribe recorded calls for quality assurance, compliance monitoring, and performance analytics.
 
-**Market Research**  
-Transcribe focus group or interview recordings for thematic analysis and reporting.
+**Market Research**Transcribe focus group or interview recordings for thematic analysis and reporting.
 
 ## Integration Best Practices
 
-**Use Context Variables**  
-Reference audio URLs or data dynamically to support flexible workflow design and reusability.
+**Use Context Variables**Reference audio URLs or data dynamically to support flexible workflow design and reusability.
 
-**Employ Prompt Engineering**  
-Tailor instructions for speaker labeling, terminology, or formatting to improve accuracy for specific use cases.
+**Employ Prompt Engineering**Tailor instructions for speaker labeling, terminology, or formatting to improve accuracy for specific use cases.
 
-**Implement Batch Processing**  
-For large volumes, utilize batch or asynchronous modes to optimize resource usage and reduce processing time.
+**Implement Batch Processing**For large volumes, utilize batch or asynchronous modes to optimize resource usage and reduce processing time.
 
-**Preprocess Audio Quality**  
-Ensure clear audio, minimal background noise, and compatible format before processing to maximize transcription accuracy.
+**Preprocess Audio Quality**Ensure clear audio, minimal background noise, and compatible format before processing to maximize transcription accuracy.
 
-**Segment Files Strategically**  
-Split long recordings at logical breaks (sentence boundaries, speaker changes) to maintain context when approaching size limits.
+**Segment Files Strategically**Split long recordings at logical breaks (sentence boundaries, speaker changes) to maintain context when approaching size limits.
 
-**Provide Custom Vocabulary**  
-Submit domain-specific term lists to improve recognition of technical jargon, product names, or industry terminology.
+**Provide Custom Vocabulary**Submit domain-specific term lists to improve recognition of technical jargon, product names, or industry terminology.
 
-**Configure Compliance Features**  
-Enable profanity filtering and select appropriate data residency options to meet regulatory requirements.
+**Configure Compliance Features**Enable profanity filtering and select appropriate data residency options to meet regulatory requirements.
 
 ## Error Handling & Monitoring
 
@@ -270,29 +230,26 @@ Enable profanity filtering and select appropriate data residency options to meet
 
 | Provider | Key Features | Languages | Notes |
 |----------|-------------|-----------|-------|
-| **OpenAI Whisper** | Multilingual, translation, robust ASR, profanity filtering | 50+ | Best for general-purpose transcription |
-| **Google Speech-to-Text** | 125+ languages, streaming & batch, diarization, adaptation | 125+ | Strong enterprise features |
-| **Azure Speech** | Real-time/batch, custom models, industry adaptation | 100+ | Deep Microsoft ecosystem integration |
-| **Rev AI** | Asynchronous & streaming, human and machine transcription | 58+ | Hybrid human/AI options |
-| **LiveKit** | Pluggable models (AssemblyAI, Cartesia, Deepgram) | Model-dependent | Flexible for real-time applications |
-| **VectorShift** | Node-based pipelines, LLM integration | Provider-dependent | Best for complex workflows |
+| **OpenAI Whisper**| Multilingual, translation, robust ASR, profanity filtering | 50+ | Best for general-purpose transcription |
+| **Google Speech-to-Text**| 125+ languages, streaming & batch, diarization, adaptation | 125+ | Strong enterprise features |
+| **Azure Speech**| Real-time/batch, custom models, industry adaptation | 100+ | Deep Microsoft ecosystem integration |
+| **Rev AI**| Asynchronous & streaming, human and machine transcription | 58+ | Hybrid human/AI options |
+| **LiveKit**| Pluggable models (AssemblyAI, Cartesia, Deepgram) | Model-dependent | Flexible for real-time applications |
+| **VectorShift**| Node-based pipelines, LLM integration | Provider-dependent | Best for complex workflows |
 
 ## Implementation Examples
 
 ### Example 1: Meeting Transcription (Kore.ai)
 
-**Prompt:**  
-"Use direct speech and highlight problem or challenge-related vocabulary."
+**Prompt:**"Use direct speech and highlight problem or challenge-related vocabulary."
 
-**Input:**
-```json
+**Input:**```json
 {
   "audioFile": "https://example.com/meeting-2024-06-10.mp3"
 }
 ```
 
-**Output:**
-```
+**Output:**```
 Speaker 1: We're experiencing recurring issues with our API gateway.
 Speaker 2: The main challenge is integrating external authentication.
 ```
@@ -334,20 +291,15 @@ session = AgentSession(
 
 ## Technical Considerations
 
-**Token Limits:**  
-Some ASR models have input token limits (e.g., Whisper: 224 tokens). Plan segmentation strategies for long-form content.
+**Token Limits:**Some ASR models have input token limits (e.g., Whisper: 224 tokens). Plan segmentation strategies for long-form content.
 
-**Edge Audio Cases:**  
-For files near size limits, segment at logical boundaries and maintain sentence integrity when splitting.
+**Edge Audio Cases:**For files near size limits, segment at logical boundaries and maintain sentence integrity when splitting.
 
-**Profanity and Content Filtering:**  
-Removal may be default for some models; verify configuration options for your use case.
+**Profanity and Content Filtering:**Removal may be default for some models; verify configuration options for your use case.
 
-**Speaker Diarization:**  
-Not universally supported across all providers—verify availability and accuracy for multi-speaker scenarios.
+**Speaker Diarization:**Not universally supported across all providers—verify availability and accuracy for multi-speaker scenarios.
 
-**Real-Time vs Batch:**  
-Choose between streaming (real-time) and batch processing based on latency requirements and cost optimization.
+**Real-Time vs Batch:**Choose between streaming (real-time) and batch processing based on latency requirements and cost optimization.
 
 ## References
 

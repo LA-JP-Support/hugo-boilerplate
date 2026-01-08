@@ -104,12 +104,12 @@ The system prompt implementation follows a structured workflow that begins befor
 
 | Aspect | Basic System Prompt | Advanced System Prompt | Enterprise System Prompt |
 |--------|-------------------|----------------------|------------------------|
-| **Complexity** | Simple role definition | Multi-layered instructions | Comprehensive framework |
-| **Customization** | Limited parameters | Moderate flexibility | Highly configurable |
-| **Safety Measures** | Basic guidelines | Enhanced protections | Enterprise-grade security |
-| **Context Handling** | Single-turn focus | Multi-turn awareness | Session-wide consistency |
-| **Integration** | Standalone operation | API-compatible | Full system integration |
-| **Maintenance** | Manual updates | Semi-automated | Automated management |
+| **Complexity**| Simple role definition | Multi-layered instructions | Comprehensive framework |
+| **Customization**| Limited parameters | Moderate flexibility | Highly configurable |
+| **Safety Measures**| Basic guidelines | Enhanced protections | Enterprise-grade security |
+| **Context Handling**| Single-turn focus | Multi-turn awareness | Session-wide consistency |
+| **Integration**| Standalone operation | API-compatible | Full system integration |
+| **Maintenance**| Manual updates | Semi-automated | Automated management |
 
 ## Challenges and Considerations
 

@@ -23,7 +23,7 @@ draft: false
 ---
 ## Introduction & Definition
 
-**Sandbox Mode** is an isolated, disposable testing environment used to execute flows, automations, software, or untrusted code with zero impact on production systems or live data. It acts as a digital playground for innovation, debugging, security analysis, and validation—enabling safe experimentation away from operational assets. The sandbox concept originated with the need to safely run untrusted code or software, allowing researchers, developers, and security analysts to observe, analyze, and iterate without risk of damaging core infrastructure or exposing sensitive data ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [TestGrid](https://testgrid.io/blog/sandbox-environment-for-testing/), [Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing)).
+**Sandbox Mode**is an isolated, disposable testing environment used to execute flows, automations, software, or untrusted code with zero impact on production systems or live data. It acts as a digital playground for innovation, debugging, security analysis, and validation—enabling safe experimentation away from operational assets. The sandbox concept originated with the need to safely run untrusted code or software, allowing researchers, developers, and security analysts to observe, analyze, and iterate without risk of damaging core infrastructure or exposing sensitive data ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [TestGrid](https://testgrid.io/blog/sandbox-environment-for-testing/), [Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing)).
 
 A sandbox provides a tightly controlled and isolated environment—often achieved through virtualization or [containerization](/en/glossary/containerization/)—so that whatever is executed inside cannot escape its boundaries, propagate errors, or leak information. This strict separation is critical for modern workflows in AI/ML, automation, cybersecurity, and software development.
 
@@ -171,8 +171,7 @@ Sandbox Mode relies on overlapping technologies for robust isolation and observa
 - Enable comprehensive logging for security and compliance ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing)).
 - Monitor resource consumption to avoid bottlenecks.
 
-**Pro Tips:**
-- For AI/LLM sandboxes, ensure dependencies match those required by generated code.
+**Pro Tips:**- For AI/LLM sandboxes, ensure dependencies match those required by generated code.
 - Prefer ephemeral sandboxes for quick experiments; persistent ones for extended projects.
 ## Challenges & Limitations
 
@@ -205,40 +204,32 @@ Sandbox Mode relies on overlapping technologies for robust isolation and observa
 
 | Concept                             | Isolation Level   | Typical Use Case                              | Overhead       |
 |--------------------------------------|------------------|-----------------------------------------------|----------------|
-| **Sandbox Mode**                     | High             | Safe, repeatable testing and experimentation  | Variable       |
-| **Virtual Machines (VMs)**           | Full OS          | OS-level app testing, security research       | High           |
-| **Containers**                       | Process/App      | Dev/test microservices, quick isolation       | Low/Medium     |
-| **Process Isolation**                | Per-process      | OS-level security, basic compartmentalization | Low            |
-| **Bare-metal Testing**               | None             | Hardware-level QA, performance benchmarks     | Highest        |
-| **UAT (User Acceptance Testing)**    | Process, not env | End-user validation in near-production        | N/A            |
+| **Sandbox Mode**| High             | Safe, repeatable testing and experimentation  | Variable       |
+| **Virtual Machines (VMs)**| Full OS          | OS-level app testing, security research       | High           |
+| **Containers**| Process/App      | Dev/test microservices, quick isolation       | Low/Medium     |
+| **Process Isolation**| Per-process      | OS-level security, basic compartmentalization | Low            |
+| **Bare-metal Testing**| None             | Hardware-level QA, performance benchmarks     | Highest        |
+| **UAT (User Acceptance Testing)**| Process, not env | End-user validation in near-production        | N/A            |
 
-**Analogy:** A VM is a whole house with locked doors; a container is a room with strong walls; a sandbox is a sealed playpen inside that room, for safe, disposable experimentation.
+**Analogy:**A VM is a whole house with locked doors; a container is a room with strong walls; a sandbox is a sealed playpen inside that room, for safe, disposable experimentation.
 
 ## Frequently Asked Questions (FAQs)
 
-**What’s the difference between Sandbox Mode and a regular test environment?**  
-A sandbox is designed for strict isolation and disposability—nothing affects production, and all artifacts are discarded after use. Regular test environments may not guarantee this.
+**What’s the difference between Sandbox Mode and a regular test environment?**A sandbox is designed for strict isolation and disposability—nothing affects production, and all artifacts are discarded after use. Regular test environments may not guarantee this.
 
-**Can I use production data in a sandbox?**  
-Best practice: use masked or synthetic data. If real data is necessary, anonymize it to prevent exposure ([Salesforce Data Mask](https://www.salesforce.com/platform/data-masking/)).
+**Can I use production data in a sandbox?**Best practice: use masked or synthetic data. If real data is necessary, anonymize it to prevent exposure ([Salesforce Data Mask](https://www.salesforce.com/platform/data-masking/)).
 
-**How often should I refresh my sandbox?**  
-Frequency depends on platform and use case—Developer sandboxes may refresh daily, Full sandboxes monthly ([Salesforce Guide](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
+**How often should I refresh my sandbox?**Frequency depends on platform and use case—Developer sandboxes may refresh daily, Full sandboxes monthly ([Salesforce Guide](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
 
-**What is the difference between Sandbox Mode and UAT?**  
-UAT (User Acceptance Testing) is a process. Sandbox Mode is the isolated environment enabling safe UAT and other tests.
+**What is the difference between Sandbox Mode and UAT?**UAT (User Acceptance Testing) is a process. Sandbox Mode is the isolated environment enabling safe UAT and other tests.
 
-**How do sandboxes help with security?**  
-They restrict risky code or behavior, enabling safe analysis and threat detection without risk to the host system ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
+**How do sandboxes help with security?**They restrict risky code or behavior, enabling safe analysis and threat detection without risk to the host system ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
 
-**Are sandboxes only for security?**  
-No, sandboxes are vital for development, QA, integration, training, and compliance as well.
+**Are sandboxes only for security?**No, sandboxes are vital for development, QA, integration, training, and compliance as well.
 
-**Do sandboxes use the same infrastructure as production?**  
-They often replicate production setups, but run on isolated compute resources for safety.
+**Do sandboxes use the same infrastructure as production?**They often replicate production setups, but run on isolated compute resources for safety.
 
-**What’s an AI code sandbox?**  
-A sandbox optimized for running AI-generated code, with strong isolation, dependency management, and advanced monitoring ([Modal AI Code Sandbox](https://modal.com/blog/what-is-ai-code-sandbox)).
+**What’s an AI code sandbox?**A sandbox optimized for running AI-generated code, with strong isolation, dependency management, and advanced monitoring ([Modal AI Code Sandbox](https://modal.com/blog/what-is-ai-code-sandbox)).
 
 ## Resources & Calls to Action
 

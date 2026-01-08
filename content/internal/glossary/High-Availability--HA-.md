@@ -21,11 +21,11 @@ Un sistema altamente disponible está diseñado para eliminar puntos únicos de 
 
 Las estrategias de Alta Disponibilidad se implementan donde el servicio ininterrumpido es esencial:
 
-- **Servir Modelos de IA:** Asegurando que los modelos entrenados permanezcan accesibles para inferencia sin interrupciones, de modo que aplicaciones como detección de fraude o motores de recomendación nunca se detengan.
-- **Pipelines de Datos:** Manteniendo la ingesta, transformación y almacenamiento de datos de forma continua, crucial para data lakes, analítica y flujos de trabajo de IA.
-- **Aplicaciones orientadas al usuario:** Impulsando plataformas críticas en salud, finanzas o transporte, donde las caídas pueden resultar en pérdida de datos, transacciones no realizadas o riesgos para la vida humana.
-- **Computación en el Borde e IoT:** Distribuyendo inteligencia entre dispositivos geográficamente dispersos, de modo que fallas locales no interrumpan servicios globales (ver [Aerospike: HA en Cloud Computing](https://aerospike.com/blog/what-is-high-availability/)).
-- **Entornos Cloud e Híbridos:** Asegurando failover transparente entre regiones o zonas de disponibilidad, estándar en implementaciones cloud-native de IA (ver [IBM: High Availability in Cloud](https://www.ibm.com/topics/cloud-computing)).
+- **Servir Modelos de IA:**Asegurando que los modelos entrenados permanezcan accesibles para inferencia sin interrupciones, de modo que aplicaciones como detección de fraude o motores de recomendación nunca se detengan.
+- **Pipelines de Datos:**Manteniendo la ingesta, transformación y almacenamiento de datos de forma continua, crucial para data lakes, analítica y flujos de trabajo de IA.
+- **Aplicaciones orientadas al usuario:**Impulsando plataformas críticas en salud, finanzas o transporte, donde las caídas pueden resultar en pérdida de datos, transacciones no realizadas o riesgos para la vida humana.
+- **Computación en el Borde e IoT:**Distribuyendo inteligencia entre dispositivos geográficamente dispersos, de modo que fallas locales no interrumpan servicios globales (ver [Aerospike: HA en Cloud Computing](https://aerospike.com/blog/what-is-high-availability/)).
+- **Entornos Cloud e Híbridos:**Asegurando failover transparente entre regiones o zonas de disponibilidad, estándar en implementaciones cloud-native de IA (ver [IBM: High Availability in Cloud](https://www.ibm.com/topics/cloud-computing)).
 
 Los Acuerdos de Nivel de Servicio (SLA) suelen formalizar la HA, especificando objetivos como “cinco nueves” (99,999%) de tiempo de actividad—equivalente a 5 minutos y 15 segundos de inactividad anual ([IBM: High Availability](https://www.ibm.com/think/topics/high-availability)).
 
@@ -36,20 +36,17 @@ Los Acuerdos de Nivel de Servicio (SLA) suelen formalizar la HA, especificando o
 La redundancia consiste en desplegar componentes duplicados o de respaldo—servidores, bases de datos, enlaces de red o almacenamiento—para que, si el primario falla, un secundario pueda tomar el control de inmediato ([F5](https://www.f5.com/glossary/high-availability)).  
 Tipos de redundancia:
 
-- **Redundancia de Hardware:** Múltiples servidores, fuentes de poder e interfaces de red.
-- **Redundancia de Software/Aplicación:** Varias instancias de servicio, réplicas de microservicios.
-- **Redundancia de Datos:** Replicación entre volúmenes de almacenamiento o regiones geográficas.
+- **Redundancia de Hardware:**Múltiples servidores, fuentes de poder e interfaces de red.
+- **Redundancia de Software/Aplicación:**Varias instancias de servicio, réplicas de microservicios.
+- **Redundancia de Datos:**Replicación entre volúmenes de almacenamiento o regiones geográficas.
 
-**Modelos de Redundancia:**
-
-| Modelo     | Descripción                                  | Caso de Uso Ejemplo     |
+**Modelos de Redundancia:**| Modelo     | Descripción                                  | Caso de Uso Ejemplo     |
 |------------|----------------------------------------------|------------------------|
 | N+1        | Un componente extra más allá del mínimo      | Inferencia en clúster  |
 | 2N         | Duplicación total de cada componente         | Finanzas, tráfico aéreo|
 | N+2, 2N+1  | Varios repuestos para mayor seguridad        | Salud, banca           |
 
-**Lectura adicional:**  
-[TechTarget: Redundancia](https://www.techtarget.com/whatis/definition/redundancy)
+**Lectura adicional:**[TechTarget: Redundancia](https://www.techtarget.com/whatis/definition/redundancy)
 
 ### 2. Punto Único de Falla (SPOF)
 
@@ -66,8 +63,8 @@ El balanceo de carga distribuye el tráfico o las cargas de trabajo entre varios
 ### 5. Replicación
 
 La replicación mantiene los datos sincronizados entre nodos o sitios.  
-- **Síncrona:** Replicación en tiempo real; sin pérdida de datos, pero puede afectar el rendimiento.
-- **Asíncrona:** Ligero retraso; mayor rendimiento, bajo riesgo de pérdida mínima de datos.
+- **Síncrona:**Replicación en tiempo real; sin pérdida de datos, pero puede afectar el rendimiento.
+- **Asíncrona:**Ligero retraso; mayor rendimiento, bajo riesgo de pérdida mínima de datos.
 
 [Memgraph: Cómo funciona la replicación](https://memgraph.com/docs/clustering/replication/how-replication-works)
 
@@ -81,28 +78,25 @@ El clustering agrupa múltiples servidores/nodos para actuar como un solo sistem
 
 ### Clústeres Activo-Activo
 
-- **Descripción:** Todos los nodos atienden solicitudes de forma activa; la carga se distribuye.
-- **Ventajas:** Rendimiento y tolerancia a fallos; sin recursos ociosos.
-- **Caso de Uso:** Inferencia de IA distribuida, analítica en tiempo real ([Aerospike: Clustering](https://aerospike.com/blog/database-clustering-use-cases/)).
-- **Consideraciones:** Requiere resolución avanzada de conflictos y sincronización de estado.
+- **Descripción:**Todos los nodos atienden solicitudes de forma activa; la carga se distribuye.
+- **Ventajas:**Rendimiento y tolerancia a fallos; sin recursos ociosos.
+- **Caso de Uso:**Inferencia de IA distribuida, analítica en tiempo real ([Aerospike: Clustering](https://aerospike.com/blog/database-clustering-use-cases/)).
+- **Consideraciones:**Requiere resolución avanzada de conflictos y sincronización de estado.
 
 ### Clústeres Activo-Pasivo
 
-- **Descripción:** Solo el nodo primario está activo; los de respaldo están listos para tomar el control.
-- **Ventajas:** Más sencillo de configurar; gestión de estado más fácil.
-- **Caso de Uso:** Backends de bases de datos, sistemas transaccionales.
-- **Consideraciones:** El failover introduce un breve retraso en el traspaso.
+- **Descripción:**Solo el nodo primario está activo; los de respaldo están listos para tomar el control.
+- **Ventajas:**Más sencillo de configurar; gestión de estado más fácil.
+- **Caso de Uso:**Backends de bases de datos, sistemas transaccionales.
+- **Consideraciones:**El failover introduce un breve retraso en el traspaso.
 
-**Despliegue de Clúster:**  
-- [Red Hat: Guía de Diseño de Sistemas HA](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/system_design_guide/assembly_overview-of-high-availability-system-design-guide)
+**Despliegue de Clúster:**- [Red Hat: Guía de Diseño de Sistemas HA](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/system_design_guide/assembly_overview-of-high-availability-system-design-guide)
 - [Memgraph: Despliegue de Clúster HA con Docker/Kubernetes](https://memgraph.com/docs/clustering/high-availability/setup-ha-cluster-k8s)
 
 ## Medición de Disponibilidad: Uptime y Métricas de Confiabilidad
 
 La disponibilidad suele medirse como el porcentaje de tiempo que el sistema está operativo.  
-- **Disponibilidad (%) = ((Tiempo Total - Tiempo Inactivo) / Tiempo Total) × 100**
-
-### Uptime (“Nueves”)
+- **Disponibilidad (%) = ((Tiempo Total - Tiempo Inactivo) / Tiempo Total) × 100**### Uptime (“Nueves”)
 
 | Disponibilidad (%) | Tiempo de Inactividad Anual   |
 |--------------------|------------------------------|
@@ -140,38 +134,33 @@ Periodo máximo tolerable en el que se pueden perder datos debido a una falla.
 | Técnicas           | Redundancia, failover, clustering     | Backups, geo-replicación, sitios calientes | Duplicación total de todos los componentes|
 | Ejemplo de sistema | Failover de servidor modelo de IA     | Restaurar data center tras desastre        | Sistemas de control de aeronaves         |
 
-- **HA:** Diseñado para resistir fallos rutinarios.
-- **DR:** Enfocado en la recuperación tras desastres o caídas de sitios completos.
-- **Tolerancia a Fallos:** Busca cero inactividad real, duplicando cada ruta crítica ([IBM: DR vs. HA](https://www.ibm.com/topics/disaster-recovery), [Nobl9: HA vs. Fault Tolerance](https://www.nobl9.com/service-availability/high-availability-vs-fault-tolerance)).
+- **HA:**Diseñado para resistir fallos rutinarios.
+- **DR:**Enfocado en la recuperación tras desastres o caídas de sitios completos.
+- **Tolerancia a Fallos:**Busca cero inactividad real, duplicando cada ruta crítica ([IBM: DR vs. HA](https://www.ibm.com/topics/disaster-recovery), [Nobl9: HA vs. Fault Tolerance](https://www.nobl9.com/service-availability/high-availability-vs-fault-tolerance)).
 
 ## Mejores Prácticas para Lograr Alta Disponibilidad
 
-1. **Eliminar Puntos Únicos de Falla:** Identificar y eliminar SPOFs en cada capa arquitectónica.
-2. **Implementar Redundancia:** Duplicar servidores, rutas de red, almacenamiento y energía.
-3. **Automatizar Failover y Recuperación:** Usar herramientas de orquestación y probar failover regularmente.
-4. **Balanceo de Carga:** Emplear balanceadores con chequeos de salud y redundancia.
-5. **Replicación y Backups de Datos:** Asegurar replicación en tiempo real o casi real; programar backups frecuentes.
-6. **Monitoreo Continuo:** Supervisar métricas, logs y eventos; implementar alertas.
-7. **Distribución Geográfica:** Repartir recursos entre regiones para soportar caídas de sitios.
-8. **Mantenimiento y Pruebas Regulares:** Parchar, actualizar y realizar simulacros de failover.
-9. **Documentación y Capacitación Clara:** Mantener runbooks operativos y capacitar equipos.
-10. **Formalizar SLAs:** Definir y hacer cumplir objetivos de disponibilidad, RTO y RPO.
+1. **Eliminar Puntos Únicos de Falla:**Identificar y eliminar SPOFs en cada capa arquitectónica.
+2. **Implementar Redundancia:**Duplicar servidores, rutas de red, almacenamiento y energía.
+3. **Automatizar Failover y Recuperación:**Usar herramientas de orquestación y probar failover regularmente.
+4. **Balanceo de Carga:**Emplear balanceadores con chequeos de salud y redundancia.
+5. **Replicación y Backups de Datos:**Asegurar replicación en tiempo real o casi real; programar backups frecuentes.
+6. **Monitoreo Continuo:**Supervisar métricas, logs y eventos; implementar alertas.
+7. **Distribución Geográfica:**Repartir recursos entre regiones para soportar caídas de sitios.
+8. **Mantenimiento y Pruebas Regulares:**Parchar, actualizar y realizar simulacros de failover.
+9. **Documentación y Capacitación Clara:**Mantener runbooks operativos y capacitar equipos.
+10. **Formalizar SLAs:**Definir y hacer cumplir objetivos de disponibilidad, RTO y RPO.
 
 [Memgraph: Mejores Prácticas HA](https://memgraph.com/docs/clustering/high-availability/best-practices)  
 [Nobl9: Ingeniería del Caos y Revisión Post-Incidente](https://www.nobl9.com/service-availability/incident-response-metrics)
 
 ## Ejemplos y Casos de Uso Reales
 
-- **Sistemas de Salud:**  
-  Las historias clínicas electrónicas (EHR) deben estar accesibles 24/7 para emergencias.
-- **Vehículos Autónomos:**  
-  La inferencia de IA a bordo nunca debe fallar en operación ([TechTarget: Self-driving Car](https://www.techtarget.com/searchenterpriseai/definition/driverless-car)).
-- **Servicios Financieros:**  
-  Las plataformas de trading exigen HA para procesar transacciones sin interrupciones.
-- **Implementaciones de IA a Gran Escala:**  
-  Modelos de IA en la nube servidos a través de clústeres redundantes y balanceados.
-- **IoT y Edge:**  
-  La infraestructura de ciudades inteligentes depende de HA para redes de sensores y respuesta en tiempo real ([Aerospike: HA in Cloud Computing](https://aerospike.com/blog/what-is-high-availability/)).
+- **Sistemas de Salud:**Las historias clínicas electrónicas (EHR) deben estar accesibles 24/7 para emergencias.
+- **Vehículos Autónomos:**La inferencia de IA a bordo nunca debe fallar en operación ([TechTarget: Self-driving Car](https://www.techtarget.com/searchenterpriseai/definition/driverless-car)).
+- **Servicios Financieros:**Las plataformas de trading exigen HA para procesar transacciones sin interrupciones.
+- **Implementaciones de IA a Gran Escala:**Modelos de IA en la nube servidos a través de clústeres redundantes y balanceados.
+- **IoT y Edge:**La infraestructura de ciudades inteligentes depende de HA para redes de sensores y respuesta en tiempo real ([Aerospike: HA in Cloud Computing](https://aerospike.com/blog/what-is-high-availability/)).
 
 
 ## Lectura adicional
@@ -185,17 +174,14 @@ Periodo máximo tolerable en el que se pueden perder datos debido a una falla.
 - [Cisco: ¿Qué es la Alta Disponibilidad?](https://www.cisco.com/site/us/en/learn/topics/networking/what-is-high-availability.html)
 - [F5: ¿Qué es la Alta Disponibilidad?](https://www.f5.com/glossary/high-availability)
 
-**Texto alternativo para diagramas:**  
-- *Diagrama de clúster activo-activo:* Varios servidores procesan solicitudes en paralelo; la falla de un nodo no interrumpe el servicio.  
+**Texto alternativo para diagramas:**- *Diagrama de clúster activo-activo:* Varios servidores procesan solicitudes en paralelo; la falla de un nodo no interrumpe el servicio.  
 - *Diagrama de clúster activo-pasivo:* El servidor principal atiende solicitudes, el respaldo está listo para hacerse cargo instantáneamente ante una falla.
-**Recursos técnicos adicionales:**
-- [Memgraph: Cómo funciona la Alta Disponibilidad](https://memgraph.com/docs/clustering/high-availability/how-high-availability-works)
+**Recursos técnicos adicionales:**- [Memgraph: Cómo funciona la Alta Disponibilidad](https://memgraph.com/docs/clustering/high-availability/how-high-availability-works)
 - [Red Hat: Diseño de Sistemas de Alta Disponibilidad](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/system_design_guide/assembly_overview-of-high-availability-system-design-guide)
 - [Aerospike: Medición de Alta Disponibilidad](https://aerospike.com/blog/what-is-high-availability/#measuring_high_availability)
 - [Nobl9: Métricas de Respuesta a Incidentes](https://www.nobl9.com/service-availability/incident-response-metrics)
 
-**Para guía de despliegue y operación:**  
-- [Configura un clúster HA usando Docker (Memgraph)](https://memgraph.com/docs/clustering/high-availability/setup-ha-cluster-docker)
+**Para guía de despliegue y operación:**- [Configura un clúster HA usando Docker (Memgraph)](https://memgraph.com/docs/clustering/high-availability/setup-ha-cluster-docker)
 - [HA con Kubernetes (Memgraph)](https://memgraph.com/docs/clustering/high-availability/setup-ha-cluster-k8s)
 - [Aerospike: Clustering](https://aerospike.com/blog/database-clustering-use-cases/)
 

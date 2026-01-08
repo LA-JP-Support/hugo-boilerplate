@@ -40,9 +40,7 @@ Large datasets and graphs (mind maps, network diagrams) employ minimaps for cont
 
 React Flow and Svelte Flow provide customizable `<MiniMap />` component for node-based editors, rendering each node as SVG element and visualizing current viewport relative to flow.
 
-**React Flow Example:**
-
-```jsx
+**React Flow Example:**```jsx
 import { ReactFlow, MiniMap } from '@xyflow/react';
 
 export default function Flow() {
@@ -54,9 +52,7 @@ export default function Flow() {
 }
 ```
 
-**Svelte Flow Example:**
-
-```svelte
+**Svelte Flow Example:**```svelte
 <script lang="ts">
   import { SvelteFlow, MiniMap } from '@xyflow/svelte';
 </script>
@@ -93,9 +89,7 @@ export default function Flow() {
 
 ### Customization Examples
 
-**Color by Node Type:**
-
-```jsx
+**Color by Node Type:**```jsx
 function nodeColor(node) {
   switch (node.type) {
     case 'input': return '#6ede87';
@@ -107,9 +101,7 @@ function nodeColor(node) {
 <MiniMap nodeColor={nodeColor} />
 ```
 
-**Custom Node Rendering:**
-
-```jsx
+**Custom Node Rendering:**```jsx
 function MiniMapNode({ x, y }) {
   return <circle cx={x} cy={y} r="50" />;
 }
@@ -117,9 +109,7 @@ function MiniMapNode({ x, y }) {
 <MiniMap nodeComponent={MiniMapNode} />
 ```
 
-**Interactive Minimap:**
-
-```jsx
+**Interactive Minimap:**```jsx
 <MiniMap pannable zoomable />
 ```
 
@@ -143,76 +133,69 @@ Complex network diagram uses minimap for navigating thousands of interconnected 
 
 ## Benefits
 
-**Spatial Awareness:** Maintain orientation within large workspaces preventing users from getting lost in complex flows.
+**Spatial Awareness:**Maintain orientation within large workspaces preventing users from getting lost in complex flows.
 
-**Efficient Navigation:** Jump instantly to distant sections without scrolling or searching, improving workflow efficiency.
+**Efficient Navigation:**Jump instantly to distant sections without scrolling or searching, improving workflow efficiency.
 
-**Context Preservation:** See overall structure while focusing on specific details, understanding how parts relate to whole.
+**Context Preservation:**See overall structure while focusing on specific details, understanding how parts relate to whole.
 
-**Visual Overview:** Quickly assess flow complexity, identify patterns, spot potential issues in layout or structure.
+**Visual Overview:**Quickly assess flow complexity, identify patterns, spot potential issues in layout or structure.
 
-**Reduced Cognitive Load:** External memory aid reducing mental effort required to track position within large systems.
+**Reduced Cognitive Load:**External memory aid reducing mental effort required to track position within large systems.
 
 ## Accessibility Considerations
 
-**Accessible Labels:** Set `ariaLabel` prop describing minimap's purpose for screen readers.
+**Accessible Labels:**Set `ariaLabel` prop describing minimap's purpose for screen readers.
 
-**Keyboard Navigation:** Ensure keyboard interaction support for users unable to use mouse.
+**Keyboard Navigation:**Ensure keyboard interaction support for users unable to use mouse.
 
-**Color Contrast:** Use color schemes with sufficient contrast for visually impaired users.
+**Color Contrast:**Use color schemes with sufficient contrast for visually impaired users.
 
-**Responsive Sizing:** Make minimap visible but unobtrusive across different screen sizes.
+**Responsive Sizing:**Make minimap visible but unobtrusive across different screen sizes.
 
-**Alternative Navigation:** Provide complementary navigation methods (search, breadcrumbs) for users who cannot effectively use visual minimaps.
+**Alternative Navigation:**Provide complementary navigation methods (search, breadcrumbs) for users who cannot effectively use visual minimaps.
 
 ## Best Practices
 
-**Appropriate Sizing:** Large enough to be useful but small enough not to obscure primary content.
+**Appropriate Sizing:**Large enough to be useful but small enough not to obscure primary content.
 
-**Clear Visual Hierarchy:** Distinguish between viewport indicator and content through color, opacity, borders.
+**Clear Visual Hierarchy:**Distinguish between viewport indicator and content through color, opacity, borders.
 
-**Performance Optimization:** Optimize rendering for large node counts using virtualization or simplified representations.
+**Performance Optimization:**Optimize rendering for large node counts using virtualization or simplified representations.
 
-**Consistent Positioning:** Place minimap in consistent location (typically bottom-right) matching user expectations.
+**Consistent Positioning:**Place minimap in consistent location (typically bottom-right) matching user expectations.
 
-**Progressive Disclosure:** Hide or collapse minimap when not needed, especially on smaller screens.
+**Progressive Disclosure:**Hide or collapse minimap when not needed, especially on smaller screens.
 
-**Visual Clarity:** Ensure minimap representation clearly corresponds to main view with consistent styling.
+**Visual Clarity:**Ensure minimap representation clearly corresponds to main view with consistent styling.
 
 ## Common Pitfalls
 
-**Too Small:** Minimap so small it's unusable, defeating purpose of providing overview.
+**Too Small:**Minimap so small it's unusable, defeating purpose of providing overview.
 
-**Too Large:** Obscures significant portion of working area, hindering primary task.
+**Too Large:**Obscures significant portion of working area, hindering primary task.
 
-**Poor Contrast:** Insufficient visual distinction between elements making minimap difficult to read.
+**Poor Contrast:**Insufficient visual distinction between elements making minimap difficult to read.
 
-**Missing Accessibility:** No keyboard access or screen reader support excluding users with disabilities.
+**Missing Accessibility:**No keyboard access or screen reader support excluding users with disabilities.
 
-**Performance Issues:** Unoptimized rendering causing lag or stuttering with large datasets.
+**Performance Issues:**Unoptimized rendering causing lag or stuttering with large datasets.
 
 ## Frequently Asked Questions
 
-**What is the main purpose of a minimap?**
-Provides condensed, navigable overview of large area helping users maintain context and move efficiently within complex interfaces.
+**What is the main purpose of a minimap?**Provides condensed, navigable overview of large area helping users maintain context and move efficiently within complex interfaces.
 
-**How does minimap enhance chatbot builder experience?**
-Allows creators to see entire automation flow at glance, quickly locate and edit nodes, avoid losing context in complex branching logic.
+**How does minimap enhance chatbot builder experience?**Allows creators to see entire automation flow at glance, quickly locate and edit nodes, avoid losing context in complex branching logic.
 
-**Can minimap appearance be customized?**
-Yes. Customize colors, shapes, node rendering, position, interactivity (panning, zooming), and more using configuration properties or custom components.
+**Can minimap appearance be customized?**Yes. Customize colors, shapes, node rendering, position, interactivity (panning, zooming), and more using configuration properties or custom components.
 
-**Is minimap interactive by default?**
-No. In React Flow and Svelte Flow, minimap is non-interactive unless `pannable` or `zoomable` properties set to `true`.
+**Is minimap interactive by default?**No. In React Flow and Svelte Flow, minimap is non-interactive unless `pannable` or `zoomable` properties set to `true`.
 
-**How does minimap improve efficiency?**
-Enables instant navigation across distant sections, provides visual structure identification, maintains spatial awareness when editing or debugging.
+**How does minimap improve efficiency?**Enables instant navigation across distant sections, provides visual structure identification, maintains spatial awareness when editing or debugging.
 
-**Is minimap accessible?**
-Depends on implementation. Use `ariaLabel` for screen readers, ensure keyboard navigation, provide strong color contrast.
+**Is minimap accessible?**Depends on implementation. Use `ariaLabel` for screen readers, ensure keyboard navigation, provide strong color contrast.
 
-**Can minimaps be used outside chatbot builders?**
-Yes. Widely used in code editors, data visualization, mapping applications, and games.
+**Can minimaps be used outside chatbot builders?**Yes. Widely used in code editors, data visualization, mapping applications, and games.
 
 ## References
 

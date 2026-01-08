@@ -42,19 +42,19 @@ Contemporary video support architectures leverage cloud computing, content deliv
 
 ## How Video Support Works
 
-The video support workflow begins with **video capture** where cameras or screen recording software convert visual information into digital video signals. The captured video undergoes **preprocessing** including noise reduction, color correction, and format standardization to optimize quality and compatibility.
+The video support workflow begins with **video capture**where cameras or screen recording software convert visual information into digital video signals. The captured video undergoes **preprocessing**including noise reduction, color correction, and format standardization to optimize quality and compatibility.
 
-**Video encoding** compresses the raw video data using sophisticated algorithms that reduce file size while preserving visual quality. The encoder selects appropriate compression parameters based on target bandwidth, device capabilities, and quality requirements.
+**Video encoding**compresses the raw video data using sophisticated algorithms that reduce file size while preserving visual quality. The encoder selects appropriate compression parameters based on target bandwidth, device capabilities, and quality requirements.
 
-**Network transmission** delivers the encoded video through various protocols and network infrastructures. The system selects optimal routing paths and may fragment video data into packets for efficient transmission across IP networks.
+**Network transmission**delivers the encoded video through various protocols and network infrastructures. The system selects optimal routing paths and may fragment video data into packets for efficient transmission across IP networks.
 
-**Quality adaptation** continuously monitors network conditions and adjusts video parameters in real-time. The system may switch between different quality levels, adjust frame rates, or modify compression settings to maintain smooth playback.
+**Quality adaptation**continuously monitors network conditions and adjusts video parameters in real-time. The system may switch between different quality levels, adjust frame rates, or modify compression settings to maintain smooth playback.
 
-**Content delivery** utilizes CDNs and edge servers to distribute video content efficiently. The system routes requests to the nearest available server and may pre-cache popular content to reduce loading times.
+**Content delivery**utilizes CDNs and edge servers to distribute video content efficiently. The system routes requests to the nearest available server and may pre-cache popular content to reduce loading times.
 
-**Client-side processing** handles video decoding, rendering, and playback on end-user devices. The client software manages buffering, synchronization, and user interface elements while adapting to device capabilities.
+**Client-side processing**handles video decoding, rendering, and playback on end-user devices. The client software manages buffering, synchronization, and user interface elements while adapting to device capabilities.
 
-**Error handling and recovery** mechanisms detect and correct transmission errors, packet loss, and connection interruptions. The system may request retransmission, interpolate missing frames, or switch to alternative delivery methods.
+**Error handling and recovery**mechanisms detect and correct transmission errors, packet loss, and connection interruptions. The system may request retransmission, interpolate missing frames, or switch to alternative delivery methods.
 
 **Example workflow**: A video conference call begins with camera capture, proceeds through real-time encoding, transmits via WebRTC protocols, adapts quality based on bandwidth, delivers through optimized network paths, and renders on participant devices with synchronized audio and video streams.
 

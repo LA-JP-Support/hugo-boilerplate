@@ -22,8 +22,7 @@ Structured prompts are organized, format-driven instructions for AI systems. The
 
 A structured prompt is a practice within **prompt engineering**—the discipline of designing, testing, and optimizing prompts to control and reliably guide AI model outputs.
 
-**Key characteristics:**
-- **Explicit sections**: Task, role, context, examples, output formatting, and constraints are each clearly specified.
+**Key characteristics:**- **Explicit sections**: Task, role, context, examples, output formatting, and constraints are each clearly specified.
 - **Machine-readability**: Structured prompts can be formatted for seamless automation and integration (e.g., with APIs, workflows, or in bulk processes).
 - **Reusability and repeatability**: Templates can be applied across tasks, ensuring consistent AI behavior and output.
 
@@ -297,29 +296,21 @@ Try the free [SPN Editor](https://structuredprompt.com/free-structured-prompt-no
 
 ### Key Principles
 
-1. **Be Explicit and Specific**
-   - Clearly state task, format, tone, and constraints.
+1. **Be Explicit and Specific**- Clearly state task, format, tone, and constraints.
 
-2. **Use Clear Labels and Sections**
-   - Structure prompts with labeled sections (Role, Task, Context, etc.).
+2. **Use Clear Labels and Sections**- Structure prompts with labeled sections (Role, Task, Context, etc.).
 
-3. **Provide Examples When Needed**
-   - Use few-shot examples for complex patterns.
+3. **Provide Examples When Needed**- Use few-shot examples for complex patterns.
 
-4. **Specify Output Structure**
-   - Require specific formats (JSON, CSV, Markdown).
+4. **Specify Output Structure**- Require specific formats (JSON, CSV, Markdown).
 
-5. **Define Constraints**
-   - Set word/character limits, style guides, forbidden content.
+5. **Define Constraints**- Set word/character limits, style guides, forbidden content.
 
-6. **Keep Prompts Modular and Reusable**
-   - Design for adaptation and repetition.
+6. **Keep Prompts Modular and Reusable**- Design for adaptation and repetition.
 
-7. **Iterate and Refine**
-   - Test, review, and version prompts based on outcomes.
+7. **Iterate and Refine**- Test, review, and version prompts based on outcomes.
 
-8. **Anticipate Ambiguities**
-   - Clarify areas open to multiple interpretations.
+8. **Anticipate Ambiguities**- Clarify areas open to multiple interpretations.
 
 ### Auditing and Governance
 
@@ -361,12 +352,10 @@ Machine-readable formats (JSON, XML) allow integration with:
 - [Prompting Guide: General Tips for Designing Prompts](https://promptingguide.ai/)
 - [Hypha: Optimizing AI Results with Structured Prompting](https://www.hypha.co/blog/optimizing-ai-results-with-structured-prompting)
 
-**For hands-on exploration, see:**
-- [Google Prompt Design Colab Notebook](https://colab.research.google.com/github/GoogleCloudPlatform/generative-ai/blob/main/gemini/prompts/intro_prompt_design.ipynb)
+**For hands-on exploration, see:**- [Google Prompt Design Colab Notebook](https://colab.research.google.com/github/GoogleCloudPlatform/generative-ai/blob/main/gemini/prompts/intro_prompt_design.ipynb)
 - [Structured Prompt Notation Editor (Free)](https://structuredprompt.com/free-structured-prompt-notation-editor/)
 
-**Further video resources:**
-- [ChatGPT Structured Prompt Helper Application Demos (YouTube)](https://structuredprompt.com/#demos)
+**Further video resources:**- [ChatGPT Structured Prompt Helper Application Demos (YouTube)](https://structuredprompt.com/#demos)
 
 This glossary delivers a full-spectrum, enterprise-grade resource on the theory and practice of structured prompts, integrating the latest frameworks, tools, and research from industry leaders and academic sources. For the most current templates, workflows, and best practices, reference the links provided throughout this document.
 

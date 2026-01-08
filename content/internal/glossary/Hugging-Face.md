@@ -15,9 +15,9 @@ url = "/internal/glossary/Hugging-Face/"
 
 Hugging Face es una plataforma de IA de código abierto y una comunidad global centrada en democratizar el aprendizaje automático y la inteligencia artificial. Ofrece un ecosistema integrado para compartir, descubrir y desplegar modelos de aprendizaje automático, conjuntos de datos y aplicaciones en áreas como [procesamiento del lenguaje natural (PLN)](/es/glossary/natural-language-processing--nlp-/), visión por computadora, audio e IA multimodal.
 
-- **Misión:** Hacer que la IA sea accesible y transparente para todos.
-- **Enfoque:** Bibliotecas de código abierto, colaboración en modelos y conjuntos de datos, y herramientas de despliegue sin fricciones.
-- **Impacto:** Hugging Face apoya a millones de usuarios, cuenta con más de 2 millones de modelos, más de 500,000 conjuntos de datos y más de 1 millón de aplicaciones de demostración (“Spaces”). Sus recursos ayudan a investigadores, desarrolladores y empresas a construir y desplegar soluciones de IA de última generación, acelerando la innovación y el desarrollo responsable de IA.
+- **Misión:**Hacer que la IA sea accesible y transparente para todos.
+- **Enfoque:**Bibliotecas de código abierto, colaboración en modelos y conjuntos de datos, y herramientas de despliegue sin fricciones.
+- **Impacto:**Hugging Face apoya a millones de usuarios, cuenta con más de 2 millones de modelos, más de 500,000 conjuntos de datos y más de 1 millón de aplicaciones de demostración (“Spaces”). Sus recursos ayudan a investigadores, desarrolladores y empresas a construir y desplegar soluciones de IA de última generación, acelerando la innovación y el desarrollo responsable de IA.
 
 Hugging Face funciona como un “GitHub para IA”, permitiendo que cualquiera colabore, contribuya o aproveche modelos y datos preentrenados para aplicaciones avanzadas de IA.
 
@@ -92,34 +92,28 @@ Recursos que requieren aprobación explícita de acceso por parte del autor, a m
 
 El Model Hub es la plataforma central de Hugging Face para compartir, descubrir y utilizar modelos de aprendizaje automático. Está diseñado para que modelos de alta calidad sean accesibles para todos, acelerando la investigación, el desarrollo y el despliegue en producción.
 
-**Funciones clave:**
-- Buscar y filtrar modelos por tarea (por ejemplo, generación de texto, clasificación), arquitectura (por ejemplo, BERT, GPT), conjunto de datos o idioma.
+**Funciones clave:**- Buscar y filtrar modelos por tarea (por ejemplo, generación de texto, clasificación), arquitectura (por ejemplo, BERT, GPT), conjunto de datos o idioma.
 - Fichas de modelo: Documentación completa sobre uso previsto, datos de entrenamiento, limitaciones, sesgos y licenciamiento.
 - Versionado: Cada actualización del modelo queda registrada, permitiendo reproducibilidad, retrocesos y colaboración.
 - Integración con las principales librerías de machine learning como Transformers, PyTorch, TensorFlow, Flax y JAX.
 - Widgets de modelos en el navegador para inferencia interactiva y demostraciones en vivo.
 - Estadísticas de descargas, etiquetas y metadatos para obtener información del ecosistema.
 
-**Beneficios:**
-- Reducir la necesidad de entrenar desde cero aprovechando modelos preentrenados.
+**Beneficios:**- Reducir la necesidad de entrenar desde cero aprovechando modelos preentrenados.
 - Acelerar la creación de prototipos y el despliegue en producción.
 - Fomentar una IA responsable y ética mediante documentación transparente.
 
-**Ejemplos populares de modelos:**
-- BERT, RoBERTa, GPT-2, GPT-3, GPT-4 (PLN)
+**Ejemplos populares de modelos:**- BERT, RoBERTa, GPT-2, GPT-3, GPT-4 (PLN)
 - Stable Diffusion, DeepSeek, Z-Image-Turbo (Visión/Multimodal)
 - Whisper (Voz)
 - LLMs de dominio específico (legal, biomédico, código)
 
-**Explorar el Model Hub:**  
-- [https://huggingface.co/models](https://huggingface.co/models)
+**Explorar el Model Hub:**- [https://huggingface.co/models](https://huggingface.co/models)
 
-**Subida y Compartición de Modelos:**  
-- [Guía para Subir Modelos](https://huggingface.co/docs/hub/en/models-uploading)
+**Subida y Compartición de Modelos:**- [Guía para Subir Modelos](https://huggingface.co/docs/hub/en/models-uploading)
 - [Checklist para Liberación de Modelos](https://huggingface.co/docs/hub/en/model-release-checklist)
 
-**Descarga y Uso de Modelos:**  
-- [Guía para Descargar Modelos](https://huggingface.co/docs/hub/en/models-downloading)
+**Descarga y Uso de Modelos:**- [Guía para Descargar Modelos](https://huggingface.co/docs/hub/en/models-downloading)
 - Ejemplo:
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -127,8 +121,7 @@ model = AutoModelForCausalLM.from_pretrained("gpt2")
 tokenizer = AutoTokenizer.from_pretrained("gpt2")
 ```
 
-**Widgets para Modelos:**  
-Incorpora demostraciones de modelos en páginas web o utiliza widgets en Spaces para pruebas instantáneas.
+**Widgets para Modelos:**Incorpora demostraciones de modelos en páginas web o utiliza widgets en Spaces para pruebas instantáneas.
 
 - [Documentación de Widgets de Modelos](https://huggingface.co/docs/hub/en/models-widgets)
 
@@ -136,34 +129,28 @@ Incorpora demostraciones de modelos en páginas web o utiliza widgets en Spaces 
 
 El Datasets Hub es un repositorio de conjuntos de datos seleccionados para investigación y producción en aprendizaje automático, diseñado para accesibilidad, reproducibilidad y cumplimiento normativo.
 
-**Funciones clave:**
-- Más de 500,000 conjuntos de datos en PLN, visión por computadora, audio y dominios multimodales.
+**Funciones clave:**- Más de 500,000 conjuntos de datos en PLN, visión por computadora, audio y dominios multimodales.
 - Fichas de conjunto de datos: Documentación sobre esquema, origen, uso previsto, licencia y limitaciones.
 - Control de versiones y metadatos para rastrear cambios y garantizar reproducibilidad.
 - Conjuntos de datos públicos y privados para satisfacer requisitos de privacidad y regulación.
 - Data Studio: Exploración interactiva y basada en navegador de los conjuntos de datos.
 - Procesamiento y transmisión de datos en tiempo real para ML a gran escala.
 
-**Integración:**
-- Librería Datasets de Hugging Face para acceso programático y procesamiento eficiente.
+**Integración:**- Librería Datasets de Hugging Face para acceso programático y procesamiento eficiente.
 - Soporte para múltiples formatos de datos (CSV, JSON, Parquet, imagen, audio, video).
 
-**Conjuntos de datos populares:**
-- Common Crawl, OpenWebText (entrenamiento LLM a escala web)
+**Conjuntos de datos populares:**- Common Crawl, OpenWebText (entrenamiento LLM a escala web)
 - SQuAD, MNLI, GLUE (benchmarks de PLN)
 - nvidia/PhysicalAI-Autonomous-Vehicles (visión)
 - openai/gdpval (evaluación PLN)
 
-**Explorar el Datasets Hub:**  
-- [https://huggingface.co/datasets](https://huggingface.co/datasets)
+**Explorar el Datasets Hub:**- [https://huggingface.co/datasets](https://huggingface.co/datasets)
 
-**Documentación de Datasets:**  
-- [Documentación de la Librería Datasets](https://huggingface.co/docs/datasets/index)
+**Documentación de Datasets:**- [Documentación de la Librería Datasets](https://huggingface.co/docs/datasets/index)
 - [Guía para Añadir Datasets](https://huggingface.co/docs/hub/en/datasets-adding)
 - [Fichas de Conjuntos de Datos](https://huggingface.co/docs/hub/en/datasets-cards)
 
-**Ejemplo de uso:**
-```python
+**Ejemplo de uso:**```python
 from datasets import load_dataset
 dataset = load_dataset("squad")
 print(dataset["train"][0])
@@ -173,28 +160,23 @@ print(dataset["train"][0])
 
 Spaces es la plataforma de Hugging Face para alojar, compartir y demostrar aplicaciones de aprendizaje automático y apps web interactivas. Spaces permite a individuos y equipos mostrar modelos y experimentos sin preocuparse por el backend o la infraestructura.
 
-**Características:**
-- Alojar apps interactivas creadas con Gradio, Streamlit, HTML/JS estático o [Docker](/es/glossary/docker/).
+**Características:**- Alojar apps interactivas creadas con Gradio, Streamlit, HTML/JS estático o [Docker](/es/glossary/docker/).
 - Integración directa con modelos y conjuntos de datos del Hub.
 - [Aceleración por GPU](/es/glossary/gpu-acceleration/) mediante ZeroGPU para demostraciones que requieren computación intensiva.
 - Opciones de almacenamiento persistente para apps que requieren retención de datos.
 - Modo de desarrollo de Spaces para desarrollo y depuración en vivo.
 - Participación de la comunidad mediante likes, etiquetas y compartición.
 
-**Beneficios:**
-- Mostrar investigaciones, demostraciones y prototipos a una audiencia global.
+**Beneficios:**- Mostrar investigaciones, demostraciones y prototipos a una audiencia global.
 - Recoger feedback y fomentar la colaboración.
 - Crear un portafolio profesional o compartir recursos de aprendizaje.
 
-**Ejemplos populares de Spaces:**
-- [Tongyi-MAI/Z-Image-Turbo (Generación de Imágenes)](https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo)
+**Ejemplos populares de Spaces:**- [Tongyi-MAI/Z-Image-Turbo (Generación de Imágenes)](https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo)
 - [Dream-wan2-2-faster-Pro (Generación de Video)](https://huggingface.co/spaces/dream2589632147/Dream-wan2-2-faster-Pro)
 
-**Explorar Spaces:**  
-- [https://huggingface.co/spaces](https://huggingface.co/spaces)
+**Explorar Spaces:**- [https://huggingface.co/spaces](https://huggingface.co/spaces)
 
-**Documentación de Spaces:**  
-- [Visión general de Spaces](https://huggingface.co/docs/hub/en/spaces-overview)
+**Documentación de Spaces:**- [Visión general de Spaces](https://huggingface.co/docs/hub/en/spaces-overview)
 - [Modo de Desarrollo de Spaces](https://huggingface.co/docs/hub/en/spaces-dev-mode)
 - [Mejoras de GPU en Spaces](https://huggingface.co/docs/hub/en/spaces-gpus)
 - [Almacenamiento en Spaces](https://huggingface.co/docs/hub/en/spaces-storage)
@@ -203,19 +185,16 @@ Spaces es la plataforma de Hugging Face para alojar, compartir y demostrar aplic
 
 Los proveedores de inferencia permiten el despliegue escalable y sin servidor de modelos de Hugging Face en infraestructuras en la nube gestionadas. Esto abstrae la complejidad del hardware, escalado y confiabilidad del sistema.
 
-**Cómo funciona:**
-- Selecciona un modelo del Hub.
+**Cómo funciona:**- Selecciona un modelo del Hub.
 - Elige un proveedor de inferencia (por ejemplo, SambaNova, Replicate, Together AI).
 - Despliega y sirve el modelo mediante endpoints de API REST, con autoescalado y monitorización.
 - Precios por uso o cuotas gratuitas con suscripción Pro.
 
-**Beneficios:**
-- Probar o desplegar modelos rápidamente sin gestionar infraestructura.
+**Beneficios:**- Probar o desplegar modelos rápidamente sin gestionar infraestructura.
 - Integrar inferencia ML en sistemas web/móvil/backend.
 - Optimizar para coste, velocidad, cumplimiento y localización geográfica.
 
-**Ejemplo de código:**
-```python
+**Ejemplo de código:**```python
 from huggingface_hub import InferenceClient
 
 client = InferenceClient()
@@ -230,22 +209,20 @@ print(result.generated_text)
 
 La librería Transformers es el paquete insignia de código abierto en Python de Hugging Face para trabajar con modelos transformers en diferentes dominios.
 
-**Funciones clave:**
-- Cargar, afinar y desplegar cientos de arquitecturas de modelos.
+**Funciones clave:**- Cargar, afinar y desplegar cientos de arquitecturas de modelos.
 - Compatibilidad con PyTorch, TensorFlow y JAX/Flax.
 - Utilidades para tokenización, entrenamiento distribuido, evaluación y cuantización.
 - Soporte multimodal (texto, visión, audio).
 - Integración con el Hub de Hugging Face para descarga/subida de modelos.
 - Tutoriales extensos y referencia de API.
 
-**Otras librerías destacadas:**
-- **Datasets:** Carga y procesamiento de datos rápida y eficiente en memoria.
-- **Tokenizers:** Tokenización de texto rápida y personalizable.
-- **Diffusers:** Implementa modelos de difusión de última generación para IA generativa.
-- **Safetensors:** Almacenamiento seguro y de alto rendimiento para pesos de modelos.
-- **PEFT:** Afinado eficiente en parámetros para grandes modelos de lenguaje.
-- **Gradio:** Crea y comparte interfaces de usuario impulsadas por ML en minutos.
-- **TRL:** Entrenamiento de algoritmos de refuerzo para modelos de lenguaje.
+**Otras librerías destacadas:**- **Datasets:**Carga y procesamiento de datos rápida y eficiente en memoria.
+- **Tokenizers:**Tokenización de texto rápida y personalizable.
+- **Diffusers:**Implementa modelos de difusión de última generación para IA generativa.
+- **Safetensors:**Almacenamiento seguro y de alto rendimiento para pesos de modelos.
+- **PEFT:**Afinado eficiente en parámetros para grandes modelos de lenguaje.
+- **Gradio:**Crea y comparte interfaces de usuario impulsadas por ML en minutos.
+- **TRL:**Entrenamiento de algoritmos de refuerzo para modelos de lenguaje.
 
 - [Documentación de Transformers](https://huggingface.co/docs/transformers)
 - [Documentación de Datasets](https://huggingface.co/docs/datasets)
@@ -260,21 +237,17 @@ La librería Transformers es el paquete insignia de código abierto en Python de
 
 El ecosistema de Hugging Face se basa en principios de código abierto y colaboración comunitaria.
 
-**Colaboración:**
-- Publica y comparte modelos, conjuntos de datos y Spaces.
+**Colaboración:**- Publica y comparte modelos, conjuntos de datos y Spaces.
 - Pull requests, control de versiones y debates para desarrollo colaborativo.
 - Más de 50,000 organizaciones, incluyendo Meta, Google, Amazon, Microsoft y AI2, usan Hugging Face para compartir y desplegar modelos.
 
-**Transparencia:**
-- Uso intensivo de fichas de modelos y conjuntos de datos para documentación.
+**Transparencia:**- Uso intensivo de fichas de modelos y conjuntos de datos para documentación.
 - Seguimiento de versiones, licenciamiento y debates abiertos para un uso responsable.
 
-**Contribuciones:**
-- Cualquier persona puede aportar modelos, datasets, mejoras o tutoriales.
+**Contribuciones:**- Cualquier persona puede aportar modelos, datasets, mejoras o tutoriales.
 - Foros de la comunidad, Discord y eventos (por ejemplo, semana de la comunidad JAX/Flax, talleres) fomentan el intercambio de conocimiento y mentoría.
 
-**Participa:**
-- [Regístrate](https://huggingface.co/join)
+**Participa:**- [Regístrate](https://huggingface.co/join)
 - [Guía Comunitaria](https://huggingface.co/code-of-conduct)
 - [Guía de Contenidos](https://huggingface.co/content-guidelines)
 - [Foros de la Comunidad](https://discuss.huggingface.co/)
@@ -346,22 +319,19 @@ trainer.train()
 
 ### Fragmentos de Código
 
-**Descargar un modelo:**
-```python
+**Descargar un modelo:**```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 model = AutoModelForCausalLM.from_pretrained("gpt2")
 tokenizer = AutoTokenizer.from_pretrained("gpt2")
 ```
 
-**Acceder a un conjunto de datos:**
-```python
+**Acceder a un conjunto de datos:**```python
 from datasets import load_dataset
 dataset = load_dataset("squad")
 print(dataset["train"][0])
 ```
 
-**Ejemplo de inferencia vía API REST:**
-```python
+**Ejemplo de inferencia vía API REST:**```python
 import requests
 API_URL = "https://api-inference.huggingface.co/models/gpt2"
 headers = {"Authorization": "Bearer YOUR_HUGGINGFACE_TOKEN"}

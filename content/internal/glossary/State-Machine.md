@@ -28,8 +28,7 @@ En el desarrollo de chatbots y automatización, las máquinas de estados rastrea
 
 Un estado es una instantánea del sistema en un momento dado. En chatbots, los estados pueden incluir `SALUDO`, `PEDIR_INFORMACIÓN`, `PROCESANDO`, `OFRECER_SOLUCIÓN` o `DESPEDIDA`. El sistema siempre se encuentra exactamente en un estado en cada momento.
 
-**Ejemplo:**
-- Estados de procesamiento de pedido: `Pendiente`, `Enviado`, `Entregado`, `Devuelto`
+**Ejemplo:**- Estados de procesamiento de pedido: `Pendiente`, `Enviado`, `Entregado`, `Devuelto`
 - Estados de chatbot: `SALUDO`, `PEDIR_PROBLEMA`, `PROCESAR_PROBLEMA`, `OFRECER_SOLUCIÓN`, `DESPEDIDA`
 - Estados de reproductor de música: `Pausado`, `Reproduciendo`, `Detenido`
 
@@ -37,8 +36,7 @@ Un estado es una instantánea del sistema en un momento dado. En chatbots, los e
 
 Los eventos son disparadores—entradas, acciones u ocurrencias—que provocan transiciones de estado. Los eventos pueden ser mensajes de usuario, acciones del sistema, temporizadores o señales externas.
 
-**Ejemplo:**
-- `usuario dice hola`
+**Ejemplo:**- `usuario dice hola`
 - `artículo enviado`
 - `botón de reproducir presionado`
 - `ocurrió tiempo de espera`
@@ -47,13 +45,11 @@ Los eventos son disparadores—entradas, acciones u ocurrencias—que provocan t
 
 Una transición define el movimiento de un estado a otro, provocado por un evento. Las transiciones son direccionales y suelen estar etiquetadas con el evento que las desencadena.
 
-**Ejemplo:**
-- De `Pendiente` (estado), ante `artículo enviado` (evento), a `Enviado` (estado):
+**Ejemplo:**- De `Pendiente` (estado), ante `artículo enviado` (evento), a `Enviado` (estado):
 
   `Pendiente` + `artículo enviado` → `Enviado`
 
-**Diagrama:**  
-Las máquinas de estados suelen visualizarse como círculos (estados) conectados por flechas (transiciones), con cada flecha etiquetada con el evento que causa la transición.
+**Diagrama:**Las máquinas de estados suelen visualizarse como círculos (estados) conectados por flechas (transiciones), con cada flecha etiquetada con el evento que causa la transición.
 
 ## Tipos de Máquinas de Estados
 
@@ -64,12 +60,11 @@ Una Máquina de Estados Finita es el tipo estándar, con un número limitado y c
 
 Las máquinas de estados jerárquicas (también llamadas statecharts) permiten la anidación de estados. Un estado padre puede encapsular múltiples estados hijos, reduciendo la complejidad en sistemas grandes.
 
-**Ejemplo:**  
-Un estado padre `Reserva` puede incluir `ReservaVuelo`, `ReservaHotel` y `ReservaAuto` como subestados.
+**Ejemplo:**Un estado padre `Reserva` puede incluir `ReservaVuelo`, `ReservaHotel` y `ReservaAuto` como subestados.
 ### Deterministas vs. No Deterministas
 
-- **Determinista:** Cada combinación de estado y entrada conduce exactamente a un único siguiente estado posible.
-- **No determinista:** Pueden existir múltiples transiciones posibles para un estado y entrada dados; se utiliza más comúnmente en modelos teóricos o reconocimiento de patrones.
+- **Determinista:**Cada combinación de estado y entrada conduce exactamente a un único siguiente estado posible.
+- **No determinista:**Pueden existir múltiples transiciones posibles para un estado y entrada dados; se utiliza más comúnmente en modelos teóricos o reconocimiento de patrones.
 
 ## Cómo se Usan las Máquinas de Estados
 
@@ -77,40 +72,33 @@ Un estado padre `Reserva` puede incluir `ReservaVuelo`, `ReservaHotel` y `Reserv
 
 Las máquinas de estados gestionan la “memoria” y el flujo de las conversaciones de los chatbots. Cada estado conversacional refleja una etapa única (por ejemplo, saludo, recolección de detalles del problema, procesamiento, oferta de solución). Los eventos—típicamente entradas del usuario—disparan las transiciones.
 
-**Ejemplo:**  
-Un chatbot de soporte podría transicionar de `SALUDO` a `PEDIR_PROBLEMA` al recibir un saludo del usuario.
+**Ejemplo:**Un chatbot de soporte podría transicionar de `SALUDO` a `PEDIR_PROBLEMA` al recibir un saludo del usuario.
 ### Automatización y Gestión de Flujos de Trabajo
 
 Las máquinas de estados se utilizan ampliamente en automatización de procesos y gestión de flujos de trabajo, representando pasos como `Pendiente`, `Aprobado`, `Enviado`, etc. Eventos como “aprobado” o “artículo enviado” avanzan el flujo de trabajo provocando transiciones.
 ### Otros Dominios
 
-- **IA en Juegos:** Modela comportamientos de NPC (inactivo, patrulla, perseguir, atacar).
-- **Robótica:** Controla secuencias (mover, recoger, colocar, recargar).
-- **Automatización de Procesos Empresariales:** Gestiona aprobaciones, escalados y enrutamiento de tareas.
+- **IA en Juegos:**Modela comportamientos de NPC (inactivo, patrulla, perseguir, atacar).
+- **Robótica:**Controla secuencias (mover, recoger, colocar, recargar).
+- **Automatización de Procesos Empresariales:**Gestiona aprobaciones, escalados y enrutamiento de tareas.
 
 ## Ejemplos Prácticos
 
 ### Ejemplo 1: Procesamiento de Pedidos
 
-**Estados:**  
-`Pendiente` → `Enviado` → `Entregado` → `Devuelto`
+**Estados:**`Pendiente` → `Enviado` → `Entregado` → `Devuelto`
 
-**Transiciones:**  
-- `Pendiente` + `artículo enviado` → `Enviado`
+**Transiciones:**- `Pendiente` + `artículo enviado` → `Enviado`
 - `Enviado` + `artículo entregado` → `Entregado`
 - `Entregado` + `artículo devuelto` → `Devuelto`
 
-**Diagrama:**  
-[Ejemplo de Estados de Pedido](https://stately.ai/blog/2023-10-02-what-is-a-state-machine/order-states-light.png)
+**Diagrama:**[Ejemplo de Estados de Pedido](https://stately.ai/blog/2023-10-02-what-is-a-state-machine/order-states-light.png)
 
 ### Ejemplo 2: Conversación de Chatbot
 
-**Estados:**  
-`SALUDO` → `PEDIR_PROBLEMA` → `PROCESAR_PROBLEMA` → `OFRECER_SOLUCIÓN` → `SEGUIMIENTO` → `DESPEDIDA`
+**Estados:**`SALUDO` → `PEDIR_PROBLEMA` → `PROCESAR_PROBLEMA` → `OFRECER_SOLUCIÓN` → `SEGUIMIENTO` → `DESPEDIDA`
 
-**Implementación de muestra en Python:**
-
-```python
+**Implementación de muestra en Python:**```python
 class ChatbotFSM:
     def __init__(self):
         self.state = 'SALUDO'
@@ -138,8 +126,7 @@ class ChatbotFSM:
 
 ### Ejemplo 4: Flujo de Reserva de Viaje
 
-**Estados:**  
-`Inactivo`, `Reservando Vuelo`, `Reservando Hotel`, `Reservando Auto`, `Confirmación`, `Error`
+**Estados:**`Inactivo`, `Reservando Vuelo`, `Reservando Hotel`, `Reservando Auto`, `Confirmación`, `Error`
 
 Eventos como “vuelo reservado”, “error al reservar hotel” o “tiempo de espera” disparan transiciones. Los estados jerárquicos pueden emplearse para manejo de errores.
 
@@ -147,31 +134,28 @@ Eventos como “vuelo reservado”, “error al reservar hotel” o “tiempo de
 
 ### Diseño Modular
 
-- **Separación de Responsabilidades:** Implementa cada estado como una función o clase separada para facilitar el mantenimiento.
-- **Mapeo de Manejadores de Estado:** Usa diccionarios u objetos para mapear estados a funciones manejadoras.
+- **Separación de Responsabilidades:**Implementa cada estado como una función o clase separada para facilitar el mantenimiento.
+- **Mapeo de Manejadores de Estado:**Usa diccionarios u objetos para mapear estados a funciones manejadoras.
 
 ### Persistencia de Estado y Contexto
 
-- **Gestión de Sesiones:** Almacena el estado actual y el contexto (como entradas del usuario, historial de conversación) usando almacenamiento en memoria o una base de datos.
+- **Gestión de Sesiones:**Almacena el estado actual y el contexto (como entradas del usuario, historial de conversación) usando almacenamiento en memoria o una base de datos.
 
-**Ejemplo:**
-```python
+**Ejemplo:**```python
 user_sessions = {user_id: {'state': 'PROCESAR_PROBLEMA', 'issue': 'problema de inicio de sesión'}}
 ```
 (Fuente: [Tencent Cloud](https://www.tencentcloud.com/techpedia/127736))
 
 ### Herramientas y Librerías
 
-- **[XState](https://stately.ai/docs/xstate):** Librería JavaScript/TypeScript para máquinas de estados y statecharts.
-- **[Stately Editor](https://state.new):** Editor visual para diseñar y exportar máquinas de estados.
-- **[Mermaid](https://mermaid-js.github.io/mermaid/):** Herramienta de diagramación para statecharts.
-- **Librerías específicas de lenguaje** para Python, Java, etc.
+- **[XState](https://stately.ai/docs/xstate):**Librería JavaScript/TypeScript para máquinas de estados y statecharts.
+- **[Stately Editor](https://state.new):**Editor visual para diseñar y exportar máquinas de estados.
+- **[Mermaid](https://mermaid-js.github.io/mermaid/):**Herramienta de diagramación para statecharts.
+- **Librerías específicas de lenguaje**para Python, Java, etc.
 
 ### Fragmento de Código de Ejemplo
 
-**Esqueleto FSM en Python:**
-
-```python
+**Esqueleto FSM en Python:**```python
 class StateMachine:
     def __init__(self, initial_state):
         self.state = initial_state
@@ -187,8 +171,7 @@ class StateMachine:
             print("Transición inválida")
 ```
 
-**Ejemplo XState:**
-```javascript
+**Ejemplo XState:**```javascript
 import { createMachine } from 'xstate';
 const orderMachine = createMachine({
   initial: 'pendiente',
@@ -204,23 +187,22 @@ const orderMachine = createMachine({
 
 ## Ventajas de las Máquinas de Estados
 
-- **Claridad:** Los diagramas de estados visualizan la lógica y mejoran la comunicación.
-- **Consistencia:** La definición explícita de estados y transiciones previene comportamientos inesperados.
-- **Modularidad:** La lógica de cada estado está aislada, facilitando el mantenimiento y la escalabilidad.
-- **Pruebas Exhaustivas:** Todos los caminos pueden enumerarse y probarse.
-- **Contexto Explícito:** Mantiene de forma confiable el estado de la conversación o flujo de trabajo.
-- **Previsibilidad:** Las transiciones deterministas aseguran resultados definidos.
+- **Claridad:**Los diagramas de estados visualizan la lógica y mejoran la comunicación.
+- **Consistencia:**La definición explícita de estados y transiciones previene comportamientos inesperados.
+- **Modularidad:**La lógica de cada estado está aislada, facilitando el mantenimiento y la escalabilidad.
+- **Pruebas Exhaustivas:**Todos los caminos pueden enumerarse y probarse.
+- **Contexto Explícito:**Mantiene de forma confiable el estado de la conversación o flujo de trabajo.
+- **Previsibilidad:**Las transiciones deterministas aseguran resultados definidos.
 
 ## Desafíos y Limitaciones
 
-- **Complejidad:** Un gran número de estados y transiciones puede causar explosión de estados, dificultando el manejo de diagramas.
-- **Escalabilidad:** Sistemas abiertos o muy dinámicos pueden requerir máquinas de estados jerárquicas o composicionales.
-- **Flexibilidad:** Los modelos estrictos de estados pueden ser rígidos; flujos creativos o no lineales pueden ser más difíciles de captar.
-- **Integración:** Combinar con bases de datos, APIs o servicios externos agrega complejidad.
-- **Limitaciones de Contexto:** En bots impulsados por LLM, el tamaño de la ventana de contexto puede limitar el recuerdo de estados; la gestión explícita del contexto es esencial.
+- **Complejidad:**Un gran número de estados y transiciones puede causar explosión de estados, dificultando el manejo de diagramas.
+- **Escalabilidad:**Sistemas abiertos o muy dinámicos pueden requerir máquinas de estados jerárquicas o composicionales.
+- **Flexibilidad:**Los modelos estrictos de estados pueden ser rígidos; flujos creativos o no lineales pueden ser más difíciles de captar.
+- **Integración:**Combinar con bases de datos, APIs o servicios externos agrega complejidad.
+- **Limitaciones de Contexto:**En bots impulsados por LLM, el tamaño de la ventana de contexto puede limitar el recuerdo de estados; la gestión explícita del contexto es esencial.
 
-**Estrategias de Mitigación:**
-- Utiliza manejadores de estado modulares y máquinas de estados jerárquicas.
+**Estrategias de Mitigación:**- Utiliza manejadores de estado modulares y máquinas de estados jerárquicas.
 - Persiste el contexto en almacenamiento externo.
 - Refactoriza regularmente los diagramas de estados para mantener la complejidad manejable.
 
@@ -232,9 +214,9 @@ const orderMachine = createMachine({
 - Los statecharts agregan características como estados paralelos, historial y acciones de entrada/salida.
 ### Integración con Aprendizaje Automático
 
-- **Modelos Híbridos:** Combina máquinas de estados con modelos de ML para transiciones adaptativas (por ejemplo, ML clasifica la intención del usuario; la máquina de estados gestiona el flujo de la conversación).
-- **Aprendizaje por Refuerzo:** Los agentes pueden aprender transiciones óptimas a partir de la experiencia.
-- **Lógica de Transición Dinámica:** Los modelos de ML pueden predecir el siguiente estado en función de contexto rico.
+- **Modelos Híbridos:**Combina máquinas de estados con modelos de ML para transiciones adaptativas (por ejemplo, ML clasifica la intención del usuario; la máquina de estados gestiona el flujo de la conversación).
+- **Aprendizaje por Refuerzo:**Los agentes pueden aprender transiciones óptimas a partir de la experiencia.
+- **Lógica de Transición Dinámica:**Los modelos de ML pueden predecir el siguiente estado en función de contexto rico.
 ### Generación Dinámica de Persona
 
 - En chatbots complejos, las máquinas de estados pueden cambiar la personalidad o rol del bot según el contexto (por ejemplo, de agente general a especialista).

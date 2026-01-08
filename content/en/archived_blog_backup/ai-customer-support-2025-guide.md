@@ -71,7 +71,7 @@ Intuit leveraged Amazon Connect to build an integrated customer contact center. 
 
 ### 3. Joyful Hands (Vietnam - Beauty & Health Products Startup)
 
-Hanoi-based beauty and health products startup **Joyful Hands** faced challenges handling customer inquiries in Vietnamese, Thai, and English. They implemented **BotStar's multilingual [AI chatbot](/en/glossary/AI-chatbot/)** to establish automated response capabilities in each language. As a result, [Cart Abandonment Rate](/en/glossary/Cart-Abandonment-Rate/) **decreased by 35%**, automated inquiry handling improved **from 55% to 89%**, and positive customer reviews increased regarding response speed and conversation ease.
+Hanoi-based beauty and health products startup **Joyful Hands**faced challenges handling customer inquiries in Vietnamese, Thai, and English. They implemented **BotStar's multilingual [AI chatbot](/en/glossary/AI-chatbot/)**to establish automated response capabilities in each language. As a result, [Cart Abandonment Rate](/en/glossary/Cart-Abandonment-Rate/) **decreased by 35%**, automated inquiry handling improved **from 55% to 89%**, and positive customer reviews increased regarding response speed and conversation ease.
 
 ### 4. Bali Bliss Homestay (Indonesia - Small Accommodation Business)
 
@@ -83,19 +83,15 @@ Italian hair care manufacturer Procosmet faced increasing customer support burde
 
 #### Common Points and Differentiation Factors
 
-**Common Points:**
+**Common Points:**- **AI-driven Automation and Accuracy Improvement:**From major companies like Salesforce and Intuit to SMEs like Joyful Hands and Bali Bliss Homestay, [AI implementation](/en/glossary/AI-implementation/) achieves inquiry handling automation and response accuracy improvement.
+- **Customer Experience-Centered Improvement:**Instant responses, multilingual support, and emotion analysis lead to improved customer satisfaction and repeat usage.
+- **Balance of [Operational Efficiency](/en/glossary/Operational-Efficiency/) and Results:**Beyond mere cost reduction, directly contributing to concrete business outcomes such as sales expansion, booking rate improvement, and lead acquisition increase.
 
-- **AI-driven Automation and Accuracy Improvement:** From major companies like Salesforce and Intuit to SMEs like Joyful Hands and Bali Bliss Homestay, [AI implementation](/en/glossary/AI-implementation/) achieves inquiry handling automation and response accuracy improvement.
-- **Customer Experience-Centered Improvement:** Instant responses, multilingual support, and emotion analysis lead to improved customer satisfaction and repeat usage.
-- **Balance of [Operational Efficiency](/en/glossary/Operational-Efficiency/) and Results:** Beyond mere cost reduction, directly contributing to concrete business outcomes such as sales expansion, booking rate improvement, and lead acquisition increase.
-
-**Differentiation Points:**
-
-- **Salesforce (USA):** Autonomous [AI agents](/en/glossary/AI-agents/) solve complex inquiries with near-human accuracy. Strong in large-scale [CRM](/en/glossary/CRM/) environment implementation.
-- **Intuit (USA):** Scalable contact center construction for peak seasons, enabling rapid system establishment in industries with high demand fluctuation.
-- **Joyful Hands (Vietnam):** Multilingual support in cross-border EC reduces cart abandonment and improves customer experience. Key point is addressing Southeast Asia's unique multinational market.
-- **Bali Bliss Homestay (Indonesia):** [WhatsApp](/en/glossary/WhatsApp/) bot implementable even in small accommodation facilities, solving time difference and staff absence challenges.
-- **Procosmet (Italy):** Unique in directly linking chatbot with marketing initiatives to drive sales expansion and ROI improvement.
+**Differentiation Points:**- **Salesforce (USA):**Autonomous [AI agents](/en/glossary/AI-agents/) solve complex inquiries with near-human accuracy. Strong in large-scale [CRM](/en/glossary/CRM/) environment implementation.
+- **Intuit (USA):**Scalable contact center construction for peak seasons, enabling rapid system establishment in industries with high demand fluctuation.
+- **Joyful Hands (Vietnam):**Multilingual support in cross-border EC reduces cart abandonment and improves customer experience. Key point is addressing Southeast Asia's unique multinational market.
+- **Bali Bliss Homestay (Indonesia):**[WhatsApp](/en/glossary/WhatsApp/) bot implementable even in small accommodation facilities, solving time difference and staff absence challenges.
+- **Procosmet (Italy):**Unique in directly linking chatbot with marketing initiatives to drive sales expansion and ROI improvement.
 
 These cases demonstrate that **AI customer support can deliver sufficient results not only for large enterprises but also for SMEs**, with implementation purposes expanding from " [operational efficiency](/en/glossary/Operational-Efficiency/)" to "revenue and customer experience enhancement."
 
@@ -153,20 +149,16 @@ Tools like "LiveAgent" and "FlowHunt" used in SmartWeb's construction services c
 
 ### Strategic Hints for Global Expansion
 
-**Necessity of Multilingual Support:** For international expansion, communicating with customers in local languages is essential. However, traditional systems required building separate systems for each language, incurring costs and time.
+**Necessity of Multilingual Support:**For international expansion, communicating with customers in local languages is essential. However, traditional systems required building separate systems for each language, incurring costs and time.
 
-**Leveraging Japanese Strengths:** Japanese companies' "omotenashi" spirit and meticulous attention to detail are highly valued worldwide. Combining this with AI can provide unique services unavailable in other countries.
+**Leveraging Japanese Strengths:**Japanese companies' "omotenashi" spirit and meticulous attention to detail are highly valued worldwide. Combining this with AI can provide unique services unavailable in other countries.
 
-**SmartWeb AI Chatbot Advantages:**
+**SmartWeb AI Chatbot Advantages:**- **Multilingual Support:**Single system capable of handling multiple languages
+- **Flexible Customization:**Easy adjustment to industries and companies
+- **Cost Efficiency:**Implementation and operation at a fraction of traditional costs
 
-- **Multilingual Support:** Single system capable of handling multiple languages
-- **Flexible Customization:** Easy adjustment to industries and companies
-- **Cost Efficiency:** Implementation and operation at a fraction of traditional costs
-
-**Path to Success:**
-
-1. **Regular Review:** Continuously check AI response accuracy
-2. **Staff Training:** Strengthen AI-human collaboration
-3. **Quality Control:** Ensure response quality in both Japanese and foreign languages
+**Path to Success:**1. **Regular Review:**Continuously check AI response accuracy
+2. **Staff Training:**Strengthen AI-human collaboration
+3. **Quality Control:**Ensure response quality in both Japanese and foreign languages
 
 Japan's AI customer support market is achieving unprecedented development through the fusion of cutting-edge technology and Japan's unique "omotenashi culture." By leveraging efficient solutions like SmartWeb, even non-large enterprises can achieve world-class customer service, which will be a crucial factor determining future corporate competitiveness.

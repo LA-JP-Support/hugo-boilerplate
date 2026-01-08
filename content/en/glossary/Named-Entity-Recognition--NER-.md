@@ -16,8 +16,7 @@ Named Entity Recognition (NER) is a core task in Natural Language Processing (NL
 
 In practical terms, NER models process textual data to extract and annotate key information, enabling downstream applications such as search, question answering, content recommendation, and document automation.
 
-**Example:**
-"Apple is looking at buying U.K. startup for $1 billion."
+**Example:**"Apple is looking at buying U.K. startup for $1 billion."
 
 NER output:
 - "Apple" → Organization (ORG)
@@ -28,18 +27,17 @@ NER output:
 
 Most digital content is unstructured—emails, articles, customer chats, social media posts, medical records, legal documents. NER enables machines to extract factual meaning from this data, supporting broad spectrum of applications:
 
-**Search:** Enhances result relevance by indexing named entities.
+**Search:**Enhances result relevance by indexing named entities.
 
-**Recommendation:** Suggests content based on recognized people, places, or products.
+**Recommendation:**Suggests content based on recognized people, places, or products.
 
-**Automation:** Extracts structured data from invoices, contracts, and forms.
+**Automation:**Extracts structured data from invoices, contracts, and forms.
 
-**Compliance:** Identifies and redacts personally identifiable information (PII).
+**Compliance:**Identifies and redacts personally identifiable information (PII).
 
-**Knowledge Graphs:** Structures information for analytics and AI.
+**Knowledge Graphs:**Structures information for analytics and AI.
 
-**Ambiguity Handling Example:**
-NER models analyze context to resolve ambiguous names:
+**Ambiguity Handling Example:**NER models analyze context to resolve ambiguous names:
 - "Lincoln" can refer to "Abraham Lincoln" (Person), "Lincoln Motor Company" (Organization), or "Lincoln, Nebraska" (Location).
 
 ## Key Concepts
@@ -48,7 +46,7 @@ NER models analyze context to resolve ambiguous names:
 
 Unique, real-world object denoted by proper noun or fixed reference.
 
-**Examples:** "Michelle Obama" (Person), "London" (Location), "Google" (Organization), "$500" (Money).
+**Examples:**"Michelle Obama" (Person), "London" (Location), "Google" (Organization), "$500" (Money).
 
 ### Entity Type / Label / Tag
 
@@ -58,51 +56,51 @@ Category assigned to entity span, such as PER (Person), ORG (Organization), LOC 
 
 Process of detecting start and end indices of entity mentions in text, crucial for multi-word names and complex entities.
 
-**Example:** Correctly extracting "The George Washington University Hospital" as single entity.
+**Example:**Correctly extracting "The George Washington University Hospital" as single entity.
 
 ### Tagging Schemes
 
 NER models often use tagging schemes to mark entity boundaries:
 
-**BIO (Begin, Inside, Outside):** B-ORG, I-ORG, O
+**BIO (Begin, Inside, Outside):**B-ORG, I-ORG, O
 
-**IOBES (Inside, Outside, Begin, End, Single):** B-ORG, I-ORG, E-ORG, S-ORG, O
+**IOBES (Inside, Outside, Begin, End, Single):**B-ORG, I-ORG, E-ORG, S-ORG, O
 
 ## How NER Works
 
 ### Workflow
 
-**Text Input and Preprocessing:** Tokenization, sentence segmentation, normalization.
+**Text Input and Preprocessing:**Tokenization, sentence segmentation, normalization.
 
-**Feature Extraction:** Extract morphological, syntactic, semantic, and external features.
+**Feature Extraction:**Extract morphological, syntactic, semantic, and external features.
 
-**Entity Boundary Detection:** Locate candidate spans that may represent entities.
+**Entity Boundary Detection:**Locate candidate spans that may represent entities.
 
-**Entity Classification:** Assign each detected candidate most probable label using rules, statistical models, or deep learning.
+**Entity Classification:**Assign each detected candidate most probable label using rules, statistical models, or deep learning.
 
-**Post-processing:** Resolve overlapping/nested entities, disambiguate, enforce consistency.
+**Post-processing:**Resolve overlapping/nested entities, disambiguate, enforce consistency.
 
-**Output Generation:** Return structured results as annotated text, JSON, or XML.
+**Output Generation:**Return structured results as annotated text, JSON, or XML.
 
 ## Entity Types
 
 | Label | Description | Example |
 |-------|-------------|---------|
-| **PER** | Person | "Marie Curie", "Sherlock Holmes" |
-| **ORG** | Organization | "Google", "United Nations" |
-| **LOC** | Location | "Mount Everest", "Nile River" |
-| **GPE** | Geopolitical Entity | "Tokyo", "United States" |
-| **DATE** | Calendar dates or periods | "January 1, 2022", "19th century" |
-| **TIME** | Specific times or durations | "5 PM", "two hours" |
-| **MONEY** | Monetary values | "$100", "€50 million" |
-| **PERCENT** | Percentages | "50%", "half" |
-| **FAC** | Facilities | "JFK Airport", "Golden Gate Bridge" |
-| **PRODUCT** | Products, vehicles, software | "iPhone", "Boeing 747" |
-| **EVENT** | Named events | "Olympics", "Hurricane Katrina" |
-| **WORK_OF_ART** | Books, movies, paintings | "Mona Lisa", "Star Wars" |
-| **LANGUAGE** | Languages | "English", "Mandarin" |
-| **LAW** | Legal documents, treaties | "Treaty of Versailles" |
-| **NORP** | Nationalities, religious, political groups | "American", "Democrat" |
+| **PER**| Person | "Marie Curie", "Sherlock Holmes" |
+| **ORG**| Organization | "Google", "United Nations" |
+| **LOC**| Location | "Mount Everest", "Nile River" |
+| **GPE**| Geopolitical Entity | "Tokyo", "United States" |
+| **DATE**| Calendar dates or periods | "January 1, 2022", "19th century" |
+| **TIME**| Specific times or durations | "5 PM", "two hours" |
+| **MONEY**| Monetary values | "$100", "€50 million" |
+| **PERCENT**| Percentages | "50%", "half" |
+| **FAC**| Facilities | "JFK Airport", "Golden Gate Bridge" |
+| **PRODUCT**| Products, vehicles, software | "iPhone", "Boeing 747" |
+| **EVENT**| Named events | "Olympics", "Hurricane Katrina" |
+| **WORK_OF_ART**| Books, movies, paintings | "Mona Lisa", "Star Wars" |
+| **LANGUAGE**| Languages | "English", "Mandarin" |
+| **LAW**| Legal documents, treaties | "Treaty of Versailles" |
+| **NORP**| Nationalities, religious, political groups | "American", "Democrat" |
 
 ## Methods and Approaches
 
@@ -110,35 +108,34 @@ NER models often use tagging schemes to mark entity boundaries:
 
 Uses dictionaries (gazetteers), regular expressions, and linguistic rules.
 
-**Pros:** Fast and interpretable.
+**Pros:**Fast and interpretable.
 
-**Cons:** Brittle—requires manual updating for new entities or domains.
+**Cons:**Brittle—requires manual updating for new entities or domains.
 
-**Use Cases:** Fixed formats (phone numbers, dates, known PII).
+**Use Cases:**Fixed formats (phone numbers, dates, known PII).
 
 ### Traditional Machine Learning
 
 Learns from annotated datasets using engineered features (word shapes, POS, context).
 
-**Popular Algorithms:** Conditional Random Fields (CRF), Hidden Markov Models (HMM), Support Vector Machines (SVM), Decision Trees.
+**Popular Algorithms:**Conditional Random Fields (CRF), Hidden Markov Models (HMM), Support Vector Machines (SVM), Decision Trees.
 
-**Pros:** Can generalize to unseen examples.
+**Pros:**Can generalize to unseen examples.
 
-**Cons:** Needs labeled data and feature engineering.
+**Cons:**Needs labeled data and feature engineering.
 
 ### Deep Learning Approaches
 
-**Recurrent Neural Networks (RNN, LSTM):** Learns sequential dependencies. Bidirectional LSTMs capture context from both directions.
+**Recurrent Neural Networks (RNN, LSTM):**Learns sequential dependencies. Bidirectional LSTMs capture context from both directions.
 
-**Transformer-Based Models (BERT, RoBERTa, GPT):**
-- Use self-attention to model complex dependencies in context
+**Transformer-Based Models (BERT, RoBERTa, GPT):**- Use self-attention to model complex dependencies in context
 - Pretrained on massive corpora, fine-tuned with labeled NER data
 - Handle ambiguity, context, long-range dependencies, subword units, and nested entities
 - Outperform previous models on standard benchmarks
 
-**Large Language Models (LLMs):** General-purpose LLMs like GPT-4 can perform NER via zero-shot or few-shot prompting.
+**Large Language Models (LLMs):**General-purpose LLMs like GPT-4 can perform NER via zero-shot or few-shot prompting.
 
-**Domain Adaptation & Transfer Learning:** Fine-tuning pretrained models on custom corpora yields domain-specific NER.
+**Domain Adaptation & Transfer Learning:**Fine-tuning pretrained models on custom corpora yields domain-specific NER.
 
 ## Python Implementation Example
 
@@ -159,8 +156,7 @@ for ent in doc.ents:
     print(ent.text, ent.start_char, ent.end_char, ent.label_)
 ```
 
-**Output:**
-```
+**Output:**```
 Steve Jobs 0 10 PERSON
 Steve Wozniak 15 29 PERSON
 Apple 39 44 ORG
@@ -184,21 +180,21 @@ for entity in entities:
 
 ## Challenges
 
-**Ambiguity & Polysemy:** Words can have multiple entity types ("Amazon": company or river).
+**Ambiguity & Polysemy:**Words can have multiple entity types ("Amazon": company or river).
 
-**Boundary Detection:** Multi-word and nested entity names ("Martin Luther King Jr.", "University of California, Berkeley").
+**Boundary Detection:**Multi-word and nested entity names ("Martin Luther King Jr.", "University of California, Berkeley").
 
-**Domain Adaptation:** New or rare entities in specialized domains (biomedicine, law).
+**Domain Adaptation:**New or rare entities in specialized domains (biomedicine, law).
 
-**Evolving Language:** New terms, brands, slang, or acronyms.
+**Evolving Language:**New terms, brands, slang, or acronyms.
 
-**Multilingual NER:** Handling code-switching, different scripts, or language-specific entity types.
+**Multilingual NER:**Handling code-switching, different scripts, or language-specific entity types.
 
-**Scarce Labeled Data:** Annotating large corpora is expensive and time-consuming.
+**Scarce Labeled Data:**Annotating large corpora is expensive and time-consuming.
 
-**Nested/Overlapping Entities:** Entities within entities (especially in biomedical or legal text).
+**Nested/Overlapping Entities:**Entities within entities (especially in biomedical or legal text).
 
-**Noise and Informality:** Social media, OCR, and speech transcripts introduce errors and informal language.
+**Noise and Informality:**Social media, OCR, and speech transcripts introduce errors and informal language.
 
 ## Applications
 
@@ -222,8 +218,7 @@ Creates structured graphs of entities and relationships from unstructured docume
 
 Identifies and redacts PII in sensitive documents for GDPR, HIPAA, and other regulatory compliance.
 
-**Redaction Example:**
-"Steve Jobs founded Apple in Cupertino."
+**Redaction Example:**"Steve Jobs founded Apple in Cupertino."
 → "[PERSON] founded [ORG] in [LOCATION]."
 
 ### Sentiment Analysis Enhancement
@@ -242,14 +237,14 @@ Biomedical (genes, proteins, diseases), legal (cases, statutes), financial (tick
 
 | Tool/Library | Highlights | Language(s) |
 |--------------|-----------|-------------|
-| **spaCy** | Fast, production-ready, customizable, pre-trained models | Python |
-| **NLTK** | Educational, basic NER, linguistic analysis | Python |
-| **Stanford CoreNLP** | Academic gold standard, RegexNER, multi-language support | Java, Python |
-| **Tonic Textual** | Enterprise NER, redaction, synthesis, custom models | API, Python SDK |
-| **DeepPavlov** | Deep learning, pre-trained models, domain adaptation | Python |
-| **Google Cloud NLP** | Managed service, entity analysis, sentiment | API |
-| **AWS Comprehend** | Entity extraction, sentiment, key phrase detection | API |
-| **Hugging Face Transformers** | BERT-based NER, extensive model library | Python |
+| **spaCy**| Fast, production-ready, customizable, pre-trained models | Python |
+| **NLTK**| Educational, basic NER, linguistic analysis | Python |
+| **Stanford CoreNLP**| Academic gold standard, RegexNER, multi-language support | Java, Python |
+| **Tonic Textual**| Enterprise NER, redaction, synthesis, custom models | API, Python SDK |
+| **DeepPavlov**| Deep learning, pre-trained models, domain adaptation | Python |
+| **Google Cloud NLP**| Managed service, entity analysis, sentiment | API |
+| **AWS Comprehend**| Entity extraction, sentiment, key phrase detection | API |
+| **Hugging Face Transformers**| BERT-based NER, extensive model library | Python |
 
 ## References
 

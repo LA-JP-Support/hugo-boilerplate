@@ -16,7 +16,7 @@ Speech Synthesis Markup Language (SSML) is an XML-based markup standard develope
 
 Without SSML, text-to-speech (TTS) outputs are often robotic, monotonous, and prone to mispronunciations or awkward intonation. SSML solves these issues by providing fine-grained control over pronunciation using phonetic alphabets (IPA, X-SAMPA), prosody specification (pitch, rate, volume, emphasis), natural pause insertion and sentence structuring, explicit handling of special content (dates, times, acronyms, currency), voice and language switching mid-stream, and audio file embedding.
 
-**Industry Adoption:** SSML is the de facto standard for all major cloud TTS providers including Amazon Alexa Skills Kit, Google Cloud Text-to-Speech, Microsoft Azure Speech Service, IBM Watson Text-to-Speech, and Speechify.
+**Industry Adoption:**SSML is the de facto standard for all major cloud TTS providers including Amazon Alexa Skills Kit, Google Cloud Text-to-Speech, Microsoft Azure Speech Service, IBM Watson Text-to-Speech, and Speechify.
 
 ## Core Capabilities
 
@@ -64,8 +64,7 @@ Omitting the `<speak>` tag results in errors or the TTS engine falling back to p
 
 Adds a pause or controls the boundary between words or phrases.
 
-**Attributes:**
-- `time`: Exact pause duration (e.g., "500ms", "2s")
+**Attributes:**- `time`: Exact pause duration (e.g., "500ms", "2s")
 - `strength`: Relative pause ("none", "x-weak", "weak", "medium", "strong", "x-strong")
 
 ```xml
@@ -78,8 +77,7 @@ Adds a pause or controls the boundary between words or phrases.
 
 Changes expressiveness of speech.
 
-**Attributes:**
-- `pitch`: "x-low", "low", "medium", "high", "x-high", or percentage ("+20%")
+**Attributes:**- `pitch`: "x-low", "low", "medium", "high", "x-high", or percentage ("+20%")
 - `rate`: "x-slow", "slow", "medium", "fast", "x-fast", or percentage ("-20%")
 - `volume`: "silent", "x-soft", "soft", "medium", "loud", "x-loud", decibel ("-6dB"), or percentage
 
@@ -91,7 +89,7 @@ Changes expressiveness of speech.
 </speak>
 ```
 
-**Best Practice:** Avoid extreme values; subtle changes produce more natural speech.
+**Best Practice:**Avoid extreme values; subtle changes produce more natural speech.
 
 ### `<emphasis>`: Highlight Words
 
@@ -109,8 +107,7 @@ Levels: "strong", "moderate", "reduced"
 
 Directs TTS to read text as specific types.
 
-**Common interpret-as values:**
-- "cardinal": Numbers (123 → "one hundred twenty-three")
+**Common interpret-as values:**- "cardinal": Numbers (123 → "one hundred twenty-three")
 - "ordinal": Ordinal numbers (1st → "first")
 - "characters": Spell out ("SSML" → "S S M L")
 - "date": Dates with format specification
@@ -120,9 +117,7 @@ Directs TTS to read text as specific types.
 - "fraction": Fractions ("3/4" → "three quarters")
 - "unit": Measurements
 
-**Examples:**
-
-```xml
+**Examples:**```xml
 <speak>
   <say-as interpret-as="characters">SSML</say-as>
 </speak>
@@ -144,8 +139,7 @@ Directs TTS to read text as specific types.
 
 Specifies exact pronunciation using phonetic alphabets.
 
-**Attributes:**
-- `alphabet`: "ipa", "x-sampa"
+**Attributes:**- `alphabet`: "ipa", "x-sampa"
 - `ph`: Phonetic string
 
 ```xml
@@ -164,7 +158,7 @@ Reads the alias value instead of the enclosed text.
 </speak>
 ```
 
-**Use Cases:** Brand names, acronyms, foreign words
+**Use Cases:**Brand names, acronyms, foreign words
 
 ### `<audio>`: Insert Audio Clips
 
@@ -179,8 +173,7 @@ Embeds recorded audio in speech output (sound effects, music).
 </speak>
 ```
 
-**Provider Limitations:**
-- Google Cloud: Format and time restrictions apply
+**Provider Limitations:**- Google Cloud: Format and time restrictions apply
 - Amazon Alexa: 240-second max, HTTPS required, size limits
 - Azure: Supported with restrictions
 
@@ -222,7 +215,7 @@ Specifies language for a text segment, enabling proper pronunciation and accent.
 
 ### Amazon Alexa
 
-**`<amazon:emotion>`:** Adds "excited" or "disappointed" emotion
+**`<amazon:emotion>`:**Adds "excited" or "disappointed" emotion
 
 ```xml
 <speak>
@@ -232,11 +225,11 @@ Specifies language for a text segment, enabling proper pronunciation and accent.
 </speak>
 ```
 
-**`<amazon:domain>`:** Changes delivery style (news, music, conversational)
+**`<amazon:domain>`:**Changes delivery style (news, music, conversational)
 
 ### Microsoft Azure
 
-**`<mstts:express-as>`:** Neural voice styles and roles
+**`<mstts:express-as>`:**Neural voice styles and roles
 
 ```xml
 <speak>
@@ -250,7 +243,7 @@ Styles include: cheerful, sad, angry, fearful, friendly, hopeful, newscast, cust
 
 ### Speechify
 
-**`<speechify:style>`:** Proprietary style control for enhanced reading experiences
+**`<speechify:style>`:**Proprietary style control for enhanced reading experiences
 
 ## Practical Example
 
@@ -268,7 +261,7 @@ Styles include: cheerful, sad, angry, fearful, friendly, hopeful, newscast, cust
 </speak>
 ```
 
-**Expected Output:** "Welcome to the demo. [pause] Your appointment is on June tenth, twenty twenty-three. The amount due is nineteen dollars and ninety-nine cents. For assistance, call one eight hundred one two three four five six seven. [slower] Thank you for using our service."
+**Expected Output:**"Welcome to the demo. [pause] Your appointment is on June tenth, twenty twenty-three. The amount due is nineteen dollars and ninety-nine cents. For assistance, call one eight hundred one two three four five six seven. [slower] Thank you for using our service."
 
 ## Common Use Cases
 
@@ -298,33 +291,33 @@ Deliver notifications and responses with appropriate context and emotion
 
 ## Best Practices
 
-**Subtle Adjustments:** Small prosody changes are more effective than extreme modifications
+**Subtle Adjustments:**Small prosody changes are more effective than extreme modifications
 
-**Test Across Platforms:** Verify SSML rendering across target TTS providers
+**Test Across Platforms:**Verify SSML rendering across target TTS providers
 
-**Use Phonetic Sparingly:** Only override pronunciation when necessary
+**Use Phonetic Sparingly:**Only override pronunciation when necessary
 
-**Structure Logically:** Use `<p>` and `<s>` tags for natural pacing
+**Structure Logically:**Use `<p>` and `<s>` tags for natural pacing
 
-**Balance Speed:** Maintain natural rate; avoid overly fast or slow speech
+**Balance Speed:**Maintain natural rate; avoid overly fast or slow speech
 
-**Audio Quality:** Ensure embedded audio files are properly encoded and hosted
+**Audio Quality:**Ensure embedded audio files are properly encoded and hosted
 
-**Accessibility Focus:** Consider all users, including those with assistive technology
+**Accessibility Focus:**Consider all users, including those with assistive technology
 
 ## Implementation Considerations
 
-**Platform Compatibility:** Different providers support different tag subsets and extensions
+**Platform Compatibility:**Different providers support different tag subsets and extensions
 
-**Fallback Content:** Provide fallback text for unsupported tags
+**Fallback Content:**Provide fallback text for unsupported tags
 
-**Character Limits:** Be aware of platform-specific text length restrictions
+**Character Limits:**Be aware of platform-specific text length restrictions
 
-**Processing Overhead:** Complex SSML may increase response time
+**Processing Overhead:**Complex SSML may increase response time
 
-**Cost Management:** Some providers charge based on character count including markup
+**Cost Management:**Some providers charge based on character count including markup
 
-**Testing Protocol:** Establish comprehensive testing across devices and platforms
+**Testing Protocol:**Establish comprehensive testing across devices and platforms
 
 ## References
 

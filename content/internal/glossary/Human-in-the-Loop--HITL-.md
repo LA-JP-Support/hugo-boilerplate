@@ -15,8 +15,7 @@ url = "/internal/glossary/Human-in-the-Loop--HITL-/"
 
 HITL integra la inteligencia humana directamente en los flujos de trabajo de IA y ML. Las personas participan en etapas clave: etiquetado de datos de entrenamiento, ajuste de modelos, validación de resultados y toma o anulación de decisiones. Este ciclo de retroalimentación aprovecha la experiencia humana para aportar contexto, juicio y razonamiento ético, complementando la velocidad y escala de la automatización.
 
-**Fuente clave:**  
-- [IBM: ¿Qué es Human In The Loop (HITL)?](https://www.ibm.com/think/topics/human-in-the-loop)
+**Fuente clave:**- [IBM: ¿Qué es Human In The Loop (HITL)?](https://www.ibm.com/think/topics/human-in-the-loop)
 - [Stanford HAI: Humans in the Loop](https://hai.stanford.edu/news/humans-loop-design-interactive-ai-systems)
 - [MIT Press: Data Science and Engineering With Human in the Loop](https://hdsr.mitpress.mit.edu/pub/812vijgg)
 
@@ -26,33 +25,26 @@ HITL es distinto de “human-on-the-loop” (donde las personas supervisan e int
 
 HITL es esencial cuando:
 
-- **La IA por sí sola no puede gestionar la ambigüedad o decisiones críticas.**
-- **Las regulaciones exigen supervisión humana** (por ejemplo, [Ley de IA de la UE](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence)).
-- **La confianza, transparencia y responsabilidad** son indispensables (sanidad, finanzas, legal, sectores críticos de seguridad).
-- **Casos límite y sesgos** presentan riesgos que la automatización pura no puede abordar.
+- **La IA por sí sola no puede gestionar la ambigüedad o decisiones críticas.**- **Las regulaciones exigen supervisión humana**(por ejemplo, [Ley de IA de la UE](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence)).
+- **La confianza, transparencia y responsabilidad**son indispensables (sanidad, finanzas, legal, sectores críticos de seguridad).
+- **Casos límite y sesgos**presentan riesgos que la automatización pura no puede abordar.
 
-**Ejemplo:**  
-Al procesar facturas, los modelos de IA extraen campos estándar, pero la escritura ambigua o diseños inusuales requieren revisión humana. Las correcciones se retroalimentan al sistema, mejorando la precisión futura ([Google Cloud](https://cloud.google.com/discover/human-in-the-loop)).
+**Ejemplo:**Al procesar facturas, los modelos de IA extraen campos estándar, pero la escritura ambigua o diseños inusuales requieren revisión humana. Las correcciones se retroalimentan al sistema, mejorando la precisión futura ([Google Cloud](https://cloud.google.com/discover/human-in-the-loop)).
 
 ## ¿Cómo funciona Human-in-the-Loop?
 
 ### Pasos principales del flujo de trabajo
 
-1. **Anotación de datos:**  
-   Las personas etiquetan o anotan datos para aportar la verdad de base al entrenamiento de ML. Esto es crucial para tareas con subjetividad, ambigüedad o conocimiento de dominio (por ejemplo, imágenes médicas, detección de spam, visión por computadora).  
+1. **Anotación de datos:**Las personas etiquetan o anotan datos para aportar la verdad de base al entrenamiento de ML. Esto es crucial para tareas con subjetividad, ambigüedad o conocimiento de dominio (por ejemplo, imágenes médicas, detección de spam, visión por computadora).  
    - [Google Cloud: Human-in-the-Loop](https://cloud.google.com/discover/human-in-the-loop)
 
-2. **Entrenamiento y ajuste de modelos:**  
-   Los datos anotados se usan para entrenar el modelo de IA. Expertos humanos ajustan parámetros, evalúan desempeño y mitigan sesgos o errores.
+2. **Entrenamiento y ajuste de modelos:**Los datos anotados se usan para entrenar el modelo de IA. Expertos humanos ajustan parámetros, evalúan desempeño y mitigan sesgos o errores.
 
-3. **Evaluación y validación:**  
-   Revisores humanos evalúan los resultados del modelo en calidad, relevancia, seguridad y cumplimiento. Se señalan y corrigen casos límite o predicciones inciertas.
+3. **Evaluación y validación:**Revisores humanos evalúan los resultados del modelo en calidad, relevancia, seguridad y cumplimiento. Se señalan y corrigen casos límite o predicciones inciertas.
 
-4. **Retroalimentación y reentrenamiento:**  
-   Correcciones y juicios humanos se incorporan a los datos de entrenamiento, refinando el modelo en un ciclo continuo.
+4. **Retroalimentación y reentrenamiento:**Correcciones y juicios humanos se incorporan a los datos de entrenamiento, refinando el modelo en un ciclo continuo.
 
-5. **Supervisión de decisiones:**  
-   En producción, la IA gestiona casos rutinarios y escala decisiones ambiguas o de alto riesgo a humanos.
+5. **Supervisión de decisiones:**En producción, la IA gestiona casos rutinarios y escala decisiones ambiguas o de alto riesgo a humanos.
 
 #### Más sobre flujos de trabajo HITL:
 - [Zapier: Human-in-the-Loop en flujos de IA](https://zapier.com/blog/human-in-the-loop/)
@@ -60,10 +52,10 @@ Al procesar facturas, los modelos de IA extraen campos estándar, pero la escrit
 
 ### HITL en acción: dominios de aplicación
 
-- **Aprendizaje supervisado:** Las personas etiquetan datos de entrenamiento (imágenes, texto) para su clasificación correcta.
-- **Aprendizaje por refuerzo con retroalimentación humana (RLHF):** La retroalimentación humana entrena modelos de recompensa para los comportamientos deseados.
-- **Aprendizaje activo:** El sistema identifica casos inciertos y solicita intervención humana solo cuando es necesario, optimizando recursos.
-- **Sistemas agentivos:** HITL es crítico cuando los agentes de IA pueden activar flujos, acceder a datos sensibles o tomar decisiones de impacto ([Permit.io](https://www.permit.io/blog/human-in-the-loop-for-ai-agents-best-practices-frameworks-use-cases-and-demo)).
+- **Aprendizaje supervisado:**Las personas etiquetan datos de entrenamiento (imágenes, texto) para su clasificación correcta.
+- **Aprendizaje por refuerzo con retroalimentación humana (RLHF):**La retroalimentación humana entrena modelos de recompensa para los comportamientos deseados.
+- **Aprendizaje activo:**El sistema identifica casos inciertos y solicita intervención humana solo cuando es necesario, optimizando recursos.
+- **Sistemas agentivos:**HITL es crítico cuando los agentes de IA pueden activar flujos, acceder a datos sensibles o tomar decisiones de impacto ([Permit.io](https://www.permit.io/blog/human-in-the-loop-for-ai-agents-best-practices-frameworks-use-cases-and-demo)).
 
 ## Casos de uso ejemplares
 
@@ -92,15 +84,14 @@ Coches autónomos y robots requieren HITL para escenarios imprevistos o fallos.
 ### 6. Finanzas y cumplimiento  
 Sistemas de trading algorítmico y legaltech requieren revisión humana para cumplimiento regulatorio y detección de anomalías.
 
-**Más casos de éxito:**  
-- [Parseur: Casos de estudio de IA HITL](https://parseur.com/blog/human-in-the-loop-ai)
+**Más casos de éxito:**- [Parseur: Casos de estudio de IA HITL](https://parseur.com/blog/human-in-the-loop-ai)
 
 ## Principales roles humanos en HITL
 
-- **Anotadores:** Etiquetan y curan datos para entrenamiento y evaluación.
-- **Expertos de dominio:** Aportan experiencia para casos límite y decisiones ambiguas.
-- **Validadores de modelos:** Evalúan resultados en calidad, cumplimiento y seguridad.
-- **Supervisores/Supervisión:** Monitorean operaciones, intervienen y documentan decisiones para [transparencia](/es/glossary/transparency/) y auditoría.
+- **Anotadores:**Etiquetan y curan datos para entrenamiento y evaluación.
+- **Expertos de dominio:**Aportan experiencia para casos límite y decisiones ambiguas.
+- **Validadores de modelos:**Evalúan resultados en calidad, cumplimiento y seguridad.
+- **Supervisores/Supervisión:**Monitorean operaciones, intervienen y documentan decisiones para [transparencia](/es/glossary/transparency/) y auditoría.
 
 ## Beneficios de Human-in-the-Loop
 
@@ -141,35 +132,27 @@ Sin automatización, los pasos HITL pueden ser un cuello de botella a medida que
 
 ## HITL vs. Human-on-the-Loop vs. Human-out-of-the-Loop
 
-- **HITL:** Las personas están integradas en el ciclo de retroalimentación, etiquetan, validan y corrigen de forma activa.
-- **Human-on-the-Loop:** Las personas supervisan y pueden intervenir, pero no participan en cada operación.
-- **Human-out-of-the-Loop:** La IA actúa completamente de forma autónoma tras el despliegue.
+- **HITL:**Las personas están integradas en el ciclo de retroalimentación, etiquetan, validan y corrigen de forma activa.
+- **Human-on-the-Loop:**Las personas supervisan y pueden intervenir, pero no participan en cada operación.
+- **Human-out-of-the-Loop:**La IA actúa completamente de forma autónoma tras el despliegue.
 
-**La elección de aplicación depende del riesgo, la precisión requerida y las necesidades regulatorias.**  
-- [Permit.io: HITL en flujos agentivos](https://www.permit.io/blog/human-in-the-loop-for-ai-agents-best-practices-frameworks-use-cases-and-demo)
+**La elección de aplicación depende del riesgo, la precisión requerida y las necesidades regulatorias.**- [Permit.io: HITL en flujos agentivos](https://www.permit.io/blog/human-in-the-loop-for-ai-agents-best-practices-frameworks-use-cases-and-demo)
 
 ## Diseño HITL: buenas prácticas
 
-1. **Intervención humana dirigida:**  
-   Centrarse en tareas ambiguas, de baja confianza o alto riesgo mediante aprendizaje activo y triaje.
+1. **Intervención humana dirigida:**Centrarse en tareas ambiguas, de baja confianza o alto riesgo mediante aprendizaje activo y triaje.
 
-2. **Bucles iterativos de retroalimentación:**  
-   Reentrenar continuamente los modelos con correcciones humanas para mejora incremental.
+2. **Bucles iterativos de retroalimentación:**Reentrenar continuamente los modelos con correcciones humanas para mejora incremental.
 
-3. **Flujos de trabajo basados en roles:**  
-   Asignar roles claros (anotador, revisor, supervisor) con controles de acceso.
+3. **Flujos de trabajo basados en roles:**Asignar roles claros (anotador, revisor, supervisor) con controles de acceso.
 
-4. **Herramientas y automatización:**  
-   Usar plataformas HITL (ej. [SuperAnnotate](https://www.superannotate.com/blog/human-in-the-loop-hitl), [Encord](https://encord.com/blog/human-in-the-loop-ai/)) para gestión del flujo, analítica y trazabilidad.
+4. **Herramientas y automatización:**Usar plataformas HITL (ej. [SuperAnnotate](https://www.superannotate.com/blog/human-in-the-loop-hitl), [Encord](https://encord.com/blog/human-in-the-loop-ai/)) para gestión del flujo, analítica y trazabilidad.
 
-5. **Cumplimiento y documentación:**  
-   Mantener registros y trazas de auditoría para adherencia normativa.
+5. **Cumplimiento y documentación:**Mantener registros y trazas de auditoría para adherencia normativa.
 
-6. **Control de calidad:**  
-   Usar “conjuntos dorados” de casos de prueba para evaluación consistente.
+6. **Control de calidad:**Usar “conjuntos dorados” de casos de prueba para evaluación consistente.
 
-7. **Monitoreo continuo:**  
-   Vigilar modelos desplegados ante deriva y escalar nuevos casos límite para revisión.
+7. **Monitoreo continuo:**Vigilar modelos desplegados ante deriva y escalar nuevos casos límite para revisión.
 
 - [Permit.io: Buenas prácticas HITL](https://www.permit.io/blog/human-in-the-loop-for-ai-agents-best-practices-frameworks-use-cases-and-demo)
 - [SuperAnnotate: Plataformas HITL](https://www.superannotate.com/blog/human-in-the-loop-hitl)
@@ -177,17 +160,13 @@ Sin automatización, los pasos HITL pueden ser un cuello de botella a medida que
 
 ## Casos reales de estudio
 
-- **Procesamiento de documentos:**  
-  Una empresa logística aumentó la precisión de extracción de facturas del 82% al 98% con HITL ([Parseur](https://parseur.com/blog/human-in-the-loop-ai)).
+- **Procesamiento de documentos:**Una empresa logística aumentó la precisión de extracción de facturas del 82% al 98% con HITL ([Parseur](https://parseur.com/blog/human-in-the-loop-ai)).
 
-- **Imágenes médicas:**  
-  La combinación de IA y revisión clínica elevó la precisión diagnóstica al 99,5% ([Nexus Frontier](https://nexusfrontier.tech/why-is-human-in-the-loop-gaining-popularity/)).
+- **Imágenes médicas:**La combinación de IA y revisión clínica elevó la precisión diagnóstica al 99,5% ([Nexus Frontier](https://nexusfrontier.tech/why-is-human-in-the-loop-gaining-popularity/)).
 
-- **Cualificación de leads de ventas:**  
-  Chatbots de IA filtran leads, las personas gestionan casos matizados, mejorando la tasa de cierre ([Parseur](https://parseur.com/blog/human-in-the-loop-ai)).
+- **Cualificación de leads de ventas:**Chatbots de IA filtran leads, las personas gestionan casos matizados, mejorando la tasa de cierre ([Parseur](https://parseur.com/blog/human-in-the-loop-ai)).
 
-- **Moderación de contenido:**  
-  La IA detecta ~88% de contenido dañino, pero el 5–10% requiere revisión humana ([SEO Sandwich](https://seosandwitch.com/ai-content-moderation-stats/)).
+- **Moderación de contenido:**La IA detecta ~88% de contenido dañino, pero el 5–10% requiere revisión humana ([SEO Sandwich](https://seosandwitch.com/ai-content-moderation-stats/)).
 
 ## Referencias y lecturas recomendadas
 
@@ -207,21 +186,18 @@ Sin automatización, los pasos HITL pueden ser un cuello de botella a medida que
 
 | Aspecto                  | Descripción                                                                        | Ejemplo                                   |
 |--------------------------|------------------------------------------------------------------------------------|-------------------------------------------|
-| **Definición**           | Participación humana en el ciclo de vida de IA/ML: entrenamiento, ajuste, supervisión | Personas etiquetan datos para visión por computadora     |
-| **Principales beneficios** | Precisión, [mitigación de sesgos](/es/glossary/bias-mitigation/), transparencia, cumplimiento, eficiencia                    | 99,9% de precisión en procesamiento de documentos     |
-| **Desafíos**             | Escalabilidad, coste, error humano, privacidad, cuellos de botella                               | Anotar millones de imágenes             |
-| **Roles principales**    | Anotador, experto, validador, supervisor                                           | Clínico revisa exploraciones señaladas           |
-| **Buenas prácticas**     | Intervención dirigida, bucles de retroalimentación, herramientas robustas, cumplimiento, monitoreo             | Aprendizaje activo para centrar la anotación       |
-| **Industrias**           | Sanidad, finanzas, moderación, vehículos autónomos, atención al cliente, legaltech | HITL para escalamiento en chatbots               |
+| **Definición**| Participación humana en el ciclo de vida de IA/ML: entrenamiento, ajuste, supervisión | Personas etiquetan datos para visión por computadora     |
+| **Principales beneficios**| Precisión, [mitigación de sesgos](/es/glossary/bias-mitigation/), transparencia, cumplimiento, eficiencia                    | 99,9% de precisión en procesamiento de documentos     |
+| **Desafíos**| Escalabilidad, coste, error humano, privacidad, cuellos de botella                               | Anotar millones de imágenes             |
+| **Roles principales**| Anotador, experto, validador, supervisor                                           | Clínico revisa exploraciones señaladas           |
+| **Buenas prácticas**| Intervención dirigida, bucles de retroalimentación, herramientas robustas, cumplimiento, monitoreo             | Aprendizaje activo para centrar la anotación       |
+| **Industrias**| Sanidad, finanzas, moderación, vehículos autónomos, atención al cliente, legaltech | HITL para escalamiento en chatbots               |
 
 ## Recursos visuales
 
-- **Diagrama de flujo HITL:**  
-  ![Diagrama de flujo HITL](https://parseur.com/images/hitl-workflow_1024.png)
-- **Infografía de casos de uso HITL:**  
-  ![Casos de uso HITL](https://parseur.com/images/hitl-use-cases_1024.png)
-- **Características de plataformas HITL:**  
-  ![Plataforma HITL](https://cdn.prod.website-files.com/614c82ed388d53640613982e/687751f1f60530fa84d8af61_what-should-a-human-in-the-loop-platform-include.webp)
+- **Diagrama de flujo HITL:**![Diagrama de flujo HITL](https://parseur.com/images/hitl-workflow_1024.png)
+- **Infografía de casos de uso HITL:**![Casos de uso HITL](https://parseur.com/images/hitl-use-cases_1024.png)
+- **Características de plataformas HITL:**![Plataforma HITL](https://cdn.prod.website-files.com/614c82ed388d53640613982e/687751f1f60530fa84d8af61_what-should-a-human-in-the-loop-platform-include.webp)
 
 ## Términos relacionados
 

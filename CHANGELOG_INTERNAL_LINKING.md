@@ -1,5 +1,29 @@
 # Changelog - Internal Linking System
 
+## [2.1.1] - 2026-01-08
+
+### 🐛 Fixed
+
+- **日本語リンク精度の向上**
+  - `Janome` による形態素解析を導入し、複合語の一部（例：「交通信号」内の「通信」）への誤った部分一致リンクを防止
+- **太字レンダリング問題の修正**
+  - Markdownの太字記法（`**`）が特定の記号（括弧、コロン等）と隣接した場合にレンダリングされない問題を修正
+  - `scripts/fix_bold_syntax_to_html.py` を作成し、Markdown内の太字を `<strong>` タグに一括変換（コードブロック等は保護）
+- **リンク先マッピングの修正**
+  - 「通信」がDTMFページへ誤リンクされる問題を修正（Denylistへ正規化して追加）
+  - 「検索拡張生成(RAG)」と「キャッシュ拡張生成(CAG)」のリンク先を適切な日本語ページ（用語集/ブログ）に修正
+- **再現性テスト**
+  - `linkbuilding-repro.md` を作成し、太字とリンクの競合ケースを網羅的にテスト・検証
+
+### 🔧 Technical Details
+
+- **依存関係**: 日本語処理用に `janome` ライブラリを追加（`linkbuilding.py` 内で条件付きインポート）
+- **スクリプト更新**:
+  - `linkbuilding.py`: 形態素境界チェックロジックを追加
+  - `fix_bold_syntax_to_html.py`: 新規追加（Markdown修正用）
+
+---
+
 ## [2.1.0] - 2026-01-08
 
 ### 🎯 Major Changes - CSV Database System
@@ -148,7 +172,11 @@ python3 scripts/linkbuilding_parallel.py \
 - `linkbuilding.py`: `--dry-run` モードでファイルが書き込まれる問題を修正
 - `extract_automatic_links.py`: 重複キーワードが生成される問題を修正
 - `linkbuilding.py`: 太字タグ内でリンクを作成する際の `NoneType` エラーを修正
-- `linkbuilding.py`: 言語コードの正規化処理を改善
+  - `linkbuilding.py`: 言語コードの正規化処理を改善
+- **太字処理の修正 (v2.1.1)**
+  - `try_wrap_bold_tag` を削除し、粒度の細かいリンク注入に変更
+  - `**Keyword(KW)**` のような複合ケースや、入れ子リンクによる表示崩れを防止
+  - Markdown内の不正な太字（スペース入り `** A **`）を自動修正するスクリプト適用
 
 ### 📝 Documentation
 

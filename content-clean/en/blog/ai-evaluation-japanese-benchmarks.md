@@ -39,11 +39,7 @@ Hallucination phenomena remains one of the greatest risks in AI implementation t
 
 To address these challenges, new evaluation metrics have been developed:
 
-- **RAG benchmarks**
-- **Fact-Score**
-- **MHaluBench**
-
-These evaluation methods enable scientific measurement of how trustworthy AI outputs are.
+- **RAG benchmarks**- **Fact-Score**- **MHaluBench**These evaluation methods enable scientific measurement of how trustworthy AI outputs are.
 
 ## The Uniqueness of Japanese LLM Evaluation and International Comparison
 
@@ -53,19 +49,17 @@ Evaluating Japanese AI models presents language-specific complexities. Honorific
 
 | Benchmark Name | Characteristics | Evaluation Focus |
 |---|---|---|
-| **[JMMLU](https://github.com/nlp-waseda/JMMLU)** | Multi-domain knowledge questions | Factual knowledge and reasoning ability |
-| **[JGLUE](https://github.com/yahoojapan/JGLUE)** | NLP task collection | Contextual comprehension and logical thinking |
-| **[JamC-QA](https://huggingface.co/datasets/sbintuitions/jamc-qa)** | Japan-culture specialized | Japan-specific common sense and cultural knowledge |
-| **[Nejumi Leaderboard4](https://wandb.ai/wandb-japan/llm-leaderboard)** | Comprehensive evaluation environment | Multi-faceted performance comparison |
+| **[JMMLU](https://github.com/nlp-waseda/JMMLU)**| Multi-domain knowledge questions | Factual knowledge and reasoning ability |
+| **[JGLUE](https://github.com/yahoojapan/JGLUE)**| NLP task collection | Contextual comprehension and logical thinking |
+| **[JamC-QA](https://huggingface.co/datasets/sbintuitions/jamc-qa)**| Japan-culture specialized | Japan-specific common sense and cultural knowledge |
+| **[Nejumi Leaderboard4](https://wandb.ai/wandb-japan/llm-leaderboard)**| Comprehensive evaluation environment | Multi-faceted performance comparison |
 
 ### Trends in International Comparison
 
-**Characteristics by Parameter Scale**
-- Under 10B: Japanese-specialized models excel
+**Characteristics by Parameter Scale**- Under 10B: Japanese-specialized models excel
 - 30B and above: Overseas large-scale models demonstrate high performance in Japanese
 
-**Differences by Evaluation Category**
-- Logical reasoning and accuracy: English models maintain high standards
+**Differences by Evaluation Category**- Logical reasoning and accuracy: English models maintain high standards
 - Honorifics and cultural consideration: Japanese-specialized models significantly superior
 - Misinformation resistance: Japanese-specialized models more stable
 
@@ -75,18 +69,15 @@ Effective AI utilization requires careful design and evaluation of prompts. This
 
 ### Scientific Improvement Methodology
 
-**Step 1: Prompt Design**
-- Create clear, specific instructions
+**Step 1: Prompt Design**- Create clear, specific instructions
 - Eliminate ambiguous expressions
 - Utilize techniques such as Zero-shot, Few-shot, and Chain-of-Thought
 
-**Step 2: Multi-faceted Evaluation**
-- Precision, F1 score, BLEU/ROUGE scores
+**Step 2: Multi-faceted Evaluation**- Precision, F1 score, BLEU/ROUGE scores
 - Consistency evaluation
 - Reproducibility validation
 
-**Step 3: Continuous Improvement**
-- Create and compare multiple prompt patterns
+**Step 3: Continuous Improvement**- Create and compare multiple prompt patterns
 - Combine automatic and human evaluation
 - Iterative refinement based on measured outcomes
 
@@ -96,7 +87,7 @@ Effective AI utilization requires careful design and evaluation of prompts. This
 
 ## JamC-QA: Innovative Benchmark for Measuring Japan-Specific Cultural Knowledge
 
-**[JamC-QA](https://huggingface.co/datasets/sbintuitions/jamc-qa)** is a revolutionary tool for evaluating genuine "Japaneseness"—something translation-based benchmarks cannot measure.
+**[JamC-QA](https://huggingface.co/datasets/sbintuitions/jamc-qa)**is a revolutionary tool for evaluating genuine "Japaneseness"—something translation-based benchmarks cannot measure.
 
 ### Characteristics and Design Purpose
 
@@ -106,8 +97,7 @@ Effective AI utilization requires careful design and evaluation of prompts. This
 
 ### Evaluation Result Trends
 
-**Global Models vs. Japanese-Specialized Models**
-- Overseas models like GPT-5 and Llama-3: Significant score drops on JamC-QA
+**Global Models vs. Japanese-Specialized Models**- Overseas models like GPT-5 and Llama-3: Significant score drops on JamC-QA
 - Japanese-specialized models: Better suited for culture-specific questions
 - Clear score differences enable objective model selection criteria
 
@@ -148,19 +138,17 @@ SmartWeb's AI chatbot employs industry-leading LLMs including **[OpenAI](https:/
 
 General AI chatbots face the challenge of providing inaccurate responses to unstudied content—the hallucination problem. SmartWeb has implemented the following countermeasures:
 
-**Proprietary Learning Data Management System**
-- Enterprise-specific response content is registered as training data in advance
+**Proprietary Learning Data Management System**- Enterprise-specific response content is registered as training data in advance
 - RAG technology selects appropriate answers from registered data
 - Honestly responds "I don't know" to questions outside the training database
 
-**Continuous Quality Improvement**
-- Continuously improve response accuracy by analyzing actual conversation logs
+**Continuous Quality Improvement**- Continuously improve response accuracy by analyzing actual conversation logs
 - Quality management through consistency evaluation
 - Optimization of evaluation metrics based on customer satisfaction
 
 ### The Superiority of the FlowHunt Platform
 
-SmartWeb's adopted **[FlowHunt](https://flowhunt.io/)** provides a practical environment for applying the latest evaluation methodologies discussed in this article:
+SmartWeb's adopted **[FlowHunt](https://flowhunt.io/)**provides a practical environment for applying the latest evaluation methodologies discussed in this article:
 
 1. **Comparative evaluation of diverse LLMs**: Actual performance testing of multiple AI models possible
 2. **Prompt optimization features**: Application of advanced techniques like Chain-of-Thought prompts

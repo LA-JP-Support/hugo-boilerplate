@@ -102,12 +102,12 @@ What makes Hugo taxonomies particularly powerful is their automatic generation o
 
 | Feature | Hugo Taxonomies | WordPress Categories | Jekyll Collections | Drupal Taxonomy |
 |---------|----------------|---------------------|-------------------|-----------------|
-| **Flexibility** | Unlimited custom taxonomies | Limited to categories/tags | Collection-based grouping | Highly flexible vocabulary system |
-| **Performance** | Static generation, very fast | Database queries, slower | Static generation, fast | Database-dependent, variable |
-| **Maintenance** | Automatic page generation | Manual or plugin-dependent | Manual configuration required | Administrative interface available |
-| **Multilingual** | Built-in support | Plugin-dependent | Limited support | Comprehensive multilingual features |
-| **Customization** | Template-based, highly flexible | Theme and plugin dependent | Liquid template customization | Extensive but complex configuration |
-| **Learning Curve** | Moderate, template knowledge helpful | Easy for basic use | Moderate, requires Jekyll knowledge | Steep, complex administrative interface |
+| **Flexibility**| Unlimited custom taxonomies | Limited to categories/tags | Collection-based grouping | Highly flexible vocabulary system |
+| **Performance**| Static generation, very fast | Database queries, slower | Static generation, fast | Database-dependent, variable |
+| **Maintenance**| Automatic page generation | Manual or plugin-dependent | Manual configuration required | Administrative interface available |
+| **Multilingual**| Built-in support | Plugin-dependent | Limited support | Comprehensive multilingual features |
+| **Customization**| Template-based, highly flexible | Theme and plugin dependent | Liquid template customization | Extensive but complex configuration |
+| **Learning Curve**| Moderate, template knowledge helpful | Easy for basic use | Moderate, requires Jekyll knowledge | Steep, complex administrative interface |
 
 ## Challenges and Considerations
 

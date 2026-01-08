@@ -13,7 +13,7 @@ url = "/internal/glossary/Prompt-Template/"
 +++
 ## Definición
 
-Un **prompt template** es una estructura de prompt preconfigurada que incorpora instrucciones estáticas y variables. Estos templates están diseñados para usarse de forma repetida en flujos conversacionales con chatbots de IA, generadores de contenido y sistemas de automatización, permitiendo entradas dinámicas y contextuales sin reescribir todo el prompt para cada uso.
+Un **prompt template**es una estructura de prompt preconfigurada que incorpora instrucciones estáticas y variables. Estos templates están diseñados para usarse de forma repetida en flujos conversacionales con chatbots de IA, generadores de contenido y sistemas de automatización, permitiendo entradas dinámicas y contextuales sin reescribir todo el prompt para cada uso.
 
 ## Visión general: ¿Qué es un Prompt Template?
 
@@ -21,50 +21,46 @@ Los prompt templates funcionan como planos estructurados para generar prompts en
 
 Los prompt templates son análogos a recetas: el método y las instrucciones permanecen iguales, pero los ingredientes específicos pueden cambiar según cada ocasión. Este enfoque agiliza el desarrollo de agentes conversacionales y la automatización de contenido, asegurando uniformidad y escalabilidad.
 
-**Recursos autorizados:**
-- [PromptLayer: What is a Prompt Template?](https://www.promptlayer.com/glossary/prompt-template)
+**Recursos autorizados:**- [PromptLayer: What is a Prompt Template?](https://www.promptlayer.com/glossary/prompt-template)
 - [Google Cloud: Use prompt templates](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-templates)
 - [Notion: AI prompt templates directory](https://www.notion.com/templates/category/ai-prompts)
 - [Prompt Engineering Guide: General Tips](https://www.promptingguide.ai/introduction/tips)
 
 ## Beneficios clave de los Prompt Templates
 
-- **Consistencia:** Mantiene tono, estructura e instrucciones uniformes en todos los resultados generados. Esto es fundamental para la voz de marca, cumplimiento regulatorio y experiencia del cliente.
-- **Reusabilidad:** Se adapta a diferentes tareas y escenarios con mínimas modificaciones, reduciendo el trabajo manual.
-- **Eficiencia:** Elimina la escritura repetitiva, acelera el despliegue y aumenta la productividad.
-- **Escalabilidad:** Permite una generación rápida y masiva de contenido o conversaciones al automatizar la creación de prompts.
-- **Reducción de errores:** Disminuye el riesgo de omitir información o mensajes inconsistentes.
-- **Optimización continua:** Facilita pruebas y mejoras constantes para optimizar respuestas de IA.
-- **Compartición de conocimiento:** Simplifica la incorporación y colaboración estandarizando los procesos de ingeniería de prompts.
+- **Consistencia:**Mantiene tono, estructura e instrucciones uniformes en todos los resultados generados. Esto es fundamental para la voz de marca, cumplimiento regulatorio y experiencia del cliente.
+- **Reusabilidad:**Se adapta a diferentes tareas y escenarios con mínimas modificaciones, reduciendo el trabajo manual.
+- **Eficiencia:**Elimina la escritura repetitiva, acelera el despliegue y aumenta la productividad.
+- **Escalabilidad:**Permite una generación rápida y masiva de contenido o conversaciones al automatizar la creación de prompts.
+- **Reducción de errores:**Disminuye el riesgo de omitir información o mensajes inconsistentes.
+- **Optimización continua:**Facilita pruebas y mejoras constantes para optimizar respuestas de IA.
+- **Compartición de conocimiento:**Simplifica la incorporación y colaboración estandarizando los procesos de ingeniería de prompts.
 
 ## Componentes principales de un Prompt Template
 
-1. **Instrucciones estáticas:** La parte invariable que indica a la IA qué hacer.
-2. **Variables/Marcadores:** Secciones marcadas (por ejemplo, `{variable}`) que se reemplazan con datos relevantes.
-3. **Guía de formato:** Indicaciones opcionales sobre el formato, estilo o longitud del resultado (por ejemplo, “Responde en una lista con viñetas”).
-4. **Información contextual:** Detalles o antecedentes adicionales para mejorar la precisión de la respuesta.
-5. **Asignación de roles o personalidades:** A veces, los templates especifican un rol para la IA, como “Actúa como agente de soporte”.
+1. **Instrucciones estáticas:**La parte invariable que indica a la IA qué hacer.
+2. **Variables/Marcadores:**Secciones marcadas (por ejemplo, `{variable}`) que se reemplazan con datos relevantes.
+3. **Guía de formato:**Indicaciones opcionales sobre el formato, estilo o longitud del resultado (por ejemplo, “Responde en una lista con viñetas”).
+4. **Información contextual:**Detalles o antecedentes adicionales para mejorar la precisión de la respuesta.
+5. **Asignación de roles o personalidades:**A veces, los templates especifican un rol para la IA, como “Actúa como agente de soporte”.
 
 ## Cómo se usan los Prompt Templates
 
 Los prompt templates son fundamentales en aplicaciones que aprovechan modelos de lenguaje grande (LLMs) y IA generativa. Escenarios comunes incluyen:
 
-- **Chatbots de IA:** Fomentan conversaciones coherentes y personalizadas, gestionan FAQs y flujos orientados a tareas.
-- **Generación de contenido:** Automatizan la creación de artículos, resúmenes, descripciones de productos, textos de marketing y más.
-- **Extracción de datos:** Estructuran prompts para extraer datos estructurados de texto no estructurado (por ejemplo, reconocimiento de entidades, resúmenes).
-- **Soporte al cliente:** Guían a asistentes de IA para ofrecer respuestas uniformes y de alta calidad.
-- **Herramientas educativas:** Generan explicaciones personalizadas, cuestionarios y recursos para estudiantes.
-- **Plataformas de automatización:** Se integran con herramientas como Zapier o [Vertex AI](https://cloud.google.com/vertex-ai) para automatizar flujos de trabajo y crear contenido dinámico.
+- **Chatbots de IA:**Fomentan conversaciones coherentes y personalizadas, gestionan FAQs y flujos orientados a tareas.
+- **Generación de contenido:**Automatizan la creación de artículos, resúmenes, descripciones de productos, textos de marketing y más.
+- **Extracción de datos:**Estructuran prompts para extraer datos estructurados de texto no estructurado (por ejemplo, reconocimiento de entidades, resúmenes).
+- **Soporte al cliente:**Guían a asistentes de IA para ofrecer respuestas uniformes y de alta calidad.
+- **Herramientas educativas:**Generan explicaciones personalizadas, cuestionarios y recursos para estudiantes.
+- **Plataformas de automatización:**Se integran con herramientas como Zapier o [Vertex AI](https://cloud.google.com/vertex-ai) para automatizar flujos de trabajo y crear contenido dinámico.
 
-**Más casos de uso:**  
-[Zapier: AI prompt templates](https://zapier.com/blog/ai-prompt-templates/)  
+**Más casos de uso:**[Zapier: AI prompt templates](https://zapier.com/blog/ai-prompt-templates/)  
 [Notion: AI prompt templates](https://www.notion.com/templates/category/ai-prompts)
 
 ## Ejemplo real: Prompt Template con variables
 
-**Ejemplo 1: Respuesta de soporte al cliente**
-
-```text
+**Ejemplo 1: Respuesta de soporte al cliente**```text
 Hola {customer_name},
 
 Gracias por contactarnos respecto a tu problema con {product_name}. Según tu descripción: "{issue_description}", te recomendamos los siguientes pasos:
@@ -77,26 +73,21 @@ Si el problema persiste, responde a este mensaje o contacta a nuestro equipo de 
 Saludos cordiales,  
 {agent_name}
 ```
-- **Variables:** `{customer_name}`, `{product_name}`, `{issue_description}`, `{step_1}`, `{step_2}`, `{support_email}`, `{agent_name}`
-- **Uso:** Cada variable se rellena con datos relevantes en tiempo de ejecución, produciendo un mensaje de soporte personalizado.
+- **Variables:**`{customer_name}`, `{product_name}`, `{issue_description}`, `{step_1}`, `{step_2}`, `{support_email}`, `{agent_name}`
+- **Uso:**Cada variable se rellena con datos relevantes en tiempo de ejecución, produciendo un mensaje de soporte personalizado.
 
-**Ejemplo 2: Template de extracción de datos para LLM**
-
-```text
+**Ejemplo 2: Template de extracción de datos para LLM**```text
 Extrae todas las fechas mencionadas y los eventos relacionados del siguiente texto: {TEXT}. Enumera cada fecha seguida de los eventos asociados.
 ```
-- **Variable:** `{TEXT}`
-- **Propósito:** Indica a la IA que extraiga datos estructurados de una entrada variable.
+- **Variable:**`{TEXT}`
+- **Propósito:**Indica a la IA que extraiga datos estructurados de una entrada variable.
 
-**Ejemplo 3: Generador de entradas de blog**
-
-```text
+**Ejemplo 3: Generador de entradas de blog**```text
 Eres un/a reconocido/a {role} escribiendo para un blog leído por {target_audience}. Escribe una entrada atractiva sobre {topic}, enfocándote en {subtopic}. Incluye un llamado a la acción para probar {product}.
 ```
-- **Variables:** `{role}`, `{target_audience}`, `{topic}`, `{subtopic}`, `{product}`
+- **Variables:**`{role}`, `{target_audience}`, `{topic}`, `{subtopic}`, `{product}`
 
-**Explora más:**  
-[Notion AI prompt templates](https://www.notion.com/templates/category/ai-prompts)
+**Explora más:**[Notion AI prompt templates](https://www.notion.com/templates/category/ai-prompts)
 
 ## Casos de uso típicos
 
@@ -110,31 +101,24 @@ Eres un/a reconocido/a {role} escribiendo para un blog leído por {target_audien
 
 ## Paso a paso: Cómo crear y usar un Prompt Template
 
-1. **Analiza la tarea**
-   - Define el resultado esperado y los elementos variables/estáticos.
+1. **Analiza la tarea**- Define el resultado esperado y los elementos variables/estáticos.
 
-2. **Diseña la estructura del template**
-   - Escribe el prompt, usando llaves `{}` para las variables.
+2. **Diseña la estructura del template**- Escribe el prompt, usando llaves `{}` para las variables.
    - Ejemplo:  
      `Resume el siguiente texto: {input_text}. Proporciona tres puntos clave y califica el sentimiento general como positivo, neutral o negativo.`
 
-3. **Define las variables**
-   - Nombra cada variable de forma clara y sin ambigüedad (por ejemplo, `{customer_name}`).
+3. **Define las variables**- Nombra cada variable de forma clara y sin ambigüedad (por ejemplo, `{customer_name}`).
 
-4. **Implementa y prueba**
-   - Sustituye las variables por datos de ejemplo.
+4. **Implementa y prueba**- Sustituye las variables por datos de ejemplo.
    - Prueba en tu plataforma de IA (por ejemplo, [Google Vertex AI Studio](https://cloud.google.com/vertex-ai), [LangChain](https://python.langchain.com/docs/modules/prompts/prompt_templates/), [Zapier](https://zapier.com/blog/ai-prompt-templates/), ChatGPT).
 
-5. **Refina y optimiza**
-   - Ajusta las instrucciones para mayor claridad, especificidad y resultados deseados.
+5. **Refina y optimiza**- Ajusta las instrucciones para mayor claridad, especificidad y resultados deseados.
    - Realiza pruebas iterativas para asegurar la calidad.
 
-6. **Documenta y versiona**
-   - Registra el propósito del template, variables e indicaciones de uso.
+6. **Documenta y versiona**- Registra el propósito del template, variables e indicaciones de uso.
    - Mantén control de versiones para mejoras continuas.
 
-7. **Implementa y reutiliza**
-   - Integra los templates en flujos de automatización o chatbots.
+7. **Implementa y reutiliza**- Integra los templates en flujos de automatización o chatbots.
    - Compártelos con equipos para una implementación coherente.
 
 ## Buenas prácticas para Prompt Templates efectivos
@@ -151,13 +135,13 @@ Eres un/a reconocido/a {role} escribiendo para un blog leído por {target_audien
 
 ## Errores y desafíos comunes
 
-- **Variables no coincidentes:** Variables indefinidas o mal escritas pueden romper la automatización o generar resultados incorrectos.
-- **Generalización excesiva:** Templates demasiado genéricos pueden resultar en respuestas insípidas, poco útiles o fuera de tono.
-- **Instrucciones vagas:** Falta de especificidad puede causar resultados inconsistentes o impredecibles.
-- **Pruebas insuficientes:** Los templates pueden fallar en casos límite o con datos diversos.
-- **Desalineación del template:** Con el tiempo, los templates pueden perder alineación con las necesidades del negocio o las capacidades del modelo.
-- **Limitaciones de ventana de contexto:** Templates grandes o demasiado detallados pueden exceder los límites de entrada de los LLM.
-- **Lógica compleja:** El exceso de ramificaciones o condicionales puede confundir tanto a humanos como a modelos de IA.
+- **Variables no coincidentes:**Variables indefinidas o mal escritas pueden romper la automatización o generar resultados incorrectos.
+- **Generalización excesiva:**Templates demasiado genéricos pueden resultar en respuestas insípidas, poco útiles o fuera de tono.
+- **Instrucciones vagas:**Falta de especificidad puede causar resultados inconsistentes o impredecibles.
+- **Pruebas insuficientes:**Los templates pueden fallar en casos límite o con datos diversos.
+- **Desalineación del template:**Con el tiempo, los templates pueden perder alineación con las necesidades del negocio o las capacidades del modelo.
+- **Limitaciones de ventana de contexto:**Templates grandes o demasiado detallados pueden exceder los límites de entrada de los LLM.
+- **Lógica compleja:**El exceso de ramificaciones o condicionales puede confundir tanto a humanos como a modelos de IA.
 
 ## Técnicas avanzadas
 
@@ -181,9 +165,7 @@ Indica a la IA que responda en JSON, tablas o listas para facilitar el procesami
 
 ## Implementación técnica: código de ejemplo
 
-**Ejemplo en Python usando LangChain**
-
-```python
+**Ejemplo en Python usando LangChain**```python
 from langchain.prompts import PromptTemplate
 
 prompt = PromptTemplate(
@@ -206,18 +188,18 @@ Más detalles técnicos y templates:
 
 ## Comparativa: Prompt Templates vs. otras técnicas de prompting
 
-- **Prompts ad-hoc:** Escritos para tareas puntuales; carecen de consistencia y escalabilidad.
-- **Prompt Templates:** Estandarizados, reutilizables y adaptables a múltiples escenarios.
-- **Few-Shot Prompting:** Incluye ejemplos dentro del prompt; puede integrarse en templates.
-- **Chain-of-Thought Prompts:** Fomenta razonamiento paso a paso; puede ser una característica de los templates.
+- **Prompts ad-hoc:**Escritos para tareas puntuales; carecen de consistencia y escalabilidad.
+- **Prompt Templates:**Estandarizados, reutilizables y adaptables a múltiples escenarios.
+- **Few-Shot Prompting:**Incluye ejemplos dentro del prompt; puede integrarse en templates.
+- **Chain-of-Thought Prompts:**Fomenta razonamiento paso a paso; puede ser una característica de los templates.
 
 ## Conceptos relacionados
 
-- **Ingeniería de Prompts:** El proceso más amplio de diseñar, refinar y optimizar prompts para LLMs.
-- **Biblioteca de Prompts:** Colección curada de templates reutilizables para tareas diversas.
-- **Optimización de Prompts:** Mejorar iterativamente prompts para maximizar rendimiento y precisión.
-- **Variables/Marcadores:** Campos dinámicos en un template, reemplazados por datos en tiempo de ejecución.
-- **Automatización de contenido:** Uso de templates para generar y subir contenido programáticamente.
+- **Ingeniería de Prompts:**El proceso más amplio de diseñar, refinar y optimizar prompts para LLMs.
+- **Biblioteca de Prompts:**Colección curada de templates reutilizables para tareas diversas.
+- **Optimización de Prompts:**Mejorar iterativamente prompts para maximizar rendimiento y precisión.
+- **Variables/Marcadores:**Campos dinámicos en un template, reemplazados por datos en tiempo de ejecución.
+- **Automatización de contenido:**Uso de templates para generar y subir contenido programáticamente.
 
 ## Lecturas adicionales y referencias autorizadas
 
@@ -231,20 +213,15 @@ Más detalles técnicos y templates:
 
 ## Preguntas frecuentes
 
-**P: ¿Qué es un prompt template en IA?**  
-R: Una estructura de prompt reutilizable con variables, diseñada para generar instrucciones consistentes y escalables para modelos de lenguaje IA.
+**P: ¿Qué es un prompt template en IA?**R: Una estructura de prompt reutilizable con variables, diseñada para generar instrucciones consistentes y escalables para modelos de lenguaje IA.
 
-**P: ¿Cómo creo un prompt template efectivo?**  
-R: Analiza tu tarea, define variables, diseña una estructura clara, prueba exhaustivamente y optimiza según los resultados de la IA.
+**P: ¿Cómo creo un prompt template efectivo?**R: Analiza tu tarea, define variables, diseña una estructura clara, prueba exhaustivamente y optimiza según los resultados de la IA.
 
-**P: ¿Cuáles son los casos de uso más comunes de los prompt templates?**  
-R: Chatbots de IA, generación de contenido, extracción de datos, soporte al cliente, herramientas educativas y creación automática de documentos.
+**P: ¿Cuáles son los casos de uso más comunes de los prompt templates?**R: Chatbots de IA, generación de contenido, extracción de datos, soporte al cliente, herramientas educativas y creación automática de documentos.
 
-**P: ¿Cuáles son los principales desafíos de los prompt templates?**  
-R: Variables mal definidas, falta de especificidad, exceso de templates genéricos y mantenimiento a medida que evolucionan las tareas.
+**P: ¿Cuáles son los principales desafíos de los prompt templates?**R: Variables mal definidas, falta de especificidad, exceso de templates genéricos y mantenimiento a medida que evolucionan las tareas.
 
-**P: ¿Cómo puedo optimizar mis prompt templates?**  
-R: Usa instrucciones claras, variables descriptivas, pruebas regulares y actualiza los templates según cambien tus necesidades o modelos de IA.
+**P: ¿Cómo puedo optimizar mis prompt templates?**R: Usa instrucciones claras, variables descriptivas, pruebas regulares y actualiza los templates según cambien tus necesidades o modelos de IA.
 
 ## Lista de verificación resumida
 
@@ -257,8 +234,7 @@ R: Usa instrucciones claras, variables descriptivas, pruebas regulares y actuali
 
 *Los prompt templates son herramientas fundamentales en la ingeniería de prompts. Permiten una automatización confiable, eficiente y escalable para la [IA conversacional](/es/glossary/conversational-ai/), creación de contenido, extracción de datos y más. Dominar los prompt templates desbloquea todo el potencial de los modelos de lenguaje grande y la IA generativa.*
 
-**Para más información sobre prompt templates, consulta:**  
-- [Prompt Engineering Guide: Tips](https://www.promptingguide.ai/introduction/tips)  
+**Para más información sobre prompt templates, consulta:**- [Prompt Engineering Guide: Tips](https://www.promptingguide.ai/introduction/tips)  
 - [Google Cloud: Prompt Templates](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-templates)  
 - [Notion: AI prompt templates](https://www.notion.com/templates/category/ai-prompts)  
 - [LangChain: Prompt Templates](https://python.langchain.com/docs/modules/prompts/prompt_templates/)  

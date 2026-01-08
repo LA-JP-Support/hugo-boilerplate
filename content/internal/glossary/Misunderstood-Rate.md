@@ -33,20 +33,15 @@ Monitoring the misunderstood rate is essential for continuous improvement. By tr
 
 ### Core Use Cases
 
-1. **Diagnosing NLP Model Weaknesses:**  
-   Misunderstood rate highlights where the chatbot fails to interpret real-world user queries, including colloquial language and domain-specific terms.
+1. **Diagnosing NLP Model Weaknesses:**Misunderstood rate highlights where the chatbot fails to interpret real-world user queries, including colloquial language and domain-specific terms.
 
-2. **Intent Expansion Prioritization:**  
-   By examining misunderstood messages, teams can identify which intents need to be added or refined.
+2. **Intent Expansion Prioritization:**By examining misunderstood messages, teams can identify which intents need to be added or refined.
 
-3. **Iterative Bot Training:**  
-   Misunderstood logs direct data annotation and enrichment, ensuring training sets reflect actual user language and behavior.
+3. **Iterative Bot Training:**Misunderstood logs direct data annotation and enrichment, ensuring training sets reflect actual user language and behavior.
 
-4. **Customer Experience Management:**  
-   Spikes in misunderstood rate often correlate with drops in customer satisfaction (CSAT) and increases in support escalations.
+4. **Customer Experience Management:**Spikes in misunderstood rate often correlate with drops in customer satisfaction (CSAT) and increases in support escalations.
 
-5. **Quality Assurance and Compliance:**  
-   Maintaining a low misunderstood rate is crucial in regulated industries, where incorrect or missed responses can have legal or financial implications.
+5. **Quality Assurance and Compliance:**Maintaining a low misunderstood rate is crucial in regulated industries, where incorrect or missed responses can have legal or financial implications.
 
 For more, see [Botsquad’s deep-dive on metrics](https://botsquad.ai/chatbot-conversation-rate-metrics).
 
@@ -58,8 +53,8 @@ For more, see [Botsquad’s deep-dive on metrics](https://botsquad.ai/chatbot-co
 \text{Misunderstood Rate (\%)} = \frac{\text{Number of Fallback-Triggered Messages}}{\text{Total User Inputs}} \times 100
 \]
 
-- **Fallback-Triggered Messages:** User inputs that could not be mapped to any trained intent, triggering a generic fallback or error response.
-- **Total User Inputs:** All messages received from users within a given period.
+- **Fallback-Triggered Messages:**User inputs that could not be mapped to any trained intent, triggering a generic fallback or error response.
+- **Total User Inputs:**All messages received from users within a given period.
 
 #### Example
 
@@ -71,15 +66,15 @@ If a chatbot processes 1,000 messages and 57 trigger fallback, the misunderstood
 
 ### Data Sources
 
-- **Chatbot analytics dashboards:** For example, [Amazon Lex Analytics](https://docs.aws.amazon.com/lexv2/latest/dg/analytics-key-definitions.html) and [Quickchat AI](https://quickchat.ai/post/chatbot-analytics) provide misunderstood/fallback rate reporting.
-- **Conversation logs:** Review logs for fallback events.
-- **Custom event tracking:** Tag fallback responses in analytics tools for deeper measurement.
+- **Chatbot analytics dashboards:**For example, [Amazon Lex Analytics](https://docs.aws.amazon.com/lexv2/latest/dg/analytics-key-definitions.html) and [Quickchat AI](https://quickchat.ai/post/chatbot-analytics) provide misunderstood/fallback rate reporting.
+- **Conversation logs:**Review logs for fallback events.
+- **Custom event tracking:**Tag fallback responses in analytics tools for deeper measurement.
 
 ### Tools and Platforms
 
-- **Proprietary platforms:** Dialogflow, Amazon Lex, Microsoft Bot Framework, etc., offer fallback intent tracking and misunderstood rate analytics.
-- **Custom solutions:** Log event and intent outputs to compute custom misunderstood rates.
-- **AI workflow analytics:** [Prompts.ai](https://www.prompts.ai/en/blog/guide-to-task-specific-chatbot-evaluation-metrics) enables automated, real-time monitoring.
+- **Proprietary platforms:**Dialogflow, Amazon Lex, Microsoft Bot Framework, etc., offer fallback intent tracking and misunderstood rate analytics.
+- **Custom solutions:**Log event and intent outputs to compute custom misunderstood rates.
+- **AI workflow analytics:**[Prompts.ai](https://www.prompts.ai/en/blog/guide-to-task-specific-chatbot-evaluation-metrics) enables automated, real-time monitoring.
 
 ## Industry Benchmarks
 
@@ -94,13 +89,13 @@ A misunderstood rate below 5% is generally considered good for mature, domain-sp
 
 ## Common Causes of High Misunderstood Rate
 
-- **Insufficient/Biased Training Data:** The bot lacks exposure to real-world language and phrasing.
-- **Poor Intent Design:** Overlapping or poorly defined intents confuse classification algorithms.
-- **Limited NLP/LLM Capability:** Basic models struggle with slang, misspellings, or complex queries.
-- **Inadequate Entity Recognition:** Failing to extract key parameters leads to fallback.
-- **Outdated/Incomplete Knowledge Base:** The bot cannot answer questions on recent topics.
-- **Poor Conversation Design:** Unclear prompts or lack of guided flows increase confusion.
-- **Language/Cultural Mismatch:** Not adapting the bot for user demographics or locales.
+- **Insufficient/Biased Training Data:**The bot lacks exposure to real-world language and phrasing.
+- **Poor Intent Design:**Overlapping or poorly defined intents confuse classification algorithms.
+- **Limited NLP/LLM Capability:**Basic models struggle with slang, misspellings, or complex queries.
+- **Inadequate Entity Recognition:**Failing to extract key parameters leads to fallback.
+- **Outdated/Incomplete Knowledge Base:**The bot cannot answer questions on recent topics.
+- **Poor Conversation Design:**Unclear prompts or lack of guided flows increase confusion.
+- **Language/Cultural Mismatch:**Not adapting the bot for user demographics or locales.
 
 For more, see [Bridgepointe Technologies: Disadvantages of Chatbots](https://bridgepointetechnologies.com/customer-experience/disadvantages-of-chatbots/).
 
@@ -124,37 +119,30 @@ Action: Regularly reviewing misunderstood logs showed issues with recent policy 
 
 ## Best Practices for Reducing Misunderstood Rate
 
-1. **Expand Training Data:** Collect and annotate misunderstood utterances for improved coverage.
-2. **Refine Intent Mapping:** Reduce overlap and ambiguity; use hierarchical intent structures.
-3. **Leverage Advanced NLP/LLMs:** Upgrade or fine-tune models for domain specificity.
-4. **Review Fallback Logs:** Identify patterns and integrate insights into bot updates.
-5. **Enrich Knowledge Base:** Keep information current to address new queries.
-6. **Enhance Conversation Design:** Use guided flows and [quick replies](/en/glossary/quick-replies/) to steer users.
-7. **Multilingual and Accessibility Support:** Adapt for linguistic and special needs.
-8. **Integrate Human Escalation:** Ensure smooth handoff to agents when automation fails.
+1. **Expand Training Data:**Collect and annotate misunderstood utterances for improved coverage.
+2. **Refine Intent Mapping:**Reduce overlap and ambiguity; use hierarchical intent structures.
+3. **Leverage Advanced NLP/LLMs:**Upgrade or fine-tune models for domain specificity.
+4. **Review Fallback Logs:**Identify patterns and integrate insights into bot updates.
+5. **Enrich Knowledge Base:**Keep information current to address new queries.
+6. **Enhance Conversation Design:**Use guided flows and [quick replies](/en/glossary/quick-replies/) to steer users.
+7. **Multilingual and Accessibility Support:**Adapt for linguistic and special needs.
+8. **Integrate Human Escalation:**Ensure smooth handoff to agents when automation fails.
 
 [Quickchat AI](https://quickchat.ai/post/chatbot-analytics) emphasizes combining misunderstood rate analysis with CSAT and FCR for a holistic view.
 
 ## Pitfalls and Common Mistakes
 
-- **Overfitting Training Data:** Over-reliance on synthetic/scripted data ignores real user language.
-- **Ignoring Context:** Not considering conversation history or user profiles.
-- **Delaying Updates:** Allowing persistent error patterns by not acting on misunderstood logs.
-- **Over-focusing on the Metric:** Minimizing misunderstood rate by broadening intents can cause false positives.
-- **Lack of Oversight:** Not monitoring for critical failures or ethical risks.
+- **Overfitting Training Data:**Over-reliance on synthetic/scripted data ignores real user language.
+- **Ignoring Context:**Not considering conversation history or user profiles.
+- **Delaying Updates:**Allowing persistent error patterns by not acting on misunderstood logs.
+- **Over-focusing on the Metric:**Minimizing misunderstood rate by broadening intents can cause false positives.
+- **Lack of Oversight:**Not monitoring for critical failures or ethical risks.
 
 ## Interpreting Misunderstood Rate in Context
 
 Misunderstood rate should be analyzed alongside:
 
-- **CSAT (Customer Satisfaction Score)**
-- **Goal Completion Rate (GCR)**
-- **Deflection Rate**
-- **First Contact Resolution (FCR)**
-- **False Positive Rate**
-- **Sentiment Analysis**
-
-As shown in the [CMU/Microsoft study](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/mcmu.pdf), false positives—where the bot gives a wrong answer confidently—can be more damaging than fallback triggers. Properly tuning thresholds and contextual understanding is vital.
+- **CSAT (Customer Satisfaction Score)**- **Goal Completion Rate (GCR)**- **Deflection Rate**- **First Contact Resolution (FCR)**- **False Positive Rate**- **Sentiment Analysis**As shown in the [CMU/Microsoft study](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/mcmu.pdf), false positives—where the bot gives a wrong answer confidently—can be more damaging than fallback triggers. Properly tuning thresholds and contextual understanding is vital.
 
 ## Business Impact
 
@@ -174,19 +162,16 @@ As shown in the [CMU/Microsoft study](https://www.microsoft.com/en-us/research/w
 
 ## Ethical and Responsible Automation
 
-- **User Trust:** Transparency and clear escalation avenues.
-- **Bias and Inclusion:** Regular audits for fairness in training data.
-- **Human Oversight:** Ongoing review of misunderstood logs and fallback events.
-- **Data Privacy:** Secure handling of logs, especially those with sensitive queries.
+- **User Trust:**Transparency and clear escalation avenues.
+- **Bias and Inclusion:**Regular audits for fairness in training data.
+- **Human Oversight:**Ongoing review of misunderstood logs and fallback events.
+- **Data Privacy:**Secure handling of logs, especially those with sensitive queries.
 
 ## Visual Summary
 
-**Infographic Example:**  
-Workflow diagram: User input → NLU/intent classification → understood vs. misunderstood → fallback trigger → logging & review → retraining cycle.
+**Infographic Example:**Workflow diagram: User input → NLU/intent classification → understood vs. misunderstood → fallback trigger → logging & review → retraining cycle.
 
-**Misunderstood Rate Benchmarks:**
-
-| Industry        | Target Misunderstood Rate | Typical Range      |
+**Misunderstood Rate Benchmarks:**| Industry        | Target Misunderstood Rate | Typical Range      |
 |-----------------|--------------------------|--------------------|
 | E-commerce      | <5%                      | 2–7%               |
 | Banking/Finance | <4%                      | 2–6%               |
@@ -226,9 +211,6 @@ Most leading chatbot platforms (Dialogflow, Lex, Bot Framework) include fallback
 - Always interpret misunderstood rate alongside KPIs like CSAT, GCR, deflection rate, and false positives.
 - Continuous monitoring, iterative training, and ethical oversight are essential for optimal misunderstood rates and user trust.
 
-**Related Terms:**  
-Fallback Rate, [Intent Recognition](/en/glossary/intent-recognition/) Accuracy, False Positive Rate, [Goal Completion Rate (GCR)](/en/glossary/goal-completion-rate--gcr-/), Customer Satisfaction Score (CSAT), First Contact Resolution (FCR), Deflection Rate, User Experience (UX), NLP, Machine Learning, Knowledge Base, Conversational Flow
+**Related Terms:**Fallback Rate, [Intent Recognition](/en/glossary/intent-recognition/) Accuracy, False Positive Rate, [Goal Completion Rate (GCR)](/en/glossary/goal-completion-rate--gcr-/), Customer Satisfaction Score (CSAT), First Contact Resolution (FCR), Deflection Rate, User Experience (UX), NLP, Machine Learning, Knowledge Base, Conversational Flow
 
-**For more in-depth guidance on chatbot analytics and misunderstood rate improvement, see [Quickchat AI’s Guide](https://quickchat.ai/post/chatbot-analytics), [Prompts.ai’s Metrics Guide](https://www.prompts.ai/en/blog/guide-to-task-specific-chatbot-evaluation-metrics), and [Botsquad’s Metrics Deep-Dive](https://botsquad.ai/chatbot-conversation-rate-metrics).**
-
-This glossary page is designed to provide a comprehensive, actionable resource on misunderstood rate for AI chatbot and automation professionals. Use the linked sources for further depth and the latest industry insights.
+**For more in-depth guidance on chatbot analytics and misunderstood rate improvement, see [Quickchat AI’s Guide](https://quickchat.ai/post/chatbot-analytics), [Prompts.ai’s Metrics Guide](https://www.prompts.ai/en/blog/guide-to-task-specific-chatbot-evaluation-metrics), and [Botsquad’s Metrics Deep-Dive](https://botsquad.ai/chatbot-conversation-rate-metrics).**This glossary page is designed to provide a comprehensive, actionable resource on misunderstood rate for AI chatbot and automation professionals. Use the linked sources for further depth and the latest industry insights.

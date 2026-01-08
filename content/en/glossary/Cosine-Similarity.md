@@ -14,8 +14,7 @@ draft: false
 
 Cosine similarity is a quantitative metric that calculates the cosine of the angle between two non-zero vectors in an inner product space. This metric is widely used in data mining, machine learning, and artificial intelligence to assess how similar two vectors are, based exclusively on their orientation rather than their magnitude. Its fundamental advantage is the focus on direction, making it ideal for high-dimensional representations such as document embeddings or feature vectors.
 
-**Formula:**  
-\[
+**Formula:**\[
 \text{Cosine Similarity} = \cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \times \|\mathbf{B}\|}
 \]
 
@@ -24,8 +23,7 @@ Where:
 - \(\|\mathbf{A}\|\), \(\|\mathbf{B}\|\): Euclidean norm (magnitude) of each vector
 - \(\theta\): Angle between the vectors
 
-**Interpretation:**
-- Score of **1**: Vectors point in the same direction (perfect similarity)
+**Interpretation:**- Score of **1**: Vectors point in the same direction (perfect similarity)
 - Score of **0**: Vectors are orthogonal (no similarity)
 - Score of **-1**: Vectors point in opposite directions (maximal dissimilarity)
 
@@ -43,21 +41,18 @@ Given two non-zero vectors:
 \mathbf{B} = [b_1, b_2, \ldots, b_n]
 \]
 
-**1. Dot Product:**  
-\[
+**1. Dot Product:**\[
 \mathbf{A} \cdot \mathbf{B} = \sum_{i=1}^{n} a_i b_i
 \]
 
-**2. Magnitude (Euclidean Norm):**  
-\[
+**2. Magnitude (Euclidean Norm):**\[
 \|\mathbf{A}\| = \sqrt{\sum_{i=1}^{n} a_i^2}
 \]
 \[
 \|\mathbf{B}\| = \sqrt{\sum_{i=1}^{n} b_i^2}
 \]
 
-**3. Cosine Similarity:**  
-\[
+**3. Cosine Similarity:**\[
 \cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \times \|\mathbf{B}\|}
 \]
 
@@ -70,35 +65,29 @@ Let \(\mathbf{A} = [3, 2, 0, 5]\), \(\mathbf{B} = [1, 0, 0, 0]\).
 - Magnitude of B: \(\sqrt{1^2 + 0^2 + 0^2 + 0^2} = 1\)
 - Cosine Similarity: \(3 / (6.16 * 1) \approx 0.49\)
 
-**Cosine Dissimilarity:**  
-Often, the dissimilarity is calculated as \(1 - \text{Cosine Similarity}\). For the above example, \(D_C(\mathbf{A}, \mathbf{B}) = 1 - 0.49 = 0.51\).
+**Cosine Dissimilarity:**Often, the dissimilarity is calculated as \(1 - \text{Cosine Similarity}\). For the above example, \(D_C(\mathbf{A}, \mathbf{B}) = 1 - 0.49 = 0.51\).
 
 ## Visual Intuition
 
 Imagine two arrows starting from the same origin in a multi-dimensional space:
 
-- **0° (Cosine = 1):** Arrows overlap, indicating identical direction
-- **90° (Cosine = 0):** Arrows are at right angles, showing no relation
-- **180° (Cosine = -1):** Arrows are in opposite directions, indicating total dissimilarity
+- **0° (Cosine = 1):**Arrows overlap, indicating identical direction
+- **90° (Cosine = 0):**Arrows are at right angles, showing no relation
+- **180° (Cosine = -1):**Arrows are in opposite directions, indicating total dissimilarity
 
 ## Practical Implementation
 
 ### Popular Libraries
 
-**NumPy**  
-Efficient for vectorized operations.
+**NumPy**Efficient for vectorized operations.
 
-**scikit-learn**  
-`sklearn.metrics.pairwise.cosine_similarity` for pairwise similarity matrices.
+**scikit-learn**`sklearn.metrics.pairwise.cosine_similarity` for pairwise similarity matrices.
 
-**TensorFlow**  
-Built-in CosineSimilarity loss.
+**TensorFlow**Built-in CosineSimilarity loss.
 
-**PyTorch**  
-`torch.nn.CosineSimilarity`.
+**PyTorch**`torch.nn.CosineSimilarity`.
 
-**Vector Databases**  
-Extensions like pgvector for PostgreSQL.
+**Vector Databases**Extensions like pgvector for PostgreSQL.
 
 ### Python Example (NumPy)
 
@@ -135,65 +124,51 @@ Multi-dimensional transaction vectors are compared to flag abnormal patterns usi
 
 ### Advantages
 
-**Insensitive to Magnitude**  
-Only direction matters; vectors of different lengths can still be highly similar.
+**Insensitive to Magnitude**Only direction matters; vectors of different lengths can still be highly similar.
 
-**High-dimensional Robustness**  
-Works well in sparse, high-dimensional datasets (e.g., text analysis, embeddings).
+**High-dimensional Robustness**Works well in sparse, high-dimensional datasets (e.g., text analysis, embeddings).
 
-**Computational Efficiency**  
-Calculation is straightforward and optimized in major machine learning libraries.
+**Computational Efficiency**Calculation is straightforward and optimized in major machine learning libraries.
 
-**Normalization Built-in**  
-No need to explicitly normalize input vectors.
+**Normalization Built-in**No need to explicitly normalize input vectors.
 
 ### Limitations
 
-**Ignores Magnitude**  
-Cannot distinguish between a small and large vector pointing in the same direction.
+**Ignores Magnitude**Cannot distinguish between a small and large vector pointing in the same direction.
 
-**Undefined for Zero Vectors**  
-Cosine similarity is not defined if either vector is the zero vector.
+**Undefined for Zero Vectors**Cosine similarity is not defined if either vector is the zero vector.
 
-**Symmetry**  
-\(\text{CosineSimilarity}(A, B) = \text{CosineSimilarity}(B, A)\); does not account for directionality of comparison.
+**Symmetry**\(\text{CosineSimilarity}(A, B) = \text{CosineSimilarity}(B, A)\); does not account for directionality of comparison.
 
-**Sensitive to Sparsity**  
-May perform poorly with extremely sparse data where non-zero elements overlap little.
+**Sensitive to Sparsity**May perform poorly with extremely sparse data where non-zero elements overlap little.
 
 ## Comparison with Other Similarity Metrics
 
 | Metric | Focus | Sensitive to Magnitude | Best For |
 |--------|-------|------------------------|----------|
-| **Cosine Similarity** | Direction | No | Text, embeddings |
-| **Euclidean Distance** | Position | Yes | Numeric, physical data |
-| **Jaccard Similarity** | Overlap/Set | No | Sets, binary attributes |
+| **Cosine Similarity**| Direction | No | Text, embeddings |
+| **Euclidean Distance**| Position | Yes | Numeric, physical data |
+| **Jaccard Similarity**| Overlap/Set | No | Sets, binary attributes |
 
-**Euclidean Distance:** Measures straight-line distance; affected by both direction and magnitude. Useful when absolute differences matter.
+**Euclidean Distance:**Measures straight-line distance; affected by both direction and magnitude. Useful when absolute differences matter.
 
-**Jaccard Similarity:** Measures overlap between sets; ideal for categorical or binary features (e.g., shared tags).
+**Jaccard Similarity:**Measures overlap between sets; ideal for categorical or binary features (e.g., shared tags).
 
-**Dot Product:** Includes magnitude; can be misleading if scales differ.
+**Dot Product:**Includes magnitude; can be misleading if scales differ.
 
 ## Best Practices and Practical Tips
 
-**1. Normalize Data**  
-Remove zero vectors and ensure all vectors are non-zero to prevent undefined results.
+**1. Normalize Data**Remove zero vectors and ensure all vectors are non-zero to prevent undefined results.
 
-**2. Sparse Data Handling**  
-Use libraries optimized for sparse matrices when working with high-dimensional, sparse data.
+**2. Sparse Data Handling**Use libraries optimized for sparse matrices when working with high-dimensional, sparse data.
 
-**3. Combine Metrics**  
-For richer similarity analysis, combine cosine similarity with other metrics as model features.
+**3. Combine Metrics**For richer similarity analysis, combine cosine similarity with other metrics as model features.
 
-**4. Consistent Preprocessing**  
-Ensure that all vectors are generated from the same process/model and have the same dimensionality.
+**4. Consistent Preprocessing**Ensure that all vectors are generated from the same process/model and have the same dimensionality.
 
-**5. Interpret Carefully**  
-High cosine similarity does not always imply semantic equivalence; context and domain knowledge are essential.
+**5. Interpret Carefully**High cosine similarity does not always imply semantic equivalence; context and domain knowledge are essential.
 
-**6. Leverage Robust Libraries**  
-Use built-in functions from NumPy, scikit-learn, TensorFlow, or pgvector.
+**6. Leverage Robust Libraries**Use built-in functions from NumPy, scikit-learn, TensorFlow, or pgvector.
 
 ## References
 
