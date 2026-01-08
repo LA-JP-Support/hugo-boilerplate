@@ -3,7 +3,7 @@ title: "AI Email Auto-Response Generation"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "ai-email-auto-response-generation"
-description: "AI technology that automatically reads incoming emails and generates personalized replies based on their content and meaning, saving time on high-volume email workflows."
+description: "AI technology that automatically reads incoming emails and generates personalized replies based on their content, saving time on high-volume email workflows."
 keywords: ["AI email auto-response", "natural language processing", "large language models", "email automation", "customer support"]
 category: "AI Chatbot & Automation"
 type: "glossary"

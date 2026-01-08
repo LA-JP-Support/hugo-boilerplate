@@ -2,7 +2,7 @@
 title: "Cloud PBX"
 date: 2025-12-19
 translationKey: Cloud-PBX
-description: "A phone system delivered over the internet instead of physical office equipment, allowing businesses to make calls and manage communications without expensive hardware."
+description: "A phone system hosted on the internet that lets businesses make calls and manage communications without buying expensive office equipment."
 keywords:
 - cloud pbx
 - hosted pbx

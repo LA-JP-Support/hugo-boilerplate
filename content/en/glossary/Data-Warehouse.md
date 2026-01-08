@@ -2,7 +2,7 @@
 title: "Data Warehouse"
 date: 2025-12-19
 translationKey: Data-Warehouse
-description: "A centralized database that collects and organizes data from across a company to help leaders and analysts make better business decisions through reporting and analysis."
+description: "A centralized storage system that collects data from across a company and organizes it so managers and analysts can easily analyze it to make better business decisions."
 keywords:
 - data warehouse
 - business intelligence

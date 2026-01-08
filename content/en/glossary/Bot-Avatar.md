@@ -2,7 +2,7 @@
 title: "Bot Avatar"
 lastmod: 2025-12-18
 translationKey: "bot-avatar"
-description: "A bot avatar is the visual character or icon that represents an AI chatbot in a chat interface, making the automated assistant feel more human and relatable to users."
+description: "A bot avatar is the visual character or icon that represents an AI chatbot, giving it a recognizable face that makes conversations feel more human and trustworthy."
 keywords: ["bot avatar", "chatbot persona", "AI assistant", "digital human", "user experience"]
 category: "AI Chatbot & Automation"
 type: "glossary"

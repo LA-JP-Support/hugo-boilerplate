@@ -2,7 +2,7 @@
 title: "SOC 2 Compliance"
 date: 2025-12-19
 translationKey: SOC-2-Compliance
-description: "An auditing standard that verifies organizations properly protect customer data and maintain secure operations, helping clients trust their service providers."
+description: "A security audit standard that verifies service providers properly protect customer data and maintain safe operations, helping businesses ensure their vendors are trustworthy."
 keywords:
 - SOC 2 compliance
 - trust service criteria

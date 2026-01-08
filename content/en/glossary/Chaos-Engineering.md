@@ -3,7 +3,7 @@ title: "Chaos Engineering"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "chaos-engineering"
-description: "A practice of deliberately testing software systems with controlled failures to find weaknesses and ensure they can handle real-world problems before they cause actual outages."
+description: "A practice of intentionally causing controlled failures in software systems to discover weaknesses and ensure they can handle real-world problems safely before actual outages occur."
 keywords: ["Chaos Engineering", "system resilience", "fault injection", "distributed systems", "SRE"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

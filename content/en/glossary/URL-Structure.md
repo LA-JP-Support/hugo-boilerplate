@@ -2,7 +2,7 @@
 title: "URL Structure"
 date: 2025-12-19
 translationKey: URL-Structure
-description: "A URL structure is the organized format of web addresses that helps browsers find and display specific pages and files on the internet. It combines elements like the protocol, domain name, and page path into a unique identifier for each resource."
+description: "A URL structure is the organized format of web addresses that helps browsers locate specific pages on the internet by combining elements like the protocol, domain name, and page path."
 keywords:
 - URL structure
 - web development

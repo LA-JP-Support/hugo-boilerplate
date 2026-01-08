@@ -3,7 +3,7 @@ title: "Multitasking"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "multitasking"
-description: "Multitasking is attempting to do multiple tasks at once or switch between them rapidly, though research shows it usually reduces efficiency and work quality rather than boosting productivity."
+description: "Multitasking is attempting to do multiple tasks at once or switch between them rapidly, though research shows it usually reduces efficiency and work quality."
 keywords: ["multitasking", "task switching", "cognitive load", "productivity", "AI chatbots"]
 category: "AI Chatbot & Automation"
 type: "glossary"

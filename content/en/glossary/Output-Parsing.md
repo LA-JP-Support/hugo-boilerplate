@@ -1,7 +1,7 @@
 ---
 title: Output Parsing
 translationKey: output-parsing
-description: "A technique that converts unstructured text from AI models into organized, machine-readable formats like JSON so software can automatically process and use the data."
+description: "A technique that converts raw text from AI models into organized formats like JSON so software can automatically process and use the data."
 keywords:
 - output parsing
 - LLMs

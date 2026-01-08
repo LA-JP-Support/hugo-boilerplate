@@ -2,7 +2,7 @@
 title: "Contact Center as a Service (CCaaS)"
 date: 2025-12-19
 translationKey: Contact-Center-as-a-Service--CCaaS-
-description: "A cloud-based customer service platform that lets businesses manage phone calls, messages, and support tickets without buying expensive equipment or hiring IT staff."
+description: "A cloud-based customer service platform that enables businesses to handle customer calls, messages, and support without purchasing expensive equipment or maintaining IT infrastructure."
 keywords:
 - contact center as a service
 - ccaas platform

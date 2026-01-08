@@ -2,7 +2,7 @@
 title: "Model Retraining"
 date: 2025-12-19
 translationKey: Model-Retraining
-description: "Model Retraining is the process of updating a machine learning model with new data to keep it accurate and effective as real-world conditions change over time."
+description: "Model Retraining is the process of updating a machine learning system with new data to keep it working accurately as real-world conditions change over time."
 keywords:
 - model retraining
 - machine learning lifecycle

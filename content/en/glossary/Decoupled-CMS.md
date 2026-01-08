@@ -2,7 +2,7 @@
 title: "Decoupled CMS"
 date: 2025-12-19
 translationKey: Decoupled-CMS
-description: "A content management system that separates content creation from website design, allowing teams to manage content and developers to build custom websites independently using any technology."
+description: "A content management system that separates content creation from website design, letting content teams and developers work independently using any technology."
 keywords:
 - decoupled cms
 - headless cms

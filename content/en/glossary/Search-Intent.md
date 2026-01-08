@@ -2,7 +2,7 @@
 title: "Search Intent"
 date: 2025-12-19
 translationKey: Search-Intent
-description: "The underlying reason why someone searches for something online. Understanding what users actually want to find helps create content that matches their needs."
+description: "The reason why someone searches online—whether they want information, to buy something, or to find a specific website. Understanding search intent helps create content that actually matches what people are looking for."
 keywords:
 - search intent
 - user intent

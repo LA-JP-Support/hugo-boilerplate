@@ -2,7 +2,7 @@
 title: "Social Customer Service"
 date: 2025-12-19
 translationKey: Social-Customer-Service
-description: "Social Customer Service is using social media platforms like Facebook and Twitter to provide customer support and answer questions in real-time, meeting customers where they already spend their time online."
+description: "Social Customer Service is providing customer support through social media platforms like Facebook and Twitter, allowing businesses to help customers quickly where they already spend time online."
 keywords:
 - social customer service
 - social media support

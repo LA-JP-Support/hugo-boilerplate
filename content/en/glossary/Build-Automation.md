@@ -2,7 +2,7 @@
 title: "Build Automation"
 date: 2025-12-19
 translationKey: Build-Automation
-description: "A system that automatically handles repetitive software development tasks like compiling code, running tests, and deploying applications, reducing manual work and errors."
+description: "A system that automatically handles repetitive development tasks like compiling code, running tests, and deploying software, so teams can work faster and make fewer mistakes."
 keywords:
 - build automation
 - continuous integration

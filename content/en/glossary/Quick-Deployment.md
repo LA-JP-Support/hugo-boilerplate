@@ -2,7 +2,7 @@
 title: "Quick Deployment"
 date: 2025-12-19
 translationKey: Quick-Deployment
-description: "Quick deployment is the practice of rapidly releasing software updates and changes to production systems with minimal manual work, using automation and streamlined processes to deliver faster while maintaining quality."
+description: "Quick deployment is the practice of rapidly releasing software updates to production systems with minimal manual work, using automation to deliver faster while maintaining quality."
 keywords:
 - quick deployment
 - rapid deployment

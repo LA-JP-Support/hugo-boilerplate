@@ -2,7 +2,7 @@
 title: "Social Media Scheduling"
 date: 2025-12-19
 translationKey: Social-Media-Scheduling
-description: "Social media scheduling is a tool that lets you plan and automatically post content to social media platforms at specific times, helping you maintain a consistent online presence without manual posting."
+description: "A tool that lets you plan and automatically post content to social media at specific times, so you can maintain an active presence without posting manually each time."
 keywords:
 - social media scheduling
 - content automation

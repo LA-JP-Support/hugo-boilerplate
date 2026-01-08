@@ -2,7 +2,7 @@
 title: "Social Media Dashboard"
 date: 2025-12-19
 translationKey: Social-Media-Dashboard
-description: "A centralized platform that lets you manage all your social media accounts, post content, and track performance from one place instead of switching between different apps."
+description: "A centralized platform that consolidates all your social media accounts into one interface, allowing you to post, manage messages, and track performance metrics across multiple platforms simultaneously."
 keywords:
 - social media dashboard
 - social media management

@@ -3,7 +3,7 @@ title: "White Labeling"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "white-labeling"
-description: "A service that lets businesses rebrand an AI chatbot as their own product by removing all vendor logos and references, so customers think it's their native solution."
+description: "A service that lets businesses rebrand an AI chatbot as their own product by removing all vendor branding, so customers see it as the business's native solution."
 keywords: ["white labeling", "AI chatbots", "chatbot platform", "brand control", "agencies"]
 category: "AI Chatbot & Automation"
 type: "glossary"

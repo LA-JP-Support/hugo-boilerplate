@@ -2,7 +2,7 @@
 title: "Contextual Prompt"
 date: 2025-12-19
 translationKey: Contextual-Prompt
-description: "A method of giving AI instructions that includes background information and context, so it understands what you want and provides better, more relevant answers."
+description: "AI instructions that include background information and context so the system understands your needs and gives better, more relevant answers."
 keywords:
 - contextual prompt
 - AI prompt engineering

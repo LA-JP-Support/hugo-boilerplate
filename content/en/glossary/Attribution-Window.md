@@ -3,7 +3,7 @@ title: "Attribution Window"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "attribution-window"
-description: "An attribution window is the time period after a customer clicks an ad or interacts with marketing content during which a purchase is credited to that marketing effort."
+description: "An attribution window is the time period after a customer interacts with an ad during which a purchase is credited to that marketing effort."
 keywords: ["attribution window", "marketing attribution", "conversion window", "campaign effectiveness", "digital advertising"]
 category: "Analytics & Content Effectiveness"
 type: "glossary"

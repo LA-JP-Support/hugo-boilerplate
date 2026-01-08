@@ -2,7 +2,7 @@
 title: "Few-Shot Learning"
 date: 2025-12-19
 translationKey: Few-Shot-Learning
-description: "A machine learning approach that enables AI models to learn and adapt to new tasks using only a few examples, mimicking how humans quickly understand new concepts."
+description: "An AI learning method that allows models to quickly master new tasks using just a few examples, similar to how humans learn from limited information."
 keywords:
 - few-shot learning
 - meta-learning

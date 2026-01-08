@@ -2,7 +2,7 @@
 title: "Social Media ROI"
 date: 2025-12-19
 translationKey: Social-Media-ROI
-description: "A metric that measures how much profit a business makes from social media marketing compared to what it spends on it, helping evaluate whether social media efforts are worthwhile."
+description: "A measurement that shows how much money a business earns from social media marketing compared to what it spends, helping decide if social media efforts are worth the investment."
 keywords:
 - social media ROI
 - social media metrics

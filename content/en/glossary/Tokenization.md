@@ -2,7 +2,7 @@
 title: "Tokenization"
 date: 2025-12-19
 translationKey: Tokenization
-description: "A security technique that replaces sensitive information like credit card numbers with random codes, protecting data while keeping it usable for business operations."
+description: "A security method that replaces sensitive data like credit card numbers with random codes, keeping the original information safe in a secure vault while allowing business operations to continue."
 keywords:
 - tokenization
 - data security

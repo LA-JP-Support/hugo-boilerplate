@@ -2,7 +2,7 @@
 title: "CRM Analytics"
 date: 2025-12-19
 translationKey: CRM-Analytics
-description: "CRM Analytics is a tool that analyzes customer data to reveal patterns and insights, helping businesses understand customer behavior and make better decisions to improve relationships."
+description: "CRM Analytics is a system that examines customer data across all touchpoints to uncover patterns and trends, helping businesses understand customer behavior and make smarter decisions."
 keywords:
 - CRM Analytics
 - Customer Data Analysis

@@ -1,7 +1,7 @@
 ---
 title: HTTP Request Node
 translationKey: http-request-node
-description: "A tool that sends requests to external websites or services within automation workflows, allowing different applications to communicate and share data automatically."
+description: "A tool that automatically sends requests to external websites or services, allowing different applications to exchange data and work together without manual intervention."
 keywords:
 - HTTP Request Node
 - API integration

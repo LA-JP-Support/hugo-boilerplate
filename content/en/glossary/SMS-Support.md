@@ -2,7 +2,7 @@
 title: "SMS Support"
 date: 2025-12-19
 translationKey: SMS-Support
-description: "SMS Support is a customer service channel that lets businesses help customers through text messages on their phones, offering quick and convenient support without phone calls or apps."
+description: "SMS Support is a customer service channel that lets businesses help customers through text messages on their mobile phones, offering quick and convenient support without needing phone calls or apps."
 keywords:
 - SMS support
 - text messaging customer service

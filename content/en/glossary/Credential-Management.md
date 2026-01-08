@@ -2,7 +2,7 @@
 title: "Credential Management"
 date: 2025-12-19
 translationKey: Credential-Management
-description: "A system for securely storing and controlling access to passwords, API keys, and other authentication information needed to access digital services and applications."
+description: "A system that securely stores and controls access to passwords, API keys, and other login information needed for digital services and applications."
 keywords:
 - credential management
 - password security

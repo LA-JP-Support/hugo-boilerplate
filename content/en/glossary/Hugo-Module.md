@@ -2,7 +2,7 @@
 title: "Hugo Module"
 date: 2025-12-19
 translationKey: Hugo-Module
-description: "A reusable component system for Hugo websites that lets developers share and manage themes, layouts, and content blocks like building blocks, with automatic version control."
+description: "A reusable building block system for Hugo websites that lets developers share themes, layouts, and components like LEGO pieces, with automatic version management."
 keywords:
 - Hugo Module
 - Static Site Generator

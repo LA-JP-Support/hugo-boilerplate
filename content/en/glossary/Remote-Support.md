@@ -2,7 +2,7 @@
 title: "Remote Support"
 date: 2025-12-19
 translationKey: Remote-Support
-description: "Technical assistance provided to computers and devices from a distance using internet connections, allowing support staff to diagnose and fix problems without visiting in person."
+description: "Remote support is technical assistance provided to computers and devices from a distance using internet connections, allowing support staff to diagnose and fix problems without visiting in person."
 keywords:
 - remote support
 - technical assistance

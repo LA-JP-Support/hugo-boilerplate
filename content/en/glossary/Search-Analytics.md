@@ -2,7 +2,7 @@
 title: "Search Analytics"
 date: 2025-12-19
 translationKey: Search-Analytics
-description: "Search Analytics is the practice of tracking and analyzing what users search for and how they interact with search results to improve search performance and understand user needs."
+description: "Search Analytics is the practice of tracking what users search for and how they interact with search results to understand their needs and improve search performance."
 keywords:
 - search analytics
 - search performance metrics

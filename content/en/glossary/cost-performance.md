@@ -3,7 +3,7 @@ title: "Cost-Performance Ratio (CPI)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "cost-performance-ratio-cpi"
-description: "A metric that measures how efficiently a project converts spending into completed work, showing whether you're getting good value for every dollar spent."
+description: "A project metric that shows how much value you're getting for each dollar spent, helping teams track if a project is on budget, over budget, or under budget."
 keywords: ["Cost Performance Index", "CPI", "project management", "AI chatbot projects", "automation projects"]
 category: "Project Management"
 type: "glossary"

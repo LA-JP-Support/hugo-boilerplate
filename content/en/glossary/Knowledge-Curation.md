@@ -2,7 +2,7 @@
 title: "Knowledge Curation"
 date: 2025-12-19
 translationKey: Knowledge-Curation
-description: "Knowledge curation is the process of collecting, organizing, and evaluating information to create useful knowledge resources that help people make better decisions."
+description: "Knowledge curation is the process of selecting, organizing, and presenting information from many sources to create useful, trustworthy resources that help people understand topics and make better decisions."
 keywords:
 - knowledge curation
 - information management

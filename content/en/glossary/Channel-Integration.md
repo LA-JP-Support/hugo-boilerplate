@@ -2,7 +2,7 @@
 title: "Channel Integration"
 date: 2025-12-19
 translationKey: Channel-Integration
-description: "Channel Integration is a system that connects all your sales and service channels—like stores, websites, apps, and social media—so customers get the same experience and information everywhere."
+description: "A system that connects all your sales channels—stores, websites, apps, and social media—so customers experience consistent pricing, products, and service everywhere."
 keywords:
 - channel integration
 - omnichannel strategy

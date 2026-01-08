@@ -2,7 +2,7 @@
 title: "Zoom"
 date: 2025-12-19
 translationKey: Zoom
-description: "A cloud-based video conferencing platform that enables people to hold virtual meetings, webinars, and collaborate remotely with high-quality audio and video."
+description: "A video conferencing platform that lets people hold virtual meetings and collaborate remotely with simple, reliable audio and video communication."
 keywords:
 - zoom video conferencing
 - remote meetings

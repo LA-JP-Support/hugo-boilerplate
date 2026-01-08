@@ -3,7 +3,7 @@ title: Bias
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: bias
-description: "AI Bias is systematic unfairness in AI systems that favors or disadvantages certain groups based on characteristics like race or gender, often reflecting historical inequities in training data and processes."
+description: "Systematic unfairness in AI systems that favors or disadvantages certain groups based on characteristics like race or gender, often reflecting historical inequities in training data."
 keywords:
 - AI bias
 - chatbot bias

@@ -2,7 +2,7 @@
 title: "Data Catalog"
 date: 2025-12-19
 translationKey: Data-Catalog
-description: "A centralized directory that helps organizations find, understand, and manage their data assets across different systems, much like a library catalog for data."
+description: "A centralized directory that organizes information about all your company's data, making it easy to find, understand, and use data across different systems."
 keywords:
 - data catalog
 - metadata management

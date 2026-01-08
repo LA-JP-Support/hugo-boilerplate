@@ -2,7 +2,7 @@
 title: "Long Short-Term Memory (LSTM)"
 date: 2025-12-19
 translationKey: Long-Short-Term-Memory--LSTM-
-description: "A neural network designed to process sequential data by selectively remembering and forgetting information over long periods, commonly used for time series analysis and language tasks."
+description: "A neural network that remembers important information over long sequences of data, making it useful for tasks like predicting stock prices or understanding sentences in text."
 keywords:
 - LSTM neural networks
 - recurrent neural networks

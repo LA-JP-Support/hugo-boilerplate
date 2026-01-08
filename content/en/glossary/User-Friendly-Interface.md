@@ -2,7 +2,7 @@
 title: "User-Friendly Interface"
 date: 2025-12-19
 translationKey: User-Friendly-Interface
-description: "A design approach that makes technology easy to use by organizing information clearly, providing helpful feedback, and requiring minimal learning time for users of all skill levels."
+description: "A design that makes technology easy to use by organizing information clearly, providing helpful feedback, and requiring minimal learning time for users of all skill levels."
 keywords:
 - user-friendly interface
 - user experience design

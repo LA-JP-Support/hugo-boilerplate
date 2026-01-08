@@ -2,7 +2,7 @@
 title: "Social Calendar"
 date: 2025-12-19
 translationKey: Social-Calendar
-description: "A planning tool that helps businesses schedule and organize social media posts across different platforms in advance, ensuring consistent and strategic content sharing."
+description: "A planning tool that helps businesses schedule social media posts in advance across multiple platforms, keeping content organized and consistent with marketing goals."
 keywords:
 - social calendar
 - content planning

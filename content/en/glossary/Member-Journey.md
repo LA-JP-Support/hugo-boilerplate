@@ -2,7 +2,7 @@
 title: "Member Journey"
 date: 2025-12-19
 translationKey: Member-Journey
-description: "A member journey is the complete experience someone has with an organization, from first learning about it through ongoing engagement and support. It helps organizations understand and improve how members interact with them over time."
+description: "A member journey is the complete path someone takes with an organization, from first discovering it to becoming an active, engaged member. It helps organizations understand and improve every interaction to build lasting relationships."
 keywords:
 - member journey
 - customer experience

@@ -2,7 +2,7 @@
 title: "Call Center CRM Integration"
 date: 2025-12-19
 translationKey: Call-Center-CRM-Integration
-description: "A system that connects your call center phone system with customer database software, so agents can see customer history and information instantly during calls without switching between programs."
+description: "A system that automatically displays customer information to call center agents during calls, eliminating the need to switch between phone and database software for faster, more personalized service."
 keywords:
 - call center CRM integration
 - customer relationship management

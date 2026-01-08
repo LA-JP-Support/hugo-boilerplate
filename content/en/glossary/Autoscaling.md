@@ -3,7 +3,7 @@ title: "Autoscaling"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "autoscaling"
-description: "A cloud feature that automatically adjusts computing resources based on current demand, keeping applications running smoothly while reducing unnecessary costs."
+description: "A cloud feature that automatically adds or removes computing resources based on how much your application needs right now, keeping it running smoothly while saving money."
 keywords: ["autoscaling", "cloud computing", "resource allocation", "horizontal scaling", "vertical scaling"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

@@ -3,7 +3,7 @@ title: "Voice Activity Detection (VAD)"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "voice-activity-detection-vad"
-description: "A technology that automatically detects when someone is speaking in audio, distinguishing speech from silence and background noise. It helps voice assistants and chatbots know when to listen and respond."
+description: "A technology that automatically identifies when someone is speaking in audio by distinguishing speech from silence, noise, and music. It helps voice assistants know when to listen and respond."
 keywords: ["Voice Activity Detection", "VAD", "Speech Activity Detection", "AI chatbots", "ASR"]
 category: "AI Chatbot & Automation"
 type: "glossary"

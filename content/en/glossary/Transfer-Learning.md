@@ -2,7 +2,7 @@
 title: "Transfer Learning"
 date: 2025-12-19
 translationKey: Transfer-Learning
-description: "A machine learning technique that reuses knowledge from one task to solve a related task more efficiently, reducing the need for large datasets and training time."
+description: "A machine learning method that reuses knowledge from one task to quickly solve similar tasks with less data and training time."
 keywords:
 - transfer learning
 - pre-trained models

@@ -2,7 +2,7 @@
 title: "IT Service Catalog"
 date: 2025-12-19
 translationKey: IT-Service-Catalog
-description: "A centralized directory that lists all IT services available in an organization, showing what each service does, how to request it, and what to expect in terms of quality and support."
+description: "A centralized directory listing all IT services available in an organization, showing how to request each service and what quality of support to expect."
 keywords:
 - IT service catalog
 - service management

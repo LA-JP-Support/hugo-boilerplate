@@ -2,7 +2,7 @@
 title: "Identity and Access Management (IAM)"
 date: 2025-12-19
 translationKey: Identity-and-Access-Management--IAM-
-description: "A security system that verifies who users are and controls what resources they can access, ensuring the right people get appropriate permissions at the right time."
+description: "A security system that verifies who users are and controls what resources they can access based on their role and needs."
 keywords:
 - identity management
 - access control

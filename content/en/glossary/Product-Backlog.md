@@ -2,7 +2,7 @@
 title: "Product Backlog"
 date: 2025-12-19
 translationKey: Product-Backlog
-description: "A prioritized to-do list for product development that organizes all features and improvements needed, helping teams decide what to build next based on business goals and user needs."
+description: "A prioritized to-do list that organizes all features and improvements a product needs, helping teams decide what to build next based on business goals and user feedback."
 keywords:
 - product backlog
 - agile development

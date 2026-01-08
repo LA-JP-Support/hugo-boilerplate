@@ -2,7 +2,7 @@
 title: "Metadata Management"
 date: 2025-12-19
 translationKey: Metadata-Management
-description: "A system that organizes and tracks information about your data—such as where it comes from, what it means, and how it's used—to help teams find and understand data more easily."
+description: "A system that organizes information about your data—like where it comes from and how it's used—so teams can easily find and understand what data they have."
 keywords:
 - metadata management
 - data governance

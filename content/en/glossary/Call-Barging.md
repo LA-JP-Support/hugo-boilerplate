@@ -2,7 +2,7 @@
 title: "Call Barging"
 date: 2025-12-19
 translationKey: Call-Barging
-description: "A feature that lets supervisors join ongoing customer calls to provide real-time guidance or resolve issues without the caller knowing they've joined the conversation."
+description: "A feature that allows supervisors to join live customer calls in real-time to provide guidance or resolve issues, without notifying the customer or agent."
 keywords:
 - call barging
 - call monitoring

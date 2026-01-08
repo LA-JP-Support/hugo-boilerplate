@@ -2,7 +2,7 @@
 title: "Training Resources"
 date: 2025-12-19
 translationKey: Training-Resources
-description: "Training resources are tools, materials, and platforms used to help people learn new skills and knowledge. They range from online courses and videos to interactive simulations and personalized learning systems."
+description: "Training resources are tools and materials—such as online courses, videos, and interactive platforms—that help people learn new skills and knowledge in schools, workplaces, or on their own."
 keywords:
 - training resources
 - learning management systems

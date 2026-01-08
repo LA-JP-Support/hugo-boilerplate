@@ -2,7 +2,7 @@
 title: "Responsible AI"
 date: 2025-12-19
 translationKey: Responsible-AI
-description: "Responsible AI is a framework for developing and using artificial intelligence systems ethically and transparently, ensuring they benefit society while respecting human rights and maintaining human oversight."
+description: "Responsible AI is an approach to developing and using artificial intelligence systems fairly, transparently, and safely—ensuring they benefit people while respecting their rights and keeping humans in control."
 keywords:
 - responsible ai
 - ai ethics

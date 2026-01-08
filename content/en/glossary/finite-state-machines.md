@@ -3,7 +3,7 @@ title: Finite State Machines (FSM)
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: finite-state-machines-fsm
-description: "A computational model that represents a system with a fixed number of states and rules for switching between them based on inputs. Used to design predictable behavior in software, games, and devices."
+description: "A computational model that represents systems with a fixed number of states and predefined rules for switching between them based on inputs. Used to create predictable behavior in software, games, and devices."
 keywords:
 - finite state machine
 - FSM

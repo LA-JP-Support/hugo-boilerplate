@@ -2,7 +2,7 @@
 title: "Private Community"
 date: 2025-12-19
 translationKey: Private-Community
-description: "An exclusive online or physical space where only selected members can join, designed for deeper connections and trusted discussions among people with shared interests or professional backgrounds."
+description: "An exclusive online or physical space where only selected members can access, designed for trusted discussions and deeper connections among people with shared interests or backgrounds."
 keywords:
 - private community
 - exclusive membership

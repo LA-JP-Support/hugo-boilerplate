@@ -2,7 +2,7 @@
 title: "Technology Partner"
 date: 2025-12-19
 translationKey: Technology-Partner
-description: "A company that works with another organization to combine their technology skills and resources, sharing both the work and the benefits to achieve goals neither could reach alone."
+description: "A company that partners with another organization to combine their technology strengths and work together toward shared goals that neither could achieve alone."
 keywords:
 - technology partner
 - strategic alliance

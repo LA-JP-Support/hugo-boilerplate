@@ -3,7 +3,7 @@ title: "Spot Instances"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "spot-instances"
-description: "Discounted cloud computing resources that use spare server capacity, often 90% cheaper than regular pricing. They're ideal for flexible tasks like data analysis and machine learning that can handle brief interruptions."
+description: "Discounted cloud computing resources that use spare server capacity at up to 90% off regular prices, ideal for flexible tasks that can tolerate brief interruptions."
 keywords: ["Spot Instances", "cloud compute", "AWS", "Azure", "GCP"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

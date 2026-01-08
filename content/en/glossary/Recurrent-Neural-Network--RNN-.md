@@ -2,7 +2,7 @@
 title: "Recurrent Neural Network (RNN)"
 date: 2025-12-19
 translationKey: Recurrent-Neural-Network--RNN-
-description: "A neural network that processes sequential data by remembering previous information, making it ideal for tasks like language translation, speech recognition, and time-series prediction."
+description: "A neural network that remembers previous information while processing sequences, making it useful for tasks like language translation, speech recognition, and predicting future trends in data."
 keywords:
 - recurrent neural network
 - RNN architecture

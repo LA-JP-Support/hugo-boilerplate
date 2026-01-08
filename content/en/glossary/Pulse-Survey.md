@@ -2,7 +2,7 @@
 title: "Pulse Survey"
 date: 2025-12-19
 translationKey: Pulse-Survey
-description: "A short, frequent survey that asks employees 5-15 quick questions to measure their engagement and satisfaction, helping organizations respond to workplace issues faster than traditional annual surveys."
+description: "A short, frequent survey with 5-15 quick questions that measures employee mood and engagement in real-time, helping organizations spot and fix workplace problems faster than yearly surveys."
 keywords:
 - pulse survey
 - employee engagement

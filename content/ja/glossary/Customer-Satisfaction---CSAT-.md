@@ -1,8 +1,6 @@
 ---
-url: "/ja/glossary/Customer-Satisfaction---CSAT-/"
----
----
 title: 顧客満足度スコア (CSAT)
+url: "/ja/glossary/Customer-Satisfaction---CSAT-/"
 lastmod: '2025-12-19'
 date: '2025-12-19'
 translationKey: customer-satisfaction-score-csat
@@ -18,7 +16,6 @@ type: glossary
 draft: false
 e-title: Customer Satisfaction Score (CSAT)
 term: こきゃくまんぞくどスコア (シーサット)
-url: "/ja/glossary/Customer-Satisfaction---CSAT-/"
 ---
 ## 顧客満足度スコア(CSAT)とは?
 顧客満足度スコア(CSAT)は、企業の製品、サービス、または特定のやり取りに対する顧客の満足度を定量化する標準化された指標です。最も一般的には、CSATは顧客ジャーニーにおける重要なイベントやタッチポイントの直後に、製品、サービス、または体験に対する満足度を評価するよう顧客に依頼することで測定されます。この指標は顧客の感情を直接的に示すものであり、顧客体験を測定し改善しようとする組織にとって重要なツールとなっています。

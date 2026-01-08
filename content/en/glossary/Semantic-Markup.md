@@ -2,7 +2,7 @@
 title: "Semantic Markup"
 date: 2025-12-19
 translationKey: Semantic-Markup
-description: "HTML code that clearly labels what each part of a webpage means, helping search engines and accessibility tools better understand and present your content."
+description: "HTML code that uses meaningful labels to clearly show what each part of a webpage represents, making it easier for search engines and accessibility tools to understand your content."
 keywords:
 - semantic markup
 - HTML5 semantic elements

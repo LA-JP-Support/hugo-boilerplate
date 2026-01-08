@@ -2,7 +2,7 @@
 title: "Federated Learning"
 date: 2025-12-19
 translationKey: Federated-Learning
-description: "A machine learning approach that trains AI models across multiple devices while keeping personal data private and stored locally, rather than collecting everything in one central location."
+description: "A machine learning method that trains AI models across multiple devices while keeping personal data private and stored locally, rather than sending it to a central server."
 keywords:
 - federated learning
 - distributed machine learning

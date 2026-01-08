@@ -2,7 +2,7 @@
 title: "Voice Search Optimization"
 date: 2025-12-19
 translationKey: Voice-Search-Optimization
-description: "A strategy to help websites appear in voice search results by using conversational language and direct answers, since people now ask questions aloud to Alexa, Google Assistant, and similar voice assistants."
+description: "Voice Search Optimization is a strategy to help websites rank in voice search results by using natural, conversational language and providing direct answers to spoken questions asked to voice assistants like Alexa and Google Assistant."
 keywords:
 - voice search optimization
 - conversational SEO

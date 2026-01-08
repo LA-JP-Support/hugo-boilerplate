@@ -2,7 +2,7 @@
 title: "Call Whisper"
 date: 2025-12-19
 translationKey: Call-Whisper
-description: "A feature that lets supervisors send real-time guidance to call center agents through a private audio channel that customers cannot hear, helping agents handle calls better."
+description: "A feature that lets supervisors send real-time guidance to call center agents through a private audio channel customers cannot hear, helping agents handle calls better."
 keywords:
 - call whisper
 - contact center technology

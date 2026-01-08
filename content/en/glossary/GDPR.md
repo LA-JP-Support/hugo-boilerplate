@@ -3,7 +3,7 @@ title: GDPR
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: gdpr
-description: "EU regulation that protects people's personal data by giving them control over their information and requiring organizations to handle it transparently and responsibly."
+description: "EU law that protects people's personal data by giving them control over their information and requiring organizations to handle it transparently and responsibly."
 keywords:
 - GDPR
 - data protection

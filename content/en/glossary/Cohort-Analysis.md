@@ -3,7 +3,7 @@ title: "Cohort Analysis"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "cohort-analysis"
-description: "A method that groups users by shared traits to track how different groups behave over time, helping businesses spot patterns and understand when customers stop using their product."
+description: "A method that groups customers by shared characteristics to track how each group behaves and stays active over time, revealing patterns that help businesses understand when and why people stop using their product."
 keywords: ["cohort analysis", "retention", "churn", "behavioral analytics", "user engagement"]
 category: "Analytics & Content Effectiveness"
 type: "glossary"

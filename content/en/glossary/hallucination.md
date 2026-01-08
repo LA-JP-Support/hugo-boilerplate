@@ -3,7 +3,7 @@ title: "Hallucination"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "hallucination"
-description: "AI models generating content that sounds correct but contains false or made-up information. This occurs due to how these systems work statistically, not from intentional deception."
+description: "AI-generated content that sounds convincing but contains false or made-up information, resulting from how these systems process data statistically rather than from intentional deception."
 keywords: ["AI hallucination", "large language models", "generative AI", "misinformation", "fact-checking"]
 category: "AI Chatbot & Automation"
 type: "glossary"

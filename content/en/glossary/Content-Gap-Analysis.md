@@ -2,7 +2,7 @@
 title: "Content Gap Analysis"
 date: 2025-12-19
 translationKey: Content-Gap-Analysis
-description: "A method for finding missing topics and keywords on your website by comparing your content with competitors and what customers are searching for, helping you create content that attracts more visitors."
+description: "A method to find missing topics and keywords your website should cover by comparing your content with competitors and what customers are searching for, helping you attract more visitors."
 keywords:
 - content gap analysis
 - SEO content strategy

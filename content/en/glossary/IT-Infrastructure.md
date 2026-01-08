@@ -2,7 +2,7 @@
 title: "IT Infrastructure"
 date: 2025-12-19
 translationKey: IT-Infrastructure
-description: "The foundational technology systems and equipment that organizations use to store data, run applications, and connect users to digital resources needed for daily work."
+description: "The foundational technology systems—including servers, networks, and software—that organizations use to store data, run applications, and support daily business operations."
 keywords:
 - IT infrastructure
 - network architecture

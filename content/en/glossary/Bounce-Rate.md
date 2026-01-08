@@ -3,7 +3,7 @@ title: "Bounce Rate"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "bounce-rate"
-description: "Bounce rate is the percentage of visitors who leave your website after viewing just one page without taking any action. It helps measure how engaging your content is and whether visitors want to explore more."
+description: "Bounce rate is the percentage of visitors who leave your website after viewing only one page without taking further action. It helps you understand whether your content is engaging and meeting visitor needs."
 keywords: ["bounce rate", "web analytics", "user engagement", "SEO", "Google Analytics 4"]
 category: "Analytics & Content Effectiveness"
 type: "glossary"

@@ -2,7 +2,7 @@
 title: "Sales Pipeline"
 date: 2025-12-19
 translationKey: Sales-Pipeline
-description: "A visual system that tracks potential customers through each stage of the buying process, helping sales teams forecast revenue and prioritize their efforts."
+description: "A visual tracking system that organizes potential customers through each stage of the sales process, helping teams forecast revenue and focus their efforts effectively."
 keywords:
 - sales pipeline
 - lead management

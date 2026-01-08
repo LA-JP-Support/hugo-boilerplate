@@ -2,7 +2,7 @@
 title: "GitHub-Copilot"
 date: 2025-12-19
 translationKey: GitHub-Copilot
-description: "An AI coding assistant that suggests and generates code in real-time, helping developers write software faster by understanding their intent from comments and existing code."
+description: "An AI assistant that suggests code in real-time as you type, helping developers write software faster by understanding what they want from comments and existing code."
 keywords:
 - GitHub Copilot
 - AI coding assistant

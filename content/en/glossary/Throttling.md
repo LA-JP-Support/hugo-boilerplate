@@ -3,7 +3,7 @@ title: "Throttling (API Throttling)"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "throttling-api-throttling"
-description: "A system that limits how many requests users can make to a service within a set time, protecting servers from overload and ensuring fair access for everyone."
+description: "A traffic control system that limits how many requests can be sent to a service within a set time, preventing server overload and ensuring fair access for all users."
 keywords: ["API throttling", "rate limiting", "token bucket", "API gateway", "system protection"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

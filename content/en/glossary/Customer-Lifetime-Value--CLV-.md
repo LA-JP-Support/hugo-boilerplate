@@ -2,7 +2,7 @@
 title: "Customer Lifetime Value (CLV)"
 date: 2025-12-19
 translationKey: Customer-Lifetime-Value--CLV-
-description: "The total profit a customer brings to a business over their entire relationship, calculated by subtracting service costs from all their purchases. It helps companies decide how much to spend on acquiring and keeping customers."
+description: "The total money a customer generates for a business over their entire relationship, minus the costs to serve them. Companies use it to decide how much to spend on attracting and keeping customers."
 keywords:
 - customer lifetime value
 - CLV calculation

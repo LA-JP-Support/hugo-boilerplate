@@ -2,7 +2,7 @@
 title: "Editorial Calendar"
 date: 2025-12-19
 translationKey: Editorial-Calendar
-description: "A planning tool that schedules and organizes when content gets published across websites, social media, and other channels to keep communication consistent and on-brand."
+description: "A planning tool that maps out when and where content gets published across different platforms to keep your messaging consistent and organized."
 keywords:
 - editorial calendar
 - content planning

@@ -2,7 +2,7 @@
 title: "Blog Post Structure"
 date: 2025-12-19
 translationKey: Blog-Post-Structure
-description: "A framework for organizing blog content with headings, paragraphs, and visual breaks to make articles easy to read and help readers quickly find information."
+description: "A way to organize blog articles using headings, paragraphs, and images so readers can quickly scan and find the information they need."
 keywords:
 - blog post structure
 - content organization

@@ -2,7 +2,7 @@
 title: "Cost per Contact"
 date: 2025-12-19
 translationKey: Cost-per-Contact
-description: "Cost per Contact is the average amount of money spent to reach one potential customer and obtain their contact information through marketing efforts. It helps businesses measure how efficiently they're spending their marketing budget."
+description: "Cost per Contact is the average cost to reach one potential customer and collect their contact information through marketing. It helps businesses measure how efficiently they're spending their marketing budget."
 keywords:
 - cost per contact
 - marketing metrics

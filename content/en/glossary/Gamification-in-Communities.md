@@ -2,7 +2,7 @@
 title: "Gamification in Communities"
 date: 2025-12-19
 translationKey: Gamification-in-Communities
-description: "Gamification in Communities is the use of game elements like points, badges, and challenges in community spaces to motivate people to participate more actively and build stronger connections with others."
+description: "Gamification in Communities is the use of game-like elements such as points, badges, and challenges to motivate people to participate more actively in community spaces and build stronger connections with others."
 keywords:
 - gamification
 - community engagement

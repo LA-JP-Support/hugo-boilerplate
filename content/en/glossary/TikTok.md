@@ -2,7 +2,7 @@
 title: "TikTok"
 date: 2025-12-19
 translationKey: TikTok
-description: "A short-form video app where users create and share videos using built-in editing tools, with an algorithm that recommends personalized content to millions of users worldwide."
+description: "A mobile app for creating and sharing short videos, where an intelligent algorithm recommends personalized content to each user instead of just showing posts from people you follow."
 keywords:
 - TikTok
 - short-form video

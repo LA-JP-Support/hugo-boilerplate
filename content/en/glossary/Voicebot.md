@@ -3,7 +3,7 @@ title: Voicebot
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: voicebot-glossary-deep-knowledge
-description: "A voicebot is an AI-powered assistant that listens to spoken words, understands them, and responds naturally to automate customer service tasks and answer questions through voice conversations."
+description: "A voicebot is an AI assistant that listens to spoken words, understands them, and responds naturally through voice conversations to automate customer service tasks and answer questions."
 keywords:
 - voicebot
 - AI

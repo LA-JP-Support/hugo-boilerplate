@@ -2,7 +2,7 @@
 title: "Editorial Guidelines"
 date: 2025-12-19
 translationKey: Editorial-Guidelines
-description: "A set of rules and standards that guide how an organization creates, reviews, and publishes content to maintain consistent quality and brand voice across all platforms."
+description: "A rulebook that organizations use to ensure all their content looks, sounds, and reads consistently across websites, social media, and other platforms."
 keywords:
 - editorial guidelines
 - content standards

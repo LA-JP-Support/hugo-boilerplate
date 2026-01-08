@@ -2,7 +2,7 @@
 title: "BERT"
 date: 2025-12-19
 translationKey: BERT
-description: "An AI model developed by Google that understands language by reading text in both directions at once, making it better at grasping word meanings from context."
+description: "An AI model developed by Google that understands language by reading text in both directions at once, helping machines better grasp word meanings from context."
 keywords:
 - BERT
 - transformer model

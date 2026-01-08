@@ -3,7 +3,7 @@ title: Generative AI
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: generative
-description: "Generative AI is artificial intelligence that creates new content like text, images, and code by learning patterns from data, rather than just analyzing existing information."
+description: "Generative AI is artificial intelligence that creates new content like text, images, and music by learning patterns from data, rather than just analyzing or classifying existing information."
 keywords:
 - Generative AI
 - AI models

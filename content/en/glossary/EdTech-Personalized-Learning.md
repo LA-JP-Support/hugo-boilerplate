@@ -2,7 +2,7 @@
 title: "EdTech Personalized Learning"
 date: 2025-12-19
 translationKey: edtech-personalized-learning
-description: "AI technology that customizes each student's learning path by analyzing their progress and adjusting content difficulty, pacing, and teaching methods in real-time to improve educational outcomes."
+description: "AI-powered education technology that customizes each student's learning experience by analyzing their progress and automatically adjusting content difficulty, speed, and teaching methods to match their individual needs and learning style."
 keywords:
 - EdTech Personalized Learning
 - Adaptive Learning Technology

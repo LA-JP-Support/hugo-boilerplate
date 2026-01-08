@@ -2,7 +2,7 @@
 title: "Tiered Support"
 date: 2025-12-19
 translationKey: Tiered-Support
-description: "A customer service system that routes issues to different support levels based on complexity, starting with basic help and escalating to specialists when needed."
+description: "A customer service system that organizes support into different levels, with basic staff handling simple questions and specialists handling complex problems."
 keywords:
 - tiered support
 - customer service levels

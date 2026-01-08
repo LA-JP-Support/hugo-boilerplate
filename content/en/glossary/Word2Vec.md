@@ -2,7 +2,7 @@
 title: "Word2Vec"
 date: 2025-12-19
 translationKey: Word2Vec
-description: "Word2Vec is an AI technique that converts words into numerical patterns, allowing computers to understand that similar words are related based on how they're used in text."
+description: "Word2Vec is a technique that converts words into numbers so computers can understand which words have similar meanings based on how they're used in text."
 keywords:
 - word2vec
 - word embeddings

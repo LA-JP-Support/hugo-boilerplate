@@ -3,7 +3,7 @@ title: "Adversarial Attack"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "adversarial-attack"
-description: "A deliberate manipulation of AI system inputs designed to trick the model into making wrong predictions, exploiting weaknesses in how it makes decisions."
+description: "A technique where inputs to an AI system are deliberately altered to trick it into making wrong decisions, even though the changes appear invisible to humans."
 keywords: ["adversarial attack", "AI security", "machine learning", "adversarial examples", "cybersecurity"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

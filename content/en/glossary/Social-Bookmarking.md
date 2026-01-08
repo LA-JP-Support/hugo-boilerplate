@@ -2,7 +2,7 @@
 title: "Social Bookmarking"
 date: 2025-12-19
 translationKey: Social-Bookmarking
-description: "A web service that lets you save and organize favorite web pages online, then share them with others and discover new content through the community's collective bookmarks."
+description: "A web service where you save favorite web pages online and share them with others, discovering new content through what the community has bookmarked."
 keywords:
 - social bookmarking
 - content curation

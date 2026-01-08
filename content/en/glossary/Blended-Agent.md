@@ -2,7 +2,7 @@
 title: "Blended Agent"
 date: 2025-12-19
 translationKey: Blended-Agent
-description: "An AI system that combines multiple technologies like machine learning, language processing, and rule-based logic to handle diverse tasks more effectively than single-purpose AI."
+description: "An AI system that combines multiple technologies like machine learning, natural language processing, and rule-based logic to handle diverse tasks more effectively than single-purpose AI."
 keywords:
 - blended agent
 - hybrid AI systems

@@ -2,7 +2,7 @@
 title: "Virtual Events"
 date: 2025-12-19
 translationKey: Virtual-Events
-description: "Digital events held entirely online using internet platforms, allowing people worldwide to attend conferences, meetings, and workshops from their computers without traveling to a physical location."
+description: "Online gatherings held entirely on the internet, allowing people worldwide to attend conferences, meetings, and workshops from their computers without traveling to a physical location."
 keywords:
 - virtual events
 - digital conferences

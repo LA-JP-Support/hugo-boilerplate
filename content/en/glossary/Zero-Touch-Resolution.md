@@ -3,7 +3,7 @@ title: "Zero-Touch Resolution"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "zero-touch-resolution"
-description: "Automatic problem-solving technology that uses AI and automation to resolve issues instantly without human involvement, enabling faster service delivery and freeing staff for more strategic work."
+description: "AI-powered technology that automatically solves problems and fulfills requests without human involvement, delivering instant solutions and freeing staff to focus on more complex work."
 keywords: ["Zero-Touch Resolution", "automation", "AI chatbots", "ITSM", "device provisioning"]
 category: "AI Chatbot & Automation"
 type: "glossary"

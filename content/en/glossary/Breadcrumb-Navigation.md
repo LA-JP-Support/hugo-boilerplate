@@ -2,7 +2,7 @@
 title: "Breadcrumb Navigation"
 date: 2025-12-19
 translationKey: Breadcrumb-Navigation
-description: "A navigation trail that shows your current location on a website and lets you jump back to parent pages, helping you understand where you are in the site's structure."
+description: "A visual trail showing your current location on a website, displayed as linked page names separated by symbols like >, helping you navigate back to parent pages and understand the site structure."
 keywords:
 - breadcrumb navigation
 - website navigation

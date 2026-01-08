@@ -2,7 +2,7 @@
 title: "Synthetic Data"
 date: 2025-12-19
 translationKey: Synthetic-Data
-description: "Artificially generated data created by computer algorithms to mimic real-world information patterns while protecting privacy and enabling safe testing for machine learning projects."
+description: "Artificially generated data created by computer algorithms to replicate real-world patterns while protecting privacy and enabling safe testing for machine learning."
 keywords:
 - synthetic data generation
 - artificial data creation

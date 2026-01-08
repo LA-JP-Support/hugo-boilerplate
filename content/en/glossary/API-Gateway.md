@@ -2,7 +2,7 @@
 title: "API Gateway"
 date: 2025-12-19
 translationKey: API-Gateway
-description: "A server that acts as a single entry point for client requests, routing them to the right backend service while handling security, speed limits, and monitoring."
+description: "A single entry point that directs client requests to the right backend services while handling security, speed limits, and monitoring."
 keywords:
 - API Gateway
 - Microservices Architecture

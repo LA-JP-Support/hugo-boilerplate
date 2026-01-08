@@ -2,7 +2,7 @@
 title: "Queue Management"
 date: 2025-12-19
 translationKey: Queue-Management
-description: "Queue Management is a system for organizing and controlling waiting lines to reduce wait times and improve service efficiency. It uses strategies and technology to balance customer demand with available resources."
+description: "A system that organizes waiting lines using technology and strategies to reduce wait times and improve service efficiency by balancing customer demand with available resources."
 keywords:
 - queue management
 - waiting line theory

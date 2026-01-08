@@ -2,7 +2,7 @@
 title: "Average Speed of Answer (ASA)"
 date: 2025-12-19
 translationKey: Average-Speed-of-Answer--ASA-
-description: "Average Speed of Answer (ASA) is the average time customers wait before a call center agent picks up their call, measured in seconds to evaluate service efficiency and customer satisfaction."
+description: "Average Speed of Answer (ASA) is the average waiting time before a call center agent picks up a customer's call, used to measure how quickly and efficiently customer service operates."
 keywords:
 - average speed of answer
 - call center metrics

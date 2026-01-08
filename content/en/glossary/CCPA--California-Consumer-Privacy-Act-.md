@@ -2,7 +2,7 @@
 title: "CCPA (California Consumer Privacy Act)"
 date: 2025-12-19
 translationKey: CCPA--California-Consumer-Privacy-Act-
-description: "A California privacy law that gives residents control over their personal data and requires businesses to be transparent about how they collect and use consumer information."
+description: "A California law that lets residents control their personal data and requires companies to be transparent about how they collect and use it."
 keywords:
 - CCPA compliance
 - California privacy law

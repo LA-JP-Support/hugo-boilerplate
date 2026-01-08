@@ -2,7 +2,7 @@
 title: "Skills Gap Analysis"
 date: 2025-12-19
 translationKey: Skills-Gap-Analysis
-description: "A process to identify gaps between the skills your workforce currently has and the skills needed to achieve business goals, helping organizations plan training and hiring decisions."
+description: "A process to identify what skills your employees have now versus what they need to achieve your business goals, guiding decisions on training and hiring."
 keywords:
 - skills gap analysis
 - workforce development

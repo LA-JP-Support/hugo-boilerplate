@@ -2,7 +2,7 @@
 title: "Unified Customer View"
 date: 2025-12-19
 translationKey: Unified-Customer-View
-description: "A complete customer profile that combines all information about a person from every interaction with a company—purchases, website visits, support calls, and more—to help businesses understand and serve them better."
+description: "A complete customer profile that combines data from all interactions—purchases, website visits, support calls, and more—to help businesses understand and serve customers better."
 keywords:
 - unified customer view
 - customer data integration

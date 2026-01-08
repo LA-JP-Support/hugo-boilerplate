@@ -2,7 +2,7 @@
 title: "Top-P Sampling"
 date: 2025-12-19
 translationKey: Top-P-Sampling
-description: "A text generation technique that controls randomness by selecting words from the most likely options, adjusting the selection pool based on the model's confidence level."
+description: "A text generation technique that dynamically adjusts which words the AI can choose from based on how confident it is, helping create more natural and varied responses."
 keywords:
 - top-p sampling
 - nucleus sampling

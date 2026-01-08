@@ -2,7 +2,7 @@
 title: "Image Compression"
 date: 2025-12-19
 translationKey: Image-Compression
-description: "Image compression is a technique that reduces the file size of digital images while keeping them looking good, making them easier to store and share online."
+description: "Image compression is a technique that reduces digital image file sizes by removing unnecessary data, making them faster to share and easier to store without losing noticeable quality."
 keywords:
 - image compression
 - lossy compression

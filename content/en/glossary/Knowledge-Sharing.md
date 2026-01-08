@@ -2,7 +2,7 @@
 title: "Knowledge Sharing"
 date: 2025-12-19
 translationKey: Knowledge-Sharing
-description: "The systematic exchange of information, skills, and experiences between people and teams to improve collective learning and organizational performance."
+description: "The practice of exchanging information, skills, and experiences among people and teams to boost learning and improve how organizations perform."
 keywords:
 - knowledge sharing
 - organizational learning

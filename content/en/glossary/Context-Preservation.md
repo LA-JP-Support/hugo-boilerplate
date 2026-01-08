@@ -2,7 +2,7 @@
 title: "Context Preservation"
 date: 2025-12-19
 translationKey: Context-Preservation
-description: "Context Preservation is the ability of AI systems to remember and use information from previous conversations to provide more relevant and personalized responses."
+description: "Context Preservation is an AI system's ability to remember and use information from previous conversations to provide more relevant and personalized responses throughout ongoing interactions."
 keywords:
 - context preservation
 - conversational AI

@@ -2,7 +2,7 @@
 title: "Repeat Contact Rate"
 date: 2025-12-19
 translationKey: Repeat-Contact-Rate
-description: "A metric that measures how often customers contact support again for the same issue, helping companies identify whether their first response actually solved the problem."
+description: "A percentage that shows how many customers contact support again for the same problem, helping companies measure whether their first response actually solved the issue."
 keywords:
 - repeat contact rate
 - customer service metrics

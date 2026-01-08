@@ -2,7 +2,7 @@
 title: "Automation Rate"
 date: 2025-12-19
 translationKey: Automation-Rate
-description: "The percentage of work tasks and processes in an organization that are completed automatically without human involvement, used to measure progress toward digital transformation and operational efficiency."
+description: "The percentage of work tasks and processes in an organization that are completed automatically, used to measure progress toward digital transformation and operational efficiency."
 keywords:
 - automation rate
 - process automation metrics

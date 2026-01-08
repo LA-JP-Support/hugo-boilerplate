@@ -2,7 +2,7 @@
 title: "Competitive Intelligence"
 date: 2025-12-19
 translationKey: Competitive-Intelligence
-description: "Competitive Intelligence is the practice of gathering and analyzing publicly available information about competitors and market conditions to help businesses make better strategic decisions."
+description: "Competitive Intelligence is the practice of collecting and analyzing publicly available information about competitors and market conditions to help businesses make smarter strategic decisions about products, pricing, and growth."
 keywords:
 - competitive intelligence
 - market analysis

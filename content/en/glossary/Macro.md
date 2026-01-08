@@ -2,7 +2,7 @@
 title: "Macro"
 date: 2025-12-19
 translationKey: Macro
-description: "A set of recorded commands that automatically repeats routine tasks with a single click, saving time and reducing errors in applications like spreadsheets or word processors."
+description: "A recorded sequence of commands that automatically repeats routine tasks with a single click, saving time and reducing errors in applications like spreadsheets or word processors."
 keywords:
 - macro programming
 - automation scripts

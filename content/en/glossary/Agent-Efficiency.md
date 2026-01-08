@@ -2,7 +2,7 @@
 title: "Agent Efficiency"
 date: 2025-12-19
 translationKey: Agent-Efficiency
-description: "Agent efficiency is how well an AI system completes its tasks while using resources wisely, measured by speed, quality of decisions, and ability to adapt to changing situations."
+description: "Agent efficiency is how well an AI system completes its tasks while using time and resources wisely, measured by speed, decision quality, and ability to adapt to new situations."
 keywords:
 - agent efficiency
 - AI performance optimization

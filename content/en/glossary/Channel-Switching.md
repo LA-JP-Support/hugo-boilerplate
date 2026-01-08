@@ -2,7 +2,7 @@
 title: "Channel Switching"
 date: 2025-12-19
 translationKey: Channel-Switching
-description: "A wireless technology that automatically switches between different communication channels during a call to maintain the best signal quality and avoid interference."
+description: "A wireless technology that automatically switches between different communication channels during calls to maintain the best signal quality and avoid interference."
 keywords:
 - channel switching
 - telecommunications

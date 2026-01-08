@@ -2,7 +2,7 @@
 title: "Context Switching"
 lastmod: 2025-12-18
 translationKey: "context-switching"
-description: "Context switching is when a user suddenly changes topics during a conversation, requiring AI chatbots to track and manage these shifts to maintain relevant responses."
+description: "Context switching is when a user suddenly changes topics during a conversation, requiring AI chatbots to track previous discussions and maintain relevant responses."
 keywords: ["context switching", "AI chatbots", "automation", "conversation management", "LLMs"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -3,7 +3,7 @@ title: "Variable Injection"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "variable-injection"
-description: "Variable injection is a technique that inserts dynamic data like user input into templates or prompts, allowing AI chatbots and automation systems to personalize responses in real-time."
+description: "A technique that inserts dynamic data like user input into templates, allowing systems to personalize responses and automate actions in real-time."
 keywords: ["variable injection", "prompt injection", "AI chatbots", "automation", "LLMs"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -1,7 +1,7 @@
 ---
 title: "Minimap"
 translationKey: "minimap"
-description: "A small overview map positioned at the screen's edge that shows a bird's-eye view of large, complex content, helping users quickly navigate and stay oriented without losing context."
+description: "A small overview map that shows your entire workspace at a glance, helping you navigate large or complex content without losing your place."
 keywords: ["minimap", "AI chatbot", "automation platforms", "flow navigation", "UI/UX"]
 category: "AI Chatbot & Automation"
 type: "glossary"

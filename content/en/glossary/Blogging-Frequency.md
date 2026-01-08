@@ -2,7 +2,7 @@
 title: "Blogging Frequency"
 date: 2025-12-19
 translationKey: Blogging-Frequency
-description: "Blogging Frequency is how often you publish new posts on your blog. It's the publishing schedule you choose to keep your audience engaged while maintaining good content quality."
+description: "Blogging Frequency is how often you publish new blog posts. It's the publishing schedule you set to keep your audience interested while maintaining good content quality."
 keywords:
 - blogging frequency
 - content publishing schedule

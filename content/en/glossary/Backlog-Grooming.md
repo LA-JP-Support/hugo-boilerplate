@@ -2,7 +2,7 @@
 title: "Backlog Grooming"
 date: 2025-12-19
 translationKey: Backlog-Grooming
-description: "A regular team meeting where product owners and developers review, clarify, and prioritize upcoming work items to keep projects organized and ready for development."
+description: "A regular team meeting where the product owner and developers review, clarify, and prioritize upcoming work items to keep projects organized and ready for development."
 keywords:
 - backlog grooming
 - product backlog refinement

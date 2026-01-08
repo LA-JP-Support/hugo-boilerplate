@@ -2,7 +2,7 @@
 title: "Customer Retention"
 date: 2025-12-19
 translationKey: Customer-Retention
-description: "Customer retention is the practice of keeping existing customers satisfied and loyal so they continue doing business with your company rather than switching to competitors."
+description: "Customer retention is the practice of keeping existing customers satisfied and loyal so they continue buying from your company instead of switching to competitors."
 keywords:
 - customer retention
 - customer loyalty

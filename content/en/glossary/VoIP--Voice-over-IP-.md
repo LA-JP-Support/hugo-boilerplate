@@ -2,7 +2,7 @@
 title: "VoIP (Voice over IP)"
 date: 2025-12-19
 translationKey: VoIP--Voice-over-IP-
-description: "A technology that converts voice calls into digital data and sends them over the internet instead of traditional phone lines, making calls cheaper and more flexible."
+description: "A technology that converts voice calls into digital data packets and sends them over the internet instead of traditional phone lines, enabling cheaper and more flexible calling."
 keywords:
 - VoIP technology
 - Voice over IP protocols

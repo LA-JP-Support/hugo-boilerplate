@@ -1,7 +1,7 @@
 ---
 title: "Global Variables"
 translationKey: "global-variables"
-description: "A variable that can be accessed and used from anywhere in a program or automation workflow, enabling data sharing across different functions and processes."
+description: "A variable accessible throughout an entire program that enables data sharing across different functions and processes, persisting during program execution."
 keywords: ["Global Variables", "AI Chatbot", "Automation Platform", "Programming Variables", "Variable Scope"]
 category: "AI Chatbot & Automation"
 type: "glossary"

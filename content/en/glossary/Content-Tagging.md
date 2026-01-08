@@ -2,7 +2,7 @@
 title: "Content Tagging"
 date: 2025-12-19
 translationKey: Content-Tagging
-description: "A system that labels and organizes digital content with descriptive keywords, making it easier to find, categorize, and manage information across large collections."
+description: "A system that labels digital content with keywords to organize and make information easy to find and manage across large collections."
 keywords:
 - content tagging
 - metadata management

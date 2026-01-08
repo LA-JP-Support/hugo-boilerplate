@@ -2,7 +2,7 @@
 title: "Outbound Dialing"
 date: 2025-12-19
 translationKey: Outbound-Dialing
-description: "Outbound Dialing: Technology that automatically calls customers and prospects on behalf of businesses, eliminating the need for manual dialing and improving call efficiency."
+description: "Outbound Dialing: Automated phone calling technology that dials customers and prospects on behalf of businesses, eliminating manual dialing to improve efficiency and agent productivity."
 keywords:
 - outbound dialing
 - predictive dialing

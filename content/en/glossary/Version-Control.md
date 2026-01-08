@@ -2,7 +2,7 @@
 title: "Version Control"
 date: 2025-12-19
 translationKey: Version-Control
-description: "A system that tracks changes to files over time, allowing you to see what changed, who changed it, and why—making it easy for teams to work together without losing previous versions."
+description: "A system that records all changes to files over time, showing who changed what and why, so teams can work together safely and return to earlier versions if needed."
 keywords:
 - version control
 - git

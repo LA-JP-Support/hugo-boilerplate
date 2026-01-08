@@ -2,7 +2,7 @@
 title: "Ticket Routing"
 date: 2025-12-19
 translationKey: Ticket-Routing
-description: "A system that automatically directs customer support requests to the right agent or team based on the issue type, customer priority, and agent skills to resolve problems faster."
+description: "A system that automatically sends customer support requests to the right person or team based on the issue type and their skills, so problems get solved faster."
 keywords:
 - ticket routing
 - automated assignment

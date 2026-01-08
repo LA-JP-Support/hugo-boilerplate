@@ -2,7 +2,7 @@
 title: "Knowledge Capture"
 date: 2025-12-19
 translationKey: Knowledge-Capture
-description: "The systematic process of capturing and documenting valuable knowledge from people's experience and expertise, converting it into shareable information that can be stored and reused across an organization."
+description: "The process of collecting and documenting expert knowledge from employees and converting it into shareable information that the organization can store and reuse."
 keywords:
 - knowledge capture
 - knowledge management

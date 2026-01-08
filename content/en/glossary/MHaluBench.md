@@ -3,7 +3,7 @@ title: MHaluBench
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: mhalubench
-description: "A benchmark tool that detects false or made-up information in AI systems that work with both images and text, by breaking down responses into individual claims and checking each one for accuracy."
+description: "A benchmark tool that evaluates whether image-and-text AI systems generate accurate information by breaking down responses into individual claims and checking each one for factual errors."
 keywords:
 - MHaluBench
 - hallucination detection

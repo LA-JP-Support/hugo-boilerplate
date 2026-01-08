@@ -3,7 +3,7 @@ title: "Version History / Rollback"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "version-history-rollback"
-description: "Version history is a record of all previous states of a chatbot's settings and behavior, while rollback lets you quickly restore an earlier working version if something goes wrong."
+description: "Version history is a record of all previous states of a chatbot's configuration, and rollback lets you quickly restore an earlier working version if recent changes cause problems."
 keywords: ["Version History", "Rollback", "AI Chatbot", "Automation Platforms", "Version Control"]
 category: "AI Chatbot & Automation"
 type: "glossary"

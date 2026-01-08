@@ -2,7 +2,7 @@
 title: "Data Mesh"
 date: 2025-12-19
 translationKey: Data-Mesh
-description: "A decentralized data management approach where different business teams own and manage their own data, rather than relying on a single central data team."
+description: "A decentralized data management approach where individual business teams own and manage their own data as products, rather than relying on a single central team."
 keywords:
 - data mesh
 - decentralized data architecture

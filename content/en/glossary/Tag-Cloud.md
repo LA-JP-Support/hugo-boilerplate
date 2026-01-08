@@ -2,7 +2,7 @@
 title: "Tag Cloud"
 date: 2025-12-19
 translationKey: Tag-Cloud
-description: "A visual display where words appear in different sizes based on how often they appear, helping you quickly spot the most important topics in a large amount of text."
+description: "A visual display where words appear in different sizes based on their frequency or importance, helping you quickly spot the most prominent topics in large amounts of text."
 keywords:
 - tag cloud
 - word cloud

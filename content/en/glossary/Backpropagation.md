@@ -2,7 +2,7 @@
 title: "Backpropagation"
 date: 2025-12-19
 translationKey: Backpropagation
-description: "A fundamental algorithm that trains neural networks by calculating how much each parameter contributes to prediction errors, then adjusting them to improve accuracy."
+description: "A training method for AI systems that works backward from errors to adjust how the network learns, improving its accuracy over time."
 keywords:
 - backpropagation
 - neural networks

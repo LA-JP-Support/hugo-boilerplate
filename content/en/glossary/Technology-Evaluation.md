@@ -2,7 +2,7 @@
 title: "Technology Evaluation"
 date: 2025-12-19
 translationKey: Technology-Evaluation
-description: "A systematic process of assessing and comparing technology solutions to determine if they meet your organization's needs, costs, and goals before making a purchase or implementation decision."
+description: "A systematic process of assessing and comparing different technology solutions to determine which one best fits your organization's needs, budget, and goals before making a purchase decision."
 keywords:
 - technology assessment
 - evaluation criteria

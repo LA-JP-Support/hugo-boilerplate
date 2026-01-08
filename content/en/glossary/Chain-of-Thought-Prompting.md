@@ -2,7 +2,7 @@
 title: "Chain-of-Thought Prompt"
 date: 2025-12-19
 translationKey: Chain-of-Thought-Prompt
-description: "A technique that helps AI solve complex problems by breaking them down into step-by-step reasoning, making the thinking process clear and more accurate."
+description: "A prompting technique that helps AI solve complex problems by asking it to explain each step of its reasoning, making answers more accurate and easier to understand."
 keywords:
 - chain-of-thought prompting
 - AI reasoning

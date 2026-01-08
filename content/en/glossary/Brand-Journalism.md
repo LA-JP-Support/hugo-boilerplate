@@ -2,7 +2,7 @@
 title: "Brand Journalism"
 date: 2025-12-19
 translationKey: Brand-Journalism
-description: "Brand journalism is when companies create authentic, newsworthy content like articles and videos to inform and engage audiences, rather than directly selling products. It builds trust by applying journalistic storytelling to business communication."
+description: "Companies create newsworthy content like articles and videos to inform and engage audiences, building trust through authentic storytelling instead of direct product promotion."
 keywords:
 - brand journalism
 - content marketing

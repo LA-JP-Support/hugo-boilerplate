@@ -3,7 +3,7 @@ title: "Cart Abandonment Rate"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "cart-abandonment-rate"
-description: "Cart Abandonment Rate is the percentage of shoppers who add items to their online shopping cart but leave without buying. It measures how many potential sales are being lost."
+description: "Cart Abandonment Rate is the percentage of online shoppers who add items to their cart but leave without completing their purchase, helping businesses identify lost sales opportunities and checkout problems."
 keywords: ["cart abandonment rate", "ecommerce", "checkout optimization", "conversion rate", "abandoned cart emails"]
 category: "Ecommerce"
 type: "glossary"

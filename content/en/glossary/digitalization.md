@@ -3,7 +3,7 @@ title: "Digitalization"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "digitalization"
-description: "Digitalization is the use of digital technologies to transform how businesses operate, make decisions, and serve customers—going beyond simply converting paper to digital files to fundamentally reimagine work processes and create new value."
+description: "Digitalization is using digital technologies to transform how businesses work and make decisions, rather than just converting paper to digital files."
 keywords: ["digitalization", "digitization", "digital transformation", "automation", "digital technologies"]
 category: "Technology"
 type: "glossary"

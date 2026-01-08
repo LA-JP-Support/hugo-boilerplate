@@ -2,7 +2,7 @@
 title: "Content Types"
 date: 2025-12-19
 translationKey: Content-Types
-description: "A blueprint that defines what information and fields each piece of content should contain, ensuring consistent organization and presentation across digital platforms."
+description: "A template that defines what fields and information each piece of content should have, so everything is organized and presented consistently across websites and apps."
 keywords:
 - content types
 - content management

@@ -2,7 +2,7 @@
 title: "Demand Generation"
 date: 2025-12-19
 translationKey: Demand-Generation
-description: "A marketing strategy that builds awareness and interest in a company's products by providing valuable content and resources to potential customers throughout their buying journey."
+description: "A marketing approach that builds customer interest by sharing helpful content and resources throughout their buying journey, rather than just collecting contact information."
 keywords:
 - demand generation
 - lead generation

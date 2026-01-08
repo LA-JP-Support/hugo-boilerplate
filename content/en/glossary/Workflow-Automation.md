@@ -2,7 +2,7 @@
 title: "Workflow Automation"
 date: 2025-12-19
 translationKey: Workflow-Automation
-description: "Technology that automatically handles repetitive business tasks and processes with minimal human involvement, helping organizations work faster and more consistently."
+description: "Technology that automatically handles repetitive business tasks by following preset rules, helping teams work faster and more consistently without manual effort."
 keywords:
 - workflow automation
 - business process automation

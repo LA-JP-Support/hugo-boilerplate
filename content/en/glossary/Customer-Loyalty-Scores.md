@@ -3,7 +3,7 @@ title: "Customer Loyalty Scores"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "customer-loyalty-scores"
-description: "A numerical rating that measures how likely customers are to keep buying from a company and recommend it to others, based on their purchase behavior and satisfaction."
+description: "A numerical score that measures how likely customers are to keep buying from a company and recommend it to others, based on their purchase history and satisfaction level."
 keywords: ["Customer Loyalty Scores", "Net Promoter Score", "Customer Lifetime Value", "Customer Retention Rate", "Churn Rate"]
 category: "AI Chatbot & Automation"
 type: "glossary"

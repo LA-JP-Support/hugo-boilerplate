@@ -3,7 +3,7 @@ title: "Autonomous AI Agents"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "autonomous-ai-agents"
-description: "Software systems that independently analyze situations, make decisions, and take actions to achieve goals with minimal human guidance, adapting and improving as they work."
+description: "Software that works independently to understand situations, make decisions, and complete tasks toward a goal with minimal human input, while learning and adapting along the way."
 keywords: ["autonomous AI agents", "AI systems", "automation", "machine learning", "decision-making"]
 category: "AI Chatbot & Automation"
 type: "glossary"

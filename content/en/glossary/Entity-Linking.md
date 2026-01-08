@@ -1,7 +1,7 @@
 ---
 title: "Entity Linking"
 translationKey: "entity-linking"
-description: "Entity linking identifies people, places, and things mentioned in text and connects them to the correct entry in a knowledge base, helping AI understand what words actually mean in context."
+description: "Entity linking identifies specific people, places, and things mentioned in text and connects them to the correct information in a database, so AI understands what words really mean."
 keywords: ["entity linking", "knowledge base", "named entity recognition", "knowledge graph", "natural language processing"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -2,7 +2,7 @@
 title: "Tree of Thoughts"
 date: 2025-12-19
 translationKey: Tree-of-Thoughts
-description: "An AI reasoning method that explores multiple solution paths simultaneously, like a decision tree, to solve complex problems more effectively than step-by-step approaches."
+description: "An AI problem-solving method that explores multiple solution paths at once, like branching roads, allowing the system to backtrack and find better answers than following just one step-by-step path."
 keywords:
 - tree of thoughts
 - AI reasoning

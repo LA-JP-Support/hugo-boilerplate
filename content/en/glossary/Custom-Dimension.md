@@ -2,7 +2,7 @@
 title: "Custom Dimension"
 date: 2025-12-19
 translationKey: Custom-Dimension
-description: "A custom dimension is a user-defined data field that lets you track specific information unique to your business that standard analytics doesn't automatically capture, such as customer membership level or product category."
+description: "A custom dimension is a user-defined field that lets you track specific business information not automatically captured by standard analytics, such as customer type or product category."
 keywords:
 - custom dimension
 - analytics tracking

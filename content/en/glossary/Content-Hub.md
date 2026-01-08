@@ -2,7 +2,7 @@
 title: "Content Hub"
 date: 2025-12-19
 translationKey: Content-Hub
-description: "A centralized platform where organizations store, organize, and share all their content—like articles, videos, and guides—across different channels to reach their audience effectively."
+description: "A centralized platform where organizations store, manage, and distribute all their content—like articles and videos—across different channels to reach their audience effectively."
 keywords:
 - content hub
 - content management

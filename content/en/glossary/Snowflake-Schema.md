@@ -2,7 +2,7 @@
 title: "Snowflake Schema"
 date: 2025-12-19
 translationKey: Snowflake-Schema
-description: "A database design technique that organizes data into a central fact table connected to multiple normalized dimension tables, reducing data duplication and storage space."
+description: "A database design that organizes data into a central table connected to multiple smaller, related tables to save storage space and reduce duplicate information."
 keywords:
 - snowflake schema
 - data warehousing

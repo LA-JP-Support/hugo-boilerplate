@@ -2,7 +2,7 @@
 title: "Content Inventory"
 date: 2025-12-19
 translationKey: Content-Inventory
-description: "A complete list of all digital content across your organization's websites, apps, and platforms, used to identify what content exists, find gaps, and improve content strategy."
+description: "A complete catalog of all digital content across your organization's websites, apps, and platforms, used to identify what exists, find gaps, and improve your content strategy."
 keywords:
 - content inventory
 - content audit

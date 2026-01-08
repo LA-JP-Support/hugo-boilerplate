@@ -3,7 +3,7 @@ title: AIチャットボット
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: ai-chatbot-in-depth-glossary-and-guide
-description: AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。
+description: "AIチャットボットは、人工知能を使って人間らしく会話し、ユーザーの質問に答えるソフトウェアです。カスタマーサービスや事務作業の自動化に活用されます。"
 keywords:
 - AIチャットボット
 - 自然言語処理

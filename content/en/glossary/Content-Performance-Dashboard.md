@@ -2,7 +2,7 @@
 title: "Content Performance Dashboard"
 date: 2025-12-19
 translationKey: Content-Performance-Dashboard
-description: "A visual dashboard that tracks how well your content performs across websites, social media, and emails by showing key metrics like engagement and conversions in one place."
+description: "A centralized tool that displays your content's performance metrics—like engagement and conversions—from websites, social media, and emails all in one place to help you make better decisions."
 keywords:
 - content performance dashboard
 - content analytics

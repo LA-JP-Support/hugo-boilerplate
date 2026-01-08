@@ -2,7 +2,7 @@
 title: "Midjourney"
 date: 2025-12-19
 translationKey: Midjourney
-description: "An AI platform that generates high-quality digital images from text descriptions, making professional artwork creation accessible to anyone without artistic skills."
+description: "An AI tool that creates professional digital images from text descriptions, allowing anyone to generate artwork without artistic skills."
 keywords:
 - Midjourney
 - AI image generation

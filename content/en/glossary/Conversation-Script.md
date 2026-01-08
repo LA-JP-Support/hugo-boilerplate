@@ -2,7 +2,7 @@
 title: "Conversation Script"
 date: 2025-12-19
 translationKey: Conversation-Script
-description: "A structured guide that defines how chatbots and voice assistants should respond to users, mapping out different conversation paths and appropriate replies based on what users say."
+description: "A blueprint that teaches chatbots and voice assistants how to understand what users want and respond appropriately, handling different conversation paths automatically."
 keywords:
 - conversation script
 - dialogue management

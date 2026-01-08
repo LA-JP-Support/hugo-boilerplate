@@ -2,7 +2,7 @@
 title: "Conversation History"
 date: 2025-12-19
 translationKey: Conversation-History
-description: "A record of all messages and exchanges in a conversation with AI, allowing the system to remember previous interactions and provide more relevant responses."
+description: "A record of all messages exchanged in a conversation with AI, enabling the system to remember previous interactions and provide more relevant and personalized responses."
 keywords:
 - conversation history
 - context management

@@ -2,7 +2,7 @@
 title: "Response Time"
 date: 2025-12-19
 translationKey: Response-Time
-description: "Response time is the total duration between when a user makes a request and when they receive the complete result, serving as a key measure of how fast a system or application performs."
+description: "Response time is the total duration from when a user makes a request until they receive the complete result, measuring how quickly a system performs."
 keywords:
 - response time
 - system performance

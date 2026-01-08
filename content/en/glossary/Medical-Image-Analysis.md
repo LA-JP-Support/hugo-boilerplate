@@ -2,7 +2,7 @@
 title: "Medical Image Analysis"
 date: 2025-12-19
 translationKey: medical-image-analysis
-description: "AI technology that automatically analyzes medical images like X-rays and CT scans to detect diseases and abnormalities, helping doctors make faster and more accurate diagnoses."
+description: "AI technology that automatically examines medical images like X-rays and CT scans to spot diseases and abnormalities, helping doctors diagnose patients faster and more accurately."
 keywords:
 - medical image analysis
 - radiology AI

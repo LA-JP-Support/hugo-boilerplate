@@ -2,7 +2,7 @@
 title: "Funnel Visualization"
 date: 2025-12-19
 translationKey: Funnel-Visualization
-description: "A visual chart shaped like a funnel that shows how customers progress through each step of a process, making it easy to spot where people drop off and improve the journey."
+description: "A chart shaped like a funnel that shows how customers move through each step of a process, with each stage getting narrower to reveal where people drop off."
 keywords:
 - funnel visualization
 - conversion analysis

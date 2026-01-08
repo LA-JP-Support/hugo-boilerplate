@@ -3,7 +3,7 @@ title: "Infrastructure as Code (IaC)"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "infrastructure-as-code-iac"
-description: "Infrastructure as Code is a practice where IT infrastructure like networks and servers is set up and managed using code instead of manual configuration, enabling faster and more reliable deployments."
+description: "Infrastructure as Code is a method of setting up and managing computer networks and servers by writing code instead of configuring them manually, making deployments faster and more reliable."
 keywords: ["Infrastructure as Code", "IaC", "DevOps", "automation", "cloud infrastructure"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

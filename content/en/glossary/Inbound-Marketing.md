@@ -2,7 +2,7 @@
 title: "Inbound Marketing"
 date: 2025-12-19
 translationKey: Inbound-Marketing
-description: "A marketing approach that attracts customers by providing valuable content and helpful information, rather than interrupting them with ads. It builds trust by positioning your business as a helpful advisor."
+description: "A marketing strategy that attracts customers by sharing helpful information and valuable content, rather than interrupting them with ads, to build trust and position your business as a helpful advisor."
 keywords:
 - inbound marketing
 - content marketing

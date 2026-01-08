@@ -2,7 +2,7 @@
 title: "Time to Value"
 date: 2025-12-19
 translationKey: Time-to-Value
-description: "The time it takes for a customer to start getting real benefits after buying a product or service. It measures how quickly they see results and achieve their goals."
+description: "The time between when a customer buys a product and when they first see real results or benefits from it. It shows how quickly a company delivers value to customers."
 keywords:
 - time to value
 - customer onboarding

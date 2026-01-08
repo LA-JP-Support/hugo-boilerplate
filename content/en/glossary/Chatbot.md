@@ -3,7 +3,7 @@ title: "Chatbot"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "chatbot"
-description: "A computer program that simulates human conversation through text or voice, available 24/7 to automatically answer questions and assist users on websites and apps."
+description: "A computer program that simulates human conversation through text or voice, available 24/7 to automatically answer questions and assist users."
 keywords: ["chatbot", "AI", "natural language processing", "machine learning", "automation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

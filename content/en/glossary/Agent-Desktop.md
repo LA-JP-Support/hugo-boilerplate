@@ -2,7 +2,7 @@
 title: "Agent Desktop"
 date: 2025-12-19
 translationKey: Agent-Desktop
-description: "Agent Desktop is a unified software interface that consolidates all tools and information customer service representatives need in one workspace, eliminating the need to switch between multiple applications."
+description: "Agent Desktop is a unified workspace that brings together all the tools and information customer service representatives need, eliminating the need to switch between different applications."
 keywords:
 - agent desktop
 - contact center software

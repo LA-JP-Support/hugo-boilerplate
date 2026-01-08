@@ -1,7 +1,7 @@
 ---
 title: "False Positive"
 translationKey: "false-positive"
-description: "A false positive is when an AI system incorrectly flags something as matching a criterion when it actually doesn't—like a spam filter blocking legitimate emails."
+description: "A false positive is when a detection system incorrectly identifies something as a problem when it isn't—like spam filters blocking legitimate emails or content moderation tools wrongly flagging honest posts."
 keywords: ["False Positive", "AI Systems", "Chatbots", "Content Detection", "Privacy Tools"]
 category: "AI Chatbot & Automation"
 type: "glossary"

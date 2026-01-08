@@ -2,7 +2,7 @@
 title: "Section"
 date: 2025-12-19
 translationKey: Section
-description: "A container that groups related content or information together to organize and structure material into logical, manageable parts across documents, websites, and applications."
+description: "A container that divides content into organized, related groups to make information easier to understand and navigate across websites, documents, and applications."
 keywords:
 - section
 - document structure

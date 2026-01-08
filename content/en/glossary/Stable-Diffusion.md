@@ -2,7 +2,7 @@
 title: "Stable-Diffusion"
 date: 2025-12-19
 translationKey: Stable-Diffusion
-description: "An AI tool that generates realistic images from text descriptions, making creative image creation accessible to everyone without expensive software or specialized skills."
+description: "An open-source AI tool that generates high-quality images from text descriptions by using a diffusion process, making creative image creation accessible without expensive software or specialized skills."
 keywords:
 - stable diffusion
 - AI image generation

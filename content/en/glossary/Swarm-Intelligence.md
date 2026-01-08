@@ -2,7 +2,7 @@
 title: "Swarm Intelligence"
 date: 2025-12-19
 translationKey: Swarm-Intelligence
-description: "A problem-solving approach inspired by how groups of simple creatures like ants or birds work together to find smart solutions without a leader directing them."
+description: "A problem-solving method inspired by how groups of simple creatures like ants or birds work together without a leader to find smart solutions to complex problems."
 keywords:
 - swarm intelligence
 - collective behavior

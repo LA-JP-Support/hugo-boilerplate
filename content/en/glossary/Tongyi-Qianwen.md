@@ -2,7 +2,7 @@
 title: "Tongyi-Qianwen"
 date: 2025-12-19
 translationKey: Tongyi-Qianwen
-description: "Alibaba's AI assistant that understands and responds to questions in multiple languages, particularly Chinese, using advanced machine learning technology similar to ChatGPT."
+description: "Alibaba's AI assistant that understands and answers questions in multiple languages, especially Chinese, using advanced machine learning similar to ChatGPT."
 keywords:
 - Tongyi-Qianwen
 - Alibaba AI

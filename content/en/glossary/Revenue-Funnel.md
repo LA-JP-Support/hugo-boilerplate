@@ -2,7 +2,7 @@
 title: "Revenue Funnel"
 date: 2025-12-19
 translationKey: Revenue-Funnel
-description: "A visual model that tracks how potential customers move through stages from first learning about a product to making a purchase and becoming loyal customers, helping businesses understand and improve their sales process."
+description: "A visual model showing how potential customers move through stages from first learning about a product to making a purchase and staying loyal, helping businesses improve their sales process."
 keywords:
 - revenue funnel
 - sales funnel optimization

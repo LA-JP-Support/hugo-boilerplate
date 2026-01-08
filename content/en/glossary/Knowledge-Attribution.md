@@ -2,7 +2,7 @@
 title: "Knowledge Attribution"
 date: 2025-12-19
 translationKey: Knowledge-Attribution
-description: "A system that tracks and documents where information comes from in AI outputs, so users can verify accuracy and understand how conclusions were reached."
+description: "A system that tracks where information comes from in AI outputs, allowing users to verify accuracy and understand how conclusions were reached."
 keywords:
 - knowledge attribution
 - AI transparency

@@ -2,7 +2,7 @@
 title: "Account Health Score"
 date: 2025-12-19
 translationKey: Account-Health-Score
-description: "A numerical rating that measures how healthy and engaged a customer is, helping businesses predict if they'll stay or leave and spot opportunities to grow the relationship."
+description: "A numerical score that measures how healthy and engaged a customer is, helping businesses predict if they'll stay or leave and find ways to grow the relationship."
 keywords:
 - account health score
 - customer success metrics

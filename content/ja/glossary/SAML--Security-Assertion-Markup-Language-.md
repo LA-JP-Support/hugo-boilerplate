@@ -2,7 +2,7 @@
 title: SAML(Security Assertion Markup Language)
 date: 2025-12-19
 translationKey: SAML--Security-Assertion-Markup-Language-
-description: SAML認証プロトコルの包括的なガイド。安全なシングルサインオンソリューションの実装、メリット、ユースケース、ベストプラクティスを網羅しています。
+description: "一度のログインで複数のアプリケーションにアクセスできる、企業向けの安全な認証システム。"
 keywords:
 - SAML認証
 - シングルサインオン

@@ -2,7 +2,7 @@
 title: "ReAct Prompting"
 date: 2025-12-19
 translationKey: ReAct-Prompting
-description: "ReAct Prompting is an AI technique that combines thinking and action steps, allowing AI systems to reason through problems while taking concrete actions like gathering information or using tools to solve complex real-world challenges."
+description: "An AI technique that combines reasoning and action steps, allowing AI systems to think through problems while taking concrete actions like gathering information or using tools to solve complex real-world challenges."
 keywords:
 - ReAct prompting
 - reasoning and acting

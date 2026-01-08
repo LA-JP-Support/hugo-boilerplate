@@ -2,7 +2,7 @@
 title: "Content Distribution Strategy"
 date: 2025-12-19
 translationKey: Content-Distribution-Strategy
-description: "A plan for sharing your content across multiple channels like social media, email, and websites to reach the right people at the right time and measure results."
+description: "A plan for sharing your content across multiple channels like social media and email to reach the right audience at the right time and measure how well it works."
 keywords:
 - content distribution
 - content marketing

@@ -2,7 +2,7 @@
 title: "LangChain"
 date: 2025-12-19
 translationKey: LangChain
-description: "An open-source framework that simplifies building AI applications by connecting large language models with tools, data, and external systems through reusable components called chains."
+description: "An open-source framework that makes it easier to build AI applications by connecting language models with data and external tools through simple, reusable building blocks."
 keywords:
 - LangChain
 - Large Language Models

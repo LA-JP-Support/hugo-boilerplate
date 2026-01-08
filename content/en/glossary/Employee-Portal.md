@@ -2,7 +2,7 @@
 title: "Employee Portal"
 date: 2025-12-19
 translationKey: Employee-Portal
-description: "A centralized online platform where employees can access company information, manage their personal details, and complete HR tasks without needing help from HR staff."
+description: "A web-based platform where employees can access company information, manage their personal details, and handle HR tasks independently without contacting HR staff."
 keywords:
 - employee portal
 - HR technology

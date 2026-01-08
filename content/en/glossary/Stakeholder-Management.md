@@ -2,7 +2,7 @@
 title: "Stakeholder Management"
 date: 2025-12-19
 translationKey: Stakeholder-Management
-description: "Stakeholder Management is the process of identifying and engaging with all people affected by a project—such as employees, customers, and leaders—to understand their needs and keep them informed for project success."
+description: "A systematic approach to identifying and engaging with all people affected by a project—including employees, customers, and leaders—to understand their needs and ensure project success."
 keywords:
 - stakeholder management
 - project management

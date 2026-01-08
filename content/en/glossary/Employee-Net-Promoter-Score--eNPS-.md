@@ -2,7 +2,7 @@
 title: "Employee Net Promoter Score (eNPS)"
 date: 2025-12-19
 translationKey: Employee-Net-Promoter-Score--eNPS-
-description: "A metric that measures how likely employees are to recommend their workplace to others, helping organizations assess employee satisfaction and loyalty."
+description: "A simple survey that asks employees how likely they are to recommend their workplace to others, helping companies understand how satisfied and loyal their staff are."
 keywords:
 - employee net promoter score
 - eNPS measurement

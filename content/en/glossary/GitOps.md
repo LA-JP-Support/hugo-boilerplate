@@ -3,7 +3,7 @@ title: GitOps
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: gitops
-description: "A modern approach to managing infrastructure and applications by storing all configurations in Git and automatically keeping systems in sync with those definitions."
+description: "A system that automatically updates your infrastructure and applications whenever you make changes in Git, treating version control as the single source of truth for your entire system."
 keywords: ["GitOps", "DevOps", "Kubernetes", "CI/CD", "Infrastructure as Code"]
 category: AI Infrastructure & Deployment
 type: glossary

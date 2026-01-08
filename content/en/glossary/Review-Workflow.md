@@ -2,7 +2,7 @@
 title: "Review Workflow"
 date: 2025-12-19
 translationKey: Review-Workflow
-description: "A structured process that guides work through multiple review stages with different experts checking quality before final approval, ensuring fewer errors and better collaboration."
+description: "A step-by-step process where different people review and approve work at each stage to catch mistakes and ensure quality before it's finalized."
 keywords:
 - review workflow
 - approval process

@@ -2,7 +2,7 @@
 title: "Threat Detection"
 date: 2025-12-19
 translationKey: Threat-Detection
-description: "A security system that continuously monitors your networks and devices to identify suspicious activities, unauthorized access attempts, and malware infections before they cause damage."
+description: "A security system that continuously monitors networks and devices to identify suspicious activities and malicious threats before they cause damage."
 keywords:
 - threat detection
 - cybersecurity monitoring

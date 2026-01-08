@@ -2,7 +2,7 @@
 title: "Template Hierarchy"
 date: 2025-12-19
 translationKey: Template-Hierarchy
-description: "A layered template system where child templates inherit properties and layouts from parent templates, enabling developers to build consistent and maintainable websites efficiently."
+description: "A layered template system where child templates inherit properties and layouts from parent templates, helping developers build consistent websites more efficiently."
 keywords:
 - template hierarchy
 - template inheritance

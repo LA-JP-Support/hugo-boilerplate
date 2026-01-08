@@ -3,7 +3,7 @@ title: "Monolithic Architecture"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "monolithic-architecture"
-description: "A software design where an entire application is built as one single unit, making it simpler to develop initially but harder to update individual parts."
+description: "A software design where all parts of an application are built and deployed together as one unit, making it simple to start but difficult to update individual features independently."
 keywords: ["monolithic architecture", "software design", "application development", "microservices", "system design"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

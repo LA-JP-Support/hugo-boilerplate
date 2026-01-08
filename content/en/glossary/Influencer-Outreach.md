@@ -2,7 +2,7 @@
 title: "Influencer Outreach"
 date: 2025-12-19
 translationKey: Influencer-Outreach
-description: "A marketing strategy where brands partner with popular social media personalities to promote products to their trusted audiences, replacing traditional advertising with authentic recommendations."
+description: "A marketing strategy where brands connect with popular social media personalities to promote products through their trusted audiences, replacing traditional ads with authentic recommendations from people their followers trust."
 keywords:
 - influencer marketing
 - brand partnerships

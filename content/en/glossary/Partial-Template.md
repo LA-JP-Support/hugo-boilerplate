@@ -2,7 +2,7 @@
 title: "Partial Template"
 date: 2025-12-19
 translationKey: Partial-Template
-description: "A reusable code component that contains part of a webpage template, designed to be inserted into other templates to avoid repeating code and keep websites organized."
+description: "A reusable piece of website code that contains common elements like headers or menus, designed to be inserted into multiple pages to avoid repeating code."
 keywords:
 - partial template
 - template reusability

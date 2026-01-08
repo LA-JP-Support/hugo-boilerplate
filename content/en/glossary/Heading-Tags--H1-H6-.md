@@ -2,7 +2,7 @@
 title: "Heading Tags (H1-H6)"
 date: 2025-12-19
 translationKey: Heading-Tags--H1-H6-
-description: "HTML elements that organize web page content into a hierarchy, helping search engines understand your content and making pages easier to navigate for all users."
+description: "HTML elements that organize web page content into a hierarchy (H1 being the main title, H2-H6 as subheadings), helping search engines understand your content and making pages easier to navigate."
 keywords:
 - heading tags
 - HTML headings

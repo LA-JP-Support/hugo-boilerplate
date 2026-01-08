@@ -2,7 +2,7 @@
 title: "Role-Based Access Control (RBAC)"
 date: 2025-12-19
 translationKey: Role-Based-Access-Control--RBAC-
-description: "A security system that grants access to computer systems based on job roles rather than individual users, making it easier to manage permissions across organizations."
+description: "A security system that assigns permissions based on job roles rather than individual users, so organizations can manage access more easily and securely."
 keywords:
 - role-based access control
 - RBAC implementation

@@ -2,7 +2,7 @@
 title: "In-Context Learning"
 date: 2025-12-19
 translationKey: In-Context-Learning
-description: "A capability that allows AI models to learn and perform new tasks by simply reading examples in a prompt, without needing additional training or updates."
+description: "An AI capability that lets models learn new tasks from examples given in a prompt, without needing retraining or updates."
 keywords:
 - in-context learning
 - few-shot learning

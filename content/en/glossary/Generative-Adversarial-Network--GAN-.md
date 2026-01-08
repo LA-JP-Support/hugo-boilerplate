@@ -2,7 +2,7 @@
 title: "Generative Adversarial Network (GAN)"
 date: 2025-12-19
 translationKey: Generative-Adversarial-Network--GAN-
-description: "A machine learning system with two competing AI networks: one creates fake data, the other detects fakes, enabling realistic synthetic image and content generation."
+description: "Two AI networks that compete with each other to create realistic fake images and content—one generates data while the other learns to spot fakes."
 keywords:
 - generative adversarial network
 - GAN architecture

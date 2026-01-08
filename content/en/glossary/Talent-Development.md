@@ -2,7 +2,7 @@
 title: "Talent Development"
 date: 2025-12-19
 translationKey: Talent-Development
-description: "Talent Development is a systematic approach to identifying and enhancing employee skills through training, mentoring, and career growth opportunities to build a stronger, more capable workforce."
+description: "Talent Development is a strategic approach to identifying and strengthening employee skills through training, mentoring, and career growth opportunities to build a more capable and productive workforce."
 keywords:
 - talent development
 - employee training

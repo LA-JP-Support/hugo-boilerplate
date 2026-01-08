@@ -1,5 +1,80 @@
 # Changelog - Internal Linking System
 
+## [2.1.0] - 2026-01-08
+
+### 🎯 Major Changes - CSV Database System
+
+**Breaking Changes**: CSVデータベースシステムを導入しました。内部リンクシステムの構造と使用方法が変更されました。
+
+### ✨ Added
+
+- **CSV Database System Guide** (`docs/CSV_DATABASE_SYSTEM_GUIDE.md`)
+  - 完全なCSVシステムの役割、構造、使用方法を文書化
+  - Description最適化ワークフローを追加
+  - CSV→JSON変換プロセスを明確化
+- **Description最適化機能**
+  - Claude Haiku 4.5を使用した自動最適化
+  - 英語1,222件、日本語1,223件のdescription最適化完了
+  - マウスオーバー表示用の簡潔な説明文に統一
+- **最新CSV Database生成**
+  - `databases/link_database_en.csv` (1,222エントリ)
+  - `databases/link_database_ja.csv` (1,223エントリ)
+  - 最適化されたdescriptionを含む
+
+### 🔄 Changed
+
+- **CSV生成方法の改善**
+  - Pythonワンライナーで簡単に生成可能に
+  - frontmatterライブラリを使用した安全なパース
+  - YAMLエラーの検出と報告機能
+- **内部リンクシステムの整理**
+  - 日本語「自然言語処理」キーワードをdenylistに追加（404エラー対策）
+  - 「AIシステム」のリンク先を正しい人工知能ページに修正
+  - ja.yamlから279個のtitleを最適化（簡易的な「〜の用語集ページ」を削除）
+
+### 🗄️ Fixed
+
+- **404エラーの修正**
+  - 存在しないページへのリンクを削除
+  - 自然言語処理関連の3つの不正なエントリを削除
+- **内部リンクの問題修正**
+  - ブログ記事への内部リンク追加（18記事、267リンク）
+  - 用語集ページへの内部リンク追加（1,244ページ、18,415リンク）
+
+### 📝 Documentation
+
+- **新規ドキュメント**
+  - `docs/CSV_DATABASE_SYSTEM_GUIDE.md` - CSVシステム完全ガイド
+- **更新予定**
+  - `docs/INTERNAL_LINK_SYSTEM_GUIDE.md` - CSV統合情報を追加予定
+  - `README.md` - CSVシステムへの参照を追加予定
+
+### 🔧 Technical Details
+
+**新しい推奨ワークフロー**:
+
+```bash
+# 1. クリーンなMarkdownからHugoビルド
+hugo --contentDir content-clean --destination public --cleanDestinationDir
+
+# 2. 自動キーワード辞書の更新（必要に応じて）
+python3 scripts/extract_automatic_links.py --content-dir content-clean/en/ --output data/linkbuilding/en_automatic.json
+python3 scripts/extract_automatic_links.py --content-dir content-clean/ja/ --output data/linkbuilding/ja_automatic.json
+
+# 3. HTML後処理で内部リンク追加
+python3 scripts/linkbuilding_parallel.py \
+  --linkbuilding-dir data/linkbuilding \
+  --public-dir public \
+  --denylist-dir databases
+```
+
+**データフロー**:
+1. `content-clean/` (Markdown) → Hugo → `public/` (HTML)
+2. `data/linkbuilding/*.json` + `databases/danger_terms_*.csv` → `linkbuilding_parallel.py`
+3. `public/` (HTML + 内部リンク)
+
+---
+
 ## [2.0.0] - 2026-01-07
 
 ### 🎯 Major Changes - HTML後処理方式への統一

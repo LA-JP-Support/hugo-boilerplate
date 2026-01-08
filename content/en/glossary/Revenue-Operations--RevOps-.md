@@ -2,7 +2,7 @@
 title: "Revenue Operations (RevOps)"
 date: 2025-12-19
 translationKey: Revenue-Operations--RevOps-
-description: "A business strategy that unites sales, marketing, and customer success teams to streamline processes and drive consistent revenue growth through shared data and aligned goals."
+description: "A business approach that connects sales, marketing, and customer success teams using shared data and aligned goals to drive predictable revenue growth."
 keywords:
 - revenue operations
 - revops strategy

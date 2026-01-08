@@ -2,7 +2,7 @@
 title: "Revenue Intelligence"
 date: 2025-12-19
 translationKey: Revenue-Intelligence
-description: "AI-powered analytics that analyzes sales conversations and customer interactions to help businesses understand their sales performance, predict outcomes, and make better revenue decisions."
+description: "AI technology that analyzes sales conversations and customer interactions to help businesses predict outcomes and make smarter revenue decisions."
 keywords:
 - revenue intelligence
 - sales analytics

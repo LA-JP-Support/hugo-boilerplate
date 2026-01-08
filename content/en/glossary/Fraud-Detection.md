@@ -2,7 +2,7 @@
 title: "Fraud Detection"
 date: 2025-12-19
 translationKey: fraud-detection
-description: "Fraud Detection is technology that uses AI and data analysis to identify suspicious transactions and deceptive activities in real-time, protecting organizations and customers from financial losses."
+description: "Fraud Detection is technology that automatically identifies suspicious transactions and deceptive activities in real-time to prevent financial losses and protect customers."
 keywords:
 - fraud detection
 - machine learning fraud

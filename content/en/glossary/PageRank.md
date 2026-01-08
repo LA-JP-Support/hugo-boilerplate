@@ -2,7 +2,7 @@
 title: "PageRank"
 date: 2025-12-19
 translationKey: PageRank
-description: "An algorithm that ranks web pages based on how many quality links point to them, helping search engines determine which pages are most important and relevant."
+description: "An algorithm that measures a webpage's importance by counting quality links pointing to it, helping search engines rank the most authoritative pages first."
 keywords:
 - PageRank algorithm
 - Google ranking factors

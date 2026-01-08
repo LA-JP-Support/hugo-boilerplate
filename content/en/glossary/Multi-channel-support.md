@@ -3,7 +3,7 @@ title: "Multi-channel Support"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "multi-channel-support"
-description: "A customer service approach where businesses offer support through multiple separate channels like chat, email, and social media, letting customers choose how they contact you."
+description: "A customer service approach where businesses offer support through multiple separate channels—like chat, email, and social media—so customers can choose their preferred way to contact you."
 keywords: ["multi-channel support", "customer service", "communication channels", "AI chatbots", "omnichannel support"]
 category: "AI Chatbot & Automation"
 type: "glossary"

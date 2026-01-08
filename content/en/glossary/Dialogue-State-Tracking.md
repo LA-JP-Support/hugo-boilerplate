@@ -1,7 +1,7 @@
 ---
 title: "Dialogue State Tracking"
 translationKey: "dialogue-state-tracking"
-description: "A technology that tracks what a user wants during a conversation, keeping track of important details so an AI chatbot can understand context and respond appropriately."
+description: "A technology that remembers what a user wants during a conversation, tracking key details so AI chatbots can understand context and respond appropriately to multi-turn requests."
 keywords: ["Dialogue State Tracking", "Conversational AI", "Chatbot", "Dialogue System", "Slot Filling"]
 category: "AI Chatbot & Automation"
 type: "glossary"

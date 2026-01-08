@@ -2,7 +2,7 @@
 title: "Alibaba"
 date: 2025-12-19
 translationKey: Alibaba
-description: "Alibaba is a Chinese technology company that operates online marketplaces and digital services, helping businesses and consumers buy, sell, and pay for products globally through interconnected platforms."
+description: "Alibaba is a Chinese technology company that operates multiple online marketplaces and digital services, enabling businesses and consumers worldwide to buy, sell, and pay for products through interconnected platforms like Taobao and Tmall."
 keywords:
 - Alibaba Group
 - E-commerce platform

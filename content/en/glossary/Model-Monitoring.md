@@ -2,7 +2,7 @@
 title: "Model Monitoring"
 date: 2025-12-19
 translationKey: Model-Monitoring
-description: "A system that continuously tracks machine learning model performance in real-world use to catch problems like accuracy drops or data changes before they cause business issues."
+description: "A system that continuously watches machine learning models after they're deployed to catch performance problems and data changes before they harm business results."
 keywords:
 - model monitoring
 - drift detection

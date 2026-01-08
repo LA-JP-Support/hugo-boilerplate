@@ -3,7 +3,7 @@ title: "Webhook Fulfillment"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "webhook-fulfillment"
-description: "A backend system that automatically processes chatbot requests by fetching real-time data from databases and APIs to deliver personalized, context-aware responses."
+description: "A system that connects chatbots to backend services to fetch real-time data and deliver personalized responses based on user requests."
 keywords: ["webhook", "fulfillment", "AI chatbots", "automation", "APIs"]
 category: "AI Chatbot & Automation"
 type: "glossary"

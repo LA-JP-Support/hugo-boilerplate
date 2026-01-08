@@ -2,7 +2,7 @@
 title: "Structured Content"
 date: 2025-12-19
 translationKey: Structured-Content
-description: "A method of organizing digital information using consistent rules and formats so it can be easily found, reused, and displayed across different platforms and devices."
+description: "A way of organizing digital information using consistent rules so it can be easily found, reused, and displayed across different websites and devices."
 keywords:
 - structured content
 - content management

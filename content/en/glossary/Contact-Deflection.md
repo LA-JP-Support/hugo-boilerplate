@@ -2,7 +2,7 @@
 title: "Contact Deflection"
 date: 2025-12-19
 translationKey: Contact-Deflection
-description: "A customer service strategy that helps people solve problems on their own through self-service tools and resources, reducing the need to contact support directly."
+description: "A customer service approach that lets people solve problems themselves using online tools and resources, rather than contacting support staff directly."
 keywords:
 - contact deflection
 - customer self-service

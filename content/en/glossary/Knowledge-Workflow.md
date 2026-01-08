@@ -2,7 +2,7 @@
 title: "Knowledge Workflow"
 date: 2025-12-19
 translationKey: Knowledge-Workflow
-description: "A systematic process for capturing, organizing, and using information and expertise throughout an organization to turn raw data into actionable insights."
+description: "A systematic process that captures, organizes, and transforms raw information into useful insights by moving knowledge through an organization's people and systems."
 keywords:
 - knowledge workflow
 - knowledge management

@@ -2,7 +2,7 @@
 title: "Buyer Persona"
 date: 2025-12-19
 translationKey: Buyer-Persona
-description: "A detailed profile of your ideal customer created from real data and research, used to help businesses tailor their marketing messages and products to match what customers actually want."
+description: "A detailed profile of your ideal customer based on real research and data, used to help businesses create marketing messages and products that match what customers actually want and need."
 keywords:
 - buyer persona
 - customer segmentation

@@ -3,7 +3,7 @@ title: "CAGR (Compound Annual Growth Rate)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "cagr-compound-annual-growth-rate"
-description: "CAGR is the average annual growth rate of an investment or business metric over time, smoothing out yearly ups and downs to show steady long-term growth."
+description: "CAGR is the steady annual growth rate that smooths out yearly ups and downs, showing how much an investment or business metric grows on average each year over time."
 keywords: ["CAGR", "Compound Annual Growth Rate", "investment growth", "financial metric", "growth rate"]
 category: "Finance"
 type: "glossary"

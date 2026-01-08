@@ -3,7 +3,7 @@ title: Deepfake Detection
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: deepfake-detection
-description: "Technology that identifies fake videos and audio created by AI, helping detect fraud and false information by spotting unnatural changes in faces, expressions, and voices."
+description: "AI technology that identifies fake videos and audio by detecting unnatural patterns in faces, expressions, and voices to prevent fraud and false information."
 keywords: ["deepfake detection", "AI-generated media", "synthetic media", "fraud prevention", "misinformation"]
 category: AI Ethics & Safety Mechanisms
 type: glossary

@@ -2,7 +2,7 @@
 title: "Internal Communications"
 date: 2025-12-19
 translationKey: Internal-Communications
-description: "Internal Communications is the practice of sharing information and encouraging dialogue between company leadership and employees to keep everyone aligned and engaged."
+description: "Internal Communications is the system that connects company leadership and employees through information sharing and two-way conversations, ensuring everyone stays informed and engaged across the organization."
 keywords:
 - internal communications
 - employee engagement

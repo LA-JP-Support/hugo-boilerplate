@@ -2,7 +2,7 @@
 title: "HR Service Delivery"
 date: 2025-12-19
 translationKey: HR-Service-Delivery
-description: "HR Service Delivery is an approach that transforms how companies organize and deliver human resources services to employees, using modern technology and customer-focused practices to improve employee experience and efficiency."
+description: "HR Service Delivery is a modern approach that transforms how HR departments serve employees, using technology and customer-focused practices to provide faster, easier access to HR services and information."
 keywords:
 - HR service delivery
 - human resources operations

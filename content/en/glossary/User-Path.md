@@ -2,7 +2,7 @@
 title: "User Path"
 date: 2025-12-19
 translationKey: User-Path
-description: "A record of all the steps and actions a user takes while using a website or app to complete a task, helping businesses understand how people interact with their product."
+description: "A record of all the steps and actions a user takes while navigating a website or app to reach their goal, helping businesses understand how people interact with their product."
 keywords:
 - user path
 - user journey

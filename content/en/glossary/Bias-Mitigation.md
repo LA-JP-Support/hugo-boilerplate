@@ -3,7 +3,7 @@ title: "Bias Mitigation"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "bias-mitigation"
-description: "Techniques and strategies to reduce unfair outcomes in AI systems, ensuring decisions don't discriminate against specific groups based on characteristics like race or gender."
+description: "AI systems that identify and reduce unfair treatment of specific groups in automated decisions, such as discrimination based on race or gender."
 keywords: ["bias mitigation", "machine learning bias", "AI ethics", "algorithmic fairness", "responsible AI"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

@@ -2,7 +2,7 @@
 title: "Event Streaming"
 date: 2025-12-19
 translationKey: Event-Streaming
-description: "Event Streaming: A technology that captures and processes data events in real-time as they happen, allowing businesses to react instantly instead of waiting to process data in batches."
+description: "Event Streaming: Technology that captures and processes data events instantly as they happen, allowing businesses to react immediately instead of waiting for scheduled batch processing."
 keywords:
 - event streaming
 - real-time data processing

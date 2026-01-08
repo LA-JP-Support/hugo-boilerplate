@@ -2,7 +2,7 @@
 title: "Encryption in Transit"
 date: 2025-12-19
 translationKey: Encryption-in-Transit
-description: "Encryption in Transit: A security method that scrambles data into unreadable code while it travels across networks, so only the intended recipient can read it."
+description: "A security method that scrambles data into unreadable code while traveling across networks, so only the intended recipient can decode it."
 keywords:
 - encryption in transit
 - TLS protocol

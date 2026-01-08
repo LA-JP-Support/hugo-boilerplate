@@ -2,7 +2,7 @@
 title: "Interaction Analytics"
 date: 2025-12-19
 translationKey: Interaction-Analytics
-description: "Interaction Analytics is technology that automatically captures and analyzes customer conversations across calls, chats, and emails to help businesses improve service quality and customer satisfaction."
+description: "Interaction Analytics is technology that automatically captures and analyzes customer conversations across calls, chats, and emails to identify patterns and improve business performance."
 keywords:
 - interaction analytics
 - customer experience analytics

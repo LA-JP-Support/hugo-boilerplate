@@ -2,7 +2,7 @@
 title: "Duplicate Content"
 date: 2025-12-19
 translationKey: Duplicate-Content
-description: "Identical or very similar content appearing on multiple web pages, which can confuse search engines and hurt your website's visibility in search results."
+description: "Identical or very similar content that appears on multiple web pages, which can confuse search engines and reduce your website's visibility in search results."
 keywords:
 - duplicate content
 - SEO optimization

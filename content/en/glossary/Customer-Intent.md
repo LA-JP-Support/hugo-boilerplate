@@ -2,7 +2,7 @@
 title: "Customer Intent"
 date: 2025-12-19
 translationKey: Customer-Intent
-description: "Customer Intent: What a customer wants to achieve when interacting with your business, such as making a purchase, finding information, or solving a problem. Understanding it helps deliver relevant experiences and increase sales."
+description: "Customer Intent: The goal or reason behind a customer's action, such as buying a product, getting information, or solving a problem. Recognizing it helps businesses provide relevant solutions and boost sales."
 keywords:
 - customer intent
 - intent recognition

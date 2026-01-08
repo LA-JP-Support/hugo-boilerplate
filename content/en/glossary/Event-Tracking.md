@@ -3,7 +3,7 @@ title: "Event Tracking"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "event-tracking"
-description: "Event tracking records specific user actions like clicks, form submissions, and purchases to understand how people interact with websites and apps, helping businesses improve user experience and increase sales."
+description: "Event tracking is a method that records specific user actions like clicks, form submissions, and purchases to help businesses understand how people use their websites and apps."
 keywords: ["event tracking", "user interactions", "digital analytics", "product analytics", "conversion funnels"]
 category: "Analytics & Content Effectiveness"
 type: "glossary"

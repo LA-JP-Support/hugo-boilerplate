@@ -2,7 +2,7 @@
 title: "Vendor Comparison"
 date: 2025-12-19
 translationKey: Vendor-Comparison
-description: "A systematic process for evaluating and comparing multiple suppliers based on set criteria such as pricing, quality, and capabilities to make the best purchasing decision."
+description: "A systematic process where organizations evaluate and compare multiple suppliers based on criteria like pricing, quality, and capabilities to make the best purchasing decision."
 keywords:
 - vendor comparison
 - supplier evaluation

@@ -2,7 +2,7 @@
 title: "Cross-Sell"
 date: 2025-12-19
 translationKey: Cross-Sell
-description: "A sales technique that offers customers additional products or services that complement what they're already buying to increase value and satisfaction."
+description: "A sales technique that offers customers additional products or services that complement their purchase to increase value and satisfaction."
 keywords:
 - cross-selling
 - revenue optimization

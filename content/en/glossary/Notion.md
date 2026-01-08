@@ -2,7 +2,7 @@
 title: "Notion"
 date: 2025-12-19
 translationKey: Notion
-description: "An all-in-one workspace app that combines note-taking, databases, and project management tools in one place for organizing information and collaborating with teams."
+description: "A flexible workspace app that combines note-taking, databases, and project management in one customizable platform for organizing information and team collaboration."
 keywords:
 - notion workspace
 - productivity platform

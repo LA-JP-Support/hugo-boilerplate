@@ -2,7 +2,7 @@
 title: "Support Team Structure"
 date: 2025-12-19
 translationKey: Support-Team-Structure
-description: "The organized system that arranges customer service staff into roles and teams, defining who handles which issues and how requests move through the organization to ensure fast and effective problem-solving."
+description: "A framework that organizes customer service staff into roles and teams, determining who handles which issues and how requests move through the organization to ensure fast problem-solving."
 keywords:
 - support team structure
 - customer service organization

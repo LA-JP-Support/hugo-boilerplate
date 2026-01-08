@@ -3,7 +3,7 @@ title: "RAG (Retrieval-Augmented Generation)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "rag-retrieval-augmented-generation"
-description: "An AI technology that retrieves relevant information from external databases in real time to provide more accurate and up-to-date answers, reducing false information."
+description: "An AI system that retrieves relevant information from external sources in real time to give more accurate and current answers without retraining the model."
 keywords: ["RAG", "Retrieval-Augmented Generation", "LLM", "AI architecture", "vector database"]
 category: "AI Chatbot & Automation"
 type: "glossary"

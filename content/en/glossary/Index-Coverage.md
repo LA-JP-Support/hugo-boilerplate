@@ -2,7 +2,7 @@
 title: "Index Coverage"
 date: 2025-12-19
 translationKey: Index-Coverage
-description: "Index Coverage is a tool that monitors which pages on your website are found and listed by search engines. It helps identify technical problems preventing your content from appearing in search results."
+description: "Index Coverage is a monitoring tool that tracks which pages on your website search engines find and display in results, helping you spot and fix technical issues blocking your content from appearing online."
 keywords:
 - index coverage
 - google search console

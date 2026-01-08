@@ -2,7 +2,7 @@
 title: "Customer Advocacy Program"
 date: 2025-12-19
 translationKey: Customer-Advocacy-Program
-description: "A program that turns satisfied customers into brand ambassadors who share their positive experiences with others, helping businesses grow through authentic word-of-mouth recommendations and peer referrals."
+description: "A program that turns satisfied customers into brand ambassadors who actively recommend your business to others, helping you grow through genuine word-of-mouth and trusted peer recommendations."
 keywords:
 - customer advocacy program
 - brand ambassadors

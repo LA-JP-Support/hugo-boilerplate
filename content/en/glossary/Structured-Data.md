@@ -2,7 +2,7 @@
 title: "Structured Data"
 date: 2025-12-19
 translationKey: Structured-Data
-description: "Information organized in a standardized format that helps search engines and computers understand web page content better, enabling richer search results with ratings, prices, and other details."
+description: "Information organized in a standardized format so that search engines can better understand web page content and display richer results with ratings, prices, and other details."
 keywords:
 - structured data
 - schema markup

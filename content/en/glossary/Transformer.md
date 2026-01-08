@@ -2,7 +2,7 @@
 title: "Transformer"
 date: 2025-12-19
 translationKey: Transformer
-description: "A neural network architecture that uses attention mechanisms to process text and images in parallel, enabling AI systems like ChatGPT to understand language more effectively than previous methods."
+description: "A neural network architecture that processes all words in a sentence at once using attention mechanisms, allowing AI systems to understand language and relationships between words much faster and more accurately than previous methods."
 keywords:
 - transformer architecture
 - attention mechanism

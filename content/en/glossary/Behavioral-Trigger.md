@@ -2,7 +2,7 @@
 title: "Behavioral Trigger"
 date: 2025-12-19
 translationKey: Behavioral-Trigger
-description: "A system that automatically responds to user actions, like clicking a button or leaving a shopping cart, to deliver timely and personalized messages or experiences."
+description: "An automatic system that detects what users do online and instantly responds with personalized messages or offers, like sending a discount when someone abandons their shopping cart."
 keywords:
 - behavioral trigger
 - user behavior

@@ -3,7 +3,7 @@ title: "Cloud-Based"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "cloud-based"
-description: "Computing services delivered over the internet that let you access servers, storage, and software from anywhere without owning physical hardware. You pay only for what you use, like a utility service."
+description: "Computing services delivered over the internet that let you access servers, storage, and software from anywhere without owning physical hardware. You pay only for what you use."
 keywords: ["cloud computing", "cloud services", "SaaS", "PaaS", "IaaS"]
 category: "Cloud Computing"
 type: "glossary"

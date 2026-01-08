@@ -2,7 +2,7 @@
 title: "Code Block (Python/JS)"
 lastmod: 2025-12-18
 translationKey: "code-block-python-js"
-description: "A group of programming statements treated as a single unit, defined by indentation in Python and curly braces in JavaScript. Used to organize logic in functions, loops, and conditions."
+description: "A group of related programming statements grouped together and treated as a single unit. Python uses indentation to define blocks, while JavaScript uses curly braces, helping organize code in functions, loops, and conditions."
 keywords: ["code block", "Python", "JavaScript", "automation", "chatbot"]
 category: "AI Chatbot & Automation"
 type: "glossary"

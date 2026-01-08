@@ -2,7 +2,7 @@
 title: "Embedding"
 date: 2025-12-19
 translationKey: Embedding
-description: "A method that converts words, images, or other data into lists of numbers that capture their meaning, allowing AI systems to understand relationships and similarities between items."
+description: "A technique that converts words, images, or data into lists of numbers that capture their meaning, enabling AI to understand similarities and relationships between items."
 keywords:
 - embedding
 - vector representation

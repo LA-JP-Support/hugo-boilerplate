@@ -3,7 +3,7 @@ title: "Jailbreaking (AI Jailbreaking)"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "jailbreaking-ai-jailbreaking"
-description: "AI Jailbreaking is a technique that bypasses safety features in AI systems to make them generate harmful content like illegal instructions or misinformation."
+description: "AI Jailbreaking is a method of bypassing safety features built into AI systems to make them generate harmful content like illegal instructions or false information."
 keywords: ["AI jailbreaking", "large language models", "safety guardrails", "prompt engineering", "security risks"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

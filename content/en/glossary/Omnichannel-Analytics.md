@@ -2,7 +2,7 @@
 title: "Omnichannel Analytics"
 date: 2025-12-19
 translationKey: Omnichannel-Analytics
-description: "A system that tracks customer interactions across all channels—websites, apps, stores, and more—to understand their complete journey and improve their experience."
+description: "A system that combines customer data from all sources—websites, apps, stores, and more—to show the complete picture of how customers interact with your business and where to improve their experience."
 keywords:
 - omnichannel analytics
 - customer journey tracking

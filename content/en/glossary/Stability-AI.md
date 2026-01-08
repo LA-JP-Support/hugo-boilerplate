@@ -2,7 +2,7 @@
 title: "Stability-AI"
 date: 2025-12-19
 translationKey: Stability-AI
-description: "An open-source AI company that creates free generative models for image, text, and video creation, making advanced AI technology accessible to everyone rather than keeping it proprietary."
+description: "An AI company that creates free, open-source models for generating images, text, and videos, making advanced AI technology available to everyone rather than keeping it exclusive."
 keywords:
 - Stability AI
 - Stable Diffusion

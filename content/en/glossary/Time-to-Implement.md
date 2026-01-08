@@ -2,7 +2,7 @@
 title: "Time to Implement"
 date: 2025-12-19
 translationKey: Time-to-Implement
-description: "Time to Implement is the total time needed to turn a business decision into a working solution, from planning through full operation. It measures how quickly an organization can deliver and adopt new systems or processes."
+description: "The total time needed to turn a business decision into a fully working solution, including planning, setup, testing, and training. It measures how quickly an organization can deliver and adopt new systems."
 keywords:
 - time to implement
 - implementation timeline

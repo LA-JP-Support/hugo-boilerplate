@@ -2,7 +2,7 @@
 title: "Super Users"
 date: 2025-12-19
 translationKey: Super-Users
-description: "Advanced users with special system access who help colleagues use technology effectively and bridge communication between technical teams and business staff."
+description: "Advanced users who bridge technical teams and regular employees, helping colleagues use technology effectively and solving complex problems."
 keywords:
 - super users
 - power users

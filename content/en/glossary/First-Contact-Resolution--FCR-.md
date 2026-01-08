@@ -2,7 +2,7 @@
 title: "First Contact Resolution (FCR)"
 date: 2025-12-19
 translationKey: First-Contact-Resolution--FCR-
-description: "A customer service metric measuring how often issues are resolved in the first interaction, without requiring follow-up contacts. Higher FCR rates improve customer satisfaction and reduce support costs."
+description: "A customer service metric that measures how often customer problems are solved in the first interaction, without needing follow-up contacts. Higher rates mean happier customers and lower support costs."
 keywords:
 - first contact resolution
 - customer service metrics

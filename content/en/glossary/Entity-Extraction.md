@@ -1,7 +1,7 @@
 ---
 title: "Entity Extraction (Named Entity Recognition, NER)"
 translationKey: "entity-extraction-named-entity-recognition-ner"
-description: "A technology that automatically identifies and extracts key information like names, organizations, and dates from text, converting it into organized data for analysis and automation."
+description: "A technology that automatically identifies and extracts key information like names, organizations, and dates from text, converting it into structured data for analysis and automation."
 keywords: ["Entity Extraction", "Named Entity Recognition", "NLP", "AI Chatbot", "Text Analytics"]
 category: "AI Chatbot & Automation"
 type: "glossary"

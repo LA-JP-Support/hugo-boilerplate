@@ -2,7 +2,7 @@
 title: "ETL (Extract Transform Load)"
 date: 2025-12-19
 translationKey: ETL--Extract-Transform-Load-
-description: "A data management process that collects information from multiple sources, cleans and organizes it, then stores it in a central location for analysis and business use."
+description: "A data process that gathers information from multiple sources, cleans and organizes it, then stores it in one central location for analysis and business decisions."
 keywords:
 - ETL process
 - data integration

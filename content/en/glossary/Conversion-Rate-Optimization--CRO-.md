@@ -2,7 +2,7 @@
 title: "Conversion Rate Optimization (CRO)"
 date: 2025-12-19
 translationKey: Conversion-Rate-Optimization--CRO-
-description: "A systematic approach to increasing the percentage of website visitors who complete desired actions, such as purchases or sign-ups, by analyzing user behavior and improving website design."
+description: "A method to increase the percentage of website visitors who complete desired actions like purchases or sign-ups by analyzing user behavior and improving the website experience."
 keywords:
 - conversion rate optimization
 - CRO strategies

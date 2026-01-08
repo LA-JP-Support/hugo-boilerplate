@@ -2,7 +2,7 @@
 title: "Quality Monitoring"
 date: 2025-12-19
 translationKey: Quality-Monitoring
-description: "A systematic process of continuously checking products, services, or processes against set standards to ensure quality, identify problems, and trigger improvements."
+description: "A process of continuously checking products and services against set standards to identify problems and ensure quality improvements."
 keywords:
 - quality monitoring
 - quality assurance

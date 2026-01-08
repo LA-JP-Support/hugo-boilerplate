@@ -2,7 +2,7 @@
 title: "Team Collaboration"
 date: 2025-12-19
 translationKey: Team-Collaboration
-description: "Team Collaboration is when people work together toward shared goals, combining their different skills and ideas to achieve better results than working alone. It relies on clear communication, trust, and teamwork tools to succeed."
+description: "Team Collaboration is when multiple people work together toward shared goals, combining their different skills and ideas to achieve better results than working alone."
 keywords:
 - team collaboration
 - workplace communication

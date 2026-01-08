@@ -1,7 +1,7 @@
 ---
 title: "Debug Console / Trace"
 translationKey: "debug-console-trace"
-description: "A diagnostic tool that records each step of a process—showing inputs, outputs, errors, and performance—to help troubleshoot and optimize automation flows, chatbots, or API operations."
+description: "A diagnostic tool that records each step of a process—showing inputs, outputs, and errors—to help identify where problems occur and optimize workflows."
 keywords: ["Debug Console", "Trace", "Automation Flow", "AI Chatbot", "API Proxy"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -2,7 +2,7 @@
 title: "Backlink"
 date: 2025-12-19
 translationKey: Backlink
-description: "A hyperlink from another website pointing to your site, acting as a vote of confidence that helps search engines determine your page's authority and ranking."
+description: "A link from another website to yours that acts like a recommendation, helping search engines decide how important and trustworthy your page is."
 keywords:
 - backlink
 - link building

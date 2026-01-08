@@ -2,7 +2,7 @@
 title: "Content ROI"
 date: 2025-12-19
 translationKey: Content-ROI
-description: "Content ROI is a measurement that shows how much profit or value your business gains from content marketing compared to what you spent creating and sharing that content."
+description: "Content ROI measures the profit or value your business gains from content marketing compared to the money spent creating and sharing it, helping you decide if your content strategy is working."
 keywords:
 - content ROI
 - content marketing metrics

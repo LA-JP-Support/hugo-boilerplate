@@ -2,7 +2,9 @@
 title: SEOメタデータ
 date: 2025-12-19
 translationKey: SEO-Metadata
-description: メタタグ、構造化データ、検索エンジンの可視性とランキング向上のための最適化手法を含む、SEOメタデータの包括的なガイド。
+description: "# 新しいdescription:
+
+ウェブページに隠れた情報を埋め込んで、検索エンジンにページの内容を正しく伝え、検索結果での表示を改善する仕組み。"
 keywords:
 - SEOメタデータ
 - メタタグ

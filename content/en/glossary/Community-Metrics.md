@@ -2,7 +2,7 @@
 title: "Community Metrics"
 date: 2025-12-19
 translationKey: Community-Metrics
-description: "Community Metrics are measurements used to track how healthy and active an online community is. They help managers understand member behavior and decide how to improve the community."
+description: "Community Metrics are measurements that track how active and healthy an online community is, helping managers understand member behavior and make decisions to improve the community."
 keywords:
 - community metrics
 - engagement analytics

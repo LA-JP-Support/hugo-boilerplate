@@ -2,7 +2,7 @@
 title: "Sales Engagement"
 date: 2025-12-19
 translationKey: Sales-Engagement
-description: "A systematic approach using technology and personalized communication to manage all interactions between sales teams and prospects, helping them build relationships and close deals more effectively."
+description: "A systematic approach that uses technology and personalized communication to manage all interactions between sales teams and prospects, helping build relationships and close deals more effectively."
 keywords:
 - sales engagement platform
 - sales automation

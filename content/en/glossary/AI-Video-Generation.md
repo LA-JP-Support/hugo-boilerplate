@@ -2,7 +2,7 @@
 title: "AI Video Generation"
 date: 2025-12-19
 translationKey: AI-Video-Generation
-description: "AI technology that automatically creates, modifies, or enhances videos from text descriptions, images, or existing footage using machine learning models."
+description: "AI technology that automatically creates videos from text, images, or existing footage using machine learning to generate realistic video content with minimal human input."
 keywords:
 - AI video generation
 - neural video synthesis

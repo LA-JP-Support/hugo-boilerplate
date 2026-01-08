@@ -2,7 +2,7 @@
 title: "Template Variable"
 date: 2025-12-19
 translationKey: Template-Variable
-description: "A placeholder in a template that automatically gets replaced with actual data when the template is processed, allowing you to create personalized content without rewriting the template each time."
+description: "A placeholder in a template that automatically gets replaced with actual data during processing, enabling personalized content creation without rewriting the template each time."
 keywords:
 - template variable
 - dynamic content

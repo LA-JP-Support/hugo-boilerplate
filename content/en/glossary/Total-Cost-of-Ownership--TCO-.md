@@ -2,7 +2,7 @@
 title: "Total Cost of Ownership (TCO)"
 date: 2025-12-19
 translationKey: Total-Cost-of-Ownership--TCO-
-description: "Total cost of ownership (TCO) is a financial analysis method that calculates all expenses involved in buying, using, and disposing of an asset over its lifetime, helping organizations make smarter purchasing decisions."
+description: "A financial calculation that adds up all costs of buying, using, and getting rid of an asset over its lifetime, helping you avoid expensive mistakes by looking beyond just the purchase price."
 keywords:
 - total cost of ownership
 - TCO analysis

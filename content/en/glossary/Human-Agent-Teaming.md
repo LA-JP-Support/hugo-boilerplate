@@ -1,7 +1,7 @@
 ---
 title: "Human-Agent Teaming"
 translationKey: "human-agent-teaming"
-description: "Human-Agent Teaming is a partnership where humans and AI work as equals, sharing control and goals to accomplish tasks more effectively by combining human judgment with AI speed and efficiency."
+description: "Human-Agent Teaming is a partnership where humans and AI work together as equals, with flexible control and shared goals, combining human judgment and creativity with AI speed and efficiency to accomplish tasks more effectively."
 keywords: ["Human-Agent Teaming", "AI collaboration", "Human-AI Teaming", "Artificial Intelligence", "Team dynamics"]
 category: "AI Chatbot & Automation"
 type: "glossary"

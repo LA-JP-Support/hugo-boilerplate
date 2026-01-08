@@ -2,7 +2,7 @@
 title: "Integration Platform as a Service (iPaaS)"
 date: 2025-12-19
 translationKey: Integration-Platform-as-a-Service--iPaaS-
-description: "A cloud platform that connects different business applications and systems together, allowing them to share data and work seamlessly without requiring specialized technical skills."
+description: "A cloud platform that connects different business applications and systems, allowing them to share data seamlessly without requiring specialized technical skills."
 keywords:
 - iPaaS
 - cloud integration

@@ -2,7 +2,7 @@
 title: "Hugo Pipes"
 date: 2025-12-19
 translationKey: Hugo-Pipes
-description: "Hugo Pipes is a built-in tool that processes website assets like stylesheets and scripts automatically, eliminating the need for separate external software."
+description: "Hugo Pipes is a built-in feature that automatically processes website files like stylesheets and scripts without needing separate software tools."
 keywords:
 - Hugo Pipes
 - asset processing

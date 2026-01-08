@@ -2,7 +2,7 @@
 title: "Content Scheduling"
 date: 2025-12-19
 translationKey: Content-Scheduling
-description: "Content scheduling is a method of planning and automatically publishing digital content at the best times to reach your audience across social media, blogs, and email."
+description: "A tool that automatically publishes your content at the best times across social media, blogs, and email by analyzing when your audience is most active."
 keywords:
 - content scheduling
 - social media automation

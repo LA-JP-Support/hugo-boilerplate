@@ -2,7 +2,7 @@
 title: "Affective Computing"
 date: 2025-12-19
 translationKey: Affective-Computing
-description: "Technology that enables computers to recognize and respond to human emotions through facial expressions, voice, and other signals, making interactions more natural and intuitive."
+description: "Technology that enables computers to recognize human emotions through facial expressions and voice, then respond in ways that feel natural and understanding."
 keywords:
 - affective computing
 - emotion recognition

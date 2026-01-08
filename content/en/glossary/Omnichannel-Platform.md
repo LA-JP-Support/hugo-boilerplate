@@ -2,7 +2,7 @@
 title: "Omnichannel Platform"
 date: 2025-12-19
 translationKey: Omnichannel-Platform
-description: "An integrated technology system that connects all customer touchpoints—online stores, apps, physical shops, and social media—so customers have a seamless experience wherever they shop."
+description: "A unified system that connects all ways customers shop—online, mobile apps, stores, and social media—so they have a consistent experience everywhere."
 keywords:
 - omnichannel platform
 - customer experience

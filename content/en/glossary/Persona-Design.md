@@ -1,7 +1,7 @@
 ---
 title: Persona Design
 translationKey: persona-design
-description: "Persona Design is the process of creating a unique personality for an AI chatbot by defining its tone, communication style, and character to make interactions feel natural and trustworthy rather than robotic."
+description: "Persona Design is the process of giving an AI chatbot a distinct personality—including its tone, communication style, and character traits—to make conversations feel natural, trustworthy, and aligned with your brand rather than robotic."
 keywords:
 - Persona Design
 - AI Chatbot

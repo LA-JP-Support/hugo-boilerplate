@@ -2,7 +2,7 @@
 title: "Model Deployment"
 date: 2025-12-19
 translationKey: Model-Deployment
-description: "The process of moving a trained AI model from development into real-world systems where it can make predictions and provide business value to users and applications."
+description: "A trained AI model is packaged and launched into real-world systems so it can make predictions and deliver value to users and applications."
 keywords:
 - model deployment
 - machine learning operations

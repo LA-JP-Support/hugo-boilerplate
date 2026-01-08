@@ -2,7 +2,7 @@
 title: "Sales Content Management"
 date: 2025-12-19
 translationKey: Sales-Content-Management
-description: "A system that organizes and stores sales materials like presentations and case studies, helping sales teams quickly find and use the right content to close deals."
+description: "A system that helps sales teams quickly find and share the right presentations, case studies, and product information to close deals more effectively."
 keywords:
 - sales content management
 - sales enablement

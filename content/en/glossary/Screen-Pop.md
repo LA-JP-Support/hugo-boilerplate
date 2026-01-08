@@ -2,7 +2,7 @@
 title: "Screen Pop"
 date: 2025-12-19
 translationKey: Screen-Pop
-description: "A feature that automatically displays a customer's information on an agent's screen when they call or message, helping the agent serve them faster and better."
+description: "A technology that automatically shows a customer's information on an agent's screen when they call or message, so the agent can help them right away without searching for their details."
 keywords:
 - screen pop
 - contact center technology

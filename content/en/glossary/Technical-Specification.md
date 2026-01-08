@@ -2,7 +2,7 @@
 title: "Technical Specification"
 date: 2025-12-19
 translationKey: Technical-Specification
-description: "A detailed document that outlines exactly how a product or system should be built, including what technology to use and what performance standards it must meet."
+description: "A detailed document that serves as a blueprint for building a product or system, specifying what technology to use, how it should work, and what performance standards it must meet."
 keywords:
 - technical specification
 - engineering documentation

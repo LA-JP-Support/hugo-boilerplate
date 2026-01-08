@@ -1,8 +1,6 @@
 ---
-url: "/ja/glossary/Debug-Console---Trace/"
----
----
 title: デバッグコンソール / トレース
+url: "/ja/glossary/Debug-Console---Trace/"
 translationKey: debug-console-trace
 description: デバッグコンソールまたはトレースは、自動化フロー、AIチャットボット、またはAPIプロキシの動作を可視化する診断インターフェースであり、データ、エラー、パフォーマンスを記録します。
 keywords:
@@ -18,7 +16,6 @@ lastmod: '2025-12-19'
 draft: false
 e-title: Debug Console / Trace
 term: でばっぐこんそーる / とれーす
-url: "/ja/glossary/Debug-Console---Trace/"
 ---
 ## デバッグコンソール / トレースとは何か?
 デバッグコンソールまたはトレースは、自動化フロー、AIチャットボットパイプライン、またはAPIプロキシ操作の実行状況を可視化する診断インターフェースです。これらのツールは、プロセスの各ステップを記録し、入出力データ、メタデータ、エラー、パフォーマンスメトリクスを取得することで、リクエストフローのリアルタイム監視、障害やボトルネックの診断、ビジネスロジックとデータ変換の検証を可能にします。

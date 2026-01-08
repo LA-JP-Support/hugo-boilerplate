@@ -5,6 +5,28 @@ do,do,Common English verb,90,seed
 get,get,Common English verb,90,seed
 set,set,Common English verb,90,seed
 use,use,Common English verb,80,seed
-Platform,platform,Generic noun; often appears as plain text,60,seed
-Token,token,Generic noun; appears frequently in AI/tech text,60,seed
+AI,ai,Too generic - causes over-linking,0,denylist
+machine learning,machine learning,Too generic - causes over-linking,0,denylist
+deep learning,deep learning,Too generic - causes over-linking,0,denylist
+neural network,neural network,Too generic - causes over-linking,0,denylist
+data,data,Too generic - causes over-linking,0,denylist
+model,model,Too generic - causes over-linking,0,denylist
+algorithm,algorithm,Too generic - causes over-linking,0,denylist
+system,system,Too generic - causes over-linking,0,denylist
+technology,technology,Too generic - causes over-linking,0,denylist
+software,software,Too generic - causes over-linking,0,denylist
+application,application,Too generic - causes over-linking,0,denylist
+platform,platform,Too generic - causes over-linking,0,denylist
+service,service,Too generic - causes over-linking,0,denylist
+tool,tool,Too generic - causes over-linking,0,denylist
+solution,solution,Too generic - causes over-linking,0,denylist
+process,process,Too generic - causes over-linking,0,denylist
+method,method,Too generic - causes over-linking,0,denylist
+approach,approach,Too generic - causes over-linking,0,denylist
+technique,technique,Too generic - causes over-linking,0,denylist
+framework,framework,Too generic - causes over-linking,0,denylist
+Ticket-System,ticket-system,Deleted - consolidated to ticket.md,0,denylist
+Ticketing-System,ticketing-system,Deleted - consolidated to ticket.md,0,denylist
+unsupervised-consistency-evaluation,unsupervised-consistency-evaluation,Deleted - replaced by Unsupervised-consistency-metrics.mdd,0,denylist
 Workflow,workflow,Generic noun; appears frequently in business/tech text,60,seed
+Token,token,Generic noun; appears frequently in AI/tech text,60,seed

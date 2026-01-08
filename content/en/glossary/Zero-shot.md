@@ -3,7 +3,7 @@ title: "Zero-Shot Learning (ZSL)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "zero-shot-learning-zsl"
-description: "A machine learning technique that recognizes new categories without training examples by using descriptions or attributes to transfer knowledge from familiar categories."
+description: "A machine learning approach that identifies new categories without training examples by using descriptions or shared characteristics to apply knowledge from familiar categories."
 keywords: ["zero-shot learning", "machine learning", "unseen classes", "auxiliary information", "embedding-based methods"]
 category: "Machine Learning"
 type: "glossary"

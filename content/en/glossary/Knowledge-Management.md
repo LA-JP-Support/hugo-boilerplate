@@ -2,7 +2,7 @@
 title: "Knowledge Management"
 date: 2025-12-19
 translationKey: Knowledge-Management
-description: "A systematic approach to capturing, organizing, and sharing an organization's collective knowledge and expertise so employees can access and use it to make better decisions."
+description: "A system that captures and organizes an organization's knowledge and expertise so employees can easily find and use it to make better decisions."
 keywords:
 - knowledge management
 - information systems

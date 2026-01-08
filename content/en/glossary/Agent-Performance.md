@@ -2,7 +2,7 @@
 title: "Agent Performance"
 date: 2025-12-19
 translationKey: Agent-Performance
-description: "Agent Performance is the measurement of how well an AI system completes its tasks, evaluated through metrics like speed, accuracy, and efficiency to help developers improve the system's reliability and effectiveness."
+description: "Agent Performance is how well an AI system completes its tasks, measured by metrics like speed and accuracy to help developers make the system more reliable and effective."
 keywords:
 - agent performance metrics
 - AI agent optimization

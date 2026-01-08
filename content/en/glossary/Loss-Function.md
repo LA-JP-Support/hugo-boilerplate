@@ -2,7 +2,7 @@
 title: "Loss Function"
 date: 2025-12-19
 translationKey: Loss-Function
-description: "A mathematical tool that measures how far a machine learning model's predictions are from the actual answers, guiding the model to improve during training."
+description: "A mathematical tool that measures how far a machine learning model's predictions are from actual answers, helping the model learn and improve during training."
 keywords:
 - loss function
 - machine learning optimization

@@ -2,7 +2,7 @@
 title: "Softphone"
 date: 2025-12-19
 translationKey: Softphone
-description: "A software application that turns your computer or smartphone into a virtual phone, allowing you to make calls over the internet instead of using a traditional phone line."
+description: "A software application that turns your computer or smartphone into a virtual phone, letting you make calls over the internet without needing a traditional phone line."
 keywords:
 - softphone
 - VoIP software

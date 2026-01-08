@@ -2,7 +2,7 @@
 title: "Revenue Attribution"
 date: 2025-12-19
 translationKey: Revenue-Attribution
-description: "Revenue Attribution is a method to identify which marketing channels and customer interactions led to a sale, helping businesses understand where to invest their marketing budget for the best results."
+description: "Revenue Attribution is a method that tracks which marketing channels and customer interactions led to a sale, helping businesses understand where to invest their marketing budget most effectively."
 keywords:
 - revenue attribution
 - sales attribution models

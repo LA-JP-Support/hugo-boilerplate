@@ -2,7 +2,7 @@
 title: "API Rate Limiting"
 date: 2025-12-19
 translationKey: API-Rate-Limiting
-description: "A system that controls how many requests can be sent to an API within a set time period, protecting the service from overload and ensuring fair access for all users."
+description: "A system that controls how many requests an API can receive within a set time period to prevent overload and ensure fair access for all users."
 keywords:
 - API rate limiting
 - request throttling

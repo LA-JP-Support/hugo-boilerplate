@@ -2,7 +2,7 @@
 title: "Custom Integration"
 date: 2025-12-19
 translationKey: Custom-Integration
-description: "A tailored software solution that connects different applications or systems that don't naturally work together, enabling them to share data and automate workflows seamlessly."
+description: "A specialized software solution that connects different applications or systems to share data and automate workflows, built specifically for unique business needs."
 keywords:
 - custom integration
 - system integration

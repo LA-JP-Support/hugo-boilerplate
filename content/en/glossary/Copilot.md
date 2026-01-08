@@ -1,7 +1,7 @@
 ---
 title: "AI Copilot"
 translationKey: "ai-copilot"
-description: "An AI assistant that works alongside you in real time to boost productivity and creativity by automating tasks, answering questions, and offering smart suggestions."
+description: "An AI assistant that works alongside you in real time to help with work tasks, answer questions, and suggest ideas by learning from your interactions."
 keywords: ["AI Copilot", "Artificial Intelligence", "Large Language Models", "Digital Assistant", "Productivity"]
 category: "General"
 type: "glossary"

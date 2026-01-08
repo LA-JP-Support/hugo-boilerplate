@@ -1,7 +1,7 @@
 ---
 title: "Logic Node / Conditional Branching"
 translationKey: "logic-node-conditional-branching"
-description: "A decision point in workflows that evaluates conditions and automatically directs users to different paths based on their choices or data, enabling personalized and intelligent responses."
+description: "A decision point in workflows that evaluates conditions and automatically routes users to different paths, enabling personalized and intelligent responses based on their choices or data."
 keywords: ["Logic Node", "Conditional Branching", "Chatbot", "Automation", "Workflow"]
 category: "AI Chatbot & Automation"
 type: "glossary"

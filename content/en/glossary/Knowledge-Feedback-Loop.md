@@ -2,7 +2,7 @@
 title: "Knowledge Feedback Loop"
 date: 2025-12-19
 translationKey: Knowledge-Feedback-Loop
-description: "A continuous learning system where results from actions and decisions are collected, analyzed, and used to improve future performance and decision-making."
+description: "A continuous cycle where you take action, learn from the results, and use those lessons to make better decisions next time."
 keywords:
 - knowledge feedback loop
 - continuous learning

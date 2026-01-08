@@ -2,7 +2,7 @@
 title: "Exit Page"
 date: 2025-12-19
 translationKey: Exit-Page
-description: "The final page a user visits before leaving your website. Analyzing exit pages helps identify problems like poor content or technical issues that cause visitors to leave."
+description: "The last page a user visits before leaving your website. Tracking exit pages helps you spot problems like confusing content or broken features that make visitors leave."
 keywords:
 - exit page
 - web analytics

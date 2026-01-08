@@ -2,7 +2,7 @@
 title: "Social Engagement Rate"
 date: 2025-12-19
 translationKey: Social-Engagement-Rate
-description: "A metric that measures how actively people interact with your social media posts through likes, comments, shares, and other actions, helping you understand if your content resonates with your audience."
+description: "A metric that measures how actively people interact with your social media posts through likes, comments, and shares, helping you understand if your content connects with your audience."
 keywords:
 - social engagement rate
 - social media metrics

@@ -2,7 +2,7 @@
 title: "Evergreen Content"
 date: 2025-12-19
 translationKey: Evergreen-Content
-description: "Content that stays relevant and valuable for months or years without needing updates, like how-to guides or tutorials that answer timeless questions and keep attracting readers long after publication."
+description: "Content that answers timeless questions and remains useful for months or years without updates, like how-to guides that keep attracting readers long after being published."
 keywords:
 - evergreen content
 - content marketing

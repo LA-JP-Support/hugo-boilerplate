@@ -3,7 +3,7 @@ title: "Personalization"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "personalization"
-description: "Personalization is technology that automatically tailors products, services, and interactions to each individual based on their behaviors and preferences, without requiring manual setup."
+description: "Personalization is AI technology that automatically customizes products, services, and interactions for each person based on their behavior and preferences, without requiring manual setup."
 keywords: ["personalization", "AI chatbots", "automation", "machine learning", "customer experience"]
 category: "AI Chatbot & Automation"
 type: "glossary"

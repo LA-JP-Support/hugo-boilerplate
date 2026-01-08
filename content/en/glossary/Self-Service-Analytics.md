@@ -2,7 +2,7 @@
 title: "Self-Service Analytics"
 date: 2025-12-19
 translationKey: Self-Service-Analytics
-description: "Self-Service Analytics is a tool that lets business users directly access and analyze data to create reports and insights on their own, without needing IT support."
+description: "A tool that lets business users analyze data and create reports on their own, without waiting for IT support or technical expertise."
 keywords:
 - self-service analytics
 - business intelligence

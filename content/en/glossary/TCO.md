@@ -3,7 +3,7 @@ title: "TCO (Total Cost of Ownership)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "tco-total-cost-of-ownership"
-description: "The total cost of owning and operating a technology or service over its entire lifetime, including hidden expenses like maintenance, upgrades, and support—not just the purchase price."
+description: "The total cost of owning and operating a technology throughout its lifetime, including hidden expenses like maintenance, upgrades, and support—not just the purchase price."
 keywords: ["TCO", "Total Cost of Ownership", "AI chatbots", "Automation costs", "Lifecycle costs"]
 category: "AI & Automation"
 type: "glossary"

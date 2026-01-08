@@ -2,7 +2,7 @@
 title: "Translation Workflow"
 date: 2025-12-19
 translationKey: Translation-Workflow
-description: "A systematic process that guides content translation from one language to another while coordinating translators, editors, and tools to ensure quality and consistency."
+description: "A step-by-step plan that guides content translation from one language to another, coordinating translators and tools to ensure quality and consistency throughout the process."
 keywords:
 - translation workflow
 - localization process

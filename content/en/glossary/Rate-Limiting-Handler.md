@@ -1,7 +1,7 @@
 ---
 title: "Rate Limiting Handler"
 translationKey: "rate-limiting-handler"
-description: "A Rate Limiting Handler is a tool that controls how many API requests can be made and automatically handles errors when limits are exceeded, preventing service disruptions."
+description: "A Rate Limiting Handler is a tool that monitors API requests and automatically manages overages by queuing, retrying, or delaying requests to prevent service disruptions and errors."
 keywords: ["Rate Limiting Handler", "API Rate Limiting", "429 Too Many Requests", "Retry Logic", "Exponential Backoff"]
 category: "General"
 type: "glossary"

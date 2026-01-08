@@ -1,7 +1,7 @@
 ---
 title: "Knowledge Base Connector"
 translationKey: "knowledge-base-connector"
-description: "A bridge connecting AI chatbots to knowledge sources like documents and databases, enabling them to provide accurate, up-to-date answers based on specific information rather than general knowledge."
+description: "A bridge that connects AI chatbots to documents and databases, allowing them to access and share specific, up-to-date information instead of relying only on general knowledge."
 keywords: ["Knowledge Base Connector", "Retrieval Augmented Generation", "AI Chatbot", "Vector Database", "Automation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -2,7 +2,7 @@
 title: "Drupal"
 date: 2025-12-19
 translationKey: Drupal
-description: "A free, flexible website builder that lets organizations create and manage complex websites without extensive coding, from blogs to large enterprise platforms."
+description: "A free, open-source platform that helps organizations build and manage websites of any size, from simple blogs to complex enterprise sites, without needing extensive coding knowledge."
 keywords:
 - Drupal CMS
 - Content Management System

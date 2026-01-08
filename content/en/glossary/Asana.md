@@ -2,7 +2,7 @@
 title: "Asana"
 date: 2025-12-19
 translationKey: Asana
-description: "A web-based platform that helps teams organize tasks, track progress, and collaborate on projects in one centralized workspace instead of using scattered emails and spreadsheets."
+description: "A web-based workspace that helps teams organize tasks, set deadlines, and collaborate on projects in one place instead of using scattered emails and spreadsheets."
 keywords:
 - Asana project management
 - team collaboration software

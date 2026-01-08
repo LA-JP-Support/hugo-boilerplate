@@ -2,7 +2,7 @@
 title: "Dublin Core"
 date: 2025-12-19
 translationKey: Dublin-Core
-description: "A standardized system for labeling digital resources with key information like title, creator, and subject to help organize and find them across different platforms."
+description: "A universal labeling system that helps libraries and websites organize and share information about digital resources like books, images, and documents in a way that different computer systems can understand."
 keywords:
 - Dublin Core
 - metadata standard

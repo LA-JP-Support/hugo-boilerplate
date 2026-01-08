@@ -2,7 +2,7 @@
 title: "Employee Self-Service"
 date: 2025-12-19
 translationKey: Employee-Self-Service
-description: "A digital platform that lets employees manage their own HR information, such as personal details, pay stubs, time off requests, and benefits, without needing to contact the HR department."
+description: "A digital platform where employees can independently manage their HR information like personal details, pay stubs, time off requests, and benefits without contacting the HR department."
 keywords:
 - employee self-service
 - HR technology

@@ -2,7 +2,7 @@
 title: "Personalized Email Marketing"
 date: 2025-12-19
 translationKey: personalized-email-marketing
-description: "Email marketing that uses AI to automatically customize messages, subject lines, and offers for each person based on their behavior and preferences, boosting engagement and sales."
+description: "Email marketing that uses customer data and AI to automatically customize messages, subject lines, and product recommendations for each person based on their behavior and interests, to increase engagement and sales."
 keywords:
 - personalized email marketing
 - email personalization

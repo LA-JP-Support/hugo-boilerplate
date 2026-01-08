@@ -2,7 +2,7 @@
 title: "Session Duration"
 date: 2025-12-19
 translationKey: Session-Duration
-description: "Session Duration is the total time a user spends on a website or app during a single visit, measured from their first action until they leave or become inactive. It helps businesses understand how engaged visitors are with their content."
+description: "Session Duration is the total time a user spends actively using a website or app during one visit, helping businesses measure how engaged visitors are with their content."
 keywords:
 - session duration
 - web analytics

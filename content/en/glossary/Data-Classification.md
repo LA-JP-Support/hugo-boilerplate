@@ -2,7 +2,7 @@
 title: "Data Classification"
 date: 2025-12-19
 translationKey: Data-Classification
-description: "Data Classification is the process of organizing information by its sensitivity level to determine how it should be protected and handled. It helps organizations keep important data secure and comply with regulations."
+description: "Data Classification is the process of sorting and labeling information based on how sensitive it is, so organizations know how to protect and manage it properly."
 keywords:
 - data classification
 - information security

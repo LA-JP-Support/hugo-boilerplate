@@ -2,7 +2,7 @@
 title: "Content Funnel"
 date: 2025-12-19
 translationKey: Content-Funnel
-description: "A marketing strategy that guides potential customers toward a purchase by providing different types of content based on their stage in the buying process—from initial awareness to final decision."
+description: "A marketing approach that guides potential customers toward purchase by sharing different content based on where they are in their buying journey—from first learning about your brand to making a final decision."
 keywords:
 - content funnel
 - content marketing strategy

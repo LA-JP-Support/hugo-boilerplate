@@ -2,7 +2,7 @@
 title: "Above the Fold"
 date: 2025-12-19
 translationKey: Above-the-Fold
-description: "The portion of a webpage visible without scrolling, where the most important content and calls-to-action are placed to make a strong first impression on visitors."
+description: "The part of a webpage you see first without scrolling, where important content and buttons are placed to grab visitors' attention immediately."
 keywords:
 - above the fold
 - web design

@@ -2,7 +2,7 @@
 title: "Omnichannel Contact Center"
 date: 2025-12-19
 translationKey: Omnichannel-Contact-Center
-description: "A customer service system that connects phone, email, chat, social media, and other channels so customers can switch between them seamlessly without repeating information."
+description: "A customer service system that unifies phone, email, chat, and social media so customers can switch between channels without repeating information or losing conversation history."
 keywords:
 - omnichannel contact center
 - unified customer experience

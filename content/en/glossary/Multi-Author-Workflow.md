@@ -2,7 +2,7 @@
 title: "Multi-Author Workflow"
 date: 2025-12-19
 translationKey: Multi-Author-Workflow
-description: "A system that helps multiple people work together on writing and publishing projects, with tools to track changes, share feedback, and manage versions."
+description: "A system that enables multiple people to work together on documents, with tools to track changes, share feedback, and manage different versions throughout the writing and publishing process."
 keywords:
 - multi-author workflow
 - collaborative writing

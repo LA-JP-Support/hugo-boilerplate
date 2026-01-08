@@ -2,7 +2,7 @@
 title: "Data Lakehouse"
 date: 2025-12-19
 translationKey: Data-Lakehouse
-description: "A unified storage platform that combines the cost-effectiveness of data lakes with the performance and reliability of data warehouses, allowing organizations to store and analyze all types of data in one place."
+description: "A unified storage system that combines the low cost of data lakes with the speed and reliability of data warehouses, letting companies store and analyze all their data in one place."
 keywords:
 - data lakehouse
 - data architecture

@@ -3,7 +3,7 @@ title: "Conversion Funnel"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "conversion-funnel"
-description: "A visual model that tracks how many users complete each step from discovering a product to making a purchase or taking a desired action, helping businesses identify where people drop off."
+description: "A visual model that shows how many users complete each step from discovering a product to making a purchase, helping businesses spot where people stop engaging."
 keywords: ["conversion funnel", "marketing funnel", "sales funnel", "conversion rate optimization", "user journey"]
 category: "Analytics & Content Effectiveness"
 type: "glossary"

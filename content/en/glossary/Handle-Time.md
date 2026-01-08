@@ -2,7 +2,7 @@
 title: "Handle Time"
 date: 2025-12-19
 translationKey: Handle-Time
-description: "The total time a contact center agent spends on a customer interaction, including conversation, follow-up work, and administrative tasks needed to resolve the issue."
+description: "The total time a contact center agent spends on a customer interaction, including conversation, follow-up work, and administrative tasks. It measures how efficiently agents resolve customer issues."
 keywords:
 - handle time
 - contact center metrics

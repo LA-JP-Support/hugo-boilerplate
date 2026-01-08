@@ -2,7 +2,7 @@
 title: "Brain-Computer Interface"
 date: 2025-12-19
 translationKey: Brain-Computer-Interface
-description: "A technology that reads brain signals and translates them into commands to control computers or devices through thought alone, helping people with paralysis or disabilities regain mobility."
+description: "A technology that reads electrical signals from your brain and converts them into commands to control computers or devices using only your thoughts, helping people with paralysis regain mobility and independence."
 keywords:
 - brain-computer interface
 - neural control systems

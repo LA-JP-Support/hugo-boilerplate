@@ -2,7 +2,7 @@
 title: "Call Routing"
 date: 2025-12-19
 translationKey: Call-Routing
-description: "A system that automatically directs incoming phone calls to the right person or department based on preset rules, ensuring efficient communication and better customer service."
+description: "A system that automatically directs incoming calls to the right person or department based on preset rules, ensuring efficient communication and better customer service."
 keywords:
 - call routing
 - telecommunications

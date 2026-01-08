@@ -2,7 +2,7 @@
 title: "Service Level Agreement (SLA)"
 date: 2025-12-19
 translationKey: Service-Level-Agreement--SLA-
-description: "A formal agreement between a service provider and customer that sets clear expectations for service quality, performance standards, and what happens if those standards aren't met."
+description: "A contract between a service provider and customer that sets specific performance targets (like uptime and response times) and defines penalties if those targets aren't met."
 keywords:
 - service level agreement
 - SLA management

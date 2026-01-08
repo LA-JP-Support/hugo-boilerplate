@@ -2,7 +2,7 @@
 title: "QoS (Quality of Service)"
 date: 2025-12-19
 translationKey: QoS--Quality-of-Service-
-description: "Network technology that prioritizes important data traffic to ensure smooth performance for applications like video calls and streaming, while managing less time-sensitive tasks like email."
+description: "Network technology that prioritizes important data traffic to ensure critical applications like video calls run smoothly, while allowing less urgent tasks like email to wait."
 keywords:
 - quality of service
 - network traffic management

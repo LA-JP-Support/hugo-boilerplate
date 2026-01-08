@@ -3,7 +3,7 @@ title: "Safety Guardrails"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "safety-guardrails"
-description: "Safety guardrails are automated safeguards that prevent AI systems from producing harmful, inappropriate, or unsafe content by filtering requests and monitoring outputs in real time."
+description: "Safety guardrails are automated safeguards built into AI systems that block harmful requests and prevent unsafe outputs, protecting users and data from risky AI behavior."
 keywords: ["Safety Guardrails", "AI Safety", "LLM Safety", "AI Ethics", "AI Risk Management"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

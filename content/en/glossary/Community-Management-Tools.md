@@ -2,7 +2,7 @@
 title: "Community Management Tools"
 date: 2025-12-19
 translationKey: Community-Management-Tools
-description: "Software that helps organizations manage and grow their online communities by monitoring conversations, engaging members, and organizing interactions across multiple platforms in one place."
+description: "Software that helps organizations manage their online communities by bringing conversations from different platforms into one dashboard, so they can engage with members and track community growth more easily."
 keywords:
 - community management
 - social media tools

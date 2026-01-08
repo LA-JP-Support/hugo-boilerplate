@@ -2,7 +2,7 @@
 title: "Agent Productivity"
 date: 2025-12-19
 translationKey: Agent-Productivity
-description: "Agent Productivity is the measurement and improvement of how efficiently an AI agent completes tasks, including its accuracy, speed, and ability to learn and adapt over time."
+description: "Agent Productivity is how well an AI agent completes tasks by measuring its accuracy, speed, learning ability, and the quality of results it produces over time."
 keywords:
 - agent productivity
 - AI agent performance

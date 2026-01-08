@@ -2,7 +2,7 @@
 title: "Scrum"
 date: 2025-12-19
 translationKey: Scrum
-description: "An agile framework that helps teams deliver products faster through short work cycles called sprints, emphasizing teamwork, transparency, and continuous improvement."
+description: "A framework that helps teams complete projects faster by breaking work into short cycles, focusing on teamwork and continuous improvement."
 keywords:
 - scrum methodology
 - agile framework

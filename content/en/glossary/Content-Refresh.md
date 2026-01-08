@@ -2,7 +2,7 @@
 title: "Content Refresh"
 date: 2025-12-19
 translationKey: Content-Refresh
-description: "Content Refresh: The process of updating and improving existing web content to keep it accurate, relevant, and visible in search results, rather than creating entirely new content from scratch."
+description: "Content Refresh: Updating and improving existing web content to keep it accurate and visible in search results, rather than creating new content from scratch."
 keywords:
 - content refresh
 - content optimization

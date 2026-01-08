@@ -2,7 +2,7 @@
 title: "Ticket Deflection"
 date: 2025-12-19
 translationKey: Ticket-Deflection
-description: "Ticket Deflection is a customer service strategy that helps customers solve problems on their own through self-service options and automated resources, reducing the need for direct support contact."
+description: "A customer service strategy that helps customers solve problems themselves through self-service tools and automated resources, reducing the need to contact support staff directly."
 keywords:
 - ticket deflection
 - customer support automation

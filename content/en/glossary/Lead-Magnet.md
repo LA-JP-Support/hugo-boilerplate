@@ -2,7 +2,7 @@
 title: "Lead Magnet"
 date: 2025-12-19
 translationKey: Lead-Magnet
-description: "A valuable piece of content or offer that businesses give away in exchange for contact information like email addresses, helping turn website visitors into potential customers."
+description: "A free valuable offer like an ebook or discount that businesses give away to collect visitor email addresses and turn them into potential customers."
 keywords:
 - lead magnet
 - lead generation

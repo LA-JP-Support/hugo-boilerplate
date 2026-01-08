@@ -2,7 +2,7 @@
 title: "Scroll Depth"
 date: 2025-12-19
 translationKey: Scroll-Depth
-description: "A metric that tracks how far down a webpage users scroll, helping measure content engagement and identify which parts of a page capture visitor attention."
+description: "A metric that measures how far down a webpage users scroll, revealing which content captures their attention and how engaged they are with your page."
 keywords:
 - scroll depth tracking
 - user engagement metrics

@@ -2,7 +2,7 @@
 title: "Interactive Content"
 date: 2025-12-19
 translationKey: Interactive-Content
-description: "Digital content that requires user participation, such as quizzes or interactive videos, rather than just passive reading. It adapts based on user choices to create personalized experiences."
+description: "Digital content that engages users through active participation—like quizzes or interactive videos—rather than passive reading, adapting to their choices for personalized experiences."
 keywords:
 - interactive content
 - user engagement

@@ -2,7 +2,7 @@
 title: "Digital Experience Platform (DXP)"
 date: 2025-12-19
 translationKey: Digital-Experience-Platform--DXP-
-description: "A unified software platform that helps businesses create and deliver personalized customer experiences across websites, apps, email, and other digital channels."
+description: "A unified software platform that helps businesses create and deliver personalized customer experiences across websites, apps, email, and other digital channels by integrating content management, customer data, and analytics tools."
 keywords:
 - digital experience platform
 - DXP architecture

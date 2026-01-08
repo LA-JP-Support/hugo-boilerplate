@@ -2,7 +2,7 @@
 title: "Omnichannel Strategy"
 date: 2025-12-19
 translationKey: Omnichannel-Strategy
-description: "A business approach that creates seamless customer experiences by connecting all channels—stores, websites, apps, and social media—so customers can switch between them without losing information or context."
+description: "A business strategy that connects all customer touchpoints—stores, websites, apps, and social media—so customers can move between them smoothly while keeping their information and experience consistent."
 keywords:
 - omnichannel strategy
 - customer experience

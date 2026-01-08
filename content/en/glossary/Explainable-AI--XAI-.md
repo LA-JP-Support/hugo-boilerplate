@@ -2,7 +2,7 @@
 title: "Explainable AI (XAI)"
 date: 2025-12-19
 translationKey: Explainable-AI--XAI-
-description: "AI technology that makes machine learning decisions understandable to humans by revealing why the system made specific predictions, rather than just showing the results."
+description: "AI technology that reveals why a system made a specific decision, not just what it predicted. This transparency is essential for building trust in high-stakes applications like healthcare and finance."
 keywords:
 - explainable AI
 - interpretable machine learning

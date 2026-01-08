@@ -2,7 +2,7 @@
 title: "Static Site Generation"
 date: 2025-12-19
 translationKey: Static-Site-Generation
-description: "A web development method that creates finished web pages in advance, then serves them directly to visitors instead of building pages each time someone visits. This approach combines the speed of simple websites with modern development tools."
+description: "A method that builds web pages once during development and serves them ready-made to visitors, combining fast loading speeds with modern coding tools."
 keywords:
 - static site generation
 - JAMstack

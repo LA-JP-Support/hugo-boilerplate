@@ -2,7 +2,7 @@
 title: "Indexing"
 date: 2025-12-19
 translationKey: Indexing
-description: "A data organization technique that creates shortcuts to information, allowing computers to find specific data much faster without searching through everything, like using a book's index instead of reading every page."
+description: "A technique that organizes data with shortcuts so computers can find specific information instantly, like using a book's index instead of reading every page."
 keywords:
 - database indexing
 - search indexing

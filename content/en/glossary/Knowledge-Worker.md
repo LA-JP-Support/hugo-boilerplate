@@ -2,7 +2,7 @@
 title: "Knowledge Worker"
 date: 2025-12-19
 translationKey: Knowledge-Worker
-description: "A professional who creates value primarily through thinking, problem-solving, and using information rather than manual work. They rely on education, expertise, and technology tools to drive innovation and make decisions."
+description: "A professional who solves problems and creates value mainly through thinking, analysis, and using information rather than physical work. They rely on education, expertise, and technology tools to drive innovation and make decisions."
 keywords:
 - knowledge worker
 - information work

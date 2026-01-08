@@ -2,7 +2,7 @@
 title: "WeChat"
 date: 2025-12-19
 translationKey: WeChat
-description: "WeChat is a Chinese mobile app that combines messaging, payments, shopping, and many other services in one platform, allowing users to handle most daily digital tasks without switching between different apps."
+description: "A Chinese mobile app that combines messaging, payments, shopping, and many other services in one platform, allowing users to handle most daily digital tasks without switching between different apps."
 keywords:
 - WeChat
 - super app

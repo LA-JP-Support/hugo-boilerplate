@@ -2,7 +2,7 @@
 title: OAuth
 date: 2025-12-19
 translationKey: OAuth
-description: OAuth認可フレームワークの包括的なガイド。プロトコル、実装、セキュリティのベストプラクティス、実際のアプリケーション事例を網羅しています。
+description: "パスワードを共有せずに、アプリがあなたのGoogleやFacebookなどのアカウント情報に安全にアクセスできる仕組み。"
 keywords:
 - OAuth
 - 認可フレームワーク

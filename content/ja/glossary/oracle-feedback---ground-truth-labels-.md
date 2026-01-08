@@ -1,8 +1,6 @@
 ---
-url: "/ja/glossary/oracle-feedback---ground-truth-labels-/"
----
----
 title: オラクルフィードバック(正解ラベル)
+url: "/ja/glossary/oracle-feedback---ground-truth-labels-/"
 lastmod: '2025-12-19'
 date: '2025-12-19'
 translationKey: oracle-feedback-ground-truth-labels
@@ -18,7 +16,6 @@ type: glossary
 draft: false
 e-title: Oracle Feedback (Ground-Truth Labels)
 term: オラクルフィードバック(せいかいラベル)
-url: "/ja/glossary/oracle-feedback---ground-truth-labels-/"
 ---
 ## はじめに
 Oracleフィードバック(「オラクルフィードバック(正解ラベル)」と呼ばれる)は、AIおよび機械学習(ML)モデルのトレーニング、評価、継続的改善のために、権威ある正しい回答を提供するシステムです。Oracleのエコシステム、特に[Oracle Select AI](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/select-ai-feedback.html)や[Oracle HCM Cloud](https://docs.oracle.com/en/cloud/saas/readiness/hcm/24a/tama-24a/24A-talent-mgmt-wn-f31188.htm)などの製品において、オラクルフィードバックは教師あり学習、プロンプトチューニング、適応型自動化の基盤を形成します。「オラクル」とは、信頼できる権威(通常は人間またはゴールドスタンダードプロセス)を指し、参照、検証、反復的なモデル改善のためにこれらの正解ラベルを提供します。

@@ -2,7 +2,7 @@
 title: "Autonomous Systems"
 date: 2025-12-19
 translationKey: Autonomous-Systems
-description: "Technology that operates independently by using AI and sensors to understand its surroundings, make decisions, and take action without constant human control."
+description: "Machines and devices that can think and act on their own by sensing their surroundings, making decisions, and completing tasks without needing someone to control them every step of the way."
 keywords:
 - autonomous systems
 - artificial intelligence

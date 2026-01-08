@@ -2,7 +2,7 @@
 title: "Live Commerce"
 date: 2025-12-19
 translationKey: Live-Commerce
-description: "Live shopping where hosts broadcast products in real-time videos and viewers can purchase instantly while watching, combining entertainment with immediate buying."
+description: "Live streaming shopping where viewers watch product demonstrations in real-time videos and purchase instantly while interacting with hosts, blending entertainment with immediate buying."
 keywords:
 - live commerce
 - live streaming shopping

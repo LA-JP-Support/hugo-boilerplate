@@ -2,7 +2,7 @@
 title: Conversational AI
 lastmod: 2025-12-18
 translationKey: conversational
-description: "AI technology that understands and responds to human conversation through text or voice, learning from interactions to provide more helpful answers over time."
+description: "AI technology that understands and responds to human conversation through text or voice, learning from interactions to improve its answers over time."
 keywords: ["Conversational AI", "Natural Language Processing", "Machine Learning", "Chatbots", "Virtual Assistants"]
 category: AI Chatbot & Automation
 type: glossary

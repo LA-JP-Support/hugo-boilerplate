@@ -2,7 +2,7 @@
 title: "Data Lineage"
 date: 2025-12-19
 translationKey: Data-Lineage
-description: "A complete record of how data moves and changes as it flows through an organization's systems, helping teams understand data sources, track transformations, and ensure compliance."
+description: "A complete map showing how data moves and changes through an organization's systems, from where it starts to where it ends up, helping teams track sources and ensure accuracy."
 keywords:
 - data lineage
 - data governance

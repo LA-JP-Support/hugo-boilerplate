@@ -2,7 +2,7 @@
 title: "Build Performance"
 date: 2025-12-19
 translationKey: Build-Performance
-description: "Build Performance is the speed and efficiency at which software development tools compile and prepare code for deployment. It directly impacts developer productivity and project delivery timelines."
+description: "Build Performance is how quickly software development tools compile and prepare code for release. It directly affects how fast developers can work and how quickly projects are completed."
 keywords:
 - build performance
 - compilation optimization

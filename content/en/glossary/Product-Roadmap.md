@@ -2,7 +2,7 @@
 title: "Product Roadmap"
 date: 2025-12-19
 translationKey: Product-Roadmap
-description: "A strategic planning document that outlines what features and improvements a product will have over time, helping teams understand the direction and priorities of the product."
+description: "A strategic plan that shows what features and improvements a product will deliver over time, helping teams and stakeholders understand where the product is heading and why."
 keywords:
 - product roadmap
 - strategic planning

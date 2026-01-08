@@ -2,7 +2,7 @@
 title: "Multichannel Attribution"
 date: 2025-12-19
 translationKey: Multichannel-Attribution
-description: "Marketing analytics method that tracks which channels (social media, email, ads, etc.) helped customers decide to buy, and fairly distributes credit among them instead of giving all credit to just one touchpoint."
+description: "A marketing tool that tracks how different channels like social media, email, and ads influence a customer's purchase decision, then fairly shares credit among all of them instead of giving all credit to just one."
 keywords:
 - multichannel attribution
 - marketing attribution models

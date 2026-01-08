@@ -2,7 +2,7 @@
 title: "Publishing Workflow"
 date: 2025-12-19
 translationKey: Publishing-Workflow
-description: "A step-by-step process that guides content from initial ideas through editing, approval, and final publication across websites, print, and social media."
+description: "A step-by-step process that transforms content ideas into finished materials ready for publication across websites, print, and social media."
 keywords:
 - publishing workflow
 - content management

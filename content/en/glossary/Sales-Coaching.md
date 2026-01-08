@@ -2,7 +2,7 @@
 title: "Sales Coaching"
 date: 2025-12-19
 translationKey: Sales-Coaching
-description: "Sales Coaching is an ongoing process that helps salespeople improve their skills and performance through personalized guidance, feedback, and practice. It focuses on identifying areas for improvement and providing continuous support to help them succeed."
+description: "Sales coaching is a continuous, personalized process that helps salespeople improve their skills and performance through targeted feedback, practice, and one-on-one guidance to achieve better results."
 keywords:
 - sales coaching
 - sales performance

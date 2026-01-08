@@ -2,7 +2,7 @@
 title: "Metadata Schema"
 date: 2025-12-19
 translationKey: Metadata-Schema
-description: "A structured set of rules that defines how to describe and organize information about data, ensuring consistency and making data easier to find and share across different systems."
+description: "A set of rules that defines how to describe and organize information about data, ensuring it stays consistent and easy to find across different systems."
 keywords:
 - metadata schema
 - data structure

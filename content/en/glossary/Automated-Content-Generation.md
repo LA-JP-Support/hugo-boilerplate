@@ -2,7 +2,7 @@
 title: "Automated Content Generation"
 date: 2025-12-19
 translationKey: Automated-Content-Generation
-description: "AI technology that automatically creates written and visual content like articles, social media posts, and product descriptions by learning from large amounts of text data."
+description: "AI technology that automatically creates articles, social media posts, and other content by learning patterns from large amounts of text data."
 keywords:
 - automated content generation
 - AI content creation

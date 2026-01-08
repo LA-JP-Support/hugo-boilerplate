@@ -2,7 +2,7 @@
 title: "Early Stopping"
 date: 2025-12-19
 translationKey: Early-Stopping
-description: "A training technique that stops model learning when performance on validation data stops improving, preventing the model from memorizing training data instead of learning useful patterns."
+description: "A training method that stops learning when a model's performance on test data stops improving, preventing it from memorizing training data instead of learning useful patterns."
 keywords:
 - early stopping
 - machine learning regularization

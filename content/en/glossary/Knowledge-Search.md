@@ -2,7 +2,7 @@
 title: "Knowledge Search"
 date: 2025-12-19
 translationKey: Knowledge-Search
-description: "A search system that understands meaning and context, not just keywords, to find relevant information more accurately using artificial intelligence and natural language processing."
+description: "A search system that understands what you mean, not just the words you type, to find relevant information more accurately using AI technology."
 keywords:
 - knowledge search
 - information retrieval

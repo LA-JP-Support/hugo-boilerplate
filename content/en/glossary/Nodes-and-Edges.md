@@ -1,7 +1,7 @@
 ---
 title: "Nodes and Edges"
 translationKey: "nodes-and-edges"
-description: "Nodes are individual units (like actions or data points) and edges are the connections between them that show how information flows. They're used to map out workflows, processes, and relationships in systems like chatbots and automation tools."
+description: "Nodes are individual units like actions or data points, and edges are the connections between them that show how information flows through workflows and processes."
 keywords: ["nodes", "edges", "graph-based modeling", "AI chatbots", "automation workflows"]
 category: "AI Chatbot & Automation"
 type: "glossary"

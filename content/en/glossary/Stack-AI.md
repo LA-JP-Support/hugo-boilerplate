@@ -1,7 +1,7 @@
 ---
 title: Stack AI
 translationKey: stack
-description: "A no-code platform that lets businesses build AI assistants and automate workflows by connecting data sources with AI models, without requiring programming skills."
+description: "A no-code platform that helps businesses build AI chatbots and automate tasks by connecting their data and systems to AI models, without needing programming skills."
 keywords:
 - Stack AI
 - no-code AI

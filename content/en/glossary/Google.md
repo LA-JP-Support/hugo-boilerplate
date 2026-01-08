@@ -3,7 +3,7 @@ title: "Google"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "google"
-description: "Google's transformation from a search engine into a global AI leader, developing advanced models like Gemini for text, images, and video, plus tools for coding, drug discovery, and enterprise applications."
+description: "Google is a technology company that started as a search engine and now leads in artificial intelligence, creating advanced AI tools for text, images, coding, and scientific research."
 keywords: ["Google AI", "Gemini models", "Vertex AI", "Multimodal understanding", "Generative AI"]
 category: "Artificial Intelligence"
 type: "glossary"

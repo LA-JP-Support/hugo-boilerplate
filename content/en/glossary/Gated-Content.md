@@ -2,7 +2,7 @@
 title: "Gated Content"
 date: 2025-12-19
 translationKey: Gated-Content
-description: "Valuable content that users can only access by sharing their contact information, such as email or name. Businesses use it to identify interested prospects and collect leads."
+description: "Valuable content that users can only access by providing their contact information, like email or name. Businesses use this to identify interested customers and collect their details."
 keywords:
 - gated content
 - lead generation

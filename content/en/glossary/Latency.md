@@ -3,7 +3,7 @@ title: "Latency"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "latency"
-description: "The time delay between a user's action and a system's response, typically measured in milliseconds. High latency makes digital services feel slow and sluggish."
+description: "The delay between when you perform an action and when a system responds, measured in milliseconds. High latency makes digital services feel slow and sluggish."
 keywords: ["latency", "AI infrastructure", "network latency", "performance optimization", "real-time systems"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

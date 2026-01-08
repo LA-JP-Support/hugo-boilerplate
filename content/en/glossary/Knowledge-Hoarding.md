@@ -2,7 +2,7 @@
 title: "Knowledge Hoarding"
 date: 2025-12-19
 translationKey: Knowledge-Hoarding
-description: "Knowledge hoarding is when employees deliberately keep valuable information, skills, or expertise to themselves instead of sharing it with colleagues. This behavior often stems from fear of losing job security or importance, and it harms organizational teamwork and growth."
+description: "Knowledge hoarding is when employees deliberately keep important information or skills to themselves instead of sharing with colleagues, often because they fear losing their job value or importance."
 keywords:
 - knowledge hoarding
 - information sharing

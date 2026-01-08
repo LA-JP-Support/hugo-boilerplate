@@ -2,7 +2,7 @@
 title: "Linked Data"
 date: 2025-12-19
 translationKey: Linked-Data
-description: "A method of publishing data on the web so that computers can automatically link and understand information from different sources, making it easier to find and combine related data."
+description: "A method of publishing data on the web using standard links so that computers can automatically find, understand, and combine information from different sources."
 keywords:
 - linked data
 - semantic web

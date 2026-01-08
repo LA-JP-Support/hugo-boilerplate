@@ -2,7 +2,7 @@
 title: "Conversion Path"
 date: 2025-12-19
 translationKey: Conversion-Path
-description: "The complete journey a customer takes from first learning about a brand to making a purchase or taking a desired action, including all their interactions across websites, emails, ads, and social media."
+description: "The complete journey a customer takes from first learning about a brand to making a purchase, including all their interactions across websites, emails, ads, and social media. Used to understand how customers decide to buy and where to improve marketing efforts."
 keywords:
 - conversion path
 - customer journey

@@ -2,7 +2,7 @@
 title: "Customer Success Manager"
 date: 2025-12-19
 translationKey: Customer-Success-Manager
-description: "A professional who ensures customers get the most value from a product or service, focusing on long-term satisfaction and retention rather than just making sales."
+description: "A professional who helps customers get the most value from a product or service by guiding them through setup, monitoring their usage, and solving problems before they arise to ensure long-term satisfaction."
 keywords:
 - customer success manager
 - customer retention

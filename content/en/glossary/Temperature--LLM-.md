@@ -2,7 +2,7 @@
 title: "Temperature (LLM)"
 date: 2025-12-19
 translationKey: Temperature--LLM-
-description: "A setting that controls how creative or predictable an AI's responses are—lower values make it more focused and consistent, while higher values make it more varied and imaginative."
+description: "A setting that adjusts how creative or predictable an AI's responses are by controlling randomness in text generation—lower values produce focused, consistent answers, while higher values create more varied and imaginative ones."
 keywords:
 - temperature parameter
 - LLM sampling

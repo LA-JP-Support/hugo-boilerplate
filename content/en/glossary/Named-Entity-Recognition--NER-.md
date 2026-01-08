@@ -1,7 +1,7 @@
 ---
 title: "Named Entity Recognition (NER)"
 translationKey: "named-entity-recognition-ner"
-description: "A technology that automatically finds and labels important information like people, places, and organizations in text, turning unstructured data into organized, machine-readable information."
+description: "A technology that automatically finds and labels important information like people, places, and organizations in text, making it easier for computers to understand and use that information."
 keywords: ["Named Entity Recognition", "NER", "Natural Language Processing", "NLP", "Entity Extraction"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -2,7 +2,7 @@
 title: "Warm Transfer"
 date: 2025-12-19
 translationKey: Warm-Transfer
-description: "A customer service technique where an agent stays on the line to introduce the customer to another agent and share their situation before handing off, ensuring a smooth transition without losing context."
+description: "A customer service method where an agent stays on the line to introduce the customer to another agent and explain their situation, ensuring smooth handoff without losing information."
 keywords:
 - warm transfer
 - customer service

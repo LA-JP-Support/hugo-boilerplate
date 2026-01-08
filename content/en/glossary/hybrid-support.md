@@ -3,7 +3,7 @@ title: "Hybrid Support"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "hybrid-support"
-description: "A customer service approach that combines AI chatbots for quick, routine answers with human agents for complex issues, ensuring fast and empathetic support."
+description: "A customer service model that combines AI chatbots for quick routine tasks with human agents for complex problems, delivering fast and caring support."
 keywords: ["hybrid support", "customer service", "AI", "human agents", "automation"]
 category: "Customer Service"
 type: "glossary"

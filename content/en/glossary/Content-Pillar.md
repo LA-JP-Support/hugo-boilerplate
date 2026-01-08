@@ -2,7 +2,7 @@
 title: "Content Pillar"
 date: 2025-12-19
 translationKey: Content-Pillar
-description: "A core topic that serves as the foundation for your content marketing strategy, helping organize all your content around key themes your business specializes in."
+description: "A core topic that forms the foundation of your content strategy, helping you organize all your content around key themes your business specializes in."
 keywords:
 - content pillar
 - content strategy

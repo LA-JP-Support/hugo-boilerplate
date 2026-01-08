@@ -3,7 +3,7 @@ title: "JamC-QA"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "jamc-qa"
-description: "A Japanese language test with 2,341 multiple-choice questions designed to evaluate how well AI models understand Japanese culture, history, geography, and other knowledge areas."
+description: "A Japanese knowledge test with 2,341 multiple-choice questions that evaluates how well AI models understand Japanese culture, history, geography, customs, and other areas important to Japanese society."
 keywords: ["JamC-QA", "Japanese LLMs", "benchmark dataset", "multiple-choice QA", "LLM evaluation"]
 category: "Natural Language Processing"
 type: "glossary"

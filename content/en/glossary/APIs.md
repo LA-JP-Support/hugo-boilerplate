@@ -3,7 +3,7 @@ title: "APIs (Application Programming Interfaces)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "apis-application-programming-interfaces"
-description: "A set of rules that lets different software applications communicate and share data with each other, like a waiter taking orders between you and a kitchen."
+description: "A set of rules that lets different software applications communicate and exchange data, like a waiter between you and a kitchen."
 keywords: ["API", "Application Programming Interface", "REST API", "API security", "API testing"]
 category: "AI Chatbot & Automation"
 type: "glossary"

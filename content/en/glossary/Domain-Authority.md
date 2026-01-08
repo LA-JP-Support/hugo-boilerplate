@@ -2,7 +2,7 @@
 title: "Domain Authority"
 date: 2025-12-19
 translationKey: Domain-Authority
-description: "A score from 1 to 100 that predicts how well a website might rank in search results. It helps SEO professionals compare the strength of different websites."
+description: "A score from 1 to 100 that estimates how well a website might rank in search results, helping SEO professionals compare the strength of different websites."
 keywords:
 - domain authority
 - SEO metrics

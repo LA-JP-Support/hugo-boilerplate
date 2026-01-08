@@ -2,7 +2,7 @@
 title: "Community Onboarding"
 date: 2025-12-19
 translationKey: Community-Onboarding
-description: "A structured process that welcomes new members to a community, helps them understand its purpose and rules, and guides them toward active participation."
+description: "A structured process that welcomes new members to a community, helps them understand its purpose, culture, and rules, and guides them toward active participation."
 keywords:
 - community onboarding
 - member integration

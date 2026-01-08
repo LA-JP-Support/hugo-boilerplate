@@ -2,7 +2,7 @@
 title: "Performance Budget"
 date: 2025-12-19
 translationKey: Performance-Budget
-description: "A set of performance limits that development teams establish to keep websites fast and ensure good user experience, such as page load time and file size targets."
+description: "A set of performance targets that development teams establish to keep websites fast and ensure good user experience, such as page load time and file size limits."
 keywords:
 - performance budget
 - web performance optimization

@@ -3,7 +3,7 @@ title: "Precision"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "precision"
-description: "Precision measures how often an AI model's positive predictions are actually correct. It's essential for applications like fraud detection where false alarms are costly."
+description: "Precision measures how often an AI model's positive predictions are actually correct. It's crucial for applications like fraud detection where false alarms are costly."
 keywords: ["precision", "AI", "machine learning", "model evaluation", "false positives"]
 category: "AI Chatbot & Automation"
 type: "glossary"

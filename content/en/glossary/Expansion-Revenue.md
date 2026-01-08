@@ -2,7 +2,7 @@
 title: "Expansion Revenue"
 date: 2025-12-19
 translationKey: Expansion-Revenue
-description: "Additional income from existing customers through upgrades, add-ons, or increased usage. It measures how well a company grows revenue by deepening relationships with current customers rather than only acquiring new ones."
+description: "Additional income earned by selling more services or upgrades to customers you already have, rather than only focusing on finding new customers."
 keywords:
 - expansion revenue
 - customer expansion

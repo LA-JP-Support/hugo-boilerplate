@@ -2,7 +2,7 @@
 title: "Pipeline Management"
 date: 2025-12-19
 translationKey: Pipeline-Management
-description: "A system for organizing and tracking work through sequential stages, helping teams monitor progress, identify delays, and improve efficiency from start to finish."
+description: "A method for organizing work through stages, tracking progress at each step, and identifying problems to improve efficiency and output quality."
 keywords:
 - pipeline management
 - workflow automation

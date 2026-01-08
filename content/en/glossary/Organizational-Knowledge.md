@@ -2,7 +2,7 @@
 title: "Organizational Knowledge"
 date: 2025-12-19
 translationKey: Organizational-Knowledge
-description: "The collective skills, experiences, and information that employees share within a company, used to help the organization work efficiently and make better decisions."
+description: "The collective skills, experiences, and information that employees share within a company, helping it operate efficiently and make better decisions."
 keywords:
 - organizational knowledge
 - knowledge management

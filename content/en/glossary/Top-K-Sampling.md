@@ -2,7 +2,7 @@
 title: "Top-K Sampling"
 date: 2025-12-19
 translationKey: Top-K-Sampling
-description: "A text generation technique that randomly selects the next word from only the most likely candidates, balancing quality and creativity in AI-generated text."
+description: "A text generation technique that randomly selects the next word from the K most likely candidates, balancing text quality with creativity and variety."
 keywords:
 - top-k sampling
 - text generation

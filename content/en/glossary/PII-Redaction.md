@@ -3,7 +3,7 @@ title: PII Redaction
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: pii-redaction
-description: "PII Redaction is an automated process that finds and hides sensitive personal information like names, ID numbers, and contact details in documents and digital files to protect privacy and comply with regulations."
+description: "An automated process that finds and removes or hides personal information like names, ID numbers, and contact details from documents and files to protect privacy and meet legal requirements."
 keywords: ["PII redaction", "personally identifiable information", "data privacy", "regulatory compliance", "automated redaction"]
 category: AI Ethics & Safety Mechanisms
 type: glossary

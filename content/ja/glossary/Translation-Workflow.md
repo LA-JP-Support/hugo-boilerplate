@@ -2,7 +2,7 @@
 title: 翻訳ワークフロー
 date: 2025-12-19
 translationKey: Translation-Workflow
-description: 翻訳ワークフローの包括的なガイド。効率的な多言語コンテンツ管理のためのプロセス、ツール、ベストプラクティスを網羅しています。
+description: "複数の言語へのコンテンツ翻訳を、品質と効率を保ちながら進めるための体系的な手順。"
 keywords:
 - 翻訳ワークフロー
 - ローカリゼーションプロセス

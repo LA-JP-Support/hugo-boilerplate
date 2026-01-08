@@ -2,7 +2,7 @@
 title: "Glossary Management"
 date: 2025-12-19
 translationKey: Glossary-Management
-description: "A system for organizing and maintaining a shared list of key business terms and their definitions so everyone in an organization understands them the same way."
+description: "A system that creates and maintains a shared dictionary of business terms so everyone in an organization understands and uses them consistently."
 keywords:
 - glossary management
 - terminology management

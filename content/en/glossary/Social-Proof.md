@@ -2,7 +2,7 @@
 title: "Social Proof"
 date: 2025-12-19
 translationKey: Social-Proof
-description: "Social proof is the tendency to follow others' actions and decisions when uncertain, such as buying products with positive reviews or adopting behaviors you see others doing."
+description: "Social proof is a psychological tendency where people follow others' actions and decisions to guide their own choices, especially when uncertain. It works because we naturally assume that what many people are doing must be correct."
 keywords:
 - social proof
 - social validation

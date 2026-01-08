@@ -3,7 +3,7 @@ title: "Accuracy Measurement"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "accuracy-measurement"
-description: "Accuracy Measurement is a metric that shows how often an AI system makes correct predictions or decisions, calculated by dividing correct results by total attempts."
+description: "Accuracy Measurement is a way to check how often an AI system gets the right answer, calculated by dividing correct results by the total number of attempts."
 keywords: ["accuracy", "AI", "machine learning", "chatbot", "automation systems"]
 category: "AI/Machine Learning"
 type: "glossary"

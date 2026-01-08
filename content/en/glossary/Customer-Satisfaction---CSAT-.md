@@ -3,7 +3,7 @@ title: "Customer Satisfaction Score (CSAT)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "customer-satisfaction-score-csat"
-description: "A metric that measures how satisfied customers are with a product or service by asking them to rate their experience, helping companies identify areas for improvement."
+description: "A metric that measures customer satisfaction by asking them to rate their experience on a scale, helping companies quickly identify what's working well and what needs improvement."
 keywords: ["customer satisfaction score", "CSAT", "customer experience", "customer loyalty", "AI chatbots"]
 category: "AI Chatbot & Automation"
 type: "glossary"

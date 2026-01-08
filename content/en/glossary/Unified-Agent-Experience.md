@@ -2,7 +2,7 @@
 title: "Unified Agent Experience"
 date: 2025-12-19
 translationKey: Unified-Agent-Experience
-description: "A single workspace that brings together all the tools, data, and communication channels customer service agents need, eliminating the need to switch between multiple systems."
+description: "A single workspace that consolidates all customer service tools, data, and communication channels agents need, eliminating the need to switch between multiple systems."
 keywords:
 - unified agent experience
 - contact center platform

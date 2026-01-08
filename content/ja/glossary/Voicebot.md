@@ -3,7 +3,9 @@ title: ボイスボット
 date: '2025-12-19'
 lastmod: '2025-12-19'
 translationKey: voicebot-glossary-deep-knowledge
-description: ボイスボットの包括的なガイドをご紹介します。ASR、NLP、TTSなどのコア技術、動作原理、主要機能、種類、そしてカスタマーサービスと自動化におけるビジネス上のメリットについて解説します。
+description: "# ボイスボット
+
+音声で話しかけると、AIが聞き取って理解し、音声で答えてくれるソフトウェア。カスタマーサービスや予約受付など、様々な場面で自動的に対応します。"
 keywords:
 - ボイスボット
 - AI

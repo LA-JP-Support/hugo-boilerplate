@@ -2,7 +2,7 @@
 title: "HR Analytics"
 date: 2025-12-19
 translationKey: HR-Analytics
-description: "HR Analytics is the practice of using data and statistics to make better decisions about employees and workforce management, replacing guesswork with evidence-based insights."
+description: "HR Analytics is the practice of using employee data and statistics to make smarter workforce decisions, replacing guesswork with evidence-based insights about hiring, performance, and retention."
 keywords:
 - HR Analytics
 - People Analytics

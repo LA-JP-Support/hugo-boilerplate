@@ -2,7 +2,7 @@
 title: "Convolutional Neural Network (CNN)"
 date: 2025-12-19
 translationKey: Convolutional-Neural-Network--CNN-
-description: "A deep learning technology that automatically learns to recognize patterns in images by analyzing small sections of pixels, similar to how the human brain processes visual information."
+description: "A deep learning technology that automatically learns to recognize patterns in images by analyzing small sections of pixels, similar to how the human brain's visual system works."
 keywords:
 - convolutional neural network
 - deep learning

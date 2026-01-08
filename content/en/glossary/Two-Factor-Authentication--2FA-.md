@@ -2,7 +2,7 @@
 title: "Two-Factor Authentication (2FA)"
 date: 2025-12-19
 translationKey: Two-Factor-Authentication--2FA-
-description: "A security method that requires two different verification steps to access an account, such as a password plus a code from your phone, making it much harder for unauthorized users to gain access."
+description: "A security method requiring two different verification steps to access an account, such as a password plus a code from your phone, making unauthorized access much harder."
 keywords:
 - two-factor authentication
 - 2FA security

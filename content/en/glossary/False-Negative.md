@@ -1,7 +1,7 @@
 ---
 title: "False Negative"
 translationKey: "false-negative"
-description: "A False Negative is when an AI system fails to detect a real problem or request that actually exists. For example, a chatbot missing a customer's genuine complaint or a security system overlooking a real threat."
+description: "A False Negative is when an AI system fails to detect something that actually exists, like missing a real customer complaint or overlooking a security threat."
 keywords: ["False Negative", "AI Chatbot", "Automation", "Machine Learning", "Confusion Matrix"]
 category: "AI Chatbot & Automation"
 type: "glossary"

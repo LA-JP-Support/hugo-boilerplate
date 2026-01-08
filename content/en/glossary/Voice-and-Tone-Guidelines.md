@@ -2,7 +2,7 @@
 title: "Voice and Tone Guidelines"
 date: 2025-12-19
 translationKey: Voice-and-Tone-Guidelines
-description: "A set of guidelines that defines how a brand communicates its personality and emotions across all channels, ensuring consistent and appropriate messaging for every situation."
+description: "A set of rules that defines how a brand should communicate—its personality, word choice, and emotional tone—to ensure consistent messaging across all channels and situations."
 keywords:
 - voice and tone guidelines
 - brand communication

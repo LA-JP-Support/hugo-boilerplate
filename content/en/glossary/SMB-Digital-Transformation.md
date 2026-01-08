@@ -2,7 +2,7 @@
 title: "SMB Digital Transformation"
 date: 2025-12-19
 translationKey: SMB-Digital-Transformation
-description: "Small and medium businesses integrating digital technologies like cloud computing and automation tools to operate more efficiently and serve customers better, with practical solutions that fit their budget and resources."
+description: "Small and medium businesses adopting digital tools like cloud services and automation to work more efficiently and serve customers better, with affordable solutions that fit their size and budget."
 keywords:
 - SMB digital transformation
 - small business digitization

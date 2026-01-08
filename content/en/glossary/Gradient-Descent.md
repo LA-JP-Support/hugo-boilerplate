@@ -2,7 +2,7 @@
 title: "Gradient Descent"
 date: 2025-12-19
 translationKey: Gradient-Descent
-description: "An optimization algorithm that finds the best solution by repeatedly moving in the direction of steepest descent, widely used to train machine learning models like neural networks and regression models."
+description: "An algorithm that finds the best solution by repeatedly moving downhill in the direction of steepest descent, used to train machine learning models by minimizing errors."
 keywords:
 - gradient descent
 - optimization algorithm

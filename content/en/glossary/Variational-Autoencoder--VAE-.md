@@ -2,7 +2,7 @@
 title: "Variational Autoencoder (VAE)"
 date: 2025-12-19
 translationKey: Variational-Autoencoder--VAE-
-description: "A generative AI model that learns to create new data by compressing information into a probability distribution, then reconstructing realistic samples from it."
+description: "A generative AI model that learns to create new data by compressing it into a probability distribution, then generating realistic new samples from it."
 keywords:
 - variational autoencoder
 - generative modeling

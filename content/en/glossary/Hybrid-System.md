@@ -3,7 +3,7 @@ title: "Hybrid System"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "hybrid-system"
-description: "A collaborative framework where AI and humans work together, combining machine speed and consistency with human creativity and judgment for better results."
+description: "A system where AI and humans work together, combining machine speed with human creativity and judgment to achieve better results."
 keywords: ["hybrid system", "human-AI collaboration", "artificial intelligence", "automation", "AI chatbot"]
 category: "AI Chatbot & Automation"
 type: "glossary"

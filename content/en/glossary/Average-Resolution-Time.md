@@ -2,7 +2,7 @@
 title: "Average Resolution Time"
 date: 2025-12-19
 translationKey: Average-Resolution-Time
-description: "Average Resolution Time is the average time it takes to completely fix a problem or answer a customer request from when it's reported until it's fully resolved. Organizations use this metric to measure how efficiently their support team works and to improve service quality."
+description: "Average Resolution Time is the average time it takes to resolve a customer problem from when it's reported until it's completely fixed, helping organizations measure how quickly their support team works."
 keywords:
 - average resolution time
 - incident management

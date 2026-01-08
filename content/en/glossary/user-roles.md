@@ -3,7 +3,7 @@ title: "User Roles"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "user-roles"
-description: "User Roles are permission levels assigned to people in a system that control what they can see and do, like giving some people admin access while others can only view information."
+description: "User Roles are permission levels that control what each person can do in a system, like deciding who can edit content, who can only view it, and who manages everything."
 keywords: ["user roles", "access control", "RBAC", "permissions", "automation platforms"]
 category: "AI Chatbot & Automation"
 type: "glossary"

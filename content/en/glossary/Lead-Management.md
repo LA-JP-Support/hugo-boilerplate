@@ -2,7 +2,7 @@
 title: "Lead Management"
 date: 2025-12-19
 translationKey: Lead-Management
-description: "A system for tracking and nurturing potential customers from their first interest through to purchase, helping sales teams convert prospects into buyers efficiently."
+description: "A system that tracks and nurtures potential customers from their first contact through to purchase, helping sales teams convert prospects into buyers efficiently."
 keywords:
 - lead management
 - lead generation

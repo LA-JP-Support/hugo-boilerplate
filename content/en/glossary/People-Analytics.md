@@ -2,7 +2,7 @@
 title: "People Analytics"
 date: 2025-12-19
 translationKey: People-Analytics
-description: "People Analytics is the use of data and statistics to understand employee performance and workplace trends, helping organizations make better decisions about hiring, retention, and workforce management."
+description: "People Analytics is the practice of using data and statistics to uncover patterns in employee information, helping organizations make smarter decisions about hiring, keeping talent, and managing their workforce."
 keywords:
 - people analytics
 - workforce analytics

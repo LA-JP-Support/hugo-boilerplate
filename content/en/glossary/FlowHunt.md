@@ -3,7 +3,7 @@ title: FlowHunt
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: flowhunt
-description: "FlowHunt is a no-code platform that lets anyone build AI chatbots and automate workflows by dragging and dropping blocks together, without writing code."
+description: "FlowHunt is a no-code platform that lets anyone build AI chatbots and automate business tasks by visually connecting blocks together, without writing code."
 keywords:
 - FlowHunt
 - AI chatbot

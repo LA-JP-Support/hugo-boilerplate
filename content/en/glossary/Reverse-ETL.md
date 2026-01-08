@@ -2,7 +2,7 @@
 title: "Reverse ETL"
 date: 2025-12-19
 translationKey: Reverse-ETL
-description: "A technology that takes processed data from your data warehouse and automatically sends it to business tools like CRM or marketing platforms so teams can act on it in real-time."
+description: "A technology that extracts refined data from your data warehouse and automatically sends it to business tools like CRM or marketing platforms so teams can use real-time insights to take action."
 keywords:
 - reverse etl
 - data activation

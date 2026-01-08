@@ -3,7 +3,7 @@ title: "Blue-Green Deployment"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "blue-green-deployment"
-description: "A deployment strategy that runs two identical production environments, allowing you to release new software with zero downtime by switching traffic between them and instantly rolling back if problems occur."
+description: "A deployment method that runs two identical production environments, allowing you to release new software with zero downtime by instantly switching traffic between them or rolling back if problems occur."
 keywords: ["blue-green deployment", "deployment strategy", "zero-downtime", "rollback", "CI/CD"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

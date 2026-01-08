@@ -2,7 +2,7 @@
 title: "Base Template"
 date: 2025-12-19
 translationKey: Base-Template
-description: "A master template that child templates inherit from, containing shared elements like headers and footers to maintain consistency and avoid repeating code across an application."
+description: "A master template that child templates inherit from, containing shared elements like headers and footers to maintain consistency and reduce code duplication across an application."
 keywords:
 - base template
 - template inheritance

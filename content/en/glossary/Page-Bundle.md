@@ -2,7 +2,7 @@
 title: "Page Bundle"
 date: 2025-12-19
 translationKey: Page-Bundle
-description: "A folder that groups a webpage and all its related files (images, documents, etc.) together in one place, making content easier to manage and move without breaking links."
+description: "A folder that keeps a webpage and all its related files (images, documents) together in one place, so content stays organized and links don't break when moved."
 keywords:
 - page bundle
 - static site generator

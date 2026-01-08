@@ -3,7 +3,7 @@ title: "Inference Latency"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "inference-latency"
-description: "The time it takes for an AI model to process input and deliver a prediction, measured in milliseconds. It's crucial for real-time applications where users expect fast responses."
+description: "The time it takes for an AI model to process an input and produce a prediction, typically measured in milliseconds. It's essential for applications where users need fast responses."
 keywords: ["inference latency", "AI model", "machine learning", "real-time AI", "model optimization"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

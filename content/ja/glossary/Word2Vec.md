@@ -2,7 +2,9 @@
 title: Word2Vec
 date: 2025-12-19
 translationKey: Word2Vec
-description: Word2Vecニューラルネットワークモデルの包括的なガイド。NLPアプリケーション向けのCBOWおよびSkip-gramアーキテクチャを含む単語埋め込み技術について解説します。
+description: "# Word2Vec
+
+単語を数字の並びに変換して、コンピュータが言葉の意味を理解できるようにする技術。意味が似た単語は近い位置に配置されるため、感情分析や翻訳などのAI処理に活用されます。"
 keywords:
 - word2vec
 - 単語埋め込み

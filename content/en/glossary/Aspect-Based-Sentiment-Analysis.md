@@ -2,7 +2,7 @@
 title: "Aspect-Based Sentiment Analysis"
 date: 2025-12-19
 translationKey: aspect-based-sentiment-analysis
-description: "A technique that analyzes opinions about specific features in text, such as identifying positive sentiment toward food but negative sentiment toward service in a restaurant review."
+description: "A technique that identifies what specific features people are discussing in text and determines whether their opinions about each feature are positive or negative, helping businesses understand detailed customer feedback."
 keywords:
 - aspect-based sentiment analysis
 - opinion mining

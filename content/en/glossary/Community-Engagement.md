@@ -2,7 +2,7 @@
 title: "Community Engagement"
 date: 2025-12-19
 translationKey: Community-Engagement
-description: "A systematic approach where organizations work together with community members as active partners in decision-making and problem-solving, rather than simply providing services to them."
+description: "Community Engagement is a collaborative approach where organizations partner with community members as active decision-makers to solve problems together, rather than simply providing services to them."
 keywords:
 - community engagement
 - stakeholder participation

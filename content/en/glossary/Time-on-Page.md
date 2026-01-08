@@ -2,7 +2,7 @@
 title: "Time on Page"
 date: 2025-12-19
 translationKey: Time-on-Page
-description: "Time on Page is a web analytics metric that measures how long visitors spend viewing a specific webpage, helping you understand which content engages readers most."
+description: "A metric that measures how long visitors spend on a specific webpage, indicating how engaging and valuable your content is to readers."
 keywords:
 - time on page
 - web analytics

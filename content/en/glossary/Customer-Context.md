@@ -2,7 +2,7 @@
 title: "Customer Context"
 date: 2025-12-19
 translationKey: Customer-Context
-description: "A complete picture of your customer built from their purchase history, preferences, and behaviors to help businesses deliver personalized experiences and make better decisions about how to engage with them."
+description: "A complete picture of a customer built from their purchase history, preferences, and behaviors to help businesses deliver personalized experiences and make better decisions about engagement."
 keywords:
 - customer context
 - customer data

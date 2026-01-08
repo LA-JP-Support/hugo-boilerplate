@@ -2,7 +2,7 @@
 title: "Marketing Automation"
 date: 2025-12-19
 translationKey: Marketing-Automation
-description: "Software that automatically handles repetitive marketing tasks and sends personalized messages to customers based on their behavior, helping businesses nurture leads and boost sales."
+description: "Software that automatically sends personalized messages to customers based on their actions, helping businesses nurture leads and boost sales efficiently."
 keywords:
 - marketing automation
 - lead nurturing

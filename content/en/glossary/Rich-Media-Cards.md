@@ -1,7 +1,7 @@
 ---
 title: "Rich Media Cards"
 translationKey: "rich-media-cards"
-description: "Interactive message cards that combine images, videos, and buttons within chat conversations to create engaging, clickable experiences that drive actions like purchases or sign-ups."
+description: "Interactive message cards that combine images, videos, and buttons within chat to create engaging, clickable experiences that drive actions like purchases or sign-ups."
 keywords: ["rich media cards", "chatbot", "conversational AI", "messaging platforms", "user engagement"]
 category: "AI Chatbot & Automation"
 type: "glossary"

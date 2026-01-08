@@ -2,7 +2,7 @@
 title: "Data Anonymization"
 date: 2025-12-19
 translationKey: Data-Anonymization
-description: "A technique that removes or changes personal information from data so individuals cannot be identified, while keeping the data useful for analysis and research."
+description: "A technique that removes or masks personal information from data so people cannot be identified, while keeping the data useful for analysis and research."
 keywords:
 - data anonymization
 - privacy protection

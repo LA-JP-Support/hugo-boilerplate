@@ -2,7 +2,7 @@
 title: "Validation Set"
 date: 2025-12-19
 translationKey: Validation-Set
-description: "A dataset used to test how well a machine learning model works on new data during development, helping prevent the model from becoming too specialized to its training examples."
+description: "A dataset used to test how well a machine learning model performs on new data during development, helping prevent it from becoming too specialized to its training examples."
 keywords:
 - validation set
 - machine learning

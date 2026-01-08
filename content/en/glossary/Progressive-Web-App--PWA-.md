@@ -2,7 +2,7 @@
 title: "Progressive Web App (PWA)"
 date: 2025-12-19
 translationKey: Progressive-Web-App--PWA-
-description: "A web application that works like a mobile app, offering offline access and fast performance directly through your browser without needing to download anything."
+description: "A web application that works like a mobile app, combining web accessibility with app-like features such as offline access, fast performance, and push notifications—all without requiring installation."
 keywords:
 - progressive web app
 - PWA development

@@ -3,7 +3,7 @@ title: "Cosine Similarity"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "cosine-similarity"
-description: "A metric that measures how similar two sets of data are by comparing their direction rather than size, commonly used to find related documents or recommendations."
+description: "A measurement that compares how similar two pieces of data are by looking at their direction rather than their size, useful for finding related documents or recommendations."
 keywords: ["cosine similarity", "machine learning", "natural language processing", "recommendation systems", "vector similarity"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

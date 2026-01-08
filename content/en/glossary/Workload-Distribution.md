@@ -2,7 +2,7 @@
 title: "Workload Distribution"
 date: 2025-12-19
 translationKey: Workload-Distribution
-description: "A method of spreading computational work across multiple servers or computers to prevent any single system from becoming overloaded while keeping all resources working efficiently."
+description: "A method of spreading work across multiple computers to prevent any single system from becoming overloaded while keeping all resources working efficiently."
 keywords:
 - workload distribution
 - load balancing

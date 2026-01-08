@@ -2,7 +2,7 @@
 title: "Social Media Advertising"
 date: 2025-12-19
 translationKey: Social-Media-Advertising
-description: "Social media advertising is a way to promote products or services by placing targeted ads on social platforms like Facebook or Instagram, reaching people based on their interests and behaviors."
+description: "Social media advertising is a way to promote products or services by placing targeted ads on platforms like Facebook or Instagram, using user information to reach people most likely to be interested in what you're selling."
 keywords:
 - social media advertising
 - digital marketing

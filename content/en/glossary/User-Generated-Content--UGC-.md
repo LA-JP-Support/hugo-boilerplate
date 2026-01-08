@@ -2,7 +2,7 @@
 title: "User-Generated Content (UGC)"
 date: 2025-12-19
 translationKey: User-Generated-Content--UGC-
-description: "Content created and shared by customers and fans rather than brands themselves, such as reviews, photos, and videos, used to build authentic trust and influence purchasing decisions."
+description: "Content created and shared by customers and fans—such as reviews, photos, and videos—rather than by brands, to build authentic trust and influence purchasing decisions."
 keywords:
 - user-generated content
 - UGC marketing

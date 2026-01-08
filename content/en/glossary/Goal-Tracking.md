@@ -2,7 +2,7 @@
 title: "Goal Tracking"
 date: 2025-12-19
 translationKey: Goal-Tracking
-description: "A systematic method for monitoring progress toward specific objectives by setting measurable targets and regularly assessing advancement to ensure you stay on track."
+description: "A method for regularly checking progress toward your goals by setting clear targets and measuring how well you're doing against them."
 keywords:
 - goal tracking
 - performance measurement

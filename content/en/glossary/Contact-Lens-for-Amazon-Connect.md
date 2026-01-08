@@ -3,7 +3,7 @@ title: "Contact Lens for Amazon Connect"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "contact-lens-for-amazon-connect"
-description: "Contact Lens for Amazon Connect is an AI tool that automatically analyzes customer service calls and chats to provide transcripts, detect customer emotions, identify issues, and protect sensitive information."
+description: "An AI service that automatically transcribes customer calls and chats, analyzes emotions and issues, and protects sensitive information for contact centers."
 keywords: ["Contact Lens for Amazon Connect", "Amazon Connect", "conversational analytics", "sentiment analysis", "sensitive data redaction"]
 category: "AI-Driven Contact Center Analytics"
 type: "glossary"

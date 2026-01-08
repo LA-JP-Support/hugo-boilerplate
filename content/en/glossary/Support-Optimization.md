@@ -2,7 +2,7 @@
 title: "Support Optimization"
 date: 2025-12-19
 translationKey: Support-Optimization
-description: "Support Optimization is the practice of improving customer service by streamlining processes, using technology and data to work faster, and making customers happier while reducing costs."
+description: "Support Optimization is improving customer service by analyzing and streamlining how support teams work, using technology and data to respond faster and solve problems better while reducing costs."
 keywords:
 - support optimization
 - customer service efficiency

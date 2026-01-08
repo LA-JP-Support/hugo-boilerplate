@@ -2,7 +2,7 @@
 title: "Support Capacity Planning"
 date: 2025-12-19
 translationKey: Support-Capacity-Planning
-description: "Support Capacity Planning is a process of forecasting customer support needs and allocating staff and resources to handle them efficiently while meeting service quality goals."
+description: "Support Capacity Planning is a process of forecasting customer support needs and strategically allocating staff and resources to deliver quality service while managing costs and meeting service goals."
 keywords:
 - support capacity planning
 - resource allocation

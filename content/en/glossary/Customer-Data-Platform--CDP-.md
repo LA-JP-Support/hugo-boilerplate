@@ -2,7 +2,7 @@
 title: "Customer Data Platform (CDP)"
 date: 2025-12-19
 translationKey: Customer-Data-Platform--CDP-
-description: "A software platform that gathers customer information from all business sources into one unified database, helping companies understand and personalize interactions with each customer across all channels."
+description: "A software system that collects customer information from all business sources into one unified database, enabling companies to create complete customer profiles and personalize interactions across all channels."
 keywords:
 - customer data platform
 - unified customer profiles

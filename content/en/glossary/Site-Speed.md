@@ -2,7 +2,7 @@
 title: "Site Speed"
 date: 2025-12-19
 translationKey: Site-Speed
-description: "Site Speed: How quickly a website loads and becomes usable for visitors. It's measured through various metrics that track page loading performance and directly impacts user experience and search rankings."
+description: "Site Speed: How quickly a website loads and becomes usable for visitors. It's measured through various metrics and directly impacts user experience and search rankings."
 keywords:
 - site speed
 - page load time

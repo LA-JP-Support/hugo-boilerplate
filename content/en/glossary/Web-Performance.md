@@ -2,7 +2,7 @@
 title: "Web Performance"
 date: 2025-12-19
 translationKey: Web-Performance
-description: "Web Performance: The speed and efficiency at which web pages load and become interactive for users. Faster websites improve user satisfaction, increase conversions, and boost search engine rankings."
+description: "Web Performance: How fast a website loads and responds to user actions. Faster websites keep visitors happy, increase sales, and rank better in search results."
 keywords:
 - web performance optimization
 - page load speed

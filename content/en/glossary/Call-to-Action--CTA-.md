@@ -2,7 +2,7 @@
 title: "Call to Action (CTA)"
 date: 2025-12-19
 translationKey: Call-to-Action--CTA-
-description: "A marketing element like a button or link that prompts users to take a specific action, such as making a purchase or signing up, to drive business results."
+description: "A button, link, or text that encourages users to take a specific action like making a purchase or signing up, turning their interest into actual results."
 keywords:
 - call to action
 - CTA optimization

@@ -2,7 +2,7 @@
 title: "Article Feedback"
 date: 2025-12-19
 translationKey: Article-Feedback
-description: "Article Feedback is a system for collecting reader opinions, ratings, and comments on published content to help writers improve their articles and better meet audience needs."
+description: "Article Feedback is a system that collects readers' opinions, ratings, and comments on articles to help writers understand what works and improve their content."
 keywords:
 - article feedback
 - content evaluation

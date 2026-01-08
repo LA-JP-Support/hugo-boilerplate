@@ -2,7 +2,7 @@
 title: "CDN (Content Delivery Network)"
 date: 2025-12-19
 translationKey: CDN--Content-Delivery-Network-
-description: "A network of servers worldwide that delivers website content faster by storing copies closer to users, reducing loading times and improving performance."
+description: "A network of servers worldwide that stores copies of website content and delivers it from locations closest to each user, making websites load faster."
 keywords:
 - content delivery network
 - CDN architecture

@@ -2,7 +2,7 @@
 title: "Customer Interaction Management"
 date: 2025-12-19
 translationKey: Customer-Interaction-Management
-description: "A system that manages all customer communications across phone, email, chat, and social media to deliver consistent, personalized experiences throughout their journey with your business."
+description: "A system that brings together all customer communications across phone, email, chat, and social media in one place, so businesses can provide consistent and personalized service at every interaction."
 keywords:
 - customer interaction management
 - CIM systems

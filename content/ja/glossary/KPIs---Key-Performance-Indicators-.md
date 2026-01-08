@@ -1,8 +1,6 @@
 ---
-url: "/ja/glossary/KPIs---Key-Performance-Indicators-/"
----
----
 title: KPI(重要業績評価指標)
+url: "/ja/glossary/KPIs---Key-Performance-Indicators-/"
 lastmod: '2025-12-19'
 date: '2025-12-19'
 translationKey: kpis-key-performance-indicators
@@ -18,7 +16,6 @@ type: glossary
 draft: false
 e-title: KPIs (Key Performance Indicators)
 term: ケーピーアイ(じゅうようぎょうせきひょうかしひょう)
-url: "/ja/glossary/KPIs---Key-Performance-Indicators-/"
 ---
 ## KPIとは何か?
 重要業績評価指標(KPI)は、組織の戦略的および運用的目標に向けた進捗を評価する定量的な測定指標です。KPIはビジネス目標を測定可能な成果に変換し、組織があらゆるレベルでパフォーマンスを追跡し、改善領域を特定し、情報に基づいた意思決定を行うことを可能にします。単に活動を測定する一般的な指標とは異なり、KPIは重要なビジネス目標と戦略的優先事項に直接結びついています。

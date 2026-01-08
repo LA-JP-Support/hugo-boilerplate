@@ -2,7 +2,7 @@
 title: "Newsjacking"
 date: 2025-12-19
 translationKey: Newsjacking
-description: "Newsjacking is a marketing technique where brands quickly create content about breaking news or trending topics to gain attention and engage audiences in real-time."
+description: "Newsjacking is a marketing strategy where brands quickly create content about breaking news or trending topics to gain attention and engage audiences in real-time by connecting their brand to newsworthy moments."
 keywords:
 - newsjacking
 - real-time marketing

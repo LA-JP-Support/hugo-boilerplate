@@ -2,7 +2,7 @@
 title: "Cross-Validation"
 date: 2025-12-19
 translationKey: Cross-Validation
-description: "A machine learning technique that splits data into multiple parts to test how well a model works on new, unseen data and prevent it from memorizing training patterns."
+description: "A method that splits your dataset into different parts to test how well a model works on new data and prevent it from memorizing training patterns instead of learning real patterns."
 keywords:
 - cross-validation
 - model validation

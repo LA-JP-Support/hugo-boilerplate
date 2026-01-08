@@ -2,7 +2,7 @@
 title: "Quality Assurance (QA)"
 date: 2025-12-19
 translationKey: Quality-Assurance--QA-
-description: "A systematic process that checks whether products meet quality standards before release, focusing on preventing problems rather than fixing them afterward."
+description: "A systematic process that checks whether products meet quality standards before release, preventing problems rather than fixing them afterward."
 keywords:
 - quality assurance
 - QA testing

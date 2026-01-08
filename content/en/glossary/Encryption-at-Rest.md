@@ -2,7 +2,7 @@
 title: "Encryption at Rest"
 date: 2025-12-19
 translationKey: Encryption-at-Rest
-description: "A security method that protects stored data by converting it into unreadable code, so it remains safe even if storage devices are stolen or accessed without permission."
+description: "A security method that converts stored data into unreadable code so it stays protected even if storage devices are stolen or accessed without permission."
 keywords:
 - encryption at rest
 - data protection

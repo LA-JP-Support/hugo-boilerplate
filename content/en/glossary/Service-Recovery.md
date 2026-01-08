@@ -2,7 +2,7 @@
 title: "Service Recovery"
 date: 2025-12-19
 translationKey: Service-Recovery
-description: "Service Recovery: The actions a company takes to fix service problems and restore customer satisfaction after something goes wrong, turning a negative experience into an opportunity to build loyalty."
+description: "Service Recovery: Actions a company takes to fix service problems and restore customer satisfaction, turning negative experiences into opportunities to strengthen customer loyalty."
 keywords:
 - service recovery
 - customer satisfaction

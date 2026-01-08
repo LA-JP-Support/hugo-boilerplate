@@ -2,7 +2,7 @@
 title: "Mistral AI"
 date: 2025-12-21
 translationKey: Mistral-AI
-description: "Mistral AI is a French artificial intelligence company developing open-weight large language models and the Le Chat assistant, positioned as Europe's leading AI challenger to OpenAI and Anthropic."
+description: "A French AI company creating open-source language models and ChatGPT-like tools, positioning Europe as a competitor to American AI leaders."
 keywords: ['Mistral AI', 'Le Chat', 'Mistral Large', 'Mixtral', 'open-weight AI', 'European AI']
 category: "AI Chatbot & Automation"
 type: glossary

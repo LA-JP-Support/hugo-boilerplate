@@ -2,7 +2,7 @@
 title: "Featured Snippet"
 date: 2025-12-19
 translationKey: Featured-Snippet
-description: "A special search result that appears at the top of Google's search results, showing a quick answer to your question without needing to click a website link."
+description: "A special search result that appears at the top of Google search results, showing a quick answer to your question without needing to click a website."
 keywords:
 - featured snippet
 - search engine optimization

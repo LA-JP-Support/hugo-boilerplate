@@ -2,7 +2,7 @@
 title: "SIP Trunking"
 date: 2025-12-19
 translationKey: SIP-Trunking
-description: "A technology that replaces traditional phone lines with internet-based connections, allowing businesses to make calls and send messages over the internet instead of physical copper wires."
+description: "A technology that replaces traditional phone lines with internet-based connections, enabling businesses to make calls and send messages over the internet through a single network."
 keywords:
 - SIP trunking
 - VoIP communications

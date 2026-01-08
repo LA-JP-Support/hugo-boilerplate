@@ -2,7 +2,7 @@
 title: "Email Newsletter"
 date: 2025-12-19
 translationKey: Email-Newsletter
-description: "A regularly sent email from a business to subscribers who have agreed to receive it, sharing news, content, and offers to keep customers engaged and informed."
+description: "A regular email sent by businesses to subscribers who agreed to receive it, sharing news, updates, and offers to keep them informed and engaged."
 keywords:
 - email newsletter
 - email marketing

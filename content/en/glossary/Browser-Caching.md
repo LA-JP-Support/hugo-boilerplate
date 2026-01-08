@@ -2,7 +2,7 @@
 title: "Browser Caching"
 date: 2025-12-19
 translationKey: Browser-Caching
-description: "Browser caching temporarily stores website files on your device so pages load faster when you revisit them, reducing the need to download the same content repeatedly."
+description: "Browser caching stores website files on your device so pages load faster on repeat visits by reducing repeated downloads."
 keywords:
 - browser caching
 - web performance

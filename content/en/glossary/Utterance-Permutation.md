@@ -3,7 +3,7 @@ title: "Utterance Permutation"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "utterance-permutation"
-description: "A technique that creates multiple sentence variations expressing the same meaning to train AI chatbots to better understand diverse ways users communicate their requests."
+description: "A method of creating multiple ways to say the same thing so AI chatbots can learn to understand how real people ask for help in different ways."
 keywords: ["utterance permutation", "NLU models", "AI chatbots", "intent classification", "training data augmentation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

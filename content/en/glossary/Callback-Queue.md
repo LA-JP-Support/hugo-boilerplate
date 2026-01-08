@@ -2,7 +2,7 @@
 title: "Callback Queue"
 date: 2025-12-19
 translationKey: Callback-Queue
-description: "A queue that stores callback functions waiting to be executed, ensuring asynchronous operations run in order without interrupting the main program flow."
+description: "A waiting line for callback functions that executes them in order once the main program finishes, keeping programs responsive without freezing."
 keywords:
 - callback queue
 - asynchronous programming

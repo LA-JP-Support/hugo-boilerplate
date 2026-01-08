@@ -3,7 +3,7 @@ title: "Image Analysis"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "image-analysis"
-description: "Image analysis is AI technology that automatically interprets digital images to identify objects, people, and text, extracting useful information for applications like medical imaging and quality inspection."
+description: "AI technology that automatically interprets digital images to identify objects, text, and patterns, extracting useful information for applications like medical imaging and quality inspection."
 keywords: ["image analysis", "AI", "computer vision", "object detection", "image segmentation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

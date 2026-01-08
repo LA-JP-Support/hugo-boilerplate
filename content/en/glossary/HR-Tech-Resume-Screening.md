@@ -2,7 +2,7 @@
 title: "HR Tech Resume Screening"
 date: 2025-12-19
 translationKey: hr-tech-resume-screening
-description: "AI technology that automatically reviews and ranks job applications by matching candidate qualifications to job requirements, saving recruiters hours of manual work while reducing bias in hiring decisions."
+description: "AI software that automatically reviews job applications and ranks candidates by matching their qualifications to job requirements, saving recruiters time and reducing hiring bias."
 keywords:
 - resume screening
 - AI resume parsing

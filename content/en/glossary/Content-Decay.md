@@ -2,7 +2,7 @@
 title: "Content Decay"
 date: 2025-12-19
 translationKey: Content-Decay
-description: "The gradual decline in a website's search rankings and traffic over time as content becomes outdated or faces new competition. Regular updates help maintain visibility and performance."
+description: "The gradual decline in a website's search rankings and traffic as content becomes outdated or faces new competition. Regular updates help maintain visibility."
 keywords:
 - content decay
 - SEO content freshness

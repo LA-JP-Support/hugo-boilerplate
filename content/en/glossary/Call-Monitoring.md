@@ -2,7 +2,7 @@
 title: "Call Monitoring"
 date: 2025-12-19
 translationKey: Call-Monitoring
-description: "A system that records and analyzes phone calls between customer service agents and customers to monitor service quality, ensure compliance, and identify training needs."
+description: "A system that records and analyzes phone calls between customer service agents and customers to ensure service quality, check compliance, and identify training needs."
 keywords:
 - call monitoring
 - quality assurance

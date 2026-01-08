@@ -2,7 +2,7 @@
 title: "Security Information and Event Management (SIEM)"
 date: 2025-12-19
 translationKey: Security-Information-and-Event-Management--SIEM-
-description: "A centralized security platform that collects and analyzes data from all your IT systems to detect threats, identify suspicious activity, and help respond to security incidents in real-time."
+description: "A centralized platform that gathers and analyzes security data from all your IT systems to detect threats and suspicious activity in real-time."
 keywords:
 - SIEM
 - security monitoring

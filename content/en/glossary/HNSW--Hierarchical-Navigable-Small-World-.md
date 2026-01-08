@@ -3,7 +3,7 @@ title: "HNSW (Hierarchical Navigable Small World)"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "hnsw-hierarchical-navigable-small-world"
-description: "A fast search algorithm that finds the most similar items in large datasets by navigating through a layered network graph, enabling quick results without checking every item."
+description: "A fast search method that finds the most similar items in huge datasets by navigating through a layered network, enabling quick results without checking every item."
 keywords: ["HNSW", "Approximate Nearest Neighbor", "Vector Search", "Vector Databases", "Graph Algorithm"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

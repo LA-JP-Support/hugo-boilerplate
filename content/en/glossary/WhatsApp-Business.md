@@ -2,7 +2,7 @@
 title: "WhatsApp Business"
 date: 2025-12-19
 translationKey: WhatsApp-Business
-description: "A messaging platform that lets businesses communicate with customers through WhatsApp, offering automated messages, customer profiles, and sales tools."
+description: "A messaging app that helps businesses communicate with customers through WhatsApp, with features like automated messages, customer profiles, and sales tools."
 keywords:
 - WhatsApp Business API
 - Business messaging platform

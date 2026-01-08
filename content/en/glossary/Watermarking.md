@@ -3,7 +3,7 @@ title: "Watermarking"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "watermarking"
-description: "AI Watermarking is a technique that embeds invisible digital markers into AI-generated content to identify its origin and verify it's authentic, helping prevent fake content from spreading."
+description: "AI Watermarking is a technique that embeds invisible digital markers into AI-generated content to identify its source and verify authenticity, helping distinguish AI-created material from human-made content and prevent misinformation."
 keywords: ["AI watermarking", "generative AI", "deepfakes", "content provenance", "digital authenticity"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

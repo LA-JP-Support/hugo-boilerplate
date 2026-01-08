@@ -2,7 +2,7 @@
 title: "Data Connector"
 date: 2025-12-19
 translationKey: Data-Connector
-description: "A software tool that automatically transfers and syncs data between different applications and systems, eliminating the need to manually move information between them."
+description: "A software bridge that automatically transfers and syncs data between different apps and systems, so information flows seamlessly without manual work."
 keywords:
 - data connector
 - data integration

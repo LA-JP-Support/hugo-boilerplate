@@ -2,7 +2,7 @@
 title: "Brand Guidelines"
 date: 2025-12-19
 translationKey: Brand-Guidelines
-description: "A rulebook that ensures a brand looks and sounds the same everywhere by specifying how to use logos, colors, fonts, and messaging across all communications."
+description: "A rulebook that keeps a brand looking and sounding consistent everywhere by specifying how to use logos, colors, fonts, and messaging across all communications and platforms."
 keywords:
 - brand guidelines
 - visual identity

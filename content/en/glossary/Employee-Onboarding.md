@@ -2,7 +2,7 @@
 title: "Employee Onboarding"
 date: 2025-12-19
 translationKey: Employee-Onboarding
-description: "The structured process of integrating new employees into a company by providing essential information, cultural orientation, and ongoing support to help them become productive team members quickly."
+description: "A structured process that helps new employees quickly become productive by providing them with essential information, company culture introduction, and ongoing support during their transition into the organization."
 keywords:
 - employee onboarding
 - new hire orientation

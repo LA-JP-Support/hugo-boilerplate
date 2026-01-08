@@ -2,7 +2,7 @@
 title: "Call Analytics"
 date: 2025-12-19
 translationKey: Call-Analytics
-description: "Call Analytics is technology that records and analyzes phone conversations to help businesses understand customer needs, improve agent performance, and identify service improvements."
+description: "Call Analytics is technology that records and analyzes phone conversations to help businesses understand what customers need, measure how well staff perform, and find ways to improve service."
 keywords:
 - call analytics
 - speech analytics

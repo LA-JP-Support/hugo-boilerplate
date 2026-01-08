@@ -2,7 +2,7 @@
 title: "Customer Success Platform"
 date: 2025-12-19
 translationKey: Customer-Success-Platform
-description: "A software tool that helps businesses keep customers satisfied and loyal by tracking their progress, automating support, and predicting when they might leave."
+description: "A software tool that helps businesses keep customers happy and loyal by organizing customer information, automating support tasks, and alerting teams when customers might cancel."
 keywords:
 - customer success platform
 - customer retention software

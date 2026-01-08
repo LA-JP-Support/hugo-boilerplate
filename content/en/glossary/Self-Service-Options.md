@@ -2,7 +2,7 @@
 title: "Self-Service Options"
 date: 2025-12-19
 translationKey: Self-Service-Options
-description: "Self-service options are digital tools and systems that let customers solve problems, find information, and complete tasks on their own without needing to contact support staff."
+description: "Self-service options are digital tools that let customers solve problems and complete tasks on their own without contacting support staff, using technologies like chatbots and online portals."
 keywords:
 - self-service technology
 - customer support automation

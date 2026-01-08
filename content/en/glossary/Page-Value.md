@@ -2,7 +2,7 @@
 title: "Page Value"
 date: 2025-12-19
 translationKey: Page-Value
-description: "Page Value is a metric that assigns a dollar amount to each webpage based on how much it helps generate sales or achieve business goals. It shows which pages actually drive revenue, not just traffic."
+description: "Page Value is a metric that assigns a dollar amount to each webpage based on how much it contributes to sales or business goals, helping you identify which pages actually drive revenue."
 keywords:
 - page value
 - google analytics

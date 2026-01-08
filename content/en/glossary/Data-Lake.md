@@ -2,7 +2,7 @@
 title: "Data Lake"
 date: 2025-12-19
 translationKey: Data-Lake
-description: "A centralized storage system that collects raw data from many sources in any format, allowing organizations to analyze it later without organizing it first."
+description: "A centralized storage system where organizations keep raw data from many sources in any format, then analyze and organize it as needed."
 keywords:
 - data lake
 - big data storage

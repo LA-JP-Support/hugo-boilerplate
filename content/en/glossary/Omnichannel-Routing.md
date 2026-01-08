@@ -2,7 +2,7 @@
 title: "Omnichannel Routing"
 date: 2025-12-19
 translationKey: Omnichannel-Routing
-description: "A system that automatically directs customer messages across email, chat, phone, and social media to the right agent, keeping full conversation history for consistent service."
+description: "A system that automatically directs customer messages from email, chat, phone, and social media to the right agent while keeping the full conversation history for consistent service across all channels."
 keywords:
 - omnichannel routing
 - customer experience management

@@ -2,7 +2,7 @@
 title: "Landing Page Optimization"
 date: 2025-12-19
 translationKey: Landing-Page-Optimization
-description: "Landing Page Optimization is the process of improving website elements like headlines, images, and buttons to increase the percentage of visitors who complete a desired action, such as making a purchase or signing up."
+description: "Landing Page Optimization is the process of testing and improving website elements like headlines, images, and buttons to increase the percentage of visitors who complete a desired action, such as making a purchase or signing up."
 keywords:
 - landing page optimization
 - conversion rate optimization

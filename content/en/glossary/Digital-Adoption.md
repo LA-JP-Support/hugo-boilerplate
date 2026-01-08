@@ -2,7 +2,7 @@
 title: "Digital Adoption"
 date: 2025-12-19
 translationKey: Digital-Adoption
-description: "The process of integrating digital technologies into daily work and business operations, including the training and cultural changes needed to use them effectively."
+description: "The process of integrating digital tools into daily work and helping people learn to use them effectively through training and organizational changes."
 keywords:
 - digital adoption
 - digital transformation

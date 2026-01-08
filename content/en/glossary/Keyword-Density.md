@@ -2,7 +2,7 @@
 title: "Keyword Density"
 date: 2025-12-19
 translationKey: Keyword-Density
-description: "Keyword Density is the percentage of times a target keyword appears in your content compared to the total word count. It helps measure how often you mention important search terms to improve your content's visibility in search results."
+description: "Keyword density is the percentage of times a target keyword appears in your content compared to the total word count. It helps measure how often you mention important search terms to improve your content's visibility in search results."
 keywords:
 - keyword density
 - SEO optimization

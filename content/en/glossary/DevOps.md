@@ -2,7 +2,7 @@
 title: "DevOps"
 date: 2025-12-19
 translationKey: DevOps
-description: "A collaborative approach where development and operations teams work together to automate software delivery, enabling faster and more reliable releases."
+description: "A management approach where development and operations teams collaborate closely to automate software delivery, enabling faster and more reliable product releases."
 keywords:
 - DevOps
 - continuous integration

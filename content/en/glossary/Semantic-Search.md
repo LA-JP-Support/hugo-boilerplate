@@ -2,7 +2,7 @@
 title: "Semantic Search"
 date: 2025-12-19
 translationKey: Semantic-Search
-description: "A search technology that understands the meaning and intent behind your questions, delivering relevant results even when exact keywords don't match the content."
+description: "A search technology that understands what you really mean, not just the exact words you type, to find more relevant answers."
 keywords:
 - semantic search
 - natural language processing

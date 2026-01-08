@@ -2,7 +2,7 @@
 title: "Welcome Message"
 date: 2025-12-19
 translationKey: Welcome-Message
-description: "A greeting message that appears when users first join or access an app, designed to confirm their signup, introduce key features, and guide them toward their first actions."
+description: "A greeting message that appears when users first join an app, confirming their signup and guiding them toward their first actions."
 keywords:
 - welcome message
 - user onboarding

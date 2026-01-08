@@ -2,7 +2,7 @@
 title: "Low-Code/No-Code"
 date: 2025-12-19
 translationKey: Low-Code-No-Code
-description: "Development platforms that let anyone build applications using drag-and-drop interfaces instead of writing code, enabling faster software creation with minimal programming knowledge."
+description: "Visual development platforms that enable anyone to build applications by dragging and dropping components instead of writing code, making software creation faster and more accessible."
 keywords:
 - low-code development
 - no-code platforms

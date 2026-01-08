@@ -1,7 +1,7 @@
 ---
 title: "Dify"
 translationKey: "dify"
-description: "An open-source platform that lets teams build and deploy AI applications like chatbots and intelligent agents using visual tools, with minimal coding required."
+description: "An open-source platform that helps teams build and deploy AI applications like chatbots and intelligent agents using visual tools, with little to no coding required."
 keywords: ["Dify", "LLMOps", "AI applications", "RAG", "agentic workflows"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -2,7 +2,7 @@
 title: "Vocabulary Control"
 date: 2025-12-19
 translationKey: Vocabulary-Control
-description: "A system that standardizes terminology across databases and information systems by establishing preferred terms and organizing related words, making information easier to find and understand."
+description: "A system that standardizes terminology across databases by establishing preferred terms and organizing related words, making information easier to find and understand."
 keywords:
 - vocabulary control
 - controlled vocabulary

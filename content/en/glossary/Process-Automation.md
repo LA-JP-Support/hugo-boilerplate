@@ -2,7 +2,7 @@
 title: "Process Automation"
 date: 2025-12-19
 translationKey: Process-Automation
-description: "Technology that automatically handles repetitive business tasks, allowing employees to focus on more important work that requires human thinking and creativity."
+description: "Technology that automatically handles repetitive business tasks, freeing employees to focus on work requiring creativity and strategic thinking."
 keywords:
 - process automation
 - workflow automation

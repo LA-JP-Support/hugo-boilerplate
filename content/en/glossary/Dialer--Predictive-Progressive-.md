@@ -2,7 +2,7 @@
 title: "Dialer (Predictive/Progressive)"
 date: 2025-12-19
 translationKey: Dialer--Predictive-Progressive-
-description: "Automated calling system that dials phone numbers for contact center agents, connecting them only to live customers to boost productivity and reduce idle time."
+description: "Automated phone system that dials numbers for contact center agents, connecting them only to live customers to maximize productivity and minimize waiting time."
 keywords:
 - predictive dialer
 - progressive dialer

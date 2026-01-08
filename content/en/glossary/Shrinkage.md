@@ -2,7 +2,7 @@
 title: "Shrinkage"
 date: 2025-12-19
 translationKey: Shrinkage
-description: "The reduction in size, volume, or quantity of materials during manufacturing or the loss of inventory in retail operations due to theft, damage, or errors."
+description: "The reduction in size or quantity of materials during manufacturing, or the loss of inventory in stores due to theft, damage, or mistakes."
 keywords:
 - shrinkage
 - material shrinkage

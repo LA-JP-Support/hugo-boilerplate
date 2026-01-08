@@ -2,7 +2,7 @@
 title: "Headless CMS"
 date: 2025-12-19
 translationKey: Headless-CMS
-description: "A content management system that stores and organizes content separately from how it's displayed, allowing the same content to be used across websites, apps, and other platforms through APIs."
+description: "A content management system that separates content storage from how it's displayed, so the same content can be used across websites, apps, and devices through simple data connections."
 keywords:
 - headless cms
 - content management

@@ -2,7 +2,7 @@
 title: "Knowledge Analytics"
 date: 2025-12-19
 translationKey: Knowledge-Analytics
-description: "Knowledge Analytics is a method that combines data science and AI to extract useful insights from large amounts of information, helping organizations make better decisions based on data."
+description: "Knowledge Analytics is a method that uses data science and AI to find useful patterns and insights from all types of information—numbers, text, and more—helping organizations make smarter decisions."
 keywords:
 - knowledge analytics
 - data mining

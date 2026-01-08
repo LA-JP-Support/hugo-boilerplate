@@ -3,7 +3,7 @@ title: "Dashboard"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "dashboard"
-description: "A visual display that shows important business numbers and trends from different sources in real time, helping you quickly understand performance and make better decisions."
+description: "A visual control panel that displays your business's key numbers and performance trends in real time, letting you understand what's happening and make decisions quickly."
 keywords: ["dashboard", "data visualization", "KPIs", "real-time monitoring", "AI dashboards"]
 category: "AI Chatbot & Automation"
 type: "glossary"

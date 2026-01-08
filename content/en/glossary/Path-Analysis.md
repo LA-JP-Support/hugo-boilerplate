@@ -2,7 +2,7 @@
 title: "Path Analysis"
 date: 2025-12-19
 translationKey: Path-Analysis
-description: "A statistical method for testing how variables influence each other through direct and indirect pathways, helping researchers understand cause-and-effect relationships in complex data."
+description: "A statistical method that breaks down how variables influence each other through direct and indirect pathways, helping researchers understand cause-and-effect relationships in complex data."
 keywords:
 - path analysis
 - causal modeling

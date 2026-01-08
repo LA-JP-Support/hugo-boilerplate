@@ -2,7 +2,7 @@
 title: "Session Border Controller (SBC)"
 date: 2025-12-19
 translationKey: Session-Border-Controller--SBC-
-description: "A network security device that protects and manages voice and video calls as they cross between different networks, ensuring safe and efficient communication."
+description: "A network security device that protects voice and video calls crossing between networks, managing communication safely and efficiently while controlling who can connect and how data flows."
 keywords:
 - Session Border Controller
 - SBC

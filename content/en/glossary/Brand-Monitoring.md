@@ -2,7 +2,7 @@
 title: "Brand Monitoring"
 date: 2025-12-19
 translationKey: Brand-Monitoring
-description: "Brand Monitoring is the practice of tracking what people say about your brand online and offline, helping you understand customer opinions and respond quickly to feedback or potential problems."
+description: "Brand Monitoring is the practice of tracking what people say about your brand across the internet and media, using technology to understand customer opinions and quickly spot problems or opportunities."
 keywords:
 - brand monitoring
 - reputation management

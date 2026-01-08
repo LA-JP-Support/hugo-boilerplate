@@ -2,7 +2,7 @@
 title: "Data Files"
 date: 2025-12-19
 translationKey: Data-Files
-description: "Data files are digital containers that store organized information in specific formats, allowing computers to save, retrieve, and process everything from text to images and videos."
+description: "Data files are digital containers that store information in organized formats, enabling computers to save, retrieve, and process text, images, videos, and other content."
 keywords:
 - data files
 - file formats

@@ -1,7 +1,7 @@
 ---
 title: "Node Grouping"
 translationKey: "node-grouping"
-description: "A method of organizing related processing elements together in workflows to make complex systems easier to understand, manage, and update as a single unit."
+description: "A method of organizing related processing elements together in workflows by grouping them visually or logically, making complex systems easier to understand, manage, and update as a single unit."
 keywords: ["Node Grouping", "AI Chatbots", "Workflow Automation", "Kubernetes", "Clustering"]
 category: "AI Chatbot & Automation"
 type: "glossary"

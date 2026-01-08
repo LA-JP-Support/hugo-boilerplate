@@ -2,7 +2,7 @@
 title: "Usage-Based Pricing"
 date: 2025-12-19
 translationKey: Usage-Based-Pricing
-description: "A billing model where customers pay only for what they actually use, such as data processed or transactions completed, rather than paying a fixed monthly fee."
+description: "A billing model where you pay only for what you actually use—like data or transactions—instead of a fixed monthly fee, making costs flexible and fair."
 keywords:
 - usage-based pricing
 - consumption pricing

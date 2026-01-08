@@ -2,7 +2,7 @@
 title: "Customer Advocacy"
 date: 2025-12-19
 translationKey: Customer-Advocacy
-description: "A business strategy that turns satisfied customers into enthusiastic brand promoters who voluntarily recommend your products to others through word-of-mouth and testimonials."
+description: "A marketing approach that turns satisfied customers into enthusiastic brand promoters who voluntarily recommend your products to others through word-of-mouth and testimonials."
 keywords:
 - customer advocacy
 - brand champions

@@ -2,7 +2,7 @@
 title: "Call Queue"
 date: 2025-12-19
 translationKey: Call-Queue
-description: "An automated phone system that holds incoming calls in a waiting line and routes them to available agents, ensuring callers are served in an organized order."
+description: "An automated phone system that holds incoming calls in a waiting line and routes them to available agents when they become free, ensuring callers are served in order."
 keywords:
 - call queue
 - phone system

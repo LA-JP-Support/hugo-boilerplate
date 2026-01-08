@@ -3,7 +3,7 @@ title: "Algorithmic Accountability"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "algorithmic-accountability"
-description: "Algorithmic Accountability is the requirement for organizations to explain how their automated decision-making systems work, ensure they are fair, and take responsibility for any harm they cause."
+description: "The requirement for organizations to explain how their automated decision-making systems work, ensure they operate fairly, and take responsibility for any resulting harm."
 keywords: ["algorithmic accountability", "AI ethics", "AI governance", "transparency", "explainability"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

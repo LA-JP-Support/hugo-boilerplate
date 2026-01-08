@@ -2,7 +2,7 @@
 title: "Edge Function"
 date: 2025-12-19
 translationKey: Edge-Function
-description: "A lightweight program that runs on servers near users instead of distant data centers, making websites and apps respond faster by processing requests locally."
+description: "A lightweight program that runs on servers located near users worldwide, processing requests instantly without sending them to distant data centers, making websites and apps faster."
 keywords:
 - edge computing
 - serverless functions

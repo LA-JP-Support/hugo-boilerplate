@@ -2,7 +2,7 @@
 title: "Hyperparameter Tuning"
 date: 2025-12-19
 translationKey: Hyperparameter-Tuning
-description: "Machine learning models have settings that control how they learn, called hyperparameters. Hyperparameter tuning is the process of testing different combinations of these settings to find which ones make your model work best."
+description: "The process of adjusting a machine learning model's settings before training to find the combination that makes it perform best on your task."
 keywords:
 - hyperparameter optimization
 - grid search

@@ -2,7 +2,7 @@
 title: "Crawl Budget"
 date: 2025-12-19
 translationKey: Crawl-Budget
-description: "The number of web pages that Google will crawl and index on your site within a given time period, which affects how quickly new content gets discovered and ranked."
+description: "The number of web pages Google will crawl and index on your site within a given time period, which affects how quickly new content gets discovered and ranked."
 keywords:
 - crawl budget
 - search engine optimization

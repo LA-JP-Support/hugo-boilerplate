@@ -3,7 +3,7 @@ title: "Transparency (AI Transparency)"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "transparency-ai-transparency"
-description: "AI Transparency is the practice of openly sharing how an AI system works, what data it uses, and how it makes decisions. It builds trust and ensures AI systems can be checked and held responsible."
+description: "AI Transparency is the practice of openly sharing how an AI system works, what data it uses, and how it makes decisions to build trust and ensure accountability."
 keywords: ["AI transparency", "explainability", "interpretability", "AI governance", "regulatory compliance"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

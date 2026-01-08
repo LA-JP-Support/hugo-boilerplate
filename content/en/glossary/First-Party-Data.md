@@ -2,7 +2,7 @@
 title: "First-Party Data"
 date: 2025-12-19
 translationKey: First-Party-Data
-description: "Information about customers that a company collects directly from their own website, app, or interactions, used to better understand and personalize their experience."
+description: "Information a company collects directly from its own website, app, and customer interactions to better understand and personalize their experience."
 keywords:
 - first-party data
 - customer data collection

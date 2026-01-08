@@ -2,7 +2,9 @@
 title: GPT
 date: 2025-12-19
 translationKey: GPT
-description: GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。
+description: "# 新しいdescription:
+
+GPT（生成型事前学習済みトランスフォーマー）は、大量のテキストデータで学習したAIが、人間らしい文章を自動生成する技術です。質問への回答や文章作成など、様々な言語タスクに活用できます。"
 keywords:
 - GPT
 - Generative Pre-trained Transformer

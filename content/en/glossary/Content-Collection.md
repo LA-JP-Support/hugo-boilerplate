@@ -2,7 +2,7 @@
 title: "Content Collection"
 date: 2025-12-19
 translationKey: Content-Collection
-description: "The systematic process of gathering, organizing, and storing digital content from various sources into one centralized location for easy access and management."
+description: "A systematic process of gathering and organizing digital content from multiple sources into one centralized location for easy access and management."
 keywords:
 - content collection
 - content aggregation

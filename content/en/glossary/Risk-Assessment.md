@@ -2,7 +2,7 @@
 title: "Risk Assessment"
 date: 2025-12-19
 translationKey: Risk-Assessment
-description: "A systematic process to evaluate potential risks associated with a customer, such as credit risk or fraud risk, to help organizations make informed decisions about lending, pricing, and relationship management."
+description: "A systematic evaluation process that identifies potential financial and fraud risks associated with customers to help organizations make safer lending and business decisions."
 keywords:
 - customer risk assessment
 - risk management framework

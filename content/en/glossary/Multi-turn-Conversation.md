@@ -1,7 +1,7 @@
 ---
 title: Multi-Turn Conversation
 translationKey: multi-turn-conversation
-description: "A conversation with an AI where users and the system exchange multiple messages back and forth, allowing the AI to remember previous answers and handle complex tasks like booking or troubleshooting."
+description: "A conversation with an AI where users exchange multiple messages back and forth, allowing the system to remember previous answers and handle complex tasks like booking or troubleshooting across several steps."
 keywords:
 - multi-turn conversation
 - AI chatbot

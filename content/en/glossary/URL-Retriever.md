@@ -3,7 +3,7 @@ title: "URL Retriever"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "url-retriever"
-description: "A software tool that automatically collects and updates information from websites by accessing URLs, eliminating manual copy-paste work and enabling large-scale data extraction and monitoring tasks."
+description: "A software tool that automatically extracts and monitors information from websites by accessing URLs, eliminating manual work and enabling large-scale data collection tasks."
 keywords: ["URL Retriever", "web automation", "AI agent", "data extraction", "browser extension"]
 category: "AI Chatbot & Automation"
 type: "glossary"

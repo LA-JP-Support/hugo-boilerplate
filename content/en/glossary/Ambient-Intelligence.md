@@ -2,7 +2,7 @@
 title: "Ambient Intelligence (AmI)"
 lastmod: 2025-12-18
 translationKey: "ambient-intelligence-ami"
-description: "Ambient Intelligence is technology that automatically senses what's happening around you and responds to your needs without you asking, like a smart home that adjusts lighting based on your presence."
+description: "Technology that automatically senses your surroundings and responds to your needs in real time, like a smart home that adjusts lighting based on your presence without you asking."
 keywords: ["ambient intelligence", "AmI", "smart environments", "context-aware systems", "AI automation"]
 category: "General"
 type: "glossary"

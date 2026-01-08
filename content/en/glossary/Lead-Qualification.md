@@ -2,7 +2,7 @@
 title: "Lead Qualification"
 date: 2025-12-19
 translationKey: Lead-Qualification
-description: "Lead Qualification is the process of evaluating potential customers to determine if they are likely to buy and if they match your company's ideal customer. It helps sales teams focus their efforts on the most promising prospects."
+description: "Lead Qualification is the process of evaluating potential customers to determine if they're likely to buy and if they match your company's ideal customer profile. It helps sales teams focus on the most promising prospects."
 keywords:
 - lead qualification
 - sales process

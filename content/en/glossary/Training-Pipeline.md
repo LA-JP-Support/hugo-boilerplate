@@ -2,7 +2,7 @@
 title: "Training Pipeline"
 date: 2025-12-19
 translationKey: Training-Pipeline
-description: "An automated system that guides raw data through data cleaning, model training, and testing stages to create ready-to-use AI models efficiently and consistently."
+description: "An automated workflow that guides raw data through cleaning, training, and testing to create AI models efficiently and consistently."
 keywords:
 - training pipeline
 - machine learning workflow

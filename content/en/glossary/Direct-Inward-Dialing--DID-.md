@@ -2,7 +2,7 @@
 title: "Direct Inward Dialing (DID)"
 date: 2025-12-19
 translationKey: Direct-Inward-Dialing--DID-
-description: "A telecommunications service that assigns unique phone numbers to individual employees or departments, allowing callers to reach them directly without going through a receptionist."
+description: "A phone system feature that gives each employee or department their own direct phone number, so callers can reach them instantly without waiting for a receptionist."
 keywords:
 - direct inward dialing
 - DID numbers

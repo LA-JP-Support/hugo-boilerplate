@@ -2,7 +2,7 @@
 title: "Support Metrics"
 date: 2025-12-19
 translationKey: Support-Metrics
-description: "Support Metrics are measurements used to evaluate how well a customer support team is performing, such as response times, customer satisfaction, and issue resolution rates. They help companies understand and improve their customer service quality."
+description: "Support Metrics are measurements that track how well a customer support team is performing, such as response times and customer satisfaction. They help companies identify what's working and what needs improvement in their customer service."
 keywords:
 - support metrics
 - customer service KPIs

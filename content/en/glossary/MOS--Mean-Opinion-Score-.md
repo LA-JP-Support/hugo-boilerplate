@@ -2,7 +2,7 @@
 title: "MOS (Mean Opinion Score)"
 date: 2025-12-19
 translationKey: MOS--Mean-Opinion-Score-
-description: "A standardized method where people rate the quality of audio, video, or other media on a scale of 1-5, helping service providers measure how satisfied users actually are."
+description: "A method where people rate the quality of audio, video, or other media on a scale of 1-5, helping measure how satisfied users actually are with their experience."
 keywords:
 - Mean Opinion Score
 - MOS testing

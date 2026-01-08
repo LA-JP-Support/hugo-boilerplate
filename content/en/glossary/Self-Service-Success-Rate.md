@@ -2,7 +2,7 @@
 title: "Self-Service Success Rate"
 date: 2025-12-19
 translationKey: Self-Service-Success-Rate
-description: "A metric that measures how often customers solve their problems using self-service tools like chatbots or knowledge bases without needing to contact support staff."
+description: "A percentage that shows how often customers successfully solve their problems using self-service tools like chatbots or knowledge bases without contacting support staff."
 keywords:
 - self-service success rate
 - customer support metrics

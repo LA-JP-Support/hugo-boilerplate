@@ -2,7 +2,7 @@
 title: "User Review Management"
 date: 2025-12-19
 translationKey: User-Review-Management
-description: "A system for collecting, monitoring, and responding to customer reviews across online platforms to build brand reputation and improve business decisions."
+description: "A system that collects and monitors customer reviews across online platforms, then responds strategically to build brand reputation and improve business decisions."
 keywords:
 - user review management
 - customer feedback systems

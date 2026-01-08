@@ -2,7 +2,7 @@
 title: "Data Breach Response"
 date: 2025-12-19
 translationKey: Data-Breach-Response
-description: "A systematic plan that organizations follow when hackers steal their data, including immediate actions to stop the damage, investigate what happened, and notify affected people while meeting legal requirements."
+description: "A plan organizations use to respond quickly when hackers steal their data, including stopping the damage, investigating what happened, and notifying affected people while following legal rules."
 keywords:
 - data breach response
 - incident response

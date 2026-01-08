@@ -2,7 +2,7 @@
 title: "Learning Rate"
 date: 2025-12-19
 translationKey: Learning-Rate
-description: "Learning rate is a setting that controls how much a machine learning model adjusts its parameters during training. It determines the step size when the model learns from errors to improve its predictions."
+description: "A setting that controls how big each adjustment step is when a machine learning model learns from mistakes during training."
 keywords:
 - learning rate
 - gradient descent

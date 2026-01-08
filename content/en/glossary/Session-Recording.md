@@ -2,7 +2,7 @@
 title: "Session Recording"
 date: 2025-12-19
 translationKey: Session-Recording
-description: "A technology that records and replays how users interact with websites or apps, showing every click and scroll to help identify usability problems and improve user experience."
+description: "A technology that records and replays exactly how users click, scroll, and interact with websites or apps, helping businesses spot problems and improve the user experience."
 keywords:
 - session recording
 - user behavior analytics

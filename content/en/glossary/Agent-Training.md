@@ -2,7 +2,7 @@
 title: "Agent Training"
 date: 2025-12-19
 translationKey: Agent-Training
-description: "Agent training is a process of teaching AI systems to learn from experience and make independent decisions to achieve specific goals in changing environments."
+description: "Agent training is a method of teaching AI systems to learn from their experiences and make smart decisions on their own to achieve goals in changing situations."
 keywords:
 - agent training
 - reinforcement learning

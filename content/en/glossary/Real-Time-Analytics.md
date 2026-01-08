@@ -2,7 +2,7 @@
 title: "Real-Time Analytics"
 date: 2025-12-19
 translationKey: Real-Time-Analytics
-description: "Real-time analytics is technology that analyzes data instantly as it's created, allowing businesses to make immediate decisions based on current information instead of waiting for delayed reports."
+description: "Real-time analytics is technology that instantly analyzes data as it's created, helping businesses make immediate decisions based on current information instead of waiting for delayed reports."
 keywords:
 - real-time analytics
 - stream processing

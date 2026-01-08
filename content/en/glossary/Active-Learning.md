@@ -2,7 +2,7 @@
 title: "Active Learning"
 date: 2025-12-19
 translationKey: active-learning
-description: "Active learning is a machine learning method where the algorithm intelligently chooses which data to label, reducing the need for human annotation while improving accuracy with fewer examples."
+description: "A machine learning approach where the algorithm selects which data to label, dramatically reducing human effort while achieving better results with fewer examples."
 keywords:
 - active learning
 - machine learning

@@ -2,7 +2,7 @@
 title: "Content Front Matter"
 date: 2025-12-19
 translationKey: Content-Front-Matter
-description: "A structured information section at the start of content files that stores key details like publication date, author, and categories, helping websites automatically organize and display content."
+description: "A metadata section at the start of content files that stores information like publication date and author, helping websites automatically organize and display content."
 keywords:
 - front matter
 - metadata

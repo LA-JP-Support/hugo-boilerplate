@@ -2,7 +2,7 @@
 title: "Content Amplification"
 date: 2025-12-19
 translationKey: Content-Amplification
-description: "A strategic approach to spreading your content across multiple channels and platforms to reach more people and boost engagement, rather than relying on organic discovery alone."
+description: "A marketing strategy that actively promotes your content across multiple channels and platforms to reach more people, rather than waiting for people to find it on their own."
 keywords:
 - content amplification
 - digital marketing strategy

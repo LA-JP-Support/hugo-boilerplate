@@ -2,7 +2,7 @@
 title: "FCP (First Contentful Paint)"
 date: 2025-12-19
 translationKey: FCP--First-Contentful-Paint-
-description: "A web performance metric that measures how quickly users first see content appear on a webpage after clicking a link, affecting their initial impression and engagement."
+description: "A web performance metric that measures how quickly the first content appears on a webpage after loading begins, helping improve user experience and search rankings."
 keywords:
 - first contentful paint
 - web performance metrics

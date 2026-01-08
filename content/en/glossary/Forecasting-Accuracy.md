@@ -2,7 +2,7 @@
 title: "Forecasting Accuracy"
 date: 2025-12-19
 translationKey: Forecasting-Accuracy
-description: "Forecasting accuracy measures how closely predicted values match actual results, helping organizations evaluate whether their prediction methods work reliably in real situations."
+description: "A measure of how well predictions match actual results, used to evaluate whether forecasting methods are reliable and working effectively."
 keywords:
 - forecasting accuracy
 - prediction metrics

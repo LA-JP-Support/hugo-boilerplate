@@ -2,7 +2,7 @@
 title: カノニカルURL
 date: 2025-12-19
 translationKey: Canonical-URL
-description: カノニカルURLの包括的なガイド。実装方法、メリット、SEO最適化と重複コンテンツ管理のベストプラクティスを解説します。
+description: "同じ内容を持つ複数のURLがある場合に、検索エンジンに「このURLを本物のバージョンとして扱ってください」と伝えるための指定方法。検索順位の低下を防ぎます。"
 keywords:
 - カノニカルURL
 - 重複コンテンツ

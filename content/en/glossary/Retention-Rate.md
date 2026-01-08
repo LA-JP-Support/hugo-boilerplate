@@ -2,7 +2,7 @@
 title: "Retention Rate"
 date: 2025-12-19
 translationKey: Retention-Rate
-description: "A metric that measures the percentage of customers or users who continue using a business over a specific period, indicating how well a company keeps its customers satisfied and engaged."
+description: "A measure of how many customers or employees stay with a company over time, showing how well the business keeps people satisfied and coming back."
 keywords:
 - retention rate
 - customer retention

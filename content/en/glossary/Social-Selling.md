@@ -2,7 +2,7 @@
 title: "Social Selling"
 date: 2025-12-19
 translationKey: Social-Selling
-description: "Social selling is using social media platforms to build genuine relationships with potential customers and earn their trust, rather than using aggressive sales tactics."
+description: "Social selling is using social media to build genuine relationships with potential customers by sharing helpful content and engaging authentically, rather than using pushy sales tactics."
 keywords:
 - social selling
 - social media sales

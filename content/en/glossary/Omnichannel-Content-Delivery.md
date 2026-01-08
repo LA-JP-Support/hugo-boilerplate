@@ -2,7 +2,7 @@
 title: "Omnichannel Content Delivery"
 date: 2025-12-19
 translationKey: Omnichannel-Content-Delivery
-description: "A system that delivers consistent, personalized content across all customer channels—websites, apps, stores, and social media—while remembering their preferences and history."
+description: "A unified system that delivers the same personalized content across websites, apps, stores, and social media by tracking what customers do on each channel."
 keywords:
 - omnichannel content delivery
 - cross-platform content management

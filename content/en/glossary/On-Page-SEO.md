@@ -2,7 +2,7 @@
 title: "On-Page SEO"
 date: 2025-12-19
 translationKey: On-Page-SEO
-description: "On-page SEO is the practice of optimizing individual web pages with better content, titles, and technical settings to help search engines rank them higher and attract more visitors."
+description: "On-page SEO is the practice of improving individual web pages through better content, titles, and technical settings so search engines can rank them higher and show them to more people."
 keywords:
 - on-page SEO
 - search engine optimization

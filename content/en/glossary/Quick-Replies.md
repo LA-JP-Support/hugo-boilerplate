@@ -1,7 +1,7 @@
 ---
 title: "Quick Replies"
 translationKey: "quick-replies"
-description: "Quick Replies are temporary buttons in chat apps that offer preset answer options. They disappear after you tap one, keeping the conversation clean and easy to follow."
+description: "Quick Replies are temporary buttons in chat apps that show preset answer options. They disappear after you select one, keeping conversations clean and organized."
 keywords: ["Quick Replies", "Chatbot", "Ephemeral buttons", "Chat interface", "Messaging platforms"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -3,7 +3,7 @@ title: "Engagement Score"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "engagement-score"
-description: "A single number that measures how actively someone uses a product, service, or content by combining multiple interaction signals like logins, time spent, and sharing activity."
+description: "A single number that measures how actively someone uses a product or service by combining multiple signals like logins, time spent, and sharing. It helps companies track customer satisfaction and identify who might stop using their product."
 keywords: ["Engagement Score", "Customer Engagement", "Employee Engagement", "Product Engagement", "Composite Metric"]
 category: "Analytics & Content Effectiveness"
 type: "glossary"

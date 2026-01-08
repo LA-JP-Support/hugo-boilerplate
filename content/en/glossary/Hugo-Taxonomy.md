@@ -2,7 +2,7 @@
 title: "Hugo Taxonomy"
 date: 2025-12-19
 translationKey: Hugo-Taxonomy
-description: "A content organization system in Hugo that lets you label and group related articles using customizable categories like tags or topics, automatically creating organized pages for browsing."
+description: "A labeling system in Hugo that organizes content by assigning custom tags or categories, automatically creating browsable pages to help readers find related articles."
 keywords:
 - Hugo taxonomy
 - static site generator

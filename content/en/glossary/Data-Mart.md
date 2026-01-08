@@ -2,7 +2,7 @@
 title: "Data Mart"
 date: 2025-12-19
 translationKey: Data-Mart
-description: "A focused database that stores department-specific data from a larger data warehouse, helping teams quickly access and analyze information relevant to their business area."
+description: "A specialized database that stores data for one department or business area, helping teams quickly find and analyze the information they need without sorting through company-wide data."
 keywords:
 - data mart
 - data warehouse

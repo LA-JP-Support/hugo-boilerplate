@@ -2,7 +2,7 @@
 title: "Free Trial"
 date: 2025-12-19
 translationKey: Free-Trial
-description: "A marketing strategy that lets potential customers use a product or service for free during a limited time, so they can test it before deciding to buy."
+description: "A marketing strategy that lets potential customers test a product or service for free during a limited time before deciding to buy."
 keywords:
 - free trial
 - trial period

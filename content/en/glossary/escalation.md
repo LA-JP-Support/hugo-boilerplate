@@ -3,7 +3,7 @@ title: Escalation
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: escalation
-description: "The process of transferring a difficult or urgent issue to someone with more expertise or authority to solve it effectively. Used in customer support, IT, and AI chatbots to ensure complex problems get proper attention."
+description: "A process of passing a difficult problem to someone with more expertise or authority to solve it properly. Used in customer support and AI chatbots to ensure complex issues get the right attention."
 keywords:
 - escalation
 - AI chatbot

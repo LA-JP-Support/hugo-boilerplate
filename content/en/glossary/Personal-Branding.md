@@ -2,7 +2,7 @@
 title: "Personal Branding"
 date: 2025-12-19
 translationKey: Personal-Branding
-description: "Personal branding is the practice of deliberately building and managing your professional reputation and image to show your unique skills and value to others. It helps you stand out in your career by consistently presenting who you are across online and offline platforms."
+description: "Personal branding is the practice of deliberately building and managing your professional reputation across different platforms to showcase your unique skills and value. It helps you stand out in your career by consistently presenting who you are and what makes you different."
 keywords:
 - personal branding
 - professional identity

@@ -3,7 +3,7 @@ title: "High Availability (HA)"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "high-availability-ha"
-description: "A system design that keeps services running without interruption by eliminating single points of failure and using backup components, ensuring reliability close to 100% of the time."
+description: "A system design that keeps services running without interruption by using backup components, ensuring reliability close to 100% of the time."
 keywords: ["High Availability", "HA", "redundancy", "failover", "uptime"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

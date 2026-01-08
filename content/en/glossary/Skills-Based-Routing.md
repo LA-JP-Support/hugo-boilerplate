@@ -2,7 +2,7 @@
 title: "Skills-Based Routing"
 date: 2025-12-19
 translationKey: Skills-Based-Routing
-description: "A system that automatically connects customers to the best-suited agent based on their skills and expertise, ensuring faster and more effective problem resolution."
+description: "A contact center system that automatically connects customers to the agent best equipped to help them based on their skills and knowledge, resulting in faster and better solutions."
 keywords:
 - skills-based routing
 - intelligent call routing

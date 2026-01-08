@@ -2,7 +2,7 @@
 title: "Content Distribution Channels"
 date: 2025-12-19
 translationKey: Content-Distribution-Channels
-description: "The various platforms and pathways organizations use to deliver content to their audiences, such as social media, email, and video services, to increase visibility and engagement."
+description: "The various platforms and pathways organizations use to deliver content to audiences, such as social media, email, and video services, to increase visibility and engagement."
 keywords:
 - content distribution
 - digital marketing channels

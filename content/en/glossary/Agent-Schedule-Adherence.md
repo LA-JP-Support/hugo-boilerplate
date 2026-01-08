@@ -2,7 +2,7 @@
 title: "Agent Schedule Adherence"
 date: 2025-12-19
 translationKey: Agent-Schedule-Adherence
-description: "A metric that measures how well contact center employees follow their assigned work schedules, helping companies track productivity and ensure smooth operations."
+description: "A measure of how well contact center employees stick to their assigned work schedules, used to track productivity and ensure the team operates smoothly."
 keywords:
 - agent schedule adherence
 - workforce management

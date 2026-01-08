@@ -2,7 +2,7 @@
 title: "Collaboration Platform"
 date: 2025-12-19
 translationKey: Collaboration-Platform
-description: "A digital workspace that brings together messaging, video calls, file sharing, and task management in one place so teams can work together easily, no matter where they are."
+description: "A digital workspace that combines messaging, video calls, file sharing, and task management so teams can communicate and work together from anywhere."
 keywords:
 - collaboration platform
 - team collaboration

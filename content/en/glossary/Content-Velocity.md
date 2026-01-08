@@ -2,7 +2,7 @@
 title: "Content Velocity"
 date: 2025-12-19
 translationKey: Content-Velocity
-description: "The speed at which an organization creates and publishes content across digital channels. It measures how quickly a company can produce and distribute materials while maintaining quality and consistency."
+description: "The speed at which a company creates and publishes content across digital channels while maintaining quality. It measures how quickly an organization can respond to trends and keep audiences engaged."
 keywords:
 - content velocity
 - content production speed

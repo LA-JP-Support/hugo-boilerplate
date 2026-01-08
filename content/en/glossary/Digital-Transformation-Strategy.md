@@ -2,7 +2,7 @@
 title: "Digital Transformation Strategy"
 date: 2025-12-19
 translationKey: Digital-Transformation-Strategy
-description: "A comprehensive plan for how an organization uses digital technologies to fundamentally change its business operations, customer experiences, and competitive approach."
+description: "A roadmap for using digital technology to reinvent how a company operates, serves customers, and competes in the market."
 keywords:
 - digital transformation strategy
 - digital transformation framework

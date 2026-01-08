@@ -2,7 +2,7 @@
 title: "Perplexity"
 date: 2025-12-19
 translationKey: Perplexity
-description: "Comprehensive guide to perplexity in natural language processing, machine learning evaluation metrics, and AI model performance assessment."
+description: "A metric that measures how well a language model predicts text by quantifying its uncertainty, with lower scores indicating better performance."
 keywords:
 - perplexity metric
 - language model evaluation

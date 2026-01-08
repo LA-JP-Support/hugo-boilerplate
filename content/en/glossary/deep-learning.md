@@ -3,7 +3,7 @@ title: "Deep Learning"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "deep-learning"
-description: "A machine learning technology that uses layered artificial networks inspired by the human brain to automatically learn patterns from data, powering applications like image recognition and language understanding."
+description: "A machine learning technology that uses multiple layers of artificial networks inspired by the human brain to automatically discover patterns and features from raw data, enabling computers to perform tasks like image recognition and language understanding."
 keywords: ["deep learning", "neural networks", "machine learning", "artificial intelligence", "AI chatbots"]
 category: "AI Chatbot & Automation"
 type: "glossary"

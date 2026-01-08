@@ -2,7 +2,7 @@
 title: "Knowledge Gap"
 date: 2025-12-19
 translationKey: Knowledge-Gap
-description: "The difference between what you currently know and what you need to know to achieve your goals or solve problems. Identifying knowledge gaps helps organizations improve performance and learning."
+description: "The difference between what you currently know and what you need to know to achieve your goals. Identifying these gaps helps improve learning and performance."
 keywords:
 - knowledge gap
 - information asymmetry

@@ -2,7 +2,7 @@
 title: "Content Expiration"
 date: 2025-12-19
 translationKey: Content-Expiration
-description: "A system that automatically removes, archives, or updates outdated content based on set time periods or rules, keeping information fresh and relevant without manual work."
+description: "A system that automatically removes, archives, or updates old content based on time or rules, keeping your information current without manual effort."
 keywords:
 - content expiration
 - content lifecycle management

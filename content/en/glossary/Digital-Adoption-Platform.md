@@ -2,7 +2,7 @@
 title: "Digital Adoption Platform"
 date: 2025-12-19
 translationKey: Digital-Adoption-Platform
-description: "A software tool that guides users through new applications with interactive tutorials and real-time help, making it easier to learn and use complex software quickly."
+description: "A software layer that guides users through new applications with interactive tutorials and real-time help, making it easier to learn and use complex software quickly."
 keywords:
 - digital adoption platform
 - user onboarding

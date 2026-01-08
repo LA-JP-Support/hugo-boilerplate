@@ -2,7 +2,7 @@
 title: "Localization Management"
 date: 2025-12-19
 translationKey: Localization-Management
-description: "The process of adapting software and content for different countries and cultures, including translation, design adjustments, and ensuring everything works correctly for each market."
+description: "The process of adapting software and digital products for different countries and cultures by coordinating translation, design adjustments, and technical requirements to ensure everything works correctly for each market."
 keywords:
 - localization management
 - translation workflow

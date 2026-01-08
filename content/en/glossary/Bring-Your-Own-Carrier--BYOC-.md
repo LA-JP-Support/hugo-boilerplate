@@ -2,7 +2,7 @@
 title: "Bring Your Own Carrier (BYOC)"
 date: 2025-12-19
 translationKey: Bring-Your-Own-Carrier--BYOC-
-description: "A telecommunications approach that lets businesses use their own phone carriers while accessing advanced cloud communication features, providing greater flexibility and cost control."
+description: "A service that lets businesses use their preferred phone carriers while accessing advanced cloud communication features, offering more flexibility and cost savings."
 keywords:
 - bring your own carrier
 - BYOC implementation

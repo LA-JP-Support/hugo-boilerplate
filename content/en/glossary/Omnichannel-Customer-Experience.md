@@ -2,7 +2,7 @@
 title: "Omnichannel Customer Experience"
 date: 2025-12-19
 translationKey: Omnichannel-Customer-Experience
-description: "A unified customer experience that connects all channels—online, mobile, phone, and stores—so customers can switch between them smoothly while keeping their information and conversation history consistent."
+description: "A seamless shopping experience where customers can start their journey on one channel—like a website—and continue it on another, such as a store or phone, without losing their information or conversation history."
 keywords:
 - omnichannel customer experience
 - cross-channel integration

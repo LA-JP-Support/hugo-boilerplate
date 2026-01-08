@@ -1,7 +1,7 @@
 ---
 title: "Speech-to-Text Node"
 translationKey: "speech-to-text-node"
-description: "A Speech-to-Text Node converts spoken words in audio files into written text, enabling voice commands, meeting transcriptions, and automated voice-based processes."
+description: "A Speech-to-Text Node converts spoken words from audio files into written text, enabling voice commands, meeting transcriptions, and automated voice-based processes."
 keywords: ["Speech-to-Text Node", "Automatic Speech Recognition", "AI workflows", "Audio to Text", "Transcription"]
 category: "AI Chatbot & Automation"
 type: "glossary"

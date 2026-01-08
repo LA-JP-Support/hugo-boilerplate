@@ -3,7 +3,7 @@ title: "Supervised Learning"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "supervised-learning"
-description: "A machine learning method where algorithms learn from labeled examples to make accurate predictions on new data, like learning with a teacher who provides correct answers."
+description: "A machine learning approach where algorithms learn from examples labeled with correct answers, enabling them to make accurate predictions on new data."
 keywords: ["supervised learning", "machine learning", "classification", "regression", "labeled data"]
 category: "AI Chatbot & Automation"
 type: "glossary"

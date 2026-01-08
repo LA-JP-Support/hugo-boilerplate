@@ -2,7 +2,7 @@
 title: "Error Message Design"
 date: 2025-12-19
 translationKey: Error-Message-Design
-description: "Error Message Design is the practice of creating clear, helpful messages that guide users when something goes wrong, turning frustrating moments into opportunities to maintain trust and resolve problems quickly."
+description: "Error Message Design is the practice of creating clear, helpful messages that guide users when something goes wrong, helping them solve problems quickly and maintain trust in the system."
 keywords:
 - error message design
 - user experience

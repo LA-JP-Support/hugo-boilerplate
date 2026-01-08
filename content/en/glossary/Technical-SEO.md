@@ -2,7 +2,7 @@
 title: "Technical SEO"
 date: 2025-12-19
 translationKey: Technical-SEO
-description: "Website optimization that ensures search engines can easily crawl, understand, and rank your site by improving its speed, mobile compatibility, and technical structure."
+description: "Website optimization that improves how search engines crawl and understand your site by enhancing speed, mobile compatibility, and technical structure."
 keywords:
 - technical SEO
 - website optimization

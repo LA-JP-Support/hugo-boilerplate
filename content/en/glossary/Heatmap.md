@@ -2,7 +2,7 @@
 title: "Heatmap"
 date: 2025-12-19
 translationKey: Heatmap
-description: "A data visualization tool that uses color intensity to display numerical information, making it easy to spot patterns and trends in large datasets at a glance."
+description: "A visualization tool that uses colors to represent data values, helping you quickly spot patterns and trends in large amounts of information."
 keywords:
 - heatmap
 - data visualization

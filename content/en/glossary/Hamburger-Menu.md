@@ -1,7 +1,7 @@
 ---
 title: "Hamburger Menu"
 translationKey: "hamburger-menu"
-description: "A menu icon with three stacked lines that opens hidden navigation options when clicked, commonly used on mobile apps and websites to save screen space."
+description: "A menu icon with three stacked lines that reveals hidden navigation options when clicked, commonly used on mobile apps and websites to save screen space."
 keywords: ["hamburger menu", "UI/UX design", "mobile navigation", "progressive disclosure", "web accessibility"]
 category: "General"
 type: "glossary"

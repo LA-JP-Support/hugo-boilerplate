@@ -2,7 +2,7 @@
 title: "Keyword Research"
 date: 2025-12-19
 translationKey: Keyword-Research
-description: "Keyword Research is the process of finding and analyzing the words and phrases people use when searching online, to help create content and websites that match what they're looking for."
+description: "Keyword Research is the process of discovering and analyzing the words and phrases people search for online, helping you create content and websites that match what they're actually looking for."
 keywords:
 - keyword research
 - SEO optimization

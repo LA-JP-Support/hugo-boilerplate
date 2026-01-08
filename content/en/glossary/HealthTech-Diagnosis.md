@@ -2,7 +2,7 @@
 title: "HealthTech Diagnosis"
 date: 2025-12-19
 translationKey: healthtech-diagnosis
-description: "AI-powered tools that help doctors diagnose diseases faster and more accurately by analyzing medical images, patient data, and clinical information to support medical decision-making."
+description: "AI technology that helps doctors diagnose diseases faster and more accurately by analyzing medical images, patient data, and lab results to support clinical decision-making."
 keywords:
 - healthtech diagnosis
 - AI medical diagnosis

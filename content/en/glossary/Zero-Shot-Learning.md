@@ -2,7 +2,7 @@
 title: "Zero-Shot Learning"
 date: 2025-12-19
 translationKey: Zero-Shot-Learning
-description: "An AI technique that recognizes new categories without training examples by understanding their relationships to familiar concepts and shared characteristics."
+description: "An AI technique that identifies new objects or categories the model has never seen before by understanding their shared characteristics with familiar concepts."
 keywords:
 - zero-shot learning
 - machine learning

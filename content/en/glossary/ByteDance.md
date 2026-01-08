@@ -2,7 +2,7 @@
 title: "ByteDance"
 date: 2025-12-19
 translationKey: ByteDance
-description: "ByteDance is a Chinese technology company founded in 2012 that created TikTok, a hugely popular short-form video app. It uses AI algorithms to recommend personalized content that keeps users engaged."
+description: "ByteDance is a Chinese technology company founded in 2012 that created TikTok, the wildly popular short-form video app. It uses AI to recommend personalized videos that keep users engaged."
 keywords:
 - ByteDance
 - TikTok

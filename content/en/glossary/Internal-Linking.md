@@ -2,7 +2,7 @@
 title: "Internal Linking"
 date: 2025-12-19
 translationKey: Internal-Linking
-description: "Internal links are clickable connections between pages on the same website that help visitors navigate and find related content while improving search engine rankings."
+description: "Links that connect different pages within the same website to help visitors find related content and improve search rankings."
 keywords:
 - internal linking
 - SEO optimization

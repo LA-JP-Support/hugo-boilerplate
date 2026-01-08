@@ -2,7 +2,7 @@
 title: "Asset Library"
 date: 2025-12-19
 translationKey: Asset-Library
-description: "A centralized storage system that organizes and shares digital resources like images, videos, code, and design elements across projects to save time and maintain consistency."
+description: "A centralized storage where teams keep and share reusable digital resources like images, videos, and code to work faster and stay consistent across projects."
 keywords:
 - asset library
 - digital asset management

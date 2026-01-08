@@ -2,7 +2,7 @@
 title: "Churn Rate"
 date: 2025-12-19
 translationKey: Churn-Rate
-description: "The percentage of customers who stop using a business during a specific period, used to measure customer loyalty and business health especially for subscription services."
+description: "The percentage of customers who stop using a service during a specific period, used to measure how well a business keeps its customers satisfied and healthy."
 keywords:
 - churn rate
 - customer retention

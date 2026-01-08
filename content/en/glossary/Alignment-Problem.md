@@ -3,7 +3,7 @@ title: "Alignment Problem"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "alignment-problem"
-description: "The challenge of ensuring AI systems pursue goals and make decisions that match human values and intentions, rather than producing unintended or harmful outcomes."
+description: "The challenge of ensuring AI systems pursue goals that match human values and intentions, rather than producing unintended or harmful outcomes."
 keywords: ["AI alignment", "misalignment", "AI ethics", "AI safety", "reward hacking"]
 category: "AI Ethics & Safety Mechanisms"
 type: "glossary"

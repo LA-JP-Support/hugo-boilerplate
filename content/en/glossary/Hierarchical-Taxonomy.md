@@ -2,7 +2,7 @@
 title: "Hierarchical Taxonomy"
 date: 2025-12-19
 translationKey: Hierarchical-Taxonomy
-description: "A classification system that organizes information into levels, from broad categories at the top to specific ones below, making it easier to find and manage large amounts of data."
+description: "A tree-like organization system that arranges information from general categories at the top down to specific ones below, making it easier to find and manage data."
 keywords:
 - hierarchical taxonomy
 - classification systems

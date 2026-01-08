@@ -3,7 +3,7 @@ title: Milvus
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: milvus-a
-description: "A database designed to quickly search and find similar items in large collections of unstructured data like images, text, and audio by comparing their numerical representations."
+description: "An open-source database that quickly finds similar items in large collections of unstructured data like images and text by comparing their numerical representations."
 keywords: ["Milvus", "vector database", "similarity search", "vector embeddings", "unstructured data"]
 category: Vector Database
 type: glossary

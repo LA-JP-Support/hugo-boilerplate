@@ -3,7 +3,7 @@ title: 'Integration'
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: integration
-description: "Integration connects different software and data sources so they work together seamlessly, allowing chatbots and automation tools to share information and operate as one unified system."
+description: "Integration connects different software and business systems so they work together as one, allowing chatbots and automation tools to automatically share data and complete tasks without manual effort."
 keywords:
 - integration
 - AI chatbots

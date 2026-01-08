@@ -3,7 +3,7 @@ title: "Utterance"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "utterance"
-description: "An utterance is any message, question, or command a user sends to a chatbot—whether typed or spoken. It's the basic input that AI systems analyze to understand what the user wants and provide the right response."
+description: "An utterance is any message, question, or command a user sends to a chatbot—whether typed or spoken. It's the basic input that AI systems analyze to understand what the user wants."
 keywords: ["utterance", "conversational AI", "chatbot", "NLU", "NLP"]
 category: "AI Chatbot & Automation"
 type: "glossary"

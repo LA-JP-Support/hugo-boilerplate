@@ -2,7 +2,7 @@
 title: "Single Template"
 date: 2025-12-19
 translationKey: Single-Template
-description: "A unified design template that serves as the foundation for an entire application, allowing developers to maintain consistency across all pages while adapting content dynamically without rebuilding the structure repeatedly."
+description: "A single master design template that serves as the foundation for an entire application, allowing developers to maintain consistent layouts while changing content dynamically without rebuilding the structure."
 keywords:
 - single template
 - template architecture

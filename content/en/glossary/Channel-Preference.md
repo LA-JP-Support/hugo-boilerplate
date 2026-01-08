@@ -2,7 +2,7 @@
 title: "Channel Preference"
 date: 2025-12-19
 translationKey: Channel-Preference
-description: "A customer's preferred way to be contacted, such as email, phone, or text message. Organizations use this to communicate with customers in the way they like best."
+description: "A customer's preferred communication method, such as email, phone, or text message. Companies use this information to contact customers in the way they prefer, improving satisfaction and efficiency."
 keywords:
 - channel preference
 - customer communication

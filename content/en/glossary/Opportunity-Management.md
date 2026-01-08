@@ -2,7 +2,7 @@
 title: "Opportunity Management"
 date: 2025-12-19
 translationKey: Opportunity-Management
-description: "A systematic approach to identifying, tracking, and converting potential sales opportunities into actual customers to maximize revenue and business growth."
+description: "A systematic process for identifying and tracking potential sales opportunities, then converting them into actual customers to grow revenue and business success."
 keywords:
 - opportunity management
 - sales pipeline

@@ -2,7 +2,7 @@
 title: "Customer Feedback Analysis"
 date: 2025-12-19
 translationKey: Customer-Feedback-Analysis
-description: "Customer Feedback Analysis is the process of collecting and examining customer opinions from surveys, reviews, and social media to understand what customers think and identify ways to improve products and services."
+description: "Customer Feedback Analysis is the process of collecting and analyzing customer opinions from surveys, reviews, and social media to understand what customers think and find ways to improve products and services."
 keywords:
 - customer feedback analysis
 - sentiment analysis

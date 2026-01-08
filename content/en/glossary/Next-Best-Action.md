@@ -2,7 +2,7 @@
 title: "Next Best Action"
 date: 2025-12-19
 translationKey: Next-Best-Action
-description: "AI technology that recommends the best action to take with each customer at the right moment, using their data and behavior patterns to personalize interactions and improve business results."
+description: "AI technology that analyzes customer data and behavior to recommend the best action at the right moment, helping businesses deliver personalized experiences and improve results."
 keywords:
 - next best action
 - customer experience optimization

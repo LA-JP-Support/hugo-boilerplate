@@ -2,7 +2,7 @@
 title: 多要素認証（MFA）
 date: 2025-12-19
 translationKey: Multi-Factor-Authentication--MFA-
-description: 多要素認証（MFA）の包括的なガイド。実装方法、メリット、課題、セキュリティ強化のためのベストプラクティスを網羅しています。
+description: "アカウントにアクセスする際に、パスワードに加えて指紋認証やスマートフォンの確認コードなど複数の確認方法を組み合わせることで、セキュリティを大幅に強化する仕組みです。"
 keywords:
 - 多要素認証
 - 二要素認証

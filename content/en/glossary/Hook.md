@@ -2,7 +2,7 @@
 title: "Hook"
 date: 2025-12-19
 translationKey: Hook
-description: "A mechanism that lets developers insert custom code at specific points in a program's execution without changing the core functionality, enabling flexible customization and automation."
+description: "A predefined point in a program where you can insert custom code to extend or modify how it works, without changing the original code."
 keywords:
 - hooks programming
 - React hooks

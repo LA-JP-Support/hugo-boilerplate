@@ -3,7 +3,7 @@ title: "Chroma"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "chroma"
-description: "An open-source database designed to store and search AI-generated numerical data, enabling applications to understand meaning and find similar information quickly."
+description: "An open-source database that stores AI data as numbers, helping applications find similar information and understand meaning quickly."
 keywords: ["Chroma", "vector database", "embeddings", "AI-native applications", "semantic search"]
 category: "General"
 type: "glossary"

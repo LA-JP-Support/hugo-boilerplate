@@ -2,7 +2,7 @@
 title: "Journey Analytics"
 date: 2025-12-19
 translationKey: Journey-Analytics
-description: "Journey Analytics is a method for tracking and analyzing all customer interactions across different channels to understand their complete experience and identify ways to improve it."
+description: "Journey Analytics is a method for tracking customer interactions across all channels and touchpoints to understand their complete experience and find ways to improve it."
 keywords:
 - journey analytics
 - customer journey mapping

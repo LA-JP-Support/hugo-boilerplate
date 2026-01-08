@@ -2,7 +2,7 @@
 title: "Social Media Strategy"
 date: 2025-12-19
 translationKey: Social-Media-Strategy
-description: "A plan that guides how organizations use social media platforms to reach customers, build relationships, and achieve business goals through consistent content and engagement."
+description: "A comprehensive plan that outlines how organizations will use social media platforms to achieve business goals, connect with customers, and build relationships through consistent content and engagement."
 keywords:
 - social media strategy
 - digital marketing

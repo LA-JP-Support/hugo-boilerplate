@@ -2,7 +2,7 @@
 title: "Content Aging"
 date: 2025-12-19
 translationKey: Content-Aging
-description: "A strategy for managing digital content throughout its lifetime by tracking performance and deciding when to update, improve, or remove outdated information."
+description: "A process of tracking how well your digital content performs over time and deciding whether to update, improve, or remove it to keep information fresh and useful."
 keywords:
 - content aging
 - content lifecycle management

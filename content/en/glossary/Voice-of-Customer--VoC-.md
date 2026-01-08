@@ -2,7 +2,7 @@
 title: "Voice of Customer (VoC)"
 date: 2025-12-19
 translationKey: Voice-of-Customer--VoC-
-description: "A systematic process of collecting and analyzing customer feedback to understand their needs, preferences, and experiences, helping businesses make better decisions."
+description: "A systematic approach to collecting and analyzing customer feedback across all interactions to understand their true needs and improve business decisions accordingly."
 keywords:
 - voice of customer
 - customer feedback

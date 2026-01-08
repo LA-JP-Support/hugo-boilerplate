@@ -2,7 +2,7 @@
 title: "WebRTC"
 date: 2025-12-19
 translationKey: WebRTC
-description: "A technology that lets web browsers and apps communicate directly with each other for video calls, voice chats, and instant messaging without needing extra software or plugins."
+description: "A technology that enables direct video calls, voice chats, and messaging between web browsers without needing extra software or plugins."
 keywords:
 - WebRTC
 - real-time communication

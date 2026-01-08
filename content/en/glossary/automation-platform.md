@@ -3,7 +3,7 @@ title: Automation Platform
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: automation-platform
-description: "An automation platform is software that handles repetitive business tasks automatically by connecting different systems and applications, reducing manual work and improving accuracy."
+description: "An automation platform is software that automatically handles repetitive business tasks by connecting different systems and applications, reducing manual work, costs, and errors while speeding up processes."
 keywords:
 - automation platform
 - business process automation

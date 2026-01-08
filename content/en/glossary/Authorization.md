@@ -2,7 +2,7 @@
 title: "Authorization"
 date: 2025-12-19
 translationKey: Authorization
-description: "Authorization is a security system that controls what actions users can perform after their identity is verified, granting access only to the resources they need."
+description: "Authorization is a security system that determines what actions a user can perform after their identity is verified, granting access only to the resources and data they need."
 keywords:
 - authorization
 - access control

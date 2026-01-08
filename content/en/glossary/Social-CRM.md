@@ -2,7 +2,7 @@
 title: "Social CRM"
 date: 2025-12-19
 translationKey: Social-CRM
-description: "A business system that combines customer data with social media conversations to help companies understand and engage with customers across platforms like Facebook, Twitter, and Instagram."
+description: "A business system that monitors and engages with customers across social media platforms like Facebook and Twitter, combining their social conversations with customer data for better understanding."
 keywords:
 - social CRM
 - customer relationship management

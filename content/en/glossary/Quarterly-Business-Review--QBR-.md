@@ -2,7 +2,7 @@
 title: "Quarterly Business Review (QBR)"
 date: 2025-12-19
 translationKey: Quarterly-Business-Review--QBR-
-description: "A strategic meeting held every three months where company leaders review performance, discuss progress toward goals, and plan next steps to keep the business on track."
+description: "A strategic meeting held every three months where company leaders review business performance, discuss progress toward goals, and plan next steps to keep the business on track."
 keywords:
 - quarterly business review
 - QBR process

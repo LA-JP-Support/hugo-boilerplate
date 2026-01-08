@@ -2,7 +2,7 @@
 title: "Discussion Forums"
 date: 2025-12-19
 translationKey: Discussion-Forums
-description: "Online spaces where people post messages and have conversations about specific topics at their own pace, with all discussions organized and saved for future reference."
+description: "Online spaces where people post messages and discuss topics at their own pace, with all conversations organized and saved for future reference."
 keywords:
 - discussion forums
 - online communities

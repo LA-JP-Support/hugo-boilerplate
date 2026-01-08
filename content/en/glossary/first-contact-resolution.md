@@ -3,7 +3,7 @@ title: "First Contact Resolution (FCR)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "first-contact-resolution-fcr"
-description: "A customer support metric measuring whether an issue is completely resolved during the first interaction, without needing follow-up contacts or escalations."
+description: "A customer support metric that measures whether an issue is completely solved in the first interaction, without needing follow-up contacts or callbacks."
 keywords: ["First Contact Resolution", "FCR", "customer service", "contact center", "customer satisfaction"]
 category: "AI Chatbot & Automation"
 type: "glossary"

@@ -2,7 +2,7 @@
 title: "Accessibility (Web)"
 date: 2025-12-19
 translationKey: Accessibility--Web-
-description: "Web accessibility is the practice of designing websites so that people with disabilities—such as vision, hearing, or mobility impairments—can use them easily and effectively."
+description: "Web accessibility is the practice of designing websites so that people with disabilities can easily use them, including those with vision, hearing, mobility, or cognitive challenges."
 keywords:
 - web accessibility
 - WCAG guidelines

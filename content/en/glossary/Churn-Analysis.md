@@ -2,7 +2,7 @@
 title: "Churn Analysis"
 date: 2025-12-19
 translationKey: Churn-Analysis
-description: "A method to identify and predict which customers are likely to stop using a service, helping businesses understand why they leave and how to keep them."
+description: "A business method to identify which customers might stop using a service and understand why, helping companies retain them."
 keywords:
 - churn analysis
 - customer retention

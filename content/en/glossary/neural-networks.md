@@ -3,7 +3,7 @@ title: "Neural Networks"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "neural-networks"
-description: "A computational model inspired by the human brain that learns patterns in data by processing information through interconnected layers, powering AI applications like image recognition and language understanding."
+description: "A computer system inspired by the human brain that learns to recognize patterns in data by processing information through connected layers, enabling AI to perform tasks like image recognition and language understanding."
 keywords: ["neural networks", "artificial intelligence", "machine learning", "deep learning", "artificial neurons"]
 category: "AI Chatbot & Automation"
 type: "glossary"

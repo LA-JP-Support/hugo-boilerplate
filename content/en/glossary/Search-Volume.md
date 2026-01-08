@@ -2,7 +2,7 @@
 title: "Search Volume"
 date: 2025-12-19
 translationKey: Search-Volume
-description: "Search Volume is the number of times people search for a specific keyword or topic on search engines each month. It helps marketers understand what people are looking for and decide what content to create or advertise."
+description: "Search Volume is the total number of times people search for a specific keyword on search engines each month, helping marketers understand what topics are popular and decide what content to create."
 keywords:
 - search volume
 - keyword research

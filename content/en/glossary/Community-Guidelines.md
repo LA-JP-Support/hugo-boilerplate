@@ -2,7 +2,7 @@
 title: "Community Guidelines"
 date: 2025-12-19
 translationKey: Community-Guidelines
-description: "Community Guidelines are the rules and standards that online platforms set to define acceptable behavior and content, protecting users while maintaining a safe community environment."
+description: "Community Guidelines are rules set by online platforms to define what behavior and content are acceptable, helping keep communities safe and fair for everyone."
 keywords:
 - community guidelines
 - content moderation

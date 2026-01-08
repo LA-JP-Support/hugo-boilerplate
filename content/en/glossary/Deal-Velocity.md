@@ -2,7 +2,7 @@
 title: "Deal Velocity"
 date: 2025-12-19
 translationKey: Deal-Velocity
-description: "A metric that measures how fast sales opportunities move through your pipeline and turn into closed deals, helping companies forecast revenue and identify sales process bottlenecks."
+description: "A metric that measures how quickly sales opportunities move through your pipeline and convert into closed deals, helping companies forecast revenue and identify where sales processes slow down."
 keywords:
 - deal velocity
 - sales cycle optimization

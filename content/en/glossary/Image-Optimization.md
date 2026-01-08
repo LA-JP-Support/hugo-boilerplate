@@ -2,7 +2,7 @@
 title: "Image Optimization"
 date: 2025-12-19
 translationKey: Image-Optimization
-description: "Image Optimization is the process of reducing image file sizes while keeping them looking good, so websites load faster and work better on all devices."
+description: "Image Optimization is the process of reducing image file sizes while maintaining visual quality, so websites load faster and perform better across all devices and network conditions."
 keywords:
 - image optimization
 - web performance

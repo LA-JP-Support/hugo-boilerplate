@@ -2,7 +2,7 @@
 title: "Quick Wins"
 date: 2025-12-19
 translationKey: Quick-Wins
-description: "Quick wins are small, easy improvements that deliver fast, measurable results and build momentum for bigger changes. They help teams gain confidence and prove progress to leadership with minimal effort."
+description: "Small, easy improvements that deliver fast, measurable results and build momentum for bigger changes. They help teams gain confidence and prove progress to leadership with minimal effort."
 keywords:
 - quick wins
 - immediate improvements

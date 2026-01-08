@@ -2,7 +2,7 @@
 title: "Folksonomy"
 date: 2025-12-19
 translationKey: Folksonomy
-description: "A system where users collectively organize and label digital content with freely chosen tags, creating a flexible classification that reflects how people naturally think about information."
+description: "A system where regular people tag and organize online content together, creating a flexible way to categorize information that reflects how everyone naturally thinks about it."
 keywords:
 - folksonomy
 - collaborative tagging

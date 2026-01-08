@@ -2,7 +2,7 @@
 title: "SIP (Session Initiation Protocol)"
 date: 2025-12-19
 translationKey: SIP--Session-Initiation-Protocol-
-description: "A protocol that sets up and manages phone calls and video meetings over the internet by handling the connection process while other technologies handle the actual voice and video."
+description: "A protocol that initiates and manages internet phone calls and video meetings by coordinating the connection, while other technologies handle the actual voice and video transmission."
 keywords:
 - SIP protocol
 - VoIP communication

@@ -2,7 +2,7 @@
 title: "Voice Cloning"
 date: 2025-12-19
 translationKey: Voice-Cloning
-description: "AI technology that analyzes a person's voice characteristics to create a digital replica capable of generating new speech that sounds like the original speaker."
+description: "AI technology that analyzes a person's voice to create a digital copy capable of generating new speech that sounds like them."
 keywords:
 - voice cloning
 - speech synthesis

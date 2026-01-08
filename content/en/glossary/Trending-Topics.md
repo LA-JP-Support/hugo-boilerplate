@@ -2,7 +2,7 @@
 title: "Trending Topics"
 date: 2025-12-19
 translationKey: Trending-Topics
-description: "Trending Topics are the most popular subjects being discussed right now on social media and online platforms. Brands and content creators use them to create timely content that connects with more people."
+description: "Trending Topics are the most talked-about subjects right now on social media and online platforms. Brands and creators use them to share timely content that reaches more people."
 keywords:
 - trending topics
 - social media analytics

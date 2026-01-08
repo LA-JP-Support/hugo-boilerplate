@@ -2,7 +2,7 @@
 title: "Batch Normalization"
 date: 2025-12-19
 translationKey: Batch-Normalization
-description: "A technique that stabilizes neural network training by adjusting layer inputs to have consistent statistical properties, enabling faster and more stable learning."
+description: "A technique that normalizes neural network layer inputs during training to maintain consistent data distribution, enabling faster and more stable learning."
 keywords:
 - batch normalization
 - neural networks

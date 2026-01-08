@@ -2,7 +2,7 @@
 title: "RTP (Real-time Transport Protocol)"
 date: 2025-12-19
 translationKey: RTP--Real-time-Transport-Protocol-
-description: "A network protocol that delivers audio and video over the internet in real-time, prioritizing speed over perfect accuracy to keep conversations and streams smooth."
+description: "A network protocol that delivers audio and video over the internet in real-time by prioritizing speed over perfect accuracy, allowing video calls and live streams to flow smoothly even if some data is lost."
 keywords:
 - RTP protocol
 - real-time transport

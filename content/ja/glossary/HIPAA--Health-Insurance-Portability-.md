@@ -2,7 +2,7 @@
 title: HIPAA(医療保険の相互運用性と説明責任に関する法律)
 date: 2025-12-19
 translationKey: HIPAA--Health-Insurance-Portability-
-description: プライバシー、セキュリティ、相互運用性要件、コンプライアンス戦略、実装のベストプラクティスをカバーする、HIPAA規制の包括的なガイド。
+description: "患者の医療情報を保護するため、米国の医療機関が守るべき法律。転職時の保険継続と医療詐欺防止も目的としています。"
 keywords:
 - HIPAAコンプライアンス
 - 医療プライバシー

@@ -2,7 +2,7 @@
 title: "Data Visualization Best Practices"
 date: 2025-12-19
 translationKey: Data-Visualization-Best-Practices
-description: "A set of design principles and guidelines that help you communicate data clearly and effectively through charts, graphs, and visual displays so people can understand insights quickly."
+description: "A set of design rules and techniques for creating charts and graphs that help people understand data quickly and make better decisions. It combines psychology, design, and statistics to make information clear and easy to grasp."
 keywords:
 - data visualization
 - chart design

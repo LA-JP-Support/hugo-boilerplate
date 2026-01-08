@@ -2,7 +2,7 @@
 title: "Content Governance"
 date: 2025-12-19
 translationKey: Content-Governance
-description: "A system of rules and processes that organizations use to create, review, publish, and maintain digital content consistently across all platforms and channels."
+description: "A set of rules and processes that organizations use to manage digital content consistently across all platforms, ensuring quality, accuracy, and brand alignment throughout its lifecycle."
 keywords:
 - content governance
 - content management

@@ -2,7 +2,7 @@
 title: "Agent Assist"
 date: 2025-12-19
 translationKey: Agent-Assist
-description: "AI technology that helps customer service agents work faster and better by providing real-time suggestions, information, and guidance during customer conversations."
+description: "AI-powered software that gives customer service agents real-time suggestions and information during customer conversations to help them respond faster and solve problems better."
 keywords:
 - agent assist
 - AI customer service

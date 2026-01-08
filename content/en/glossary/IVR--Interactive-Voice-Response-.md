@@ -2,7 +2,7 @@
 title: "IVR (Interactive Voice Response)"
 date: 2025-12-19
 translationKey: IVR--Interactive-Voice-Response-
-description: "An automated phone system that lets callers navigate menus by pressing numbers or speaking commands, routing calls to the right department or providing instant answers without human help."
+description: "An automated phone system that uses voice prompts and keypad inputs to guide callers through menus, answer questions, and route calls to the right department without human assistance."
 keywords:
 - interactive voice response
 - IVR system

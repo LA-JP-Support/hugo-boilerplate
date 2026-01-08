@@ -2,7 +2,7 @@
 title: "Unified Inbox"
 date: 2025-12-19
 translationKey: Unified-Inbox
-description: "A single inbox that combines emails, messages, and notifications from all your communication apps in one place, so you don't have to switch between different platforms."
+description: "A centralized hub that gathers emails, messages, and notifications from all your communication apps into one place, eliminating the need to switch between different platforms."
 keywords:
 - unified inbox
 - message consolidation

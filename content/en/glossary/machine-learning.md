@@ -3,7 +3,7 @@ title: Machine Learning
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: machine-learning
-description: "Machine Learning is a type of AI that enables computers to learn from data and make predictions or decisions automatically, without being explicitly programmed for each task."
+description: "Machine Learning is technology that enables computers to learn patterns from data and make decisions automatically, improving their performance through experience rather than following pre-programmed instructions."
 keywords:
 - machine learning
 - artificial intelligence

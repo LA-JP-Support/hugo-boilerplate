@@ -2,7 +2,7 @@
 title: "Workforce Management (WFM)"
 date: 2025-12-19
 translationKey: Workforce-Management--WFM-
-description: "A system that schedules employees and tracks their productivity to ensure the right staff are available when needed, while reducing labor costs and maintaining service quality."
+description: "A system that uses scheduling and data analysis to ensure the right employees work at the right times, improving service quality while controlling labor costs."
 keywords:
 - workforce management
 - employee scheduling

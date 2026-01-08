@@ -2,7 +2,7 @@
 title: "Instruction Tuning"
 date: 2025-12-19
 translationKey: Instruction-Tuning
-description: "A training technique that teaches AI language models to understand and follow human instructions accurately, improving their ability to complete specific tasks."
+description: "A training method that teaches AI models to follow human instructions and complete specific tasks more accurately by learning from examples of instructions and their desired responses."
 keywords:
 - instruction tuning
 - fine-tuning

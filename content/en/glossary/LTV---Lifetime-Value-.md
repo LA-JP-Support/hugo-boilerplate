@@ -3,7 +3,7 @@ title: "LTV (Lifetime Value)"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "ltv-lifetime-value"
-description: "The total profit or revenue a customer generates for your business over their entire relationship with you, used to measure business health and marketing effectiveness."
+description: "The total revenue or profit a customer generates for your business over their entire relationship with you, used to measure whether your business is growing sustainably and if your marketing spending is worthwhile."
 keywords: ["LTV", "Customer Lifetime Value", "SaaS", "AI chatbot", "automation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

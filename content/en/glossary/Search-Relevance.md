@@ -2,7 +2,7 @@
 title: "Search Relevance"
 date: 2025-12-19
 translationKey: Search-Relevance
-description: "Search relevance is how well search results match what a user is actually looking for, using algorithms that understand meaning and context rather than just matching keywords."
+description: "Search relevance is how well search results match what a user is actually looking for, based on meaning and context rather than just keywords."
 keywords:
 - search relevance
 - ranking algorithms

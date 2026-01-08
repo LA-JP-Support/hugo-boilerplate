@@ -2,7 +2,7 @@
 title: "Privacy by Design"
 date: 2025-12-19
 translationKey: Privacy-by-Design
-description: "A system design approach that builds privacy protection into technology from the start, rather than adding it later, making privacy the default setting without requiring user action."
+description: "A system design approach that builds privacy protection into technology from the start as the default setting, rather than adding it later or requiring users to change settings themselves."
 keywords:
 - privacy by design
 - data protection

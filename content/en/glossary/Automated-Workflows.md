@@ -2,7 +2,7 @@
 title: "Automated Workflows"
 lastmod: 2025-12-18
 translationKey: "automated-workflows"
-description: "Automated workflows are digital processes that handle repetitive business tasks automatically based on set rules, reducing manual work and saving time."
+description: "Automated workflows are digital processes that automatically handle repetitive business tasks based on predefined rules, eliminating manual work and saving time and costs."
 keywords: ["Automated Workflows", "Workflow Automation", "Business Process Automation", "RPA", "Process Automation"]
 category: "AI Chatbot & Automation"
 type: "glossary"

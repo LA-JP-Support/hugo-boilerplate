@@ -2,7 +2,7 @@
 title: "Influencer Marketing"
 date: 2025-12-19
 translationKey: Influencer-Marketing
-description: "Influencer Marketing is a marketing strategy that uses popular social media personalities to promote brands and products to their followers, leveraging the trust and credibility they've built with their audiences."
+description: "A marketing strategy that uses trusted social media personalities to recommend brands and products to their followers, leveraging the authentic connections and credibility they've built with their audiences."
 keywords:
 - influencer marketing
 - social media influencers

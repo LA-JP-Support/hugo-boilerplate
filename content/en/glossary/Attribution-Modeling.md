@@ -3,7 +3,7 @@ title: "Attribution Modeling"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "attribution-modeling"
-description: "A method to track which marketing activities (ads, emails, social posts, etc.) lead to sales or sign-ups, helping businesses spend their marketing budget more effectively."
+description: "A method that tracks which marketing activities (ads, emails, social posts, etc.) influence customer purchases or sign-ups, helping businesses understand where to spend their marketing budget most effectively."
 keywords: ["attribution modeling", "marketing attribution", "conversion tracking", "customer journey", "marketing channels"]
 category: "Marketing Analytics"
 type: "glossary"

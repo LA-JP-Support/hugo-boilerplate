@@ -2,7 +2,7 @@
 title: "Authentication"
 date: 2025-12-19
 translationKey: Authentication
-description: "Authentication is the security process of verifying who you are before granting access to a system or service, typically using passwords, security codes, or biometric data."
+description: "Authentication is the security process that verifies your identity before granting access, using passwords, codes, or biometric data like fingerprints."
 keywords:
 - authentication
 - identity verification

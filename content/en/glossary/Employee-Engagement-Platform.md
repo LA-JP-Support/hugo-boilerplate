@@ -2,7 +2,7 @@
 title: "Employee Engagement Platform"
 date: 2025-12-19
 translationKey: Employee-Engagement-Platform
-description: "A digital tool that helps organizations measure and improve how connected and committed employees feel to their work, using surveys, feedback, and analytics to create a better workplace."
+description: "A digital tool that helps organizations understand and strengthen how committed employees feel about their work through surveys, feedback, and data insights."
 keywords:
 - employee engagement platform
 - workforce management

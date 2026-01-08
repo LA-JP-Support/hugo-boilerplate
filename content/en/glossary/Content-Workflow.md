@@ -2,7 +2,7 @@
 title: "Content Workflow"
 date: 2025-12-19
 translationKey: Content-Workflow
-description: "A step-by-step process that guides content creation from initial idea through publication, ensuring quality control and clear team responsibilities across all digital platforms."
+description: "A step-by-step process that guides a team through creating, reviewing, and publishing content across websites and social media, ensuring quality and clear responsibilities."
 keywords:
 - content workflow
 - content management

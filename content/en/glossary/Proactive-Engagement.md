@@ -2,7 +2,7 @@
 title: "Proactive Engagement"
 date: 2025-12-19
 translationKey: Proactive-Engagement
-description: "A business strategy where companies reach out to customers before problems happen, using data and insights to offer timely help, relevant offers, or useful information that strengthens relationships and prevents issues."
+description: "A business approach where companies use customer data to reach out first with helpful offers, information, or support before problems occur, building stronger relationships and preventing issues."
 keywords:
 - proactive engagement
 - customer success

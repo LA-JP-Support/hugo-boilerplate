@@ -2,7 +2,7 @@
 title: "Sales Methodology"
 date: 2025-12-19
 translationKey: Sales-Methodology
-description: "A structured step-by-step guide that helps sales teams consistently convert prospects into customers by providing clear processes for each stage of the sales journey."
+description: "A step-by-step selling framework that helps sales teams consistently turn prospects into customers by providing clear processes and techniques for each stage of the sales journey."
 keywords:
 - sales methodology
 - sales process

@@ -2,7 +2,7 @@
 title: "Content Analytics"
 date: 2025-12-19
 translationKey: Content-Analytics
-description: "Content Analytics is the process of measuring and analyzing how audiences interact with digital content to help organizations improve their content strategy and performance based on real data."
+description: "Content Analytics is the measurement and analysis of how audiences interact with digital content, helping organizations improve their content strategy and performance using real data."
 keywords:
 - content analytics
 - content performance metrics

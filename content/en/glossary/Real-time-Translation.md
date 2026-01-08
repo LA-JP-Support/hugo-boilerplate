@@ -1,7 +1,7 @@
 ---
 title: Real-Time Translation
 translationKey: real-time-translation
-description: "AI software that instantly translates conversations, messages, or documents between languages, allowing people to communicate smoothly even when they speak different languages."
+description: "AI-powered software that instantly converts speech or text between languages during conversations, allowing people who speak different languages to communicate smoothly in real time."
 keywords:
 - real time translation customer
 - translation tools

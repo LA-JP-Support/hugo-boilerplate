@@ -2,7 +2,7 @@
 title: "Touchpoint"
 date: 2025-12-19
 translationKey: Touchpoint
-description: "Any moment when a customer interacts with a brand—whether online, in a store, or by phone—that shapes their impression and experience with the company."
+description: "Any moment when a customer interacts with a brand—online, in a store, or by phone—that shapes their impression and experience."
 keywords:
 - touchpoint
 - customer experience

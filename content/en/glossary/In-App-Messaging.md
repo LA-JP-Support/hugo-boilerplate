@@ -2,7 +2,7 @@
 title: "In-App Messaging"
 date: 2025-12-19
 translationKey: In-App-Messaging
-description: "In-App Messaging is a direct communication method that sends messages to users while they're using an app, delivering personalized content at the right moment to encourage specific actions."
+description: "In-app messaging is a communication tool that delivers personalized messages directly within an app while users are actively using it, designed to encourage specific actions at the right moment."
 keywords:
 - in-app messaging
 - mobile engagement

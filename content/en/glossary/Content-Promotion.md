@@ -2,7 +2,7 @@
 title: "Content Promotion"
 date: 2025-12-19
 translationKey: Content-Promotion
-description: "Content Promotion is the process of sharing and marketing your content across different channels like social media, email, and ads to reach more people and achieve your business goals."
+description: "Content Promotion is the process of sharing and distributing your content across multiple channels like social media, email, and ads to ensure it reaches the right audience and achieves your business goals."
 keywords:
 - content promotion
 - digital marketing

@@ -3,7 +3,7 @@ title: "Engagement Metrics"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "engagement-metrics"
-description: "Engagement Metrics are measurements that show how users interact with websites, apps, and social media—such as clicking, scrolling, and sharing. They help businesses understand if users find their content valuable and what improvements are needed."
+description: "Engagement Metrics are measurements that track how users interact with digital content—such as clicking, scrolling, and sharing—to help businesses understand if their content is valuable and what needs improvement."
 keywords: ["engagement metrics", "user interaction", "conversion rate", "bounce rate", "session duration"]
 category: "Analytics & Content Effectiveness"
 type: "glossary"

@@ -2,7 +2,7 @@
 title: "Quality Score"
 date: 2025-12-19
 translationKey: Quality-Score
-description: "A rating system (1-10) that search engines use to measure how relevant and useful your ads are to users, which affects how often your ads appear and how much you pay per click."
+description: "A rating system search engines use to measure how relevant and useful your ads are to users, which affects ad placement and cost per click."
 keywords:
 - quality score
 - digital advertising

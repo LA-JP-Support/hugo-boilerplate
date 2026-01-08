@@ -2,7 +2,7 @@
 title: "Real-Time Personalization"
 date: 2025-12-19
 translationKey: Real-Time-Personalization
-description: "A technology that instantly customizes website content and recommendations based on what users are doing right now, using AI to adapt their experience in real-time."
+description: "A technology that instantly adjusts website content and recommendations based on what users are doing right now, using AI to create personalized experiences within milliseconds."
 keywords:
 - real-time personalization
 - dynamic content delivery

@@ -3,7 +3,7 @@ title: "Ticket Management"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "ticket-management"
-description: "A system that organizes and tracks customer requests and problems from start to finish, ensuring nothing gets missed and teams can work together to solve issues quickly."
+description: "A system that captures customer requests through multiple channels and organizes them into digital records that teams can track and resolve together from start to finish."
 keywords: ["ticket management", "ticketing system", "help desk software", "customer support", "SLA management"]
 category: "AI Chatbot & Automation"
 type: "glossary"

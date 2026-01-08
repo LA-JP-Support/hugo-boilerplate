@@ -3,7 +3,7 @@ title: 'Model Quantization: A Comprehensive Guide'
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: model-quantization-a
-description: "Model quantization is a technique that reduces the precision of AI model numbers to make them smaller and faster, enabling them to run on phones and edge devices with less memory and power."
+description: "Model Quantization: A technique that reduces the precision of AI model numbers to make them smaller and faster, enabling efficient operation on phones and edge devices with limited memory and power."
 keywords: ["model quantization", "machine learning", "deep learning", "LLMs", "AI optimization"]
 category: AI Infrastructure & Deployment
 type: glossary

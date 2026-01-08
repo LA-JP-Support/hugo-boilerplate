@@ -3,7 +3,7 @@ title: Multimodal AI
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: multimodal
-description: "Multimodal AI is artificial intelligence that processes multiple types of data—like text, images, and audio—together to understand information more completely, similar to how humans use all their senses."
+description: "Multimodal AI is artificial intelligence that processes multiple types of data—such as text, images, and audio—simultaneously to understand information more completely, similar to how humans use all their senses together."
 keywords:
 - Multimodal AI
 - AI models

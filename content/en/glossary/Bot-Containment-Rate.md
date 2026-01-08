@@ -2,7 +2,7 @@
 title: "Bot Containment Rate"
 lastmod: 2025-12-18
 translationKey: "bot-containment-rate"
-description: "The percentage of customer questions your chatbot answers completely on its own, without needing a human agent to take over. It measures how well your automation is working."
+description: "The percentage of customer conversations your chatbot resolves completely on its own, without transferring to a human agent. It measures how effectively your automation handles customer needs."
 keywords: ["Bot Containment Rate", "chatbot performance", "AI chatbot", "customer service automation", "escalation rate"]
 category: "AI Chatbot & Automation"
 type: "glossary"

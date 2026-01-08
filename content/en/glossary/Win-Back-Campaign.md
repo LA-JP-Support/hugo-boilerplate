@@ -2,7 +2,7 @@
 title: "Win-Back Campaign"
 date: 2025-12-19
 translationKey: Win-Back-Campaign
-description: "A marketing strategy to re-engage customers who have stopped buying or using your products, by reaching out with personalized offers and messages to bring them back."
+description: "A marketing effort to win back customers who have stopped buying by sending them personalized offers and messages to encourage them to return."
 keywords:
 - win-back campaign
 - customer retention

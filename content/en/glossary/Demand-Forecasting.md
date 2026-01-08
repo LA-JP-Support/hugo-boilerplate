@@ -2,7 +2,7 @@
 title: "Demand Forecasting"
 date: 2025-12-19
 translationKey: demand-forecasting
-description: "A business process that uses historical data and AI to predict future customer demand, helping companies plan inventory, production, and staffing more effectively."
+description: "A process that uses past sales data and AI to predict what customers will buy in the future, helping businesses decide how much inventory to stock and when to produce goods."
 keywords:
 - demand forecasting
 - predictive analytics

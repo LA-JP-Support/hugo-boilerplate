@@ -2,7 +2,7 @@
 title: "Responsive Design"
 date: 2025-12-19
 translationKey: Responsive-Design
-description: "A web design approach that automatically adjusts website layout and content to fit any screen size, from smartphones to desktop computers, ensuring a great viewing experience for all users."
+description: "A web design method that automatically adjusts website layout to fit any device screen, from phones to computers, so everyone sees it perfectly regardless of what they're using."
 keywords:
 - responsive design
 - mobile-first design

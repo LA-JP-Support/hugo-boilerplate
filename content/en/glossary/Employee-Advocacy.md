@@ -2,7 +2,7 @@
 title: "Employee Advocacy"
 date: 2025-12-19
 translationKey: Employee-Advocacy
-description: "A program that turns employees into brand ambassadors by encouraging them to share company content and positive experiences with their personal networks, creating more authentic and trustworthy marketing."
+description: "A program that encourages employees to share company content and positive workplace experiences on their personal networks, making marketing messages feel more authentic and trustworthy coming from real people."
 keywords:
 - employee advocacy
 - brand ambassadors

@@ -2,7 +2,7 @@
 title: "Content Curation"
 date: 2025-12-19
 translationKey: Content-Curation
-description: "The process of finding, organizing, and sharing existing high-quality content from various sources to provide value to your audience, rather than creating original content from scratch."
+description: "A process of finding and sharing the best existing content from various sources, organized and presented with your own insights to help your audience discover valuable information."
 keywords:
 - content curation
 - digital marketing

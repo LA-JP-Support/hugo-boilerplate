@@ -2,7 +2,7 @@
 title: "Business Automation"
 date: 2025-12-19
 translationKey: Business-Automation
-description: "Technology that handles repetitive business tasks automatically, reducing manual work and helping organizations operate more efficiently across departments."
+description: "Technology that automatically handles repetitive business tasks using software and AI, freeing up employees to focus on more important work."
 keywords:
 - business automation
 - workflow automation

@@ -2,7 +2,7 @@
 title: "Price Optimization"
 date: 2025-12-19
 translationKey: price-optimization
-description: "Price optimization is AI technology that automatically determines the best prices for products by analyzing demand, competition, and customer behavior to maximize profits and sales."
+description: "AI technology that automatically finds the best prices for products by analyzing sales data, customer demand, and competitor prices to maximize profits."
 keywords:
 - price optimization
 - dynamic pricing

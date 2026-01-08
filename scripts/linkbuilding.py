@@ -273,6 +273,56 @@ class LinkBuilder:
         self.page_total_links = 0
         self.page_replacements = 0
         self.existing_links = 0
+        self.current_page_url = None
+    
+    def _extract_page_url(self, soup) -> Optional[str]:
+        """Extract the current page URL from HTML meta tags or canonical link"""
+        # Try canonical link first
+        canonical = soup.find('link', rel='canonical')
+        if canonical and canonical.get('href'):
+            url = canonical.get('href')
+            # Extract path from full URL
+            parsed = urlparse(url)
+            return parsed.path
+        
+        # Try og:url meta tag
+        og_url = soup.find('meta', property='og:url')
+        if og_url and og_url.get('content'):
+            url = og_url.get('content')
+            parsed = urlparse(url)
+            return parsed.path
+        
+        return None
+    
+    def _should_skip_url(self, keyword_url: str) -> bool:
+        """Check if a keyword URL should be skipped (e.g., self-reference)"""
+        if not self.current_page_url or not keyword_url:
+            return False
+        
+        # Normalize URLs for comparison
+        current_normalized = self.current_page_url.rstrip('/')
+        keyword_normalized = keyword_url.rstrip('/')
+        
+        # Skip if keyword URL matches current page URL exactly
+        if current_normalized == keyword_normalized:
+            return True
+        
+        # Also check if keyword URL matches when language prefix is removed
+        # e.g., /ja/blog/article/ should match /blog/article/
+        # or /en/blog/article/ should match /blog/article/
+        if current_normalized.startswith('/ja/') or current_normalized.startswith('/en/'):
+            # Remove language prefix from current URL
+            current_without_lang = '/' + '/'.join(current_normalized.split('/')[2:])
+            if current_without_lang == keyword_normalized:
+                return True
+        
+        # Also check the reverse: if keyword has language prefix but current doesn't
+        if keyword_normalized.startswith('/ja/') or keyword_normalized.startswith('/en/'):
+            keyword_without_lang = '/' + '/'.join(keyword_normalized.split('/')[2:])
+            if current_normalized == keyword_without_lang:
+                return True
+        
+        return False
     
     def should_skip_file(self, file_path: Path) -> bool:
         """Check if a file should be skipped based on its path."""
@@ -393,6 +443,9 @@ class LinkBuilder:
             # Parse HTML
             soup = BeautifulSoup(content, 'html.parser')
             
+            # Extract current page URL from canonical link or meta tags
+            self.current_page_url = self._extract_page_url(soup)
+            
             # Count existing links
             self.existing_links = len(soup.find_all('a'))
             
@@ -490,6 +543,10 @@ class LinkBuilder:
         
         # Check each keyword to see if it matches the entire bold text
         for keyword in self.keywords:
+            # Skip self-referencing URLs
+            if self._should_skip_url(keyword.url):
+                continue
+            
             # Check limits
             if (self.page_replacements >= self.config.max_replacements_per_page or
                 self.page_keyword_counts[keyword.keyword] >= self.config.max_replacements_per_keyword or
@@ -557,6 +614,10 @@ class LinkBuilder:
         last_end = 0
         
         for keyword in self.keywords:
+            # Skip self-referencing URLs
+            if self._should_skip_url(keyword.url):
+                continue
+            
             # Check if we can add more links
             if (self.page_replacements >= self.config.max_replacements_per_page or
                 paragraph_links >= self.config.max_replacements_per_paragraph or

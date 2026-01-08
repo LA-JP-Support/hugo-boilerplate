@@ -3,7 +3,7 @@ title: Continuous Learning (Continual Learning)
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: continuous-learning
-description: "An AI system that learns and improves continuously from new data without forgetting previous knowledge, adapting to changing conditions like humans do over time."
+description: "An AI system that learns and improves from new data over time without forgetting what it already knows, staying useful as conditions change."
 keywords:
 - continuous learning
 - continual learning

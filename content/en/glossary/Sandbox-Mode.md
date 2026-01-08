@@ -1,7 +1,7 @@
 ---
 title: Sandbox Mode
 translationKey: sandbox-mode
-description: "A safe testing space where you can run code or software without affecting your real systems or data. It's like a digital sandbox where developers and security experts can experiment and test freely."
+description: "A safe testing environment where you can run code or software without affecting real systems or data. It's like a digital playground for developers to experiment and test freely."
 keywords:
 - sandbox mode
 - testing environment

@@ -2,7 +2,7 @@
 title: "Peer-to-Peer Support"
 date: 2025-12-19
 translationKey: Peer-to-Peer-Support
-description: "Mutual support system where people with similar experiences help each other by sharing practical advice and emotional understanding, rather than relying on professional experts."
+description: "People with similar experiences helping each other through practical advice and emotional understanding, without needing professional experts."
 keywords:
 - peer-to-peer support
 - community support systems

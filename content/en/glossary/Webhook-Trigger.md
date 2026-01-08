@@ -3,7 +3,7 @@ title: "Webhook Trigger"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "webhook-trigger"
-description: "A webhook trigger is an automated signal that launches workflows when external services send data to your system, enabling real-time connections between different applications without manual action."
+description: "A webhook trigger is an automated signal that activates workflows instantly when external applications send data to your system, enabling real-time connections between different services without manual action."
 keywords: ["webhook trigger", "automation", "AI chatbot", "system integration", "real-time events"]
 category: "AI Chatbot & Automation"
 type: "glossary"

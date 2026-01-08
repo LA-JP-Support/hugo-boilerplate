@@ -2,7 +2,7 @@
 title: "Triggered Messaging"
 date: 2025-12-19
 translationKey: Triggered-Messaging
-description: "Automatic messages sent to customers based on their actions or behaviors, like a reminder after abandoning a shopping cart or a thank-you message after a purchase."
+description: "Automatic messages sent to customers at the right moment based on their actions, like a cart reminder or purchase confirmation, to increase engagement and sales."
 keywords:
 - triggered messaging
 - automated messaging

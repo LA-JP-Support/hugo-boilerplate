@@ -2,7 +2,7 @@
 title: "Attention Mechanism"
 date: 2025-12-19
 translationKey: Attention-Mechanism
-description: "A neural network technique that allows AI models to focus on the most relevant parts of input data when making decisions, similar to how humans concentrate on important information."
+description: "A technique that helps AI models identify and focus on the most important parts of information, similar to how you concentrate on relevant details when reading or listening."
 keywords:
 - attention mechanism
 - transformer architecture

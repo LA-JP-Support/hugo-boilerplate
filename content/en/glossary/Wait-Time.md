@@ -2,7 +2,7 @@
 title: "Wait Time"
 date: 2025-12-19
 translationKey: Wait-Time
-description: "The duration a user or system must wait before receiving a response or service. It's measured to improve performance and user satisfaction across applications."
+description: "The amount of time a user or system must wait before getting a response or service. It's measured to improve how fast systems work and how satisfied users are."
 keywords:
 - wait time
 - system performance

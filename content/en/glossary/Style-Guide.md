@@ -2,7 +2,7 @@
 title: "Style Guide"
 date: 2025-12-19
 translationKey: Style-Guide
-description: "A document that sets rules for how a company writes, designs, and presents its brand across all materials to keep everything looking and sounding consistent."
+description: "A document that sets rules for writing, design, and branding so a company looks and sounds the same everywhere across all its materials and platforms."
 keywords:
 - style guide
 - brand consistency

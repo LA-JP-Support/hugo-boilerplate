@@ -2,7 +2,7 @@
 title: "Social Analytics"
 date: 2025-12-19
 translationKey: Social-Analytics
-description: "Social analytics is the process of collecting and analyzing data from social media to understand how people interact with your brand and content, helping businesses make better marketing decisions."
+description: "Social analytics is the process of collecting and analyzing data from social media platforms to understand how people interact with your brand, helping you make smarter marketing decisions and grow your business."
 keywords:
 - social analytics
 - social media metrics

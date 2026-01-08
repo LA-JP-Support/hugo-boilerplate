@@ -2,7 +2,7 @@
 title: 組織知識
 date: 2025-12-19
 translationKey: Organizational-Knowledge
-description: 組織の知恵を捉えるためのシステム、プロセス、戦略を含む、組織知識管理の包括的なガイド。
+description: "企業や機関内に存在する、文書化された情報と従業員の経験・スキルを合わせた集合的な知識。効率的な運営と競争力を高めるために活用されます。"
 keywords:
 - 組織知識
 - ナレッジマネジメント

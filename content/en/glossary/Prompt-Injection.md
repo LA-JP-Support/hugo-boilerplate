@@ -2,7 +2,7 @@
 title: "Prompt Injection"
 date: 2025-12-19
 translationKey: Prompt-Injection
-description: "A security attack where users trick AI systems by inserting hidden commands into text prompts to override the model's intended behavior or bypass safety protections."
+description: "A security attack where users trick AI systems by inserting hidden commands into text prompts to make the AI ignore its safety rules or perform unintended actions."
 keywords:
 - prompt injection
 - AI security

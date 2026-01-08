@@ -2,7 +2,7 @@
 title: "First Response Time (FRT)"
 date: 2025-12-19
 translationKey: First-Response-Time--FRT-
-description: "The time it takes for a customer to receive an initial response after submitting a support request. It measures how quickly a business acknowledges customer inquiries across email, chat, phone, and social media."
+description: "The time between when a customer contacts support and when they receive an initial response. It measures how quickly a business acknowledges customer inquiries across all communication channels."
 keywords:
 - first response time
 - customer service metrics

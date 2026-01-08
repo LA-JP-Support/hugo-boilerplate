@@ -2,7 +2,7 @@
 title: "SERP (Search Engine Results Page)"
 date: 2025-12-19
 translationKey: SERP--Search-Engine-Results-Page-
-description: "A webpage showing search results that appear when you search on Google or other search engines, displaying links, images, and information relevant to your query."
+description: "A webpage showing search results when you search on Google or other search engines, displaying links, images, and information relevant to your query."
 keywords:
 - SERP features
 - search engine optimization

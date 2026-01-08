@@ -2,7 +2,7 @@
 title: "Industry Analysis"
 date: 2025-12-19
 translationKey: Industry-Analysis
-description: "A systematic examination of a market or industry to understand its competitive landscape, growth potential, and key business factors that influence strategic decisions."
+description: "A research method that examines a market or industry to understand competition, growth opportunities, and key factors affecting business decisions."
 keywords:
 - industry analysis
 - competitive intelligence

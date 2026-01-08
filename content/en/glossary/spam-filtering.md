@@ -3,7 +3,7 @@ title: "Spam Filtering"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "spam-filtering"
-description: "Spam filtering is an automated system that detects and blocks unwanted emails like phishing attempts and malware before they reach your inbox, protecting you from fraud and security threats."
+description: "Spam filtering is an automated system that analyzes incoming emails to detect and block unwanted messages like phishing attempts and malware before they reach your inbox."
 keywords: ["spam filtering", "email security", "phishing", "malware", "DMARC"]
 category: "AI Chatbot & Automation"
 type: "glossary"

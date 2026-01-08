@@ -2,7 +2,7 @@
 title: "Self-Service Ratio"
 date: 2025-12-19
 translationKey: Self-Service-Ratio
-description: "A metric that measures what percentage of customer questions are solved automatically through chatbots, FAQs, or similar tools without needing human help. It shows how well a company's self-service system is working."
+description: "A percentage that shows how many customer questions are answered automatically by chatbots, FAQs, or similar tools instead of by staff. Companies use it to measure how well their self-service system works."
 keywords:
 - self-service ratio
 - customer support metrics

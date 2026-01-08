@@ -2,7 +2,9 @@
 title: Text-to-Speech(音声合成)
 date: 2025-12-19
 translationKey: Text-to-Speech
-description: Text-to-Speech技術の包括的なガイド。音声合成手法、応用分野、メリット、実装のベストプラクティスを網羅しています。
+description: "# Text-to-Speech(音声合成)
+
+書かれたテキストをコンピュータが人間らしい音声に変換する技術。視覚障害者や読書が困難な人がデジタルコンテンツを音声で利用できるようにします。"
 keywords:
 - text-to-speech
 - 音声合成

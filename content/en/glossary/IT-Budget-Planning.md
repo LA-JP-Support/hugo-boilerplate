@@ -2,7 +2,7 @@
 title: "IT Budget Planning"
 date: 2025-12-19
 translationKey: IT-Budget-Planning
-description: "IT Budget Planning is the process of planning and allocating money for an organization's technology needs, such as hardware, software, and staff, to support business goals."
+description: "IT Budget Planning is the process of forecasting and allocating money for an organization's technology needs—such as hardware, software, and staff—to support business goals over a specific period."
 keywords:
 - IT budget planning
 - technology budget management

@@ -2,7 +2,7 @@
 title: "Weight Initialization"
 date: 2025-12-19
 translationKey: Weight-Initialization
-description: "The initial values assigned to a neural network's parameters before training begins, chosen strategically to help the network learn effectively and avoid training problems."
+description: "The starting values given to a neural network's parameters before training, chosen to help the network learn efficiently and avoid problems like slow learning or gradient failures."
 keywords:
 - weight initialization
 - neural networks

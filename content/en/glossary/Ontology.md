@@ -2,7 +2,7 @@
 title: "Ontology"
 date: 2025-12-19
 translationKey: Ontology
-description: "A structured framework that defines concepts, relationships, and rules within a specific field so that computers and people can understand and share information in the same way."
+description: "A shared system that defines what things are and how they relate to each other, so computers and people can understand information the same way."
 keywords:
 - ontology
 - knowledge representation

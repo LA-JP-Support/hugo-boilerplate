@@ -2,7 +2,7 @@
 title: "Microcopy"
 date: 2025-12-19
 translationKey: Microcopy
-description: "Microcopy is the small text elements like button labels, error messages, and instructions that guide users through digital interfaces and help them complete tasks smoothly."
+description: "Microcopy is the small text throughout websites and apps—like button labels, error messages, and instructions—that guides users and helps them complete tasks smoothly."
 keywords:
 - microcopy
 - UX writing

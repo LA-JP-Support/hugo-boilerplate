@@ -3,7 +3,7 @@ title: "Speech Recognition"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "speech-recognition"
-description: "Speech recognition is technology that converts spoken words into written text, enabling computers and devices to understand and respond to human voice commands."
+description: "Speech recognition is technology that converts spoken words into written text, allowing computers and devices to understand and respond to voice commands."
 keywords: ["speech recognition", "ASR", "deep learning", "AI", "transcription"]
 category: "Technology"
 type: "glossary"

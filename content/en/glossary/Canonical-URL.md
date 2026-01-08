@@ -2,7 +2,7 @@
 title: "Canonical URL"
 date: 2025-12-19
 translationKey: Canonical-URL
-description: "A preferred web page version that tells search engines which URL to prioritize when multiple pages have identical content, helping improve search rankings and avoid duplicate content problems."
+description: "A preferred web page address that tells search engines which version to show when multiple pages have the same content, helping improve visibility and avoid ranking problems."
 keywords:
 - canonical URL
 - duplicate content

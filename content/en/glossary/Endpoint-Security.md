@@ -2,7 +2,7 @@
 title: "Endpoint Security"
 date: 2025-12-19
 translationKey: Endpoint-Security
-description: "A security approach that protects individual devices like computers and phones by detecting and blocking cyber threats at the device level rather than just at the network edge."
+description: "A security system that protects individual devices like computers and phones by detecting and blocking cyber threats directly on each device rather than relying solely on network-level protection."
 keywords:
 - endpoint security
 - endpoint protection

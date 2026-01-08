@@ -3,7 +3,7 @@ title: Edge AI
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: edge
-description: "AI technology that processes data directly on local devices instead of sending it to distant servers, enabling faster and more private decision-making."
+description: "AI technology that runs directly on your device—like a smartphone or camera—to analyze data instantly and privately, without sending information to distant servers."
 keywords: ["Edge AI", "Edge Computing", "Artificial Intelligence", "IoT", "Machine Learning"]
 category: AI Infrastructure & Deployment
 type: glossary

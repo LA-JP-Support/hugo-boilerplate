@@ -1,8 +1,6 @@
 ---
-url: "/ja/glossary/Customer-Experience---CX-/"
----
----
 title: カスタマーエクスペリエンス(CX)
+url: "/ja/glossary/Customer-Experience---CX-/"
 lastmod: '2025-12-19'
 date: '2025-12-19'
 translationKey: customer-experience-cx
@@ -18,7 +16,6 @@ type: glossary
 draft: false
 e-title: Customer Experience (CX)
 term: カスタマーエクスペリエンス
-url: "/ja/glossary/Customer-Experience---CX-/"
 ---
 ## カスタマーエクスペリエンス(CX)とは?
 カスタマーエクスペリエンス(CX)とは、顧客が企業やブランドとのあらゆるチャネル、カスタマージャーニーのあらゆる段階における全ての相互作用に基づいて形成する認識として定義されます。McKinseyによれば、CXは「企業や組織が顧客を第一に考え、顧客のジャーニーを管理し、ニーズに応えるために行うすべてのこと」です。

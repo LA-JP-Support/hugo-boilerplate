@@ -2,7 +2,7 @@
 title: "Social Media Integration"
 date: 2025-12-19
 translationKey: Social-Media-Integration
-description: "A technology that connects your website or app with social media platforms, allowing users to log in with their social accounts and share content directly."
+description: "A technology that connects your website or app to social media platforms, letting users log in with their social accounts and share content directly."
 keywords:
 - social media integration
 - API connectivity

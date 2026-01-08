@@ -2,7 +2,7 @@
 title: "Technical Blog"
 date: 2025-12-19
 translationKey: Technical-Blog
-description: "A platform where technology professionals share knowledge through tutorials, code examples, and solutions to help others learn and solve technical problems."
+description: "A website where tech professionals share practical knowledge through tutorials, code examples, and solutions to help others learn and solve technical problems."
 keywords:
 - technical blogging
 - developer content

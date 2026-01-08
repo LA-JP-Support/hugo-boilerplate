@@ -2,7 +2,7 @@
 title: "Prompt Chaining"
 date: 2025-12-19
 translationKey: Prompt-Chaining
-description: "A technique that breaks down complex AI tasks into smaller, connected steps where each answer feeds into the next question, making it easier to solve difficult problems."
+description: "A method of breaking down complex problems into smaller steps, where each AI response becomes the input for the next question, helping solve difficult tasks more reliably."
 keywords:
 - prompt chaining
 - AI workflow automation

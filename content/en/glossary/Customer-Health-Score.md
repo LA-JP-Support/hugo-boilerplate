@@ -2,7 +2,7 @@
 title: "Customer Health Score"
 date: 2025-12-19
 translationKey: Customer-Health-Score
-description: "A numerical rating that measures how healthy and successful a customer relationship is, helping teams spot problems early and take action before customers leave."
+description: "A numerical score that measures how healthy a customer relationship is by tracking their activity and engagement, helping teams identify problems early and prevent customers from leaving."
 keywords:
 - customer health score
 - customer success metrics

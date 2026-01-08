@@ -2,7 +2,7 @@
 title: "Subject Matter Expert (SME)"
 date: 2025-12-19
 translationKey: Subject-Matter-Expert--SME-
-description: "A specialist with deep knowledge in a specific field who provides expert advice and guidance to help organizations make better decisions and solve complex problems."
+description: "A specialist with deep knowledge in a specific field who provides expert advice to help organizations solve problems and make better decisions."
 keywords:
 - subject matter expert
 - SME roles

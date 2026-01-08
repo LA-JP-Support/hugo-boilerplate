@@ -2,7 +2,7 @@
 title: "PBX (Private Branch Exchange)"
 date: 2025-12-19
 translationKey: PBX--Private-Branch-Exchange-
-description: "A private telephone system that connects employees within a company and manages calls to external numbers, reducing costs by sharing phone lines instead of giving each person their own."
+description: "A private telephone system that connects employees within a company and shares external phone lines, reducing costs while managing all incoming and outgoing calls."
 keywords:
 - PBX system
 - private branch exchange

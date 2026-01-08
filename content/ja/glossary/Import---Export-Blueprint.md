@@ -1,8 +1,6 @@
 ---
-url: "/ja/glossary/Import---Export-Blueprint/"
----
----
 title: ブループリントのインポート/エクスポート
+url: "/ja/glossary/Import---Export-Blueprint/"
 translationKey: import-export-blueprint
 description: ブループリントのインポート/エクスポートは、自動化やチャットボットのロジックをファイル(JSONまたはYAML)として保存し、プラットフォームや環境を超えた共有、バックアップ、移行、バージョン管理を可能にします。
 keywords:
@@ -18,7 +16,6 @@ lastmod: '2025-12-19'
 draft: false
 e-title: Import / Export Blueprint
 term: ブループリントのインポート/エクスポート
-url: "/ja/glossary/Import---Export-Blueprint/"
 ---
 ## Import / Export Blueprintとは?
 Import / Export Blueprintとは、自動化シナリオやチャットボットの全体的なロジック、設定、構造(すべての設定、モジュール、フロー、ロジックを含む)を標準化されたファイル—一般的にはJSON形式またはYAML形式—として保存するプロセスです。これにより、ユーザーはこれらのブループリントを異なるアカウント、環境、またはプラットフォーム間で共有、バックアップ、移行、または移動することができます。

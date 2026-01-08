@@ -2,7 +2,7 @@
 title: "Customer Callback"
 date: 2025-12-19
 translationKey: Customer-Callback
-description: "A service that lets customers request a callback instead of waiting on hold, so they can hang up and receive a call back when an agent is ready to help."
+description: "A service that lets customers skip waiting on hold by requesting a callback, so they can hang up and receive a call back when an agent is available."
 keywords:
 - customer callback
 - call center technology

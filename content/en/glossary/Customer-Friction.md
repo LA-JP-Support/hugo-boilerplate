@@ -2,7 +2,7 @@
 title: "Customer Friction"
 date: 2025-12-19
 translationKey: Customer-Friction
-description: "Customer Friction: Any obstacle or difficulty customers face when interacting with a business, such as confusing checkout processes, slow websites, or poor customer service. Removing these barriers improves satisfaction and sales."
+description: "Customer Friction: Any obstacle customers encounter when using a business, such as slow websites, confusing checkout, or poor service. Removing these barriers improves satisfaction and sales."
 keywords:
 - customer friction
 - user experience optimization

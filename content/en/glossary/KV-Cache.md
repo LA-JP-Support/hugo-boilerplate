@@ -3,7 +3,7 @@ title: "KV Cache"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "kv-cache"
-description: "A memory storage technique that speeds up AI text generation by reusing previously calculated information instead of recalculating it for each new word."
+description: "A memory technique that speeds up AI text generation by saving and reusing calculations from previous words instead of redoing them for each new word."
 keywords: ["KV Cache", "LLMs", "Transformer models", "inference optimization", "token generation"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

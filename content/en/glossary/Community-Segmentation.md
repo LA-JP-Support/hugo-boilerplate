@@ -2,7 +2,7 @@
 title: "Community Segmentation"
 date: 2025-12-19
 translationKey: Community-Segmentation
-description: "Community Segmentation is the practice of dividing a community into smaller groups based on shared characteristics or behaviors, allowing organizations to send more relevant messages and offers to each group."
+description: "Community Segmentation is dividing a community into smaller groups based on shared traits or behaviors, so organizations can send more targeted messages and offers that matter to each group."
 keywords:
 - community segmentation
 - audience targeting

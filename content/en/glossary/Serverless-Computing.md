@@ -3,7 +3,7 @@ title: "Serverless Computing"
 date: 2025-12-18
 lastmod: 2025-12-18
 translationKey: "serverless-computing"
-description: "A cloud service where you write code without managing servers, paying only for what you use while the provider handles all the technical infrastructure automatically."
+description: "A cloud service where developers write code without managing servers, with the cloud provider automatically handling all infrastructure while you pay only for actual usage."
 keywords: ["serverless computing", "cloud computing", "FaaS", "BaaS", "AWS Lambda"]
 category: "AI Infrastructure & Deployment"
 type: "glossary"

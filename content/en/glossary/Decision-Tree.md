@@ -2,7 +2,7 @@
 title: "Decision Tree"
 date: 2025-12-19
 translationKey: Decision-Tree
-description: "A machine learning algorithm that makes predictions by asking a series of yes-or-no questions about data, organizing them like a flowchart to reach a final answer."
+description: "A machine learning model that makes predictions by asking a series of yes-or-no questions about data, organized like a flowchart that anyone can easily understand and follow."
 keywords:
 - decision tree
 - machine learning

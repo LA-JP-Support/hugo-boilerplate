@@ -2,7 +2,7 @@
 title: "User Groups"
 date: 2025-12-19
 translationKey: User-Groups
-description: "A collection of user accounts grouped together so administrators can manage permissions and access rights for multiple people at once, rather than one by one."
+description: "A way to organize user accounts into groups so administrators can manage permissions and access for multiple people at once instead of individually."
 keywords:
 - user groups
 - access control

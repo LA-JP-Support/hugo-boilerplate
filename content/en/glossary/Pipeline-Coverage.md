@@ -2,7 +2,7 @@
 title: "Pipeline Coverage"
 date: 2025-12-19
 translationKey: Pipeline-Coverage
-description: "A metric that measures how thoroughly automated software delivery processes test and validate code changes across different environments, configurations, and real-world scenarios before release."
+description: "A metric that measures how thoroughly automated software delivery processes test code changes across different environments and real-world scenarios before release."
 keywords:
 - pipeline coverage
 - CI/CD metrics

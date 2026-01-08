@@ -2,7 +2,7 @@
 title: "Agent Utilization"
 date: 2025-12-19
 translationKey: Agent-Utilization
-description: "Agent Utilization is a metric that measures what percentage of their work time contact center employees spend actively helping customers. It helps managers check if they have the right number of staff and if work is distributed fairly."
+description: "Agent Utilization is the percentage of time contact center employees spend actively helping customers compared to their total work time. It helps managers determine if they have enough staff and if work is distributed efficiently."
 keywords:
 - agent utilization
 - workforce optimization

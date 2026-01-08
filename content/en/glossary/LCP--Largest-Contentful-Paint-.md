@@ -2,7 +2,7 @@
 title: "LCP (Largest Contentful Paint)"
 date: 2025-12-19
 translationKey: LCP--Largest-Contentful-Paint-
-description: "A web performance metric that measures how quickly the largest content on a page becomes visible to users, directly affecting their first impression and engagement."
+description: "A web performance metric that measures how quickly the largest content on a page becomes visible, helping websites provide a better user experience and faster loading perception."
 keywords:
 - largest contentful paint
 - core web vitals

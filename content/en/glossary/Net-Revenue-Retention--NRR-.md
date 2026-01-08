@@ -2,7 +2,7 @@
 title: "Net Revenue Retention (NRR)"
 date: 2025-12-19
 translationKey: Net-Revenue-Retention--NRR-
-description: "A metric that measures how much revenue a company keeps and grows from existing customers through upgrades and additional purchases, minus losses from cancellations and downgrades."
+description: "A percentage that shows how much revenue a company keeps and grows from existing customers through upgrades, minus losses from cancellations. It helps measure business health in subscription-based companies."
 keywords:
 - net revenue retention
 - NRR metric

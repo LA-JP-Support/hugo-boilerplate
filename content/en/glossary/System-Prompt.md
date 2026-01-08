@@ -2,7 +2,7 @@
 title: "System Prompt"
 date: 2025-12-19
 translationKey: System-Prompt
-description: "A set of foundational instructions that define how an AI system behaves, communicates, and responds to users. System prompts work behind the scenes to ensure consistent and reliable AI interactions."
+description: "A set of foundational instructions that define how an AI system behaves and responds. System prompts work behind the scenes to ensure the AI stays consistent, reliable, and safe across all interactions."
 keywords:
 - system prompt
 - AI prompt engineering

@@ -2,7 +2,7 @@
 title: "Unified Communications"
 date: 2025-12-19
 translationKey: Unified-Communications
-description: "A unified platform that combines phone calls, video meetings, messaging, and file sharing into one easy-to-use interface for seamless workplace communication."
+description: "A single platform that combines calls, video meetings, messages, and file sharing so teams can communicate easily from anywhere."
 keywords:
 - unified communications
 - UC platforms

@@ -2,7 +2,7 @@
 title: "Web Accessibility Standards"
 date: 2025-12-19
 translationKey: Web-Accessibility-Standards
-description: "Guidelines that ensure websites work for everyone, including people with disabilities, by making content perceivable, operable, and understandable for all users."
+description: "Web Accessibility Standards are guidelines that make websites usable for everyone, including people with disabilities, by ensuring content is easy to perceive, navigate, and understand."
 keywords:
 - web accessibility standards
 - WCAG guidelines

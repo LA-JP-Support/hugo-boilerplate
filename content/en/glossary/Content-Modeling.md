@@ -2,7 +2,7 @@
 title: "Content Modeling"
 date: 2025-12-19
 translationKey: Content-Modeling
-description: "A blueprint for organizing digital content that defines what types of content you create, how they connect to each other, and how they should be structured and reused across different platforms."
+description: "A system for organizing digital content by defining what types of content you create, how they relate to each other, and how they should be structured so they can be reused across different platforms."
 keywords:
 - content modeling
 - content structure

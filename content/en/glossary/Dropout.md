@@ -2,7 +2,7 @@
 title: "Dropout"
 date: 2025-12-19
 translationKey: Dropout
-description: "A training technique that randomly disables some neurons to prevent neural networks from memorizing data and improve their ability to work with new, unseen information."
+description: "A training technique that randomly disables some neurons during learning to prevent AI models from memorizing data and help them work better with new information."
 keywords:
 - dropout regularization
 - neural network overfitting

@@ -2,7 +2,7 @@
 title: "Content Migration"
 date: 2025-12-19
 translationKey: Content-Migration
-description: "Content Migration is the process of moving digital content, data, and files from one platform or system to another while keeping everything organized and working properly."
+description: "Content migration is the process of transferring digital content, data, and files from one system to another while preserving their organization and functionality."
 keywords:
 - content migration
 - data transfer

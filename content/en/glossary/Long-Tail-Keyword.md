@@ -2,7 +2,7 @@
 title: "Long-Tail Keyword"
 date: 2025-12-19
 translationKey: Long-Tail-Keyword
-description: "A specific search phrase with 3+ words that targets people looking for exactly what you offer, making it easier to rank for and more likely to attract customers."
+description: "A specific search phrase with 3+ words that targets people looking for exactly what you offer, making it easier to rank for and attract qualified customers."
 keywords:
 - long-tail keyword
 - SEO strategy

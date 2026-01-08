@@ -2,7 +2,7 @@
 title: "Personalization Engine"
 date: 2025-12-19
 translationKey: Personalization-Engine
-description: "A software system that uses AI to analyze user behavior and automatically show each person customized content, products, or recommendations tailored to their interests."
+description: "A software system that uses AI to learn what each user likes and automatically shows them personalized content, products, and recommendations in real time."
 keywords:
 - personalization engine
 - user experience customization

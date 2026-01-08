@@ -2,7 +2,7 @@
 title: "Brand Storytelling"
 date: 2025-12-19
 translationKey: Brand-Storytelling
-description: "Brand storytelling is a marketing approach that uses narratives to communicate a company's values and mission, creating emotional connections with customers rather than just promoting products."
+description: "Brand storytelling is a marketing method that uses compelling narratives to communicate a company's values and purpose, creating emotional connections with customers rather than simply promoting products."
 keywords:
 - brand storytelling
 - narrative marketing

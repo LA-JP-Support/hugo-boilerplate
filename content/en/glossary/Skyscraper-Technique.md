@@ -2,7 +2,7 @@
 title: "Skyscraper Technique"
 date: 2025-12-19
 translationKey: Skyscraper-Technique
-description: "A content marketing strategy where you find popular articles in your field, create better versions with more information and improved design, then reach out to sites that linked to the originals to share your superior content."
+description: "A content marketing strategy where you identify popular articles in your field, create better versions with more information and improved design, then contact websites that linked to the originals to share your superior content."
 keywords:
 - skyscraper technique
 - content marketing

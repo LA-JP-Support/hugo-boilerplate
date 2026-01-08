@@ -2,7 +2,7 @@
 title: "Pillar Page"
 date: 2025-12-19
 translationKey: Pillar-Page
-description: "A comprehensive guide page that serves as the main hub for a broad topic, with links to related detailed articles, helping search engines and readers understand your site's expertise."
+description: "A comprehensive guide that covers a broad topic in detail and links to related articles, helping search engines understand your site's expertise on that subject."
 keywords:
 - pillar page
 - content marketing

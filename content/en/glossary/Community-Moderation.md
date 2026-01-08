@@ -2,7 +2,7 @@
 title: "Community Moderation"
 date: 2025-12-19
 translationKey: Community-Moderation
-description: "The process of monitoring and managing user content and interactions in online communities to keep them safe, respectful, and free from harassment or misinformation."
+description: "The process of monitoring and managing user content and interactions in online communities to maintain a safe, respectful, and engaging environment free from harassment and misinformation."
 keywords:
 - community moderation
 - content moderation

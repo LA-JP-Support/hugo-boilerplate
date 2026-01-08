@@ -2,7 +2,7 @@
 title: "Jitter"
 date: 2025-12-19
 translationKey: Jitter
-description: "Jitter is the variation in timing delays when data travels through networks or digital systems, causing packets to arrive at slightly different times than expected. This inconsistency can reduce quality in real-time applications like video calls and online gaming."
+description: "The variation in timing delays when data packets travel through networks, causing them to arrive at slightly different times and reducing quality in real-time applications like video calls and online gaming."
 keywords:
 - jitter
 - network latency

@@ -2,7 +2,7 @@
 title: "Event-Driven Architecture"
 date: 2025-12-19
 translationKey: Event-Driven-Architecture
-description: "A software design pattern where system components communicate through events rather than direct calls, enabling flexible and responsive systems that can handle many operations simultaneously."
+description: "A software design pattern where system components communicate through events instead of direct calls, allowing systems to respond quickly and handle many operations at once."
 keywords:
 - event-driven architecture
 - microservices

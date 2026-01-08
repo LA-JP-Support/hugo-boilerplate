@@ -2,7 +2,7 @@
 title: "Fine-Tuning"
 date: 2025-12-19
 translationKey: Fine-Tuning
-description: "Fine-tuning is a machine learning technique that takes a pre-trained model and adapts it to work well on a specific task, using less data and computing power than training from scratch."
+description: "A machine learning technique that adapts a pre-trained model to perform well on a specific task, using less data and computing power than training from scratch."
 keywords:
 - fine-tuning
 - transfer learning

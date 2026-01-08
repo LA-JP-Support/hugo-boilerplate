@@ -2,7 +2,7 @@
 title: "Conversion Tracking"
 date: 2025-12-19
 translationKey: Conversion-Tracking
-description: "A system that monitors and measures specific user actions on websites, such as purchases or sign-ups, to help businesses understand how effective their marketing campaigns are."
+description: "A technology that records what customers do on your website—like making a purchase or signing up—so businesses can measure how well their marketing campaigns work."
 keywords:
 - conversion tracking
 - digital analytics

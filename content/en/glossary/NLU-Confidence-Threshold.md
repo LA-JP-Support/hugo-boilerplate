@@ -1,7 +1,7 @@
 ---
 title: "NLU Confidence Threshold"
 translationKey: "nlu-confidence-threshold"
-description: "A minimum confidence score that an AI chatbot uses to decide whether it correctly understood a user's request. If the score is too low, it asks for clarification instead of guessing wrong."
+description: "A minimum confidence score that determines whether an AI chatbot understood a user's request correctly. If the score falls below this threshold, the system asks for clarification instead of making a wrong guess."
 keywords: ["NLU confidence threshold", "natural language understanding", "confidence scores", "chatbot", "intent classification"]
 category: "AI Chatbot & Automation"
 type: "glossary"

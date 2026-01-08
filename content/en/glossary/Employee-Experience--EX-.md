@@ -2,7 +2,7 @@
 title: "Employee Experience (EX)"
 date: 2025-12-19
 translationKey: Employee-Experience--EX-
-description: "Employee Experience (EX) is the overall journey and feeling an employee has while working at a company, shaped by their interactions with colleagues, tools, workspace, and management from hiring through departure."
+description: "Employee Experience (EX) is the overall journey and feeling an employee has throughout their time at a company, shaped by interactions with colleagues, tools, workspace, and management from hiring to departure."
 keywords:
 - employee experience
 - workplace culture

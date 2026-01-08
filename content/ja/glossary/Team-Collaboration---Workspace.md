@@ -1,8 +1,6 @@
 ---
-url: "/ja/glossary/Team-Collaboration---Workspace/"
----
----
 title: チーム コラボレーション / ワークスペース
+url: "/ja/glossary/Team-Collaboration---Workspace/"
 date: '2025-12-19'
 lastmod: '2025-12-19'
 translationKey: team-collaboration-workspace
@@ -18,7 +16,6 @@ type: glossary
 draft: false
 e-title: Team Collaboration / Workspace
 term: チーム コラボレーション / ワークスペース
-url: "/ja/glossary/Team-Collaboration---Workspace/"
 ---
 ## チームコラボレーション / ワークスペースとは
 チームコラボレーション / ワークスペースとは、同じ組織内の複数のユーザーが共有ドキュメント、プロセス、または自動化されたワークフローに対してリアルタイムで協働作業を行うことを可能にするデジタル環境です。AI Chatbot & Automationの文脈において、これらのプラットフォームとツールは、協働編集、自動化されたタスクフロー、コミュニケーション、集団的意思決定をサポートし、すべてが安全で管理されたデジタル空間内で行われます。

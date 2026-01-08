@@ -2,7 +2,7 @@ keyword,normalized,title,url,description,priority,variation_type,exact_match
 ITIL – Information Technology Infrastructure Library(ITインフラストラクチャライブラリ),itil – information technology infrastructure library(itインフラストラクチャライブラリ),ITIL – Information Technology Infrastructure Library(ITインフラストラクチャライブラリ),/ja/glossary/ITIL/,ITIL(Information Technology Infrastructure Library)について解説します。ITサービスマネジメントの主要なフレームワークとして、その歴史、原則、プラクティス、認定資格、およびメリットを学びましょう。,1142,exact,true
 EdTech Personalized Learning（EdTechパーソナライズドラーニング）,edtech personalized learning（edtechパーソナライズドラーニング）,EdTech Personalized Learning（EdTechパーソナライズドラーニング）,/ja/glossary/EdTech-Personalized-Learning/,AI駆動の教育テクノロジーは、データ駆動の洞察を通じて従来の教育を変革し、個々の学生のニーズに合わせて学習パスを適応させます。,1098,exact,true
 Integration Platform as a Service (iPaaS),integration platform as a service (ipaas),Integration Platform as a Service (iPaaS),/ja/glossary/Integration-Platform-as-a-Service--iPaaS-/,iPaaSプラットフォームの包括的ガイド。クラウドベースの統合ソリューション、API管理、データ変換、エンタープライズ接続について解説します。,1082,exact,true
-SAML(Security Assertion Markup Language),saml(security assertion markup language),SAML(Security Assertion Markup Language),/ja/glossary/SAML--Security-Assertion-Markup-Language-/,SAML認証プロトコルの包括的なガイド。安全なシングルサインオンソリューションの実装、メリット、ユースケース、ベストプラクティスを網羅しています。,1080,exact,true
+SAML(Security Assertion Markup Language),saml(security assertion markup language),SAML(Security Assertion Markup Language),/ja/glossary/SAML--Security-Assertion-Markup-Language-/,一度のログインで複数のアプリケーションにアクセスできる、企業向けの安全な認証システム。,1080,exact,true
 FinTech Fraud Detection（フィンテック不正検知）,fintech fraud detection（フィンテック不正検知）,FinTech Fraud Detection（フィンテック不正検知）,/ja/glossary/FinTech-Fraud-Detection/,AIと機械学習を使用して不正な金融取引をリアルタイムで特定・防止するフィンテック不正検知システムの包括的ガイド。,1070,exact,true
 RAG(Retrieval-Augmented Generation),rag(retrieval-augmented generation),RAG(Retrieval-Augmented Generation),/ja/glossary/RAG/,RAG(Retrieval-Augmented Generation)は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。,1070,exact,true
 Contact Lens for Amazon Connect,contact lens for amazon connect,Contact Lens for Amazon Connect,/ja/glossary/Contact-Lens-for-Amazon-Connect/,Contact Lens for Amazon Connectは、Amazon Connect向けの機械学習駆動型会話分析およびコンプライアンススイートです。文字起こし、感情分析、データ編集などの機能を提供します。,1062,exact,true
@@ -13,7 +13,7 @@ Bring Your Own Carrier (BYOC),bring your own carrier (byoc),Bring Your Own Carri
 Code Interpreter（コードインタープリター）,code interpreter（コードインタープリター）,Code Interpreter（コードインタープリター）,/ja/glossary/Code-Interpreter/,会話中にリアルタイムでコードを書き、実行し、デバッグするAIツール。インタラクティブなプログラミングとデータ分析を可能にします。,1058,exact,true
 フォールバック機構(Fallback Mechanism),フォールバック機構(fallback mechanism),フォールバック機構(Fallback Mechanism),/ja/glossary/Fall-back-Mechanism/,AIチャットボットにおけるフォールバック機構は、ボットがリクエストを解釈または実行できない場合に、会話をリダイレクト、明確化、またはエスカレーションすることで継続性を確保します。,1058,exact,true
 FCP (First Contentful Paint),fcp (first contentful paint),FCP (First Contentful Paint),/ja/glossary/FCP--First-Contentful-Paint-/,ユーザーがリンクをクリックした後、ウェブページ上にコンテンツが最初に表示されるまでの速度を測定するウェブパフォーマンス指標で、ユーザーの第一印象とエンゲージメントに影響を与えます。,1056,exact,true
-HIPAA(医療保険の相互運用性と説明責任に関する法律),hipaa(医療保険の相互運用性と説明責任に関する法律),HIPAA(医療保険の相互運用性と説明責任に関する法律),/ja/glossary/HIPAA--Health-Insurance-Portability-/,プライバシー、セキュリティ、相互運用性要件、コンプライアンス戦略、実装のベストプラクティスをカバーする、HIPAA規制の包括的なガイド。,1056,exact,true
+HIPAA(医療保険の相互運用性と説明責任に関する法律),hipaa(医療保険の相互運用性と説明責任に関する法律),HIPAA(医療保険の相互運用性と説明責任に関する法律),/ja/glossary/HIPAA--Health-Insurance-Portability-/,患者の医療情報を保護するため、米国の医療機関が守るべき法律。転職時の保険継続と医療詐欺防止も目的としています。,1056,exact,true
 Infrastructure as Code (IaC),infrastructure as code (iac),Infrastructure as Code (IaC),/ja/glossary/Infrastructure-as-Code--IaC-/,Infrastructure as Code(IaC)は、ネットワーク、仮想マシン、ロードバランサーなどのITインフラストラクチャをコードと自動化を使用して定義・管理する手法です。そのメリット、ツール、ベストプラクティスについて解説します。,1056,exact,true
 MCP (Model Context Protocol),mcp (model context protocol),MCP (Model Context Protocol),/ja/glossary/MCP--Model-Context-Protocol-/,Model Context Protocol (MCP) の包括的ガイド - AIモデルと外部システム統合のための標準化された通信フレームワーク。,1056,exact,true
 SaaS(Software as a Service),saas(software as a service),SaaS(Software as a Service),/ja/glossary/SaaS--Software-as-a-Service-/,インターネット経由でサブスクリプション形式で提供されるソフトウェアで、インストールやメンテナンスが不要です。ユーザーは任意のデバイスからいつでも最新バージョンにアクセスできます。,1054,exact,true
@@ -39,6 +39,7 @@ Fact-Score (FActScore),fact-score (factscore),Fact-Score (FActScore),/ja/glossar
 LLM as Judge(LLMによる評価),llm as judge(llmによる評価),LLM as Judge(LLMによる評価),/ja/glossary/LLM-as-Judge/,LLM-as-a-Judge(LaaJ)は、LLMが他のLLMの出力を評価する手法です。スケーラブルで繊細なAI評価のための定義、手法、ベストプラクティス、ユースケースについて解説します。,1044,exact,true
 マイクロサービスアーキテクチャ:包括的ガイド,マイクロサービスアーキテクチャ:包括的ガイド,マイクロサービスアーキテクチャ:包括的ガイド,/ja/glossary/Microservices/,API Gateway、Bounded Context、CQRSなど、マイクロサービスアーキテクチャの重要な概念、パターン、テクノロジーを網羅した包括的な用語集をご覧ください。,1044,exact,true
 サブジェクト・マター・エキスパート(SME),サブジェクト・マター・エキスパート(sme),サブジェクト・マター・エキスパート(SME),/ja/glossary/Subject-Matter-Expert--SME-/,サブジェクト・マター・エキスパート(SME)の包括的ガイド - 役割、責任、メリット、および専門知識を活用するためのベストプラクティス。,1044,exact,true
+チーム コラボレーション / ワークスペース,チーム コラボレーション / ワークスペース,チーム コラボレーション / ワークスペース,/ja/glossary/Team-Collaboration---Workspace/,チーム コラボレーション / ワークスペースは、複数のユーザーが共有ドキュメント、プロセス、自動化されたワークフローに対してリアルタイムで作業できるデジタル環境です。多くの場合、AIによって機能が強化されています。,1044,exact,true
 CDN(コンテンツデリバリーネットワーク),cdn(コンテンツデリバリーネットワーク),CDN(コンテンツデリバリーネットワーク),/ja/glossary/CDN--Content-Delivery-Network-/,コンテンツデリバリーネットワーク(CDN)の包括的ガイド - アーキテクチャ、メリット、実装戦略、グローバルコンテンツ配信のベストプラクティスを解説します。,1042,exact,true
 カスタマーデータプラットフォーム(CDP),カスタマーデータプラットフォーム(cdp),カスタマーデータプラットフォーム(CDP),/ja/glossary/Customer-Data-Platform--CDP-/,カスタマーデータプラットフォーム(CDP)の包括的ガイド - 統合された顧客データ管理、リアルタイムパーソナライゼーション、オムニチャネルマーケティングソリューション。,1042,exact,true
 従業員ネットプロモータースコア(eNPS),従業員ネットプロモータースコア(enps),従業員ネットプロモータースコア(eNPS),/ja/glossary/Employee-Net-Promoter-Score--eNPS-/,従業員ネットプロモータースコア(eNPS)の包括的ガイド - 測定方法論、実装戦略、および組織のためのベストプラクティス。,1042,exact,true
@@ -52,22 +53,24 @@ Google Search Console,google search console,Google Search Console,/ja/glossary/G
 ブレイン・コンピュータ・インターフェース,ブレイン・コンピュータ・インターフェース,ブレイン・コンピュータ・インターフェース,/ja/glossary/Brain-Computer-Interface/,ブレイン・コンピュータ・インターフェース技術、応用分野、実装方法、および神経制御システムの将来的な発展に関する包括的なガイド。,1040,exact,true
 畳み込みニューラルネットワーク(CNN),畳み込みニューラルネットワーク(cnn),畳み込みニューラルネットワーク(CNN),/ja/glossary/Convolutional-Neural-Network--CNN-/,CNNの包括的ガイド:ディープラーニング画像処理タスクのためのアーキテクチャ、応用、メリット、実装のベストプラクティスを解説します。,1040,exact,true
 エンティティ抽出（固有表現認識、NER）,エンティティ抽出（固有表現認識、ner）,エンティティ抽出（固有表現認識、NER）,/ja/glossary/Entity-Extraction/,エンティティ抽出（NER）は、非構造化テキストから人名、組織名、日付などの重要な情報を識別・分類する自然言語処理技術です。これにより、テキストデータを構造化データに変換し、分析や自動化に活用できます。,1040,exact,true
+エラーハンドラー / Try-Catch,エラーハンドラー / try-catch,エラーハンドラー / Try-Catch,/ja/glossary/Error-Handler---Try-Catch/,エラーハンドラー(多くの場合Try-Catchブロック)は、自動化やAIチャットボットにおける予期しない障害を管理し、クラッシュを防ぎ、制御された復旧やログ記録を可能にします。,1040,exact,true
 コミュニティにおけるゲーミフィケーション,コミュニティにおけるゲーミフィケーション,コミュニティにおけるゲーミフィケーション,/ja/glossary/Gamification-in-Communities/,コミュニティにおけるゲーミフィケーションの包括的ガイド:メカニクス、メリット、実装戦略、エンゲージメントのベストプラクティス,1040,exact,true
 ヒューマン・イン・ザ・ループ(HITL),ヒューマン・イン・ザ・ループ(hitl),ヒューマン・イン・ザ・ループ(HITL),/ja/glossary/Human-in-the-Loop--HITL-/,ヒューマン・イン・ザ・ループ(HITL)は、AI/MLワークフローに人間の知能を統合し、トレーニング、チューニング、検証を行うことで、精度、安全性、倫理的な意思決定を確保します。,1040,exact,true
 アイデンティティ・アクセス管理（IAM）,アイデンティティ・アクセス管理（iam）,アイデンティティ・アクセス管理（IAM）,/ja/glossary/Identity-and-Access-Management--IAM-/,アイデンティティ・アクセス管理（IAM）システムの包括的ガイド。認証、認可、ガバナンス、セキュリティのベストプラクティスを網羅しています。,1040,exact,true
+ブループリントのインポート/エクスポート,ブループリントのインポート/エクスポート,ブループリントのインポート/エクスポート,/ja/glossary/Import---Export-Blueprint/,ブループリントのインポート/エクスポートは、自動化やチャットボットのロジックをファイル(JSONまたはYAML)として保存し、プラットフォームや環境を超えた共有、バックアップ、移行、バージョン管理を可能にします。,1040,exact,true
 レベニューオペレーション(RevOps),レベニューオペレーション(revops),レベニューオペレーション(RevOps),/ja/glossary/Revenue-Operations--RevOps-/,営業、マーケティング、カスタマーサクセスの各チームを統合し、共有データと整合された目標を通じてプロセスを効率化し、一貫した収益成長を推進するビジネス戦略。,1040,exact,true
 セールスイネーブルメントプラットフォーム,セールスイネーブルメントプラットフォーム,セールスイネーブルメントプラットフォーム,/ja/glossary/Sales-Enablement-Platform/,営業チームにコンテンツ、トレーニング、顧客インサイトを提供し、より効果的な販売活動と迅速な商談成約を実現するテクノロジープラットフォーム。,1040,exact,true
 セキュリティ情報イベント管理(SIEM),セキュリティ情報イベント管理(siem),セキュリティ情報イベント管理(SIEM),/ja/glossary/Security-Information-and-Event-Management--SIEM-/,SIEMシステムの包括的ガイド:リアルタイムセキュリティ監視、脅威検知、コンプライアンス管理、インシデント対応機能について解説します。,1040,exact,true
-Text-to-Speech(音声合成),text-to-speech(音声合成),Text-to-Speech(音声合成),/ja/glossary/Text-to-Speech/,Text-to-Speech技術の包括的なガイド。音声合成手法、応用分野、メリット、実装のベストプラクティスを網羅しています。,1040,exact,true
+Text-to-Speech(音声合成),text-to-speech(音声合成),Text-to-Speech(音声合成),/ja/glossary/Text-to-Speech/,# Text-to-Speech(音声合成),1040,exact,true
 Aggregator（アグリゲーター）,aggregator（アグリゲーター）,Aggregator（アグリゲーター）,/ja/glossary/Aggregator/,複数の実行パスやループからの出力を収集し、単一の結果に統合するノード。効率的なデータ処理を実現します。,1038,exact,true
-コンテンツパフォーマンスダッシュボード,コンテンツパフォーマンスダッシュボード,コンテンツパフォーマンスダッシュボード,/ja/glossary/Content-Performance-Dashboard/,メトリクスの追跡、エンゲージメントの分析、デジタルコンテンツ戦略の効果的な最適化を行うための、コンテンツパフォーマンスダッシュボードの包括的なガイド。,1038,exact,true
+コンテンツパフォーマンスダッシュボード,コンテンツパフォーマンスダッシュボード,コンテンツパフォーマンスダッシュボード,/ja/glossary/Content-Performance-Dashboard/,ウェブサイトやSNSなど複数の媒体からのコンテンツの成果を一つの画面に集めて、リアルタイムで確認・分析するツール。,1038,exact,true
 従業員エンゲージメントプラットフォーム,従業員エンゲージメントプラットフォーム,従業員エンゲージメントプラットフォーム,/ja/glossary/Employee-Engagement-Platform/,従業員エンゲージメントプラットフォームの包括的ガイド:機能、メリット、導入戦略、および労働力最適化のためのベストプラクティス。,1038,exact,true
 ナレッジセンタードサービス (KCS),ナレッジセンタードサービス (kcs),ナレッジセンタードサービス (KCS),/ja/glossary/Knowledge-Centered-Service--KCS-/,カスタマーサポート、ナレッジマネジメント、サービスエクセレンスのためのナレッジセンタードサービス (KCS) 手法の包括的ガイド。,1038,exact,true
 ナレッジホーディング(知識の囲い込み),ナレッジホーディング(知識の囲い込み),ナレッジホーディング(知識の囲い込み),/ja/glossary/Knowledge-Hoarding/,ナレッジホーディングの包括的ガイド:原因、影響、予防戦略、および効果的な知識共有のための組織的ソリューションについて解説します。,1038,exact,true
 Meta Business Suite,meta business suite,Meta Business Suite,/ja/glossary/Meta-Business-Suite/,FacebookとInstagramのアカウント、投稿、広告、パフォーマンスデータを一元管理できる統合ダッシュボード。ビジネスのソーシャルメディア運用を効率化します。,1038,exact,true
 Mistral AI(ミストラルAI),mistral ai(ミストラルai),Mistral AI(ミストラルAI),/ja/glossary/Mistral-AI/,Mistral AIは、オープンウェイト大規模言語モデルとLe Chatアシスタントを開発するフランスの人工知能企業で、OpenAIやAnthropicに対抗するヨーロッパを代表するAI企業として位置づけられています。,1038,exact,true
 ネットレベニューリテンション（NRR）,ネットレベニューリテンション（nrr）,ネットレベニューリテンション（NRR）,/ja/glossary/Net-Revenue-Retention--NRR-/,ネットレベニューリテンション（NRR）の包括的ガイド - 既存顧客からの収益成長を拡張とチャーン分析を通じて測定する、重要なSaaS指標です。,1038,exact,true
-オンラインコミュニティプラットフォーム,オンラインコミュニティプラットフォーム,オンラインコミュニティプラットフォーム,/ja/glossary/Online-Community-Platform/,オンラインコミュニティプラットフォームの包括的なガイド。機能、実装戦略、エンゲージメントの高いデジタルコミュニティを構築するためのベストプラクティスを解説します。,1038,exact,true
+オンラインコミュニティプラットフォーム,オンラインコミュニティプラットフォーム,オンラインコミュニティプラットフォーム,/ja/glossary/Online-Community-Platform/,同じ興味や目的を持つ人々が、オンライン上で繋がり、情報を共有し、一緒に活動できるデジタルの場所です。,1038,exact,true
 パーソナライズドEメールマーケティング,パーソナライズドeメールマーケティング,パーソナライズドEメールマーケティング,/ja/glossary/Personalized-Email-Marketing/,パーソナライズドEメールマーケティングは、AI、機械学習、行動分析を活用して、受信者の好み、行動、予測される関心に基づいて、メールコンテンツ、件名、送信時間、オファーを個別に自動カスタマイズします。これにより、開封率、クリック率、コンバージョン率が劇的に向上し、配信停止を減少させることができます。,1038,exact,true
 RTP (リアルタイム転送プロトコル),rtp (リアルタイム転送プロトコル),RTP (リアルタイム転送プロトコル),/ja/glossary/RTP--Real-time-Transport-Protocol-/,RTP(リアルタイム転送プロトコル)の包括的ガイド - IPネットワーク上でリアルタイムアプリケーションにおいて音声と映像を配信するための標準プロトコルです。,1038,exact,true
 セルフコンシステンシープロンプティング,セルフコンシステンシープロンプティング,セルフコンシステンシープロンプティング,/ja/glossary/Self-Consistency-Prompting/,セルフコンシステンシープロンプティングの包括的ガイド:複数のサンプリングパスを通じてAI推論精度を向上させる高度なテクニック,1038,exact,true
@@ -94,12 +97,16 @@ ITSM(ITサービスマネジメント),itsm(itサービスマネジメント),IT
 SSML(音声合成マークアップ言語),ssml(音声合成マークアップ言語),SSML(音声合成マークアップ言語),/ja/glossary/SSML--Speech-Synthesis-Markup-Language-/,SSMLは、合成音声の出力を制御するためのXMLベースのマークアップ言語で、発音、イントネーション、ペース、感情などを調整でき、主要なTTSプロバイダーで使用されています。,1036,exact,true
 ユーザーフレンドリーインターフェース,ユーザーフレンドリーインターフェース,ユーザーフレンドリーインターフェース,/ja/glossary/User-Friendly-Interface/,情報を明確に整理し、有用なフィードバックを提供し、あらゆるスキルレベルのユーザーが最小限の学習時間で使用できるようにすることで、テクノロジーを使いやすくする設計アプローチ。,1036,exact,true
 ワークフォースマネジメント(WFM),ワークフォースマネジメント(wfm),ワークフォースマネジメント(WFM),/ja/glossary/Workforce-Management--WFM-/,ワークフォースマネジメント(WFM)システム、テクノロジー、および従業員のスケジューリングと生産性を最適化するためのベストプラクティスに関する包括的なガイド。,1036,exact,true
+オラクルフィードバック(正解ラベル),オラクルフィードバック(正解ラベル),オラクルフィードバック(正解ラベル),/ja/glossary/oracle-feedback---ground-truth-labels-/,AI/MLにおけるオラクルフィードバックと正解ラベルについて解説します。Oracle Select AIやHCM Cloudが、モデルのトレーニング、評価、継続的改善のために権威あるデータをどのように活用しているかを学びます。,1036,exact,true
 シナリオ(事前準備された会話フロー),シナリオ(事前準備された会話フロー),シナリオ(事前準備された会話フロー),/ja/glossary/scenarios/,AIチャットボットおよび自動化システムにおけるシナリオ(チャットボットスクリプト)について解説します。その定義、構造(ブロック、イベント、アクション)、作成プロセス、およびビジネスにおけるメリットを学びましょう。,1036,exact,true
 コール・トゥ・アクション（CTA）,コール・トゥ・アクション（cta）,コール・トゥ・アクション（CTA）,/ja/glossary/Call-to-Action--CTA-/,ボタンやリンクなどのマーケティング要素で、購入や登録など特定のアクションをユーザーに促し、ビジネス成果を推進するもの。,1034,exact,true
 チェーン・オブ・ソート・プロンプト,チェーン・オブ・ソート・プロンプト,チェーン・オブ・ソート・プロンプト,/ja/glossary/Chain-of-Thought-Prompting/,言語モデルにおけるAI推論と問題解決能力を向上させるための、チェーン・オブ・ソート・プロンプティング技術の包括的ガイド。,1034,exact,true
+カスタマーエクスペリエンス(CX),カスタマーエクスペリエンス(cx),カスタマーエクスペリエンス(CX),/ja/glossary/Customer-Experience---CX-/,カスタマーエクスペリエンス(CX)について解説します。顧客がブランドと持つすべてのインタラクションの総体であり、ロイヤルティへの影響、主要な構成要素、測定方法、戦略について学びます。,1034,exact,true
 カスタマーサクセスプラットフォーム,カスタマーサクセスプラットフォーム,カスタマーサクセスプラットフォーム,/ja/glossary/Customer-Success-Platform/,カスタマーサクセスプラットフォームの包括的ガイド - 機能、メリット、導入戦略、顧客維持を最大化するためのベストプラクティスを解説します。,1034,exact,true
 敵対的生成ネットワーク (GAN),敵対的生成ネットワーク (gan),敵対的生成ネットワーク (GAN),/ja/glossary/Generative-Adversarial-Network--GAN-/,敵対的生成ネットワーク (GAN) の包括的ガイド - アーキテクチャ、応用例、メリット、課題、実装のベストプラクティスを解説します。,1034,exact,true
 IVR(インタラクティブ音声応答),ivr(インタラクティブ音声応答),IVR(インタラクティブ音声応答),/ja/glossary/IVR--Interactive-Voice-Response-/,インタラクティブ音声応答システムの包括的ガイド。技術、実装、メリット、自動電話システムのベストプラクティスを網羅しています。,1034,exact,true
+イテレーター / For-Each,イテレーター / for-each,イテレーター / For-Each,/ja/glossary/Iterator---For-Each/,イテレーターまたはfor-each構造は、リストやコレクション内のアイテムを1つずつ処理し、各要素に対して読み取り、更新、またはタスクの自動化などのアクションを実行できるようにします。,1034,exact,true
+ネットプロモータースコア(NPS),ネットプロモータースコア(nps),ネットプロモータースコア(NPS),/ja/glossary/NPS---Net-Promoter-Score-/,ネットプロモータースコア(NPS)について学びましょう。顧客ロイヤルティを測る重要な指標であるNPSの計算方法、構成要素、業界ベンチマーク、そしてNPSデータを活用して顧客体験を改善する方法を理解できます。,1034,exact,true
 パレートの法則(80/20の法則),パレートの法則(80/20の法則),パレートの法則(80/20の法則),/ja/glossary/Pareto's-Law/,パレートの法則(80/20の法則)を探求します。これは、結果の80%が原因の20%から生じるという経験的原理です。ビジネス、AI、生産性などにおける応用を学びましょう。,1034,exact,true
 リアルタイムパーソナライゼーション,リアルタイムパーソナライゼーション,リアルタイムパーソナライゼーション,/ja/glossary/Real-Time-Personalization/,リアルタイムパーソナライゼーション技術、実装戦略、および動的なユーザー体験のためのベストプラクティスに関する包括的なガイド。,1034,exact,true
 SERP(検索エンジン結果ページ),serp(検索エンジン結果ページ),SERP(検索エンジン結果ページ),/ja/glossary/SERP--Search-Engine-Results-Page-/,Googleやその他の検索エンジンで検索した際に表示されるウェブページで、検索クエリに関連するリンク、画像、情報が表示されます。,1034,exact,true
@@ -112,6 +119,7 @@ Text-to-Speechノード,text-to-speechノード,Text-to-Speechノード,/ja/glos
 WhatsApp Business,whatsapp business,WhatsApp Business,/ja/glossary/WhatsApp-Business/,顧客コミュニケーション、自動メッセージング、ビジネス成長戦略のためのWhatsApp Businessプラットフォームの包括的ガイド。,1034,exact,true
 コストパフォーマンス比率(CPI),コストパフォーマンス比率(cpi),コストパフォーマンス比率(CPI),/ja/glossary/cost-performance/,コストパフォーマンス指数(CPI)は、コスト効率を測定するプロジェクト管理の重要な指標です。AIチャットボットや自動化プロジェクトにおけるCPIの計算方法、解釈、適用方法を学び、予算管理に活用しましょう。,1034,exact,true
 アフェクティブコンピューティング,アフェクティブコンピューティング,アフェクティブコンピューティング,/ja/glossary/Affective-Computing/,アフェクティブコンピューティングの包括的ガイド:感情認識、感情分析、感情的AIシステムのためのヒューマンコンピュータインタラクション技術について解説します。,1032,exact,true
+BLEUスコア/ROUGEスコア,bleuスコア/rougeスコア,BLEUスコア/ROUGEスコア,/ja/glossary/BLEU---ROUGE-scores/,BLEUスコアとROUGEスコアについて学びましょう。機械翻訳、要約、AIにおいて、機械生成テキストを人間の参照テキストと比較評価するための重要なNLP評価指標です。,1032,exact,true
 ビジネスインテリジェンス（BI）,ビジネスインテリジェンス（bi）,ビジネスインテリジェンス（BI）,/ja/glossary/Business-Intelligence--BI-/,ビジネスインテリジェンス（BI）システム、テクノロジー、実装戦略、およびデータドリブンな意思決定のためのベストプラクティスに関する包括的なガイド。,1032,exact,true
 CMS(コンテンツ管理システム),cms(コンテンツ管理システム),CMS(コンテンツ管理システム),/ja/glossary/CMS--Content-Management-System-/,コンテンツ管理システム(CMS)の包括的ガイド - デジタルコンテンツ管理のための機能、メリット、実装戦略、ベストプラクティスを解説します。,1032,exact,true
 カルーセル(UIコンポーネント),カルーセル(uiコンポーネント),カルーセル(UIコンポーネント),/ja/glossary/Carousel/,カルーセルは、画像やカードなどの一連のコンテンツアイテムを単一のビューポート内に表示し、ユーザーがそれらを順に閲覧できるインタラクティブなUIコンポーネントです。,1032,exact,true
@@ -119,6 +127,7 @@ CMS(コンテンツ管理システム),cms(コンテンツ管理システム),CM
 コンテンツアンプリフィケーション,コンテンツアンプリフィケーション,コンテンツアンプリフィケーション,/ja/glossary/Content-Amplification/,デジタルチャネル全体でリーチとエンゲージメントを最大化するための、コンテンツアンプリフィケーション戦略、テクニック、ベストプラクティスに関する包括的なガイド。,1032,exact,true
 コンバージョン率最適化(CRO),コンバージョン率最適化(cro),コンバージョン率最適化(CRO),/ja/glossary/Conversion-Rate-Optimization--CRO-/,ウェブサイトのパフォーマンスとユーザーエンゲージメントを向上させるためのコンバージョン率最適化(CRO)戦略、テクニック、ベストプラクティスに関する包括的なガイド。,1032,exact,true
 カスタマーアドボカシープログラム,カスタマーアドボカシープログラム,カスタマーアドボカシープログラム,/ja/glossary/Customer-Advocacy-Program/,カスタマーアドボカシープログラムの包括的ガイド。実装戦略、メリット、そして忠実なブランドチャンピオンを構築するためのベストプラクティスを解説します。,1032,exact,true
+デバッグコンソール / トレース,デバッグコンソール / トレース,デバッグコンソール / トレース,/ja/glossary/Debug-Console---Trace/,デバッグコンソールまたはトレースは、自動化フロー、AIチャットボット、またはAPIプロキシの動作を可視化する診断インターフェースであり、データ、エラー、パフォーマンスを記録します。,1032,exact,true
 間接的プロンプトインジェクション,間接的プロンプトインジェクション,間接的プロンプトインジェクション,/ja/glossary/Indirect-Prompt-Injection/,間接的プロンプトインジェクションについて学びます。これは、攻撃者がLLMによって処理される外部コンテンツに悪意のある指示を埋め込むことで、意図しない動作やデータ漏洩を引き起こすセキュリティ脆弱性です。,1032,exact,true
 リードジェネレーションコンテンツ,リードジェネレーションコンテンツ,リードジェネレーションコンテンツ,/ja/glossary/Lead-Generation-Content/,B2Bマーケティングの成功に向けた、リードジェネレーションコンテンツの戦略、種類、実装のベストプラクティス、最適化テクニックに関する包括的なガイド。,1032,exact,true
 Make(Integromat),make(integromat),Make(Integromat),/ja/glossary/Make--Integromat-/,Make(旧Integromat)は、シンプルなタスクから複雑なエンタープライズ規模のプロセスまで、ワークフローの設計、構築、自動化を行うビジュアルなノーコードプラットフォームです。,1032,exact,true
@@ -138,8 +147,10 @@ UI(ユーザーインターフェース),ui(ユーザーインターフェース
 ユーザー生成コンテンツ(UGC),ユーザー生成コンテンツ(ugc),ユーザー生成コンテンツ(UGC),/ja/glossary/User-Generated-Content--UGC-/,ユーザー生成コンテンツ(UGC)の包括的ガイド - 定義、メリット、実装戦略、そして本物のコンテンツを活用するためのベストプラクティス。,1032,exact,true
 音声アクティビティ検出(VAD),音声アクティビティ検出(vad),音声アクティビティ検出(VAD),/ja/glossary/VAD--Voice-Activity-Detection-/,音声アクティビティ検出(VAD)は、オーディオストリーム内の人間の音声を識別する信号処理手法です。AIチャットボット、ASR、リアルタイムコミュニケーションに不可欠であり、VADは音声と無音やノイズを区別することで精度とユーザーエクスペリエンスを向上させます。,1032,exact,true
 変分オートエンコーダー(VAE),変分オートエンコーダー(vae),変分オートエンコーダー(VAE),/ja/glossary/Variational-Autoencoder--VAE-/,変分オートエンコーダー(VAE)の包括的ガイド - データ生成のためにディープラーニングと確率的推論を組み合わせた生成モデル,1032,exact,true
+バージョン履歴 / ロールバック,バージョン履歴 / ロールバック,バージョン履歴 / ロールバック,/ja/glossary/Version-History---Rollback/,AIチャットボットおよび自動化プラットフォームにおけるバージョン履歴とロールバックについて理解します。ボット設定の追跡、管理、および安定した状態への復元方法を学び、エラーからの迅速な復旧を実現します。,1032,exact,true
 オートメーションプラットフォーム,オートメーションプラットフォーム,オートメーションプラットフォーム,/ja/glossary/automation-platform/,オートメーションプラットフォームとは何か、その使用方法、種類、主要機能、主なメリットについて解説します。ビジネスに最適なソリューションの選定と導入方法を学びましょう。,1032,exact,true
 デジタルトランスフォーメーション,デジタルトランスフォーメーション,デジタルトランスフォーメーション,/ja/glossary/digital-transformation/,デジタルトランスフォーメーション用語集:深層知識版をご覧ください。デジタル技術の戦略的統合、ビジネスモデルの再考、現代組織における文化的変革について理解を深めましょう。,1032,exact,true
+ユーザーインターフェース（UI）,ユーザーインターフェース（ui）,ユーザーインターフェース（UI）,/ja/glossary/user-interfaces---UI-/,ユーザーインターフェース（UI）を探求：定義、種類（GUI、CLI、VUI、タッチ）、デザイン原則、戦略的価値について学びます。UIがユーザビリティ、ビジネス、未来のテクノロジーに与える影響を理解しましょう。,1032,exact,true
 アフターコールワーク(ACW),アフターコールワーク(acw),アフターコールワーク(ACW),/ja/glossary/After-Call-Work--ACW-/,コンタクトセンターにおけるアフターコールワーク(ACW)の包括的ガイド。プロセス、メリット、実装戦略、最適化テクニックを網羅しています。,1030,exact,true
 エージェントスケジュール遵守率,エージェントスケジュール遵守率,エージェントスケジュール遵守率,/ja/glossary/Agent-Schedule-Adherence/,コンタクトセンターの従業員が割り当てられた勤務スケジュールをどの程度遵守しているかを測定する指標で、企業が生産性を追跡し、円滑な業務運営を確保するために役立ちます。,1030,exact,true
 オールインワンプラットフォーム,オールインワンプラットフォーム,オールインワンプラットフォーム,/ja/glossary/All-in-One-Platform/,顧客管理、マーケティング、プロジェクト追跡などの複数のビジネスツールを1つの統合されたワークスペースに組み合わせた単一のソフトウェアシステム。,1030,exact,true
@@ -149,6 +160,7 @@ CLS(累積レイアウトシフト),cls(累積レイアウトシフト),CLS(累�
 Core Web Vitals,core web vitals,Core Web Vitals,/ja/glossary/Core-Web-Vitals/,Googleが定める3つの指標で、ウェブページの読み込み速度、クリックへの応答速度、読み込み中のレイアウトの安定性を測定します。,1030,exact,true
 カスタマーインタラクション管理,カスタマーインタラクション管理,カスタマーインタラクション管理,/ja/glossary/Customer-Interaction-Management/,カスタマーインタラクション管理システム、テクノロジー、およびすべてのタッチポイントにおける顧客体験を最適化するためのベストプラクティスに関する包括的なガイド。,1030,exact,true
 カスタマージャーニーマッピング,カスタマージャーニーマッピング,カスタマージャーニーマッピング,/ja/glossary/Customer-Journey-Mapping/,カスタマージャーニーマッピングの包括的ガイド:プロセスの可視化、タッチポイント分析、ビジネスのための体験最適化戦略。,1030,exact,true
+顧客満足度スコア (CSAT),顧客満足度スコア (csat),顧客満足度スコア (CSAT),/ja/glossary/Customer-Satisfaction---CSAT-/,顧客満足度スコア(CSAT)は、製品、サービス、または対応に対する顧客満足度を定量化する指標です。その計算方法、活用事例、そして顧客体験を向上させる方法について解説します。,1030,exact,true
 カスタマーサクセスマネージャー,カスタマーサクセスマネージャー,カスタマーサクセスマネージャー,/ja/glossary/Customer-Success-Manager/,カスタマーサクセスマネージャーの包括的ガイド:顧客維持と成長を促進するための役割、責任、戦略、ベストプラクティス。,1030,exact,true
 DAM(デジタルアセット管理),dam(デジタルアセット管理),DAM(デジタルアセット管理),/ja/glossary/DAM--Digital-Asset-Management-/,デジタルアセット管理システム、ワークフロー、メリット、および現代組織向けの実装戦略に関する包括的なガイド。,1030,exact,true
 初回コンタクト解決率（FCR）,初回コンタクト解決率（fcr）,初回コンタクト解決率（FCR）,/ja/glossary/First-Contact-Resolution--FCR-/,顧客の問い合わせや問題が最初のやり取りで解決され、追加の連絡を必要としない割合を測定するカスタマーサービス指標です。FCR率が高いほど顧客満足度が向上し、サポートコストが削減されます。,1030,exact,true
@@ -186,6 +198,7 @@ AIライティングアシスタント,aiライティングアシスタント,AI
 カスタマーフィードバック分析,カスタマーフィードバック分析,カスタマーフィードバック分析,/ja/glossary/Customer-Feedback-Analysis/,顧客データから実用的なインサイトを抽出するための、カスタマーフィードバック分析の手法、ツール、ベストプラクティスに関する包括的なガイド。,1028,exact,true
 カスタマーセグメンテーション,カスタマーセグメンテーション,カスタマーセグメンテーション,/ja/glossary/Customer-Segmentation/,ターゲットマーケティングとビジネス成長最適化のための、カスタマーセグメンテーション戦略、テクニック、実装に関する包括的ガイド。,1028,exact,true
 ダークソーシャルシェアリング,ダークソーシャルシェアリング,ダークソーシャルシェアリング,/ja/glossary/Dark-Social-Sharing/,ダークソーシャルシェアリングの包括的ガイド - メッセージングアプリやメールなどのプライベートチャネルを通じた追跡不可能なコンテンツ共有について,1028,exact,true
+ディレイ / スリープノード,ディレイ / スリープノード,ディレイ / スリープノード,/ja/glossary/Delay---Sleep-Node/,ディレイ/スリープノードは、AIチャットボットや自動化ワークフローにおいて、設定された期間または条件が満たされるまで実行を一時停止します。APIレート制限やオーケストレーションに不可欠な機能です。,1028,exact,true
 ETL(抽出・変換・ロード),etl(抽出・変換・ロード),ETL(抽出・変換・ロード),/ja/glossary/ETL--Extract-Transform-Load-/,データ抽出、変換、ロードの技術を網羅した、現代のデータ統合ワークフローのためのETLプロセスの包括的ガイド。,1028,exact,true
 エクスパンション・レベニュー,エクスパンション・レベニュー,エクスパンション・レベニュー,/ja/glossary/Expansion-Revenue/,既存顧客との関係を通じて持続可能なビジネス成長を実現するための、エクスパンション・レベニュー戦略、指標、実装に関する包括的ガイド。,1028,exact,true
 エキスパート・ラウンドアップ,エキスパート・ラウンドアップ,エキスパート・ラウンドアップ,/ja/glossary/Expert-Roundup/,1つのトピックについて複数の業界専門家から洞察やアドバイスを収集し、それらを1つの記事や投稿にまとめることで、多様な視点を提供し権威性を構築するコンテンツ形式。,1028,exact,true
@@ -194,6 +207,7 @@ GitHub Copilot,github copilot,GitHub Copilot,/ja/glossary/GitHub-Copilot/,コメ
 インテリジェントルーティング,インテリジェントルーティング,インテリジェントルーティング,/ja/glossary/Intelligent-Routing/,最適化されたネットワークトラフィック管理と意思決定のための、インテリジェントルーティングシステム、アルゴリズム、実装戦略に関する包括的なガイド。,1028,exact,true
 ナレッジベースアーキテクチャ,ナレッジベースアーキテクチャ,ナレッジベースアーキテクチャ,/ja/glossary/Knowledge-Base-Architecture/,エンタープライズシステムにおけるナレッジベースアーキテクチャの設計、コンポーネント、実装戦略、ベストプラクティスに関する包括的なガイド。,1028,exact,true
 ナレッジフィードバックループ,ナレッジフィードバックループ,ナレッジフィードバックループ,/ja/glossary/Knowledge-Feedback-Loop/,ナレッジフィードバックループの包括的ガイド - 反復的なデータ収集、分析、改善プロセスを通じて向上する継続的学習システムについて解説します。,1028,exact,true
+ロジックノード / 条件分岐,ロジックノード / 条件分岐,ロジックノード / 条件分岐,/ja/glossary/Logic-Node---Conditional-Branching/,ロジックノード(条件分岐)は、チャットボットや自動化ワークフローにおいて条件を評価し、ユーザー入力やコンテキストに基づいて動的にパスを振り分けます。,1028,exact,true
 MOS(平均オピニオン評点),mos(平均オピニオン評点),MOS(平均オピニオン評点),/ja/glossary/MOS--Mean-Opinion-Score-/,平均オピニオン評点(MOS)の包括的ガイド - オーディオ、ビデオ、マルチメディアアプリケーションにおける標準的な主観的品質測定手法です。,1028,exact,true
 ネイティブインテグレーション,ネイティブインテグレーション,ネイティブインテグレーション,/ja/glossary/Native-Integration/,ネイティブインテグレーションの包括的ガイド：シームレスなソフトウェア接続、API実装、プラットフォーム固有の開発アプローチについて解説します。,1028,exact,true
 オムニチャネルコンテンツ配信,オムニチャネルコンテンツ配信,オムニチャネルコンテンツ配信,/ja/glossary/Omnichannel-Content-Delivery/,シームレスなクロスプラットフォーム体験を実現するための、オムニチャネルコンテンツ配信戦略、テクノロジー、実装ベストプラクティスに関する包括的なガイド。,1028,exact,true
@@ -207,6 +221,8 @@ PagedAttention,pagedattention,PagedAttention,/ja/glossary/PagedAttention/,PagedA
 ソーシャルカスタマーサービス,ソーシャルカスタマーサービス,ソーシャルカスタマーサービス,/ja/glossary/Social-Customer-Service/,ソーシャルメディアプラットフォーム全体で優れた顧客サポートを提供するための、ソーシャルカスタマーサービスの戦略、ツール、ベストプラクティスに関する包括的なガイド。,1028,exact,true
 ソーシャルエンゲージメント率,ソーシャルエンゲージメント率,ソーシャルエンゲージメント率,/ja/glossary/Social-Engagement-Rate/,ソーシャルメディアの投稿に対して、いいね、コメント、シェアなどのアクションを通じて、人々がどれだけ積極的に反応しているかを測定する指標です。コンテンツがオーディエンスの共感を得ているかどうかを理解するのに役立ちます。,1028,exact,true
 スプリントレトロスペクティブ,スプリントレトロスペクティブ,スプリントレトロスペクティブ,/ja/glossary/Sprint-Retrospective/,アジャイル開発におけるスプリントレトロスペクティブの包括的ガイド - チームのための手法、メリット、ベストプラクティス、実装戦略を解説します。,1028,exact,true
+ステート/コンテキストメモリ,ステート/コンテキストメモリ,ステート/コンテキストメモリ,/ja/glossary/State---Context-Memory/,ステート/コンテキストメモリは、AIチャットボットがセッション間で情報を保持・想起できるようにするストレージメカニズムです。会話の連続性、パーソナライゼーション、効率的なタスク管理を実現します。,1028,exact,true
+サブフロー / ネストフロー,サブフロー / ネストフロー,サブフロー / ネストフロー,/ja/glossary/Sub-flow---Nested-Flow/,自動化におけるサブフロー(ネストフロー)について学びます。ワークフローを他のワークフロー内に埋め込むことで、複雑なロジックを簡素化し、再利用性を高め、メンテナンスを改善します。,1028,exact,true
 Tencent(テンセント),tencent(テンセント),Tencent(テンセント),/ja/glossary/Tencent/,Tencentは1998年に設立された中国のテクノロジー企業で、WeChatなどの相互接続されたプラットフォームを通じて、世界中の数十億人のユーザーにソーシャルメッセージング、ゲーム、エンターテインメント、クラウドサービス、デジタル決済を提供しています。,1028,exact,true
 Tongyi-Qianwen,tongyi-qianwen,Tongyi-Qianwen,/ja/glossary/Tongyi-Qianwen/,Alibabaが開発したAIアシスタントで、ChatGPTと同様の高度な機械学習技術を使用し、特に中国語を含む複数の言語で質問を理解し応答します。,1028,exact,true
 トップオブファネルコンテンツ,トップオブファネルコンテンツ,トップオブファネルコンテンツ,/ja/glossary/Top-of-Funnel-Content/,効果的なオーディエンスエンゲージメントとリード獲得のための、トップオブファネルコンテンツ戦略、作成テクニック、最適化手法に関する包括的なガイド。,1028,exact,true
@@ -225,7 +241,7 @@ Tongyi-Qianwen,tongyi-qianwen,Tongyi-Qianwen,/ja/glossary/Tongyi-Qianwen/,Alibab
 コンテンツシンジケーション,コンテンツシンジケーション,コンテンツシンジケーション,/ja/glossary/Content-Syndication/,リーチを拡大し、コンテンツROIを最大化するためのコンテンツシンジケーション戦略、テクノロジー、ベストプラクティスに関する包括的なガイド。,1026,exact,true
 コンバージョントラッキング,コンバージョントラッキング,コンバージョントラッキング,/ja/glossary/Conversion-Tracking/,ウェブサイト上での購入や登録などの特定のユーザーアクションを監視・測定するシステムで、企業がマーケティングキャンペーンの効果を理解するのに役立ちます。,1026,exact,true
 コーナーストーンコンテンツ,コーナーストーンコンテンツ,コーナーストーンコンテンツ,/ja/glossary/Cornerstone-Content/,SEOパフォーマンスとユーザーエンゲージメントを向上させるための、コーナーストーンコンテンツ戦略の実装と最適化に関する包括的なガイド。,1026,exact,true
-カスタムインテグレーション,カスタムインテグレーション,カスタムインテグレーション,/ja/glossary/Custom-Integration/,カスタムインテグレーションソリューションの包括的なガイド。実装戦略、メリット、シームレスなシステム接続のためのベストプラクティスを解説します。,1026,exact,true
+カスタムインテグレーション,カスタムインテグレーション,カスタムインテグレーション,/ja/glossary/Custom-Integration/,異なるソフトウェアシステムを繋ぎ、データを自動的にやり取りするために特別に作られた仕組み。,1026,exact,true
 カスタマーオンボーディング,カスタマーオンボーディング,カスタマーオンボーディング,/ja/glossary/Customer-Onboarding/,顧客オンボーディングプロセス、戦略、およびユーザー定着と継続利用を成功させるためのベストプラクティスに関する包括的なガイド。,1026,exact,true
 デジタルワークプレイス戦略,デジタルワークプレイス戦略,デジタルワークプレイス戦略,/ja/glossary/Digital-Workplace-Strategy/,デジタルワークプレイス戦略の包括的ガイド。現代組織における実装方法、メリット、課題、ベストプラクティスを網羅しています。,1026,exact,true
 ディスカッションフォーラム,ディスカッションフォーラム,ディスカッションフォーラム,/ja/glossary/Discussion-Forums/,ディスカッションフォーラムの包括的ガイド：機能、実装、モデレーション戦略、オンラインコミュニティ構築のベストプラクティスを解説します。,1026,exact,true
@@ -236,6 +252,7 @@ Tongyi-Qianwen,tongyi-qianwen,Tongyi-Qianwen,/ja/glossary/Tongyi-Qianwen/,Alibab
 情報アーキテクチャ（IA）,情報アーキテクチャ（ia）,情報アーキテクチャ（IA）,/ja/glossary/Information-Architecture--IA-/,情報アーキテクチャ（IA）の包括的ガイド - デジタルコンテンツを効果的に整理するための原則、方法論、メリット、ベストプラクティスを解説します。,1026,exact,true
 インテグレーションパターン,インテグレーションパターン,インテグレーションパターン,/ja/glossary/Integration-Patterns/,エンタープライズシステム、API、マイクロサービスアーキテクチャのための統合パターンの包括的ガイド。実装戦略を含む。,1026,exact,true
 インタラクティブコンテンツ,インタラクティブコンテンツ,インタラクティブコンテンツ,/ja/glossary/Interactive-Content/,インタラクティブコンテンツの包括的ガイド:種類、実装方法、メリット、魅力的なデジタル体験を実現するためのベストプラクティス。,1026,exact,true
+KPI(重要業績評価指標),kpi(重要業績評価指標),KPI(重要業績評価指標),/ja/glossary/KPIs---Key-Performance-Indicators-/,重要業績評価指標(KPI)について学びましょう:KPIとは何か、なぜ重要なのか、種類、開発方法、そして営業、マーケティング、人事、ITにおける具体例を解説します。,1026,exact,true
 ナレッジアトリビューション,ナレッジアトリビューション,ナレッジアトリビューション,/ja/glossary/Knowledge-Attribution/,AIシステムにおけるナレッジアトリビューションの包括的ガイド。情報処理における情報源の追跡、透明性、説明責任について解説します。,1026,exact,true
 ナレッジベースソフトウェア,ナレッジベースソフトウェア,ナレッジベースソフトウェア,/ja/glossary/Knowledge-Base-Software/,ナレッジベースソフトウェアの包括的ガイド:機能、メリット、導入戦略、および組織的なナレッジマネジメントのベストプラクティスを解説します。,1026,exact,true
 学習管理システム(LMS),学習管理システム(lms),学習管理システム(LMS),/ja/glossary/Learning-Management-System--LMS-/,学習管理システム(LMS)の包括的ガイド - デジタル学習プラットフォームの機能、メリット、導入戦略、ベストプラクティスを解説します。,1026,exact,true
@@ -248,7 +265,7 @@ Tongyi-Qianwen,tongyi-qianwen,Tongyi-Qianwen,/ja/glossary/Tongyi-Qianwen/,Alibab
 精度(Precision),精度(precision),精度(Precision),/ja/glossary/Precision/,精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。,1026,exact,true
 プロンプトエンジニアリング,プロンプトエンジニアリング,プロンプトエンジニアリング,/ja/glossary/Prompt-Engineering/,AI言語モデルとのインタラクションと出力を最適化するための、プロンプトエンジニアリング技術、ベストプラクティス、および応用に関する包括的なガイド。,1026,exact,true
 プロンプトインジェクション,プロンプトインジェクション,プロンプトインジェクション,/ja/glossary/Prompt-Injection/,AIの言語モデルとアプリケーションにおけるプロンプトインジェクション攻撃、防御メカニズム、セキュリティのベストプラクティスに関する包括的なガイド。,1026,exact,true
-パブリッシングワークフロー,パブリッシングワークフロー,パブリッシングワークフロー,/ja/glossary/Publishing-Workflow/,デジタルコンテンツ管理、自動化、および現代の出版業務におけるベストプラクティスを網羅した、パブリッシングワークフローの包括的なガイド。,1026,exact,true
+パブリッシングワークフロー,パブリッシングワークフロー,パブリッシングワークフロー,/ja/glossary/Publishing-Workflow/,コンテンツのアイデアから公開まで、記事や資料を作成・チェック・配信するための一連の流れと仕組み。,1026,exact,true
 ReActプロンプティング,reactプロンプティング,ReActプロンプティング,/ja/glossary/ReAct-Prompting/,推論と行動を組み合わせたReActプロンプティング手法の包括的ガイド。AIの問題解決能力と意思決定能力を強化します。,1026,exact,true
 レコメンデーションエンジン,レコメンデーションエンジン,レコメンデーションエンジン,/ja/glossary/Recommendation-Engine/,レコメンデーションエンジンの包括的ガイド:アルゴリズム、実装、メリット、パーソナライズされたコンテンツ配信システムのベストプラクティス。,1026,exact,true
 レベニューインテリジェンス,レベニューインテリジェンス,レベニューインテリジェンス,/ja/glossary/Revenue-Intelligence/,セールス会話と顧客インタラクションを分析するAI搭載アナリティクスで、企業が営業パフォーマンスを理解し、成果を予測し、より良い収益決定を行うことを支援します。,1026,exact,true
@@ -279,7 +296,7 @@ APIエンドポイント設定,apiエンドポイント設定,APIエンドポイ
 ビジネススケーラビリティ,ビジネススケーラビリティ,ビジネススケーラビリティ,/ja/glossary/Business-Scalability/,コストやリソースを同じ割合で増やすことなく、品質と効率性を維持しながら、より多くの顧客にサービスを提供し、ビジネスを成長させる企業の能力。,1024,exact,true
 CAGR(年平均成長率),cagr(年平均成長率),CAGR(年平均成長率),/ja/glossary/CAGR/,年平均成長率(CAGR)について学びましょう。投資や指標の経時的な平均年間成長を測定する財務指標です。その計算式、算出方法、および応用例を理解できます。,1024,exact,true
 静的サイト向けCI/CD,静的サイト向けci/cd,静的サイト向けCI/CD,/ja/glossary/CI-CD-for-Static-Sites/,コード変更が行われるたびに静的ウェブサイトを自動的にビルド、テスト、デプロイする自動化システムで、手動での公開作業を不要にします。,1024,exact,true
-コールセンターCRM統合,コールセンターcrm統合,コールセンターCRM統合,/ja/glossary/Call-Center-CRM-Integration/,コールセンターCRM統合の包括的なガイド。実装戦略、メリット、課題、シームレスなカスタマーサービスのためのベストプラクティスを網羅しています。,1024,exact,true
+コールセンターCRM統合,コールセンターcrm統合,コールセンターCRM統合,/ja/glossary/Call-Center-CRM-Integration/,コールセンターと顧客管理システムを連携させ、オペレーターが通話中に顧客情報を一画面で確認できるようにするシステム。対応の質と効率を向上させます。,1024,exact,true
 コミュニティガイドライン,コミュニティガイドライン,コミュニティガイドライン,/ja/glossary/Community-Guidelines/,コミュニティガイドラインの包括的ガイド:オンラインプラットフォームとコミュニティのためのルール、執行、ベストプラクティス、実装戦略について解説します。,1024,exact,true
 コンディショナルルーター,コンディショナルルーター,コンディショナルルーター,/ja/glossary/Conditional-Router/,コンディショナルルーターは、データをルールに照らして評価し、特定のルートに振り分けます。自動化パイプライン、AIチャットボット、ソフトウェアにおける動的でルールベースの分岐処理に不可欠です。,1024,exact,true
 コンタクトデフレクション,コンタクトデフレクション,コンタクトデフレクション,/ja/glossary/Contact-Deflection/,セルフサービスツールやリソースを通じて顧客が自分で問題を解決できるようにすることで、サポートへの直接的な問い合わせを減らすカスタマーサービス戦略です。,1024,exact,true
@@ -313,7 +330,7 @@ ITインフラストラクチャ,itインフラストラクチャ,ITインフラ
 ランディングページ最適化,ランディングページ最適化,ランディングページ最適化,/ja/glossary/Landing-Page-Optimization/,ランディングページ最適化とは、見出し、画像、ボタンなどのウェブサイト要素を改善し、購入やサインアップなどの望ましいアクションを完了する訪問者の割合を増やすプロセスです。,1024,exact,true
 ローカライゼーション管理,ローカライゼーション管理,ローカライゼーション管理,/ja/glossary/Localization-Management/,グローバル市場におけるソフトウェアとコンテンツの適応に向けた、ローカライゼーション管理のプロセス、ツール、戦略に関する包括的なガイド。,1024,exact,true
 ロングフォームコンテンツ,ロングフォームコンテンツ,ロングフォームコンテンツ,/ja/glossary/Long-Form-Content/,ロングフォームコンテンツの作成、戦略、メリット、およびデジタルマーケティングとオーディエンスエンゲージメント成功のためのベストプラクティスに関する包括的なガイド。,1024,exact,true
-マーケットバスケット分析,マーケットバスケット分析,マーケットバスケット分析,/ja/glossary/Market-Basket-Analysis/,マーケットバスケット分析は、データマイニング、アソシエーションルール学習、機械学習を活用して購買パターンを発見し、商品間の関連性を特定し、顧客が頻繁に一緒に購入する商品を分析することでクロスセリングの機会を明らかにします。これにより、最適な商品配置、パーソナライズされたレコメンデーション、ターゲットを絞ったプロモーションが可能になります。,1024,exact,true
+マーケットバスケット分析,マーケットバスケット分析,マーケットバスケット分析,/ja/glossary/Market-Basket-Analysis/,顧客が一緒に購入する商品の組み合わせパターンを分析し、関連商品の配置やおすすめ商品の提案に活用する手法。,1024,exact,true
 ネクストベストアクション,ネクストベストアクション,ネクストベストアクション,/ja/glossary/Next-Best-Action/,ネクストベストアクションシステムの包括的ガイド - 顧客とのインタラクションやビジネス上の意思決定を最適化するAI駆動型レコメンデーションエンジン。,1024,exact,true
 オーガニックトラフィック,オーガニックトラフィック,オーガニックトラフィック,/ja/glossary/Organic-Traffic/,Googleなどの検索エンジンで、広告を使わずに自然検索結果から訪れる訪問者のことです。コンテンツがユーザーの検索意図と一致したときに、自然に発生します。,1024,exact,true
 パフォーマンスバジェット,パフォーマンスバジェット,パフォーマンスバジェット,/ja/glossary/Performance-Budget/,ウェブサイトを高速に保ち、優れたユーザー体験を確保するために開発チームが設定するパフォーマンス制限のセット。ページ読み込み時間やファイルサイズの目標値などが含まれます。,1024,exact,true
@@ -329,7 +346,7 @@ ITインフラストラクチャ,itインフラストラクチャ,ITインフラ
 セルフサービスオプション,セルフサービスオプション,セルフサービスオプション,/ja/glossary/Self-Service-Options/,セルフサービスオプション、テクノロジー、実装戦略、および自動化されたカスタマーサポートソリューションのベストプラクティスに関する包括的なガイド。,1024,exact,true
 センチメント適応型トーン,センチメント適応型トーン,センチメント適応型トーン,/ja/glossary/Sentiment-Adaptive-Tone/,センチメント適応型トーンは、顧客の感情に基づいてコミュニケーションスタイルを調整するAI機能です。これにより、インタラクションの質が向上し、顧客満足度が改善されます。,1024,exact,true
 セッションレコーディング,セッションレコーディング,セッションレコーディング,/ja/glossary/Session-Recording/,ユーザーがウェブサイトやアプリとどのように対話するかを記録し、再生する技術。すべてのクリックやスクロールを表示することで、ユーザビリティの問題を特定し、ユーザーエクスペリエンスの向上に役立てます。,1024,exact,true
-スキルベースルーティング,スキルベースルーティング,スキルベースルーティング,/ja/glossary/Skills-Based-Routing/,顧客からの問い合わせを、専門知識と能力に基づいて最も適格なエージェントにインテリジェントにマッチングするスキルベースルーティングシステムの包括的なガイド。,1024,exact,true
+スキルベースルーティング,スキルベースルーティング,スキルベースルーティング,/ja/glossary/Skills-Based-Routing/,顧客からの問い合わせを、その内容に最も適したスキルを持つ担当者に自動で振り分けるシステム。対応品質と顧客満足度を向上させます。,1024,exact,true
 スロットキャリーオーバー,スロットキャリーオーバー,スロットキャリーオーバー,/ja/glossary/Slot-Carryover/,スロットキャリーオーバーは、AIチャットボットが会話のターンをまたいで構造化された情報(スロット)を記憶し再利用できるようにする機能です。これにより、タスク指向の対話システムにおいてコンテキストを維持し、ユーザー体験を向上させます。,1024,exact,true
 ソーシャルアナリティクス,ソーシャルアナリティクス,ソーシャルアナリティクス,/ja/glossary/Social-Analytics/,ソーシャルアナリティクスとは、ソーシャルメディアからデータを収集・分析し、人々がブランドやコンテンツとどのように関わっているかを理解するプロセスです。これにより、企業はより効果的なマーケティング意思決定を行うことができます。,1024,exact,true
 ソーシャルメディアAPI,ソーシャルメディアapi,ソーシャルメディアAPI,/ja/glossary/Social-Media-API/,開発者がアプリをソーシャルメディアプラットフォームに接続し、データへのアクセス、コンテンツの投稿、ソーシャル機能の追加を、ゼロから構築することなく実現できるツールです。,1024,exact,true
@@ -352,7 +369,7 @@ Webスクレイパーノード,webスクレイパーノード,Webスクレイパ
 ウェビナーマーケティング,ウェビナーマーケティング,ウェビナーマーケティング,/ja/glossary/Webinar-Marketing/,ウェビナーマーケティングの戦略、ツール、ベストプラクティスに関する包括的なガイド。デジタルマーケティングにおけるリード獲得とオーディエンスエンゲージメントの向上を実現します。,1024,exact,true
 ウィンバックキャンペーン,ウィンバックキャンペーン,ウィンバックキャンペーン,/ja/glossary/Win-Back-Campaign/,ウィンバックキャンペーンの包括的ガイド:非アクティブな顧客や購読者を再エンゲージメントするための戦略、実装方法、ベストプラクティス。,1024,exact,true
 ワークフローテンプレート,ワークフローテンプレート,ワークフローテンプレート,/ja/glossary/Workflow-Template/,ワークフローテンプレートの包括的ガイド - ビジネスプロセスの自動化、効率性の向上、一貫性の確保のための標準化されたフレームワーク。,1024,exact,true
-ライティングガイドライン,ライティングガイドライン,ライティングガイドライン,/ja/glossary/Writing-Guidelines/,効果的なドキュメント作成のための標準、ベストプラクティス、実装戦略を網羅したライティングガイドラインの包括的なガイド。,1024,exact,true
+ライティングガイドライン,ライティングガイドライン,ライティングガイドライン,/ja/glossary/Writing-Guidelines/,文書やコンテンツを作成する際に、文体や表現方法を統一するための決まりやルール集。組織全体で一貫性のある、わかりやすい文章を書くために使います。,1024,exact,true
 ゼロトラストセキュリティ,ゼロトラストセキュリティ,ゼロトラストセキュリティ,/ja/glossary/Zero-Trust-Security/,ゼロトラストセキュリティアーキテクチャ、実装戦略、メリット、および現代のサイバーセキュリティにおけるベストプラクティスに関する包括的なガイド。,1024,exact,true
 ハルシネーション緩和戦略,ハルシネーション緩和戦略,ハルシネーション緩和戦略,/ja/glossary/hallucination-mitigation-strategies/,AIシステム、特にLLM（大規模言語モデル）におけるハルシネーション緩和戦略を探求します。RAG、プロンプトエンジニアリング、ファインチューニングなど、虚偽の出力を防ぐための技術について学びます。,1024,exact,true
 AIコピーライティング,aiコピーライティング,AIコピーライティング,/ja/glossary/AI-Copywriting/,自動コンテンツ作成とマーケティング最適化のためのAIコピーライティングツール、テクニック、アプリケーションに関する包括的なガイド。,1022,exact,true
@@ -368,8 +385,8 @@ AIメール自動返信生成,aiメール自動返信生成,AIメール自動返
 Baidu(バイドゥ),baidu(バイドゥ),Baidu(バイドゥ),/ja/glossary/Baidu/,Baiduは中国最大の検索エンジンであり、人々がオンラインで情報を見つけることを支援しながら、自動運転や音声認識などの人工知能技術を開発する大手AI企業です。,1022,exact,true
 ブログプラットフォーム,ブログプラットフォーム,ブログプラットフォーム,/ja/glossary/Blogging-Platform/,技術的なスキルやプログラミング知識を必要とせず、誰でもオンラインでブログを作成・公開できるソフトウェアツール。,1022,exact,true
 ブランドジャーナリズム,ブランドジャーナリズム,ブランドジャーナリズム,/ja/glossary/Brand-Journalism/,ブランドジャーナリズムの包括的ガイド:ストーリーテリング戦略、コンテンツ制作テクニック、現代マーケティングにおける実装のベストプラクティス。,1022,exact,true
-パンくずナビゲーション,パンくずナビゲーション,パンくずナビゲーション,/ja/glossary/Breadcrumb-Navigation/,パンくずナビゲーションシステムの包括的なガイド。実装戦略、メリット、ユーザーエクスペリエンスとSEOを向上させるためのベストプラクティスを解説します。,1022,exact,true
-CMSマイグレーション,cmsマイグレーション,CMSマイグレーション,/ja/glossary/CMS-Migration/,CMSマイグレーションの完全ガイド:プロセス、メリット、課題、そしてコンテンツ管理システムの移行を成功させるためのベストプラクティスを解説します。,1022,exact,true
+パンくずナビゲーション,パンくずナビゲーション,パンくずナビゲーション,/ja/glossary/Breadcrumb-Navigation/,ウェブサイト内での現在位置を示すナビゲーション。ホームページから現在のページまでの階層構造を視覚的に表示し、ユーザーが迷わず目的のページに戻れるようにします。,1022,exact,true
+CMSマイグレーション,cmsマイグレーション,CMSマイグレーション,/ja/glossary/CMS-Migration/,古いウェブサイト管理システムから新しいシステムへ、コンテンツやデータを移行するプロセス。データの損失を防ぎながら、検索順位やサイト機能を保つことが重要です。,1022,exact,true
 CRM(顧客関係管理),crm(顧客関係管理),CRM(顧客関係管理),/ja/glossary/CRM/,CRM(顧客関係管理)システムは、顧客とのやり取りを管理・最適化するソフトウェアです。データを一元化し、プロセスを自動化し、顧客エンゲージメントとビジネスパフォーマンスを向上させるためのインサイトを提供します。,1022,exact,true
 チャネルプリファレンス,チャネルプリファレンス,チャネルプリファレンス,/ja/glossary/Channel-Preference/,顧客コミュニケーションにおけるチャネルプリファレンスの包括的ガイド。マルチチャネルエンゲージメントのための戦略、実装、最適化テクニックをカバーします。,1022,exact,true
 カオスエンジニアリング,カオスエンジニアリング,カオスエンジニアリング,/ja/glossary/Chaos-Engineering/,カオスエンジニアリングは、システムの弱点を発見し、その回復力に対する信頼性を構築するために、意図的にシステムに実験を行う手法です。脆弱性を事前に特定する方法を学びましょう。,1022,exact,true
@@ -386,7 +403,7 @@ CRM(顧客関係管理),crm(顧客関係管理),CRM(顧客関係管理),/ja/glos
 コンバージョンファネル,コンバージョンファネル,コンバージョンファネル,/ja/glossary/Conversion-Funnel/,コンバージョンファネルとは、初回認知から特定の目標達成までのユーザージャーニーを表す分析モデルです。マーケティング、UX、最適化における各段階と活用方法について解説します。,1022,exact,true
 カスタムディメンション,カスタムディメンション,カスタムディメンション,/ja/glossary/Custom-Dimension/,アナリティクスプラットフォームにおけるカスタムディメンションの包括的ガイド。実装方法、メリット、データトラッキング強化のためのベストプラクティスを網羅しています。,1022,exact,true
 カスタマーアドボカシー,カスタマーアドボカシー,カスタマーアドボカシー,/ja/glossary/Customer-Advocacy/,忠実なブランドチャンピオンを育成し、ビジネス成長を促進するための、カスタマーアドボカシー戦略、実装方法、ベストプラクティスに関する包括的なガイド。,1022,exact,true
-カスタマーコールバック,カスタマーコールバック,カスタマーコールバック,/ja/glossary/Customer-Callback/,カスタマーコールバックシステムの包括的なガイド。実装戦略、メリット、および現代のコンタクトセンターにおけるベストプラクティスを解説します。,1022,exact,true
+カスタマーコールバック,カスタマーコールバック,カスタマーコールバック,/ja/glossary/Customer-Callback/,顧客が電話で長く待たずに済むよう、企業から折り返し電話をもらえるサービス。待ち時間を有効活用できます。,1022,exact,true
 カスタマーコンテキスト,カスタマーコンテキスト,カスタマーコンテキスト,/ja/glossary/Customer-Context/,カスタマーコンテキストの包括的ガイド - 顧客データ、行動、嗜好を理解し、パーソナライズされた体験を提供してビジネス成長を促進する方法について解説します。,1022,exact,true
 カスタマーフリクション,カスタマーフリクション,カスタマーフリクション,/ja/glossary/Customer-Friction/,カスタマーフリクション:顧客が企業とやり取りする際に直面する障害や困難のこと。わかりにくいチェックアウトプロセス、遅いウェブサイト、不十分なカスタマーサービスなどが該当します。これらの障壁を取り除くことで、顧客満足度と売上が向上します。,1022,exact,true
 カスタマーヘルススコア,カスタマーヘルススコア,カスタマーヘルススコア,/ja/glossary/Customer-Health-Score/,カスタマーヘルススコアの指標、実装戦略、顧客の成功と維持を予測するためのベストプラクティスに関する包括的なガイド。,1022,exact,true
@@ -415,9 +432,10 @@ Hugo タクソノミー,hugo タクソノミー,Hugo タクソノミー,/ja/glos
 ナレッジベースコネクタ,ナレッジベースコネクタ,ナレッジベースコネクタ,/ja/glossary/Knowledge-Base-Connector/,チャットボットなどのAIワークフローをインデックス化されたナレッジソースに接続する統合モジュールで、文脈に即した応答を実現するRetrieval,1022,exact,true
 ナレッジキュレーション,ナレッジキュレーション,ナレッジキュレーション,/ja/glossary/Knowledge-Curation/,ナレッジキュレーションの包括的ガイド:意思決定の強化を目的とした情報資産の体系的な収集、整理、管理について解説します。,1022,exact,true
 ナレッジトランスファー,ナレッジトランスファー,ナレッジトランスファー,/ja/glossary/Knowledge-Transfer/,効果的な組織学習と情報共有のための、ナレッジトランスファーのプロセス、方法論、ベストプラクティスに関する包括的なガイド。,1022,exact,true
+LTV(顧客生涯価値),ltv(顧客生涯価値),LTV(顧客生涯価値),/ja/glossary/LTV---Lifetime-Value-/,AIチャットボットや自動化ビジネスにおける重要な指標である顧客生涯価値(LTV)を理解しましょう。その定義、計算方法、重要性、そして持続可能な成長のためのLTV向上戦略について学びます。,1022,exact,true
 長短期記憶（LSTM）,長短期記憶（lstm）,長短期記憶（LSTM）,/ja/glossary/Long-Short-Term-Memory--LSTM-/,LSTM ニューラルネットワークの包括的ガイド。そのアーキテクチャ、応用例、および逐次データ処理と時系列分析のための実装方法について解説します。,1022,exact,true
 ロングテールキーワード,ロングテールキーワード,ロングテールキーワード,/ja/glossary/Long-Tail-Keyword/,3語以上の具体的な検索フレーズで、提供するものを正確に探している人々をターゲットにします。検索順位を上げやすく、顧客を引き付ける可能性が高くなります。,1022,exact,true
-ローコード/ノーコード,ローコード/ノーコード,ローコード/ノーコード,/ja/glossary/Low-Code-No-Code/,ローコードおよびノーコード開発プラットフォームの包括的なガイド。最小限のプログラミング知識で迅速なアプリケーション開発を可能にします。,1022,exact,true
+ローコード/ノーコード,ローコード/ノーコード,ローコード/ノーコード,/ja/glossary/Low-Code-No-Code/,プログラミング知識がほぼ不要で、ドラッグ&ドロップなどの直感的な操作でアプリケーションを素早く作成できるツール。,1022,exact,true
 メタディスクリプション,メタディスクリプション,メタディスクリプション,/ja/glossary/Meta-Description/,検索結果の下に表示される短いテキスト要約で、Webページの内容を説明し、ユーザーがクリックするかどうかを判断するのに役立ちます。,1022,exact,true
 マイクロフロントエンド,マイクロフロントエンド,マイクロフロントエンド,/ja/glossary/Micro-Frontends/,マイクロフロントエンドは、Webアプリケーションをより小さく独立して開発・デプロイ可能なフロントエンドアプリに分解するアーキテクチャスタイルで、スケーラブルで自律的なチーム運営を実現します。,1022,exact,true
 モバイルワークフォース,モバイルワークフォース,モバイルワークフォース,/ja/glossary/Mobile-Workforce/,モバイルワークフォース管理、テクノロジー、メリット、および現代の分散チームのための実装戦略に関する包括的なガイド。,1022,exact,true
@@ -434,7 +452,7 @@ Nofollowリンク,nofollowリンク,Nofollowリンク,/ja/glossary/Nofollow-Link
 個人情報保護法(中国),個人情報保護法(中国),個人情報保護法(中国),/ja/glossary/Personal-Information-Protection-Law/,,1022,exact,true
 パーソナライゼーション,パーソナライゼーション,パーソナライゼーション,/ja/glossary/Personalization/,AIチャットボットと自動化におけるパーソナライゼーションは、高度なアルゴリズムを使用して、個々のユーザーの嗜好や行動に合わせてサービス、コンテンツ、インタラクションをカスタマイズします。,1022,exact,true
 パイプラインカバレッジ,パイプラインカバレッジ,パイプラインカバレッジ,/ja/glossary/Pipeline-Coverage/,自動化されたソフトウェアデリバリープロセスが、リリース前にさまざまな環境、構成、実際のシナリオにわたってコード変更をどれだけ徹底的にテストおよび検証するかを測定する指標。,1022,exact,true
-プラットフォームAPI,プラットフォームapi,プラットフォームAPI,/ja/glossary/Platform-API/,サードパーティの開発者がデジタルプラットフォーム上でアプリケーションや統合機能を構築できるようにする、プログラミングインターフェースとツールのセット。プラットフォームAPIは、プラットフォームのインフラストラクチャ、データ、機能へのアクセスを大規模に提供することで、拡張可能なエコシステムを構築します。,1022,exact,true
+プラットフォームAPI,プラットフォームapi,プラットフォームAPI,/ja/glossary/Platform-API/,プラットフォームAPIは、外部の開発者がプラットフォームの機能やデータを使って新しいアプリケーションやサービスを作れるようにするツール群です。,1022,exact,true
 プラットフォーム拡張性,プラットフォーム拡張性,プラットフォーム拡張性,/ja/glossary/Platform-Extensibility/,プラットフォーム拡張性に関する包括的なガイド。コアコンセプト、実装戦略、スケーラブルなシステム設計のベストプラクティスを網羅しています。,1022,exact,true
 プロダクトアダプション,プロダクトアダプション,プロダクトアダプション,/ja/glossary/Product-Adoption/,ユーザーエンゲージメントとビジネス成長を促進するための、プロダクトアダプション戦略、指標、ベストプラクティスに関する包括的ガイド,1022,exact,true
 プロダクトロードマップ,プロダクトロードマップ,プロダクトロードマップ,/ja/glossary/Product-Roadmap/,プロダクトロードマップの包括的ガイド:チームを整合させ、ビジョンを伝え、成功するプロダクト開発を推進する戦略的計画ツールです。,1022,exact,true
@@ -480,7 +498,7 @@ Webhookトリガー,webhookトリガー,Webhookトリガー,/ja/glossary/Webhook
 AI回答アシスタント,ai回答アシスタント,AI回答アシスタント,/ja/glossary/AI-answer-assistant/,AI回答アシスタントは、自然言語処理(NLP)、機械学習(ML)、大規模言語モデル(LLM)、RAG技術を活用し、複雑なテキストや専門用語を明確化・洗練・解説する高度なAI駆動型ソフトウェアシステムです。,1020,exact,true
 アクティブラーニング,アクティブラーニング,アクティブラーニング,/ja/glossary/Active-Learning/,アクティブラーニングは、モデルが人間によるラベリングのために最も有益なデータポイントを戦略的に選択する機械学習アプローチです。インテリジェントなサンプリング戦略により、アノテーションコストを大幅に削減しながら、モデルの精度を向上させます。,1020,exact,true
 エージェントアシスト,エージェントアシスト,エージェントアシスト,/ja/glossary/Agent-Assist/,エージェントアシスト技術の包括的ガイド - カスタマーサービス担当者のパフォーマンスと効率をリアルタイムで向上させるAI搭載ツール,1020,exact,true
-ブランドガイドライン,ブランドガイドライン,ブランドガイドライン,/ja/glossary/Brand-Guidelines/,ビジュアルアイデンティティ、メッセージング基準、実装戦略、一貫したブランド管理のためのベストプラクティスを網羅した、ブランドガイドラインの包括的なガイドです。,1020,exact,true
+ブランドガイドライン,ブランドガイドライン,ブランドガイドライン,/ja/glossary/Brand-Guidelines/,ブランドの見た目や話し方を統一するためのルール集。ロゴ、色、フォント、メッセージなど、すべての場面で同じイメージを保つための指南書です。,1020,exact,true
 ブランドモニタリング,ブランドモニタリング,ブランドモニタリング,/ja/glossary/Brand-Monitoring/,ブランドモニタリングとは、オンラインおよびオフラインで自社ブランドについて人々が何を言っているかを追跡する実践であり、顧客の意見を理解し、フィードバックや潜在的な問題に迅速に対応することを可能にします。,1020,exact,true
 ブラウザキャッシング,ブラウザキャッシング,ブラウザキャッシング,/ja/glossary/Browser-Caching/,ブラウザキャッシングは、ウェブサイトのファイルを一時的にデバイスに保存することで、再訪問時のページ読み込みを高速化し、同じコンテンツを繰り返しダウンロードする必要性を減らします。,1020,exact,true
 ビルドパフォーマンス,ビルドパフォーマンス,ビルドパフォーマンス,/ja/glossary/Build-Performance/,ビルドパフォーマンスとは、ソフトウェア開発ツールがコードをコンパイルし、デプロイメントのために準備する速度と効率性のことです。開発者の生産性とプロジェクトの納期に直接的な影響を与えます。,1020,exact,true
@@ -535,31 +553,31 @@ MHaluBench,mhalubench,MHaluBench,/ja/glossary/MHaluBench/,MHaluBenchは、マル
 Midjourney,midjourney,Midjourney,/ja/glossary/Midjourney/,テキストの説明から高品質なデジタル画像を生成するAIプラットフォームで、芸術的なスキルがなくても誰でもプロフェッショナルなアートワークの作成が可能になります。,1020,exact,true
 モデルデプロイメント,モデルデプロイメント,モデルデプロイメント,/ja/glossary/Model-Deployment/,本番環境のMLシステムにおける戦略、ベストプラクティス、課題、実装アプローチを網羅したモデルデプロイメントの包括的ガイド。,1020,exact,true
 モデル再トレーニング,モデル再トレーニング,モデル再トレーニング,/ja/glossary/Model-Retraining/,機械学習におけるモデル再トレーニングの包括的ガイド。モデルのパフォーマンスを維持するための戦略、メリット、課題、ベストプラクティスを網羅しています。,1020,exact,true
-多要素認証（MFA）,多要素認証（mfa）,多要素認証（MFA）,/ja/glossary/Multi-Factor-Authentication--MFA-/,多要素認証（MFA）の包括的なガイド。実装方法、メリット、課題、セキュリティ強化のためのベストプラクティスを網羅しています。,1020,exact,true
+多要素認証（MFA）,多要素認証（mfa）,多要素認証（MFA）,/ja/glossary/Multi-Factor-Authentication--MFA-/,アカウントにアクセスする際に、パスワードに加えて指紋認証やスマートフォンの確認コードなど複数の確認方法を組み合わせることで、セキュリティを大幅に強化する仕組みです。,1020,exact,true
 ニュースジャッキング,ニュースジャッキング,ニュースジャッキング,/ja/glossary/Newsjacking/,ニュースジャッキングの包括的ガイド:速報ニュースを活用したマーケティング成功戦略、リアルタイムエンゲージメント手法、ブランド認知度向上について解説します。,1020,exact,true
 PBX(構内交換機),pbx(構内交換機),PBX(構内交換機),/ja/glossary/PBX--Private-Branch-Exchange-/,PBXシステムの包括的ガイド:従来型、IP型、クラウド型のビジネス通信インフラと管理ソリューション。,1020,exact,true
-ピアツーピアサポート,ピアツーピアサポート,ピアツーピアサポート,/ja/glossary/Peer-to-Peer-Support/,ピアツーピアサポートシステムの包括的なガイド。実装戦略、メリット、コミュニティ主導の支援におけるベストプラクティスを網羅しています。,1020,exact,true
+ピアツーピアサポート,ピアツーピアサポート,ピアツーピアサポート,/ja/glossary/Peer-to-Peer-Support/,同じ経験や課題を持つ人同士が、専門家ではなく互いに助言や励ましを提供し合う支援の方法。,1020,exact,true
 シート単位の価格設定,シート単位の価格設定,シート単位の価格設定,/ja/glossary/Per-Seat-Pricing/,ソフトウェアにアクセスする各ユーザーまたは従業員ごとに固定料金を支払うソフトウェア価格設定モデルで、コストがチームの規模に応じて直接スケールします。,1020,exact,true
 プロダクトバックログ,プロダクトバックログ,プロダクトバックログ,/ja/glossary/Product-Backlog/,アジャイル開発におけるプロダクトバックログの包括的ガイド。管理、優先順位付け、効果的な実装のためのベストプラクティスを網羅しています。,1020,exact,true
 ROI(投資収益率),roi(投資収益率),ROI(投資収益率),/ja/glossary/ROI/,投資収益率(ROI)は、投資効率を定量化する財務指標です。AIチャットボットと自動化のROI計算方法、主要な構成要素、指標、実際の事例について学びましょう。,1020,exact,true
 レート制限ハンドラー,レート制限ハンドラー,レート制限ハンドラー,/ja/glossary/Rate-Limiting-Handler/,レート制限ハンドラーは、APIリクエストのクォータを管理し、429エラーを検出し、リトライロジックを実装することで、クライアントおよびサーバーアプリケーションのコンプライアンスを確保し、サービス中断を防止します。,1020,exact,true
-リモートワークツール,リモートワークツール,リモートワークツール,/ja/glossary/Remote-Work-Tools/,コミュニケーションプラットフォーム、プロジェクト管理システム、分散チーム向けコラボレーション技術を含む、リモートワークツールの包括的なガイド。,1020,exact,true
+リモートワークツール,リモートワークツール,リモートワークツール,/ja/glossary/Remote-Work-Tools/,リモートワークツールは、オフィスに行かずにチームが一緒に仕事できるようにするビデオ会議、メッセージング、ファイル共有などのデジタルツールの総称です。,1020,exact,true
 リピートコンタクト率,リピートコンタクト率,リピートコンタクト率,/ja/glossary/Repeat-Contact-Rate/,同じ問題について顧客が再度サポートに連絡する頻度を測定する指標で、企業が最初の対応で実際に問題を解決できたかどうかを特定するのに役立ちます。,1020,exact,true
 レスポンシブデザイン,レスポンシブデザイン,レスポンシブデザイン,/ja/glossary/Responsive-Design/,スマートフォンからデスクトップコンピュータまで、あらゆる画面サイズに合わせてウェブサイトのレイアウトとコンテンツを自動的に調整するウェブデザインアプローチ。すべてのユーザーに優れた閲覧体験を提供します。,1020,exact,true
 レビューワークフロー,レビューワークフロー,レビューワークフロー,/ja/glossary/Review-Workflow/,レビューワークフローの包括的ガイド:品質保証と承認システムのためのプロセス、実装方法、メリット、ベストプラクティスを解説します。,1020,exact,true
 リッチメディアカード,リッチメディアカード,リッチメディアカード,/ja/glossary/Rich-Media-Cards/,リッチメディアカードは、チャットストリーム内のインタラクティブなUIコンポーネントで、画像、動画、ボタンなどのマルチメディアコンテンツとアクション可能な要素を提供し、魅力的な会話を実現します。,1020,exact,true
 Robots.txt,robots.txt,Robots.txt,/ja/glossary/Robots-txt/,検索エンジンのクローラーに対して、ウェブサイトのどの部分にアクセスしてインデックス化できるか、またはできないかを指示するテキストファイルです。,1020,exact,true
-ロールベース権限管理,ロールベース権限管理,ロールベース権限管理,/ja/glossary/Role-Based-Permissions/,ロールベース権限システムの包括的なガイド。実装戦略、メリット、セキュアなアクセス制御のためのベストプラクティスを解説します。,1020,exact,true
+ロールベース権限管理,ロールベース権限管理,ロールベース権限管理,/ja/glossary/Role-Based-Permissions/,従業員の職務に応じて、必要なシステムやデータへのアクセス権を管理する仕組み。権限を個別に設定するのではなく、役割ごとにまとめて管理することで、セキュリティを保ちながら運用を効率化します。,1020,exact,true
 セールスメソドロジー,セールスメソドロジー,セールスメソドロジー,/ja/glossary/Sales-Methodology/,営業チームが見込み客を一貫して顧客に転換できるよう支援する、体系的なステップバイステップガイド。営業プロセスの各段階において明確なプロセスを提供します。,1020,exact,true
 セールスパイプライン,セールスパイプライン,セールスパイプライン,/ja/glossary/Sales-Pipeline/,購買プロセスの各段階で見込み客を追跡する視覚的なシステムで、営業チームが収益を予測し、業務の優先順位を決定するのに役立ちます。,1020,exact,true
-セールスプレイブック,セールスプレイブック,セールスプレイブック,/ja/glossary/Sales-Playbook/,営業チームに実証済みの戦略、プロセス、戦術を提供し、一貫して商談を成約させ、収益を成長させるための包括的なガイド。,1020,exact,true
+セールスプレイブック,セールスプレイブック,セールスプレイブック,/ja/glossary/Sales-Playbook/,セールスチームが見込み客から成約まで、同じやり方で進められるようにまとめた営業マニュアル。成功した営業方法をルール化して、誰もが同じレベルで売上を作れるようにするもの。,1020,exact,true
 セールストレーニング,セールストレーニング,セールストレーニング,/ja/glossary/Sales-Training/,セールストレーニングとは、営業担当者が顧客と効果的に関わり、関係を構築し、商談を成約させるために必要な知識、スキル、テクニックを習得するための体系的な教育プロセスです。,1020,exact,true
 サンドボックスモード,サンドボックスモード,サンドボックスモード,/ja/glossary/Sandbox-Mode/,コード、フロー、またはソフトウェアを本番システムに影響を与えることなく安全に実行するための、隔離された使い捨てのテスト環境。開発、セキュリティ、品質保証に最適です。,1020,exact,true
 スキーママークアップ,スキーママークアップ,スキーママークアップ,/ja/glossary/Schema-Markup/,スキーママークアップの包括的ガイド - 検索エンジンがウェブサイトのコンテンツをより効果的に理解し表示するための構造化データボキャブラリー。,1020,exact,true
 セルフサービス成功率,セルフサービス成功率,セルフサービス成功率,/ja/glossary/Self-Service-Success-Rate/,セルフサービス成功率の指標、測定戦略、最適化手法、カスタマーサポートのベストプラクティスに関する包括的なガイド,1020,exact,true
 シングルテンプレート,シングルテンプレート,シングルテンプレート,/ja/glossary/Single-Template/,アプリケーション全体の基盤となる統一されたデザインテンプレートで、開発者が構造を繰り返し再構築することなく、すべてのページで一貫性を保ちながらコンテンツを動的に適応させることができます。,1020,exact,true
 サイトアーキテクチャ,サイトアーキテクチャ,サイトアーキテクチャ,/ja/glossary/Site-Architecture/,最適なユーザーエクスペリエンスとSEOパフォーマンスを実現するための、サイトアーキテクチャの原則、実装戦略、ベストプラクティスに関する包括的なガイド。,1020,exact,true
-サイトナビゲーション,サイトナビゲーション,サイトナビゲーション,/ja/glossary/Site-Navigation/,サイトナビゲーションシステムの包括的なガイド。デザイン原則、実装戦略、最適なユーザーエクスペリエンスのためのベストプラクティスを解説します。,1020,exact,true
+サイトナビゲーション,サイトナビゲーション,サイトナビゲーション,/ja/glossary/Site-Navigation/,ウェブサイト内でユーザーが目的のページを見つけやすくするためのメニューやリンクなどの案内システム。サイト全体を効率よく移動できるようにします。,1020,exact,true
 スマートコントラクト,スマートコントラクト,スマートコントラクト,/ja/glossary/Smart-Contract/,スマートコントラクトの包括的ガイド：合意を自動化し、仲介者を排除し、ビジネスプロセスを変革する自己実行型ブロックチェーンプログラムについて解説します。,1020,exact,true
 ソーシャルカレンダー,ソーシャルカレンダー,ソーシャルカレンダー,/ja/glossary/Social-Calendar/,企業が複数のプラットフォームにわたってソーシャルメディアの投稿を事前にスケジュールし、整理するための計画ツールです。一貫性のある戦略的なコンテンツ共有を実現します。,1020,exact,true
 ソーシャルリスニング,ソーシャルリスニング,ソーシャルリスニング,/ja/glossary/Social-Listening/,ソーシャルリスニングの包括的ガイド:ブランドインサイトと顧客エンゲージメントのためのオンライン会話のモニタリング、分析、対応について解説します。,1020,exact,true
@@ -581,7 +599,7 @@ Robots.txt,robots.txt,Robots.txt,/ja/glossary/Robots-txt/,検索エンジンの�
 ベクトルデータベース,ベクトルデータベース,ベクトルデータベース,/ja/glossary/Vector-Database/,ベクトルデータベースは、高次元ベクトル埋め込みの保存、インデックス化、クエリに特化したシステムで、効率的な類似性検索を可能にし、RAGなどの最新AI,1020,exact,true
 ウォーターマーキング,ウォーターマーキング,ウォーターマーキング,/ja/glossary/Watermarking/,AIにおけるウォーターマーキングとは、AI生成コンテンツ(テキスト、画像、音声、動画)に可視または不可視の信号を埋め込み、その出所を検証し、ディープフェイクに対抗し、真正性を確保する技術です。,1020,exact,true
 Webパフォーマンス,webパフォーマンス,Webパフォーマンス,/ja/glossary/Web-Performance/,Webパフォーマンス:Webページがユーザーに対して読み込まれ、インタラクティブになるまでの速度と効率性。高速なWebサイトはユーザー満足度を向上させ、コンバージョンを増加させ、検索エンジンランキングを向上させます。,1020,exact,true
-ウェルカムメッセージ,ウェルカムメッセージ,ウェルカムメッセージ,/ja/glossary/Welcome-Message/,デジタルアプリケーションにおけるウェルカムメッセージの包括的なガイド。実装戦略、ベストプラクティス、最適化テクニックを網羅しています。,1020,exact,true
+ウェルカムメッセージ,ウェルカムメッセージ,ウェルカムメッセージ,/ja/glossary/Welcome-Message/,ウェルカムメッセージは、アプリやサービスに登録した新規ユーザーに最初に表示されるメッセージです。ユーザーに安心感を与え、サービスの使い方をガイドするために使われます。,1020,exact,true
 WhatsApp連携,whatsapp連携,WhatsApp連携,/ja/glossary/WhatsApp-Integration/,ビジネス向けWhatsApp連携の包括的ガイド。API、実装戦略、メリット、顧客エンゲージメントのベストプラクティスを網羅しています。,1020,exact,true
 口コミマーケティング,口コミマーケティング,口コミマーケティング,/ja/glossary/Word-of-Mouth-Marketing/,口コミマーケティング戦略、メリット、実装テクニック、オーガニックなブランドアドボカシーのベストプラクティスに関する包括的なガイド。,1020,exact,true
 ワークフォース最適化,ワークフォース最適化,ワークフォース最適化,/ja/glossary/Workforce-Optimization/,データとテクノロジーを活用して、採用、スケジューリング、パフォーマンス、リソース配分を改善することで、従業員の生産性と組織の効率性を最大化する戦略的アプローチ。,1020,exact,true
@@ -595,9 +613,9 @@ AIにおける継続学習,aiにおける継続学習,AIにおける継続学習
 スパムフィルタリング,スパムフィルタリング,スパムフィルタリング,/ja/glossary/spam-filtering/,スパムフィルタリングとは、迷惑メール、大量送信メール、または悪意のあるメールを自動的に検出、分類、管理し、ユーザーの受信トレイに届かないようにするプロセスです。その仕組み、種類、メールセキュリティにおけるメリットについて解説します。,1020,exact,true
 スチューデントモデル,スチューデントモデル,スチューデントモデル,/ja/glossary/student-models/,スチューデントモデルとは、より大規模な「ティーチャーモデル」の動作を模倣するように訓練されたAIシステムで、リソースに制約のあるデバイス上での効率的なデプロイメント、モデル圧縮、転移学習を実現します。,1020,exact,true
 AIレポーティング,aiレポーティング,AIレポーティング,/ja/glossary/AI-Reporting/,AIレポーティングは、AI、機械学習、自然言語処理を活用してデータ分析とレポート生成を自動化します。詳細なインサイトの取得、異常検知、KPI要因の説明、トレンド予測を効率的に実現します。,1018,exact,true
-AIチャットボット,aiチャットボット,AIチャットボット,/ja/glossary/AI-chatbot/,AIチャットボットについて詳しく解説:その定義、NLP、NLU、LLMを活用した動作原理、種類、メリット、ユースケース、そして導入のベストプラクティスを学びます。,1018,exact,true
+AIチャットボット,aiチャットボット,AIチャットボット,/ja/glossary/AI-chatbot/,AIチャットボットは、人工知能を使って人間らしく会話し、ユーザーの質問に答えるソフトウェアです。カスタマーサービスや事務作業の自動化に活用されます。,1018,exact,true
 APIゲートウェイ,apiゲートウェイ,APIゲートウェイ,/ja/glossary/API-Gateway/,現代のマイクロサービスと分散システムにおけるAPIゲートウェイのアーキテクチャ、実装、メリット、ベストプラクティスに関する包括的なガイド。,1018,exact,true
-APIセキュリティ,apiセキュリティ,APIセキュリティ,/ja/glossary/API-Security/,認証、認可、暗号化、およびアプリケーションインターフェースを保護するためのベストプラクティスを網羅した、APIセキュリティの包括的なガイド。,1018,exact,true
+APIセキュリティ,apiセキュリティ,APIセキュリティ,/ja/glossary/API-Security/,APIセキュリティとは、異なるソフトウェア間の通信を守るための技術や対策の総称です。不正アクセスやデータ盗難を防ぐために使われます。,1018,exact,true
 敵対的ロバストネス,敵対的ロバストネス,敵対的ロバストネス,/ja/glossary/Adversarial-Robustness/,敵対的ロバストネスとは、AI/ML モデルが、エラーや誤分類を引き起こすために意図的に作成された敵対的入力に対して、信頼性の高いパフォーマンスを維持する能力のことです。,1018,exact,true
 エージェント占有率,エージェント占有率,エージェント占有率,/ja/glossary/Agent-Occupancy/,コンタクトセンターにおけるエージェント占有率指標の包括的ガイド。計算方法、最適化戦略、パフォーマンス管理について解説します。,1018,exact,true
 エージェント生産性,エージェント生産性,エージェント生産性,/ja/glossary/Agent-Productivity/,エージェント生産性とは、AIエージェントがタスクを完了する効率性の測定と改善を指し、その精度、速度、および時間の経過とともに学習し適応する能力を含みます。,1018,exact,true
@@ -641,7 +659,7 @@ Ernie-Bot,ernie-bot,Ernie-Bot,/ja/glossary/Ernie-Bot/,高度な推論、画像�
 フリーミアムモデル,フリーミアムモデル,フリーミアムモデル,/ja/glossary/Freemium-Model/,基本サービスを無料で提供してユーザーを獲得し、高度な機能に対して課金することで収益を生み出すビジネスモデル。,1018,exact,true
 ゴールトラッキング,ゴールトラッキング,ゴールトラッキング,/ja/glossary/Goal-Tracking/,個人および組織の成功測定のための、ゴールトラッキングシステム、方法論、ベストプラクティスに関する包括的なガイド。,1018,exact,true
 見出しライティング,見出しライティング,見出しライティング,/ja/glossary/Headline-Writing/,実証済みのテクニック、心理的トリガー、最適化戦略を活用して、最大限のエンゲージメントを実現する見出しライティングの技術と科学をマスターしましょう。,1018,exact,true
-階層型タクソノミー,階層型タクソノミー,階層型タクソノミー,/ja/glossary/Hierarchical-Taxonomy/,階層型タクソノミーシステムの包括的なガイド。その構造、実装方法、および様々な領域や業界における応用について解説します。,1018,exact,true
+階層型タクソノミー,階層型タクソノミー,階層型タクソノミー,/ja/glossary/Hierarchical-Taxonomy/,情報をツリー状に整理する分類方法。大きなカテゴリから小さなカテゴリへと段階的に分けることで、膨大な情報を効率よく探しやすくします。,1018,exact,true
 高可用性 (HA),高可用性 (ha),高可用性 (HA),/ja/glossary/High-Availability--HA-/,高可用性 (HA) は、単一障害点を排除し冗長性を活用することで、継続的な運用パフォーマンスとアップタイムの達成を目指すシステム設計手法です。,1018,exact,true
 Hugoモジュール,hugoモジュール,Hugoモジュール,/ja/glossary/Hugo-Module/,Hugoウェブサイト向けの再利用可能なコンポーネントシステムで、開発者がテーマ、レイアウト、コンテンツブロックをビルディングブロックのように共有・管理でき、自動バージョン管理機能を備えています。,1018,exact,true
 Instagram,instagram,Instagram,/ja/glossary/Instagram/,Instagramは、写真と動画の共有に特化したビジュアル型ソーシャルメディアプラットフォームです。機能、ビジネスツール、インフルエンサーマーケティング、オーディエンス構築について学びましょう。,1018,exact,true
@@ -670,7 +688,7 @@ Microsoft,microsoft,Microsoft,/ja/glossary/Microsoft/,Windows、Office、クラ�
 オリジナルリサーチ,オリジナルリサーチ,オリジナルリサーチ,/ja/glossary/Original-Research/,オリジナルリサーチとは、直接的な観察や実験を通じて新しいデータを収集・分析し、特定の分野における新たな知見を発見し、知識を進展させる体系的な調査研究です。,1018,exact,true
 ページオーソリティ,ページオーソリティ,ページオーソリティ,/ja/glossary/Page-Authority/,Mozが提供する指標で、個別のWebページを1から100のスコアで評価し、検索結果でのランキング予測を行います。主にリンクの質と量に基づいて算出されます。,1018,exact,true
 ページ読み込み時間,ページ読み込み時間,ページ読み込み時間,/ja/glossary/Page-Load-Time/,Webページが完全に読み込まれ、ブラウザで使用可能になるまでにかかる時間です。ユーザーがWebサイトを閲覧し、操作できるようになるまでの速度に影響します。,1018,exact,true
-プレビルトコネクタ,プレビルトコネクタ,プレビルトコネクタ,/ja/glossary/Pre-Built-Connector/,カスタム開発を必要とせず、異なるアプリケーションやシステム間のシームレスな統合を可能にする、すぐに使えるソフトウェアコンポーネントです。プレビルトコネクタは、事前設定されたマッピング、認証、データ変換機能を提供し、組織が広範なコーディングではなく直感的なインターフェースを通じて、プラットフォームを迅速に接続できるようにします。,1018,exact,true
+プレビルトコネクタ,プレビルトコネクタ,プレビルトコネクタ,/ja/glossary/Pre-Built-Connector/,プレビルトコネクタは、異なるアプリケーション間のデータ連携を、プログラミングなしで簡単に実現するあらかじめ用意されたソフトウェア部品です。,1018,exact,true
 プロダクト利用分析,プロダクト利用分析,プロダクト利用分析,/ja/glossary/Product-Usage-Analytics/,プロダクト利用分析の包括的ガイド:ユーザー行動の追跡、エンゲージメントの測定、データドリブンなインサイトによるデジタルプロダクトの最適化について解説します。,1018,exact,true
 RAGベンチマーク,ragベンチマーク,RAGベンチマーク,/ja/glossary/RAG-benchmarks/,RAGベンチマークは、Retrieval-Augmented Generation(RAG)システムを評価するための構造化された基準と指標であり、検索品質と生成品質の両方を評価します。,1018,exact,true
 規制サンドボックス,規制サンドボックス,規制サンドボックス,/ja/glossary/Regulatory-Sandbox/,規制サンドボックスとは、規制当局が革新的な企業に対して新製品やサービスをテストできるよう設けた管理された環境であり、規制を緩和しながら消費者の安全を確保し、イノベーションを促進するものです。,1018,exact,true
@@ -698,10 +716,9 @@ SMB(中小企業),smb(中小企業),SMB(中小企業),/ja/glossary/SMB--Small-an
 システムプロンプト,システムプロンプト,システムプロンプト,/ja/glossary/System-Prompt/,AIにおけるシステムプロンプトの包括的ガイド:定義、実装、ベストプラクティス、および最適なAI動作制御のための高度なテクニック。,1018,exact,true
 タスク指向型ボット,タスク指向型ボット,タスク指向型ボット,/ja/glossary/Task-Oriented-Bot/,タスク指向型ボットは、予約、追跡、スケジューリングなどの特定の構造化されたプロセスを自動化するために設計された専門的なチャットボットで、自然言語処理とバックエンド統合を活用します。,1018,exact,true
 サードパーティ統合,サードパーティ統合,サードパーティ統合,/ja/glossary/Third-Party-Integration/,サードパーティ統合の包括的ガイド:API、Webhook、ミドルウェア、セキュリティ考慮事項、シームレスなシステム接続のためのベストプラクティス。,1018,exact,true
-チケットステータス,チケットステータス,チケットステータス,/ja/glossary/Ticket-Status/,ITサービスマネジメント、ヘルプデスク業務、プロジェクト追跡ワークフローにおけるチケットステータスシステムの包括的なガイド。,1018,exact,true
+チケットステータス,チケットステータス,チケットステータス,/ja/glossary/Ticket-Status/,チケットステータスは、サポート依頼や問題がどの段階にあるかを示す状態表示です。顧客とサポート担当者が進捗を共有し、次にすべきことを理解するために使われます。,1018,exact,true
 トピッククラスター,トピッククラスター,トピッククラスター,/ja/glossary/Topic-Cluster/,トピッククラスターの包括的ガイド - ピラーページを中心に関連コンテンツを整理し、検索ランキングを向上させるSEOコンテンツ戦略,1018,exact,true
 Twitter-X,twitter-x,Twitter-X,/ja/glossary/Twitter-X/,Twitter-Xは、2023年にイーロン・マスクによって立ち上げられた、メッセージング、コンテンツ作成、金融サービスを1つのアプリに統合したリブランド後のソーシャルメディアプラットフォームです。,1018,exact,true
-教師なし一貫性評価,教師なし一貫性評価,教師なし一貫性評価,/ja/glossary/Unsupervised-Consistency-Evaluation/,ラベル付きデータや人間によるアノテーションを必要とせず、モデルの信頼性を評価するための教師なし一貫性評価手法に関する包括的なガイド。,1018,exact,true
 使用状況メトリクス,使用状況メトリクス,使用状況メトリクス,/ja/glossary/Usage-Metrics/,使用状況メトリクスの包括的ガイド - デジタルプラットフォーム全体におけるユーザー行動とシステムパフォーマンスの測定、分析、最適化について解説します。,1018,exact,true
 ユーザーストーリー,ユーザーストーリー,ユーザーストーリー,/ja/glossary/User-Story/,アジャイル開発におけるユーザーストーリーの包括的ガイド - 定義、メリット、実装のベストプラクティス、およびチーム向けの高度なテクニック。,1018,exact,true
 バイラルコンテンツ,バイラルコンテンツ,バイラルコンテンツ,/ja/glossary/Viral-Content/,バイラルコンテンツの作成、配信戦略、およびソーシャルメディアでのエンゲージメントとリーチを最大化するための最適化テクニックに関する包括的なガイド。,1018,exact,true
@@ -736,7 +753,7 @@ Botpress,botpress,Botpress,/ja/glossary/Botpress/,Botpressは、ビジュアル�
 コールパーキング,コールパーキング,コールパーキング,/ja/glossary/Call-Parking/,コールパーキング技術、実装方法、メリット、および現代のビジネスコミュニケーションシステムにおけるベストプラクティスに関する包括的なガイド。,1016,exact,true
 コールウィスパー,コールウィスパー,コールウィスパー,/ja/glossary/Call-Whisper/,コンタクトセンターにおけるコールウィスパー技術の包括的ガイド。導入方法、メリット、エージェントコーチングのベストプラクティスを網羅しています。,1016,exact,true
 カナリアリリース,カナリアリリース,カナリアリリース,/ja/glossary/Canary-Release/,カナリアリリースとは、新しいアプリケーションバージョンを少数のユーザーに段階的に展開する漸進的なソフトウェアデプロイメント戦略であり、早期の問題検出とリスク軽減を可能にします。,1016,exact,true
-カノニカルURL,カノニカルurl,カノニカルURL,/ja/glossary/Canonical-URL/,カノニカルURLの包括的なガイド。実装方法、メリット、SEO最適化と重複コンテンツ管理のベストプラクティスを解説します。,1016,exact,true
+カノニカルURL,カノニカルurl,カノニカルURL,/ja/glossary/Canonical-URL/,同じ内容を持つ複数のURLがある場合に、検索エンジンに「このURLを本物のバージョンとして扱ってください」と伝えるための指定方法。検索順位の低下を防ぎます。,1016,exact,true
 コミュニティ構築,コミュニティ構築,コミュニティ構築,/ja/glossary/Community-Building/,プラットフォーム全体でエンゲージメントの高い持続可能なコミュニティを構築するための、包括的な戦略、テクニック、ベストプラクティスガイド。,1016,exact,true
 コンテンツAPI,コンテンツapi,コンテンツAPI,/ja/glossary/Content-API/,コンテンツAPIの包括的ガイド - プラットフォームやアプリケーション間でデジタルコンテンツを管理、配信、統合するためのプログラマティックインターフェース。,1016,exact,true
 コンテンツの劣化,コンテンツの劣化,コンテンツの劣化,/ja/glossary/Content-Decay/,コンテンツが古くなったり新しい競合が現れたりすることで、ウェブサイトの検索ランキングとトラフィックが時間とともに徐々に低下する現象。定期的な更新により、可視性とパフォーマンスを維持することができます。,1016,exact,true
@@ -744,7 +761,7 @@ Botpress,botpress,Botpress,/ja/glossary/Botpress/,Botpressは、ビジュアル�
 コンテンツピラー,コンテンツピラー,コンテンツピラー,/ja/glossary/Content-Pillar/,コンテンツピラーの包括的ガイド - デジタルプラットフォーム全体でコンテンツ戦略、SEOパフォーマンス、オーディエンスエンゲージメントを推進する基盤となるトピックについて解説します。,1016,exact,true
 コンテンツROI,コンテンツroi,コンテンツROI,/ja/glossary/Content-ROI/,デジタルマーケティングの成功とビジネス成長戦略のための、コンテンツ投資収益率の測定と最適化に関する包括的なガイド。,1016,exact,true
 コンテンツタイプ,コンテンツタイプ,コンテンツタイプ,/ja/glossary/Content-Type/,コンピュータに送信されるデータの種類を示すラベルで、データを正しく表示または処理する方法を判断するために使用されます。,1016,exact,true
-コンテンツタイプ,コンテンツタイプ,コンテンツタイプ,/ja/glossary/Content-Types/,デジタルシステムにおけるコンテンツタイプの包括的なガイド。分類、実装、構造化されたコンテンツ管理のベストプラクティスを網羅しています。,1016,exact,true
+コンテンツタイプ,コンテンツタイプ,コンテンツタイプ,/ja/glossary/Content-Types/,コンテンツタイプは、Webサイトやアプリで異なる種類の情報（ブログ記事や商品など）を統一したルールで管理するための設計図です。,1016,exact,true
 コンテキスト保持,コンテキスト保持,コンテキスト保持,/ja/glossary/Context-Preservation/,AI システムにおけるコンテキスト保持の包括的ガイド。会話の一貫性を維持するための技術、メリット、実装戦略について解説します。,1016,exact,true
 AIコパイロット,aiコパイロット,AIコパイロット,/ja/glossary/Copilot/,AIコパイロットは、人間のユーザーと並行して動作する高度なAI搭載デジタルアシスタントであり、生産性、創造性、意思決定をリアルタイムで強化します。,1016,exact,true
 データガバナンス,データガバナンス,データガバナンス,/ja/glossary/Data-Governance/,組織のデータ資産を効果的かつ安全に管理するための、データガバナンスフレームワーク、ポリシー、ベストプラクティスに関する包括的なガイド。,1016,exact,true
@@ -752,7 +769,7 @@ AIコパイロット,aiコパイロット,AIコパイロット,/ja/glossary/Copi
 ディールステージ,ディールステージ,ディールステージ,/ja/glossary/Deal-Stage/,ディールステージとは、見込み顧客が購買プロセスのどの段階にいるかを示す営業プロセスのチェックポイントであり、営業チームが進捗を追跡し、どの案件が成約するかを予測するのに役立ちます。,1016,exact,true
 ダイアログターン,ダイアログターン,ダイアログターン,/ja/glossary/Dialog-Turn/,会話型AIシステムにおけるダイアログターンの包括的ガイド。実装方法、メリット、課題、効果的なインタラクションデザインのベストプラクティスを網羅しています。,1016,exact,true
 エコシステム統合,エコシステム統合,エコシステム統合,/ja/glossary/Ecosystem-Integration/,シームレスなシステム接続と相互運用性を実現するための、エコシステム統合戦略、テクノロジー、ベストプラクティスに関する包括的なガイド。,1016,exact,true
-編集ガイドライン,編集ガイドライン,編集ガイドライン,/ja/glossary/Editorial-Guidelines/,一貫性のあるコンテンツ作成と公開ワークフローのための標準、プロセス、ベストプラクティスを網羅した編集ガイドラインの包括的なガイド。,1016,exact,true
+編集ガイドライン,編集ガイドライン,編集ガイドライン,/ja/glossary/Editorial-Guidelines/,コンテンツを作成・公開する際に、文章のスタイルから法的ルールまで、すべてのチームが同じ基準で進めるための統一ルール集。,1016,exact,true
 アンサンブル学習,アンサンブル学習,アンサンブル学習,/ja/glossary/Ensemble-Learning/,機械学習における予測精度向上のためのアンサンブル学習手法、アルゴリズム、および応用に関する包括的ガイド。,1016,exact,true
 Facebook,facebook,Facebook,/ja/glossary/Facebook/,Facebookは世界最大のソーシャルネットワーキングプラットフォームで、数十億人のユーザーを繋いでいます。機能、ビジネスツール、広告、コミュニティ構築について学びましょう。,1016,exact,true
 公平性メトリクス,公平性メトリクス,公平性メトリクス,/ja/glossary/Fairness-Metrics/,公平性メトリクスは、AI/MLシステムにおけるバイアスを定量化、評価、監視するために使用される数学的・統計的ツールであり、グループ間での公平な取り扱いを保証します。,1016,exact,true
@@ -766,7 +783,7 @@ Goテンプレート,goテンプレート,Goテンプレート,/ja/glossary/Go-T
 ヒートマップ分析,ヒートマップ分析,ヒートマップ分析,/ja/glossary/Heatmap-Analysis/,色のグラデーションを使用して数値を表現するデータ可視化手法で、パターンやトレンドを一目で把握できるようにします。,1016,exact,true
 Hreflang,hreflang,Hreflang,/ja/glossary/Hreflang/,検索エンジンに対して、どの言語バージョンのウェブページをユーザーに表示すべきかを伝えるHTMLタグで、多言語ウェブサイトが適切なオーディエンスにリーチするのを支援します。,1016,exact,true
 実装タイムライン,実装タイムライン,実装タイムライン,/ja/glossary/Implementation-Timeline/,システムやソリューションを開始から完了まで成功裏に立ち上げるために必要な段階、マイルストーン、期限を示すプロジェクトロードマップ。,1016,exact,true
-インデックス作成,インデックス作成,インデックス作成,/ja/glossary/Indexing/,データベースおよび検索システムにおけるインデックス作成の包括的なガイド。種類、実装方法、メリット、最適なパフォーマンスを実現するためのベストプラクティスを解説します。,1016,exact,true
+インデックス作成,インデックス作成,インデックス作成,/ja/glossary/Indexing/,データを素早く見つけるために、あらかじめ整理・分類しておく仕組み。書籍の索引のように、必要な情報にすぐアクセスできるようにします。,1016,exact,true
 Jamstack,jamstack,Jamstack,/ja/glossary/Jamstack/,Jamstackアーキテクチャの包括的ガイド:JavaScript、API、マークアップを活用した高速で安全、かつスケーラブルなモダンWebアプリケーションの構築方法。,1016,exact,true
 ナレッジギャップ,ナレッジギャップ,ナレッジギャップ,/ja/glossary/Knowledge-Gap/,組織、研究、学習におけるナレッジギャップの包括的ガイド - 成功のための特定、分析、および橋渡し戦略。,1016,exact,true
 ナレッジの再利用,ナレッジの再利用,ナレッジの再利用,/ja/glossary/Knowledge-Reuse/,ナレッジの再利用戦略、実装方法、組織学習と効率化のためのベストプラクティスに関する包括的なガイド。,1016,exact,true
@@ -800,7 +817,7 @@ REST API,rest api,REST API,/ja/glossary/REST-API/,REST APIの包括的ガイド:
 レスポンスタイム,レスポンスタイム,レスポンスタイム,/ja/glossary/Response-Time/,レスポンスタイムメトリクス、測定技術、最適化戦略、およびシステムパフォーマンス分析のベストプラクティスに関する包括的なガイド。,1016,exact,true
 リテンション戦略,リテンション戦略,リテンション戦略,/ja/glossary/Retention-Strategy/,顧客ロイヤルティ、従業員エンゲージメント、ビジネス成長のための包括的なリテンション戦略ガイド。実証済みの方法論とベストプラクティスを通じて解説します。,1016,exact,true
 リッチスニペット,リッチスニペット,リッチスニペット,/ja/glossary/Rich-Snippets/,リッチスニペットの包括的ガイド - 構造化データマークアップによって強化された検索結果で、SERPsにおける視認性とクリック率を向上させます。,1016,exact,true
-SEOメタデータ,seoメタデータ,SEOメタデータ,/ja/glossary/SEO-Metadata/,メタタグ、構造化データ、検索エンジンの可視性とランキング向上のための最適化手法を含む、SEOメタデータの包括的なガイド。,1016,exact,true
+SEOメタデータ,seoメタデータ,SEOメタデータ,/ja/glossary/SEO-Metadata/,# 新しいdescription:,1016,exact,true
 セールスプロセス,セールスプロセス,セールスプロセス,/ja/glossary/Sales-Process/,見込み顧客を有料顧客に転換するために営業チームが従う段階的な計画で、最初の接触から契約成立までをカバーします。,1016,exact,true
 スクリーンポップ,スクリーンポップ,スクリーンポップ,/ja/glossary/Screen-Pop/,コンタクトセンターにおけるスクリーンポップ技術の包括的ガイド。実装方法、メリット、カスタマーサービス自動化のベストプラクティスを網羅しています。,1016,exact,true
 スクロールマップ,スクロールマップ,スクロールマップ,/ja/glossary/Scroll-Map/,ウェブページ上でユーザーがどこまでスクロールしているかを色分けされたヒートマップで視覚化するツールです。デザイナーがどのコンテンツが注目されているか、訪問者がどこで離脱しているかを理解するのに役立ちます。,1016,exact,true
@@ -820,15 +837,15 @@ Stack AI,stack ai,Stack AI,/ja/glossary/Stack-AI/,Stack AIは、高度な大規�
 テクノロジー評価,テクノロジー評価,テクノロジー評価,/ja/glossary/Technology-Evaluation/,購入または導入の意思決定を行う前に、テクノロジーソリューションが組織のニーズ、コスト、目標を満たしているかどうかを評価・比較する体系的なプロセス。,1016,exact,true
 テンプレート階層,テンプレート階層,テンプレート階層,/ja/glossary/Template-Hierarchy/,子テンプレートが親テンプレートからプロパティとレイアウトを継承する階層型テンプレートシステムで、開発者が一貫性のある保守しやすいウェブサイトを効率的に構築できるようにします。,1016,exact,true
 テンプレート変数,テンプレート変数,テンプレート変数,/ja/glossary/Template-Variable/,テンプレート内のプレースホルダーで、テンプレートが処理される際に実際のデータに自動的に置き換えられます。これにより、テンプレートを毎回書き直すことなく、パーソナライズされたコンテンツを作成できます。,1016,exact,true
-翻訳ワークフロー,翻訳ワークフロー,翻訳ワークフロー,/ja/glossary/Translation-Workflow/,翻訳ワークフローの包括的なガイド。効率的な多言語コンテンツ管理のためのプロセス、ツール、ベストプラクティスを網羅しています。,1016,exact,true
+翻訳ワークフロー,翻訳ワークフロー,翻訳ワークフロー,/ja/glossary/Translation-Workflow/,複数の言語へのコンテンツ翻訳を、品質と効率を保ちながら進めるための体系的な手順。,1016,exact,true
 UXライティング,uxライティング,UXライティング,/ja/glossary/UX-Writing/,UXライティングの包括的ガイド - デジタルインターフェースとエクスペリエンスを通じてユーザーを導く、ユーザー中心のコピーを作成する実践手法について解説します。,1016,exact,true
-統合インボックス,統合インボックス,統合インボックス,/ja/glossary/Unified-Inbox/,複数のコミュニケーションチャネルを単一のインターフェースに統合し、メッセージ管理を効率化する統合インボックスシステムの包括的なガイド。,1016,exact,true
-ユーザーグループ,ユーザーグループ,ユーザーグループ,/ja/glossary/User-Groups/,システム管理におけるユーザーグループの包括的なガイド。実装、管理、セキュリティ上のメリット、アクセス制御のベストプラクティスについて解説します。,1016,exact,true
+統合インボックス,統合インボックス,統合インボックス,/ja/glossary/Unified-Inbox/,メール、SNS、チャットなど複数のコミュニケーションアプリを一つの画面にまとめて、メッセージ管理を効率化するシステム。,1016,exact,true
+ユーザーグループ,ユーザーグループ,ユーザーグループ,/ja/glossary/User-Groups/,ユーザーグループは、同じアクセス権限が必要なユーザーをまとめて管理する仕組みです。一度に複数ユーザーの権限を設定できるため、管理作業を効率化できます。,1016,exact,true
 バーチャルキュー,バーチャルキュー,バーチャルキュー,/ja/glossary/Virtual-Queue/,バーチャルキューの包括的ガイド:リモート待ち列管理とリアルタイム通知により、物理的な行列を排除するデジタル待機システムです。,1016,exact,true
 Weaviate,weaviate,Weaviate,/ja/glossary/Weaviate/,Weaviateは、オブジェクトと高次元埋め込みを保存するオープンソースのクラウドネイティブなベクトルデータベースです。セマンティック検索、ハイブリッド検索、大規模なAI/MLアプリケーションを可能にします。,1016,exact,true
 WhatsApp,whatsapp,WhatsApp,/ja/glossary/WhatsApp/,電話プランを使用せずにインターネット経由でテキスト、通話、ビデオを送信できる無料のメッセージングアプリで、強力なプライバシー保護機能を備えています。,1016,exact,true
 ホワイトペーパー,ホワイトペーパー,ホワイトペーパー,/ja/glossary/White-Paper/,ホワイトペーパーの包括的ガイド:ソートリーダーシップ、問題解決、ビジネスコミュニケーション戦略のための権威ある文書。,1016,exact,true
-Word2Vec,word2vec,Word2Vec,/ja/glossary/Word2Vec/,Word2Vecニューラルネットワークモデルの包括的なガイド。NLPアプリケーション向けのCBOWおよびSkip-gramアーキテクチャを含む単語埋め込み技術について解説します。,1016,exact,true
+Word2Vec,word2vec,Word2Vec,/ja/glossary/Word2Vec/,# Word2Vec,1016,exact,true
 ワークロード分散,ワークロード分散,ワークロード分散,/ja/glossary/Workload-Distribution/,複数のサーバーやコンピューターに計算作業を分散させることで、単一のシステムに過負荷がかかるのを防ぎ、すべてのリソースを効率的に稼働させる手法。,1016,exact,true
 ゼロクリック検索,ゼロクリック検索,ゼロクリック検索,/ja/glossary/Zero-Click-Search/,検索結果ページ上で質問に直接回答する検索機能。必要な情報を見つけるためにウェブサイトをクリックする必要がありません。,1016,exact,true
 ゼロショット学習,ゼロショット学習,ゼロショット学習,/ja/glossary/Zero-Shot-Learning/,ゼロショット学習の包括的ガイド:セマンティック埋め込みを通じて、訓練例なしで未知のカテゴリを分類できるAIモデルの実現方法を解説します。,1016,exact,true
@@ -856,11 +873,11 @@ ChatGPT,chatgpt,ChatGPT,/ja/glossary/ChatGPT/,ChatGPTは、大規模言語モデ
 チャットボット,チャットボット,チャットボット,/ja/glossary/Chatbot/,チャットボットは、テキストまたは音声を使用して人間の会話をシミュレートするソフトウェアプログラムで、24時間365日利用可能です。チャットボットの種類、用途、メリット、そしてAI、自然言語処理、機械学習の活用方法について解説します。,1014,exact,true
 チャーンレート,チャーンレート,チャーンレート,/ja/glossary/Churn-Rate/,サブスクリプションビジネスにおける顧客離脱を削減するための、チャーンレート指標、計算方法、戦略に関する包括的なガイド。,1014,exact,true
 クリックマップ,クリックマップ,クリックマップ,/ja/glossary/Click-Map/,クリックマップは、ウェブページ上でユーザーがクリックまたはタップした場所を視覚的に表示する分析ツールです。ウェブ専門家、マーケター、UXスペシャリストがサイトレイアウトを最適化し、コンバージョンを改善し、ユーザーインタラクションを理解するのに役立ちます。,1014,exact,true
-クラウドPBX,クラウドpbx,クラウドPBX,/ja/glossary/Cloud-PBX/,クラウドPBXシステムの包括的なガイド。アーキテクチャ、メリット、導入方法、そして現代のビジネスコミュニケーションにおけるベストプラクティスを網羅しています。,1014,exact,true
+クラウドPBX,クラウドpbx,クラウドPBX,/ja/glossary/Cloud-PBX/,インターネットを通じて提供される電話システム。従来のオフィスの電話機器が不要で、どこからでも電話やビデオ会議などが使える。,1014,exact,true
 コンタクト管理,コンタクト管理,コンタクト管理,/ja/glossary/Contact-Management/,顧客情報を整理・保存し、コミュニケーションの改善、関係性の追跡、ビジネス上の意思決定をサポートするシステム。,1014,exact,true
 コンテンツ監査,コンテンツ監査,コンテンツ監査,/ja/glossary/Content-Audit/,コンテンツ監査の包括的ガイド:デジタルコンテンツのパフォーマンスを最適化するための体系的な評価プロセス、方法論、ツール、ベストプラクティス。,1014,exact,true
 コンテンツ収集,コンテンツ収集,コンテンツ収集,/ja/glossary/Content-Collection/,さまざまなソースからデジタルコンテンツを収集し、整理して、一元化された場所に保存することで、簡単にアクセスおよび管理できるようにする体系的なプロセス。,1014,exact,true
-コンテンツハブ,コンテンツハブ,コンテンツハブ,/ja/glossary/Content-Hub/,コンテンツハブの包括的なガイド - 複数のチャネルとオーディエンスにわたってデジタルコンテンツを整理、管理、配信するための一元化されたプラットフォームです。,1014,exact,true
+コンテンツハブ,コンテンツハブ,コンテンツハブ,/ja/glossary/Content-Hub/,# 新しいdescription:,1014,exact,true
 コンテンツ移行,コンテンツ移行,コンテンツ移行,/ja/glossary/Content-Migration/,プラットフォームやシステム間でのシームレスなデータ転送を実現するための、コンテンツ移行プロセス、戦略、ベストプラクティスに関する包括的なガイド。,1014,exact,true
 コンテンツ戦略,コンテンツ戦略,コンテンツ戦略,/ja/glossary/Content-Strategy/,コンテンツ戦略の包括的ガイド:ビジネス目標を達成し、ターゲットオーディエンスを効果的にエンゲージするためのコンテンツの計画、作成、管理について解説します。,1014,exact,true
 会話のドリフト,会話のドリフト,会話のドリフト,/ja/glossary/Conversation-Drift/,会話のドリフトは、AIチャットボットやバーチャルアシスタントが本来のトピックから逸脱し、話題がずれた応答を返すことで、ユーザー体験の低下を招く現象です。その防止方法について学びましょう。,1014,exact,true
@@ -904,10 +921,10 @@ KVキャッシュ,kvキャッシュ,KVキャッシュ,/ja/glossary/KV-Cache/,KV�
 キーワード密度,キーワード密度,キーワード密度,/ja/glossary/Keyword-Density/,キーワード密度とは、コンテンツ内で特定のターゲットキーワードが出現する回数を総単語数で割った割合のことです。重要な検索用語をどの程度言及しているかを測定し、検索結果におけるコンテンツの可視性を向上させるのに役立ちます。,1014,exact,true
 ナレッジサイロ,ナレッジサイロ,ナレッジサイロ,/ja/glossary/Knowledge-Silos/,ナレッジサイロの包括的ガイド:組織における情報障壁を打破するための原因、影響、解決策、ベストプラクティスを解説します。,1014,exact,true
 リンクトデータ,リンクトデータ,リンクトデータ,/ja/glossary/Linked-Data/,機械可読な情報の相互接続されたウェブを構築するための、リンクトデータの原則、技術、実装に関する包括的なガイド。,1014,exact,true
-ライブチャット,ライブチャット,ライブチャット,/ja/glossary/Live-Chat/,ライブチャットシステムの包括的なガイド。実装戦略、メリット、リアルタイムの顧客コミュニケーションソリューションのベストプラクティスを解説します。,1014,exact,true
+ライブチャット,ライブチャット,ライブチャット,/ja/glossary/Live-Chat/,ウェブサイトやアプリ上で企業の担当者やAIと即座にメッセージをやり取りできるツール。顧客が離脱せずにその場で質問や相談ができます。,1014,exact,true
 ライブコマース,ライブコマース,ライブコマース,/ja/glossary/Live-Commerce/,ホストがリアルタイム動画で商品を配信し、視聴者が視聴しながら即座に購入できるライブショッピング形式。エンターテインメントと即時購入を組み合わせたものです。,1014,exact,true
 メタデータ管理,メタデータ管理,メタデータ管理,/ja/glossary/Metadata-Management/,データ資産を効果的に整理し統制するための、メタデータ管理システム、プロセス、ベストプラクティスに関する包括的なガイド。,1014,exact,true
-マイクロコピー,マイクロコピー,マイクロコピー,/ja/glossary/Microcopy/,UXデザインにおけるマイクロコピーの完全ガイド - ユーザーを導き、摩擦を減らし、戦略的なメッセージングを通じてデジタル体験を向上させる小さなテキスト要素について解説します。,1014,exact,true
+マイクロコピー,マイクロコピー,マイクロコピー,/ja/glossary/Microcopy/,ウェブサイトやアプリ内の、ボタンやエラーメッセージなど、ユーザーを案内する小さなテキスト。使いやすさを高めます。,1014,exact,true
 モバイル最適化,モバイル最適化,モバイル最適化,/ja/glossary/Mobile-Optimization/,モバイル最適化とは、ウェブサイトやアプリをスマートフォンやタブレットでスムーズに動作するように設計するプロセスであり、小さな画面での高速な読み込み速度と簡単なナビゲーションを確保します。,1014,exact,true
 モデルドリフト,モデルドリフト,モデルドリフト,/ja/glossary/Model-Drift/,機械学習におけるモデルドリフトの包括的ガイド:AIシステムのパフォーマンスを維持するための検出、モニタリング、および緩和戦略。,1014,exact,true
 ノードとエッジ,ノードとエッジ,ノードとエッジ,/ja/glossary/Nodes-and-Edges/,ノードはシステムにおける基本的な構成要素(アクションまたはエンティティ)であり、エッジは関係性、データフロー、または依存関係を定義する接続(線)です。,1014,exact,true
@@ -919,9 +936,9 @@ POV(視点),pov(視点),POV(視点),/ja/glossary/POV--Point-of-View-/,物語が�
 パルスサーベイ,パルスサーベイ,パルスサーベイ,/ja/glossary/Pulse-Survey/,パルスサーベイの包括的ガイド:従業員エンゲージメント、満足度、組織の健全性をリアルタイムで測定するための迅速なフィードバックツール。,1014,exact,true
 クイックウィン,クイックウィン,クイックウィン,/ja/glossary/Quick-Wins/,クイックウィンとは、迅速かつ測定可能な成果をもたらし、より大きな変革への勢いを生み出す、小規模で実行しやすい改善施策のことです。最小限の労力でチームの自信を高め、リーダーシップに対して進捗を証明するのに役立ちます。,1014,exact,true
 RSSフィード,rssフィード,RSSフィード,/ja/glossary/RSS-Feed/,RSSフィードの包括的ガイド - ウェブコンテンツを購読者やアプリケーションに自動配信するためのXMLベースの配信フォーマット。,1014,exact,true
-関連コンテンツ,関連コンテンツ,関連コンテンツ,/ja/glossary/Related-Content/,関連コンテンツシステムの包括的なガイド。実装戦略、アルゴリズム、ユーザーエンゲージメントとSEOを向上させるためのベストプラクティスを解説します。,1014,exact,true
+関連コンテンツ,関連コンテンツ,関連コンテンツ,/ja/glossary/Related-Content/,ユーザーが今見ているコンテンツに基づいて、関連する記事や商品を自動で提案するシステム。サイト内での閲覧時間を増やし、ユーザーが欲しい情報を見つけやすくするために使われます。,1014,exact,true
 リバースETL,リバースetl,リバースETL,/ja/glossary/Reverse-ETL/,リバースETLの包括的ガイド:データウェアハウスから運用システムへデータを移動し、リアルタイムのビジネス活性化と顧客エンゲージメントを実現する方法を解説します。,1014,exact,true
-SMSサポート,smsサポート,SMSサポート,/ja/glossary/SMS-Support/,SMSサポートシステムの包括的なガイド、実装戦略、メリット、およびカスタマーサービスコミュニケーションチャネルのベストプラクティス。,1014,exact,true
+SMSサポート,smsサポート,SMSサポート,/ja/glossary/SMS-Support/,SMSサポートは、テキストメッセージを通じて顧客サービスを提供するシステムです。専用アプリ不要で、スマートフォンから気軽に問い合わせや相談ができます。,1014,exact,true
 スクロール深度,スクロール深度,スクロール深度,/ja/glossary/Scroll-Depth/,ユーザーがウェブページをどこまでスクロールしたかを追跡する指標で、コンテンツのエンゲージメントを測定し、ページのどの部分が訪問者の注意を引いているかを特定するのに役立ちます。,1014,exact,true
 検索ボリューム,検索ボリューム,検索ボリューム,/ja/glossary/Search-Volume/,検索ボリュームとは、特定のキーワードやトピックが検索エンジンで月間に検索される回数のことです。マーケターは検索ボリュームを活用することで、人々が何を探しているかを理解し、作成すべきコンテンツや広告の方向性を決定することができます。,1014,exact,true
 シャーディング,シャーディング,シャーディング,/ja/glossary/Sharding/,シャーディングとは、大規模な論理データセットを独立した小さな断片(シャード)に分割するデータベースアーキテクチャパターンであり、水平スケーリングとパフォーマンスの向上を実現します。,1014,exact,true
@@ -931,7 +948,7 @@ SMSサポート,smsサポート,SMSサポート,/ja/glossary/SMS-Support/,SMSサ
 スタースキーマ,スタースキーマ,スタースキーマ,/ja/glossary/Star-Schema/,データウェアハウスにおけるスタースキーマ設計の包括的ガイド。ディメンショナルモデリングの実装、メリット、ベストプラクティスを網羅しています。,1014,exact,true
 ステートマシン,ステートマシン,ステートマシン,/ja/glossary/State-Machine/,システムの状態遷移を表現する計算モデル、ステートマシンについて解説します。基本概念、種類、AIチャットボットや自動化での活用方法、実装方法、利点、課題について学びましょう。,1014,exact,true
 静的サイト生成,静的サイト生成,静的サイト生成,/ja/glossary/Static-Site-Generation/,完成したWebページを事前に作成し、訪問者がアクセスするたびにページを構築するのではなく、直接配信するWeb開発手法です。このアプローチは、シンプルなWebサイトの速度と最新の開発ツールを組み合わせています。,1014,exact,true
-スタイルガイド,スタイルガイド,スタイルガイド,/ja/glossary/Style-Guide/,スタイルガイドの包括的なガイド:組織全体で一貫したブランディング、ライティング基準、デザイン原則を実現するための必須ドキュメント。,1014,exact,true
+スタイルガイド,スタイルガイド,スタイルガイド,/ja/glossary/Style-Guide/,スタイルガイドは、組織全体で文字や色、デザインなどを統一するためのルールブックです。すべての資料を同じイメージで統一し、信頼感を高めるために使います。,1014,exact,true
 サクセスプラン,サクセスプラン,サクセスプラン,/ja/glossary/Success-Plan/,サクセスプランの包括的ガイド - 構造化された計画と実行手法を通じてビジネス目標を達成するための戦略的フレームワーク。,1014,exact,true
 サポート最適化,サポート最適化,サポート最適化,/ja/glossary/Support-Optimization/,サポート最適化とは、プロセスの合理化、テクノロジーとデータの活用による業務の高速化を通じて、顧客サービスを改善し、コストを削減しながら顧客満足度を向上させる実践手法です。,1014,exact,true
 チケット優先度,チケット優先度,チケット優先度,/ja/glossary/Ticket-Priority/,ITサービスマネジメントにおけるチケット優先度システムの包括的ガイド。分類方法、ワークフロー、効果的なサポートのためのベストプラクティスを解説します。,1014,exact,true
@@ -940,10 +957,10 @@ SMSサポート,smsサポート,SMSサポート,/ja/glossary/SMS-Support/,SMSサ
 フリーダイヤル,フリーダイヤル,フリーダイヤル,/ja/glossary/Toll-Free-Number/,フリーダイヤルの包括的ガイド:仕組み、メリット、導入方法、ビジネスコミュニケーションのベストプラクティスを解説します。,1014,exact,true
 トピックマップ,トピックマップ,トピックマップ,/ja/glossary/Topic-Map/,トピックマップの包括的ガイド - 複雑な情報構造を整理、リンク、ナビゲートするためのセマンティック知識表現技術。,1014,exact,true
 タッチポイント,タッチポイント,タッチポイント,/ja/glossary/Touchpoint/,カスタマーエクスペリエンスにおけるタッチポイントの包括的ガイド。デジタルおよび物理的なインタラクションポイント、最適化戦略、実装のベストプラクティスを網羅しています。,1014,exact,true
-URLスラッグ,urlスラッグ,URLスラッグ,/ja/glossary/URL-Slug/,URLスラッグの包括的なガイド - ユーザー体験と検索エンジン最適化を向上させる、読みやすくSEOフレンドリーなURLの一部分について解説します。,1014,exact,true
+URLスラッグ,urlスラッグ,URLスラッグ,/ja/glossary/URL-Slug/,URLスラッグとは、ウェブアドレスの中でページの内容を説明する部分のことで、複雑な数字や記号の代わりに、人間にも検索エンジンにも分かりやすい言葉を使ってページを識別します。,1014,exact,true
 統合顧客ビュー,統合顧客ビュー,統合顧客ビュー,/ja/glossary/Unified-Customer-View/,統合顧客ビューの包括的ガイド:統合戦略、メリット、実装のベストプラクティス、および顧客データ管理の将来トレンドについて解説します。,1014,exact,true
 ユーザーフロー,ユーザーフロー,ユーザーフロー,/ja/glossary/User-Flow/,アプリやウェブサイトでユーザーがタスクを完了するまでの段階的な経路を示すビジュアル図で、デザイナーが問題を特定し、体験を改善するのに役立ちます。,1014,exact,true
-バージョン管理,バージョン管理,バージョン管理,/ja/glossary/Version-Control/,バージョン管理システムの包括的なガイド。Git、SVN、ワークフロー、ベストプラクティス、ソフトウェア開発チームのための実装戦略をカバーしています。,1014,exact,true
+バージョン管理,バージョン管理,バージョン管理,/ja/glossary/Version-Control/,ファイルの変更履歴を記録し、いつでも以前の状態に戻せるシステム。複数の人が同時に作業する際に、変更内容を管理し、競合を解決するために使われます。,1014,exact,true
 ビデオサポート,ビデオサポート,ビデオサポート,/ja/glossary/Video-Support/,現代のデジタルコミュニケーションプラットフォームにおけるビデオサポートシステム、技術、および実装戦略に関する包括的なガイド。,1014,exact,true
 音声検索最適化,音声検索最適化,音声検索最適化,/ja/glossary/Voice-Search-Optimization/,AlexaやGoogleアシスタントなどの音声アシスタントに人々が声で質問するようになったことを受け、会話的な言語と直接的な回答を使用してウェブサイトが音声検索結果に表示されるようにする戦略です。,1014,exact,true
 YouTube,youtube,YouTube,/ja/glossary/YouTube/,YouTubeは世界最大の動画共有プラットフォームで、あらゆるトピックの動画をアップロード、視聴、共有でき、クリエイターは広告や登録を通じて収益を得ることができます。,1014,exact,true
@@ -956,7 +973,7 @@ YouTube,youtube,YouTube,/ja/glossary/YouTube/,YouTubeは世界最大の動画共
 セルフサービス,セルフサービス,セルフサービス,/ja/glossary/self-service/,カスタマーサポートのためのセルフサービスソリューション、ツール、戦略を探求します。FAQ、ナレッジベース、AIチャットボットが顧客をエンパワーメントし、運用コストを削減する方法を学びます。,1014,exact,true
 ユーザーロール,ユーザーロール,ユーザーロール,/ja/glossary/user-roles/,ユーザーロールは、ソフトウェアにおける権限とアクセス権を定義するもので、AIチャットボットや自動化システムにおけるアクセス制御、セキュリティ、運用効率にとって重要です。RBAC、一般的なロール、ベストプラクティスについて学びましょう。,1014,exact,true
 A/Bテスト,a/bテスト,A/Bテスト,/ja/glossary/A-B-Testing/,A/Bテストの方法論、実装戦略、統計分析、およびデータ駆動型の意思決定のための最適化技術に関する包括的なガイド。,1012,exact,true
-AI動画生成,ai動画生成,AI動画生成,/ja/glossary/AI-Video-Generation/,AI動画生成技術の包括的なガイド。ニューラルネットワーク、拡散モデル、コンテンツ制作における実用的な応用について解説します。,1012,exact,true
+AI動画生成,ai動画生成,AI動画生成,/ja/glossary/AI-Video-Generation/,AI動画生成は、人工知能を使ってテキストや画像から自動的に動画を作成する技術です。映画制作やマーケティング、教育など様々な場面で活用されています。,1012,exact,true
 受け入れ基準,受け入れ基準,受け入れ基準,/ja/glossary/Acceptance-Criteria/,ソフトウェア機能またはユーザーストーリーが完成し、ステークホルダーに受け入れられるために満たすべき具体的な条件と要件。高レベルの要件と詳細な実装の間の基準として機能します。,1012,exact,true
 代替テキスト,代替テキスト,代替テキスト,/ja/glossary/Alt-Text/,画像が表示されない場合に、スクリーンリーダーを使用するユーザーや検索エンジンが視覚的なコンテンツを理解できるようにするための、画像の文字による説明です。,1012,exact,true
 自律システム,自律システム,自律システム,/ja/glossary/Autonomous-Systems/,自律システムの包括的ガイド:自己動作技術、AI駆動の自動化、ロボティクス、インテリジェントな意思決定システムについて解説します。,1012,exact,true
@@ -973,7 +990,7 @@ Chroma,chroma,Chroma,/ja/glossary/Chroma/,AI ネイティブアプリケーシ�
 チャーン分析,チャーン分析,チャーン分析,/ja/glossary/Churn-Analysis/,チャーン分析の包括的ガイド:予測モデリング技術、顧客維持戦略、および離脱を削減するためのデータ駆動型アプローチ。,1012,exact,true
 チャーン予測,チャーン予測,チャーン予測,/ja/glossary/Churn-Prediction/,チャーン予測の包括的ガイド:機械学習技術、実装戦略、顧客維持分析のベストプラクティスを解説します。,1012,exact,true
 Claude,claude,Claude,/ja/glossary/Claude/,ClaudeはAnthropicが開発した、安全性、信頼性、有用性を重視した先進的なAIアシスタントファミリーです。Claude 4の機能、価格設定、エンタープライズ向けアプリケーションについて解説します。,1012,exact,true
-クラウドAI,クラウドai,クラウドAI,/ja/glossary/Cloud-AI/,クラウドAIについて詳しく解説:クラウドコンピューティングインフラストラクチャを使用してインターネット経由でアクセスできるサービスと機能。その仕組み、メリット、ユースケース、主要プロバイダーについて学びます。,1012,exact,true
+クラウドAI,クラウドai,クラウドAI,/ja/glossary/Cloud-AI/,インターネット経由でアクセスできるAIサービス。高価なコンピューターを買わなくても、Google CloudやAWSなどのサービスを使って、誰でも簡単にAI技術を利用できます。,1012,exact,true
 クラウド移行,クラウド移行,クラウド移行,/ja/glossary/Cloud-Migration/,企業のデータ、アプリケーション、ITシステムを物理サーバーからクラウドプラットフォームに移行し、柔軟性の向上とコスト削減を実現するプロセス。,1012,exact,true
 コホート分析,コホート分析,コホート分析,/ja/glossary/Cohort-Analysis/,コホート分析は、共通の特性に基づいてユーザーをグループに分類し、時間経過に伴う行動を追跡・比較することで、トレンドを明らかにする行動分析手法です。,1012,exact,true
 コスト最適化,コスト最適化,コスト最適化,/ja/glossary/Cost-Optimization/,コスト最適化とは、すべての業務において無駄を特定し排除することで、品質と効率性を維持しながらビジネス費用を削減する戦略的アプローチです。,1012,exact,true
@@ -1029,7 +1046,7 @@ Qdrant,qdrant,Qdrant,/ja/glossary/Qdrant/,Qdrantは、高次元ベクトルデ�
 タグクラウド,タグクラウド,タグクラウド,/ja/glossary/Tag-Cloud/,タグクラウドの包括的ガイド:キーワードやメタデータを頻度や重要度に基づいて異なるサイズで表示する視覚的データ表現ツールです。,1012,exact,true
 タクソノミー,タクソノミー,タクソノミー,/ja/glossary/Taxonomy/,タクソノミーシステム、分類方法、階層構造、および情報整理のための実装ベストプラクティスに関する包括的なガイド。,1012,exact,true
 テレメトリー,テレメトリー,テレメトリー,/ja/glossary/Telemetry/,テレメトリーとは、リモートソースからデータを自動的に収集、送信、分析し、監視、分析、意思決定を行うプロセスです。その種類、メリット、実装方法について解説します。,1012,exact,true
-テストセット,テストセット,テストセット,/ja/glossary/Test-Set/,機械学習とデータサイエンスにおけるテストセットの包括的なガイド。検証手法、ベストプラクティス、実装戦略について解説します。,1012,exact,true
+テストセット,テストセット,テストセット,/ja/glossary/Test-Set/,機械学習モデルの性能を評価するために、訓練に使わない別のデータを用意したもの。モデルが実際に新しいデータにどれだけ対応できるかを正しく測るために使います。,1012,exact,true
 テキスト生成,テキスト生成,テキスト生成,/ja/glossary/Text-Generation/,テキスト生成の包括的ガイド:AIを活用したコンテンツ作成、自然言語処理、現代のアプリケーション向け自動ライティング技術について解説します。,1012,exact,true
 TikTok,tiktok,TikTok,/ja/glossary/TikTok/,ユーザーが組み込みの編集ツールを使用して動画を作成・共有するショート動画アプリ。アルゴリズムにより、世界中の数百万人のユーザーにパーソナライズされたコンテンツを推薦する。,1012,exact,true
 実装所要時間,実装所要時間,実装所要時間,/ja/glossary/Time-to-Implement/,実装所要時間とは、ビジネス上の意思決定から実際に機能するソリューションへと転換するまでに必要な総時間を指し、計画段階から完全な運用開始までを含みます。組織が新しいシステムやプロセスをどれだけ迅速に提供し、導入できるかを測定する指標です。,1012,exact,true
@@ -1038,7 +1055,7 @@ TikTok,tiktok,TikTok,/ja/glossary/TikTok/,ユーザーが組み込みの編集�
 ユーザーパス,ユーザーパス,ユーザーパス,/ja/glossary/User-Path/,ウェブサイトやアプリを使用してタスクを完了する際に、ユーザーが取るすべてのステップとアクションの記録。企業が自社製品とユーザーの相互作用を理解するのに役立ちます。,1012,exact,true
 ベンダー比較,ベンダー比較,ベンダー比較,/ja/glossary/Vendor-Comparison/,価格、品質、能力などの設定された基準に基づいて複数のサプライヤーを評価・比較し、最適な購買決定を行うための体系的なプロセス。,1012,exact,true
 ベンダー選定,ベンダー選定,ベンダー選定,/ja/glossary/Vendor-Selection/,組織のビジネスニーズ、品質基準、コスト要件に最も適合するサプライヤーやサービスプロバイダーを特定、評価、選択する体系的なプロセス。,1012,exact,true
-ボイスボット,ボイスボット,ボイスボット,/ja/glossary/Voicebot/,ボイスボットの包括的なガイドをご紹介します。ASR、NLP、TTSなどのコア技術、動作原理、主要機能、種類、そしてカスタマーサービスと自動化におけるビジネス上のメリットについて解説します。,1012,exact,true
+ボイスボット,ボイスボット,ボイスボット,/ja/glossary/Voicebot/,# ボイスボット,1012,exact,true
 WeChat,wechat,WeChat,/ja/glossary/WeChat/,WeChatは、メッセージング、決済、ショッピング、その他多数のサービスを1つのプラットフォームに統合した中国のモバイルアプリで、ユーザーは異なるアプリを切り替えることなく、日常的なデジタルタスクのほとんどを処理できます。,1012,exact,true
 WebRTC,webrtc,WebRTC,/ja/glossary/WebRTC/,WebRTC技術の包括的ガイド。リアルタイム通信プロトコル、実装方法、メリット、開発者向けベストプラクティスを網羅しています。,1012,exact,true
 ワークフロー,ワークフロー,ワークフロー,/ja/glossary/Workflow/,ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。,1012,exact,true
@@ -1093,11 +1110,11 @@ F1スコア,f1スコア,F1スコア,/ja/glossary/F1-score/,F1スコアは、機�
 リード管理,リード管理,リード管理,/ja/glossary/Lead-Management/,見込み顧客の最初の関心から購入に至るまでを追跡し、育成するシステムです。営業チームが見込み客を効率的に購入者へと転換することを支援します。,1010,exact,true
 リード選別,リード選別,リード選別,/ja/glossary/Lead-Qualification/,リード選別とは、見込み顧客が購入する可能性が高いか、また自社の理想的な顧客像に合致しているかを評価するプロセスです。営業チームが最も有望な見込み客に注力できるよう支援します。,1010,exact,true
 MLOps,mlops,MLOps,/ja/glossary/MLOps/,MLOps(Machine Learning Operations)は、機械学習モデルのライフサイクルを実験段階から本番運用、保守に至るまで自動化し、効率化するエンジニアリング手法です。,1010,exact,true
-ミニバッチ,ミニバッチ,ミニバッチ,/ja/glossary/Mini-Batch/,機械学習におけるミニバッチ処理の包括的なガイド。勾配降下法の最適化、実装戦略、ベストプラクティスについて解説します。,1010,exact,true
+ミニバッチ,ミニバッチ,ミニバッチ,/ja/glossary/Mini-Batch/,訓練データを小分けにして機械学習モデルを効率的に学習させる方法。全体処理より速く、1件ずつ処理より安定した結果が得られます。,1010,exact,true
 ミニマップ,ミニマップ,ミニマップ,/ja/glossary/Minimap/,ミニマップは、AIチャットボットの会話やコードなど、大規模で複雑なフローをナビゲートするためのコンパクトな視覚的概要マップです。ユーザーが自分の位置を把握し、複雑な図を管理するのに役立ちます。,1010,exact,true
 モデル圧縮,モデル圧縮,モデル圧縮,/ja/glossary/Model-Compression/,機械学習アプリケーションにおいて、AIモデルのサイズを削減しながらパフォーマンスを維持するためのモデル圧縮技術に関する包括的なガイド。,1010,exact,true
 モデル評価,モデル評価,モデル評価,/ja/glossary/Model-Evaluation/,機械学習モデルのパフォーマンスと信頼性を評価するためのモデル評価技術、メトリクス、ベストプラクティスに関する包括的なガイド。,1010,exact,true
-OAuth,oauth,OAuth,/ja/glossary/OAuth/,OAuth認可フレームワークの包括的なガイド。プロトコル、実装、セキュリティのベストプラクティス、実際のアプリケーション事例を網羅しています。,1010,exact,true
+OAuth,oauth,OAuth,/ja/glossary/OAuth/,パスワードを共有せずに、アプリがあなたのGoogleやFacebookなどのアカウント情報に安全にアクセスできる仕組み。,1010,exact,true
 出力パース,出力パース,出力パース,/ja/glossary/Output-Parsing/,出力パースは、AI言語モデルのテキスト応答から構造化データ(JSON、Pythonオブジェクト)を抽出し、自動化、分析、システム統合に活用する技術です。,1010,exact,true
 PII編集,pii編集,PII編集,/ja/glossary/PII-Redaction/,PII編集について学ぶ:デジタル資産から機密性の高い個人識別情報を検出し、プライバシーとコンプライアンスを確保するために自動的に隠蔽するプロセス。,1010,exact,true
 ページ価値,ページ価値,ページ価値,/ja/glossary/Page-Value/,ページ価値は、各ウェブページが売上の創出やビジネス目標の達成にどれだけ貢献しているかに基づいて、金額を割り当てる指標です。単なるトラフィックではなく、実際に収益を生み出しているページを示します。,1010,exact,true
@@ -1152,7 +1169,7 @@ Hugo,hugo,Hugo,/ja/glossary/Hugo/,コンテンツを静的HTMLファイルに変
 損失関数,損失関数,損失関数,/ja/glossary/Loss-Function/,機械学習における損失関数の包括的ガイド - 種類、実装、メリット、最適化アルゴリズムのベストプラクティスを解説,1008,exact,true
 業務効率,業務効率,業務効率,/ja/glossary/Operational-Efficiency/,業務効率とは、企業が労働力や材料などのリソースをどれだけ効果的に活用し、品質を維持しながら最小限のコストで製品やサービスを生産できるかを示す指標です。企業が無駄を最小限に抑え、生産性を最大化する能力を測定します。,1008,exact,true
 商談管理,商談管理,商談管理,/ja/glossary/Opportunity-Management/,潜在的な営業機会を特定、追跡し、実際の顧客へと転換するための体系的なアプローチ。収益とビジネス成長を最大化することを目的とする。,1008,exact,true
-組織知識,組織知識,組織知識,/ja/glossary/Organizational-Knowledge/,組織の知恵を捉えるためのシステム、プロセス、戦略を含む、組織知識管理の包括的なガイド。,1008,exact,true
+組織知識,組織知識,組織知識,/ja/glossary/Organizational-Knowledge/,企業や機関内に存在する、文書化された情報と従業員の経験・スキルを合わせた集合的な知識。効率的な運営と競争力を高めるために活用されます。,1008,exact,true
 並列実行,並列実行,並列実行,/ja/glossary/Parallel-Execution/,並列実行について学ぶ:複数のタスクを同時に実行することで、処理を高速化し、リソース利用を最大化し、ワークフロー、テスト、チャットボットにおけるフィードバックループを短縮します。,1008,exact,true
 パス解析,パス解析,パス解析,/ja/glossary/Path-Analysis/,変数間の直接的および間接的な経路を通じた相互影響を検証する統計手法で、複雑なデータにおける因果関係の理解を研究者に提供します。,1008,exact,true
 事前学習,事前学習,事前学習,/ja/glossary/Pre-Training/,機械学習における事前学習の包括的ガイド:タスク固有のファインチューニングの前に、大規模データセットを使用してニューラルネットワークを訓練する基礎的な学習フェーズ。,1008,exact,true
@@ -1165,7 +1182,7 @@ Hugo,hugo,Hugo,/ja/glossary/Hugo/,コンテンツを静的HTMLファイルに変
 スクラム,スクラム,スクラム,/ja/glossary/Scrum/,スクラム手法の包括的ガイド:フレームワーク、役割、イベント、成果物、メリット、実装のベストプラクティス、アジャイル開発における今後のトレンド。,1008,exact,true
 検索意図,検索意図,検索意図,/ja/glossary/Search-Intent/,ユーザーがオンラインで何かを検索する根本的な理由。ユーザーが実際に何を見つけたいのかを理解することで、そのニーズに合ったコンテンツを作成できます。,1008,exact,true
 脅威検知,脅威検知,脅威検知,/ja/glossary/Threat-Detection/,サイバーセキュリティリスクや悪意のある活動を特定するための脅威検知システム、テクノロジー、方法論に関する包括的なガイド。,1008,exact,true
-トークン,トークン,トークン,/ja/glossary/Token/,コンピューティング、ブロックチェーン、認証システムにおけるトークンの包括的なガイド。種類、実装方法、セキュリティに関する考慮事項を含みます。,1008,exact,true
+トークン,トークン,トークン,/ja/glossary/Token/,トークンは、デジタルシステムで身分や権限を証明する小さな情報単位です。パスワードを何度も入力する代わりに、一度認証されたら、そのトークンを使って安全にサービスにアクセスできます。,1008,exact,true
 転移学習,転移学習,転移学習,/ja/glossary/Transfer-Learning/,機械学習における転移学習の包括的ガイド。技術、メリット、応用例、実装戦略について解説します。,1008,exact,true
 思考の木,思考の木,思考の木,/ja/glossary/Tree-of-Thoughts/,思考の木(ToT)の包括的ガイド - 複数の解決経路を体系的に探索可能にする高度なAI推論フレームワーク,1008,exact,true
 UX監査,ux監査,UX監査,/ja/glossary/UX-Audit/,ウェブサイトやアプリを体系的に評価し、デザイン上の問題点やユーザビリティの課題を特定することで、ユーザーとのインタラクションを改善する手法です。,1008,exact,true
@@ -1186,13 +1203,13 @@ i18n,i18n,i18n,/ja/glossary/i18n/,アプリケーションが複数の言語や�
 離脱率,離脱率,離脱率,/ja/glossary/Exit-Rate/,離脱率とは、特定のページからウェブサイトを離れる訪問者の割合を示す指標です。どのページが訪問者のサイト離脱を引き起こしているかを特定するのに役立ちます。,1006,exact,true
 偽陰性,偽陰性,偽陰性,/ja/glossary/False-Negative/,偽陰性とは、チャットボットのようなAIシステムが実際の問題や意図を検出できない状態を指します。自動化における影響、原因、削減戦略について解説します。,1006,exact,true
 偽陽性,偽陽性,偽陽性,/ja/glossary/False-Positive/,偽陽性とは、AIシステム(チャットボット、検知ツール、プライバシーフィルター)が、状況やコンテンツを誤って基準に一致すると識別し、エラーを引き起こすことです。,1006,exact,true
-GPT,gpt,GPT,/ja/glossary/GPT/,GPT(Generative Pre-trained Transformer)技術の包括的なガイド。アーキテクチャ、応用例、実装のベストプラクティスを解説します。,1006,exact,true
+GPT,gpt,GPT,/ja/glossary/GPT/,# 新しいdescription:,1006,exact,true
 フック,フック,フック,/ja/glossary/Hook/,開発者がプログラムの実行における特定のポイントでカスタムコードを挿入できる仕組みで、コア機能を変更することなく、柔軟なカスタマイズと自動化を可能にします。,1006,exact,true
 学習率,学習率,学習率,/ja/glossary/Learning-Rate/,機械学習における学習率の包括的ガイド - 最適化戦略、適応的手法、ニューラルネットワークのベストプラクティス。,1006,exact,true
 マクロ,マクロ,マクロ,/ja/glossary/Macro/,スプレッドシートやワードプロセッサなどのアプリケーションで、定型的なタスクをワンクリックで自動的に繰り返す、記録されたコマンドのセット。時間を節約し、エラーを削減します。,1006,exact,true
 誤解率,誤解率,誤解率,/ja/glossary/Misunderstood-Rate/,誤解率は、チャットボットがユーザーの意図を理解できず、フォールバック応答をトリガーする失敗を測定する指標です。これは、NLU（自然言語理解）のパフォーマンス、ユーザーエクスペリエンス、および会話型AIの改善における重要な指標です。,1006,exact,true
 過学習,過学習,過学習,/ja/glossary/Overfitting/,機械学習における過学習の包括的ガイド:原因、検出方法、防止テクニック、およびモデル汎化のベストプラクティス。,1006,exact,true
-正則化,正則化,正則化,/ja/glossary/Regularization/,機械学習における正則化技術の包括的なガイド。L1/L2正則化、ドロップアウト、過学習を防ぐための高度な手法について解説します。,1006,exact,true
+正則化,正則化,正則化,/ja/glossary/Regularization/,機械学習モデルが訓練データを丸暗記してしまうのを防ぎ、新しいデータにも対応できるようにする技術。モデルに「シンプルさ」というペナルティを課すことで、より汎用的で信頼性の高い予測を実現します。,1006,exact,true
 形式知,形式知,形式知,/ja/glossary/explicit-knowledge/,形式知とは、文書化された情報であり、容易に言語化、体系化され、マニュアル、データベース、デジタルファイルを通じて共有できる知識です。AI、自動化、組織学習において不可欠な要素となっています。,1006,exact,true
 n8n,n8n,n8n,/ja/glossary/n8n/,n8nは、ソースコードが公開されたノードベースのワークフロー自動化ツールで、高度なAI統合機能を備え、アプリ、API、サービスを接続します。,1006,exact,true
 ノート,ノート,ノート,/ja/glossary/note/,社内チケットシステムにおけるノートとは何か、スタッフ専用コミュニケーションの目的、そしてドキュメント作成、コラボレーション、AI自動化にどのように使用されるかを学びます。,1006,exact,true
@@ -1208,6 +1225,7 @@ Integration Platform as a Service,integration platform as a service,Integration 
 H1-H6,h1-h6,見出しタグ(H1-H6),/ja/glossary/Heading-Tags--H1-H6-/,Webページのコンテンツを階層的に整理するHTML要素で、検索エンジンがコンテンツを理解しやすくし、すべてのユーザーにとってページのナビゲーションを容易にします。,960,acronym,false
 AI透明性,ai透明性,透明性(AI透明性),/ja/glossary/Transparency/,AI透明性とは、AIシステムの内部動作、データ、意思決定ロジックを明らかにすることです。信頼構築、説明責任の確保、規制コンプライアンスの遵守に不可欠です。,960,acronym,false
 BYOC,byoc,Bring Your Own Carrier (BYOC),/ja/glossary/Bring-Your-Own-Carrier--BYOC-/,Bring Your Own Carrier (BYOC)の包括的ガイド - 企業が既存の通信事業者をクラウドコミュニケーションプラットフォームと統合できるようにする仕組みについて解説します。,958,acronym,false
+CSAT,csat,顧客満足度スコア (CSAT),/ja/glossary/Customer-Satisfaction---CSAT-/,顧客満足度スコア(CSAT)は、製品、サービス、または対応に対する顧客満足度を定量化する指標です。その計算方法、活用事例、そして顧客体験を向上させる方法について解説します。,958,acronym,false
 HITL,hitl,ヒューマン・イン・ザ・ループ(HITL),/ja/glossary/Human-in-the-Loop--HITL-/,ヒューマン・イン・ザ・ループ(HITL)は、AI/MLワークフローに人間の知能を統合し、トレーニング、チューニング、検証を行うことで、精度、安全性、倫理的な意思決定を確保します。,958,acronym,false
 PPML,ppml,プライバシー保護機械学習(PPML),/ja/glossary/Privacy-Preserving-ML/,プライバシー保護機械学習(PPML)について探求します。差分プライバシー、準同型暗号、マルチパーティ計算、連合学習などの手法を用いて、機械学習モデルにおける機密データを保護する方法を解説します。,958,acronym,false
 SIEM,siem,セキュリティ情報イベント管理(SIEM),/ja/glossary/Security-Information-and-Event-Management--SIEM-/,SIEMシステムの包括的ガイド:リアルタイムセキュリティ監視、脅威検知、コンプライアンス管理、インシデント対応機能について解説します。,958,acronym,false
@@ -1230,6 +1248,7 @@ KCS,kcs,ナレッジセンタードサービス (KCS),/ja/glossary/Knowledge-Cen
 LMS,lms,学習管理システム(LMS),/ja/glossary/Learning-Management-System--LMS-/,学習管理システム(LMS)の包括的ガイド - デジタル学習プラットフォームの機能、メリット、導入戦略、ベストプラクティスを解説します。,956,acronym,false
 MDM,mdm,マスターデータマネジメント(MDM),/ja/glossary/Master-Data-Management--MDM-/,マスターデータマネジメント(MDM)の包括的ガイド - エンタープライズデータガバナンスのための戦略、実装、メリット、ベストプラクティス。,956,acronym,false
 MVP,mvp,ミニマム・バイアブル・プロダクト(MVP),/ja/glossary/Minimum-Viable-Product--MVP-/,ミニマム・バイアブル・プロダクト(MVP)の開発、実装戦略、メリット、およびリーンスタートアップ手法のベストプラクティスに関する包括的なガイド。,956,acronym,false
+NPS,nps,ネットプロモータースコア(NPS),/ja/glossary/NPS---Net-Promoter-Score-/,ネットプロモータースコア(NPS)について学びましょう。顧客ロイヤルティを測る重要な指標であるNPSの計算方法、構成要素、業界ベンチマーク、そしてNPSデータを活用して顧客体験を改善する方法を理解できます。,956,acronym,false
 QBR,qbr,四半期ビジネスレビュー(QBR),/ja/glossary/Quarterly-Business-Review--QBR-/,四半期ビジネスレビュー(QBR)の包括的ガイド - ステークホルダーの連携、パフォーマンス評価、ビジネス成長を推進する戦略的ミーティングです。,956,acronym,false
 RNN,rnn,リカレントニューラルネットワーク(RNN),/ja/glossary/Recurrent-Neural-Network--RNN-/,リカレントニューラルネットワーク(RNN)の包括的ガイド - アーキテクチャ、応用例、メリット、課題、実装のベストプラクティスを解説。,956,acronym,false
 SEO,seo,検索エンジン最適化(SEO),/ja/glossary/Search-Engine-Optimization--SEO-/,SEOとは、コンテンツ、構造、技術的要素を最適化することで、Googleなどの検索エンジンからより多くのオーガニックトラフィックを獲得するために、ウェブサイトの検索結果における可視性を向上させる実践手法です。,956,acronym,false
@@ -1251,6 +1270,7 @@ FSM,fsm,有限状態機械(FSM),/ja/glossary/finite-state-machines/,有限状態
 FCR,fcr,初回コンタクト解決率(FCR),/ja/glossary/first-contact-resolution/,初回コンタクト解決率(FCR)について学びましょう。これは、最初の接触で顧客の問題を解決できたかを測定する重要な指標です。顧客満足度、業務効率への重要性、および改善のためのベストプラクティスをご紹介します。,956,acronym,false
 LLM,llm,大規模言語モデル(LLM),/ja/glossary/large-language-models/,大規模言語モデル(LLM)は、深層学習とトランスフォーマーネットワークを活用した高度なAIシステムで、テキスト生成、翻訳などを実現します。その中核概念、応用分野、課題について理解を深めましょう。,956,acronym,false
 NLS,nls,自然言語検索(NLS),/ja/glossary/natural-language-search/,自然言語検索(NLS)は、ユーザーが会話形式の言語を使用してシステムに問い合わせを行うことを可能にします。この詳細な用語集では、NLSの仕組み、メリット、実際の応用例について解説します。,956,acronym,false
+CX,cx,カスタマーエクスペリエンス(CX),/ja/glossary/Customer-Experience---CX-/,カスタマーエクスペリエンス(CX)について解説します。顧客がブランドと持つすべてのインタラクションの総体であり、ロイヤルティへの影響、主要な構成要素、測定方法、戦略について学びます。,954,acronym,false
 EX,ex,従業員体験(EX),/ja/glossary/Employee-Experience--EX-/,従業員体験(EX)の包括的ガイド - 職場変革のための戦略、メリット、実装のベストプラクティス、および将来のトレンド。,954,acronym,false
 HA,ha,高可用性 (HA),/ja/glossary/High-Availability--HA-/,高可用性 (HA) は、単一障害点を排除し冗長性を活用することで、継続的な運用パフォーマンスとアップタイムの達成を目指すシステム設計手法です。,954,acronym,false
 QA,qa,品質保証(QA),/ja/glossary/Quality-Assurance--QA-/,製品の卓越性と信頼性を確保するための品質保証(QA)の方法論、プロセス、ベストプラクティスに関する包括的なガイド。,954,acronym,false
@@ -1271,15 +1291,17 @@ EdTech Personalized Learning,edtech personalized learning,EdTech Personalized Le
 従業員ネットプロモータースコア,従業員ネットプロモータースコア,従業員ネットプロモータースコア(eNPS),/ja/glossary/Employee-Net-Promoter-Score--eNPS-/,従業員ネットプロモータースコア(eNPS)の包括的ガイド - 測定方法論、実装戦略、および組織のためのベストプラクティス。,930,without_parens,false
 ヒューマン・イン・ザ・ループ,ヒューマン・イン・ザ・ループ,ヒューマン・イン・ザ・ループ(HITL),/ja/glossary/Human-in-the-Loop--HITL-/,ヒューマン・イン・ザ・ループ(HITL)は、AI/MLワークフローに人間の知能を統合し、トレーニング、チューニング、検証を行うことで、精度、安全性、倫理的な意思決定を確保します。,928,without_parens,false
 セキュリティ情報イベント管理,セキュリティ情報イベント管理,セキュリティ情報イベント管理(SIEM),/ja/glossary/Security-Information-and-Event-Management--SIEM-/,SIEMシステムの包括的ガイド:リアルタイムセキュリティ監視、脅威検知、コンプライアンス管理、インシデント対応機能について解説します。,928,without_parens,false
-Text-to-Speech,text-to-speech,Text-to-Speech(音声合成),/ja/glossary/Text-to-Speech/,Text-to-Speech技術の包括的なガイド。音声合成手法、応用分野、メリット、実装のベストプラクティスを網羅しています。,928,without_parens,false
+Text-to-Speech,text-to-speech,Text-to-Speech(音声合成),/ja/glossary/Text-to-Speech/,# Text-to-Speech(音声合成),928,without_parens,false
 FinTech Fraud Detection,fintech fraud detection,FinTech Fraud Detection（フィンテック不正検知）,/ja/glossary/FinTech-Fraud-Detection/,AIと機械学習を使用して不正な金融取引をリアルタイムで特定・防止するフィンテック不正検知システムの包括的ガイド。,926,without_fullwidth_parens,false
 カスタマーエフォートスコア,カスタマーエフォートスコア,カスタマーエフォートスコア(CES),/ja/glossary/Customer-Effort-Score--CES-/,カスタマーエフォートスコア(CES)の包括的ガイド - 測定方法論、実装戦略、顧客の労力を削減するためのベストプラクティス。,926,without_parens,false
+カスタマーエクスペリエンス,カスタマーエクスペリエンス,カスタマーエクスペリエンス(CX),/ja/glossary/Customer-Experience---CX-/,カスタマーエクスペリエンス(CX)について解説します。顧客がブランドと持つすべてのインタラクションの総体であり、ロイヤルティへの影響、主要な構成要素、測定方法、戦略について学びます。,926,without_parens,false
 ナレッジセンタードサービス,ナレッジセンタードサービス,ナレッジセンタードサービス (KCS),/ja/glossary/Knowledge-Centered-Service--KCS-/,カスタマーサポート、ナレッジマネジメント、サービスエクセレンスのためのナレッジセンタードサービス (KCS) 手法の包括的ガイド。,926,without_parens,false
 マスターデータマネジメント,マスターデータマネジメント,マスターデータマネジメント(MDM),/ja/glossary/Master-Data-Management--MDM-/,マスターデータマネジメント(MDM)の包括的ガイド - エンタープライズデータガバナンスのための戦略、実装、メリット、ベストプラクティス。,926,without_parens,false
 Time to Value,time to value,Time to Value(価値実現までの時間),/ja/glossary/Time-to-Value/,Time to Value(TTV)の包括的ガイド - 顧客が製品、サービス、またはビジネスへの投資から利益を実感するまでの速度を測定する指標について解説します。,926,without_parens,false
 ワークフォースマネジメント,ワークフォースマネジメント,ワークフォースマネジメント(WFM),/ja/glossary/Workforce-Management--WFM-/,ワークフォースマネジメント(WFM)システム、テクノロジー、および従業員のスケジューリングと生産性を最適化するためのベストプラクティスに関する包括的なガイド。,926,without_parens,false
 コンテンツオペレーション,コンテンツオペレーション,コンテンツオペレーション(Content Ops),/ja/glossary/Content-Operations--Content-Ops-/,コンテンツオペレーション(Content Ops)の包括的ガイド - コンテンツワークフローの効率化、ガバナンス、スケーラブルなコンテンツ管理戦略について解説します。,924,without_parens,false
 LLM as Judge,llm as judge,LLM as Judge(LLMによる評価),/ja/glossary/LLM-as-Judge/,LLM-as-a-Judge(LaaJ)は、LLMが他のLLMの出力を評価する手法です。スケーラブルで繊細なAI評価のための定義、手法、ベストプラクティス、ユースケースについて解説します。,924,without_parens,false
+ネットプロモータースコア,ネットプロモータースコア,ネットプロモータースコア(NPS),/ja/glossary/NPS---Net-Promoter-Score-/,ネットプロモータースコア(NPS)について学びましょう。顧客ロイヤルティを測る重要な指標であるNPSの計算方法、構成要素、業界ベンチマーク、そしてNPSデータを活用して顧客体験を改善する方法を理解できます。,924,without_parens,false
 プライバシー保護機械学習,プライバシー保護機械学習,プライバシー保護機械学習(PPML),/ja/glossary/Privacy-Preserving-ML/,プライバシー保護機械学習(PPML)について探求します。差分プライバシー、準同型暗号、マルチパーティ計算、連合学習などの手法を用いて、機械学習モデルにおける機密データを保護する方法を解説します。,924,without_parens,false
 レベニューオペレーション,レベニューオペレーション,レベニューオペレーション(RevOps),/ja/glossary/Revenue-Operations--RevOps-/,営業、マーケティング、カスタマーサクセスの各チームを統合し、共有データと整合された目標を通じてプロセスを効率化し、一貫した収益成長を推進するビジネス戦略。,924,without_parens,false
 コストパフォーマンス比率,コストパフォーマンス比率,コストパフォーマンス比率(CPI),/ja/glossary/cost-performance/,コストパフォーマンス指数(CPI)は、コスト効率を測定するプロジェクト管理の重要な指標です。AIチャットボットや自動化プロジェクトにおけるCPIの計算方法、解釈、適用方法を学び、予算管理に活用しましょう。,924,without_parens,false
@@ -1292,6 +1314,7 @@ Temperature,temperature,Temperature(LLM),/ja/glossary/Temperature--LLM-/,大規�
 ユーザー生成コンテンツ,ユーザー生成コンテンツ,ユーザー生成コンテンツ(UGC),/ja/glossary/User-Generated-Content--UGC-/,ユーザー生成コンテンツ(UGC)の包括的ガイド - 定義、メリット、実装戦略、そして本物のコンテンツを活用するためのベストプラクティス。,922,without_parens,false
 音声アクティビティ検出,音声アクティビティ検出,音声アクティビティ検出(VAD),/ja/glossary/VAD--Voice-Activity-Detection-/,音声アクティビティ検出(VAD)は、オーディオストリーム内の人間の音声を識別する信号処理手法です。AIチャットボット、ASR、リアルタイムコミュニケーションに不可欠であり、VADは音声と無音やノイズを区別することで精度とユーザーエクスペリエンスを向上させます。,922,without_parens,false
 変分オートエンコーダー,変分オートエンコーダー,変分オートエンコーダー(VAE),/ja/glossary/Variational-Autoencoder--VAE-/,変分オートエンコーダー(VAE)の包括的ガイド - データ生成のためにディープラーニングと確率的推論を組み合わせた生成モデル,922,without_parens,false
+オラクルフィードバック,オラクルフィードバック,オラクルフィードバック(正解ラベル),/ja/glossary/oracle-feedback---ground-truth-labels-/,AI/MLにおけるオラクルフィードバックと正解ラベルについて解説します。Oracle Select AIやHCM Cloudが、モデルのトレーニング、評価、継続的改善のために権威あるデータをどのように活用しているかを学びます。,922,without_parens,false
 アフターコールワーク,アフターコールワーク,アフターコールワーク(ACW),/ja/glossary/After-Call-Work--ACW-/,コンタクトセンターにおけるアフターコールワーク(ACW)の包括的ガイド。プロセス、メリット、実装戦略、最適化テクニックを網羅しています。,920,without_parens,false
 環境変数:詳細ガイド,環境変数:詳細ガイド,環境変数(シークレット):詳細ガイド,/ja/glossary/Environment-Variables--Secrets-/,アプリケーションの安全な設定のための環境変数(シークレット)について学びます。APIキーやパスワードなどの機密データをコードから分離し、セキュリティと柔軟性を確保します。,920,without_parens,false
 Fact-Score,fact-score,Fact-Score (FActScore),/ja/glossary/Fact-Score/,FActScoreは、AI生成テキストにおける事実の正確性を定量化する自動評価指標です。出力を原子的事実に分解し、信頼できる外部知識ソースからの裏付けを検証します。,920,without_parens,false
@@ -1309,6 +1332,7 @@ Mistral AI,mistral ai,Mistral AI(ミストラルAI),/ja/glossary/Mistral-AI/,Mis
 シングルサインオン,シングルサインオン,シングルサインオン(SSO),/ja/glossary/Single-Sign-On--SSO-/,シングルサインオン(SSO)認証システム、プロトコル、実装戦略、および企業向けセキュリティ考慮事項に関する包括的なガイド。,918,without_parens,false
 ダイレクト・インワード・ダイヤリング,ダイレクト・インワード・ダイヤリング,ダイレクト・インワード・ダイヤリング（DID）,/ja/glossary/Direct-Inward-Dialing--DID-/,ダイレクト・インワード・ダイヤリング（DID）技術の包括的ガイド。実装方法、メリット、および現代の通信システムにおけるベストプラクティスを解説します。,916,without_fullwidth_parens,false
 アクセシビリティ,アクセシビリティ,アクセシビリティ(Web),/ja/glossary/Accessibility--Web-/,Webアクセシビリティとは、視覚、聴覚、運動機能などの障害を持つ人々が、Webサイトを容易かつ効果的に利用できるように設計する実践のことです。,916,without_parens,false
+顧客満足度スコア,顧客満足度スコア,顧客満足度スコア (CSAT),/ja/glossary/Customer-Satisfaction---CSAT-/,顧客満足度スコア(CSAT)は、製品、サービス、または対応に対する顧客満足度を定量化する指標です。その計算方法、活用事例、そして顧客体験を向上させる方法について解説します。,916,without_parens,false
 学習管理システム,学習管理システム,学習管理システム(LMS),/ja/glossary/Learning-Management-System--LMS-/,学習管理システム(LMS)の包括的ガイド - デジタル学習プラットフォームの機能、メリット、導入戦略、ベストプラクティスを解説します。,916,without_parens,false
 ゼロショット学習,ゼロショット学習,ゼロショット学習(ZSL),/ja/glossary/Zero-shot/,ゼロショット学習(ZSL)は、セマンティック記述や埋め込みなどの補助情報を活用することで、未見のクラスのインスタンスを分類できる機械学習パラダイムです。大量のラベル付きデータの必要性を軽減します。,916,without_parens,false
 大規模言語モデル,大規模言語モデル,大規模言語モデル(LLM),/ja/glossary/large-language-models/,大規模言語モデル(LLM)は、深層学習とトランスフォーマーネットワークを活用した高度なAIシステムで、テキスト生成、翻訳などを実現します。その中核概念、応用分野、課題について理解を深めましょう。,916,without_parens,false
@@ -1337,7 +1361,7 @@ Baidu,baidu,Baidu(バイドゥ),/ja/glossary/Baidu/,Baiduは中国最大の検�
 カルーセル,カルーセル,カルーセル(UIコンポーネント),/ja/glossary/Carousel/,カルーセルは、画像やカードなどの一連のコンテンツアイテムを単一のビューポート内に表示し、ユーザーがそれらを順に閲覧できるインタラクティブなUIコンポーネントです。,910,without_parens,false
 ダイヤラー,ダイヤラー,ダイヤラー(プレディクティブ/プログレッシブ),/ja/glossary/Dialer--Predictive-Progressive-/,プレディクティブダイヤラーとプログレッシブダイヤラーの包括的ガイド - エージェントの生産性と顧客接触率を最適化する自動発信システムです。,910,without_parens,false
 従業員体験,従業員体験,従業員体験(EX),/ja/glossary/Employee-Experience--EX-/,従業員体験(EX)の包括的ガイド - 職場変革のための戦略、メリット、実装のベストプラクティス、および将来のトレンド。,910,without_parens,false
-HIPAA,hipaa,HIPAA(医療保険の相互運用性と説明責任に関する法律),/ja/glossary/HIPAA--Health-Insurance-Portability-/,プライバシー、セキュリティ、相互運用性要件、コンプライアンス戦略、実装のベストプラクティスをカバーする、HIPAA規制の包括的なガイド。,910,without_parens,false
+HIPAA,hipaa,HIPAA(医療保険の相互運用性と説明責任に関する法律),/ja/glossary/HIPAA--Health-Insurance-Portability-/,患者の医療情報を保護するため、米国の医療機関が守るべき法律。転職時の保険継続と医療詐欺防止も目的としています。,910,without_parens,false
 見出しタグ,見出しタグ,見出しタグ(H1-H6),/ja/glossary/Heading-Tags--H1-H6-/,Webページのコンテンツを階層的に整理するHTML要素で、検索エンジンがコンテンツを理解しやすくし、すべてのユーザーにとってページのナビゲーションを容易にします。,910,without_parens,false
 ベロシティ,ベロシティ,ベロシティ(アジャイル),/ja/glossary/Velocity--Agile-/,アジャイルベロシティの包括的ガイド:測定方法、計算方法、メリット、スプリント計画とチームパフォーマンス追跡のベストプラクティス。,910,without_parens,false
 Adaptive Cards,adaptive cards,Adaptive Cards（アダプティブカード）,/ja/glossary/Adaptive-Cards/,Adaptive Cardsの包括的ガイド - アプリケーションやプラットフォーム間でリッチコンテンツカードを交換するためのプラットフォーム非依存UIフレームワーク,908,without_fullwidth_parens,false
@@ -1350,7 +1374,7 @@ HNSW,hnsw,HNSW(階層的ナビゲート可能スモールワールド),/ja/gloss
 ITSM,itsm,ITSM(ITサービスマネジメント),/ja/glossary/ITSM/,ITSM(ITサービスマネジメント)は、ITサービスの設計、提供、管理、改善を体系的に行うアプローチであり、ビジネス目標と整合させることで最適な価値を実現します。,908,without_parens,false
 Make,make,Make(Integromat),/ja/glossary/Make--Integromat-/,Make(旧Integromat)は、シンプルなタスクから複雑なエンタープライズ規模のプロセスまで、ワークフローの設計、構築、自動化を行うビジュアルなノーコードプラットフォームです。,908,without_parens,false
 品質保証,品質保証,品質保証(QA),/ja/glossary/Quality-Assurance--QA-/,製品の卓越性と信頼性を確保するための品質保証(QA)の方法論、プロセス、ベストプラクティスに関する包括的なガイド。,908,without_parens,false
-SAML,saml,SAML(Security Assertion Markup Language),/ja/glossary/SAML--Security-Assertion-Markup-Language-/,SAML認証プロトコルの包括的なガイド。安全なシングルサインオンソリューションの実装、メリット、ユースケース、ベストプラクティスを網羅しています。,908,without_parens,false
+SAML,saml,SAML(Security Assertion Markup Language),/ja/glossary/SAML--Security-Assertion-Markup-Language-/,一度のログインで複数のアプリケーションにアクセスできる、企業向けの安全な認証システム。,908,without_parens,false
 SERP,serp,SERP(検索エンジン結果ページ),/ja/glossary/SERP--Search-Engine-Results-Page-/,Googleやその他の検索エンジンで検索した際に表示されるウェブページで、検索クエリに関連するリンク、画像、情報が表示されます。,908,without_parens,false
 SSML,ssml,SSML(音声合成マークアップ言語),/ja/glossary/SSML--Speech-Synthesis-Markup-Language-/,SSMLは、合成音声の出力を制御するためのXMLベースのマークアップ言語で、発音、イントネーション、ペース、感情などを調整でき、主要なTTSプロバイダーで使用されています。,908,without_parens,false
 SaaS,saas,SaaS(Software as a Service),/ja/glossary/SaaS--Software-as-a-Service-/,インターネット経由でサブスクリプション形式で提供されるソフトウェアで、インストールやメンテナンスが不要です。ユーザーは任意のデバイスからいつでも最新バージョンにアクセスできます。,908,without_parens,false
@@ -1371,7 +1395,9 @@ ETL,etl,ETL(抽出・変換・ロード),/ja/glossary/ETL--Extract-Transform-Loa
 FAQ,faq,FAQ(よくある質問),/ja/glossary/FAQ/,デジタルコミュニケーション、カスタマーサポート、AIチャットボットの基盤となるFAQ(よくある質問)について解説します。その定義、目的、メリット、実装方法を学びましょう。,906,without_parens,false
 FCP,fcp,FCP (First Contentful Paint),/ja/glossary/FCP--First-Contentful-Paint-/,ユーザーがリンクをクリックした後、ウェブページ上にコンテンツが最初に表示されるまでの速度を測定するウェブパフォーマンス指標で、ユーザーの第一印象とエンゲージメントに影響を与えます。,906,without_parens,false
 IVR,ivr,IVR(インタラクティブ音声応答),/ja/glossary/IVR--Interactive-Voice-Response-/,インタラクティブ音声応答システムの包括的ガイド。技術、実装、メリット、自動電話システムのベストプラクティスを網羅しています。,906,without_parens,false
+KPI,kpi,KPI(重要業績評価指標),/ja/glossary/KPIs---Key-Performance-Indicators-/,重要業績評価指標(KPI)について学びましょう:KPIとは何か、なぜ重要なのか、種類、開発方法、そして営業、マーケティング、人事、ITにおける具体例を解説します。,906,without_parens,false
 LCP,lcp,LCP (Largest Contentful Paint),/ja/glossary/LCP--Largest-Contentful-Paint-/,ページ上の最大のコンテンツがユーザーに表示されるまでの速度を測定するウェブパフォーマンス指標で、ユーザーの第一印象とエンゲージメントに直接影響します。,906,without_parens,false
+LTV,ltv,LTV(顧客生涯価値),/ja/glossary/LTV---Lifetime-Value-/,AIチャットボットや自動化ビジネスにおける重要な指標である顧客生涯価値(LTV)を理解しましょう。その定義、計算方法、重要性、そして持続可能な成長のためのLTV向上戦略について学びます。,906,without_parens,false
 MCP,mcp,MCP (Model Context Protocol),/ja/glossary/MCP--Model-Context-Protocol-/,Model Context Protocol (MCP) の包括的ガイド - AIモデルと外部システム統合のための標準化された通信フレームワーク。,906,without_parens,false
 MOS,mos,MOS(平均オピニオン評点),/ja/glossary/MOS--Mean-Opinion-Score-/,平均オピニオン評点(MOS)の包括的ガイド - オーディオ、ビデオ、マルチメディアアプリケーションにおける標準的な主観的品質測定手法です。,906,without_parens,false
 PBX,pbx,PBX(構内交換機),/ja/glossary/PBX--Private-Branch-Exchange-/,PBXシステムの包括的ガイド:従来型、IP型、クラウド型のビジネス通信インフラと管理ソリューション。,906,without_parens,false
@@ -1389,21 +1415,22 @@ TCO,tco,TCO(総所有コスト),/ja/glossary/TCO/,総所有コスト(TCO)は、�
 ロールベースアクセス制御,ロールベースアクセス制御,ロールベースアクセス制御（RBAC）,/ja/glossary/Role-Based-Access-Control--RBAC-/,ロールベースアクセス制御（RBAC）の包括的ガイド - 実装方法、メリット、課題、そして安全なアクセス管理のためのベストプラクティスを解説します。,904,without_fullwidth_parens,false
 ユーザーエクスペリエンス,ユーザーエクスペリエンス,ユーザーエクスペリエンス（UX）,/ja/glossary/User-Experience--UX-/,ユーザーエクスペリエンス（UX）とは、製品やサービスを利用する際の総合的な体験のことです。ユーザーが必要とするものや望むものを理解することで、デジタル製品を使いやすく、楽しいものにすることに焦点を当てています。,904,without_fullwidth_parens,false
 ボイス・オブ・カスタマー,ボイス・オブ・カスタマー,ボイス・オブ・カスタマー（VoC）,/ja/glossary/Voice-of-Customer--VoC-/,顧客インサイトとフィードバックを収集するための、ボイス・オブ・カスタマー（VoC）プログラム、方法論、実装戦略に関する包括的なガイド。,904,without_fullwidth_parens,false
+ユーザーインターフェース,ユーザーインターフェース,ユーザーインターフェース（UI）,/ja/glossary/user-interfaces---UI-/,ユーザーインターフェース（UI）を探求：定義、種類（GUI、CLI、VUI、タッチ）、デザイン原則、戦略的価値について学びます。UIがユーザビリティ、ビジネス、未来のテクノロジーに与える影響を理解しましょう。,904,without_fullwidth_parens,false
 Aggregator,aggregator,Aggregator（アグリゲーター）,/ja/glossary/Aggregator/,複数の実行パスやループからの出力を収集し、単一の結果に統合するノード。効率的なデータ処理を実現します。,900,without_fullwidth_parens,false
 初回コンタクト解決率,初回コンタクト解決率,初回コンタクト解決率（FCR）,/ja/glossary/First-Contact-Resolution--FCR-/,顧客の問い合わせや問題が最初のやり取りで解決され、追加の連絡を必要としない割合を測定するカスタマーサービス指標です。FCR率が高いほど顧客満足度が向上し、サポートコストが削減されます。,900,without_fullwidth_parens,false
 情報アーキテクチャ,情報アーキテクチャ,情報アーキテクチャ（IA）,/ja/glossary/Information-Architecture--IA-/,情報アーキテクチャ（IA）の包括的ガイド - デジタルコンテンツを効果的に整理するための原則、方法論、メリット、ベストプラクティスを解説します。,898,without_fullwidth_parens,false
 エンティティ抽出,エンティティ抽出,エンティティ抽出（固有表現認識、NER）,/ja/glossary/Entity-Extraction/,エンティティ抽出（NER）は、非構造化テキストから人名、組織名、日付などの重要な情報を識別・分類する自然言語処理技術です。これにより、テキストデータを構造化データに変換し、分析や自動化に活用できます。,896,without_fullwidth_parens,false
 固有表現認識,固有表現認識,固有表現認識（NER）,/ja/glossary/Named-Entity-Recognition--NER-/,固有表現認識（NER）は、テキスト内の実世界のエンティティ（人物、組織、場所など）を識別し分類することで、生データを構造化された情報に変換します。,892,without_fullwidth_parens,false
 長短期記憶,長短期記憶,長短期記憶（LSTM）,/ja/glossary/Long-Short-Term-Memory--LSTM-/,LSTM ニューラルネットワークの包括的ガイド。そのアーキテクチャ、応用例、および逐次データ処理と時系列分析のための実装方法について解説します。,890,without_fullwidth_parens,false
-多要素認証,多要素認証,多要素認証（MFA）,/ja/glossary/Multi-Factor-Authentication--MFA-/,多要素認証（MFA）の包括的なガイド。実装方法、メリット、課題、セキュリティ強化のためのベストプラクティスを網羅しています。,890,without_fullwidth_parens,false
+多要素認証,多要素認証,多要素認証（MFA）,/ja/glossary/Multi-Factor-Authentication--MFA-/,アカウントにアクセスする際に、パスワードに加えて指紋認証やスマートフォンの確認コードなど複数の確認方法を組み合わせることで、セキュリティを大幅に強化する仕組みです。,890,without_fullwidth_parens,false
 二要素認証,二要素認証,二要素認証（2FA）,/ja/glossary/Two-Factor-Authentication--2FA-/,二要素認証（2FA）の包括的ガイド - セキュリティ手法、実装方法、メリット、およびデジタル保護を強化するためのベストプラクティスを解説します。,890,without_fullwidth_parens,false
-Security Assertion Markup Language,security assertion markup language,SAML(Security Assertion Markup Language),/ja/glossary/SAML--Security-Assertion-Markup-Language-/,SAML認証プロトコルの包括的なガイド。安全なシングルサインオンソリューションの実装、メリット、ユースケース、ベストプラクティスを網羅しています。,868,parens_content,false
+Security Assertion Markup Language,security assertion markup language,SAML(Security Assertion Markup Language),/ja/glossary/SAML--Security-Assertion-Markup-Language-/,一度のログインで複数のアプリケーションにアクセスできる、企業向けの安全な認証システム。,868,parens_content,false
 Retrieval-Augmented Generation,retrieval-augmented generation,RAG(Retrieval-Augmented Generation),/ja/glossary/RAG/,RAG(Retrieval-Augmented Generation)は、外部データソースを統合することでLLMを強化します。正確でタイムリー、かつ文脈に関連したAI応答を提供し、ハルシネーションを削減します。,860,parens_content,false
 アプリケーション・プログラミング・インターフェース,アプリケーション・プログラミング・インターフェース,API(アプリケーション・プログラミング・インターフェース),/ja/glossary/APIs/,API(アプリケーション・プログラミング・インターフェース)を詳しく解説:定義、仕組み、種類(REST、SOAP)、実例、メリット、セキュリティ、ベストプラクティスを網羅した総合ガイドです。,850,parens_content,false
 Largest Contentful Paint,largest contentful paint,LCP (Largest Contentful Paint),/ja/glossary/LCP--Largest-Contentful-Paint-/,ページ上の最大のコンテンツがユーザーに表示されるまでの速度を測定するウェブパフォーマンス指標で、ユーザーの第一印象とエンゲージメントに直接影響します。,848,parens_content,false
 First Contentful Paint,first contentful paint,FCP (First Contentful Paint),/ja/glossary/FCP--First-Contentful-Paint-/,ユーザーがリンクをクリックした後、ウェブページ上にコンテンツが最初に表示されるまでの速度を測定するウェブパフォーマンス指標で、ユーザーの第一印象とエンゲージメントに影響を与えます。,844,parens_content,false
 Model Context Protocol,model context protocol,MCP (Model Context Protocol),/ja/glossary/MCP--Model-Context-Protocol-/,Model Context Protocol (MCP) の包括的ガイド - AIモデルと外部システム統合のための標準化された通信フレームワーク。,844,parens_content,false
-医療保険の相互運用性と説明責任に関する法律,医療保険の相互運用性と説明責任に関する法律,HIPAA(医療保険の相互運用性と説明責任に関する法律),/ja/glossary/HIPAA--Health-Insurance-Portability-/,プライバシー、セキュリティ、相互運用性要件、コンプライアンス戦略、実装のベストプラクティスをカバーする、HIPAA規制の包括的なガイド。,842,parens_content,false
+医療保険の相互運用性と説明責任に関する法律,医療保険の相互運用性と説明責任に関する法律,HIPAA(医療保険の相互運用性と説明責任に関する法律),/ja/glossary/HIPAA--Health-Insurance-Portability-/,患者の医療情報を保護するため、米国の医療機関が守るべき法律。転職時の保険継続と医療詐欺防止も目的としています。,842,parens_content,false
 Software as a Service,software as a service,SaaS(Software as a Service),/ja/glossary/SaaS--Software-as-a-Service-/,インターネット経由でサブスクリプション形式で提供されるソフトウェアで、インストールやメンテナンスが不要です。ユーザーは任意のデバイスからいつでも最新バージョンにアクセスできます。,842,parens_content,false
 カリフォルニア州消費者プライバシー法,カリフォルニア州消費者プライバシー法,CCPA(カリフォルニア州消費者プライバシー法),/ja/glossary/CCPA--California-Consumer-Privacy-Act-/,CCPA準拠、消費者の権利、企業の義務、カリフォルニア州法に基づくプライバシー保護要件に関する包括的なガイド。,836,parens_content,false
 Fallback Mechanism,fallback mechanism,フォールバック機構(Fallback Mechanism),/ja/glossary/Fall-back-Mechanism/,AIチャットボットにおけるフォールバック機構は、ボットがリクエストを解釈または実行できない場合に、会話をリダイレクト、明確化、またはエスカレーションすることで継続性を確保します。,836,parens_content,false
@@ -1441,6 +1468,7 @@ FActScore,factscore,Fact-Score (FActScore),/ja/glossary/Fact-Score/,FActScoreは
 Precision,precision,精度(Precision),/ja/glossary/Precision/,精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。,818,parens_content,false
 価値実現までの時間,価値実現までの時間,Time to Value(価値実現までの時間),/ja/glossary/Time-to-Value/,Time to Value(TTV)の包括的ガイド - 顧客が製品、サービス、またはビジネスへの投資から利益を実感するまでの速度を測定する指標について解説します。,818,parens_content,false
 ソーシャルメディア,ソーシャルメディア,プラットフォーム(ソーシャルメディア),/ja/glossary/platform/,Facebook、Instagram、TikTokなどのソーシャルメディアプラットフォームを探索します。その定義、ビジネス活用、種類、そしてAIチャットボットと自動化がどのようにエンゲージメントを向上させるかを学びます。,818,parens_content,false
+重要業績評価指標,重要業績評価指標,KPI(重要業績評価指標),/ja/glossary/KPIs---Key-Performance-Indicators-/,重要業績評価指標(KPI)について学びましょう:KPIとは何か、なぜ重要なのか、種類、開発方法、そして営業、マーケティング、人事、ITにおける具体例を解説します。,816,parens_content,false
 LLMによる評価,llmによる評価,LLM as Judge(LLMによる評価),/ja/glossary/LLM-as-Judge/,LLM-as-a-Judge(LaaJ)は、LLMが他のLLMの出力を評価する手法です。スケーラブルで繊細なAI評価のための定義、手法、ベストプラクティス、ユースケースについて解説します。,816,parens_content,false
 80/20の法則,80/20の法則,パレートの法則(80/20の法則),/ja/glossary/Pareto's-Law/,パレートの法則(80/20の法則)を探求します。これは、結果の80%が原因の20%から生じるという経験的原理です。ビジネス、AI、生産性などにおける応用を学びましょう。,816,parens_content,false
 自動着信呼分配,自動着信呼分配,ACD(自動着信呼分配),/ja/glossary/ACD--Automatic-Call-Distribution-/,自動着信呼分配システムの包括的ガイド。コールセンター向けのコア技術、実装戦略、ベストプラクティスを網羅しています。,814,parens_content,false
@@ -1451,6 +1479,7 @@ LLMによる評価,llmによる評価,LLM as Judge(LLMによる評価),/ja/gloss
 顧客関係管理,顧客関係管理,CRM(顧客関係管理),/ja/glossary/CRM/,CRM(顧客関係管理)システムは、顧客とのやり取りを管理・最適化するソフトウェアです。データを一元化し、プロセスを自動化し、顧客エンゲージメントとビジネスパフォーマンスを向上させるためのインサイトを提供します。,812,parens_content,false
 シークレット,シークレット,環境変数(シークレット):詳細ガイド,/ja/glossary/Environment-Variables--Secrets-/,アプリケーションの安全な設定のための環境変数(シークレット)について学びます。APIキーやパスワードなどの機密データをコードから分離し、セキュリティと柔軟性を確保します。,812,parens_content,false
 よくある質問,よくある質問,FAQ(よくある質問),/ja/glossary/FAQ/,デジタルコミュニケーション、カスタマーサポート、AIチャットボットの基盤となるFAQ(よくある質問)について解説します。その定義、目的、メリット、実装方法を学びましょう。,812,parens_content,false
+顧客生涯価値,顧客生涯価値,LTV(顧客生涯価値),/ja/glossary/LTV---Lifetime-Value-/,AIチャットボットや自動化ビジネスにおける重要な指標である顧客生涯価値(LTV)を理解しましょう。その定義、計算方法、重要性、そして持続可能な成長のためのLTV向上戦略について学びます。,812,parens_content,false
 RevOps,revops,レベニューオペレーション(RevOps),/ja/glossary/Revenue-Operations--RevOps-/,営業、マーケティング、カスタマーサクセスの各チームを統合し、共有データと整合された目標を通じてプロセスを効率化し、一貫した収益成長を推進するビジネス戦略。,812,parens_content,false
 総所有コスト,総所有コスト,TCO(総所有コスト),/ja/glossary/TCO/,総所有コスト(TCO)は、資産のライフサイクルにおけるすべての直接費、間接費、隠れたコストを定量化します。AIチャットボットと自動化において不可欠なTCOは、動的な費用を管理し、情報に基づいた技術的意思決定を支援します。,812,parens_content,false
 ウェブフック,ウェブフック,Webhook(ウェブフック),/ja/glossary/Webhook/,Webhookの包括的ガイド:リアルタイムデータ同期、イベント駆動型アーキテクチャ、自動化されたシステム統合のためのHTTPコールバック。,812,parens_content,false
@@ -1460,10 +1489,11 @@ iPaaS,ipaas,Integration Platform as a Service (iPaaS),/ja/glossary/Integration-P
 投資収益率,投資収益率,ROI(投資収益率),/ja/glossary/ROI/,投資収益率(ROI)は、投資効率を定量化する財務指標です。AIチャットボットと自動化のROI計算方法、主要な構成要素、指標、実際の事例について学びましょう。,810,parens_content,false
 テンセント,テンセント,Tencent(テンセント),/ja/glossary/Tencent/,Tencentは1998年に設立された中国のテクノロジー企業で、WeChatなどの相互接続されたプラットフォームを通じて、世界中の数十億人のユーザーにソーシャルメッセージング、ゲーム、エンターテインメント、クラウドサービス、デジタル決済を提供しています。,810,parens_content,false
 アジャイル,アジャイル,ベロシティ(アジャイル),/ja/glossary/Velocity--Agile-/,アジャイルベロシティの包括的ガイド:測定方法、計算方法、メリット、スプリント計画とチームパフォーマンス追跡のベストプラクティス。,810,parens_content,false
+正解ラベル,正解ラベル,オラクルフィードバック(正解ラベル),/ja/glossary/oracle-feedback---ground-truth-labels-/,AI/MLにおけるオラクルフィードバックと正解ラベルについて解説します。Oracle Select AIやHCM Cloudが、モデルのトレーニング、評価、継続的改善のために権威あるデータをどのように活用しているかを学びます。,810,parens_content,false
 バイドゥ,バイドゥ,Baidu(バイドゥ),/ja/glossary/Baidu/,Baiduは中国最大の検索エンジンであり、人々がオンラインで情報を見つけることを支援しながら、自動運転や音声認識などの人工知能技術を開発する大手AI企業です。,808,parens_content,false
 eNPS,enps,従業員ネットプロモータースコア(eNPS),/ja/glossary/Employee-Net-Promoter-Score--eNPS-/,従業員ネットプロモータースコア(eNPS)の包括的ガイド - 測定方法論、実装戦略、および組織のためのベストプラクティス。,808,parens_content,false
 中小企業,中小企業,SMB(中小企業),/ja/glossary/SMB--Small-and-Medium-Business-/,従業員数500名未満の企業で、経済の基盤を形成しています。大企業よりも高い機動性を持って事業を展開する一方、テクノロジーや人材面でのリソース制約に直面しています。,808,parens_content,false
-音声合成,音声合成,Text-to-Speech(音声合成),/ja/glossary/Text-to-Speech/,Text-to-Speech技術の包括的なガイド。音声合成手法、応用分野、メリット、実装のベストプラクティスを網羅しています。,808,parens_content,false
+音声合成,音声合成,Text-to-Speech(音声合成),/ja/glossary/Text-to-Speech/,# Text-to-Speech(音声合成),808,parens_content,false
 Web,web,アクセシビリティ(Web),/ja/glossary/Accessibility--Web-/,Webアクセシビリティとは、視覚、聴覚、運動機能などの障害を持つ人々が、Webサイトを容易かつ効果的に利用できるように設計する実践のことです。,806,parens_content,false
 AmI,ami,アンビエント・インテリジェンス(AmI),/ja/glossary/Ambient-Intelligence/,アンビエント・インテリジェンス(AmI)は、デジタルシステムを環境にシームレスに組み込み、明示的な命令なしに人間のニーズを感知、解釈し、プロアクティブに応答します。,806,parens_content,false
 IaC,iac,Infrastructure as Code (IaC),/ja/glossary/Infrastructure-as-Code--IaC-/,Infrastructure as Code(IaC)は、ネットワーク、仮想マシン、ロードバランサーなどのITインフラストラクチャをコードと自動化を使用して定義・管理する手法です。そのメリット、ツール、ベストプラクティスについて解説します。,806,parens_content,false
@@ -1484,7 +1514,7 @@ CTA,cta,コール・トゥ・アクション（CTA）,/ja/glossary/Call-to-Actio
 DID,did,ダイレクト・インワード・ダイヤリング（DID）,/ja/glossary/Direct-Inward-Dialing--DID-/,ダイレクト・インワード・ダイヤリング（DID）技術の包括的ガイド。実装方法、メリット、および現代の通信システムにおけるベストプラクティスを解説します。,786,fullwidth_parens_content,false
 FCR,fcr,初回コンタクト解決率（FCR）,/ja/glossary/First-Contact-Resolution--FCR-/,顧客の問い合わせや問題が最初のやり取りで解決され、追加の連絡を必要としない割合を測定するカスタマーサービス指標です。FCR率が高いほど顧客満足度が向上し、サポートコストが削減されます。,786,fullwidth_parens_content,false
 IAM,iam,アイデンティティ・アクセス管理（IAM）,/ja/glossary/Identity-and-Access-Management--IAM-/,アイデンティティ・アクセス管理（IAM）システムの包括的ガイド。認証、認可、ガバナンス、セキュリティのベストプラクティスを網羅しています。,786,fullwidth_parens_content,false
-MFA,mfa,多要素認証（MFA）,/ja/glossary/Multi-Factor-Authentication--MFA-/,多要素認証（MFA）の包括的なガイド。実装方法、メリット、課題、セキュリティ強化のためのベストプラクティスを網羅しています。,786,fullwidth_parens_content,false
+MFA,mfa,多要素認証（MFA）,/ja/glossary/Multi-Factor-Authentication--MFA-/,アカウントにアクセスする際に、パスワードに加えて指紋認証やスマートフォンの確認コードなど複数の確認方法を組み合わせることで、セキュリティを大幅に強化する仕組みです。,786,fullwidth_parens_content,false
 NER,ner,固有表現認識（NER）,/ja/glossary/Named-Entity-Recognition--NER-/,固有表現認識（NER）は、テキスト内の実世界のエンティティ（人物、組織、場所など）を識別し分類することで、生データを構造化された情報に変換します。,786,fullwidth_parens_content,false
 NRR,nrr,ネットレベニューリテンション（NRR）,/ja/glossary/Net-Revenue-Retention--NRR-/,ネットレベニューリテンション（NRR）の包括的ガイド - 既存顧客からの収益成長を拡張とチャーン分析を通じて測定する、重要なSaaS指標です。,786,fullwidth_parens_content,false
 PWA,pwa,プログレッシブウェブアプリ（PWA）,/ja/glossary/Progressive-Web-App--PWA-/,モバイルアプリのように動作するウェブアプリケーションで、ダウンロード不要でブラウザから直接、オフラインアクセスと高速なパフォーマンスを提供します。,786,fullwidth_parens_content,false
@@ -1493,22 +1523,47 @@ VoC,voc,ボイス・オブ・カスタマー（VoC）,/ja/glossary/Voice-of-Cust
 BI,bi,ビジネスインテリジェンス（BI）,/ja/glossary/Business-Intelligence--BI-/,ビジネスインテリジェンス（BI）システム、テクノロジー、実装戦略、およびデータドリブンな意思決定のためのベストプラクティスに関する包括的なガイド。,784,fullwidth_parens_content,false
 IA,ia,情報アーキテクチャ（IA）,/ja/glossary/Information-Architecture--IA-/,情報アーキテクチャ（IA）の包括的ガイド - デジタルコンテンツを効果的に整理するための原則、方法論、メリット、ベストプラクティスを解説します。,784,fullwidth_parens_content,false
 UX,ux,ユーザーエクスペリエンス（UX）,/ja/glossary/User-Experience--UX-/,ユーザーエクスペリエンス（UX）とは、製品やサービスを利用する際の総合的な体験のことです。ユーザーが必要とするものや望むものを理解することで、デジタル製品を使いやすく、楽しいものにすることに焦点を当てています。,784,fullwidth_parens_content,false
+UI,ui,ユーザーインターフェース（UI）,/ja/glossary/user-interfaces---UI-/,ユーザーインターフェース（UI）を探求：定義、種類（GUI、CLI、VUI、タッチ）、デザイン原則、戦略的価値について学びます。UIがユーザビリティ、ビジネス、未来のテクノロジーに与える影響を理解しましょう。,784,fullwidth_parens_content,false
 フィードバックボタン(サムズアップ,フィードバックボタン(サムズアップ,フィードバックボタン(サムズアップ/ダウン),/ja/glossary/Feedback-Buttons--Thumbs-Up-Down-/,AIチャットボットやデジタルコンテンツ向けのフィードバックボタン(サムズアップ/ダウン)について学びます。そのメリット、ベストプラクティス、継続的な改善を推進する方法を解説します。,734,slash_part,false
 コードブロック(Python,コードブロック(python,コードブロック(Python/JS),/ja/glossary/Code-Block--Python-JS-/,コードブロックは、統一された実行のためにプログラミング文をグループ化したもので、Pythonではインデント、JavaScriptでは中括弧によって定義されます。自動化やチャットボットにおいて、カスタムロジックの実装に使用されます。,728,slash_part,false
 ダイヤラー(プレディクティブ,ダイヤラー(プレディクティブ,ダイヤラー(プレディクティブ/プログレッシブ),/ja/glossary/Dialer--Predictive-Progressive-/,プレディクティブダイヤラーとプログレッシブダイヤラーの包括的ガイド - エージェントの生産性と顧客接触率を最適化する自動発信システムです。,728,slash_part,false
+ブループリントのインポート,ブループリントのインポート,ブループリントのインポート/エクスポート,/ja/glossary/Import---Export-Blueprint/,ブループリントのインポート/エクスポートは、自動化やチャットボットのロジックをファイル(JSONまたはYAML)として保存し、プラットフォームや環境を超えた共有、バックアップ、移行、バージョン管理を可能にします。,726,slash_part,false
+チーム コラボレーション,チーム コラボレーション,チーム コラボレーション / ワークスペース,/ja/glossary/Team-Collaboration---Workspace/,チーム コラボレーション / ワークスペースは、複数のユーザーが共有ドキュメント、プロセス、自動化されたワークフローに対してリアルタイムで作業できるデジタル環境です。多くの場合、AIによって機能が強化されています。,724,slash_part,false
 パレートの法則(80,パレートの法則(80,パレートの法則(80/20の法則),/ja/glossary/Pareto's-Law/,パレートの法則(80/20の法則)を探求します。これは、結果の80%が原因の20%から生じるという経験的原理です。ビジネス、AI、生産性などにおける応用を学びましょう。,720,slash_part,false
 静的サイト向けCI,静的サイト向けci,静的サイト向けCI/CD,/ja/glossary/CI-CD-for-Static-Sites/,コード変更が行われるたびに静的ウェブサイトを自動的にビルド、テスト、デプロイする自動化システムで、手動での公開作業を不要にします。,718,slash_part,false
+デバッグコンソール,デバッグコンソール,デバッグコンソール / トレース,/ja/glossary/Debug-Console---Trace/,デバッグコンソールまたはトレースは、自動化フロー、AIチャットボット、またはAPIプロキシの動作を可視化する診断インターフェースであり、データ、エラー、パフォーマンスを記録します。,718,slash_part,false
+Try-Catch,try-catch,エラーハンドラー / Try-Catch,/ja/glossary/Error-Handler---Try-Catch/,エラーハンドラー(多くの場合Try-Catchブロック)は、自動化やAIチャットボットにおける予期しない障害を管理し、クラッシュを防ぎ、制御された復旧やログ記録を可能にします。,718,slash_part,false
+コンテキストメモリ,コンテキストメモリ,ステート/コンテキストメモリ,/ja/glossary/State---Context-Memory/,ステート/コンテキストメモリは、AIチャットボットがセッション間で情報を保持・想起できるようにするストレージメカニズムです。会話の連続性、パーソナライゼーション、効率的なタスク管理を実現します。,718,slash_part,false
+ROUGEスコア,rougeスコア,BLEUスコア/ROUGEスコア,/ja/glossary/BLEU---ROUGE-scores/,BLEUスコアとROUGEスコアについて学びましょう。機械翻訳、要約、AIにおいて、機械生成テキストを人間の参照テキストと比較評価するための重要なNLP評価指標です。,716,slash_part,false
 プログレッシブ),プログレッシブ),ダイヤラー(プレディクティブ/プログレッシブ),/ja/glossary/Dialer--Predictive-Progressive-/,プレディクティブダイヤラーとプログレッシブダイヤラーの包括的ガイド - エージェントの生産性と顧客接触率を最適化する自動発信システムです。,716,slash_part,false
+エラーハンドラー,エラーハンドラー,エラーハンドラー / Try-Catch,/ja/glossary/Error-Handler---Try-Catch/,エラーハンドラー(多くの場合Try-Catchブロック)は、自動化やAIチャットボットにおける予期しない障害を管理し、クラッシュを防ぎ、制御された復旧やログ記録を可能にします。,716,slash_part,false
+For-Each,for-each,イテレーター / For-Each,/ja/glossary/Iterator---For-Each/,イテレーターまたはfor-each構造は、リストやコレクション内のアイテムを1つずつ処理し、各要素に対して読み取り、更新、またはタスクの自動化などのアクションを実行できるようにします。,716,slash_part,false
+BLEUスコア,bleuスコア,BLEUスコア/ROUGEスコア,/ja/glossary/BLEU---ROUGE-scores/,BLEUスコアとROUGEスコアについて学びましょう。機械翻訳、要約、AIにおいて、機械生成テキストを人間の参照テキストと比較評価するための重要なNLP評価指標です。,714,slash_part,false
+スリープノード,スリープノード,ディレイ / スリープノード,/ja/glossary/Delay---Sleep-Node/,ディレイ/スリープノードは、AIチャットボットや自動化ワークフローにおいて、設定された期間または条件が満たされるまで実行を一時停止します。APIレート制限やオーケストレーションに不可欠な機能です。,714,slash_part,false
+ロジックノード,ロジックノード,ロジックノード / 条件分岐,/ja/glossary/Logic-Node---Conditional-Branching/,ロジックノード(条件分岐)は、チャットボットや自動化ワークフローにおいて条件を評価し、ユーザー入力やコンテキストに基づいて動的にパスを振り分けます。,714,slash_part,false
+ワークスペース,ワークスペース,チーム コラボレーション / ワークスペース,/ja/glossary/Team-Collaboration---Workspace/,チーム コラボレーション / ワークスペースは、複数のユーザーが共有ドキュメント、プロセス、自動化されたワークフローに対してリアルタイムで作業できるデジタル環境です。多くの場合、AIによって機能が強化されています。,714,slash_part,false
+バージョン履歴,バージョン履歴,バージョン履歴 / ロールバック,/ja/glossary/Version-History---Rollback/,AIチャットボットおよび自動化プラットフォームにおけるバージョン履歴とロールバックについて理解します。ボット設定の追跡、管理、および安定した状態への復元方法を学び、エラーからの迅速な復旧を実現します。,714,slash_part,false
+エクスポート,エクスポート,ブループリントのインポート/エクスポート,/ja/glossary/Import---Export-Blueprint/,ブループリントのインポート/エクスポートは、自動化やチャットボットのロジックをファイル(JSONまたはYAML)として保存し、プラットフォームや環境を超えた共有、バックアップ、移行、バージョン管理を可能にします。,712,slash_part,false
+イテレーター,イテレーター,イテレーター / For-Each,/ja/glossary/Iterator---For-Each/,イテレーターまたはfor-each構造は、リストやコレクション内のアイテムを1つずつ処理し、各要素に対して読み取り、更新、またはタスクの自動化などのアクションを実行できるようにします。,712,slash_part,false
 20の法則),20の法則),パレートの法則(80/20の法則),/ja/glossary/Pareto's-Law/,パレートの法則(80/20の法則)を探求します。これは、結果の80%が原因の20%から生じるという経験的原理です。ビジネス、AI、生産性などにおける応用を学びましょう。,712,slash_part,false
+ネストフロー,ネストフロー,サブフロー / ネストフロー,/ja/glossary/Sub-flow---Nested-Flow/,自動化におけるサブフロー(ネストフロー)について学びます。ワークフローを他のワークフロー内に埋め込むことで、複雑なロジックを簡素化し、再利用性を高め、メンテナンスを改善します。,712,slash_part,false
 JSON設定,json設定,TOML/YAML/JSON設定,/ja/glossary/TOML-YAML-JSON-Config/,アプリケーションの設定をソースコードにハードコーディングすることなく、人間が読みやすい形式で保存する設定ファイルフォーマット。,712,slash_part,false
-ローコード,ローコード,ローコード/ノーコード,/ja/glossary/Low-Code-No-Code/,ローコードおよびノーコード開発プラットフォームの包括的なガイド。最小限のプログラミング知識で迅速なアプリケーション開発を可能にします。,710,slash_part,false
-ノーコード,ノーコード,ローコード/ノーコード,/ja/glossary/Low-Code-No-Code/,ローコードおよびノーコード開発プラットフォームの包括的なガイド。最小限のプログラミング知識で迅速なアプリケーション開発を可能にします。,710,slash_part,false
+ロールバック,ロールバック,バージョン履歴 / ロールバック,/ja/glossary/Version-History---Rollback/,AIチャットボットおよび自動化プラットフォームにおけるバージョン履歴とロールバックについて理解します。ボット設定の追跡、管理、および安定した状態への復元方法を学び、エラーからの迅速な復旧を実現します。,712,slash_part,false
+ローコード,ローコード,ローコード/ノーコード,/ja/glossary/Low-Code-No-Code/,プログラミング知識がほぼ不要で、ドラッグ&ドロップなどの直感的な操作でアプリケーションを素早く作成できるツール。,710,slash_part,false
+ノーコード,ノーコード,ローコード/ノーコード,/ja/glossary/Low-Code-No-Code/,プログラミング知識がほぼ不要で、ドラッグ&ドロップなどの直感的な操作でアプリケーションを素早く作成できるツール。,710,slash_part,false
+サブフロー,サブフロー,サブフロー / ネストフロー,/ja/glossary/Sub-flow---Nested-Flow/,自動化におけるサブフロー(ネストフロー)について学びます。ワークフローを他のワークフロー内に埋め込むことで、複雑なロジックを簡素化し、再利用性を高め、メンテナンスを改善します。,710,slash_part,false
 Bテスト,bテスト,A/Bテスト,/ja/glossary/A-B-Testing/,A/Bテストの方法論、実装戦略、統計分析、およびデータ駆動型の意思決定のための最適化技術に関する包括的なガイド。,708,slash_part,false
+トレース,トレース,デバッグコンソール / トレース,/ja/glossary/Debug-Console---Trace/,デバッグコンソールまたはトレースは、自動化フロー、AIチャットボット、またはAPIプロキシの動作を可視化する診断インターフェースであり、データ、エラー、パフォーマンスを記録します。,708,slash_part,false
+ディレイ,ディレイ,ディレイ / スリープノード,/ja/glossary/Delay---Sleep-Node/,ディレイ/スリープノードは、AIチャットボットや自動化ワークフローにおいて、設定された期間または条件が満たされるまで実行を一時停止します。APIレート制限やオーケストレーションに不可欠な機能です。,708,slash_part,false
 ダウン),ダウン),フィードバックボタン(サムズアップ/ダウン),/ja/glossary/Feedback-Buttons--Thumbs-Up-Down-/,AIチャットボットやデジタルコンテンツ向けのフィードバックボタン(サムズアップ/ダウン)について学びます。そのメリット、ベストプラクティス、継続的な改善を推進する方法を解説します。,708,slash_part,false
+条件分岐,条件分岐,ロジックノード / 条件分岐,/ja/glossary/Logic-Node---Conditional-Branching/,ロジックノード(条件分岐)は、チャットボットや自動化ワークフローにおいて条件を評価し、ユーザー入力やコンテキストに基づいて動的にパスを振り分けます。,708,slash_part,false
+ステート,ステート,ステート/コンテキストメモリ,/ja/glossary/State---Context-Memory/,ステート/コンテキストメモリは、AIチャットボットがセッション間で情報を保持・想起できるようにするストレージメカニズムです。会話の連続性、パーソナライゼーション、効率的なタスク管理を実現します。,708,slash_part,false
 TOML,toml,TOML/YAML/JSON設定,/ja/glossary/TOML-YAML-JSON-Config/,アプリケーションの設定をソースコードにハードコーディングすることなく、人間が読みやすい形式で保存する設定ファイルフォーマット。,708,slash_part,false
 YAML,yaml,TOML/YAML/JSON設定,/ja/glossary/TOML-YAML-JSON-Config/,アプリケーションの設定をソースコードにハードコーディングすることなく、人間が読みやすい形式で保存する設定ファイルフォーマット。,708,slash_part,false
 JS),js),コードブロック(Python/JS),/ja/glossary/Code-Block--Python-JS-/,コードブロックは、統一された実行のためにプログラミング文をグループ化したもので、Pythonではインデント、JavaScriptでは中括弧によって定義されます。自動化やチャットボットにおいて、カスタムロジックの実装に使用されます。,706,slash_part,false
 CD,cd,静的サイト向けCI/CD,/ja/glossary/CI-CD-for-Static-Sites/,コード変更が行われるたびに静的ウェブサイトを自動的にビルド、テスト、デプロイする自動化システムで、手動での公開作業を不要にします。,704,slash_part,false
+エラーハンドラー / Try Catch,エラーハンドラー / try catch,エラーハンドラー / Try-Catch,/ja/glossary/Error-Handler---Try-Catch/,エラーハンドラー(多くの場合Try-Catchブロック)は、自動化やAIチャットボットにおける予期しない障害を管理し、クラッシュを防ぎ、制御された復旧やログ記録を可能にします。,640,without_hyphens,false
+イテレーター / For Each,イテレーター / for each,イテレーター / For-Each,/ja/glossary/Iterator---For-Each/,イテレーターまたはfor-each構造は、リストやコレクション内のアイテムを1つずつ処理し、各要素に対して読み取り、更新、またはタスクの自動化などのアクションを実行できるようにします。,634,without_hyphens,false
 Speech to Textノード,speech to textノード,Speech-to-Textノード,/ja/glossary/Speech-to-Text-Node/,Speech-to-Textノードは、自動音声認識(ASR)を使用して音声言語を機械可読テキストに変換する、自動化プラットフォームやAIワークフローにおけるモジュール型コンポーネントです。,634,without_hyphens,false
 Text to Speechノード,text to speechノード,Text-to-Speechノード,/ja/glossary/Text-to-Speech-Node/,Text-to-Speechノード(TTSノード)は、会話型AIおよび自動化プラットフォームにおけるモジュール式のビルディングブロックで、入力テキストを音声応答用の合成オーディオに変換します。,634,without_hyphens,false
 Tongyi Qianwen,tongyi qianwen,Tongyi-Qianwen,/ja/glossary/Tongyi-Qianwen/,Alibabaが開発したAIアシスタントで、ChatGPTと同様の高度な機械学習技術を使用し、特に中国語を含む複数の言語で質問を理解し応答します。,628,without_hyphens,false

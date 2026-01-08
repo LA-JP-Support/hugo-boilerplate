@@ -2,7 +2,7 @@
 title: "Nofollow Link"
 date: 2025-12-19
 translationKey: Nofollow-Link
-description: "A nofollow link is a special HTML link that tells search engines not to count it as a vote for the destination website. It's used to link to content you don't want to endorse or to prevent spam."
+description: "A nofollow link is a special HTML link that tells search engines not to count it as a vote for the destination website. It's used when you want to link to content without endorsing it or to prevent spam."
 keywords:
 - nofollow link
 - link attributes

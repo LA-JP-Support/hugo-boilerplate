@@ -2,7 +2,7 @@
 title: "Landing Page"
 date: 2025-12-19
 translationKey: Landing-Page
-description: "A standalone web page designed to guide visitors toward one specific action, such as making a purchase or signing up, by removing distractions and focusing their attention on a single goal."
+description: "A focused web page designed to guide visitors toward one specific goal, like making a purchase or signing up, by removing distractions and highlighting what you want them to do."
 keywords:
 - landing page
 - conversion optimization

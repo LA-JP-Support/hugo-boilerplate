@@ -1,8 +1,6 @@
 ---
-url: "/ja/glossary/user-interfaces---UI-/"
----
----
 title: ユーザーインターフェース（UI）
+url: "/ja/glossary/user-interfaces---UI-/"
 lastmod: '2025-12-19'
 date: '2025-12-19'
 translationKey: user-interfaces-ui-definition-types-design-guidelines-use-cases-and-strategic-value
@@ -18,7 +16,6 @@ type: glossary
 draft: false
 e-title: User Interfaces (UI)
 term: ユーザーインターフェース
-url: "/ja/glossary/user-interfaces---UI-/"
 ---
 ## ユーザーインターフェース(UI)とは?
 

@@ -3,7 +3,7 @@ title: "F1 Score"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "f1-score"
-description: "A machine learning metric that balances how well a model catches true cases versus how often it makes false alarms, making it ideal for real-world problems where both mistakes matter."
+description: "A machine learning measurement that balances two types of mistakes: missing real cases and making false alarms, making it useful when both errors matter equally."
 keywords: ["F1 score", "precision", "recall", "machine learning", "classification"]
 category: "AI Chatbot & Automation"
 type: "glossary"

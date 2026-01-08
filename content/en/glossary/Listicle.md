@@ -2,7 +2,7 @@
 title: "Listicle"
 date: 2025-12-19
 translationKey: Listicle
-description: "A content format that combines numbered lists with article-style writing to present information in an easy-to-scan, organized way that keeps readers engaged."
+description: "A content format that presents information as a numbered list combined with article-style writing, making it easy for readers to quickly scan and understand complex topics."
 keywords:
 - listicle
 - content marketing

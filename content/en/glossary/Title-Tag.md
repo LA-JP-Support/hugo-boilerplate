@@ -2,7 +2,7 @@
 title: "Title Tag"
 date: 2025-12-19
 translationKey: Title-Tag
-description: "The HTML text that appears as a clickable headline in search results and browser tabs, helping search engines understand your page's content and users find your site."
+description: "A headline that appears in search results and browser tabs, helping search engines understand your page and users find your website."
 keywords:
 - title tag
 - HTML meta tags

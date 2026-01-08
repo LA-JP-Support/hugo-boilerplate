@@ -2,7 +2,7 @@
 title: "Baidu"
 date: 2025-12-19
 translationKey: Baidu
-description: "Baidu is China's largest search engine and a leading AI company that helps people find information online while developing artificial intelligence technologies like autonomous driving and voice recognition."
+description: "Baidu is China's largest search engine and leading AI company that helps people find information online while developing technologies like autonomous driving and voice recognition."
 keywords:
 - Baidu
 - Chinese search engine

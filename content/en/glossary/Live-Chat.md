@@ -2,7 +2,7 @@
 title: "Live Chat"
 date: 2025-12-19
 translationKey: Live-Chat
-description: "Live chat is a real-time messaging tool that lets customers instantly connect with support staff or chatbots directly on websites or apps for immediate help."
+description: "Live chat is a real-time messaging tool that lets customers instantly connect with support staff or chatbots on websites and apps for immediate help."
 keywords:
 - live chat
 - customer support

@@ -2,7 +2,7 @@
 title: "Outsourcing"
 date: 2025-12-19
 translationKey: Outsourcing
-description: "A business practice where companies hire external specialists to handle specific tasks or services, allowing them to focus on their core business while reducing costs and accessing expert skills."
+description: "A business strategy where companies hire outside specialists to handle specific tasks, freeing up their team to focus on what they do best while cutting costs."
 keywords:
 - outsourcing
 - business process outsourcing

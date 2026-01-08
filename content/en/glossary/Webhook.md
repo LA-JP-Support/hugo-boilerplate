@@ -2,7 +2,7 @@
 title: "Webhook"
 date: 2025-12-19
 translationKey: Webhook
-description: "A system that automatically sends data from one application to another when specific events happen, enabling real-time integration without constant checking."
+description: "A system that automatically pushes data to another app when something happens, enabling real-time updates without constant checking."
 keywords:
 - webhook
 - HTTP callback

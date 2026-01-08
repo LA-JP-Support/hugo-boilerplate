@@ -3,7 +3,7 @@ title: Bottlenecks
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: bottlenecks-comprehensive-glossary-action-guide-for-business-automation-and-ai-chatbot-operations
-description: "The slowest step in a process that limits how much work can be completed, like a bottle's narrow neck restricting liquid flow regardless of the bottle's size."
+description: "The slowest step in a process that limits overall output, like a bottle's narrow neck restricting liquid flow. Identifying and fixing bottlenecks dramatically improves productivity."
 keywords:
 - bottlenecks
 - business process

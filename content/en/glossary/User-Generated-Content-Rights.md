@@ -2,7 +2,7 @@
 title: "User-Generated Content Rights"
 date: 2025-12-19
 translationKey: User-Generated-Content-Rights
-description: "User-Generated Content Rights are the legal rules that determine who owns and can use content created by users on digital platforms, such as videos, photos, and posts."
+description: "User-Generated Content Rights are the legal rules that determine who owns and can use content like videos, photos, and posts created by users on digital platforms."
 keywords:
 - user-generated content
 - content ownership

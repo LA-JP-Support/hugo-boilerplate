@@ -2,7 +2,7 @@
 title: "DAM (Digital Asset Management)"
 date: 2025-12-19
 translationKey: DAM--Digital-Asset-Management-
-description: "A centralized system that organizes, stores, and shares digital files like images, videos, and documents across an organization, making them easy to find and use."
+description: "A centralized system that helps organizations organize, store, and find digital files like images, videos, and documents in one place, making them easier to use and share across teams."
 keywords:
 - digital asset management
 - DAM systems

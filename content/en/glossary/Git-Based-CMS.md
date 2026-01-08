@@ -2,7 +2,7 @@
 title: "Git-Based CMS"
 date: 2025-12-19
 translationKey: Git-Based-CMS
-description: "A content management system that stores website content in files and uses Git version control, allowing teams to manage, track changes, and publish content like developers manage code."
+description: "A content management system that stores website content in files tracked by Git, enabling teams to manage and publish content using the same version control tools developers use for code."
 keywords:
 - git-based cms
 - headless cms

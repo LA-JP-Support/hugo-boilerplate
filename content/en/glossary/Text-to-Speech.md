@@ -2,7 +2,7 @@
 title: "Text-to-Speech"
 date: 2025-12-19
 translationKey: Text-to-Speech
-description: "Text-to-Speech is technology that converts written text into spoken words, making digital content accessible through audio for people with visual impairments or those who prefer listening."
+description: "Text-to-Speech is technology that converts written text into spoken words, making digital content accessible through audio for people with visual impairments, reading difficulties, or those who prefer listening."
 keywords:
 - text-to-speech
 - speech synthesis

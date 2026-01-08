@@ -2,7 +2,7 @@
 title: "Knowledge Maintenance"
 date: 2025-12-19
 translationKey: Knowledge-Maintenance
-description: "The ongoing process of keeping an organization's information accurate, up-to-date, and useful by regularly reviewing, updating, and removing outdated content."
+description: "The ongoing process of keeping an organization's information accurate, current, and useful by regularly reviewing, updating, and removing outdated content."
 keywords:
 - knowledge maintenance
 - knowledge management

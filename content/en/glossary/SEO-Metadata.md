@@ -2,7 +2,7 @@
 title: "SEO Metadata"
 date: 2025-12-19
 translationKey: SEO-Metadata
-description: "SEO metadata is hidden information added to web pages that helps search engines understand your content and display it better in search results. It includes elements like page titles and descriptions that also help users decide whether to click on your site."
+description: "SEO metadata is hidden information added to web pages that helps search engines understand your content and display it better in search results, while also helping users decide whether to click on your site."
 keywords:
 - SEO metadata
 - meta tags

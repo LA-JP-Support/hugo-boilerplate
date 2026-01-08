@@ -2,7 +2,7 @@
 title: "Word-of-Mouth Marketing"
 date: 2025-12-19
 translationKey: Word-of-Mouth-Marketing
-description: "Satisfied customers sharing their positive experiences about a brand with friends and family, creating authentic recommendations that are more trusted than traditional advertising."
+description: "A marketing strategy where satisfied customers naturally share their positive experiences with friends and family, creating trusted recommendations that are far more effective than traditional advertising."
 keywords:
 - word-of-mouth marketing
 - viral marketing

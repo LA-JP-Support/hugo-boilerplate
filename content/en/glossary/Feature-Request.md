@@ -2,7 +2,7 @@
 title: "Feature Request"
 date: 2025-12-19
 translationKey: Feature-Request
-description: "A proposal from users or team members to add new features or improve existing functions in software, helping development teams understand what users need."
+description: "A proposal from users or team members to suggest new features or improvements for software, helping developers understand what users actually need."
 keywords:
 - feature request
 - product management

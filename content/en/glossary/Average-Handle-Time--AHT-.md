@@ -2,7 +2,7 @@
 title: "Average Handle Time (AHT)"
 date: 2025-12-19
 translationKey: Average-Handle-Time--AHT-
-description: "Average Handle Time (AHT) is the total time an agent spends on a customer interaction, including conversation, hold time, and follow-up work. It measures contact center efficiency and helps manage costs and service quality."
+description: "Average Handle Time (AHT) is the total time a customer service agent spends on one customer interaction, including talking, waiting, and follow-up work. It helps measure how efficiently agents work and manage service costs."
 keywords:
 - average handle time
 - contact center metrics

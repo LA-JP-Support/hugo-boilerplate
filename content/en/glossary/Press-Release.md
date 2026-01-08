@@ -2,7 +2,7 @@
 title: "Press Release"
 date: 2025-12-19
 translationKey: Press-Release
-description: "A formal written announcement that organizations send to journalists and media outlets to share newsworthy information and reach the public through news coverage."
+description: "An official announcement that organizations send to journalists and media outlets to share important news and reach the public through news coverage."
 keywords:
 - press release
 - media relations

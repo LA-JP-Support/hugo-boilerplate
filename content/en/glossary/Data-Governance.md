@@ -2,7 +2,7 @@
 title: "Data Governance"
 date: 2025-12-19
 translationKey: Data-Governance
-description: "A set of rules and processes that organizations use to manage their data properly, ensure it's accurate and secure, and use it effectively for better decision-making."
+description: "A framework of rules and processes that organizations use to manage data quality, security, and access, ensuring data is accurate, protected, and used effectively for better business decisions."
 keywords:
 - data governance
 - data management

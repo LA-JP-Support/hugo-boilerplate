@@ -2,7 +2,7 @@
 title: "Unified Customer Profile"
 date: 2025-12-19
 translationKey: Unified-Customer-Profile
-description: "A single customer record created by combining data from all the places a customer interacts with your business, used to provide personalized experiences and better service."
+description: "A single customer record that combines information from all the ways a customer interacts with your business, enabling personalized service and better decision-making."
 keywords:
 - unified customer profile
 - customer data integration

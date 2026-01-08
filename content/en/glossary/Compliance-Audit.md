@@ -2,7 +2,7 @@
 title: "Compliance Audit"
 date: 2025-12-19
 translationKey: Compliance-Audit
-description: "A systematic review process that checks whether a company follows all applicable laws, regulations, and internal policies to identify risks and ensure proper operations."
+description: "A systematic examination that checks whether a company follows all applicable laws, regulations, and internal policies to identify risks and ensure proper operations."
 keywords:
 - compliance audit
 - regulatory compliance

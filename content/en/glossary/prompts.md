@@ -3,7 +3,7 @@ title: Prompts
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: prompts-comprehensive-glossary-best-practices
-description: "A prompt is an instruction or question you give to an AI system to get a specific response or result. The clearer and more detailed your prompt, the better the AI's answer will be."
+description: "An instruction or question you give to an AI system to get a specific response. The clearer and more detailed your prompt, the better the AI's answer will be."
 keywords:
 - AI prompts
 - prompt engineering

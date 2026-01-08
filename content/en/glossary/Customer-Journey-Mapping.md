@@ -2,7 +2,7 @@
 title: "Customer Journey Mapping"
 date: 2025-12-19
 translationKey: Customer-Journey-Mapping
-description: "A visual map showing every step a customer takes when interacting with a brand, from first discovery to after purchase, helping businesses find problems and improve the experience."
+description: "A visual diagram that tracks every step a customer takes when dealing with a brand, from first noticing it to after buying, so companies can spot problems and make the experience better."
 keywords:
 - customer journey mapping
 - customer experience design

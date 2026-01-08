@@ -2,7 +2,7 @@
 title: "Expert Roundup"
 date: 2025-12-19
 translationKey: Expert-Roundup
-description: "A content format that gathers insights and advice from multiple industry experts on one topic and compiles them into a single article or post to provide diverse perspectives and build authority."
+description: "A content format that brings together advice from multiple industry experts on one topic into a single article, giving readers diverse viewpoints and trusted information all in one place."
 keywords:
 - expert roundup
 - content marketing

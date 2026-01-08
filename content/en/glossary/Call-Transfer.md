@@ -2,7 +2,7 @@
 title: "Call Transfer"
 date: 2025-12-19
 translationKey: Call-Transfer
-description: "A telecommunications feature that redirects an active phone call to another person or department while keeping the caller connected, enabling efficient call routing in businesses."
+description: "A phone feature that smoothly redirects a call to another person or department without hanging up, helping businesses connect callers to the right person quickly."
 keywords:
 - call transfer
 - telecommunications

@@ -2,7 +2,7 @@
 title: "Vendor Selection"
 date: 2025-12-19
 translationKey: Vendor-Selection
-description: "The systematic process of identifying, evaluating, and choosing suppliers or service providers that best meet an organization's business needs, quality standards, and cost requirements."
+description: "The process of finding and choosing the best suppliers or service providers by comparing their costs, quality, and reliability to meet your organization's needs."
 keywords:
 - vendor selection
 - supplier evaluation

@@ -2,7 +2,7 @@
 title: "Page Authority"
 date: 2025-12-19
 translationKey: Page-Authority
-description: "A Moz metric that scores individual web pages from 1-100 to predict how well they'll rank in search results, based mainly on link quality and quantity."
+description: "A Moz score from 1-100 that predicts how well a web page will rank in search results, based mainly on the quality and number of links pointing to it."
 keywords:
 - page authority
 - SEO metrics

@@ -2,7 +2,7 @@
 title: "Knowledge Article"
 date: 2025-12-19
 translationKey: Knowledge-Article
-description: "A structured document that organizes information, procedures, or expertise so teams can easily find answers, solve problems, and share knowledge across an organization."
+description: "A structured document that captures and organizes information, procedures, or expertise so teams can easily find answers, solve problems, and share knowledge across an organization."
 keywords:
 - knowledge article
 - knowledge management

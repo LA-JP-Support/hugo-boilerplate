@@ -2,7 +2,7 @@
 title: "Star Schema"
 date: 2025-12-19
 translationKey: Star-Schema
-description: "A database design pattern that organizes data into a central facts table surrounded by dimension tables, making it easy to analyze business metrics and their context."
+description: "A database layout that organizes business data with a central metrics table surrounded by descriptive information tables, designed to make analyzing business performance simple and fast."
 keywords:
 - star schema
 - dimensional modeling

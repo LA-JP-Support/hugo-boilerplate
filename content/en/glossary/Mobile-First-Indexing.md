@@ -2,7 +2,7 @@
 title: "Mobile-First Indexing"
 date: 2025-12-19
 translationKey: Mobile-First-Indexing
-description: "Google's method of evaluating websites primarily through their mobile versions to determine search rankings, reflecting how most people now browse the internet on phones."
+description: "Google's approach to ranking websites based on how they look and work on phones, since most people now search the internet on mobile devices."
 keywords:
 - mobile-first indexing
 - mobile SEO

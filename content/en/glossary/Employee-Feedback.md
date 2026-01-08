@@ -2,7 +2,7 @@
 title: "Employee Feedback"
 date: 2025-12-19
 translationKey: Employee-Feedback
-description: "Employee Feedback is a two-way communication process where managers, colleagues, and employees share observations about work performance and behavior to help each other improve and grow professionally."
+description: "Employee Feedback is a two-way communication process where managers, colleagues, and employees share observations about work performance to help each other improve and grow professionally."
 keywords:
 - employee feedback
 - performance management

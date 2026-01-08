@@ -2,7 +2,7 @@
 title: "Social Commerce"
 date: 2025-12-19
 translationKey: Social-Commerce
-description: "Social commerce is selling products directly through social media platforms like Instagram and Facebook, letting customers shop without leaving the app."
+description: "Social commerce is shopping directly within social media apps like Instagram and Facebook, where you can discover, evaluate, and buy products without leaving the platform."
 keywords:
 - social commerce
 - social selling

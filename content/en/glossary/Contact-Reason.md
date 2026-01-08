@@ -2,7 +2,7 @@
 title: "Contact Reason"
 date: 2025-12-19
 translationKey: Contact-Reason
-description: "Contact Reason is a label that identifies why a customer is contacting a company, such as asking a question, reporting a problem, or requesting a change. It helps businesses understand customer needs and improve their service."
+description: "A label that categorizes why a customer contacts a company, such as asking questions, reporting problems, or requesting changes. It helps businesses understand customer needs and improve service efficiency."
 keywords:
 - contact reason
 - customer service classification

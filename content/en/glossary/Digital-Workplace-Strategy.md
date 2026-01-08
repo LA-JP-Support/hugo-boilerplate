@@ -2,7 +2,7 @@
 title: "Digital Workplace Strategy"
 date: 2025-12-19
 translationKey: Digital-Workplace-Strategy
-description: "A plan for using digital tools and platforms to help employees work effectively from anywhere, improving teamwork and productivity across the organization."
+description: "A comprehensive plan that helps organizations use digital tools and technology to enable employees to work effectively from anywhere, improving how teams collaborate and get work done."
 keywords:
 - digital workplace strategy
 - remote work technology

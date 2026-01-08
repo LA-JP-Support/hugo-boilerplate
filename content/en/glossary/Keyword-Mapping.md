@@ -2,7 +2,7 @@
 title: "Keyword Mapping"
 date: 2025-12-19
 translationKey: Keyword-Mapping
-description: "A strategic process of assigning specific search terms to individual website pages to improve search engine visibility and prevent multiple pages from competing for the same keywords."
+description: "A process of assigning specific search terms to individual website pages to improve search visibility and ensure each page targets relevant keywords without competing with others."
 keywords:
 - keyword mapping
 - SEO strategy

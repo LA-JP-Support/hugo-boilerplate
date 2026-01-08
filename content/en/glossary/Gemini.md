@@ -2,7 +2,7 @@
 title: "Gemini"
 date: 2025-12-19
 translationKey: "gemini"
-description: "Google's AI system that understands text, images, audio, and video together to answer questions and complete tasks across multiple types of information."
+description: "Google's AI system that understands text, images, audio, and video together to answer questions and complete tasks."
 keywords:
 - Gemini
 - Google AI

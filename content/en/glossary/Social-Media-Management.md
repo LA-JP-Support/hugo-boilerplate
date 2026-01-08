@@ -2,7 +2,7 @@
 title: "Social Media Management"
 date: 2025-12-19
 translationKey: Social-Media-Management
-description: "Social Media Management is the process of creating, posting, and analyzing content on social media platforms to build brand awareness and connect with customers."
+description: "Social media management is the process of planning, creating, and sharing content on social media platforms to build brand awareness and strengthen connections with customers."
 keywords:
 - social media management
 - content strategy

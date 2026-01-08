@@ -3,7 +3,7 @@ title: Cloud Service
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: cloud-service
-description: "IT resources and applications delivered over the internet, allowing you to use computing power, storage, and software without installing them locally or buying expensive equipment."
+description: "Internet-based IT resources and applications you can use on-demand without buying equipment or installing software locally, paying only for what you use."
 keywords:
 - cloud services
 - SaaS

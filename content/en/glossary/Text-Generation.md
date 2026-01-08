@@ -2,7 +2,7 @@
 title: "Text Generation"
 date: 2025-12-19
 translationKey: Text-Generation
-description: "AI technology that automatically creates written text by learning patterns from human writing, used to generate articles, summaries, and other content."
+description: "AI technology that automatically creates written text by learning patterns from human writing, enabling computers to generate articles, summaries, and other content that reads naturally."
 keywords:
 - text generation
 - natural language processing

@@ -2,7 +2,7 @@
 title: "Time to Interactive (TTI)"
 date: 2025-12-19
 translationKey: Time-to-Interactive--TTI-
-description: "A web performance metric that measures when a webpage becomes fully responsive to user clicks and interactions, rather than just appearing visually complete."
+description: "A web performance metric that measures when a webpage becomes fully responsive to user clicks and interactions, ensuring a smooth user experience without delays."
 keywords:
 - time to interactive
 - web performance metrics

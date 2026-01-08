@@ -3,7 +3,7 @@ title: "Reinforcement Learning"
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: "reinforcement-learning"
-description: "A machine learning approach where an AI agent learns to make better decisions by trying different actions and receiving rewards or penalties based on results."
+description: "An AI learning method where an agent improves decisions through trial and error, earning rewards for good actions and penalties for bad ones."
 keywords: ["reinforcement learning", "machine learning", "AI", "agent", "Markov Decision Process"]
 category: "AI Chatbot & Automation"
 type: "glossary"

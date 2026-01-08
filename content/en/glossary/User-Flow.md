@@ -2,7 +2,7 @@
 title: "User Flow"
 date: 2025-12-19
 translationKey: User-Flow
-description: "A visual diagram that shows the step-by-step path users take to complete a task in an app or website, helping designers identify problems and improve the experience."
+description: "A visual map showing the step-by-step path users take to complete a task in an app or website, helping designers spot problems and improve the experience."
 keywords:
 - user flow
 - user experience design

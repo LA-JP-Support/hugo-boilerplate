@@ -2,7 +2,7 @@
 title: "YouTube"
 date: 2025-12-19
 translationKey: YouTube
-description: "YouTube is the world's largest video-sharing platform where people upload, watch, and share videos on any topic, and creators can earn money through ads and subscriptions."
+description: "YouTube is a video-sharing platform where people watch, upload, and share videos on any topic, and creators can earn money through ads and memberships."
 keywords:
 - YouTube platform
 - video content creation

@@ -2,7 +2,7 @@
 title: "Partner Ecosystem"
 date: 2025-12-19
 translationKey: Partner-Ecosystem
-description: "A network of partner companies that work together to share resources and expertise, helping each other reach more customers and create better solutions than they could alone."
+description: "A network of companies working together to share skills and resources, helping each other reach more customers and create better solutions than they could alone."
 keywords:
 - partner ecosystem
 - strategic partnerships

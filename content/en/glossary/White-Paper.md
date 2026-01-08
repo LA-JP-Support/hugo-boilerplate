@@ -2,7 +2,7 @@
 title: "White Paper"
 date: 2025-12-19
 translationKey: White-Paper
-description: "A detailed, research-based document that establishes an organization's expertise on a specific topic while educating readers on complex issues to support informed decision-making."
+description: "A detailed report that explains complex topics in depth, helping organizations show their expertise and readers make informed decisions."
 keywords:
 - white paper
 - thought leadership

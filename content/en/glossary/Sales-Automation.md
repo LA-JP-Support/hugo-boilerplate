@@ -2,7 +2,7 @@
 title: "Sales Automation"
 date: 2025-12-19
 translationKey: Sales-Automation
-description: "Sales automation is technology that handles repetitive sales tasks like data entry and follow-ups automatically, so sales teams can focus on building customer relationships and closing deals."
+description: "Sales automation is technology that automatically handles repetitive sales tasks like data entry and follow-ups, freeing sales teams to focus on building relationships and closing deals."
 keywords:
 - sales automation
 - CRM systems

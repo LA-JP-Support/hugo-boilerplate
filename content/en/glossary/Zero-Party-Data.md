@@ -2,7 +2,7 @@
 title: "Zero-Party Data"
 date: 2025-12-19
 translationKey: Zero-Party-Data
-description: "Information that customers voluntarily share with brands through surveys, quizzes, or preference forms to receive more personalized experiences while protecting their privacy."
+description: "Information that customers willingly share directly with brands through surveys or preference forms to get personalized experiences while keeping their privacy safe."
 keywords:
 - zero-party data
 - customer data collection

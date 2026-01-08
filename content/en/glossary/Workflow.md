@@ -3,7 +3,7 @@ title: Workflow
 lastmod: 2025-12-18
 date: 2025-12-18
 translationKey: workflow-definition-types-examples-and-guide-to-workflow
-description: "A repeatable sequence of tasks that guides work through people and systems in a standardized way to achieve business goals efficiently and consistently."
+description: "A set of organized steps that guides work through people and systems in a standardized way, ensuring tasks are completed efficiently and consistently to achieve business goals."
 keywords:
 - workflow
 - workflow automation

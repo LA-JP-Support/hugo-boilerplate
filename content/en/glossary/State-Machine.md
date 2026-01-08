@@ -1,7 +1,7 @@
 ---
 title: State Machine
 translationKey: state-machine
-description: "A computational model that tracks how a system moves between different states based on triggers, commonly used to control chatbot conversations and automated workflows."
+description: "A system model that tracks how a process moves between different situations based on triggers, used to control chatbot conversations and automated workflows."
 keywords:
 - state machine
 - AI chatbot

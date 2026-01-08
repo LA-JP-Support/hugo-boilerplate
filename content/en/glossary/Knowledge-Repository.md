@@ -2,7 +2,7 @@
 title: "Knowledge Repository"
 date: 2025-12-19
 translationKey: Knowledge-Repository
-description: "A centralized digital system that stores and organizes an organization's documents, procedures, and expertise in one searchable place for easy access and sharing."
+description: "A centralized digital system that stores an organization's documents, procedures, and expertise in one searchable place so employees can easily find and share information."
 keywords:
 - knowledge repository
 - knowledge management

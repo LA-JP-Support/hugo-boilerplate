@@ -2,7 +2,7 @@
 title: "Top-of-Funnel Content"
 date: 2025-12-19
 translationKey: Top-of-Funnel-Content
-description: "Content that introduces your brand to potential customers who are just starting to recognize they have a problem, helping build awareness and trust before they're ready to buy."
+description: "Content that attracts potential customers just beginning to recognize their problems, building brand awareness and trust before they're ready to buy."
 keywords:
 - top-of-funnel content
 - content marketing strategy
