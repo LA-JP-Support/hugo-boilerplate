@@ -1,8 +1,8 @@
 ---
 title: "AGI"
-date: 2025-12-19
+date: 2026-01-08
 translationKey: AGI
-description: "Comprehensive guide to Artificial General Intelligence (AGI) - definition, technologies, implementation, challenges, and future directions for human-level AI."
+description: "Artificial General Intelligence (AGI) refers to hypothetical AI systems capable of matching human-level intelligence across all cognitive tasks and domains."
 keywords:
 - artificial general intelligence
 - AGI systems

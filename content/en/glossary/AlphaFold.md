@@ -1,8 +1,8 @@
 ---
 title: "AlphaFold"
-date: 2025-12-19
+date: 2026-01-08
 translationKey: AlphaFold
-description: "Comprehensive guide to AlphaFold, DeepMind's revolutionary AI system for protein structure prediction that transforms biological research and drug discovery."
+description: "AlphaFold is DeepMind's AI system that predicts protein structures from amino acid sequences, revolutionizing structural biology and drug discovery."
 keywords:
 - AlphaFold
 - protein structure prediction

@@ -11,19 +11,19 @@ categories = ["Flows"]
 showCTA = true
 ctaHeading = "Build Intelligent AI Workflows with SmartWeb"
 ctaDescription = "Create powerful AI agents that leverage RAG and CAG techniques to deliver accurate, contextual responses. Start building with FlowHunt's no-code AI platform today."
-[faq]
+[[faq]]
 question = "What is the main difference between RAG and CAG?"
 answer = "RAG (Retrieval-Augmented Generation retrieves relevant information from external sources on-demand during query processing, while CAG (Cache-Augmented Generation preloads all knowledge into the model's context window upfront. RAG offers better scalability and data freshness, while CAG provides lower latency and faster responses."
-[faq]
+[[faq]]
 question = "When should I use RAG instead of CAG?"
 answer = "Use RAG when you have a large, frequently updated knowledge base, need precise citations to source materials, or require the system to handle millions of documents. RAG is ideal for legal research, customer support with dynamic information, and research assistants where data freshness is critical."
-[faq]
+[[faq]]
 question = "What is a KV cache in the context of CAG?"
 answer = "A KV (Key-Value cache is the internal state created from each self-attention layer in a transformer model after it processes and digests all preloaded documents. It represents the model's encoded form of all your knowledge, allowing the model to reference this information without reprocessing the text."
-[faq]
+[[faq]]
 question = "Can RAG and CAG be used together?"
 answer = "Yes, a hybrid approach can combine both techniques. For example, RAG can retrieve the most relevant subset from a massive knowledge base, and then CAG can load that retrieved content into a long-context model for comprehensive processing. This is particularly effective for complex scenarios like clinical decision support systems."
-[faq]
+[[faq]]
 question = "What are the scalability limits of CAG?"
 answer = "CAG is constrained by the model's context window size, typically 32,000 to 100,000 tokens in modern models. This limits CAG to handling a few hundred documents at most, whereas RAG can scale to millions of documents since it only retrieves small relevant pieces per query."
 +++

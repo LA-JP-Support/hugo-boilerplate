@@ -276,6 +276,36 @@
                     }
 
                     let lastQuery = '';
+
+                    function expandQuery(query) {
+                        const q = (query || '').trim();
+                        if (!q) return [];
+
+                        const variants = new Set();
+                        variants.add(q);
+                        variants.add(q.replace(/[\s・\-_/\.]+/g, ''));
+
+                        const upper = q.toUpperCase();
+
+                        const synonymPairs = [
+                            ['AGI', ['エージーアイ', '汎用人工知能']],
+                            ['NLP', ['自然言語処理', 'エヌエルピー']],
+                            ['LLM', ['大規模言語モデル', 'エルエルエム']],
+                        ];
+
+                        synonymPairs.forEach(([acronym, jaVariants]) => {
+                            if (upper.includes(acronym) || q.includes(acronym)) {
+                                jaVariants.forEach(v => variants.add(v));
+                            }
+                            jaVariants.forEach(v => {
+                                if (q.includes(v)) {
+                                    variants.add(acronym);
+                                }
+                            });
+                        });
+
+                        return Array.from(variants);
+                    }
                     function performSearch(query, page = 1) {
                         lastQuery = query;
                         const perPage = 30;
@@ -293,8 +323,12 @@
                             return;
                         }
 
-                        // Perform multi-token search: search for whole phrase AND individual words
-                        let results = fuse.search(query);
+                        // Perform searches over expanded queries (acronyms/ja variants)
+                        const expandedQueries = expandQuery(query);
+                        let results = [];
+                        expandedQueries.forEach(q => {
+                            results.push(...fuse.search(q));
+                        });
 
                         // If query has multiple words, also search for individual words
                         const queryWords = query.trim().split(/\s+/).filter(w => w.length >= 2);
@@ -439,8 +473,13 @@
                             fuse = new Fuse(data, {
                                 keys: [
                                     { name: 'title', weight: 2 },
-                                    { name: 'content', weight: 1 },
-                                    { name: 'tags', weight: 1.5 }
+                                    { name: 'searchText', weight: 2 },
+                                    { name: 'eTitle', weight: 1.8 },
+                                    { name: 'translationKey', weight: 1.5 },
+                                    { name: 'term', weight: 1.5 },
+                                    { name: 'keywords', weight: 1.8 },
+                                    { name: 'tags', weight: 1.5 },
+                                    { name: 'content', weight: 1 }
                                 ],
                                 includeScore: true,
                                 includeMatches: true,

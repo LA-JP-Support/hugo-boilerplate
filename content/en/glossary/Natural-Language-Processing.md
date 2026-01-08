@@ -1,8 +1,8 @@
 ---
 title: "Natural Language Processing"
-date: 2025-12-19
+date: 2026-01-08
 translationKey: Natural-Language-Processing
-description: "Comprehensive guide to Natural Language Processing (NLP) technologies, applications, and implementation strategies for modern AI systems."
+description: "NLP enables computers to understand, interpret, and generate human language using AI techniques like machine learning and deep learning for text analysis and translation."
 keywords:
 - natural language processing
 - NLP algorithms

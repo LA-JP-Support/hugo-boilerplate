@@ -11,16 +11,16 @@ categories = ["Flows"]
 showCTA = true
 ctaHeading = "Ready to Automate Your Workflow with AI?"
 ctaDescription = "Discover how SmartWeb and LiveAgent can integrate AI-powered language models into your business processes for enhanced productivity and customer engagement."
-[faq]
+[[faq]]
 question = "What is the difference between ChatGPT and other language models?"
 answer = "ChatGPT by OpenAI is the original and most feature-rich conversational AI platform, deployed in 2022. However, the ecosystem has grown significantly with alternatives like Google's Gemini, Microsoft's Copilot, Anthropic's Claude, and others. Each offers unique features and capabilities, though ChatGPT remains the most popular and widely used."
-[faq]
+[[faq]]
 question = "How do language models understand and generate text?"
 answer = "Language models work by breaking text into small chunks called tokens. Under the hood, they predict the next token in a sequence based on patterns learned during training. This process happens across a neural network with billions of parameters that have been trained on vast amounts of internet text data."
-[faq]
+[[faq]]
 question = "What is a knowledge cutoff and why do language models have outdated information?"
 answer = "A knowledge cutoff is the date up to which a language model was trained. Because pre-training is extremely expensive and time-consuming (often costing millions of dollars and taking months, models are not retrained frequently. This means their knowledge only extends to their training date, making them somewhat outdated for recent events."
-[faq]
+[[faq]]
 question = "What are the main differences between pre-training and post-training?"
 answer = "Pre-training is where the model learns knowledge by reading internet documents and predicting the next token, compressing all that knowledge into its parameters. Post-training is where the model is fine-tuned to behave like a helpful assistant through human feedback and example conversations, giving it its personality and conversational style."
 +++

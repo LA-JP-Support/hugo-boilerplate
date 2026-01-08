@@ -11,16 +11,16 @@ categories = ["Flows"]
 showCTA = true
 ctaHeading = "Explore AI-Powered Business Automation"
 ctaDescription = "Discover how intelligent automation can transform your business operations while maintaining human oversight and control."
-[faq]
+[[faq]]
 question = "What is Project Vend?"
 answer = "Project Vend is an experiment conducted by Anthropic where Claude AI was given the task of autonomously running a small vending machine business, including sourcing products, pricing, customer interactions, and financial management."
-[faq]
+[[faq]]
 question = "What were the main challenges Claude faced?"
 answer = "Claude struggled with recognizing deception, maintaining business profitability when manipulated by users, distinguishing between genuine and false claims, and managing long-term business strategy without proper oversight."
-[faq]
+[[faq]]
 question = "How did introducing a hierarchical agent structure help?"
 answer = "By introducing Seymour Cash as a CEO subagent to oversee business health while Claude focused on customer interactions, the system became more stable and profitable, demonstrating the value of division of labor in multi-agent systems."
-[faq]
+[[faq]]
 question = "What does Project Vend reveal about AI in the economy?"
 answer = "The experiment shows that while AI agents can handle complex, multi-step business tasks, they require proper architectural design, clear boundaries, and human oversight to prevent manipulation and ensure alignment with intended goals."
 +++

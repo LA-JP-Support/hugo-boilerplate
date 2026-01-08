@@ -239,12 +239,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 fuseInstance = new Fuse(searchData, {
                     keys: [
                         { name: 'title', weight: 2 },
+                        { name: 'searchText', weight: 2 },
                         { name: 'eTitle', weight: 1.8 },
                         { name: 'translationKey', weight: 1.5 },
                         { name: 'term', weight: 1.5 },
-                        { name: 'content', weight: 1 },
+                        { name: 'keywords', weight: 1.8 },
                         { name: 'tags', weight: 1.5 },
-                        { name: 'keywords', weight: 1.8 }
+                        { name: 'content', weight: 1 }
                     ],
                     includeScore: true,
                     includeMatches: true,
@@ -346,6 +347,37 @@ document.addEventListener('DOMContentLoaded', function() {
      * Performs a search for the given query and displays the results.
      * @param {string} query - The search query.
      */
+    function expandQuery(query) {
+        const q = (query || '').trim();
+        if (!q) return [];
+
+        const variants = new Set();
+        variants.add(q);
+        variants.add(q.replace(/[\s・\-_/\.]+/g, ''));
+
+        const upper = q.toUpperCase();
+
+        // Common acronym/kana variants (extend as needed)
+        const synonymPairs = [
+            ['AGI', ['エージーアイ', '汎用人工知能']],
+            ['NLP', ['自然言語処理', 'エヌエルピー']],
+            ['LLM', ['大規模言語モデル', 'エルエルエム']],
+        ];
+
+        synonymPairs.forEach(([acronym, jaVariants]) => {
+            if (upper.includes(acronym) || q.includes(acronym)) {
+                jaVariants.forEach(v => variants.add(v));
+            }
+            jaVariants.forEach(v => {
+                if (q.includes(v)) {
+                    variants.add(acronym);
+                }
+            });
+        });
+
+        return Array.from(variants);
+    }
+
     function performSearch(query) {
         if (!fuseInstance) {
             searchResults.innerHTML = `<p>${searchTranslations.searchInitializing}</p>`;
@@ -353,8 +385,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         try {
-            // Perform multi-token search: search for whole phrase AND individual words
-            let results = fuseInstance.search(query);
+            // Perform searches over expanded queries (acronyms/ja variants)
+            const expandedQueries = expandQuery(query);
+            let results = [];
+            expandedQueries.forEach(q => {
+                results.push(...fuseInstance.search(q));
+            });
 
             // If query has multiple words, also search for individual words
             const queryWords = query.trim().split(/\s+/).filter(w => w.length >= 2);
@@ -373,6 +409,20 @@ document.addEventListener('DOMContentLoaded', function() {
                         results.push(result);
                         seenPermalinks.add(result.item.permalink);
                     }
+                });
+            }
+
+            // Also search for expanded query tokens individually
+            const expandedWords = expandedQueries.flatMap(q => q.split(/\s+/)).filter(w => w.length >= 2);
+            if (expandedWords.length > 0) {
+                const seenPermalinks = new Set(results.map(r => r.item.permalink));
+                expandedWords.forEach(word => {
+                    fuseInstance.search(word).forEach(result => {
+                        if (!seenPermalinks.has(result.item.permalink)) {
+                            results.push(result);
+                            seenPermalinks.add(result.item.permalink);
+                        }
+                    });
                 });
             }
 

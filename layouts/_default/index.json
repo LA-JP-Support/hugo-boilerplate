@@ -25,6 +25,7 @@
   "categories" .Params.categories
   "keywords" .Params.keywords
   "content" .Params.description
+  "searchText" (printf "%v %v %v %v %v %v %v" .Title $eTitle .Params.translationKey .Params.term (.Params.keywords | default slice) .Params.description (replaceRE "[\\s・\\-_/\\.]+" "" (printf "%v%v%v%v" .Title $eTitle .Params.translationKey .Params.term)))
   "permalink" .Permalink
   "readingTime" .ReadingTime
   "date" (.Date.Format "Jan 2, 2006")
@@ -54,6 +55,7 @@
       "categories" $term.Page.Params.categories
       "keywords" $term.Page.Params.keywords
       "content" $term.Page.Params.description
+      "searchText" (printf "%v %v %v %v %v %v %v" $term.Page.Title $eTitle $term.Page.Params.translationKey $term.Page.Params.term ($term.Page.Params.keywords | default slice) $term.Page.Params.description (replaceRE "[\\s・\\-_/\\.]+" "" (printf "%v%v%v%v" $term.Page.Title $eTitle $term.Page.Params.translationKey $term.Page.Params.term)))
       "permalink" $term.Page.Permalink
       "readingTime" $term.Page.ReadingTime
       "date" ($term.Page.Date.Format "Jan 2, 2006")

@@ -1,8 +1,8 @@
 ---
 title: "Google DeepMind"
-date: 2025-12-19
+date: 2026-01-08
 translationKey: Google-DeepMind
-description: "Comprehensive guide to Google DeepMind, the AI research laboratory developing breakthrough artificial intelligence systems and technologies."
+description: "Google DeepMind is an AI research laboratory under Alphabet, known for breakthroughs like AlphaGo and AlphaFold that advance artificial general intelligence."
 keywords:
 - Google DeepMind
 - artificial intelligence
