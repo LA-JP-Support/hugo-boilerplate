@@ -524,6 +524,11 @@
     .dark .pillars-section {
       background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
     }
+    .pillar-card-link {
+      display: block;
+      text-decoration: none;
+      height: 100%;
+    }
     .pillar-card {
       background: white;
       border-radius: 16px;
@@ -648,6 +653,7 @@
     <!-- 2x2 Grid -->
     <div class="pillars-grid max-w-5xl mx-auto">
       {{ range .Params.pillars_support.items }}
+      {{ if .url }}<a href="{{ .url }}" class="pillar-card-link">{{ end }}
       <div class="pillar-card">
         <div class="pillar-image-container">
           {{ if .image }}
@@ -667,6 +673,7 @@
           <p class="pillar-description">{{ .description }}</p>
         </div>
       </div>
+      {{ if .url }}</a>{{ end }}
       {{ end }}
     </div>
   </div>

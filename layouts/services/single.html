@@ -1,0 +1,612 @@
+{{ define "main" }}
+<style>
+  /* Service Hero Styles */
+  .service-hero {
+    background: linear-gradient(135deg, 
+      #2a3d78 0%, 
+      #3a2d65 25%, 
+      #8b4db5 50%, 
+      #2d6da4 75%, 
+      #0097a9 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .dark .service-hero {
+    background: linear-gradient(135deg, 
+      #0a0f2f 0%, 
+      #12102d 25%, 
+      #2a1a4b 50%, 
+      #06344a 75%, 
+      #023a3a 100%);
+  }
+  
+  /* Floating Orbs */
+  .service-hero::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 25s ease-in-out infinite;
+    filter: blur(60px);
+    z-index: 1;
+  }
+  
+  .service-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 30s ease-in-out infinite reverse;
+    filter: blur(60px);
+    z-index: 1;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translate(0px, 0px); }
+    25% { transform: translate(30px, -50px); }
+    50% { transform: translate(-20px, -100px); }
+    75% { transform: translate(-50px, -50px); }
+  }
+  
+  @keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .hero-animate-down {
+    animation: slideInDown 0.8s ease-out;
+  }
+  
+  .hero-animate-up {
+    animation: slideInUp 0.8s ease-out 0.1s both;
+  }
+  
+  .hero-animate-up-delay {
+    animation: slideInUp 0.8s ease-out 0.2s both;
+  }
+
+  /* Feature Section Styles */
+  .feature-section {
+    position: relative;
+  }
+  
+  .feature-section:nth-child(odd) {
+    background: #f8fafc;
+  }
+  
+  .dark .feature-section:nth-child(odd) {
+    background: #111827;
+  }
+  
+  .feature-section:nth-child(even) {
+    background: #ffffff;
+  }
+  
+  .dark .feature-section:nth-child(even) {
+    background: #1f2937;
+  }
+  
+  .feature-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    overflow: hidden;
+    background: transparent;
+    padding: 1.5rem;
+    position: relative;
+  }
+  
+  .dark .feature-image-placeholder {
+    background: transparent;
+  }
+  
+  /* Image Slideshow */
+  .feature-slideshow {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .feature-slideshow-images {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .feature-slideshow-slide {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feature-slideshow-slide:first-child {
+    position: relative;
+  }
+  
+  .feature-slideshow-slide.active {
+    opacity: 1;
+  }
+  
+  .feature-slideshow-slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-slideshow-slide img.size-small {
+    max-width: 320px;
+  }
+  
+  .feature-slideshow-slide img.size-medium {
+    max-width: 420px;
+  }
+  
+  .feature-slideshow-slide img.size-large {
+    max-width: 520px;
+  }
+  
+  .feature-slideshow-caption {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-align: center;
+  }
+  
+  .dark .feature-slideshow-caption {
+    color: #9ca3af;
+  }
+  
+  .feature-image-placeholder img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-image-placeholder img.size-small {
+    max-width: 320px;
+  }
+  
+  .feature-image-placeholder img.size-medium {
+    max-width: 420px;
+  }
+  
+  .feature-image-placeholder img.size-large {
+    max-width: 520px;
+  }
+  
+  .feature-image-placeholder img.size-full {
+    max-width: 100%;
+  }
+  
+  .feature-image-placeholder svg {
+    width: 96px;
+    height: 96px;
+    color: #a5b4fc;
+    padding: 48px;
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+    border-radius: 12px;
+  }
+  
+  .dark .feature-image-placeholder svg {
+    color: #4f46e5;
+    background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
+  }
+  
+  .feature-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6366f1;
+    background: rgba(99, 102, 241, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+  }
+  
+  .dark .feature-label {
+    color: #a5b4fc;
+    background: rgba(99, 102, 241, 0.2);
+  }
+
+  /* Stats Section */
+  .stats-section {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e3a5f 100%);
+  }
+  
+  .stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+  }
+  
+  .stat-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .stat-description {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.75rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  /* Related Services */
+  .related-service-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dark .related-service-card {
+    background: #1f2937;
+  }
+  
+  .related-service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .related-service-image {
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+    overflow: hidden;
+  }
+  
+  .dark .related-service-image {
+    background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
+  }
+  
+  .related-service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .related-service-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="service-hero">
+  <div class="relative isolate z-10 w-full">
+    <div class="wrapper py-16 sm:py-20">
+      <div class="mx-auto max-w-4xl text-center">
+        <!-- Badge -->
+        {{ if .Params.badge }}
+        <div class="hero-animate-down mb-6">
+          <span class="inline-flex items-center rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
+            {{ .Params.badge }}
+          </span>
+        </div>
+        {{ end }}
+        
+        <!-- Title -->
+        <h1 class="hero-animate-down text-4xl font-bold font-mincho tracking-tight text-balance text-white drop-shadow-lg sm:text-5xl lg:text-6xl">
+          {{ .Params.hero_heading | default .Title | safeHTML }}
+        </h1>
+        
+        <!-- Description -->
+        {{ if .Params.hero_description }}
+        <p class="hero-animate-up mt-8 text-lg font-medium text-pretty text-white/90 drop-shadow-md sm:text-xl/8 max-w-2xl mx-auto">
+          {{ .Params.hero_description | safeHTML }}
+        </p>
+        {{ end }}
+        
+        <!-- CTAs -->
+        {{ if or .Params.cta_primary .Params.cta_secondary }}
+        <div class="hero-animate-up-delay mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
+          {{ if .Params.cta_primary }}
+          <a href="{{ .Params.cta_primary.url }}" 
+             class="rounded-md bg-white px-5 py-3 text-sm font-semibold text-indigo-600 shadow-lg hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all hover:scale-105">
+            {{ .Params.cta_primary.text }}
+          </a>
+          {{ end }}
+          {{ if .Params.cta_secondary }}
+          <a href="{{ .Params.cta_secondary.url }}" 
+             class="text-sm font-semibold text-white hover:text-white/80 transition-colors drop-shadow-md">
+            {{ .Params.cta_secondary.text }} <span aria-hidden="true">→</span>
+          </a>
+          {{ end }}
+        </div>
+        {{ end }}
+        
+        <!-- Powered by logos -->
+        {{ if .Params.powered_by }}
+        <div class="hero-animate-up-delay mt-12 flex items-center justify-center gap-4">
+          <span class="text-xs font-semibold text-white/60 uppercase tracking-wider">Powered by</span>
+          <div class="flex items-center gap-6">
+            {{ range .Params.powered_by }}
+            <img src="{{ .logo }}" alt="{{ .name }}" class="h-6 sm:h-8 w-auto opacity-80 hover:opacity-100 transition-opacity">
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction Section -->
+{{ if .Params.introduction }}
+<section class="py-12 sm:py-16 bg-white dark:bg-gray-800">
+  <div class="wrapper">
+    <div class="mx-auto max-w-4xl">
+      <p class="text-lg sm:text-xl leading-8 text-gray-700 dark:text-gray-200 font-mincho font-bold">
+        {{ .Params.introduction | safeHTML }}
+      </p>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Feature Sections -->
+{{ if .Params.features }}
+<div class="features-container">
+  {{ range $index, $feature := .Params.features }}
+  <section class="feature-section py-16 sm:py-24">
+    <div class="wrapper">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        
+        {{ if eq (mod $index 2) 0 }}
+        <!-- Image Left, Text Right -->
+        <div class="order-2 lg:order-1">
+          <div class="feature-image-placeholder">
+            {{ if $feature.images }}
+            <div class="feature-slideshow" data-interval="4000">
+              {{ range $imgIndex, $img := $feature.images }}
+              <div class="feature-slideshow-slide{{ if eq $imgIndex 0 }} active{{ end }}">
+                <img src="{{ $img.src }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $img.size }}size-{{ . }}{{ end }}">
+                {{ if $img.caption }}
+                <span class="feature-slideshow-caption">{{ $img.caption }}</span>
+                {{ end }}
+              </div>
+              {{ end }}
+            </div>
+            {{ else if $feature.image }}
+            <img src="{{ $feature.image }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $feature.image_size }}size-{{ . }}{{ end }}">
+            {{ else }}
+            <svg class="w-24 h-24 text-indigo-300 dark:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            {{ end }}
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          {{ if $feature.label }}
+          <span class="feature-label">{{ $feature.label }}</span>
+          {{ end }}
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+            {{ $feature.title }}
+          </h2>
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              {{ $feature.description | safeHTML }}
+            </p>
+          </div>
+        </div>
+        
+        {{ else }}
+        <!-- Text Left, Image Right -->
+        <div class="order-1">
+          {{ if $feature.label }}
+          <span class="feature-label">{{ $feature.label }}</span>
+          {{ end }}
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+            {{ $feature.title }}
+          </h2>
+          <div class="prose prose-lg dark:prose-invert max-w-none">
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+              {{ $feature.description | safeHTML }}
+            </p>
+          </div>
+        </div>
+        <div class="order-2">
+          <div class="feature-image-placeholder">
+            {{ if $feature.images }}
+            <div class="feature-slideshow" data-interval="4000">
+              {{ range $imgIndex, $img := $feature.images }}
+              <div class="feature-slideshow-slide{{ if eq $imgIndex 0 }} active{{ end }}">
+                <img src="{{ $img.src }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $img.size }}size-{{ . }}{{ end }}">
+                {{ if $img.caption }}
+                <span class="feature-slideshow-caption">{{ $img.caption }}</span>
+                {{ end }}
+              </div>
+              {{ end }}
+            </div>
+            {{ else if $feature.image }}
+            <img src="{{ $feature.image }}" alt="{{ $feature.title }}" loading="lazy" class="{{ with $feature.image_size }}size-{{ . }}{{ end }}">
+            {{ else }}
+            <svg class="w-24 h-24 text-indigo-300 dark:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+        
+      </div>
+    </div>
+  </section>
+  {{ end }}
+</div>
+{{ end }}
+
+<!-- Stats Section -->
+{{ if .Params.stats }}
+<section class="stats-section py-20 sm:py-28">
+  <div class="wrapper">
+    {{ if .Params.stats_heading }}
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">{{ .Params.stats_heading }}</h2>
+      {{ if .Params.stats_description }}
+      <p class="text-lg text-white max-w-2xl mx-auto">{{ .Params.stats_description }}</p>
+      {{ end }}
+    </div>
+    {{ end }}
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-{{ len .Params.stats }} gap-6 max-w-5xl mx-auto">
+      {{ range .Params.stats }}
+      <div class="stat-card">
+        <div class="stat-value">{{ .value }}</div>
+        <div class="stat-label">{{ .label }}</div>
+        {{ if .description }}
+        <div class="stat-description">{{ .description }}</div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- CTA Section -->
+<section class="py-20 sm:py-28 bg-gray-50 dark:bg-gray-900">
+  <div class="wrapper">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+        {{ .Params.cta_section.heading | default (i18n "cta_heading") | default "今すぐ始めませんか？" }}
+      </h2>
+      <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
+        {{ .Params.cta_section.description | default (i18n "cta_description") | default "SmartWebで未来を創る。数千社の企業が私たちのソリューションでビジネスを変革しています。" }}
+      </p>
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+        <a href="{{ .Params.cta_section.button_url | default "/ja/contact/" }}" 
+           class="rounded-md bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all">
+          {{ .Params.cta_section.button_text | default (i18n "cta_button") | default "無料相談を予約" }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Services Section -->
+{{ if .Params.related_services }}
+<section class="py-20 sm:py-28 bg-white dark:bg-gray-800">
+  <div class="wrapper">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+        {{ .Params.related_services_heading | default "その他のサービス" }}
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        {{ .Params.related_services_description | default "SmartWebの他のAIカスタマーサポート機能もご覧ください" }}
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      {{ range .Params.related_services }}
+      <a href="{{ .url }}" class="related-service-card group">
+        <div class="related-service-image">
+          {{ if .image }}
+          <img src="{{ .image }}" alt="{{ .title }}" loading="lazy" class="group-hover:scale-105 transition-transform duration-300">
+          {{ end }}
+        </div>
+        <div class="related-service-content">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+            {{ .title }}
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 flex-1">
+            {{ .description }}
+          </p>
+          <span class="mt-4 text-sm font-semibold text-indigo-600 dark:text-indigo-400 inline-flex items-center">
+            詳細を見る
+            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<script>
+// Feature Image Slideshow
+document.addEventListener('DOMContentLoaded', function() {
+  const slideshows = document.querySelectorAll('.feature-slideshow');
+  
+  slideshows.forEach(function(slideshow) {
+    const slides = slideshow.querySelectorAll('.feature-slideshow-slide');
+    if (slides.length <= 1) return;
+    
+    const interval = parseInt(slideshow.dataset.interval) || 4000;
+    let currentIndex = 0;
+    
+    setInterval(function() {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }, interval);
+  });
+});
+</script>
+
+{{ end }}
