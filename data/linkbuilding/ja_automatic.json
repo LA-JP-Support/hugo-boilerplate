@@ -50,6 +50,13 @@
       "Priority": 3
     },
     {
+      "Keyword": "AI",
+      "URL": "/ja/glossary/Precision/",
+      "Title": "精度(Precision)は、AIおよび機械学習における重要な評価指標であり、陽性予測の正確性を測定します。その計算式、詐欺検出やスパムフィルタリングにおける重要性、そして正解率(Accuracy)や再現率(Recall)との違いについて解説します。",
+      "Exact": false,
+      "Priority": 2
+    },
+    {
       "Keyword": "AI セキュリティ",
       "URL": "/ja/glossary/Adversarial-Attack/",
       "Title": "敵対的攻撃は、AI/ML モデルの入力を操作して誤った予測を引き起こし、脆弱性を悪用します。これらの攻撃は AI の信頼性を損ない、サイバーセキュリティ、自動運転車などに影響を及ぼします。",
@@ -459,6 +466,20 @@
       "Keyword": "AlphaFold",
       "URL": "/ja/glossary/AlphaFold/",
       "Title": "AlphaFoldは、アミノ酸配列からタンパク質の立体構造を予測するDeepMindのAIシステムで、構造生物学と創薬に革命をもたらしました。",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "AlphaGo",
+      "URL": "/ja/glossary/AlphaGo/",
+      "Title": "AlphaGoは、DeepMindが開発したAIプログラムで、2016年に世界囲碁チャンピオンを破りました。深層強化学習とモンテカルロ木探索を使用しています。",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
+      "Keyword": "AlphaZero",
+      "URL": "/ja/glossary/AlphaZero/",
+      "Title": "AlphaZeroは、人間の知識を用いることなく、純粋な自己対戦型強化学習を通じてチェス、将棋、囲碁を習得した汎用ゲームプレイAIです。",
       "Exact": false,
       "Priority": 3
     },
@@ -1156,6 +1177,13 @@
       "Priority": 2
     },
     {
+      "Keyword": "Gemini",
+      "URL": "/ja/glossary/Gemini/",
+      "Title": "Geminiは、テキスト、画像、音声、動画の理解に優れたGoogleの先進的なマルチモーダルAIモデルファミリーです。Gemini 2.5 Pro、機能、アプリケーションについて解説します。",
+      "Exact": false,
+      "Priority": 3
+    },
+    {
       "Keyword": "Geminiモデル",
       "URL": "/ja/glossary/Google/",
       "Title": "AI分野のリーダーとしてのGoogleの進化を探る。Geminiモデル、マルチモーダル理解、高度な推論、そして自動化、クリエイティブ生成、エンタープライズにおける応用を紹介します。",
@@ -1210,6 +1238,13 @@
       "Title": "Geminiは、テキスト、画像、音声、動画の理解に優れたGoogleの先進的なマルチモーダルAIモデルファミリーです。Gemini 2.5 Pro、機能、アプリケーションについて解説します。",
       "Exact": false,
       "Priority": 3
+    },
+    {
+      "Keyword": "Google DeepMind",
+      "URL": "/ja/glossary/Google-DeepMind/",
+      "Title": "Google DeepMindは、Alphabet傘下のAI研究機関であり、AlphaGoやAlphaFoldなどの画期的な成果で知られ、汎用人工知能の発展に貢献しています。",
+      "Exact": false,
+      "Priority": 5
     },
     {
       "Keyword": "Google Search Console",

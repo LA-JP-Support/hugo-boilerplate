@@ -1669,3 +1669,28 @@ keywords:
   exact: true
   priority: 10
   title: Visualization glossary entry
+- keyword: Google DeepMind
+  url: /en/glossary/Google-DeepMind/
+  exact: false
+  priority: 12
+  title: "Google DeepMind is an AI research laboratory under Alphabet, known for breakthroughs like AlphaGo and AlphaFold that advance artificial general intelligence."
+- keyword: DeepMind
+  url: /en/glossary/Google-DeepMind/
+  exact: false
+  priority: 12
+  title: "Google DeepMind is an AI research laboratory under Alphabet, known for breakthroughs like AlphaGo and AlphaFold that advance artificial general intelligence."
+- keyword: Gemini
+  url: /en/glossary/Gemini/
+  exact: true
+  priority: 12
+  title: "Google's AI system that understands text, images, audio, and video together to answer questions and complete tasks."
+- keyword: AlphaGo
+  url: /en/glossary/AlphaGo/
+  exact: true
+  priority: 12
+  title: "AlphaGo is DeepMind's AI program that defeated the world Go champion in 2016, using deep reinforcement learning and Monte Carlo tree search."
+- keyword: AlphaZero
+  url: /en/glossary/AlphaZero/
+  exact: true
+  priority: 12
+  title: "AlphaZero is a general game-playing AI that mastered chess, shogi, and Go through pure self-play reinforcement learning without human knowledge."
