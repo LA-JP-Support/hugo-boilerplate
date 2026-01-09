@@ -16,7 +16,7 @@ JSON Path is a query language designed for navigating, extracting, and evaluatin
 
 JSON Path was standardized in RFC 9535 by the IETF, providing uniform syntax and semantics for query expressions. The language has implementations across numerous programming environments including JavaScript, Python, Java, PHP, and SQL databases. Common applications span API testing and validation, ETL processes, database JSON column queries, configuration management, and chatbot data parsing.
 
-**Example Query:**```json
+<strong>Example Query:</strong>```json
 {
   "user": {
     "id": 123,
@@ -160,7 +160,7 @@ $.store.book[*].title
 // ["Sayings of the Century", "Sword of Honour", "Moby Dick", "The Lord of the Rings"]
 ```
 
-**Fiction Authors:**```jsonpath
+<strong>Fiction Authors:</strong>```jsonpath
 $.store.book[?(@.category == 'fiction')].author
 // ["Evelyn Waugh", "Herman Melville", "J. R. R. Tolkien"]
 ```
@@ -170,7 +170,7 @@ $.store.book[?(@.price < 10)]
 // Returns two book objects
 ```
 
-**All Prices (Recursive):**```jsonpath
+<strong>All Prices (Recursive):</strong>```jsonpath
 $..price
 // [8.95, 12.99, 8.99, 22.99, 19.95]
 ```
@@ -180,7 +180,7 @@ $.store.book[0:2].title
 // ["Sayings of the Century", "Sword of Honour"]
 ```
 
-**All ISBN Numbers:**```jsonpath
+<strong>All ISBN Numbers:</strong>```jsonpath
 $.store.book[*].isbn
 // ["0-553-21311-3", "0-395-19395-8"]
 ```
@@ -299,7 +299,7 @@ WHERE JSON_VALUE(value, '$.price') < 10;
 
 ### API Testing and Automation
 
-**Postman Example:**```javascript
+<strong>Postman Example:</strong>```javascript
 // Test response contains expected value
 pm.test("User email is correct", function() {
     const email = jsonpath.query(pm.response.json(), '$.user.email')[0];
@@ -316,7 +316,7 @@ given()
 
 ### Data Transformation (ETL)
 
-**Extract Errors from Logs:**```python
+<strong>Extract Errors from Logs:</strong>```python
 from jsonpath_ng import parse
 
 errors = [match.value 
@@ -333,7 +333,7 @@ WHERE data @> '{"active": true}';
 
 ### Configuration Management
 
-**Update Config Values:**```javascript
+<strong>Update Config Values:</strong>```javascript
 const config = require('./config.json');
 jsonpath.value(config, '$.database.port', 5432);
 fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
@@ -345,7 +345,7 @@ fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
 $.conversation[*].user_message
 ```
 
-**Filter by Intent:**```jsonpath
+<strong>Filter by Intent:</strong>```jsonpath
 $.messages[?(@.intent == 'purchase')].text
 ```
 

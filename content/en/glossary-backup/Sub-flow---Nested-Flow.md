@@ -11,100 +11,100 @@ draft: false
 ---
 ## What Are Sub-flows / Nested Flows?
 
-A **sub-flow**(or **nested flow**) is a self-contained workflow invoked as a step within a larger, parent workflow. This modular pattern allows decomposition of intricate business logic, enabling consistent reuse and simplified maintenance. Sub-flows are analogous to software functions: encapsulating specific logic reusable across multiple contexts.
+A <strong>sub-flow</strong>(or <strong>nested flow</strong>) is a self-contained workflow invoked as a step within a larger, parent workflow. This modular pattern allows decomposition of intricate business logic, enabling consistent reuse and simplified maintenance. Sub-flows are analogous to software functions: encapsulating specific logic reusable across multiple contexts.
 
-- **Example:**In employee onboarding, separate sub-flows handle IT setup, HR compliance, equipment provisioning, and account creation. Each sub-flow is developed once and invoked wherever needed.
+- <strong>Example:</strong>In employee onboarding, separate sub-flows handle IT setup, HR compliance, equipment provisioning, and account creation. Each sub-flow is developed once and invoked wherever needed.
 ## Why Use Sub-flows / Nested Flows?
 
 ### Key Benefits
 
-- **Modularity:**Complex workflows are divided into manageable, logical units.  
-- **Reusability:**Common logic (validation, notifications, data transformation) is built once, reused everywhere.  
-- **Maintainability:**Changes in a sub-flow instantly update all parent workflows, reducing risk and overhead.  
-- **Scalability:**Large automations are easier to grow and adapt by composing smaller, well-defined pieces.  
-- **Consistency:**Identical processes execute uniformly across all workflows.  
-- **Enhanced Security:**Access to sensitive logic is isolated and protected via permissions.  
-- **Improved Error Handling:**Centralized error management is applied to sub-flows for reliable recovery and unified logging.
+- <strong>Modularity:</strong>Complex workflows are divided into manageable, logical units.  
+- <strong>Reusability:</strong>Common logic (validation, notifications, data transformation) is built once, reused everywhere.  
+- <strong>Maintainability:</strong>Changes in a sub-flow instantly update all parent workflows, reducing risk and overhead.  
+- <strong>Scalability:</strong>Large automations are easier to grow and adapt by composing smaller, well-defined pieces.  
+- <strong>Consistency:</strong>Identical processes execute uniformly across all workflows.  
+- <strong>Enhanced Security:</strong>Access to sensitive logic is isolated and protected via permissions.  
+- <strong>Improved Error Handling:</strong>Centralized error management is applied to sub-flows for reliable recovery and unified logging.
 ## How Do Sub-flows / Nested Flows Work?
 
 ### Step-by-Step Process
 
-1. **Design the Sub-flow:**Identify repeatable logic (e.g., data validation, notifications) and build it as a standalone workflow with defined input/output.
+1. <strong>Design the Sub-flow:</strong>Identify repeatable logic (e.g., data validation, notifications) and build it as a standalone workflow with defined input/output.
 
-2. **Integrate with Parent Workflow:**Invoke the sub-flow at the desired step, passing necessary data as inputs.
+2. <strong>Integrate with Parent Workflow:</strong>Invoke the sub-flow at the desired step, passing necessary data as inputs.
 
-3. **Execution:**The parent workflow triggers the sub-flow, which runs as a single operation. Execution may be synchronous (parent waits) or asynchronous (parent continues).
+3. <strong>Execution:</strong>The parent workflow triggers the sub-flow, which runs as a single operation. Execution may be synchronous (parent waits) or asynchronous (parent continues).
 
-4. **State and Results Management:**Sub-flow results are returned and available for subsequent processing. State is managed within the sub-flow but may access parent context as needed.
+4. <strong>State and Results Management:</strong>Sub-flow results are returned and available for subsequent processing. State is managed within the sub-flow but may access parent context as needed.
 
-5. **Reusability Across Workflows:**The same sub-flow may be called from multiple parent workflows, supporting standardization and rapid development.
+5. <strong>Reusability Across Workflows:</strong>The same sub-flow may be called from multiple parent workflows, supporting standardization and rapid development.
 
-**Platform Examples:**- **Microsoft Power Automate for Desktop:**Sub-flows automate Excel, web, or Windows actions and are invoked within main workflows.  
+<strong>Platform Examples:</strong>- <strong>Microsoft Power Automate for Desktop:</strong>Sub-flows automate Excel, web, or Windows actions and are invoked within main workflows.  
   [Tutorial](https://learn.microsoft.com/en-us/training/modules/create-subflows-web-automation-online-workshop/)
 
-- **ServiceNow Workflow Studio:**Subflows, actions, and templates are built as reusable logic and invoked in any flow.  
+- <strong>ServiceNow Workflow Studio:</strong>Subflows, actions, and templates are built as reusable logic and invoked in any flow.  
   [Workflow Studio Docs](https://docs.servicenow.com/csh?version=latest&topicname=workflow-studio)
 
-- **AWS Step Functions:**Parent state machines orchestrate child (nested) workflows, supporting complex hierarchies and domain separation.  
+- <strong>AWS Step Functions:</strong>Parent state machines orchestrate child (nested) workflows, supporting complex hierarchies and domain separation.  
   [AWS Step Functions Docs](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-nested-workflows.html)
 
 ## Parent Workflow vs. Sub-flow: Key Terms
 
-- **Parent Workflow:**The main automation controlling the process, invoking sub-flows as steps.
-- **Sub-flow / Nested Flow:**A contained, reusable workflow executed within the parent workflow.
-- **Reusable Component:**Any modular workflow or sub-flow designed for repeated use.
-- **State Transitions:**Movement between workflow states, including calling sub-flows and processing their results.
-- **Error Handling:**Mechanisms for managing failures in sub-flows, propagating issues to the parent for recovery.
+- <strong>Parent Workflow:</strong>The main automation controlling the process, invoking sub-flows as steps.
+- <strong>Sub-flow / Nested Flow:</strong>A contained, reusable workflow executed within the parent workflow.
+- <strong>Reusable Component:</strong>Any modular workflow or sub-flow designed for repeated use.
+- <strong>State Transitions:</strong>Movement between workflow states, including calling sub-flows and processing their results.
+- <strong>Error Handling:</strong>Mechanisms for managing failures in sub-flows, propagating issues to the parent for recovery.
 
 ## Importance and Value Proposition
 
-- **Reduce Redundancy:**Eliminates code duplication; logic is updated centrally.
-- **Centralize Updates:**One change updates all dependent workflows.
-- **Simplify Complex Logic:**Large workflows are easier to understand and debug.
-- **Support Team Collaboration:**Teams own distinct sub-flows, enabling domain expertise and distributed maintenance.
-- **Enable Advanced Patterns:**- **Parallel Execution:**Invoke multiple sub-flows concurrently.  
-  - **Conditional Logic:**Call sub-flows based on runtime conditions.  
-  - **Looping:**Repeatedly execute sub-flows until a condition is met.  
-  - **Suspension/Resumption:**Pause and resume workflows at sub-flow boundaries.
+- <strong>Reduce Redundancy:</strong>Eliminates code duplication; logic is updated centrally.
+- <strong>Centralize Updates:</strong>One change updates all dependent workflows.
+- <strong>Simplify Complex Logic:</strong>Large workflows are easier to understand and debug.
+- <strong>Support Team Collaboration:</strong>Teams own distinct sub-flows, enabling domain expertise and distributed maintenance.
+- <strong>Enable Advanced Patterns:</strong>- <strong>Parallel Execution:</strong>Invoke multiple sub-flows concurrently.  
+  - <strong>Conditional Logic:</strong>Call sub-flows based on runtime conditions.  
+  - <strong>Looping:</strong>Repeatedly execute sub-flows until a condition is met.  
+  - <strong>Suspension/Resumption:</strong>Pause and resume workflows at sub-flow boundaries.
 
-**AWS Step Functions Real-World Value:**Decoupling workflows into sub-flows reduced monthly costs and improved error isolation, debugging, and operational metrics ([full AWS comparison](https://aws.amazon.com/blogs/compute/breaking-down-monolith-workflows-modularizing-aws-step-functions-workflows/)).
+<strong>AWS Step Functions Real-World Value:</strong>Decoupling workflows into sub-flows reduced monthly costs and improved error isolation, debugging, and operational metrics ([full AWS comparison](https://aws.amazon.com/blogs/compute/breaking-down-monolith-workflows-modularizing-aws-step-functions-workflows/)).
 
 ## Common Use Cases
 
-1. **Human Resources (HR):**- **Onboarding:**Sub-flows for IT setup, HR paperwork, compliance.
-   - **Recruitment:**Screening, interview scheduling, offer creation.
+1. <strong>Human Resources (HR):</strong>- <strong>Onboarding:</strong>Sub-flows for IT setup, HR paperwork, compliance.
+   - <strong>Recruitment:</strong>Screening, interview scheduling, offer creation.
 
-2. **Finance:**- **Payment Processing:**Sub-flows for credit check, fraud detection, transaction logging.
-   - **Invoice Management:**Validation, approval routing, reimbursement.
+2. <strong>Finance:</strong>- <strong>Payment Processing:</strong>Sub-flows for credit check, fraud detection, transaction logging.
+   - <strong>Invoice Management:</strong>Validation, approval routing, reimbursement.
 
-3. **Customer Support:**- **Ticket Intake:**Sub-flow for data validation and account checks.
-   - **Escalation:**Sub-flows for different escalation paths.
+3. <strong>Customer Support:</strong>- <strong>Ticket Intake:</strong>Sub-flow for data validation and account checks.
+   - <strong>Escalation:</strong>Sub-flows for different escalation paths.
 
-4. **Marketing:**- **Campaign Automation:**Sub-flows for segmentation, personalization, email delivery.
+4. <strong>Marketing:</strong>- <strong>Campaign Automation:</strong>Sub-flows for segmentation, personalization, email delivery.
 
-5. **Compliance and Auditing:**- **Audit Prep:**Documentation collection, self-checks, completion tracking.
-   - **Incident Management:**Notifications, investigations, reporting.
+5. <strong>Compliance and Auditing:</strong>- <strong>Audit Prep:</strong>Documentation collection, self-checks, completion tracking.
+   - <strong>Incident Management:</strong>Notifications, investigations, reporting.
 
-6. **Operations:**- **Inventory Management:**Stock updates, reorder triggers, supplier validation.
+6. <strong>Operations:</strong>- <strong>Inventory Management:</strong>Stock updates, reorder triggers, supplier validation.
 
-**Example:**A “credit check” sub-flow is reused in both loan application and new customer onboarding, ensuring consistent compliance and validation logic.
+<strong>Example:</strong>A “credit check” sub-flow is reused in both loan application and new customer onboarding, ensuring consistent compliance and validation logic.
 
 ## Technical Patterns and Features
 
 ### Platform Implementations
 
-- **Microsoft Power Automate:**Sub-flows automate web/desktop actions, returning results and handling errors centrally.  
+- <strong>Microsoft Power Automate:</strong>Sub-flows automate web/desktop actions, returning results and handling errors centrally.  
   [Guide](https://learn.microsoft.com/en-us/training/modules/create-subflows-web-automation-online-workshop/)
 
-- **ServiceNow Workflow Studio:**Unified builder for flows, subflows, and custom actions. Debugging, versioning, and LLM-powered conversational flows supported.  
+- <strong>ServiceNow Workflow Studio:</strong>Unified builder for flows, subflows, and custom actions. Debugging, versioning, and LLM-powered conversational flows supported.  
   [Release notes](https://www.servicenow.com/docs/bundle/zurich-release-notes/page/release-notes/now-platform-app-engine/flow-designer-rn.html)
 
-- **AWS Step Functions:**- **Parent-Child Pattern:**Parent workflows orchestrate sub-flows (child workflows), each focused on a domain or operation.  
-  - **Domain Separation:**Separate workflows for payment, inventory, shipping, etc.  
-  - **Shared Utilities:**Reusable sub-flows for notifications, logging, validation.  
-  - **Error Workflows:**Centralized error handling sub-flows for consistency and maintainability.
+- <strong>AWS Step Functions:</strong>- <strong>Parent-Child Pattern:</strong>Parent workflows orchestrate sub-flows (child workflows), each focused on a domain or operation.  
+  - <strong>Domain Separation:</strong>Separate workflows for payment, inventory, shipping, etc.  
+  - <strong>Shared Utilities:</strong>Reusable sub-flows for notifications, logging, validation.  
+  - <strong>Error Workflows:</strong>Centralized error handling sub-flows for consistency and maintainability.
 
-**Example AWS Code Snippet (TypeScript-like):**```typescript
+<strong>Example AWS Code Snippet (TypeScript-like):</strong>```typescript
 const nestedWorkflow = new LegacyWorkflow({ name: "nested-workflow" })
   .step(stepA)
   .then(stepB)
@@ -161,7 +161,7 @@ const parentWorkflow = new LegacyWorkflow({ name: "parent-workflow" })
 
 **Q: How do I update a sub-flow used in many workflows?**A: Update the sub-flow definition; all parent workflows immediately use the latest version.
 
-**Q: What if a sub-flow is suspended or paused?**A: Parent workflows can wait and resume as needed—supports [human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/) processes.
+**Q: What if a sub-flow is suspended or paused?**A: Parent workflows can wait and resume as needed—supports human-in-the-loop processes.
 
 **Q: Can sub-flows be nested multiple levels deep?**A: Yes, supporting complex hierarchies.
 

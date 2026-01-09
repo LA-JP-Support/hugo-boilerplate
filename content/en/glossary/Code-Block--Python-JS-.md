@@ -24,7 +24,7 @@ According to the Python Execution Model: "A block is a piece of Python program t
 
 In JavaScript, a block statement is used to group zero or more statements, delimited by curly braces `{}`. This is sometimes called a "compound statement." Blocks are essential in control flow constructs such as `if`, `for`, `while`, and function declarations. Blocks also define scope for variables declared with `let` and `const`.
 
-**Example:**```javascript
+<strong>Example:</strong>```javascript
 if (condition) {
     // code block: statements here are executed if condition is true
 }
@@ -43,7 +43,7 @@ if age >= 18:
 print("Done")  # Outside the block
 ```
 
-**Incorrect Syntax Example:**```python
+<strong>Incorrect Syntax Example:</strong>```python
 if age >= 18:
 print("Adult")  # Raises IndentationError
 ```
@@ -74,7 +74,7 @@ if (age >= 18)
     console.log("Can vote"); // Not part of the if-block!
 ```
 
-**Best Practice:**Always use curly braces, even for single-statement blocks, to avoid logic errors and improve readability.
+<strong>Best Practice:</strong>Always use curly braces, even for single-statement blocks, to avoid logic errors and improve readability.
 
 ## Naming, Binding, and Scope
 
@@ -90,7 +90,7 @@ if (age >= 18)
 - Variables declared with `var` are function-scoped, not block-scoped
 - Block scoping is crucial for avoiding unintentional variable leaks or shadowing
 
-**Example:**```javascript
+<strong>Example:</strong>```javascript
 var x = 1;
 let y = 1;
 if (true) {
@@ -150,7 +150,7 @@ if x > 5:
         print("x is even")
 ```
 
-**JavaScript:**```javascript
+<strong>JavaScript:</strong>```javascript
 let x = 10;
 if (x > 5) {
     console.log("x is greater than 5");
@@ -168,7 +168,7 @@ for i in range(3):
     print(i * 2)
 ```
 
-**JavaScript:**```javascript
+<strong>JavaScript:</strong>```javascript
 for (let i = 0; i < 3; i++) {
     console.log(i);
     console.log(i * 2);

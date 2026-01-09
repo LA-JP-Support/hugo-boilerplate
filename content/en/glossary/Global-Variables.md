@@ -18,17 +18,17 @@ Global variables enable data sharing across modules, maintaining user session da
 
 ## Scope and Accessibility
 
-**Global Scope:**Variables defined in global scope are accessible from every function, node, or topic in the application after declaration.
+<strong>Global Scope:</strong>Variables defined in global scope are accessible from every function, node, or topic in the application after declaration.
 
-**Local vs Global Comparison:**- **Local variables**– Confined to function, block, or node where declared
-- **Global variables**– Accessible anywhere in code after declaration
-- **Shadowing**– Local variables with same name can shadow global variables within their scope
+<strong>Local vs Global Comparison:</strong>- <strong>Local variables</strong>– Confined to function, block, or node where declared
+- <strong>Global variables</strong>– Accessible anywhere in code after declaration
+- <strong>Shadowing</strong>– Local variables with same name can shadow global variables within their scope
 
 ## Programming Language Examples
 
 ### Python
 
-**Defining and Accessing:**```python
+<strong>Defining and Accessing:</strong>```python
 x = "awesome"  # Global variable
 
 def myfunc():
@@ -53,7 +53,7 @@ The `global` keyword is necessary to modify global variables from within functio
 
 ### C Language
 
-**Declaration and Use:**```c
+<strong>Declaration and Use:</strong>```c
 #include <stdio.h>
 int x = 5; // global variable
 
@@ -86,16 +86,16 @@ C global variables are initialized to zero by default if not explicitly initiali
 
 ### Microsoft Copilot Studio
 
-**Creating Global Variables:**1. Create a variable in the variable panel
+<strong>Creating Global Variables:</strong>1. Create a variable in the variable panel
 2. Set scope to "Global (any topic can access)"
 3. Variable receives prefix (e.g., `Global.UserName`)
 4. Accessible and modifiable across all topics and automation nodes
 
-**Using Global Variables:**- Access via variable picker or type prefixed name
+<strong>Using Global Variables:</strong>- Access via variable picker or type prefixed name
 - Set values from user input, API calls, or query strings
 - Initialize from external sources via URL parameters
 
-**Example URL Initialization:**```
+<strong>Example URL Initialization:</strong>```
 https://web.powerva.microsoft.com/webchat/bots/12345?UserName=Ana
 ```
 

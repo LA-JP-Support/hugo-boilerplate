@@ -19,20 +19,20 @@ draft: false
 
 A Delay or Sleep Node is a component that introduces a pause in execution for a configurable period or until a condition is fulfilled. In code (JavaScript/Node.js), it's implemented as a function (`sleep`, `delay`, etc.) that suspends further execution in a non-blocking way, typically using Promises and async/await. In workflow automation tools (n8n, Make, AWS SSM, Cognigy, Jira), it's a visual node/block that can be configured for a specific time or event.
 
-**Why pause execution?**To space out API calls and prevent rate limiting, wait for external processes (e.g., file upload, payment confirmation), orchestrate workflows with time-based or event-based conditions, simulate slow operations or network latency in testing, implement retries with exponential backoff, and allow time for data synchronization before continuing.
+<strong>Why pause execution?</strong>To space out API calls and prevent rate limiting, wait for external processes (e.g., file upload, payment confirmation), orchestrate workflows with time-based or event-based conditions, simulate slow operations or network latency in testing, implement retries with exponential backoff, and allow time for data synchronization before continuing.
 
 ## Purpose and Use Cases
 
 ### When and Why Delay/Sleep Nodes Are Used
 
-**API Rate Limiting:**Prevent exceeding quotas by spacing requests.  
-**Workflow Orchestration:**Ensure steps occur in a specific order with controlled intervals.  
-**Polling/Condition Waits:**Pause until an external event or condition is met.  
-**Testing & Simulation:**Simulate slow operations or network latency.  
-**Retry & Backoff:**Implement retries with exponential backoff.  
-**Buffer for External Systems:**Allow time for data sync before continuing.
+<strong>API Rate Limiting:</strong>Prevent exceeding quotas by spacing requests.  
+<strong>Workflow Orchestration:</strong>Ensure steps occur in a specific order with controlled intervals.  
+<strong>Polling/Condition Waits:</strong>Pause until an external event or condition is met.  
+<strong>Testing & Simulation:</strong>Simulate slow operations or network latency.  
+<strong>Retry & Backoff:</strong>Implement retries with exponential backoff.  
+<strong>Buffer for External Systems:</strong>Allow time for data sync before continuing.
 
-**Examples:**- Waiting several seconds between notification emails
+<strong>Examples:</strong>- Waiting several seconds between notification emails
 - Pausing until a file upload is confirmed
 - Polling an API every minute until status is "complete"
 
@@ -42,7 +42,7 @@ A Delay or Sleep Node is a component that introduces a pause in execution for a 
 
 JavaScript and Node.js are single-threaded, non-blocking environments. There is no built-in `sleep()` function. The standard pattern is to use asynchronous approaches (Promises, async/await) to insert delays without blocking the event loop.
 
-**Community best practice:**```js
+<strong>Community best practice:</strong>```js
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -56,7 +56,7 @@ async function main() {
 }
 ```
 
-**One-liner:**```js
+<strong>One-liner:</strong>```js
 await new Promise(resolve => setTimeout(resolve, 5000));
 ```
 
@@ -80,11 +80,11 @@ console.log('Start');
 sleep(2000, () => console.log('End after 2 seconds'));
 ```
 
-**Drawback:**Callback hell, difficult to chain sequential operations.
+<strong>Drawback:</strong>Callback hell, difficult to chain sequential operations.
 
 ### Promises & async/await
 
-**Modern approach:**```js
+<strong>Modern approach:</strong>```js
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -105,13 +105,13 @@ const sleep = require('sleep-promise');
 await sleep(5000); // Wait for 5 seconds
 ```
 
-**Pros:**Features like cancellation, timeouts, better cross-platform support.
+<strong>Pros:</strong>Features like cancellation, timeouts, better cross-platform support.
 
 ### Blocking & Synchronous Sleep Methods
 
-**Not recommended for production.**Blocks the entire event loop, degrading all concurrent tasks.
+<strong>Not recommended for production.</strong>Blocks the entire event loop, degrading all concurrent tasks.
 
-**Example (Node.js, Unix only):**```js
+<strong>Example (Node.js, Unix only):</strong>```js
 const { execSync } = require('child_process');
 function sleep(seconds) {
   execSync(`sleep ${seconds}`);
@@ -137,7 +137,7 @@ const sleep = (ms, { signal, timeout } = {}) => {
 };
 ```
 
-**Intelligent polling (exponential backoff):**```js
+<strong>Intelligent polling (exponential backoff):</strong>```js
 let interval = 1000, maxInterval = 30000;
 while (!conditionMet) {
   await sleep(interval);
@@ -163,75 +163,75 @@ inputs:
 
 ### Cognigy
 
-**Node:**Sleep Node  
-**Function:**Pauses chatbot flow for a set duration  
-**Configuration:**Duration in ms, seconds, etc.
+<strong>Node:</strong>Sleep Node  
+<strong>Function:</strong>Pauses chatbot flow for a set duration  
+<strong>Configuration:</strong>Duration in ms, seconds, etc.
 
 ### n8n & Make
 
-**Node:**Delay/Sleep/Wait Node  
-**Configuration:**Duration, units, and in some cases, event-based waits
+<strong>Node:</strong>Delay/Sleep/Wait Node  
+<strong>Configuration:</strong>Duration, units, and in some cases, event-based waits
 
-**Best Practices:**- Use Delay/Wait nodes sparingly to conserve execution resources
+<strong>Best Practices:</strong>- Use Delay/Wait nodes sparingly to conserve execution resources
 - For processing arrays with delays, handle each item with a loop and insert a delay between iterations
 - Consider parallel execution implications
 
 ### Jira Automation
 
-**Component:**Delay / Pause / Wait Step  
-**Function:**Inserts a pause to prevent race conditions and sequence automation reliably  
-**Configuration:**Duration, or stacking multiple delays for longer waits
+<strong>Component:</strong>Delay / Pause / Wait Step  
+<strong>Function:</strong>Inserts a pause to prevent race conditions and sequence automation reliably  
+<strong>Configuration:</strong>Duration, or stacking multiple delays for longer waits
 
-**Best Practices:**- Be aware that branches in Jira automation may execute in parallel
+<strong>Best Practices:</strong>- Be aware that branches in Jira automation may execute in parallel
 - Serializing actions with delays or splitting into separate rules may be necessary
 
 ## Best Practices
 
-**1. Always use non-blocking delays**(Promises, async/await, or platform-native delay nodes)  
-**2. Avoid synchronous/blocking sleep**in servers or production environments  
-**3. Use timeouts**to prevent indefinite waits  
-**4. Apply exponential backoff**for polling external systems or retries  
-**5. Limit the scope of delays**to only where necessary  
-**6. Support cancellation**(e.g., with AbortController in JS, or abort/timeout configs in workflows)  
-**7. Avoid excessive delays**to conserve execution resources and avoid hitting quotas  
-**8. Distribute delays**in platforms like n8n to avoid bottlenecks and resource contention
+<strong>1. Always use non-blocking delays</strong>(Promises, async/await, or platform-native delay nodes)  
+<strong>2. Avoid synchronous/blocking sleep</strong>in servers or production environments  
+<strong>3. Use timeouts</strong>to prevent indefinite waits  
+<strong>4. Apply exponential backoff</strong>for polling external systems or retries  
+<strong>5. Limit the scope of delays</strong>to only where necessary  
+<strong>6. Support cancellation</strong>(e.g., with AbortController in JS, or abort/timeout configs in workflows)  
+<strong>7. Avoid excessive delays</strong>to conserve execution resources and avoid hitting quotas  
+<strong>8. Distribute delays</strong>in platforms like n8n to avoid bottlenecks and resource contention
 
 ## Troubleshooting / FAQ
 
-**Why doesn't Node.js have a built-in sleep() function?**Node.js is designed for asynchronous, non-blocking I/O. Blocking the event loop would degrade all concurrent tasks. Use async/await or Promises.
+<strong>Why doesn't Node.js have a built-in sleep() function?</strong>Node.js is designed for asynchronous, non-blocking I/O. Blocking the event loop would degrade all concurrent tasks. Use async/await or Promises.
 
-**My delay node seems to block other flows!**Check for accidental use of blocking sleep (e.g., while loops or execSync in Node.js). In automation platforms, avoid excessive or long delays in shared (single-threaded) environments.
+<strong>My delay node seems to block other flows!</strong>Check for accidental use of blocking sleep (e.g., while loops or execSync in Node.js). In automation platforms, avoid excessive or long delays in shared (single-threaded) environments.
 
-**How do I wait for a condition, not just a fixed time?**Use a polling loop with increasing delays (exponential backoff), or use "wait until" nodes if your platform supports it.
+<strong>How do I wait for a condition, not just a fixed time?</strong>Use a polling loop with increasing delays (exponential backoff), or use "wait until" nodes if your platform supports it.
 
-**Can I cancel a delay/sleep operation?**In modern JavaScript, use AbortController. In workflow tools, look for nodes supporting abort/timeout.
+<strong>Can I cancel a delay/sleep operation?</strong>In modern JavaScript, use AbortController. In workflow tools, look for nodes supporting abort/timeout.
 
 ## Parameter Table: Delay/Sleep Node (Generalized)
 
 | Parameter | Type | Description | Example Value |
 |-----------|------|-------------|---------------|
-| **Duration**| Number/String | How long to delay (ms/s/min/h, ISO 8601) | `5000`, `"PT10M"` |
-| **Condition**| Function/String | Optional: Wait until condition is met | `status === "done"` |
-| **Max Wait**| Number | Maximum time to wait | `60000` (1 minute) |
-| **Abort Signal**| Object | For JS: `AbortController.signal` | - |
-| **Timeout**| Number | Timeout for polling or waiting | `30000` (30 seconds) |
+| <strong>Duration</strong>| Number/String | How long to delay (ms/s/min/h, ISO 8601) | `5000`, `"PT10M"` |
+| <strong>Condition</strong>| Function/String | Optional: Wait until condition is met | `status === "done"` |
+| <strong>Max Wait</strong>| Number | Maximum time to wait | `60000` (1 minute) |
+| <strong>Abort Signal</strong>| Object | For JS: `AbortController.signal` | - |
+| <strong>Timeout</strong>| Number | Timeout for polling or waiting | `30000` (30 seconds) |
 
 ## Example Use Cases
 
 ### Chatbot Flow
 
-**Scenario:**Wait 3 seconds after user input before responding to simulate processing.  
-**How:**Place a "Sleep" node (e.g., 3000 ms) in Cognigy or n8n.
+<strong>Scenario:</strong>Wait 3 seconds after user input before responding to simulate processing.  
+<strong>How:</strong>Place a "Sleep" node (e.g., 3000 ms) in Cognigy or n8n.
 
 ### API Rate Limiting
 
-**Scenario:**Integration sends requests with 1 req/sec limit.  
-**How:**Use `await sleep(1000)` in Node.js, or a 1-second Delay node in automation.
+<strong>Scenario:</strong>Integration sends requests with 1 req/sec limit.  
+<strong>How:</strong>Use `await sleep(1000)` in Node.js, or a 1-second Delay node in automation.
 
 ### Intelligent Polling (Event Wait)
 
-**Scenario:**Wait for payment confirmation, but avoid excessive API calls.  
-**How:**Use exponential backoff polling loop:
+<strong>Scenario:</strong>Wait for payment confirmation, but avoid excessive API calls.  
+<strong>How:</strong>Use exponential backoff polling loop:
 
 ```js
 let delay = 1000, maxDelay = 30000;

@@ -20,11 +20,11 @@ draft: false
 
 Structured prompts are organized, format-driven instructions for AI systems. They arrange the task, required context, constraints, and output format into explicit, consistently labeled sections—often using templates, schemas, or machine-readable notations (e.g., JSON, XML, Markdown). This contrasts with free-form or conversational prompts, where guidance is implicit and subject to interpretation.
 
-A structured prompt is a practice within **prompt engineering**—the discipline of designing, testing, and optimizing prompts to control and reliably guide AI model outputs.
+A structured prompt is a practice within <strong>prompt engineering</strong>—the discipline of designing, testing, and optimizing prompts to control and reliably guide AI model outputs.
 
-**Key characteristics:**- **Explicit sections**: Task, role, context, examples, output formatting, and constraints are each clearly specified.
-- **Machine-readability**: Structured prompts can be formatted for seamless automation and integration (e.g., with APIs, workflows, or in bulk processes).
-- **Reusability and repeatability**: Templates can be applied across tasks, ensuring consistent AI behavior and output.
+<strong>Key characteristics:</strong>- <strong>Explicit sections</strong>: Task, role, context, examples, output formatting, and constraints are each clearly specified.
+- <strong>Machine-readability</strong>: Structured prompts can be formatted for seamless automation and integration (e.g., with APIs, workflows, or in bulk processes).
+- <strong>Reusability and repeatability</strong>: Templates can be applied across tasks, ensuring consistent AI behavior and output.
 
 *References:*
 - [LearnPrompting.org: Prompt Structure](https://learnprompting.org/docs/basics/prompt_structure)
@@ -35,12 +35,12 @@ A structured prompt is a practice within **prompt engineering**—the discipline
 
 ### Benefits
 
-- **Reliability & Consistency**: Reduces ambiguity, leading to predictable, repeatable AI outputs.
-- **Precision & Control**: Explicit roles, formats, and constraints direct the AI, reducing hallucinations and errors.
-- **Repeatability & Scalability**: Templates can process thousands of tasks (customer support tickets, report generation, etc.) with uniform quality.
-- **Efficiency**: Clear prompts lessen the need for iterative editing and reduce turnaround time.
-- **System Integration**: Machine-friendly formats (JSON, XML) enable direct use in automation, APIs, and enterprise workflows.
-- **Governance & Auditing**: Structured prompts are easy to version, audit, and review for compliance and continuous improvement.
+- <strong>Reliability & Consistency</strong>: Reduces ambiguity, leading to predictable, repeatable AI outputs.
+- <strong>Precision & Control</strong>: Explicit roles, formats, and constraints direct the AI, reducing hallucinations and errors.
+- <strong>Repeatability & Scalability</strong>: Templates can process thousands of tasks (customer support tickets, report generation, etc.) with uniform quality.
+- <strong>Efficiency</strong>: Clear prompts lessen the need for iterative editing and reduce turnaround time.
+- <strong>System Integration</strong>: Machine-friendly formats (JSON, XML) enable direct use in automation, APIs, and enterprise workflows.
+- <strong>Governance & Auditing</strong>: Structured prompts are easy to version, audit, and review for compliance and continuous improvement.
 
 ### Risks of Unstructured Prompts
 
@@ -58,17 +58,17 @@ A well-structured prompt contains several functional elements:
 
 ### Directive / Instruction
 
-**Purpose**: The main command or request; defines the core task for the AI.
+<strong>Purpose</strong>: The main command or request; defines the core task for the AI.
 
-**Labels**: Task, Instruction, Request.
+<strong>Labels</strong>: Task, Instruction, Request.
 
-**Example**:
+<strong>Example</strong>:
 ```markdown
 Task: Summarize the following article in 3 bullet points.
 Instruction: Translate this paragraph into Spanish.
 ```
 
-**Best Practices**:
+<strong>Best Practices</strong>:
 - Use clear, concise action verbs (“write”, “list”, “translate”, “summarize”).
 - Avoid ambiguous language.
 - For complex tasks, break instructions into steps.
@@ -77,17 +77,17 @@ Instruction: Translate this paragraph into Spanish.
 
 ### Role / Persona
 
-**Purpose**: Assigns the AI a specific role, expertise, or persona, influencing tone, style, and knowledge domain.
+<strong>Purpose</strong>: Assigns the AI a specific role, expertise, or persona, influencing tone, style, and knowledge domain.
 
-**Labels**: Role, Persona.
+<strong>Labels</strong>: Role, Persona.
 
-**Example**:
+<strong>Example</strong>:
 ```markdown
 Role: You are an experienced customer support agent.
 Role: Act as a senior marketing copywriter.
 ```
 
-**Best Practices**:
+<strong>Best Practices</strong>:
 - Select a role relevant to the task (e.g., “medical professional” for health advice).
 - Combine with context for more nuanced outputs.
 
@@ -95,27 +95,27 @@ Role: Act as a senior marketing copywriter.
 
 ### Context / Additional Information
 
-**Purpose**: Provides background, scenario details, or data the AI must consider.
+<strong>Purpose</strong>: Provides background, scenario details, or data the AI must consider.
 
-**Labels**: Context, Background, Additional Information.
+<strong>Labels</strong>: Context, Background, Additional Information.
 
-**Example**:
+<strong>Example</strong>:
 ```markdown
 Context: The customer is frustrated due to a delayed shipment.
 Background: Our company is launching a new eco-friendly water bottle.
 ```
 
-**Best Practices**:
+<strong>Best Practices</strong>:
 - Supply all relevant details the AI may need.
 - For multi-turn conversations, include references to prior dialogue.
 
 ### Examples (Few-shot Prompting)
 
-**Purpose**: Demonstrates the desired format, logic, or style by including sample input-output pairs.
+<strong>Purpose</strong>: Demonstrates the desired format, logic, or style by including sample input-output pairs.
 
-**Labels**: Examples, Few-shot, Sample Input/Output.
+<strong>Labels</strong>: Examples, Few-shot, Sample Input/Output.
 
-**Example**:
+<strong>Example</strong>:
 ```markdown
 Examples:
 Q: I need help resetting my password.
@@ -125,7 +125,7 @@ Q: I was billed twice this month.
 A: Category: Billing Inquiry
 ```
 
-**Best Practices**:
+<strong>Best Practices</strong>:
 - Match complexity and style of task.
 - Use one-shot or few-shot examples for non-obvious outputs.
 
@@ -133,45 +133,45 @@ A: Category: Billing Inquiry
 
 ### Output Formatting
 
-**Purpose**: Specifies the structure or style of the response (table, JSON, Markdown, etc.).
+<strong>Purpose</strong>: Specifies the structure or style of the response (table, JSON, Markdown, etc.).
 
-**Labels**: Output Format, Formatting, Response Format.
+<strong>Labels</strong>: Output Format, Formatting, Response Format.
 
-**Example**:
+<strong>Example</strong>:
 ```markdown
 Output Format: Provide your answer as a Markdown table.
 Formatting: Respond in JSON with fields "summary" and "action items".
 ```
 
-**Best Practices**:
+<strong>Best Practices</strong>:
 - Directly state the required output format.
 - Specify field names, order, and nesting for JSON/XML.
 - For tabular data, define column headers.
 
 ### Constraints / Notes
 
-**Purpose**: Limits or prescribes specifics (word count, tone, forbidden topics, or inclusions).
+<strong>Purpose</strong>: Limits or prescribes specifics (word count, tone, forbidden topics, or inclusions).
 
-**Labels**: Constraints, Notes, Limitations, Guardrails.
+<strong>Labels</strong>: Constraints, Notes, Limitations, Guardrails.
 
-**Example**:
+<strong>Example</strong>:
 ```markdown
 Constraints: Limit your response to 40 words. Do not mention pricing.
 Notes: Only output the ticket category. If unsure, default to "Technical Issue."
 ```
 
-**Best Practices**:
+<strong>Best Practices</strong>:
 - List all exclusions and requirements.
 - Set boundaries for safety (e.g., do not generate medical advice).
 - Specify default behaviors for edge cases.
 
 ### References (Internal & External)
 
-**Purpose**: Directs the AI to refer to previous conversation turns, documents, or data.
+<strong>Purpose</strong>: Directs the AI to refer to previous conversation turns, documents, or data.
 
-**Labels**: Reference, See prior answer, Source Text.
+<strong>Labels</strong>: Reference, See prior answer, Source Text.
 
-**Example**:
+<strong>Example</strong>:
 ```markdown
 Reference: See previous answer regarding refund policy.
 Source Text: [Paste customer complaint here]
@@ -181,15 +181,15 @@ Source Text: [Paste customer complaint here]
 
 ### Structured Prompting
 
-- **Definition**: Prompts are organized into labeled, template-based sections (sometimes in machine-readable formats).
-- **Strengths**: Predictable, repeatable, easier to automate or integrate.
-- **Best for**: Business automation, production workflows, regulatory outputs, scaling content.
+- <strong>Definition</strong>: Prompts are organized into labeled, template-based sections (sometimes in machine-readable formats).
+- <strong>Strengths</strong>: Predictable, repeatable, easier to automate or integrate.
+- <strong>Best for</strong>: Business automation, production workflows, regulatory outputs, scaling content.
 
 ### Unstructured Prompting
 
-- **Definition**: Free-form, conversational input.
-- **Strengths**: Flexible, fast for ad hoc or exploratory questions.
-- **Limitations**: Output is variable, less suitable for automation or high-stakes tasks.
+- <strong>Definition</strong>: Free-form, conversational input.
+- <strong>Strengths</strong>: Flexible, fast for ad hoc or exploratory questions.
+- <strong>Limitations</strong>: Output is variable, less suitable for automation or high-stakes tasks.
 
 | Aspect            | Structured Prompting                              | Unstructured Prompting                |
 |-------------------|--------------------------------------------------|---------------------------------------|
@@ -205,7 +205,7 @@ Source Text: [Paste customer complaint here]
 
 ### Example 1: Customer Support Ticket Categorization
 
-**Unstructured Prompt**:
+<strong>Unstructured Prompt</strong>:
 ```
 Can you tell me what kind of issue this ticket is about? "I can’t reset my password."
 ```
@@ -213,7 +213,7 @@ Can you tell me what kind of issue this ticket is about? "I can’t reset my pas
 - "It sounds like a technical support request."
 - "The issue is about password reset."
 
-**Structured Prompt**:
+<strong>Structured Prompt</strong>:
 ```
 Role: Customer support ticket classifier.
 Task: Categorize the following ticket as "Technical Issue", "Billing Inquiry", or "Feature Request".
@@ -225,12 +225,12 @@ Technical Issue
 
 ### Example 2: Marketing Copy Generation
 
-**Unstructured Prompt**:
+<strong>Unstructured Prompt</strong>:
 ```
 Can you help me write something about a new eco-friendly water bottle?
 ```
 
-**Structured Prompt**:
+<strong>Structured Prompt</strong>:
 ```
 Role: Senior marketing copywriter.
 Task: Write a two-sentence product description for a new eco-friendly water bottle.
@@ -244,7 +244,7 @@ Output Format: Provide in Markdown bullet points.
 
 ### Example 3: Format-Specific Output (JSON)
 
-**Prompt**:
+<strong>Prompt</strong>:
 ```json
 {
   "role": "resume editor",
@@ -274,11 +274,11 @@ Output Format: Provide in Markdown bullet points.
 ### TRACI Prompt Framework
 
 [TRACI](https://structuredprompt.com/#TRACI) stands for:
-- **T**ask – General output goal (e.g., "Write marketing copy").
-- **R**ole – Persona or title for the responder (e.g., "Professional copywriter").
-- **A**udience – Who the output is for (e.g., "Potential customers").
-- **C**reate – Specifies what is being created (e.g., "List of 5 product benefits").
-- **I**ntent – Purpose or desired tone (e.g., "Inspire eco-friendly purchasing").
+- <strong>T</strong>ask – General output goal (e.g., "Write marketing copy").
+- <strong>R</strong>ole – Persona or title for the responder (e.g., "Professional copywriter").
+- <strong>A</strong>udience – Who the output is for (e.g., "Potential customers").
+- <strong>C</strong>reate – Specifies what is being created (e.g., "List of 5 product benefits").
+- <strong>I</strong>ntent – Purpose or desired tone (e.g., "Inspire eco-friendly purchasing").
 
 TRACI can be customized by toggling elements and adding rules/parameters as needed. It is widely used for engineering scalable, modular prompts.
 
@@ -287,8 +287,8 @@ TRACI can be customized by toggling elements and adding rules/parameters as need
 ### Structured Prompt Notation (SPN)
 
 Structured Prompt Notation is an outline-based format for creating complex, reusable prompts that can be automatically converted to JSON, XML, or other machine-readable forms. SPN enables:
-- **Authoring once, deploying in many formats**.
-- **Future-proofing**: As new LLMs require different structures, SPN can be adapted without rewriting prompts.
+- <strong>Authoring once, deploying in many formats</strong>.
+- <strong>Future-proofing</strong>: As new LLMs require different structures, SPN can be adapted without rewriting prompts.
 
 Try the free [SPN Editor](https://structuredprompt.com/free-structured-prompt-notation-editor/) for hands-on practice.
 
@@ -296,28 +296,28 @@ Try the free [SPN Editor](https://structuredprompt.com/free-structured-prompt-no
 
 ### Key Principles
 
-1. **Be Explicit and Specific**- Clearly state task, format, tone, and constraints.
+1. <strong>Be Explicit and Specific</strong>- Clearly state task, format, tone, and constraints.
 
-2. **Use Clear Labels and Sections**- Structure prompts with labeled sections (Role, Task, Context, etc.).
+2. <strong>Use Clear Labels and Sections</strong>- Structure prompts with labeled sections (Role, Task, Context, etc.).
 
-3. **Provide Examples When Needed**- Use few-shot examples for complex patterns.
+3. <strong>Provide Examples When Needed</strong>- Use few-shot examples for complex patterns.
 
-4. **Specify Output Structure**- Require specific formats (JSON, CSV, Markdown).
+4. <strong>Specify Output Structure</strong>- Require specific formats (JSON, CSV, Markdown).
 
-5. **Define Constraints**- Set word/character limits, style guides, forbidden content.
+5. <strong>Define Constraints</strong>- Set word/character limits, style guides, forbidden content.
 
-6. **Keep Prompts Modular and Reusable**- Design for adaptation and repetition.
+6. <strong>Keep Prompts Modular and Reusable</strong>- Design for adaptation and repetition.
 
-7. **Iterate and Refine**- Test, review, and version prompts based on outcomes.
+7. <strong>Iterate and Refine</strong>- Test, review, and version prompts based on outcomes.
 
-8. **Anticipate Ambiguities**- Clarify areas open to multiple interpretations.
+8. <strong>Anticipate Ambiguities</strong>- Clarify areas open to multiple interpretations.
 
 ### Auditing and Governance
 
-- **Version Control**: Maintain prompt versions for traceability.
-- **Review & QA**: Regularly audit prompt effectiveness and compliance.
-- **Documentation**: Document prompt templates and usage scenarios.
-- **Compliance**: Incorporate legal, ethical, and regulatory guidelines where relevant.
+- <strong>Version Control</strong>: Maintain prompt versions for traceability.
+- <strong>Review & QA</strong>: Regularly audit prompt effectiveness and compliance.
+- <strong>Documentation</strong>: Document prompt templates and usage scenarios.
+- <strong>Compliance</strong>: Incorporate legal, ethical, and regulatory guidelines where relevant.
 
 *References:*
 - [Google Vertex AI: Prompt Engineering Workflow](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies#prompt-engineering-workflow)
@@ -326,12 +326,12 @@ Try the free [SPN Editor](https://structuredprompt.com/free-structured-prompt-no
 ## Enterprise Use Cases and Workflow Integration
 
 Structured prompts are foundational for:
-- **Customer Support Automation**: Ticket routing, FAQ bots, escalation logic.
-- **Content Generation**: Product descriptions, ad copy, editorial calendars.
-- **Data Analysis**: Summarizing trends, extracting insights, report formatting.
-- **Software Development**: Code generation, test case templating.
-- **Education**: Automated grading, feedback generation, language translation.
-- **Workflow Automation**: Bulk content processing, review generation, lead qualification.
+- <strong>Customer Support Automation</strong>: Ticket routing, FAQ bots, escalation logic.
+- <strong>Content Generation</strong>: Product descriptions, ad copy, editorial calendars.
+- <strong>Data Analysis</strong>: Summarizing trends, extracting insights, report formatting.
+- <strong>Software Development</strong>: Code generation, test case templating.
+- <strong>Education</strong>: Automated grading, feedback generation, language translation.
+- <strong>Workflow Automation</strong>: Bulk content processing, review generation, lead qualification.
 
 Machine-readable formats (JSON, XML) allow integration with:
 - API-driven workflows
@@ -352,10 +352,10 @@ Machine-readable formats (JSON, XML) allow integration with:
 - [Prompting Guide: General Tips for Designing Prompts](https://promptingguide.ai/)
 - [Hypha: Optimizing AI Results with Structured Prompting](https://www.hypha.co/blog/optimizing-ai-results-with-structured-prompting)
 
-**For hands-on exploration, see:**- [Google Prompt Design Colab Notebook](https://colab.research.google.com/github/GoogleCloudPlatform/generative-ai/blob/main/gemini/prompts/intro_prompt_design.ipynb)
+<strong>For hands-on exploration, see:</strong>- [Google Prompt Design Colab Notebook](https://colab.research.google.com/github/GoogleCloudPlatform/generative-ai/blob/main/gemini/prompts/intro_prompt_design.ipynb)
 - [Structured Prompt Notation Editor (Free)](https://structuredprompt.com/free-structured-prompt-notation-editor/)
 
-**Further video resources:**- [ChatGPT Structured Prompt Helper Application Demos (YouTube)](https://structuredprompt.com/#demos)
+<strong>Further video resources:</strong>- [ChatGPT Structured Prompt Helper Application Demos (YouTube)](https://structuredprompt.com/#demos)
 
 This glossary delivers a full-spectrum, enterprise-grade resource on the theory and practice of structured prompts, integrating the latest frameworks, tools, and research from industry leaders and academic sources. For the most current templates, workflows, and best practices, reference the links provided throughout this document.
 

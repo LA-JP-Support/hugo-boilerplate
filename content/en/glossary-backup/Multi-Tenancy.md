@@ -15,7 +15,7 @@ Multi-tenancy is a software architecture pattern in which a single instance of a
 
 - Tenants may be individual users or groups (such as customer organizations) with common access to an application.
 - Each tenant’s data is isolated from others, both for privacy and for regulatory requirements.
-- Multi-tenancy is foundational to Software-as-a-Service (SaaS) and [cloud computing](/en/glossary/cloud-computing/) delivery models.
+- Multi-tenancy is foundational to Software-as-a-Service (SaaS) and cloud computing delivery models.
 - [IBM: What is Multi-Tenant?](https://www.ibm.com/think/topics/multi-tenant)
 - [Wikipedia: Multitenancy](https://en.wikipedia.org/wiki/Multitenancy)
 
@@ -24,12 +24,12 @@ Multi-tenancy is a software architecture pattern in which a single instance of a
 
 Multi-tenancy enables scalable, cost-efficient, and manageable software delivery for large numbers of customers with similar needs. Typical use cases include:
 
-- **SaaS applications**: CRMs (Salesforce), e-commerce (Shopify), helpdesk (Zendesk).
-- **Public and private cloud platforms**: AWS, Azure, and Google Cloud deliver compute, storage, and networking using multi-tenant models.
-- **Analytics & AI platforms**: Services like GoodData and cloud-based business intelligence tools.
-- **Collaboration suites**: Microsoft 365, Google Workspace.
-- **Industry-specific vertical SaaS**: Healthcare, financial, and legal SaaS solutions that require configurable compliance.
-- **Embedded analytics**and business intelligence platforms.
+- <strong>SaaS applications</strong>: CRMs (Salesforce), e-commerce (Shopify), helpdesk (Zendesk).
+- <strong>Public and private cloud platforms</strong>: AWS, Azure, and Google Cloud deliver compute, storage, and networking using multi-tenant models.
+- <strong>Analytics & AI platforms</strong>: Services like GoodData and cloud-based business intelligence tools.
+- <strong>Collaboration suites</strong>: Microsoft 365, Google Workspace.
+- <strong>Industry-specific vertical SaaS</strong>: Healthcare, financial, and legal SaaS solutions that require configurable compliance.
+- <strong>Embedded analytics</strong>and business intelligence platforms.
 - Multi-tenant SaaS enables vendors to roll out new features, security patches, and updates to all users at once, reducing maintenance overhead and eliminating version drift.
 
 See:
@@ -39,30 +39,30 @@ See:
 <a name="key-concepts"></a>
 ## 3. Key Concepts and Terminology
 
-- **Tenant**: A customer or logical unit (organization, department, user group) with isolated access to a shared application.
-- **Application Instance**: The running software that serves multiple tenants from a shared codebase.
-- **Data Isolation**: Ensuring no tenant can access another’s data; achieved through separate schemas, tenant IDs, or databases.
-- **Resource Sharing**: Hardware, compute, storage, and network resources are pooled for efficiency.
-- **RBAC (Role-Based Access Control)**: Security model assigning permissions by user role, often scoped per tenant.
-- **Noisy Neighbor**: A scenario where one tenant’s resource usage negatively impacts others’ performance.
-- **Customization**: Allowing tenants to configure branding, business rules, and settings without code changes.
-- **Logical vs. Physical Isolation**: Logical uses code/database partitioning; physical may use dedicated servers or clusters.
+- <strong>Tenant</strong>: A customer or logical unit (organization, department, user group) with isolated access to a shared application.
+- <strong>Application Instance</strong>: The running software that serves multiple tenants from a shared codebase.
+- <strong>Data Isolation</strong>: Ensuring no tenant can access another’s data; achieved through separate schemas, tenant IDs, or databases.
+- <strong>Resource Sharing</strong>: Hardware, compute, storage, and network resources are pooled for efficiency.
+- <strong>RBAC (Role-Based Access Control)</strong>: Security model assigning permissions by user role, often scoped per tenant.
+- <strong>Noisy Neighbor</strong>: A scenario where one tenant’s resource usage negatively impacts others’ performance.
+- <strong>Customization</strong>: Allowing tenants to configure branding, business rules, and settings without code changes.
+- <strong>Logical vs. Physical Isolation</strong>: Logical uses code/database partitioning; physical may use dedicated servers or clusters.
 
 <a name="how-it-works"></a>
 ## 4. Multi-Tenant Architecture: How It Works
 
 A multi-tenant architecture ensures each tenant’s data and configuration remain isolated within a shared infrastructure. Tenants interact with the application through their own accounts but use the same application code and backend systems.
 
-- **Data isolation**is enforced at the application and/or database layer.
-- **Resource allocation**is dynamically managed to optimize infrastructure utilization.
+- <strong>Data isolation</strong>is enforced at the application and/or database layer.
+- <strong>Resource allocation</strong>is dynamically managed to optimize infrastructure utilization.
 
 <a name="data-separation"></a>
 ### Data Separation and Isolation
 
 Approaches to data isolation include:
-- **Tenant IDs**: Each data record tagged with a unique tenant identifier.
-- **Separate Schemas**: Each tenant’s data is stored in a dedicated schema within a single database.
-- **Dedicated Databases**: Each tenant has a physically separate database for maximum isolation.
+- <strong>Tenant IDs</strong>: Each data record tagged with a unique tenant identifier.
+- <strong>Separate Schemas</strong>: Each tenant’s data is stored in a dedicated schema within a single database.
+- <strong>Dedicated Databases</strong>: Each tenant has a physically separate database for maximum isolation.
 
 Example: In Salesforce, each organization is a tenant. Data is tagged with an `OrgID`, and all queries are scoped to this identifier, preventing cross-tenant data access.
 - [Salesforce Platform Multitenant Architecture](https://architect.salesforce.com/fundamentals/platform-multitenant-architecture)
@@ -85,22 +85,22 @@ Architectures vary by data isolation, cost, scalability, and complexity.
 <a name="single-app-single-db"></a>
 ### 5.1 Single Application, Single Database
 
-- **One app instance, one database.**All tenants’ data coexists in the same tables, partitioned by tenant ID.
-- **Pros**: Simple, cost-efficient, easy to manage.
-- **Cons**: Risk of data leakage if isolation fails, limited tenant customization.
+- <strong>One app instance, one database.</strong>All tenants’ data coexists in the same tables, partitioned by tenant ID.
+- <strong>Pros</strong>: Simple, cost-efficient, easy to manage.
+- <strong>Cons</strong>: Risk of data leakage if isolation fails, limited tenant customization.
 
 <a name="single-app-multi-db"></a>
 ### 5.2 Single Application, Multiple Databases
 
-- **One app instance, multiple databases.**Each tenant has a dedicated database.
-- **Pros**: Strong data isolation, easier per-tenant backup and migration.
-- **Cons**: Higher operational complexity, costlier at scale.
+- <strong>One app instance, multiple databases.</strong>Each tenant has a dedicated database.
+- <strong>Pros</strong>: Strong data isolation, easier per-tenant backup and migration.
+- <strong>Cons</strong>: Higher operational complexity, costlier at scale.
 
 <a name="multi-app-multi-db"></a>
 ### 5.3 Multiple Applications, Multiple Databases
 
-- **Each tenant has a separate app instance and database.**- **Pros**: Maximum security and customization.
-- **Cons**: High cost, complex management, less resource efficient.
+- <strong>Each tenant has a separate app instance and database.</strong>- <strong>Pros</strong>: Maximum security and customization.
+- <strong>Cons</strong>: High cost, complex management, less resource efficient.
 
 <a name="architecture-comparison"></a>
 #### Architecture Type Comparison
@@ -143,12 +143,12 @@ Each tenant has a private “apartment” (data/config), but all share the build
 <a name="benefits"></a>
 ## 7. Benefits of Multi-Tenancy
 
-- **Cost Efficiency**: Shared infrastructure reduces per-customer costs.
-- **Scalability**: Rapidly onboard new tenants without separate deployments.
-- **Centralized Management**: Simplified updates, patching, and support.
-- **Consistent Experience**: All tenants use the same version.
-- **Resource Utilization**: Hardware and compute are more fully utilized.
-- **Configurable Customization**: Branding and settings can be tenant-specific.
+- <strong>Cost Efficiency</strong>: Shared infrastructure reduces per-customer costs.
+- <strong>Scalability</strong>: Rapidly onboard new tenants without separate deployments.
+- <strong>Centralized Management</strong>: Simplified updates, patching, and support.
+- <strong>Consistent Experience</strong>: All tenants use the same version.
+- <strong>Resource Utilization</strong>: Hardware and compute are more fully utilized.
+- <strong>Configurable Customization</strong>: Branding and settings can be tenant-specific.
 
 See [IBM: Multi-Tenant Benefits](https://www.ibm.com/think/topics/multi-tenant)
 
@@ -158,10 +158,10 @@ See [IBM: Multi-Tenant Benefits](https://www.ibm.com/think/topics/multi-tenant)
 <a name="security"></a>
 ### Security in Multi-Tenant Environments
 
-- **Data Leakage Risk**: Poor isolation can expose tenant data.
-- **Access Control**: Requires tenant-aware authentication, RBAC, and strict API security.
-- **Compliance**: Meeting standards (GDPR, HIPAA) requires auditability and data controls.
-- **Granular Controls**: Fine-grained access and logging are critical.
+- <strong>Data Leakage Risk</strong>: Poor isolation can expose tenant data.
+- <strong>Access Control</strong>: Requires tenant-aware authentication, RBAC, and strict API security.
+- <strong>Compliance</strong>: Meeting standards (GDPR, HIPAA) requires auditability and data controls.
+- <strong>Granular Controls</strong>: Fine-grained access and logging are critical.
 
 Best practices:
 - Use strict query scoping (tenant ID filters).
@@ -172,7 +172,7 @@ Best practices:
 
 - Occurs when one tenant’s heavy resource use degrades others’ performance.
 - Common in shared compute/storage environments.
-- Mitigated by quotas, [throttling](/en/glossary/throttling/), monitoring, and resource limits.
+- Mitigated by quotas, throttling, monitoring, and resource limits.
 
 Deep dive:
 - [Neon: The Noisy Neighbor Problem in Multitenant Architectures](https://neon.com/blog/noisy-neighbor-multitenant)
@@ -181,21 +181,21 @@ Deep dive:
 <a name="resource-contention"></a>
 ### Resource Contention and Performance
 
-- Shared resources can create contention, leading to [latency](/en/glossary/latency/) spikes or outages.
+- Shared resources can create contention, leading to latency spikes or outages.
 - Resource management strategies include:
     - Logical isolation (namespaces, quotas)
     - Physical isolation (dedicated nodes/clusters)
-    - Dynamic scaling and [autoscaling](/en/glossary/autoscaling/)
+    - Dynamic scaling and autoscaling
     - Monitoring and alerting on resource usage
 
 <a name="implementation"></a>
 ## 9. Implementation: Technology Stack & Best Practices
 
-**Backend**: Node.js, Python (Django, FastAPI), Java, PHP, Go  
-**Databases**: PostgreSQL (with schemas), MySQL, MongoDB, Azure SQL  
-**Authentication**: Auth0, Keycloak, OAuth2, Firebase Auth  
-**DevOps**: Docker, Kubernetes, Terraform, Helm  
-**Monitoring/Security**: Cloud-native monitoring, DLP tools, audit logs
+<strong>Backend</strong>: Node.js, Python (Django, FastAPI), Java, PHP, Go  
+<strong>Databases</strong>: PostgreSQL (with schemas), MySQL, MongoDB, Azure SQL  
+<strong>Authentication</strong>: Auth0, Keycloak, OAuth2, Firebase Auth  
+<strong>DevOps</strong>: Docker, Kubernetes, Terraform, Helm  
+<strong>Monitoring/Security</strong>: Cloud-native monitoring, DLP tools, audit logs
 
 <a name="authentication"></a>
 ### Authentication & Authorization
@@ -240,22 +240,22 @@ Automation is key: use CI/CD pipelines for repeated, reliable testing.
 <a name="saas"></a>
 ### SaaS Platforms
 
-- **Salesforce**: Multi-tenant CRM with strong org-level isolation.
-- **Shopify**: Each store is a tenant; globally shared platform.
-- **Zendesk**: Multiple customer support teams, shared backend, isolated data.
+- <strong>Salesforce</strong>: Multi-tenant CRM with strong org-level isolation.
+- <strong>Shopify</strong>: Each store is a tenant; globally shared platform.
+- <strong>Zendesk</strong>: Multiple customer support teams, shared backend, isolated data.
 
 <a name="cloud-services"></a>
 ### Cloud Services
 
-- **AWS, Azure, GCP**: Multi-tenant infrastructure spans compute, storage, networking.
-- **Microsoft 365**: Millions of business tenants, with isolated configurations.
+- <strong>AWS, Azure, GCP</strong>: Multi-tenant infrastructure spans compute, storage, networking.
+- <strong>Microsoft 365</strong>: Millions of business tenants, with isolated configurations.
 
 <a name="ai-analytics"></a>
 ### Analytics & AI Platforms
 
-- **GoodData**: Workspace-per-tenant model for analytics.
-- **Tableau, Power BI**: Multi-tenant business intelligence platforms.
-- **Serverless platforms**: Isolate function execution per tenant.
+- <strong>GoodData</strong>: Workspace-per-tenant model for analytics.
+- <strong>Tableau, Power BI</strong>: Multi-tenant business intelligence platforms.
+- <strong>Serverless platforms</strong>: Isolate function execution per tenant.
 
 For deeper AI SaaS and vertical SaaS examples:
 - [AI in SaaS: Cigen](https://www.cigen.io/insights/ai-in-saas-use-cases-benefits-and-real-world-applications)
@@ -269,22 +269,22 @@ Recommended if:
 - Cost efficiency, scalability, and centralized management are priorities.
 - Per-tenant customization needs are limited to configuration, not core code.
 
-**Not ideal for**:
+<strong>Not ideal for</strong>:
 - Tenants with strict compliance, isolation, or regulatory needs (use per-tenant DBs or app instances for these).
 - Deeply bespoke, client-specific deployments.
 
 <a name="faqs"></a>
 ## 12. FAQs
 
-**How is tenant data kept secure?**Data is isolated via tenant IDs, schemas, or databases. Access is controlled with RBAC and strict authentication, plus encryption.
+<strong>How is tenant data kept secure?</strong>Data is isolated via tenant IDs, schemas, or databases. Access is controlled with RBAC and strict authentication, plus encryption.
 
-**Can tenants customize the application?**Yes—typically via settings, branding, and business rules. Major code changes are shared across all tenants.
+<strong>Can tenants customize the application?</strong>Yes—typically via settings, branding, and business rules. Major code changes are shared across all tenants.
 
-**How are updates managed?**Updates and patches are deployed centrally, ensuring all tenants benefit simultaneously.
+<strong>How are updates managed?</strong>Updates and patches are deployed centrally, ensuring all tenants benefit simultaneously.
 
-**What is the “noisy neighbor” effect?**Resource-heavy tenants may impact others. Managed with quotas, monitoring, autoscaling, and isolation.
+<strong>What is the “noisy neighbor” effect?</strong>Resource-heavy tenants may impact others. Managed with quotas, monitoring, autoscaling, and isolation.
 
-**Is multi-tenancy only for SaaS?**No—also used in cloud hosting, analytics, embedded services, and more.
+<strong>Is multi-tenancy only for SaaS?</strong>No—also used in cloud hosting, analytics, embedded services, and more.
 
 <a name="references"></a>
 ## 13. Further Reading & References

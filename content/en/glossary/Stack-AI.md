@@ -21,19 +21,19 @@ Stack AI is an enterprise-grade, no-code/low-code platform for building, testing
 
 The platform enables organizations to connect disparate data sources and business systems, automate complex processes, and deploy AI assistants at scale—all without requiring deep programming expertise. Stack AI targets enterprises needing secure, compliant, and scalable AI-driven operations.
 
-**Key Characteristics:**
+<strong>Key Characteristics:</strong>
 
-**No-code/low-code builder:**Drag-and-drop workflow creation, modular steps, and plain English descriptions scaffold automation
+<strong>No-code/low-code builder:</strong>Drag-and-drop workflow creation, modular steps, and plain English descriptions scaffold automation
 
-**LLM Integration:**Native support for OpenAI, Anthropic Claude, Google Gemini, and Cohere models
+<strong>LLM Integration:</strong>Native support for OpenAI, Anthropic Claude, Google Gemini, and Cohere models
 
-**Security/compliance:**SOC2, HIPAA, and GDPR compliant
+<strong>Security/compliance:</strong>SOC2, HIPAA, and GDPR compliant
 
-**Integration ecosystem:**100+ SaaS, cloud, database, and API connectors
+<strong>Integration ecosystem:</strong>100+ SaaS, cloud, database, and API connectors
 
-**Flexible deployment:**Cloud, on-premise, VPC, web, chat, API, Slack, Teams, embedded widgets
+<strong>Flexible deployment:</strong>Cloud, on-premise, VPC, web, chat, API, Slack, Teams, embedded widgets
 
-**Enterprise focus:**Designed for regulated industries and large-scale automation with granular access controls
+<strong>Enterprise focus:</strong>Designed for regulated industries and large-scale automation with granular access controls
 
 ## How Stack AI is Used
 
@@ -41,171 +41,171 @@ The platform enables organizations to connect disparate data sources and busines
 
 Stack AI streamlines knowledge-driven, repetitive, or labor-intensive business workflows by combining LLMs with a visual workflow builder:
 
-**AI Agent Creation:**Build custom chatbots, document analyzers, knowledge assistants, and RAG bots through a modular builder
+<strong>AI Agent Creation:</strong>Build custom chatbots, document analyzers, knowledge assistants, and RAG bots through a modular builder
 
-**Document Processing:**Extract, classify, and process data from PDFs, contracts, spreadsheets at scale
+<strong>Document Processing:</strong>Extract, classify, and process data from PDFs, contracts, spreadsheets at scale
 
-**Workflow Automation:**Orchestrate business logic—ingesting emails, querying CRMs, generating reports, posting to Slack
+<strong>Workflow Automation:</strong>Orchestrate business logic—ingesting emails, querying CRMs, generating reports, posting to Slack
 
-**Data Integration:**Connect unstructured data from SharePoint, Salesforce, Notion, Snowflake, Google Drive
+<strong>Data Integration:</strong>Connect unstructured data from SharePoint, Salesforce, Notion, Snowflake, Google Drive
 
-**Custom Interfaces:**Deploy through web widgets, forms, Slack/Teams bots, or API endpoints
+<strong>Custom Interfaces:</strong>Deploy through web widgets, forms, Slack/Teams bots, or API endpoints
 
-**Example Workflow:**Read PDF from Google Drive → Extract key data with OCR → Analyze with Claude or GPT-4 → Write summary to Salesforce → Notify team on Slack
+<strong>Example Workflow:</strong>Read PDF from Google Drive → Extract key data with OCR → Analyze with Claude or GPT-4 → Write summary to Salesforce → Notify team on Slack
 
 ### Who Uses Stack AI
 
-**Finance & Insurance:**Automate document review and compliance
+<strong>Finance & Insurance:</strong>Automate document review and compliance
 
-**Healthcare:**Build HIPAA-compliant co-pilots for physicians, automate charting, and EHR extraction
+<strong>Healthcare:</strong>Build HIPAA-compliant co-pilots for physicians, automate charting, and EHR extraction
 
-**Education:**AI tutors, knowledge assistants, administrative bots
+<strong>Education:</strong>AI tutors, knowledge assistants, administrative bots
 
-**Agencies & Marketing:**Content QA, onboarding flows, knowledge bots
+<strong>Agencies & Marketing:</strong>Content QA, onboarding flows, knowledge bots
 
-**IT & Operations:**Back-office automation, RFP management, data extraction
+<strong>IT & Operations:</strong>Back-office automation, RFP management, data extraction
 
-**Non-technical users:**No-code interface enables business analysts and operations managers to build automations
+<strong>Non-technical users:</strong>No-code interface enables business analysts and operations managers to build automations
 
-**Technical leads:**API and deep integration support for developers
+<strong>Technical leads:</strong>API and deep integration support for developers
 
-**Customer Examples:**HP, SmartAsset, Red Bull, IBM, MIT
+<strong>Customer Examples:</strong>HP, SmartAsset, Red Bull, IBM, MIT
 
 ## Key Features
 
 ### No-Code Workflow Builder
 
-**Visual drag-and-drop:**Compose workflows from modular "nodes" (data sources, logic, AI models, outputs)
+<strong>Visual drag-and-drop:</strong>Compose workflows from modular "nodes" (data sources, logic, AI models, outputs)
 
-**Quick Start/Custom modes:**Use templates or design from scratch
+<strong>Quick Start/Custom modes:</strong>Use templates or design from scratch
 
-**Conversational builder:**Scaffold workflows by describing them in plain English
+<strong>Conversational builder:</strong>Scaffold workflows by describing them in plain English
 
-**Advanced logic:**Parallel, conditional, and multi-source aggregation supported
+<strong>Advanced logic:</strong>Parallel, conditional, and multi-source aggregation supported
 
-**Reusable components:**Save and reuse workflow templates across the organization
+<strong>Reusable components:</strong>Save and reuse workflow templates across the organization
 
 ### Integration Ecosystem
 
 Over 100 integrations with SaaS, cloud storage, databases, communication platforms, and APIs:
 
-**Data:**Google Drive, OneDrive, Snowflake, SharePoint, Notion, MongoDB, Airtable, AWS S3, BigQuery
+<strong>Data:</strong>Google Drive, OneDrive, Snowflake, SharePoint, Notion, MongoDB, Airtable, AWS S3, BigQuery
 
-**Business apps:**Salesforce, HubSpot, Zendesk, GitHub
+<strong>Business apps:</strong>Salesforce, HubSpot, Zendesk, GitHub
 
-**Messaging:**Slack, Microsoft Teams, WhatsApp, SMS
+<strong>Messaging:</strong>Slack, Microsoft Teams, WhatsApp, SMS
 
-**AI providers:**OpenAI, Anthropic, Google, Cohere
+<strong>AI providers:</strong>OpenAI, Anthropic, Google, Cohere
 
-**Custom APIs:**Connect any RESTful service; Managed Custom Processes (MCP) nodes allow advanced integrations
+<strong>Custom APIs:</strong>Connect any RESTful service; Managed Custom Processes (MCP) nodes allow advanced integrations
 
-**Integration setup:**OAuth authentication, reusable across workflows
+<strong>Integration setup:</strong>OAuth authentication, reusable across workflows
 
 ### Multi-Channel Interfaces
 
-**Web chatbots:**Embeddable on websites or internal portals
+<strong>Web chatbots:</strong>Embeddable on websites or internal portals
 
-**Forms:**Structured data collection with AI-powered feedback
+<strong>Forms:</strong>Structured data collection with AI-powered feedback
 
-**Batch processing:**Analyze documents in bulk
+<strong>Batch processing:</strong>Analyze documents in bulk
 
-**Slack/Teams bots:**Bring AI assistants into collaboration tools
+<strong>Slack/Teams bots:</strong>Bring AI assistants into collaboration tools
 
-**API endpoints:**Embed workflows into custom applications
+<strong>API endpoints:</strong>Embed workflows into custom applications
 
-**Custom UI branding:**Tailor chatbots and forms with company branding
+<strong>Custom UI branding:</strong>Tailor chatbots and forms with company branding
 
-**Granular access control:**Manage who can use or modify each interface
+<strong>Granular access control:</strong>Manage who can use or modify each interface
 
 ### Advanced AI Capabilities
 
-**Retrieval Augmented Generation (RAG):**Connect LLMs to proprietary data for context-aware answers with citations
+<strong>Retrieval Augmented Generation (RAG):</strong>Connect LLMs to proprietary data for context-aware answers with citations
 
-**Data extraction/classification:**OCR for scanned documents, structured data extraction
+<strong>Data extraction/classification:</strong>OCR for scanned documents, structured data extraction
 
-**Prompt engineering:**Tune LLM instructions, collect feedback, iterate on agent behavior
+<strong>Prompt engineering:</strong>Tune LLM instructions, collect feedback, iterate on agent behavior
 
-**Custom LLM selection:**Assign specific models (GPT-4, Claude 3) to different workflow steps
+<strong>Custom LLM selection:</strong>Assign specific models (GPT-4, Claude 3) to different workflow steps
 
-**Knowledge base search:**Vector database support for semantic retrieval
+<strong>Knowledge base search:</strong>Vector database support for semantic retrieval
 
 ### Security, Compliance, and Access Control
 
-**Compliance:**SOC2, HIPAA, GDPR certified—suitable for regulated industries
+<strong>Compliance:</strong>SOC2, HIPAA, GDPR certified—suitable for regulated industries
 
-**Deployment:**Cloud, on-premise, or VPC for dedicated infrastructure
+<strong>Deployment:</strong>Cloud, on-premise, or VPC for dedicated infrastructure
 
-**SSO:**Integrates with enterprise identity providers
+<strong>SSO:</strong>Integrates with enterprise identity providers
 
-**Role-based permissions:**Fine-grained access, audit trails for compliance
+<strong>Role-based permissions:</strong>Fine-grained access, audit trails for compliance
 
 ## Use Cases and Examples
 
 ### Financial Document Review
 
-**Challenge:**High-volume loan or credit application processing
+<strong>Challenge:</strong>High-volume loan or credit application processing
 
-**Workflow:**Ingest documents → OCR and LLM extraction of key terms → Cross-reference databases → Generate reports → Notify on Slack
+<strong>Workflow:</strong>Ingest documents → OCR and LLM extraction of key terms → Cross-reference databases → Generate reports → Notify on Slack
 
-**Outcome:**Review time reduced from hours to minutes, fewer manual errors
+<strong>Outcome:</strong>Review time reduced from hours to minutes, fewer manual errors
 
 ### Healthcare Patient Co-Pilot
 
-**Challenge:**Reduce administrative time for physicians
+<strong>Challenge:</strong>Reduce administrative time for physicians
 
-**Workflow:**Integrate with EHR → Summarize history, generate SOAP notes → Deploy secure chatbot in Teams
+<strong>Workflow:</strong>Integrate with EHR → Summarize history, generate SOAP notes → Deploy secure chatbot in Teams
 
-**Outcome:**Improved documentation, more time for patient care
+<strong>Outcome:</strong>Improved documentation, more time for patient care
 
 ### AI Knowledge Assistant
 
-**Challenge:**Employees need instant, accurate answers from internal docs
+<strong>Challenge:</strong>Employees need instant, accurate answers from internal docs
 
-**Workflow:**Load knowledge base → RAG workflow retrieves relevant info → LLM generates cited answers → Deploy as web/Slack bot
+<strong>Workflow:</strong>Load knowledge base → RAG workflow retrieves relevant info → LLM generates cited answers → Deploy as web/Slack bot
 
-**Outcome:**Boosts productivity, reduces helpdesk tickets
+<strong>Outcome:</strong>Boosts productivity, reduces helpdesk tickets
 
 ### Automated RFP Management
 
-**Challenge:**Tedious, repetitive RFP/questionnaire responses
+<strong>Challenge:</strong>Tedious, repetitive RFP/questionnaire responses
 
-**Workflow:**Ingest RFPs → Draft responses with LLM/templates → Route for review → Submit and track progress
+<strong>Workflow:</strong>Ingest RFPs → Draft responses with LLM/templates → Route for review → Submit and track progress
 
-**Outcome:**Faster, more consistent RFP turnaround
+<strong>Outcome:</strong>Faster, more consistent RFP turnaround
 
 ### Marketing Content QA
 
-**Challenge:**Review volume and quality of marketing copy
+<strong>Challenge:</strong>Review volume and quality of marketing copy
 
-**Workflow:**Pull drafts → LLM checks for grammar, compliance → Summarize feedback → Notify managers
+<strong>Workflow:</strong>Pull drafts → LLM checks for grammar, compliance → Summarize feedback → Notify managers
 
-**Outcome:**Faster, higher-quality reviews, lower risk
+<strong>Outcome:</strong>Faster, higher-quality reviews, lower risk
 
 ## Technical Architecture
 
 Stack AI's technical foundation is modular and cloud-native:
 
-**Node-based workflow engine:**Each step is a modular node (data, logic, AI, output)
+<strong>Node-based workflow engine:</strong>Each step is a modular node (data, logic, AI, output)
 
-**Connector ecosystem:**100+ connectors for SaaS, databases, APIs
+<strong>Connector ecosystem:</strong>100+ connectors for SaaS, databases, APIs
 
-**Model orchestration:**Assign/manage LLMs per workflow step; supports prompt/context injection
+<strong>Model orchestration:</strong>Assign/manage LLMs per workflow step; supports prompt/context injection
 
-**Deployment:**SaaS, VPC, or on-premise
+<strong>Deployment:</strong>SaaS, VPC, or on-premise
 
-**Monitoring/logging:**Detailed run history, error tracking, analytics
+<strong>Monitoring/logging:</strong>Detailed run history, error tracking, analytics
 
-**Vector databases:**Power semantic search and RAG
+<strong>Vector databases:</strong>Power semantic search and RAG
 
-**Machine learning/NLP:**Core for extraction, classification, summarization
+<strong>Machine learning/NLP:</strong>Core for extraction, classification, summarization
 
-**Access/security modules:**Enforce compliance and protection
+<strong>Access/security modules:</strong>Enforce compliance and protection
 
 ## Stack AI vs Other Platforms
 
 | Platform | Target Market | Strengths | Weaknesses |
 |----------|---------------|-----------|------------|
-| **Stack AI**| Enterprise | Deep LLM integration, broad connectors, compliance, excellent UI | Higher price, learning curve |
+| <strong>Stack AI</strong>| Enterprise | Deep LLM integration, broad connectors, compliance, excellent UI | Higher price, learning curve |
 | Box | Enterprise | Document management, workflow automation | Limited AI customization |
 | Pega | Large enterprise | Decision automation, process management | Steep learning curve, expensive |
 | Cflow | SMB/Enterprise | Drag-and-drop builder | Minimal AI integration |
@@ -214,7 +214,7 @@ Stack AI's technical foundation is modular and cloud-native:
 | n8n | Developers/SMB | Open-source, flexible | Less enterprise support/compliance |
 | Gumloop | Agencies/SMB | Fast GPT prototyping | Fewer integrations/compliance gaps |
 
-**Stack AI Differentiators:**- Rapid LLM support (new models adopted quickly)
+<strong>Stack AI Differentiators:</strong>- Rapid LLM support (new models adopted quickly)
 - RAG and vector database integration
 - Enterprise compliance (SOC2/HIPAA/GDPR)
 - Flexible deployment (SaaS, on-prem, VPC)
@@ -222,69 +222,69 @@ Stack AI's technical foundation is modular and cloud-native:
 
 ## Limitations and Considerations
 
-**Pricing:**Free tier for prototyping (500 runs/month); commercial deployments require custom enterprise plans
+<strong>Pricing:</strong>Free tier for prototyping (500 runs/month); commercial deployments require custom enterprise plans
 
-**Learning curve:**Advanced workflows require understanding of LLMs, data pipelines, and integration logic
+<strong>Learning curve:</strong>Advanced workflows require understanding of LLMs, data pipelines, and integration logic
 
-**Onboarding:**Some users note limited step-by-step onboarding for complex cases
+<strong>Onboarding:</strong>Some users note limited step-by-step onboarding for complex cases
 
-**Integration coverage:**Not every SaaS/analytics tool supported out-of-the-box (e.g., Google Analytics missing as of 2025)
+<strong>Integration coverage:</strong>Not every SaaS/analytics tool supported out-of-the-box (e.g., Google Analytics missing as of 2025)
 
-**Support:**Community for free users, dedicated engineers for enterprise
+<strong>Support:</strong>Community for free users, dedicated engineers for enterprise
 
 ## Real-World Feedback
 
-**Testimonials:**- "The amount of adapters and connectors seems endless."
+<strong>Testimonials:</strong>- "The amount of adapters and connectors seems endless."
 - "Impressed with how Stack AI adds support for new LLM models the same day they're released."
 - "A breath of fresh air when it comes to design compared to n8n or similar tools."
 
-**Areas for Improvement:**- More onboarding content for complex workflows needed
+<strong>Areas for Improvement:</strong>- More onboarding content for complex workflows needed
 - Pricing transparency is a common enterprise platform challenge
 
 ## Key Terminology
 
-**Artificial Intelligence (AI):**Simulation of human intelligence by machines
+<strong>Artificial Intelligence (AI):</strong>Simulation of human intelligence by machines
 
-**Workflow Automation:**Automating business processes using software
+<strong>Workflow Automation:</strong>Automating business processes using software
 
-**Large Language Models (LLMs):**AI models trained on large text datasets, such as GPT-4, Claude 3
+<strong>Large Language Models (LLMs):</strong>AI models trained on large text datasets, such as GPT-4, Claude 3
 
-**Retrieval Augmented Generation (RAG):**Combines retrieval from knowledge bases with generative AI for context-aware responses
+<strong>Retrieval Augmented Generation (RAG):</strong>Combines retrieval from knowledge bases with generative AI for context-aware responses
 
-**Vector Databases:**Databases designed for storing/searching high-dimensional vectors (embeddings), key to semantic search
+<strong>Vector Databases:</strong>Databases designed for storing/searching high-dimensional vectors (embeddings), key to semantic search
 
-**Unstructured Data:**Non-tabular data formats (text, PDFs, emails, images)
+<strong>Unstructured Data:</strong>Non-tabular data formats (text, PDFs, emails, images)
 
-**Access Control:**Security mechanism for managing user permissions
+<strong>Access Control:</strong>Security mechanism for managing user permissions
 
-**Drag-and-Drop Interface:**Visual UI for workflow/process building
+<strong>Drag-and-Drop Interface:</strong>Visual UI for workflow/process building
 
-**Technical Expertise:**Skill level required to use/build on a platform
+<strong>Technical Expertise:</strong>Skill level required to use/build on a platform
 
 ## Summary Table
 
 | Feature | Description |
 |---------|-------------|
-| **Type**| No-code AI workflow builder |
-| **Core Focus**| LLM-powered automation, document processing, AI agents |
-| **Industry Fit**| Finance, healthcare, education, insurance, legal, agencies |
-| **Integrations**| 100+ SaaS, data, and communication platforms |
-| **Compliance**| SOC2, HIPAA, GDPR |
-| **Deployment**| Cloud, on-premise, VPC, API, web, chat, Slack, Teams |
-| **Pricing**| Free tier (limited), Enterprise (custom pricing) |
-| **Support**| Community (free), dedicated engineers (enterprise) |
+| <strong>Type</strong>| No-code AI workflow builder |
+| <strong>Core Focus</strong>| LLM-powered automation, document processing, AI agents |
+| <strong>Industry Fit</strong>| Finance, healthcare, education, insurance, legal, agencies |
+| <strong>Integrations</strong>| 100+ SaaS, data, and communication platforms |
+| <strong>Compliance</strong>| SOC2, HIPAA, GDPR |
+| <strong>Deployment</strong>| Cloud, on-premise, VPC, API, web, chat, Slack, Teams |
+| <strong>Pricing</strong>| Free tier (limited), Enterprise (custom pricing) |
+| <strong>Support</strong>| Community (free), dedicated engineers (enterprise) |
 
 ## Frequently Asked Questions
 
-**Can I use Stack AI if I'm not a developer?**Yes. Stack AI's no-code interface and templates make it accessible to business users.
+<strong>Can I use Stack AI if I'm not a developer?</strong>Yes. Stack AI's no-code interface and templates make it accessible to business users.
 
-**What kinds of AI models does Stack AI support?**OpenAI (GPT-4, GPT-3.5), Anthropic (Claude 3), Google Gemini, Cohere, and more.
+<strong>What kinds of AI models does Stack AI support?</strong>OpenAI (GPT-4, GPT-3.5), Anthropic (Claude 3), Google Gemini, Cohere, and more.
 
-**How does Stack AI handle data privacy?**SOC2, HIPAA, GDPR compliant; supports on-prem/VPC deployment and role-based access.
+<strong>How does Stack AI handle data privacy?</strong>SOC2, HIPAA, GDPR compliant; supports on-prem/VPC deployment and role-based access.
 
-**Is Stack AI suitable for small businesses?**Primarily aimed at enterprises. Free tier is available for prototypes; SMBs may prefer alternative platforms.
+<strong>Is Stack AI suitable for small businesses?</strong>Primarily aimed at enterprises. Free tier is available for prototypes; SMBs may prefer alternative platforms.
 
-**What is a typical Stack AI workflow?**Input (file, email, API) → Data extraction (OCR, LLM) → Analysis → Output (CRM, Slack, report).
+<strong>What is a typical Stack AI workflow?</strong>Input (file, email, API) → Data extraction (OCR, LLM) → Analysis → Output (CRM, Slack, report).
 
 ## References
 

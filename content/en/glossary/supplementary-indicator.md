@@ -40,7 +40,7 @@ Proxy indicators serve as indirect measures when direct measurement is impractic
 
 ## Indicator Type Comparison
 
-| **Indicator Type**| **Primary Purpose**| **Relationship to Goal**| **Example in AI Chatbot**|
+| <strong>Indicator Type</strong>| <strong>Primary Purpose</strong>| <strong>Relationship to Goal</strong>| <strong>Example in AI Chatbot</strong>|
 |-------------------|---------------------|-------------------------|--------------------------|
 | Primary | Measure core objective | Direct measurement | Resolution rate |
 | Supplementary | Context and validation | Supporting evidence | Response time, satisfaction |
@@ -71,37 +71,37 @@ Systematic selection processes ensure supplementary indicators add value without
 
 ### Selection Criteria
 
-**Directness**Indicators should measure the specific aspect they're intended to assess. Vague or indirect measures add noise without insight. Response time directly measures speed. CPU utilization indirectly suggests capacity constraints but doesn't directly measure user experience.
+<strong>Directness</strong>Indicators should measure the specific aspect they're intended to assess. Vague or indirect measures add noise without insight. Response time directly measures speed. CPU utilization indirectly suggests capacity constraints but doesn't directly measure user experience.
 
-**Objectivity**Measurements should be unambiguous and reproducible. Quantitative metrics generally offer more objectivity than subjective assessments, though carefully designed qualitative measures have roles. System-logged response times are objective. User impressions of speed are subjective but valuable.
+<strong>Objectivity</strong>Measurements should be unambiguous and reproducible. Quantitative metrics generally offer more objectivity than subjective assessments, though carefully designed qualitative measures have roles. System-logged response times are objective. User impressions of speed are subjective but valuable.
 
-**Adequacy**The complete set of supplementary indicators should cover all important aspects of performance not captured by primary metrics. Gaps in coverage leave blind spots. Redundant indicators waste measurement resources without adding information.
+<strong>Adequacy</strong>The complete set of supplementary indicators should cover all important aspects of performance not captured by primary metrics. Gaps in coverage leave blind spots. Redundant indicators waste measurement resources without adding information.
 
-**Practicality**Data collection must be feasible given available tools, resources, and systems. Indicators requiring extensive manual effort, expensive instrumentation, or invasive monitoring may not justify their value. Automated logging of system metrics is practical. Surveying every user about every interaction is often impractical.
+<strong>Practicality</strong>Data collection must be feasible given available tools, resources, and systems. Indicators requiring extensive manual effort, expensive instrumentation, or invasive monitoring may not justify their value. Automated logging of system metrics is practical. Surveying every user about every interaction is often impractical.
 
-**Reliability**Measurements should be stable and trustworthy. Noisy indicators that fluctuate wildly obscure real performance changes. Flaky sensors, inconsistent collection processes, or biased measurement methods undermine indicator value.
+<strong>Reliability</strong>Measurements should be stable and trustworthy. Noisy indicators that fluctuate wildly obscure real performance changes. Flaky sensors, inconsistent collection processes, or biased measurement methods undermine indicator value.
 
 ### Selection Process
 
-**Step 1: Define Core Objectives**Clearly articulate what the primary indicator measures and what successful performance looks like. Understand stakeholder needs and system requirements.
+<strong>Step 1: Define Core Objectives</strong>Clearly articulate what the primary indicator measures and what successful performance looks like. Understand stakeholder needs and system requirements.
 
-**Step 2: Identify Evaluation Gaps**Analyze what aspects of performance the primary indicator doesn't capture. Consider speed, quality, cost, user experience, reliability, fairness, and sustainability dimensions.
+<strong>Step 2: Identify Evaluation Gaps</strong>Analyze what aspects of performance the primary indicator doesn't capture. Consider speed, quality, cost, user experience, reliability, fairness, and sustainability dimensions.
 
-**Step 3: Generate Candidate Indicators**Brainstorm potential measures addressing identified gaps. Consult domain experts, review relevant literature, and examine comparable systems. Generate more candidates than needed.
+<strong>Step 3: Generate Candidate Indicators</strong>Brainstorm potential measures addressing identified gaps. Consult domain experts, review relevant literature, and examine comparable systems. Generate more candidates than needed.
 
-**Step 4: Apply Selection Criteria**Systematically evaluate each candidate against directness, objectivity, adequacy, practicality, and reliability criteria. Eliminate indicators failing multiple criteria.
+<strong>Step 4: Apply Selection Criteria</strong>Systematically evaluate each candidate against directness, objectivity, adequacy, practicality, and reliability criteria. Eliminate indicators failing multiple criteria.
 
-**Step 5: Prioritize and Validate**Rank remaining candidates by value and feasibility. Select a manageable set providing comprehensive coverage without overwhelming measurement systems. Pilot selected indicators to validate usefulness.
+<strong>Step 5: Prioritize and Validate</strong>Rank remaining candidates by value and feasibility. Select a manageable set providing comprehensive coverage without overwhelming measurement systems. Pilot selected indicators to validate usefulness.
 
-**Step 6: Implement and Monitor**Integrate indicators into dashboards and reporting systems. Train stakeholders on interpretation. Periodically review whether indicators continue providing value as systems and requirements evolve.
+<strong>Step 6: Implement and Monitor</strong>Integrate indicators into dashboards and reporting systems. Train stakeholders on interpretation. Periodically review whether indicators continue providing value as systems and requirements evolve.
 
 ## Application in AI and Automation
 
 ### Machine Learning Model Evaluation
 
-**Primary Indicator:**Overall accuracy or F1-score  
+<strong>Primary Indicator:</strong>Overall accuracy or F1-score  
 
-**Supplementary Indicators:**- Class-specific precision and recall revealing per-category performance
+<strong>Supplementary Indicators:</strong>- Class-specific precision and recall revealing per-category performance
 - Confusion matrices showing systematic error patterns
 - Calibration metrics measuring confidence reliability
 - Processing latency indicating deployment feasibility
@@ -112,9 +112,9 @@ These supplementary indicators prevent optimizing for headline accuracy while cr
 
 ### Chatbot Performance Assessment
 
-**Primary Indicator:**Resolution rate (percentage of queries resolved without escalation)
+<strong>Primary Indicator:</strong>Resolution rate (percentage of queries resolved without escalation)
 
-**Supplementary Indicators:**- Average response time measuring speed
+<strong>Supplementary Indicators:</strong>- Average response time measuring speed
 - User satisfaction scores capturing experience quality
 - Escalation frequency revealing complexity handling
 - Conversation length indicating efficiency
@@ -125,9 +125,9 @@ Together, these indicators reveal whether the chatbot provides fast, satisfactor
 
 ### Automated Process Monitoring
 
-**Primary Indicator:**Task completion rate
+<strong>Primary Indicator:</strong>Task completion rate
 
-**Supplementary Indicators:**- Processing time per task measuring efficiency
+<strong>Supplementary Indicators:</strong>- Processing time per task measuring efficiency
 - Exception rate showing automation reliability
 - Manual intervention frequency indicating true automation level
 - Error rates measuring quality
@@ -138,9 +138,9 @@ These prevent declaring automation success when tasks complete only after extens
 
 ### Healthcare AI Systems
 
-**Primary Indicator:**Diagnostic accuracy
+<strong>Primary Indicator:</strong>Diagnostic accuracy
 
-**Supplementary Indicators:**- False positive and false negative rates for different conditions
+<strong>Supplementary Indicators:</strong>- False positive and false negative rates for different conditions
 - Time to diagnosis measuring clinical workflow impact
 - Clinician confidence in recommendations
 - Patient outcome metrics validating clinical utility
@@ -209,17 +209,17 @@ Advanced statistical techniques identify causal relationships between supplement
 
 ## Frequently Asked Questions
 
-**How many supplementary indicators should we use?**Use as few as necessary to provide adequate context. Start with 3-5 per primary indicator, adding more only when clear gaps exist. Too many indicators overwhelm users and dilute focus.
+<strong>How many supplementary indicators should we use?</strong>Use as few as necessary to provide adequate context. Start with 3-5 per primary indicator, adding more only when clear gaps exist. Too many indicators overwhelm users and dilute focus.
 
-**Should supplementary indicators have targets or thresholds?**Yes, where appropriate. Thresholds trigger alerts when supplementary indicators signal problems. However, avoid treating all supplementary indicators as formal targets to prevent gaming.
+<strong>Should supplementary indicators have targets or thresholds?</strong>Yes, where appropriate. Thresholds trigger alerts when supplementary indicators signal problems. However, avoid treating all supplementary indicators as formal targets to prevent gaming.
 
-**Can supplementary indicators become primary indicators?**Yes, if organizational priorities shift. An indicator's classification reflects its role in current evaluation framework, not inherent properties. Today's supplementary indicator measuring user satisfaction might become tomorrow's primary indicator if strategy shifts toward retention.
+<strong>Can supplementary indicators become primary indicators?</strong>Yes, if organizational priorities shift. An indicator's classification reflects its role in current evaluation framework, not inherent properties. Today's supplementary indicator measuring user satisfaction might become tomorrow's primary indicator if strategy shifts toward retention.
 
-**How do we handle conflicting indicators?**Conflicts reveal trade-offs. Surface them explicitly to stakeholders who must decide priority. Sometimes conflicts indicate measurement problems requiring investigation. Other times they reflect genuine tensions requiring explicit choices.
+<strong>How do we handle conflicting indicators?</strong>Conflicts reveal trade-offs. Surface them explicitly to stakeholders who must decide priority. Sometimes conflicts indicate measurement problems requiring investigation. Other times they reflect genuine tensions requiring explicit choices.
 
-**What if we can't measure ideal supplementary indicators?**Use proxies or accept gaps in coverage. Acknowledge limitations when interpreting results. Invest in improving measurement capabilities for critical indicators. Consider qualitative assessment methods when quantitative measurement is infeasible.
+<strong>What if we can't measure ideal supplementary indicators?</strong>Use proxies or accept gaps in coverage. Acknowledge limitations when interpreting results. Invest in improving measurement capabilities for critical indicators. Consider qualitative assessment methods when quantitative measurement is infeasible.
 
-**How often should we review indicator selection?**Quarterly or semi-annually for stable systems. More frequently for rapidly evolving systems or during major changes. Review whenever primary indicators change, new stakeholders join, or strategic priorities shift.
+<strong>How often should we review indicator selection?</strong>Quarterly or semi-annually for stable systems. More frequently for rapidly evolving systems or during major changes. Review whenever primary indicators change, new stakeholders join, or strategic priorities shift.
 
 ## References
 

@@ -23,15 +23,15 @@ Unlike single-turn interactions, the system must remember and use information fr
 
 ## Why Multi-Turn Conversations Matter
 
-**Complex Tasks:**Many user goals involve multiple data points, steps, or decisions that cannot be handled in a single prompt-response pair.
+<strong>Complex Tasks:</strong>Many user goals involve multiple data points, steps, or decisions that cannot be handled in a single prompt-response pair.
 
-**Natural Dialogue:**Users expect to interact with systems conversationally, using pronouns, referencing previous answers, and correcting themselves without restating everything.
+<strong>Natural Dialogue:</strong>Users expect to interact with systems conversationally, using pronouns, referencing previous answers, and correcting themselves without restating everything.
 
-**Customer Experience:**Avoids user frustration by not repeating questions, handling context naturally, and providing seamless experience.
+<strong>Customer Experience:</strong>Avoids user frustration by not repeating questions, handling context naturally, and providing seamless experience.
 
-**Non-Linear Interactions:**Supports topic shifts, clarifications, and corrections mid-flow, just as in human conversation.
+<strong>Non-Linear Interactions:</strong>Supports topic shifts, clarifications, and corrections mid-flow, just as in human conversation.
 
-**Key Benefits:**- Higher task completion rates
+<strong>Key Benefits:</strong>- Higher task completion rates
 - Improved customer satisfaction (CSAT)
 - More robust automation
 - Human-like digital experiences
@@ -64,7 +64,7 @@ Knows when to reset or clear stored data (after task completion or inactivity).
 
 ## Dialogue Example
 
-**Scenario: Booking Flight via Chatbot**```
+<strong>Scenario: Booking Flight via Chatbot</strong>```
 User: I'd like to book a flight.
 Bot: Sure! Where would you like to fly to?
 User: London.

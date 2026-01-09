@@ -28,42 +28,42 @@ This dynamic retrieval process mirrors a legal judge consulting a law library fo
 
 ### Limitations of Standalone LLMs
 
-- **Static Knowledge:**LLMs cannot access information generated or updated after their last training cycle ([AWS](https://aws.amazon.com/what-is/retrieval-augmented-generation/)).
-- **Hallucinations:**LLMs may fabricate plausible-sounding but false or unverifiable information, undermining trust.
-- **Opaque Reasoning:**Without source attribution, verifying AI responses is difficult.
-- **Costly Updates:**Retraining LLMs is expensive and time-consuming.
+- <strong>Static Knowledge:</strong>LLMs cannot access information generated or updated after their last training cycle ([AWS](https://aws.amazon.com/what-is/retrieval-augmented-generation/)).
+- <strong>Hallucinations:</strong>LLMs may fabricate plausible-sounding but false or unverifiable information, undermining trust.
+- <strong>Opaque Reasoning:</strong>Without source attribution, verifying AI responses is difficult.
+- <strong>Costly Updates:</strong>Retraining LLMs is expensive and time-consuming.
 
 ### RAG Solves These Challenges
 
-- **Access to Authoritative, Up-To-Date Data:**By linking to curated sources, RAG ensures responses are grounded in the latest information.
-- **Reduced Hallucinations:**Factual grounding minimizes the risk of fabrication.
-- **Source Attribution:**RAG can provide citations, allowing users to verify information ([AWS](https://aws.amazon.com/what-is/retrieval-augmented-generation/)).
-- **No Retraining Needed:**New knowledge is incorporated by updating the external data, not the LLM itself.
+- <strong>Access to Authoritative, Up-To-Date Data:</strong>By linking to curated sources, RAG ensures responses are grounded in the latest information.
+- <strong>Reduced Hallucinations:</strong>Factual grounding minimizes the risk of fabrication.
+- <strong>Source Attribution:</strong>RAG can provide citations, allowing users to verify information ([AWS](https://aws.amazon.com/what-is/retrieval-augmented-generation/)).
+- <strong>No Retraining Needed:</strong>New knowledge is incorporated by updating the external data, not the LLM itself.
 
-**Example:**An HR chatbot using RAG can answer policy queries with the latest company documentation, even if those policies changed after the LLM’s last training ([NVIDIA](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)).
+<strong>Example:</strong>An HR chatbot using RAG can answer policy queries with the latest company documentation, even if those policies changed after the LLM’s last training ([NVIDIA](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)).
 
 ## How Does RAG Work?
 
 ### 1. Data Preparation and Indexing
-- **External Data Collection:**Aggregate documents, records, emails, web pages, or databases.
-- **Preprocessing:**Data is cleaned, chunked, and converted into embeddings (vector representations) using embedding models like Sentence Transformers or OpenAI’s embeddings API.
-- **Vector Storage:**Embeddings are stored in a vector database (e.g., Pinecone, FAISS) for efficient retrieval.
+- <strong>External Data Collection:</strong>Aggregate documents, records, emails, web pages, or databases.
+- <strong>Preprocessing:</strong>Data is cleaned, chunked, and converted into embeddings (vector representations) using embedding models like Sentence Transformers or OpenAI’s embeddings API.
+- <strong>Vector Storage:</strong>Embeddings are stored in a vector database (e.g., Pinecone, FAISS) for efficient retrieval.
 
 ### 2. Query and Retrieval
-- **Query Embedding:**User input is embedded into a vector using the same embedding model.
-- **Similarity Search:**The query vector is compared to stored document vectors; top matches are retrieved.
+- <strong>Query Embedding:</strong>User input is embedded into a vector using the same embedding model.
+- <strong>Similarity Search:</strong>The query vector is compared to stored document vectors; top matches are retrieved.
 
 ### 3. Prompt Augmentation
-- **Contextual Prompt Construction:**Retrieved snippets are combined with the user’s query to build a context-rich prompt for the LLM.
+- <strong>Contextual Prompt Construction:</strong>Retrieved snippets are combined with the user’s query to build a context-rich prompt for the LLM.
 
 ### 4. Response Generation
-- **LLM Generation:**The LLM generates a response, using both its internal knowledge and retrieved external information.
-- **Citation (Optional):**The output may reference the source documents.
+- <strong>LLM Generation:</strong>The LLM generates a response, using both its internal knowledge and retrieved external information.
+- <strong>Citation (Optional):</strong>The output may reference the source documents.
 
 ### 5. Continuous Data Updates
-- **Live Refresh:**As new information is added, the vector database is updated, ensuring the system always retrieves the latest knowledge.
+- <strong>Live Refresh:</strong>As new information is added, the vector database is updated, ensuring the system always retrieves the latest knowledge.
 
-**Illustration:**User: “What’s our latest PTO policy?”  
+<strong>Illustration:</strong>User: “What’s our latest PTO policy?”  
 System: Retrieves current HR docs → LLM generates answer with references.
 
 *For step-by-step technical detail, see [AWS: How does Retrieval-Augmented Generation work?](https://aws.amazon.com/what-is/retrieval-augmented-generation/#how-does-retrieval-augmented-generation-work--1xobboj)*
@@ -111,9 +111,9 @@ System: Retrieves current HR docs → LLM generates answer with references.
 | Improved Search & Retrieval      | Leverages semantic search and vector databases.                   |
 | Hallucination Mitigation         | Grounds outputs in factual, retrievable knowledge.                |
 
-- **Cost-effective implementation:**No need for expensive re-training ([AWS](https://aws.amazon.com/what-is/retrieval-augmented-generation/)).
-- **Enhanced user trust:**Transparent citations build confidence.
-- **Developer control:**Curate sources, apply access controls, and troubleshoot easily.
+- <strong>Cost-effective implementation:</strong>No need for expensive re-training ([AWS](https://aws.amazon.com/what-is/retrieval-augmented-generation/)).
+- <strong>Enhanced user trust:</strong>Transparent citations build confidence.
+- <strong>Developer control:</strong>Curate sources, apply access controls, and troubleshoot easily.
 
 ## Main Challenges and Limitations
 
@@ -126,9 +126,9 @@ System: Retrieves current HR docs → LLM generates answer with references.
 | Security & Governance    | Protect sensitive information and enforce access controls.         |
 | Implementation Complexity| Requires expertise in AI, search, and system integration.          |
 
-- **Query Understanding:**Ambiguous or vague questions can degrade retrieval quality.
-- **Multi-source Integration:**Combining diverse sources (SharePoint, databases, file systems) is complex.
-- **Response Time:**Balancing thoroughness with low latency is critical.
+- <strong>Query Understanding:</strong>Ambiguous or vague questions can degrade retrieval quality.
+- <strong>Multi-source Integration:</strong>Combining diverse sources (SharePoint, databases, file systems) is complex.
+- <strong>Response Time:</strong>Balancing thoroughness with low latency is critical.
 
 ## Practical Applications and Industry Examples
 
@@ -158,43 +158,43 @@ A financial services chatbot uses RAG to access regulatory updates and client in
 
 ## Getting Started with RAG / Best Practices
 
-1. **Assess Data Sources:**Curate authoritative, up-to-date information for retrieval.
+1. <strong>Assess Data Sources:</strong>Curate authoritative, up-to-date information for retrieval.
 
-2. **Choose Embedding and Retrieval Technologies:**Select models and vector databases suited to your data.
+2. <strong>Choose Embedding and Retrieval Technologies:</strong>Select models and vector databases suited to your data.
 
-3. **Implement Retriever–Generator Pipeline:**Integrate semantic and keyword retrievers with your LLM of choice.
+3. <strong>Implement Retriever–Generator Pipeline:</strong>Integrate semantic and keyword retrievers with your LLM of choice.
 
-4. **Optimize for Relevance and Performance:**Tune top-k retrieval, score thresholds, and use re-ranking models.
+4. <strong>Optimize for Relevance and Performance:</strong>Tune top-k retrieval, score thresholds, and use re-ranking models.
 
-5. **Enforce Security and Governance:**Apply access controls to protect sensitive data.
+5. <strong>Enforce Security and Governance:</strong>Apply access controls to protect sensitive data.
 
-6. **Monitor and Iterate:**Evaluate retrieval quality and generation accuracy continuously.
+6. <strong>Monitor and Iterate:</strong>Evaluate retrieval quality and generation accuracy continuously.
 
-7. **Leverage Cloud and Open Source Tools:**- **AWS:**[Amazon Bedrock](https://aws.amazon.com/bedrock/), [Amazon Kendra](https://aws.amazon.com/kendra/)
-   - **Azure:**[Azure AI Search](https://azure.microsoft.com/en-us/products/ai-services/search/)
-   - **Google Cloud:**[Vertex AI Search and RAG Engine](https://cloud.google.com/vertex-ai/docs/generative-ai/search)
-   - **NVIDIA:**[NeMo Retriever](https://developer.nvidia.com/nemo), [NIM microservices](https://developer.nvidia.com/blog/nvidia-nim-microservices/)
-   - **Open Source:**[LangChain](https://python.langchain.com/), [LlamaIndex](https://llamaindex.ai/)
+7. <strong>Leverage Cloud and Open Source Tools:</strong>- <strong>AWS:</strong>[Amazon Bedrock](https://aws.amazon.com/bedrock/), [Amazon Kendra](https://aws.amazon.com/kendra/)
+   - <strong>Azure:</strong>[Azure AI Search](https://azure.microsoft.com/en-us/products/ai-services/search/)
+   - <strong>Google Cloud:</strong>[Vertex AI Search and RAG Engine](https://cloud.google.com/vertex-ai/docs/generative-ai/search)
+   - <strong>NVIDIA:</strong>[NeMo Retriever](https://developer.nvidia.com/nemo), [NIM microservices](https://developer.nvidia.com/blog/nvidia-nim-microservices/)
+   - <strong>Open Source:</strong>[LangChain](https://python.langchain.com/), [LlamaIndex](https://llamaindex.ai/)
 
 ## RAG in Action: Example Scenario
 
-**Scenario:**User asks: “Who is the current CEO, and what are the latest company goals for this year?”  
-**Workflow:**1. System retrieves current press releases and strategic documents.
+<strong>Scenario:</strong>User asks: “Who is the current CEO, and what are the latest company goals for this year?”  
+<strong>Workflow:</strong>1. System retrieves current press releases and strategic documents.
 2. LLM augments the prompt with retrieved content.
 3. Assistant responds with factually accurate, referenced information.
 4. Citations or links to the sources are provided.
 
 ## Frequently Asked Questions (FAQ)
 
-**Q: What types of data sources can RAG access?**A: Structured (databases, spreadsheets), unstructured (PDFs, emails, web pages), knowledge graphs, and live data feeds ([AWS](https://aws.amazon.com/what-is/retrieval-augmented-generation/)).
+<strong>Q: What types of data sources can RAG access?</strong>A: Structured (databases, spreadsheets), unstructured (PDFs, emails, web pages), knowledge graphs, and live data feeds ([AWS](https://aws.amazon.com/what-is/retrieval-augmented-generation/)).
 
-**Q: How does RAG reduce hallucinations?**A: By grounding LLM outputs in externally retrieved, verifiable information.
+<strong>Q: How does RAG reduce hallucinations?</strong>A: By grounding LLM outputs in externally retrieved, verifiable information.
 
-**Q: When is RAG preferred over retraining?**A: When rapid, frequent, or proprietary knowledge updates are needed.
+<strong>Q: When is RAG preferred over retraining?</strong>A: When rapid, frequent, or proprietary knowledge updates are needed.
 
-**Q: Can RAG provide source citations?**A: Yes, many RAG systems support citations or direct links to sources.
+<strong>Q: Can RAG provide source citations?</strong>A: Yes, many RAG systems support citations or direct links to sources.
 
-**Q: What are the main technical components of RAG?**A: Retriever, vector database, LLM, and prompt engineering logic.
+<strong>Q: What are the main technical components of RAG?</strong>A: Retriever, vector database, LLM, and prompt engineering logic.
 
 ## References & Further Reading
 
@@ -210,12 +210,12 @@ A financial services chatbot uses RAG to access regulatory updates and client in
 - [LangChain Tutorials](https://python.langchain.com/docs/use_cases/question_answering/)
 - [LlamaIndex Tutorials](https://docs.llamaindex.ai/en/stable/)
 
-**For a deeper dive:**- [NVIDIA: Generative AI Explained](https://www.nvidia.com/en-us/glossary/data-science/generative-ai/)
+<strong>For a deeper dive:</strong>- [NVIDIA: Generative AI Explained](https://www.nvidia.com/en-us/glossary/data-science/generative-ai/)
 - [AWS: AI and Machine Learning Glossary](https://aws.amazon.com/what-is/artificial-intelligence/)
 - [OpenAI: GPT-4 Technical Report](https://cdn.openai.com/papers/gpt-4.pdf)
 - [Google Cloud: Vertex AI RAG Engine](https://cloud.google.com/vertex-ai/docs/generative-ai/search)
 - [Microsoft: Azure AI Search RAG](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)
 
-**Attribution:**This glossary consolidates and expands upon knowledge from AWS, NVIDIA, Wikipedia, Meta AI, and the foundational RAG paper by Lewis et al. (2020). For real-world implementations and tutorials, refer to [Hugging Face](https://huggingface.co/facebook/rag-token-nq), [LangChain](https://python.langchain.com/), and [LlamaIndex](https://llamaindex.ai/).
+<strong>Attribution:</strong>This glossary consolidates and expands upon knowledge from AWS, NVIDIA, Wikipedia, Meta AI, and the foundational RAG paper by Lewis et al. (2020). For real-world implementations and tutorials, refer to [Hugging Face](https://huggingface.co/facebook/rag-token-nq), [LangChain](https://python.langchain.com/), and [LlamaIndex](https://llamaindex.ai/).
 
 *For the latest advancements, see the [NVIDIA Blog](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/) and [AWS RAG Explained](https://aws.amazon.com/what-is/retrieval-augmented-generation/).*

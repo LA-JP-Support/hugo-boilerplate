@@ -11,9 +11,9 @@ draft: false
 ---
 ## What is KV Cache?
 
-**KV Cache**(Key-Value Cache) is an inference-time optimization for transformer models, especially *large language models* (LLMs), that stores the key (K) and value (V) tensors computed during attention for all previously processed tokens. Instead of recalculating these tensors for every token at each inference step, the model reuses them from a cache and computes only the new token’s K and V. This approach is foundational for efficient, high-speed autoregressive text generation.
+<strong>KV Cache</strong>(Key-Value Cache) is an inference-time optimization for transformer models, especially *large language models* (LLMs), that stores the key (K) and value (V) tensors computed during attention for all previously processed tokens. Instead of recalculating these tensors for every token at each inference step, the model reuses them from a cache and computes only the new token’s K and V. This approach is foundational for efficient, high-speed autoregressive text generation.
 
-**In short:**> KV Cache is an auxiliary memory holding the intermediate key and value tensors from previous tokens so that, as new tokens are generated, only the new token’s K and V need to be computed and appended. All prior K/Vs are instantly available from the cache.
+<strong>In short:</strong>> KV Cache is an auxiliary memory holding the intermediate key and value tensors from previous tokens so that, as new tokens are generated, only the new token’s K and V need to be computed and appended. All prior K/Vs are instantly available from the cache.
 
 ### Authority Sources:
 - [Hugging Face: KV Caching Explained](https://huggingface.co/blog/not-lain/kv-caching)
@@ -24,10 +24,10 @@ draft: false
 KV Cache is used exclusively during inference in transformer-based models for generating text token-by-token.
 
 ### Core Usage Pattern:
-- **Autoregressive Generation:**LLMs generate text one token at a time, conditioning each prediction on all prior tokens.
-- **At each inference step:**The model needs K and V for the full sequence so far to compute attention for the next token.
-- **With KV Cache:**Instead of recomputing K and V for all previous tokens at every step, only the new token’s K and V are computed and appended to the cache.
-- **Outcome:**Dramatically reduced computation, lower [latency](/en/glossary/latency/), and notable cost savings during inference—especially for long sequences.
+- <strong>Autoregressive Generation:</strong>LLMs generate text one token at a time, conditioning each prediction on all prior tokens.
+- <strong>At each inference step:</strong>The model needs K and V for the full sequence so far to compute attention for the next token.
+- <strong>With KV Cache:</strong>Instead of recomputing K and V for all previous tokens at every step, only the new token’s K and V are computed and appended to the cache.
+- <strong>Outcome:</strong>Dramatically reduced computation, lower latency, and notable cost savings during inference—especially for long sequences.
 
 ### Common Usage Contexts:
 - Text generation with LLMs (e.g., GPT, Llama, Claude, Gemini)
@@ -44,9 +44,9 @@ KV Cache is used exclusively during inference in transformer-based models for ge
 ### Challenge Without KV Cache
 
 The transformer attention mechanism involves three projections per token:
-- **Query (Q):**What the current token “wants to know.”
-- **Key (K):**The “address label” of each token.
-- **Value (V):**The “content” of each token.
+- <strong>Query (Q):</strong>What the current token “wants to know.”
+- <strong>Key (K):</strong>The “address label” of each token.
+- <strong>Value (V):</strong>The “content” of each token.
 
 During inference, LLMs process input one token at a time. Standard inference recomputes K and V for every token in the current sequence, including those already processed. This is highly inefficient for long sequences.
 
@@ -61,9 +61,9 @@ Suppose generating "The cat sits":
 - On “cat”, compute K/V for “cat”, append to cache.
 - On “sits”, compute K/V for “sits”, append to cache; “The” and “cat” K/V are reused.
 
-**Optimization is critical for:**- **Speed:**Up to 5–20× faster inference.
-- **Cost:**Significant reduction in compute and API costs.
-- **Scalability:**Enables long-context and multi-turn conversations.
+<strong>Optimization is critical for:</strong>- <strong>Speed:</strong>Up to 5–20× faster inference.
+- <strong>Cost:</strong>Significant reduction in compute and API costs.
+- <strong>Scalability:</strong>Enables long-context and multi-turn conversations.
 
 ##### Further Authority:
 - [Neptune: Transformers Key-Value Caching Explained](https://neptune.ai/blog/transformers-key-value-caching)
@@ -77,7 +77,7 @@ Suppose generating "The cat sits":
 For prompt: `["The", "cat", "sits"]`
 - Each step recomputes K and V for all tokens in the current sequence.
 
-**Diagram:**```
+<strong>Diagram:</strong>```
 Step 1: "The"           --> K1, V1    (computed)
 Step 2: "The cat"       --> K1, V1, K2, V2  (K1, V1 recomputed)
 Step 3: "The cat sits"  --> K1, V1, K2, V2, K3, V3 (K1, V1, K2, V2 recomputed)
@@ -91,7 +91,7 @@ Step 1: "The"      --> K1, V1    (stored in cache)
 Step 2: "cat"      --> K2, V2    (appended to cache)
 Step 3: "sits"     --> K3, V3    (appended to cache)
 ```
-**Cache after step 3:**```
+<strong>Cache after step 3:</strong>```
 K-cache: [K1, K2, K3]
 V-cache: [V1, V2, V3]
 ```

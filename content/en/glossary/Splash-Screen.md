@@ -14,11 +14,11 @@ draft: false
 
 A splash screen is a non-interactive, branded image or animation that appears during the initial loading phase of an application or chatbot interface. It typically displays a logo, company name, or tagline and serves as a transitional visual while resources load or background processes initialize.
 
-**Mobile & Web Apps:**Splash screens display while the app loads critical resources, offering a visual cue that the app is starting and preventing the perception of a frozen or broken interface.
+<strong>Mobile & Web Apps:</strong>Splash screens display while the app loads critical resources, offering a visual cue that the app is starting and preventing the perception of a frozen or broken interface.
 
-**AI Chatbot Widgets:**When a chatbot widget is triggered, the splash screen is shown until the chat interface and AI models are ready for user interaction.
+<strong>AI Chatbot Widgets:</strong>When a chatbot widget is triggered, the splash screen is shown until the chat interface and AI models are ready for user interaction.
 
-**Key Characteristics:**- Minimalistic design centered on branding
+<strong>Key Characteristics:</strong>- Minimalistic design centered on branding
 - Non-interactive—users cannot click or interact
 - Automatically dismissed when loading completes
 - Often supports light and dark themes, responsive layouts, and high contrast for accessibility
@@ -27,27 +27,27 @@ A splash screen is a non-interactive, branded image or animation that appears du
 
 ### Brand Identity and First Impressions
 
-**Brand Reinforcement:**Splash screens provide immediate exposure to logos, colors, and visual identity, cementing brand presence from the first moment of engagement.
+<strong>Brand Reinforcement:</strong>Splash screens provide immediate exposure to logos, colors, and visual identity, cementing brand presence from the first moment of engagement.
 
-**Professionalism:**A polished splash screen signals a well-crafted application, increasing user trust and perceived quality.
+<strong>Professionalism:</strong>A polished splash screen signals a well-crafted application, increasing user trust and perceived quality.
 
-**Consistency:**Establishes consistent look and feel across platforms and devices.
+<strong>Consistency:</strong>Establishes consistent look and feel across platforms and devices.
 
 ### User Experience and Perceived Performance
 
-**Loading Feedback:**Offers clear feedback that the application or chatbot is initializing, reducing the likelihood of users perceiving a broken or unresponsive interface.
+<strong>Loading Feedback:</strong>Offers clear feedback that the application or chatbot is initializing, reducing the likelihood of users perceiving a broken or unresponsive interface.
 
-**Perceived Speed:**Subtle animations or dynamic elements can make wait times feel shorter, even if actual loading takes several seconds.
+<strong>Perceived Speed:</strong>Subtle animations or dynamic elements can make wait times feel shorter, even if actual loading takes several seconds.
 
-**Transition Smoothing:**Eases users into the main interface, smoothing the visual transition between loading and active interface.
+<strong>Transition Smoothing:</strong>Eases users into the main interface, smoothing the visual transition between loading and active interface.
 
 ### Technical and Practical Roles
 
-**Resource Initialization:**Provides time for loading assets (AI models, data, authentication), especially important for AI chatbot widgets requiring API handshakes or model loading.
+<strong>Resource Initialization:</strong>Provides time for loading assets (AI models, data, authentication), especially important for AI chatbot widgets requiring API handshakes or model loading.
 
-**Error Handling:**Can be adapted to display friendly error messages in case of loading failures due to network issues.
+<strong>Error Handling:</strong>Can be adapted to display friendly error messages in case of loading failures due to network issues.
 
-**Security:**In banking or enterprise contexts, splash screens allow secure authentication or environment checks before user interaction.
+<strong>Security:</strong>In banking or enterprise contexts, splash screens allow secure authentication or environment checks before user interaction.
 
 ## Design Best Practices
 
@@ -103,11 +103,11 @@ A splash screen is a non-interactive, branded image or animation that appears du
 
 Since Android 12, the SplashScreen API standardizes splash screens with system-managed animations and transitions. For earlier versions, use the compat library.
 
-**Key Implementation Steps:**- Define splash screen elements in XML (logo, background, animation)
+<strong>Key Implementation Steps:</strong>- Define splash screen elements in XML (logo, background, animation)
 - Use vector drawables for logos to ensure scalability
 - Implement custom exit animations for smoother transitions
 
-**Sample XML Theme:**```xml
+<strong>Sample XML Theme:</strong>```xml
 <item name="android:windowSplashScreenBackground">@color/white</item>
 <item name="android:windowSplashScreenAnimatedIcon">@drawable/animated_logo</item>
 <item name="android:windowSplashScreenAnimationDuration">1000</item>
@@ -122,30 +122,30 @@ splashScreen.setOnExitAnimationListener { splashScreenView ->
 }
 ```
 
-**Customization Options:**- Light and dark mode support through separate resource files
+<strong>Customization Options:</strong>- Light and dark mode support through separate resource files
 - Adaptive icon backgrounds for improved contrast
 - Animation duration recommendations: keep under 1,000 ms
 
-**Migration:**If using custom splash screens in Android 11 or earlier, migrate to the SplashScreen API for consistency and compliance with modern Android UX guidelines.
+<strong>Migration:</strong>If using custom splash screens in Android 11 or earlier, migrate to the SplashScreen API for consistency and compliance with modern Android UX guidelines.
 
 ### iOS
 
 iOS uses static launch images or storyboards for splash screens, defined in Xcode project settings.
 
-**Best Practices:**- Use launch screen storyboard that matches style of main app interface
+<strong>Best Practices:</strong>- Use launch screen storyboard that matches style of main app interface
 - Avoid placing text or time-sensitive information on splash screen
 - Keep launch images simple and free from interactive elements
 
-**Customization:**- Use vector assets for logos and icons to support all device sizes and resolutions
+<strong>Customization:</strong>- Use vector assets for logos and icons to support all device sizes and resolutions
 - Align brand colors and visual elements with rest of app's UI
 
-**Apple Guidelines:**Design a launch screen nearly identical to the first screen of your app. The launch screen quickly transitions to the first screen to make your app feel fast and responsive.
+<strong>Apple Guidelines:</strong>Design a launch screen nearly identical to the first screen of your app. The launch screen quickly transitions to the first screen to make your app feel fast and responsive.
 
 ### Web Applications & Chatbot Widgets
 
 Web splash screens are typically HTML/CSS overlays displayed while the application or chatbot initializes.
 
-**Sample Implementation:**```html
+<strong>Sample Implementation:</strong>```html
 <div id="chat-splash" class="splash-screen">
   <img src="logo.png" alt="Brand Logo" />
 </div>

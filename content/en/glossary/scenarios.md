@@ -17,7 +17,7 @@ draft: false
 
 ## What Are Scenarios?
 
-A **scenario**(also called a chatbot script, bot story, or conversation flow) is a pre-prepared, structured sequence of interactions between a user and an AI-powered automation system. Scenarios define the complete path of a conversation, including the logic, branching, data collection, and actions that guide how a chatbot responds to user input and executes operations to achieve specific outcomes.
+A <strong>scenario</strong>(also called a chatbot script, bot story, or conversation flow) is a pre-prepared, structured sequence of interactions between a user and an AI-powered automation system. Scenarios define the complete path of a conversation, including the logic, branching, data collection, and actions that guide how a chatbot responds to user input and executes operations to achieve specific outcomes.
 
 Scenarios are the operational backbone of modern chatbot and automation platforms, translating business requirements into executable conversation flows. They are constructed using visual or code-based workflow builders where modular blocks—representing events, actions, conditions, and exits—are connected to create dynamic, context-aware experiences across digital channels including web chat, mobile apps, messaging platforms, and voice interfaces.
 
@@ -27,17 +27,17 @@ Understanding the relationship between these related concepts is essential for e
 
 | Aspect | Scenario | User Story | Use Case |
 |--------|----------|------------|----------|
-| **Definition**| Executable conversation flow with specific steps, logic, and actions | Brief feature description from user perspective (Agile format) | Comprehensive specification of all system interactions |
-| **Format**| Visual workflow or flowchart with blocks, branches, conditions | Text card: "As a [user], I want [goal], so that [benefit]" | Detailed text with main/alternate flows and error handling |
-| **Detail Level**| Step-by-step implementation with specific actions and responses | High-level, abstract | Comprehensive, covering all variations |
-| **Purpose**| Guide actual automated conversation or process execution | Capture requirement or feature to implement | Specify complete system requirements |
-| **Focus**| User behavior and system automation in practice | User need and desired outcome | System behavior and responses |
-| **Audience**| Chatbot builders, automation engineers | Product owners, development teams | System analysts, developers, QA |
-| **Granularity**| Operational (what actually happens) | Strategic (what should be built) | Tactical (how system should behave) |
+| <strong>Definition</strong>| Executable conversation flow with specific steps, logic, and actions | Brief feature description from user perspective (Agile format) | Comprehensive specification of all system interactions |
+| <strong>Format</strong>| Visual workflow or flowchart with blocks, branches, conditions | Text card: "As a [user], I want [goal], so that [benefit]" | Detailed text with main/alternate flows and error handling |
+| <strong>Detail Level</strong>| Step-by-step implementation with specific actions and responses | High-level, abstract | Comprehensive, covering all variations |
+| <strong>Purpose</strong>| Guide actual automated conversation or process execution | Capture requirement or feature to implement | Specify complete system requirements |
+| <strong>Focus</strong>| User behavior and system automation in practice | User need and desired outcome | System behavior and responses |
+| <strong>Audience</strong>| Chatbot builders, automation engineers | Product owners, development teams | System analysts, developers, QA |
+| <strong>Granularity</strong>| Operational (what actually happens) | Strategic (what should be built) | Tactical (how system should behave) |
 
-**Example Comparison:**
+<strong>Example Comparison:</strong>
 
-**User Story:**```
+<strong>User Story:</strong>```
 As a new visitor, I want to get product support
 so that I can resolve my issue quickly.
 ```
@@ -55,7 +55,7 @@ Alternate Flows:
 - 3a. Solution not available → Escalate to agent
 ```
 
-**Scenario:**```
+<strong>Scenario:</strong>```
 [Entry Gate]
 → [Event: New User Message]
 → [Send Message: "How can I help you today?"]
@@ -133,7 +133,7 @@ Plain text or formatted content with variables:
 "Hello {{user_name}}, your order #{{order_id}} has shipped!"
 ```
 
-**Button Picker:**```
+<strong>Button Picker:</strong>```
 Message: "How would you like to proceed?"
 Buttons: 
   - "Check Order Status"
@@ -149,7 +149,7 @@ Validation: Email format
 Store in: user.email
 ```
 
-**Carousel:**```
+<strong>Carousel:</strong>```
 Display multiple cards with images, text, and buttons
 Use case: Product showcase, feature comparison
 ```
@@ -181,15 +181,15 @@ Condition blocks evaluate data or context to direct flow:
 
 Exit blocks control how scenarios conclude:
 
-**Stop Scenario:**- Terminates current flow completely
+<strong>Stop Scenario:</strong>- Terminates current flow completely
 - Returns control to main chat system
 - Use when objective achieved or error encountered
 
-**Run Scenario:**- Launches another scenario
+<strong>Run Scenario:</strong>- Launches another scenario
 - Enables modular, reusable flows
 - Supports scenario chaining for complex workflows
 
-**Example Modular Design:**```
+<strong>Example Modular Design:</strong>```
 Scenario A: Lead Qualification
   → [Exit: Run Scenario B "Email Collection"]
   
@@ -258,16 +258,16 @@ Scenario B: Email Collection
     [Loop back to Field Input]
 ```
 
-**Key Features:**- Input validation
+<strong>Key Features:</strong>- Input validation
 - Data storage
 - Confirmation feedback
 - Error handling
 
 ### Example 2: FAQ Resolution Scenario
 
-**Objective:**Automatically answer common questions
+<strong>Objective:</strong>Automatically answer common questions
 
-**Flow:**```
+<strong>Flow:</strong>```
 [Entry Gate]
 ↓
 [Event: User Message Matches "*refund*|*return*"]
@@ -317,15 +317,15 @@ Scenario B: Email Collection
 [Continue to main conversation flow...]
 ```
 
-**Key Features:**- Channel detection
+<strong>Key Features:</strong>- Channel detection
 - Personalized greetings
 - Consistent user experience across platforms
 
 ### Example 4: Lead Qualification and Routing
 
-**Objective:**Qualify leads and route to appropriate sales team
+<strong>Objective:</strong>Qualify leads and route to appropriate sales team
 
-**Flow:**```
+<strong>Flow:</strong>```
 [Entry Gate]
 ↓
 [Send: "What's your company size?"]
@@ -471,24 +471,24 @@ Modern scenarios leverage AI capabilities:
 
 | KPI | Description | Target |
 |-----|-------------|--------|
-| **Completion Rate**| % of users who finish scenario | >80% |
-| **Drop-off Points**| Where users abandon flow | Minimize |
-| **Average Duration**| Time to complete scenario | Minimize while maintaining quality |
-| **User Satisfaction**| Post-interaction rating | >4/5 |
-| **Containment Rate**| % of issues resolved without escalation | >70% |
-| **Error Rate**| Invalid inputs, failed actions | <5% |
+| <strong>Completion Rate</strong>| % of users who finish scenario | >80% |
+| <strong>Drop-off Points</strong>| Where users abandon flow | Minimize |
+| <strong>Average Duration</strong>| Time to complete scenario | Minimize while maintaining quality |
+| <strong>User Satisfaction</strong>| Post-interaction rating | >4/5 |
+| <strong>Containment Rate</strong>| % of issues resolved without escalation | >70% |
+| <strong>Error Rate</strong>| Invalid inputs, failed actions | <5% |
 
 ### Optimization Strategies
 
-**Analyze Logs:**- Identify common drop-off points
+<strong>Analyze Logs:</strong>- Identify common drop-off points
 - Review misunderstood inputs
 - Spot technical errors
 
-**A/B Testing:**- Test different message phrasings
+<strong>A/B Testing:</strong>- Test different message phrasings
 - Compare button arrangements
 - Optimize input field placement
 
-**User Feedback:**- Survey satisfaction
+<strong>User Feedback:</strong>- Survey satisfaction
 - Collect improvement suggestions
 - Monitor social media mentions
 
@@ -496,18 +496,18 @@ Modern scenarios leverage AI capabilities:
 
 | Term | Definition |
 |------|------------|
-| **Scenario**| Pre-prepared conversation flow built from modular blocks |
-| **Block**| Discrete unit of logic or function (Event, Action, Condition, Exit) |
-| **Entry Gate**| Starting point of scenario flow |
-| **Event Block**| Triggers that pause/resume scenario based on user or system events |
-| **Action Block**| Operations executed within scenario (send message, update data, API call) |
-| **Condition Block**| Decision points that branch scenario flow based on evaluated criteria |
-| **Exit Block**| Ends scenario or transitions to another scenario |
-| **Pattern Matching**| Detecting keywords or phrases in user messages |
-| **Memorization**| Storing collected user data for later use in scenario |
-| **Chaining**| Connecting multiple scenarios in sequence |
-| **Fallback**| Default action when no conditions match |
-| **Escalation**| Transferring conversation from bot to human agent |
+| <strong>Scenario</strong>| Pre-prepared conversation flow built from modular blocks |
+| <strong>Block</strong>| Discrete unit of logic or function (Event, Action, Condition, Exit) |
+| <strong>Entry Gate</strong>| Starting point of scenario flow |
+| <strong>Event Block</strong>| Triggers that pause/resume scenario based on user or system events |
+| <strong>Action Block</strong>| Operations executed within scenario (send message, update data, API call) |
+| <strong>Condition Block</strong>| Decision points that branch scenario flow based on evaluated criteria |
+| <strong>Exit Block</strong>| Ends scenario or transitions to another scenario |
+| <strong>Pattern Matching</strong>| Detecting keywords or phrases in user messages |
+| <strong>Memorization</strong>| Storing collected user data for later use in scenario |
+| <strong>Chaining</strong>| Connecting multiple scenarios in sequence |
+| <strong>Fallback</strong>| Default action when no conditions match |
+| <strong>Escalation</strong>| Transferring conversation from bot to human agent |
 
 ## References
 

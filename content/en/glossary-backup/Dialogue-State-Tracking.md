@@ -11,78 +11,78 @@ draft: false
 ---
 ## What is Dialogue State Tracking?
 
-Dialogue State Tracking (DST) is the backbone of any task-oriented [conversational AI](/en/glossary/conversational-ai/) system. It systematically keeps track of the essential details throughout a [multi-turn conversation](/en/glossary/multi-turn-conversation/), maintaining a structured, machine-readable representation of:
+Dialogue State Tracking (DST) is the backbone of any task-oriented conversational AI system. It systematically keeps track of the essential details throughout a multi-turn conversation, maintaining a structured, machine-readable representation of:
 
-- **User goals and intentions**- **Slot values**(specific pieces of information expressed by the user)
-- **Dialogue history and context**At every turn, DST estimates the user's current objective and all the relevant parameters required to fulfill it. This enables the system to make informed decisions about what to do or say next, ensuring conversation coherence and relevance.
+- <strong>User goals and intentions</strong>- <strong>Slot values</strong>(specific pieces of information expressed by the user)
+- <strong>Dialogue history and context</strong>At every turn, DST estimates the user's current objective and all the relevant parameters required to fulfill it. This enables the system to make informed decisions about what to do or say next, ensuring conversation coherence and relevance.
 
-DST operates as an intermediary between user input interpretation (through natural language understanding techniques) and [dialogue management](/en/glossary/dialogue-management/) (decision-making for system responses). It forms a critical part of the conversational loop: the user's [utterance](/en/glossary/utterance/) is processed, state is estimated, and the system determines the next action accordingly.
+DST operates as an intermediary between user input interpretation (through natural language understanding techniques) and dialogue management (decision-making for system responses). It forms a critical part of the conversational loop: the user's utterance is processed, state is estimated, and the system determines the next action accordingly.
 ## How is Dialogue State Tracking Used?
 
 DST is used to:
 
-- **Maintain conversation context:**Ensures continuity and coherence by retaining memory of previous turns and resolved information.
-- **Guide dialogue policy:**Informs the chatbot or agent about the appropriate next action (e.g., ask for missing data, confirm a detail, execute a task).
-- **Resolve ambiguity:**Handles references (anaphora) and clarifies user requests over multiple turns, especially in noisy or ambiguous contexts.
-- **Personalize responses:**Adapts system behavior to user preferences and prior interactions, enabling contextually aware and user-tailored replies.
-- **Enable multi-turn reasoning:**Tracks complex queries and dependencies that span several dialogue turns, crucial for tasks like bookings or troubleshooting.
+- <strong>Maintain conversation context:</strong>Ensures continuity and coherence by retaining memory of previous turns and resolved information.
+- <strong>Guide dialogue policy:</strong>Informs the chatbot or agent about the appropriate next action (e.g., ask for missing data, confirm a detail, execute a task).
+- <strong>Resolve ambiguity:</strong>Handles references (anaphora) and clarifies user requests over multiple turns, especially in noisy or ambiguous contexts.
+- <strong>Personalize responses:</strong>Adapts system behavior to user preferences and prior interactions, enabling contextually aware and user-tailored replies.
+- <strong>Enable multi-turn reasoning:</strong>Tracks complex queries and dependencies that span several dialogue turns, crucial for tasks like bookings or troubleshooting.
 
-**Application domains include:**- **Virtual assistants:**e.g., Alexa, Siri, Google Assistant
-- **Customer support chatbots:**e.g., automated helpdesks, live chat support
-- **Automated booking systems:**e.g., restaurants, hotels, flights, taxis
-- **Conversational commerce:**Shopping assistants that keep track of carts, preferences
-- **Healthcare agents:**Collecting patient information over multiple turns, triage
-- **Technical troubleshooting:**Step-by-step guidance and context retention
+<strong>Application domains include:</strong>- <strong>Virtual assistants:</strong>e.g., Alexa, Siri, Google Assistant
+- <strong>Customer support chatbots:</strong>e.g., automated helpdesks, live chat support
+- <strong>Automated booking systems:</strong>e.g., restaurants, hotels, flights, taxis
+- <strong>Conversational commerce:</strong>Shopping assistants that keep track of carts, preferences
+- <strong>Healthcare agents:</strong>Collecting patient information over multiple turns, triage
+- <strong>Technical troubleshooting:</strong>Step-by-step guidance and context retention
 ## Key Concepts and Terminology
 
 | Term                        | Definition                                                                                         |
 |-----------------------------|----------------------------------------------------------------------------------------------------|
-| **Slot**| A variable representing a specific piece of information (e.g., “location”, “time”, “cuisine”).    |
-| **Slot Value**| The user-provided or system-inferred value for a slot (e.g., “New York” for “location”).           |
-| **Slot-Value Pair**| A key-value record of a slot and its current value (e.g., {“time”: “7 PM”}).                       |
-| **Dialogue State**| The current set of all slot-value pairs and other contextual information tracked at each turn.      |
-| **Belief State**| A probability distribution over possible dialogue states; used in probabilistic DST.                |
-| **Ontology**| The schema defining all possible slots and their allowed values for a domain.                       |
-| **Informable Slot**| A slot the user can specify as a constraint (e.g., “area = north”).                                |
-| **Requestable Slot**| A slot the user can request information about (e.g., “What is the address?”).                      |
-| **Turn**| A pair of a user utterance and a system response.                                                  |
-| **Dialogue Policy**| The decision logic that chooses the next system action based on the current dialogue state.         |
+| <strong>Slot</strong>| A variable representing a specific piece of information (e.g., “location”, “time”, “cuisine”).    |
+| <strong>Slot Value</strong>| The user-provided or system-inferred value for a slot (e.g., “New York” for “location”).           |
+| <strong>Slot-Value Pair</strong>| A key-value record of a slot and its current value (e.g., {“time”: “7 PM”}).                       |
+| <strong>Dialogue State</strong>| The current set of all slot-value pairs and other contextual information tracked at each turn.      |
+| <strong>Belief State</strong>| A probability distribution over possible dialogue states; used in probabilistic DST.                |
+| <strong>Ontology</strong>| The schema defining all possible slots and their allowed values for a domain.                       |
+| <strong>Informable Slot</strong>| A slot the user can specify as a constraint (e.g., “area = north”).                                |
+| <strong>Requestable Slot</strong>| A slot the user can request information about (e.g., “What is the address?”).                      |
+| <strong>Turn</strong>| A pair of a user utterance and a system response.                                                  |
+| <strong>Dialogue Policy</strong>| The decision logic that chooses the next system action based on the current dialogue state.         |
 ## Approaches to Dialogue State Tracking
 
 DST has evolved from rule-based pattern-matching systems to complex, data-driven architectures. Major approaches include:
 
 ### Rule-Based DST
 
-- **How it works:**Hand-crafted rules or patterns update the dialogue state in response to user input. For example, if the user says “I want Italian food,” set `cuisine = Italian`.
-- **Pros:**Simple, interpretable, no data required.
-- **Cons:**Not robust to language variability or scale, brittle to unseen scenarios, and requires intensive manual engineering.
+- <strong>How it works:</strong>Hand-crafted rules or patterns update the dialogue state in response to user input. For example, if the user says “I want Italian food,” set `cuisine = Italian`.
+- <strong>Pros:</strong>Simple, interpretable, no data required.
+- <strong>Cons:</strong>Not robust to language variability or scale, brittle to unseen scenarios, and requires intensive manual engineering.
 ### Probabilistic DST
 
-- **How it works:**Maintains a probability distribution (belief state) over possible dialogue states. Updates are performed using statistical models such as Bayesian networks, Markov Decision Processes (MDPs), or Partially Observable MDPs (POMDPs).
-- **Pros:**Robust to uncertainty and input errors (e.g., from speech recognition), can handle ambiguous language.
-- **Cons:**Computationally intensive, requires feature engineering, and enough data for parameter estimation.
+- <strong>How it works:</strong>Maintains a probability distribution (belief state) over possible dialogue states. Updates are performed using statistical models such as Bayesian networks, Markov Decision Processes (MDPs), or Partially Observable MDPs (POMDPs).
+- <strong>Pros:</strong>Robust to uncertainty and input errors (e.g., from speech recognition), can handle ambiguous language.
+- <strong>Cons:</strong>Computationally intensive, requires feature engineering, and enough data for parameter estimation.
 ### Machine Learning / Deep Learning DST
 
-- **How it works:**Learns to update the dialogue state directly from conversation data using models such as Recurrent Neural Networks (RNNs), LSTM/GRU, Transformers (BERT, GPT), Conditional Random Fields (CRFs), and others.
-- **Pros:**Captures complex dialogue patterns, generalizes across domains, and supports large-scale applications.
-- **Cons:**Requires large annotated datasets, less interpretable than rule-based systems.
-- **Example Techniques:**- RNNs/LSTM/GRU for sequential dialogue modeling ([MA-DST](https://ojs.aaai.org/index.php/AAAI/article/download/6322/6178))
+- <strong>How it works:</strong>Learns to update the dialogue state directly from conversation data using models such as Recurrent Neural Networks (RNNs), LSTM/GRU, Transformers (BERT, GPT), Conditional Random Fields (CRFs), and others.
+- <strong>Pros:</strong>Captures complex dialogue patterns, generalizes across domains, and supports large-scale applications.
+- <strong>Cons:</strong>Requires large annotated datasets, less interpretable than rule-based systems.
+- <strong>Example Techniques:</strong>- RNNs/LSTM/GRU for sequential dialogue modeling ([MA-DST](https://ojs.aaai.org/index.php/AAAI/article/download/6322/6178))
     - Transformers (BERT/GPT) for encoding conversation context ([Chain of Thought for DST](https://arxiv.org/html/2403.04656v1))
     - Attention mechanisms for focusing on relevant history
     - Pointer networks for extracting slot values directly from the dialogue
 
 ### Hybrid Methods
 
-- **How it works:**Combine rule-based and machine learning approaches; rules handle frequent/simple cases, ML handles rare/complex scenarios.
-- **Pros:**Leverage interpretability of rules and robustness of ML.
-- **Cons:**Integration complexity.
+- <strong>How it works:</strong>Combine rule-based and machine learning approaches; rules handle frequent/simple cases, ML handles rare/complex scenarios.
+- <strong>Pros:</strong>Leverage interpretability of rules and robustness of ML.
+- <strong>Cons:</strong>Integration complexity.
 ## Dialogue State Representation Formats
 
 DST state can be represented in multiple ways according to system requirements:
 
 ### Slot-Value Pairs
 
-- **Most common format.**- Each slot (key) holds its current value, e.g.,
+- <strong>Most common format.</strong>- Each slot (key) holds its current value, e.g.,
   ```json
   {
     "cuisine": "Italian",
@@ -134,25 +134,25 @@ Updating the dialogue state is the core function of DST. Mechanisms include:
 
 ### Standard Datasets
 
-- **WOZ (Wizard of Oz):**Human-human dialogues in restaurant booking ([DSTC](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/44018.pdf))
-- **MultiWOZ:**Large-scale, multi-domain, annotated dialogue dataset (over 10,000 dialogues).
-- **DSTC (Dialogue State Tracking Challenge):**A series of benchmark tasks and datasets for DST systems.
+- <strong>WOZ (Wizard of Oz):</strong>Human-human dialogues in restaurant booking ([DSTC](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/44018.pdf))
+- <strong>MultiWOZ:</strong>Large-scale, multi-domain, annotated dialogue dataset (over 10,000 dialogues).
+- <strong>DSTC (Dialogue State Tracking Challenge):</strong>A series of benchmark tasks and datasets for DST systems.
 
 ### Common Metrics
 
 | Metric                 | Description                                                                                         |
 |------------------------|-----------------------------------------------------------------------------------------------------|
-| **Joint Goal Accuracy**| Percentage of dialogue turns where all slots are correctly predicted (stringent measure).            |
-| **Slot Accuracy**| Correctness of individual slot-value predictions.                                                    |
-| **Slot F1 Score**| Harmonic mean of [precision and recall](/en/glossary/precision-and-recall/) for slot prediction; handles class imbalance.                  |
-| **Perplexity**| Evaluates language modeling, measuring how well the model predicts next tokens in context.           |
-| **Human Evaluation**| Subjective assessment of system performance (coherence, helpfulness, naturalness).                   |
+| <strong>Joint Goal Accuracy</strong>| Percentage of dialogue turns where all slots are correctly predicted (stringent measure).            |
+| <strong>Slot Accuracy</strong>| Correctness of individual slot-value predictions.                                                    |
+| <strong>Slot F1 Score</strong>| Harmonic mean of precision and recall for slot prediction; handles class imbalance.                  |
+| <strong>Perplexity</strong>| Evaluates language modeling, measuring how well the model predicts next tokens in context.           |
+| <strong>Human Evaluation</strong>| Subjective assessment of system performance (coherence, helpfulness, naturalness).                   |
 ## Examples and Use Cases
 
 ### Example: Restaurant Booking Dialogue State
 
-**Turn 1**- *User:* "I'm looking for an Italian restaurant."
-- **State:**```json
+<strong>Turn 1</strong>- *User:* "I'm looking for an Italian restaurant."
+- <strong>State:</strong>```json
   { "cuisine": "Italian" }
   ```
 
@@ -161,8 +161,8 @@ Updating the dialogue state is the core function of DST. Mechanisms include:
   { "cuisine": "Italian", "location": "New York" }
   ```
 
-**Turn 3**- *User:* "For 7 PM."
-- **State:**```json
+<strong>Turn 3</strong>- *User:* "For 7 PM."
+- <strong>State:</strong>```json
   { "cuisine": "Italian", "location": "New York", "time": "7 PM" }
   ```
 
@@ -173,7 +173,7 @@ Updating the dialogue state is the core function of DST. Mechanisms include:
 
 ### Example: Multi-Domain Dialogue
 
-**State at Turn 5:**```json
+<strong>State at Turn 5:</strong>```json
 {
   "hotel-name": "York Hotel",
   "hotel-stars": "5",

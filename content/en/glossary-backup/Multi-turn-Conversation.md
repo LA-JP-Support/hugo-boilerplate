@@ -17,34 +17,34 @@ draft: false
 ---
 ## 1. Definition: What Is a Multi-Turn Conversation?
 
-A **multi-turn conversation**is a dialog between a user and an AI system, such as a chatbot or [virtual assistant](/en/glossary/virtual-assistant/), where the interaction consists of multiple exchanges or "turns". Each turn is a pair of user input and system response. Multi-turn conversations allow the AI to handle scenarios where information must be collected or clarified across several steps to achieve a goal (e.g., booking travel, troubleshooting, or onboarding). Unlike single-turn interactions, the system must remember and use information from previous turns, manage conversational state, and adapt to ambiguity or interruptions.
+A <strong>multi-turn conversation</strong>is a dialog between a user and an AI system, such as a chatbot or virtual assistant, where the interaction consists of multiple exchanges or "turns". Each turn is a pair of user input and system response. Multi-turn conversations allow the AI to handle scenarios where information must be collected or clarified across several steps to achieve a goal (e.g., booking travel, troubleshooting, or onboarding). Unlike single-turn interactions, the system must remember and use information from previous turns, manage conversational state, and adapt to ambiguity or interruptions.
 <a name="importance"></a>
 ## 2. Why Multi-Turn Conversation Matters
 
 Multi-turn conversations are required for realistic, helpful, and human-like automated interactions because:
 
-- **Complex Tasks:**Many user goals involve multiple data points, steps, or decisions that cannot be handled in a single prompt-response pair.
-- **Natural Dialogue:**Users expect to interact with systems conversationally, using pronouns, referencing previous answers, and correcting themselves without restating everything.
-- **Customer Experience:**Avoids user frustration by not repeating questions, handling context naturally, and providing a seamless experience.
-- **Non-Linear Interactions:**Supports topic shifts, clarifications, and corrections mid-flow, just as in human conversation.
+- <strong>Complex Tasks:</strong>Many user goals involve multiple data points, steps, or decisions that cannot be handled in a single prompt-response pair.
+- <strong>Natural Dialogue:</strong>Users expect to interact with systems conversationally, using pronouns, referencing previous answers, and correcting themselves without restating everything.
+- <strong>Customer Experience:</strong>Avoids user frustration by not repeating questions, handling context naturally, and providing a seamless experience.
+- <strong>Non-Linear Interactions:</strong>Supports topic shifts, clarifications, and corrections mid-flow, just as in human conversation.
 
-**Key Benefits:**- Higher task completion rates (users can finish what they started)
+<strong>Key Benefits:</strong>- Higher task completion rates (users can finish what they started)
 - Improved customer satisfaction (CSAT), as measured in user studies ([see research summary](https://arxiv.org/abs/2505.06120))
 - More robust automation (bots can guide users through complex flows)
 - Human-like digital experiences
 <a name="how-it-works"></a>
 ## 3. How Multi-Turn Conversations Work
 
-Multi-turn systems use a combination of context retention, [dialogue management](/en/glossary/dialogue-management/), slot filling, error handling, and knowledge base structuring to guide users through multi-step tasks.
+Multi-turn systems use a combination of context retention, dialogue management, slot filling, error handling, and knowledge base structuring to guide users through multi-step tasks.
 
 ### <a name="technical-elements"></a>Key Technical Elements
 
-- **Context Retention:**The system stores relevant details from earlier turns (e.g., destination, date, user preferences) to inform later responses. This enables reference resolution (e.g., "book it" or "change the time").
-- **Dialogue/State Management:**Tracks which step the user is at, which slots (information fields) have been filled, and what is still needed.
-- **Slot Filling:**Collects required information (e.g., date, location, seat class) across several turns, validating as needed.
-- **Clarification Prompts:**Asks for missing or ambiguous details ("Did you mean departing this Friday or next Friday?").
-- **Error Recovery:**Handles misunderstandings, incorrect answers, or interruptions by re-prompting or gracefully restarting.
-- **Context Expiry:**Knows when to reset or clear stored data (e.g., after task completion or inactivity).
+- <strong>Context Retention:</strong>The system stores relevant details from earlier turns (e.g., destination, date, user preferences) to inform later responses. This enables reference resolution (e.g., "book it" or "change the time").
+- <strong>Dialogue/State Management:</strong>Tracks which step the user is at, which slots (information fields) have been filled, and what is still needed.
+- <strong>Slot Filling:</strong>Collects required information (e.g., date, location, seat class) across several turns, validating as needed.
+- <strong>Clarification Prompts:</strong>Asks for missing or ambiguous details ("Did you mean departing this Friday or next Friday?").
+- <strong>Error Recovery:</strong>Handles misunderstandings, incorrect answers, or interruptions by re-prompting or gracefully restarting.
+- <strong>Context Expiry:</strong>Knows when to reset or clear stored data (e.g., after task completion or inactivity).
 
 For more technical details, see:
 - [Microsoft QnA Maker Multi-Turn](https://learn.microsoft.com/en-us/azure/ai-services/qnamaker/how-to/multi-turn)
@@ -52,7 +52,7 @@ For more technical details, see:
 
 ### <a name="example"></a>Dialogue Example Walkthrough
 
-**Scenario: Booking a Flight via Chatbot**```plaintext
+<strong>Scenario: Booking a Flight via Chatbot</strong>```plaintext
 User: I'd like to book a flight.
 Bot: Sure! Where would you like to fly to?
 User: London.
@@ -98,7 +98,7 @@ Bot: Done. The dish soap order is canceled, and your money was refunded.
 
 ### <a name="dialogue-management"></a>Dialogue & State Management
 
-- Use a [state machine](/en/glossary/state-machine/), flowchart, or story-based system to track the user's position in the conversation and trigger relevant prompts.
+- Use a state machine, flowchart, or story-based system to track the user's position in the conversation and trigger relevant prompts.
 - Supports non-linear flows: users may ask clarifying questions, change their mind, or interject new requests.
 ### <a name="slot-filling"></a>Slot Filling
 
@@ -119,7 +119,7 @@ Bot: Done. The dish soap order is canceled, and your money was refunded.
 
 Multi-turn dialogue systems often use API requests with conversation state in the payload.
 
-**Sample QnA Maker API Request:**```json
+<strong>Sample QnA Maker API Request:</strong>```json
 {
   "question": "accounts and signing in",
   "top": 10,
@@ -147,51 +147,51 @@ Multi-turn dialogue systems often use API requests with conversation state in th
 
 Multi-turn conversations introduce these challenges:
 
-- **Context Loss:**The bot may forget earlier information, especially if the conversation exceeds the model's context window or memory limit.
-- **Context Window Limits:**LLMs (like GPT) have a maximum context window (e.g., 8K or 32K tokens), so long conversations may require truncation or summarization ([OpenAI Community](https://community.openai.com/t/multi-turn-conversation-best-practice/282349)).
-- **Unexpected Topic Changes:**Users can jump between topics, requiring dynamic state management.
-- **Ambiguous Responses:**Vague input can derail the flow, requiring clarifying prompts.
-- **Repeated/Looping Questions:**Poor state handling can cause the bot to repeat questions unnecessarily.
-- **Error Propagation:**Early mistakes can cascade, leading to confusion later in the conversation.
-- **Consistency:**Maintaining factual and persona consistency across turns is a major challenge ([Maxim AI Consistency Guide](https://www.getmaxim.ai/articles/how-to-ensure-consistency-in-multi-turn-ai-conversations/)).
+- <strong>Context Loss:</strong>The bot may forget earlier information, especially if the conversation exceeds the model's context window or memory limit.
+- <strong>Context Window Limits:</strong>LLMs (like GPT) have a maximum context window (e.g., 8K or 32K tokens), so long conversations may require truncation or summarization ([OpenAI Community](https://community.openai.com/t/multi-turn-conversation-best-practice/282349)).
+- <strong>Unexpected Topic Changes:</strong>Users can jump between topics, requiring dynamic state management.
+- <strong>Ambiguous Responses:</strong>Vague input can derail the flow, requiring clarifying prompts.
+- <strong>Repeated/Looping Questions:</strong>Poor state handling can cause the bot to repeat questions unnecessarily.
+- <strong>Error Propagation:</strong>Early mistakes can cascade, leading to confusion later in the conversation.
+- <strong>Consistency:</strong>Maintaining factual and persona consistency across turns is a major challenge ([Maxim AI Consistency Guide](https://www.getmaxim.ai/articles/how-to-ensure-consistency-in-multi-turn-ai-conversations/)).
 
 <a name="best-practices"></a>
 ## 7. Best Practices for Designing Multi-Turn Flows
 
 To deliver robust, user-friendly multi-turn experiences:
 
-- **Map Conversation Flows:**Use flowcharts/storyboards to design each path, including alternate and error flows.
-- **Slot Filling & Validation:**Ensure required information is collected, validated, and confirmed before proceeding.
-- **Context Expiry Rules:**Automatically clear context on inactivity, task completion, or explicit user request.
-- **Graceful Topic Shifts:**Allow the bot to pause, switch, or resume flows as users change topics.
-- **Clarify Ambiguities:**Use context-aware prompts to ask for clarification when needed.
-- **Stateless Turn Design:**Where possible, treat each turn as a stateless function, passing all necessary context in each prompt ([PromptLayer Stateless Chat](https://docs.promptlayer.com/why-promptlayer/multi-turn-chat)).
-- **Test Extensively:**Simulate real user behavior, interruptions, and non-linear paths. Use frameworks for automated testing and scoring ([Sendbird AI Testing](https://sendbird.com/blog/what-are-multi-turn-conversations/ai-agent-testing)).
-- **Leverage Hierarchical KBs:**Use structured documents (headings/subheadings) to define follow-up prompts and maintain logical flow ([Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/qnamaker/how-to/multi-turn)).
-- **Monitor & Iterate:**Analyze logs for breakdowns; refine flows, prompts, and state management continually.
+- <strong>Map Conversation Flows:</strong>Use flowcharts/storyboards to design each path, including alternate and error flows.
+- <strong>Slot Filling & Validation:</strong>Ensure required information is collected, validated, and confirmed before proceeding.
+- <strong>Context Expiry Rules:</strong>Automatically clear context on inactivity, task completion, or explicit user request.
+- <strong>Graceful Topic Shifts:</strong>Allow the bot to pause, switch, or resume flows as users change topics.
+- <strong>Clarify Ambiguities:</strong>Use context-aware prompts to ask for clarification when needed.
+- <strong>Stateless Turn Design:</strong>Where possible, treat each turn as a stateless function, passing all necessary context in each prompt ([PromptLayer Stateless Chat](https://docs.promptlayer.com/why-promptlayer/multi-turn-chat)).
+- <strong>Test Extensively:</strong>Simulate real user behavior, interruptions, and non-linear paths. Use frameworks for automated testing and scoring ([Sendbird AI Testing](https://sendbird.com/blog/what-are-multi-turn-conversations/ai-agent-testing)).
+- <strong>Leverage Hierarchical KBs:</strong>Use structured documents (headings/subheadings) to define follow-up prompts and maintain logical flow ([Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/qnamaker/how-to/multi-turn)).
+- <strong>Monitor & Iterate:</strong>Analyze logs for breakdowns; refine flows, prompts, and state management continually.
 
 <a name="tools"></a>
 ## 8. Tools and Frameworks Supporting Multi-Turn Conversation
 
-- **Microsoft QnA Maker / Azure AI Language Service**Extracts multi-turn flows from structured documents, API-based follow-up prompts.  
+- <strong>Microsoft QnA Maker / Azure AI Language Service</strong>Extracts multi-turn flows from structured documents, API-based follow-up prompts.  
   [Docs](https://learn.microsoft.com/en-us/azure/ai-services/qnamaker/how-to/multi-turn)
 
-- **Dialogflow CX (Google Cloud):**Manages complex, multi-step conversations with stateful flows.  
+- <strong>Dialogflow CX (Google Cloud):</strong>Manages complex, multi-step conversations with stateful flows.  
   [Dialogflow CX Docs](https://cloud.google.com/dialogflow/cx/docs)
 
-- **Rasa:**Open-source, supports stories/rules for dialogue state and slot filling.  
+- <strong>Rasa:</strong>Open-source, supports stories/rules for dialogue state and slot filling.  
   [Rasa Docs](https://rasa.com/docs/)
 
-- **Amazon Lex:**Provides session attributes and slot management.  
+- <strong>Amazon Lex:</strong>Provides session attributes and slot management.  
   [Amazon Lex Docs](https://docs.aws.amazon.com/lex/latest/dg/what-is.html)
 
-- **PromptLayer:**Stateless multi-turn chat, prompt evaluation, and systematic testing.  
+- <strong>PromptLayer:</strong>Stateless multi-turn chat, prompt evaluation, and systematic testing.  
   [PromptLayer Docs](https://docs.promptlayer.com/why-promptlayer/multi-turn-chat)
 
-- **Sendbird Agentic AI:**Multi-turn conversation testing and analytics.  
+- <strong>Sendbird Agentic AI:</strong>Multi-turn conversation testing and analytics.  
   [Sendbird Blog](https://sendbird.com/blog/what-are-multi-turn-conversations/ai-agent-testing)
 
-- **Bot Framework Composer (Microsoft):**Visual design tool for building/testing multi-turn dialogues.  
+- <strong>Bot Framework Composer (Microsoft):</strong>Visual design tool for building/testing multi-turn dialogues.  
   [Bot Framework Composer Docs](https://learn.microsoft.com/en-us/composer/)
 
 <a name="summary-table"></a>
@@ -200,7 +200,7 @@ To deliver robust, user-friendly multi-turn experiences:
 | Feature                | Purpose                            | Example / Solution                                      |
 |------------------------|------------------------------------|---------------------------------------------------------|
 | Context Retention      | Remembers user inputs across steps | Stores destination and date during booking              |
-| [Dialogue State Tracking](/en/glossary/dialogue-state-tracking/)| Knows user’s position in process   | “Step 2: Choosing a flight”                             |
+| Dialogue State Tracking| Knows user’s position in process   | “Step 2: Choosing a flight”                             |
 | Slot Filling           | Collects required data             | Asks for return date after destination                  |
 | Clarification Prompts  | Handles missing/ambiguous info     | “Could you confirm the date?”                           |
 | Context Expiry         | Clears context when task ends      | Resets after booking confirmation                       |
@@ -222,9 +222,9 @@ To deliver robust, user-friendly multi-turn experiences:
 - [Microsoft Bot Builder: Conceptual bot design](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-conversations)
 - [Sendbird: Multi-turn conversation testing framework](https://sendbird.com/blog/what-are-multi-turn-conversations/ai-agent-testing)
 
-**Takeaway:**Multi-turn conversation is foundational for AI chatbots and automation handling real-world, complex tasks. By maintaining context, managing flows, and handling interruptions, AI systems deliver seamless, human-like experiences. Effective implementation requires careful flow design, robust testing, and continuous improvement, supported by modern [conversational AI](/en/glossary/conversational-ai/) frameworks and best practices.
+<strong>Takeaway:</strong>Multi-turn conversation is foundational for AI chatbots and automation handling real-world, complex tasks. By maintaining context, managing flows, and handling interruptions, AI systems deliver seamless, human-like experiences. Effective implementation requires careful flow design, robust testing, and continuous improvement, supported by modern conversational AI frameworks and best practices.
 
-**For a deeper dive:**- [Microsoft Bot Builder Conversation Design Guidance](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-conversations)
+<strong>For a deeper dive:</strong>- [Microsoft Bot Builder Conversation Design Guidance](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-conversations)
 - [Sendbird Multi-Turn AI Testing Framework](https://sendbird.com/blog/what-are-multi-turn-conversations/ai-agent-testing)
 - [PromptLayer Blog: Evaluating Multi-Turn AI](https://blog.promptlayer.com/best-practi-to-evaluate-back-and-forth-conversational-ai-in-promptlayer/)
 

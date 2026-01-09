@@ -13,7 +13,7 @@ draft: false
 
 The [F1 score](https://en.wikipedia.org/wiki/F-score) is a key evaluation metric in machine learning and statistics, representing the harmonic mean of precision and recall. Unlike accuracy, which only measures the overall proportion of correct predictions, the F1 score quantifies a model’s effectiveness by balancing the trade-off between precision (the ability to avoid false positives) and recall (the ability to capture true positives). This makes the F1 score a preferred performance indicator for real-world machine learning problems where class imbalance is prevalent—such as fraud detection, healthcare diagnostics, and AI chatbot moderation. In these situations, the cost of misclassifying a positive or negative case is not uniform, and accuracy alone can be misleading ([V7 Labs](https://www.v7labs.com/blog/f1-score-guide); [GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/f1-score-in-machine-learning/)).
 
-**On this page:**- What the F1 score is and why it matters
+<strong>On this page:</strong>- What the F1 score is and why it matters
 - Relationship to confusion matrix, precision, and recall
 - Mathematical formulation and calculation of F1 score
 - F1 score variants and averaging strategies for multiclass scenarios
@@ -25,13 +25,13 @@ The [F1 score](https://en.wikipedia.org/wiki/F-score) is a key evaluation metric
 
 The [F1 score](https://en.wikipedia.org/wiki/F-score) quantifies a model’s performance in binary and multiclass classification tasks by combining precision and recall into a single metric. The F1 score ranges from 0 (worst) to 1 (best), where a score of 1 reflects perfect precision and recall. F1 is particularly valuable when classes are imbalanced, as it penalizes models that achieve high precision or recall at the expense of the other.
 
-**Key properties:**- **Balances precision and recall:**The harmonic mean ensures that both metrics are given equal weight. If either is low, the F1 score drops sharply.
-- **Robust to class imbalance:**Outperforms accuracy in scenarios with skewed class distribution ([V7 Labs](https://www.v7labs.com/blog/f1-score-guide)).
-- **Single-value summary:**Provides an interpretable number summarizing a model’s ability to minimize both false positives and false negatives ([GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/f1-score-in-machine-learning/)).
+<strong>Key properties:</strong>- <strong>Balances precision and recall:</strong>The harmonic mean ensures that both metrics are given equal weight. If either is low, the F1 score drops sharply.
+- <strong>Robust to class imbalance:</strong>Outperforms accuracy in scenarios with skewed class distribution ([V7 Labs](https://www.v7labs.com/blog/f1-score-guide)).
+- <strong>Single-value summary:</strong>Provides an interpretable number summarizing a model’s ability to minimize both false positives and false negatives ([GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/f1-score-in-machine-learning/)).
 
 ## Conceptual Foundations
 
-Understanding the F1 score requires knowledge of **precision**and **recall**, which are derived from the confusion matrix.
+Understanding the F1 score requires knowledge of <strong>precision</strong>and <strong>recall</strong>, which are derived from the confusion matrix.
 
 ### The Confusion Matrix
 
@@ -39,23 +39,23 @@ A [confusion matrix](https://developers.google.com/machine-learning/crash-course
 
 |                     | Predicted Positive | Predicted Negative |
 |---------------------|-------------------|-------------------|
-| **Actual Positive**| True Positive (TP) | False Negative (FN) |
-| **Actual Negative**| False Positive (FP) | True Negative (TN) |
+| <strong>Actual Positive</strong>| True Positive (TP) | False Negative (FN) |
+| <strong>Actual Negative</strong>| False Positive (FP) | True Negative (TN) |
 
-- **True Positive (TP):**The model correctly predicts a positive instance.
-- **False Positive (FP):**The model incorrectly predicts a negative instance as positive.
-- **False Negative (FN):**The model incorrectly predicts a positive instance as negative.
-- **True Negative (TN):**The model correctly predicts a negative instance.
+- <strong>True Positive (TP):</strong>The model correctly predicts a positive instance.
+- <strong>False Positive (FP):</strong>The model incorrectly predicts a negative instance as positive.
+- <strong>False Negative (FN):</strong>The model incorrectly predicts a positive instance as negative.
+- <strong>True Negative (TN):</strong>The model correctly predicts a negative instance.
 
 ([KDnuggets](https://www.kdnuggets.com/2022/11/confusion-matrix-precision-recall-explained.html); [Google Developers](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall))
 
 ### Precision and Recall
 
-- **Precision**measures the correctness of positive predictions:
+- <strong>Precision</strong>measures the correctness of positive predictions:
   - *Definition:* Of all predicted positives, what fraction are actually positive?
   - *Formula:* \(\text{Precision} = \frac{TP}{TP + FP}\)
   - *Example:* If a model predicts 50 positives and 40 are correct (TP), precision is 80%.
-- **Recall**(aka *sensitivity* or *true positive rate*) measures the model’s ability to find all actual positives:
+- <strong>Recall</strong>(aka *sensitivity* or *true positive rate*) measures the model’s ability to find all actual positives:
   - *Definition:* Of all actual positives, what fraction did the model correctly identify?
   - *Formula:* \(\text{Recall} = \frac{TP}{TP + FN}\)
   - *Example:* If there are 100 actual positives and the model predicts 80 of them, recall is 80%.
@@ -109,9 +109,9 @@ The [F-beta score](https://permetrics.readthedocs.io/en/latest/pages/classificat
 \[
 F_\beta = (1 + \beta^2) \times \frac{\text{Precision} \times \text{Recall}}{(\beta^2 \times \text{Precision}) + \text{Recall}}
 \]
-- **β = 1:**Equal weight (F1 score)
-- **β > 1:**Recall is more important (e.g., F2 score)
-- **β < 1:**Precision is more important (e.g., F0.5 score)
+- <strong>β = 1:</strong>Equal weight (F1 score)
+- <strong>β > 1:</strong>Recall is more important (e.g., F2 score)
+- <strong>β < 1:</strong>Precision is more important (e.g., F0.5 score)
 
 Use cases: In medical diagnostics, high recall (catching as many positives as possible) may be prioritized, suggesting a higher β ([Arize](https://arize.com/blog-course/f1-score/)).
 
@@ -119,19 +119,19 @@ Use cases: In medical diagnostics, high recall (catching as many positives as po
 
 When addressing datasets with more than two classes, several averaging strategies are employed ([scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)):
 
-- **Macro-average:**Computes F1 for each class, then averages. Treats all classes equally.
+- <strong>Macro-average:</strong>Computes F1 for each class, then averages. Treats all classes equally.
   \[
   \text{F1}_{macro} = \frac{1}{N} \sum_{i=1}^N \text{F1}_i
   \]
-- **Micro-average:**Aggregates TP, FP, FN across all classes to compute a global F1.
+- <strong>Micro-average:</strong>Aggregates TP, FP, FN across all classes to compute a global F1.
   \[
   \text{F1}_{micro} = \frac{2 \times \sum TP_i}{2 \times \sum TP_i + \sum FP_i + \sum FN_i}
   \]
-- **Weighted-average:**Averages F1 for each class, weighted by the number of true instances per class.
+- <strong>Weighted-average:</strong>Averages F1 for each class, weighted by the number of true instances per class.
   \[
   \text{F1}_{weighted} = \frac{\sum w_i \times \text{F1}_i}{\sum w_i}
   \]
-- **None:**Returns F1 per class without averaging.
+- <strong>None:</strong>Returns F1 per class without averaging.
 
 ([Permetrics](https://permetrics.readthedocs.io/en/latest/pages/classification/FBS.html))
 
@@ -166,7 +166,7 @@ print("Macro-average F1 score:", f1_macro)
 print("Weighted-average F1 score:", f1_weighted)
 ```
 
-**Output:**```
+<strong>Output:</strong>```
 F1 score per class: [0.67 0.40 0.67]
 Micro-average F1 score: 0.64
 Macro-average F1 score: 0.58

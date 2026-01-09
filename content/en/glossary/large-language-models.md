@@ -14,13 +14,13 @@ draft: false
 
 Large language models (LLMs) are advanced artificial intelligence systems trained on massive text datasets to understand, generate, and manipulate human language. They leverage deep learning, specifically transformer neural networks, to perform a wide variety of natural language processing (NLP) tasks including text generation, translation, summarization, code synthesis, and question answering.
 
-**Defining Characteristics:**| Characteristic | Description | Example |
+<strong>Defining Characteristics:</strong>| Characteristic | Description | Example |
 |----------------|-------------|---------|
-| **Scale**| Billions of parameters | GPT-4: 1.76 trillion parameters |
-| **Architecture**| Transformer-based neural networks | Self-attention mechanisms |
-| **Training**| Massive text corpora | Books, web pages, code repositories |
-| **Capabilities**| Multi-task language understanding | Translation, summarization, reasoning |
-| **Learning**| Self-supervised and few-shot | Learn from context with minimal examples |
+| <strong>Scale</strong>| Billions of parameters | GPT-4: 1.76 trillion parameters |
+| <strong>Architecture</strong>| Transformer-based neural networks | Self-attention mechanisms |
+| <strong>Training</strong>| Massive text corpora | Books, web pages, code repositories |
+| <strong>Capabilities</strong>| Multi-task language understanding | Translation, summarization, reasoning |
+| <strong>Learning</strong>| Self-supervised and few-shot | Learn from context with minimal examples |
 
 ## Model Scale and Parameters
 
@@ -28,33 +28,33 @@ Large language models (LLMs) are advanced artificial intelligence systems traine
 
 | Model Generation | Parameter Count | Examples | Capabilities |
 |-----------------|----------------|----------|--------------|
-| **Small**| 100M-1B | DistilBERT, ALBERT | Specific tasks, efficient |
-| **Medium**| 1B-10B | GPT-2, BERT-Large | General language tasks |
-| **Large**| 10B-100B | GPT-3 (175B), LLaMA 70B | Advanced reasoning |
-| **Very Large**| 100B+ | GPT-4 (1.76T), PaLM 2 (340B) | Multi-modal, complex tasks |
+| <strong>Small</strong>| 100M-1B | DistilBERT, ALBERT | Specific tasks, efficient |
+| <strong>Medium</strong>| 1B-10B | GPT-2, BERT-Large | General language tasks |
+| <strong>Large</strong>| 10B-100B | GPT-3 (175B), LLaMA 70B | Advanced reasoning |
+| <strong>Very Large</strong>| 100B+ | GPT-4 (1.76T), PaLM 2 (340B) | Multi-modal, complex tasks |
 
 ### What Are Parameters?
 
-**Definition:**Parameters are the internal variables (weights and biases) in neural networks that are adjusted during training to minimize prediction errors.
+<strong>Definition:</strong>Parameters are the internal variables (weights and biases) in neural networks that are adjusted during training to minimize prediction errors.
 
-**Impact on Performance:**| Parameter Count | Training Data | Compute Required | Performance | Use Case |
+<strong>Impact on Performance:</strong>| Parameter Count | Training Data | Compute Required | Performance | Use Case |
 |----------------|---------------|------------------|-------------|----------|
-| **100M-1B**| 10-100GB | Days on GPUs | Good for specific tasks | Mobile, edge devices |
-| **1B-10B**| 100GB-1TB | Weeks on GPU clusters | General language | Standard applications |
-| **10B-100B**| 1-10TB | Months on supercomputers | Advanced reasoning | Enterprise AI |
-| **100B+**| 10TB+ | Months on massive clusters | State-of-the-art | Research, flagship products |
+| <strong>100M-1B</strong>| 10-100GB | Days on GPUs | Good for specific tasks | Mobile, edge devices |
+| <strong>1B-10B</strong>| 100GB-1TB | Weeks on GPU clusters | General language | Standard applications |
+| <strong>10B-100B</strong>| 1-10TB | Months on supercomputers | Advanced reasoning | Enterprise AI |
+| <strong>100B+</strong>| 10TB+ | Months on massive clusters | State-of-the-art | Research, flagship products |
 
 ### Notable LLM Examples
 
 | Model | Organization | Parameters | Release | Key Feature |
 |-------|-------------|-----------|---------|-------------|
-| **BERT**| Google | 110M-340M | 2018 | Bidirectional understanding |
-| **GPT-3**| OpenAI | 175B | 2020 | Few-shot learning |
-| **PaLM 2**| Google | Up to 340B | 2023 | Multilingual |
-| **LLaMA 2**| Meta | 7B-70B | 2023 | Open source |
-| **GPT-4**| OpenAI | 1.76T (estimated) | 2023 | Multimodal |
-| **Gemini**| Google | 540B+ | 2023 | Native multimodal |
-| **Claude**| Anthropic | Unknown | 2024 | Constitutional AI |
+| <strong>BERT</strong>| Google | 110M-340M | 2018 | Bidirectional understanding |
+| <strong>GPT-3</strong>| OpenAI | 175B | 2020 | Few-shot learning |
+| <strong>PaLM 2</strong>| Google | Up to 340B | 2023 | Multilingual |
+| <strong>LLaMA 2</strong>| Meta | 7B-70B | 2023 | Open source |
+| <strong>GPT-4</strong>| OpenAI | 1.76T (estimated) | 2023 | Multimodal |
+| <strong>Gemini</strong>| Google | 540B+ | 2023 | Native multimodal |
+| <strong>Claude</strong>| Anthropic | Unknown | 2024 | Constitutional AI |
 
 ## Transformer Architecture
 
@@ -62,21 +62,21 @@ Large language models (LLMs) are advanced artificial intelligence systems traine
 
 The transformer, introduced in ["Attention Is All You Need" (2017)](https://arxiv.org/abs/1706.03762), revolutionized NLP by processing sequences in parallel using self-attention mechanisms.
 
-**Key Advantages Over Previous Architectures:**| Feature | RNN/LSTM | Transformer |
+<strong>Key Advantages Over Previous Architectures:</strong>| Feature | RNN/LSTM | Transformer |
 |---------|----------|-------------|
-| **Processing**| Sequential | Parallel |
-| **Long-range Dependencies**| Limited | Excellent |
-| **Training Speed**| Slow | Fast |
-| **Scalability**| Poor | Excellent |
-| **Context Window**| Limited | Extensive |
+| <strong>Processing</strong>| Sequential | Parallel |
+| <strong>Long-range Dependencies</strong>| Limited | Excellent |
+| <strong>Training Speed</strong>| Slow | Fast |
+| <strong>Scalability</strong>| Poor | Excellent |
+| <strong>Context Window</strong>| Limited | Extensive |
 
 ### Transformer Components
 
-**1. Self-Attention Mechanism**
+<strong>1. Self-Attention Mechanism</strong>
 
-**Purpose:**Allow the model to weigh the importance of different words in a sequence when processing each word.
+<strong>Purpose:</strong>Allow the model to weigh the importance of different words in a sequence when processing each word.
 
-**Process:**```
+<strong>Process:</strong>```
 Input Sequence: "The cat sat on the mat"
     ↓
 For each word, compute attention scores with all other words
@@ -174,27 +174,27 @@ Repeat billions of times
 Pretrained Model
 ```
 
-**Computational Requirements:**| Model Size | GPUs/TPUs | Training Time | Cost | Energy |
+<strong>Computational Requirements:</strong>| Model Size | GPUs/TPUs | Training Time | Cost | Energy |
 |-----------|-----------|---------------|------|--------|
-| **1B params**| 8-16 GPUs | Days-weeks | $10K-100K | 10-50 MWh |
-| **10B params**| 64-128 GPUs | Weeks-months | $100K-1M | 100-500 MWh |
-| **100B+ params**| 1000+ GPUs/TPUs | Months | $1M-10M+ | 1-10 GWh |
+| <strong>1B params</strong>| 8-16 GPUs | Days-weeks | $10K-100K | 10-50 MWh |
+| <strong>10B params</strong>| 64-128 GPUs | Weeks-months | $100K-1M | 100-500 MWh |
+| <strong>100B+ params</strong>| 1000+ GPUs/TPUs | Months | $1M-10M+ | 1-10 GWh |
 
 ### Stage 3: Fine-Tuning
 
-**Purpose:**Adapt pretrained models to specific tasks or domains.
+<strong>Purpose:</strong>Adapt pretrained models to specific tasks or domains.
 
-**Fine-Tuning Approaches:**| Approach | Data Requirements | Resources | Use Case |
+<strong>Fine-Tuning Approaches:</strong>| Approach | Data Requirements | Resources | Use Case |
 |----------|------------------|-----------|----------|
-| **Full Fine-Tuning**| 10K-1M examples | High | Domain adaptation |
-| **LoRA (Low-Rank Adaptation)**| 1K-100K examples | Medium | Efficient adaptation |
-| **Prompt Tuning**| 100-10K examples | Low | Task-specific |
-| **Instruction Tuning**| 10K-100K instructions | Medium | Follow instructions |
-| **RLHF**| Human feedback | High | Alignment with values |
+| <strong>Full Fine-Tuning</strong>| 10K-1M examples | High | Domain adaptation |
+| <strong>LoRA (Low-Rank Adaptation)</strong>| 1K-100K examples | Medium | Efficient adaptation |
+| <strong>Prompt Tuning</strong>| 100-10K examples | Low | Task-specific |
+| <strong>Instruction Tuning</strong>| 10K-100K instructions | Medium | Follow instructions |
+| <strong>RLHF</strong>| Human feedback | High | Alignment with values |
 
 ### Stage 4: Alignment
 
-**Reinforcement Learning from Human Feedback (RLHF):**```
+<strong>Reinforcement Learning from Human Feedback (RLHF):</strong>```
 Generate multiple responses
     ↓
 Humans rank responses by quality
@@ -227,9 +227,9 @@ Output: "Bonjour, comment allez-vous?"
 
 ### Few-Shot Learning
 
-**Definition:**Learn from a small number of examples provided in the prompt.
+<strong>Definition:</strong>Learn from a small number of examples provided in the prompt.
 
-**Example:**```
+<strong>Example:</strong>```
 Sentiment classification:
 
 "Great product!" → Positive

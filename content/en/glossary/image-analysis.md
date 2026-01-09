@@ -14,44 +14,44 @@ draft: false
 
 Image analysis is the automated process by which artificial intelligence (AI) systems interpret, extract, and understand meaningful information from digital images. This encompasses technologies that enable computers to "see"—making sense of visual data such as photographs, X-rays, satellite imagery, or video frames. Core tasks include identifying objects, people, structures, text, and activities within images, and making decisions or generating outputs from this understanding.
 
-**Scope:**While closely related to computer vision (the broader AI discipline), image analysis specifically focuses on extracting actionable insights from static images.
+<strong>Scope:</strong>While closely related to computer vision (the broader AI discipline), image analysis specifically focuses on extracting actionable insights from static images.
 
 ## Image Analysis vs. Computer Vision
 
 | Aspect | Computer Vision | Image Analysis |
 |--------|----------------|----------------|
-| **Scope**| Broad field covering all visual understanding | Specific application within computer vision |
-| **Data Types**| Images, video, 3D data, real-time streams | Primarily static images |
-| **Applications**| Robotics, autonomous vehicles, AR/VR | Medical imaging, document processing, quality inspection |
-| **Processing**| Real-time and offline | Typically offline or batch processing |
-| **Complexity**| Encompasses full visual scene understanding | Focused on specific image interpretation tasks |
+| <strong>Scope</strong>| Broad field covering all visual understanding | Specific application within computer vision |
+| <strong>Data Types</strong>| Images, video, 3D data, real-time streams | Primarily static images |
+| <strong>Applications</strong>| Robotics, autonomous vehicles, AR/VR | Medical imaging, document processing, quality inspection |
+| <strong>Processing</strong>| Real-time and offline | Typically offline or batch processing |
+| <strong>Complexity</strong>| Encompasses full visual scene understanding | Focused on specific image interpretation tasks |
 
 ## Core Image Analysis Workflow
 
 ### Stage 1: Data Acquisition and Input
 
-**Image Sources:**| Source Type | Examples | Use Cases |
+<strong>Image Sources:</strong>| Source Type | Examples | Use Cases |
 |------------|----------|-----------|
-| **Medical Devices**| X-ray, MRI, CT scan, ultrasound | Diagnostics, treatment planning |
-| **Cameras**| Smartphones, DSLRs, surveillance | Security, social media, documentation |
-| **Satellites**| Remote sensing imagery | Agriculture, urban planning, environment |
-| **Scanners**| Document scanners, barcode readers | Digitization, inventory management |
-| **Industrial**| Quality control cameras, microscopes | Manufacturing, research |
+| <strong>Medical Devices</strong>| X-ray, MRI, CT scan, ultrasound | Diagnostics, treatment planning |
+| <strong>Cameras</strong>| Smartphones, DSLRs, surveillance | Security, social media, documentation |
+| <strong>Satellites</strong>| Remote sensing imagery | Agriculture, urban planning, environment |
+| <strong>Scanners</strong>| Document scanners, barcode readers | Digitization, inventory management |
+| <strong>Industrial</strong>| Quality control cameras, microscopes | Manufacturing, research |
 
 ### Stage 2: Preprocessing
 
-**Purpose:**Enhance image quality and standardize format for analysis.
+<strong>Purpose:</strong>Enhance image quality and standardize format for analysis.
 
-**Common Techniques:**| Technique | Purpose | Example |
+<strong>Common Techniques:</strong>| Technique | Purpose | Example |
 |-----------|---------|---------|
-| **Resizing**| Standardize dimensions | 224×224, 512×512 for neural networks |
-| **Normalization**| Scale pixel values | Convert to 0-1 range or standardize |
-| **Noise Reduction**| Remove artifacts | Gaussian blur, median filtering |
-| **Color Adjustment**| Enhance visibility | Contrast, brightness, histogram equalization |
-| **Grayscale Conversion**| Simplify when color unnecessary | Reduce from 3 channels to 1 |
-| **Augmentation**| Expand training data | Rotation, flipping, cropping, scaling |
+| <strong>Resizing</strong>| Standardize dimensions | 224×224, 512×512 for neural networks |
+| <strong>Normalization</strong>| Scale pixel values | Convert to 0-1 range or standardize |
+| <strong>Noise Reduction</strong>| Remove artifacts | Gaussian blur, median filtering |
+| <strong>Color Adjustment</strong>| Enhance visibility | Contrast, brightness, histogram equalization |
+| <strong>Grayscale Conversion</strong>| Simplify when color unnecessary | Reduce from 3 channels to 1 |
+| <strong>Augmentation</strong>| Expand training data | Rotation, flipping, cropping, scaling |
 
-**Preprocessing Pipeline:**```
+<strong>Preprocessing Pipeline:</strong>```
 Raw Image
     ↓
 Resize to Standard Dimensions
@@ -95,54 +95,54 @@ Model learns to map features → labels
 Trained Model predicts on new images
 ```
 
-**Training Approaches:**| Approach | Description | Use Case |
+<strong>Training Approaches:</strong>| Approach | Description | Use Case |
 |----------|-------------|----------|
-| **From Scratch**| Train entirely new model | Large datasets, unique domains |
-| **Transfer Learning**| Adapt pre-trained model | Limited data, faster training |
-| **Fine-Tuning**| Adjust pre-trained weights | Domain-specific adaptation |
-| **Few-Shot Learning**| Learn from minimal examples | Rare classes, limited labels |
+| <strong>From Scratch</strong>| Train entirely new model | Large datasets, unique domains |
+| <strong>Transfer Learning</strong>| Adapt pre-trained model | Limited data, faster training |
+| <strong>Fine-Tuning</strong>| Adjust pre-trained weights | Domain-specific adaptation |
+| <strong>Few-Shot Learning</strong>| Learn from minimal examples | Rare classes, limited labels |
 
-**Popular Architectures:**| Architecture Type | Examples | Strengths |
+<strong>Popular Architectures:</strong>| Architecture Type | Examples | Strengths |
 |------------------|----------|-----------|
-| **CNNs**| ResNet, VGG, EfficientNet | Strong spatial feature extraction |
-| **Vision Transformers**| ViT, SWIN, DeiT | Global context, attention mechanisms |
-| **Detection Models**| YOLO, Faster R-CNN, DETR | Object localization + classification |
-| **Segmentation Models**| U-Net, Mask R-CNN, DeepLab | Pixel-level labeling |
+| <strong>CNNs</strong>| ResNet, VGG, EfficientNet | Strong spatial feature extraction |
+| <strong>Vision Transformers</strong>| ViT, SWIN, DeiT | Global context, attention mechanisms |
+| <strong>Detection Models</strong>| YOLO, Faster R-CNN, DETR | Object localization + classification |
+| <strong>Segmentation Models</strong>| U-Net, Mask R-CNN, DeepLab | Pixel-level labeling |
 
 ### Stage 5: Validation and Testing
 
-**Dataset Splits:**| Split | Purpose | Typical Size |
+<strong>Dataset Splits:</strong>| Split | Purpose | Typical Size |
 |-------|---------|-------------|
-| **Training**| Model learning | 70-80% |
-| **Validation**| Hyperparameter tuning | 10-15% |
-| **Test**| Final evaluation | 10-15% |
+| <strong>Training</strong>| Model learning | 70-80% |
+| <strong>Validation</strong>| Hyperparameter tuning | 10-15% |
+| <strong>Test</strong>| Final evaluation | 10-15% |
 
-**Evaluation Metrics:**| Metric | Use Case | Formula/Description |
+<strong>Evaluation Metrics:</strong>| Metric | Use Case | Formula/Description |
 |--------|----------|-------------------|
-| **Accuracy**| Classification | Correct predictions / Total predictions |
-| **Precision**| Object detection | True Positives / (TP + False Positives) |
-| **Recall**| Object detection | True Positives / (TP + False Negatives) |
-| **F1 Score**| Balanced metric | 2 × (Precision × Recall) / (Precision + Recall) |
-| **IoU**| Segmentation, detection | Intersection / Union of predicted and ground truth |
-| **mAP**| Object detection | Mean Average Precision across classes |
+| <strong>Accuracy</strong>| Classification | Correct predictions / Total predictions |
+| <strong>Precision</strong>| Object detection | True Positives / (TP + False Positives) |
+| <strong>Recall</strong>| Object detection | True Positives / (TP + False Negatives) |
+| <strong>F1 Score</strong>| Balanced metric | 2 × (Precision × Recall) / (Precision + Recall) |
+| <strong>IoU</strong>| Segmentation, detection | Intersection / Union of predicted and ground truth |
+| <strong>mAP</strong>| Object detection | Mean Average Precision across classes |
 
 ### Stage 6: Deployment and Inference
 
-**Deployment Options:**| Platform | Characteristics | Use Cases |
+<strong>Deployment Options:</strong>| Platform | Characteristics | Use Cases |
 |----------|----------------|-----------|
-| **Cloud APIs**| Scalable, managed | High-volume applications |
-| **Edge Devices**| Low-latency, offline | IoT, mobile apps, autonomous systems |
-| **Web Applications**| Accessible, cross-platform | Consumer applications |
-| **Embedded Systems**| Resource-constrained | Industrial, automotive |
+| <strong>Cloud APIs</strong>| Scalable, managed | High-volume applications |
+| <strong>Edge Devices</strong>| Low-latency, offline | IoT, mobile apps, autonomous systems |
+| <strong>Web Applications</strong>| Accessible, cross-platform | Consumer applications |
+| <strong>Embedded Systems</strong>| Resource-constrained | Industrial, automotive |
 
-**Optimization Techniques:**- Model quantization (reduce precision)
+<strong>Optimization Techniques:</strong>- Model quantization (reduce precision)
 - Pruning (remove unnecessary weights)
 - Knowledge distillation (create smaller models)
 - Hardware acceleration (GPU, TPU, specialized chips)
 
 ### Stage 7: Continuous Improvement
 
-**Maintenance Activities:**- Monitor performance in production
+<strong>Maintenance Activities:</strong>- Monitor performance in production
 - Collect new data from real-world usage
 - Retrain models periodically
 - Update for concept drift
@@ -153,16 +153,16 @@ Trained Model predicts on new images
 
 ### 1. Image Classification
 
-**Definition:**Assign a single category label to an entire image.
+<strong>Definition:</strong>Assign a single category label to an entire image.
 
-**Applications:**| Domain | Task | Output |
+<strong>Applications:</strong>| Domain | Task | Output |
 |--------|------|--------|
-| **E-commerce**| Product categorization | "Shirt", "Shoes", "Electronics" |
-| **Healthcare**| Disease detection | "Normal", "Pneumonia", "COVID-19" |
-| **Agriculture**| Crop identification | "Wheat", "Corn", "Soybeans" |
-| **Wildlife**| Species recognition | "Lion", "Elephant", "Zebra" |
+| <strong>E-commerce</strong>| Product categorization | "Shirt", "Shoes", "Electronics" |
+| <strong>Healthcare</strong>| Disease detection | "Normal", "Pneumonia", "COVID-19" |
+| <strong>Agriculture</strong>| Crop identification | "Wheat", "Corn", "Soybeans" |
+| <strong>Wildlife</strong>| Species recognition | "Lion", "Elephant", "Zebra" |
 
-**Model Architecture:**```
+<strong>Model Architecture:</strong>```
 Input Image → CNN Backbone → Global Average Pooling → 
 Fully Connected Layers → Softmax → Class Probabilities
 ```
@@ -179,45 +179,45 @@ Fully Connected Layers → Softmax → Class Probabilities
 ]
 ```
 
-**Popular Models:**| Model | Speed | Accuracy | Best For |
+<strong>Popular Models:</strong>| Model | Speed | Accuracy | Best For |
 |-------|-------|----------|----------|
-| **YOLO v8**| Very Fast | High | Real-time applications |
-| **Faster R-CNN**| Moderate | Very High | Accuracy-critical tasks |
-| **DETR**| Moderate | High | Transformer-based detection |
-| **RetinaNet**| Fast | High | Handling class imbalance |
+| <strong>YOLO v8</strong>| Very Fast | High | Real-time applications |
+| <strong>Faster R-CNN</strong>| Moderate | Very High | Accuracy-critical tasks |
+| <strong>DETR</strong>| Moderate | High | Transformer-based detection |
+| <strong>RetinaNet</strong>| Fast | High | Handling class imbalance |
 
-**Applications:**- Autonomous vehicles (pedestrians, vehicles, signs)
+<strong>Applications:</strong>- Autonomous vehicles (pedestrians, vehicles, signs)
 - Surveillance (person detection, behavior analysis)
 - Retail (product recognition, shelf monitoring)
 - Manufacturing (defect detection)
 
 ### 3. Image Segmentation
 
-**Definition:**Label every pixel in an image according to class or instance.
+<strong>Definition:</strong>Label every pixel in an image according to class or instance.
 
-**Segmentation Types:**| Type | Description | Use Case |
+<strong>Segmentation Types:</strong>| Type | Description | Use Case |
 |------|-------------|----------|
-| **Semantic**| Class per pixel, no instance distinction | Land use mapping, medical imaging |
-| **Instance**| Separate instances of same class | Counting objects, robot manipulation |
-| **Panoptic**| Combination of semantic + instance | Comprehensive scene understanding |
+| <strong>Semantic</strong>| Class per pixel, no instance distinction | Land use mapping, medical imaging |
+| <strong>Instance</strong>| Separate instances of same class | Counting objects, robot manipulation |
+| <strong>Panoptic</strong>| Combination of semantic + instance | Comprehensive scene understanding |
 
-**Model Examples:**| Model | Type | Strengths |
+<strong>Model Examples:</strong>| Model | Type | Strengths |
 |-------|------|-----------|
-| **U-Net**| Semantic | Medical imaging, small datasets |
-| **Mask R-CNN**| Instance | Object instances with precise boundaries |
-| **DeepLab**| Semantic | High accuracy, atrous convolutions |
-| **YOLOv8-seg**| Instance | Real-time segmentation |
+| <strong>U-Net</strong>| Semantic | Medical imaging, small datasets |
+| <strong>Mask R-CNN</strong>| Instance | Object instances with precise boundaries |
+| <strong>DeepLab</strong>| Semantic | High accuracy, atrous convolutions |
+| <strong>YOLOv8-seg</strong>| Instance | Real-time segmentation |
 
-**Applications:**- Medical: Tumor segmentation, organ delineation
+<strong>Applications:</strong>- Medical: Tumor segmentation, organ delineation
 - Autonomous driving: Road, lane, sidewalk segmentation
 - Agriculture: Crop and weed identification
 - Satellite: Land cover classification
 
 ### 4. Optical Character Recognition (OCR)
 
-**Definition:**Detect and extract text from images, including printed and handwritten sources.
+<strong>Definition:</strong>Detect and extract text from images, including printed and handwritten sources.
 
-**Pipeline:**```
+<strong>Pipeline:</strong>```
 Image → Text Detection → Text Recognition → 
 Post-Processing → Structured Text Output
 ```
@@ -267,7 +267,7 @@ Image → CNN Encoder → Visual Features →
 LSTM/Transformer Decoder → Text Generation → Caption
 ```
 
-**Example Output:**```
+<strong>Example Output:</strong>```
 Image: [Beach scene with people]
 Caption: "A group of people enjoying a sunny day at the beach, 
           with waves in the background and umbrellas on the sand."
@@ -306,14 +306,14 @@ Cosine Similarity → Relevance Score
 
 ### Healthcare and Medical Imaging
 
-**Applications:**| Task | Technology | Impact |
+<strong>Applications:</strong>| Task | Technology | Impact |
 |------|------------|--------|
-| **Disease Detection**| Classification, segmentation | Early diagnosis, treatment planning |
-| **Tumor Analysis**| Segmentation, measurement | Precise treatment targeting |
-| **Tissue Classification**| Classification | Pathology diagnosis |
-| **Treatment Monitoring**| Change detection | Track disease progression |
+| <strong>Disease Detection</strong>| Classification, segmentation | Early diagnosis, treatment planning |
+| <strong>Tumor Analysis</strong>| Segmentation, measurement | Precise treatment targeting |
+| <strong>Tissue Classification</strong>| Classification | Pathology diagnosis |
+| <strong>Treatment Monitoring</strong>| Change detection | Track disease progression |
 
-**Example Workflow:**```
+<strong>Example Workflow:</strong>```
 X-Ray Image → Preprocessing → CNN Analysis → 
 Anomaly Detection → Confidence Score → 
 Radiologist Review → Diagnosis

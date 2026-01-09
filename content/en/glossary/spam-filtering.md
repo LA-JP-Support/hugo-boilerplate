@@ -22,27 +22,27 @@ Effective spam filtering serves as a critical first line of defense in email sec
 
 ### Security Protection
 
-**Threat Prevention**Spam is the primary delivery mechanism for phishing attacks, ransomware, malware, business email compromise (BEC), credential theft, and social engineering attacks. Successful spam attacks result in data breaches, financial loss, intellectual property theft, and regulatory violations. Spam filtering blocks these threats before they reach users who might otherwise fall victim to convincing attacks.
+<strong>Threat Prevention</strong>Spam is the primary delivery mechanism for phishing attacks, ransomware, malware, business email compromise (BEC), credential theft, and social engineering attacks. Successful spam attacks result in data breaches, financial loss, intellectual property theft, and regulatory violations. Spam filtering blocks these threats before they reach users who might otherwise fall victim to convincing attacks.
 
-**Brand Protection**Allowing spam to reach users—especially messages spoofing your brand or originating from your domain—undermines trust, damages reputation, and can result in domain blocklisting. Outbound spam filtering prevents compromised accounts from sending spam that could get your organization's domain blacklisted by major email providers.
+<strong>Brand Protection</strong>Allowing spam to reach users—especially messages spoofing your brand or originating from your domain—undermines trust, damages reputation, and can result in domain blocklisting. Outbound spam filtering prevents compromised accounts from sending spam that could get your organization's domain blacklisted by major email providers.
 
 ### Operational Efficiency
 
-**Productivity**Unfiltered spam floods inboxes with junk, making it difficult for users to find legitimate communications. This reduces operational efficiency, increases the risk of missing critical messages, and wastes time sorting through unwanted emails. Effective filtering maintains inbox cleanliness and user focus.
+<strong>Productivity</strong>Unfiltered spam floods inboxes with junk, making it difficult for users to find legitimate communications. This reduces operational efficiency, increases the risk of missing critical messages, and wastes time sorting through unwanted emails. Effective filtering maintains inbox cleanliness and user focus.
 
-**Resource Optimization**Spam filtering reduces server load, storage requirements, and bandwidth consumption by blocking unwanted messages before they consume system resources. This enables IT infrastructure to focus on legitimate communications.
+<strong>Resource Optimization</strong>Spam filtering reduces server load, storage requirements, and bandwidth consumption by blocking unwanted messages before they consume system resources. This enables IT infrastructure to focus on legitimate communications.
 
 ### Compliance and Governance
 
-**Regulatory Adherence**Spam often attempts data exfiltration or results in data leakage, exposing organizations to legal and regulatory penalties under frameworks such as GDPR, HIPAA, PCI DSS, and SOX. Spam filtering helps maintain compliance by preventing unauthorized data exposure and maintaining email security controls.
+<strong>Regulatory Adherence</strong>Spam often attempts data exfiltration or results in data leakage, exposing organizations to legal and regulatory penalties under frameworks such as GDPR, HIPAA, PCI DSS, and SOX. Spam filtering helps maintain compliance by preventing unauthorized data exposure and maintaining email security controls.
 
-**Policy Enforcement**Modern spam filters enforce organizational communication policies, including acceptable use policies, data loss prevention rules, and external communication guidelines.
+<strong>Policy Enforcement</strong>Modern spam filters enforce organizational communication policies, including acceptable use policies, data loss prevention rules, and external communication guidelines.
 
 ### Cost Management
 
-**Direct Cost Savings**Spam filtering reduces costs associated with malware remediation, incident response, data breach recovery, and legal proceedings. Preventing a single successful ransomware attack through effective filtering can save hundreds of thousands or millions of dollars.
+<strong>Direct Cost Savings</strong>Spam filtering reduces costs associated with malware remediation, incident response, data breach recovery, and legal proceedings. Preventing a single successful ransomware attack through effective filtering can save hundreds of thousands or millions of dollars.
 
-**Indirect Savings**Reduced help desk tickets for spam-related issues, lower training costs for security awareness, and decreased insurance premiums for cyber liability coverage contribute to overall cost reduction.
+<strong>Indirect Savings</strong>Reduced help desk tickets for spam-related issues, lower training costs for security awareness, and decreased insurance premiums for cyber liability coverage contribute to overall cost reduction.
 
 ## How Spam Filtering Works
 
@@ -50,41 +50,41 @@ Spam filtering operates through a multi-stage, defense-in-depth workflow that co
 
 ### Multi-Stage Filtering Workflow
 
-**1. Email Reception**The mail server or gateway receives the inbound email and triggers scanning and filtering mechanisms. Initial connection-level checks may reject messages before full receipt based on sender reputation or authentication failures.
+<strong>1. Email Reception</strong>The mail server or gateway receives the inbound email and triggers scanning and filtering mechanisms. Initial connection-level checks may reject messages before full receipt based on sender reputation or authentication failures.
 
-**2. Connection and Sender Reputation Check**The filter examines the sender's IP address, sending domain, and email infrastructure against global and local blocklists (DNS-based blackhole lists, real-time blackhole lists), threat intelligence feeds, and sender reputation databases. Known spam sources, compromised servers, recently registered domains, or senders with poor reputation scores are blocked or quarantined immediately.
+<strong>2. Connection and Sender Reputation Check</strong>The filter examines the sender's IP address, sending domain, and email infrastructure against global and local blocklists (DNS-based blackhole lists, real-time blackhole lists), threat intelligence feeds, and sender reputation databases. Known spam sources, compromised servers, recently registered domains, or senders with poor reputation scores are blocked or quarantined immediately.
 
 Advanced systems leverage real-time reputation scoring using threat intelligence from sources such as Spamhaus, Cisco Talos, Google Safe Browsing, Microsoft Defender, and crowdsourced spam reports.
 
-**3. Header Analysis and Authentication Protocols**The filter inspects email header metadata for anomalies including mismatched "From" and "Return-Path" addresses, forged received headers, non-standard formatting, irregular routing paths, and timestamp inconsistencies.
+<strong>3. Header Analysis and Authentication Protocols</strong>The filter inspects email header metadata for anomalies including mismatched "From" and "Return-Path" addresses, forged received headers, non-standard formatting, irregular routing paths, and timestamp inconsistencies.
 
 Authentication protocols are enforced:
-- **SPF (Sender Policy Framework):**Verifies sending server is authorized by domain owner
-- **DKIM (DomainKeys Identified Mail):**Validates message integrity and sender authenticity through cryptographic signatures
-- **DMARC (Domain-based Message Authentication, Reporting & Conformance):**Enforces SPF and DKIM alignment and specifies handling for failures
+- <strong>SPF (Sender Policy Framework):</strong>Verifies sending server is authorized by domain owner
+- <strong>DKIM (DomainKeys Identified Mail):</strong>Validates message integrity and sender authenticity through cryptographic signatures
+- <strong>DMARC (Domain-based Message Authentication, Reporting & Conformance):</strong>Enforces SPF and DKIM alignment and specifies handling for failures
 
 Failures or inconsistencies in authentication protocols are strong signals of spoofing, phishing, domain impersonation, or compromised accounts.
 
-**4. Content and Contextual Analysis**The email body, subject line, and formatting are scanned for spam indicators including suspicious keywords and phrases, deceptive formatting and obfuscation techniques, excessive use of images or minimal text, unusual character encoding or hidden text, and suspicious attachment types.
+<strong>4. Content and Contextual Analysis</strong>The email body, subject line, and formatting are scanned for spam indicators including suspicious keywords and phrases, deceptive formatting and obfuscation techniques, excessive use of images or minimal text, unusual character encoding or hidden text, and suspicious attachment types.
 
 Heuristic and rule-based algorithms flag known spam tactics such as urgency language ("act now," "limited time"), financial fraud indicators ("wire transfer," "urgent payment"), suspicious offers ("unclaimed inheritance," "guaranteed returns"), and phishing lures ("verify your account," "confirm your identity").
 
 Content filters identify language patterns consistent with known phishing campaigns, social engineering attacks, and fraud schemes through pattern matching and machine learning classification.
 
-**5. URL and Link Scanning**Embedded URLs are extracted and checked against threat intelligence databases for known malicious domains, newly registered domains (common in phishing), lookalike domains using typosquatting or homograph attacks, suspicious URL shorteners, and redirect chains to malicious sites.
+<strong>5. URL and Link Scanning</strong>Embedded URLs are extracted and checked against threat intelligence databases for known malicious domains, newly registered domains (common in phishing), lookalike domains using typosquatting or homograph attacks, suspicious URL shorteners, and redirect chains to malicious sites.
 
 Advanced systems perform real-time URL reputation checking, sandbox detonation of linked content, and analysis of landing page characteristics.
 
-**6. Attachment Analysis**Email attachments undergo multi-level scanning:
-- **Signature-based detection:**Comparing file hashes against known malware databases
-- **Heuristic analysis:**Examining file structure and characteristics for suspicious patterns
-- **Sandboxing:**Executing files in isolated virtual environments to observe behavior
-- **File type validation:**Ensuring file extensions match actual content
-- **Macro analysis:**Detecting malicious macros in Office documents
+<strong>6. Attachment Analysis</strong>Email attachments undergo multi-level scanning:
+- <strong>Signature-based detection:</strong>Comparing file hashes against known malware databases
+- <strong>Heuristic analysis:</strong>Examining file structure and characteristics for suspicious patterns
+- <strong>Sandboxing:</strong>Executing files in isolated virtual environments to observe behavior
+- <strong>File type validation:</strong>Ensuring file extensions match actual content
+- <strong>Macro analysis:</strong>Detecting malicious macros in Office documents
 
 Suspicious attachments are quarantined or stripped, with users notified and given options to request review if needed.
 
-**7. Machine Learning and Behavioral Analysis**Adaptive machine learning models analyze patterns across multiple dimensions:
+<strong>7. Machine Learning and Behavioral Analysis</strong>Adaptive machine learning models analyze patterns across multiple dimensions:
 - Historical email patterns and normal behavior baselines
 - Sudden changes in sending volume or recipient lists
 - Unusual communication flows or timing
@@ -94,17 +94,17 @@ Suspicious attachments are quarantined or stripped, with users notified and give
 
 Behavioral analysis tracks sender-recipient relationships, identifies anomalous communication patterns, and detects account compromise indicators.
 
-**8. Scoring and Classification**Each email receives a composite spam score based on weighted factors from all analysis stages. Sophisticated systems use multi-factor risk scoring considering sender reputation weight, authentication protocol results, content analysis findings, URL and attachment risk assessment, and machine learning model predictions.
+<strong>8. Scoring and Classification</strong>Each email receives a composite spam score based on weighted factors from all analysis stages. Sophisticated systems use multi-factor risk scoring considering sender reputation weight, authentication protocol results, content analysis findings, URL and attachment risk assessment, and machine learning model predictions.
 
 Configurable thresholds determine message handling:
-- **Low score:**Delivered normally
-- **Medium score:**Flagged or moved to spam folder
-- **High score:**Quarantined for review
-- **Very high score:**Blocked outright
+- <strong>Low score:</strong>Delivered normally
+- <strong>Medium score:</strong>Flagged or moved to spam folder
+- <strong>High score:</strong>Quarantined for review
+- <strong>Very high score:</strong>Blocked outright
 
 Administrators can customize thresholds, create allowlists and blocklists, and establish policy-based routing rules.
 
-**9. User Feedback and Learning**User actions provide feedback loops:
+<strong>9. User Feedback and Learning</strong>User actions provide feedback loops:
 - Marking messages as spam or not spam retrains filters
 - Reporting phishing attempts updates threat databases
 - Allowlisting legitimate senders improves accuracy
@@ -116,37 +116,37 @@ Enterprise solutions often include self-service portals where users review quara
 
 ### By Analytical Method
 
-**Content Filters**Analyze email body, subject lines, links, and attachments for spam characteristics. Effective against common spam tactics and highly customizable. May generate false positives on legitimate marketing emails and can be evaded through obfuscation techniques.
+<strong>Content Filters</strong>Analyze email body, subject lines, links, and attachments for spam characteristics. Effective against common spam tactics and highly customizable. May generate false positives on legitimate marketing emails and can be evaded through obfuscation techniques.
 
-**Header Filters**Inspect sender information, routing metadata, and timestamp data for anomalies or spoofed information. Detect forged sources and domain spoofing effectively. Sophisticated attackers can mimic legitimate headers.
+<strong>Header Filters</strong>Inspect sender information, routing metadata, and timestamp data for anomalies or spoofed information. Detect forged sources and domain spoofing effectively. Sophisticated attackers can mimic legitimate headers.
 
-**Blocklist Filters**Reference DNS-based blackhole lists (DNSBL) and real-time blackhole lists (RBL) for known spam sources. Provide fast blocking of known bad actors but are ineffective against new or unknown sources and may have false positives if legitimate servers are wrongly listed.
+<strong>Blocklist Filters</strong>Reference DNS-based blackhole lists (DNSBL) and real-time blackhole lists (RBL) for known spam sources. Provide fast blocking of known bad actors but are ineffective against new or unknown sources and may have false positives if legitimate servers are wrongly listed.
 
-**Bayesian Filters**Use probabilistic models assessing likelihood of spam based on word and phrase frequency patterns learned from training data. Adaptive systems learn over time and reduce false negatives. Vulnerable to Bayesian poisoning attacks and require regular training with clean datasets.
+<strong>Bayesian Filters</strong>Use probabilistic models assessing likelihood of spam based on word and phrase frequency patterns learned from training data. Adaptive systems learn over time and reduce false negatives. Vulnerable to Bayesian poisoning attacks and require regular training with clean datasets.
 
-**Heuristic Filters**Apply predefined rule sets using if-then logic to detect spam patterns. Provide immediate effect and easy deployment but can be brittle and generate high false positives if not carefully tuned.
+<strong>Heuristic Filters</strong>Apply predefined rule sets using if-then logic to detect spam patterns. Provide immediate effect and easy deployment but can be brittle and generate high false positives if not carefully tuned.
 
-**Rule-Based Filters**Custom administrator or user-defined rules based on sender, content, behavior, or other criteria. Highly customizable to organizational needs but require ongoing maintenance and tuning.
+<strong>Rule-Based Filters</strong>Custom administrator or user-defined rules based on sender, content, behavior, or other criteria. Highly customizable to organizational needs but require ongoing maintenance and tuning.
 
-**Machine Learning Filters**Neural networks and ensemble models trained on large datasets to recognize complex, evolving spam patterns. Detect sophisticated threats and adapt quickly to new tactics. Resource-intensive and depend heavily on training data quality.
+<strong>Machine Learning Filters</strong>Neural networks and ensemble models trained on large datasets to recognize complex, evolving spam patterns. Detect sophisticated threats and adapt quickly to new tactics. Resource-intensive and depend heavily on training data quality.
 
-**Authentication Filters**Enforce SPF, DKIM, and DMARC protocols for sender and domain validation. Significantly reduce spoofing, BEC attacks, and brand forgery. Compromised legitimate accounts can still pass authentication checks.
+<strong>Authentication Filters</strong>Enforce SPF, DKIM, and DMARC protocols for sender and domain validation. Significantly reduce spoofing, BEC attacks, and brand forgery. Compromised legitimate accounts can still pass authentication checks.
 
-**Challenge-Response Systems**Require sender verification through CAPTCHA, email confirmation, or other validation before message delivery. Effectively block automated spam bots but can delay or block legitimate communications and create poor user experience.
+<strong>Challenge-Response Systems</strong>Require sender verification through CAPTCHA, email confirmation, or other validation before message delivery. Effectively block automated spam bots but can delay or block legitimate communications and create poor user experience.
 
-**Behavioral and Collaborative Filters**Analyze sending patterns and leverage crowdsourced intelligence from user reports across organizations. Detect mass spam campaigns and learn from community feedback. May be slower to detect targeted attacks against specific organizations.
+<strong>Behavioral and Collaborative Filters</strong>Analyze sending patterns and leverage crowdsourced intelligence from user reports across organizations. Detect mass spam campaigns and learn from community feedback. May be slower to detect targeted attacks against specific organizations.
 
-**Language and Geographic Filters**Block or score messages based on language or country of origin. Reduce irrelevant international spam but may block legitimate foreign-language communications.
+<strong>Language and Geographic Filters</strong>Block or score messages based on language or country of origin. Reduce irrelevant international spam but may block legitimate foreign-language communications.
 
 ### By Deployment Model
 
-**Server-Side (Gateway) Filtering**Deployed on mail servers or network gateways before message delivery to users. Provides centralized control, consistent policy enforcement, comprehensive logging, and reduced endpoint risk. Offers less flexibility for individual user preferences and requires initial setup investment.
+<strong>Server-Side (Gateway) Filtering</strong>Deployed on mail servers or network gateways before message delivery to users. Provides centralized control, consistent policy enforcement, comprehensive logging, and reduced endpoint risk. Offers less flexibility for individual user preferences and requires initial setup investment.
 
-**Client-Side Filtering**Runs within user mail clients (Outlook, Thunderbird, Gmail) or endpoint security agents. Enables personalized filtering, user control over rules, and easy recovery of misclassified messages. Messages reach devices before filtering, increasing endpoint exposure, and requires per-user configuration and maintenance.
+<strong>Client-Side Filtering</strong>Runs within user mail clients (Outlook, Thunderbird, Gmail) or endpoint security agents. Enables personalized filtering, user control over rules, and easy recovery of misclassified messages. Messages reach devices before filtering, increasing endpoint exposure, and requires per-user configuration and maintenance.
 
-**Cloud-Based Filtering**Email routed through cloud provider's filtering infrastructure before delivery. Provides automatic updates, rapid threat response, infinite scalability, and protection for remote workforces. Introduces data residency and sovereignty concerns and dependency on provider infrastructure.
+<strong>Cloud-Based Filtering</strong>Email routed through cloud provider's filtering infrastructure before delivery. Provides automatic updates, rapid threat response, infinite scalability, and protection for remote workforces. Introduces data residency and sovereignty concerns and dependency on provider infrastructure.
 
-**Hybrid Approaches**Combines server, client, and/or cloud filtering for layered, defense-in-depth security. Maximizes protection through redundancy, compensates for individual filter weaknesses, and provides fallback protection. More complex to manage with potential interoperability challenges.
+<strong>Hybrid Approaches</strong>Combines server, client, and/or cloud filtering for layered, defense-in-depth security. Maximizes protection through redundancy, compensates for individual filter weaknesses, and provides fallback protection. More complex to manage with potential interoperability challenges.
 
 ## Key Technologies in Modern Spam Filtering
 
@@ -252,24 +252,24 @@ Conduct regular phishing simulations testing filter effectiveness, perform red t
 ## Common Challenges and Solutions
 
 ### False Positives
-**Challenge:**Legitimate emails incorrectly classified as spam disrupt business communications.  
-**Solution:**Implement progressive scoring rather than binary classification, maintain accurate allowlists, tune thresholds based on organizational risk tolerance, provide easy email recovery mechanisms, and regularly review and adjust rules.
+<strong>Challenge:</strong>Legitimate emails incorrectly classified as spam disrupt business communications.  
+<strong>Solution:</strong>Implement progressive scoring rather than binary classification, maintain accurate allowlists, tune thresholds based on organizational risk tolerance, provide easy email recovery mechanisms, and regularly review and adjust rules.
 
 ### Evasion Techniques
-**Challenge:**Attackers constantly evolve tactics to bypass filters using AI-generated content, image-based spam, steganography, and polymorphic techniques.  
-**Solution:**Deploy machine learning filters that adapt to new patterns, use sandboxing for suspicious content, maintain multiple detection layers, participate in threat intelligence sharing, and update filters frequently.
+<strong>Challenge:</strong>Attackers constantly evolve tactics to bypass filters using AI-generated content, image-based spam, steganography, and polymorphic techniques.  
+<strong>Solution:</strong>Deploy machine learning filters that adapt to new patterns, use sandboxing for suspicious content, maintain multiple detection layers, participate in threat intelligence sharing, and update filters frequently.
 
 ### Performance Impact
-**Challenge:**Comprehensive filtering can introduce latency and consume system resources.  
-**Solution:**Optimize filter configuration for performance, use cloud-based filtering for resource-intensive analysis, implement caching for reputation and authentication checks, balance thoroughness with acceptable delays, and scale infrastructure as needed.
+<strong>Challenge:</strong>Comprehensive filtering can introduce latency and consume system resources.  
+<strong>Solution:</strong>Optimize filter configuration for performance, use cloud-based filtering for resource-intensive analysis, implement caching for reputation and authentication checks, balance thoroughness with acceptable delays, and scale infrastructure as needed.
 
 ### Complex Configuration
-**Challenge:**Modern spam filters offer extensive configuration options that can overwhelm administrators.  
-**Solution:**Start with vendor-recommended baseline configurations, make incremental changes with testing, document all customizations, use templates for common scenarios, and provide administrator training.
+<strong>Challenge:</strong>Modern spam filters offer extensive configuration options that can overwhelm administrators.  
+<strong>Solution:</strong>Start with vendor-recommended baseline configurations, make incremental changes with testing, document all customizations, use templates for common scenarios, and provide administrator training.
 
 ### User Resistance
-**Challenge:**Users may bypass or disable filtering when experiencing false positives or delayed emails.  
-**Solution:**Communicate filtering benefits and necessity, provide self-service options for managing personal filters, respond quickly to false positive reports, maintain acceptable performance levels, and involve users in tuning decisions.
+<strong>Challenge:</strong>Users may bypass or disable filtering when experiencing false positives or delayed emails.  
+<strong>Solution:</strong>Communicate filtering benefits and necessity, provide self-service options for managing personal filters, respond quickly to false positive reports, maintain acceptable performance levels, and involve users in tuning decisions.
 
 ## Real-World Use Cases
 
@@ -290,21 +290,21 @@ Implements multi-region cloud filtering with local language and cultural adaptat
 
 ## Frequently Asked Questions
 
-**Is spam filtering enough to prevent all email-based threats?**No. Spam filtering is a critical defense layer but must be combined with user education, endpoint protection, email authentication, access controls, and regular security assessments for comprehensive email security.
+<strong>Is spam filtering enough to prevent all email-based threats?</strong>No. Spam filtering is a critical defense layer but must be combined with user education, endpoint protection, email authentication, access controls, and regular security assessments for comprehensive email security.
 
-**What are false positives and how can I reduce them?**False positives are legitimate emails incorrectly marked as spam. Reduce them by tuning filter thresholds, maintaining accurate allowlists, using progressive scoring, leveraging user feedback for filter training, and regularly reviewing quarantine contents.
+<strong>What are false positives and how can I reduce them?</strong>False positives are legitimate emails incorrectly marked as spam. Reduce them by tuning filter thresholds, maintaining accurate allowlists, using progressive scoring, leveraging user feedback for filter training, and regularly reviewing quarantine contents.
 
-**Can spam filters be bypassed?**Yes. Sophisticated attackers continuously innovate using AI-generated phishing, lookalike domains, polymorphic malware, steganography, and social engineering. Regular updates, layered filtering, machine learning, and user education are essential for maintaining effectiveness.
+<strong>Can spam filters be bypassed?</strong>Yes. Sophisticated attackers continuously innovate using AI-generated phishing, lookalike domains, polymorphic malware, steganography, and social engineering. Regular updates, layered filtering, machine learning, and user education are essential for maintaining effectiveness.
 
-**What are SPF, DKIM, and DMARC?**SPF validates sending servers are authorized by domain owners. DKIM provides cryptographic signatures verifying message integrity and sender authenticity. DMARC enforces SPF and DKIM alignment and specifies handling for authentication failures. Together, they prevent domain spoofing and phishing.
+<strong>What are SPF, DKIM, and DMARC?</strong>SPF validates sending servers are authorized by domain owners. DKIM provides cryptographic signatures verifying message integrity and sender authenticity. DMARC enforces SPF and DKIM alignment and specifies handling for authentication failures. Together, they prevent domain spoofing and phishing.
 
-**Should filtering be done server-side or client-side?**Server-side filtering provides centralized control, consistent policy enforcement, and better security by blocking spam before delivery. Client-side filtering offers personalization and user control but exposes endpoints to spam. Hybrid approaches combine advantages of both.
+<strong>Should filtering be done server-side or client-side?</strong>Server-side filtering provides centralized control, consistent policy enforcement, and better security by blocking spam before delivery. Client-side filtering offers personalization and user control but exposes endpoints to spam. Hybrid approaches combine advantages of both.
 
-**How does machine learning improve spam filtering?**Machine learning analyzes large datasets to recognize complex patterns, adapts to evolving tactics, detects zero-day threats, reduces false positives through continuous learning, and handles polymorphic spam that evades signature-based detection.
+<strong>How does machine learning improve spam filtering?</strong>Machine learning analyzes large datasets to recognize complex patterns, adapts to evolving tactics, detects zero-day threats, reduces false positives through continuous learning, and handles polymorphic spam that evades signature-based detection.
 
-**What should I do if legitimate email is blocked?**Contact your email administrator to review the blocked message, request sender be added to allowlist if appropriate, check if sender's domain has authentication issues, verify sender's reputation, and report false positive for filter tuning.
+<strong>What should I do if legitimate email is blocked?</strong>Contact your email administrator to review the blocked message, request sender be added to allowlist if appropriate, check if sender's domain has authentication issues, verify sender's reputation, and report false positive for filter tuning.
 
-**How often should spam filters be updated?**Signature and threat intelligence updates should occur continuously or at minimum daily. Rule sets and machine learning models should be reviewed and updated monthly. Major configuration reviews should occur quarterly with full assessments annually.
+<strong>How often should spam filters be updated?</strong>Signature and threat intelligence updates should occur continuously or at minimum daily. Rule sets and machine learning models should be reviewed and updated monthly. Major configuration reviews should occur quarterly with full assessments annually.
 
 ## References
 

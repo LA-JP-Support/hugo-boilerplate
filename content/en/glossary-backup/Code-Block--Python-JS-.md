@@ -38,7 +38,7 @@ if (condition) {
 
 Blocks in Python are defined by consistent indentation, typically four spaces per level ([PEP 8](https://peps.python.org/pep-0008/#indentation)). Indentation signals the start and end of a block, unlike curly braces in other languages.
 
-**Correct Syntax Example:**```python
+<strong>Correct Syntax Example:</strong>```python
 if age >= 18:
     print("Adult")
     print("Can vote")
@@ -48,7 +48,7 @@ print("Done")  # Outside the block
 if age >= 18:
 print("Adult")  # Raises IndentationError
 ```
-**Key Points:**- All lines in a block must be indented by the same amount.
+<strong>Key Points:</strong>- All lines in a block must be indented by the same amount.
 - Mixing tabs and spaces causes errors. Use spaces only, as per [PEP 8](https://peps.python.org/pep-0008/#tabs-or-spaces).
 - An empty block is invalid; use `pass` as a placeholder if needed:
 ```python
@@ -66,7 +66,7 @@ if (age >= 18) {
 }
 console.log("Done"); // Outside the block
 ```
-**Incorrect Syntax Example:**```javascript
+<strong>Incorrect Syntax Example:</strong>```javascript
 if (age >= 18)
     console.log("Adult");
     console.log("Can vote"); // Not part of the if-block!
@@ -161,7 +161,7 @@ if x > 5:
     if x % 2 == 0:
         print("x is even")
 ```
-**JavaScript:**```javascript
+<strong>JavaScript:</strong>```javascript
 let x = 10;
 if (x > 5) {
     console.log("x is greater than 5");
@@ -178,7 +178,7 @@ for i in range(3):
     print(i)
     print(i * 2)
 ```
-**JavaScript:**```javascript
+<strong>JavaScript:</strong>```javascript
 for (let i = 0; i < 3; i++) {
     console.log(i);
     console.log(i * 2);

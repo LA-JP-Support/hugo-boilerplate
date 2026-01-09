@@ -22,9 +22,9 @@ In automation and AI chatbot development, an error handler—often implemented a
 
 ## 1. Introduction
 
-Automated systems and [conversational AI](/en/glossary/conversational-ai/) platforms must be resilient against unexpected failures from invalid user input, integration outages, or logic bugs. Error handlers, typically realized as Try-Catch blocks, anticipate and manage such runtime exceptions. Without them, a single unhandled error can crash an automation process or leave a chatbot session in an undefined state.
+Automated systems and conversational AI platforms must be resilient against unexpected failures from invalid user input, integration outages, or logic bugs. Error handlers, typically realized as Try-Catch blocks, anticipate and manage such runtime exceptions. Without them, a single unhandled error can crash an automation process or leave a chatbot session in an undefined state.
 
-**Scenario:**If a chatbot reads data from an external API and the API fails, a Try-Catch block ensures the bot gracefully informs the user and offers alternatives, rather than terminating abruptly ([JavaScript.info: Try-Catch](https://javascript.info/try-catch)).
+<strong>Scenario:</strong>If a chatbot reads data from an external API and the API fails, a Try-Catch block ensures the bot gracefully informs the user and offers alternatives, rather than terminating abruptly ([JavaScript.info: Try-Catch](https://javascript.info/try-catch)).
 
 ## 2. What Is an Error Handler / Try-Catch?
 
@@ -32,11 +32,11 @@ Automated systems and [conversational AI](/en/glossary/conversational-ai/) platf
 
 An error handler (or Try-Catch block) is a programming construct or logical flow element that traps exceptions—unexpected events during execution—allowing code or automation to respond deliberately rather than fail uncontrollably.
 
-- **Exception Handling:**Detecting, capturing, and processing exceptions.
-- **Exception:**An event representing an error or unexpected condition during execution.
-- **Try Block:**Contains code that may generate exceptions.
-- **Catch Block:**Handles exceptions thrown in the associated try block.
-- **Finally Block (optional):**Executes code regardless of whether an exception was thrown.
+- <strong>Exception Handling:</strong>Detecting, capturing, and processing exceptions.
+- <strong>Exception:</strong>An event representing an error or unexpected condition during execution.
+- <strong>Try Block:</strong>Contains code that may generate exceptions.
+- <strong>Catch Block:</strong>Handles exceptions thrown in the associated try block.
+- <strong>Finally Block (optional):</strong>Executes code regardless of whether an exception was thrown.
 
 > “A Try-Catch error handler directs control flow to a dedicated block when an operation fails, enabling recovery or reporting without crashing the process.”
 
@@ -44,7 +44,7 @@ An error handler (or Try-Catch block) is a programming construct or logical flow
 
 ### 3.1 JavaScript
 
-**Syntax:**```javascript
+<strong>Syntax:</strong>```javascript
 try {
   // Code that may throw an error
 } catch (error) {
@@ -82,13 +82,13 @@ finally
     // Always runs
 }
 ```
-**Features:**- Multiple catch blocks for different exception types.
+<strong>Features:</strong>- Multiple catch blocks for different exception types.
 - Exception filters (`catch (Exception ex) when (condition)`) for advanced handling.
 - `throw;` rethrows and preserves the stack trace ([Microsoft Learn: Exception Handling](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/exception-handling-statements)).
 
 ### 3.3 Java
 
-**Syntax:**```java
+<strong>Syntax:</strong>```java
 try {
     // Code that may throw
 } catch (ExceptionType e) {
@@ -134,37 +134,37 @@ try {
 
 ### When and Why to Use Error Handlers
 
-- **Use Try-Catch for:**- Exceptional, unpredictable scenarios (network failures, file I/O, external service errors).
+- <strong>Use Try-Catch for:</strong>- Exceptional, unpredictable scenarios (network failures, file I/O, external service errors).
   - Preventing workflow crashes and ensuring user-friendly error handling.
   - Integration boundaries or where validation cannot prevent all failures.
 
-- **Avoid Try-Catch for:**- Normal control flow (avoid replacing if/else with exceptions).
+- <strong>Avoid Try-Catch for:</strong>- Normal control flow (avoid replacing if/else with exceptions).
   - Code where errors should be prevented through validation/checks.
   - Performance-critical code unless necessary.
 
 ### Best Practices
 
-- **Be Specific:**Catch the most specific exception types possible ([Stackify Java](https://stackify.com/best-practices-exceptions-java/)).
-- **Never Leave Catch Blocks Empty:**Always log, handle, or rethrow; silent failures mask bugs ([Stack Overflow C#](https://stackoverflow.com/questions/14973642/how-using-try-catch-for-exception-handling-is-best-practice)).
-- **Log and Monitor:**Capture details (type, message, stack trace) for troubleshooting.
-- **Re-throw When Needed:**If you cannot handle an exception, rethrow to upper layers using `throw;` in C# or `throw e;` in Java/JavaScript.
-- **Use Finally for Cleanup:**Release resources in `finally` to avoid leaks.
-- **Limit Catch Scope:**Don’t wrap large blocks in a single Try-Catch; isolate risky operations ([UiPath Best Practice](https://forum.uipath.com/t/best-practices-try-catch/402586)).
+- <strong>Be Specific:</strong>Catch the most specific exception types possible ([Stackify Java](https://stackify.com/best-practices-exceptions-java/)).
+- <strong>Never Leave Catch Blocks Empty:</strong>Always log, handle, or rethrow; silent failures mask bugs ([Stack Overflow C#](https://stackoverflow.com/questions/14973642/how-using-try-catch-for-exception-handling-is-best-practice)).
+- <strong>Log and Monitor:</strong>Capture details (type, message, stack trace) for troubleshooting.
+- <strong>Re-throw When Needed:</strong>If you cannot handle an exception, rethrow to upper layers using `throw;` in C# or `throw e;` in Java/JavaScript.
+- <strong>Use Finally for Cleanup:</strong>Release resources in `finally` to avoid leaks.
+- <strong>Limit Catch Scope:</strong>Don’t wrap large blocks in a single Try-Catch; isolate risky operations ([UiPath Best Practice](https://forum.uipath.com/t/best-practices-try-catch/402586)).
 
 #### Platform-Specific Guidance
 
-- **JavaScript:**- Try-Catch does not catch syntax errors or async errors unless inside the callback.
+- <strong>JavaScript:</strong>- Try-Catch does not catch syntax errors or async errors unless inside the callback.
   - For async/await, use Try-Catch within the async function ([MDN try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)).
 
-- **C#/.NET:**- Use exception filters for advanced scenarios.
+- <strong>C#/.NET:</strong>- Use exception filters for advanced scenarios.
   - Use `throw;` to preserve original stack traces.
   - Don’t catch `Exception` unless at a top-level boundary ([Microsoft Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/exception-handling-statements)).
 
-- **Node.js (JavaScript):**- Try-Catch only handles synchronous errors.
+- <strong>Node.js (JavaScript):</strong>- Try-Catch only handles synchronous errors.
   - Use proper error handling in asynchronous callbacks or promises.
   - For server stability, use process-level handlers but prefer process restart on fatal errors ([Node.js error handling tips](https://stackoverflow.com/questions/5999373/how-do-i-prevent-node-js-from-crashing-try-catch-doesnt-work)).
 
-- **RPA / UiPath:**- **Global Exception Handler**(GEH) can intercept exceptions before local Try-Catch if not properly configured.
+- <strong>RPA / UiPath:</strong>- <strong>Global Exception Handler</strong>(GEH) can intercept exceptions before local Try-Catch if not properly configured.
   - Place risky activities in their own Try-Catch, especially in loops.
   - Use logging and flags to control flow after exceptions.
   - Only one global handler per project is supported, and it should be used carefully—any error triggers it ([UiPath Forum](https://forum.uipath.com/t/what-is-the-best-approach-for-exception-handling-in-uipath-if-you-have-hundred-of-activities-and-many-workflows-error-handling/529943)).
@@ -182,7 +182,7 @@ try {
 
 ### 5.1 JavaScript (Synchronous vs Asynchronous)
 
-**Correct Usage:**```javascript
+<strong>Correct Usage:</strong>```javascript
 try {
   let user = JSON.parse(data);
   // process user
@@ -201,7 +201,7 @@ try {
 }
 ```
 
-**Async Pitfall:**```javascript
+<strong>Async Pitfall:</strong>```javascript
 // This will NOT catch the error!
 try {
   setTimeout(() => { throw new Error("Oops"); }, 1000);
@@ -222,7 +222,7 @@ setTimeout(() => {
 
 ### 5.2 C#
 
-**Correct Usage:**```csharp
+<strong>Correct Usage:</strong>```csharp
 try
 {
     var result = ProcessUserInput(input);
@@ -247,7 +247,7 @@ catch
     // Anti-pattern: empty catch hides all errors
 }
 ```
-**Best Practice: Use Exception Filters**```csharp
+<strong>Best Practice: Use Exception Filters</strong>```csharp
 try
 {
     // Action
@@ -272,7 +272,7 @@ try {
 }
 ```
 
-**Incorrect Usage:**```java
+<strong>Incorrect Usage:</strong>```java
 try {
     // code
 } catch (Exception e) {
@@ -293,11 +293,11 @@ try {
 
 ### 5.4 UiPath RPA
 
-**Try-Catch Activity Example:**- **Try:**Select item from dropdown
-- **Catch:**Log error, add to error list, set flag, continue loop
-- **Finally:**Cleanup or reset
+<strong>Try-Catch Activity Example:</strong>- <strong>Try:</strong>Select item from dropdown
+- <strong>Catch:</strong>Log error, add to error list, set flag, continue loop
+- <strong>Finally:</strong>Cleanup or reset
 
-**Global Exception Handler Interaction:**- If both GEH and Try-Catch are present, exception may go to GEH first unless activity is properly isolated ([UiPath Forum](https://forum.uipath.com/t/global-exception-handler-vs-try-catch-when-to-use-which/177630)).
+<strong>Global Exception Handler Interaction:</strong>- If both GEH and Try-Catch are present, exception may go to GEH first unless activity is properly isolated ([UiPath Forum](https://forum.uipath.com/t/global-exception-handler-vs-try-catch-when-to-use-which/177630)).
 
 ## 6. Troubleshooting & Advanced Scenarios
 
@@ -308,7 +308,7 @@ try {
 
 ### Global vs Local Handlers in RPA
 
-- **UiPath:**- Global Exception Handler may intercept exceptions before local Try-Catch, especially if activities are not isolated.
+- <strong>UiPath:</strong>- Global Exception Handler may intercept exceptions before local Try-Catch, especially if activities are not isolated.
   - To ensure local Try-Catch is respected, isolate single risky activity in its own Try-Catch block ([UiPath Best Practice](https://forum.uipath.com/t/best-practices-try-catch/402586), [UiPath Forum](https://forum.uipath.com/t/what-is-the-best-approach-for-exception-handling-in-uipath-if-you-have-hundred-of-activities-and-many-workflows-error-handling/529943)).
 
 ### Node.js Async Pitfalls
@@ -355,4 +355,4 @@ try {
 - [Baeldung: Java Exceptions](https://www.baeldung.com/java-exceptions)
 - [UiPath Official Docs: Try Catch](https://docs.uipath.com/activities/docs/try-catch)
 
-**For implementation details on exception handling in your platform, always consult the official documentation and community best practices.**
+<strong>For implementation details on exception handling in your platform, always consult the official documentation and community best practices.</strong>

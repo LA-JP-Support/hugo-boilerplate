@@ -16,7 +16,7 @@ Named Entity Recognition (NER) is a core task in Natural Language Processing (NL
 
 In practical terms, NER models process textual data to extract and annotate key information, enabling downstream applications such as search, question answering, content recommendation, and document automation.
 
-**Example:**"Apple is looking at buying U.K. startup for $1 billion."
+<strong>Example:</strong>"Apple is looking at buying U.K. startup for $1 billion."
 
 NER output:
 - "Apple" → Organization (ORG)
@@ -27,17 +27,17 @@ NER output:
 
 Most digital content is unstructured—emails, articles, customer chats, social media posts, medical records, legal documents. NER enables machines to extract factual meaning from this data, supporting broad spectrum of applications:
 
-**Search:**Enhances result relevance by indexing named entities.
+<strong>Search:</strong>Enhances result relevance by indexing named entities.
 
-**Recommendation:**Suggests content based on recognized people, places, or products.
+<strong>Recommendation:</strong>Suggests content based on recognized people, places, or products.
 
-**Automation:**Extracts structured data from invoices, contracts, and forms.
+<strong>Automation:</strong>Extracts structured data from invoices, contracts, and forms.
 
-**Compliance:**Identifies and redacts personally identifiable information (PII).
+<strong>Compliance:</strong>Identifies and redacts personally identifiable information (PII).
 
-**Knowledge Graphs:**Structures information for analytics and AI.
+<strong>Knowledge Graphs:</strong>Structures information for analytics and AI.
 
-**Ambiguity Handling Example:**NER models analyze context to resolve ambiguous names:
+<strong>Ambiguity Handling Example:</strong>NER models analyze context to resolve ambiguous names:
 - "Lincoln" can refer to "Abraham Lincoln" (Person), "Lincoln Motor Company" (Organization), or "Lincoln, Nebraska" (Location).
 
 ## Key Concepts
@@ -46,7 +46,7 @@ Most digital content is unstructured—emails, articles, customer chats, social 
 
 Unique, real-world object denoted by proper noun or fixed reference.
 
-**Examples:**"Michelle Obama" (Person), "London" (Location), "Google" (Organization), "$500" (Money).
+<strong>Examples:</strong>"Michelle Obama" (Person), "London" (Location), "Google" (Organization), "$500" (Money).
 
 ### Entity Type / Label / Tag
 
@@ -56,51 +56,51 @@ Category assigned to entity span, such as PER (Person), ORG (Organization), LOC 
 
 Process of detecting start and end indices of entity mentions in text, crucial for multi-word names and complex entities.
 
-**Example:**Correctly extracting "The George Washington University Hospital" as single entity.
+<strong>Example:</strong>Correctly extracting "The George Washington University Hospital" as single entity.
 
 ### Tagging Schemes
 
 NER models often use tagging schemes to mark entity boundaries:
 
-**BIO (Begin, Inside, Outside):**B-ORG, I-ORG, O
+<strong>BIO (Begin, Inside, Outside):</strong>B-ORG, I-ORG, O
 
-**IOBES (Inside, Outside, Begin, End, Single):**B-ORG, I-ORG, E-ORG, S-ORG, O
+<strong>IOBES (Inside, Outside, Begin, End, Single):</strong>B-ORG, I-ORG, E-ORG, S-ORG, O
 
 ## How NER Works
 
 ### Workflow
 
-**Text Input and Preprocessing:**Tokenization, sentence segmentation, normalization.
+<strong>Text Input and Preprocessing:</strong>Tokenization, sentence segmentation, normalization.
 
-**Feature Extraction:**Extract morphological, syntactic, semantic, and external features.
+<strong>Feature Extraction:</strong>Extract morphological, syntactic, semantic, and external features.
 
-**Entity Boundary Detection:**Locate candidate spans that may represent entities.
+<strong>Entity Boundary Detection:</strong>Locate candidate spans that may represent entities.
 
-**Entity Classification:**Assign each detected candidate most probable label using rules, statistical models, or deep learning.
+<strong>Entity Classification:</strong>Assign each detected candidate most probable label using rules, statistical models, or deep learning.
 
-**Post-processing:**Resolve overlapping/nested entities, disambiguate, enforce consistency.
+<strong>Post-processing:</strong>Resolve overlapping/nested entities, disambiguate, enforce consistency.
 
-**Output Generation:**Return structured results as annotated text, JSON, or XML.
+<strong>Output Generation:</strong>Return structured results as annotated text, JSON, or XML.
 
 ## Entity Types
 
 | Label | Description | Example |
 |-------|-------------|---------|
-| **PER**| Person | "Marie Curie", "Sherlock Holmes" |
-| **ORG**| Organization | "Google", "United Nations" |
-| **LOC**| Location | "Mount Everest", "Nile River" |
-| **GPE**| Geopolitical Entity | "Tokyo", "United States" |
-| **DATE**| Calendar dates or periods | "January 1, 2022", "19th century" |
-| **TIME**| Specific times or durations | "5 PM", "two hours" |
-| **MONEY**| Monetary values | "$100", "€50 million" |
-| **PERCENT**| Percentages | "50%", "half" |
-| **FAC**| Facilities | "JFK Airport", "Golden Gate Bridge" |
-| **PRODUCT**| Products, vehicles, software | "iPhone", "Boeing 747" |
-| **EVENT**| Named events | "Olympics", "Hurricane Katrina" |
-| **WORK_OF_ART**| Books, movies, paintings | "Mona Lisa", "Star Wars" |
-| **LANGUAGE**| Languages | "English", "Mandarin" |
-| **LAW**| Legal documents, treaties | "Treaty of Versailles" |
-| **NORP**| Nationalities, religious, political groups | "American", "Democrat" |
+| <strong>PER</strong>| Person | "Marie Curie", "Sherlock Holmes" |
+| <strong>ORG</strong>| Organization | "Google", "United Nations" |
+| <strong>LOC</strong>| Location | "Mount Everest", "Nile River" |
+| <strong>GPE</strong>| Geopolitical Entity | "Tokyo", "United States" |
+| <strong>DATE</strong>| Calendar dates or periods | "January 1, 2022", "19th century" |
+| <strong>TIME</strong>| Specific times or durations | "5 PM", "two hours" |
+| <strong>MONEY</strong>| Monetary values | "$100", "€50 million" |
+| <strong>PERCENT</strong>| Percentages | "50%", "half" |
+| <strong>FAC</strong>| Facilities | "JFK Airport", "Golden Gate Bridge" |
+| <strong>PRODUCT</strong>| Products, vehicles, software | "iPhone", "Boeing 747" |
+| <strong>EVENT</strong>| Named events | "Olympics", "Hurricane Katrina" |
+| <strong>WORK_OF_ART</strong>| Books, movies, paintings | "Mona Lisa", "Star Wars" |
+| <strong>LANGUAGE</strong>| Languages | "English", "Mandarin" |
+| <strong>LAW</strong>| Legal documents, treaties | "Treaty of Versailles" |
+| <strong>NORP</strong>| Nationalities, religious, political groups | "American", "Democrat" |
 
 ## Methods and Approaches
 
@@ -108,34 +108,34 @@ NER models often use tagging schemes to mark entity boundaries:
 
 Uses dictionaries (gazetteers), regular expressions, and linguistic rules.
 
-**Pros:**Fast and interpretable.
+<strong>Pros:</strong>Fast and interpretable.
 
-**Cons:**Brittle—requires manual updating for new entities or domains.
+<strong>Cons:</strong>Brittle—requires manual updating for new entities or domains.
 
-**Use Cases:**Fixed formats (phone numbers, dates, known PII).
+<strong>Use Cases:</strong>Fixed formats (phone numbers, dates, known PII).
 
 ### Traditional Machine Learning
 
 Learns from annotated datasets using engineered features (word shapes, POS, context).
 
-**Popular Algorithms:**Conditional Random Fields (CRF), Hidden Markov Models (HMM), Support Vector Machines (SVM), Decision Trees.
+<strong>Popular Algorithms:</strong>Conditional Random Fields (CRF), Hidden Markov Models (HMM), Support Vector Machines (SVM), Decision Trees.
 
-**Pros:**Can generalize to unseen examples.
+<strong>Pros:</strong>Can generalize to unseen examples.
 
-**Cons:**Needs labeled data and feature engineering.
+<strong>Cons:</strong>Needs labeled data and feature engineering.
 
 ### Deep Learning Approaches
 
-**Recurrent Neural Networks (RNN, LSTM):**Learns sequential dependencies. Bidirectional LSTMs capture context from both directions.
+<strong>Recurrent Neural Networks (RNN, LSTM):</strong>Learns sequential dependencies. Bidirectional LSTMs capture context from both directions.
 
-**Transformer-Based Models (BERT, RoBERTa, GPT):**- Use self-attention to model complex dependencies in context
+<strong>Transformer-Based Models (BERT, RoBERTa, GPT):</strong>- Use self-attention to model complex dependencies in context
 - Pretrained on massive corpora, fine-tuned with labeled NER data
 - Handle ambiguity, context, long-range dependencies, subword units, and nested entities
 - Outperform previous models on standard benchmarks
 
-**Large Language Models (LLMs):**General-purpose LLMs like GPT-4 can perform NER via zero-shot or few-shot prompting.
+<strong>Large Language Models (LLMs):</strong>General-purpose LLMs like GPT-4 can perform NER via zero-shot or few-shot prompting.
 
-**Domain Adaptation & Transfer Learning:**Fine-tuning pretrained models on custom corpora yields domain-specific NER.
+<strong>Domain Adaptation & Transfer Learning:</strong>Fine-tuning pretrained models on custom corpora yields domain-specific NER.
 
 ## Python Implementation Example
 
@@ -156,7 +156,7 @@ for ent in doc.ents:
     print(ent.text, ent.start_char, ent.end_char, ent.label_)
 ```
 
-**Output:**```
+<strong>Output:</strong>```
 Steve Jobs 0 10 PERSON
 Steve Wozniak 15 29 PERSON
 Apple 39 44 ORG

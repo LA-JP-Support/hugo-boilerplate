@@ -48,17 +48,17 @@ Instantly shifts tone, language, or escalation based on detected emotion. Enable
 
 A robust sentiment-adaptive tone system integrates several modules:
 
-**Automatic Speech Recognition (ASR):**Converts voice to text for further analysis
+<strong>Automatic Speech Recognition (ASR):</strong>Converts voice to text for further analysis
 
-**Sentiment & Emotion Classifiers:**Assign emotion scores to input using ML models
+<strong>Sentiment & Emotion Classifiers:</strong>Assign emotion scores to input using ML models
 
-**Dialogue State Tracker:**Maintains conversation context and emotional trajectory
+<strong>Dialogue State Tracker:</strong>Maintains conversation context and emotional trajectory
 
-**Response Generator:**Crafts replies with tone parameters, using templates or generative AI models
+<strong>Response Generator:</strong>Crafts replies with tone parameters, using templates or generative AI models
 
-**Escalation Engine:**Routes to human agents if strong negative sentiment or risk is detected
+<strong>Escalation Engine:</strong>Routes to human agents if strong negative sentiment or risk is detected
 
-**Workflow Diagram:**```
+<strong>Workflow Diagram:</strong>```
 [User Input] → [Emotion & Context Detection] → [Tone Selection Engine] → [Adaptive Response Generation] → [User]
                         ↑
                         | (Feedback loop: monitors for tone shifts)

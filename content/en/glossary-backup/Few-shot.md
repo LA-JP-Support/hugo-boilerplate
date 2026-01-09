@@ -19,7 +19,7 @@ draft: false
 
 ## Definition
 
-**Few-shot learning**is a machine learning paradigm that enables models to generalize from a limited number of labeled examples—often just a handful per class or task. Rather than requiring thousands or millions of training samples, few-shot techniques allow AI systems to adapt rapidly and efficiently in data-scarce environments or when faced with novel situations. In the context of AI chatbots and automation, few-shot learning and prompting are critical for adding new capabilities, intents, or domains without massive retraining or data collection.
+<strong>Few-shot learning</strong>is a machine learning paradigm that enables models to generalize from a limited number of labeled examples—often just a handful per class or task. Rather than requiring thousands or millions of training samples, few-shot techniques allow AI systems to adapt rapidly and efficiently in data-scarce environments or when faced with novel situations. In the context of AI chatbots and automation, few-shot learning and prompting are critical for adding new capabilities, intents, or domains without massive retraining or data collection.
 
 - [Simplified Chat: Few-shot Learning](https://simplified.chat/ai-chat-glossary/few-shot-learning)
 - [Nebius: Few-shot learning explained](https://nebius.com/blog/posts/few-shot-learning-explained)
@@ -32,10 +32,10 @@ Few-shot learning challenges the traditional paradigm of machine learning, which
 
 Key areas where few-shot learning is especially impactful include:
 
-- **Natural Language Processing (NLP):**Adapting LLMs to new question types, domains, or conversational styles.
-- **Computer Vision:**Recognizing rare categories or new object classes with very limited imagery.
-- **Speech and Audio:**Understanding new voice commands or user accents after hearing only a few samples.
-- **Healthcare and Cybersecurity:**Detecting rare conditions or attack types with minimal historical data.
+- <strong>Natural Language Processing (NLP):</strong>Adapting LLMs to new question types, domains, or conversational styles.
+- <strong>Computer Vision:</strong>Recognizing rare categories or new object classes with very limited imagery.
+- <strong>Speech and Audio:</strong>Understanding new voice commands or user accents after hearing only a few samples.
+- <strong>Healthcare and Cybersecurity:</strong>Detecting rare conditions or attack types with minimal historical data.
 
 For a broader context, see [IBM: What is Few-Shot Learning?](https://www.ibm.com/think/topics/few-shot-learning).
 
@@ -45,10 +45,10 @@ Few-shot learning and prompting operate via several foundational mechanisms and 
 
 ### Key Concepts
 
-- **Support Set:**The small set of labeled examples provided for a new task or class.
-- **Query Set:**Unlabeled examples for which predictions are required, based on knowledge from the support set.
-- **Similarity Metrics:**Algorithms often rely on metrics like cosine similarity or Euclidean distance to compare query and support examples in an embedding space.
-- **In-Context Demonstrations:**Explicit input-output pairs in prompts that guide LLMs toward the desired behavior.
+- <strong>Support Set:</strong>The small set of labeled examples provided for a new task or class.
+- <strong>Query Set:</strong>Unlabeled examples for which predictions are required, based on knowledge from the support set.
+- <strong>Similarity Metrics:</strong>Algorithms often rely on metrics like cosine similarity or Euclidean distance to compare query and support examples in an embedding space.
+- <strong>In-Context Demonstrations:</strong>Explicit input-output pairs in prompts that guide LLMs toward the desired behavior.
 
 ### Major Approaches
 
@@ -56,9 +56,9 @@ Few-shot learning and prompting operate via several foundational mechanisms and 
 
 Meta-learning, or "learning to learn", refers to training a model across a distribution of tasks so it can rapidly adapt to new ones with minimal data. This is achieved by optimizing the model’s parameters such that only a few gradient updates are needed for effective adaptation.
 
-- **Prototypical Networks:**Calculate an average embedding per class (the prototype), then classify queries by distance to prototypes.
-- **Matching Networks:**Use attention to weigh the relevance of each support example when classifying new inputs.
-- **Siamese Networks:**Compare pairs of examples to learn a similarity metric, useful in verification tasks.
+- <strong>Prototypical Networks:</strong>Calculate an average embedding per class (the prototype), then classify queries by distance to prototypes.
+- <strong>Matching Networks:</strong>Use attention to weigh the relevance of each support example when classifying new inputs.
+- <strong>Siamese Networks:</strong>Compare pairs of examples to learn a similarity metric, useful in verification tasks.
 
 For more, see [GeeksforGeeks: Few Shot Learning in Machine Learning](https://www.geeksforgeeks.org/machine-learning/few-shot-learning-in-machine-learning/).
 
@@ -66,27 +66,27 @@ For more, see [GeeksforGeeks: Few Shot Learning in Machine Learning](https://www
 
 Instead of retraining, large language models can be conditioned via prompts containing a few demonstration pairs. This approach takes advantage of LLMs' extensive pretraining on diverse data and enables in-context learning, where the model analogizes from examples without weight updates.
 
-- **Few-shot Prompting:**Insert 2–20 representative input-output pairs in the prompt.
-- **Zero-shot Prompting:**Provide only instructions, no examples.
-- **Chain-of-thought and Step-by-step Prompts:**Guide reasoning by including intermediate steps.
+- <strong>Few-shot Prompting:</strong>Insert 2–20 representative input-output pairs in the prompt.
+- <strong>Zero-shot Prompting:</strong>Provide only instructions, no examples.
+- <strong>Chain-of-thought and Step-by-step Prompts:</strong>Guide reasoning by including intermediate steps.
 
 Reference: [Prompting Guide: Few-Shot Prompting](https://www.promptingguide.ai/techniques/fewshot) and [Brown et al., "Language Models are Few-Shot Learners"](https://arxiv.org/abs/2005.14165).
 
 #### 3. Hybrid and Memory-Augmented Models
 
-- **Hybrid Models:**Combine pretraining with embedding-based few-shot techniques.
-- **Memory-Augmented Networks:**Store and recall support examples for rapid adaptation.
+- <strong>Hybrid Models:</strong>Combine pretraining with embedding-based few-shot techniques.
+- <strong>Memory-Augmented Networks:</strong>Store and recall support examples for rapid adaptation.
 
 ### Typical Workflow
 
-**Few-Shot Learning (Meta-Learning / CV / Speech):**1. Pretrain on large datasets (optional)
+<strong>Few-Shot Learning (Meta-Learning / CV / Speech):</strong>1. Pretrain on large datasets (optional)
 2. Select support set (few labeled examples)
 3. Extract embeddings/features for support and query samples
 4. Compute similarity between query and support
 5. Assign labels or generate responses based on closest examples
 6. Fine-tune if needed
 
-**Few-Shot Prompting (LLMs/Chatbots):**1. Define the task and desired output
+<strong>Few-Shot Prompting (LLMs/Chatbots):</strong>1. Define the task and desired output
 2. Curate 2–10 representative example pairs
 3. Construct the prompt with demonstrations
 4. Add the target query
@@ -98,17 +98,17 @@ See [Nebius: Few-shot learning explained](https://nebius.com/blog/posts/few-shot
 
 | Architecture        | Description                                               | Typical Use Cases           |
 |---------------------|----------------------------------------------------------|-----------------------------|
-| **Transformers**| Self-attention for flexible context and sequence input    | Text generation, translation|
-| **Siamese Networks**| Compare embeddings for similarity                        | Face recognition, verification|
-| **Prototypical Networks**| Classify by distance to prototype embeddings        | Image classification        |
-| **Matching Networks**| Attention-weighted example comparison                   | One-shot/few-shot learning (vision)|
-| **Hybrid Models**| Mix pretraining and embedding/similarity methods         | Multimodal tasks            |
+| <strong>Transformers</strong>| Self-attention for flexible context and sequence input    | Text generation, translation|
+| <strong>Siamese Networks</strong>| Compare embeddings for similarity                        | Face recognition, verification|
+| <strong>Prototypical Networks</strong>| Classify by distance to prototype embeddings        | Image classification        |
+| <strong>Matching Networks</strong>| Attention-weighted example comparison                   | One-shot/few-shot learning (vision)|
+| <strong>Hybrid Models</strong>| Mix pretraining and embedding/similarity methods         | Multimodal tasks            |
 
 ## Practical Examples
 
 ### Example 1: Few-Shot Prompting for Sentiment Analysis
 
-**Prompt:**```
+<strong>Prompt:</strong>```
 "This is awesome!" // Positive
 "This is bad!" // Negative
 "Wow, that movie was rad!" // Positive
@@ -125,7 +125,7 @@ Write a new poem about the beauty of a sunset, based on these examples:
 1. The sky is painted bright, the sun begins to fall...
 2. As the sun sets low, the stars begin to glow...
 ```
-**Model Output:**A new poem, creatively structured as in the given examples.
+<strong>Model Output:</strong>A new poem, creatively structured as in the given examples.
 
 ### Example 3: Computer Vision Classification
 
@@ -134,7 +134,7 @@ Write a new poem about the beauty of a sunset, based on these examples:
 - Normalizes and compares embeddings with the support set
 - Assigns the label of the most similar support example
 
-**Python Sample:**```python
+<strong>Python Sample:</strong>```python
 support_embeddings = model(support_images)
 query_embeddings = model(query_images)
 similarity = torch.mm(query_embeddings, support_embeddings.T)

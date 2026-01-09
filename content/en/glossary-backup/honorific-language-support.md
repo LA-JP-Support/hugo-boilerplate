@@ -11,19 +11,19 @@ draft: false
 
 ## Glossary Entry Overview
 
-**Keyword:**honorific language support  
-**Definition:**Appropriate use of Japanese polite expressions  
-**Category:**AI Chatbot & Automation
+<strong>Keyword:</strong>honorific language support  
+<strong>Definition:</strong>Appropriate use of Japanese polite expressions  
+<strong>Category:</strong>AI Chatbot & Automation
 
 ## What Is Honorific Language Support?
 
 Honorific language support refers to the capability—human or automated—to identify, generate, and appropriately use Japanese polite expressions, known as keigo (敬語). This includes understanding which forms to use, and when, in accordance with the hierarchical, social, and cultural context. In AI and automation, this means machines must parse relational cues and dynamically select the correct honorific level, mimicking the complex etiquette of native speakers.
 
-- **Linguistic Structure:**Specialized verbs, noun forms, honorific suffixes/prefixes, and sentence patterns.
-- **Cultural Sensitivity:**Awareness of age, status, group belonging, and situational formality.
-- **Practical Implementation:**Essential for customer service bots, translation platforms, email automation, and educational software targeting Japanese business or social interactions.
+- <strong>Linguistic Structure:</strong>Specialized verbs, noun forms, honorific suffixes/prefixes, and sentence patterns.
+- <strong>Cultural Sensitivity:</strong>Awareness of age, status, group belonging, and situational formality.
+- <strong>Practical Implementation:</strong>Essential for customer service bots, translation platforms, email automation, and educational software targeting Japanese business or social interactions.
 
-**Further reading:**- [Mastering the Art of Japanese Keigo - Nichijougo](https://nichijougo.com/a-comprehensive-guide-to-honorific-language)
+<strong>Further reading:</strong>- [Mastering the Art of Japanese Keigo - Nichijougo](https://nichijougo.com/a-comprehensive-guide-to-honorific-language)
 - [Mastering Honorifics: Japanese Keigo Translation Guide – OTranslator](https://otranslator.com/en/blog/japanese-translation)
 
 ## Japanese Honorific Language (Keigo): Structure and Types
@@ -38,15 +38,15 @@ Keigo is the backbone of Japanese politeness. It encodes respect, humility, and 
 
 Sonkeigo elevates the listener or a third party, particularly superiors, clients, or guests.
 
-**Grammatical Features:**- Substitution of standard verbs with special respectful verbs.
+<strong>Grammatical Features:</strong>- Substitution of standard verbs with special respectful verbs.
 - Use of honorific prefixes (お- / ご-).
 - Elevated verb endings or forms.
 
-**Examples:**- 行く (iku, “to go”) → いらっしゃる / いらっしゃいます (irassharu/irasshaimasu)
+<strong>Examples:</strong>- 行く (iku, “to go”) → いらっしゃる / いらっしゃいます (irassharu/irasshaimasu)
 - 言う (iu, “to say”) → おっしゃる (ossharu)
 - 見る (miru, “to see”) → ご覧になる (goran ni naru)
 
-**Usage:**- Client: お客様がご覧になります。  
+<strong>Usage:</strong>- Client: お客様がご覧になります。  
   The client (respectfully) looks.
 
 - Superior: 部長がいらっしゃいます。  
@@ -58,14 +58,14 @@ See full breakdown: [Nichijougo Keigo Guide](https://nichijougo.com/a-comprehens
 
 Kenjougo expresses humility by lowering the speaker/in-group in relation to the listener/out-group.
 
-**Grammatical Features:**- Replacement of standard verbs with humble forms.
+<strong>Grammatical Features:</strong>- Replacement of standard verbs with humble forms.
 - Sometimes changes the subject marker from が to を.
 
-**Examples:**- 行く (iku) / 来る (kuru) → 参る (mairu)  
+<strong>Examples:</strong>- 行く (iku) / 来る (kuru) → 参る (mairu)  
 - 言う (iu) → 申す (mousu), 申し上げる (moushiageru)  
 - もらう (morau, “to receive”) → いただく (itadaku)
 
-**Usage:**- 私がご案内いたします。  
+<strong>Usage:</strong>- 私がご案内いたします。  
   I will show you around (humble form).
 
 - 田中と申します。  
@@ -77,11 +77,11 @@ See more: [OTRanslator - Mastering Honorifics](https://otranslator.com/en/blog/j
 
 Teineigo is the universal polite register, safe for use with strangers, in business, and in most formal situations.
 
-**Grammatical Features:**- Verbs end in 〜ます (masu), copula です (desu).
+<strong>Grammatical Features:</strong>- Verbs end in 〜ます (masu), copula です (desu).
 
-**Examples:**- 行きます (ikimasu), 食べます (tabemasu), です (desu)
+<strong>Examples:</strong>- 行きます (ikimasu), 食べます (tabemasu), です (desu)
 
-**Usage:**- 明日行きます。  
+<strong>Usage:</strong>- 明日行きます。  
   I will go tomorrow (polite form).
 
 - これは本です。  
@@ -110,7 +110,7 @@ Japanese attaches honorifics to names and nouns to signal respect, familiarity, 
 | o-     | お       | Polite, native words | お茶 (ocha – tea), お名前 (onamae – name) |
 | go-    | ご       | Polite, Sino-Japanese words | ご家族 (gokazoku – family), ご意見 (goiken – opinion) |
 
-**Guidelines:**- Never use honorifics for yourself.
+<strong>Guidelines:</strong>- Never use honorifics for yourself.
 - Default to -san unless context dictates otherwise.
 - Prefixes are attached to nouns relevant to the out-group or person of respect.
 
@@ -121,7 +121,7 @@ Japanese attaches honorifics to names and nouns to signal respect, familiarity, 
 - Uchi (内): The “in-group” (family, company, close friends).
 - Soto (外): The “out-group” (clients, strangers).
 
-**Principle:**When talking to outsiders about your in-group, humble your side. When talking to in-group about outsiders, elevate the outsiders.
+<strong>Principle:</strong>When talking to outsiders about your in-group, humble your side. When talking to in-group about outsiders, elevate the outsiders.
 
 *Example:*  
 A company employee refers to their own president using humble forms when talking to a client, even though the president is high status within the company.
@@ -140,23 +140,23 @@ See: [Coto Academy - Introduction to Keigo](https://cotoacademy.com/japanese-kei
 
 ### Human Communication (Native and Learner Contexts)
 
-- **Native Speakers:**Use keigo to navigate workplace, social occasions, and customer interactions. Even native speakers may struggle with advanced forms, particularly in business.
+- <strong>Native Speakers:</strong>Use keigo to navigate workplace, social occasions, and customer interactions. Even native speakers may struggle with advanced forms, particularly in business.
   - Example: New employees undergo keigo training to avoid embarrassing mistakes.
 
-- **Non-native Learners:**Must master both grammar and social context.
+- <strong>Non-native Learners:</strong>Must master both grammar and social context.
   - Example: Foreigners in Japan often take dedicated keigo courses for professional readiness.
 
 ### AI, Chatbots, and Automation
 
-- **AI chatbots:**Must analyze user status, intent, and relational cues to select the correct register (e.g., sonkeigo for customers, kenjougo for in-group).
+- <strong>AI chatbots:</strong>Must analyze user status, intent, and relational cues to select the correct register (e.g., sonkeigo for customers, kenjougo for in-group).
   - Example: A chatbot greets a customer as お客様 (o-kyaku-sama) and refers to company staff in humble forms.
 
-- **Business Process Automation:**Automated emails, notifications, and customer support must reflect the appropriate keigo level.
+- <strong>Business Process Automation:</strong>Automated emails, notifications, and customer support must reflect the appropriate keigo level.
   - Example: Automated business email opens with 拝啓 (haikei) and uses humble phrases (申し上げます).
 
-- **Language learning apps:**Provide interactive scenarios, context-sensitive feedback, and error correction focused on keigo.
+- <strong>Language learning apps:</strong>Provide interactive scenarios, context-sensitive feedback, and error correction focused on keigo.
 
-**Implementation considerations:**- Context awareness: AI must track conversation state to avoid register errors.
+<strong>Implementation considerations:</strong>- Context awareness: AI must track conversation state to avoid register errors.
 - Adaptability: Adjusts formality as the relationship develops in the dialogue.
 - Error handling: Detects and corrects overuse, underuse, or incorrect form switching.
 
@@ -164,11 +164,11 @@ See: [OTRanslator - AI and Keigo](https://otranslator.com/en/blog/japanese-trans
 
 ### Case Studies and Scenarios
 
-**Customer Support Bot:**- Greets as お客様, uses sonkeigo for user actions, kenjougo for company actions.
+<strong>Customer Support Bot:</strong>- Greets as お客様, uses sonkeigo for user actions, kenjougo for company actions.
 
-**Business Email Automation:**- Uses set phrases, humble forms, and opens/ends with culturally appropriate salutations.
+<strong>Business Email Automation:</strong>- Uses set phrases, humble forms, and opens/ends with culturally appropriate salutations.
 
-**Language Learning Platform:**- Simulates business calls, social encounters, and offers real-time register correction.
+<strong>Language Learning Platform:</strong>- Simulates business calls, social encounters, and offers real-time register correction.
 
 ## Common Examples and Usage Patterns
 
@@ -183,7 +183,7 @@ See: [OTRanslator - AI and Keigo](https://otranslator.com/en/blog/japanese-trans
 | to eat  | 食べる (taberu) | 食べます (tabemasu) | 召し上がる (meshiagaru) | いただく (itadaku) |
 | to see  | 見る (miru) | 見ます (mimasu) | ご覧になる (goran ni naru) | 拝見する (haiken suru) |
 
-**Sample Dialog:**A: 田中さんはもういらっしゃいましたか？  
+<strong>Sample Dialog:</strong>A: 田中さんはもういらっしゃいましたか？  
    Has Mr. Tanaka already arrived?  
 B: はい、先ほどお見えになりました。  
    Yes, he arrived a short while ago.
@@ -202,26 +202,26 @@ B: はい、先ほどお見えになりました。
 
 ## Practical Guidelines and Best Practices
 
-- **Relationship Assessment:**Always consider age, status, and context.
-- **Default Politeness:**Use teineigo (-masu, -desu) and -san if uncertain.
-- **Customer/Superior Interactions:**Use sonkeigo for their actions, kenjougo for yours.
-- **Honorifics for Names:**Always attach an appropriate honorific unless invited otherwise; never for yourself.
-- **Dynamic Adaptation:**Adjust language level as relationships evolve; AI should shift register if the user signals increased familiarity.
-- **Mixing Registers:**Use the correct level for each subject in a sentence; for example, humble for your team, respectful for the client.
-- **Consistency:**Avoid switching registers mid-conversation unless context changes.
+- <strong>Relationship Assessment:</strong>Always consider age, status, and context.
+- <strong>Default Politeness:</strong>Use teineigo (-masu, -desu) and -san if uncertain.
+- <strong>Customer/Superior Interactions:</strong>Use sonkeigo for their actions, kenjougo for yours.
+- <strong>Honorifics for Names:</strong>Always attach an appropriate honorific unless invited otherwise; never for yourself.
+- <strong>Dynamic Adaptation:</strong>Adjust language level as relationships evolve; AI should shift register if the user signals increased familiarity.
+- <strong>Mixing Registers:</strong>Use the correct level for each subject in a sentence; for example, humble for your team, respectful for the client.
+- <strong>Consistency:</strong>Avoid switching registers mid-conversation unless context changes.
 
-**Further reading:**[Nichijougo - Keigo Mastery Tips](https://nichijougo.com/a-comprehensive-guide-to-honorific-language)
+<strong>Further reading:</strong>[Nichijougo - Keigo Mastery Tips](https://nichijougo.com/a-comprehensive-guide-to-honorific-language)
 
 ## Challenges, Pitfalls, and Contextual Adaptation
 
 ### Typical Errors in Human and Automated Communication
 
-- **Overuse:**Excessive keigo can sound insincere or stilted.
-- **Underuse or Misuse:**May cause offense or imply disrespect.
-- **Incorrect Subject:**Using respectful forms for oneself or humble forms for the listener reverses meaning.
-- **Register Switching:**Unplanned shifts can be confusing or jarring.
+- <strong>Overuse:</strong>Excessive keigo can sound insincere or stilted.
+- <strong>Underuse or Misuse:</strong>May cause offense or imply disrespect.
+- <strong>Incorrect Subject:</strong>Using respectful forms for oneself or humble forms for the listener reverses meaning.
+- <strong>Register Switching:</strong>Unplanned shifts can be confusing or jarring.
 
-**AI-specific pitfalls:**- Failure to recognize shifts in context or status.
+<strong>AI-specific pitfalls:</strong>- Failure to recognize shifts in context or status.
 - Rigid rule application without nuance, leading to unnatural output.
 
 ### Regional and Generational Variation
@@ -229,7 +229,7 @@ B: はい、先ほどお見えになりました。
 - Some forms are regionally specific or considered old-fashioned.
 - Younger generations in casual settings may default to less formal language, but keigo remains essential in business and service sectors.
 
-**See:**[Coto Academy – Keigo Regional Nuances](https://cotoacademy.com/japanese-keigo/)
+<strong>See:</strong>[Coto Academy – Keigo Regional Nuances](https://cotoacademy.com/japanese-keigo/)
 
 ## Summary and Key Takeaways
 

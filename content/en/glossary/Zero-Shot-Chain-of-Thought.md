@@ -16,11 +16,11 @@ Zero-Shot Chain of Thought (CoT) is a prompt engineering technique enabling larg
 
 The methodology was formalized in 2022 research by Kojima et al. demonstrating that minimal prompt modifications—adding simple reasoning instructions—significantly improve LLM performance on arithmetic, commonsense, and symbolic reasoning tasks. Unlike few-shot prompting requiring carefully curated example sets, Zero-Shot CoT leverages models' inherent reasoning capabilities developed during pre-training, enabling effective problem-solving across new domains without task-specific demonstrations.
 
-**Key Distinction from Traditional Prompting:**
+<strong>Key Distinction from Traditional Prompting:</strong>
 
-**Zero-Shot**refers to absence of example demonstrations in prompts, requiring models to generalize purely from training knowledge
+<strong>Zero-Shot</strong>refers to absence of example demonstrations in prompts, requiring models to generalize purely from training knowledge
 
-**Chain of Thought**emphasizes generating visible intermediate reasoning steps rather than producing only final answers, improving transparency and debuggability
+<strong>Chain of Thought</strong>emphasizes generating visible intermediate reasoning steps rather than producing only final answers, improving transparency and debuggability
 
 This combination enables models to tackle unfamiliar problem types, complex multi-step reasoning, and ambiguous queries more effectively than direct prompting approaches while requiring minimal prompt engineering effort.
 
@@ -28,25 +28,25 @@ This combination enables models to tackle unfamiliar problem types, complex mult
 
 ### Reasoning Activation Process
 
-**Query Understanding**– Model receives problem statement or question requiring logical analysis and step decomposition
+<strong>Query Understanding</strong>– Model receives problem statement or question requiring logical analysis and step decomposition
 
-**Instruction Recognition**– Explicit reasoning cues like "Let's think step by step" signal model to activate stepwise reasoning patterns learned during training
+<strong>Instruction Recognition</strong>– Explicit reasoning cues like "Let's think step by step" signal model to activate stepwise reasoning patterns learned during training
 
-**Step Generation**– Model decomposes problem into logical sub-components generating intermediate conclusions, calculations, or inferences sequentially
+<strong>Step Generation</strong>– Model decomposes problem into logical sub-components generating intermediate conclusions, calculations, or inferences sequentially
 
-**Answer Synthesis**– Final conclusion derived from accumulated reasoning chain ensuring consistency with generated logic
+<strong>Answer Synthesis</strong>– Final conclusion derived from accumulated reasoning chain ensuring consistency with generated logic
 
-**Optional Answer Extraction**– Some implementations use secondary prompt extracting clean final answer from reasoning text for user presentation
+<strong>Optional Answer Extraction</strong>– Some implementations use secondary prompt extracting clean final answer from reasoning text for user presentation
 
 ### Comparison with Prompting Variants
 
 | Approach | Examples Provided | Reasoning Shown | Best Use Case |
 |----------|------------------|-----------------|---------------|
-| **Zero-Shot**| No | No | Simple factual queries |
-| **Zero-Shot CoT**| No | Yes | Complex reasoning without examples |
-| **Few-Shot**| Yes | No | Format guidance, context setting |
-| **Few-Shot CoT**| Yes | Yes | Specialized complex tasks |
-| **Auto-CoT**| Auto-generated | Yes | Scalable multi-domain automation |
+| <strong>Zero-Shot</strong>| No | No | Simple factual queries |
+| <strong>Zero-Shot CoT</strong>| No | Yes | Complex reasoning without examples |
+| <strong>Few-Shot</strong>| Yes | No | Format guidance, context setting |
+| <strong>Few-Shot CoT</strong>| Yes | Yes | Specialized complex tasks |
+| <strong>Auto-CoT</strong>| Auto-generated | Yes | Scalable multi-domain automation |
 
 Recent research with advanced models (GPT-4, Claude, Qwen2.5) indicates Zero-Shot CoT increasingly matches or exceeds few-shot performance as models improve at following reasoning instructions without explicit demonstrations, suggesting prompt engineering evolution toward instruction-based rather than example-based approaches.
 
@@ -54,7 +54,7 @@ Recent research with advanced models (GPT-4, Claude, Qwen2.5) indicates Zero-Sho
 
 ### Mathematical Problem Solving
 
-**Standard Zero-Shot Prompt:**```
+<strong>Standard Zero-Shot Prompt:</strong>```
 Calculate: 15 + 23 - 7 × 2
 ```
 **Output:**`44` (Incorrect due to order of operations error)
@@ -63,7 +63,7 @@ Calculate: 15 + 23 - 7 × 2
 Calculate: 15 + 23 - 7 × 2
 Let's solve this step by step.
 ```
-**Output:**```
+<strong>Output:</strong>```
 1. First, handle multiplication: 7 × 2 = 14
 2. Then left-to-right addition and subtraction: 15 + 23 = 38
 3. Finally subtract: 38 - 14 = 24
@@ -77,7 +77,7 @@ If all roses are flowers, and some flowers fade quickly, can we conclude that so
 Let's reason through this step by step.
 ```
 
-**Output:**```
+<strong>Output:</strong>```
 1. Premise 1: All roses are flowers (roses ⊂ flowers)
 2. Premise 2: Some flowers fade quickly (∃ flowers that fade quickly)
 3. The question asks if some roses must fade quickly
@@ -94,7 +94,7 @@ You're making a 3-layer birthday cake. Each layer needs to cool for 30 minutes a
 Let's think step by step.
 ```
 
-**Output:**```
+<strong>Output:</strong>```
 1. Total layers: 3
 2. Baking time per layer: 40 minutes
 3. Cooling time per layer: 30 minutes

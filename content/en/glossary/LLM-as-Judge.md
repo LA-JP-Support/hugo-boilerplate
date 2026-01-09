@@ -20,45 +20,45 @@ The LLM-as-a-Judge method produces labels (e.g., "factually accurate", "unhelpfu
 
 ### Limitations of Traditional Evaluation
 
-**Human Evaluation:**Gold standard for nuanced tasks but slow, expensive, difficult to scale, and often inconsistent due to subjective variance among reviewers.
+<strong>Human Evaluation:</strong>Gold standard for nuanced tasks but slow, expensive, difficult to scale, and often inconsistent due to subjective variance among reviewers.
 
-**Automated Metrics (BLEU, ROUGE, METEOR):**Fast and scalable but focus on surface-level similarity (word overlap), missing deeper semantic or stylistic qualities. These metrics fail in tasks where correctness isn't purely word matching, such as summarization or open-ended generation.
+<strong>Automated Metrics (BLEU, ROUGE, METEOR):</strong>Fast and scalable but focus on surface-level similarity (word overlap), missing deeper semantic or stylistic qualities. These metrics fail in tasks where correctness isn't purely word matching, such as summarization or open-ended generation.
 
 ### LLM-as-a-Judge Advantages
 
-**Scale:**Evaluate thousands of outputs in minutes via API or batch jobs.
+<strong>Scale:</strong>Evaluate thousands of outputs in minutes via API or batch jobs.
 
-**Flexibility:**Tailor evaluation to factual accuracy, helpfulness, style, safety, and more by altering evaluation prompt.
+<strong>Flexibility:</strong>Tailor evaluation to factual accuracy, helpfulness, style, safety, and more by altering evaluation prompt.
 
-**Nuance:**Judge semantic qualities, logical consistency, tone—qualities surface metrics miss.
+<strong>Nuance:</strong>Judge semantic qualities, logical consistency, tone—qualities surface metrics miss.
 
-**Consistency:**Apply same rubric across all outputs, reducing reviewer subjectivity.
+<strong>Consistency:</strong>Apply same rubric across all outputs, reducing reviewer subjectivity.
 
-**Cost-Effectiveness:**Drastically reduces expense compared to manual annotation.
+<strong>Cost-Effectiveness:</strong>Drastically reduces expense compared to manual annotation.
 
-**Speed:**Enables near-instant feedback loops, crucial for fast iteration and continuous monitoring.
+<strong>Speed:</strong>Enables near-instant feedback loops, crucial for fast iteration and continuous monitoring.
 
-**Accessibility:**Makes evaluation feasible for teams without large annotation workforces.
+<strong>Accessibility:</strong>Makes evaluation feasible for teams without large annotation workforces.
 
-**Where It Excels:**Open-ended outputs, high-volume production monitoring, rapid regression testing, evaluation of properties not easily captured by code (politeness, bias, hallucination, multi-turn dialogue quality).
+<strong>Where It Excels:</strong>Open-ended outputs, high-volume production monitoring, rapid regression testing, evaluation of properties not easily captured by code (politeness, bias, hallucination, multi-turn dialogue quality).
 
 ## How LLM-as-a-Judge Works
 
 ### Implementation Process
 
-**1. Define Evaluation Criteria:**Determine important attributes (helpfulness, factual accuracy, tone, safety).
+<strong>1. Define Evaluation Criteria:</strong>Determine important attributes (helpfulness, factual accuracy, tone, safety).
 
-**2. Draft Evaluation Prompt:**Write explicit instruction for judge LLM, detailing criteria and expected output format. Provide examples (few-shot prompting) and set temperature to 0 for deterministic output.
+<strong>2. Draft Evaluation Prompt:</strong>Write explicit instruction for judge LLM, detailing criteria and expected output format. Provide examples (few-shot prompting) and set temperature to 0 for deterministic output.
 
-**3. Prepare Data:**Gather outputs to be judged (chatbot logs, generated summaries, Q&A pairs).
+<strong>3. Prepare Data:</strong>Gather outputs to be judged (chatbot logs, generated summaries, Q&A pairs).
 
-**4. Call Judge LLM:**Submit evaluation prompt and data to LLM via API or batch processing.
+<strong>4. Call Judge LLM:</strong>Submit evaluation prompt and data to LLM via API or batch processing.
 
-**5. Collect and Aggregate Results:**Parse LLM responses (scores, labels, explanations) for dashboards, performance monitoring, or benchmarking.
+<strong>5. Collect and Aggregate Results:</strong>Parse LLM responses (scores, labels, explanations) for dashboards, performance monitoring, or benchmarking.
 
-**6. Analyze and Act:**Use evaluations to identify strengths, weaknesses, regressions, or improvement opportunities.
+<strong>6. Analyze and Act:</strong>Use evaluations to identify strengths, weaknesses, regressions, or improvement opportunities.
 
-**Example Prompt:**> Evaluate the following chatbot response for helpfulness. A helpful response is clear, relevant, and actionable. An unhelpful response is vague, off-topic, or lacks detail. Question: "How do I reset my password?" Response: "You can reset your password using the link on the login page." Label as 'helpful' or 'unhelpful', and provide one-sentence explanation.
+<strong>Example Prompt:</strong>> Evaluate the following chatbot response for helpfulness. A helpful response is clear, relevant, and actionable. An unhelpful response is vague, off-topic, or lacks detail. Question: "How do I reset my password?" Response: "You can reset your password using the link on the login page." Label as 'helpful' or 'unhelpful', and provide one-sentence explanation.
 
 ## Types of LLM-as-a-Judge Evaluation
 
@@ -97,23 +97,23 @@ Prompt design is critical for reliable evaluations. Effective prompts clearly de
 | Multi-Criteria Scoring | Rate on multiple attributes | Comprehensive evaluation |
 | Critique-then-Judge | Critique before final verdict | Complex/subjective tasks |
 
-**Chain-of-Thought Example:**> Read the question and answer. Step by step, explain whether the answer is correct, then state YES or NO. Question: "What is the capital of France?" Answer: "Paris is the capital of France." Explanation: The answer correctly identifies Paris as the capital of France. Verdict: YES
+<strong>Chain-of-Thought Example:</strong>> Read the question and answer. Step by step, explain whether the answer is correct, then state YES or NO. Question: "What is the capital of France?" Answer: "Paris is the capital of France." Explanation: The answer correctly identifies Paris as the capital of France. Verdict: YES
 
 ## Use Cases and Applications
 
-**Automated Quality Assurance:**Continuously monitor outputs for correctness, helpfulness, and safety. Flag chatbot responses that hallucinate or show bias.
+<strong>Automated Quality Assurance:</strong>Continuously monitor outputs for correctness, helpfulness, and safety. Flag chatbot responses that hallucinate or show bias.
 
-**Model Benchmarking:**Use pairwise or rubric-based judgments to select best model or prompt configuration.
+<strong>Model Benchmarking:</strong>Use pairwise or rubric-based judgments to select best model or prompt configuration.
 
-**Regression Testing:**Detect quality drops after updates or fine-tuning by tracking LLM-judge scores over time.
+<strong>Regression Testing:</strong>Detect quality drops after updates or fine-tuning by tracking LLM-judge scores over time.
 
-**Production Monitoring:**Surface issues like hallucination or bias in real-time without manual review.
+<strong>Production Monitoring:</strong>Surface issues like hallucination or bias in real-time without manual review.
 
-**Human-in-the-Loop Review:**Filter low-quality outputs for human escalation, reducing reviewer workload.
+<strong>Human-in-the-Loop Review:</strong>Filter low-quality outputs for human escalation, reducing reviewer workload.
 
-**RLHF and Preference Learning:**Generate preference data for reward models in reinforcement learning from human feedback.
+<strong>RLHF and Preference Learning:</strong>Generate preference data for reward models in reinforcement learning from human feedback.
 
-**Example Workflow:**Fintech company deploys customer support chatbot. Each response sent to judge LLM for correctness, politeness, and hallucination checks. Low-scoring outputs flagged for human review; aggregate statistics monitored to ensure ongoing model quality.
+<strong>Example Workflow:</strong>Fintech company deploys customer support chatbot. Each response sent to judge LLM for correctness, politeness, and hallucination checks. Low-scoring outputs flagged for human review; aggregate statistics monitored to ensure ongoing model quality.
 
 ## Comparison to Traditional Methods
 
@@ -127,47 +127,47 @@ Prompt design is critical for reliable evaluations. Effective prompts clearly de
 | Nuance Handling | Good (prompt tuning) | Best (ambiguous tasks) | Poor |
 | Bias Risk | Model/prompt bias | Human/cultural bias | Metric design bias |
 
-**Performance:**LLM-as-a-Judge achieves ~80–85% agreement with human evaluation in public benchmarks.
+<strong>Performance:</strong>LLM-as-a-Judge achieves ~80–85% agreement with human evaluation in public benchmarks.
 
 ## Best Practices
 
-**Define clear, specific criteria**for evaluation with concrete examples.
+<strong>Define clear, specific criteria</strong>for evaluation with concrete examples.
 
-**Use structured outputs**(JSON, labeled fields) for easy parsing and aggregation.
+<strong>Use structured outputs</strong>(JSON, labeled fields) for easy parsing and aggregation.
 
-**Set temperature to zero**for reproducibility and consistent judgments.
+<strong>Set temperature to zero</strong>for reproducibility and consistent judgments.
 
-**Provide few-shot examples**for complex or subjective evaluation tasks.
+<strong>Provide few-shot examples</strong>for complex or subjective evaluation tasks.
 
-**Randomize output order**in pairwise prompts to avoid positional bias.
+<strong>Randomize output order</strong>in pairwise prompts to avoid positional bias.
 
-**Periodically calibrate**against human evaluators to validate accuracy.
+<strong>Periodically calibrate</strong>against human evaluators to validate accuracy.
 
-**Aggregate and monitor**scores over time to identify trends and regressions.
+<strong>Aggregate and monitor</strong>scores over time to identify trends and regressions.
 
-**Document and version control**evaluation prompts for reproducibility.
+<strong>Document and version control</strong>evaluation prompts for reproducibility.
 
 ## Common Pitfalls
 
-**Ambiguous/vague prompts**lead to inconsistent judgments and unreliable results.
+<strong>Ambiguous/vague prompts</strong>lead to inconsistent judgments and unreliable results.
 
-**Lack of reference answers**increases variability in subjective evaluations.
+<strong>Lack of reference answers</strong>increases variability in subjective evaluations.
 
-**Judge LLM's own limitations:**Can hallucinate or be tricked by adversarial inputs.
+<strong>Judge LLM's own limitations:</strong>Can hallucinate or be tricked by adversarial inputs.
 
-**Overreliance on single judge:**Use ensembles or human spot-checks for critical applications.
+<strong>Overreliance on single judge:</strong>Use ensembles or human spot-checks for critical applications.
 
-**Ignoring cost:**High-frequency evaluations can result in significant API expenses.
+<strong>Ignoring cost:</strong>High-frequency evaluations can result in significant API expenses.
 
 ## Implementation Guidelines
 
 ### Tooling and Frameworks
 
-**Open-source:**- Evidently: LLM evaluations, judge creation, prompt management, dashboards
+<strong>Open-source:</strong>- Evidently: LLM evaluations, judge creation, prompt management, dashboards
 - DeepEval: Supports various evaluation types and metrics
 - Langfuse: Judge evaluators, prompt management, monitoring dashboards
 
-**Cloud platforms:**- Amazon Bedrock Model Evaluation: LLM-as-a-Judge evaluations, multiple metrics, reporting
+<strong>Cloud platforms:</strong>- Amazon Bedrock Model Evaluation: LLM-as-a-Judge evaluations, multiple metrics, reporting
 - Toloka: LLM-judge pipelines aligned with human evaluations
 
 ### Python API Example
@@ -187,45 +187,45 @@ def judge_response(evaluation_prompt, model_output):
 
 ### Monitoring and Analysis
 
-**Dashboards:**Aggregate scores by model version, prompt, or category.
+<strong>Dashboards:</strong>Aggregate scores by model version, prompt, or category.
 
-**Regression Testing:**Track metrics over time to catch performance regressions.
+<strong>Regression Testing:</strong>Track metrics over time to catch performance regressions.
 
-**Failure Alerting:**Flag outputs below threshold for immediate review.
+<strong>Failure Alerting:</strong>Flag outputs below threshold for immediate review.
 
 ## Frequently Asked Questions
 
-**How do I write a good evaluation prompt?**Be explicit: define what to assess, provide rubric or labels, specify output format, and use few-shot examples for nuanced tasks.
+<strong>How do I write a good evaluation prompt?</strong>Be explicit: define what to assess, provide rubric or labels, specify output format, and use few-shot examples for nuanced tasks.
 
-**Can I use LLM-as-a-Judge for code or math?**Yes. LLMs evaluate code correctness, math proofs, and logical reasoning, often using chain-of-thought or reference-based prompts.
+<strong>Can I use LLM-as-a-Judge for code or math?</strong>Yes. LLMs evaluate code correctness, math proofs, and logical reasoning, often using chain-of-thought or reference-based prompts.
 
-**How do I know if the judge LLM is reliable?**Compare LLM judgments to human annotations. Use statistical agreement metrics (Cohen's Kappa, agreement rate). Periodically recalibrate.
+<strong>How do I know if the judge LLM is reliable?</strong>Compare LLM judgments to human annotations. Use statistical agreement metrics (Cohen's Kappa, agreement rate). Periodically recalibrate.
 
-**Is LLM-as-a-Judge a replacement for human evaluation?**Not for every case. Best for large-scale first-pass evaluation. For ambiguous or high-stakes outputs, human review remains critical.
+<strong>Is LLM-as-a-Judge a replacement for human evaluation?</strong>Not for every case. Best for large-scale first-pass evaluation. For ambiguous or high-stakes outputs, human review remains critical.
 
-**What models work best as judges?**Larger, more capable models (GPT-4, Claude, Gemini) generally produce more accurate and nuanced judgments than smaller models.
+<strong>What models work best as judges?</strong>Larger, more capable models (GPT-4, Claude, Gemini) generally produce more accurate and nuanced judgments than smaller models.
 
-**How much does it cost?**Costs vary by provider and usage. Batch processing and efficient prompt design can significantly reduce expenses.
+<strong>How much does it cost?</strong>Costs vary by provider and usage. Batch processing and efficient prompt design can significantly reduce expenses.
 
 ## Key Terms Glossary
 
-**Evaluation Prompt:**Instructions/rubric provided to judge LLM
+<strong>Evaluation Prompt:</strong>Instructions/rubric provided to judge LLM
 
-**Reference-Free Evaluation:**Judging outputs solely against criteria, no gold answer needed
+<strong>Reference-Free Evaluation:</strong>Judging outputs solely against criteria, no gold answer needed
 
-**Reference-Based Evaluation:**Comparing output to provided reference answer
+<strong>Reference-Based Evaluation:</strong>Comparing output to provided reference answer
 
-**Pairwise Comparison:**Picking better of two outputs
+<strong>Pairwise Comparison:</strong>Picking better of two outputs
 
-**Chain-of-Thought (CoT):**Step-by-step reasoning before judgment
+<strong>Chain-of-Thought (CoT):</strong>Step-by-step reasoning before judgment
 
-**Rubric:**Set of rules or criteria for evaluation
+<strong>Rubric:</strong>Set of rules or criteria for evaluation
 
-**Likert Scale:**Numeric scale (e.g., 1–5) for subjective ratings
+<strong>Likert Scale:</strong>Numeric scale (e.g., 1–5) for subjective ratings
 
-**Hallucination:**LLM output not supported by input or facts
+<strong>Hallucination:</strong>LLM output not supported by input or facts
 
-**RLHF:**Reinforcement learning from human (or LLM) feedback
+<strong>RLHF:</strong>Reinforcement learning from human (or LLM) feedback
 
 ## References
 

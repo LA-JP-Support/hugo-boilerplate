@@ -13,22 +13,22 @@ draft: false
 
 Cosine similarity is a quantitative metric that calculates the cosine of the angle between two non-zero vectors in an inner product space. This metric is widely used in data mining, machine learning, and artificial intelligence to assess how similar two vectors are, based exclusively on their orientation rather than their magnitude. Its fundamental advantage is the focus on direction, making it ideal for high-dimensional representations such as document embeddings or feature vectors (see [IBM: What is Cosine Similarity](https://www.ibm.com/think/topics/cosine-similarity), [GeeksforGeeks: Cosine Similarity](https://www.geeksforgeeks.org/dbms/cosine-similarity/)).
 
-**Formula:**\[
+<strong>Formula:</strong>\[
 \text{Cosine Similarity} = \cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \times \|\mathbf{B}\|}
 \]
 - \(\mathbf{A} \cdot \mathbf{B}\): Dot product of vectors A and B  
 - \(\|\mathbf{A}\|\), \(\|\mathbf{B}\|\): Euclidean norm (magnitude) of each vector  
 - \(\theta\): Angle between the vectors
 
-**Interpretation:**- Score of **1**: Vectors point in the same direction (perfect similarity).
-- Score of **0**: Vectors are orthogonal (no similarity).
-- Score of **-1**: Vectors point in opposite directions (maximal dissimilarity).
+<strong>Interpretation:</strong>- Score of <strong>1</strong>: Vectors point in the same direction (perfect similarity).
+- Score of <strong>0</strong>: Vectors are orthogonal (no similarity).
+- Score of <strong>-1</strong>: Vectors point in opposite directions (maximal dissimilarity).
 
 Most practical applications (text mining, embeddings) use non-negative vectors, so cosine similarity scores typically range from 0 to 1.
 
 ## Mathematical Explanation
 
-**Step-by-Step Calculation:**Given two non-zero vectors:
+<strong>Step-by-Step Calculation:</strong>Given two non-zero vectors:
 \[
 \mathbf{A} = [a_1, a_2, \ldots, a_n]
 \]
@@ -36,22 +36,22 @@ Most practical applications (text mining, embeddings) use non-negative vectors, 
 \mathbf{B} = [b_1, b_2, \ldots, b_n]
 \]
 
-1. **Dot Product:**\[
+1. <strong>Dot Product:</strong>\[
    \mathbf{A} \cdot \mathbf{B} = \sum_{i=1}^{n} a_i b_i
    \]
 
-2. **Magnitude (Euclidean Norm):**\[
+2. <strong>Magnitude (Euclidean Norm):</strong>\[
    \|\mathbf{A}\| = \sqrt{\sum_{i=1}^{n} a_i^2}
    \]
    \[
    \|\mathbf{B}\| = \sqrt{\sum_{i=1}^{n} b_i^2}
    \]
 
-3. **Cosine Similarity:**\[
+3. <strong>Cosine Similarity:</strong>\[
    \cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \times \|\mathbf{B}\|}
    \]
 
-**Example Calculation:**Let  
+<strong>Example Calculation:</strong>Let  
 \(\mathbf{A} = [3, 2, 0, 5]\),  
 \(\mathbf{B} = [1, 0, 0, 0]\).
 
@@ -62,29 +62,29 @@ Most practical applications (text mining, embeddings) use non-negative vectors, 
 
 (Reference: [GeeksforGeeks Example](https://www.geeksforgeeks.org/dbms/cosine-similarity/))
 
-**Cosine Dissimilarity:**Often, the dissimilarity is calculated as \(1 - \text{Cosine Similarity}\). For the above example, \(D_C(\mathbf{A}, \mathbf{B}) = 1 - 0.49 = 0.51\).
+<strong>Cosine Dissimilarity:</strong>Often, the dissimilarity is calculated as \(1 - \text{Cosine Similarity}\). For the above example, \(D_C(\mathbf{A}, \mathbf{B}) = 1 - 0.49 = 0.51\).
 
 ## Visual Intuition
 
 Imagine two arrows starting from the same origin in a multi-dimensional space:
 
-- **0° (Cosine = 1):**Arrows overlap, indicating identical direction.
-- **90° (Cosine = 0):**Arrows are at right angles, showing no relation.
-- **180° (Cosine = -1):**Arrows are in opposite directions, indicating total dissimilarity.
+- <strong>0° (Cosine = 1):</strong>Arrows overlap, indicating identical direction.
+- <strong>90° (Cosine = 0):</strong>Arrows are at right angles, showing no relation.
+- <strong>180° (Cosine = -1):</strong>Arrows are in opposite directions, indicating total dissimilarity.
 
 See the [GeeksforGeeks diagram](https://media.geeksforgeeks.org/wp-content/uploads/20200911171455/UntitledDiagram2.png) for a visualization.
 
-**StatQuest Video Explanation:**[YouTube: Cosine Similarity, Clearly Explained!!! (StatQuest)](https://www.youtube.com/watch?v=e9U0QAFbfLI)
+<strong>StatQuest Video Explanation:</strong>[YouTube: Cosine Similarity, Clearly Explained!!! (StatQuest)](https://www.youtube.com/watch?v=e9U0QAFbfLI)
 
 ## Practical Implementation
 
-**Popular Libraries:**- **NumPy:**Efficient for vectorized operations ([NumPy linalg documentation](https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html))
-- **scikit-learn:**[`sklearn.metrics.pairwise.cosine_similarity`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html) for pairwise similarity matrices.
-- **TensorFlow:**Built-in [CosineSimilarity loss](https://www.tensorflow.org/api_docs/python/tf/keras/losses/CosineSimilarity)
-- **PyTorch:**[`torch.nn.CosineSimilarity`](https://pytorch.org/docs/stable/generated/torch.nn.CosineSimilarity.html)
-- **Vector Databases:**Extensions like [pgvector for PostgreSQL](https://github.com/pgvector/pgvector)
+<strong>Popular Libraries:</strong>- <strong>NumPy:</strong>Efficient for vectorized operations ([NumPy linalg documentation](https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html))
+- <strong>scikit-learn:</strong>[`sklearn.metrics.pairwise.cosine_similarity`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html) for pairwise similarity matrices.
+- <strong>TensorFlow:</strong>Built-in [CosineSimilarity loss](https://www.tensorflow.org/api_docs/python/tf/keras/losses/CosineSimilarity)
+- <strong>PyTorch:</strong>[`torch.nn.CosineSimilarity`](https://pytorch.org/docs/stable/generated/torch.nn.CosineSimilarity.html)
+- <strong>Vector Databases:</strong>Extensions like [pgvector for PostgreSQL](https://github.com/pgvector/pgvector)
 
-**Python Example (NumPy):**```python
+<strong>Python Example (NumPy):</strong>```python
 import numpy as np
 
 def cosine_similarity(A, B):

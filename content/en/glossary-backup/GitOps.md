@@ -17,7 +17,7 @@ GitOps is a modern operational framework that extends DevOps principles to infra
 All desired states (such as Kubernetes manifests or Terraform code) are captured declaratively in Git; any change (to infrastructure, application, or configuration) must go through a Git-based workflow, usually via pull or merge requests. This enables rigorous code review, automated validation, and a clear, auditable history for every change.  
 Continuous deployment engines—often referred to as reconciliation agents or controllers (e.g., Argo CD, Flux)—monitor the Git repository, automatically reconcile the live system to the desired state, and correct configuration drift.
 
-**Key Source Links:**- [Harness: What is GitOps?](https://www.harness.io/harness-devops-academy/what-is-gitops)  
+<strong>Key Source Links:</strong>- [Harness: What is GitOps?](https://www.harness.io/harness-devops-academy/what-is-gitops)  
 - [GitLab: What is GitOps?](https://about.gitlab.com/topics/gitops/)  
 - [Red Hat: What is GitOps?](https://www.redhat.com/en/topics/devops/what-is-gitops)
 
@@ -41,18 +41,18 @@ GitOps is underpinned by several foundational principles:
 - Automated agents (GitOps controllers) continuously compare actual state with the desired state in Git.
 - Any deviation (drift) is either auto-corrected or flagged, ensuring ongoing consistency.
 
-**Authoritative Source:**- [Spot.io: Understanding GitOps Principles](https://spot.io/resources/gitops/understanding-gitops-principles-workflows-deployment-types/)
+<strong>Authoritative Source:</strong>- [Spot.io: Understanding GitOps Principles](https://spot.io/resources/gitops/understanding-gitops-principles-workflows-deployment-types/)
 - [Datadog: GitOps Principles and Components](https://www.datadoghq.com/blog/gitops-principles-and-components/)
 
 ## How Does GitOps Work?
 
-**Workflow Components:**- **Git as the single source of truth:**All desired state configurations are stored in a Git repository.
-- **Declarative configuration:**Tools like Kubernetes manifests, Terraform, and Helm describe the target state.
-- **Pull/Merge requests:**Any change is proposed via PR/MR, reviewed, tested, and merged.
-- **CI/CD automation:**Merging triggers automated pipelines that validate and deliver changes.
-- **Continuous reconciliation:**GitOps controllers (e.g., Argo CD, Flux) monitor Git and the runtime environment, auto-correcting drift.
+<strong>Workflow Components:</strong>- <strong>Git as the single source of truth:</strong>All desired state configurations are stored in a Git repository.
+- <strong>Declarative configuration:</strong>Tools like Kubernetes manifests, Terraform, and Helm describe the target state.
+- <strong>Pull/Merge requests:</strong>Any change is proposed via PR/MR, reviewed, tested, and merged.
+- <strong>CI/CD automation:</strong>Merging triggers automated pipelines that validate and deliver changes.
+- <strong>Continuous reconciliation:</strong>GitOps controllers (e.g., Argo CD, Flux) monitor Git and the runtime environment, auto-correcting drift.
 
-**Detailed Workflow Example**([Datadog](https://www.datadoghq.com/blog/gitops-principles-and-components/)):
+<strong>Detailed Workflow Example</strong>([Datadog](https://www.datadoghq.com/blog/gitops-principles-and-components/)):
 1. Write/modify configuration (e.g., change a Kubernetes deployment YAML).
 2. Commit changes to a branch and open a pull request.
 3. Team members review and approve.
@@ -62,14 +62,14 @@ GitOps is underpinned by several foundational principles:
 
 ## Core GitOps Workflow: Step-by-Step Example
 
-**Kubernetes GitOps Workflow:**1. **Define Desired State**: Write/update declarative files (YAML, HCL, etc.).
-2. **Commit and PR**: Commit to a feature branch, open a pull request.
-3. **Review and Approve**: Team reviews, tests, and approves via CI pipelines.
-4. **Merge to Main**: Approved changes are merged; triggers deployment pipeline.
-5. **GitOps Agent Applies Change**: Agent (e.g., Argo CD) syncs environment to match new state.
-6. **Continuous Monitoring**: Agent monitors for drift, auto-corrects or alerts as needed.
+<strong>Kubernetes GitOps Workflow:</strong>1. <strong>Define Desired State</strong>: Write/update declarative files (YAML, HCL, etc.).
+2. <strong>Commit and PR</strong>: Commit to a feature branch, open a pull request.
+3. <strong>Review and Approve</strong>: Team reviews, tests, and approves via CI pipelines.
+4. <strong>Merge to Main</strong>: Approved changes are merged; triggers deployment pipeline.
+5. <strong>GitOps Agent Applies Change</strong>: Agent (e.g., Argo CD) syncs environment to match new state.
+6. <strong>Continuous Monitoring</strong>: Agent monitors for drift, auto-corrects or alerts as needed.
 
-**Sample YAML (Kubernetes Deployment):**```yaml
+<strong>Sample YAML (Kubernetes Deployment):</strong>```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -102,7 +102,7 @@ spec:
 
 **Common Challenges:**- **Cultural Shift:**Teams must avoid "quick fixes" outside of Git, which requires discipline and process changes.
 - **Repository & Tooling Complexity:**Managing multiple repositories or large configuration files can be unwieldy at scale; tool selection and integration may be challenging.
-- **Secrets Management:**Storing [secrets](/en/glossary/environment-variables--secrets-/) securely is critical; plaintext in Git is a major anti-pattern—use tools like HashiCorp Vault or Sealed Secrets.
+- **Secrets Management:**Storing secrets securely is critical; plaintext in Git is a major anti-pattern—use tools like HashiCorp Vault or Sealed Secrets.
 - **Conflict Resolution:**Simultaneous changes from multiple contributors can cause merge conflicts.
 - **Scaling Observability:**As environments grow larger, maintaining visibility and auditability requires additional monitoring and tooling.
 - **No Native Help for Secrets:**GitOps is not a secrets manager; it must be paired with external solutions.

@@ -9,7 +9,7 @@ image: "/images/blog/email-response-automation-platform.jpg"
 tags: ["Operational Efficiency", "AI Technology", "Customer Support"]
 categories: ["Business"]
 ---
-Are you spending enormous amounts of time handling business email inquiries? Template management, [ticket systems](/en/glossary/Ticket-System/), chatbots... implementing them individually only inflates costs and management burden. This article introduces revolutionary improvement methods for email handling, from efficiency techniques based on scientific approaches to integrated solutions that realize all of these on a single [platform](/en/glossary/platform/).
+Are you spending enormous amounts of time handling business email inquiries? Template management, ticket systems, chatbots... implementing them individually only inflates costs and management burden. This article introduces revolutionary improvement methods for email handling, from efficiency techniques based on scientific approaches to integrated solutions that realize all of these on a single platform.
 
 ## Time Required for Business Email Inquiry Handling and Its Challenges
 
@@ -23,11 +23,11 @@ Particularly serious is the problem of spending most of the morning on email han
 
 The three main reasons inquiry handling takes time:
 
-**1. Difficulty in Information Organization and Prioritization**When multiple inquiries arrive simultaneously, numerous tasks arise for each case: judging urgency and importance, confirming past exchanges, and gathering related information.
+<strong>1. Difficulty in Information Organization and Prioritization</strong>When multiple inquiries arrive simultaneously, numerous tasks arise for each case: judging urgency and importance, confirming past exchanges, and gathering related information.
 
-**2. Burden of Non-Standard and Individual Responses**Content that cannot be handled with templates and individual reply creation considering past exchanges require more time and effort.
+<strong>2. Burden of Non-Standard and Individual Responses</strong>Content that cannot be handled with templates and individual reply creation considering past exchanges require more time and effort.
 
-**3. Complexity of Confirmation and Approval Flows**When internal coordination or supervisor confirmation is needed, responses take time, keeping customers waiting.
+<strong>3. Complexity of Confirmation and Approval Flows</strong>When internal coordination or supervisor confirmation is needed, responses take time, keeping customers waiting.
 
 ### Field Example: Mornings End with "Email Handling Only"
 
@@ -41,21 +41,21 @@ Response delays lead to decreased customer satisfaction, reduced deal closure ra
 
 ### Information Organization and Prioritization Theory
 
-Efficient business email processing requires information organization and clear prioritization. According to [Pareto's Law](/en/glossary/Pareto's-Law/) (the 80:20 rule), approximately 80% of overall inquiries tend to concentrate on specific 20% of themes or questions.
+Efficient business email processing requires information organization and clear prioritization. According to Pareto's Law (the 80:20 rule), approximately 80% of overall inquiries tend to concentrate on specific 20% of themes or questions.
 
-Utilizing this law enables identifying frequent patterns and standardizing response methods. As a result, [cognitive load](/en/glossary/cognitive-load/) decreases and processing speed improves.
+Utilizing this law enables identifying frequent patterns and standardizing response methods. As a result, cognitive load decreases and processing speed improves.
 
-Additionally, psychological research shows that [multitasking](/en/glossary/multitasking/) reduces work efficiency. The method of handling email in concentrated batches at designated times, processing one at a time, is effective.
+Additionally, psychological research shows that multitasking reduces work efficiency. The method of handling email in concentrated batches at designated times, processing one at a time, is effective.
 
 ### Business Flow Visualization and Bottleneck Analysis
 
-Visualizing email handling flow and identifying [bottlenecks](/en/glossary/bottlenecks/) (time and burden points) at each stage is the first step toward efficiency.
+Visualizing email handling flow and identifying bottlenecks (time and burden points) at each stage is the first step toward efficiency.
 
 Representing the flow from inquiry reception through staff assignment, reply content creation, to sending in a flowchart clarifies which processes take time. In the business improvement field, bottleneck resolution is key to productivity enhancement.
 
 ### Concentration Peaks and Time Zone Utilization
 
-Concentration and cognitive function are influenced by the body clock ([circadian rhythm](/en/glossary/circadian-rhythm/)). Many studies indicate 2-3 hours after waking as the cognitive function peak.
+Concentration and cognitive function are influenced by the body clock (circadian rhythm). Many studies indicate 2-3 hours after waking as the cognitive function peak.
 
 Concentrating important email replies during this time improves processing quality and speed. Meanwhile, afternoons see easier energy decline, making it efficient to allocate less burdensome tasks like routine work and simple communications.
 
@@ -69,7 +69,7 @@ Using pre-prepared templates for similar inquiries can significantly reduce repl
 
 ### 2. Automation Tool Implementation
 
-Implementing tools for email sorting, auto-reply, [ticket management](/en/glossary/ticket-management/), etc. However, combining multiple tools is necessary, and inter-system coordination becomes a challenge.
+Implementing tools for email sorting, auto-reply, ticket management, etc. However, combining multiple tools is necessary, and inter-system coordination becomes a challenge.
 
 ### 3. Email Management Optimization
 
@@ -79,21 +79,21 @@ Using folders and labels for organization, setting automatic sorting rules, etc.
 
 When advancing efficiency, the following two points are important:
 
-**1. Manual and [FAQ](/en/glossary/FAQ/) Development**Response standardization reduces errors and enables consistent level responses even from newcomers. However, creation and updates require considerable time.
+<strong>1. Manual and FAQ Development</strong>Response standardization reduces errors and enables consistent level responses even from newcomers. However, creation and updates require considerable time.
 
-**2. Maintaining [Personalization](/en/glossary/Personalization/)**Even when using templates, adding a line based on customer names and past exchanges avoids mechanical impressions.
+<strong>2. Maintaining Personalization</strong>Even when using templates, adding a line based on customer names and past exchanges avoids mechanical impressions.
 
 ## Importance of Internal Structure and Education
 
-**[Knowledge Sharing](/en/glossary/Knowledge-Sharing/) Mechanisms**Sharing success cases and response know-how across the organization reduces dependence on specific staff and standardizes response quality.
+<strong>Knowledge Sharing Mechanisms</strong>Sharing success cases and response know-how across the organization reduces dependence on specific staff and standardizes response quality.
 
-**Continuous Education**Enhance member skills through e-learning and role-playing.
+<strong>Continuous Education</strong>Enhance member skills through e-learning and role-playing.
 
 ## Traditional Method Limitations: Challenges Individual Implementation Cannot Solve
 
-The methods introduced so far are all effective. However, **attempting individual implementation faces four major barriers:**### 1. Cost and Effort Problems
+The methods introduced so far are all effective. However, <strong>attempting individual implementation faces four major barriers:</strong>### 1. Cost and Effort Problems
 
-Template management, [ticket](/en/glossary/ticket/) systems, chatbots, [FAQ](/en/glossary/FAQ/) systems... implementing each as separate tools inflates both initial and operational costs.
+Template management, ticket systems, chatbots, FAQ systems... implementing each as separate tools inflates both initial and operational costs.
 
 ### 2. System Disconnection
 
@@ -107,101 +107,101 @@ Mastering multiple tool operations takes time, increasing newcomer training burd
 
 Data is managed separately in each tool, making overall analysis and improvement activities difficult.
 
-**What's needed is an "integrated [platform](/en/glossary/platform/)."**If there were a solution where necessary functions are consolidated into one system and fully coordinated, these challenges could be resolved at once.
+<strong>What's needed is an "integrated platform."</strong>If there were a solution where necessary functions are consolidated into one system and fully coordinated, these challenges could be resolved at once.
 
-The next [section](/en/glossary/Section/) introduces "SmartWeb," the integrated [customer support](/en/glossary/customer-support/) [platform](/en/glossary/platform/) that realizes this ideal.
+The next section introduces "SmartWeb," the integrated customer support platform that realizes this ideal.
 
 ## Revolutionary Efficiency in Inquiry Handling with SmartWeb
 
 ### What is SmartWeb?
 
-SmartWeb is a next-generation platform integrating [LiveAgent](/en/glossary/LiveAgent/) ([ticket system](/en/glossary/Ticket-System/)) and [FlowHunt](/en/glossary/FlowHunt/) ([AI](/en/glossary/artificial-intelligence/) automation). **It realizes all the efficiency techniques introduced in the previous chapter in one system.**### Correspondence Table: Traditional Efficiency Methods and SmartWeb Functions
+SmartWeb is a next-generation platform integrating LiveAgent (ticket system) and FlowHunt (AI automation). <strong>It realizes all the efficiency techniques introduced in the previous chapter in one system.</strong>### Correspondence Table: Traditional Efficiency Methods and SmartWeb Functions
 
 | Traditional Efficiency Method | Challenge | SmartWeb Corresponding Function |
 |---|---|---|
-| Templates/Standard Text | Complex management, lacks flexibility | [AI](/en/glossary/artificial-intelligence/) email auto-response generates situation-appropriate replies automatically |
-| Automation Tool Implementation | Managing multiple tools, difficult coordination | [LiveAgent](/en/glossary/LiveAgent/) ticket system integrates everything |
-| [Email Management](/en/glossary/Email-Management/) Optimization | Setup/maintenance effort | Automation through automatic sorting and priority setting |
-| Manual/ [FAQ](/en/glossary/FAQ/) Development | Time-consuming creation/updates | Easy creation with knowledge base, automatic utilization |
-| Maintaining [Personalization](/en/glossary/Personalization/) | Manual individual responses required | AI response generation automatically adapts to situations |
-| [Knowledge Sharing](/en/glossary/Knowledge-Sharing/) Mechanisms | Separate system management required | Naturally realized through full function [integration](/en/glossary/Integration/) |
-| 24-Hour Support | Staff increase required | [AI [chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-[chatbot](/en/glossary/Chatbot/)/) automated response |
+| Templates/Standard Text | Complex management, lacks flexibility | AI email auto-response generates situation-appropriate replies automatically |
+| Automation Tool Implementation | Managing multiple tools, difficult coordination | LiveAgent ticket system integrates everything |
+| Email Management Optimization | Setup/maintenance effort | Automation through automatic sorting and priority setting |
+| Manual/ FAQ Development | Time-consuming creation/updates | Easy creation with knowledge base, automatic utilization |
+| Maintaining Personalization | Manual individual responses required | AI response generation automatically adapts to situations |
+| Knowledge Sharing Mechanisms | Separate system management required | Naturally realized through full function integration |
+| 24-Hour Support | Staff increase required | AI [chatbot](/en/glossary/AI-chatbot/) automated response |
 
 ### 1. LiveAgent Ticket System: Integrated Realization of "Automation Tools" and "Email Management"
 
-**Integrating Previously Individually Required Functions**Traditionally, email sorting tools, ticket management systems, and progress management tools each required separate implementation. With [LiveAgent](/en/glossary/LiveAgent/), all of these are included as standard functions.
+<strong>Integrating Previously Individually Required Functions</strong>Traditionally, email sorting tools, ticket management systems, and progress management tools each required separate implementation. With LiveAgent, all of these are included as standard functions.
 
-**Key Functions:**- **Multi-channel Integrated Management**: Manage email, chat, and phone in one interface
-- **Automatic Sorting and Priority Setting**: Automatically to appropriate staff based on content and urgency
-- **Team-wide [Visualization](/en/glossary/visualization/)**: Real-time awareness of who's handling what
-- **Complete Response History Storage**: Centrally manage all customer interactions
+<strong>Key Functions:</strong>- <strong>Multi-channel Integrated Management</strong>: Manage email, chat, and phone in one interface
+- <strong>Automatic Sorting and Priority Setting</strong>: Automatically to appropriate staff based on content and urgency
+- <strong>Team-wide Visualization</strong>: Real-time awareness of who's handling what
+- <strong>Complete Response History Storage</strong>: Centrally manage all customer interactions
 
-**Effects:**- Reduce [response time](/en/glossary/Response-Time/) by up to 73%
+<strong>Effects:</strong>- Reduce response time by up to 73%
 - Eliminate response gaps and duplicate responses
 - Reduce multiple tool management costs
 
-> **Related Article:**[Complete Guide to Using LiveAgent](#)
+> <strong>Related Article:</strong>[Complete Guide to Using LiveAgent](#)
 
 ### 2. Knowledge Base: Easy Realization of "Manual/FAQ Development"
 
-**Creation and Updates Surprisingly Easy**Traditional FAQ systems required HTML knowledge or had complex update procedures. SmartWeb's [knowledge base](/en/glossary/knowledge-base/) allows anyone to easily create and update with an intuitive editor.
+<strong>Creation and Updates Surprisingly Easy</strong>Traditional FAQ systems required HTML knowledge or had complex update procedures. SmartWeb's knowledge base allows anyone to easily create and update with an intuitive editor.
 
-**Key Functions:**- **Customer [Self-Service Portal](/en/glossary/[Self-Service](/en/glossary/[self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/) refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.")/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/ "[Self-service](/en/glossary/self-service/) refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.")-Portal/)**: Customers resolve common questions themselves
-- **Internal FAQ**: Enables high-quality responses even from newcomers immediately
-- **Search Function**: Quickly discover necessary information by keywords
-- **[AI [Chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-chatbot/) [Integration](/en/glossary/Integration/)**: Automatically presents appropriate articles
+<strong>Key Functions:</strong>- <strong>Customer Self-Service Portal refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.")/ "Self-service refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.") refers to tools and resources that let customers find answers and solve problems on their own, 24/7, without waiting for support staff—such as FAQs, chatbots, and help centers.")-Portal/)</strong>: Customers resolve common questions themselves
+- <strong>Internal FAQ</strong>: Enables high-quality responses even from newcomers immediately
+- <strong>Search Function</strong>: Quickly discover necessary information by keywords
+- <strong>AI [Chatbot](/en/glossary/AI-chatbot/) Integration</strong>: Automatically presents appropriate articles
 
-**Effects:**- Auto-resolve 82% of simple inquiries
+<strong>Effects:</strong>- Auto-resolve 82% of simple inquiries
 - Significantly shorten newcomer training period
 - Standardize response quality
 
-> **Related Article:**[How to Create Effective Knowledge Bases](#)
+> <strong>Related Article:</strong>[How to Create Effective Knowledge Bases](#)
 
 ### 3. AI Chatbot: Low-Cost Realization of "24-Hour Support"
 
-**24/7 Support Without Staff Increase**Traditionally, nighttime and holiday support required additional personnel. AI chatbots enable constant support without additional costs.
+<strong>24/7 Support Without Staff Increase</strong>Traditionally, nighttime and holiday support required additional personnel. AI chatbots enable constant support without additional costs.
 
-**Key Functions:**- **Immediate Initial Response**: Don't keep customers waiting even outside business hours
-- **Knowledge Base [Integration](/en/glossary/Integration/)**: Accurate answers based on accumulated information
-- **Automatic [Escalation](/en/glossary/escalation/)**: Transfer to human operators when users request or for complex questions
+<strong>Key Functions:</strong>- <strong>Immediate Initial Response</strong>: Don't keep customers waiting even outside business hours
+- <strong>Knowledge Base Integration</strong>: Accurate answers based on accumulated information
+- <strong>Automatic Escalation</strong>: Transfer to human operators when users request or for complex questions
 
-**Effects:**- 100% outside business hours response rate
-- Reduce initial [response time](/en/glossary/Response-Time/) to zero
+<strong>Effects:</strong>- 100% outside business hours response rate
+- Reduce initial response time to zero
 - Improve customer satisfaction
 
-> **Related Article:**[How [AI Chatbot](/en/glossary/AI-chatbot/) Implementation Transforms Customer Support](#)
+> <strong>Related Article:</strong>How [AI Chatbot Implementation Transforms Customer Support](#)
 
 ### 4. AI Email Auto-Response Generation: Next-Generation Evolution of "Template Utilization"
 
-**Not Just Templates—AI Generates Optimal Responses Based on Situations**Traditional templates were static, requiring situation-based adjustments. SmartWeb's [AI Answer Assistant](/en/glossary/AI-answer-assistant/) uses [RAG](/en/glossary/RAG/) ([Retrieval-Augmented Generation](/en/glossary/RAG/)) technology, referencing company-specific knowledge bases to **automatically generate response drafts optimal for that customer and situation**.
+<strong>Not Just Templates—AI Generates Optimal Responses Based on Situations</strong>Traditional templates were static, requiring situation-based adjustments. SmartWeb's AI Answer Assistant uses RAG (Retrieval-Augmented Generation) technology, referencing company-specific knowledge bases to <strong>automatically generate response drafts optimal for that customer and situation</strong>.
 
-**Key Functions:**- **Accurate Response Generation via RAG Technology**: References company manuals and FAQs
-- **Human Final Confirmation**: Send after confirming AI-generated responses
-- **Customizable**: Adjustable to industry and company-specific requirements
-- **Accuracy Improvement Through Data Updates**: Response accuracy continuously improves with reference database updates
+<strong>Key Functions:</strong>- <strong>Accurate Response Generation via RAG Technology</strong>: References company manuals and FAQs
+- <strong>Human Final Confirmation</strong>: Send after confirming AI-generated responses
+- <strong>Customizable</strong>: Adjustable to industry and company-specific requirements
+- <strong>Accuracy Improvement Through Data Updates</strong>: Response accuracy continuously improves with reference database updates
 
-**Effects:**- Reduce email reply creation time from average 5 minutes to 1 minute (80% reduction)
+<strong>Effects:</strong>- Reduce email reply creation time from average 5 minutes to 1 minute (80% reduction)
 - Standardize and improve response quality
 - Significantly reduce staff workload
 - Freedom from "template management" hassle
 
-> **Related Article:**[What is RAG Technology? How AI Utilizes Company Knowledge](#)
+> <strong>Related Article:</strong>[What is RAG Technology? How AI Utilizes Company Knowledge](#)
 
 ### 5. Synergistic Effects Through Integration: Natural Realization of "Internal Structure and Knowledge Sharing"
 
-**True Information Sharing Impossible with Scattered Tools**SmartWeb's greatest strength is that all these functions are **fully coordinated on one platform**.
+<strong>True Information Sharing Impossible with Scattered Tools</strong>SmartWeb's greatest strength is that all these functions are <strong>fully coordinated on one platform</strong>.
 
-**Effects Integration Brings:**- **Complete Customer Information Centralization**: Confirm response history across all channels in one place
-- **Natural [Knowledge Sharing](/en/glossary/Knowledge-Sharing/)**: Response content automatically accumulates in knowledge base
-- **Team-wide [Visualization](/en/glossary/visualization/)**: At-a-glance view of who's handling which inquiries
-- **Data-Based Improvement**: Discover improvement points from all response data
+<strong>Effects Integration Brings:</strong>- <strong>Complete Customer Information Centralization</strong>: Confirm response history across all channels in one place
+- <strong>Natural Knowledge Sharing</strong>: Response content automatically accumulates in knowledge base
+- <strong>Team-wide Visualization</strong>: At-a-glance view of who's handling which inquiries
+- <strong>Data-Based Improvement</strong>: Discover improvement points from all response data
 
 ## From Individual Measures to Integrated Platform
 
-Business email handling efficiency requires information organization and prioritization, business flow [visualization](/en/glossary/visualization/), and template and automation tool utilization. However, implementing these individually requires considerable time and cost.
+Business email handling efficiency requires information organization and prioritization, business flow visualization, and template and automation tool utilization. However, implementing these individually requires considerable time and cost.
 
-With an integrated platform like SmartWeb, all functions—ticket management, knowledge base, [AI chatbot](/en/glossary/AI-chatbot/), AI response generation—coordinate fully in one system. Without spending effort and cost on individual tool implementation, you can construct an ideal email handling structure via the shortest route.
+With an integrated platform like SmartWeb, all functions—ticket management, knowledge base, AI chatbot, AI response generation—coordinate fully in one system. Without spending effort and cost on individual tool implementation, you can construct an ideal email handling structure via the shortest route.
 
-While [generative AI](/en/glossary/Generative-AI/) and automated response technologies are rapidly evolving, AI is a tool supporting human work. The collaborative structure where AI handles routine tasks and humans concentrate on complex judgments and individual responses is the ideal form for future [customer support](/en/glossary/customer-support/). Utilize SmartWeb to realize further email handling efficiency and quality improvement in a new style of human-AI collaboration.
+While generative AI and automated response technologies are rapidly evolving, AI is a tool supporting human work. The collaborative structure where AI handles routine tasks and humans concentrate on complex judgments and individual responses is the ideal form for future customer support. Utilize SmartWeb to realize further email handling efficiency and quality improvement in a new style of human-AI collaboration.
 
-**From individual measures to integrated platform. Start next-generation email handling today.**
+<strong>From individual measures to integrated platform. Start next-generation email handling today.</strong>

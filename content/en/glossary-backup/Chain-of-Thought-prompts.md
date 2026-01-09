@@ -32,15 +32,15 @@ Standard prompts usually ask models for a direct answer. Chain-of-Thought prompt
 | Standard        | Q: What is 23 × 7?                                                                                        | A: 161                                                                                                                 |
 | Chain-of-Thought| Q: What is 23 × 7? Let’s think step by step.                                                              | A: 23 × 7 = (20 × 7) + (3 × 7) = 140 + 21 = 161. The answer is 161.                                                   |
 
-**Key Takeaway:**CoT prompts guide the model to articulate intermediate steps, improving accuracy and interpretability for complex tasks.
+<strong>Key Takeaway:</strong>CoT prompts guide the model to articulate intermediate steps, improving accuracy and interpretability for complex tasks.
 
 ## Why Chain-of-Thought Prompting Is Important
 
 ### Enhances Reasoning Capabilities
 
-- **Improves Performance:**CoT prompting enables LLMs to tackle problems that require multi-step logic, such as arithmetic, commonsense, symbolic reasoning, and decision-making ([Wei et al., 2022](https://arxiv.org/abs/2201.11903)).
-- **Human-Like Reasoning:**By decomposing queries into logical steps, CoT aligns AI output with human problem-solving approaches.
-- **Transparency and Debugging:**Intermediate steps make it easier to observe, understand, and debug the model’s logic ([PromptHub: CoT Guide](https://www.prompthub.us/blog/chain-of-thought-prompting-guide)).
+- <strong>Improves Performance:</strong>CoT prompting enables LLMs to tackle problems that require multi-step logic, such as arithmetic, commonsense, symbolic reasoning, and decision-making ([Wei et al., 2022](https://arxiv.org/abs/2201.11903)).
+- <strong>Human-Like Reasoning:</strong>By decomposing queries into logical steps, CoT aligns AI output with human problem-solving approaches.
+- <strong>Transparency and Debugging:</strong>Intermediate steps make it easier to observe, understand, and debug the model’s logic ([PromptHub: CoT Guide](https://www.prompthub.us/blog/chain-of-thought-prompting-guide)).
 
 ### Typical Use Cases
 
@@ -59,12 +59,12 @@ Choose a problem that benefits from stepwise reasoning, such as math word proble
 
 ### 2. Choose a Prompting Method
 
-**a. Zero-shot CoT Prompting:**Add explicit instruction to the prompt (e.g., “Let’s think step by step”).  
+<strong>a. Zero-shot CoT Prompting:</strong>Add explicit instruction to the prompt (e.g., “Let’s think step by step”).  
 [Zero-shot CoT details](https://www.promptingguide.ai/techniques/cot#zero-shot-cot-prompting)
 
-**b. Few-shot CoT Prompting:**Include several examples demonstrating step-by-step reasoning before the new question.
+<strong>b. Few-shot CoT Prompting:</strong>Include several examples demonstrating step-by-step reasoning before the new question.
 
-**c. Self-Consistency CoT:**Generate multiple reasoning paths and select the most consistent answer—see [Self-Consistency Prompting](https://learnprompting.org/docs/intermediate/self_consistency), [Prompt Engineering Guide: Consistency](https://www.promptingguide.ai/techniques/consistency).
+<strong>c. Self-Consistency CoT:</strong>Generate multiple reasoning paths and select the most consistent answer—see [Self-Consistency Prompting](https://learnprompting.org/docs/intermediate/self_consistency), [Prompt Engineering Guide: Consistency](https://www.promptingguide.ai/techniques/consistency).
 
 ### 3. Write Exemplars (for Few-shot)
 
@@ -91,7 +91,7 @@ For zero-shot CoT, append phrases like:
 
 ### Example 1: Arithmetic Word Problem
 
-**Prompt (Few-shot CoT):**```plaintext
+<strong>Prompt (Few-shot CoT):</strong>```plaintext
 Q: There are 15 trees in the grove. After planting, there are 21 trees. How many were planted?
 A: There are 15 trees originally. After planting, there are 21. So, 21 - 15 = 6. The answer is 6.
 
@@ -107,7 +107,7 @@ Originally, Leah had 32 chocolates. Her sister had 42. Total is 32 + 42 = 74. Af
 
 ### Example 2: Zero-shot CoT on Commonsense Reasoning
 
-**Prompt:**```plaintext
+<strong>Prompt:</strong>```plaintext
 John put his book in the backpack and left it in the car. Where is the book?
 Let’s think step by step.
 ```
@@ -123,12 +123,12 @@ Chain-of-Thought prompting has inspired multiple variants, each with specific st
 
 | Variant                       | Description                                                                                 | Use Cases                       | Strengths                          | Trade-offs                       |
 |-------------------------------|---------------------------------------------------------------------------------------------|----------------------------------|-------------------------------------|----------------------------------|
-| **Zero-shot CoT**| Adds reasoning cue (“Let’s think step by step”) without examples.                          | General reasoning                | Simple, low overhead                | Lower accuracy for complex tasks |
-| **Few-shot CoT**| Provides example prompts with reasoning steps before the question.                         | Math, logic, complex tasks       | Higher accuracy                     | Needs high-quality exemplars     |
-| **Self-Consistency CoT**| Generates multiple reasoning paths; selects the most consistent answer.                    | High-stakes, critical tasks      | Increases reliability               | Computationally expensive        |
-| **Auto-CoT**| Automatically generates reasoning exemplars for few-shot CoT via clustering/sample selection| Large, diverse tasks             | Reduces manual effort               | May require external tools       |
-| **Tree-of-Thought (ToT)**| Explores multiple reasoning paths in a tree structure to evaluate alternatives             | Planning, decision trees         | Handles branching, backtracking     | High computation/resource use    |
-| **Multimodal CoT**| Integrates reasoning across multiple data types (text, images, etc.)                       | Vision-language tasks            | Richer, cross-modal reasoning       | Model/prompt complexity          |
+| <strong>Zero-shot CoT</strong>| Adds reasoning cue (“Let’s think step by step”) without examples.                          | General reasoning                | Simple, low overhead                | Lower accuracy for complex tasks |
+| <strong>Few-shot CoT</strong>| Provides example prompts with reasoning steps before the question.                         | Math, logic, complex tasks       | Higher accuracy                     | Needs high-quality exemplars     |
+| <strong>Self-Consistency CoT</strong>| Generates multiple reasoning paths; selects the most consistent answer.                    | High-stakes, critical tasks      | Increases reliability               | Computationally expensive        |
+| <strong>Auto-CoT</strong>| Automatically generates reasoning exemplars for few-shot CoT via clustering/sample selection| Large, diverse tasks             | Reduces manual effort               | May require external tools       |
+| <strong>Tree-of-Thought (ToT)</strong>| Explores multiple reasoning paths in a tree structure to evaluate alternatives             | Planning, decision trees         | Handles branching, backtracking     | High computation/resource use    |
+| <strong>Multimodal CoT</strong>| Integrates reasoning across multiple data types (text, images, etc.)                       | Vision-language tasks            | Richer, cross-modal reasoning       | Model/prompt complexity          |
 
 - For a deep dive into ToT, see [Prompt Engineering Guide: ToT](https://www.promptingguide.ai/techniques/tot), [Zero to Mastery: ToT](https://zerotomastery.io/blog/tree-of-thought-prompting/), [LearnPrompting: ToT](https://learnprompting.org/docs/advanced/decomposition/tree_of_thoughts).
 - For Auto-CoT, refer to [PromptHub: CoT Guide](https://www.prompthub.us/blog/chain-of-thought-prompting-guide).
@@ -141,38 +141,38 @@ Self-consistency is an enhancement to CoT. Instead of relying on a single reason
 
 Tree-of-Thought (ToT) prompting generalizes CoT by enabling models to explore and evaluate multiple reasoning paths in a tree-like structure, mimicking human problem-solving strategies ([Prompt Engineering Guide: ToT](https://www.promptingguide.ai/techniques/tot); [LearnPrompting: ToT](https://learnprompting.org/docs/advanced/decomposition/tree_of_thoughts)). The model proposes multiple partial solutions at each step, evaluates them, and chooses which branches to expand or backtrack, similar to best-first search algorithms.
 
-**Applications:**- Math puzzles (e.g., Game of 24)
+<strong>Applications:</strong>- Math puzzles (e.g., Game of 24)
 - Creative writing (planning multiple narrative paths)
 - Complex decision trees in business logic and planning
 
-**Advantages:**Allows exploration of alternatives, increases solution robustness, and enables backtracking—at the cost of higher computation.
+<strong>Advantages:</strong>Allows exploration of alternatives, increases solution robustness, and enables backtracking—at the cost of higher computation.
 
 ## Real-World Applications and Use Cases
 
-- **Mathematics and Symbolic Reasoning:**Solving equations, arithmetic word problems, and logical puzzles by detailed stepwise computation ([Wei et al., 2022](https://arxiv.org/abs/2201.11903)).
-- **Programming and Debugging:**Stepwise code explanation, bug tracing, and rationale generation.
-- **Medical Diagnostics:**Sequential analysis of symptoms and test results.
-- **Legal and Compliance Analysis:**Interpreting case law or regulations by outlining reasoning from facts to conclusions.
-- **Financial Analysis:**Credit scoring and risk assessment by decomposing financial history.
-- **Education/Tutoring:**Guided explanations and problem-solving for students.
-- **Complex Decision-Making:**Multi-step support in robotics, strategy planning, and games.
+- <strong>Mathematics and Symbolic Reasoning:</strong>Solving equations, arithmetic word problems, and logical puzzles by detailed stepwise computation ([Wei et al., 2022](https://arxiv.org/abs/2201.11903)).
+- <strong>Programming and Debugging:</strong>Stepwise code explanation, bug tracing, and rationale generation.
+- <strong>Medical Diagnostics:</strong>Sequential analysis of symptoms and test results.
+- <strong>Legal and Compliance Analysis:</strong>Interpreting case law or regulations by outlining reasoning from facts to conclusions.
+- <strong>Financial Analysis:</strong>Credit scoring and risk assessment by decomposing financial history.
+- <strong>Education/Tutoring:</strong>Guided explanations and problem-solving for students.
+- <strong>Complex Decision-Making:</strong>Multi-step support in robotics, strategy planning, and games.
 
 ## Advantages of Chain-of-Thought Prompting
 
-- **Improved Accuracy:**Decomposing complex tasks into logical steps increases the likelihood of correct answers ([Prompt Engineering Guide: CoT](https://www.promptingguide.ai/techniques/cot)).
-- **Transparency:**Intermediate steps make model outputs interpretable.
-- **Debuggability:**Stepwise responses reveal where the model may err.
-- **Versatility:**Broad applicability across math, language, code, logic, and more.
-- **No Fine-Tuning Needed:**Implemented via prompt design, not model retraining.
+- <strong>Improved Accuracy:</strong>Decomposing complex tasks into logical steps increases the likelihood of correct answers ([Prompt Engineering Guide: CoT](https://www.promptingguide.ai/techniques/cot)).
+- <strong>Transparency:</strong>Intermediate steps make model outputs interpretable.
+- <strong>Debuggability:</strong>Stepwise responses reveal where the model may err.
+- <strong>Versatility:</strong>Broad applicability across math, language, code, logic, and more.
+- <strong>No Fine-Tuning Needed:</strong>Implemented via prompt design, not model retraining.
 
 ## Limitations and Challenges
 
-- **Increased Computational Cost:**Multi-step outputs consume more tokens and compute ([LearnPrompting: Self-Consistency](https://learnprompting.org/docs/intermediate/self_consistency)).
-- **Quality Dependence:**Effectiveness relies on well-crafted prompts and exemplars.
-- **Hallucination Risk:**Models may generate plausible but incorrect reasoning chains.
-- **Longer Response Times:**Stepwise outputs increase latency.
-- **Overfitting to Style:**Overuse of exemplars may reduce generalization.
-- **Subjective Evaluation:**Assessing “reasoning” improvement can be qualitative.
+- <strong>Increased Computational Cost:</strong>Multi-step outputs consume more tokens and compute ([LearnPrompting: Self-Consistency](https://learnprompting.org/docs/intermediate/self_consistency)).
+- <strong>Quality Dependence:</strong>Effectiveness relies on well-crafted prompts and exemplars.
+- <strong>Hallucination Risk:</strong>Models may generate plausible but incorrect reasoning chains.
+- <strong>Longer Response Times:</strong>Stepwise outputs increase latency.
+- <strong>Overfitting to Style:</strong>Overuse of exemplars may reduce generalization.
+- <strong>Subjective Evaluation:</strong>Assessing “reasoning” improvement can be qualitative.
 
 ## Comparative Table: CoT Variants and Their Properties
 
@@ -215,13 +215,13 @@ Tree-of-Thought (ToT) prompting generalizes CoT by enabling models to explore an
 
 | Aspect                         | Description                                                                   |
 |--------------------------------|-------------------------------------------------------------------------------|
-| **Definition**| Prompting AI to break down reasoning into logical, intermediate steps         |
-| **Purpose**| Enhance accuracy and interpretability on complex reasoning tasks              |
-| **Variants**| Zero-shot, Few-shot, Self-consistency, Auto-CoT, Tree-of-Thought             |
-| **Key Benefits**| Improved accuracy, transparency, debuggability, versatility                  |
-| **Limitations**| Computational cost, need for quality prompts, risk of hallucination           |
-| **Best Use Cases**| Math, code, logic, legal, medical, educational, decision-making tasks         |
-| **Implementation**| Add stepwise instructions or exemplars; select variant per task complexity    |
+| <strong>Definition</strong>| Prompting AI to break down reasoning into logical, intermediate steps         |
+| <strong>Purpose</strong>| Enhance accuracy and interpretability on complex reasoning tasks              |
+| <strong>Variants</strong>| Zero-shot, Few-shot, Self-consistency, Auto-CoT, Tree-of-Thought             |
+| <strong>Key Benefits</strong>| Improved accuracy, transparency, debuggability, versatility                  |
+| <strong>Limitations</strong>| Computational cost, need for quality prompts, risk of hallucination           |
+| <strong>Best Use Cases</strong>| Math, code, logic, legal, medical, educational, decision-making tasks         |
+| <strong>Implementation</strong>| Add stepwise instructions or exemplars; select variant per task complexity    |
 
 ## References
 
@@ -235,9 +235,9 @@ Tree-of-Thought (ToT) prompting generalizes CoT by enabling models to explore an
 8. [LearnPrompting: Self-Consistency](https://learnprompting.org/docs/intermediate/self_consistency)
 9. [LearnPrompting: Tree of Thoughts](https://learnprompting.org/docs/advanced/decomposition/tree_of_thoughts)
 10. [Zero to Mastery: Tree-of-Thought Prompting](https://zerotomastery.io/blog/tree-of-thought-prompting/)
-**Note:**This glossary entry is a technical reference for AI, automation professionals, prompt engineers, and advanced practitioners designing, evaluating, or implementing Chain-of-Thought prompting techniques in real-world AI systems.
+<strong>Note:</strong>This glossary entry is a technical reference for AI, automation professionals, prompt engineers, and advanced practitioners designing, evaluating, or implementing Chain-of-Thought prompting techniques in real-world AI systems.
 
-**For further exploration and up-to-date examples, visit:**- [arXiv: Chain-of-Thought Prompting Elicits Reasoning in LLMs (Wei et al., 2022)](https://arxiv.org/abs/2201.11903)  
+<strong>For further exploration and up-to-date examples, visit:</strong>- [arXiv: Chain-of-Thought Prompting Elicits Reasoning in LLMs (Wei et al., 2022)](https://arxiv.org/abs/2201.11903)  
 - [Prompt Engineering Guide: CoT](https://www.promptingguide.ai/techniques/cot)  
 - [LearnPrompting: Self-Consistency](https://learnprompting.org/docs/intermediate/self_consistency)  
 - [PromptHub: Chain of Thought Prompting Guide](https://www.prompthub.us/blog/chain-of-thought-prompting-guide)  

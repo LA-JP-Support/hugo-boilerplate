@@ -14,34 +14,34 @@ An API (Application Programming Interface) is a mechanism that enables different
 
 ## Definition
 
-An **API (Application Programming Interface)**is a set of rules, protocols, and tools that allows software applications to communicate, interact, and exchange data or functionalities with each other. APIs abstract the internal logic of software, exposing only objects or actions the developer needs, and shield the internal details for security and simplicity.  
+An <strong>API (Application Programming Interface)</strong>is a set of rules, protocols, and tools that allows software applications to communicate, interact, and exchange data or functionalities with each other. APIs abstract the internal logic of software, exposing only objects or actions the developer needs, and shield the internal details for security and simplicity.  
 
-**Analogy:**Ordering at a restaurant:
-- **You (client)**place your order with the **waiter (API)**.
-- The waiter delivers your request to the **kitchen (server)**.
+<strong>Analogy:</strong>Ordering at a restaurant:
+- <strong>You (client)</strong>place your order with the <strong>waiter (API)</strong>.
+- The waiter delivers your request to the <strong>kitchen (server)</strong>.
 - The kitchen prepares your food and gives it to the waiter, who brings it back to you.
 You never need to know how the kitchen operates. Similarly, interacting applications don’t need to know each other’s internals; they just use the API.
 
 ## How APIs Work: The Request-Response Cycle
 
-APIs operate within a **client-server model**and mediate a **request-response cycle**:
+APIs operate within a <strong>client-server model</strong>and mediate a <strong>request-response cycle</strong>:
 
-1. **Client Sends Request**:  
+1. <strong>Client Sends Request</strong>:  
    The client application sends a request to an API endpoint (a specific URL), specifying an action (GET, POST, PUT, DELETE, etc.) and often including authentication credentials.
 
-2. **API Validates and Processes Request**:  
+2. <strong>API Validates and Processes Request</strong>:  
    The API checks the request for validity, authorization, and correct formatting.
 
-3. **Server Handles Logic**:  
+3. <strong>Server Handles Logic</strong>:  
    The API passes the request to the server or service that owns the resource or function.
 
-4. **Server Responds**:  
+4. <strong>Server Responds</strong>:  
    The server processes the logic, accesses databases or services, and returns the result to the API.
 
-5. **API Returns Response to Client**:  
+5. <strong>API Returns Response to Client</strong>:  
    The API formats the response (commonly JSON or XML) and returns it to the client.
    
-**Example:**A weather app sends a request via API to a weather data provider. The provider returns the current forecast, which the app displays.  
+<strong>Example:</strong>A weather app sends a request via API to a weather data provider. The provider returns the current forecast, which the app displays.  
 
 ## Types of APIs
 
@@ -51,56 +51,56 @@ APIs are classified by scope of use and architectural style.
 
 | Type               | Who Can Use It?                              | Example Use Case                                    |
 |--------------------|----------------------------------------------|-----------------------------------------------------|
-| **Open/Public**| Anyone (may require registration)             | Google Maps API for embedding maps                   |
-| **Partner**| Authorized external partners                  | Airlines sharing flight info with travel platforms   |
-| **Internal/Private**| Only within an organization                  | Connecting HR and payroll software                   |
-| **Composite**| Combines multiple APIs in one request         | Fetch user profile, orders, and recommendations      |
+| <strong>Open/Public</strong>| Anyone (may require registration)             | Google Maps API for embedding maps                   |
+| <strong>Partner</strong>| Authorized external partners                  | Airlines sharing flight info with travel platforms   |
+| <strong>Internal/Private</strong>| Only within an organization                  | Connecting HR and payroll software                   |
+| <strong>Composite</strong>| Combines multiple APIs in one request         | Fetch user profile, orders, and recommendations      |
 
-**Details:**- **Open/Public APIs**(aka external APIs): Accessible to any external developer or user; designed for broad usage and third-party integrations.  
-- **Partner APIs**: Exposed to specific partners, typically with contractual agreements; often used in B2B scenarios.  
-- **Internal/Private APIs**: Used within the organization; not exposed publicly and primarily for internal development, integration, and automation.  
-- **Composite APIs**: Aggregate multiple API or data sources into one call, commonly used in microservices architectures.
+<strong>Details:</strong>- <strong>Open/Public APIs</strong>(aka external APIs): Accessible to any external developer or user; designed for broad usage and third-party integrations.  
+- <strong>Partner APIs</strong>: Exposed to specific partners, typically with contractual agreements; often used in B2B scenarios.  
+- <strong>Internal/Private APIs</strong>: Used within the organization; not exposed publicly and primarily for internal development, integration, and automation.  
+- <strong>Composite APIs</strong>: Aggregate multiple API or data sources into one call, commonly used in microservices architectures.
 
 ### By Architecture / Protocol
 
 | Type                   | Description                                      | Data Format   | Typical Use Case                          |
 |------------------------|--------------------------------------------------|---------------|-------------------------------------------|
-| **REST**| Stateless, HTTP-based, uses HTTP verbs           | JSON, XML     | Web/mobile apps, public APIs              |
-| **SOAP**| Strict protocol, XML-based, advanced security    | XML           | Enterprise, finance, healthcare           |
-| **GraphQL**| Flexible query language, precise data fetching   | JSON          | Mobile apps, complex UIs                  |
-| **gRPC**| High-performance, Protocol Buffers, HTTP/2       | Binary        | Microservices, real-time comms            |
-| **WebSocket**| Persistent, full-duplex, real-time comms         | JSON, Binary  | Chat apps, live dashboards                |
-| **XML-RPC / JSON-RPC**| Remote procedure calls over HTTP                 | XML, JSON     | Legacy, lightweight integrations          |
+| <strong>REST</strong>| Stateless, HTTP-based, uses HTTP verbs           | JSON, XML     | Web/mobile apps, public APIs              |
+| <strong>SOAP</strong>| Strict protocol, XML-based, advanced security    | XML           | Enterprise, finance, healthcare           |
+| <strong>GraphQL</strong>| Flexible query language, precise data fetching   | JSON          | Mobile apps, complex UIs                  |
+| <strong>gRPC</strong>| High-performance, Protocol Buffers, HTTP/2       | Binary        | Microservices, real-time comms            |
+| <strong>WebSocket</strong>| Persistent, full-duplex, real-time comms         | JSON, Binary  | Chat apps, live dashboards                |
+| <strong>XML-RPC / JSON-RPC</strong>| Remote procedure calls over HTTP                 | XML, JSON     | Legacy, lightweight integrations          |
 
-**Details:**- **REST (Representational State Transfer)**:  
+<strong>Details:</strong>- <strong>REST (Representational State Transfer)</strong>:  
   Most widely used; stateless, resource-oriented, and leverages HTTP methods.  
   [See more: REST APIs](https://aws.amazon.com/what-is/restful-api/)
-- **SOAP (Simple Object Access Protocol)**:  
+- <strong>SOAP (Simple Object Access Protocol)</strong>:  
   XML-based, rigidly defined, supports security and complex transactions; often found in regulated industries.
-- **GraphQL**:  
+- <strong>GraphQL</strong>:  
   Allows clients to specify exactly what data they need; reduces over-fetching/under-fetching.
-- **gRPC**:  
+- <strong>gRPC</strong>:  
   Developed by Google, uses Protocol Buffers for efficient binary serialization; supports streaming and high-throughput.
-- **WebSocket**:  
+- <strong>WebSocket</strong>:  
   Maintains a persistent connection for real-time, two-way communication.
-- **XML-RPC / JSON-RPC**:  
+- <strong>XML-RPC / JSON-RPC</strong>:  
   Simple protocols for sending remote procedure calls using XML or JSON.
 
 ## Real-World Examples and Use Cases
 
 APIs are the backbone of digital ecosystems in every industry:
 
-- **Social Login**:  
+- <strong>Social Login</strong>:  
   Login with Google, Facebook, or X uses API-based authentication.  
-- **Payment Processing**:  
+- <strong>Payment Processing</strong>:  
   E-commerce platforms use Stripe/PayPal APIs for secure transactions, without handling sensitive data directly.  
-- **Travel Booking Aggregators**:  
+- <strong>Travel Booking Aggregators</strong>:  
   Sites like Expedia combine airline, hotel, and rental car APIs to show real-time availability.
-- **Internet of Things (IoT)**:  
+- <strong>Internet of Things (IoT)</strong>:  
   Smart home devices (e.g., thermostats, fridges) use APIs to interact with applications and cloud services.
-- **Chatbots and AI Assistants**:  
+- <strong>Chatbots and AI Assistants</strong>:  
   Customer service bots use APIs to fetch order status, process refunds, or update records.
-- **Navigation Apps**:  
+- <strong>Navigation Apps</strong>:  
   APIs provide live traffic, directions, and map data.
 
 | Sector         | API Example                 | Purpose                                      |
@@ -115,38 +115,38 @@ APIs are the backbone of digital ecosystems in every industry:
 
 APIs bring substantial value to developers, organizations, and end-users:
 
-- **Efficiency**:  
+- <strong>Efficiency</strong>:  
   Reuse existing services and data, reducing development time and redundancy.
-- **Integration**:  
+- <strong>Integration</strong>:  
   Seamlessly connect systems, platforms, and devices for unified workflows.
-- **Innovation**:  
+- <strong>Innovation</strong>:  
   Accelerate new product or feature development by combining APIs.
-- **Scalability**:  
+- <strong>Scalability</strong>:  
   Modular systems make it easier to scale and maintain software.
-- **Automation**:  
+- <strong>Automation</strong>:  
   Streamline business workflows and eliminate manual tasks.
-- **Monetization**:  
+- <strong>Monetization</strong>:  
   Offer APIs as paid services/products (“API economy”).
-- **Security and Privacy**:  
+- <strong>Security and Privacy</strong>:  
   Expose only necessary data/functions; sensitive systems remain protected.
 
 ## Security Considerations
 
 APIs are a common target for misuse. Strong security practices are essential:
 
-- **Authentication**:  
+- <strong>Authentication</strong>:  
   Verifying identity using API keys, OAuth tokens, JWT, etc.
-- **Authorization**:  
+- <strong>Authorization</strong>:  
   Restricting access so only permitted users or apps can access certain data/actions.
-- **Encryption**:  
+- <strong>Encryption</strong>:  
   Secure data in transit with TLS/SSL.
-- **Rate Limiting**:  
+- <strong>Rate Limiting</strong>:  
   Prevent abuse by capping requests per user/app.
-- **Monitoring and Logging**:  
+- <strong>Monitoring and Logging</strong>:  
   Track usage, detect anomalies or suspicious activity.
-- **Input Validation**:  
+- <strong>Input Validation</strong>:  
   Protect against injection attacks (SQLi, XSS) by validating all client input.
-- **Error Handling**:  
+- <strong>Error Handling</strong>:  
   Don’t reveal sensitive implementation details in error responses.
 A poorly secured API can expose sensitive data or allow unauthorized actions; always follow security best practices.  
 
@@ -155,22 +155,22 @@ A poorly secured API can expose sensitive data or allow unauthorized actions; al
 ### Integration
 
 Developers use API documentation to send requests and handle responses. Common tools:
-- **Postman**– For testing, development, and automation
-- **SoapUI**– For SOAP and REST testing
-- **JMeter**– For load and performance testing
+- <strong>Postman</strong>– For testing, development, and automation
+- <strong>SoapUI</strong>– For SOAP and REST testing
+- <strong>JMeter</strong>– For load and performance testing
 
 ### Testing
 
 API testing confirms functionality, security, and performance. Key types:
-- **Contract Testing**: Ensures requests/responses follow the defined contract
-- **Unit Testing**: Verifies individual endpoints
-- **End-to-End Testing**: Validates workflows spanning multiple endpoints
-- **Load Testing**: Simulates high traffic to test scalability
-- **Security Testing**: Finds vulnerabilities (e.g., unauthorized access, data leakage)
-- **Integration Testing**: Confirms APIs work together as expected
-- **Functional Testing**: Ensures APIs behave as designed
+- <strong>Contract Testing</strong>: Ensures requests/responses follow the defined contract
+- <strong>Unit Testing</strong>: Verifies individual endpoints
+- <strong>End-to-End Testing</strong>: Validates workflows spanning multiple endpoints
+- <strong>Load Testing</strong>: Simulates high traffic to test scalability
+- <strong>Security Testing</strong>: Finds vulnerabilities (e.g., unauthorized access, data leakage)
+- <strong>Integration Testing</strong>: Confirms APIs work together as expected
+- <strong>Functional Testing</strong>: Ensures APIs behave as designed
 
-**Read more:**[Postman – What is API Testing?](https://www.postman.com/api-platform/api-testing/), [Postman API Testing YouTube Guide](https://www.youtube.com/watch?v=RYsBgP-RwVI)
+<strong>Read more:</strong>[Postman – What is API Testing?](https://www.postman.com/api-platform/api-testing/), [Postman API Testing YouTube Guide](https://www.youtube.com/watch?v=RYsBgP-RwVI)
 
 ### Common Bugs Found in API Testing
 
@@ -185,50 +185,50 @@ API testing confirms functionality, security, and performance. Key types:
 
 ### Best Practices Checklist
 
-1. **Design with an API-first approach**: Plan APIs before building applications.
-2. **Provide clear, comprehensive documentation**: Use tools like Swagger/OpenAPI.
-3. **Implement robust authentication and authorization.**4. **Version your APIs**: Prevent breaking existing integrations.
-5. **Optimize for performance**: Use caching, pagination, efficient data formats.
-6. **Handle errors gracefully**: Use meaningful error codes/messages.
-7. **Enforce rate limiting and monitoring.**8. **Encrypt sensitive data in transit and at rest.**9. **Plan for scalability and future growth.**10. **Maintain and update documentation/code.**
+1. <strong>Design with an API-first approach</strong>: Plan APIs before building applications.
+2. <strong>Provide clear, comprehensive documentation</strong>: Use tools like Swagger/OpenAPI.
+3. <strong>Implement robust authentication and authorization.</strong>4. <strong>Version your APIs</strong>: Prevent breaking existing integrations.
+5. <strong>Optimize for performance</strong>: Use caching, pagination, efficient data formats.
+6. <strong>Handle errors gracefully</strong>: Use meaningful error codes/messages.
+7. <strong>Enforce rate limiting and monitoring.</strong>8. <strong>Encrypt sensitive data in transit and at rest.</strong>9. <strong>Plan for scalability and future growth.</strong>10. <strong>Maintain and update documentation/code.</strong>
 
-**Further reading:**[Postman – API Test Automation Best Practices](https://www.postman.com/postman-best-practices/api-test-automation/)
+<strong>Further reading:</strong>[Postman – API Test Automation Best Practices](https://www.postman.com/postman-best-practices/api-test-automation/)
 
 ## API Protocols and Architectural Styles
 
 | Protocol / Style     | Key Features                                   | When to Use                                      |
 |----------------------|------------------------------------------------|--------------------------------------------------|
-| **REST**| Stateless, resource-oriented, scalable         | Most web/mobile apps, public APIs                 |
-| **SOAP**| Rigid contracts, built-in error handling       | Enterprise, regulated industries                  |
-| **GraphQL**| Flexible queries, precise data retrieval       | Complex UIs, data-rich mobile apps                |
-| **gRPC**| High speed, binary data, streaming, HTTP/2     | Microservices, internal high-performance systems  |
-| **WebSocket**| Persistent, real-time two-way communication    | Live chat, games, financial tickers               |
-| **XML-RPC/JSON-RPC**| Simple remote calls over HTTP                  | Lightweight or legacy integrations                |
+| <strong>REST</strong>| Stateless, resource-oriented, scalable         | Most web/mobile apps, public APIs                 |
+| <strong>SOAP</strong>| Rigid contracts, built-in error handling       | Enterprise, regulated industries                  |
+| <strong>GraphQL</strong>| Flexible queries, precise data retrieval       | Complex UIs, data-rich mobile apps                |
+| <strong>gRPC</strong>| High speed, binary data, streaming, HTTP/2     | Microservices, internal high-performance systems  |
+| <strong>WebSocket</strong>| Persistent, real-time two-way communication    | Live chat, games, financial tickers               |
+| <strong>XML-RPC/JSON-RPC</strong>| Simple remote calls over HTTP                  | Lightweight or legacy integrations                |
 
 ## Frequently Asked Questions and Troubleshooting
 
-**Q: What does API stand for?**A: Application Programming Interface.
+<strong>Q: What does API stand for?</strong>A: Application Programming Interface.
 
-**Q: Are all APIs web-based?**A: No. APIs can be local (within one system), remote (over a network), or web-based (internet).
+<strong>Q: Are all APIs web-based?</strong>A: No. APIs can be local (within one system), remote (over a network), or web-based (internet).
 
-**Q: What’s the difference between REST and SOAP?**A: REST is a flexible, HTTP-based architectural style; SOAP is a strict protocol using XML and often required in regulated industries.
+<strong>Q: What’s the difference between REST and SOAP?</strong>A: REST is a flexible, HTTP-based architectural style; SOAP is a strict protocol using XML and often required in regulated industries.
 
-**Q: How do I use an API?**A: Obtain access (usually with an API key), read documentation, and send requests to API endpoints.
+<strong>Q: How do I use an API?</strong>A: Obtain access (usually with an API key), read documentation, and send requests to API endpoints.
 
-**Q: What is an API endpoint?**A: A specific URL where an API receives requests and sends responses.
+<strong>Q: What is an API endpoint?</strong>A: A specific URL where an API receives requests and sends responses.
 
-**Q: What’s an example of API in everyday life?**A: Clicking "Pay with PayPal" on a shopping site triggers an API exchange to process your payment.
+<strong>Q: What’s an example of API in everyday life?</strong>A: Clicking "Pay with PayPal" on a shopping site triggers an API exchange to process your payment.
 
-**Q: What are API keys and tokens?**A: API keys uniquely identify the calling application; tokens (OAuth, JWT) prove user identity and permissions.
+<strong>Q: What are API keys and tokens?</strong>A: API keys uniquely identify the calling application; tokens (OAuth, JWT) prove user identity and permissions.
 
-**Q: How do APIs relate to microservices?**A: Microservices architectures use APIs for communication between independent service components.
+<strong>Q: How do APIs relate to microservices?</strong>A: Microservices architectures use APIs for communication between independent service components.
 
 ### Troubleshooting Common API Issues
 
-- **401 Unauthorized**: Check your authentication credentials.
-- **404 Not Found**: The endpoint or resource doesn’t exist.
-- **429 Too Many Requests**: Rate limit exceeded; reduce frequency.
-- **500 Internal Server Error**: Server-side failure; check API status or documentation.
+- <strong>401 Unauthorized</strong>: Check your authentication credentials.
+- <strong>404 Not Found</strong>: The endpoint or resource doesn’t exist.
+- <strong>429 Too Many Requests</strong>: Rate limit exceeded; reduce frequency.
+- <strong>500 Internal Server Error</strong>: Server-side failure; check API status or documentation.
 
 ## References
 
@@ -239,7 +239,7 @@ API testing confirms functionality, security, and performance. Key types:
 5. [Postman – API Test Automation Best Practices](https://www.postman.com/postman-best-practices/api-test-automation/)
 6. [YouTube – Postman API Testing Guide](https://www.youtube.com/watch?v=RYsBgP-RwVI)
 
-**For further exploration:**- [AWS: RESTful API Guide](https://aws.amazon.com/what-is/restful-api/)
+<strong>For further exploration:</strong>- [AWS: RESTful API Guide](https://aws.amazon.com/what-is/restful-api/)
 - [Postman: API-First Guide](https://www.postman.com/api-first/)
 - [IBM API Connect Developer Portal](https://www.ibm.com/products/api-connect/developer-portal)
 

@@ -14,9 +14,9 @@ draft: false
 
 A Text-to-Speech Node (TTS Node) is a modular building block within conversational AI, automation, and workflow platforms. It receives input text, converts it to synthesized audio using neural or traditional speech engines, and outputs the result as an audio file or stream. This enables voice responses in chatbots, voicebots, accessibility solutions, and diverse automation scenarios. TTS Nodes can integrate advanced AI voices, multi-language support, and custom prosody or emotion settings, making them essential for natural-sounding, automated spoken interactions.
 
-**Summary:**- **Function:**Converts text (plain or marked up) into speech audio (e.g., .mp3, .wav)
-- **Core Use:**Adds dynamic voice output to automations, chatbots, and virtual assistants
-- **Integration:**Used as a node/block in platforms like LearningFlow.AI, Microsoft Azure, Google Cloud TTS, OpenAI, and open-source solutions
+<strong>Summary:</strong>- <strong>Function:</strong>Converts text (plain or marked up) into speech audio (e.g., .mp3, .wav)
+- <strong>Core Use:</strong>Adds dynamic voice output to automations, chatbots, and virtual assistants
+- <strong>Integration:</strong>Used as a node/block in platforms like LearningFlow.AI, Microsoft Azure, Google Cloud TTS, OpenAI, and open-source solutions
 
 ## How is a Text-to-Speech Node Used?
 
@@ -24,12 +24,12 @@ A Text-to-Speech Node (TTS Node) is a modular building block within conversation
 
 A typical TTS Node workflow:
 
-1. **Input Capture:**Receives text from an upstream source—such as a chatbot's reply, notification, or status message
-2. **Node Processing:**Applies voice model, language, and optional SSML markup, then submits to a TTS engine (cloud API, on-premise, or open-source server)
-3. **Speech Synthesis:**The TTS engine returns the audio file, streamed or as a downloadable asset, in formats like MP3, WAV, or OGG
-4. **Output Routing:**Audio is sent to speakers, phones, smart devices, or further workflow nodes (e.g., for playback, download, or animation)
+1. <strong>Input Capture:</strong>Receives text from an upstream source—such as a chatbot's reply, notification, or status message
+2. <strong>Node Processing:</strong>Applies voice model, language, and optional SSML markup, then submits to a TTS engine (cloud API, on-premise, or open-source server)
+3. <strong>Speech Synthesis:</strong>The TTS engine returns the audio file, streamed or as a downloadable asset, in formats like MP3, WAV, or OGG
+4. <strong>Output Routing:</strong>Audio is sent to speakers, phones, smart devices, or further workflow nodes (e.g., for playback, download, or animation)
 
-**Example Automation Sequence:**```
+<strong>Example Automation Sequence:</strong>```
 Text Input → AI Response Generation → Text-to-Speech Node → Play Sound/Send Audio
 ```
 
@@ -146,15 +146,15 @@ Supported tags and features vary by provider.
 
 ### Step-by-Step Checklist
 
-1. **Add the Node:**Drag and drop the "Text-to-Speech" block onto your workflow canvas
-2. **Connect Input:**Link the node to upstream data (e.g., chatbot response, notification)
-3. **Configure Voice Model:**Choose the desired AI voice; set language/locale, and (optionally) SSML markup
-4. **Set Output Format:**Select between MP3, WAV, OGG, or other formats
-5. **Configure Additional Parameters:**Adjust speaking rate, pitch, volume, emotion, etc.; enable caching for repeated utterances if available
-6. **Connect Outputs:**Route the generated audio to playback, download, or further workflow nodes
-7. **Test the Node:**Provide sample input, verify output matches expectations
+1. <strong>Add the Node:</strong>Drag and drop the "Text-to-Speech" block onto your workflow canvas
+2. <strong>Connect Input:</strong>Link the node to upstream data (e.g., chatbot response, notification)
+3. <strong>Configure Voice Model:</strong>Choose the desired AI voice; set language/locale, and (optionally) SSML markup
+4. <strong>Set Output Format:</strong>Select between MP3, WAV, OGG, or other formats
+5. <strong>Configure Additional Parameters:</strong>Adjust speaking rate, pitch, volume, emotion, etc.; enable caching for repeated utterances if available
+6. <strong>Connect Outputs:</strong>Route the generated audio to playback, download, or further workflow nodes
+7. <strong>Test the Node:</strong>Provide sample input, verify output matches expectations
 
-**Example (Google Cloud Node.js):**```js
+<strong>Example (Google Cloud Node.js):</strong>```js
 const request = {
   input: {text: "Hello, this is your reminder."},
   voice: {languageCode: "en-US", ssmlGender: "FEMALE"},
@@ -178,18 +178,18 @@ data:
 
 ## Example Use Cases
 
-**1. Conversational Voicebot (Customer Service)**Workflow: User query → AI response → Text-to-Speech Node → Audio to caller  
+<strong>1. Conversational Voicebot (Customer Service)</strong>Workflow: User query → AI response → Text-to-Speech Node → Audio to caller  
 Purpose: Deliver real-time, spoken support over phone or web
 
-**2. Accessibility Enhancement**Workflow: UI event → Text description → TTS Node → Audio output  
+<strong>2. Accessibility Enhancement</strong>Workflow: UI event → Text description → TTS Node → Audio output  
 Purpose: Read out on-screen content for users with visual impairments
 
-**3. Multilingual Announcements**Workflow: Scheduled event → Dynamic multilingual message → TTS Node → Public announcement system  
+<strong>3. Multilingual Announcements</strong>Workflow: Scheduled event → Dynamic multilingual message → TTS Node → Public announcement system  
 Purpose: Broadcast messages in several languages
 
-**4. Educational Narration**Workflow: Lesson text → TTS Node with expressive/child-friendly voice → Audio file for lesson playback
+<strong>4. Educational Narration</strong>Workflow: Lesson text → TTS Node with expressive/child-friendly voice → Audio file for lesson playback
 
-**5. IoT Device Voice Feedback**Workflow: Device status change → Message → TTS Node → Smart speaker audio
+<strong>5. IoT Device Voice Feedback</strong>Workflow: Device status change → Message → TTS Node → Smart speaker audio
 
 ## Troubleshooting & Common Issues
 
@@ -205,51 +205,51 @@ Purpose: Broadcast messages in several languages
 
 ## Frequently Asked Questions (FAQ)
 
-**Q: What audio formats are supported?**A: Most TTS nodes support MP3, WAV, OGG/Opus. Format support varies by provider and playback device.
+<strong>Q: What audio formats are supported?</strong>A: Most TTS nodes support MP3, WAV, OGG/Opus. Format support varies by provider and playback device.
 
-**Q: Can I customize the voice?**A: Many platforms allow voice, language, and accent selection. Some (Azure, ElevenLabs) offer custom voice training.
+<strong>Q: Can I customize the voice?</strong>A: Many platforms allow voice, language, and accent selection. Some (Azure, ElevenLabs) offer custom voice training.
 
-**Q: Does the TTS node support multiple languages?**A: Yes, leading services support dozens to hundreds of languages and dialects.
+<strong>Q: Does the TTS node support multiple languages?</strong>A: Yes, leading services support dozens to hundreds of languages and dialects.
 
-**Q: How do I make speech more natural or expressive?**A: Use neural TTS voices and SSML for prosody, emotion, pitch, and rate control.
+<strong>Q: How do I make speech more natural or expressive?</strong>A: Use neural TTS voices and SSML for prosody, emotion, pitch, and rate control.
 
-**Q: What is SSML, and do I need it?**A: SSML lets you control speech characteristics (emphasis, pauses, pronunciation). Optional, but recommended for advanced control.
+<strong>Q: What is SSML, and do I need it?</strong>A: SSML lets you control speech characteristics (emphasis, pauses, pronunciation). Optional, but recommended for advanced control.
 
-**Q: Is caching available?**A: Most platforms offer caching for repeated utterances. See your provider's documentation.
+<strong>Q: Is caching available?</strong>A: Most platforms offer caching for repeated utterances. See your provider's documentation.
 
-**Q: What are common pitfalls?**A: Audio format mismatches, wrong voice/language, unsupported SSML tags. Test outputs across target devices, review documentation.
+<strong>Q: What are common pitfalls?</strong>A: Audio format mismatches, wrong voice/language, unsupported SSML tags. Test outputs across target devices, review documentation.
 
 ## Implementation Best Practices
 
-**Voice Selection:**Choose voices that match your brand and audience; test with representative users
+<strong>Voice Selection:</strong>Choose voices that match your brand and audience; test with representative users
 
-**Audio Quality:**Balance quality with file size; MP3 at 128kbps is sufficient for most use cases
+<strong>Audio Quality:</strong>Balance quality with file size; MP3 at 128kbps is sufficient for most use cases
 
-**Error Handling:**Implement fallback mechanisms for TTS failures; have pre-recorded audio as backup
+<strong>Error Handling:</strong>Implement fallback mechanisms for TTS failures; have pre-recorded audio as backup
 
-**Caching Strategy:**Cache frequently used phrases to reduce API costs and latency
+<strong>Caching Strategy:</strong>Cache frequently used phrases to reduce API costs and latency
 
-**SSML Usage:**Use SSML sparingly; focus on critical pronunciation and pacing adjustments
+<strong>SSML Usage:</strong>Use SSML sparingly; focus on critical pronunciation and pacing adjustments
 
-**Testing:**Test across different devices and browsers; verify audio playback compatibility
+<strong>Testing:</strong>Test across different devices and browsers; verify audio playback compatibility
 
-**Accessibility:**Provide text alternatives; ensure screen readers can access content
+<strong>Accessibility:</strong>Provide text alternatives; ensure screen readers can access content
 
-**Performance:**Monitor TTS API latency; consider edge computing for real-time applications
+<strong>Performance:</strong>Monitor TTS API latency; consider edge computing for real-time applications
 
 ## Advanced Features
 
-**Dynamic Voice Selection:**Choose voices based on user preferences or context
+<strong>Dynamic Voice Selection:</strong>Choose voices based on user preferences or context
 
-**Emotion and Tone:**Adjust voice characteristics to match message sentiment
+<strong>Emotion and Tone:</strong>Adjust voice characteristics to match message sentiment
 
-**Voice Cloning:**Create custom brand voices (available on some platforms)
+<strong>Voice Cloning:</strong>Create custom brand voices (available on some platforms)
 
-**Real-Time Streaming:**Stream audio as it's generated for lower latency
+<strong>Real-Time Streaming:</strong>Stream audio as it's generated for lower latency
 
-**Multi-Speaker Support:**Switch between voices within a single conversation
+<strong>Multi-Speaker Support:</strong>Switch between voices within a single conversation
 
-**Background Audio:**Mix TTS with music or sound effects
+<strong>Background Audio:</strong>Mix TTS with music or sound effects
 
 ## References
 

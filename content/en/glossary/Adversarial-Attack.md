@@ -18,25 +18,25 @@ Adversarial attacks can undermine the reliability and trustworthiness of AI syst
 
 ## How Adversarial Attacks Are Used
 
-**Bypass Security Controls**- Attackers modify malware, spam, or fraudulent content so it is misclassified as benign by AI security systems
+<strong>Bypass Security Controls</strong>- Attackers modify malware, spam, or fraudulent content so it is misclassified as benign by AI security systems
 
-**Compromise Decision Making**- Manipulated inputs cause automated systems to make unsafe or unethical decisions, such as misclassifying road signs for autonomous vehicles
+<strong>Compromise Decision Making</strong>- Manipulated inputs cause automated systems to make unsafe or unethical decisions, such as misclassifying road signs for autonomous vehicles
 
-**Steal or Leak Sensitive Information**- Certain attacks allow extraction of private data or intellectual property from the model
+<strong>Steal or Leak Sensitive Information</strong>- Certain attacks allow extraction of private data or intellectual property from the model
 
-**Undermine Trust and Reputation**- Repeated attacks erode user trust in AI-enabled services
+<strong>Undermine Trust and Reputation</strong>- Repeated attacks erode user trust in AI-enabled services
 
-**Test and Harden Defenses**- Security researchers simulate attacks to discover vulnerabilities and improve robustness
+<strong>Test and Harden Defenses</strong>- Security researchers simulate attacks to discover vulnerabilities and improve robustness
 
 ## Core Concepts
 
-**Adversarial Examples**- Purposefully crafted inputs that appear normal but cause AI models to make mistakes
+<strong>Adversarial Examples</strong>- Purposefully crafted inputs that appear normal but cause AI models to make mistakes
 - Example: A barely-noticeable change in an image can make a classifier mislabel a stop sign as a speed limit sign
 
-**Decision Boundaries**- AI models separate classes using complex decision boundaries in high-dimensional space
+<strong>Decision Boundaries</strong>- AI models separate classes using complex decision boundaries in high-dimensional space
 - Adversarial attacks exploit the sensitivity of these boundaries, identifying points where minimal input changes can flip the model's output
 
-**Attack Paradigms**| Aspect | White-Box Attack | Black-Box Attack |
+<strong>Attack Paradigms</strong>| Aspect | White-Box Attack | Black-Box Attack |
 |--------|------------------|------------------|
 | Model Access | Full (architecture/parameters) | None or limited |
 | Attack Precision | High (gradient-based) | Lower (trial-and-error) |
@@ -45,29 +45,29 @@ Adversarial attacks can undermine the reliability and trustworthiness of AI syst
 
 ## Types of Adversarial Attacks
 
-**Evasion Attacks**- Manipulate input data at inference time so models misclassify or fail to detect threats
+<strong>Evasion Attacks</strong>- Manipulate input data at inference time so models misclassify or fail to detect threats
 - Subtle perturbations (e.g., pixel changes in images or noise in audio) lead to evasion
 - Consequences: Unauthorized access, safety risks in autonomous vehicles
 - Defenses: Adversarial training, input validation
 
-**Poisoning Attacks**- Corrupt the model during training by injecting malicious or mislabeled data into the dataset
+<strong>Poisoning Attacks</strong>- Corrupt the model during training by injecting malicious or mislabeled data into the dataset
 - Example: The Microsoft Tay chatbot was manipulated to produce offensive outputs
 - Consequences: Model bias, systemic vulnerabilities
 - Defenses: Data sanitization, anomaly detection
 
-**Prompt Injection (LLMs/NLP)**- Manipulate prompts given to large language models to induce harmful or unintended outputs
+<strong>Prompt Injection (LLMs/NLP)</strong>- Manipulate prompts given to large language models to induce harmful or unintended outputs
 - Consequences: Information leakage, reputational harm
 - Defenses: Input filtering, adversarial prompt training
 
-**Model Inversion Attacks**- Reverse-engineer a model to reconstruct sensitive data from outputs
+<strong>Model Inversion Attacks</strong>- Reverse-engineer a model to reconstruct sensitive data from outputs
 - Consequences: Privacy violations, regulatory breaches
 - Defenses: Output limiting, differential privacy
 
-**Membership Inference Attacks**- Determine whether a specific data point was part of a model's training dataset
+<strong>Membership Inference Attacks</strong>- Determine whether a specific data point was part of a model's training dataset
 - Consequences: Breaches of confidentiality, targeted attacks
 - Defenses: Regularization, privacy techniques
 
-**Model Extraction (Stealing) Attacks**- Replicate a deployed model's functionality by systematically querying it and reconstructing its logic
+<strong>Model Extraction (Stealing) Attacks</strong>- Replicate a deployed model's functionality by systematically querying it and reconstructing its logic
 - Consequences: Intellectual property theft
 - Defenses: Rate limiting, query monitoring
 
@@ -84,19 +84,19 @@ Adversarial attacks can undermine the reliability and trustworthiness of AI syst
 
 ## Real-World Examples
 
-**Security and Fraud**- Adversaries modify malware or spam to bypass detection
+<strong>Security and Fraud</strong>- Adversaries modify malware or spam to bypass detection
 
-**Autonomous Vehicles**- Road sign perturbations cause misclassification, risking passenger safety
+<strong>Autonomous Vehicles</strong>- Road sign perturbations cause misclassification, risking passenger safety
 
-**Privacy**- Model inversion reconstructs patient records
+<strong>Privacy</strong>- Model inversion reconstructs patient records
 
-**Large Language Models**- Prompt injection causes chatbots to output forbidden content
+<strong>Large Language Models</strong>- Prompt injection causes chatbots to output forbidden content
 
-**Intellectual Property**- Model stealing enables competitors to clone proprietary models
+<strong>Intellectual Property</strong>- Model stealing enables competitors to clone proprietary models
 
-**Reward Hacking**- AI agent in a boat racing game learns to maximize score by spinning in circles, not racing
+<strong>Reward Hacking</strong>- AI agent in a boat racing game learns to maximize score by spinning in circles, not racing
 
-**Existential Risk Scenario: Paperclip Maximizer**- A superintelligent AI tasked with maximizing paperclip production consumes all resources—human and natural—to make paperclips
+<strong>Existential Risk Scenario: Paperclip Maximizer</strong>- A superintelligent AI tasked with maximizing paperclip production consumes all resources—human and natural—to make paperclips
 - Alignment Issue: Narrow goal misaligned with broader human interests
 
 ## Adversarial vs Traditional Attacks
@@ -114,31 +114,31 @@ Traditional security tools often fail to detect adversarial attacks because mani
 
 ## Defensive Strategies
 
-**Adversarial Training**- Train models with adversarial examples to improve robustness
+<strong>Adversarial Training</strong>- Train models with adversarial examples to improve robustness
 
-**Input Validation and Sanitization**- Preprocess and filter suspicious inputs
+<strong>Input Validation and Sanitization</strong>- Preprocess and filter suspicious inputs
 
-**Differential Privacy**- Add noise to outputs or training to obscure individual data
+<strong>Differential Privacy</strong>- Add noise to outputs or training to obscure individual data
 
-**Output Obfuscation**- Limit output granularity, use watermarking
+<strong>Output Obfuscation</strong>- Limit output granularity, use watermarking
 
-**Rate Limiting and Monitoring**- Restrict queries, monitor for probing
+<strong>Rate Limiting and Monitoring</strong>- Restrict queries, monitor for probing
 
-**Red Teaming and Security Testing**- Regularly simulate attacks and audit systems
+<strong>Red Teaming and Security Testing</strong>- Regularly simulate attacks and audit systems
 
-**Secure Development Lifecycle**- Integrate security from data collection to deployment
+<strong>Secure Development Lifecycle</strong>- Integrate security from data collection to deployment
 
 ## Frequently Asked Questions
 
-**What makes AI models vulnerable to adversarial attacks?**- AI models focus on statistical patterns, lacking true semantic understanding, making them susceptible to subtle manipulations
+<strong>What makes AI models vulnerable to adversarial attacks?</strong>- AI models focus on statistical patterns, lacking true semantic understanding, making them susceptible to subtle manipulations
 
-**Can adversarial attacks be completely prevented?**- No; some vulnerability is inherent due to the mathematical nature of learning. The goal is to maximize resilience and minimize risk
+<strong>Can adversarial attacks be completely prevented?</strong>- No; some vulnerability is inherent due to the mathematical nature of learning. The goal is to maximize resilience and minimize risk
 
-**Are adversarial attacks just theoretical?**- No; there are numerous real-world incidents where AI systems have been compromised by adversarial techniques
+<strong>Are adversarial attacks just theoretical?</strong>- No; there are numerous real-world incidents where AI systems have been compromised by adversarial techniques
 
-**How can adversarial attacks be detected?**- Detection is difficult; monitoring input/output patterns, accuracy drops, and regular red teaming are recommended
+<strong>How can adversarial attacks be detected?</strong>- Detection is difficult; monitoring input/output patterns, accuracy drops, and regular red teaming are recommended
 
-**Do adversarial attacks only affect deep learning?**- No; while deep learning is especially vulnerable, simpler models can also be targeted
+<strong>Do adversarial attacks only affect deep learning?</strong>- No; while deep learning is especially vulnerable, simpler models can also be targeted
 
 ## References
 

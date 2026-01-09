@@ -20,50 +20,50 @@ draft: false
 
 ### Hallucination in Multimodal AI
 
-**Definition:**In MLLMs, hallucination is the generation of output content that is syntactically plausible but semantically unfaithful to the provided input(s) or contradicts established world knowledge. This can occur in visual, textual, or cross-modal outputs.
+<strong>Definition:</strong>In MLLMs, hallucination is the generation of output content that is syntactically plausible but semantically unfaithful to the provided input(s) or contradicts established world knowledge. This can occur in visual, textual, or cross-modal outputs.
 ### Taxonomy and Definitions
 
 #### Faithfulness vs. Factuality Hallucinations
 
-- **Faithfulness Hallucination:**Output contradicts the direct input context. Example: Describing an object not present in the input image.  
+- <strong>Faithfulness Hallucination:</strong>Output contradicts the direct input context. Example: Describing an object not present in the input image.  
   [Related: Taxonomy summary, arXiv survey, Section 2.1](https://arxiv.org/html/2507.19024v1)
-- **Factuality Hallucination:**Output conflicts with established external knowledge, not the input context. Example: Assigning the wrong name to a famous landmark.
+- <strong>Factuality Hallucination:</strong>Output conflicts with established external knowledge, not the input context. Example: Assigning the wrong name to a famous landmark.
 
 #### Modality-Conflicting vs. Fact-Conflicting Hallucinations
 
-- **Modality-Conflicting:**Direct contradiction between modalities (e.g., visual vs. textual).  
+- <strong>Modality-Conflicting:</strong>Direct contradiction between modalities (e.g., visual vs. textual).  
   Example: Text says “red car,” image shows blue car.
-- **Fact-Conflicting:**Output is plausible but incorrect by world knowledge.  
+- <strong>Fact-Conflicting:</strong>Output is plausible but incorrect by world knowledge.  
   Example: “Eiffel Tower is in London.”
 
 #### Granularity: Object-Level, Attribute-Level, Scene-Level
 
-- **Object-Level:**Incorrect identification or hallucination of entities.  
+- <strong>Object-Level:</strong>Incorrect identification or hallucination of entities.  
   Example: Citing a dog when only a cat is present.
-- **Attribute-Level:**Incorrect properties assigned (color, shape, etc.).
-- **Scene-Level:**Misrepresentation of relationships or events.
-- **Scene-Text:**Errors in text recognition or generation within images.
+- <strong>Attribute-Level:</strong>Incorrect properties assigned (color, shape, etc.).
+- <strong>Scene-Level:</strong>Misrepresentation of relationships or events.
+- <strong>Scene-Text:</strong>Errors in text recognition or generation within images.
 
 #### Task Modalities
 
-- **Image-to-Text (I2T):**Captioning, VQA, visual reasoning. [MS-COCO](https://cocodataset.org/#home), [TextVQA](https://textvqa.org/)
-- **Text-to-Image (T2I):**DALL-E, Stable Diffusion, etc. [DrawBench](https://arxiv.org/abs/2206.01714), [T2I-CompBench](https://arxiv.org/abs/2307.10021)
+- <strong>Image-to-Text (I2T):</strong>Captioning, VQA, visual reasoning. [MS-COCO](https://cocodataset.org/#home), [TextVQA](https://textvqa.org/)
+- <strong>Text-to-Image (T2I):</strong>DALL-E, Stable Diffusion, etc. [DrawBench](https://arxiv.org/abs/2206.01714), [T2I-CompBench](https://arxiv.org/abs/2307.10021)
 
 #### Annotation Levels
 
-- **Segment-Level:**Sentence or logical text segment.
-- **Claim-Level:**Atomic factual assertion within a segment.
+- <strong>Segment-Level:</strong>Sentence or logical text segment.
+- <strong>Claim-Level:</strong>Atomic factual assertion within a segment.
 
 ### Benchmark Construction
 
 #### Dataset Composition
 
 MHaluBench covers:
-- **Image Captioning (IC):**200 samples from [MS-COCO 2014 Validation](https://cocodataset.org/#download), generated from diverse MLLMs.
-- **Visual Question Answering (VQA):**200 samples from [TextVQA test set](https://textvqa.org/download.html).
-- **Text-to-Image Generation:**220 samples based on [DrawBench](https://arxiv.org/abs/2206.01714) and [T2I-CompBench](https://arxiv.org/abs/2307.10021).
+- <strong>Image Captioning (IC):</strong>200 samples from [MS-COCO 2014 Validation](https://cocodataset.org/#download), generated from diverse MLLMs.
+- <strong>Visual Question Answering (VQA):</strong>200 samples from [TextVQA test set](https://textvqa.org/download.html).
+- <strong>Text-to-Image Generation:</strong>220 samples based on [DrawBench](https://arxiv.org/abs/2206.01714) and [T2I-CompBench](https://arxiv.org/abs/2307.10021).
 
-**Total:**620 instances, each annotated at both segment and claim levels.  
+<strong>Total:</strong>620 instances, each annotated at both segment and claim levels.  
 *Source: [MHaluBench Dataset Card on HuggingFace](https://huggingface.co/datasets/OpenKG/MHaluBench)*
 
 #### Data Generation and Model Coverage
@@ -73,18 +73,18 @@ MHaluBench covers:
 
 #### Annotation Protocol
 
-- **Claim Extraction:**Automated using advanced LLMs ([GPT-4V](https://platform.openai.com/docs/guides/vision), [Gemini](https://deepmind.google/technologies/gemini/)), then manually verified.
-- **Labeling:**- Claims labeled hallucinatory/non-hallucinatory.
+- <strong>Claim Extraction:</strong>Automated using advanced LLMs ([GPT-4V](https://platform.openai.com/docs/guides/vision), [Gemini](https://deepmind.google/technologies/gemini/)), then manually verified.
+- <strong>Labeling:</strong>- Claims labeled hallucinatory/non-hallucinatory.
   - Segment is hallucinatory if any claim within is hallucinatory.
   - Response is hallucinatory if any segment is hallucinatory.
-- **Category Labels:**| Category      | Definition | Example |
+- <strong>Category Labels:</strong>| Category      | Definition | Example |
   |---------------|------------|---------|
   | Object        | Incorrect/omitted entity | “A dog is running” when only a cat is present |
   | Attribute     | Incorrect property | “The car is red” (but it’s blue) |
   | Scene-Text    | Transcription/factual error in text | “Sign says ‘Open’” (but says ‘Closed’) |
   | Fact          | Contradiction to external knowledge | “Eiffel Tower is in London” |
 
-- **Human Annotation:**Three graduate-level annotators independently label; disagreements resolved by majority vote.  
+- <strong>Human Annotation:</strong>Three graduate-level annotators independently label; disagreements resolved by majority vote.  
   Inter-annotator agreement: Fleiss’s Kappa κ = 0.822.  
   *See [MHaluBench paper, Section 4.2, Table 5](https://aclanthology.org/2024.acl-long.178.pdf)*
 
@@ -99,12 +99,12 @@ Each entry includes:
 #### Unified Hallucination Detection (UNIHD)
 
 UNIHD decomposes hallucination detection into four stages:
-1. **Essential Claim Extraction:**Identify atomic factual claims ([MHaluBench, Section 3.1](https://aclanthology.org/2024.acl-long.178/)).
-2. **Autonomous Tool Selection:**Formulate targeted queries and select validation tools (object, attribute, scene-text, fact).
-3. **Parallel Tool Execution:**Deploy detectors/classifiers (e.g., [Grounding DINO](https://github.com/IDEA-Research/GroundingDINO) for objects, OCR for scene-text).
-4. **Hallucination Verification:**Aggregate results, generate rationales, and assign final labels.
+1. <strong>Essential Claim Extraction:</strong>Identify atomic factual claims ([MHaluBench, Section 3.1](https://aclanthology.org/2024.acl-long.178/)).
+2. <strong>Autonomous Tool Selection:</strong>Formulate targeted queries and select validation tools (object, attribute, scene-text, fact).
+3. <strong>Parallel Tool Execution:</strong>Deploy detectors/classifiers (e.g., [Grounding DINO](https://github.com/IDEA-Research/GroundingDINO) for objects, OCR for scene-text).
+4. <strong>Hallucination Verification:</strong>Aggregate results, generate rationales, and assign final labels.
 
-**Supported Detection Approaches:**| Approach           | Description | Examples |
+<strong>Supported Detection Approaches:</strong>| Approach           | Description | Examples |
 |--------------------|-------------|----------|
 | Black-Box          | Input/output only | [FaithScore](https://arxiv.org/abs/2309.00906), GAVIE, HaELM |
 | White-Box          | Uses model internals | DHCP, OPERA, ContextualLens |
@@ -124,23 +124,23 @@ UNIHD decomposes hallucination detection into four stages:
 | Collu-Bench    | Code        | Code gen & repair  | Token               | Multiple code categories     | Token            | Per-token localization, multi-LLM         |
 | MHaluBench     | Image/Text  | Captioning, VQA, T2I| Segment/Claim      | Object, Attribute, Scene, Fact| Claim/Segment    | Unified, fine-grained, cross-modal        |
 
-- **Distinctive aspects of MHaluBench:**- Covers both I2T and T2I tasks.
+- <strong>Distinctive aspects of MHaluBench:</strong>- Covers both I2T and T2I tasks.
   - Fine-grained, claim-level annotation scheme.
   - Explicitly distinguishes modality- and fact-conflicting hallucinations.
   - Structured for meta-evaluation of detectors.
 
-**Further reading:**- [OpenKG MHaluBench Dataset on HuggingFace](https://huggingface.co/datasets/OpenKG/MHaluBench)
+<strong>Further reading:</strong>- [OpenKG MHaluBench Dataset on HuggingFace](https://huggingface.co/datasets/OpenKG/MHaluBench)
 - [MMHal-Bench: Modality Misalignment Evaluation (Emergent Mind)](https://www.emergentmind.com/topics/mmhal-bench)
 
 ### Illustrative Examples
 
-**Image-to-Text (I2T):**- *Input*: Soccer match with a blue-uniformed athlete on the right.
+<strong>Image-to-Text (I2T):</strong>- *Input*: Soccer match with a blue-uniformed athlete on the right.
 - *Output*: “The athlete on the right side, wearing the red uniform, belongs to Club América.”
 - *Extracted Claims*:  
   1. Athlete on right wears red uniform. *(Hallucinatory: Attribute-level, Modality-conflicting)*
   2. Athlete belongs to Club América. *(Fact-level, requires external check)*
 
-**Text-to-Image (T2I):**- *Input*: “A yellow school bus parked in front of the Eiffel Tower in Paris.”
+<strong>Text-to-Image (T2I):</strong>- *Input*: “A yellow school bus parked in front of the Eiffel Tower in Paris.”
 - *Output*: Image showing a red bus in front of an unidentified landmark.
 - *Extracted Claims*:  
   1. There is a yellow school bus. *(Hallucinatory: Object/Attribute, Modality-conflicting)*
@@ -148,17 +148,17 @@ UNIHD decomposes hallucination detection into four stages:
 
 ### Use Cases
 
-- **Benchmarking:**Standardized testbed for evaluating hallucination detectors ([UNIHD](https://aclanthology.org/2024.acl-long.178/), black-box, etc.).
-- **Model Diagnostics:**Enables granular, claim-level error analysis for targeted improvement.
-- **Unified Detection Pipeline Prototyping:**Data structure supports integration/testing of tool-augmented pipelines (object detectors, OCR, fact-checkers).
+- <strong>Benchmarking:</strong>Standardized testbed for evaluating hallucination detectors ([UNIHD](https://aclanthology.org/2024.acl-long.178/), black-box, etc.).
+- <strong>Model Diagnostics:</strong>Enables granular, claim-level error analysis for targeted improvement.
+- <strong>Unified Detection Pipeline Prototyping:</strong>Data structure supports integration/testing of tool-augmented pipelines (object detectors, OCR, fact-checkers).
 
 ### Limitations and Future Directions
 
-- **Dataset Size:**Currently 620 instances—smaller than large-scale text benchmarks. Plans for expansion and inclusion of more modalities (audio, video) and domains.
-- **Annotation Scalability:**Human annotation is resource-intensive; future iterations may use semi-automatic or consensus-driven approaches.
-- **Tool Dependency:**Frameworks like UNIHD depend on external tool accuracy (object detectors, OCR, knowledge bases).
-- **Dynamic Evaluation:**Most data is static; open-domain or real-time deployment evaluation remains an open challenge.
-- **From Detection to Mitigation:**MHaluBench is for detection/diagnostics; future directions include integrating with correction/mitigation systems.
+- <strong>Dataset Size:</strong>Currently 620 instances—smaller than large-scale text benchmarks. Plans for expansion and inclusion of more modalities (audio, video) and domains.
+- <strong>Annotation Scalability:</strong>Human annotation is resource-intensive; future iterations may use semi-automatic or consensus-driven approaches.
+- <strong>Tool Dependency:</strong>Frameworks like UNIHD depend on external tool accuracy (object detectors, OCR, knowledge bases).
+- <strong>Dynamic Evaluation:</strong>Most data is static; open-domain or real-time deployment evaluation remains an open challenge.
+- <strong>From Detection to Mitigation:</strong>MHaluBench is for detection/diagnostics; future directions include integrating with correction/mitigation systems.
 
 ### References & Further Links
 

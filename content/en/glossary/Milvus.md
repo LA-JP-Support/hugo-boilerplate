@@ -30,9 +30,9 @@ Data without predefined schema or structure—free-form text, images, audio, vid
 
 ### Similarity Search and ANN
 
-**Similarity Search:**Finding items in dataset most similar to query item based on vector distance metrics (Euclidean, cosine similarity, inner product).
+<strong>Similarity Search:</strong>Finding items in dataset most similar to query item based on vector distance metrics (Euclidean, cosine similarity, inner product).
 
-**Approximate Nearest Neighbor (ANN):**Family of algorithms rapidly retrieving items whose vectors are closest to query vector, trading small amount of accuracy for significant speed gains—essential for billion-scale datasets.
+<strong>Approximate Nearest Neighbor (ANN):</strong>Family of algorithms rapidly retrieving items whose vectors are closest to query vector, trading small amount of accuracy for significant speed gains—essential for billion-scale datasets.
 
 ## Architecture
 
@@ -40,120 +40,120 @@ Data without predefined schema or structure—free-form text, images, audio, vid
 
 Milvus implements multi-layered, microservices architecture with disaggregated storage and compute. Design follows data plane and control plane separation promoting independent scalability and operational flexibility.
 
-**Major Components:**
+<strong>Major Components:</strong>
 
-**Access Layer:**Stateless proxies handling client requests and APIs (RESTful, SDKs), validating requests, aggregating results.
+<strong>Access Layer:</strong>Stateless proxies handling client requests and APIs (RESTful, SDKs), validating requests, aggregating results.
 
-**Coordinator Services:**Orchestrates load balancing, metadata management, system state, DDL/DCL operations, task scheduling.
+<strong>Coordinator Services:</strong>Orchestrates load balancing, metadata management, system state, DDL/DCL operations, task scheduling.
 
-**Worker Nodes:**Stateless executors for search, data insertion, indexing.
+<strong>Worker Nodes:</strong>Stateless executors for search, data insertion, indexing.
 - Streaming Node: Handles real-time data ingestion and streaming consistency
 - Query Node: Loads and queries historical (sealed) data
 - Data Node: Background tasks like compaction and index-building
 
-**Object Storage:**Persists vector data, indexes, logs. Supports MinIO, AWS S3, Azure Blob.
+<strong>Object Storage:</strong>Persists vector data, indexes, logs. Supports MinIO, AWS S3, Azure Blob.
 
-**Meta Storage:**Uses etcd for metadata and cluster state.
+<strong>Meta Storage:</strong>Uses etcd for metadata and cluster state.
 
-**WAL Storage:**Write-Ahead Log for data durability and recovery (Kafka, Pulsar).
+<strong>WAL Storage:</strong>Write-Ahead Log for data durability and recovery (Kafka, Pulsar).
 
 ### Deployment Options
 
 | Mode | Description | Use Case |
 |------|-------------|----------|
-| **Milvus Lite**| Python library via pip; runs embedded | Prototyping, local dev |
-| **Standalone**| Docker-based single-node deployment | Testing, small production |
-| **Distributed**| Kubernetes-based with horizontal scaling | Enterprise, large-scale |
-| **Zilliz Cloud**| Fully managed SaaS with 10x performance acceleration | Production, hassle-free |
+| <strong>Milvus Lite</strong>| Python library via pip; runs embedded | Prototyping, local dev |
+| <strong>Standalone</strong>| Docker-based single-node deployment | Testing, small production |
+| <strong>Distributed</strong>| Kubernetes-based with horizontal scaling | Enterprise, large-scale |
+| <strong>Zilliz Cloud</strong>| Fully managed SaaS with 10x performance acceleration | Production, hassle-free |
 
 ### Scalability
 
-**Horizontal Scaling:**Compute and storage scale independently. Stateless microservices allow elastic recovery orchestrated by Kubernetes.
+<strong>Horizontal Scaling:</strong>Compute and storage scale independently. Stateless microservices allow elastic recovery orchestrated by Kubernetes.
 
-**Hardware Optimization:**AVX512, SIMD, GPU acceleration (NVIDIA CUDA, Cagra), NVMe SSD support.
+<strong>Hardware Optimization:</strong>AVX512, SIMD, GPU acceleration (NVIDIA CUDA, Cagra), NVMe SSD support.
 
-**Billion-Scale Support:**Proven stability for datasets with tens of billions of vectors used in production by major enterprises.
+<strong>Billion-Scale Support:</strong>Proven stability for datasets with tens of billions of vectors used in production by major enterprises.
 
 ## Key Features
 
 ### Supported Data Types
 
-**Dense Vectors:**float32, float16, int8 arrays (from BERT, CLIP, ResNet).
+<strong>Dense Vectors:</strong>float32, float16, int8 arrays (from BERT, CLIP, ResNet).
 
-**Sparse Vectors:**Efficient for high-dimensional data with many zeros (text search, recommendation).
+<strong>Sparse Vectors:</strong>Efficient for high-dimensional data with many zeros (text search, recommendation).
 
-**Binary Vectors:**Compact, bit-packed representation for hashing or vision tasks.
+<strong>Binary Vectors:</strong>Compact, bit-packed representation for hashing or vision tasks.
 
-**Primitives:**Integer, float, string, boolean.
+<strong>Primitives:</strong>Integer, float, string, boolean.
 
-**JSON/Array/Set:**Semi-structured metadata and multi-modal modeling.
+<strong>JSON/Array/Set:</strong>Semi-structured metadata and multi-modal modeling.
 
 ### Indexing Algorithms
 
 | Algorithm | Description | Use Case |
 |-----------|-------------|----------|
-| **HNSW**| Hierarchical Navigable Small World; graph-based | Versatile, high-dimension |
-| **IVF**| Inverted File System; partitions vector space | Balanced speed/cost |
-| **DiskANN**| On-disk index for massive datasets | Billions of vectors, SSD |
-| **Flat**| Linear scan for highest precision | Small datasets, evaluation |
-| **Cagra**| GPU-optimized graph-based index | High-throughput, GPU infra |
+| <strong>HNSW</strong>| Hierarchical Navigable Small World; graph-based | Versatile, high-dimension |
+| <strong>IVF</strong>| Inverted File System; partitions vector space | Balanced speed/cost |
+| <strong>DiskANN</strong>| On-disk index for massive datasets | Billions of vectors, SSD |
+| <strong>Flat</strong>| Linear scan for highest precision | Small datasets, evaluation |
+| <strong>Cagra</strong>| GPU-optimized graph-based index | High-throughput, GPU infra |
 
-**Key Concepts:**- Graph-based indexes (HNSW) outperform IVF for low-k, high recall queries
+<strong>Key Concepts:</strong>- Graph-based indexes (HNSW) outperform IVF for low-k, high recall queries
 - IVF optimal for large top-k queries
 - DiskANN ideal for SSD-backed, billion-scale datasets
 - Quantization (SQ8, PQ) compresses vectors for memory efficiency
 
 ### Search Capabilities
 
-**ANN Search:**Find top-K vectors most similar to query.
+<strong>ANN Search:</strong>Find top-K vectors most similar to query.
 
-**Filtering Search:**Combine vector search with metadata filtering (tags, ranges).
+<strong>Filtering Search:</strong>Combine vector search with metadata filtering (tags, ranges).
 
-**Range Search:**Retrieve vectors within distance threshold.
+<strong>Range Search:</strong>Retrieve vectors within distance threshold.
 
-**Hybrid Search:**Use multiple vector fields/modalities in query.
+<strong>Hybrid Search:</strong>Use multiple vector fields/modalities in query.
 
-**Full-Text Search:**BM25-based search for textual fields.
+<strong>Full-Text Search:</strong>BM25-based search for textual fields.
 
-**Reranking:**Refine initial results with secondary algorithms.
+<strong>Reranking:</strong>Refine initial results with secondary algorithms.
 
-**Fetch by ID:**Retrieve items by primary key or complex expressions.
+<strong>Fetch by ID:</strong>Retrieve items by primary key or complex expressions.
 
 ### Data Operations
 
-**Collections & Partitions:**Organize data hierarchically for efficient access.
+<strong>Collections & Partitions:</strong>Organize data hierarchically for efficient access.
 
-**Schema Evolution:**Update collection schemas without downtime.
+<strong>Schema Evolution:</strong>Update collection schemas without downtime.
 
-**CRUD Operations:**Insert, update, delete, upsert vectors and metadata.
+<strong>CRUD Operations:</strong>Insert, update, delete, upsert vectors and metadata.
 
-**Batch Processing:**Bulk import/export tools.
+<strong>Batch Processing:</strong>Bulk import/export tools.
 
-**Multi-Tenancy:**Isolation by database, collection, or partition key.
+<strong>Multi-Tenancy:</strong>Isolation by database, collection, or partition key.
 
 ### Consistency and Security
 
-**Configurable Consistency:**Strong, bounded staleness, session, eventual consistency models.
+<strong>Configurable Consistency:</strong>Strong, bounded staleness, session, eventual consistency models.
 
-**Authentication & RBAC:**User authentication, role-based access control, fine-grained permissions.
+<strong>Authentication & RBAC:</strong>User authentication, role-based access control, fine-grained permissions.
 
-**TLS Encryption:**Secure data-in-transit.
+<strong>TLS Encryption:</strong>Secure data-in-transit.
 
-**Tiered Storage:**Hot/cold storage for cost-efficient performance.
+<strong>Tiered Storage:</strong>Hot/cold storage for cost-efficient performance.
 
 ## Integration Ecosystem
 
 ### SDKs and APIs
 
-**Language Support:**Python (PyMilvus), Java, Go, Node.js, C#, RESTful API.
+<strong>Language Support:</strong>Python (PyMilvus), Java, Go, Node.js, C#, RESTful API.
 
-**AI Framework Integrations:**LangChain, LlamaIndex, OpenAI, Hugging Face, DSPy, Haystack, Ragas, MemGPT.
+<strong>AI Framework Integrations:</strong>LangChain, LlamaIndex, OpenAI, Hugging Face, DSPy, Haystack, Ragas, MemGPT.
 
-**Data Processing:**Apache Spark connector for ML pipelines.
+<strong>Data Processing:</strong>Apache Spark connector for ML pipelines.
 
-**Observability:**Prometheus and Grafana for monitoring.
+<strong>Observability:</strong>Prometheus and Grafana for monitoring.
 
-**Admin Tools:**Attu (GUI), Birdwatcher (debugging), Milvus Backup & CDC, Vector Transmission Services (migration).
+<strong>Admin Tools:</strong>Attu (GUI), Birdwatcher (debugging), Milvus Backup & CDC, Vector Transmission Services (migration).
 
 ### Example: OpenAI Integration
 
@@ -184,17 +184,17 @@ results = client.search(
 
 ## Use Cases
 
-**Retrieval-Augmented Generation (RAG):**Connects LLMs to external knowledge bases via vector search, enabling accurate, contextually relevant AI responses grounded in retrieved documents.
+<strong>Retrieval-Augmented Generation (RAG):</strong>Connects LLMs to external knowledge bases via vector search, enabling accurate, contextually relevant AI responses grounded in retrieved documents.
 
-**Recommendation Systems:**Surfaces content, products, ads based on user preference embeddings and item features. Used in e-commerce, streaming, news feeds.
+<strong>Recommendation Systems:</strong>Surfaces content, products, ads based on user preference embeddings and item features. Used in e-commerce, streaming, news feeds.
 
-**Computer Vision:**Image similarity search, object detection, classification using visual embeddings. Enables reverse image search, medical image retrieval, retail visual search.
+<strong>Computer Vision:</strong>Image similarity search, object detection, classification using visual embeddings. Enables reverse image search, medical image retrieval, retail visual search.
 
-**Natural Language Processing:**Semantic search, document clustering, chatbot retrieval using text embeddings. Used for legal document search, contextual chatbots, FAQ systems.
+<strong>Natural Language Processing:</strong>Semantic search, document clustering, chatbot retrieval using text embeddings. Used for legal document search, contextual chatbots, FAQ systems.
 
-**Fraud & Anomaly Detection:**Vectorizes transaction patterns or network events for real-time anomaly detection in financial fraud and cybersecurity.
+<strong>Fraud & Anomaly Detection:</strong>Vectorizes transaction patterns or network events for real-time anomaly detection in financial fraud and cybersecurity.
 
-**Scientific Research:**Molecular similarity search, genomic analysis, materials science applications.
+<strong>Scientific Research:</strong>Molecular similarity search, genomic analysis, materials science applications.
 
 ## Industry Adoption
 
@@ -204,15 +204,15 @@ Organizations using Milvus include: NVIDIA, Salesforce, eBay, Walmart, IBM, Shop
 
 | Feature | Milvus | Pinecone | Weaviate | Qdrant | Chroma |
 |---------|--------|----------|----------|--------|--------|
-| **Open Source**| Yes (Apache) | No (SaaS) | Yes | Yes | Yes |
-| **Deployment**| Self, Cloud, K8s | SaaS | Self, Cloud | Self, Cloud | Self, Cloud |
-| **Scalability**| Excellent | Managed | Good | Good | Limited |
-| **Index Types**| HNSW, IVF, DiskANN, Cagra | Proprietary | HNSW | HNSW, IVF | HNSW, Annoy |
-| **Vector Types**| Dense, sparse, binary | Dense | Dense | Dense | Dense |
-| **Metadata Filtering**| Advanced | Basic | GraphQL | Advanced | Basic |
-| **GPU Acceleration**| Yes (CUDA, SIMD, AVX) | Some | No | No | No |
+| <strong>Open Source</strong>| Yes (Apache) | No (SaaS) | Yes | Yes | Yes |
+| <strong>Deployment</strong>| Self, Cloud, K8s | SaaS | Self, Cloud | Self, Cloud | Self, Cloud |
+| <strong>Scalability</strong>| Excellent | Managed | Good | Good | Limited |
+| <strong>Index Types</strong>| HNSW, IVF, DiskANN, Cagra | Proprietary | HNSW | HNSW, IVF | HNSW, Annoy |
+| <strong>Vector Types</strong>| Dense, sparse, binary | Dense | Dense | Dense | Dense |
+| <strong>Metadata Filtering</strong>| Advanced | Basic | GraphQL | Advanced | Basic |
+| <strong>GPU Acceleration</strong>| Yes (CUDA, SIMD, AVX) | Some | No | No | No |
 
-**Milvus Advantages:**Rich index diversity, proven billion-scale performance, open community, broad SDK support, hybrid and multi-modal search, enterprise-grade security.
+<strong>Milvus Advantages:</strong>Rich index diversity, proven billion-scale performance, open community, broad SDK support, hybrid and multi-modal search, enterprise-grade security.
 
 ## References
 

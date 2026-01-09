@@ -11,9 +11,9 @@ draft: false
 ---
 ## 1. What is an Image Generation Node?
 
-An **Image Generation Node**is a modular, reusable component within a visual programming, automation, or workflow environment that connects to an AI model for synthesizing images from text prompts or other data. These nodes abstract the complexities of running and parameterizing advanced generative models, allowing users—including those with no machine learning expertise—to create, edit, and deploy custom image generation workflows.
+An <strong>Image Generation Node</strong>is a modular, reusable component within a visual programming, automation, or workflow environment that connects to an AI model for synthesizing images from text prompts or other data. These nodes abstract the complexities of running and parameterizing advanced generative models, allowing users—including those with no machine learning expertise—to create, edit, and deploy custom image generation workflows.
 
-**Key attributes:**- Accepts natural language (text prompt) or structured data as input.
+<strong>Key attributes:</strong>- Accepts natural language (text prompt) or structured data as input.
 - Connects directly to AI image generation models such as [DALL-E](https://platform.openai.com/docs/guides/image-generation), [Stable Diffusion](https://github.com/AUTOMATIC1111/stable-diffusion-webui), or [MidJourney](https://docs.midjourney.com/hc/en-us/articles/33329261836941-Getting-Started-Guide).
 - Provides a user interface for setting parameters like resolution, guidance scale, steps, style, etc.
 - Can be chained with other nodes for tasks like upscaling, inpainting, style transfer, or automated delivery.
@@ -22,40 +22,40 @@ An **Image Generation Node**is a modular, reusable component within a visual pro
 
 ### Node
 
-A **node**is a basic functional element in a visual workflow, representing an operation or transformation. In image generation, nodes may handle data input, model inference, post-processing, or output. Nodes are connected in a directed graph, defining the flow of data and operations.
+A <strong>node</strong>is a basic functional element in a visual workflow, representing an operation or transformation. In image generation, nodes may handle data input, model inference, post-processing, or output. Nodes are connected in a directed graph, defining the flow of data and operations.
 
-- **Example:**In [ComfyUI](https://github.com/comfyanonymous/ComfyUI), each node (e.g., "KSampler", "VAE Decode") has specific inputs and outputs, and can be linked to form complex image workflows.  
+- <strong>Example:</strong>In [ComfyUI](https://github.com/comfyanonymous/ComfyUI), each node (e.g., "KSampler", "VAE Decode") has specific inputs and outputs, and can be linked to form complex image workflows.  
   [ComfyUI Node Overview](https://docs.comfy.org/built-in-nodes/overview)
 
 ### Text Prompt
 
-A **text prompt**is a natural language description provided by the user to guide the image generation model. The prompt directly influences the subject, style, and composition of the generated image. Prompt engineering is a discipline focused on optimizing these inputs for maximal relevance or creativity.
+A <strong>text prompt</strong>is a natural language description provided by the user to guide the image generation model. The prompt directly influences the subject, style, and composition of the generated image. Prompt engineering is a discipline focused on optimizing these inputs for maximal relevance or creativity.
 
-- **Example:**“A serene landscape with misty mountains and a tranquil lake at sunrise, digital art, high detail.”
+- <strong>Example:</strong>“A serene landscape with misty mountains and a tranquil lake at sunrise, digital art, high detail.”
 
 ### Model (DALL-E, Stable Diffusion, etc.)
 
-An **AI image generation model**is a trained neural network that synthesizes images, often conditioned on text prompts. Leading models include:
+An <strong>AI image generation model</strong>is a trained neural network that synthesizes images, often conditioned on text prompts. Leading models include:
 
-- [**DALL-E**](https://platform.openai.com/docs/guides/image-generation): Developed by OpenAI, supports complex and creative prompt interpretation.  
-- [**Stable Diffusion**](https://github.com/AUTOMATIC1111/stable-diffusion-webui): Open-source, highly customizable, supports models, extensions, and community-trained checkpoints.
-- [**MidJourney**](https://docs.midjourney.com/hc/en-us/articles/33329261836941-Getting-Started-Guide): Proprietary, cloud-based, known for artistic style and rapid iteration.
+- [<strong>DALL-E</strong>](https://platform.openai.com/docs/guides/image-generation): Developed by OpenAI, supports complex and creative prompt interpretation.  
+- [<strong>Stable Diffusion</strong>](https://github.com/AUTOMATIC1111/stable-diffusion-webui): Open-source, highly customizable, supports models, extensions, and community-trained checkpoints.
+- [<strong>MidJourney</strong>](https://docs.midjourney.com/hc/en-us/articles/33329261836941-Getting-Started-Guide): Proprietary, cloud-based, known for artistic style and rapid iteration.
 
 ### Parameter
 
-A **parameter**is any configurable option that affects how the image is generated. Key parameters include:
+A <strong>parameter</strong>is any configurable option that affects how the image is generated. Key parameters include:
 
-- **Steps**: Number of denoising or sampling steps.
-- **Guidance Scale (CFG Scale)**: Strength of prompt adherence.
-- **Resolution**: Output image size (e.g., 512x512, 768x512).
-- **Seed**: Controls randomization for reproducible outputs.
-- **Batch Size**: Number of images generated per prompt.
+- <strong>Steps</strong>: Number of denoising or sampling steps.
+- <strong>Guidance Scale (CFG Scale)</strong>: Strength of prompt adherence.
+- <strong>Resolution</strong>: Output image size (e.g., 512x512, 768x512).
+- <strong>Seed</strong>: Controls randomization for reproducible outputs.
+- <strong>Batch Size</strong>: Number of images generated per prompt.
 
 ### Workflow
 
-A **workflow**is a sequence of nodes representing a complete pipeline, from prompt input to image output. Workflows enable [batch processing](/en/glossary/batch-processing/), automation, and reproducibility.
+A <strong>workflow</strong>is a sequence of nodes representing a complete pipeline, from prompt input to image output. Workflows enable batch processing, automation, and reproducibility.
 
-- **Example:**1. Input Node (text prompt)  
+- <strong>Example:</strong>1. Input Node (text prompt)  
   2. Image Generation Node (Stable Diffusion, set parameters)  
   3. Post-Processing Node (upscale or filter)  
   4. Output Node (send to chatbot, save to disk)
@@ -66,22 +66,22 @@ A **workflow**is a sequence of nodes representing a complete pipeline, from prom
 
 ### Generative Adversarial Networks (GANs)
 
-**GANs**consist of two neural networks—the generator and discriminator—trained adversarially. The generator synthesizes images, while the discriminator tries to distinguish real from fake. GANs have been foundational in generative art but are less common for text-to-image workflows compared to diffusion models.
+<strong>GANs</strong>consist of two neural networks—the generator and discriminator—trained adversarially. The generator synthesizes images, while the discriminator tries to distinguish real from fake. GANs have been foundational in generative art but are less common for text-to-image workflows compared to diffusion models.
 
-- **Strengths:**High realism, fast inference.
-- **Weaknesses:**Training instability, mode collapse (limited diversity), high resource needs.
+- <strong>Strengths:</strong>High realism, fast inference.
+- <strong>Weaknesses:</strong>Training instability, mode collapse (limited diversity), high resource needs.
 ### Variational Autoencoders (VAEs)
 
-**VAEs**encode images into a structured latent space and decode them back. They are used for learning smooth, continuous representations, and are a core component in many diffusion and generative pipelines.
+<strong>VAEs</strong>encode images into a structured latent space and decode them back. They are used for learning smooth, continuous representations, and are a core component in many diffusion and generative pipelines.
 
-- **Strengths:**Stable training, interpretable latent space.
-- **Weaknesses:**Output images can be blurry, less detailed.
+- <strong>Strengths:</strong>Stable training, interpretable latent space.
+- <strong>Weaknesses:</strong>Output images can be blurry, less detailed.
 ### Diffusion Models
 
-**Diffusion models**(e.g., Stable Diffusion, DALL-E 2/3) operate by gradually adding noise to an image and then learning to reverse this process, generating new images from noise conditioned on text.
+<strong>Diffusion models</strong>(e.g., Stable Diffusion, DALL-E 2/3) operate by gradually adding noise to an image and then learning to reverse this process, generating new images from noise conditioned on text.
 
-- **Strengths:**High fidelity, diverse outputs, robust prompt conditioning.
-- **Weaknesses:**Computationally demanding, slower than GANs for sampling.
+- <strong>Strengths:</strong>High fidelity, diverse outputs, robust prompt conditioning.
+- <strong>Weaknesses:</strong>Computationally demanding, slower than GANs for sampling.
 #### Comparative Analysis Table
 
 | Model Type | Training Mechanism | Strengths | Weaknesses | Example Models | Best Use Cases |
@@ -99,12 +99,12 @@ Image Generation Nodes can be embedded into chatbots (e.g., to create visual res
 
 A typical image generation workflow:
 
-1. **Input Node:**Receives a text prompt from user or system.
-2. **Image Generation Node:**Selects model (Stable Diffusion, DALL-E, etc.), sets parameters, and generates images.
-3. **Post-Processing Node:**Applies upscaling, filtering, or additional effects.
-4. **Output Node:**Sends image to user, saves to disk, or returns to a chatbot.
+1. <strong>Input Node:</strong>Receives a text prompt from user or system.
+2. <strong>Image Generation Node:</strong>Selects model (Stable Diffusion, DALL-E, etc.), sets parameters, and generates images.
+3. <strong>Post-Processing Node:</strong>Applies upscaling, filtering, or additional effects.
+4. <strong>Output Node:</strong>Sends image to user, saves to disk, or returns to a chatbot.
 
-**Sample YAML (pseudocode):**```yaml
+<strong>Sample YAML (pseudocode):</strong>```yaml
 - node: "Input"
   type: "text"
   output: "prompt"
@@ -187,10 +187,10 @@ image.save("astronaut_blossom.png")
 ```
 ### Troubleshooting
 
-- **Artifacts or Unwanted Objects:**Use negative prompts or tweak the seed.
-- **Incoherent Results:**Simplify the prompt, reduce CFG scale, or increase steps.
-- **Resource Errors:**Lower resolution or batch size.
-- **Style Not Matching:**Add explicit style keywords, adjust prompt phrasing.
+- <strong>Artifacts or Unwanted Objects:</strong>Use negative prompts or tweak the seed.
+- <strong>Incoherent Results:</strong>Simplify the prompt, reduce CFG scale, or increase steps.
+- <strong>Resource Errors:</strong>Lower resolution or batch size.
+- <strong>Style Not Matching:</strong>Add explicit style keywords, adjust prompt phrasing.
 
 ## 7. Relevant Tools and Resources
 
@@ -205,15 +205,15 @@ image.save("astronaut_blossom.png")
 
 ## 8. Frequently Asked Questions (FAQ)
 
-**Q: Which platforms support Image Generation Nodes?**A: ComfyUI, Node-RED, n8n, and custom chatbot/automation frameworks. Many support plug-ins or direct integration with DALL-E, Stable Diffusion, and similar models.
+<strong>Q: Which platforms support Image Generation Nodes?</strong>A: ComfyUI, Node-RED, n8n, and custom chatbot/automation frameworks. Many support plug-ins or direct integration with DALL-E, Stable Diffusion, and similar models.
 
-**Q: Can I use these nodes without coding?**A: Yes. Platforms like ComfyUI and n8n offer drag-and-drop interfaces. No-code solutions are increasingly common.
+<strong>Q: Can I use these nodes without coding?</strong>A: Yes. Platforms like ComfyUI and n8n offer drag-and-drop interfaces. No-code solutions are increasingly common.
 
-**Q: How do I choose between DALL-E, Stable Diffusion, or MidJourney?**A: DALL-E gives creative, high-fidelity images but has usage/cost limits; Stable Diffusion is open-source and highly customizable; MidJourney excels at stylized, artistic outputs.
+<strong>Q: How do I choose between DALL-E, Stable Diffusion, or MidJourney?</strong>A: DALL-E gives creative, high-fidelity images but has usage/cost limits; Stable Diffusion is open-source and highly customizable; MidJourney excels at stylized, artistic outputs.
 
-**Q: Can I batch-generate images?**A: Yes. Most node-based systems support batch, loop, or bulk image generation.
+<strong>Q: Can I batch-generate images?</strong>A: Yes. Most node-based systems support batch, loop, or bulk image generation.
 
-**Q: Common issues and fixes?**A:  
+<strong>Q: Common issues and fixes?</strong>A:  
 - Blurry images: Increase steps or resolution, use a better model.
 - Unwanted objects: Add negative prompts.
 - OOM (out-of-memory): Lower resolution or batch size.

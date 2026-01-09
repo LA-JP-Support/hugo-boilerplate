@@ -21,15 +21,15 @@ An HTTP Request Node is a central component in automation and integration platfo
 
 ## Core Capabilities
 
-**Supported HTTP Methods:**- **GET**– Retrieve data from specified resource
-- **POST**– Send data to create or update resource
-- **PUT**– Replace or update resource
-- **PATCH**– Partially update resource
-- **DELETE**– Remove resource
-- **HEAD**– Retrieve headers without response body
-- **OPTIONS**– Query supported communication options
+<strong>Supported HTTP Methods:</strong>- <strong>GET</strong>– Retrieve data from specified resource
+- <strong>POST</strong>– Send data to create or update resource
+- <strong>PUT</strong>– Replace or update resource
+- <strong>PATCH</strong>– Partially update resource
+- <strong>DELETE</strong>– Remove resource
+- <strong>HEAD</strong>– Retrieve headers without response body
+- <strong>OPTIONS</strong>– Query supported communication options
 
-**Authentication Options:**- No Authentication (open endpoints)
+<strong>Authentication Options:</strong>- No Authentication (open endpoints)
 - Basic Authentication (username/password, Base64-encoded)
 - Digest Authentication (hashed credentials)
 - Bearer Token (JWT in Authorization header)
@@ -38,14 +38,14 @@ An HTTP Request Node is a central component in automation and integration platfo
 - Custom Auth (user-defined logic)
 - Query Auth (credentials via query parameters)
 
-**Supported Data Formats:**- application/json (JSON payloads)
+<strong>Supported Data Formats:</strong>- application/json (JSON payloads)
 - application/x-www-form-urlencoded (key/value pairs)
 - multipart/form-data (file uploads, complex data)
 - Raw (arbitrary content with specified content type)
 - Plain Text (unstructured text)
 - Binary (file and binary data transfer)
 
-**Additional Features:**- Custom headers (Content-Type, Authorization)
+<strong>Additional Features:</strong>- Custom headers (Content-Type, Authorization)
 - Query parameters (dynamic filtering)
 - Proxy support (HTTP proxies)
 - Timeouts (request and connection control)
@@ -59,15 +59,15 @@ An HTTP Request Node is a central component in automation and integration platfo
 
 ### n8n HTTP Request Node
 
-**Basic Parameters:**- **Method**– Select HTTP method (DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT)
-- **URL**– API endpoint (static or dynamic using expressions)
-- **Authentication**– Choose predefined credentials or configure manually
-- **Send Query Parameters**– Define as key/value pairs or JSON
-- **Send Headers**– Specify custom headers
-- **Send Body**– Enable for POST, PUT, PATCH requests
-- **Output Variables**– Map status code, body, headers to workflow variables
+<strong>Basic Parameters:</strong>- <strong>Method</strong>– Select HTTP method (DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT)
+- <strong>URL</strong>– API endpoint (static or dynamic using expressions)
+- <strong>Authentication</strong>– Choose predefined credentials or configure manually
+- <strong>Send Query Parameters</strong>– Define as key/value pairs or JSON
+- <strong>Send Headers</strong>– Specify custom headers
+- <strong>Send Body</strong>– Enable for POST, PUT, PATCH requests
+- <strong>Output Variables</strong>– Map status code, body, headers to workflow variables
 
-**Advanced Options:**- Array format in query parameters
+<strong>Advanced Options:</strong>- Array format in query parameters
 - Batching (items per batch, delay between batches)
 - Ignore SSL issues (trusted endpoints only)
 - Lowercase headers toggle
@@ -77,7 +77,7 @@ An HTTP Request Node is a central component in automation and integration platfo
 - Proxy specification
 - Timeout (request timeout in ms)
 
-**Example POST Request:**```json
+<strong>Example POST Request:</strong>```json
 {
   "method": "POST",
   "url": "https://api.example.com/resource",
@@ -112,13 +112,13 @@ An HTTP Request Node is a central component in automation and integration platfo
 }
 ```
 
-**Important:**Reset `msg.headers` to `{}` between HTTP nodes to avoid header leakage.
+<strong>Important:</strong>Reset `msg.headers` to `{}` between HTTP nodes to avoid header leakage.
 
 ### Node.js HTTP Requests
 
-**Native HTTP/HTTPS Modules:**Low-level modules for full control over requests with built-in streaming support.
+<strong>Native HTTP/HTTPS Modules:</strong>Low-level modules for full control over requests with built-in streaming support.
 
-**Fetch API (Node.js 18+):**Built-in since Node.js 18, returns Promises, supports async/await syntax.
+<strong>Fetch API (Node.js 18+):</strong>Built-in since Node.js 18, returns Promises, supports async/await syntax.
 
 ```js
 const response = await fetch('https://api.example.com/data');
@@ -126,7 +126,7 @@ const data = await response.json();
 console.log(data);
 ```
 
-**axios:**Promise-based HTTP client with interceptors, timeout, automatic JSON handling, request/response transformation.
+<strong>axios:</strong>Promise-based HTTP client with interceptors, timeout, automatic JSON handling, request/response transformation.
 
 ```js
 const axios = require('axios');
@@ -144,26 +144,26 @@ axios.post('https://api.example.com/resource', {
 
 ## Best Practices
 
-**Security:**- Use built-in credential managers, never hard-code secrets
+<strong>Security:</strong>- Use built-in credential managers, never hard-code secrets
 - Always use HTTPS with SSL certificate validation
 - Sanitize all dynamic input (headers, params, body)
 - Rotate, expire, and securely store tokens
 
-**Error Handling:**- Always check and handle HTTP status codes
+<strong>Error Handling:</strong>- Always check and handle HTTP status codes
 - Set appropriate timeouts to avoid hanging requests
 - Implement retries for transient failures (network, 5xx errors)
 
-**Content Types and Encoding:**- Match Content-Type header to body format
+<strong>Content Types and Encoding:</strong>- Match Content-Type header to body format
 - URL-encode query parameters for special characters
 - Check API docs for required array encoding
 
-**Pagination:**- Recognize API patterns (page/limit, offset, next URL)
+<strong>Pagination:</strong>- Recognize API patterns (page/limit, offset, next URL)
 - Use platform pagination features where possible
 
-**Headers and Response Handling:**- In Node-RED, reset `msg.headers` between HTTP nodes
+<strong>Headers and Response Handling:</strong>- In Node-RED, reset `msg.headers` between HTTP nodes
 - Check response headers for rate limits, authentication challenges, pagination
 
-**Debugging:**- Validate configs with built-in test features or tools like Postman
+<strong>Debugging:</strong>- Validate configs with built-in test features or tools like Postman
 - Log full responses for troubleshooting
 
 ## Common Pitfalls
@@ -176,30 +176,30 @@ axios.post('https://api.example.com/resource', {
 
 ## Use Cases
 
-**API Integration:**Fetch user info from REST API. Configure GET method, set URL, add Authorization header, map response.
+<strong>API Integration:</strong>Fetch user info from REST API. Configure GET method, set URL, add Authorization header, map response.
 
-**Sending Data:**Submit form. POST method, Content-Type `application/x-www-form-urlencoded`, enter fields.
+<strong>Sending Data:</strong>Submit form. POST method, Content-Type `application/x-www-form-urlencoded`, enter fields.
 
-**File Upload:**Upload file using `multipart/form-data`. POST/PUT, attach file.
+<strong>File Upload:</strong>Upload file using `multipart/form-data`. POST/PUT, attach file.
 
-**Webhook Trigger:**Notify external system upon event. POST method, set URL, send JSON body.
+<strong>Webhook Trigger:</strong>Notify external system upon event. POST method, set URL, send JSON body.
 
-**Automation with AI Agents (n8n):**Use HTTP Request Node in LLM workflow. Attach node, configure optimized response extraction.
+<strong>Automation with AI Agents (n8n):</strong>Use HTTP Request Node in LLM workflow. Attach node, configure optimized response extraction.
 
 ## Platform-Specific Notes
 
-**n8n:**- Predefined OAuth2, API Key, generic auth options
+<strong>n8n:</strong>- Predefined OAuth2, API Key, generic auth options
 - Drag-and-drop UI, cURL import
 - Body/Headers/Query as fields or direct JSON input
 - Pagination supports parameter increment and next-URL
 - AI Agent Integration optimizes responses for LLMs
 
-**Node-RED:**- Dynamic config via `msg.method`, `msg.url`, `msg.headers`
+<strong>Node-RED:</strong>- Dynamic config via `msg.method`, `msg.url`, `msg.headers`
 - Mustache syntax for dynamic URLs/headers
 - Auto Content-Type for object payloads
 - Response handling: string, JSON, binary buffer
 
-**Node.js:**- HTTP/HTTPS: Low-level, full control
+<strong>Node.js:</strong>- HTTP/HTTPS: Low-level, full control
 - axios/node-fetch/Fetch API: High-level, Promise-based
 - Native streaming support
 - Proxy via environment or library options

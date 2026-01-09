@@ -24,19 +24,19 @@ Modern URL structures have evolved significantly since the early days of the int
 
 ## Core URL Components
 
-**Protocol Identifier**- The protocol component specifies the communication method used to access the resource, typically HTTP or HTTPS. This element determines the security level and transmission method for data exchange between the client and server.
+<strong>Protocol Identifier</strong>- The protocol component specifies the communication method used to access the resource, typically HTTP or HTTPS. This element determines the security level and transmission method for data exchange between the client and server.
 
-**Domain Name**- The domain name serves as the human-readable address that identifies the specific server or website hosting the resource. It includes the top-level domain (TLD) and any subdomains that help organize content hierarchically.
+<strong>Domain Name</strong>- The domain name serves as the human-readable address that identifies the specific server or website hosting the resource. It includes the top-level domain (TLD) and any subdomains that help organize content hierarchically.
 
-**Port Number**- An optional component that specifies the network port for server communication when different from the default ports (80 for HTTP, 443 for HTTPS). Custom ports are often used for development environments or specialized applications.
+<strong>Port Number</strong>- An optional component that specifies the network port for server communication when different from the default ports (80 for HTTP, 443 for HTTPS). Custom ports are often used for development environments or specialized applications.
 
-**Path Structure**- The path component defines the hierarchical location of the resource within the server's file system or application routing structure. It typically follows a logical organization that reflects the site's content architecture.
+<strong>Path Structure</strong>- The path component defines the hierarchical location of the resource within the server's file system or application routing structure. It typically follows a logical organization that reflects the site's content architecture.
 
-**Query Parameters**- Dynamic elements that pass additional information to the server, enabling customized content delivery, filtering, sorting, and tracking. These parameters follow the question mark symbol and use key-value pairs.
+<strong>Query Parameters</strong>- Dynamic elements that pass additional information to the server, enabling customized content delivery, filtering, sorting, and tracking. These parameters follow the question mark symbol and use key-value pairs.
 
-**Fragment Identifier**- The fragment component, preceded by a hash symbol, identifies specific sections within a page or document. It enables direct linking to particular content areas without requiring separate pages.
+<strong>Fragment Identifier</strong>- The fragment component, preceded by a hash symbol, identifies specific sections within a page or document. It enables direct linking to particular content areas without requiring separate pages.
 
-**Authentication Information**- Optional credentials that can be embedded within URLs for accessing protected resources, though this practice is generally discouraged for security reasons.
+<strong>Authentication Information</strong>- Optional credentials that can be embedded within URLs for accessing protected resources, though this practice is generally discouraged for security reasons.
 
 ## How URL Structure Works
 
@@ -54,7 +54,7 @@ The server generates an appropriate response, which may include HTML content, fi
 
 Throughout this process, various caching mechanisms at different levels may store and retrieve URL-based content to improve performance and reduce server load. These caching systems rely on URL structure consistency to function effectively.
 
-**Example Workflow:**```
+<strong>Example Workflow:</strong>```
 https://example.com/products/electronics/smartphones?brand=apple&sort=price#reviews
 1. Parse: protocol=https, domain=example.com, path=/products/electronics/smartphones
 2. DNS lookup: example.com → 192.168.1.100

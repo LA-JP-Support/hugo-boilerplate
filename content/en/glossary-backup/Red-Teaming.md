@@ -13,20 +13,20 @@ draft: false
 
 - Red teaming is a proactive, adversarial security process where expert teams simulate real-world attacks on AI systems to detect vulnerabilities, biases, and misuse scenarios before adversaries can exploit them. ([Mindgard](https://mindgard.ai/blog/what-is-ai-red-teaming))
 - It extends beyond traditional penetration testing by targeting all components of the AI lifecycle, including models, data pipelines, APIs, and user interfaces, with a focus on both security and ethical risks. ([Prompt Security](https://www.prompt.security/blog/what-is-ai-red-teaming-the-ultimate-guide))
-- Red teaming is critical for regulatory compliance (e.g., EU AI Act, NIST AI RMF), strengthening public trust, and improving the security posture and [adversarial robustness](/en/glossary/adversarial-robustness/) of AI. ([NIST AI RMF](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework))
+- Red teaming is critical for regulatory compliance (e.g., EU AI Act, NIST AI RMF), strengthening public trust, and improving the security posture and adversarial robustness of AI. ([NIST AI RMF](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework))
 - Methodologies include manual, automated, and hybrid approaches, leveraging specialized tools and multidisciplinary expertise.
 - Industry leaders such as OpenAI, Microsoft, Anthropic, and Meta use red teaming as a core element of AI model development and deployment. ([OpenAI Red Teaming PDF](https://cdn.openai.com/papers/openais-approach-to-external-red-teaming.pdf))
 - Common use cases: bias detection, privacy testing, adversarial robustness, fraud detection, social engineering simulation, and attack surface management.
 
 ## What is Red Teaming?
 
-Red teaming is a proactive, adversarial methodology rooted in military strategy and now essential in cybersecurity and AI risk management. In AI, red teaming involves dedicated experts (red teams) who simulate real-world adversarial attacks, input manipulations, and misuse scenarios to uncover vulnerabilities, biases, and flaws in AI systems. The goal is to strengthen the **security posture**, fairness, and reliability of AI systems both pre- and post-deployment.
+Red teaming is a proactive, adversarial methodology rooted in military strategy and now essential in cybersecurity and AI risk management. In AI, red teaming involves dedicated experts (red teams) who simulate real-world adversarial attacks, input manipulations, and misuse scenarios to uncover vulnerabilities, biases, and flaws in AI systems. The goal is to strengthen the <strong>security posture</strong>, fairness, and reliability of AI systems both pre- and post-deployment.
 
 Unlike standard testing, red teaming is adversarial by design—deliberately probing system limits and seeking to exploit weaknesses that typical software assessments may miss. ([Mindgard Complete Guide](https://mindgard.ai/blog/what-is-ai-red-teaming))
 
-**Key characteristics:**- **Adversarial**: Imitates the tactics, techniques, and procedures (TTPs) of real attackers, including prompt injection, [data poisoning](/en/glossary/data-poisoning/), and social engineering.
-- **Comprehensive**: Assesses the full AI ecosystem—models, data sources, APIs, integrations, user interfaces, and even the human factors in deployment and usage.
-- **Iterative**: Red teaming is continuous, evolving to address new model versions, threat intelligence, and emerging attack vectors.
+<strong>Key characteristics:</strong>- <strong>Adversarial</strong>: Imitates the tactics, techniques, and procedures (TTPs) of real attackers, including prompt injection, data poisoning, and social engineering.
+- <strong>Comprehensive</strong>: Assesses the full AI ecosystem—models, data sources, APIs, integrations, user interfaces, and even the human factors in deployment and usage.
+- <strong>Iterative</strong>: Red teaming is continuous, evolving to address new model versions, threat intelligence, and emerging attack vectors.
 
 Further reading:  
 - [What is AI Red Teaming? The Ultimate Guide (Prompt Security)](https://www.prompt.security/blog/what-is-ai-red-teaming-the-ultimate-guide)
@@ -44,7 +44,7 @@ Key objectives include:
 - Ensuring compliance with regulatory requirements and ethical guidelines.
 - Building trust among stakeholders by demonstrating due diligence in AI risk management.
 
-**Typical activities:**- Crafting adversarial inputs (e.g., prompt injection, data poisoning, logic manipulation).
+<strong>Typical activities:</strong>- Crafting adversarial inputs (e.g., prompt injection, data poisoning, logic manipulation).
 - Simulating social engineering and misuse scenarios.
 - Probing for privacy violations, including model inversion and data leakage.
 - Stress-testing API integrations and third-party services.
@@ -55,15 +55,15 @@ For an in-depth methodology, see:
 
 ## Red Teaming vs. Related Practices
 
-| **Practice**| **Purpose**| **Scope**| **Approach**|
+| <strong>Practice</strong>| <strong>Purpose</strong>| <strong>Scope</strong>| <strong>Approach</strong>|
 |--------------------------|-----------------------------------------------------|-----------------------------|-------------------------------|
-| **Red Teaming**| Simulate real-world adversarial attacks and unknown risks | System-wide, creative       | Adversarial simulation         |
-| **Penetration Testing**| Exploit known vulnerabilities                       | Defined systems and apps    | Tool-based/manual testing      |
-| **Vulnerability Assessment**| Identify and report system flaws without exploitation  | Infrastructure, applications | Automated scanning/analysis    |
+| <strong>Red Teaming</strong>| Simulate real-world adversarial attacks and unknown risks | System-wide, creative       | Adversarial simulation         |
+| <strong>Penetration Testing</strong>| Exploit known vulnerabilities                       | Defined systems and apps    | Tool-based/manual testing      |
+| <strong>Vulnerability Assessment</strong>| Identify and report system flaws without exploitation  | Infrastructure, applications | Automated scanning/analysis    |
 
-**Distinctions:**- **Red teaming**is broader and more adversarial, focusing on unknown, complex risks including bias, emergent behaviors, and ethical challenges.
-- **Penetration testing**targets known weaknesses in infrastructure or applications.
-- **Vulnerability assessment**is systematic detection and reporting of flaws, often without active exploitation.
+<strong>Distinctions:</strong>- <strong>Red teaming</strong>is broader and more adversarial, focusing on unknown, complex risks including bias, emergent behaviors, and ethical challenges.
+- <strong>Penetration testing</strong>targets known weaknesses in infrastructure or applications.
+- <strong>Vulnerability assessment</strong>is systematic detection and reporting of flaws, often without active exploitation.
 
 Further resources:  
 - [Mindgard: Penetration Testing vs Red Teaming](https://mindgard.ai/blog/red-teaming)  
@@ -74,25 +74,25 @@ Further resources:
 
 Red teaming for AI typically involves:
 
-1. **Scoping and Goal Definition**- Define objectives (e.g., test for bias, adversarial robustness, privacy).
+1. <strong>Scoping and Goal Definition</strong>- Define objectives (e.g., test for bias, adversarial robustness, privacy).
    - Identify AI system components for testing (models, APIs, data pipelines).
 
-2. **Team Formation**- Assemble a multidisciplinary team: AI/ML experts, cybersecurity professionals, ethicists, and relevant domain specialists.
+2. <strong>Team Formation</strong>- Assemble a multidisciplinary team: AI/ML experts, cybersecurity professionals, ethicists, and relevant domain specialists.
 
-3. **Model & System Familiarization**- Study the AI system architecture, data sources, intended use, and deployment context.
+3. <strong>Model & System Familiarization</strong>- Study the AI system architecture, data sources, intended use, and deployment context.
 
-4. **Threat Modeling**- Identify potential attackers, their motivations, and likely attack paths. ([Prompt Security](https://www.prompt.security/blog/what-is-ai-red-teaming-the-ultimate-guide))
+4. <strong>Threat Modeling</strong>- Identify potential attackers, their motivations, and likely attack paths. ([Prompt Security](https://www.prompt.security/blog/what-is-ai-red-teaming-the-ultimate-guide))
 
-5. **Scenario Building**- Develop plausible abuse cases: e.g., attempts to extract sensitive data, bypass filters, or induce unsafe outputs.
+5. <strong>Scenario Building</strong>- Develop plausible abuse cases: e.g., attempts to extract sensitive data, bypass filters, or induce unsafe outputs.
 
-6. **Adversarial Testing**- Execute attacks such as prompt injection, data poisoning, model evasion, and social engineering.
+6. <strong>Adversarial Testing</strong>- Execute attacks such as prompt injection, data poisoning, model evasion, and social engineering.
    - Use both manual and automated testing tools.
 
-7. **Logging and Analysis**- Record attack vectors and outputs, analyze results, and assess severity and impact.
+7. <strong>Logging and Analysis</strong>- Record attack vectors and outputs, analyze results, and assess severity and impact.
 
-8. **Reporting and Recommendations**- Provide actionable feedback for model retraining, policy updates, or redesign.
+8. <strong>Reporting and Recommendations</strong>- Provide actionable feedback for model retraining, policy updates, or redesign.
 
-9. **Re-testing and Continuous Improvement**- Repeat exercises as models and threats evolve.
+9. <strong>Re-testing and Continuous Improvement</strong>- Repeat exercises as models and threats evolve.
 
 For practical workflow diagrams and templates:  
 - [GitHub: AI-Red-Teaming-Guide](https://github.com/requie/AI-Red-Teaming-Guide)
@@ -102,21 +102,21 @@ For practical workflow diagrams and templates:
 ### Manual Testing
 
 - Human experts design creative attack scenarios, craft adversarial prompts, and analyze outputs.
-- **Advantages:**Highly creative, effective for nuanced and context-specific vulnerabilities.
-- **Disadvantages:**Resource-intensive, less scalable for large-scale systems.
+- <strong>Advantages:</strong>Highly creative, effective for nuanced and context-specific vulnerabilities.
+- <strong>Disadvantages:</strong>Resource-intensive, less scalable for large-scale systems.
 
 ### Automated Testing
 
 - Automated tools generate and execute large volumes of adversarial cases, including fuzzing, prompt chaining, and logic manipulation.
-- **Advantages:**Scalable and efficient, ideal for testing large models or datasets.
-- **Disadvantages:**May overlook subtle or context-dependent vulnerabilities.
+- <strong>Advantages:</strong>Scalable and efficient, ideal for testing large models or datasets.
+- <strong>Disadvantages:</strong>May overlook subtle or context-dependent vulnerabilities.
 
 ### Hybrid (Human-in-the-Loop)
 
 - Combines manual creativity with automation; human experts guide tool development and interpret results for broad coverage and deep insight.
-- **Best for:**Complex systems requiring both scale and nuanced analysis.
+- <strong>Best for:</strong>Complex systems requiring both scale and nuanced analysis.
 
-| **Methodology**| **Description**| **Advantages**| **Disadvantages**|
+| <strong>Methodology</strong>| <strong>Description</strong>| <strong>Advantages</strong>| <strong>Disadvantages</strong>|
 |----------------------|----------------------------------------------------|-----------------------------|-----------------------------------------|
 | Manual               | Human experts craft attacks                        | Creative, nuanced           | Time-consuming, less scalable           |
 | Automated            | Tools generate attacks at scale                    | Scalable, efficient         | May overlook subtle vulnerabilities     |
@@ -129,23 +129,23 @@ For further reading and case examples:
 
 Red teaming is applicable throughout the AI development and deployment lifecycle, including:
 
-1. **Risk Identification**- Discovering new vulnerabilities in models, pipelines, and integrations.
+1. <strong>Risk Identification</strong>- Discovering new vulnerabilities in models, pipelines, and integrations.
 
-2. **Adversarial Robustness Testing**- Evaluating resistance to adversarial examples, evasion, and manipulation.
+2. <strong>Adversarial Robustness Testing</strong>- Evaluating resistance to adversarial examples, evasion, and manipulation.
 
-3. **Bias and Fairness Analysis**- Detecting and mitigating biases in data or model outputs, ensuring equitable outcomes.
+3. <strong>Bias and Fairness Analysis</strong>- Detecting and mitigating biases in data or model outputs, ensuring equitable outcomes.
 
-4. **Data Privacy and Model Inversion**- Preventing data leakage or extraction of sensitive training data by adversaries.
+4. <strong>Data Privacy and Model Inversion</strong>- Preventing data leakage or extraction of sensitive training data by adversaries.
 
-5. **Stress Testing and Performance Degradation**- Assessing model behavior under high load, ambiguous, or edge-case scenarios.
+5. <strong>Stress Testing and Performance Degradation</strong>- Assessing model behavior under high load, ambiguous, or edge-case scenarios.
 
-6. **Integration and Attack Surface Management**- Testing APIs, third-party service integrations, and overall system exposure.
+6. <strong>Integration and Attack Surface Management</strong>- Testing APIs, third-party service integrations, and overall system exposure.
 
-7. **Human-AI Interaction Risks**- Simulating prompt injection, social engineering, and other harmful user interactions.
+7. <strong>Human-AI Interaction Risks</strong>- Simulating prompt injection, social engineering, and other harmful user interactions.
 
-8. **Fraud Detection and Abuse Prevention**- Hardening fraud detection models against adversarial tactics.
+8. <strong>Fraud Detection and Abuse Prevention</strong>- Hardening fraud detection models against adversarial tactics.
 
-9. **Regulatory Compliance**- Demonstrating adherence to frameworks such as the EU AI Act and NIST AI RMF, and supporting audits.
+9. <strong>Regulatory Compliance</strong>- Demonstrating adherence to frameworks such as the EU AI Act and NIST AI RMF, and supporting audits.
 
 For additional use case breakdowns:  
 - [Mindgard: AI Red Teaming Applications](https://mindgard.ai/blog/what-is-ai-red-teaming)
@@ -153,20 +153,20 @@ For additional use case breakdowns:
 ## Red Teaming in Practice: Examples and Scenarios
 
 ### Example 1: Large Language Models (LLMs)
-- **Scenario:**Testing a generative AI chatbot for prompt injection and jailbreak attempts.
-- **Outcome:**Revealed ways to bypass moderation, resulting in improved safeguards. ([OpenAI Red Teaming PDF](https://cdn.openai.com/papers/openais-approach-to-external-red-teaming.pdf))
+- <strong>Scenario:</strong>Testing a generative AI chatbot for prompt injection and jailbreak attempts.
+- <strong>Outcome:</strong>Revealed ways to bypass moderation, resulting in improved safeguards. ([OpenAI Red Teaming PDF](https://cdn.openai.com/papers/openais-approach-to-external-red-teaming.pdf))
 
 ### Example 2: Financial Fraud Detection
-- **Scenario:**Simulating adversarial transactions to evade AI-powered anti-fraud systems.
-- **Outcome:**Exposed weaknesses in detection logic, leading to algorithmic updates.
+- <strong>Scenario:</strong>Simulating adversarial transactions to evade AI-powered anti-fraud systems.
+- <strong>Outcome:</strong>Exposed weaknesses in detection logic, leading to algorithmic updates.
 
 ### Example 3: Healthcare Diagnostics
-- **Scenario:**Probing diagnostic AIs with edge cases and adversarial inputs for bias or misdiagnosis.
-- **Outcome:**Identified disparities for underrepresented groups, prompting model retraining.
+- <strong>Scenario:</strong>Probing diagnostic AIs with edge cases and adversarial inputs for bias or misdiagnosis.
+- <strong>Outcome:</strong>Identified disparities for underrepresented groups, prompting model retraining.
 
 ### Example 4: API Integration Weaknesses
-- **Scenario:**Testing API integrations for unauthorized data access.
-- **Outcome:**Discovered data leakage vulnerabilities, resulting in enhanced API security.
+- <strong>Scenario:</strong>Testing API integrations for unauthorized data access.
+- <strong>Outcome:</strong>Discovered data leakage vulnerabilities, resulting in enhanced API security.
 
 For more field-tested scenarios:  
 - [Prompt Security: AI Red Teaming Scenarios](https://www.prompt.security/blog/what-is-ai-red-teaming-the-ultimate-guide)
@@ -175,7 +175,7 @@ For more field-tested scenarios:
 
 A growing ecosystem of open-source and commercial tools supports AI red teaming efforts:
 
-| **Tool**| **Overview**| **Use Case**|
+| <strong>Tool</strong>| <strong>Overview</strong>| <strong>Use Case</strong>|
 |------------------|---------------------------------------------------------------------|---------------------------------------|
 | [Mindgard](https://mindgard.ai/ai-security-platform)         | AI red teaming and offensive security platform                    | Security assessment across AI lifecycle|
 | [Garak](https://github.com/leondz/garak)            | Adversarial testing tool for LLMs                                 | Prompt injection, jailbreak testing   |
@@ -192,13 +192,13 @@ For a comprehensive list and tooltips:
 
 Red teaming in AI is guided by emerging standards and regulatory mandates. Key frameworks and practices include:
 
-- **NIST AI Risk Management Framework (AI RMF):**Principles and guidelines for assessing and managing AI risks. ([NIST AI RMF](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework))
-- **EU AI Act:**Legal requirements for risk management, testing, and documentation for high-risk AI systems. ([EU AI Act](https://artificialintelligenceact.eu/))
-- **MITRE ATLAS:**Knowledge base/framework for adversarial machine learning. ([MITRE ATLAS](https://atlas.mitre.org/))
-- **OWASP AI Security & Top 10:**Community-driven list of AI security risks. ([OWASP AI Security](https://owasp.org/www-project-top-10-for-large-language-model-applications/))
-- **Responsible AI guidelines:**Leading organizations (Microsoft, Google, Meta) emphasize [transparency](/en/glossary/transparency/), auditability, and continuous monitoring.
+- <strong>NIST AI Risk Management Framework (AI RMF):</strong>Principles and guidelines for assessing and managing AI risks. ([NIST AI RMF](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework))
+- <strong>EU AI Act:</strong>Legal requirements for risk management, testing, and documentation for high-risk AI systems. ([EU AI Act](https://artificialintelligenceact.eu/))
+- <strong>MITRE ATLAS:</strong>Knowledge base/framework for adversarial machine learning. ([MITRE ATLAS](https://atlas.mitre.org/))
+- <strong>OWASP AI Security & Top 10:</strong>Community-driven list of AI security risks. ([OWASP AI Security](https://owasp.org/www-project-top-10-for-large-language-model-applications/))
+- <strong>Responsible AI guidelines:</strong>Leading organizations (Microsoft, Google, Meta) emphasize transparency, auditability, and continuous monitoring.
 
-**Best Practices:**- Embed red teaming early and throughout the AI lifecycle.
+<strong>Best Practices:</strong>- Embed red teaming early and throughout the AI lifecycle.
 - Use multidisciplinary teams to address technical, ethical, and domain-specific risks.
 - Document all attacks, findings, and remediation steps for traceability and compliance.
 - Continuously update red teaming strategies to match evolving threats and model changes.
@@ -210,12 +210,12 @@ Further reading:
 
 ## Challenges in AI Red Teaming
 
-- **Lack of Standardization:**Methodologies and benchmarks are developing, complicating comparisons and repeatability across organizations.
-- **Model Complexity:**Large/multimodal models require deep ML/security expertise and creative attack strategies.
-- **Resource Intensity:**Manual red teaming is laborious, needing highly skilled, interdisciplinary teams.
-- **Evolving Threats:**Attack vectors (e.g., adversarial ML, prompt injection) change fast, requiring ongoing adaptation.
-- **Safety vs. Utility:**Overly restrictive mitigations may degrade usability or model effectiveness.
-- **Ethical/Legal Risks:**Simulating harmful scenarios raises ethical and regulatory questions.
+- <strong>Lack of Standardization:</strong>Methodologies and benchmarks are developing, complicating comparisons and repeatability across organizations.
+- <strong>Model Complexity:</strong>Large/multimodal models require deep ML/security expertise and creative attack strategies.
+- <strong>Resource Intensity:</strong>Manual red teaming is laborious, needing highly skilled, interdisciplinary teams.
+- <strong>Evolving Threats:</strong>Attack vectors (e.g., adversarial ML, prompt injection) change fast, requiring ongoing adaptation.
+- <strong>Safety vs. Utility:</strong>Overly restrictive mitigations may degrade usability or model effectiveness.
+- <strong>Ethical/Legal Risks:</strong>Simulating harmful scenarios raises ethical and regulatory questions.
 
 For challenges and mitigation strategies:  
 - [IBM: What is Red Teaming for Gen AI?](https://research.ibm.com/blog/what-is-red-teaming-gen-AI)
@@ -223,11 +223,11 @@ For challenges and mitigation strategies:
 
 ## Real-World Adoption and Case Studies
 
-- **OpenAI:**Used external red teaming for GPT-4, with teams attempting to induce harmful, biased, or policy-violating outputs. ([OpenAI Red Teaming PDF](https://cdn.openai.com/papers/openais-approach-to-external-red-teaming.pdf))
-- **Anthropic:**Embedded continuous red teaming in safety research for Claude, involving external experts. ([Anthropic Red Teaming](https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety))
-- **Microsoft:**Implements red teaming in its Responsible AI program to simulate abuse, security threats, and social harms.
-- **Meta:**Conducted red teaming for Llama and other models to surface bias and misinformation.
-- **Industry Examples:**Banks and financial institutions red team AI-driven fraud detection; healthcare firms probe diagnostic AI for fairness and privacy; tech companies stress-test LLMs for prompt injection and data leakage.
+- <strong>OpenAI:</strong>Used external red teaming for GPT-4, with teams attempting to induce harmful, biased, or policy-violating outputs. ([OpenAI Red Teaming PDF](https://cdn.openai.com/papers/openais-approach-to-external-red-teaming.pdf))
+- <strong>Anthropic:</strong>Embedded continuous red teaming in safety research for Claude, involving external experts. ([Anthropic Red Teaming](https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety))
+- <strong>Microsoft:</strong>Implements red teaming in its Responsible AI program to simulate abuse, security threats, and social harms.
+- <strong>Meta:</strong>Conducted red teaming for Llama and other models to surface bias and misinformation.
+- <strong>Industry Examples:</strong>Banks and financial institutions red team AI-driven fraud detection; healthcare firms probe diagnostic AI for fairness and privacy; tech companies stress-test LLMs for prompt injection and data leakage.
 
 More case studies:  
 - [HackTheBox: AI Red Teaming Explained](https://www.hackthebox.com/blog/ai-red-teaming-explained)
@@ -235,11 +235,11 @@ More case studies:
 
 ## Regulatory and Industry Trends
 
-- **Regulatory Pressure:**Legislation such as the EU AI Act and US Executive Orders mandate adversarial testing and risk management for high-risk AI.
-- **Automation/Tooling:**Growing use of automated and [human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/) red teaming frameworks for scalable, continuous assessment.
-- **Diversity/Inclusivity:**Emphasis on diverse red teams to uncover unknown risks and model behaviors across cultures and contexts.
-- **Continuous Red Teaming:**Shift from periodic to ongoing, integrated red teaming throughout the AI lifecycle.
-- **Collaboration:**Industry consortia (e.g., NIST AI Safety Institute) standardize practices, share threat intelligence, and create benchmark datasets.
+- <strong>Regulatory Pressure:</strong>Legislation such as the EU AI Act and US Executive Orders mandate adversarial testing and risk management for high-risk AI.
+- <strong>Automation/Tooling:</strong>Growing use of automated and human-in-the-loop red teaming frameworks for scalable, continuous assessment.
+- <strong>Diversity/Inclusivity:</strong>Emphasis on diverse red teams to uncover unknown risks and model behaviors across cultures and contexts.
+- <strong>Continuous Red Teaming:</strong>Shift from periodic to ongoing, integrated red teaming throughout the AI lifecycle.
+- <strong>Collaboration:</strong>Industry consortia (e.g., NIST AI Safety Institute) standardize practices, share threat intelligence, and create benchmark datasets.
 
 ## Further Reading & Resources
 

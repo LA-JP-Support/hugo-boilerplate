@@ -24,37 +24,37 @@ The significance of chain-of-thought prompting extends beyond mere problem-solvi
 
 ## Core Reasoning Methodologies
 
-**Few-Shot Chain-of-Thought**involves providing the language model with several examples that demonstrate the step-by-step reasoning process before presenting the actual problem to solve. This approach helps the model understand the expected format and depth of reasoning required for similar problems.
+<strong>Few-Shot Chain-of-Thought</strong>involves providing the language model with several examples that demonstrate the step-by-step reasoning process before presenting the actual problem to solve. This approach helps the model understand the expected format and depth of reasoning required for similar problems.
 
-**Zero-Shot Chain-of-Thought**utilizes simple trigger phrases like "Let's think step by step" to activate the model's reasoning capabilities without providing explicit examples. This method relies on the model's inherent ability to break down problems systematically when prompted appropriately.
+<strong>Zero-Shot Chain-of-Thought</strong>utilizes simple trigger phrases like "Let's think step by step" to activate the model's reasoning capabilities without providing explicit examples. This method relies on the model's inherent ability to break down problems systematically when prompted appropriately.
 
-**Self-Consistency Decoding**generates multiple reasoning paths for the same problem and selects the most frequently occurring answer among the different chains of thought. This technique improves accuracy by leveraging the wisdom of multiple reasoning attempts.
+<strong>Self-Consistency Decoding</strong>generates multiple reasoning paths for the same problem and selects the most frequently occurring answer among the different chains of thought. This technique improves accuracy by leveraging the wisdom of multiple reasoning attempts.
 
-**Tree-of-Thought Reasoning**extends chain-of-thought by exploring multiple reasoning branches simultaneously, allowing the model to consider alternative approaches and backtrack when necessary. This method mimics more sophisticated human problem-solving strategies.
+<strong>Tree-of-Thought Reasoning</strong>extends chain-of-thought by exploring multiple reasoning branches simultaneously, allowing the model to consider alternative approaches and backtrack when necessary. This method mimics more sophisticated human problem-solving strategies.
 
-**Least-to-Most Prompting**breaks complex problems into smaller, more manageable subproblems that are solved sequentially. Each subproblem's solution builds upon previous solutions, creating a hierarchical reasoning structure.
+<strong>Least-to-Most Prompting</strong>breaks complex problems into smaller, more manageable subproblems that are solved sequentially. Each subproblem's solution builds upon previous solutions, creating a hierarchical reasoning structure.
 
-**Program-Aided Language Models**combine natural language reasoning with code execution, allowing models to perform precise calculations and logical operations while maintaining interpretable reasoning chains.
+<strong>Program-Aided Language Models</strong>combine natural language reasoning with code execution, allowing models to perform precise calculations and logical operations while maintaining interpretable reasoning chains.
 
-**Analogical Reasoning**encourages models to draw parallels between the current problem and similar problems they have encountered, leveraging pattern recognition to guide the reasoning process.
+<strong>Analogical Reasoning</strong>encourages models to draw parallels between the current problem and similar problems they have encountered, leveraging pattern recognition to guide the reasoning process.
 
 ## How Chain-of-Thought Prompting Works
 
-The chain-of-thought prompting process begins with **problem identification and decomposition**, where the complex task is analyzed to determine the logical steps required for solution. The model identifies key components, relationships, and dependencies within the problem structure.
+The chain-of-thought prompting process begins with <strong>problem identification and decomposition</strong>, where the complex task is analyzed to determine the logical steps required for solution. The model identifies key components, relationships, and dependencies within the problem structure.
 
-**Example demonstration**follows, where one or more worked examples are provided showing the complete reasoning process from problem statement to final answer. These examples serve as templates for the model to follow when approaching similar problems.
+<strong>Example demonstration</strong>follows, where one or more worked examples are provided showing the complete reasoning process from problem statement to final answer. These examples serve as templates for the model to follow when approaching similar problems.
 
-**Pattern recognition and internalization**occurs as the language model processes the demonstrated examples and identifies the underlying reasoning patterns. The model learns to recognize when and how to apply similar step-by-step approaches.
+<strong>Pattern recognition and internalization</strong>occurs as the language model processes the demonstrated examples and identifies the underlying reasoning patterns. The model learns to recognize when and how to apply similar step-by-step approaches.
 
-**Problem presentation**involves introducing the actual problem to be solved, typically following the same format as the demonstration examples. Clear problem statements help ensure the model understands what is being asked.
+<strong>Problem presentation</strong>involves introducing the actual problem to be solved, typically following the same format as the demonstration examples. Clear problem statements help ensure the model understands what is being asked.
 
-**Step-by-step reasoning generation**is where the model produces its own chain of thought, articulating each intermediate step in the problem-solving process. This includes calculations, logical deductions, and intermediate conclusions.
+<strong>Step-by-step reasoning generation</strong>is where the model produces its own chain of thought, articulating each intermediate step in the problem-solving process. This includes calculations, logical deductions, and intermediate conclusions.
 
-**Verification and validation**happens as the model checks its reasoning for consistency and accuracy. Some implementations include explicit verification steps where the model reviews its own work.
+<strong>Verification and validation</strong>happens as the model checks its reasoning for consistency and accuracy. Some implementations include explicit verification steps where the model reviews its own work.
 
-**Final answer synthesis**combines all the intermediate steps to produce the final solution, clearly stating the conclusion reached through the reasoning process.
+<strong>Final answer synthesis</strong>combines all the intermediate steps to produce the final solution, clearly stating the conclusion reached through the reasoning process.
 
-**Example Workflow:**```
+<strong>Example Workflow:</strong>```
 Problem: "Sarah has 3 boxes of apples. Each box contains 12 apples. She gives away 8 apples. How many apples does she have left?"
 
 Chain-of-Thought Response:

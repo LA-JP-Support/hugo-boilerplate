@@ -18,10 +18,10 @@ RAG bridges the limitations of static model training by allowing AI systems to a
 
 LLMs have inherent limitations due to the static and finite nature of their training data:
 
-- **Outdated Information**: LLMs cannot access data created after their last training cycle, resulting in potentially stale or irrelevant answers.
-- **Factual Inaccuracy (Hallucination)**: LLMs may generate plausible but incorrect or unverifiable outputs.
-- **Lack of Domain Specificity**: Off-the-shelf models often lack access to proprietary or highly specialized information.
-- **High Retraining Costs**: Retraining large models to incorporate new knowledge is computationally and financially intensive.
+- <strong>Outdated Information</strong>: LLMs cannot access data created after their last training cycle, resulting in potentially stale or irrelevant answers.
+- <strong>Factual Inaccuracy (Hallucination)</strong>: LLMs may generate plausible but incorrect or unverifiable outputs.
+- <strong>Lack of Domain Specificity</strong>: Off-the-shelf models often lack access to proprietary or highly specialized information.
+- <strong>High Retraining Costs</strong>: Retraining large models to incorporate new knowledge is computationally and financially intensive.
 
 RAG addresses these limitations by:
 
@@ -52,24 +52,24 @@ Organizations can specify which data sources are accessible, enforce security an
 RAG combines semantic search with LLMs, enabling effective retrieval from diverse and unstructured sources such as emails, PDFs, wikis, and more.
 ## How Does RAG Work?
 
-RAG consists of two main phases: **Preparation**and **Retrieval/Generation**.
+RAG consists of two main phases: <strong>Preparation</strong>and <strong>Retrieval/Generation</strong>.
 
 ### A. Preparation Phase
 
-1. **Data Selection and Preprocessing**: Identify and curate relevant data sources (internal documents, knowledge articles, databases). Preprocess data (tokenization, cleaning, normalization) for efficient retrieval and embedding compatibility.
-2. **Embedding Generation**: Convert preprocessed data into high-dimensional vectors (“embeddings”) using embedding models. These vectors encode semantic meaning, enabling similarity-based retrieval.
-3. **Indexing in a Vector Database**: Store embeddings in a vector database (e.g., Pinecone, FAISS) optimized for fast similarity searches.
+1. <strong>Data Selection and Preprocessing</strong>: Identify and curate relevant data sources (internal documents, knowledge articles, databases). Preprocess data (tokenization, cleaning, normalization) for efficient retrieval and embedding compatibility.
+2. <strong>Embedding Generation</strong>: Convert preprocessed data into high-dimensional vectors (“embeddings”) using embedding models. These vectors encode semantic meaning, enabling similarity-based retrieval.
+3. <strong>Indexing in a Vector Database</strong>: Store embeddings in a vector database (e.g., Pinecone, FAISS) optimized for fast similarity searches.
 
 ### B. Retrieval and Generation Phase
 
-1. **User Query Embedding**: The user’s query is embedded using the same model as the data.
-2. **Similarity Search**: The system searches the vector database for the most relevant documents or passages based on semantic similarity.
-3. **Retrieval of Relevant Information**: The top-matching documents or snippets are retrieved.
-4. **Prompt Augmentation**: The retrieved context is concatenated with the user’s original query to form an “augmented” prompt.
-5. **Response Generation**: The augmented prompt is fed to the LLM, which generates a response grounded in both its own training and the retrieved context.
-6. **Source Attribution (Optional)**: Responses may include citations or references to the source material.
+1. <strong>User Query Embedding</strong>: The user’s query is embedded using the same model as the data.
+2. <strong>Similarity Search</strong>: The system searches the vector database for the most relevant documents or passages based on semantic similarity.
+3. <strong>Retrieval of Relevant Information</strong>: The top-matching documents or snippets are retrieved.
+4. <strong>Prompt Augmentation</strong>: The retrieved context is concatenated with the user’s original query to form an “augmented” prompt.
+5. <strong>Response Generation</strong>: The augmented prompt is fed to the LLM, which generates a response grounded in both its own training and the retrieved context.
+6. <strong>Source Attribution (Optional)</strong>: Responses may include citations or references to the source material.
 
-**Diagram and Example**:  
+<strong>Diagram and Example</strong>:  
 - [NVIDIA: RAG architecture with diagram](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)  
 - [IBM YouTube: RAG Explained](https://www.youtube.com/watch?v=T-D1OfcDW1M)
 
@@ -77,44 +77,44 @@ RAG consists of two main phases: **Preparation**and **Retrieval/Generation**.
 
 RAG’s architecture typically includes:
 
-- **Embedding Model**: Converts documents and queries into vector representations.
-- **Vector Database**: Stores embeddings for fast similarity search (e.g., Pinecone, FAISS, Vertex AI Vector Search).
-- **Retriever**: Performs searches in the vector database to find relevant embeddings for a query.
-- **Generator (LLM)**: Produces the final response using both retrieved information and learned knowledge.
-- **Orchestrator**: Manages the flow from user input through retrieval to response generation; can be implemented in cloud or custom infrastructure.
+- <strong>Embedding Model</strong>: Converts documents and queries into vector representations.
+- <strong>Vector Database</strong>: Stores embeddings for fast similarity search (e.g., Pinecone, FAISS, Vertex AI Vector Search).
+- <strong>Retriever</strong>: Performs searches in the vector database to find relevant embeddings for a query.
+- <strong>Generator (LLM)</strong>: Produces the final response using both retrieved information and learned knowledge.
+- <strong>Orchestrator</strong>: Manages the flow from user input through retrieval to response generation; can be implemented in cloud or custom infrastructure.
 
-**Types of RAG Architectures**:
+<strong>Types of RAG Architectures</strong>:
 
-- **Vector-based RAG**: Uses vector databases for storage and retrieval.
-- **Knowledge Graph-based RAG**: Uses knowledge graphs to represent relationships and richer context.
-- **Ensemble RAG**: Combines multiple retrievers or generators for improved robustness.
+- <strong>Vector-based RAG</strong>: Uses vector databases for storage and retrieval.
+- <strong>Knowledge Graph-based RAG</strong>: Uses knowledge graphs to represent relationships and richer context.
+- <strong>Ensemble RAG</strong>: Combines multiple retrievers or generators for improved robustness.
 ## Practical Applications and Use Cases
 
 RAG is widely used for tasks requiring language understanding and access to dynamic or proprietary data:
 
 ### Business Chatbots & Virtual Assistants
 
-- **HR Chatbots**: Retrieve company policies or employee-specific data to answer HR queries.
-- **Customer Service Agents**: Access up-to-date product manuals, service histories, or troubleshooting guides for personalized support.
+- <strong>HR Chatbots</strong>: Retrieve company policies or employee-specific data to answer HR queries.
+- <strong>Customer Service Agents</strong>: Access up-to-date product manuals, service histories, or troubleshooting guides for personalized support.
 
 ### Knowledge Management
 
-- **Internal Knowledge Bases**: Employees can query vast repositories, wikis, or data platforms and receive synthesized, context-aware answers.
-- **Compliance and Policy Search**: Retrieve relevant legal, regulatory, or compliance information in response to complex queries.
+- <strong>Internal Knowledge Bases</strong>: Employees can query vast repositories, wikis, or data platforms and receive synthesized, context-aware answers.
+- <strong>Compliance and Policy Search</strong>: Retrieve relevant legal, regulatory, or compliance information in response to complex queries.
 
 ### Healthcare
 
-- **Clinical Support**: Access the latest medical research, clinical guidelines, or patient data to support healthcare professionals.
+- <strong>Clinical Support</strong>: Access the latest medical research, clinical guidelines, or patient data to support healthcare professionals.
 
 ### Finance
 
-- **Market Analysis**: Combine real-time financial feeds with historical analysis for investment queries or reports.
+- <strong>Market Analysis</strong>: Combine real-time financial feeds with historical analysis for investment queries or reports.
 
-**Industry Examples**:
+<strong>Industry Examples</strong>:
 
-- **Salesforce Agentforce**: Uses RAG for autonomous AI agents delivering customer service and sales support grounded in CRM data.
-- **Google Cloud Vertex AI RAG**: Enables enterprise chatbots to draw on internal data for grounded, reliable responses.
-- **NVIDIA NeMo RAG**: Provides scalable pipelines for enterprise RAG workflows.
+- <strong>Salesforce Agentforce</strong>: Uses RAG for autonomous AI agents delivering customer service and sales support grounded in CRM data.
+- <strong>Google Cloud Vertex AI RAG</strong>: Enables enterprise chatbots to draw on internal data for grounded, reliable responses.
+- <strong>NVIDIA NeMo RAG</strong>: Provides scalable pipelines for enterprise RAG workflows.
 ## Implementation Considerations
 
 Key decisions and best practices for RAG system implementation:
@@ -145,50 +145,50 @@ Key decisions and best practices for RAG system implementation:
 - RAG reduces retraining costs, but infrastructure and query volumes must be managed.
 ## Illustrative Example
 
-**Scenario:**An employee asks a chatbot, “How much annual leave do I have left?”
+<strong>Scenario:</strong>An employee asks a chatbot, “How much annual leave do I have left?”
 
-**RAG Workflow:**1. The chatbot converts the question into an embedding.
+<strong>RAG Workflow:</strong>1. The chatbot converts the question into an embedding.
 2. Searches the company’s vector database for relevant HR documents and the employee’s leave record.
 3. Retrieved documents are combined with the query to form an augmented prompt.
 4. The LLM generates a personalized response: “You have 8 days of annual leave remaining. According to company policy, you may carry over up to 5 days to the next year.”
 5. The response can include citations to the policy and HR system.
 ## RAG vs. Semantic Search
 
-**Semantic Search**: Retrieves and presents relevant documents or passages based on the query’s meaning, but does not generate new responses.
+<strong>Semantic Search</strong>: Retrieves and presents relevant documents or passages based on the query’s meaning, but does not generate new responses.
 
-**RAG**: Retrieves relevant information and *generates* a synthesized answer by combining the retrieved data with model knowledge.
+<strong>RAG</strong>: Retrieves relevant information and *generates* a synthesized answer by combining the retrieved data with model knowledge.
 ## Challenges and Limitations
 
-- **Data Drift**: Outdated or poorly maintained knowledge bases degrade response quality.
-- **Retrieval Errors**: Irrelevant or low-quality retrievals lead to off-topic answers.
-- **Prompt Length Constraints**: Only a limited amount of retrieved data fits in the LLM prompt due to model input size limits.
-- **Security Risks**: Inadequate access controls may expose sensitive data.
+- <strong>Data Drift</strong>: Outdated or poorly maintained knowledge bases degrade response quality.
+- <strong>Retrieval Errors</strong>: Irrelevant or low-quality retrievals lead to off-topic answers.
+- <strong>Prompt Length Constraints</strong>: Only a limited amount of retrieved data fits in the LLM prompt due to model input size limits.
+- <strong>Security Risks</strong>: Inadequate access controls may expose sensitive data.
 
-**Mitigation Strategies**:  
+<strong>Mitigation Strategies</strong>:  
 Regularly update knowledge bases, monitor retrieval quality, and maintain robust data governance.
 ## Frequently Asked Questions (FAQ)
 
-**What is RAG?**RAG stands for Retrieval-Augmented Generation. It enhances LLMs by retrieving relevant information from external knowledge bases before generating a response.
+<strong>What is RAG?</strong>RAG stands for Retrieval-Augmented Generation. It enhances LLMs by retrieving relevant information from external knowledge bases before generating a response.
 
-**How does RAG improve LLM responses?**By grounding outputs in up-to-date data, RAG reduces hallucinations and increases response accuracy.
+<strong>How does RAG improve LLM responses?</strong>By grounding outputs in up-to-date data, RAG reduces hallucinations and increases response accuracy.
 
-**When should RAG be used?**RAG is ideal when AI applications require access to proprietary, confidential, or frequently updated information not present in the LLM’s training data.
+<strong>When should RAG be used?</strong>RAG is ideal when AI applications require access to proprietary, confidential, or frequently updated information not present in the LLM’s training data.
 
-**What types of data can RAG retrieve?**Both structured and unstructured data: documents, PDFs, emails, databases, and real-time feeds.
+<strong>What types of data can RAG retrieve?</strong>Both structured and unstructured data: documents, PDFs, emails, databases, and real-time feeds.
 
-**Does RAG require retraining the LLM?**No. RAG expands knowledge without retraining, reducing costs and complexity.
+<strong>Does RAG require retraining the LLM?</strong>No. RAG expands knowledge without retraining, reducing costs and complexity.
 
-**What are the key components of a RAG system?**A retriever for finding documents and a generator (LLM) for synthesizing responses.
+<strong>What are the key components of a RAG system?</strong>A retriever for finding documents and a generator (LLM) for synthesizing responses.
 
-**What are the main implementation challenges?**Ensuring data quality, managing retrieval relevance, prompt length, and enforcing data security.
+<strong>What are the main implementation challenges?</strong>Ensuring data quality, managing retrieval relevance, prompt length, and enforcing data security.
 ## Actionable Next Steps for Implementation
 
-1. **Assess Suitability**: Identify scenarios requiring up-to-date, domain-specific, or proprietary knowledge.
-2. **Curate and Prepare Data**: Gather and preprocess documents. Ensure updates and quality checks.
-3. **Choose Technology Stack**: Select embedding models, vector databases, and LLM providers.
-4. **Design Retrieval and Augmentation**: Develop workflows for embedding, retrieval, and prompt construction.
-5. **Implement Access Controls**: Protect sensitive data with authentication and authorization.
-6. **Monitor and Optimize**: Regularly evaluate and refine retrieval and generation quality.
+1. <strong>Assess Suitability</strong>: Identify scenarios requiring up-to-date, domain-specific, or proprietary knowledge.
+2. <strong>Curate and Prepare Data</strong>: Gather and preprocess documents. Ensure updates and quality checks.
+3. <strong>Choose Technology Stack</strong>: Select embedding models, vector databases, and LLM providers.
+4. <strong>Design Retrieval and Augmentation</strong>: Develop workflows for embedding, retrieval, and prompt construction.
+5. <strong>Implement Access Controls</strong>: Protect sensitive data with authentication and authorization.
+6. <strong>Monitor and Optimize</strong>: Regularly evaluate and refine retrieval and generation quality.
 ## External Resources
 
 - [AWS: What is Retrieval-Augmented Generation?](https://aws.amazon.com/what-is/retrieval-augmented-generation/)

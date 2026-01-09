@@ -11,7 +11,7 @@ draft: false
 ---
 ## Concise Summary / Definition
 
-**Throttling**, also called *API throttling*, is the deliberate restriction of the number of requests a user, client, or application can make to an API or service within a specific time period. Throttling is crucial for preventing backend overload, ensuring equitable access, curbing abuse, and maintaining consistent service performance by managing and smoothing the flow of incoming traffic.
+<strong>Throttling</strong>, also called *API throttling*, is the deliberate restriction of the number of requests a user, client, or application can make to an API or service within a specific time period. Throttling is crucial for preventing backend overload, ensuring equitable access, curbing abuse, and maintaining consistent service performance by managing and smoothing the flow of incoming traffic.
 
 - [AWS API Gateway Throttling Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html)
 - [Gravitee: API Throttling Best Practices](https://www.gravitee.io/blog/api-throttling-best-practices)
@@ -19,32 +19,32 @@ draft: false
 
 ## Why Throttling is Important / Use Cases
 
-**Throttling serves several critical purposes:**- **System Protection:**Shields backend services from traffic spikes, accidental misuse, or deliberate attacks that could degrade performance or cause outages. For example, AWS applies both hard and soft throttling at multiple system levels to prevent infrastructure overload ([source](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html)).
-- **Fair Usage:**Guarantees that no single user or client can monopolize API resources, ensuring fair access for all consumers ([Gravitee](https://www.gravitee.io/blog/api-throttling-best-practices)).
-- **Security:**Restricts the ability of malicious actors to launch denial-of-service (DoS/DDoS) attacks by capping the rate at which requests are accepted ([Knit.dev](https://www.getknit.dev/blog/10-best-practices-for-api-rate-limiting-and-throttling)).
-- **Performance Stability:**Maintains predictable and stable API response times even under variable or bursty loads.
-- **Monetization & Metering:**Enables differentiated pricing and service tiers, with usage quotas for free and paid plans.
-- **Resource Management:**Prevents backend resource exhaustion (such as databases, caches, or GPUs) by smoothing out demand and limiting simultaneous workloads.
+<strong>Throttling serves several critical purposes:</strong>- <strong>System Protection:</strong>Shields backend services from traffic spikes, accidental misuse, or deliberate attacks that could degrade performance or cause outages. For example, AWS applies both hard and soft throttling at multiple system levels to prevent infrastructure overload ([source](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html)).
+- <strong>Fair Usage:</strong>Guarantees that no single user or client can monopolize API resources, ensuring fair access for all consumers ([Gravitee](https://www.gravitee.io/blog/api-throttling-best-practices)).
+- <strong>Security:</strong>Restricts the ability of malicious actors to launch denial-of-service (DoS/DDoS) attacks by capping the rate at which requests are accepted ([Knit.dev](https://www.getknit.dev/blog/10-best-practices-for-api-rate-limiting-and-throttling)).
+- <strong>Performance Stability:</strong>Maintains predictable and stable API response times even under variable or bursty loads.
+- <strong>Monetization & Metering:</strong>Enables differentiated pricing and service tiers, with usage quotas for free and paid plans.
+- <strong>Resource Management:</strong>Prevents backend resource exhaustion (such as databases, caches, or GPUs) by smoothing out demand and limiting simultaneous workloads.
 
-**Real-world examples:**- **Social APIs:**Twitter restricts API usage per user per 15-minute window to discourage spam and protect platform stability ([Twitter API Documentation](https://developer.twitter.com/en/docs/twitter-api/rate-limits)).
-- **Booking Engines:**Online travel agencies throttle calls to airline reservation systems (e.g., Sabre, Amadeus) to avoid service disruptions upstream.
-- **Cloud Storage:**AWS S3 enforces request quotas to preserve consistent performance for all tenants ([AWS S3 Limits](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html)).
-- **AI APIs:**Image recognition or large language model APIs apply per-user or per-app throttling to control GPU costs and maintain [inference latency](/en/glossary/inference-latency/) ([Gravitee](https://www.gravitee.io/blog/api-throttling-best-practices)).
+<strong>Real-world examples:</strong>- <strong>Social APIs:</strong>Twitter restricts API usage per user per 15-minute window to discourage spam and protect platform stability ([Twitter API Documentation](https://developer.twitter.com/en/docs/twitter-api/rate-limits)).
+- <strong>Booking Engines:</strong>Online travel agencies throttle calls to airline reservation systems (e.g., Sabre, Amadeus) to avoid service disruptions upstream.
+- <strong>Cloud Storage:</strong>AWS S3 enforces request quotas to preserve consistent performance for all tenants ([AWS S3 Limits](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html)).
+- <strong>AI APIs:</strong>Image recognition or large language model APIs apply per-user or per-app throttling to control GPU costs and maintain inference latency ([Gravitee](https://www.gravitee.io/blog/api-throttling-best-practices)).
 
 ## How Throttling Works
 
-**Throttling mechanisms include:**1. **Rate Limits:**Set the maximum number of requests allowed per user, client, or API key over a defined time (e.g., 1,000 requests/hour).
-2. **Burst Limits:**Permit short spikes above the sustained rate, up to a threshold (e.g., 100 requests in one second, average capped at 10/sec).
-3. **Error Codes:**Exceeding limits triggers an HTTP `429 Too Many Requests` error response ([RFC 6585](https://datatracker.ietf.org/doc/html/rfc6585#section-4)).
-4. **Retry Guidance:**APIs return a `Retry-After` header, instructing the client on when to retry.
-5. **Enforcement Levels:**Throttling can be per user, per API key, per app, per region, or global, and is often enforced at the API gateway or backend.
+<strong>Throttling mechanisms include:</strong>1. <strong>Rate Limits:</strong>Set the maximum number of requests allowed per user, client, or API key over a defined time (e.g., 1,000 requests/hour).
+2. <strong>Burst Limits:</strong>Permit short spikes above the sustained rate, up to a threshold (e.g., 100 requests in one second, average capped at 10/sec).
+3. <strong>Error Codes:</strong>Exceeding limits triggers an HTTP `429 Too Many Requests` error response ([RFC 6585](https://datatracker.ietf.org/doc/html/rfc6585#section-4)).
+4. <strong>Retry Guidance:</strong>APIs return a `Retry-After` header, instructing the client on when to retry.
+5. <strong>Enforcement Levels:</strong>Throttling can be per user, per API key, per app, per region, or global, and is often enforced at the API gateway or backend.
 
-**Throttling flow:**1. Client sends request to API.
+<strong>Throttling flow:</strong>1. Client sends request to API.
 2. System checks request count and timing against configured thresholds (using token buckets, counters, or queues).
 3. If within limits: request is processed; if not: `429` error is returned, with headers such as `Retry-After`, `X-RateLimit-Remaining`.
 4. Client can implement backoff strategies—delaying, retrying, or batching requests.
 
-**Example Response:**```http
+<strong>Example Response:</strong>```http
 HTTP/1.1 429 Too Many Requests
 X-RateLimit-Limit: 1000
 X-RateLimit-Remaining: 0
@@ -84,77 +84,77 @@ def allow_request():
         return False
 ```
 
-**Example:**Stock market API: 100 requests burst, refills at 10/sec.
+<strong>Example:</strong>Stock market API: 100 requests burst, refills at 10/sec.
 
 ### 2. Leaky Bucket Algorithm
 
-**Mechanism:**Requests enter a fixed-size queue (the "bucket"). Requests are processed at a constant rate. If the bucket is full, new requests are dropped or delayed.
+<strong>Mechanism:</strong>Requests enter a fixed-size queue (the "bucket"). Requests are processed at a constant rate. If the bucket is full, new requests are dropped or delayed.
 
-- **Pros:**Smooths out bursts, ensures steady outflow.
-- **Cons:**Can introduce [latency](/en/glossary/latency/) or drop bursty traffic.
-- **Analogy:**Bucket with a hole—water in at any rate, leaks out steadily.
+- <strong>Pros:</strong>Smooths out bursts, ensures steady outflow.
+- <strong>Cons:</strong>Can introduce latency or drop bursty traffic.
+- <strong>Analogy:</strong>Bucket with a hole—water in at any rate, leaks out steadily.
 
-**Example:**Email API queues up to 100 emails per minute, sends at constant rate.
+<strong>Example:</strong>Email API queues up to 100 emails per minute, sends at constant rate.
 
 ### 3. Fixed Window Algorithm
 
-**Mechanism:**Counts requests within a fixed interval (e.g., minute/hour). Counter resets at the window boundary.
+<strong>Mechanism:</strong>Counts requests within a fixed interval (e.g., minute/hour). Counter resets at the window boundary.
 
-- **Pros:**Simple to implement.
-- **Cons:**Vulnerable to spikes at window boundaries.
+- <strong>Pros:</strong>Simple to implement.
+- <strong>Cons:</strong>Vulnerable to spikes at window boundaries.
 
-**Example:**Twitter allows 300 requests per user per 15-minute window.
+<strong>Example:</strong>Twitter allows 300 requests per user per 15-minute window.
 
 ### 4. Sliding Window Algorithm
 
-**Mechanism:**Tracks requests in a rolling window (e.g., last 60 seconds) for finer control, smoothing bursts.
+<strong>Mechanism:</strong>Tracks requests in a rolling window (e.g., last 60 seconds) for finer control, smoothing bursts.
 
-- **Pros:**Prevents burstiness at window edges.
-- **Cons:**Requires tracking timestamps, more complex.
+- <strong>Pros:</strong>Prevents burstiness at window edges.
+- <strong>Cons:</strong>Requires tracking timestamps, more complex.
 
-**Example:**SaaS API allows 100 requests per rolling 60 seconds.
+<strong>Example:</strong>SaaS API allows 100 requests per rolling 60 seconds.
 
 ### 5. Concurrent Request Limiting
 
-**Mechanism:**Limits number of simultaneous (in-flight) requests per client.
+<strong>Mechanism:</strong>Limits number of simultaneous (in-flight) requests per client.
 
-- **Pros:**Prevents resource exhaustion due to parallel workloads.
-- **Cons:**Does not limit total requests over time.
+- <strong>Pros:</strong>Prevents resource exhaustion due to parallel workloads.
+- <strong>Cons:</strong>Does not limit total requests over time.
 
-**Example:**Image processing API allows max 5 concurrent requests per client.
+<strong>Example:</strong>Image processing API allows max 5 concurrent requests per client.
 
 ### 6. Hard vs. Soft Throttling
 
-- **Hard Throttling:**Strict enforcement; excess requests rejected (e.g., free API tiers, critical infrastructure).
-- **Soft Throttling:**Allows temporary overages or queues/excess requests based on backend capacity.
+- <strong>Hard Throttling:</strong>Strict enforcement; excess requests rejected (e.g., free API tiers, critical infrastructure).
+- <strong>Soft Throttling:</strong>Allows temporary overages or queues/excess requests based on backend capacity.
 
 ### 7. User-Level vs. System-Level Throttling
 
-- **User-Level:**Limits per user/client/API key for fairness.
-- **System-Level:**Global limits to ensure overall infrastructure health.
+- <strong>User-Level:</strong>Limits per user/client/API key for fairness.
+- <strong>System-Level:</strong>Global limits to ensure overall infrastructure health.
 
 - [Gravitee: API Throttling Techniques](https://www.gravitee.io/blog/api-throttling-best-practices)
 
 ## Implementation Best Practices
 
-**Practical guidelines for robust throttling:**1. **Granular Limits:**- Set at multiple levels (user, API key, endpoint, region).
+<strong>Practical guidelines for robust throttling:</strong>1. <strong>Granular Limits:</strong>- Set at multiple levels (user, API key, endpoint, region).
    - Use multiple time windows (per second/minute/hour/day).
    - [AWS: Per-client, per-method, per-stage](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html#apigateway-method-level-throttling-in-usage-plan).
 
-2. **Distributed Counters:**- Use centralized stores such as Redis for counters in distributed systems ([Knit.dev](https://www.getknit.dev/blog/10-best-practices-for-api-rate-limiting-and-throttling)).
+2. <strong>Distributed Counters:</strong>- Use centralized stores such as Redis for counters in distributed systems ([Knit.dev](https://www.getknit.dev/blog/10-best-practices-for-api-rate-limiting-and-throttling)).
 
-3. **Clear Error Messaging:**- Always return HTTP `429`, with headers for limit, remaining quota, reset time (`Retry-After`).
+3. <strong>Clear Error Messaging:</strong>- Always return HTTP `429`, with headers for limit, remaining quota, reset time (`Retry-After`).
    - Example headers: `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset`, `Retry-After`.
 
-4. **Retry Strategies:**- Advise clients to use exponential backoff with jitter to avoid thundering herd problems.
+4. <strong>Retry Strategies:</strong>- Advise clients to use exponential backoff with jitter to avoid thundering herd problems.
 
-5. **API Gateway Integration:**- Use platforms such as AWS API Gateway, Kong, Gravitee for centralized policy management and analytics ([Gravitee](https://www.gravitee.io/platform/api-gateway)).
+5. <strong>API Gateway Integration:</strong>- Use platforms such as AWS API Gateway, Kong, Gravitee for centralized policy management and analytics ([Gravitee](https://www.gravitee.io/platform/api-gateway)).
 
-6. **Monitor and Adjust:**- Continuously monitor usage, error rates, and system health; adjust thresholds as needed ([Knit.dev](https://www.getknit.dev/blog/10-best-practices-for-api-rate-limiting-and-throttling)).
+6. <strong>Monitor and Adjust:</strong>- Continuously monitor usage, error rates, and system health; adjust thresholds as needed ([Knit.dev](https://www.getknit.dev/blog/10-best-practices-for-api-rate-limiting-and-throttling)).
 
-7. **Transparency:**- Document throttling policies clearly and communicate updates; provide usage dashboards where possible.
+7. <strong>Transparency:</strong>- Document throttling policies clearly and communicate updates; provide usage dashboards where possible.
 
-**Token Bucket Example (Python):**```python
+<strong>Token Bucket Example (Python):</strong>```python
 class TokenBucket:
     def __init__(self, capacity, refill_rate):
         self.capacity = capacity

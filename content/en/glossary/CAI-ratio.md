@@ -16,13 +16,13 @@ The CAI Ratio—short for Consistent and Inconsistent Ratio—is an unsupervised
 
 When evaluating LLM-generated annotations without oracle (human) feedback, the CAI Ratio enables practitioners to estimate annotation quality, select more reliable models, and filter out noisy or overconfident outputs. The metric has been validated across large-scale open-domain datasets and is an essential tool for scalable, unsupervised evaluation workflows.
 
-**Definition:**\[
+<strong>Definition:</strong>\[
 \text{CAI Ratio} = \frac{N_C}{N_{IC}}
 \]
 
 Where:
-- **N_C:**Number of consistent samples (where student and LLM outputs are identical)
-- **N_{IC}:**Number of inconsistent samples (where outputs differ)
+- <strong>N_C:</strong>Number of consistent samples (where student and LLM outputs are identical)
+- <strong>N_{IC}:</strong>Number of inconsistent samples (where outputs differ)
 
 Consistent samples indicate mutual confidence and reliability, while inconsistent samples suggest uncertainty, annotation noise, or overconfidence. A high CAI Ratio indicates greater alignment between models and suggests that LLM annotations are more likely to be reliable, even without ground truth.
 
@@ -32,15 +32,15 @@ Traditional metrics like accuracy, F1-score, or BLEU require labeled ground trut
 
 ### Key Benefits
 
-**Unsupervised Evaluation**Enables assessment of annotation quality and model alignment without human-verified labels.
+<strong>Unsupervised Evaluation</strong>Enables assessment of annotation quality and model alignment without human-verified labels.
 
-**Model Selection**Helps identify robust LLMs by comparing agreement with a trusted student model.
+<strong>Model Selection</strong>Helps identify robust LLMs by comparing agreement with a trusted student model.
 
-**Correlation with Downstream Accuracy**Empirically, CAI Ratio is highly correlated with actual annotation accuracy, making it a reliable proxy for annotation quality.
+<strong>Correlation with Downstream Accuracy</strong>Empirically, CAI Ratio is highly correlated with actual annotation accuracy, making it a reliable proxy for annotation quality.
 
-**Scalability**Can be computed efficiently across large datasets, supporting scalable evaluation in automated workflows.
+<strong>Scalability</strong>Can be computed efficiently across large datasets, supporting scalable evaluation in automated workflows.
 
-**Quality Control**Identifies high-confidence consistent samples for self-training and filters out inconsistent/noisy samples.
+<strong>Quality Control</strong>Identifies high-confidence consistent samples for self-training and filters out inconsistent/noisy samples.
 
 ## How is the CAI Ratio Calculated?
 
@@ -48,18 +48,18 @@ The CAI Ratio is computed by comparing outputs between a student model and an LL
 
 ### Step-by-Step Process
 
-**1. Data Preparation**- Dataset: Unlabeled or partially labeled dataset (e.g., user utterances, documents)
+<strong>1. Data Preparation</strong>- Dataset: Unlabeled or partially labeled dataset (e.g., user utterances, documents)
 - User Preferences (Optional): Small subset of user-verified samples (5% or less)
 
-**2. Annotation Assignment**- **Student Model:**Lightweight/distilled model (e.g., MINILM) encodes each sample and assigns labels based on majority voting in embedding space
-- **LLM (Noisy Teacher):**Generates annotations independently via zero-shot or single-shot prompting
+<strong>2. Annotation Assignment</strong>- <strong>Student Model:</strong>Lightweight/distilled model (e.g., MINILM) encodes each sample and assigns labels based on majority voting in embedding space
+- <strong>LLM (Noisy Teacher):</strong>Generates annotations independently via zero-shot or single-shot prompting
 
-**3. Consistency Identification**- **Consistent:**Student and LLM outputs are identical
-- **Inconsistent:**Outputs differ
+<strong>3. Consistency Identification</strong>- <strong>Consistent:</strong>Student and LLM outputs are identical
+- <strong>Inconsistent:</strong>Outputs differ
 
-**4. Counting**- Tally N_C (consistent samples) and N_{IC} (inconsistent samples)
+<strong>4. Counting</strong>- Tally N_C (consistent samples) and N_{IC} (inconsistent samples)
 
-**5. Compute CAI Ratio**\[
+<strong>5. Compute CAI Ratio</strong>\[
 \text{CAI Ratio} = \frac{N_C}{N_{IC}}
 \]
 
@@ -69,26 +69,26 @@ Higher CAI Ratio = Higher agreement and reliability.
 
 Suppose you label 10,000 chatbot utterances for intent classification without ground truth:
 
-**Process:**1. Student model predicts labels using verified intents and majority voting
+<strong>Process:</strong>1. Student model predicts labels using verified intents and majority voting
 2. LLM generates predicted intent labels for each sample
 3. Compare student and LLM labels for each sample
 4. Count: 7,500 consistent, 2,500 inconsistent
 
-**Result:**\[
+<strong>Result:</strong>\[
 \text{CAI Ratio} = \frac{7,500}{2,500} = 3.0
 \]
 
-**Interpretation:**CAI Ratio of 3.0 suggests substantial agreement; among multiple LLMs, select the one with highest CAI Ratio.
+<strong>Interpretation:</strong>CAI Ratio of 3.0 suggests substantial agreement; among multiple LLMs, select the one with highest CAI Ratio.
 
 ## Interpreting Results
 
 The CAI Ratio is an unsupervised signal best interpreted comparatively across models or datasets.
 
-**High CAI Ratio**Strong model alignment, suggesting reliable annotations. Studies show consistent samples have much higher true accuracy than inconsistent samples.
+<strong>High CAI Ratio</strong>Strong model alignment, suggesting reliable annotations. Studies show consistent samples have much higher true accuracy than inconsistent samples.
 
-**Low CAI Ratio**Increased annotation noise, model overconfidence, or divergence; may require model retraining.
+<strong>Low CAI Ratio</strong>Increased annotation noise, model overconfidence, or divergence; may require model retraining.
 
-**Comparative Use**When evaluating candidate LLMs, the highest CAI Ratio typically corresponds to the most accurate annotations.
+<strong>Comparative Use</strong>When evaluating candidate LLMs, the highest CAI Ratio typically corresponds to the most accurate annotations.
 
 ### Empirical Findings
 
@@ -118,53 +118,53 @@ Integrate CAI Ratio computation for real-time feedback on annotation quality. Us
 
 ## Limitations and Considerations
 
-**Relativity**Most informative for comparative evaluation, not absolute measurement.
+<strong>Relativity</strong>Most informative for comparative evaluation, not absolute measurement.
 
-**Student Model Quality**If the student model is biased or poorly calibrated, CAI Ratio may reflect artifacts rather than true annotation quality.
+<strong>Student Model Quality</strong>If the student model is biased or poorly calibrated, CAI Ratio may reflect artifacts rather than true annotation quality.
 
-**Semantic Granularity**Only captures binary agreement, not nuanced semantic similarity.
+<strong>Semantic Granularity</strong>Only captures binary agreement, not nuanced semantic similarity.
 
-**Ambiguous Tasks**In multi-label or ambiguous tasks, CAI Ratio may underrepresent subtler forms of agreement.
+<strong>Ambiguous Tasks</strong>In multi-label or ambiguous tasks, CAI Ratio may underrepresent subtler forms of agreement.
 
-**Not a Substitute for Human Evaluation**Should complement, not replace, periodic human or expert review for critical applications.
+<strong>Not a Substitute for Human Evaluation</strong>Should complement, not replace, periodic human or expert review for critical applications.
 
 ## Related Concepts
 
-**CAIR (Confidence in AI Results)**Related metric focused on user trust and risk/benefit analysis, emphasizing reliability and interpretability.
+<strong>CAIR (Confidence in AI Results)</strong>Related metric focused on user trust and risk/benefit analysis, emphasizing reliability and interpretability.
 
-**Consistency Metric**Metrics that quantify agreement between different annotators or models.
+<strong>Consistency Metric</strong>Metrics that quantify agreement between different annotators or models.
 
-**Unsupervised Model Evaluation**Techniques to assess model outputs without labeled ground truth.
+<strong>Unsupervised Model Evaluation</strong>Techniques to assess model outputs without labeled ground truth.
 
-**Annotation Quality**The reliability and correctness of assigned labels, crucial for downstream task performance.
+<strong>Annotation Quality</strong>The reliability and correctness of assigned labels, crucial for downstream task performance.
 
-**LLM Accuracy**The alignment between LLM outputs and ideal (often human) annotations.
+<strong>LLM Accuracy</strong>The alignment between LLM outputs and ideal (often human) annotations.
 
-**Model Selection**Process of choosing the best model for deployment or further training, often using proxy metrics like CAI Ratio.
+<strong>Model Selection</strong>Process of choosing the best model for deployment or further training, often using proxy metrics like CAI Ratio.
 
 ## Best Practices
 
-**Use for Comparative Analysis**Compare multiple models or configurations to identify the most reliable option.
+<strong>Use for Comparative Analysis</strong>Compare multiple models or configurations to identify the most reliable option.
 
-**Validate Student Model Quality**Ensure student model is well-calibrated and representative of target domain.
+<strong>Validate Student Model Quality</strong>Ensure student model is well-calibrated and representative of target domain.
 
-**Monitor Trends Over Time**Track CAI Ratio across iterations to detect quality degradation or improvement.
+<strong>Monitor Trends Over Time</strong>Track CAI Ratio across iterations to detect quality degradation or improvement.
 
-**Combine with Other Metrics**Use alongside traditional metrics when available, and complement with human evaluation.
+<strong>Combine with Other Metrics</strong>Use alongside traditional metrics when available, and complement with human evaluation.
 
-**Set Consistency Thresholds**Define minimum CAI Ratio thresholds for production deployment based on empirical validation.
+<strong>Set Consistency Thresholds</strong>Define minimum CAI Ratio thresholds for production deployment based on empirical validation.
 
 ## Frequently Asked Questions
 
-**What makes CAI Ratio different from traditional accuracy metrics?**CAI Ratio works without ground truth by measuring model agreement, while accuracy requires labeled data.
+<strong>What makes CAI Ratio different from traditional accuracy metrics?</strong>CAI Ratio works without ground truth by measuring model agreement, while accuracy requires labeled data.
 
-**Can CAI Ratio replace human evaluation?**No. It's a valuable proxy but should complement periodic human review, especially for critical applications.
+<strong>Can CAI Ratio replace human evaluation?</strong>No. It's a valuable proxy but should complement periodic human review, especially for critical applications.
 
-**What's a good CAI Ratio value?**It's relative. Higher is generally better, but compare across models in your specific context.
+<strong>What's a good CAI Ratio value?</strong>It's relative. Higher is generally better, but compare across models in your specific context.
 
-**How does CAI Ratio relate to CAIR?**CAIR focuses on user trust and risk/benefit analysis, while CAI Ratio measures model agreement for annotation quality.
+<strong>How does CAI Ratio relate to CAIR?</strong>CAIR focuses on user trust and risk/benefit analysis, while CAI Ratio measures model agreement for annotation quality.
 
-**Is CAI Ratio suitable for all NLP tasks?**Most effective for classification and labeling tasks. May be less informative for generation or highly ambiguous tasks.
+<strong>Is CAI Ratio suitable for all NLP tasks?</strong>Most effective for classification and labeling tasks. May be less informative for generation or highly ambiguous tasks.
 
 ## References
 

@@ -20,23 +20,23 @@ Continuous deployment engines (reconciliation agents or controllers like Argo CD
 
 ## Core Principles
 
-**Declarative Configuration**Entire system defined declaratively—describing what you want, not how to achieve it. Examples include Kubernetes YAML, Terraform HCL, Helm charts.
+<strong>Declarative Configuration</strong>Entire system defined declaratively—describing what you want, not how to achieve it. Examples include Kubernetes YAML, Terraform HCL, Helm charts.
 
-**Versioned and Immutable Source of Truth**All configurations stored in version control (Git). Every change creates clear, auditable, immutable history supporting easy rollbacks and compliance requirements.
+<strong>Versioned and Immutable Source of Truth</strong>All configurations stored in version control (Git). Every change creates clear, auditable, immutable history supporting easy rollbacks and compliance requirements.
 
-**Automated Change Approval and Delivery**Changes proposed via pull/merge requests, reviewed, approved. Often triggers CI/CD pipelines for automated validation and testing. Once merged, system automatically initiates deployment.
+<strong>Automated Change Approval and Delivery</strong>Changes proposed via pull/merge requests, reviewed, approved. Often triggers CI/CD pipelines for automated validation and testing. Once merged, system automatically initiates deployment.
 
-**Continuous Reconciliation and Drift Correction**Automated agents continuously compare actual state with desired state in Git. Any deviation either auto-corrected or flagged, ensuring ongoing consistency.
+<strong>Continuous Reconciliation and Drift Correction</strong>Automated agents continuously compare actual state with desired state in Git. Any deviation either auto-corrected or flagged, ensuring ongoing consistency.
 
 ## How GitOps Works
 
-**Workflow Components:**- **Git as single source of truth**– All desired state configurations stored in Git repository
-- **Declarative configuration**– Tools like Kubernetes manifests, Terraform, Helm describe target state
-- **Pull/Merge requests**– Changes proposed via PR/MR, reviewed, tested, merged
-- **CI/CD automation**– Merging triggers automated pipelines validating and delivering changes
-- **Continuous reconciliation**– GitOps controllers monitor Git and runtime environment, auto-correcting drift
+<strong>Workflow Components:</strong>- <strong>Git as single source of truth</strong>– All desired state configurations stored in Git repository
+- <strong>Declarative configuration</strong>– Tools like Kubernetes manifests, Terraform, Helm describe target state
+- <strong>Pull/Merge requests</strong>– Changes proposed via PR/MR, reviewed, tested, merged
+- <strong>CI/CD automation</strong>– Merging triggers automated pipelines validating and delivering changes
+- <strong>Continuous reconciliation</strong>– GitOps controllers monitor Git and runtime environment, auto-correcting drift
 
-**Example Workflow:**1. Write/modify configuration (change Kubernetes deployment YAML)
+<strong>Example Workflow:</strong>1. Write/modify configuration (change Kubernetes deployment YAML)
 2. Commit changes to branch, open pull request
 3. Team members review and approve
 4. Merge to main branch triggers CI/CD pipeline
@@ -45,14 +45,14 @@ Continuous deployment engines (reconciliation agents or controllers like Argo CD
 
 ## Kubernetes GitOps Workflow
 
-**Step-by-Step Process:**1. **Define Desired State**– Write/update declarative files (YAML, HCL)
-2. **Commit and PR**– Commit to feature branch, open pull request
-3. **Review and Approve**– Team reviews, tests, approves via CI pipelines
-4. **Merge to Main**– Approved changes merged, triggers deployment pipeline
-5. **GitOps Agent Applies Change**– Agent (Argo CD) syncs environment to match new state
-6. **Continuous Monitoring**– Agent monitors for drift, auto-corrects or alerts
+<strong>Step-by-Step Process:</strong>1. <strong>Define Desired State</strong>– Write/update declarative files (YAML, HCL)
+2. <strong>Commit and PR</strong>– Commit to feature branch, open pull request
+3. <strong>Review and Approve</strong>– Team reviews, tests, approves via CI pipelines
+4. <strong>Merge to Main</strong>– Approved changes merged, triggers deployment pipeline
+5. <strong>GitOps Agent Applies Change</strong>– Agent (Argo CD) syncs environment to match new state
+6. <strong>Continuous Monitoring</strong>– Agent monitors for drift, auto-corrects or alerts
 
-**Sample YAML:**```yaml
+<strong>Sample YAML:</strong>```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:

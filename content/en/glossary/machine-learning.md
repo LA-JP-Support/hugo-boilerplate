@@ -19,7 +19,7 @@ draft: false
 
 Machine learning (ML) is a domain within artificial intelligence (AI) focused on developing algorithms that enable computers to learn from and make predictions or decisions based on data, rather than relying on hard-coded instructions. These models identify complex patterns, classify information, and forecast future outcomes, forming the backbone of applications such as chatbots, recommendation engines, fraud detection, and autonomous vehicles.
 
-**Core Principle:**Systems improve performance through experience and data, automatically adapting without explicit programming for every scenario.
+<strong>Core Principle:</strong>Systems improve performance through experience and data, automatically adapting without explicit programming for every scenario.
 
 ## Machine Learning in the AI Landscape
 
@@ -27,11 +27,11 @@ Machine learning (ML) is a domain within artificial intelligence (AI) focused on
 
 | Technology | Scope | Focus | Complexity |
 |-----------|-------|-------|------------|
-| **Artificial Intelligence (AI)**| Broadest | Simulate human intelligence | All cognitive tasks |
-| **Machine Learning (ML)**| Subset of AI | Learn from data | Pattern recognition |
-| **Deep Learning (DL)**| Subset of ML | Multi-layer neural networks | High-dimensional data |
+| <strong>Artificial Intelligence (AI)</strong>| Broadest | Simulate human intelligence | All cognitive tasks |
+| <strong>Machine Learning (ML)</strong>| Subset of AI | Learn from data | Pattern recognition |
+| <strong>Deep Learning (DL)</strong>| Subset of ML | Multi-layer neural networks | High-dimensional data |
 
-**Hierarchy:**```
+<strong>Hierarchy:</strong>```
 Artificial Intelligence
 ├── Machine Learning
 │   ├── Traditional ML (Decision Trees, SVM, etc.)
@@ -98,66 +98,66 @@ Deploy Model
 
 ### 2. Unsupervised Learning
 
-**Definition:**Algorithms discover patterns in unlabeled data without explicit target outputs.
+<strong>Definition:</strong>Algorithms discover patterns in unlabeled data without explicit target outputs.
 
-**Key Characteristics:**| Aspect | Description |
+<strong>Key Characteristics:</strong>| Aspect | Description |
 |--------|-------------|
-| **Data Requirement**| Unlabeled data only |
-| **Goal**| Find hidden structures |
-| **Feedback**| No explicit labels |
-| **Common Tasks**| Clustering, dimensionality reduction |
+| <strong>Data Requirement</strong>| Unlabeled data only |
+| <strong>Goal</strong>| Find hidden structures |
+| <strong>Feedback</strong>| No explicit labels |
+| <strong>Common Tasks</strong>| Clustering, dimensionality reduction |
 
-**Main Tasks:**| Task | Purpose | Output | Applications |
+<strong>Main Tasks:</strong>| Task | Purpose | Output | Applications |
 |------|---------|--------|--------------|
-| **Clustering**| Group similar items | Cluster assignments | Customer segmentation, document organization |
-| **Dimensionality Reduction**| Reduce feature space | Lower-dimensional representation | Visualization, noise reduction |
-| **Anomaly Detection**| Identify outliers | Anomaly scores | Fraud detection, system monitoring |
+| <strong>Clustering</strong>| Group similar items | Cluster assignments | Customer segmentation, document organization |
+| <strong>Dimensionality Reduction</strong>| Reduce feature space | Lower-dimensional representation | Visualization, noise reduction |
+| <strong>Anomaly Detection</strong>| Identify outliers | Anomaly scores | Fraud detection, system monitoring |
 
-**Popular Algorithms:**| Algorithm | Task | Use Case | Scalability |
+<strong>Popular Algorithms:</strong>| Algorithm | Task | Use Case | Scalability |
 |-----------|------|----------|-------------|
-| **K-Means**| Clustering | Customer segments | High |
-| **DBSCAN**| Clustering | Spatial data, arbitrary shapes | Medium |
-| **Hierarchical Clustering**| Clustering | Taxonomy creation | Low |
-| **PCA**| Dimensionality reduction | Feature extraction | High |
-| **t-SNE**| Visualization | 2D/3D projection | Medium |
-| **Autoencoders**| Feature learning | Compression, denoising | High |
+| <strong>K-Means</strong>| Clustering | Customer segments | High |
+| <strong>DBSCAN</strong>| Clustering | Spatial data, arbitrary shapes | Medium |
+| <strong>Hierarchical Clustering</strong>| Clustering | Taxonomy creation | Low |
+| <strong>PCA</strong>| Dimensionality reduction | Feature extraction | High |
+| <strong>t-SNE</strong>| Visualization | 2D/3D projection | Medium |
+| <strong>Autoencoders</strong>| Feature learning | Compression, denoising | High |
 
 ### 3. Semi-Supervised Learning
 
-**Definition:**Combines small amounts of labeled data with large amounts of unlabeled data.
+<strong>Definition:</strong>Combines small amounts of labeled data with large amounts of unlabeled data.
 
-**Motivation:**| Factor | Benefit |
+<strong>Motivation:</strong>| Factor | Benefit |
 |--------|---------|
-| **Cost**| Labeling is expensive and time-consuming |
-| **Availability**| Unlabeled data is abundant |
-| **Performance**| Often matches supervised with less labels |
+| <strong>Cost</strong>| Labeling is expensive and time-consuming |
+| <strong>Availability</strong>| Unlabeled data is abundant |
+| <strong>Performance</strong>| Often matches supervised with less labels |
 
-**Typical Ratio:**| Labeled | Unlabeled | Performance vs. Fully Supervised |
+<strong>Typical Ratio:</strong>| Labeled | Unlabeled | Performance vs. Fully Supervised |
 |---------|-----------|--------------------------------|
 | 10% | 90% | 80-90% |
 | 20% | 80% | 90-95% |
 | 50% | 50% | 95-98% |
 
-**Applications:**| Domain | Use Case | Benefit |
+<strong>Applications:</strong>| Domain | Use Case | Benefit |
 |--------|----------|---------|
-| **Computer Vision**| Image classification | Millions of images, few labels |
-| **NLP**| Text classification | Large text corpora |
-| **Speech Recognition**| Transcription | Limited transcribed audio |
+| <strong>Computer Vision</strong>| Image classification | Millions of images, few labels |
+| <strong>NLP</strong>| Text classification | Large text corpora |
+| <strong>Speech Recognition</strong>| Transcription | Limited transcribed audio |
 
 ### 4. Reinforcement Learning
 
-**Definition:**Agents learn optimal behavior through trial and error, receiving rewards or penalties.
+<strong>Definition:</strong>Agents learn optimal behavior through trial and error, receiving rewards or penalties.
 
-**Key Components:**| Component | Description | Example |
+<strong>Key Components:</strong>| Component | Description | Example |
 |-----------|-------------|---------|
-| **Agent**| Decision-maker | Robot, game player |
-| **Environment**| World agent interacts with | Game board, physical space |
-| **State**| Current situation | Board position, sensor readings |
-| **Action**| Agent's choice | Move piece, turn wheel |
-| **Reward**| Feedback signal | Points, penalties |
-| **Policy**| Strategy for choosing actions | Neural network, rules |
+| <strong>Agent</strong>| Decision-maker | Robot, game player |
+| <strong>Environment</strong>| World agent interacts with | Game board, physical space |
+| <strong>State</strong>| Current situation | Board position, sensor readings |
+| <strong>Action</strong>| Agent's choice | Move piece, turn wheel |
+| <strong>Reward</strong>| Feedback signal | Points, penalties |
+| <strong>Policy</strong>| Strategy for choosing actions | Neural network, rules |
 
-**Learning Loop:**```
+<strong>Learning Loop:</strong>```
 Agent observes State
     ↓
 Agent takes Action based on Policy
@@ -270,48 +270,48 @@ Check convergence or max epochs
 Trained Model
 ```
 
-**Hyperparameter Tuning:**| Method | Description | Efficiency |
+<strong>Hyperparameter Tuning:</strong>| Method | Description | Efficiency |
 |--------|-------------|------------|
-| **Grid Search**| Try all combinations | Low (thorough) |
-| **Random Search**| Sample randomly | Medium |
-| **Bayesian Optimization**| Smart sampling | High |
-| **Automated (AutoML)**| Algorithm-driven | Very High |
+| <strong>Grid Search</strong>| Try all combinations | Low (thorough) |
+| <strong>Random Search</strong>| Sample randomly | Medium |
+| <strong>Bayesian Optimization</strong>| Smart sampling | High |
+| <strong>Automated (AutoML)</strong>| Algorithm-driven | Very High |
 
-**Stage 6: Evaluation**
+<strong>Stage 6: Evaluation</strong>
 
-**Classification Metrics:**| Metric | Formula | Use Case |
+<strong>Classification Metrics:</strong>| Metric | Formula | Use Case |
 |--------|---------|----------|
-| **Accuracy**| (TP+TN) / Total | Balanced datasets |
-| **Precision**| TP / (TP+FP) | Minimize false positives |
-| **Recall**| TP / (TP+FN) | Minimize false negatives |
-| **F1 Score**| 2 × (Precision × Recall) / (P+R) | Balanced metric |
-| **AUC-ROC**| Area under ROC curve | Overall performance |
+| <strong>Accuracy</strong>| (TP+TN) / Total | Balanced datasets |
+| <strong>Precision</strong>| TP / (TP+FP) | Minimize false positives |
+| <strong>Recall</strong>| TP / (TP+FN) | Minimize false negatives |
+| <strong>F1 Score</strong>| 2 × (Precision × Recall) / (P+R) | Balanced metric |
+| <strong>AUC-ROC</strong>| Area under ROC curve | Overall performance |
 
-**Regression Metrics:**| Metric | Description | Sensitivity |
+<strong>Regression Metrics:</strong>| Metric | Description | Sensitivity |
 |--------|-------------|-------------|
-| **MAE**| Mean Absolute Error | Linear to errors |
-| **MSE**| Mean Squared Error | Penalizes large errors |
-| **RMSE**| Root Mean Squared Error | Same units as target |
-| **R²**| Coefficient of determination | Proportion of variance explained |
+| <strong>MAE</strong>| Mean Absolute Error | Linear to errors |
+| <strong>MSE</strong>| Mean Squared Error | Penalizes large errors |
+| <strong>RMSE</strong>| Root Mean Squared Error | Same units as target |
+| <strong>R²</strong>| Coefficient of determination | Proportion of variance explained |
 
-**Stage 7: Deployment**
+<strong>Stage 7: Deployment</strong>
 
-**Deployment Options:**| Method | Description | Use Case |
+<strong>Deployment Options:</strong>| Method | Description | Use Case |
 |--------|-------------|----------|
-| **Batch Prediction**| Scheduled inference | Daily reports, recommendations |
-| **Real-Time API**| On-demand predictions | Interactive applications |
-| **Edge Deployment**| On-device inference | Mobile apps, IoT |
-| **Streaming**| Continuous processing | Fraud detection, monitoring |
+| <strong>Batch Prediction</strong>| Scheduled inference | Daily reports, recommendations |
+| <strong>Real-Time API</strong>| On-demand predictions | Interactive applications |
+| <strong>Edge Deployment</strong>| On-device inference | Mobile apps, IoT |
+| <strong>Streaming</strong>| Continuous processing | Fraud detection, monitoring |
 
-**Stage 8: Monitoring and Maintenance**
+<strong>Stage 8: Monitoring and Maintenance</strong>
 
-**Monitoring Metrics:**| Metric | Purpose | Alert Threshold |
+<strong>Monitoring Metrics:</strong>| Metric | Purpose | Alert Threshold |
 |--------|---------|----------------|
-| **Prediction Accuracy**| Model performance | < 90% of baseline |
-| **Data Drift**| Input distribution changes | Significant divergence |
-| **Concept Drift**| Relationship changes | Accuracy drop > 5% |
-| **Latency**| Response time | > SLA requirements |
-| **Resource Usage**| Infrastructure costs | Budget exceeded |
+| <strong>Prediction Accuracy</strong>| Model performance | < 90% of baseline |
+| <strong>Data Drift</strong>| Input distribution changes | Significant divergence |
+| <strong>Concept Drift</strong>| Relationship changes | Accuracy drop > 5% |
+| <strong>Latency</strong>| Response time | > SLA requirements |
+| <strong>Resource Usage</strong>| Infrastructure costs | Budget exceeded |
 
 ## Key Algorithms Deep Dive
 
@@ -319,27 +319,27 @@ Trained Model
 
 | Algorithm | Type | Equation | Best For |
 |-----------|------|----------|----------|
-| **Linear Regression**| Regression | y = wx + b | Simple relationships |
-| **Logistic Regression**| Classification | σ(wx + b) | Binary classification |
-| **Lasso/Ridge**| Regularized | With L1/L2 penalty | Feature selection |
+| <strong>Linear Regression</strong>| Regression | y = wx + b | Simple relationships |
+| <strong>Logistic Regression</strong>| Classification | σ(wx + b) | Binary classification |
+| <strong>Lasso/Ridge</strong>| Regularized | With L1/L2 penalty | Feature selection |
 
 ### Tree-Based Models
 
 | Algorithm | Approach | Advantages | Disadvantages |
 |-----------|----------|------------|---------------|
-| **Decision Tree**| Single tree | Interpretable, handles non-linearity | Overfitting |
-| **Random Forest**| Ensemble of trees | Robust, accurate | Less interpretable |
-| **Gradient Boosting**| Sequential trees | State-of-the-art accuracy | Slow training |
-| **XGBoost/LightGBM**| Optimized boosting | Fast, scalable | Complexity |
+| <strong>Decision Tree</strong>| Single tree | Interpretable, handles non-linearity | Overfitting |
+| <strong>Random Forest</strong>| Ensemble of trees | Robust, accurate | Less interpretable |
+| <strong>Gradient Boosting</strong>| Sequential trees | State-of-the-art accuracy | Slow training |
+| <strong>XGBoost/LightGBM</strong>| Optimized boosting | Fast, scalable | Complexity |
 
 ### Neural Networks
 
 | Type | Architecture | Use Case | Depth |
 |------|-------------|----------|-------|
-| **Feedforward**| Fully connected layers | Tabular data | 2-5 layers |
-| **CNN**| Convolutional layers | Images | 10-100+ layers |
-| **RNN/LSTM**| Recurrent connections | Sequences | 2-10 layers |
-| **Transformer**| Attention mechanisms | Language | 12-100+ layers |
+| <strong>Feedforward</strong>| Fully connected layers | Tabular data | 2-5 layers |
+| <strong>CNN</strong>| Convolutional layers | Images | 10-100+ layers |
+| <strong>RNN/LSTM</strong>| Recurrent connections | Sequences | 2-10 layers |
+| <strong>Transformer</strong>| Attention mechanisms | Language | 12-100+ layers |
 
 ## Benefits and Advantages
 
@@ -347,21 +347,21 @@ Trained Model
 
 | Benefit | Description | Measurable Impact |
 |---------|-------------|------------------|
-| **Automation**| Reduce manual work | 30-70% efficiency gain |
-| **Accuracy**| Better than human for specific tasks | 10-30% error reduction |
-| **Scalability**| Handle massive data volumes | Process millions of records |
-| **Speed**| Real-time decisions | Millisecond predictions |
-| **Cost Reduction**| Optimize operations | 20-50% cost savings |
-| **Personalization**| Tailored experiences | 10-30% engagement increase |
+| <strong>Automation</strong>| Reduce manual work | 30-70% efficiency gain |
+| <strong>Accuracy</strong>| Better than human for specific tasks | 10-30% error reduction |
+| <strong>Scalability</strong>| Handle massive data volumes | Process millions of records |
+| <strong>Speed</strong>| Real-time decisions | Millisecond predictions |
+| <strong>Cost Reduction</strong>| Optimize operations | 20-50% cost savings |
+| <strong>Personalization</strong>| Tailored experiences | 10-30% engagement increase |
 
 ### Technical Benefits
 
 | Benefit | Impact |
 |---------|--------|
-| **Pattern Discovery**| Find non-obvious relationships |
-| **Continuous Improvement**| Self-optimization over time |
-| **Adaptability**| Handle new scenarios |
-| **Multi-dimensional Analysis**| Process complex data |
+| <strong>Pattern Discovery</strong>| Find non-obvious relationships |
+| <strong>Continuous Improvement</strong>| Self-optimization over time |
+| <strong>Adaptability</strong>| Handle new scenarios |
+| <strong>Multi-dimensional Analysis</strong>| Process complex data |
 
 ## Challenges and Limitations
 
@@ -369,29 +369,29 @@ Trained Model
 
 | Challenge | Description | Mitigation |
 |-----------|-------------|------------|
-| **Data Quality**| Garbage in, garbage out | Rigorous cleaning, validation |
-| **Overfitting**| Memorizing training data | Regularization, cross-validation |
-| **Underfitting**| Too simple model | Increase complexity, more features |
-| **Bias-Variance Tradeoff**| Balance accuracy and generalization | Model selection, ensemble |
-| **Computational Cost**| Training time and resources | Cloud computing, distributed training |
+| <strong>Data Quality</strong>| Garbage in, garbage out | Rigorous cleaning, validation |
+| <strong>Overfitting</strong>| Memorizing training data | Regularization, cross-validation |
+| <strong>Underfitting</strong>| Too simple model | Increase complexity, more features |
+| <strong>Bias-Variance Tradeoff</strong>| Balance accuracy and generalization | Model selection, ensemble |
+| <strong>Computational Cost</strong>| Training time and resources | Cloud computing, distributed training |
 
 ### Data Challenges
 
 | Challenge | Impact | Solution |
 |-----------|--------|----------|
-| **Insufficient Data**| Poor performance | Data augmentation, transfer learning |
-| **Imbalanced Classes**| Bias toward majority | Resampling, weighted loss |
-| **High Dimensionality**| Curse of dimensionality | Feature selection, dimensionality reduction |
-| **Noisy Labels**| Incorrect learning | Label cleaning, robust algorithms |
+| <strong>Insufficient Data</strong>| Poor performance | Data augmentation, transfer learning |
+| <strong>Imbalanced Classes</strong>| Bias toward majority | Resampling, weighted loss |
+| <strong>High Dimensionality</strong>| Curse of dimensionality | Feature selection, dimensionality reduction |
+| <strong>Noisy Labels</strong>| Incorrect learning | Label cleaning, robust algorithms |
 
 ### Ethical and Social Challenges
 
 | Challenge | Risk | Responsibility |
 |-----------|------|----------------|
-| **Bias and Fairness**| Discriminatory outcomes | Bias audits, diverse training data |
-| **Privacy**| Data misuse | Differential privacy, federated learning |
-| **Explainability**| Black box decisions | Interpretable models, SHAP, LIME |
-| **Job Displacement**| Automation impact | Reskilling programs |
+| <strong>Bias and Fairness</strong>| Discriminatory outcomes | Bias audits, diverse training data |
+| <strong>Privacy</strong>| Data misuse | Differential privacy, federated learning |
+| <strong>Explainability</strong>| Black box decisions | Interpretable models, SHAP, LIME |
+| <strong>Job Displacement</strong>| Automation impact | Reskilling programs |
 
 ## Industry Applications
 
@@ -399,46 +399,46 @@ Trained Model
 
 | Application | ML Type | Impact |
 |-------------|---------|--------|
-| **Disease Diagnosis**| Supervised classification | Early detection, accuracy |
-| **Drug Discovery**| Reinforcement learning | Accelerated research |
-| **Patient Monitoring**| Anomaly detection | Proactive intervention |
-| **Treatment Personalization**| Clustering, regression | Improved outcomes |
+| <strong>Disease Diagnosis</strong>| Supervised classification | Early detection, accuracy |
+| <strong>Drug Discovery</strong>| Reinforcement learning | Accelerated research |
+| <strong>Patient Monitoring</strong>| Anomaly detection | Proactive intervention |
+| <strong>Treatment Personalization</strong>| Clustering, regression | Improved outcomes |
 
 ### Finance
 
 | Application | ML Type | Benefit |
 |-------------|---------|---------|
-| **Fraud Detection**| Anomaly detection | 70-90% detection rate |
-| **Credit Scoring**| Supervised classification | Fair, accurate assessments |
-| **Algorithmic Trading**| Reinforcement learning | Optimized returns |
-| **Risk Management**| Regression, simulation | Better predictions |
+| <strong>Fraud Detection</strong>| Anomaly detection | 70-90% detection rate |
+| <strong>Credit Scoring</strong>| Supervised classification | Fair, accurate assessments |
+| <strong>Algorithmic Trading</strong>| Reinforcement learning | Optimized returns |
+| <strong>Risk Management</strong>| Regression, simulation | Better predictions |
 
 ### Retail and E-commerce
 
 | Application | ML Type | Business Value |
 |-------------|---------|---------------|
-| **Recommendation Systems**| Collaborative filtering | 20-35% revenue increase |
-| **Demand Forecasting**| Time series regression | Inventory optimization |
-| **Customer Segmentation**| Clustering | Targeted marketing |
-| **Dynamic Pricing**| Reinforcement learning | Margin optimization |
+| <strong>Recommendation Systems</strong>| Collaborative filtering | 20-35% revenue increase |
+| <strong>Demand Forecasting</strong>| Time series regression | Inventory optimization |
+| <strong>Customer Segmentation</strong>| Clustering | Targeted marketing |
+| <strong>Dynamic Pricing</strong>| Reinforcement learning | Margin optimization |
 
 ### Manufacturing
 
 | Application | ML Type | Outcome |
 |-------------|---------|---------|
-| **Predictive Maintenance**| Supervised learning | 30-50% downtime reduction |
-| **Quality Control**| Computer vision | 99%+ defect detection |
-| **Supply Chain Optimization**| Regression, optimization | Cost savings |
-| **Process Optimization**| Reinforcement learning | Efficiency gains |
+| <strong>Predictive Maintenance</strong>| Supervised learning | 30-50% downtime reduction |
+| <strong>Quality Control</strong>| Computer vision | 99%+ defect detection |
+| <strong>Supply Chain Optimization</strong>| Regression, optimization | Cost savings |
+| <strong>Process Optimization</strong>| Reinforcement learning | Efficiency gains |
 
 ### Transportation
 
 | Application | ML Type | Progress |
 |-------------|---------|----------|
-| **Autonomous Vehicles**| Deep RL, computer vision | Level 2-4 autonomy |
-| **Route Optimization**| Reinforcement learning | Fuel/time savings |
-| **Traffic Prediction**| Time series forecasting | Congestion management |
-| **Demand Prediction**| Regression | Resource allocation |
+| <strong>Autonomous Vehicles</strong>| Deep RL, computer vision | Level 2-4 autonomy |
+| <strong>Route Optimization</strong>| Reinforcement learning | Fuel/time savings |
+| <strong>Traffic Prediction</strong>| Time series forecasting | Congestion management |
+| <strong>Demand Prediction</strong>| Regression | Resource allocation |
 
 ## Best Practices
 
@@ -446,47 +446,47 @@ Trained Model
 
 | Practice | Benefit |
 |----------|---------|
-| **Start Simple**| Establish baseline, faster iteration |
-| **Version Control**| Track experiments, reproducibility |
-| **Cross-Validation**| Robust evaluation |
-| **Feature Engineering**| Often more impactful than complex models |
-| **Ensemble Methods**| Combine models for better performance |
-| **Regular Monitoring**| Detect degradation early |
+| <strong>Start Simple</strong>| Establish baseline, faster iteration |
+| <strong>Version Control</strong>| Track experiments, reproducibility |
+| <strong>Cross-Validation</strong>| Robust evaluation |
+| <strong>Feature Engineering</strong>| Often more impactful than complex models |
+| <strong>Ensemble Methods</strong>| Combine models for better performance |
+| <strong>Regular Monitoring</strong>| Detect degradation early |
 
 ### Operational Best Practices
 
 | Practice | Purpose |
 |----------|---------|
-| **A/B Testing**| Validate improvements |
-| **Gradual Rollout**| Minimize risk |
-| **Model Registry**| Track versions, reproducibility |
-| **Automated Retraining**| Keep models current |
-| **Explainability Tools**| Build trust, debug |
-| **Security Audits**| Protect against attacks |
+| <strong>A/B Testing</strong>| Validate improvements |
+| <strong>Gradual Rollout</strong>| Minimize risk |
+| <strong>Model Registry</strong>| Track versions, reproducibility |
+| <strong>Automated Retraining</strong>| Keep models current |
+| <strong>Explainability Tools</strong>| Build trust, debug |
+| <strong>Security Audits</strong>| Protect against attacks |
 
 ## Comparison: ML Types Summary
 
 | Type | Data Requirement | Goal | Use Case | Learning Signal |
 |------|-----------------|------|----------|----------------|
-| **Supervised**| Labeled | Predict labels | Classification, regression | Explicit labels |
-| **Unsupervised**| Unlabeled | Find structure | Clustering, dimensionality reduction | Internal patterns |
-| **Semi-Supervised**| Few labels + unlabeled | Leverage both | Large datasets, limited labels | Partial labels |
-| **Reinforcement**| Interactions | Maximize reward | Sequential decisions | Rewards/penalties |
-| **Self-Supervised**| Unlabeled | Learn representations | Transfer learning | Self-generated |
+| <strong>Supervised</strong>| Labeled | Predict labels | Classification, regression | Explicit labels |
+| <strong>Unsupervised</strong>| Unlabeled | Find structure | Clustering, dimensionality reduction | Internal patterns |
+| <strong>Semi-Supervised</strong>| Few labels + unlabeled | Leverage both | Large datasets, limited labels | Partial labels |
+| <strong>Reinforcement</strong>| Interactions | Maximize reward | Sequential decisions | Rewards/penalties |
+| <strong>Self-Supervised</strong>| Unlabeled | Learn representations | Transfer learning | Self-generated |
 
 ## Frequently Asked Questions
 
-**Q: What's the difference between machine learning and traditional programming?**A: Traditional programming uses explicit rules ("if-then" logic). Machine learning learns patterns from data and creates its own rules.
+<strong>Q: What's the difference between machine learning and traditional programming?</strong>A: Traditional programming uses explicit rules ("if-then" logic). Machine learning learns patterns from data and creates its own rules.
 
-**Q: How much data is needed for machine learning?**A: Varies by task: simple tasks (100s of examples), standard supervised learning (1,000-100,000), deep learning (100,000-millions).
+<strong>Q: How much data is needed for machine learning?</strong>A: Varies by task: simple tasks (100s of examples), standard supervised learning (1,000-100,000), deep learning (100,000-millions).
 
-**Q: Can machine learning work with small datasets?**A: Yes, using transfer learning, data augmentation, or simpler algorithms (linear models, small trees).
+<strong>Q: Can machine learning work with small datasets?</strong>A: Yes, using transfer learning, data augmentation, or simpler algorithms (linear models, small trees).
 
-**Q: What skills are required for machine learning?**A: Programming (Python), mathematics (statistics, linear algebra), domain knowledge, data wrangling, and ML theory.
+<strong>Q: What skills are required for machine learning?</strong>A: Programming (Python), mathematics (statistics, linear algebra), domain knowledge, data wrangling, and ML theory.
 
-**Q: Is machine learning always better than rule-based systems?**A: No. Simple, well-understood problems often work better with rules. ML excels at complex, data-rich scenarios.
+<strong>Q: Is machine learning always better than rule-based systems?</strong>A: No. Simple, well-understood problems often work better with rules. ML excels at complex, data-rich scenarios.
 
-**Q: How do you prevent overfitting?**A: Cross-validation, regularization, more data, simpler models, dropout, early stopping, and ensemble methods.
+<strong>Q: How do you prevent overfitting?</strong>A: Cross-validation, regularization, more data, simpler models, dropout, early stopping, and ensemble methods.
 
 ## References
 

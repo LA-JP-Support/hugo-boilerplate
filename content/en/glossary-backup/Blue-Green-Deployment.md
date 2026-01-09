@@ -11,9 +11,9 @@ draft: false
 ---
 ## 1. Definition: What is Blue-Green Deployment?
 
-A **blue-green deployment**is a deployment strategy designed to minimize downtime and reduce risks associated with releasing new versions of software. It involves running two separate, but otherwise identical, environments known as "blue" (currently live) and "green" (new or candidate). At any given time, only one environment serves production traffic. When a new version is ready, it is deployed to the idle environment (green), tested, and once validated, traffic is switched from blue to green, usually with zero downtime. If issues occur, the switch can be instantly reversed.
+A <strong>blue-green deployment</strong>is a deployment strategy designed to minimize downtime and reduce risks associated with releasing new versions of software. It involves running two separate, but otherwise identical, environments known as "blue" (currently live) and "green" (new or candidate). At any given time, only one environment serves production traffic. When a new version is ready, it is deployed to the idle environment (green), tested, and once validated, traffic is switched from blue to green, usually with zero downtime. If issues occur, the switch can be instantly reversed.
 
-**Key characteristics:**- Two identical production environments: blue (active) and green (idle/candidate).
+<strong>Key characteristics:</strong>- Two identical production environments: blue (active) and green (idle/candidate).
 - Only one environment receives live traffic at a time.
 - Enables seamless switching and instant rollback.
 - Supports zero-downtime releases and robust disaster recovery.
@@ -26,15 +26,15 @@ The process is systematic and minimizes risk by allowing for controlled, reversi
 
 | Step                    | Description                                                                                                 |
 |-------------------------|-------------------------------------------------------------------------------------------------------------|
-| **1. Prepare Release**| Develop and test the new application version in a staging/dev environment.                                  |
-| **2. Deploy to Green**| Deploy the new version to the green environment, which is a production clone and not live yet.              |
-| **3. Test Green**| Run comprehensive tests, including unit, integration, UAT, and performance, on the green environment.       |
-| **4. Switch Traffic**| Redirect production traffic from blue to green using a load balancer, DNS update, or service mesh.          |
-| **5. Monitor**| Monitor the green environment closely for errors, performance, and user impact.                             |
-| **6. Rollback (if needed)**| If issues arise, quickly switch traffic back to the blue environment.                                |
-| **7. Cleanup/Rotate**| After green is validated as stable, blue can be decommissioned, repurposed, or kept as backup.              |
+| <strong>1. Prepare Release</strong>| Develop and test the new application version in a staging/dev environment.                                  |
+| <strong>2. Deploy to Green</strong>| Deploy the new version to the green environment, which is a production clone and not live yet.              |
+| <strong>3. Test Green</strong>| Run comprehensive tests, including unit, integration, UAT, and performance, on the green environment.       |
+| <strong>4. Switch Traffic</strong>| Redirect production traffic from blue to green using a load balancer, DNS update, or service mesh.          |
+| <strong>5. Monitor</strong>| Monitor the green environment closely for errors, performance, and user impact.                             |
+| <strong>6. Rollback (if needed)</strong>| If issues arise, quickly switch traffic back to the blue environment.                                |
+| <strong>7. Cleanup/Rotate</strong>| After green is validated as stable, blue can be decommissioned, repurposed, or kept as backup.              |
 
-**Illustration:**```
+<strong>Illustration:</strong>```
 [Users]
    |        (traffic switch)
    |------> [Blue Environment] -----------|
@@ -52,7 +52,7 @@ The process is systematic and minimizes risk by allowing for controlled, reversi
 - **Traffic Switching:**Redirecting user traffic from one environment to another, typically via a load balancer or DNS update.
 - **Rollback:**Instantly reverting traffic to the previous stable environment if issues arise.
 - **Identical Production Environments:**Both blue and green must have equivalent infrastructure, configuration, and dependencies.
-- **Deployment Automation:**Utilizing CI/CD and [Infrastructure as Code (IaC)](/en/glossary/infrastructure-as-code--iac-/) for repeatable, hands-off deployments and traffic switching.
+- **Deployment Automation:**Utilizing CI/CD and Infrastructure as Code (IaC) for repeatable, hands-off deployments and traffic switching.
 - **Continuous Deployment / Delivery:**Automated pipelines that integrate blue-green deployment for faster, safer releases.
 - **Disaster Recovery:**The idle environment serves as a hot standby in case of catastrophic failures.
 <a id="benefits"></a>
@@ -149,9 +149,9 @@ spec:
 
 ### On Cloud Platforms
 
-- **AWS:**AWS enables blue-green deployments using [CodeDeploy with Elastic Load Balancing](https://docs.aws.amazon.com/whitepapers/latest/blue-green-deployments/introduction.html), orchestrating traffic shift and health checks.
+- <strong>AWS:</strong>AWS enables blue-green deployments using [CodeDeploy with Elastic Load Balancing](https://docs.aws.amazon.com/whitepapers/latest/blue-green-deployments/introduction.html), orchestrating traffic shift and health checks.
 
-- **Azure:**Azure Container Apps utilizes [revisions and traffic weights](https://learn.microsoft.com/en-us/azure/container-apps/blue-green-deployment) to manage blue-green strategies.
+- <strong>Azure:</strong>Azure Container Apps utilizes [revisions and traffic weights](https://learn.microsoft.com/en-us/azure/container-apps/blue-green-deployment) to manage blue-green strategies.
 
 ### With Infrastructure as Code (IaC)
 
@@ -165,59 +165,59 @@ While application environments can be duplicated, most blue-green deployments sh
 
 | Issue                                   | Solution/Best Practice                                                      |
 |------------------------------------------|-----------------------------------------------------------------------------|
-| **Schema Changes**| Ensure all changes are backward-compatible.                                 |
-| **Concurrent Application Versions**| Both blue and green must work with the same schema/data during transition.   |
-| **Data Migration**| Use migration tools to minimize lock time and risk.                         |
-| **Rollback Safety**| Avoid destructive schema changes until old version is decommissioned.        |
+| <strong>Schema Changes</strong>| Ensure all changes are backward-compatible.                                 |
+| <strong>Concurrent Application Versions</strong>| Both blue and green must work with the same schema/data during transition.   |
+| <strong>Data Migration</strong>| Use migration tools to minimize lock time and risk.                         |
+| <strong>Rollback Safety</strong>| Avoid destructive schema changes until old version is decommissioned.        |
 
 #### AWS RDS Blue/Green Deployments
 
-- **Green environment**is a production clone, kept in sync via physical or logical replication ([details](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments-overview.html)).
-- **Benefits:**Test changes independently, switch with <1 minute downtime and no data loss.
-- **Limitations:**- No support for some features (e.g., RDS Proxy, cross-region replicas)
+- <strong>Green environment</strong>is a production clone, kept in sync via physical or logical replication ([details](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments-overview.html)).
+- <strong>Benefits:</strong>Test changes independently, switch with <1 minute downtime and no data loss.
+- <strong>Limitations:</strong>- No support for some features (e.g., RDS Proxy, cross-region replicas)
   - Schema changes must be backward-compatible ([limitations](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments-considerations.html))
   - Logical replication may not support unlogged tables or certain Postgres features.
   - Switchover requires careful resource and slot management; replication lag is possible if resources are undersized.
 
 #### General Best Practices
 
-- **Backward-Compatible Migrations:**Add columns/tables, but do not remove/rename until all environments are migrated.
-- **Feature Toggles:**Decouple database and code changes.
-- **Database Versioning:**Use tools like [Liquibase](https://www.liquibase.com/blog/blue-green-deployments-liquibase) to automate schema migrations and rollback.
+- <strong>Backward-Compatible Migrations:</strong>Add columns/tables, but do not remove/rename until all environments are migrated.
+- <strong>Feature Toggles:</strong>Decouple database and code changes.
+- <strong>Database Versioning:</strong>Use tools like [Liquibase](https://www.liquibase.com/blog/blue-green-deployments-liquibase) to automate schema migrations and rollback.
 <a id="best-practices"></a>
 ## 9. Best Practices
 
 | Best Practice                             | Description                                                                                                      |
 |-------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| **Automate Everything**| Use CI/CD tools (Jenkins, GitHub Actions, etc.) and IaC for deployments and environment setup.                   |
-| **Robust Monitoring & Observability**| Implement real-time monitoring (Prometheus, Grafana, Datadog) for both environments and during traffic switch.   |
-| **Thorough Testing Before Cutover**| Run all tests (unit, integration, performance, UAT) on the green environment.                                    |
-| **Gradual Traffic Shifting**| Optionally shift traffic gradually (canary style) before full cutover.                                           |
-| **Maintain Database Compatibility**| Use phased, backward-compatible migrations for schema changes.                                                   |
-| **Plan & Regularly Test Rollbacks**| Document, automate, and rehearse rollback procedures.                                                            |
-| **Secure Both Environments**| Patch, scan, and enforce security policies for blue and green equally.                                           |
-| **Cleanup & Cost Control**| Decommission unused environments post-deployment to avoid unnecessary costs.                                     |
+| <strong>Automate Everything</strong>| Use CI/CD tools (Jenkins, GitHub Actions, etc.) and IaC for deployments and environment setup.                   |
+| <strong>Robust Monitoring & Observability</strong>| Implement real-time monitoring (Prometheus, Grafana, Datadog) for both environments and during traffic switch.   |
+| <strong>Thorough Testing Before Cutover</strong>| Run all tests (unit, integration, performance, UAT) on the green environment.                                    |
+| <strong>Gradual Traffic Shifting</strong>| Optionally shift traffic gradually (canary style) before full cutover.                                           |
+| <strong>Maintain Database Compatibility</strong>| Use phased, backward-compatible migrations for schema changes.                                                   |
+| <strong>Plan & Regularly Test Rollbacks</strong>| Document, automate, and rehearse rollback procedures.                                                            |
+| <strong>Secure Both Environments</strong>| Patch, scan, and enforce security policies for blue and green equally.                                           |
+| <strong>Cleanup & Cost Control</strong>| Decommission unused environments post-deployment to avoid unnecessary costs.                                     |
 <a id="comparison"></a>
 ## 10. Comparison with Other Deployment Strategies
 
 | Deployment Strategy    | Environments Needed | Traffic Switch | Rollback Speed | Gradual Exposure | Downtime Risk | Complexity | Use Case                              |
 |-----------------------|--------------------|---------------|---------------|------------------|--------------|-----------|---------------------------------------|
-| **Blue-Green**| 2                  | All-at-once   | Instant       | No (unless combined) | Low          | Medium    | Zero-downtime, fast rollback          |
-| **Canary**| 1+                 | Gradual       | Fast          | Yes              | Low          | High      | Risk-averse, incremental rollouts     |
-| **Rolling**| 1                  | Sequential    | Moderate      | Yes              | Low-moderate | Medium    | Resource-constrained, large clusters  |
-| **A/B Testing**| 2+                 | Partial       | N/A           | Yes (by design)   | Low          | High      | Feature experimentation, user studies |
+| <strong>Blue-Green</strong>| 2                  | All-at-once   | Instant       | No (unless combined) | Low          | Medium    | Zero-downtime, fast rollback          |
+| <strong>Canary</strong>| 1+                 | Gradual       | Fast          | Yes              | Low          | High      | Risk-averse, incremental rollouts     |
+| <strong>Rolling</strong>| 1                  | Sequential    | Moderate      | Yes              | Low-moderate | Medium    | Resource-constrained, large clusters  |
+| <strong>A/B Testing</strong>| 2+                 | Partial       | N/A           | Yes (by design)   | Low          | High      | Feature experimentation, user studies |
 <a id="glossary"></a>
 ## 11. Glossary of Related Terms
 
-- **Traffic Switching:**Redirecting live requests from one environment to another during deployment.
-- **Deployment Automation:**Use of scripts and tools to remove manual intervention from deployment processes.
-- **Continuous Deployment:**Automatically deploying every code change that passes automated tests.
-- **Disaster Recovery:**Procedures and infrastructure to quickly restore service after failure.
-- **Identical Production Environments:**Environments that match configuration, dependencies, and infrastructure as closely as possible.
-- **Rollback:**The process of reverting to a previous stable state/version.
-- **Infrastructure as Code (IaC):**Managing and provisioning computing resources through machine-readable definition files.
-- **Gradual Traffic Shift:**Incrementally increasing the percentage of traffic directed to a new environment, rather than switching all at once.
-- **Load Balancer:**Hardware or software that distributes incoming traffic across multiple servers/environments.
+- <strong>Traffic Switching:</strong>Redirecting live requests from one environment to another during deployment.
+- <strong>Deployment Automation:</strong>Use of scripts and tools to remove manual intervention from deployment processes.
+- <strong>Continuous Deployment:</strong>Automatically deploying every code change that passes automated tests.
+- <strong>Disaster Recovery:</strong>Procedures and infrastructure to quickly restore service after failure.
+- <strong>Identical Production Environments:</strong>Environments that match configuration, dependencies, and infrastructure as closely as possible.
+- <strong>Rollback:</strong>The process of reverting to a previous stable state/version.
+- <strong>Infrastructure as Code (IaC):</strong>Managing and provisioning computing resources through machine-readable definition files.
+- <strong>Gradual Traffic Shift:</strong>Incrementally increasing the percentage of traffic directed to a new environment, rather than switching all at once.
+- <strong>Load Balancer:</strong>Hardware or software that distributes incoming traffic across multiple servers/environments.
 
 <a id="references"></a>
 ## 12. Further Reading and References

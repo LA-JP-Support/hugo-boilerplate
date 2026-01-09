@@ -17,23 +17,23 @@ Entity extraction, also referred to as named entity recognition (NER), is a foun
 For example, in the sentence: "Apple Inc. announced a new product in San Francisco on September 12, 2023."
 
 A robust entity extraction system would identify:
-- **Organization:**Apple Inc.
-- **Location:**San Francisco
-- **Date:**September 12, 2023
+- <strong>Organization:</strong>Apple Inc.
+- <strong>Location:</strong>San Francisco
+- <strong>Date:</strong>September 12, 2023
 
 This structured output can then be leveraged for database population, analytics, search, or triggered automated processes. Entity extraction bridges the gap between the vast amounts of unstructured data organizations collect—emails, legal documents, chat logs, reports, reviews, and social media posts—and the structured data formats required by traditional software systems for analytics, search, and automation.
 
 ## Why Entity Extraction Matters
 
-**Automation of Data Entry:**Reduces manual handling and errors, dramatically increasing efficiency in document processing, invoice management, and customer onboarding.
+<strong>Automation of Data Entry:</strong>Reduces manual handling and errors, dramatically increasing efficiency in document processing, invoice management, and customer onboarding.
 
-**Enhanced Search and Retrieval:**Enables semantic, context-aware, and faceted search based on recognized entities, improving information discovery.
+<strong>Enhanced Search and Retrieval:</strong>Enables semantic, context-aware, and faceted search based on recognized entities, improving information discovery.
 
-**Business Intelligence:**Powers trend analysis, sentiment monitoring, and market intelligence by structuring critical data from unstructured sources.
+<strong>Business Intelligence:</strong>Powers trend analysis, sentiment monitoring, and market intelligence by structuring critical data from unstructured sources.
 
-**Conversational AI:**Extracts user intents and details to automate support, personalization, and workflow orchestration in chatbots and virtual assistants.
+<strong>Conversational AI:</strong>Extracts user intents and details to automate support, personalization, and workflow orchestration in chatbots and virtual assistants.
 
-**Compliance and Risk Management:**Identifies sensitive information for redaction and flags compliance-relevant entities for regulatory adherence.
+<strong>Compliance and Risk Management:</strong>Identifies sensitive information for redaction and flags compliance-relevant entities for regulatory adherence.
 
 ## How Entity Extraction Works
 
@@ -41,9 +41,9 @@ This structured output can then be leveraged for database population, analytics,
 Acquisition of raw text data from emails, PDFs, chat logs, contracts, web pages, or other sources.
 
 ### Step 2: Preprocessing
-- **Tokenization:**Splits text into tokens (words, numbers, punctuation)
-- **Normalization:**Converts text to consistent format (lowercasing, stemming)
-- **Part-of-Speech Tagging:**Assigns grammatical tags to each token, aiding entity recognition
+- <strong>Tokenization:</strong>Splits text into tokens (words, numbers, punctuation)
+- <strong>Normalization:</strong>Converts text to consistent format (lowercasing, stemming)
+- <strong>Part-of-Speech Tagging:</strong>Assigns grammatical tags to each token, aiding entity recognition
 
 ### Step 3: Entity Detection
 Identifies candidate tokens or spans (words or phrases) that are likely to be entities.
@@ -54,32 +54,32 @@ Assigns each detected entity a category/type (person, organization, date, locati
 ### Step 5: Disambiguation and Linking
 Resolves ambiguities (distinguishing "Paris" the city from "Paris" the person) and may link entities to external knowledge bases or ontologies.
 
-**Example Workflow:**Input: "Apple was founded by Steve Jobs in California in 1976."
+<strong>Example Workflow:</strong>Input: "Apple was founded by Steve Jobs in California in 1976."
 
-**Entities Recognized:**- Organization: Apple
+<strong>Entities Recognized:</strong>- Organization: Apple
 - Person: Steve Jobs
 - Location: California
 - Date: 1976
 
 ## Common Entity Types
 
-**Person:**Names of individuals (e.g., "Marie Curie")
+<strong>Person:</strong>Names of individuals (e.g., "Marie Curie")
 
-**Organization:**Companies, institutions, government bodies (e.g., "UNESCO", "Apple Inc.")
+<strong>Organization:</strong>Companies, institutions, government bodies (e.g., "UNESCO", "Apple Inc.")
 
-**Location:**Cities, countries, landmarks, geopolitical entities (e.g., "Tokyo", "Mount Everest")
+<strong>Location:</strong>Cities, countries, landmarks, geopolitical entities (e.g., "Tokyo", "Mount Everest")
 
-**Date/Time:**Temporal expressions ("July 2021", "last Friday")
+<strong>Date/Time:</strong>Temporal expressions ("July 2021", "last Friday")
 
-**Numerical Values:**Amounts, percentages, measurements ("$1 billion", "23%")
+<strong>Numerical Values:</strong>Amounts, percentages, measurements ("$1 billion", "23%")
 
-**Contact Information:**Emails, phone numbers, addresses
+<strong>Contact Information:</strong>Emails, phone numbers, addresses
 
-**Products:**Goods, software, or hardware ("iPhone", "Photoshop")
+<strong>Products:</strong>Goods, software, or hardware ("iPhone", "Photoshop")
 
-**Events:**Named events ("World Cup", "CES 2023")
+<strong>Events:</strong>Named events ("World Cup", "CES 2023")
 
-**Domain-Specific Types:**Legal terms, medical codes, financial instruments, and other specialized entities
+<strong>Domain-Specific Types:</strong>Legal terms, medical codes, financial instruments, and other specialized entities
 
 Custom entity types are common for domain-specific needs, such as drugs in healthcare, ticker symbols in finance, or legal citations in law.
 
@@ -102,41 +102,41 @@ Combine the strengths of rule-based, dictionary, and machine learning methods. U
 
 ## Evaluation Metrics
 
-**Precision:**Of the entities extracted, what proportion are correct?
+<strong>Precision:</strong>Of the entities extracted, what proportion are correct?
 
-**Recall:**Of all correct entities in the text, what proportion were extracted?
+<strong>Recall:</strong>Of all correct entities in the text, what proportion were extracted?
 
-**F1 Score:**The harmonic mean of precision and recall, balancing the two.
+<strong>F1 Score:</strong>The harmonic mean of precision and recall, balancing the two.
 
-**Entity-level vs. Token-level Evaluation:**Scoring may be done at the exact span (entity-level) or token-by-token basis.
+<strong>Entity-level vs. Token-level Evaluation:</strong>Scoring may be done at the exact span (entity-level) or token-by-token basis.
 
-**Example:**If a system finds 10 entities, 8 of which are correct (precision = 0.8), but there were 12 correct entities in total (recall = 0.67), its F1 score is approximately 0.73.
+<strong>Example:</strong>If a system finds 10 entities, 8 of which are correct (precision = 0.8), but there were 12 correct entities in total (recall = 0.67), its F1 score is approximately 0.73.
 
 Scoring must consider both correct boundary detection (e.g., "John Smith" vs. "John") and type labeling (PER, LOC, ORG, etc.).
 
 ## Use Cases and Applications
 
 ### Business and Operations
-- **Invoice Processing:**Extract invoice numbers, dates, supplier names, and amounts from scanned invoices
-- **Contract Analytics:**Identify parties, obligations, dates, and clauses within legal agreements
-- **Customer Onboarding:**Automate KYC by extracting names, addresses, and IDs from forms
-- **Email Management:**Pull order numbers, appointment times, and contact details to automate ticketing
+- <strong>Invoice Processing:</strong>Extract invoice numbers, dates, supplier names, and amounts from scanned invoices
+- <strong>Contract Analytics:</strong>Identify parties, obligations, dates, and clauses within legal agreements
+- <strong>Customer Onboarding:</strong>Automate KYC by extracting names, addresses, and IDs from forms
+- <strong>Email Management:</strong>Pull order numbers, appointment times, and contact details to automate ticketing
 
 ### Customer Service & Chatbots
-- **Intent and Slot Extraction:**Recognize account numbers, issue types, or product names in support chats
-- **Personalization:**Extract user preferences, locations, or purchase history for tailored responses
-- **Task Automation:**Extract details required for booking, scheduling, or order tracking
+- <strong>Intent and Slot Extraction:</strong>Recognize account numbers, issue types, or product names in support chats
+- <strong>Personalization:</strong>Extract user preferences, locations, or purchase history for tailored responses
+- <strong>Task Automation:</strong>Extract details required for booking, scheduling, or order tracking
 
 ### Analytics and Research
-- **Business Intelligence:**Extract organizations, locations, and event times from news for competitive analysis
-- **Social Media Monitoring:**Detect brand, product, or location mentions to gauge sentiment and trends
-- **Legal Research:**Tag judges, attorneys, parties, and legal citations in court documents
+- <strong>Business Intelligence:</strong>Extract organizations, locations, and event times from news for competitive analysis
+- <strong>Social Media Monitoring:</strong>Detect brand, product, or location mentions to gauge sentiment and trends
+- <strong>Legal Research:</strong>Tag judges, attorneys, parties, and legal citations in court documents
 
 ### Advanced Applications
-- **Relationship Extraction:**Identify links between entities (e.g., "John Smith works for XYZ Corp.")
-- **Event Extraction:**Detect structured events with participants, locations, and times
-- **Geotagging:**Assign coordinates to locations, resolving ambiguities
-- **Knowledge Graph Construction:**Populate knowledge graphs with entities and their relationships for semantic search
+- <strong>Relationship Extraction:</strong>Identify links between entities (e.g., "John Smith works for XYZ Corp.")
+- <strong>Event Extraction:</strong>Detect structured events with participants, locations, and times
+- <strong>Geotagging:</strong>Assign coordinates to locations, resolving ambiguities
+- <strong>Knowledge Graph Construction:</strong>Populate knowledge graphs with entities and their relationships for semantic search
 
 ## Challenges in Entity Extraction
 
@@ -160,29 +160,29 @@ Real-time, high-volume processing requires efficiency. Distributed/cloud-based a
 
 ## Implementation Best Practices
 
-**Define clear entity types**mapped to business or domain needs
+<strong>Define clear entity types</strong>mapped to business or domain needs
 
-**Select the right approach**based on complexity: rule-based for simple cases; ML/LLM methods for complex scenarios
+<strong>Select the right approach</strong>based on complexity: rule-based for simple cases; ML/LLM methods for complex scenarios
 
-**Curate quality training data**using authoritative, diverse, and well-annotated datasets for supervised learning
+<strong>Curate quality training data</strong>using authoritative, diverse, and well-annotated datasets for supervised learning
 
-**Continuous monitoring and retraining**to adapt to new entity types and maintain performance
+<strong>Continuous monitoring and retraining</strong>to adapt to new entity types and maintain performance
 
-**Integrate with downstream systems**connecting NER output to chatbots, analytics platforms, and automation workflows
+<strong>Integrate with downstream systems</strong>connecting NER output to chatbots, analytics platforms, and automation workflows
 
-**Ensure compliance and security**through encryption, access controls, and anonymization where required
+<strong>Ensure compliance and security</strong>through encryption, access controls, and anonymization where required
 
-**Evaluate on real-world data**using domain-specific test sets to measure precision, recall, and business impact
+<strong>Evaluate on real-world data</strong>using domain-specific test sets to measure precision, recall, and business impact
 
 ## Annotation Tools
 
-**Prodigy:**Supports manual, model-assisted, and active learning annotation; integrates with spaCy and supports custom pipelines
+<strong>Prodigy:</strong>Supports manual, model-assisted, and active learning annotation; integrates with spaCy and supports custom pipelines
 
-**Encord:**End-to-end platform for multimodal annotation and NER tasks
+<strong>Encord:</strong>End-to-end platform for multimodal annotation and NER tasks
 
-**Doccano:**Open-source annotation tool with multi-user support
+<strong>Doccano:</strong>Open-source annotation tool with multi-user support
 
-**BRAT:**Web-based tool for detailed manual annotation
+<strong>BRAT:</strong>Web-based tool for detailed manual annotation
 
 ### Annotation Best Practices
 - Develop clear annotation guidelines for ambiguous cases
@@ -191,15 +191,15 @@ Real-time, high-volume processing requires efficiency. Distributed/cloud-based a
 
 ## Future Outlook
 
-**Increasing accuracy:**Transformer-based and LLM models (BERT, GPT) achieve near-human performance, even in noisy or complex text.
+<strong>Increasing accuracy:</strong>Transformer-based and LLM models (BERT, GPT) achieve near-human performance, even in noisy or complex text.
 
-**Multilingual and cross-domain support:**Modern systems handle multiple languages and specialized domains (legal, medical, financial).
+<strong>Multilingual and cross-domain support:</strong>Modern systems handle multiple languages and specialized domains (legal, medical, financial).
 
-**Integration with knowledge graphs:**Extracted entities enrich knowledge graphs, enabling semantic search, recommendations, and automation.
+<strong>Integration with knowledge graphs:</strong>Extracted entities enrich knowledge graphs, enabling semantic search, recommendations, and automation.
 
-**Real-time and adaptive learning:**Systems learn dynamically from new data and user feedback, improving accuracy over time.
+<strong>Real-time and adaptive learning:</strong>Systems learn dynamically from new data and user feedback, improving accuracy over time.
 
-**Responsible AI:**Focus on privacy, fairness, and transparency, especially for personal or sensitive data.
+<strong>Responsible AI:</strong>Focus on privacy, fairness, and transparency, especially for personal or sensitive data.
 
 ## References
 

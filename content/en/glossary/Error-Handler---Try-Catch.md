@@ -27,13 +27,13 @@ Modern development platforms—from JavaScript and Python to C# and RPA tools li
 
 ## Core Components
 
-**Try Block**Contains code that may generate exceptions. Execution proceeds normally unless an error occurs, at which point control immediately transfers to the catch block.
+<strong>Try Block</strong>Contains code that may generate exceptions. Execution proceeds normally unless an error occurs, at which point control immediately transfers to the catch block.
 
-**Catch Block**Handles exceptions thrown from the try block. Captures exception details (type, message, stack trace) and implements recovery logic, logging, or user notification.
+<strong>Catch Block</strong>Handles exceptions thrown from the try block. Captures exception details (type, message, stack trace) and implements recovery logic, logging, or user notification.
 
-**Finally Block**Executes regardless of whether exceptions occurred, ensuring resource cleanup (closing files, releasing connections) happens consistently.
+<strong>Finally Block</strong>Executes regardless of whether exceptions occurred, ensuring resource cleanup (closing files, releasing connections) happens consistently.
 
-**Exception Object**Contains error information including exception type, descriptive message, and stack trace showing where the error originated.
+<strong>Exception Object</strong>Contains error information including exception type, descriptive message, and stack trace showing where the error originated.
 
 ## Implementation Patterns
 
@@ -51,7 +51,7 @@ try {
 }
 ```
 
-**Key Points:**- Catches runtime errors only, not syntax errors
+<strong>Key Points:</strong>- Catches runtime errors only, not syntax errors
 - Async errors require handling within async context
 - Use `throw` to rethrow exceptions to higher-level handlers
 
@@ -77,7 +77,7 @@ finally
 }
 ```
 
-**Features:**- Multiple catch blocks for specific exception types
+<strong>Features:</strong>- Multiple catch blocks for specific exception types
 - Exception filters with `when` clauses
 - `throw;` preserves original stack trace when rethrowing
 
@@ -112,51 +112,51 @@ try {
 
 ### UiPath RPA
 
-**Try-Catch Activity:**- Try sequence contains automation steps
+<strong>Try-Catch Activity:</strong>- Try sequence contains automation steps
 - Catch sequence activates on exceptions
 - Finally sequence ensures cleanup
 
-**Global Exception Handler:**Intercepts unhandled exceptions project-wide. Configure carefully as it may override local Try-Catch blocks if not properly structured.
+<strong>Global Exception Handler:</strong>Intercepts unhandled exceptions project-wide. Configure carefully as it may override local Try-Catch blocks if not properly structured.
 
 ## When to Use Error Handlers
 
-**Appropriate Use Cases:**- External service calls (APIs, databases, network requests)
+<strong>Appropriate Use Cases:</strong>- External service calls (APIs, databases, network requests)
 - File I/O operations with potential access or format issues
 - User input processing where validation cannot catch all errors
 - Integration points between systems
 - Resource allocation that requires guaranteed cleanup
 
-**Inappropriate Use Cases:**- Normal control flow (use if/else instead)
+<strong>Inappropriate Use Cases:</strong>- Normal control flow (use if/else instead)
 - Predictable validation (check conditions before operations)
 - Performance-critical code without exceptional circumstances
 - Replacing proper input validation
 
 ## Best Practices
 
-**Be Specific with Exception Types**Catch the most specific exception type possible rather than broad base classes. This enables targeted handling and prevents masking unexpected errors.
+<strong>Be Specific with Exception Types</strong>Catch the most specific exception type possible rather than broad base classes. This enables targeted handling and prevents masking unexpected errors.
 
-**Never Leave Catch Blocks Empty**Silent failures hide bugs and complicate debugging. Always log, handle, or rethrow exceptions with appropriate context.
+<strong>Never Leave Catch Blocks Empty</strong>Silent failures hide bugs and complicate debugging. Always log, handle, or rethrow exceptions with appropriate context.
 
-**Log Complete Error Information**Capture exception type, message, stack trace, and relevant context (user ID, input values, system state) for effective troubleshooting.
+<strong>Log Complete Error Information</strong>Capture exception type, message, stack trace, and relevant context (user ID, input values, system state) for effective troubleshooting.
 
-**Use Finally for Resource Cleanup**Guarantee resource release (file handles, database connections, locks) regardless of success or failure.
+<strong>Use Finally for Resource Cleanup</strong>Guarantee resource release (file handles, database connections, locks) regardless of success or failure.
 
-**Limit Try Block Scope**Wrap only risky operations rather than entire workflows. Smaller scopes make error sources clear and handling more precise.
+<strong>Limit Try Block Scope</strong>Wrap only risky operations rather than entire workflows. Smaller scopes make error sources clear and handling more precise.
 
-**Rethrow When Unable to Handle**If a catch block cannot meaningfully resolve an exception, rethrow using `throw;` (C#) or `throw` (Python/Java) to preserve stack traces and enable higher-level handling.
+<strong>Rethrow When Unable to Handle</strong>If a catch block cannot meaningfully resolve an exception, rethrow using `throw;` (C#) or `throw` (Python/Java) to preserve stack traces and enable higher-level handling.
 
-**Platform-Specific Considerations:**- **JavaScript:**Use Try-Catch within async functions for async/await error handling
-- **Node.js:**Implement process-level error handlers but restart processes on fatal errors
-- **C#:**Leverage exception filters for advanced scenarios
-- **UiPath:**Place individual risky activities in separate Try-Catch blocks, especially within loops
+<strong>Platform-Specific Considerations:</strong>- <strong>JavaScript:</strong>Use Try-Catch within async functions for async/await error handling
+- <strong>Node.js:</strong>Implement process-level error handlers but restart processes on fatal errors
+- <strong>C#:</strong>Leverage exception filters for advanced scenarios
+- <strong>UiPath:</strong>Place individual risky activities in separate Try-Catch blocks, especially within loops
 
 ## Common Anti-Patterns
 
-**Using Exceptions for Control Flow**Don't replace if/else logic with Try-Catch. Exceptions carry performance costs and reduce code readability.
+<strong>Using Exceptions for Control Flow</strong>Don't replace if/else logic with Try-Catch. Exceptions carry performance costs and reduce code readability.
 
-**Catching Too Broadly**Avoid catching base `Exception` or `Throwable` unless at application boundaries. Broad catches mask unexpected errors and complicate debugging.
+<strong>Catching Too Broadly</strong>Avoid catching base `Exception` or `Throwable` unless at application boundaries. Broad catches mask unexpected errors and complicate debugging.
 
-**Empty Catch Blocks**```csharp
+<strong>Empty Catch Blocks</strong>```csharp
 try { riskyOperation(); }
 catch { } // NEVER DO THIS
 ```

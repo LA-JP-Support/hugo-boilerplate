@@ -11,15 +11,15 @@ draft: false
 ---
 ## 1. What is Disambiguation in AI Chatbots?
 
-Disambiguation is a systematic approach in [conversational AI](/en/glossary/conversational-ai/) to resolve ambiguities in user inputs. When user messages are vague, overlap with multiple intents, or can be interpreted in more than one way, chatbots and virtual assistants employ specific strategies to unearth the user's actual intention. This prevents the system from making incorrect assumptions or providing irrelevant responses.
+Disambiguation is a systematic approach in conversational AI to resolve ambiguities in user inputs. When user messages are vague, overlap with multiple intents, or can be interpreted in more than one way, chatbots and virtual assistants employ specific strategies to unearth the user's actual intention. This prevents the system from making incorrect assumptions or providing irrelevant responses.
 
 For example:
-- **User:**“Show me Apple.”
-- **Chatbot:**“Are you referring to Apple the fruit, or Apple the technology company?”
+- <strong>User:</strong>“Show me Apple.”
+- <strong>Chatbot:</strong>“Are you referring to Apple the fruit, or Apple the technology company?”
 
 The disambiguation process is vital for natural language understanding (NLU), as it bridges the gap between how users express themselves and how bots interpret natural language. This ensures more accurate, context-driven, and relevant responses.
 
-**Additional details:**- Disambiguation can involve confidence scoring (where the system evaluates how likely a specific intent matches the input), trigger thresholds (if multiple intents have similar confidence), and user-driven clarifications.
+<strong>Additional details:</strong>- Disambiguation can involve confidence scoring (where the system evaluates how likely a specific intent matches the input), trigger thresholds (if multiple intents have similar confidence), and user-driven clarifications.
 - Advanced chatbots use machine learning models to detect ambiguity and trigger disambiguation only when necessary, balancing efficiency and user satisfaction.
 ## 2. Why Disambiguation Matters
 
@@ -27,17 +27,17 @@ Disambiguation is a core challenge in building scalable, user-friendly, and reli
 
 ### Key reasons for disambiguation:
 
-**1. Accuracy and Precision in Responses:**Disambiguation ensures that the user's request is matched to the most relevant intent, reducing the risk of irrelevant or incorrect responses. Failure to disambiguate can lead to user frustration and a breakdown in trust.
+<strong>1. Accuracy and Precision in Responses:</strong>Disambiguation ensures that the user's request is matched to the most relevant intent, reducing the risk of irrelevant or incorrect responses. Failure to disambiguate can lead to user frustration and a breakdown in trust.
 
-**2. Enhanced User Experience:**By clarifying ambiguous requests, chatbots avoid guessing and instead give users the power to refine their own queries. This leads to smoother, less frustrating conversations.
+<strong>2. Enhanced User Experience:</strong>By clarifying ambiguous requests, chatbots avoid guessing and instead give users the power to refine their own queries. This leads to smoother, less frustrating conversations.
 
-**3. Scalability and Maintenance:**As a chatbot’s knowledge base and intent library expand, the chances of ambiguous input increase. Robust disambiguation allows for expansion without a corresponding drop in performance.
+<strong>3. Scalability and Maintenance:</strong>As a chatbot’s knowledge base and intent library expand, the chances of ambiguous input increase. Robust disambiguation allows for expansion without a corresponding drop in performance.
 
-**4. Continuous Improvement:**Every disambiguation event provides valuable data. Analyzing these interactions helps refine intent models, training data, and overall NLU accuracy.
+<strong>4. Continuous Improvement:</strong>Every disambiguation event provides valuable data. Analyzing these interactions helps refine intent models, training data, and overall NLU accuracy.
 
-**5. Trust and Adoption:**Users are more likely to trust and use bots that consistently understand their needs, even when queries are vague or multi-faceted.
+<strong>5. Trust and Adoption:</strong>Users are more likely to trust and use bots that consistently understand their needs, even when queries are vague or multi-faceted.
 
-**Citations:**- [SiteSpeakAI: Why is Disambiguation important?](https://sitespeak.ai/ai-chatbot-terms/disambiguation)
+<strong>Citations:</strong>- [SiteSpeakAI: Why is Disambiguation important?](https://sitespeak.ai/ai-chatbot-terms/disambiguation)
 - [Amazon Lex: Resolve ambiguous user inputs](https://docs.aws.amazon.com/lexv2/latest/dg/generative-intent-disambiguation.html)
 - [Microsoft Copilot Studio: Disambiguate customer intents](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/cux-disambiguate-intent)
 
@@ -47,29 +47,29 @@ Ambiguity in user input can arise in multiple forms, necessitating different dis
 
 ### 3.1 Ambiguous Entity or Brand Names
 
-**Example:**- **User:**“Show me Jaguar.”
-- **Chatbot:**“Are you interested in Jaguar the car brand or Jaguar the animal?”
+<strong>Example:</strong>- <strong>User:</strong>“Show me Jaguar.”
+- <strong>Chatbot:</strong>“Are you interested in Jaguar the car brand or Jaguar the animal?”
 
 Such queries are common in industries with overlapping product, brand, or entity names.
 
 ### 3.2 Multiple Possible Actions
 
-**Example:**- **User:**“Upgrade my computer.”
-- **Chatbot:**“Are you looking to upgrade your operating system, your computer’s hardware, or install the latest security updates?”
+<strong>Example:</strong>- <strong>User:</strong>“Upgrade my computer.”
+- <strong>Chatbot:</strong>“Are you looking to upgrade your operating system, your computer’s hardware, or install the latest security updates?”
 
 This form of ambiguity typically arises in technical support, IT helpdesk, and product support bots.
 
 ### 3.3 Overlapping Intents
 
-**Example:**- **User:**“I need support.”
-- **Chatbot:**“Would you like technical support, billing support, or help with your account?”
+<strong>Example:</strong>- <strong>User:</strong>“I need support.”
+- <strong>Chatbot:</strong>“Would you like technical support, billing support, or help with your account?”
 
 Here, the user's intent could map to several different support workflows.
 
 ### 3.4 Vague Requests
 
-**Example:**- **User:**“Book a service.”
-- **Chatbot:**“Which service would you like to book: cleaning, repair, or maintenance?”
+<strong>Example:</strong>- <strong>User:</strong>“Book a service.”
+- <strong>Chatbot:</strong>“Which service would you like to book: cleaning, repair, or maintenance?”
 
 Vague requests are especially common in service industries and require clarifying the service type.
 
@@ -84,39 +84,39 @@ Various disambiguation strategies are used in conversational AI platforms, often
 
 The chatbot asks clarifying questions, prompting the user to provide more detail.
 
-**Example Dialogue:**- **User:**“Change my plan.”
-- **Chatbot:**“Are you referring to your mobile plan, internet plan, or TV package?”
+<strong>Example Dialogue:</strong>- <strong>User:</strong>“Change my plan.”
+- <strong>Chatbot:</strong>“Are you referring to your mobile plan, internet plan, or TV package?”
 
-**Advantages:**- Mimics human conversation.
+<strong>Advantages:</strong>- Mimics human conversation.
 - Allows for open-ended refinement.
 
-**Considerations:**- Can increase the number of conversational turns.
+<strong>Considerations:</strong>- Can increase the number of conversational turns.
 - Overuse may lead to user fatigue.
 
 ### 4.2 Presenting Options
 
 The bot presents a list of the most probable intents or actions for the user to select from.
 
-**Example Dialogue:**- **User:**“Order status.”
-- **Chatbot:**“Do you want to track a recent order, modify an order, or cancel an order?”
+<strong>Example Dialogue:</strong>- <strong>User:</strong>“Order status.”
+- <strong>Chatbot:</strong>“Do you want to track a recent order, modify an order, or cancel an order?”
 
-**Advantages:**- Directs users quickly.
+<strong>Advantages:</strong>- Directs users quickly.
 - Reduces cognitive load.
 
-**Considerations:**- Too many options can overwhelm users.
+<strong>Considerations:</strong>- Too many options can overwhelm users.
 - Options must be clear and mutually exclusive.
 
 ### 4.3 Targeted Questions
 
 The bot asks context-aware, specific questions, leveraging previous interactions or session data.
 
-**Example Dialogue:**- **User:**“How do I reset?”
-- **Chatbot:**“Would you like to reset your password or reset your device?”
+<strong>Example Dialogue:</strong>- <strong>User:</strong>“How do I reset?”
+- <strong>Chatbot:</strong>“Would you like to reset your password or reset your device?”
 
-**Advantages:**- Shortens conversations.
+<strong>Advantages:</strong>- Shortens conversations.
 - Uses context to improve accuracy.
 
-**Considerations:**- Requires robust context management.
+<strong>Considerations:</strong>- Requires robust context management.
 
 ### 4.4 Combining Approaches
 
@@ -124,29 +124,29 @@ Effective bots often blend these methods:
 - Begin with 2–3 likely options.
 - If “None of these” is selected, ask a follow-up question or escalate to a human agent.
 
-**Best Practices:**- Use a custom disambiguation message to explain the need for clarification.
+<strong>Best Practices:</strong>- Use a custom disambiguation message to explain the need for clarification.
 - Provide a way out, such as “None of these” or “Something else.”
 ## 5. Use Cases for Disambiguation
 
 ### 5.1 Customer Support
 
-**Scenario:**A telecom chatbot supports account inquiries, technical troubleshooting, and billing. If a user types “I have a problem,” the bot must clarify whether the issue is technical, billing-related, or something else.
+<strong>Scenario:</strong>A telecom chatbot supports account inquiries, technical troubleshooting, and billing. If a user types “I have a problem,” the bot must clarify whether the issue is technical, billing-related, or something else.
 
 ### 5.2 E-Commerce
 
-**Scenario:**A retail chatbot handles product search, order status, and returns. If a user says “Need help with my order,” the bot distinguishes between tracking, modifying, or returning an order.
+<strong>Scenario:</strong>A retail chatbot handles product search, order status, and returns. If a user says “Need help with my order,” the bot distinguishes between tracking, modifying, or returning an order.
 
 ### 5.3 Healthcare
 
-**Scenario:**A healthcare bot manages appointment scheduling, prescription refills, and billing. When a user says “I need an appointment,” the bot asks for the type of doctor or service.
+<strong>Scenario:</strong>A healthcare bot manages appointment scheduling, prescription refills, and billing. When a user says “I need an appointment,” the bot asks for the type of doctor or service.
 
 ### 5.4 IT Helpdesk
 
-**Scenario:**An internal support bot for employees responds to “Request access.” The bot must clarify whether access is needed for a system, a folder, or an application.
+<strong>Scenario:</strong>An internal support bot for employees responds to “Request access.” The bot must clarify whether access is needed for a system, a folder, or an application.
 
 ### 5.5 Financial Services
 
-**Scenario:**A banking bot receives “Transfer funds.” It must clarify between internal transfers, external transfers, or payments.
+<strong>Scenario:</strong>A banking bot receives “Transfer funds.” It must clarify between internal transfers, external transfers, or payments.
 ## 6. Implementation in Conversational Platforms
 
 ### 6.1 Automated Disambiguation Features
@@ -155,11 +155,11 @@ Many leading platforms provide built-in disambiguation capabilities, reducing ma
 
 #### Amazon Lex
 
-- **Intent Disambiguation**uses a large language model (LLM) to analyze intent names and descriptions, presenting the most likely matching intents when ambiguity is detected.
+- <strong>Intent Disambiguation</strong>uses a large language model (LLM) to analyze intent names and descriptions, presenting the most likely matching intents when ambiguity is detected.
 - Supports 2–5 candidate intents, custom display names, and customizable disambiguation messages.
 - Available in multiple languages and locales.
 
-**Implementation Steps:**1. Enable Intent Disambiguation in the Amazon Lex V2 console.
+<strong>Implementation Steps:</strong>1. Enable Intent Disambiguation in the Amazon Lex V2 console.
 2. Set the number of intent options (2–5).
 3. Customize the disambiguation message.
 4. Configure user-friendly display names for intents.
@@ -284,14 +284,14 @@ For highly customized or complex bots, manual design may be required:
 
 ## 10. Glossary of Key Terms
 
-- **Intent:**The underlying goal or task the user wants to accomplish with the bot.
-- **Ambiguous Input:**A user query that could map to multiple intents or lacks clear context.
-- **Disambiguation Dialog:**A conversational step where the bot seeks clarification from the user.
-- **Fallback:**A default response or flow triggered when user input cannot be matched to any intent or clarified.
-- **Natural Language Understanding (NLU):**AI capability to interpret and classify user input, forming the basis for intent detection and disambiguation.
-- **Confidence Score:**A numeric value indicating the likelihood that a detected intent matches the user’s input.
-- **Slot Filling:**The process of collecting required information (slots) from the user to complete an intent.
-- **Candidate Intents:**List of intents that could plausibly match a user's input, presented during disambiguation.
+- <strong>Intent:</strong>The underlying goal or task the user wants to accomplish with the bot.
+- <strong>Ambiguous Input:</strong>A user query that could map to multiple intents or lacks clear context.
+- <strong>Disambiguation Dialog:</strong>A conversational step where the bot seeks clarification from the user.
+- <strong>Fallback:</strong>A default response or flow triggered when user input cannot be matched to any intent or clarified.
+- <strong>Natural Language Understanding (NLU):</strong>AI capability to interpret and classify user input, forming the basis for intent detection and disambiguation.
+- <strong>Confidence Score:</strong>A numeric value indicating the likelihood that a detected intent matches the user’s input.
+- <strong>Slot Filling:</strong>The process of collecting required information (slots) from the user to complete an intent.
+- <strong>Candidate Intents:</strong>List of intents that could plausibly match a user's input, presented during disambiguation.
 
 ## 11. Further Resources
 

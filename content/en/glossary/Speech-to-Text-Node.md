@@ -16,35 +16,35 @@ A Speech-to-Text Node is a foundational component in conversational AI, automati
 
 The node functions as a modular workflow component that receives audio input, processes it through an Automatic Speech Recognition (ASR) model, and outputs a transcript. This transcript can optionally include word-level timestamps, speaker labels, translations, or structured metadata for further processing.
 
-**Typical Workflow:**1. Audio input received (file upload, URL, or workflow variable)
+<strong>Typical Workflow:</strong>1. Audio input received (file upload, URL, or workflow variable)
 2. Processing via ASR model (OpenAI Whisper, Google Speech-to-Text, Azure Speech, Rev AI)
 3. Output transcript with optional metadata (timestamps, speaker labels, translations)
 
-**Role in Automation:**- Enables chatbots to process voice queries
+<strong>Role in Automation:</strong>- Enables chatbots to process voice queries
 - Transcribes meetings, interviews, and lectures for knowledge management
 - Automates content indexing and data extraction from voice interactions
 
 ## Key Capabilities
 
-**Automatic Speech Recognition (ASR)**Converts audio to text using advanced models with high accuracy across diverse accents and audio conditions.
+<strong>Automatic Speech Recognition (ASR)</strong>Converts audio to text using advanced models with high accuracy across diverse accents and audio conditions.
 
-**Multilingual Support**Transcribes speech in 50-125+ languages and dialects, depending on provider. Major models support global language coverage for international deployments.
+<strong>Multilingual Support</strong>Transcribes speech in 50-125+ languages and dialects, depending on provider. Major models support global language coverage for international deployments.
 
-**Translation**Translates non-English speech into English or other supported languages in a single processing step, eliminating the need for separate translation workflows.
+<strong>Translation</strong>Translates non-English speech into English or other supported languages in a single processing step, eliminating the need for separate translation workflows.
 
-**Custom Prompt Instructions**Accepts natural language instructions for transcription style, speaker labeling, terminology preferences, or error handling approaches.
+<strong>Custom Prompt Instructions</strong>Accepts natural language instructions for transcription style, speaker labeling, terminology preferences, or error handling approaches.
 
-**Flexible Audio Input**Accepts file uploads, URLs, or variables from previous workflow steps, supporting diverse integration patterns.
+<strong>Flexible Audio Input</strong>Accepts file uploads, URLs, or variables from previous workflow steps, supporting diverse integration patterns.
 
-**Large File Handling**Processes files up to provider-specific limits (typically 25 MB), with guidance on segmenting larger files at logical boundaries.
+<strong>Large File Handling</strong>Processes files up to provider-specific limits (typically 25 MB), with guidance on segmenting larger files at logical boundaries.
 
-**Timestamps & Speaker Diarization**Optionally includes word-level or utterance-level timing and identifies individual speakers in multi-party conversations.
+<strong>Timestamps & Speaker Diarization</strong>Optionally includes word-level or utterance-level timing and identifies individual speakers in multi-party conversations.
 
-**Profanity Filtering**Removes or masks offensive content according to configuration or model defaults.
+<strong>Profanity Filtering</strong>Removes or masks offensive content according to configuration or model defaults.
 
-**Custom Vocabulary & Model Adaptation**Improves recognition of domain-specific terms through vocabulary lists and model fine-tuning.
+<strong>Custom Vocabulary & Model Adaptation</strong>Improves recognition of domain-specific terms through vocabulary lists and model fine-tuning.
 
-**Structured Output (JSON)**Returns data in schemas suitable for downstream processing, including nested metadata.
+<strong>Structured Output (JSON)</strong>Returns data in schemas suitable for downstream processing, including nested metadata.
 
 ## How Speech-to-Text Nodes Work
 
@@ -54,9 +54,9 @@ The node receives an audio file or URL from user upload, cloud storage, or a pre
 
 ### Model Selection & Preprocessing
 
-**Choose ASR Provider:**Select from OpenAI Whisper, Google Speech-to-Text, Azure Speech Service, AssemblyAI, Deepgram, or other providers.
+<strong>Choose ASR Provider:</strong>Select from OpenAI Whisper, Google Speech-to-Text, Azure Speech Service, AssemblyAI, Deepgram, or other providers.
 
-**Configure Features:**Enable language detection, translation, timestamps, speaker identification, and custom prompts.
+<strong>Configure Features:</strong>Enable language detection, translation, timestamps, speaker identification, and custom prompts.
 
 ### Transcription Process
 
@@ -68,14 +68,14 @@ The node outputs the transcript in plain text or structured JSON format. Downstr
 
 ## Supported Audio Formats & File Limits
 
-**Audio Formats:**- M4A, MP3, WebM, MP4, MPGA, WAV, MPEG
+<strong>Audio Formats:</strong>- M4A, MP3, WebM, MP4, MPGA, WAV, MPEG
 - Provider support varies; verify compatibility with your chosen ASR service
 
-**File Size Limits:**- Typical maximum: 25 MB per file
+<strong>File Size Limits:</strong>- Typical maximum: 25 MB per file
 - Larger files must be split into segments ≤25 MB
 - Segment at logical sentence boundaries to preserve context and accuracy
 
-**Input Methods:**- Direct file upload
+<strong>Input Methods:</strong>- Direct file upload
 - URL reference to hosted audio
 - Variable reference from previous workflow steps
 
@@ -91,21 +91,21 @@ Some platforms accept only URLs for security and scalability reasons.
 
 ### Step-by-Step Configuration
 
-**1. Add Node to Workflow**Open your automation builder and drag the Speech-to-Text or Audio to Text node into your workflow.
+<strong>1. Add Node to Workflow</strong>Open your automation builder and drag the Speech-to-Text or Audio to Text node into your workflow.
 
-**2. Configure Node Properties**- **Node Name:**Assign unique, descriptive name (e.g., "MeetingTranscription")
-- **Audio File Input:**Reference variable holding audio URL
-- **Model Selection:**Choose ASR provider and specific model
-- **Feature Toggles:**Enable translation, timestamps, speaker diarization, profanity filtering
+<strong>2. Configure Node Properties</strong>- <strong>Node Name:</strong>Assign unique, descriptive name (e.g., "MeetingTranscription")
+- <strong>Audio File Input:</strong>Reference variable holding audio URL
+- <strong>Model Selection:</strong>Choose ASR provider and specific model
+- <strong>Feature Toggles:</strong>Enable translation, timestamps, speaker diarization, profanity filtering
 
-**3. Set Custom Prompt Instructions**Define transcription style, speaker labeling requirements, terminology preferences, or error handling approaches in natural language.
+<strong>3. Set Custom Prompt Instructions</strong>Define transcription style, speaker labeling requirements, terminology preferences, or error handling approaches in natural language.
 
 Example:
 ```
 Provide a clean transcript, omitting filler words, with clear speaker labels and correct technical terms.
 ```
 
-**4. Define JSON Schema for Output (Optional)**Specify structured output schema for downstream processing:
+<strong>4. Define JSON Schema for Output (Optional)</strong>Specify structured output schema for downstream processing:
 
 ```json
 {
@@ -127,10 +127,10 @@ Provide a clean transcript, omitting filler words, with clear speaker labels and
 }
 ```
 
-**5. Connect Success & Failure Paths**- **On Success:**Route to summarization, translation, or analysis nodes
-- **On Failure:**Route to error handling or fallback nodes
+<strong>5. Connect Success & Failure Paths</strong>- <strong>On Success:</strong>Route to summarization, translation, or analysis nodes
+- <strong>On Failure:</strong>Route to error handling or fallback nodes
 
-**6. Test and Validate**Run workflow with sample inputs, review output for completeness and correctness, and adjust configuration as needed.
+<strong>6. Test and Validate</strong>Run workflow with sample inputs, review output for completeness and correctness, and adjust configuration as needed.
 
 ## Configuration Parameters
 
@@ -150,11 +150,11 @@ Provide a clean transcript, omitting filler words, with clear speaker labels and
 
 ## Response Formats & Output
 
-**Plain Text Output:**Default transcript as continuous text string.
+<strong>Plain Text Output:</strong>Default transcript as continuous text string.
 
-**Structured JSON Output:**Includes transcript, timestamps, speaker labels, and confidence scores.
+<strong>Structured JSON Output:</strong>Includes transcript, timestamps, speaker labels, and confidence scores.
 
-**Example:**```json
+<strong>Example:</strong>```json
 {
   "transcript": "Hello, thank you for calling AcmeCorp. How may I assist you today?",
   "timestamps": [
@@ -249,7 +249,7 @@ Provide a clean transcript, omitting filler words, with clear speaker labels and
 }
 ```
 
-**Output:**```
+<strong>Output:</strong>```
 Speaker 1: We're experiencing recurring issues with our API gateway.
 Speaker 2: The main challenge is integrating external authentication.
 ```

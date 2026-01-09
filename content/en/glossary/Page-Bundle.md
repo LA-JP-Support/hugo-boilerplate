@@ -24,19 +24,19 @@ Page bundles come in two primary types: leaf bundles and branch bundles. Leaf bu
 
 ## Core Content Organization Concepts
 
-**Leaf Bundle Structure**- A leaf bundle represents a single page with all its associated resources contained within one directory. The bundle uses an index.md file as the main content and can include images, documents, and other assets that are automatically available for use within that specific page without complex path references.
+<strong>Leaf Bundle Structure</strong>- A leaf bundle represents a single page with all its associated resources contained within one directory. The bundle uses an index.md file as the main content and can include images, documents, and other assets that are automatically available for use within that specific page without complex path references.
 
-**Branch Bundle Architecture**- Branch bundles serve as section organizers that can contain multiple child pages and other bundles. They use _index.md as their primary content file and enable hierarchical content organization while maintaining the resource co-location benefits of the bundle system.
+<strong>Branch Bundle Architecture</strong>- Branch bundles serve as section organizers that can contain multiple child pages and other bundles. They use _index.md as their primary content file and enable hierarchical content organization while maintaining the resource co-location benefits of the bundle system.
 
-**Resource Management**- Page bundles implement sophisticated resource handling that automatically processes and optimizes images, manages file references, and provides built-in methods for accessing bundle resources through template functions and shortcodes.
+<strong>Resource Management</strong>- Page bundles implement sophisticated resource handling that automatically processes and optimizes images, manages file references, and provides built-in methods for accessing bundle resources through template functions and shortcodes.
 
-**Content Hierarchy**- The bundle system creates clear content hierarchies where the file system structure directly reflects the website's organizational structure, making it intuitive for content creators to understand and navigate the content architecture.
+<strong>Content Hierarchy</strong>- The bundle system creates clear content hierarchies where the file system structure directly reflects the website's organizational structure, making it intuitive for content creators to understand and navigate the content architecture.
 
-**Asset Processing**- Modern page bundle implementations include automatic asset processing capabilities such as image resizing, format conversion, minification, and optimization that occur during the build process without requiring external tools.
+<strong>Asset Processing</strong>- Modern page bundle implementations include automatic asset processing capabilities such as image resizing, format conversion, minification, and optimization that occur during the build process without requiring external tools.
 
-**Portable Content Units**- Each bundle functions as a completely portable unit that can be moved between projects or shared with other developers while maintaining all internal references and associated resources intact.
+<strong>Portable Content Units</strong>- Each bundle functions as a completely portable unit that can be moved between projects or shared with other developers while maintaining all internal references and associated resources intact.
 
-**Template Integration**- Page bundles integrate seamlessly with templating systems, providing specific functions and methods for accessing bundle resources, metadata, and related content within templates and layouts.
+<strong>Template Integration</strong>- Page bundles integrate seamlessly with templating systems, providing specific functions and methods for accessing bundle resources, metadata, and related content within templates and layouts.
 
 ## How Page Bundle Works
 
@@ -56,7 +56,7 @@ Quality assurance processes verify that all bundle resources are properly linked
 
 Performance optimization occurs as the final step, where the generator may implement additional optimizations such as lazy loading for images, resource preloading, or content delivery network integration for bundle assets.
 
-**Example Workflow:**```
+<strong>Example Workflow:</strong>```
 content/
 ├── posts/
 │   ├── my-article/

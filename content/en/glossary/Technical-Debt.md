@@ -16,121 +16,121 @@ Technical debt is the additional cost and effort required to make changes in a s
 
 Ward Cunningham, who coined the term, explained it as the cost that comes from "going faster now at the expense of having to do more work later." Technical debt is not limited to code; it encompasses all aspects of software systems, including architecture, documentation, infrastructure, testing, and processes.
 
-**Example:**Hardcoding a database connection string allows for rapid deployment but means future changes require manual edits in multiple locations, increasing risk and maintenance overhead.
+<strong>Example:</strong>Hardcoding a database connection string allows for rapid deployment but means future changes require manual edits in multiple locations, increasing risk and maintenance overhead.
 
 Technical debt can be strategic when consciously managed for business priorities, but becomes problematic when allowed to accumulate without visibility or remediation.
 
 ## Why Does Technical Debt Occur?
 
-**Tight Deadlines:**Teams prioritize delivery speed, taking shortcuts or omitting refactoring
+<strong>Tight Deadlines:</strong>Teams prioritize delivery speed, taking shortcuts or omitting refactoring
 
-**Changing Requirements:**Scope changes can render previous solutions suboptimal, requiring workarounds or patches
+<strong>Changing Requirements:</strong>Scope changes can render previous solutions suboptimal, requiring workarounds or patches
 
-**Skill Gaps:**Developers unfamiliar with best practices may introduce inefficient, unscalable, or error-prone code
+<strong>Skill Gaps:</strong>Developers unfamiliar with best practices may introduce inefficient, unscalable, or error-prone code
 
-**Resource Constraints:**Limited budgets, personnel, or time force trade-offs on quality and sustainability
+<strong>Resource Constraints:</strong>Limited budgets, personnel, or time force trade-offs on quality and sustainability
 
-**Poor Communication:**Misalignment among stakeholders leads to misunderstandings, rework, and duplicated efforts
+<strong>Poor Communication:</strong>Misalignment among stakeholders leads to misunderstandings, rework, and duplicated efforts
 
-**Legacy Systems:**Maintaining older systems often means layering new functionality onto outdated foundations
+<strong>Legacy Systems:</strong>Maintaining older systems often means layering new functionality onto outdated foundations
 
-**Lack of Documentation:**Inadequate documentation increases onboarding time and the risk of accidental errors
+<strong>Lack of Documentation:</strong>Inadequate documentation increases onboarding time and the risk of accidental errors
 
-**Real-World Example:**A startup rapidly develops a minimum viable product (MVP) to enter the market. To save time, it skips automated testing and code reviews. As the codebase grows, the lack of testing infrastructure leads to recurring bugs and slows the addition of new features—a textbook case of technical debt spiraling.
+<strong>Real-World Example:</strong>A startup rapidly develops a minimum viable product (MVP) to enter the market. To save time, it skips automated testing and code reviews. As the codebase grows, the lack of testing infrastructure leads to recurring bugs and slows the addition of new features—a textbook case of technical debt spiraling.
 
 ## Types of Technical Debt
 
 ### By Intent and Awareness (Martin Fowler's Technical Debt Quadrant)
 
-**Deliberate Debt:**Intentionally incurred to meet business goals, with a plan for remediation
+<strong>Deliberate Debt:</strong>Intentionally incurred to meet business goals, with a plan for remediation
 
-**Accidental (Inadvertent) Debt:**Results from mistakes, lack of experience, or unforeseen consequences
+<strong>Accidental (Inadvertent) Debt:</strong>Results from mistakes, lack of experience, or unforeseen consequences
 
-**Reckless Debt:**Shortcuts taken with disregard for quality or future impact
+<strong>Reckless Debt:</strong>Shortcuts taken with disregard for quality or future impact
 
-**Prudent Debt:**Well-understood trade-offs, consciously managed
+<strong>Prudent Debt:</strong>Well-understood trade-offs, consciously managed
 
 ### By Origin or Domain
 
-**Architecture Debt:**Flaws in system structure that hinder scalability, maintainability, or flexibility (e.g., a tightly coupled monolithic system instead of modular services)
+<strong>Architecture Debt:</strong>Flaws in system structure that hinder scalability, maintainability, or flexibility (e.g., a tightly coupled monolithic system instead of modular services)
 
-**Code Debt:**Poor coding practices, inconsistent style, duplicated logic, or lack of adherence to standards (e.g., repeated code blocks instead of reusable functions)
+<strong>Code Debt:</strong>Poor coding practices, inconsistent style, duplicated logic, or lack of adherence to standards (e.g., repeated code blocks instead of reusable functions)
 
-**Design Debt:**Violations of design principles, such as improper inheritance or lack of encapsulation
+<strong>Design Debt:</strong>Violations of design principles, such as improper inheritance or lack of encapsulation
 
-**Defect Debt:**Known bugs or issues deferred for future resolution
+<strong>Defect Debt:</strong>Known bugs or issues deferred for future resolution
 
-**Documentation Debt:**Missing, outdated, or insufficient technical documentation
+<strong>Documentation Debt:</strong>Missing, outdated, or insufficient technical documentation
 
-**Build Debt:**Inefficient, unreliable, or manual build and deployment processes
+<strong>Build Debt:</strong>Inefficient, unreliable, or manual build and deployment processes
 
-**Infrastructure Debt:**Outdated servers, scripts, or configurations
+<strong>Infrastructure Debt:</strong>Outdated servers, scripts, or configurations
 
-**Process Debt:**Ineffective workflows, absence of automation, or unclear processes
+<strong>Process Debt:</strong>Ineffective workflows, absence of automation, or unclear processes
 
-**People Debt:**Insufficient training, knowledge silos, or poor onboarding
+<strong>People Debt:</strong>Insufficient training, knowledge silos, or poor onboarding
 
-**Requirement Debt:**Incomplete, poorly defined, or partially implemented requirements
+<strong>Requirement Debt:</strong>Incomplete, poorly defined, or partially implemented requirements
 
-**Security Debt:**Ignored or delayed security best practices and vulnerability patches
+<strong>Security Debt:</strong>Ignored or delayed security best practices and vulnerability patches
 
-**Test Debt:**Lack of automated or comprehensive tests
+<strong>Test Debt:</strong>Lack of automated or comprehensive tests
 
-**Test Automation Debt:**Manual tests that should be automated for scalability and reliability
+<strong>Test Automation Debt:</strong>Manual tests that should be automated for scalability and reliability
 
-**Data Debt:**Poor data models, legacy schemas, or lack of data governance
+<strong>Data Debt:</strong>Poor data models, legacy schemas, or lack of data governance
 
 ## How is Technical Debt Used? (Context and Use Cases)
 
-**Software Development:**Debt items are tracked alongside feature development and bug fixes using tools like Jira
+<strong>Software Development:</strong>Debt items are tracked alongside feature development and bug fixes using tools like Jira
 
-**Project Management:**Product owners weigh the cost/benefit of debt remediation versus new features during planning
+<strong>Project Management:</strong>Product owners weigh the cost/benefit of debt remediation versus new features during planning
 
-**DevOps and Infrastructure:**Teams automate, refactor, and update deployment pipelines to minimize future debt
+<strong>DevOps and Infrastructure:</strong>Teams automate, refactor, and update deployment pipelines to minimize future debt
 
-**AI Infrastructure & Deployment:**Machine learning systems require special attention due to their susceptibility to hidden technical debt
+<strong>AI Infrastructure & Deployment:</strong>Machine learning systems require special attention due to their susceptibility to hidden technical debt
 
 ### Example Use Cases
 
-**Sprint Planning:**Allocating sprint capacity (e.g., 20%) for refactoring and addressing debt
+<strong>Sprint Planning:</strong>Allocating sprint capacity (e.g., 20%) for refactoring and addressing debt
 
-**Security Audits:**Logging and prioritizing outdated libraries and vulnerabilities as security debt
+<strong>Security Audits:</strong>Logging and prioritizing outdated libraries and vulnerabilities as security debt
 
-**Onboarding:**Reducing documentation debt to accelerate new developer ramp-up
+<strong>Onboarding:</strong>Reducing documentation debt to accelerate new developer ramp-up
 
-**AI Workloads:**Investing in modularizing and automating data pipelines to address infrastructure and process debt
+<strong>AI Workloads:</strong>Investing in modularizing and automating data pipelines to address infrastructure and process debt
 
 ## Impacts of Technical Debt
 
-**Reduced Development Speed:**Feature addition slows as codebase complexity grows
+<strong>Reduced Development Speed:</strong>Feature addition slows as codebase complexity grows
 
-**Increased Maintenance Costs:**More resources spent on fixing issues and workarounds instead of innovation
+<strong>Increased Maintenance Costs:</strong>More resources spent on fixing issues and workarounds instead of innovation
 
-**Lower Software Quality:**Accumulated shortcuts lead to more bugs and reliability issues
+<strong>Lower Software Quality:</strong>Accumulated shortcuts lead to more bugs and reliability issues
 
-**Poor Scalability:**Systems become harder to extend or adapt to changing needs
+<strong>Poor Scalability:</strong>Systems become harder to extend or adapt to changing needs
 
-**Security Vulnerabilities:**Outdated components and ignored controls increase exposure to attacks
+<strong>Security Vulnerabilities:</strong>Outdated components and ignored controls increase exposure to attacks
 
-**Resource Drain:**Up to 20-33% of IT budgets and engineering time are consumed by technical debt
+<strong>Resource Drain:</strong>Up to 20-33% of IT budgets and engineering time are consumed by technical debt
 
-**Business Risks:**Delays, missed opportunities, compliance failures, and reputational harm
+<strong>Business Risks:</strong>Delays, missed opportunities, compliance failures, and reputational harm
 
-**Team Morale:**Repeated firefighting leads to burnout and turnover
+<strong>Team Morale:</strong>Repeated firefighting leads to burnout and turnover
 
 ## How to Identify Technical Debt
 
-**Code Reviews:**Uncover shortcuts, complexity, and missing tests
+<strong>Code Reviews:</strong>Uncover shortcuts, complexity, and missing tests
 
-**Automated Code Analysis:**Tools like SonarQube and CodeClimate flag code smells, duplication, and complexity
+<strong>Automated Code Analysis:</strong>Tools like SonarQube and CodeClimate flag code smells, duplication, and complexity
 
-**Developer Feedback:**Recurring complaints about certain modules signal debt hotspots
+<strong>Developer Feedback:</strong>Recurring complaints about certain modules signal debt hotspots
 
-**Issue Tracking:**Frequent bug reports in the same areas
+<strong>Issue Tracking:</strong>Frequent bug reports in the same areas
 
-**Performance Monitoring:**Identifying resource spikes or degraded response times
+<strong>Performance Monitoring:</strong>Identifying resource spikes or degraded response times
 
-**User Feedback:**Reports of poor performance or reliability may point to hidden debt
+<strong>User Feedback:</strong>Reports of poor performance or reliability may point to hidden debt
 
 ## How to Measure Technical Debt
 
@@ -149,61 +149,61 @@ Rates debt items by risk, business impact, likelihood, and remediation cost.
 
 ### Additional Metrics
 
-**Code Complexity:**High cyclomatic complexity or coupling signals debt
+<strong>Code Complexity:</strong>High cyclomatic complexity or coupling signals debt
 
-**Bug Resolution Time:**Longer fix times in certain modules
+<strong>Bug Resolution Time:</strong>Longer fix times in certain modules
 
-**Legacy Code Percentage:**Ratio of untested or unsupported code
+<strong>Legacy Code Percentage:</strong>Ratio of untested or unsupported code
 
-**Open Debt Items:**Number and severity of logged debt tasks
+<strong>Open Debt Items:</strong>Number and severity of logged debt tasks
 
 ## How to Manage and Reduce Technical Debt
 
-**1. Acknowledge and Define Debt**Ensure all stakeholders understand what constitutes technical debt.
+<strong>1. Acknowledge and Define Debt</strong>Ensure all stakeholders understand what constitutes technical debt.
 
-**2. Make Debt Visible**Track debt alongside regular development work.
+<strong>2. Make Debt Visible</strong>Track debt alongside regular development work.
 
-**3. Prioritize Remediation**Use risk and cost frameworks (e.g., SQALE, Gartner) to prioritize.
+<strong>3. Prioritize Remediation</strong>Use risk and cost frameworks (e.g., SQALE, Gartner) to prioritize.
 
-**4. Integrate Remediation**Allocate dedicated sprint capacity for debt reduction.
+<strong>4. Integrate Remediation</strong>Allocate dedicated sprint capacity for debt reduction.
 
-**5. Automate Testing and Validation**Implement CI/CD pipelines and automated tests.
+<strong>5. Automate Testing and Validation</strong>Implement CI/CD pipelines and automated tests.
 
-**6. Refactor Incrementally**Break down large items and focus on high-impact areas.
+<strong>6. Refactor Incrementally</strong>Break down large items and focus on high-impact areas.
 
-**7. Educate Teams**Train developers and product owners on long-term costs and risks.
+<strong>7. Educate Teams</strong>Train developers and product owners on long-term costs and risks.
 
-**8. Monitor Progress**Track and report on debt reduction.
+<strong>8. Monitor Progress</strong>Track and report on debt reduction.
 
-**9. Prevent New Debt**Enforce standards, peer reviews, and automation.
+<strong>9. Prevent New Debt</strong>Enforce standards, peer reviews, and automation.
 
 ## Examples of Technical Debt in Practice
 
-**Hardcoded Values:**Credentials embedded in code, complicating environment changes
+<strong>Hardcoded Values:</strong>Credentials embedded in code, complicating environment changes
 
-**Skipped Error Handling:**Rushed releases lack robust error handling, causing crashes
+<strong>Skipped Error Handling:</strong>Rushed releases lack robust error handling, causing crashes
 
-**Tightly Coupled Components:**Interdependent legacy features hinder isolated updates
+<strong>Tightly Coupled Components:</strong>Interdependent legacy features hinder isolated updates
 
-**Outdated Dependencies:**Unpatched libraries introduce security and maintenance risks
+<strong>Outdated Dependencies:</strong>Unpatched libraries introduce security and maintenance risks
 
-**Manual Deployment:**Scripts require manual intervention, slowing delivery and increasing error rates
+<strong>Manual Deployment:</strong>Scripts require manual intervention, slowing delivery and increasing error rates
 
 ## Technical Debt in AI Infrastructure & Deployment
 
 Machine learning and AI systems are especially prone to hidden technical debt due to rapid prototyping and experimental development.
 
-**Boundary Erosion:**ML models erode modularity, making it hard to maintain strict abstraction boundaries
+<strong>Boundary Erosion:</strong>ML models erode modularity, making it hard to maintain strict abstraction boundaries
 
-**Entanglement:**Model features and data dependencies become tightly coupled, so "Changing Anything Changes Everything" (CACE principle)
+<strong>Entanglement:</strong>Model features and data dependencies become tightly coupled, so "Changing Anything Changes Everything" (CACE principle)
 
-**Correction Cascades:**Stacking models or correction layers increases system complexity and interdependence
+<strong>Correction Cascades:</strong>Stacking models or correction layers increases system complexity and interdependence
 
-**Undeclared Consumers:**Downstream systems silently depend on ML output, increasing maintenance risk
+<strong>Undeclared Consumers:</strong>Downstream systems silently depend on ML output, increasing maintenance risk
 
-**Data Dependencies:**Data pipeline or training data changes can silently break models
+<strong>Data Dependencies:</strong>Data pipeline or training data changes can silently break models
 
-**Configuration and External Drift:**Model behavior can change if the external world shifts or configuration is inconsistent
+<strong>Configuration and External Drift:</strong>Model behavior can change if the external world shifts or configuration is inconsistent
 
 ### Specific AI/ML Examples
 
@@ -214,31 +214,31 @@ Machine learning and AI systems are especially prone to hidden technical debt du
 
 ## Tools and Templates for Managing Technical Debt
 
-**Jira:**Track and prioritize debt alongside features and bugs
+<strong>Jira:</strong>Track and prioritize debt alongside features and bugs
 
-**Ardoq:**Visualize and quantify debt across portfolios
+<strong>Ardoq:</strong>Visualize and quantify debt across portfolios
 
-**SonarQube:**Automated code quality and debt analysis
+<strong>SonarQube:</strong>Automated code quality and debt analysis
 
-**SQALE Method:**Framework for debt quantification and reporting
+<strong>SQALE Method:</strong>Framework for debt quantification and reporting
 
-**AWS Transform Custom:**Automate code and infrastructure modernization at scale
+<strong>AWS Transform Custom:</strong>Automate code and infrastructure modernization at scale
 
 ## Frequently Asked Questions (FAQ)
 
-**What is the difference between technical debt and bugs?**Technical debt is the cumulative effect of shortcuts or compromises, while bugs are defects causing incorrect behavior. Some bugs are caused by technical debt, but not all debt is a bug.
+<strong>What is the difference between technical debt and bugs?</strong>Technical debt is the cumulative effect of shortcuts or compromises, while bugs are defects causing incorrect behavior. Some bugs are caused by technical debt, but not all debt is a bug.
 
-**Is technical debt always bad?**No. Strategic technical debt enables business agility when managed and remediated before costs spiral.
+<strong>Is technical debt always bad?</strong>No. Strategic technical debt enables business agility when managed and remediated before costs spiral.
 
-**Who is responsible for technical debt?**Responsibility is shared across developers, managers, and business stakeholders. Developers often identify and remediate, while product owners prioritize.
+<strong>Who is responsible for technical debt?</strong>Responsibility is shared across developers, managers, and business stakeholders. Developers often identify and remediate, while product owners prioritize.
 
-**How can technical debt be prevented?**Set realistic deadlines, enforce code reviews, automate testing, and foster a culture valuing long-term code health.
+<strong>How can technical debt be prevented?</strong>Set realistic deadlines, enforce code reviews, automate testing, and foster a culture valuing long-term code health.
 
-**How do you measure technical debt?**Combine qualitative (reviews, feedback) and quantitative (metrics, SQALE, TDR) methods, tracking open items, remediation cost, and business risk.
+<strong>How do you measure technical debt?</strong>Combine qualitative (reviews, feedback) and quantitative (metrics, SQALE, TDR) methods, tracking open items, remediation cost, and business risk.
 
-**Can AI help manage technical debt?**Yes. AI tools can identify code smells, automate code modernization, and suggest refactoring, but always require human oversight.
+<strong>Can AI help manage technical debt?</strong>Yes. AI tools can identify code smells, automate code modernization, and suggest refactoring, but always require human oversight.
 
-**What are "code smells" in the context of technical debt?**Symptoms in source code (e.g., duplicate code, long methods, excessive coupling) indicating deeper problems and often leading to technical debt.
+<strong>What are "code smells" in the context of technical debt?</strong>Symptoms in source code (e.g., duplicate code, long methods, excessive coupling) indicating deeper problems and often leading to technical debt.
 
 ## Key Takeaways
 

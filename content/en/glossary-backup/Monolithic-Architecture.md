@@ -15,7 +15,7 @@ Monolithic architecture refers to a unified software application model where all
 
 A monolithic application encapsulates all functionality—such as web interfaces, business workflows, data persistence, and integrations—in a single repository and release pipeline. This is in contrast to microservices, where an application is split into independently deployable services with distinct runtimes and codebases ([IBM](https://www.ibm.com/think/topics/monolithic-architecture), [AWS](https://aws.amazon.com/compare/the-difference-between-monolithic-and-microservices-architecture/), [Atlassian](https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith)).
 
-**Analogy:**A monolithic application is like a single, solid building carved from one rock; any modification or repair requires working with the entire structure, not just a part.
+<strong>Analogy:</strong>A monolithic application is like a single, solid building carved from one rock; any modification or repair requires working with the entire structure, not just a part.
 
 ## Structural Overview and Key Components
 
@@ -46,40 +46,40 @@ Monolithic applications are typically organized into logical layers inside one c
 - Cross-cutting concerns such as logging, error handling, monitoring, authentication, and security.
 - Middleware is often implemented as shared libraries or modules used across the codebase.
 
-**Diagram:**![Monolithic Architecture Diagram](https://media.geeksforgeeks.org/wp-content/uploads/20240405152350/Monolithic-Architecture.webp)  
+<strong>Diagram:</strong>![Monolithic Architecture Diagram](https://media.geeksforgeeks.org/wp-content/uploads/20240405152350/Monolithic-Architecture.webp)  
 *Source: [GeeksforGeeks - Monolithic Architecture](https://www.geeksforgeeks.org/system-design/monolithic-architecture-system-design/)*
 
 ## Key Characteristics
 
-- **Single Codebase:**All application code is managed in a single repository and built together.
+- <strong>Single Codebase:</strong>All application code is managed in a single repository and built together.
 
-- **Tightly Coupled Components:**Modules and features are interdependent, often sharing class definitions, data models, and internal APIs.
+- <strong>Tightly Coupled Components:</strong>Modules and features are interdependent, often sharing class definitions, data models, and internal APIs.
 
-- **Unified Process Space:**The application runs as a single process, with shared memory and resources.
+- <strong>Unified Process Space:</strong>The application runs as a single process, with shared memory and resources.
 
-- **Single Deployment Unit:**The entire application is packaged and deployed together (e.g., as a .jar, .war, or [Docker](/en/glossary/docker/) container).
+- <strong>Single Deployment Unit:</strong>The entire application is packaged and deployed together (e.g., as a .jar, .war, or Docker container).
 
-- **Centralized Data Store:**Typically, a single database serves all application components.
+- <strong>Centralized Data Store:</strong>Typically, a single database serves all application components.
 
-- **Layered Internal Structure:**Code is often organized into logical layers (UI, business logic, data access), but remains one deployable artifact.
+- <strong>Layered Internal Structure:</strong>Code is often organized into logical layers (UI, business logic, data access), but remains one deployable artifact.
 
-- **Limited Scalability:**Scaling requires scaling the whole application, even if only one component is under load.
+- <strong>Limited Scalability:</strong>Scaling requires scaling the whole application, even if only one component is under load.
 
-**Authoritative source:**[IBM: What is monolithic architecture?](https://www.ibm.com/think/topics/monolithic-architecture)
+<strong>Authoritative source:</strong>[IBM: What is monolithic architecture?](https://www.ibm.com/think/topics/monolithic-architecture)
 
 ## Design Principles
 
 Even within a monolithic architecture, best practices dictate clear organization and maintainability:
 
-- **Modularity:**Structure code into cohesive modules or packages for separation of concerns.
+- <strong>Modularity:</strong>Structure code into cohesive modules or packages for separation of concerns.
 
-- **Separation of Concerns:**Distinct responsibilities for UI, business logic, and data access, minimizing cross-layer dependencies.
+- <strong>Separation of Concerns:</strong>Distinct responsibilities for UI, business logic, and data access, minimizing cross-layer dependencies.
 
-- **Encapsulation:**Hide internal details within modules, exposing only necessary public interfaces.
+- <strong>Encapsulation:</strong>Hide internal details within modules, exposing only necessary public interfaces.
 
-- **Consistency:**Enforce uniform coding styles, design patterns, and architectural conventions across the codebase.
+- <strong>Consistency:</strong>Enforce uniform coding styles, design patterns, and architectural conventions across the codebase.
 
-- **Scalability Considerations:**Prepare for horizontal scaling (replicating the whole application) and introduce caching or async processing where possible.
+- <strong>Scalability Considerations:</strong>Prepare for horizontal scaling (replicating the whole application) and introduce caching or async processing where possible.
 
 *See: [GeeksforGeeks - Monolithic Architecture Design Principles](https://www.geeksforgeeks.org/system-design/monolithic-architecture-system-design/)*
 
@@ -103,25 +103,25 @@ Even within a monolithic architecture, best practices dictate clear organization
 
 ### Real-World Examples
 
-- **Banking Systems:**Legacy banking apps often combine account management, transactions, and reporting in one monolithic system.
-- **Enterprise Resource Planning (ERP):**Classic ERP solutions manage HR, finance, and supply chain in a single deployable unit.
-- **Web Platforms:**Early versions of Facebook, Netflix, and WordPress were monolithic.
+- <strong>Banking Systems:</strong>Legacy banking apps often combine account management, transactions, and reporting in one monolithic system.
+- <strong>Enterprise Resource Planning (ERP):</strong>Classic ERP solutions manage HR, finance, and supply chain in a single deployable unit.
+- <strong>Web Platforms:</strong>Early versions of Facebook, Netflix, and WordPress were monolithic.
 
 ## Advantages of Monolithic Architecture
 
 | Advantage | Explanation |
 |-----------|-------------|
-| **Simplicity**| Easier to develop, understand, and manage, especially for small to medium projects ([IBM](https://www.ibm.com/think/topics/monolithic-architecture)). |
-| **Quick Initial Development**| Rapid prototyping with minimal infrastructure complexity ([ShadeCoder](https://www.shadecoder.com/topics/a-monolithic-architecture-a-comprehensive-guide-for-2025)). |
-| **Centralized Deployment**| Single artifact release streamlines versioning and rollout ([AWS](https://aws.amazon.com/compare/the-difference-between-monolithic-and-microservices-architecture/)). |
-| **Performance**| In-process communication is faster than network calls across distributed services. |
-| **Straightforward Debugging**| Tracing and logging all occur within one process, simplifying troubleshooting. |
-| **Unified Testing**| End-to-end tests can validate all application flows without orchestrating multiple environments. |
-| **Lower Infrastructure Overhead**| Fewer moving parts mean simpler DevOps and cost-effective early-stage operations. |
-| **Enhanced Security**| Fewer internal communication points reduce the attack surface ([IBM](https://www.ibm.com/think/topics/monolithic-architecture)). |
-| **Legacy Compatibility**| Well-suited for environments with established deployment and maintenance practices. |
+| <strong>Simplicity</strong>| Easier to develop, understand, and manage, especially for small to medium projects ([IBM](https://www.ibm.com/think/topics/monolithic-architecture)). |
+| <strong>Quick Initial Development</strong>| Rapid prototyping with minimal infrastructure complexity ([ShadeCoder](https://www.shadecoder.com/topics/a-monolithic-architecture-a-comprehensive-guide-for-2025)). |
+| <strong>Centralized Deployment</strong>| Single artifact release streamlines versioning and rollout ([AWS](https://aws.amazon.com/compare/the-difference-between-monolithic-and-microservices-architecture/)). |
+| <strong>Performance</strong>| In-process communication is faster than network calls across distributed services. |
+| <strong>Straightforward Debugging</strong>| Tracing and logging all occur within one process, simplifying troubleshooting. |
+| <strong>Unified Testing</strong>| End-to-end tests can validate all application flows without orchestrating multiple environments. |
+| <strong>Lower Infrastructure Overhead</strong>| Fewer moving parts mean simpler DevOps and cost-effective early-stage operations. |
+| <strong>Enhanced Security</strong>| Fewer internal communication points reduce the attack surface ([IBM](https://www.ibm.com/think/topics/monolithic-architecture)). |
+| <strong>Legacy Compatibility</strong>| Well-suited for environments with established deployment and maintenance practices. |
 
-**Expanded Notes:**- Developers can grasp the entire business logic and flow without context-switching between services.
+<strong>Expanded Notes:</strong>- Developers can grasp the entire business logic and flow without context-switching between services.
 - All features, fixes, and updates go live together, reducing the risk of version mismatches.
 - Function calls between layers are in-memory, eliminating network serialization/deserialization.
 - "Monolithic" does not mean "unstructured"—internal modularity is possible, even within a single deployable unit ([ShadeCoder](https://www.shadecoder.com/topics/a-monolithic-architecture-a-comprehensive-guide-for-2025)).
@@ -130,58 +130,58 @@ Even within a monolithic architecture, best practices dictate clear organization
 
 | Limitation | Description / Example |
 |------------|----------------------|
-| **Scalability Bottlenecks**| Scaling the entire application is required even if only one module (e.g., checkout) requires more resources ([AWS](https://aws.amazon.com/compare/the-difference-between-monolithic-and-microservices-architecture/)). |
-| **Deployment Risk**| Even minor changes trigger full application redeployment, increasing downtime risk. |
-| **Tight Coupling**| High interdependency makes code changes riskier and can introduce regression bugs. |
-| **Lack of Flexibility / Technology Lock-in**| Difficult to introduce new languages, frameworks, or tools for specific features. |
-| **Slower Development as Scale Grows**| Large codebases become unwieldy, with more merge conflicts and longer build/test cycles. |
-| **Reduced Fault Isolation**| A bug in one module can crash the entire application. |
-| **Limited Support for CI/CD**| Difficult to implement frequent, small releases. |
-| **Resource Inefficiency**| Overprovisioning is common; underutilized components still consume resources. |
+| <strong>Scalability Bottlenecks</strong>| Scaling the entire application is required even if only one module (e.g., checkout) requires more resources ([AWS](https://aws.amazon.com/compare/the-difference-between-monolithic-and-microservices-architecture/)). |
+| <strong>Deployment Risk</strong>| Even minor changes trigger full application redeployment, increasing downtime risk. |
+| <strong>Tight Coupling</strong>| High interdependency makes code changes riskier and can introduce regression bugs. |
+| <strong>Lack of Flexibility / Technology Lock-in</strong>| Difficult to introduce new languages, frameworks, or tools for specific features. |
+| <strong>Slower Development as Scale Grows</strong>| Large codebases become unwieldy, with more merge conflicts and longer build/test cycles. |
+| <strong>Reduced Fault Isolation</strong>| A bug in one module can crash the entire application. |
+| <strong>Limited Support for CI/CD</strong>| Difficult to implement frequent, small releases. |
+| <strong>Resource Inefficiency</strong>| Overprovisioning is common; underutilized components still consume resources. |
 
-**Example:**A trivial change in the UI (e.g., fixing a typo) requires rebuilding, retesting, and redeploying the entire application, risking outages ([Strapi Case Study](https://strapi.io/blog/monolithic-architecture-pros-cons-evolution-guide)).
+<strong>Example:</strong>A trivial change in the UI (e.g., fixing a typo) requires rebuilding, retesting, and redeploying the entire application, risking outages ([Strapi Case Study](https://strapi.io/blog/monolithic-architecture-pros-cons-evolution-guide)).
 
 ## Use Cases: When to Use Monolithic Architecture
 
 | Use Case | Suitability Reason |
 |----------|-------------------|
-| **Startups & MVPs**| Rapid development with minimal infrastructure and lower cost. |
-| **Simple or Small Applications**| Limited scope eases maintenance and deployment. |
-| **Tightly Regulated Environments**| Centralized code and deployment ease compliance and auditing. |
-| **Legacy Systems**| Existing monolithic solutions can be efficiently maintained if scaling needs are predictable. |
-| **Teams with Limited DevOps Expertise**| Easier to operate and debug without distributed system complexity. |
+| <strong>Startups & MVPs</strong>| Rapid development with minimal infrastructure and lower cost. |
+| <strong>Simple or Small Applications</strong>| Limited scope eases maintenance and deployment. |
+| <strong>Tightly Regulated Environments</strong>| Centralized code and deployment ease compliance and auditing. |
+| <strong>Legacy Systems</strong>| Existing monolithic solutions can be efficiently maintained if scaling needs are predictable. |
+| <strong>Teams with Limited DevOps Expertise</strong>| Easier to operate and debug without distributed system complexity. |
 
 ## Scaling and Maintenance Challenges
 
 ### Scaling Patterns
 
-- **Vertical Scaling (Scale Up):**Increase server resources (CPU, RAM) for the whole application. Effective up to hardware limits but can become costly ([GeeksforGeeks](https://www.geeksforgeeks.org/system-design/monolithic-architecture-system-design/)).
-- **Horizontal Scaling (Scale Out):**Run multiple instances of the entire application behind a load balancer. Does not allow scaling individual features independently.
-- **Caching:**Use of in-memory caching (e.g., Redis, Memcached) to reduce database and API load.
-- **Database Sharding:**Partition data across multiple database instances. Adds complexity to tightly-coupled codebases ([GeeksforGeeks: Database Sharding](https://www.geeksforgeeks.org/system-design/database-sharding-a-system-design-concept/)).
-- **Load Balancing:**Distributes incoming traffic across identical application nodes.
+- <strong>Vertical Scaling (Scale Up):</strong>Increase server resources (CPU, RAM) for the whole application. Effective up to hardware limits but can become costly ([GeeksforGeeks](https://www.geeksforgeeks.org/system-design/monolithic-architecture-system-design/)).
+- <strong>Horizontal Scaling (Scale Out):</strong>Run multiple instances of the entire application behind a load balancer. Does not allow scaling individual features independently.
+- <strong>Caching:</strong>Use of in-memory caching (e.g., Redis, Memcached) to reduce database and API load.
+- <strong>Database Sharding:</strong>Partition data across multiple database instances. Adds complexity to tightly-coupled codebases ([GeeksforGeeks: Database Sharding](https://www.geeksforgeeks.org/system-design/database-sharding-a-system-design-concept/)).
+- <strong>Load Balancing:</strong>Distributes incoming traffic across identical application nodes.
 
 ### Maintenance Issues
 
-- **Codebase Growth:**As features accumulate, the codebase becomes harder to manage, increasing [technical debt](/en/glossary/technical-debt/).
-- **Deployment Complexity:**Longer build and test cycles, higher risk of deployment failures.
-- **Change Management:**Difficult to refactor or update individual modules without impacting unrelated features.
+- <strong>Codebase Growth:</strong>As features accumulate, the codebase becomes harder to manage, increasing technical debt.
+- <strong>Deployment Complexity:</strong>Longer build and test cycles, higher risk of deployment failures.
+- <strong>Change Management:</strong>Difficult to refactor or update individual modules without impacting unrelated features.
 
 ## Monolithic Architecture vs. Microservices
 
 | Attribute | Monolithic Architecture | Microservices Architecture |
 |-----------|------------------------|---------------------------|
-| **Structure**| Single codebase, tightly coupled modules | Multiple, loosely coupled independent services |
-| **Deployment**| Single deployment unit | Each service deploys independently |
-| **Scalability**| Entire app scales as one unit | Scale individual services as needed |
-| **Technology Stack**| Uniform across app | Each service can use different tech |
-| **Debugging**| Centralized, less complex | Distributed, requires tracing across services |
-| **Release Management**| Whole app released together | Continuous, targeted deployments |
-| **Failure Impact**| One bug can affect all features | Faults isolated to the affected service |
-| **Team Autonomy**| Lower; all teams work in same codebase | Higher; teams own and deploy their own services |
+| <strong>Structure</strong>| Single codebase, tightly coupled modules | Multiple, loosely coupled independent services |
+| <strong>Deployment</strong>| Single deployment unit | Each service deploys independently |
+| <strong>Scalability</strong>| Entire app scales as one unit | Scale individual services as needed |
+| <strong>Technology Stack</strong>| Uniform across app | Each service can use different tech |
+| <strong>Debugging</strong>| Centralized, less complex | Distributed, requires tracing across services |
+| <strong>Release Management</strong>| Whole app released together | Continuous, targeted deployments |
+| <strong>Failure Impact</strong>| One bug can affect all features | Faults isolated to the affected service |
+| <strong>Team Autonomy</strong>| Lower; all teams work in same codebase | Higher; teams own and deploy their own services |
 
-**Case Study:**- **Netflix:**Migrated from monolithic to microservices to support scaling and rapid deployments ([Atlassian](https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith)).
-- **Atlassian:**Decomposed Jira and Confluence monoliths for better cloud scalability and team agility.
+<strong>Case Study:</strong>- <strong>Netflix:</strong>Migrated from monolithic to microservices to support scaling and rapid deployments ([Atlassian](https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith)).
+- <strong>Atlassian:</strong>Decomposed Jira and Confluence monoliths for better cloud scalability and team agility.
 ## Migration Strategies
 
 Migrating from a monolithic to a distributed (e.g., microservices) architecture is complex. Key strategies include:
@@ -207,11 +207,11 @@ Migrating from a monolithic to a distributed (e.g., microservices) architecture 
 
 Monolithic architecture remains a foundational pattern for application development, delivering simplicity, performance, and ease of development for small to medium-sized projects and teams with limited operational resources. Its strengths include rapid iteration, centralized deployment, and ease of debugging. However, as systems grow in complexity and scale, the tight coupling and deployment risk of monoliths become significant bottlenecks, often necessitating a migration to microservices or distributed architectures for flexibility, scalability, and maintainability.
 
-**When to choose monolithic:**- Rapid prototyping, MVPs, or simple applications
+<strong>When to choose monolithic:</strong>- Rapid prototyping, MVPs, or simple applications
 - Small teams or limited DevOps resources
 - Projects with stable, predictable workloads
 
-**When to consider alternatives:**- Large, evolving systems requiring independent scaling and deployment
+<strong>When to consider alternatives:</strong>- Large, evolving systems requiring independent scaling and deployment
 - Teams needing technology diversity and continuous delivery
 - Applications requiring high reliability and fault isolation
 

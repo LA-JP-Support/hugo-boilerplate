@@ -10,11 +10,11 @@ image: "/images/blog/inquiry-management-revolution.png"
 Have you ever been startled by this question from staff first thing Monday morning?
 You frantically open your mailbox to find a mountain of inquiries that have piled up since Friday evening. You open your Excel management sheet and desperately check "Handled" and "Pending." Wait, is Tanaka-san handling this inquiry, or am I?
 Before you know it, the morning is over and your actual work remains untouched...
-**In fact, this scene is happening in small businesses all across Japan.**## Shocking Fact: 60% of Inquiry Responses Are Still "Manual"
+<strong>In fact, this scene is happening in small businesses all across Japan.</strong>## Shocking Fact: 60% of Inquiry Responses Are Still "Manual"
 
 ### Invisible Losses Are Accumulating
 
-Research shows that approximately **60%**of inquiry responses are still handled manually. And about **70%**of companies have experienced "response errors and oversights due to insufficient information sharing."
+Research shows that approximately <strong>60%</strong>of inquiry responses are still handled manually. And about <strong>70%</strong>of companies have experienced "response errors and oversights due to insufficient information sharing."
 
 Let's think concretely about what this means:
 
@@ -32,22 +32,22 @@ When multiple inquiries come in simultaneously, which should be handled first? A
 
 ### 30% of Customers Leave Due to "Slow Response"
 
-There's even more shocking data. Recent surveys show that delays in customer service and declining service quality are the reason approximately **30%**of customers leave.
+There's even more shocking data. Recent surveys show that delays in customer service and declining service quality are the reason approximately <strong>30%</strong>of customers leave.
 
 In other words, improving inquiry management isn't something you "should do" - it's a "must do to survive" level challenge.
 
-## [Ticket System](/en/glossary/Ticket-System/): The "Magic Wand"
+## Ticket System: The "Magic Wand"
 
 ### What Exactly Is a "Ticket System"?
 
 It might sound complicated, but it's actually simple.
 
-> [Ticket](/en/glossary/ticket/) System = A mechanism to manage all inquiries as "numbered slips"
+> Ticket System = A mechanism to manage all inquiries as "numbered slips"
 
 It's like when a restaurant takes an order, writes it on a slip, and sends it to the kitchen.
 
-- Email inquiry → [Ticket](/en/glossary/ticket/) #001
-- Phone consultation → [Ticket](/en/glossary/ticket/) #002
+- Email inquiry → Ticket #001
+- Phone consultation → Ticket #002
 - SNS DM or comment → Ticket #003
 - Quote request from inquiry form → Ticket #004
 
@@ -55,18 +55,18 @@ Everything gets a number, making it clear at a glance "who," "when," and "what" 
 
 ### Amazing Results: Actual Company Outcomes
 
-At SmartWeb, we use [LiveAgent](/en/glossary/LiveAgent/), a proven ticket system with extensive track record.
+At SmartWeb, we use LiveAgent, a proven ticket system with extensive track record.
 
 #### Results from companies that implemented LiveAgent:
 
-- [First contact resolution](/en/glossary/First-Contact-Resolution--FCR-/) rate: **28% improvement**- [Response time](/en/glossary/Response-Time/): Reduced from 1 hour to **20 minutes**- Missed responses: **Nearly zero**Voice from a small business owner:
-**"Before implementation, every day was panic mode. But now, I can see the status of all inquiries just by looking at the screen. Response speed doubled and complaints drastically decreased."**## [Support Portal](/en/glossary/Support-Portal/): The "Magic Bookshelf" for Customer Self-Service
+- First contact resolution rate: <strong>28% improvement</strong>- Response time: Reduced from 1 hour to <strong>20 minutes</strong>- Missed responses: <strong>Nearly zero</strong>Voice from a small business owner:
+<strong>"Before implementation, every day was panic mode. But now, I can see the status of all inquiries just by looking at the screen. Response speed doubled and complaints drastically decreased."</strong>## Support Portal: The "Magic Bookshelf" for Customer Self-Service
 
 ### 30-52% of Inquiries Disappear!?
 
-A "Support Portal" is like a "customer-dedicated library" that compiles [FAQs](/en/glossary/FAQ/) and manuals.
+A "Support Portal" is like a "customer-dedicated library" that compiles FAQs and manuals.
 
-In fact, **30-52%**of inquiries are things customers can resolve themselves if they have the right information (according to Gartner research).
+In fact, <strong>30-52%</strong>of inquiries are things customers can resolve themselves if they have the right information (according to Gartner research).
 
 #### Common self-resolvable inquiries:
 
@@ -94,7 +94,7 @@ By providing this information 24/7/365, you can reduce late-night and weekend in
 | Time | Before: Monday Morning Pre-Implementation | After: Monday Morning Post-SmartWeb Implementation |
 | --- | --- | --- |
 | 9:30 | Arrive at office | Arrive at office |
-| 9:35 | Start checking emails | Check dedicated support [dashboard](/en/glossary/dashboard/) |
+| 9:35 | Start checking emails | Check dedicated support dashboard |
 | 9:40 |   | 3 unhandled tickets, process from "high" priority |
 | 10:00 | Update Excel management sheet | Each assigned staff member starts handling auto-sorted tickets, also begins parallel chat support |
 | 10:30 | Ask staff "Did anyone handle this case?" |   |
@@ -113,7 +113,7 @@ By providing this information 24/7/365, you can reduce late-night and weekend in
 ### Step 2: Setup (1 week)
 
 - SmartWeb initial configuration (supported by Japanese staff)
-- Register basic [FAQ](/en/glossary/FAQ/) items
+- Register basic FAQ items
 - Confirm operation through test runs
 
 ### Step 3: Start Operations (1 week~)
@@ -129,27 +129,27 @@ By providing this information 24/7/365, you can reduce late-night and weekend in
 - Initial cost: 100,000 yen - We'll set it up ready to use
 - Monthly cost: From 10,000 yen~ - Varies based on number of staff using the system
 
-### Simple [Return on Investment](/en/glossary/ROI/) Calculation
+### Simple Return on Investment Calculation
 
-| Item | Current [State](/en/glossary/State---Context-Memory/) | After SmartWeb Implementation |
+| Item | Current State | After SmartWeb Implementation |
 | --- | --- | --- |
-| [Response time](/en/glossary/Response-Time/) | 2 staff members, 2 hours daily each | [Response time](/en/glossary/Response-Time/) cut in half |
+| Response time | 2 staff members, 2 hours daily each | Response time cut in half |
 | Personnel costs | 2 hours × 2 people × 20 days × 2,000 yen = 160,000 yen equivalent per month | Reducible personnel costs: 80,000 yen equivalent per month |
 | System costs | - | SmartWeb monthly cost: 12,500 yen |
 | Net reduction effect | - | 67,500 yen per month! |
 
-In other words, you can **recover the initial investment in 2 months**.
+In other words, you can <strong>recover the initial investment in 2 months</strong>.
 
 ## Answering Common Questions and Concerns
 
-**Q: We're a small company, do we really need this?**
-**A:**Small companies need it even more. To operate efficiently with few people, leveraging system power is crucial.
+<strong>Q: We're a small company, do we really need this?</strong>
+<strong>A:</strong>Small companies need it even more. To operate efficiently with few people, leveraging system power is crucial.
 
-**Q: Can we use it even if we're not IT-savvy?**
-**A:**Absolutely. Japanese staff will carefully support you from implementation to operation. The interface is in Japanese and intuitive to operate.
+<strong>Q: Can we use it even if we're not IT-savvy?</strong>
+<strong>A:</strong>Absolutely. Japanese staff will carefully support you from implementation to operation. The interface is in Japanese and intuitive to operate.
 
-**Q: Changing our current methods seems difficult...**
-**A:**The first week does require adjustment, but after one month everyone says "we can never go back to the old way."
+<strong>Q: Changing our current methods seems difficult...</strong>
+<strong>A:</strong>The first week does require adjustment, but after one month everyone says "we can never go back to the old way."
 
 ## "3 Secrets" Practiced by Successful Companies
 
@@ -167,7 +167,7 @@ Check data monthly. Analyze "what types of inquiries are most common?" and "did 
 
 ## If You Don't Start Now, Competitors Will Gain an Advantage
 
-The wave of [digitalization](/en/glossary/digitalization/) isn't just for large corporations. Rather, small businesses have the opportunity to provide enterprise-level service by making technology their ally.
+The wave of digitalization isn't just for large corporations. Rather, small businesses have the opportunity to provide enterprise-level service by making technology their ally.
 
 ### Imagine Your Company One Year From Now
 
@@ -180,7 +180,7 @@ The wave of [digitalization](/en/glossary/digitalization/) isn't just for large 
 
 ## Inquiry Management Is "Investment," Not "Cost"
 
-Improving inquiry management isn't just [operational efficiency](/en/glossary/Operational-Efficiency/). It's a "strategic investment" to build trust relationships with customers and grow your business.
+Improving inquiry management isn't just operational efficiency. It's a "strategic investment" to build trust relationships with customers and grow your business.
 
 ### With SmartWeb:
 
@@ -197,4 +197,4 @@ Improving inquiry management isn't just [operational efficiency](/en/glossary/Op
 
 Our experienced Japanese staff will carefully answer any questions you have.
 
-**In a 20-minute free online demo, we'll show you the moment your company's inquiry management dramatically transforms.**
+<strong>In a 20-minute free online demo, we'll show you the moment your company's inquiry management dramatically transforms.</strong>

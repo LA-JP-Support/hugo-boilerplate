@@ -42,14 +42,14 @@ Flag states are managed in one of several ways:
 - Static configuration files
 - Databases or key-value stores
 - Dedicated feature flag management systems (e.g., LaunchDarkly, AWS AppConfig, Unleash)
-- [Environment variables](/en/glossary/environment-variables--secrets-/)
+- Environment variables
 
 Modern flag management tools allow dynamic updates—so flipping a flag in a UI or API changes behavior instantly for all users or selected segments, without downtime or redeploy.
 
 Flags can be:
-- **Global**(affecting all users)
-- **Targeted**(affecting specific users, cohorts, or environments)
-- **Boolean**(on/off) or **multivariate**(multiple states or variants)
+- <strong>Global</strong>(affecting all users)
+- <strong>Targeted</strong>(affecting specific users, cohorts, or environments)
+- <strong>Boolean</strong>(on/off) or <strong>multivariate</strong>(multiple states or variants)
 
 For a visual explanation and more technical details, see:
 - [AWS: Feature Flags Best Practices](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
@@ -61,11 +61,11 @@ Feature flag taxonomy is crucial for best practice management. Types include:
 
 | Type                | Purpose                                        | Typical Lifespan    | Example Use                                   |
 |---------------------|------------------------------------------------|---------------------|-----------------------------------------------|
-| **Release Toggle**| Hide incomplete or experimental features       | Short (weeks/months)| Progressive rollout of a new UI               |
-| **Experiment Toggle**| Enable A/B or multivariate testing           | Short (days/weeks)  | Comparing checkout flows                      |
-| **Ops Toggle**| Operational control (e.g., kill switch)        | Short/Medium/Long   | Disabling resource-intensive features         |
-| **Permission Toggle**| Limit features by roles/cohorts              | Long/Permanent      | Premium or admin-only features                |
-| **Kill Switch**| Emergency disabling of risky features          | Long/Permanent      | Instantly disabling a payment integration     |
+| <strong>Release Toggle</strong>| Hide incomplete or experimental features       | Short (weeks/months)| Progressive rollout of a new UI               |
+| <strong>Experiment Toggle</strong>| Enable A/B or multivariate testing           | Short (days/weeks)  | Comparing checkout flows                      |
+| <strong>Ops Toggle</strong>| Operational control (e.g., kill switch)        | Short/Medium/Long   | Disabling resource-intensive features         |
+| <strong>Permission Toggle</strong>| Limit features by roles/cohorts              | Long/Permanent      | Premium or admin-only features                |
+| <strong>Kill Switch</strong>| Emergency disabling of risky features          | Long/Permanent      | Instantly disabling a payment integration     |
 
 Deep reference:
 - [Martin Fowler: Feature Toggles Taxonomy](https://martinfowler.com/articles/feature-toggles.html#CategoriesOfToggles)
@@ -76,21 +76,21 @@ Deep reference:
 
 Feature flags enable fast, safe, and flexible software delivery. Key benefits:
 
-- **Decouple Deployment from Release:**Ship code to production but control exposure of features until ready. [LaunchDarkly](https://launchdarkly.com/blog/what-are-feature-flags/)
+- <strong>Decouple Deployment from Release:</strong>Ship code to production but control exposure of features until ready. [LaunchDarkly](https://launchdarkly.com/blog/what-are-feature-flags/)
 
-- **Progressive Delivery:**Roll out features gradually to minimize risk (canary, percentage, cohort, region).  
+- <strong>Progressive Delivery:</strong>Roll out features gradually to minimize risk (canary, percentage, cohort, region).  
   [AWS: Gradual Deployments](https://aws.amazon.com/awstv/watch/b0a6ae07a9f/)
 
-- **Rapid Rollback (Kill Switch):**Instantly disable problematic features without redeploying or hotfixes.
+- <strong>Rapid Rollback (Kill Switch):</strong>Instantly disable problematic features without redeploying or hotfixes.
 
-- **Continuous Integration & Trunk-Based Development:**Merge incomplete features into mainline safely, removing the need for long-lived feature branches.  
+- <strong>Continuous Integration & Trunk-Based Development:</strong>Merge incomplete features into mainline safely, removing the need for long-lived feature branches.  
   [LaunchDarkly: Trunk-Based Development](https://launchdarkly.com/blog/introduction-to-trunk-based-development/)
 
-- **A/B Testing & Experimentation:**Test variants and collect behavioral data for data-driven product decisions.
+- <strong>A/B Testing & Experimentation:</strong>Test variants and collect behavioral data for data-driven product decisions.
 
-- **Operational Control:**Respond to incidents by toggling off features that cause instability.
+- <strong>Operational Control:</strong>Respond to incidents by toggling off features that cause instability.
 
-- **Entitlement & Permission Management:**Gate access by user role, subscription, contract, or geography.
+- <strong>Entitlement & Permission Management:</strong>Gate access by user role, subscription, contract, or geography.
 
 For more, see:
 - [Optimizely: Feature Flag Benefits](https://www.optimizely.com/optimization-glossary/feature-flags/)
@@ -113,17 +113,17 @@ Wrap evaluation in a helper for centralization and testability.
 
 ### 2. Configuring Flags
 
-- **Static:**Hardcoded or in config files; requires redeploy to change.
-- **Dynamic:**Stored in databases, APIs, or flag management platforms; changes propagate instantly.
+- <strong>Static:</strong>Hardcoded or in config files; requires redeploy to change.
+- <strong>Dynamic:</strong>Stored in databases, APIs, or flag management platforms; changes propagate instantly.
 
 Dynamic management is best for most production use cases.
 
 ### 3. Targeting and Evaluation
 
 Flags may check:
-- **User attributes:**(ID, role, region)
-- **Request context:**(session, device, cohort)
-- **Environment:**(dev, staging, prod)
+- <strong>User attributes:</strong>(ID, role, region)
+- <strong>Request context:</strong>(session, device, cohort)
+- <strong>Environment:</strong>(dev, staging, prod)
 
 Example: Rollout to 10% of users
 ```javascript
@@ -185,32 +185,32 @@ While feature flags add flexibility, they introduce complexity and require disci
 
 Multiple flags = more conditional paths.  
 - Can lead to hard-to-read and hard-to-test code.  
-- **Mitigation:**Limit number of active flags, document thoroughly.
+- <strong>Mitigation:</strong>Limit number of active flags, document thoroughly.
 
 ### 2. Technical Debt from Stale Flags
 
 Flags meant as temporary may linger, cluttering codebase.  
-- **Mitigation:**Audit and remove obsolete flags regularly.
+- <strong>Mitigation:</strong>Audit and remove obsolete flags regularly.
 
 ### 3. Performance Overhead
 
 Frequent flag checks, especially in performance-critical paths, may degrade performance.  
-- **Mitigation:**Cache flag state where possible.
+- <strong>Mitigation:</strong>Cache flag state where possible.
 
 ### 4. Test Matrix Explosion
 
 Multiple flags multiply possible code paths to test.  
-- **Mitigation:**Prioritize high-impact combinations, automate testing.
+- <strong>Mitigation:</strong>Prioritize high-impact combinations, automate testing.
 
 ### 5. Security Considerations
 
 Improper configuration may expose sensitive features/data.  
-- **Mitigation:**Apply access control, audit logs, restrict management access.
+- <strong>Mitigation:</strong>Apply access control, audit logs, restrict management access.
 
 ### 6. Operational Complexity
 
 Synchronizing flag state across distributed systems is non-trivial.  
-- **Mitigation:**Use robust, centralized management tools.
+- <strong>Mitigation:</strong>Use robust, centralized management tools.
 
 Further analysis:
 - [Octopus: Challenges and Risks](https://octopus.com/devops/feature-flags/#challenges-and-risks-of-using-feature-flags)
@@ -220,23 +220,23 @@ Further analysis:
 
 To get the most out of feature flags:
 
-- **Use a Centralized Management Tool:**Provides visibility, access control, and auditability.
+- <strong>Use a Centralized Management Tool:</strong>Provides visibility, access control, and auditability.
 
-- **Naming Conventions:**Name flags by purpose and expected lifespan.
+- <strong>Naming Conventions:</strong>Name flags by purpose and expected lifespan.
 
-- **Document Everything:**Purpose, owner, dependencies, and removal criteria.
+- <strong>Document Everything:</strong>Purpose, owner, dependencies, and removal criteria.
 
-- **Regular Audits:**Remove unused flags to avoid [technical debt](/en/glossary/technical-debt/) (“flag rot”).
+- <strong>Regular Audits:</strong>Remove unused flags to avoid technical debt (“flag rot”).
 
-- **Integrate Flag Cleanup:**Into CI/CD and release checklists.
+- <strong>Integrate Flag Cleanup:</strong>Into CI/CD and release checklists.
 
-- **Monitor Performance Impact:**Optimize evaluation logic.
+- <strong>Monitor Performance Impact:</strong>Optimize evaluation logic.
 
-- **Secure Management Interfaces:**Limit access, enable audit logging.
+- <strong>Secure Management Interfaces:</strong>Limit access, enable audit logging.
 
-- **Educate Teams:**On proper flag usage and lifecycle.
+- <strong>Educate Teams:</strong>On proper flag usage and lifecycle.
 
-**Actionable Checklist:**- [ ] Each flag has a documented owner.
+<strong>Actionable Checklist:</strong>- [ ] Each flag has a documented owner.
 - [ ] Flags are categorized (release, experiment, ops, permission).
 - [ ] Flag status is visible in all environments.
 - [ ] Expiry/removal dates are tracked.
@@ -259,7 +259,7 @@ You can build a tool in-house, but commercial and open-source tools provide adva
 | ConfigCat      | SaaS           | Simple UI, SDKs, targeting, roles                        | [configcat.com](https://configcat.com/) |
 | Split          | Commercial     | Feature flagging, experimentation, metrics               | [split.io](http://split.io) |
 | OpenFeature    | Standard       | Vendor-neutral API/SDK for flag evaluation               | [openfeature.dev](https://openfeature.dev/) |
-| AWS AppConfig  | Commercial     | AWS native, integrates with other AWS services, gradual rollouts, [safety guardrails](/en/glossary/safety-guardrails/) | [AWS AppConfig documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) |
+| AWS AppConfig  | Commercial     | AWS native, integrates with other AWS services, gradual rollouts, safety guardrails | [AWS AppConfig documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) |
 
 Select a tool based on your scale, security, and analytics needs.
 

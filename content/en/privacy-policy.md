@@ -9,7 +9,7 @@ type: "legal"
 draft: false
 ---
 
-Interwork Corporation (hereinafter "the Company") is committed to protecting and appropriately handling the personal information of customers in the website construction and operational support service **SmartWeb**that the Company provides. This policy consolidates the Company's personal information protection policy and matters related to the handling of personal information.
+Interwork Corporation (hereinafter "the Company") is committed to protecting and appropriately handling the personal information of customers in the website construction and operational support service <strong>SmartWeb</strong>that the Company provides. This policy consolidates the Company's personal information protection policy and matters related to the handling of personal information.
 
 ---
 
@@ -46,13 +46,13 @@ Information collected is used within the following scope:
 
 The Company shares personal information with joint users only in the following cases:
 
-**Joint User:**Quality Unit s.r.o. (Developer of LiveAgent and FlowHunt, located in Bratislava, Slovakia)
+<strong>Joint User:</strong>Quality Unit s.r.o. (Developer of LiveAgent and FlowHunt, located in Bratislava, Slovakia)
 
-**Items to be Jointly Used:**Name, company name, position, email address, inquiry content, usage history, and similar information
+<strong>Items to be Jointly Used:</strong>Name, company name, position, email address, inquiry content, usage history, and similar information
 
-**Purposes for Use:**Inquiry response, technical support, service operation, and improvement support
+<strong>Purposes for Use:</strong>Inquiry response, technical support, service operation, and improvement support
 
-**Responsibility Manager:**Interwork Corporation
+<strong>Responsibility Manager:</strong>Interwork Corporation
 
 ---
 
@@ -100,7 +100,7 @@ The Company may revise this policy without notice due to changes in laws or serv
 
 For questions or inquiries regarding personal information, please contact us through the following:
 
-**Interwork Corporation**Personal Information Protection Inquiry Reception  
+<strong>Interwork Corporation</strong>Personal Information Protection Inquiry Reception  
 Personal Information Inquiry Department  
 11F, Aoyama Paracio Tower, 3-6-7 Kitaaoyama, Minato Ward, Tokyo 107-0061, Japan
 
@@ -108,7 +108,7 @@ Please use the inquiry button at the bottom right of the page to contact us.
 
 ---
 
-**Establishment and Update History**Date Established: September 9, 2025
+<strong>Establishment and Update History</strong>Date Established: September 9, 2025
 
 Last Updated: September 11, 2025
 

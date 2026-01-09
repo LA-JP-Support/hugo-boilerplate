@@ -11,15 +11,15 @@ draft: false
 ---
 ## What is an Utterance in Conversational AI?
 
-An **utterance**is any input, phrase, or statement that a user communicates to a chatbot or [conversational AI](/en/glossary/conversational-ai/) during a conversation, either by typing or speaking. Each message or command—whether a sentence, question, or fragment—is an utterance. For example:
+An <strong>utterance</strong>is any input, phrase, or statement that a user communicates to a chatbot or conversational AI during a conversation, either by typing or speaking. Each message or command—whether a sentence, question, or fragment—is an utterance. For example:
 
 - User: “What’s my account balance?” *(utterance)*
 - User: “Cancel my last order.” *(utterance)*
 - User: “Hi!” *(utterance)*
 
-Utterances are the building blocks that conversational AI systems interpret to understand user needs and generate appropriate responses. They are core to systems that rely on **natural language understanding (NLU)**and **natural language processing (NLP)**.
+Utterances are the building blocks that conversational AI systems interpret to understand user needs and generate appropriate responses. They are core to systems that rely on <strong>natural language understanding (NLU)</strong>and <strong>natural language processing (NLP)</strong>.
 
-**Authoritative Reference:**- [SiteSpeakAI: What is an Utterance?](https://sitespeak.ai/ai-chatbot-terms/utterance)
+<strong>Authoritative Reference:</strong>- [SiteSpeakAI: What is an Utterance?](https://sitespeak.ai/ai-chatbot-terms/utterance)
 - [Emplifi: AI Utterances Documentation](https://docs.emplifi.io/platform/latest/home/ai-utterances)
 - [LinkedIn: Utterance, Intent & Entity in Conversational AI](https://www.linkedin.com/pulse/what-utterance-intent-entity-conversational-ai-paul-blocchi)
 
@@ -39,56 +39,56 @@ Utterances can vary in complexity, length, and intent. They range from brief gre
 
 ### Real-World Use Cases
 
-- **Banking Chatbots:**- “How do I check my balance?”
+- <strong>Banking Chatbots:</strong>- “How do I check my balance?”
   - “Transfer $100 to savings.”
 
-- **E-commerce Bots:**- “Track my order.”
+- <strong>E-commerce Bots:</strong>- “Track my order.”
   - “I want to return these shoes.”
 
-- **Customer Support:**- “I can’t log in to my account.”
+- <strong>Customer Support:</strong>- “I can’t log in to my account.”
   - “Reset my password.”
 
 Each user input is an utterance that the chatbot must understand to fulfill the request. Capturing a wide range of utterances is vital for training conversational AI effectively. ([SiteSpeakAI](https://sitespeak.ai/ai-chatbot-terms/utterance))
 
 ## Types and Categories of Utterances
 
-Understanding utterance diversity is central to robust chatbot design and effective [intent recognition](/en/glossary/intent-recognition/).
+Understanding utterance diversity is central to robust chatbot design and effective intent recognition.
 
 ### 1. Structured vs. Unstructured Utterances
 
-- **Structured:**Clear, predictable format.
+- <strong>Structured:</strong>Clear, predictable format.
   - Example: “Order status: #12345”
-- **Unstructured:**Free-form, natural phrasing.
+- <strong>Unstructured:</strong>Free-form, natural phrasing.
   - Example: “Can you tell me where my last order is?”
 
 ### 2. Contextual vs. Non-Contextual Utterances
 
-- **Contextual:**Dependent on previous conversation or user data.
+- <strong>Contextual:</strong>Dependent on previous conversation or user data.
   - Example: “When will it arrive?” (after discussing an order)
-- **Non-Contextual:**Independent, can be understood alone.
+- <strong>Non-Contextual:</strong>Independent, can be understood alone.
   - Example: “What are your store hours?”
 
 ### 3. Positive vs. Negative Utterances
 
-- **Positive:**Satisfaction or agreement.
+- <strong>Positive:</strong>Satisfaction or agreement.
   - “Thanks, that was helpful!”
-- **Negative:**Dissatisfaction or complaint.
+- <strong>Negative:</strong>Dissatisfaction or complaint.
   - “This isn’t working for me.”
 
 ### 4. Intent-Oriented Categories
 
-- **Direct Commands:**“Cancel my appointment.”
-- **Polite Requests:**“Could you please cancel my appointment?”
-- **Questions:**“How do I cancel my appointment?”
-- **Statements of Intent:**“I want to cancel my appointment.”
-- **Hypotheticals:**“What if I cancel my appointment?”
-- **Partial/Fragmented:**“Cancel appointment”
-- **Emotion or Feedback:**“This is too slow.” / “Great service!”
+- <strong>Direct Commands:</strong>“Cancel my appointment.”
+- <strong>Polite Requests:</strong>“Could you please cancel my appointment?”
+- <strong>Questions:</strong>“How do I cancel my appointment?”
+- <strong>Statements of Intent:</strong>“I want to cancel my appointment.”
+- <strong>Hypotheticals:</strong>“What if I cancel my appointment?”
+- <strong>Partial/Fragmented:</strong>“Cancel appointment”
+- <strong>Emotion or Feedback:</strong>“This is too slow.” / “Great service!”
 
 ### 5. Linguistic Variation
 
-- **Formal vs. Informal:**“I would like to…” vs. “Wanna…”
-- **Slang, Abbreviations, Typos:**“U there?” “Plz help” “Cant log in”
+- <strong>Formal vs. Informal:</strong>“I would like to…” vs. “Wanna…”
+- <strong>Slang, Abbreviations, Typos:</strong>“U there?” “Plz help” “Cant log in”
 
 #### Category Table
 
@@ -108,18 +108,18 @@ Understanding utterance diversity is central to robust chatbot design and effect
 
 The chatbot workflow for processing utterances involves several steps:
 
-1. **User submits an utterance:**The user types or speaks a message.
-2. **Natural Language Processing (NLP):**The chatbot analyzes the utterance using:
-   - **Tokenization:**Breaking down the utterance into words or tokens.
-   - **Stemming/Lemmatization:**Reducing words to their base forms.
-   - **Part-of-speech tagging:**Identifying grammatical roles.
-   - **Named Entity Recognition (NER):**Extracting key details (like dates, locations).
-   - **Sentiment Analysis:**Assessing emotional tone.
-3. **Intent Classification:**Determining what the user wants to achieve.
+1. <strong>User submits an utterance:</strong>The user types or speaks a message.
+2. <strong>Natural Language Processing (NLP):</strong>The chatbot analyzes the utterance using:
+   - <strong>Tokenization:</strong>Breaking down the utterance into words or tokens.
+   - <strong>Stemming/Lemmatization:</strong>Reducing words to their base forms.
+   - <strong>Part-of-speech tagging:</strong>Identifying grammatical roles.
+   - <strong>Named Entity Recognition (NER):</strong>Extracting key details (like dates, locations).
+   - <strong>Sentiment Analysis:</strong>Assessing emotional tone.
+3. <strong>Intent Classification:</strong>Determining what the user wants to achieve.
    - Example: “I want to book a flight to Tokyo.” → Intent: BookFlight
-4. **Entity Extraction:**Pulling specific details from the utterance.
+4. <strong>Entity Extraction:</strong>Pulling specific details from the utterance.
    - Example: Destination = Tokyo
-5. **Response Generation:**Using the identified intent, entities, and context to generate a reply.
+5. <strong>Response Generation:</strong>Using the identified intent, entities, and context to generate a reply.
 
 ### Relationship: Utterance, Intent, and Entity
 
@@ -132,8 +132,8 @@ The chatbot workflow for processing utterances involves several steps:
 
 ### 1. Linguistic Ambiguity
 
-- **Homonyms and Homophones:**- “Book a table” (reserve) vs. “Read a book” (object)
-- **Implicit Intent:**- “It’s too cold in here” (implied: turn up the heat)
+- <strong>Homonyms and Homophones:</strong>- “Book a table” (reserve) vs. “Read a book” (object)
+- <strong>Implicit Intent:</strong>- “It’s too cold in here” (implied: turn up the heat)
 
 ### 2. Slang, Abbreviations, and Informal Language
 
@@ -223,22 +223,22 @@ Ensure utterance data does not contain personal or confidential information.
 | Spelling Errors     | “Cant log in”                     | Typos/misspellings             | Use spell correction or train with errors  |
 | Multilingual        | “Bonjour, je veux un café”        | Language diversity             | Multilingual utterance sets                |
 | Contextual          | “How long will it take?”          | Context dependence             | Context-aware NLU engines                  |
-| Negative Feedback   | “Not working”                     | Sentiment, support escalation  | [Sentiment analysis](/en/glossary/sentiment-analysis/), escalation triggers    |
+| Negative Feedback   | “Not working”                     | Sentiment, support escalation  | Sentiment analysis, escalation triggers    |
 ## Frequently Asked Questions (FAQ) about Utterances
 
-**Q: Why are multiple utterances needed for chatbot training?**A: Users express the same intent in many ways. Training on diverse utterances enables chatbots to recognize a wide variety of phrasings, improving accuracy and the user experience. ([SiteSpeakAI FAQ](https://sitespeak.ai/ai-chatbot-terms/utterance))
+<strong>Q: Why are multiple utterances needed for chatbot training?</strong>A: Users express the same intent in many ways. Training on diverse utterances enables chatbots to recognize a wide variety of phrasings, improving accuracy and the user experience. ([SiteSpeakAI FAQ](https://sitespeak.ai/ai-chatbot-terms/utterance))
 
-**Q: How do I collect utterances for a new chatbot?**A: Use historical chat logs, user surveys, brainstorming, and active learning from real conversations.
+<strong>Q: How do I collect utterances for a new chatbot?</strong>A: Use historical chat logs, user surveys, brainstorming, and active learning from real conversations.
 
-**Q: How many utterances per intent are recommended?**A: Industry guidance (e.g., Microsoft LUIS, Emplifi) suggests 10–20 well-chosen utterances per intent. Too many can cause confusion; too few can limit accuracy. ([Emplifi Utterance Guide](https://docs.emplifi.io/platform/latest/home/ai-utterances))
+<strong>Q: How many utterances per intent are recommended?</strong>A: Industry guidance (e.g., Microsoft LUIS, Emplifi) suggests 10–20 well-chosen utterances per intent. Too many can cause confusion; too few can limit accuracy. ([Emplifi Utterance Guide](https://docs.emplifi.io/platform/latest/home/ai-utterances))
 
-**Q: Should I include misspellings and slang?**A: Yes. Include common typos, abbreviations, and slang to improve robustness.
+<strong>Q: Should I include misspellings and slang?</strong>A: Yes. Include common typos, abbreviations, and slang to improve robustness.
 
-**Q: Can utterances contain multiple intents?**A: Some user messages may express more than one intent. Design your chatbot to prioritize, clarify, or handle multi-intent utterances.
+<strong>Q: Can utterances contain multiple intents?</strong>A: Some user messages may express more than one intent. Design your chatbot to prioritize, clarify, or handle multi-intent utterances.
 
-**Q: How often should utterance libraries be updated?**A: Continuously. Regularly review live interactions, add new utterances, and remove outdated examples.
+<strong>Q: How often should utterance libraries be updated?</strong>A: Continuously. Regularly review live interactions, add new utterances, and remove outdated examples.
 
-**Q: Are utterances only user inputs?**A: Primarily, yes, but some systems also model bot/system utterances for advanced [dialogue management](/en/glossary/dialogue-management/).
+<strong>Q: Are utterances only user inputs?</strong>A: Primarily, yes, but some systems also model bot/system utterances for advanced dialogue management.
 
 ## Further Reading and Resources
 
@@ -252,7 +252,7 @@ Ensure utterance data does not contain personal or confidential information.
 
 ## Key Takeaways
 
-- An **utterance**is any user input (text or speech) provided to a chatbot or conversational AI.
+- An <strong>utterance</strong>is any user input (text or speech) provided to a chatbot or conversational AI.
 - Utterances drive the process of understanding user intent and extracting entities for meaningful responses.
 - Capturing diverse, natural, and representative utterances is critical for building effective conversational AI.
 - Regularly review and update utterance libraries, avoid intent overlap, and reflect real user language.

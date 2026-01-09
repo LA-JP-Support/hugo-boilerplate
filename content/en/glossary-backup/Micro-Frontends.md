@@ -11,7 +11,7 @@ draft: false
 ---
 ## Definition
 
-**Micro-Frontends**is an architectural style for web development where a single application is decomposed into smaller, independently developed, tested, and deployed frontend applications—each called a *micro-frontend*. These microapps are owned by separate teams and are composed together to create a seamless user experience.
+<strong>Micro-Frontends</strong>is an architectural style for web development where a single application is decomposed into smaller, independently developed, tested, and deployed frontend applications—each called a *micro-frontend*. These microapps are owned by separate teams and are composed together to create a seamless user experience.
 
 > “An architectural style where independently deliverable frontend applications are composed into a greater whole.” ([martinfowler.com](https://martinfowler.com/articles/micro-frontends.html))
 
@@ -90,7 +90,7 @@ Too much freedom in technology choices can lead to “framework anarchy,” maki
 
 ### CSS and Global Namespace Conflicts
 
-Without careful isolation (e.g., using CSS modules, Shadow DOM, or strict naming conventions), styles and [global variables](/en/glossary/global-variables/) can leak between micro-frontends, causing bugs and visual inconsistencies.
+Without careful isolation (e.g., using CSS modules, Shadow DOM, or strict naming conventions), styles and global variables can leak between micro-frontends, causing bugs and visual inconsistencies.
 
 ### Cross-Application Communication
 
@@ -106,41 +106,41 @@ Micro-frontends can be composed in several ways, each with unique pros and cons.
 ### 1. Server-Side Template Composition
 
 The server assembles the final HTML page from fragments or partials served by each micro-frontend.  
-- **Example:**[Nginx SSI](https://nginx.org/en/docs/http/ngx_http_ssi_module.html)  
-- **Pros:**Strong isolation, universal rendering, minimal client-side JS  
-- **Cons:**Limited interactivity, coarse updates, slower for dynamic UIs  
+- <strong>Example:</strong>[Nginx SSI](https://nginx.org/en/docs/http/ngx_http_ssi_module.html)  
+- <strong>Pros:</strong>Strong isolation, universal rendering, minimal client-side JS  
+- <strong>Cons:</strong>Limited interactivity, coarse updates, slower for dynamic UIs  
 ### 2. Build-Time Integration
 
 Micro-frontends are published as libraries (npm packages) and imported by a “container” application at build time.  
-- **Pros:**Deduplicated dependencies, optimized bundles  
-- **Cons:**Loses independent deployment; requires coordinated releases  
+- <strong>Pros:</strong>Deduplicated dependencies, optimized bundles  
+- <strong>Cons:</strong>Loses independent deployment; requires coordinated releases  
 ### 3. Run-Time Integration
 
-**a. Iframes**Each micro-frontend is loaded in an iframe, with the container application managing which iframe is visible.  
-- **Pros:**Maximum isolation, security  
-- **Cons:**Clumsy navigation, poor communication, performance overhead  
-**b. JavaScript Entry Points**Each micro-frontend exposes a global render function. The container app loads the bundle and calls the function to mount the micro-frontend.  
-- **Pros:**Flexible, independent deployments  
-- **Cons:**Namespace collisions, dependency management  
-**c. Web Components (Custom Elements)**Micro-frontends are distributed as custom HTML elements, leveraging Shadow DOM for encapsulation.  
-- **Pros:**Strong encapsulation, tech stack agnostic, native browser support  
-- **Cons:**Browser compatibility (modern browsers are fine), advanced communication can be complex  
-**d. Module Federation (Webpack 5+)**Allows runtime loading and sharing of code between separately built and deployed applications.  
-- **Pros:**Dynamic loading, fine-grained sharing  
-- **Cons:**Requires careful configuration and operational discipline  
+<strong>a. Iframes</strong>Each micro-frontend is loaded in an iframe, with the container application managing which iframe is visible.  
+- <strong>Pros:</strong>Maximum isolation, security  
+- <strong>Cons:</strong>Clumsy navigation, poor communication, performance overhead  
+<strong>b. JavaScript Entry Points</strong>Each micro-frontend exposes a global render function. The container app loads the bundle and calls the function to mount the micro-frontend.  
+- <strong>Pros:</strong>Flexible, independent deployments  
+- <strong>Cons:</strong>Namespace collisions, dependency management  
+<strong>c. Web Components (Custom Elements)</strong>Micro-frontends are distributed as custom HTML elements, leveraging Shadow DOM for encapsulation.  
+- <strong>Pros:</strong>Strong encapsulation, tech stack agnostic, native browser support  
+- <strong>Cons:</strong>Browser compatibility (modern browsers are fine), advanced communication can be complex  
+<strong>d. Module Federation (Webpack 5+)</strong>Allows runtime loading and sharing of code between separately built and deployed applications.  
+- <strong>Pros:</strong>Dynamic loading, fine-grained sharing  
+- <strong>Cons:</strong>Requires careful configuration and operational discipline  
 ## Technical Deep Dive & Example
 
 ### Example: Food Delivery Application
 
-**Pages:**- *Browse Restaurants*: Search and filter options  
+<strong>Pages:</strong>- *Browse Restaurants*: Search and filter options  
 - *Order Page*: Select menu items, customize orders, checkout  
 - *User Profile*: Manage account settings, order history  
 
-**Team Structure:**Each page is a micro-frontend, owned and operated by a dedicated team.
+<strong>Team Structure:</strong>Each page is a micro-frontend, owned and operated by a dedicated team.
 
-**Integration:**A container app provides global layout, navigation, and shared services. Micro-frontends are loaded dynamically as the user navigates.
+<strong>Integration:</strong>A container app provides global layout, navigation, and shared services. Micro-frontends are loaded dynamically as the user navigates.
 
-**Web Components Code Example:**```js
+<strong>Web Components Code Example:</strong>```js
 class BrowseRestaurants extends HTMLElement { /* ... */ }
 window.customElements.define('browse-restaurants', BrowseRestaurants);
 
@@ -158,34 +158,34 @@ window.customElements.define('user-profile', UserProfile);
 </div>
 ```
 
-**Communication:**Use browser-native [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent), local storage, or an event bus for cross-micro-frontend interactions.
+<strong>Communication:</strong>Use browser-native [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent), local storage, or an event bus for cross-micro-frontend interactions.
 ## Best Practices & Design Principles
 
-- **Technology Agnosticism:**Teams should be able to choose and upgrade their stack independently. Use browser standards (Custom Elements) for integration boundaries ([micro-frontends.org](https://micro-frontends.org/#core-ideas-behind-micro-frontends)).
-- **Team/Code Isolation:**Avoid shared globals and runtime dependencies. Namespace CSS, events, and storage to prevent collisions.
-- **Robustness:**Support universal/server-side rendering and progressive enhancement for resilience and performance.
-- **Communication Patterns:**Favor native browser events over custom APIs for decoupled communication.
-- **Shared Component Libraries:**Use central libraries for visual consistency, but ensure encapsulation to prevent conflicts.
-- **Framework Governance:**Align on a minimal set of frameworks and conventions to avoid fragmentation, while supporting team flexibility.
+- <strong>Technology Agnosticism:</strong>Teams should be able to choose and upgrade their stack independently. Use browser standards (Custom Elements) for integration boundaries ([micro-frontends.org](https://micro-frontends.org/#core-ideas-behind-micro-frontends)).
+- <strong>Team/Code Isolation:</strong>Avoid shared globals and runtime dependencies. Namespace CSS, events, and storage to prevent collisions.
+- <strong>Robustness:</strong>Support universal/server-side rendering and progressive enhancement for resilience and performance.
+- <strong>Communication Patterns:</strong>Favor native browser events over custom APIs for decoupled communication.
+- <strong>Shared Component Libraries:</strong>Use central libraries for visual consistency, but ensure encapsulation to prevent conflicts.
+- <strong>Framework Governance:</strong>Align on a minimal set of frameworks and conventions to avoid fragmentation, while supporting team flexibility.
 ## Types of Micro-Frontend Organization
 
 ### Monorepo
 
 All micro-frontends in a single repository.  
-- **Pros:**Easier code sharing, atomic commits, unified CI/CD  
-- **Cons:**Can become unwieldy, risk of coupling, slower builds
+- <strong>Pros:</strong>Easier code sharing, atomic commits, unified CI/CD  
+- <strong>Cons:</strong>Can become unwieldy, risk of coupling, slower builds
 
 ### Multirepo
 
 Each micro-frontend in its own repository.  
-- **Pros:**Strong autonomy, independent pipelines  
-- **Cons:**Harder to share code and coordinate cross-repo changes
+- <strong>Pros:</strong>Strong autonomy, independent pipelines  
+- <strong>Cons:</strong>Harder to share code and coordinate cross-repo changes
 
 ### Metarepo
 
 Hybrid approach: multiple micro-frontend repos with a meta-repo for coordination.  
-- **Pros:**Balance of autonomy and shared governance  
-- **Cons:**Requires additional tooling and coordination
+- <strong>Pros:</strong>Balance of autonomy and shared governance  
+- <strong>Cons:</strong>Requires additional tooling and coordination
 ## When to Use (and When Not To)
 
 ### When to Use
@@ -203,20 +203,20 @@ Hybrid approach: multiple micro-frontend repos with a meta-repo for coordination
 - Rapid prototyping/startups with shifting requirements
 ## Use Cases and Examples
 
-- **E-commerce:**Product catalog, cart, and account as separate micro-frontends
-- **Food Delivery:**Browsing, ordering, user profile as individual micro-frontends
-- **Enterprise Portals:**Dashboard, analytics, admin modules built/deployed independently
-- **SaaS Platforms:**Integrating independently developed features into a single product
+- <strong>E-commerce:</strong>Product catalog, cart, and account as separate micro-frontends
+- <strong>Food Delivery:</strong>Browsing, ordering, user profile as individual micro-frontends
+- <strong>Enterprise Portals:</strong>Dashboard, analytics, admin modules built/deployed independently
+- <strong>SaaS Platforms:</strong>Integrating independently developed features into a single product
 ## Summary Table: Monolithic vs. Micro-Frontend Architectures
 
 | Aspect               | Monolithic Frontend                | Micro-Frontend Architecture          |
 |----------------------|------------------------------------|-------------------------------------|
-| **Codebase**| Single, large, tightly coupled     | Multiple, smaller, decoupled        |
-| **Deployment**| All-or-nothing, global releases    | Independent, incremental releases   |
-| **Team Structure**| Centralized, cross-team coupling   | Decentralized, vertical ownership   |
-| **Tech Stack**| One stack for all                  | Flexible, per-micro-frontend        |
-| **Scaling**| Difficult for teams and features   | Teams/features scale independently  |
-| **Migration**| Hard, high risk                    | Incremental, low risk               |
+| <strong>Codebase</strong>| Single, large, tightly coupled     | Multiple, smaller, decoupled        |
+| <strong>Deployment</strong>| All-or-nothing, global releases    | Independent, incremental releases   |
+| <strong>Team Structure</strong>| Centralized, cross-team coupling   | Decentralized, vertical ownership   |
+| <strong>Tech Stack</strong>| One stack for all                  | Flexible, per-micro-frontend        |
+| <strong>Scaling</strong>| Difficult for teams and features   | Teams/features scale independently  |
+| <strong>Migration</strong>| Hard, high risk                    | Incremental, low risk               |
 
 
 ## References & Further Reading
@@ -235,4 +235,4 @@ Microservices, Single-Page Application (SPA), Web Components, Shadow DOM, Progre
 
 *For practical patterns and implementation details, see [martinfowler.com/articles/micro-frontends.html](https://martinfowler.com/articles/micro-frontends.html) and [micro-frontends.org](https://micro-frontends.org/).*
 
-**This glossary provides a comprehensive, detail-rich, and reference-linked overview of micro-frontends, their rationale, patterns, and best practices. For deeper technical dives and real-world case studies, always consult the [Martin Fowler article](https://martinfowler.com/articles/micro-frontends.html) and [Micro-Frontends.org](https://micro-frontends.org/).**
+<strong>This glossary provides a comprehensive, detail-rich, and reference-linked overview of micro-frontends, their rationale, patterns, and best practices. For deeper technical dives and real-world case studies, always consult the [Martin Fowler article](https://martinfowler.com/articles/micro-frontends.html) and [Micro-Frontends.org](https://micro-frontends.org/).</strong>

@@ -11,7 +11,7 @@ draft: false
 ---
 ## Definition & Overview
 
-A **minimap**is a compact, simplified visual map embedded within a larger interface. It provides a condensed, bird’s-eye view of a workspace, flow, or environment, typically positioned at the screen’s edge. Users can quickly orient themselves and navigate through large or complex content areas without losing context. Minimaps are especially useful in **AI chatbot and automation platforms**to visualize and manage intricate conversation flows or process diagrams, which often contain hundreds of interconnected nodes. Their use extends to software design, gaming, data visualization, mapping, and code editors.
+A <strong>minimap</strong>is a compact, simplified visual map embedded within a larger interface. It provides a condensed, bird’s-eye view of a workspace, flow, or environment, typically positioned at the screen’s edge. Users can quickly orient themselves and navigate through large or complex content areas without losing context. Minimaps are especially useful in <strong>AI chatbot and automation platforms</strong>to visualize and manage intricate conversation flows or process diagrams, which often contain hundreds of interconnected nodes. Their use extends to software design, gaming, data visualization, mapping, and code editors.
 
 - [React Flow Minimap Documentation](https://reactflow.dev/api-reference/components/minimap)
 - [Svelte Flow Minimap Documentation](https://svelteflow.dev/api-reference/components/mini-map)
@@ -20,19 +20,19 @@ A **minimap**is a compact, simplified visual map embedded within a larger interf
 
 ## Practical Applications and Benefits
 
-**AI Chatbot & Automation Platforms**Minimaps in platforms such as Crisp or custom automation builders allow creators to oversee, edit, and debug complex chatbot flows. With hundreds of nodes and intricate decision trees, a minimap helps maintain an overview, letting users jump to any section instantly and reducing “lost in the flow” issues.  
+<strong>AI Chatbot & Automation Platforms</strong>Minimaps in platforms such as Crisp or custom automation builders allow creators to oversee, edit, and debug complex chatbot flows. With hundreds of nodes and intricate decision trees, a minimap helps maintain an overview, letting users jump to any section instantly and reducing “lost in the flow” issues.  
 - Example: [Crisp AI Chatbot & Automations](https://help.crisp.chat/en/category/ai-chatbot-automations-1yxt4vb/)
 
-**Software UI/UX**Minimaps are embedded in code editors (e.g., VS Code), diagram builders (React Flow, Svelte Flow), and analytics dashboards to facilitate navigation of large documents, graphs, or layouts.
+<strong>Software UI/UX</strong>Minimaps are embedded in code editors (e.g., VS Code), diagram builders (React Flow, Svelte Flow), and analytics dashboards to facilitate navigation of large documents, graphs, or layouts.
 - In [VS Code](https://code.visualstudio.com/docs/editor/codebasics#_minimap), the minimap provides a visual summary of the file, highlighting code blocks, search matches, and errors.
 
-**Gaming**A minimap is a standard HUD (heads-up display) element in games, showing player position, objectives, and the environment.  
+<strong>Gaming</strong>A minimap is a standard HUD (heads-up display) element in games, showing player position, objectives, and the environment.  
 - [Game UI Database: Minimap](https://www.gameuidatabase.com/index.php?scrn=135)  
 - Minimap coding techniques: [Reddit: How do most games code minimaps?](https://www.reddit.com/r/howdidtheycodeit/comments/zxg62w/how_do_most_games_code_minimaps_and_your_movement/)
 
-**Data Visualization**Large datasets and graphs (e.g., mind maps, network diagrams) use minimaps for context and quick movement across the visualization.
+<strong>Data Visualization</strong>Large datasets and graphs (e.g., mind maps, network diagrams) use minimaps for context and quick movement across the visualization.
 
-**Analogy:**A minimap in a workspace is like a GPS navigation map in a car dashboard, offering a full-route perspective while letting users focus on their current position and navigation.
+<strong>Analogy:</strong>A minimap in a workspace is like a GPS navigation map in a car dashboard, offering a full-route perspective while letting users focus on their current position and navigation.
 
 ## Technical Documentation: Minimap Implementation
 
@@ -42,10 +42,10 @@ The `<MiniMap />` component is available in both React Flow and Svelte Flow, pro
 
 #### [React Flow: MiniMap Component](https://reactflow.dev/api-reference/components/minimap)
 
-- **Renders:**Each node as an SVG element.
-- **Visualizes:**The current viewport relative to the flow.
+- <strong>Renders:</strong>Each node as an SVG element.
+- <strong>Visualizes:</strong>The current viewport relative to the flow.
 
-**Sample Usage:**```jsx
+<strong>Sample Usage:</strong>```jsx
 import { ReactFlow, MiniMap } from '@xyflow/react';
 
 export default function Flow() {
@@ -100,15 +100,15 @@ Both React Flow and Svelte Flow minimaps share a common set of properties (props
 | `...props`         | `HTMLAttributes<HTMLDivElement/SVGSVGElement>`   | -                 | Additional HTML/SVG attributes.                                            |
 ### Customization & Interactivity
 
-**Appearance**Customize `bgColor`, `nodeColor`, `nodeStrokeColor`, `nodeBorderRadius`, and `nodeComponent` to match your app’s theme or to convey node status.
+<strong>Appearance</strong>Customize `bgColor`, `nodeColor`, `nodeStrokeColor`, `nodeBorderRadius`, and `nodeComponent` to match your app’s theme or to convey node status.
 
-**Positioning**Use the `position` prop (`top-left`, `top-right`, `bottom-right`, `bottom-left`) to place the minimap in the interface.
+<strong>Positioning</strong>Use the `position` prop (`top-left`, `top-right`, `bottom-right`, `bottom-left`) to place the minimap in the interface.
 
-**Interactivity**- Enable `pannable` and `zoomable` for direct interaction.
+<strong>Interactivity</strong>- Enable `pannable` and `zoomable` for direct interaction.
 - Use `onClick` and `onNodeClick` to trigger navigation or actions.
 - Adjust `maskColor`, `maskStrokeColor`, and `maskStrokeWidth` for viewport highlighting.
 
-**Customization Example: Change Node Color by Type**```jsx
+<strong>Customization Example: Change Node Color by Type</strong>```jsx
 function nodeColor(node) {
   switch (node.type) {
     case 'input': return '#6ede87';
@@ -128,7 +128,7 @@ function MiniMapNode({ x, y }) {
 <MiniMap nodeComponent={MiniMapNode} />
 ```
 
-**Interactive Minimap**```jsx
+<strong>Interactive Minimap</strong>```jsx
 <MiniMap pannable zoomable />
 ```
 
@@ -237,7 +237,7 @@ export default function AutomationFlow() {
 }
 ```
 
-**For more technical details or to see live code examples, visit:**- [React Flow MiniMap Documentation](https://reactflow.dev/api-reference/components/minimap)  
+<strong>For more technical details or to see live code examples, visit:</strong>- [React Flow MiniMap Documentation](https://reactflow.dev/api-reference/components/minimap)  
 - [Svelte Flow MiniMap Documentation](https://svelteflow.dev/api-reference/components/mini-map)  
 - [Crisp AI Chatbot & Automations](https://help.crisp.chat/en/category/ai-chatbot-automations-1yxt4vb/)  
 - [Lenovo Glossary: Minimap](https://www.lenovo.com/us/en/glossary/mini-map/)

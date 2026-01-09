@@ -14,7 +14,7 @@ draft: false
 
 An Image Generation Node is a modular, reusable component within visual programming, automation, or workflow environments that connects to an AI model for synthesizing images from text prompts or other data. These nodes abstract the complexities of running and parameterizing advanced generative models, allowing users—including those with no machine learning expertise—to create, edit, and deploy custom image generation workflows.
 
-**Key Attributes:**- Accepts natural language (text prompt) or structured data as input
+<strong>Key Attributes:</strong>- Accepts natural language (text prompt) or structured data as input
 - Connects directly to AI image generation models (DALL-E, Stable Diffusion, MidJourney)
 - Provides user interface for setting parameters (resolution, guidance scale, steps, style)
 - Can be chained with other nodes for upscaling, inpainting, style transfer, or automated delivery
@@ -22,39 +22,39 @@ An Image Generation Node is a modular, reusable component within visual programm
 
 ## Core Concepts
 
-**Node:**Basic functional element in visual workflow, representing an operation or transformation. In image generation, nodes may handle data input, model inference, post-processing, or output. Nodes are connected in directed graph defining data and operations flow.
+<strong>Node:</strong>Basic functional element in visual workflow, representing an operation or transformation. In image generation, nodes may handle data input, model inference, post-processing, or output. Nodes are connected in directed graph defining data and operations flow.
 
-**Text Prompt:**Natural language description provided by user to guide image generation model. The prompt directly influences subject, style, and composition of generated image. Prompt engineering is discipline focused on optimizing these inputs.
+<strong>Text Prompt:</strong>Natural language description provided by user to guide image generation model. The prompt directly influences subject, style, and composition of generated image. Prompt engineering is discipline focused on optimizing these inputs.
 
-**Model (DALL-E, Stable Diffusion, etc.):**AI image generation model is trained neural network that synthesizes images, often conditioned on text prompts:
+<strong>Model (DALL-E, Stable Diffusion, etc.):</strong>AI image generation model is trained neural network that synthesizes images, often conditioned on text prompts:
 
-- **DALL-E**– Developed by OpenAI, supports complex and creative prompt interpretation
-- **Stable Diffusion**– Open-source, highly customizable, supports models, extensions, and community-trained checkpoints
-- **MidJourney**– Proprietary, cloud-based, known for artistic style and rapid iteration
+- <strong>DALL-E</strong>– Developed by OpenAI, supports complex and creative prompt interpretation
+- <strong>Stable Diffusion</strong>– Open-source, highly customizable, supports models, extensions, and community-trained checkpoints
+- <strong>MidJourney</strong>– Proprietary, cloud-based, known for artistic style and rapid iteration
 
-**Parameter:**Configurable option affecting how image is generated:
+<strong>Parameter:</strong>Configurable option affecting how image is generated:
 
-- **Steps**– Number of denoising or sampling steps
-- **Guidance Scale (CFG Scale)**– Strength of prompt adherence
-- **Resolution**– Output image size (512x512, 768x512)
-- **Seed**– Controls randomization for reproducible outputs
-- **Batch Size**– Number of images generated per prompt
+- <strong>Steps</strong>– Number of denoising or sampling steps
+- <strong>Guidance Scale (CFG Scale)</strong>– Strength of prompt adherence
+- <strong>Resolution</strong>– Output image size (512x512, 768x512)
+- <strong>Seed</strong>– Controls randomization for reproducible outputs
+- <strong>Batch Size</strong>– Number of images generated per prompt
 
-**Workflow:**Sequence of nodes representing complete pipeline from prompt input to image output, enabling batch processing, automation, and reproducibility.
+<strong>Workflow:</strong>Sequence of nodes representing complete pipeline from prompt input to image output, enabling batch processing, automation, and reproducibility.
 
 ## Underlying Models
 
-**Generative Adversarial Networks (GANs):**Two neural networks—generator and discriminator—trained adversarially. Generator synthesizes images while discriminator distinguishes real from fake.
+<strong>Generative Adversarial Networks (GANs):</strong>Two neural networks—generator and discriminator—trained adversarially. Generator synthesizes images while discriminator distinguishes real from fake.
 
 - Strengths: High realism, fast inference
 - Weaknesses: Training instability, mode collapse, high resource needs
 
-**Variational Autoencoders (VAEs):**Encode images into structured latent space and decode them back. Used for learning smooth, continuous representations, core component in many diffusion pipelines.
+<strong>Variational Autoencoders (VAEs):</strong>Encode images into structured latent space and decode them back. Used for learning smooth, continuous representations, core component in many diffusion pipelines.
 
 - Strengths: Stable training, interpretable latent space
 - Weaknesses: Output images can be blurry
 
-**Diffusion Models:**Operate by gradually adding noise to image and learning to reverse process, generating new images from noise conditioned on text.
+<strong>Diffusion Models:</strong>Operate by gradually adding noise to image and learning to reverse process, generating new images from noise conditioned on text.
 
 - Strengths: High fidelity, diverse outputs, robust prompt conditioning
 - Weaknesses: Computationally demanding, slower than GANs
@@ -69,14 +69,14 @@ An Image Generation Node is a modular, reusable component within visual programm
 
 ## How Image Generation Nodes are Used
 
-**Integration in AI Chatbots and Automation:**Image Generation Nodes embedded into chatbots (visual responses), no-code automation tools (Node-RED, n8n), and creative platforms (ComfyUI). Use cases include customer support, entertainment, bulk marketing content creation, product visualization.
+<strong>Integration in AI Chatbots and Automation:</strong>Image Generation Nodes embedded into chatbots (visual responses), no-code automation tools (Node-RED, n8n), and creative platforms (ComfyUI). Use cases include customer support, entertainment, bulk marketing content creation, product visualization.
 
-**Workflow Example:**1. **Input Node**– Receives text prompt from user or system
-2. **Image Generation Node**– Selects model, sets parameters, generates images
-3. **Post-Processing Node**– Applies upscaling, filtering, or additional effects
-4. **Output Node**– Sends image to user, saves to disk, or returns to chatbot
+<strong>Workflow Example:</strong>1. <strong>Input Node</strong>– Receives text prompt from user or system
+2. <strong>Image Generation Node</strong>– Selects model, sets parameters, generates images
+3. <strong>Post-Processing Node</strong>– Applies upscaling, filtering, or additional effects
+4. <strong>Output Node</strong>– Sends image to user, saves to disk, or returns to chatbot
 
-**Sample Pseudocode:**```yaml
+<strong>Sample Pseudocode:</strong>```yaml
 - node: "Input"
   type: "text"
   output: "prompt"
@@ -136,36 +136,36 @@ image = pipe(
 image.save("astronaut_blossom.png")
 ```
 
-**Troubleshooting:**- **Artifacts or Unwanted Objects**– Use negative prompts or tweak seed
-- **Incoherent Results**– Simplify prompt, reduce CFG scale, or increase steps
-- **Resource Errors**– Lower resolution or batch size
-- **Style Not Matching**– Add explicit style keywords, adjust prompt phrasing
+<strong>Troubleshooting:</strong>- <strong>Artifacts or Unwanted Objects</strong>– Use negative prompts or tweak seed
+- <strong>Incoherent Results</strong>– Simplify prompt, reduce CFG scale, or increase steps
+- <strong>Resource Errors</strong>– Lower resolution or batch size
+- <strong>Style Not Matching</strong>– Add explicit style keywords, adjust prompt phrasing
 
 ## Tools and Resources
 
-**ComfyUI:**Node-based GUI for Stable Diffusion and other models with extensive community support.
+<strong>ComfyUI:</strong>Node-based GUI for Stable Diffusion and other models with extensive community support.
 
-**Other Platforms:**- Node-RED
+<strong>Other Platforms:</strong>- Node-RED
 - n8n
 - Stable Diffusion Web UI
 - MidJourney
 
-**Key Resources:**- ComfyUI Community Manual
+<strong>Key Resources:</strong>- ComfyUI Community Manual
 - ComfyUI Official Documentation
 - Awesome ComfyUI Custom Nodes
 - Adobe Firefly AI tutorials
 
 ## Frequently Asked Questions
 
-**Q: Which platforms support Image Generation Nodes?**A: ComfyUI, Node-RED, n8n, and custom chatbot/automation frameworks. Many support plug-ins or direct integration with DALL-E, Stable Diffusion, and similar models.
+<strong>Q: Which platforms support Image Generation Nodes?</strong>A: ComfyUI, Node-RED, n8n, and custom chatbot/automation frameworks. Many support plug-ins or direct integration with DALL-E, Stable Diffusion, and similar models.
 
-**Q: Can I use these nodes without coding?**A: Yes. Platforms like ComfyUI and n8n offer drag-and-drop interfaces. No-code solutions are increasingly common.
+<strong>Q: Can I use these nodes without coding?</strong>A: Yes. Platforms like ComfyUI and n8n offer drag-and-drop interfaces. No-code solutions are increasingly common.
 
-**Q: How do I choose between DALL-E, Stable Diffusion, or MidJourney?**A: DALL-E gives creative, high-fidelity images but has usage/cost limits; Stable Diffusion is open-source and highly customizable; MidJourney excels at stylized, artistic outputs.
+<strong>Q: How do I choose between DALL-E, Stable Diffusion, or MidJourney?</strong>A: DALL-E gives creative, high-fidelity images but has usage/cost limits; Stable Diffusion is open-source and highly customizable; MidJourney excels at stylized, artistic outputs.
 
-**Q: Can I batch-generate images?**A: Yes. Most node-based systems support batch, loop, or bulk image generation.
+<strong>Q: Can I batch-generate images?</strong>A: Yes. Most node-based systems support batch, loop, or bulk image generation.
 
-**Q: Common issues and fixes?**A: Blurry images (increase steps or resolution), unwanted objects (add negative prompts), OOM errors (lower resolution or batch size).
+<strong>Q: Common issues and fixes?</strong>A: Blurry images (increase steps or resolution), unwanted objects (add negative prompts), OOM errors (lower resolution or batch size).
 
 ## Best Practices
 

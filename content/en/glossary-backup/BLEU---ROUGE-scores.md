@@ -20,9 +20,9 @@ Learn more:
 
 ## What Are BLEU and ROUGE Scores?
 
-**BLEU (Bilingual Evaluation Understudy):**A metric that assesses the precision of n-gram overlap between a candidate (machine-generated) text and one or more reference (human-authored) texts. Originally designed for machine translation, BLEU has become a standard evaluation tool for various language generation applications, including image captioning, technical document generation, and dialogue systems.
+<strong>BLEU (Bilingual Evaluation Understudy):</strong>A metric that assesses the precision of n-gram overlap between a candidate (machine-generated) text and one or more reference (human-authored) texts. Originally designed for machine translation, BLEU has become a standard evaluation tool for various language generation applications, including image captioning, technical document generation, and dialogue systems.
 
-**ROUGE (Recall-Oriented Understudy for Gisting Evaluation):**A suite of metrics focusing on recall, measuring the n-gram, word sequence, and word pair overlaps between the generated output and reference text(s). ROUGE is particularly influential in the evaluation of text summarization, paraphrase generation, and question answering, where capturing the essential content of the reference is vital.
+<strong>ROUGE (Recall-Oriented Understudy for Gisting Evaluation):</strong>A suite of metrics focusing on recall, measuring the n-gram, word sequence, and word pair overlaps between the generated output and reference text(s). ROUGE is particularly influential in the evaluation of text summarization, paraphrase generation, and question answering, where capturing the essential content of the reference is vital.
 
 Both BLEU and ROUGE are reference-based metrics: they require one or more ground-truth texts for comparison.
 ## Theoretical Foundation
@@ -67,10 +67,10 @@ ROUGE quantifies the recall of a candidate output: how much of the reference con
 
 #### Key ROUGE Variants
 
-- **ROUGE-N:**Measures n-gram overlap (ROUGE-1 for unigrams, ROUGE-2 for bigrams, etc.)
-- **ROUGE-L:**Based on the Longest Common Subsequence (LCS), capturing similarity in sequence and structure.
-- **ROUGE-W:**Weighted LCS, giving higher scores for longer contiguous matches.
-- **ROUGE-S:**Skip-bigrams—word pairs in correct order, possibly with gaps.
+- <strong>ROUGE-N:</strong>Measures n-gram overlap (ROUGE-1 for unigrams, ROUGE-2 for bigrams, etc.)
+- <strong>ROUGE-L:</strong>Based on the Longest Common Subsequence (LCS), capturing similarity in sequence and structure.
+- <strong>ROUGE-W:</strong>Weighted LCS, giving higher scores for longer contiguous matches.
+- <strong>ROUGE-S:</strong>Skip-bigrams—word pairs in correct order, possibly with gaps.
 
 ##### ROUGE-N Formula
 
@@ -90,13 +90,13 @@ Let \( X \) (reference) and \( Y \) (candidate) be sequences:
 
 ### BLEU Workflow
 
-1. **Tokenization:**Split candidate and reference texts into tokens (words or subwords).
-2. **N-gram Extraction:**Collect n-grams (typically up to 4-grams for BLEU-4).
-3. **Count Matching N-grams:**For each n-gram in the candidate, count the maximum number of times it occurs in any reference, applying "clipping" to avoid over-counting.
-4. **Modified Precision Calculation:**Compute precision for each n-gram order.
-5. **Geometric Mean of Precisions:**Combine n-gram precisions via a weighted geometric mean.
-6. **Brevity Penalty Application:**Penalize candidates that are shorter than the references.
-7. **Final Score:**Output a BLEU score between 0 and 1.
+1. <strong>Tokenization:</strong>Split candidate and reference texts into tokens (words or subwords).
+2. <strong>N-gram Extraction:</strong>Collect n-grams (typically up to 4-grams for BLEU-4).
+3. <strong>Count Matching N-grams:</strong>For each n-gram in the candidate, count the maximum number of times it occurs in any reference, applying "clipping" to avoid over-counting.
+4. <strong>Modified Precision Calculation:</strong>Compute precision for each n-gram order.
+5. <strong>Geometric Mean of Precisions:</strong>Combine n-gram precisions via a weighted geometric mean.
+6. <strong>Brevity Penalty Application:</strong>Penalize candidates that are shorter than the references.
+7. <strong>Final Score:</strong>Output a BLEU score between 0 and 1.
 
 #### BLEU Example
 
@@ -114,15 +114,15 @@ See: [SuperAnnotate BLEU methodology](https://doc.superannotate.com/docs/guide-b
 
 ### ROUGE Workflow
 
-1. **Tokenization/Normalization:**Lowercase, remove punctuation, and tokenize both candidate and reference.
-2. **N-gram or Sequence Matching:**- ROUGE-N: Count overlapping n-grams.
+1. <strong>Tokenization/Normalization:</strong>Lowercase, remove punctuation, and tokenize both candidate and reference.
+2. <strong>N-gram or Sequence Matching:</strong>- ROUGE-N: Count overlapping n-grams.
    - ROUGE-L: Find the LCS between candidate and reference.
    - ROUGE-S: Identify skip-bigram matches.
-3. **Recall, Precision, F1 Calculation:**- Recall: Portion of reference units found in candidate.
+3. <strong>Recall, Precision, F1 Calculation:</strong>- Recall: Portion of reference units found in candidate.
    - Precision: Portion of candidate units found in reference.
    - F1: Harmonic mean of recall and precision.
-4. **Aggregation:**For multiple references, take the maximum or average.
-5. **Final Score:**Output is between 0 and 1.
+4. <strong>Aggregation:</strong>For multiple references, take the maximum or average.
+5. <strong>Final Score:</strong>Output is between 0 and 1.
 
 #### ROUGE Example
 
@@ -150,7 +150,7 @@ print(f"BLEU Score: {bleu_score:.2f}")
 ```
 - Use smoothing functions for short sentences to avoid zero scores.
 
-**Resources:**- [NLTK BLEU Documentation](https://www.nltk.org/api/nltk.translate.html#nltk.translate.bleu_score.sentence_bleu)  
+<strong>Resources:</strong>- [NLTK BLEU Documentation](https://www.nltk.org/api/nltk.translate.html#nltk.translate.bleu_score.sentence_bleu)  
 - [GeeksforGeeks BLEU code example](https://www.geeksforgeeks.org/nlp/understanding-bleu-and-rouge-score-for-nlp-evaluation/#calculating-bleu-and-rouge-scores-practical-examples)
 
 ### ROUGE (Python, rouge-score)
@@ -169,17 +169,17 @@ print(f"ROUGE-L F1: {scores['rougeL'].fmeasure:.2f}")
 
 - Stemming helps match different word forms.
 
-**Resources:**- [rouge-score PyPI](https://pypi.org/project/rouge-score/)  
+<strong>Resources:</strong>- [rouge-score PyPI](https://pypi.org/project/rouge-score/)  
 - [GeeksforGeeks ROUGE code example](https://www.geeksforgeeks.org/nlp/understanding-bleu-and-rouge-score-for-nlp-evaluation/#calculating-bleu-and-rouge-scores-practical-examples)
 
 ## BLEU and ROUGE in Real-World Workflows
 
 ### Use Cases
 
-- **Machine Translation:**BLEU is the standard for comparing translation outputs against reference translations.
-- **Text Summarization:**ROUGE is the default metric for evaluating summary coverage relative to gold summaries.
-- **Image Captioning & Dialogue:**Both metrics are applied where generated responses should closely match references.
-- **Question Answering:**BLEU and ROUGE benchmark overlap with ground truth in retrieval-augmented generation (RAG) and closed-domain QA.
+- <strong>Machine Translation:</strong>BLEU is the standard for comparing translation outputs against reference translations.
+- <strong>Text Summarization:</strong>ROUGE is the default metric for evaluating summary coverage relative to gold summaries.
+- <strong>Image Captioning & Dialogue:</strong>Both metrics are applied where generated responses should closely match references.
+- <strong>Question Answering:</strong>BLEU and ROUGE benchmark overlap with ground truth in retrieval-augmented generation (RAG) and closed-domain QA.
 ### Automation in QA Pipelines
 
 - Scores are computed automatically for each AI-generated annotation.
@@ -205,18 +205,18 @@ elif bleu_score < 0.5:
 
 ### BLEU Variants
 
-- **BLEU-1:**Unigram precision only.
-- **BLEU-2:**Adds bigrams.
-- **BLEU-4:**Up to 4-grams; standard for translation.
+- <strong>BLEU-1:</strong>Unigram precision only.
+- <strong>BLEU-2:</strong>Adds bigrams.
+- <strong>BLEU-4:</strong>Up to 4-grams; standard for translation.
 
 ### ROUGE Variants
 
-- **ROUGE-1:**Unigram overlap.
-- **ROUGE-2:**Bigram overlap.
-- **ROUGE-L:**Longest common subsequence.
-- **ROUGE-S:**Skip-bigram overlap.
+- <strong>ROUGE-1:</strong>Unigram overlap.
+- <strong>ROUGE-2:</strong>Bigram overlap.
+- <strong>ROUGE-L:</strong>Longest common subsequence.
+- <strong>ROUGE-S:</strong>Skip-bigram overlap.
 
-**Choosing Variants:**- BLEU-4 is preferred for translation tasks.
+<strong>Choosing Variants:</strong>- BLEU-4 is preferred for translation tasks.
 - ROUGE-L is favored for summarization and paraphrasing.
 ## Interpreting BLEU and ROUGE Scores
 
@@ -226,7 +226,7 @@ elif bleu_score < 0.5:
 | ROUGE-1   | 0–1      | >0.5 (50%)         | Covers key content from reference              |
 | ROUGE-L   | 0–1      | >0.5 (50%)         | Structural similarity with reference           |
 
-**Notes:**- Multiple references improve reliability.
+<strong>Notes:</strong>- Multiple references improve reliability.
 - BLEU is stricter; high scores are rare for creative or short outputs.
 - ROUGE is tolerant to paraphrasing and rewording.
 ## Strengths and Limitations
@@ -241,10 +241,10 @@ elif bleu_score < 0.5:
 
 ### Common Pitfalls
 
-- **Synonyms/Paraphrasing:**Both metrics may underrate outputs using different but correct wording.
-- **Brevity Penalty:**BLEU penalizes short candidates, problematic in summarization.
-- **Diverse Valid Outputs:**Low scores for valid out-of-reference answers.
-- **Score Interpretation:**Compare systems on the same dataset; absolute scores alone can be misleading.
+- <strong>Synonyms/Paraphrasing:</strong>Both metrics may underrate outputs using different but correct wording.
+- <strong>Brevity Penalty:</strong>BLEU penalizes short candidates, problematic in summarization.
+- <strong>Diverse Valid Outputs:</strong>Low scores for valid out-of-reference answers.
+- <strong>Score Interpretation:</strong>Compare systems on the same dataset; absolute scores alone can be misleading.
 ## BLEU vs ROUGE: Summary Table
 
 | Feature              | BLEU                                    | ROUGE                               |
@@ -267,7 +267,7 @@ elif bleu_score < 0.5:
 - Integrate metrics into CI/CD pipelines for scalable, reproducible evaluation.
 ## Practical Tips
 
-- **Text Normalization:**Lowercase, remove punctuation, and standardize to avoid spurious mismatches.
-- **Smoothing:**Use smoothing in BLEU for short or low-overlap outputs.
-- **Thresholds:**Empirically determine "good" scores per
+- <strong>Text Normalization:</strong>Lowercase, remove punctuation, and standardize to avoid spurious mismatches.
+- <strong>Smoothing:</strong>Use smoothing in BLEU for short or low-overlap outputs.
+- <strong>Thresholds:</strong>Empirically determine "good" scores per
 

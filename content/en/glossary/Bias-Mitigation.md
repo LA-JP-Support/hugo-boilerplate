@@ -20,13 +20,13 @@ Notable real-world incidents, including racial bias in the COMPAS recidivism ass
 
 ## Why Bias Mitigation Matters
 
-**Legal and Regulatory Compliance**Jurisdictions increasingly demand non-discriminatory automated decision-making. The EU AI Act, NYC Bias Audits, and emerging standards require organizations to proactively identify and mitigate AI bias.
+<strong>Legal and Regulatory Compliance</strong>Jurisdictions increasingly demand non-discriminatory automated decision-making. The EU AI Act, NYC Bias Audits, and emerging standards require organizations to proactively identify and mitigate AI bias.
 
-**Ethical Responsibility**Mitigating bias aligns with principles of fairness, justice, and social equity—core components of responsible AI practice.
+<strong>Ethical Responsibility</strong>Mitigating bias aligns with principles of fairness, justice, and social equity—core components of responsible AI practice.
 
-**Operational Reliability**Unchecked bias causes inaccurate predictions and operational inefficiencies, especially as models generalize poorly to underrepresented or marginalized groups.
+<strong>Operational Reliability</strong>Unchecked bias causes inaccurate predictions and operational inefficiencies, especially as models generalize poorly to underrepresented or marginalized groups.
 
-**Trust and Reputation**Fair models foster user trust and protect organizational reputation. Public backlash and reputational damage commonly follow high-profile AI failures.
+<strong>Trust and Reputation</strong>Fair models foster user trust and protect organizational reputation. Public backlash and reputational damage commonly follow high-profile AI failures.
 
 ## Types of Bias in Machine Learning
 
@@ -34,41 +34,41 @@ Notable real-world incidents, including racial bias in the COMPAS recidivism ass
 
 Bias originating from training and evaluation data:
 
-- **Sampling Bias:**Overrepresentation or underrepresentation of certain groups in datasets
-- **Measurement Bias:**Systematic errors in data recording or feature measurement
-- **Labeling Bias:**Human labelers introducing their own prejudices or reflecting societal stereotypes
-- **Aggregation Bias:**Combining data at inappropriate levels, masking subgroup differences
-- **Omitted Variable Bias:**Exclusion of relevant features influencing outcomes
+- <strong>Sampling Bias:</strong>Overrepresentation or underrepresentation of certain groups in datasets
+- <strong>Measurement Bias:</strong>Systematic errors in data recording or feature measurement
+- <strong>Labeling Bias:</strong>Human labelers introducing their own prejudices or reflecting societal stereotypes
+- <strong>Aggregation Bias:</strong>Combining data at inappropriate levels, masking subgroup differences
+- <strong>Omitted Variable Bias:</strong>Exclusion of relevant features influencing outcomes
 
 ### Algorithmic Bias
 
 Bias introduced by model design, objective functions, or optimization strategies:
 
-- **Algorithmic Bias:**Model structure or learning favoring certain outcomes due to implicit assumptions
-- **Evaluation Bias:**Using metrics that don't reflect fairness for all groups
-- **Popularity Bias:**Recommendation systems favoring popular classes, reinforcing existing trends
+- <strong>Algorithmic Bias:</strong>Model structure or learning favoring certain outcomes due to implicit assumptions
+- <strong>Evaluation Bias:</strong>Using metrics that don't reflect fairness for all groups
+- <strong>Popularity Bias:</strong>Recommendation systems favoring popular classes, reinforcing existing trends
 
 ### User Interaction Bias
 
 Bias arising from user feedback or system interaction:
 
-- **Historical Bias:**Inherited from societal or historical inequalities in collected data
-- **Population Bias:**Uneven data representation leading to models performing well on majority groups
-- **Social Bias:**Cultural attitudes embedded in text corpora or user-generated data
-- **Temporal Bias:**Data reflecting patterns valid only for specific time periods
-- **Automation Bias:**Over-reliance on model outputs, perpetuating errors
+- <strong>Historical Bias:</strong>Inherited from societal or historical inequalities in collected data
+- <strong>Population Bias:</strong>Uneven data representation leading to models performing well on majority groups
+- <strong>Social Bias:</strong>Cultural attitudes embedded in text corpora or user-generated data
+- <strong>Temporal Bias:</strong>Data reflecting patterns valid only for specific time periods
+- <strong>Automation Bias:</strong>Over-reliance on model outputs, perpetuating errors
 
 ## Impact of Bias
 
-- **Societal:**Reinforces discrimination, exclusion, or harm to marginalized groups
-- **Legal:**Violations of anti-discrimination laws resulting in regulatory penalties and lawsuits
-- **Operational:**Leads to inaccurate predictions, inefficiencies, and increased costs
-- **Ethical:**Erodes fairness, justice, and public trust in AI systems
+- <strong>Societal:</strong>Reinforces discrimination, exclusion, or harm to marginalized groups
+- <strong>Legal:</strong>Violations of anti-discrimination laws resulting in regulatory penalties and lawsuits
+- <strong>Operational:</strong>Leads to inaccurate predictions, inefficiencies, and increased costs
+- <strong>Ethical:</strong>Erodes fairness, justice, and public trust in AI systems
 
-**Use Case Examples:**- **Healthcare:**Biased models causing misdiagnosis or unequal treatment access
-- **Criminal Justice:**COMPAS algorithm disproportionately flagging Black defendants as high-risk
-- **Hiring:**Job recommendation systems displaying higher-paying ads to men over equally qualified women
-- **Recruitment:**Gender bias in algorithmic resume screening
+<strong>Use Case Examples:</strong>- <strong>Healthcare:</strong>Biased models causing misdiagnosis or unequal treatment access
+- <strong>Criminal Justice:</strong>COMPAS algorithm disproportionately flagging Black defendants as high-risk
+- <strong>Hiring:</strong>Job recommendation systems displaying higher-paying ads to men over equally qualified women
+- <strong>Recruitment:</strong>Gender bias in algorithmic resume screening
 
 ## How Bias Mitigation is Used
 
@@ -76,36 +76,36 @@ Bias mitigation is implemented through technical and organizational strategies s
 
 ### Pre-processing Methods
 
-**Objective:**Reduce or remove bias from data before model training
+<strong>Objective:</strong>Reduce or remove bias from data before model training
 
-**Techniques:**- Relabeling and perturbation to balance representation
+<strong>Techniques:</strong>- Relabeling and perturbation to balance representation
 - Sampling (oversampling, downsampling, instance reweighting)
 - Representation learning (Learning Fair Representations)
 
-**Strengths:**Model-agnostic, addresses bias at data source  
-**Limitations:**May distort original data distribution, requires data access
+<strong>Strengths:</strong>Model-agnostic, addresses bias at data source  
+<strong>Limitations:</strong>May distort original data distribution, requires data access
 
 ### In-processing Methods
 
-**Objective:**Modify model training to directly optimize for fairness
+<strong>Objective:</strong>Modify model training to directly optimize for fairness
 
-**Techniques:**- Regularization and constraints (adding fairness-focused penalties to loss functions)
+<strong>Techniques:</strong>- Regularization and constraints (adding fairness-focused penalties to loss functions)
 - Adversarial debiasing
 - Adjusted learning algorithms
 
-**Strengths:**Directly optimizes for fairness during training  
-**Limitations:**Requires access to model internals, may increase complexity
+<strong>Strengths:</strong>Directly optimizes for fairness during training  
+<strong>Limitations:</strong>Requires access to model internals, may increase complexity
 
 ### Post-processing Methods
 
-**Objective:**Modify model predictions after training to enhance fairness
+<strong>Objective:</strong>Modify model predictions after training to enhance fairness
 
-**Techniques:**- Input correction
+<strong>Techniques:</strong>- Input correction
 - Classifier correction (adjusting output distributions or thresholds)
 - Output correction
 
-**Strengths:**Model-agnostic, no retraining needed  
-**Limitations:**May reduce predictive accuracy
+<strong>Strengths:</strong>Model-agnostic, no retraining needed  
+<strong>Limitations:</strong>May reduce predictive accuracy
 
 ### Organizational and Governance Strategies
 
@@ -118,13 +118,13 @@ Bias mitigation is implemented through technical and organizational strategies s
 
 Continuous evaluation using fairness metrics and audits is essential.
 
-**Key Metrics:**- **Demographic Parity:**Equal probability of positive outcome across groups
-- **Equalized Odds:**Equal true/false positive rates across groups
-- **Disparate Impact:**Ratio of favorable outcomes for protected vs. unprotected groups
-- **Equal Opportunity Difference:**Difference in true positive rates between groups
-- **Treatment Equality:**Balance of false positives/negatives across groups
+<strong>Key Metrics:</strong>- <strong>Demographic Parity:</strong>Equal probability of positive outcome across groups
+- <strong>Equalized Odds:</strong>Equal true/false positive rates across groups
+- <strong>Disparate Impact:</strong>Ratio of favorable outcomes for protected vs. unprotected groups
+- <strong>Equal Opportunity Difference:</strong>Difference in true positive rates between groups
+- <strong>Treatment Equality:</strong>Balance of false positives/negatives across groups
 
-**Evaluation Tools:**- AI Fairness 360 (IBM)
+<strong>Evaluation Tools:</strong>- AI Fairness 360 (IBM)
 - Fairlearn (Microsoft)
 - Google Model Remediation (MinDiff, CLP)
 - Holistic AI Library
@@ -132,9 +132,9 @@ Continuous evaluation using fairness metrics and audits is essential.
 
 ## Example: Sentiment Analysis Bias Mitigation
 
-**Scenario:**A sentiment analysis model consistently predicts lower sentiment scores for reviews written by non-native English speakers.
+<strong>Scenario:</strong>A sentiment analysis model consistently predicts lower sentiment scores for reviews written by non-native English speakers.
 
-**Mitigation Steps:**1. Conduct data audit to identify linguistic features and demographic distribution
+<strong>Mitigation Steps:</strong>1. Conduct data audit to identify linguistic features and demographic distribution
 2. Apply resampling or reweighting to balance language representation
 3. Incorporate fairness constraints into model loss function
 4. Adjust sentiment thresholds for underrepresented groups
@@ -143,24 +143,24 @@ Continuous evaluation using fairness metrics and audits is essential.
 ## Use Cases
 
 ### Healthcare
-- **Task:**Disease risk prediction
-- **Bias Risk:**Underdiagnosis in minority groups due to sample imbalance
-- **Mitigation:**Stratified sampling, fairness-constrained training, regular audits
+- <strong>Task:</strong>Disease risk prediction
+- <strong>Bias Risk:</strong>Underdiagnosis in minority groups due to sample imbalance
+- <strong>Mitigation:</strong>Stratified sampling, fairness-constrained training, regular audits
 
 ### Criminal Justice
-- **Task:**Recidivism prediction
-- **Bias Risk:**Racial disparities in risk scores
-- **Mitigation:**Pre-process to balance data, post-process to adjust predictions
+- <strong>Task:</strong>Recidivism prediction
+- <strong>Bias Risk:</strong>Racial disparities in risk scores
+- <strong>Mitigation:</strong>Pre-process to balance data, post-process to adjust predictions
 
 ### Hiring & HR Tech
-- **Task:**Automated resume screening
-- **Bias Risk:**Gender or ethnicity bias from historical patterns
-- **Mitigation:**De-bias training data, adversarial debiasing, diverse evaluation panels
+- <strong>Task:</strong>Automated resume screening
+- <strong>Bias Risk:</strong>Gender or ethnicity bias from historical patterns
+- <strong>Mitigation:</strong>De-bias training data, adversarial debiasing, diverse evaluation panels
 
 ### Finance
-- **Task:**Loan approvals
-- **Bias Risk:**Discriminatory lending due to omitted variables
-- **Mitigation:**Fairness metrics in deployment, explainable AI for transparency
+- <strong>Task:</strong>Loan approvals
+- <strong>Bias Risk:</strong>Discriminatory lending due to omitted variables
+- <strong>Mitigation:</strong>Fairness metrics in deployment, explainable AI for transparency
 
 ## Common Algorithms and Tools
 

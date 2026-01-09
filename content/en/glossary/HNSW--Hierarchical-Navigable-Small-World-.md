@@ -14,33 +14,33 @@ draft: false
 
 HNSW (Hierarchical Navigable Small World) is a proximity graph algorithm for fast, scalable, and accurate approximate nearest neighbor (ANN) search in high-dimensional vector spaces. Widely used in vector databases and AI-powered applications, HNSW finds the closest items (vectors) to a query without exhaustive search, superseding many earlier ANN algorithms in both speed and recall, especially in large-scale, in-memory settings.
 
-**Purpose:**Efficient ANN search with high recall in large, high-dimensional datasets.
+<strong>Purpose:</strong>Efficient ANN search with high recall in large, high-dimensional datasets.
 
-**Key Innovations:**Combines small-world graphs (rapid navigation) with skip-list-like hierarchy (multi-scale search).
+<strong>Key Innovations:</strong>Combines small-world graphs (rapid navigation) with skip-list-like hierarchy (multi-scale search).
 
-**Applications:**Semantic document search, image/video retrieval, recommendation engines, LLM context retrieval, anomaly detection.
+<strong>Applications:</strong>Semantic document search, image/video retrieval, recommendation engines, LLM context retrieval, anomaly detection.
 
 ## Core Concepts
 
-**Vector Search and ANN:**Vector search seeks closest (most similar) vectors to a query. Each data point is represented as a high-dimensional vector (768-dim BERT or 1536-dim OpenAI embedding). Brute-force search scales linearly with dataset size (O(N)), impractical for large collections.
+<strong>Vector Search and ANN:</strong>Vector search seeks closest (most similar) vectors to a query. Each data point is represented as a high-dimensional vector (768-dim BERT or 1536-dim OpenAI embedding). Brute-force search scales linearly with dataset size (O(N)), impractical for large collections.
 
 Approximate Nearest Neighbor (ANN) algorithms like HNSW reduce search time by accepting tiny recall loss for dramatic speedups, achieving sub-linear time complexity critical for real-time applications on millions or billions of vectors.
 
-**Navigable Small World Graphs:**Small-world graphs are networks where most nodes reach others through few hops, thanks to local and long-range links. NSW graphs enable greedy routing: at each step, move to neighbor closest to query. NSW graphs have logarithmic or polylogarithmic search complexity.
+<strong>Navigable Small World Graphs:</strong>Small-world graphs are networks where most nodes reach others through few hops, thanks to local and long-range links. NSW graphs enable greedy routing: at each step, move to neighbor closest to query. NSW graphs have logarithmic or polylogarithmic search complexity.
 
-**Hierarchy (Skip Lists):**Skip lists are layered linked lists where higher layers provide longer jumps, accelerating search. HNSW introduces similar hierarchy where each vector is randomly assigned layer count following geometric distribution. Upper layers are sparse (fast traversal), lower layers dense (precise search). This hierarchical structure enables efficient coarse-to-fine navigation.
+<strong>Hierarchy (Skip Lists):</strong>Skip lists are layered linked lists where higher layers provide longer jumps, accelerating search. HNSW introduces similar hierarchy where each vector is randomly assigned layer count following geometric distribution. Upper layers are sparse (fast traversal), lower layers dense (precise search). This hierarchical structure enables efficient coarse-to-fine navigation.
 
 ## How HNSW Works
 
-**Graph Structure:**HNSW creates multi-layered directed proximity graph:
+<strong>Graph Structure:</strong>HNSW creates multi-layered directed proximity graph:
 
-- **Top Layer**– Fewest nodes with long-range edges
-- **Intermediate Layers**– Gradually denser with shorter-range connections
-- **Bottom Layer (Layer 0)**– All vectors with short-range nearest neighbor connections
+- <strong>Top Layer</strong>– Fewest nodes with long-range edges
+- <strong>Intermediate Layers</strong>– Gradually denser with shorter-range connections
+- <strong>Bottom Layer (Layer 0)</strong>– All vectors with short-range nearest neighbor connections
 
 Each node is assigned highest layer using geometric distribution (probability p, often 1/ln(N)), ensuring nodes per layer decrease exponentially with height, enabling logarithmic search complexity.
 
-**Search Process:**1. Start at top layer entry node
+<strong>Search Process:</strong>1. Start at top layer entry node
 2. Greedy traversal: repeatedly move to neighbor closest to query vector
 3. At local minimum, descend to next lower layer and repeat
 4. Maintain priority queue (size controlled by efSearch parameter) of candidate nodes
@@ -48,20 +48,20 @@ Each node is assigned highest layer using geometric distribution (probability p,
 
 This process leverages long-range links for global navigation and short-range links for local refinement.
 
-**Graph Construction:**1. Random layer assignment for each new vector (geometric distribution)
+<strong>Graph Construction:</strong>1. Random layer assignment for each new vector (geometric distribution)
 2. Top-down traversal performing greedy search at each layer
 3. Connect new node to M nearest neighbors at each layer
 4. Descend through assigned layers, connecting at each, until reaching layer 0
 
 This incremental, probabilistic process enables dynamic, efficient index construction.
 
-**Key Parameters:**- **M (max neighbors)**– Controls neighbors per node. Higher M increases recall and memory
-- **efConstruction**– Candidates considered during construction. Higher values yield better quality, more build time
-- **efSearch**– Candidates considered during search. Higher values increase recall, more query latency
+<strong>Key Parameters:</strong>- <strong>M (max neighbors)</strong>– Controls neighbors per node. Higher M increases recall and memory
+- <strong>efConstruction</strong>– Candidates considered during construction. Higher values yield better quality, more build time
+- <strong>efSearch</strong>– Candidates considered during search. Higher values increase recall, more query latency
 
-**Tradeoffs:**Increasing M or ef* improves recall but increases memory footprint and/or latency. Lowering reduces RAM and speeds queries but can reduce recall.
+<strong>Tradeoffs:</strong>Increasing M or ef* improves recall but increases memory footprint and/or latency. Lowering reduces RAM and speeds queries but can reduce recall.
 
-**Complexity:**- Memory: O(M*N) edges for N vectors
+<strong>Complexity:</strong>- Memory: O(M*N) edges for N vectors
 - Index build time: O(N log N) with high efConstruction
 - Search: O(log N) expected hops in well-tuned graphs
 
@@ -69,16 +69,16 @@ This incremental, probabilistic process enables dynamic, efficient index constru
 
 | Algorithm | Structure | Pros | Cons | Best Use Cases |
 |-----------|-----------|------|------|----------------|
-| **HNSW**| Graph + Hierarchy | High recall, dynamic, SOTA | High memory, complexity | Most vector DBs, AI workloads |
-| **KD-Tree**| Tree | Simple, low-dim | Degrades in high-dim | Small/low-dim datasets |
-| **IVF**| Flat clusters | Disk scalable, simple | Lower recall, static index | Billions-scale, lower recall |
-| **LSH**| Hash buckets | Fast, memory efficient | Lower recall, random | High-dim, hashing scenarios |
+| <strong>HNSW</strong>| Graph + Hierarchy | High recall, dynamic, SOTA | High memory, complexity | Most vector DBs, AI workloads |
+| <strong>KD-Tree</strong>| Tree | Simple, low-dim | Degrades in high-dim | Small/low-dim datasets |
+| <strong>IVF</strong>| Flat clusters | Disk scalable, simple | Lower recall, static index | Billions-scale, lower recall |
+| <strong>LSH</strong>| Hash buckets | Fast, memory efficient | Lower recall, random | High-dim, hashing scenarios |
 
-**Research Insights:**Recent studies show "hubs" (well-connected nodes) in the graph play critical role in navigation speed and recall, sometimes more than hierarchy itself.
+<strong>Research Insights:</strong>Recent studies show "hubs" (well-connected nodes) in the graph play critical role in navigation speed and recall, sometimes more than hierarchy itself.
 
 ## Implementation
 
-**Python + Faiss:**```python
+<strong>Python + Faiss:</strong>```python
 import faiss
 import numpy as np
 
@@ -98,7 +98,7 @@ ON document_embedding
 USING hnsw(embedding vector_cosine_ops);
 ```
 
-**Redis:**```bash
+<strong>Redis:</strong>```bash
 FT.CREATE docs_idx ON HASH PREFIX 1 docs: 
 SCHEMA doc_embedding VECTOR HNSW 512 
 TYPE FLOAT32 DISTANCE_METRIC COSINE M 16 EF_CONSTRUCTION 32

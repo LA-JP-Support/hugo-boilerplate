@@ -14,39 +14,39 @@ draft: false
 
 A sub-flow (or nested flow) is a self-contained workflow invoked as a step within a larger, parent workflow. This modular pattern allows decomposition of intricate business logic, enabling consistent reuse and simplified maintenance. Sub-flows are analogous to software functions: encapsulating specific logic reusable across multiple contexts.
 
-**Example:**In employee onboarding, separate sub-flows handle IT setup, HR compliance, equipment provisioning, and account creation. Each sub-flow is developed once and invoked wherever needed.
+<strong>Example:</strong>In employee onboarding, separate sub-flows handle IT setup, HR compliance, equipment provisioning, and account creation. Each sub-flow is developed once and invoked wherever needed.
 
 ## Why Use Sub-flows / Nested Flows?
 
 ### Key Benefits
 
-**Modularity:**Complex workflows are divided into manageable, logical units.
+<strong>Modularity:</strong>Complex workflows are divided into manageable, logical units.
 
-**Reusability:**Common logic (validation, notifications, data transformation) is built once, reused everywhere.
+<strong>Reusability:</strong>Common logic (validation, notifications, data transformation) is built once, reused everywhere.
 
-**Maintainability:**Changes in a sub-flow instantly update all parent workflows, reducing risk and overhead.
+<strong>Maintainability:</strong>Changes in a sub-flow instantly update all parent workflows, reducing risk and overhead.
 
-**Scalability:**Large automations are easier to grow and adapt by composing smaller, well-defined pieces.
+<strong>Scalability:</strong>Large automations are easier to grow and adapt by composing smaller, well-defined pieces.
 
-**Consistency:**Identical processes execute uniformly across all workflows.
+<strong>Consistency:</strong>Identical processes execute uniformly across all workflows.
 
-**Enhanced Security:**Access to sensitive logic is isolated and protected via permissions.
+<strong>Enhanced Security:</strong>Access to sensitive logic is isolated and protected via permissions.
 
-**Improved Error Handling:**Centralized error management is applied to sub-flows for reliable recovery and unified logging.
+<strong>Improved Error Handling:</strong>Centralized error management is applied to sub-flows for reliable recovery and unified logging.
 
 ## How Do Sub-flows / Nested Flows Work?
 
 ### Step-by-Step Process
 
-**1. Design the Sub-flow**Identify repeatable logic (e.g., data validation, notifications) and build it as a standalone workflow with defined input/output.
+<strong>1. Design the Sub-flow</strong>Identify repeatable logic (e.g., data validation, notifications) and build it as a standalone workflow with defined input/output.
 
-**2. Integrate with Parent Workflow**Invoke the sub-flow at the desired step, passing necessary data as inputs.
+<strong>2. Integrate with Parent Workflow</strong>Invoke the sub-flow at the desired step, passing necessary data as inputs.
 
-**3. Execution**The parent workflow triggers the sub-flow, which runs as a single operation. Execution may be synchronous (parent waits) or asynchronous (parent continues).
+<strong>3. Execution</strong>The parent workflow triggers the sub-flow, which runs as a single operation. Execution may be synchronous (parent waits) or asynchronous (parent continues).
 
-**4. State and Results Management**Sub-flow results are returned and available for subsequent processing. State is managed within the sub-flow but may access parent context as needed.
+<strong>4. State and Results Management</strong>Sub-flow results are returned and available for subsequent processing. State is managed within the sub-flow but may access parent context as needed.
 
-**5. Reusability Across Workflows**The same sub-flow may be called from multiple parent workflows, supporting standardization and rapid development.
+<strong>5. Reusability Across Workflows</strong>The same sub-flow may be called from multiple parent workflows, supporting standardization and rapid development.
 
 ## Platform Examples
 
@@ -62,7 +62,7 @@ Subflows, actions, and templates are built as reusable logic and invoked in any 
 
 Parent state machines orchestrate child (nested) workflows, supporting complex hierarchies and domain separation.
 
-**Example AWS Code Snippet:**```typescript
+<strong>Example AWS Code Snippet:</strong>```typescript
 const nestedWorkflow = new LegacyWorkflow({ name: "nested-workflow" })
   .step(stepA)
   .then(stepB)

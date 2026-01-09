@@ -11,8 +11,8 @@ draft: false
 
 ## Key Points
 
-- **Circadian rhythm**is the body’s internal 24-hour clock, orchestrating physical, mental, and behavioral processes, most prominently the sleep-wake cycle, hormone release, body temperature, and metabolism.
-- The **suprachiasmatic nucleus (SCN)**in the brain’s hypothalamus acts as the master clock, synchronizing bodily rhythms with environmental cues, primarily light.
+- <strong>Circadian rhythm</strong>is the body’s internal 24-hour clock, orchestrating physical, mental, and behavioral processes, most prominently the sleep-wake cycle, hormone release, body temperature, and metabolism.
+- The <strong>suprachiasmatic nucleus (SCN)</strong>in the brain’s hypothalamus acts as the master clock, synchronizing bodily rhythms with environmental cues, primarily light.
 - Disruption of circadian rhythms is linked to sleep disorders, mood changes, cognitive impairment, metabolic syndrome, cardiovascular disease, and cancer.
 - Supporting and aligning with circadian rhythms improves sleep, cognitive performance, and overall health.
 
@@ -20,25 +20,25 @@ draft: false
 
 Circadian rhythms are internally generated biological cycles recurring roughly every 24 hours. They regulate core functions, including sleep-wake cycles, hormone secretion (e.g., melatonin, cortisol), body temperature, appetite, metabolism, and cognitive performance. These rhythms are present across all domains of life—animals, plants, fungi, and some bacteria—enabling adaptation to Earth’s day/night cycle.
 
-- **Endogenous:**Generated within the body, circadian rhythms persist in the absence of external time cues (free-running), but are normally entrained to environmental signals (“zeitgebers”).
-- **Universal:**Circadian organization is evolutionarily conserved, dating back to early life forms ([Frontiers in Sleep, 2025](https://www.frontiersin.org/journals/sleep/articles/10.3389/frsle.2025.1544945/full)).
-- **Multi-system:**They regulate sleep, metabolism, immune function, cognition, and the body’s response to stress ([Sleep Foundation](https://www.sleepfoundation.org/circadian-rhythm); [Cleveland Clinic](https://my.clevelandclinic.org/health/articles/circadian-rhythm)).
+- <strong>Endogenous:</strong>Generated within the body, circadian rhythms persist in the absence of external time cues (free-running), but are normally entrained to environmental signals (“zeitgebers”).
+- <strong>Universal:</strong>Circadian organization is evolutionarily conserved, dating back to early life forms ([Frontiers in Sleep, 2025](https://www.frontiersin.org/journals/sleep/articles/10.3389/frsle.2025.1544945/full)).
+- <strong>Multi-system:</strong>They regulate sleep, metabolism, immune function, cognition, and the body’s response to stress ([Sleep Foundation](https://www.sleepfoundation.org/circadian-rhythm); [Cleveland Clinic](https://my.clevelandclinic.org/health/articles/circadian-rhythm)).
 
 ## 2. How Does Circadian Rhythm Work?
 
 ### Master Clock: The Suprachiasmatic Nucleus (SCN)
 
-The master circadian clock resides in the **suprachiasmatic nucleus (SCN)**, a cluster of about 20,000 neurons in the hypothalamus. The SCN receives direct input from the retina, aligning internal timekeeping with the outside world.
+The master circadian clock resides in the <strong>suprachiasmatic nucleus (SCN)</strong>, a cluster of about 20,000 neurons in the hypothalamus. The SCN receives direct input from the retina, aligning internal timekeeping with the outside world.
 
-- **Light as the primary zeitgeber:**Light signals suppress melatonin and promote wakefulness; darkness triggers melatonin release for sleep ([Cleveland Clinic](https://my.clevelandclinic.org/health/articles/circadian-rhythm)).
-- **Peripheral clocks:**Most organs and tissues have their own clocks, regulated by the SCN but also sensitive to local cues like food, activity, and temperature ([Nature, 2022](https://www.nature.com/articles/s41392-022-00899-y)).
+- <strong>Light as the primary zeitgeber:</strong>Light signals suppress melatonin and promote wakefulness; darkness triggers melatonin release for sleep ([Cleveland Clinic](https://my.clevelandclinic.org/health/articles/circadian-rhythm)).
+- <strong>Peripheral clocks:</strong>Most organs and tissues have their own clocks, regulated by the SCN but also sensitive to local cues like food, activity, and temperature ([Nature, 2022](https://www.nature.com/articles/s41392-022-00899-y)).
 
 ### Molecular Mechanism
 
-At the core, the circadian clock is a network of feedback loops involving **clock genes**(e.g., **PER**, **CRY**, **CLOCK**, **BMAL1**) and their protein products. These genes activate and inhibit each other’s expression in a 24-hour cycle:
+At the core, the circadian clock is a network of feedback loops involving <strong>clock genes</strong>(e.g., <strong>PER</strong>, <strong>CRY</strong>, <strong>CLOCK</strong>, <strong>BMAL1</strong>) and their protein products. These genes activate and inhibit each other’s expression in a 24-hour cycle:
 
-- **Positive limb:**CLOCK and BMAL1 proteins form a complex that stimulates PER and CRY gene expression.
-- **Negative limb:**PER and CRY proteins accumulate, then inhibit the activity of CLOCK/BMAL1, suppressing their own production.
+- <strong>Positive limb:</strong>CLOCK and BMAL1 proteins form a complex that stimulates PER and CRY gene expression.
+- <strong>Negative limb:</strong>PER and CRY proteins accumulate, then inhibit the activity of CLOCK/BMAL1, suppressing their own production.
 - This cycle creates rhythmic gene expression throughout the body ([Nature, 2022](https://www.nature.com/articles/s41392-022-00899-y); [Frontiers in Sleep, 2025](https://www.frontiersin.org/journals/sleep/articles/10.3389/frsle.2025.1544945/full)).
 
 #### Further reading:  
@@ -49,27 +49,27 @@ At the core, the circadian clock is a network of feedback loops involving **cloc
 
 “Zeitgebers” ([German: “time givers”](https://www.sleepfoundation.org/circadian-rhythm#how-does-circadian-rhythm-work--1)) synchronize internal clocks to the environment. The strongest zeitgeber is light; others include:
 
-- **Meal timing:**Schedules for eating can shift peripheral clocks, especially in the liver and gut.
-- **Physical activity:**Regular exercise, particularly in the morning, strengthens circadian alignment.
-- **Social interaction:**Consistent routines and social cues play a role.
-- **Temperature:**Fluctuations help synchronize body clocks.
+- <strong>Meal timing:</strong>Schedules for eating can shift peripheral clocks, especially in the liver and gut.
+- <strong>Physical activity:</strong>Regular exercise, particularly in the morning, strengthens circadian alignment.
+- <strong>Social interaction:</strong>Consistent routines and social cues play a role.
+- <strong>Temperature:</strong>Fluctuations help synchronize body clocks.
 
 ## 3. Circadian Rhythm Across the Lifespan
 
 ### Infants and Children
 
-- **Infants:**Newborns have no fixed circadian pattern; regular rhythms emerge after 2-4 months with light exposure and parental routines ([Cleveland Clinic](https://my.clevelandclinic.org/health/articles/circadian-rhythm)).
-- **Children:**Develop consolidated, earlier sleep patterns, needing more sleep than adults.
+- <strong>Infants:</strong>Newborns have no fixed circadian pattern; regular rhythms emerge after 2-4 months with light exposure and parental routines ([Cleveland Clinic](https://my.clevelandclinic.org/health/articles/circadian-rhythm)).
+- <strong>Children:</strong>Develop consolidated, earlier sleep patterns, needing more sleep than adults.
 
 ### Teenagers
 
-- **Sleep phase delay:**Teenagers naturally fall asleep and wake later due to a delayed circadian phase, peaking melatonin secretion later in the evening.
-- **Conflict with early schedules:**Early school start times disrupt natural rhythms, leading to chronic sleep deprivation ([Sleep Foundation](https://www.sleepfoundation.org/circadian-rhythm#how-does-circadian-rhythm-work--1)).
+- <strong>Sleep phase delay:</strong>Teenagers naturally fall asleep and wake later due to a delayed circadian phase, peaking melatonin secretion later in the evening.
+- <strong>Conflict with early schedules:</strong>Early school start times disrupt natural rhythms, leading to chronic sleep deprivation ([Sleep Foundation](https://www.sleepfoundation.org/circadian-rhythm#how-does-circadian-rhythm-work--1)).
 
 ### Adults
 
-- **Stabilization:**Most adults settle into a consistent rhythm, though with individual “chronotypes” (morning lark vs. night owl).
-- **Older adults:**Often experience a phase advance, going to bed and waking earlier.
+- <strong>Stabilization:</strong>Most adults settle into a consistent rhythm, though with individual “chronotypes” (morning lark vs. night owl).
+- <strong>Older adults:</strong>Often experience a phase advance, going to bed and waking earlier.
 
 For more: [Sleep patterns by age (Cleveland Clinic)](https://my.clevelandclinic.org/health/articles/circadian-rhythm)
 
@@ -77,13 +77,13 @@ For more: [Sleep patterns by age (Cleveland Clinic)](https://my.clevelandclinic.
 
 Circadian rhythms are sensitive to:
 
-- **Light and darkness:**Morning light advances, evening light delays the clock.
-- **Meal timing:**Eating out of sync (late at night, irregular meals) impairs rhythm.
-- **Physical activity:**Consistency, especially in the morning, strengthens rhythm.
-- **Sleep schedule:**Irregular sleep/wake times disrupt alignment.
-- **Screen time:**Blue light in the evening suppresses melatonin.
-- **Shift work/travel:**Working nights or crossing time zones (jet lag) misaligns internal and external clocks.
-- **Medications/health:**Some drugs and illnesses (e.g., depression, neurodegeneration) alter circadian timing ([Nature, 2022](https://www.nature.com/articles/s41392-022-00899-y)).
+- <strong>Light and darkness:</strong>Morning light advances, evening light delays the clock.
+- <strong>Meal timing:</strong>Eating out of sync (late at night, irregular meals) impairs rhythm.
+- <strong>Physical activity:</strong>Consistency, especially in the morning, strengthens rhythm.
+- <strong>Sleep schedule:</strong>Irregular sleep/wake times disrupt alignment.
+- <strong>Screen time:</strong>Blue light in the evening suppresses melatonin.
+- <strong>Shift work/travel:</strong>Working nights or crossing time zones (jet lag) misaligns internal and external clocks.
+- <strong>Medications/health:</strong>Some drugs and illnesses (e.g., depression, neurodegeneration) alter circadian timing ([Nature, 2022](https://www.nature.com/articles/s41392-022-00899-y)).
 
 [More from Sleep Foundation on disruptions](https://www.sleepfoundation.org/circadian-rhythm#link)
 
@@ -114,22 +114,22 @@ Supporting your rhythm improves sleep, health, and cognitive performance.
 
 ### Actionable Steps
 
-- **Consistent sleep schedule:**Same bedtime/wake time every day.
-- **Morning sunlight:**Get outside or near a window after waking.
-- **Limit screens before bed:**Avoid blue light an hour before sleep.
-- **Relaxing bedtime routine:**Dim lights, read, meditate.
-- **Avoid caffeine/alcohol late:**Both delay sleep onset.
-- **Exercise regularly:**Ideally in the morning.
-- **Regular meal timing:**Avoid heavy/late meals.
-- **Optimize sleep environment:**Cool, dark, quiet room.
+- <strong>Consistent sleep schedule:</strong>Same bedtime/wake time every day.
+- <strong>Morning sunlight:</strong>Get outside or near a window after waking.
+- <strong>Limit screens before bed:</strong>Avoid blue light an hour before sleep.
+- <strong>Relaxing bedtime routine:</strong>Dim lights, read, meditate.
+- <strong>Avoid caffeine/alcohol late:</strong>Both delay sleep onset.
+- <strong>Exercise regularly:</strong>Ideally in the morning.
+- <strong>Regular meal timing:</strong>Avoid heavy/late meals.
+- <strong>Optimize sleep environment:</strong>Cool, dark, quiet room.
 
 [More tips: Sleep Foundation](https://www.sleepfoundation.org/circadian-rhythm#maintain)
 
 ### Restoring Alignment
 
-- **Light therapy:**Timed exposure to bright light to shift rhythm; used for jet lag, shift work, or delayed/advanced sleep phase disorder.
-- **Melatonin supplements:**May help, especially for jet lag or sleep phase disorders—consult a specialist.
-- **Gradual schedule shifts:**Adjust sleep/wake by 15-30 minutes per day.
+- <strong>Light therapy:</strong>Timed exposure to bright light to shift rhythm; used for jet lag, shift work, or delayed/advanced sleep phase disorder.
+- <strong>Melatonin supplements:</strong>May help, especially for jet lag or sleep phase disorders—consult a specialist.
+- <strong>Gradual schedule shifts:</strong>Adjust sleep/wake by 15-30 minutes per day.
 
 [How to fix circadian rhythm: Sleep Foundation](https://www.sleepfoundation.org/circadian-rhythm#fix)
 
@@ -137,12 +137,12 @@ Supporting your rhythm improves sleep, health, and cognitive performance.
 
 ### Major Types
 
-- **Delayed Sleep-Wake Phase Disorder:**Falling asleep and waking up much later than desired (“night owls”).
-- **Advanced Sleep-Wake Phase Disorder:**Falling asleep and waking much earlier than desired.
-- **Shift Work Sleep Disorder (SWSD):**Trouble sleeping due to working nights or rotating shifts.
-- **Jet Lag Disorder:**Misalignment after crossing time zones.
-- **Non-24-Hour Sleep-Wake Rhythm Disorder:**Sleep/wake cycle shifts daily, common among blind individuals.
-- **Irregular Sleep-Wake Rhythm Disorder:**Sleep is fragmented into several short periods throughout the day/night.
+- <strong>Delayed Sleep-Wake Phase Disorder:</strong>Falling asleep and waking up much later than desired (“night owls”).
+- <strong>Advanced Sleep-Wake Phase Disorder:</strong>Falling asleep and waking much earlier than desired.
+- <strong>Shift Work Sleep Disorder (SWSD):</strong>Trouble sleeping due to working nights or rotating shifts.
+- <strong>Jet Lag Disorder:</strong>Misalignment after crossing time zones.
+- <strong>Non-24-Hour Sleep-Wake Rhythm Disorder:</strong>Sleep/wake cycle shifts daily, common among blind individuals.
+- <strong>Irregular Sleep-Wake Rhythm Disorder:</strong>Sleep is fragmented into several short periods throughout the day/night.
 
 ### Symptoms
 
@@ -155,10 +155,10 @@ Supporting your rhythm improves sleep, health, and cognitive performance.
 
 ## 8. Measurement and Assessment
 
-- **Core body temperature:**Fluctuates predictably with circadian phase.
-- **Melatonin levels:**Measured via blood/saliva for onset/offset timing.
-- **Actigraphy:**Wearable devices tracking rest/activity cycles.
-- **Questionnaires:**E.g., Morningness-Eveningness Questionnaire for chronotype assessment.
+- <strong>Core body temperature:</strong>Fluctuates predictably with circadian phase.
+- <strong>Melatonin levels:</strong>Measured via blood/saliva for onset/offset timing.
+- <strong>Actigraphy:</strong>Wearable devices tracking rest/activity cycles.
+- <strong>Questionnaires:</strong>E.g., Morningness-Eveningness Questionnaire for chronotype assessment.
 
 [Assessment info: Sleep Foundation](https://www.sleepfoundation.org/circadian-rhythm#disorders)
 
@@ -166,46 +166,46 @@ Supporting your rhythm improves sleep, health, and cognitive performance.
 
 Understanding circadian science informs digital health, productivity, and automation:
 
-- **Optimize chatbot responses:**Timing interactions to user time zones and cognitive peaks (2-3 hours post-wake).
-- **Personalized notifications:**Avoiding late-night messages; aligning reminders to user circadian profiles.
-- **Health coaching:**AI-driven feedback for sleep hygiene, activity, and light exposure.
-- **Shift work support:**AI scheduling tools for minimizing circadian disruption.
+- <strong>Optimize chatbot responses:</strong>Timing interactions to user time zones and cognitive peaks (2-3 hours post-wake).
+- <strong>Personalized notifications:</strong>Avoiding late-night messages; aligning reminders to user circadian profiles.
+- <strong>Health coaching:</strong>AI-driven feedback for sleep hygiene, activity, and light exposure.
+- <strong>Shift work support:</strong>AI scheduling tools for minimizing circadian disruption.
 
 [Example: AI chatbot for sleep hygiene](https://www.sleepfoundation.org/circadian-rhythm#maintain)
 
 ## 10. Frequently Asked Questions
 
-**What is the main function of the circadian rhythm?**To synchronize bodily processes (sleep, hormones, metabolism, temperature) with the 24-hour day-night cycle.
+<strong>What is the main function of the circadian rhythm?</strong>To synchronize bodily processes (sleep, hormones, metabolism, temperature) with the 24-hour day-night cycle.
 
-**How is the circadian rhythm controlled?**By the SCN in the hypothalamus, which receives environmental light input.
+<strong>How is the circadian rhythm controlled?</strong>By the SCN in the hypothalamus, which receives environmental light input.
 
-**Can you change your circadian rhythm?**Yes—using light exposure, sleep schedule changes, and gradual routine adjustments.
+<strong>Can you change your circadian rhythm?</strong>Yes—using light exposure, sleep schedule changes, and gradual routine adjustments.
 
-**What happens if I ignore my circadian rhythm?**Chronic misalignment increases risk for insomnia, fatigue, mood disorders, and chronic diseases.
+<strong>What happens if I ignore my circadian rhythm?</strong>Chronic misalignment increases risk for insomnia, fatigue, mood disorders, and chronic diseases.
 
-**How do I know if my circadian rhythm is off?**Symptoms: ongoing sleep problems, daytime sleepiness, poor focus, mood swings.
+<strong>How do I know if my circadian rhythm is off?</strong>Symptoms: ongoing sleep problems, daytime sleepiness, poor focus, mood swings.
 
-**When should I see a healthcare provider?**When sleep problems or fatigue persist, or if you suspect a circadian disorder.
+<strong>When should I see a healthcare provider?</strong>When sleep problems or fatigue persist, or if you suspect a circadian disorder.
 
 ## 11. Glossary of Related Terms
 
-- **Circadian rhythm:**Internal, ~24-hour cycle regulating sleep/wake, hormones, temperature, and more.
-- **Suprachiasmatic nucleus (SCN):**The “master clock” in the hypothalamus.
-- **Sleep-wake cycle:**Alternating sleep and wakefulness in a 24-hour pattern.
-- **Melatonin:**Pineal gland hormone promoting sleep, suppressed by light.
-- **Clock genes:**Genes (e.g., PER, CRY, CLOCK, BMAL1) generating circadian oscillations.
-- **Zeitgebers:**Environmental cues (light, meals, activity) synchronizing rhythms.
-- **Chronotype:**Individual’s natural sleep-wake preference (“lark” or “owl”).
-- **Circadian rhythm sleep disorders:**Misalignment of internal clock with environment, causing sleep issues.
-- **Phase delay/advance:**Shift of circadian phase later (delay) or earlier (advance).
-- **Core body temperature:**Predictably fluctuates with circadian phase.
+- <strong>Circadian rhythm:</strong>Internal, ~24-hour cycle regulating sleep/wake, hormones, temperature, and more.
+- <strong>Suprachiasmatic nucleus (SCN):</strong>The “master clock” in the hypothalamus.
+- <strong>Sleep-wake cycle:</strong>Alternating sleep and wakefulness in a 24-hour pattern.
+- <strong>Melatonin:</strong>Pineal gland hormone promoting sleep, suppressed by light.
+- <strong>Clock genes:</strong>Genes (e.g., PER, CRY, CLOCK, BMAL1) generating circadian oscillations.
+- <strong>Zeitgebers:</strong>Environmental cues (light, meals, activity) synchronizing rhythms.
+- <strong>Chronotype:</strong>Individual’s natural sleep-wake preference (“lark” or “owl”).
+- <strong>Circadian rhythm sleep disorders:</strong>Misalignment of internal clock with environment, causing sleep issues.
+- <strong>Phase delay/advance:</strong>Shift of circadian phase later (delay) or earlier (advance).
+- <strong>Core body temperature:</strong>Predictably fluctuates with circadian phase.
 
 ## 12. Practical Usecases
 
-- **Healthcare:**Diagnosing and treating sleep/circadian disorders, optimizing medication timing (chronotherapy), adjusting shift work.
-- **Workplace:**Scheduling work/breaks to match cognitive energy peaks.
-- **Travel:**Managing light and sleep to reduce jet lag.
-- **AI & Chatbots:**Timing engagement, reminders, and health advice to natural rhythms.
+- <strong>Healthcare:</strong>Diagnosing and treating sleep/circadian disorders, optimizing medication timing (chronotherapy), adjusting shift work.
+- <strong>Workplace:</strong>Scheduling work/breaks to match cognitive energy peaks.
+- <strong>Travel:</strong>Managing light and sleep to reduce jet lag.
+- <strong>AI & Chatbots:</strong>Timing engagement, reminders, and health advice to natural rhythms.
 
 ## 13. References & Further Reading
 
@@ -217,8 +217,8 @@ Understanding circadian science informs digital health, productivity, and automa
 6. [Molecular Architecture of the Mammalian Circadian Clock (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC3946763/)
 7. [YouTube - Understanding Your Circadian Rhythm: How It Regulates Your Sleep Cycle](https://www.youtube.com/watch?v=1SkpRbB_Pxw)
 
-**For advanced scientific exploration:**- [Chronobiology (Frontiers in Sleep)](https://www.frontiersin.org/journals/sleep/articles/10.3389/frsle.2025.1544945/full)
+<strong>For advanced scientific exploration:</strong>- [Chronobiology (Frontiers in Sleep)](https://www.frontiersin.org/journals/sleep/articles/10.3389/frsle.2025.1544945/full)
 - [Molecular regulations of circadian rhythm (Nature)](https://www.nature.com/articles/s41392-022-00899-y)
 
-**This glossary provides a comprehensive, evidence-based overview of circadian rhythm, with direct links to leading medical, scientific, and educational resources for further study.**
+<strong>This glossary provides a comprehensive, evidence-based overview of circadian rhythm, with direct links to leading medical, scientific, and educational resources for further study.</strong>
 

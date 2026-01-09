@@ -12,21 +12,21 @@ categories: ["Technology"]
 ## Basics and Applications of RAG (Retrieval-Augmented Generation)
 
 ### Basic Structure of RAG
-[RAG (Retrieval-Augmented Generation)](/en/glossary/RAG/) is a mechanism that combines "retrieval" and "generation". Traditional [AI](/en/glossary/artificial-intelligence/) created text and responses using only learned knowledge. [RAG](/en/glossary/RAG/) searches for necessary information from external sources like databases when questions arrive, then creates answers based on that information.
+RAG (Retrieval-Augmented Generation) is a mechanism that combines "retrieval" and "generation". Traditional AI created text and responses using only learned knowledge. RAG searches for necessary information from external sources like databases when questions arrive, then creates answers based on that information.
 
-First, [AI](/en/glossary/artificial-intelligence/) understands the question content and retrieves relevant information from search engines or specific databases. Next, using the found information, it creates answers in natural text. This method enables AI to immediately update knowledge and quickly reflect new information.
+First, AI understands the question content and retrieves relevant information from search engines or specific databases. Next, using the found information, it creates answers in natural text. This method enables AI to immediately update knowledge and quickly reflect new information.
 
 ### Role of RAG
 
-In today's society, much new information is generated daily. For AI to provide correct answers, it needs constant access to the latest information. Traditional [generative AI](/en/glossary/Generative-AI/) only has knowledge from when it was trained, so information becomes outdated over time and may produce incorrect answers.
+In today's society, much new information is generated daily. For AI to provide correct answers, it needs constant access to the latest information. Traditional generative AI only has knowledge from when it was trained, so information becomes outdated over time and may produce incorrect answers.
 
-[RAG](/en/glossary/RAG/) solves this problem. It searches for and incorporates information from external sources for each question, creating answers using the latest data. More importantly, RAG allows **limiting reference information sources**. For example, in AI chatbots and AI-generated email auto-responses, using only company FAQs and manuals as information sources enables accurate responses unaffected by other companies' information or uncertain online information. This way, it can expand AI knowledge scope while narrowing down to only necessary information. AI can provide accurate support in various [scenarios](/en/glossary/scenarios/) including medical care, education, and business.
+RAG solves this problem. It searches for and incorporates information from external sources for each question, creating answers using the latest data. More importantly, RAG allows <strong>limiting reference information sources</strong>. For example, in AI chatbots and AI-generated email auto-responses, using only company FAQs and manuals as information sources enables accurate responses unaffected by other companies' information or uncertain online information. This way, it can expand AI knowledge scope while narrowing down to only necessary information. AI can provide accurate support in various scenarios including medical care, education, and business.
 
 ### Changes RAG Brings to Society
 
-Using RAG enables AI to provide information more flexibly and intelligently. For example, it can immediately respond to rapidly changing fields like news updates or new research findings. Simultaneously, companies can respond to customers using only their own information, realizing consistent responses aligned with brand image and corporate policy. Users can always receive answers based on new and accurate information, expanding AI utilization [scenarios](/en/glossary/scenarios/).
+Using RAG enables AI to provide information more flexibly and intelligently. For example, it can immediately respond to rapidly changing fields like news updates or new research findings. Simultaneously, companies can respond to customers using only their own information, realizing consistent responses aligned with brand image and corporate policy. Users can always receive answers based on new and accurate information, expanding AI utilization scenarios.
 
-Beyond education and business support, RAG is used in various [scenarios](/en/glossary/scenarios/) including AI chatbots and [AI email auto-response generation](/en/glossary/AI-email-auto-response-generation/) provided through SmartWeb's development service using [FlowHunt](/en/glossary/FlowHunt/). These services provide [FAQ](/en/glossary/FAQ/) auto-responses and [customer support](/en/glossary/customer-support/) using the latest information, allowing anyone to easily experience cutting- [edge AI](/en/glossary/Edge-AI/) technology.
+Beyond education and business support, RAG is used in various scenarios including AI chatbots and AI email auto-response generation provided through SmartWeb's development service using FlowHunt. These services provide FAQ auto-responses and customer support using the latest information, allowing anyone to easily experience cutting- edge AI technology.
 
 
 ## Differences Between Traditional Generative AI and RAG, Mechanisms, and Use Cases
@@ -53,11 +53,11 @@ RAG creates answers through three steps: "question understanding", "retrieval", 
 
 ! [Three Steps of RAG](/images/blog/RAG-123.jpg)
 
-1. **Question Understanding**Generative AI understands user questions and determines what information is needed. At this stage, it analyzes question intent and required answer type.
+1. <strong>Question Understanding</strong>Generative AI understands user questions and determines what information is needed. At this stage, it analyzes question intent and required answer type.
 
-2. **Retrieval**AI automatically searches for information needed for the question from databases or the [web](/en/glossary/Accessibility--Web-/). Targets include FAQs, manuals, and news articles. For companies, limiting search targets to only company information can exclude irrelevant external information.
+2. <strong>Retrieval</strong>AI automatically searches for information needed for the question from databases or the web. Targets include FAQs, manuals, and news articles. For companies, limiting search targets to only company information can exclude irrelevant external information.
 
-3. **Generation**Based on collected information, AI creates easy-to-understand answers in natural Japanese. It explains technical terms and difficult content in ways users can understand.
+3. <strong>Generation</strong>Based on collected information, AI creates easy-to-understand answers in natural Japanese. It explains technical terms and difficult content in ways users can understand.
 
 Through these three steps, RAG provides accurate answers beyond knowledge limitations.
 
@@ -72,9 +72,9 @@ While traditional generative AI limits answers to "what it knows", RAG can "sear
 
 The major benefit of RAG is that AI can access external data on the spot while providing answers. This allows AI to always respond using new and accurate information.
 
-Importantly, RAG has two major advantages. First is **access to latest data**. It can incorporate not just training-time data but also daily updated information in real-time. Second is **access to limited data**. By using only company FAQs, manuals, and internal documents as information sources, it can provide responses unaffected by irrelevant internet information or other companies' product information.
+Importantly, RAG has two major advantages. First is <strong>access to latest data</strong>. It can incorporate not just training-time data but also daily updated information in real-time. Second is <strong>access to limited data</strong>. By using only company FAQs, manuals, and internal documents as information sources, it can provide responses unaffected by irrelevant internet information or other companies' product information.
 
-This "answering from only company information" characteristic is especially important for AI chatbots and [AI email auto-response generation](/en/glossary/AI-email-auto-response-generation/). It enables consistent responses aligned with corporate brand image and policy, providing customers with accurate and reliable information. It also has the effect of preventing [hallucination](/en/glossary/hallucination/).
+This "answering from only company information" characteristic is especially important for AI chatbots and AI email auto-response generation. It enables consistent responses aligned with corporate brand image and policy, providing customers with accurate and reliable information. It also has the effect of preventing hallucination.
 
 RAG searches for necessary information from databases, internal documents, websites, etc., and creates answers based on that content. This method realizes "new information", "accurate content", and "explanations with clear basis".
 
@@ -82,24 +82,24 @@ In business settings, using RAG reduces incorrect answers. It can also flexibly 
 
 ### Considerations and Limitations
 
-RAG performance is greatly affected by the quality of referenced information sources. If external data contains errors or outdated content, AI answers will also be inaccurate. Also, RAG models themselves are not perfect. Regular work is needed to update information and review operational methods. Furthermore, combining retrieval and [text generation](/en/glossary/Text-Generation/) processing uses many [computational resources](/en/glossary/computational-resources/). When creating systems, attention is needed for costs and operation speed.
+RAG performance is greatly affected by the quality of referenced information sources. If external data contains errors or outdated content, AI answers will also be inaccurate. Also, RAG models themselves are not perfect. Regular work is needed to update information and review operational methods. Furthermore, combining retrieval and text generation processing uses many computational resources. When creating systems, attention is needed for costs and operation speed.
 
 ### Future Potential
 
-Recent scientific papers and technical developments predict that RAG will advance in cooperation with [knowledge graphs](/en/glossary/knowledge-graphs/) and multiple data sources, with applications to deeper reasoning, high- [precision](/en/glossary/Precision/) auto-summarization, and domain-specific AI. RAG is expanding in many fields including education, medical care, government, and [customer support](/en/glossary/customer-support/) where "human-like explanations" and "answers with basis" are required.
+Recent scientific papers and technical developments predict that RAG will advance in cooperation with knowledge graphs and multiple data sources, with applications to deeper reasoning, high- precision auto-summarization, and domain-specific AI. RAG is expanding in many fields including education, medical care, government, and customer support where "human-like explanations" and "answers with basis" are required.
 
 ### RAG Use Cases at SmartWeb
 
-SmartWeb develops [AI [chatbot](/en/glossary/Chatbot/)](/en/glossary/AI-[chatbot](/en/glossary/Chatbot/)/) and AI email auto-response services combining [LiveAgent](/en/glossary/LiveAgent/) and FlowHunt. Using RAG technology, it immediately searches and provides the latest information from manuals, FAQs, and specialized documents collected for each company. It is used in scenarios like:
+SmartWeb develops AI [chatbot](/en/glossary/AI-chatbot/) and AI email auto-response services combining LiveAgent and FlowHunt. Using RAG technology, it immediately searches and provides the latest information from manuals, FAQs, and specialized documents collected for each company. It is used in scenarios like:
 
-- **24/7/365 Auto-Response with Latest Information**Even outside business hours or late at night, AI immediately answers customer questions. It cross-searches the latest manuals and FAQs to return optimal answers on the spot.
+- <strong>24/7/365 Auto-Response with Latest Information</strong>Even outside business hours or late at night, AI immediately answers customer questions. It cross-searches the latest manuals and FAQs to return optimal answers on the spot.
 
-- **Accurate Responses Limited to Company Information**By referencing only company FAQs and manuals, it is unaffected by other companies' product information or uncertain online information. It enables consistent responses aligned with company policy and product specifications. Customers receive official company views and accurate product information, realizing highly reliable support experiences.
+- <strong>Accurate Responses Limited to Company Information</strong>By referencing only company FAQs and manuals, it is unaffected by other companies' product information or uncertain online information. It enables consistent responses aligned with company policy and product specifications. Customers receive official company views and accurate product information, realizing highly reliable support experiences.
 
-- **Easy Translation of Difficult Terms**AI converts technical terms and industry-specific language into easy-to-understand expressions. Even first-time users can inquire with confidence.
+- <strong>Easy Translation of Difficult Terms</strong>AI converts technical terms and industry-specific language into easy-to-understand expressions. Even first-time users can inquire with confidence.
 
-- **Batch Cross-Search of Large Volumes of Materials**Even with hundreds of [FAQ](/en/glossary/FAQ/) entries or many manuals, AI immediately finds necessary information and combines it to create answers.
+- <strong>Batch Cross-Search of Large Volumes of Materials</strong>Even with hundreds of FAQ entries or many manuals, AI immediately finds necessary information and combines it to create answers.
 
-- **Efficiency of Email Auto-Response Creation**For questions from inquiry forms, AI automatically creates optimal response drafts. This reduces staff workload and speeds up responses. Cases of increased customer satisfaction are growing.
+- <strong>Efficiency of Email Auto-Response Creation</strong>For questions from inquiry forms, AI automatically creates optimal response drafts. This reduces staff workload and speeds up responses. Cases of increased customer satisfaction are growing.
 
 In this way, RAG is advanced technology not only to "convey new and accurate information in easily understandable ways at any time" but also to "provide consistent responses using only company-managed information". It will continue evolving and becoming widely used in the future.

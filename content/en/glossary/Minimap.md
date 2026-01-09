@@ -40,7 +40,7 @@ Large datasets and graphs (mind maps, network diagrams) employ minimaps for cont
 
 React Flow and Svelte Flow provide customizable `<MiniMap />` component for node-based editors, rendering each node as SVG element and visualizing current viewport relative to flow.
 
-**React Flow Example:**```jsx
+<strong>React Flow Example:</strong>```jsx
 import { ReactFlow, MiniMap } from '@xyflow/react';
 
 export default function Flow() {
@@ -89,7 +89,7 @@ export default function Flow() {
 
 ### Customization Examples
 
-**Color by Node Type:**```jsx
+<strong>Color by Node Type:</strong>```jsx
 function nodeColor(node) {
   switch (node.type) {
     case 'input': return '#6ede87';
@@ -109,7 +109,7 @@ function MiniMapNode({ x, y }) {
 <MiniMap nodeComponent={MiniMapNode} />
 ```
 
-**Interactive Minimap:**```jsx
+<strong>Interactive Minimap:</strong>```jsx
 <MiniMap pannable zoomable />
 ```
 

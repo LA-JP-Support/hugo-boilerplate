@@ -12,9 +12,9 @@ draft: false
 ---
 ## What is Conversational AI?
 
-**Conversational AI**refers to the collection of artificial intelligence technologies that allow computers to simulate and process human conversation, either via text or voice. By leveraging a blend of [Natural Language Processing (NLP)](/en/glossary/natural-language-processing--nlp-/), Natural Language Understanding (NLU), Machine Learning (ML), and speech recognition, these systems can interpret user queries, retain context, and generate responses that are coherent and human-like. Conversational AI powers chatbots, virtual agents, interactive voice response (IVR) systems, and intelligent assistants across digital touchpoints.
+<strong>Conversational AI</strong>refers to the collection of artificial intelligence technologies that allow computers to simulate and process human conversation, either via text or voice. By leveraging a blend of Natural Language Processing (NLP), Natural Language Understanding (NLU), Machine Learning (ML), and speech recognition, these systems can interpret user queries, retain context, and generate responses that are coherent and human-like. Conversational AI powers chatbots, virtual agents, interactive voice response (IVR) systems, and intelligent assistants across digital touchpoints.
 
-- **Key Attributes:**- Understands context and user intent.
+- <strong>Key Attributes:</strong>- Understands context and user intent.
   - Maintains multi-turn conversations.
   - Continuously learns and adapts through data.
   - Supports omnichannel interactions (web, messaging, voice).
@@ -34,19 +34,19 @@ Identifying the distinctions between conversational AI, generative AI, and chatb
 
 | Technology                   | What It Does                                                                 | Example Use                    | Analogy                |
 |------------------------------|------------------------------------------------------------------------------|--------------------------------|------------------------|
-| **Chatbot (Rule-Based)**| Follows scripted flows; answers only what it’s programmed to.                | “Check flight status” bot      | Vending machine        |
-| **Conversational AI**| Understands intent, manages dialogue, personalizes, adapts to context.       | Virtual bank assistant         | Skilled translator     |
-| **Generative AI**| Produces new, original content such as text, images, or code.                | Email drafting, creative copy  | Author/creator         |
+| <strong>Chatbot (Rule-Based)</strong>| Follows scripted flows; answers only what it’s programmed to.                | “Check flight status” bot      | Vending machine        |
+| <strong>Conversational AI</strong>| Understands intent, manages dialogue, personalizes, adapts to context.       | Virtual bank assistant         | Skilled translator     |
+| <strong>Generative AI</strong>| Produces new, original content such as text, images, or code.                | Email drafting, creative copy  | Author/creator         |
 
-- **Chatbots**can be simple (rule-based, button-driven) or complex (AI-driven). Traditional chatbots are limited to predefined scripts and are unable to manage complex or ambiguous conversations.
-- **Conversational AI**uses advanced NLP, NLU, and [dialogue management](/en/glossary/dialogue-management/) to offer fluid, context-aware, and multi-turn conversations.
-- **Generative AI**(e.g., GPT-4, DALL-E) is capable of producing entirely new content and is often embedded within conversational AI to provide dynamic, creative, and contextually relevant responses.
+- <strong>Chatbots</strong>can be simple (rule-based, button-driven) or complex (AI-driven). Traditional chatbots are limited to predefined scripts and are unable to manage complex or ambiguous conversations.
+- <strong>Conversational AI</strong>uses advanced NLP, NLU, and dialogue management to offer fluid, context-aware, and multi-turn conversations.
+- <strong>Generative AI</strong>(e.g., GPT-4, DALL-E) is capable of producing entirely new content and is often embedded within conversational AI to provide dynamic, creative, and contextually relevant responses.
 
-**How they work together:**Modern AI-driven platforms often combine conversational AI for intent and context with generative AI for personalized, dynamic responses, typically accessed via a chatbot or voicebot interface.
+<strong>How they work together:</strong>Modern AI-driven platforms often combine conversational AI for intent and context with generative AI for personalized, dynamic responses, typically accessed via a chatbot or voicebot interface.
 
 > Example: ChatGPT uses conversational AI for understanding and managing conversation flow, and generative AI for producing unique text responses.
 
-**Further Reading:**- [AWS: What is Conversational AI?](https://aws.amazon.com/what-is/conversational-ai/#ams#what-isc6#pattern-data)
+<strong>Further Reading:</strong>- [AWS: What is Conversational AI?](https://aws.amazon.com/what-is/conversational-ai/#ams#what-isc6#pattern-data)
 - [K2View: Conversational AI vs Generative AI](https://www.k2view.com/blog/conversational-ai-vs-generative-ai/)
 
 
@@ -55,8 +55,8 @@ Identifying the distinctions between conversational AI, generative AI, and chatb
 Conversational AI systems process user input through a multi-stage workflow designed to decode meaning, determine intent, and deliver human-like responses.
 
 ### 1. Input Collection
-- **Text:**Users interact via chat, messaging, or web interface.
-- **Voice:**Spoken input is captured and transcribed using Automatic Speech Recognition (ASR).
+- <strong>Text:</strong>Users interact via chat, messaging, or web interface.
+- <strong>Voice:</strong>Spoken input is captured and transcribed using Automatic Speech Recognition (ASR).
 
 ### 2. Natural Language Processing (NLP)
 - Breaks down user input, identifies language, segments sentences, and extracts key data.
@@ -79,7 +79,7 @@ Conversational AI systems process user input through a multi-stage workflow desi
 ### 7. Output Delivery
 - Sends reply as text or, for voice systems, as synthesized speech via Text-to-Speech (TTS).
 
-**Detailed Diagram and Flow:**```mermaid
+<strong>Detailed Diagram and Flow:</strong>```mermaid
 flowchart LR
     A[User Input (Text/Voice)] --> B[ASR (if voice)]
     B --> C[NLP/NLU]
@@ -104,7 +104,7 @@ flowchart LR
 
 #### Natural Language Understanding (NLU)
 - Subset of NLP focused on deriving meaning, intent, and context from language.
-- Powers [intent recognition](/en/glossary/intent-recognition/), entity extraction, and [sentiment analysis](/en/glossary/sentiment-analysis/).
+- Powers intent recognition, entity extraction, and sentiment analysis.
 
 #### Natural Language Generation (NLG)
 - Converts structured data and intent into coherent, human-like sentences.
@@ -160,8 +160,8 @@ Further reading:
 | ML                            | Learns from data, improves accuracy over time                       | Adapting to slang/new topics       |
 | ASR                           | Converts speech to text                                             | Voice commands for Alexa/Siri      |
 | TTS                           | Converts text to spoken language                                    | Spoken responses in voice apps     |
-| [Dialogue Management](/en/glossary/dialogue-management/)           | Manages conversation flow and context                               | Multi-turn interactions            |
-| [Sentiment Analysis](/en/glossary/sentiment-analysis/)            | Detects emotions, adjusts replies accordingly                       | Prioritizing angry customers       |
+| Dialogue Management           | Manages conversation flow and context                               | Multi-turn interactions            |
+| Sentiment Analysis            | Detects emotions, adjusts replies accordingly                       | Prioritizing angry customers       |
 | Integration APIs              | Connects AI to business systems (CRM, ERP, databases)               | Fulfilling orders, checking status |
 
 - **Further Concepts:**- [Agent Assist](https://www.cognigy.com/resources/conversational-artificial-intelligence-glossary): AI that provides real-time support to human agents.
@@ -276,7 +276,7 @@ The field evolves rapidly, with several emerging trends:
 - **Integration with Generative AI:**Leveraging large language models (LLMs) for more creative, adaptive responses.
 - **Industry-Specific Solutions:**AI tailored to sectors like healthcare, finance, education, and retail.
 - **Hyper-Personalization:**Deep CRM and analytics integration for individualized experiences.
-- **Ethics & Responsible AI:**Greater focus on fairness, [transparency](/en/glossary/transparency/), and privacy.
+- **Ethics & Responsible AI:**Greater focus on fairness, transparency, and privacy.
 
 **Market Outlook:**Conversational AI market in banking and financial services is expected to surpass $7 billion by 2030 ([NextMSC](https://www.nextmsc.com/report/chatbot-market-in-bfsi)).
 
@@ -290,4 +290,4 @@ Explore more:
 - **Conversational AI Workflow:**![Conversational AI Workflow Diagram](https://www.nextiva.com/cdn-cgi/image/width=850,height=1318,fit=cover,gravity=auto,format=auto/blog/wp-content/uploads/sites/10/2024/12/components-of-conversational-ai.webp?resize=850,1318)
 - **Google Cloud Demo (YouTube):**[Watch the Demo](https://www.youtube.com/watch?v=I-lEf2kMjTg)
 - **Customer Experience Impact Stats:**![Zendesk: AI in Customer Experience](https://d1eipm3vz40hy0.cloudfront.net/vorteile-der-konversationellen-ki-de-optimized.png)
-- **AI Copilot Example:**![[AI Copilot](/en/glossary/copilot/) in Customer Support](https://www.nextiva.com/cdn-cgi/image/width=850,height=599
+- **AI Copilot Example:**![AI Copilot in Customer Support](https://www.nextiva.com/cdn-cgi/image/width=850,height=599

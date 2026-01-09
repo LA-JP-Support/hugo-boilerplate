@@ -33,15 +33,15 @@ Encryption encodes information so only those with the appropriate key can access
 
 ### Plaintext and Ciphertext
 
-- **Plaintext**: The original, readable data or message.
-- **Ciphertext**: The encrypted, unreadable version of the data.
+- <strong>Plaintext</strong>: The original, readable data or message.
+- <strong>Ciphertext</strong>: The encrypted, unreadable version of the data.
 
 When data is encrypted, plaintext is transformed into ciphertext. Decryption uses keys and algorithms to convert ciphertext back to plaintext.
 
 ### Encryption Keys
 
-- **Encryption Key**: A string of characters or numbers used in the encryption algorithm to convert plaintext to ciphertext.
-- **Decryption Key**: Used to revert ciphertext to plaintext. In symmetric encryption, both keys are the same; in asymmetric encryption, they are different but mathematically related.
+- <strong>Encryption Key</strong>: A string of characters or numbers used in the encryption algorithm to convert plaintext to ciphertext.
+- <strong>Decryption Key</strong>: Used to revert ciphertext to plaintext. In symmetric encryption, both keys are the same; in asymmetric encryption, they are different but mathematically related.
 
 Key management is central to effective encryption. Loss or exposure of keys can result in permanent data loss or security breaches.
 
@@ -49,8 +49,8 @@ Key management is central to effective encryption. Loss or exposure of keys can 
 
 Encryption algorithms (ciphers) define how data is encrypted and decrypted. The strength of encryption depends on the algorithm and key length.
 
-- **Symmetric Algorithms**: Use one key for both encryption and decryption (e.g., AES, DES, Blowfish).
-- **Asymmetric Algorithms**: Use a pair of keys (public and private) for encryption and decryption (e.g., RSA, ECC).
+- <strong>Symmetric Algorithms</strong>: Use one key for both encryption and decryption (e.g., AES, DES, Blowfish).
+- <strong>Asymmetric Algorithms</strong>: Use a pair of keys (public and private) for encryption and decryption (e.g., RSA, ECC).
 
 Further reading:
 - [Google Cloud: What is encryption and how does it work?](https://cloud.google.com/learn/what-is-encryption)
@@ -62,26 +62,26 @@ Encryption can be categorized by how keys are managed and used.
 
 ### Symmetric Encryption
 
-- **Uses one key for both encryption and decryption**- **Fast and efficient for large amounts of data**- **Requires secure key distribution**: Both sender and recipient must have the same secret key.
-- **Common Algorithms**: AES, DES, Blowfish
-- **Typical Uses**: Disk encryption, file encryption, database encryption, internal network traffic.
+- <strong>Uses one key for both encryption and decryption</strong>- <strong>Fast and efficient for large amounts of data</strong>- <strong>Requires secure key distribution</strong>: Both sender and recipient must have the same secret key.
+- <strong>Common Algorithms</strong>: AES, DES, Blowfish
+- <strong>Typical Uses</strong>: Disk encryption, file encryption, database encryption, internal network traffic.
 
-**Advantages:**Speed, simplicity, efficient for bulk data  
-**Disadvantages:**Key distribution is challenging; compromise of the key risks all protected data
+<strong>Advantages:</strong>Speed, simplicity, efficient for bulk data  
+<strong>Disadvantages:</strong>Key distribution is challenging; compromise of the key risks all protected data
 
 More details:  
 - [GeeksforGeeks: Symmetric Key Encryption](https://www.geeksforgeeks.org/ethical-hacking/what-is-a-symmetric-encryption/)
 
 ### Asymmetric Encryption
 
-- **Uses a mathematically related key pair (public/private)**- Public key: shared openly, used for encryption
+- <strong>Uses a mathematically related key pair (public/private)</strong>- Public key: shared openly, used for encryption
     - Private key: kept secret, used for decryption
-- **Secure key exchange**: No need to transmit the private key
-- **Enables digital signatures, authentication, and non-repudiation**- **Common Algorithms**: RSA, ECC, Diffie-Hellman
-- **Typical Uses**: Secure email, digital signatures, SSL/TLS, initial key exchange for symmetric encryption
+- <strong>Secure key exchange</strong>: No need to transmit the private key
+- <strong>Enables digital signatures, authentication, and non-repudiation</strong>- <strong>Common Algorithms</strong>: RSA, ECC, Diffie-Hellman
+- <strong>Typical Uses</strong>: Secure email, digital signatures, SSL/TLS, initial key exchange for symmetric encryption
 
-**Advantages:**Secure for communication and key exchange  
-**Disadvantages:**Slower, more resource-intensive, best for small data amounts or key exchange
+<strong>Advantages:</strong>Secure for communication and key exchange  
+<strong>Disadvantages:</strong>Slower, more resource-intensive, best for small data amounts or key exchange
 
 More details:  
 - [GeeksforGeeks: Asymmetric Key Encryption](https://www.geeksforgeeks.org/computer-networks/what-is-asymmetric-encryption/)
@@ -97,25 +97,25 @@ More details:
 | Security           | Depends on secrecy  | More secure for exchange|
 | Algorithms         | AES, DES, Blowfish  | RSA, ECC, DSA           |
 
-**Hybrid Approach:**Most modern protocols (like SSL/TLS) use asymmetric encryption to exchange a symmetric key, which is then used for the bulk of data transmission.  
+<strong>Hybrid Approach:</strong>Most modern protocols (like SSL/TLS) use asymmetric encryption to exchange a symmetric key, which is then used for the bulk of data transmission.  
 ## Common Data Encryption Algorithms
 
 ### Symmetric Algorithms
 
-- **AES (Advanced Encryption Standard)**: Block cipher, standard for most applications; key sizes: 128, 192, 256 bits.
-- **DES (Data Encryption Standard)**: Block cipher, now insecure due to short key (56 bits).
-- **3DES (Triple DES)**: Applies DES three times; deprecated due to efficiency and security issues.
-- **Blowfish**: Block cipher with variable key length, used in legacy and some open-source tools.
-- **Twofish**: Successor to Blowfish; up to 256-bit keys, strong and flexible.
-- **RC4**: Stream cipher, deprecated due to vulnerabilities.
-- **Format-Preserving Encryption (FPE)**: Maintains format of original data; used in tokenization and anonymization.
+- <strong>AES (Advanced Encryption Standard)</strong>: Block cipher, standard for most applications; key sizes: 128, 192, 256 bits.
+- <strong>DES (Data Encryption Standard)</strong>: Block cipher, now insecure due to short key (56 bits).
+- <strong>3DES (Triple DES)</strong>: Applies DES three times; deprecated due to efficiency and security issues.
+- <strong>Blowfish</strong>: Block cipher with variable key length, used in legacy and some open-source tools.
+- <strong>Twofish</strong>: Successor to Blowfish; up to 256-bit keys, strong and flexible.
+- <strong>RC4</strong>: Stream cipher, deprecated due to vulnerabilities.
+- <strong>Format-Preserving Encryption (FPE)</strong>: Maintains format of original data; used in tokenization and anonymization.
 
 ### Asymmetric Algorithms
 
-- **RSA**: Public-key cryptosystem; 1024–4096-bit keys; used for secure data exchange and digital signatures.
-- **ECC (Elliptic Curve Cryptography)**: Efficient for mobile/low-resource devices; 160–521-bit keys.
-- **DSA (Digital Signature Algorithm)**: Used for digital signatures.
-- **Diffie-Hellman**: Securely exchanges cryptographic keys; not for direct encryption.
+- <strong>RSA</strong>: Public-key cryptosystem; 1024–4096-bit keys; used for secure data exchange and digital signatures.
+- <strong>ECC (Elliptic Curve Cryptography)</strong>: Efficient for mobile/low-resource devices; 160–521-bit keys.
+- <strong>DSA (Digital Signature Algorithm)</strong>: Used for digital signatures.
+- <strong>Diffie-Hellman</strong>: Securely exchanges cryptographic keys; not for direct encryption.
 
 Further reading:
 - [Sealpath: Types of Encryption Guide](https://www.sealpath.com/blog/types-of-encryption-guide/)
@@ -128,23 +128,23 @@ Encryption strategies depend on data state:
 
 ### Data at Rest
 
-- **Definition**: Data stored on a device, database, or storage medium.
-- **Examples**: Files on hard drives, cloud storage, databases.
-- **Protection**: Full disk encryption (e.g., BitLocker, FileVault), file/folder encryption, database-level encryption (TDE).
-- **Risks**: Device theft, accidental disclosure, insider threats.
+- <strong>Definition</strong>: Data stored on a device, database, or storage medium.
+- <strong>Examples</strong>: Files on hard drives, cloud storage, databases.
+- <strong>Protection</strong>: Full disk encryption (e.g., BitLocker, FileVault), file/folder encryption, database-level encryption (TDE).
+- <strong>Risks</strong>: Device theft, accidental disclosure, insider threats.
 
 ### Data in Transit
 
-- **Definition**: Data actively moving between systems or across networks.
-- **Examples**: Web traffic (HTTPS), emails, VPN transmissions.
-- **Protection**: TLS/SSL for web, VPN tunnels, secure file transfer protocols (SFTP, SCP).
-- **Risks**: Eavesdropping, interception, man-in-the-middle attacks.
+- <strong>Definition</strong>: Data actively moving between systems or across networks.
+- <strong>Examples</strong>: Web traffic (HTTPS), emails, VPN transmissions.
+- <strong>Protection</strong>: TLS/SSL for web, VPN tunnels, secure file transfer protocols (SFTP, SCP).
+- <strong>Risks</strong>: Eavesdropping, interception, man-in-the-middle attacks.
 
 ### End-to-End Encryption
 
-- **Definition**: Only communicating users can decrypt messages; intermediaries cannot access plaintext.
-- **Examples**: Messaging apps (WhatsApp, Signal), some secure email systems.
-- **Benefits**: Protects against both external attackers and service providers.
+- <strong>Definition</strong>: Only communicating users can decrypt messages; intermediaries cannot access plaintext.
+- <strong>Examples</strong>: Messaging apps (WhatsApp, Signal), some secure email systems.
+- <strong>Benefits</strong>: Protects against both external attackers and service providers.
 
 Further reading:
 - [Splunk: Encryption Explained – At Rest, In Transit & End-To-End](https://www.splunk.com/en_us/blog/learn/end-to-end-encryption.html)
@@ -155,12 +155,12 @@ Further reading:
 
 ### Use Cases
 
-- **Device Security**: Full disk encryption protects data on laptops and smartphones; USB encryption for removable media.
-- **Cloud and Remote Work**: Encrypting cloud storage and remote data access.
-- **Intellectual Property Protection**: DRM systems prevent unauthorized copying or reverse engineering.
-- **Network Security**: VPNs encrypt all data between devices and servers; HTTPS secures web browsing.
-- **Secure Communications**: Messaging apps and email encryption.
-- **Secure Backups**: Encrypted backups in cloud and on-premises systems.
+- <strong>Device Security</strong>: Full disk encryption protects data on laptops and smartphones; USB encryption for removable media.
+- <strong>Cloud and Remote Work</strong>: Encrypting cloud storage and remote data access.
+- <strong>Intellectual Property Protection</strong>: DRM systems prevent unauthorized copying or reverse engineering.
+- <strong>Network Security</strong>: VPNs encrypt all data between devices and servers; HTTPS secures web browsing.
+- <strong>Secure Communications</strong>: Messaging apps and email encryption.
+- <strong>Secure Backups</strong>: Encrypted backups in cloud and on-premises systems.
 
 ### Regulatory Compliance
 
@@ -168,11 +168,11 @@ Encryption is mandated or strongly recommended in many regulations:
 
 | Regulation/Standard | Sector                    | Key Encryption Requirements                          |
 |---------------------|---------------------------|------------------------------------------------------|
-| **HIPAA**| Healthcare                | Encrypt protected health information (PHI)           |
-| **PCI DSS**| Payment card industry     | Encrypt cardholder data in storage and transit       |
-| **GDPR**| General data privacy (EU) | Protect personal data; encryption recommended        |
-| **FIPS 140-2**| US federal government     | Specifies approved encryption algorithms             |
-| **FERPA**| Education                 | Protects student records                            |
+| <strong>HIPAA</strong>| Healthcare                | Encrypt protected health information (PHI)           |
+| <strong>PCI DSS</strong>| Payment card industry     | Encrypt cardholder data in storage and transit       |
+| <strong>GDPR</strong>| General data privacy (EU) | Protect personal data; encryption recommended        |
+| <strong>FIPS 140-2</strong>| US federal government     | Specifies approved encryption algorithms             |
+| <strong>FERPA</strong>| Education                 | Protects student records                            |
 
 Encryption helps organizations avoid fines, data breaches, and reputational damage by demonstrating compliance with these and other standards.
 
@@ -183,25 +183,25 @@ Further reading:
 
 ## Benefits of Data Encryption
 
-- **Confidentiality**: Only authorized users can access data.
-- **Integrity**: Ensures data is not altered during transmission or storage; cryptographic hashes and digital signatures verify authenticity.
-- **Authentication**: Confirms identities of parties communicating.
-- **Non-repudiation**: Prevents denial of sending or receiving messages.
-- **Regulatory compliance**: Meets legal and industry data protection requirements.
-- **Device and cloud security**: Protects data on endpoints and in the cloud.
-- **Supports secure remote work**: Safeguards data from any location.
-- **Protects intellectual property**: Prevents unauthorized use or duplication.
+- <strong>Confidentiality</strong>: Only authorized users can access data.
+- <strong>Integrity</strong>: Ensures data is not altered during transmission or storage; cryptographic hashes and digital signatures verify authenticity.
+- <strong>Authentication</strong>: Confirms identities of parties communicating.
+- <strong>Non-repudiation</strong>: Prevents denial of sending or receiving messages.
+- <strong>Regulatory compliance</strong>: Meets legal and industry data protection requirements.
+- <strong>Device and cloud security</strong>: Protects data on endpoints and in the cloud.
+- <strong>Supports secure remote work</strong>: Safeguards data from any location.
+- <strong>Protects intellectual property</strong>: Prevents unauthorized use or duplication.
 
 ## Disadvantages and Challenges
 
 | Challenge            | Explanation |
 |----------------------|-------------|
-| **Key management**| Securely creating, storing, rotating, and revoking keys is difficult. Loss of keys can result in permanent data loss. |
-| **Performance impact**| Encryption and decryption require computational resources, potentially affecting speed and system performance. |
-| **Ransomware**| Attackers may encrypt user data and demand payment for decryption keys. |
-| **Quantum computing**| Quantum computers may eventually break current algorithms, necessitating quantum-resistant cryptography. |
-| **Usability issues**| Layered encryption solutions can complicate workflows and user access. |
-| **Insider threats**| Employees or admins with access to keys may compromise data. |
+| <strong>Key management</strong>| Securely creating, storing, rotating, and revoking keys is difficult. Loss of keys can result in permanent data loss. |
+| <strong>Performance impact</strong>| Encryption and decryption require computational resources, potentially affecting speed and system performance. |
+| <strong>Ransomware</strong>| Attackers may encrypt user data and demand payment for decryption keys. |
+| <strong>Quantum computing</strong>| Quantum computers may eventually break current algorithms, necessitating quantum-resistant cryptography. |
+| <strong>Usability issues</strong>| Layered encryption solutions can complicate workflows and user access. |
+| <strong>Insider threats</strong>| Employees or admins with access to keys may compromise data. |
 
 ## Best Practices for Data Encryption
 
@@ -230,13 +230,13 @@ Encryption makes unauthorized data access difficult but not impossible. Attacker
 
 ### Attack Vectors and Threats
 
-- **Brute force attacks**: Trying all possible keys; strong encryption/long keys make this impractical.
-- **Key exposure or theft**: Gaining access to decryption keys via poor management, malware, or insiders.
-- **Side-channel attacks**: Exploiting system behavior (timing, power usage) to recover keys.
-- **Cryptanalysis**: Finding weaknesses in algorithms.
-- **Social engineering/phishing**: Trick users into revealing keys/passwords.
-- **Insider threats**: Leaking or misusing keys.
-- **Endpoint compromise**: Malware intercepts data before/after encryption.
+- <strong>Brute force attacks</strong>: Trying all possible keys; strong encryption/long keys make this impractical.
+- <strong>Key exposure or theft</strong>: Gaining access to decryption keys via poor management, malware, or insiders.
+- <strong>Side-channel attacks</strong>: Exploiting system behavior (timing, power usage) to recover keys.
+- <strong>Cryptanalysis</strong>: Finding weaknesses in algorithms.
+- <strong>Social engineering/phishing</strong>: Trick users into revealing keys/passwords.
+- <strong>Insider threats</strong>: Leaking or misusing keys.
+- <strong>Endpoint compromise</strong>: Malware intercepts data before/after encryption.
 
 Encryption does not prevent data theft, but ensures stolen data remains unusable without the key.
 

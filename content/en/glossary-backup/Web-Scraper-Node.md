@@ -11,9 +11,9 @@ draft: false
 ---
 ## Category
 
-**AI Chatbot & Automation**## Definition
+<strong>AI Chatbot & Automation</strong>## Definition
 
-A **Web Scraper Node**is a modular, reusable component that fetches and extracts data from specified web URLs within an automated workflow. It’s a building block commonly found in automation platforms (such as [n8n](https://n8n.io/), Node.js scripts, or AI chatbot backends), enabling the systematic collection of web data for further processing, integration, or analysis. Web scraper nodes are pivotal for workflows that require information from web pages lacking structured APIs.
+A <strong>Web Scraper Node</strong>is a modular, reusable component that fetches and extracts data from specified web URLs within an automated workflow. It’s a building block commonly found in automation platforms (such as [n8n](https://n8n.io/), Node.js scripts, or AI chatbot backends), enabling the systematic collection of web data for further processing, integration, or analysis. Web scraper nodes are pivotal for workflows that require information from web pages lacking structured APIs.
 
 ## What Is a Web Scraper Node?
 
@@ -24,15 +24,15 @@ A Web Scraper Node is a self-contained unit within a workflow automation framewo
 - Extracts relevant data using selectors (CSS, XPath) or AI prompts.
 - Returns the extracted, structured data for use by other workflow nodes.
 
-**Node types include:**- **Code-based nodes:**e.g., [Puppeteer](https://pptr.dev/), [Cheerio](https://cheerio.js.org/), [Axios](https://github.com/axios/axios) in Node.js.
-- **Visual/low-code nodes:**e.g., [n8n Web Scraper Node](https://docs.n8n.io/) or [Firecrawl API node](https://docs.firecrawl.dev/).
-- **API-powered nodes:**e.g., [ZenRows](https://www.zenrows.com/), [ScrapingBee](https://www.scrapingbee.com/).
+<strong>Node types include:</strong>- <strong>Code-based nodes:</strong>e.g., [Puppeteer](https://pptr.dev/), [Cheerio](https://cheerio.js.org/), [Axios](https://github.com/axios/axios) in Node.js.
+- <strong>Visual/low-code nodes:</strong>e.g., [n8n Web Scraper Node](https://docs.n8n.io/) or [Firecrawl API node](https://docs.firecrawl.dev/).
+- <strong>API-powered nodes:</strong>e.g., [ZenRows](https://www.zenrows.com/), [ScrapingBee](https://www.scrapingbee.com/).
 
-**Typical Inputs:**- Target URLs (array or single)
+<strong>Typical Inputs:</strong>- Target URLs (array or single)
 - Extraction selectors (CSS, XPath, Regex) or AI prompts
 - Optional configs: User agent, proxies, authentication, headers
 
-**Typical Outputs:**- Structured data (JSON, text, table)
+<strong>Typical Outputs:</strong>- Structured data (JSON, text, table)
 - Status and error messages
 
 ## How Does a Web Scraper Node Work?
@@ -57,28 +57,28 @@ Delivers structured data (JSON, tables) to downstream nodes or responses (e.g., 
 
 Web scraper nodes automate the process of collecting web data where no official API exists. Primary use cases include:
 
-- **Real-time data for chatbots or AI agents**- **Competitor monitoring**- **Price and content aggregation**- **Lead/contact data extraction**
+- <strong>Real-time data for chatbots or AI agents</strong>- <strong>Competitor monitoring</strong>- <strong>Price and content aggregation</strong>- <strong>Lead/contact data extraction</strong>
 
-**Key Benefits:**- **No/low-code integration:**Build flows visually ([n8n example](https://docs.n8n.io/)).
-- **Scalable and reusable:**Nodes can be reused across workflows.
-- **Scheduled/triggered execution:**On-demand or interval-based data collection.
+<strong>Key Benefits:</strong>- <strong>No/low-code integration:</strong>Build flows visually ([n8n example](https://docs.n8n.io/)).
+- <strong>Scalable and reusable:</strong>Nodes can be reused across workflows.
+- <strong>Scheduled/triggered execution:</strong>On-demand or interval-based data collection.
 
 ## Core Technologies & Tools
 
 ### In Node.js:
 
-- **HTTP Clients:**[Axios](https://github.com/axios/axios), [node-fetch](https://github.com/node-fetch/node-fetch)
-- **HTML Parsers:**[Cheerio](https://cheerio.js.org/), [jsdom](https://github.com/jsdom/jsdom)
-- **Headless Browsers:**[Puppeteer](https://pptr.dev/), [Playwright](https://playwright.dev/), [Selenium](https://www.selenium.dev/)
-- **Full Frameworks:**[nodejs-web-scraper (npm)](https://www.npmjs.com/package/nodejs-web-scraper), [Crawler](https://github.com/bda-research/node-crawler)
+- <strong>HTTP Clients:</strong>[Axios](https://github.com/axios/axios), [node-fetch](https://github.com/node-fetch/node-fetch)
+- <strong>HTML Parsers:</strong>[Cheerio](https://cheerio.js.org/), [jsdom](https://github.com/jsdom/jsdom)
+- <strong>Headless Browsers:</strong>[Puppeteer](https://pptr.dev/), [Playwright](https://playwright.dev/), [Selenium](https://www.selenium.dev/)
+- <strong>Full Frameworks:</strong>[nodejs-web-scraper (npm)](https://www.npmjs.com/package/nodejs-web-scraper), [Crawler](https://github.com/bda-research/node-crawler)
 
 ### In Automation Platforms:
 
-- **n8n Web Scraper Node:**Visual node for URL, selector, and output configuration ([Docs](https://docs.n8n.io/)).
-- **Firecrawl API Node:**Handles complex scraping via API ([Docs](https://docs.firecrawl.dev/)).
-- **ZenRows API:**Handles anti-bot and dynamic sites ([ZenRows Docs](https://www.zenrows.com/docs)).
+- <strong>n8n Web Scraper Node:</strong>Visual node for URL, selector, and output configuration ([Docs](https://docs.n8n.io/)).
+- <strong>Firecrawl API Node:</strong>Handles complex scraping via API ([Docs](https://docs.firecrawl.dev/)).
+- <strong>ZenRows API:</strong>Handles anti-bot and dynamic sites ([ZenRows Docs](https://www.zenrows.com/docs)).
 
-**Further reading and sample code:**- [Web Scraping with JavaScript and Node.js (ScrapingBee)](https://www.scrapingbee.com/blog/web-scraping-javascript/)
+<strong>Further reading and sample code:</strong>- [Web Scraping with JavaScript and Node.js (ScrapingBee)](https://www.scrapingbee.com/blog/web-scraping-javascript/)
 - [7 Best JavaScript & Node.js Web Scraping Libraries (ZenRows)](https://www.zenrows.com/blog/javascript-nodejs-web-scraping-libraries)
 
 ## Example: Node.js Script for Book Data
@@ -109,12 +109,12 @@ const run = async () => {
 };
 run();
 ```
-- **Workflow:**Launch browser → Load page → Extract structured data → Save to file  
-- **More Puppeteer examples:**[Puppeteer Docs](https://pptr.dev/)
+- <strong>Workflow:</strong>Launch browser → Load page → Extract structured data → Save to file  
+- <strong>More Puppeteer examples:</strong>[Puppeteer Docs](https://pptr.dev/)
 
 ## Example: n8n Visual Workflow
 
-**Monitor competitor pricing:**```
+<strong>Monitor competitor pricing:</strong>```
 [Trigger] → [HTTP Request (Scrape)] → [Code (Compare)] → [Slack Notification]
                                              |
                                              ↓

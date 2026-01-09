@@ -13,11 +13,11 @@ draft: false
 
 Latency is the time delay that occurs between the initiation and completion of a process. In networked systems and AI infrastructure, it is the time it takes for data to travel from one point to another—most often measured as the delay between a user's action and the system's response. Typically, latency is quantified in milliseconds (ms) and represents the "lag" users perceive during interactions with web apps, APIs, or AI-powered services.
 
-**Key Definition:**> Latency refers to the delay that occurs between initiating a request (such as clicking a button in a web app) and receiving a response from the system or application.
+<strong>Key Definition:</strong>> Latency refers to the delay that occurs between initiating a request (such as clicking a button in a web app) and receiving a response from the system or application.
 
-- **Source:**[Galileo AI: Understanding Latency in AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
-- **Source:**[AWS: What Is Latency?](https://aws.amazon.com/what-is/latency/)
-- **Source:**[DriveNets: Latency in AI Networking](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
+- <strong>Source:</strong>[Galileo AI: Understanding Latency in AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
+- <strong>Source:</strong>[AWS: What Is Latency?](https://aws.amazon.com/what-is/latency/)
+- <strong>Source:</strong>[DriveNets: Latency in AI Networking](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
 
 ## Why Does Latency Matter in Digital Systems?
 
@@ -26,12 +26,12 @@ Latency directly impacts user experience, application performance, and the effec
 - Responsive web and mobile applications
 - Real-time analytics and decision-making
 - AI-powered search and retrieval
-- [Cloud computing](/en/glossary/cloud-computing/) and API integration
+- Cloud computing and API integration
 - High-frequency trading (HFT) and financial systems
 - Telemedicine, remote monitoring, and healthcare applications
 - Online gaming and interactive media
 
-**Examples:**- In high-frequency trading, a 1-millisecond delay can mean the difference between profit and loss.  
+<strong>Examples:</strong>- In high-frequency trading, a 1-millisecond delay can mean the difference between profit and loss.  
   [Read: Investopedia on HFT Latency](https://www.investopedia.com/terms/h/high-frequency-trading.asp)
 - In AI-powered chatbots, high latency degrades the conversational experience, making responses feel slow or unnatural.
 - In autonomous vehicles, even slight delays can pose safety risks ([Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)).
@@ -40,68 +40,68 @@ Latency directly impacts user experience, application performance, and the effec
 
 Latency in digital systems appears in several forms:
 
-- **Network Latency:**Time for data to travel over a network from sender to receiver. Impacted by physical distance, transmission medium, and network congestion.
-- **Retrieval Latency:**Time taken for a system (e.g., AI model) to fetch relevant data from storage or a knowledge base after a query.
-- **Disk/Storage Latency:**Delay in reading/writing data from storage devices. SSDs have lower latency than HDDs.
-- **Operational/Compute Latency:**Delay introduced by application or server processing. Complex AI models or inefficient algorithms increase compute latency.
+- <strong>Network Latency:</strong>Time for data to travel over a network from sender to receiver. Impacted by physical distance, transmission medium, and network congestion.
+- <strong>Retrieval Latency:</strong>Time taken for a system (e.g., AI model) to fetch relevant data from storage or a knowledge base after a query.
+- <strong>Disk/Storage Latency:</strong>Delay in reading/writing data from storage devices. SSDs have lower latency than HDDs.
+- <strong>Operational/Compute Latency:</strong>Delay introduced by application or server processing. Complex AI models or inefficient algorithms increase compute latency.
 
 In AI pipelines, multiple latency types compound, affecting overall system responsiveness.
 
-- **Source:**[Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
-- **Source:**[DriveNets](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
+- <strong>Source:</strong>[Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
+- <strong>Source:</strong>[DriveNets](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
 
 ## How Is Latency Used or Encountered?
 
 Latency is a primary concern in the design, deployment, and operation of:
 
-- **AI Model Inference:**Time from user input to output generation.
-- **API Integrations:**Delay in external or internal service calls.
-- **Database/Search Retrieval:**Speed of fetching relevant information.
-- **Networked Applications:**Web, mobile, and IoT apps requiring fast feedback.
+- <strong>AI Model Inference:</strong>Time from user input to output generation.
+- <strong>API Integrations:</strong>Delay in external or internal service calls.
+- <strong>Database/Search Retrieval:</strong>Speed of fetching relevant information.
+- <strong>Networked Applications:</strong>Web, mobile, and IoT apps requiring fast feedback.
 
-**Example:**In a retrieval-augmented generation (RAG) pipeline, retrieval latency determines how quickly documents or facts are fetched to inform the AI model's response.  
+<strong>Example:</strong>In a retrieval-augmented generation (RAG) pipeline, retrieval latency determines how quickly documents or facts are fetched to inform the AI model's response.  
 [See: AI21 Labs on Retrieval Latency](https://www.ai21.com/glossary/foundational-llm/retrieval-latency/)
 
 ## Practical Examples & Use Cases
 
 ### 1. Gaming
-- **Importance:**Multiplayer online games require minimal latency for real-time interaction.
-- **Impact:**High latency causes lag, severely affecting gameplay and user satisfaction.
+- <strong>Importance:</strong>Multiplayer online games require minimal latency for real-time interaction.
+- <strong>Impact:</strong>High latency causes lag, severely affecting gameplay and user satisfaction.
   - [Fortinet: Gaming and Network Latency](https://www.fortinet.com/resources/cyberglossary/latency)
 
 ### 2. Finance & High-Frequency Trading (HFT)
-- **Importance:**Automated trading systems execute orders where microseconds matter.
-- **Impact:**Even small latencies can result in significant financial loss or missed opportunities.
+- <strong>Importance:</strong>Automated trading systems execute orders where microseconds matter.
+- <strong>Impact:</strong>Even small latencies can result in significant financial loss or missed opportunities.
   - [Investopedia: HFT](https://www.investopedia.com/terms/h/high-frequency-trading.asp)
 
 ### 3. Cloud-Based Web Applications
-- **Importance:**Users expect instant loading and seamless interactions.
-- **Impact:**Slow API responses or database queries degrade application performance.
+- <strong>Importance:</strong>Users expect instant loading and seamless interactions.
+- <strong>Impact:</strong>Slow API responses or database queries degrade application performance.
   - [MDN: Understanding Latency](https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency)
 
 ### 4. Healthcare
-- **Importance:**Telemedicine, remote surgery, and clinical data retrieval require low latency for safety and effectiveness.
-- **Impact:**High latency can impede diagnosis, monitoring, or real-time interventions.
+- <strong>Importance:</strong>Telemedicine, remote surgery, and clinical data retrieval require low latency for safety and effectiveness.
+- <strong>Impact:</strong>High latency can impede diagnosis, monitoring, or real-time interventions.
   - [IBM: Latency in Healthcare](https://www.ibm.com/think/topics/latency)
 
 ### 5. AI/ML Pipelines
-- **Importance:**Real-time inference and semantic search depend on fast data retrieval.
-- **Impact:**High retrieval latency bottlenecks model throughput and degrades user experience.
+- <strong>Importance:</strong>Real-time inference and semantic search depend on fast data retrieval.
+- <strong>Impact:</strong>High retrieval latency bottlenecks model throughput and degrades user experience.
   - [AI21: Retrieval Latency](https://www.ai21.com/glossary/foundational-llm/retrieval-latency/)
 
 ## Main Causes and Contributing Factors to Latency
 
 Several factors contribute to latency in digital infrastructure:
 
-- **Physical Distance:**Greater distance increases latency. [AWS: Latency](https://aws.amazon.com/what-is/latency/)
-- **Transmission Medium:**Fiber optic < Copper < Wireless < Satellite (in latency order). [Fortinet: Transmission Medium](https://www.fortinet.com/resources/cyberglossary/latency)
-- **Number of Network Hops:**Each router, switch, or firewall adds processing time.
-- **Network Congestion:**High traffic volume causes delays.
-- **Server/Application Performance:**Inefficient server processing increases latency.
-- **Storage Performance:**HDDs have higher latency than SSDs. [WEKA: Storage Latency](https://www.weka.io/blog/ai-ml/solving-latency-challenges-in-ai-data-centers/)
-- **Packet Size & Data Volume:**Larger packets or volumes can increase delay.
-- **Routing & Network Architecture:**Inefficient routing or unnecessary hops add to latency.
-- **Code and Application Logic:**Inefficient algorithms or unoptimized code can introduce delays.
+- <strong>Physical Distance:</strong>Greater distance increases latency. [AWS: Latency](https://aws.amazon.com/what-is/latency/)
+- <strong>Transmission Medium:</strong>Fiber optic < Copper < Wireless < Satellite (in latency order). [Fortinet: Transmission Medium](https://www.fortinet.com/resources/cyberglossary/latency)
+- <strong>Number of Network Hops:</strong>Each router, switch, or firewall adds processing time.
+- <strong>Network Congestion:</strong>High traffic volume causes delays.
+- <strong>Server/Application Performance:</strong>Inefficient server processing increases latency.
+- <strong>Storage Performance:</strong>HDDs have higher latency than SSDs. [WEKA: Storage Latency](https://www.weka.io/blog/ai-ml/solving-latency-challenges-in-ai-data-centers/)
+- <strong>Packet Size & Data Volume:</strong>Larger packets or volumes can increase delay.
+- <strong>Routing & Network Architecture:</strong>Inefficient routing or unnecessary hops add to latency.
+- <strong>Code and Application Logic:</strong>Inefficient algorithms or unoptimized code can introduce delays.
 
 ### Summary Table: Common Latency Contributors
 
@@ -115,7 +115,7 @@ Several factors contribute to latency in digital infrastructure:
 | Storage Device           | SSD vs. HDD vs. cloud storage                          | Moderate             |
 | Data Packet Size         | Volume and size of each transferred data unit          | Moderate             |
 
-- **Source:**[Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works), [WEKA](https://www.weka.io/blog/ai-ml/solving-latency-challenges-in-ai-data-centers/)
+- <strong>Source:</strong>[Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works), [WEKA](https://www.weka.io/blog/ai-ml/solving-latency-challenges-in-ai-data-centers/)
 
 ## How Is Latency Measured?
 
@@ -150,7 +150,7 @@ Latency is measured in milliseconds (ms) using standardized metrics:
 | HDD Storage            | 5–10                |
 | SSD Storage            | <1                  |
 
-- **Source:**[AWS](https://aws.amazon.com/what-is/latency/), [Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
+- <strong>Source:</strong>[AWS](https://aws.amazon.com/what-is/latency/), [Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works)
 
 ## Latency vs. Related Concepts
 
@@ -183,7 +183,7 @@ Latency is measured in milliseconds (ms) using standardized metrics:
 | Jitter       | Variation in delay                | ms            | Fluctuations in water pressure               |
 | Packet Loss  | Data lost in transit              | %             | Water leaks from the pipe                    |
 
-- **Source:**[Fortinet: Latency Glossary](https://www.fortinet.com/resources/cyberglossary/latency)
+- <strong>Source:</strong>[Fortinet: Latency Glossary](https://www.fortinet.com/resources/cyberglossary/latency)
 
 ## Strategies to Reduce or Manage Latency
 
@@ -226,7 +226,7 @@ Optimizing for low latency requires architectural, infrastructural, and software
 ### 10. Hybrid Search Models for AI Retrieval
 - Combine vector and keyword search to balance accuracy and latency in AI applications.
 
-- **Source:**[Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works), [DriveNets](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
+- <strong>Source:</strong>[Galileo AI](https://galileo.ai/blog/understanding-latency-in-ai-what-it-is-and-how-it-works), [DriveNets](https://drivenets.com/blog/latency-in-ai-networking-inevitable-limitation-to-solvable-challenge/)
 
 ## Industry Solutions & Best Practices
 
@@ -241,16 +241,16 @@ Leading providers offer specialized solutions for latency optimization:
 
 ## Frequently Asked Questions (FAQs)
 
-**Q1: What is considered a "good" latency?**A: Acceptable latency varies by use case. For interactive apps, <100 ms is generally good; for high-frequency trading or real-time gaming, <10 ms may be required.  
+<strong>Q1: What is considered a "good" latency?</strong>A: Acceptable latency varies by use case. For interactive apps, <100 ms is generally good; for high-frequency trading or real-time gaming, <10 ms may be required.  
 [Source: AWS](https://aws.amazon.com/what-is/latency/)
 
-**Q2: Is high or low latency better?**A: Lower latency is always preferable, enabling faster, more responsive applications and better user experience.
+<strong>Q2: Is high or low latency better?</strong>A: Lower latency is always preferable, enabling faster, more responsive applications and better user experience.
 
-**Q3: Why might high bandwidth not improve latency?**A: Bandwidth is about the amount of data moved per second, not the speed of a single transaction. Long network paths or congestion can cause high latency even with high bandwidth.
+<strong>Q3: Why might high bandwidth not improve latency?</strong>A: Bandwidth is about the amount of data moved per second, not the speed of a single transaction. Long network paths or congestion can cause high latency even with high bandwidth.
 
-**Q4: What are some easy wins to reduce latency in web apps?**A: Use CDNs, optimize images/scripts, minimize third-party API calls, enable caching, deploy servers near users.
+<strong>Q4: What are some easy wins to reduce latency in web apps?</strong>A: Use CDNs, optimize images/scripts, minimize third-party API calls, enable caching, deploy servers near users.
 
-**Q5: How does retrieval latency impact AI systems?**A: High retrieval latency slows inference and real-time decision-making, directly affecting the effectiveness of AI-powered search, recommendations, and chatbots.  
+<strong>Q5: How does retrieval latency impact AI systems?</strong>A: High retrieval latency slows inference and real-time decision-making, directly affecting the effectiveness of AI-powered search, recommendations, and chatbots.  
 [Source: AI21 Labs](https://www.ai21.com/glossary/foundational-llm/retrieval-latency/)
 
 ## Further Reading & Authoritative Resources

@@ -13,7 +13,7 @@ draft: false
 
 Speech Synthesis Markup Language (SSML) is an XML-based markup standard developed and maintained by the [W3C](https://www.w3.org/TR/speech-synthesis11/). SSML enables developers, designers, and linguists to describe precisely how a piece of text should be rendered in synthetic (machine-generated) speech. This is essential for applications that require a natural, expressive, and contextually appropriate spoken output.
 
-**Key Features:**- Fine-grained control over pronunciation (using phonetic alphabets like IPA/XSAMPA)
+<strong>Key Features:</strong>- Fine-grained control over pronunciation (using phonetic alphabets like IPA/XSAMPA)
 - Direct specification of prosody: pitch, rate, volume, and emphasis
 - Insertion of natural pauses, sentence and paragraph structuring
 - Explicit handling of special content (dates, times, acronyms, currency, telephone numbers)
@@ -21,7 +21,7 @@ Speech Synthesis Markup Language (SSML) is an XML-based markup standard develope
 - Embedding of external audio files
 - Support for vendor-specific extensions (e.g., emotions and roles in Amazon Alexa, neural voice styles in Azure)
 
-**Industry Adoption:**SSML is the de facto standard for all major cloud TTS providers, including:
+<strong>Industry Adoption:</strong>SSML is the de facto standard for all major cloud TTS providers, including:
 - [Amazon Alexa Skills Kit](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html)
 - [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech/docs/ssml)
 - [Microsoft Azure Speech Service](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup)
@@ -34,21 +34,21 @@ Speech Synthesis Markup Language (SSML) is an XML-based markup standard develope
 
 Text-to-speech (TTS) systems convert plain text into spoken audio. Without SSML, TTS outputs are often robotic, monotonous, and prone to mispronunciations or awkward intonation. SSML solves these issues by allowing the creator to:
 
-- **Control Prosody:**Adjust how text is spoken by setting attributes for pitch, rate (speed), and volume, making speech sound more human.
-- **Improve Pronunciation:**Override default pronunciations for technical terms, brand names, or foreign words using phonetic alphabets or substitutions.
-- **Clarify Special Content:**Direct explicit reading of dates, times, abbreviations, numbers, emails, and currency.
-- **Add Expressiveness:**Inject emphasis, style, and emotional nuance using attributes or vendor-specific extensions.
-- **Enhance Accessibility:**Make speech output clearer and more understandable for users relying on assistive technology.
-- **Insert Pauses and Audio:**Use pauses to match natural conversational flow or insert sounds/music to enhance user experience.
-- **Switch Voices or Languages:**Seamlessly transition between different voices, accents, or languages within the same output.
+- <strong>Control Prosody:</strong>Adjust how text is spoken by setting attributes for pitch, rate (speed), and volume, making speech sound more human.
+- <strong>Improve Pronunciation:</strong>Override default pronunciations for technical terms, brand names, or foreign words using phonetic alphabets or substitutions.
+- <strong>Clarify Special Content:</strong>Direct explicit reading of dates, times, abbreviations, numbers, emails, and currency.
+- <strong>Add Expressiveness:</strong>Inject emphasis, style, and emotional nuance using attributes or vendor-specific extensions.
+- <strong>Enhance Accessibility:</strong>Make speech output clearer and more understandable for users relying on assistive technology.
+- <strong>Insert Pauses and Audio:</strong>Use pauses to match natural conversational flow or insert sounds/music to enhance user experience.
+- <strong>Switch Voices or Languages:</strong>Seamlessly transition between different voices, accents, or languages within the same output.
 
-**Common Problems Solved:**- Flat, robotic-sounding speech
+<strong>Common Problems Solved:</strong>- Flat, robotic-sounding speech
 - Mispronunciation of uncommon or ambiguous words
 - Unnatural pacing or sentence grouping
 - Inability to convey emotion or style
 - Difficulty understanding numbers, dates, or special sequences
 
-**Platform Notes:**- [Amazon Alexa](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html) supports a subset of W3C SSML, with Alexa-specific tags for emotion and style.
+<strong>Platform Notes:</strong>- [Amazon Alexa](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html) supports a subset of W3C SSML, with Alexa-specific tags for emotion and style.
 - [Google Cloud](https://cloud.google.com/text-to-speech/docs/ssml) and [Microsoft Azure](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup) both implement vendor-specific extensions and neural voice technologies.
 
 ## SSML: Basic Structure and Usage
@@ -63,9 +63,9 @@ All valid SSML documents begin with the `<speak>` root element, which defines th
 </speak>
 ```
 
-- **Tip:**Omitting the `<speak>` tag will result in errors or the TTS engine falling back to plain text rendering.
+- <strong>Tip:</strong>Omitting the `<speak>` tag will result in errors or the TTS engine falling back to plain text rendering.
 
-**Provider Documentation:**- [Google Cloud SSML Syntax](https://cloud.google.com/text-to-speech/docs/ssml)
+<strong>Provider Documentation:</strong>- [Google Cloud SSML Syntax](https://cloud.google.com/text-to-speech/docs/ssml)
 - [Amazon Alexa SSML Syntax](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#ssml-supported)
 - [Microsoft Azure SSML Overview](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup)
 
@@ -87,7 +87,7 @@ All valid SSML documents begin with the `<speak>` root element, which defines th
 | `<p>`, `<s>`  | Paragraph and sentence structure               | N/A                               | All providers               |
 | `<lang>`      | Specifies language for enclosed text           | `xml:lang`                        | All providers               |
 
-**Full Supported Tag List:**- [Amazon Alexa Supported SSML Tags](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#ssml-supported)
+<strong>Full Supported Tag List:</strong>- [Amazon Alexa Supported SSML Tags](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#ssml-supported)
 - [Google Cloud Supported SSML Tags](https://cloud.google.com/text-to-speech/docs/ssml#supported_ssml)
 - [Microsoft Azure Supported SSML Tags](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-structure#ssml-supported-elements)
 
@@ -95,8 +95,8 @@ All valid SSML documents begin with the `<speak>` root element, which defines th
 
 #### `<speak>`: Root Element
 
-- **Purpose:**Required root for all SSML documents.
-- **Example:**```xml
+- <strong>Purpose:</strong>Required root for all SSML documents.
+- <strong>Example:</strong>```xml
     <speak>
       This is a simple SSML example.
     </speak>
@@ -113,16 +113,16 @@ All valid SSML documents begin with the `<speak>` root element, which defines th
       Please wait.<break time="1s"/>Processing your request.
     </speak>
     ```
-- **Provider Nuances:**- Google Cloud and Amazon Alexa both support the `time` and `strength` attributes, but maximum/minimum pause values may differ ([Google docs](https://cloud.google.com/text-to-speech/docs/ssml#break-tag), [Alexa docs](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#break)).
+- <strong>Provider Nuances:</strong>- Google Cloud and Amazon Alexa both support the `time` and `strength` attributes, but maximum/minimum pause values may differ ([Google docs](https://cloud.google.com/text-to-speech/docs/ssml#break-tag), [Alexa docs](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#break)).
     - Microsoft Azure supports `<break>` for fine pause control ([Azure docs](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-structure#break-element)).
 
 #### `<prosody>`: Control Pitch, Rate, Volume
 
-- **Purpose:**Changes expressiveness of speech.
-- **Attributes:**- `pitch`: "x-low", "low", "medium", "high", "x-high", or percentage (e.g., "+20%")
+- <strong>Purpose:</strong>Changes expressiveness of speech.
+- <strong>Attributes:</strong>- `pitch`: "x-low", "low", "medium", "high", "x-high", or percentage (e.g., "+20%")
     - `rate`: "x-slow", "slow", "medium", "fast", "x-fast", or percentage (e.g., "-20%")
     - `volume`: "silent", "x-soft", "soft", "medium", "loud", "x-loud", decibel (e.g., "-6dB"), or percentage
-- **Example:**```xml
+- <strong>Example:</strong>```xml
     <speak>
       <prosody pitch="high" rate="fast" volume="+20%">
         This is spoken with higher pitch, faster, and louder.
@@ -140,14 +140,14 @@ All valid SSML documents begin with the `<speak>` root element, which defines th
       You must <emphasis level="strong">complete</emphasis> the task.
     </speak>
     ```
-- **Nuances:**Some TTS engines may interpret emphasis differently, and overuse can make speech sound unnatural ([Amazon Alexa emphasis docs](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#emphasis)).
+- <strong>Nuances:</strong>Some TTS engines may interpret emphasis differently, and overuse can make speech sound unnatural ([Amazon Alexa emphasis docs](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#emphasis)).
 
 #### `<say-as>`: Interpret Content Type
 
-- **Purpose:**Directs TTS to read text as a specific type (e.g., date, time, currency, telephone, characters).
-- **Attributes:**- `interpret-as`: Accepts values such as "cardinal", "ordinal", "characters", "date", "time", "telephone", "currency", "fraction", "unit", "expletive".
+- <strong>Purpose:</strong>Directs TTS to read text as a specific type (e.g., date, time, currency, telephone, characters).
+- <strong>Attributes:</strong>- `interpret-as`: Accepts values such as "cardinal", "ordinal", "characters", "date", "time", "telephone", "currency", "fraction", "unit", "expletive".
     - `format`, `detail`: For dates/times, defines structure.
-- **Examples:**- Acronym as characters:
+- <strong>Examples:</strong>- Acronym as characters:
         ```xml
         <speak>
           <say-as interpret-as="characters">SSML</say-as>
@@ -165,15 +165,15 @@ All valid SSML documents begin with the `<speak>` root element, which defines th
           <say-as interpret-as="currency" language="en-US">$19.99</say-as>
         </speak>
         ```
-- **Full Attribute Documentation:**- [Google say-as](https://cloud.google.com/text-to-speech/docs/ssml#say-as-tag)
+- <strong>Full Attribute Documentation:</strong>- [Google say-as](https://cloud.google.com/text-to-speech/docs/ssml#say-as-tag)
   - [Amazon Alexa say-as](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#say-as)
 
 #### `<phoneme>`: Custom Pronunciation
 
-- **Purpose:**Specifies exact pronunciation using phonetic alphabets (IPA, XSAMPA, etc.).
-- **Attributes:**- `alphabet`: E.g., "ipa", "x-sampa"
+- <strong>Purpose:</strong>Specifies exact pronunciation using phonetic alphabets (IPA, XSAMPA, etc.).
+- <strong>Attributes:</strong>- `alphabet`: E.g., "ipa", "x-sampa"
     - `ph`: Phonetic string
-- **Example:**```xml
+- <strong>Example:</strong>```xml
     <speak>
       <phoneme alphabet="ipa" ph="ˈniːʃ">niche</phoneme>
     </speak>
@@ -190,14 +190,14 @@ All valid SSML documents begin with the `<speak>` root element, which defines th
       Welcome to the <sub alias="World Wide Web Consortium">W3C</sub>.
     </speak>
     ```
-- **Use Cases:**Brand names, acronyms, foreign words.
-- **Docs:**[Google sub](https://cloud.google.com/text-to-speech/docs/ssml#sub-tag), [Alexa sub](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#sub)
+- <strong>Use Cases:</strong>Brand names, acronyms, foreign words.
+- <strong>Docs:</strong>[Google sub](https://cloud.google.com/text-to-speech/docs/ssml#sub-tag), [Alexa sub](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#sub)
 
 #### `<audio>`: Insert Audio Clips
 
-- **Purpose:**Embeds recorded audio in speech output (e.g., effects, music).
-- **Attribute:**`src` (HTTPS URL)
-- **Example:**```xml
+- <strong>Purpose:</strong>Embeds recorded audio in speech output (e.g., effects, music).
+- <strong>Attribute:</strong>`src` (HTTPS URL)
+- <strong>Example:</strong>```xml
     <speak>
       Please listen to this sound. <audio src="https://www.example.com/sound.mp3">Unable to play audio.</audio>
     </speak>
@@ -216,13 +216,13 @@ All valid SSML documents begin with the `<speak>` root element, which defines th
       <voice name="en-GB-Wavenet-B">And I am a British voice.</voice>
     </speak>
     ```
-- **Vendor Extensions:**- Azure supports [neural voice styles and roles](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice#style-attribute).
+- <strong>Vendor Extensions:</strong>- Azure supports [neural voice styles and roles](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice#style-attribute).
   - Alexa supports [emotion and domain](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#amazon-emotion).
 
 #### `<p>` and `<s>`: Structure Text
 
-- **Purpose:**Defines paragraphs (`<p>`) and sentences (`<s>`) for better pacing and grouping.
-- **Example:**```xml
+- <strong>Purpose:</strong>Defines paragraphs (`<p>`) and sentences (`<s>`) for better pacing and grouping.
+- <strong>Example:</strong>```xml
     <speak>
       <p>
         <s>This is the first sentence.</s>
@@ -240,14 +240,14 @@ All valid SSML documents begin with the `<speak>` root element, which defines th
       Here is a word in French: <lang xml:lang="fr-FR">bonjour</lang>.
     </speak>
     ```
-- **Note:**Not all voices support all languages; check provider [language support](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=tts).
+- <strong>Note:</strong>Not all voices support all languages; check provider [language support](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=tts).
 
 ### Provider-Specific Extensions
 
-- **Amazon Alexa:**- `<amazon:emotion>`: Adds "excited" or "disappointed" emotion ([docs](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#amazon-emotion)).
+- <strong>Amazon Alexa:</strong>- `<amazon:emotion>`: Adds "excited" or "disappointed" emotion ([docs](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#amazon-emotion)).
   - `<amazon:domain>`: Changes delivery style (e.g., "news", "music", "conversational").
-- **Microsoft Azure:**- `<mstts:express-as>`: Neural voice styles/roles ([docs](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice#microsoft-extensions)).
-- **Speechify:**- `<speechify:style>`: Proprietary style control ([docs](https://docs.sws.speechify.com/docs/features/ssml)).
+- <strong>Microsoft Azure:</strong>- `<mstts:express-as>`: Neural voice styles/roles ([docs](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice#microsoft-extensions)).
+- <strong>Speechify:</strong>- `<speechify:style>`: Proprietary style control ([docs](https://docs.sws.speechify.com/docs/features/ssml)).
 
 ## Practical SSML Examples
 
@@ -265,4 +265,4 @@ All valid SSML documents begin with the `<speak>` root element, which defines th
   <prosody rate="slow">Thank you for using our service.</prosody>
 </speak>
 ```
-**Expected Output:**"Welcome to the demo. [pause] Your appointment is on June tenth, twenty
+<strong>Expected Output:</strong>"Welcome to the demo. [pause] Your appointment is on June tenth, twenty

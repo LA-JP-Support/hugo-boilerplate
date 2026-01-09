@@ -34,17 +34,17 @@ Large language models (LLMs) are advanced artificial intelligence (AI) systems t
   > "Transformers are a key architecture in LLMs, utilizing attention mechanisms to focus on important input parts and enhance processing efficiency."  
   – [Google LLMs Guide](https://developers.google.com/machine-learning/resources/intro-llms)
 
-- **Self-Attention:**Enables the model to weigh the relevance of every part of the input sequence, capturing long-range dependencies.
-- **Positional Encoding:**Adds information about the position/order of tokens, since transformers process all tokens simultaneously.
-- **Multi-Headed Attention:**Multiple attention mechanisms run in parallel, allowing the model to capture varied relationships simultaneously.
+- <strong>Self-Attention:</strong>Enables the model to weigh the relevance of every part of the input sequence, capturing long-range dependencies.
+- <strong>Positional Encoding:</strong>Adds information about the position/order of tokens, since transformers process all tokens simultaneously.
+- <strong>Multi-Headed Attention:</strong>Multiple attention mechanisms run in parallel, allowing the model to capture varied relationships simultaneously.
 
-  - **Detailed walkthrough:**[Transformer Neural Networks: A Step-by-Step Breakdown (BuiltIn)](https://builtin.com/artificial-intelligence/transformer-neural-network)
+  - <strong>Detailed walkthrough:</strong>[Transformer Neural Networks: A Step-by-Step Breakdown (BuiltIn)](https://builtin.com/artificial-intelligence/transformer-neural-network)
 
 ### Learning Paradigms
 
-- **Self-Supervised Learning:**The model predicts hidden or next tokens in vast unlabeled text corpora, learning language structure without explicit human labels.
-- **Unsupervised & Few-Shot Learning:**LLMs can generalize to new tasks with minimal or no additional examples (zero-shot, one-shot, few-shot learning).
-- **Fine-Tuning:**After pretraining, LLMs can be adapted to specific tasks by further training on smaller, specialized datasets.
+- <strong>Self-Supervised Learning:</strong>The model predicts hidden or next tokens in vast unlabeled text corpora, learning language structure without explicit human labels.
+- <strong>Unsupervised & Few-Shot Learning:</strong>LLMs can generalize to new tasks with minimal or no additional examples (zero-shot, one-shot, few-shot learning).
+- <strong>Fine-Tuning:</strong>After pretraining, LLMs can be adapted to specific tasks by further training on smaller, specialized datasets.
 
   > "A foundation model is trained on extensive datasets... can be fine-tuned for specific tasks."
   – [AIMultiple: LLM Complete Guide](https://research.aimultiple.com/large-language-models/)
@@ -57,34 +57,34 @@ Large language models (LLMs) are advanced artificial intelligence (AI) systems t
 
 ### Tokenization and Embeddings
 
-- **Tokenization:**Text is split into tokens (subwords, words, or characters) for processing.
+- <strong>Tokenization:</strong>Text is split into tokens (subwords, words, or characters) for processing.
   - [Google ML Glossary: Token](https://developers.google.com/machine-learning/glossary#token)
-- **Embeddings:**Each token is mapped to a high-dimensional vector capturing its semantic meaning. Similar words are close in this vector space.
+- <strong>Embeddings:</strong>Each token is mapped to a high-dimensional vector capturing its semantic meaning. Similar words are close in this vector space.
 
   - [Elastic: Vector Embedding](https://www.elastic.co/what-is/vector-embedding)
 
 ### Transformer Model Structure
 
-- **Input Layer:**Tokens are embedded into vectors; positional encoding is added.
-- **Attention Layers:**Self-attention computes relationships between all tokens in the sequence.
-- **Feedforward Layers:**Process data after attention, with nonlinear transformations.
-- **Stacked Layers:**Multiple layers deepen the model’s understanding.
-- **Output Layer:**Decodes hidden representations to generate output tokens.
+- <strong>Input Layer:</strong>Tokens are embedded into vectors; positional encoding is added.
+- <strong>Attention Layers:</strong>Self-attention computes relationships between all tokens in the sequence.
+- <strong>Feedforward Layers:</strong>Process data after attention, with nonlinear transformations.
+- <strong>Stacked Layers:</strong>Multiple layers deepen the model’s understanding.
+- <strong>Output Layer:</strong>Decodes hidden representations to generate output tokens.
 
 #### Encoder, Decoder, Encoder-Decoder
 
-- **Encoder-only:**Used for understanding/classification (e.g., BERT).
-- **Decoder-only:**Used for text generation (e.g., GPT-3, GPT-4).
-- **Encoder-Decoder:**Used for sequence-to-sequence tasks (e.g., translation, T5).
+- <strong>Encoder-only:</strong>Used for understanding/classification (e.g., BERT).
+- <strong>Decoder-only:</strong>Used for text generation (e.g., GPT-3, GPT-4).
+- <strong>Encoder-Decoder:</strong>Used for sequence-to-sequence tasks (e.g., translation, T5).
 
 ### Training Stages
 
-1. **Data Collection and Cleaning:**Massive, diverse datasets drawn from books, web pages, code, etc.
-2. **Preprocessing and Tokenization:**Text is cleaned, deduplicated, and tokenized.
-3. **Model Initialization:**Transformer model with billions of parameters is set up.
-4. **Pretraining:**Model learns to predict masked/next tokens across massive datasets, adjusting weights to minimize prediction error.
-5. **Fine-Tuning:**Model is further trained on smaller, supervised datasets for specific tasks.
-6. **Evaluation and Iteration:**Benchmarked on standard datasets; model is iteratively improved.
+1. <strong>Data Collection and Cleaning:</strong>Massive, diverse datasets drawn from books, web pages, code, etc.
+2. <strong>Preprocessing and Tokenization:</strong>Text is cleaned, deduplicated, and tokenized.
+3. <strong>Model Initialization:</strong>Transformer model with billions of parameters is set up.
+4. <strong>Pretraining:</strong>Model learns to predict masked/next tokens across massive datasets, adjusting weights to minimize prediction error.
+5. <strong>Fine-Tuning:</strong>Model is further trained on smaller, supervised datasets for specific tasks.
+6. <strong>Evaluation and Iteration:</strong>Benchmarked on standard datasets; model is iteratively improved.
 
   - [AIMultiple: LLM Training](https://research.aimultiple.com/large-language-model-training/)
 
@@ -95,14 +95,14 @@ Large language models (LLMs) are advanced artificial intelligence (AI) systems t
 
 ## Key Terminology
 
-- **Parameter:**A learned variable (weight or bias) in the neural network.
-- **Tokenization:**Breaking text into machine-processable units.
-- **Embedding:**Numeric vector representing a token.
-- **Self-Attention:**A mechanism for weighting relationships between tokens.
-- **Positional Encoding:**Encodes the order of tokens in a sequence.
-- **Fine-Tuning:**Adapting a pretrained model to a specific task or dataset.
-- **Zero-shot/Few-shot Learning:**Performing new tasks with minimal or no task-specific examples.
-- **Foundation Model:**A general-purpose, pretrained model adaptable to many tasks.
+- <strong>Parameter:</strong>A learned variable (weight or bias) in the neural network.
+- <strong>Tokenization:</strong>Breaking text into machine-processable units.
+- <strong>Embedding:</strong>Numeric vector representing a token.
+- <strong>Self-Attention:</strong>A mechanism for weighting relationships between tokens.
+- <strong>Positional Encoding:</strong>Encodes the order of tokens in a sequence.
+- <strong>Fine-Tuning:</strong>Adapting a pretrained model to a specific task or dataset.
+- <strong>Zero-shot/Few-shot Learning:</strong>Performing new tasks with minimal or no task-specific examples.
+- <strong>Foundation Model:</strong>A general-purpose, pretrained model adaptable to many tasks.
 
 ## Applications of LLMs
 
@@ -265,14 +265,14 @@ Large language models (LLMs) are advanced artificial intelligence (AI) systems t
 
 ## Related Concepts
 
-- **Natural Language Processing (NLP):**The broader field of enabling machines to understand/generate language.  
+- <strong>Natural Language Processing (NLP):</strong>The broader field of enabling machines to understand/generate language.  
   - [Elastic: What is NLP?](https://www.elastic.co/what-is/natural-language-processing)
-- **Deep Learning:**Neural networks with many layers, the foundation of LLMs.  
+- <strong>Deep Learning:</strong>Neural networks with many layers, the foundation of LLMs.  
   - [IBM: Deep Learning](https://www.ibm.com/think/topics/deep-learning)
-- **Machine Learning:**Algorithms that learn from data.
-- **Encoder-Decoder Models:**Neural architectures for mapping sequences to sequences.
-- **Fine-Tuning & Transfer Learning:**Adapting pretrained models to new tasks.
-- **Prompt Engineering:**Designing inputs to elicit desired outputs from LLMs.
+- <strong>Machine Learning:</strong>Algorithms that learn from data.
+- <strong>Encoder-Decoder Models:</strong>Neural architectures for mapping sequences to sequences.
+- <strong>Fine-Tuning & Transfer Learning:</strong>Adapting pretrained models to new tasks.
+- <strong>Prompt Engineering:</strong>Designing inputs to elicit desired outputs from LLMs.
 
 ## References and Further Reading
 

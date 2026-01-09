@@ -18,28 +18,28 @@ draft: false
 ---
 ## What Is an Embed Script?
 
-An **embed script**is a compact, self-contained JavaScript snippet inserted into a website’s HTML to load and display dynamic third-party content—most commonly AI chatbots or widgets. When added to a site, the script fetches the chatbot’s code and resources from the provider’s servers and renders the widget in the browser.
+An <strong>embed script</strong>is a compact, self-contained JavaScript snippet inserted into a website’s HTML to load and display dynamic third-party content—most commonly AI chatbots or widgets. When added to a site, the script fetches the chatbot’s code and resources from the provider’s servers and renders the widget in the browser.
 
-**Key Characteristics:**- **Plug-and-play:**Only requires copy-pasting into the HTML—no advanced coding.
-- **Dynamic:**Loads dependencies and UI from the provider on the fly.
-- **Isolated:**Runs in a sandboxed browser context, minimizing risk of interfering with other site elements.
-- **Universal:**Works with virtually any website platform that allows custom HTML or JavaScript.
+<strong>Key Characteristics:</strong>- <strong>Plug-and-play:</strong>Only requires copy-pasting into the HTML—no advanced coding.
+- <strong>Dynamic:</strong>Loads dependencies and UI from the provider on the fly.
+- <strong>Isolated:</strong>Runs in a sandboxed browser context, minimizing risk of interfering with other site elements.
+- <strong>Universal:</strong>Works with virtually any website platform that allows custom HTML or JavaScript.
 
-**AI Chatbot & Automation Context:**Embed scripts make it possible to deploy chatbots—powered by AI—for sales, support, lead generation, and engagement, directly on your site or web app. Visitors interact with the chatbot in real time, receiving automated, personalized responses.
+<strong>AI Chatbot & Automation Context:</strong>Embed scripts make it possible to deploy chatbots—powered by AI—for sales, support, lead generation, and engagement, directly on your site or web app. Visitors interact with the chatbot in real time, receiving automated, personalized responses.
 ## How Embed Scripts Are Used
 
 ### Basic Integration
 
 Most chatbot providers offer a ready-to-use embed script tied to your account or instance. The basic workflow is:
 
-1. **Obtain the Embed Script:**- Sign in to the dashboard (e.g., [Chatbase](https://chatbase.co/), [ChatBot.com](https://www.chatbot.com/), [Pickaxe](https://pickaxe.co/)).
+1. <strong>Obtain the Embed Script:</strong>- Sign in to the dashboard (e.g., [Chatbase](https://chatbase.co/), [ChatBot.com](https://www.chatbot.com/), [Pickaxe](https://pickaxe.co/)).
    - Navigate to the “Deploy,” “Publish,” or “Integrations” section.
    - Copy the provided JavaScript snippet ([example for Chatbase](https://chatbase.co/docs/developer-guides/javascript-embed#quick-start-guide)).
 
-2. **Add to Your Website:**- Paste the script into your HTML, either in the `<head>` or just before the closing `</body>` tag for optimal performance.
+2. <strong>Add to Your Website:</strong>- Paste the script into your HTML, either in the `<head>` or just before the closing `</body>` tag for optimal performance.
    - Save and redeploy or refresh your site.
 
-**Example:**```html
+<strong>Example:</strong>```html
 <!-- Chatbase Example Embed Script -->
 <script src="https://www.chatbase.co/embed.min.js" agent-id="YOUR_AGENT_ID" async></script>
 ```

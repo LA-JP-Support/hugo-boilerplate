@@ -20,11 +20,11 @@ KV Cache acts as auxiliary memory holding intermediate key and value tensors fro
 
 KV Cache is used exclusively during inference in transformer-based models for generating text token-by-token.
 
-**Core Usage Pattern**Autoregressive generation involves LLMs producing text one token at a time, conditioning each prediction on all prior tokens. At each inference step, the model needs K and V for the full sequence to compute attention for the next token. With KV Cache, instead of recomputing K and V for all previous tokens at every step, only the new token's K and V are computed and appended to cache.
+<strong>Core Usage Pattern</strong>Autoregressive generation involves LLMs producing text one token at a time, conditioning each prediction on all prior tokens. At each inference step, the model needs K and V for the full sequence to compute attention for the next token. With KV Cache, instead of recomputing K and V for all previous tokens at every step, only the new token's K and V are computed and appended to cache.
 
-**Outcome:**Dramatically reduced computation, lower latency, and notable cost savings during inference—especially for long sequences.
+<strong>Outcome:</strong>Dramatically reduced computation, lower latency, and notable cost savings during inference—especially for long sequences.
 
-**Common Usage Contexts**- Text generation with LLMs (GPT, Llama, Claude, Gemini)
+<strong>Common Usage Contexts</strong>- Text generation with LLMs (GPT, Llama, Claude, Gemini)
 - Chatbots and conversational agents
 - Code completion and code assistants
 - Real-time and batch inference serving
@@ -35,24 +35,24 @@ KV Cache is used exclusively during inference in transformer-based models for ge
 
 The transformer attention mechanism involves three projections per token:
 
-- **Query (Q):**What the current token "wants to know"
-- **Key (K):**The "address label" of each token
-- **Value (V):**The "content" of each token
+- <strong>Query (Q):</strong>What the current token "wants to know"
+- <strong>Key (K):</strong>The "address label" of each token
+- <strong>Value (V):</strong>The "content" of each token
 
 During inference, LLMs process input one token at a time. Standard inference recomputes K and V for every token in the current sequence, including already processed tokens. This is highly inefficient for long sequences.
 
-**Inefficiency Example**Generating "The cat sits":
+<strong>Inefficiency Example</strong>Generating "The cat sits":
 - Generate "The": compute K/V for "The"
 - Generate "The cat": recompute K/V for both "The" and "cat"
 - Generate "The cat sits": recompute K/V for all three tokens
 
-**With KV Cache**- Compute K/V for "The" once, store it
+<strong>With KV Cache</strong>- Compute K/V for "The" once, store it
 - On "cat", compute K/V for "cat", append to cache
 - On "sits", compute K/V for "sits", append to cache; "The" and "cat" K/V are reused
 
-**Optimization Benefits**- **Speed:**Up to 5–20× faster inference
-- **Cost:**Significant reduction in compute and API costs
-- **Scalability:**Enables long-context and multi-turn conversations
+<strong>Optimization Benefits</strong>- <strong>Speed:</strong>Up to 5–20× faster inference
+- <strong>Cost:</strong>Significant reduction in compute and API costs
+- <strong>Scalability:</strong>Enables long-context and multi-turn conversations
 
 ## How KV Cache Works: Detailed Example
 
@@ -78,7 +78,7 @@ Step 2: "cat"      --> K2, V2    (appended to cache)
 Step 3: "sits"     --> K3, V3    (appended to cache)
 ```
 
-**Cache after step 3:**```
+<strong>Cache after step 3:</strong>```
 K-cache: [K1, K2, K3]
 V-cache: [V1, V2, V3]
 ```

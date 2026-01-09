@@ -16,7 +16,7 @@ Speech Synthesis Markup Language (SSML) is an XML-based markup standard develope
 
 Without SSML, text-to-speech (TTS) outputs are often robotic, monotonous, and prone to mispronunciations or awkward intonation. SSML solves these issues by providing fine-grained control over pronunciation using phonetic alphabets (IPA, X-SAMPA), prosody specification (pitch, rate, volume, emphasis), natural pause insertion and sentence structuring, explicit handling of special content (dates, times, acronyms, currency), voice and language switching mid-stream, and audio file embedding.
 
-**Industry Adoption:**SSML is the de facto standard for all major cloud TTS providers including Amazon Alexa Skills Kit, Google Cloud Text-to-Speech, Microsoft Azure Speech Service, IBM Watson Text-to-Speech, and Speechify.
+<strong>Industry Adoption:</strong>SSML is the de facto standard for all major cloud TTS providers including Amazon Alexa Skills Kit, Google Cloud Text-to-Speech, Microsoft Azure Speech Service, IBM Watson Text-to-Speech, and Speechify.
 
 ## Core Capabilities
 
@@ -64,7 +64,7 @@ Omitting the `<speak>` tag results in errors or the TTS engine falling back to p
 
 Adds a pause or controls the boundary between words or phrases.
 
-**Attributes:**- `time`: Exact pause duration (e.g., "500ms", "2s")
+<strong>Attributes:</strong>- `time`: Exact pause duration (e.g., "500ms", "2s")
 - `strength`: Relative pause ("none", "x-weak", "weak", "medium", "strong", "x-strong")
 
 ```xml
@@ -77,7 +77,7 @@ Adds a pause or controls the boundary between words or phrases.
 
 Changes expressiveness of speech.
 
-**Attributes:**- `pitch`: "x-low", "low", "medium", "high", "x-high", or percentage ("+20%")
+<strong>Attributes:</strong>- `pitch`: "x-low", "low", "medium", "high", "x-high", or percentage ("+20%")
 - `rate`: "x-slow", "slow", "medium", "fast", "x-fast", or percentage ("-20%")
 - `volume`: "silent", "x-soft", "soft", "medium", "loud", "x-loud", decibel ("-6dB"), or percentage
 
@@ -89,7 +89,7 @@ Changes expressiveness of speech.
 </speak>
 ```
 
-**Best Practice:**Avoid extreme values; subtle changes produce more natural speech.
+<strong>Best Practice:</strong>Avoid extreme values; subtle changes produce more natural speech.
 
 ### `<emphasis>`: Highlight Words
 
@@ -107,7 +107,7 @@ Levels: "strong", "moderate", "reduced"
 
 Directs TTS to read text as specific types.
 
-**Common interpret-as values:**- "cardinal": Numbers (123 → "one hundred twenty-three")
+<strong>Common interpret-as values:</strong>- "cardinal": Numbers (123 → "one hundred twenty-three")
 - "ordinal": Ordinal numbers (1st → "first")
 - "characters": Spell out ("SSML" → "S S M L")
 - "date": Dates with format specification
@@ -117,7 +117,7 @@ Directs TTS to read text as specific types.
 - "fraction": Fractions ("3/4" → "three quarters")
 - "unit": Measurements
 
-**Examples:**```xml
+<strong>Examples:</strong>```xml
 <speak>
   <say-as interpret-as="characters">SSML</say-as>
 </speak>

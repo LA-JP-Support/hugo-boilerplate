@@ -17,22 +17,22 @@ draft: false
 
 ## What Is an Incident?
 
-An **incident**is defined as any unplanned interruption to an IT service or a reduction in the quality of that service. The ITIL framework describes incidents as events where a service is not functioning as expected or its performance is degraded, impacting users' ability to carry out normal business activities.
+An <strong>incident</strong>is defined as any unplanned interruption to an IT service or a reduction in the quality of that service. The ITIL framework describes incidents as events where a service is not functioning as expected or its performance is degraded, impacting users' ability to carry out normal business activities.
 
-**Core Characteristics:**| Characteristic | Description |
+<strong>Core Characteristics:</strong>| Characteristic | Description |
 |----------------|-------------|
-| **Unplanned**| Unscheduled events disrupting normal operations |
-| **Service Impact**| Any interruption or quality reduction affects business |
-| **Detection Methods**| User reports, technical staff, automated monitoring |
-| **Prevention Focus**| Can be reported before SLA breach to minimize impact |
+| <strong>Unplanned</strong>| Unscheduled events disrupting normal operations |
+| <strong>Service Impact</strong>| Any interruption or quality reduction affects business |
+| <strong>Detection Methods</strong>| User reports, technical staff, automated monitoring |
+| <strong>Prevention Focus</strong>| Can be reported before SLA breach to minimize impact |
 
-**Common Incident Examples:**| Category | Examples |
+<strong>Common Incident Examples:</strong>| Category | Examples |
 |----------|----------|
-| **Infrastructure**| Server outages, database crashes, storage failures |
-| **Network**| WAN/LAN disruptions, VPN failures, connectivity issues |
-| **Applications**| Software crashes, error messages, performance degradation |
-| **Hardware**| Printer failures, workstation breakdowns, device malfunctions |
-| **Security**| Malware infections, unauthorized access, data breaches |
+| <strong>Infrastructure</strong>| Server outages, database crashes, storage failures |
+| <strong>Network</strong>| WAN/LAN disruptions, VPN failures, connectivity issues |
+| <strong>Applications</strong>| Software crashes, error messages, performance degradation |
+| <strong>Hardware</strong>| Printer failures, workstation breakdowns, device malfunctions |
+| <strong>Security</strong>| Malware infections, unauthorized access, data breaches |
 
 ## Incidents vs. Problems vs. Service Requests
 
@@ -42,14 +42,14 @@ Understanding the distinctions is essential for efficient resource allocation, S
 
 | Aspect | Incident | Problem | Service Request |
 |--------|----------|---------|-----------------|
-| **Definition**| Unplanned service interruption or quality reduction | Root cause of incidents | Formal request for standard change or access |
-| **Nature**| Something broken or not working | Underlying cause, often hidden | User needs resource or information |
-| **Urgency**| Requires immediate attention | May not be urgent, needs analysis | Follows standard timelines |
-| **Focus**| Rapid restoration | Root cause analysis and permanent fix | Fulfillment per service catalog |
-| **SLA Metric**| Response and resolution time | Time to permanent solution | Fulfillment time |
-| **Examples**| Server crash, network outage | Faulty router causing repeated outages | Password reset, software installation |
-| **Staff Involved**| Service desk, operations | Problem management, specialists | Service desk, fulfillment teams |
-| **Documentation**| Incident ticket with resolution | Problem record with analysis | Request ticket with approval |
+| <strong>Definition</strong>| Unplanned service interruption or quality reduction | Root cause of incidents | Formal request for standard change or access |
+| <strong>Nature</strong>| Something broken or not working | Underlying cause, often hidden | User needs resource or information |
+| <strong>Urgency</strong>| Requires immediate attention | May not be urgent, needs analysis | Follows standard timelines |
+| <strong>Focus</strong>| Rapid restoration | Root cause analysis and permanent fix | Fulfillment per service catalog |
+| <strong>SLA Metric</strong>| Response and resolution time | Time to permanent solution | Fulfillment time |
+| <strong>Examples</strong>| Server crash, network outage | Faulty router causing repeated outages | Password reset, software installation |
+| <strong>Staff Involved</strong>| Service desk, operations | Problem management, specialists | Service desk, fulfillment teams |
+| <strong>Documentation</strong>| Incident ticket with resolution | Problem record with analysis | Request ticket with approval |
 
 ### Classification Decision Tree
 
@@ -71,12 +71,12 @@ Is it unplanned?
 
 ### Why Correct Classification Matters
 
-**Impact of Misclassification:**| Issue | Consequence | Solution |
+<strong>Impact of Misclassification:</strong>| Issue | Consequence | Solution |
 |-------|-------------|----------|
-| **Service Requests as Incidents**| Wasted support resources, missed SLAs | Clear classification criteria and training |
-| **Incidents as Service Requests**| Delayed critical issue resolution | Automated priority assessment |
-| **Incidents as Problems**| Service restoration delayed | Focus on rapid restoration first |
-| **Problems as Incidents**| Root cause never addressed | Pattern recognition and analysis |
+| <strong>Service Requests as Incidents</strong>| Wasted support resources, missed SLAs | Clear classification criteria and training |
+| <strong>Incidents as Service Requests</strong>| Delayed critical issue resolution | Automated priority assessment |
+| <strong>Incidents as Problems</strong>| Service restoration delayed | Focus on rapid restoration first |
+| <strong>Problems as Incidents</strong>| Root cause never addressed | Pattern recognition and analysis |
 
 ## Incident Management Lifecycle
 
@@ -104,47 +104,47 @@ Is it unplanned?
 
 ### Stage 1: Detection and Logging
 
-**Detection Methods:**| Method | Description | Response Time | Coverage |
+<strong>Detection Methods:</strong>| Method | Description | Response Time | Coverage |
 |--------|-------------|---------------|----------|
-| **User Reports**| Service desk tickets, calls, emails | Minutes to hours | Known issues |
-| **Automated Monitoring**| System alerts, performance metrics | Seconds to minutes | Infrastructure |
-| **Proactive Detection**| Predictive analytics, anomaly detection | Before impact | Emerging issues |
+| <strong>User Reports</strong>| Service desk tickets, calls, emails | Minutes to hours | Known issues |
+| <strong>Automated Monitoring</strong>| System alerts, performance metrics | Seconds to minutes | Infrastructure |
+| <strong>Proactive Detection</strong>| Predictive analytics, anomaly detection | Before impact | Emerging issues |
 
-**Logging Requirements:**| Data Element | Purpose | Example |
+<strong>Logging Requirements:</strong>| Data Element | Purpose | Example |
 |--------------|---------|---------|
-| **Timestamp**| Track response time | 2025-12-18 14:23:15 |
-| **Reporter**| Contact for updates | jane.smith@company.com |
-| **Affected Service**| Identify scope | Email System |
-| **Description**| Understand issue | "Cannot send emails, error 550" |
-| **Business Impact**| Determine priority | 200 users affected |
-| **Symptoms**| Aid diagnosis | Timeout after 30 seconds |
+| <strong>Timestamp</strong>| Track response time | 2025-12-18 14:23:15 |
+| <strong>Reporter</strong>| Contact for updates | jane.smith@company.com |
+| <strong>Affected Service</strong>| Identify scope | Email System |
+| <strong>Description</strong>| Understand issue | "Cannot send emails, error 550" |
+| <strong>Business Impact</strong>| Determine priority | 200 users affected |
+| <strong>Symptoms</strong>| Aid diagnosis | Timeout after 30 seconds |
 
 ### Stage 2: Classification and Prioritization
 
-**Priority Matrix:**| Impact ↓ / Urgency → | High Urgency | Medium Urgency | Low Urgency |
+<strong>Priority Matrix:</strong>| Impact ↓ / Urgency → | High Urgency | Medium Urgency | Low Urgency |
 |-----------------------|--------------|----------------|-------------|
-| **Critical Impact**| Priority 1 (P1) | Priority 2 (P2) | Priority 3 (P3) |
-| **High Impact**| Priority 2 (P2) | Priority 3 (P3) | Priority 4 (P4) |
-| **Medium Impact**| Priority 3 (P3) | Priority 4 (P4) | Priority 5 (P5) |
-| **Low Impact**| Priority 4 (P4) | Priority 5 (P5) | Priority 5 (P5) |
+| <strong>Critical Impact</strong>| Priority 1 (P1) | Priority 2 (P2) | Priority 3 (P3) |
+| <strong>High Impact</strong>| Priority 2 (P2) | Priority 3 (P3) | Priority 4 (P4) |
+| <strong>Medium Impact</strong>| Priority 3 (P3) | Priority 4 (P4) | Priority 5 (P5) |
+| <strong>Low Impact</strong>| Priority 4 (P4) | Priority 5 (P5) | Priority 5 (P5) |
 
-**Impact Assessment:**| Level | User Impact | Business Effect | Examples |
+<strong>Impact Assessment:</strong>| Level | User Impact | Business Effect | Examples |
 |-------|-------------|-----------------|----------|
-| **Critical**| 500+ users or entire service | Revenue loss, compliance violation | Core business system down |
-| **High**| 100-500 users or key function | Significant productivity loss | Email system outage |
-| **Medium**| 10-100 users or workaround available | Moderate inconvenience | Single printer failure |
-| **Low**| Individual user, no workaround needed | Minimal impact | Cosmetic software issue |
+| <strong>Critical</strong>| 500+ users or entire service | Revenue loss, compliance violation | Core business system down |
+| <strong>High</strong>| 100-500 users or key function | Significant productivity loss | Email system outage |
+| <strong>Medium</strong>| 10-100 users or workaround available | Moderate inconvenience | Single printer failure |
+| <strong>Low</strong>| Individual user, no workaround needed | Minimal impact | Cosmetic software issue |
 
-**Urgency Factors:**| Factor | High | Medium | Low |
+<strong>Urgency Factors:</strong>| Factor | High | Medium | Low |
 |--------|------|--------|-----|
-| **Deadline**| Immediate/critical | Within 24 hours | No specific deadline |
-| **Workaround**| None available | Complex workaround | Easy workaround |
-| **User Type**| Executive, external customer | Management, key staff | General staff |
-| **Time Sensitivity**| Peak business hours | Normal hours | Off-hours |
+| <strong>Deadline</strong>| Immediate/critical | Within 24 hours | No specific deadline |
+| <strong>Workaround</strong>| None available | Complex workaround | Easy workaround |
+| <strong>User Type</strong>| Executive, external customer | Management, key staff | General staff |
+| <strong>Time Sensitivity</strong>| Peak business hours | Normal hours | Off-hours |
 
 ### Stage 3: Initial Diagnosis and Triage
 
-**Diagnostic Workflow:**```
+<strong>Diagnostic Workflow:</strong>```
 Receive Incident
     ↓
 Search Knowledge Base
@@ -249,24 +249,24 @@ Lessons Learned Documentation
 
 | Role | Responsibilities | Skills Required |
 |------|-----------------|-----------------|
-| **Incident Manager**| Coordination, decision-making, communication | Leadership, ITSM knowledge |
-| **Technical Lead**| Investigation, resolution planning | Deep technical expertise |
-| **Communications Lead**| Stakeholder updates, messaging | Communication, business acumen |
-| **Business Liaison**| Business impact assessment | Business knowledge |
-| **Support Specialists**| Technical investigation and fixes | Specialized technical skills |
+| <strong>Incident Manager</strong>| Coordination, decision-making, communication | Leadership, ITSM knowledge |
+| <strong>Technical Lead</strong>| Investigation, resolution planning | Deep technical expertise |
+| <strong>Communications Lead</strong>| Stakeholder updates, messaging | Communication, business acumen |
+| <strong>Business Liaison</strong>| Business impact assessment | Business knowledge |
+| <strong>Support Specialists</strong>| Technical investigation and fixes | Specialized technical skills |
 
 ### Communication Plan
 
-**Stakeholder Update Frequency:**| Priority | Internal Updates | Customer Updates | Executive Updates |
+<strong>Stakeholder Update Frequency:</strong>| Priority | Internal Updates | Customer Updates | Executive Updates |
 |----------|-----------------|------------------|-------------------|
-| **P1**| Every 30 minutes | Every hour | Every 2 hours |
-| **P2**| Every 2 hours | Every 4 hours | Daily |
+| <strong>P1</strong>| Every 30 minutes | Every hour | Every 2 hours |
+| <strong>P2</strong>| Every 2 hours | Every 4 hours | Daily |
 
-**Communication Templates:**| Template | Purpose | Key Elements |
+<strong>Communication Templates:</strong>| Template | Purpose | Key Elements |
 |----------|---------|--------------|
-| **Initial Notification**| Inform of incident | Issue, impact, ETA |
-| **Status Update**| Progress report | Actions taken, current status, next steps |
-| **Resolution Notice**| Closure confirmation | Solution, validation, follow-up |
+| <strong>Initial Notification</strong>| Inform of incident | Issue, impact, ETA |
+| <strong>Status Update</strong>| Progress report | Actions taken, current status, next steps |
+| <strong>Resolution Notice</strong>| Closure confirmation | Solution, validation, follow-up |
 
 ## Automation and AI in Incident Management
 
@@ -274,15 +274,15 @@ Lessons Learned Documentation
 
 | Benefit | Impact | Measurement |
 |---------|--------|-------------|
-| **Speed**| 60-80% faster resolution | MTTR reduction |
-| **Consistency**| Standardized handling | Quality scores |
-| **Scalability**| 24/7 capacity | Ticket volume handled |
-| **Cost Efficiency**| Reduced labor costs | Cost per ticket |
-| **Accuracy**| Fewer human errors | Error rate |
+| <strong>Speed</strong>| 60-80% faster resolution | MTTR reduction |
+| <strong>Consistency</strong>| Standardized handling | Quality scores |
+| <strong>Scalability</strong>| 24/7 capacity | Ticket volume handled |
+| <strong>Cost Efficiency</strong>| Reduced labor costs | Cost per ticket |
+| <strong>Accuracy</strong>| Fewer human errors | Error rate |
 
 ### AI-Powered Use Cases
 
-**1. Intelligent Ticket Routing**```
+<strong>1. Intelligent Ticket Routing</strong>```
 Incident Detected/Reported
     ↓
 AI Classification
@@ -321,18 +321,18 @@ Bot: "I'll help you with email access. Let me check a few things:
     → Provides solution or escalates
 ```
 
-**3. Automated Incident Detection**
+<strong>3. Automated Incident Detection</strong>
 
-**Detection Methods:**| Method | Data Source | Detection Type | Response Time |
+<strong>Detection Methods:</strong>| Method | Data Source | Detection Type | Response Time |
 |--------|-------------|----------------|---------------|
-| **Threshold Monitoring**| Performance metrics | Exceeds limits | < 1 minute |
-| **Anomaly Detection**| ML analysis of patterns | Unusual behavior | 1-5 minutes |
-| **Log Analysis**| System logs | Error patterns | Real-time |
-| **Synthetic Monitoring**| Simulated transactions | Service availability | Continuous |
+| <strong>Threshold Monitoring</strong>| Performance metrics | Exceeds limits | < 1 minute |
+| <strong>Anomaly Detection</strong>| ML analysis of patterns | Unusual behavior | 1-5 minutes |
+| <strong>Log Analysis</strong>| System logs | Error patterns | Real-time |
+| <strong>Synthetic Monitoring</strong>| Simulated transactions | Service availability | Continuous |
 
-**4. Predictive Incident Management**
+<strong>4. Predictive Incident Management</strong>
 
-**Approach:**```
+<strong>Approach:</strong>```
 Historical Data Collection
     ↓
 Pattern Analysis (ML)
@@ -382,36 +382,36 @@ Knowledge Base
 └── FAQs (Common Questions)
 ```
 
-**Quality Criteria:**- Accurate and tested solutions
+<strong>Quality Criteria:</strong>- Accurate and tested solutions
 - Clear, step-by-step instructions
 - Regular updates and validation
 - User-friendly language
 - Searchable and well-tagged
 
-**3. Communication Standards**
+<strong>3. Communication Standards</strong>
 
-**Communication Principles:**| Principle | Application |
+<strong>Communication Principles:</strong>| Principle | Application |
 |-----------|-------------|
-| **Timeliness**| Update at defined intervals |
-| **Clarity**| Avoid jargon, be specific |
-| **Completeness**| Include impact, actions, timeline |
-| **Consistency**| Use templates and standards |
-| **Accessibility**| Multiple channels (email, SMS, portal) |
+| <strong>Timeliness</strong>| Update at defined intervals |
+| <strong>Clarity</strong>| Avoid jargon, be specific |
+| <strong>Completeness</strong>| Include impact, actions, timeline |
+| <strong>Consistency</strong>| Use templates and standards |
+| <strong>Accessibility</strong>| Multiple channels (email, SMS, portal) |
 
 ### Technical Best Practices
 
-**4. Monitoring and Detection**
+<strong>4. Monitoring and Detection</strong>
 
-**Monitoring Coverage:**| Layer | Metrics | Tools |
+<strong>Monitoring Coverage:</strong>| Layer | Metrics | Tools |
 |-------|---------|-------|
-| **Infrastructure**| CPU, memory, disk, network | Nagios, Zabbix, Datadog |
-| **Application**| Response time, errors, availability | New Relic, AppDynamics |
-| **Business**| Transactions, SLA compliance | Custom dashboards |
-| **Security**| Access attempts, vulnerabilities | SIEM, IDS/IPS |
+| <strong>Infrastructure</strong>| CPU, memory, disk, network | Nagios, Zabbix, Datadog |
+| <strong>Application</strong>| Response time, errors, availability | New Relic, AppDynamics |
+| <strong>Business</strong>| Transactions, SLA compliance | Custom dashboards |
+| <strong>Security</strong>| Access attempts, vulnerabilities | SIEM, IDS/IPS |
 
-**5. Post-Incident Reviews**
+<strong>5. Post-Incident Reviews</strong>
 
-**Review Process:**```
+<strong>Review Process:</strong>```
 Incident Closed
     ↓
 Review Meeting (within 48 hours)
@@ -505,11 +505,11 @@ Document and Share Lessons
 4. Post-Incident Activity
 ```
 
-**Applicable to:**Security incidents, cybersecurity events
+<strong>Applicable to:</strong>Security incidents, cybersecurity events
 
 ### ISO 20000
 
-**Requirements:**- Documented incident management process
+<strong>Requirements:</strong>- Documented incident management process
 - Priority assignment criteria
 - SLA compliance tracking
 - Continual improvement activities
@@ -518,9 +518,9 @@ Document and Share Lessons
 
 ### Example 1: E-commerce Platform Outage
 
-**Scenario:**Payment gateway failure during peak shopping season
+<strong>Scenario:</strong>Payment gateway failure during peak shopping season
 
-**Response:**```
+<strong>Response:</strong>```
 Detection: Automated monitoring alerts within 2 minutes
 Classification: P1 - Critical (revenue impact)
 Team: Major incident team assembled
@@ -547,9 +547,9 @@ Follow-up: Scheduled preventive maintenance
 
 ### Example 3: Security Incident
 
-**Scenario:**Ransomware detection on file server
+<strong>Scenario:</strong>Ransomware detection on file server
 
-**Response:**```
+<strong>Response:</strong>```
 Detection: Security monitoring alert
 Classification: P1 - Critical (security)
 Immediate Actions:

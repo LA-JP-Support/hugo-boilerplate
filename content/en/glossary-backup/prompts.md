@@ -17,7 +17,7 @@ draft: false
 
 ## Introduction
 
-A **prompt**in artificial intelligence (AI) defines the instruction, question, or input provided to a system—most commonly large language models (LLMs) and generative AI tools—to generate relevant output or perform a specific task. The art and science of prompt writing, also known as **prompt engineering**, directly influences the usefulness, accuracy, and safety of AI-generated responses. Mastery of prompts is crucial for effective interaction with AI chatbots, automation, and generative systems across industries.
+A <strong>prompt</strong>in artificial intelligence (AI) defines the instruction, question, or input provided to a system—most commonly large language models (LLMs) and generative AI tools—to generate relevant output or perform a specific task. The art and science of prompt writing, also known as <strong>prompt engineering</strong>, directly influences the usefulness, accuracy, and safety of AI-generated responses. Mastery of prompts is crucial for effective interaction with AI chatbots, automation, and generative systems across industries.
 
 This glossary page presents a detailed definition of “prompt,” its practical importance, operational mechanics, actionable advice for writing effective prompts, key applications, best practices, common pitfalls, and domain-specific strategies. References to leading guides and academic resources are included for further exploration.
 
@@ -25,13 +25,13 @@ This glossary page presents a detailed definition of “prompt,” its practical
 
 ### What Is a Prompt?
 
-A **prompt**is the user’s input—a question, command, statement, or instruction—submitted to an AI system such as an LLM, generative AI platform, or chatbot. Prompts may be simple (“Summarize this text.”) or highly structured, incorporating context, role assignments, and even example outputs. Advanced AI tools often accept multimodal prompts, including images, audio, or code.
+A <strong>prompt</strong>is the user’s input—a question, command, statement, or instruction—submitted to an AI system such as an LLM, generative AI platform, or chatbot. Prompts may be simple (“Summarize this text.”) or highly structured, incorporating context, role assignments, and even example outputs. Advanced AI tools often accept multimodal prompts, including images, audio, or code.
 
-> **Authoritative Source:**> - [TechTarget: What is an AI Prompt?](https://www.techtarget.com/searchenterpriseai/definition/AI-prompt)  
+> <strong>Authoritative Source:</strong>> - [TechTarget: What is an AI Prompt?](https://www.techtarget.com/searchenterpriseai/definition/AI-prompt)  
 > - [Google Cloud: Prompt Engineering Guide](https://cloud.google.com/discover/what-is-prompt-engineering)  
 > - [Harvard University: Getting Started with Prompts](https://www.huit.harvard.edu/news/ai-prompts)
 
-**Example Prompts:**- "Summarize the following article in 100 words."
+<strong>Example Prompts:</strong>- "Summarize the following article in 100 words."
 - "Act as a cybersecurity analyst and explain the latest phishing threats."
 - "Generate a Python function that calculates the Fibonacci sequence."
 
@@ -45,59 +45,59 @@ The prompt is the primary channel for expressing user intent to the AI, guiding 
 
 Crafting effective prompts is essential for:
 
-- **Accuracy:**Clear prompts yield precise, relevant responses ([TechTarget](https://www.techtarget.com/searchenterpriseai/definition/AI-prompt)).
-- **Relevance:**Specific prompts help the AI focus on the user’s actual needs.
-- **User Experience:**Well-structured prompts streamline interaction, reducing the need for back-and-forth clarifications.
-- **Productivity:**Targeted prompts minimize manual corrections and repetitive work.
-- **Creativity:**Prompts can inspire novel ideas or alternative perspectives, especially in creative and ideation tasks.
-- **Customization:**Prompts can specify tone, style, format, or intended audience.
-- **Learning:**Detailed prompts enable AI to act as a tutor or coach, giving targeted feedback.
+- <strong>Accuracy:</strong>Clear prompts yield precise, relevant responses ([TechTarget](https://www.techtarget.com/searchenterpriseai/definition/AI-prompt)).
+- <strong>Relevance:</strong>Specific prompts help the AI focus on the user’s actual needs.
+- <strong>User Experience:</strong>Well-structured prompts streamline interaction, reducing the need for back-and-forth clarifications.
+- <strong>Productivity:</strong>Targeted prompts minimize manual corrections and repetitive work.
+- <strong>Creativity:</strong>Prompts can inspire novel ideas or alternative perspectives, especially in creative and ideation tasks.
+- <strong>Customization:</strong>Prompts can specify tone, style, format, or intended audience.
+- <strong>Learning:</strong>Detailed prompts enable AI to act as a tutor or coach, giving targeted feedback.
 
 ### Benefits of Effective Prompts
 
-- **Enhanced efficiency:**Tasks are completed faster, with fewer iterations.
-- **Better decision-making:**Reliable outputs support informed choices.
-- **Time savings:**Reduces manual intervention and clarifications.
-- **Personalization:**Prompts can be tailored to individual or organizational needs.
-- **Domain adaptability:**Prompts can direct AI to operate within specialized domains (e.g., healthcare, law).
+- <strong>Enhanced efficiency:</strong>Tasks are completed faster, with fewer iterations.
+- <strong>Better decision-making:</strong>Reliable outputs support informed choices.
+- <strong>Time savings:</strong>Reduces manual intervention and clarifications.
+- <strong>Personalization:</strong>Prompts can be tailored to individual or organizational needs.
+- <strong>Domain adaptability:</strong>Prompts can direct AI to operate within specialized domains (e.g., healthcare, law).
 
 ### Risks and Challenges
 
-- **Ambiguity:**Vague prompts produce generic or inaccurate outputs.
-- **Bias:**Prompts and training data can introduce or perpetuate bias ([Google Cloud](https://cloud.google.com/discover/what-is-prompt-engineering)).
-- **Hallucinations:**AI may generate plausible-sounding but incorrect information.
-- **Ethical issues:**Poorly-crafted prompts can enable misinformation or cause offensive outputs.
-- **Complexity:**New users may struggle to construct effective prompts.
+- <strong>Ambiguity:</strong>Vague prompts produce generic or inaccurate outputs.
+- <strong>Bias:</strong>Prompts and training data can introduce or perpetuate bias ([Google Cloud](https://cloud.google.com/discover/what-is-prompt-engineering)).
+- <strong>Hallucinations:</strong>AI may generate plausible-sounding but incorrect information.
+- <strong>Ethical issues:</strong>Poorly-crafted prompts can enable misinformation or cause offensive outputs.
+- <strong>Complexity:</strong>New users may struggle to construct effective prompts.
 
 ## How Prompts Work
 
 ### The Prompting Process
 
-1. **Input:**User submits a prompt to the AI system.
-2. **Interpretation:**The AI analyzes the prompt using natural language processing and deep learning.
-3. **Inference:**The AI infers the most probable and contextually relevant response.
-4. **Output:**The system generates an answer (text, image, code, etc.).
+1. <strong>Input:</strong>User submits a prompt to the AI system.
+2. <strong>Interpretation:</strong>The AI analyzes the prompt using natural language processing and deep learning.
+3. <strong>Inference:</strong>The AI infers the most probable and contextually relevant response.
+4. <strong>Output:</strong>The system generates an answer (text, image, code, etc.).
 
 > [Google Cloud: Prompt Engineering Guide](https://cloud.google.com/discover/what-is-prompt-engineering)
 
 ### The Role of Specificity and Context
 
-- **Specificity:**Precise prompts yield targeted, actionable responses.  
+- <strong>Specificity:</strong>Precise prompts yield targeted, actionable responses.  
   Example: “Write a business plan” vs. “Write a 500-word business plan for a vegan bakery targeting young professionals in New York City.”
-- **Context:**Providing background, audience, tone, or format helps the AI tailor its output.
+- <strong>Context:</strong>Providing background, audience, tone, or format helps the AI tailor its output.
 
 ## How to Write Effective Prompts
 
 ### Key Elements of an Effective Prompt
 
-- **Goal:**Clearly state the desired outcome.
-- **Role/Persona:**Assign a perspective or role if relevant (“Act as a financial advisor”).
-- **Task:**Specify the action or output required.
-- **Context:**Add background, audience, or constraints.
-- **Format:**Define the structure (list, table, essay, code).
-- **Tone/Style:**Indicate the tone (formal, conversational, technical).
-- **Examples:**Supply input/output samples or templates.
-- **Constraints:**Set word count, time frame, or other boundaries.
+- <strong>Goal:</strong>Clearly state the desired outcome.
+- <strong>Role/Persona:</strong>Assign a perspective or role if relevant (“Act as a financial advisor”).
+- <strong>Task:</strong>Specify the action or output required.
+- <strong>Context:</strong>Add background, audience, or constraints.
+- <strong>Format:</strong>Define the structure (list, table, essay, code).
+- <strong>Tone/Style:</strong>Indicate the tone (formal, conversational, technical).
+- <strong>Examples:</strong>Supply input/output samples or templates.
+- <strong>Constraints:</strong>Set word count, time frame, or other boundaries.
 
 > [Atlassian: Ultimate Guide to Writing Effective Prompts](https://www.atlassian.com/blog/artificial-intelligence/ultimate-guide-writing-ai-prompts)  
 > [Harvard University: Getting Started with Prompts](https://www.huit.harvard.edu/news/ai-prompts)
@@ -145,7 +145,7 @@ Crafting effective prompts is essential for:
 
 ### Common Prompt Structures
 
-| **Component**| **Example**|
+| <strong>Component</strong>| <strong>Example</strong>|
 |----------------|---------------------------------------------------------------|
 | Role/Persona   | Act as a financial advisor.                                   |
 | Task           | Analyze the following investment portfolio.                    |
@@ -156,16 +156,16 @@ Crafting effective prompts is essential for:
 
 ### Prompt Types and Strategies
 
-**Zero-Shot Prompts:**Direct instructions without examples.  
-**Few-Shot Prompts:**Include sample input-output pairs to guide the model.  
-**Chain-of-Thought Prompts:**Encourage the AI to break down reasoning into steps ([Google Cloud](https://cloud.google.com/discover/what-is-prompt-engineering)).  
-**Multi-Turn Prompts:**Used for ongoing, context-aware conversations.
+<strong>Zero-Shot Prompts:</strong>Direct instructions without examples.  
+<strong>Few-Shot Prompts:</strong>Include sample input-output pairs to guide the model.  
+<strong>Chain-of-Thought Prompts:</strong>Encourage the AI to break down reasoning into steps ([Google Cloud](https://cloud.google.com/discover/what-is-prompt-engineering)).  
+<strong>Multi-Turn Prompts:</strong>Used for ongoing, context-aware conversations.
 
 ## Best Practices & Common Mistakes
 
 ### Dos and Don’ts
 
-| **Best Practices (Dos)**| **Common Mistakes (Don’ts)**|
+| <strong>Best Practices (Dos)</strong>| <strong>Common Mistakes (Don’ts)</strong>|
 |-----------------------------------------------|-----------------------------------------------|
 | Be specific and detailed                      | Use vague or ambiguous prompts                |
 | Assign roles/personas as needed               | Stack conflicting instructions                |
@@ -178,11 +178,11 @@ Crafting effective prompts is essential for:
 
 ### Tips for Ongoing Improvement
 
-- **Iterate**: Start basic, then refine for clarity/detail.
-- **Feedback**: Specify helpful/unhelpful parts after each response.
-- **Collaboration**: Share effective prompt strategies with peers.
-- **Ethical Use**: Avoid prompts that amplify bias or unethical results.
-- **Critical Review**: Always verify AI-generated outputs.
+- <strong>Iterate</strong>: Start basic, then refine for clarity/detail.
+- <strong>Feedback</strong>: Specify helpful/unhelpful parts after each response.
+- <strong>Collaboration</strong>: Share effective prompt strategies with peers.
+- <strong>Ethical Use</strong>: Avoid prompts that amplify bias or unethical results.
+- <strong>Critical Review</strong>: Always verify AI-generated outputs.
 
 > [Google Cloud: Prompt Engineering Strategies](https://cloud.google.com/discover/what-is-prompt-engineering)  
 > [Atlassian: Ultimate Guide](https://www.atlassian.com/blog/artificial-intelligence/ultimate-guide-writing-ai-prompts)
@@ -226,23 +226,23 @@ Prompts enable AI systems to perform a wide range of tasks across industries.
 
 ### 7. Domain-Specific Tasks
 
-- **Healthcare:**Drafting case studies, patient summaries, research analysis.
-- **Law:**Summarizing legal documents, drafting contracts.
-- **Science:**Explaining technical concepts for target audiences.
+- <strong>Healthcare:</strong>Drafting case studies, patient summaries, research analysis.
+- <strong>Law:</strong>Summarizing legal documents, drafting contracts.
+- <strong>Science:</strong>Explaining technical concepts for target audiences.
 
 > [Google Cloud: Prompt Engineering Use Cases](https://cloud.google.com/discover/what-is-prompt-engineering)
 
 #### Domain-Specific Considerations
 
-- **Compliance:**Adhere to regulatory standards (privacy, security).
-- **Expertise:**Use detailed prompts for specialized areas.
-- **Confidentiality:**Avoid sensitive data in prompts where privacy is a concern.
+- <strong>Compliance:</strong>Adhere to regulatory standards (privacy, security).
+- <strong>Expertise:</strong>Use detailed prompts for specialized areas.
+- <strong>Confidentiality:</strong>Avoid sensitive data in prompts where privacy is a concern.
 
 ## Sample Prompts and Improved Versions
 
 ### Simple vs. Detailed
 
-| **Unclear Prompt**| **Improved Prompt**|
+| <strong>Unclear Prompt</strong>| <strong>Improved Prompt</strong>|
 |---------------------------------------|------------------------------------------------------------------------------------------|
 | Write a report.                       | Write a 500-word report summarizing the latest trends in renewable energy for a general audience. |
 | Create an image.                      | Generate an image of a futuristic city skyline at sunset, with flying cars and green rooftop gardens. |
@@ -257,17 +257,17 @@ Prompts enable AI systems to perform a wide range of tasks across industries.
 
 ### Frequently Asked Questions
 
-**Q:**What makes a prompt “high quality”?  
-**A:**A high-quality prompt is clear, specific, provides necessary context, and is tailored to the desired outcome. It avoids ambiguity and conflicting instructions. ([Atlassian](https://www.atlassian.com/blog/artificial-intelligence/ultimate-guide-writing-ai-prompts))
+<strong>Q:</strong>What makes a prompt “high quality”?  
+<strong>A:</strong>A high-quality prompt is clear, specific, provides necessary context, and is tailored to the desired outcome. It avoids ambiguity and conflicting instructions. ([Atlassian](https://www.atlassian.com/blog/artificial-intelligence/ultimate-guide-writing-ai-prompts))
 
-**Q:**Why does the AI sometimes give irrelevant or incorrect answers?  
-**A:**This can be due to vague prompts, lack of context, or model limitations. Refining your prompt with more detail usually improves accuracy.
+<strong>Q:</strong>Why does the AI sometimes give irrelevant or incorrect answers?  
+<strong>A:</strong>This can be due to vague prompts, lack of context, or model limitations. Refining your prompt with more detail usually improves accuracy.
 
-**Q:**How can I ensure my prompt avoids bias?  
-**A:**Use neutral, inclusive language and be mindful of potential sources of bias in your prompt and examples. ([Google Cloud](https://cloud.google.com/discover/what-is-prompt-engineering))
+<strong>Q:</strong>How can I ensure my prompt avoids bias?  
+<strong>A:</strong>Use neutral, inclusive language and be mindful of potential sources of bias in your prompt and examples. ([Google Cloud](https://cloud.google.com/discover/what-is-prompt-engineering))
 
-**Q:**How do prompts differ across AI applications?  
-**A:**Text-based AI responds best to detailed, natural-language prompts; multimodal generators require descriptive, attribute-rich prompts. Tailor your instructions to the tool and task.
+<strong>Q:</strong>How do prompts differ across AI applications?  
+<strong>A:</strong>Text-based AI responds best to detailed, natural-language prompts; multimodal generators require descriptive, attribute-rich prompts. Tailor your instructions to the tool and task.
 
 ## References
 
@@ -283,7 +283,7 @@ Prompts enable AI systems to perform a wide range of tasks across industries.
 
 For further skill development, explore resources on [prompt engineering](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/introduction-prompt-design), AI ethics, and application-specific prompt guides.
 
-**[Return to Top](#prompts-comprehensive-glossary--best-practices-for-ai-chatbot--automation)**
+<strong>[Return to Top](#prompts-comprehensive-glossary--best-practices-for-ai-chatbot--automation)</strong>
 
 *This glossary page was compiled using up-to-date, authoritative sources to provide a deep and actionable understanding of prompts in AI chatbots and automation. All factual statements are supported by the referenced links for further reading and verification.*
 

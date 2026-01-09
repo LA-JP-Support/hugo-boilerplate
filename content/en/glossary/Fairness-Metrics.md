@@ -20,104 +20,104 @@ Fairness metrics serve multiple critical functions: quantifying disparate outcom
 
 ## Implementation Workflow
 
-**Data Collection and Preparation**Collect demographic and sensitive attribute data (gender, race, age) while ensuring representative coverage for all relevant groups. Balance privacy concerns with the need for comprehensive bias assessment.
+<strong>Data Collection and Preparation</strong>Collect demographic and sensitive attribute data (gender, race, age) while ensuring representative coverage for all relevant groups. Balance privacy concerns with the need for comprehensive bias assessment.
 
-**Model Training and Evaluation**Train models on labeled datasets and evaluate outputs across demographic groups using selected fairness metrics. Establish baseline measurements for comparison.
+<strong>Model Training and Evaluation</strong>Train models on labeled datasets and evaluate outputs across demographic groups using selected fairness metrics. Establish baseline measurements for comparison.
 
-**Bias Assessment**Apply one or more fairness metrics to measure disparities in outcomes. Analyze specific subgroups to identify where unfairness occurs and quantify its severity.
+<strong>Bias Assessment</strong>Apply one or more fairness metrics to measure disparities in outcomes. Analyze specific subgroups to identify where unfairness occurs and quantify its severity.
 
-**Mitigation and Iteration**Use actionable insights from fairness metrics to modify training data, refine algorithms, or adjust decision thresholds. Re-evaluate iteratively until acceptable fairness levels are achieved.
+<strong>Mitigation and Iteration</strong>Use actionable insights from fairness metrics to modify training data, refine algorithms, or adjust decision thresholds. Re-evaluate iteratively until acceptable fairness levels are achieved.
 
-**Continuous Monitoring**Monitor fairness metrics post-deployment to detect fairness drift as data distributions and populations evolve. Document findings and mitigation efforts for audits and compliance reporting.
+<strong>Continuous Monitoring</strong>Monitor fairness metrics post-deployment to detect fairness drift as data distributions and populations evolve. Document findings and mitigation efforts for audits and compliance reporting.
 
-**Lifecycle Integration:**- **Pre-processing**– Address bias in data before training through reweighting, data augmentation, or synthetic data generation
-- **In-processing**– Apply fairness constraints or regularization during model training to optimize for both accuracy and fairness
-- **Post-processing**– Adjust model predictions or decision thresholds after training to achieve fairer outcomes
+<strong>Lifecycle Integration:</strong>- <strong>Pre-processing</strong>– Address bias in data before training through reweighting, data augmentation, or synthetic data generation
+- <strong>In-processing</strong>– Apply fairness constraints or regularization during model training to optimize for both accuracy and fairness
+- <strong>Post-processing</strong>– Adjust model predictions or decision thresholds after training to achieve fairer outcomes
 
 ## Key Fairness Metric Types
 
-**Demographic Parity (Statistical Parity)**Ensures individuals from different groups have equal probability of receiving positive outcomes. Formula: P(Outcome = 1 | Group A) = P(Outcome = 1 | Group B). Used in hiring algorithms and loan approval systems. Limitation: Does not account for qualification differences; strict enforcement may reduce overall utility.
+<strong>Demographic Parity (Statistical Parity)</strong>Ensures individuals from different groups have equal probability of receiving positive outcomes. Formula: P(Outcome = 1 | Group A) = P(Outcome = 1 | Group B). Used in hiring algorithms and loan approval systems. Limitation: Does not account for qualification differences; strict enforcement may reduce overall utility.
 
-**Equal Opportunity**Qualified individuals from different groups have equal probability of positive outcomes. Formula: P(Outcome = 1 | Qualified = 1, Group A) = P(Outcome = 1 | Qualified = 1, Group B). Applied in university admissions and promotion decisions. Limitation: Requires accurate, unbiased qualification measurement.
+<strong>Equal Opportunity</strong>Qualified individuals from different groups have equal probability of positive outcomes. Formula: P(Outcome = 1 | Qualified = 1, Group A) = P(Outcome = 1 | Qualified = 1, Group B). Applied in university admissions and promotion decisions. Limitation: Requires accurate, unbiased qualification measurement.
 
-**Equalized Odds**True positive and false positive rates are equal across groups. Formulas: TPR and FPR equality across demographic categories. Used in criminal justice risk assessments and medical diagnosis. Limitation: Difficult to achieve simultaneously; may conflict with other metrics or overall accuracy.
+<strong>Equalized Odds</strong>True positive and false positive rates are equal across groups. Formulas: TPR and FPR equality across demographic categories. Used in criminal justice risk assessments and medical diagnosis. Limitation: Difficult to achieve simultaneously; may conflict with other metrics or overall accuracy.
 
-**Predictive Parity**Precision (positive predictive value) is equal across groups. Formula: P(Actual = 1 | Outcome = 1, Group A) = P(Actual = 1 | Outcome = 1, Group B). Applied in loan default prediction and healthcare treatment recommendations. Limitation: Can conflict with equal opportunity or equalized odds.
+<strong>Predictive Parity</strong>Precision (positive predictive value) is equal across groups. Formula: P(Actual = 1 | Outcome = 1, Group A) = P(Actual = 1 | Outcome = 1, Group B). Applied in loan default prediction and healthcare treatment recommendations. Limitation: Can conflict with equal opportunity or equalized odds.
 
-**Treatment Equality**Ratio of false positives to false negatives is equal across groups. Used in predictive policing and fraud detection. Limitation: Complex to interpret and implement in practice.
+<strong>Treatment Equality</strong>Ratio of false positives to false negatives is equal across groups. Used in predictive policing and fraud detection. Limitation: Complex to interpret and implement in practice.
 
-**Individual Fairness**Similar individuals should receive similar outcomes. Requires task-specific similarity metrics and consistency analysis. Applied in loan approval and healthcare triage. Limitation: Defining "similarity" is subjective and context-dependent.
+<strong>Individual Fairness</strong>Similar individuals should receive similar outcomes. Requires task-specific similarity metrics and consistency analysis. Applied in loan approval and healthcare triage. Limitation: Defining "similarity" is subjective and context-dependent.
 
-**Counterfactual Fairness**Model predictions remain unchanged when sensitive attributes are altered while holding all else constant. Used to ensure decisions are not impacted by protected attributes in hiring and lending. Limitation: Requires causal modeling and counterfactual data generation.
+<strong>Counterfactual Fairness</strong>Model predictions remain unchanged when sensitive attributes are altered while holding all else constant. Used to ensure decisions are not impacted by protected attributes in hiring and lending. Limitation: Requires causal modeling and counterfactual data generation.
 
 ## Real-World Applications
 
-**Hiring Algorithms**Resume screening tools showing gender or ethnic bias are assessed using demographic parity and equal opportunity metrics. Mitigation involves adjusting training data, applying fairness constraints, and monitoring selection rates.
+<strong>Hiring Algorithms</strong>Resume screening tools showing gender or ethnic bias are assessed using demographic parity and equal opportunity metrics. Mitigation involves adjusting training data, applying fairness constraints, and monitoring selection rates.
 
-**Facial Recognition Systems**Higher error rates for underrepresented groups are identified through equalized odds analysis. Solutions include diversifying training data, retraining models, and conducting regular performance audits across demographic groups.
+<strong>Facial Recognition Systems</strong>Higher error rates for underrepresented groups are identified through equalized odds analysis. Solutions include diversifying training data, retraining models, and conducting regular performance audits across demographic groups.
 
-**Loan Approval Systems**Lower approval rates for minority applicants due to historical bias are addressed using predictive parity and counterfactual fairness. Mitigation includes debiasing techniques, threshold adjustments, and regulatory compliance monitoring.
+<strong>Loan Approval Systems</strong>Lower approval rates for minority applicants due to historical bias are addressed using predictive parity and counterfactual fairness. Mitigation includes debiasing techniques, threshold adjustments, and regulatory compliance monitoring.
 
-**Healthcare Diagnosis**Diagnostic tools showing accuracy disparities across demographic groups are evaluated using equalized odds and treatment equality. Improvements involve training data augmentation, continuous fairness monitoring, and domain expert engagement.
+<strong>Healthcare Diagnosis</strong>Diagnostic tools showing accuracy disparities across demographic groups are evaluated using equalized odds and treatment equality. Improvements involve training data augmentation, continuous fairness monitoring, and domain expert engagement.
 
 ## Tools and Libraries
 
-**Fairlearn**Python library providing fairness metrics, mitigation algorithms, and visualization tools for evaluating and improving model fairness.
+<strong>Fairlearn</strong>Python library providing fairness metrics, mitigation algorithms, and visualization tools for evaluating and improving model fairness.
 
-**AIF360 (AI Fairness 360)**IBM's comprehensive toolkit offering broad fairness metrics and bias mitigation techniques across the model lifecycle.
+<strong>AIF360 (AI Fairness 360)</strong>IBM's comprehensive toolkit offering broad fairness metrics and bias mitigation techniques across the model lifecycle.
 
-**Fairness Indicators**Google's tool for evaluating and visualizing fairness metrics, particularly designed for TensorFlow models.
+<strong>Fairness Indicators</strong>Google's tool for evaluating and visualizing fairness metrics, particularly designed for TensorFlow models.
 
-**Additional Tools:**- **FairComp**– Library for comparing fairness interventions and benchmarking metrics
-- **FairML**– Auditing tool for identifying bias sources
-- **Aequitas**– Analyzing model impact on demographic groups
-- **Themis and Themis-ML**– Libraries focused on individual fairness
+<strong>Additional Tools:</strong>- <strong>FairComp</strong>– Library for comparing fairness interventions and benchmarking metrics
+- <strong>FairML</strong>– Auditing tool for identifying bias sources
+- <strong>Aequitas</strong>– Analyzing model impact on demographic groups
+- <strong>Themis and Themis-ML</strong>– Libraries focused on individual fairness
 
 ## Best Practices
 
-**Comprehensive Approach**Use multiple metrics for holistic fairness assessment, as single metrics rarely capture complete picture. Different metrics can conflict, requiring careful trade-off analysis.
+<strong>Comprehensive Approach</strong>Use multiple metrics for holistic fairness assessment, as single metrics rarely capture complete picture. Different metrics can conflict, requiring careful trade-off analysis.
 
-**Contextual Application**Tailor metric selection and interpretation to real-world impact and domain-specific requirements. Consider social, ethical, and legal contexts.
+<strong>Contextual Application</strong>Tailor metric selection and interpretation to real-world impact and domain-specific requirements. Consider social, ethical, and legal contexts.
 
-**Stakeholder Engagement**Involve impacted groups, domain experts, and decision makers in fairness assessment and mitigation decisions.
+<strong>Stakeholder Engagement</strong>Involve impacted groups, domain experts, and decision makers in fairness assessment and mitigation decisions.
 
-**Regular Auditing**Continuously monitor fairness metrics post-deployment as data, models, and populations evolve. Establish scheduled review cycles.
+<strong>Regular Auditing</strong>Continuously monitor fairness metrics post-deployment as data, models, and populations evolve. Establish scheduled review cycles.
 
-**Transparent Documentation**Maintain comprehensive records of fairness analyses, decisions, and remediation steps for accountability and compliance.
+<strong>Transparent Documentation</strong>Maintain comprehensive records of fairness analyses, decisions, and remediation steps for accountability and compliance.
 
-**Balanced Optimization**Recognize that improving fairness may reduce accuracy. Use multi-objective optimization and make informed trade-offs with stakeholder input.
+<strong>Balanced Optimization</strong>Recognize that improving fairness may reduce accuracy. Use multi-objective optimization and make informed trade-offs with stakeholder input.
 
 ## Common Pitfalls
 
-**Single Metric Reliance**Depending on one metric provides incomplete fairness assessment. Different metrics capture different fairness dimensions.
+<strong>Single Metric Reliance</strong>Depending on one metric provides incomplete fairness assessment. Different metrics capture different fairness dimensions.
 
-**Ignoring Social Context**Interpreting metrics without relevant social, ethical, and historical frameworks leads to misguided conclusions.
+<strong>Ignoring Social Context</strong>Interpreting metrics without relevant social, ethical, and historical frameworks leads to misguided conclusions.
 
-**Static Evaluation**Failing to regularly reassess as data distributions, model performance, and demographics shift over time.
+<strong>Static Evaluation</strong>Failing to regularly reassess as data distributions, model performance, and demographics shift over time.
 
-**Correlation vs. Causation Confusion**Observed disparities may reflect real-world inequalities rather than solely model bias. Distinguishing these requires careful analysis.
+<strong>Correlation vs. Causation Confusion</strong>Observed disparities may reflect real-world inequalities rather than solely model bias. Distinguishing these requires careful analysis.
 
-**Insufficient Transparency**Poor documentation leads to compliance issues, stakeholder distrust, and inability to reproduce fairness assessments.
+<strong>Insufficient Transparency</strong>Poor documentation leads to compliance issues, stakeholder distrust, and inability to reproduce fairness assessments.
 
 ## Regulatory Compliance
 
-**Legal Frameworks:**- **EU AI Act**– Mandates transparency, accountability, fairness requirements with risk assessments and documentation
-- **Fair Credit Reporting Act (FCRA)**– Governs credit data use, prohibits discrimination in automated credit decisions
-- **Equal Credit Opportunity Act (ECOA)**– Prohibits discrimination in lending decisions
-- **GDPR**– Requires transparency and "right to explanation" for automated decisions in EU
-- **Algorithmic Accountability Act**– Proposed US legislation requiring algorithmic bias assessment and reporting
+<strong>Legal Frameworks:</strong>- <strong>EU AI Act</strong>– Mandates transparency, accountability, fairness requirements with risk assessments and documentation
+- <strong>Fair Credit Reporting Act (FCRA)</strong>– Governs credit data use, prohibits discrimination in automated credit decisions
+- <strong>Equal Credit Opportunity Act (ECOA)</strong>– Prohibits discrimination in lending decisions
+- <strong>GDPR</strong>– Requires transparency and "right to explanation" for automated decisions in EU
+- <strong>Algorithmic Accountability Act</strong>– Proposed US legislation requiring algorithmic bias assessment and reporting
 
-**Industry Standards:**- Ethics boards and responsible AI committees providing organizational oversight
+<strong>Industry Standards:</strong>- Ethics boards and responsible AI committees providing organizational oversight
 - Model cards and data sheets documenting fairness checks and identified risks
 - Regular fairness audits and third-party assessments
 
 ## Key Terms
 
-- **Bias (AI)**– Systematic error in AI outputs caused by prejudiced data, flawed algorithms, or skewed training
-- **Sensitive Attribute**– Demographic feature that may lead to discrimination if used in decision-making
-- **Disparate Impact**– Model predictions disproportionately harming protected groups even without explicit use of sensitive attributes
-- **Transparency**– Degree to which AI decisions and processes can be understood, audited, and explained
-- **Accountability**– Obligation to justify and be answerable for AI system outcomes regarding fairness
+- <strong>Bias (AI)</strong>– Systematic error in AI outputs caused by prejudiced data, flawed algorithms, or skewed training
+- <strong>Sensitive Attribute</strong>– Demographic feature that may lead to discrimination if used in decision-making
+- <strong>Disparate Impact</strong>– Model predictions disproportionately harming protected groups even without explicit use of sensitive attributes
+- <strong>Transparency</strong>– Degree to which AI decisions and processes can be understood, audited, and explained
+- <strong>Accountability</strong>– Obligation to justify and be answerable for AI system outcomes regarding fairness
 
 ## Summary Table: Common Fairness Metrics
 

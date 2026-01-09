@@ -50,8 +50,8 @@ The CAC is China’s primary regulatory and enforcement authority for the PIPL, 
 
 ### 3.1. Territorial Scope
 
-- **Domestic processing:**Applies to all personal information processing within the PRC, regardless of the data subject’s nationality or residency.
-- **Extraterritorial effect:**Applies to organizations outside China processing personal information of individuals in China for the purpose of offering products/services, analyzing or assessing behavior, or other circumstances specified by regulations.
+- <strong>Domestic processing:</strong>Applies to all personal information processing within the PRC, regardless of the data subject’s nationality or residency.
+- <strong>Extraterritorial effect:</strong>Applies to organizations outside China processing personal information of individuals in China for the purpose of offering products/services, analyzing or assessing behavior, or other circumstances specified by regulations.
 
 ### 3.2. Sectoral Scope
 
@@ -155,16 +155,16 @@ Additional requirements:
 - Obtain separate consent
 - Prior approval for judicial or law enforcement transfers
 
-**Recent regulatory updates:**- Provisions on Promoting and Regulating Cross-border Data Flow (effective March 22, 2024)  
+<strong>Recent regulatory updates:</strong>- Provisions on Promoting and Regulating Cross-border Data Flow (effective March 22, 2024)  
 - Measures for the Standard Contract for the Cross-border Transfer of Personal Information (effective June 1, 2023)  
 - Regulation on Network Data Security Management (effective January 1, 2025)  
 - [Hawksford: Cross-border Data Transfers](https://www.hawksford.com/insights-and-guides/china-pipl-compliance-guide)
 
 ## 10. Vendor and Joint Processing Management
 
-- **Joint handlers:**Jointly determining processing purposes and means requires a contract specifying responsibilities; joint and several liability applies.
-- **Entrusted parties:**Processing agreements must clarify purpose, methods, retention, security, and responsibilities.
-- **Supervision:**Handlers remain responsible for compliance by entrusted parties.
+- <strong>Joint handlers:</strong>Jointly determining processing purposes and means requires a contract specifying responsibilities; joint and several liability applies.
+- <strong>Entrusted parties:</strong>Processing agreements must clarify purpose, methods, retention, security, and responsibilities.
+- <strong>Supervision:</strong>Handlers remain responsible for compliance by entrusted parties.
 
 ## 11. Enforcement and Penalties
 
@@ -181,18 +181,18 @@ The CAC is the lead PIPL enforcer. Sector-specific regulators (e.g., banking, he
 
 ### 12.1. AI Chatbot and Automation Context
 
-- **Chatbots:**Consent must be obtained before collecting chat transcripts with personal data. Sensitive data (medical, financial) requires separate consent.
-- **Automated decision-making:**Individuals have the right to explanation and objection if AI is used for profiling or credit scoring.
-- **Cross-border data:**Chatbot platforms hosted outside China must use compliant transfer mechanisms and obtain separate consent.
-- **Children’s interactions:**Chatbots interacting with minors under 14 require guardian consent and special protection.
-- **DPO appointment:**Providers handling large user volumes must appoint a DPO and perform regular audits.
+- <strong>Chatbots:</strong>Consent must be obtained before collecting chat transcripts with personal data. Sensitive data (medical, financial) requires separate consent.
+- <strong>Automated decision-making:</strong>Individuals have the right to explanation and objection if AI is used for profiling or credit scoring.
+- <strong>Cross-border data:</strong>Chatbot platforms hosted outside China must use compliant transfer mechanisms and obtain separate consent.
+- <strong>Children’s interactions:</strong>Chatbots interacting with minors under 14 require guardian consent and special protection.
+- <strong>DPO appointment:</strong>Providers handling large user volumes must appoint a DPO and perform regular audits.
 
 ### 12.2. Compliance Automation
 
-- **Consent management:**Automated systems for collecting and recording explicit and separate consents.
-- **Data subject requests:**Automated workflows to process access, rectification, and deletion requests.
-- **Impact assessment tools:**Software to streamline PIPIA documentation and compliance tracking.
-- **Vendor management:**Risk assessment systems for evaluating third-party processors.
+- <strong>Consent management:</strong>Automated systems for collecting and recording explicit and separate consents.
+- <strong>Data subject requests:</strong>Automated workflows to process access, rectification, and deletion requests.
+- <strong>Impact assessment tools:</strong>Software to streamline PIPIA documentation and compliance tracking.
+- <strong>Vendor management:</strong>Risk assessment systems for evaluating third-party processors.
 ## 13. Comparison with Other Data Protection Laws
 
 | Feature                    | PIPL (China)                                           | GDPR (EU)                               | CCPA/CPRA (California, US)         |
@@ -206,32 +206,32 @@ The CAC is the lead PIPL enforcer. Sector-specific regulators (e.g., banking, he
 | Penalties                  | Up to 50 million RMB or 5% of revenue                  | Up to €20 million or 4% of revenue      | $2,500–$7,500 per violation        |
 ## 14. Practical Steps for Compliance
 
-1. **Data Mapping:**Catalog all personal information processing activities, including AI/chatbots.
-2. **Privacy Notice:**Publish policies meeting PIPL standards.
-3. **Consent Management:**Implement systems for explicit and separate consent.
-4. **Data Subject Rights:**Enable mechanisms for access, correction, and deletion.
-5. **Impact Assessments:**Conduct and retain PIPIA for high-risk scenarios.
-6. **DPO Appointment:**Assess need based on processing volume and register DPO if required.
-7. **Cross-Border Transfers:**Choose a legal transfer mechanism and update contracts accordingly.
-8. **Vendor Oversight:**Conduct due diligence and formalize processor agreements.
-9. **Security Controls:**Apply encryption, access management, and incident response measures.
-10. **Audit and Training:**Regularly audit compliance and train staff on privacy obligations.
+1. <strong>Data Mapping:</strong>Catalog all personal information processing activities, including AI/chatbots.
+2. <strong>Privacy Notice:</strong>Publish policies meeting PIPL standards.
+3. <strong>Consent Management:</strong>Implement systems for explicit and separate consent.
+4. <strong>Data Subject Rights:</strong>Enable mechanisms for access, correction, and deletion.
+5. <strong>Impact Assessments:</strong>Conduct and retain PIPIA for high-risk scenarios.
+6. <strong>DPO Appointment:</strong>Assess need based on processing volume and register DPO if required.
+7. <strong>Cross-Border Transfers:</strong>Choose a legal transfer mechanism and update contracts accordingly.
+8. <strong>Vendor Oversight:</strong>Conduct due diligence and formalize processor agreements.
+9. <strong>Security Controls:</strong>Apply encryption, access management, and incident response measures.
+10. <strong>Audit and Training:</strong>Regularly audit compliance and train staff on privacy obligations.
 
 ## 15. Ambiguities and Evolving Aspects
 
-- **Thresholds for DPO/localization:**The CAC has not yet specified precise data volume thresholds for DPO appointment or mandatory localization.
-- **Separate consent:**No detailed regulatory guidance, but best practice is to require clear, unbundled consent.
-- **Joint processing and processor supervision:**The PIPL imposes joint and several liability but leaves some requirements under-defined.
-- **Regulatory updates:**Ongoing supplemental regulations, especially for cross-border transfers and sensitive data.
+- <strong>Thresholds for DPO/localization:</strong>The CAC has not yet specified precise data volume thresholds for DPO appointment or mandatory localization.
+- <strong>Separate consent:</strong>No detailed regulatory guidance, but best practice is to require clear, unbundled consent.
+- <strong>Joint processing and processor supervision:</strong>The PIPL imposes joint and several liability but leaves some requirements under-defined.
+- <strong>Regulatory updates:</strong>Ongoing supplemental regulations, especially for cross-border transfers and sensitive data.
 
 Stay updated via CAC guidance and industry best practices.
 
 ## 16. Related Terms
 
-- **Data Security Law (DSL):**Covers broader data protection and classification rules in China.
-- **Cybersecurity Law (CSL):**Sets baseline network and cybersecurity requirements.
-- **Personal Information Security Specification (PIS Specification):**Detailed national guidance, highly persuasive but non-binding.
-- **Network Data:**Data processed or generated by networked systems, subject to evolving regulation.
+- <strong>Data Security Law (DSL):</strong>Covers broader data protection and classification rules in China.
+- <strong>Cybersecurity Law (CSL):</strong>Sets baseline network and cybersecurity requirements.
+- <strong>Personal Information Security Specification (PIS Specification):</strong>Detailed national guidance, highly persuasive but non-binding.
+- <strong>Network Data:</strong>Data processed or generated by networked systems, subject to evolving regulation.
 
 ## References
 
@@ -245,5 +245,5 @@ Stay updated via CAC guidance and industry best practices.
 8. [Personal Information Protection Law (unofficial English translation)](https://digichina.stanford.edu/work/translation-personal-information-protection-law-of-the-peoples-republic-of-china-effective-nov-1-2021/)
 9. [Cyberspace Administration of China (CAC)](http://www.cac.gov.cn/)
 10. [Personal Information Security Specification (Chinese National Standard)](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=6C4A1B0C7E668CFAB0C2C6D6F4B2E5A8)
-**For more up-to-date guidance, refer to the [Cyberspace Administration of China’s official announcements](http://www.cac.gov.cn/) and consult with privacy legal advisors specializing in Chinese data protection law.**
+<strong>For more up-to-date guidance, refer to the [Cyberspace Administration of China’s official announcements](http://www.cac.gov.cn/) and consult with privacy legal advisors specializing in Chinese data protection law.</strong>
 

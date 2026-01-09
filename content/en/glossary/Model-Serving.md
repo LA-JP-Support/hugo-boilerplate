@@ -20,17 +20,17 @@ The process separates model development from deployment and usage, allowing scal
 
 ### Typical Workflow
 
-**Train Model:**Use ML framework (TensorFlow, PyTorch, scikit-learn, XGBoost) to build and train model on historical data.
+<strong>Train Model:</strong>Use ML framework (TensorFlow, PyTorch, scikit-learn, XGBoost) to build and train model on historical data.
 
-**Package Model:**Serialize or export trained model to portable format (.pkl, .pt, .onnx, .pb).
+<strong>Package Model:</strong>Serialize or export trained model to portable format (.pkl, .pt, .onnx, .pb).
 
-**Wrap with API:**Use frameworks like FastAPI, Flask, or specialized tools like TensorFlow Serving, TorchServe, or KServe to expose model as HTTP/gRPC API.
+<strong>Wrap with API:</strong>Use frameworks like FastAPI, Flask, or specialized tools like TensorFlow Serving, TorchServe, or KServe to expose model as HTTP/gRPC API.
 
-**Deploy Infrastructure:**Deploy model and API to server, container, Kubernetes pod, or cloud-managed service.
+<strong>Deploy Infrastructure:</strong>Deploy model and API to server, container, Kubernetes pod, or cloud-managed service.
 
-**Handle Requests:**Incoming data (JSON, images, tabular) sent to serving endpoint, model processes it, result returned.
+<strong>Handle Requests:</strong>Incoming data (JSON, images, tabular) sent to serving endpoint, model processes it, result returned.
 
-**Monitor and Scale:**Use monitoring tools to track usage, latency, errors. Autoscale resources as needed and update model version through CI/CD.
+<strong>Monitor and Scale:</strong>Use monitoring tools to track usage, latency, errors. Autoscale resources as needed and update model version through CI/CD.
 
 ### Architecture Pattern
 
@@ -40,28 +40,28 @@ Monitoring and scaling services surround API ensuring health and performance. Ce
 
 ## Why Model Serving is Needed
 
-**Real-Time Inference:**Enables instant decisioning (fraud detection, recommendations, personalization) with strict latency requirements under 100ms.
+<strong>Real-Time Inference:</strong>Enables instant decisioning (fraud detection, recommendations, personalization) with strict latency requirements under 100ms.
 
-**Batch Processing:**Supports efficient scoring of large datasets (nightly churn prediction over millions of records).
+<strong>Batch Processing:</strong>Supports efficient scoring of large datasets (nightly churn prediction over millions of records).
 
-**Centralized Management:**Decouples model logic from application code; multiple apps can use same model endpoint.
+<strong>Centralized Management:</strong>Decouples model logic from application code; multiple apps can use same model endpoint.
 
-**Versioning and Updates:**Allows safe deployment, A/B testing, rollback, and canary releases of models.
+<strong>Versioning and Updates:</strong>Allows safe deployment, A/B testing, rollback, and canary releases of models.
 
-**Scalable Infrastructure:**Leverages cloud/serverless autoscaling to handle variable load and optimize costs.
+<strong>Scalable Infrastructure:</strong>Leverages cloud/serverless autoscaling to handle variable load and optimize costs.
 
 ## Key Features
 
 | Feature | Description |
 |---------|-------------|
-| **API Access**| Serve models via HTTP/REST, gRPC, or custom protocols |
-| **Scalability**| Autoscale up/down based on demand, including scale-to-zero |
-| **Low Latency**| Sub-100ms response times for real-time applications |
-| **Model Versioning**| Deploy/manage multiple versions, support rollbacks and A/B testing |
-| **Monitoring**| Dashboards for usage, errors, latency, model drift, resource utilization |
-| **Security**| Authentication, authorization, encryption (TLS), compliance |
-| **Integration**| Connect to feature stores, data sources, orchestration tools |
-| **Cost Optimization**| Dynamically allocate resources, pay-per-use billing |
+| <strong>API Access</strong>| Serve models via HTTP/REST, gRPC, or custom protocols |
+| <strong>Scalability</strong>| Autoscale up/down based on demand, including scale-to-zero |
+| <strong>Low Latency</strong>| Sub-100ms response times for real-time applications |
+| <strong>Model Versioning</strong>| Deploy/manage multiple versions, support rollbacks and A/B testing |
+| <strong>Monitoring</strong>| Dashboards for usage, errors, latency, model drift, resource utilization |
+| <strong>Security</strong>| Authentication, authorization, encryption (TLS), compliance |
+| <strong>Integration</strong>| Connect to feature stores, data sources, orchestration tools |
+| <strong>Cost Optimization</strong>| Dynamically allocate resources, pay-per-use billing |
 
 ## Use Cases
 
@@ -89,23 +89,23 @@ Telecommunications firms use batch model serving to score churn risk for million
 
 ### Monolithic vs. API-Based
 
-**Monolithic:**Model code embedded in application. Updating requires app redeployment; not reusable by other services.
+<strong>Monolithic:</strong>Model code embedded in application. Updating requires app redeployment; not reusable by other services.
 
-**API-Based (Service-Oriented):**Model is standalone service accessible via API—supports sharing, centralized management, independent updates.
+<strong>API-Based (Service-Oriented):</strong>Model is standalone service accessible via API—supports sharing, centralized management, independent updates.
 
 ### Batch vs. Real-Time
 
-**Batch:**Processes large datasets on schedule (nightly jobs).
+<strong>Batch:</strong>Processes large datasets on schedule (nightly jobs).
 
-**Real-Time:**Responds to individual requests with low latency (fraud checks, recommendations).
+<strong>Real-Time:</strong>Responds to individual requests with low latency (fraud checks, recommendations).
 
 ### Deployment Options
 
-**On-Premise:**Full control but high cost and maintenance.
+<strong>On-Premise:</strong>Full control but high cost and maintenance.
 
-**Cloud/Serverless:**Managed, elastic, scalable, pay-as-you-go.
+<strong>Cloud/Serverless:</strong>Managed, elastic, scalable, pay-as-you-go.
 
-**Hybrid:**Sensitive models/data on-premise; non-sensitive in cloud.
+<strong>Hybrid:</strong>Sensitive models/data on-premise; non-sensitive in cloud.
 
 ## Operational Considerations
 
@@ -119,11 +119,11 @@ Real-time apps require sub-100ms inference; batch jobs can tolerate higher laten
 
 ### Cost and Infrastructure
 
-**On-Premise:**High capex (Nvidia A100 GPUs >$10,000 each).
+<strong>On-Premise:</strong>High capex (Nvidia A100 GPUs >$10,000 each).
 
-**Cloud:**Opex/pay-per-use (AWS GPU: $1–32/hr).
+<strong>Cloud:</strong>Opex/pay-per-use (AWS GPU: $1–32/hr).
 
-**Managed Platforms:**Optimize for cost but may restrict deep customization.
+<strong>Managed Platforms:</strong>Optimize for cost but may restrict deep customization.
 
 ### Security and Privacy
 
@@ -137,13 +137,13 @@ Real-time dashboards for latency, error rates, throughput. Model drift detection
 
 | Platform | Best For | Key Features |
 |----------|----------|--------------|
-| **TensorFlow Serving**| TensorFlow models | Scalable, production-ready serving |
-| **TorchServe**| PyTorch models | Multi-model, REST/gRPC APIs |
-| **KServe**| Kubernetes-native | Multi-framework, A/B testing |
-| **Amazon SageMaker**| Managed cloud | Training, deployment, endpoints, monitoring |
-| **Azure ML**| Managed cloud | Training, serving, versioning, security |
-| **Databricks Model Serving**| Unified ML platform | Real-time/batch, serverless, monitoring |
-| **Hugging Face Inference**| NLP/LLM models | Fast transformer model deployment |
+| <strong>TensorFlow Serving</strong>| TensorFlow models | Scalable, production-ready serving |
+| <strong>TorchServe</strong>| PyTorch models | Multi-model, REST/gRPC APIs |
+| <strong>KServe</strong>| Kubernetes-native | Multi-framework, A/B testing |
+| <strong>Amazon SageMaker</strong>| Managed cloud | Training, deployment, endpoints, monitoring |
+| <strong>Azure ML</strong>| Managed cloud | Training, serving, versioning, security |
+| <strong>Databricks Model Serving</strong>| Unified ML platform | Real-time/batch, serverless, monitoring |
+| <strong>Hugging Face Inference</strong>| NLP/LLM models | Fast transformer model deployment |
 
 ## Implementation Example
 
@@ -172,55 +172,55 @@ Package with Docker, deploy to Kubernetes, cloud VM, or managed platform.
 
 ### Benefits
 
-**Scalability:**Handle unpredictable or bursty workloads via cloud/serverless autoscaling.
+<strong>Scalability:</strong>Handle unpredictable or bursty workloads via cloud/serverless autoscaling.
 
-**Cost Efficiency:**Pay for actual usage; avoid upfront hardware investments.
+<strong>Cost Efficiency:</strong>Pay for actual usage; avoid upfront hardware investments.
 
-**Reduced DevOps:**Managed platforms simplify infrastructure, security, and monitoring.
+<strong>Reduced DevOps:</strong>Managed platforms simplify infrastructure, security, and monitoring.
 
-**Faster Production:**Shorten time from model development to deployment.
+<strong>Faster Production:</strong>Shorten time from model development to deployment.
 
-**Centralized Monitoring:**Unified dashboards for all model endpoints.
+<strong>Centralized Monitoring:</strong>Unified dashboards for all model endpoints.
 
 ### Drawbacks
 
-**Data Privacy:**Using external/managed platforms may raise compliance concerns.
+<strong>Data Privacy:</strong>Using external/managed platforms may raise compliance concerns.
 
-**Customization Limits:**Managed services may restrict advanced tuning or hardware options.
+<strong>Customization Limits:</strong>Managed services may restrict advanced tuning or hardware options.
 
-**Vendor Lock-in:**Switching platforms can require re-engineering.
+<strong>Vendor Lock-in:</strong>Switching platforms can require re-engineering.
 
-**Cost Predictability:**Usage-based pricing can fluctuate with traffic spikes.
+<strong>Cost Predictability:</strong>Usage-based pricing can fluctuate with traffic spikes.
 
-**Security Responsibility:**On-premise deployments require in-house hardening and monitoring.
+<strong>Security Responsibility:</strong>On-premise deployments require in-house hardening and monitoring.
 
 ## Model Serving vs. Model Deployment
 
-**Model Deployment:**Act of moving trained model into production environment (uploading, registering, containerizing).
+<strong>Model Deployment:</strong>Act of moving trained model into production environment (uploading, registering, containerizing).
 
-**Model Serving:**Ongoing operation making deployed model available for inference requests (API, batch).
+<strong>Model Serving:</strong>Ongoing operation making deployed model available for inference requests (API, batch).
 
 Deployment is how you deliver model to production; serving is how you make it available for real-world use.
 
 ## Best Practices
 
-**Framework Compatibility:**Verify ML framework supported (TensorFlow, PyTorch, Hugging Face).
+<strong>Framework Compatibility:</strong>Verify ML framework supported (TensorFlow, PyTorch, Hugging Face).
 
-**Inference Mode:**Determine real-time or batch inference requirements.
+<strong>Inference Mode:</strong>Determine real-time or batch inference requirements.
 
-**Performance Requirements:**Define latency and throughput requirements.
+<strong>Performance Requirements:</strong>Define latency and throughput requirements.
 
-**Data Sensitivity:**Assess privacy and regulatory requirements.
+<strong>Data Sensitivity:</strong>Assess privacy and regulatory requirements.
 
-**Priority Balancing:**Decide between cost, flexibility, or speed priorities.
+<strong>Priority Balancing:</strong>Decide between cost, flexibility, or speed priorities.
 
-**Update Strategy:**Plan how to monitor and update models in production.
+<strong>Update Strategy:</strong>Plan how to monitor and update models in production.
 
-**Vendor Independence:**Consider vendor lock-in implications.
+<strong>Vendor Independence:</strong>Consider vendor lock-in implications.
 
-**Testing:**Comprehensive testing before production deployment.
+<strong>Testing:</strong>Comprehensive testing before production deployment.
 
-**Documentation:**Maintain documentation for endpoints, versioning, rollback procedures.
+<strong>Documentation:</strong>Maintain documentation for endpoints, versioning, rollback procedures.
 
 ## References
 

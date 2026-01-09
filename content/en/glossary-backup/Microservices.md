@@ -17,7 +17,7 @@ draft: false
 
 The set of operations and domain events a service exposes. APIs are accessed over protocols such as HTTP/REST, gRPC, or message queues and form the contract between microservices and their clients (other services or frontends).
 
-- **Further reading:**[Microservices.io: API](https://microservices.io/articles/glossary#api)
+- <strong>Further reading:</strong>[Microservices.io: API](https://microservices.io/articles/glossary#api)
 
 ### API Gateway
 
@@ -45,8 +45,8 @@ Automated pipelines for building, testing, and deploying software changes, enabl
 
 ### Command & Query
 
-- **Command:**An operation that modifies data or state.
-- **Query:**An operation that retrieves data without side effects.
+- <strong>Command:</strong>An operation that modifies data or state.
+- <strong>Query:</strong>An operation that retrieves data without side effects.
 
 ### Container
 
@@ -176,9 +176,9 @@ The process of managing changes to service APIs or data contracts to ensure back
 - [Microservices Anti-Patterns](https://microservices.io/patterns/anti-patterns/index.html)
 - [Eventuate: Distributed Data Patterns](https://eventuate.io/)
 
-**For more in-depth information, consult:**- [Microservices.io](https://microservices.io/)
+<strong>For more in-depth information, consult:</strong>- [Microservices.io](https://microservices.io/)
 - [AWS Microservices](https://aws.amazon.com/microservices/)
 - [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)
 - [Google Cloud Microservices](https://cloud.google.com/learn/what-is-microservices-architecture)
 
-**Note:**For each term, further reading links offer deep dives, practical patterns, and real-world examples. Explore the references for implementation details, architectural diagrams, and expert guidance.
+<strong>Note:</strong>For each term, further reading links offer deep dives, practical patterns, and real-world examples. Explore the references for implementation details, architectural diagrams, and expert guidance.

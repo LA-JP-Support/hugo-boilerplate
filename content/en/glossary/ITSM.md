@@ -16,97 +16,97 @@ ITSM (IT Service Management) is a systematic approach for designing, delivering,
 
 ITSM is not defined by a single tool or help desk function. Rather, it comprises a holistic set of processes, practices, and frameworks guiding how IT teams manage the complete lifecycle of IT services—from strategic planning and design to operational support and continuous enhancement.
 
-**Key Concept:**ITSM operates as the "operating system" for IT organizations: it orchestrates people, processes, and technologies to ensure reliable, efficient, and high-quality IT services.
+<strong>Key Concept:</strong>ITSM operates as the "operating system" for IT organizations: it orchestrates people, processes, and technologies to ensure reliable, efficient, and high-quality IT services.
 
 ## How ITSM is Used
 
 ITSM is implemented to standardize, streamline, and optimize IT service delivery:
 
-- **Incident and Problem Management**– Issues logged, prioritized, investigated, and resolved using structured workflows, minimizing business disruption
-- **Service Request Fulfillment**– Routine IT requests handled via automated, repeatable workflows
-- **Change Enablement**– Evaluating, approving, and implementing changes to IT systems in controlled manner to reduce risk
-- **IT Asset Tracking**– Comprehensive visibility into hardware, software, licenses, and configurations through their lifecycle
-- **Knowledge Management**– Creating and maintaining accessible knowledge bases
-- **Automation and AI Integration**– Deploying automation tools and AI-driven chatbots to handle repetitive tasks
-- **Business Alignment**– Ensuring IT activities and resources are directly linked to business goals
+- <strong>Incident and Problem Management</strong>– Issues logged, prioritized, investigated, and resolved using structured workflows, minimizing business disruption
+- <strong>Service Request Fulfillment</strong>– Routine IT requests handled via automated, repeatable workflows
+- <strong>Change Enablement</strong>– Evaluating, approving, and implementing changes to IT systems in controlled manner to reduce risk
+- <strong>IT Asset Tracking</strong>– Comprehensive visibility into hardware, software, licenses, and configurations through their lifecycle
+- <strong>Knowledge Management</strong>– Creating and maintaining accessible knowledge bases
+- <strong>Automation and AI Integration</strong>– Deploying automation tools and AI-driven chatbots to handle repetitive tasks
+- <strong>Business Alignment</strong>– Ensuring IT activities and resources are directly linked to business goals
 
 ## Core ITSM Processes
 
 ITSM is implemented through interconnected processes, often standardized via frameworks like ITIL:
 
-**Incident Management:**Restores normal service operation as quickly as possible after unplanned interruption.
+<strong>Incident Management:</strong>Restores normal service operation as quickly as possible after unplanned interruption.
 
-**Problem Management:**Identifies, analyzes, and eliminates root causes of recurring or significant incidents.
+<strong>Problem Management:</strong>Identifies, analyzes, and eliminates root causes of recurring or significant incidents.
 
-**Change Management (Change Enablement):**Ensures all changes to IT systems are evaluated, approved, and implemented with minimal risk and maximum transparency.
+<strong>Change Management (Change Enablement):</strong>Ensures all changes to IT systems are evaluated, approved, and implemented with minimal risk and maximum transparency.
 
-**Service Request Management:**Fulfills standardized user requests using predefined workflows and automation.
+<strong>Service Request Management:</strong>Fulfills standardized user requests using predefined workflows and automation.
 
-**Configuration Management:**Maintains up-to-date record of IT components and their relationships via Configuration Management Database (CMDB).
+<strong>Configuration Management:</strong>Maintains up-to-date record of IT components and their relationships via Configuration Management Database (CMDB).
 
-**IT Asset Management:**Manages lifecycle of IT assets—hardware, software, licenses—for compliance, optimization, and cost control.
+<strong>IT Asset Management:</strong>Manages lifecycle of IT assets—hardware, software, licenses—for compliance, optimization, and cost control.
 
-**Knowledge Management:**Documents, structures, and shares knowledge, enabling efficient problem-solving.
+<strong>Knowledge Management:</strong>Documents, structures, and shares knowledge, enabling efficient problem-solving.
 
-**Service Level Management:**Defines, monitors, and reports on service levels (SLAs) between IT and business customers.
+<strong>Service Level Management:</strong>Defines, monitors, and reports on service levels (SLAs) between IT and business customers.
 
 ## Popular ITSM Frameworks
 
 | Framework | Focus Area | Key Attributes |
 |-----------|------------|----------------|
-| **ITIL**| Comprehensive ITSM best practices | Emphasizes value creation and continuous improvement, defines 34 management practices |
-| **COBIT**| IT governance and management | Focuses on compliance, risk, and alignment with business goals |
-| **ISO/IEC 20000**| International standard for ITSM | Specifies requirements for establishing, implementing, and improving ITSM systems |
-| **FitSM**| Lightweight ITSM standard | Practical and streamlined, ideal for smaller organizations |
-| **VeriSM**| Service management for digital organizations | Flexible, integrates multiple management methods |
-| **SIAM**| Multi-provider service management | Focuses on integrating and managing services from multiple vendors |
-| **DevOps**| Collaboration between development and operations | Stresses speed, automation, and cultural change |
+| <strong>ITIL</strong>| Comprehensive ITSM best practices | Emphasizes value creation and continuous improvement, defines 34 management practices |
+| <strong>COBIT</strong>| IT governance and management | Focuses on compliance, risk, and alignment with business goals |
+| <strong>ISO/IEC 20000</strong>| International standard for ITSM | Specifies requirements for establishing, implementing, and improving ITSM systems |
+| <strong>FitSM</strong>| Lightweight ITSM standard | Practical and streamlined, ideal for smaller organizations |
+| <strong>VeriSM</strong>| Service management for digital organizations | Flexible, integrates multiple management methods |
+| <strong>SIAM</strong>| Multi-provider service management | Focuses on integrating and managing services from multiple vendors |
+| <strong>DevOps</strong>| Collaboration between development and operations | Stresses speed, automation, and cultural change |
 
 ## ITSM vs Related Concepts
 
 | Concept | Description |
 |---------|-------------|
-| **ITSM**| Overarching management of IT services, processes, roles, and supporting tools |
-| **ITIL**| Framework providing best practices for implementing ITSM processes |
-| **Help Desk**| ITSM function focused on resolving user issues and incidents |
-| **DevOps**| Methodology promoting collaboration and automation between development and operations |
-| **ESM**| Applies ITSM principles to other business functions (HR, Facilities) |
+| <strong>ITSM</strong>| Overarching management of IT services, processes, roles, and supporting tools |
+| <strong>ITIL</strong>| Framework providing best practices for implementing ITSM processes |
+| <strong>Help Desk</strong>| ITSM function focused on resolving user issues and incidents |
+| <strong>DevOps</strong>| Methodology promoting collaboration and automation between development and operations |
+| <strong>ESM</strong>| Applies ITSM principles to other business functions (HR, Facilities) |
 
 ## Benefits of ITSM
 
-**Increased Efficiency:**Standardized processes and automation reduce manual work and human error.
+<strong>Increased Efficiency:</strong>Standardized processes and automation reduce manual work and human error.
 
-**Improved Service Quality:**Proactive monitoring, incident/problem management, and process optimization minimize downtime.
+<strong>Improved Service Quality:</strong>Proactive monitoring, incident/problem management, and process optimization minimize downtime.
 
-**Faster Response and Resolution:**Automated workflows and clear escalation paths accelerate problem-solving.
+<strong>Faster Response and Resolution:</strong>Automated workflows and clear escalation paths accelerate problem-solving.
 
-**User & Customer Satisfaction:**Self-service portals, knowledge bases, and transparent updates improve experiences.
+<strong>User & Customer Satisfaction:</strong>Self-service portals, knowledge bases, and transparent updates improve experiences.
 
-**Cost Control:**Asset visibility and license management reduce waste and support smarter spending.
+<strong>Cost Control:</strong>Asset visibility and license management reduce waste and support smarter spending.
 
-**Compliance & Security:**Defined processes and audit trails support regulatory adherence and risk reduction.
+<strong>Compliance & Security:</strong>Defined processes and audit trails support regulatory adherence and risk reduction.
 
-**Continuous Improvement:**Metrics and feedback loops support ongoing optimization.
+<strong>Continuous Improvement:</strong>Metrics and feedback loops support ongoing optimization.
 
-**Scalability:**Standardized practices enable organizational growth without sacrificing control.
+<strong>Scalability:</strong>Standardized practices enable organizational growth without sacrificing control.
 
-**Business Alignment:**Ensures IT services actively support strategic objectives.
+<strong>Business Alignment:</strong>Ensures IT services actively support strategic objectives.
 
 ## ITSM Implementation Roadmap
 
-**1. Assess Current State:**Evaluate existing IT processes, tools, and pain points; prioritize improvement areas.
+<strong>1. Assess Current State:</strong>Evaluate existing IT processes, tools, and pain points; prioritize improvement areas.
 
-**2. Define Goals and Strategy:**Engage stakeholders, set clear objectives, select suitable frameworks.
+<strong>2. Define Goals and Strategy:</strong>Engage stakeholders, set clear objectives, select suitable frameworks.
 
-**3. Design Processes & Roles:**Map key processes, define roles and responsibilities.
+<strong>3. Design Processes & Roles:</strong>Map key processes, define roles and responsibilities.
 
-**4. Select and Configure Tools:**Choose ITSM platforms that fit needs, support required integrations, automation, and scalability.
+<strong>4. Select and Configure Tools:</strong>Choose ITSM platforms that fit needs, support required integrations, automation, and scalability.
 
-**5. Implement & Train:**Deploy processes and tools in phases, provide training and change management for adoption.
+<strong>5. Implement & Train:</strong>Deploy processes and tools in phases, provide training and change management for adoption.
 
-**6. Monitor, Measure, and Improve:**Track performance with dashboards and KPIs, solicit feedback, refine workflows.
+<strong>6. Monitor, Measure, and Improve:</strong>Track performance with dashboards and KPIs, solicit feedback, refine workflows.
 
-**Implementation Tips:**- Start with high-impact areas (incident and change management)
+<strong>Implementation Tips:</strong>- Start with high-impact areas (incident and change management)
 - Prioritize data quality, especially for CMDBs and asset management
 - Involve all stakeholders early
 - Customize frameworks to organizational context
@@ -114,19 +114,19 @@ ITSM is implemented through interconnected processes, often standardized via fra
 
 ## Common Use Cases
 
-**Automated Employee Onboarding:**Automated workflows provision laptops, assign software, set up access for new hires.
+<strong>Automated Employee Onboarding:</strong>Automated workflows provision laptops, assign software, set up access for new hires.
 
-**Self-Service Portals:**Employees reset passwords or request software via portals or chatbots, reducing service desk workload.
+<strong>Self-Service Portals:</strong>Employees reset passwords or request software via portals or chatbots, reducing service desk workload.
 
-**Proactive Incident Management:**Monitoring tools trigger incidents for outages and automatically route issues to relevant teams.
+<strong>Proactive Incident Management:</strong>Monitoring tools trigger incidents for outages and automatically route issues to relevant teams.
 
-**Asset & Configuration Management:**Real-time asset visibility supports audits and compliance, especially in regulated industries.
+<strong>Asset & Configuration Management:</strong>Real-time asset visibility supports audits and compliance, especially in regulated industries.
 
-**Multi-Provider Service Integration (SIAM):**Unified service catalogs and vendor performance management across global, multi-vendor environments.
+<strong>Multi-Provider Service Integration (SIAM):</strong>Unified service catalogs and vendor performance management across global, multi-vendor environments.
 
 ## ITSM Software and Tools
 
-**Core Features:**- Service desk/ticketing system
+<strong>Core Features:</strong>- Service desk/ticketing system
 - Self-service portals and knowledge bases
 - Workflow automation (approvals and notifications)
 - Asset and configuration management (CMDB)
@@ -134,12 +134,12 @@ ITSM is implemented through interconnected processes, often standardized via fra
 - API integration with business systems
 - AI-enabled chatbots and virtual agents
 
-**Popular ITSM Tools:**- ServiceNow
+<strong>Popular ITSM Tools:</strong>- ServiceNow
 - Jira Service Management
 - Ivanti ITSM
 - BMC Helix ITSM
 
-**Evaluation Tips:**- Usability and adaptability
+<strong>Evaluation Tips:</strong>- Usability and adaptability
 - Automation and AI support
 - Seamless integration with existing tools
 - Scalability and multi-department (ESM) expansion
@@ -148,40 +148,40 @@ ITSM is implemented through interconnected processes, often standardized via fra
 
 Modern ITSM increasingly leverages automation and AI:
 
-**AI-Powered Virtual Agents:**Chatbots handle common queries, ticket creation, and knowledge search.
+<strong>AI-Powered Virtual Agents:</strong>Chatbots handle common queries, ticket creation, and knowledge search.
 
-**Automated Ticket Routing:**Machine learning classifies and routes incidents based on historical data.
+<strong>Automated Ticket Routing:</strong>Machine learning classifies and routes incidents based on historical data.
 
-**Predictive Analytics:**AI analyzes patterns to predict outages or recurring problems and enables proactive fixes.
+<strong>Predictive Analytics:</strong>AI analyzes patterns to predict outages or recurring problems and enables proactive fixes.
 
-**Knowledge Base Automation:**AI curates and generates documentation to improve self-service.
+<strong>Knowledge Base Automation:</strong>AI curates and generates documentation to improve self-service.
 
-**Event-Driven Automation:**Automated workflows remediate issues and update records without human intervention.
+<strong>Event-Driven Automation:</strong>Automated workflows remediate issues and update records without human intervention.
 
-**Considerations:**Robust data governance and security frameworks critical as automation and AI become more deeply embedded.
+<strong>Considerations:</strong>Robust data governance and security frameworks critical as automation and AI become more deeply embedded.
 
 ## ITSM Maturity
 
 ITSM Maturity describes how formalized and optimized an organization's ITSM processes are:
 
-1. **Initial (Ad hoc)**– Processes informal, unstructured, reactive
-2. **Repeatable**– Basic, repeatable processes in place
-3. **Defined**– Processes documented, standardized, communicated
-4. **Managed**– Processes measured, monitored, actively managed
-5. **Optimized**– Continuous improvement and automation integral to operations
+1. <strong>Initial (Ad hoc)</strong>– Processes informal, unstructured, reactive
+2. <strong>Repeatable</strong>– Basic, repeatable processes in place
+3. <strong>Defined</strong>– Processes documented, standardized, communicated
+4. <strong>Managed</strong>– Processes measured, monitored, actively managed
+5. <strong>Optimized</strong>– Continuous improvement and automation integral to operations
 
-**Continuous Improvement:**Ongoing reviews, user feedback, and data analysis ensure ITSM evolves with business needs and technology changes.
+<strong>Continuous Improvement:</strong>Ongoing reviews, user feedback, and data analysis ensure ITSM evolves with business needs and technology changes.
 
 ## Best Practices
 
-**Do:**- Align ITSM with business priorities
+<strong>Do:</strong>- Align ITSM with business priorities
 - Invest in training and stakeholder engagement
 - Prioritize people and process before selecting tools
 - Customize frameworks for your environment
 - Promote transparency and accountability
 - Foster continuous improvement
 
-**Don't:**- Blindly copy frameworks without adaptation
+<strong>Don't:</strong>- Blindly copy frameworks without adaptation
 - Ignore organizational culture and change management
 - Focus on tools at expense of process or people
 - Neglect continuous improvement

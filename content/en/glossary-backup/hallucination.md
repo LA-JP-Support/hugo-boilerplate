@@ -15,60 +15,60 @@ Hallucination in artificial intelligence (AI) refers to the phenomenon where a g
 
 This phenomenon is metaphorically named after human sensory hallucinations: the perception of things that do not exist. In AI, however, these “perceptions” are algorithmic outputs without conscious experience. Hallucination is a central challenge in AI deployment, especially as LLMs and other generative systems are increasingly trusted for decision support, automated content creation, and real-time conversational interaction.
 
-**Further reading:**- [Oxford University on Hallucination Detection](https://www.ox.ac.uk/news/2024-06-20-major-research-hallucinating-generative-models-advances-reliability-artificial)
+<strong>Further reading:</strong>- [Oxford University on Hallucination Detection](https://www.ox.ac.uk/news/2024-06-20-major-research-hallucinating-generative-models-advances-reliability-artificial)
 - [CASMI at Northwestern: Hallucination—A Feature, Not a Bug](https://casmi.northwestern.edu/news/articles/2024/the-hallucination-problem-a-feature-not-a-bug.html)
 - [Google Cloud: What are AI Hallucinations?](https://cloud.google.com/discover/what-are-ai-hallucinations)
 - [Wikipedia: Hallucination (Artificial Intelligence)](https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence))
 
 ## Key Characteristics of AI Hallucination
 
-- **Plausibility:**AI-generated hallucinations are often structurally, grammatically, and stylistically correct, making them appear convincing.
-- **Incorrectness:**The content is factually wrong or logically inconsistent, sometimes inventing non-existent entities, events, or data.
-- **Confidence:**AI models frequently present hallucinated outputs with high confidence, lacking mechanisms for expressing genuine uncertainty unless specifically engineered.
-- **Unintentionality:**Hallucinations are not the result of intentional deception but stem from the model’s limitations, gaps in training data, or the probabilistic nature of language and content generation.
+- <strong>Plausibility:</strong>AI-generated hallucinations are often structurally, grammatically, and stylistically correct, making them appear convincing.
+- <strong>Incorrectness:</strong>The content is factually wrong or logically inconsistent, sometimes inventing non-existent entities, events, or data.
+- <strong>Confidence:</strong>AI models frequently present hallucinated outputs with high confidence, lacking mechanisms for expressing genuine uncertainty unless specifically engineered.
+- <strong>Unintentionality:</strong>Hallucinations are not the result of intentional deception but stem from the model’s limitations, gaps in training data, or the probabilistic nature of language and content generation.
 ## How Is Hallucination Used in AI Systems?
 
 Hallucinations are universally recognized as a challenge in generative AI, not as a feature to be intentionally leveraged (except, sometimes, in creative domains). Key areas affected include:
 
-- **Conversational AI (Chatbots & Virtual Assistants):**Chatbots may confidently provide incorrect or fabricated answers to user questions, risking user trust and spreading misinformation.
-- **Automated Content Generation:**Tools that generate news summaries, research overviews, or reports can invent statistics, misattribute quotations, or fabricate references.
-- **Image & Video Generation:**Systems like Stable Diffusion or Midjourney may create physically impossible or anatomically inconsistent images, such as people with extra limbs.
-- **Decision Support (Healthcare, Finance, Law):**Hallucinations in high-stakes recommendations (e.g., misdiagnosis, false legal citations) can have severe consequences.
-- **Information Retrieval & Search:**LLMs summarizing web results may blend, distort, or invent facts not present in the original sources.
-- **Creative Generation:**In art and game design, hallucination is sometimes embraced for its capacity to fuel imaginative, surreal, or avant-garde outputs.
+- <strong>Conversational AI (Chatbots & Virtual Assistants):</strong>Chatbots may confidently provide incorrect or fabricated answers to user questions, risking user trust and spreading misinformation.
+- <strong>Automated Content Generation:</strong>Tools that generate news summaries, research overviews, or reports can invent statistics, misattribute quotations, or fabricate references.
+- <strong>Image & Video Generation:</strong>Systems like Stable Diffusion or Midjourney may create physically impossible or anatomically inconsistent images, such as people with extra limbs.
+- <strong>Decision Support (Healthcare, Finance, Law):</strong>Hallucinations in high-stakes recommendations (e.g., misdiagnosis, false legal citations) can have severe consequences.
+- <strong>Information Retrieval & Search:</strong>LLMs summarizing web results may blend, distort, or invent facts not present in the original sources.
+- <strong>Creative Generation:</strong>In art and game design, hallucination is sometimes embraced for its capacity to fuel imaginative, surreal, or avant-garde outputs.
 
-**Further reading:**- [Oxford AI Safety Institute](https://oatml.cs.ox.ac.uk/)
+<strong>Further reading:</strong>- [Oxford AI Safety Institute](https://oatml.cs.ox.ac.uk/)
 - [CASMI: Hallucination—A Feature, Not a Bug](https://casmi.northwestern.edu/news/articles/2024/the-hallucination-problem-a-feature-not-a-bug.html)
 
 ## Types and Examples of AI Hallucination
 
 ### 1. Factual Hallucinations
-**Definition:**Generation of statements that are false, fabricated, or do not correspond to real-world facts.
-**Example:**An LLM invents a scientific citation that does not exist when prompted for academic references.
+<strong>Definition:</strong>Generation of statements that are false, fabricated, or do not correspond to real-world facts.
+<strong>Example:</strong>An LLM invents a scientific citation that does not exist when prompted for academic references.
 
 ### 2. Reasoning and Logic Errors
-**Definition:**Outputs that display faulty or nonsensical logic, such as incorrect causal or hierarchical relationships.
-**Example:**A chatbot claims that “all squares are circles” after misinterpreting a geometry question.
+<strong>Definition:</strong>Outputs that display faulty or nonsensical logic, such as incorrect causal or hierarchical relationships.
+<strong>Example:</strong>A chatbot claims that “all squares are circles” after misinterpreting a geometry question.
 
 ### 3. Mathematical Errors
-**Definition:**Incorrect computations, faulty arithmetic, or misapplication of mathematical rules.
-**Example:**A model calculates 7 × 8 as 54, providing a step-by-step explanation that appears logical but is wrong.
+<strong>Definition:</strong>Incorrect computations, faulty arithmetic, or misapplication of mathematical rules.
+<strong>Example:</strong>A model calculates 7 × 8 as 54, providing a step-by-step explanation that appears logical but is wrong.
 
 ### 4. Unfounded Fabrication
-**Definition:**Creation of information with no basis in the training data or real-world facts.
-**Example:**An AI-generated news summary includes a quote from a public official that was never made.
+<strong>Definition:</strong>Creation of information with no basis in the training data or real-world facts.
+<strong>Example:</strong>An AI-generated news summary includes a quote from a public official that was never made.
 
 ### 5. Visual Hallucinations
-**Definition:**Image or video outputs that contain physically impossible features, distortions, or inconsistencies.
-**Example:**Generative image models produce portraits with six fingers or mirrored reflections that do not match the subject.
+<strong>Definition:</strong>Image or video outputs that contain physically impossible features, distortions, or inconsistencies.
+<strong>Example:</strong>Generative image models produce portraits with six fingers or mirrored reflections that do not match the subject.
 
 ### 6. Text Output Errors
-**Definition:**Coherence, grammatical, or structural mistakes that result in repetitive, contradictory, or incomplete sentences.
-**Example:**A summary tool outputs: “The main reason for the increase was the main reason was the increase due to the main reason.”
+<strong>Definition:</strong>Coherence, grammatical, or structural mistakes that result in repetitive, contradictory, or incomplete sentences.
+<strong>Example:</strong>A summary tool outputs: “The main reason for the increase was the main reason was the increase due to the main reason.”
 
 ### 7. Overfitting-Induced Hallucination
-**Definition:**Outputs reflect memorized or overly rigid patterns from training data, causing domain-inappropriate application or jargon misuse.
-**Example:**A legal AI model uses highly technical legalese when responding to a layperson’s question about traffic tickets.
+<strong>Definition:</strong>Outputs reflect memorized or overly rigid patterns from training data, causing domain-inappropriate application or jargon misuse.
+<strong>Example:</strong>A legal AI model uses highly technical legalese when responding to a layperson’s question about traffic tickets.
 ## Causes of AI Hallucination
 
 ### 1. Biased or Incomplete Training Data
@@ -89,98 +89,98 @@ When prompts lack specificity, models extrapolate or invent details to fill in t
 ### 6. Adversarial Inputs
 Inputs intentionally crafted to exploit model weaknesses can induce hallucinations, posing security risks in sensitive applications.
 
-**Key research:**- [Oxford: Detecting Hallucinations with Semantic Entropy](https://www.ox.ac.uk/news/2024-06-20-major-research-hallucinating-generative-models-advances-reliability-artificial)
+<strong>Key research:</strong>- [Oxford: Detecting Hallucinations with Semantic Entropy](https://www.ox.ac.uk/news/2024-06-20-major-research-hallucinating-generative-models-advances-reliability-artificial)
 - [CASMI: Hallucination—A Feature, Not a Bug](https://casmi.northwestern.edu/news/articles/2024/the-hallucination-problem-a-feature-not-a-bug.html)
 
 ## Implications and Risks of AI Hallucination
 
-- **Misinformation and Disinformation:**Hallucinations can spread false or misleading information on a massive scale. Unlike intentional disinformation, these errors are unintentional but can be equally damaging.
-- **Failures in Decision-Making:**In regulated or high-stakes domains, hallucinated outputs may result in financial loss, harm to patients, or legal liability.
-- **Security Vulnerabilities:**Adversarial attacks exploiting hallucination tendencies can undermine trust and operational security in autonomous systems.
-- **Erosion of Trust:**Persistent hallucinations diminish user confidence, slowing adoption for professional or mission-critical use cases.
-- **Regulatory and Reputational Risk:**Organizations deploying hallucination-prone AI face potential legal, regulatory, and reputational consequences, especially under emerging AI governance frameworks.
+- <strong>Misinformation and Disinformation:</strong>Hallucinations can spread false or misleading information on a massive scale. Unlike intentional disinformation, these errors are unintentional but can be equally damaging.
+- <strong>Failures in Decision-Making:</strong>In regulated or high-stakes domains, hallucinated outputs may result in financial loss, harm to patients, or legal liability.
+- <strong>Security Vulnerabilities:</strong>Adversarial attacks exploiting hallucination tendencies can undermine trust and operational security in autonomous systems.
+- <strong>Erosion of Trust:</strong>Persistent hallucinations diminish user confidence, slowing adoption for professional or mission-critical use cases.
+- <strong>Regulatory and Reputational Risk:</strong>Organizations deploying hallucination-prone AI face potential legal, regulatory, and reputational consequences, especially under emerging AI governance frameworks.
 
-**Further reading:**- [Oxford: Hallucinations in LLMs](https://www.ox.ac.uk/news/2024-06-20-major-research-hallucinating-generative-models-advances-reliability-artificial)
+<strong>Further reading:</strong>- [Oxford: Hallucinations in LLMs](https://www.ox.ac.uk/news/2024-06-20-major-research-hallucinating-generative-models-advances-reliability-artificial)
 - [Nature: AI Hallucination Classification](https://www.nature.com/articles/s41599-024-03811-x)
 
 ## Strategies to Prevent or Mitigate Hallucinations
 
 ### Data-Level Techniques
 
-- **Curate High-Quality, Representative Data:**Regularly audit and update datasets to reduce bias, fill knowledge gaps, and ensure domain relevance.
-- **Continuous Data Refresh:**Keep training data up to date to reflect the latest facts and correct known inaccuracies.
+- <strong>Curate High-Quality, Representative Data:</strong>Regularly audit and update datasets to reduce bias, fill knowledge gaps, and ensure domain relevance.
+- <strong>Continuous Data Refresh:</strong>Keep training data up to date to reflect the latest facts and correct known inaccuracies.
 
 ### Model- and Algorithm-Level Techniques
 
-- **Regularization & Constraints:**Use regularization to prevent overfitting and guide outputs within realistic bounds.
-- **Grounding & Retrieval-Augmented Generation (RAG):**Couple generative models with retrieval systems or structured data to anchor outputs in verifiable information.  
+- <strong>Regularization & Constraints:</strong>Use regularization to prevent overfitting and guide outputs within realistic bounds.
+- <strong>Grounding & Retrieval-Augmented Generation (RAG):</strong>Couple generative models with retrieval systems or structured data to anchor outputs in verifiable information.  
   - [RAG research](https://arxiv.org/abs/2407.13193)
-- **Temperature Tuning:**Adjust the model’s “temperature” parameter to control output creativity versus factuality.  
+- <strong>Temperature Tuning:</strong>Adjust the model’s “temperature” parameter to control output creativity versus factuality.  
   - [OpenAI API Reference: Temperature](https://platform.openai.com/docs/api-reference/chat/create)
 
 ### Design-Level and UI Techniques
 
-- **Communicate Uncertainty:**Display confidence scores, uncertainty statements, or warnings on outputs with low model certainty.
-- **Present Source References:**Whenever possible, link generated content to external, verifiable sources.
-- **Limit Output Scope:**Restrict models to defined domains to minimize speculative or unsupported content.
-- **Enable User Feedback:**Allow users to flag, correct, or comment on hallucinated outputs, feeding corrections back into model improvement.
+- <strong>Communicate Uncertainty:</strong>Display confidence scores, uncertainty statements, or warnings on outputs with low model certainty.
+- <strong>Present Source References:</strong>Whenever possible, link generated content to external, verifiable sources.
+- <strong>Limit Output Scope:</strong>Restrict models to defined domains to minimize speculative or unsupported content.
+- <strong>Enable User Feedback:</strong>Allow users to flag, correct, or comment on hallucinated outputs, feeding corrections back into model improvement.
 
 ### Human Oversight and Validation
 
-- **Human-in-the-Loop Review:**Mandate human validation for high-stakes outputs, especially where legal, financial, or clinical risks are present.
-- **Continuous Testing & Monitoring:**Regularly test models with real-world and benchmark datasets to detect emerging hallucination patterns.
+- <strong>Human-in-the-Loop Review:</strong>Mandate human validation for high-stakes outputs, especially where legal, financial, or clinical risks are present.
+- <strong>Continuous Testing & Monitoring:</strong>Regularly test models with real-world and benchmark datasets to detect emerging hallucination patterns.
 
-**Advanced detection:**Oxford’s 2024 research introduced semantic entropy as a method to estimate uncertainty in “meaning-space,” outperforming prior methods in detecting confabulation (hallucination by inconsistent answers). This approach generalizes across tasks and models, providing a robust tool for risk-sensitive AI deployment.  
+<strong>Advanced detection:</strong>Oxford’s 2024 research introduced semantic entropy as a method to estimate uncertainty in “meaning-space,” outperforming prior methods in detecting confabulation (hallucination by inconsistent answers). This approach generalizes across tasks and models, providing a robust tool for risk-sensitive AI deployment.  
 - [Oxford: Semantic Entropy Method](https://www.ox.ac.uk/news/2024-06-20-major-research-hallucinating-generative-models-advances-reliability-artificial)
 
 ## Use Cases and Applications
 
-**Healthcare:**- *Risk:* Clinical AI misdiagnoses due to hallucinated findings.  
+<strong>Healthcare:</strong>- *Risk:* Clinical AI misdiagnoses due to hallucinated findings.  
 - *Mitigation:* Combine AI recommendations with human expert oversight and require evidence-based justification.  
   - [RSNA: Risks in Medical AI](https://pubs.rsna.org/doi/full/10.1148/radiol.230163)
 
-**Legal & Academic Research:**- *Risk:* Fabricated citations in legal briefs or research reviews.  
+<strong>Legal & Academic Research:</strong>- *Risk:* Fabricated citations in legal briefs or research reviews.  
 - *Mitigation:* Require AI outputs to include verifiable references and manual review.  
   - [Business Standard: Fabricated Legal Precedents](https://www.business-standard.com/world-news/us-lawyer-in-legal-trouble-after-citing-cases-invented-by-chatgpt-123052800935_1.html)
 
-**Media & Journalism:**- *Risk:* Summaries with invented details or misattributed quotes.  
+<strong>Media & Journalism:</strong>- *Risk:* Summaries with invented details or misattributed quotes.  
 - *Mitigation:* Restrict summarization to well-defined, fact-checked domains; link to sources.
 
-**Art & Design:**- *Opportunity:* Purposefully use hallucination for creative, surreal, or novel outputs.
+<strong>Art & Design:</strong>- *Opportunity:* Purposefully use hallucination for creative, surreal, or novel outputs.
 - *Caveat:* Clearly distinguish creative fiction from factual content.
 
-**Gaming & Virtual Reality:**- *Opportunity:* Generate unpredictable narratives or environments, enhancing user immersion.
+<strong>Gaming & Virtual Reality:</strong>- *Opportunity:* Generate unpredictable narratives or environments, enhancing user immersion.
 
 ## How to Identify and Manage Potential Hallucinations
 
-1. **Fact-Checking:**Implement systematic verification of AI outputs, especially in high-stakes contexts.
-2. **User Education:**Train users to recognize and critically evaluate AI-generated content.
-3. **Transparent Interfaces:**Provide confidence scores, source links, and uncertainty indicators on all outputs.
-4. **Monitoring & Auditing:**Continuously monitor model outputs for emerging hallucination patterns and update mitigation strategies accordingly.
+1. <strong>Fact-Checking:</strong>Implement systematic verification of AI outputs, especially in high-stakes contexts.
+2. <strong>User Education:</strong>Train users to recognize and critically evaluate AI-generated content.
+3. <strong>Transparent Interfaces:</strong>Provide confidence scores, source links, and uncertainty indicators on all outputs.
+4. <strong>Monitoring & Auditing:</strong>Continuously monitor model outputs for emerging hallucination patterns and update mitigation strategies accordingly.
 
 ## Ongoing Research and Debates
 
-- **Inevitability:**Recent studies (Cornell, Oxford) conclude that hallucinations are fundamental to the probabilistic architecture of LLMs; perfect factuality is unattainable without external grounding.
+- <strong>Inevitability:</strong>Recent studies (Cornell, Oxford) conclude that hallucinations are fundamental to the probabilistic architecture of LLMs; perfect factuality is unattainable without external grounding.
   - [TechCrunch on Cornell Study](https://techcrunch.com/2024/08/14/study-suggests-that-even-the-best-ai-models-hallucinate-a-bunch/)
   - [CASMI: Hallucination—A Feature, Not a Bug](https://casmi.northwestern.edu/news/articles/2024/the-hallucination-problem-a-feature-not-a-bug.html)
-- **Terminology:**Some researchers propose alternative terms (e.g., “AI fabrication”) to avoid anthropomorphism or misinterpretation.
+- <strong>Terminology:</strong>Some researchers propose alternative terms (e.g., “AI fabrication”) to avoid anthropomorphism or misinterpretation.
   - [Nature: AI Hallucination Classification](https://www.nature.com/articles/s41599-024-03811-x)
-- **Trade-Offs:**Reducing hallucinations may reduce flexibility or creativity, so mitigation must be balanced with application needs.
-- **Advances in Detection:**Semantic entropy and other statistical approaches are improving the identification and management of hallucinated outputs.
+- <strong>Trade-Offs:</strong>Reducing hallucinations may reduce flexibility or creativity, so mitigation must be balanced with application needs.
+- <strong>Advances in Detection:</strong>Semantic entropy and other statistical approaches are improving the identification and management of hallucinated outputs.
   - [Oxford: Semantic Entropy Method](https://www.ox.ac.uk/news/2024-06-20-major-research-hallucinating-generative-models-advances-reliability-artificial)
 
 ## Glossary: Related Terms
 
-- **Artificial Intelligence (AI):**Computer systems designed to perform tasks that typically require human intelligence.
-- **Machine Learning (ML):**A branch of AI where algorithms learn from data to improve predictions or generate content.
-- **Training Data:**The dataset used to teach AI models patterns and associations.
-- **Large Language Models (LLMs):**Deep learning models (e.g., GPT-4, LLaMA 2) trained on large corpora for natural language understanding and generation.
-- **Grounding:**Linking AI outputs to real-world, verifiable facts.
-- **Overfitting:**When a model is too closely tailored to training data, failing to generalize and increasing hallucination risk.
-- **Fact-Checking:**Verifying the accuracy of AI-generated information.
-- **Confidence Score:**A measure of how certain the AI is about its output.
-- **Adversarial Attack:**Input crafted to exploit model weaknesses, inducing errors or hallucinations.
-- **Disinformation / Misinformation:**Disinformation is intentionally false; misinformation is incorrect without intent to deceive; both differ from unintentional AI hallucinations.
+- <strong>Artificial Intelligence (AI):</strong>Computer systems designed to perform tasks that typically require human intelligence.
+- <strong>Machine Learning (ML):</strong>A branch of AI where algorithms learn from data to improve predictions or generate content.
+- <strong>Training Data:</strong>The dataset used to teach AI models patterns and associations.
+- <strong>Large Language Models (LLMs):</strong>Deep learning models (e.g., GPT-4, LLaMA 2) trained on large corpora for natural language understanding and generation.
+- <strong>Grounding:</strong>Linking AI outputs to real-world, verifiable facts.
+- <strong>Overfitting:</strong>When a model is too closely tailored to training data, failing to generalize and increasing hallucination risk.
+- <strong>Fact-Checking:</strong>Verifying the accuracy of AI-generated information.
+- <strong>Confidence Score:</strong>A measure of how certain the AI is about its output.
+- <strong>Adversarial Attack:</strong>Input crafted to exploit model weaknesses, inducing errors or hallucinations.
+- <strong>Disinformation / Misinformation:</strong>Disinformation is intentionally false; misinformation is incorrect without intent to deceive; both differ from unintentional AI hallucinations.
 
 ## Summary Table: Hallucination vs. Related Concepts
 
@@ -193,27 +193,27 @@ Inputs intentionally crafted to exploit model weaknesses can induce hallucinatio
 
 ## Best Practices to Prevent and Manage AI Hallucination
 
-1. **Curate and Audit Training Data:**Ensure data accuracy, diversity, and relevance to reduce bias and knowledge gaps.
-2. **Implement Grounding:**Use retrieval-augmented generation and fact-checking modules to anchor outputs to verified sources.
-3. **Communicate Uncertainty:**Design interfaces to display confidence levels, uncertainty, and supporting evidence.
-4. **Restrict Output Scope:**Limit AI outputs to domains where reliable data and oversight exist.
-5. **Integrate Human Oversight:**Require human review for high-impact or regulatory-sensitive applications.
-6. **Enable User Feedback:**Allow users to flag and correct hallucinated outputs.
-7. **Continuous Testing:**Regularly evaluate model behavior in real-world contexts, updating models as new data and risks emerge.
+1. <strong>Curate and Audit Training Data:</strong>Ensure data accuracy, diversity, and relevance to reduce bias and knowledge gaps.
+2. <strong>Implement Grounding:</strong>Use retrieval-augmented generation and fact-checking modules to anchor outputs to verified sources.
+3. <strong>Communicate Uncertainty:</strong>Design interfaces to display confidence levels, uncertainty, and supporting evidence.
+4. <strong>Restrict Output Scope:</strong>Limit AI outputs to domains where reliable data and oversight exist.
+5. <strong>Integrate Human Oversight:</strong>Require human review for high-impact or regulatory-sensitive applications.
+6. <strong>Enable User Feedback:</strong>Allow users to flag and correct hallucinated outputs.
+7. <strong>Continuous Testing:</strong>Regularly evaluate model behavior in real-world contexts, updating models as new data and risks emerge.
 
 ## Illustrative Examples
 
-- **Medical Misdiagnosis:**A medical AI suggests unnecessary treatment due to hallucinated findings in radiology reports.  
+- <strong>Medical Misdiagnosis:</strong>A medical AI suggests unnecessary treatment due to hallucinated findings in radiology reports.  
   - [RSNA: Medical Imaging Risks](https://pubs.rsna.org/doi/full/10.1148/radiol.230163)
-- **Fabricated Legal References:**An LLM for legal research invents a case precedent, causing professional embarrassment or legal jeopardy.  
+- <strong>Fabricated Legal References:</strong>An LLM for legal research invents a case precedent, causing professional embarrassment or legal jeopardy.  
   - [Business Standard: Fake Legal Precedents](https://www.business-standard.com/world-news/us-lawyer-in-legal-trouble-after-citing-cases-invented-by-chatgpt-123052800935_1.html)
-- **Hallucinated News Summaries:**Automated news summarization tools introduce fictional events or misattribute statements.
-- **Creative Image Generation:**Artists intentionally prompt generative models to hallucinate surreal visuals.
-- **Financial Risk Assessment:**AI tools provide risk scores based on fabricated or misinterpreted market data.
+- <strong>Hallucinated News Summaries:</strong>Automated news summarization tools introduce fictional events or misattribute statements.
+- <strong>Creative Image Generation:</strong>Artists intentionally prompt generative models to hallucinate surreal visuals.
+- <strong>Financial Risk Assessment:</strong>AI tools provide risk scores based on fabricated or misinterpreted market data.
 
 ## Frequently Asked Questions
 
-**Q: Can hallucinations in AI be completely eliminated?**A: No. Research from Cornell and Oxford confirms hallucinations are inherent to probabilistic language models. Mitigation is possible, but total elimination is not feasible without external verification mechanisms.  
+<strong>Q: Can hallucinations in AI be completely eliminated?</strong>A: No. Research from Cornell and Oxford confirms hallucinations are inherent to probabilistic language models. Mitigation is possible, but total elimination is not feasible without external verification mechanisms.  
 - [CASMI: Hallucination—A Feature, Not a Bug](https://casmi.northwestern.edu/news/articles/2024/the-hallucination-problem-a-feature-not-a-bug.html)
 - [Oxford: Hallucination Detection](https://www.ox.ac.uk/news/2024-06-20-major-research-hallucinating-generative-model
 

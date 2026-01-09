@@ -20,9 +20,9 @@ draft: false
 Slot filling is a core technique in task-oriented dialog systems for conversational AI. It focuses on identifying and extracting required parameters—called slots—from user queries. These slots are necessary to fulfill a specific action, such as booking a flight, ordering food, or scheduling an appointment.
 
 For example, in the query "Book a flight from New York to London on July 20th," the conversational agent should extract:
-- **Departure city:**New York
-- **Destination city:**London
-- **Date:**July 20th
+- <strong>Departure city:</strong>New York
+- <strong>Destination city:</strong>London
+- <strong>Date:</strong>July 20th
 
 Slot filling is the mechanism that allows the AI to parse this information, store it, and use it effectively to respond or take action on behalf of the user. If some information is missing, the system prompts the user to provide it, ensuring a complete data set for the task.
 
@@ -30,13 +30,13 @@ Slot filling is essential for enabling AI systems to gather all necessary data t
 
 ## Key Concepts: Slots, Entities, and Intents
 
-**Intent:**The user's goal or purpose (e.g., "Book a hotel," "Order pizza").
+<strong>Intent:</strong>The user's goal or purpose (e.g., "Book a hotel," "Order pizza").
 
-**Slot:**A placeholder for a required or optional piece of information needed to fulfill the intent (e.g., "check-in date," "pizza size").
+<strong>Slot:</strong>A placeholder for a required or optional piece of information needed to fulfill the intent (e.g., "check-in date," "pizza size").
 
-**Entity:**The data type or category of information that a slot expects (e.g., city, date, number, item type).
+<strong>Entity:</strong>The data type or category of information that a slot expects (e.g., city, date, number, item type).
 
-**Relationship:**An intent defines the action, slots are parameters needed for that action, and entities describe the kind of data each slot expects.
+<strong>Relationship:</strong>An intent defines the action, slots are parameters needed for that action, and entities describe the kind of data each slot expects.
 
 ## Types of Entities
 
@@ -55,29 +55,29 @@ Predefined by the conversational platform, these handle common data types:
 
 Defined by developers to fit domain-specific needs:
 
-**Closed List Entities:**Enumerated set of acceptable values (e.g., pizza toppings, product SKUs).
+<strong>Closed List Entities:</strong>Enumerated set of acceptable values (e.g., pizza toppings, product SKUs).
 
-**Regular Expressions (RegEx):**Patterns for extracting structured data (e.g., ticket numbers like "INC000123").
+<strong>Regular Expressions (RegEx):</strong>Patterns for extracting structured data (e.g., ticket numbers like "INC000123").
 
 Custom entities expand the bot's ability to handle specialized vocabulary and data types. Use synonyms and fuzzy matching to broaden entity recognition (e.g., "NYC" as a synonym for "New York City").
 
 ## Slot Filling Process
 
-**1. Define Required Slots:**List all the pieces of information needed to accomplish a specific intent.
+<strong>1. Define Required Slots:</strong>List all the pieces of information needed to accomplish a specific intent.
 
-**2. Associate Entities with Each Slot:**Specify which data type or pattern each slot should accept.
+<strong>2. Associate Entities with Each Slot:</strong>Specify which data type or pattern each slot should accept.
 
-**3. Extract Slot Values from User Input:**Use NLU (Natural Language Understanding) to identify and extract values for each slot.
+<strong>3. Extract Slot Values from User Input:</strong>Use NLU (Natural Language Understanding) to identify and extract values for each slot.
 
-**4. Prompt for Missing Slots:**If any required slot is unfilled, the bot asks questions to gather the missing information.
+<strong>4. Prompt for Missing Slots:</strong>If any required slot is unfilled, the bot asks questions to gather the missing information.
 
-**5. Handle Multi-Turn Dialogs:**Allow users to fill slots over several messages and in any order.
+<strong>5. Handle Multi-Turn Dialogs:</strong>Allow users to fill slots over several messages and in any order.
 
-**6. Confirm Collected Slot Values:**Optionally present gathered information to the user for confirmation before taking action.
+<strong>6. Confirm Collected Slot Values:</strong>Optionally present gathered information to the user for confirmation before taking action.
 
-**7. Execute the Task:**Proceed with the fulfillment (e.g., book, order, support) once all required slots are filled and confirmed.
+<strong>7. Execute the Task:</strong>Proceed with the fulfillment (e.g., book, order, support) once all required slots are filled and confirmed.
 
-**Visual Example:**```
+<strong>Visual Example:</strong>```
 User: "I want to order a pizza."
 Bot: "How many slices would you like?"
 User: "8"
@@ -137,22 +137,22 @@ else:
 
 ### Platform-Specific Details
 
-**Microsoft Copilot Studio:**- Use prebuilt and custom entities
+<strong>Microsoft Copilot Studio:</strong>- Use prebuilt and custom entities
 - Enable "Smart Matching" for fuzzy matching and autocorrect
 - Add synonyms to closed list entities
 - Use regular expressions for structured data extraction
 
-**Just AI Conversational Cloud:**- Configure required/optional slots, array types, and retry/timeout logic in `chatbot.yaml`
+<strong>Just AI Conversational Cloud:</strong>- Configure required/optional slots, array types, and retry/timeout logic in `chatbot.yaml`
 - Access slots via `$parseTree` or related variables
 
-**Dydu:**- Define Slot knowledge types and configure the slot filling process visually
+<strong>Dydu:</strong>- Define Slot knowledge types and configure the slot filling process visually
 - Use introductory, confirmation, and end sentences to manage user flow
 
 ## Practical Examples
 
 ### Example 1: Pizza Order
 
-**Required Slots:**Number of slices, Pizza type
+<strong>Required Slots:</strong>Number of slices, Pizza type
 
 ```
 User: "I want to order a pizza."
@@ -167,7 +167,7 @@ Bot: "Order confirmed!"
 
 ### Example 2: Book a Train Ticket
 
-**Required Slots:**Destination city, Date
+<strong>Required Slots:</strong>Destination city, Date
 
 ```
 User: "I need to buy a train ticket to Paris."
@@ -178,7 +178,7 @@ Bot: "Ticket to Paris on next Monday. Shall I proceed?"
 
 ### Example 3: Weather Inquiry
 
-**Slots:**City (required), Date (optional)
+<strong>Slots:</strong>City (required), Date (optional)
 
 ```
 User: "What's the weather like in London today?"
@@ -194,55 +194,55 @@ Bot: "For which date do you need the forecast?"
 
 ## Best Practices
 
-**1. Use Built-in Entities When Possible:**Leverage platform-provided entities for robust handling of common data types.
+<strong>1. Use Built-in Entities When Possible:</strong>Leverage platform-provided entities for robust handling of common data types.
 
-**2. Add Synonyms to Closed List Entities:**Expand recognition with variations and related terms.
+<strong>2. Add Synonyms to Closed List Entities:</strong>Expand recognition with variations and related terms.
 
-**3. Enable Smart or Fuzzy Matching:**Allow for misspellings and similar terms to broaden entity recognition.
+<strong>3. Enable Smart or Fuzzy Matching:</strong>Allow for misspellings and similar terms to broaden entity recognition.
 
-**4. Be Creative with Regular Expressions:**Use RegEx for structured data formats, especially for codes and IDs.
+<strong>4. Be Creative with Regular Expressions:</strong>Use RegEx for structured data formats, especially for codes and IDs.
 
-**5. Confirm Critical Slot Values:**Always confirm with the user before taking important actions.
+<strong>5. Confirm Critical Slot Values:</strong>Always confirm with the user before taking important actions.
 
-**6. Set Maximum Retry/Prompt Limits:**Prevent endless loops by limiting prompts for unfilled slots.
+<strong>6. Set Maximum Retry/Prompt Limits:</strong>Prevent endless loops by limiting prompts for unfilled slots.
 
-**7. Design for Interruptions:**Allow users to exit slot filling flows or switch topics gracefully.
+<strong>7. Design for Interruptions:</strong>Allow users to exit slot filling flows or switch topics gracefully.
 
-**8. Handle Arrays and Multiple Slot Values:**Support scenarios where users provide several values for the same slot.
+<strong>8. Handle Arrays and Multiple Slot Values:</strong>Support scenarios where users provide several values for the same slot.
 
 ## Common Pitfalls and How to Avoid Them
 
-**Missing Clarifying Questions:**If no prompt is specified for a required slot, the intent may never be matched.
+<strong>Missing Clarifying Questions:</strong>If no prompt is specified for a required slot, the intent may never be matched.
 
-**Overly Rigid Entity Definitions:**Avoid restricting entities to a narrow list; use synonyms and smart matching.
+<strong>Overly Rigid Entity Definitions:</strong>Avoid restricting entities to a narrow list; use synonyms and smart matching.
 
-**Not Handling Slot Filling Interruptions:**Always allow users a way to abandon or reset slot filling if stuck.
+<strong>Not Handling Slot Filling Interruptions:</strong>Always allow users a way to abandon or reset slot filling if stuck.
 
-**Ignoring Confirmation Steps:**Failing to confirm slot values can lead to errors or user frustration.
+<strong>Ignoring Confirmation Steps:</strong>Failing to confirm slot values can lead to errors or user frustration.
 
-**Not Supporting Multi-Turn/Out-of-Order Filling:**Users expect to give information in any order over several messages.
+<strong>Not Supporting Multi-Turn/Out-of-Order Filling:</strong>Users expect to give information in any order over several messages.
 
-**No Handling of Maximum Retries/Timeouts:**Set sensible limits to avoid trapping users in endless clarification loops.
+<strong>No Handling of Maximum Retries/Timeouts:</strong>Set sensible limits to avoid trapping users in endless clarification loops.
 
 ## Advanced Approaches: BERT
 
 BERT (Bidirectional Encoder Representations from Transformers) has revolutionized slot filling by leveraging deep contextual language understanding:
 
-**Contextual Representations:**BERT captures context from the entire input, aiding in accurate slot boundary detection.
+<strong>Contextual Representations:</strong>BERT captures context from the entire input, aiding in accurate slot boundary detection.
 
-**Ambiguity Resolution:**Handles ambiguous phrasing and abbreviations in user queries.
+<strong>Ambiguity Resolution:</strong>Handles ambiguous phrasing and abbreviations in user queries.
 
-**OOV Handling:**Subword tokenization supports extraction even when users use rare or misspelled terms.
+<strong>OOV Handling:</strong>Subword tokenization supports extraction even when users use rare or misspelled terms.
 
-**Fine-Tuning:**Pre-trained BERT models can be fine-tuned on slot filling datasets for domain adaptation.
+<strong>Fine-Tuning:</strong>Pre-trained BERT models can be fine-tuned on slot filling datasets for domain adaptation.
 
-**Implementation Steps:**1. Data Preparation: Create labeled datasets (tokens + slot labels)
+<strong>Implementation Steps:</strong>1. Data Preparation: Create labeled datasets (tokens + slot labels)
 2. BERT Tokenization: Convert text to tokens/subwords
 3. Model Architecture: Use BERT as encoder, with a slot classification layer
 4. Fine-Tuning: Train on slot-labeled data using cross-entropy loss
 5. Inference: Predict slot labels for each token in user input
 
-**Python Example:**```python
+<strong>Python Example:</strong>```python
 from transformers import BertTokenizer, BertForTokenClassification
 
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')

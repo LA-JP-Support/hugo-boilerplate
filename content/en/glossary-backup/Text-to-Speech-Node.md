@@ -11,23 +11,23 @@ draft: false
 ---
 ## What is a Text-to-Speech Node?
 
-A **Text-to-Speech Node**(TTS Node) is a modular building block within [conversational AI](/en/glossary/conversational-ai/), automation, and workflow platforms. It receives input text, converts it to synthesized audio using neural or traditional speech engines, and outputs the result as an audio file or stream. This enables voice responses in chatbots, voicebots, accessibility solutions, and diverse automation scenarios. TTS Nodes can integrate advanced AI voices, multi-language support, and custom prosody or emotion settings, making them essential for natural-sounding, automated spoken interactions.
+A <strong>Text-to-Speech Node</strong>(TTS Node) is a modular building block within conversational AI, automation, and workflow platforms. It receives input text, converts it to synthesized audio using neural or traditional speech engines, and outputs the result as an audio file or stream. This enables voice responses in chatbots, voicebots, accessibility solutions, and diverse automation scenarios. TTS Nodes can integrate advanced AI voices, multi-language support, and custom prosody or emotion settings, making them essential for natural-sounding, automated spoken interactions.
 
-**Summary:**- **Function:**Converts text (plain or marked up) into speech audio (e.g., .mp3, .wav).
-- **Core Use:**Adds dynamic voice output to automations, chatbots, and virtual assistants.
-- **Integration:**Used as a node/block in platforms like [LearningFlow.AI](https://www.learningflow.ai/docs/nodes/text-to-speech), [Microsoft Azure](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/text-to-speech), [Google Cloud TTS](https://cloud.google.com/text-to-speech/docs), [OpenAI](https://platform.openai.com/docs/guides/text-to-speech), and open-source solutions such as [Advanced TTS MCP](https://github.com/samihalawa/advanced-tts-mcp).
+<strong>Summary:</strong>- <strong>Function:</strong>Converts text (plain or marked up) into speech audio (e.g., .mp3, .wav).
+- <strong>Core Use:</strong>Adds dynamic voice output to automations, chatbots, and virtual assistants.
+- <strong>Integration:</strong>Used as a node/block in platforms like [LearningFlow.AI](https://www.learningflow.ai/docs/nodes/text-to-speech), [Microsoft Azure](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/text-to-speech), [Google Cloud TTS](https://cloud.google.com/text-to-speech/docs), [OpenAI](https://platform.openai.com/docs/guides/text-to-speech), and open-source solutions such as [Advanced TTS MCP](https://github.com/samihalawa/advanced-tts-mcp).
 
 ## How is a Text-to-Speech Node Used?
 
 ### Workflow Integration
 
 A typical TTS Node workflow:
-1. **Input Capture:**Receives text from an upstream source—such as a chatbot's reply, notification, or status message.
-2. **Node Processing:**Applies voice model, language, and optional SSML markup, then submits to a TTS engine (cloud API, on-premise, or open-source server).
-3. **Speech Synthesis:**The TTS engine returns the audio file, streamed or as a downloadable asset, in formats like MP3, WAV, or OGG.
-4. **Output Routing:**Audio is sent to speakers, phones, smart devices, or further workflow nodes (e.g., for playback, download, or animation).
+1. <strong>Input Capture:</strong>Receives text from an upstream source—such as a chatbot's reply, notification, or status message.
+2. <strong>Node Processing:</strong>Applies voice model, language, and optional SSML markup, then submits to a TTS engine (cloud API, on-premise, or open-source server).
+3. <strong>Speech Synthesis:</strong>The TTS engine returns the audio file, streamed or as a downloadable asset, in formats like MP3, WAV, or OGG.
+4. <strong>Output Routing:</strong>Audio is sent to speakers, phones, smart devices, or further workflow nodes (e.g., for playback, download, or animation).
 
-**Example Automation Sequence:**```
+<strong>Example Automation Sequence:</strong>```
 Text Input → AI Response Generation → Text-to-Speech Node → Play Sound/Send Audio
 ```
 
@@ -143,17 +143,17 @@ Supported tags and features vary by provider ([Azure SSML Tags](https://learn.mi
 
 ## Usage Instructions: Adding and Configuring a Text-to-Speech Node
 
-**Step-by-Step Checklist:**1. **Add the Node**- Drag and drop the “Text-to-Speech” block onto your workflow canvas ([LearningFlow.AI Example](https://www.learningflow.ai/docs/nodes/text-to-speech#setting-up-text-to-speech)).
-2. **Connect Input**- Link the node to upstream data (e.g., chatbot response, notification).
-3. **Configure Voice Model**- Choose the desired AI voice.
+<strong>Step-by-Step Checklist:</strong>1. <strong>Add the Node</strong>- Drag and drop the “Text-to-Speech” block onto your workflow canvas ([LearningFlow.AI Example](https://www.learningflow.ai/docs/nodes/text-to-speech#setting-up-text-to-speech)).
+2. <strong>Connect Input</strong>- Link the node to upstream data (e.g., chatbot response, notification).
+3. <strong>Configure Voice Model</strong>- Choose the desired AI voice.
    - Set language/locale, and (optionally) SSML markup.
-4. **Set Output Format**- Select between MP3, WAV, OGG, or other formats.
-5. **Configure Additional Parameters**- Adjust speaking rate, pitch, volume, emotion, etc.
+4. <strong>Set Output Format</strong>- Select between MP3, WAV, OGG, or other formats.
+5. <strong>Configure Additional Parameters</strong>- Adjust speaking rate, pitch, volume, emotion, etc.
    - Enable caching for repeated utterances if available.
-6. **Connect Outputs**- Route the generated audio to playback, download, or further workflow nodes.
-7. **Test the Node**- Provide sample input, verify output matches expectations.
+6. <strong>Connect Outputs</strong>- Route the generated audio to playback, download, or further workflow nodes.
+7. <strong>Test the Node</strong>- Provide sample input, verify output matches expectations.
 
-**Example (Google Cloud Node.js):**```js
+<strong>Example (Google Cloud Node.js):</strong>```js
 const request = {
   input: {text: "Hello, this is your reminder."},
   voice: {languageCode: "en-US", ssmlGender: "FEMALE"},
@@ -181,26 +181,26 @@ data:
 
 ### 1. Conversational Voicebot (Customer Service)
 
-- **Workflow:**User query → AI response → Text-to-Speech Node → Audio to caller
-- **Purpose:**Deliver real-time, spoken support over phone or web.
+- <strong>Workflow:</strong>User query → AI response → Text-to-Speech Node → Audio to caller
+- <strong>Purpose:</strong>Deliver real-time, spoken support over phone or web.
 
 ### 2. Accessibility Enhancement
 
-- **Workflow:**UI event → Text description → TTS Node → Audio output
-- **Purpose:**Read out on-screen content for users with visual impairments.
+- <strong>Workflow:</strong>UI event → Text description → TTS Node → Audio output
+- <strong>Purpose:</strong>Read out on-screen content for users with visual impairments.
 
 ### 3. Multilingual Announcements
 
-- **Workflow:**Scheduled event → Dynamic multilingual message → TTS Node → Public announcement system
-- **Purpose:**Broadcast messages in several languages.
+- <strong>Workflow:</strong>Scheduled event → Dynamic multilingual message → TTS Node → Public announcement system
+- <strong>Purpose:</strong>Broadcast messages in several languages.
 
 ### 4. Educational Narration
 
-- **Workflow:**Lesson text → TTS Node with expressive/child-friendly voice → Audio file for lesson playback
+- <strong>Workflow:</strong>Lesson text → TTS Node with expressive/child-friendly voice → Audio file for lesson playback
 
 ### 5. IoT Device Voice Feedback
 
-- **Workflow:**Device status change → Message → TTS Node → Smart speaker audio
+- <strong>Workflow:</strong>Device status change → Message → TTS Node → Smart speaker audio
 
 [See more workflow examples in LearningFlow.AI Docs](https://www.learningflow.ai/docs/nodes/text-to-speech#example-workflows)
 
@@ -210,7 +210,7 @@ data:
 |---------------------------------|-------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Unsupported audio format        | Target player does not support selected format   | Change output format (e.g., to MP3 or WAV); use transcoding if available                              |
 | Voice/language mismatch         | Selected voice does not support input language   | Select a matching voice and language code; review provider’s supported voices                         |
-| [Latency](/en/glossary/latency/) in audio playback       | Network delays or processing overhead            | Enable caching; use local/edge TTS if possible                                                        |
+| Latency in audio playback       | Network delays or processing overhead            | Enable caching; use local/edge TTS if possible                                                        |
 | Partial/corrupted audio         | Incompatible sample rate or bit depth            | Adjust sample rate/channels; use standard values (e.g., 44100Hz, 2 channels)                          |
 | No audio output                 | Incorrect routing or device configuration        | Check output node/device; verify audio file is generated and accessible                               |
 | Network/API errors              | API key, quota, or endpoint configuration issue  | Validate API credentials, quotas, and endpoint URLs                                                    |
@@ -221,19 +221,19 @@ data:
 
 ## Frequently Asked Questions (FAQ)
 
-**Q: What audio formats are supported?**A: Most TTS nodes support MP3, WAV, OGG/Opus. Format support varies by provider and playback device. [Google Cloud supported formats](https://cloud.google.com/text-to-speech/docs/overview).
+<strong>Q: What audio formats are supported?</strong>A: Most TTS nodes support MP3, WAV, OGG/Opus. Format support varies by provider and playback device. [Google Cloud supported formats](https://cloud.google.com/text-to-speech/docs/overview).
 
-**Q: Can I customize the voice?**A: Many platforms allow voice, language, and accent selection. Some (Azure, ElevenLabs) offer custom voice training. [Azure Custom Voice](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/custom-neural-voice).
+<strong>Q: Can I customize the voice?</strong>A: Many platforms allow voice, language, and accent selection. Some (Azure, ElevenLabs) offer custom voice training. [Azure Custom Voice](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/custom-neural-voice).
 
-**Q: Does the TTS node support multiple languages?**A: Yes, leading services support dozens to hundreds of languages and dialects. [Google Cloud voices list](https://cloud.google.com/text-to-speech/docs/voices).
+<strong>Q: Does the TTS node support multiple languages?</strong>A: Yes, leading services support dozens to hundreds of languages and dialects. [Google Cloud voices list](https://cloud.google.com/text-to-speech/docs/voices).
 
-**Q: How do I make speech more natural or expressive?**A: Use neural TTS voices and SSML for prosody, emotion, pitch, and rate control.
+<strong>Q: How do I make speech more natural or expressive?</strong>A: Use neural TTS voices and SSML for prosody, emotion, pitch, and rate control.
 
-**Q: What is SSML, and do I need it?**A: SSML lets you control speech characteristics (emphasis, pauses, pronunciation). Optional, but recommended for advanced control. [Azure SSML Reference](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup).
+<strong>Q: What is SSML, and do I need it?</strong>A: SSML lets you control speech characteristics (emphasis, pauses, pronunciation). Optional, but recommended for advanced control. [Azure SSML Reference](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup).
 
-**Q: Is caching available?**A: Most platforms offer caching for repeated utterances. See your provider’s documentation.
+<strong>Q: Is caching available?</strong>A: Most platforms offer caching for repeated utterances. See your provider’s documentation.
 
-**Q: What are common pitfalls?**A: Audio format mismatches, wrong voice/language, unsupported SSML tags. Test outputs across target devices, review documentation.
+<strong>Q: What are common pitfalls?</strong>A: Audio format mismatches, wrong voice/language, unsupported SSML tags. Test outputs across target devices, review documentation.
 
 ## References & Further Reading
 
@@ -254,4 +254,4 @@ data:
 - [SSML Reference Guide](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup)
 - [Voice Model Customization](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/custom-neural-voice)
 
-**Related Keywords:**speech service, text speech tts, custom voice, [speech synthesis markup language](/en/glossary/ssml--speech-synthesis-markup-language-/), neural networks, linguistic analysis, spoken language, professional voice, TTS systems, real time, accessibility,
+<strong>Related Keywords:</strong>speech service, text speech tts, custom voice, speech synthesis markup language, neural networks, linguistic analysis, spoken language, professional voice, TTS systems, real time, accessibility,

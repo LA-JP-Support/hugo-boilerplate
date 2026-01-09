@@ -11,9 +11,9 @@ draft: false
 ---
 ## 1. What Is Entity Linking?
 
-Entity linking is a foundational task in [natural language processing (NLP)](/en/glossary/natural-language-processing--nlp-/), enabling machines to identify entities in unstructured text and link each mention to a specific entry in a knowledge base. This process is vital for transforming human language into structured, actionable data and is essential for tasks such as semantic search, recommendation, and knowledge graph population.
+Entity linking is a foundational task in natural language processing (NLP), enabling machines to identify entities in unstructured text and link each mention to a specific entry in a knowledge base. This process is vital for transforming human language into structured, actionable data and is essential for tasks such as semantic search, recommendation, and knowledge graph population.
 
-- **Example:**In “Jordan played exceptionally well against Phoenix last night,”
+- <strong>Example:</strong>In “Jordan played exceptionally well against Phoenix last night,”
   - “Jordan” could refer to Michael Jordan (the basketball player), another athlete, or a location.
   - “Phoenix” could mean the Phoenix Suns (NBA team) or the city in Arizona.
 - Entity linking resolves these ambiguities using contextual clues, mapping each mention to the correct knowledge base entry (see [Ontotext: What is Entity Linking](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/)).
@@ -22,19 +22,19 @@ Entity linking is a foundational task in [natural language processing (NLP)](/en
 
 Entity linking bridges the divide between unstructured text and structured data, enabling a range of data-intensive and AI-driven applications:
 
-- **Search Engines & Semantic Search:**By linking queries and documents to specific entities, search engines improve result relevance. For instance, searching “Paris” can prioritize results about the city, not Paris Hilton, if contextually indicated ([Ontotext: Semantic Search](https://www.ontotext.com/knowledgehub/fundamentals/what-is-semantic-search/)).
+- <strong>Search Engines & Semantic Search:</strong>By linking queries and documents to specific entities, search engines improve result relevance. For instance, searching “Paris” can prioritize results about the city, not Paris Hilton, if contextually indicated ([Ontotext: Semantic Search](https://www.ontotext.com/knowledgehub/fundamentals/what-is-semantic-search/)).
 
-- **Content Recommendation & Personalization:**Recommendations are improved by aligning user interests and content topics via linked entities, e.g., distinguishing between “Jaguar” the car brand and the animal.
+- <strong>Content Recommendation & Personalization:</strong>Recommendations are improved by aligning user interests and content topics via linked entities, e.g., distinguishing between “Jaguar” the car brand and the animal.
 
-- **Knowledge Graph Construction & Enrichment:**Entity linking automates the population and updating of knowledge graphs with new facts and relationships.
+- <strong>Knowledge Graph Construction & Enrichment:</strong>Entity linking automates the population and updating of knowledge graphs with new facts and relationships.
 
-- **Information Extraction & Data Integration:**Converts unstructured data into structured formats for analytics and business intelligence.
+- <strong>Information Extraction & Data Integration:</strong>Converts unstructured data into structured formats for analytics and business intelligence.
 
-- **SEO & Schema Markup:**Enhances discoverability by linking content to authoritative entities in public or proprietary knowledge graphs ([Schema App: What is Entity Linking](https://www.schemaapp.com/schema-markup/what-is-entity-linking/)).
+- <strong>SEO & Schema Markup:</strong>Enhances discoverability by linking content to authoritative entities in public or proprietary knowledge graphs ([Schema App: What is Entity Linking](https://www.schemaapp.com/schema-markup/what-is-entity-linking/)).
 
-- **AI Assistants & Chatbots:**Supports precise query understanding and context-aware response generation.
+- <strong>AI Assistants & Chatbots:</strong>Supports precise query understanding and context-aware response generation.
 
-- **Multilingual and Multiregional Content:**Ensures correct entity references across languages and regions (e.g., “football” in the US vs. UK).
+- <strong>Multilingual and Multiregional Content:</strong>Ensures correct entity references across languages and regions (e.g., “football” in the US vs. UK).
 
 See also [Microsoft Azure: Entity Linking Overview](https://learn.microsoft.com/en-us/azure/ai-services/language-service/entity-linking/overview).
 
@@ -43,27 +43,27 @@ See also [Microsoft Azure: Entity Linking Overview](https://learn.microsoft.com/
 Entity linking is implemented as a multi-stage pipeline. Each component addresses a distinct problem:
 
 ### 3.1 Named Entity Recognition (NER)
-- **Goal:**Identify text spans that denote entities.
-- **Example:**In “Christa Lanz loves San Diego,” NER detects “Christa Lanz” (person) and “San Diego” (location).
+- <strong>Goal:</strong>Identify text spans that denote entities.
+- <strong>Example:</strong>In “Christa Lanz loves San Diego,” NER detects “Christa Lanz” (person) and “San Diego” (location).
 
 ### 3.2 Candidate Generation
-- **Goal:**For each detected entity mention, generate a set of possible matching entities from the knowledge base.
-- **Techniques:**- Name dictionaries
+- <strong>Goal:</strong>For each detected entity mention, generate a set of possible matching entities from the knowledge base.
+- <strong>Techniques:</strong>- Name dictionaries
   - Surface form expansion (handling abbreviations, synonyms)
   - Search engine-based retrieval
 
 ### 3.3 Entity Disambiguation
-- **Goal:**Select the correct entity from the candidates using context.
-- **Techniques:**- Contextual similarity scoring
+- <strong>Goal:</strong>Select the correct entity from the candidates using context.
+- <strong>Techniques:</strong>- Contextual similarity scoring
   - Entity type matching
   - Use of entity descriptions and relationships
-- **Example:**Disambiguating “Clinton” in a US presidential context likely links to “Bill Clinton” rather than “Hillary Clinton” ([Ontotext](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/)).
+- <strong>Example:</strong>Disambiguating “Clinton” in a US presidential context likely links to “Bill Clinton” rather than “Hillary Clinton” ([Ontotext](https://www.ontotext.com/knowledgehub/fundamentals/what-is-entity-linking/)).
 
 ### 3.4 Linking to Knowledge Base
-- **Goal:**Connect the mention to a unique KB identifier (e.g., Wikidata Q312 for Apple Inc.).
-- **Outcome:**Enables access to structured facts, relationships, and attributes.
+- <strong>Goal:</strong>Connect the mention to a unique KB identifier (e.g., Wikidata Q312 for Apple Inc.).
+- <strong>Outcome:</strong>Enables access to structured facts, relationships, and attributes.
 
-**Pipeline Diagram (Text Description):**Raw Text → NER → Candidate Generation → Entity [Disambiguation](/en/glossary/disambiguation/) → KB Link
+<strong>Pipeline Diagram (Text Description):</strong>Raw Text → NER → Candidate Generation → Entity Disambiguation → KB Link
 
 ## 4. Challenges in Entity Linking
 
@@ -100,14 +100,14 @@ New entities and facts are constantly added; systems must adapt without frequent
 ### 5.3 Deep Learning & Transformer-Based Methods
 - Use contextual embeddings to resolve ambiguity and capture relationships.
 - Transformers (BERT, RoBERTa) encode both mention context and candidate entity descriptions/types.
-- **Example:**Ontotext CEEL, Amazon’s ReFinED, Facebook’s GENRE.
+- <strong>Example:</strong>Ontotext CEEL, Amazon’s ReFinED, Facebook’s GENRE.
 
 #### Transformer-Based Pipeline (Ontotext CEEL Example)
-- **Mention Detection:**Transformer models for token classification.
-- **Candidate Generation:**Gazetteers/dictionaries propose candidates.
-- **Entity Typing:**Compare predicted and candidate types.
-- **Entity Description Matching:**Bi-encoder compares mention and KB entity descriptions.
-- **Final Scoring:**Combines type and description scores.
+- <strong>Mention Detection:</strong>Transformer models for token classification.
+- <strong>Candidate Generation:</strong>Gazetteers/dictionaries propose candidates.
+- <strong>Entity Typing:</strong>Compare predicted and candidate types.
+- <strong>Entity Description Matching:</strong>Bi-encoder compares mention and KB entity descriptions.
+- <strong>Final Scoring:</strong>Combines type and description scores.
 
 #### Zero-Shot Entity Linking
 - Models generalize to unseen entities using type/description information.
@@ -130,28 +130,28 @@ See [Ontotext: Entity Linking with Knowledge Graphs](https://www.ontotext.com/kn
 
 \*Relative to comparable models on same datasets.
 
-**See [Ontotext’s CEEL Benchmarks](https://www.ontotext.com/blog/common-english-entity-linking-linking-text-to-knowledge-fast-and-efficient/)**## 7. Practical Applications & Use Cases
+<strong>See [Ontotext’s CEEL Benchmarks](https://www.ontotext.com/blog/common-english-entity-linking-linking-text-to-knowledge-fast-and-efficient/)</strong>## 7. Practical Applications & Use Cases
 
-**Search & Retrieval:**Improves intent understanding and result relevance by disambiguating entities.
+<strong>Search & Retrieval:</strong>Improves intent understanding and result relevance by disambiguating entities.
 
-**Content Recommendation:**Maps content and user interests to the same set of entities for better recommendations.
+<strong>Content Recommendation:</strong>Maps content and user interests to the same set of entities for better recommendations.
 
-**Knowledge Graph Population:**Automates and enriches knowledge bases with new facts and relationships.
+<strong>Knowledge Graph Population:</strong>Automates and enriches knowledge bases with new facts and relationships.
 
-**SEO & Structured Data:**Boosts search visibility by embedding entity references using Schema.org’s `sameAs`.
+<strong>SEO & Structured Data:</strong>Boosts search visibility by embedding entity references using Schema.org’s `sameAs`.
 
-**Business Intelligence:**Extracts insights from news, research, and market data.
+<strong>Business Intelligence:</strong>Extracts insights from news, research, and market data.
 
-**AI Assistant & Chatbots:**Supports context-aware responses by grounding queries in linked entities.
+<strong>AI Assistant & Chatbots:</strong>Supports context-aware responses by grounding queries in linked entities.
 
-**Multilingual Content Management:**Disambiguates terms across languages and markets.
+<strong>Multilingual Content Management:</strong>Disambiguates terms across languages and markets.
 
 ### Case Studies
 
-- **Healthcare Search Improvement:**Entity linking on physician pages led to a 32% increase in click-through rates by clarifying referenced doctors and clinics.  
+- <strong>Healthcare Search Improvement:</strong>Entity linking on physician pages led to a 32% increase in click-through rates by clarifying referenced doctors and clinics.  
   [See case study](https://www.schemaapp.com/customer-stories/how-marshfield-clinic-leveraged-schema-markup-to-improve-search-traffic-prepare-for-ai-search/)
 
-- **Location-Based SEO:**Adding entity links for locations increased impressions by 46% and clicks by 42% for non-branded queries.
+- <strong>Location-Based SEO:</strong>Adding entity links for locations increased impressions by 46% and clicks by 42% for non-branded queries.
 
 ## 8. Tooling & Integration
 
@@ -166,7 +166,7 @@ Various commercial and open-source tools provide entity linking capabilities:
 | Azure Language Service | API, SDK (Python, C#, etc) | Wikipedia             | [Docs](https://learn.microsoft.com/en-us/azure/ai-services/language-service/entity-linking/overview) |
 | Schema App             | Web, Schema.org markup     | Public, internal      | [Docs](https://www.schemaapp.com/schema-markup/what-is-entity-linking/) |
 
-**JSON-LD Example for Entity Linking in Schema Markup:**```json
+<strong>JSON-LD Example for Entity Linking in Schema Markup:</strong>```json
 {
   "@context": "https://schema.org",
   "@type": "Brand",
@@ -202,7 +202,7 @@ This markup clarifies that “Jaguar” refers to the car brand, not the animal.
 
 - entity disambiguation
 - knowledge bases
-- [named entity recognition](/en/glossary/named-entity-recognition--ner-/)
+- named entity recognition
 - natural language processing
 - knowledge graphs
 - entity linking systems

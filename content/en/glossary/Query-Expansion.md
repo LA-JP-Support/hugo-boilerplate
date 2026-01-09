@@ -36,35 +36,35 @@ Users rarely specify all contextual details. A search for "best restaurant" migh
 
 ### Classic Techniques
 
-**Synonym Expansion:**Adds synonyms of original terms ("car" → "automobile," "vehicle")
+<strong>Synonym Expansion:</strong>Adds synonyms of original terms ("car" → "automobile," "vehicle")
 
-**Stemming/Lemmatization:**Reduces words to root forms ("running," "ran," "runs" → "run")
+<strong>Stemming/Lemmatization:</strong>Reduces words to root forms ("running," "ran," "runs" → "run")
 
-**Related-Term Expansion:**Adds contextually related terms ("diabetes" → "insulin," "glucose")
+<strong>Related-Term Expansion:</strong>Adds contextually related terms ("diabetes" → "insulin," "glucose")
 
-**Automatic Thesaurus Generation:**Uses curated or machine-built thesauri
+<strong>Automatic Thesaurus Generation:</strong>Uses curated or machine-built thesauri
 
-**Contextual Expansion:**Considers query context or user profile (e.g., "Spring" as "Java framework" for developers)
+<strong>Contextual Expansion:</strong>Considers query context or user profile (e.g., "Spring" as "Java framework" for developers)
 
 ### Advanced/AI-Powered Techniques
 
-**Relevance Feedback:**User marks results as relevant or not; system refines expansion
+<strong>Relevance Feedback:</strong>User marks results as relevant or not; system refines expansion
 
-**Pseudo-Relevance Feedback:**System assumes top N results are relevant and extracts terms for expansion
+<strong>Pseudo-Relevance Feedback:</strong>System assumes top N results are relevant and extracts terms for expansion
 
-**Semantic Embeddings:**Uses models like Word2Vec, GloVe, BERT to find semantically similar terms
+<strong>Semantic Embeddings:</strong>Uses models like Word2Vec, GloVe, BERT to find semantically similar terms
 
-**Co-occurrence Analysis:**Identifies terms that frequently appear together in relevant documents
+<strong>Co-occurrence Analysis:</strong>Identifies terms that frequently appear together in relevant documents
 
-**Hybrid Approaches:**Combines manual curation with automated expansion
+<strong>Hybrid Approaches:</strong>Combines manual curation with automated expansion
 
 ### Implementation Approaches
 
-**Manual Expansion:**Curated by human experts (common in law, medicine)
+<strong>Manual Expansion:</strong>Curated by human experts (common in law, medicine)
 
-**Automatic Expansion:**Data-driven and algorithmic
+<strong>Automatic Expansion:</strong>Data-driven and algorithmic
 
-**Hybrid Expansion:**Merges human expertise with automation
+<strong>Hybrid Expansion:</strong>Merges human expertise with automation
 
 ## Comprehensive Technique Reference
 
@@ -82,21 +82,21 @@ Users rarely specify all contextual details. A search for "best restaurant" migh
 
 ### Basic Pipeline
 
-**1. Query Analysis:**The system receives the user's query (e.g., "climate change")
+<strong>1. Query Analysis:</strong>The system receives the user's query (e.g., "climate change")
 
-**2. Term Selection:**Identifies key terms, synonyms, and possible ambiguities
+<strong>2. Term Selection:</strong>Identifies key terms, synonyms, and possible ambiguities
 
-**3. Expansion Generation:**Generates related terms/phrases (e.g., "global warming," "greenhouse gas emissions")
+<strong>3. Expansion Generation:</strong>Generates related terms/phrases (e.g., "global warming," "greenhouse gas emissions")
 
-**4. Query Reformulation:**Combines original and expanded terms into a new query
+<strong>4. Query Reformulation:</strong>Combines original and expanded terms into a new query
 
-**5. Search Execution:**Executes the expanded query to retrieve a broader, more relevant set of results
+<strong>5. Search Execution:</strong>Executes the expanded query to retrieve a broader, more relevant set of results
 
 ### RAG System Implementation
 
 For AI-powered pipelines, especially Retrieval-Augmented Generation (RAG) systems, the process involves encoding the query as a vector, retrieving semantically relevant documents, ranking them, and feeding both the query and retrieved documents to a language model for final answer generation.
 
-**Python Example (Haystack):**```python
+<strong>Python Example (Haystack):</strong>```python
 query_expander = QueryExpander()
 retriever = MultiQueryInMemoryBM25Retriever(InMemoryBM25Retriever(document_store=doc_store))
 

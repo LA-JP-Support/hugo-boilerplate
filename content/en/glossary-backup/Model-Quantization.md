@@ -24,15 +24,15 @@ Think of recording temperatures with a digital thermometer that shows decimals (
 
 ### Motivation
 
-1. **Memory Efficiency:**Lower-precision numbers require fewer bits, drastically reducing the memory footprint. For example, quantizing from FP32 to INT8 cuts memory usage by 75%. For large language models (LLMs) with tens or hundreds of billions of parameters, this is critical for fitting models into smaller GPUs or edge devices.
+1. <strong>Memory Efficiency:</strong>Lower-precision numbers require fewer bits, drastically reducing the memory footprint. For example, quantizing from FP32 to INT8 cuts memory usage by 75%. For large language models (LLMs) with tens or hundreds of billions of parameters, this is critical for fitting models into smaller GPUs or edge devices.
 
-2. **Faster Inference:**Integer arithmetic is more efficient than floating-point on most hardware. Quantized models can achieve 2–3x speedup in inference, and up to 16x increase in performance per watt on specialized accelerators.
+2. <strong>Faster Inference:</strong>Integer arithmetic is more efficient than floating-point on most hardware. Quantized models can achieve 2–3x speedup in inference, and up to 16x increase in performance per watt on specialized accelerators.
 
-3. **Lower Power Consumption:**Smaller, quantized models consume less energy—an important factor for battery-powered devices and sustainability-conscious deployments.
+3. <strong>Lower Power Consumption:</strong>Smaller, quantized models consume less energy—an important factor for battery-powered devices and sustainability-conscious deployments.
 
-4. **Edge and Mobile Deployment:**Many edge devices (IoT, smartphones, wearables) lack the hardware to support high-precision operations. Quantization enables running advanced AI models even on resource-constrained hardware.
+4. <strong>Edge and Mobile Deployment:</strong>Many edge devices (IoT, smartphones, wearables) lack the hardware to support high-precision operations. Quantization enables running advanced AI models even on resource-constrained hardware.
 
-5. **Cost Reduction:**By reducing computational and memory requirements, quantization lowers operational costs in cloud and datacenter deployments.
+5. <strong>Cost Reduction:</strong>By reducing computational and memory requirements, quantization lowers operational costs in cloud and datacenter deployments.
 
 #### Example
 
@@ -45,16 +45,16 @@ Quantization maps high-precision values to a lower-precision domain, usually by 
 
 The most common quantization scheme is affine quantization. For a floating-point value \( x \) in the range \([a, b]\):
 
-**Scale (S):**Determines how the continuous floating-point range is mapped to the discrete integer range.
+<strong>Scale (S):</strong>Determines how the continuous floating-point range is mapped to the discrete integer range.
 
-**Zero-point (Z):**Allows the floating-point zero to be exactly represented as an integer, which is crucial for correct computation in neural networks.
+<strong>Zero-point (Z):</strong>Allows the floating-point zero to be exactly represented as an integer, which is crucial for correct computation in neural networks.
 
-- **Quantizing:**\[
+- <strong>Quantizing:</strong>\[
   x_q = \text{round}\left(\frac{x}{S} + Z\right)
   \]
   where \(x_q\) is the quantized integer value.
 
-- **Dequantizing:**\[
+- <strong>Dequantizing:</strong>\[
   x = S \times (x_q - Z)
   \]
   where \(x\) is the reconstructed floating-point value.
@@ -65,13 +65,13 @@ See:
 
 ### Symmetric vs. Asymmetric Quantization
 
-- **Symmetric:**The integer range is centered at zero (\(Z=0\)); best for data centered around zero.
-- **Asymmetric (Affine):**\(Z\) can be any integer, allowing the floating-point zero to align with an arbitrary integer; useful for skewed distributions.
+- <strong>Symmetric:</strong>The integer range is centered at zero (\(Z=0\)); best for data centered around zero.
+- <strong>Asymmetric (Affine):</strong>\(Z\) can be any integer, allowing the floating-point zero to align with an arbitrary integer; useful for skewed distributions.
 
 ### Per-Tensor vs. Per-Channel Quantization
 
-- **Per-tensor:**The same \(S\) and \(Z\) apply to the whole tensor (e.g., all weights in a layer).
-- **Per-channel:**Each channel (e.g., each convolutional filter) gets its own \(S\) and \(Z\); improves accuracy, especially in convolutional neural networks.
+- <strong>Per-tensor:</strong>The same \(S\) and \(Z\) apply to the whole tensor (e.g., all weights in a layer).
+- <strong>Per-channel:</strong>Each channel (e.g., each convolutional filter) gets its own \(S\) and \(Z\); improves accuracy, especially in convolutional neural networks.
 
 ## Types and Techniques of Quantization
 
@@ -81,31 +81,31 @@ Quantization can be applied in several ways, each with distinct trade-offs.
 
 Quantization is applied to a trained model, without retraining.
 
-- **Static PTQ:**- Uses a calibration dataset to estimate activation ranges.
+- <strong>Static PTQ:</strong>- Uses a calibration dataset to estimate activation ranges.
   - Quantizes weights and activations ahead of inference.
   - Offers better accuracy but requires calibration data.
 
-- **Dynamic PTQ:**- Quantizes weights statically, but activations are quantized on-the-fly during inference.
+- <strong>Dynamic PTQ:</strong>- Quantizes weights statically, but activations are quantized on-the-fly during inference.
   - No calibration data needed.
   - Slightly lower accuracy and slower than static, but easier to implement.
 
-**Use Case:**When retraining is not possible or you have limited data; suitable for many NLP transformer models.
+<strong>Use Case:</strong>When retraining is not possible or you have limited data; suitable for many NLP transformer models.
 ### 2. Quantization-Aware Training (QAT)
 
 Simulates quantization effects during model training by inserting "fake quantization" operations in the computational graph. The model learns to compensate for quantization errors, generally achieving higher post-quantization accuracy, especially at very low bit-widths (e.g., INT4).
 
-**Use Case:**When maximum accuracy is required and retraining is feasible; often used for computer vision and edge deployment scenarios.
+<strong>Use Case:</strong>When maximum accuracy is required and retraining is feasible; often used for computer vision and edge deployment scenarios.
 
 ### 3. Uniform vs. Non-Uniform Quantization
 
-- **Uniform:**Divides the range into equal-sized intervals (linear mapping).
-- **Non-Uniform:**Uses variable-sized intervals (e.g., logarithmic scales, k-means clustering) to allocate more precision where the data is dense or critical.
+- <strong>Uniform:</strong>Divides the range into equal-sized intervals (linear mapping).
+- <strong>Non-Uniform:</strong>Uses variable-sized intervals (e.g., logarithmic scales, k-means clustering) to allocate more precision where the data is dense or critical.
 
 ### 4. Weight-Only, Activation-Only, and Hybrid Quantization
 
-- **Weight-only:**Only weights are quantized; activations remain high-precision.
-- **Activation-only:**Less common; only activations are quantized.
-- **Hybrid:**Both weights and activations are quantized, possibly to different precisions.
+- <strong>Weight-only:</strong>Only weights are quantized; activations remain high-precision.
+- <strong>Activation-only:</strong>Less common; only activations are quantized.
+- <strong>Hybrid:</strong>Both weights and activations are quantized, possibly to different precisions.
 
 ### 5. Integer-Only Quantization
 
@@ -113,12 +113,12 @@ All computations, including accumulations, are performed using integer arithmeti
 
 ### 6. Advanced and Specialized Techniques
 
-- **GPTQ (Gradient Post-Training Quantization):**Layer-wise quantization for transformers, minimizing the mean squared error between original and quantized outputs. Often uses mixed INT4/FP16 precision.
-- **QLoRA (Quantized Low-Rank Adaptation):**Combines low-rank adaptation (LoRA) with quantization, enabling efficient fine-tuning of LLMs.
-- **ZeroQAT, FlatQuant:**Recent research methods for quantizing LLMs with minimal accuracy loss.
+- <strong>GPTQ (Gradient Post-Training Quantization):</strong>Layer-wise quantization for transformers, minimizing the mean squared error between original and quantized outputs. Often uses mixed INT4/FP16 precision.
+- <strong>QLoRA (Quantized Low-Rank Adaptation):</strong>Combines low-rank adaptation (LoRA) with quantization, enabling efficient fine-tuning of LLMs.
+- <strong>ZeroQAT, FlatQuant:</strong>Recent research methods for quantizing LLMs with minimal accuracy loss.
 ## Step-by-Step Example: Quantizing a Large Language Model
 
-Below is a practical workflow using [Hugging Face](/en/glossary/hugging-face/) Transformers and BitsAndBytes for 4-bit quantization (QLoRA) of a TinyLlama model:
+Below is a practical workflow using Hugging Face Transformers and BitsAndBytes for 4-bit quantization (QLoRA) of a TinyLlama model:
 
 ```python
 import torch
@@ -199,7 +199,7 @@ Real-time object detection and sensor fusion require fast, efficient inference o
 Quantized neural networks power on-device speech recognition and natural language understanding in products like Alexa, Siri, and Google Assistant.
 
 ### 5. Industrial IoT
-Anomaly detection, predictive maintenance, and control systems with strict [latency](/en/glossary/latency/) and power requirements.
+Anomaly detection, predictive maintenance, and control systems with strict latency and power requirements.
 
 ### 6. Cloud Inference Acceleration
 Large-scale LLMs and recommender systems in the cloud benefit from reduced memory bandwidth and faster serving.
@@ -216,18 +216,18 @@ Large-scale LLMs and recommender systems in the cloud benefit from reduced memor
 
 ### Hardware
 
-- **CPUs:**Most modern CPUs support INT8 and, increasingly, INT4 operations (e.g., Intel AVX-512 VNNI, AMD Zen4, Apple Silicon, ARM NEON).
-- **GPUs:**NVIDIA (Tensor Cores, Hopper FP8), AMD (Radeon AI), and Apple Neural Engine support various quantization formats.
-- **AI Accelerators:**Google Edge TPU, Intel Gaudi, AWS Inferentia, Qualcomm Hexagon, and dedicated AI chips for mobile/edge devices.
-- **FPGAs/ASICs:**Custom hardware often supports flexible quantization (user-specified bit-widths).
+- <strong>CPUs:</strong>Most modern CPUs support INT8 and, increasingly, INT4 operations (e.g., Intel AVX-512 VNNI, AMD Zen4, Apple Silicon, ARM NEON).
+- <strong>GPUs:</strong>NVIDIA (Tensor Cores, Hopper FP8), AMD (Radeon AI), and Apple Neural Engine support various quantization formats.
+- <strong>AI Accelerators:</strong>Google Edge TPU, Intel Gaudi, AWS Inferentia, Qualcomm Hexagon, and dedicated AI chips for mobile/edge devices.
+- <strong>FPGAs/ASICs:</strong>Custom hardware often supports flexible quantization (user-specified bit-widths).
 
 ### Frameworks
 
-- **PyTorch:**Native quantization APIs (including QAT/PTQ), [torch.quantization](https://pytorch.org/docs/stable/quantization.html), and support for INT8/FP16.
-- **TensorFlow Lite:**Focused on post-training quantization and edge deployment.
-- **ONNX Runtime:**Cross-platform, with quantization extensions.
-- **Hugging Face Optimum:**Integrates quantization for Transformers and ONNX: [Optimum Quantization](https://huggingface.co/docs/optimum/en/concept_guides/quantization)
-- **BitsAndBytes:**Focused on LLMs and 4-bit/8-bit quantization: [BitsAndBytes Quantization](https://huggingface.co/docs/transformers/en/quantization/bitsandbytes)
+- <strong>PyTorch:</strong>Native quantization APIs (including QAT/PTQ), [torch.quantization](https://pytorch.org/docs/stable/quantization.html), and support for INT8/FP16.
+- <strong>TensorFlow Lite:</strong>Focused on post-training quantization and edge deployment.
+- <strong>ONNX Runtime:</strong>Cross-platform, with quantization extensions.
+- <strong>Hugging Face Optimum:</strong>Integrates quantization for Transformers and ONNX: [Optimum Quantization](https://huggingface.co/docs/optimum/en/concept_guides/quantization)
+- <strong>BitsAndBytes:</strong>Focused on LLMs and 4-bit/8-bit quantization: [BitsAndBytes Quantization](https://huggingface.co/docs/transformers/en/quantization/bitsandbytes)
 
 
 ## References and Further Reading
@@ -244,4 +244,4 @@ Large-scale LLMs and recommender systems in the cloud benefit from reduced memor
 
 ## Example Q&A
 
-**Q: What is model quantization?**A: Model quantization is the process of reducing the numerical precision of a model’s parameters and activations—typically from high-precision floating-point (e.g., FP32) to low-precision integer (e.g., INT8)—to reduce
+<strong>Q: What is model quantization?</strong>A: Model quantization is the process of reducing the numerical precision of a model’s parameters and activations—typically from high-precision floating-point (e.g., FP32) to low-precision integer (e.g., INT8)—to reduce

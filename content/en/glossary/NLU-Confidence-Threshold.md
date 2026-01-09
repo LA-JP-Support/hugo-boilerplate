@@ -22,7 +22,7 @@ The threshold is tunable (usually 0.0–1.0) and is central to how conversationa
 
 When an NLU model processes a user utterance, it predicts the most likely intent and assigns a confidence score to each candidate. This score is a scalar (typically 0–1) reflecting how strongly the model believes the input matches a particular intent.
 
-**Example:**A user types "I forgot my password." The NLU model might evaluate:
+<strong>Example:</strong>A user types "I forgot my password." The NLU model might evaluate:
 - ResetPassword: 0.92
 - ChangeEmail: 0.12
 - AccountLockout: 0.08
@@ -31,14 +31,14 @@ The top intent, ResetPassword, has a confidence score of 0.92.
 
 ### Confidence Score vs. Statistical Probability
 
-**Confidence Score:**- Internal metric from NLU engine, not true probability
+<strong>Confidence Score:</strong>- Internal metric from NLU engine, not true probability
 - Not guaranteed to be calibrated or sum to 1 across all intents
 - Indicates relative certainty, not absolute likelihood
 
-**Statistical Probability:**- In statistics, confidence interval (e.g., 95%) defines range for result
+<strong>Statistical Probability:</strong>- In statistics, confidence interval (e.g., 95%) defines range for result
 - Statistical probability is mathematically calibrated; NLU confidence scores are not
 
-**Important:**Do not interpret confidence score of 0.9 as 90% chance of correctness. Treat it as "the model is much more certain about this intent than others right now."
+<strong>Important:</strong>Do not interpret confidence score of 0.9 as 90% chance of correctness. Treat it as "the model is much more certain about this intent than others right now."
 
 ## Role in Chatbot Workflows
 
@@ -46,11 +46,11 @@ The confidence threshold acts as gate in conversational AI decision logic. It de
 
 ### Typical Workflow
 
-**NLU Model Processes Input:**Model assigns scores to all candidate intents.
+<strong>NLU Model Processes Input:</strong>Model assigns scores to all candidate intents.
 
-**Compare to Threshold:**If top intent's score ≥ threshold, proceed with that intent. If not, trigger fallback logic.
+<strong>Compare to Threshold:</strong>If top intent's score ≥ threshold, proceed with that intent. If not, trigger fallback logic.
 
-**Fallback Logic Examples:**- Ask user to confirm detected intent
+<strong>Fallback Logic Examples:</strong>- Ask user to confirm detected intent
 - Request user to rephrase
 - Route to human agent
 - Trigger fallback intent (e.g., AMAZON.FallbackIntent in Amazon Lex)
@@ -59,72 +59,72 @@ The confidence threshold acts as gate in conversational AI decision logic. It de
 
 NLU systems can implement several thresholds for different behaviors:
 
-**Confirmation Threshold:**If top intent's confidence is below this (but above rejection), bot asks user to confirm, e.g., "Did you mean to reset your password?"
+<strong>Confirmation Threshold:</strong>If top intent's confidence is below this (but above rejection), bot asks user to confirm, e.g., "Did you mean to reset your password?"
 
-**Rejection Threshold:**If confidence is below this value, bot triggers fallback, e.g., "I didn't understand that. Could you rephrase?"
+<strong>Rejection Threshold:</strong>If confidence is below this value, bot triggers fallback, e.g., "I didn't understand that. Could you rephrase?"
 
-**Ambiguity Threshold (Optional):**If top two intents have close scores, bot may prompt user to choose.
+<strong>Ambiguity Threshold (Optional):</strong>If top two intents have close scores, bot may prompt user to choose.
 
 ### Threshold Type Comparison
 
 | Threshold Type | Confidence Range | Bot Action |
 |---------------|------------------|------------|
-| **Rejection**| < 0.2 | Fallback/Reject |
-| **Confirmation**| 0.2 – 0.4 | Ask for confirmation |
-| **Acceptance**| > 0.4 | Proceed with intent |
+| <strong>Rejection</strong>| < 0.2 | Fallback/Reject |
+| <strong>Confirmation</strong>| 0.2 – 0.4 | Ask for confirmation |
+| <strong>Acceptance</strong>| > 0.4 | Proceed with intent |
 
 ## Operational Usage
 
-**Intent Filtering:**Intents below threshold are not considered valid.
+<strong>Intent Filtering:</strong>Intents below threshold are not considered valid.
 
-**Fallback Routing:**If no intent exceeds threshold, fallback/default intent is triggered.
+<strong>Fallback Routing:</strong>If no intent exceeds threshold, fallback/default intent is triggered.
 
-**User Experience Control:**Thresholds balance strictness (avoiding errors) and user convenience (minimizing unnecessary prompts).
+<strong>User Experience Control:</strong>Thresholds balance strictness (avoiding errors) and user convenience (minimizing unnecessary prompts).
 
-**Example (Amazon Lex):**If all intent scores are below threshold, Lex triggers AMAZON.FallbackIntent and prompts user to clarify.
+<strong>Example (Amazon Lex):</strong>If all intent scores are below threshold, Lex triggers AMAZON.FallbackIntent and prompts user to clarify.
 
 ## Selecting and Tuning Thresholds
 
 ### Step-by-Step Process
 
-**Gather Annotated Test Data:**Use dataset of real-world user utterances with known intent labels.
+<strong>Gather Annotated Test Data:</strong>Use dataset of real-world user utterances with known intent labels.
 
-**Run Model Predictions:**For each utterance, get model's intent confidence scores.
+<strong>Run Model Predictions:</strong>For each utterance, get model's intent confidence scores.
 
-**Evaluate at Multiple Thresholds:**For thresholds (e.g., 0.0–1.0 in 0.05 increments), record:
+<strong>Evaluate at Multiple Thresholds:</strong>For thresholds (e.g., 0.0–1.0 in 0.05 increments), record:
 - Correct acceptances (true positives)
 - Incorrect acceptances (false positives)
 - Correct rejections (true negatives)
 - Incorrect rejections (false negatives)
 
-**Plot ROC Curve:**Receiver Operating Characteristic (ROC) curve plots true positive rate vs. false positive rate for different thresholds.
+<strong>Plot ROC Curve:</strong>Receiver Operating Characteristic (ROC) curve plots true positive rate vs. false positive rate for different thresholds.
 
-**Calculate F1 Score:**F1 combines precision and recall into one metric, especially useful for imbalanced datasets.
+<strong>Calculate F1 Score:</strong>F1 combines precision and recall into one metric, especially useful for imbalanced datasets.
 
-**Select Threshold(s):**Choose threshold(s) that balance:
+<strong>Select Threshold(s):</strong>Choose threshold(s) that balance:
 - User friction (too many confirmations)
 - Accuracy (minimizing misclassifications)
 - Business risk (cost of errors vs. interruptions)
 
-**Important:**Criticality of errors can justify higher or lower thresholds. In regulated or high-risk domains, favor higher thresholds and confirmations.
+<strong>Important:</strong>Criticality of errors can justify higher or lower thresholds. In regulated or high-risk domains, favor higher thresholds and confirmations.
 
 ## Evaluation Metrics
 
 ### Key Metrics
 
-**Precision:**Proportion of accepted intents that are correct.
+<strong>Precision:</strong>Proportion of accepted intents that are correct.
 
-**Recall:**Proportion of correct intents that are accepted.
+<strong>Recall:</strong>Proportion of correct intents that are accepted.
 
-**F1 Score:**Harmonic mean of precision and recall.
+<strong>F1 Score:</strong>Harmonic mean of precision and recall.
 
 ### Visualization
 
-**ROC Curve:**For binary intent classification.
+<strong>ROC Curve:</strong>For binary intent classification.
 
-**Custom Plots:**For multi-class systems, plot correct/incorrect acceptances and rejections per threshold.
+<strong>Custom Plots:</strong>For multi-class systems, plot correct/incorrect acceptances and rejections per threshold.
 
-**Example Metrics:**- Correct Accept (true positive)
+<strong>Example Metrics:</strong>- Correct Accept (true positive)
 - False Accept (false positive)
 - Correct Reject (true negative)
 - False Reject (false negative)
@@ -147,17 +147,17 @@ Confidence thresholds determine which intent is triggered. Upgrades to model may
 
 Recommends dataset balance and real-world testing for thresholds.
 
-**Important:**Thresholds are not portable across engines. Each NLU's scoring is unique and may change over time.
+<strong>Important:</strong>Thresholds are not portable across engines. Each NLU's scoring is unique and may change over time.
 
 ## Monitoring and Adjustment
 
 ### Why Continuous Tuning is Necessary
 
-**Model Updates:**Retraining or upgrading NLU can shift score distributions.
+<strong>Model Updates:</strong>Retraining or upgrading NLU can shift score distributions.
 
-**Dataset Drift:**User language and patterns evolve, affecting threshold effectiveness.
+<strong>Dataset Drift:</strong>User language and patterns evolve, affecting threshold effectiveness.
 
-**Engine Changes:**Vendor upgrades may alter optimal thresholds.
+<strong>Engine Changes:</strong>Vendor upgrades may alter optimal thresholds.
 
 ### Best Practices
 
@@ -170,42 +170,42 @@ Recommends dataset balance and real-world testing for thresholds.
 
 ### Banking Chatbot with Overlapping Intents
 
-**Scenario:**"Check balance" and "Manage credit card" both have utterances like "What's my credit card balance?"
+<strong>Scenario:</strong>"Check balance" and "Manage credit card" both have utterances like "What's my credit card balance?"
 
-**Issue:**High utterance overlap lowers confidence scores.
+<strong>Issue:</strong>High utterance overlap lowers confidence scores.
 
-**Solution:**Refine utterances to minimize overlap and adjust thresholds after retraining.
+<strong>Solution:</strong>Refine utterances to minimize overlap and adjust thresholds after retraining.
 
 ### Contact Center Virtual Agent
 
-**Scenario:**NLU returns multiple close-scoring intents for "error."
+<strong>Scenario:</strong>NLU returns multiple close-scoring intents for "error."
 
-**Observed:**"SearchKnowledgeBase" and "ProvideVirtualAgentFeedback" return 85%; "RaiseIncident" returns 70%.
+<strong>Observed:</strong>"SearchKnowledgeBase" and "ProvideVirtualAgentFeedback" return 85%; "RaiseIncident" returns 70%.
 
-**Analysis:**Scoring mechanism may favor certain patterns. Adjust threshold and improve training data.
+<strong>Analysis:</strong>Scoring mechanism may favor certain patterns. Adjust threshold and improve training data.
 
 ### Amazon Lex Fallback
 
-**Scenario:**User: "I need help with my bill."
+<strong>Scenario:</strong>User: "I need help with my bill."
 
-**NLU Output:**- "BillingHelp": 0.61
+<strong>NLU Output:</strong>- "BillingHelp": 0.61
 - "AccountHelp": 0.58
 
-**Threshold:**Set at 0.65.
+<strong>Threshold:</strong>Set at 0.65.
 
-**Result:**Both below threshold; Lex triggers AMAZON.FallbackIntent.
+<strong>Result:</strong>Both below threshold; Lex triggers AMAZON.FallbackIntent.
 
 ## Common Pitfalls
 
-**Overly High Thresholds:**Excessive fallback/confirmation prompts, poor UX.
+<strong>Overly High Thresholds:</strong>Excessive fallback/confirmation prompts, poor UX.
 
-**Overly Low Thresholds:**Accepts incorrect intents, misrouted conversations.
+<strong>Overly Low Thresholds:</strong>Accepts incorrect intents, misrouted conversations.
 
-**Assuming Threshold Portability:**Thresholds for one engine/dataset won't generalize.
+<strong>Assuming Threshold Portability:</strong>Thresholds for one engine/dataset won't generalize.
 
-**Ignoring Dataset Imbalance:**Skewed training leads to biased scores.
+<strong>Ignoring Dataset Imbalance:</strong>Skewed training leads to biased scores.
 
-**Not Monitoring in Production:**Accuracy can drift unnoticed.
+<strong>Not Monitoring in Production:</strong>Accuracy can drift unnoticed.
 
 ## Best Practices
 
@@ -216,29 +216,29 @@ Recommends dataset balance and real-world testing for thresholds.
 - Regularly retrain and re-evaluate after changes
 - Document rationale for chosen thresholds
 
-**Important:**In high-risk domains (e.g., healthcare, finance), set conservative thresholds and favor confirmation.
+<strong>Important:</strong>In high-risk domains (e.g., healthcare, finance), set conservative thresholds and favor confirmation.
 
 ## Related Terminology
 
-**Natural Language Understanding (NLU):**AI for extracting intent/entities from input.
+<strong>Natural Language Understanding (NLU):</strong>AI for extracting intent/entities from input.
 
-**Intent:**Goal/task user wants (e.g., "ResetPassword").
+<strong>Intent:</strong>Goal/task user wants (e.g., "ResetPassword").
 
-**Utterance:**User's input phrase.
+<strong>Utterance:</strong>User's input phrase.
 
-**Confidence Score:**NLU's estimate of intent match.
+<strong>Confidence Score:</strong>NLU's estimate of intent match.
 
-**Fallback:**Response when no intent is confidently matched.
+<strong>Fallback:</strong>Response when no intent is confidently matched.
 
-**ROC Curve:**Graph of true positive vs. false positive at thresholds.
+<strong>ROC Curve:</strong>Graph of true positive vs. false positive at thresholds.
 
-**F1 Score:**Harmonic mean of precision and recall.
+<strong>F1 Score:</strong>Harmonic mean of precision and recall.
 
-**False Positive:**Model accepts incorrect intent.
+<strong>False Positive:</strong>Model accepts incorrect intent.
 
-**False Negative:**Model rejects correct intent.
+<strong>False Negative:</strong>Model rejects correct intent.
 
-**Intent Overlap:**Similar utterances across intents, reducing confidence.
+<strong>Intent Overlap:</strong>Similar utterances across intents, reducing confidence.
 
 ## References
 

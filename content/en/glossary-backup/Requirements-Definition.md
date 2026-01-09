@@ -28,7 +28,7 @@ Requirements definition answers:
 
 This process transforms vague or conflicting stakeholder expectations into precise, actionable, and measurable statements, which are used to evaluate system completeness and success.
 
-**Links:**- [SEBoK: System Requirements Definition](https://sebokwiki.org/wiki/System_Requirements_Definition)
+<strong>Links:</strong>- [SEBoK: System Requirements Definition](https://sebokwiki.org/wiki/System_Requirements_Definition)
 - [FHWA: Systems Engineering for ITS - Requirements](https://ops.fhwa.dot.gov/seits/sections/section3/3_3_6.html)
 - [IEEE Std 830-1998: Recommended Practice for SRS](https://www.utdallas.edu/~chung/RE/IEEE830-1993.pdf)
 - [ISO/IEC/IEEE 29148:2018 Standard](https://drkasbokar.com/wp-content/uploads/2024/09/29148-2018-ISOIECIEEE.pdf)
@@ -49,10 +49,10 @@ Requirements definition is foundational to any AI, software, or systems project.
 
 ### Requirements vs. Specifications
 
-- **Requirements:**State what a system must achieve (needs, constraints, outcomes).
-- **Specifications:**Describe how the system will fulfill the requirements (technical details, architecture).
+- <strong>Requirements:</strong>State what a system must achieve (needs, constraints, outcomes).
+- <strong>Specifications:</strong>Describe how the system will fulfill the requirements (technical details, architecture).
 
-**Example:**- Requirement: “The chatbot shall respond to user queries in less than 1 second under normal load.”
+<strong>Example:</strong>- Requirement: “The chatbot shall respond to user queries in less than 1 second under normal load.”
 - Specification: “The chatbot will be hosted on a scalable cloud infrastructure, with Redis caching for session data.”
 
 ## Types of Requirements
@@ -61,14 +61,14 @@ Requirements definition is foundational to any AI, software, or systems project.
 
 Describe what the system must do—features, capabilities, and interactions.
 
-**Examples:**- “The AI assistant shall authenticate users via OAuth 2.0.”
+<strong>Examples:</strong>- “The AI assistant shall authenticate users via OAuth 2.0.”
 - “The chatbot shall process natural language queries in English and Spanish.”
 
 ### Non-Functional Requirements (Quality Attributes)
 
 Describe how well the system must perform—quality attributes and constraints.
 
-**Examples:**- “The chatbot interface shall load within 2 seconds for 95% of users.”
+<strong>Examples:</strong>- “The chatbot interface shall load within 2 seconds for 95% of users.”
 - “All user data must be encrypted at rest using AES-256.”
 
 Common categories:
@@ -82,40 +82,40 @@ Common categories:
 
 High-level objectives reflecting organizational goals.
 
-**Example:**“The chatbot solution shall reduce average customer response time by 50% within six months.”
+<strong>Example:</strong>“The chatbot solution shall reduce average customer response time by 50% within six months.”
 
 ### Technical Requirements
 
 Detail technology stack, interoperability, infrastructure, and standards.
 
-**Examples:**- “The automation must integrate with the SAP ERP system.”
+<strong>Examples:</strong>- “The automation must integrate with the SAP ERP system.”
 - “The application shall be developed in Python 3.9 or higher.”
 
 ### Constraint Requirements
 
 Impose limitations such as regulatory, resource, or environmental constraints.
 
-**Examples:**- “The system must comply with GDPR.”
+<strong>Examples:</strong>- “The system must comply with GDPR.”
 - “The application shall not require more than 2 GB of RAM per instance.”
 
 ### Interface Requirements
 
 Define interactions with users, external systems, or hardware.
 
-**Example:**“The chatbot shall expose a RESTful API conforming to OpenAPI 3.0.”
+<strong>Example:</strong>“The chatbot shall expose a RESTful API conforming to OpenAPI 3.0.”
 
 ## Attributes of Well-Formed Requirements
 
 According to [IEEE 830](https://www.utdallas.edu/~chung/RE/IEEE830-1993.pdf) and [ISO/IEC/IEEE 29148](https://drkasbokar.com/wp-content/uploads/2024/09/29148-2018-ISOIECIEEE.pdf):
 
-- **Clarity:**Unambiguous language.
-- **Testability:**Objectively verifiable.
-- **Traceability:**Linked to source and tracked through the lifecycle.
-- **Feasibility:**Realistic within project constraints.
-- **Singularity:**One need or function per statement.
-- **Completeness:**All necessary detail provided.
-- **Consistency:**No conflicts with other requirements.
-- **Verifiability:**Means of verification is clear (test, inspection, analysis).
+- <strong>Clarity:</strong>Unambiguous language.
+- <strong>Testability:</strong>Objectively verifiable.
+- <strong>Traceability:</strong>Linked to source and tracked through the lifecycle.
+- <strong>Feasibility:</strong>Realistic within project constraints.
+- <strong>Singularity:</strong>One need or function per statement.
+- <strong>Completeness:</strong>All necessary detail provided.
+- <strong>Consistency:</strong>No conflicts with other requirements.
+- <strong>Verifiability:</strong>Means of verification is clear (test, inspection, analysis).
 
 *Poor requirement:*  
 “The chatbot should be fast.”  
@@ -133,7 +133,7 @@ Gathering and clarifying requirements from:
 - Existing systems and documentation
 - Regulations, standards, and policies
 
-**Techniques:**- Interviews, focus groups, workshops
+<strong>Techniques:</strong>- Interviews, focus groups, workshops
 - Surveys, questionnaires
 - Observation, shadowing
 - Prototyping, use cases
@@ -178,7 +178,7 @@ Requirements must be maintained throughout the lifecycle:
 - Impact analysis for changes
 - Traceability links to design, implementation, testing
 
-**Traceability:**- Each requirement is traceable to its origin and rationale.
+<strong>Traceability:</strong>- Each requirement is traceable to its origin and rationale.
 - All requirements addressed in downstream artifacts.
 - Changes reflected throughout all documentation.
 
@@ -186,10 +186,10 @@ Requirements must be maintained throughout the lifecycle:
 
 Requirements are structured hierarchically:
 
-- **High-Level Requirements:**Broad objectives.
-- **System Requirements:**Overall solution needs.
-- **Subsystem/Component Requirements:**Module-specific needs.
-- **Derived Requirements:**Emerge from design or constraints.
+- <strong>High-Level Requirements:</strong>Broad objectives.
+- <strong>System Requirements:</strong>Overall solution needs.
+- <strong>Subsystem/Component Requirements:</strong>Module-specific needs.
+- <strong>Derived Requirements:</strong>Emerge from design or constraints.
 
 *Example hierarchy for an AI chatbot:*
 
@@ -201,10 +201,10 @@ Requirements are structured hierarchically:
 
 ## Practical Examples
 
-- **Functional (Good):**“The AI assistant shall provide context-based suggestions after each user input.”
-- **Non-Functional (Performance):**“The system shall process 1,000 transactions per second with an average response time under 2 seconds.”
-- **Security:**“The application shall encrypt all user data at rest using AES-256.”
-- **Interface:**“The system shall expose a REST API, conforming to OpenAPI 3.0.”
+- <strong>Functional (Good):</strong>“The AI assistant shall provide context-based suggestions after each user input.”
+- <strong>Non-Functional (Performance):</strong>“The system shall process 1,000 transactions per second with an average response time under 2 seconds.”
+- <strong>Security:</strong>“The application shall encrypt all user data at rest using AES-256.”
+- <strong>Interface:</strong>“The system shall expose a REST API, conforming to OpenAPI 3.0.”
 
 ## Use Cases of Requirements Definition
 
@@ -247,7 +247,7 @@ Specifies requirements for complex systems (e.g., aerospace, medical), including
 - Control changes with formal change management.
 - Plan for requirement margins to manage uncertainty.
 
-**Best practice guides:**- [Aqua Cloud: 8 Essential Strategies](https://aqua-cloud.io/8-essential-strategies-effective-requirements-elicitation/)  
+<strong>Best practice guides:</strong>- [Aqua Cloud: 8 Essential Strategies](https://aqua-cloud.io/8-essential-strategies-effective-requirements-elicitation/)  
 - [Modern Requirements: AI Elicitation Best Practices](https://www.modernrequirements.com/blogs/best-practices-for-ai-requirements-elicitation-techniques/)
 
 ## Common Pitfalls and Solutions
@@ -262,13 +262,13 @@ Specifies requirements for complex systems (e.g., aerospace, medical), including
 
 ## Tools and Standards
 
-**Widely Adopted Tools:**- IBM Rational DOORS: [Official Site](https://www.ibm.com/products/requirements-management)
+<strong>Widely Adopted Tools:</strong>- IBM Rational DOORS: [Official Site](https://www.ibm.com/products/requirements-management)
 - Jama Connect: [Official Site](https://www.jamasoftware.com/)
 - Jira (with requirements plugins): [Jira Software](https://www.atlassian.com/software/jira)
 - Microsoft Azure DevOps: [Azure Boards](https://azure.microsoft.com/en-us/services/devops/boards/)
 - ReqIF-based tools: [ReqIF.academy](https://www.reqif.academy/)
 
-**Key Standards:**- [INCOSE Systems Engineering Handbook](https://www.incose.org/products-and-publications/se-handbook)
+<strong>Key Standards:</strong>- [INCOSE Systems Engineering Handbook](https://www.incose.org/products-and-publications/se-handbook)
 - [IEEE 830: SRS Standard (PDF)](https://www.utdallas.edu/~chung/RE/IEEE830-1993.pdf)
 - [ISO/IEC/IEEE 29148:2018](https://drkasbokar.com/wp-content/uploads/2024/09/29148-2018-ISOIECIEEE.pdf)
 - [ISO/IEC 15288: System Life Cycle Processes](https://www.iso.org/standard/63711.html)
@@ -278,14 +278,14 @@ Specifies requirements for complex systems (e.g., aerospace, medical), including
 ## Requirements Definition in the Application Lifecycle
 
 Requirements definition is integrated into every stage:
-- **Planning:**Defines scope and objectives.
-- **Design:**Informs architecture and tech selection.
-- **Development:**Guides implementation.
-- **Testing:**Basis for test cases and acceptance.
-- **Deployment:**Ensures solution meets requirements.
-- **Maintenance:**Supports changes and impact analysis.
+- <strong>Planning:</strong>Defines scope and objectives.
+- <strong>Design:</strong>Informs architecture and tech selection.
+- <strong>Development:</strong>Guides implementation.
+- <strong>Testing:</strong>Basis for test cases and acceptance.
+- <strong>Deployment:</strong>Ensures solution meets requirements.
+- <strong>Maintenance:</strong>Supports changes and impact analysis.
 
-**Traceability Example:**A requirement for “response time under 1 second” is traced to:
+<strong>Traceability Example:</strong>A requirement for “response time under 1 second” is traced to:
 - Architectural decisions (caching strategy)
 - Code modules (query optimization)
 - Test cases (performance benchmarks)
@@ -320,9 +320,9 @@ Requirements definition is integrated into every stage:
 - [Specification](https://en.wikipedia.org/wiki/Specification_(technical_standard))
 - [Stakeholder Analysis](https://en.wikipedia.org/wiki/Stakeholder_analysis)
 
-**Category:**AI Chatbot & Automation
+<strong>Category:</strong>AI Chatbot & Automation
 
-**For further reading and detailed process diagrams, see the following:**- [SEBoK: System Requirements Definition](https://sebokwiki.org/wiki/System_Requirements_Definition)
+<strong>For further reading and detailed process diagrams, see the following:</strong>- [SEBoK: System Requirements Definition](https://sebokwiki.org/wiki/System_Requirements_Definition)
 - [ISO/IEC/IEEE 29148:2018 Standard (PDF)](https://drkasbokar.com/wp-content/uploads/2024/09/29148-2018-ISOIECIEEE.pdf)
 - [IEEE 830: Software Requirements Specifications (PDF)](https://www.utdallas.edu/~chung/RE/IEEE830-1993.pdf)
 - [NASA Systems Engineering Handbook (PDF)](https://ntrs.nasa.gov/api/citations/20080008301/downloads/20080008301.pdf)

@@ -48,19 +48,19 @@ Logic that compares user query embeddings with route vectors, selects the best m
 
 ### Step-by-Step Workflow
 
-**1. User Query:**User submits a free-form question or command
+<strong>1. User Query:</strong>User submits a free-form question or command
 
-**2. Text Embedding:**Query is converted into a vector using an embedding model
+<strong>2. Text Embedding:</strong>Query is converted into a vector using an embedding model
 
-**3. Route Definition:**Each route is associated with one or more example utterances, embedded as vectors
+<strong>3. Route Definition:</strong>Each route is associated with one or more example utterances, embedded as vectors
 
-**4. Similarity Search:**The system computes similarity (e.g., cosine similarity) between the query vector and all route utterance vectors
+<strong>4. Similarity Search:</strong>The system computes similarity (e.g., cosine similarity) between the query vector and all route utterance vectors
 
-**5. Routing Decision:**The route with the highest similarity (above a threshold) is chosen
+<strong>5. Routing Decision:</strong>The route with the highest similarity (above a threshold) is chosen
 
-**6. Action/Fallback:**The matched route triggers a specific action or a fallback/default route is used if no match is strong enough
+<strong>6. Action/Fallback:</strong>The matched route triggers a specific action or a fallback/default route is used if no match is strong enough
 
-**Example Workflow:**```plaintext
+<strong>Example Workflow:</strong>```plaintext
 User Query: "I can't get into my account"
    ↓
 [Embedding Model] → Query Vector

@@ -11,14 +11,14 @@ draft: false
 ---
 ## What is a Rate Limiting Handler?
 
-A **Rate Limiting Handler**manages and enforces API request quotas transparently for both client and server applications. It detects when request thresholds are approached or breached, handles HTTP 429 “Too Many Requests” responses, and manages retry logic, queuing, or deferral to maintain compliance with API rate limits. Handlers can exist as middleware, libraries, proxy layers, or cloud-managed services.
+A <strong>Rate Limiting Handler</strong>manages and enforces API request quotas transparently for both client and server applications. It detects when request thresholds are approached or breached, handles HTTP 429 “Too Many Requests” responses, and manages retry logic, queuing, or deferral to maintain compliance with API rate limits. Handlers can exist as middleware, libraries, proxy layers, or cloud-managed services.
 
-**Key functions:**- Tracking and limiting outgoing or incoming requests.
+<strong>Key functions:</strong>- Tracking and limiting outgoing or incoming requests.
 - Responding automatically to rate limiting signals (e.g., HTTP headers, error codes).
 - Implementing sophisticated wait, queue, or retry logic.
 - Providing user or developer feedback about quota status.
 
-**Further reading:**- [MDN: HTTP 429 – Too Many Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)
+<strong>Further reading:</strong>- [MDN: HTTP 429 – Too Many Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)
 - [Zuplo: What is API Rate Limiting?](https://zuplo.com/features/rate-limiting?utm_source=blog)
 
 ## Why Are Rate Limiting Handlers Necessary?
@@ -26,13 +26,13 @@ A **Rate Limiting Handler**manages and enforces API request quotas transparently
 APIs, especially those in SaaS, AI, social media, and cloud platforms, impose rate limits to ensure fair usage and infrastructure stability. Unmanaged request bursts can trigger:
 
 - HTTP 429 errors
-- Temporary/permanent bans or [throttling](/en/glossary/throttling/)
+- Temporary/permanent bans or throttling
 - Workflow failures and user disruptions
 - Increased costs due to repeated or failed requests
 
 A robust handler automatically ensures compliance, prevents errors, and optimizes resource use—often invisibly to end users or developers.
 
-**Industry scenarios:**- OpenAI and GPT APIs enforce strict per-key and per-user limits.
+<strong>Industry scenarios:</strong>- OpenAI and GPT APIs enforce strict per-key and per-user limits.
 - Social networks (Twitter/X, Facebook, LinkedIn) have endpoint- and user-based quotas.
 - SaaS integrations (Salesforce, Atlassian, Jira) protect against excessive polling or data dumps.
 
@@ -66,19 +66,19 @@ The sliding or fixed time period used for counting requests within a quota syste
 
 The handler’s lifecycle follows these advanced steps:
 
-1. **Traffic Pattern Analysis:**Advanced handlers analyze historical and real-time data to predict and proactively manage quota consumption. [Zuplo: Traffic Analysis](https://zuplo.com/learning-center/10-best-practices-for-api-rate-limiting-in-2025#1-analyze-api-traffic-patterns)
+1. <strong>Traffic Pattern Analysis:</strong>Advanced handlers analyze historical and real-time data to predict and proactively manage quota consumption. [Zuplo: Traffic Analysis](https://zuplo.com/learning-center/10-best-practices-for-api-rate-limiting-in-2025#1-analyze-api-traffic-patterns)
 
-2. **Dynamic Algorithm Selection:**Handlers adapt between algorithms (fixed/sliding window, token/leaky bucket) based on traffic bursts, user types, or endpoint criticality.
+2. <strong>Dynamic Algorithm Selection:</strong>Handlers adapt between algorithms (fixed/sliding window, token/leaky bucket) based on traffic bursts, user types, or endpoint criticality.
 
-3. **Keyed, Resource-Based, or Global Limits:**Limits can be set per-API key, per-user, per-IP, or per-resource, supporting multi-tiered access and special cases (VIP, partner, or public users).
+3. <strong>Keyed, Resource-Based, or Global Limits:</strong>Limits can be set per-API key, per-user, per-IP, or per-resource, supporting multi-tiered access and special cases (VIP, partner, or public users).
 
-4. **API Gateway/Middleware Integration:**Many handlers exist as plugins or features in API gateways (e.g., Kong, Zuplo, AWS API Gateway, Cloudflare), centralizing enforcement and observability.
+4. <strong>API Gateway/Middleware Integration:</strong>Many handlers exist as plugins or features in API gateways (e.g., Kong, Zuplo, AWS API Gateway, Cloudflare), centralizing enforcement and observability.
 
-5. **Header Parsing and Adaptive Wait:**Handlers interpret `Retry-After`, `X-RateLimit-Reset`, and other headers to wait or schedule retries precisely.
+5. <strong>Header Parsing and Adaptive Wait:</strong>Handlers interpret `Retry-After`, `X-RateLimit-Reset`, and other headers to wait or schedule retries precisely.
 
-6. **User/Developer Feedback:**Advanced systems inform clients or end-users of wait times, current quota, or anticipated recovery via dashboards, logs, or API responses.
+6. <strong>User/Developer Feedback:</strong>Advanced systems inform clients or end-users of wait times, current quota, or anticipated recovery via dashboards, logs, or API responses.
 
-7. **Cost and Abuse Management:**Handlers may batch, cache, or coalesce requests, and auto-block or alert on abnormal usage patterns.
+7. <strong>Cost and Abuse Management:</strong>Handlers may batch, cache, or coalesce requests, and auto-block or alert on abnormal usage patterns.
 
 ## Common Rate Limiting Algorithms
 
@@ -90,7 +90,7 @@ The handler’s lifecycle follows these advanced steps:
 | Leaky Bucket   | Consistent request flow       | Queued requests processed at fixed rate     |
 | Sliding Log    | High precision, low error     | Timestamp log, highest accuracy, more memory|
 
-**Algorithm deep dive:**- [Solo.io: Rate Limiting Algorithms](https://www.solo.io/topics/rate-limiting)
+<strong>Algorithm deep dive:</strong>- [Solo.io: Rate Limiting Algorithms](https://www.solo.io/topics/rate-limiting)
 - [Zuplo: Algorithm Comparison](https://zuplo.com/learning-center/10-best-practices-for-api-rate-limiting-in-2025#quick-comparison-of-algorithms)
 
 ## Implementation Examples
@@ -123,7 +123,7 @@ class RateLimiter {
   }
 }
 ```
-**Usage:**Wrap outgoing fetch calls to avoid exceeding limits, enforcing smooth request pacing.
+<strong>Usage:</strong>Wrap outgoing fetch calls to avoid exceeding limits, enforcing smooth request pacing.
 
 ### Server-Side Python: Fixed Window (Flask + Redis)
 
@@ -195,7 +195,7 @@ class Limiter {
   - `X-RateLimit-Limit`
   - `X-RateLimit-Remaining`
 
-**Example:**```
+<strong>Example:</strong>```
 HTTP/1.1 429 TOO MANY REQUESTS
 Retry-After: 60
 X-RateLimit-Limit: 5
@@ -226,7 +226,7 @@ while (attempt < maxRetries) {
 }
 ```
 
-**Python Example (Tenacity):**```python
+<strong>Python Example (Tenacity):</strong>```python
 from tenacity import retry, wait_random_exponential, stop_after_attempt
 
 @retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))

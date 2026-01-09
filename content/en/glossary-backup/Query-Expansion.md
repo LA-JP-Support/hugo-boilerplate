@@ -17,9 +17,9 @@ Query expansion is essential for modern search engines, enterprise search, medic
 
 ### Core Principles
 
-- **Synonymy:**Different words can mean the same thing (“car” and “automobile”).
-- **Polysemy:**The same word can have different meanings (“spring” as a season or a coil).
-- **Contextual Matching:**Understanding the user's intent beyond the literal query.
+- <strong>Synonymy:</strong>Different words can mean the same thing (“car” and “automobile”).
+- <strong>Polysemy:</strong>The same word can have different meanings (“spring” as a season or a coil).
+- <strong>Contextual Matching:</strong>Understanding the user's intent beyond the literal query.
 
 ## Why Is Query Expansion Needed? The Motivation
 
@@ -43,52 +43,52 @@ Query expansion encompasses a range of methods, from classic synonym expansion t
 
 ### Classic Techniques
 
-- **Synonym Expansion:**Adds synonyms of original terms (“car” → “automobile,” “vehicle”).
-- **Stemming/Lemmatization:**Reduces words to root forms (“running,” “ran,” “runs” → “run”).
-- **Related-Term Expansion:**Adds contextually related terms (“diabetes” → “insulin,” “glucose”).
-- **Automatic Thesaurus Generation:**Uses curated or machine-built thesauri ([Stanford NLP](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf)).
-- **Contextual Expansion:**Considers query context or user profile (e.g., “Spring” as “Java framework” for developers).
+- <strong>Synonym Expansion:</strong>Adds synonyms of original terms (“car” → “automobile,” “vehicle”).
+- <strong>Stemming/Lemmatization:</strong>Reduces words to root forms (“running,” “ran,” “runs” → “run”).
+- <strong>Related-Term Expansion:</strong>Adds contextually related terms (“diabetes” → “insulin,” “glucose”).
+- <strong>Automatic Thesaurus Generation:</strong>Uses curated or machine-built thesauri ([Stanford NLP](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf)).
+- <strong>Contextual Expansion:</strong>Considers query context or user profile (e.g., “Spring” as “Java framework” for developers).
 
 ### Advanced/AI-Powered Techniques
 
-- **Relevance Feedback:**User marks results as relevant or not; system refines expansion ([Stanford NLP, Ch. 9](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf)).
-- **Pseudo-Relevance Feedback:**System assumes top N results are relevant and extracts terms for expansion.
-- **Semantic Embeddings:**Uses models like Word2Vec, GloVe, BERT to find semantically similar terms.
-- **Co-occurrence Analysis:**Identifies terms that frequently appear together in relevant documents.
-- **Hybrid Approaches:**Combines manual curation with automated expansion ([ITU Online](https://www.ituonline.com/tech-definitions/what-is-query-expansion/)).
+- <strong>Relevance Feedback:</strong>User marks results as relevant or not; system refines expansion ([Stanford NLP, Ch. 9](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf)).
+- <strong>Pseudo-Relevance Feedback:</strong>System assumes top N results are relevant and extracts terms for expansion.
+- <strong>Semantic Embeddings:</strong>Uses models like Word2Vec, GloVe, BERT to find semantically similar terms.
+- <strong>Co-occurrence Analysis:</strong>Identifies terms that frequently appear together in relevant documents.
+- <strong>Hybrid Approaches:</strong>Combines manual curation with automated expansion ([ITU Online](https://www.ituonline.com/tech-definitions/what-is-query-expansion/)).
 
 ### Implementation Approaches
 
-- **Manual Expansion:**Curated by human experts (common in law, medicine).
-- **Automatic Expansion:**Data-driven and algorithmic.
-- **Hybrid Expansion:**Merges human expertise with automation.
+- <strong>Manual Expansion:</strong>Curated by human experts (common in law, medicine).
+- <strong>Automatic Expansion:</strong>Data-driven and algorithmic.
+- <strong>Hybrid Expansion:</strong>Merges human expertise with automation.
 
-**Comprehensive Reference Table**| Technique                  | How It Works                                              | Example                                  |
+<strong>Comprehensive Reference Table</strong>| Technique                  | How It Works                                              | Example                                  |
 |----------------------------|----------------------------------------------------------|------------------------------------------|
 | Synonym Expansion          | Adds synonyms                                            | “car” → “automobile,” “vehicle”          |
-| Stemming/[Lemmatization](/en/glossary/lemmatization/)     | Normalizes word forms                                    | “running” → “run”                        |
+| Stemming/Lemmatization     | Normalizes word forms                                    | “running” → “run”                        |
 | Related-Term Expansion     | Adds contextually relevant terms                         | “heart attack” → “myocardial infarction” |
 | Relevance Feedback         | Refines expansion from user feedback                     | Clicked docs influence added terms       |
 | Embedding-Based Expansion  | Uses semantic similarity in vector space                 | “AI” → “artificial intelligence,” “ML”   |
 | Co-occurrence Analysis     | Adds terms frequently found together                     | “solar” + “energy”                       |
 | Contextual Expansion       | Leverages user/location/context for expansion            | “Spring” + developer profile → “Java”    |
 
-**Further reading:**- [Stanford NLP - Relevance Feedback and Query Expansion PDF](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf)  
+<strong>Further reading:</strong>- [Stanford NLP - Relevance Feedback and Query Expansion PDF](https://nlp.stanford.edu/IR-book/pdf/09expand.pdf)  
 - [ITU Online - Query Expansion](https://www.ituonline.com/tech-definitions/what-is-query-expansion/)
 
 ## How Query Expansion Works: Step-by-Step
 
 ### Example Pipeline
 
-1. **Query Analysis:**The system receives the user’s query (e.g., “climate change”).
-2. **Term Selection:**Identifies key terms, synonyms, and possible ambiguities.
-3. **Expansion Generation:**Generates related terms/phrases (e.g., “global warming,” “greenhouse gas emissions”).
-4. **Query Reformulation:**Combines original and expanded terms into a new query.
-5. **Search Execution:**Executes the expanded query to retrieve a broader, more relevant set of results.
+1. <strong>Query Analysis:</strong>The system receives the user’s query (e.g., “climate change”).
+2. <strong>Term Selection:</strong>Identifies key terms, synonyms, and possible ambiguities.
+3. <strong>Expansion Generation:</strong>Generates related terms/phrases (e.g., “global warming,” “greenhouse gas emissions”).
+4. <strong>Query Reformulation:</strong>Combines original and expanded terms into a new query.
+5. <strong>Search Execution:</strong>Executes the expanded query to retrieve a broader, more relevant set of results.
 
 For AI-powered pipelines, especially Retrieval-Augmented Generation (RAG) systems, the process involves encoding the query as a vector, retrieving semantically relevant documents, ranking them, and feeding both the query and retrieved documents to a language model for final answer generation ([Glean RAG Examples](https://www.glean.com/blog/rag-examples), [Signity Solutions - RAG](https://www.signitysolutions.com/blog/real-world-examples-of-retrieval-augmented-generation)).
 
-**Python Example (Haystack):**```python
+<strong>Python Example (Haystack):</strong>```python
 query_expander = QueryExpander()
 retriever = MultiQueryInMemoryBM25Retriever(InMemoryBM25Retriever(document_store=doc_store))
 
@@ -107,7 +107,7 @@ results = expanded_retrieval_pipeline.run({"expander": {"query": "climate change
 | Early Web (1990s)     | Synonym Lists            | Fast, predictable            | Rigid, not context-aware             |
 | 2000s                 | Statistical Analysis     | Data-driven, some personal.  | Needs large data, privacy issues     |
 | 2010s                 | Pseudo-Relevance Feedback| Contextual, self-improving   | Can introduce noise                  |
-| 2020s                 | LLMs, Embeddings         | Deep context, [disambiguation](/en/glossary/disambiguation/) | Resource-intensive, risk of over-expansion |
+| 2020s                 | LLMs, Embeddings         | Deep context, disambiguation | Resource-intensive, risk of over-expansion |
 ## Benefits of Query Expansion
 
 - **Improved Recall:**Recovers relevant documents that use different terminology.
@@ -119,7 +119,7 @@ results = expanded_retrieval_pipeline.run({"expander": {"query": "climate change
 ## Challenges and Considerations
 
 - **Over-Expansion:**Too many or irrelevant terms dilute precision.
-- **Computational Overhead:**More terms increase system load and [latency](/en/glossary/latency/).
+- **Computational Overhead:**More terms increase system load and latency.
 - **Relevance Maintenance:**Added terms must match user intent.
 - **Privacy:**Personal data use can raise regulatory concerns.
 - **Bias Amplification:**Expansion algorithms may perpetuate biases.
@@ -207,7 +207,7 @@ Use Word2Vec, GloVe, BERT, or similar for vector-based semantic expansion.
 
 **Q: How does synonym expansion improve search results?**A: Including synonyms enables retrieval of documents using different words for the same concept, increasing recall.
 
-**Q: What are the main challenges?**A: Over-expansion, computational complexity, relevance, privacy/bias issues, and lack of [transparency](/en/glossary/transparency/).
+**Q: What are the main challenges?**A: Over-expansion, computational complexity, relevance, privacy/bias issues, and lack of transparency.
 
 **Q: Can query expansion help with ambiguous queries?**A: Yes. Contextual expansion helps infer likely intent behind short or ambiguous queries.
 

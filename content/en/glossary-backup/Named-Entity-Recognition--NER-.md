@@ -15,7 +15,7 @@ draft: false
 
 In practical terms, NER models process textual data to extract and annotate key information, enabling downstream applications such as search, question answering, content recommendation, and document automation.
 
-**Example:** 
+<strong>Example:</strong> 
 *"Apple is looking at buying U.K. startup for $1 billion."*  
 NER output:  
 - "Apple" → Organization (ORG)
@@ -28,13 +28,13 @@ For a visual example and further explanation, see [Encord’s NER guide](https:/
 
 Most digital content is unstructured—emails, articles, customer chats, social media posts, medical records, legal documents, and more. NER enables machines to extract factual meaning from this data, supporting a broad spectrum of applications:
 
-- **Search:**Enhances result relevance by indexing named entities.
-- **Recommendation:**Suggests content based on recognized people, places, or products.
-- **Automation:**Extracts structured data from invoices, contracts, and forms.
-- **Compliance:**Identifies and redacts personally identifiable information (PII).
-- **Knowledge Graphs:**Structures information for analytics and AI.
+- <strong>Search:</strong>Enhances result relevance by indexing named entities.
+- <strong>Recommendation:</strong>Suggests content based on recognized people, places, or products.
+- <strong>Automation:</strong>Extracts structured data from invoices, contracts, and forms.
+- <strong>Compliance:</strong>Identifies and redacts personally identifiable information (PII).
+- <strong>Knowledge Graphs:</strong>Structures information for analytics and AI.
 
-**Ambiguity Handling Example:**NER models analyze context to resolve ambiguous names:
+<strong>Ambiguity Handling Example:</strong>NER models analyze context to resolve ambiguous names:
 - *"Lincoln"* can refer to "Abraham Lincoln" (Person), "Lincoln Motor Company" (Organization), or "Lincoln, Nebraska" (Location).
 
 For additional use cases, see the [AltexSoft NER overview](https://www.altexsoft.com/blog/named-entity-recognition/).
@@ -43,7 +43,7 @@ For additional use cases, see the [AltexSoft NER overview](https://www.altexsoft
 
 ### Named Entity (NE)
 A unique, real-world object denoted by a proper noun or a fixed reference.  
-**Examples:**“Michelle Obama” (Person), “London” (Location), “Google” (Organization), “$500” (Money).
+<strong>Examples:</strong>“Michelle Obama” (Person), “London” (Location), “Google” (Organization), “$500” (Money).
 
 ### Entity Type / Label / Tag
 The category assigned to an entity span, such as PER (Person), ORG (Organization), LOC (Location), DATE, MONEY, etc.
@@ -54,10 +54,10 @@ The process of detecting the start and end indices of entity mentions in the tex
 
 ### Tagging Schemes
 NER models often use tagging schemes to mark entity boundaries:
-- **BIO**(Begin, Inside, Outside): B-ORG, I-ORG, O
-- **IOBES**(Inside, Outside, Begin, End, Single): B-ORG, I-ORG, E-ORG, S-ORG, O
+- <strong>BIO</strong>(Begin, Inside, Outside): B-ORG, I-ORG, O
+- <strong>IOBES</strong>(Inside, Outside, Begin, End, Single): B-ORG, I-ORG, E-ORG, S-ORG, O
 
-**Tagging examples and visuals:**[Encord: NER Tagging Schemes](https://encord.com/blog/named-entity-recognition/)
+<strong>Tagging examples and visuals:</strong>[Encord: NER Tagging Schemes](https://encord.com/blog/named-entity-recognition/)
 
 ### Part-of-Speech (POS) Tagging
 Assigns words their grammatical roles (noun, verb, adjective, etc.), often used as features for NER models.
@@ -79,16 +79,16 @@ A large, annotated collection of texts used to train and evaluate NER systems.
 The NER process comprises several sequential stages:
 
 ### 1. Text Input and Preprocessing
-- **Tokenization:**Splitting raw text into words, punctuation, and symbols (tokens).
-- **Sentence Segmentation:**Identifying sentence boundaries.
-- **Normalization:**Lowercasing, stemming, or lemmatization to reduce word forms.
+- <strong>Tokenization:</strong>Splitting raw text into words, punctuation, and symbols (tokens).
+- <strong>Sentence Segmentation:</strong>Identifying sentence boundaries.
+- <strong>Normalization:</strong>Lowercasing, stemming, or lemmatization to reduce word forms.
 
 ### 2. Feature Extraction
 NER models extract features to inform entity boundaries and classification:
-- **Morphological:**Word shapes, prefixes, suffixes, capitalization.
-- **Syntactic:**POS tags, phrase structure.
-- **Semantic:**Contextual meaning, neighbors.
-- **External:**Gazetteer matches, regular expression patterns.
+- <strong>Morphological:</strong>Word shapes, prefixes, suffixes, capitalization.
+- <strong>Syntactic:</strong>POS tags, phrase structure.
+- <strong>Semantic:</strong>Contextual meaning, neighbors.
+- <strong>External:</strong>Gazetteer matches, regular expression patterns.
 
 ### 3. Entity Boundary Detection
 Locate candidate spans that may represent entities, using contextual and syntactic cues.
@@ -97,14 +97,14 @@ Locate candidate spans that may represent entities, using contextual and syntact
 Assign each detected candidate the most probable label (e.g., Person, Location, Organization), using either hand-crafted rules, statistical models, or deep learning.
 
 ### 5. Post-processing
-- **Overlapping/Nested Entities:**Resolve when entities overlap or nest (e.g., “University of California, Berkeley”).
-- **Ambiguity Resolution:**Leverage context to disambiguate polysemous names.
-- **Consistency Enforcement:**Ensure consistent labeling within and across documents.
+- <strong>Overlapping/Nested Entities:</strong>Resolve when entities overlap or nest (e.g., “University of California, Berkeley”).
+- <strong>Ambiguity Resolution:</strong>Leverage context to disambiguate polysemous names.
+- <strong>Consistency Enforcement:</strong>Ensure consistent labeling within and across documents.
 
 ### 6. Output Generation
 Return structured results, typically as annotated text, JSON, or XML.
 
-**Sample JSON:**```json
+<strong>Sample JSON:</strong>```json
 [
   { "text": "Steve Jobs", "type": "PERSON", "startOffset": 0, "endOffset": 10 },
   { "text": "Apple", "type": "ORG", "startOffset": 22, "endOffset": 27 }
@@ -202,16 +202,16 @@ Return structured results, typically as annotated text, JSON, or XML.
 
 NER remains a hard problem in NLP due to:
 
-- **Ambiguity & Polysemy:**Words can have multiple entity types (“Amazon”: company or river).
-- **Boundary Detection:**Multi-word and nested entity names (“Martin Luther King Jr.”, “University of California, Berkeley”).
-- **Domain Adaptation:**New or rare entities in specialized domains (biomedicine, law).
-- **Evolving Language:**New terms, brands, slang, or acronyms.
-- **Multilingual NER:**Handling code-switching, different scripts, or language-specific entity types.
-- **Scarce Labeled Data:**Annotating large corpora is expensive and time-consuming.
-- **Nested/Overlapping Entities:**Entities within entities (especially in biomedical or legal text).
-- **Noise and Informality:**Social media, OCR, and speech transcripts introduce errors and informal language.
+- <strong>Ambiguity & Polysemy:</strong>Words can have multiple entity types (“Amazon”: company or river).
+- <strong>Boundary Detection:</strong>Multi-word and nested entity names (“Martin Luther King Jr.”, “University of California, Berkeley”).
+- <strong>Domain Adaptation:</strong>New or rare entities in specialized domains (biomedicine, law).
+- <strong>Evolving Language:</strong>New terms, brands, slang, or acronyms.
+- <strong>Multilingual NER:</strong>Handling code-switching, different scripts, or language-specific entity types.
+- <strong>Scarce Labeled Data:</strong>Annotating large corpora is expensive and time-consuming.
+- <strong>Nested/Overlapping Entities:</strong>Entities within entities (especially in biomedical or legal text).
+- <strong>Noise and Informality:</strong>Social media, OCR, and speech transcripts introduce errors and informal language.
 
-**For more challenges, see:**[Encord: Challenges in NER](https://encord.com/blog/named-entity-recognition/)  
+<strong>For more challenges, see:</strong>[Encord: Challenges in NER](https://encord.com/blog/named-entity-recognition/)  
 [arXiv: Recent Advances in NER](https://arxiv.org/html/2401.10825v3)
 
 ## NER Use Cases and Applications
@@ -231,7 +231,7 @@ Creates structured graphs of entities and relationships from unstructured docume
 ### 5. Compliance & Privacy
 Identifies and redacts PII in sensitive documents for GDPR, HIPAA, and other regulatory compliance.
 
-  **Redaction Example:**“Steve Jobs founded Apple in Cupertino.”  
+  <strong>Redaction Example:</strong>“Steve Jobs founded Apple in Cupertino.”  
   → “[PERSON] founded [ORG] in [LOCATION].”
 
 ### 6. Sentiment Analysis Enhancement
@@ -243,7 +243,7 @@ Routes tickets by extracting product names, course titles, or complaint subjects
 ### 8. Domain-Specific NER
 Biomedical (genes, proteins, diseases), legal (cases, statutes), financial (tickers, instruments), and more.
 
-**Case Studies and Examples:**- [AltexSoft NER Applications](https://www.altexsoft.com/blog/named-entity-recognition/)
+<strong>Case Studies and Examples:</strong>- [AltexSoft NER Applications](https://www.altexsoft.com/blog/named-entity-recognition/)
 - [GeeksforGeeks: NER Applications](https://www.geeksforgeeks.org/nlp/named-entity-recognition/)
 
 ## Practical Implementation: Step-by-Step Example with spaCy
@@ -268,7 +268,7 @@ for ent in doc.ents:
     print(ent.text, ent.start_char, ent.end_char, ent.label_)
 ```
 
-**Sample Output:**```
+<strong>Sample Output:</strong>```
 Steve Jobs 0 10 PERSON
 Steve Wozniak 15 29 PERSON
 Apple 39 44 ORG

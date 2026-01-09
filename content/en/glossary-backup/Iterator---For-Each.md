@@ -11,11 +11,11 @@ draft: false
 ---
 ## What Is an Iterator / For-Each?
 
-**Iterator:**An iterator is an object or logic block that enables traversing through a collection (such as a list, array, or map), processing each item one at a time. Iterators are central to handling collections in nearly all modern programming languages. They provide a standardized way to access each item sequentially, regardless of how the collection is structured in memory. For example, in Java, the [Iterator](https://www.w3schools.com/java/java_iterator.asp) interface allows you to loop through `ArrayList`, `HashSet`, and other collections without directly handling indices or internal data structure details.
+<strong>Iterator:</strong>An iterator is an object or logic block that enables traversing through a collection (such as a list, array, or map), processing each item one at a time. Iterators are central to handling collections in nearly all modern programming languages. They provide a standardized way to access each item sequentially, regardless of how the collection is structured in memory. For example, in Java, the [Iterator](https://www.w3schools.com/java/java_iterator.asp) interface allows you to loop through `ArrayList`, `HashSet`, and other collections without directly handling indices or internal data structure details.
 
-**For-Each Construct:**A for-each construct (also called a for-each loop, foreach statement, or iterator block) executes a block of code for every item in a collection, abstracting away the details of how iteration occurs. Many languages provide this as a built-in statement—`for ... of` in JavaScript, `foreach` in C#, and the enhanced `for` loop in Java. These constructs are also a staple in workflow automation tools, like Relay.app, where an iterator block processes each item in a list step-by-step ([Relay.app Docs](https://docs.relay.app/flow-control/iterators)).
+<strong>For-Each Construct:</strong>A for-each construct (also called a for-each loop, foreach statement, or iterator block) executes a block of code for every item in a collection, abstracting away the details of how iteration occurs. Many languages provide this as a built-in statement—`for ... of` in JavaScript, `foreach` in C#, and the enhanced `for` loop in Java. These constructs are also a staple in workflow automation tools, like Relay.app, where an iterator block processes each item in a list step-by-step ([Relay.app Docs](https://docs.relay.app/flow-control/iterators)).
 
-> **Key Point:**> Iterators and for-each constructs simplify collection processing, reduce likelihood of off-by-one errors, and make code more readable and maintainable. They are foundational to both programming and workflow automation.
+> <strong>Key Point:</strong>> Iterators and for-each constructs simplify collection processing, reduce likelihood of off-by-one errors, and make code more readable and maintainable. They are foundational to both programming and workflow automation.
 
 ## Technical Explanation of Iterators
 
@@ -23,21 +23,21 @@ draft: false
 
 An iterator must provide a mechanism to return the next item in a sequence and signal when no more items remain. This is formalized as an *iterator protocol* in many languages:
 
-- **Iterator Protocol:**The object must implement a specific interface, such as a `next()` method (JavaScript, Python, Java) or `MoveNext()`/`Current` (C#).
-- **Consumption:**Iterators are typically *consumed* as you process them—once you reach the end, you can't reset or reuse the same iterator object; you must create a new one if you want to traverse the collection again.
+- <strong>Iterator Protocol:</strong>The object must implement a specific interface, such as a `next()` method (JavaScript, Python, Java) or `MoveNext()`/`Current` (C#).
+- <strong>Consumption:</strong>Iterators are typically *consumed* as you process them—once you reach the end, you can't reset or reuse the same iterator object; you must create a new one if you want to traverse the collection again.
 
 #### Language Protocols Overview
 
-- **Python:**Objects that implement the `__iter__()` and `__next__()` methods conform to the iterator protocol. A list or other collection is *iterable*; calling `iter()` on it produces an iterator ([GeeksforGeeks](https://www.geeksforgeeks.org/python/python-difference-iterable-iterator/)).  
-- **JavaScript:**Objects that implement the `next()` method, returning `{value, done}`, are iterators by the [Iterator protocol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators). Many built-in types (Array, String, Set, Map) are iterable, and the `[Symbol.iterator]()` method produces an iterator.  
-- **Java:**Objects implementing the `Iterator<E>` interface provide `hasNext()`, `next()`, and optionally `remove()` ([W3Schools](https://www.w3schools.com/java/java_iterator.asp)).  
-- **C#:**The [IEnumerator](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerator) and [IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable) interfaces define the protocol.  
-- **Workflow Automation (Relay.app):**Iterator blocks visually process each item in a list; the tool handles the iteration logic ([Relay.app Docs](https://docs.relay.app/flow-control/iterators)).
+- <strong>Python:</strong>Objects that implement the `__iter__()` and `__next__()` methods conform to the iterator protocol. A list or other collection is *iterable*; calling `iter()` on it produces an iterator ([GeeksforGeeks](https://www.geeksforgeeks.org/python/python-difference-iterable-iterator/)).  
+- <strong>JavaScript:</strong>Objects that implement the `next()` method, returning `{value, done}`, are iterators by the [Iterator protocol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators). Many built-in types (Array, String, Set, Map) are iterable, and the `[Symbol.iterator]()` method produces an iterator.  
+- <strong>Java:</strong>Objects implementing the `Iterator<E>` interface provide `hasNext()`, `next()`, and optionally `remove()` ([W3Schools](https://www.w3schools.com/java/java_iterator.asp)).  
+- <strong>C#:</strong>The [IEnumerator](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerator) and [IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable) interfaces define the protocol.  
+- <strong>Workflow Automation (Relay.app):</strong>Iterator blocks visually process each item in a list; the tool handles the iteration logic ([Relay.app Docs](https://docs.relay.app/flow-control/iterators)).
 
 ### Iterator vs Iterable
 
-- **Iterable:**An object that can produce an iterator (e.g., a list, array, set).  
-- **Iterator:**The object that actually delivers one item at a time from the iterable.
+- <strong>Iterable:</strong>An object that can produce an iterator (e.g., a list, array, set).  
+- <strong>Iterator:</strong>The object that actually delivers one item at a time from the iterable.
 
 *In Python, every iterator is also an iterable, but not every iterable is an iterator* ([GeeksforGeeks](https://www.geeksforgeeks.org/python/python-difference-iterable-iterator/)).
 
@@ -47,9 +47,9 @@ A for-each loop or block allows automatic processing of every item in a collecti
 
 ### Advantages
 
-- **Error Reduction:**For-each loops eliminate common bugs like off-by-one errors and accidental skipping of elements.
-- **Code Clarity:**Code is often shorter, easier to read, and communicates intent more directly.
-- **Safety:**For-each works on any iterable/collection object, reducing coupling to the collection's underlying structure.
+- <strong>Error Reduction:</strong>For-each loops eliminate common bugs like off-by-one errors and accidental skipping of elements.
+- <strong>Code Clarity:</strong>Code is often shorter, easier to read, and communicates intent more directly.
+- <strong>Safety:</strong>For-each works on any iterable/collection object, reducing coupling to the collection's underlying structure.
 
 For example, in C#, the `foreach` statement works seamlessly with any type that implements `IEnumerable<T>` ([Stackify](https://stackify.com/c-foreach-definition-and-best-practices/)). In JavaScript, the `for...of` loop iterates over all elements of an iterable object ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)).
 
@@ -61,8 +61,8 @@ For example, in C#, the `foreach` statement works seamlessly with any type that 
 
 In Python, an *iterable* is any object that can be passed to `iter()` to obtain an iterator. The iterator then returns items one at a time via `next()`. Lists, tuples, dicts, sets, strings, and many other types are iterable.
 
-- **Iterables:**Implement `__iter__()`, which must return an iterator object.
-- **Iterators:**Implement both `__iter__()` (returns self) and `__next__()` (returns next item or raises `StopIteration`).
+- <strong>Iterables:</strong>Implement `__iter__()`, which must return an iterator object.
+- <strong>Iterators:</strong>Implement both `__iter__()` (returns self) and `__next__()` (returns next item or raises `StopIteration`).
 
 [GeeksforGeeks: Python Iterables vs Iterators](https://www.geeksforgeeks.org/python/python-difference-iterable-iterator/)
 
@@ -99,8 +99,8 @@ for number in Counter():
 
 #### Practical Notes
 
-- **Best Practice:**Use for loops for most iteration tasks.
-- **Pitfall:**Modifying a collection during iteration can cause errors or unexpected results.
+- <strong>Best Practice:</strong>Use for loops for most iteration tasks.
+- <strong>Pitfall:</strong>Modifying a collection during iteration can cause errors or unexpected results.
   [GeeksforGeeks: Python Iterables vs Iterators](https://www.geeksforgeeks.org/python/python-difference-iterable-iterator/)
 
 ### JavaScript
@@ -169,8 +169,8 @@ for (const num of genNumbers()) {
 
 #### Practical Notes
 
-- **Pitfall:**Iterators are usually consumed after one complete loop.
-- **Best Practice:**Use `for...of` for clean and idiomatic iteration.
+- <strong>Pitfall:</strong>Iterators are usually consumed after one complete loop.
+- <strong>Best Practice:</strong>Use `for...of` for clean and idiomatic iteration.
   [MDN: Iterators and generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
 
 ### Java
@@ -223,8 +223,8 @@ while (it.hasNext()) {
 
 #### Practical Notes
 
-- **Best Practice:**Use for-each for read-only iteration; use `Iterator` directly only when you need to remove elements while iterating.
-- **Pitfall:**Modifying the collection directly during iteration can cause exceptions.
+- <strong>Best Practice:</strong>Use for-each for read-only iteration; use `Iterator` directly only when you need to remove elements while iterating.
+- <strong>Pitfall:</strong>Modifying the collection directly during iteration can cause exceptions.
 
 ### C#
 
@@ -282,8 +282,8 @@ await foreach (var item in asyncSequence)
 
 #### Practical Notes
 
-- **Best Practice:**Use `foreach` for readability and safety unless you need to modify the collection or require the index.
-- **Pitfall:**Direct modification of a collection during `foreach` iteration is not allowed.
+- <strong>Best Practice:</strong>Use `foreach` for readability and safety unless you need to modify the collection or require the index.
+- <strong>Pitfall:</strong>Direct modification of a collection during `foreach` iteration is not allowed.
   [Stackify: C# foreach definition and best practices](https://stackify.com/c-foreach-definition-and-best-practices/)
 
 ### Workflow Automation Platforms (Relay.app)
@@ -294,27 +294,27 @@ Workflow automation platforms such as Relay.app provide *iterator* or *for-each*
 
 #### Using Iterators in Relay.app: Step-by-Step
 
-1. **Add an Iterator Block:**- Select 'Iterator' from the Flow Control menu ([Relay.app Docs](https://docs.relay.app/flow-control/iterators)).
-2. **Select the List to Process:**- Choose the output list from a previous step (e.g., a list of spreadsheet rows).
-3. **Configure Actions:**- Inside the iterator, add steps to define what should happen for each item (e.g., send email, update a record).
-4. **Use Current Item Data:**> **Tip:**> Iterator blocks allow for visual, no-code processing of collections, ideal for automating repetitive tasks in workflows.
+1. <strong>Add an Iterator Block:</strong>- Select 'Iterator' from the Flow Control menu ([Relay.app Docs](https://docs.relay.app/flow-control/iterators)).
+2. <strong>Select the List to Process:</strong>- Choose the output list from a previous step (e.g., a list of spreadsheet rows).
+3. <strong>Configure Actions:</strong>- Inside the iterator, add steps to define what should happen for each item (e.g., send email, update a record).
+4. <strong>Use Current Item Data:</strong>> <strong>Tip:</strong>> Iterator blocks allow for visual, no-code processing of collections, ideal for automating repetitive tasks in workflows.
 
 #### Practical Notes
 
-- **Best Practice:**Place all actions that should happen per item inside the iterator block.
-- **Pitfall:**Avoid modifying the underlying list during iteration.
+- <strong>Best Practice:</strong>Place all actions that should happen per item inside the iterator block.
+- <strong>Pitfall:</strong>Avoid modifying the underlying list during iteration.
   [Relay.app Docs: Looping (Iterators)](https://docs.relay.app/flow-control/iterators)
 
 ## Comparison: Iterator vs Iterable, For vs For-Each
 
 | Concept        | Description                                                                               | When to Use                               |
 |----------------|------------------------------------------------------------------------------------------|-------------------------------------------|
-| **Iterator**| Object that produces items from a collection one by one                                  | When you need fine control of iteration   |
-| **Iterable**| Object that can return an iterator (e.g., lists, arrays, sets)                           | When you want to loop using for-each      |
-| **For Loop**| Classic loop with control over indexes, conditions, and increments                       | When you need index access or custom steps|
-| **For-Each**| Simplified loop that processes every item in a collection, hides index details            | When you just want to process items       |
+| <strong>Iterator</strong>| Object that produces items from a collection one by one                                  | When you need fine control of iteration   |
+| <strong>Iterable</strong>| Object that can return an iterator (e.g., lists, arrays, sets)                           | When you want to loop using for-each      |
+| <strong>For Loop</strong>| Classic loop with control over indexes, conditions, and increments                       | When you need index access or custom steps|
+| <strong>For-Each</strong>| Simplified loop that processes every item in a collection, hides index details            | When you just want to process items       |
 
-**Key Differences:**- For-each does not expose the current index directly.
+<strong>Key Differences:</strong>- For-each does not expose the current index directly.
 - For-each is safer for read-only operations; for loops are needed for custom step sizes, skipping, or reverse order.
 - Some languages allow removal of items during iteration (Java's `Iterator.remove()`), others do not (`foreach` in C#).
 
@@ -322,10 +322,10 @@ Workflow automation platforms such as Relay.app provide *iterator* or *for-each*
 
 ### Common Pitfalls
 
-- **Modifying the collection during iteration**can cause errors or unexpected behavior (ConcurrentModificationException in Java, runtime error in C#).
-- **Iterators are consumed:**Once finished, you can't restart them without creating a new one.
-- **For-each does not provide index:**Use a `for` loop if you need the position.
-- **Infinite Iteration:**Custom iterators should raise/return a stop condition (`StopIteration` in Python).
+- <strong>Modifying the collection during iteration</strong>can cause errors or unexpected behavior (ConcurrentModificationException in Java, runtime error in C#).
+- <strong>Iterators are consumed:</strong>Once finished, you can't restart them without creating a new one.
+- <strong>For-each does not provide index:</strong>Use a `for` loop if you need the position.
+- <strong>Infinite Iteration:</strong>Custom iterators should raise/return a stop condition (`StopIteration` in Python).
 
 ### Best Practices
 
@@ -335,14 +335,14 @@ Workflow automation platforms such as Relay.app provide *iterator* or *for-each*
 
 ### Special Features
 
-- **Asynchronous Iteration:**Supported in C# (`await foreach`) and JavaScript (async iterators and `for await...of`).
-- **Removing Items:**Only supported in certain languages (e.g., Java's `Iterator.remove()`).
+- <strong>Asynchronous Iteration:</strong>Supported in C# (`await foreach`) and JavaScript (async iterators and `for await...of`).
+- <strong>Removing Items:</strong>Only supported in certain languages (e.g., Java's `Iterator.remove()`).
 
 ## Use Cases and Examples
 
 ### Processing Spreadsheet Rows
 
-- **Python:**```python
+- <strong>Python:</strong>```python
   for row in spreadsheet_rows:
       process(row)
   ```

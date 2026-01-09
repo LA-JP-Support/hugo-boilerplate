@@ -21,7 +21,7 @@ Small talk in AI chatbots refers to the bot's ability to engage users in casual,
 
 By enabling this capability, chatbots foster a sense of approachability and relatability, making digital interactions feel less mechanical and more like conversing with a real person. This creates a positive first impression, increases user comfort, and can significantly improve recall and engagement rates.
 
-**Examples:**- "Hello! How are you today?"
+<strong>Examples:</strong>- "Hello! How are you today?"
 - "Can you tell me a joke?"
 - "Who made you?"
 - "What's the weather like?"
@@ -32,17 +32,17 @@ Small talk is designed through a series of predefined user utterances and bot re
 
 Small talk serves several core purposes within chatbot interactions:
 
-**Break the Ice:**Initiate conversations and put users at ease, especially during first contact.
+<strong>Break the Ice:</strong>Initiate conversations and put users at ease, especially during first contact.
 
-**Build Rapport:**Foster emotional connection and trust, counteracting the impersonal nature of automation.
+<strong>Build Rapport:</strong>Foster emotional connection and trust, counteracting the impersonal nature of automation.
 
-**Fill Silences:**Prevent abrupt or awkward conversational endings by gracefully handling pauses or conversational lulls.
+<strong>Fill Silences:</strong>Prevent abrupt or awkward conversational endings by gracefully handling pauses or conversational lulls.
 
-**Show Personality:**Reflect brand tone, humor, and friendliness through carefully crafted bot responses.
+<strong>Show Personality:</strong>Reflect brand tone, humor, and friendliness through carefully crafted bot responses.
 
-**Handle Off-Topic Queries:**Respond to questions or comments outside the primary functional scope of the bot.
+<strong>Handle Off-Topic Queries:</strong>Respond to questions or comments outside the primary functional scope of the bot.
 
-**Typical Flow:**A user initiates a conversation with a greeting or a non-specific question ("Hey, what's up?"). The chatbot identifies this as a small talk intent and responds accordingly, often with a follow-up or related question to maintain engagement.
+<strong>Typical Flow:</strong>A user initiates a conversation with a greeting or a non-specific question ("Hey, what's up?"). The chatbot identifies this as a small talk intent and responds accordingly, often with a follow-up or related question to maintain engagement.
 
 Small talk encompasses a broad range of conversational topics, including weather, hobbies, compliments, jokes, polite refusals or farewells, and emojis and reactions.
 
@@ -62,7 +62,7 @@ Small talk encompasses a broad range of conversational topics, including weather
 
 ### Customer Service Use
 
-**After Resolving an Issue:**```
+<strong>After Resolving an Issue:</strong>```
 User: "Thank you!"
 Bot: "Happy to help! If you have more questions, just ask."
 ```
@@ -72,7 +72,7 @@ User: "That was helpful."
 Bot: "Glad I could assist! Anything else I can do for you?"
 ```
 
-**Responding to Off-Topic or Playful Queries:**```
+<strong>Responding to Off-Topic or Playful Queries:</strong>```
 User: "What do you do for fun?"
 Bot: "I like chatting with you! Now, how can I assist you today?"
 ```

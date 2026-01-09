@@ -18,28 +18,28 @@ draft: false
 
 ## Definition
 
-**Retrieval-Augmented Generation (RAG)**is an AI architecture that combines the reasoning and language generation ability of large language models (LLMs) with the factual grounding of external knowledge sources. Instead of relying solely on static, pre-trained model weights, RAG systems retrieve relevant information from databases, document repositories, or real-time feeds, inject this data into the prompt or context window, and generate contextually accurate, up-to-date responses. This hybrid approach bridges the gap between generative AI and dynamic, organization-specific information, delivering more accurate, current, and trustworthy outputs.
+<strong>Retrieval-Augmented Generation (RAG)</strong>is an AI architecture that combines the reasoning and language generation ability of large language models (LLMs) with the factual grounding of external knowledge sources. Instead of relying solely on static, pre-trained model weights, RAG systems retrieve relevant information from databases, document repositories, or real-time feeds, inject this data into the prompt or context window, and generate contextually accurate, up-to-date responses. This hybrid approach bridges the gap between generative AI and dynamic, organization-specific information, delivering more accurate, current, and trustworthy outputs.
 ## How RAG Technology Works
 
 RAG’s workflow consists of tightly integrated steps that ensure the LLM has access to the most accurate and relevant data at inference time. Here’s a detailed breakdown:
 
-### 1. **Data Preparation and Indexing**- **Data Collection:**Gather data from internal and external sources, including structured (databases, spreadsheets) and unstructured (PDFs, emails, manuals, websites) content.
-- **Cleaning & Preprocessing:**Remove irrelevant content, normalize text (tokenization, stemming, stop-word removal), and split large documents into context-preserving "chunks."
-- **Embeddings Generation:**Use embedding models (e.g., OpenAI, Google Vertex AI, HuggingFace Transformers) to convert text chunks into high-dimensional vector representations that capture semantic meaning.
-- **Vector Database Storage:**Store these embeddings in a vector database (e.g., Pinecone, Weaviate, FAISS, Google AlloyDB, Redis) that supports fast similarity search based on vector distances.
-### 2. **Retrieval**- **Query Embedding:**When a user submits a prompt, the system encodes it into an embedding using the same model as above.
-- **Semantic Search:**The vector database is searched to find document chunks most semantically similar to the query, leveraging cosine similarity or other distance metrics.
-- **Re-Ranking:**Additional ranking models or heuristics (e.g., cross-encoders, hybrid keyword+vector search) re-score the retrieved results for contextual relevance.
-### 3. **Augmentation**- **Prompt Construction:**The most relevant retrieved passages are selected and formatted into the LLM's prompt window, often using advanced prompt engineering techniques for optimal context utilization.
-- **Grounding:**This retrieved data "grounds" the LLM's output, reducing hallucination and increasing reliability.
+### 1. <strong>Data Preparation and Indexing</strong>- <strong>Data Collection:</strong>Gather data from internal and external sources, including structured (databases, spreadsheets) and unstructured (PDFs, emails, manuals, websites) content.
+- <strong>Cleaning & Preprocessing:</strong>Remove irrelevant content, normalize text (tokenization, stemming, stop-word removal), and split large documents into context-preserving "chunks."
+- <strong>Embeddings Generation:</strong>Use embedding models (e.g., OpenAI, Google Vertex AI, HuggingFace Transformers) to convert text chunks into high-dimensional vector representations that capture semantic meaning.
+- <strong>Vector Database Storage:</strong>Store these embeddings in a vector database (e.g., Pinecone, Weaviate, FAISS, Google AlloyDB, Redis) that supports fast similarity search based on vector distances.
+### 2. <strong>Retrieval</strong>- <strong>Query Embedding:</strong>When a user submits a prompt, the system encodes it into an embedding using the same model as above.
+- <strong>Semantic Search:</strong>The vector database is searched to find document chunks most semantically similar to the query, leveraging cosine similarity or other distance metrics.
+- <strong>Re-Ranking:</strong>Additional ranking models or heuristics (e.g., cross-encoders, hybrid keyword+vector search) re-score the retrieved results for contextual relevance.
+### 3. <strong>Augmentation</strong>- <strong>Prompt Construction:</strong>The most relevant retrieved passages are selected and formatted into the LLM's prompt window, often using advanced prompt engineering techniques for optimal context utilization.
+- <strong>Grounding:</strong>This retrieved data "grounds" the LLM's output, reducing hallucination and increasing reliability.
 
-### 4. **Generation**- **Response Synthesis:**The LLM generates an answer or performs the required task, using both its internal knowledge and the augmented, externally retrieved facts.
-- **Source Attribution:**Some RAG systems annotate responses with source citations or links to the underlying documents, enhancing transparency and auditability.
+### 4. <strong>Generation</strong>- <strong>Response Synthesis:</strong>The LLM generates an answer or performs the required task, using both its internal knowledge and the augmented, externally retrieved facts.
+- <strong>Source Attribution:</strong>Some RAG systems annotate responses with source citations or links to the underlying documents, enhancing transparency and auditability.
 
-### 5. **Updating and Maintenance**- **Continuous Index Refresh:**Data sources and embeddings are periodically updated to reflect new information.
-- **Access Control:**Fine-grained permissions and compliance controls (e.g., for GDPR, HIPAA) ensure sensitive data is only accessed as authorized.
+### 5. <strong>Updating and Maintenance</strong>- <strong>Continuous Index Refresh:</strong>Data sources and embeddings are periodically updated to reflect new information.
+- <strong>Access Control:</strong>Fine-grained permissions and compliance controls (e.g., for GDPR, HIPAA) ensure sensitive data is only accessed as authorized.
 
-**Visualization: RAG Workflow**```
+<strong>Visualization: RAG Workflow</strong>```
 User Query
    ↓
 Query Embedding

@@ -17,7 +17,7 @@ draft: false
 
 ## What Is a Prompt?
 
-A **prompt**is the instruction, question, statement, or input provided to an AI system—most commonly large language models (LLMs) and generative AI platforms—to generate relevant output or perform a specific task. The quality and structure of a prompt directly influence the accuracy, relevance, usefulness, and safety of AI-generated responses. Prompt writing, also known as **prompt engineering**, is the practice of crafting effective instructions that guide AI systems to produce desired outcomes across applications ranging from chatbots and content creation to code generation and data analysis.
+A <strong>prompt</strong>is the instruction, question, statement, or input provided to an AI system—most commonly large language models (LLMs) and generative AI platforms—to generate relevant output or perform a specific task. The quality and structure of a prompt directly influence the accuracy, relevance, usefulness, and safety of AI-generated responses. Prompt writing, also known as <strong>prompt engineering</strong>, is the practice of crafting effective instructions that guide AI systems to produce desired outcomes across applications ranging from chatbots and content creation to code generation and data analysis.
 
 Prompts serve as the primary communication channel between humans and AI, translating user intent into actionable instructions the AI can process. They can range from simple single-sentence queries to complex, multi-component instructions incorporating context, examples, role assignments, and formatting specifications. As AI systems become more sophisticated, the art and science of prompt engineering has emerged as a critical skill for maximizing AI effectiveness across industries.
 
@@ -27,23 +27,23 @@ Effective prompts typically include several key elements that work together to p
 
 | Component | Description | Example |
 |-----------|-------------|---------|
-| **Goal/Objective**| Clear statement of desired outcome | "Summarize the key findings" |
-| **Role/Persona**| Assigned perspective or expertise | "Act as a financial advisor" |
-| **Task**| Specific action or output required | "Write a 500-word analysis" |
-| **Context**| Background information and constraints | "For a general audience, avoiding jargon" |
-| **Format**| Structure and presentation style | "Present as a bulleted list" |
-| **Tone/Style**| Communication approach | "Professional and concise" |
-| **Examples**| Sample inputs or outputs | "Here's the format to follow..." |
-| **Constraints**| Boundaries and limitations | "Limit to 300 words, cite 3 sources" |
+| <strong>Goal/Objective</strong>| Clear statement of desired outcome | "Summarize the key findings" |
+| <strong>Role/Persona</strong>| Assigned perspective or expertise | "Act as a financial advisor" |
+| <strong>Task</strong>| Specific action or output required | "Write a 500-word analysis" |
+| <strong>Context</strong>| Background information and constraints | "For a general audience, avoiding jargon" |
+| <strong>Format</strong>| Structure and presentation style | "Present as a bulleted list" |
+| <strong>Tone/Style</strong>| Communication approach | "Professional and concise" |
+| <strong>Examples</strong>| Sample inputs or outputs | "Here's the format to follow..." |
+| <strong>Constraints</strong>| Boundaries and limitations | "Limit to 300 words, cite 3 sources" |
 
 ### Prompt Complexity Spectrum
 
 Prompts exist along a spectrum of complexity:
 
-- **Simple Prompts:**Direct, single-purpose queries ("What is machine learning?")
-- **Structured Prompts:**Multi-component instructions with clear requirements
-- **Complex Prompts:**Detailed specifications with context, examples, and multiple conditions
-- **Conversational Prompts:**Multi-turn exchanges building on previous responses
+- <strong>Simple Prompts:</strong>Direct, single-purpose queries ("What is machine learning?")
+- <strong>Structured Prompts:</strong>Multi-component instructions with clear requirements
+- <strong>Complex Prompts:</strong>Detailed specifications with context, examples, and multiple conditions
+- <strong>Conversational Prompts:</strong>Multi-turn exchanges building on previous responses
 
 ## Why Prompts Matter
 
@@ -53,26 +53,26 @@ The significance of effective prompting extends across multiple dimensions:
 
 | Factor | Poor Prompt | Effective Prompt | Result |
 |--------|-------------|------------------|---------|
-| **Accuracy**| Vague, ambiguous | Clear, specific | 40-60% improvement in relevance |
-| **Efficiency**| Multiple iterations needed | Right first time | 3-5x faster task completion |
-| **Consistency**| Variable outputs | Predictable results | Reliable quality across uses |
-| **Creativity**| Generic responses | Novel insights | Enhanced problem-solving |
+| <strong>Accuracy</strong>| Vague, ambiguous | Clear, specific | 40-60% improvement in relevance |
+| <strong>Efficiency</strong>| Multiple iterations needed | Right first time | 3-5x faster task completion |
+| <strong>Consistency</strong>| Variable outputs | Predictable results | Reliable quality across uses |
+| <strong>Creativity</strong>| Generic responses | Novel insights | Enhanced problem-solving |
 
 ### Business Value
 
-- **Productivity Gains:**Well-crafted prompts reduce iteration cycles by 60-80%
-- **Cost Reduction:**Fewer API calls and computational resources required
-- **Quality Improvement:**Higher accuracy reduces manual correction needs
-- **Time Savings:**Accelerates content creation, analysis, and decision-making
-- **Scalability:**Enables consistent AI performance across teams and use cases
+- <strong>Productivity Gains:</strong>Well-crafted prompts reduce iteration cycles by 60-80%
+- <strong>Cost Reduction:</strong>Fewer API calls and computational resources required
+- <strong>Quality Improvement:</strong>Higher accuracy reduces manual correction needs
+- <strong>Time Savings:</strong>Accelerates content creation, analysis, and decision-making
+- <strong>Scalability:</strong>Enables consistent AI performance across teams and use cases
 
 ### User Experience Benefits
 
-- **Natural Interaction:**Intuitive communication reduces learning curve
-- **Personalization:**Tailored outputs match individual needs and preferences
-- **Accessibility:**Enables non-technical users to leverage advanced AI capabilities
-- **Confidence:**Predictable, reliable responses build user trust
-- **Empowerment:**Users can customize AI behavior to their specific requirements
+- <strong>Natural Interaction:</strong>Intuitive communication reduces learning curve
+- <strong>Personalization:</strong>Tailored outputs match individual needs and preferences
+- <strong>Accessibility:</strong>Enables non-technical users to leverage advanced AI capabilities
+- <strong>Confidence:</strong>Predictable, reliable responses build user trust
+- <strong>Empowerment:</strong>Users can customize AI behavior to their specific requirements
 
 ## Prompt Engineering Strategies
 
@@ -80,7 +80,7 @@ The significance of effective prompting extends across multiple dimensions:
 
 Direct instructions without examples, relying on the AI's pre-trained knowledge:
 
-**Example:**```
+<strong>Example:</strong>```
 Classify the sentiment of this customer review: "The product arrived late but works perfectly."
 ```
 
@@ -100,13 +100,13 @@ Example 3: "It's okay, nothing special." → Neutral
 Now classify: "The features are great, but setup was confusing."
 ```
 
-**Best for:**Tasks requiring specific formatting or domain-specific patterns.
+<strong>Best for:</strong>Tasks requiring specific formatting or domain-specific patterns.
 
 ### Chain-of-Thought Prompting
 
 Encourages the AI to show its reasoning process step-by-step:
 
-**Example:**```
+<strong>Example:</strong>```
 A store offers a 20% discount on a $50 item, then adds 8% sales tax. 
 What's the final price? Show your calculation steps.
 ```
@@ -123,13 +123,13 @@ symmetric and asymmetric encryption to a non-technical manager who needs to
 make a purchasing decision.
 ```
 
-**Best for:**Domain-specific tasks requiring specialized knowledge or perspective.
+<strong>Best for:</strong>Domain-specific tasks requiring specialized knowledge or perspective.
 
 ### Iterative Refinement
 
 Progressive improvement through multi-turn conversation:
 
-**Example:**```
+<strong>Example:</strong>```
 Turn 1: "Write a product description for wireless headphones."
 Turn 2: "Make it more concise and emphasize battery life."
 Turn 3: "Add a call-to-action for business professionals."

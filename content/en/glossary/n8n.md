@@ -13,10 +13,10 @@ draft: false
 
 n8n (pronounced "en-eight-en", short for *nodemation*) is a node-based, source-available workflow automation platform that empowers users to visually design, automate, and orchestrate complex business processes across hundreds of apps and APIs—including advanced AI-powered tasks. Unlike closed-source platforms, n8n offers both self-hosting for full control and privacy, and a managed cloud for ease of use.
 
-**Key Points:**- Source-available (fair-code): [n8n License](https://faircode.io)
+<strong>Key Points:</strong>- Source-available (fair-code): [n8n License](https://faircode.io)
 - Drag-and-drop workflow builder
 - Custom code support (JavaScript natively, Python via node)
-- 500+ native integrations and [HTTP Request node](/en/glossary/http-request-node/) for any API
+- 500+ native integrations and HTTP Request node for any API
 - Native AI nodes (OpenAI, Gemini, Claude, etc.)
 - Agentic workflows, RAG, and prompt chaining
 - Active open community
@@ -24,79 +24,79 @@ n8n (pronounced "en-eight-en", short for *nodemation*) is a node-based, source-a
 
 ### Nodes
 
-**Definition:**Nodes are the modular building blocks of n8n workflows, each representing a specific function or integration (e.g., sending an email, fetching API data, transforming JSON).
+<strong>Definition:</strong>Nodes are the modular building blocks of n8n workflows, each representing a specific function or integration (e.g., sending an email, fetching API data, transforming JSON).
 
-**Types of Nodes:**- **Trigger Nodes:**Initiate workflows (webhook, schedule, app events).
-- **Action Nodes:**Execute tasks (send message, update database, call API).
-- **Logic Nodes:**Branching, merging, looping (if/else, switch, merge, loop).
-- **Code Nodes:**Execute custom JavaScript (native) or Python (via node).
+<strong>Types of Nodes:</strong>- <strong>Trigger Nodes:</strong>Initiate workflows (webhook, schedule, app events).
+- <strong>Action Nodes:</strong>Execute tasks (send message, update database, call API).
+- <strong>Logic Nodes:</strong>Branching, merging, looping (if/else, switch, merge, loop).
+- <strong>Code Nodes:</strong>Execute custom JavaScript (native) or Python (via node).
 
-**Node Examples:**- Webhook node (trigger on HTTP request)
+<strong>Node Examples:</strong>- Webhook node (trigger on HTTP request)
 - Google Sheets node (append row)
 - Slack node (send message)
 - HTTP Request node (integrate any RESTful API)
 
-**Learn More:**- [n8n Node Reference](https://docs.n8n.io/nodes/)
+<strong>Learn More:</strong>- [n8n Node Reference](https://docs.n8n.io/nodes/)
 - [Community Nodes](https://docs.n8n.io/integrations/community-nodes/installation/)
 
 ### Workflows
 
-**Definition:**A workflow is a visual sequence of interconnected nodes, representing an automated process or business logic—essentially a flowchart for automation.
+<strong>Definition:</strong>A workflow is a visual sequence of interconnected nodes, representing an automated process or business logic—essentially a flowchart for automation.
 
-**Features:**- Drag-and-drop visual editor
+<strong>Features:</strong>- Drag-and-drop visual editor
 - Branching, merging, conditional logic, and looping
 - Step-by-step debugging and execution logs
 - Modular: Reuse workflows across projects
 
-**Examples:**- New form submission → Add to CRM → Notify via Slack → Send confirmation email
+<strong>Examples:</strong>- New form submission → Add to CRM → Notify via Slack → Send confirmation email
 
-**Learn More:**- [n8n Docs: Workflows](https://docs.n8n.io/workflows/)
+<strong>Learn More:</strong>- [n8n Docs: Workflows](https://docs.n8n.io/workflows/)
 - [Template Library](https://n8n.io/workflows/)
 
 ### Credentials
 
-**Definition:**Securely stored authentication details (API keys, OAuth tokens, etc.) that allow nodes to access external services.
+<strong>Definition:</strong>Securely stored authentication details (API keys, OAuth tokens, etc.) that allow nodes to access external services.
 
-**Key Features:**- Central management of credentials
+<strong>Key Features:</strong>- Central management of credentials
 - Encryption at rest and in transit
 - Reusable across workflows
 
-**Examples:**- Google OAuth credential for Sheets
+<strong>Examples:</strong>- Google OAuth credential for Sheets
 - Slack API token
 - Custom HTTP header for REST APIs
 ### Triggers
 
-**Definition:**Events that start workflows, such as incoming webhooks, scheduled times, or changes in connected apps.
+<strong>Definition:</strong>Events that start workflows, such as incoming webhooks, scheduled times, or changes in connected apps.
 
-**Common Triggers:**- Webhook (receive data from forms, APIs, etc.)
+<strong>Common Triggers:</strong>- Webhook (receive data from forms, APIs, etc.)
 - Cron (run at scheduled times)
 - App-specific triggers (new row in Sheets, new deal in CRM)
 ### Expressions
 
-**Definition:**Dynamic formulas for referencing, transforming, and mapping data between nodes—enabling complex automation and data manipulation.
+<strong>Definition:</strong>Dynamic formulas for referencing, transforming, and mapping data between nodes—enabling complex automation and data manipulation.
 
-**Syntax Example:**- `{{$json["email"]}}` to access an email field from previous node
+<strong>Syntax Example:</strong>- `{{$json["email"]}}` to access an email field from previous node
 
-**Advanced Usage:**- Conditional logic
+<strong>Advanced Usage:</strong>- Conditional logic
 - Data formatting
 - Calculations and string manipulation
 ## Visual Workflow Editor
 
 n8n’s visual editor is a node-based, drag-and-drop interface allowing users to design, trace, and debug workflows transparently.
 
-**Key Benefits:**- Easy to understand and modify
+<strong>Key Benefits:</strong>- Easy to understand and modify
 - Mix no-code automation with custom code
 - Real-time execution and error tracing
 
-**Screenshot Example:**![n8n Workflow Editor](https://xcloud.host/wp-content/uploads/2025/08/image-14.png)
+<strong>Screenshot Example:</strong>![n8n Workflow Editor](https://xcloud.host/wp-content/uploads/2025/08/image-14.png)
 
-**Learn More:**- [n8n Docs: Editor UI](https://docs.n8n.io/editor/ui/)
+<strong>Learn More:</strong>- [n8n Docs: Editor UI](https://docs.n8n.io/editor/ui/)
 
 ## How Is n8n Used?
 
 n8n is used to automate repetitive, multi-step business or personal tasks across apps and data sources, with both simple and complex logic.
 
-**Common Use Cases:**- Lead management: Capture forms, update CRM, notify sales, automate emails
+<strong>Common Use Cases:</strong>- Lead management: Capture forms, update CRM, notify sales, automate emails
 - Data sync: Keep customer info, orders, or tickets synced across tools
 - AI-powered processes: Chatbots, summarization, ticket classification, content generation
 - Reporting: Aggregate analytics, compile reports, deliver notifications
@@ -106,7 +106,7 @@ n8n is used to automate repetitive, multi-step business or personal tasks across
 - Web/data scraping: Extract, transform, and store information
 - Smart home: Automate devices based on location or events
 
-**User Types:**- IT, DevOps, SecOps
+<strong>User Types:</strong>- IT, DevOps, SecOps
 - Agencies, marketing, sales, and support teams
 - Developers and non-coders (thanks to the visual editor)
 - Enterprises with privacy, compliance, or custom integration needs
@@ -115,25 +115,25 @@ n8n is used to automate repetitive, multi-step business or personal tasks across
 
 AI workflow automation in n8n leverages nodes for LLMs (OpenAI, Gemini, Claude, etc.), retrievers, and agentic orchestration, allowing you to automate unstructured data processing, intelligent routing, and advanced decision-making.
 
-**Key AI Features:**- Natural Language Understanding: Summarize, classify, or transform text using LLM nodes ([n8n AI Docs](https://docs.n8n.io/advanced-ai/))
+<strong>Key AI Features:</strong>- Natural Language Understanding: Summarize, classify, or transform text using LLM nodes ([n8n AI Docs](https://docs.n8n.io/advanced-ai/))
 - Retrieval-Augmented Generation (RAG): Combine LLMs with document retrieval for chatbots and internal search ([Example RAG Workflow](https://n8n.io/workflows/2753-rag-chatbot-for-company-documents-using-google-drive-and-gemini/))
 - Multimodal AI: Handle text, images, and documents (e.g., validate passport photos with Google Gemini)
-- [Human-in-the-Loop](/en/glossary/human-in-the-loop--hitl-/): Pause for manual approval within automated flows
+- Human-in-the-Loop: Pause for manual approval within automated flows
 - Multi-Agent Systems: Orchestrate multiple AI models, combine outputs, and make decisions
 
-**Benefits of AI Workflow Automation:**- Handles unstructured data (emails, docs, images, social posts)
+<strong>Benefits of AI Workflow Automation:</strong>- Handles unstructured data (emails, docs, images, social posts)
 - Automates tedious, error-prone tasks
 - Scales with business growth
 - Adapts to unexpected changes in data or process
 - Provides predictive analytics and actionable insights
 ## Features & Differentiators
 
-| Feature                          | n8n                                   | Zapier                     | [Make (Integromat)](/en/glossary/make--integromat-/)         |
+| Feature                          | n8n                                   | Zapier                     | Make (Integromat)         |
 |-----------------------------------|---------------------------------------|----------------------------|---------------------------|
 | Visual Workflow Editor            | Yes                                   | Yes                        | Yes                       |
 | No-Code Friendly                  | Moderate (advanced users)             | Very High                  | High                      |
 | Custom Code Support               | Yes (JavaScript native, Python node)  | No                         | Limited                   |
-| Self-Hosting Option               | Yes ([Docker](/en/glossary/docker/), VPS, Cloud, On-Premise)  | No                         | No                        |
+| Self-Hosting Option               | Yes (Docker, VPS, Cloud, On-Premise)  | No                         | No                        |
 | API Extensibility                 | Very High (HTTP Request & custom)     | Medium                     | Medium                    |
 | AI Integration                    | Native nodes, agentic workflows       | Limited                    | Some                      |
 | Cost (Self-hosted)                | Free (just server cost)               | N/A                        | N/A                       |
@@ -141,7 +141,7 @@ AI workflow automation in n8n leverages nodes for LLMs (OpenAI, Gemini, Claude, 
 | Error Handling                    | Visual, detailed logs                 | Basic                      | Good                      |
 | Best for                          | Complex, custom, high-volume, privacy | Simple, business tasks     | Visual, medium complexity |
 
-**Key Strengths:**- Flexible hosting: cloud or self-host
+<strong>Key Strengths:</strong>- Flexible hosting: cloud or self-host
 - Unlimited executions (self-hosted)
 - Advanced branching, looping, merging, error handling
 - Integrated code for edge cases
@@ -193,29 +193,29 @@ AI workflow automation in n8n leverages nodes for LLMs (OpenAI, Gemini, Claude, 
 ### 7. Web Scraping & Monitoring
 - Steps: Scrape website → Store results → Alert on price drop
 
-**Template Library:**- [n8n Workflow Templates](https://n8n.io/workflows/categories/ai/)
+<strong>Template Library:</strong>- [n8n Workflow Templates](https://n8n.io/workflows/categories/ai/)
 
 ## Advanced Topics: AI & Custom Integrations
 
 ### AI Integration Examples
 
-- **Chatbot with Knowledge Base:**OpenAI node + Google Drive retriever + Slack/WhatsApp output  
+- <strong>Chatbot with Knowledge Base:</strong>OpenAI node + Google Drive retriever + Slack/WhatsApp output  
   [RAG Chatbot Example](https://n8n.io/workflows/2753-rag-chatbot-for-company-documents-using-google-drive-and-gemini/)
-- **Multi-Agent Orchestration:**Coordinate multiple LLMs for advanced decision flows
-- **Natural Language to API:**Convert plain English into IT tasks via API calls
-- **Human-in-the-Loop:**Pause automation for manual approval before execution
+- <strong>Multi-Agent Orchestration:</strong>Coordinate multiple LLMs for advanced decision flows
+- <strong>Natural Language to API:</strong>Convert plain English into IT tasks via API calls
+- <strong>Human-in-the-Loop:</strong>Pause automation for manual approval before execution
 
 ### Custom Integrations
 
-- **HTTP Request Node:**Connect any REST API, with advanced auth
-- **Community Nodes:**Expand n8n with 3rd-party and custom nodes ([Install Guide](https://docs.n8n.io/integrations/community-nodes/installation/))
-- **Custom Code:**Use Function/FunctionItem nodes for custom logic, data transforms, or external library calls
+- <strong>HTTP Request Node:</strong>Connect any REST API, with advanced auth
+- <strong>Community Nodes:</strong>Expand n8n with 3rd-party and custom nodes ([Install Guide](https://docs.n8n.io/integrations/community-nodes/installation/))
+- <strong>Custom Code:</strong>Use Function/FunctionItem nodes for custom logic, data transforms, or external library calls
 ## Security & Compliance
 
-- **Self-hosting:**All data remains on your infrastructure
-- **Access Control:**Role-based permissions for workflows and credentials
-- **Audit Logs:**Trace all workflow executions and changes
-- **SOC2:**n8n Cloud is SOC2 compliant for enterprise security
+- <strong>Self-hosting:</strong>All data remains on your infrastructure
+- <strong>Access Control:</strong>Role-based permissions for workflows and credentials
+- <strong>Audit Logs:</strong>Trace all workflow executions and changes
+- <strong>SOC2:</strong>n8n Cloud is SOC2 compliant for enterprise security
 ## Pros & Cons: n8n vs Zapier/Make
 
 | Pros (n8n)                              | Cons (n8n)                              |
@@ -235,26 +235,26 @@ AI workflow automation in n8n leverages nodes for LLMs (OpenAI, Gemini, Claude, 
 | No setup required, instant cloud use      | Limited advanced logic/custom code      |
 | Good for simple, linear automations       | API rate limits, execution limits       |
 
-**Detailed Comparison:**- [Hostinger: n8n vs Zapier](https://www.hostinger.com/tutorials/n8n-vs-zapier)
+<strong>Detailed Comparison:</strong>- [Hostinger: n8n vs Zapier](https://www.hostinger.com/tutorials/n8n-vs-zapier)
 
 ## FAQ
 
-**Do I need to be a developer to use n8n?**No. The visual editor and templates enable non-coders to automate. Coding is optional for advanced cases.  
+<strong>Do I need to be a developer to use n8n?</strong>No. The visual editor and templates enable non-coders to automate. Coding is optional for advanced cases.  
 [Getting Started Guide](https://contabo.com/blog/the-complete-beginners-guide-to-n8n-your-first-workflow/)
 
-**Is n8n free?**Yes, if you self-host (pay only for your server). n8n Cloud is paid but has a free trial.  
+<strong>Is n8n free?</strong>Yes, if you self-host (pay only for your server). n8n Cloud is paid but has a free trial.  
 [Pricing](https://n8n.io/pricing/)
 
-**Can I connect to any app or API?**Yes. Use built-in nodes or the HTTP Request node for custom APIs.  
+<strong>Can I connect to any app or API?</strong>Yes. Use built-in nodes or the HTTP Request node for custom APIs.  
 [Node Reference](https://docs.n8n.io/nodes/)
 
-**How does n8n handle errors?**Workflows support error handling nodes, alternate branches, and execution logs for debugging.  
+<strong>How does n8n handle errors?</strong>Workflows support error handling nodes, alternate branches, and execution logs for debugging.  
 [Error Handling](https://docs.n8n.io/workflows/error-handling/)
 
-**Is my data secure?**Self-hosting ensures full data privacy. n8n Cloud is SOC2 compliant.  
+<strong>Is my data secure?</strong>Self-hosting ensures full data privacy. n8n Cloud is SOC2 compliant.  
 [Security](https://docs.n8n.io/security/)
 
-**Where can I find help and templates?**- [n8n Docs](https://docs.n8n.io/)
+<strong>Where can I find help and templates?</strong>- [n8n Docs](https://docs.n8n.io/)
 - [Template Library](https://n8n.io/workflows/)
 - [Community Forum](https://community.n8n.io/)
 - [YouTube Channel](https://www.youtube.com/@n8n-automation)

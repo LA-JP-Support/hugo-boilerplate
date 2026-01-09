@@ -27,39 +27,39 @@ Common secret types include database passwords, API tokens, OAuth credentials, c
 
 ## Why Use Environment Variables for Secrets?
 
-**Code-Configuration Separation**Keeping sensitive data out of codebases and version control enables the same code to run across different environments with different credentials. Development, staging, and production each use appropriate secrets without code modifications.
+<strong>Code-Configuration Separation</strong>Keeping sensitive data out of codebases and version control enables the same code to run across different environments with different credentials. Development, staging, and production each use appropriate secrets without code modifications.
 
-**Enhanced Security**Secrets embedded in code face constant exposure risk through repository access, code sharing, or accidental commits. Environment variables eliminate this attack vector by keeping secrets external to the codebase. They prevent exposure in error messages, stack traces, and debugging outputs.
+<strong>Enhanced Security</strong>Secrets embedded in code face constant exposure risk through repository access, code sharing, or accidental commits. Environment variables eliminate this attack vector by keeping secrets external to the codebase. They prevent exposure in error messages, stack traces, and debugging outputs.
 
-**Operational Flexibility**Update or rotate secrets without touching code. Change environment variables and restart applications to implement new credentials. This agility supports rapid incident response when credentials leak or require rotation.
+<strong>Operational Flexibility</strong>Update or rotate secrets without touching code. Change environment variables and restart applications to implement new credentials. This agility supports rapid incident response when credentials leak or require rotation.
 
-**Deployment Consistency**CI/CD pipelines inject secrets automatically during deployment, maintaining consistent processes across environments. Teams avoid manual credential management and reduce human error.
+<strong>Deployment Consistency</strong>CI/CD pipelines inject secrets automatically during deployment, maintaining consistent processes across environments. Teams avoid manual credential management and reduce human error.
 
-**Process-Level Isolation**Each application process accesses only relevant secrets, reducing blast radius if one process becomes compromised. Granular access control prevents privilege escalation.
+<strong>Process-Level Isolation</strong>Each application process accesses only relevant secrets, reducing blast radius if one process becomes compromised. Granular access control prevents privilege escalation.
 
 ## Types of Environment Variables
 
-**System-Level Variables**Set at operating system level, affecting all processes and users. Examples include `PATH` directories on Unix systems or Windows environment settings.
+<strong>System-Level Variables</strong>Set at operating system level, affecting all processes and users. Examples include `PATH` directories on Unix systems or Windows environment settings.
 
-**User-Scoped Variables**Limited to specific user profiles. Only processes launched by that user can access these variables, providing user-level isolation.
+<strong>User-Scoped Variables</strong>Limited to specific user profiles. Only processes launched by that user can access these variables, providing user-level isolation.
 
-**Process-Scoped Variables**Exist only for individual processes or sessions. Set temporarily when launching specific processes without affecting the broader system.
+<strong>Process-Scoped Variables</strong>Exist only for individual processes or sessions. Set temporarily when launching specific processes without affecting the broader system.
 
-**Build vs Runtime Secrets**Build-time secrets support compilation and dependency fetching. Runtime secrets enable running application connections to live services and databases.
+<strong>Build vs Runtime Secrets</strong>Build-time secrets support compilation and dependency fetching. Runtime secrets enable running application connections to live services and databases.
 
-**Application-Level Management**`.env` files store variables for local development. Secret managers (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault) provide encrypted storage with audit trails, access control, and automated rotation for production environments.
+<strong>Application-Level Management</strong>`.env` files store variables for local development. Secret managers (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault) provide encrypted storage with audit trails, access control, and automated rotation for production environments.
 
 ## Common Use Cases
 
-**API Integration**External services (OpenAI, Google Cloud, Stripe, payment processors) require API keys passed via environment variables rather than hardcoded.
+<strong>API Integration</strong>External services (OpenAI, Google Cloud, Stripe, payment processors) require API keys passed via environment variables rather than hardcoded.
 
-**Database Connectivity**Connection strings with usernames, passwords, and hostnames remain secure and environment-specific.
+<strong>Database Connectivity</strong>Connection strings with usernames, passwords, and hostnames remain secure and environment-specific.
 
-**Authentication Tokens**JWT signing keys, OAuth client secrets, and webhook verification tokens stay protected outside source code.
+<strong>Authentication Tokens</strong>JWT signing keys, OAuth client secrets, and webhook verification tokens stay protected outside source code.
 
-**Feature Management**Feature flags control functionality across environments without code deployments.
+<strong>Feature Management</strong>Feature flags control functionality across environments without code deployments.
 
-**Environment Identification**Tags like `development`, `staging`, or `production` guide application behavior appropriately.
+<strong>Environment Identification</strong>Tags like `development`, `staging`, or `production` guide application behavior appropriately.
 
 ## Implementation Approaches
 
@@ -73,7 +73,7 @@ DATABASE_URL=postgres://user:pass@host:5432/db
 MODE=production
 ```
 
-**Critical:**Always add `.env` to `.gitignore` to prevent version control commits.
+<strong>Critical:</strong>Always add `.env` to `.gitignore` to prevent version control commits.
 
 ### Node.js Implementation
 
@@ -108,7 +108,7 @@ var movieKey = builder.Configuration["Movies:ServiceApiKey"];
 
 ### Operating System Configuration
 
-**Unix/Linux/macOS**```bash
+<strong>Unix/Linux/macOS</strong>```bash
 # Current session
 export API_KEY="abc123"
 
@@ -132,45 +132,45 @@ $env:API_KEY="abc123"
 
 ## Secret Management Best Practices
 
-**Never Store Secrets in Version Control**Git repositories maintain complete history. Committed secrets remain accessible even after removal. Use `.gitignore` religiously.
+<strong>Never Store Secrets in Version Control</strong>Git repositories maintain complete history. Committed secrets remain accessible even after removal. Use `.gitignore` religiously.
 
-**Production Secret Managers**AWS Secrets Manager, Azure Key Vault, and HashiCorp Vault provide encryption, access logging, automated rotation, and compliance features essential for production.
+<strong>Production Secret Managers</strong>AWS Secrets Manager, Azure Key Vault, and HashiCorp Vault provide encryption, access logging, automated rotation, and compliance features essential for production.
 
-**Least Privilege Access**Restrict secret access to minimum necessary personnel and systems. Implement role-based access controls.
+<strong>Least Privilege Access</strong>Restrict secret access to minimum necessary personnel and systems. Implement role-based access controls.
 
-**Regular Rotation**Rotate secrets on schedules or after incidents. Automate where possible using secret manager capabilities or dynamic secrets that expire automatically.
+<strong>Regular Rotation</strong>Rotate secrets on schedules or after incidents. Automate where possible using secret manager capabilities or dynamic secrets that expire automatically.
 
-**Comprehensive Audit Logging**Track all secret access for security monitoring and compliance requirements.
+<strong>Comprehensive Audit Logging</strong>Track all secret access for security monitoring and compliance requirements.
 
-**Client-Side Isolation**Never expose runtime secrets (database passwords, API keys) to browser JavaScript. Use backend proxies for external service access.
+<strong>Client-Side Isolation</strong>Never expose runtime secrets (database passwords, API keys) to browser JavaScript. Use backend proxies for external service access.
 
-**Automated Security Scanning**Implement CI/CD pipeline secret scanning to catch accidental commits before they reach repositories.
+<strong>Automated Security Scanning</strong>Implement CI/CD pipeline secret scanning to catch accidental commits before they reach repositories.
 
-**Encryption Requirements**Encrypt secrets at rest in storage systems and in transit over networks.
+<strong>Encryption Requirements</strong>Encrypt secrets at rest in storage systems and in transit over networks.
 
-**Environment Segmentation**Maintain separate secret sets for development, staging, and production to prevent cross-environment contamination.
+<strong>Environment Segmentation</strong>Maintain separate secret sets for development, staging, and production to prevent cross-environment contamination.
 
 ## Advanced Patterns
 
-**Multiple Environment Management**Use separate `.env` files (`.env.development`, `.env.production`) or secret manager namespaces for each environment.
+<strong>Multiple Environment Management</strong>Use separate `.env` files (`.env.development`, `.env.production`) or secret manager namespaces for each environment.
 
-**Secret File Handling**Platform dashboards (Render, Vercel, Netlify) support uploading entire secret files like private keys or certificates.
+<strong>Secret File Handling</strong>Platform dashboards (Render, Vercel, Netlify) support uploading entire secret files like private keys or certificates.
 
-**Microservices Secret Sharing**Environment groups or secret managers enable sharing configuration across related services while maintaining security boundaries.
+<strong>Microservices Secret Sharing</strong>Environment groups or secret managers enable sharing configuration across related services while maintaining security boundaries.
 
-**Kubernetes Sidecar Pattern**Deploy Vault Agent as sidecar container to fetch and inject secrets into application containers at runtime.
+<strong>Kubernetes Sidecar Pattern</strong>Deploy Vault Agent as sidecar container to fetch and inject secrets into application containers at runtime.
 
-**Dynamic Secrets**Applications request temporary credentials from secret managers, receiving auto-expiring access tokens that enhance security through time-limited exposure.
+<strong>Dynamic Secrets</strong>Applications request temporary credentials from secret managers, receiving auto-expiring access tokens that enhance security through time-limited exposure.
 
 ## Security Considerations
 
-**Plaintext Limitations**Local `.env` files and OS-level variables store data unencrypted. Acceptable for development but insufficient for production.
+<strong>Plaintext Limitations</strong>Local `.env` files and OS-level variables store data unencrypted. Acceptable for development but insufficient for production.
 
-**Configuration Complexity**Environment variables struggle with nested or hierarchical configuration. Consider encrypted config files for complex structures.
+<strong>Configuration Complexity</strong>Environment variables struggle with nested or hierarchical configuration. Consider encrypted config files for complex structures.
 
-**Distribution Challenges**Manual secret distribution across teams introduces errors and security gaps. Centralized secret managers solve this problem.
+<strong>Distribution Challenges</strong>Manual secret distribution across teams introduces errors and security gaps. Centralized secret managers solve this problem.
 
-**Alternative Solutions**For complex configurations requiring structure, use encrypted configuration files (excluded from version control) combined with platform-specific secret management tools.
+<strong>Alternative Solutions</strong>For complex configurations requiring structure, use encrypted configuration files (excluded from version control) combined with platform-specific secret management tools.
 
 ## Production Architecture Example
 
@@ -183,7 +183,7 @@ Consider an AI chatbot requiring external LLM API access:
 5. Different keys for development, staging, and production environments
 6. Audit trail tracks all API key access
 
-**Node.js:**```javascript
+<strong>Node.js:</strong>```javascript
 require('dotenv').config();
 const { OpenAI } = require('openai');
 const client = new OpenAI({
@@ -198,7 +198,7 @@ from openai import OpenAI
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 ```
 
-**C#:**```csharp
+<strong>C#:</strong>```csharp
 var builder = WebApplication.CreateBuilder(args);
 var apiKey = builder.Configuration["OPENAI_API_KEY"];
 ```

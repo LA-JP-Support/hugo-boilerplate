@@ -20,28 +20,28 @@ draft: false
 
 Environment variables are named, externally-defined key-value pairs that provide runtime configuration to applications. When utilized for secrets, they store sensitive data—API keys, passwords, connection strings, tokens—outside codebases, UIs, or logs. The decoupling ensures that secrets are never hardcoded in source code or checked into version control.
 
-- **Analogy:**The value of an environment variable acts as a placeholder in your code. For example, instead of writing `API_KEY = "secret123"`, you reference `API_KEY`, which is only defined at runtime in the execution environment.
-- **Security Context:**Storing secrets in environment variables minimizes the risk of accidental exposure through code leaks, Git repository access, or logs. Sensitive values are injected at runtime and not stored in visual interfaces or configuration files unless specifically required.
-- **Secret Types:**Database passwords, API tokens, OAuth credentials, cryptographic keys, [feature flags](/en/glossary/feature-flags/), and more.
+- <strong>Analogy:</strong>The value of an environment variable acts as a placeholder in your code. For example, instead of writing `API_KEY = "secret123"`, you reference `API_KEY`, which is only defined at runtime in the execution environment.
+- <strong>Security Context:</strong>Storing secrets in environment variables minimizes the risk of accidental exposure through code leaks, Git repository access, or logs. Sensitive values are injected at runtime and not stored in visual interfaces or configuration files unless specifically required.
+- <strong>Secret Types:</strong>Database passwords, API tokens, OAuth credentials, cryptographic keys, feature flags, and more.
 
-**See:**- [OWASP Secrets Management Cheat Sheet—Intro and General Concepts](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#1-introduction)  
+<strong>See:</strong>- [OWASP Secrets Management Cheat Sheet—Intro and General Concepts](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#1-introduction)  
 - [Kinsta: What Is an Environment Variable?](https://kinsta.com/blog/what-is-an-environment-variable/)
 
 ## Why Use Environment Variables for Secrets?
 
-**Separation of Code and Configuration:**- Keeps sensitive data out of codebases and version control.  
+<strong>Separation of Code and Configuration:</strong>- Keeps sensitive data out of codebases and version control.  
 - Enables the same codebase to run in different environments (development, staging, production) with different credentials.
 
-**Security:**- Reduces risk of secret leakage by not embedding them in code or public repositories.
+<strong>Security:</strong>- Reduces risk of secret leakage by not embedding them in code or public repositories.
 - Prevents secrets from being exposed in logs, error messages, or UIs.
 
-**Flexibility and Maintainability:**- Secrets can be updated or rotated without code changes.
+<strong>Flexibility and Maintainability:</strong>- Secrets can be updated or rotated without code changes.
 - Supports rapid response to incidents (e.g., credential leaks) by changing the environment variable and restarting the application.
 
-**Scalability and Consistency:**- Manage environment-specific values (dev/staging/prod) centrally.
+<strong>Scalability and Consistency:</strong>- Manage environment-specific values (dev/staging/prod) centrally.
 - Consistent deployment pipelines (CI/CD) that do not require code changes for configuration updates.
 
-**Process Isolation:**- Each process has access only to relevant secrets, reducing accidental exposure or privilege escalation.
+<strong>Process Isolation:</strong>- Each process has access only to relevant secrets, reducing accidental exposure or privilege escalation.
 ## Types of Environment Variables
 
 ### 1. System Environment Variables
@@ -59,35 +59,35 @@ Environment variables are named, externally-defined key-value pairs that provide
 - Set temporarily for a session or when launching a process.
 
 ### 4. Build-Time vs. Runtime Secrets
-- **Build-Time:**Used during the building/compilation process (e.g., fetching dependencies).
-- **Runtime:**Used while the application is running (e.g., connecting to live services).
+- <strong>Build-Time:</strong>Used during the building/compilation process (e.g., fetching dependencies).
+- <strong>Runtime:</strong>Used while the application is running (e.g., connecting to live services).
 
 ### 5. Application/Project Level (.env Files, Secret Managers)
 - `.env` files store environment variables for local development.
 - Secret managers (e.g., AWS Secrets Manager, Azure Key Vault, HashiCorp Vault) provide encrypted storage with audit, access control, and rotation capabilities.
 
 ### Platform Differences
-- **Windows:**Set via Control Panel, CLI (`set`), or PowerShell (`$env:VAR_NAME`).
-- **Unix/Linux/macOS:**Set via `export VAR=value` in shell, or add to `.bashrc`/`.zshrc` for persistence.
+- <strong>Windows:</strong>Set via Control Panel, CLI (`set`), or PowerShell (`$env:VAR_NAME`).
+- <strong>Unix/Linux/macOS:</strong>Set via `export VAR=value` in shell, or add to `.bashrc`/`.zshrc` for persistence.
 ## How Environment Variables Are Used
 
-**Workflow:**1. Define secrets outside the codebase (OS, `.env` file, secret manager, deployment dashboard).
+<strong>Workflow:</strong>1. Define secrets outside the codebase (OS, `.env` file, secret manager, deployment dashboard).
 2. Reference them in application code via environment variable APIs.
 3. Deploy the application—secrets are injected at runtime.
 
-**Example:**Instead of hardcoding `API_KEY = "abc123"`, set the value as an environment variable and let the application read it securely at runtime.
+<strong>Example:</strong>Instead of hardcoding `API_KEY = "abc123"`, set the value as an environment variable and let the application read it securely at runtime.
 
-**Automated Secret Injection:**- In CI/CD, secrets are often injected at build or deployment time.
+<strong>Automated Secret Injection:</strong>- In CI/CD, secrets are often injected at build or deployment time.
 - Secret managers or deployment dashboards provide UIs/APIs for defining and rotating secrets.
 ## Common Use Cases & Examples
 
-- **API Keys:**External services (OpenAI, Google Cloud, Stripe).
-- **Database Credentials:**Securely pass DB usernames, passwords, hostnames.
-- **Secret Tokens:**JWT signing keys, OAuth client secrets, webhook tokens.
-- **Feature Flags:**Enable/disable features dynamically.
-- **Environment Tags:**Indicate `development`, `staging`, or `production`.
+- <strong>API Keys:</strong>External services (OpenAI, Google Cloud, Stripe).
+- <strong>Database Credentials:</strong>Securely pass DB usernames, passwords, hostnames.
+- <strong>Secret Tokens:</strong>JWT signing keys, OAuth client secrets, webhook tokens.
+- <strong>Feature Flags:</strong>Enable/disable features dynamically.
+- <strong>Environment Tags:</strong>Indicate `development`, `staging`, or `production`.
 
-**.env Example:**```
+<strong>.env Example:</strong>```
 OPENAI_API_KEY=sk-abc123
 DATABASE_URL=postgres://user:pass@host:5432/db
 MODE=production
@@ -274,7 +274,7 @@ require('dotenv').config();
 const openai = require('openai');
 openai.apiKey = process.env.OPENAI_API_KEY;
 ```
-**Sample Python:**```python
+<strong>Sample Python:</strong>```python
 import os
 from openai import OpenAI
 

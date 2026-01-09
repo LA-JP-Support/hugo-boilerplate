@@ -31,9 +31,9 @@ Requirements definition is foundational to any AI, software, or systems project 
 
 ### Requirements vs. Specifications
 
-**Requirements**state what a system must achieve—needs, constraints, outcomes, capabilities. **Specifications**describe how the system will fulfill requirements—technical details, architecture, implementation approach.
+<strong>Requirements</strong>state what a system must achieve—needs, constraints, outcomes, capabilities. <strong>Specifications</strong>describe how the system will fulfill requirements—technical details, architecture, implementation approach.
 
-**Example:**- Requirement: "The chatbot shall respond to user queries in less than 1 second under normal load."
+<strong>Example:</strong>- Requirement: "The chatbot shall respond to user queries in less than 1 second under normal load."
 - Specification: "The chatbot will be hosted on scalable cloud infrastructure with Redis caching for session data."
 
 ## Types of Requirements
@@ -42,7 +42,7 @@ Requirements definition is foundational to any AI, software, or systems project 
 
 Describe what the system must do—features, capabilities, and interactions.
 
-**Examples:**- "The AI assistant shall authenticate users via OAuth 2.0"
+<strong>Examples:</strong>- "The AI assistant shall authenticate users via OAuth 2.0"
 - "The chatbot shall process natural language queries in English and Spanish"
 - "The system shall allow users to reset passwords via secure email link"
 
@@ -50,14 +50,14 @@ Describe what the system must do—features, capabilities, and interactions.
 
 Describe how well the system must perform—quality attributes and constraints.
 
-**Categories:**- **Performance:**Throughput, latency, response time
-- **Usability:**UI intuitiveness, accessibility
-- **Reliability:**Mean time between failures, availability
-- **Security:**Authentication, authorization, encryption
-- **Scalability:**Capacity for growth
-- **Maintainability:**Ease of updates and fixes
+<strong>Categories:</strong>- <strong>Performance:</strong>Throughput, latency, response time
+- <strong>Usability:</strong>UI intuitiveness, accessibility
+- <strong>Reliability:</strong>Mean time between failures, availability
+- <strong>Security:</strong>Authentication, authorization, encryption
+- <strong>Scalability:</strong>Capacity for growth
+- <strong>Maintainability:</strong>Ease of updates and fixes
 
-**Examples:**- "The chatbot interface shall load within 2 seconds for 95% of users"
+<strong>Examples:</strong>- "The chatbot interface shall load within 2 seconds for 95% of users"
 - "All user data must be encrypted at rest using AES-256"
 - "The system shall process 1,000 transactions per second with average response time under 2 seconds"
 
@@ -65,13 +65,13 @@ Describe how well the system must perform—quality attributes and constraints.
 
 High-level objectives reflecting organizational goals.
 
-**Example:**"The chatbot solution shall reduce average customer response time by 50% within six months"
+<strong>Example:</strong>"The chatbot solution shall reduce average customer response time by 50% within six months"
 
 ### Technical Requirements
 
 Detail technology stack, interoperability, infrastructure, and standards.
 
-**Examples:**- "The automation must integrate with the SAP ERP system"
+<strong>Examples:</strong>- "The automation must integrate with the SAP ERP system"
 - "The application shall be developed in Python 3.9 or higher"
 - "The system shall expose a RESTful API conforming to OpenAPI 3.0"
 
@@ -79,7 +79,7 @@ Detail technology stack, interoperability, infrastructure, and standards.
 
 Impose limitations such as regulatory, resource, or environmental constraints.
 
-**Examples:**- "The system must comply with GDPR"
+<strong>Examples:</strong>- "The system must comply with GDPR"
 - "The application shall not require more than 2 GB of RAM per instance"
 - "Development must complete within allocated budget of $500,000"
 
@@ -87,31 +87,31 @@ Impose limitations such as regulatory, resource, or environmental constraints.
 
 Define interactions with users, external systems, or hardware.
 
-**Examples:**- "The chatbot shall expose a RESTful API conforming to OpenAPI 3.0"
+<strong>Examples:</strong>- "The chatbot shall expose a RESTful API conforming to OpenAPI 3.0"
 - "The system shall integrate with existing CRM via SOAP web services"
 
 ## Attributes of Well-Formed Requirements
 
 According to IEEE 830 and ISO/IEC/IEEE 29148 standards:
 
-**Clarity:**Unambiguous language preventing multiple interpretations
+<strong>Clarity:</strong>Unambiguous language preventing multiple interpretations
 
-**Testability:**Objectively verifiable through inspection, analysis, demonstration, or test
+<strong>Testability:</strong>Objectively verifiable through inspection, analysis, demonstration, or test
 
-**Traceability:**Linked to source and tracked through lifecycle
+<strong>Traceability:</strong>Linked to source and tracked through lifecycle
 
-**Feasibility:**Realistic within project constraints
+<strong>Feasibility:</strong>Realistic within project constraints
 
-**Singularity:**One need or function per statement
+<strong>Singularity:</strong>One need or function per statement
 
-**Completeness:**All necessary detail provided
+<strong>Completeness:</strong>All necessary detail provided
 
-**Consistency:**No conflicts with other requirements
+<strong>Consistency:</strong>No conflicts with other requirements
 
-**Verifiability:**Clear means of verification defined
+<strong>Verifiability:</strong>Clear means of verification defined
 
-**Poor Requirement Example:**"The chatbot should be fast"  
-**Improved:**"The chatbot shall provide a response within 1 second for 95% of queries"
+<strong>Poor Requirement Example:</strong>"The chatbot should be fast"  
+<strong>Improved:</strong>"The chatbot shall provide a response within 1 second for 95% of queries"
 
 ## Requirements Definition Process
 
@@ -119,14 +119,14 @@ According to IEEE 830 and ISO/IEC/IEEE 29148 standards:
 
 Gathering and clarifying requirements from stakeholders, existing systems, documentation, and regulatory sources.
 
-**Techniques:**- Interviews, focus groups, workshops
+<strong>Techniques:</strong>- Interviews, focus groups, workshops
 - Surveys, questionnaires
 - Observation, shadowing
 - Prototyping, use cases
 - Analysis of legacy/competitive systems
 - Brainstorming sessions
 
-**Best Practices:**- Push beyond initial answers to true needs
+<strong>Best Practices:</strong>- Push beyond initial answers to true needs
 - Involve QA and technical staff early
 - Document assumptions and constraints
 - Identify all stakeholder groups
@@ -135,7 +135,7 @@ Gathering and clarifying requirements from stakeholders, existing systems, docum
 
 Refining requirements for clarity, feasibility, and alignment.
 
-**Activities:**- Resolve conflicts and ambiguities
+<strong>Activities:</strong>- Resolve conflicts and ambiguities
 - Decompose high-level needs into details
 - Prioritize using methods like MoSCoW (Must, Should, Could, Won't)
 - Identify dependencies, assumptions, risks
@@ -145,37 +145,37 @@ Refining requirements for clarity, feasibility, and alignment.
 
 Formally recording requirements using clear, standardized formats.
 
-**Artifacts:**- Requirements Specification Documents (SRS/PRD)
+<strong>Artifacts:</strong>- Requirements Specification Documents (SRS/PRD)
 - Requirements Traceability Matrix (RTM)
 - Use case diagrams, data flow diagrams, state diagrams
 - User stories (in Agile contexts)
 
-**Language Conventions:**Use "shall" for mandatory requirements, "should" for desirable features
+<strong>Language Conventions:</strong>Use "shall" for mandatory requirements, "should" for desirable features
 
 ### 4. Validation and Verification
 
 Ensuring requirements are correct, complete, and agreed upon.
 
-**Methods:**- Review sessions, walkthroughs
+<strong>Methods:</strong>- Review sessions, walkthroughs
 - Prototyping, simulation
 - Defining acceptance criteria
 - Early verification planning
 - Stakeholder sign-off
 
-**Key Questions:**- Validation: "Are we building the right system?"
+<strong>Key Questions:</strong>- Validation: "Are we building the right system?"
 - Verification: "Are we building the system right?"
 
 ### 5. Management and Traceability
 
 Maintaining requirements throughout the lifecycle.
 
-**Practices:**- Version control and change management
+<strong>Practices:</strong>- Version control and change management
 - Impact analysis for changes
 - Traceability links to design, implementation, testing
 - Regular reviews and updates
 - Baseline management
 
-**Traceability Components:**- Each requirement traceable to origin and rationale
+<strong>Traceability Components:</strong>- Each requirement traceable to origin and rationale
 - All requirements addressed in downstream artifacts
 - Changes reflected throughout documentation
 
@@ -183,15 +183,15 @@ Maintaining requirements throughout the lifecycle.
 
 Requirements are structured hierarchically:
 
-**High-Level Requirements:**Broad organizational objectives
+<strong>High-Level Requirements:</strong>Broad organizational objectives
 
-**System Requirements:**Overall solution needs
+<strong>System Requirements:</strong>Overall solution needs
 
-**Subsystem/Component Requirements:**Module-specific needs
+<strong>Subsystem/Component Requirements:</strong>Module-specific needs
 
-**Derived Requirements:**Emerge from design decisions or constraints
+<strong>Derived Requirements:</strong>Emerge from design decisions or constraints
 
-**Example Hierarchy (AI Chatbot):**| ID | Level | Requirement |
+<strong>Example Hierarchy (AI Chatbot):</strong>| ID | Level | Requirement |
 |----|-------|-------------|
 | R1 | System | The chatbot shall support 10,000 concurrent users |
 | R1.1 | Subsystem | The NLP engine shall process 200 requests per second |
@@ -203,116 +203,116 @@ Requirements are structured hierarchically:
 
 Defines conversational flows, supported languages, integration points, compliance needs (GDPR), escalation procedures, and performance targets.
 
-**Example:**"The chatbot shall escalate unresolved queries to a human agent within 2 minutes"
+<strong>Example:</strong>"The chatbot shall escalate unresolved queries to a human agent within 2 minutes"
 
 ### Automation Projects
 
 Outlines triggers, workflows, error handling, reporting, and system integrations.
 
-**Example:**"The RPA bot shall extract invoice data from PDF files and update the ERP system within 5 minutes"
+<strong>Example:</strong>"The RPA bot shall extract invoice data from PDF files and update the ERP system within 5 minutes"
 
 ### Software Engineering
 
 Captures user stories, system features, acceptance criteria for agile or waterfall projects.
 
-**Example:**"The application shall allow users to reset passwords via secure email link with token expiration after 24 hours"
+<strong>Example:</strong>"The application shall allow users to reset passwords via secure email link with token expiration after 24 hours"
 
 ### Systems Engineering
 
 Specifies requirements for complex systems (aerospace, medical) including safety, reliability, interface requirements.
 
-**Example:**"The navigation system shall operate continuously for 24 hours without manual intervention"
+<strong>Example:</strong>"The navigation system shall operate continuously for 24 hours without manual intervention"
 
 ## Best Practices
 
-**Use Clear Language:**Avoid ambiguous terms, use precise, measurable statements
+<strong>Use Clear Language:</strong>Avoid ambiguous terms, use precise, measurable statements
 
-**Involve All Stakeholders:**Engage users, customers, developers, QA, operations throughout process
+<strong>Involve All Stakeholders:</strong>Engage users, customers, developers, QA, operations throughout process
 
-**Prioritize Requirements:**Rank by value, risk, dependencies
+<strong>Prioritize Requirements:</strong>Rank by value, risk, dependencies
 
-**Document Consistently:**Use standardized templates and formats
+<strong>Document Consistently:</strong>Use standardized templates and formats
 
-**Ensure Testability:**Every requirement must be verifiable
+<strong>Ensure Testability:</strong>Every requirement must be verifiable
 
-**Regular Reviews:**Validate and update requirements iteratively
+<strong>Regular Reviews:</strong>Validate and update requirements iteratively
 
-**Formal Change Control:**Manage changes through documented process
+<strong>Formal Change Control:</strong>Manage changes through documented process
 
-**Plan for Margins:**Include buffers for uncertainty
+<strong>Plan for Margins:</strong>Include buffers for uncertainty
 
-**Maintain Traceability:**Link requirements to all lifecycle artifacts
+<strong>Maintain Traceability:</strong>Link requirements to all lifecycle artifacts
 
-**Define Acceptance Criteria:**Clear pass/fail conditions for each requirement
+<strong>Define Acceptance Criteria:</strong>Clear pass/fail conditions for each requirement
 
 ## Common Pitfalls and Solutions
 
 | Pitfall | Description | Solution |
 |---------|-------------|----------|
-| **Ambiguity**| Vague, multi-interpretable language | Use precise, testable statements |
-| **Incomplete Stakeholder Involvement**| Missing critical needs or constraints | Engage all stakeholder groups early |
-| **Scope Creep**| Uncontrolled expansion of requirements | Formal change control and prioritization |
-| **Lack of Traceability**| Cannot track requirements to design, code, tests | Use traceability matrices and tools |
-| **Redundancy and Conflicts**| Overlapping or contradictory requirements | Systematic review and conflict resolution |
-| **Gold Plating**| Excessive features beyond actual needs | Focus on essential business value |
-| **Unstable Requirements**| Frequent changes without control | Baseline management and change process |
+| <strong>Ambiguity</strong>| Vague, multi-interpretable language | Use precise, testable statements |
+| <strong>Incomplete Stakeholder Involvement</strong>| Missing critical needs or constraints | Engage all stakeholder groups early |
+| <strong>Scope Creep</strong>| Uncontrolled expansion of requirements | Formal change control and prioritization |
+| <strong>Lack of Traceability</strong>| Cannot track requirements to design, code, tests | Use traceability matrices and tools |
+| <strong>Redundancy and Conflicts</strong>| Overlapping or contradictory requirements | Systematic review and conflict resolution |
+| <strong>Gold Plating</strong>| Excessive features beyond actual needs | Focus on essential business value |
+| <strong>Unstable Requirements</strong>| Frequent changes without control | Baseline management and change process |
 
 ## Tools and Standards
 
 ### Widely Adopted Tools
 
-**IBM Rational DOORS:**Enterprise requirements management
+<strong>IBM Rational DOORS:</strong>Enterprise requirements management
 
-**Jama Connect:**Requirements and test management platform
+<strong>Jama Connect:</strong>Requirements and test management platform
 
-**Jira with Plugins:**Agile requirements management
+<strong>Jira with Plugins:</strong>Agile requirements management
 
-**Microsoft Azure DevOps:**Integrated ALM with requirements tracking
+<strong>Microsoft Azure DevOps:</strong>Integrated ALM with requirements tracking
 
-**ReqIF-based Tools:**Standards-compliant requirements exchange
+<strong>ReqIF-based Tools:</strong>Standards-compliant requirements exchange
 
 ### Key Standards
 
-**ISO/IEC/IEEE 29148:2018:**Systems and software engineering requirements processes
+<strong>ISO/IEC/IEEE 29148:2018:</strong>Systems and software engineering requirements processes
 
-**IEEE 830-1998:**Recommended practice for software requirements specifications
+<strong>IEEE 830-1998:</strong>Recommended practice for software requirements specifications
 
-**ISO/IEC 15288:**System life cycle processes
+<strong>ISO/IEC 15288:</strong>System life cycle processes
 
-**INCOSE Systems Engineering Handbook:**Industry best practices
+<strong>INCOSE Systems Engineering Handbook:</strong>Industry best practices
 
-**NASA Systems Engineering Handbook:**Government standards and practices
+<strong>NASA Systems Engineering Handbook:</strong>Government standards and practices
 
 ## Requirements in Application Lifecycle
 
-**Planning Phase:**Defines scope, objectives, success criteria
+<strong>Planning Phase:</strong>Defines scope, objectives, success criteria
 
-**Design Phase:**Informs architecture and technology selection
+<strong>Design Phase:</strong>Informs architecture and technology selection
 
-**Development Phase:**Guides implementation decisions
+<strong>Development Phase:</strong>Guides implementation decisions
 
-**Testing Phase:**Basis for test cases and acceptance criteria
+<strong>Testing Phase:</strong>Basis for test cases and acceptance criteria
 
-**Deployment Phase:**Ensures solution meets all requirements
+<strong>Deployment Phase:</strong>Ensures solution meets all requirements
 
-**Maintenance Phase:**Supports changes and impact analysis
+<strong>Maintenance Phase:</strong>Supports changes and impact analysis
 
-**Traceability Example:**Requirement "response time under 1 second" traces to architectural decisions (caching strategy), code modules (query optimization), test cases (performance benchmarks), and acceptance criteria for deployment.
+<strong>Traceability Example:</strong>Requirement "response time under 1 second" traces to architectural decisions (caching strategy), code modules (query optimization), test cases (performance benchmarks), and acceptance criteria for deployment.
 
 ## Key Terminology
 
 | Term | Definition |
 |------|------------|
-| **Requirement**| Statement of need, feature, constraint, or capability a system must satisfy |
-| **Requirement Attribute**| Metadata describing requirement (priority, rationale, owner, status) |
-| **Elicitation**| Process of gathering and clarifying requirements from stakeholders |
-| **Traceability Matrix**| Tool linking requirements to design, tests, code |
-| **Verification**| Checking that system meets specified requirements |
-| **Validation**| Checking that system meets stakeholder needs and intended use |
-| **Scope Creep**| Uncontrolled expansion of project scope/requirements |
-| **Stakeholder**| Any party influencing or affected by requirements |
-| **Baseline**| Approved version of requirements at specific point in time |
-| **Change Request**| Formal proposal to modify baselined requirements |
+| <strong>Requirement</strong>| Statement of need, feature, constraint, or capability a system must satisfy |
+| <strong>Requirement Attribute</strong>| Metadata describing requirement (priority, rationale, owner, status) |
+| <strong>Elicitation</strong>| Process of gathering and clarifying requirements from stakeholders |
+| <strong>Traceability Matrix</strong>| Tool linking requirements to design, tests, code |
+| <strong>Verification</strong>| Checking that system meets specified requirements |
+| <strong>Validation</strong>| Checking that system meets stakeholder needs and intended use |
+| <strong>Scope Creep</strong>| Uncontrolled expansion of project scope/requirements |
+| <strong>Stakeholder</strong>| Any party influencing or affected by requirements |
+| <strong>Baseline</strong>| Approved version of requirements at specific point in time |
+| <strong>Change Request</strong>| Formal proposal to modify baselined requirements |
 
 ## References
 

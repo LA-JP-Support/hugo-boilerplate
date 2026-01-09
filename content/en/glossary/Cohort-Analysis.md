@@ -14,25 +14,25 @@ draft: false
 
 Cohort analysis is a behavioral analytics method that divides users into groups—called cohorts—based on shared characteristics or experiences within a defined time frame, then tracks and compares their behaviors over time. Instead of looking at all users as a single, undifferentiated mass, cohort analysis allows businesses to see how specific groups behave, uncovering trends and patterns that are hidden in aggregate data.
 
-**Key Terms:**- **Cohort:**A user group defined by a shared trait (e.g., signup date, first purchase, behavior, or demographic)
-- **Retention:**The percentage of users who remain active after a certain period
-- **Churn:**The percentage of users who stop using the product over time
-- **Acquisition cohort:**Users grouped by when they first interacted with the product
-- **Behavioral cohort:**Users grouped by actions taken
-- **Time zero:**The starting point for measuring cohort behavior
-- **Cohort attrition:**The flip side of retention—the rate at which users leave a cohort
+<strong>Key Terms:</strong>- <strong>Cohort:</strong>A user group defined by a shared trait (e.g., signup date, first purchase, behavior, or demographic)
+- <strong>Retention:</strong>The percentage of users who remain active after a certain period
+- <strong>Churn:</strong>The percentage of users who stop using the product over time
+- <strong>Acquisition cohort:</strong>Users grouped by when they first interacted with the product
+- <strong>Behavioral cohort:</strong>Users grouped by actions taken
+- <strong>Time zero:</strong>The starting point for measuring cohort behavior
+- <strong>Cohort attrition:</strong>The flip side of retention—the rate at which users leave a cohort
 
 ## How Is Cohort Analysis Used?
 
 ### Tracking User Retention and Churn
 Cohort analysis is essential for measuring retention and identifying churn patterns. By tracking what percentage of each cohort remains active through specific intervals—such as Day 1, Day 7, Day 30—you can pinpoint exactly when users disengage and hypothesize why.
 
-**Example:**If 1,000 users sign up in January and 400 are still active after 30 days, Day 30 retention for the January cohort is 40%. A cohort analysis heatmap visually highlights where drop-offs are most severe.
+<strong>Example:</strong>If 1,000 users sign up in January and 400 are still active after 30 days, Day 30 retention for the January cohort is 40%. A cohort analysis heatmap visually highlights where drop-offs are most severe.
 
 ### Understanding Product and Feature Engagement
 By forming behavioral cohorts—such as users who completed onboarding—you can analyze how specific actions impact long-term engagement. Comparing retention rates among users who adopted a new feature versus those who didn't reveals which features are "sticky" and drive retention.
 
-**Example:**Retention for users who engage with a new feature in the first week might be 60% at Day 30, while non-adopters are only 30%. This highlights the feature's importance.
+<strong>Example:</strong>Retention for users who engage with a new feature in the first week might be 60% at Day 30, while non-adopters are only 30%. This highlights the feature's importance.
 
 ### Comparing Experiment and Campaign Effectiveness
 Marketers and product managers use cohort analysis to compare user behavior by acquisition channel, campaign, or feature launch. Users acquired via Facebook Ads can be compared to those from organic search to determine which channel produces more loyal users.
@@ -47,13 +47,13 @@ By identifying at-risk or high-value cohorts, you can target users with tailored
 
 ### 1. Acquisition Cohorts
 
-**Definition:**Grouping users by when they first interacted with your product (e.g., week or month of signup).
+<strong>Definition:</strong>Grouping users by when they first interacted with your product (e.g., week or month of signup).
 
-**Use Cases:**- Measuring retention by signup period
+<strong>Use Cases:</strong>- Measuring retention by signup period
 - Assessing the impact of marketing campaigns or product launches
 - Identifying seasonal or campaign-based differences
 
-**Example Table: Acquisition Cohort Retention**| Cohort (Signup Month) | Users | Day 1 Retention | Day 7 Retention | Day 30 Retention |
+<strong>Example Table: Acquisition Cohort Retention</strong>| Cohort (Signup Month) | Users | Day 1 Retention | Day 7 Retention | Day 30 Retention |
 |-----------------------|-------|----------------|----------------|-----------------|
 | January               | 1,000 | 40%            | 25%            | 18%             |
 | February              | 900   | 45%            | 28%            | 21%             |
@@ -63,13 +63,13 @@ A spike or drop in retention for a specific cohort signals the need to investiga
 
 ### 2. Behavioral Cohorts
 
-**Definition:**Grouping users by actions taken (or not) within the product.
+<strong>Definition:</strong>Grouping users by actions taken (or not) within the product.
 
-**Use Cases:**- Identifying which behaviors drive engagement and retention
+<strong>Use Cases:</strong>- Identifying which behaviors drive engagement and retention
 - Detecting at-risk segments based on inactivity
 - Testing hypotheses about user journeys
 
-**Example Table: Behavioral Cohort Comparison**| Cohort                | Users | Day 30 Retention |
+<strong>Example Table: Behavioral Cohort Comparison</strong>| Cohort                | Users | Day 30 Retention |
 |-----------------------|-------|------------------|
 | Onboarding Completers | 500   | 40%              |
 | Skipped Onboarding    | 400   | 22%              |
@@ -78,10 +78,10 @@ High retention among onboarding completers indicates onboarding is critical; inv
 
 ### 3. Other Cohort Types
 
-**Demographic Cohorts**- Age, location, device  
-**Technographic Cohorts**- App version, browser, OS  
-**Plan-based Cohorts**- Free vs. paid, tier level  
-**Size-based Cohorts**- SMB vs. enterprise customers
+<strong>Demographic Cohorts</strong>- Age, location, device  
+<strong>Technographic Cohorts</strong>- App version, browser, OS  
+<strong>Plan-based Cohorts</strong>- Free vs. paid, tier level  
+<strong>Size-based Cohorts</strong>- SMB vs. enterprise customers
 
 Segmenting by these criteria reveals differences in behavior and helps tailor strategies to specific groups.
 
@@ -89,21 +89,21 @@ Segmenting by these criteria reveals differences in behavior and helps tailor st
 
 ### Unlock Actionable Insights
 
-**Pinpoint when and why users churn**- Instead of a single churn rate, see exactly when drop-offs happen  
-**Discover sticky features**- Identify actions that correlate with long-term retention  
-**Optimize onboarding**- Spot drop-off points and test improvements  
-**Personalize interventions**- Target at-risk users with precise messaging
+<strong>Pinpoint when and why users churn</strong>- Instead of a single churn rate, see exactly when drop-offs happen  
+<strong>Discover sticky features</strong>- Identify actions that correlate with long-term retention  
+<strong>Optimize onboarding</strong>- Spot drop-off points and test improvements  
+<strong>Personalize interventions</strong>- Target at-risk users with precise messaging
 
 ### Drive Product and Business Outcomes
 
-**Reduce churn**- Proactively address pain points before mass attrition  
-**Boost retention and LTV**- Focus on features and actions that extend customer lifetime  
-**Improve marketing ROI**- Invest in channels that bring high-value users
+<strong>Reduce churn</strong>- Proactively address pain points before mass attrition  
+<strong>Boost retention and LTV</strong>- Focus on features and actions that extend customer lifetime  
+<strong>Improve marketing ROI</strong>- Invest in channels that bring high-value users
 
 ### Validate Product Changes
 
-**A/B test updates**- See if new features or flows improve retention  
-**Measure campaign effectiveness**- Track which acquisition sources yield loyal users
+<strong>A/B test updates</strong>- See if new features or flows improve retention  
+<strong>Measure campaign effectiveness</strong>- Track which acquisition sources yield loyal users
 
 ## Step-by-Step: How to Conduct Cohort Analysis
 
@@ -122,15 +122,15 @@ Key metrics include:
 Choose criteria such as acquisition date, behavioral milestones, demographic/plan/feature use.
 
 Ensure cohorts are:
-- **Statistically significant:**Not so small they're noise
-- **Actionable:**Not so broad insights are diluted
+- <strong>Statistically significant:</strong>Not so small they're noise
+- <strong>Actionable:</strong>Not so broad insights are diluted
 
 ### 4. Build Your Cohort Table or Chart
-- **Rows:**Cohorts (e.g., signup week)
-- **Columns:**Time periods (e.g., Day 1, Day 7, Day 30)
-- **Cells:**Percentage of users retained
+- <strong>Rows:</strong>Cohorts (e.g., signup week)
+- <strong>Columns:</strong>Time periods (e.g., Day 1, Day 7, Day 30)
+- <strong>Cells:</strong>Percentage of users retained
 
-**Visual tip:**Use heatmaps to highlight high/low retention.
+<strong>Visual tip:</strong>Use heatmaps to highlight high/low retention.
 
 ### 5. Analyze Results and Find Patterns
 Look for steep drop-offs, cohorts with unusually high/low retention, and impact of product changes or campaigns.
@@ -158,47 +158,47 @@ Identifying a cohort of users who haven't logged in for seven days allows target
 
 ### Best Practices
 
-**Start with clear objectives**- Know your business question  
-**Choose actionable cohorts**- Focus on traits or behaviors you can influence  
-**Combine acquisition and behavioral cohorts**- See both when and why churn happens  
-**Visualize data**- Use tables, heatmaps, or graphs  
-**Act on findings**- Drive product and marketing improvements
+<strong>Start with clear objectives</strong>- Know your business question  
+<strong>Choose actionable cohorts</strong>- Focus on traits or behaviors you can influence  
+<strong>Combine acquisition and behavioral cohorts</strong>- See both when and why churn happens  
+<strong>Visualize data</strong>- Use tables, heatmaps, or graphs  
+<strong>Act on findings</strong>- Drive product and marketing improvements
 
 ### Common Pitfalls
 
-**Cohorts too broad/narrow**- Too broad = meaningless, too narrow = unreliable  
-**Confusing correlation with causation**- A feature may correlate with retention but not cause it  
-**Ignoring external factors**- Seasonality, technical issues, or competition can influence results  
-**Vanity metrics**- Retention and engagement are more meaningful than simple logins
+<strong>Cohorts too broad/narrow</strong>- Too broad = meaningless, too narrow = unreliable  
+<strong>Confusing correlation with causation</strong>- A feature may correlate with retention but not cause it  
+<strong>Ignoring external factors</strong>- Seasonality, technical issues, or competition can influence results  
+<strong>Vanity metrics</strong>- Retention and engagement are more meaningful than simple logins
 
 ### Limitations
 
-**Data volume**- Small user bases make analysis less reliable  
-**Tooling constraints**- Some tools (e.g., Google Analytics) only allow basic cohorting  
-**Complexity**- Multi-dimensional cohort analysis can be hard to interpret
+<strong>Data volume</strong>- Small user bases make analysis less reliable  
+<strong>Tooling constraints</strong>- Some tools (e.g., Google Analytics) only allow basic cohorting  
+<strong>Complexity</strong>- Multi-dimensional cohort analysis can be hard to interpret
 
 ## Cohort Analysis vs. Similar Concepts
 
 | Concept | What It Does | Key Difference |
 |---------|--------------|----------------|
-| **Cohort Analysis**| Tracks user groups over time | Focuses on time-based or behavioral change |
-| **Segmentation**| Groups by current trait or behavior | Snapshot in time, not longitudinal |
-| **Churn Analysis**| Investigates why users leave | Uses cohort analysis as a method |
-| **RFM Analysis**| Segments by Recency, Frequency, Value | Transaction-based, not time-based evolution |
+| <strong>Cohort Analysis</strong>| Tracks user groups over time | Focuses on time-based or behavioral change |
+| <strong>Segmentation</strong>| Groups by current trait or behavior | Snapshot in time, not longitudinal |
+| <strong>Churn Analysis</strong>| Investigates why users leave | Uses cohort analysis as a method |
+| <strong>RFM Analysis</strong>| Segments by Recency, Frequency, Value | Transaction-based, not time-based evolution |
 
 ## Tools and Resources
 
 ### Leading Tools for Cohort Analysis
 
-**Mixpanel**Advanced cohort creation (acquisition, behavioral, multi-criteria), retention/frequency reports, integrations with messaging tools.
+<strong>Mixpanel</strong>Advanced cohort creation (acquisition, behavioral, multi-criteria), retention/frequency reports, integrations with messaging tools.
 
-**Google Analytics**Basic cohort reports (acquisition only), limited flexibility.
+<strong>Google Analytics</strong>Basic cohort reports (acquisition only), limited flexibility.
 
-**Userpilot**Cohort analysis plus in-app messaging and onboarding tools.
+<strong>Userpilot</strong>Cohort analysis plus in-app messaging and onboarding tools.
 
-**Amplitude, Indicative**Advanced product analytics, flexible cohorting, visualization.
+<strong>Amplitude, Indicative</strong>Advanced product analytics, flexible cohorting, visualization.
 
-**Spreadsheets (Excel, Google Sheets)**Manual cohort tables for prototyping or small datasets.
+<strong>Spreadsheets (Excel, Google Sheets)</strong>Manual cohort tables for prototyping or small datasets.
 
 ## Quick Checklist: Getting Started with Cohort Analysis
 

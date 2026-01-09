@@ -28,10 +28,10 @@ Precision quantifies the proportion of true positive results among all positive 
 Precision = True Positives / (True Positives + False Positives)
 ```
 
-**Where:**- **True Positives (TP):**Items correctly identified as positive
-- **False Positives (FP):**Items incorrectly identified as positive (model marked them as positive, but they are actually negative)
+<strong>Where:</strong>- <strong>True Positives (TP):</strong>Items correctly identified as positive
+- <strong>False Positives (FP):</strong>Items incorrectly identified as positive (model marked them as positive, but they are actually negative)
 
-**Expressed as percentage:**```
+<strong>Expressed as percentage:</strong>```
 Precision = TP / (TP + FP) × 100%
 ```
 

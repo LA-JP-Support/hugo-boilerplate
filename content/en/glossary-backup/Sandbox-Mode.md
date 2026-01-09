@@ -23,15 +23,15 @@ draft: false
 ---
 ## Introduction & Definition
 
-**Sandbox Mode**is an isolated, disposable testing environment used to execute flows, automations, software, or untrusted code with zero impact on production systems or live data. It acts as a digital playground for innovation, debugging, security analysis, and validation—enabling safe experimentation away from operational assets. The sandbox concept originated with the need to safely run untrusted code or software, allowing researchers, developers, and security analysts to observe, analyze, and iterate without risk of damaging core infrastructure or exposing sensitive data ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [TestGrid](https://testgrid.io/blog/sandbox-environment-for-testing/), [Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing)).
+<strong>Sandbox Mode</strong>is an isolated, disposable testing environment used to execute flows, automations, software, or untrusted code with zero impact on production systems or live data. It acts as a digital playground for innovation, debugging, security analysis, and validation—enabling safe experimentation away from operational assets. The sandbox concept originated with the need to safely run untrusted code or software, allowing researchers, developers, and security analysts to observe, analyze, and iterate without risk of damaging core infrastructure or exposing sensitive data ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [TestGrid](https://testgrid.io/blog/sandbox-environment-for-testing/), [Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing)).
 
-A sandbox provides a tightly controlled and isolated environment—often achieved through virtualization or [containerization](/en/glossary/containerization/)—so that whatever is executed inside cannot escape its boundaries, propagate errors, or leak information. This strict separation is critical for modern workflows in AI/ML, automation, cybersecurity, and software development.
+A sandbox provides a tightly controlled and isolated environment—often achieved through virtualization or containerization—so that whatever is executed inside cannot escape its boundaries, propagate errors, or leak information. This strict separation is critical for modern workflows in AI/ML, automation, cybersecurity, and software development.
 
 ## Key Features & Characteristics
 
 ### Complete Isolation from Production
 
-- Sandboxes are fully separated from operational (production) environments, ensuring no cross-contamination of code, data, or configurations. Isolation is enforced with technologies such as hypervisors (for virtual machines), [Docker](/en/glossary/docker/)/Kubernetes (for containers), and secure runtimes like [gVisor](https://gvisor.dev) ([Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing)).
+- Sandboxes are fully separated from operational (production) environments, ensuring no cross-contamination of code, data, or configurations. Isolation is enforced with technologies such as hypervisors (for virtual machines), Docker/Kubernetes (for containers), and secure runtimes like [gVisor](https://gvisor.dev) ([Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing)).
 - This architecture prevents anything running in the sandbox from affecting the host system, tampering with live resources, or spreading malware ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing)).
 
 ### Controlled Data Handling
@@ -67,76 +67,76 @@ A sandbox provides a tightly controlled and isolated environment—often achieve
 
 Sandbox mode is implemented in several forms, each optimized for different use cases ([TestGrid](https://testgrid.io/blog/sandbox-environment-for-testing/), [Global App Testing](https://www.globalapptesting.com/blog/sandbox-testing), [Dev.to](https://dev.to/testwithtorin/the-ultimate-guide-to-sandbox-environments-safe-efficient-software-testing-lb5)):
 
-- **Security Sandbox**: Used for malware detonation, threat analysis, and vulnerability testing.
-- **Disposable Sandbox**: Designed for one-time tests or CI/CD pipelines, reset automatically after execution.
-- **Application Sandbox**: Constrains individual applications, as seen in mobile OSes and modern browsers.
-- **Cloud-Based Sandbox**: Provides isolated environments in the cloud (AWS, Azure, Google Cloud) for DevOps and integration.
-- **Web Browser Sandbox**: Isolates each tab or process to prevent cross-site attacks.
-- **Software Development Sandbox**: Used by developers for feature testing, debugging, and integration.
-- **VM-Based Sandbox**: Full OS-level separation for compatibility or multi-platform testing.
-- **Network Sandbox**: Analyzes network traffic or isolates test networks for safe security research.
+- <strong>Security Sandbox</strong>: Used for malware detonation, threat analysis, and vulnerability testing.
+- <strong>Disposable Sandbox</strong>: Designed for one-time tests or CI/CD pipelines, reset automatically after execution.
+- <strong>Application Sandbox</strong>: Constrains individual applications, as seen in mobile OSes and modern browsers.
+- <strong>Cloud-Based Sandbox</strong>: Provides isolated environments in the cloud (AWS, Azure, Google Cloud) for DevOps and integration.
+- <strong>Web Browser Sandbox</strong>: Isolates each tab or process to prevent cross-site attacks.
+- <strong>Software Development Sandbox</strong>: Used by developers for feature testing, debugging, and integration.
+- <strong>VM-Based Sandbox</strong>: Full OS-level separation for compatibility or multi-platform testing.
+- <strong>Network Sandbox</strong>: Analyzes network traffic or isolates test networks for safe security research.
 
 ## Benefits & Use Cases
 
 ### Security
 
-- **Malware & Threat Analysis**: Sandboxes enable safe execution and analysis of suspicious files, scripts, or executables, supporting dynamic malware analysis and detection of advanced persistent threats ([Proofpoint](https://www.proofpoint.com/us/threat-reference/sandbox), [OPSWAT](https://www.opswat.com/blog/what-is-sandboxing)).
-- **Vulnerability Assessment**: Test for security flaws in code or integrations, particularly zero-day exploits and evasive malware ([Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
+- <strong>Malware & Threat Analysis</strong>: Sandboxes enable safe execution and analysis of suspicious files, scripts, or executables, supporting dynamic malware analysis and detection of advanced persistent threats ([Proofpoint](https://www.proofpoint.com/us/threat-reference/sandbox), [OPSWAT](https://www.opswat.com/blog/what-is-sandboxing)).
+- <strong>Vulnerability Assessment</strong>: Test for security flaws in code or integrations, particularly zero-day exploits and evasive malware ([Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
 
 ### Innovation & Development
 
-- **Feature Testing**: Experiment with new features, AI behaviors, or automation flows without risking live systems.
-- **Integration Validation**: Test third-party APIs, connectors, and extensions in a production-like, but isolated, environment ([Salesforce Sandboxes](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
+- <strong>Feature Testing</strong>: Experiment with new features, AI behaviors, or automation flows without risking live systems.
+- <strong>Integration Validation</strong>: Test third-party APIs, connectors, and extensions in a production-like, but isolated, environment ([Salesforce Sandboxes](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
 
 ### Quality Assurance (QA) & Debugging
 
-- **Bug Investigation**: Reproduce and analyze bugs in a controlled, repeatable environment.
-- **Load & Performance Testing**: Simulate high-traffic scenarios and stress-test application scalability ([Salesforce Full Sandbox](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
+- <strong>Bug Investigation</strong>: Reproduce and analyze bugs in a controlled, repeatable environment.
+- <strong>Load & Performance Testing</strong>: Simulate high-traffic scenarios and stress-test application scalability ([Salesforce Full Sandbox](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
 
 ### Training & Demos
 
-- **Onboarding**: Train new staff on real workflows without exposing production data.
-- **Sales Demonstrations**: Safely showcase new features to customers.
+- <strong>Onboarding</strong>: Train new staff on real workflows without exposing production data.
+- <strong>Sales Demonstrations</strong>: Safely showcase new features to customers.
 
 ### Compliance & Governance
 
-- **Policy Testing**: Validate permissions, data handling, and regulatory compliance (GDPR, HIPAA) prior to production deployment.
+- <strong>Policy Testing</strong>: Validate permissions, data handling, and regulatory compliance (GDPR, HIPAA) prior to production deployment.
 
 ### AI & Automation
 
-- **LLM/AI Code Testing**: Safely execute AI-generated or untrusted code in a secure, monitored environment ([Modal AI Code Sandbox](https://modal.com/blog/what-is-ai-code-sandbox)).
-- **Reinforcement Learning**: Safely iterate and improve self-modifying or unpredictable flows.
+- <strong>LLM/AI Code Testing</strong>: Safely execute AI-generated or untrusted code in a secure, monitored environment ([Modal AI Code Sandbox](https://modal.com/blog/what-is-ai-code-sandbox)).
+- <strong>Reinforcement Learning</strong>: Safely iterate and improve self-modifying or unpredictable flows.
 ## How It Works / Underlying Technology
 
 Sandbox Mode relies on overlapping technologies for robust isolation and observability ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [Palo Alto Networks](https://www.paloaltonetworks.com/cyberpedia/sandboxing), [Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)):
 
 ### Virtualization
 
-- **Virtual Machines (VMs)**: Full OS-level replicas with hypervisors, offering strong separation from the host (e.g., [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/)).
-- **Device/OS Emulation**: Simulate specific hardware or software stacks for compatibility and threat analysis.
+- <strong>Virtual Machines (VMs)</strong>: Full OS-level replicas with hypervisors, offering strong separation from the host (e.g., [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/)).
+- <strong>Device/OS Emulation</strong>: Simulate specific hardware or software stacks for compatibility and threat analysis.
 
 ### Containerization
 
-- **Containers (Docker, Kubernetes)**: Lightweight, process-level isolation. Fast to spin up, ideal for continuous integration and microservices ([Docker](https://www.docker.com/)).
-- **Secure Container Runtimes**: Tools like [gVisor](https://gvisor.dev) add an additional kernel-level security layer, intercepting risky system calls and enhancing isolation for untrusted or AI-generated code.
+- <strong>Containers (Docker, Kubernetes)</strong>: Lightweight, process-level isolation. Fast to spin up, ideal for continuous integration and microservices ([Docker](https://www.docker.com/)).
+- <strong>Secure Container Runtimes</strong>: Tools like [gVisor](https://gvisor.dev) add an additional kernel-level security layer, intercepting risky system calls and enhancing isolation for untrusted or AI-generated code.
 
 ### Process & Application Sandboxing
 
-- **Application Sandboxes**: Restrict app access to system resources (seen in browsers, Android/iOS apps, Java applets).
-- **File System & Network Namespace Isolation**: Prevent sandboxed code from accessing or altering host data or external networks.
+- <strong>Application Sandboxes</strong>: Restrict app access to system resources (seen in browsers, Android/iOS apps, Java applets).
+- <strong>File System & Network Namespace Isolation</strong>: Prevent sandboxed code from accessing or altering host data or external networks.
 
 ### Monitoring & Observability
 
-- **Activity Tracking**: All system calls, file modifications, and network traffic are logged for forensic analysis ([Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
-- **Snapshotting**: Save/restore sandbox state; supports iterative or rollback testing.
+- <strong>Activity Tracking</strong>: All system calls, file modifications, and network traffic are logged for forensic analysis ([Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
+- <strong>Snapshotting</strong>: Save/restore sandbox state; supports iterative or rollback testing.
 
 ### Advanced Security & Threat Analysis
 
-- **Behavioral Monitoring**: Observe code for suspicious behaviors, including API calls, memory access, and network activity.
-- **Evasion Detection**: Employ randomized environments, dynamic instrumentation, and [human-in-the-loop](/en/glossary/human-in-the-loop--hitl-/) analysis to catch malware designed to detect sandboxes ([Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
-- **Extended Detonation Windows**: Allow malware to execute over longer periods, catching time-based evasions.
+- <strong>Behavioral Monitoring</strong>: Observe code for suspicious behaviors, including API calls, memory access, and network activity.
+- <strong>Evasion Detection</strong>: Employ randomized environments, dynamic instrumentation, and human-in-the-loop analysis to catch malware designed to detect sandboxes ([Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
+- <strong>Extended Detonation Windows</strong>: Allow malware to execute over longer periods, catching time-based evasions.
 
-**Analogy**: A sandbox is like a sealed lab room—no matter what happens inside, the rest of the building remains safe.
+<strong>Analogy</strong>: A sandbox is like a sealed lab room—no matter what happens inside, the rest of the building remains safe.
 ## Setup & Best Practices
 
 ### 1. Define Objectives
@@ -145,8 +145,8 @@ Sandbox Mode relies on overlapping technologies for robust isolation and observa
 
 ### 2. Choose the Right Sandbox Type
 
-- **Developer/Partial Sandboxes**: For code changes and integration; use synthetic data.
-- **Full Sandboxes**: Mirror production for high-fidelity load or UAT testing ([Salesforce Sandboxes](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
+- <strong>Developer/Partial Sandboxes</strong>: For code changes and integration; use synthetic data.
+- <strong>Full Sandboxes</strong>: Mirror production for high-fidelity load or UAT testing ([Salesforce Sandboxes](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
 
 ### 3. Environment Creation & Configuration
 
@@ -171,65 +171,65 @@ Sandbox Mode relies on overlapping technologies for robust isolation and observa
 - Enable comprehensive logging for security and compliance ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing)).
 - Monitor resource consumption to avoid bottlenecks.
 
-**Pro Tips:**- For AI/LLM sandboxes, ensure dependencies match those required by generated code.
+<strong>Pro Tips:</strong>- For AI/LLM sandboxes, ensure dependencies match those required by generated code.
 - Prefer ephemeral sandboxes for quick experiments; persistent ones for extended projects.
 ## Challenges & Limitations
 
-- **Resource Consumption**: Full replicas or VM-based sandboxes are compute- and storage-intensive. Prefer containers or cloud-based sandboxes for lightweight, scalable solutions ([TestGrid](https://testgrid.io/blog/sandbox-environment-for-testing/)).
-- **Complexity & Maintenance**: Keeping sandboxes aligned with production is challenging; automate refreshes and use configuration management tools.
-- **Realism vs. Isolation Tradeoff**: Some bugs or vulnerabilities may only manifest in true production or at scale. Use a mix of sandbox types and periodic production testing.
-- **Security Evasion**: Advanced malware can detect sandboxing and alter behavior. Counter this with randomized environments, extended execution times, and human-in-the-loop analysis ([Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
-- **Access Control Risks**: Misconfigured sandboxes can expose sensitive resources. Regularly audit permissions and network boundaries.
-- **Vendor Lock-in**: Some managed sandboxes limit portability. Prefer open standards (Docker, Kubernetes, gVisor) when possible.
+- <strong>Resource Consumption</strong>: Full replicas or VM-based sandboxes are compute- and storage-intensive. Prefer containers or cloud-based sandboxes for lightweight, scalable solutions ([TestGrid](https://testgrid.io/blog/sandbox-environment-for-testing/)).
+- <strong>Complexity & Maintenance</strong>: Keeping sandboxes aligned with production is challenging; automate refreshes and use configuration management tools.
+- <strong>Realism vs. Isolation Tradeoff</strong>: Some bugs or vulnerabilities may only manifest in true production or at scale. Use a mix of sandbox types and periodic production testing.
+- <strong>Security Evasion</strong>: Advanced malware can detect sandboxing and alter behavior. Counter this with randomized environments, extended execution times, and human-in-the-loop analysis ([Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
+- <strong>Access Control Risks</strong>: Misconfigured sandboxes can expose sensitive resources. Regularly audit permissions and network boundaries.
+- <strong>Vendor Lock-in</strong>: Some managed sandboxes limit portability. Prefer open standards (Docker, Kubernetes, gVisor) when possible.
 ## Real-World Examples & Tools
 
 ### Platforms & Tools
 
-- **Salesforce Sandboxes**: Developer, Developer Pro, Partial Copy, Full Sandbox for realistic testing and training ([Salesforce Guide](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
-- **Windows Sandbox**: Disposable, hypervisor-backed Windows VM ([Windows Sandbox Docs](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/)).
-- **Modal AI Code Sandbox**: Executes AI/LLM-generated code with advanced isolation and fast scaling ([Modal Blog](https://modal.com/blog/what-is-ai-code-sandbox)).
-- **Docker**: Container-based isolation for rapid, repeatable environments ([Docker](https://www.docker.com/)).
-- **Cuckoo Sandbox**: Open-source malware analysis ([Cuckoo](https://cuckoosandbox.org/)).
-- **Sandboxie Plus**: Application-level sandboxing for Windows.
-- **Firejail**: Linux sandboxing for process and app isolation.
+- <strong>Salesforce Sandboxes</strong>: Developer, Developer Pro, Partial Copy, Full Sandbox for realistic testing and training ([Salesforce Guide](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
+- <strong>Windows Sandbox</strong>: Disposable, hypervisor-backed Windows VM ([Windows Sandbox Docs](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/)).
+- <strong>Modal AI Code Sandbox</strong>: Executes AI/LLM-generated code with advanced isolation and fast scaling ([Modal Blog](https://modal.com/blog/what-is-ai-code-sandbox)).
+- <strong>Docker</strong>: Container-based isolation for rapid, repeatable environments ([Docker](https://www.docker.com/)).
+- <strong>Cuckoo Sandbox</strong>: Open-source malware analysis ([Cuckoo](https://cuckoosandbox.org/)).
+- <strong>Sandboxie Plus</strong>: Application-level sandboxing for Windows.
+- <strong>Firejail</strong>: Linux sandboxing for process and app isolation.
 
 ### Practical Scenarios
 
-- **AI Chatbots**: Test generated code or new conversational flows without risking live data.
-- **Security Teams**: Analyze email attachments or URLs for malicious behavior ([Proofpoint TAP](https://www.proofpoint.com/us/products/advanced-threat-protection/targeted-attack-protection)).
-- **Software Development**: Validate features, debug, and perform integration testing.
-- **Training & Sales Demos**: Safely onboard users or demonstrate features with production-like realism.
+- <strong>AI Chatbots</strong>: Test generated code or new conversational flows without risking live data.
+- <strong>Security Teams</strong>: Analyze email attachments or URLs for malicious behavior ([Proofpoint TAP](https://www.proofpoint.com/us/products/advanced-threat-protection/targeted-attack-protection)).
+- <strong>Software Development</strong>: Validate features, debug, and perform integration testing.
+- <strong>Training & Sales Demos</strong>: Safely onboard users or demonstrate features with production-like realism.
 
 ## Comparison with Related Concepts
 
 | Concept                             | Isolation Level   | Typical Use Case                              | Overhead       |
 |--------------------------------------|------------------|-----------------------------------------------|----------------|
-| **Sandbox Mode**| High             | Safe, repeatable testing and experimentation  | Variable       |
-| **Virtual Machines (VMs)**| Full OS          | OS-level app testing, security research       | High           |
-| **Containers**| Process/App      | Dev/test microservices, quick isolation       | Low/Medium     |
-| **Process Isolation**| Per-process      | OS-level security, basic compartmentalization | Low            |
-| **Bare-metal Testing**| None             | Hardware-level QA, performance benchmarks     | Highest        |
-| **UAT (User Acceptance Testing)**| Process, not env | End-user validation in near-production        | N/A            |
+| <strong>Sandbox Mode</strong>| High             | Safe, repeatable testing and experimentation  | Variable       |
+| <strong>Virtual Machines (VMs)</strong>| Full OS          | OS-level app testing, security research       | High           |
+| <strong>Containers</strong>| Process/App      | Dev/test microservices, quick isolation       | Low/Medium     |
+| <strong>Process Isolation</strong>| Per-process      | OS-level security, basic compartmentalization | Low            |
+| <strong>Bare-metal Testing</strong>| None             | Hardware-level QA, performance benchmarks     | Highest        |
+| <strong>UAT (User Acceptance Testing)</strong>| Process, not env | End-user validation in near-production        | N/A            |
 
-**Analogy:**A VM is a whole house with locked doors; a container is a room with strong walls; a sandbox is a sealed playpen inside that room, for safe, disposable experimentation.
+<strong>Analogy:</strong>A VM is a whole house with locked doors; a container is a room with strong walls; a sandbox is a sealed playpen inside that room, for safe, disposable experimentation.
 
 ## Frequently Asked Questions (FAQs)
 
-**What’s the difference between Sandbox Mode and a regular test environment?**A sandbox is designed for strict isolation and disposability—nothing affects production, and all artifacts are discarded after use. Regular test environments may not guarantee this.
+<strong>What’s the difference between Sandbox Mode and a regular test environment?</strong>A sandbox is designed for strict isolation and disposability—nothing affects production, and all artifacts are discarded after use. Regular test environments may not guarantee this.
 
-**Can I use production data in a sandbox?**Best practice: use masked or synthetic data. If real data is necessary, anonymize it to prevent exposure ([Salesforce Data Mask](https://www.salesforce.com/platform/data-masking/)).
+<strong>Can I use production data in a sandbox?</strong>Best practice: use masked or synthetic data. If real data is necessary, anonymize it to prevent exposure ([Salesforce Data Mask](https://www.salesforce.com/platform/data-masking/)).
 
-**How often should I refresh my sandbox?**Frequency depends on platform and use case—Developer sandboxes may refresh daily, Full sandboxes monthly ([Salesforce Guide](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
+<strong>How often should I refresh my sandbox?</strong>Frequency depends on platform and use case—Developer sandboxes may refresh daily, Full sandboxes monthly ([Salesforce Guide](https://www.salesforce.com/platform/sandboxes-environments/guide/)).
 
-**What is the difference between Sandbox Mode and UAT?**UAT (User Acceptance Testing) is a process. Sandbox Mode is the isolated environment enabling safe UAT and other tests.
+<strong>What is the difference between Sandbox Mode and UAT?</strong>UAT (User Acceptance Testing) is a process. Sandbox Mode is the isolated environment enabling safe UAT and other tests.
 
-**How do sandboxes help with security?**They restrict risky code or behavior, enabling safe analysis and threat detection without risk to the host system ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
+<strong>How do sandboxes help with security?</strong>They restrict risky code or behavior, enabling safe analysis and threat detection without risk to the host system ([OPSWAT](https://www.opswat.com/blog/what-is-sandboxing), [Gopher Security](https://www.gopher.security/post-quantum/sandboxing-techniques-malicious-code-analysis)).
 
-**Are sandboxes only for security?**No, sandboxes are vital for development, QA, integration, training, and compliance as well.
+<strong>Are sandboxes only for security?</strong>No, sandboxes are vital for development, QA, integration, training, and compliance as well.
 
-**Do sandboxes use the same infrastructure as production?**They often replicate production setups, but run on isolated compute resources for safety.
+<strong>Do sandboxes use the same infrastructure as production?</strong>They often replicate production setups, but run on isolated compute resources for safety.
 
-**What’s an AI code sandbox?**A sandbox optimized for running AI-generated code, with strong isolation, dependency management, and advanced monitoring ([Modal AI Code Sandbox](https://modal.com/blog/what-is-ai-code-sandbox)).
+<strong>What’s an AI code sandbox?</strong>A sandbox optimized for running AI-generated code, with strong isolation, dependency management, and advanced monitoring ([Modal AI Code Sandbox](https://modal.com/blog/what-is-ai-code-sandbox)).
 
 ## Resources & Calls to Action
 

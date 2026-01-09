@@ -20,23 +20,23 @@ Document loaders serve as the bridge between raw, diverse data sources and AI sy
 
 ## Why Use Document Loaders?
 
-**Standardization**- Harmonizes data from countless formats, encodings, and layouts
+<strong>Standardization</strong>- Harmonizes data from countless formats, encodings, and layouts
 - Converts PDFs, HTML, CSVs, JSON into consistent schema
 - Eliminates custom parsing logic for each source
 
-**Automation**- Eliminates boilerplate extraction and parsing scripts
+<strong>Automation</strong>- Eliminates boilerplate extraction and parsing scripts
 - Provides reusable, well-tested tools
 - Minimizes development overhead and maintenance
 
-**Context Preservation**- Attaches vital metadata (source location, page numbers, timestamps)
+<strong>Context Preservation</strong>- Attaches vital metadata (source location, page numbers, timestamps)
 - Enables traceability, compliance, and fine-grained retrieval
 - Preserves relationships between content and its origin
 
-**Scalability**- Handles large-scale ingestion scenarios
+<strong>Scalability</strong>- Handles large-scale ingestion scenarios
 - Supports batch processing and streaming
 - Optimizes for performance and memory efficiency via lazy loading
 
-**Plug-and-Play Integration**- Works seamlessly with frameworks like LangChain
+<strong>Plug-and-Play Integration</strong>- Works seamlessly with frameworks like LangChain
 - Provides standard interfaces for vector databases
 - Ensures connectivity across AI pipelines
 
@@ -44,20 +44,20 @@ Document loaders serve as the bridge between raw, diverse data sources and AI sy
 
 When a document loader processes a data source, it produces a Document object—the atomic unit for LLM pipelines, vector store ingestion, and RAG systems.
 
-**Core Fields:**
+<strong>Core Fields:</strong>
 
-**page_content (String)**- Primary text or content extracted from source
+<strong>page_content (String)</strong>- Primary text or content extracted from source
 - Cleaned, decoded, and pre-processed for downstream tasks
 - Examples: PDF page text, CSV row data, HTML paragraph content
 
-**metadata (Dictionary)**- Contextual, descriptive, and source-related key-value pairs
+<strong>metadata (Dictionary)</strong>- Contextual, descriptive, and source-related key-value pairs
 - Common fields: source, page, row, title, filetype, created_at, last_modified, category, section
 - Enriches content with information needed for retrieval and filtering
 
-**id (Optional String)**- Unique identifier for the document
+<strong>id (Optional String)</strong>- Unique identifier for the document
 - Essential for deduplication, cross-referencing, and database indexing
 
-**Example in Python:**```python
+<strong>Example in Python:</strong>```python
 from langchain_core.documents import Document
 
 doc = Document(

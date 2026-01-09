@@ -24,9 +24,9 @@ Pinecone operates as a serverless, cloud-native service on AWS, GCP, and Azure, 
 
 Embeddings are dense vectors—arrays of floating-point numbers—created by AI models to represent the semantics of data. A sentence processed by BERT or OpenAI models might produce a 768-dimensional embedding. Similar sentences yield vectors that are close together in this high-dimensional space, enabling semantic similarity search.
 
-**Generation:**Models such as BERT, OpenAI, CLIP, or custom neural networks transform text, images, or other data into vector representations.
+<strong>Generation:</strong>Models such as BERT, OpenAI, CLIP, or custom neural networks transform text, images, or other data into vector representations.
 
-**Applications:**Semantic search, recommendations, anomaly detection, generative AI memory, and content discovery.
+<strong>Applications:</strong>Semantic search, recommendations, anomaly detection, generative AI memory, and content discovery.
 
 ### Chunks
 
@@ -52,11 +52,11 @@ Metadata consists of key-value pairs attached to each vector, such as document t
 
 Pinecone uses Approximate Nearest Neighbor (ANN) algorithms to efficiently find the closest vectors to a query according to a specified metric:
 
-**Cosine Similarity:**Measures angle between vectors, popular for text data where direction matters more than magnitude.
+<strong>Cosine Similarity:</strong>Measures angle between vectors, popular for text data where direction matters more than magnitude.
 
-**Euclidean Distance:**Measures straight-line distance, common for image and audio embeddings.
+<strong>Euclidean Distance:</strong>Measures straight-line distance, common for image and audio embeddings.
 
-**Dot Product:**Used in some ML applications for projection similarity and recommendation systems.
+<strong>Dot Product:</strong>Used in some ML applications for projection similarity and recommendation systems.
 
 ANN algorithms provide near-optimal results orders of magnitude faster than exact search, making billion-scale vector search practical.
 
@@ -66,43 +66,43 @@ ANN algorithms provide near-optimal results orders of magnitude faster than exac
 
 Pinecone's architecture is designed for high throughput, reliability, and automatic scaling:
 
-**API Gateway:**Receives and authenticates all API requests, routing them to either the control plane for management operations or data plane for reads and writes.
+<strong>API Gateway:</strong>Receives and authenticates all API requests, routing them to either the control plane for management operations or data plane for reads and writes.
 
-**Control Plane:**Manages projects, indexes, billing, and coordinates multi-region operations and configuration.
+<strong>Control Plane:</strong>Manages projects, indexes, billing, and coordinates multi-region operations and configuration.
 
-**Data Plane:**Handles all read/write operations to vector indexes within a specific cloud region, optimized for low latency.
+<strong>Data Plane:</strong>Handles all read/write operations to vector indexes within a specific cloud region, optimized for low latency.
 
-**Object Storage:**Stores records in immutable, distributed slabs for unlimited scalability and high availability.
+<strong>Object Storage:</strong>Stores records in immutable, distributed slabs for unlimited scalability and high availability.
 
-**Write Path:**Ensures every write is logged and made durable with a unique sequence number (LSN) for consistency.
+<strong>Write Path:</strong>Ensures every write is logged and made durable with a unique sequence number (LSN) for consistency.
 
-**Index Builder:**Manages in-memory and persistent storage, optimizing for both fresh data ingestion and query performance.
+<strong>Index Builder:</strong>Manages in-memory and persistent storage, optimizing for both fresh data ingestion and query performance.
 
-**Read Path:**Queries check the in-memory structure first for the freshest results, then persistent storage for completeness, ensuring real-time data availability.
+<strong>Read Path:</strong>Queries check the in-memory structure first for the freshest results, then persistent storage for completeness, ensuring real-time data availability.
 
 ## Key Features
 
-**Sub-millisecond Search**Returns results in milliseconds, even across billions of vectors, enabling real-time applications like chatbots and live recommendations.
+<strong>Sub-millisecond Search</strong>Returns results in milliseconds, even across billions of vectors, enabling real-time applications like chatbots and live recommendations.
 
-**Serverless Scaling**Resources scale automatically based on usage; no manual sharding or provisioning required, reducing operational overhead.
+<strong>Serverless Scaling</strong>Resources scale automatically based on usage; no manual sharding or provisioning required, reducing operational overhead.
 
-**Real-Time Data Ingestion**New vectors are searchable immediately after upsert, supporting dynamic applications that require fresh data.
+<strong>Real-Time Data Ingestion</strong>New vectors are searchable immediately after upsert, supporting dynamic applications that require fresh data.
 
-**Hybrid Search**Supports both dense (vector) and sparse (keyword) searches, combining semantic understanding with traditional keyword matching.
+<strong>Hybrid Search</strong>Supports both dense (vector) and sparse (keyword) searches, combining semantic understanding with traditional keyword matching.
 
-**Advanced Filtering**Combine similarity with metadata filters for precise results, such as finding semantically similar documents within a specific date range or category.
+<strong>Advanced Filtering</strong>Combine similarity with metadata filters for precise results, such as finding semantically similar documents within a specific date range or category.
 
-**Multitenancy**Namespaces keep customer or team data isolated while sharing infrastructure, enabling efficient multi-tenant applications.
+<strong>Multitenancy</strong>Namespaces keep customer or team data isolated while sharing infrastructure, enabling efficient multi-tenant applications.
 
-**Security and Compliance**SOC 2, GDPR, ISO 27001, HIPAA certified. Data encrypted at rest and in transit with hierarchical encryption keys and private networking options.
+<strong>Security and Compliance</strong>SOC 2, GDPR, ISO 27001, HIPAA certified. Data encrypted at rest and in transit with hierarchical encryption keys and private networking options.
 
 ## How Pinecone Works: Development Workflow
 
 ### Basic Workflow
 
-**1. Sign Up and API Key**Register at pinecone.io and generate API credentials for authentication.
+<strong>1. Sign Up and API Key</strong>Register at pinecone.io and generate API credentials for authentication.
 
-**2. Install Client SDK**```bash
+<strong>2. Install Client SDK</strong>```bash
 pip install pinecone
 ```
 
@@ -112,7 +112,7 @@ pc = Pinecone(api_key="YOUR_API_KEY")
 pc.create_index("my-index", dimension=768, metric="cosine")
 ```
 
-**4. Generate Embeddings**```python
+<strong>4. Generate Embeddings</strong>```python
 from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('all-MiniLM-L6-v2')
 embedding = model.encode("Sample text to embed").tolist()
@@ -124,7 +124,7 @@ pc.Index("my-index").upsert(vectors=[
 ], namespace="projectA")
 ```
 
-**6. Query for Similarity and Filter**```python
+<strong>6. Query for Similarity and Filter</strong>```python
 query_embedding = model.encode("What are the latest news?").tolist()
 results = pc.Index("my-index").query(
     vector=query_embedding,

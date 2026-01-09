@@ -63,10 +63,10 @@ Event-driven architecture is a system design pattern in which components communi
 
 Webhooks and APIs are both used for system integration, but they differ fundamentally in how and when data is transferred:
 
-- **Webhooks (Push):**Data is delivered automatically to your endpoint when an event occurs.
-- **API Polling (Pull):**Your system repeatedly requests data from a server at regular intervals to check for updates.
+- <strong>Webhooks (Push):</strong>Data is delivered automatically to your endpoint when an event occurs.
+- <strong>API Polling (Pull):</strong>Your system repeatedly requests data from a server at regular intervals to check for updates.
 
-Polling is resource-intensive and introduces [latency](/en/glossary/latency/), while webhooks provide near-instant, efficient communication with minimal overhead.
+Polling is resource-intensive and introduces latency, while webhooks provide near-instant, efficient communication with minimal overhead.
 
 ### Comparison Table
 
@@ -79,7 +79,7 @@ Polling is resource-intensive and introduces [latency](/en/glossary/latency/), w
 | Scalability          | Stateless, easy endpoints    | Requires rate limiting        |
 | Setup                | Register endpoint URL        | Implement scheduled polling   |
 | Error Handling       | Retries, status codes        | Client handles failures       |
-| Security             | HMAC, [secrets](/en/glossary/environment-variables--secrets-/), mTLS, HTTPS   | API keys, OAuth, HTTPS        |
+| Security             | HMAC, secrets, mTLS, HTTPS   | API keys, OAuth, HTTPS        |
 | Use Cases            | Notifications, integrations  | Bulk queries, periodic sync   |
 
 - [Webhooks vs. APIs: A Clear Comparison](https://dev.to/robbiecahill/what-are-webhooks-a-comprehensive-guide-for-developers-4l72)
@@ -90,19 +90,19 @@ Webhook fulfillment generally follows these steps:
 
 ### Lifecycle Steps
 
-1. **Event Trigger:**An event occurs (e.g., intent matched, user action, data update).
+1. <strong>Event Trigger:</strong>An event occurs (e.g., intent matched, user action, data update).
 
-2. **Webhook Request:**The source system sends an HTTPS POST request to the registered webhook endpoint. The payload contains details of the event and relevant context.
+2. <strong>Webhook Request:</strong>The source system sends an HTTPS POST request to the registered webhook endpoint. The payload contains details of the event and relevant context.
 
-3. **Payload Processing:**The webhook handler verifies authenticity, parses the payload, and executes business logic (API calls, DB queries, calculations).
+3. <strong>Payload Processing:</strong>The webhook handler verifies authenticity, parses the payload, and executes business logic (API calls, DB queries, calculations).
 
-4. **Response Generation:**The webhook handler returns an HTTP response (usually JSON) with the fulfillment result.
+4. <strong>Response Generation:</strong>The webhook handler returns an HTTP response (usually JSON) with the fulfillment result.
 
-5. **Confirmation & Acknowledgment:**The source system expects a 2xx HTTP status code to confirm success. If not received, it retries delivery per its policy.
+5. <strong>Confirmation & Acknowledgment:</strong>The source system expects a 2xx HTTP status code to confirm success. If not received, it retries delivery per its policy.
 
-6. **Retries and Error Handling:**If the handler fails or is unavailable, the source retries with exponential backoff or a fixed number of attempts.
+6. <strong>Retries and Error Handling:</strong>If the handler fails or is unavailable, the source retries with exponential backoff or a fixed number of attempts.
 
-**Visual Flow:**```
+<strong>Visual Flow:</strong>```
 [User Action/Intent]
       |
       v
@@ -135,7 +135,7 @@ Webhook fulfillment generally follows these steps:
 }
 ```
 
-**Dialogflow Request Example:**See [Dialogflow WebhookRequest Reference](https://cloud.google.com/dialogflow/es/docs/reference/rpc/google.cloud.dialogflow.v2#webhookrequest)
+<strong>Dialogflow Request Example:</strong>See [Dialogflow WebhookRequest Reference](https://cloud.google.com/dialogflow/es/docs/reference/rpc/google.cloud.dialogflow.v2#webhookrequest)
 ```json
 {
   "responseId": "response-id",
@@ -149,7 +149,7 @@ Webhook fulfillment generally follows these steps:
 }
 ```
 
-**Webhook Response (JSON Example):**```json
+<strong>Webhook Response (JSON Example):</strong>```json
 {
   "fulfillmentText": "Your current account balance is $1,250.",
   "parameters": { "balance": 1250 }
@@ -263,7 +263,7 @@ function fetchUserBalance(userId) {
 app.listen(3000, () => console.log('Webhook listening on port 3000'));
 ```
 
-**Signature Verification (Pseudocode):**```python
+<strong>Signature Verification (Pseudocode):</strong>```python
 import hmac
 import hashlib
 
@@ -282,17 +282,17 @@ https://api.example.com/webhook?user_id=$session.params.user_id
 
 Webhook fulfillment enables numerous automation scenarios:
 
-- **AI Chatbots:**- Fetch user profile/account data in real time.
+- <strong>AI Chatbots:</strong>- Fetch user profile/account data in real time.
     - Validate user inputs (e.g., promo codes).
     - Provide context-aware, personalized responses.
     - Route conversations by user status (e.g., VIP routing).
-- **Payments & E-commerce:**- Notify systems when an order is created, paid, or shipped.
+- <strong>Payments & E-commerce:</strong>- Notify systems when an order is created, paid, or shipped.
     - Update inventory or trigger fulfillment processes.
-- **CRM & Marketing:**- Sync contact/lead data instantly with third-party tools.
+- <strong>CRM & Marketing:</strong>- Sync contact/lead data instantly with third-party tools.
     - Trigger marketing campaigns based on user actions.
-- **IT & DevOps Automation:**- Initiate infrastructure changes on code merges.
+- <strong>IT & DevOps Automation:</strong>- Initiate infrastructure changes on code merges.
     - Integrate CI/CD, monitoring, or incident management workflows.
-- **Workflow Orchestration:**- Chain multi-step processes by triggering downstream systems.
+- <strong>Workflow Orchestration:</strong>- Chain multi-step processes by triggering downstream systems.
     - Start data pipelines or analytics processes as new data arrives.
 
 - [Dialogflow Fulfillment Use Cases](https://cloud.google.com/dialogflow/es/docs/fulfillment-webhook)
@@ -300,21 +300,21 @@ Webhook fulfillment enables numerous automation scenarios:
 
 ## Best Practices
 
-**Security:**- Always use HTTPS to prevent interception.
+<strong>Security:</strong>- Always use HTTPS to prevent interception.
 - Validate request signatures or authentication tokens.
 - Never expose endpoints without authentication.
 
-**Reliability:**- Implement retry logic on both sender and receiver.
+<strong>Reliability:</strong>- Implement retry logic on both sender and receiver.
 - Ensure idempotency by tracking event IDs.
 - Use queues/background workers for slow tasks.
 
-**Performance:**- Respond to webhooks quickly; defer heavy work.
+<strong>Performance:</strong>- Respond to webhooks quickly; defer heavy work.
 - Monitor endpoint health and log all requests/failures.
 
-**Scalability:**- Use load balancers/distributed infrastructure for high loads.
+<strong>Scalability:</strong>- Use load balancers/distributed infrastructure for high loads.
 - Persist incoming events to a database or queue before processing.
 
-**Maintainability:**- Keep webhook endpoint documentation up-to-date.
+<strong>Maintainability:</strong>- Keep webhook endpoint documentation up-to-date.
 - Separate test and production environments.
 - Version payloads for backward compatibility.
 
@@ -323,19 +323,19 @@ Webhook fulfillment enables numerous automation scenarios:
 
 ## Frequently Asked Questions
 
-**Are webhooks and APIs the same?**No. Webhooks are server-initiated HTTP requests (event-driven), while APIs are client-initiated (request/response). Webhooks notify you of changes; APIs let you query or update data.
+<strong>Are webhooks and APIs the same?</strong>No. Webhooks are server-initiated HTTP requests (event-driven), while APIs are client-initiated (request/response). Webhooks notify you of changes; APIs let you query or update data.
 
-**What happens if my webhook endpoint is down?**The source system retries delivery per its retry policy. If unavailable past the retry limit, events may be lost.
+<strong>What happens if my webhook endpoint is down?</strong>The source system retries delivery per its retry policy. If unavailable past the retry limit, events may be lost.
 
-**Can webhook payloads be customized?**Many platforms support flexible payloads and parameter mapping.
+<strong>Can webhook payloads be customized?</strong>Many platforms support flexible payloads and parameter mapping.
 
-**How do I test webhook fulfillment locally?**Use tunneling tools like [ngrok](https://ngrok.com/) or [Tunnelmole](https://tunnelmole.com/) to expose your local server.
+<strong>How do I test webhook fulfillment locally?</strong>Use tunneling tools like [ngrok](https://ngrok.com/) or [Tunnelmole](https://tunnelmole.com/) to expose your local server.
 
-**How do I avoid duplicate processing?**Track unique event IDs and ignore repeated events for idempotency.
+<strong>How do I avoid duplicate processing?</strong>Track unique event IDs and ignore repeated events for idempotency.
 
-**What payload formats are supported?**JSON is standard; XML or form-encoded data is sometimes used.
+<strong>What payload formats are supported?</strong>JSON is standard; XML or form-encoded data is sometimes used.
 
-**How do I secure webhook endpoints?**Use HTTPS, validate HMAC signatures or tokens, and restrict IPs if possible.
+<strong>How do I secure webhook endpoints?</strong>Use HTTPS, validate HMAC signatures or tokens, and restrict IPs if possible.
 
 ## References & Further Reading
 

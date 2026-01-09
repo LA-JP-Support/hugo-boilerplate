@@ -54,49 +54,49 @@ For a comprehensive overview of AI’s impact, see:
 
 | Level           | Description                                                                                  | Example Applications                     |
 |-----------------|---------------------------------------------------------------------------------------------|------------------------------------------|
-| **AI**| Machines exhibiting human-like intelligence                                                  | Chatbots, image recognition, fraud detection |
-| **Machine Learning (ML)**| Algorithms that learn patterns from data without explicit programming                    | Email spam filters, recommendations      |
-| **Deep Learning (DL)**| Multilayered neural networks handling complex, unstructured data                          | Speech-to-text, image classification     |
+| <strong>AI</strong>| Machines exhibiting human-like intelligence                                                  | Chatbots, image recognition, fraud detection |
+| <strong>Machine Learning (ML)</strong>| Algorithms that learn patterns from data without explicit programming                    | Email spam filters, recommendations      |
+| <strong>Deep Learning (DL)</strong>| Multilayered neural networks handling complex, unstructured data                          | Speech-to-text, image classification     |
 
 #### Key Technologies and Subfields
 
-- **Machine Learning (ML):**Computers learn from datasets to find patterns and make predictions, using methods such as linear regression, decision trees, support vector machines, and clustering.  
+- <strong>Machine Learning (ML):</strong>Computers learn from datasets to find patterns and make predictions, using methods such as linear regression, decision trees, support vector machines, and clustering.  
   - [IBM: Machine Learning](https://www.ibm.com/think/topics/machine-learning)
 
-- **Neural Networks:**Computational models inspired by the human brain, consisting of interconnected nodes (“neurons”) that process information through layers.  
+- <strong>Neural Networks:</strong>Computational models inspired by the human brain, consisting of interconnected nodes (“neurons”) that process information through layers.  
   - [IBM: Neural Networks](https://www.ibm.com/think/topics/neural-networks)
 
-- **Deep Learning:**A subset of ML using deep neural networks (multiple layers) to extract complex features from raw, unstructured data (images, audio, text).  
+- <strong>Deep Learning:</strong>A subset of ML using deep neural networks (multiple layers) to extract complex features from raw, unstructured data (images, audio, text).  
   - [IBM: Deep Learning](https://www.ibm.com/think/topics/deep-learning)
 
-- **Natural Language Processing (NLP):**Enables systems to understand, interpret, and generate human language. Used in chatbots, translation, and language models.  
+- <strong>Natural Language Processing (NLP):</strong>Enables systems to understand, interpret, and generate human language. Used in chatbots, translation, and language models.  
   - [IBM: Natural Language Processing](https://www.ibm.com/think/topics/natural-language-processing)
 
-- **Computer Vision:**AI analyzes visual data from images and videos to identify objects, people, and patterns.  
+- <strong>Computer Vision:</strong>AI analyzes visual data from images and videos to identify objects, people, and patterns.  
   - [IBM: Computer Vision](https://www.ibm.com/think/topics/computer-vision)
 
-- **Large Language Models (LLMs):**Advanced models (e.g., ChatGPT, Gemini, Copilot) trained on massive text datasets to generate human-like language.  
+- <strong>Large Language Models (LLMs):</strong>Advanced models (e.g., ChatGPT, Gemini, Copilot) trained on massive text datasets to generate human-like language.  
   - [IBM: AI Models](https://www.ibm.com/think/topics/ai-model)
 
 #### Machine Learning Techniques
 
-- **Supervised Learning:**Models are trained on labeled data to predict outcomes or classify inputs.
-- **Unsupervised Learning:**Models uncover patterns in unlabeled data, such as clustering.
-- **Semi-supervised Learning:**Combines labeled and unlabeled data for improved accuracy.
-- **Reinforcement Learning:**Agents learn by interacting with their environment and receiving feedback as rewards or penalties.
+- <strong>Supervised Learning:</strong>Models are trained on labeled data to predict outcomes or classify inputs.
+- <strong>Unsupervised Learning:</strong>Models uncover patterns in unlabeled data, such as clustering.
+- <strong>Semi-supervised Learning:</strong>Combines labeled and unlabeled data for improved accuracy.
+- <strong>Reinforcement Learning:</strong>Agents learn by interacting with their environment and receiving feedback as rewards or penalties.
 - [IBM: Types of Machine Learning](https://www.ibm.com/think/topics/machine-learning)
 
 ## Types and Classifications of AI
 
-AI systems can be classified by **capability**(scope of intelligence) and **functionality**(operational mechanism).
+AI systems can be classified by <strong>capability</strong>(scope of intelligence) and <strong>functionality</strong>(operational mechanism).
 
 ### By Capability
 
 | Type (Capability)                  | Description                                                                      | Current Status         | Example                |
 |-------------------------------------|----------------------------------------------------------------------------------|-----------------------|------------------------|
-| **Artificial Narrow Intelligence (ANI)**<br>(Weak AI) | Specialized for specific tasks; context-limited                                    | Widely deployed       | Voice assistants, search engines |
-| **Artificial General Intelligence (AGI)**<br>(Strong AI) | Hypothetical human-level intelligence, adaptable across domains                   | Not yet achieved      | Fictional androids     |
-| **Artificial Superintelligence (ASI)**| Theoretical AI, vastly exceeding human intellect and capabilities                 | Speculative           | Science fiction        |
+| <strong>Artificial Narrow Intelligence (ANI)</strong><br>(Weak AI) | Specialized for specific tasks; context-limited                                    | Widely deployed       | Voice assistants, search engines |
+| <strong>Artificial General Intelligence (AGI)</strong><br>(Strong AI) | Hypothetical human-level intelligence, adaptable across domains                   | Not yet achieved      | Fictional androids     |
+| <strong>Artificial Superintelligence (ASI)</strong>| Theoretical AI, vastly exceeding human intellect and capabilities                 | Speculative           | Science fiction        |
 
 - [Tableau: Four Types of AI](https://www.tableau.com/data-insights/ai/what-is)
 
@@ -104,10 +104,10 @@ AI systems can be classified by **capability**(scope of intelligence) and **func
 
 | Type (Functionality)       | Description                                                                 | Example/Status           |
 |----------------------------|-----------------------------------------------------------------------------|--------------------------|
-| **Reactive Machines**| Respond only to current input; no memory                                    | IBM Deep Blue (chess)    |
-| **Limited Memory**| Learn from past data for short-term improvements                            | Self-driving cars        |
-| **Theory of Mind**| Understand emotions, beliefs, intentions (theoretical)                      | Not yet realized         |
-| **Self-aware AI**| Self-conscious, aware of own existence (theoretical)                        | Not yet realized         |
+| <strong>Reactive Machines</strong>| Respond only to current input; no memory                                    | IBM Deep Blue (chess)    |
+| <strong>Limited Memory</strong>| Learn from past data for short-term improvements                            | Self-driving cars        |
+| <strong>Theory of Mind</strong>| Understand emotions, beliefs, intentions (theoretical)                      | Not yet realized         |
+| <strong>Self-aware AI</strong>| Self-conscious, aware of own existence (theoretical)                        | Not yet realized         |
 
 - [Infuy: Types of AI](https://www.infuy.com/blog/understanding-artificial-intelligence-ai-a-comprehensive-guide/#Types_of_Artificial_Intelligence)
 
@@ -115,18 +115,18 @@ AI systems can be classified by **capability**(scope of intelligence) and **func
 
 AI development and operation involve several key stages:
 
-**1. Data Collection and Preparation:**AI requires large and relevant datasets (images, text, signals) for training. Data must be cleaned, labeled, and organized.
+<strong>1. Data Collection and Preparation:</strong>AI requires large and relevant datasets (images, text, signals) for training. Data must be cleaned, labeled, and organized.
 
-**2. Algorithms:**Mathematical models process input data to find patterns, make predictions, and solve problems. Modern AI uses statistical, probabilistic, and neural network-based algorithms.
+<strong>2. Algorithms:</strong>Mathematical models process input data to find patterns, make predictions, and solve problems. Modern AI uses statistical, probabilistic, and neural network-based algorithms.
 
-**3. Model Training (Learning):**- **Supervised Learning:**Model learns from labeled input-output pairs.
-- **Unsupervised Learning:**Model detects patterns without labels.
-- **Reinforcement Learning:**Model learns via trial-and-error, optimizing for maximum reward.
+<strong>3. Model Training (Learning):</strong>- <strong>Supervised Learning:</strong>Model learns from labeled input-output pairs.
+- <strong>Unsupervised Learning:</strong>Model detects patterns without labels.
+- <strong>Reinforcement Learning:</strong>Model learns via trial-and-error, optimizing for maximum reward.
 
-**4. Model Evaluation and Deployment:**Trained models are tested on new data, fine-tuned, and deployed into production systems for real-world inference.
+<strong>4. Model Evaluation and Deployment:</strong>Trained models are tested on new data, fine-tuned, and deployed into production systems for real-world inference.
 
-**5. Main Approaches:**- **Rule-based Systems:**Early AI, using explicit if-then rules.
-- **Statistical Learning:**Modern AI, using probabilistic models for prediction and generalization.
+<strong>5. Main Approaches:</strong>- <strong>Rule-based Systems:</strong>Early AI, using explicit if-then rules.
+- <strong>Statistical Learning:</strong>Modern AI, using probabilistic models for prediction and generalization.
 
 - [IBM: How AI Works](https://www.ibm.com/think/topics/artificial-intelligence)
 - [Infuy: How AI Works](https://www.infuy.com/blog/understanding-artificial-intelligence-ai-a-comprehensive-guide/#How_Artificial_Intelligence_Works)
@@ -135,39 +135,39 @@ AI development and operation involve several key stages:
 
 ### Everyday Examples
 
-- **Virtual Assistants:**Siri, Alexa, Google Assistant
-- **Recommendation Systems:**Netflix, Spotify, Amazon
-- **Navigation:**Google Maps, Waze
-- **Email Filtering:**Spam detection (Gmail, Outlook)
+- <strong>Virtual Assistants:</strong>Siri, Alexa, Google Assistant
+- <strong>Recommendation Systems:</strong>Netflix, Spotify, Amazon
+- <strong>Navigation:</strong>Google Maps, Waze
+- <strong>Email Filtering:</strong>Spam detection (Gmail, Outlook)
 
 ### Industry Applications
 
-- **Healthcare:**- Automated diagnostics from X-rays and MRIs
+- <strong>Healthcare:</strong>- Automated diagnostics from X-rays and MRIs
   - Personalized treatment recommendations
   - Virtual nursing agents  
   - [AI in Healthcare](https://www.infuy.com/blog/understanding-artificial-intelligence-ai-a-comprehensive-guide/#AI_in_Healthcare)
 
-- **Finance:**- Fraud detection and anti-money laundering
+- <strong>Finance:</strong>- Fraud detection and anti-money laundering
   - Algorithmic trading and portfolio optimization
   - Credit scoring and risk assessment  
   - [AI in Finance](https://www.infuy.com/blog/understanding-artificial-intelligence-ai-a-comprehensive-guide/#AI_in_Finance)
 
-- **Retail & Marketing:**- Chatbots for customer service
+- <strong>Retail & Marketing:</strong>- Chatbots for customer service
   - Targeted product recommendations
   - Demand forecasting and inventory management
 
-- **Manufacturing:**- Predictive maintenance (failure prevention)
+- <strong>Manufacturing:</strong>- Predictive maintenance (failure prevention)
   - Computer vision for quality assurance
   - Automation in assembly lines
 
-- **Transportation:**- Autonomous vehicles (self-driving cars, drones)
+- <strong>Transportation:</strong>- Autonomous vehicles (self-driving cars, drones)
   - Traffic prediction and management  
   - [AI in Transportation](https://www.infuy.com/blog/understanding-artificial-intelligence-ai-a-comprehensive-guide/#AI_in_Transportation)
 
-- **Human Resources:**- Automated resume screening
+- <strong>Human Resources:</strong>- Automated resume screening
   - Video interview analysis
 
-- **Content Creation:**- Generative AI for text, images, video, music
+- <strong>Content Creation:</strong>- Generative AI for text, images, video, music
   - Automated news and report summaries
 
 - [IBM: AI Use Cases](https://www.ibm.com/topics/artificial-intelligence#use-cases)
@@ -177,12 +177,12 @@ AI development and operation involve several key stages:
 
 AI provides numerous advantages, including:
 
-- **Automation of Repetitive Tasks:**Reduces manual labor, increases productivity, and eliminates human error.
-- **Data-Driven Insights:**Analyzes vast datasets quickly to support evidence-based decisions.
-- **Consistency and Accuracy:**AI systems maintain high performance in repetitive tasks (e.g., data processing, diagnostics).
-- **24/7 Availability:**Operates around the clock without breaks or fatigue.
-- **Personalization:**Delivers customized content, recommendations, and solutions.
-- **Enhanced Safety:**AI-powered robots can operate in hazardous environments (e.g., bomb disposal, deep-sea exploration).
+- <strong>Automation of Repetitive Tasks:</strong>Reduces manual labor, increases productivity, and eliminates human error.
+- <strong>Data-Driven Insights:</strong>Analyzes vast datasets quickly to support evidence-based decisions.
+- <strong>Consistency and Accuracy:</strong>AI systems maintain high performance in repetitive tasks (e.g., data processing, diagnostics).
+- <strong>24/7 Availability:</strong>Operates around the clock without breaks or fatigue.
+- <strong>Personalization:</strong>Delivers customized content, recommendations, and solutions.
+- <strong>Enhanced Safety:</strong>AI-powered robots can operate in hazardous environments (e.g., bomb disposal, deep-sea exploration).
 
 For more on benefits:  
 - [IBM: Benefits of AI](https://www.ibm.com/topics/artificial-intelligence#benefits)
@@ -191,12 +191,12 @@ For more on benefits:
 
 AI introduces several risks and challenges that must be managed:
 
-- **Bias and Fairness:**AI can perpetuate societal biases if training data is skewed, leading to unfair decisions in hiring, lending, or law enforcement.
-- **Transparency and Explainability:**Deep learning models can be opaque (“black boxes”), making their reasoning difficult to interpret.
-- **Job Displacement:**Automation may reduce demand for certain roles, requiring workforce reskilling.
-- **Security and Privacy:**AI systems can be vulnerable to hacking, data breaches, or malicious use.
-- **Misinformation and Deepfakes:**Generative AI can create convincing fake content, challenging truth and trust.
-- **Operational Risks:**Model drift, adversarial attacks, and system failures can reduce reliability.
+- <strong>Bias and Fairness:</strong>AI can perpetuate societal biases if training data is skewed, leading to unfair decisions in hiring, lending, or law enforcement.
+- <strong>Transparency and Explainability:</strong>Deep learning models can be opaque (“black boxes”), making their reasoning difficult to interpret.
+- <strong>Job Displacement:</strong>Automation may reduce demand for certain roles, requiring workforce reskilling.
+- <strong>Security and Privacy:</strong>AI systems can be vulnerable to hacking, data breaches, or malicious use.
+- <strong>Misinformation and Deepfakes:</strong>Generative AI can create convincing fake content, challenging truth and trust.
+- <strong>Operational Risks:</strong>Model drift, adversarial attacks, and system failures can reduce reliability.
 
 - [Tableau: Challenges of AI](https://www.tableau.com/data-insights/ai/what-is)
 - [Infuy: Ethical Considerations](https://www.infuy.com/blog/understanding-artificial-intelligence-ai-a-comprehensive-guide/#Ethical_Considerations_in_AI_Development)
@@ -205,11 +205,11 @@ AI introduces several risks and challenges that must be managed:
 
 Responsible AI development emphasizes ethical principles and governance frameworks, such as:
 
-- **Explainability:**Ensuring outputs are interpretable by humans.
-- **Fairness and Inclusion:**Mitigating bias and promoting diversity.
-- **Robustness and Security:**Building resilient systems against manipulation or failure.
-- **Accountability and Transparency:**Clear assignment of responsibility for AI outcomes, open documentation of processes.
-- **Privacy and Compliance:**Protecting personal data and adhering to laws (e.g., GDPR).
+- <strong>Explainability:</strong>Ensuring outputs are interpretable by humans.
+- <strong>Fairness and Inclusion:</strong>Mitigating bias and promoting diversity.
+- <strong>Robustness and Security:</strong>Building resilient systems against manipulation or failure.
+- <strong>Accountability and Transparency:</strong>Clear assignment of responsibility for AI outcomes, open documentation of processes.
+- <strong>Privacy and Compliance:</strong>Protecting personal data and adhering to laws (e.g., GDPR).
 
 Governance involves policies, standards, and regulatory oversight at organizational and governmental levels.  
 - [Infuy: AI Governance](https://www.infuy.com/blog/understanding-artificial-intelligence-ai-a-comprehensive-guide/#AI_Governance_and_Regulation)
@@ -237,11 +237,11 @@ Deep dives on AI history:
 
 ### Education and Upskilling
 
-- **Foundational Courses:**- [Introduction to Artificial Intelligence (Coursera)](https://www.coursera.org/learn/ai-for-everyone)
+- <strong>Foundational Courses:</strong>- [Introduction to Artificial Intelligence (Coursera)](https://www.coursera.org/learn/ai-for-everyone)
   - [AI for Everyone by DeepLearning.AI](https://www.coursera.org/learn/ai-for-everyone)
   - [IBM AI Foundations for Everyone](https://www.coursera.org/learn/ai-foundations-for-everyone)
-- **Advanced Topics:**- Machine Learning, Deep Learning, NLP, Computer Vision
-- **Certifications:**- Certified Artificial Intelligence Engineer (CAIE)
+- <strong>Advanced Topics:</strong>- Machine Learning, Deep Learning, NLP, Computer Vision
+- <strong>Certifications:</strong>- Certified Artificial Intelligence Engineer (CAIE)
   - Certified Artificial Intelligence Scientist (CAIS)
   - Artificial Intelligence Engineer (AIE)
 
@@ -266,7 +266,7 @@ Industry demand for AI professionals continues to grow, with roles ranging from 
 
 ## Table: Benefits and Risks of AI
 
-| **Benefits**| **Risks/Challenges**|
+| <strong>Benefits</strong>| <strong>Risks/Challenges</strong>|
 |--------------------------------------------------|--------------------------------------------------------------------------|
 | Automates repetitive tasks                       | Potential job displacement                                               |
 | Improves accuracy and consistency                | Bias and fairness concerns                                               |
@@ -277,15 +277,15 @@ Industry demand for AI professionals continues to grow, with roles ranging from 
 
 ## Summary Table: Types of AI
 
-| **Classification**| **Example/Status**|
+| <strong>Classification</strong>| <strong>Example/Status</strong>|
 |--------------------------|---------------------------------------------------------------|
-| **Narrow (Weak) AI**| Voice assistants, chatbots, recommendation systems (common)   |
-| **General (Strong) AI**| Human-level, adaptable intelligence (theoretical)             |
-| **Superintelligence**| Intelligence surpassing humans (speculative)                  |
-| **Reactive Machines**| IBM Deep Blue (chess player, no memory)                       |
-| **Limited Memory**| Self-driving cars (learn from past data)                      |
-| **Theory of Mind**| Not yet achieved                                              |
-| **Self-aware**| Not yet achieved                                              |
+| <strong>Narrow (Weak) AI</strong>| Voice assistants, chatbots, recommendation systems (common)   |
+| <strong>General (Strong) AI</strong>| Human-level, adaptable intelligence (theoretical)             |
+| <strong>Superintelligence</strong>| Intelligence surpassing humans (speculative)                  |
+| <strong>Reactive Machines</strong>| IBM Deep Blue (chess player, no memory)                       |
+| <strong>Limited Memory</strong>| Self-driving cars (learn from past data)                      |
+| <strong>Theory of Mind</strong>| Not yet achieved                                              |
+| <strong>Self-aware</strong>| Not yet achieved                                              |
 
 ## References and Further Reading
 
@@ -297,5 +297,5 @@ Industry demand for AI professionals continues to grow, with roles ranging from 
 6. [Coursera: What is Artificial Intelligence?](https://www.coursera.org/articles/what-is-artificial-intelligence)
 7. [DeepLearning.AI: AI For Everyone (YouTube)](https://www.youtube.com/c/Deeplearningai)
 
-**For continued learning, refer to industry whitepapers, academic publications, and hands-on online courses from leading universities and organizations.**
+<strong>For continued learning, refer to industry whitepapers, academic publications, and hands-on online courses from leading universities and organizations.</strong>
 

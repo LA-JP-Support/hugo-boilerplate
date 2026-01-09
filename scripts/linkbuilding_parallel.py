@@ -60,9 +60,12 @@ def find_language_files(linkbuilding_dir: Path, public_dir: Path) -> List[Dict]:
                 logger.info(f"No manual file found for language {lang} - will use automatic only")
         
         # Determine HTML directory
-        # English content is at the root of public, other languages have subdirectories
+        # English content might be in public/en (if defaultContentLanguageInSubdir=true) or root
         if lang == 'en':
-            html_dir = public_dir
+            if (public_dir / 'en').exists():
+                html_dir = public_dir / 'en'
+            else:
+                html_dir = public_dir
         else:
             html_dir = public_dir / lang
             

@@ -21,19 +21,19 @@ A Delay or Sleep Node is a component, often seen in automation platforms or as a
 - In code (JavaScript/Node.js), it’s implemented as a function (`sleep`, `delay`, etc.) that suspends further execution in a non-blocking way, e.g., using Promises and async/await.  
 - In workflow automation tools (n8n, Make, AWS SSM, Cognigy, Jira), it’s a visual node/block that can be configured for a specific time or event.
 
-**Why pause execution?**- To space out API calls and prevent rate limiting.
+<strong>Why pause execution?</strong>- To space out API calls and prevent rate limiting.
 - To wait for external processes (e.g., file upload, payment confirmation).
 - For orchestrating workflows with time-based or event-based conditions.
 ## Purpose and Use Cases
 
-**When and why are Delay/Sleep Nodes used?**- **API Rate Limiting:**Prevent exceeding quotas by spacing requests.
-- **Workflow Orchestration:**Ensure steps occur in a specific order with controlled intervals.
-- **Polling/Condition Waits:**Pause until an external event or condition is met.
-- **Testing & Simulation:**Simulate slow operations or network [latency](/en/glossary/latency/).
-- **Retry & Backoff:**Implement retries with exponential backoff.
-- **Buffer for External Systems:**Allow time for data sync before continuing.
+<strong>When and why are Delay/Sleep Nodes used?</strong>- <strong>API Rate Limiting:</strong>Prevent exceeding quotas by spacing requests.
+- <strong>Workflow Orchestration:</strong>Ensure steps occur in a specific order with controlled intervals.
+- <strong>Polling/Condition Waits:</strong>Pause until an external event or condition is met.
+- <strong>Testing & Simulation:</strong>Simulate slow operations or network latency.
+- <strong>Retry & Backoff:</strong>Implement retries with exponential backoff.
+- <strong>Buffer for External Systems:</strong>Allow time for data sync before continuing.
 
-**Examples:**- Waiting several seconds between notification emails.
+<strong>Examples:</strong>- Waiting several seconds between notification emails.
 - Pausing until a file upload is confirmed.
 - Polling an API every minute until status is “complete”.
 
@@ -56,16 +56,16 @@ function sleep(ms) {
 ### Automation Platforms (n8n, Make, AWS SSM, Cognigy, Jira)
 
 Workflow tools provide visual Delay/Sleep nodes:
-- **Duration:**Fixed time (seconds, minutes, hours, ISO 8601).
-- **Condition/Event-based:**Wait until a logical condition is true.
-- **Timeouts:**Prevent indefinite waits.
-- **Exponential Backoff:**For intelligent polling or retries.
+- <strong>Duration:</strong>Fixed time (seconds, minutes, hours, ISO 8601).
+- <strong>Condition/Event-based:</strong>Wait until a logical condition is true.
+- <strong>Timeouts:</strong>Prevent indefinite waits.
+- <strong>Exponential Backoff:</strong>For intelligent polling or retries.
 
 ## Implementation Techniques in JavaScript/Node.js
 
 ### `setTimeout` with Callbacks
 
-**Pattern:**```js
+<strong>Pattern:</strong>```js
 function sleep(ms, callback) {
   setTimeout(callback, ms);
 }
@@ -88,10 +88,10 @@ async function main() {
 }
 main();
 ```
-- **Pros:**Clean, readable, non-blocking, easy to compose.
-- **Cons:**Requires use of `async` functions.
+- <strong>Pros:</strong>Clean, readable, non-blocking, easy to compose.
+- <strong>Cons:</strong>Requires use of `async` functions.
 
-**One-liner:**```js
+<strong>One-liner:</strong>```js
 await new Promise(resolve => setTimeout(resolve, 5000));
 ```
 ### Third-Party Packages (e.g., `sleep-promise`)
@@ -100,12 +100,12 @@ await new Promise(resolve => setTimeout(resolve, 5000));
 const sleep = require('sleep-promise');
 await sleep(5000); // Wait for 5 seconds
 ```
-- **Pros:**Features like cancellation, timeouts, better cross-platform support.
-- **Cons:**Extra dependency.
+- <strong>Pros:</strong>Features like cancellation, timeouts, better cross-platform support.
+- <strong>Cons:</strong>Extra dependency.
 
 ### Blocking & Synchronous Sleep Methods
 
-**Not recommended for production.**- Blocks the entire event loop, degrading all concurrent tasks.
+<strong>Not recommended for production.</strong>- Blocks the entire event loop, degrading all concurrent tasks.
 - Example (Node.js, Unix only):
 ```js
 const { execSync } = require('child_process');
@@ -113,11 +113,11 @@ function sleep(seconds) {
   execSync(`sleep ${seconds}`);
 }
 ```
-- **Use case:**Debugging or quick scripts, never in production.
+- <strong>Use case:</strong>Debugging or quick scripts, never in production.
 
 ### Advanced: AbortController, Timeouts, and Intelligent Polling
 
-**Cancelable sleep:**```js
+<strong>Cancelable sleep:</strong>```js
 const sleep = (ms, { signal, timeout } = {}) => {
   return new Promise((resolve, reject) => {
     const timer = setTimeout(resolve, ms);
@@ -143,16 +143,16 @@ while (!conditionMet) {
   interval = Math.min(interval * 2, maxInterval);
 }
 ```
-- **Use case:**Waiting for asynchronous external events.
+- <strong>Use case:</strong>Waiting for asynchronous external events.
 ## Delay/Sleep Nodes in Automation Workflows
 
 ### AWS SSM (Systems Manager) Automation
 
-- **Node:**`aws:sleep`
-- **Configuration:**- `Duration` (ISO 8601, e.g., `PT10M`)
+- <strong>Node:</strong>`aws:sleep`
+- <strong>Configuration:</strong>- `Duration` (ISO 8601, e.g., `PT10M`)
     - `Timestamp` (e.g., `2020-01-01T01:00:00Z`)
-- **Max delay:**7 days (604799 seconds)
-**Example:**```yaml
+- <strong>Max delay:</strong>7 days (604799 seconds)
+<strong>Example:</strong>```yaml
 name: sleep
 action: aws:sleep
 inputs:

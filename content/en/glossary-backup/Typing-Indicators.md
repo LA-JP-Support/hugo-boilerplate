@@ -11,7 +11,7 @@ draft: false
 ---
 ## What are Typing Indicators?
 
-**Typing indicators**are visual or textual cues in chat or messaging applications that signal when another participant is actively composing a message. A classic example is the animated “three dots” (ellipsis) familiar from iMessage or Facebook Messenger. In AI chatbot interfaces, typing indicators show while the bot processes a reply, signifying to the user that a response is coming.
+<strong>Typing indicators</strong>are visual or textual cues in chat or messaging applications that signal when another participant is actively composing a message. A classic example is the animated “three dots” (ellipsis) familiar from iMessage or Facebook Messenger. In AI chatbot interfaces, typing indicators show while the bot processes a reply, signifying to the user that a response is coming.
 
 Typing indicators simulate real-time feedback, replicating the pauses and cues of face-to-face conversation. They create a sense of presence and immediacy, keeping users engaged and informed during digital interactions. As highlighted in the [CometChat guide](https://www.cometchat.com/blog/typing-indicators), these indicators are now a standard in both consumer and enterprise messaging platforms.
 
@@ -19,11 +19,11 @@ Typing indicators simulate real-time feedback, replicating the pauses and cues o
 
 Typing indicators are widely adopted across digital platforms for various purposes:
 
-- **Human-to-Human Messaging:**Shows when a person is composing a message in one-on-one or group chat.
-- **AI Chatbots:**Indicates that the bot is processing or generating a response, reassuring users their message is acknowledged.
-- **Customer Support:**Lets users know when an agent is replying, reducing uncertainty during support sessions.
-- **Collaboration Tools:**Signals when colleagues are actively participating in a conversation or document, enhancing teamwork and reducing redundant communication.
-- **Digital Scheduling & Operations:**In platforms like [Shyft](https://www.myshyft.com/blog/typing-indicators/), typing indicators foster real-time coordination in industries such as healthcare, retail, and hospitality.
+- <strong>Human-to-Human Messaging:</strong>Shows when a person is composing a message in one-on-one or group chat.
+- <strong>AI Chatbots:</strong>Indicates that the bot is processing or generating a response, reassuring users their message is acknowledged.
+- <strong>Customer Support:</strong>Lets users know when an agent is replying, reducing uncertainty during support sessions.
+- <strong>Collaboration Tools:</strong>Signals when colleagues are actively participating in a conversation or document, enhancing teamwork and reducing redundant communication.
+- <strong>Digital Scheduling & Operations:</strong>In platforms like [Shyft](https://www.myshyft.com/blog/typing-indicators/), typing indicators foster real-time coordination in industries such as healthcare, retail, and hospitality.
 
 Their adoption is so widespread that users now expect typing indicators as a basic feature of chat experiences, regardless of industry or context.
 
@@ -31,11 +31,11 @@ Their adoption is so widespread that users now expect typing indicators as a bas
 
 Typing indicators offer tangible benefits for both users and businesses:
 
-- **Increased User Engagement:**By providing real-time feedback, typing indicators keep users’ attention focused in the chat window. This leads to longer sessions and more meaningful interactions ([CometChat](https://www.cometchat.com/blog/typing-indicators)).
-- **Reduced Message Overlap:**In group chats or collaborative environments, indicators help prevent people from talking over each other or sending conflicting messages ([Shyft](https://www.myshyft.com/blog/typing-indicators/)).
-- **Enhanced User Experience:**Replicates the rhythm of in-person conversation, making digital chat more intuitive and natural.
-- **Decreased User Uncertainty:**Users are less likely to feel ignored or confused when they see that their message is being addressed, whether by a human or a bot.
-- **Boosted Retention and Satisfaction:**Real-time communication features, including typing indicators, help build trust and user satisfaction, which can translate into higher retention and loyalty ([CometChat](https://www.cometchat.com/blog/typing-indicators)).
+- <strong>Increased User Engagement:</strong>By providing real-time feedback, typing indicators keep users’ attention focused in the chat window. This leads to longer sessions and more meaningful interactions ([CometChat](https://www.cometchat.com/blog/typing-indicators)).
+- <strong>Reduced Message Overlap:</strong>In group chats or collaborative environments, indicators help prevent people from talking over each other or sending conflicting messages ([Shyft](https://www.myshyft.com/blog/typing-indicators/)).
+- <strong>Enhanced User Experience:</strong>Replicates the rhythm of in-person conversation, making digital chat more intuitive and natural.
+- <strong>Decreased User Uncertainty:</strong>Users are less likely to feel ignored or confused when they see that their message is being addressed, whether by a human or a bot.
+- <strong>Boosted Retention and Satisfaction:</strong>Real-time communication features, including typing indicators, help build trust and user satisfaction, which can translate into higher retention and loyalty ([CometChat](https://www.cometchat.com/blog/typing-indicators)).
 
 ## Common Use Cases
 
@@ -74,15 +74,15 @@ For further examples, see [Shyft’s discussion on scheduling](https://www.myshy
 
 Typing indicators are implemented in distinct, often branded ways:
 
-- **iMessage (Apple):**Animated three dots in a speech bubble.
-- **Facebook Messenger:**Pulsing ellipsis bubble.
-- **WhatsApp:**Text-based, e.g., “User is typing…”.
-- **Slack:**Text string such as “[Name] is typing…” below the chat input.
-- **Telegram:**Displays “typing…” or “recording audio…” below the contact name.
-- **Snapchat:**Push notifications when someone starts typing.
-- **Microsoft Teams:**Small animated dots.
-- **Signal:**Animated dots.
-- **Skype:**Combination of text and visual indicators.
+- <strong>iMessage (Apple):</strong>Animated three dots in a speech bubble.
+- <strong>Facebook Messenger:</strong>Pulsing ellipsis bubble.
+- <strong>WhatsApp:</strong>Text-based, e.g., “User is typing…”.
+- <strong>Slack:</strong>Text string such as “[Name] is typing…” below the chat input.
+- <strong>Telegram:</strong>Displays “typing…” or “recording audio…” below the contact name.
+- <strong>Snapchat:</strong>Push notifications when someone starts typing.
+- <strong>Microsoft Teams:</strong>Small animated dots.
+- <strong>Signal:</strong>Animated dots.
+- <strong>Skype:</strong>Combination of text and visual indicators.
 
 For a detailed breakdown, read [CometChat’s comparison](https://www.cometchat.com/blog/typing-indicators).
 
@@ -114,11 +114,11 @@ This flow is described in-depth in the [dev.to tutorial](https://dev.to/hexshift
 
 #### Implementation Best Practices
 
-- **Debounce Timers:**Avoid sending typing signals on every keystroke by implementing debouncing.
-- **Timeouts:**Automatically clear indicators if “stop typing” events are missed.
-- **Display Name/User ID:**Show who is typing, especially in group chats.
-- **Contextual Messaging:**Vary the message (e.g., “Alice is typing…” or “Several people are typing…”) by context.
-- **Visibility Control:**Limit indicator visibility (e.g., only the recipient in private messages).
+- <strong>Debounce Timers:</strong>Avoid sending typing signals on every keystroke by implementing debouncing.
+- <strong>Timeouts:</strong>Automatically clear indicators if “stop typing” events are missed.
+- <strong>Display Name/User ID:</strong>Show who is typing, especially in group chats.
+- <strong>Contextual Messaging:</strong>Vary the message (e.g., “Alice is typing…” or “Several people are typing…”) by context.
+- <strong>Visibility Control:</strong>Limit indicator visibility (e.g., only the recipient in private messages).
 
 These practices keep indicators lightweight and prevent excessive network traffic ([dev.to](https://dev.to/hexshift/adding-typing-indicators-to-real-time-chat-applications-76p)).
 
@@ -135,9 +135,9 @@ Many chat development platforms provide built-in support for typing indicators:
 Typing indicators can be customized for user experience and branding:
 
 ### 1. Visual-Based Indicators
-- **Animated Ellipsis (•••):**The iconic “three dots” used by iMessage, Facebook Messenger, and others.
-- **Custom Animations:**Branded or themed animations for unique user experiences.
-- **Combined Visual/Text:**Blends text and animations for clarity (e.g., Skype).
+- <strong>Animated Ellipsis (•••):</strong>The iconic “three dots” used by iMessage, Facebook Messenger, and others.
+- <strong>Custom Animations:</strong>Branded or themed animations for unique user experiences.
+- <strong>Combined Visual/Text:</strong>Blends text and animations for clarity (e.g., Skype).
 
 ### 2. Text-Based Indicators
 - Displays text such as “User is typing…” or “[Name] is typing…”, common in business tools.
@@ -157,10 +157,10 @@ For customizable design ideas, see [CometChat’s implementation guide](https://
 
 Developers should keep the following in mind:
 
-- **Performance:**Indicators should be lightweight, adding minimal [latency](/en/glossary/latency/) and network load.
-- **Privacy:**Some users may wish to hide their typing status; providing an opt-out increases trust.
-- **Accessibility:**Ensure indicators are accessible, such as providing clear text alternatives for screen readers.
-- **Scalability:**In high-traffic environments, efficient handling of typing events prevents overload ([dev.to](https://dev.to/hexshift/adding-typing-indicators-to-real-time-chat-applications-76p)).
+- <strong>Performance:</strong>Indicators should be lightweight, adding minimal latency and network load.
+- <strong>Privacy:</strong>Some users may wish to hide their typing status; providing an opt-out increases trust.
+- <strong>Accessibility:</strong>Ensure indicators are accessible, such as providing clear text alternatives for screen readers.
+- <strong>Scalability:</strong>In high-traffic environments, efficient handling of typing events prevents overload ([dev.to](https://dev.to/hexshift/adding-typing-indicators-to-real-time-chat-applications-76p)).
 
 ### Rapid Development Tools
 
@@ -171,8 +171,8 @@ Developers should keep the following in mind:
 ## Frequently Asked Questions
 
 ### What’s the difference between a typing indicator and a “read receipt”?
-- **Typing indicators**show when someone is composing a message.
-- **Read receipts**show when a message has been read by the recipient.
+- <strong>Typing indicators</strong>show when someone is composing a message.
+- <strong>Read receipts</strong>show when a message has been read by the recipient.
 
 ### Can typing indicators be turned off?
 - Some apps allow users to disable typing indicators for privacy reasons.
@@ -188,10 +188,10 @@ Developers should keep the following in mind:
 
 ## Related Concepts
 
-- **Real-time Chat Features:**Typing indicators, read receipts, presence status, delivery receipts ([CometChat](https://www.cometchat.com/blog/chat-features-to-boost-user-engagement)).
-- **User Engagement:**Features that enhance the interactivity and immediacy of chat apps.
-- **Push Notifications:**Alerts based on user activity, including typing events.
-- **Chat SDKs and APIs:**Tools that facilitate developing chat features like typing indicators.
+- <strong>Real-time Chat Features:</strong>Typing indicators, read receipts, presence status, delivery receipts ([CometChat](https://www.cometchat.com/blog/chat-features-to-boost-user-engagement)).
+- <strong>User Engagement:</strong>Features that enhance the interactivity and immediacy of chat apps.
+- <strong>Push Notifications:</strong>Alerts based on user activity, including typing events.
+- <strong>Chat SDKs and APIs:</strong>Tools that facilitate developing chat features like typing indicators.
 
 ## Further Reading and Resources
 
@@ -218,7 +218,7 @@ For technical guidance, best practices, and further exploration, see the followi
 
 *Explore more real-time chat features in our [Chat Features Glossary](#) or start building with a [free developer trial](https://sendbird.com/form/free-trial).*
 
-**Sources and Further Reading**- [Adding Typing Indicators to Real Time Chat Applications – dev.to](https://dev.to/hexshift/adding-typing-indicators-to-real-time-chat-applications-76p)  
+<strong>Sources and Further Reading</strong>- [Adding Typing Indicators to Real Time Chat Applications – dev.to](https://dev.to/hexshift/adding-typing-indicators-to-real-time-chat-applications-76p)  
 - [Typing Indicators: How Real-time Feedback Improves Chat Experience – CometChat](https://www.cometchat.com/blog/typing-indicators)  
 - [Typing Indicators in Scheduling – Shyft](https://www.myshyft.com/blog/typing-indicators/)  
 - [Sendbird: What Are Typing Indicators?](https://sendbird.com/learn/what-are-typing-indicators)  

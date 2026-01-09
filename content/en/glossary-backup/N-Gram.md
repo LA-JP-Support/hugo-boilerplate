@@ -11,11 +11,11 @@ draft: false
 ---
 ## Definition and Overview
 
-An **N-gram**is a contiguous sequence of *n* items from a given sample of text or speech. In the context of [Natural Language Processing (NLP)](https://en.wikipedia.org/wiki/Natural_language_processing), N-grams are typically sequences of words, characters, or symbols. The value of *n* determines the length of each chunk:
+An <strong>N-gram</strong>is a contiguous sequence of *n* items from a given sample of text or speech. In the context of [Natural Language Processing (NLP)](https://en.wikipedia.org/wiki/Natural_language_processing), N-grams are typically sequences of words, characters, or symbols. The value of *n* determines the length of each chunk:
 
-- For *n=1*, the model uses **unigrams**(single words or tokens).
-- For *n=2*, it uses **bigrams**(two-word sequences).
-- For *n=3*, it uses **trigrams**(three-word sequences).
+- For *n=1*, the model uses <strong>unigrams</strong>(single words or tokens).
+- For *n=2*, it uses <strong>bigrams</strong>(two-word sequences).
+- For *n=3*, it uses <strong>trigrams</strong>(three-word sequences).
 - Higher-order N-grams (*n > 3*) are also used in cases where larger context is necessary.
 
 N-gram models are fundamental to computational linguistics, providing statistical frameworks for understanding, generating, and predicting language. They are the backbone of many classical NLP systems, including spell-checkers, predictive text, machine translation, and speech recognition.
@@ -26,13 +26,13 @@ A language model based on N-grams assigns a probability to sequences of tokens, 
 
 ## Historical Context and Development
 
-N-grams have a rich history in both linguistics and information theory. The mathematical formalization of N-grams can be traced back to Andrey Markov, whose work on **Markov chains**in the early 20th century laid the foundation for sequence modeling. Markov's insight was that the probability of an event could depend on the previous event(s) in a chain, rather than the entire history (the "Markov property").
+N-grams have a rich history in both linguistics and information theory. The mathematical formalization of N-grams can be traced back to Andrey Markov, whose work on <strong>Markov chains</strong>in the early 20th century laid the foundation for sequence modeling. Markov's insight was that the probability of an event could depend on the previous event(s) in a chain, rather than the entire history (the "Markov property").
 
 In the 1940s and 1950s, Claude Shannon applied Markov models to English text, introducing the concept of N-gram models for language. Shannon's experiments demonstrated that statistical models could generate surprisingly human-like text, laying the groundwork for computational linguistics.
 
 By the 1980s and 1990s, with the rise of digital corpora and increased computational power, N-gram models became the standard approach for tasks such as speech recognition, optical character recognition (OCR), and early machine translation systems. Their simplicity, interpretability, and effectiveness made them a baseline in many NLP pipelines.
 
-Today, while advanced neural architectures like [Transformers](https://www.geeksforgeeks.org/machine-learning/getting-started-with-transformers/) have surpassed N-gram models in many tasks, N-grams remain essential for feature engineering, baseline comparisons, and applications where efficiency and [transparency](/en/glossary/transparency/) are critical.
+Today, while advanced neural architectures like [Transformers](https://www.geeksforgeeks.org/machine-learning/getting-started-with-transformers/) have surpassed N-gram models in many tasks, N-grams remain essential for feature engineering, baseline comparisons, and applications where efficiency and transparency are critical.
 
 *Further reading: [Wikipedia: N-gram](https://en.wikipedia.org/wiki/N-gram)*
 
@@ -40,32 +40,32 @@ Today, while advanced neural architectures like [Transformers](https://www.geeks
 
 ### Unigrams
 
-- **Definition:**Sequences of single items (usually words).
-- **Example:**Text: "[Natural language processing](/en/glossary/natural-language-processing--nlp-/) is fun."  
+- <strong>Definition:</strong>Sequences of single items (usually words).
+- <strong>Example:</strong>Text: "Natural language processing is fun."  
   Unigrams: "Natural", "language", "processing", "is", "fun"
-- **Use Cases:**Basic word frequency analysis, text classification, information retrieval.
+- <strong>Use Cases:</strong>Basic word frequency analysis, text classification, information retrieval.
 
 ### Bigrams
 
-- **Definition:**Sequences of two consecutive items.
-- **Example:**Text: "Natural language processing is fun."  
+- <strong>Definition:</strong>Sequences of two consecutive items.
+- <strong>Example:</strong>Text: "Natural language processing is fun."  
   Bigrams: "Natural language", "language processing", "processing is", "is fun"
-- **Use Cases:**Phrase detection, [sentiment analysis](/en/glossary/sentiment-analysis/) ("not good"), speech recognition.
+- <strong>Use Cases:</strong>Phrase detection, sentiment analysis ("not good"), speech recognition.
 
 ### Trigrams
 
-- **Definition:**Sequences of three consecutive items.
-- **Example:**Text: "Natural language processing is fun."  
+- <strong>Definition:</strong>Sequences of three consecutive items.
+- <strong>Example:</strong>Text: "Natural language processing is fun."  
   Trigrams: "Natural language processing", "language processing is", "processing is fun"
-- **Use Cases:**Capturing broader context, autocomplete, spelling correction.
+- <strong>Use Cases:</strong>Capturing broader context, autocomplete, spelling correction.
 
 ### Higher-order N-grams
 
-- **Definition:**Sequences of four or more consecutive items (e.g., 4-grams, 5-grams).
-- **Example:**For "Natural language processing is fun."  
+- <strong>Definition:</strong>Sequences of four or more consecutive items (e.g., 4-grams, 5-grams).
+- <strong>Example:</strong>For "Natural language processing is fun."  
   4-gram: "Natural language processing is", "language processing is fun"
-- **Use Cases:**Domain-specific language modeling, plagiarism detection.
-- **Considerations:**As *n* increases, the number of possible N-grams grows exponentially, leading to data sparsity and computational overhead.
+- <strong>Use Cases:</strong>Domain-specific language modeling, plagiarism detection.
+- <strong>Considerations:</strong>As *n* increases, the number of possible N-grams grows exponentially, leading to data sparsity and computational overhead.
 
 *Source: [GeeksforGeeks: N-gram in NLP](https://www.geeksforgeeks.org/nlp/n-gram-in-nlp/)*
 
@@ -73,17 +73,17 @@ Today, while advanced neural architectures like [Transformers](https://www.geeks
 
 ### Probability Estimation
 
-N-gram models estimate the probability of a word or token based on the preceding *n-1* items. The **chain rule of probability**expresses the joint probability of a sequence as a product of conditional probabilities:
+N-gram models estimate the probability of a word or token based on the preceding *n-1* items. The <strong>chain rule of probability</strong>expresses the joint probability of a sequence as a product of conditional probabilities:
 
 \[
 P(w_1, w_2, \ldots, w_n) = P(w_1) \cdot P(w_2|w_1) \cdot P(w_3|w_1, w_2) \cdots P(w_n|w_1, \ldots, w_{n-1})
 \]
 
-This formula is computationally expensive for long sequences. N-gram models simplify this by making the **Markov assumption**.
+This formula is computationally expensive for long sequences. N-gram models simplify this by making the <strong>Markov assumption</strong>.
 
 ### Markov Assumption
 
-The **Markov assumption**posits that the probability of a word depends only on the previous *n-1* words, not the entire preceding context. This is crucial for practical computation.
+The <strong>Markov assumption</strong>posits that the probability of a word depends only on the previous *n-1* words, not the entire preceding context. This is crucial for practical computation.
 
 For a bigram (*n=2*):
 \[
@@ -116,7 +116,7 @@ For bigrams, this becomes:
 P(w_n | w_{n-1}) = \frac{C(w_{n-1}, w_n)}{C(w_{n-1})}
 \]
 
-**Example Calculation:**Given the corpus:
+<strong>Example Calculation:</strong>Given the corpus:
 - "I am Sam"
 - "Sam I am"
 - "I do not like green eggs and ham"
@@ -132,7 +132,7 @@ To calculate \(P(am | I)\):
 
 #### The Need for Smoothing
 
-As *n* increases, many valid N-grams may not appear in the training data, resulting in zero probability estimates. This is called **data sparsity**. Smoothing techniques adjust probability estimates to account for unseen N-grams, improving generalization.
+As *n* increases, many valid N-grams may not appear in the training data, resulting in zero probability estimates. This is called <strong>data sparsity</strong>. Smoothing techniques adjust probability estimates to account for unseen N-grams, improving generalization.
 
 #### Laplace (Additive) Smoothing
 
@@ -149,19 +149,19 @@ This ensures no N-gram has zero probability.
 
 #### Advanced Smoothing: Good-Turing, Kneser-Ney
 
-- **Good-Turing Smoothing:**Adjusts N-gram frequencies based on the number of N-grams seen once, twice, etc.
-- **Kneser-Ney Smoothing:**State-of-the-art for language modeling, considers both the frequency and the distribution of contexts in which an N-gram appears.
+- <strong>Good-Turing Smoothing:</strong>Adjusts N-gram frequencies based on the number of N-grams seen once, twice, etc.
+- <strong>Kneser-Ney Smoothing:</strong>State-of-the-art for language modeling, considers both the frequency and the distribution of contexts in which an N-gram appears.
 
 *Detailed explanation: [Stanford PDF, Section 3.4](https://web.stanford.edu/~jurafsky/slp3/3.pdf)*
 
 ### Perplexity and Entropy
 
-- **Perplexity**is a measure of how well a probability model predicts a sample. Lower perplexity indicates a better language model.
+- <strong>Perplexity</strong>is a measure of how well a probability model predicts a sample. Lower perplexity indicates a better language model.
   \[
   Perplexity(P) = 2^{H(P)}
   \]
   where \(H(P)\) is the entropy of the probability distribution.
-- **Entropy**measures the unpredictability of the text.
+- <strong>Entropy</strong>measures the unpredictability of the text.
 
 *More details: [Stanford PDF, Section 3.5](https://web.stanford.edu/~jurafsky/slp3/3.pdf)*
 
@@ -211,7 +211,7 @@ smoothed_ngrams = laplace_smoothing(ngrams, vocab_size)
 print("Smoothed N-grams:", smoothed_ngrams)
 ```
 
-**Output:**```
+<strong>Output:</strong>```
 Smoothed N-grams: {('Geeks', 'for'): 0.25, ('for', 'Geeks'): 0.25, ('Geeks', 'Community'): 0.25}
 ```
 

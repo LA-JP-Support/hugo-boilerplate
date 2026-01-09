@@ -22,7 +22,7 @@ A reproducible AI system requires tracking and recording changes across three ma
 
 AI and ML research face a well-documented reproducibility crisis. Less than one-third of AI research is reproducible, and only about 5% of AI researchers share their source code. Studies indicate most published results cannot be independently reproduced due to insufficient documentation, inaccessible code or data, and untracked environmental variables.
 
-**Key Statistics:**- Only 42% of NeurIPS papers included code
+<strong>Key Statistics:</strong>- Only 42% of NeurIPS papers included code
 - Just 23% provided dataset access
 - Most AI results cannot be independently verified
 - Inconsistent tracking undermines scientific integrity
@@ -57,53 +57,53 @@ Precise terminology is essential for effective validation:
 
 | Term | Who Performs | What Stays Same | What Changes | Purpose |
 |------|--------------|-----------------|--------------|---------|
-| **Repeatability**| Same team, same environment | Methods, data, environment, operators | None | Tests short-term consistency under identical conditions |
-| **Reproducibility**| Different team/environment | Methods and protocols | Operators, environment, equipment | Verifies consistency across varying conditions |
-| **Replicability**| Different team, potentially new approach | Hypothesis or goal | Methods, data, sometimes design | Assesses robustness and generalizability |
+| <strong>Repeatability</strong>| Same team, same environment | Methods, data, environment, operators | None | Tests short-term consistency under identical conditions |
+| <strong>Reproducibility</strong>| Different team/environment | Methods and protocols | Operators, environment, equipment | Verifies consistency across varying conditions |
+| <strong>Replicability</strong>| Different team, potentially new approach | Hypothesis or goal | Methods, data, sometimes design | Assesses robustness and generalizability |
 
-**Repeatability**tests if original researchers obtain the same results under identical conditions. **Reproducibility**confirms independent teams obtain the same results with the same methods but different conditions. **Replicability**tests if similar findings emerge when experiment aspects are intentionally changed.
+<strong>Repeatability</strong>tests if original researchers obtain the same results under identical conditions. <strong>Reproducibility</strong>confirms independent teams obtain the same results with the same methods but different conditions. <strong>Replicability</strong>tests if similar findings emerge when experiment aspects are intentionally changed.
 
 ## Reproducibility Validation Workflow
 
 ### 1. Comprehensive Documentation
 
-**Record All Details:**Code, data, configurations, hardware, software dependencies, random seeds, hyperparameters
+<strong>Record All Details:</strong>Code, data, configurations, hardware, software dependencies, random seeds, hyperparameters
 
-**Use Experiment Tracking:**Platforms like MLflow, Weights & Biases, or Union log every run, configuration, output, and environment
+<strong>Use Experiment Tracking:</strong>Platforms like MLflow, Weights & Biases, or Union log every run, configuration, output, and environment
 
-**Standardized Checklists:**Adopt reproducibility checklists from conferences like NeurIPS and ICML ensuring crucial artifacts are disclosed
+<strong>Standardized Checklists:</strong>Adopt reproducibility checklists from conferences like NeurIPS and ICML ensuring crucial artifacts are disclosed
 
 ### 2. Environment Variation and Testing
 
-**Execute Across Environments:**Run workflows on different machines, cloud providers, or operating systems
+<strong>Execute Across Environments:</strong>Run workflows on different machines, cloud providers, or operating systems
 
-**Containerization:**Use Docker or similar technologies to encapsulate dependencies ensuring consistent environments
+<strong>Containerization:</strong>Use Docker or similar technologies to encapsulate dependencies ensuring consistent environments
 
-**Dependency Management:**Employ requirements files and environment managers to freeze library versions
+<strong>Dependency Management:</strong>Employ requirements files and environment managers to freeze library versions
 
 ### 3. Result Comparison and Analysis
 
-**Quantitative Metrics:**Compare accuracy, F1 score, performance metrics across executions
+<strong>Quantitative Metrics:</strong>Compare accuracy, F1 score, performance metrics across executions
 
-**Qualitative Assessment:**Evaluate chatbot responses, generated content, user experience
+<strong>Qualitative Assessment:</strong>Evaluate chatbot responses, generated content, user experience
 
-**Statistical Validation:**Calculate standard deviation and variability according to ISO 5725 standards
+<strong>Statistical Validation:</strong>Calculate standard deviation and variability according to ISO 5725 standards
 
 ### 4. Independent Reproduction
 
-**External Team Testing:**Enable independent teams to reconstruct processes using only provided documentation
+<strong>External Team Testing:</strong>Enable independent teams to reconstruct processes using only provided documentation
 
-**Open Science Practices:**Share datasets, code, and detailed experiment logs for independent verification
+<strong>Open Science Practices:</strong>Share datasets, code, and detailed experiment logs for independent verification
 
-**Cross-Organization Validation:**Facilitate collaborative verification across research groups or business units
+<strong>Cross-Organization Validation:</strong>Facilitate collaborative verification across research groups or business units
 
 ### 5. Continuous Monitoring and Reporting
 
-**Audit Trails:**Log all actions, communications, and artifact changes for traceability
+<strong>Audit Trails:</strong>Log all actions, communications, and artifact changes for traceability
 
-**Version Control:**Maintain comprehensive history of code, data, and model versions
+<strong>Version Control:</strong>Maintain comprehensive history of code, data, and model versions
 
-**Model Registries:**Store all model versions, metadata, and deployment histories centrally
+<strong>Model Registries:</strong>Store all model versions, metadata, and deployment histories centrally
 
 ## Challenges to Reproducibility
 
@@ -111,50 +111,50 @@ Achieving reproducibility in AI faces significant obstacles:
 
 | Challenge | Impact | Example |
 |-----------|--------|---------|
-| **Randomness/Stochasticity**| Different results from non-deterministic processes | Stochastic gradient descent, random weight initialization |
-| **Data Preprocessing Variability**| Inconsistent data handling | Missing value treatment, stopword removal variations |
-| **Non-Deterministic Hardware/Software**| Platform-dependent results | CPU vs GPU differences, library version changes |
-| **Incomplete Documentation**| Cannot reconstruct experiments | Missing scripts, unclear instructions, absent environment files |
-| **Dataset Accessibility**| Prevents independent verification | Proprietary or non-public datasets |
-| **Resource Limitations**| Limits who can reproduce | High computational requirements for state-of-the-art models |
-| **Hyperparameter Gaps**| Undocumented configuration | Unlisted parameter values affecting results |
-| **Versioning Issues**| Framework API changes | TensorFlow 1.x vs 2.x divergence |
+| <strong>Randomness/Stochasticity</strong>| Different results from non-deterministic processes | Stochastic gradient descent, random weight initialization |
+| <strong>Data Preprocessing Variability</strong>| Inconsistent data handling | Missing value treatment, stopword removal variations |
+| <strong>Non-Deterministic Hardware/Software</strong>| Platform-dependent results | CPU vs GPU differences, library version changes |
+| <strong>Incomplete Documentation</strong>| Cannot reconstruct experiments | Missing scripts, unclear instructions, absent environment files |
+| <strong>Dataset Accessibility</strong>| Prevents independent verification | Proprietary or non-public datasets |
+| <strong>Resource Limitations</strong>| Limits who can reproduce | High computational requirements for state-of-the-art models |
+| <strong>Hyperparameter Gaps</strong>| Undocumented configuration | Unlisted parameter values affecting results |
+| <strong>Versioning Issues</strong>| Framework API changes | TensorFlow 1.x vs 2.x divergence |
 
-**LLM-Specific Challenges:**Large language models may generate different outputs with same inputs if hyperparameters like temperature or top-k sampling aren't fixed and logged, complicating verification and compliance.
+<strong>LLM-Specific Challenges:</strong>Large language models may generate different outputs with same inputs if hyperparameters like temperature or top-k sampling aren't fixed and logged, complicating verification and compliance.
 
 ## Methods and Frameworks
 
 ### Documentation and Experiment Tracking
 
-**Comprehensive Logging:**Record code, data, preprocessing, hyperparameters, environment variables, random seeds
+<strong>Comprehensive Logging:</strong>Record code, data, preprocessing, hyperparameters, environment variables, random seeds
 
-**Tracking Tools:**MLflow, Weights & Biases, Union enable comparison across experiments and lineage tracing
+<strong>Tracking Tools:</strong>MLflow, Weights & Biases, Union enable comparison across experiments and lineage tracing
 
-**Standardized Reporting:**Structured templates and checklists from major conferences
+<strong>Standardized Reporting:</strong>Structured templates and checklists from major conferences
 
 ### Data and Model Versioning
 
-**Data Versioning:**Track datasets with unique identifiers using tools like DVC, ensuring changes are logged and revertible
+<strong>Data Versioning:</strong>Track datasets with unique identifiers using tools like DVC, ensuring changes are logged and revertible
 
-**Model Registry:**Central repository for all model versions, metadata, and deployment histories
+<strong>Model Registry:</strong>Central repository for all model versions, metadata, and deployment histories
 
-**Artifact Management:**Comprehensive tracking of all inputs, outputs, and intermediate artifacts
+<strong>Artifact Management:</strong>Comprehensive tracking of all inputs, outputs, and intermediate artifacts
 
 ### Environment Management
 
-**Containerization:**Docker encapsulates dependencies ensuring consistent environments across setups
+<strong>Containerization:</strong>Docker encapsulates dependencies ensuring consistent environments across setups
 
-**Dependency Locking:**Requirements files and environment managers freeze library versions
+<strong>Dependency Locking:</strong>Requirements files and environment managers freeze library versions
 
-**Infrastructure as Code:**Declarative specifications for reproducible infrastructure
+<strong>Infrastructure as Code:</strong>Declarative specifications for reproducible infrastructure
 
 ### Statistical Validation
 
-**Reproducibility Standard Deviation:**Calculate variability across conditions according to ISO 5725
+<strong>Reproducibility Standard Deviation:</strong>Calculate variability across conditions according to ISO 5725
 
-**Balanced Experiment Design:**Systematic testing across varying conditions
+<strong>Balanced Experiment Design:</strong>Systematic testing across varying conditions
 
-**Formula for Reproducibility SD:**```
+<strong>Formula for Reproducibility SD:</strong>```
 s_r = sqrt(Σ(x̄_i - x̄_total)² / (n - 1))
 ```
 where x̄_i is mean result for condition i, x̄_total is grand mean, n is number of conditions

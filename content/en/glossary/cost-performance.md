@@ -22,7 +22,7 @@ The metric's power lies in its objectivity and simplicity. CPI distills complex 
 
 CPI is calculated using two key Earned Value Management components:
 
-**Formula:**```
+<strong>Formula:</strong>```
 CPI = Earned Value (EV) / Actual Cost (AC)
 ```
 

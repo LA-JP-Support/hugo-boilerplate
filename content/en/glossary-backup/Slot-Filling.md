@@ -18,20 +18,20 @@ draft: false
 ---
 ## What is Slot Filling?
 
-Slot filling is a core technique in task-oriented dialog systems for [conversational AI](/en/glossary/conversational-ai/). It focuses on identifying and extracting required parameters—called slots—from user queries. These slots are necessary to fulfill a specific action, such as booking a flight, ordering food, or scheduling an appointment.
+Slot filling is a core technique in task-oriented dialog systems for conversational AI. It focuses on identifying and extracting required parameters—called slots—from user queries. These slots are necessary to fulfill a specific action, such as booking a flight, ordering food, or scheduling an appointment.
 
 For example, in the query:
 
 > “Book a flight from New York to London on July 20th.”
 
 The conversational agent should extract:
-- **Departure city:**New York
-- **Destination city:**London
-- **Date:**July 20th
+- <strong>Departure city:</strong>New York
+- <strong>Destination city:</strong>London
+- <strong>Date:</strong>July 20th
 
 Slot filling is the mechanism that allows the AI to parse this information, store it, and use it effectively to respond or take action on behalf of the user. If some information is missing, the system prompts the user to provide it, ensuring a complete data set for the task.
 
-**Authoritative Sources:**- [Microsoft Copilot Studio: Use entities and slot filling in agents](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-entities-slot-filling)  
+<strong>Authoritative Sources:</strong>- [Microsoft Copilot Studio: Use entities and slot filling in agents](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-entities-slot-filling)  
 - [Dydu documentation: Slot filling](https://docs-en.dydu.ai/contents/knowledge/knowledge-types/slot-filling)  
 - [Just AI Conversational Cloud: Slot filling](https://help.cloud.just-ai.com/en/jaicp/NLU_core/slot_filling)  
 
@@ -47,11 +47,11 @@ Slot filling is the backbone of any conversational interface that requires struc
 
 ## Key Concepts: Slots, Entities, and Intents
 
-- **Intent:**The user’s goal or purpose (e.g., "Book a hotel," "Order pizza").
-- **Slot:**A placeholder for a required or optional piece of information needed to fulfill the intent (e.g., “check-in date,” “pizza size”).
-- **Entity:**The data type or category of information that a slot expects (e.g., city, date, number, item type).
+- <strong>Intent:</strong>The user’s goal or purpose (e.g., "Book a hotel," "Order pizza").
+- <strong>Slot:</strong>A placeholder for a required or optional piece of information needed to fulfill the intent (e.g., “check-in date,” “pizza size”).
+- <strong>Entity:</strong>The data type or category of information that a slot expects (e.g., city, date, number, item type).
 
-**Relationship:**An intent defines the action, slots are parameters needed for that action, and entities describe the kind of data each slot expects ([Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-entities-slot-filling), [Just AI](https://help.cloud.just-ai.com/en/jaicp/NLU_core/slot_filling)).
+<strong>Relationship:</strong>An intent defines the action, slots are parameters needed for that action, and entities describe the kind of data each slot expects ([Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-entities-slot-filling), [Just AI](https://help.cloud.just-ai.com/en/jaicp/NLU_core/slot_filling)).
 
 ## Types of Entities Used in Slot Filling
 
@@ -69,30 +69,30 @@ Predefined by the conversational platform, these handle common data types such a
 
 ### 2. Custom Entities
 Defined by developers to fit domain-specific needs.
-- **Closed List Entities:**Enumerated set of acceptable values (e.g., pizza toppings, product SKUs).
-- **Regular Expressions (RegEx):**Patterns for extracting structured data (e.g., ticket numbers like “INC000123”).
+- <strong>Closed List Entities:</strong>Enumerated set of acceptable values (e.g., pizza toppings, product SKUs).
+- <strong>Regular Expressions (RegEx):</strong>Patterns for extracting structured data (e.g., ticket numbers like “INC000123”).
 
 Custom entities expand the bot’s ability to handle specialized vocabulary and data types. ([Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-entities-slot-filling#closed-list-entities), [Just AI entities guide](https://help.cloud.just-ai.com/en/jaicp/platform_ux/nlu_core/entities))
 
-**Tip:**Use synonyms and fuzzy matching to broaden entity recognition (e.g., “NYC” as a synonym for “New York City”).
+<strong>Tip:</strong>Use synonyms and fuzzy matching to broaden entity recognition (e.g., “NYC” as a synonym for “New York City”).
 
 ## Slot Filling Process: Step-by-Step
 
-**1. Define Required Slots:**List all the pieces of information needed to accomplish a specific intent.
+<strong>1. Define Required Slots:</strong>List all the pieces of information needed to accomplish a specific intent.
 
-**2. Associate Entities with Each Slot:**Specify which data type or pattern each slot should accept.
+<strong>2. Associate Entities with Each Slot:</strong>Specify which data type or pattern each slot should accept.
 
-**3. Extract Slot Values from User Input:**Use NLU (Natural Language Understanding) to identify and extract values for each slot.
+<strong>3. Extract Slot Values from User Input:</strong>Use NLU (Natural Language Understanding) to identify and extract values for each slot.
 
-**4. Prompt for Missing Slots:**If any required slot is unfilled, the bot asks questions to gather the missing information.
+<strong>4. Prompt for Missing Slots:</strong>If any required slot is unfilled, the bot asks questions to gather the missing information.
 
-**5. Handle Multi-Turn Dialogs:**Allow users to fill slots over several messages and in any order.
+<strong>5. Handle Multi-Turn Dialogs:</strong>Allow users to fill slots over several messages and in any order.
 
-**6. Confirm Collected Slot Values:**Optionally present gathered information to the user for confirmation before taking action.
+<strong>6. Confirm Collected Slot Values:</strong>Optionally present gathered information to the user for confirmation before taking action.
 
-**7. Execute the Task:**Proceed with the fulfillment (e.g., book, order, support) once all required slots are filled and confirmed.
+<strong>7. Execute the Task:</strong>Proceed with the fulfillment (e.g., book, order, support) once all required slots are filled and confirmed.
 
-**Visual Example (from Dydu):**- User: "I want to order a pizza."
+<strong>Visual Example (from Dydu):</strong>- User: "I want to order a pizza."
 - Bot: "How many slices would you like?"
 - User: "8"
 - Bot: "What type of pizza do you want?"
@@ -107,15 +107,15 @@ Custom entities expand the bot’s ability to handle specialized vocabulary and 
 
 When defining slots, configuration options include:
 
-- **Name:**Identifier for the slot (e.g., `departure_city`).
-- **Entity:**Data type expected—built-in or custom.
-- **Required:**Is this slot mandatory for the task? If yes, the bot must prompt until filled or exit.
-- **Is Array:**Should the slot accept multiple values (e.g., “Order two pizzas: one Margherita, one Pepperoni”)?
-- **Clarifying Questions:**Prompts to use when requesting missing slot values.
-- **Default Value:**Fallback value if the slot is optional and left unfilled.
-- **Reset/Overwrite:**Should the slot’s value be overwritten if the user provides new information?
-- **Max Retries / Garbage Count:**Maximum times to prompt for required information before abandoning the process.
-- **Confirmation:**Option to confirm the slot values with the user before proceeding.
+- <strong>Name:</strong>Identifier for the slot (e.g., `departure_city`).
+- <strong>Entity:</strong>Data type expected—built-in or custom.
+- <strong>Required:</strong>Is this slot mandatory for the task? If yes, the bot must prompt until filled or exit.
+- <strong>Is Array:</strong>Should the slot accept multiple values (e.g., “Order two pizzas: one Margherita, one Pepperoni”)?
+- <strong>Clarifying Questions:</strong>Prompts to use when requesting missing slot values.
+- <strong>Default Value:</strong>Fallback value if the slot is optional and left unfilled.
+- <strong>Reset/Overwrite:</strong>Should the slot’s value be overwritten if the user provides new information?
+- <strong>Max Retries / Garbage Count:</strong>Maximum times to prompt for required information before abandoning the process.
+- <strong>Confirmation:</strong>Option to confirm the slot values with the user before proceeding.
 
 ([Just AI Slot Parameter Details](https://help.cloud.just-ai.com/en/jaicp/NLU_core/slot_filling#slot-parameters), [Dydu Slot Options](https://docs-en.dydu.ai/contents/knowledge/knowledge-types/slot-filling#id-1-configuration-of-the-slots))
 
@@ -123,19 +123,19 @@ When defining slots, configuration options include:
 
 ### General Workflow
 
-1. **Intent Recognition:**Use NLU models to detect the intent and identify which slots apply.
+1. <strong>Intent Recognition:</strong>Use NLU models to detect the intent and identify which slots apply.
 
-2. **Entity Extraction:**Apply entity recognition to extract slot values from user input.
+2. <strong>Entity Extraction:</strong>Apply entity recognition to extract slot values from user input.
 
-3. **Slot Tracking:**Maintain the state of filled/unfilled slots throughout the conversation.
+3. <strong>Slot Tracking:</strong>Maintain the state of filled/unfilled slots throughout the conversation.
 
-4. **Prompt Logic:**Implement logic to prompt users for unfilled required slots and manage retries or interruptions.
+4. <strong>Prompt Logic:</strong>Implement logic to prompt users for unfilled required slots and manage retries or interruptions.
 
-5. **Script/Code Access:**Access filled slots in conversation scripts or backend code.
+5. <strong>Script/Code Access:</strong>Access filled slots in conversation scripts or backend code.
 
-6. **Completion & Confirmation:**Once all required slots are filled, optionally confirm with the user before executing the backend action.
+6. <strong>Completion & Confirmation:</strong>Once all required slots are filled, optionally confirm with the user before executing the backend action.
 
-**Example: Slot Extraction in Code (Pseudocode)**```python
+<strong>Example: Slot Extraction in Code (Pseudocode)</strong>```python
 if not slots['city']:
     prompt("Which city are you traveling to?")
 elif not slots['date']:
@@ -269,18 +269,18 @@ inputs = tokenizer("Book a flight from New York to London", return_tensors='pt')
 outputs = model(**inputs)
 ```
 
-**Resources:**- [Enhancing Conversational AI with BERT: The Power of Slot Filling - Analytics Vidhya](https://www.analyticsvidhya.com/blog/2023/10/conversational-ai-with-bert/)
+<strong>Resources:</strong>- [Enhancing Conversational AI with BERT: The Power of Slot Filling - Analytics Vidhya](https://www.analyticsvidhya.com/blog/2023/10/conversational-ai-with-bert/)
 
 ## Use Cases and Real-World Applications
 
 Slot filling powers a broad range of conversational AI applications:
 
-- **Travel Booking:**Departure/arrival cities, dates, passenger counts, class, etc.
-- **E-commerce Orders:**Product types, quantities, sizes, colors, delivery addresses.
-- **Customer Support:**Ticket numbers, account IDs, issue descriptions.
-- **Restaurant Reservations:**Restaurant name, date, time, number of guests, special requests.
-- **Smart Home/Utilities:**Device names, actions, schedules, settings.
-- **Healthcare Chatbots:**Symptoms, appointment dates, doctor names, insurance information.
+- <strong>Travel Booking:</strong>Departure/arrival cities, dates, passenger counts, class, etc.
+- <strong>E-commerce Orders:</strong>Product types, quantities, sizes, colors, delivery addresses.
+- <strong>Customer Support:</strong>Ticket numbers, account IDs, issue descriptions.
+- <strong>Restaurant Reservations:</strong>Restaurant name, date, time, number of guests, special requests.
+- <strong>Smart Home/Utilities:</strong>Device names, actions, schedules, settings.
+- <strong>Healthcare Chatbots:</strong>Symptoms, appointment dates, doctor names, insurance information.
 
 ([Dydu Use Cases](https://docs-en.dydu.ai/contents/knowledge/knowledge-types/slot-filling), [Just AI Use Cases](https://help.cloud.just-ai.com/en/jaicp/NLU_core/slot_filling#slot-extraction))
 
@@ -294,10 +294,10 @@ Slot filling powers a broad range of conversational AI applications:
 
 ## Frequently Asked Questions (FAQ)
 
-**Q1: What is the difference between a slot and an entity?**A slot is a placeholder for a specific piece of information required to complete a task (e.g., “date” in booking a ticket), while an entity is the data category or type (e.g., “city”, “number”, “date”) that can fill that slot.
+<strong>Q1: What is the difference between a slot and an entity?</strong>A slot is a placeholder for a specific piece of information required to complete a task (e.g., “date” in booking a ticket), while an entity is the data category or type (e.g., “city”, “number”, “date”) that can fill that slot.
 
-**Q2: How does a chatbot know which slots to fill?**Each intent is associated with a set of required and optional slots. The chatbot tracks which have been filled and prompts for missing ones, based on user input and dialog state.
+<strong>Q2: How does a chatbot know which slots to fill?</strong>Each intent is associated with a set of required and optional slots. The chatbot tracks which have been filled and prompts for missing ones, based on user input and dialog state.
 
-**Q3: What happens if the user does not provide all required slot values?**The chatbot will prompt with clarifying questions for missing required slots, up to a maximum retry limit or until the user abandons the process.
+<strong>Q3: What happens if the user does not provide all required slot values?</strong>The chatbot will prompt with clarifying questions for missing required slots, up to a maximum retry limit or until the user abandons the process.
 
-**Q4: Can users fill multiple slots in one message?**
+<strong>Q4: Can users fill multiple slots in one message?</strong>

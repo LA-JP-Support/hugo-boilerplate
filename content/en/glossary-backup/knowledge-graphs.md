@@ -15,7 +15,7 @@ A knowledge graph is a structured, machine-readable data model that represents r
 
 Knowledge graphs are designed to encode not only raw data, but also its context, meaning, and relationships, allowing systems to infer new knowledge and support advanced analytics, search, and AI applications.
 
-**Analogy:**Think of a city map where landmarks (like museums, parks, and restaurants) are connected by roads. Each landmark is a node, each road is a relationship, and details (address, opening hours, road type) are attributes. A knowledge graph similarly maps information and its relationships, making data contextually rich and interconnected.  
+<strong>Analogy:</strong>Think of a city map where landmarks (like museums, parks, and restaurants) are connected by roads. Each landmark is a node, each road is a relationship, and details (address, opening hours, road type) are attributes. A knowledge graph similarly maps information and its relationships, making data contextually rich and interconnected.  
 [Source: Neo4j](https://neo4j.com/blog/knowledge-graph/what-is-knowledge-graph/), [Ontotext](https://www.ontotext.com/knowledgehub/fundamentals/what-is-a-knowledge-graph/), [IBM](https://www.ibm.com/think/topics/knowledge-graph)
 
 ## Core Definition and Components
@@ -26,9 +26,9 @@ The backbone of a knowledge graph is its schema or ontology—a formal specifica
 
 A knowledge graph is typically viewed as a combination of:
 
-- **Database:**Allows structured queries.
-- **Graph:**Enables analysis as a network.
-- **Knowledge base:**Embeds formal semantics for interpretation and inference.
+- <strong>Database:</strong>Allows structured queries.
+- <strong>Graph:</strong>Enables analysis as a network.
+- <strong>Knowledge base:</strong>Embeds formal semantics for interpretation and inference.
 
 [Source: Ontotext](https://www.ontotext.com/knowledgehub/fundamentals/what-is-a-knowledge-graph/)
 
@@ -38,7 +38,7 @@ A knowledge graph is typically viewed as a combination of:
 
 Entities (or nodes) are the basic units in a knowledge graph, representing real-world objects, events, or concepts, such as a person, place, company, or document. Entities are typically uniquely identified (e.g., by Uniform Resource Identifiers/URIs), ensuring unambiguous referencing across the graph.
 
-**Examples:**- "Albert Einstein" (Person)  
+<strong>Examples:</strong>- "Albert Einstein" (Person)  
 - "New York City" (Location)  
 - "Forrest Gump" (Movie)  
 - "Apple Inc." (Company)
@@ -49,12 +49,12 @@ Entities (or nodes) are the basic units in a knowledge graph, representing real-
 
 Relationships, or edges, define how entities are connected. They capture the nature of interactions, associations, or hierarchies between nodes. Each relationship can be directed (e.g., "employed_by") or undirected (e.g., "friends_with") and may have its own properties (such as time, reason, or ranking).
 
-**Types of relationships:**- Hierarchical (e.g., "isSubClassOf," "managed_by")
+<strong>Types of relationships:</strong>- Hierarchical (e.g., "isSubClassOf," "managed_by")
 - Association (e.g., "member_of," "located_in")
 - Causal (e.g., "causes," "influences")
 - Sequential (e.g., "follows," "precedes")
 
-**Examples:**- "Tom Hanks" —[acted_in]→ "Forrest Gump"  
+<strong>Examples:</strong>- "Tom Hanks" —[acted_in]→ "Forrest Gump"  
 - "Paris" —[isCapitalOf]→ "France"
 
 [Source: Splunk](https://www.splunk.com/en_us/blog/learn/knowledge-graphs.html)
@@ -63,11 +63,11 @@ Relationships, or edges, define how entities are connected. They capture the nat
 
 Attributes are key-value data attached to nodes or edges, providing additional descriptive information and context. Attributes can be numerical, categorical, or textual.
 
-**Node attributes:**- Name, birthdate, address, status, category, etc.
+<strong>Node attributes:</strong>- Name, birthdate, address, status, category, etc.
 
-**Edge attributes:**- Start date, duration, relevance, ranking, etc.
+<strong>Edge attributes:</strong>- Start date, duration, relevance, ranking, etc.
 
-**Examples:**- Node: "Paris" (type: City, population: 2.1 million, country: France)
+<strong>Examples:</strong>- Node: "Paris" (type: City, population: 2.1 million, country: France)
 - Edge: "Tom Hanks" —[acted_in, year: 1994]→ "Forrest Gump"
 
 [Source: Splunk](https://www.splunk.com/en_us/blog/learn/knowledge-graphs.html)
@@ -76,12 +76,12 @@ Attributes are key-value data attached to nodes or edges, providing additional d
 
 An ontology is a formal, shared conceptualization specifying the types of entities, relationships, attributes, and constraints allowed in the graph. It provides a contract for data consistency and interpretable meaning, supporting data integration and advanced reasoning.
 
-**Components of an ontology:**- **Classes:**Hierarchical categories (Person, Organization, City, etc.)
-- **Relationship types:**Defined nature (e.g., "parent_of" is inverse of "child_of")
-- **Categories:**Groupings or tags (e.g., "Bestselling books," "19th-century composers")
-- **Formal rules:**Constraints, such as cardinality, transitivity, symmetry
+<strong>Components of an ontology:</strong>- <strong>Classes:</strong>Hierarchical categories (Person, Organization, City, etc.)
+- <strong>Relationship types:</strong>Defined nature (e.g., "parent_of" is inverse of "child_of")
+- <strong>Categories:</strong>Groupings or tags (e.g., "Bestselling books," "19th-century composers")
+- <strong>Formal rules:</strong>Constraints, such as cardinality, transitivity, symmetry
 
-**Example:**A movie ontology might specify:
+<strong>Example:</strong>A movie ontology might specify:
 - "Actor" can "act_in" a "Movie"
 - "Director" can "direct" a "Movie"
 - "Movie" has "release_date" and "genre"
@@ -92,7 +92,7 @@ An ontology is a formal, shared conceptualization specifying the types of entiti
 
 Each entity and relationship in a knowledge graph is assigned a unique identifier (often a URI) to ensure unambiguous referencing, crucial for data integration and disambiguation (e.g., "Apple" (fruit) vs. "Apple Inc." (company)).
 
-**Example:**- URI: `https://example.com/id/apple-inc`
+<strong>Example:</strong>- URI: `https://example.com/id/apple-inc`
 - URI: `https://example.com/id/apple-fruit`
 
 [Source: Schema App](https://www.schemaapp.com/schema-markup/the-anatomy-of-a-content-knowledge-graph/)
@@ -101,10 +101,10 @@ Each entity and relationship in a knowledge graph is assigned a unique identifie
 
 Knowledge graphs can support logical inference—deducing new facts or connections from existing data using rules or algorithms. This enables systems to answer complex queries, discover hidden patterns, and automate reasoning tasks.
 
-**Types of inference:**- **Ontology-based:**Uses schema/ontology rules to infer new relationships (e.g., transitive, symmetric, or inverse relationships).
-- **Graph algorithms:**Includes path finding (e.g., shortest path), centrality detection (e.g., PageRank), and community detection.
+<strong>Types of inference:</strong>- <strong>Ontology-based:</strong>Uses schema/ontology rules to infer new relationships (e.g., transitive, symmetric, or inverse relationships).
+- <strong>Graph algorithms:</strong>Includes path finding (e.g., shortest path), centrality detection (e.g., PageRank), and community detection.
 
-**Examples:**- If "Alice" is parent of "Bob" and "Bob" is parent of "Carol," the graph can infer "Alice" is grandparent of "Carol."
+<strong>Examples:</strong>- If "Alice" is parent of "Bob" and "Bob" is parent of "Carol," the graph can infer "Alice" is grandparent of "Carol."
 - If "A" is a subtype of "B" and "B" is a subtype of "C," infer "A" is a subtype of "C."
 
 [Source: Stanford](https://web.stanford.edu/class/cs520/2020/notes/What_Are_Some_Inference_Algorithms.html)
@@ -139,9 +139,9 @@ Graph query languages, such as SPARQL (for RDF graphs) or Cypher (for property g
 
 Knowledge graphs are dynamic, allowing continuous enrichment, updates, and refinement as new information becomes available.
 
-**Graph Databases & Query Languages:**Popular graph databases include Neo4j, Amazon Neptune, and GraphDB. Query languages include SPARQL (for RDF) and Cypher (for property graphs).
+<strong>Graph Databases & Query Languages:</strong>Popular graph databases include Neo4j, Amazon Neptune, and GraphDB. Query languages include SPARQL (for RDF) and Cypher (for property graphs).
 
-**Integration:**Knowledge graphs excel at connecting previously siloed data from multiple sources, providing a unified, machine-interpretable network for richer analytics and more accurate AI-driven insights.
+<strong>Integration:</strong>Knowledge graphs excel at connecting previously siloed data from multiple sources, providing a unified, machine-interpretable network for richer analytics and more accurate AI-driven insights.
 
 [Source: Neo4j](https://neo4j.com/blog/knowledge-graph/what-is-knowledge-graph/), [IBM](https://www.ibm.com/think/topics/knowledge-graph)
 
@@ -149,13 +149,13 @@ Knowledge graphs are dynamic, allowing continuous enrichment, updates, and refin
 
 Ontologies provide the schema—the organizing principles—of a knowledge graph. They define entity types, relationships, constraints, and categories, ensuring consistency and enabling complex reasoning.
 
-- **Ontology:**An abstract, formal specification of the structure, classes, relationships, and constraints for a domain.
-- **Knowledge Graph:**A concrete instance of an ontology, populated with real-world data and relationships.
+- <strong>Ontology:</strong>An abstract, formal specification of the structure, classes, relationships, and constraints for a domain.
+- <strong>Knowledge Graph:</strong>A concrete instance of an ontology, populated with real-world data and relationships.
 
-**Ontology Components:**- **Classes:**e.g., Person, Organization, City  
-- **Relationship types:**e.g., parent_of, member_of, located_in  
-- **Categories/Taxonomies:**e.g., "Big Four consultants," "XIX century composers"  
-- **Formal Rules:**e.g., transitivity, symmetry, inverses
+<strong>Ontology Components:</strong>- <strong>Classes:</strong>e.g., Person, Organization, City  
+- <strong>Relationship types:</strong>e.g., parent_of, member_of, located_in  
+- <strong>Categories/Taxonomies:</strong>e.g., "Big Four consultants," "XIX century composers"  
+- <strong>Formal Rules:</strong>e.g., transitivity, symmetry, inverses
 
 Ontologies enable formal semantics, allowing both humans and machines to interpret and reason over data in a consistent, reliable manner.
 
@@ -165,10 +165,10 @@ Ontologies enable formal semantics, allowing both humans and machines to interpr
 
 Knowledge graphs enable inference—deriving new information not explicitly present, using structural and semantic rules.
 
-**Classes of inference algorithms:**- **Graph-based:**Path finding (e.g., shortest path), centrality (e.g., PageRank), community detection
-- **Ontology-based:**Logical deduction using class hierarchies, transitive/symmetric/inverse relationships
+<strong>Classes of inference algorithms:</strong>- <strong>Graph-based:</strong>Path finding (e.g., shortest path), centrality (e.g., PageRank), community detection
+- <strong>Ontology-based:</strong>Logical deduction using class hierarchies, transitive/symmetric/inverse relationships
 
-**Real-world uses:**- Inferring grandparent relationships from parent links  
+<strong>Real-world uses:</strong>- Inferring grandparent relationships from parent links  
 - Identifying influential nodes (e.g., in fraud detection or social networks)  
 - Detecting communities or clusters (e.g., for recommendation or anomaly detection)
 
@@ -178,50 +178,50 @@ Knowledge graphs enable inference—deriving new information not explicitly pres
 
 ### Well-Known Knowledge Graphs
 
-- **Google Knowledge Graph:**Powers Google Search, providing contextual information about people, places, and things, and enabling features like the Knowledge Panel.  
+- <strong>Google Knowledge Graph:</strong>Powers Google Search, providing contextual information about people, places, and things, and enabling features like the Knowledge Panel.  
   [Read more](https://blog.google/products/search/introducing-knowledge-graph-things-not/)
 
-- **DBpedia:**Extracts structured data from Wikipedia, forming a vast open knowledge graph for public use.  
+- <strong>DBpedia:</strong>Extracts structured data from Wikipedia, forming a vast open knowledge graph for public use.  
   [DBpedia](https://wiki.dbpedia.org/)
 
-- **Wikidata:**A collaboratively edited knowledge graph supporting Wikimedia projects.  
+- <strong>Wikidata:</strong>A collaboratively edited knowledge graph supporting Wikimedia projects.  
   [Wikidata](https://www.wikidata.org/)
 
-- **LinkedIn Economic Graph:**Maps relationships between professionals, companies, skills, and opportunities.  
+- <strong>LinkedIn Economic Graph:</strong>Maps relationships between professionals, companies, skills, and opportunities.  
   [LinkedIn Economic Graph](https://economicgraph.linkedin.com/)
 
-- **Facebook Entity Graph, Amazon Product Graph:**Drive social and product recommendations by linking users, content, and products.
+- <strong>Facebook Entity Graph, Amazon Product Graph:</strong>Drive social and product recommendations by linking users, content, and products.
 
 ### Industry Use Cases
 
-- **Search and Question Answering:**Knowledge graphs deliver direct, context-aware answers to user queries.  
+- <strong>Search and Question Answering:</strong>Knowledge graphs deliver direct, context-aware answers to user queries.  
   [Source: AIMultiple](https://research.aimultiple.com/knowledge-graph/)
 
-- **Recommendation Systems:**Used in e-commerce and streaming (e.g., Amazon, Netflix) to personalize product or content suggestions.
+- <strong>Recommendation Systems:</strong>Used in e-commerce and streaming (e.g., Amazon, Netflix) to personalize product or content suggestions.
 
-- **Fraud Detection and Risk Analysis:**Financial institutions use knowledge graphs to map and analyze relationships among entities, improving detection of suspicious patterns and AML/KYC compliance.
+- <strong>Fraud Detection and Risk Analysis:</strong>Financial institutions use knowledge graphs to map and analyze relationships among entities, improving detection of suspicious patterns and AML/KYC compliance.
 
-- **Healthcare and Biomedical Research:**Integrate patient records, medical research, and clinical guidelines to support diagnostics and drug discovery.
+- <strong>Healthcare and Biomedical Research:</strong>Integrate patient records, medical research, and clinical guidelines to support diagnostics and drug discovery.
 
-- **Enterprise Knowledge Management:**Organize internal data, documents, and expertise for easier discovery and reuse.
+- <strong>Enterprise Knowledge Management:</strong>Organize internal data, documents, and expertise for easier discovery and reuse.
 
-- **Supply Chain Optimization:**Connects data from all supply chain stages, enabling logistics optimization and risk forecasting.
+- <strong>Supply Chain Optimization:</strong>Connects data from all supply chain stages, enabling logistics optimization and risk forecasting.
 
-- **Customer 360 and Master Data Management:**Unifies customer or product data from multiple systems for a holistic view.
+- <strong>Customer 360 and Master Data Management:</strong>Unifies customer or product data from multiple systems for a holistic view.
 
-**Mini-Scenario:**If a product recall is issued by "Vendor C" for "Product B," a retail knowledge graph can immediately identify all affected customers and orders by traversing the supplier-product-customer relationships.
+<strong>Mini-Scenario:</strong>If a product recall is issued by "Vendor C" for "Product B," a retail knowledge graph can immediately identify all affected customers and orders by traversing the supplier-product-customer relationships.
 
 [Sources: AIMultiple](https://research.aimultiple.com/knowledge-graph/), [Neo4j](https://neo4j.com/blog/knowledge-graph/top-10-use-cases-knowledge-graphs/), [PuppyGraph](https://www.puppygraph.com/blog/knowledge-graph-examples)
 
 ## Value and Benefits
 
-- **Data Integration:**Unifies fragmented, heterogeneous datasets (structured, unstructured, semi-structured).
-- **Semantic Search:**Supports intelligent, context-aware search and discovery.
-- **Personalization:**Enables tailored recommendations and user experiences.
-- **Explainability:**Makes AI decisions transparent and auditable.
-- **AI & Automation Support:**Enriches machine learning with structured background knowledge for improved performance.
-- **Flexibility:**Graph models accommodate new data types and relationships with minimal redesign.
-- **Efficient Complex Queries:**Native traversal of relationships provides superior performance for connected data versus traditional relational databases.
+- <strong>Data Integration:</strong>Unifies fragmented, heterogeneous datasets (structured, unstructured, semi-structured).
+- <strong>Semantic Search:</strong>Supports intelligent, context-aware search and discovery.
+- <strong>Personalization:</strong>Enables tailored recommendations and user experiences.
+- <strong>Explainability:</strong>Makes AI decisions transparent and auditable.
+- <strong>AI & Automation Support:</strong>Enriches machine learning with structured background knowledge for improved performance.
+- <strong>Flexibility:</strong>Graph models accommodate new data types and relationships with minimal redesign.
+- <strong>Efficient Complex Queries:</strong>Native traversal of relationships provides superior performance for connected data versus traditional relational databases.
 
 [Source: PuppyGraph](https://www.puppygraph.com/blog/knowledge-graph-examples)
 
@@ -229,36 +229,36 @@ Knowledge graphs enable inference—deriving new information not explicitly pres
 
 ### Typical Steps
 
-1. **Define Scope/Purpose:**Identify the domain, key entities, and target use cases.
-2. **Data Collection/Preparation:**Gather, cleanse, and normalize data from various sources.
-3. **Entity/Relationship Extraction:**Use NLP and machine learning to identify and categorize entities and relationships.
-4. **Design Ontology (Schema):**Specify entity types, relationships, attributes, and constraints.
-5. **Graph Database Selection:**Choose the right technology (Neo4j, Amazon Neptune, GraphDB, etc.).
-6. **Data Loading:**Ingest data into the graph model, ensuring linkage and consistency.
-7. **Query & Analyze:**Use languages like Cypher, SPARQL, or Gremlin for queries and analytics.
-8. **Visualization & Integration:**Employ visualization tools (Gephi, Linkurious) and integrate with applications.
-9. **Maintenance:**Continuously enrich, update, and validate the graph as new data arrives.
+1. <strong>Define Scope/Purpose:</strong>Identify the domain, key entities, and target use cases.
+2. <strong>Data Collection/Preparation:</strong>Gather, cleanse, and normalize data from various sources.
+3. <strong>Entity/Relationship Extraction:</strong>Use NLP and machine learning to identify and categorize entities and relationships.
+4. <strong>Design Ontology (Schema):</strong>Specify entity types, relationships, attributes, and constraints.
+5. <strong>Graph Database Selection:</strong>Choose the right technology (Neo4j, Amazon Neptune, GraphDB, etc.).
+6. <strong>Data Loading:</strong>Ingest data into the graph model, ensuring linkage and consistency.
+7. <strong>Query & Analyze:</strong>Use languages like Cypher, SPARQL, or Gremlin for queries and analytics.
+8. <strong>Visualization & Integration:</strong>Employ visualization tools (Gephi, Linkurious) and integrate with applications.
+9. <strong>Maintenance:</strong>Continuously enrich, update, and validate the graph as new data arrives.
 
 ### Leading Technologies
 
-- **Graph Databases:**Neo4j, Amazon Neptune, Ontotext GraphDB
-- **Data Formats:**RDF, Property Graph
-- **Ontology Languages:**OWL (Web Ontology Language)
-- **Query Languages:**SPARQL (RDF), Cypher (property graph), Gremlin
+- <strong>Graph Databases:</strong>Neo4j, Amazon Neptune, Ontotext GraphDB
+- <strong>Data Formats:</strong>RDF, Property Graph
+- <strong>Ontology Languages:</strong>OWL (Web Ontology Language)
+- <strong>Query Languages:</strong>SPARQL (RDF), Cypher (property graph), Gremlin
 
 [Source: Neo4j](https://neo4j.com/blog/knowledge-graph/what-is-knowledge-graph/), [AIMultiple](https://research.aimultiple.com/knowledge-graph/)
 
 ## FAQ
 
-**How is a knowledge graph different from a graph database?**A graph database is a storage technology for managing connected data. A knowledge graph is a data model (often implemented on a graph database) enriched with semantics and ontologies for advanced reasoning.
+<strong>How is a knowledge graph different from a graph database?</strong>A graph database is a storage technology for managing connected data. A knowledge graph is a data model (often implemented on a graph database) enriched with semantics and ontologies for advanced reasoning.
 
-**What is a triplestore?**A triplestore is a database for managing subject-predicate-object triples (e.g., "Paris" —[isCapitalOf]→ "France"), foundational for semantic web and RDF-based knowledge graphs.
+<strong>What is a triplestore?</strong>A triplestore is a database for managing subject-predicate-object triples (e.g., "Paris" —[isCapitalOf]→ "France"), foundational for semantic web and RDF-based knowledge graphs.
 
-**Do large language models (LLMs) use knowledge graphs?**LLMs are primarily trained on text, but combining them with knowledge graphs (e.g., in Retrieval-Augmented Generation/RAG) enhances AI by grounding responses in structured, verified knowledge.
+<strong>Do large language models (LLMs) use knowledge graphs?</strong>LLMs are primarily trained on text, but combining them with knowledge graphs (e.g., in Retrieval-Augmented Generation/RAG) enhances AI by grounding responses in structured, verified knowledge.
 
-**What is inference in a knowledge graph?**Inference is deducing new facts from existing data using logical or graph algorithms (e.g., inferring grandparent relationships or detecting influential nodes).
+<strong>What is inference in a knowledge graph?</strong>Inference is deducing new facts from existing data using logical or graph algorithms (e.g., inferring grandparent relationships or detecting influential nodes).
 
-**Can knowledge graphs be updated as information changes?**Yes, knowledge graphs are dynamic and can be updated with new nodes, relationships, and attributes as new information becomes available.
+<strong>Can knowledge graphs be updated as information changes?</strong>Yes, knowledge graphs are dynamic and can be updated with new nodes, relationships, and attributes as new information becomes available.
 
 ## References
 
