@@ -595,19 +595,19 @@ class LinkBuilder:
                     paragraph_links >= max_links_density):
                     break
             
-            # Check keyword-specific limits
-            if (self.page_keyword_counts[keyword.keyword] >= self.config.max_replacements_per_keyword or
-                self.page_url_counts[keyword.url] >= self.config.max_replacements_per_url):
-                continue
-            
-            keyword_url_key = f"{keyword.keyword}|{keyword.url}"
-            if self.page_keyword_url_counts[keyword_url_key] >= self.config.max_replacements_per_keyword_url:
-                continue
-            
             # Find keyword in text
             matches = list(keyword.keyword_pattern.finditer(text))
             
             for match in matches:
+                # Check keyword-specific limits INSIDE the loop to handle multiple matches in one text node
+                if (self.page_keyword_counts[keyword.keyword] >= self.config.max_replacements_per_keyword or
+                    self.page_url_counts[keyword.url] >= self.config.max_replacements_per_url):
+                    break
+                
+                keyword_url_key = f"{keyword.keyword}|{keyword.url}"
+                if self.page_keyword_url_counts[keyword_url_key] >= self.config.max_replacements_per_keyword_url:
+                    break
+
                 start, end = match.span()
                 
                 # Check morphological boundaries for Japanese
