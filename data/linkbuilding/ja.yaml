@@ -1648,3 +1648,28 @@ keywords:
   exact: true
   priority: 10
   title: ビジュアライゼーション の用語集ページ
+- keyword: Google DeepMind
+  url: /ja/glossary/Google-DeepMind/
+  exact: false
+  priority: 12
+  title: Google DeepMindは、Alphabet傘下のAI研究機関であり、AlphaGoやAlphaFoldなどの画期的な成果で知られ、汎用人工知能の発展に貢献しています。
+- keyword: DeepMind
+  url: /ja/glossary/Google-DeepMind/
+  exact: false
+  priority: 12
+  title: Google DeepMindは、Alphabet傘下のAI研究機関であり、AlphaGoやAlphaFoldなどの画期的な成果で知られ、汎用人工知能の発展に貢献しています。
+- keyword: Gemini
+  url: /ja/glossary/Gemini/
+  exact: true
+  priority: 12
+  title: Geminiは、テキスト、画像、音声、動画の理解に優れたGoogleの先進的なマルチモーダルAIモデルファミリーです。Gemini 2.5 Pro、機能、アプリケーションについて解説します。
+- keyword: AlphaGo
+  url: /ja/glossary/AlphaGo/
+  exact: true
+  priority: 12
+  title: AlphaGoは、DeepMindが開発したAIプログラムで、2016年に世界囲碁チャンピオンを破りました。深層強化学習とモンテカルロ木探索を使用しています。
+- keyword: AlphaZero
+  url: /ja/glossary/AlphaZero/
+  exact: true
+  priority: 12
+  title: AlphaZeroは、人間の知識を用いることなく、純粋な自己対戦型強化学習を通じてチェス、将棋、囲碁を習得した汎用ゲームプレイAIです。
