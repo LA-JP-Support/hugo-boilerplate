@@ -9,7 +9,9 @@ frontend:
     build:
       commands:
         - npm run build
-        - hugo --minify
+        - export HUGO_CACHEDIR="$(pwd)/.hugo_cache"
+        - mkdir -p "$HUGO_CACHEDIR"
+        - hugo --minify --cacheDir "$HUGO_CACHEDIR"
         - python3 scripts/linkbuilding_parallel.py --linkbuilding-dir data/linkbuilding --public-dir public --denylist-dir databases --max-links 9999 --max-keyword 1 --max-url 1
   artifacts:
     baseDirectory: public
@@ -19,3 +21,5 @@ frontend:
     paths:
       - node_modules/**/*
       - ~/.cache/pip/**/*
+      - .hugo_cache/**/*
+      - resources/**/*
