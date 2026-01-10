@@ -4,9 +4,7 @@ lastmod: '2025-12-19'
 date: '2025-12-19'
 translationKey: personal-information-protection-law
 url: "/ja/glossary/Personal-Information-Protection-Law/"
----
-china--
-description: 個人情報保護法(PIPL)は、中国における包括的なデータ保護法であり、個人情報の処理、個人の権利、組織の要件を規制しています。
+description: 中国の個人情報保護法(PIPL)は、中国における包括的なデータ保護法であり、個人情報の処理、個人の権利、組織の要件を規制しています。
 keywords:
 - 個人情報保護法
 - 中国データ保護
