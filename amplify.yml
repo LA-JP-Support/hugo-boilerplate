@@ -1,0 +1,21 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci || npm install
+        - python3 -m pip install --upgrade pip
+        - pip3 install beautifulsoup4 lxml pyyaml janome
+    build:
+      commands:
+        - npm run build
+        - hugo --minify
+        - python3 scripts/linkbuilding_parallel.py --linkbuilding-dir data/linkbuilding --public-dir public --denylist-dir databases --max-links 9999 --max-keyword 1 --max-url 1
+  artifacts:
+    baseDirectory: public
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
+      - ~/.cache/pip/**/*
