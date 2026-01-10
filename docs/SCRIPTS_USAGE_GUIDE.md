@@ -563,22 +563,63 @@ vim content/ja/blog/knowledge-base-faq-guide-2025.md
 # 2. ツールチップを検索
 /\[.*\](/.*/ ".*")
 
-# 3. 修正
-# Before: [text](/path/[nested](/nested-path/ "tooltip")](/path/ "tooltip"))
-# After:  [text](/path/)
 ```
 
-**一括修正スクリプト**: `scripts/remove_tooltips.py`
+**注意**:
+
+- 現在 `scripts/remove_tooltips.py` は存在しません（古い記載）。
+- 代替として `scripts/sanitize_markdown.py` / `scripts/scrub_blog_posts.py` は存在しますが、これらは **リンクを広範に剥がす**ため破壊的です。
+  - 実行する場合は必ずバックアップを取り、まず1ファイルで検証してください。
+
+---
+
+### 用語集（glossary）の `<strong>/<b>` を Markdown 太字（`**`）に変換
+
+**用途**: `content/en/glossary` と `content/ja/glossary` に残っている `<strong></strong>` / `<b></b>` を安全に `**` に変換します。
+
+**スクリプト**: `scripts/convert_strong_to_markdown_bold.py`
+
+**安全設計**:
+
+- コードブロック（```）とインラインコード（`...`）は保護して変換しません
+- 変換後に `**` の偶奇が崩れるファイルは自動的にスキップしてレポートします
+
+**使用方法**:
 
 ```bash
-# 日本語ブログのツールチップを削除
-python scripts/remove_tooltips.py \
-    --content-dir content/ja/blog
+# 1) まず dry-run（書き込みなし）
+python3 scripts/convert_strong_to_markdown_bold.py \
+  --report strong_to_md_report.dryrun.json
 
-# 英語ブログのツールチップを削除
-python scripts/remove_tooltips.py \
-    --content-dir content/en/blog
+# 2) 問題がなければ適用（書き込みあり）
+python3 scripts/convert_strong_to_markdown_bold.py \
+  --apply \
+  --report strong_to_md_report.apply.json
 ```
+
+---
+
+### ⚠️ Markdown（.md）を書き換えるスクリプト一覧（事故防止）
+
+このリポジトリには、`content/` 配下の Markdown を直接書き換えるスクリプトが複数あります。
+**一括実行前に必ずバックアップ（またはGitで復元可能な状態）**を作ってください。
+
+特に注意が必要（用途はあるが、誤実行で大きく壊れる可能性がある）:
+
+- `scripts/sanitize_markdown.py`
+  - ツールチップ除去 + **リンクを全て剥がす**（破壊的）
+- `scripts/scrub_blog_posts.py`
+  - ツールチップ除去 + **リンクを全て剥がす**（破壊的）
+- `scripts/clean_en_content.py`
+  - `**text**` を `strong` タグに変換するため、`<strong>` タグを再導入します
+- `scripts/fix_ja_blog_formatting.py`
+  - 日本語ブログに内部リンクを直接挿入します（現行方式では非推奨）
+
+内部リンク系（Markdown直接編集方式）は v2.0.0 以降 **非推奨/使用禁止**:
+
+- `scripts/archived_markdown_based/add_internal_links.py`
+- `scripts/archived_markdown_based/add_links_from_database.py`
+- `scripts/archived_markdown_based/remove_internal_links.py`
 
 ---
 
@@ -782,17 +823,18 @@ python scripts/translate_glossary_en_to_ja.py --start 0 --end 100 --workers 5
 # 推定時間: 約60分（30秒/記事 × 100 ÷ 5並列）
 # 推定コスト: 約$15-20（$0.15-0.20/記事）
 
-# 3. 最適化・リンク構築
+# 3. 最適化（description）
 python scripts/optimize_glossary_descriptions.py --lang en --workers 5
 python scripts/optimize_glossary_descriptions.py --lang ja --workers 5
-python scripts/linkbuilding_parallel.py \
-    --content-dir content/en/glossary \
-    --glossary-dir content/en/glossary \
-    --workers 5
-python scripts/linkbuilding_parallel.py \
-    --content-dir content/ja/glossary \
-    --glossary-dir content/ja/glossary \
-    --workers 5
+
+# 4. Hugoビルド（content-clean → public）
+hugo --contentDir content-clean --destination public --cleanDestinationDir
+
+# 5. 内部リンク追加（HTML後処理: public/ を処理）
+python3 scripts/linkbuilding_parallel.py \
+  --linkbuilding-dir data/linkbuilding \
+  --public-dir public \
+  --denylist-dir databases
 ```
 
 ---

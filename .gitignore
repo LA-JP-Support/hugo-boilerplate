@@ -58,4 +58,5 @@ content-drafts/**/*.md
 
 # Temporary / generated artifacts
 tmp_batch_*/
+.local_archive/
 **/__pycache__/
