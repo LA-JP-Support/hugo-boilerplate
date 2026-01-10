@@ -459,7 +459,12 @@ class LinkBuilder:
                 content = f.read()
             
             # Parse HTML
-            soup = BeautifulSoup(content, 'html.parser')
+            parser = 'lxml'
+            try:
+                __import__('lxml')
+            except Exception:
+                parser = 'html.parser'
+            soup = BeautifulSoup(content, parser)
             
             # Extract current page URL from canonical link or meta tags
             self.current_page_url = self._extract_page_url(soup)
