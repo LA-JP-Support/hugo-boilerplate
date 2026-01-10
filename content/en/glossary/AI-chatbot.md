@@ -2,7 +2,7 @@
 title: AI Chatbot
 lastmod: 2025-12-18
 date: 2025-12-18
-translationKey: ai-chatbot-in-depth-glossary-and-guide
+translationKey: ai-chatbot
 description: 'Explore AI chatbots: learn what they are, how they work with NLP, NLU, and LLMs, their types, benefits, use cases, and best practices for deployment.'
 keywords:
 - AI chatbot

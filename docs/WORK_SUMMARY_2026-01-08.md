@@ -1,5 +1,40 @@
 # 作業完了サマリ - 2026-01-08
 
+## 追記（2026-01-10）
+
+### 追加で実施した内容
+
+- ✅ **日本語用語集description最適化の再実行**
+  - コマンド: `python3 scripts/optimize_glossary_descriptions.py --lang ja --workers 5`
+  - 結果: `ok: 1231件 / skipped: 1件`
+- ✅ **skipped 1件の原因特定と修正**
+  - 対象: `content/ja/glossary/Personal-Information-Protection-Law.md`
+  - 原因: YAMLフロントマターが途中で壊れており、`description` が抽出できず `skipped` 扱いになっていた
+  - 対応: フロントマターの不正行（途中の `---` / ゴミ文字列）を削除して修正
+- ✅ **URLの小文字化（ケースセンシティブ対策）**
+  - `content/ja/glossary/LiveAgent.md`: `url` を `/ja/glossary/liveagent/` に変更
+  - `content/ja/glossary/FlowHunt.md`: `url` を `/ja/glossary/flowhunt/` に変更
+- ✅ **リンクURLの不整合修正（AIチャットボット・チケットシステム）**
+  - **原因特定**:
+    - `data/linkbuilding/ja.yaml`（手動辞書）に古いURLパターン（`/ja/glossary/ai-chatbot-in-depth-glossary-and-guide/`）が直接記述されていた。
+    - `content/ja/glossary/AI-chatbot.md` の `translationKey` が古く、自動生成URLにも悪影響を与えていた。
+    - チケットシステムのリンク先が、存在しないページ（`/ja/glossary/ticket-system/`）になっていた（正しくは `/ja/glossary/ticket/`）。
+  - **対応**:
+    - `ja.yaml` / `en.yaml` の古いURLエントリを修正。
+    - `AI-chatbot.md` (JA/EN) の `translationKey` を `ai-chatbot` に修正。
+    - `extract_automatic_links.py` を再実行し、自動生成辞書（`ja_automatic.json`）をクリーンアップ。
+- ✅ **ローカルで内部リンク付きプレビュー（同一ポート1313で切り替え）**
+  - `hugo server` 側はHTML後処理を自動で走らせないため、静的ビルド + linkbuilding 適用後に `python3 -m http.server` で配信する手順を確立
+- ✅ **ドキュメント更新（今回の知見を反映）**
+  - `docs/INTERNAL_LINKING_QUICK_START.md`: ローカルで内部リンク付き確認手順を追記
+  - `docs/SCRIPTS_USAGE_GUIDE.md`: `optimize_glossary_descriptions.py` の `skipped` 条件を追記
+  - `docs/INTERNAL_LINK_SYSTEM_GUIDE.md`: 旧方式（Markdown直接編集）と現行方式（HTML後処理）の位置付けを明確化
+  - `WORKFLOW.md`: `hugo server` 単体では内部リンクが付かない注意を追記
+  - `CHANGELOG_INTERNAL_LINKING.md`: `2.1.2 (2026-01-10)` としてドキュメント更新を追記
+- ✅ **公開デプロイ（GitHub push → Amplify）**
+  - コミット: `Fix JA glossary frontmatter and URLs`（JA用語集3ファイル）
+  - push: `main` へ反映し、Amplifyデプロイをトリガー
+
 ## 実施内容
 
 ### 1. 日本語内部リンクの問題修正

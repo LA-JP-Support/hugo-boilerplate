@@ -62,6 +62,32 @@ grep -r 'data-lb="1"' public/ja/ | wc -l
 
 ---
 
+## 🧪 ローカルで「内部リンク付き」を確認する（同じポートで切り替え）
+
+ `hugo server` は **HTML後処理（内部リンク付与）を自動実行しない**ため、ブラウザ上で内部リンクを確認したい場合は、内部リンク適用済みの静的HTMLを配信して確認します。
+
+```bash
+# 1) いったん hugo server を止める（同じポートを使う場合）
+
+# 2) 静的ビルド（成果物: public/ は .gitignore 対象）
+hugo --baseURL http://localhost:1313/ --destination public --cleanDestinationDir
+
+# 3) HTML後処理で内部リンク追加（EN/JA両方）
+python3 scripts/linkbuilding_parallel.py \
+  --linkbuilding-dir data/linkbuilding \
+  --public-dir public \
+  --denylist-dir databases
+
+# 4) 静的サーバで配信（同じポート 1313）
+python3 -m http.server 1313 --bind 127.0.0.1 --directory public
+
+# 5) ブラウザで確認
+# http://localhost:1313/ja/...
+# http://localhost:1313/en/...
+```
+
+---
+
 ## 📁 ディレクトリ構造
 
 ```

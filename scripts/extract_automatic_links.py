@@ -25,12 +25,50 @@ import argparse
 import frontmatter
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit, urlunsplit
 import logging
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
+
+def normalize_url(url: str) -> str:
+    """Normalize URLs to match Hugo's default behavior (lowercase paths).
+
+    Hugo lowercases URL paths by default unless disablePathToLower is set.
+    The linkbuilding system should therefore emit lowercase site-relative URLs
+    to avoid case-sensitive 404s.
+    """
+    if url is None:
+        return ""
+    url = str(url).strip()
+    if not url:
+        return ""
+
+    parts = urlsplit(url)
+    if parts.scheme or parts.netloc:
+        # Absolute URL: lowercase only the path
+        return urlunsplit((parts.scheme, parts.netloc, parts.path.lower(), parts.query, parts.fragment))
+
+    # Relative URL: preserve query/fragment while lowercasing path
+    path = url
+    fragment = ""
+    query = ""
+
+    if "#" in path:
+        path, fragment = path.split("#", 1)
+    if "?" in path:
+        path, query = path.split("?", 1)
+
+    path = path.lower()
+
+    out = path
+    if query:
+        out += "?" + query
+    if fragment:
+        out += "#" + fragment
+    return out
 
 
 class LinkExtractor:
@@ -164,20 +202,20 @@ class LinkExtractor:
             # Ensure URL ends with / for consistency (unless it's a file with extension)
             if not url.endswith('/') and '.' not in url.split('/')[-1]:
                 url += '/'
-            return url
+            return normalize_url(url)
         
         # 2. Check for flow_id (special case for ai-flow-templates)
         if 'flow_id' in frontmatter_data:
             # Generate URL based on file path for flow templates
             relative_path = file_path.relative_to(self.content_dir)
             url_path = self.path_to_url(relative_path)
-            return url_path
+            return normalize_url(url_path)
         
         # 3. Generate URL from file path as fallback
         relative_path = file_path.relative_to(self.content_dir)
         url_path = self.path_to_url(relative_path)
-        
-        return url_path
+
+        return normalize_url(url_path)
     
     def path_to_url(self, relative_path: Path) -> str:
         """Convert a file path to a URL"""
@@ -202,7 +240,8 @@ class LinkExtractor:
         if path_str != '/' and not path_str.endswith('/'):
             path_str += '/'
         
-        return path_str
+        # Normalize to lowercase to match Hugo output
+        return path_str.lower()
     
     def get_title_from_frontmatter(self, frontmatter_data: Dict) -> str:
         """Get title from frontmatter with priority: description > shortDescription > title"""

@@ -14,6 +14,7 @@ import argparse
 import yaml
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
+from urllib.parse import urlsplit, urlunsplit
 from dataclasses import dataclass, field
 from collections import defaultdict
 from datetime import datetime
@@ -25,6 +26,45 @@ try:
     HAS_JANOME = True
 except ImportError:
     HAS_JANOME = False
+
+
+def normalize_url(url: str) -> str:
+    """Normalize URLs to match Hugo's default lowercase path behavior.
+
+    Amplify/S3 hosting is case-sensitive. If a keyword DB contains mixed-case
+    paths (e.g., /ja/glossary/LiveAgent/), generated links can 404 even though
+    Hugo outputs lowercase paths.
+    
+    This normalizes only the path portion, preserving query and fragment.
+    """
+    if url is None:
+        return ""
+    url = str(url).strip()
+    if not url:
+        return ""
+
+    parts = urlsplit(url)
+    if parts.scheme or parts.netloc:
+        return urlunsplit((parts.scheme, parts.netloc, parts.path.lower(), parts.query, parts.fragment))
+
+    # Relative URL: preserve query/fragment while lowercasing path
+    path = url
+    fragment = ""
+    query = ""
+
+    if "#" in path:
+        path, fragment = path.split("#", 1)
+    if "?" in path:
+        path, query = path.split("?", 1)
+
+    path = path.lower()
+
+    out = path
+    if query:
+        out += "?" + query
+    if fragment:
+        out += "#" + fragment
+    return out
 
 
 @dataclass
@@ -726,7 +766,7 @@ def load_keywords_from_csv(file_path: str) -> List[Keyword]:
         for row in reader:
             keyword = Keyword(
                 keyword=row.get('keyword', '').strip(),
-                url=row.get('url', '').strip(),
+                url=normalize_url(row.get('url', '').strip()),
                 title=row.get('title', '').strip(),
                 priority=int(row.get('priority', 0)),
                 exact_match=row.get('exact_match', '').lower() in ('true', '1', 'yes')
@@ -784,7 +824,7 @@ def load_keywords_from_json(file_path: str) -> List[Keyword]:
         if isinstance(item, dict):
             # Support both lowercase and capitalized field names for compatibility
             keyword_text = item.get('Keyword', item.get('keyword', '')).strip()
-            url = item.get('URL', item.get('url', '')).strip()
+            url = normalize_url(item.get('URL', item.get('url', '')).strip())
             title = item.get('Title', item.get('title', '')).strip()
             priority = item.get('Priority', item.get('priority', 0))
             exact_match = item.get('Exact', item.get('exact_match', item.get('exact', False)))
@@ -833,7 +873,7 @@ def load_keywords_from_yaml(file_path: str) -> List[Keyword]:
     for item in items:
         if isinstance(item, dict):
             keyword_text = item.get('keyword', '').strip()
-            url = item.get('url', '').strip()
+            url = normalize_url(item.get('url', '').strip())
             title = item.get('title', '').strip()
             priority = item.get('priority', 0)
             exact_match = item.get('exact', item.get('exact_match', False))

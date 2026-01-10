@@ -2,7 +2,7 @@
 title: AIチャットボット
 lastmod: 2025-12-18
 date: 2025-12-18
-translationKey: ai-chatbot-in-depth-glossary-and-guide
+translationKey: ai-chatbot
 description: "AIチャットボットは、人工知能を使って人間らしく会話し、ユーザーの質問に答えるソフトウェアです。カスタマーサービスや事務作業の自動化に活用されます。"
 keywords:
 - AIチャットボット

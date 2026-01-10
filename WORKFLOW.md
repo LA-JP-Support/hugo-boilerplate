@@ -61,14 +61,19 @@ python3 cleanup_flowhunt_output.py \
 ```
 
 ### ステップ3: プレビュー確認
-
+ 
 ```bash
 hugo server
 # http://localhost:1313/en/glossary/ で確認
 ```
 
-### ステップ4: Gitにコミット
+**注意**:
+- `hugo server` は **HTML後処理（内部リンク付与）を自動実行しません**。
+- 内部リンク付きで確認したい場合は、Hugoで静的ビルドした `public/` に対して `scripts/linkbuilding_parallel.py` を実行し、静的サーバで `public/` を配信して確認してください。
+- 手順は `docs/INTERNAL_LINKING_QUICK_START.md` の「ローカルで内部リンク付き」を参照。
 
+### ステップ4: Gitにコミット
+ 
 ```bash
 # 新しい記事を追加
 git add content/en/glossary/conversation-drift.md

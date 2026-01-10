@@ -210,6 +210,13 @@ python scripts/optimize_glossary_descriptions.py \
 python scripts/optimize_glossary_descriptions.py --lang en --dry-run
 ```
 
+**補足（skippedになる条件）**:
+- **`description` が無い/空**: `skipped` になります（このスクリプトは `description` の「最適化」が目的で、未設定ファイルに新規追加はしません）。
+- **フロントマター構文が壊れている**（`---` の閉じ忘れ/途中に余計な `---` がある等）: `description` が抽出できず `skipped` になることがあります。
+
+**対処**:
+- `---` で正しくフロントマターを閉じ、`description:` を1行で入れてから再実行してください。
+
 ---
 
 ## 翻訳
@@ -431,6 +438,10 @@ python scripts/linkbuilding_parallel.py \
 
 - `extract_automatic_links.py` で `What? faq already exists?` が出る場合は、TOMLフロントマターのFAQを `[[faq]]` に修正してください。
 - `linkbuilding_parallel.py` は「ENは `public/` 直下」前提の挙動があります。ENが `public/en/` 配下に出力される場合は、ENだけ `scripts/linkbuilding.py -d public/en` を実行してください（詳細は `docs/INTERNAL_LINKING_QUICK_START.md`）。
+
+**ローカルプレビューに関する注意**:
+- `hugo server` は **HTML後処理（内部リンク付与）を自動で実行しません**。そのため、`hugo server` だけで見ているページには内部リンクが付かないのが正常です。
+- 内部リンク付きで確認したい場合は、静的ビルドした `public/`（または `public-test/`）に対して `linkbuilding_parallel.py` を実行し、そのディレクトリを静的サーバで配信して確認してください（例は `docs/INTERNAL_LINKING_QUICK_START.md` に追記）。
 
 ---
 

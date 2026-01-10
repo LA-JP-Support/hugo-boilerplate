@@ -35,7 +35,7 @@ keywords:
   priority: 10
   title: AI回答アシスタントは、自然言語処理(NLP)、機械学習(ML)、大規模言語モデル(LLM)、RAG技術を活用し、複雑なテキストや専門用語を明確化・洗練・解説する高度なAI駆動型ソフトウェアシステムです。
 - keyword: AIチャットボット
-  url: /ja/glossary/ai-chatbot-in-depth-glossary-and-guide/
+  url: /ja/glossary/ai-chatbot/
   exact: true
   priority: 10
   title: SmartWebが提供するAIチャットボット・AIカスタマーサポートサービスの利用規約です
@@ -692,10 +692,10 @@ keywords:
   title: チャットボットなどのAIワークフローをインデックス化されたナレッジソースに接続する統合モジュールで、文脈に即した応答を実現するRetrieval
     Augmented Generation(RAG)を強化します。
 - keyword: ナレッジベース
-  url: /ja/glossary/knowledge-bases/
+  url: /ja/glossary/knowledge-base/
   exact: true
   priority: 10
-  title: エンティティリンキングは、テキストから抽出されたエンティティをナレッジベース内の一意のエントリに接続し、曖昧性を解決することで、AI、検索、レコメンデーションのための構造化データを実現します。
+  title: ナレッジベースとは何かを解説します。顧客、従業員、または自動化システムによる迅速な情報検索とセルフサービスを実現する、一元化された整理された情報の集合体です。
 - keyword: LLM as Judge(LLMによる評価)
   url: /ja/glossary/llm-as-judge/
   exact: true
@@ -715,7 +715,7 @@ keywords:
   url: /ja/glossary/latency/
   exact: true
   priority: 10
-  title: レイテンシとは、リクエストとシステムの応答との間の時間遅延のことで、AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。
+  title: レイテンシとは、リクエストとシステムの応答との間の時間遅延のことです。AIインフラストラクチャ、Webアプリケーション、リアルタイムシステムにおいて重要な要素です。その種類、原因、削減戦略について解説します。
 - keyword: レンマ化
   url: /ja/glossary/lemmatization/
   exact: true
@@ -1149,7 +1149,7 @@ keywords:
   priority: 10
   title: スロットリング(APIスロットリング) の用語集ページ
 - keyword: チケットシステム
-  url: /ja/glossary/ticket-system/
+  url: /ja/glossary/ticket/
   exact: true
   priority: 10
   title: カスタマーサポートのチケットシステムの基本から導入方法、AI活用まで詳しく解説。業務効率化と顧客満足度向上を実現する方法を紹介します。
@@ -1213,96 +1213,36 @@ keywords:
   exact: true
   priority: 10
   title: バーチャルアシスタント(VA)とは、人間またはAIによるリモートサービスプロバイダーで、企業や個人に対して管理業務、技術、クリエイティブ、または業界特有のサポートを提供します。
-- keyword: ビジュアルフロービルダー
-  url: /ja/glossary/visual-flow-builder/
+- keyword: ビジュアライゼーション
+  url: /ja/glossary/visualization/
   exact: true
   priority: 10
-  title: ビジュアルフロービルダーは、コードを書くことなく複雑なワークフローやAIプロセスを設計、自動化、管理できるノーコードのドラッグ&ドロップインターフェースです。
-- keyword: ボイスボット
-  url: /ja/glossary/voicebot-glossary-deep-knowledge/
+  title: ビジュアライゼーション の用語集ページ
+- keyword: Google DeepMind
+  url: /ja/glossary/Google-DeepMind/
+  exact: false
+  priority: 12
+  title: Google DeepMindは、Alphabet傘下のAI研究機関であり、AlphaGoやAlphaFoldなどの画期的な成果で知られ、汎用人工知能の発展に貢献しています。
+- keyword: DeepMind
+  url: /ja/glossary/Google-DeepMind/
+  exact: false
+  priority: 12
+  title: Google DeepMindは、Alphabet傘下のAI研究機関であり、AlphaGoやAlphaFoldなどの画期的な成果で知られ、汎用人工知能の発展に貢献しています。
+- keyword: Gemini
+  url: /ja/glossary/Gemini/
   exact: true
-  priority: 10
-  title: ボイスボットの包括的なガイドをご紹介します。ASR、NLP、TTSなどのコア技術、動作原理、主要機能、種類、そしてカスタマーサービスと自動化におけるビジネス上のメリットについて解説します。
-- keyword: Voiceflow
-  url: /ja/glossary/voiceflow/
+  priority: 12
+  title: Geminiは、テキスト、画像、音声、動画の理解に優れたGoogleの先進的なマルチモーダルAIモデルファミリーです。Gemini 2.5 Pro、機能、アプリケーションについて解説します。
+- keyword: AlphaGo
+  url: /ja/glossary/AlphaGo/
   exact: true
-  priority: 10
-  title: Voiceflowは、チャットボットや音声アシスタントなどの会話型AIエージェントを設計、構築、デプロイするためのノーコードプラットフォームです。複数のチャネルにわたって顧客とのやり取りやワークフローを自動化します。
-- keyword: ウェイクワード技術
-  url: /ja/glossary/wake-word-technology/
+  priority: 12
+  title: AlphaGoは、DeepMindが開発したAIプログラムで、2016年に世界囲碁チャンピオンを破りました。深層強化学習とモンテカルロ木探索を使用しています。
+- keyword: AlphaZero
+  url: /ja/glossary/AlphaZero/
   exact: true
-  priority: 10
-  title: ウェイクワード技術 の用語集ページ
-- keyword: ウォーターマーキング
-  url: /ja/glossary/watermarking/
-  exact: true
-  priority: 10
-  title: ウォーターマーキング の用語集ページ
-- keyword: Weaviate
-  url: /ja/glossary/weaviate/
-  exact: true
-  priority: 10
-  title: Weaviateは、オブジェクトと高次元埋め込みを保存するオープンソースのクラウドネイティブなベクトルデータベースです。セマンティック検索、ハイブリッド検索、大規模なAI/MLアプリケーションを可能にします。
-- keyword: Webスクレイパーノード
-  url: /ja/glossary/web-scraper-node/
-  exact: true
-  priority: 10
-  title: Webスクレイパーノードは、自動化ワークフロー用のモジュール型コンポーネントで、WebのURLからデータを取得・抽出します。AIチャットボット、競合他社のモニタリング、データ集約に不可欠です。
-- keyword: Webhook Fulfillment
-  url: /ja/glossary/webhook-fulfillment/
-  exact: true
-  priority: 10
-  title: Webhook Fulfillment の用語集ページ
-- keyword: Webhookトリガー
-  url: /ja/glossary/webhook-trigger/
-  exact: true
-  priority: 10
-  title: Webhookトリガーは、外部サービスがリアルタイムのHTTPリクエストを送信することで、自動化されたワークフローを開始できるようにします。AIチャットボット、自動化、システム統合に不可欠な機能です。
-- keyword: Webview(ウェブビュー)
-  url: /ja/glossary/webview/
-  exact: true
-  priority: 10
-  title: Webviewは、フォーム、商品カタログ、決済インターフェースなどのWebコンテンツをチャットボットやモバイルアプリ内に直接表示する埋め込みブラウザウィンドウです。シームレスなユーザー体験を実現します。
-- keyword: ホワイトラベリング
-  url: /ja/glossary/white-labeling/
-  exact: true
-  priority: 10
-  title: AIチャットボットにおけるホワイトラベリングは、企業がベンダーの参照をすべて削除し、完全に自社ブランドとしてチャットボットプラットフォームを展開できる機能です。代理店、SaaS、エンタープライズに最適です。
-- keyword: ウィザード・オブ・オズ・テスティング(WoZ)
-  url: /ja/glossary/wizard-of-oz-testing-woz/
-  exact: true
-  priority: 10
-  title: ウィザード・オブ・オズ・テスティング(WoZ)は、ユーザーが隠れた人間によって制御されるシステムと対話し、AIをシミュレートすることで、コスト効率的にデザインをテストするユーザーリサーチ手法です。
-- keyword: ワークフロー
-  url: /ja/glossary/workflow-definition-types-examples-and-guide-to-workflow/
-  exact: true
-  priority: 10
-  title: ワークフローについて学びましょう。ビジネス目標を効率化する反復可能なタスクのシーケンスです。ワークフローの種類、メリット、効率性と一貫性を高めるための自動化方法を探ります。
-- keyword: Zapier
-  url: /ja/glossary/zapier/
-  exact: true
-  priority: 10
-  title: 8,000以上のアプリを連携するノーコード自動化プラットフォーム、Zapierについて解説します。Zap、AIエージェント、ユースケース、そしてワークフローを効率的に自動化する方法を学びましょう。
-- keyword: ゼロショット思考連鎖
-  url: /ja/glossary/zero-shot-chain-of-thought/
-  exact: true
-  priority: 10
-  title: ゼロショット思考連鎖(CoT)は、LLMのためのプロンプトエンジニアリング技術であり、例を示さずにモデルに段階的な推論を指示することで、複雑な問題解決能力を向上させます。
-- keyword: ゼロタッチ解決
-  url: /ja/glossary/zero-touch-resolution/
-  exact: true
-  priority: 10
-  title: ゼロタッチ解決について探求します。これは、AI、自動化、セルフサービスプラットフォームを使用して、人間の介入なしに問題が自動的に解決される手法です。そのメリット、課題、実装方法について学びます。
-- keyword: ゼロショット学習(ZSL)
-  url: /ja/glossary/zero-shot-learning-zsl/
-  exact: true
-  priority: 10
-  title: ゼロショット学習の包括的ガイド:セマンティック埋め込みを通じて、訓練例なしで未知のカテゴリを分類できるAIモデルの実現方法を解説します。
-- keyword: 用語集
-  url: /ja/glossary/glossary-index/
-  exact: true
-  priority: 10
-  title: AIチャットボット、自動化、カスタマーサポートに関する包括的な用語集。技術的な概念をわかりやすく解説します。
+  priority: 12
+  title: AlphaZeroは、人間の知識を用いることなく、純粋な自己対戦型強化学習を通じてチェス、将棋、囲碁を習得した汎用ゲームプレイAIです。
 - keyword: アクセス制御
   url: /ja/glossary/access-control/
   exact: true
@@ -1483,11 +1423,6 @@ keywords:
   exact: true
   priority: 10
   title: インシデント の用語集ページ
-- keyword: ナレッジベース
-  url: /ja/glossary/knowledge-base/
-  exact: true
-  priority: 10
-  title: エンティティリンキングは、テキストから抽出されたエンティティをナレッジベース内の一意のエントリに接続し、曖昧性を解決することで、AI、検索、レコメンデーションのための構造化データを実現します。
 - keyword: ナレッジグラフ
   url: /ja/glossary/knowledge-graph/
   exact: true

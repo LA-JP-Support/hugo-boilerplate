@@ -126,9 +126,7 @@ Hugo静的サイトのブログ記事やグロッサリーページに、関連�
 
 ```
 hugo-boilerplate/
-├── databases/                          # リンクデータベース
-│   ├── link_database_en.csv           # 英語キーワードDB
-│   ├── link_database_ja.csv           # 日本語キーワードDB
+├── databases/                          # Denylist（除外語）
 │   ├── danger_terms_en.csv            # 英語禁止用語
 │   └── danger_terms_ja.csv            # 日本語禁止用語
 │
@@ -410,14 +408,10 @@ python3 scripts/add_internal_links.py \
 
 ```bash
 # 英語禁止用語を生成
-python3 scripts/generate_danger_terms.py \
-  --lang en \
-  --min-score 60
+python3 scripts/generate_danger_terms.py --lang en --min-score 60
 
 # 日本語禁止用語を生成
-python3 scripts/generate_danger_terms.py \
-  --lang ja \
-  --min-score 60
+python3 scripts/generate_danger_terms.py --lang ja --min-score 60
 ```
 
 #### オプション
@@ -445,35 +439,145 @@ python3 scripts/generate_danger_terms.py \
 
 ---
 
-### 5. linkbuilding.py - HTML後処理
+## スクリプト詳細（旧方式）
 
-Hugoビルド後のHTMLファイルにリンクを追加します。
+### 1. build_link_database.py - データベース生成
 
-#### 特徴
+グロッサリーディレクトリからキーワードデータベースを生成します。
 
-- BeautifulSoupによる安全なHTML解析
-- 詳細な統計レポート生成
-- 細かな制限設定が可能
+**⚠️ 注意**: 現行の内部リンクはHTML後処理方式が標準です。このセクションは旧方式（CSV DB中心）の説明として残しています。
 
-#### 主要設定
+**推奨**: `extract_automatic_links.py`（`data/linkbuilding/*_automatic.json` 生成）と `linkbuilding_parallel.py`（`public/` HTML後処理）を使用してください。
 
-```python
-max_replacements_per_keyword: 2      # 同一キーワードの最大リンク数
-max_replacements_per_url: 2          # 同一URLへの最大リンク数
-max_links_on_page: 50                # ページ全体の最大リンク数
-max_replacements_per_page: 30        # ページごとの最大置換数
-min_chars_between_links: 1           # リンク間の最小文字数
+#### 機能
+
+- グロッサリーファイルからタイトル・URL・説明文を抽出
+- キーワードバリエーションを自動生成
+- 優先度スコアを計算
+- CSVファイルとして出力
+
+#### 使用方法
+
+```bash
+python3 scripts/build_link_database.py \
+  --glossary-dir content/en/glossary \
+  --output databases/link_database_en.csv \
+  --lang en
+```
+
+#### オプション
+
+| オプション | 必須 | 説明 |
+|-----------|------|------|
+| `--glossary-dir` | ✅ | グロッサリーディレクトリのパス |
+| `--output` | ✅ | 出力CSVファイルのパス |
+| `--lang` | ❌ | 言語コード（デフォルト: `ja`） |
+
+#### 出力例
+
+```
+============================================================
+Building link database from: content/en/glossary
+Output: databases/link_database_en.csv
+Language: en
+============================================================
+
+============================================================
+✅ Link database created successfully!
+   Glossary entries: 1221
+   Total keyword variations: 3071
+   Output file: databases/link_database_en.csv
+============================================================
+
+Top 20 keywords by priority:
+   1. ITIL – Information Technology Infrastructure Library (priority: 1104, type: exact)
+   2. Entity Extraction (Named Entity Recognition, NER)    (priority: 1098, type: exact)
+   ...
 ```
 
 ---
 
-### 6. precompute_linkbuilding.py - 事前計算最適化
+### 2. add_links_from_database.py - リンク挿入（非推奨）
 
-ビルド済みHTMLを解析し、実際に存在するキーワードのみを含む最適化ファイルを生成します。
+CSVデータベースを使用してMarkdownファイルにリンクを挿入します。
 
-#### 目的
+**⚠️ 注意**: Markdownへ直接リンクを挿入する方式は現在は非推奨です（HTML後処理方式が標準）。
 
-デプロイ時のリンクビルディング処理を高速化します。
+#### 機能
+
+- CSVデータベースからキーワードを読み込み
+- 禁止用語リストでフィルタリング
+- 安全なコンテンツ保護（コードブロック、既存リンク等）
+- 日本語・英語両対応
+- 同一キーワードのリンク数制限
+
+#### 使用方法
+
+```bash
+# プレビュー（dry-run）
+python3 scripts/add_links_from_database.py \
+  content/en/blog/ \
+  --database databases/link_database_en.csv \
+  --dry-run
+
+# 本番実行
+python3 scripts/add_links_from_database.py \
+  content/en/blog/ \
+  --database databases/link_database_en.csv
+```
+
+#### オプション
+
+| オプション | 必須 | 説明 |
+|-----------|------|------|
+| `content_dir` | ✅ | 処理対象ディレクトリ |
+| `--database` | ✅ | リンクデータベースCSVのパス |
+| `--denylist` | ❌ | 禁止用語CSVのパス（自動検出） |
+| `--dry-run` | ❌ | プレビューモード（ファイル変更なし） |
+| `--debug` | ❌ | デバッグログを有効化 |
+
+#### コンテンツ保護
+
+以下の領域はリンク挿入から保護されます：
+
+1. **コードブロック**: ` ```...``` `
+2. **インラインコード**: `` `...` ``
+3. **既存リンク**: `[text](url)`
+4. **HTMLタグ**: `<tag>...</tag>`
+5. **ショートコード**: `{{< ... >}}`
+6. **見出し**: `# Heading`
+
+#### リンク制限
+
+| 制限項目 | デフォルト値 |
+|---------|-------------|
+| 同一キーワードの最大リンク数 | 3 |
+| ページ全体の最大リンク数 | 100 |
+
+---
+
+### 3. add_internal_links.py - リンク挿入（シンプル版）
+
+グロッサリーを直接読み込んでリンクを挿入するシンプルなスクリプトです。
+
+**⚠️ 注意**: Markdownへ直接リンクを挿入する方式は現在は非推奨です（HTML後処理方式が標準）。
+
+#### 使用方法
+
+```bash
+python3 scripts/add_internal_links.py \
+  content/en/blog/ \
+  --glossary-dir content/en/glossary \
+  --lang en \
+  --dry-run
+```
+
+#### 特徴
+
+- CSVデータベース不要
+- グロッサリーを直接読み込み
+- シンプルな処理フロー
+- 禁止用語フィルタリングなし
 
 ---
 
@@ -512,17 +616,16 @@ min_chars_between_links: 1           # リンク間の最小文字数
 #### Step 1: データベース再生成
 
 ```bash
-# 英語
-python3 scripts/build_link_database.py \
-  --glossary-dir content/en/glossary \
-  --output databases/link_database_en.csv \
-  --lang en
+# 自動キーワード辞書を再生成（必要に応じて）
+# EN
+python3 scripts/extract_automatic_links.py \
+  --content-dir content-clean/en/ \
+  --output data/linkbuilding/en_automatic.json
 
-# 日本語
-python3 scripts/build_link_database.py \
-  --glossary-dir content/ja/glossary \
-  --output databases/link_database_ja.csv \
-  --lang ja
+# JA
+python3 scripts/extract_automatic_links.py \
+  --content-dir content-clean/ja/ \
+  --output data/linkbuilding/ja_automatic.json
 ```
 
 #### Step 2: 禁止用語更新（オプション）
@@ -540,38 +643,36 @@ python3 scripts/generate_danger_terms.py --lang ja
 #### Step 3: プレビュー確認
 
 ```bash
-# 英語ブログ
-python3 scripts/add_links_from_database.py \
-  content/en/blog/ \
-  --database databases/link_database_en.csv \
-  --dry-run
+# HugoでHTMLを生成（テスト用ディレクトリに出力）
+hugo --contentDir content-clean --destination public-test --cleanDestinationDir
 
-# 日本語ブログ
-python3 scripts/add_links_from_database.py \
-  content/ja/blog/ \
-  --database databases/link_database_ja.csv \
-  --dry-run
+# HTML後処理で内部リンク追加（プレビュー用）
+python3 scripts/linkbuilding_parallel.py \
+  --linkbuilding-dir data/linkbuilding \
+  --public-dir public-test \
+  --denylist-dir databases
 ```
 
 #### Step 4: 本番実行
 
 ```bash
-# 英語ブログ
-python3 scripts/add_links_from_database.py \
-  content/en/blog/ \
-  --database databases/link_database_en.csv
+# HugoでHTMLを生成（公開用）
+hugo --contentDir content-clean --destination public --cleanDestinationDir
 
-# 日本語ブログ
-python3 scripts/add_links_from_database.py \
-  content/ja/blog/ \
-  --database databases/link_database_ja.csv
+# HTML後処理で内部リンク追加（公開用）
+python3 scripts/linkbuilding_parallel.py \
+  --linkbuilding-dir data/linkbuilding \
+  --public-dir public \
+  --denylist-dir databases
 ```
 
 #### Step 5: Gitコミット
 
 ```bash
-git add content/en/blog/ content/ja/blog/
-git commit -m "Add internal links to blog posts"
+# public/ は成果物のためコミットしない（.gitignore）
+# 辞書やdenylistを更新した場合のみそれらをコミット
+git add data/linkbuilding/ databases/
+git commit -m "Update internal linking data"
 git push
 ```
 
@@ -583,52 +684,31 @@ git push
 
 ```bash
 # ========================================
-# データベース生成
+# 自動キーワード辞書の更新（必要に応じて）
 # ========================================
 
-# 英語DB生成
-python3 scripts/build_link_database.py \
-  --glossary-dir content/en/glossary \
-  --output databases/link_database_en.csv \
-  --lang en
+# EN
+python3 scripts/extract_automatic_links.py \
+  --content-dir content-clean/en/ \
+  --output data/linkbuilding/en_automatic.json
 
-# 日本語DB生成
-python3 scripts/build_link_database.py \
-  --glossary-dir content/ja/glossary \
-  --output databases/link_database_ja.csv \
-  --lang ja
+# JA
+python3 scripts/extract_automatic_links.py \
+  --content-dir content-clean/ja/ \
+  --output data/linkbuilding/ja_automatic.json
 
 # ========================================
-# リンク挿入（推奨: add_links_from_database.py）
+# Hugoビルド + HTML後処理（推奨）
 # ========================================
 
-# 英語ブログ - プレビュー
-python3 scripts/add_links_from_database.py \
-  content/en/blog/ \
-  --database databases/link_database_en.csv \
-  --dry-run
+# 1) Hugoビルド
+hugo --contentDir content-clean --destination public --cleanDestinationDir
 
-# 英語ブログ - 本番
-python3 scripts/add_links_from_database.py \
-  content/en/blog/ \
-  --database databases/link_database_en.csv
-
-# 日本語ブログ - プレビュー
-python3 scripts/add_links_from_database.py \
-  content/ja/blog/ \
-  --database databases/link_database_ja.csv \
-  --dry-run
-
-# 日本語ブログ - 本番
-python3 scripts/add_links_from_database.py \
-  content/ja/blog/ \
-  --database databases/link_database_ja.csv
-
-# デバッグモード
-python3 scripts/add_links_from_database.py \
-  content/ja/blog/ \
-  --database databases/link_database_ja.csv \
-  --debug
+# 2) 内部リンク追加（HTML後処理）
+python3 scripts/linkbuilding_parallel.py \
+  --linkbuilding-dir data/linkbuilding \
+  --public-dir public \
+  --denylist-dir databases
 
 # ========================================
 # 禁止用語生成
@@ -638,14 +718,16 @@ python3 scripts/generate_danger_terms.py --lang en
 python3 scripts/generate_danger_terms.py --lang ja
 
 # ========================================
-# シンプル版（データベース不要）
+# 単一言語のみ処理（必要に応じて）
 # ========================================
 
-python3 scripts/add_internal_links.py \
-  content/en/blog/ \
-  --glossary-dir content/en/glossary \
-  --lang en \
-  --dry-run
+python3 scripts/linkbuilding.py \
+  -k data/linkbuilding/ja.yaml \
+  -a data/linkbuilding/ja_automatic.json \
+  -d public/ja \
+  --language JA \
+  --denylist databases/danger_terms_ja.csv \
+  --max-links 15 --max-keyword 1 --max-url 3
 ```
 
 ---
@@ -726,10 +808,13 @@ self.link_database.sort(key=lambda x: len(x['keyword']), reverse=True)
 
 **原因と対策:**
 
-1. **キーワードがデータベースにない**
+1. **キーワードが辞書にない**
    ```bash
-   # データベースを確認
-   grep -i "keyword" databases/link_database_en.csv
+   # 手動辞書を確認（YAML）
+   grep -n "keyword:" data/linkbuilding/en.yaml
+   
+   # 自動辞書を確認（JSON）
+   grep -i "keyword" data/linkbuilding/en_automatic.json
    ```
 
 2. **禁止用語リストに含まれている**
@@ -765,21 +850,18 @@ self.link_database.sort(key=lambda x: len(x['keyword']), reverse=True)
 **原因と対策:**
 
 1. **全角・半角の不一致**
-   - データベース生成時に正規化されているか確認
+   - `data/linkbuilding/ja.yaml` と `data/linkbuilding/ja_automatic.json` の表記を確認してください。
 
-2. **文字コードの問題**
-   ```bash
-   # ファイルのエンコーディングを確認
-   file -i databases/link_database_ja.csv
-   ```
+2. **辞書側にキーワードがない**
+   - `data/linkbuilding/ja.yaml`（手動） / `data/linkbuilding/ja_automatic.json`（自動）を確認し、必要なら `extract_automatic_links.py` を再実行してください。
 
 ### Q4: 処理が遅い
 
 **対策:**
 
-1. データベースサイズを確認
+1. 辞書サイズを確認
    ```bash
-   wc -l databases/link_database_*.csv
+   wc -l data/linkbuilding/*_automatic.json
    ```
 
 2. 禁止用語でフィルタリングを強化
@@ -792,12 +874,12 @@ self.link_database.sort(key=lambda x: len(x['keyword']), reverse=True)
 
 ### 1. 定期的なデータベース更新
 
-グロッサリー追加後は必ずデータベースを再生成：
+グロッサリー追加後は必要に応じて自動辞書を再生成：
 
 ```bash
 # 週次または新規グロッサリー追加時
-python3 scripts/build_link_database.py --glossary-dir content/en/glossary --output databases/link_database_en.csv --lang en
-python3 scripts/build_link_database.py --glossary-dir content/ja/glossary --output databases/link_database_ja.csv --lang ja
+python3 scripts/extract_automatic_links.py --content-dir content-clean/en/ --output data/linkbuilding/en_automatic.json
+python3 scripts/extract_automatic_links.py --content-dir content-clean/ja/ --output data/linkbuilding/ja_automatic.json
 ```
 
 ### 2. 必ずdry-runで確認
@@ -805,7 +887,8 @@ python3 scripts/build_link_database.py --glossary-dir content/ja/glossary --outp
 本番実行前に必ずプレビュー：
 
 ```bash
-python3 scripts/add_links_from_database.py content/en/blog/ --database databases/link_database_en.csv --dry-run
+hugo --contentDir content-clean --destination public-test --cleanDestinationDir
+python3 scripts/linkbuilding_parallel.py --linkbuilding-dir data/linkbuilding --public-dir public-test --denylist-dir databases --dry-run
 ```
 
 ### 3. バックアップの作成

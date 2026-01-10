@@ -1,5 +1,18 @@
 # Changelog - Internal Linking System
 
+## [2.1.2] - 2026-01-10
+
+### 📝 Documentation
+
+- **ローカルで内部リンク付きプレビュー手順を追加**
+  - `docs/INTERNAL_LINKING_QUICK_START.md`: `hugo server` では内部リンクが付かない旨と、静的ビルド + HTML後処理 + 同一ポート配信の手順を追記
+- **旧方式（Markdown直接編集）と現行方式（HTML後処理）の位置付けを明確化**
+  - `docs/INTERNAL_LINK_SYSTEM_GUIDE.md`: 旧スクリプト（CSV/Markdown編集）を「旧方式」として明示し、現行の `extract_automatic_links.py` + `linkbuilding_parallel.py` へ誘導
+- **description最適化のskipped条件を明文化**
+  - `docs/SCRIPTS_USAGE_GUIDE.md`: `description` 未設定/フロントマター不正の場合に `skipped` になる点と対処を追記
+- **用語集ワークフローの注意点を追記**
+  - `WORKFLOW.md`: `hugo server` 単体では内部リンクが付かない点を追記
+
 ## [2.1.1] - 2026-01-08
 
 ### 🐛 Fixed
